@@ -1,0 +1,20 @@
+r=1 dimension=1 catalogue matched, all endpoint sets saturated
+p=101 rank=1 det=41
+p=101 deletion rank=0; duplicate unavailable for one row
+p=103 rank=1 det=43
+p=103 deletion rank=0; duplicate unavailable for one row
+r=2 dimension=6 catalogue matched, all endpoint sets saturated
+p=101 rank=6 det=66
+p=101 deleted=5 duplicated=5
+p=103 rank=6 det=74
+p=103 deleted=5 duplicated=5
+r=3 dimension=60 catalogue matched, all endpoint sets saturated
+p=101 rank=60 det=90
+p=101 deleted=59 duplicated=59
+p=103 rank=60 det=64
+p=103 deleted=59 duplicated=59
+r=4 dimension=420 catalogue matched, all endpoint sets saturated
+p=101 rank=420 det=6
+p=101 deleted=419 duplicated=419
+p=103 rank=420 det=65
+p=103 deleted=419 duplicated=419

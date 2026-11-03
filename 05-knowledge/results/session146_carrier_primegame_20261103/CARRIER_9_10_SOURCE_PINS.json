@@ -1,0 +1,36 @@
+{
+  "base_commit": "84154edbc189629acc09797148168da461d25071",
+  "scope": "Inherited proofs and concurrent related carrier source; no independent replay of the concurrent S/B result.",
+  "sources": [
+    {
+      "path": "05-knowledge/results/session145_endpoint_fence_ramsey_20261103/carrier/POOLED_PARITY_CARRIER.md",
+      "blob": "df6662e19f704959c36c649344d3220f7d0d9e38",
+      "bytes": 17957,
+      "sha256": "84cff4e5b5fb768fb1dc93638be7c1bf1170b65d1f0bac606a7bb9053cb65790"
+    },
+    {
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier7/PROOF.md",
+      "blob": "5ef4d8a6e664944609b06f6d11c9e0305e204b3e",
+      "bytes": 4861,
+      "sha256": "c119c8dea4252860f1db9ef0f4e7255e5db8f6328eab5ed0bcee8063efd6b5c9"
+    },
+    {
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier8/PROOF.md",
+      "blob": "d4144a453257bfc509a150bd06de5cb12f86cc34",
+      "bytes": 3081,
+      "sha256": "dbd37bd5ad982e47c8dd1566e5ad2b5b7730e42e496296fa1086a048260deda4"
+    },
+    {
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier8/AUDIT.md",
+      "blob": "acae5686c703f6c15c0f4e2e33da8545ed61b837",
+      "bytes": 3663,
+      "sha256": "b122573b009a5d4aaa5befa85f66ea0c5629e87d0009d3a9367c0349238ab277"
+    },
+    {
+      "path": "05-knowledge/results/positive_source_jacobian_prime_clocks_20261103/PARITY_CARRIER.md",
+      "blob": "81e59c48d08aebe7614219cb3fea77990bf0c320",
+      "bytes": 10903,
+      "sha256": "fadb03af2587d193996a71d97a69c856d57ffc126b1b4fbe67b9cb2cdd722b0c"
+    }
+  ]
+}

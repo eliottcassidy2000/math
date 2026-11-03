@@ -1,0 +1,134 @@
+{
+  "files": [
+    {
+      "bytes": 3379,
+      "path": "AUDIT.md",
+      "sha256": "d09ee08f0df4b91b23e4c78fdb4c45ed0ce0a18d024708ebca86caaaac249520"
+    },
+    {
+      "bytes": 82,
+      "path": "BLOCK5_SHA256",
+      "sha256": "ea9bb97957a7627bcd2379acb41b31d225d49cdc1f1f78f821c99586aa498421"
+    },
+    {
+      "bytes": 4100,
+      "path": "PROOF.md",
+      "sha256": "00decfa30b01771d29878036151499a57a398eccb353aa8cf9ac32a516e03362"
+    },
+    {
+      "bytes": 1473,
+      "path": "README.md",
+      "sha256": "53fe6980cfde53d0c8ad6d91582f06a387ed7115ffff4b888c3b0b57cecf27d3"
+    },
+    {
+      "bytes": 1622,
+      "path": "SHA256SUMS",
+      "sha256": "5818a6a1aa515e952697461d4c0d68d6302bcdc17388bb54fba9e232fd58faf3"
+    },
+    {
+      "bytes": 45,
+      "path": "block1.contexts",
+      "sha256": "8c7b79164b91db23a94df8b1dddde64a40811cbdbc4b0b29a1e3ca3ff96ef02a"
+    },
+    {
+      "bytes": 14,
+      "path": "block1.reps",
+      "sha256": "35349cabd937a3225d58ecf21793ceb403ca488af3fa8e6a00d2be7b6153cbf1"
+    },
+    {
+      "bytes": 396,
+      "path": "block2.contexts",
+      "sha256": "f2e9abfaa81888932b24eba97d59880566b4e2823dfd3153d9db77d57adc9be2"
+    },
+    {
+      "bytes": 90,
+      "path": "block2.reps",
+      "sha256": "c661986d144f60c4f7b1d5a98806aaebc0dc68dcb11e33d90dae34204e7fc5f3"
+    },
+    {
+      "bytes": 4844,
+      "path": "block3.contexts",
+      "sha256": "c53af9211c10c74e58f17a21c08b0f03847e2cb1f0789c99918441915bad6423"
+    },
+    {
+      "bytes": 915,
+      "path": "block3.reps",
+      "sha256": "4449c9659a3500f61c5b9665f637ad24ee509da1bdc48dc2466c6caecd90823a"
+    },
+    {
+      "bytes": 66862,
+      "path": "block4.contexts",
+      "sha256": "3142d5623154f02a15710d0a86d1dd318b6f96c9fadd104fa3a6d349369a54ef"
+    },
+    {
+      "bytes": 11700,
+      "path": "block4.reps",
+      "sha256": "8eb8b60b16b2acf8275cb9521057f4e855688ebc2ee9d5c44b973d733c546acf"
+    },
+    {
+      "bytes": 55690,
+      "path": "block5.contexts.part00",
+      "sha256": "bd52cded91af19a72e95ef1c709ad27727fa82e88c1671e4961df6ef428ed97f"
+    },
+    {
+      "bytes": 54272,
+      "path": "block5.contexts.part01",
+      "sha256": "9cf8d7778aa472ebb65b4a242718713d9314bbc92961c2a501a823f5daf92aa1"
+    },
+    {
+      "bytes": 14439,
+      "path": "block5.reps",
+      "sha256": "379c61b98dd681dec3ff93998e0a5163ddadc814b38b03ef5805e78c32a8b824"
+    },
+    {
+      "bytes": 4934,
+      "path": "generate_blocks.cpp",
+      "sha256": "47c9327c4fc35d1aad5b76eb5fb7d38b31b4179e14a523bf2136967987433df5"
+    },
+    {
+      "bytes": 100,
+      "path": "hostiles.normal.log",
+      "sha256": "f5bca5164117b12dd8b75cf5823c645386c561bcd3f9a60724478f24e95c7f07"
+    },
+    {
+      "bytes": 100,
+      "path": "hostiles.optimized.log",
+      "sha256": "f5bca5164117b12dd8b75cf5823c645386c561bcd3f9a60724478f24e95c7f07"
+    },
+    {
+      "bytes": 1178,
+      "path": "hostiles.py",
+      "sha256": "7ad139699e2618e0fc892e2294319f02248fb60708efeb1c63f5ce6a2a592bad"
+    },
+    {
+      "bytes": 1177,
+      "path": "replay.py",
+      "sha256": "2185e518ce0e0044aacf2092c5ee2d9fec50a5bcbc7788ac3090b1ec8a40f30f"
+    },
+    {
+      "bytes": 894,
+      "path": "verify.log",
+      "sha256": "bbaa5b3cc202f42a3b0714936d93e8f83d66898231a0e7d2d5aa7a3a0f27b5ad"
+    },
+    {
+      "bytes": 8133,
+      "path": "verify10.cpp",
+      "sha256": "5caec819c365069eabaf5f8efa478dedf3e0400d8c4bf71a1548a58ce130415a"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [],
+  "replay": [
+    {
+      "script": "replay.py",
+      "stdout_sha256": "b451946bf92c592b2cde75a2bad07a3d28bef204a8cf9027c7196085363d395f"
+    }
+  ],
+  "schema": 1,
+  "scope": "Order-ten fixed-attachment lower-bound certificate and higher-order lifting, independently audited."
+}

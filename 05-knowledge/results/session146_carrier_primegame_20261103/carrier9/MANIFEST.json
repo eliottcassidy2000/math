@@ -1,0 +1,114 @@
+{
+  "files": [
+    {
+      "bytes": 2731,
+      "path": "AUDIT.md",
+      "sha256": "0983660778a18c42d2464a2a2b5c495349cd6915ff06bcd8565273790ace92ef"
+    },
+    {
+      "bytes": 3992,
+      "path": "PROOF.md",
+      "sha256": "ba32f8214b52b9e8c9b6d9d4cbdec0a089596eadb8e73d7a302a6d81871ad721"
+    },
+    {
+      "bytes": 1251,
+      "path": "README.md",
+      "sha256": "d1700de3263ed983d8cc20276d7f7d4d37ac7462911fa8dd8be23a265873e6bd"
+    },
+    {
+      "bytes": 1285,
+      "path": "SHA256SUMS",
+      "sha256": "2942d8a2a6271f85bbdf18b1789181a1377529c737077cd98616498f20464513"
+    },
+    {
+      "bytes": 50,
+      "path": "block1.contexts",
+      "sha256": "64c84fde004f5de50aadd0a7cf9badf2c49a757c105e40f3ed98a1a1f467ad15"
+    },
+    {
+      "bytes": 12,
+      "path": "block1.reps",
+      "sha256": "3bd69011bebcefd9e30082b32df776e10c98e63ff3fd55a3d6b03b42c52a64a1"
+    },
+    {
+      "bytes": 407,
+      "path": "block2.contexts",
+      "sha256": "4971805063e28ebebf97aa3a92369087d43549989ed504bb3292674d4a4545e5"
+    },
+    {
+      "bytes": 84,
+      "path": "block2.reps",
+      "sha256": "c5a626aad1b44df9fddb879c6d84e117c1b9b5c0629447402350226de368dc64"
+    },
+    {
+      "bytes": 4774,
+      "path": "block3.contexts",
+      "sha256": "eb1a80974720ab86d5a4117611715dc4dae2d11ad56d6148ca19b9dad5c7253e"
+    },
+    {
+      "bytes": 855,
+      "path": "block3.reps",
+      "sha256": "2dfb62d4f2aed20ea0dcf8b6ac86672f4e36189b1b581728e0a3221301d94d8d"
+    },
+    {
+      "bytes": 40997,
+      "path": "block4.contexts",
+      "sha256": "4635196193ce4cf5f02529120cc9c4749cd974e09320890d5a7b78e24bcf8cbb"
+    },
+    {
+      "bytes": 6024,
+      "path": "block4.reps",
+      "sha256": "9d232cfa8a4c85233657d9ffd0517e61f5698fa111ed368094a25bfd6e1c9e58"
+    },
+    {
+      "bytes": 4649,
+      "path": "generate_blocks.cpp",
+      "sha256": "dbad59eb249b6f84e041bcb020c6c19464b4cd825473d15bc9740651fb54f34b"
+    },
+    {
+      "bytes": 100,
+      "path": "hostiles.normal.log",
+      "sha256": "f5bca5164117b12dd8b75cf5823c645386c561bcd3f9a60724478f24e95c7f07"
+    },
+    {
+      "bytes": 100,
+      "path": "hostiles.optimized.log",
+      "sha256": "f5bca5164117b12dd8b75cf5823c645386c561bcd3f9a60724478f24e95c7f07"
+    },
+    {
+      "bytes": 1175,
+      "path": "hostiles.py",
+      "sha256": "ac43962a04f88bb387e3fa746cdf5c850ebdda08b20e57f91558f2e5379bf512"
+    },
+    {
+      "bytes": 865,
+      "path": "replay.py",
+      "sha256": "04b4401621eaa5e2d3a005bb94a2561f4dd0e6e03c9556060e887fa5dd15b03e"
+    },
+    {
+      "bytes": 720,
+      "path": "verify.log",
+      "sha256": "13a250a4e28970be83af33d6bb9857487160fa194aa498549c7de72fddfd556a"
+    },
+    {
+      "bytes": 8061,
+      "path": "verify9.cpp",
+      "sha256": "421611427448f920bf26680c626479a68e366928be0cce9bc9144fde5b09f381"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [],
+  "replay": [
+    {
+      "script": "replay.py",
+      "stdout_sha256": "d6df16389980194639d1945624cc062f8c4913e6a7445ec409d9f9274f0f8944"
+    }
+  ],
+  "schema": 1,
+  "scope": "Order-nine fixed-attachment exact dimension and higher-order lower bounds with independent endpoint-block audit."
+}
