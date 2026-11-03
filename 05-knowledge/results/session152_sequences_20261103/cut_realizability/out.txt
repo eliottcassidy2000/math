@@ -1,0 +1,8 @@
+exhaustive n= 2 count= 2
+exhaustive n= 3 count= 8
+exhaustive n= 4 count= 64
+n=5 code= 8 H= 9 B= 30 image= [15, 17, 19, 23, 25, 27, 29, 33, 37, 41]
+target masks: {27: [5, 11], 29: [10, 21], 31: []}
+n=5 code= 759 H= 9 B= 30 image= [15, 17, 19, 23, 29, 31, 33, 37, 43]
+target masks: {27: [], 29: [1, 5, 6, 10, 21, 23, 25, 26], 31: [2, 9, 22, 27]}
+PASS
