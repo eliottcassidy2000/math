@@ -1,0 +1,46 @@
+{
+  "files": [
+    {
+      "bytes": 4039,
+      "path": "README.md",
+      "sha256": "9ddca16feb15ade0bd110a8a34560cdf332867e4a71a5e136b86bb8bddb3b1e8"
+    },
+    {
+      "bytes": 740,
+      "path": "audit.py",
+      "sha256": "986885c73010ffb21a16f693058b200c43489c5a367aa4b90c12a619ab1272db"
+    },
+    {
+      "bytes": 2658,
+      "path": "check.py",
+      "sha256": "51eea66f209acb91aea988596a99c28597072e60a7c676708ff66a0c1199c8d9"
+    },
+    {
+      "bytes": 1206,
+      "path": "results.txt",
+      "sha256": "048b61e21d7746ed9399ce01c8da5a9c3964307ec0fddef4bf64ed7201755022"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "00-navigation/S148.md",
+    "00-navigation/S111-plus.md"
+  ],
+  "replay": [
+    {
+      "script": "check.py",
+      "stdout_sha256": "048b61e21d7746ed9399ce01c8da5a9c3964307ec0fddef4bf64ed7201755022"
+    },
+    {
+      "script": "audit.py",
+      "stdout_sha256": "28d91dc2c0e3c143f3ae4cf2e0a68fd9b3c9518f7da7f8d726a94a8fc8d90833"
+    }
+  ],
+  "schema": 1,
+  "scope": "Finite shell bijection and square-sum edge obstruction"
+}

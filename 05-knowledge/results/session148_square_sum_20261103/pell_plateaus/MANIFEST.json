@@ -1,0 +1,66 @@
+{
+  "files": [
+    {
+      "bytes": 3186,
+      "path": "AUDIT.md",
+      "sha256": "4f433716cf232388997fe75069e3a7858ac5eecdbd5ccf8f98f5009fa5a8ff22"
+    },
+    {
+      "bytes": 2196,
+      "path": "PELL_PLATEAUS.md",
+      "sha256": "dbb4a58be32ff1698a1e090620cc13dc136dc2038abccb65c4495fd959c72252"
+    },
+    {
+      "bytes": 170,
+      "path": "audit.normal.txt",
+      "sha256": "a0e210b16012a9e16dc6955011568710a718bcfb415273adbc473668cce77749"
+    },
+    {
+      "bytes": 170,
+      "path": "audit.optimized.txt",
+      "sha256": "a0e210b16012a9e16dc6955011568710a718bcfb415273adbc473668cce77749"
+    },
+    {
+      "bytes": 4027,
+      "path": "audit.py",
+      "sha256": "82bec9ff586283912930bc5af03ff8f8c6516eec071863b635d8db5c208a17d9"
+    },
+    {
+      "bytes": 102,
+      "path": "check.normal.txt",
+      "sha256": "38cc30262110f42c62964f0367417f3b80ad5a4b3cf48fd438ca67173834d5ec"
+    },
+    {
+      "bytes": 102,
+      "path": "check.optimized.txt",
+      "sha256": "38cc30262110f42c62964f0367417f3b80ad5a4b3cf48fd438ca67173834d5ec"
+    },
+    {
+      "bytes": 1240,
+      "path": "check_plateaus.py",
+      "sha256": "b1b362d2d0a89a06519ead179dfb8eaa53da557cc02818309486b2712aa62796"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "00-navigation/S148.md",
+    "00-navigation/S111-plus.md"
+  ],
+  "replay": [
+    {
+      "script": "check_plateaus.py",
+      "stdout_sha256": "38cc30262110f42c62964f0367417f3b80ad5a4b3cf48fd438ca67173834d5ec"
+    },
+    {
+      "script": "audit.py",
+      "stdout_sha256": "a0e210b16012a9e16dc6955011568710a718bcfb415273adbc473668cce77749"
+    }
+  ],
+  "schema": 1,
+  "scope": "Three-vertex plateaus at square-sum Pell cancellation centers"
+}

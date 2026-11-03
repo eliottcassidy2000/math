@@ -1,0 +1,8 @@
+G15: edges=15 beta=1 undirected_paths=1 histogram={0: 32764, 1: 4}
+G16: edges=16 beta=1 undirected_paths=1 histogram={0: 65532, 1: 4}
+G17: edges=17 beta=1 undirected_paths=1 histogram={0: 131068, 1: 4}
+G23: edges=28 beta=6 undirected_paths=3 histogram={0: 268435072, 1: 384}
+G25: edges=32 beta=8 undirected_paths=10 histogram={0: 4294962432, 1: 4608, 2: 256}
+G26: edges=34 beta=9 undirected_paths=12 histogram={0: 17179857952, 1: 10240, 2: 928, 3: 64}
+G27: edges=36 beta=10 undirected_paths=35 histogram={0: 68719413784, 1: 54976, 2: 7360, 3: 488, 4: 120, 5: 8}
+PASS: independent DFS and orientation-extension census, cycle coordinates, all path-containing simple graphs <=5; K3 overlap hostile; explicit exceptions

@@ -1,0 +1,8 @@
+n=15 m=15 beta=1 U=1 verified bases=1 vectors=2 path-incidences=4
+n=16 m=16 beta=1 U=1 verified bases=1 vectors=2 path-incidences=4
+n=17 m=17 beta=1 U=1 verified bases=1 vectors=2 path-incidences=4
+n=23 m=28 beta=6 U=3 verified bases=3 vectors=64 path-incidences=384
+n=25 m=32 beta=8 U=10 verified bases=10 vectors=256 path-incidences=5120
+n=26 m=34 beta=9 U=12 verified bases=12 vectors=512 path-incidences=12288
+n=27 m=36 beta=10 U=35 verified bases=35 vectors=1024 path-incidences=71680
+All fundamental-cycle checks passed.

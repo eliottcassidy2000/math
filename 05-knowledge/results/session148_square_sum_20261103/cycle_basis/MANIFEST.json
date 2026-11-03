@@ -1,0 +1,81 @@
+{
+  "files": [
+    {
+      "bytes": 2760,
+      "path": "AUDIT.md",
+      "sha256": "5190a244b4c17e3c69a3a4c5703050c988e07db911d06ad5b48b52e96b4701f1"
+    },
+    {
+      "bytes": 3453,
+      "path": "FUNDAMENTAL_CYCLES.md",
+      "sha256": "55d477b7d0ae9d4227b770f4ceefc531c00db99647f7f11bc9068d1bfb973f64"
+    },
+    {
+      "bytes": 5038,
+      "path": "audit.py",
+      "sha256": "7fbed30b2242638933c59f5bf3f5c950ad05c10a1d48f60f8e60367ea2dacf8d"
+    },
+    {
+      "bytes": 527,
+      "path": "fundamental_cycles.normal.out",
+      "sha256": "536cecf6ae9523844d64c6cac3c8b3e5b39114eaec13896836b29b9cdcb4b503"
+    },
+    {
+      "bytes": 527,
+      "path": "fundamental_cycles.optimized.out",
+      "sha256": "536cecf6ae9523844d64c6cac3c8b3e5b39114eaec13896836b29b9cdcb4b503"
+    },
+    {
+      "bytes": 1498,
+      "path": "fundamental_cycles.py",
+      "sha256": "f4be98782df004b39bf1d0f70c616b58957b59ffef7296466ff42fc43507dcdb"
+    },
+    {
+      "bytes": 716,
+      "path": "normal.txt",
+      "sha256": "fc611b7563a89981adefdb0d911c45d4910d573ac35811c0bf56ac1e5faa2f41"
+    },
+    {
+      "bytes": 716,
+      "path": "optimized.txt",
+      "sha256": "fc611b7563a89981adefdb0d911c45d4910d573ac35811c0bf56ac1e5faa2f41"
+    },
+    {
+      "bytes": 2560,
+      "path": "orientation.py",
+      "sha256": "8bdc9d0d37d1bd6e126bc93151b90be74708dae304fccdbfbf80010ab585b357"
+    },
+    {
+      "bytes": 527,
+      "path": "original.normal.txt",
+      "sha256": "536cecf6ae9523844d64c6cac3c8b3e5b39114eaec13896836b29b9cdcb4b503"
+    },
+    {
+      "bytes": 527,
+      "path": "original.optimized.txt",
+      "sha256": "536cecf6ae9523844d64c6cac3c8b3e5b39114eaec13896836b29b9cdcb4b503"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "00-navigation/S148.md",
+    "00-navigation/S111-plus.md"
+  ],
+  "replay": [
+    {
+      "script": "fundamental_cycles.py",
+      "stdout_sha256": "536cecf6ae9523844d64c6cac3c8b3e5b39114eaec13896836b29b9cdcb4b503"
+    },
+    {
+      "script": "audit.py",
+      "stdout_sha256": "fc611b7563a89981adefdb0d911c45d4910d573ac35811c0bf56ac1e5faa2f41"
+    }
+  ],
+  "schema": 1,
+  "scope": "Fundamental cycle basis and orientation incidences for fixed Hamilton paths"
+}

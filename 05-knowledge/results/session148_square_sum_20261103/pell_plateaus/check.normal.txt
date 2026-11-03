@@ -1,0 +1,1 @@
+PASS: all n<=1000000; both Pell families 200 terms; 9/25 plateaus and G15 edge labels; optimized-safe
