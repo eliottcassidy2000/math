@@ -1,0 +1,44 @@
+{
+  "checks": 1582,
+  "exhaustive_contexts_n_le_4": 1098,
+  "note": "independent subset-pair coefficients versus permutation extension counts; independent permutation-cut profile enumeration; arithmetic witness checks",
+  "seed_data": [
+    {
+      "E": [
+        0,
+        0,
+        4,
+        4,
+        4
+      ],
+      "leaf": 0,
+      "profile": [
+        0,
+        12,
+        60,
+        54,
+        14,
+        1
+      ]
+    },
+    {
+      "E": [
+        0,
+        2,
+        2,
+        2,
+        6
+      ],
+      "leaf": 4,
+      "profile": [
+        0,
+        12,
+        60,
+        54,
+        14,
+        1
+      ]
+    }
+  ],
+  "status": "pass"
+}

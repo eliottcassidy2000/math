@@ -99,7 +99,7 @@ Likewise the infinite-state obstruction concerns a finite autonomous record with
 
 ## 6. Connection to tournament memory and a useful research split
 
-S171's full-profile-blind storage and fixed contextual Hamilton read head can store and retrieve finite output words. The session’s Collatz construction develops that literal construction. The general theorem here supplies its missing contract: an exact k-symbol output tape stores one of b^k distinguishable finite responses; deleting its head is a correct update only at precision k−1. Keeping a full k-symbol forecast requires new information about the next symbol. A complete static tournament encoding is therefore not automatically a finite autonomous simulator of the original arithmetic.
+S171's full-profile-blind storage and fixed contextual Hamilton read head can store and retrieve finite output words. The [sibling Collatz packet](../collatz/NOTE.md) develops that literal construction. The general theorem here supplies its missing contract: an exact k-symbol output tape stores one of b^k distinguishable finite responses; deleting its head is a correct update only at precision k−1. Keeping a full k-symbol forecast requires new information about the next symbol. A complete static tournament encoding is therefore not automatically a finite autonomous simulator of the original arithmetic.
 
 Three resources should be measured separately in future constructions:
 

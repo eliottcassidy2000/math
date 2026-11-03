@@ -1,0 +1,7 @@
+{
+  "checks": 93421,
+  "finite_systems": 5898,
+  "relative_link_occurrences": 7,
+  "scope": "all 1-3-state two-map systems with binary observations; links verified against intended sibling packaging",
+  "status": "pass"
+}
