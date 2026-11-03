@@ -1,0 +1,11 @@
+{
+  "CRT_orbit_checks": 4368,
+  "S3_noncommuting_pairs": 6,
+  "S3_trefoil_representations": 12,
+  "knot_representation_pairs": 98304,
+  "literal_tournament_states": 84,
+  "octonion_group_order": 128,
+  "primitive_slope_cover_checks": 2112,
+  "single_arc_checks": 228,
+  "status": "PASS"
+}
