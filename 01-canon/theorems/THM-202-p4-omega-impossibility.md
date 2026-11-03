@@ -1,14 +1,31 @@
 # THM-202: P₄ Cannot Be Ω(T) — Toward H≠21
 
-**Status:** PROVED (for P₄ Omega structure)
+**Status:** PROVED as a corollary of the all-order raw-count exclusion. The historical direct argument below is incomplete and is not a proved dependency.
 **Proved by:** opus-2026-03-14-S71g
-**Dependencies:** THM-200, directed cycle counting, Jacobsthal connection
+**Current dependencies:** the odd-cycle formula and THM-1370
+[all-order raw H exclusion](THM-1370-h-spectrum-omits-7-21-all-n.md).
+The latter uses strong-subtournament floors, not this file, so the repair is noncircular.
 
 ## Statement
 
 For any tournament T, the conflict graph Ω(T) is never isomorphic to P₄ (the path graph on 4 vertices).
 
-## Proof
+## Current proof (2026-11-03 repair)
+
+The odd-cycle formula gives `H(T)=I(Omega(T),2)`. A path on four vertices
+has independence polynomial `1+4x+3x^2`, so `I(P_4,2)=1+8+12=21`.
+THM-1370 excludes raw Hamiltonian-path count 21 at every order. Therefore
+`Omega(T)` cannot be `P_4`. This proves the stated obstruction but does not
+prove that 7 and 21 are the only missing odd counts.
+
+## Historical direct argument — incomplete, retained for provenance
+
+The old Step 1 counted `1+3` as more than four and did not handle longer odd
+cycles. Step 2 assumed adjacent triangles shared exactly one vertex, omitting
+shared-edge cases. The printed cascade also did not justify all its arc
+orientations. Its unlinked finite checks below do not repair those universal
+steps. The conclusion is now supported by the complete proof above.
+
 
 Suppose Ω(T) = P₄, meaning T has exactly 4 directed odd cycles C₁, C₂, C₃, C₄ with adjacency C₁-C₂-C₃-C₄ (sharing vertices pairwise along the path).
 
@@ -57,7 +74,7 @@ These 3 extra triangles are **structurally unavoidable**: they arise from the ba
 
 ∎
 
-## Computational Verification
+## Historical computational claims (not re-audited here)
 
 - n=7 (P₄ on 7 vertices with shared edges): 0/2048 tournaments achieve t₃=4. Min t₃=5.
 - n=9 (P₄ on 9 vertices with single shared vertices): 0/16,777,216 tournaments achieve t₃=4. Min t₃=9.
@@ -69,7 +86,7 @@ I(P₄, 2) = 21 is the 5th term of the sequence I(Pₘ, 2) = 1, 3, 5, 11, 21, 43
 
 The P₄ impossibility means H=21 cannot come from an Ω = P₄ structure. Combined with the K₃+K₁ impossibility (THM-201), two of the four graph structures yielding I(G,2)=21 are ruled out.
 
-## Remaining Cases for H=21 Proof
+## Historical remaining cases (superseded by THM-1370)
 
 To fully prove H≠21, must also rule out:
 - K₆ minus 2 edges (α₁=6, α₂=2): absent at n≤7 exhaustive

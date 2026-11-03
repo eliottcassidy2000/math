@@ -4,6 +4,27 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — Path-order indexing and the incomplete historical P4 proof
+
+**Affected:** THM-1425 (`theorems/THM-1425-the-ocf-is-the-weight-two-shifted-pascal-identity.md`)
+and THM-202 (`theorems/THM-202-p4-omega-impossibility.md`).
+
+**Failed implication:** `sum binom(m-k,k) w^k` was identified with the
+independence polynomial of the path on `m` vertices. It instead describes
+`P_(m-1)` for `m>=1`. The minimal witness is `P_1`: its value at weight two
+is 3, whereas the old corollary gives 1. The correct identity is
+`I(P_m,2)=J_(m+2)`; the old Pascal table is unchanged.
+
+**Related proof audit:** THM-202's old cascade assumed single-vertex triangle
+intersections and called one 5-cycle plus three triangles more than four cycles.
+It did not prove its universal claim. Retain that text as historical/incomplete;
+the current noncircular proof is `I(P_4,2)=21` plus THM-1370's independent
+all-order raw-count exclusion. No spectral completeness claim follows.
+
+**Repair/sidecar:** retain the actual path vertex count, not just a shifted
+recurrence index. The new triple-reentry packet checks path orders 0..12 by
+independent-set enumeration, recurrence and the corrected binomial formula.
+
 ## 2026-11-03 — a native chord complement need not be a blue line
 
 - **Scope:** `session160_ordered_programs_20261103/priority_tilings/NOTE.md` and its scanner output labels, received at `ab860360b8`. The priority scanner, arithmetic-image counts2592/512 and native-complement identity remain valid.

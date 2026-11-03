@@ -1,6 +1,6 @@
 ---
 id: THM-1425
-title: "THE OCF IS THE SHIFTED-PASCAL FIBONACCI IDENTITY WITH WEIGHT 2 INSTEAD OF 1 — Σ_k C(m−k,k)·1^k = F(m+1) counts independent sets in the path; Σ_k C(m−k,k)·2^k = J(m+1) = (2^{m+1}−(−1)^{m+1})/3 is the SAME sum with the OCF's weight, so whenever the odd-cycle intersection graph is a path the Hamiltonian-path count is a JACOBSTHAL number. The OCF itself is confirmed exhaustively: H(T) = Σ over sets of vertex-disjoint directed odd cycles of 2^{#cycles}, zero mismatches over all 8/64/1024/32768 labelled tournaments at n = 3..6. RÉDEI IS ITS MOD-2 SHADOW — every nonempty collection contributes an even 2^{|S|}, so only the empty collection survives mod 2 and H ≡ 1, a one-line derivation of oddness. AND THE 60 IS REAL BUT IT MOVES: Fibonacci's last digit has period 60 mod 10 and 560 mod 1001, while the weight-2 sequence has period 4 mod 10 and EXACTLY 60 mod 1001 = 7·11·13 — because the weight-2 period mod q is governed by ord_q(2) and ord_1001(2) = 60. Same constant, opposite modulus, swapped by the very weight-1 → weight-2 substitution that turns Fibonacci into the OCF."
+title: "THE OCF IS THE SHIFTED-PASCAL FIBONACCI IDENTITY WITH WEIGHT 2 INSTEAD OF 1 — Σ_k C(m−k,k)·1^k = F(m+1) counts independent sets in the path on m−1 vertices (m≥1); Σ_k C(m−k,k)·2^k = J(m+1) = (2^{m+1}−(−1)^{m+1})/3 is the SAME sum with the OCF's weight, so whenever the odd-cycle intersection graph is a path the Hamiltonian-path count is a JACOBSTHAL number. The OCF itself is confirmed exhaustively: H(T) = Σ over sets of vertex-disjoint directed odd cycles of 2^{#cycles}, zero mismatches over all 8/64/1024/32768 labelled tournaments at n = 3..6. RÉDEI IS ITS MOD-2 SHADOW — every nonempty collection contributes an even 2^{|S|}, so only the empty collection survives mod 2 and H ≡ 1, a one-line derivation of oddness. AND THE 60 IS REAL BUT IT MOVES: Fibonacci's last digit has period 60 mod 10 and 560 mod 1001, while the weight-2 sequence has period 4 mod 10 and EXACTLY 60 mod 1001 = 7·11·13 — because the weight-2 period mod q is governed by ord_q(2) and ord_1001(2) = 60. Same constant, opposite modulus, swapped by the very weight-1 → weight-2 substitution that turns Fibonacci into the OCF."
 status: >
   OCF form VERIFIED-EXACT by exhaustive enumeration of every labelled tournament at
   n = 3,4,5,6 (8/64/1024/32768; zero mismatches against the subset-DP Hamiltonian-path
@@ -41,7 +41,7 @@ Rédei's oddness a one-line remark — and moves the number 60 from modulus 10 t
 ## (B) The shifted-Pascal bridge
 
 The shallow diagonals of Pascal's triangle sum to Fibonacci because `C(m−k,k)` counts the
-independent sets of size `k` in the path `P_m`. Give each chosen vertex a weight `w`:
+independent sets of size `k` in the path `P_(m−1)` for `m>=1`, when `P_r` means a path on `r` vertices. The displayed sum at `m=0` is the initial value 1. Give each chosen vertex a weight `w`:
 
 | weight | `Σ_k C(m−k,k)·w^k` | sequence |
 |---|---|---|
@@ -53,7 +53,15 @@ graph** (vertices = directed odd cycles, edges = share a vertex; "independent" =
 disjoint). Hence:
 
 > **Corollary.** If a tournament's odd-cycle intersection graph is a path `P_m`, then
-> `H(T) = J(m+1) = (2^{m+1} − (−1)^{m+1})/3` — a Jacobsthal number.
+> `H(T) = J(m+2) = (2^{m+2} − (−1)^{m+2})/3` — a Jacobsthal number.
+
+**Index correction, 2026-11-03.** For a path on `m` vertices the polynomial is
+`I(P_m,w)=sum_k binom(m+1-k,k) w^k`. Thus `I(P_1,2)=3` and
+`I(P_4,2)=21`. The earlier `J(m+1)` corollary confused the Pascal index
+with the path order; the displayed Pascal table itself was correct. The
+path-realizability hypothesis remains essential: `P_4` cannot be the full
+odd-cycle intersection graph of a tournament, by THM-202
+[`P4 Omega impossibility`](THM-202-p4-omega-impossibility.md).
 
 ## (C) Rédei as the mod-2 shadow
 

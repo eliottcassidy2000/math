@@ -1,0 +1,112 @@
+{
+  "independently_counted_literal_cuts": 416,
+  "orbit_census": [
+    {
+      "classes": 1,
+      "labelled": 1,
+      "minima": {
+        "either": null,
+        "fixed": null,
+        "strong_fixed": null
+      },
+      "n": 1,
+      "strong_labelled": 1
+    },
+    {
+      "classes": 1,
+      "labelled": 2,
+      "minima": {
+        "either": null,
+        "fixed": null,
+        "strong_fixed": null
+      },
+      "n": 2,
+      "strong_labelled": 0
+    },
+    {
+      "classes": 2,
+      "labelled": 8,
+      "minima": {
+        "either": null,
+        "fixed": null,
+        "strong_fixed": null
+      },
+      "n": 3,
+      "strong_labelled": 2
+    },
+    {
+      "classes": 4,
+      "labelled": 64,
+      "minima": {
+        "either": null,
+        "fixed": null,
+        "strong_fixed": null
+      },
+      "n": 4,
+      "strong_labelled": 24
+    },
+    {
+      "classes": 12,
+      "labelled": 1024,
+      "minima": {
+        "either": null,
+        "fixed": 255,
+        "strong_fixed": null
+      },
+      "n": 5,
+      "strong_labelled": 544
+    },
+    {
+      "classes": 35,
+      "labelled": 22320,
+      "minima": {
+        "either": 72320955,
+        "fixed": 1335,
+        "strong_fixed": 1335
+      },
+      "n": 6,
+      "strong_labelled": 22320
+    }
+  ],
+  "raw_seeds": [
+    {
+      "H": 1,
+      "order": 1,
+      "strong": true
+    },
+    {
+      "H": 23,
+      "order": 6,
+      "strong": true
+    },
+    {
+      "H": 25,
+      "order": 6,
+      "strong": true
+    },
+    {
+      "H": 63,
+      "order": 8,
+      "strong": true
+    },
+    {
+      "H": 65,
+      "order": 7,
+      "strong": true
+    },
+    {
+      "H": 67,
+      "order": 7,
+      "strong": true
+    }
+  ],
+  "scalar_roots_through_100001": {
+    "1": 40160,
+    "23": 3280,
+    "25": 3280,
+    "63": 1093,
+    "65": 1093,
+    "67": 1093
+  },
+  "status": "PASS"
+}

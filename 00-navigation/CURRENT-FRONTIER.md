@@ -244,6 +244,12 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
   reading. THM-4088/4095 show bare order loses magnitude/type; THM-4093 needs cycles.
 - THM-4094 reduces completeness, via exact deletion and carries `49,63,343`,
   to lanes `p` (`p!=7`) and `7p` (`p!=3`). [Birth/embedding limits](../05-knowledge/results/metagraph_primegame_20261102/README.md).
+- [Triple-return/interface packet](../05-knowledge/results/triple_reentry_interfaces_20261103/README.md):
+  **PROVED** scalar ternary forest after deleting7,21 has roots1,23,25,63,65,67;
+  literal seed witnesses are **FINITE-EXACT**, common marked-source reentry remains **OPEN**.
+  Minimal prime-support transversals classify a fixed bank's unit interfaces over every
+  modulus. Small quadratic probes need not contain a common unit: strong order-six
+  minimum obstruction moduli1335 (fixed baseline) and72320955 (either baseline).
 - THM-4099 makes insertion compositional; marginals lose mixed response.
 - THM-4097/4102/4104/4111--4137 handle the order-nine/ten interval-cut route;
   THM-4144/4162/4163 close nonprimes, THM-4168 symmetric primes, and

@@ -1,0 +1,90 @@
+{
+  "base_revision": "d9d9f3e483c54d83ebd569b91a85b7d015923cfe",
+  "note": "Inherited versions at startup; current repairs to THM-1425 and THM-202 override the affected historical claims.",
+  "pins": [
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8"
+    },
+    {
+      "path": "01-canon/theorems/THM-1425-the-ocf-is-the-weight-two-shifted-pascal-identity.md",
+      "blob": "e859cf0d1afac0adf47468a384ef26442e7e3999"
+    },
+    {
+      "path": "01-canon/theorems/THM-202-p4-omega-impossibility.md",
+      "blob": "fd148da8aa7e4e78b708652e93d144c9828e26b9"
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260917_divisor_balance_family.md",
+      "blob": "5cd86cd979e194e3e405606e6b9de1276bbff0bb"
+    },
+    {
+      "path": "05-knowledge/results/inverse65_zeckendorf_20261103/ZECKENDORF.md",
+      "blob": "bd2bf285c3a138b0ce9cf03d37a7c1a48dd11727"
+    },
+    {
+      "path": "05-knowledge/results/mrb_square_probe_spectrum_20261103/verify.py",
+      "blob": "1b3f9713be47055a32245a17b5d886930362161d"
+    },
+    {
+      "path": "05-knowledge/results/session124_million_path_spectrum_20261031/construct_witness.py",
+      "blob": "7b8cee81651126cd56f4a72a9ea4546a30b52276"
+    },
+    {
+      "path": "05-knowledge/results/session157_gaps_20261103/universal/NOTE.md",
+      "blob": "92e7c9a431f2cfd55adb9b7948cf44cc70645d88"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/strands/NOTE.md",
+      "blob": "021f6fd11325275aff3c59874071f8f800ef46c0"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/strong_returns/FIRST_STEP.md",
+      "blob": "806a06a76ad5777eb0de257818f7502a0f2520b9"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/strong_returns/MOVING_GUARD.md",
+      "blob": "e9917aceed95d315f106d203f324ed26fd6db441"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/survey/META_LEDGER.md",
+      "blob": "7bea9e6380a23d0321104c4df18ea66ab96e0f26"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/triple_codec/NOTE.md",
+      "blob": "efee305436fdb5a626c425d2f3da897d408237e9"
+    },
+    {
+      "path": "05-knowledge/results/session38_incidence_ports_electrical_20261023/incidence/TERNARY_SIGNATURES.md",
+      "blob": "c26cdbeedd21c95276e48667da25f8e59d677dc1"
+    },
+    {
+      "path": "05-knowledge/results/session41_owned_attachments_fibonacci_20261023/COLORED_GRID_AND_PHASE_QUOTIENT.md",
+      "blob": "404c60e1158dcf043e05e730f803c8eb9fda6f41"
+    },
+    {
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/fractions-ternary/README.md",
+      "blob": "9dda523f5e6a8891033156bace9c8857dd4ef697"
+    },
+    {
+      "path": "05-knowledge/results/session58_hourglass_complement_geometry_20261025/tropical-gap-triples/RESULT.md",
+      "blob": "6248466cbd9af8e19701e3ccc4da7daf60846ba2"
+    },
+    {
+      "path": "05-knowledge/results/session77_ternary_color_20261027/TERNARY_MEMORY.md",
+      "blob": "46916f7018ab90d2c046d8de76846fca30de4c41"
+    },
+    {
+      "path": "05-knowledge/results/ternary_berggren_20260925.md",
+      "blob": "bd087667f4b2c8b543ce2f5ad693aaae046f44da"
+    },
+    {
+      "path": "05-knowledge/results/ternary_bridge_20260925.md",
+      "blob": "03a7103962766adb017280d538db27681999dced"
+    },
+    {
+      "path": "05-knowledge/results/ternary_integer_returns_20261029/RANKS_AND_CONNECTIONS.md",
+      "blob": "ea3d1bb0f920aa285807f77a8aa196c66984af1c"
+    }
+  ]
+}

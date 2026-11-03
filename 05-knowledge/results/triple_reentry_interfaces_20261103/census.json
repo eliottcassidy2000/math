@@ -1,0 +1,129 @@
+[
+  {
+    "minima": {
+      "either": null,
+      "fixed": null,
+      "strong_fixed": null
+    },
+    "n": 1,
+    "response_sha256": "f4a6dfc8b18110a56e5af5808965d44f5320cbb762ffea935f8e997fd4057bef",
+    "strong_total": 1,
+    "total": 1,
+    "universe": "all labelled"
+  },
+  {
+    "minima": {
+      "either": null,
+      "fixed": null,
+      "strong_fixed": null
+    },
+    "n": 2,
+    "response_sha256": "89e2f93e4c84ee55e5ce067487a19448cff3d348ff8d400d30dea5c41806ed8b",
+    "strong_total": 0,
+    "total": 2,
+    "universe": "all labelled"
+  },
+  {
+    "minima": {
+      "either": null,
+      "fixed": null,
+      "strong_fixed": null
+    },
+    "n": 3,
+    "response_sha256": "0290ec6f6ecfddeed6b15a0766407e5565235a4c1da233fb7c6bf0fc2e0a93c8",
+    "strong_total": 2,
+    "total": 8,
+    "universe": "all labelled"
+  },
+  {
+    "minima": {
+      "either": null,
+      "fixed": null,
+      "strong_fixed": null
+    },
+    "n": 4,
+    "response_sha256": "c4b75f6e6967a3ae7b7f1c5d7b4378fd72be8874308dffe66f7e3733c938089e",
+    "strong_total": 24,
+    "total": 64,
+    "universe": "all labelled"
+  },
+  {
+    "minima": {
+      "either": null,
+      "fixed": {
+        "H": 3,
+        "code": 2,
+        "mask": 19,
+        "modulus": 255,
+        "rows": [
+          4,
+          1,
+          2,
+          7,
+          15
+        ],
+        "target": 13
+      },
+      "strong_fixed": null
+    },
+    "n": 5,
+    "response_sha256": "e8997e57d385ff131ba60d89fbb4f01a4779e3b8a393752653fd9e074e65f526",
+    "strong_total": 544,
+    "total": 1024,
+    "universe": "all labelled"
+  },
+  {
+    "minima": {
+      "either": {
+        "H": 27,
+        "code": 80,
+        "mask": 22,
+        "modulus": 72320955,
+        "rows": [
+          32,
+          9,
+          3,
+          5,
+          15,
+          30
+        ],
+        "target": 79
+      },
+      "fixed": {
+        "H": 27,
+        "code": 176,
+        "mask": 43,
+        "modulus": 1335,
+        "rows": [
+          32,
+          21,
+          1,
+          7,
+          13,
+          30
+        ],
+        "target": 71
+      },
+      "strong_fixed": {
+        "H": 27,
+        "code": 176,
+        "mask": 43,
+        "modulus": 1335,
+        "rows": [
+          32,
+          21,
+          1,
+          7,
+          13,
+          30
+        ],
+        "target": 71
+      }
+    },
+    "n": 6,
+    "response_sha256": "b57635aa60f866a43e24c475ace47f95919fa0130797c37dff54c5628370ed7d",
+    "strong_total": 22320,
+    "total": 22320,
+    "universe": "strong labelled"
+  }
+]
