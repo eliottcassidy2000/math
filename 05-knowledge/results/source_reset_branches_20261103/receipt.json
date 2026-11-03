@@ -1,0 +1,5595 @@
+{
+  "ancestry": {
+    "H31_sources": [
+      {
+        "children": [
+          {
+            "H": 95,
+            "kids": [
+              1779,
+              1780,
+              1781
+            ],
+            "roots": [
+              0,
+              3,
+              1,
+              5,
+              6
+            ],
+            "rows": [
+              10,
+              36,
+              1,
+              22,
+              7,
+              93,
+              159,
+              63
+            ]
+          }
+        ],
+        "source": {
+          "H": 31,
+          "kids": [
+            122,
+            123,
+            124,
+            125,
+            126,
+            127
+          ],
+          "roots": [
+            0,
+            3,
+            1
+          ],
+          "rows": [
+            10,
+            36,
+            1,
+            22,
+            7,
+            29
+          ]
+        }
+      },
+      {
+        "children": [
+          {
+            "H": 97,
+            "kids": [
+              1729,
+              1730,
+              1731,
+              1732,
+              1733
+            ],
+            "roots": [
+              0,
+              3,
+              0,
+              5,
+              3
+            ],
+            "rows": [
+              42,
+              4,
+              1,
+              150,
+              7,
+              94,
+              31,
+              119
+            ]
+          },
+          {
+            "H": 93,
+            "kids": [
+              2497,
+              2498,
+              2499
+            ],
+            "roots": [
+              0,
+              3,
+              0,
+              5,
+              5,
+              7
+            ],
+            "rows": [
+              42,
+              4,
+              1,
+              22,
+              7,
+              222,
+              31,
+              351,
+              127
+            ]
+          }
+        ],
+        "source": {
+          "H": 31,
+          "kids": [
+            739,
+            740,
+            741,
+            742,
+            743,
+            744,
+            745
+          ],
+          "roots": [
+            0,
+            3,
+            0,
+            5
+          ],
+          "rows": [
+            42,
+            4,
+            1,
+            22,
+            7,
+            94,
+            31
+          ]
+        }
+      },
+      {
+        "children": [
+          {
+            "H": 97,
+            "kids": [
+              2696,
+              2697,
+              2698,
+              2699
+            ],
+            "roots": [
+              0,
+              3,
+              4,
+              5,
+              5,
+              5
+            ],
+            "rows": [
+              10,
+              4,
+              1,
+              22,
+              39,
+              463,
+              31,
+              95,
+              223
+            ]
+          },
+          {
+            "H": 93,
+            "kids": [
+              2702,
+              2703,
+              2704
+            ],
+            "roots": [
+              0,
+              3,
+              4,
+              5,
+              5,
+              7
+            ],
+            "rows": [
+              10,
+              4,
+              1,
+              22,
+              39,
+              207,
+              31,
+              351,
+              127
+            ]
+          }
+        ],
+        "source": {
+          "H": 31,
+          "kids": [
+            889,
+            890,
+            891,
+            892,
+            893,
+            894,
+            895
+          ],
+          "roots": [
+            0,
+            3,
+            4,
+            5
+          ],
+          "rows": [
+            10,
+            4,
+            1,
+            22,
+            39,
+            79,
+            31
+          ]
+        }
+      }
+    ],
+    "histograms": {
+      "31": {
+        "2": 1,
+        "5": 2
+      },
+      "95": {
+        "0": 2,
+        "1": 4,
+        "2": 1,
+        "3": 2,
+        "5": 1,
+        "6": 1
+      },
+      "97": {
+        "0": 6,
+        "1": 6,
+        "2": 3,
+        "4": 1,
+        "5": 1
+      }
+    },
+    "sha256": "6a75a31cfdf2413be053acfa12d961a41745faec3dfa1194d28bbe94025a4c0b",
+    "stdout": "classes 2820 probes 25196 max_order 11 orders 3:1 4:1 5:4 6:20 7:120 8:750 9:1133 10:687 11:104\n31 2:1 5:2\n95 0:2 1:4 2:1 3:2 5:1 6:1\n97 0:6 1:6 2:3 4:1 5:1"
+  },
+  "cloning": {
+    "branches": [
+      {
+        "child": {
+          "H": 95,
+          "coefficients": {
+            "0": -2,
+            "1": -13,
+            "2": 18,
+            "3": 24
+          },
+          "kind": "child",
+          "source": 0,
+          "vertex": 3
+        },
+        "offset": 2,
+        "source": {
+          "H": 31,
+          "coefficients": {
+            "1": -5,
+            "2": 6,
+            "3": 8
+          },
+          "kind": "source",
+          "source": 0,
+          "vertex": 3
+        }
+      },
+      {
+        "child": {
+          "H": 95,
+          "coefficients": {
+            "0": -3,
+            "1": 5,
+            "2": 27,
+            "3": 12
+          },
+          "kind": "child",
+          "source": 0,
+          "vertex": 4
+        },
+        "offset": 2,
+        "source": {
+          "H": 31,
+          "coefficients": {
+            "0": -1,
+            "1": 1,
+            "2": 9,
+            "3": 4
+          },
+          "kind": "source",
+          "source": 0,
+          "vertex": 4
+        }
+      },
+      {
+        "child": {
+          "H": 97,
+          "coefficients": {
+            "0": -5,
+            "1": 31,
+            "2": 33
+          },
+          "kind": "child",
+          "source": 1,
+          "vertex": 1
+        },
+        "offset": 4,
+        "source": {
+          "H": 31,
+          "coefficients": {
+            "0": -1,
+            "1": 9,
+            "2": 11
+          },
+          "kind": "source",
+          "source": 1,
+          "vertex": 1
+        }
+      },
+      {
+        "child": {
+          "H": 93,
+          "coefficients": {
+            "0": -3,
+            "1": 27,
+            "2": 33
+          },
+          "kind": "child",
+          "source": 1,
+          "vertex": 1
+        },
+        "offset": 0,
+        "source": {
+          "H": 31,
+          "coefficients": {
+            "0": -1,
+            "1": 9,
+            "2": 11
+          },
+          "kind": "source",
+          "source": 1,
+          "vertex": 1
+        }
+      },
+      {
+        "child": {
+          "H": 93,
+          "coefficients": {
+            "0": -3,
+            "1": -33,
+            "2": 63
+          },
+          "kind": "child",
+          "source": 1,
+          "vertex": 2
+        },
+        "offset": 0,
+        "source": {
+          "H": 31,
+          "coefficients": {
+            "0": -1,
+            "1": -11,
+            "2": 21
+          },
+          "kind": "source",
+          "source": 1,
+          "vertex": 2
+        }
+      },
+      {
+        "child": {
+          "H": 93,
+          "coefficients": {
+            "0": -3,
+            "1": 3,
+            "2": 45
+          },
+          "kind": "child",
+          "source": 1,
+          "vertex": 3
+        },
+        "offset": 0,
+        "source": {
+          "H": 31,
+          "coefficients": {
+            "0": -1,
+            "1": 1,
+            "2": 15
+          },
+          "kind": "source",
+          "source": 1,
+          "vertex": 3
+        }
+      },
+      {
+        "child": {
+          "H": 93,
+          "coefficients": {
+            "0": -3,
+            "1": 3,
+            "2": 45
+          },
+          "kind": "child",
+          "source": 1,
+          "vertex": 4
+        },
+        "offset": 0,
+        "source": {
+          "H": 31,
+          "coefficients": {
+            "0": -1,
+            "1": 1,
+            "2": 15
+          },
+          "kind": "source",
+          "source": 1,
+          "vertex": 4
+        }
+      },
+      {
+        "child": {
+          "H": 93,
+          "coefficients": {
+            "0": -1,
+            "1": 27,
+            "2": 33
+          },
+          "kind": "child",
+          "source": 1,
+          "vertex": 6
+        },
+        "offset": 0,
+        "source": {
+          "H": 31,
+          "coefficients": {
+            "0": -1,
+            "1": 9,
+            "2": 11
+          },
+          "kind": "source",
+          "source": 1,
+          "vertex": 6
+        }
+      },
+      {
+        "child": {
+          "H": 97,
+          "coefficients": {
+            "0": -8,
+            "1": -29,
+            "2": 36,
+            "3": 18
+          },
+          "kind": "child",
+          "source": 2,
+          "vertex": 0
+        },
+        "offset": 4,
+        "source": {
+          "H": 31,
+          "coefficients": {
+            "0": -2,
+            "1": -11,
+            "2": 12,
+            "3": 6
+          },
+          "kind": "source",
+          "source": 2,
+          "vertex": 0
+        }
+      },
+      {
+        "child": {
+          "H": 93,
+          "coefficients": {
+            "0": -6,
+            "1": -33,
+            "2": 36,
+            "3": 18
+          },
+          "kind": "child",
+          "source": 2,
+          "vertex": 0
+        },
+        "offset": 0,
+        "source": {
+          "H": 31,
+          "coefficients": {
+            "0": -2,
+            "1": -11,
+            "2": 12,
+            "3": 6
+          },
+          "kind": "source",
+          "source": 2,
+          "vertex": 0
+        }
+      },
+      {
+        "child": {
+          "H": 93,
+          "coefficients": {
+            "0": -9,
+            "1": 27,
+            "2": 33
+          },
+          "kind": "child",
+          "source": 2,
+          "vertex": 1
+        },
+        "offset": 0,
+        "source": {
+          "H": 31,
+          "coefficients": {
+            "0": -3,
+            "1": 9,
+            "2": 11
+          },
+          "kind": "source",
+          "source": 2,
+          "vertex": 1
+        }
+      },
+      {
+        "child": {
+          "H": 93,
+          "coefficients": {
+            "0": -15,
+            "1": -9,
+            "2": 51
+          },
+          "kind": "child",
+          "source": 2,
+          "vertex": 2
+        },
+        "offset": 0,
+        "source": {
+          "H": 31,
+          "coefficients": {
+            "0": -5,
+            "1": -3,
+            "2": 17
+          },
+          "kind": "source",
+          "source": 2,
+          "vertex": 2
+        }
+      },
+      {
+        "child": {
+          "H": 93,
+          "coefficients": {
+            "0": -3,
+            "1": -9,
+            "2": 15,
+            "3": 24
+          },
+          "kind": "child",
+          "source": 2,
+          "vertex": 3
+        },
+        "offset": 0,
+        "source": {
+          "H": 31,
+          "coefficients": {
+            "0": -1,
+            "1": -3,
+            "2": 5,
+            "3": 8
+          },
+          "kind": "source",
+          "source": 2,
+          "vertex": 3
+        }
+      },
+      {
+        "child": {
+          "H": 93,
+          "coefficients": {
+            "0": -3,
+            "1": 27,
+            "2": 33
+          },
+          "kind": "child",
+          "source": 2,
+          "vertex": 6
+        },
+        "offset": 0,
+        "source": {
+          "H": 31,
+          "coefficients": {
+            "0": -3,
+            "1": 9,
+            "2": 11
+          },
+          "kind": "source",
+          "source": 2,
+          "vertex": 6
+        }
+      }
+    ],
+    "matches": [
+      [
+        {
+          "H": 31,
+          "coefficients": {
+            "0": -3,
+            "1": 9,
+            "2": 11
+          },
+          "kind": "source",
+          "source": 2,
+          "vertex": 1
+        },
+        {
+          "H": 31,
+          "coefficients": {
+            "0": -1,
+            "1": 9,
+            "2": 11
+          },
+          "kind": "source",
+          "source": 1,
+          "vertex": 1
+        }
+      ],
+      [
+        {
+          "H": 31,
+          "coefficients": {
+            "0": -3,
+            "1": 9,
+            "2": 11
+          },
+          "kind": "source",
+          "source": 2,
+          "vertex": 1
+        },
+        {
+          "H": 31,
+          "coefficients": {
+            "0": -1,
+            "1": 9,
+            "2": 11
+          },
+          "kind": "source",
+          "source": 1,
+          "vertex": 6
+        }
+      ],
+      [
+        {
+          "H": 31,
+          "coefficients": {
+            "0": -3,
+            "1": 9,
+            "2": 11
+          },
+          "kind": "source",
+          "source": 2,
+          "vertex": 6
+        },
+        {
+          "H": 31,
+          "coefficients": {
+            "0": -1,
+            "1": 9,
+            "2": 11
+          },
+          "kind": "source",
+          "source": 1,
+          "vertex": 1
+        }
+      ],
+      [
+        {
+          "H": 31,
+          "coefficients": {
+            "0": -3,
+            "1": 9,
+            "2": 11
+          },
+          "kind": "source",
+          "source": 2,
+          "vertex": 6
+        },
+        {
+          "H": 31,
+          "coefficients": {
+            "0": -1,
+            "1": 9,
+            "2": 11
+          },
+          "kind": "source",
+          "source": 1,
+          "vertex": 6
+        }
+      ]
+    ],
+    "records": [
+      {
+        "H": 31,
+        "coefficients": {
+          "0": 1,
+          "1": -11,
+          "2": 3,
+          "3": 12
+        },
+        "kind": "source",
+        "source": 0,
+        "vertex": 0
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -1,
+          "1": -11,
+          "2": 9,
+          "3": 8
+        },
+        "kind": "source",
+        "source": 0,
+        "vertex": 1
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -2,
+          "1": 3,
+          "2": 14
+        },
+        "kind": "source",
+        "source": 0,
+        "vertex": 2
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "1": -5,
+          "2": 6,
+          "3": 8
+        },
+        "kind": "source",
+        "source": 0,
+        "vertex": 3
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -1,
+          "1": 1,
+          "2": 9,
+          "3": 4
+        },
+        "kind": "source",
+        "source": 0,
+        "vertex": 4
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -4,
+          "1": -5,
+          "2": 18
+        },
+        "kind": "source",
+        "source": 0,
+        "vertex": 5
+      },
+      {
+        "H": 95,
+        "coefficients": {
+          "0": 3,
+          "1": -35,
+          "2": 11,
+          "3": 36
+        },
+        "kind": "child",
+        "source": 0,
+        "vertex": 0
+      },
+      {
+        "H": 95,
+        "coefficients": {
+          "0": 3,
+          "1": -35,
+          "2": 11,
+          "3": 36
+        },
+        "kind": "child",
+        "source": 0,
+        "vertex": 1
+      },
+      {
+        "H": 95,
+        "coefficients": {
+          "0": -6,
+          "1": 7,
+          "2": 44
+        },
+        "kind": "child",
+        "source": 0,
+        "vertex": 2
+      },
+      {
+        "H": 95,
+        "coefficients": {
+          "0": -2,
+          "1": -13,
+          "2": 18,
+          "3": 24
+        },
+        "kind": "child",
+        "source": 0,
+        "vertex": 3
+      },
+      {
+        "H": 95,
+        "coefficients": {
+          "0": -3,
+          "1": 5,
+          "2": 27,
+          "3": 12
+        },
+        "kind": "child",
+        "source": 0,
+        "vertex": 4
+      },
+      {
+        "H": 95,
+        "coefficients": {
+          "0": 9,
+          "1": -59,
+          "2": 23,
+          "3": 36
+        },
+        "kind": "child",
+        "source": 0,
+        "vertex": 5
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": 9,
+          "1": -9,
+          "2": -31,
+          "3": 26,
+          "4": 6
+        },
+        "kind": "source",
+        "source": 1,
+        "vertex": 0
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -1,
+          "1": 9,
+          "2": 11
+        },
+        "kind": "source",
+        "source": 1,
+        "vertex": 1
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -1,
+          "1": -11,
+          "2": 21
+        },
+        "kind": "source",
+        "source": 1,
+        "vertex": 2
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -1,
+          "1": 1,
+          "2": 15
+        },
+        "kind": "source",
+        "source": 1,
+        "vertex": 3
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -1,
+          "1": 1,
+          "2": 15
+        },
+        "kind": "source",
+        "source": 1,
+        "vertex": 4
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -1,
+          "1": -11,
+          "2": 21
+        },
+        "kind": "source",
+        "source": 1,
+        "vertex": 5
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -1,
+          "1": 9,
+          "2": 11
+        },
+        "kind": "source",
+        "source": 1,
+        "vertex": 6
+      },
+      {
+        "H": 97,
+        "coefficients": {
+          "0": 14,
+          "1": 7,
+          "2": -102,
+          "3": 50,
+          "4": 36
+        },
+        "kind": "child",
+        "source": 1,
+        "vertex": 0
+      },
+      {
+        "H": 97,
+        "coefficients": {
+          "0": -5,
+          "1": 31,
+          "2": 33
+        },
+        "kind": "child",
+        "source": 1,
+        "vertex": 1
+      },
+      {
+        "H": 97,
+        "coefficients": {
+          "0": -5,
+          "1": -25,
+          "2": 61
+        },
+        "kind": "child",
+        "source": 1,
+        "vertex": 2
+      },
+      {
+        "H": 97,
+        "coefficients": {
+          "0": 1,
+          "1": -29,
+          "2": 3,
+          "3": 40
+        },
+        "kind": "child",
+        "source": 1,
+        "vertex": 3
+      },
+      {
+        "H": 97,
+        "coefficients": {
+          "0": -2,
+          "1": 13,
+          "2": 42
+        },
+        "kind": "child",
+        "source": 1,
+        "vertex": 4
+      },
+      {
+        "H": 97,
+        "coefficients": {
+          "0": 4,
+          "1": -19,
+          "2": 10,
+          "3": 32
+        },
+        "kind": "child",
+        "source": 1,
+        "vertex": 5
+      },
+      {
+        "H": 97,
+        "coefficients": {
+          "0": -1,
+          "1": 3,
+          "2": 29,
+          "3": 12
+        },
+        "kind": "child",
+        "source": 1,
+        "vertex": 6
+      },
+      {
+        "H": 93,
+        "coefficients": {
+          "0": 17,
+          "1": 9,
+          "2": -123,
+          "3": 70,
+          "4": 30
+        },
+        "kind": "child",
+        "source": 1,
+        "vertex": 0
+      },
+      {
+        "H": 93,
+        "coefficients": {
+          "0": -3,
+          "1": 27,
+          "2": 33
+        },
+        "kind": "child",
+        "source": 1,
+        "vertex": 1
+      },
+      {
+        "H": 93,
+        "coefficients": {
+          "0": -3,
+          "1": -33,
+          "2": 63
+        },
+        "kind": "child",
+        "source": 1,
+        "vertex": 2
+      },
+      {
+        "H": 93,
+        "coefficients": {
+          "0": -3,
+          "1": 3,
+          "2": 45
+        },
+        "kind": "child",
+        "source": 1,
+        "vertex": 3
+      },
+      {
+        "H": 93,
+        "coefficients": {
+          "0": -3,
+          "1": 3,
+          "2": 45
+        },
+        "kind": "child",
+        "source": 1,
+        "vertex": 4
+      },
+      {
+        "H": 93,
+        "coefficients": {
+          "0": 12,
+          "1": -57,
+          "2": 12,
+          "3": 42
+        },
+        "kind": "child",
+        "source": 1,
+        "vertex": 5
+      },
+      {
+        "H": 93,
+        "coefficients": {
+          "0": -1,
+          "1": 27,
+          "2": 33
+        },
+        "kind": "child",
+        "source": 1,
+        "vertex": 6
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -2,
+          "1": -11,
+          "2": 12,
+          "3": 6
+        },
+        "kind": "source",
+        "source": 2,
+        "vertex": 0
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -3,
+          "1": 9,
+          "2": 11
+        },
+        "kind": "source",
+        "source": 2,
+        "vertex": 1
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -5,
+          "1": -3,
+          "2": 17
+        },
+        "kind": "source",
+        "source": 2,
+        "vertex": 2
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -1,
+          "1": -3,
+          "2": 5,
+          "3": 8
+        },
+        "kind": "source",
+        "source": 2,
+        "vertex": 3
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -2,
+          "1": -11,
+          "2": 12,
+          "3": 6
+        },
+        "kind": "source",
+        "source": 2,
+        "vertex": 4
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -5,
+          "1": -3,
+          "2": 17
+        },
+        "kind": "source",
+        "source": 2,
+        "vertex": 5
+      },
+      {
+        "H": 31,
+        "coefficients": {
+          "0": -3,
+          "1": 9,
+          "2": 11
+        },
+        "kind": "source",
+        "source": 2,
+        "vertex": 6
+      },
+      {
+        "H": 97,
+        "coefficients": {
+          "0": -8,
+          "1": -29,
+          "2": 36,
+          "3": 18
+        },
+        "kind": "child",
+        "source": 2,
+        "vertex": 0
+      },
+      {
+        "H": 97,
+        "coefficients": {
+          "0": -9,
+          "1": 27,
+          "2": 35
+        },
+        "kind": "child",
+        "source": 2,
+        "vertex": 1
+      },
+      {
+        "H": 97,
+        "coefficients": {
+          "0": -17,
+          "1": -9,
+          "2": 53
+        },
+        "kind": "child",
+        "source": 2,
+        "vertex": 2
+      },
+      {
+        "H": 97,
+        "coefficients": {
+          "0": -1,
+          "1": -9,
+          "2": 5,
+          "3": 32
+        },
+        "kind": "child",
+        "source": 2,
+        "vertex": 3
+      },
+      {
+        "H": 97,
+        "coefficients": {
+          "0": 4,
+          "1": -53,
+          "2": 12,
+          "3": 42
+        },
+        "kind": "child",
+        "source": 2,
+        "vertex": 4
+      },
+      {
+        "H": 97,
+        "coefficients": {
+          "0": -5,
+          "1": -69,
+          "2": 83
+        },
+        "kind": "child",
+        "source": 2,
+        "vertex": 5
+      },
+      {
+        "H": 97,
+        "coefficients": {
+          "1": 9,
+          "2": 44
+        },
+        "kind": "child",
+        "source": 2,
+        "vertex": 6
+      },
+      {
+        "H": 93,
+        "coefficients": {
+          "0": -6,
+          "1": -33,
+          "2": 36,
+          "3": 18
+        },
+        "kind": "child",
+        "source": 2,
+        "vertex": 0
+      },
+      {
+        "H": 93,
+        "coefficients": {
+          "0": -9,
+          "1": 27,
+          "2": 33
+        },
+        "kind": "child",
+        "source": 2,
+        "vertex": 1
+      },
+      {
+        "H": 93,
+        "coefficients": {
+          "0": -15,
+          "1": -9,
+          "2": 51
+        },
+        "kind": "child",
+        "source": 2,
+        "vertex": 2
+      },
+      {
+        "H": 93,
+        "coefficients": {
+          "0": -3,
+          "1": -9,
+          "2": 15,
+          "3": 24
+        },
+        "kind": "child",
+        "source": 2,
+        "vertex": 3
+      },
+      {
+        "H": 93,
+        "coefficients": {
+          "1": -33,
+          "2": 18,
+          "3": 30
+        },
+        "kind": "child",
+        "source": 2,
+        "vertex": 4
+      },
+      {
+        "H": 93,
+        "coefficients": {
+          "0": 8,
+          "1": -57,
+          "2": 24,
+          "3": 34
+        },
+        "kind": "child",
+        "source": 2,
+        "vertex": 5
+      },
+      {
+        "H": 93,
+        "coefficients": {
+          "0": -3,
+          "1": 27,
+          "2": 33
+        },
+        "kind": "child",
+        "source": 2,
+        "vertex": 6
+      }
+    ]
+  },
+  "hostile81_27": {
+    "H": [
+      462915,
+      462915
+    ],
+    "cyclic_triples": 67,
+    "groups": [
+      81,
+      27
+    ],
+    "port8_outdegree_one_after_sink": [
+      2390013,
+      1754919
+    ],
+    "rows": [
+      [
+        254,
+        244,
+        248,
+        242,
+        4064,
+        3904,
+        3968,
+        3872,
+        3599,
+        1039,
+        2063,
+        527
+      ],
+      [
+        254,
+        244,
+        248,
+        242,
+        4064,
+        3904,
+        3968,
+        3872,
+        15,
+        2319,
+        783,
+        1295
+      ]
+    ]
+  },
+  "module_age": {
+    "literal_profile_checks": 2565,
+    "rotations": [
+      {
+        "field": {
+          "alpha": [
+            2,
+            2
+          ],
+          "charge": 6,
+          "theta_exponent": 13
+        },
+        "k": 2,
+        "marked": 5,
+        "native_moves": 2,
+        "peak_order": 7,
+        "profile": [
+          15,
+          3,
+          9,
+          29
+        ],
+        "program": [
+          {
+            "arc": [
+              5,
+              4
+            ],
+            "birth_out": 32,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                5,
+                4,
+                1,
+                2,
+                6
+              ],
+              [
+                0,
+                3,
+                5,
+                6,
+                4,
+                1,
+                2
+              ]
+            ]
+          }
+        ],
+        "source": [
+          10,
+          4,
+          1,
+          54,
+          7,
+          23
+        ],
+        "state": [
+          15,
+          13,
+          16
+        ],
+        "target": [
+          10,
+          4,
+          1,
+          54,
+          39,
+          7
+        ]
+      },
+      {
+        "field": {
+          "alpha": [
+            6,
+            5
+          ],
+          "charge": 1,
+          "theta_exponent": 42
+        },
+        "k": 3,
+        "marked": 6,
+        "native_moves": 4,
+        "peak_order": 8,
+        "profile": [
+          27,
+          3,
+          15,
+          77
+        ],
+        "program": [
+          {
+            "arc": [
+              6,
+              4
+            ],
+            "birth_out": 64,
+            "inverse_case": false,
+            "paths": [
+              [
+                5,
+                0,
+                3,
+                6,
+                4,
+                1,
+                2,
+                7
+              ],
+              [
+                5,
+                0,
+                3,
+                6,
+                7,
+                4,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              6,
+              5
+            ],
+            "birth_out": 64,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                4,
+                6,
+                5,
+                1,
+                2,
+                7
+              ],
+              [
+                0,
+                3,
+                4,
+                6,
+                7,
+                5,
+                1,
+                2
+              ]
+            ]
+          }
+        ],
+        "source": [
+          10,
+          4,
+          1,
+          118,
+          7,
+          23,
+          55
+        ],
+        "state": [
+          27,
+          37,
+          40
+        ],
+        "target": [
+          10,
+          4,
+          1,
+          118,
+          71,
+          87,
+          7
+        ]
+      },
+      {
+        "field": {
+          "alpha": [
+            2,
+            1
+          ],
+          "charge": 1,
+          "theta_exponent": 35
+        },
+        "k": 4,
+        "marked": 7,
+        "native_moves": 6,
+        "peak_order": 9,
+        "profile": [
+          51,
+          3,
+          27,
+          209
+        ],
+        "program": [
+          {
+            "arc": [
+              7,
+              4
+            ],
+            "birth_out": 128,
+            "inverse_case": false,
+            "paths": [
+              [
+                6,
+                5,
+                0,
+                3,
+                7,
+                4,
+                1,
+                2,
+                8
+              ],
+              [
+                6,
+                5,
+                0,
+                3,
+                7,
+                8,
+                4,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              7,
+              5
+            ],
+            "birth_out": 128,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                6,
+                4,
+                7,
+                5,
+                1,
+                2,
+                8
+              ],
+              [
+                0,
+                3,
+                6,
+                4,
+                7,
+                8,
+                5,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              7,
+              6
+            ],
+            "birth_out": 128,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                4,
+                7,
+                6,
+                5,
+                1,
+                2,
+                8
+              ],
+              [
+                0,
+                3,
+                4,
+                7,
+                8,
+                6,
+                5,
+                1,
+                2
+              ]
+            ]
+          }
+        ],
+        "source": [
+          10,
+          4,
+          1,
+          246,
+          7,
+          23,
+          55,
+          119
+        ],
+        "state": [
+          51,
+          103,
+          106
+        ],
+        "target": [
+          10,
+          4,
+          1,
+          246,
+          135,
+          151,
+          183,
+          7
+        ]
+      },
+      {
+        "field": {
+          "alpha": [
+            0,
+            5
+          ],
+          "charge": 3,
+          "theta_exponent": 9
+        },
+        "k": 5,
+        "marked": 8,
+        "native_moves": 8,
+        "peak_order": 10,
+        "profile": [
+          99,
+          3,
+          51,
+          581
+        ],
+        "program": [
+          {
+            "arc": [
+              8,
+              4
+            ],
+            "birth_out": 256,
+            "inverse_case": false,
+            "paths": [
+              [
+                7,
+                6,
+                5,
+                0,
+                3,
+                8,
+                4,
+                1,
+                2,
+                9
+              ],
+              [
+                7,
+                6,
+                5,
+                0,
+                3,
+                8,
+                9,
+                4,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              8,
+              5
+            ],
+            "birth_out": 256,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                7,
+                6,
+                4,
+                8,
+                5,
+                1,
+                2,
+                9
+              ],
+              [
+                0,
+                3,
+                7,
+                6,
+                4,
+                8,
+                9,
+                5,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              8,
+              6
+            ],
+            "birth_out": 256,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                7,
+                4,
+                8,
+                6,
+                5,
+                1,
+                2,
+                9
+              ],
+              [
+                0,
+                3,
+                7,
+                4,
+                8,
+                9,
+                6,
+                5,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              8,
+              7
+            ],
+            "birth_out": 256,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                4,
+                8,
+                7,
+                6,
+                5,
+                1,
+                2,
+                9
+              ],
+              [
+                0,
+                3,
+                4,
+                8,
+                9,
+                7,
+                6,
+                5,
+                1,
+                2
+              ]
+            ]
+          }
+        ],
+        "source": [
+          10,
+          4,
+          1,
+          502,
+          7,
+          23,
+          55,
+          119,
+          247
+        ],
+        "state": [
+          99,
+          289,
+          292
+        ],
+        "target": [
+          10,
+          4,
+          1,
+          502,
+          263,
+          279,
+          311,
+          375,
+          7
+        ]
+      },
+      {
+        "field": {
+          "alpha": [
+            0,
+            0
+          ],
+          "charge": 6,
+          "theta_exponent": null
+        },
+        "k": 6,
+        "marked": 9,
+        "native_moves": 10,
+        "peak_order": 11,
+        "profile": [
+          195,
+          3,
+          99,
+          1649
+        ],
+        "program": [
+          {
+            "arc": [
+              9,
+              4
+            ],
+            "birth_out": 512,
+            "inverse_case": false,
+            "paths": [
+              [
+                8,
+                7,
+                6,
+                5,
+                0,
+                3,
+                9,
+                4,
+                1,
+                2,
+                10
+              ],
+              [
+                8,
+                7,
+                6,
+                5,
+                0,
+                3,
+                9,
+                10,
+                4,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              9,
+              5
+            ],
+            "birth_out": 512,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                8,
+                7,
+                6,
+                4,
+                9,
+                5,
+                1,
+                2,
+                10
+              ],
+              [
+                0,
+                3,
+                8,
+                7,
+                6,
+                4,
+                9,
+                10,
+                5,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              9,
+              6
+            ],
+            "birth_out": 512,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                8,
+                7,
+                4,
+                9,
+                6,
+                5,
+                1,
+                2,
+                10
+              ],
+              [
+                0,
+                3,
+                8,
+                7,
+                4,
+                9,
+                10,
+                6,
+                5,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              9,
+              7
+            ],
+            "birth_out": 512,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                8,
+                4,
+                9,
+                7,
+                6,
+                5,
+                1,
+                2,
+                10
+              ],
+              [
+                0,
+                3,
+                8,
+                4,
+                9,
+                10,
+                7,
+                6,
+                5,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              9,
+              8
+            ],
+            "birth_out": 512,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                4,
+                9,
+                8,
+                7,
+                6,
+                5,
+                1,
+                2,
+                10
+              ],
+              [
+                0,
+                3,
+                4,
+                9,
+                10,
+                8,
+                7,
+                6,
+                5,
+                1,
+                2
+              ]
+            ]
+          }
+        ],
+        "source": [
+          10,
+          4,
+          1,
+          1014,
+          7,
+          23,
+          55,
+          119,
+          247,
+          503
+        ],
+        "state": [
+          195,
+          823,
+          826
+        ],
+        "target": [
+          10,
+          4,
+          1,
+          1014,
+          519,
+          535,
+          567,
+          631,
+          759,
+          7
+        ]
+      },
+      {
+        "field": {
+          "alpha": [
+            5,
+            0
+          ],
+          "charge": 2,
+          "theta_exponent": 8
+        },
+        "k": 7,
+        "marked": 10,
+        "native_moves": 12,
+        "peak_order": 12,
+        "profile": [
+          387,
+          3,
+          195,
+          4757
+        ],
+        "program": [
+          {
+            "arc": [
+              10,
+              4
+            ],
+            "birth_out": 1024,
+            "inverse_case": false,
+            "paths": [
+              [
+                9,
+                8,
+                7,
+                6,
+                5,
+                0,
+                3,
+                10,
+                4,
+                1,
+                2,
+                11
+              ],
+              [
+                9,
+                8,
+                7,
+                6,
+                5,
+                0,
+                3,
+                10,
+                11,
+                4,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              10,
+              5
+            ],
+            "birth_out": 1024,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                9,
+                8,
+                7,
+                6,
+                4,
+                10,
+                5,
+                1,
+                2,
+                11
+              ],
+              [
+                0,
+                3,
+                9,
+                8,
+                7,
+                6,
+                4,
+                10,
+                11,
+                5,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              10,
+              6
+            ],
+            "birth_out": 1024,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                9,
+                8,
+                7,
+                4,
+                10,
+                6,
+                5,
+                1,
+                2,
+                11
+              ],
+              [
+                0,
+                3,
+                9,
+                8,
+                7,
+                4,
+                10,
+                11,
+                6,
+                5,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              10,
+              7
+            ],
+            "birth_out": 1024,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                9,
+                8,
+                4,
+                10,
+                7,
+                6,
+                5,
+                1,
+                2,
+                11
+              ],
+              [
+                0,
+                3,
+                9,
+                8,
+                4,
+                10,
+                11,
+                7,
+                6,
+                5,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              10,
+              8
+            ],
+            "birth_out": 1024,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                9,
+                4,
+                10,
+                8,
+                7,
+                6,
+                5,
+                1,
+                2,
+                11
+              ],
+              [
+                0,
+                3,
+                9,
+                4,
+                10,
+                11,
+                8,
+                7,
+                6,
+                5,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "arc": [
+              10,
+              9
+            ],
+            "birth_out": 1024,
+            "inverse_case": false,
+            "paths": [
+              [
+                0,
+                3,
+                4,
+                10,
+                9,
+                8,
+                7,
+                6,
+                5,
+                1,
+                2,
+                11
+              ],
+              [
+                0,
+                3,
+                4,
+                10,
+                11,
+                9,
+                8,
+                7,
+                6,
+                5,
+                1,
+                2
+              ]
+            ]
+          }
+        ],
+        "source": [
+          10,
+          4,
+          1,
+          2038,
+          7,
+          23,
+          55,
+          119,
+          247,
+          503,
+          1015
+        ],
+        "state": [
+          387,
+          2377,
+          2380
+        ],
+        "target": [
+          10,
+          4,
+          1,
+          2038,
+          1031,
+          1047,
+          1079,
+          1143,
+          1271,
+          1527,
+          7
+        ]
+      }
+    ],
+    "strong_position_checks": 927
+  },
+  "native": {
+    "clone_template_scans": {
+      "32": "LIFT vertex 7 branches 0 0 coeff 0 -15 56\npath 4 1 2 5 7 3 6 0\npath 0 5 7 3 2 6 4 1\ntarget 98 0 67 55 39 198 26 95\nplus2\nplus4\nLIFT vertex 7 branches 0 0 coeff 0 -15 56\npath 4 5 7 3 6 2 0 1\npath 1 6 4 5 7 3 2 0\ntarget 0 69 97 55 39 195 25 95\nplus2\nplus4\nTOTAL pairs 17857 neutral 156 branching 10 inactive 6 clone_lifts 2",
+      "40": "TOTAL pairs 17385 neutral 155 branching 6 inactive 5 clone_lifts 0"
+    },
+    "ear_tree_sha256": "94d032507e6567c80085d8f31fa632097be3c255e9268d4d6d61edaacdef9634",
+    "one_ear_census": "nodes 13 cut evaluations 7296 root survival 3\n0 3 1\n1 1 4\n2 1 4\n3 1 4",
+    "resets": [
+      {
+        "H": 97,
+        "branches": {
+          "2": {
+            "H": 293,
+            "core_cut": 12,
+            "cut": 140,
+            "observer": {
+              "Q4": {
+                "q0": {
+                  "field": {
+                    "alpha": [
+                      6,
+                      5
+                    ],
+                    "charge": 0,
+                    "theta_exponent": 42
+                  },
+                  "state": [
+                    2693,
+                    3681,
+                    3981
+                  ]
+                },
+                "q1": {
+                  "field": {
+                    "alpha": [
+                      6,
+                      0
+                    ],
+                    "charge": 6,
+                    "theta_exponent": 24
+                  },
+                  "state": [
+                    4479,
+                    2488,
+                    3388
+                  ]
+                },
+                "q2": {
+                  "field": {
+                    "alpha": [
+                      4,
+                      0
+                    ],
+                    "charge": 4,
+                    "theta_exponent": 16
+                  },
+                  "state": [
+                    3483,
+                    2788,
+                    3381
+                  ]
+                },
+                "q4": {
+                  "field": {
+                    "alpha": [
+                      0,
+                      0
+                    ],
+                    "charge": 5,
+                    "theta_exponent": null
+                  },
+                  "state": [
+                    2679,
+                    3585,
+                    3885
+                  ]
+                },
+                "q5": {
+                  "field": {
+                    "alpha": [
+                      3,
+                      2
+                    ],
+                    "charge": 0,
+                    "theta_exponent": 44
+                  },
+                  "state": [
+                    4083,
+                    2481,
+                    3292
+                  ]
+                }
+              },
+              "field": {
+                "alpha": [
+                  6,
+                  2
+                ],
+                "charge": 4,
+                "theta_exponent": 15
+              },
+              "state": [
+                293,
+                109,
+                191
+              ]
+            },
+            "rows": [
+              4,
+              65,
+              330,
+              339,
+              39,
+              15,
+              49,
+              383,
+              115
+            ],
+            "strong_rows": [
+              4,
+              65,
+              202,
+              211,
+              39,
+              15,
+              49,
+              115
+            ]
+          },
+          "4": {
+            "H": 295,
+            "core_cut": 61,
+            "cut": 189,
+            "observer": {
+              "Q4": {
+                "q0": {
+                  "field": {
+                    "alpha": [
+                      5,
+                      4
+                    ],
+                    "charge": 6,
+                    "theta_exponent": 47
+                  },
+                  "state": [
+                    3279,
+                    4328,
+                    4701
+                  ]
+                },
+                "q1": {
+                  "field": {
+                    "alpha": [
+                      1,
+                      1
+                    ],
+                    "charge": 5,
+                    "theta_exponent": 29
+                  },
+                  "state": [
+                    5361,
+                    2914,
+                    4033
+                  ]
+                },
+                "q2": {
+                  "field": {
+                    "alpha": [
+                      5,
+                      0
+                    ],
+                    "charge": 2,
+                    "theta_exponent": 8
+                  },
+                  "state": [
+                    4041,
+                    3287,
+                    3955
+                  ]
+                },
+                "q4": {
+                  "field": {
+                    "alpha": [
+                      5,
+                      6
+                    ],
+                    "charge": 2,
+                    "theta_exponent": 11
+                  },
+                  "state": [
+                    3123,
+                    4127,
+                    4500
+                  ]
+                },
+                "q5": {
+                  "field": {
+                    "alpha": [
+                      6,
+                      3
+                    ],
+                    "charge": 3,
+                    "theta_exponent": 27
+                  },
+                  "state": [
+                    4787,
+                    2836,
+                    3832
+                  ]
+                }
+              },
+              "field": {
+                "alpha": [
+                  4,
+                  6
+                ],
+                "charge": 2,
+                "theta_exponent": 7
+              },
+              "state": [
+                295,
+                164,
+                209
+              ]
+            },
+            "rows": [
+              260,
+              65,
+              330,
+              339,
+              295,
+              271,
+              49,
+              383,
+              66
+            ],
+            "strong_rows": [
+              132,
+              65,
+              202,
+              211,
+              167,
+              143,
+              49,
+              66
+            ]
+          }
+        },
+        "deleted_universal_vertices": [
+          {
+            "kind": "source",
+            "name": 7
+          }
+        ],
+        "initial_cut": 32,
+        "intermediate_counts": [
+          97,
+          359,
+          97
+        ],
+        "paths": [
+          [
+            3,
+            4,
+            6,
+            2,
+            5,
+            7,
+            0,
+            1
+          ],
+          [
+            7,
+            0,
+            2,
+            1,
+            6,
+            5,
+            3,
+            4
+          ]
+        ],
+        "retained_names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "search": "SUCCESS H 97 probes 2648 steps 2\npath 3 4 6 2 5 7 0 1\npath 7 0 2 1 6 5 3 4\ntarget 4 65 74 83 39 15 49 127\nplus2 140\nplus4 189",
+        "source": [
+          2,
+          4,
+          41,
+          115,
+          103,
+          195,
+          7,
+          95
+        ],
+        "strong_core": [
+          4,
+          65,
+          74,
+          83,
+          39,
+          15,
+          49
+        ],
+        "strong_search": "NO_SUCCESS H 97 probes 13944 radius 2",
+        "target": [
+          4,
+          65,
+          74,
+          83,
+          39,
+          15,
+          49,
+          127
+        ],
+        "transport": [
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    1,
+                    0
+                  ],
+                  "charge": 3,
+                  "theta_exponent": 0
+                },
+                "state": [
+                  1081,
+                  1417,
+                  1540
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    2,
+                    4
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 2
+                },
+                "state": [
+                  1767,
+                  951,
+                  1320
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    2,
+                    6
+                  ],
+                  "charge": 5,
+                  "theta_exponent": 36
+                },
+                "state": [
+                  1313,
+                  1074,
+                  1294
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    6,
+                    6
+                  ],
+                  "charge": 1,
+                  "theta_exponent": 5
+                },
+                "state": [
+                  1029,
+                  1332,
+                  1455
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    2,
+                    3
+                  ],
+                  "charge": 2,
+                  "theta_exponent": 23
+                },
+                "state": [
+                  1559,
+                  925,
+                  1235
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                2,
+                1
+              ],
+              "charge": 5,
+              "theta_exponent": 35
+            },
+            "state": [
+              97,
+              45,
+              78
+            ]
+          },
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    4,
+                    1
+                  ],
+                  "charge": 3,
+                  "theta_exponent": 34
+                },
+                "state": [
+                  5359,
+                  6733,
+                  7358
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    4,
+                    4
+                  ],
+                  "charge": 5,
+                  "theta_exponent": 45
+                },
+                "state": [
+                  8577,
+                  4499,
+                  6374
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    5,
+                    4
+                  ],
+                  "charge": 3,
+                  "theta_exponent": 47
+                },
+                "state": [
+                  6139,
+                  5124,
+                  6108
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    6,
+                    5
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 42
+                },
+                "state": [
+                  4827,
+                  6170,
+                  6795
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    3,
+                    1
+                  ],
+                  "charge": 3,
+                  "theta_exponent": 31
+                },
+                "state": [
+                  7389,
+                  4233,
+                  5811
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                1,
+                6
+              ],
+              "charge": 3,
+              "theta_exponent": 46
+            },
+            "state": [
+              359,
+              297,
+              328
+            ]
+          },
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    3,
+                    3
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 21
+                },
+                "state": [
+                  905,
+                  1232,
+                  1333
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    1,
+                    1
+                  ],
+                  "charge": 4,
+                  "theta_exponent": 29
+                },
+                "state": [
+                  1503,
+                  832,
+                  1135
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    4,
+                    4
+                  ],
+                  "charge": 4,
+                  "theta_exponent": 45
+                },
+                "state": [
+                  1163,
+                  933,
+                  1131
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    5,
+                    1
+                  ],
+                  "charge": 0,
+                  "theta_exponent": 12
+                },
+                "state": [
+                  897,
+                  1195,
+                  1296
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    6,
+                    6
+                  ],
+                  "charge": 1,
+                  "theta_exponent": 5
+                },
+                "state": [
+                  1365,
+                  828,
+                  1098
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                3,
+                2
+              ],
+              "charge": 4,
+              "theta_exponent": 44
+            },
+            "state": [
+              97,
+              36,
+              65
+            ]
+          },
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    3,
+                    3
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 21
+                },
+                "state": [
+                  905,
+                  1232,
+                  1333
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    1,
+                    1
+                  ],
+                  "charge": 4,
+                  "theta_exponent": 29
+                },
+                "state": [
+                  1503,
+                  832,
+                  1135
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    4,
+                    4
+                  ],
+                  "charge": 4,
+                  "theta_exponent": 45
+                },
+                "state": [
+                  1163,
+                  933,
+                  1131
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    5,
+                    1
+                  ],
+                  "charge": 0,
+                  "theta_exponent": 12
+                },
+                "state": [
+                  897,
+                  1195,
+                  1296
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    6,
+                    6
+                  ],
+                  "charge": 1,
+                  "theta_exponent": 5
+                },
+                "state": [
+                  1365,
+                  828,
+                  1098
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                3,
+                2
+              ],
+              "charge": 4,
+              "theta_exponent": 44
+            },
+            "state": [
+              97,
+              36,
+              65
+            ]
+          }
+        ]
+      },
+      {
+        "H": 95,
+        "branches": {
+          "2": {
+            "H": 287,
+            "core_cut": 120,
+            "cut": 120,
+            "observer": {
+              "Q4": {
+                "q0": {
+                  "field": {
+                    "alpha": [
+                      0,
+                      6
+                    ],
+                    "charge": 0,
+                    "theta_exponent": 25
+                  },
+                  "state": [
+                    2743,
+                    3703,
+                    4010
+                  ]
+                },
+                "q1": {
+                  "field": {
+                    "alpha": [
+                      4,
+                      0
+                    ],
+                    "charge": 2,
+                    "theta_exponent": 16
+                  },
+                  "state": [
+                    4545,
+                    2495,
+                    3416
+                  ]
+                },
+                "q2": {
+                  "field": {
+                    "alpha": [
+                      3,
+                      1
+                    ],
+                    "charge": 2,
+                    "theta_exponent": 31
+                  },
+                  "state": [
+                    3475,
+                    2802,
+                    3396
+                  ]
+                },
+                "q4": {
+                  "field": {
+                    "alpha": [
+                      0,
+                      4
+                    ],
+                    "charge": 4,
+                    "theta_exponent": 17
+                  },
+                  "state": [
+                    2703,
+                    3554,
+                    3861
+                  ]
+                },
+                "q5": {
+                  "field": {
+                    "alpha": [
+                      2,
+                      5
+                    ],
+                    "charge": 3,
+                    "theta_exponent": 30
+                  },
+                  "state": [
+                    4089,
+                    2475,
+                    3267
+                  ]
+                }
+              },
+              "field": {
+                "alpha": [
+                  2,
+                  5
+                ],
+                "charge": 2,
+                "theta_exponent": 30
+              },
+              "state": [
+                287,
+                99,
+                208
+              ]
+            },
+            "rows": [
+              4,
+              129,
+              34,
+              375,
+              487,
+              323,
+              263,
+              109,
+              135
+            ],
+            "strong_rows": [
+              4,
+              129,
+              34,
+              375,
+              487,
+              323,
+              263,
+              109,
+              135
+            ]
+          },
+          "4": {
+            "H": 289,
+            "core_cut": 158,
+            "cut": 158,
+            "observer": {
+              "Q4": {
+                "q0": {
+                  "field": {
+                    "alpha": [
+                      0,
+                      3
+                    ],
+                    "charge": 4,
+                    "theta_exponent": 41
+                  },
+                  "state": [
+                    2737,
+                    3708,
+                    4014
+                  ]
+                },
+                "q1": {
+                  "field": {
+                    "alpha": [
+                      2,
+                      3
+                    ],
+                    "charge": 0,
+                    "theta_exponent": 23
+                  },
+                  "state": [
+                    4539,
+                    2501,
+                    3419
+                  ]
+                },
+                "q2": {
+                  "field": {
+                    "alpha": [
+                      5,
+                      0
+                    ],
+                    "charge": 3,
+                    "theta_exponent": 8
+                  },
+                  "state": [
+                    3489,
+                    2807,
+                    3402
+                  ]
+                },
+                "q4": {
+                  "field": {
+                    "alpha": [
+                      1,
+                      4
+                    ],
+                    "charge": 4,
+                    "theta_exponent": 3
+                  },
+                  "state": [
+                    2703,
+                    3576,
+                    3882
+                  ]
+                },
+                "q5": {
+                  "field": {
+                    "alpha": [
+                      0,
+                      4
+                    ],
+                    "charge": 2,
+                    "theta_exponent": 17
+                  },
+                  "state": [
+                    4101,
+                    2484,
+                    3287
+                  ]
+                }
+              },
+              "field": {
+                "alpha": [
+                  4,
+                  6
+                ],
+                "charge": 3,
+                "theta_exponent": 7
+              },
+              "state": [
+                289,
+                104,
+                202
+              ]
+            },
+            "rows": [
+              4,
+              385,
+              290,
+              375,
+              487,
+              67,
+              7,
+              365,
+              97
+            ],
+            "strong_rows": [
+              4,
+              385,
+              290,
+              375,
+              487,
+              67,
+              7,
+              365,
+              97
+            ]
+          }
+        },
+        "deleted_universal_vertices": [],
+        "initial_cut": 40,
+        "intermediate_counts": [
+          95,
+          157,
+          95
+        ],
+        "paths": [
+          [
+            2,
+            3,
+            5,
+            7,
+            4,
+            6,
+            0,
+            1
+          ],
+          [
+            4,
+            6,
+            0,
+            2,
+            1,
+            7,
+            3,
+            5
+          ]
+        ],
+        "retained_names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "search": "SUCCESS H 95 probes 597 steps 2\npath 2 3 5 7 4 6 0 1\npath 4 6 0 2 1 7 3 5\ntarget 4 129 34 119 231 67 7 109\nplus2 120\nplus4 158",
+        "source": [
+          2,
+          4,
+          41,
+          243,
+          103,
+          195,
+          7,
+          87
+        ],
+        "strong_core": [
+          4,
+          129,
+          34,
+          119,
+          231,
+          67,
+          7,
+          109
+        ],
+        "strong_search": "SUCCESS H 95 probes 597 steps 2\npath 2 3 5 7 4 6 0 1\npath 4 6 0 2 1 7 3 5\ntarget 4 129 34 119 231 67 7 109\nplus2 120\nplus4 158",
+        "target": [
+          4,
+          129,
+          34,
+          119,
+          231,
+          67,
+          7,
+          109
+        ],
+        "transport": [
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    5,
+                    1
+                  ],
+                  "charge": 5,
+                  "theta_exponent": 12
+                },
+                "state": [
+                  1063,
+                  1392,
+                  1513
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    6,
+                    2
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 15
+                },
+                "state": [
+                  1737,
+                  934,
+                  1297
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    0,
+                    4
+                  ],
+                  "charge": 4,
+                  "theta_exponent": 17
+                },
+                "state": [
+                  1289,
+                  1055,
+                  1271
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    3,
+                    0
+                  ],
+                  "charge": 3,
+                  "theta_exponent": 40
+                },
+                "state": [
+                  1011,
+                  1307,
+                  1428
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    0,
+                    1
+                  ],
+                  "charge": 4,
+                  "theta_exponent": 1
+                },
+                "state": [
+                  1531,
+                  908,
+                  1212
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                4,
+                0
+              ],
+              "charge": 4,
+              "theta_exponent": 16
+            },
+            "state": [
+              95,
+              44,
+              77
+            ]
+          },
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    0,
+                    6
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 25
+                },
+                "state": [
+                  5997,
+                  6829,
+                  7559
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    4,
+                    1
+                  ],
+                  "charge": 4,
+                  "theta_exponent": 34
+                },
+                "state": [
+                  9231,
+                  4482,
+                  6672
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    3,
+                    2
+                  ],
+                  "charge": 5,
+                  "theta_exponent": 44
+                },
+                "state": [
+                  5887,
+                  5212,
+                  6099
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    5,
+                    0
+                  ],
+                  "charge": 0,
+                  "theta_exponent": 8
+                },
+                "state": [
+                  4851,
+                  5675,
+                  6405
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    4,
+                    2
+                  ],
+                  "charge": 2,
+                  "theta_exponent": 19
+                },
+                "state": [
+                  7347,
+                  3909,
+                  5518
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                3,
+                5
+              ],
+              "charge": 5,
+              "theta_exponent": 43
+            },
+            "state": [
+              157,
+              361,
+              369
+            ]
+          },
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    2,
+                    6
+                  ],
+                  "charge": 4,
+                  "theta_exponent": 36
+                },
+                "state": [
+                  927,
+                  1246,
+                  1350
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    1,
+                    3
+                  ],
+                  "charge": 4,
+                  "theta_exponent": 4
+                },
+                "state": [
+                  1533,
+                  839,
+                  1151
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    0,
+                    1
+                  ],
+                  "charge": 4,
+                  "theta_exponent": 1
+                },
+                "state": [
+                  1167,
+                  943,
+                  1142
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    1,
+                    1
+                  ],
+                  "charge": 5,
+                  "theta_exponent": 29
+                },
+                "state": [
+                  909,
+                  1192,
+                  1296
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    3,
+                    5
+                  ],
+                  "charge": 5,
+                  "theta_exponent": 43
+                },
+                "state": [
+                  1375,
+                  830,
+                  1097
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                1,
+                0
+              ],
+              "charge": 4,
+              "theta_exponent": 0
+            },
+            "state": [
+              95,
+              34,
+              70
+            ]
+          },
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    2,
+                    6
+                  ],
+                  "charge": 4,
+                  "theta_exponent": 36
+                },
+                "state": [
+                  927,
+                  1246,
+                  1350
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    1,
+                    3
+                  ],
+                  "charge": 4,
+                  "theta_exponent": 4
+                },
+                "state": [
+                  1533,
+                  839,
+                  1151
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    0,
+                    1
+                  ],
+                  "charge": 4,
+                  "theta_exponent": 1
+                },
+                "state": [
+                  1167,
+                  943,
+                  1142
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    1,
+                    1
+                  ],
+                  "charge": 5,
+                  "theta_exponent": 29
+                },
+                "state": [
+                  909,
+                  1192,
+                  1296
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    3,
+                    5
+                  ],
+                  "charge": 5,
+                  "theta_exponent": 43
+                },
+                "state": [
+                  1375,
+                  830,
+                  1097
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                1,
+                0
+              ],
+              "charge": 4,
+              "theta_exponent": 0
+            },
+            "state": [
+              95,
+              34,
+              70
+            ]
+          }
+        ]
+      },
+      {
+        "H": 95,
+        "branches": {
+          "2": {
+            "H": 287,
+            "core_cut": 184,
+            "cut": 184,
+            "observer": {
+              "Q4": {
+                "q0": {
+                  "field": {
+                    "alpha": [
+                      4,
+                      1
+                    ],
+                    "charge": 6,
+                    "theta_exponent": 34
+                  },
+                  "state": [
+                    3143,
+                    4131,
+                    4488
+                  ]
+                },
+                "q1": {
+                  "field": {
+                    "alpha": [
+                      4,
+                      1
+                    ],
+                    "charge": 6,
+                    "theta_exponent": 34
+                  },
+                  "state": [
+                    5145,
+                    2773,
+                    3844
+                  ]
+                },
+                "q2": {
+                  "field": {
+                    "alpha": [
+                      5,
+                      1
+                    ],
+                    "charge": 1,
+                    "theta_exponent": 12
+                  },
+                  "state": [
+                    3831,
+                    3130,
+                    3774
+                  ]
+                },
+                "q4": {
+                  "field": {
+                    "alpha": [
+                      5,
+                      3
+                    ],
+                    "charge": 4,
+                    "theta_exponent": 26
+                  },
+                  "state": [
+                    3003,
+                    3888,
+                    4245
+                  ]
+                },
+                "q5": {
+                  "field": {
+                    "alpha": [
+                      4,
+                      3
+                    ],
+                    "charge": 6,
+                    "theta_exponent": 14
+                  },
+                  "state": [
+                    4545,
+                    2703,
+                    3601
+                  ]
+                }
+              },
+              "field": {
+                "alpha": [
+                  5,
+                  6
+                ],
+                "charge": 1,
+                "theta_exponent": 11
+              },
+              "state": [
+                287,
+                127,
+                230
+              ]
+            },
+            "rows": [
+              2,
+              128,
+              163,
+              359,
+              463,
+              467,
+              135,
+              265,
+              71
+            ],
+            "strong_rows": [
+              2,
+              128,
+              163,
+              359,
+              463,
+              467,
+              135,
+              265,
+              71
+            ]
+          },
+          "4": {
+            "H": 289,
+            "core_cut": 84,
+            "cut": 84,
+            "observer": {
+              "Q4": {
+                "q0": {
+                  "field": {
+                    "alpha": [
+                      5,
+                      1
+                    ],
+                    "charge": 1,
+                    "theta_exponent": 12
+                  },
+                  "state": [
+                    3089,
+                    4082,
+                    4432
+                  ]
+                },
+                "q1": {
+                  "field": {
+                    "alpha": [
+                      6,
+                      6
+                    ],
+                    "charge": 0,
+                    "theta_exponent": 5
+                  },
+                  "state": [
+                    5067,
+                    2743,
+                    3793
+                  ]
+                },
+                "q2": {
+                  "field": {
+                    "alpha": [
+                      0,
+                      1
+                    ],
+                    "charge": 2,
+                    "theta_exponent": 1
+                  },
+                  "state": [
+                    3797,
+                    3093,
+                    3732
+                  ]
+                },
+                "q4": {
+                  "field": {
+                    "alpha": [
+                      2,
+                      5
+                    ],
+                    "charge": 1,
+                    "theta_exponent": 30
+                  },
+                  "state": [
+                    2967,
+                    3862,
+                    4212
+                  ]
+                },
+                "q5": {
+                  "field": {
+                    "alpha": [
+                      1,
+                      3
+                    ],
+                    "charge": 0,
+                    "theta_exponent": 4
+                  },
+                  "state": [
+                    4497,
+                    2682,
+                    3573
+                  ]
+                }
+              },
+              "field": {
+                "alpha": [
+                  1,
+                  0
+                ],
+                "charge": 2,
+                "theta_exponent": 0
+              },
+              "state": [
+                289,
+                126,
+                224
+              ]
+            },
+            "rows": [
+              2,
+              128,
+              419,
+              103,
+              463,
+              211,
+              391,
+              9,
+              171
+            ],
+            "strong_rows": [
+              2,
+              128,
+              419,
+              103,
+              463,
+              211,
+              391,
+              9,
+              171
+            ]
+          }
+        },
+        "deleted_universal_vertices": [],
+        "initial_cut": 61,
+        "intermediate_counts": [
+          95,
+          197,
+          95
+        ],
+        "paths": [
+          [
+            3,
+            4,
+            0,
+            7,
+            6,
+            1,
+            2,
+            5
+          ],
+          [
+            6,
+            1,
+            7,
+            3,
+            2,
+            5,
+            4,
+            0
+          ]
+        ],
+        "retained_names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "search": "SUCCESS H 95 probes 1473 steps 2\npath 3 4 0 7 6 1 2 5\npath 6 1 7 3 2 5 4 0\ntarget 2 128 163 103 207 211 135 9\nplus2 184\nplus4 84",
+        "source": [
+          130,
+          4,
+          169,
+          243,
+          231,
+          195,
+          7,
+          66
+        ],
+        "strong_core": [
+          2,
+          128,
+          163,
+          103,
+          207,
+          211,
+          135,
+          9
+        ],
+        "strong_search": "SUCCESS H 95 probes 1473 steps 2\npath 3 4 0 7 6 1 2 5\npath 6 1 7 3 2 5 4 0\ntarget 2 128 163 103 207 211 135 9\nplus2 184\nplus4 84",
+        "target": [
+          2,
+          128,
+          163,
+          103,
+          207,
+          211,
+          135,
+          9
+        ],
+        "transport": [
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    1,
+                    1
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 29
+                },
+                "state": [
+                  1239,
+                  1587,
+                  1730
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    5,
+                    1
+                  ],
+                  "charge": 5,
+                  "theta_exponent": 12
+                },
+                "state": [
+                  2001,
+                  1063,
+                  1492
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    6,
+                    2
+                  ],
+                  "charge": 1,
+                  "theta_exponent": 15
+                },
+                "state": [
+                  1459,
+                  1206,
+                  1444
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    5,
+                    0
+                  ],
+                  "charge": 2,
+                  "theta_exponent": 8
+                },
+                "state": [
+                  1143,
+                  1474,
+                  1617
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    1,
+                    0
+                  ],
+                  "charge": 2,
+                  "theta_exponent": 0
+                },
+                "state": [
+                  1745,
+                  1015,
+                  1379
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                4,
+                3
+              ],
+              "charge": 1,
+              "theta_exponent": 14
+            },
+            "state": [
+              95,
+              63,
+              80
+            ]
+          },
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    1,
+                    0
+                  ],
+                  "charge": 0,
+                  "theta_exponent": 0
+                },
+                "state": [
+                  2765,
+                  3508,
+                  3829
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    2,
+                    0
+                  ],
+                  "charge": 5,
+                  "theta_exponent": 32
+                },
+                "state": [
+                  4443,
+                  2348,
+                  3311
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    2,
+                    2
+                  ],
+                  "charge": 0,
+                  "theta_exponent": 13
+                },
+                "state": [
+                  3215,
+                  2669,
+                  3187
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    0,
+                    1
+                  ],
+                  "charge": 3,
+                  "theta_exponent": 1
+                },
+                "state": [
+                  2517,
+                  3243,
+                  3564
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    1,
+                    1
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 29
+                },
+                "state": [
+                  3857,
+                  2224,
+                  3046
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                5,
+                1
+              ],
+              "charge": 0,
+              "theta_exponent": 12
+            },
+            "state": [
+              197,
+              152,
+              169
+            ]
+          },
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    3,
+                    1
+                  ],
+                  "charge": 2,
+                  "theta_exponent": 31
+                },
+                "state": [
+                  1039,
+                  1367,
+                  1485
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    2,
+                    5
+                  ],
+                  "charge": 2,
+                  "theta_exponent": 30
+                },
+                "state": [
+                  1701,
+                  918,
+                  1272
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    3,
+                    3
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 21
+                },
+                "state": [
+                  1269,
+                  1036,
+                  1249
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    4,
+                    0
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 16
+                },
+                "state": [
+                  993,
+                  1289,
+                  1407
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    4,
+                    4
+                  ],
+                  "charge": 3,
+                  "theta_exponent": 45
+                },
+                "state": [
+                  1505,
+                  895,
+                  1194
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                4,
+                5
+              ],
+              "charge": 6,
+              "theta_exponent": 20
+            },
+            "state": [
+              95,
+              43,
+              75
+            ]
+          },
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    3,
+                    1
+                  ],
+                  "charge": 2,
+                  "theta_exponent": 31
+                },
+                "state": [
+                  1039,
+                  1367,
+                  1485
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    2,
+                    5
+                  ],
+                  "charge": 2,
+                  "theta_exponent": 30
+                },
+                "state": [
+                  1701,
+                  918,
+                  1272
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    3,
+                    3
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 21
+                },
+                "state": [
+                  1269,
+                  1036,
+                  1249
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    4,
+                    0
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 16
+                },
+                "state": [
+                  993,
+                  1289,
+                  1407
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    4,
+                    4
+                  ],
+                  "charge": 3,
+                  "theta_exponent": 45
+                },
+                "state": [
+                  1505,
+                  895,
+                  1194
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                4,
+                5
+              ],
+              "charge": 6,
+              "theta_exponent": 20
+            },
+            "state": [
+              95,
+              43,
+              75
+            ]
+          }
+        ]
+      },
+      {
+        "H": 97,
+        "branches": {
+          "2": {
+            "H": 293,
+            "core_cut": 2,
+            "cut": 18,
+            "observer": {
+              "Q4": {
+                "q0": {
+                  "field": {
+                    "alpha": [
+                      6,
+                      4
+                    ],
+                    "charge": 0,
+                    "theta_exponent": 28
+                  },
+                  "state": [
+                    3021,
+                    4052,
+                    4393
+                  ]
+                },
+                "q1": {
+                  "field": {
+                    "alpha": [
+                      3,
+                      0
+                    ],
+                    "charge": 1,
+                    "theta_exponent": 40
+                  },
+                  "state": [
+                    4971,
+                    2736,
+                    3759
+                  ]
+                },
+                "q2": {
+                  "field": {
+                    "alpha": [
+                      0,
+                      1
+                    ],
+                    "charge": 6,
+                    "theta_exponent": 1
+                  },
+                  "state": [
+                    3815,
+                    3077,
+                    3711
+                  ]
+                },
+                "q4": {
+                  "field": {
+                    "alpha": [
+                      0,
+                      4
+                    ],
+                    "charge": 2,
+                    "theta_exponent": 17
+                  },
+                  "state": [
+                    2925,
+                    3919,
+                    4260
+                  ]
+                },
+                "q5": {
+                  "field": {
+                    "alpha": [
+                      5,
+                      0
+                    ],
+                    "charge": 3,
+                    "theta_exponent": 8
+                  },
+                  "state": [
+                    4497,
+                    2688,
+                    3626
+                  ]
+                }
+              },
+              "field": {
+                "alpha": [
+                  1,
+                  0
+                ],
+                "charge": 6,
+                "theta_exponent": 0
+              },
+              "state": [
+                293,
+                152,
+                189
+              ]
+            },
+            "rows": [
+              98,
+              388,
+              169,
+              195,
+              495,
+              202,
+              134,
+              1,
+              237
+            ],
+            "strong_rows": [
+              50,
+              196,
+              89,
+              99,
+              106,
+              70,
+              1,
+              125
+            ]
+          },
+          "4": {
+            "H": 295,
+            "core_cut": 58,
+            "cut": 122,
+            "observer": {
+              "Q4": {
+                "q0": {
+                  "field": {
+                    "alpha": [
+                      1,
+                      2
+                    ],
+                    "charge": 0,
+                    "theta_exponent": 18
+                  },
+                  "state": [
+                    3103,
+                    4152,
+                    4503
+                  ]
+                },
+                "q1": {
+                  "field": {
+                    "alpha": [
+                      1,
+                      0
+                    ],
+                    "charge": 1,
+                    "theta_exponent": 0
+                  },
+                  "state": [
+                    5097,
+                    2804,
+                    3857
+                  ]
+                },
+                "q2": {
+                  "field": {
+                    "alpha": [
+                      3,
+                      0
+                    ],
+                    "charge": 3,
+                    "theta_exponent": 40
+                  },
+                  "state": [
+                    3909,
+                    3155,
+                    3801
+                  ]
+                },
+                "q4": {
+                  "field": {
+                    "alpha": [
+                      0,
+                      0
+                    ],
+                    "charge": 2,
+                    "theta_exponent": null
+                  },
+                  "state": [
+                    2991,
+                    4017,
+                    4368
+                  ]
+                },
+                "q5": {
+                  "field": {
+                    "alpha": [
+                      4,
+                      5
+                    ],
+                    "charge": 0,
+                    "theta_exponent": 20
+                  },
+                  "state": [
+                    4611,
+                    2748,
+                    3722
+                  ]
+                }
+              },
+              "field": {
+                "alpha": [
+                  1,
+                  5
+                ],
+                "charge": 3,
+                "theta_exponent": 39
+              },
+              "state": [
+                295,
+                164,
+                187
+              ]
+            },
+            "rows": [
+              98,
+              388,
+              169,
+              451,
+              495,
+              458,
+              390,
+              1,
+              133
+            ],
+            "strong_rows": [
+              50,
+              196,
+              89,
+              227,
+              234,
+              198,
+              1,
+              69
+            ]
+          }
+        },
+        "deleted_universal_vertices": [
+          {
+            "kind": "source",
+            "name": 4
+          }
+        ],
+        "initial_cut": 63,
+        "intermediate_counts": [
+          97,
+          207,
+          97
+        ],
+        "paths": [
+          [
+            3,
+            4,
+            1,
+            7,
+            6,
+            2,
+            5,
+            0
+          ],
+          [
+            4,
+            1,
+            7,
+            0,
+            6,
+            2,
+            5,
+            3
+          ]
+        ],
+        "retained_names": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7
+        ],
+        "search": "SUCCESS H 97 probes 2792 steps 2\npath 3 4 1 7 6 2 5 0\npath 4 1 7 0 6 2 5 3\ntarget 98 132 169 195 239 202 134 1\nplus2 18 88\nplus4 122",
+        "source": [
+          130,
+          132,
+          169,
+          243,
+          231,
+          195,
+          7,
+          64
+        ],
+        "strong_core": [
+          50,
+          68,
+          89,
+          99,
+          106,
+          70,
+          1
+        ],
+        "strong_search": "NO_SUCCESS H 97 probes 13944 radius 2",
+        "target": [
+          98,
+          132,
+          169,
+          195,
+          239,
+          202,
+          134,
+          1
+        ],
+        "transport": [
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    1,
+                    3
+                  ],
+                  "charge": 3,
+                  "theta_exponent": 4
+                },
+                "state": [
+                  1273,
+                  1627,
+                  1774
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    4,
+                    4
+                  ],
+                  "charge": 0,
+                  "theta_exponent": 45
+                },
+                "state": [
+                  2055,
+                  1089,
+                  1530
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    0,
+                    3
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 41
+                },
+                "state": [
+                  1493,
+                  1236,
+                  1480
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    6,
+                    1
+                  ],
+                  "charge": 3,
+                  "theta_exponent": 22
+                },
+                "state": [
+                  1173,
+                  1506,
+                  1653
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    3,
+                    2
+                  ],
+                  "charge": 0,
+                  "theta_exponent": 44
+                },
+                "state": [
+                  1787,
+                  1039,
+                  1409
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                3,
+                0
+              ],
+              "charge": 6,
+              "theta_exponent": 40
+            },
+            "state": [
+              97,
+              63,
+              84
+            ]
+          },
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    2,
+                    2
+                  ],
+                  "charge": 4,
+                  "theta_exponent": 13
+                },
+                "state": [
+                  4087,
+                  4942,
+                  5427
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    3,
+                    3
+                  ],
+                  "charge": 5,
+                  "theta_exponent": 21
+                },
+                "state": [
+                  6441,
+                  3280,
+                  4735
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    5,
+                    5
+                  ],
+                  "charge": 5,
+                  "theta_exponent": 37
+                },
+                "state": [
+                  4413,
+                  3765,
+                  4457
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    1,
+                    3
+                  ],
+                  "charge": 0,
+                  "theta_exponent": 4
+                },
+                "state": [
+                  3531,
+                  4369,
+                  4854
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    4,
+                    4
+                  ],
+                  "charge": 3,
+                  "theta_exponent": 45
+                },
+                "state": [
+                  5383,
+                  3002,
+                  4162
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                2,
+                6
+              ],
+              "charge": 5,
+              "theta_exponent": 36
+            },
+            "state": [
+              207,
+              234,
+              251
+            ]
+          },
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    3,
+                    4
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 38
+                },
+                "state": [
+                  1081,
+                  1428,
+                  1551
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    4,
+                    1
+                  ],
+                  "charge": 2,
+                  "theta_exponent": 34
+                },
+                "state": [
+                  1767,
+                  962,
+                  1331
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    1,
+                    3
+                  ],
+                  "charge": 2,
+                  "theta_exponent": 4
+                },
+                "state": [
+                  1335,
+                  1085,
+                  1305
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    5,
+                    4
+                  ],
+                  "charge": 3,
+                  "theta_exponent": 47
+                },
+                "state": [
+                  1029,
+                  1365,
+                  1488
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    4,
+                    1
+                  ],
+                  "charge": 5,
+                  "theta_exponent": 34
+                },
+                "state": [
+                  1581,
+                  936,
+                  1268
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                1,
+                4
+              ],
+              "charge": 2,
+              "theta_exponent": 3
+            },
+            "state": [
+              97,
+              56,
+              67
+            ]
+          },
+          {
+            "Q4": {
+              "q0": {
+                "field": {
+                  "alpha": [
+                    3,
+                    4
+                  ],
+                  "charge": 6,
+                  "theta_exponent": 38
+                },
+                "state": [
+                  1081,
+                  1428,
+                  1551
+                ]
+              },
+              "q1": {
+                "field": {
+                  "alpha": [
+                    4,
+                    1
+                  ],
+                  "charge": 2,
+                  "theta_exponent": 34
+                },
+                "state": [
+                  1767,
+                  962,
+                  1331
+                ]
+              },
+              "q2": {
+                "field": {
+                  "alpha": [
+                    1,
+                    3
+                  ],
+                  "charge": 2,
+                  "theta_exponent": 4
+                },
+                "state": [
+                  1335,
+                  1085,
+                  1305
+                ]
+              },
+              "q4": {
+                "field": {
+                  "alpha": [
+                    5,
+                    4
+                  ],
+                  "charge": 3,
+                  "theta_exponent": 47
+                },
+                "state": [
+                  1029,
+                  1365,
+                  1488
+                ]
+              },
+              "q5": {
+                "field": {
+                  "alpha": [
+                    4,
+                    1
+                  ],
+                  "charge": 5,
+                  "theta_exponent": 34
+                },
+                "state": [
+                  1581,
+                  936,
+                  1268
+                ]
+              }
+            },
+            "field": {
+              "alpha": [
+                1,
+                4
+              ],
+              "charge": 2,
+              "theta_exponent": 3
+            },
+            "state": [
+              97,
+              56,
+              67
+            ]
+          }
+        ]
+      }
+    ],
+    "source": [
+      2,
+      4,
+      41,
+      115,
+      103,
+      67,
+      7
+    ],
+    "source_transport": {
+      "Q4": {
+        "q0": {
+          "field": {
+            "alpha": [
+              6,
+              6
+            ],
+            "charge": 1,
+            "theta_exponent": 5
+          },
+          "state": [
+            343,
+            450,
+            489
+          ]
+        },
+        "q1": {
+          "field": {
+            "alpha": [
+              2,
+              6
+            ],
+            "charge": 2,
+            "theta_exponent": 36
+          },
+          "state": [
+            561,
+            302,
+            419
+          ]
+        },
+        "q2": {
+          "field": {
+            "alpha": [
+              1,
+              5
+            ],
+            "charge": 6,
+            "theta_exponent": 39
+          },
+          "state": [
+            417,
+            341,
+            411
+          ]
+        },
+        "q4": {
+          "field": {
+            "alpha": [
+              2,
+              0
+            ],
+            "charge": 5,
+            "theta_exponent": 32
+          },
+          "state": [
+            327,
+            423,
+            462
+          ]
+        },
+        "q5": {
+          "field": {
+            "alpha": [
+              6,
+              0
+            ],
+            "charge": 5,
+            "theta_exponent": 24
+          },
+          "state": [
+            495,
+            294,
+            392
+          ]
+        }
+      },
+      "field": {
+        "alpha": [
+          3,
+          4
+        ],
+        "charge": 6,
+        "theta_exponent": 38
+      },
+      "state": [
+        31,
+        14,
+        25
+      ]
+    },
+    "strict_phase_scans": {
+      "32": "HIT root 2 state 97 131 131\npath 4 1 2 5 7 3 6 0\npath 0 5 7 3 2 6 4 1\ntarget 98 0 67 55 39 198 26 95\nplus2 233 245\nplus4 224\nHIT root 4 state 97 166 166\npath 4 1 2 5 7 3 6 0\npath 0 5 7 3 2 6 4 1\ntarget 98 0 67 55 39 198 26 95\nplus2 233 245\nplus4 224\nHIT root 1 state 97 131 131\npath 4 5 7 3 6 2 0 1\npath 1 6 4 5 7 3 2 0\ntarget 0 69 97 55 39 195 25 95\nplus2 236 246\nplus4 224\nHIT root 4 state 97 166 166\npath 4 5 7 3 6 2 0 1\npath 1 6 4 5 7 3 2 0\ntarget 0 69 97 55 39 195 25 95\nplus2 236 246\nplus4 224\nHIT root 2 state 97 131 131\npath 4 6 1 2 5 7 3 0\npath 0 5 4 7 3 2 6 1\ntarget 42 0 67 118 135 86 19 111\nplus2 217 245\nplus4 145\nHIT root 5 state 97 166 166\npath 4 6 1 2 5 7 3 0\npath 0 5 4 7 3 2 6 1\ntarget 42 0 67 118 135 86 19 111\nplus2 217 245\nplus4 145\nHIT root 1 state 97 131 131\npath 4 6 2 3 5 7 0 1\npath 1 6 2 3 5 4 7 0\ntarget 0 69 41 115 135 83 21 111\nplus2 220 246\nplus4 148\nHIT root 5 state 97 166 166\npath 4 6 2 3 5 7 0 1\npath 1 6 2 3 5 4 7 0\ntarget 0 69 41 115 135 83 21 111\nplus2 220 246\nplus4 148\nHIT root 2 state 97 138 138\npath 7 0 1 2 3 4 5 6\npath 1 6 3 4 5 2 7 0\ntarget 0 65 131 55 103 135 45 91\nplus2 4 48\nplus4 60\nHIT root 3 state 97 236 236\npath 7 0 1 2 3 4 5 6\npath 1 6 3 4 5 2 7 0\ntarget 0 65 131 55 103 135 45 91\nplus2 4 48\nplus4 60\nTOTAL endpoints 13847 branching 8 phase_hits 10",
+      "40": "TOTAL endpoints 13369 branching 5 phase_hits 0",
+      "61": "TOTAL endpoints 13369 branching 5 phase_hits 0",
+      "63": "HIT root 1 state 97 131 131\npath 3 4 7 6 1 2 5 0\npath 1 0 6 3 2 5 4 7\ntarget 224 193 163 167 207 210 140 0\nplus2 119 121\nplus4 112\nHIT root 2 state 97 166 166\npath 3 4 7 6 1 2 5 0\npath 1 0 6 3 2 5 4 7\ntarget 224 193 163 167 207 210 140 0\nplus2 119 121\nplus4 112\nTOTAL endpoints 13847 branching 8 phase_hits 2"
+    }
+  },
+  "precision": {
+    "first_two_ages_both_nonprimitive": [
+      [
+        563,
+        2,
+        179,
+        10,
+        41,
+        566,
+        105,
+        [
+          3,
+          7,
+          3,
+          5,
+          21,
+          1,
+          3,
+          35,
+          3,
+          1,
+          21,
+          5
+        ]
+      ],
+      [
+        715,
+        0,
+        229,
+        12,
+        23,
+        428,
+        15,
+        [
+          5,
+          3,
+          1,
+          3
+        ]
+      ],
+      [
+        1150,
+        0,
+        277,
+        6,
+        29,
+        824,
+        15,
+        [
+          5,
+          3,
+          1,
+          3
+        ]
+      ],
+      [
+        1574,
+        0,
+        257,
+        6,
+        79,
+        1294,
+        15,
+        [
+          5,
+          3,
+          1,
+          3
+        ]
+      ],
+      [
+        1865,
+        7,
+        253,
+        41,
+        73,
+        343,
+        15,
+        [
+          3,
+          5,
+          3,
+          1
+        ]
+      ],
+      [
+        1988,
+        0,
+        101,
+        1,
+        17,
+        641,
+        39,
+        [
+          3,
+          13,
+          3,
+          1,
+          3,
+          1,
+          3,
+          1,
+          3,
+          1,
+          3,
+          1
+        ]
+      ],
+      [
+        2345,
+        2,
+        241,
+        2,
+        91,
+        3256,
+        15,
+        [
+          3,
+          5,
+          3,
+          1
+        ]
+      ]
+    ],
+    "independent_birth_transition_checks": 25196,
+    "latest_first_primitive_age": 7,
+    "no_primitive_age": [],
+    "phase_hostile": {
+      "divisors": [
+        3,
+        7,
+        3,
+        5,
+        21,
+        1,
+        3,
+        35,
+        3,
+        1,
+        21,
+        5
+      ],
+      "modulus": 105,
+      "period": 12,
+      "profile": [
+        179,
+        10,
+        41,
+        566
+      ],
+      "root": 2,
+      "roots": [
+        0,
+        2,
+        1,
+        0,
+        6
+      ],
+      "rows": [
+        74,
+        36,
+        17,
+        6,
+        11,
+        29,
+        190,
+        63
+      ]
+    },
+    "primitive_profiles": 22856,
+    "rooted_profiles": 25198,
+    "sha256": "6c51da00db652a4d6caaeeeef78a38510c8836e1011152784bd1c263c7499ecc",
+    "stdout": "profiled classes 2820"
+  },
+  "reflection": {
+    "annihilator_ascending": [
+      1296,
+      -3060,
+      2664,
+      -1115,
+      239,
+      -25,
+      1
+    ],
+    "controls": [
+      {
+        "H": 1855,
+        "first_endpoint": [
+          8184,
+          8173,
+          8185,
+          8160,
+          8138,
+          8144,
+          8064,
+          768,
+          2048,
+          256,
+          2944,
+          4736,
+          1920
+        ],
+        "k": 2,
+        "marked": 5,
+        "reflected_path": [
+          4,
+          1,
+          2,
+          0,
+          3,
+          5,
+          6,
+          12,
+          10,
+          7,
+          9,
+          8,
+          11
+        ],
+        "source": [
+          10,
+          4,
+          1,
+          54,
+          39,
+          7
+        ],
+        "source_path": [
+          4,
+          1,
+          2,
+          0,
+          3,
+          5
+        ],
+        "strong_endpoint": [
+          10,
+          4,
+          1,
+          54,
+          39,
+          71,
+          4127,
+          6783,
+          7423,
+          7551,
+          255,
+          1151,
+          3135
+        ]
+      },
+      {
+        "H": 10663,
+        "first_endpoint": [
+          32760,
+          32749,
+          32761,
+          32704,
+          32650,
+          32664,
+          32688,
+          32512,
+          1536,
+          4096,
+          512,
+          14080,
+          25856,
+          18176,
+          3840
+        ],
+        "k": 3,
+        "marked": 6,
+        "reflected_path": [
+          5,
+          4,
+          1,
+          2,
+          0,
+          3,
+          6,
+          7,
+          14,
+          11,
+          8,
+          10,
+          9,
+          12,
+          13
+        ],
+        "source": [
+          10,
+          4,
+          1,
+          118,
+          71,
+          87,
+          7
+        ],
+        "source_path": [
+          5,
+          4,
+          1,
+          2,
+          0,
+          3,
+          6
+        ],
+        "strong_endpoint": [
+          10,
+          4,
+          1,
+          118,
+          71,
+          87,
+          135,
+          16447,
+          29951,
+          31231,
+          31487,
+          511,
+          10495,
+          2303,
+          14463
+        ]
+      }
+    ],
+    "exponential_coefficients": {
+      "1": -5,
+      "2": 6,
+      "3": 8,
+      "4": 36,
+      "6": 24,
+      "9": 4
+    },
+    "minimal_rational_recurrence_order": 6
+  },
+  "scope": "scoped all-size oldest-port divisor and clock theorems; exact bounded native branch repairs; global spectrum OPEN"
+}
