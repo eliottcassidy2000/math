@@ -13,7 +13,7 @@ This document summarizes an ongoing research program on **tournaments** (complet
 
 $$H(T) = I(\Omega(T),\, 2)$$
 
-where $H(T)$ counts directed Hamiltonian paths, $\Omega(T)$ is the conflict graph on directed odd cycles, and $I(G,x)$ is the independence polynomial. This formula — proved independently by Grinberg and Stanley (arXiv:2412.10572, 2024) and verified exhaustively for $n \leq 8$ — serves as the organizing principle of a broader program spanning:
+where $H(T)$ counts directed Hamiltonian paths, $\Omega(T)$ is the conflict graph on directed odd cycles, and $I(G,x)$ is the independence polynomial. This formula — proved by Grinberg and Stanley (arXiv:2307.05569, 2023) and verified exhaustively for $n \leq 8$ — serves as the organizing principle of a broader program spanning:
 
 - A complete Walsh–Fourier spectral theory of $H(T)$ and the transfer matrix $M[a,b]$
 - Universal congruences for the signed Hamiltonian permanent
@@ -382,9 +382,215 @@ The **isomorphism class graph** $G_n$ has one vertex per tournament isomorphism 
 
 ### 12.1 Small-Prime Gaussian Elimination (8× Memory Reduction)
 
-Store constraint matrices as `uint8` modulo a small prime $p < 256$ rather than `int64`. Rank is preserved for all $p$ exceeding the largest elementary divisor of the integer matrix. For tournament matrices (entries $\in \{0, \pm 1\}$), this holds for all $p \geq 7$.
+Store constraint matrices as `uint8` modulo a small prime $p < 256$ rather than `int64`. The rank modulo $p$ is a lower bound for the rational rank; it agrees when $p$ divides none of the nonzero Smith invariant factors. Entries in $\{0,\pm1\}$ alone do not guarantee that a given small prime is safe.
 
-**Certification:** Compute rank at two independent primes; agreement certifies correctness via Smith normal form. For $T_{11}$'s degree-9 constraint matrix: $6.6\,\text{GB} \to 828\,\text{MB}$.
+**Correction:** Agreement at two primes is evidence, not a rational-rank certificate: $\operatorname{diag}(1,35)$ has rank 1 modulo 5 and 7 but rank 2 over $\mathbb Q$. An independently established rational upper bound, exact rational computation, or sufficient Smith-normal-form information is needed. The reported memory reduction for $T_{11}
+
+### 12.2 Eigenspace Decomposition ($n$-fold Speedup)
+
+THM-125 implies that for circulant tournaments all $n$ eigenspaces have identical Omega-dimension vectors. Computing rank once and multiplying by $n$ replaces $n$ independent rank computations. For $T_{19}$: a 19-fold speedup (from infeasible to tractable).
+
+### 12.3 Multi-Prime Rank Certification
+
+Agreement of ranks at two small primes supplies a lower bound and supporting evidence, not a proof of the rational rank. Any Betti-number conclusion based on these modular ranks requires an additional exact certificate or rational upper bound.
+
+### 12.4 OCF-Based Path Counting
+
+The formula $H(T) = I(\Omega(T), 2)$ replaces path enumeration (exponential) with independence polynomial evaluation. For structured tournaments this yields $\sim 100\times$ speedup (0.7 ms vs. 70 ms per tournament at $n = 9$).
+
+### 12.5 Walsh Dimensionality Reduction
+
+| $n$ | Tournament space | Nonzero Walsh amplitudes | Reduction |
+|-----|-----------------|--------------------------|-----------|
+| 5 | 1,024 | 3 independent | $341\times$ |
+| 7 | 2,097,152 | $\sim 20$ | $\sim 100{,}000\times$ |
+
+---
+
+## 13. OEIS Contributions
+
+90+ sequences extended, including:
+
+| Sequence | Description | Extension |
+|----------|-------------|-----------|
+| A000568 | Tournaments on $n$ nodes | $n = 77 \to n = 200+$ (250–1600× speedup via LCD-scaled integer accumulation) |
+| A000273 | Labeled directed graphs | $n = 65 \to n = 101$ |
+| A000171 | Self-complementary graphs | $n = 100 \to n = 439+$ |
+| A038375 | $H_{\max}(n)$ for tournaments | New computed terms for $p = 11, 19$ |
+| A052283 | Digraph arc triangle | 2,681 → 9,020 entries |
+| A028657 | $m \times n$ binary matrices | $\sim 1{,}081 \to 3{,}000+$ entries |
+
+New techniques contributing to these: divisor-signature Möbius inversion for $k$-uniform hypergraphs (64–130× speedup); formal group acceleration via $[n](x) = \tanh(n \cdot \mathrm{arctanh}(x))$ (3,589× speedup for iteration); denominator-killing primes (when $p = \binom{n}{2}+1$ is prime, eigenvalue fractions become trivial mod $p$).
+
+**New sequence** (not yet in OEIS): $W(n) = 1, 2, 8, 32, 158, 928, 6350, 49752, 439670, 4327904, \ldots$
+
+---
+
+## 14. T(r)ienerments: A Ternary Generalization of Tournaments
+
+### 14.1 Motivation and Definition
+
+A **t(r)ienerment** is a complete graph on $n$ vertices in which each edge $\{u,v\}$ is assigned one of **three** states: a directed arc $u \to v$, a directed arc $v \to u$, or a **bidirectional tie** $u \leftrightarrow v$.  When $k = 0$ ties are present, a t(r)ienerment is a tournament.
+
+Ties represent genuine indeterminacy: two competitors draw, two items are indistinguishable at the current measurement precision, or two candidates tie in a vote.  The name blends "tournament" with the Latin *tri* (three outcomes) and the Wiener index motif.
+
+There are two canonical representations:
+- **Positive** (ties = $\leftrightarrow$): the edge between $u$ and $v$ exists in both directions.
+- **Negative** (ties = $\emptyset$): no edge between $u$ and $v$.  These are exactly the *oriented graphs* studied in graph theory.
+
+### 14.2 Burnside Counting Formula
+
+The symmetric group $S_n$ acts on labeled t(r)ienerments by relabeling.  For a permutation $\sigma$ with cycle type $(l_1, \ldots, l_m)$, the number of t(r)ienerments fixed by $\sigma$ is $3^{B(\sigma)}$ where
+
+$$B(\sigma) = \sum_{a=1}^m \left\lfloor \frac{l_a - 1}{2} \right\rfloor + \sum_{1 \le a < b \le m} \gcd(l_a, l_b).$$
+
+The formula arises from an orbit analysis of $\sigma$ acting on ordered pairs:
+- **Case A orbits** (orbit = its reverse): forced to be ties; contribute factor 1.  Arise only within even-length cycles at distance $l/2$.
+- **Case B orbit pairs** (orbit ≠ its reverse): each pair has 3 choices (directed one way, directed the other, or all tied); contribute factor 3.
+
+**Theorem** (proved): The number of unlabeled isomorphism classes of t(r)ienerments on $n$ vertices is
+$$T(n) = \frac{1}{n!} \sum_{\sigma \in S_n} 3^{B(\sigma)},$$
+giving the sequence $T(n) = 1, 2, 7, 42, 582, 21{,}480, 2{,}142{,}288, \ldots$ = **OEIS A007025**.
+
+Comparison: the tournament count A000568 uses $2^{B(\sigma)}$ and restricts to permutations with all odd cycles.  T(r)ienerments sum over all $\sigma$ with base 3.
+
+### 14.3 The Refined Distribution $f(n,k)$
+
+Let $f(n,k)$ = number of iso classes with exactly $k$ ties.  It is extracted from a **generating polynomial per cycle type**:
+
+$$P_\sigma(x) = \prod_{\substack{a:\\l_a \text{ even}}} x^{l_a/2} \cdot \prod_a (2 + x^{l_a})^{\lfloor(l_a-1)/2\rfloor} \cdot \prod_{a<b} (2 + x^{\mathrm{lcm}(l_a,l_b)})^{\gcd(l_a,l_b)},$$
+
+with $f(n,k) = [x^k] \frac{1}{n!}\sum_\sigma P_\sigma(x)$.  Each factor $(2 + x^m)$ records: directed (2 choices, contributing $x^0$) or all-tied ($x^m$).
+
+**Computed values** (oracle-2026-05-02-S1, verified by `04-computation/trienerment_iso_count.py`):
+
+| $n$ | Distribution $f(n,0), f(n,1), \ldots, f(n,\binom{n}{2})$ |
+|-----|----------------------------------------------------------|
+| 2 | **1**, 1 |
+| 3 | **2**, 3, 1, 1 |
+| 4 | **4**, 10, 12, 10, 4, 1, 1 |
+| 5 | **12**, 50, 107, 144, 131, 78, 41, 13, 4, 1, 1 |
+| 6 | **56**, 376, 1274, 2740, 4112, 4512, 3817, 2500, 1292, 539, 187, 55, 14, 4, 1, 1 |
+
+Bold: $f(n,0) = \text{A000568}(n)$ (tournaments).
+
+**Special values** (proved):
+- $f(n, \binom{n}{2}) = 1$: unique all-ties class.
+- $f(n, \binom{n}{2}-1) = 1$: unique one-directed-edge class.
+- $f(n, \binom{n}{2}-2) = 4$ for all $n \ge 4$: the four types are (two arcs sharing a head), (sharing a tail), (a directed path), (two disjoint arcs).
+- $f(n, \binom{n}{2}-3) = 14$ for all $n \ge 6$.
+
+### 14.4 Positive-Negative Isomorphism (proved)
+
+The map $\phi: \tau \mapsto \nu$ that replaces each tie $u \leftrightarrow v$ with the absent edge $\emptyset$ (and keeps all directed arcs) is $S_n$-equivariant.  Hence:
+
+**Theorem**: The spaces of positive and negative t(r)ienerments have identical isomorphism-class structures.  In particular, the unlabeled count $T(n) = \text{A007025}(n)$ counts both.
+
+The distribution $f(n,k)$ is identical in both representations.  Conceptually: a tie encoded as "both exist" is combinatorially equivalent to a tie encoded as "neither exists," because the symmetric group cannot distinguish which encoding convention is used.
+
+### 14.5 Hamiltonian Paths
+
+**Theorem** (R\'edei extension, proved): Every t(r)ienerment has at least one directed Hamiltonian path, i.e.\ $H(\tau) \ge 1$.
+
+*Proof*: Any tie resolution (each tie $\to$ an arbitrary directed arc) yields a tournament; by Rédei's theorem that tournament has a directed HP; the same path is valid in the original t(r)ienerment since ties allow traversal in either direction. $\square$
+
+**Parity failure** (proved at $n=3$): Unlike tournaments, $H(\tau)$ need not be odd.  The t(r)ienerment $\{1 \leftrightarrow 2, 1 \to 3, 2 \to 3\}$ has $H = 2$.  The all-ties t(r)ienerment has $H = n!$ (even for $n \ge 2$).
+
+**Correction (general digraphs):** The tournament odd-cycle formula does not extend unchanged to ties. For the two-vertex digraph with both arcs, $H=2$ while the odd-cycle independence polynomial evaluates to $1$. For a general loopless digraph $D$ with adjacency matrix $A$ and all-ones matrix $J$, the valid identity of Irving and Omar, Proposition 2, is
+$H(D)=\sum_{S\subseteq V}\det((J-A)[S])\operatorname{per}(A[V\setminus S]),$
+where the empty determinant and permanent are $1$. See https://arxiv.org/html/2412.10572. The tournament odd-cycle formula stated above remains valid for tournaments.
+
+**Conjecture** (All positive integers achievable): For every positive integer $N$, some t(r)ienerment $\tau$ achieves $H(\tau) = N$.  In particular, the permanent gaps $H = 7$ and $H = 21$ for tournaments are not forbidden for t(r)ienerments.
+
+### 14.6 Open Questions
+
+1. Verify computationally that $H = 7$ and $H = 21$ are achievable by some t(r)ienerment.
+2. Characterize the $H$-spectrum of t(r)ienerments: which positive integers arise?
+3. Among t(r)ienerments with $k$ ties fixed, which iso class maximizes $H$?
+4. Do the odd-cycle statistics of the Paley t(r)ienerment (with ties derived from the QR structure) have an extremal property?
+5. Compute $\beta_p(D_\tau)$ (path homology Betti numbers) for t(r)ienerments and determine whether the tournament Betti bounds ($\beta_2 = 0$, $\beta_1 \le 1$) extend.
+6. Describe the metagraph $G_n^{\text{tri}}$ on t(r)ienerment iso classes with edges from single-edge flips; compare its structure to the tournament metagraph.
+
+---
+
+## 15. Summary of Proof Status
+
+### Proved (full proof in canon, independently verified)
+
+| Result | Theorem ID |
+|--------|------------|
+| Rédei's theorem (4 independent routes) | THM-001 |
+| OCF: $H(T) = I(\Omega(T), 2)$ | THM-002 |
+| Claim B (algebraic companion to OCF) | THM-003 |
+| Transfer matrix symmetry $M[a,b] = M[b,a]$ | THM-030 |
+| Complete Walsh spectrum of $H(T)$ | THM-071 |
+| Complete Walsh spectrum of $M[a,b]$ | THM-080 |
+| Position Character Decomposition | THM-068 |
+| Universal congruences for $S(T)$ (THM-H, -I, -J) | — |
+| $\beta_2 = 0$ for all tournaments | THM-108/109 |
+| $\beta_1 \leq 1$ for all tournaments | THM-103 |
+| $\beta_1 \cdot \beta_3 = 0$ | THM-095 |
+| Rank formula for $\partial_2$ | — |
+| $F$-polynomial complement duality, mod-2 universality | THM-087/094 |
+| $H = 7$ and $H = 21$ are permanent gaps | THM-029/115 |
+| Pin grid $S_3 \times \mathbb{Z}_2$ symmetry | — |
+| $k$-nacci Mersenne identity | THM-227 |
+| Simplicial Rédei: $\mathrm{sim}_H \in \{0,1\}$ | THM-220 |
+| Egyptian fraction splitting ($3/N$, master criterion $k/N$) | HYP-1612/1615 |
+| Double factorial fixed point | HYP-1614/1616 |
+| Constant symbol matrix for circulant tournaments | THM-125 |
+| Cayley–Delannoy framework (variance, Rodrigues, duality) | — |
+| Golden exceptional points of transfer matrix | THM-224 |
+
+### Computationally established (strong evidence, no general proof)
+
+| Result | Evidence |
+|--------|----------|
+| Paley Betti formula (THM-130) | Verified $p = 7, 11$; algebraic proof in progress |
+| Paley tournaments maximize $H$ | Verified $p = 3, 7, 11$; matches A038375 |
+| Unimodality of $F(T,x)$ | $50{,}000+$ tests; zero failures |
+| At most 3 bad vertices (HYP-282) | Verified $n \leq 10$ |
+| Eigenspace rank shift $R_d^{(k)} - R_d^{(0)} = (-1)^{d+1}$ | Verified $p = 7, 11$ |
+| Torsion-free Paley chain complexes | Verified $p = 7, 11, 19, 23$ |
+| Base-42 Erdős–Straus covering | Zero failures to $10^6$ |
+
+### Open Problems
+
+**Tier 1 (closest to resolution):**
+1. Prove $\beta_1 \cdot \beta_3 = 0$ for all $n$ algebraically (mechanism via $\mathrm{im}(\partial_2)$ understood but not closed)
+2. Algebraic proof of THM-130 (Paley Betti formula) via representation theory + THM-125
+3. Prove all eigenspaces of $T_p$ have equal rank structure (follows from THM-125 + representation theory; writeup incomplete)
+4. Is $\beta_{(p-1)/2}(T_p) = p - 1$ for all Paley primes? (Verified $p = 7, 11$)
+
+**Tier 2 (major open problems):**
+5. Prove the Paley maximization conjecture: $H(T_p) = \max_{|V|=p} H(T)$ for all Paley primes
+6. Characterize $\beta_3 = 2$ at $n = 8$ (which tournaments achieve it? what is the structural explanation?)
+7. What replaces $\beta_k \leq 1$ at $n \geq 8$? Is there a bound $\beta_k \leq C(n,k)$ for some combinatorial $C$?
+8. Does the density of achievable $H$-values approach 1? Are there infinitely many permanent gaps beyond $\{7, 21\}$?
+9. Per-path identity for all $n$: correct generalization incorporating cycles of all odd lengths (fails at $n = 6$ due to 5-cycle contributions)
+10. $T_{19}$ full path homology: computationally intense but in principle feasible with CSC sparse matrices
+
+---
+
+## 16. References
+
+1. N. Alon, *The maximum number of Hamiltonian paths in tournaments*, Combinatorica **10** (1990), 319–324.
+2. J. Chapman, *Alternating sign matrices and tournaments*, Adv. Appl. Math. **27** (2001), 318–335.
+3. R. Forcade, *Parity of paths and circuits in tournaments*, Discrete Math. **6** (1973), 115–118.
+4. D. Grinberg and R. P. Stanley, *The Rédei–Berge symmetric function of a directed graph*, arXiv:2307.05569 (2023), https://arxiv.org/abs/2307.05569. See also J. Irving and M. Omar, *Revisiting The Rédei-Berge Symmetric Functions via Matrix Algebra*, arXiv:2412.10572, https://arxiv.org/abs/2412.10572.
+5. A. Grigor'yan, Y. Lin, Y. Muranov, S.-T. Yau, *Homologies of path complexes and digraphs*, arXiv:1207.2834 (2012).
+6. J. W. Moon, *Topics on Tournaments*, Holt, Rinehart and Winston (1968).
+7. L. Rédei, *Ein kombinatorischer Satz*, Acta Litt. Sci. (Szeged) **7** (1934), 39–43.
+8. L. J. Santharoubane, *Cohomology of Heisenberg Lie algebras*, Proc. Amer. Math. Soc. **87** (1983), 23–28.
+9. J. Schweser, M. Stiebitz, B. Toft, *The tournament theorem of Rédei revisited*, arXiv:2510.10659 (2025).
+10. R. P. Stanley, *Enumerative Combinatorics*, Vols. 1–2, Cambridge University Press (1999/2012).
+11. K. B. Tang, S.-T. Yau, *Path homology of circulant digraphs*, arXiv:2602.04140 (2026).
+12. A. El Sahili, M. Abi Aad, *Parity of paths and circuits in tournaments*, Discrete Math. **343** (2020).
+
+---
+
+*Repository at `/home/ubuntu/math`. Document maintained alongside the research; consult the canon (`01-canon/theorems/`) for full proofs of each numbered theorem.*
+s degree-9 constraint matrix was $6.6\,\text{GB} \to 828\,\text{MB}$; its modular rank requires such a certificate before being treated as exact.
 
 ### 12.2 Eigenspace Decomposition ($n$-fold Speedup)
 
@@ -496,9 +702,9 @@ The distribution $f(n,k)$ is identical in both representations.  Conceptually: a
 
 **Parity failure** (proved at $n=3$): Unlike tournaments, $H(\tau)$ need not be odd.  The t(r)ienerment $\{1 \leftrightarrow 2, 1 \to 3, 2 \to 3\}$ has $H = 2$.  The all-ties t(r)ienerment has $H = n!$ (even for $n \ge 2$).
 
-**OCF extension** (follows from Grinberg–Stanley for digraphs): For any t(r)ienerment $\tau$, let $D_\tau$ be its associated digraph (ties become bidirectional arc pairs).  Then
-$$H(\tau) = I(\Omega(D_\tau), 2) = 1 + 2\alpha_1 + 4\alpha_2 + 8\alpha_3 + \cdots,$$
-where $\alpha_k$ counts independent $k$-tuples of pairwise vertex-disjoint directed odd cycles in $D_\tau$.  Ties enrich $\Omega(D_\tau)$: a tie $u \leftrightarrow v$ creates cycles in both orientations.
+**Correction (general digraphs):** The tournament odd-cycle formula does not extend unchanged to ties. For the two-vertex digraph with both arcs, $H=2$ while the odd-cycle independence polynomial evaluates to $1$. For a general loopless digraph $D$ with adjacency matrix $A$ and all-ones matrix $J$, the valid identity of Irving and Omar, Proposition 2, is
+$H(D)=\sum_{S\subseteq V}\det((J-A)[S])\operatorname{per}(A[V\setminus S]),$
+where the empty determinant and permanent are $1$. See https://arxiv.org/html/2412.10572. The tournament odd-cycle formula stated above remains valid for tournaments.
 
 **Conjecture** (All positive integers achievable): For every positive integer $N$, some t(r)ienerment $\tau$ achieves $H(\tau) = N$.  In particular, the permanent gaps $H = 7$ and $H = 21$ for tournaments are not forbidden for t(r)ienerments.
 
@@ -507,7 +713,7 @@ where $\alpha_k$ counts independent $k$-tuples of pairwise vertex-disjoint direc
 1. Verify computationally that $H = 7$ and $H = 21$ are achievable by some t(r)ienerment.
 2. Characterize the $H$-spectrum of t(r)ienerments: which positive integers arise?
 3. Among t(r)ienerments with $k$ ties fixed, which iso class maximizes $H$?
-4. Is the Paley t(r)ienerment (with ties derived from the QR structure) in some sense extremal for the $\alpha$-decomposition?
+4. Do the odd-cycle statistics of the Paley t(r)ienerment (with ties derived from the QR structure) have an extremal property?
 5. Compute $\beta_p(D_\tau)$ (path homology Betti numbers) for t(r)ienerments and determine whether the tournament Betti bounds ($\beta_2 = 0$, $\beta_1 \le 1$) extend.
 6. Describe the metagraph $G_n^{\text{tri}}$ on t(r)ienerment iso classes with edges from single-edge flips; compare its structure to the tournament metagraph.
 
@@ -577,7 +783,7 @@ where $\alpha_k$ counts independent $k$-tuples of pairwise vertex-disjoint direc
 1. N. Alon, *The maximum number of Hamiltonian paths in tournaments*, Combinatorica **10** (1990), 319–324.
 2. J. Chapman, *Alternating sign matrices and tournaments*, Adv. Appl. Math. **27** (2001), 318–335.
 3. R. Forcade, *Parity of paths and circuits in tournaments*, Discrete Math. **6** (1973), 115–118.
-4. S. Grinberg, R. P. Stanley, *Counting Hamiltonian paths in tournaments*, arXiv:2412.10572 (2024).
+4. D. Grinberg and R. P. Stanley, *The Rédei–Berge symmetric function of a directed graph*, arXiv:2307.05569 (2023), https://arxiv.org/abs/2307.05569. See also J. Irving and M. Omar, *Revisiting The Rédei-Berge Symmetric Functions via Matrix Algebra*, arXiv:2412.10572, https://arxiv.org/abs/2412.10572.
 5. A. Grigor'yan, Y. Lin, Y. Muranov, S.-T. Yau, *Homologies of path complexes and digraphs*, arXiv:1207.2834 (2012).
 6. J. W. Moon, *Topics on Tournaments*, Holt, Rinehart and Winston (1968).
 7. L. Rédei, *Ein kombinatorischer Satz*, Acta Litt. Sci. (Szeged) **7** (1934), 39–43.
