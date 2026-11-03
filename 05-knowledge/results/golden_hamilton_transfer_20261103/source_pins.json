@@ -1,0 +1,77 @@
+{
+  "snapshot_head": "f4d04a3e16f3ecb453dbd0892f4ad89348843d31",
+  "sources": {
+    "AGENTS.md": {
+      "LF_normalized_sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "LF_normalized_bytes": 6823
+    },
+    "05-knowledge/results/fibonacci_parity_precision_20261103/COMPLEMENTS.md": {
+      "LF_normalized_sha256": "9a9c0bb0de11b5883bfe5170761f3ef0325d51eeb8307024ae5fccc88d5157b9",
+      "LF_normalized_bytes": 10079
+    },
+    "05-knowledge/results/overnight_rank_return_20261029/DEFECT_TRANSFER.md": {
+      "LF_normalized_sha256": "8568e40f76396e9c1bd5441db30adca588cd0ef8d06009eff88d4a1b102b254e",
+      "LF_normalized_bytes": 16779
+    },
+    "05-knowledge/results/tournament_future_boundary_20261020/README.md": {
+      "LF_normalized_sha256": "a01aa678ff7741d3153de9a893084bbd4373396b0dbc932226ed804d3554b685",
+      "LF_normalized_bytes": 27382
+    },
+    "05-knowledge/results/charged_recurrence_memory_20261028/COMPLEMENT.md": {
+      "LF_normalized_sha256": "bc7ba6b59f5bd091a36e3fd69b3d8932e0b8658a4142715416dcba78275dab64",
+      "LF_normalized_bytes": 5615
+    },
+    "05-knowledge/results/metagraph_primegame_20261102/HANDOFF.md": {
+      "LF_normalized_sha256": "624a3a1c6b315b82ab5a55012c3ddaab59d9fccba3c5a4a041c5186ed303e4bb",
+      "LF_normalized_bytes": 3134
+    },
+    "05-knowledge/results/metagraph_primegame_20261102/PADDED_EARS.json": {
+      "LF_normalized_sha256": "f64b493c15842514388c46d713817c2a473c1e30bed2b7a300d2e8401f79a783",
+      "LF_normalized_bytes": 796
+    },
+    "05-knowledge/results/square_birth_windows_20261103/GROWTH.md": {
+      "LF_normalized_sha256": "89d84ca310c6aaf2bfd147a2b7c66e05040d9a09d02d492e0caa965e0b7de7ba",
+      "LF_normalized_bytes": 9217
+    },
+    "05-knowledge/results/session150_hamiltonian_spectrum_20261103/transfer/TRANSFER.md": {
+      "LF_normalized_sha256": "7286be338f9e0c15becc2e8187616014f39b1c4ed05a9bd7ec479404715d6ab0",
+      "LF_normalized_bytes": 4765
+    },
+    "05-knowledge/results/primegame_port_spectrum_20261103/FOREST_RESPONSE_RECURRENCE.md": {
+      "LF_normalized_sha256": "c19454f45ca6958abf84535500d70f4813670aab9fe060a63cb8eba14d401956",
+      "LF_normalized_bytes": 13698
+    },
+    "05-knowledge/results/primegame_port_spectrum_20261103/verify.py": {
+      "LF_normalized_sha256": "3a12b3d8c1a61964f3cfbf98e76963eda0336c95ee70592762d24ecb84486804",
+      "LF_normalized_bytes": 8160
+    },
+    "05-knowledge/results/primegame_port_spectrum_20261103/port_scout.py": {
+      "LF_normalized_sha256": "90301a791adba44e839d4ad6441dbc1323d70adc60c3395670c88a577c6d615b",
+      "LF_normalized_bytes": 2365
+    },
+    "05-knowledge/results/primegame_port_spectrum_20261103/growth_identity.py": {
+      "LF_normalized_sha256": "53a8e4f7dbe7ef2dbb0a48932b1e664f90257904b5f2121a719615d142f23b3b",
+      "LF_normalized_bytes": 2659
+    },
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": {
+      "LF_normalized_sha256": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+      "LF_normalized_bytes": 21132
+    },
+    "05-knowledge/results/positive_source_jacobian_prime_clocks_20261103/PARITY_CARRIER.md": {
+      "LF_normalized_sha256": "fadb03af2587d193996a71d97a69c856d57ffc126b1b4fbe67b9cb2cdd722b0c",
+      "LF_normalized_bytes": 10903
+    },
+    "05-knowledge/results/two_selector_boolean_20261102/CARRIER.md": {
+      "LF_normalized_sha256": "4e603929924cc9bbee397064abe6c90daa0d6fbc81b2b56f65aed19bba1c3136",
+      "LF_normalized_bytes": 7087
+    },
+    "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md": {
+      "LF_normalized_sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+      "LF_normalized_bytes": 22524
+    },
+    "01-canon/theorems/THM-4731-tiling-line-metagraph-self-lines-by-twisted-burnside-sigma-twins-depth-and-the-tribonacci-partner.md": {
+      "LF_normalized_sha256": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d",
+      "LF_normalized_bytes": 23768
+    }
+  }
+}

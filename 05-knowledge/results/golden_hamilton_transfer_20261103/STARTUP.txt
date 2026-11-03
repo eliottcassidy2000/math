@@ -1,0 +1,101 @@
+MATH RESEARCH STARTUP PACKET (read-only, bounded)
+
+== Git state ==
+branch: codex/session-golden_hamilton_20261103
+HEAD:   f4d04a3e16f3
+target (cached refs): origin/main
+relative to target: behind 0, ahead 0
+working tree: DIRTY (1 paths; first 12 shown)
+  ?? .scratch-golden-startup.txt
+ACTION: identify ownership; do not sweep unrelated files into a commit.
+
+== Recent commits (8) ==
+f4d04a3e16 (HEAD -> codex/session-golden_hamilton_20261103, origin/main, origin/HEAD) Session150 checkpoint 3: rooted transitive-block arithmetic rays
+48298050de (codex/session-paired_recursions_20261103) [paired-recursions]: seal CRT clock compression and reconcile concurrent proofs
+0c5deacdbb Session150 checkpoint 2: square-root family and spectrum reduction
+5ab41b1aa5 Session150 checkpoint 1: exact triangle-wrapper path-cover transfer
+453fa4c73c [paired-recursions]: prove compatible pairing rank and four-bit CRT formulas
+947b6c3852 [fibonacci-parity-precision]: third-bit census law and marked golden complements
+a28303347b [tournament-parity-spectrum]: checkpoint - audited class pairing and exact support obstructions
+9b75ef18bf Session149 checkpoint 6: finite spectrum decision and research index
+Freshness is cached-only: run `git fetch origin` before strict reliance.
+
+== Canonical startup route ==
+always read:
+  [OK] 00-navigation/START-HERE.md
+  [OK] 00-navigation/CURRENT-FRONTIER.md
+  [OK] 01-canon/ACTIVE-GUARDRAILS.md
+mathematical workflow:
+  [OK] 00-navigation/RESEARCH-PROTOCOL.md
+  [OK] 00-navigation/META-PATTERNS.md
+on demand:
+  [OK] 05-knowledge/reference/CORE-PAPERS.md
+  [OK] 00-navigation/PROBLEM-LEDGER.md
+Historical logs/reflections are searched for provenance, not read as truth.
+
+== Session posture ==
+Anchor: golden complement Hamilton recurrence five Q4 presentations 111 55 56
+Inheritance: name the closest proved mechanism, hostile example,
+corrected near miss, and least-used relevant sidecar before deriving.
+Choose one underexplored Niche and one freely generated Wildcard.
+Keep a 3–7 concept board; compare each new result against every item.
+Explain the mechanism or failure anatomy, not only the verdict.
+Type connections as map / preserved predicate / loss / sidecar / test.
+Select a relevant META-PATTERNS card; at closeout record cards used
+and evidence for any candidate card or counterindication.
+Treat RESERVED and CLAIMED files as unproved; never use them as proved dependencies.
+
+== Front-of-ledger correction headings ==
+- MISTAKE-597 (2026-10-13, opus-2026-10-13-S25 five-manuscripts note, THM-4627, THM-4628, HYP-9258; found by the session's independent adversarial audit after checkpoint 6dde94b60c was pushed) -- an inverted substitution misidentifying an elliptic curve, nonexistent fixed primes of order twenty, a run index reported as a location, and four overclaims
+- MISTAKE-593 (2026-10-12, opus-2026-10-12-S24 six-colour core and band-budget notes, THM-4614, HYP-9247, HYP-9248; found by the session's independent adversarial audit after checkpoint d75e3ac2a was pushed) -- a source charge read from a truncated trace, a ledger count recorded before the last rule, "PROVED under the random model" for a large-deviation heuristic, a residue-colouring no-go scoped to all primes from one, and a port quantifier
+- MISTAKE-592 (2026-10-12, opus-2026-10-12-S23 chess proof-system note, THM-4612 and THM-4613; found by the session's independent adversarial audit A after checkpoints fc6ead521, 95493b988 and cec488f34 were pushed) -- a retrograde solver that could not lose by boundary moves alone, an unsupported numeric range, a stale output file, and five wording overclaims
+- MISTAKE-591 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit H after checkpoints cd2dead5a5 and 6c272b0bc1 were pushed) -- float evidence typed as exact, "need" where only "were" was shown, a verification claimed for all maps that covered half, a lost log quoted as evidence, a one-form experiment stated as a theorem, an overgeneralized existence claim, "semi-decidable" misused, and a false reason in a proof (fixed before the audit finished)
+- MISTAKE-590 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit G after checkpoint 97b640656d was pushed) -- a per-offset "iff" claimed where only a limit was proved, a missing positivity hypothesis, a missed second kind of congruence obstruction, a wrong parameter restriction on a sketch route, an over-general impossibility claim, an uncredited criterion, a census miscount, an "equality" that was a strict failure, and a constant attached to the wrong form
+- MISTAKE-589 (2026-10-08, mac-mini-2026-10-08-reframes; found by independent audits E (THM-4606) and F (HYP-9244 and the results note) after checkpoint 8de8989efb was pushed) -- a conjecture stated without an accessibility clause, a false "sheet-blind" reading, a diagnostic that could not show what was claimed, a single-event estimate, an "exact" label on a pruned search, a density bound stated for all offsets, a proof sentence wrong for non-integer starts, heuristics stated as identities, and a per-depth tail read from correlated samples
+- MISTAKE-588 (2026-10-07, opus-2026-10-07-S21 Mersenne-line barriers note, THM-4605 and HYP-9243; found by the session's independent adversarial audit after checkpoint 023a49bcf was pushed) -- an absorbed block assumed to be an interval, a "collapse together" claim no committed code checked, a band "agreement" with the orphan law that was a bookkeeping artifact, a provable consequence typed as heuristic, an uncited published algorithm, and a Mahler analogy at the wrong place; then (second audit) a misstated trivial-cycle case and a missed canon theorem (THM-4593)
+- MISTAKE-587 (2026-10-07, mac-mini-2026-10-07-twoanchor continuation; found by independent audits C (Collatz) and D (reducible locus) after checkpoint a0a33b38cd was pushed) -- an orphan-law exponent claimed from data that cannot fix it, a selection artifact read as a signal, a classification typed PROVED that rests on an open periodicity question, non-realisable transitions listed, a lemma stated without its scope, and a frieze "reading" that was wrong about where friezes live and what minors see
+Topic-matched older corrections:
+- MISTAKE-693 (2026-10-28, opus-2026-10-28-S68, HYP-9437, THM-4839, MISTAKE-691 and the note `05-knowledge/results/attractors_modular_triangle_world_abc_genealogy_20261028.md` at the pre-audit commit 4e32454073; found by the independent audit `04-computation/experiments/attractors_census_bridges_20261028_audit_S68/AUDIT.md`, SOUND WITH CORRECTIONS, all applied) -- a lexicon bug ('Hecke' matching 'checked') that manufactured a census hub, the wrong modular curve for Pythagorean Frey curves, and over-statements in the bridges and the genealogy
+- MISTAKE-643 (2026-10-18, frontier_petersen_oct18 / 20261018o) — a historical cubic-line relation was complemented and a del Pezzo convention changed mid-argument
+- MISTAKE-645 (2026-10-20, opus-2026-10-20-S46) — the tribonacci law of the full tiling tournament was re-derived without finding its March-2026 proof, and an odd-n rigidity claim was written before its n = 11 test had run
+- MISTAKE-674 (2026-10-26, opus-2026-10-26-S59) — an uncomputed "exactly one pair module" claim and an unlabelled overreach of the module-shattering corollary
+Read ACTIVE-GUARDRAILS first; open the full entry only when relevant.
+
+== Topic packet: golden complement Hamilton recurrence five Q4 presentations 111 55 56 ==
+rank terms: golden complement Hamilton recurrence five presentations 111, golden, complement, Hamilton, recurrence, five, presentations, 111
+Current-route matches (ranked):
+  00-navigation/LRC14-PROOF-MAP.md:54: **Finite-exact sidecars.** [Minimum address](../07-reflections/lrc_endpoint_ufull_minimum_joint_address_gate_20260816.md) isolates the Haar debt; [THM-3505](../01-canon/theorems/THM-3505-r5-projective-slope-pencil-and-anchored-haar-basis.md) gives slopes `936/936`, anchored Haar `804/864`. [THM-3515](../01-canon/theore...
+  00-navigation/LRC14-PROOF-MAP.md:52: Independently audited THM-2449 says any rational lawful anchored continuation either fires all `72` mixed source-target colours after one rectangle defect or is exactly delta plus six replicas. THM-2456 identifies that failure as a uniform owner-minus-replica root-density offset: it is trivial on one Boolean chart, but...
+  00-navigation/LRC14-PROOF-MAP.md:14: **Scale-three closure.** [THM-4445](../01-canon/theorems/THM-4445-lrc14-signed-111-sharp-obstruction-classification.md) gives sharp additive `6/55`; [THM-4441](../01-canon/theorems/THM-4441-lrc14-signed-122-sharp-ray-closure.md) removes `(1,2,2)`; [THM-4444](../01-canon/theorems/THM-4444-lrc14-signed-112-sharp-one-ray-...
+Detailed files (truth precedence first; specificity within group):
+  Established canon:
+    [PROVED] 01-canon/theorems/THM-549-halftiling-complement-quotient.md
+    [PROVED] 01-canon/theorems/THM-4202-vertex-transitive-ordinal-remainder-positivity.md
+    [PROVED] 01-canon/theorems/THM-4224-order-ten-minimal-plus-min-two-bad-owner-obstruction.md
+    ... 1186 more; refine the query
+  Unproved candidates (not results):
+    (none)
+  Hypotheses:
+    [OPEN] 05-knowledge/hypotheses/HYP-9348-endpoint-layers-black-core-connectivity-and-the-next-zero-heavy-layers.md
+    [OPEN] 05-knowledge/hypotheses/HYP-2625-lrc14-modular-recurrence-address.md
+    [PROVED] 05-knowledge/hypotheses/HYP-6815-lrc14-affine-slope-threshold-suspension.md
+    ... 365 more; refine the query
+  Historical reflections:
+    [HISTORY] 07-reflections/lrc14-the-object-is-a-decorated-obligation-component-holonomy-groupoid-codex-S10.md
+    [HISTORY] 07-reflections/the-n12-object-is-cover-debt-on-kakeya-combs-codex-S14.md
+    [HISTORY] 07-reflections/lucas-summand-graph-zeckendorf-geometry.md
+    ... 651 more; refine the query
+Niche/artifact hits (evidence or inspiration; not truth authority):
+  05-knowledge/results/overnight_rank_return_20261029/COMPLEMENT_KERNEL.md
+  00-navigation/TANGENTS.md
+  05-knowledge/results/INDEX.md
+  05-knowledge/results/aliquot_66_five_fifteen_20261028/occurrences.json
+  05-knowledge/results/charged_recurrence_memory_20261028/COMPLEMENT.md
+  05-knowledge/results/constants_atlas_20260926_mine.json
+  ... 8670 more; refine the query
+
+== Coordination ==
+machine identity: opus
+Use `python3 agents/processor.py --status --peek --limit 8`;
+remove --peek only when intentionally consuming the displayed messages.
+Legacy IDs collide: cite every theorem as ID + slug/path.

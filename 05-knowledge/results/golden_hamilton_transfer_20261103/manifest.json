@@ -1,0 +1,77 @@
+{
+  "hash_basis": "UTF-8 text with CRLF normalized to LF",
+  "files": {
+    "AUDIT.md": {
+      "LF_normalized_sha256": "fef0a038acb5e4d4014d0a91b1a0097d4870148ad9727f8e5edf8d6a0beb233d",
+      "LF_normalized_bytes": 5441
+    },
+    "CONNECTIONS.md": {
+      "LF_normalized_sha256": "47fbaf98eccb88b5c1d35c1132585727a628cec02079a79e109b2a00d9542692",
+      "LF_normalized_bytes": 5532
+    },
+    "extension.json": {
+      "LF_normalized_sha256": "391d1472363ba5c661e05a46ea62a1129c7b1c8c77c14c9af8db947f8d2b51e9",
+      "LF_normalized_bytes": 32740
+    },
+    "extension.py": {
+      "LF_normalized_sha256": "f66add615bc69067b143f655d042895cc88a1cfb229620993656d9b82ee0d95c",
+      "LF_normalized_bytes": 3113
+    },
+    "HANDOFF.md": {
+      "LF_normalized_sha256": "425b9518b0b98c695b7d15bfe999c30066c2d6afa937282d288888c2a248ae7a",
+      "LF_normalized_bytes": 5407
+    },
+    "reach.py": {
+      "LF_normalized_sha256": "6afa9aea563547da1e909838deb4b93ea539f1989414d3f2c4e2af0ff76420ef",
+      "LF_normalized_bytes": 3907
+    },
+    "reachability.json": {
+      "LF_normalized_sha256": "0a185d6a768b95540e0b666e96bb589a0cfed24515006c69a38fdaa33ed44be9",
+      "LF_normalized_bytes": 47699
+    },
+    "REACHABILITY.md": {
+      "LF_normalized_sha256": "109a54a01197c6a6fb1b5b4981dca0bc82c9e7c155f0aaf7f02a98013cab3c47",
+      "LF_normalized_bytes": 5674
+    },
+    "README.md": {
+      "LF_normalized_sha256": "554fd00e3e3b1fec33541202534d41c9c84a90e30c4bacb6dbc4d6bcb4bffb45",
+      "LF_normalized_bytes": 3636
+    },
+    "RECURRENCE.md": {
+      "LF_normalized_sha256": "ed1784b863bfcb71a07859b80a9673a3cf47177198749ee69ed778824b078bc0",
+      "LF_normalized_bytes": 8284
+    },
+    "seal.py": {
+      "LF_normalized_sha256": "9741139343a27fcec77e3639eadbbead054391c8abaef351d9f815c16cfc5e6d",
+      "LF_normalized_bytes": 2774
+    },
+    "source_pins.json": {
+      "LF_normalized_sha256": "95e74662fd7c5194a274ff5e939e4f98da0ab22da597edf2ac29722020f5f8f7",
+      "LF_normalized_bytes": 4038
+    },
+    "STARTUP.txt": {
+      "LF_normalized_sha256": "e3cc90d8eae82d0797c2dc506b2ed1242916f60c15b88137bc5dabc638c46872",
+      "LF_normalized_bytes": 10514
+    },
+    "transfer.json": {
+      "LF_normalized_sha256": "d4c0b2566b0d600e0610d87fbb33475ecfb751dd5d943b144a79a952a3e8f7d5",
+      "LF_normalized_bytes": 7294
+    },
+    "transfer.py": {
+      "LF_normalized_sha256": "34bed6c09c16d173ecc654c9e73b7a8e6af572008d06ed29dbf81a6e00676ba5",
+      "LF_normalized_bytes": 5805
+    },
+    "verification.json": {
+      "LF_normalized_sha256": "31a16e7a363bef182f0c87badbf188d0191e2c6a59ccfc226b89932f2521d037",
+      "LF_normalized_bytes": 7444
+    },
+    "verification_optimized.json": {
+      "LF_normalized_sha256": "31a16e7a363bef182f0c87badbf188d0191e2c6a59ccfc226b89932f2521d037",
+      "LF_normalized_bytes": 7444
+    },
+    "verify.py": {
+      "LF_normalized_sha256": "9e8b09adabaff1f8d3ecfd02ac110b7afc9a2680ae3ecfed7618fdf17ee31f89",
+      "LF_normalized_bytes": 11510
+    }
+  }
+}
