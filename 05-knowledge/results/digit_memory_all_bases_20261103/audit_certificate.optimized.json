@@ -1,0 +1,51 @@
+{
+  "counts": {
+    "CRT_multiplication_orbits": 15300,
+    "brute_permutation_profiles": 8,
+    "cyclic_run_word_H_reproductions": 12,
+    "exhaustive_minimal_modulus_cases": 30,
+    "literal_suffix_automata": 168,
+    "nonmemoized_coupled_graphs": 4,
+    "rational_word_phase_cases": 7650,
+    "sharpness_component_paths": 93
+  },
+  "query_profiles": [
+    [
+      0,
+      17,
+      95,
+      138,
+      73,
+      15,
+      1
+    ],
+    [
+      0,
+      19,
+      109,
+      150,
+      75,
+      15,
+      1
+    ]
+  ],
+  "seed_profiles": [
+    [
+      0,
+      9,
+      33,
+      31,
+      10,
+      1
+    ],
+    [
+      0,
+      9,
+      33,
+      31,
+      10,
+      1
+    ]
+  ],
+  "status": "PASS: separate same-agent implementation"
+}
