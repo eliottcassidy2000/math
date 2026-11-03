@@ -1,0 +1,108 @@
+{
+  "arbitrary_single_arc_decoder_checks": 12480,
+  "codes": [
+    {
+      "K": 1,
+      "M": 4,
+      "d": 2,
+      "distance": 4,
+      "enumerated_words": 2,
+      "r": 2
+    },
+    {
+      "K": 4,
+      "M": 8,
+      "d": 3,
+      "distance": 4,
+      "enumerated_words": 16,
+      "r": 2
+    },
+    {
+      "K": 1,
+      "M": 8,
+      "d": 3,
+      "distance": 8,
+      "enumerated_words": 2,
+      "r": 3
+    },
+    {
+      "K": 11,
+      "M": 16,
+      "d": 4,
+      "distance": 4,
+      "enumerated_words": 2048,
+      "r": 2
+    },
+    {
+      "K": 5,
+      "M": 16,
+      "d": 4,
+      "distance": 8,
+      "enumerated_words": 32,
+      "r": 3
+    },
+    {
+      "K": 1,
+      "M": 16,
+      "d": 4,
+      "distance": 16,
+      "enumerated_words": 2,
+      "r": 4
+    },
+    {
+      "K": 26,
+      "M": 32,
+      "d": 5,
+      "distance": 4,
+      "r": 2
+    },
+    {
+      "K": 16,
+      "M": 32,
+      "d": 5,
+      "distance": 8,
+      "r": 3
+    },
+    {
+      "K": 6,
+      "M": 32,
+      "d": 5,
+      "distance": 16,
+      "enumerated_words": 64,
+      "r": 4
+    },
+    {
+      "K": 1,
+      "M": 32,
+      "d": 5,
+      "distance": 32,
+      "enumerated_words": 2,
+      "r": 5
+    }
+  ],
+  "literal": {
+    "query_H": [
+      17,
+      19
+    ],
+    "seed_H": 9,
+    "seed_rows": [
+      [
+        16,
+        1,
+        3,
+        7,
+        14
+      ],
+      [
+        20,
+        1,
+        2,
+        7,
+        14
+      ]
+    ],
+    "two_block_graphs": 12
+  },
+  "status": "PASS"
+}

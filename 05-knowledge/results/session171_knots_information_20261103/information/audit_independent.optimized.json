@@ -1,0 +1,25 @@
+{
+  "brute_force_start_rows": [
+    [
+      1,
+      2,
+      4,
+      8,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      3,
+      7,
+      5,
+      1
+    ]
+  ],
+  "equality_threshold_ambiguity": true,
+  "independent_partition_profile_checks": 2,
+  "mixed_error_erasure_decoding_checks": 2512,
+  "slot_polynomial_checks": 30,
+  "status": "PASS"
+}
