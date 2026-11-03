@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "script": "check_corollary.py",
+      "optimized": false,
+      "status": "PASS exact output match"
+    },
+    {
+      "script": "test_corollary.py",
+      "optimized": false,
+      "status": "PASS exact output match"
+    },
+    {
+      "script": "check_corollary.py",
+      "optimized": true,
+      "status": "PASS exact output match"
+    },
+    {
+      "script": "test_corollary.py",
+      "optimized": true,
+      "status": "PASS exact output match"
+    }
+  ],
+  "producer_checks": 77
+}

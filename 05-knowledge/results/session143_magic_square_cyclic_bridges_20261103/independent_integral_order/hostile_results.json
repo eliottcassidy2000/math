@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "optimized": false,
+      "mutation": "index",
+      "exit_code": 1,
+      "last_error": "RuntimeError: power-basis determinant minus eleven"
+    },
+    {
+      "optimized": false,
+      "mutation": "growing-cokernel",
+      "exit_code": 1,
+      "last_error": "RuntimeError: bounded module cokernel does not grow eleven-adically"
+    },
+    {
+      "optimized": false,
+      "mutation": "cyclotomic-inverse",
+      "exit_code": 1,
+      "last_error": "RuntimeError: integral cyclotomic inverse"
+    },
+    {
+      "optimized": false,
+      "mutation": "hadamard-repair",
+      "exit_code": 1,
+      "last_error": "RuntimeError: entrywise Hadamard repair recovers labeled generator"
+    },
+    {
+      "optimized": true,
+      "mutation": "index",
+      "exit_code": 1,
+      "last_error": "RuntimeError: power-basis determinant minus eleven"
+    },
+    {
+      "optimized": true,
+      "mutation": "growing-cokernel",
+      "exit_code": 1,
+      "last_error": "RuntimeError: bounded module cokernel does not grow eleven-adically"
+    },
+    {
+      "optimized": true,
+      "mutation": "cyclotomic-inverse",
+      "exit_code": 1,
+      "last_error": "RuntimeError: integral cyclotomic inverse"
+    },
+    {
+      "optimized": true,
+      "mutation": "hadamard-repair",
+      "exit_code": 1,
+      "last_error": "RuntimeError: entrywise Hadamard repair recovers labeled generator"
+    }
+  ]
+}

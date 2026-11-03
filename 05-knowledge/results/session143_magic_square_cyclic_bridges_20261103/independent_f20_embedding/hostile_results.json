@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "optimized": false,
+      "mutation": "centralizer",
+      "exit_code": 1,
+      "last_error": "RuntimeError: C5 times HS excludes class5B"
+    },
+    {
+      "optimized": false,
+      "mutation": "character",
+      "exit_code": 1,
+      "last_error": "RuntimeError: exact irreducible-character orthogonality"
+    },
+    {
+      "optimized": false,
+      "mutation": "permutation-copies",
+      "exit_code": 1,
+      "last_error": "RuntimeError: whole five-dimensional permutation copies require trivial constituents"
+    },
+    {
+      "optimized": true,
+      "mutation": "centralizer",
+      "exit_code": 1,
+      "last_error": "RuntimeError: C5 times HS excludes class5B"
+    },
+    {
+      "optimized": true,
+      "mutation": "character",
+      "exit_code": 1,
+      "last_error": "RuntimeError: exact irreducible-character orthogonality"
+    },
+    {
+      "optimized": true,
+      "mutation": "permutation-copies",
+      "exit_code": 1,
+      "last_error": "RuntimeError: whole five-dimensional permutation copies require trivial constituents"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "checked_utc_date": "2026-11-03",
+  "access_scope": "No new browsing or tables; only previously verified ATLAS and BMW snapshots reused.",
+  "sources": [
+    {
+      "id": "atlas-b",
+      "url": "https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/B",
+      "locators": [
+        "Maximal subgroup displayed as 5:4 x HS:2, order1774080000",
+        "Conjugacy classes: only5A/5B, centralizers443520000/6000000"
+      ],
+      "snapshot_sha256": "2dfac4ac49865ef042865be4fb18170ca3fd66709bbd38f0ef35293c43f354e3",
+      "grouping_scope": "Use only index-two base (5:4)xHS; do not assume a commuting outer involution or identify centralizer structure."
+    },
+    {
+      "id": "bmw-ctbl",
+      "url": "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/htm/ctblbm.htm",
+      "locators": [
+        "Section6: character table identifier 5:4xHS.2 and normal5-core positions",
+        "Section7: rational ordinary4371 character, 5A value21"
+      ],
+      "snapshot_sha256": "6f341f9b274f2b477f140de8b7453604ef4fe26e362c4aa16dcb8dd78ee2e436"
+    }
+  ],
+  "local_previously_verified_dependencies": [
+    {
+      "packet": "puzzle_coordinates",
+      "manifest_sha256": "1f26239bd18518f4ce23cfdbbeebf8e0579d78095ae0cd5265f0d0f2571cee89",
+      "used": "Explicit g,h with orders5,4, conjugation exponent2, subgroup order20"
+    },
+    {
+      "packet": "sporadic",
+      "manifest_sha256": "20a2e90b012f482a301b6c4fd3560982414845d2157243c5658019293a2522ae",
+      "used": "4371-character restriction multiplicities891 and870"
+    }
+  ],
+  "source_snapshot_distribution": "Excluded; no external data required to rerun finite algebra checks."
+}

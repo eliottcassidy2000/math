@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "producer_bundle": "f20_embedding",
+  "files": [
+    {
+      "path": "report.md",
+      "bytes": 6376,
+      "sha256": "01b872115be66e3391768cb6425c7e12e24849cd57ccfc3fc907855b7987653b",
+      "status": "Sealed producer bytes verified"
+    },
+    {
+      "path": "check_corollary.py",
+      "bytes": 4242,
+      "sha256": "aa8639a2cb84cf748e5a81763bee028d60b9ef02ce5c89df12f98d12acfb12f3",
+      "status": "Sealed producer bytes verified"
+    },
+    {
+      "path": "check_output.json",
+      "bytes": 670,
+      "sha256": "068405a196fd364890e20b28aa065fd9952596fde7ea4ad1ad53d6d54cb99059",
+      "status": "Sealed producer bytes verified"
+    },
+    {
+      "path": "test_corollary.py",
+      "bytes": 1115,
+      "sha256": "963e09d3882a350e8a7f811d1097673589ab2fc5f1ca97a92b44f5b0992b3a08",
+      "status": "Sealed producer bytes verified"
+    },
+    {
+      "path": "test_output.json",
+      "bytes": 608,
+      "sha256": "755d4b750cde7f21bd68a007fa3050ee88a1c450f2a088862073a2565d34b897",
+      "status": "Sealed producer bytes verified"
+    },
+    {
+      "path": "sources.json",
+      "bytes": 1640,
+      "sha256": "02aee4cd6c9358ec0e88c664c3b9e389ca93a0d12983f298bf3584b4ccb234e1",
+      "status": "Sealed producer bytes verified"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 1672,
+      "sha256": "848b1e2ea55f0c249e6cde8559df46df31261cf092f3c2642e58ca40d6270bc8"
+    }
+  ],
+  "unchanged_dependencies": [
+    {
+      "packet": "puzzle_coordinates",
+      "manifest_sha256": "1f26239bd18518f4ce23cfdbbeebf8e0579d78095ae0cd5265f0d0f2571cee89",
+      "used": "Explicit g,h with orders5,4, conjugation exponent2, subgroup order20"
+    },
+    {
+      "packet": "sporadic",
+      "manifest_sha256": "20a2e90b012f482a301b6c4fd3560982414845d2157243c5658019293a2522ae",
+      "used": "4371-character restriction multiplicities891 and870"
+    }
+  ],
+  "independent_primary_check": {
+    "date": "2026-11-03",
+    "urls": [
+      "https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/B",
+      "https://brauer.maths.qmul.ac.uk/Atlas/spor/HS/",
+      "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/htm/ctblbm.htm"
+    ],
+    "scope": "Structure notation, subgroup/HS orders, class data and prior character source; no group construction executed."
+  }
+}

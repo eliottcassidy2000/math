@@ -1,0 +1,14 @@
+{
+  "base_commit": "d7c2dfd3e681831a8192c9130a0ebdeaed10786d",
+  "curated_publication_links_checked": 74,
+  "frontier_line_budget": 450,
+  "frontier_lines": 450,
+  "full_checker_run": false,
+  "opaque_ledger_read": false,
+  "owned_text_files_checked": 185,
+  "scope": "Startup budgets and unchanged startup surface, explicit owned-file conflicts and curated publication links only. Historical snapshot links retain original context. No repository-wide check_docs claim.",
+  "startup_byte_budget": 180000,
+  "startup_bytes": 179893,
+  "startup_unchanged": true,
+  "status": "PASS"
+}

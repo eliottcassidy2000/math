@@ -79,3 +79,22 @@ point orbit -> four regular tournament orientations. It preserves the chosen
 C5:C4 action but loses the other eight positions, line incidence and word
 history. A named line-to-nonline image rejects the false collineation claim.
 It supplies no Baby Monster embedding or representation intertwiner.
+
+
+## Final integral-order refinement
+
+The polynomial inverse raises one precise arithmetic question: is the
+rational algebra equality also integral? The answer is no, by exact index11,
+but the loss is only ordinary functional calculus. The cyclotomic factor
+still has an integral inverse; an extra congruence glues it to the trivial
+factor. Transpose/all-ones or Hadamard data repairs the full labeled graph
+without division. The mod5 hostile rules out spectral-support counting as
+a general ring-generation test. No additional cross-subject meaning of11
+is inferred; this bounded addendum is the final research step.
+
+The final existing-input group corollary adds one explicit **abstract** map:
+puzzle F20 -> the cited Baby Monster normalizer factor, with the order-five
+generator in5A. Source class-centralizer bounds select the class; restricted
+characters determine870 W4 and891 total linear constituents, not their
+individual linear split or whole permutation-module multiplicity. Actual
+Baby Monster words/matrices/intertwiners are still not constructed.

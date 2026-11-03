@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "bytes": 9097,
+      "path": "PROOF.md",
+      "sha256": "d463941118eb3a6add2702ea7b0aecb7990187f2a510582f528e92c50b02bdb2"
+    },
+    {
+      "bytes": 11055,
+      "path": "check_integral_order.py",
+      "sha256": "0d1c78effe788840e05f8ecb7fc4edbb89a4fef1e4cfc43a6551f58f491a6ad5"
+    },
+    {
+      "bytes": 4336,
+      "path": "certificate.json",
+      "sha256": "567fdbe3fb3dbb3593b80632fa4eb5d750236642b3d28b5ba9420c1e61d03003"
+    },
+    {
+      "bytes": 1998,
+      "path": "test_negative_controls.py",
+      "sha256": "a7f35ae4daa709ef7faa7308f39e2613676850ac2f4c517348351bc2349621c5"
+    },
+    {
+      "bytes": 983,
+      "path": "negative_controls.json",
+      "sha256": "fa149e60dd1a403d2962e694f4ed22be1766df24aee830c365c6c8d69f06c1c4"
+    },
+    {
+      "bytes": 948,
+      "path": "verify_manifest.py",
+      "sha256": "67a60e07168646090be62224ba1af98bc65a7b8628192902b7c7e56ed351eff8"
+    },
+    {
+      "bytes": 484,
+      "path": "source_pins.json",
+      "sha256": "38bfd9ea1a57cff2969e703f3fbba9a34af4d1da254575b2756aa665773b5db9"
+    }
+  ],
+  "hash_basis": "raw bytes"
+}

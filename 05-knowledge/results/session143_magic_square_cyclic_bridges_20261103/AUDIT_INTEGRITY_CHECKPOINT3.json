@@ -1,0 +1,10 @@
+{
+  "audited_f20_addendum_files": 7,
+  "audited_integral_addendum_files": 8,
+  "inherited_tournament_manifest_sha256": "97f8f00d91d6e7b435379e124e3f75be02a72f4ef5526ef6892cbdaba60db26b",
+  "lane_files": 17,
+  "lane_manifests": 2,
+  "optimization_safe_scripts": 7,
+  "scope": "Exact proof/checker binding to additive integral-order and F20 audits; existing science untouched, external subgroup/character facts remain cited.",
+  "status": "PASS"
+}

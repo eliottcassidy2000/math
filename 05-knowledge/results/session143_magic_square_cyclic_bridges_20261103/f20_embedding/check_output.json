@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "checks_executed": 77,
+  "normalizer_order": 1774080000,
+  "centralizer_5A": 443520000,
+  "centralizer_5B": 6000000,
+  "HS_order": 44352000,
+  "robust_centralizer_lower_bound": 221760000,
+  "F20_irreducible_degrees": [
+    1,
+    1,
+    1,
+    1,
+    4
+  ],
+  "restriction": {
+    "four_dimensional_multiplicity": 870,
+    "total_linear_multiplicity": 891,
+    "rationality_constraint": "a1=a3; a0+a1+a2+a3=891",
+    "whole_permutation_modules_not_forced": true,
+    "hostile_module_trivial_H_multiplicity": 0
+  },
+  "boundary": "Abstract embedding conditional on cited ATLAS subgroup data; no explicit Baby Monster generators or intertwiner."
+}

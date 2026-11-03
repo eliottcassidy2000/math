@@ -1,0 +1,319 @@
+{
+  "checks_passed": 3302,
+  "composite_prime_power_checks": [
+    {
+      "cokernel_order": 1,
+      "modulus": 6,
+      "predicted_image_size": 7776
+    },
+    {
+      "cokernel_order": 1,
+      "modulus": 10,
+      "predicted_image_size": 100000
+    },
+    {
+      "cokernel_order": 1,
+      "modulus": 12,
+      "predicted_image_size": 248832
+    },
+    {
+      "cokernel_order": 11,
+      "modulus": 22,
+      "predicted_image_size": 468512
+    },
+    {
+      "cokernel_order": 11,
+      "modulus": 33,
+      "predicted_image_size": 3557763
+    },
+    {
+      "cokernel_order": 11,
+      "modulus": 55,
+      "predicted_image_size": 45753125
+    },
+    {
+      "cokernel_order": 11,
+      "modulus": 121,
+      "predicted_image_size": 2357947691
+    },
+    {
+      "cokernel_order": 11,
+      "modulus": 242,
+      "predicted_image_size": 75454326112
+    },
+    {
+      "cokernel_order": 11,
+      "modulus": 1331,
+      "predicted_image_size": 379749833583241
+    },
+    {
+      "cokernel_order": 11,
+      "modulus": 14641,
+      "predicted_image_size": 61159090448414546291
+    }
+  ],
+  "congruence_row": [
+    0,
+    1,
+    -1,
+    3,
+    6
+  ],
+  "cyclotomic_basis": [
+    [
+      1,
+      0,
+      -1,
+      0
+    ],
+    [
+      0,
+      1,
+      -1,
+      -2
+    ],
+    [
+      0,
+      1,
+      0,
+      -3
+    ],
+    [
+      0,
+      0,
+      1,
+      -2
+    ]
+  ],
+  "cyclotomic_basis_determinant": -1,
+  "cyclotomic_inverse_coefficients": [
+    -2,
+    -3,
+    -2,
+    -1
+  ],
+  "determinant": -11,
+  "discriminants": {
+    "adjacency_order": 378125,
+    "cyclotomic_order": 125,
+    "group_order": 3125
+  },
+  "finite_exhaustive": [
+    {
+      "cokernel_order": 1,
+      "image_size": 1,
+      "kernel_size": 1,
+      "modulus": 1
+    },
+    {
+      "cokernel_order": 1,
+      "image_size": 32,
+      "kernel_size": 1,
+      "modulus": 2
+    },
+    {
+      "cokernel_order": 1,
+      "image_size": 243,
+      "kernel_size": 1,
+      "modulus": 3
+    },
+    {
+      "cokernel_order": 1,
+      "image_size": 1024,
+      "kernel_size": 1,
+      "modulus": 4
+    },
+    {
+      "cokernel_order": 1,
+      "image_size": 3125,
+      "kernel_size": 1,
+      "modulus": 5
+    },
+    {
+      "cokernel_order": 1,
+      "image_size": 16807,
+      "kernel_size": 1,
+      "modulus": 7
+    },
+    {
+      "cokernel_order": 11,
+      "image_size": 14641,
+      "kernel_size": 11,
+      "modulus": 11
+    }
+  ],
+  "full_adjacency_repairs": {
+    "family_members_checked": 4,
+    "hadamard_formula": "P=A-A Hadamard A^2",
+    "integer_formula": "P=5J-A^3-2A^2-3A-2I",
+    "moduli_checked": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      11,
+      22,
+      55,
+      121,
+      1331
+    ],
+    "transpose_formula": "J=I+A+A^T"
+  },
+  "full_inverse_coefficients": [
+    -17,
+    -18,
+    -2,
+    -1,
+    5
+  ],
+  "gluing_norms": [
+    5,
+    11,
+    55
+  ],
+  "inverse_numerator": [
+    [
+      11,
+      -17,
+      17,
+      -7,
+      -3
+    ],
+    [
+      0,
+      -18,
+      29,
+      -21,
+      13
+    ],
+    [
+      0,
+      -2,
+      2,
+      5,
+      -1
+    ],
+    [
+      0,
+      -1,
+      1,
+      -3,
+      5
+    ],
+    [
+      0,
+      5,
+      -5,
+      4,
+      -3
+    ]
+  ],
+  "mod11_root_images": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      9,
+      2
+    ]
+  ],
+  "mod5_hostile": "A still generates: (A-2)^5=0 but (A-2)^4 !=0",
+  "power_basis_columns": [
+    [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      2,
+      1
+    ],
+    [
+      3,
+      1,
+      0,
+      1,
+      3
+    ],
+    [
+      4,
+      6,
+      4,
+      1,
+      1
+    ]
+  ],
+  "power_basis_matrix": [
+    [
+      1,
+      0,
+      0,
+      3,
+      4
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      6
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      4
+    ],
+    [
+      0,
+      0,
+      2,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      3,
+      1
+    ]
+  ],
+  "quotient": "additive R/Z[A] is C11, not a quotient ring",
+  "smith_invariant_factors": [
+    1,
+    1,
+    1,
+    1,
+    11
+  ],
+  "status": "PROVED identities and order/gluing theorem; FINITE-EXACT replay checks; no FRACTRAN dynamics transported"
+}

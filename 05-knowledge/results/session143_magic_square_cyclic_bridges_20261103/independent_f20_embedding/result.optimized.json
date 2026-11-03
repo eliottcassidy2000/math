@@ -1,0 +1,175 @@
+{
+  "W_multiplicity": 870,
+  "centralizer_lower_bound": 221760000,
+  "character_gram_entries": [
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      4,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      3,
+      0
+    ],
+    [
+      1,
+      4,
+      0
+    ],
+    [
+      2,
+      0,
+      0
+    ],
+    [
+      2,
+      1,
+      0
+    ],
+    [
+      2,
+      2,
+      1
+    ],
+    [
+      2,
+      3,
+      0
+    ],
+    [
+      2,
+      4,
+      0
+    ],
+    [
+      3,
+      0,
+      0
+    ],
+    [
+      3,
+      1,
+      0
+    ],
+    [
+      3,
+      2,
+      0
+    ],
+    [
+      3,
+      3,
+      1
+    ],
+    [
+      3,
+      4,
+      0
+    ],
+    [
+      4,
+      0,
+      0
+    ],
+    [
+      4,
+      1,
+      0
+    ],
+    [
+      4,
+      2,
+      0
+    ],
+    [
+      4,
+      3,
+      0
+    ],
+    [
+      4,
+      4,
+      1
+    ]
+  ],
+  "checks": 447,
+  "conjugacy_class_sizes": [
+    1,
+    4,
+    5,
+    5,
+    5
+  ],
+  "formal_noninference_witnesses": [
+    {
+      "h_trace": 891,
+      "linear_multiplicities": [
+        891,
+        0,
+        0,
+        0
+      ],
+      "trivial_F20_multiplicity": 891
+    },
+    {
+      "h_trace": -891,
+      "linear_multiplicities": [
+        0,
+        0,
+        891,
+        0
+      ],
+      "trivial_F20_multiplicity": 0
+    }
+  ],
+  "group_order": 20,
+  "irreducible_degrees": [
+    1,
+    1,
+    1,
+    1,
+    4
+  ],
+  "normalizer_order": 1774080000,
+  "rationality_relation": "a1=a3",
+  "scope": "Abstract embedding and restriction conditional on cited subgroup/class/character inputs. No Baby Monster generators, table reconstruction, intertwiner or actual individual linear multiplicities computed.",
+  "selected_B_class": "5A",
+  "status": "PASS",
+  "total_linear_multiplicity": 891
+}

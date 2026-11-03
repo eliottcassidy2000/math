@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "optimized": false,
+      "mutation": false,
+      "exit_code": 0,
+      "checks_executed": 77
+    },
+    {
+      "optimized": false,
+      "mutation": true,
+      "exit_code": 1,
+      "rejection": "FAIL: cited 5A centralizer order is twice the robust lower bound"
+    },
+    {
+      "optimized": true,
+      "mutation": false,
+      "exit_code": 0,
+      "checks_executed": 77
+    },
+    {
+      "optimized": true,
+      "mutation": true,
+      "exit_code": 1,
+      "rejection": "FAIL: cited 5A centralizer order is twice the robust lower bound"
+    }
+  ]
+}

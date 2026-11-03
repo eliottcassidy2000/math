@@ -1,0 +1,46 @@
+{
+  "schema": "session143-f20-abstract-embedding-portable-v1",
+  "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+  "checked_utc_date": "2026-11-03",
+  "status": "PROVED conditional on cited subgroup/character inputs;77 exact checks and4 normal/-O regression cases PASS",
+  "reproduce": [
+    "python3 check_corollary.py",
+    "python3 -O check_corollary.py",
+    "python3 test_corollary.py",
+    "python3 -O test_corollary.py"
+  ],
+  "artifacts": [
+    {
+      "path": "report.md",
+      "bytes": 6376,
+      "sha256": "01b872115be66e3391768cb6425c7e12e24849cd57ccfc3fc907855b7987653b"
+    },
+    {
+      "path": "check_corollary.py",
+      "bytes": 4242,
+      "sha256": "aa8639a2cb84cf748e5a81763bee028d60b9ef02ce5c89df12f98d12acfb12f3"
+    },
+    {
+      "path": "check_output.json",
+      "bytes": 670,
+      "sha256": "068405a196fd364890e20b28aa065fd9952596fde7ea4ad1ad53d6d54cb99059"
+    },
+    {
+      "path": "test_corollary.py",
+      "bytes": 1115,
+      "sha256": "963e09d3882a350e8a7f811d1097673589ab2fc5f1ca97a92b44f5b0992b3a08"
+    },
+    {
+      "path": "test_output.json",
+      "bytes": 608,
+      "sha256": "755d4b750cde7f21bd68a007fa3050ee88a1c450f2a088862073a2565d34b897"
+    },
+    {
+      "path": "sources.json",
+      "bytes": 1640,
+      "sha256": "02aee4cd6c9358ec0e88c664c3b9e389ca93a0d12983f298bf3584b4ccb234e1"
+    }
+  ],
+  "boundary": "Abstract F20 embedding sending g to5A; no computed Baby Monster generators, intertwiner, or exact split of891 linear constituents. Outer2 grouping deliberately not assumed. No whole5D affine-permutation-module multiplicity follows from the C5 data.",
+  "frozen_prior_packets_modified": false
+}

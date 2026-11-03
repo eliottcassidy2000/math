@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "producer_sha256": "0d1c78effe788840e05f8ecb7fc4edbb89a4fef1e4cfc43a6551f58f491a6ad5",
+  "tests": [
+    {
+      "mutation": "reciprocal-step",
+      "optimized": false,
+      "anchor_count": 1,
+      "exit_code": 1,
+      "last_error": "RuntimeError: cyclic power-basis columns"
+    },
+    {
+      "mutation": "reciprocal-step",
+      "optimized": true,
+      "anchor_count": 1,
+      "exit_code": 1,
+      "last_error": "RuntimeError: cyclic power-basis columns"
+    },
+    {
+      "mutation": "bad-cyclotomic-inverse",
+      "optimized": false,
+      "anchor_count": 1,
+      "exit_code": 1,
+      "last_error": "RuntimeError: integral cyclotomic inverse"
+    },
+    {
+      "mutation": "bad-cyclotomic-inverse",
+      "optimized": true,
+      "anchor_count": 1,
+      "exit_code": 1,
+      "last_error": "RuntimeError: integral cyclotomic inverse"
+    },
+    {
+      "mutation": "growing-cokernel",
+      "optimized": false,
+      "anchor_count": 2,
+      "exit_code": 1,
+      "last_error": "RuntimeError: kernel order remains11 at every tested11-adic depth"
+    },
+    {
+      "mutation": "growing-cokernel",
+      "optimized": true,
+      "anchor_count": 2,
+      "exit_code": 1,
+      "last_error": "RuntimeError: kernel order remains11 at every tested11-adic depth"
+    },
+    {
+      "mutation": "wrong-Hadamard-sign",
+      "optimized": false,
+      "anchor_count": 1,
+      "exit_code": 1,
+      "last_error": "RuntimeError: Hadamard repair recovers the labeled generator"
+    },
+    {
+      "mutation": "wrong-Hadamard-sign",
+      "optimized": true,
+      "anchor_count": 1,
+      "exit_code": 1,
+      "last_error": "RuntimeError: Hadamard repair recovers the labeled generator"
+    }
+  ]
+}

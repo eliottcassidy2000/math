@@ -1,0 +1,47 @@
+{
+  "cases": [
+    {
+      "name": "wrong_generator",
+      "normal_rejected": true,
+      "optimized_rejected": true
+    },
+    {
+      "name": "wrong_inverse",
+      "normal_rejected": true,
+      "optimized_rejected": true
+    },
+    {
+      "name": "wrong_congruence",
+      "normal_rejected": true,
+      "optimized_rejected": true
+    },
+    {
+      "name": "wrong_field_inverse",
+      "normal_rejected": true,
+      "optimized_rejected": true
+    },
+    {
+      "name": "wrong_new_prime",
+      "normal_rejected": true,
+      "optimized_rejected": true
+    },
+    {
+      "name": "wrong_hadamard_sign",
+      "normal_rejected": true,
+      "optimized_rejected": true
+    },
+    {
+      "name": "growing_prime_power_deficit",
+      "normal_rejected": true,
+      "optimized_rejected": true
+    },
+    {
+      "name": "false_mod5_spectral_heuristic",
+      "normal_rejected": true,
+      "optimized_rejected": true
+    }
+  ],
+  "mutants": 8,
+  "runs": 16,
+  "status": "PASS"
+}

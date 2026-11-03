@@ -1,0 +1,374 @@
+{
+  "mutations": [
+    {
+      "after": "len(orbits) == 13, '1024 labels,12 classes'",
+      "before": "len(orbits) == 12, '1024 labels,12 classes'",
+      "label": "wrong-tournament-census",
+      "reason": "1024 labels,12 classes",
+      "returncode": 1,
+      "script": "tournaments/check_tournaments.py",
+      "target": "tournaments/check_tournaments.py"
+    },
+    {
+      "after": "linear_combo([-16, -18, -2, -1, 5], powers[:5])",
+      "before": "linear_combo([-17, -18, -2, -1, 5], powers[:5])",
+      "label": "wrong-cyclotomic-inverse",
+      "reason": "11P polynomial reconstruction",
+      "returncode": 1,
+      "script": "tournaments/check_tournaments.py",
+      "target": "tournaments/check_tournaments.py"
+    },
+    {
+      "after": "# Nine-cycle carry and complete degree-three magic relabeling classificatioN",
+      "before": "# Nine-cycle carry and complete degree-three magic relabeling classification",
+      "label": "audited-proof-content-corruption",
+      "reason": "audited SHA256 magic_cycle/THEOREM.md",
+      "returncode": 1,
+      "script": "verify_checkpoint2_integrity.py",
+      "target": "magic_cycle/THEOREM.md"
+    },
+    {
+      "after": "# Session 143: the exact integral order defect, and its sharp repaiR",
+      "before": "# Session 143: the exact integral order defect, and its sharp repair",
+      "label": "integral-reviewed-proof-corruption",
+      "reason": "audited SHA256 cyclic_integral_order/PROOF.md",
+      "returncode": 1,
+      "script": "verify_checkpoint3_integrity.py",
+      "target": "cyclic_integral_order/PROOF.md"
+    }
+  ],
+  "proof_corruption": "cyclic_integral_order/PROOF.md",
+  "scope": "Checkpoint2: all checkpoint1 science plus all-real degree<=3 magic-assignment classification, C9 carry/affine boundaries, signed octonion/subalgebra/character maps and one magic-predicate-preserving half-turn lift. Conditional lambda-cube comparison; integer-square existence remains OPEN. No external table/build reconstruction. Additive explicit PG(2,3) puzzle words and chosen five-orbit/four-orientation action; not a collineation or Baby Monster intertwiner. Final integral-order addendum: exact additive index11 and all-modulus generation for ordinary polynomial calculus, with sharp full-adjacency recovery; no extra cross-subject transport. Final cited-input abstract F20 embedding selects5A; restriction determines870 W4 and891 total linears, not whole affine permutation modules or explicit Baby Monster generators/intertwiner.",
+  "tests": [
+    {
+      "label": "n5-census",
+      "output": "tournaments/classification.json",
+      "script": "tournaments/check_tournaments.py"
+    },
+    {
+      "label": "mckay-catalogue",
+      "output": "tournaments/catalogue_crosscheck.stdout.txt",
+      "script": "tournaments/catalogue_crosscheck.py"
+    },
+    {
+      "label": "tournament-lane-manifest",
+      "script": "tournaments/verify_manifest.py"
+    },
+    {
+      "label": "C5-operator",
+      "output": "sporadic/check_output_portable.json",
+      "script": "sporadic/check_bridge.py"
+    },
+    {
+      "label": "C5-lane-hostile-suite",
+      "output": "sporadic/test_output_portable.json",
+      "script": "sporadic/test_bridge.py"
+    },
+    {
+      "argv": [
+        "--mutate",
+        "bad-eigenvalue"
+      ],
+      "label": "bad-eigenvalue",
+      "reason": "rem(qalpha,phi5)==[0]",
+      "returncode": 1,
+      "script": "sporadic/check_bridge.py"
+    },
+    {
+      "argv": [
+        "--mutate",
+        "bad-character"
+      ],
+      "label": "bad-character",
+      "reason": "multiplicities==expected",
+      "returncode": 1,
+      "script": "sporadic/check_bridge.py"
+    },
+    {
+      "label": "historical-source-pins",
+      "output": "SOURCE_INTEGRITY_CHECKPOINT1.json",
+      "script": "verify_source_pins.py"
+    },
+    {
+      "label": "independent-census-C5",
+      "output": "independent_checkpoint1/result.json",
+      "script": "independent_checkpoint1/check_checkpoint1.py"
+    },
+    {
+      "label": "independent-lane-manifest",
+      "script": "independent_checkpoint1/verify_manifest.py"
+    },
+    {
+      "argv": [
+        "--mutate-spectrum"
+      ],
+      "label": "independent-wrong-spectrum",
+      "reason": "nine distinct adjacency spectra",
+      "returncode": 1,
+      "script": "independent_checkpoint1/check_checkpoint1.py"
+    },
+    {
+      "label": "magic-cycle",
+      "output": "magic_cycle/results.json",
+      "script": "magic_cycle/verify.py"
+    },
+    {
+      "label": "full-cubic-classification",
+      "output": "magic_cycle/full_cubic_audit.json",
+      "script": "magic_cycle/full_cubic_audit.py"
+    },
+    {
+      "label": "nonodd-independent-elimination",
+      "output": "magic_cycle/audit/full_cubic_nonodd.json",
+      "script": "magic_cycle/audit/full_cubic_nonodd.py"
+    },
+    {
+      "label": "magic-lane-manifest",
+      "script": "magic_cycle/verify_manifest.py"
+    },
+    {
+      "label": "magic-lane-hostile-suite",
+      "output": "magic_cycle/hostile_controls.json",
+      "script": "magic_cycle/verify_hostile_controls.py"
+    },
+    {
+      "label": "octonion-maps",
+      "output": "lambda_octonions/certificate.json",
+      "script": "lambda_octonions/verify.py"
+    },
+    {
+      "argv": [
+        "--mutate-sign"
+      ],
+      "label": "octonion-sign-hostile",
+      "reason": "cochain vs Cayley-Dickson",
+      "returncode": 1,
+      "script": "lambda_octonions/verify.py"
+    },
+    {
+      "label": "full-independent-audit",
+      "output": "independent/result.json",
+      "script": "independent/check_independent.py"
+    },
+    {
+      "label": "full-independent-cubic",
+      "output": "independent/full_cubic_result.json",
+      "script": "independent/check_full_cubic.py"
+    },
+    {
+      "label": "full-independent-manifest",
+      "script": "independent/verify_manifest.py"
+    },
+    {
+      "argv": [
+        "--mutate-moment"
+      ],
+      "label": "independent-moment-hostile",
+      "reason": "RuntimeError:",
+      "returncode": 1,
+      "script": "independent/check_independent.py"
+    },
+    {
+      "argv": [
+        "--mutate-octonion"
+      ],
+      "label": "independent-octonion-hostile",
+      "reason": "RuntimeError:",
+      "returncode": 1,
+      "script": "independent/check_independent.py"
+    },
+    {
+      "argv": [
+        "--mutate-ray"
+      ],
+      "label": "independent-nonodd-ray-hostile",
+      "reason": "four nonodd central-symmetry rays",
+      "returncode": 1,
+      "script": "independent/check_full_cubic.py"
+    },
+    {
+      "argv": [
+        "--manifest",
+        "SOURCE_PINS_CHECKPOINT2.json"
+      ],
+      "label": "full-historical-source-pins",
+      "output": "SOURCE_INTEGRITY_CHECKPOINT2.json",
+      "script": "verify_source_pins.py"
+    },
+    {
+      "label": "audit-proof-binding",
+      "output": "AUDIT_INTEGRITY_CHECKPOINT2.json",
+      "script": "verify_checkpoint2_integrity.py"
+    },
+    {
+      "label": "projective-puzzle-witnesses",
+      "output": "puzzle_coordinates/check_output.json",
+      "script": "puzzle_coordinates/check_coordinates.py"
+    },
+    {
+      "label": "projective-puzzle-hostile-suite",
+      "output": "puzzle_coordinates/test_output.json",
+      "script": "puzzle_coordinates/test_coordinates.py"
+    },
+    {
+      "label": "independent-projective-puzzle",
+      "output": "independent_puzzle/result.json",
+      "script": "independent_puzzle/check_puzzle.py"
+    },
+    {
+      "label": "independent-puzzle-manifest",
+      "script": "independent_puzzle/verify_manifest.py"
+    },
+    {
+      "argv": [
+        "--mutate",
+        "single-swap"
+      ],
+      "label": "independent-illegal-puzzle-move",
+      "reason": "RuntimeError:",
+      "returncode": 1,
+      "script": "independent_puzzle/check_puzzle.py"
+    },
+    {
+      "argv": [
+        "--mutate",
+        "inverse-h"
+      ],
+      "label": "independent-inverse-puzzle-normalizer",
+      "reason": "RuntimeError:",
+      "returncode": 1,
+      "script": "independent_puzzle/check_puzzle.py"
+    },
+    {
+      "argv": [
+        "--mutate",
+        "reciprocal-adjacency"
+      ],
+      "label": "independent-reciprocal-puzzle-adjacency",
+      "reason": "RuntimeError:",
+      "returncode": 1,
+      "script": "independent_puzzle/check_puzzle.py"
+    },
+    {
+      "label": "integral-order-producer",
+      "output": "cyclic_integral_order/certificate.json",
+      "script": "cyclic_integral_order/check_integral_order.py"
+    },
+    {
+      "label": "integral-order-producer-controls",
+      "output": "cyclic_integral_order/negative_controls.json",
+      "script": "cyclic_integral_order/test_negative_controls.py"
+    },
+    {
+      "label": "integral-order-independent",
+      "output": "independent_integral_order/result.json",
+      "script": "independent_integral_order/check_integral_order.py"
+    },
+    {
+      "label": "integral-order-independent-manifest",
+      "script": "independent_integral_order/verify_manifest.py"
+    },
+    {
+      "argv": [
+        "{root}/cyclic_integral_order/check_integral_order.py"
+      ],
+      "label": "independent-producer-mutations",
+      "output": "independent_integral_order/producer_mutation_results.json",
+      "script": "independent_integral_order/audit_producer_mutations.py"
+    },
+    {
+      "label": "integral-order-audit-binding",
+      "output": "AUDIT_INTEGRITY_CHECKPOINT3.json",
+      "script": "verify_checkpoint3_integrity.py"
+    },
+    {
+      "argv": [
+        "--mutate",
+        "index"
+      ],
+      "label": "integral-hostile-index",
+      "reason": "power-basis determinant minus eleven",
+      "returncode": 1,
+      "script": "independent_integral_order/check_integral_order.py"
+    },
+    {
+      "argv": [
+        "--mutate",
+        "growing-cokernel"
+      ],
+      "label": "integral-hostile-growing-cokernel",
+      "reason": "bounded module cokernel does not grow eleven-adically",
+      "returncode": 1,
+      "script": "independent_integral_order/check_integral_order.py"
+    },
+    {
+      "argv": [
+        "--mutate",
+        "cyclotomic-inverse"
+      ],
+      "label": "integral-hostile-cyclotomic-inverse",
+      "reason": "integral cyclotomic inverse",
+      "returncode": 1,
+      "script": "independent_integral_order/check_integral_order.py"
+    },
+    {
+      "argv": [
+        "--mutate",
+        "hadamard-repair"
+      ],
+      "label": "integral-hostile-hadamard-repair",
+      "reason": "entrywise Hadamard repair recovers labeled generator",
+      "returncode": 1,
+      "script": "independent_integral_order/check_integral_order.py"
+    },
+    {
+      "label": "F20-abstract-corollary",
+      "output": "f20_embedding/check_output.json",
+      "script": "f20_embedding/check_corollary.py"
+    },
+    {
+      "label": "F20-producer-controls",
+      "output": "f20_embedding/test_output.json",
+      "script": "f20_embedding/test_corollary.py"
+    },
+    {
+      "label": "F20-independent-character-audit",
+      "output": "independent_f20_embedding/result.json",
+      "script": "independent_f20_embedding/check_f20.py"
+    },
+    {
+      "label": "F20-independent-manifest",
+      "script": "independent_f20_embedding/verify_manifest.py"
+    },
+    {
+      "argv": [
+        "--mutate",
+        "centralizer"
+      ],
+      "label": "F20-hostile-centralizer",
+      "reason": "RuntimeError:",
+      "returncode": 1,
+      "script": "independent_f20_embedding/check_f20.py"
+    },
+    {
+      "argv": [
+        "--mutate",
+        "character"
+      ],
+      "label": "F20-hostile-character",
+      "reason": "RuntimeError:",
+      "returncode": 1,
+      "script": "independent_f20_embedding/check_f20.py"
+    },
+    {
+      "argv": [
+        "--mutate",
+        "permutation-copies"
+      ],
+      "label": "F20-hostile-permutation-copies",
+      "reason": "RuntimeError:",
+      "returncode": 1,
+      "script": "independent_f20_embedding/check_f20.py"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "original_packet": "session143/tournaments",
+  "original_packet_manifest_sha256": "97f8f00d91d6e7b435379e124e3f75be02a72f4ef5526ef6892cbdaba60db26b",
+  "provenance": "Root proposed integral refinement of the original rational inverse; producer independently recomputed powers, determinant, integer orders and repairs. No new external sources used.",
+  "repository_revision_inherited": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+  "runtime_dependency_on_original_packet": false
+}

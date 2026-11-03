@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "optimized": false,
+      "status": "PASS",
+      "receipt": "PASS: portable manifest, 3302 exact checks normal/-O, and eight mutants rejected in both modes"
+    },
+    {
+      "optimized": true,
+      "status": "PASS",
+      "receipt": "PASS: portable manifest, 3302 exact checks normal/-O, and eight mutants rejected in both modes"
+    }
+  ],
+  "producer_positive_checks": 3302,
+  "producer_mutants": 8,
+  "producer_mutant_runs": 16
+}
