@@ -5,24 +5,24 @@
       "sha256_lf": "dc2e34eb6d898eb893a3d56fc100d79f81fc3d10a1f55a2eb2f89346d7e8aada"
     },
     "AUDIT.md": {
-      "bytes_lf": 7579,
-      "sha256_lf": "8aaa4c2da409763c31f04c5943724019aa11168b96e00eabc630dff3c88539fc"
+      "bytes_lf": 7790,
+      "sha256_lf": "c2109f1b717ce2afdf783b8d0f251ad4ed2533984b1f0a9d7aff0859ee7ac7bc"
     },
     "HANDOFF.md": {
-      "bytes_lf": 4068,
-      "sha256_lf": "973f43e4a3f771a53b9dc6e099bbfcd0337375a047bc02f7edaa0873b3201cb2"
+      "bytes_lf": 4152,
+      "sha256_lf": "62305cc0cb757ae1d72acac37cfa8cbf88845056b5e95126e861e1a92a87e1a6"
     },
     "JACOBIAN_COMPOSITION.md": {
       "bytes_lf": 9484,
       "sha256_lf": "06010d616c7067babe411fa78b56aa9ffa45fdd1f820437c1ad70b3d6d048659"
     },
     "PARITY_CARRIER.md": {
-      "bytes_lf": 10579,
-      "sha256_lf": "05bdbebcbdddbd98ec814e133f0e577444b0541d50561a9293acb572cf83d010"
+      "bytes_lf": 10903,
+      "sha256_lf": "fadb03af2587d193996a71d97a69c856d57ffc126b1b4fbe67b9cb2cdd722b0c"
     },
     "README.md": {
-      "bytes_lf": 3051,
-      "sha256_lf": "fc473adc5779e60ead9daf173b546c7f624f2fc66bf49d7b6ed7db2342180805"
+      "bytes_lf": 3199,
+      "sha256_lf": "954c4ecd4911d24922be0c69a06f7269abe1a9a7f47efb0317096964ee9bab5a"
     },
     "SYNTHESIS.md": {
       "bytes_lf": 8428,
@@ -85,8 +85,8 @@
       "sha256_lf": "4923d93228dfff4798e460db1f67648e2ec9fade6bef11fc7bfe956bede2a7e7"
     },
     "seal.py": {
-      "bytes_lf": 3057,
-      "sha256_lf": "4fe3558fcc2de8c37288aa52986d9ef44eee7c69f6fc7c02155628abe14c54a9"
+      "bytes_lf": 3138,
+      "sha256_lf": "ec0c3a063ac47a0d0411751385fc4db4282c21d9216e3fa849b2ebb84c21100d"
     },
     "sidecars.json": {
       "bytes_lf": 1324,
@@ -157,6 +157,10 @@
     "05-knowledge/results/session145_endpoint_fence_ramsey_20261103/carrier/POOLED_PARITY_CARRIER.md": {
       "bytes_lf": 17957,
       "sha256_lf": "84cff4e5b5fb768fb1dc93638be7c1bf1170b65d1f0bac606a7bb9053cb65790"
+    },
+    "05-knowledge/results/session146_carrier_primegame_20261103/carrier7/PROOF.md": {
+      "bytes_lf": 4861,
+      "sha256_lf": "c119c8dea4252860f1db9ef0f4e7255e5db8f6328eab5ed0bcee8063efd6b5c9"
     },
     "05-knowledge/results/session31_mirror_mrb_20261022/tree-moments/TREE_MOMENT_BRIDGE.md": {
       "bytes_lf": 22354,

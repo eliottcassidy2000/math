@@ -195,8 +195,12 @@ on all32768 six-vertex sources under89 specified fixed contexts, checking
 the two Fourier coefficients directly. This avoids deriving the test from
 the contraction argument itself.
 
-Next: determine whether actual attachment queries span all2668 coordinates
-at seven and prove or refute all-order sharpness of (2). Closure under native
+**Final incoming update:** [Session146](../session146_carrier_primegame_20261103/carrier7/PROOF.md)
+now proves minimum2668 at seven for the full fixed-attachment language,
+using an independently audited exterior-coefficient bank. This is inherited,
+not a local replay. Its all-order lifting bound gives10795<=d8<=13028.
+Next: attain2668 using a short actual S/B-only bank at seven, or settle
+sharpness at eight; prove or refute all-order sharpness of (2). Closure under native
 path complement or source-dependent re-marking requires a separate audit.
 The full spectrum theorem remains OPEN; shrinking an exact mean observer
 does not construct a target tournament.

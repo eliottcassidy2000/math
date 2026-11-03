@@ -93,6 +93,9 @@ and2a836157af (Session145 parity carrier and exact571 minimum).
 Their overlapping results have priority and are explicitly credited.
 The final integration also reads d40bde5797's fixed-coordinate W4 and
 two-gcd fibre algorithm, and4c6f0ca135's separate portfolio scope updates.
+The last fetch adds14823946db (Session146): exact full-language minimum2668
+at seven and an all-order lifting lower bound. Its proof/audit were read
+and credited; no local replay of that larger bank is claimed.
 
 This packet adds a short bank of571 ACTUAL S/B words of depth at most5,
 verified by an independent full evaluation-matrix rank. The incoming

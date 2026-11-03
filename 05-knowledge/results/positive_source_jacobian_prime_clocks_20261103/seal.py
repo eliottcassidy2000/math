@@ -37,6 +37,7 @@ sources=[
  '05-knowledge/results/collatz_atom_route_memory_20261003.md',
  '05-knowledge/results/collatz_five_mirrors_20260929.md',
  '05-knowledge/results/uniform_prime_transport_20261103/README.md',
+ '05-knowledge/results/session146_carrier_primegame_20261103/carrier7/PROOF.md',
 ]
 def pin(p):
     b=p.read_bytes().replace(b'\r\n',b'\n')

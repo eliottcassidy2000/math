@@ -4,12 +4,13 @@ Do not restart completed enumeration. Full7/21 completeness and a complete
 classification of Keller counterexamples remain OPEN. This session has
 closed two specific tests and found a smaller mean carrier.
 
-1. **Attain the new seven-vertex bound.** PARITY_CARRIER proves an all-order
+1. **Short queries at seven; full minimum at eight.** PARITY_CARRIER proves an all-order
    closed rational carrier with d6=571,d7=2668; minimum571 is now attained
    by571 actual S/B words of at most five births. Independent literal
-   Boolean counts certify rank571. Do not rerun this target. Seek rank2668
-   at seven, using signed block contraction for discovery and actual counts
-   for validation. All-order sharpness remains unproved.
+   Boolean counts certify rank571. Do not rerun this target. Final incoming
+   Session146 proves full-language minimum2668 at seven by an exterior
+   coefficient bank. Seek a SHORT ACTUAL S/B bank attaining it, or settle
+   10795<=d8<=13028. All-order sharpness remains unproved.
    Internal allocation is invisible; endpoint matching and each path's
    parity must remain. Native path complement and source-dependent
    re-marking are outside this closure theorem.

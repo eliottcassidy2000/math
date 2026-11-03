@@ -15,6 +15,8 @@ are the only forbidden odd tournament Hamiltonian values remains OPEN.
   and EGF(3) hold at all orders. A new bank of571 actual S/B words, each
   using at most five births, attains the six-vertex minimum. All-order
   minimality remains open.
+  Final incoming Session146 also proves the full-language minimum2668 at
+  seven; finding short actual S/B queries there remains a separate target.
 - [Uniform tree recurrence](TREE_RECURRENCE.md): exact all-order path-cover
   transfer P_(n+1)=t(P_n''+nP_n'+nP_n), real nonpositive roots, and
   Var H(T_n)>=21/4 for all n>=5. This family cannot reach the proposed
