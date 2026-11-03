@@ -17,10 +17,12 @@
     "05-knowledge/results/two_selector_boolean_20261102/CARRIER.md": "4e603929924cc9bbee397064abe6c90daa0d6fbc81b2b56f65aed19bba1c3136",
     "05-knowledge/results/two_selector_boolean_20261102/JOINT_REPAIRS.md": "c6057316841540c392a665a34dfc2a84e4093bdc9c33457f10474220139766be",
     "05-knowledge/results/spectrum_descent_jacobian_20261102/README.md": "4df5d13b18f4dd3e100c8ba8f3c4da7ccbcfa2fc34d5024a9d6a00c7e67c180a",
-    "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/tournaments/RESEARCH.md": "fa95d4d59517699d46a0e174e737261ba8af6a4920a2b418a77711dd69c058eb"
+    "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/tournaments/RESEARCH.md": "fa95d4d59517699d46a0e174e737261ba8af6a4920a2b418a77711dd69c058eb",
+    "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/cyclic_integral_order/PROOF.md": "d463941118eb3a6add2702ea7b0aecb7990187f2a510582f528e92c50b02bdb2"
   },
   "primary_urls": [
     "https://www.cs.unc.edu/~stotts/COMP210-s23/madMath/Conway87.pdf",
     "https://www.math.ucla.edu/~pak/papers/DominoPermanent16.pdf"
-  ]
+  ],
+  "incoming_checkpoint": "74e81ed37c"
 }

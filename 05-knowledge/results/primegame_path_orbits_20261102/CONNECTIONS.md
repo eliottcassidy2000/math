@@ -164,6 +164,23 @@ Its characteristic polynomial is t^5-5t^2-5t-2. The representation-theoretic
 bridge there retains this actual operator and its multiplicities. We do not
 replace it with the supplied radical lists.
 
+Incoming checkpoint74e81ed37c sharpens this in the same session's
+`cyclic_integral_order/PROOF.md`: the ordinary polynomial subring
+Z[P+P^2] has additive index11 in Z[P]. Yet the full adjacency relation
+recovers P integrally by
+
+```text
+P=A-A circ A^2,
+```
+
+where circ is entrywise multiplication. This identity works modulo every
+modulus, including11. The index belongs to the restricted operation algebra,
+not to the full graph data. It complements our Boolean zeta inverse: here
+there is no integral index defect once all conjunction responses are kept,
+but scalar or shallow projections still lose whole source coordinates.
+No identification with PRIMEGAME's11-register is implied. This incoming
+result is credited, not rediscovered or used to prove our source family.
+
 ## 5. What this contributes toward the major target
 
 The spectrum statement is [Chan–Pak, Conjecture6.2](https://www.math.ucla.edu/~pak/papers/DominoPermanent16.pdf),

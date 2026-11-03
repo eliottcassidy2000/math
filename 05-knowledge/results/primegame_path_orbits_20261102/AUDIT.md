@@ -93,6 +93,13 @@ The starting clean checkpoint was ec2cfc9e50, incorporating
 are credited. Other closest sources are named in THEORY and CONNECTIONS;
 normalized SHA256 pins are in SOURCES.json.
 
+Before publication, incoming d7c2dfd3e6 and74e81ed37c were read and integrated
+from a clean committed worktree. The latter's integral cyclic-order repair
+is now credited in CONNECTIONS. It adds a precise all-modulus comparison
+and does not alter the tested source rows or command definitions.
+Normal and optimized verification outputs are byte-identical; their hash
+is in SOURCES.json. The repository documentation checker passed.
+
 Primary pages checked this session: Conway1987, Theorem1 and its first-enabled
 definition (UNC-hosted original manuscript); Chan–Pak, Conjecture6.2
 (authors' manuscript). No other web-search result is imported as a theorem.
