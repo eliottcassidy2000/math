@@ -27,6 +27,15 @@ the literal word instead of treating the alternating lattice as a Boolean
 inverse. The full group of integral basis changes is not a legal source
 operation.
 
+The incoming H31 neutral six-cycle and repeatable oldest-port resets are
+already successful source changes; use the routes in INCOMING.md rather
+than restarting them. PROFILE.md now supplies a further exact coordinate:
+the whole path-cover edge-response polynomial. Under the same triangle
+attachment, ordinary jump2 becomes18,130 or-126 for different supplied
+sources. Seek entries whose polynomial has controlled transport, not merely
+whose value at one is two. The offset-zero and offset-three families already
+have all-order monomial response polynomials.
+
 For the arithmetic lane, use the exact source-height d in G3/G4 to compare
 multiple deleted source coordinates. The one-coordinate case gives one
 paired cyclic factor and is finished. Two source coordinates may give a

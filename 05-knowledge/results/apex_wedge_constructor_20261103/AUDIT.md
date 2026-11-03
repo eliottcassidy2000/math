@@ -1,7 +1,7 @@
 # Scope and reproduction record
 
 **PROVED scoped** refers to the all-order elementary arguments in THEORY,
-GEOMETRY and CARRIER, and the exact finite linear certificates in RECURRENCES.
+GEOMETRY, CARRIER and PROFILE, and the exact finite linear certificates in RECURRENCES.
 **FINITE-EXACT** refers to the bounded graph and matrix checks below.
 All proof review was performed by the same agent; the independent paths
 are separate counting and move implementations, not a separate-person audit.
@@ -20,9 +20,10 @@ are separate counting and move implementations, not a separate-person audit.
 | Actual-word decoder | all 5,461 four-letter words through length6; lengths25,100,1000 | contraction formula, gap counts on long controls, and decoded word replay |
 | Infinite scalar recurrences | three literal two-run templates, 12-dimensional closed representations | exact Krylov closure plus all 12 residual identities; adjacency DP at small orders including16 |
 | 7-adic phase | seven unique phase lifts | modular exponentiation; the all-e proof is R4, not the seven samples |
+| Full path-cover derivative | all word pairs through length4 and slots0,...,4: 1,705 checks; 256 symbolic charge identities | independent ordered subset convolution and six literal triangle substitutions; all-run family identities controlled through parameter12 |
 
 All validity checks raise explicit exceptions and survive Python -O.
-The eight executions in reproduction.json produce identical normal and
+The ten executions in reproduction.json produce identical normal and
 optimized receipts. The recorded environment is Python3.13.14 / SymPy1.14.0.
 Reproduction needs no network and imports no old experimental solver.
 

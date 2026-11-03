@@ -1,0 +1,70 @@
+{
+  "status": "PROVED_SCOPED",
+  "subset_convolution_checks": 1705,
+  "symbolic_charge_checks": 256,
+  "profile_family_parameters_through": 12,
+  "universe": "all pairs of binary words with lengths0 through4; r=0 through4",
+  "examples": [
+    {
+      "P": 1,
+      "R": 3,
+      "order": 7,
+      "response_polynomial": "2*r**3",
+      "ordinary_jump": 2,
+      "after_triangle_jump": 18,
+      "upper_H": 133,
+      "lower_H": 131
+    },
+    {
+      "P": 2,
+      "R": 4,
+      "order": 9,
+      "response_polynomial": "2*r**3",
+      "ordinary_jump": 2,
+      "after_triangle_jump": 18,
+      "upper_H": 341,
+      "lower_H": 339
+    },
+    {
+      "P": 3,
+      "R": 5,
+      "order": 9,
+      "response_polynomial": "2*r**3",
+      "ordinary_jump": 2,
+      "after_triangle_jump": 18,
+      "upper_H": 929,
+      "lower_H": 927
+    },
+    {
+      "P": 4,
+      "R": 6,
+      "order": 10,
+      "response_polynomial": "2*r**6",
+      "ordinary_jump": 2,
+      "after_triangle_jump": 130,
+      "upper_H": 1353,
+      "lower_H": 1351
+    },
+    {
+      "P": 5,
+      "R": 7,
+      "order": 10,
+      "response_polynomial": "2*r**6",
+      "ordinary_jump": 2,
+      "after_triangle_jump": 130,
+      "upper_H": 2999,
+      "lower_H": 2997
+    },
+    {
+      "P": 6,
+      "R": 8,
+      "order": 11,
+      "response_polynomial": "-2*r**5*(r**2 - 2)",
+      "ordinary_jump": 2,
+      "after_triangle_jump": -126,
+      "upper_H": 2627,
+      "lower_H": 2625
+    }
+  ],
+  "inherited_operator": "session159_constructions_20261103/profile_operator/NOTE.md"
+}

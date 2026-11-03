@@ -11,10 +11,13 @@ def main():
     pins=json.loads((HERE/'source_pins.json').read_text(encoding='utf8'))
     for relative,expected in pins['sha256'].items():
         need(digest(ROOT/relative)==expected,('inherited source changed: inspect before repinning',relative))
+    incoming=json.loads((HERE/'incoming_pins.json').read_text(encoding='utf8'))
+    for relative,expected in incoming['sha256'].items():
+        need(digest(ROOT/relative)==expected,('incoming source changed: inspect before repinning',relative))
     inherited=json.loads((ROOT/'05-knowledge/results/mixed_returns_20261103/controllers.json').read_text())
     need(inherited['hostile81_27']['groups']==[81,27] and inherited['one_birth55_orientations']==768,'pinned hostile scope')
     scripts={'verify.py':'verification.json','geometry.py':'geometry.json',
-             'jump_carrier.py':'jump_carrier.json','recurrences.py':'recurrences.json'}
+             'jump_carrier.py':'jump_carrier.json','recurrences.py':'recurrences.json','profile.py':'profile.json'}
     modes={}
     for mode in ('normal','optimized'):
         receipts={}
@@ -26,7 +29,7 @@ def main():
         modes[mode]=receipts
     need(modes['normal']==modes['optimized'],'normal/optimized receipts differ')
     report={'status':'PASS','python':platform.python_version(),'sympy':sympy.__version__,
-            'source_pin_count':len(pins['sha256']),'same_agent_independent_implementations':True,
+            'source_pin_count':len(pins['sha256'])+len(incoming['sha256']),'same_agent_independent_implementations':True,
             'receipt_sha256_by_mode':modes,
             'inherited_controls':{'source':'mixed_returns_20261103/controllers.json',
                                   'recomputed_here':False,'hostile81_27':inherited['hostile81_27'],

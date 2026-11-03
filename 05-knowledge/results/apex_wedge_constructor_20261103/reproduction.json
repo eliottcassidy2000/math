@@ -2,20 +2,22 @@
   "status": "PASS",
   "python": "3.13.14",
   "sympy": "1.14.0",
-  "source_pin_count": 11,
+  "source_pin_count": 15,
   "same_agent_independent_implementations": true,
   "receipt_sha256_by_mode": {
     "normal": {
       "verification.json": "1aace47fe65ca5aad24ba5f380f7c9010a88cb7c24d9cf50c4ada25637367f3a",
       "geometry.json": "eed6d756bb202f4ab2f5e2b4943a61b6bd1b45e9d6fb8090167837810fdc9088",
       "jump_carrier.json": "8540a379c3aa48596fa1e4d69df7d8c262fbc4a3fff704187ae5dc802eb40172",
-      "recurrences.json": "c8b1a425d20305c0d3a782e2488f10c00cfd0aa4d54619001f7732ee55626452"
+      "recurrences.json": "c8b1a425d20305c0d3a782e2488f10c00cfd0aa4d54619001f7732ee55626452",
+      "profile.json": "182ca95837f5b1c61aab3f77af69e5875fa5ad1a16c3421e96a0c83b227b7a74"
     },
     "optimized": {
       "verification.json": "1aace47fe65ca5aad24ba5f380f7c9010a88cb7c24d9cf50c4ada25637367f3a",
       "geometry.json": "eed6d756bb202f4ab2f5e2b4943a61b6bd1b45e9d6fb8090167837810fdc9088",
       "jump_carrier.json": "8540a379c3aa48596fa1e4d69df7d8c262fbc4a3fff704187ae5dc802eb40172",
-      "recurrences.json": "c8b1a425d20305c0d3a782e2488f10c00cfd0aa4d54619001f7732ee55626452"
+      "recurrences.json": "c8b1a425d20305c0d3a782e2488f10c00cfd0aa4d54619001f7732ee55626452",
+      "profile.json": "182ca95837f5b1c61aab3f77af69e5875fa5ad1a16c3421e96a0c83b227b7a74"
     }
   },
   "inherited_controls": {
