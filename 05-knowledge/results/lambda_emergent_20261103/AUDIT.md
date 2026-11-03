@@ -3,7 +3,7 @@
 **Same-agent proof review with independent computational paths.** No Lean
 formalization or independent-agent audit is claimed.
 
-The new all-order claims are JC1--JC4, PL1--PL3 and RR1--RR5, with proofs in
+The new all-order claims are JC1--JC4, PL1--PL3 and RR1--RR6, with proofs in
 their named files. Their finite certificates use exact integers/rationals,
 explicit row-action conventions, and checks that remain active under Python
 -O. No result is promoted from a finite prefix without an operator identity,
@@ -34,11 +34,18 @@ induction, structural classification or a proved insertion argument.
 - RR4 uses independent named gap automata and endpoint DP. Universal
   annihilator identities prove the geometric formulas. Both literal RR5
   update orders are compared after the specified fresh-label permutation.
+- RR6 replays all six orders of repair and two growth operations on actual
+  graphs, including the helper births and both native guards. The resulting
+  graphs and additive costs agree; the peak vertex clocks differ exactly
+  as stated. Labelled fibre clock polynomials are checked through base8.
 
 ## Hostiles and repaired exploratory mistakes
 
 Inherited81/27 and55->111 receipts are pinned and remain outside any claimed
 scalar classification. A four-phase primitive guard obstruction is retained.
+Incoming O3 in ready_return_pentagon_20261103/OBSTRUCTION.md further excludes
+every ready presentation of H35, and is integrated as an inherited theorem,
+not a new experiment here. It rules out a universal closed ready bank.
 The exceptional q=0 boundary changes the doubling offset from1 to3.
 The ready grid has genuine count collisions already among wider one-apex
 word banks; its scalar formula is not an isomorphism-class enumeration.

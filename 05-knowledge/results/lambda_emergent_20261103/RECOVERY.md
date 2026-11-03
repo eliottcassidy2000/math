@@ -73,3 +73,29 @@ as one algebraic law.
 No new general META-PATTERNS card is promoted: these results support a
 specific packet synthesis, not an independently established cross-field law.
 The source pins preserve the recovered material and the exact hostile controls.
+
+## Incoming integration through1393d4c65b
+
+[Ready-return O3](../ready_return_pentagon_20261103/OBSTRUCTION.md) proves that
+H35 has no ready source at any order, and its packet replaces that failed
+universal interface by a graded joint-defect grammar. This sharpens our
+handoff: RR3 repairs sources at changed counts, so it cannot circumvent
+an empty exact-H ready fibre. The narrower H233 construction remains useful.
+
+[Canonical C/D returns](../session164_emergent_20261103/profile_algebras/CANONICAL_RETURNS.md)
+give every7-power scalar residue using3 and91 multipliers, while retaining
+the distinction between multiplier m and actual output count3m. Our JC3/PL
+results observe a richer six-coordinate action; scalar modular surjectivity
+does not replace that interface.
+
+[Guard adjunctions](../session165_geometry_representation_20261103/guard_adjunctions/NOTE.md)
+separate static closure from ordered dynamics. RR6 gives a concrete related
+construction: an idempotent source normalizer with an exact binomial fibre
+clock, commuting with two growth operators on graph endpoints. Peak memory
+still remembers their order. This is an actual resource-sensitive example,
+not an identification with the lcm closure or its reflection chambers.
+
+[Uniform slot estimates](../session165_geometry_representation_20261103/slot_representation/UNIFORM_PLANCHEREL.md)
+retain positive path-cover cut deficits. They concern asymptotic slot mass;
+JC1 instead preserves exact small-bin coordinates. An asymptotic simplification
+cannot discard those coordinates before exact future attachment questions.

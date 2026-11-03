@@ -22,19 +22,25 @@ compiler, and an all-precision shared clock correction.
   with the desired full phase; four specified phases obstruct every common
   word in the primitive two-letter language. Bounds count actual native
   moves, with root and retained-port programs attached.
-- [RR1--RR5: induced obstruction and ready-source construction](READY_REPAIR.md).
+- [RR1--RR6: induced obstruction and ready-source construction](READY_REPAIR.md).
   Minimum Hamilton-start multiplicity is monotone under induced inclusion
   into a strong tournament. It makes regular five an obstruction to all
   ready-source extensions. Nevertheless each H497 orientation has a minimal
   one-old-edge repair, using two native moves, producing ready H395 or H311.
   They sit in an infinite two-parameter ready grid with exact H and golden
   formulas. Two ports compile its sources; three named ports support both
-  commuting one-birth updates on an existing source.
+  commuting one-birth updates on an existing source. Normalization commutes
+  with both updates on graphs and total native cost, but peak order differs
+  by one: an explicit evaluation-order effect survives source confluence.
 
 The graph/source language, not a scalar coincidence, connects these results.
 The ready grid supplies genuine interfaces; the six-coordinate algebra tracks
 the chosen returns; the legalizer preserves their full rooted phase. They
-do **not** yet compose into a count-preserving return from every ternary child.
+do **not** compose into a universal ready-to-ready count-preserving return:
+incoming [O3](../ready_return_pentagon_20261103/OBSTRUCTION.md) excludes every
+ready presentation of the actual ternary output H35. Broader joint-defect
+states are necessary. Particular exact-H returns, such as the H233 target,
+remain meaningful constructive questions.
 The full eighteen-polynomial carrier is retained where general attachments
 or the H497 repair require it. Full spectrum coverage, A000568 recreation,
 LRC(14) and Collatz remain OPEN.

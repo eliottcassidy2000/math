@@ -80,6 +80,14 @@
       "sha256": "2ece655a0ea098c4bf460373a32e11b12183d61bae3b909d4fc7a86ab06507b3"
     },
     {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/OBSTRUCTION.md",
+      "sha256": "5890c526288797d4bd80ffaa5eefaa9aa148ee928163f104dea76fc5c4fc39ef"
+    },
+    {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/README.md",
+      "sha256": "a360f71a78b99b715e2533957aa30b913cb0d88865c13563a5a4667157bd1121"
+    },
+    {
       "path": "05-knowledge/results/rooted_carry_closure_20261103/HANDOFF.md",
       "sha256": "e18d62ec7e1646ce81a22d9307c2983af463daecd299557349018dc380d82bc2"
     },
@@ -168,8 +176,20 @@
       "sha256": "ff0dd6500840ac06a2934e93577cdb0cbe7d25653dcdb7c114e382e60faba161"
     },
     {
+      "path": "05-knowledge/results/session164_emergent_20261103/profile_algebras/CANONICAL_RETURNS.md",
+      "sha256": "1e0bd5339312bc93861cc00a3b79407888b8aba85c73860494a90a70a2d38ada"
+    },
+    {
       "path": "05-knowledge/results/session164_emergent_20261103/triple_gluing/NOTE.md",
       "sha256": "94e13112370700925a62d8bab61dbfefdbf1029eb764d75a7311c43d58feb66b"
+    },
+    {
+      "path": "05-knowledge/results/session165_geometry_representation_20261103/guard_adjunctions/NOTE.md",
+      "sha256": "7470e6092c5fcd1f2461e1b7205c79dc96e7bc60e9bff940ea785a7af1718bc1"
+    },
+    {
+      "path": "05-knowledge/results/session165_geometry_representation_20261103/slot_representation/UNIFORM_PLANCHEREL.md",
+      "sha256": "b5b0d91de21a067f68834ffa512b7c0f1084f717e7907465e1fc83366fb7f672"
     },
     {
       "path": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/finite-fields/README.md",

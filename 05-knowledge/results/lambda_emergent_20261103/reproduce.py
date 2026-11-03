@@ -4,7 +4,7 @@ import hashlib,json,sys,subprocess,platform
 import sympy
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[2]
 PREV=HERE.parent/'rooted_carry_closure_20261103'
-SCRIPTS=('effects','algebra','lattice','controls','ready','one_hole','legalizer')
+SCRIPTS=('effects','algebra','lattice','controls','ready','one_hole','legalizer','clock_cube')
 EXTRA=(
  'rooted_carry_closure_20261103/ROOTED_RETURN.md',
  'rooted_carry_closure_20261103/PHASE_49_50_51.md',
@@ -15,6 +15,11 @@ EXTRA=(
  'session143_magic_square_cyclic_bridges_20261103/lambda_octonions/PROOF.md',
  'session143_frobenius_magic_followup_20261103/producer/PROOF.md',
  'session164_emergent_20261103/triple_gluing/NOTE.md',
+ 'ready_return_pentagon_20261103/README.md',
+ 'ready_return_pentagon_20261103/OBSTRUCTION.md',
+ 'session164_emergent_20261103/profile_algebras/CANONICAL_RETURNS.md',
+ 'session165_geometry_representation_20261103/guard_adjunctions/NOTE.md',
+ 'session165_geometry_representation_20261103/slot_representation/UNIFORM_PLANCHEREL.md',
 )
 def need(ok,msg):
     if not ok:raise RuntimeError(msg)
@@ -32,7 +37,7 @@ def main():
              'dependencies':[{'path':p,'sha256':digest(ROOT/p)} for p in sorted(paths)],
              'hostile81_27':prior['hostile81_27'],'one_birth55_orientations':prior['one_birth55_orientations']})
         save('manifest.json',{'receipts':[{'file':k+'.json','sha256':digest(HERE/(k+'.json'))} for k in SCRIPTS]})
-        print('Pinned',len(paths),'inherited files and seven result receipts');return
+        print('Pinned',len(paths),'inherited files and',len(SCRIPTS),'result receipts');return
     sources=json.loads((HERE/'sources.json').read_text())
     for row in sources['dependencies']:need(digest(ROOT/row['path'])==row['sha256'],'changed inherited input: '+row['path'])
     expected={r['file']:r['sha256'] for r in json.loads((HERE/'manifest.json').read_text())['receipts']}
@@ -47,5 +52,5 @@ def main():
     mode='optimized' if sys.flags.optimize else 'normal'
     save('verification.'+mode+'.json',{'status':'PASS','mode':mode,'python':platform.python_version(),'sympy':sympy.__version__,
          'inherited_files':len(sources['dependencies']),'receipts':out})
-    print('PASS',mode,'all source pins and seven deterministic exact receipts')
+    print('PASS',mode,'all source pins and',len(SCRIPTS),'deterministic exact receipts')
 if __name__=='__main__':main()

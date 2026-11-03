@@ -175,3 +175,35 @@ The distinction is constructive: a short source template can be compiled
 with fewer ports than are needed for arbitrary future edits to its output.
 The ready grid still does not contain its ternary children as a proved
 closed return family; that remains the next source-level obligation.
+
+## RR6. A commuting repair cube whose peak clock does not commute
+
+On the larger two-apex family with common first1 and last0, let P be the
+star normalization, U prepend a common11, and V insert a common11 immediately
+before the last00. At the source-template level
+
+    P^2=P,       PU=UP,       PV=VP,       UV=VU.
+
+These identities hold for actual graphs with the indicated fresh-label
+transport: P changes only the dominant apex's missing base arcs; U and V
+add common11 incidences and do not alter any such missing arc. Thus this
+is an action of N^2 times the two-element idempotent monoid. The image of
+P is exactly the all-one-dominant ready family considered in RR3.
+
+For fixed base size m and fixed other-apex word, P has2^(m-2) labelled
+source presentations in its fibre. Exactly binomial(m-2,z) use z helpers
+and2z native moves. Its exact helper-clock generating polynomial is
+(1+y)^(m-2). These are labelled word fibres, not unlabelled tournament
+isomorphism-class multiplicities.
+
+There is a useful operational failure of naive commutation. For a source
+of order n with z>0, all six orders of P,U,V produce the same graph, spend
+2z native moves and add two permanent vertices. But putting P last requires
+peak order n+3, whereas the other four schedules need only n+2. Its helper
+coexists with both new vertices only in the former schedules. The literal
+traces in [clock_cube.json](clock_cube.json) demonstrate both cases.
+
+This gives a concrete evaluation-order connection to the lambda-cube cue:
+source confluence does not identify resource effects. The retained clock
+must say which resource is observed. No claim about lambda normalization
+or computational complexity follows just from this commuting diagram.

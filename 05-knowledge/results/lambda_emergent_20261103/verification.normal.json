@@ -3,7 +3,7 @@
   "mode": "normal",
   "python": "3.13.14",
   "sympy": "1.14.0",
-  "inherited_files": 56,
+  "inherited_files": 61,
   "receipts": [
     {
       "script": "effects",
@@ -38,7 +38,12 @@
     {
       "script": "legalizer",
       "stdout": "PASS: all 584 source tuples at each of three precisions, full phase identities and primitive integer replay",
-      "sha256": "b5c1d88ee250f700e2fc3f3331e825c354612740e15b67ae53c73c54702e85e4"
+      "sha256": "2ca7a5caa7e747cac875acc40f01ead6452c7c7a7eca197de285ef41602bcdb7"
+    },
+    {
+      "script": "clock_cube",
+      "stdout": "PASS: idempotent repair commutes on actual graphs; native clocks agree and peak clock distinguishes order",
+      "sha256": "7faa31436900097570f60bf6c687851c9b04e8b10e53c4e31a3599f9837353be"
     }
   ]
 }

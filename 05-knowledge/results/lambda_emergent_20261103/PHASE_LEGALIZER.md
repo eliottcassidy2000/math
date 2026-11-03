@@ -67,7 +67,10 @@ actual entry source. Before the first C5 in any common primitive word,
 only C3 has occurred. Its action permutes this four-set, so one supplied
 source is always at forbidden7. Thus no common legal word contains C5.
 Nor can a power of C3 replace its required phase action: det(M3)=4 modulo7
-has powers in {1,2,4}, whereas det(M5)=3. This is an obstruction in the
+has powers in {1,2,4}, whereas det(M5)=3. For the actual H497 entry, the
+first two supplied pair residues are (1,3),(6,2), with nonzero determinant5
+modulo7. Agreement on those sources would already force equality of the
+two pair matrices. This is an obstruction in the
 entire primitive two-letter language, not just the displayed repair scheme.
 NR, other graph edits or relaxation of primitivity lie outside this claim.
 

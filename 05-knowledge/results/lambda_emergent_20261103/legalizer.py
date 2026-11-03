@@ -62,12 +62,20 @@ def main():
     b,t=2828575,222057
     import math
     need(math.gcd(b,t)==1 and b%3 and t%3==0,'actual primitive source entry')
+    four=[];bb,tt=b,t
+    for _ in range(4):
+        r=None if bb%11==0 else tt*pow(bb,-1,11)%11
+        four.append({'pair_mod7':[bb%7,tt%7],'controller':r})
+        bb,tt=61*bb-2*tt,9*bb
+    need(tuple(x['controller'] for x in four)==hostile,'actual four-source hostile phases')
+    need(s.Matrix([four[0]['pair_mod7'],four[1]['pair_mod7']]).det()%7!=0,'actual hostile sources span the pair plane')
     initial=[b,t];j,word=program((t*pow(b,-1,11)%11,),1)
     for letter,count in word:
         for _ in range(count):
             b,t=((61*b-2*t,9*b) if letter=='3' else (421*b-2*t,33*b))
             need(math.gcd(b,t)==1 and b>t>0 and b%2 and t%2 and b%3 and t%3==0,'exact integer guard along legal program')
     out={'status':'FINITE_EXACT','exhaustive_controller_tests':tests,'examples':examples,'hostile_four_states':hostile,
+         'actual_four_source_residues':four,
          'integer_replay':{'initial':initial,'word':word,'final_decimal_digits':len(str(b)),'final_mod7':[b%7,t%7]}}
     (HERE/'legalizer.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf8',newline='\n')
     print('PASS: all 584 source tuples at each of three precisions, full phase identities and primitive integer replay')

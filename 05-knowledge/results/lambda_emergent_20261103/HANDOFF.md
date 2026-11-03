@@ -5,7 +5,16 @@ effect decomposition and eight invariant quotient types; JC3 integer
 closure with only a formal factor-two defect; JC4 signed C4 intertwiner;
 PL1--PL3 all-precision full-phase shared legalizers and the sharp four-source
 primitive obstruction; RR1--RR5 regular-five induced obstruction, minimal
-H497 star repairs and the commuting one-hole ready grid.
+H497 star repairs and the commuting one-hole ready grid. RR6 adds an
+idempotent normalizer commuting with both growth operations on source
+graphs, while the peak vertex clock still detects evaluation order.
+
+Incoming through1393d4c65b supplies a decisive global correction to the
+target: [O3](../ready_return_pentagon_20261103/OBSTRUCTION.md) excludes H35
+from both ready images at every order, even for weak tournaments. Do not
+seek a universal exact-H closed ready bank containing the H11 branches.
+The broader graded joint-defect return language is necessary. A particular
+ready return at H233 is still a valid, narrower constructive test.
 
 Do not repeat the bounded birth search: **every** induced extension of
 H497 fails readiness because it retains R5. A useful next target must
