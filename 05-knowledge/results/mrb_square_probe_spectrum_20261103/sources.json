@@ -1,0 +1,14 @@
+{
+  "base_commit": "d79221bc31b8b251b2fb035a2f03387b22052806",
+  "source_files": {
+    "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+    "01-canon/theorems/THM-4104-selected-order-eleven-strong-ear-solid-interval.md": "566e36860b24351fb40eee865dd03e8ff101658da92423265afcb3c8b26a22ac",
+    "01-canon/theorems/THM-4115-uniform-ear-cut-walsh-variance-and-sharp-growth-refinement.md": "b36f9653e703da1ee802a4f32f6395b0bccfd2d2c31e9f7d7d933357312ab275",
+    "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/SHARED_CLOCKS.md": "14ca21b4287fbae93e19d37d004755b7a2e45bc272517e4ca281929fec38057f",
+    "05-knowledge/results/induced_square_pair_extension_20261019/SCALED_PAIR_EXTENSION_AND_TWO_DEGENERATE.md": "d70391de79ec7ef76619cd4614a4f8cf3cdf5813d33d625d91b678bc56935fa9",
+    "05-knowledge/results/prime_lane_ports_five_groups_20261102/attachment.md": "40555deb834245e47cbdd670d5eba973e8f8a6cc2dade333a47b7619b5da3669",
+    "05-knowledge/results/session144_jacobian_eth_mrb_20261103/mrb/RESEARCH.md": "cb574aca3217cfd0ea9ff65f8e5209302241167a28d1b0f8f67af7a8d7d01c59",
+    "05-knowledge/results/session31_mirror_mrb_20261022/mrb/MRB_CONTOUR_AUDIT.md": "175e51a6c895502ebfafde8f2ec2de7d7ba09c5dfe304c7b79dbb3ddc29d48aa",
+    "05-knowledge/results/source_selection_closure_20261103/BRANCH.md": "26822bbb84ac8b889806a357ae72f647535816f7e2b1e57fb58ee6919843b3da"
+  }
+}

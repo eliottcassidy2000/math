@@ -1,0 +1,38 @@
+{
+  "MRB_source_phase_gap_strict_upper_bound": "-8168083/12500000",
+  "audit": "same agent; independent implementation; no producer imports",
+  "exact_rational_rank_of_supplied_minors": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      10
+    ],
+    [
+      5,
+      15
+    ]
+  ],
+  "four_cube_coefficients": [
+    69,
+    5,
+    27,
+    -6
+  ],
+  "permutation_recounted_strong_targets": [
+    93,
+    95,
+    97
+  ],
+  "source_H_by_permutations": 31
+}
