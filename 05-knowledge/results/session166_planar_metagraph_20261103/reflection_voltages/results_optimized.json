@@ -1,0 +1,249 @@
+{
+  "abstract_gauge_controls": [
+    {
+      "cycle_rank": 0,
+      "edges": [],
+      "gauge_classes": 1,
+      "vertices": 1
+    },
+    {
+      "cycle_rank": 1,
+      "edges": [
+        [
+          0,
+          0
+        ]
+      ],
+      "gauge_classes": 2,
+      "vertices": 1
+    },
+    {
+      "cycle_rank": 1,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "gauge_classes": 2,
+      "vertices": 2
+    },
+    {
+      "cycle_rank": 1,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "gauge_classes": 2,
+      "vertices": 3
+    },
+    {
+      "cycle_rank": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "gauge_classes": 4,
+      "vertices": 4
+    }
+  ],
+  "status": "PASS",
+  "tournaments": [
+    {
+      "NS_cycle_rank": 0,
+      "NS_loop_witnesses": {},
+      "NS_nodes": 0,
+      "NS_subgraph_components": 0,
+      "NS_subgraph_edges": 0,
+      "SC": 2,
+      "black_orbit_types": {},
+      "black_orbits": 0,
+      "black_trace_checks": 4,
+      "blue_lines": 1,
+      "blue_word_matrix_checks": 26,
+      "classes": 2,
+      "gauges_checked": 1,
+      "n": 3,
+      "normalized_negative_chords": 0
+    },
+    {
+      "NS_cycle_rank": 0,
+      "NS_loop_witnesses": {},
+      "NS_nodes": 1,
+      "NS_subgraph_components": 1,
+      "NS_subgraph_edges": 0,
+      "SC": 2,
+      "black_orbit_types": {
+        "SC-NS": 1
+      },
+      "black_orbits": 1,
+      "black_trace_checks": 4,
+      "blue_lines": 2,
+      "blue_word_matrix_checks": 26,
+      "classes": 4,
+      "gauges_checked": 2,
+      "n": 4,
+      "normalized_negative_chords": 0
+    },
+    {
+      "NS_cycle_rank": 0,
+      "NS_loop_witnesses": {},
+      "NS_nodes": 2,
+      "NS_subgraph_components": 2,
+      "NS_subgraph_edges": 0,
+      "SC": 8,
+      "black_orbit_types": {
+        "SC-NS": 6,
+        "SC-SC cross": 4,
+        "SC-SC loop": 2
+      },
+      "black_orbits": 12,
+      "black_trace_checks": 4,
+      "blue_lines": 8,
+      "blue_word_matrix_checks": 26,
+      "classes": 12,
+      "gauges_checked": 4,
+      "n": 5,
+      "normalized_negative_chords": 0
+    },
+    {
+      "NS_cycle_rank": 136,
+      "NS_loop_witnesses": {
+        "-1": {
+          "class_endpoints": [
+            26,
+            20,
+            20,
+            26
+          ],
+          "converse_class": 26,
+          "node": 20,
+          "tilings": [
+            13,
+            1010,
+            584,
+            439
+          ]
+        },
+        "1": {
+          "class_endpoints": [
+            22,
+            22,
+            18,
+            18
+          ],
+          "converse_class": 22,
+          "node": 18,
+          "tilings": [
+            11,
+            1012,
+            776,
+            247
+          ]
+        }
+      },
+      "NS_nodes": 22,
+      "NS_subgraph_components": 1,
+      "NS_subgraph_edges": 157,
+      "SC": 12,
+      "black_orbit_types": {
+        "NS loop twisted": 9,
+        "NS loop untwisted": 3,
+        "NS-NS crossed": 94,
+        "NS-NS parallel": 51,
+        "SC-NS": 78,
+        "SC-SC cross": 5
+      },
+      "black_orbits": 240,
+      "black_trace_checks": 4,
+      "blue_lines": 32,
+      "blue_word_matrix_checks": 26,
+      "classes": 56,
+      "gauges_checked": 0,
+      "n": 6,
+      "normalized_negative_chords": 73
+    },
+    {
+      "NS_cycle_rank": 4921,
+      "NS_loop_witnesses": {
+        "-1": {
+          "class_endpoints": [
+            1330,
+            820,
+            820,
+            1330
+          ],
+          "converse_class": 1330,
+          "node": 820,
+          "tilings": [
+            345,
+            32422,
+            17688,
+            15079
+          ]
+        },
+        "1": {
+          "class_endpoints": [
+            822,
+            822,
+            306,
+            306
+          ],
+          "converse_class": 822,
+          "node": 306,
+          "tilings": [
+            339,
+            32428,
+            25624,
+            7143
+          ]
+        }
+      },
+      "NS_nodes": 184,
+      "NS_subgraph_components": 1,
+      "NS_subgraph_edges": 5104,
+      "SC": 88,
+      "black_orbit_types": {
+        "NS loop twisted": 35,
+        "NS loop untwisted": 13,
+        "NS-NS crossed": 3317,
+        "NS-NS parallel": 1739,
+        "SC-NS": 2522,
+        "SC-SC cross": 429,
+        "SC-SC loop": 9
+      },
+      "black_orbits": 8064,
+      "black_trace_checks": 0,
+      "blue_lines": 256,
+      "blue_word_matrix_checks": 0,
+      "classes": 456,
+      "gauges_checked": 0,
+      "n": 7,
+      "normalized_negative_chords": 2483
+    }
+  ]
+}

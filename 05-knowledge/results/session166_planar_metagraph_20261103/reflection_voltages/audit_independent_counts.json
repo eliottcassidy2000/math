@@ -1,0 +1,32 @@
+[
+  {
+    "n": 6,
+    "classes": 56,
+    "SC": 12,
+    "NS": 22,
+    "blue": 32,
+    "black_orbits": 240,
+    "NS_edges": 157,
+    "NS_components": 1,
+    "beta": 136,
+    "NS_loops": {
+      "positive": 3,
+      "negative": 9
+    }
+  },
+  {
+    "n": 7,
+    "classes": 456,
+    "SC": 88,
+    "NS": 184,
+    "blue": 256,
+    "black_orbits": 8064,
+    "NS_edges": 5104,
+    "NS_components": 1,
+    "beta": 4921,
+    "NS_loops": {
+      "positive": 13,
+      "negative": 35
+    }
+  }
+]
