@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
+<rect width="960" height="520" fill="white"/>
+<g font-family="Arial,sans-serif" fill="#263238" text-anchor="middle">
+<text x="480" y="31" font-size="23">Shared boundaries leave the pseudoforest class</text>
+<text x="250" y="78" font-size="20">Capped total area</text>
+<text x="700" y="78" font-size="18">Product of areas — no unit-area cap</text>
+<line x1="155.000000" y1="140.000000" x2="155.000000" y2="235.000000" stroke="#245b85" stroke-width="3"/>
+<line x1="155.000000" y1="235.000000" x2="155.000000" y2="330.000000" stroke="#245b85" stroke-width="3"/>
+<line x1="250.000000" y1="140.000000" x2="250.000000" y2="235.000000" stroke="#bb4430" stroke-width="3"/>
+<line x1="250.000000" y1="235.000000" x2="250.000000" y2="330.000000" stroke="#bb4430" stroke-width="3"/>
+<line x1="345.000000" y1="140.000000" x2="345.000000" y2="235.000000" stroke="#245b85" stroke-width="3"/>
+<line x1="345.000000" y1="235.000000" x2="345.000000" y2="330.000000" stroke="#245b85" stroke-width="3"/>
+<line x1="155.000000" y1="140.000000" x2="250.000000" y2="140.000000" stroke="#245b85" stroke-width="3"/>
+<line x1="250.000000" y1="140.000000" x2="345.000000" y2="140.000000" stroke="#245b85" stroke-width="3"/>
+<line x1="155.000000" y1="235.000000" x2="250.000000" y2="235.000000" stroke="#bb4430" stroke-width="3"/>
+<line x1="250.000000" y1="235.000000" x2="345.000000" y2="235.000000" stroke="#bb4430" stroke-width="3"/>
+<line x1="155.000000" y1="330.000000" x2="250.000000" y2="330.000000" stroke="#245b85" stroke-width="3"/>
+<line x1="250.000000" y1="330.000000" x2="345.000000" y2="330.000000" stroke="#245b85" stroke-width="3"/>
+<circle cx="155.000000" cy="140.000000" r="3"/>
+<circle cx="155.000000" cy="235.000000" r="3"/>
+<circle cx="155.000000" cy="330.000000" r="3"/>
+<circle cx="250.000000" cy="140.000000" r="3"/>
+<circle cx="250.000000" cy="235.000000" r="3"/>
+<circle cx="250.000000" cy="330.000000" r="3"/>
+<circle cx="345.000000" cy="140.000000" r="3"/>
+<circle cx="345.000000" cy="235.000000" r="3"/>
+<circle cx="345.000000" cy="330.000000" r="3"/>
+<text x="202.5" y="193.5" font-size="21">1</text>
+<text x="202.5" y="288.5" font-size="21">1</text>
+<text x="297.5" y="193.5" font-size="21">1</text>
+<text x="297.5" y="288.5" font-size="21">1</text>
+<text x="250" y="395" font-size="17">12 unit fences · total area 4</text>
+<text x="250" y="422" font-size="15">Cycle rank 4; pseudoforest maximum 3</text>
+<polygon points="610.000000,255.000000 596.375096,343.962700 655.000000,412.249746 745.000000,412.249746 803.624904,343.962700 790.000000,255.000000" fill="#245b85" fill-opacity="0.08"/>
+<line x1="610.000000" y1="255.000000" x2="596.375096" y2="343.962700" stroke="#245b85" stroke-width="3"/>
+<line x1="596.375096" y1="343.962700" x2="655.000000" y2="412.249746" stroke="#245b85" stroke-width="3"/>
+<line x1="655.000000" y1="412.249746" x2="745.000000" y2="412.249746" stroke="#245b85" stroke-width="3"/>
+<line x1="745.000000" y1="412.249746" x2="803.624904" y2="343.962700" stroke="#245b85" stroke-width="3"/>
+<line x1="803.624904" y1="343.962700" x2="790.000000" y2="255.000000" stroke="#245b85" stroke-width="3"/>
+<circle cx="610.000000" cy="255.000000" r="3"/>
+<circle cx="596.375096" cy="343.962700" r="3"/>
+<circle cx="655.000000" cy="412.249746" r="3"/>
+<circle cx="745.000000" cy="412.249746" r="3"/>
+<circle cx="803.624904" cy="343.962700" r="3"/>
+<circle cx="790.000000" cy="255.000000" r="3"/>
+<polygon points="610.000000,255.000000 596.375096,166.037300 655.000000,97.750254 745.000000,97.750254 803.624904,166.037300 790.000000,255.000000" fill="#245b85" fill-opacity="0.08"/>
+<line x1="610.000000" y1="255.000000" x2="596.375096" y2="166.037300" stroke="#245b85" stroke-width="3"/>
+<line x1="596.375096" y1="166.037300" x2="655.000000" y2="97.750254" stroke="#245b85" stroke-width="3"/>
+<line x1="655.000000" y1="97.750254" x2="745.000000" y2="97.750254" stroke="#245b85" stroke-width="3"/>
+<line x1="745.000000" y1="97.750254" x2="803.624904" y2="166.037300" stroke="#245b85" stroke-width="3"/>
+<line x1="803.624904" y1="166.037300" x2="790.000000" y2="255.000000" stroke="#245b85" stroke-width="3"/>
+<circle cx="610.000000" cy="255.000000" r="3"/>
+<circle cx="596.375096" cy="166.037300" r="3"/>
+<circle cx="655.000000" cy="97.750254" r="3"/>
+<circle cx="745.000000" cy="97.750254" r="3"/>
+<circle cx="803.624904" cy="166.037300" r="3"/>
+<circle cx="790.000000" cy="255.000000" r="3"/>
+<line x1="610.000000" y1="255.000000" x2="700.000000" y2="255.000000" stroke="#bb4430" stroke-width="3"/>
+<line x1="700.000000" y1="255.000000" x2="790.000000" y2="255.000000" stroke="#bb4430" stroke-width="3"/>
+<circle cx="700.000000" cy="255.000000" r="3"/>
+<text x="700" y="188" font-size="22">A</text>
+<text x="700" y="332" font-size="22">A</text>
+<text x="700" y="455" font-size="16">12 unit edges · A² = (89 + 26√13)/16</text>
+<text x="700" y="482" font-size="16">Cycle rank 2</text>
+</g></svg>

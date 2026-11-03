@@ -1,0 +1,175 @@
+{
+  "repo_sources": [
+    {
+      "commit": "aaf2c1255531c1b34543997debc23e18ac22adf6",
+      "path": "05-knowledge/results/session143_frobenius_magic_followup_20261103/producer/PROOF.md",
+      "blob": "cb0720b9ac3296e058aaabb7bece393bc82b24c0",
+      "sha256": "92762cf5812c0f18bb86edce4a88f8453a49e7764c94c1336f31ad5232ba869f"
+    },
+    {
+      "commit": "aaf2c1255531c1b34543997debc23e18ac22adf6",
+      "path": "05-knowledge/results/session143_frobenius_magic_followup_20261103/independent/PROOF.md",
+      "blob": "366f374bd5e33d387786578f08a9e7ba8107cef1",
+      "sha256": "4952cda10ed920cd325acd4ab315680b309b6d6abef4434586937086731fb5a2"
+    },
+    {
+      "commit": "aaf2c1255531c1b34543997debc23e18ac22adf6",
+      "path": "05-knowledge/results/preprint_connections_solfeggio_digits_20261017.md",
+      "blob": "47e1786c59464a9f208b1b1d7edfd7eb38ffd222",
+      "sha256": "04662d781c3dc9ef6aa1e10f7722f49873a24d3ed3642977877080ef085a9517"
+    },
+    {
+      "commit": "aaf2c1255531c1b34543997debc23e18ac22adf6",
+      "path": "05-knowledge/results/carmichael_successor_blocks_20261014b.md",
+      "blob": "e285bbea5c7cc2f8c18b889215a96407a2c80a5e",
+      "sha256": "e2b97fdf89dc9315c3eb1660dfa32803080477f855536777c5f74f700b894211"
+    },
+    {
+      "commit": "aaf2c1255531c1b34543997debc23e18ac22adf6",
+      "path": "05-knowledge/results/session129_primegame_tournament_partition_20261031/partition/README.md",
+      "blob": "445c9c6740f623f5bbdca41f80d329266bf04f41",
+      "sha256": "2a2f780f8065c90c4bae08efd0e83e2ed94383156a4e0a53c6a2fb0ca3de959b"
+    },
+    {
+      "commit": "aaf2c1255531c1b34543997debc23e18ac22adf6",
+      "path": "05-knowledge/results/primegame_path_orbits_20261102/CONNECTIONS.md",
+      "blob": "76f602bcbf5c8ecf6ef99aaa36ce3f5e65a6add2",
+      "sha256": "af8cfc13028a3c0b9bc7b8d25c1bc7997ee69ed5829e0940df2105c3f44e1d3a"
+    },
+    {
+      "commit": "aaf2c1255531c1b34543997debc23e18ac22adf6",
+      "path": "05-knowledge/results/primegame_port_spectrum_20261103/FOREST_RESPONSE_RECURRENCE.md",
+      "blob": "46f7bedfbb4518fe744107e0accb2cbe238183c3",
+      "sha256": "0bb6a6b0624495b9ccc4123a2db544f2764f92c01138c4b0b241d6ef2ad73b0b"
+    },
+    {
+      "commit": "aaf2c1255531c1b34543997debc23e18ac22adf6",
+      "path": "05-knowledge/results/uniform_prime_transport_20261103/CLASSIFICATION.md",
+      "blob": "2c33209cbca2bf3f6de2769b128f63b5ad2a008d",
+      "sha256": "3763d9e957200f3a3583d80acba386256d75163abf97b75fd74bc582fb8fef8c"
+    },
+    {
+      "commit": "aaf2c1255531c1b34543997debc23e18ac22adf6",
+      "path": "05-knowledge/results/ramsey_cascade_barrier_and_port_rigidity_20261030/README.md",
+      "blob": "9bc0b7e7861a72e4b9e5e8abaf0c37dd0c65b822",
+      "sha256": "35346bff140fb223cf2a39d7747bfe0bc28466fe5df127699c1283e454abb966"
+    },
+    {
+      "commit": "aaf2c1255531c1b34543997debc23e18ac22adf6",
+      "path": "05-knowledge/results/coloring_clock_session_20261020/FUNCTIONAL_GRAPHS_AND_REGULARITY.md",
+      "blob": "f9c902de8bda8b667211fa744f313d5cfbb91ae1",
+      "sha256": "bfbb56f7b4eca84bc9b50c64ebad05a44423da20159116f0ab6b3894a82baa36"
+    },
+    {
+      "commit": "aaf2c1255531c1b34543997debc23e18ac22adf6",
+      "path": "05-knowledge/results/session144_jacobian_eth_mrb_20261103/jacobian_followup/independent/QUARTIC_BOUNDARY_AUDIT.md",
+      "blob": "e044ea645c3b67f7c298f3d9823361272d547b1e",
+      "sha256": "5ae10085b2c3cb5c81147a9b66e38a095d70751cb91e46ff7c12c5143058e8bb"
+    },
+    {
+      "commit": "aaf2c1255531c1b34543997debc23e18ac22adf6",
+      "path": "01-canon/theorems/THM-3441-weighted-quartic-jelonek-components-and-inertia-parity.md",
+      "blob": "2f5c0ef6965ace8fc1f708a9faaefe34bb687ac9",
+      "sha256": "9964134a23af9a8ef050f43a48d5311350003301d104129b60efca3cc7facf4c"
+    },
+    {
+      "commit": "aaf2c1255531c1b34543997debc23e18ac22adf6",
+      "path": "01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md",
+      "blob": "3622e921396451b9d2a93ffe5d710216c1a095e8",
+      "sha256": "b1683ddd6bbac866350679d744adb57f11946b2a81c56aa5fd23091f68320f66"
+    },
+    {
+      "commit": "aaf2c1255531c1b34543997debc23e18ac22adf6",
+      "path": "01-canon/theorems/THM-2242-tournament-complement-transport-and-knot-kernel-green-rigidity.md",
+      "blob": "d0b6fd1b6a3b73f5e1fd00a403a1417ea727f446",
+      "sha256": "7db6c761e4be750840d5b408637c1c8297e9b76ba2ecc24e9142cb808f5b6e13"
+    },
+    {
+      "commit": "2a836157af1de9702b9c04f3c28f7da941d449e9",
+      "path": "05-knowledge/results/session145_endpoint_fence_ramsey_20261103/carrier/POOLED_PARITY_CARRIER.md",
+      "blob": "df6662e19f704959c36c649344d3220f7d0d9e38",
+      "sha256": "84cff4e5b5fb768fb1dc93638be7c1bf1170b65d1f0bac606a7bb9053cb65790"
+    },
+    {
+      "commit": "d40bde5797f99533d186bd520547eb96a8589260",
+      "path": "05-knowledge/results/jacobian_eth_prime_wait_20261102/WEIGHTED-CLASSIFICATION.md",
+      "blob": "fb9d3ac37faa643558589f6e3c72a142b71d4dcf",
+      "sha256": "c48e8e79043b04d4e7b6c4b29e3121c4c1e0d65f9e116dd8203d328b6213ef26"
+    },
+    {
+      "commit": "14823946db2a12a234d83daccd7142c920aa8c7d",
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier7/PROOF.md",
+      "blob": "5ef4d8a6e664944609b06f6d11c9e0305e204b3e",
+      "sha256": "c119c8dea4252860f1db9ef0f4e7255e5db8f6328eab5ed0bcee8063efd6b5c9"
+    },
+    {
+      "commit": "84154edbc189629acc09797148168da461d25071",
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier8/PROOF.md",
+      "blob": "d4144a453257bfc509a150bd06de5cb12f86cc34",
+      "sha256": "dbd37bd5ad982e47c8dd1566e5ad2b5b7730e42e496296fa1086a048260deda4"
+    },
+    {
+      "commit": "84154edbc189629acc09797148168da461d25071",
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/machines/README.md",
+      "blob": "6c5dd0f96f884fd4787d4b64941cca6b1a8f16f0",
+      "sha256": "bfc6c8a635443363424641d8b86e850d65947938cc04ff87314e274d4efc815b"
+    },
+    {
+      "commit": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "path": "05-knowledge/results/session145_endpoint_fence_ramsey_20261103/portfolio/fences/PROOF.md",
+      "blob": "cd70e21b7d0a937a9a8df355d0391d3ca56f62b4",
+      "sha256": "a9abe6f191238fd786da875e713f731a95cbbb7f90d565463911e3d359790826"
+    },
+    {
+      "commit": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "path": "05-knowledge/results/session145_endpoint_fence_ramsey_20261103/portfolio/fences/theta_addendum/PROOF.md",
+      "blob": "074daa894e827328ba9c0fb037466c9e604d493d",
+      "sha256": "e3edc02c161d7a03b549cbbacd7d18d42fd806b322c6a3430c37a5a5f180b52f"
+    },
+    {
+      "commit": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "path": "05-knowledge/results/session145_endpoint_fence_ramsey_20261103/portfolio/magic_frequency/PROOF.md",
+      "blob": "f672562784ae54ddf5558b0509d922125318fec2",
+      "sha256": "f789de6a505748d66d27cedbddaea747b58db2e2be66345a3d1dc1736e8094d1"
+    },
+    {
+      "commit": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "path": "05-knowledge/results/session145_endpoint_fence_ramsey_20261103/portfolio/ramsey_knots/PROOFS.md",
+      "blob": "108215f718c7c96ba5ff9f99cc30d2fb322593d2",
+      "sha256": "c6b81f47311eca1bfe7ebd4de374d5a16f6863283eedb49c0b98cd81fe5acb00"
+    },
+    {
+      "commit": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "path": "05-knowledge/results/session145_endpoint_fence_ramsey_20261103/portfolio/ramsey_knots/SOURCES.md",
+      "blob": "87138651f19f5a71603aaa38d6f6b16a387f8d6b",
+      "sha256": "f3ab15f126a9ad65ea3b181e86e529b360efd4675a2761f88e063a350ed8a0a9"
+    }
+  ],
+  "primary_sources_opened": [
+    {
+      "title": "Maximum Fence Area",
+      "url": "https://erich-friedman.github.io/packing/fence/",
+      "scope": "problem statement and known constructions, not optimum proofs"
+    },
+    {
+      "title": "Maximum Product of Areas",
+      "url": "https://erich-friedman.github.io/packing/product/",
+      "scope": "known n12 construction and its credit"
+    },
+    {
+      "title": "Gullerud and Mbirika, An Euler Phi Function for the Eisenstein Integers and Some Applications",
+      "url": "https://math.colgate.edu/~integers/u20/u20.pdf",
+      "scope": "Euclidean domain and prime classification, section2"
+    },
+    {
+      "title": "Razborov, Flag Algebras",
+      "url": "https://www.ias.edu/sites/default/files/math/csdm/05-06/arazborov_flag_algebras.pdf",
+      "scope": "classical pattern-count framework; not claimed to supply our exact finite carrier theorem"
+    },
+    {
+      "title": "Radziszowski, Small Ramsey Numbers, DS1.18, April24 2026",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/ejcram18.pdf",
+      "scope": "page57 survey baseline57 and91; later86 bound inherited from pinned Session145 audit"
+    }
+  ]
+}

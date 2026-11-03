@@ -1,0 +1,16 @@
+{
+  "normal": {
+    "receipt_sha256": "58e241c79fc616da6c1b2d0095120e8132f5548cca3204bb23c6325f949facc8",
+    "stdout_sha256": "da01de3a2d56f01104dbf9fd2dd9875131caa4a9c49d87441eb6feca9028509f"
+  },
+  "optimized": {
+    "receipt_sha256": "58e241c79fc616da6c1b2d0095120e8132f5548cca3204bb23c6325f949facc8",
+    "stdout_sha256": "da01de3a2d56f01104dbf9fd2dd9875131caa4a9c49d87441eb6feca9028509f"
+  },
+  "inverse_example": {
+    "trace_residue": 2,
+    "source_modulus": 9,
+    "required_output_modulus": 27,
+    "scope": "arithmetic inverse; elliptic-curve realization is separate"
+  }
+}

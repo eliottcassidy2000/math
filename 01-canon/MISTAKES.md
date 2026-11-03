@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — a capped face is not the gross interior of a nested cycle
+
+- **Scope:** prepublication fence argument in `05-knowledge/results/chart_clique_norm_20261103/FENCES_AND_PORTS.md`; no accepted theorem is retracted.
+- **Failed implication:** a bound of1 on every actual field does not imply that the total area inside each polygon component is at most1. An outer cycle can enclose several fields separated by nested components.
+- **Repair / strongest survivor:** associate each cycle in an embedded pseudoforest with the face immediately inside it, subtracting immediate child interiors. These faces partition the bounded regions. A unit triangle contributes at most sqrt3/4; a cycle of length m>=4 contributes at most1<=m/4. The total-area bound n/4, including nesting, survives; at12 edges the restricted maximum3 is attained by three squares.
+- **Missing coordinate:** containment/face incidence. Cycle count or gross polygon area alone cannot implement the capped-area objective or geometric gluing.
+
 ## 2026-11-03 — equal H15 does not select a homogeneous module response
 
 - **Scope:** prepublication scout in `05-knowledge/results/uniform_prime_transport_20261103`; no accepted theorem is retracted.

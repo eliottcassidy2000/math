@@ -1,0 +1,19 @@
+{
+  "status": "same-agent audit with independent algorithms",
+  "sha256": {
+    "ARITHMETIC.md": "ad09f562b0689d8076df48abbf9f46780c58f2bd57cd310935d6618b95044543",
+    "AUDIT.md": "80160725cc90451e95e89399a41e6efdaa49258bdce2bf448340699297535082",
+    "BRIDGES.md": "16509849b00c46bf880213e8a4d85c5820052e0108bfce0b6b571278adba48f9",
+    "CHECKS.json": "94e5e807664437a201e379a0a0faac861c0bbe3e28019903d6e3b4ec35850519",
+    "CLIQUE_CARRIER.md": "03d0d999ceb533f8eb7759be7ed1d217b3bb797653fbe066d2cd833335e920c5",
+    "draw.py": "9e604c552cf457f482fd46629c2a18a85f38a14aa5149555ed7cfee07bf2d9f7",
+    "FENCES_AND_PORTS.md": "39882f0ac4872eb304e00ea029f2b1ed5cfbf60fb396a3c850ee0fb3e6e2a6c9",
+    "invert.py": "adf5f1dd573d5fd5ea3dc8a23a79efe0cc64a1e2567556d120962c301fd2bd7f",
+    "README.md": "899d19c4e11a65eae50ef98a753accb3921bd78a659755bfde5323353051ca00",
+    "seal.py": "76c7b085a267674f08144519f279f6c13bde0966c42cc8c56fd6fca77facd4f0",
+    "shared_boundaries.svg": "7615b937d89d87e4e2d5019b6d405242f115aa5e10e57c21096104c8190f1a82",
+    "SOURCE_PINS.json": "a775d52ec967d2789691dbb6a5b257fb5180e7ff67245789c7c7c583a84e1607",
+    "verification.json": "58e241c79fc616da6c1b2d0095120e8132f5548cca3204bb23c6325f949facc8",
+    "verify.py": "c023302ea67ebda691f6a78c9eda93e1fc6b42e1f5b4f37b692c494cc9eea1ad"
+  }
+}
