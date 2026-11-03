@@ -24,8 +24,8 @@ spectrum conjecture, a complete metagraph carrier, or A000568 enumeration.
 
 ## Exact universes and controls
 
-`reproduction.json` records a successful complete replay against 109 input
-hashes. Every Python probe is run normally and with `-O`; explicit `need`
+`reproduction.json` records a successful complete replay against the pinned
+input hashes (including incoming integration sources). Every Python probe is run normally and with `-O`; explicit `need`
 checks remain active, and the LF-normalized JSON outputs agree.
 
 - **channels.py:** all 65 atoms by permutations; three inherited seeds by
@@ -69,6 +69,14 @@ checks remain active, and the LF-normalized JSON outputs agree.
 - **81/27 hostile:** the actual adjacency rows reproduce 67 identical cyclic
   triples and H=462915, but the specified sink/port extension gives 2390013
   versus 1754919. Automorphism orders are recomputed, not taken from labels.
+
+- **integration_probe.py:** exact quotient intertwining, determinant and
+  characteristic polynomial for D=L2 b L2; all eight nonzero normalized F9
+  phases and their source-relative Frobenius map; literal graph counts for
+  all three seed families at k=0,1,2,3 through 66 vertices. The uniform level
+  step is proved by invertibility of R modulo 3. The universal parity
+  extension credits the incoming all-block calibration. Other incoming
+  censuses are cited with their scope, not claimed as fresh independent checks.
 
 ## Reproduce and inspect
 

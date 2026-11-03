@@ -123,6 +123,10 @@ t into2r and crosses precisely this absorbing boundary. Any return needs a
 different operation, such as an explicitly justified source replacement or
 re-marking; these are not excluded by the append-only theorem.
 
+The incoming universal block calibration extends this parity barrier beyond
+the selected 65 to arbitrary supplied blocks of the same join type; see
+[INCOMING I1](INCOMING.md). Enlarging the atom bank alone does not evade it.
+
 The four next affine states from the inherited U2/U4 constructions remain
 absent after multiplying by P_W:
 

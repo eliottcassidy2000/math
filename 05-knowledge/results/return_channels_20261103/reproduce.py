@@ -29,7 +29,7 @@ def main():
         if exe.exists():exe.unlink()
     probes=(('channels.py','channels.json'),('arithmetic_probe.py','arithmetic.json'),
             ('port_guard.py','port_guard.json'),('birth_verify.py','birth_verification.json'),
-            ('context_entry.py','context_entry.json'))
+            ('context_entry.py','context_entry.json'),('integration_probe.py','integration.json'))
     records=[]
     for script,out in probes:
         hashes=[];runs=[]

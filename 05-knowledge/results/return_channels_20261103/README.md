@@ -30,6 +30,14 @@ port-start feasibility. The full start count gives a sharp four-dimensional
 linear lift. This repairs a precise legality loss without claiming full
 source reconstruction.
 
+[Incoming integration](INCOMING.md) strengthens the parity barrier to arbitrary
+blocks of the same join type and produces a concrete 19-vertex return loop.
+Its error gain is -4 while its bulk action raises the 3-adic level by exactly
+one for every nonzero input. The normalized bulk has an exact eight-phase F9
+clock. Literal source-family counts are checked through 66 vertices. This
+leaves the incoming return theorem's unit-determinant hypothesis, but still
+does not supply a closed ternary source bank.
+
 Four actual error loops have gains-2,6,45,13. They give exact valuation and
 generating-function formulas. In this loop language, Liouville needs2 response
 states, Mobius7, their joint observation8, and retaining error sign16. The
@@ -51,5 +59,5 @@ shows why the returned representative must not replace the supplied graph.
 
 See [audit](AUDIT.md), [recovered work and concept board](RECOVERY.md), and
 [next decisive tests](HANDOFF.md). Run `python -X utf8 -B reproduce.py` here
-to compile the extension verifier and replay the five Python probes normally
+to compile the extension verifier and replay the six Python probes normally
 and under-O, with identical result receipts.

@@ -5,6 +5,16 @@ The uniform prime/7p inverse and the unrestricted {7,21} spectrum claim remain
 **OPEN**. Start from this packet and its successful `reproduction.json`;
 do not rerun the entire historical search.
 
+**Incoming update through a140b314340c:** read [INCOMING](INCOMING.md) first.
+Universal block calibration extends our parity barrier to all atom sizes.
+The actual loop D=L2 b L2, cost 19, has error gain -4 and bulk matrix 3R with
+det R=-100. It raises every nonzero bulk's 3-adic level exactly once, while
+the normalized F9 clock has period eight and Frobenius phase k->3k+6.
+All three seed families are checked through 66 vertices. The incoming
+17-query two-port observer and four-level integer-carry repair tree supply
+concrete operations/endpoints for a next return test; their global closure
+is still open. Test these before conducting another unguided word census.
+
 ## Completed mechanisms to inherit
 
 - Processing seeds U=`r5 a a`, U2=`a a q1 a a`, U4=`q0 a a a a a` have
@@ -69,10 +79,10 @@ Parents of required primes or 7p need not stay in those two scalar lanes.
 
 ## Reproduction and close-out
 
-`python -X utf8 -B reproduce.py` replays five probes in normal and optimized
+`python -X utf8 -B reproduce.py` replays six probes in normal and optimized
 Python plus both C++ transforms. `seal.py` verifies local links and creates
-the LF-normalized manifest. Inputs are pinned at the previous checkpoint;
-preserve that provenance when integrating newer mainline work.
+the LF-normalized manifest. Inputs retain the previous checkpoint plus the
+explicit incoming-source pins; preserve both when integrating newer work.
 
 The 81/27 source rows and the failed 55-to-111 sources remain mandatory
 hostiles. Keep source replacement distinct from retained-edge attachment,

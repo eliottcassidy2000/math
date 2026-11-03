@@ -5,6 +5,10 @@ This session used the bounded startup routes and targeted current result
 files, not a chronological log as authority. The shared checkout's unrelated
 files were preserved in place; all work here belongs to an isolated worktree.
 
+The later [incoming integration](INCOMING.md) reads through a140b314340c,
+credits the universal carry lattice, two-port observer and modular-orbit
+certificates, and derives a new uniform level-raising loop with an F9 clock.
+
 Closest proved mechanism: [G1-G4, universal marked bridge transfer](../golden_hamilton_transfer_20261103/RECURRENCE.md).
 Canonical hostiles: the actual 81/27 pair and the six supplied H55 sources.
 Corrected near miss: positive integral observer data and a successful output
