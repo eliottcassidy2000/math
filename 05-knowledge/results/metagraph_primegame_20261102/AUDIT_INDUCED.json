@@ -1,0 +1,96 @@
+{
+  "enumerated_directed_simple_paths": 713827,
+  "negative_branches": [
+    [
+      3,
+      7
+    ],
+    [
+      7,
+      13
+    ],
+    [
+      7,
+      15
+    ],
+    [
+      11,
+      21
+    ],
+    [
+      13,
+      27
+    ],
+    [
+      29,
+      57
+    ],
+    [
+      31,
+      63
+    ],
+    [
+      43,
+      85
+    ],
+    [
+      43,
+      87
+    ],
+    [
+      47,
+      93
+    ],
+    [
+      47,
+      117
+    ],
+    [
+      53,
+      105
+    ]
+  ],
+  "noncomposable_witnesses": [
+    {
+      "first": {
+        "source_count": 47,
+        "source_subset": 127,
+        "target_count": 73,
+        "target_rows": [
+          134,
+          252,
+          248,
+          241,
+          225,
+          193,
+          1,
+          64
+        ]
+      },
+      "p": 47,
+      "q": 73,
+      "r": 117,
+      "second": {
+        "source_count": 73,
+        "source_subset": 255,
+        "target_count": 117,
+        "target_rows": [
+          298,
+          508,
+          505,
+          496,
+          481,
+          448,
+          385,
+          1,
+          128
+        ]
+      }
+    }
+  ],
+  "scope": "Independent literal path enumeration; all-order interpretation uses strong-component reduction and inherited f(10)=125",
+  "source_checks": 687,
+  "status": "PASS",
+  "subset_checks": 153914,
+  "wider_noncomposable_witnesses": []
+}

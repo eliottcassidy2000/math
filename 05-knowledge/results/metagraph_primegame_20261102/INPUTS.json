@@ -1,0 +1,44 @@
+[
+  {
+    "n": 3,
+    "source": "05-knowledge/results/prime_inverse_ports_20261102/inputs/quotients_n3.txt",
+    "count": 2,
+    "input_sha256": "b8bd9f18dbaa6e48bf08aea7368585a4e3e001c4914a4012b138c7aa8b1bb6a0"
+  },
+  {
+    "n": 4,
+    "source": "05-knowledge/results/prime_inverse_ports_20261102/inputs/quotients_n4.txt",
+    "count": 4,
+    "input_sha256": "91dde84a6b6286a5e0b7b6295ccb1d16955dc4d74b8b93163d50d8a9cd7c7921"
+  },
+  {
+    "n": 5,
+    "source": "05-knowledge/results/prime_inverse_ports_20261102/inputs/quotients_n5.txt",
+    "count": 12,
+    "input_sha256": "5d16cab0f65c58f402ef49c3442e3e8fedbb5498a8cb09f58a5d8d733784f6e4"
+  },
+  {
+    "n": 6,
+    "source": "05-knowledge/results/prime_inverse_ports_20261102/inputs/quotients_n6.txt",
+    "count": 56,
+    "input_sha256": "814e0ed10e5d3aaae92d809b9eb915f1eb5542a65a33fe4d47463d22159a525b"
+  },
+  {
+    "n": 7,
+    "source": "05-knowledge/results/prime_inverse_ports_20261102/inputs/quotients_n7.txt",
+    "count": 456,
+    "input_sha256": "164260b94960af0cc63faf3f178ceb95f4dd23bbca376ec23872c33b30d94261"
+  },
+  {
+    "n": 8,
+    "source": "05-knowledge/results/prime_inverse_ports_20261102/inputs/quotients_n8.txt",
+    "count": 6880,
+    "input_sha256": "fc96c6997724e54ccea3bd166f4117d9e27925d85f568e31b0623527e5139dad"
+  },
+  {
+    "n": 9,
+    "source": "05-knowledge/results/spectrum_analogies_nearjoin_20261102/data/census2_9.txt",
+    "count": 191536,
+    "input_sha256": "4f7d6c43cfed87e1e5293dc751736efe2d7bc1554946cdc83f4026a575fbbbf8"
+  }
+]

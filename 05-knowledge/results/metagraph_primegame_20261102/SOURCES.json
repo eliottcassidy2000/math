@@ -1,0 +1,77 @@
+{
+  "public_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+  "sources": [
+    {
+      "path": "05-knowledge/results/session129_primegame_tournament_partition_20261031/partition/README.md",
+      "sha256": "2a2f780f8065c90c4bae08efd0e83e2ed94383156a4e0a53c6a2fb0ca3de959b"
+    },
+    {
+      "path": "05-knowledge/results/free_bits_signed_incidence_20261028/THEORY.md",
+      "sha256": "628c98efc18bce12879a4888fb63cbdf87f1e1116d95d0693fe937f24f0d6a07"
+    },
+    {
+      "path": "05-knowledge/results/session85_arithmetic_codes_free_bits_20261028/ARITHMETIC_FREE_BITS.md",
+      "sha256": "e5466ee1981c6a1ddf5f649acd3c528df74b58debef1f6fe5ec79d42f797ae90"
+    },
+    {
+      "path": "05-knowledge/results/session142_tournament_odd_spectrum_20261102/constructions/BINARY_NO_GO.md",
+      "sha256": "5e342fac18537bb234c432b4c8b675ed0ee4d4b41af9dfd67c49f19c12204a6a"
+    },
+    {
+      "path": "05-knowledge/results/session142_tournament_odd_spectrum_20261102/minimal_gap/PROOF.md",
+      "sha256": "243d500c1d726c6ca66f766d6ce041dfc7a370196cc6b39563a43f22a1bb34db"
+    },
+    {
+      "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/constructor/PROOF.md",
+      "sha256": "20a3926688d9048cab4ddda61db9eb1c535e95dda038cec2601688033cc618f1"
+    },
+    {
+      "path": "05-knowledge/results/prime_inverse_ports_20261102/README.md",
+      "sha256": "fecc8aee65a0aaa36c12f099d759f7624028cdf825c7ab1e045968616c49ca6f"
+    },
+    {
+      "path": "01-canon/theorems/THM-505-the-ocf-non-spectral-defect-H-equals-spectral-skeleton-plus-witt-defect.md",
+      "sha256": "8467fdb879c359e12bbf444fc518c64bdd4f609ccf65e824a1dfca49eae549f5"
+    },
+    {
+      "path": "05-knowledge/results/spectrum_analogies_nearjoin_20261102/data/census2_3.txt",
+      "sha256": "c59bb94101b5e5ebe77420c7359d9a2ba8b332eec13c2772a3a453d17de18730"
+    },
+    {
+      "path": "05-knowledge/results/spectrum_analogies_nearjoin_20261102/data/census2_4.txt",
+      "sha256": "8e8891c11026a04da7024dd0609a1059da20c49974a2cd2f26bb8df275276c88"
+    },
+    {
+      "path": "05-knowledge/results/spectrum_analogies_nearjoin_20261102/data/census2_5.txt",
+      "sha256": "afce6584376a16ac5f359a84e904f9eea3e074cb7b6096a26fce19a67e7cc1c6"
+    },
+    {
+      "path": "05-knowledge/results/spectrum_analogies_nearjoin_20261102/data/census2_6.txt",
+      "sha256": "6a7a64663b1d6cdac1059c35dbd7e352fef413621df87ae4a6bd6e9f5d131c7b"
+    },
+    {
+      "path": "05-knowledge/results/spectrum_analogies_nearjoin_20261102/data/census2_7.txt",
+      "sha256": "cc7a6b7d7b3c7e4e769dd49a2f95ab2153a0242e0a11184cdbb251c15c3b904f"
+    },
+    {
+      "path": "05-knowledge/results/spectrum_analogies_nearjoin_20261102/data/census2_8.txt",
+      "sha256": "655e44d26613ef7aba9d262f7f163fff9a0a3d833e5721169d884a5ff47519b3"
+    },
+    {
+      "path": "05-knowledge/results/spectrum_analogies_nearjoin_20261102/data/census2_9.txt",
+      "sha256": "86738081b63d8ee25319bc11e288942881c213dd60b3413b24ae582ca069d9d5"
+    },
+    {
+      "path": "05-knowledge/results/groups_of_five_primegame_merged_metagraph_20261031.md",
+      "sha256": "70ad0f50758bd68e1d1664302d2879276dd9a7b4cd5a2b18e645aeb1f4f218d5"
+    },
+    {
+      "path": "05-knowledge/results/primegame_blocks_register_decomposition_metagraphs_20261031.md",
+      "sha256": "8652f8bdca597e6f67f2abd2783d4e6aa79d7a27fd8189041c4af1843780a064"
+    },
+    {
+      "path": "05-knowledge/results/spectrum_descent_jacobian_20261102/DESCENT.md",
+      "sha256": "665510704752baface0462e9cd50e4ffb5aca7a2d8dafe297db72978fc475d1d"
+    }
+  ]
+}

@@ -243,7 +243,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 - MISTAKE-227--229 repair the `11!` AP frame, Paley roots, and a false Heegner
   reading. THM-4088/4095 show bare order loses magnitude/type; THM-4093 needs cycles.
 - THM-4094 reduces completeness, via exact deletion and carries `49,63,343`,
-  to lanes `p` (`p!=7`) and `7p` (`p!=3`).
+  to lanes `p` (`p!=7`) and `7p` (`p!=3`). [Birth/embedding limits](../05-knowledge/results/metagraph_primegame_20261102/README.md).
 - THM-4099 makes insertion compositional; marginals lose mixed response.
 - THM-4097/4102/4104/4111--4137 handle the order-nine/ten interval-cut route;
   THM-4144/4162/4163 close nonprimes, THM-4168 symmetric primes, and

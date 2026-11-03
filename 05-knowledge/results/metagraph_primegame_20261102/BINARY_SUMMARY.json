@@ -1,0 +1,239 @@
+{
+  "both_children_two_sided": 0,
+  "missing_counts_below125": [
+    7,
+    21
+  ],
+  "missing_signs": [
+    {
+      "H": 3,
+      "missing": [
+        1
+      ]
+    },
+    {
+      "H": 11,
+      "missing": [
+        -1
+      ]
+    },
+    {
+      "H": 13,
+      "missing": [
+        1
+      ]
+    },
+    {
+      "H": 19,
+      "missing": [
+        -1
+      ]
+    },
+    {
+      "H": 25,
+      "missing": [
+        1
+      ]
+    },
+    {
+      "H": 29,
+      "missing": [
+        -1
+      ]
+    },
+    {
+      "H": 31,
+      "missing": [
+        -1,
+        1
+      ]
+    },
+    {
+      "H": 35,
+      "missing": [
+        -1
+      ]
+    },
+    {
+      "H": 39,
+      "missing": [
+        -1
+      ]
+    },
+    {
+      "H": 43,
+      "missing": [
+        -1,
+        1
+      ]
+    },
+    {
+      "H": 45,
+      "missing": [
+        1
+      ]
+    },
+    {
+      "H": 47,
+      "missing": [
+        -1
+      ]
+    },
+    {
+      "H": 49,
+      "missing": [
+        1
+      ]
+    },
+    {
+      "H": 53,
+      "missing": [
+        -1
+      ]
+    },
+    {
+      "H": 55,
+      "missing": [
+        -1,
+        1
+      ]
+    },
+    {
+      "H": 61,
+      "missing": [
+        -1,
+        1
+      ]
+    },
+    {
+      "H": 63,
+      "missing": [
+        -1,
+        1
+      ]
+    },
+    {
+      "H": 67,
+      "missing": [
+        -1
+      ]
+    },
+    {
+      "H": 71,
+      "missing": [
+        -1
+      ]
+    },
+    {
+      "H": 73,
+      "missing": [
+        -1,
+        1
+      ]
+    },
+    {
+      "H": 75,
+      "missing": [
+        1
+      ]
+    },
+    {
+      "H": 77,
+      "missing": [
+        -1
+      ]
+    },
+    {
+      "H": 83,
+      "missing": [
+        1
+      ]
+    },
+    {
+      "H": 85,
+      "missing": [
+        -1,
+        1
+      ]
+    },
+    {
+      "H": 87,
+      "missing": [
+        -1,
+        1
+      ]
+    },
+    {
+      "H": 93,
+      "missing": [
+        1
+      ]
+    },
+    {
+      "H": 97,
+      "missing": [
+        1
+      ]
+    },
+    {
+      "H": 99,
+      "missing": [
+        1
+      ]
+    },
+    {
+      "H": 101,
+      "missing": [
+        -1
+      ]
+    },
+    {
+      "H": 111,
+      "missing": [
+        1
+      ]
+    },
+    {
+      "H": 113,
+      "missing": [
+        -1,
+        1
+      ]
+    },
+    {
+      "H": 115,
+      "missing": [
+        1
+      ]
+    },
+    {
+      "H": 121,
+      "missing": [
+        1
+      ]
+    }
+  ],
+  "no_binary_ports": [
+    31,
+    43,
+    55,
+    61,
+    63,
+    73,
+    85,
+    87,
+    113
+  ],
+  "source_scope": "All orders, by the proved SCC reduction and f(10)=125",
+  "status": "FINITE-EXACT",
+  "strong_sources_below125": 687,
+  "two_sided_class_counts": {
+    "3": 0,
+    "4": 1,
+    "5": 2,
+    "6": 3,
+    "7": 8,
+    "8": 16,
+    "9": 30
+  }
+}
