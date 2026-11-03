@@ -154,3 +154,47 @@ The order can drop for a particular weight or response; 24 is a uniform
 upper bound, not a claim of minimality. Changing the generator at every
 time still uses the ordered layer-path expansion A4 rather than this
 constant-operator recurrence.
+
+For the positive weights `(1,2,3,4,5,6,7)` on
+`(C3p,C5p,N,J0,J1,J2,J3)`, the seven factors are, in the same order,
+
+```text
+x-436
+x^2-1022x-7704
+x-61
+x^3-10810x^2+207633x+100913724
+x^3-78426x^2+50513552x+17906890752
+x+25
+x+100
+```
+
+Raising them to exponents `(1,3,3,3,1,1,1)` gives the displayed
+degree-24 annihilator. Exact Horner evaluation on the full matrix is
+zero, so this example checks the radical terms too. The following
+standalone check, executed in this session, reproduces that evaluation
+from the pinned certificates (run as Python from the repository root):
+
+```python
+from pathlib import Path
+import json
+import sympy as s
+from sympy.polys.matrices import DomainMatrix as DM
+p = Path('05-knowledge/results/return701_algebra_20261103')
+a = json.loads((p/'algebra_exact.json').read_text())
+b = json.loads((p/'semisimple.json').read_text())
+w = {k: i+1 for i, k in enumerate(a['generators'])}
+A = sum((w[k]*s.Matrix(v) for k, v in a['generators'].items()), s.zeros(27))
+x = s.Symbol('x')
+P = s.Integer(1)
+for c, e in zip(b['components'], (1,3,3,3,1,1,1)):
+    C = sum((w[k]*s.Matrix(v) for k, v in c['generator_matrices'].items()),
+            s.zeros(c['dimension']))
+    P *= C.charpoly(x).as_expr()**e
+D = DM.from_Matrix(A).to_field()
+I, Z = DM.eye(27, D.domain), DM.zeros((27,27), D.domain)
+for c in s.Poly(P, x).all_coeffs():
+    Z = Z*D + I.scalarmul(D.domain.convert(c))
+if not Z.is_zero_matrix:
+    raise RuntimeError('Degree-24 annihilator failed')
+print('PASS exact degree', s.degree(P,x))
+```

@@ -1,4 +1,4 @@
-# The701 return changes ready lane
+# The 701 return changes ready lane
 
 **PROVED all-size ready-image consequence of the inherited classification
 and a complete finite head; FINITE-EXACT actual native return.** Local
@@ -13,16 +13,16 @@ then produces h'=3h+2b.
 
 At h=701 the complete classification is:
 
-* No finite tournament has a1-ready root and H701.
-* There is exactly one rooted strong2-ready isomorphism class with H701.
+* No finite tournament has a 1-ready root and H701.
+* There is exactly one rooted strong 2-ready isomorphism class with H701.
   It has order9 and rooted profile `(701,81,83,703)`.
-* Every weak2-ready example is that strong core followed by a transitive
+* Every weak 2-ready example is that strong core followed by a transitive
   tail. There is one rooted class at each order n>=9, including the strong
   example at9. This does not classify arbitrary second-port markings.
 
 **Proof and complete finite reduction.** [READY](../two_entry_funnels_20261103/READY.md)
-classifies every1-ready root as the one-in-neighbour newborn of a strong
-one-start parent. A2-ready root is either the analogous two-start newborn
+classifies every 1-ready root as the one-in-neighbour newborn of a strong
+one-start parent. A 2-ready root is either the analogous two-start newborn
 or one of five explicit exceptional families. The newborn count is
 `h_child=h_parent+F_parent-b >=2h_parent-b`.
 For h_child=701 and b=1 or2, h_parent<=351. The sharp strong-order bound
@@ -59,8 +59,8 @@ shows that a positive ready defect1 or2, smaller than H, puts the root in
 the first strong component and forces every later component to be a
 singleton. This proves the weak-source statements and completes R1.
 
-Consequently an H-preserving return into the1-ready lane is impossible
-at701, regardless of the proposed operation. The2-ready lane remains
+Consequently an H-preserving return into the 1-ready lane is impossible
+at701, regardless of the proposed operation. The 2-ready lane remains
 available and is used below. This is an interface classification, not a
 missing Hamilton-path value.
 
@@ -68,7 +68,7 @@ missing Hamilton-path value.
 
 Start with the saved ready233 source and its NR child in
 [the preceding packet](../joint_port_geometry_20261103/RETURN_233.md).
-The701 child's physical names are
+The 701 child's physical names are
 
 `[0,1,2,4,5,6,7,8,13,14]`, with root13 and spare6.
 
@@ -106,8 +106,11 @@ which old names carry which incidences; they are not free graph edits.
 
 ## R3 Actual branches survive the obstruction
 
-The returned2-ready root has an ordinary NR continuation to2107=3*701+4,
+The returned 2-ready root has an ordinary NR continuation to2107=3*701+4,
 with the first new vertex as the next root and both new names recorded.
+Here 2107=49*43. Its golden observer is `(2107,13765,13794)` and its
+chart is `(1,4,3)`: divisibility of the scalar count by 49 does not erase
+the joint phase. This is a literal next source for the older mod-49 gate.
 
 There is also a different one-complement/one-birth escape from the original
 701 source to **each** of2103,2105,2107, with the same old root13 and spare6

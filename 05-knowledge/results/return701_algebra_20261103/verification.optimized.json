@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "mode": "optimized",
+  "python": "3.13.14",
+  "sympy": "1.14.0",
+  "numpy": "2.3.2",
+  "inherited_files": 141,
+  "receipts": [
+    {
+      "script": "algebra_exact",
+      "stdout": "rational basis95 pivots 95\nclosure 3p\nclosure 5p\nclosure N\nclosure J0\nclosure J1\nclosure J2\nclosure J3\ntrace rank 26 radical candidate 69",
+      "sha256": "57b2c33d738fc70a1a17bf2d30913229aa388d3ece5e5c5f7003aa30a8e774fe"
+    },
+    {
+      "script": "radical",
+      "stdout": "radical module filtration [27, 21]\nradical module filtration [27, 21, 7]\nradical module filtration [27, 21, 7, 2]\nradical module filtration [27, 21, 7, 2, 0]\nquotient center dimension 7\ncentral characteristic polynomial (x - 2522)*(x - 472)*(x - 197)**9*(x - 14)**9*(x + 1)*(x + 7)**4*(x + 18)",
+      "sha256": "991184c55143e3b1a9c093851a210fd888b993d6d8c4802f879f0e721aaa05cc"
+    },
+    {
+      "script": "semisimple",
+      "stdout": "PASS A/J = Q^4 + M2(Q) + M3(Q)^2, J^4=0 != J^3; A dimension95",
+      "sha256": "140cb8b1f8941bb81efed5473382652e19203827d243fde2358363fdb66434b4"
+    },
+    {
+      "script": "multiplication",
+      "stdout": "ideal powers [69, 18]\nideal powers [69, 18, 4]\nideal powers [69, 18, 4, 0]\nPASS sparse multiplication products 1647 radical dimensions [69, 18, 4, 0] clock seed 1",
+      "sha256": "667057a085a5c1395893f3b46975a736c1b1f192d634e8a83a34dd09614103c5"
+    },
+    {
+      "script": "radical_clocks",
+      "stdout": "PASS: formal clock p^e (p>=5), 3^(e+1); all positive generators singular {'3p': 26, '5p': 26, 'N': 23, 'J0': 23, 'J1': 23, 'J2': 23, 'J3': 23}",
+      "sha256": "9dd0a5cb3c4623f8823021435ebd6c7b6ff46b3af1cb2395b5d8fe654c1aee4f"
+    },
+    {
+      "script": "clock_split",
+      "stdout": "PASS formal tensor clock156: samples12/13 separate commuting nilpotent/quadratic factors",
+      "sha256": "3ff03e7c7186f5bde78d89c2b8ea0a800887a9edd83fd042c7e40ab21335fdb3"
+    },
+    {
+      "script": "ready701",
+      "stdout": "parent 3 classes 1 ready701 0\nparent 4 classes 3 ready701 0\nparent 5 classes 8 ready701 0\nparent 6 classes 21 ready701 0\nparent 7 classes 55 ready701 0\nparent 8 classes 144 ready701 0\nparent 9 classes 377 ready701 0\nparent 10 classes 987 ready701 0\nparent 11 classes 2584 ready701 0",
+      "sha256": "3f3ea1e6174f65c5525e883afbd901143746e758e7b1692dad1b34b4aa4bc960"
+    },
+    {
+      "script": "two_ready701",
+      "stdout": "two-start parent 3 classes 0 ready701 0\ntwo-start parent 4 classes 1 ready701 0\ntwo-start parent 5 classes 5 ready701 0\ntwo-start parent 6 classes 18 ready701 0\ntwo-start parent 7 classes 60 ready701 0\ntwo-start parent 8 classes 191 ready701 1\ntwo-start parent 9 classes 589 ready701 0\ntwo-start parent 10 classes 1775 ready701 0\ntwo-start parent 11 classes 5257 ready701 0",
+      "sha256": "28d607ce8060eba6eb2b80b33fdfdbb770eedd5d14bc678882f970d1ad1ad0b1"
+    },
+    {
+      "script": "escape_probe",
+      "stdout": "native701 endpoints 6 root-ready<=701 0 701 deletions 7 ready 0",
+      "sha256": "6230e78d9b14c2321a8c22b286a9f296613ccd83bc3239e0afea7562676dd5b0"
+    },
+    {
+      "script": "escape_birth",
+      "stdout": "native path 0 701 births 0 same-root ready 0 any-root ready 0\nnative path 100 701 births 13 same-root ready 0 any-root ready 0\nnative path 500 701 births 25 same-root ready 0 any-root ready 0\nPASS all native/birth programs: targets 29 same-root ready 0 any ready 0",
+      "sha256": "891e682c617d67feae4b376129531cd2ec2adeb54e641a9af2adb4a896709dd0"
+    },
+    {
+      "script": "ternary_escapes",
+      "stdout": "ternary escape counts {2105: 43, 2103: 38, 2107: 20} selected profiles {2105: (2105, 51, 871, 18059), 2103: (2103, 60, 751, 12168), 2107: (2107, 42, 537, 15490)}",
+      "sha256": "c354c577ea00be850a9ccd76f4cb489e88bb4ba3959bdc24234c72a7fe52c22b"
+    },
+    {
+      "script": "target_match",
+      "stdout": "new minimum 13 delete 0\nnew minimum 12 delete 0\nnew minimum 11 delete 0\nnew minimum 10 delete 0\nnew minimum 9 delete 0\nnew minimum 8 delete 0\nnew minimum 7 delete 0\nnew minimum 6 delete 0\nminimum old arc repairs 6 tested 141321600",
+      "sha256": "f16d021cb08b22b39e7dcf72a88f8824b49c908c19ad5bb4b2523ab14f7e5263"
+    },
+    {
+      "script": "native_return",
+      "stdout": "PASS named701 return:13 native moves, one old deletion, peak10, profile (701, 81, 83, 703) next2107",
+      "sha256": "3731ae37ed9080c78916ca1affddbe01acd7f600d6797f93bd4162ddd11b7460"
+    },
+    {
+      "script": "hilbert_collatz",
+      "stdout": "PASS source/clock Hilbert charts through16384 certified sources; native clocks and scale-dependent XOR transport",
+      "sha256": "488ff193f286b72ab10f20342f2f18272da405a4475aea9be52ca298a73852d9"
+    },
+    {
+      "script": "hostiles",
+      "stdout": "PASS: actual81/27 groups,67 equal cyclic triples, regular-mask separation; independent return profiles",
+      "sha256": "6b9ea5e4ead7a7d17f4e73967bce3b34b66a6e45b15bf00cd1de16496e0772ae"
+    }
+  ]
+}

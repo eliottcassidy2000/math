@@ -45,6 +45,8 @@ failed 55-to-111 bank is pinned inheritance, not newly rerun.
 Uniform recursive return closure, the complete tournament Hamilton-path
 spectrum, full metagraph classification and universal Collatz entry remain
 **OPEN**. The next decisive source is the explicitly saved 2107 child.
+The [incoming integration](INCOMING.md) records compatible signed-transport,
+cellular-clock, clone-return and collision-bank developments from other sessions.
 
 Reproduce from the repository root:
 

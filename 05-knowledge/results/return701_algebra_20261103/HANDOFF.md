@@ -8,6 +8,10 @@ the old 77/233 search.
    `next_phases` give the actual order-11 child with H=2107. The physical
    next root is name 21; the retained spare is name 6. The returned 701
    source is order 9, root name 13, profile `(701,81,83,703)`.
+   Here `2107=49*43`, but the new golden observer is
+   `(2107,13765,13794)` with chart `(1,4,3)`. A zero scalar modulo 49
+   does not mean the full chart is zero. This is an explicit next test
+   of the earlier mod-49 gate with the retained source and spare.
 2. First classify the ready target image at 2107 using the existing
    one/two-start grammar. The all-size argument at 701 is reusable, with
    the parent bound `(2107+b)/2` and the published strong-order minimum.

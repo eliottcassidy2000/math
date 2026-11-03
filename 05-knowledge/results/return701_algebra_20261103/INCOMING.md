@@ -65,3 +65,26 @@ The incoming starting-path correction for a sole-in-neighbour birth is
 also respected: the formula used in R1 is `H_child=H_parent+F_parent-b`,
 where b is the parent's starting-path count, never `H_parent+F_parent`.
 The new MISTAKES entries are therefore compatible with the current proofs.
+
+## Further integration through bad837af38
+
+[Adaptive returns L1--L3](../adaptive_four_returns_20261103/LIFTING.md)
+now supplies six infinite actual clone families. Two complements commute
+with a transitive substitution when the substituted vertex has the same
+ordered predecessor and successor in both supplied paths. This is a
+particularly relevant new lemma for parameterizing the six paired repairs
+in R2. The initial single complement in our 13-move program is unpaired:
+it changes a transitive clone block into its consecutive-edge interval
+tournament. That boundary transformation must be carried explicitly; the
+incoming cancellation theorem cannot simply erase it.
+
+[The nine-coordinate collision bank](../session169_runner_jacobian_20261103/collision/COLLISION_BANK.md)
+also proves an abstract n+3-direction sufficiency and lower bound for
+first-order collision detection in dimension n>=3, with an actual bank
+for its specified nine-coordinate language. Its abstract theorem at
+n=27 would give a 30-direction target for our observer space. Whether
+30 such directions can be actual persistent-port source states is a new
+**OPEN realization problem**. A Vandermonde bank of arbitrary vectors
+does not answer it. This is another concrete meeting point between the
+Jacobian response problem and the distinction between A95 and its legal
+positive construction monoid.
