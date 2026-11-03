@@ -322,11 +322,31 @@ def main():
              'sharp linear boundary history length')
         observability.append({'n': n, 'rank': 2*n, 'one_fewer_rank': 2*n-1})
     arbitrary = [clock_order(n) for n in list(range(1, 13))+[16]]
-    for n in (2, 4, 5, 7, 8):
+    for n in (2, 4, 5, 7, 8, 11):
         entry = next(e for e in arbitrary if e['n'] == n)
         v = (1,)+(0,)*(2*n-1)
         need(period(v, step, entry['order']) == entry['order'], 'cyclic impulse independent orbit')
         entry['delta_physical_period'] = period(v, lift, 2*entry['order'])
+        trajectory = []
+        w = v
+        for _ in range(entry['order']):
+            trajectory.append(w)
+            w = step(w)
+        deck = []
+        for lag in (2, 1):
+            for i in range(n):
+                winding = sum((0, 1, -1)[(trajectory[(t+lag) % len(trajectory)][i]-trajectory[t][i]) % 3]
+                              for t in range(len(trajectory)))
+                need(winding % 3 == 0, 'closed trit word winding')
+                crossings = sum({trajectory[t][i], trajectory[(t+lag) % len(trajectory)][i]} == {0, 1}
+                                for t in range(len(trajectory)))
+                need((winding//3-crossings) % 2 == 0, 'one-edge crossing parity')
+                deck.append((winding//3) % 2)
+        physical = v
+        for _ in range(entry['order']):
+            physical = lift(physical)
+        need(tuple((x+3*b) % 6 for x, b in zip(v, deck)) == physical, 'boundary winding deck prediction')
+        entry['impulse_one_lap_deck_bits'] = deck
     carry_census = []
     for n in (1, 2, 3, 4):
         states = [(v[0]+3*b,)+v[1:] for v in product(range(3), repeat=2*n) for b in (0, 1)]

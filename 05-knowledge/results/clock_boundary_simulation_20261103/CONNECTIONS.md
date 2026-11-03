@@ -162,12 +162,16 @@ Collatz orbit.
    Same H is insufficient; compare the first permissible probe responses.
 2. **All-width physical clock (OPEN here).** CB4 computes the logical order
    at every width. Find an arithmetic characterization of the one-lap deck
-   parity for the impulse. Widths2,4,8 double;5,7 do not. The mechanism
+   parity for the impulse. CB3 reduces it to lag-one and lag-two boundary
+   winding parities, equivalently one-edge necklace crossing parities.
+   Widths2,4,8,11 double;5,7 do not. Width11 is an odd-width hostile against
+   a mere even/odd criterion. The mechanism
    cannot simply be the uniform half-turn: the 5-site factors have root
    orders8 and164, with different powers of two.
 3. **Boundary history compression (resolved here, then extended).** The
    initial helper question asked whether the six-valued reader could beat
-   2m queries. The carry identity CB3(9) proves it cannot in the worst case:
+   2m consecutive queries. The carry identity CB3(9) proves it cannot in
+   the worst case for that observation schedule:
    the last observation only partially separates the next trit. The exact
    shorter-history count is10*3^(L-1). The next OPEN question is to optimize
    two fixed probe locations, retaining their unknown initial deck bits:

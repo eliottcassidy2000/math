@@ -39,8 +39,11 @@ is credited to S167/S168; no new literature-priority claim is made.
    is the period8 hostile. Zero has4^m distinct physical fixed lifts.
 3. **Physical return.** The cancellation uses a state-specific half-turn
    and the specified linear gate schedule, not merely an even period.
-   Widths2,4,8 double the impulse period. Arbitrary-width logical orders
+   Widths2,4,8,11 double the impulse period. Arbitrary-width logical orders
    do not imply no doubling.
+   The one-lap deck vector is independently reduced to lag-one/lag-two
+   boundary winding parity, and then to a single undirected-edge crossing
+   parity, with exact checks at widths2,4,5,7,8,11.
 4. **Readout type.** CB2 retains a physical label and adds one new vertex.
    It does not recover a deck bit from an unmarked isomorphism class.
    The probe changes the profile; querying a copy preserves the source.
@@ -50,7 +53,8 @@ is credited to S167/S168; no new literature-priority claim is made.
    bound for six-valued measurements. CB3 supplies the actual carry formula
    and exact shorter-history classes. It also proves which remote bits
    remain invisible at every time. Changing the observation alphabet can
-   change this equivalence relation.
+   change this equivalence relation. The sharp length bound is for
+   consecutive round-boundary observations, not arbitrary adaptive timings.
 6. **Every width.** CB4 treats the inseparable spatial multiplicities and
    the critical quadratic separately. The repeated factor occurs at
    widths divisible by8 after removing powers of3. No diagonalization of
@@ -94,3 +98,10 @@ not close their universal marked-reentry gap.
 
 The small board and four helper questions are in [CONNECTIONS](CONNECTIONS.md).
 The reproduction commands and source-pinning scope are in [README](README.md).
+
+**Incoming close-out audit:** commit `e92fc100d5` adds S168's independent
+cellular audit, including physical controls through width243 and the
+required injectivity premise for the irreversible-map obstruction. It
+does not change the inherited R rule or hexagon used here. The present
+packet's own finite controls and source-pinned proofs are unchanged by
+that integration.

@@ -405,7 +405,13 @@
           "root_lcm": 8
         }
       ],
-      "delta_physical_period": 16
+      "delta_physical_period": 16,
+      "impulse_one_lap_deck_bits": [
+        0,
+        0,
+        1,
+        1
+      ]
     },
     {
       "n": 3,
@@ -460,7 +466,17 @@
           "root_lcm": 20
         }
       ],
-      "delta_physical_period": 80
+      "delta_physical_period": 80,
+      "impulse_one_lap_deck_bits": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
     },
     {
       "n": 5,
@@ -493,7 +509,19 @@
           "root_lcm": 164
         }
       ],
-      "delta_physical_period": 328
+      "delta_physical_period": 328,
+      "impulse_one_lap_deck_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "n": 6,
@@ -556,7 +584,23 @@
           "root_lcm": 1460
         }
       ],
-      "delta_physical_period": 2920
+      "delta_physical_period": 2920,
+      "impulse_one_lap_deck_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "n": 8,
@@ -600,7 +644,25 @@
           "root_lcm": 20
         }
       ],
-      "delta_physical_period": 240
+      "delta_physical_period": 240,
+      "impulse_one_lap_deck_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "n": 9,
@@ -710,6 +772,31 @@
           ],
           "root_lcm": 242
         }
+      ],
+      "delta_physical_period": 1936,
+      "impulse_one_lap_deck_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
       ]
     },
     {

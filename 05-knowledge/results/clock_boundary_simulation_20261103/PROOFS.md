@@ -200,12 +200,36 @@ exactly
     2 * 3^(L-1) * (1+2+2) = 10*3^(L-1)                (10)
 
 distinct physical histories. There are6 histories at L=1 and2*9^m at
-L=2m. Consequently **exactly2m queries are necessary and sufficient in the
-worst case**, even for this six-valued physical reader, to recover the
+L=2m. Consequently **exactly2m consecutive round-boundary queries are
+necessary and sufficient in the worst case**, even for this six-valued
+physical reader, to recover the
 logical state and observed deck bit. At L=2m-1 the two unresolved values
 in a carry-pair give distinct logical sources with identical histories.
 This is specific to the inherited four-layer lift and the fixed a_0 port,
-not a lower bound for all possible controllers or probes.
+not a lower bound for all possible controllers, probes, or adaptively
+spaced query times.
+
+### One-lap physical obstruction is a boundary winding parity
+
+For any logical orbit of period p, at any width, put
+
+    W_j(i)=sum_(t=0)^(p-1) sigma(y_i(t+j)-y_i(t)),  j=1,2.
+
+These are integer multiples of3. Summing (9) telescopes the last two
+terms, so the a_i deck change is W_2(i)/3 mod2. The single b_i update in
+each round has increment sigma(y_i(t+2)-y_i(t+1)); its deck change is
+W_1(i)/3 mod2. Thus the full one-lap deck vector is known from these two
+boundary winding parities at each site, without reconstructing all the
+intermediate tournament flips. The physical period is p iff every entry
+is zero, and2p otherwise.
+
+There is a still smaller parity test: W_j(i)/3 mod2 is the parity of the
+number of t for which the unordered pair {y_i(t),y_i(t+j)} is {0,1}.
+The closed word's three undirected edge counts have the same parity,
+since each vertex has even total incidence. Their sum has that parity;
+it is also W_j(i) modulo2, equal to W_j(i)/3 modulo2. This is an exact
+necklace-crossing invariant for this physical lift, not a general formula
+for arbitrary gate schedules.
 
 ### Exact remaining ambiguity
 
@@ -276,14 +300,16 @@ deck-parity test; (8) alone does not decide that extra lap.
 |7|2920|2920|
 |8|120|240|
 |9|72|72|
-|11|968|not needed for this table|
+|11|968|1936|
 |16|4920|not needed for this table|
 
 These finite entries have polynomial and independent dense-matrix checks.
 The 5-site clock includes a degree8 factor of root order164, giving
 lcm(8,164)=328. At11 sites the remaining degree20 polynomial splits into
 four degree5 factors, whose combined root order is242; thus the clock is
-lcm(8,242)=968=8*11^2. These are explicit field-order calculations, not
+lcm(8,242)=968=8*11^2. Its impulse has a nonzero winding obstruction,
+so the physical period is1936, unlike the undoubled odd width5. These are
+explicit field-order and boundary-carry calculations, not
 inferences from the numerals5 and11. The 8-site extra factor3 is ramification
 at the critical points of r, not the physical double-cover bit.
 

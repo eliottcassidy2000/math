@@ -21,11 +21,14 @@ realization has order12m and constant full path-cover profile. Our extensions:
   about future observations, not just a counting lower bound.
 - The observed deck bit carries partial information about the next trit.
   An exact three-trit carry formula counts every shorter physical-history
-  class and proves2m is still the sharp worst-case query count.
+  class and proves2m is still the sharp worst-case consecutive-history
+  length. This is not a bound for adaptively spaced probes.
 - The cyclic polynomial `(T^2-T-1)^m-T^m` gives logical periods at every
   width. At the prime-to-three widths divisible by8, its repeated quadratic
   introduces an extra factor3. The physical lift's possible doubling is
-  a separate question. Width11 has logical order968=8*11^2.
+  measured by two boundary winding parities. Width11 has logical
+  order968=8*11^2 and physical impulse period1936, so odd width alone
+  does not prevent doubling.
 - The compatible infinite formal-series limit has no nonzero periodic
   states, despite finite periodic truncations at every level. A scheduled
   single-gate clock also differs from a round clock: the impulse has
