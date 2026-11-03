@@ -27,7 +27,7 @@ If the final reversed edge 15→10 is absent from a Hamilton path of the 15-vert
 
 No such path exists: after 10 is removed, only the edge 8→1 is reversed. To place vertex 9 before terminal vertex 6, a path must descend using 8→1, but 9 cannot occur before 8 in a path with no other descent. Therefore all projections are valid. Conversely, each of the 265 core paths expands uniquely by placing each of 11,12,13,14 either immediately before 15 (after the core prefix) or after the core suffix, in increasing order. Thus there are 2⁴·265 paths using 15→10, and the total is 17·265.
 
-All later selected intervals are separated from this enlarged core and each other, so their Hamilton-path counts multiply. For interval [T_n,T_(n+1)] the difference is n+1, so its factor is 1+2^n. Substituting n=i+2 proves (1).
+If n=4 is selected, all later intervals are separated from the enlarged core [1,15]. If n=4 is absent, every selected interval is separated from the original core [1,10]. In either case the selected intervals are mutually separated, so their Hamilton-path counts multiply. For interval [T_n,T_(n+1)] the difference is n+1, so its factor is 1+2^n. Substituting n=i+2 proves (1).
 
 ## Checks
 
