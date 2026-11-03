@@ -22,7 +22,7 @@ By induction 2<=A(m)<=m+1: the lower bound is immediate; for even 2m, A(2m)<=2m+
 
 The recurrence supplies a bank of O(T) exact integer states through T-2; each state reads only state floor(m/2). Search takes O(T) integer additions/comparisons and O(T) space, with O(T log T) bit complexity using ordinary arithmetic. It gives certificates for nonmembership in the restricted family by listing F(m) over the proven interval. Multiplicative closure via ordinal sums then supplies exact tournament counts from products of bank entries, but generally loses strong connectivity; it does not give additive or exact universal coverage.
 
-Reproduce with `python3 check.py` or `python3 -O check.py`. The script compares the bank to independently counted Hamilton paths using subset/endpoint dynamic programming for every binary word beginning 1 and ending 0 with length 2 through 8; checks the universal recurrence and proven bounds for all m<=100000; and verifies explicit restricted-family absences 13,29,35,41. It reports additional exact counts via products but does not claim completeness for general tournaments.
+Reproduce with `python3 check.py` or `python3 -O check.py`. The script compares the bank to independently counted Hamilton paths using subset/endpoint dynamic programming for every binary word beginning 1 and ending 0 with length 2 through 8; generates the recurrence and checks its proven bounds for all m<=100000; and verifies explicit restricted-family absences 13,29,35,41. It does not claim completeness for general tournaments.
 
 ## A positive-density obstruction for this restricted family
 
