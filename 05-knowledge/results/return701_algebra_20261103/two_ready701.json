@@ -1,0 +1,78 @@
+{
+  "status": "FINITE_EXACT_COMPLETE_TWO_READY_INVERSE_AT701",
+  "parent_order_bound": 11,
+  "parent_H_bound": 351,
+  "grammar_counts": [
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      6,
+      18
+    ],
+    [
+      7,
+      60
+    ],
+    [
+      8,
+      191
+    ],
+    [
+      9,
+      589
+    ],
+    [
+      10,
+      1775
+    ],
+    [
+      11,
+      5257
+    ]
+  ],
+  "hits": [
+    {
+      "rows": [
+        258,
+        4,
+        25,
+        147,
+        227,
+        207,
+        143,
+        7,
+        254
+      ],
+      "root": 8,
+      "parent": [
+        2,
+        4,
+        25,
+        147,
+        227,
+        207,
+        143,
+        7
+      ],
+      "parent_order": 8,
+      "rank": 12,
+      "parent_profile": [
+        83,
+        2,
+        49,
+        620
+      ]
+    }
+  ],
+  "exceptional_hits": []
+}

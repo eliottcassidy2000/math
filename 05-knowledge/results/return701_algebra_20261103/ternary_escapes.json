@@ -1,0 +1,2803 @@
+{
+  "status": "FINITE_EXACT_NATIVE_TERNARY_BRANCHES",
+  "source_rows": [
+    14,
+    12,
+    40,
+    96,
+    47,
+    131,
+    439,
+    31,
+    703,
+    255
+  ],
+  "source_names": [
+    0,
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    13,
+    14
+  ],
+  "root": 8,
+  "spare": 5,
+  "evaluated_birth_masks": 572416,
+  "counts": {
+    "2105": 43,
+    "2103": 38,
+    "2107": 20
+  },
+  "selected": {
+    "2105": {
+      "score": [
+        15954,
+        547,
+        56,
+        1007
+      ],
+      "target": 2105,
+      "path": [
+        2,
+        5,
+        7,
+        4,
+        1,
+        3,
+        6,
+        8,
+        9,
+        0
+      ],
+      "intermediate_H": 547,
+      "birth_mask": 1007,
+      "retained_root_profile": [
+        2105,
+        51,
+        871,
+        18059
+      ],
+      "rows": [
+        1520,
+        2025,
+        2035,
+        2005,
+        834,
+        2008,
+        1792,
+        1872,
+        1536,
+        1025,
+        16
+      ],
+      "source_names": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        13,
+        14,
+        15
+      ],
+      "root": 8,
+      "spare": 5,
+      "root_phases": {
+        "profile": [
+          2105,
+          51,
+          871,
+          18059
+        ],
+        "golden": [
+          2105,
+          1221,
+          1709
+        ],
+        "golden_phase": [
+          5,
+          1,
+          4
+        ],
+        "all_five_Q4_phases": {
+          "q0": [
+            2,
+            3,
+            6
+          ],
+          "q1": [
+            6,
+            1,
+            6
+          ],
+          "q2": [
+            2,
+            2,
+            4
+          ],
+          "q4": [
+            5,
+            0,
+            4
+          ],
+          "q5": [
+            5,
+            5,
+            2
+          ]
+        }
+      },
+      "spare_phases": {
+        "profile": [
+          2105,
+          262,
+          509,
+          3240
+        ],
+        "golden": [
+          2105,
+          5682,
+          5739
+        ],
+        "golden_phase": [
+          1,
+          6,
+          6
+        ],
+        "all_five_Q4_phases": {
+          "q0": [
+            3,
+            5,
+            4
+          ],
+          "q1": [
+            0,
+            3,
+            4
+          ],
+          "q2": [
+            5,
+            4,
+            6
+          ],
+          "q4": [
+            1,
+            6,
+            5
+          ],
+          "q5": [
+            6,
+            4,
+            0
+          ]
+        }
+      }
+    },
+    "2103": {
+      "score": [
+        10065,
+        915,
+        422,
+        383
+      ],
+      "target": 2103,
+      "path": [
+        8,
+        9,
+        7,
+        0,
+        2,
+        5,
+        1,
+        3,
+        6,
+        4
+      ],
+      "intermediate_H": 915,
+      "birth_mask": 383,
+      "retained_root_profile": [
+        2103,
+        60,
+        751,
+        12168
+      ],
+      "rows": [
+        1908,
+        2009,
+        2034,
+        2005,
+        1920,
+        1882,
+        1552,
+        353,
+        1600,
+        128,
+        640
+      ],
+      "source_names": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        13,
+        14,
+        15
+      ],
+      "root": 8,
+      "spare": 5,
+      "root_phases": {
+        "profile": [
+          2103,
+          60,
+          751,
+          12168
+        ],
+        "golden": [
+          2103,
+          2292,
+          2448
+        ],
+        "golden_phase": [
+          2,
+          5,
+          5
+        ],
+        "all_five_Q4_phases": {
+          "q0": [
+            6,
+            3,
+            1
+          ],
+          "q1": [
+            0,
+            6,
+            1
+          ],
+          "q2": [
+            3,
+            1,
+            5
+          ],
+          "q4": [
+            2,
+            5,
+            3
+          ],
+          "q5": [
+            5,
+            1,
+            0
+          ]
+        }
+      },
+      "spare_phases": {
+        "profile": [
+          2103,
+          280,
+          373,
+          2882
+        ],
+        "golden": [
+          2103,
+          6688,
+          6715
+        ],
+        "golden_phase": [
+          0,
+          2,
+          1
+        ],
+        "all_five_Q4_phases": {
+          "q0": [
+            1,
+            4,
+            4
+          ],
+          "q1": [
+            0,
+            3,
+            3
+          ],
+          "q2": [
+            4,
+            1,
+            1
+          ],
+          "q4": [
+            1,
+            1,
+            3
+          ],
+          "q5": [
+            6,
+            0,
+            5
+          ]
+        }
+      }
+    },
+    "2107": {
+      "score": [
+        13383,
+        369,
+        29,
+        318
+      ],
+      "target": 2107,
+      "path": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        7,
+        4,
+        5,
+        0
+      ],
+      "intermediate_H": 369,
+      "birth_mask": 318,
+      "retained_root_profile": [
+        2107,
+        42,
+        537,
+        15490
+      ],
+      "rows": [
+        976,
+        2037,
+        2009,
+        2003,
+        1888,
+        1869,
+        768,
+        368,
+        1536,
+        128,
+        705
+      ],
+      "source_names": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        13,
+        14,
+        15
+      ],
+      "root": 8,
+      "spare": 5,
+      "root_phases": {
+        "profile": [
+          2107,
+          42,
+          537,
+          15490
+        ],
+        "golden": [
+          2107,
+          1213,
+          1557
+        ],
+        "golden_phase": [
+          4,
+          3,
+          4
+        ],
+        "all_five_Q4_phases": {
+          "q0": [
+            0,
+            5,
+            0
+          ],
+          "q1": [
+            1,
+            0,
+            4
+          ],
+          "q2": [
+            6,
+            2,
+            4
+          ],
+          "q4": [
+            0,
+            1,
+            1
+          ],
+          "q5": [
+            4,
+            3,
+            6
+          ]
+        }
+      },
+      "spare_phases": {
+        "profile": [
+          2107,
+          138,
+          207,
+          2946
+        ],
+        "golden": [
+          2107,
+          4065,
+          4113
+        ],
+        "golden_phase": [
+          3,
+          4,
+          3
+        ],
+        "all_five_Q4_phases": {
+          "q0": [
+            0,
+            2,
+            0
+          ],
+          "q1": [
+            6,
+            0,
+            3
+          ],
+          "q2": [
+            1,
+            5,
+            3
+          ],
+          "q4": [
+            0,
+            6,
+            6
+          ],
+          "q5": [
+            3,
+            4,
+            1
+          ]
+        }
+      }
+    }
+  },
+  "all_hits": [
+    {
+      "target": 2105,
+      "path": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        4,
+        5,
+        7
+      ],
+      "intermediate_H": 321,
+      "birth_mask": 231,
+      "retained_root_profile": [
+        2105,
+        32,
+        1227,
+        29342
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        4,
+        5,
+        7
+      ],
+      "intermediate_H": 321,
+      "birth_mask": 238,
+      "retained_root_profile": [
+        2105,
+        32,
+        1231,
+        29302
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        5,
+        7,
+        4
+      ],
+      "intermediate_H": 351,
+      "birth_mask": 164,
+      "retained_root_profile": [
+        2105,
+        23,
+        1109,
+        31429
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        3,
+        6,
+        8,
+        9,
+        4
+      ],
+      "intermediate_H": 333,
+      "birth_mask": 199,
+      "retained_root_profile": [
+        2103,
+        30,
+        1215,
+        29334
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        4,
+        3,
+        6,
+        8,
+        9
+      ],
+      "intermediate_H": 57,
+      "birth_mask": 791,
+      "retained_root_profile": [
+        2103,
+        30,
+        873,
+        23472
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        4,
+        3,
+        6,
+        8,
+        9
+      ],
+      "intermediate_H": 57,
+      "birth_mask": 1011,
+      "retained_root_profile": [
+        2103,
+        32,
+        1071,
+        23832
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        4,
+        3,
+        6,
+        8,
+        9
+      ],
+      "intermediate_H": 57,
+      "birth_mask": 1013,
+      "retained_root_profile": [
+        2103,
+        32,
+        1071,
+        23832
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        4,
+        3,
+        6,
+        8,
+        9
+      ],
+      "intermediate_H": 57,
+      "birth_mask": 1014,
+      "retained_root_profile": [
+        2103,
+        32,
+        1071,
+        23832
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        0,
+        1,
+        3,
+        6,
+        8,
+        9,
+        2,
+        5,
+        7,
+        4
+      ],
+      "intermediate_H": 443,
+      "birth_mask": 518,
+      "retained_root_profile": [
+        2107,
+        13,
+        1059,
+        36729
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        0,
+        1,
+        3,
+        6,
+        8,
+        9,
+        4,
+        2,
+        5,
+        7
+      ],
+      "intermediate_H": 341,
+      "birth_mask": 157,
+      "retained_root_profile": [
+        2107,
+        30,
+        1183,
+        30104
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        0,
+        2,
+        5,
+        1,
+        3,
+        6,
+        8,
+        9,
+        7,
+        4
+      ],
+      "intermediate_H": 321,
+      "birth_mask": 119,
+      "retained_root_profile": [
+        2105,
+        32,
+        1227,
+        29342
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        0,
+        2,
+        5,
+        1,
+        3,
+        6,
+        8,
+        9,
+        7,
+        4
+      ],
+      "intermediate_H": 321,
+      "birth_mask": 126,
+      "retained_root_profile": [
+        2105,
+        32,
+        1231,
+        29302
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        0,
+        2,
+        5,
+        7,
+        3,
+        6,
+        8,
+        9,
+        4,
+        1
+      ],
+      "intermediate_H": 645,
+      "birth_mask": 141,
+      "retained_root_profile": [
+        2103,
+        25,
+        1231,
+        30923
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        0,
+        3,
+        6,
+        8,
+        9,
+        1,
+        2,
+        5,
+        7,
+        4
+      ],
+      "intermediate_H": 443,
+      "birth_mask": 515,
+      "retained_root_profile": [
+        2107,
+        13,
+        1059,
+        36729
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        0,
+        3,
+        6,
+        8,
+        9,
+        4,
+        1,
+        2,
+        5,
+        7
+      ],
+      "intermediate_H": 341,
+      "birth_mask": 158,
+      "retained_root_profile": [
+        2107,
+        30,
+        1183,
+        30104
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        0,
+        3,
+        6,
+        8,
+        9,
+        4,
+        2,
+        5,
+        7,
+        1
+      ],
+      "intermediate_H": 675,
+      "birth_mask": 10,
+      "retained_root_profile": [
+        2105,
+        30,
+        1215,
+        29898
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        0,
+        3,
+        6,
+        8,
+        9,
+        4,
+        5,
+        7,
+        1,
+        2
+      ],
+      "intermediate_H": 701,
+      "birth_mask": 447,
+      "retained_root_profile": [
+        2103,
+        36,
+        701,
+        16644
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        0,
+        3,
+        6,
+        8,
+        9,
+        7,
+        4,
+        2,
+        5,
+        1
+      ],
+      "intermediate_H": 701,
+      "birth_mask": 447,
+      "retained_root_profile": [
+        2103,
+        36,
+        701,
+        16644
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        7,
+        4,
+        5,
+        0
+      ],
+      "intermediate_H": 369,
+      "birth_mask": 318,
+      "retained_root_profile": [
+        2107,
+        42,
+        537,
+        15490
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        1,
+        2,
+        5,
+        0,
+        3,
+        6,
+        8,
+        9,
+        7,
+        4
+      ],
+      "intermediate_H": 249,
+      "birth_mask": 514,
+      "retained_root_profile": [
+        2107,
+        17,
+        1043,
+        33281
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        1,
+        2,
+        5,
+        7,
+        0,
+        3,
+        6,
+        8,
+        9,
+        4
+      ],
+      "intermediate_H": 257,
+      "birth_mask": 118,
+      "retained_root_profile": [
+        2105,
+        22,
+        1191,
+        30744
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        1,
+        2,
+        5,
+        7,
+        3,
+        6,
+        8,
+        9,
+        4,
+        0
+      ],
+      "intermediate_H": 407,
+      "birth_mask": 206,
+      "retained_root_profile": [
+        2103,
+        23,
+        1223,
+        30601
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        1,
+        2,
+        5,
+        7,
+        3,
+        6,
+        8,
+        9,
+        4,
+        0
+      ],
+      "intermediate_H": 407,
+      "birth_mask": 735,
+      "retained_root_profile": [
+        2103,
+        24,
+        1017,
+        29212
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        1,
+        2,
+        5,
+        7,
+        4,
+        3,
+        6,
+        8,
+        9,
+        0
+      ],
+      "intermediate_H": 455,
+      "birth_mask": 551,
+      "retained_root_profile": [
+        2107,
+        14,
+        1059,
+        34516
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        1,
+        2,
+        5,
+        7,
+        4,
+        3,
+        6,
+        8,
+        9,
+        0
+      ],
+      "intermediate_H": 455,
+      "birth_mask": 638,
+      "retained_root_profile": [
+        2103,
+        22,
+        1045,
+        30270
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        1,
+        2,
+        5,
+        7,
+        4,
+        3,
+        6,
+        8,
+        9,
+        0
+      ],
+      "intermediate_H": 455,
+      "birth_mask": 679,
+      "retained_root_profile": [
+        2107,
+        15,
+        1057,
+        33845
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        1,
+        3,
+        6,
+        8,
+        9,
+        0,
+        2,
+        5,
+        7,
+        4
+      ],
+      "intermediate_H": 301,
+      "birth_mask": 366,
+      "retained_root_profile": [
+        2105,
+        26,
+        689,
+        18442
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        1,
+        3,
+        6,
+        8,
+        9,
+        4,
+        0,
+        2,
+        5,
+        7
+      ],
+      "intermediate_H": 277,
+      "birth_mask": 188,
+      "retained_root_profile": [
+        2103,
+        26,
+        1175,
+        30550
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        1,
+        3,
+        6,
+        8,
+        9,
+        4,
+        0,
+        2,
+        5,
+        7
+      ],
+      "intermediate_H": 277,
+      "birth_mask": 230,
+      "retained_root_profile": [
+        2105,
+        25,
+        1225,
+        30665
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        1,
+        3,
+        6,
+        8,
+        9,
+        4,
+        0,
+        2,
+        5,
+        7
+      ],
+      "intermediate_H": 277,
+      "birth_mask": 547,
+      "retained_root_profile": [
+        2103,
+        18,
+        1071,
+        33030
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        1,
+        3,
+        6,
+        8,
+        9,
+        4,
+        2,
+        5,
+        7,
+        0
+      ],
+      "intermediate_H": 435,
+      "birth_mask": 251,
+      "retained_root_profile": [
+        2107,
+        28,
+        1187,
+        29870
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        2,
+        5,
+        0,
+        1,
+        3,
+        6,
+        8,
+        9,
+        7,
+        4
+      ],
+      "intermediate_H": 277,
+      "birth_mask": 93,
+      "retained_root_profile": [
+        2105,
+        25,
+        1225,
+        30665
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        2,
+        5,
+        0,
+        1,
+        3,
+        6,
+        8,
+        9,
+        7,
+        4
+      ],
+      "intermediate_H": 277,
+      "birth_mask": 155,
+      "retained_root_profile": [
+        2103,
+        26,
+        1175,
+        30550
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        2,
+        5,
+        0,
+        1,
+        3,
+        6,
+        8,
+        9,
+        7,
+        4
+      ],
+      "intermediate_H": 277,
+      "birth_mask": 549,
+      "retained_root_profile": [
+        2103,
+        18,
+        1071,
+        33030
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        2,
+        5,
+        7,
+        0,
+        3,
+        6,
+        8,
+        9,
+        4,
+        1
+      ],
+      "intermediate_H": 529,
+      "birth_mask": 134,
+      "retained_root_profile": [
+        2103,
+        28,
+        1229,
+        30736
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        2,
+        5,
+        7,
+        0,
+        3,
+        6,
+        8,
+        9,
+        4,
+        1
+      ],
+      "intermediate_H": 529,
+      "birth_mask": 135,
+      "retained_root_profile": [
+        2103,
+        28,
+        1229,
+        30736
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        2,
+        5,
+        7,
+        3,
+        6,
+        8,
+        9,
+        4,
+        0,
+        1
+      ],
+      "intermediate_H": 507,
+      "birth_mask": 53,
+      "retained_root_profile": [
+        2103,
+        26,
+        1183,
+        31286
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        2,
+        5,
+        7,
+        3,
+        6,
+        8,
+        9,
+        4,
+        0,
+        1
+      ],
+      "intermediate_H": 507,
+      "birth_mask": 895,
+      "retained_root_profile": [
+        2107,
+        45,
+        897,
+        18567
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        2,
+        5,
+        7,
+        4,
+        1,
+        3,
+        6,
+        8,
+        9,
+        0
+      ],
+      "intermediate_H": 547,
+      "birth_mask": 1007,
+      "retained_root_profile": [
+        2105,
+        51,
+        871,
+        18059
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        2,
+        5,
+        7,
+        4,
+        3,
+        6,
+        8,
+        9,
+        0,
+        1
+      ],
+      "intermediate_H": 663,
+      "birth_mask": 60,
+      "retained_root_profile": [
+        2105,
+        26,
+        1149,
+        30858
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        3,
+        6,
+        8,
+        9,
+        1,
+        2,
+        5,
+        7,
+        4,
+        0
+      ],
+      "intermediate_H": 705,
+      "birth_mask": 701,
+      "retained_root_profile": [
+        2103,
+        24,
+        1065,
+        30980
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        3,
+        6,
+        8,
+        9,
+        5,
+        7,
+        4,
+        0,
+        1,
+        2
+      ],
+      "intermediate_H": 587,
+      "birth_mask": 702,
+      "retained_root_profile": [
+        2103,
+        21,
+        1039,
+        31957
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        3,
+        6,
+        8,
+        9,
+        7,
+        4,
+        0,
+        1,
+        2,
+        5
+      ],
+      "intermediate_H": 509,
+      "birth_mask": 138,
+      "retained_root_profile": [
+        2105,
+        32,
+        1191,
+        29244
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        3,
+        6,
+        8,
+        9,
+        7,
+        4,
+        1,
+        2,
+        5,
+        0
+      ],
+      "intermediate_H": 453,
+      "birth_mask": 253,
+      "retained_root_profile": [
+        2103,
+        29,
+        1191,
+        30121
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        4,
+        0,
+        3,
+        6,
+        8,
+        9,
+        1,
+        2,
+        5,
+        7
+      ],
+      "intermediate_H": 713,
+      "birth_mask": 37,
+      "retained_root_profile": [
+        2105,
+        23,
+        1109,
+        31429
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        4,
+        1,
+        3,
+        6,
+        8,
+        9,
+        0,
+        2,
+        5,
+        7
+      ],
+      "intermediate_H": 605,
+      "birth_mask": 895,
+      "retained_root_profile": [
+        2103,
+        40,
+        819,
+        18386
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        4,
+        3,
+        6,
+        8,
+        9,
+        7,
+        1,
+        2,
+        5,
+        0
+      ],
+      "intermediate_H": 657,
+      "birth_mask": 15,
+      "retained_root_profile": [
+        2105,
+        30,
+        1239,
+        30378
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        4,
+        3,
+        6,
+        8,
+        9,
+        7,
+        1,
+        2,
+        5,
+        0
+      ],
+      "intermediate_H": 657,
+      "birth_mask": 39,
+      "retained_root_profile": [
+        2107,
+        25,
+        1249,
+        31739
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        4,
+        3,
+        6,
+        8,
+        9,
+        7,
+        1,
+        2,
+        5,
+        0
+      ],
+      "intermediate_H": 657,
+      "birth_mask": 55,
+      "retained_root_profile": [
+        2107,
+        25,
+        1249,
+        31739
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        4,
+        3,
+        6,
+        8,
+        9,
+        7,
+        2,
+        5,
+        0,
+        1
+      ],
+      "intermediate_H": 807,
+      "birth_mask": 12,
+      "retained_root_profile": [
+        2105,
+        30,
+        1239,
+        30378
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        4,
+        5,
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        7
+      ],
+      "intermediate_H": 425,
+      "birth_mask": 139,
+      "retained_root_profile": [
+        2105,
+        24,
+        1237,
+        31634
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        4,
+        5,
+        0,
+        1,
+        3,
+        6,
+        8,
+        9,
+        7,
+        2
+      ],
+      "intermediate_H": 759,
+      "birth_mask": 3,
+      "retained_root_profile": [
+        2105,
+        24,
+        1235,
+        31762
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        4,
+        5,
+        7,
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "intermediate_H": 97,
+      "birth_mask": 700,
+      "retained_root_profile": [
+        2105,
+        25,
+        1235,
+        31531
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        4,
+        5,
+        7,
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "intermediate_H": 97,
+      "birth_mask": 1006,
+      "retained_root_profile": [
+        2107,
+        36,
+        1083,
+        22488
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        5,
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        7,
+        4
+      ],
+      "intermediate_H": 341,
+      "birth_mask": 182,
+      "retained_root_profile": [
+        2107,
+        30,
+        1183,
+        30104
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        5,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        7,
+        4,
+        0
+      ],
+      "intermediate_H": 483,
+      "birth_mask": 162,
+      "retained_root_profile": [
+        2105,
+        28,
+        1193,
+        30682
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        5,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        7,
+        4,
+        0
+      ],
+      "intermediate_H": 483,
+      "birth_mask": 164,
+      "retained_root_profile": [
+        2105,
+        28,
+        1193,
+        30682
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        5,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        7,
+        4,
+        0
+      ],
+      "intermediate_H": 483,
+      "birth_mask": 168,
+      "retained_root_profile": [
+        2105,
+        28,
+        1193,
+        30682
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        5,
+        7,
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        4
+      ],
+      "intermediate_H": 333,
+      "birth_mask": 551,
+      "retained_root_profile": [
+        2105,
+        23,
+        1055,
+        30465
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        5,
+        7,
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        4
+      ],
+      "intermediate_H": 333,
+      "birth_mask": 679,
+      "retained_root_profile": [
+        2103,
+        23,
+        1091,
+        30207
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        5,
+        7,
+        0,
+        1,
+        3,
+        6,
+        8,
+        9,
+        4,
+        2
+      ],
+      "intermediate_H": 617,
+      "birth_mask": 575,
+      "retained_root_profile": [
+        2105,
+        23,
+        1055,
+        30465
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        5,
+        7,
+        0,
+        2,
+        3,
+        6,
+        8,
+        9,
+        4,
+        1
+      ],
+      "intermediate_H": 617,
+      "birth_mask": 575,
+      "retained_root_profile": [
+        2105,
+        23,
+        1055,
+        30465
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        5,
+        7,
+        1,
+        3,
+        6,
+        8,
+        9,
+        4,
+        0,
+        2
+      ],
+      "intermediate_H": 645,
+      "birth_mask": 170,
+      "retained_root_profile": [
+        2103,
+        25,
+        1231,
+        30923
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        5,
+        7,
+        2,
+        3,
+        6,
+        8,
+        9,
+        4,
+        0,
+        1
+      ],
+      "intermediate_H": 693,
+      "birth_mask": 687,
+      "retained_root_profile": [
+        2105,
+        26,
+        1085,
+        29392
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        5,
+        7,
+        4,
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "intermediate_H": 57,
+      "birth_mask": 535,
+      "retained_root_profile": [
+        2107,
+        27,
+        1193,
+        31093
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        5,
+        7,
+        4,
+        0,
+        1,
+        3,
+        6,
+        8,
+        9,
+        2
+      ],
+      "intermediate_H": 701,
+      "birth_mask": 447,
+      "retained_root_profile": [
+        2103,
+        33,
+        701,
+        17963
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        5,
+        7,
+        4,
+        0,
+        2,
+        3,
+        6,
+        8,
+        9,
+        1
+      ],
+      "intermediate_H": 701,
+      "birth_mask": 447,
+      "retained_root_profile": [
+        2103,
+        33,
+        701,
+        17963
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        5,
+        7,
+        4,
+        2,
+        3,
+        6,
+        8,
+        9,
+        0,
+        1
+      ],
+      "intermediate_H": 821,
+      "birth_mask": 42,
+      "retained_root_profile": [
+        2103,
+        27,
+        1145,
+        30703
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        6,
+        8,
+        9,
+        4,
+        0,
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "intermediate_H": 977,
+      "birth_mask": 1,
+      "retained_root_profile": [
+        2107,
+        27,
+        1221,
+        29689
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        0,
+        2,
+        3,
+        6,
+        8,
+        9,
+        4,
+        5,
+        1
+      ],
+      "intermediate_H": 749,
+      "birth_mask": 45,
+      "retained_root_profile": [
+        2105,
+        26,
+        1227,
+        31458
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        7,
+        0,
+        3,
+        6,
+        8,
+        9,
+        4,
+        1,
+        2,
+        5
+      ],
+      "intermediate_H": 723,
+      "birth_mask": 63,
+      "retained_root_profile": [
+        2107,
+        30,
+        1183,
+        30104
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        0,
+        3,
+        6,
+        8,
+        9,
+        4,
+        5,
+        1,
+        2
+      ],
+      "intermediate_H": 749,
+      "birth_mask": 43,
+      "retained_root_profile": [
+        2105,
+        26,
+        1227,
+        31458
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        4,
+        5,
+        0
+      ],
+      "intermediate_H": 645,
+      "birth_mask": 45,
+      "retained_root_profile": [
+        2105,
+        26,
+        1227,
+        31458
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        7,
+        1,
+        3,
+        6,
+        8,
+        9,
+        4,
+        2,
+        5,
+        0
+      ],
+      "intermediate_H": 711,
+      "birth_mask": 36,
+      "retained_root_profile": [
+        2103,
+        27,
+        1235,
+        30697
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        1,
+        3,
+        6,
+        8,
+        9,
+        4,
+        5,
+        0,
+        2
+      ],
+      "intermediate_H": 791,
+      "birth_mask": 40,
+      "retained_root_profile": [
+        2105,
+        26,
+        1227,
+        31458
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        2,
+        5,
+        0,
+        3,
+        6,
+        8,
+        9,
+        4,
+        1
+      ],
+      "intermediate_H": 843,
+      "birth_mask": 128,
+      "retained_root_profile": [
+        2105,
+        24,
+        1239,
+        31824
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        3,
+        6,
+        8,
+        9,
+        4,
+        1,
+        2,
+        5,
+        0
+      ],
+      "intermediate_H": 677,
+      "birth_mask": 16,
+      "retained_root_profile": [
+        2105,
+        25,
+        1217,
+        31855
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        4,
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        5
+      ],
+      "intermediate_H": 697,
+      "birth_mask": 7,
+      "retained_root_profile": [
+        2105,
+        28,
+        1209,
+        30882
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        7,
+        4,
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        5
+      ],
+      "intermediate_H": 697,
+      "birth_mask": 40,
+      "retained_root_profile": [
+        2107,
+        26,
+        1193,
+        31936
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        7,
+        4,
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        5
+      ],
+      "intermediate_H": 697,
+      "birth_mask": 158,
+      "retained_root_profile": [
+        2107,
+        25,
+        1215,
+        31815
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        4,
+        0,
+        2,
+        5,
+        1,
+        3,
+        6,
+        8,
+        9
+      ],
+      "intermediate_H": 97,
+      "birth_mask": 698,
+      "retained_root_profile": [
+        2105,
+        25,
+        1235,
+        31531
+      ]
+    },
+    {
+      "target": 2107,
+      "path": [
+        7,
+        4,
+        0,
+        2,
+        5,
+        1,
+        3,
+        6,
+        8,
+        9
+      ],
+      "intermediate_H": 97,
+      "birth_mask": 894,
+      "retained_root_profile": [
+        2107,
+        36,
+        1083,
+        22488
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        4,
+        1,
+        2,
+        5,
+        0,
+        3,
+        6,
+        8,
+        9
+      ],
+      "intermediate_H": 109,
+      "birth_mask": 607,
+      "retained_root_profile": [
+        2105,
+        27,
+        1271,
+        29291
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        4,
+        1,
+        3,
+        6,
+        8,
+        9,
+        5,
+        0,
+        2
+      ],
+      "intermediate_H": 927,
+      "birth_mask": 1,
+      "retained_root_profile": [
+        2105,
+        25,
+        1181,
+        31807
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        4,
+        2,
+        3,
+        6,
+        8,
+        9,
+        5,
+        0,
+        1
+      ],
+      "intermediate_H": 821,
+      "birth_mask": 13,
+      "retained_root_profile": [
+        2105,
+        26,
+        1213,
+        31982
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        4,
+        2,
+        3,
+        6,
+        8,
+        9,
+        5,
+        0,
+        1
+      ],
+      "intermediate_H": 821,
+      "birth_mask": 15,
+      "retained_root_profile": [
+        2105,
+        26,
+        1213,
+        31982
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        4,
+        2,
+        3,
+        6,
+        8,
+        9,
+        5,
+        0,
+        1
+      ],
+      "intermediate_H": 821,
+      "birth_mask": 63,
+      "retained_root_profile": [
+        2105,
+        23,
+        1167,
+        32361
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        4,
+        2,
+        3,
+        6,
+        8,
+        9,
+        5,
+        0,
+        1
+      ],
+      "intermediate_H": 821,
+      "birth_mask": 143,
+      "retained_root_profile": [
+        2105,
+        26,
+        1213,
+        31982
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        7,
+        4,
+        3,
+        6,
+        8,
+        9,
+        5,
+        0,
+        1,
+        2
+      ],
+      "intermediate_H": 935,
+      "birth_mask": 4,
+      "retained_root_profile": [
+        2105,
+        24,
+        1191,
+        31776
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        7,
+        4,
+        5,
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "intermediate_H": 81,
+      "birth_mask": 637,
+      "retained_root_profile": [
+        2103,
+        22,
+        1301,
+        30748
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        7,
+        4,
+        5,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        0
+      ],
+      "intermediate_H": 705,
+      "birth_mask": 702,
+      "retained_root_profile": [
+        2103,
+        24,
+        1077,
+        31332
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        8,
+        9,
+        4,
+        0,
+        1,
+        2,
+        5,
+        7,
+        3,
+        6
+      ],
+      "intermediate_H": 645,
+      "birth_mask": 142,
+      "retained_root_profile": [
+        2103,
+        50,
+        1231,
+        19452
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        8,
+        9,
+        4,
+        0,
+        2,
+        5,
+        7,
+        1,
+        3,
+        6
+      ],
+      "intermediate_H": 701,
+      "birth_mask": 255,
+      "retained_root_profile": [
+        2103,
+        36,
+        701,
+        16644
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        8,
+        9,
+        4,
+        2,
+        5,
+        7,
+        0,
+        1,
+        3,
+        6
+      ],
+      "intermediate_H": 675,
+      "birth_mask": 9,
+      "retained_root_profile": [
+        2105,
+        60,
+        1215,
+        18784
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        8,
+        9,
+        6,
+        0,
+        1,
+        2,
+        5,
+        7,
+        4,
+        3
+      ],
+      "intermediate_H": 1071,
+      "birth_mask": 191,
+      "retained_root_profile": [
+        2103,
+        32,
+        1071,
+        23832
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        8,
+        9,
+        6,
+        0,
+        1,
+        2,
+        5,
+        7,
+        4,
+        3
+      ],
+      "intermediate_H": 1071,
+      "birth_mask": 447,
+      "retained_root_profile": [
+        2103,
+        64,
+        1071,
+        15684
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        8,
+        9,
+        6,
+        0,
+        1,
+        2,
+        5,
+        7,
+        4,
+        3
+      ],
+      "intermediate_H": 1071,
+      "birth_mask": 959,
+      "retained_root_profile": [
+        2103,
+        64,
+        1071,
+        15684
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        8,
+        9,
+        7,
+        0,
+        2,
+        5,
+        1,
+        3,
+        6,
+        4
+      ],
+      "intermediate_H": 915,
+      "birth_mask": 383,
+      "retained_root_profile": [
+        2103,
+        60,
+        751,
+        12168
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        8,
+        9,
+        7,
+        0,
+        2,
+        5,
+        1,
+        3,
+        6,
+        4
+      ],
+      "intermediate_H": 915,
+      "birth_mask": 895,
+      "retained_root_profile": [
+        2103,
+        60,
+        751,
+        12168
+      ]
+    },
+    {
+      "target": 2105,
+      "path": [
+        8,
+        9,
+        7,
+        4,
+        1,
+        2,
+        5,
+        0,
+        3,
+        6
+      ],
+      "intermediate_H": 693,
+      "birth_mask": 575,
+      "retained_root_profile": [
+        2105,
+        52,
+        1085,
+        20164
+      ]
+    },
+    {
+      "target": 2103,
+      "path": [
+        8,
+        9,
+        7,
+        4,
+        2,
+        5,
+        0,
+        1,
+        3,
+        6
+      ],
+      "intermediate_H": 701,
+      "birth_mask": 255,
+      "retained_root_profile": [
+        2103,
+        36,
+        701,
+        16644
+      ]
+    }
+  ]
+}

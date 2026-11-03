@@ -1,0 +1,47 @@
+{
+  "status": "FINITE_EXACT_INDEPENDENT_CONTROLS",
+  "actual81_27": {
+    "tournaments": [
+      {
+        "flip": false,
+        "group_order": 81,
+        "regular_binary_masks": 1620
+      },
+      {
+        "flip": true,
+        "group_order": 27,
+        "regular_binary_masks": 1728
+      }
+    ],
+    "common_cyclic_triples": 67
+  },
+  "return_profiles": [
+    {
+      "stage": "source",
+      "profile": [
+        701,
+        233,
+        233,
+        701
+      ]
+    },
+    {
+      "stage": "returned",
+      "profile": [
+        701,
+        81,
+        83,
+        703
+      ]
+    },
+    {
+      "stage": "next",
+      "profile": [
+        2107,
+        701,
+        701,
+        2107
+      ]
+    }
+  ]
+}

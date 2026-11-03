@@ -1,0 +1,134 @@
+{
+  "scripts": [
+    {
+      "file": "algebra_exact.py",
+      "sha256": "9d0612556e93361419e07eaa8007ef8de9e17429c30730d038bdb1668e526dfa"
+    },
+    {
+      "file": "clock_split.py",
+      "sha256": "e36b61075127f1fb2522403990a5810b2744982b58c03aa8906b0688e7e9db61"
+    },
+    {
+      "file": "common.py",
+      "sha256": "d47b59335bfe4074791fa6f224d05bdeed0bc6c040345fa2817c7faf7bfe6b39"
+    },
+    {
+      "file": "escape_birth.py",
+      "sha256": "b015a7a5f0e2c195f9f7cf703b97d986aeffe76d07ce3d1397fa3edbba1dae72"
+    },
+    {
+      "file": "escape_probe.py",
+      "sha256": "470f464e883f53e9124c2d786a82e143e413a4a221bdea01a580c80697424944"
+    },
+    {
+      "file": "hilbert_collatz.py",
+      "sha256": "24993169df1d9e10d5574eb28555a178c445619a4c0cd3a471e766f2b7dbbdc9"
+    },
+    {
+      "file": "hostiles.py",
+      "sha256": "cbec75acc18cc8f736b5316a131ea6a4fd33631e446cc225af0e7afb43cb6de9"
+    },
+    {
+      "file": "multiplication.py",
+      "sha256": "ef8d050e68d5d1188a2003e5d245485b689152e70aaf4543d99ceffe521bc637"
+    },
+    {
+      "file": "native_return.py",
+      "sha256": "5ec2468c1bf1b1fa07f1c9433c33837dfca95cbae651acfa3f4f16855f7813f8"
+    },
+    {
+      "file": "radical.py",
+      "sha256": "67e42d04173222c9166e9bb8e2378a74f763ecdad6864c760909f2d7cc104fce"
+    },
+    {
+      "file": "radical_clocks.py",
+      "sha256": "3c97960b52dfe7221675d48a14b891c34cb49a06fe3ccfa8ac020273467c0283"
+    },
+    {
+      "file": "ready701.py",
+      "sha256": "19ddc26a26dc5e727524990729353a936bba7c531b6080913a62beb4fe95b99e"
+    },
+    {
+      "file": "reproduce.py",
+      "sha256": "7698a1e7f2b6bd21e98bbc1132748ed39f35479cc07a917bce2eb8e846f6d63c"
+    },
+    {
+      "file": "semisimple.py",
+      "sha256": "c8b64e4b672205a8b9c0eb4e9ef735d08e5da551bc93b5dd68b0a549716e4c1f"
+    },
+    {
+      "file": "target_match.py",
+      "sha256": "1f334b2d8bcfe69c8c80b06f548318f9dbdbcdbd1ec2eca6a6304be5cd4c6405"
+    },
+    {
+      "file": "ternary_escapes.py",
+      "sha256": "2bf1f2c5c1046660490ecee58ea038dcf926dc57b6a641cc27b46a6bfe481042"
+    },
+    {
+      "file": "two_ready701.py",
+      "sha256": "7551c3941f29ff2701b19c6fe5bfb4cdcf6b35242cbf41166f8b105a1827e762"
+    }
+  ],
+  "receipts": [
+    {
+      "file": "algebra_exact.json",
+      "sha256": "57b2c33d738fc70a1a17bf2d30913229aa388d3ece5e5c5f7003aa30a8e774fe"
+    },
+    {
+      "file": "radical.json",
+      "sha256": "991184c55143e3b1a9c093851a210fd888b993d6d8c4802f879f0e721aaa05cc"
+    },
+    {
+      "file": "semisimple.json",
+      "sha256": "140cb8b1f8941bb81efed5473382652e19203827d243fde2358363fdb66434b4"
+    },
+    {
+      "file": "multiplication.json",
+      "sha256": "667057a085a5c1395893f3b46975a736c1b1f192d634e8a83a34dd09614103c5"
+    },
+    {
+      "file": "radical_clocks.json",
+      "sha256": "9dd0a5cb3c4623f8823021435ebd6c7b6ff46b3af1cb2395b5d8fe654c1aee4f"
+    },
+    {
+      "file": "clock_split.json",
+      "sha256": "3ff03e7c7186f5bde78d89c2b8ea0a800887a9edd83fd042c7e40ab21335fdb3"
+    },
+    {
+      "file": "ready701.json",
+      "sha256": "3f3ea1e6174f65c5525e883afbd901143746e758e7b1692dad1b34b4aa4bc960"
+    },
+    {
+      "file": "two_ready701.json",
+      "sha256": "28d607ce8060eba6eb2b80b33fdfdbb770eedd5d14bc678882f970d1ad1ad0b1"
+    },
+    {
+      "file": "escape_probe.json",
+      "sha256": "6230e78d9b14c2321a8c22b286a9f296613ccd83bc3239e0afea7562676dd5b0"
+    },
+    {
+      "file": "escape_birth.json",
+      "sha256": "891e682c617d67feae4b376129531cd2ec2adeb54e641a9af2adb4a896709dd0"
+    },
+    {
+      "file": "ternary_escapes.json",
+      "sha256": "c354c577ea00be850a9ccd76f4cb489e88bb4ba3959bdc24234c72a7fe52c22b"
+    },
+    {
+      "file": "target_match.json",
+      "sha256": "f16d021cb08b22b39e7dcf72a88f8824b49c908c19ad5bb4b2523ab14f7e5263"
+    },
+    {
+      "file": "native_return.json",
+      "sha256": "3731ae37ed9080c78916ca1affddbe01acd7f600d6797f93bd4162ddd11b7460"
+    },
+    {
+      "file": "hilbert_collatz.json",
+      "sha256": "488ff193f286b72ab10f20342f2f18272da405a4475aea9be52ca298a73852d9"
+    },
+    {
+      "file": "hostiles.json",
+      "sha256": "6b9ea5e4ead7a7d17f4e73967bce3b34b66a6e45b15bf00cd1de16496e0772ae"
+    }
+  ]
+}

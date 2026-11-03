@@ -1,0 +1,44 @@
+{
+  "status": "FINITE_EXACT_COMPLETE_ONE_READY_INVERSE_AT701",
+  "parent_order_bound": 11,
+  "parent_H_bound": 351,
+  "grammar_counts": [
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      6,
+      21
+    ],
+    [
+      7,
+      55
+    ],
+    [
+      8,
+      144
+    ],
+    [
+      9,
+      377
+    ],
+    [
+      10,
+      987
+    ],
+    [
+      11,
+      2584
+    ]
+  ],
+  "hits": []
+}

@@ -1,0 +1,22 @@
+{
+  "status": "EXACT_FORMAL_TENSOR_CLOCK",
+  "modulus": 13,
+  "quadratic_matrix": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      5
+    ]
+  ],
+  "quadratic_order": 12,
+  "unipotent_order": 13,
+  "tensor_dimension": 54,
+  "tensor_order": 156,
+  "sample12_order": 13,
+  "sample13_order": 12,
+  "primitive_trace_determinant": 29,
+  "scope": "formal joint linear module; not a native tournament attachment or a Collatz transition"
+}
