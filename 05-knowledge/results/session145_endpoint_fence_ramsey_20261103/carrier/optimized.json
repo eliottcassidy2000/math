@@ -1,0 +1,163 @@
+{
+  "checks": 598066,
+  "counts": [
+    {
+      "forests": 1,
+      "n": 0,
+      "new_coordinates": 1,
+      "old_class_size_histogram": {
+        "1": 1
+      },
+      "old_coordinates": 1
+    },
+    {
+      "forests": 1,
+      "n": 1,
+      "new_coordinates": 1,
+      "old_class_size_histogram": {
+        "1": 1
+      },
+      "old_coordinates": 1
+    },
+    {
+      "forests": 2,
+      "n": 2,
+      "new_coordinates": 2,
+      "old_class_size_histogram": {
+        "1": 2
+      },
+      "old_coordinates": 2
+    },
+    {
+      "forests": 7,
+      "n": 3,
+      "new_coordinates": 7,
+      "old_class_size_histogram": {
+        "1": 7
+      },
+      "old_coordinates": 7
+    },
+    {
+      "forests": 34,
+      "n": 4,
+      "new_coordinates": 28,
+      "old_class_size_histogram": {
+        "1": 28
+      },
+      "old_coordinates": 28
+    },
+    {
+      "forests": 206,
+      "n": 5,
+      "new_coordinates": 126,
+      "old_class_size_histogram": {
+        "1": 126
+      },
+      "old_coordinates": 126
+    },
+    {
+      "forests": 1486,
+      "n": 6,
+      "new_coordinates": 571,
+      "old_class_size_histogram": {
+        "1": 481,
+        "2": 90
+      },
+      "old_coordinates": 661
+    }
+  ],
+  "dimension_counts_through_12": [
+    {
+      "b": 1,
+      "c": 1,
+      "n": 0
+    },
+    {
+      "b": 1,
+      "c": 1,
+      "n": 1
+    },
+    {
+      "b": 2,
+      "c": 2,
+      "n": 2
+    },
+    {
+      "b": 7,
+      "c": 7,
+      "n": 3
+    },
+    {
+      "b": 28,
+      "c": 28,
+      "n": 4
+    },
+    {
+      "b": 126,
+      "c": 126,
+      "n": 5
+    },
+    {
+      "b": 661,
+      "c": 571,
+      "n": 6
+    },
+    {
+      "b": 3928,
+      "c": 2668,
+      "n": 7
+    },
+    {
+      "b": 25628,
+      "c": 13028,
+      "n": 8
+    },
+    {
+      "b": 181828,
+      "c": 65908,
+      "n": 9
+    },
+    {
+      "b": 1396261,
+      "c": 347626,
+      "n": 10
+    },
+    {
+      "b": 11517606,
+      "c": 1902231,
+      "n": 11
+    },
+    {
+      "b": 101321320,
+      "c": 10777900,
+      "n": 12
+    }
+  ],
+  "exhaustive_exterior_congruence_cases": 18376,
+  "first_collision": {
+    "law_weights": [
+      "1/32768",
+      "1/65536",
+      "3/65536"
+    ],
+    "masks": [
+      10376,
+      5392
+    ],
+    "old_coordinate_expectations": [
+      "1/64",
+      "-1/64"
+    ]
+  },
+  "full_hamilton_coefficients_checked": 33867,
+  "maximum_new_vertices_for_separator": 4,
+  "scope": "Coordinate count and closed upper bound only; no all-order minimum rank claimed.",
+  "separator_mechanisms": {
+    "degree": 170092,
+    "matching": 768,
+    "parity": 150
+  },
+  "separator_pairs": 171010,
+  "status": "PASS",
+  "universe": "all labelled old graph edge sets through n=6; all Hamilton word coefficient expansions through n=6; all distinct signature pairs through n=6; all exterior subsets with two new vertices through old n=4"
+}

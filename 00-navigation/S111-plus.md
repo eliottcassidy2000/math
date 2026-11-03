@@ -75,3 +75,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session143](S143.md): complete degree3 magic classification, explicit cyclic/octonion/puzzle maps, and the sharp index11 polynomial-calculus boundary; magic-square-of-squares remains OPEN.
 
 [Session144](S144.md): Jacobian degree/fiber/gauge classifications and boundary corrections; audited ETH interfaces; MRB filter/finite-part/precision theorems. Full map classification and MRB arithmetic remain open.
+
+[Session145](S145.md): Pooled interior-parity attachment carrier and exact six-vertex minimum 571 (570 normalized); higher-order linear minimality remains open.

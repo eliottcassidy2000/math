@@ -1,0 +1,15 @@
+{
+  "source_commit": "7b76044ca13e6684d1746923285b83dbf83828d2",
+  "sources": [
+    {
+      "local": "sources/FOREST_RESPONSE_RECURRENCE.md.txt",
+      "repository_path": "05-knowledge/results/primegame_port_spectrum_20261103/FOREST_RESPONSE_RECURRENCE.md",
+      "sha256": "0bb6a6b0624495b9ccc4123a2db544f2764f92c01138c4b0b241d6ef2ad73b0b"
+    },
+    {
+      "local": "sources/GROWTH_FAITHFULNESS.md.txt",
+      "repository_path": "05-knowledge/results/primegame_port_spectrum_20261103/GROWTH_FAITHFULNESS.md",
+      "sha256": "22c8093fbb11523e112f22183f1cd8d4cc8845ca5f98e67683cd4c3e3174d71c"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "source_contexts_sha256": "19f3e917d64e15d6cc79d15bf11d5f1fa3d3cac78215096226715cb21636987f",
+  "n": 6,
+  "coordinates": 571,
+  "queries": 571,
+  "new_vertex_range": [
+    0,
+    12
+  ],
+  "exterior_edge_range": [
+    0,
+    16
+  ],
+  "ranks": [
+    {
+      "prime": 101,
+      "rank": 571,
+      "determinant": 40,
+      "remove_last_rank": 570,
+      "replace_last_by_first_rank": 570
+    },
+    {
+      "prime": 103,
+      "rank": 571,
+      "determinant": 84,
+      "remove_last_rank": 570,
+      "replace_last_by_first_rank": 570
+    }
+  ],
+  "formula_controls": "all Hamilton permutations and all edge monomials N1..5",
+  "checks": 1680
+}

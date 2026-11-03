@@ -1,0 +1,27 @@
+{
+  "orders": [
+    0,
+    12
+  ],
+  "counts": [
+    1,
+    1,
+    2,
+    7,
+    28,
+    126,
+    571,
+    2668,
+    13028,
+    65908,
+    347626,
+    1902231,
+    10777900
+  ],
+  "formula": "exp(x+x^2/2) sum_{h,j>=0} x^(3h+2j)/(2^h h! (h+2j)!) - exp(x)(cosh(x)-1)",
+  "checks": 14,
+  "missing_boundary_hostile": {
+    "without_subtraction_c2": 3,
+    "actual_c2": 2
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "source_commit": "7b76044ca13e6684d1746923285b83dbf83828d2",
+  "checks": 142618,
+  "census": [
+    {
+      "n": 0,
+      "edge_subsets": 1,
+      "forests": 1,
+      "endpoint_vertex_blocks": 1,
+      "boundary_parity_blocks": 1,
+      "old_coordinates_per_new": {
+        "1": 1
+      }
+    },
+    {
+      "n": 1,
+      "edge_subsets": 1,
+      "forests": 1,
+      "endpoint_vertex_blocks": 1,
+      "boundary_parity_blocks": 1,
+      "old_coordinates_per_new": {
+        "1": 1
+      }
+    },
+    {
+      "n": 2,
+      "edge_subsets": 2,
+      "forests": 2,
+      "endpoint_vertex_blocks": 2,
+      "boundary_parity_blocks": 2,
+      "old_coordinates_per_new": {
+        "1": 2
+      }
+    },
+    {
+      "n": 3,
+      "edge_subsets": 8,
+      "forests": 7,
+      "endpoint_vertex_blocks": 7,
+      "boundary_parity_blocks": 7,
+      "old_coordinates_per_new": {
+        "1": 7
+      }
+    },
+    {
+      "n": 4,
+      "edge_subsets": 64,
+      "forests": 34,
+      "endpoint_vertex_blocks": 28,
+      "boundary_parity_blocks": 28,
+      "old_coordinates_per_new": {
+        "1": 28
+      }
+    },
+    {
+      "n": 5,
+      "edge_subsets": 1024,
+      "forests": 206,
+      "endpoint_vertex_blocks": 126,
+      "boundary_parity_blocks": 126,
+      "old_coordinates_per_new": {
+        "1": 126
+      }
+    },
+    {
+      "n": 6,
+      "edge_subsets": 32768,
+      "forests": 1486,
+      "endpoint_vertex_blocks": 661,
+      "boundary_parity_blocks": 571,
+      "old_coordinates_per_new": {
+        "1": 481,
+        "2": 90
+      }
+    }
+  ],
+  "closures": [
+    {
+      "old_n": 2,
+      "cuts": 4,
+      "basis_pullbacks": 28
+    },
+    {
+      "old_n": 3,
+      "cuts": 8,
+      "basis_pullbacks": 224
+    },
+    {
+      "old_n": 4,
+      "cuts": 16,
+      "basis_pullbacks": 2016
+    },
+    {
+      "old_n": 5,
+      "cuts": 32,
+      "basis_pullbacks": 18272
+    }
+  ],
+  "b_sequence": [
+    1,
+    1,
+    2,
+    7,
+    28,
+    126,
+    661,
+    3928,
+    25628,
+    181828,
+    1396261,
+    11517606,
+    101321320
+  ],
+  "c_sequence": [
+    1,
+    1,
+    2,
+    7,
+    28,
+    126,
+    571,
+    2668,
+    13028,
+    65908,
+    347626,
+    1902231,
+    10777900
+  ],
+  "hostile": {
+    "n": 6,
+    "edge_order": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "masks": [
+      10376,
+      5392
+    ],
+    "old_signatures": [
+      [
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          0,
+          1
+        ],
+        [
+          [
+            2,
+            3,
+            5
+          ],
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          [
+            0,
+            1,
+            5
+          ],
+          0,
+          1
+        ],
+        [
+          [
+            2,
+            3,
+            4
+          ],
+          2,
+          3
+        ]
+      ]
+    ],
+    "new_signature": [
+      [],
+      [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          1
+        ]
+      ]
+    ],
+    "canonical_signs": [
+      1,
+      1
+    ]
+  }
+}
