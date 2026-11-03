@@ -145,9 +145,29 @@ def main():
         c=formulas['3'][0];j=n-c['m'];mult=comb(j+c['k'],c['k'])
         need(mult*(c['root_orbits']+j)==(n-2)**2,'rooted triangle family')
         need(mult*(c['pair_orbits']+2*j+j*(j-1))==(n-2)*((n-3)*(n-2)+2),'two-port triangle family')
+    # Independently rebuild the incoming one-apex family at small orders.
+    family=[]
+    for n in range(1,5):
+        N=2*n+2;a=[0]*N
+        for i in range(1,N):
+            for j in range(i+1,N):a[i]|=1<<j
+        for j in range(1,N):
+            if j==1 or (j-1)%2==1:a[0]|=1<<j
+            else:a[j]|=1
+        expected=(10*4**n+6*n-1)//9
+        need(hp(a)==expected and len(scc(a))==1,'incoming actual one-apex family')
+        family.append({'n':n,'order':N,'H':expected,'rows':a})
+    value=5;seen=set();hits={}
+    for n in range(1,14701):
+        need(value==((10*pow(4,n,44100)+6*n-1)//9)%4900,'modular recurrence')
+        seen.add(value)
+        if value in (7,21) and value not in hits:hits[value]=n
+        value=(4*value+1-2*n)%4900
+    need(seen==set(range(1,4900,2)) and hits=={21:1075,7:2634},'49/100 residue countercontrols')
     output={'status':'PASS','independent_literal_classes':checked,'basis_counts':dict(sorted(Counter(r['n'] for r in basis).items())),
             'inherited_basis':'exact graph-set equality after canonicalization','strong_atoms':atoms,'minimal_obstructions':basis,
-            'core_formulas':formulas,'controls':['all vertex deletions','ordered triangle chain','nonminimal singleton padding','C3 one-port versus two-port orbit distinction']}
+            'core_formulas':formulas,'incoming_one_apex_controls':family,'modular_4900_first_hits':hits,
+            'controls':['all vertex deletions','ordered triangle chain','nonminimal singleton padding','C3 one-port versus two-port orbit distinction','all odd residues modulo4900 do occur although exact7/21 do not']}
     (HERE/'audit.json').write_text(json.dumps(output,indent=2)+'\n',encoding='utf8')
     print(f'PASS: {checked} literal classes; 56 exact inherited obstructions; all-order marked core formulas')
 if __name__=='__main__':main()

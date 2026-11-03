@@ -2045,10 +2045,73 @@
     ],
     "21": []
   },
+  "incoming_one_apex_controls": [
+    {
+      "n": 1,
+      "order": 4,
+      "H": 5,
+      "rows": [
+        6,
+        12,
+        8,
+        1
+      ]
+    },
+    {
+      "n": 2,
+      "order": 6,
+      "H": 19,
+      "rows": [
+        22,
+        60,
+        56,
+        49,
+        32,
+        1
+      ]
+    },
+    {
+      "n": 3,
+      "order": 8,
+      "H": 73,
+      "rows": [
+        86,
+        252,
+        248,
+        241,
+        224,
+        193,
+        128,
+        1
+      ]
+    },
+    {
+      "n": 4,
+      "order": 10,
+      "H": 287,
+      "rows": [
+        342,
+        1020,
+        1016,
+        1009,
+        992,
+        961,
+        896,
+        769,
+        512,
+        1
+      ]
+    }
+  ],
+  "modular_4900_first_hits": {
+    "21": 1075,
+    "7": 2634
+  },
   "controls": [
     "all vertex deletions",
     "ordered triangle chain",
     "nonminimal singleton padding",
-    "C3 one-port versus two-port orbit distinction"
+    "C3 one-port versus two-port orbit distinction",
+    "all odd residues modulo4900 do occur although exact7/21 do not"
   ]
 }

@@ -20,6 +20,9 @@ selector is used to generate the finite exclusion certificate.
   Their orders are6,7,8,9 with multiplicities29,13,13,1. This is recertification.
 - A [marked core-counting refinement](PORTS.md) retains one-port and joint
   two-port orbits and gives exact rational series throughout H<=21.
+- [Concurrent-work reconciliation](INCOMING.md) distinguishes the smaller
+  Busch-based certificate and explains why fixed scalar congruences cannot
+  prove the gaps; actual one-apex controls pass both mod49 and mod100.
 
 Reproduce from the repository root:
 

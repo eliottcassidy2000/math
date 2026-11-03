@@ -6,7 +6,10 @@
     "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/spectrum/basis21.json": "90bb8490dc2fb933a63878bcebec327f53125120470b5fa9e162adfd89c7bf1d",
     "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/spectrum/OBSTRUCTION_PROOF.md": "e56a78deede068c1dbcfaf9743359994509ed8b16c64fc97405fa7a8ab0ef53c",
     "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md": "40d8b722dc71233a2e6ab31f224cb5de20db56463be568148c865b438f16cdfe",
-    "05-knowledge/results/session153_gadgets_20261103/species/SPECIES_TROPICAL.md": "b8a0193bc8114626b0bbd67b844fe119e3e0ccfa845f23004bf00009f61f07e8"
+    "05-knowledge/results/session153_gadgets_20261103/species/SPECIES_TROPICAL.md": "b8a0193bc8114626b0bbd67b844fe119e3e0ccfa845f23004bf00009f61f07e8",
+    "05-knowledge/results/session157_gaps_20261103/gaps/gaps-note.md": "c420741d6cae920f5eb8b3e14ecdfd2b721c7ae1dc90ec9bdd80d647a12ec639",
+    "05-knowledge/results/session157_gaps_20261103/cycles/README.md": "84b9f245dc27fbd8a537f6ed4604a7aeb76bbdff471cacdaa58ee7197ad5eda7",
+    "05-knowledge/results/session157_gaps_20261103/prime_power/NOTE.md": "0274561dbd60331a06d12060f434c0d78946e22d4eb77a9d837215fe68984a3d"
   },
   "primary_pages_checked": {
     "Moon1966": {
@@ -26,5 +29,6 @@
       "role": "April 27 2026 version, Remark 1.1.11: known exclusions and unresolved higher range"
     }
   },
-  "checked_date": "2026-11-03"
+  "checked_date": "2026-11-03",
+  "incoming_commit": "63488fcae6"
 }
