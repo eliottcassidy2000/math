@@ -96,7 +96,7 @@ There is also a positive concrete complement description of S_G:
 
 Given an X-cover, append a in slot i and prepend b in slot j. Every pair is valid except i=j with that old slot empty. The excluded pairs are exactly the distinguished-empty-slot model for d_G. Thus (11) is a split inclusion of actual permutation modules, not a subtraction-based existence claim.
 
-Equations (6), (8)–(11) give one constructive category of slot modules covering ordinal composition, strong triangle resets, physical moving guards and forgetting the guard. They do not make arbitrary representation triples realizable as tournaments.
+Equations (6), (8)–(11) give one constructive category of slot modules covering ordinal composition, strong triangle resets, physical moving guards and forgetting the guard. More formally, take ordinary and guarded tournaments as two groupoids, with graph isomorphisms as arrows and guard-preserving isomorphisms in the pointed type. The slot-cover assignment is functorial, and the stated insertion and splitting maps commute with these arrows. This is a representation-valued model of the literal typed construction grammar. It does not make arbitrary representation triples realizable as tournaments.
 
 ## 3. A nonnegative Young-lattice engine
 
