@@ -1,0 +1,73 @@
+{
+  "cancellation_controls": [
+    {
+      "random_physical_starts": 4,
+      "width": 1
+    },
+    {
+      "random_physical_starts": 4,
+      "width": 3
+    },
+    {
+      "random_physical_starts": 4,
+      "width": 9
+    },
+    {
+      "random_physical_starts": 4,
+      "width": 27
+    },
+    {
+      "random_physical_starts": 4,
+      "width": 81
+    },
+    {
+      "random_physical_starts": 4,
+      "width": 243
+    }
+  ],
+  "hamilton_counts": [
+    29,
+    29,
+    29,
+    29,
+    29,
+    29
+  ],
+  "literal_arc_sequence": [
+    [
+      3,
+      5
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "logical_first_returns": {
+    "1": 8,
+    "2": 8,
+    "3": 24,
+    "4": 40,
+    "5": 328,
+    "7": 2920,
+    "9": 72,
+    "27": 216,
+    "81": 648
+  }
+}
