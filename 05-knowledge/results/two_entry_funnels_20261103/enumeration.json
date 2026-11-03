@@ -1,0 +1,286 @@
+{
+  "core_subset_inventories": [
+    {
+      "B": {
+        "0": 1,
+        "1": 1
+      },
+      "H": 1,
+      "automorphisms": 1,
+      "n": 1,
+      "subset_orbits": 2
+    },
+    {
+      "B": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      },
+      "H": 3,
+      "automorphisms": 3,
+      "n": 3,
+      "subset_orbits": 4
+    },
+    {
+      "B": {
+        "0": 1,
+        "1": 3,
+        "2": 4,
+        "3": 4,
+        "4": 3,
+        "5": 1
+      },
+      "H": 5,
+      "automorphisms": 1,
+      "n": 4,
+      "subset_orbits": 16
+    },
+    {
+      "B": {
+        "0": 1,
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 6,
+        "5": 6,
+        "6": 3,
+        "7": 3,
+        "8": 3,
+        "9": 1
+      },
+      "H": 9,
+      "automorphisms": 1,
+      "n": 5,
+      "subset_orbits": 32
+    },
+    {
+      "B": {
+        "0": 1,
+        "1": 3,
+        "2": 4,
+        "3": 4,
+        "4": 4,
+        "5": 4,
+        "6": 4,
+        "7": 4,
+        "8": 3,
+        "9": 1
+      },
+      "H": 9,
+      "automorphisms": 1,
+      "n": 5,
+      "subset_orbits": 32
+    },
+    {
+      "B": {
+        "0": 1,
+        "2": 3,
+        "3": 1,
+        "4": 4,
+        "5": 3,
+        "6": 4,
+        "7": 4,
+        "8": 3,
+        "9": 4,
+        "10": 1,
+        "11": 3,
+        "13": 1
+      },
+      "H": 13,
+      "automorphisms": 1,
+      "n": 5,
+      "subset_orbits": 32
+    },
+    {
+      "B": {
+        "0": 1,
+        "1": 2,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 4,
+        "6": 4,
+        "7": 4,
+        "8": 3,
+        "9": 2,
+        "10": 2,
+        "11": 1
+      },
+      "H": 11,
+      "automorphisms": 1,
+      "n": 5,
+      "subset_orbits": 32
+    },
+    {
+      "B": {
+        "0": 1,
+        "3": 3,
+        "6": 4,
+        "9": 4,
+        "12": 3,
+        "15": 1
+      },
+      "H": 15,
+      "automorphisms": 3,
+      "n": 5,
+      "subset_orbits": 16
+    },
+    {
+      "B": {
+        "0": 1,
+        "3": 1,
+        "6": 2,
+        "9": 2,
+        "12": 1,
+        "15": 1
+      },
+      "H": 15,
+      "automorphisms": 5,
+      "n": 5,
+      "subset_orbits": 8
+    }
+  ],
+  "fixed_spine_fibres": [
+    {
+      "fixed_spine_charts": 1,
+      "n": 1,
+      "ordinary_classes": 1
+    },
+    {
+      "fixed_spine_charts": 1,
+      "n": 2,
+      "ordinary_classes": 1
+    },
+    {
+      "fixed_spine_charts": 2,
+      "n": 3,
+      "ordinary_classes": 2
+    },
+    {
+      "fixed_spine_charts": 8,
+      "n": 4,
+      "ordinary_classes": 4
+    },
+    {
+      "fixed_spine_charts": 64,
+      "n": 5,
+      "ordinary_classes": 12
+    }
+  ],
+  "ordinary_classes": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12
+  ],
+  "rooted_classes_through_six": [
+    0,
+    1,
+    2,
+    4,
+    12,
+    48,
+    296
+  ],
+  "status": "PASS",
+  "strong_start_budgets": [
+    {
+      "classes": 1,
+      "n": 3,
+      "start_paths": 1
+    },
+    {
+      "classes": 3,
+      "n": 4,
+      "start_paths": 1
+    },
+    {
+      "classes": 1,
+      "n": 4,
+      "start_paths": 2
+    },
+    {
+      "classes": 8,
+      "n": 5,
+      "start_paths": 1
+    },
+    {
+      "classes": 5,
+      "n": 5,
+      "start_paths": 2
+    },
+    {
+      "classes": 8,
+      "n": 5,
+      "start_paths": 3
+    },
+    {
+      "classes": 3,
+      "n": 5,
+      "start_paths": 4
+    },
+    {
+      "classes": 21,
+      "n": 6,
+      "start_paths": 1
+    },
+    {
+      "classes": 18,
+      "n": 6,
+      "start_paths": 2
+    },
+    {
+      "classes": 31,
+      "n": 6,
+      "start_paths": 3
+    },
+    {
+      "classes": 21,
+      "n": 6,
+      "start_paths": 4
+    },
+    {
+      "classes": 33,
+      "n": 6,
+      "start_paths": 5
+    },
+    {
+      "classes": 21,
+      "n": 6,
+      "start_paths": 6
+    },
+    {
+      "classes": 15,
+      "n": 6,
+      "start_paths": 7
+    },
+    {
+      "classes": 12,
+      "n": 6,
+      "start_paths": 8
+    },
+    {
+      "classes": 12,
+      "n": 6,
+      "start_paths": 9
+    },
+    {
+      "classes": 3,
+      "n": 6,
+      "start_paths": 10
+    },
+    {
+      "classes": 3,
+      "n": 6,
+      "start_paths": 11
+    },
+    {
+      "classes": 4,
+      "n": 6,
+      "start_paths": 12
+    }
+  ]
+}

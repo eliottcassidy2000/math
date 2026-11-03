@@ -1,0 +1,56 @@
+{
+  "checks": {
+    "boundary.py": {
+      "normal_optimized_identical": true,
+      "output": "boundary.json",
+      "output_sha256": "fd0e9a9c06d8a2c392450358e4ff361e26920feba6b6d4d056252e2585aaee6a"
+    },
+    "carrier.py": {
+      "normal_optimized_identical": true,
+      "output": "carrier.json",
+      "output_sha256": "3cc977b1d8d783d596e497e839abfcde2de9e144efa40e0e3199899c70352ac9"
+    },
+    "enumeration.py": {
+      "normal_optimized_identical": true,
+      "output": "enumeration.json",
+      "output_sha256": "921385966ba92c2bced268bef3972c8091a54d283f37edb6fd88c83ca890f79a"
+    },
+    "research.py": {
+      "normal_optimized_identical": true,
+      "output": "research.out",
+      "output_sha256": "b544b4584bc72a8b6755ec20bcede20870295f1d78442963ae768a678e8d191c"
+    },
+    "template_search.json": {
+      "output_sha256": "97c324f7e708a66f29800229e248dd7aeaa695506d01fa7f70dcd02525b92b9e"
+    },
+    "verify.py": {
+      "normal_optimized_identical": true,
+      "output": "verification.json",
+      "output_sha256": "4387b9d443754bd71724d706619cca8b9eef18df34a5ac3932d21d885b174153"
+    }
+  },
+  "hash_convention": "SHA256 after CRLF-to-LF normalization",
+  "inherited_hashes": {
+    "adaptive_metagraph_reformulation_20261103/metagraph_probe.py": "75266c143e3c4fbbadd5202984ec5cd6a0b7b9310a37850ff04fb6e92585ed84",
+    "golden_inverse_defects_20261103/inverse.py": "6d168811df51cc876283973587251361ad957144665f01d11ea2091f6c7b9feb",
+    "golden_seam_recurrence_20261103/atom_atlas.json": "b7f7715f5e6577c056da67ea2752f4643bd4ae16a8ef06707c2286032b434eba",
+    "polarized_path_calculus_20261103/explore.py": "343b6168f5116275538a87959e6a0949ad8518aaede6d5a5952479069255bbb4",
+    "polarized_path_calculus_20261103/recognize.py": "967693a89ed94465be01753b8b0b2e9c20e67bbcd5257200d224c39527b2fc85",
+    "source_selection_closure_20261103/graded_carrier.py": "312e82d56d36fed9d717a656721a17a3039d3245ab10f6bae926fcee5700639b"
+  },
+  "local_hashes": {
+    "AUDIT.md": "a5f13dfb589c89c20f31282fd26440e3904361b79d8a5cfcf8c3eb7182258c6b",
+    "README.md": "2edcc73428e17da37314298a72b48c52e9353d9b8edc4291c55eb14f2009021c",
+    "READY.md": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c",
+    "TILINGS.md": "d06963e5cdce4e4e056f38db5194f138fd5ce70eeaa0be72aff547148ce7d81f",
+    "TRANSPORT.md": "8ee3708fe971e2e2e649fab17ed6dce3b98a841df5194ba8f892c8e8b32f7210",
+    "TWO_ENTRY.md": "31c18d359d4f56c5778492ccdb4435793d117890d8318138b727b8816e8e4c93",
+    "boundary.py": "f1737e3df65aa722a6410ba6cefd7aa1c49dbaa3ce276fc92b68119cabf0acfe",
+    "carrier.py": "b64813435c45418e8d2173d8cdc19678715bf338b8c2242495b49020692157bb",
+    "enumeration.py": "30c56c7719c3a4d78e2936f01f0d6b2eb766a367350b6542162f820f63e9a446",
+    "replay.py": "81772fd37ea925a0e12805198f3b20bd401475ef7ea5114814ab51a12743a06b",
+    "research.py": "75e0188ab2763faa84637c8ed07a05a0978e9034b3fc3a91de1661162cb6a387",
+    "verify.py": "7f982b5173292ec904d99bc75f074cd66ee885674bda361c0142aed8f9a30de1"
+  },
+  "status": "PASS"
+}
