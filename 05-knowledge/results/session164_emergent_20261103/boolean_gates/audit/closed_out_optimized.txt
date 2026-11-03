@@ -1,0 +1,7 @@
+All six collapsed-run word lists independently verified
+Exact wrapper observer: all 75 labeled nonempty Y through order four PASS
+Two literal closed operations: (0, 0) observer (112977, 56448, 56529) PASS
+Two literal closed operations: (0, 1) observer (134499, 67200, 67299) PASS
+Two literal closed operations: (1, 0) observer (134499, 67200, 67299) PASS
+Two literal closed operations: (1, 1) observer (160121, 80000, 80121) PASS
+PASS: exact wrapper compression and closed operations

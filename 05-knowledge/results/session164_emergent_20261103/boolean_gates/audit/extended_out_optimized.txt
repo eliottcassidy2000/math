@@ -1,0 +1,8 @@
+Independent C/D transfer cases, strong n=3..5: 814
+Independent protected-pair bilinear cases: 40 with five lattice points each
+Independent named family: seed 17 all 0<=k,l<=3 PASS
+Independent named family: seed 31 all 0<=k,l<=3 PASS
+Independent full-observer valuation, both wrapper ports: s= 1 PASS
+Independent full-observer valuation, both wrapper ports: s= 2 PASS
+Independent uniform-substitution full observers: all 16 two-gate settings PASS
+PASS: extended independent controls
