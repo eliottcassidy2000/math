@@ -52,7 +52,7 @@ rows and complete subset check are in [ready.json](ready.json). This is a
 finite proof of the five cases after the all-size block reduction.
 Indegree at least three is excluded by the inherited defect inequality.
 
-Consequently **no induced extension of a tournament containing R5 can
+Consequently **no strong induced extension of a tournament containing R5 can
 acquire a ready root at any vertex**, however large or differently marked.
 Both H497 orientations contain R5. Their neutral apex flip exchanges the
 R5 copies rather than removing the obstruction. A change to an old edge

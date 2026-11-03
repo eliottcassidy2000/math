@@ -16,8 +16,8 @@ seek a universal exact-H closed ready bank containing the H11 branches.
 The broader graded joint-defect return language is necessary. A particular
 ready return at H233 is still a valid, narrower constructive test.
 
-Do not repeat the bounded birth search: **every** induced extension of
-H497 fails readiness because it retains R5. A useful next target must
+Do not repeat the bounded birth search: **every strong** induced extension
+of H497 fails readiness because it retains R5. A useful next target must
 change or delete an old incidence, or start in a different core age.
 
 The next decisive source test is the ternary child of the grid source

@@ -25,7 +25,7 @@ compiler, and an all-precision shared clock correction.
 - [RR1--RR6: induced obstruction and ready-source construction](READY_REPAIR.md).
   Minimum Hamilton-start multiplicity is monotone under induced inclusion
   into a strong tournament. It makes regular five an obstruction to all
-  ready-source extensions. Nevertheless each H497 orientation has a minimal
+  strong ready-source extensions. Nevertheless each H497 orientation has a minimal
   one-old-edge repair, using two native moves, producing ready H395 or H311.
   They sit in an infinite two-parameter ready grid with exact H and golden
   formulas. Two ports compile its sources; three named ports support both

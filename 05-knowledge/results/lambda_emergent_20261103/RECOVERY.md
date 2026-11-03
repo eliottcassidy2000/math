@@ -99,3 +99,10 @@ not an identification with the lcm closure or its reflection chambers.
 retain positive path-cover cut deficits. They concern asymptotic slot mass;
 JC1 instead preserves exact small-bin coordinates. An asymptotic simplification
 cannot discard those coordinates before exact future attachment questions.
+
+The final incoming revisione693aef153 applies RR2 to a different actual
+source: the [H65 seed](../triple_reentry_interfaces_20261103/INCOMING.md#5-last-incoming-merge-a-structural-obstruction-at-the-actual65-seed)
+contains R5, ruling out every birth-only repair with a strong ready endpoint.
+The H67 control has no R5 but is still not ready. Thus the induced obstruction
+transfers to another construction, while its absence is not a certificate.
+The strong ambient scope is explicit in our consequence and handoff as well.
