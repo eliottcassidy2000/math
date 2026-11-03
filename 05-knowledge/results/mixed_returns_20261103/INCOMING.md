@@ -50,3 +50,24 @@ different family, not our integral return lattice.
 No incoming claim is needed for the cone, determinant or carry proofs in this
 packet. The new integration supplies positive controls and a better next
 search language, without weakening the existing stopping reason.
+
+## Later incoming projective classification
+
+Commit `ebdd5e4325` arrived during publication. Its
+[eight-macro projective decoder](../spectrum31_return_20261103/PROJECTIVE.md)
+proves disjoint ratio images on [1,2], reconstructs every source word on
+the supplied seed ray, and classifies its exact ternary edges. It independently
+rules out iteration of the95/97 companions inside that infinite family.
+This is **CITED**, not an independently rerun certificate here. Our786-block
+interval union need not have disjoint images and is not claimed to decode
+words; our expansion/determinant argument instead excludes finite exact
+seed cycles without restricting all seed bulks to one ray. Neither statement
+replaces the other's hypotheses.
+
+That packet's [joint F7 action monoid](../spectrum31_return_20261103/TRANSPORT.md)
+retains the F49 field state and transverse F7 charge. It is a different
+representation from our48-element GL2(F3) action on normalized bulk phase.
+The cardinalities are not interchangeable carrier sizes. Its
+[two-live-port branch failures](../spectrum31_return_20261103/LIVE_FIBRES.md)
+also reinforce the next obligation: a new source selector must certify both
+successor branches, not just scalar coverage or one successful return.
