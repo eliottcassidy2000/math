@@ -1,0 +1,862 @@
+{
+  "scope": "exact finite controls; uniform claims have proofs in PROOFS.md",
+  "selector_bank": [
+    {
+      "cut": 2,
+      "counts": [
+        109,
+        115,
+        101,
+        77,
+        73,
+        81
+      ]
+    },
+    {
+      "cut": 4,
+      "counts": [
+        77,
+        73,
+        81,
+        109,
+        115,
+        101
+      ]
+    },
+    {
+      "cut": 9,
+      "counts": [
+        83,
+        71,
+        75,
+        81,
+        93,
+        91
+      ]
+    },
+    {
+      "cut": 10,
+      "counts": [
+        127,
+        117,
+        101,
+        81,
+        93,
+        103
+      ]
+    },
+    {
+      "cut": 13,
+      "counts": [
+        95,
+        77,
+        83,
+        111,
+        135,
+        123
+      ]
+    },
+    {
+      "cut": 27,
+      "counts": [
+        127,
+        103,
+        93,
+        81,
+        101,
+        117
+      ]
+    },
+    {
+      "cut": 28,
+      "counts": [
+        111,
+        83,
+        77,
+        95,
+        123,
+        135
+      ]
+    },
+    {
+      "cut": 31,
+      "counts": [
+        109,
+        81,
+        73,
+        77,
+        101,
+        115
+      ]
+    },
+    {
+      "cut": 35,
+      "counts": [
+        95,
+        123,
+        135,
+        111,
+        83,
+        77
+      ]
+    },
+    {
+      "cut": 36,
+      "counts": [
+        81,
+        93,
+        103,
+        127,
+        117,
+        101
+      ]
+    },
+    {
+      "cut": 43,
+      "counts": [
+        83,
+        91,
+        93,
+        81,
+        75,
+        71
+      ]
+    },
+    {
+      "cut": 48,
+      "counts": [
+        81,
+        93,
+        91,
+        83,
+        71,
+        75
+      ]
+    },
+    {
+      "cut": 50,
+      "counts": [
+        111,
+        135,
+        123,
+        95,
+        77,
+        83
+      ]
+    },
+    {
+      "cut": 53,
+      "counts": [
+        81,
+        101,
+        117,
+        127,
+        103,
+        93
+      ]
+    },
+    {
+      "cut": 55,
+      "counts": [
+        77,
+        101,
+        115,
+        109,
+        81,
+        73
+      ]
+    },
+    {
+      "cut": 60,
+      "counts": [
+        81,
+        75,
+        71,
+        83,
+        91,
+        93
+      ]
+    }
+  ],
+  "strata": [
+    {
+      "n": 1,
+      "depth_states": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          8,
+          8
+        ]
+      ],
+      "logical_cycles": {
+        "1": 1,
+        "8": 1
+      },
+      "physical_cycles": {
+        "1": 4,
+        "8": 4
+      }
+    },
+    {
+      "n": 3,
+      "depth_states": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          8,
+          8
+        ],
+        [
+          2,
+          24,
+          72
+        ],
+        [
+          3,
+          24,
+          648
+        ]
+      ],
+      "logical_cycles": {
+        "1": 1,
+        "8": 1,
+        "24": 30
+      },
+      "physical_cycles": {
+        "1": 64,
+        "8": 64,
+        "24": 1920
+      }
+    }
+  ],
+  "large_basis_clocks": [
+    {
+      "n": 9,
+      "logical_period": 72,
+      "physical_period": 72
+    },
+    {
+      "n": 27,
+      "logical_period": 216,
+      "physical_period": 216
+    },
+    {
+      "n": 81,
+      "logical_period": 648,
+      "physical_period": 648
+    }
+  ],
+  "boundary_observability": [
+    {
+      "n": 1,
+      "rank": 2,
+      "one_fewer_rank": 1
+    },
+    {
+      "n": 2,
+      "rank": 4,
+      "one_fewer_rank": 3
+    },
+    {
+      "n": 3,
+      "rank": 6,
+      "one_fewer_rank": 5
+    },
+    {
+      "n": 4,
+      "rank": 8,
+      "one_fewer_rank": 7
+    },
+    {
+      "n": 5,
+      "rank": 10,
+      "one_fewer_rank": 9
+    },
+    {
+      "n": 6,
+      "rank": 12,
+      "one_fewer_rank": 11
+    },
+    {
+      "n": 7,
+      "rank": 14,
+      "one_fewer_rank": 13
+    },
+    {
+      "n": 8,
+      "rank": 16,
+      "one_fewer_rank": 15
+    },
+    {
+      "n": 9,
+      "rank": 18,
+      "one_fewer_rank": 17
+    },
+    {
+      "n": 10,
+      "rank": 20,
+      "one_fewer_rank": 19
+    },
+    {
+      "n": 11,
+      "rank": 22,
+      "one_fewer_rank": 21
+    },
+    {
+      "n": 12,
+      "rank": 24,
+      "one_fewer_rank": 23
+    },
+    {
+      "n": 13,
+      "rank": 26,
+      "one_fewer_rank": 25
+    },
+    {
+      "n": 14,
+      "rank": 28,
+      "one_fewer_rank": 27
+    },
+    {
+      "n": 15,
+      "rank": 30,
+      "one_fewer_rank": 29
+    },
+    {
+      "n": 16,
+      "rank": 32,
+      "one_fewer_rank": 31
+    },
+    {
+      "n": 17,
+      "rank": 34,
+      "one_fewer_rank": 33
+    },
+    {
+      "n": 18,
+      "rank": 36,
+      "one_fewer_rank": 35
+    },
+    {
+      "n": 19,
+      "rank": 38,
+      "one_fewer_rank": 37
+    },
+    {
+      "n": 20,
+      "rank": 40,
+      "one_fewer_rank": 39
+    },
+    {
+      "n": 27,
+      "rank": 54,
+      "one_fewer_rank": 53
+    }
+  ],
+  "arbitrary_widths": [
+    {
+      "n": 1,
+      "order": 8,
+      "prime_to_3_part": 8,
+      "ramification": false,
+      "groups": [
+        {
+          "irreducible_degree": 2,
+          "polynomial": [
+            2,
+            1,
+            1
+          ],
+          "root_lcm": 8
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "order": 8,
+      "prime_to_3_part": 8,
+      "ramification": false,
+      "groups": [
+        {
+          "irreducible_degree": 1,
+          "polynomial": [
+            2,
+            0,
+            1
+          ],
+          "root_lcm": 2
+        },
+        {
+          "irreducible_degree": 2,
+          "polynomial": [
+            2,
+            1,
+            1
+          ],
+          "root_lcm": 8
+        }
+      ],
+      "delta_physical_period": 16
+    },
+    {
+      "n": 3,
+      "order": 24,
+      "prime_to_3_part": 8,
+      "ramification": false,
+      "groups": [
+        {
+          "irreducible_degree": 2,
+          "polynomial": [
+            2,
+            1,
+            1
+          ],
+          "root_lcm": 8
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "order": 40,
+      "prime_to_3_part": 40,
+      "ramification": false,
+      "groups": [
+        {
+          "irreducible_degree": 1,
+          "polynomial": [
+            2,
+            0,
+            1
+          ],
+          "root_lcm": 2
+        },
+        {
+          "irreducible_degree": 2,
+          "polynomial": [
+            2,
+            1,
+            1
+          ],
+          "root_lcm": 8
+        },
+        {
+          "irreducible_degree": 4,
+          "polynomial": [
+            1,
+            2,
+            0,
+            1,
+            1
+          ],
+          "root_lcm": 20
+        }
+      ],
+      "delta_physical_period": 80
+    },
+    {
+      "n": 5,
+      "order": 328,
+      "prime_to_3_part": 328,
+      "ramification": false,
+      "groups": [
+        {
+          "irreducible_degree": 2,
+          "polynomial": [
+            2,
+            1,
+            1
+          ],
+          "root_lcm": 8
+        },
+        {
+          "irreducible_degree": 8,
+          "polynomial": [
+            1,
+            0,
+            0,
+            2,
+            2,
+            1,
+            0,
+            0,
+            1
+          ],
+          "root_lcm": 164
+        }
+      ],
+      "delta_physical_period": 328
+    },
+    {
+      "n": 6,
+      "order": 24,
+      "prime_to_3_part": 8,
+      "ramification": false,
+      "groups": [
+        {
+          "irreducible_degree": 1,
+          "polynomial": [
+            2,
+            0,
+            1
+          ],
+          "root_lcm": 2
+        },
+        {
+          "irreducible_degree": 2,
+          "polynomial": [
+            2,
+            1,
+            1
+          ],
+          "root_lcm": 8
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "order": 2920,
+      "prime_to_3_part": 2920,
+      "ramification": false,
+      "groups": [
+        {
+          "irreducible_degree": 2,
+          "polynomial": [
+            2,
+            1,
+            1
+          ],
+          "root_lcm": 8
+        },
+        {
+          "irreducible_degree": 12,
+          "polynomial": [
+            1,
+            2,
+            2,
+            0,
+            1,
+            2,
+            2,
+            1,
+            1,
+            0,
+            2,
+            1,
+            1
+          ],
+          "root_lcm": 1460
+        }
+      ],
+      "delta_physical_period": 2920
+    },
+    {
+      "n": 8,
+      "order": 120,
+      "prime_to_3_part": 40,
+      "ramification": true,
+      "groups": [
+        {
+          "irreducible_degree": 1,
+          "polynomial": [
+            2,
+            0,
+            1
+          ],
+          "root_lcm": 2
+        },
+        {
+          "irreducible_degree": 2,
+          "polynomial": [
+            2,
+            1,
+            0,
+            1,
+            1
+          ],
+          "root_lcm": 8
+        },
+        {
+          "irreducible_degree": 4,
+          "polynomial": [
+            1,
+            0,
+            2,
+            0,
+            1,
+            0,
+            2,
+            0,
+            1
+          ],
+          "root_lcm": 20
+        }
+      ],
+      "delta_physical_period": 240
+    },
+    {
+      "n": 9,
+      "order": 72,
+      "prime_to_3_part": 8,
+      "ramification": false,
+      "groups": [
+        {
+          "irreducible_degree": 2,
+          "polynomial": [
+            2,
+            1,
+            1
+          ],
+          "root_lcm": 8
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "order": 328,
+      "prime_to_3_part": 328,
+      "ramification": false,
+      "groups": [
+        {
+          "irreducible_degree": 1,
+          "polynomial": [
+            2,
+            0,
+            1
+          ],
+          "root_lcm": 2
+        },
+        {
+          "irreducible_degree": 2,
+          "polynomial": [
+            2,
+            1,
+            1
+          ],
+          "root_lcm": 8
+        },
+        {
+          "irreducible_degree": 8,
+          "polynomial": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "root_lcm": 164
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "order": 968,
+      "prime_to_3_part": 968,
+      "ramification": false,
+      "groups": [
+        {
+          "irreducible_degree": 2,
+          "polynomial": [
+            2,
+            1,
+            1
+          ],
+          "root_lcm": 8
+        },
+        {
+          "irreducible_degree": 5,
+          "polynomial": [
+            1,
+            0,
+            0,
+            1,
+            2,
+            0,
+            2,
+            2,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1
+          ],
+          "root_lcm": 242
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "order": 120,
+      "prime_to_3_part": 40,
+      "ramification": false,
+      "groups": [
+        {
+          "irreducible_degree": 1,
+          "polynomial": [
+            2,
+            0,
+            1
+          ],
+          "root_lcm": 2
+        },
+        {
+          "irreducible_degree": 2,
+          "polynomial": [
+            2,
+            1,
+            1
+          ],
+          "root_lcm": 8
+        },
+        {
+          "irreducible_degree": 4,
+          "polynomial": [
+            1,
+            2,
+            0,
+            1,
+            1
+          ],
+          "root_lcm": 20
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "order": 4920,
+      "prime_to_3_part": 1640,
+      "ramification": true,
+      "groups": [
+        {
+          "irreducible_degree": 1,
+          "polynomial": [
+            2,
+            0,
+            1
+          ],
+          "root_lcm": 2
+        },
+        {
+          "irreducible_degree": 2,
+          "polynomial": [
+            2,
+            1,
+            0,
+            1,
+            1
+          ],
+          "root_lcm": 8
+        },
+        {
+          "irreducible_degree": 4,
+          "polynomial": [
+            1,
+            0,
+            2,
+            0,
+            1,
+            0,
+            2,
+            0,
+            1
+          ],
+          "root_lcm": 20
+        },
+        {
+          "irreducible_degree": 8,
+          "polynomial": [
+            1,
+            2,
+            2,
+            0,
+            2,
+            1,
+            1,
+            0,
+            2,
+            0,
+            1,
+            2,
+            2,
+            0,
+            2,
+            1,
+            1
+          ],
+          "root_lcm": 164
+        }
+      ]
+    }
+  ],
+  "physical_boundary_histories": [
+    {
+      "n": 1,
+      "histories_by_length": [
+        6,
+        18
+      ]
+    },
+    {
+      "n": 2,
+      "histories_by_length": [
+        6,
+        30,
+        90,
+        162
+      ]
+    },
+    {
+      "n": 3,
+      "histories_by_length": [
+        6,
+        30,
+        90,
+        270,
+        810,
+        1458
+      ]
+    },
+    {
+      "n": 4,
+      "histories_by_length": [
+        6,
+        30,
+        90,
+        270,
+        810,
+        2430,
+        7290,
+        13122
+      ]
+    }
+  ],
+  "remote_deck_hostile": "same a0 forever; different labelled states"
+}

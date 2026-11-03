@@ -4,6 +4,25 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — a sole-in-neighbor birth needs the starting-path correction
+
+**Draft candidate, not a retracted theorem:** for a new vertex w with only
+q pointing into it, the proposed count H(T)+K_q omitted a forbidden initial
+step. Here K_q counts ordered two-path covers, first path nonempty ending
+at q and second possibly empty.
+
+**Minimal witness:** T is a singleton q. H=K_q=1, but q->w has one Hamilton
+path, not two. In the six-state switch's first block the wrong expression
+gives112 instead of109.
+
+**Repair:** paths with w first must start the remaining old path somewhere
+other than q. If s_q counts old Hamilton paths starting at q, the exact
+formula is H(T)-s_q+K_q. The other cases are in bijection with the K_q covers.
+The marked start response is the missing coordinate. See
+[clock-boundary CB2](../05-knowledge/results/clock_boundary_simulation_20261103/PROOFS.md)
+and its separate subset-DP/permutation checks. No profile-only selector or
+unmarked deck-bit recovery follows.
+
 ## 2026-11-03 — a retained vertex is not a retained live port
 
 **Affected:** `05-knowledge/results/lambda_emergent_20261103/PHASE_LEGALIZER.md`,

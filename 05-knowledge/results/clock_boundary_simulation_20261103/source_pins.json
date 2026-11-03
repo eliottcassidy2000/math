@@ -1,0 +1,49 @@
+{
+  "integration_commit": "34815c52f71a9654ec3da21526104a240c9a43f4",
+  "sources": [
+    {
+      "path": "05-knowledge/results/session168_computational_structures_20261103/cellular/NOTE.md",
+      "blob": "b9726313c06bfadaefc1b5dee152a6d324ad1874"
+    },
+    {
+      "path": "05-knowledge/results/session168_computational_structures_20261103/clocks/NOTE.md",
+      "blob": "03c7400fcb288e9950f79829238a70e36f4dc7f5"
+    },
+    {
+      "path": "05-knowledge/results/session167_recurring_structures_20261103/ternary/TERNARY_CONSTRAINTS.md",
+      "blob": "eed245b9867aca095aa8de27b314fc2b9a1747b5"
+    },
+    {
+      "path": "05-knowledge/results/sheet_return_compiler_20261103/JOINT_CLOCK.md",
+      "blob": "a11953a3fd36e5571dc5b73f75f7d56a6cab88ae"
+    },
+    {
+      "path": "05-knowledge/results/sheet_return_compiler_20261103/SHEETS_AND_SINGER.md",
+      "blob": "96a4e15eb94837c542934065ea7076bc796784b8"
+    },
+    {
+      "path": "05-knowledge/results/golden_prime_clocks_20261003.md",
+      "blob": "5caa94260eb3d07189e946ec3bd9ffac9993fee0"
+    },
+    {
+      "path": "05-knowledge/results/session56_rmq_lca_connections_20261025/CONNECTIONS.md",
+      "blob": "c6bc7125ddc3ccb1bdc03b9acb6d0d6cb7ac0de5"
+    },
+    {
+      "path": "01-canon/theorems/THM-2693-odometer-skew-product-three-event-escape-and-uniform-delayed-depth-four-nilpotence.md",
+      "blob": "00b7669c76c23f871852fcfb965e4ed096392bc5"
+    },
+    {
+      "path": "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/twists/RESULT.md",
+      "blob": "39a386a5f27ae3f2a7ee6acd5db804ceba9fd1a3"
+    },
+    {
+      "path": "05-knowledge/results/six_roots_hidden_bits_20261103/NATIVE_BRANCHES.md",
+      "blob": "dd5fd62d7381fdeb9275172f2c87766bdf7d90a7"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/README.md",
+      "blob": "92b7459828e4ae3eb9afc8fc605e0fa46149e0be"
+    }
+  ]
+}

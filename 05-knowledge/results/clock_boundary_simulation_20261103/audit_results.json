@@ -1,0 +1,160 @@
+{
+  "auditor": "same agent; distinct permutation/matrix algorithms; no research imports",
+  "birth_reader_permutation_counts": [
+    109,
+    115,
+    101,
+    77,
+    73,
+    81
+  ],
+  "matrix_orders": [
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      3,
+      24
+    ],
+    [
+      4,
+      40
+    ],
+    [
+      5,
+      328
+    ],
+    [
+      6,
+      24
+    ],
+    [
+      7,
+      2920
+    ],
+    [
+      8,
+      120
+    ],
+    [
+      9,
+      72
+    ],
+    [
+      10,
+      328
+    ],
+    [
+      11,
+      968
+    ],
+    [
+      12,
+      120
+    ],
+    [
+      16,
+      4920
+    ]
+  ],
+  "fixed_space_dimensions": [
+    [
+      1,
+      8,
+      2
+    ],
+    [
+      3,
+      8,
+      2
+    ],
+    [
+      3,
+      24,
+      6
+    ],
+    [
+      9,
+      8,
+      2
+    ],
+    [
+      9,
+      24,
+      6
+    ],
+    [
+      9,
+      72,
+      18
+    ],
+    [
+      27,
+      8,
+      2
+    ],
+    [
+      27,
+      24,
+      6
+    ],
+    [
+      27,
+      72,
+      18
+    ],
+    [
+      27,
+      216,
+      54
+    ]
+  ],
+  "carry_history_census": [
+    {
+      "n": 1,
+      "histories_by_length": [
+        6,
+        18
+      ]
+    },
+    {
+      "n": 2,
+      "histories_by_length": [
+        6,
+        30,
+        90,
+        162
+      ]
+    },
+    {
+      "n": 3,
+      "histories_by_length": [
+        6,
+        30,
+        90,
+        270,
+        810,
+        1458
+      ]
+    },
+    {
+      "n": 4,
+      "histories_by_length": [
+        6,
+        30,
+        90,
+        270,
+        810,
+        2430,
+        7290,
+        13122
+      ]
+    }
+  ],
+  "boundaries": "does not independently reprove the inherited seed cover or gate-lift theorem"
+}
