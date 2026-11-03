@@ -1,0 +1,323 @@
+{
+  "algebra": {
+    "full_octonion_group": 128,
+    "levels": [
+      {
+        "A_order_counts": {
+          "1": 1,
+          "2": 7,
+          "4": 8
+        },
+        "E_order_counts": {
+          "1": 1,
+          "2": 15
+        },
+        "level": 3,
+        "states": 16
+      },
+      {
+        "A_order_counts": {
+          "1": 1,
+          "2": 15,
+          "4": 16
+        },
+        "E_order_counts": {
+          "1": 1,
+          "2": 31
+        },
+        "level": 4,
+        "states": 32
+      },
+      {
+        "A_order_counts": {
+          "1": 1,
+          "2": 31,
+          "4": 32
+        },
+        "E_order_counts": {
+          "1": 1,
+          "2": 63
+        },
+        "level": 5,
+        "states": 64
+      },
+      {
+        "A_order_counts": {
+          "1": 1,
+          "2": 63,
+          "4": 64
+        },
+        "E_order_counts": {
+          "1": 1,
+          "2": 127
+        },
+        "level": 6,
+        "states": 128
+      },
+      {
+        "A_order_counts": {
+          "1": 1,
+          "2": 127,
+          "4": 128
+        },
+        "E_order_counts": {
+          "1": 1,
+          "2": 255
+        },
+        "level": 7,
+        "states": 256
+      }
+    ],
+    "quaternion_group_order": 8
+  },
+  "clock_circuit": {
+    "Hamilton_count": 500246412961,
+    "active_tournaments": 176,
+    "arithmetic_vertices": [
+      20,
+      61,
+      60,
+      21,
+      100,
+      69,
+      52,
+      29,
+      92,
+      77,
+      44,
+      37,
+      84,
+      85,
+      36,
+      45,
+      76,
+      93,
+      28,
+      53,
+      68,
+      101
+    ],
+    "bits": 8,
+    "color_word": "ababcbabcbabcbabcbabcb",
+    "cycle_counts": {
+      "1": 80,
+      "88": 2
+    },
+    "m": 4,
+    "scheduled_controlled_arc_gates": 1074,
+    "tournament_vertices": 48
+  },
+  "converse_extension": {
+    "Q1_edges": 157,
+    "Q1_vertices": 22,
+    "cycle_rank": 136,
+    "extension_degree_over_physical": 8,
+    "extra_basis_edges": [
+      3,
+      5,
+      6
+    ],
+    "negative_loops": 9,
+    "physical_lift_edges": 314,
+    "physical_lift_vertices": 44,
+    "regular_extension_edges": 2512,
+    "regular_extension_vertices": 352,
+    "voltage_pivot_edge": 1
+  },
+  "honeycomb": {
+    "examples": [
+      {
+        "height": 73,
+        "lap_states": [
+          "+e_0",
+          "+e_1",
+          "+e_0"
+        ],
+        "length": 18,
+        "m": 3,
+        "period": 36,
+        "return_multiplier": 2,
+        "winding": [
+          9,
+          -4
+        ]
+      },
+      {
+        "height": 101,
+        "lap_states": [
+          "+e_0",
+          "+e_5",
+          "-e_0",
+          "-e_5",
+          "+e_0"
+        ],
+        "length": 22,
+        "m": 4,
+        "period": 88,
+        "return_multiplier": 4,
+        "winding": [
+          11,
+          -5
+        ]
+      },
+      {
+        "height": 133,
+        "lap_states": [
+          "+e_0",
+          "-e_1",
+          "+e_0"
+        ],
+        "length": 26,
+        "m": 5,
+        "period": 52,
+        "return_multiplier": 2,
+        "winding": [
+          13,
+          -6
+        ]
+      },
+      {
+        "height": 169,
+        "lap_states": [
+          "+e_0",
+          "-e_5",
+          "-e_0",
+          "+e_5",
+          "+e_0"
+        ],
+        "length": 30,
+        "m": 6,
+        "period": 120,
+        "return_multiplier": 4,
+        "winding": [
+          15,
+          -7
+        ]
+      },
+      {
+        "height": 21413,
+        "lap_states": [
+          "+e_0",
+          "+e_5",
+          "-e_0",
+          "-e_5",
+          "+e_0"
+        ],
+        "length": 406,
+        "m": 100,
+        "period": 1624,
+        "return_multiplier": 4,
+        "winding": [
+          203,
+          -101
+        ]
+      }
+    ],
+    "family_members": 98,
+    "honeycomb_edges": 24,
+    "honeycomb_vertices": 16,
+    "unmarked_triangle_control": {
+      "labels": [
+        6,
+        19,
+        30,
+        6,
+        19,
+        30,
+        6
+      ],
+      "layers": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "targets": [
+        25,
+        36,
+        49
+      ]
+    }
+  },
+  "runner_examples": [
+    {
+      "attained_loneliness": "1/4",
+      "lift_return_time": 4,
+      "n": 3
+    },
+    {
+      "attained_loneliness": "1/5",
+      "lift_return_time": 2,
+      "n": 4
+    },
+    {
+      "attained_loneliness": "1/6",
+      "lift_return_time": 4,
+      "n": 5
+    },
+    {
+      "attained_loneliness": "1/7",
+      "lift_return_time": 2,
+      "n": 6
+    },
+    {
+      "attained_loneliness": "1/8",
+      "lift_return_time": 4,
+      "n": 7
+    },
+    {
+      "attained_loneliness": "1/9",
+      "lift_return_time": 2,
+      "n": 8
+    },
+    {
+      "attained_loneliness": "1/10",
+      "lift_return_time": 4,
+      "n": 9
+    },
+    {
+      "attained_loneliness": "1/11",
+      "lift_return_time": 2,
+      "n": 10
+    },
+    {
+      "attained_loneliness": "1/12",
+      "lift_return_time": 4,
+      "n": 11
+    },
+    {
+      "attained_loneliness": "1/13",
+      "lift_return_time": 2,
+      "n": 12
+    }
+  ],
+  "seed_profiles": [
+    {
+      "mask": 153,
+      "profile": [
+        0,
+        29,
+        131,
+        162,
+        77,
+        15,
+        1
+      ]
+    },
+    {
+      "mask": 185,
+      "profile": [
+        0,
+        29,
+        131,
+        162,
+        77,
+        15,
+        1
+      ]
+    }
+  ]
+}
