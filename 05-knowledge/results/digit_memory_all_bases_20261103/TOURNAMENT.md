@@ -6,6 +6,12 @@ by replacing its single feedback vertex with a transitive feedback block.
 It resolves that packet's stated 2-vertex-strong extension and gives every
 vertex-connectivity r. It does not prove an unrestricted spectrum theorem.
 
+**Concurrent recovery:** final fetch `304da36948` brought in the independent
+[S173 construction](../session173_modular_clocks_20261103/spectrum/NOTE.md),
+which proves the same connectivity/profile/read theorem. TM1 is recorded
+as a coincident derivation with a general-r counting formula, not a priority
+claim. TM2–TM3 below add the explicit boundary-factor and interaction bounds.
+
 ## Inherited seed and the extra positive information
 
 Use outgoing-neighbour masks on vertices 0,...,4:
@@ -96,6 +102,11 @@ nonisomorphic even without labels. This uses the whole set C as its canonical
 mark, replacing the incoming packet's single strong articulation vertex.
 
 ## Memory and one-vertex read theorem
+
+Bit recovery here concerns the intact storage tournament. Deleting local
+vertex 0 or 2 from a seed erases its only distinguishing arc; higher vertex
+connectivity by itself does not correct such an erasure. The labelled
+arc-distance code and vertex-deletion connectivity are separate guarantees.
 
 All W_(h,r) have the same complete path-cover profile, by the substitution
 lemma and equality of the two seed profiles. On the fixed vertex labels,

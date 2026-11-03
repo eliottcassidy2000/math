@@ -5,7 +5,8 @@
 and saved receipts. Proof review and separate implementations were performed
 by the same agent; no independent human or subagent review is claimed.
 
-The main new tournament result extends the incoming S172 memory carrier:
+The connectivity result extends S172 and agrees with independently arriving
+[S173 work](../session173_modular_clocks_20261103/spectrum/NOTE.md):
 for every r>=1 and M>=2 ceil((r+1)/5), there are 2^M pairwise nonisomorphic
 tournaments on 5M+r vertices, of vertex-connectivity exactly r, all having
 the same complete path-cover profile. A fixed one-vertex attachment reads
@@ -13,6 +14,12 @@ any addressed bit. A transitive feedback block replaces the previous single
 articulation vertex. The read survives because its two seed profiles differ
 coefficientwise by 2z+14z²+12z³+2z⁴. This is an all-size proof, not an
 extrapolation from the literal r<=4 checks.
+
+That overlap was discovered during the final clean fetch and is credited
+in CONNECTIONS.md. TM2–TM3 add the sharp boundary budgets and coupled
+prime reader. Connectivity survives vertex deletions as stated; recovery
+of all stored bits is guaranteed for the intact labelled or unlabelled
+carrier, not after arbitrary vertex erasures.
 
 The arithmetic results identify precisely when compression is safe:
 

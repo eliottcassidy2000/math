@@ -56,6 +56,46 @@ deriving TM1 and before writing the Collatz theorems:
 
 ## Older recovery and the exact boundary of each analogy
 
+### Final clean-pull integration
+
+The close-out pull reached `304da36948`, after the local proof checkpoint.
+All directly relevant new mathematical notes were read:
+
+* [S173 spectral storage](../session173_modular_clocks_20261103/spectrum/NOTE.md)
+  independently obtains TM1's transitive-feedback construction, identical
+  query profiles, the twelve-vertex H=152757 example, and its read gap60882.
+  This is a coincident derivation, not an additional novelty claim. Our
+  general-r Stirling formula and three cyclic one-run skeletons sharpen
+  its displayed lower read-gap bound from 2*9^(M-1) to 6*9^(M-1). Its
+  vertex-erasure warning is explicitly retained. TM2–TM3 go further by
+  proving sharp boundary-factor and hidden-bit interaction budgets.
+* [S172 square-sum response](../session172_memory_dynamics_20261103/squares/NOTE.md)
+  proves quadratic one-vertex response in the **attachment-incidence**
+  variables for undirected graphs. TM3 is instead a bound in the **stored
+  module bits**, assuming common module profiles. The common deletion/run
+  mechanism explains the connection, while the variables and quantifiers
+  differ. Its two-step hostile (0 versus48 paths) remains a direct warning
+  against treating a one-step response record as continuation-closed.
+* [Return6325 observer completion](../return6325_observer_20261103/PROOFS.md)
+  gives an exact query-menu set-cover problem, rational ranks1->4->10 for
+  H-only versus4->14->27 with four retained scalar outputs, and a directed
+  quadratic incidence formula. Its [saved actual return](../return6325_observer_20261103/README.md)
+  reaches18979 while preserving the old root and clocks. This supplies a
+  natural future test source for a coupled reader; the rank result alone
+  does not realize any of TM2's induced extensions as native return words.
+* [S173 modular clocks](../session173_modular_clocks_20261103/clocks/PROOF.md)
+  supplies the chosen affine lift 527x+44 modulo72 and an extra switch
+  generating A9 on the mod9 register. The switch breaks congruence modulo3
+  and is not induced by an integer polynomial modulo9. This is an exact
+  example of enlarging the operation language: its larger state action
+  cannot silently be imported as a legal Collatz arithmetic operation.
+
+The results index conflict during rebase was resolved by retaining both
+the incoming6325 entry and this packet's entry; no incoming theorem was
+overwritten or reclassified.
+
+### Earlier mechanisms
+
 * [Decimal carry D1–D5](../digit_cycle_ternary_20261103/DIGITS_AND_TOWERS.md)
   and [September halving decoder](../decoder_halving_20260925.md): the
   decimal append observer is small, but decimal appends plus legal halving
