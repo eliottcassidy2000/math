@@ -1,0 +1,42 @@
+{
+  "files": [
+    {
+      "bytes": 7527,
+      "path": "GROWTH.md",
+      "sha256": "b54951e8f94914edf36796cbea51c26623c0f1d9489047349c1d757503c21edd"
+    },
+    {
+      "bytes": 143,
+      "path": "check.normal.txt",
+      "sha256": "66f85ff27cd68b8ee0b2f2bed8fb597ca2ce569b2af5b626f03a0c0fd81831b5"
+    },
+    {
+      "bytes": 143,
+      "path": "check.optimized.txt",
+      "sha256": "66f85ff27cd68b8ee0b2f2bed8fb597ca2ce569b2af5b626f03a0c0fd81831b5"
+    },
+    {
+      "bytes": 3795,
+      "path": "check_growth.py",
+      "sha256": "c34b166eae2dd049bc6a1ef60587664991f7a889586ca1f43e5e21999971c6d0"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "00-navigation/S148.md",
+    "00-navigation/S111-plus.md"
+  ],
+  "replay": [
+    {
+      "script": "check_growth.py",
+      "stdout_sha256": "66f85ff27cd68b8ee0b2f2bed8fb597ca2ce569b2af5b626f03a0c0fd81831b5"
+    }
+  ],
+  "schema": 1,
+  "scope": "All-order degree thresholds, Pell cancellations, cumulative edge formula and path-cover recursion"
+}

@@ -1,0 +1,1 @@
+PASS degrees/blocks/edge totals n<=10000; first thresholds k<=100; Pell indicators n<=10000; path recurrence n<=18; no assert-dependent checks
