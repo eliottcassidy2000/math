@@ -1,0 +1,729 @@
+{
+  "B_at_1": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "M4_polynomials": [
+    [
+      [
+        2,
+        2,
+        1
+      ],
+      [
+        0,
+        2,
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        0,
+        1,
+        1
+      ]
+    ]
+  ],
+  "M8_polynomials": [
+    [
+      [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        2,
+        0,
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        2,
+        0,
+        0,
+        2,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1
+      ]
+    ]
+  ],
+  "all_trit_permutation_lifts": [
+    {
+      "lift": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "permutation": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "lift": [
+        0,
+        2,
+        1,
+        3,
+        5,
+        4
+      ],
+      "permutation": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "lift": [
+        1,
+        0,
+        2,
+        4,
+        3,
+        5
+      ],
+      "permutation": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "lift": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        0
+      ],
+      "permutation": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "lift": [
+        5,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "permutation": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "lift": [
+        5,
+        1,
+        3,
+        2,
+        4,
+        0
+      ],
+      "permutation": [
+        2,
+        1,
+        0
+      ]
+    }
+  ],
+  "clock_basis_orbits": [
+    {
+      "flip_parities": [
+        0,
+        0
+      ],
+      "literal_flips": 24,
+      "logical_period": 8,
+      "physical_period": 8,
+      "width": 1
+    },
+    {
+      "flip_parities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "literal_flips": 168,
+      "logical_period": 24,
+      "physical_period": 24,
+      "width": 3
+    },
+    {
+      "flip_parities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "literal_flips": 1224,
+      "logical_period": 72,
+      "physical_period": 72,
+      "width": 9
+    },
+    {
+      "flip_parities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "literal_flips": 8568,
+      "logical_period": 216,
+      "physical_period": 216,
+      "width": 27
+    },
+    {
+      "flip_parities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "literal_flips": 60024,
+      "logical_period": 648,
+      "physical_period": 648,
+      "width": 81
+    }
+  ],
+  "covers": [
+    {
+      "N": 1,
+      "edges": 6,
+      "literal_vertices": 6,
+      "logical_vertices": 3,
+      "sheets": 2
+    },
+    {
+      "N": 2,
+      "edges": 72,
+      "literal_vertices": 36,
+      "logical_vertices": 9,
+      "sheets": 4
+    },
+    {
+      "N": 3,
+      "edges": 648,
+      "literal_vertices": 216,
+      "logical_vertices": 27,
+      "sheets": 8
+    }
+  ],
+  "doubled_clock": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "five_layer_compiler": [
+    {
+      "logical_states": 9,
+      "physical_states": 36,
+      "width": 1
+    },
+    {
+      "logical_states": 81,
+      "physical_states": 1296,
+      "width": 2
+    },
+    {
+      "logical_states": 729,
+      "physical_states": null,
+      "width": 3
+    }
+  ],
+  "hostile_corners": [
+    {
+      "mask": 145,
+      "profile": [
+        0,
+        33,
+        135,
+        162,
+        77,
+        15,
+        1
+      ]
+    },
+    {
+      "mask": 8377,
+      "profile": [
+        0,
+        33,
+        135,
+        162,
+        77,
+        15,
+        1
+      ]
+    }
+  ],
+  "off_family_basis_orbits": [
+    {
+      "first_return_deck_bits": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "logical_basis_period": 8,
+      "physical_basis_period": 16,
+      "width": 2
+    },
+    {
+      "first_return_deck_bits": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "logical_basis_period": 40,
+      "physical_basis_period": 80,
+      "width": 4
+    },
+    {
+      "first_return_deck_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "logical_basis_period": 328,
+      "physical_basis_period": 328,
+      "width": 5
+    },
+    {
+      "first_return_deck_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "logical_basis_period": 2920,
+      "physical_basis_period": 2920,
+      "width": 7
+    }
+  ],
+  "seed": [
+    {
+      "canonical_mask": 153,
+      "h": 0,
+      "mask": 153,
+      "neighbors": [
+        1,
+        5
+      ],
+      "profile": [
+        0,
+        29,
+        131,
+        162,
+        77,
+        15,
+        1
+      ]
+    },
+    {
+      "canonical_mask": 177,
+      "h": 1,
+      "mask": 8345,
+      "neighbors": [
+        0,
+        2
+      ],
+      "profile": [
+        0,
+        29,
+        131,
+        162,
+        77,
+        15,
+        1
+      ]
+    },
+    {
+      "canonical_mask": 181,
+      "h": 2,
+      "mask": 8337,
+      "neighbors": [
+        1,
+        3
+      ],
+      "profile": [
+        0,
+        29,
+        131,
+        162,
+        77,
+        15,
+        1
+      ]
+    },
+    {
+      "canonical_mask": 153,
+      "h": 3,
+      "mask": 8369,
+      "neighbors": [
+        2,
+        4
+      ],
+      "profile": [
+        0,
+        29,
+        131,
+        162,
+        77,
+        15,
+        1
+      ]
+    },
+    {
+      "canonical_mask": 177,
+      "h": 4,
+      "mask": 177,
+      "neighbors": [
+        3,
+        5
+      ],
+      "profile": [
+        0,
+        29,
+        131,
+        162,
+        77,
+        15,
+        1
+      ]
+    },
+    {
+      "canonical_mask": 181,
+      "h": 5,
+      "mask": 185,
+      "neighbors": [
+        0,
+        4
+      ],
+      "profile": [
+        0,
+        29,
+        131,
+        162,
+        77,
+        15,
+        1
+      ]
+    }
+  ],
+  "status": "FINITE-EXACT controls; general statements proved in NOTE.md",
+  "whole_state_clock_controls": [
+    {
+      "logical_basepoints": 9,
+      "physical_states_via_deck_equivariance": 36,
+      "rounds": 8,
+      "width": 1
+    },
+    {
+      "logical_basepoints": 729,
+      "physical_states_via_deck_equivariance": 46656,
+      "rounds": 24,
+      "width": 3
+    }
+  ]
+}
