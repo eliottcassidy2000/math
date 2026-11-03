@@ -1,0 +1,134 @@
+{
+  "status": "PASS",
+  "pinned_inputs": 152,
+  "runs": [
+    {
+      "script": "return_census.py",
+      "output": "return_census.json",
+      "sha256_lf": "c59406edeb7d422acde3cb81908f17972008a5766f8d1b92f6427de8c7e8a5aa",
+      "runs": [
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-mixed_returns_20261103\\05-knowledge\\results\\mixed_returns_20261103\\return_census.py"
+          ],
+          "seconds": 5.71,
+          "stdout": "{\"returns\": 785, \"census\": [{\"length\": 1, \"mixed_words\": 24, \"mixed_rows\": 20, \"return_words\": 2}, {\"length\": 2, \"mixed_words\": 227, \"mixed_rows\": 113, \"return_words\": 6}, {\"length\": 3, \"mixed_words\": 1381, \"mixed_rows\": 539, \"return_words\": 16}, {\"length\": 4, \"mixed_words\": 7651, \"mixed_rows\": 2462, \"return_words\": 53}, {\"length\": 5, \"mixed_words\": 35650, \"mixed_rows\": 9570, \"return_words\": 167}, {\"length\": 6, \"mixed_words\": 161538, \"mixed_rows\": 35511, \"return_words\": 541}], \"candidate_count\": 0, \"first_candidates\": [], \"gains\": [-45, -36, -15, -13, -12, -6, -2, -1, 1, 2, 6, 8, 12, 13, 15, 36, 45, 216, 270]}",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "-O",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-mixed_returns_20261103\\05-knowledge\\results\\mixed_returns_20261103\\return_census.py"
+          ],
+          "seconds": 5.666,
+          "stdout": "{\"returns\": 785, \"census\": [{\"length\": 1, \"mixed_words\": 24, \"mixed_rows\": 20, \"return_words\": 2}, {\"length\": 2, \"mixed_words\": 227, \"mixed_rows\": 113, \"return_words\": 6}, {\"length\": 3, \"mixed_words\": 1381, \"mixed_rows\": 539, \"return_words\": 16}, {\"length\": 4, \"mixed_words\": 7651, \"mixed_rows\": 2462, \"return_words\": 53}, {\"length\": 5, \"mixed_words\": 35650, \"mixed_rows\": 9570, \"return_words\": 167}, {\"length\": 6, \"mixed_words\": 161538, \"mixed_rows\": 35511, \"return_words\": 541}], \"candidate_count\": 0, \"first_candidates\": [], \"gains\": [-45, -36, -15, -13, -12, -6, -2, -1, 1, 2, 6, 8, 12, 13, 15, 36, 45, 216, 270]}",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "script": "verify.py",
+      "output": "verification.json",
+      "sha256_lf": "27f96b6e319d252cf020645e9e4500c963e3533ff8f2cbbac98bd5f422cef23e",
+      "runs": [
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-mixed_returns_20261103\\05-knowledge\\results\\mixed_returns_20261103\\verify.py"
+          ],
+          "seconds": 2.431,
+          "stdout": "{\"status\": \"PASS\", \"catalog\": 786, \"intervals\": 25, \"all_seven_excluded\": true, \"joint_clock\": [1680, 840, [9, 849]], \"minimum_growth_margin\": \"5\"}",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "-O",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-mixed_returns_20261103\\05-knowledge\\results\\mixed_returns_20261103\\verify.py"
+          ],
+          "seconds": 2.439,
+          "stdout": "{\"status\": \"PASS\", \"catalog\": 786, \"intervals\": 25, \"all_seven_excluded\": true, \"joint_clock\": [1680, 840, [9, 849]], \"minimum_growth_margin\": \"5\"}",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "script": "carry_complete.py",
+      "output": "carry_complete.json",
+      "sha256_lf": "3422bc2b21d18538b7961c09be66218138e2c6852e0050ae0e3c6f714aece82d",
+      "runs": [
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-mixed_returns_20261103\\05-knowledge\\results\\mixed_returns_20261103\\carry_complete.py"
+          ],
+          "seconds": 0.878,
+          "stdout": "(31, 14, 25) 1 None\n(31, 14, 25) 2 None\n(95, 41, 75) 1 None\n(95, 41, 75) 2 None\n(97, 40, 75) 1 (26, ('b',), (293, 231, 295))\n(97, 40, 75) 2 None\n(287, 206, 239) 1 None\n(287, 206, 239) 2 None\n(289, 191, 239) 1 None\n(289, 191, 239) 2 None\n(293, 210, 281) 1 (15, ('b',), (881, 692, 885))\n(293, 210, 281) 2 None\n(295, 216, 260) 1 None\n(295, 216, 260) 2 None",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "-O",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-mixed_returns_20261103\\05-knowledge\\results\\mixed_returns_20261103\\carry_complete.py"
+          ],
+          "seconds": 0.901,
+          "stdout": "(31, 14, 25) 1 None\n(31, 14, 25) 2 None\n(95, 41, 75) 1 None\n(95, 41, 75) 2 None\n(97, 40, 75) 1 (26, ('b',), (293, 231, 295))\n(97, 40, 75) 2 None\n(287, 206, 239) 1 None\n(287, 206, 239) 2 None\n(289, 191, 239) 1 None\n(289, 191, 239) 2 None\n(293, 210, 281) 1 (15, ('b',), (881, 692, 885))\n(293, 210, 281) 2 None\n(295, 216, 260) 1 None\n(295, 216, 260) 2 None",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "script": "controllers.py",
+      "output": "controllers.json",
+      "sha256_lf": "d6633b1e8c042f15b2a1828c8b4985cbeb88cafe003ed48c6b990eb8d7a8e5b9",
+      "runs": [
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-mixed_returns_20261103\\05-knowledge\\results\\mixed_returns_20261103\\controllers.py"
+          ],
+          "seconds": 8.339,
+          "stdout": "{\"status\": \"PASS\", \"program_moves\": [14, 22, 22], \"program_peaks\": [10, 12, 12], \"family\": [[293, 881], [5223, 15671], [92573, 277721], [1640223, 4920671]], \"hostile\": {\"groups\": [81, 27], \"common_H\": [462915, 462915], \"port8_after_sink\": [2390013, 1754919], \"common_cyclic_triples\": 67}}",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "-O",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-mixed_returns_20261103\\05-knowledge\\results\\mixed_returns_20261103\\controllers.py"
+          ],
+          "seconds": 8.412,
+          "stdout": "{\"status\": \"PASS\", \"program_moves\": [14, 22, 22], \"program_peaks\": [10, 12, 12], \"family\": [[293, 881], [5223, 15671], [92573, 277721], [1640223, 4920671]], \"hostile\": {\"groups\": [81, 27], \"common_H\": [462915, 462915], \"port8_after_sink\": [2390013, 1754919], \"common_cyclic_triples\": 67}}",
+          "stderr": ""
+        }
+      ]
+    }
+  ]
+}

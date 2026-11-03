@@ -1,0 +1,27 @@
+{
+  "status": "VERIFIED_CHECKPOINT",
+  "normalization": "CRLF to LF",
+  "local_links": "PASS",
+  "sha256_lf": {
+    "AUDIT.md": "6b964a2460ee00a10699f13620462ceeff0573e2d0d48093c62db24d01e07e4f",
+    "CARRIES.md": "b2bc0d7ab0441377617e119aecee57a49b4bfb743425f48f46b0dca602c6911d",
+    "carry_complete.json": "3422bc2b21d18538b7961c09be66218138e2c6852e0050ae0e3c6f714aece82d",
+    "carry_complete.py": "049634e06429d49c58de5654defb818390a654fcdbb884cf1b873659618462a3",
+    "controllers.json": "d6633b1e8c042f15b2a1828c8b4985cbeb88cafe003ed48c6b990eb8d7a8e5b9",
+    "controllers.py": "7c76b7ca34626fa46f4c504e00fc04f3cd169ecb00cacc0d2351d9a786a766e9",
+    "GATES.md": "43b78695ac786d259336e214a0b1f64b6f21ef5831685e93d77cad1dbec66b11",
+    "HANDOFF.md": "5024eff02270a0e2196befb9742a9b7a237782548de6df8a8322f56491cbbe4c",
+    "inverse66.py": "aafbb6f3a3e329fe9a87a091d5047e80e461d257a92bdb5b7545b67235324d72",
+    "README.md": "009788633a2d4850cfc7bc205f48a05822e8590eb5f7106c82c7ad09fc3e7f1e",
+    "reproduce.py": "1a3be7aafa8dbc4610d73c4bba5cf4811cb033a3b42875b80fdd3522f9a3f9e2",
+    "reproduction.json": "d2594deb272960da5e87e15a4c17ce417339f7aa41be5c7cdf29eab6dd98f9c6",
+    "return_census.json": "c59406edeb7d422acde3cb81908f17972008a5766f8d1b92f6427de8c7e8a5aa",
+    "return_census.py": "71019ee50b3a15930b0e7800e0bfeda4a87645a9c62871ce57166f10769280c7",
+    "seal.py": "b8767764ef3afd8d085b14556066408b4b8a56293e66189b7af5ce08066ea6e9",
+    "source_pins.json": "2bd86aec89f95dc476b2645e09bfa10051a6d4ea5934822281c02561e7e8d37f",
+    "support.py": "d9383afec929d53679191fe1d3716d911b9b95f99d9383093e63d5ad98b79dfd",
+    "THEORY.md": "5604c0c01e42987b8688f4d817189a5122055168185977ddaf040ecbcd32f6f5",
+    "verification.json": "27f96b6e319d252cf020645e9e4500c963e3533ff8f2cbbac98bd5f422cef23e",
+    "verify.py": "6f879ec3d51543e359bb169478393c4124cf5d34f0b8a7c8cb0721d767edcc37"
+  }
+}

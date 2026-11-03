@@ -1,0 +1,10651 @@
+{
+  "status": "PASS",
+  "catalog_size": 786,
+  "distinct_matrices": 423,
+  "growth_certificates": [
+    {
+      "word": [
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 5,
+      "margin": "5"
+    },
+    {
+      "word": [
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 11,
+      "margin": "11"
+    },
+    {
+      "word": [
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 41,
+      "margin": "41"
+    },
+    {
+      "word": [
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 91,
+      "margin": "91"
+    },
+    {
+      "word": [
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 87,
+      "margin": "87"
+    },
+    {
+      "word": [
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 193,
+      "margin": "193"
+    },
+    {
+      "word": [
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 683,
+      "margin": "683/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 683,
+      "margin": "683/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 333,
+      "margin": "333"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 739,
+      "margin": "739"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 727,
+      "margin": "727"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1613,
+      "margin": "1613"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 5691,
+      "margin": "1897/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 5691,
+      "margin": "1897/3"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 707,
+      "margin": "707"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1569,
+      "margin": "1569"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1541,
+      "margin": "1541"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 3419,
+      "margin": "3419"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 12065,
+      "margin": "12065/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 12065,
+      "margin": "12065/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 5575,
+      "margin": "5575/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 12373,
+      "margin": "12373/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 5575,
+      "margin": "5575/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 12373,
+      "margin": "12373/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 2705,
+      "margin": "2705"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 6003,
+      "margin": "6003"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 5903,
+      "margin": "5903"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 13097,
+      "margin": "13097"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 46211,
+      "margin": "46211/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 46211,
+      "margin": "46211/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 5907,
+      "margin": "5907"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 13109,
+      "margin": "13109"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 12881,
+      "margin": "12881"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 28579,
+      "margin": "28579"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 100845,
+      "margin": "11205"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 100845,
+      "margin": "11205"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 46455,
+      "margin": "15485/3"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 103101,
+      "margin": "34367/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 46455,
+      "margin": "15485/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 103101,
+      "margin": "34367/3"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 5743,
+      "margin": "5743"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 12745,
+      "margin": "12745"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 12533,
+      "margin": "12533"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 27807,
+      "margin": "27807"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 98113,
+      "margin": "98113/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 98113,
+      "margin": "98113/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 12521,
+      "margin": "12521"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 27787,
+      "margin": "27787"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 27303,
+      "margin": "27303"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 60577,
+      "margin": "60577"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 213755,
+      "margin": "213755/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 213755,
+      "margin": "213755/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 98485,
+      "margin": "98485/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 218575,
+      "margin": "218575/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 98485,
+      "margin": "98485/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 218575,
+      "margin": "218575/9"
+    },
+    {
+      "word": [
+        "r19",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 928027,
+      "margin": "928027/9"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 217,
+      "margin": "217/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 5023,
+      "margin": "5023/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 5023,
+      "margin": "5023/3"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 45283,
+      "margin": "45283/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 100493,
+      "margin": "100493/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 98841,
+      "margin": "32947/3"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 219299,
+      "margin": "219299/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 773749,
+      "margin": "773749/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 773749,
+      "margin": "773749/81"
+    },
+    {
+      "word": [
+        "r32",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 1056099,
+      "margin": "352033/27"
+    },
+    {
+      "word": [
+        "r34",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 1056099,
+      "margin": "352033/9"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 217,
+      "margin": "217/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 5023,
+      "margin": "5023/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 5023,
+      "margin": "5023/3"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 45283,
+      "margin": "45283/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 100493,
+      "margin": "100493/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 98841,
+      "margin": "32947/3"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 219299,
+      "margin": "219299/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 773749,
+      "margin": "773749/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 773749,
+      "margin": "773749/81"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 21973,
+      "margin": "21973"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 48763,
+      "margin": "48763"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 47951,
+      "margin": "47951"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 106389,
+      "margin": "106389"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 375379,
+      "margin": "375379/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 375379,
+      "margin": "375379/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 47963,
+      "margin": "47963"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 106441,
+      "margin": "106441"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 104589,
+      "margin": "104589"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 232051,
+      "margin": "232051"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 818825,
+      "margin": "818825/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 818825,
+      "margin": "818825/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 377215,
+      "margin": "377215/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 837181,
+      "margin": "837181/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 377215,
+      "margin": "377215/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 837181,
+      "margin": "837181/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 47983,
+      "margin": "47983"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 106485,
+      "margin": "106485"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 104713,
+      "margin": "104713"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 232327,
+      "margin": "232327"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 819733,
+      "margin": "819733/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 819733,
+      "margin": "819733/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 104661,
+      "margin": "104661"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 232267,
+      "margin": "232267"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 228223,
+      "margin": "228223"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 506357,
+      "margin": "506357"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1786755,
+      "margin": "595585/3"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1786755,
+      "margin": "595585/3"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 823185,
+      "margin": "91465"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1826955,
+      "margin": "202995"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 823185,
+      "margin": "91465"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1826955,
+      "margin": "202995"
+    },
+    {
+      "word": [
+        "b",
+        "r19",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 7946483,
+      "margin": "7946483/9"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1809,
+      "margin": "603"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 41871,
+      "margin": "13957"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 41871,
+      "margin": "13957"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 377331,
+      "margin": "125777/3"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 837381,
+      "margin": "279127/3"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 823617,
+      "margin": "91513"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1827363,
+      "margin": "609121/3"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 6447453,
+      "margin": "2149151/27"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 6447453,
+      "margin": "2149151/27"
+    },
+    {
+      "word": [
+        "b",
+        "r32",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 9008463,
+      "margin": "3002821/27"
+    },
+    {
+      "word": [
+        "b",
+        "r34",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 8924139,
+      "margin": "991571/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1809,
+      "margin": "603"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 41871,
+      "margin": "13957"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 41871,
+      "margin": "13957"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 377331,
+      "margin": "125777/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 837381,
+      "margin": "279127/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 823617,
+      "margin": "91513"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1827363,
+      "margin": "609121/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 6447453,
+      "margin": "2149151/27"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 6447453,
+      "margin": "2149151/27"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 46651,
+      "margin": "46651"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 103529,
+      "margin": "103529"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 101805,
+      "margin": "101805"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 225875,
+      "margin": "225875"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 796969,
+      "margin": "796969/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 796969,
+      "margin": "796969/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 101833,
+      "margin": "101833"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 225991,
+      "margin": "225991"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 222059,
+      "margin": "222059"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 492681,
+      "margin": "492681"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1738495,
+      "margin": "1738495/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1738495,
+      "margin": "1738495/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 800885,
+      "margin": "800885/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1777463,
+      "margin": "1777463/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 800885,
+      "margin": "800885/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1777463,
+      "margin": "1777463/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 101709,
+      "margin": "101709"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 225715,
+      "margin": "225715"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 221959,
+      "margin": "221959"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 492461,
+      "margin": "492461"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1737579,
+      "margin": "579193/3"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1737579,
+      "margin": "579193/3"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 221843,
+      "margin": "221843"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 492321,
+      "margin": "492321"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 483749,
+      "margin": "483749"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1073291,
+      "margin": "1073291"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3787265,
+      "margin": "3787265/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3787265,
+      "margin": "3787265/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1744855,
+      "margin": "1744855/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3872485,
+      "margin": "3872485/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1744855,
+      "margin": "1744855/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3872485,
+      "margin": "3872485/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r19",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 16820993,
+      "margin": "16820993/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 3835,
+      "margin": "3835/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 88765,
+      "margin": "88765/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 88765,
+      "margin": "88765/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 799945,
+      "margin": "799945/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1775255,
+      "margin": "1775255/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1746075,
+      "margin": "582025/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3874025,
+      "margin": "3874025/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 13668655,
+      "margin": "13668655/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 13668655,
+      "margin": "13668655/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r32",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 19073025,
+      "margin": "2119225/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r34",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 18904377,
+      "margin": "6301459/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 3835,
+      "margin": "3835/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 88765,
+      "margin": "88765/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 88765,
+      "margin": "88765/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 799945,
+      "margin": "799945/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1775255,
+      "margin": "1775255/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1746075,
+      "margin": "582025/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3874025,
+      "margin": "3874025/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 13668655,
+      "margin": "13668655/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 13668655,
+      "margin": "13668655/81"
+    },
+    {
+      "word": [
+        "r19",
+        "r19",
+        "a",
+        "a",
+        "r18"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 212425,
+      "margin": "212425/9"
+    },
+    {
+      "word": [
+        "r19",
+        "r32",
+        "r48",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 7575167,
+      "margin": "7575167/9"
+    },
+    {
+      "word": [
+        "r19",
+        "r32",
+        "r48",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 16812119,
+      "margin": "16812119/9"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "a",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1805,
+      "margin": "1805/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "a",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 4007,
+      "margin": "4007/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "a"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3721,
+      "margin": "3721/9"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "r21"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 86419,
+      "margin": "86419/9"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "r38"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 86419,
+      "margin": "86419/9"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r16",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 124081,
+      "margin": "124081/9"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r21",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 39427,
+      "margin": "39427/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r21",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 87455,
+      "margin": "87455/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r38",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 39427,
+      "margin": "39427/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r38",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 87455,
+      "margin": "87455/3"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 367839,
+      "margin": "40871"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 816317,
+      "margin": "816317/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 802721,
+      "margin": "802721/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1780999,
+      "margin": "1780999/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 6284013,
+      "margin": "2094671/27"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 6284013,
+      "margin": "2094671/27"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 803101,
+      "margin": "803101/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1782267,
+      "margin": "594089/3"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1751263,
+      "margin": "1751263/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3885517,
+      "margin": "3885517/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 13710595,
+      "margin": "13710595/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 13710595,
+      "margin": "13710595/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 6316025,
+      "margin": "6316025/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 14017619,
+      "margin": "14017619/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 6316025,
+      "margin": "6316025/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 14017619,
+      "margin": "14017619/81"
+    },
+    {
+      "word": [
+        "r32",
+        "r19",
+        "a",
+        "a",
+        "r18"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 241623,
+      "margin": "2983"
+    },
+    {
+      "word": [
+        "r32",
+        "r32",
+        "r48",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 8620575,
+      "margin": "2873525/27"
+    },
+    {
+      "word": [
+        "r32",
+        "r32",
+        "r48",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 19132269,
+      "margin": "6377423/27"
+    },
+    {
+      "word": [
+        "r34",
+        "r19",
+        "a",
+        "a",
+        "r18"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 241623,
+      "margin": "8949"
+    },
+    {
+      "word": [
+        "r34",
+        "r32",
+        "r48",
+        "q4",
+        "b"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 8620575,
+      "margin": "2873525/9"
+    },
+    {
+      "word": [
+        "r34",
+        "r32",
+        "r48",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 19132269,
+      "margin": "6377423/9"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "a",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1805,
+      "margin": "1805/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "a",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 4007,
+      "margin": "4007/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "a"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3721,
+      "margin": "3721/9"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "r21"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 86419,
+      "margin": "86419/9"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "r38"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 86419,
+      "margin": "86419/9"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r16",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 124081,
+      "margin": "124081/9"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r21",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 39427,
+      "margin": "39427/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r21",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 87455,
+      "margin": "87455/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r38",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 39427,
+      "margin": "39427/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r38",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 87455,
+      "margin": "87455/3"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 367839,
+      "margin": "40871"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 816317,
+      "margin": "816317/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 802721,
+      "margin": "802721/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1780999,
+      "margin": "1780999/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 6284013,
+      "margin": "2094671/27"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 6284013,
+      "margin": "2094671/27"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 803101,
+      "margin": "803101/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1782267,
+      "margin": "594089/3"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1751263,
+      "margin": "1751263/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3885517,
+      "margin": "3885517/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 13710595,
+      "margin": "13710595/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 13710595,
+      "margin": "13710595/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 6316025,
+      "margin": "6316025/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 14017619,
+      "margin": "14017619/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 6316025,
+      "margin": "6316025/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 14017619,
+      "margin": "14017619/81"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 178489,
+      "margin": "178489"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 396107,
+      "margin": "396107"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 389511,
+      "margin": "389511"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 864209,
+      "margin": "864209"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3049243,
+      "margin": "3049243/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3049243,
+      "margin": "3049243/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 389611,
+      "margin": "389611"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 864637,
+      "margin": "864637"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 849593,
+      "margin": "849593"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1884987,
+      "margin": "1884987"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6651445,
+      "margin": "6651445/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6651445,
+      "margin": "6651445/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3064175,
+      "margin": "3064175/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6800549,
+      "margin": "6800549/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3064175,
+      "margin": "3064175/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "b",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6800549,
+      "margin": "6800549/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 389607,
+      "margin": "389607"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 864625,
+      "margin": "864625"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 850237,
+      "margin": "850237"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1886423,
+      "margin": "1886423"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6655977,
+      "margin": "739553"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6655977,
+      "margin": "739553"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 849809,
+      "margin": "849809"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1885923,
+      "margin": "1885923"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1853087,
+      "margin": "1853087"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 4111433,
+      "margin": "4111433"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14507795,
+      "margin": "14507795/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14507795,
+      "margin": "14507795/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6683965,
+      "margin": "6683965/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14834215,
+      "margin": "14834215/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6683965,
+      "margin": "6683965/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "q2",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14834215,
+      "margin": "14834215/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r19",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 64499891,
+      "margin": "64499891/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r24",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 14689,
+      "margin": "14689/3"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r24",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 339991,
+      "margin": "339991/3"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r24",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 339991,
+      "margin": "339991/3"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r24",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3063931,
+      "margin": "3063931/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r24",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6799541,
+      "margin": "6799541/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r24",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6687777,
+      "margin": "2229259/3"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r24",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14838203,
+      "margin": "14838203/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r24",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 52353373,
+      "margin": "52353373/81"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r24",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 52353373,
+      "margin": "52353373/81"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r32",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 73123803,
+      "margin": "902763"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r34",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 72449211,
+      "margin": "24149737/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r40",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 14689,
+      "margin": "14689/3"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r40",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 339991,
+      "margin": "339991/3"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r40",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 339991,
+      "margin": "339991/3"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r40",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3063931,
+      "margin": "3063931/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r40",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6799541,
+      "margin": "6799541/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r40",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6687777,
+      "margin": "2229259/3"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r40",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14838203,
+      "margin": "14838203/9"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r40",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 52353373,
+      "margin": "52353373/81"
+    },
+    {
+      "word": [
+        "b",
+        "b",
+        "r40",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 52353373,
+      "margin": "52353373/81"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 389771,
+      "margin": "389771"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 864989,
+      "margin": "864989"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 850585,
+      "margin": "850585"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1887195,
+      "margin": "1887195"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6658709,
+      "margin": "6658709/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6658709,
+      "margin": "6658709/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 850813,
+      "margin": "850813"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1888151,
+      "margin": "1888151"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1855299,
+      "margin": "1855299"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 4116341,
+      "margin": "4116341"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14525095,
+      "margin": "14525095/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14525095,
+      "margin": "14525095/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6691385,
+      "margin": "6691385/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14850683,
+      "margin": "14850683/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6691385,
+      "margin": "6691385/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "b",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14850683,
+      "margin": "14850683/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 850169,
+      "margin": "850169"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1886715,
+      "margin": "1886715"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1855319,
+      "margin": "1855319"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 4116401,
+      "margin": "4116401"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14524139,
+      "margin": "14524139/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14524139,
+      "margin": "14524139/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1854363,
+      "margin": "1854363"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 4115261,
+      "margin": "4115261"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 4043609,
+      "margin": "4043609"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 8971531,
+      "margin": "8971531"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31657365,
+      "margin": "3517485"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31657365,
+      "margin": "3517485"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14585055,
+      "margin": "4861685/3"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 32369685,
+      "margin": "10789895/3"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14585055,
+      "margin": "4861685/3"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "q2",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 32369685,
+      "margin": "10789895/3"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r19",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 140658373,
+      "margin": "140658373/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 32055,
+      "margin": "10685"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 741945,
+      "margin": "247315"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 741945,
+      "margin": "247315"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r24",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6686325,
+      "margin": "742925"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r24",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14838435,
+      "margin": "1648715"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r24",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14594535,
+      "margin": "1621615"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r24",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 32380965,
+      "margin": "3597885"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r24",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 114249195,
+      "margin": "12694355/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r24",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 114249195,
+      "margin": "12694355/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r32",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 159480465,
+      "margin": "53160155/27"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r34",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 158046957,
+      "margin": "5853591"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 32055,
+      "margin": "10685"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 741945,
+      "margin": "247315"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 741945,
+      "margin": "247315"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r40",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6686325,
+      "margin": "742925"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r40",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14838435,
+      "margin": "1648715"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r40",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14594535,
+      "margin": "1621615"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r40",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 32380965,
+      "margin": "3597885"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r40",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 114249195,
+      "margin": "12694355/9"
+    },
+    {
+      "word": [
+        "b",
+        "q2",
+        "r40",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 114249195,
+      "margin": "12694355/9"
+    },
+    {
+      "word": [
+        "b",
+        "r19",
+        "r19",
+        "a",
+        "a",
+        "r18"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1818765,
+      "margin": "202085"
+    },
+    {
+      "word": [
+        "b",
+        "r19",
+        "r32",
+        "r48",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 64864423,
+      "margin": "64864423/9"
+    },
+    {
+      "word": [
+        "b",
+        "r19",
+        "r32",
+        "r48",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 143958331,
+      "margin": "143958331/9"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "a",
+        "a",
+        "a",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 15045,
+      "margin": "5015"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "a",
+        "a",
+        "a",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 33399,
+      "margin": "11133"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "a"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31017,
+      "margin": "10339/3"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "r21"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 720363,
+      "margin": "240121/3"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "r38"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 720363,
+      "margin": "240121/3"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "a",
+        "a",
+        "r16",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1034337,
+      "margin": "344779/3"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "a",
+        "a",
+        "r21",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 328659,
+      "margin": "109553"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "a",
+        "a",
+        "r21",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 729015,
+      "margin": "243005"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "a",
+        "a",
+        "r38",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 328659,
+      "margin": "109553"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "a",
+        "a",
+        "r38",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 729015,
+      "margin": "243005"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3065103,
+      "margin": "340567"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6802149,
+      "margin": "2267383/3"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6688857,
+      "margin": "2229619/3"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14840583,
+      "margin": "4946861/3"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 52362981,
+      "margin": "5818109/9"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 52362981,
+      "margin": "5818109/9"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6692037,
+      "margin": "2230679/3"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14851179,
+      "margin": "1650131"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14592831,
+      "margin": "4864277/3"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 32377029,
+      "margin": "10792343/3"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 114246915,
+      "margin": "38082305/27"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 114246915,
+      "margin": "38082305/27"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 52629825,
+      "margin": "17543275/27"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 116805243,
+      "margin": "38935081/27"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 52629825,
+      "margin": "17543275/27"
+    },
+    {
+      "word": [
+        "b",
+        "r24",
+        "q4",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 116805243,
+      "margin": "38935081/27"
+    },
+    {
+      "word": [
+        "b",
+        "r32",
+        "r19",
+        "a",
+        "a",
+        "r18"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 2061015,
+      "margin": "687005/27"
+    },
+    {
+      "word": [
+        "b",
+        "r32",
+        "r32",
+        "r48",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 73533003,
+      "margin": "24511001/27"
+    },
+    {
+      "word": [
+        "b",
+        "r32",
+        "r32",
+        "r48",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 163197141,
+      "margin": "54399047/27"
+    },
+    {
+      "word": [
+        "b",
+        "r34",
+        "r19",
+        "a",
+        "a",
+        "r18"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 2041763,
+      "margin": "2041763/27"
+    },
+    {
+      "word": [
+        "b",
+        "r34",
+        "r32",
+        "r48",
+        "q4",
+        "b"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 72844695,
+      "margin": "8093855/3"
+    },
+    {
+      "word": [
+        "b",
+        "r34",
+        "r32",
+        "r48",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 161669529,
+      "margin": "17963281/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "a",
+        "a",
+        "a",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 15045,
+      "margin": "5015"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "a",
+        "a",
+        "a",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 33399,
+      "margin": "11133"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "a"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31017,
+      "margin": "10339/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "r21"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 720363,
+      "margin": "240121/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "r38"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 720363,
+      "margin": "240121/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "a",
+        "a",
+        "r16",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1034337,
+      "margin": "344779/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "a",
+        "a",
+        "r21",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 328659,
+      "margin": "109553"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "a",
+        "a",
+        "r21",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 729015,
+      "margin": "243005"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "a",
+        "a",
+        "r38",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 328659,
+      "margin": "109553"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "a",
+        "a",
+        "r38",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 729015,
+      "margin": "243005"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3065103,
+      "margin": "340567"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6802149,
+      "margin": "2267383/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6688857,
+      "margin": "2229619/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14840583,
+      "margin": "4946861/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 52362981,
+      "margin": "5818109/9"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 52362981,
+      "margin": "5818109/9"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6692037,
+      "margin": "2230679/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14851179,
+      "margin": "1650131"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14592831,
+      "margin": "4864277/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 32377029,
+      "margin": "10792343/3"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 114246915,
+      "margin": "38082305/27"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 114246915,
+      "margin": "38082305/27"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 52629825,
+      "margin": "17543275/27"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 116805243,
+      "margin": "38935081/27"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 52629825,
+      "margin": "17543275/27"
+    },
+    {
+      "word": [
+        "b",
+        "r40",
+        "q4",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 116805243,
+      "margin": "38935081/27"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 378951,
+      "margin": "378951"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 840977,
+      "margin": "840977"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 826973,
+      "margin": "826973"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1834807,
+      "margin": "1834807"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6473865,
+      "margin": "2157955/3"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6473865,
+      "margin": "2157955/3"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 827185,
+      "margin": "827185"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1835715,
+      "margin": "1835715"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1803775,
+      "margin": "1803775"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 4002025,
+      "margin": "4002025"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14121715,
+      "margin": "14121715/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14121715,
+      "margin": "14121715/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6505565,
+      "margin": "6505565/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14438279,
+      "margin": "14438279/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6505565,
+      "margin": "6505565/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "b",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14438279,
+      "margin": "14438279/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 827197,
+      "margin": "827197"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1835735,
+      "margin": "1835735"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1805187,
+      "margin": "1805187"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 4005173,
+      "margin": "4005173"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14131687,
+      "margin": "14131687/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14131687,
+      "margin": "14131687/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1804279,
+      "margin": "1804279"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 4004113,
+      "margin": "4004113"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 3934397,
+      "margin": "3934397"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 8729223,
+      "margin": "8729223"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 30802345,
+      "margin": "30802345/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 30802345,
+      "margin": "30802345/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14191115,
+      "margin": "14191115/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31495385,
+      "margin": "31495385/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14191115,
+      "margin": "14191115/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "q2",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31495385,
+      "margin": "31495385/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r19",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 136946265,
+      "margin": "45648755/3"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r24",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 31187,
+      "margin": "31187/3"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r24",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 721853,
+      "margin": "721853/3"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r24",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 721853,
+      "margin": "721853/3"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r24",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6505193,
+      "margin": "6505193/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r24",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14436463,
+      "margin": "14436463/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r24",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14199171,
+      "margin": "4733057/3"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r24",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31503769,
+      "margin": "31503769/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r24",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111154199,
+      "margin": "111154199/81"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r24",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111154199,
+      "margin": "111154199/81"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r32",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 155256069,
+      "margin": "51752023/27"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r34",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 153822561,
+      "margin": "51274187/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r40",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 31187,
+      "margin": "31187/3"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r40",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 721853,
+      "margin": "721853/3"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r40",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 721853,
+      "margin": "721853/3"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r40",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6505193,
+      "margin": "6505193/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r40",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14436463,
+      "margin": "14436463/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r40",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14199171,
+      "margin": "4733057/3"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r40",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31503769,
+      "margin": "31503769/9"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r40",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111154199,
+      "margin": "111154199/81"
+    },
+    {
+      "word": [
+        "q2",
+        "b",
+        "r40",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111154199,
+      "margin": "111154199/81"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 826193,
+      "margin": "826193"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1833507,
+      "margin": "1833507"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1802975,
+      "margin": "1802975"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 4000265,
+      "margin": "4000265"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14114387,
+      "margin": "14114387/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14114387,
+      "margin": "14114387/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1803459,
+      "margin": "1803459"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 4002293,
+      "margin": "4002293"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 3932657,
+      "margin": "3932657"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 8725363,
+      "margin": "8725363"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 30788685,
+      "margin": "3420965"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 30788685,
+      "margin": "3420965"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14183655,
+      "margin": "4727885/3"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31478829,
+      "margin": "10492943/3"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14183655,
+      "margin": "4727885/3"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "b",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31478829,
+      "margin": "10492943/3"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 1802047,
+      "margin": "1802047"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 3999145,
+      "margin": "3999145"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 3932597,
+      "margin": "3932597"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 8725263,
+      "margin": "8725263"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 30785857,
+      "margin": "30785857/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 30785857,
+      "margin": "30785857/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 3930569,
+      "margin": "3930569"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 8722843,
+      "margin": "8722843"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 8570967,
+      "margin": "8570967"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 0,
+      "minimum_row_sum": 19016353,
+      "margin": "19016353"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 67101995,
+      "margin": "67101995/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 67101995,
+      "margin": "67101995/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 30914965,
+      "margin": "30914965/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 68611855,
+      "margin": "68611855/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 30914965,
+      "margin": "30914965/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "q2",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 68611855,
+      "margin": "68611855/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r19",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 298137739,
+      "margin": "298137739/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 67945,
+      "margin": "67945/3"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1572655,
+      "margin": "1572655/3"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1572655,
+      "margin": "1572655/3"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r24",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14172595,
+      "margin": "14172595/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r24",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31452125,
+      "margin": "31452125/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r24",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 30935145,
+      "margin": "10311715/3"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r24",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 68635955,
+      "margin": "68635955/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r24",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 242167045,
+      "margin": "242167045/81"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r24",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 242167045,
+      "margin": "242167045/81"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r32",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 338033955,
+      "margin": "112677985/27"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r34",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 334998291,
+      "margin": "111666097/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 67945,
+      "margin": "67945/3"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1572655,
+      "margin": "1572655/3"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1572655,
+      "margin": "1572655/3"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r40",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14172595,
+      "margin": "14172595/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r40",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31452125,
+      "margin": "31452125/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r40",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 30935145,
+      "margin": "10311715/3"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r40",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 68635955,
+      "margin": "68635955/9"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r40",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 242167045,
+      "margin": "242167045/81"
+    },
+    {
+      "word": [
+        "q2",
+        "q2",
+        "r40",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 242167045,
+      "margin": "242167045/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r19",
+        "r19",
+        "a",
+        "a",
+        "r18"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3849955,
+      "margin": "3849955/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r19",
+        "r32",
+        "r48",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 137304013,
+      "margin": "137304013/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r19",
+        "r32",
+        "r48",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 304728781,
+      "margin": "304728781/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "a",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 31895,
+      "margin": "31895/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "a",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 70805,
+      "margin": "70805/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "a"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 65755,
+      "margin": "65755/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "r21"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1527145,
+      "margin": "1527145/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "r38"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1527145,
+      "margin": "1527145/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "r16",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 2192755,
+      "margin": "2192755/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "r21",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 696745,
+      "margin": "696745/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "r21",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1545485,
+      "margin": "1545485/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "r38",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 696745,
+      "margin": "696745/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "a",
+        "a",
+        "r38",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1545485,
+      "margin": "1545485/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6498045,
+      "margin": "722005"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14420615,
+      "margin": "14420615/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14180435,
+      "margin": "14180435/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31462165,
+      "margin": "31462165/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111009975,
+      "margin": "37003325/27"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111009975,
+      "margin": "37003325/27"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14187175,
+      "margin": "14187175/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31484625,
+      "margin": "10494875/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 30936925,
+      "margin": "30936925/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 68639575,
+      "margin": "68639575/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 242204425,
+      "margin": "242204425/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 242204425,
+      "margin": "242204425/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111575675,
+      "margin": "111575675/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 247628105,
+      "margin": "247628105/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111575675,
+      "margin": "111575675/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r24",
+        "q4",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 247628105,
+      "margin": "247628105/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r32",
+        "r19",
+        "a",
+        "a",
+        "r18"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 4363653,
+      "margin": "1454551/27"
+    },
+    {
+      "word": [
+        "q2",
+        "r32",
+        "r32",
+        "r48",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 155686581,
+      "margin": "17298509/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r32",
+        "r32",
+        "r48",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 345526551,
+      "margin": "38391839/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r34",
+        "r19",
+        "a",
+        "a",
+        "r18"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 4325149,
+      "margin": "4325149/27"
+    },
+    {
+      "word": [
+        "q2",
+        "r34",
+        "r32",
+        "r48",
+        "q4",
+        "b"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 154309965,
+      "margin": "51436655/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r34",
+        "r32",
+        "r48",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 342471327,
+      "margin": "114157109/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "a",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 31895,
+      "margin": "31895/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "a",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 70805,
+      "margin": "70805/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "a"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 65755,
+      "margin": "65755/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "r21"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1527145,
+      "margin": "1527145/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "r38"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1527145,
+      "margin": "1527145/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "r16",
+        "q4"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 2192755,
+      "margin": "2192755/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "r21",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 696745,
+      "margin": "696745/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "r21",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1545485,
+      "margin": "1545485/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "r38",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 696745,
+      "margin": "696745/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "a",
+        "a",
+        "r38",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1545485,
+      "margin": "1545485/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6498045,
+      "margin": "722005"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14420615,
+      "margin": "14420615/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14180435,
+      "margin": "14180435/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31462165,
+      "margin": "31462165/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111009975,
+      "margin": "37003325/27"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111009975,
+      "margin": "37003325/27"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14187175,
+      "margin": "14187175/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31484625,
+      "margin": "10494875/3"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 30936925,
+      "margin": "30936925/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 68639575,
+      "margin": "68639575/9"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 242204425,
+      "margin": "242204425/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 242204425,
+      "margin": "242204425/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111575675,
+      "margin": "111575675/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 247628105,
+      "margin": "247628105/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111575675,
+      "margin": "111575675/81"
+    },
+    {
+      "word": [
+        "q2",
+        "r40",
+        "q4",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 247628105,
+      "margin": "247628105/81"
+    },
+    {
+      "word": [
+        "r19",
+        "r19",
+        "a",
+        "a",
+        "r18",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1671885,
+      "margin": "185765"
+    },
+    {
+      "word": [
+        "r19",
+        "r19",
+        "a",
+        "a",
+        "r18",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 3708635,
+      "margin": "3708635/9"
+    },
+    {
+      "word": [
+        "r19",
+        "r32",
+        "r48",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 294903,
+      "margin": "98301"
+    },
+    {
+      "word": [
+        "r19",
+        "r32",
+        "r48",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 6826087,
+      "margin": "6826087/3"
+    },
+    {
+      "word": [
+        "r19",
+        "r32",
+        "r48",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 6826087,
+      "margin": "6826087/3"
+    },
+    {
+      "word": [
+        "r19",
+        "r32",
+        "r48",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 61529363,
+      "margin": "61529363/9"
+    },
+    {
+      "word": [
+        "r19",
+        "r32",
+        "r48",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 136547275,
+      "margin": "136547275/9"
+    },
+    {
+      "word": [
+        "r19",
+        "r32",
+        "r48",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 134302683,
+      "margin": "44767561/3"
+    },
+    {
+      "word": [
+        "r19",
+        "r32",
+        "r48",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 297978007,
+      "margin": "297978007/9"
+    },
+    {
+      "word": [
+        "r19",
+        "r32",
+        "r48",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 1051350743,
+      "margin": "1051350743/81"
+    },
+    {
+      "word": [
+        "r19",
+        "r32",
+        "r48",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 1051350743,
+      "margin": "1051350743/81"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "a",
+        "b",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 14657,
+      "margin": "14657/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "a",
+        "b",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 32527,
+      "margin": "32527/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "a",
+        "q2",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 32019,
+      "margin": "10673"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "a",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 71041,
+      "margin": "71041/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "a",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 250631,
+      "margin": "250631/27"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "a",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 250631,
+      "margin": "250631/27"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "a",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31181,
+      "margin": "31181/9"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "a",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 69227,
+      "margin": "69227/9"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "q5",
+        "a"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 64093,
+      "margin": "64093/27"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "q5",
+        "r21"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 1488187,
+      "margin": "1488187/27"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "q5",
+        "r38"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 1488187,
+      "margin": "1488187/27"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "r16",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 2133133,
+      "margin": "2133133/27"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "r21",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 678199,
+      "margin": "678199/9"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "r21",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1504343,
+      "margin": "1504343/9"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "r38",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 678199,
+      "margin": "678199/9"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "q5",
+        "r38",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1504343,
+      "margin": "1504343/9"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r16",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1012925,
+      "margin": "1012925/9"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r16",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 2248061,
+      "margin": "2248061/9"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r21",
+        "b",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 320439,
+      "margin": "106813"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r21",
+        "b",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 711131,
+      "margin": "711131/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r21",
+        "q2",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 698195,
+      "margin": "698195/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r21",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1549075,
+      "margin": "1549075/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r21",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5466591,
+      "margin": "607399/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r21",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5466591,
+      "margin": "607399/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r38",
+        "b",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 320439,
+      "margin": "106813"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r38",
+        "b",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 711131,
+      "margin": "711131/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r38",
+        "q2",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 698195,
+      "margin": "698195/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r38",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1549075,
+      "margin": "1549075/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r38",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5466591,
+      "margin": "607399/3"
+    },
+    {
+      "word": [
+        "r24",
+        "a",
+        "a",
+        "r38",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5466591,
+      "margin": "607399/3"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 2987995,
+      "margin": "2987995/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6631029,
+      "margin": "736781"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6520609,
+      "margin": "6520609/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14467291,
+      "margin": "14467291/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 51045853,
+      "margin": "51045853/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 51045853,
+      "margin": "51045853/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6522261,
+      "margin": "2174087/3"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14474407,
+      "margin": "14474407/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14222563,
+      "margin": "14222563/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31555517,
+      "margin": "31555517/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111348135,
+      "margin": "4124005/3"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111348135,
+      "margin": "4124005/3"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 51295665,
+      "margin": "17098555/27"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 113844243,
+      "margin": "37948081/27"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 51295665,
+      "margin": "17098555/27"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "b",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 113844243,
+      "margin": "37948081/27"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6523649,
+      "margin": "6523649/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14477435,
+      "margin": "14477435/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14236519,
+      "margin": "14236519/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31586601,
+      "margin": "10528867/3"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111448859,
+      "margin": "111448859/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111448859,
+      "margin": "111448859/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14229403,
+      "margin": "14229403/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31578341,
+      "margin": "31578341/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31028529,
+      "margin": "10342843/3"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 68842811,
+      "margin": "68842811/9"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 242921965,
+      "margin": "242921965/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 242921965,
+      "margin": "242921965/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111917855,
+      "margin": "111917855/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 248387525,
+      "margin": "248387525/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111917855,
+      "margin": "111917855/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "q2",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 248387525,
+      "margin": "248387525/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r19",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 1080199421,
+      "margin": "1080199421/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r24",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 245951,
+      "margin": "245951/27"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r24",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5692769,
+      "margin": "5692769/27"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r24",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5692769,
+      "margin": "5692769/27"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r24",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 51301949,
+      "margin": "51301949/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r24",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 113850379,
+      "margin": "113850379/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r24",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111979023,
+      "margin": "37326341/27"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r24",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 248448397,
+      "margin": "248448397/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r24",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 6,
+      "minimum_row_sum": 876596147,
+      "margin": "876596147/729"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r24",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 6,
+      "minimum_row_sum": 876596147,
+      "margin": "876596147/729"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r32",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 6,
+      "minimum_row_sum": 1224591297,
+      "margin": "408197099/243"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r34",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 5,
+      "minimum_row_sum": 1213207557,
+      "margin": "404402519/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r40",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 245951,
+      "margin": "245951/27"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r40",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5692769,
+      "margin": "5692769/27"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r40",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5692769,
+      "margin": "5692769/27"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r40",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 51301949,
+      "margin": "51301949/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r40",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 113850379,
+      "margin": "113850379/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r40",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111979023,
+      "margin": "37326341/27"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r40",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 248448397,
+      "margin": "248448397/81"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r40",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 6,
+      "minimum_row_sum": 876596147,
+      "margin": "876596147/729"
+    },
+    {
+      "word": [
+        "r24",
+        "q4",
+        "r40",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 6,
+      "minimum_row_sum": 876596147,
+      "margin": "876596147/729"
+    },
+    {
+      "word": [
+        "r24",
+        "r56",
+        "r10",
+        "r10",
+        "a",
+        "r20"
+      ],
+      "v3_det": 5,
+      "minimum_row_sum": 635811723,
+      "margin": "70645747/27"
+    },
+    {
+      "word": [
+        "r24",
+        "r56",
+        "r10",
+        "r9",
+        "a",
+        "r20"
+      ],
+      "v3_det": 5,
+      "minimum_row_sum": 635811723,
+      "margin": "70645747/27"
+    },
+    {
+      "word": [
+        "r24",
+        "r56",
+        "r9",
+        "r10",
+        "a",
+        "r20"
+      ],
+      "v3_det": 5,
+      "minimum_row_sum": 635811723,
+      "margin": "70645747/27"
+    },
+    {
+      "word": [
+        "r24",
+        "r56",
+        "r9",
+        "r9",
+        "a",
+        "r20"
+      ],
+      "v3_det": 5,
+      "minimum_row_sum": 635811723,
+      "margin": "70645747/27"
+    },
+    {
+      "word": [
+        "r32",
+        "r19",
+        "a",
+        "a",
+        "r18",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 1901691,
+      "margin": "70433/3"
+    },
+    {
+      "word": [
+        "r32",
+        "r19",
+        "a",
+        "a",
+        "r18",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 4218399,
+      "margin": "52079"
+    },
+    {
+      "word": [
+        "r32",
+        "r32",
+        "r48",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 335601,
+      "margin": "37289/3"
+    },
+    {
+      "word": [
+        "r32",
+        "r32",
+        "r48",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 7768119,
+      "margin": "2589373/9"
+    },
+    {
+      "word": [
+        "r32",
+        "r32",
+        "r48",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 7768119,
+      "margin": "2589373/9"
+    },
+    {
+      "word": [
+        "r32",
+        "r32",
+        "r48",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 70020699,
+      "margin": "23340233/27"
+    },
+    {
+      "word": [
+        "r32",
+        "r32",
+        "r48",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 155391429,
+      "margin": "51797143/27"
+    },
+    {
+      "word": [
+        "r32",
+        "r32",
+        "r48",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 152837073,
+      "margin": "16981897/9"
+    },
+    {
+      "word": [
+        "r32",
+        "r32",
+        "r48",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 339100347,
+      "margin": "113033449/27"
+    },
+    {
+      "word": [
+        "r32",
+        "r32",
+        "r48",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 6,
+      "minimum_row_sum": 1196441997,
+      "margin": "398813999/243"
+    },
+    {
+      "word": [
+        "r32",
+        "r32",
+        "r48",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 6,
+      "minimum_row_sum": 1196441997,
+      "margin": "398813999/243"
+    },
+    {
+      "word": [
+        "r34",
+        "r19",
+        "a",
+        "a",
+        "r18",
+        "b"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 1901691,
+      "margin": "70433"
+    },
+    {
+      "word": [
+        "r34",
+        "r19",
+        "a",
+        "a",
+        "r18",
+        "q2"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 4218399,
+      "margin": "156237"
+    },
+    {
+      "word": [
+        "r34",
+        "r32",
+        "r48",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 335601,
+      "margin": "37289"
+    },
+    {
+      "word": [
+        "r34",
+        "r32",
+        "r48",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 7768119,
+      "margin": "2589373/3"
+    },
+    {
+      "word": [
+        "r34",
+        "r32",
+        "r48",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 7768119,
+      "margin": "2589373/3"
+    },
+    {
+      "word": [
+        "r34",
+        "r32",
+        "r48",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 70020699,
+      "margin": "23340233/9"
+    },
+    {
+      "word": [
+        "r34",
+        "r32",
+        "r48",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 155391429,
+      "margin": "51797143/9"
+    },
+    {
+      "word": [
+        "r34",
+        "r32",
+        "r48",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 152837073,
+      "margin": "16981897/3"
+    },
+    {
+      "word": [
+        "r34",
+        "r32",
+        "r48",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 339100347,
+      "margin": "113033449/9"
+    },
+    {
+      "word": [
+        "r34",
+        "r32",
+        "r48",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 5,
+      "minimum_row_sum": 1196441997,
+      "margin": "398813999/81"
+    },
+    {
+      "word": [
+        "r34",
+        "r32",
+        "r48",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 5,
+      "minimum_row_sum": 1196441997,
+      "margin": "398813999/81"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "a",
+        "b",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 14657,
+      "margin": "14657/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "a",
+        "b",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 32527,
+      "margin": "32527/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "a",
+        "q2",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 32019,
+      "margin": "10673"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "a",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 71041,
+      "margin": "71041/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "a",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 250631,
+      "margin": "250631/27"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "a",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 250631,
+      "margin": "250631/27"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "a",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31181,
+      "margin": "31181/9"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "a",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 69227,
+      "margin": "69227/9"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "q5",
+        "a"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 64093,
+      "margin": "64093/27"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "q5",
+        "r21"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 1488187,
+      "margin": "1488187/27"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "q5",
+        "r38"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 1488187,
+      "margin": "1488187/27"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "r16",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 2133133,
+      "margin": "2133133/27"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "r21",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 678199,
+      "margin": "678199/9"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "r21",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1504343,
+      "margin": "1504343/9"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "r38",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 678199,
+      "margin": "678199/9"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "q5",
+        "r38",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1504343,
+      "margin": "1504343/9"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r16",
+        "q4",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 1012925,
+      "margin": "1012925/9"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r16",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 2248061,
+      "margin": "2248061/9"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r21",
+        "b",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 320439,
+      "margin": "106813"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r21",
+        "b",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 711131,
+      "margin": "711131/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r21",
+        "q2",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 698195,
+      "margin": "698195/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r21",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1549075,
+      "margin": "1549075/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r21",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5466591,
+      "margin": "607399/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r21",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5466591,
+      "margin": "607399/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r38",
+        "b",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 320439,
+      "margin": "106813"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r38",
+        "b",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 711131,
+      "margin": "711131/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r38",
+        "q2",
+        "b"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 698195,
+      "margin": "698195/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r38",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 1549075,
+      "margin": "1549075/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r38",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5466591,
+      "margin": "607399/3"
+    },
+    {
+      "word": [
+        "r40",
+        "a",
+        "a",
+        "r38",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5466591,
+      "margin": "607399/3"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 2987995,
+      "margin": "2987995/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6631029,
+      "margin": "736781"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6520609,
+      "margin": "6520609/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14467291,
+      "margin": "14467291/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 51045853,
+      "margin": "51045853/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 51045853,
+      "margin": "51045853/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6522261,
+      "margin": "2174087/3"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14474407,
+      "margin": "14474407/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14222563,
+      "margin": "14222563/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31555517,
+      "margin": "31555517/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111348135,
+      "margin": "4124005/3"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111348135,
+      "margin": "4124005/3"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 51295665,
+      "margin": "17098555/27"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 113844243,
+      "margin": "37948081/27"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 51295665,
+      "margin": "17098555/27"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "b",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 113844243,
+      "margin": "37948081/27"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "b",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 6523649,
+      "margin": "6523649/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "b",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14477435,
+      "margin": "14477435/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "b",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14236519,
+      "margin": "14236519/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "b",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31586601,
+      "margin": "10528867/3"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "b",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111448859,
+      "margin": "111448859/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "b",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111448859,
+      "margin": "111448859/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "q2",
+        "b",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 14229403,
+      "margin": "14229403/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "q2",
+        "b",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31578341,
+      "margin": "31578341/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "q2",
+        "q2",
+        "b"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 31028529,
+      "margin": "10342843/3"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "q2",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 2,
+      "minimum_row_sum": 68842811,
+      "margin": "68842811/9"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "q2",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 242921965,
+      "margin": "242921965/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "q2",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 242921965,
+      "margin": "242921965/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "r24",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111917855,
+      "margin": "111917855/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "r24",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 248387525,
+      "margin": "248387525/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "r40",
+        "q4",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111917855,
+      "margin": "111917855/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "q2",
+        "r40",
+        "q4",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 248387525,
+      "margin": "248387525/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r19",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 1080199421,
+      "margin": "1080199421/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r24",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 245951,
+      "margin": "245951/27"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r24",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5692769,
+      "margin": "5692769/27"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r24",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5692769,
+      "margin": "5692769/27"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r24",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 51301949,
+      "margin": "51301949/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r24",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 113850379,
+      "margin": "113850379/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r24",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111979023,
+      "margin": "37326341/27"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r24",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 248448397,
+      "margin": "248448397/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r24",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 6,
+      "minimum_row_sum": 876596147,
+      "margin": "876596147/729"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r24",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 6,
+      "minimum_row_sum": 876596147,
+      "margin": "876596147/729"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r32",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 6,
+      "minimum_row_sum": 1224591297,
+      "margin": "408197099/243"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r34",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "v3_det": 5,
+      "minimum_row_sum": 1213207557,
+      "margin": "404402519/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r40",
+        "a",
+        "a",
+        "a"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 245951,
+      "margin": "245951/27"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r40",
+        "a",
+        "a",
+        "r21"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5692769,
+      "margin": "5692769/27"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r40",
+        "a",
+        "a",
+        "r38"
+      ],
+      "v3_det": 3,
+      "minimum_row_sum": 5692769,
+      "margin": "5692769/27"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r40",
+        "q4",
+        "b",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 51301949,
+      "margin": "51301949/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r40",
+        "q4",
+        "b",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 113850379,
+      "margin": "113850379/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r40",
+        "q4",
+        "q2",
+        "b"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 111979023,
+      "margin": "37326341/27"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r40",
+        "q4",
+        "q2",
+        "q2"
+      ],
+      "v3_det": 4,
+      "minimum_row_sum": 248448397,
+      "margin": "248448397/81"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r40",
+        "q4",
+        "r24",
+        "q4"
+      ],
+      "v3_det": 6,
+      "minimum_row_sum": 876596147,
+      "margin": "876596147/729"
+    },
+    {
+      "word": [
+        "r40",
+        "q4",
+        "r40",
+        "q4",
+        "r40",
+        "q4"
+      ],
+      "v3_det": 6,
+      "minimum_row_sum": 876596147,
+      "margin": "876596147/729"
+    },
+    {
+      "word": [
+        "r40",
+        "r56",
+        "r10",
+        "r10",
+        "a",
+        "r20"
+      ],
+      "v3_det": 5,
+      "minimum_row_sum": 635811723,
+      "margin": "70645747/27"
+    },
+    {
+      "word": [
+        "r40",
+        "r56",
+        "r10",
+        "r9",
+        "a",
+        "r20"
+      ],
+      "v3_det": 5,
+      "minimum_row_sum": 635811723,
+      "margin": "70645747/27"
+    },
+    {
+      "word": [
+        "r40",
+        "r56",
+        "r9",
+        "r10",
+        "a",
+        "r20"
+      ],
+      "v3_det": 5,
+      "minimum_row_sum": 635811723,
+      "margin": "70645747/27"
+    },
+    {
+      "word": [
+        "r40",
+        "r56",
+        "r9",
+        "r9",
+        "a",
+        "r20"
+      ],
+      "v3_det": 5,
+      "minimum_row_sum": 635811723,
+      "margin": "70645747/27"
+    },
+    {
+      "word": [
+        "s78"
+      ],
+      "v3_det": 1,
+      "minimum_row_sum": 83,
+      "margin": "83/3"
+    }
+  ],
+  "projective_union": [
+    [
+      "637/466",
+      "406/297"
+    ],
+    [
+      "7000/5109",
+      "3661/2672"
+    ],
+    [
+      "997925/707023",
+      "68585/48592"
+    ],
+    [
+      "178428/126415",
+      "374859/265585"
+    ],
+    [
+      "377473/267437",
+      "181042/128267"
+    ],
+    [
+      "24/17",
+      "113/80"
+    ],
+    [
+      "22238/14545",
+      "14173/9270"
+    ],
+    [
+      "243649/159360",
+      "127428/83345"
+    ],
+    [
+      "367/240",
+      "26/17"
+    ],
+    [
+      "588560/384801",
+      "1227149/802311"
+    ],
+    [
+      "406217/265585",
+      "193354/126415"
+    ],
+    [
+      "222967/145776",
+      "3244213/2121069"
+    ],
+    [
+      "17/11",
+      "8/5"
+    ],
+    [
+      "347848291/217355336",
+      "1642559/1026364"
+    ],
+    [
+      "18/11",
+      "39/23"
+    ],
+    [
+      "142787/79904",
+      "297713/166601"
+    ],
+    [
+      "886967/496349",
+      "422189/236258"
+    ],
+    [
+      "25252/14131",
+      "52493/29375"
+    ],
+    [
+      "2876/1591",
+      "47/26"
+    ],
+    [
+      "4609577/2549964",
+      "9610979/5316681"
+    ],
+    [
+      "9544423/5279863",
+      "4543021/2513146"
+    ],
+    [
+      "1746268/966015",
+      "25408537/14055705"
+    ],
+    [
+      "94700/52347",
+      "181071/100090"
+    ],
+    [
+      "10515/5812",
+      "16498/9119"
+    ],
+    [
+      "317/161",
+      "152/77"
+    ]
+  ],
+  "seed_gaps": [
+    {
+      "state": [
+        31,
+        14,
+        25
+      ],
+      "ratio": "34/25",
+      "excluded_gap": [
+        "0",
+        "637/466"
+      ]
+    },
+    {
+      "state": [
+        95,
+        41,
+        75
+      ],
+      "ratio": "34/25",
+      "excluded_gap": [
+        "0",
+        "637/466"
+      ]
+    },
+    {
+      "state": [
+        97,
+        40,
+        75
+      ],
+      "ratio": "34/25",
+      "excluded_gap": [
+        "0",
+        "637/466"
+      ]
+    },
+    {
+      "state": [
+        287,
+        206,
+        239
+      ],
+      "ratio": "460/239",
+      "excluded_gap": [
+        "16498/9119",
+        "317/161"
+      ]
+    },
+    {
+      "state": [
+        289,
+        191,
+        239
+      ],
+      "ratio": "432/239",
+      "excluded_gap": [
+        "52493/29375",
+        "2876/1591"
+      ]
+    },
+    {
+      "state": [
+        293,
+        210,
+        281
+      ],
+      "ratio": "432/281",
+      "excluded_gap": [
+        "3244213/2121069",
+        "17/11"
+      ]
+    },
+    {
+      "state": [
+        295,
+        216,
+        260
+      ],
+      "ratio": "467/260",
+      "excluded_gap": [
+        "52493/29375",
+        "2876/1591"
+      ]
+    }
+  ],
+  "clocks": [
+    {
+      "state": [
+        31,
+        14,
+        25
+      ],
+      "gate49": {
+        "modulus": 49,
+        "period": 112,
+        "accepted_indices": [
+          1,
+          57
+        ]
+      },
+      "gate100": {
+        "modulus": 100,
+        "period": 60,
+        "accepted_indices": []
+      }
+    },
+    {
+      "state": [
+        95,
+        41,
+        75
+      ],
+      "gate49": {
+        "modulus": 49,
+        "period": 112,
+        "accepted_indices": [
+          1,
+          57
+        ]
+      },
+      "gate100": {
+        "modulus": 100,
+        "period": 60,
+        "accepted_indices": []
+      }
+    },
+    {
+      "state": [
+        97,
+        40,
+        75
+      ],
+      "gate49": {
+        "modulus": 49,
+        "period": 112,
+        "accepted_indices": [
+          1,
+          57
+        ]
+      },
+      "gate100": {
+        "modulus": 100,
+        "period": 60,
+        "accepted_indices": []
+      }
+    },
+    {
+      "state": [
+        287,
+        206,
+        239
+      ],
+      "gate49": {
+        "modulus": 49,
+        "period": 112,
+        "accepted_indices": [
+          9,
+          65
+        ]
+      },
+      "gate100": {
+        "modulus": 100,
+        "period": 60,
+        "accepted_indices": []
+      }
+    },
+    {
+      "state": [
+        289,
+        191,
+        239
+      ],
+      "gate49": {
+        "modulus": 49,
+        "period": 112,
+        "accepted_indices": [
+          25,
+          81
+        ]
+      },
+      "gate100": {
+        "modulus": 100,
+        "period": 60,
+        "accepted_indices": []
+      }
+    },
+    {
+      "state": [
+        293,
+        210,
+        281
+      ],
+      "gate49": {
+        "modulus": 49,
+        "period": 112,
+        "accepted_indices": [
+          33,
+          89
+        ]
+      },
+      "gate100": {
+        "modulus": 100,
+        "period": 60,
+        "accepted_indices": []
+      }
+    },
+    {
+      "state": [
+        295,
+        216,
+        260
+      ],
+      "gate49": {
+        "modulus": 49,
+        "period": 112,
+        "accepted_indices": [
+          9,
+          65
+        ]
+      },
+      "gate100": {
+        "modulus": 100,
+        "period": 60,
+        "accepted_indices": [
+          9,
+          39
+        ]
+      }
+    }
+  ],
+  "joint_gate": {
+    "pair_period": 1680,
+    "acceptance_period": 840,
+    "hits": [
+      9,
+      849
+    ],
+    "witnesses": [
+      {
+        "gate": "49",
+        "return_word": [
+          "s78",
+          "s78",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b"
+        ],
+        "cost": 39,
+        "bulk_predecessor": [
+          259559108622,
+          -715260467245
+        ],
+        "full_predecessors": [
+          {
+            "digit": 1,
+            "full_predecessor": [
+              "55987722323",
+              "-255844540473",
+              "259559108622"
+            ]
+          },
+          {
+            "digit": 2,
+            "full_predecessor": [
+              "55987722321",
+              "-255844540472",
+              "259559108622"
+            ]
+          }
+        ]
+      },
+      {
+        "gate": "100",
+        "return_word": [
+          "r24",
+          "a",
+          "a",
+          "a",
+          "b",
+          "r24",
+          "a",
+          "a",
+          "a",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b"
+        ],
+        "cost": 46,
+        "bulk_predecessor": [
+          -8088161056805,
+          21575973029296
+        ],
+        "full_predecessors": [
+          {
+            "digit": 1,
+            "full_predecessor": [
+              "-6646159140355",
+              "10066985556423",
+              "-8088161056805"
+            ]
+          },
+          {
+            "digit": 2,
+            "full_predecessor": [
+              "-13292318280709/2",
+              "40267942225691/4",
+              "-8088161056805"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "mixed_raisers": {
+    "normalized_action_group_size": 48,
+    "group_matrices": [
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        2,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        1
+      ],
+      [
+        0,
+        1,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        1
+      ],
+      [
+        0,
+        2,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        2,
+        1
+      ],
+      [
+        0,
+        2,
+        2,
+        2
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        0,
+        2,
+        1
+      ],
+      [
+        1,
+        0,
+        2,
+        2
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        0,
+        1
+      ],
+      [
+        1,
+        2,
+        0,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        0
+      ],
+      [
+        1,
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        1,
+        2
+      ],
+      [
+        2,
+        0,
+        2,
+        1
+      ],
+      [
+        2,
+        0,
+        2,
+        2
+      ],
+      [
+        2,
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        1,
+        1,
+        0
+      ],
+      [
+        2,
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        1,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        2,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        1,
+        0
+      ],
+      [
+        2,
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        0
+      ],
+      [
+        2,
+        2,
+        2,
+        1
+      ]
+    ],
+    "controls": [
+      {
+        "word": [
+          "s78",
+          "s78",
+          "r24",
+          "a",
+          "a",
+          "a",
+          "b",
+          "r24",
+          "a",
+          "a",
+          "a"
+        ],
+        "state": [
+          593213112623,
+          273510343079,
+          472736379150
+        ],
+        "vertices": 38,
+        "port": 37,
+        "normalized_phase_mod3": [
+          1,
+          0
+        ]
+      },
+      {
+        "word": [
+          "r24",
+          "a",
+          "a",
+          "a",
+          "b",
+          "r24",
+          "a",
+          "a",
+          "a",
+          "s78",
+          "s78"
+        ],
+        "state": [
+          598448793383,
+          318148801943,
+          415745156862
+        ],
+        "vertices": 38,
+        "port": 37,
+        "normalized_phase_mod3": [
+          2,
+          1
+        ]
+      }
+    ]
+  },
+  "equality_hostile": [
+    [
+      2,
+      1
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "scope": "All compositions of the finite complete short-return catalog plus s78; not all arbitrary longer 65-atom returns."
+}
