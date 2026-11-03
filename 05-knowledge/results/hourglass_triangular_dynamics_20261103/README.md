@@ -73,7 +73,8 @@ rule, and arbitrary-even-modulus run formula.
 
 Incoming Session146 has also reduced the exact order-ten mean carrier to
 345106 from the pooled-parity upper bound347626 (2520 invisible directions),
-while order nine has minimum65908. These are inherited scoped results,
+using the [upper certificate](../session146_carrier_primegame_20261103/carrier10_upper/PROOF.md)
+and separate lower certificate; order nine has minimum65908. These are inherited scoped results,
 not consequences of the quadratic construction; see the incoming packet's
 source routes. The all-size exact minimum remains a separate obligation.
 

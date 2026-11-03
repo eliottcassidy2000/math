@@ -232,6 +232,15 @@ def main():
     # Off-promise multi-control inputs are explicitly not semantic states.
     need(sum((2*3*f.numerator)%f.denominator==0 for f in program)==2,'multi-control hostile')
     for m in range(4,2002,2):wheel(m)
+    joint_tests=0
+    for m in [8,10,12,18,30,290]:
+        P=[p for p in prime_factors(m) if p!=2]
+        L=m//(2*prod(P))
+        for mask in range(1,128):
+            D=[i for i in range(7) if mask>>i&1]
+            actual=sum(all(gcd(a+2*d,m)==1 for d in D) for a in range(1,m,2))
+            predicted=L*prod(p-len({d%p for d in D}) for p in P)
+            need(actual==predicted,('joint ports',m,D));joint_tests+=1
     extra={m:wheel(m) for m in [290,5510,2310,30030,1160,1890]}
     P=primes_to(6100)
     first_plus=next(p for p in P if p%290==1)
@@ -247,6 +256,7 @@ def main():
        'tournaments':trows,'class_descent_hostile':pair_failures[0],
        'merged_descent_hostile':merged_failures[0],
        'fractran':[str(f) for f in program],'source_clock_traces':traces,
+       'joint_port_masks':joint_tests,
        'wheel_universe':'all even m=4..2000 plus recorded extras','wheels':extra,
        'prime_onsets':[first_plus,first_minus,list(pairs[0])],
        'eligible_prime_index':sum(gcd(p,290)==1 for p in P if p<=1451)}

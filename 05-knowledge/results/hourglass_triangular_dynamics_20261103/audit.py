@@ -74,6 +74,30 @@ def main():
         wheel_count+=1
     # Exact transfer matrix, independent column convention.
     import sympy as sp
+    arbitrary_layers=0
+    for m in range(2,5):
+        for sizes in product(range(1,4),repeat=m):
+            es=[((i,u),(i+1,v)) for i in range(m-1)
+                for u in range(sizes[i]) for v in range(sizes[i+1])]
+            tree={((i,0),(i+1,0)) for i in range(m-1)}
+            tree.update(((0,u),(1,0)) for u in range(1,sizes[0]))
+            tree.update(((i-1,0),(i,u)) for i in range(1,m) for u in range(1,sizes[i]))
+            non=[e for e in es if e not in tree]
+            rows=[]
+            for i in range(1,m-1):
+                for u in range(1,sizes[i]):
+                    d={((i-1,0),(i,u)):1,((i,u),(i+1,0)):1,
+                       ((i-1,0),(i,0)):-1,((i,0),(i+1,0)):-1}
+                    rows.append([d.get(e,0) for e in non])
+            for i in range(m-1):
+                for u in range(1,sizes[i]):
+                    for v in range(1,sizes[i+1]):
+                        d={((i,u),(i+1,v)):1,((i,u),(i+1,0)):-1,
+                           ((i,0),(i+1,v)):-1,((i,0),(i+1,0)):1}
+                        rows.append([d.get(e,0) for e in non])
+            check(len(rows)==len(non),('square minor',sizes))
+            check(not rows or abs(sp.Matrix(rows).det())==1,('unimodularity',sizes))
+            arbitrary_layers+=1
     F=[6,3,1,0,0,1,3,6];A=sp.zeros(8)
     for j,k in enumerate(F):A[k,j]=1
     z=sp.symbols('z')
@@ -81,7 +105,7 @@ def main():
     check([int((A**r).trace()) for r in range(1,13)]==[0,0,3]*4,'return clock')
     print(json.dumps({'independent_integer_orbit_parameters':tested,
        'parameters':[-20,1500],'denominator_tests':den_checks,
-       'ternary_line_words':words,'wheel_moduli':wheel_count,
+       'ternary_line_words':words,'arbitrary_layer_sizes':arbitrary_layers,'wheel_moduli':wheel_count,
        'transfer_determinant':str(1-z**3),'return_traces':[0,0,3]*4},indent=2,sort_keys=True))
 
 
