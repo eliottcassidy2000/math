@@ -1,0 +1,55 @@
+{
+  "checks": {
+    "explore_returns.py": {
+      "normal_optimized_identical": true,
+      "receipt": "languages.out",
+      "sha256": "134038f282c221b4d553c8cd37839f9a9100759b25468ef414ead8f88334a04e"
+    },
+    "languages.json": {
+      "sha256": "3357651cbf6d8c6783b229fe75b8ddf66bdf416f3c422183d8aa07e7b4cbf12d"
+    },
+    "obstruction.py": {
+      "normal_optimized_identical": true,
+      "receipt": "obstruction.json",
+      "sha256": "825baa14ac3f5c552d319efe0845655b8f169da5e5d455a05d54f933d731c956"
+    },
+    "ready_inverse.py": {
+      "normal_optimized_identical": true,
+      "receipt": "inverse.json",
+      "sha256": "dc683f94f9ffcc8de2b3208626ec71dc3154c715cd7f7bdfcc8adc55b535d535"
+    },
+    "return_program.py": {
+      "normal_optimized_identical": true,
+      "receipt": "returns.json",
+      "sha256": "57ddaa6eb396162b2079f5de0611970f798546334bdae8d66f29479b59df2616"
+    }
+  },
+  "hash_convention": "SHA256 after CRLF-to-LF normalization",
+  "inherited_hashes": {
+    "adaptive_metagraph_reformulation_20261103/metagraph_probe.py": "75266c143e3c4fbbadd5202984ec5cd6a0b7b9310a37850ff04fb6e92585ed84",
+    "golden_inverse_defects_20261103/inverse.py": "6d168811df51cc876283973587251361ad957144665f01d11ea2091f6c7b9feb",
+    "golden_seam_recurrence_20261103/atom_atlas.json": "b7f7715f5e6577c056da67ea2752f4643bd4ae16a8ef06707c2286032b434eba",
+    "polarized_path_calculus_20261103/explore.py": "343b6168f5116275538a87959e6a0949ad8518aaede6d5a5952479069255bbb4",
+    "polarized_path_calculus_20261103/recognize.py": "967693a89ed94465be01753b8b0b2e9c20e67bbcd5257200d224c39527b2fc85",
+    "source_selection_closure_20261103/graded_carrier.py": "312e82d56d36fed9d717a656721a17a3039d3245ab10f6bae926fcee5700639b",
+    "two_entry_funnels_20261103/READY.md": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c",
+    "two_entry_funnels_20261103/TWO_ENTRY.md": "31c18d359d4f56c5778492ccdb4435793d117890d8318138b727b8816e8e4c93",
+    "two_entry_funnels_20261103/carrier.py": "b64813435c45418e8d2173d8cdc19678715bf338b8c2242495b49020692157bb",
+    "two_entry_funnels_20261103/research.py": "75e0188ab2763faa84637c8ed07a05a0978e9034b3fc3a91de1661162cb6a387",
+    "two_entry_funnels_20261103/verify.py": "7f982b5173292ec904d99bc75f074cd66ee885674bda361c0142aed8f9a30de1"
+  },
+  "local_hashes": {
+    "ATLAS.md": "afb2bdee4ad66ab8a511b3b5e0730beaa9aebbb7e9dee62c7e3d6f20a693c163",
+    "AUDIT.md": "5297237a9a46256e443d9014b4af1d9ab0805b3b199b65104afa03f26b3de808",
+    "OBSTRUCTION.md": "5890c526288797d4bd80ffaa5eefaa9aa148ee928163f104dea76fc5c4fc39ef",
+    "PENTAGON.md": "77b33516a17d180217d5dc07ab734d9b83dbd01e6a15196fdf21439ea489998b",
+    "README.md": "fc5880c2dee23682ead5b4b3478f308a45f8c11556239d90672712b50635df36",
+    "RETURN.md": "065254286ab2dee6086e02e6426754ed6ba4b7570f7934fe55d751e9924415f6",
+    "explore_returns.py": "7c2628666cc5e6f019e2375ed506af4690210557628a5959c8bcdf58af9fcdee",
+    "obstruction.py": "d42725c29297481d8e5a75a8697a3b3bf778b9e467e2a99ded9164d0c1218a11",
+    "ready_inverse.py": "4c9f06467d9acdaef9707e7542668d3fb5d8656f8ccc6eec1942a585c36cdbec",
+    "replay.py": "472c414e52044d75f99a7e77c5d5775f21f2fe9ba9a01d642aa6a94fbc7e4d57",
+    "return_program.py": "143cba88100d6be1c93a756580a187615c3eb794ed175fcb94214812c6db3789"
+  },
+  "status": "PASS"
+}
