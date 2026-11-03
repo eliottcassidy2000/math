@@ -1,0 +1,2 @@
+PASS: 220 ordered nonnegative triples with total order <= 9
+samples: [((1, 1, 1), 3), ((2, 2, 2), 45), ((3, 2, 2), 137), ((3, 3, 3), 2721)]
