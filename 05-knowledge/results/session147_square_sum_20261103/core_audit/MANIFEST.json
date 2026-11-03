@@ -1,0 +1,42 @@
+{
+  "files": [
+    {
+      "bytes": 4335,
+      "path": "AUDIT.md",
+      "sha256": "fee5e42898f73f5606e8a24b504f2c99b119d1ab49b22d260a9bd92ec5b6e480"
+    },
+    {
+      "bytes": 1743,
+      "path": "DISTANCE_PROOF.md",
+      "sha256": "7c9773a7068cd581f8e5ca4483b4c24ed1d888c0e88789fade671d9346979d40"
+    },
+    {
+      "bytes": 688,
+      "path": "README.md",
+      "sha256": "f3ba917d947f7ca1dc0e6e24428a42799af4b8c0155da2644c84b87dca07fe87"
+    },
+    {
+      "bytes": 5092,
+      "path": "check.py",
+      "sha256": "b1cc57a44d5b3455fe3e384b6a37ead739d011b6a134dfa6ac83da230a7b0404"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "00-navigation/S147.md",
+    "00-navigation/S111-plus.md"
+  ],
+  "replay": [
+    {
+      "script": "check.py",
+      "stdout_sha256": "bb5758e7116913aac4af5c60981b78ff354fe65a96f0cbce99f9fa980ba42abb"
+    }
+  ],
+  "schema": 1,
+  "scope": "Square-sum G_n core graph decomposition and independently audited highlighted-pair, distance, centrality and finite cut statements"
+}
