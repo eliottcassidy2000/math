@@ -1,0 +1,15 @@
+{
+  "status": "PASS; second algorithm by same agent, not external referee",
+  "E_permutation_orders": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "six_seed_permutation_and_recursive_ear_checks": true,
+  "nearby67_literal_witnesses": 18,
+  "forest_graph_search_cases": 4096,
+  "hostiles": "E3 has one port response; E4 has four; five nontrivial printed seeds each require >=3 bits; a padded67 source has J=0 but is not strong"
+}

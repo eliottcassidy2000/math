@@ -1,0 +1,78 @@
+{
+  "revision": "2af5e7549da1f7a6cba03e42e15500eb060774c2",
+  "scope": "Referenced mathematical routes; relevant sections reviewed, not blanket endorsement of all historical claims",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-1263-mod-twenty-three-near-bijection-rung.md",
+      "blob": "3c8f9fb45e5f937e739c75092e62ff49ef960264"
+    },
+    {
+      "path": "01-canon/theorems/THM-4088-order-tournament-arithmetic-type-blindness-and-lrc-margin-density.md",
+      "blob": "bfb97badbadadfb7d97189adb0dee844e65a446b"
+    },
+    {
+      "path": "01-canon/theorems/THM-4666-class-numbers-are-ranking-excesses-of-kronecker-tournaments-and-local-optimality-of-the-natural-paley-order-excludes-a-real-zero.md",
+      "blob": "96a3e39ff28f9c97e3c6b3cfe377a5422c184fbd"
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260917_pythagorean_semicircle.md",
+      "blob": "cab7576dea749b381907e193910b652e0917a750"
+    },
+    {
+      "path": "05-knowledge/results/cursor_cm_phase_20261028/RAMANUJAN.md",
+      "blob": "ca736a4890b6fdd1c55d60e8d2a8a72b91c5d97e"
+    },
+    {
+      "path": "05-knowledge/results/decoder_prime_square_20260925.md",
+      "blob": "ecf12fa03e5f9fc2af7973ce5c49a17ca695a873"
+    },
+    {
+      "path": "05-knowledge/results/endpoint_pythagorean_fibers_20261019.md",
+      "blob": "9f5fc92f5376dd06a901136647930ae180be8858"
+    },
+    {
+      "path": "05-knowledge/results/lattice_bridges_audit_20261021.md",
+      "blob": "75304d6940b426b7318d0789c6afbe09d9eb5fd5"
+    },
+    {
+      "path": "05-knowledge/results/lattices_modular_repunits_20261021.md",
+      "blob": "d65596a95c97a9d4b8818e3f4f59000d0fb15ab8"
+    },
+    {
+      "path": "05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md",
+      "blob": "919c313574576094b1a3f6b8274bc1eda8def884"
+    },
+    {
+      "path": "05-knowledge/results/session131_reflection_numeration_moonshine_20261031/moonshine/README.md",
+      "blob": "dd14df76a81c029e95d41715fa82f2ce2d264944"
+    },
+    {
+      "path": "05-knowledge/results/session164_emergent_20261103/complementary_guard/UNIVERSAL_GUARD_LIFT.md",
+      "blob": "5955f0236917adf298bd5b3b488ccb7e7e8cdd7a"
+    },
+    {
+      "path": "05-knowledge/results/session41_owned_attachments_fibonacci_20261023/COLORED_GRID_AND_PHASE_QUOTIENT.md",
+      "blob": "404c60e1158dcf043e05e730f803c8eb9fda6f41"
+    },
+    {
+      "path": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/README.md",
+      "blob": "596326cad653f02bc79dd60eb6f53c08b264bf5a"
+    },
+    {
+      "path": "05-knowledge/results/session91_packing_golden_carriers_20261029/golden_fibres/GOLDEN_FIBRE_DYNAMICS.md",
+      "blob": "b92f14f11fce38036aeb3d5c77c0003f1cac3af5"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_archive_stability_20261102/RECOVERY.md",
+      "blob": "d9d78908d6c631f1ee222f4bd3c6f36127d94855"
+    },
+    {
+      "path": "05-knowledge/results/triple_reentry_interfaces_20261103/RETURN_FOREST.md",
+      "blob": "51eb85b41c9ca3d25a3538b2029bb7a4289f12af"
+    },
+    {
+      "path": "05-knowledge/results/zero_heavy_ports_20261020g/microcosm.md",
+      "blob": "a66675e4214be8a9db2380a763a40c815d4b8dfa"
+    }
+  ]
+}

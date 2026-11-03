@@ -1,0 +1,23 @@
+{
+  "revision": "2af5e7549da1f7a6cba03e42e15500eb060774c2",
+  "scope": "all tracked .md/.tex/.org; excludes dot paths, agents and this packet; exact standalone decimal numerals; lexical appearances include historical/unproved/citation/index mentions, not validated meanings",
+  "files_scanned": 18234,
+  "unique_blobs_scanned": 17038,
+  "unique_blob_bytes": 176998408,
+  "files_with_number": {
+    "1": 17183,
+    "23": 5019,
+    "25": 5147,
+    "63": 1596,
+    "67": 888,
+    "65": 1121
+  },
+  "raw_hits": {
+    "1": 621269,
+    "23": 14123,
+    "25": 16168,
+    "63": 4644,
+    "67": 1660,
+    "65": 2247
+  }
+}

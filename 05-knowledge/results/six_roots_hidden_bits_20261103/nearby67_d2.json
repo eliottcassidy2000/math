@@ -1,0 +1,58 @@
+[
+  {
+    "n": 7,
+    "flips_per_test": 2,
+    "tested": 210,
+    "count67": [
+      {
+        "J": [
+          4,
+          6,
+          52,
+          74,
+          70,
+          234,
+          76
+        ],
+        "flips": [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "rows": [
+          46,
+          124,
+          56,
+          112,
+          97,
+          64,
+          5
+        ],
+        "strong": true
+      }
+    ]
+  },
+  {
+    "n": 8,
+    "flips_per_test": 2,
+    "tested": 378,
+    "count67": []
+  },
+  {
+    "n": 9,
+    "flips_per_test": 2,
+    "tested": 630,
+    "count67": []
+  },
+  {
+    "n": 10,
+    "flips_per_test": 2,
+    "tested": 990,
+    "count67": []
+  }
+]
