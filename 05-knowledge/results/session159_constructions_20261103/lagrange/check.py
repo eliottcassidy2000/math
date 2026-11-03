@@ -115,3 +115,12 @@ if __name__=='__main__':
         for m,want in enumerate(forms,1):
             require(literal_transitive(n,m)==want, f'transitive gadget mismatch {n=} {m=}')
     print('PASS: three transitive-carrier gadget formulas, n=1,...,4')
+
+if __name__=='__main__':
+    c={1:1}
+    for m in range(6):
+        for n in range(1,5):
+            require(sum(v*q**n for q,v in c.items())==literal_transitive(n,m),f'exponential gadget mismatch {n=} {m=}')
+        require(c.get(m+1)==__import__('math').factorial(m),f'leading coefficient mismatch {m=}')
+        c={q:(q-1)*c.get(q-1,0)+q*q*c.get(q,0)-(q+1)*c.get(q+1,0) for q in range(1,m+3)}
+    print('PASS: finite exponential formula and leading coefficient for m=0,...,5 and n=1,...,4')

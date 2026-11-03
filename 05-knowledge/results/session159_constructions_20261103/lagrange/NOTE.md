@@ -74,6 +74,18 @@ For an explicit derivation, rows 1 of M, M^2 and M^3 are respectively
 
 Substituting S(n,1)=1, S(n,2)=(2^n-2)/2, S(n,3)=(3^n-3*2^n+3)/6, and S(n,4)=(4^n-4*3^n+6*2^n-4)/24 proves (6), including n=1. For example, n=2,m=2 gives an explicit 6-vertex strong tournament with 37 Hamilton paths; n=2,m=3 gives an 8-vertex one with 389. These are constructive witnesses; no nonexistence or optimality claim is made.
 
+## A finite exponential formula at every nesting depth
+
+For every m>=0 there are integer coefficients c_{m,q}, independent of n, such that
+
+  h(Y_{n,m}) = sum_{q=1}^{m+1} c_{m,q} q^n,              (7)
+  c_{0,1}=1,
+  c_{m+1,q} = (q-1)c_{m,q-1} + q^2 c_{m,q} - (q+1)c_{m,q+1}.
+
+All out-of-range coefficients are zero; apply the recurrence only for q>=1. The proof uses the ordered r-slot cover counts F_r(T_n)=r^n and the exact slot transfer F_r(G(X))=rF_{r+1}(X)+r^2F_r(X)-rF_{r-1}(X). In particular, the coefficient of 0^n can be discarded throughout, because n>=1 and that term remains zero under later iteration. Reading off the coefficient of q^n gives (7). This supplies a quadratic-in-m coefficient construction for every n, and is independent of expanding Stirling numbers individually.
+
+The top coefficient obeys c_{m,m+1}=m!, since each recurrence step has just one way to reach the new top index. It follows that for fixed m, h(Y_{n,m}) ~ m!(m+1)^n as n tends to infinity. Moreover the sequence in n is annihilated by the shift polynomial product_{q=1}^{m+1}(E-q), yielding an exact constant-coefficient recurrence for this explicit gadget family. Signs in (7) may be negative; the actual path counts are nevertheless positive.
+
 ## Reproduction
 
 Run `python3 check.py` and `python3 -O check.py`. The scripts compare (3) coefficientwise through t^15 with independent forward walk iteration; compare the first seven coefficients against subset/endpoint Hamilton-path DP on the literal tournament; compare (4) with direct unweighted step enumeration through length 12; and check all three parameterized formulas (6) by literal tournament DP for 1<=n<=4. Explicit conditions remain active under Python -O. These are controls, not substitutes for the general proofs.
