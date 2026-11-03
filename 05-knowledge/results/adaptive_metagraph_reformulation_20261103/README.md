@@ -139,8 +139,9 @@ control/signature closure, and native-gadget controls through order5.
 
 ## Incoming results sharpen the comparison
 
-[INCOMING.md](INCOMING.md) reconciles19 concurrent commits before the clean
-rebase. The new golden single-bridge construction has an all-order,
+[INCOMING.md](INCOMING.md) reconciles19 initial concurrent commits, seven
+Session153 commits and a final golden-inverse packet received during publication.
+The new golden single-bridge construction has an all-order,
 nonnegative three-coordinate transfer for arbitrary supplied blocks. Its
 fixed65-symbol bank covers the allowed prefix through30000 in the inherited
 receipt; its complete image remains OPEN. Growing both ends needs nine
@@ -204,6 +205,27 @@ has been proved. Fixed word wrappers are obstructed, and the first selected
 single-ear children already fail the next ternary step. This is a useful
 conditional proof target only when all three branches preserve the same
 actual bank; an ordinal C3 product leaves the strong adaptive language.
+
+The final incoming Session153 results sharpen this obligation. A generic
+affine inverse of a prime or7p need not remain in either lane: the induction
+must also construct its auxiliary parent language. Its finite multi-interface
+residue certificate states sufficient simultaneous closure conditions, but
+supplies no graph operations. Independent review caught and repaired its
+negative-offset descent threshold; the inverse magnitude must be checked
+alongside residues. A spectral-radius test can refute a proposed
+finite bank of scalar affine rules even when one state has all three local
+ternary branches. It does not automatically apply to our vector-valued cap3
+transfer. The selected H93 and H95 sources also retain missing ternary
+branches after up to three arbitrary added vertices, according to the
+incoming exact receipts; those representative-specific exclusions were not
+rerun here. Details and source pins are in INCOMING §7.
+
+The final golden-inverse packet supplies a terminating actual-source inverse
+for the65-symbol bank and an infinite family with both ternary offsets via
+suffix replacement. Its output states fail the next proposed affine lifts,
+although those scalar counts occur elsewhere. Thus route3 now has an exact
+membership algorithm as well as its small observer; invariant source closure
+and universal target acceptance remain OPEN. See INCOMING §8.
 
 The metagraph program has separate goals: preserve the complete named
 incidence carrier; classify fixed-order components or sufficient smaller

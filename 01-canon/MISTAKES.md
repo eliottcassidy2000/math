@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — negative affine offsets reverse the inverse-descent threshold
+
+- **Scope:** the conditional multi-interface certificate in `05-knowledge/results/session153_gadgets_20261103/strategy/finite_certificate.md`, as received at `583a44a8b19857f68ef880494ed6ab8b1b1467ac`. No tournament spectrum theorem had been claimed.
+- **Witness / first failed implication:** with N=23, K=25 and rules 3h−68, 3h−66, 3h−64, all old arithmetic thresholds hold and all odd residues modulo6 are covered, but target25 has inverse31. In general `(n−b)/a<n` requires `n>−b/(a−1)`, not `n>b/(a−1)`. A finite type containing fixed actual H1,3,5,23 witnesses is a nonvacuous counterexample under the old unrestricted operation assumptions: its sole eligible input23 maps to1,3,5, its only required seed23 exists, and it has no H25 witness. No extension-only condition was stated.
+- **Repair / strongest survivor:** require K strictly greater than every `|b_e|/(a_e−1)`, retaining the seed, parent-threshold and simultaneous interface-closure requirements. The displayed N23,K71 example is unaffected. Independent review caught the sign before the adaptive-metagraph packet used the incoming lemma as an unqualified dependency.
+- **Missing coordinate / next question:** the inverse magnitude and domain, in addition to residue integrality. An affine predecessor of a prime or7p need not remain in those lanes; a valid realization induction must construct a closed auxiliary parent language. Named witnesses, reproduction and source pins: `05-knowledge/results/adaptive_metagraph_reformulation_20261103/INCOMING.md`, §7.
+
 ## 2026-11-02 — toothpick cumulative recursion lost its boundary subtraction
 
 - **Scope:** historical `00-navigation/TANGENTS.md`, T1544. Its displayed cumulative recurrence omitted `-1`, and its assertion of a proved self-converse parity lemma cited the unrelated legacy ID THM-893 (the current file is the eroded-diamond theorem).

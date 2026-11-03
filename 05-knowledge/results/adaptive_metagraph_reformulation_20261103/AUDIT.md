@@ -86,3 +86,12 @@ spectrum conjecture.
 Source snapshots and artifact hashes are recorded separately. The two new
 navigation links point to this packet without displacing maintained warnings
 or expanding the current-frontier line budget.
+
+The final seven incoming Session153 commits received a separate source
+review. This caught a real sign error in their conditional affine induction:
+negative offsets require `K>-b/(a-1)` for inverse descent. We repaired the
+source using the sufficient absolute-value bound, recorded a nonvacuous
+four-witness counterexample to the old statement, and added the correction
+to MISTAKES. INCOMING §7 includes a small literal replay; both normal and
+optimized Python agree. The eleven original receipts are unchanged. This
+repairs an incoming conditional lemma, not a claimed spectrum theorem.

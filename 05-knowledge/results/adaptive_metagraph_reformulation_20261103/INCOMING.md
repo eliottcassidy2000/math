@@ -9,6 +9,10 @@ computations were not rerun. Their statuses below are inherited from the
 proofs and receipts read, not fresh independent certification by this lane.
 All global Hamiltonian spectrum claims remain OPEN.
 
+A final clean rebase also integrated seven Session153 commits through
+`583a44a8b1`; §7 records that later interval separately. The initial19-commit
+review and historical inventory retain their original scopes.
+
 The principal change to our proof board is **a new exact three-dimensional
 single-bridge source language with a fixed65-symbol candidate bank**. It
 joins the older digital-bank and adaptive-root routes. Its small observer
@@ -280,3 +284,150 @@ branches by themselves. The cheapest next mathematical work is still a
 closed source invariant and a target-directed inverse, or a decisive hostile
 to a specific proposed bank. No additional large census is justified by this
 reconciliation alone.
+
+## 7. Final incoming interval: Session153 and simultaneous interface closure
+
+**CITED proofs / INHERITED FINITE-EXACT receipts.** The seven commits
+`b976c1707e`, `b4ce1ff823`, `3558e094c2`, `b6231842c6`, `f7ec207248`,
+`84b30d8c1a`, `583a44a8b1` were fetched after the first publication attempt
+encountered a newer main. Their nine mathematical notes below were read;
+the new attachment scans were not rerun. These additions do not change any
+of this packet's eleven frozen computation receipts.
+
+The [finite multi-interface certificate](../session153_gadgets_20261103/strategy/finite_certificate.md)
+gives a rigorous conditional induction: actual type-preserving operations
+`h -> a_e h+b_e`, certified seeds of every required type, and simultaneous
+incoming-residue coverage at every type suffice above an explicit threshold.
+The inverse must be odd, smaller and inside the parent type's certified
+domain. **Prime lanes are sufficient final targets, not automatically a
+closed induction domain.** A prime target's affine predecessor can be
+composite and outside both lanes. The cap3 proof route must construct this
+auxiliary reachable language or prove a stronger lane-preserving inverse.
+
+**Correction after independent review.** The incoming certificate's strict
+threshold had the wrong sign for negative offsets. Since `(n-b)/a<n`
+is equivalent to `n>-b/(a-1)`, its old condition `K>b/(a-1)` did not suffice.
+With N=23, K=25, slopes3 and offsets −68,−66,−64, every old arithmetic
+threshold and odd-residue condition holds, yet target25 has inverse31.
+We repaired the source to require `K>|b|/(a-1)` and logged the mechanism in
+[MISTAKES](../../../01-canon/MISTAKES.md). The original source pin preserves
+provenance; the correction has a separate byte hash in source_pins.json.
+The N23,K71 worked illustration is unaffected. The other reviewed Session153
+arguments below passed scope review; their numerical scans were not rerun.
+
+This also refutes the old conditional lemma under its stated unrestricted
+constructive-operation assumptions. Let one type contain four fixed sources
+with adjacency rows `(0,)`, `(2,4,1)`, `(10,4,1,6)`,
+`(30,28,56,48,32,3)`, having H1,3,5,23 respectively. The last is a transitive
+five-chain plus an apex beating exactly its first two vertices. The sole
+eligible input at N=23 is the H23 source; the three operations return the
+fixed H1,H3,H5 sources. The only required seed in [23,25) exists, but there
+is no type-H25 source. An additional extension-only requirement would exclude
+these operations; the old lemma did not impose it. Independent literal path
+counts confirm the four witnesses. The corrected threshold gives K=35,
+whose larger seed obligation correctly rejects this finite type.
+
+Reproduce the small hostile and the repaired threshold from any directory:
+
+```bash
+python3 - <<'PY'
+from itertools import permutations
+rows = [(0,), (2,4,1), (10,4,1,6), (30,28,56,48,32,3)]
+counts = [sum(all(t[a] >> b & 1 for a,b in zip(p,p[1:]))
+              for p in permutations(range(len(t)))) for t in rows]
+if counts != [1,3,5,23]: raise RuntimeError(counts)
+N,K,a,bs = 23,25,3,[-68,-66,-64]
+if not all(K >= a*N+b and K*(a-1)>b for b in bs):
+    raise RuntimeError('old threshold')
+if {(a+b) % (2*a) for b in bs} != {1,3,5}: raise RuntimeError('residues')
+parents = [(25-b)//a for b in bs if (25-b) % (2*a) == a]
+if parents != [31]: raise RuntimeError(parents)
+repaired_K = max(N, max(a*N+b for b in bs), max(abs(b)//(a-1)+1 for b in bs))
+if repaired_K % 2 == 0: repaired_K += 1
+if repaired_K != 35: raise RuntimeError(repaired_K)
+print('PASS: H=',counts,'old inverse=',parents,'repaired K=',repaired_K)
+PY
+```
+
+The [finite affine-bank obstruction](../session153_gadgets_20261103/rewriting/NOTE.md)
+is a useful cheap prefilter. For finitely many scalar affine rules with
+slopes at least two and the stated positive common shift, form
+`M_sigma(t,s)=sum_(e:s->t) a_e^(-sigma)`. If `rho(M_1)<1`, generated values
+have counting function `O(X^sigma)` for some sigma<1, hence cannot cover
+all large primes. Its two-state example has three ternary branches only on
+one side and a multiply-by-nine return, exposing the missing global return
+cost. The condition `rho(M_1)>=1` is only necessary. Our finite control
+graph with unbounded vector-valued weights is not thereby a scalar affine
+bank: a valid reduction and all hypotheses would first have to be proved.
+
+The [attachment note](../session153_gadgets_20261103/gadgets/README.md)
+strengthens Session152's particular-source failure. Its strong H93 source
+has no retained-source extension to283 with at most three new vertices;
+its strong H95 source has none to287 or289 under the same bound. Two-vertex
+twin gadgets do realize281 from that H93 source and285 from that H95
+source. The inherited audits cover all arbitrary added arcs and use source
+padding to include smaller gadgets. This does not exclude other sources
+with the same H or four-vertex attachments. It directly reinforces our
+same-count/different-continuation warning, not a global ternary impossibility.
+
+The remaining notes fit existing mechanisms without supplying target entry:
+
+* [Ordinal-sum ear composition](../session153_gadgets_20261103/cuts/README.md)
+  retains endpoint corrections and a product of marked two-path covers.
+  Its full reverse connector grows at least `(ab+2)H`, obstructing that
+  particular bounded-offset ternary proposal along unbounded families.
+* [Twin-tower power sums](../session153_gadgets_20261103/connections/automata.md)
+  give a diagonal unary transfer and logarithmically sparse fixed-template
+  images. This does not obstruct noncommuting matrix alphabets or our
+  bounded-port construction. Abstract unipotent matrices still need an
+  actual tournament realization.
+* [One-feedback-vertex inverse](../session153_gadgets_20261103/strategy/word_interface.md)
+  restates the all-order omission13 with a bounded inverse test. It is
+  compatible with the already inherited modular-universal sparse family.
+* [Strong-component series](../session153_gadgets_20261103/species/SPECIES_TROPICAL.md)
+  recovers the earlier ordered-SCC generating function and minimum-order
+  divisor optimization. It retains unknown strong atoms rather than
+  constructing them; composite strong atoms can beat factor-by-factor order.
+* [Sevenfold symmetry](../session153_gadgets_20261103/cycles/RESULT.md)
+  gives the threshold H>=175 via a seven-orbit and injective insertion.
+  It is a necessary symmetry bound, not a new proof of the global gaps.
+* [Apex partition inversion](../session153_gadgets_20261103/mobius/NOTE.md)
+  expresses H through the linear coefficient of an alpha-permanent. The
+  bidirected apex is generally not a tournament, and signed cancellation
+  supplies no target realization or gap inequality by itself.
+
+Thus the procedural next test is sharper: before implementing a proposed
+affine bank, check all interface return paths and the spectral bound; before
+using prime-lane descent, write down the actual parent domain. Neither
+test substitutes for the paired endpoint data of the cap3 carrier.
+
+## 8. Last incoming checkpoint: a golden source inverse and transported offsets
+
+**CITED source review; new receipts not rerun.** Commit
+`f6d5304849e50b29df6e368239e92fffa92e57e3` adds the
+[golden-inverse packet](../golden_inverse_defects_20261103/README.md).
+[THEORY I1–I3](../golden_inverse_defects_20261103/THEORY.md) retains positive
+physical defect coordinates and a strictly increasing source rank. Inverting
+each of the65 integer matrices, testing integrality and cone guards, and
+recursively demanding actual ancestry gives a terminating sound and complete
+membership algorithm for the supplied bank. The finite scalar fibres are
+also decidable. This strengthens route3 in the same way the older digital
+inverse strengthened route1: a decision method is still not a proof that
+every allowed target is accepted.
+
+[TRANSPORT T1–T7](../golden_inverse_defects_20261103/TRANSPORT.md) gives actual
+states `(31,14,25)`, `(95,41,75)`, `(97,40,75)` differing by ternary scaling
+and one or two copies of `(2,-1,0)`. Prefixes in two specified symbols carry
+that correction by a parity sign; even parity gives both positive offsets
+for arbitrarily long prefixes. The construction replaces a named suffix,
+so it can escape a retained-source attachment obstruction. It does not
+preserve all old arcs or identify this replacement with a native metagraph
+edge. Its first output states already fail all four proposed next affine
+lifts in the bank, although the corresponding scalar values are attained
+by other states. Its supplied prefix family is also provably sparse.
+
+The useful common principle is now visible in three independent languages:
+digital, adaptive and golden source inverses certify actual objects, while
+prime/7p realization needs a globally covering choice of compatible states.
+The current correction to Session153 concerns a separate threshold sign;
+it does not affect the golden rank descent or these transported identities.

@@ -1,6 +1,16 @@
 {
   "base": "8b8310fbff889673355b269455512aa2d2c76620",
+  "final_incoming_reviewed": "583a44a8b19857f68ef880494ed6ab8b1b1467ac",
   "incoming_reviewed": "7c371e94aae8bd4994c2569ea92b60b0c56cd822",
+  "latest_incoming_reviewed": "f6d5304849e50b29df6e368239e92fffa92e57e3",
+  "repaired_sources": [
+    {
+      "base_commit": "583a44a8b19857f68ef880494ed6ab8b1b1467ac",
+      "change": "Correct negative-offset strict descent to K > |b_e|/(a_e-1); original source pin retained.",
+      "path": "05-knowledge/results/session153_gadgets_20261103/strategy/finite_certificate.md",
+      "sha256": "d3807ef2d6ce0fe7d3b1e1b4633999aabb165411d76576171f2dd228089b34ca"
+    }
+  ],
   "scope": "Linked mathematical source identities; history inventory separately records review depth. No claim to replay all inherited results.",
   "sources": [
     {
@@ -196,6 +206,24 @@
       "sha256": "611d9a6792ec1805201f43c69313d59a3dd401539cef5dd238d481b76b506aed"
     },
     {
+      "blob": "472a10df111375d0d92acc8e4fe8300676286c05",
+      "commit": "f6d5304849e50b29df6e368239e92fffa92e57e3",
+      "path": "05-knowledge/results/golden_inverse_defects_20261103/README.md",
+      "sha256": "0dd5e1e5c8c1475f6657139c6fc3427f3085212f12a45cdb46414fdb4e8e5954"
+    },
+    {
+      "blob": "48bd645e6c1008b066dbb50bf6b78e3cc6938497",
+      "commit": "f6d5304849e50b29df6e368239e92fffa92e57e3",
+      "path": "05-knowledge/results/golden_inverse_defects_20261103/THEORY.md",
+      "sha256": "895a9062de718344c95a093519e4d31bc1c28868eeafade8d9bb7c468966b830"
+    },
+    {
+      "blob": "102137ef53a114eaad2aa6a43b5856e2765f865a",
+      "commit": "f6d5304849e50b29df6e368239e92fffa92e57e3",
+      "path": "05-knowledge/results/golden_inverse_defects_20261103/TRANSPORT.md",
+      "sha256": "03183aa0957fd817393972510e7d924994ba7b77c6dde738f1a93c2722318b56"
+    },
+    {
       "blob": "7d2d24f6effb6f3a337104e17986d859088b6e0e",
       "commit": "7c371e94aae8bd4994c2569ea92b60b0c56cd822",
       "path": "05-knowledge/results/golden_seam_recurrence_20261103/README.md",
@@ -362,6 +390,60 @@
       "commit": "7c371e94aae8bd4994c2569ea92b60b0c56cd822",
       "path": "05-knowledge/results/session152_sequences_20261103/inductive_target/README.md",
       "sha256": "70914aa60135dcf4d14a118ae23201b7bc51950313eac3946782791157bea616"
+    },
+    {
+      "blob": "0de8ccf0cca7e927f0dc3894c29122731a348263",
+      "commit": "583a44a8b19857f68ef880494ed6ab8b1b1467ac",
+      "path": "05-knowledge/results/session153_gadgets_20261103/connections/automata.md",
+      "sha256": "240a2034fb25bf78a68353fcb96d18d9416919996ca97bec9756aa89402be86e"
+    },
+    {
+      "blob": "fb9068a8cd4d4333ed33fcce961795900b139a18",
+      "commit": "583a44a8b19857f68ef880494ed6ab8b1b1467ac",
+      "path": "05-knowledge/results/session153_gadgets_20261103/cuts/README.md",
+      "sha256": "be92e90de54ba4a7a8d3e2a3bdc5bf4a7a617def83f68fe5ca4697dfa208b4ca"
+    },
+    {
+      "blob": "087c6f0e793ec485fd581cbb34422370d9cd6a4f",
+      "commit": "583a44a8b19857f68ef880494ed6ab8b1b1467ac",
+      "path": "05-knowledge/results/session153_gadgets_20261103/cycles/RESULT.md",
+      "sha256": "d3740a60deb62be0aa1e3272aef02000bc8574f6524f9c6042a5c417b04fd947"
+    },
+    {
+      "blob": "ab29c68b6fe5f0c7d928c4c3afbaad7edad06ec1",
+      "commit": "583a44a8b19857f68ef880494ed6ab8b1b1467ac",
+      "path": "05-knowledge/results/session153_gadgets_20261103/gadgets/README.md",
+      "sha256": "7d766cad4ef0b8c4b01f5a1ff0deea8a673bedd7b72901fbec57f51f7a6ba07a"
+    },
+    {
+      "blob": "9bff8ccce968b726098912f6949fce67ac457cf7",
+      "commit": "583a44a8b19857f68ef880494ed6ab8b1b1467ac",
+      "path": "05-knowledge/results/session153_gadgets_20261103/mobius/NOTE.md",
+      "sha256": "477600a46022d98749238081b1ccbda67f2950e05c28a1ca35254ff2de8e6777"
+    },
+    {
+      "blob": "a1d9feda301fc74ad654004977c4722b6a4e76f6",
+      "commit": "583a44a8b19857f68ef880494ed6ab8b1b1467ac",
+      "path": "05-knowledge/results/session153_gadgets_20261103/rewriting/NOTE.md",
+      "sha256": "a800c6323ea851e8cb08b1ffad6e96f011f6998e32df2b5753cb24979af6b925"
+    },
+    {
+      "blob": "36139820f85e29badb7268f190e1cf3c5b28189c",
+      "commit": "583a44a8b19857f68ef880494ed6ab8b1b1467ac",
+      "path": "05-knowledge/results/session153_gadgets_20261103/species/SPECIES_TROPICAL.md",
+      "sha256": "b8a0193bc8114626b0bbd67b844fe119e3e0ccfa845f23004bf00009f61f07e8"
+    },
+    {
+      "blob": "ee8df5a25f69bac8a7f31cf264f8727e08e80982",
+      "commit": "583a44a8b19857f68ef880494ed6ab8b1b1467ac",
+      "path": "05-knowledge/results/session153_gadgets_20261103/strategy/finite_certificate.md",
+      "sha256": "23518e2eff66682a14f0344becbe4e65dd747701061445f4675a9d8b8e16d6bb"
+    },
+    {
+      "blob": "6ed16473a2242d88d727cc443077f552feb81bd6",
+      "commit": "583a44a8b19857f68ef880494ed6ab8b1b1467ac",
+      "path": "05-knowledge/results/session153_gadgets_20261103/strategy/word_interface.md",
+      "sha256": "e66804cb1b3dcb09590c1b33b89cc7ea8160c3d9290ff56d7a3e1c4612d97399"
     },
     {
       "blob": "d1a285da763da011f5cf5b7db561299d0a337121",
