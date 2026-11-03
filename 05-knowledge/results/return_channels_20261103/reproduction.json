@@ -1,0 +1,242 @@
+{
+  "status": "PASS",
+  "pinned_inputs": 109,
+  "cpp_runs": [
+    {
+      "command": [
+        "C:\\Users\\Eliott\\scoop\\apps\\gcc\\current\\bin\\g++.EXE",
+        "-O2",
+        "-std=c++17",
+        "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\two_birth.cpp",
+        "-o",
+        "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\.reproduce-birth.exe"
+      ],
+      "seconds": 0.809,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\.reproduce-birth.exe",
+        "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\parents55.txt",
+        "2"
+      ],
+      "seconds": 0.169,
+      "exit_code": 0,
+      "summary": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          4
+        ]
+      ]
+    },
+    {
+      "command": [
+        "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\.reproduce-birth.exe",
+        "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\representatives55.txt",
+        "3"
+      ],
+      "seconds": 5.039,
+      "exit_code": 0,
+      "summary": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          6,
+          18
+        ]
+      ]
+    }
+  ],
+  "python_runs": [
+    {
+      "script": "channels.py",
+      "result": "channels.json",
+      "sha256_lf": "6803c40337faac293342ae5f82a2cea201f846df9cf7502a00a6879e89731c71",
+      "runs": [
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\channels.py"
+          ],
+          "seconds": 1.909,
+          "stdout": "{\"status\": \"PASS\", \"M\": [798527, 31810907, 1262229579, 50075815519], \"seven_quotients\": [342223, 13633243, 540955531, 21461063791], \"gains\": [-45, -36, -6, -2, -1, 1, 2, 6, 13, 36, 45], \"literal_max_vertices\": 38, \"loop_characteristics\": {\"L2\": \"(X + 2)*(X**2 - 367*X - 30)\", \"L6\": \"(X - 6)*(X**2 - 1133*X + 90)\", \"L45\": \"(X - 45)*(X**2 - 1581580*X + 5985)\", \"L13\": \"(X - 13)*(X**2 - 348170*X + 81225)\"}, \"noncommuting_H\": [7450383, 12892021]}",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "-O",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\channels.py"
+          ],
+          "seconds": 1.932,
+          "stdout": "{\"status\": \"PASS\", \"M\": [798527, 31810907, 1262229579, 50075815519], \"seven_quotients\": [342223, 13633243, 540955531, 21461063791], \"gains\": [-45, -36, -6, -2, -1, 1, 2, 6, 13, 36, 45], \"literal_max_vertices\": 38, \"loop_characteristics\": {\"L2\": \"(X + 2)*(X**2 - 367*X - 30)\", \"L6\": \"(X - 6)*(X**2 - 1133*X + 90)\", \"L45\": \"(X - 45)*(X**2 - 1581580*X + 5985)\", \"L13\": \"(X - 13)*(X**2 - 348170*X + 81225)\"}, \"noncommuting_H\": [7450383, 12892021]}",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "script": "arithmetic_probe.py",
+      "result": "arithmetic.json",
+      "sha256_lf": "e496f51139db66f1d33b4588ef46d3b3f2aabb9fffcc524a0800ce1f1ae865dc",
+      "runs": [
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\arithmetic_probe.py"
+          ],
+          "seconds": 0.599,
+          "stdout": "{\"status\": \"PASS\", \"gain_values\": 51, \"squarefree_gains\": [1, 2, 6, 13, 26, 78], \"minimal_states\": {\"lambda\": 2, \"mu\": 7, \"lambda_mu\": 8, \"lambda_mu_orientation_phase\": 16}}",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "-O",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\arithmetic_probe.py"
+          ],
+          "seconds": 0.582,
+          "stdout": "{\"status\": \"PASS\", \"gain_values\": 51, \"squarefree_gains\": [1, 2, 6, 13, 26, 78], \"minimal_states\": {\"lambda\": 2, \"mu\": 7, \"lambda_mu\": 8, \"lambda_mu_orientation_phase\": 16}}",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "script": "port_guard.py",
+      "result": "port_guard.json",
+      "sha256_lf": "9e3ae172c05d8d01ca0aabc48d5c8aa47d2bfaf98a6f1cf667273ace518485ed",
+      "runs": [
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\port_guard.py"
+          ],
+          "seconds": 0.54,
+          "stdout": "{\"status\": \"PASS\", \"literal_joins\": 1270, \"kappa_values\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 18], \"linear_rank\": 4}",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "-O",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\port_guard.py"
+          ],
+          "seconds": 0.539,
+          "stdout": "{\"status\": \"PASS\", \"literal_joins\": 1270, \"kappa_values\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 18], \"linear_rank\": 4}",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "script": "birth_verify.py",
+      "result": "birth_verification.json",
+      "sha256_lf": "d0092b4ecee7b1845e33daa6ffe99100e9581dca39965cddbc011f942674ffad",
+      "runs": [
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\birth_verify.py"
+          ],
+          "seconds": 1.237,
+          "stdout": "{\"status\": \"PASS\", \"literal_samples\": 585, \"hostile_three_birth_orientations\": 33554432, \"positive_counts\": [4, 18], \"hostile\": {\"groups\": [81, 27], \"common_H\": [462915, 462915], \"port8_after_sink\": [2390013, 1754919], \"common_cyclic_triples\": 67}}",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "-O",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\birth_verify.py"
+          ],
+          "seconds": 1.238,
+          "stdout": "{\"status\": \"PASS\", \"literal_samples\": 585, \"hostile_three_birth_orientations\": 33554432, \"positive_counts\": [4, 18], \"hostile\": {\"groups\": [81, 27], \"common_H\": [462915, 462915], \"port8_after_sink\": [2390013, 1754919], \"common_cyclic_triples\": 67}}",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "script": "context_entry.py",
+      "result": "context_entry.json",
+      "sha256_lf": "fb49f222516ccfc544773c782a489cde0a036829310272c54b32d1c5c2f677b2",
+      "runs": [
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\context_entry.py"
+          ],
+          "seconds": 11.45,
+          "stdout": "{\"status\": \"PASS\", \"absent_states\": 942, \"pairs\": 61230, \"rescues\": 49}",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "-O",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\context_entry.py"
+          ],
+          "seconds": 11.281,
+          "stdout": "{\"status\": \"PASS\", \"absent_states\": 942, \"pairs\": 61230, \"rescues\": 49}",
+          "stderr": ""
+        }
+      ]
+    }
+  ]
+}

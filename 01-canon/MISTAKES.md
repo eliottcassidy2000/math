@@ -11,6 +11,14 @@ a historical synthesis or promoting computational evidence.
 - **Repair / strongest survivor:** the four-coordinate positive representation is closed and has minimum rational dimension4 when J1 is allowed. The cap1 C3 language still has minimum3. Individual map rank, reachable-span dimension and future-response rank are different quantities.
 - **Missing coordinate / new question:** retain the command-dependent image chart and its relations before comparing linear dimensions; a union of different low-rank images may require more observation coordinates. Exact matrices, actual minor and independent profile checks are in the linked packet and `AUDIT.md`.
 
+## 2026-11-03 — observer-image membership cannot be cancelled through a context
+
+- **Scope:** a candidate simplification of the 65-bank inverse, tested before promotion in `05-knowledge/results/return_channels_20261103/CONTEXT_ENTRY.md`. No accepted theorem is retracted.
+- **Witness / first failed implication:** `(3,0,3)` has no bank word, but singleton append sends it to `(3,3,3)`, realized by q1. Forward image closure does not imply backward closure under a named final matrix. There are 49 such entries among 61,230 tested state/letter pairs.
+- **Literal source loss:** C3 followed by a sink at the marked port has state `(3,0,3)` on four vertices. Its five-vertex singleton join has state `(3,3,3)`, whereas the q1 representative has four vertices. Their port-start counts are 0 and 1. Substituting the returned representative silently changes the supplied graph and its clock.
+- **Repair / strongest survivor:** retain the full guarded inverse, actual source and vertex clock. The new `PORT_GUARD.md`, P1-P3, proves `start(T star B,q)=kappa(B;b,q)*start(T,a)`. For all native blocks kappa is positive, so one extra bit exactly preserves future port-start feasibility. The zero-start source cannot be repaired by any further bank append. This bit does not classify every other legality predicate or re-marking.
+- **Next question:** which explicit source replacement, re-marking, or two-ended operation can cross the proved primitive-error parity barrier and return an actual legal next parent? Successful scalar H or observer-image membership alone is insufficient.
+
 ## 2026-11-03 — negative affine offsets reverse the inverse-descent threshold
 
 - **Scope:** the conditional multi-interface certificate in `05-knowledge/results/session153_gadgets_20261103/strategy/finite_certificate.md`, as received at `583a44a8b19857f68ef880494ed6ab8b1b1467ac`. No tournament spectrum theorem had been claimed.

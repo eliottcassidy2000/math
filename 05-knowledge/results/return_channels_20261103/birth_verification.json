@@ -1,0 +1,318 @@
+{
+  "status": "PASS",
+  "literal_sampled_extensions": 585,
+  "isomorphism_maps": [
+    {
+      "representative": 0,
+      "source": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "representative": 0,
+      "source": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        6,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "representative": 0,
+      "source": 4,
+      "permutation": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        3
+      ]
+    },
+    {
+      "representative": 2,
+      "source": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "representative": 2,
+      "source": 3,
+      "permutation": [
+        3,
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "representative": 2,
+      "source": 5,
+      "permutation": [
+        2,
+        3,
+        0,
+        1,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "positive_extensions": [
+    {
+      "parent": 6,
+      "born": 2,
+      "mask": 341,
+      "H": 111,
+      "rows": [
+        246,
+        236,
+        152,
+        241,
+        226,
+        68,
+        4,
+        96,
+        255
+      ]
+    },
+    {
+      "parent": 6,
+      "born": 2,
+      "mask": 6143,
+      "H": 111,
+      "rows": [
+        502,
+        492,
+        408,
+        497,
+        482,
+        196,
+        132,
+        0,
+        224
+      ]
+    },
+    {
+      "parent": 6,
+      "born": 2,
+      "mask": 17066,
+      "H": 111,
+      "rows": [
+        374,
+        364,
+        280,
+        369,
+        354,
+        68,
+        4,
+        383,
+        96
+      ]
+    },
+    {
+      "parent": 6,
+      "born": 2,
+      "mask": 27647,
+      "H": 111,
+      "rows": [
+        502,
+        492,
+        408,
+        497,
+        482,
+        324,
+        260,
+        352,
+        0
+      ]
+    },
+    {
+      "parent": 6,
+      "born": 3,
+      "mask": 4681,
+      "H": 111,
+      "rows": [
+        246,
+        236,
+        152,
+        241,
+        226,
+        68,
+        4,
+        96,
+        255,
+        511
+      ]
+    },
+    {
+      "parent": 6,
+      "born": 3,
+      "mask": 308955,
+      "H": 111,
+      "rows": [
+        502,
+        492,
+        408,
+        497,
+        482,
+        196,
+        132,
+        0,
+        224,
+        511
+      ]
+    },
+    {
+      "parent": 6,
+      "born": 3,
+      "mask": 917503,
+      "H": 111,
+      "rows": [
+        1014,
+        1004,
+        920,
+        1009,
+        994,
+        452,
+        388,
+        0,
+        128,
+        480
+      ]
+    },
+    {
+      "parent": 6,
+      "born": 3,
+      "mask": 2106514,
+      "H": 111,
+      "rows": [
+        374,
+        364,
+        280,
+        369,
+        354,
+        68,
+        4,
+        383,
+        96,
+        511
+      ]
+    },
+    {
+      "parent": 6,
+      "born": 3,
+      "mask": 2701019,
+      "H": 111,
+      "rows": [
+        502,
+        492,
+        408,
+        497,
+        482,
+        324,
+        260,
+        352,
+        0,
+        511
+      ]
+    },
+    {
+      "parent": 6,
+      "born": 3,
+      "mask": 3014655,
+      "H": 111,
+      "rows": [
+        1014,
+        1004,
+        920,
+        1009,
+        994,
+        452,
+        388,
+        256,
+        0,
+        480
+      ]
+    },
+    {
+      "parent": 6,
+      "born": 3,
+      "mask": 6300818,
+      "H": 111,
+      "rows": [
+        374,
+        364,
+        280,
+        369,
+        354,
+        68,
+        4,
+        895,
+        96,
+        383
+      ]
+    },
+    {
+      "parent": 6,
+      "born": 3,
+      "mask": 6909366,
+      "H": 111,
+      "rows": [
+        886,
+        876,
+        792,
+        881,
+        866,
+        324,
+        260,
+        895,
+        0,
+        352
+      ]
+    }
+  ],
+  "hostile81_27": {
+    "groups": [
+      81,
+      27
+    ],
+    "common_H": [
+      462915,
+      462915
+    ],
+    "port8_after_sink": [
+      2390013,
+      1754919
+    ],
+    "common_cyclic_triples": 67
+  },
+  "two_birth_hostile_orientations": 196608,
+  "three_birth_hostile_orientations": 33554432,
+  "positive_two_birth_count": 4,
+  "positive_three_birth_count": 18,
+  "scope": "No induced H111 extension with at most three added vertices for any of the six bank H55 presentations; four or more remain open."
+}

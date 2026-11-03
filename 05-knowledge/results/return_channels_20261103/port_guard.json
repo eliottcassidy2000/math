@@ -1,0 +1,319 @@
+{
+  "status": "PASS",
+  "factors": {
+    "a": {
+      "kappa": 1,
+      "first_atom_start_count": 1
+    },
+    "b": {
+      "kappa": 2,
+      "first_atom_start_count": 1
+    },
+    "q0": {
+      "kappa": 4,
+      "first_atom_start_count": 1
+    },
+    "q1": {
+      "kappa": 3,
+      "first_atom_start_count": 1
+    },
+    "q2": {
+      "kappa": 3,
+      "first_atom_start_count": 1
+    },
+    "q4": {
+      "kappa": 3,
+      "first_atom_start_count": 3
+    },
+    "q5": {
+      "kappa": 2,
+      "first_atom_start_count": 2
+    },
+    "r0": {
+      "kappa": 8,
+      "first_atom_start_count": 1
+    },
+    "r1": {
+      "kappa": 6,
+      "first_atom_start_count": 1
+    },
+    "r10": {
+      "kappa": 9,
+      "first_atom_start_count": 2
+    },
+    "r11": {
+      "kappa": 6,
+      "first_atom_start_count": 1
+    },
+    "r12": {
+      "kappa": 9,
+      "first_atom_start_count": 3
+    },
+    "r13": {
+      "kappa": 6,
+      "first_atom_start_count": 2
+    },
+    "r14": {
+      "kappa": 6,
+      "first_atom_start_count": 2
+    },
+    "r16": {
+      "kappa": 7,
+      "first_atom_start_count": 5
+    },
+    "r17": {
+      "kappa": 5,
+      "first_atom_start_count": 3
+    },
+    "r18": {
+      "kappa": 6,
+      "first_atom_start_count": 4
+    },
+    "r19": {
+      "kappa": 4,
+      "first_atom_start_count": 2
+    },
+    "r2": {
+      "kappa": 7,
+      "first_atom_start_count": 1
+    },
+    "r20": {
+      "kappa": 6,
+      "first_atom_start_count": 4
+    },
+    "r21": {
+      "kappa": 4,
+      "first_atom_start_count": 2
+    },
+    "r22": {
+      "kappa": 5,
+      "first_atom_start_count": 3
+    },
+    "r24": {
+      "kappa": 9,
+      "first_atom_start_count": 5
+    },
+    "r25": {
+      "kappa": 7,
+      "first_atom_start_count": 4
+    },
+    "r26": {
+      "kappa": 7,
+      "first_atom_start_count": 3
+    },
+    "r27": {
+      "kappa": 5,
+      "first_atom_start_count": 2
+    },
+    "r28": {
+      "kappa": 6,
+      "first_atom_start_count": 4
+    },
+    "r29": {
+      "kappa": 4,
+      "first_atom_start_count": 3
+    },
+    "r3": {
+      "kappa": 5,
+      "first_atom_start_count": 1
+    },
+    "r30": {
+      "kappa": 4,
+      "first_atom_start_count": 2
+    },
+    "r32": {
+      "kappa": 6,
+      "first_atom_start_count": 3
+    },
+    "r33": {
+      "kappa": 5,
+      "first_atom_start_count": 3
+    },
+    "r34": {
+      "kappa": 5,
+      "first_atom_start_count": 3
+    },
+    "r35": {
+      "kappa": 4,
+      "first_atom_start_count": 3
+    },
+    "r36": {
+      "kappa": 5,
+      "first_atom_start_count": 3
+    },
+    "r37": {
+      "kappa": 4,
+      "first_atom_start_count": 3
+    },
+    "r38": {
+      "kappa": 4,
+      "first_atom_start_count": 3
+    },
+    "r4": {
+      "kappa": 7,
+      "first_atom_start_count": 1
+    },
+    "r40": {
+      "kappa": 9,
+      "first_atom_start_count": 5
+    },
+    "r41": {
+      "kappa": 7,
+      "first_atom_start_count": 4
+    },
+    "r42": {
+      "kappa": 7,
+      "first_atom_start_count": 4
+    },
+    "r43": {
+      "kappa": 5,
+      "first_atom_start_count": 3
+    },
+    "r44": {
+      "kappa": 6,
+      "first_atom_start_count": 4
+    },
+    "r45": {
+      "kappa": 4,
+      "first_atom_start_count": 3
+    },
+    "r46": {
+      "kappa": 4,
+      "first_atom_start_count": 3
+    },
+    "r48": {
+      "kappa": 5,
+      "first_atom_start_count": 5
+    },
+    "r49": {
+      "kappa": 4,
+      "first_atom_start_count": 4
+    },
+    "r5": {
+      "kappa": 5,
+      "first_atom_start_count": 1
+    },
+    "r50": {
+      "kappa": 4,
+      "first_atom_start_count": 4
+    },
+    "r51": {
+      "kappa": 3,
+      "first_atom_start_count": 3
+    },
+    "r56": {
+      "kappa": 6,
+      "first_atom_start_count": 5
+    },
+    "r57": {
+      "kappa": 5,
+      "first_atom_start_count": 4
+    },
+    "r58": {
+      "kappa": 5,
+      "first_atom_start_count": 4
+    },
+    "r59": {
+      "kappa": 4,
+      "first_atom_start_count": 3
+    },
+    "r6": {
+      "kappa": 6,
+      "first_atom_start_count": 1
+    },
+    "r8": {
+      "kappa": 12,
+      "first_atom_start_count": 3
+    },
+    "r9": {
+      "kappa": 9,
+      "first_atom_start_count": 2
+    },
+    "s14": {
+      "kappa": 12,
+      "first_atom_start_count": 1
+    },
+    "s268": {
+      "kappa": 12,
+      "first_atom_start_count": 5
+    },
+    "s330": {
+      "kappa": 10,
+      "first_atom_start_count": 8
+    },
+    "s248": {
+      "kappa": 18,
+      "first_atom_start_count": 8
+    },
+    "s261": {
+      "kappa": 10,
+      "first_atom_start_count": 5
+    },
+    "s85": {
+      "kappa": 13,
+      "first_atom_start_count": 5
+    },
+    "s262": {
+      "kappa": 11,
+      "first_atom_start_count": 5
+    },
+    "s453": {
+      "kappa": 11,
+      "first_atom_start_count": 9
+    }
+  },
+  "literal_pointed_joins": 1270,
+  "same_observer_control": {
+    "extended_rows": [
+      26,
+      28,
+      25,
+      0,
+      8
+    ],
+    "bank_rows": [
+      0,
+      9,
+      3,
+      5
+    ],
+    "start_counts": [
+      0,
+      1
+    ]
+  },
+  "linear_rank_witness": [
+    [
+      31,
+      14,
+      25,
+      1
+    ],
+    [
+      187,
+      154,
+      193,
+      2
+    ],
+    [
+      417,
+      341,
+      411,
+      3
+    ],
+    [
+      3,
+      3,
+      3,
+      0
+    ],
+    [
+      3,
+      3,
+      3,
+      1
+    ]
+  ],
+  "linear_rank": 4,
+  "scope": "Coarsest future (H,port-start-feasibility) observer is hxy plus one bit for these joins; full source reconstruction is not claimed."
+}
