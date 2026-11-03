@@ -36,9 +36,9 @@
       "normal_exact": true,
       "optimized_exact": true,
       "receipt": "independent_audit.json",
-      "receipt_sha256": "bb7a78cb37500da325d498a335b55cc8d8108aaa5bbc22d21b0361571f2df67e",
+      "receipt_sha256": "6b53487168e7e776f9842ad369c438672718288355073f36e44c455b3aa6c2f1",
       "script": "independent_audit.py",
-      "script_sha256": "b81c9ae018467e22c08c295253eb79ca4b41ad6ccb1faf05c011cd9b6d63c850"
+      "script_sha256": "6c63d5ab3e3ad12b9f8b22d11eddb00754aa47143a0ce488a8d0dc912623a1af"
     }
   ],
   "scope": "Five frozen jobs reproduced in normal and optimized Python; no enlarged universe",

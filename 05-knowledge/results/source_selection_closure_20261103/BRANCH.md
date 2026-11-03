@@ -260,6 +260,18 @@ sink preserves H31 but yields no H31-preserving **first** native step among
 its 31 Hamilton paths. This cheap failed alternative says nothing about an
 excursion through other H values or a larger stabilized compiler.
 
+One final cheap probe joins these two candidate mechanisms. The k=1 balanced
+renewal from [NATIVE_SELECTION](NATIVE_SELECTION.md) ends at class C with
+physical ports (5,6), via universal word (3,4,6,4). Its unique neutral move,
+with path (4,5,6,3,1,2,0), gives rows (112,117,121,35,104,64,8).
+Keeping those ports, the next counts for masks1,2,3 are respectively
+213,187,341. Thus this particular junction overshoots every target through97
+on its first proper-cut birth; strict growth excludes later recovery in
+that append-only continuation. The B-isomorphic endpoint does not carry
+the successful pair from B4. `independent_audit.py` recounts these three
+values directly. This is a fixed-pair stopping reason, not a prohibition
+on another reset or on choosing a different initial terminal program.
+
 ## B7. Validation and the next proof interface
 
 Run from this directory:

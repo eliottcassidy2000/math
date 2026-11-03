@@ -5,6 +5,9 @@ consequence proved below. Incoming large computations were not rerun.**
 The session began at `04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8` in the
 clean reused isolated worktree. The first checkpoint push encountered eleven
 incoming commits through `da9c1c4caa`; these were read before integration.
+A second publication race brought seven further commits through
+`fa0a643acebf35322cc42d8051a18c26bd7028a3`, reviewed below. The computational
+inputs to our frozen jobs did not change in either integration.
 
 ## Independent recertification of the excluded counts
 
@@ -74,3 +77,66 @@ omission proofs reinforce the target exclusions; universal congruences
 remove any hope of reading full exact coverage off modular success alone.
 Our source and branch guards remain necessary obligations for the proposed
 constructive languages, not assertions about every possible tournament.
+
+## Further constructive operations and a literal cover-profile map
+
+[Session158 cyclic blocks](../session158_creative_20261103/cyclic_blocks/NOTE.md)
+and [carrier](../session158_creative_20261103/carrier/NOTE.md) consume ordered
+nonempty path-cover counts C_k(T). These are obtained exactly from our
+eighteen polynomials:
+
+    Q_T(z)=sum_s z^(|s|) P_s(z),
+    C_k(T)=k! [z^k] Q_T(z).
+
+Every cover has |s| marked-endpoint components and the anonymous components
+counted by P_s; the factor k! orders its components. Thus this aggregation
+preserves the entire input needed for uniform cyclic-block gluing. It loses
+the paired retained-port labels, so the eighteen polynomials must remain
+available when a later attachment distinguishes those ports. This is an
+explicit source/target map, not an analogy from similar dimensions.
+
+The [two-bin extension](../session158_creative_20261103/carrier/extension.md)
+uses f(T)=C_2(T)+2H(T), allowing either labelled path slot to be empty.
+In our rooted notation, f(T)=H(T)+sum_v F_v(T): each cover with a nonempty
+first slot has a unique endpoint v, and the remaining empty-first-slot
+case contributes H(T). This f is different from one fixed-root F.
+The pair (H,f) multiplies under ordinal sums. A cyclic wrapper with two
+singleton blocks gives H_new=H+f and is strong, even when its input block
+is weak. The supplied actual family has counts 5+2^(n+5), n>=0, including
+133=7*19 and8197=7*1171. It proves neither prime-value infinitude nor entry
+in our adaptive source grammar. It supplies a different operation to test
+at the sparse balanced boundary.
+
+[The reflection sandwich](../session158_creative_20261103/reflection/NOTE.md)
+uses an actual source A and Hamilton path p, its native partner X=K_p(A),
+and the endpoint a of p. Its portal variable r is exactly our rooted F(X,a),
+so its odd reflected native endpoint has count
+
+    H_new=F^2+2hF+(h-s)^2.
+
+The supplied91/187 hostile retains h,s but changes F. This construction
+uses two copies, a new central vertex and a specified reflected path; it
+changes H and yields a strong self-converse endpoint. It is outside the
+H-neutral physical-port selector and the balanced-renewal output language.
+No two-port entry or exact-target selector follows without a further map.
+
+[The binary bank](../session158_creative_20261103/binary_bank/NOTE.md)
+provides an exact inverse for its restricted strong transitive-deletion
+family and a47X/120+O(sqrt(X)) upper bound on distinct counts. This does not
+contradict the stronger polylogarithmic bound for the smaller Session157
+modular family. Its [FRACTRAN program](../session158_creative_20261103/binary_bank/FRACTRAN.md)
+is a terminating forward evaluator specialized to a supplied word, not
+an all-target inverse or a universal primegame realization theorem.
+
+[Square-overlap gadgets](../session158_creative_20261103/square_overlap/NOTE.md)
+give an actual two-feedback escape from the one-apex restriction, including
+H13, and a path-classified 2^A3^B response. The square-sum realization guard
+is separate from that unrestricted recurrence; it cannot be omitted to
+claim an all-B square-sum family. This continues the original prime-group/
+square-sum lane through actual boundary attachments, without identifying
+prime-group labels with the present tournament source states.
+
+History, spectrum and toothpick reviewed these operation scopes. Root
+checked the literal cover aggregation and the distinction between f and F.
+The incoming finite computations were not rerun, and none changes the open
+status of the full prime and7p lanes.

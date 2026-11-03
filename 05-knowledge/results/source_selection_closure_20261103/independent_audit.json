@@ -1,4 +1,9 @@
 {
+  "balanced_k1_native_junction_counts": [
+    213,
+    187,
+    341
+  ],
   "cofactor_separators": 54,
   "controller_edges": [
     [

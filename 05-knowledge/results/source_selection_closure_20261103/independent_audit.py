@@ -117,6 +117,12 @@ def main():
         V, pair = run(source, ports, endpoint['word'])
         need(V == tuple(endpoint['rows']) and pair == tuple(endpoint['ports']), 'literal retained ports')
         need(len(paths(V)) == target_h, 'independent factorial endpoint count')
+    # A cheap attempted junction of the balanced and H31-native mechanisms.
+    C, pair = run((2,4,1), (0,1), (3,4,6,4))
+    need(C == (10,4,1,22,39,79,31) and pair == (5,6), 'balanced k1 physical output')
+    D = native(C, (4,5,6,3,1,2,0))
+    junction = [len(paths(run(D,pair,(3*mask+2,))[0])) for mask in (1,2,3)]
+    need(junction == [213,187,341], 'fixed-pair junction overshoots all first ternary targets')
     # Projective closure computed from matrices, not a supplied transition table.
     todo = [(3,1)]; seen = {}; transitions = []
     while todo:
@@ -135,6 +141,7 @@ def main():
     need(all(h == 7*p and prime(p) for h,p in values), 'deterministic trial division controls')
     print(json.dumps(dict(status='PASS', grammar_matrices=28, cofactor_separators=54,
                          native_nodes=6, native_edges=edges, positive_branches=[95,97],
+                         balanced_k1_native_junction_counts=junction,
                          controller_states=sorted((str(x) for x in seen)), controller_edges=transitions,
                          seven_prime_controls=[{'H':h,'prime':p,'trial_division_bound':isqrt(p)}
                                                for h,p in values]),indent=2,sort_keys=True))

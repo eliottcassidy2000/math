@@ -1,5 +1,5 @@
 {
-  "incoming_reviewed_through": "da9c1c4caa4523fcf220a8c65b1fd85ee2e82ce3",
+  "incoming_reviewed_through": "fa0a643acebf35322cc42d8051a18c26bd7028a3",
   "scope": "Direct local document links and computational inputs; not a transitive dependency graph.",
   "session_base": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
   "sources": [
@@ -137,6 +137,69 @@
       "path": "05-knowledge/results/session157_gaps_20261103/universal/NOTE.md",
       "revision": "da9c1c4caa4523fcf220a8c65b1fd85ee2e82ce3",
       "sha256": "6172d56fc1765d016ebd70dd859b2d60be1ba85deed413f9840f8643a6c4b2d7"
+    },
+    {
+      "git_blob": "6731d8f00cc9cbdec419e9e1dc91dc99296a05ea",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session158_creative_20261103/binary_bank/FRACTRAN.md",
+      "revision": "fa0a643acebf35322cc42d8051a18c26bd7028a3",
+      "sha256": "ee3817c60bc46aacfc92edc890dcbf95408327daa07e73afcb13a4955bde052b"
+    },
+    {
+      "git_blob": "6378ffb05c0702320479e254b92fb32e900a24d3",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session158_creative_20261103/binary_bank/NOTE.md",
+      "revision": "fa0a643acebf35322cc42d8051a18c26bd7028a3",
+      "sha256": "df5168bb7fd0c5229a0e8f9b443ae6add302286112c77e6418ee737470df1152"
+    },
+    {
+      "git_blob": "6834275be186abebe29dfdad9ac5be46bf12e47a",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session158_creative_20261103/carrier/NOTE.md",
+      "revision": "fa0a643acebf35322cc42d8051a18c26bd7028a3",
+      "sha256": "6b5ad0cb3d7b3dcef5e14eca9770ebd61da5a23e6c350af9c72e799a47d4a1b1"
+    },
+    {
+      "git_blob": "a37e3c2c497a665ea8e576fa1e7a8088ac4abd67",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session158_creative_20261103/carrier/extension.md",
+      "revision": "fa0a643acebf35322cc42d8051a18c26bd7028a3",
+      "sha256": "b892b1c8351454333b899ee9f9bb75fdd0504c55e0dc3d3cbdd402a319459728"
+    },
+    {
+      "git_blob": "396e0a0fd4e99599320bbff5c0b9c0fe459380ce",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session158_creative_20261103/cyclic_blocks/NOTE.md",
+      "revision": "fa0a643acebf35322cc42d8051a18c26bd7028a3",
+      "sha256": "f56f98cbca5baf04f7dc20987aadbf47c03638bd29f8b14f8d355ba9bd73a925"
+    },
+    {
+      "git_blob": "4cfee3d516543fa23c97bb2271029ee8e09821a3",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session158_creative_20261103/reflection/NOTE.md",
+      "revision": "fa0a643acebf35322cc42d8051a18c26bd7028a3",
+      "sha256": "caa7bd434cb4f24ddc92bbcb98f6752a7584b880fae2ffe5242df8d1b5914195"
+    },
+    {
+      "git_blob": "94bb7a2c4f85aec254f1e89c28893b462cec6590",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session158_creative_20261103/square_overlap/NOTE.md",
+      "revision": "fa0a643acebf35322cc42d8051a18c26bd7028a3",
+      "sha256": "96ab59686b0086cc7d5d4d725702f43e8b017af478b8f50fe18870844bcb5d7d"
     },
     {
       "git_blob": "55e5a342ad499568c62de87ac17f66e68a517663",
