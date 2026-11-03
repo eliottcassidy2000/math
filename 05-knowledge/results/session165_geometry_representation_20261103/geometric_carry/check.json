@@ -1,0 +1,158 @@
+{
+  "checks": {
+    "Fibonacci residue cardinality": 16,
+    "Gaussian specialization": 15625,
+    "Zeckendorf gap": 10000,
+    "Zeckendorf sum": 10000,
+    "carry coboundary": 15625,
+    "carry reassociation": 19683,
+    "exact 2-adic distance": 523776,
+    "exact Gaussian content": 15625,
+    "full-support ball coset": 16,
+    "full-support ball residues": 16,
+    "independent endpoint DP": 8,
+    "integral normal product": 15625,
+    "literal order": 8,
+    "literal strength": 8,
+    "literal unique guard": 8,
+    "norm-65 example": 2,
+    "prime-local vanishing": 46875,
+    "quotient correspondence": 31250,
+    "quotient discriminant": 15625,
+    "strong-code decoding": 10000,
+    "transfer canonical state": 8
+  },
+  "literal_tournaments": [
+    {
+      "H": 3,
+      "guard": 0,
+      "order": 3,
+      "support": []
+    },
+    {
+      "H": 51,
+      "guard": 6,
+      "order": 8,
+      "support": [
+        2
+      ]
+    },
+    {
+      "H": 99,
+      "guard": 7,
+      "order": 9,
+      "support": [
+        3
+      ]
+    },
+    {
+      "H": 195,
+      "guard": 8,
+      "order": 10,
+      "support": [
+        4
+      ]
+    },
+    {
+      "H": 387,
+      "guard": 9,
+      "order": 11,
+      "support": [
+        5
+      ]
+    },
+    {
+      "H": 771,
+      "guard": 10,
+      "order": 12,
+      "support": [
+        6
+      ]
+    },
+    {
+      "H": 1539,
+      "guard": 11,
+      "order": 13,
+      "support": [
+        7
+      ]
+    },
+    {
+      "H": 3315,
+      "guard": 13,
+      "order": 15,
+      "support": [
+        2,
+        4
+      ]
+    }
+  ],
+  "residue_counts": [
+    [
+      4,
+      1
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      9,
+      13
+    ],
+    [
+      10,
+      21
+    ],
+    [
+      11,
+      34
+    ],
+    [
+      12,
+      55
+    ],
+    [
+      13,
+      89
+    ],
+    [
+      14,
+      144
+    ],
+    [
+      15,
+      233
+    ],
+    [
+      16,
+      377
+    ],
+    [
+      17,
+      610
+    ],
+    [
+      18,
+      987
+    ],
+    [
+      19,
+      1597
+    ]
+  ],
+  "status": "PASS",
+  "total_checks": 729799
+}
