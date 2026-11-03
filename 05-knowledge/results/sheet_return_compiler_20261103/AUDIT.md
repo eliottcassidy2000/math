@@ -54,6 +54,10 @@ isomorphism-class enumeration is asserted.
    actual programs, independently enumerates their paths, and checks their
    zero guards and retained-root phases. No minimal-path-length or exhaustive
    classification claim is made for this stopped search.
+9. `incoming.py` proves the exact index-two conjugacy to the incoming norm
+   transfer by a symbolic matrix identity, checks the cubic norm polynomial,
+   and verifies the literal two-interval factorization on16 small controls.
+   The all-size factorization follows by the pairwise arc argument in INCOMING.
 
 The recorded n=20,100,1000 values are recurrence evaluations for explicitly
 constructed tournaments of n+8 vertices. They are not direct permutation

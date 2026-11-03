@@ -61,6 +61,11 @@ this fixed root and growth language, not for arbitrary marks or attachments.
 Its projective *path-set* chart is also distinct from our projectivized
 *response-state* chart. The exact source and map are retained in both cases.
 
+[INCOMING.md](INCOMING.md) integrates the subsequent native65 branches,
+gives a literal two-interval native decomposition of the whole two-wing
+family, and transports the scalar streams to the incoming cubic norm shells.
+It preserves the correction distinguishing a surviving vertex from a live port.
+
 ## Where the switch stands
 
 For U_m=T_(m,1,2,2), V_m=T_(m,1,3,1), test every Hamilton path legal in both

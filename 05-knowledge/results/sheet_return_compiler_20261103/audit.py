@@ -12,6 +12,8 @@ def digest(path):return hashlib.sha256(path.read_bytes().replace(b'\r\n',b'\n'))
 
 
 def run():
+    from incoming import run as incoming_run
+    incoming_run()
     literal=[]
     for kind in ('straight','revisit'):
         for n in range(2,7):
@@ -105,6 +107,9 @@ def run():
       'overnight_rank_return_20261029/defect_transfer.json',
       'session35_dimensions_dualities_20261023/arithmetic/SINGER_LINE_FLIPS.md',
       'session166_planar_metagraph_20261103/reflection_voltages/REFLECTION_VOLTAGES.md',
+      'session167_recurring_structures_20261103/norm/NOTE.md',
+      'six_roots_hidden_bits_20261103/NATIVE_BRANCHES.md',
+      'joint_port_geometry_20261103/JOINT_EFFECTS.md',
       'golden_inverse_defects_20261103/inverse.py','ready_return_pentagon_20261103/return_program.py']
     out=dict(literal=literal,phase_hostile=control,next_escapes=next_checks,
              inherited_81_27_scope='unchanged twelve-vertex two/three-run separator, not a member of this specialized carrier',
