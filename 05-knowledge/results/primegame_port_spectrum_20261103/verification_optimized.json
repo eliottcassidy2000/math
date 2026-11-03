@@ -1,0 +1,207 @@
+{
+  "checks": 1276,
+  "first_jet": [
+    {
+      "n": 2,
+      "states": 1,
+      "orientations": 2,
+      "max_fibre": 2,
+      "collision": [
+        0,
+        1
+      ]
+    },
+    {
+      "n": 3,
+      "states": 8,
+      "orientations": 8,
+      "max_fibre": 1,
+      "collision": null
+    },
+    {
+      "n": 4,
+      "states": 64,
+      "orientations": 64,
+      "max_fibre": 1,
+      "collision": null
+    },
+    {
+      "n": 5,
+      "states": 1024,
+      "orientations": 1024,
+      "max_fibre": 1,
+      "collision": null
+    },
+    {
+      "n": 6,
+      "states": 32768,
+      "orientations": 32768,
+      "max_fibre": 1,
+      "collision": null
+    }
+  ],
+  "first_jet7": {
+    "n": 7,
+    "orientations": 2097152,
+    "path_cylinders": 5040,
+    "first_jet_states": 2097152,
+    "duplicate_states": 0,
+    "false_hash_matches": 0,
+    "first_collision": [
+      0,
+      0
+    ],
+    "exact_collision_comparisons": true
+  },
+  "literal_hessians": [
+    {
+      "n": 3,
+      "c": "2",
+      "cycle_multiplicity": 1,
+      "cut_multiplicity": 2
+    },
+    {
+      "n": 4,
+      "c": "2",
+      "cycle_multiplicity": 3,
+      "cut_multiplicity": 3
+    },
+    {
+      "n": 5,
+      "c": "3",
+      "cycle_multiplicity": 6,
+      "cut_multiplicity": 4
+    },
+    {
+      "n": 6,
+      "c": "6",
+      "cycle_multiplicity": 10,
+      "cut_multiplicity": 5
+    },
+    {
+      "n": 7,
+      "c": "15",
+      "cycle_multiplicity": 15,
+      "cut_multiplicity": 6
+    }
+  ],
+  "iterated_growth": [
+    {
+      "n": 3,
+      "mask": 0,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "value": 0,
+      "max_final_order": 6
+    },
+    {
+      "n": 3,
+      "mask": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "value": 2,
+      "max_final_order": 9
+    },
+    {
+      "n": 3,
+      "mask": 5,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "value": -2,
+      "max_final_order": 9
+    },
+    {
+      "n": 4,
+      "mask": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "value": 0,
+      "max_final_order": 10
+    },
+    {
+      "n": 4,
+      "mask": 17,
+      "edges": [
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "value": 0,
+      "max_final_order": 10
+    }
+  ],
+  "hostile": {
+    "groups": [
+      81,
+      27
+    ],
+    "common_H": [
+      462915,
+      462915
+    ],
+    "port8_after_sink": [
+      2390013,
+      1754919
+    ],
+    "common_cyclic_triples": 67
+  },
+  "tree_prefix_through": 20405,
+  "tree_classes_are_presentations": true,
+  "parity_contexts": 85,
+  "parity_example": {
+    "values": [
+      5,
+      5,
+      13,
+      9,
+      9,
+      11,
+      15,
+      13
+    ],
+    "moments": [
+      [
+        "10",
+        "113"
+      ],
+      [
+        "10",
+        "111"
+      ]
+    ],
+    "all_eight_shared_copies_replayed": true
+  }
+}

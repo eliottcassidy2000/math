@@ -1,0 +1,901 @@
+{
+  "blue_metagraph": {
+    "nodes": [
+      0,
+      2,
+      4,
+      5,
+      8,
+      10,
+      12,
+      40,
+      41,
+      76
+    ],
+    "pure_blue": [
+      0,
+      5,
+      76
+    ],
+    "mixed": [
+      8,
+      10,
+      12,
+      40,
+      41
+    ],
+    "pure_black": [
+      2,
+      4
+    ],
+    "blue_lines": [
+      [
+        10,
+        0
+      ],
+      [
+        12,
+        8
+      ],
+      [
+        41,
+        5
+      ],
+      [
+        76,
+        40
+      ],
+      [
+        76,
+        41
+      ],
+      [
+        12,
+        76
+      ],
+      [
+        41,
+        10
+      ],
+      [
+        10,
+        12
+      ]
+    ],
+    "black_lines": [
+      [
+        8,
+        2
+      ],
+      [
+        41,
+        4
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        12,
+        4
+      ],
+      [
+        40,
+        4
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        12,
+        41
+      ],
+      [
+        41,
+        41
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        41,
+        4
+      ],
+      [
+        40,
+        10
+      ],
+      [
+        41,
+        12
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        8,
+        41
+      ],
+      [
+        4,
+        12
+      ],
+      [
+        40,
+        4
+      ],
+      [
+        41,
+        8
+      ],
+      [
+        10,
+        8
+      ],
+      [
+        41,
+        41
+      ],
+      [
+        10,
+        40
+      ],
+      [
+        2,
+        8
+      ]
+    ],
+    "characteristic": "x**2*(x - 1)**2*(x + 1)**2*(x**2 - 2*x - 1)*(x**2 + 2*x - 1)",
+    "self_converse_characteristic": "(x - 1)**2*(x + 1)**2*(x**2 - 2*x - 1)*(x**2 + 2*x - 1)",
+    "mixed_characteristic": "x*(x**2 - x - 1)*(x**2 + x - 1)",
+    "pure_characteristic": "x**3"
+  },
+  "proposed_spectra": {
+    "first_charpoly": "x**5 + x**4 + 3*x**3/2 + 2*x**2 - x",
+    "second_charpoly": "x**5 - x**4 - 2*x**3 + x**2 - 3*x + 2",
+    "traces": [
+      -1,
+      1
+    ],
+    "first_nonintegral_coefficients": true
+  },
+  "quartet_cells": {
+    "JK": [
+      {
+        "word": "JK",
+        "minimum": 13,
+        "forbidden_multiplier_divisors": [
+          3,
+          7,
+          13,
+          17,
+          19,
+          23,
+          29
+        ],
+        "nonempty": true,
+        "product": "1"
+      },
+      {
+        "word": "KJ",
+        "minimum": 11,
+        "forbidden_multiplier_divisors": [
+          3,
+          7,
+          13,
+          17,
+          19,
+          23,
+          29
+        ],
+        "nonempty": true,
+        "product": "1"
+      }
+    ],
+    "AIMN": [
+      {
+        "word": "AIMN",
+        "minimum": 637,
+        "forbidden_multiplier_divisors": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29
+        ],
+        "nonempty": true,
+        "product": "55/637"
+      },
+      {
+        "word": "AINM",
+        "minimum": 637,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "AMIN",
+        "minimum": 637,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "AMNI",
+        "minimum": 637,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "ANIM",
+        "minimum": 637,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "ANMI",
+        "minimum": 637,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "IAMN",
+        "minimum": 10829,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "IANM",
+        "minimum": 10829,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "IMAN",
+        "minimum": 10829,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "IMNA",
+        "minimum": 10829,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "INAM",
+        "minimum": 10829,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "INMA",
+        "minimum": 10829,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "MAIN",
+        "minimum": 637,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "MANI",
+        "minimum": 637,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "MIAN",
+        "minimum": 10829,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "MINA",
+        "minimum": 10829,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "MNAI",
+        "minimum": 637,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "MNIA",
+        "minimum": 10829,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "NAIM",
+        "minimum": 637,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "NAMI",
+        "minimum": 637,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "NIAM",
+        "minimum": 10829,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "NIMA",
+        "minimum": 10829,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "NMAI",
+        "minimum": 637,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      },
+      {
+        "word": "NMIA",
+        "minimum": 10829,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "55/637"
+      }
+    ],
+    "CEFH": [
+      {
+        "word": "CEFH",
+        "minimum": 1683,
+        "forbidden_multiplier_divisors": [
+          2,
+          3,
+          5,
+          13,
+          17,
+          23,
+          29
+        ],
+        "nonempty": true,
+        "product": "539/153"
+      },
+      {
+        "word": "CEHF",
+        "minimum": 1683,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "CFEH",
+        "minimum": 4437,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "CFHE",
+        "minimum": 4437,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "CHEF",
+        "minimum": 153,
+        "forbidden_multiplier_divisors": [
+          2,
+          5,
+          11,
+          13,
+          17,
+          23,
+          29
+        ],
+        "nonempty": true,
+        "product": "539/153"
+      },
+      {
+        "word": "CHFE",
+        "minimum": 4437,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "ECFH",
+        "minimum": 1683,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "ECHF",
+        "minimum": 1683,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "EFCH",
+        "minimum": 1683,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "EFHC",
+        "minimum": 31977,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "EHCF",
+        "minimum": 31977,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "EHFC",
+        "minimum": 31977,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "FCEH",
+        "minimum": 4437,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "FCHE",
+        "minimum": 4437,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "FECH",
+        "minimum": 4437,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "FEHC",
+        "minimum": 84303,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "FHCE",
+        "minimum": 84303,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "FHEC",
+        "minimum": 84303,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "HCEF",
+        "minimum": 2907,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "HCFE",
+        "minimum": 84303,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "HECF",
+        "minimum": 2907,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "HEFC",
+        "minimum": 2907,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "HFCE",
+        "minimum": 84303,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      },
+      {
+        "word": "HFEC",
+        "minimum": 84303,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "539/153"
+      }
+    ],
+    "BDGL": [
+      {
+        "word": "BDGL",
+        "minimum": 3230,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "BDLG",
+        "minimum": 3230,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "BGDL",
+        "minimum": 3910,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "BGLD",
+        "minimum": 3910,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "BLDG",
+        "minimum": 3230,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "BLGD",
+        "minimum": 3910,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "DBGL",
+        "minimum": 3230,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "DBLG",
+        "minimum": 3230,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "DGBL",
+        "minimum": 646,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "DGLB",
+        "minimum": 1292,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "DLBG",
+        "minimum": 1292,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "DLGB",
+        "minimum": 1292,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "GBDL",
+        "minimum": 782,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "GBLD",
+        "minimum": 782,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "GDBL",
+        "minimum": 782,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "GDLB",
+        "minimum": 1564,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "GLBD",
+        "minimum": 782,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "GLDB",
+        "minimum": 1564,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "LBDG",
+        "minimum": 646,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "LBGD",
+        "minimum": 782,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "LDBG",
+        "minimum": 1292,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "LDGB",
+        "minimum": 1292,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "LGBD",
+        "minimum": 782,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      },
+      {
+        "word": "LGDB",
+        "minimum": 1564,
+        "forbidden_multiplier_divisors": [
+          1
+        ],
+        "nonempty": false,
+        "product": "585/34"
+      }
+    ]
+  },
+  "guard_checks": 7400,
+  "grading": [
+    -4,
+    0,
+    -4,
+    2,
+    2,
+    2,
+    2,
+    3,
+    -1,
+    3,
+    -2,
+    1
+  ]
+}

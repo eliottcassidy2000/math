@@ -1,0 +1,98 @@
+{
+  "checks": 2057,
+  "examples": [
+    {
+      "n": 2,
+      "mask": 0,
+      "ports": [
+        0,
+        1
+      ],
+      "counts": [
+        5,
+        3,
+        15,
+        13
+      ],
+      "derivative": 0
+    },
+    {
+      "n": 3,
+      "mask": 0,
+      "ports": [
+        0,
+        1
+      ],
+      "counts": [
+        5,
+        3,
+        15,
+        13
+      ],
+      "derivative": 0
+    },
+    {
+      "n": 6,
+      "mask": 16,
+      "ports": [
+        0,
+        1
+      ],
+      "counts": [
+        53,
+        51,
+        167,
+        157
+      ],
+      "derivative": -8
+    },
+    {
+      "n": 6,
+      "mask": 16,
+      "ports": [
+        0,
+        2
+      ],
+      "counts": [
+        73,
+        51,
+        239,
+        215
+      ],
+      "derivative": -2
+    }
+  ],
+  "first_jet": [
+    {
+      "n": 2,
+      "classes": 1,
+      "cube": 2,
+      "max_fibre": 2,
+      "collision": [
+        0,
+        1
+      ]
+    },
+    {
+      "n": 3,
+      "classes": 8,
+      "cube": 8,
+      "max_fibre": 1,
+      "collision": null
+    },
+    {
+      "n": 4,
+      "classes": 64,
+      "cube": 64,
+      "max_fibre": 1,
+      "collision": null
+    },
+    {
+      "n": 5,
+      "classes": 1024,
+      "cube": 1024,
+      "max_fibre": 1,
+      "collision": null
+    }
+  ]
+}

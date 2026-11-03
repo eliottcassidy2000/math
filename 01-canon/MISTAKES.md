@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-02 — two singleton births retain an endpoint correction
+
+- **Scope:** prepublication derivation in `05-knowledge/results/primegame_port_spectrum_20261103/GROWTH_FAITHFULNESS.md`; no accepted theorem is retracted. Let B_x append a vertex beating only the named old port x, b_x=H(B_x A), and e_x count full parent paths ending x.
+- **Minimal witness / failed implication:** for A=(0->1), b_0=3 and b_1=1, but both double-birth orders have H=5. The proposed commutator omitted the endpoint term 2(e_y-e_x); matching the interior two-path covers alone does not count paths whose old suffix is empty.
+- **Repair / strongest survivor:** retain that term in the exact unpadded identity. Appending a universal sink first makes e_x=e_y=0 for every old port. Four actual growth queries then recover the old-edge derivative at all orders; all 991 representative port pairs through order six check both versions.
+- **Missing coordinate / next question:** endpoint counts, port names and creation order are required before quotienting. The repaired signed response is an observation identity, not a positive gadget realizing a prescribed Hamiltonian count. Finding such a gadget remains open.
+
 ## 2026-11-02 — a pasted projective pentad and MRB decay do not define tournament structure
 
 - **Scope:** the user's inspirational attachment, audited in `05-knowledge/results/two_selector_boolean_20261102/INSPIRATION.md`; no accepted repository theorem is retracted.
