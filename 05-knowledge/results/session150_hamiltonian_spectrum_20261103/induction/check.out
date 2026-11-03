@@ -1,0 +1,6 @@
+r=1, witnesses=1, minimum=3, maximum=3, DP=PASS
+r=2, witnesses=2, minimum=9, maximum=11, DP=PASS
+r=3, witnesses=4, minimum=33, maximum=51, DP=PASS
+r=4, witnesses=8, minimum=129, maximum=227, DP=PASS
+r=5, witnesses=16, minimum=513, maximum=963, DP=PASS
+r=6, witnesses=32, minimum=2049, maximum=3971, DP=PASS
