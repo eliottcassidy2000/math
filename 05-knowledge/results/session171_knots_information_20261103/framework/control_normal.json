@@ -1,0 +1,6 @@
+{
+  "weighted_boundary_cases": 360,
+  "all_single_vertex_orders": 1056,
+  "exhaustive_F2_d2_observer_systems": 1024,
+  "status": "PASS"
+}
