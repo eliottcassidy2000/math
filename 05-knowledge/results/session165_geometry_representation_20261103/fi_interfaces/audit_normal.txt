@@ -1,0 +1,1 @@
+{'profile_pairs': 64, 'currying_and_adjunction_triples': 512, 'literal_matching_cases': 96, 'pointed_complement_cases': 24, 'status': 'PASS'}
