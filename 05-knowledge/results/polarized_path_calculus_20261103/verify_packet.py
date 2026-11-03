@@ -9,11 +9,12 @@ HERE=Path(__file__).resolve().parent
 
 
 def digest(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
 
 
 def main():
-    record={'checks':{},'source_hashes':{},'inherited_hashes':{}}
+    record={'checks':{},'source_hashes':{},'inherited_hashes':{},
+            'hash_convention':'SHA-256 of UTF-8 files with CRLF normalized to LF'}
     for script,output in (('explore.py','explore.out'),('counts.py','counts.json'),('recognize.py','recognition.json')):
         values=[]
         for optimize in (False,True):
@@ -24,7 +25,7 @@ def main():
             raise RuntimeError(('optimized mismatch',script))
         (HERE/output).write_text(values[0],encoding='utf-8',newline='\n')
         record['checks'][script]={'normal_optimized_identical':True,'output_sha256':digest(HERE/output)}
-    for name in ('explore.py','counts.py','recognize.py','verify_packet.py','README.md','FUNNELS.md','CALCULUS.md','AUDIT.md'):
+    for name in ('explore.py','counts.py','recognize.py','verify_packet.py','README.md','FUNNELS.md','CALCULUS.md','AUDIT.md','INCOMING.md'):
         record['source_hashes'][name]=digest(HERE/name)
     for rel in ('golden_inverse_defects_20261103/inverse.py','golden_seam_recurrence_20261103/atom_atlas.json'):
         record['inherited_hashes'][rel]=digest(HERE.parent/rel)
