@@ -1,0 +1,54 @@
+{
+  "jobs": [
+    {
+      "normal_exact": true,
+      "optimized_exact": true,
+      "receipt": "rooted_resets.json",
+      "receipt_sha256": "fd303cc132feb5fda082ecafa9635334a3888d93107cc08797d77bedc686d3ce",
+      "script": "rooted_resets.py",
+      "script_sha256": "77010c7265ed0ad817aa1648d051bb23c526d2167a847829883bc3bef3a4cf69"
+    },
+    {
+      "normal_exact": true,
+      "optimized_exact": true,
+      "receipt": "mixed_returns.json",
+      "receipt_sha256": "240a3b6fdf42f9d8ef7cf5cebb87b67fa65ada641a1c7d8220eecaef4cc9a53d",
+      "script": "mixed_returns.py",
+      "script_sha256": "9dd2b597ad67fcbb7868a985e73bce12fc61c8056ac655f8ebe379a00e010430"
+    },
+    {
+      "normal_exact": true,
+      "optimized_exact": true,
+      "receipt": "observer_induction_probe.json",
+      "receipt_sha256": "fde7e705e02d9601ac2716dd713ab53af4b454d73d500ec8b28594f55e6c06fe",
+      "script": "observer_induction_probe.py",
+      "script_sha256": "ea04d82837b067aa0ad6b798932d1fe35e281d8e5b6f9bd51313b202ae812df8"
+    },
+    {
+      "normal_exact": true,
+      "optimized_exact": true,
+      "receipt": "observer_induction_basis.json",
+      "receipt_sha256": "a067d15958cd4f3d803a581190576786cc966c880e305fcb71f35669388c17b1",
+      "script": "observer_induction_basis.py",
+      "script_sha256": "0495459416498a25580c895bb2ad416b0d8a3264206a4fba9cab44f5902c3580"
+    },
+    {
+      "normal_exact": true,
+      "optimized_exact": true,
+      "receipt": "native_reset_induction_probe.json",
+      "receipt_sha256": "99d340e50e0f045b76d5e86ac9e32efb6ae5f3a6f1bd71ce970a8a04fa86a17f",
+      "script": "native_reset_induction_probe.py",
+      "script_sha256": "b40553def8cc5ad7491532808d29e109afb44eb0e12c199f765454435b84b223"
+    },
+    {
+      "normal_exact": true,
+      "optimized_exact": true,
+      "receipt": "observer_induction_reset_audit.json",
+      "receipt_sha256": "6a58cf494a1e0d2b60587cd14603ec5252015ccbec6e6b048c65ef139d2cc38b",
+      "script": "observer_induction_reset_audit.py",
+      "script_sha256": "6b6773defe51b78c7868715fdd0ba9e0aa009318fa5c78a7eb38428b36990141"
+    }
+  ],
+  "scope": "Six frozen jobs reproduced in normal and optimized Python; no expanded scan universe",
+  "status": "PASS"
+}

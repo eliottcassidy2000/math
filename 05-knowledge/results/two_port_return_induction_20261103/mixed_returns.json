@@ -1,0 +1,1967 @@
+{
+  "actual_seed_controls": {
+    "U": {
+      "bulk": [
+        25,
+        34
+      ],
+      "normalized_Y": 25,
+      "processing_word": [
+        "r5",
+        "a",
+        "a"
+      ],
+      "singleton_queries": [
+        31,
+        59,
+        109
+      ],
+      "state": [
+        31,
+        14,
+        25
+      ]
+    },
+    "U2": {
+      "bulk": [
+        75,
+        102
+      ],
+      "normalized_Y": 25,
+      "processing_word": [
+        "a",
+        "a",
+        "q1",
+        "a",
+        "a"
+      ],
+      "singleton_queries": [
+        95,
+        177,
+        327
+      ],
+      "state": [
+        95,
+        41,
+        75
+      ]
+    },
+    "U4": {
+      "bulk": [
+        75,
+        102
+      ],
+      "normalized_Y": 25,
+      "processing_word": [
+        "q0",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      "singleton_queries": [
+        97,
+        177,
+        327
+      ],
+      "state": [
+        97,
+        40,
+        75
+      ]
+    }
+  },
+  "hostile_targets": [
+    {
+      "bulk": [
+        25,
+        34
+      ],
+      "name": "original_U",
+      "ratio": "34/25",
+      "stages": [],
+      "state": [
+        31,
+        14,
+        25
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        75,
+        102
+      ],
+      "name": "original_U2",
+      "ratio": "34/25",
+      "stages": [],
+      "state": [
+        95,
+        41,
+        75
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        75,
+        102
+      ],
+      "name": "original_U4",
+      "ratio": "34/25",
+      "stages": [],
+      "state": [
+        97,
+        40,
+        75
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        239,
+        460
+      ],
+      "name": "compact_0",
+      "ratio": "460/239",
+      "stages": [],
+      "state": [
+        287,
+        206,
+        239
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        239,
+        432
+      ],
+      "name": "compact_1",
+      "ratio": "432/239",
+      "stages": [],
+      "state": [
+        289,
+        191,
+        239
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        281,
+        432
+      ],
+      "name": "compact_2",
+      "ratio": "432/281",
+      "stages": [],
+      "state": [
+        293,
+        210,
+        281
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        260,
+        467
+      ],
+      "name": "compact_3",
+      "ratio": "467/260",
+      "stages": [],
+      "state": [
+        295,
+        216,
+        260
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        218,
+        271
+      ],
+      "name": "clock_twin_0",
+      "ratio": "271/218",
+      "stages": [],
+      "state": [
+        293,
+        98,
+        218
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        204,
+        383
+      ],
+      "name": "clock_twin_1",
+      "ratio": "383/204",
+      "stages": [],
+      "state": [
+        293,
+        147,
+        204
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        75,
+        102
+      ],
+      "name": "tree_0",
+      "ratio": "34/25",
+      "stages": [],
+      "state": [
+        95,
+        41,
+        75
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        75,
+        102
+      ],
+      "name": "tree_1",
+      "ratio": "34/25",
+      "stages": [],
+      "state": [
+        97,
+        40,
+        75
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        239,
+        460
+      ],
+      "name": "tree_2",
+      "ratio": "460/239",
+      "stages": [],
+      "state": [
+        287,
+        206,
+        239
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        204,
+        383
+      ],
+      "name": "tree_3",
+      "ratio": "383/204",
+      "stages": [],
+      "state": [
+        289,
+        149,
+        204
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        218,
+        271
+      ],
+      "name": "tree_4",
+      "ratio": "271/218",
+      "stages": [],
+      "state": [
+        293,
+        98,
+        218
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        260,
+        467
+      ],
+      "name": "tree_5",
+      "ratio": "467/260",
+      "stages": [],
+      "state": [
+        295,
+        216,
+        260
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        682,
+        925
+      ],
+      "name": "tree_6",
+      "ratio": "925/682",
+      "stages": [],
+      "state": [
+        863,
+        372,
+        682
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        661,
+        932
+      ],
+      "name": "tree_7",
+      "ratio": "932/661",
+      "stages": [],
+      "state": [
+        865,
+        364,
+        661
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        682,
+        925
+      ],
+      "name": "tree_8",
+      "ratio": "925/682",
+      "stages": [],
+      "state": [
+        869,
+        369,
+        682
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        766,
+        1457
+      ],
+      "name": "tree_9",
+      "ratio": "1457/766",
+      "stages": [],
+      "state": [
+        871,
+        676,
+        766
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        885,
+        1380
+      ],
+      "name": "tree_10",
+      "ratio": "92/59",
+      "stages": [
+        {
+          "charge_fibre": {
+            "g_max": 180,
+            "g_min": -90,
+            "g_mod_2": 0,
+            "odd_h_possible": true
+          },
+          "offset_candidates_NOT_actual_certificates": [
+            {
+              "m": -2,
+              "physical_integer_parent": [
+                331,
+                262,
+                315
+              ]
+            },
+            {
+              "m": -1,
+              "physical_integer_parent": [
+                329,
+                263,
+                315
+              ]
+            },
+            {
+              "m": 1,
+              "physical_integer_parent": [
+                325,
+                265,
+                315
+              ]
+            },
+            {
+              "m": 2,
+              "physical_integer_parent": [
+                323,
+                266,
+                315
+              ]
+            }
+          ],
+          "parent_bulk": [
+            315,
+            540
+          ],
+          "return_word": [
+            "b"
+          ]
+        }
+      ],
+      "state": [
+        881,
+        692,
+        885
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        689,
+        974
+      ],
+      "name": "tree_11",
+      "ratio": "974/689",
+      "stages": [],
+      "state": [
+        883,
+        390,
+        689
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        556,
+        1023
+      ],
+      "name": "tree_12",
+      "ratio": "1023/556",
+      "stages": [],
+      "state": [
+        887,
+        346,
+        556
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        675,
+        792
+      ],
+      "name": "tree_13",
+      "ratio": "88/75",
+      "stages": [],
+      "state": [
+        889,
+        289,
+        675
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        1983,
+        2810
+      ],
+      "name": "tree_14",
+      "ratio": "2810/1983",
+      "stages": [],
+      "state": [
+        2591,
+        1101,
+        1983
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        2060,
+        2915
+      ],
+      "name": "tree_15",
+      "ratio": "583/412",
+      "stages": [],
+      "state": [
+        2593,
+        1191,
+        2060
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        2641,
+        4112
+      ],
+      "name": "tree_16",
+      "ratio": "4112/2641",
+      "stages": [
+        {
+          "charge_fibre": {
+            "g_max": 568,
+            "g_min": -102,
+            "g_mod_2": 0,
+            "odd_h_possible": true
+          },
+          "offset_candidates_NOT_actual_certificates": [
+            {
+              "m": -2,
+              "physical_integer_parent": [
+                1039,
+                784,
+                903
+              ]
+            },
+            {
+              "m": -1,
+              "physical_integer_parent": [
+                1037,
+                785,
+                903
+              ]
+            },
+            {
+              "m": 1,
+              "physical_integer_parent": [
+                1033,
+                787,
+                903
+              ]
+            },
+            {
+              "m": 2,
+              "physical_integer_parent": [
+                1031,
+                788,
+                903
+              ]
+            }
+          ],
+          "parent_bulk": [
+            903,
+            1704
+          ],
+          "return_word": [
+            "b"
+          ]
+        }
+      ],
+      "state": [
+        2597,
+        2078,
+        2641
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        1472,
+        3405
+      ],
+      "name": "tree_17",
+      "ratio": "3405/1472",
+      "stages": [],
+      "state": [
+        2599,
+        1139,
+        1472
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        2018,
+        2789
+      ],
+      "name": "tree_18",
+      "ratio": "2789/2018",
+      "stages": [],
+      "state": [
+        2609,
+        1099,
+        2018
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        1808,
+        2761
+      ],
+      "name": "tree_19",
+      "ratio": "2761/1808",
+      "stages": [],
+      "state": [
+        2611,
+        979,
+        1808
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        2578,
+        4021
+      ],
+      "name": "tree_20",
+      "ratio": "4021/2578",
+      "stages": [
+        {
+          "charge_fibre": {
+            "g_max": 519,
+            "g_min": -291,
+            "g_mod_2": 1,
+            "odd_h_possible": true
+          },
+          "offset_candidates_NOT_actual_certificates": [
+            {
+              "m": -2,
+              "physical_integer_parent": [
+                817,
+                832,
+                924
+              ]
+            },
+            {
+              "m": -1,
+              "physical_integer_parent": [
+                815,
+                833,
+                924
+              ]
+            },
+            {
+              "m": 1,
+              "physical_integer_parent": [
+                811,
+                835,
+                924
+              ]
+            },
+            {
+              "m": 2,
+              "physical_integer_parent": [
+                809,
+                836,
+                924
+              ]
+            }
+          ],
+          "parent_bulk": [
+            924,
+            1557
+          ],
+          "return_word": [
+            "b"
+          ]
+        },
+        {
+          "charge_fibre": {
+            "g_max": 33,
+            "g_min": 3,
+            "g_mod_2": 1,
+            "odd_h_possible": true
+          },
+          "offset_candidates_NOT_actual_certificates": [],
+          "parent_bulk": [
+            48,
+            99
+          ],
+          "return_word": [
+            "q2",
+            "b"
+          ]
+        }
+      ],
+      "state": [
+        2615,
+        1992,
+        2578
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        2018,
+        2775
+      ],
+      "name": "tree_21",
+      "ratio": "2775/2018",
+      "stages": [],
+      "state": [
+        2617,
+        1088,
+        2018
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        1857,
+        2698
+      ],
+      "name": "tree_22",
+      "ratio": "2698/1857",
+      "stages": [],
+      "state": [
+        2645,
+        955,
+        1857
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        2053,
+        2908
+      ],
+      "name": "tree_23",
+      "ratio": "2908/2053",
+      "stages": [],
+      "state": [
+        2647,
+        1157,
+        2053
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        1969,
+        2432
+      ],
+      "name": "tree_24",
+      "ratio": "2432/1969",
+      "stages": [],
+      "state": [
+        2651,
+        875,
+        1969
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        2025,
+        2824
+      ],
+      "name": "tree_25",
+      "ratio": "2824/2025",
+      "stages": [],
+      "state": [
+        2653,
+        1098,
+        2025
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        2095,
+        2964
+      ],
+      "name": "tree_26",
+      "ratio": "2964/2095",
+      "stages": [],
+      "state": [
+        2663,
+        1198,
+        2095
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        2585,
+        4420
+      ],
+      "name": "tree_27",
+      "ratio": "884/517",
+      "stages": [],
+      "state": [
+        2665,
+        2170,
+        2585
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    },
+    {
+      "bulk": [
+        1801,
+        2810
+      ],
+      "name": "tree_28",
+      "ratio": "2810/1801",
+      "stages": [
+        {
+          "charge_fibre": {
+            "g_max": 358,
+            "g_min": -228,
+            "g_mod_2": 0,
+            "odd_h_possible": true
+          },
+          "offset_candidates_NOT_actual_certificates": [],
+          "parent_bulk": [
+            651,
+            1074
+          ],
+          "return_word": [
+            "b"
+          ]
+        }
+      ],
+      "state": [
+        2669,
+        971,
+        1801
+      ],
+      "stop": "NONINTEGRAL_LAST_MACRO_INVERSE"
+    },
+    {
+      "bulk": [
+        1885,
+        2726
+      ],
+      "name": "tree_29",
+      "ratio": "94/65",
+      "stages": [],
+      "state": [
+        2671,
+        970,
+        1885
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES"
+    }
+  ],
+  "inherited_transport_positive_controls": [
+    {
+      "actual_parent_state": [
+        95,
+        41,
+        75
+      ],
+      "actual_parent_word": [
+        "a",
+        "a",
+        "q1",
+        "a",
+        "a"
+      ],
+      "m": -1,
+      "return_word": [
+        "b"
+      ],
+      "stages": [
+        {
+          "charge_fibre": {
+            "g_max": 34,
+            "g_min": -48,
+            "g_mod_2": 0,
+            "odd_h_possible": true
+          },
+          "offset_candidates_NOT_actual_certificates": [
+            {
+              "m": -2,
+              "physical_integer_parent": [
+                97,
+                40,
+                75
+              ]
+            },
+            {
+              "m": -1,
+              "physical_integer_parent": [
+                95,
+                41,
+                75
+              ]
+            },
+            {
+              "m": 1,
+              "physical_integer_parent": [
+                91,
+                43,
+                75
+              ]
+            },
+            {
+              "m": 2,
+              "physical_integer_parent": [
+                89,
+                44,
+                75
+              ]
+            }
+          ],
+          "parent_bulk": [
+            75,
+            102
+          ],
+          "return_word": [
+            "b"
+          ]
+        }
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES",
+      "target_processing_word": [
+        "r5",
+        "a",
+        "a",
+        "b"
+      ],
+      "target_state": [
+        187,
+        154,
+        193
+      ]
+    },
+    {
+      "actual_parent_state": [
+        95,
+        41,
+        75
+      ],
+      "actual_parent_word": [
+        "a",
+        "a",
+        "q1",
+        "a",
+        "a"
+      ],
+      "m": 1,
+      "return_word": [
+        "q2"
+      ],
+      "stages": [
+        {
+          "charge_fibre": {
+            "g_max": 34,
+            "g_min": -48,
+            "g_mod_2": 0,
+            "odd_h_possible": true
+          },
+          "offset_candidates_NOT_actual_certificates": [
+            {
+              "m": -2,
+              "physical_integer_parent": [
+                89,
+                44,
+                75
+              ]
+            },
+            {
+              "m": -1,
+              "physical_integer_parent": [
+                91,
+                43,
+                75
+              ]
+            },
+            {
+              "m": 1,
+              "physical_integer_parent": [
+                95,
+                41,
+                75
+              ]
+            },
+            {
+              "m": 2,
+              "physical_integer_parent": [
+                97,
+                40,
+                75
+              ]
+            }
+          ],
+          "parent_bulk": [
+            75,
+            102
+          ],
+          "return_word": [
+            "q2"
+          ]
+        }
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES",
+      "target_processing_word": [
+        "r5",
+        "a",
+        "a",
+        "q2"
+      ],
+      "target_state": [
+        417,
+        341,
+        411
+      ]
+    },
+    {
+      "actual_parent_state": [
+        95,
+        41,
+        75
+      ],
+      "actual_parent_word": [
+        "a",
+        "a",
+        "q1",
+        "a",
+        "a"
+      ],
+      "m": 1,
+      "return_word": [
+        "s78"
+      ],
+      "stages": [
+        {
+          "charge_fibre": {
+            "g_max": 34,
+            "g_min": -48,
+            "g_mod_2": 0,
+            "odd_h_possible": true
+          },
+          "offset_candidates_NOT_actual_certificates": [
+            {
+              "m": -2,
+              "physical_integer_parent": [
+                89,
+                44,
+                75
+              ]
+            },
+            {
+              "m": -1,
+              "physical_integer_parent": [
+                91,
+                43,
+                75
+              ]
+            },
+            {
+              "m": 1,
+              "physical_integer_parent": [
+                95,
+                41,
+                75
+              ]
+            },
+            {
+              "m": 2,
+              "physical_integer_parent": [
+                97,
+                40,
+                75
+              ]
+            }
+          ],
+          "parent_bulk": [
+            75,
+            102
+          ],
+          "return_word": [
+            "s78"
+          ]
+        }
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES",
+      "target_processing_word": [
+        "r5",
+        "a",
+        "a",
+        "s78"
+      ],
+      "target_state": [
+        4141,
+        2203,
+        2877
+      ]
+    },
+    {
+      "actual_parent_state": [
+        95,
+        41,
+        75
+      ],
+      "actual_parent_word": [
+        "a",
+        "a",
+        "q1",
+        "a",
+        "a"
+      ],
+      "m": -1,
+      "return_word": [
+        "b",
+        "q2"
+      ],
+      "stages": [
+        {
+          "charge_fibre": {
+            "g_max": 302,
+            "g_min": -252,
+            "g_mod_2": 0,
+            "odd_h_possible": true
+          },
+          "offset_candidates_NOT_actual_certificates": [
+            {
+              "m": -2,
+              "physical_integer_parent": [
+                557,
+                464,
+                579
+              ]
+            },
+            {
+              "m": -1,
+              "physical_integer_parent": [
+                559,
+                463,
+                579
+              ]
+            },
+            {
+              "m": 1,
+              "physical_integer_parent": [
+                563,
+                461,
+                579
+              ]
+            },
+            {
+              "m": 2,
+              "physical_integer_parent": [
+                565,
+                460,
+                579
+              ]
+            }
+          ],
+          "parent_bulk": [
+            579,
+            906
+          ],
+          "return_word": [
+            "q2"
+          ]
+        },
+        {
+          "charge_fibre": {
+            "g_max": 34,
+            "g_min": -48,
+            "g_mod_2": 0,
+            "odd_h_possible": true
+          },
+          "offset_candidates_NOT_actual_certificates": [
+            {
+              "m": -2,
+              "physical_integer_parent": [
+                97,
+                40,
+                75
+              ]
+            },
+            {
+              "m": -1,
+              "physical_integer_parent": [
+                95,
+                41,
+                75
+              ]
+            },
+            {
+              "m": 1,
+              "physical_integer_parent": [
+                91,
+                43,
+                75
+              ]
+            },
+            {
+              "m": 2,
+              "physical_integer_parent": [
+                89,
+                44,
+                75
+              ]
+            }
+          ],
+          "parent_bulk": [
+            75,
+            102
+          ],
+          "return_word": [
+            "b",
+            "q2"
+          ]
+        }
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES",
+      "target_processing_word": [
+        "r5",
+        "a",
+        "a",
+        "b",
+        "q2"
+      ],
+      "target_state": [
+        3325,
+        2797,
+        3331
+      ]
+    },
+    {
+      "actual_parent_state": [
+        95,
+        41,
+        75
+      ],
+      "actual_parent_word": [
+        "a",
+        "a",
+        "q1",
+        "a",
+        "a"
+      ],
+      "m": -1,
+      "return_word": [
+        "s78",
+        "b"
+      ],
+      "stages": [
+        {
+          "charge_fibre": {
+            "g_max": 5670,
+            "g_min": -252,
+            "g_mod_2": 0,
+            "odd_h_possible": true
+          },
+          "offset_candidates_NOT_actual_certificates": [
+            {
+              "m": -2,
+              "physical_integer_parent": [
+                12427,
+                6607,
+                8631
+              ]
+            },
+            {
+              "m": -1,
+              "physical_integer_parent": [
+                12425,
+                6608,
+                8631
+              ]
+            },
+            {
+              "m": 1,
+              "physical_integer_parent": [
+                12421,
+                6610,
+                8631
+              ]
+            },
+            {
+              "m": 2,
+              "physical_integer_parent": [
+                12419,
+                6611,
+                8631
+              ]
+            }
+          ],
+          "parent_bulk": [
+            8631,
+            17010
+          ],
+          "return_word": [
+            "b"
+          ]
+        },
+        {
+          "charge_fibre": {
+            "g_max": 34,
+            "g_min": -48,
+            "g_mod_2": 0,
+            "odd_h_possible": true
+          },
+          "offset_candidates_NOT_actual_certificates": [
+            {
+              "m": -2,
+              "physical_integer_parent": [
+                97,
+                40,
+                75
+              ]
+            },
+            {
+              "m": -1,
+              "physical_integer_parent": [
+                95,
+                41,
+                75
+              ]
+            },
+            {
+              "m": 1,
+              "physical_integer_parent": [
+                91,
+                43,
+                75
+              ]
+            },
+            {
+              "m": 2,
+              "physical_integer_parent": [
+                89,
+                44,
+                75
+              ]
+            }
+          ],
+          "parent_bulk": [
+            75,
+            102
+          ],
+          "return_word": [
+            "s78",
+            "b"
+          ]
+        }
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES",
+      "target_processing_word": [
+        "r5",
+        "a",
+        "a",
+        "s78",
+        "b"
+      ],
+      "target_state": [
+        24461,
+        20645,
+        25725
+      ]
+    },
+    {
+      "actual_parent_state": [
+        95,
+        41,
+        75
+      ],
+      "actual_parent_word": [
+        "a",
+        "a",
+        "q1",
+        "a",
+        "a"
+      ],
+      "m": -4,
+      "return_word": [
+        "D"
+      ],
+      "stages": [
+        {
+          "charge_fibre": {
+            "g_max": 34,
+            "g_min": -48,
+            "g_mod_2": 0,
+            "odd_h_possible": true
+          },
+          "offset_candidates_NOT_actual_certificates": [],
+          "parent_bulk": [
+            75,
+            102
+          ],
+          "return_word": [
+            "D"
+          ]
+        }
+      ],
+      "stop": "OUTSIDE_ALL_LAST_MACRO_CONES",
+      "target_processing_word": [
+        "r5",
+        "a",
+        "a",
+        "r24",
+        "a",
+        "a",
+        "a",
+        "b",
+        "r24",
+        "a",
+        "a",
+        "a"
+      ],
+      "target_state": [
+        33868343,
+        15615527,
+        26989950
+      ]
+    }
+  ],
+  "interval_order": [
+    "D",
+    "b",
+    "q2",
+    "s78"
+  ],
+  "literal_U_count": 31,
+  "literal_U_permutations": 5040,
+  "macros": {
+    "D": {
+      "25X_minus_34Y_after_Q_coefficients": [
+        929325,
+        348375
+      ],
+      "P": [
+        [
+          336359,
+          155087,
+          268050
+        ],
+        [
+          672726,
+          310170,
+          536100
+        ],
+        [
+          560922,
+          258618,
+          447000
+        ]
+      ],
+      "Q": [
+        [
+          715050,
+          1009641
+        ],
+        [
+          268050,
+          378483
+        ]
+      ],
+      "Y_growth_lower": 715050,
+      "det_Q": -900,
+      "image_ratio_interval": [
+        "71503/50640",
+        "336547/238350"
+      ],
+      "normalized_height_growth_lower": "79450",
+      "processing_word": [
+        "r24",
+        "a",
+        "a",
+        "a",
+        "b",
+        "r24",
+        "a",
+        "a",
+        "a"
+      ],
+      "tau_gain": -4,
+      "v3_det": 2
+    },
+    "b": {
+      "25X_minus_34Y_after_Q_coefficients": [
+        30,
+        7
+      ],
+      "P": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          4,
+          3,
+          4
+        ],
+        [
+          4,
+          2,
+          3
+        ]
+      ],
+      "Q": [
+        [
+          5,
+          8
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "Y_growth_lower": 5,
+      "det_Q": -1,
+      "image_ratio_interval": [
+        "17/11",
+        "8/5"
+      ],
+      "normalized_height_growth_lower": "5",
+      "processing_word": [
+        "b"
+      ],
+      "tau_gain": -1,
+      "v3_det": 0
+    },
+    "q2": {
+      "25X_minus_34Y_after_Q_coefficients": [
+        76,
+        39
+      ],
+      "P": [
+        [
+          5,
+          3,
+          4
+        ],
+        [
+          8,
+          7,
+          8
+        ],
+        [
+          6,
+          6,
+          7
+        ]
+      ],
+      "Q": [
+        [
+          11,
+          18
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "Y_growth_lower": 11,
+      "det_Q": 5,
+      "image_ratio_interval": [
+        "18/11",
+        "39/23"
+      ],
+      "normalized_height_growth_lower": "11",
+      "processing_word": [
+        "q2"
+      ],
+      "tau_gain": 1,
+      "v3_det": 0
+    },
+    "s78": {
+      "25X_minus_34Y_after_Q_coefficients": [
+        1182,
+        423
+      ],
+      "P": [
+        [
+          41,
+          21,
+          28
+        ],
+        [
+          80,
+          43,
+          56
+        ],
+        [
+          70,
+          38,
+          49
+        ]
+      ],
+      "Q": [
+        [
+          77,
+          152
+        ],
+        [
+          28,
+          55
+        ]
+      ],
+      "Y_growth_lower": 77,
+      "det_Q": -21,
+      "image_ratio_interval": [
+        "317/161",
+        "152/77"
+      ],
+      "normalized_height_growth_lower": "77/3",
+      "processing_word": [
+        "s78"
+      ],
+      "tau_gain": 1,
+      "v3_det": 1
+    }
+  },
+  "scope": "seven-macro height obstruction; four-macro physical bulk decoder; no coverage census",
+  "separate_seven_macro_obstruction_additions": {
+    "L13": {
+      "P": [
+        [
+          85297,
+          63564,
+          76220
+        ],
+        [
+          170568,
+          127141,
+          152440
+        ],
+        [
+          151880,
+          113220,
+          135745
+        ]
+      ],
+      "Q": [
+        [
+          211965,
+          378780
+        ],
+        [
+          76220,
+          136205
+        ]
+      ],
+      "Y_growth_lower": 211965,
+      "det_Q": 81225,
+      "normalized_height_growth_lower": "70655/3",
+      "processing_word": [
+        "r19",
+        "r19",
+        "a",
+        "a",
+        "r18"
+      ],
+      "tau_gain": 13,
+      "v3_det": 2,
+      "vertices_added": 17
+    },
+    "L45": {
+      "P": [
+        [
+          275091,
+          326468,
+          366879
+        ],
+        [
+          550092,
+          652981,
+          733758
+        ],
+        [
+          489942,
+          581616,
+          653553
+        ]
+      ],
+      "Q": [
+        [
+          1020432,
+          1560769
+        ],
+        [
+          366879,
+          561148
+        ]
+      ],
+      "Y_growth_lower": 1020432,
+      "det_Q": 5985,
+      "normalized_height_growth_lower": "340144/3",
+      "processing_word": [
+        "r19",
+        "r32",
+        "r48",
+        "q4"
+      ],
+      "tau_gain": 45,
+      "v3_det": 2,
+      "vertices_added": 19
+    },
+    "L6": {
+      "P": [
+        [
+          207,
+          238,
+          270
+        ],
+        [
+          402,
+          482,
+          540
+        ],
+        [
+          330,
+          404,
+          450
+        ]
+      ],
+      "Q": [
+        [
+          720,
+          1101
+        ],
+        [
+          270,
+          413
+        ]
+      ],
+      "Y_growth_lower": 720,
+      "det_Q": 90,
+      "normalized_height_growth_lower": "80",
+      "processing_word": [
+        "r24",
+        "q4"
+      ],
+      "tau_gain": 6,
+      "v3_det": 2,
+      "vertices_added": 9
+    }
+  },
+  "source_inverse_alphabet": [
+    "a",
+    "b",
+    "q0",
+    "q1",
+    "q2",
+    "q4",
+    "q5",
+    "r0",
+    "r1",
+    "r10",
+    "r11",
+    "r12",
+    "r13",
+    "r14",
+    "r16",
+    "r17",
+    "r18",
+    "r19",
+    "r2",
+    "r20",
+    "r21",
+    "r22",
+    "r24",
+    "r25",
+    "r26",
+    "r27",
+    "r28",
+    "r29",
+    "r3",
+    "r30",
+    "r32",
+    "r33",
+    "r34",
+    "r35",
+    "r36",
+    "r37",
+    "r38",
+    "r4",
+    "r40",
+    "r41",
+    "r42",
+    "r43",
+    "r44",
+    "r45",
+    "r46",
+    "r48",
+    "r49",
+    "r5",
+    "r50",
+    "r51",
+    "r56",
+    "r57",
+    "r58",
+    "r59",
+    "r6",
+    "r8",
+    "r9",
+    "s14",
+    "s268",
+    "s330",
+    "s248",
+    "s261",
+    "s85",
+    "s262",
+    "s453",
+    "s78"
+  ],
+  "source_inverse_queries": [
+    {
+      "candidate_state": [
+        331,
+        262,
+        315
+      ],
+      "m": -2,
+      "return_word": [
+        "b"
+      ],
+      "status": "ABSENT_IN_66_BANK",
+      "target": "tree_10"
+    },
+    {
+      "candidate_state": [
+        329,
+        263,
+        315
+      ],
+      "m": -1,
+      "return_word": [
+        "b"
+      ],
+      "status": "ABSENT_IN_66_BANK",
+      "target": "tree_10"
+    },
+    {
+      "candidate_state": [
+        325,
+        265,
+        315
+      ],
+      "m": 1,
+      "return_word": [
+        "b"
+      ],
+      "status": "ABSENT_IN_66_BANK",
+      "target": "tree_10"
+    },
+    {
+      "candidate_state": [
+        323,
+        266,
+        315
+      ],
+      "m": 2,
+      "return_word": [
+        "b"
+      ],
+      "status": "ABSENT_IN_66_BANK",
+      "target": "tree_10"
+    },
+    {
+      "candidate_state": [
+        1039,
+        784,
+        903
+      ],
+      "m": -2,
+      "return_word": [
+        "b"
+      ],
+      "status": "ABSENT_IN_66_BANK",
+      "target": "tree_16"
+    },
+    {
+      "candidate_state": [
+        1037,
+        785,
+        903
+      ],
+      "m": -1,
+      "return_word": [
+        "b"
+      ],
+      "status": "ABSENT_IN_66_BANK",
+      "target": "tree_16"
+    },
+    {
+      "candidate_state": [
+        1033,
+        787,
+        903
+      ],
+      "m": 1,
+      "return_word": [
+        "b"
+      ],
+      "status": "ABSENT_IN_66_BANK",
+      "target": "tree_16"
+    },
+    {
+      "candidate_state": [
+        1031,
+        788,
+        903
+      ],
+      "m": 2,
+      "return_word": [
+        "b"
+      ],
+      "status": "ABSENT_IN_66_BANK",
+      "target": "tree_16"
+    },
+    {
+      "candidate_state": [
+        817,
+        832,
+        924
+      ],
+      "m": -2,
+      "return_word": [
+        "b"
+      ],
+      "status": "ABSENT_IN_66_BANK",
+      "target": "tree_20"
+    },
+    {
+      "candidate_state": [
+        815,
+        833,
+        924
+      ],
+      "m": -1,
+      "return_word": [
+        "b"
+      ],
+      "status": "ABSENT_IN_66_BANK",
+      "target": "tree_20"
+    },
+    {
+      "candidate_state": [
+        811,
+        835,
+        924
+      ],
+      "m": 1,
+      "return_word": [
+        "b"
+      ],
+      "status": "ABSENT_IN_66_BANK",
+      "target": "tree_20"
+    },
+    {
+      "candidate_state": [
+        809,
+        836,
+        924
+      ],
+      "m": 2,
+      "return_word": [
+        "b"
+      ],
+      "status": "ABSENT_IN_66_BANK",
+      "target": "tree_20"
+    }
+  ],
+  "source_sha256_lf": {
+    "golden_seam_recurrence_20261103/atom_atlas.json": "b7f7715f5e6577c056da67ea2752f4643bd4ae16a8ef06707c2286032b434eba",
+    "ternary_repair_clock_20261103/receipt.json": "6dd57691e399114b2623285397dd70bce9916a27ff707c3709f00fb3158f33ba"
+  },
+  "status": "PASS"
+}

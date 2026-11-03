@@ -4,6 +4,20 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — continuation divisibility needs a growth guard to exclude later primes
+
+- **Scope:** prepublication R3 in `05-knowledge/results/two_port_return_induction_20261103/ROOTED_RESETS.md`; no accepted theorem is retracted.
+- **Witness / first failed implication:** the universal seventeen-query divisor is monotone for actual two-port sources, but an adaptive birth need not strictly increase H on a weak source. TT2->C3 with both ports in TT2 has H=D=3; a birth at its universal source can preserve the prime count3. The draft applied a strong-source growth fact outside its domain.
+- **Repair / strongest survivor:** retain the universal exact continuation gcd and its divisibility monotonicity. The exclusion of all later prime outputs requires a nonempty continuation from a strong source of order at least3, as in the C3 construction language. All native H15 factor-escape examples obey that guard.
+- **Missing coordinate / next question:** the supplied graph's strongness and a strict growth certificate are separate from its future-H observer. A scalar observer can have both strong and weak representatives, so source legality cannot be inferred from its values alone.
+
+## 2026-11-03 — three neutral native examples do not establish an infinite neutral reset
+
+- **Scope:** prepublication native-star/chain candidate in `05-knowledge/results/two_port_return_induction_20261103/NATIVE_RESET_INDUCTION.md`, N2. No accepted theorem is retracted.
+- **Witness / first failed implication:** the specified native map sends every constant-root star to a newborn chain, but their equal counts5,9,17 diverge at the next source:33 becomes31. A provisional message incorrectly said equality was checked through the fourth birth. The two sequences obey different recurrences.
+- **Repair / strongest survivor:** retain the all-order named graph map and the finite H9/H17 neutral repairs. The exact difference recurrence proves strict decrease at every later size. It also supplies a four-source obstruction to any fixed linear update of the seventeen-query observer for this native selector.
+- **Missing coordinate / next question:** the selected path and actual ancestry determine the native transformation; H and a few coincident terms do not. The distinct internal-port module-reversal family in N7 has a genuine all-order endpoint-H preservation proof and an explicitly growing native implementation clock.
+
 ## 2026-11-03 — low-rank commands need not share a low-dimensional observer
 
 - **Scope:** prepublication block-switch derivation in `05-knowledge/results/adaptive_state_induction_20261103/BLOCK_SWITCH.md`; no accepted theorem is retracted.
