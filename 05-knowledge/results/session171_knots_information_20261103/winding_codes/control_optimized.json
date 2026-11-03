@@ -1,0 +1,77 @@
+{
+  "seed_controls": [
+    {
+      "seed": 153,
+      "profile": [
+        29,
+        131,
+        162,
+        77,
+        15,
+        1
+      ],
+      "canonical": 153
+    },
+    {
+      "seed": 8345,
+      "profile": [
+        29,
+        131,
+        162,
+        77,
+        15,
+        1
+      ],
+      "canonical": 177
+    },
+    {
+      "seed": 8337,
+      "profile": [
+        29,
+        131,
+        162,
+        77,
+        15,
+        1
+      ],
+      "canonical": 181
+    },
+    {
+      "seed": 8369,
+      "profile": [
+        29,
+        131,
+        162,
+        77,
+        15,
+        1
+      ],
+      "canonical": 153
+    },
+    {
+      "seed": 177,
+      "profile": [
+        29,
+        131,
+        162,
+        77,
+        15,
+        1
+      ],
+      "canonical": 177
+    },
+    {
+      "seed": 185,
+      "profile": [
+        29,
+        131,
+        162,
+        77,
+        15,
+        1
+      ],
+      "canonical": 181
+    }
+  ],
+  "repetition_radius3_syndromes": 64
+}
