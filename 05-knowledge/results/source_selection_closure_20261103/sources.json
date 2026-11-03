@@ -1,6 +1,6 @@
 {
-  "incoming_reviewed_through": "fa0a643acebf35322cc42d8051a18c26bd7028a3",
-  "scope": "Direct local document links and computational inputs; not a transitive dependency graph.",
+  "incoming_reviewed_through": "6bb391f902df4a6fd34b947a7923f64a0d5e6057",
+  "scope": "Direct document links and computational inputs, not transitive dependencies. The locally updated mistakes ledger is excluded. One incoming prose correction is pinned as its published source plus exact replacement and repaired hash.",
   "session_base": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
   "sources": [
     {
@@ -193,6 +193,20 @@
       "sha256": "caa7bd434cb4f24ddc92bbcb98f6752a7584b880fae2ffe5242df8d1b5914195"
     },
     {
+      "git_blob": "f427926783760a6204e9c092f9bac3f8941928a9",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session158_creative_20261103/square_overlap/CONTIGUOUS.md",
+      "reviewed_prose_repair": {
+        "after": "the interior vertices are beaten by all original labels",
+        "before": "the interior vertices dominate all original labels",
+        "repaired_sha256": "1687657a9e1b8d63694d5121c258efb959ee2b33ce978a636b04da515313f11f"
+      },
+      "revision": "6bb391f902df4a6fd34b947a7923f64a0d5e6057",
+      "sha256": "398e5c78e4a43f570933629b545814334805e857d0f6c893d2a10a19526ca935"
+    },
+    {
       "git_blob": "94bb7a2c4f85aec254f1e89c28893b462cec6590",
       "kinds": [
         "direct document link"
@@ -200,6 +214,15 @@
       "path": "05-knowledge/results/session158_creative_20261103/square_overlap/NOTE.md",
       "revision": "fa0a643acebf35322cc42d8051a18c26bd7028a3",
       "sha256": "96ab59686b0086cc7d5d4d725702f43e8b017af478b8f50fe18870844bcb5d7d"
+    },
+    {
+      "git_blob": "9bb16d4be2336a962c72cd8003bd32819bf629a1",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session158_creative_20261103/square_overlap/ZECKENDORF.md",
+      "revision": "6bb391f902df4a6fd34b947a7923f64a0d5e6057",
+      "sha256": "f261c09002300bcf1b8029bec8120f2840da797f40203919f75cdda848e88cc4"
     },
     {
       "git_blob": "55e5a342ad499568c62de87ac17f66e68a517663",
