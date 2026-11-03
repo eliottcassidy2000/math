@@ -1,0 +1,10 @@
+{
+  "scope": "Two complements, same ordered neighbours at an original one-in/out-neighbour clone port, then a uniform birth preserving that degree; both m=1 and m=2 must satisfy the offset. First-complement targets sorted by (H, path).",
+  "negative_prefixes": [
+    {"source_H":1463,"offset":2,"first_ranks":[0,34],"eligible_second_programs":6630,"scalar_hits":113},
+    {"source_H":1463,"offset":2,"first_ranks":[35,129],"eligible_second_programs":34416,"scalar_hits":893},
+    {"source_H":1465,"offset":2,"first_ranks":[0,59],"eligible_second_programs":16391,"scalar_hits":526},
+    {"source_H":1465,"offset":2,"first_ranks":[60,179],"eligible_second_programs":39791,"scalar_hits":1658}
+  ],
+  "interpretation": "No uniform lift was found in these candidate prefixes. All finite strong +2 branches exist. No exhaustion of all two-complement programs, no all-size nonexistence, and no missing scalar value is claimed."
+}

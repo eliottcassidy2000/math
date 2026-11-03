@@ -6,6 +6,11 @@ with separate counting implementations. No literature-priority claim.
 The assertion that 7 and 21 are the only missing odd tournament Hamilton-path
 counts, and a source bank closed under both ternary offsets, remain **OPEN**.
 
+**Continuation:** [state-dependent returns and six all-size clone lifts](../adaptive_four_returns_20261103/README.md)
+constructs both next branches from all four order-12 targets and proves six
+uniform offset families. It retains the ancestral F49/F343 phase while
+distinguishing the new transitive-clone clock from the interval-growth clock.
+
 This continues [the defect/switch/escape packet](../defect_offset_dynamics_20261103/README.md).
 Input was `46b5a24e463e`; incoming `168cad0700` is discussed below.
 
