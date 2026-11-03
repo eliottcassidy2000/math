@@ -1,0 +1,621 @@
+{
+  "all_checks_passed": true,
+  "collatz_balls": {
+    "20": {
+      "honeycomb_capacity": 631,
+      "shell": 117,
+      "triangular_capacity": 1261,
+      "vertices": 557
+    },
+    "21": {
+      "honeycomb_capacity": 694,
+      "shell": 147,
+      "triangular_capacity": 1387,
+      "vertices": 704
+    },
+    "24": {
+      "honeycomb_capacity": 901,
+      "shell": 294,
+      "triangular_capacity": 1801,
+      "vertices": 1418
+    },
+    "26": {
+      "honeycomb_capacity": 1054,
+      "shell": 471,
+      "triangular_capacity": 2107,
+      "vertices": 2263
+    }
+  },
+  "collatz_first_capacity_violations": {
+    "honeycomb": 21,
+    "triangular": 26
+  },
+  "cube_quotient_vertices": 8,
+  "deck_controls": [
+    {
+      "first_extra_even_return": 24,
+      "first_joint_extra_return": 48,
+      "gcd": 1,
+      "last_injective_ball_radius": 11,
+      "primitive_deck": [
+        12,
+        -5
+      ],
+      "targets": [
+        4,
+        9,
+        16
+      ]
+    },
+    {
+      "first_extra_even_return": 32,
+      "first_joint_extra_return": 64,
+      "gcd": 1,
+      "last_injective_ball_radius": 15,
+      "primitive_deck": [
+        16,
+        -7
+      ],
+      "targets": [
+        9,
+        16,
+        25
+      ]
+    },
+    {
+      "first_extra_even_return": 40,
+      "first_joint_extra_return": 80,
+      "gcd": 1,
+      "last_injective_ball_radius": 19,
+      "primitive_deck": [
+        20,
+        -9
+      ],
+      "targets": [
+        16,
+        25,
+        36
+      ]
+    },
+    {
+      "first_extra_even_return": 10,
+      "first_joint_extra_return": 20,
+      "gcd": 3,
+      "last_injective_ball_radius": 4,
+      "primitive_deck": [
+        5,
+        -2
+      ],
+      "targets": [
+        0,
+        6,
+        15
+      ]
+    }
+  ],
+  "exhaustive_words_through_length_10": 88573,
+  "honeycomb_balls": {
+    "15": 361,
+    "16": 409,
+    "20": 631,
+    "21": 694,
+    "24": 901,
+    "26": 1054,
+    "32": 1585
+  },
+  "order_four_tournament_witness": {
+    "after_one_lap_triangle": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "after_two_laps": "all forward",
+    "forced_path": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "free_arc_color_order": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "initial_state": "all forward"
+  },
+  "positive_cycle_family": [
+    {
+      "cycle": [
+        8,
+        41,
+        40,
+        9,
+        72,
+        49,
+        32,
+        17,
+        64,
+        57,
+        24,
+        25,
+        56,
+        65,
+        16,
+        33,
+        48,
+        73
+      ],
+      "cycle_length": 18,
+      "height": 73,
+      "m": 3,
+      "primitive_deck": [
+        9,
+        -4
+      ],
+      "targets": [
+        49,
+        81,
+        121
+      ],
+      "tournament_holonomy": [
+        1,
+        1,
+        0
+      ],
+      "word": "ababcbabcbabcbabcb"
+    },
+    {
+      "cycle": [
+        20,
+        61,
+        60,
+        21,
+        100,
+        69,
+        52,
+        29,
+        92,
+        77,
+        44,
+        37,
+        84,
+        85,
+        36,
+        45,
+        76,
+        93,
+        28,
+        53,
+        68,
+        101
+      ],
+      "cycle_length": 22,
+      "height": 101,
+      "m": 4,
+      "primitive_deck": [
+        11,
+        -5
+      ],
+      "targets": [
+        81,
+        121,
+        169
+      ],
+      "tournament_holonomy": [
+        0,
+        1,
+        1
+      ],
+      "word": "ababcbabcbabcbabcbabcb"
+    },
+    {
+      "cycle": [
+        36,
+        85,
+        84,
+        37,
+        132,
+        93,
+        76,
+        45,
+        124,
+        101,
+        68,
+        53,
+        116,
+        109,
+        60,
+        61,
+        108,
+        117,
+        52,
+        69,
+        100,
+        125,
+        44,
+        77,
+        92,
+        133
+      ],
+      "cycle_length": 26,
+      "height": 133,
+      "m": 5,
+      "primitive_deck": [
+        13,
+        -6
+      ],
+      "targets": [
+        121,
+        169,
+        225
+      ],
+      "tournament_holonomy": [
+        1,
+        1,
+        0
+      ],
+      "word": "ababcbabcbabcbabcbabcbabcb"
+    },
+    {
+      "cycle": [
+        56,
+        113,
+        112,
+        57,
+        168,
+        121,
+        104,
+        65,
+        160,
+        129,
+        96,
+        73,
+        152,
+        137,
+        88,
+        81,
+        144,
+        145,
+        80,
+        89,
+        136,
+        153,
+        72,
+        97,
+        128,
+        161,
+        64,
+        105,
+        120,
+        169
+      ],
+      "cycle_length": 30,
+      "height": 169,
+      "m": 6,
+      "primitive_deck": [
+        15,
+        -7
+      ],
+      "targets": [
+        169,
+        225,
+        289
+      ],
+      "tournament_holonomy": [
+        0,
+        1,
+        1
+      ],
+      "word": "ababcbabcbabcbabcbabcbabcbabcb"
+    },
+    {
+      "cycle": [
+        80,
+        145,
+        144,
+        81,
+        208,
+        153,
+        136,
+        89,
+        200,
+        161,
+        128,
+        97,
+        192,
+        169,
+        120,
+        105,
+        184,
+        177,
+        112,
+        113,
+        176,
+        185,
+        104,
+        121,
+        168,
+        193,
+        96,
+        129,
+        160,
+        201,
+        88,
+        137,
+        152,
+        209
+      ],
+      "cycle_length": 34,
+      "height": 209,
+      "m": 7,
+      "primitive_deck": [
+        17,
+        -8
+      ],
+      "targets": [
+        225,
+        289,
+        361
+      ],
+      "tournament_holonomy": [
+        1,
+        1,
+        0
+      ],
+      "word": "ababcbabcbabcbabcbabcbabcbabcbabcb"
+    },
+    {
+      "cycle": [
+        108,
+        181,
+        180,
+        109,
+        252,
+        189,
+        172,
+        117,
+        244,
+        197,
+        164,
+        125,
+        236,
+        205,
+        156,
+        133,
+        228,
+        213,
+        148,
+        141,
+        220,
+        221,
+        140,
+        149,
+        212,
+        229,
+        132,
+        157,
+        204,
+        237,
+        124,
+        165,
+        196,
+        245,
+        116,
+        173,
+        188,
+        253
+      ],
+      "cycle_length": 38,
+      "height": 253,
+      "m": 8,
+      "primitive_deck": [
+        19,
+        -9
+      ],
+      "targets": [
+        289,
+        361,
+        441
+      ],
+      "tournament_holonomy": [
+        0,
+        1,
+        1
+      ],
+      "word": "ababcbabcbabcbabcbabcbabcbabcbabcbabcb"
+    }
+  ],
+  "positive_cycle_family_checked_m": [
+    3,
+    100
+  ],
+  "square_15": {
+    "fourth_target_chord": [
+      1,
+      3
+    ],
+    "honeycomb_lift": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        -1,
+        1
+      ],
+      [
+        2,
+        -1,
+        0
+      ],
+      [
+        2,
+        -1,
+        1
+      ],
+      [
+        3,
+        -1,
+        0
+      ],
+      [
+        3,
+        -2,
+        1
+      ],
+      [
+        4,
+        -2,
+        0
+      ],
+      [
+        4,
+        -2,
+        1
+      ],
+      [
+        5,
+        -2,
+        0
+      ],
+      [
+        5,
+        -3,
+        1
+      ],
+      [
+        6,
+        -3,
+        0
+      ],
+      [
+        6,
+        -3,
+        1
+      ],
+      [
+        7,
+        -3,
+        0
+      ]
+    ],
+    "odd_cycle": [
+      1,
+      3,
+      6,
+      10,
+      15,
+      1
+    ],
+    "path": [
+      8,
+      1,
+      15,
+      10,
+      6,
+      3,
+      13,
+      12,
+      4,
+      5,
+      11,
+      14,
+      2,
+      7,
+      9
+    ],
+    "three_target_edges": 14
+  },
+  "word_controls": {
+    "abab": {
+      "arithmetic_endpoint": [
+        14,
+        0
+      ],
+      "cube_endpoint": [
+        0,
+        0,
+        0
+      ],
+      "honeycomb_endpoint": [
+        2,
+        0,
+        0
+      ],
+      "length": 4
+    },
+    "abababababababababcbcbcbcbcbcbcb": {
+      "arithmetic_endpoint": [
+        0,
+        0
+      ],
+      "cube_endpoint": [
+        1,
+        0,
+        1
+      ],
+      "honeycomb_endpoint": [
+        16,
+        -7,
+        0
+      ],
+      "length": 32
+    },
+    "abababababababababcbcbcbcbcbcbcbabababababababababcbcbcbcbcbcbcb": {
+      "arithmetic_endpoint": [
+        0,
+        0
+      ],
+      "cube_endpoint": [
+        0,
+        0,
+        0
+      ],
+      "honeycomb_endpoint": [
+        32,
+        -14,
+        0
+      ],
+      "length": 64
+    },
+    "abcabc": {
+      "arithmetic_endpoint": [
+        0,
+        0
+      ],
+      "cube_endpoint": [
+        0,
+        0,
+        0
+      ],
+      "honeycomb_endpoint": [
+        0,
+        0,
+        0
+      ],
+      "length": 6
+    }
+  }
+}
