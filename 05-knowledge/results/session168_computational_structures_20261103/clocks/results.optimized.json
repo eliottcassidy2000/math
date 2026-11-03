@@ -1,0 +1,302 @@
+{
+  "cayley_dickson": {
+    "distinguishing_suffixes": [
+      {
+        "states": [
+          0,
+          1
+        ],
+        "suffix": [
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "states": [
+          0,
+          2
+        ],
+        "suffix": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "states": [
+          0,
+          3
+        ],
+        "suffix": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "states": [
+          0,
+          4
+        ],
+        "suffix": []
+      },
+      {
+        "states": [
+          0,
+          5
+        ],
+        "suffix": []
+      },
+      {
+        "states": [
+          1,
+          2
+        ],
+        "suffix": [
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "states": [
+          1,
+          3
+        ],
+        "suffix": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "states": [
+          1,
+          4
+        ],
+        "suffix": []
+      },
+      {
+        "states": [
+          1,
+          5
+        ],
+        "suffix": []
+      },
+      {
+        "states": [
+          2,
+          3
+        ],
+        "suffix": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "states": [
+          2,
+          4
+        ],
+        "suffix": []
+      },
+      {
+        "states": [
+          2,
+          5
+        ],
+        "suffix": []
+      },
+      {
+        "states": [
+          3,
+          4
+        ],
+        "suffix": []
+      },
+      {
+        "states": [
+          3,
+          5
+        ],
+        "suffix": []
+      },
+      {
+        "states": [
+          4,
+          5
+        ],
+        "suffix": [
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    ],
+    "octonion_defect_cycles": {
+      "1": 8,
+      "2": 4
+    },
+    "product_pairs_by_level": {
+      "0": 1,
+      "1": 4,
+      "2": 16,
+      "3": 64,
+      "4": 256,
+      "5": 1024,
+      "6": 4096,
+      "7": 16384,
+      "8": 65536
+    },
+    "transition_table": [
+      [
+        0,
+        1,
+        2,
+        5
+      ],
+      [
+        1,
+        1,
+        4,
+        3
+      ],
+      [
+        2,
+        3,
+        2,
+        4
+      ],
+      [
+        3,
+        4,
+        4,
+        4
+      ],
+      [
+        4,
+        3,
+        3,
+        3
+      ],
+      [
+        5,
+        4,
+        3,
+        5
+      ]
+    ],
+    "transport_controls": [
+      {
+        "degree": 4,
+        "level": 1,
+        "random_words": 200
+      },
+      {
+        "degree": 8,
+        "level": 2,
+        "random_words": 200
+      },
+      {
+        "degree": 16,
+        "level": 3,
+        "random_words": 200
+      },
+      {
+        "degree": 32,
+        "level": 4,
+        "random_words": 200
+      },
+      {
+        "degree": 64,
+        "level": 5,
+        "random_words": 200
+      },
+      {
+        "degree": 128,
+        "level": 6,
+        "random_words": 200
+      },
+      {
+        "degree": 256,
+        "level": 7,
+        "random_words": 200
+      },
+      {
+        "degree": 512,
+        "level": 8,
+        "random_words": 200
+      }
+    ]
+  },
+  "scope": "All-level statements have proofs in NOTE.md. Finite controls do not replace proofs. The tournament encoding inherits the audited S167 compiler.",
+  "tribonacci_ca": {
+    "alpha_powers": {
+      "13": 1
+    },
+    "beta_powers": {
+      "13": 2,
+      "2": 16
+    },
+    "controls": [
+      {
+        "basis_lift_period": 104,
+        "clock_period": 26,
+        "negation_lift_period": 52,
+        "sites": 1,
+        "visits_per_nonzero_local_symbol": 1
+      },
+      {
+        "basis_lift_period": 312,
+        "clock_period": 78,
+        "negation_lift_period": 156,
+        "sites": 3,
+        "visits_per_nonzero_local_symbol": 3
+      },
+      {
+        "basis_lift_period": 936,
+        "clock_period": 234,
+        "negation_lift_period": 468,
+        "sites": 9,
+        "visits_per_nonzero_local_symbol": 9
+      },
+      {
+        "basis_lift_period": 2808,
+        "clock_period": 702,
+        "negation_lift_period": 1404,
+        "sites": 27,
+        "visits_per_nonzero_local_symbol": 27
+      },
+      {
+        "basis_lift_period": 8424,
+        "clock_period": 2106,
+        "negation_lift_period": 4212,
+        "sites": 81,
+        "visits_per_nonzero_local_symbol": 81
+      }
+    ],
+    "full_k3_orbit_counts": {
+      "1": 1,
+      "26": 1,
+      "78": 252
+    },
+    "full_k3_state_counts": {
+      "1": 1,
+      "26": 26,
+      "78": 19656
+    }
+  }
+}

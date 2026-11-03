@@ -1,0 +1,117 @@
+{
+  "all_signed_xor_maps": {
+    "0": 2,
+    "1": 8,
+    "2": 64,
+    "3": 2048
+  },
+  "guard_clock_controls": [
+    {
+      "delta_period": 26,
+      "four_lap_period": 104,
+      "triggers_per_lap": 1,
+      "width": 1
+    },
+    {
+      "delta_period": 78,
+      "four_lap_period": 312,
+      "triggers_per_lap": 3,
+      "width": 3
+    },
+    {
+      "delta_period": 234,
+      "four_lap_period": 936,
+      "triggers_per_lap": 9,
+      "width": 9
+    },
+    {
+      "delta_period": 702,
+      "four_lap_period": 2808,
+      "triggers_per_lap": 27,
+      "width": 27
+    },
+    {
+      "delta_period": 2106,
+      "four_lap_period": 8424,
+      "triggers_per_lap": 81,
+      "width": 81
+    }
+  ],
+  "valuation_controls": [
+    {
+      "period": 78,
+      "valuation": 0,
+      "width": 3
+    },
+    {
+      "period": 78,
+      "valuation": 1,
+      "width": 3
+    },
+    {
+      "period": 26,
+      "valuation": 2,
+      "width": 3
+    },
+    {
+      "period": 234,
+      "valuation": 0,
+      "width": 9
+    },
+    {
+      "period": 234,
+      "valuation": 1,
+      "width": 9
+    },
+    {
+      "period": 234,
+      "valuation": 4,
+      "width": 9
+    },
+    {
+      "period": 78,
+      "valuation": 6,
+      "width": 9
+    },
+    {
+      "period": 78,
+      "valuation": 7,
+      "width": 9
+    },
+    {
+      "period": 26,
+      "valuation": 8,
+      "width": 9
+    },
+    {
+      "period": 702,
+      "valuation": 0,
+      "width": 27
+    },
+    {
+      "period": 702,
+      "valuation": 1,
+      "width": 27
+    },
+    {
+      "period": 702,
+      "valuation": 13,
+      "width": 27
+    },
+    {
+      "period": 78,
+      "valuation": 24,
+      "width": 27
+    },
+    {
+      "period": 78,
+      "valuation": 25,
+      "width": 27
+    },
+    {
+      "period": 26,
+      "valuation": 26,
+      "width": 27
+    }
+  ]
+}
