@@ -1,0 +1,10 @@
+witness offset2 residue7 length=11 forward-transition-word=qbqqbbbbbqq
+orbit=2725632 parity_even=1362816 odd=1362816
+offset 2 distinct=1183 missing: (total 0)
+offset 4 distinct=1183 missing: (total 0)
+union=1183
+lane7 offset 2 missing quotients mod169: (total 0)
+lane7 offset 4 missing quotients mod169: (total 0)
+q2 orbit period 4368
+q2 offset 2 distinct 934 missing lane7 quotients: 1 11 24 27 37 50 53 63 66 76 79 89 102 105 115 118 128 141 144 154 157 167 (total 22)
+q2 offset 4 distinct 934 missing lane7 quotients: 2 5 15 18 28 31 41 54 57 67 70 80 93 96 106 109 119 122 132 145 148 158 (total 22)
