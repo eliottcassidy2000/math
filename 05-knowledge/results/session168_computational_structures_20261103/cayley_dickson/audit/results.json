@@ -1,0 +1,10 @@
+{
+  "dense_group_n1": 4,
+  "dense_group_n2": 8,
+  "dense_group_n3": 128,
+  "dense_group_n4": 4096,
+  "full_anf_physical_arc_flips": 539424,
+  "full_anf_physical_macros": 43176,
+  "physical_two_block_single_flips_classified": 264,
+  "status": "all independent audit controls passed"
+}

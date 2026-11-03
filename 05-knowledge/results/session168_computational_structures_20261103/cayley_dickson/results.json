@@ -1,0 +1,333 @@
+{
+  "independent_basis_products": 1364,
+  "levels": [
+    {
+      "dimension": 2,
+      "enumerated_group_order": 4,
+      "max_anf_terms": 1,
+      "n": 1,
+      "nonzero_row_degrees": [
+        1
+      ]
+    },
+    {
+      "dimension": 4,
+      "enumerated_group_order": 8,
+      "max_anf_terms": 2,
+      "n": 2,
+      "nonzero_row_degrees": [
+        1
+      ]
+    },
+    {
+      "cocktail_edges": 112,
+      "cocktail_vertices": 16,
+      "dimension": 8,
+      "enumerated_group_order": 128,
+      "group_order_from_kernel_proof": 128,
+      "kernel_rank": 4,
+      "max_anf_terms": 5,
+      "n": 3,
+      "nonzero_row_degrees": [
+        2
+      ],
+      "transport_memory_bits": 7
+    },
+    {
+      "cocktail_edges": 480,
+      "cocktail_vertices": 32,
+      "dimension": 16,
+      "enumerated_group_order": 4096,
+      "group_order_from_kernel_proof": 4096,
+      "kernel_rank": 8,
+      "max_anf_terms": 11,
+      "n": 4,
+      "nonzero_row_degrees": [
+        3
+      ],
+      "transport_memory_bits": 12
+    },
+    {
+      "cocktail_edges": 1984,
+      "cocktail_vertices": 64,
+      "dimension": 32,
+      "group_order_from_kernel_proof": 2097152,
+      "kernel_rank": 16,
+      "max_anf_terms": 24,
+      "n": 5,
+      "nonzero_row_degrees": [
+        4
+      ],
+      "transport_memory_bits": 21
+    },
+    {
+      "cocktail_edges": 8064,
+      "cocktail_vertices": 128,
+      "dimension": 64,
+      "group_order_from_kernel_proof": 274877906944,
+      "kernel_rank": 32,
+      "max_anf_terms": 52,
+      "n": 6,
+      "nonzero_row_degrees": [
+        5
+      ],
+      "transport_memory_bits": 38
+    },
+    {
+      "cocktail_edges": 32512,
+      "cocktail_vertices": 256,
+      "dimension": 128,
+      "group_order_from_kernel_proof": 2361183241434822606848,
+      "kernel_rank": 64,
+      "max_anf_terms": 112,
+      "n": 7,
+      "nonzero_row_degrees": [
+        6
+      ],
+      "transport_memory_bits": 71
+    }
+  ],
+  "physical_tournament_controls": {
+    "associator": [
+      {
+        "input": [
+          0,
+          0
+        ],
+        "output": [
+          0,
+          0
+        ]
+      },
+      {
+        "input": [
+          0,
+          1
+        ],
+        "output": [
+          0,
+          1
+        ]
+      },
+      {
+        "input": [
+          0,
+          2
+        ],
+        "output": [
+          0,
+          2
+        ]
+      },
+      {
+        "input": [
+          0,
+          3
+        ],
+        "output": [
+          0,
+          3
+        ]
+      },
+      {
+        "input": [
+          0,
+          4
+        ],
+        "output": [
+          1,
+          4
+        ]
+      },
+      {
+        "input": [
+          0,
+          5
+        ],
+        "output": [
+          1,
+          5
+        ]
+      },
+      {
+        "input": [
+          0,
+          6
+        ],
+        "output": [
+          1,
+          6
+        ]
+      },
+      {
+        "input": [
+          0,
+          7
+        ],
+        "output": [
+          1,
+          7
+        ]
+      },
+      {
+        "input": [
+          1,
+          0
+        ],
+        "output": [
+          1,
+          0
+        ]
+      },
+      {
+        "input": [
+          1,
+          1
+        ],
+        "output": [
+          1,
+          1
+        ]
+      },
+      {
+        "input": [
+          1,
+          2
+        ],
+        "output": [
+          1,
+          2
+        ]
+      },
+      {
+        "input": [
+          1,
+          3
+        ],
+        "output": [
+          1,
+          3
+        ]
+      },
+      {
+        "input": [
+          1,
+          4
+        ],
+        "output": [
+          0,
+          4
+        ]
+      },
+      {
+        "input": [
+          1,
+          5
+        ],
+        "output": [
+          0,
+          5
+        ]
+      },
+      {
+        "input": [
+          1,
+          6
+        ],
+        "output": [
+          0,
+          6
+        ]
+      },
+      {
+        "input": [
+          1,
+          7
+        ],
+        "output": [
+          0,
+          7
+        ]
+      }
+    ],
+    "changed_arc": [
+      1,
+      2
+    ],
+    "common_hamilton_count": 707281,
+    "fixed_masks": [
+      153,
+      185
+    ],
+    "four_two_block_profiles": [
+      [
+        841,
+        50359,
+        516558,
+        1754613,
+        2590560,
+        1918700,
+        773444,
+        177203,
+        23355,
+        1729,
+        66,
+        1
+      ],
+      [
+        841,
+        50359,
+        516558,
+        1754613,
+        2590560,
+        1918700,
+        773444,
+        177203,
+        23355,
+        1729,
+        66,
+        1
+      ],
+      [
+        841,
+        50359,
+        516558,
+        1754613,
+        2590560,
+        1918700,
+        773444,
+        177203,
+        23355,
+        1729,
+        66,
+        1
+      ],
+      [
+        841,
+        50359,
+        516558,
+        1754613,
+        2590560,
+        1918700,
+        773444,
+        177203,
+        23355,
+        1729,
+        66,
+        1
+      ]
+    ],
+    "macro_arc_checks": 248,
+    "octonion_states": 16,
+    "seed_profile": [
+      29,
+      131,
+      162,
+      77,
+      15,
+      1
+    ],
+    "tournament_order": 24
+  },
+  "status": "all explicit checks passed"
+}
