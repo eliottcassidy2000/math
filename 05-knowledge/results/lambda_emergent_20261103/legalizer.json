@@ -1,0 +1,237 @@
+{
+  "status": "FINITE_EXACT",
+  "exhaustive_controller_tests": [
+    {
+      "precision": 1,
+      "number_of_sources": 1,
+      "tuples": 8,
+      "j_histogram": {
+        "0": 7,
+        "1": 1
+      },
+      "maximum_native_moves": 440,
+      "bound": 440
+    },
+    {
+      "precision": 1,
+      "number_of_sources": 2,
+      "tuples": 64,
+      "j_histogram": {
+        "0": 49,
+        "2": 2,
+        "1": 13
+      },
+      "maximum_native_moves": 440,
+      "bound": 440
+    },
+    {
+      "precision": 1,
+      "number_of_sources": 3,
+      "tuples": 512,
+      "j_histogram": {
+        "0": 343,
+        "2": 36,
+        "3": 6,
+        "1": 127
+      },
+      "maximum_native_moves": 872,
+      "bound": 872
+    },
+    {
+      "precision": 2,
+      "number_of_sources": 1,
+      "tuples": 8,
+      "j_histogram": {
+        "0": 7,
+        "1": 1
+      },
+      "maximum_native_moves": 3032,
+      "bound": 3032
+    },
+    {
+      "precision": 2,
+      "number_of_sources": 2,
+      "tuples": 64,
+      "j_histogram": {
+        "0": 49,
+        "2": 2,
+        "1": 13
+      },
+      "maximum_native_moves": 3032,
+      "bound": 3032
+    },
+    {
+      "precision": 2,
+      "number_of_sources": 3,
+      "tuples": 512,
+      "j_histogram": {
+        "0": 343,
+        "2": 36,
+        "3": 6,
+        "1": 127
+      },
+      "maximum_native_moves": 6056,
+      "bound": 6056
+    },
+    {
+      "precision": 3,
+      "number_of_sources": 1,
+      "tuples": 8,
+      "j_histogram": {
+        "0": 7,
+        "1": 1
+      },
+      "maximum_native_moves": 21176,
+      "bound": 21176
+    },
+    {
+      "precision": 3,
+      "number_of_sources": 2,
+      "tuples": 64,
+      "j_histogram": {
+        "0": 49,
+        "2": 2,
+        "1": 13
+      },
+      "maximum_native_moves": 21176,
+      "bound": 21176
+    },
+    {
+      "precision": 3,
+      "number_of_sources": 3,
+      "tuples": 512,
+      "j_histogram": {
+        "0": 343,
+        "2": 36,
+        "3": 6,
+        "1": 127
+      },
+      "maximum_native_moves": 42344,
+      "bound": 42344
+    }
+  ],
+  "examples": [
+    {
+      "states": [
+        7
+      ],
+      "j": 1,
+      "word": [
+        [
+          "3",
+          1
+        ],
+        [
+          "5",
+          48
+        ],
+        [
+          "3",
+          11
+        ],
+        [
+          "5",
+          1
+        ]
+      ],
+      "end": [
+        0
+      ]
+    },
+    {
+      "states": [
+        0,
+        7
+      ],
+      "j": 2,
+      "word": [
+        [
+          "3",
+          2
+        ],
+        [
+          "5",
+          48
+        ],
+        [
+          "3",
+          10
+        ],
+        [
+          "5",
+          1
+        ]
+      ],
+      "end": [
+        0,
+        0
+      ]
+    },
+    {
+      "states": [
+        0,
+        7,
+        3
+      ],
+      "j": 2,
+      "word": [
+        [
+          "3",
+          2
+        ],
+        [
+          "5",
+          48
+        ],
+        [
+          "3",
+          10
+        ],
+        [
+          "5",
+          1
+        ]
+      ],
+      "end": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "hostile_four_states": [
+    0,
+    7,
+    3,
+    null
+  ],
+  "integer_replay": {
+    "initial": [
+      2828575,
+      222057
+    ],
+    "word": [
+      [
+        "3",
+        0
+      ],
+      [
+        "5",
+        48
+      ],
+      [
+        "3",
+        12
+      ],
+      [
+        "5",
+        1
+      ]
+    ],
+    "final_decimal_digits": 157,
+    "final_mod7": [
+      2,
+      5
+    ]
+  }
+}

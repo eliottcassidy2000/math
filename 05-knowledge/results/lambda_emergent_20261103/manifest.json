@@ -1,0 +1,32 @@
+{
+  "receipts": [
+    {
+      "file": "effects.json",
+      "sha256": "43a55ab8a3a2998f68e9f78544a7ac0301759b8370201e675ff13b31b9d72e4d"
+    },
+    {
+      "file": "algebra.json",
+      "sha256": "4139e29363ea056b4a5f8c1bec68e0fbe168f54a75b0e8c409f001049f90be36"
+    },
+    {
+      "file": "lattice.json",
+      "sha256": "929d1303d3805d3296e3b2d82f0927db77d38b7f4aa3f250552228c0eec039c3"
+    },
+    {
+      "file": "controls.json",
+      "sha256": "5b629c4c6f2d902f359b712640456ce5eec8d6c0e48965901656b2659c435d96"
+    },
+    {
+      "file": "ready.json",
+      "sha256": "511ea802b104a16d26c97936f844f1bbef1ca24cedce3e312efabc3643b7df17"
+    },
+    {
+      "file": "one_hole.json",
+      "sha256": "8b8974d04fdc1dac644e398b4db7f15a3b76804ea9353bf50468e8a6c5f9d718"
+    },
+    {
+      "file": "legalizer.json",
+      "sha256": "b5c1d88ee250f700e2fc3f3331e825c354612740e15b67ae53c73c54702e85e4"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "mode": "normal",
+  "python": "3.13.14",
+  "sympy": "1.14.0",
+  "inherited_files": 56,
+  "receipts": [
+    {
+      "script": "effects",
+      "stdout": "universal observable dimension 9 depth 1\nmacro image rank 32 effective observable rank 6\nnatural rank 6 basis ['h', 's', 'E1', 'S2', 'P2', 'D2']\nclosed natural matrices {'3': [[61, 9, 0, 0, 0, 0], [-2, 0, 0, 0, 0, 0], [0, 0, 4, 0, 0, 0], [0, 0, 0, -104, -544, -112], [0, 0, 0, 81, 468, 86], [0, 0, 0, 100, 488, 108]], '5': [[421, 33, 0, 0, 0, 0], [-2, 0, 0, 0, 0, 0], [0, 0, 16, 0, 0, 0], [0, 0, 0, -944, -6688, -976], [0, 0, 0, 597, 4956, 614], [0, 0, 0, 940, 6488, 972]], 'N': [[3, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0], [0, 0, 0, -1, -8, 0], [0, 0, 0, 2, 7, 2], [0, 0, 0, 0, 6, 0]]}",
+      "sha256": "43a55ab8a3a2998f68e9f78544a7ac0301759b8370201e675ff13b31b9d72e4d"
+    },
+    {
+      "script": "algebra",
+      "stdout": "PASS: full14-dimensional effect algebra, joint periods12/48 and operation cube [{'operations': [], 'future_joint_dimension': 4}, {'operations': ['3'], 'future_joint_dimension': 6}, {'operations': ['5'], 'future_joint_dimension': 6}, {'operations': ['3', '5'], 'future_joint_dimension': 6}, {'operations': ['N'], 'future_joint_dimension': 6}, {'operations': ['3', 'N'], 'future_joint_dimension': 6}, {'operations': ['5', 'N'], 'future_joint_dimension': 6}, {'operations': ['3', '5', 'N'], 'future_joint_dimension': 6}]",
+      "sha256": "4139e29363ea056b4a5f8c1bec68e0fbe168f54a75b0e8c409f001049f90be36"
+    },
+    {
+      "script": "lattice",
+      "stdout": "PASS: integral query indices 40 -> 2 -> 2; all odd moduli have full natural-coordinate observation",
+      "sha256": "929d1303d3805d3296e3b2d82f0927db77d38b7f4aa3f250552228c0eec039c3"
+    },
+    {
+      "script": "controls",
+      "stdout": "PASS: six actual order7 witnesses, six independently counted macro outputs, and 16864 start-minimum controls",
+      "sha256": "5b629c4c6f2d902f359b712640456ce5eec8d6c0e48965901656b2659c435d96"
+    },
+    {
+      "script": "ready",
+      "stdout": "m 2 counts 1 distinct 1 range 5 5 head [5]\nm 3 counts 2 distinct 2 range 11 13 head [13, 11]\nm 4 counts 4 distinct 4 range 23 37 head [33, 29, 37, 23]\nm 5 counts 8 distinct 8 range 47 109 head [85, 71, 91, 59, 109, 77, 97, 47]\nm 6 counts 16 distinct 15 range 95 321 head [225, 179, 225, 145, 267, 187, 233, 119, 313, 223, 279, 155]\nm 7 counts 32 distinct 30 range 191 997 head [613, 467, 577, 365, 673, 461, 571, 293, 775, 545, 673, 377]\nm 8 counts 64 distinct 63 range 383 3049 head [1713, 1259, 1533, 949, 1761, 1177, 1451, 737, 1989, 1371, 1679, 931]\nm 9 counts 128 distinct 125 range 767 9637 head [4885, 3491, 4201, 2549, 4765, 3113, 3823, 1913, 5293, 3575, 4351, 2375]\nH497 repairs [((395, 68, 69, 396), 1187), ((311, 60, 61, 312), 935)]",
+      "sha256": "511ea802b104a16d26c97936f844f1bbef1ca24cedce3e312efabc3643b7df17"
+    },
+    {
+      "script": "one_hole",
+      "stdout": "PASS: all-order annihilator certificates, independent gap/endpoint counts, literal commuting updates; formulas {'h': {'bases': (3, 2, 1), 'coefficients_q_positive': [[0, 2, 0], [0, 6, 0], [0, -3, -1]], 'coefficients_q_zero': ['2', '6', '-5'], 'gap_counts': [3, 3]}, 'S2': {'bases': (3, 2, 1), 'coefficients_q_positive': [[6, 4, 0], [-2, 6, -3], [0, -3, -3]], 'coefficients_q_zero': ['10', '1', '-6'], 'gap_counts': [3, 3]}, 'E1': {'bases': (3, 2, 1), 'coefficients_q_positive': [[0, 0, 0], [0, 0, 1], [0, 0, 1]], 'coefficients_q_zero': ['0', '1', '0'], 'gap_counts': [2]}}",
+      "sha256": "8b8974d04fdc1dac644e398b4db7f15a3b76804ea9353bf50468e8a6c5f9d718"
+    },
+    {
+      "script": "legalizer",
+      "stdout": "PASS: all 584 source tuples at each of three precisions, full phase identities and primitive integer replay",
+      "sha256": "b5c1d88ee250f700e2fc3f3331e825c354612740e15b67ae53c73c54702e85e4"
+    }
+  ]
+}
