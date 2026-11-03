@@ -17,6 +17,8 @@ A strong tournament of order at least 3 has a directed Hamiltonian cycle. For co
 | 5 | 9:10, 11:5, 13:10, 15:7 |
 | 6 | 15:12, 17:12, 19:12, 23:36, 25:24, 27:12, 29:66, 31:36, 33:72, 37:126, 41:24, 43:60, 45:20 |
 
+For an entirely hand-checkable exclusion of 7, note that the four possible orientations of the two chords of a 4-cycle are cyclic rotations of one another. In the representative with chords 0→2 and 1→3, the five paths are 0123, 1230, 1302, 2301, and 3012. The unique strong 3-vertex tournament has exactly three paths. Combined with Busch, this excludes 7 without a computer.
+
 Every orientation has the fixed directed spanning cycle, so all are strong. Conversely every strong tournament in the relevant order appears after relabelling its Hamiltonian cycle. Thus the table excludes 7 for n≤4 and 21 for n≤6. Together with Busch's bound and the component argument, this proves the claim for all finite orders. The orientation counts in the table count labeled cycle-rooted orientations, not isomorphism classes.
 
 The certificate is deliberately direct: the code uses no graph library, class generation, strong-connectivity routine, recurrence, or prior census. It checks at most 512×720 permutations, and independently asserts the distributions shown above.
