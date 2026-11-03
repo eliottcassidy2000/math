@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — equal H15 does not select a homogeneous module response
+
+- **Scope:** prepublication scout in `05-knowledge/results/uniform_prime_transport_20261103`; no accepted theorem is retracted.
+- **Witness / first failed implication:** regular R5 and the mixed-score native target both have H15, but ordered cover profiles `(15,90,210,240,120)` and `(15,78,198,240,120)`. Scalar equality was incorrectly used to name the target's bank entry. Their full run gcds are15 and3.
+- **Repair / strongest survivor:** retain both actual adjacency matrices under different names; check the entire higher-run profile on each literal complement/re-marking target. The mixed H11/13/15 affine response line and its native three-command implementation survive.
+- **Missing coordinate / next question:** ordered run response and the physical vertex transport. Which response classes admit a uniformly legal selected-path compiler remains open; equality of H alone is not its realization guard.
+
 ## 2026-11-02 — two singleton births retain an endpoint correction
 
 - **Scope:** prepublication derivation in `05-knowledge/results/primegame_port_spectrum_20261103/GROWTH_FAITHFULNESS.md`; no accepted theorem is retracted. Let B_x append a vertex beating only the named old port x, b_x=H(B_x A), and e_x count full parent paths ending x.

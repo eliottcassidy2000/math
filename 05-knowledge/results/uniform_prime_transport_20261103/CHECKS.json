@@ -1,0 +1,20 @@
+{
+  "normal": {
+    "receipt_sha256": "5d9183f4b6bb967a1db44ec344720360b4fe089bcfbf674d0d1e6bd8c87e7fa4",
+    "stdout_sha256": "400b2c0545e62805e9e5afbb53be338d6aa3ced90ded84f3a21093bd4ef0b33f"
+  },
+  "optimized": {
+    "receipt_sha256": "5d9183f4b6bb967a1db44ec344720360b4fe089bcfbf674d0d1e6bd8c87e7fa4",
+    "stdout_sha256": "400b2c0545e62805e9e5afbb53be338d6aa3ced90ded84f3a21093bd4ef0b33f"
+  },
+  "constructor_B11": {
+    "H_source": 2239,
+    "H_target": null,
+    "verified": true
+  },
+  "constructor_P7": {
+    "H_source": 56637,
+    "H_target": 56483,
+    "verified": true
+  }
+}

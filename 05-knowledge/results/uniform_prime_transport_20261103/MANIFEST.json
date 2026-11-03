@@ -1,0 +1,16 @@
+{
+  "status": "same-agent proof audit with independent algorithms",
+  "files_sha256": {
+    "AUDIT.md": "cf902ce96f4cfbef21b6db736690521040f6e7acdfed05f2e1580afce2c85427",
+    "CHECKS.json": "f7c75797af55cf75232334c928534a0d80b11cbc723fc09022f85f18c579b3a6",
+    "CLASSIFICATION.md": "3763d9e957200f3a3583d80acba386256d75163abf97b75fd74bc582fb8fef8c",
+    "construct.py": "bf5c456d2d31f1c2abd2e90271e11e181fd36acc7d761b032bd4f77627e082ae",
+    "README.md": "7f16f0b7d81ca9374fa823efec49ed998d49a22d80faf818d291ad41079ea574",
+    "seal.py": "002befc41877c12390fb54c86f125b6aa199d9ed35714ca2d037e773decd5e11",
+    "SOURCE_PINS.json": "1a442e72c339e03b4f7c8b0959f3d578d90d56be94ad940c6b6b41723820c29b",
+    "THEORY.md": "9dbecacedb815882a51903bfb5022bee27eb09c1d91430b46aba6b418f7954a3",
+    "transport.py": "e8396f2f9cab4d9cd307bdc6f6d9e62a56b30fd1e3f11fb30eec965895e6448b",
+    "verification.json": "5d9183f4b6bb967a1db44ec344720360b4fe089bcfbf674d0d1e6bd8c87e7fa4",
+    "verify.py": "ebf180d889542256449fbbac3a3472f7c4df95f346d0f0e2236140022d679bdf"
+  }
+}

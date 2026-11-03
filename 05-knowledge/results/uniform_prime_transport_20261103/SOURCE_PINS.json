@@ -1,0 +1,95 @@
+{
+  "sources": [
+    {
+      "commit": "ce57cb0d039a0e1b88d5bee5e2ce4e1f77475d37",
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "blob": "955d7bdf1c8a115b55f11cc60c719ff3ba6410cd",
+      "sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1"
+    },
+    {
+      "commit": "ce57cb0d039a0e1b88d5bee5e2ce4e1f77475d37",
+      "path": "01-canon/theorems/THM-155-disjoint-3cycle-identity.md",
+      "blob": "8727f9f0683a5988c9a1cdb3883b41644291bd84",
+      "sha256": "898c00cd7772178c6fddd7b11745d3fbdd915805c81d07f4b323cdc79cb6f77e"
+    },
+    {
+      "commit": "ce57cb0d039a0e1b88d5bee5e2ce4e1f77475d37",
+      "path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "blob": "21c54c68fac2c18efcacd26331006824fe891cda",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "commit": "ce57cb0d039a0e1b88d5bee5e2ce4e1f77475d37",
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "commit": "ce57cb0d039a0e1b88d5bee5e2ce4e1f77475d37",
+      "path": "01-canon/theorems/THM-4810-h-spectrum-atlas-strong-fibres-exact-low-spectra-complement-parity-invariant-score-monotonicity-paley-budgets.md",
+      "blob": "b649ea79ec4ce5b109bee91fbedfe15ba7f97224",
+      "sha256": "5c5aaf3cd87f5887d836ba5346bccdf0f184e258288f3fa79227d41213917a1b"
+    },
+    {
+      "commit": "ce57cb0d039a0e1b88d5bee5e2ce4e1f77475d37",
+      "path": "05-knowledge/results/prime_inverse_ports_20261102/SYMMETRY.md",
+      "blob": "58084794cbf1462bc67ba2a5158f8c55b4c53e8d",
+      "sha256": "935a23a17888b07507a5fb17e3c97eceb37eb318631db6bf1afc150ed96c5fcc"
+    },
+    {
+      "commit": "ce57cb0d039a0e1b88d5bee5e2ce4e1f77475d37",
+      "path": "05-knowledge/results/prime_inverse_ports_20261102/REGULAR_BALANCE.md",
+      "blob": "48511717767b7f7fab1eca5d41152c0778b2a807",
+      "sha256": "00390c6c1b6cf3065bc318e19f114f31ce8a5cba13399b5da3ac91f3b267e4f7"
+    },
+    {
+      "commit": "ce57cb0d039a0e1b88d5bee5e2ce4e1f77475d37",
+      "path": "05-knowledge/results/tournament_composition_classification_20261026/README.md",
+      "blob": "57b3c573a595486978d51ceb0c6c1b7fafbf9c6a",
+      "sha256": "9816d23a9eed30006cd8f71be7a936fea007973b6610a233b739fcfa134040a0"
+    },
+    {
+      "commit": "ce57cb0d039a0e1b88d5bee5e2ce4e1f77475d37",
+      "path": "05-knowledge/results/fano_tournament_move_quotients_20261021/session23b-fano/README.md",
+      "blob": "09babf43081ac7df4d768987dee64254708bf462",
+      "sha256": "40ba37c6d9d6bc97ca2213ff71905cb0e2a8ab2e56f1ed69ea8407313fb262b0"
+    },
+    {
+      "commit": "ce57cb0d039a0e1b88d5bee5e2ce4e1f77475d37",
+      "path": "05-knowledge/results/primegame_path_orbits_20261102/THEORY.md",
+      "blob": "d2015d14c92a0d134bcaf8326dcd9198e2ceac0c",
+      "sha256": "2e0573f5dc06df3f7db8017db5ff02d24e53b94464cd27cf489ec8a4a8267cf9"
+    },
+    {
+      "commit": "ce57cb0d039a0e1b88d5bee5e2ce4e1f77475d37",
+      "path": "05-knowledge/results/metagraph_primegame_20261102/INDUCED_OBSTRUCTIONS.md",
+      "blob": "2dcc7e40c18d8c2c3098d20040affe7da053a31a",
+      "sha256": "4e27c4c91ad22038a1927cf912ef33062d5d165640f16f97f8cd3f1e01c833e4"
+    },
+    {
+      "commit": "ce57cb0d039a0e1b88d5bee5e2ce4e1f77475d37",
+      "path": "05-knowledge/results/session142_tournament_odd_spectrum_20261102/minimal_gap/PROOF.md",
+      "blob": "8d41f3f2ab04b59013b8af9cab50e03737d2a3e6",
+      "sha256": "243d500c1d726c6ca66f766d6ce041dfc7a370196cc6b39563a43f22a1bb34db"
+    },
+    {
+      "commit": "5e1cedf452c7cc1ec447205939a9d6cf4c0e8743",
+      "path": "05-knowledge/results/primegame_port_spectrum_20261103/FOREST_RESPONSE_RECURRENCE.md",
+      "blob": "46f7bedfbb4518fe744107e0accb2cbe238183c3",
+      "sha256": "0bb6a6b0624495b9ccc4123a2db544f2764f92c01138c4b0b241d6ef2ad73b0b"
+    },
+    {
+      "commit": "b687cd28cac8eaa3ac9c0b96b959c1ccd2e89aa5",
+      "path": "05-knowledge/results/session144_jacobian_eth_mrb_20261103/jacobian/CORRECTION_LINEAGE.md",
+      "blob": "559cdaf4d7ecb47c80dcdd9c7e3b9dfac9828409",
+      "sha256": "8551d281a5cae8b486c32e76ad5abedacaf535e8ea3b7d7942a2bea556d89250"
+    }
+  ],
+  "primary_external": {
+    "author": "Arthur H. Busch",
+    "year": 2006,
+    "result": "Corollary1",
+    "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf",
+    "status": "CITED; primary source opened and checked in this session"
+  }
+}
