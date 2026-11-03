@@ -1,0 +1,94 @@
+{
+  "scripts": [
+    {
+      "file": "attachments.py",
+      "sha256": "de48bee8941fd28174d980e4fd5a7aa48248691a7fa0a8bc6f4ae1c1090a9ead"
+    },
+    {
+      "file": "clock.py",
+      "sha256": "9590d051022fa2cc11772531e6e85d7bf60e49d79bcfc0c1edfad6a2d1313289"
+    },
+    {
+      "file": "digits.py",
+      "sha256": "0da192a7e7bccd39d823066d7d2f953ed5972524be5d836e58fa00360bc60f69"
+    },
+    {
+      "file": "even_towers.py",
+      "sha256": "007de42864ff6da21108bab6bc13cdb80c8ddee7de861f08dc473b013c309067"
+    },
+    {
+      "file": "halving_normalization.py",
+      "sha256": "83548300d975ffac4648ac866dfd9191fefad085811b23f8c74e6fb78ea25c5a"
+    },
+    {
+      "file": "hostile_embedding.py",
+      "sha256": "29228f56f7337923f25fbe3fed5f9e8ebae4c1a0104a8391a76249ca12c3cfae"
+    },
+    {
+      "file": "ready2107.py",
+      "sha256": "850db49679b86c3215a5c8e511c1db91f568b9cf47f17c2429e6f63c44252047"
+    },
+    {
+      "file": "reproduce.py",
+      "sha256": "798d711e3a9899192f346cac178b4804c8d27ba50e79bf37efec766b03e0eae9"
+    },
+    {
+      "file": "return2107.py",
+      "sha256": "1b211510bd5d1ef99afb0b50b617259769897d1f2170e307935ffb8f8f9177f4"
+    },
+    {
+      "file": "support.py",
+      "sha256": "0c0ade02d7623ecde0043022d9c6955671da5335401c774f98c1fe275fada7c0"
+    },
+    {
+      "file": "target2107.py",
+      "sha256": "7bc5ebb71cb4b3c819f7aa806d268cd9d84393ac35cfdf3c82029d5da846b9ed"
+    },
+    {
+      "file": "ternary_family.py",
+      "sha256": "2735821bd3d5d070a1ed9bb1c74b439d31929404464ec57eba435eeba66671fa"
+    }
+  ],
+  "receipts": [
+    {
+      "file": "ready2107.json",
+      "sha256": "0bf45128419c5664639282c3023a61ae0bc115319642fefb80d7d0fab9832dc4"
+    },
+    {
+      "file": "target2107.json",
+      "sha256": "86005f628a728f7838bdd6269dfe46506397a2a133a0012742f39b68698de7df"
+    },
+    {
+      "file": "return2107.json",
+      "sha256": "c544a29d7e7bc185cba13e31713ce5ead2502a78cbb0e3295aab8053af7295b5"
+    },
+    {
+      "file": "digits.json",
+      "sha256": "748b74cbf02bc64fb2a243c2cc741fd9ff17f95609ab7fc9277da93442831b96"
+    },
+    {
+      "file": "clock.json",
+      "sha256": "ebc94259d0a273172b167dd60b5d28a122e758cd692ddb8c9a2652c4aa5deb0c"
+    },
+    {
+      "file": "even_towers.json",
+      "sha256": "b3237b6ffadb4be49528332ed302bde078095d38d6f69273c319224efd05a144"
+    },
+    {
+      "file": "hostile_embedding.json",
+      "sha256": "de2dbd798841e64ec7e1ff5d8463345076d008b2f073169b0541dbe666b5e894"
+    },
+    {
+      "file": "ternary_family.json",
+      "sha256": "fd3ceeaa397b88937568c4839b0fb357cd5cbe3daf36a29c1cd1b1a1132cdf04"
+    },
+    {
+      "file": "attachments.json",
+      "sha256": "6e8a563fc7e9c65877a08ee816bf0e198450dd1801b10a6fa88dca10b1a8b7a9"
+    },
+    {
+      "file": "halving_normalization.json",
+      "sha256": "3a50448751d5da738649d311c19151242123b3dfb4fdff67fce2a104ed2d7292"
+    }
+  ]
+}

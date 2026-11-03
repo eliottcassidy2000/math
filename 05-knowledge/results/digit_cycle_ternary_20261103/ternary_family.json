@@ -1,0 +1,67 @@
+{
+  "status": "FINITE_EXACT_GENERATOR_CONTROLS_FOR_PROVED_ALL_LEVEL_FAMILY",
+  "levels": [
+    {
+      "k": 1,
+      "vertices": 4,
+      "inner_clock": 3,
+      "cyclic_triples": 1,
+      "affine_group": 6,
+      "checked_affine_intersections": [
+        3,
+        3
+      ],
+      "proved_full_aut_orders": [
+        3,
+        3
+      ],
+      "proved_full_aut_ratio": 1
+    },
+    {
+      "k": 2,
+      "vertices": 12,
+      "inner_clock": 9,
+      "cyclic_triples": 67,
+      "affine_group": 54,
+      "checked_affine_intersections": [
+        27,
+        9
+      ],
+      "proved_full_aut_orders": [
+        81,
+        27
+      ],
+      "proved_full_aut_ratio": 3
+    },
+    {
+      "k": 3,
+      "vertices": 36,
+      "inner_clock": 27,
+      "cyclic_triples": 1929,
+      "affine_group": 486,
+      "checked_affine_intersections": [
+        243,
+        27
+      ],
+      "proved_full_aut_orders": [
+        1594323,
+        177147
+      ],
+      "proved_full_aut_ratio": 9
+    },
+    {
+      "k": 4,
+      "vertices": 108,
+      "inner_clock": 81,
+      "cyclic_triples": 52443,
+      "affine_group": 4374,
+      "checked_affine_intersections": null,
+      "proved_full_aut_orders": [
+        12157665459056928801,
+        450283905890997363
+      ],
+      "proved_full_aut_ratio": 27
+    }
+  ],
+  "scope": "full automorphism orders use the stated unique maximal-module recursion; enumerated affine subgroup checks do not count all automorphisms at high levels"
+}

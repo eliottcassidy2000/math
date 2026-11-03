@@ -1,0 +1,209 @@
+{
+  "status": "EXACT_ALL_LEVEL_RECURRENCE_WITH_INDEPENDENT12_VERTEX_CHECKS",
+  "actual_controls": [
+    {
+      "flipped": false,
+      "automorphisms": 81,
+      "order3_events": 16,
+      "partition_terms": 18,
+      "regular_count_polynomial": {
+        "2": 9,
+        "4": -9,
+        "6": -1,
+        "8": 3,
+        "10": -3,
+        "12": 1
+      },
+      "ports": [
+        {
+          "named_ports": 1,
+          "colors": 2,
+          "regular_attachments": 1620,
+          "attachment_orbits": 176
+        },
+        {
+          "named_ports": 2,
+          "colors": 4,
+          "regular_attachments": 13821840,
+          "attachment_orbits": 294976
+        },
+        {
+          "named_ports": 3,
+          "colors": 8,
+          "regular_attachments": 65548284480,
+          "attachment_orbits": 930437376
+        }
+      ],
+      "binary_stabilizer_order_counts": {
+        "1": 1620,
+        "3": 1836,
+        "9": 576,
+        "27": 60,
+        "81": 4
+      },
+      "two_port_orbit_excess": 264000
+    },
+    {
+      "flipped": true,
+      "automorphisms": 27,
+      "order3_events": 7,
+      "partition_terms": 8,
+      "regular_count_polynomial": {
+        "6": -1,
+        "8": 3,
+        "10": -3,
+        "12": 1
+      },
+      "ports": [
+        {
+          "named_ports": 1,
+          "colors": 2,
+          "regular_attachments": 1728,
+          "attachment_orbits": 512
+        },
+        {
+          "named_ports": 2,
+          "colors": 4,
+          "regular_attachments": 13824000,
+          "attachment_orbits": 884736
+        },
+        {
+          "named_ports": 3,
+          "colors": 8,
+          "regular_attachments": 65548320768,
+          "attachment_orbits": 2791309312
+        }
+      ],
+      "binary_stabilizer_order_counts": {
+        "1": 1728,
+        "3": 1728,
+        "9": 576,
+        "27": 64
+      },
+      "two_port_orbit_excess": 622592
+    }
+  ],
+  "recurrence_levels": [
+    {
+      "k": 1,
+      "colors": 2,
+      "aut_uniform": 3,
+      "aut_one_flip": 3,
+      "regular_uniform": 12,
+      "regular_one_flip": 12,
+      "orbits_uniform": 8,
+      "orbits_one_flip": 8
+    },
+    {
+      "k": 2,
+      "colors": 2,
+      "aut_uniform": 81,
+      "aut_one_flip": 27,
+      "regular_uniform": 1620,
+      "regular_one_flip": 1728,
+      "orbits_uniform": 176,
+      "orbits_one_flip": 512
+    },
+    {
+      "k": 3,
+      "colors": 2,
+      "aut_uniform": 1594323,
+      "aut_one_flip": 177147,
+      "regular_uniform": 4240899180,
+      "regular_one_flip": 4534963200,
+      "orbits_uniform": 1817376,
+      "orbits_one_flip": 15859712
+    },
+    {
+      "k": 4,
+      "colors": 2,
+      "aut_uniform": 12157665459056928801,
+      "aut_one_flip": 450283905890997363,
+      "regular_uniform": 76273518800468135112451761780,
+      "regular_one_flip": 81562337395771928106055680000,
+      "orbits_uniform": 2000843454429789376,
+      "orbits_one_flip": 52382337410072051712
+    },
+    {
+      "k": 1,
+      "colors": 4,
+      "aut_uniform": 3,
+      "aut_one_flip": 3,
+      "regular_uniform": 240,
+      "regular_one_flip": 240,
+      "orbits_uniform": 96,
+      "orbits_one_flip": 96
+    },
+    {
+      "k": 2,
+      "colors": 4,
+      "aut_uniform": 81,
+      "aut_one_flip": 27,
+      "regular_uniform": 13821840,
+      "regular_one_flip": 13824000,
+      "orbits_uniform": 294976,
+      "orbits_one_flip": 884736
+    },
+    {
+      "k": 3,
+      "colors": 4,
+      "aut_uniform": 1594323,
+      "aut_one_flip": 177147,
+      "regular_uniform": 2640569386330520411760,
+      "regular_one_flip": 2640982039864934400000,
+      "orbits_uniform": 8555369903445376,
+      "orbits_one_flip": 76981623047847936
+    },
+    {
+      "k": 4,
+      "colors": 4,
+      "aut_uniform": 12157665459056928801,
+      "aut_one_flip": 450283905890997363,
+      "regular_uniform": 18411651752762464282820634266822316756377864819453248664947026960,
+      "regular_one_flip": 18414529023554706185956322950719156362472790166357346877440000000,
+      "orbits_uniform": 208734924964859624005879090660514492801793669376,
+      "orbits_one_flip": 5634620183083323646072430970783855521288668839936
+    },
+    {
+      "k": 1,
+      "colors": 8,
+      "aut_uniform": 3,
+      "aut_one_flip": 3,
+      "regular_uniform": 4032,
+      "regular_one_flip": 4032,
+      "orbits_uniform": 1408,
+      "orbits_one_flip": 1408
+    },
+    {
+      "k": 2,
+      "colors": 8,
+      "aut_uniform": 81,
+      "aut_one_flip": 27,
+      "regular_uniform": 65548284480,
+      "regular_one_flip": 65548320768,
+      "orbits_uniform": 930437376,
+      "orbits_one_flip": 2791309312
+    },
+    {
+      "k": 3,
+      "colors": 8,
+      "aut_uniform": 1594323,
+      "aut_one_flip": 177147,
+      "regular_uniform": 281633290701863245143520356918720,
+      "regular_one_flip": 281633446616071131631952540467200,
+      "orbits_uniform": 268497464437211484109989376,
+      "orbits_one_flip": 2416474742085094139139981312
+    },
+    {
+      "k": 4,
+      "colors": 8,
+      "aut_uniform": 12157665459056928801,
+      "aut_one_flip": 450283905890997363,
+      "regular_uniform": 22338395146461526730733716739471839939203724601142464059757128392921488591867561302026616160429120,
+      "regular_one_flip": 22338407513157154354149834233829781901280857946514248549823983981732605782491679280232640020480000,
+      "orbits_uniform": 6452073582299761800285836787486865657118280601554267251307031612603538391909376,
+      "orbits_one_flip": 174205810975335013865798980001261839484948457915819476493911259755319971977101312
+    }
+  ],
+  "scope": "unrestricted orientations to named fixed ports; no Hamilton-count or strong-output filter"
+}

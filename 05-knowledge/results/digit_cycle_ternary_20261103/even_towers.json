@@ -1,0 +1,60 @@
+{
+  "status": "FINITE_EXACT_WITH_ALL_INTEGER_PROOFS",
+  "conjugacy_cases": 80000,
+  "separating_context_pairs": 2016,
+  "selected_contexts": [
+    {
+      "n": 10,
+      "m": 100,
+      "digits": 1,
+      "suffix": "4",
+      "sources": [
+        104,
+        1004
+      ],
+      "clocks": [
+        3,
+        2
+      ]
+    },
+    {
+      "n": 1,
+      "m": 257,
+      "digits": 4,
+      "suffix": "6384",
+      "sources": [
+        16384,
+        2576384
+      ],
+      "clocks": [
+        14,
+        12
+      ]
+    },
+    {
+      "n": 701,
+      "m": 2107,
+      "digits": 1,
+      "suffix": "6",
+      "sources": [
+        7016,
+        21076
+      ],
+      "clocks": [
+        3,
+        2
+      ]
+    }
+  ],
+  "even_orbit": [
+    6,
+    20,
+    10,
+    32,
+    16,
+    8,
+    4,
+    2
+  ],
+  "scope": "an exact conjugate of Collatz; no new convergence claim; all positive source integers are distinguishable by append/halving guards"
+}
