@@ -1,0 +1,40 @@
+{
+  "kind": "portable_local_audit_manifest",
+  "records": [
+    {
+      "path": "full_cubic_audit.py",
+      "sha256": "5fbc050bd270371a4a82499705bd0936785c575904dcd94907a127154c591328",
+      "bytes": 9187
+    },
+    {
+      "path": "full_cubic_audit.json",
+      "sha256": "19ad49d1a99979ffeb32c4887eea634a7a87b9cc81e95d03c19d6bcb3c5ed18d",
+      "bytes": 15262
+    },
+    {
+      "path": "full_cubic_audit.optimized.json",
+      "sha256": "19ad49d1a99979ffeb32c4887eea634a7a87b9cc81e95d03c19d6bcb3c5ed18d",
+      "bytes": 15262
+    },
+    {
+      "path": "FULL_CUBIC_CLASSIFICATION.md",
+      "sha256": "7514cbd2ffce6d83e71e9cf0ba65c88f38925eab41ae6094ad74821be39559df",
+      "bytes": 5808
+    },
+    {
+      "path": "audit/full_cubic_nonodd.py",
+      "sha256": "816f0b1b5b01a610d0ae016ae6c48960b97a10fbdc04fa6d866a1e3c1767683e",
+      "bytes": 3156
+    },
+    {
+      "path": "audit/full_cubic_nonodd.json",
+      "sha256": "b2eb35bf8eb6126ad584fb689fcdd1b26baaa747cf27f3482b3e9b6f87099831",
+      "bytes": 4326
+    },
+    {
+      "path": "audit/full_cubic_nonodd.optimized.json",
+      "sha256": "b2eb35bf8eb6126ad584fb689fcdd1b26baaa747cf27f3482b3e9b6f87099831",
+      "bytes": 4326
+    }
+  ]
+}

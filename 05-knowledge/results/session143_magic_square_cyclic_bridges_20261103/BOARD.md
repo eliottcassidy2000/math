@@ -48,3 +48,34 @@ forgetting and unlabeled quotients require a sidecar**. Their triggers and
 counterindications are visible respectively in the operator replacement,
 field/domain tests, and SCC/multiplicity collisions. No new universal card is
 promoted from one session.
+
+
+## Checkpoint 2 refinement
+
+The original five concepts survive, but their exact maps are now visible:
+
+- **Magic assignment:** centered moments exclude quadratics; 945 exact real
+  kernel systems and 384 signed matchings classify every cubic. Squareness
+  remains a separate constraint.
+- **Nine-cycle:** the order-nine clock retains ternary carry; affine relabeling
+  or a hypercube edge map fails. Continuous linear actions are a different target.
+- **Cube/octonions:** the sign cochain, determinant associator and named basis
+  are load-bearing. A selected subalgebra lattice and diagonal character
+  action survive, but no field/octonion algebra isomorphism does.
+- **Magic/octonions:** one signed half-turn lift preserves every grid line;
+  norm and opposite-pair equations alone fail on an explicit positive-root
+  hostile. Other XOR translations do not inherit the same predicate.
+- **Tournament/sporadic:** the first checkpoint's operator and family-action
+  repairs remain unchanged; the new arithmetic/algebra lanes do not create
+  a missing Baby Monster or Hecke intertwiner.
+
+No broader claim follows from completing the finite tests. The remaining
+stopping boundaries and full map/loss table are in
+[Synthesis checkpoint 2](SYNTHESIS_CHECKPOINT2.md).
+
+The final puzzle pass fills another actual map: normalized projective points
+plus legal hole paths -> explicit order5/order4 permutations -> chosen five-
+point orbit -> four regular tournament orientations. It preserves the chosen
+C5:C4 action but loses the other eight positions, line incidence and word
+history. A named line-to-nonline image rejects the false collineation claim.
+It supplies no Baby Monster embedding or representation intertwiner.

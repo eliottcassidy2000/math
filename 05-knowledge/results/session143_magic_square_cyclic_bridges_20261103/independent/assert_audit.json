@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scripts": [
+    {
+      "path": "independent/check_independent.py",
+      "assert_nodes": 0
+    },
+    {
+      "path": "independent/check_full_cubic.py",
+      "assert_nodes": 0
+    },
+    {
+      "path": "independent/verify_manifest.py",
+      "assert_nodes": 0
+    },
+    {
+      "path": "tournaments/check_tournaments.py",
+      "assert_nodes": 0
+    },
+    {
+      "path": "sporadic/check_bridge.py",
+      "assert_nodes": 0
+    },
+    {
+      "path": "sporadic/test_bridge.py",
+      "assert_nodes": 0
+    },
+    {
+      "path": "magic_cycle/verify.py",
+      "assert_nodes": 0
+    },
+    {
+      "path": "magic_cycle/full_cubic_audit.py",
+      "assert_nodes": 0
+    },
+    {
+      "path": "lambda_octonions/verify.py",
+      "assert_nodes": 0
+    }
+  ],
+  "boundary": "Only named current certificate scripts; historical source snapshots can retain their original assertions."
+}

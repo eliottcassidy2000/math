@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "script": "check_independent.py",
+      "optimized": false,
+      "mutation": "spectrum",
+      "exit_code": 1,
+      "last_error": "RuntimeError: nine distinct adjacency spectra"
+    },
+    {
+      "script": "check_independent.py",
+      "optimized": false,
+      "mutation": "moment",
+      "exit_code": 1,
+      "last_error": "RuntimeError: quadratic cubic-centered-moment coefficients"
+    },
+    {
+      "script": "check_independent.py",
+      "optimized": false,
+      "mutation": "octonion",
+      "exit_code": 1,
+      "last_error": "RuntimeError: Hamilton doubling matches cochain"
+    },
+    {
+      "script": "check_full_cubic.py",
+      "optimized": false,
+      "mutation": "ray",
+      "exit_code": 1,
+      "last_error": "RuntimeError: four nonodd central-symmetry rays"
+    },
+    {
+      "script": "check_independent.py",
+      "optimized": true,
+      "mutation": "spectrum",
+      "exit_code": 1,
+      "last_error": "RuntimeError: nine distinct adjacency spectra"
+    },
+    {
+      "script": "check_independent.py",
+      "optimized": true,
+      "mutation": "moment",
+      "exit_code": 1,
+      "last_error": "RuntimeError: quadratic cubic-centered-moment coefficients"
+    },
+    {
+      "script": "check_independent.py",
+      "optimized": true,
+      "mutation": "octonion",
+      "exit_code": 1,
+      "last_error": "RuntimeError: Hamilton doubling matches cochain"
+    },
+    {
+      "script": "check_full_cubic.py",
+      "optimized": true,
+      "mutation": "ray",
+      "exit_code": 1,
+      "last_error": "RuntimeError: four nonodd central-symmetry rays"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "normal": "PASS",
+  "optimized": "PASS identical",
+  "empty_working_directory_replay": "PASS identical",
+  "normal_sign_mutation": "REJECTED as expected",
+  "optimized_sign_mutation": "REJECTED as expected",
+  "no_runtime_source_checkout_dependency": true,
+  "runtime_dependencies": [
+    "Python3 standard library"
+  ]
+}

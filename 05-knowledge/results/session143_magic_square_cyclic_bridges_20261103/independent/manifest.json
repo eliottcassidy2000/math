@@ -1,0 +1,87 @@
+{
+  "schema": "session143-independent-audit-v1",
+  "baseline": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+  "status": "PASS scoped mathematical review; quoted external constructions remain cited",
+  "files": [
+    {
+      "path": "REVIEW.md",
+      "bytes": 8592,
+      "sha256": "d45d40215410e4fe921daa354a2b9d7e074df4a2c0ada930ae68b3588b3a02d8"
+    },
+    {
+      "path": "assert_audit.json",
+      "bytes": 910,
+      "sha256": "42e2d913a5d05f030a6384c56cdd3a3f242a8b6e9552d46519da1aba4a59d736"
+    },
+    {
+      "path": "check_full_cubic.py",
+      "bytes": 3535,
+      "sha256": "798542e5b09b8a8b94fc87273d7b3c27420136945de6c3c9a49000b545e604e2"
+    },
+    {
+      "path": "check_independent.py",
+      "bytes": 13326,
+      "sha256": "3fab9ef864a3edaa00d278e536bf802159e07abc4dba2ccd12493f3bb28962c2"
+    },
+    {
+      "path": "external_source_checks.json",
+      "bytes": 5149,
+      "sha256": "f0b7b04033743fee30851ff8dbe9df7c2b2f981dd730ec87e86aa15e8ffef5c2"
+    },
+    {
+      "path": "full_cubic_result.json",
+      "bytes": 1205,
+      "sha256": "29b3d7a9067af3073f5f9418463d9bbb51e7802d9cc3a4406c65cac829483263"
+    },
+    {
+      "path": "full_cubic_result.optimized.json",
+      "bytes": 1205,
+      "sha256": "29b3d7a9067af3073f5f9418463d9bbb51e7802d9cc3a4406c65cac829483263"
+    },
+    {
+      "path": "hostile_results.json",
+      "bytes": 1646,
+      "sha256": "801cf1a42357f5490823112e258ca2ee9df11f9d8a7c5035e52752d2ca27eedf"
+    },
+    {
+      "path": "lane_replay.json",
+      "bytes": 1925,
+      "sha256": "d606eec6087a55311784b4eeb4b593fcf0d0703b7b137af2873e3d680ade4c54"
+    },
+    {
+      "path": "magic_hostile_replay.json",
+      "bytes": 2657,
+      "sha256": "f256d692670c0b6bff8787485adf63a8eeb8a896d75ac4aeccf81e5da4289823"
+    },
+    {
+      "path": "repository_source_checks.json",
+      "bytes": 8443,
+      "sha256": "fcd8d8a55fb61ef46ab00b1da4a1d570a5b9fe31d8361bb83fcf24cb708913ed"
+    },
+    {
+      "path": "result.json",
+      "bytes": 6375,
+      "sha256": "541739dd702546f6214c78ccf67189f9cb2b5c96d6d196a7fa9556320f1f84e7"
+    },
+    {
+      "path": "result.optimized.json",
+      "bytes": 6375,
+      "sha256": "541739dd702546f6214c78ccf67189f9cb2b5c96d6d196a7fa9556320f1f84e7"
+    },
+    {
+      "path": "reviewed_proof_pins.json",
+      "bytes": 1181,
+      "sha256": "59fb0f3776b17dde8ca61ffd8ebe9098d438db3bff1551998de0b3ca5d9cc4ff"
+    },
+    {
+      "path": "sporadic_regression.json",
+      "bytes": 1493,
+      "sha256": "ba95f3017897fb4581f9515808187265ff41e72f4dea619e611f539c4a98f4b7"
+    },
+    {
+      "path": "verify_manifest.py",
+      "bytes": 1372,
+      "sha256": "2485808ea02ed79ba46d7b6c1edb05a99feed1fcd61b3dcb6d1a2472b1fc3364"
+    }
+  ]
+}

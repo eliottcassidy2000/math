@@ -1,0 +1,328 @@
+{
+  "adjacency": [
+    [
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0
+    ]
+  ],
+  "charpoly_descending": [
+    1,
+    0,
+    0,
+    -5,
+    -5,
+    -2
+  ],
+  "checks": 225,
+  "family_size": 4,
+  "g_images": [
+    0,
+    4,
+    12,
+    1,
+    2,
+    5,
+    11,
+    8,
+    6,
+    9,
+    7,
+    10,
+    3
+  ],
+  "g_steps": [
+    {
+      "from": 0,
+      "line": [
+        0,
+        1,
+        2,
+        12
+      ],
+      "other_swap": [
+        2,
+        12
+      ],
+      "to": 1
+    },
+    {
+      "from": 1,
+      "line": [
+        1,
+        3,
+        8,
+        11
+      ],
+      "other_swap": [
+        8,
+        11
+      ],
+      "to": 3
+    },
+    {
+      "from": 3,
+      "line": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "other_swap": [
+        7,
+        10
+      ],
+      "to": 2
+    },
+    {
+      "from": 2,
+      "line": [
+        2,
+        4,
+        6,
+        11
+      ],
+      "other_swap": [
+        6,
+        11
+      ],
+      "to": 4
+    },
+    {
+      "from": 4,
+      "line": [
+        0,
+        4,
+        8,
+        10
+      ],
+      "other_swap": [
+        8,
+        10
+      ],
+      "to": 0
+    }
+  ],
+  "group_order": 20,
+  "h_images": [
+    0,
+    4,
+    1,
+    3,
+    12,
+    5,
+    10,
+    7,
+    6,
+    9,
+    11,
+    8,
+    2
+  ],
+  "h_steps": [
+    {
+      "from": 0,
+      "line": [
+        0,
+        1,
+        2,
+        12
+      ],
+      "other_swap": [
+        2,
+        12
+      ],
+      "to": 1
+    },
+    {
+      "from": 1,
+      "line": [
+        1,
+        4,
+        7,
+        9
+      ],
+      "other_swap": [
+        4,
+        9
+      ],
+      "to": 7
+    },
+    {
+      "from": 7,
+      "line": [
+        6,
+        7,
+        8,
+        12
+      ],
+      "other_swap": [
+        6,
+        8
+      ],
+      "to": 12
+    },
+    {
+      "from": 12,
+      "line": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "other_swap": [
+        10,
+        11
+      ],
+      "to": 9
+    },
+    {
+      "from": 9,
+      "line": [
+        1,
+        4,
+        7,
+        9
+      ],
+      "other_swap": [
+        1,
+        7
+      ],
+      "to": 4
+    },
+    {
+      "from": 4,
+      "line": [
+        0,
+        4,
+        8,
+        10
+      ],
+      "other_swap": [
+        8,
+        10
+      ],
+      "to": 0
+    }
+  ],
+  "noncollineation": {
+    "image": [
+      0,
+      3,
+      4,
+      12
+    ],
+    "line": [
+      0,
+      1,
+      2,
+      12
+    ]
+  },
+  "orbit": [
+    3,
+    1,
+    4,
+    2,
+    12
+  ],
+  "points": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      2,
+      1
+    ],
+    [
+      1,
+      2,
+      2
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "scope": "Explicit projective-plane puzzle witnesses and their chosen five-orbit only; no global M12 action on fixed orbit, projective collineation, Baby Monster embedding or Hecke map.",
+  "status": "PASS"
+}

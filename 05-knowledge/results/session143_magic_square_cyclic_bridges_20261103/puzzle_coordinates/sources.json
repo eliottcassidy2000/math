@@ -1,0 +1,35 @@
+{
+  "status": "CITED primary puzzle rule and identification only; all new finite witnesses independently checked",
+  "checked_utc_date": "2026-11-03",
+  "sources": [
+    {
+      "id": "cem-m13-v1",
+      "authors": [
+        "John H. Conway",
+        "Noam D. Elkies",
+        "Jeremy L. Martin"
+      ],
+      "title": "The Mathieu group M12 and its pseudogroup extension M13",
+      "url": "https://arxiv.org/html/math/0508630v1",
+      "version": "arXiv:math/0508630v1, 2005-08-31",
+      "locators": [
+        "Introduction: closed game group M12; M13 not a group",
+        "Section2.1: PG(2,3), 13 points, four points per line",
+        "Section2.2: elementary double-transposition hole move and legal composition"
+      ],
+      "imported_scope": [
+        "definition of the basic projective-plane puzzle",
+        "closed paths realize M12; unclosed paths have endpoint-compatible composition"
+      ],
+      "not_imported": [
+        "the displayed g/h witnesses",
+        "chosen projective coordinate labels",
+        "tournament construction",
+        "any Baby Monster correspondence"
+      ],
+      "snapshot_sha256": "c4033b7388c10a5eba58d8602a0d9918d8df0a9184ab2cb830a61f8de54147c7",
+      "snapshot_bytes": 585896,
+      "snapshot_distribution": "not included; checksum records the previously browsed/downloaded primary snapshot"
+    }
+  ]
+}

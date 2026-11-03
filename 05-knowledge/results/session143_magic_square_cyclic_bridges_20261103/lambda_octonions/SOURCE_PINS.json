@@ -1,0 +1,99 @@
+{
+  "scope": "Snapshots are inherited evidence, not blanket endorsement of historical claims.",
+  "repository_sources": [
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_squarefree_symmetry.md",
+      "git_blob_sha1": "4d2775faaabaf10a3f577b8f7e964044f9ab1da5",
+      "snapshot": "sources/01-arithmetic_braids2_20260917_squarefree_symmetry.md",
+      "bytes": 19876,
+      "sha256": "ebf665a341dd4773a213dfae3cb390e75179b553767bcd7d6e87c152f2b743cf"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_fano_code.md",
+      "git_blob_sha1": "d399cda3f20289368ad6a83517bd65cbf0f8d01e",
+      "snapshot": "sources/02-arithmetic_braids2_20260917_fano_code.md",
+      "bytes": 15216,
+      "sha256": "8e8d8b508eb0df90451af85d7de9bebddcd8d1b36da151da38a2b41ed3c34a31"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "path": "05-knowledge/results/collatz_mod6_20260922_paley_fano_octonion_design.md",
+      "git_blob_sha1": "217f21402b0eb91251caf6dbc719ca04af96db12",
+      "snapshot": "sources/03-collatz_mod6_20260922_paley_fano_octonion_design.md",
+      "bytes": 38182,
+      "sha256": "e91bdda77e95033f7775cefef67309eb6809719cadc332110c7d6c5a08d05939"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "path": "04-computation/lrc_octonion_associator_fano_macmini_S74.py",
+      "git_blob_sha1": "7fe77d733d9fcb95a7825bb966c68469a539c37c",
+      "snapshot": "sources/04-lrc_octonion_associator_fano_macmini_S74.py",
+      "bytes": 3449,
+      "sha256": "de42ddd0d114c7f0e3f41cfae407e703b91c71dd195908557563f54c61a4b37a"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "path": "05-knowledge/results/lrc_octonion_associator_fano_macmini_S74.out",
+      "git_blob_sha1": "e3d46dde49b87aa3f1c2df86ba80be2f2ffb350e",
+      "snapshot": "sources/05-lrc_octonion_associator_fano_macmini_S74.out",
+      "bytes": 1660,
+      "sha256": "b54be509ab48125693d00a15e40cb956b259efee088e59d39a6cc2a5f430fdf1"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "path": "05-knowledge/results/lrc_octonion_g2_fano_associator_kps.out",
+      "git_blob_sha1": "386a73213bd9ea46bb506cdbde49438c6bf1c8e9",
+      "snapshot": "sources/06-lrc_octonion_g2_fano_associator_kps.out",
+      "bytes": 1474,
+      "sha256": "c7f9e6fac6ee846a2189d86f2949f43023a59f06eec6d2be55969b06e4aa370f"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "path": "05-knowledge/results/lucas_mirror_gap_spaces_20261028/LUCAS_MIRRORS.md",
+      "git_blob_sha1": "76652ed4ef829fc66e74d8daa6d2db7e0f9da3d6",
+      "snapshot": "sources/07-LUCAS_MIRRORS.md",
+      "bytes": 12197,
+      "sha256": "8ca3e3139dea8bf95cb4c32950881acebfbda4fbdc95b17ff11e021c6938f4ab"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "path": "04-computation/experiments/sixth_clock_branches_20261004.py",
+      "git_blob_sha1": "3bc64d77bfe314d6f0ebf0de9cd89cbdb3a50e77",
+      "snapshot": "sources/08-sixth_clock_branches_20261004.py",
+      "bytes": 15070,
+      "sha256": "ae993401c37861705827f8074be6e066ebe9e7623d8ad45311c0258377477b02"
+    }
+  ],
+  "primary_external_sources": [
+    {
+      "title": "Albuquerque\u2013Majid, Quasialgebra structure of the octonions, v1 (1998)",
+      "url": "https://arxiv.org/html/math/9802116v1",
+      "sections": "4, Corollary 4.3 and Proposition 4.4",
+      "accessed_utc": "2026-11-03",
+      "use": "Classical twisted-algebra construction; formula independently recovered from CD recursion."
+    },
+    {
+      "title": "Baez, The Octonions, \u00a72.1",
+      "url": "https://math.ucr.edu/home/baez/octonions/node4.html",
+      "accessed_utc": "2026-11-03",
+      "use": "Classical Fano and binary cube representation, and lost cochain."
+    },
+    {
+      "title": "Barendregt, Introduction to generalized type systems (1991)",
+      "url": "https://homepages.inf.ed.ac.uk/wadler/papers/barendregt/pure-type-systems.pdf",
+      "sections": "2, printed pages126\u2013129",
+      "accessed_utc": "2026-11-03",
+      "use": "Conditional interpretation only: eight type systems ordered by inclusion."
+    }
+  ]
+}

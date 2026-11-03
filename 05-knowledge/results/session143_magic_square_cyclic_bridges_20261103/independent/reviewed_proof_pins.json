@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "tournaments/RESEARCH.md",
+      "bytes": 14827,
+      "sha256": "fa95d4d59517699d46a0e174e737261ba8af6a4920a2b418a77711dd69c058eb",
+      "status": "Audited prose; scope and claims as in REVIEW.md"
+    },
+    {
+      "path": "sporadic/report.md",
+      "bytes": 9409,
+      "sha256": "3d27da11e7b0f939bef765b027b5e2b3fe1ff52120f14b348e6e572c030c86cb",
+      "status": "Audited prose; scope and claims as in REVIEW.md"
+    },
+    {
+      "path": "magic_cycle/THEOREM.md",
+      "bytes": 17703,
+      "sha256": "423d05fa2dad0be0dbac384524798d822af40481b25261ce605b31173023e3b4",
+      "status": "Audited prose; scope and claims as in REVIEW.md"
+    },
+    {
+      "path": "magic_cycle/FULL_CUBIC_CLASSIFICATION.md",
+      "bytes": 5808,
+      "sha256": "7514cbd2ffce6d83e71e9cf0ba65c88f38925eab41ae6094ad74821be39559df",
+      "status": "Audited prose; scope and claims as in REVIEW.md"
+    },
+    {
+      "path": "lambda_octonions/PROOF.md",
+      "bytes": 14454,
+      "sha256": "25df351cd4f905217cc02f9763253f09ecc32f5bae881a78cf0da2bcf0aefb4e",
+      "status": "Audited prose; scope and claims as in REVIEW.md"
+    }
+  ]
+}

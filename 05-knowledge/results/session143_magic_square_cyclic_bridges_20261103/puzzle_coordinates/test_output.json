@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "optimized": false,
+      "mutation": null,
+      "exit_code": 0,
+      "checks_executed": 609
+    },
+    {
+      "optimized": false,
+      "mutation": "bad-move",
+      "exit_code": 1,
+      "rejection": "FAIL: move 0->1 violates double-transposition rule"
+    },
+    {
+      "optimized": false,
+      "mutation": "bad-conjugator",
+      "exit_code": 1,
+      "rejection": "FAIL: h*g*h^-1 must equal g^2"
+    },
+    {
+      "optimized": false,
+      "mutation": "bad-adjacency",
+      "exit_code": 1,
+      "rejection": "FAIL: one directed edge per unordered pair"
+    },
+    {
+      "optimized": true,
+      "mutation": null,
+      "exit_code": 0,
+      "checks_executed": 609
+    },
+    {
+      "optimized": true,
+      "mutation": "bad-move",
+      "exit_code": 1,
+      "rejection": "FAIL: move 0->1 violates double-transposition rule"
+    },
+    {
+      "optimized": true,
+      "mutation": "bad-conjugator",
+      "exit_code": 1,
+      "rejection": "FAIL: h*g*h^-1 must equal g^2"
+    },
+    {
+      "optimized": true,
+      "mutation": "bad-adjacency",
+      "exit_code": 1,
+      "rejection": "FAIL: one directed edge per unordered pair"
+    }
+  ],
+  "boundary": "Specified corruptions are rejected; this is not an exhaustive proof of checker correctness."
+}

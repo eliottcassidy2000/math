@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "script": "check_coordinates.py",
+      "optimized": false,
+      "status": "PASS exact output match"
+    },
+    {
+      "script": "test_coordinates.py",
+      "optimized": false,
+      "status": "PASS exact output match"
+    },
+    {
+      "script": "check_coordinates.py",
+      "optimized": true,
+      "status": "PASS exact output match"
+    },
+    {
+      "script": "test_coordinates.py",
+      "optimized": true,
+      "status": "PASS exact output match"
+    }
+  ],
+  "producer_checks_per_baseline": 609
+}

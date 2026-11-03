@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "test": "portable-positive",
+      "optimized": false,
+      "exit_code": 0,
+      "checks_executed": 45
+    },
+    {
+      "test": "bad-eigenvalue",
+      "optimized": false,
+      "exit_code": 1,
+      "rejection": "FAIL: rem(qalpha,phi5)==[0]"
+    },
+    {
+      "test": "bad-character",
+      "optimized": false,
+      "exit_code": 1,
+      "rejection": "FAIL: multiplicities==expected"
+    },
+    {
+      "test": "source-positive",
+      "optimized": false,
+      "exit_code": 0,
+      "checks_executed": 51
+    },
+    {
+      "test": "bad-transcription",
+      "optimized": false,
+      "exit_code": 1,
+      "rejection": "FAIL: chi[17:19]==[21,-4]"
+    },
+    {
+      "test": "portable-positive",
+      "optimized": true,
+      "exit_code": 0,
+      "checks_executed": 45
+    },
+    {
+      "test": "bad-eigenvalue",
+      "optimized": true,
+      "exit_code": 1,
+      "rejection": "FAIL: rem(qalpha,phi5)==[0]"
+    },
+    {
+      "test": "bad-character",
+      "optimized": true,
+      "exit_code": 1,
+      "rejection": "FAIL: multiplicities==expected"
+    },
+    {
+      "test": "source-positive",
+      "optimized": true,
+      "exit_code": 0,
+      "checks_executed": 51
+    },
+    {
+      "test": "bad-transcription",
+      "optimized": true,
+      "exit_code": 1,
+      "rejection": "FAIL: chi[17:19]==[21,-4]"
+    }
+  ],
+  "boundary": "Negative controls certify rejection of named corruptions, not all possible checker faults."
+}

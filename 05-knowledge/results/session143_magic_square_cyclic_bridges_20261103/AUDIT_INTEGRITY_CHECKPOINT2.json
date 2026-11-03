@@ -1,0 +1,9 @@
+{
+  "audited_producer_manifests": 4,
+  "audited_proofs": 5,
+  "audited_puzzle_source_files": 9,
+  "lane_files_bound_to_audit": 58,
+  "optimization_safe_certificate_scripts": 9,
+  "scope": "Exact content binding of published proof and producer files to independent review, not a new mathematical theorem or external reconstruction.",
+  "status": "PASS"
+}

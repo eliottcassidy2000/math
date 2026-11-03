@@ -1,0 +1,928 @@
+{
+  "status": "PASS",
+  "universe": {
+    "coefficient_domain": "real",
+    "polynomial": "A*k^3+B*k^2+C*k+D",
+    "arguments": [
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "repeated_entries_allowed": true,
+    "center_pair_systems": 945,
+    "matchings_per_center": 105,
+    "odd_signed_quartet_branches": 384
+  },
+  "classification": "Magic iff B=0 and (A=0 or C=-15*A); D arbitrary",
+  "matrix_rank_counts": {
+    "1": 1,
+    "2": 30,
+    "3": 914
+  },
+  "centers": [
+    {
+      "center_index": -4,
+      "matrix_rank_counts": {
+        "2": 2,
+        "3": 103
+      },
+      "kernel_spaces": [
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -3,
+              3
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -16
+          ]
+        },
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -3,
+              4
+            ],
+            [
+              -2,
+              3
+            ],
+            [
+              -1,
+              2
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            2,
+            -3,
+            -39
+          ]
+        }
+      ]
+    },
+    {
+      "center_index": -3,
+      "matrix_rank_counts": {
+        "2": 1,
+        "3": 104
+      },
+      "kernel_spaces": [
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              4
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -9
+          ]
+        }
+      ]
+    },
+    {
+      "center_index": -2,
+      "matrix_rank_counts": {
+        "2": 1,
+        "3": 104
+      },
+      "kernel_spaces": [
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              4
+            ],
+            [
+              -3,
+              3
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -4
+          ]
+        }
+      ]
+    },
+    {
+      "center_index": -1,
+      "matrix_rank_counts": {
+        "2": 3,
+        "3": 102
+      },
+      "kernel_spaces": [
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              4
+            ],
+            [
+              -3,
+              3
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -1
+          ]
+        },
+        {
+          "type": "ray",
+          "matching_count": 2,
+          "example_matching": [
+            [
+              -4,
+              2
+            ],
+            [
+              -3,
+              1
+            ],
+            [
+              -2,
+              0
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            3,
+            -18
+          ]
+        }
+      ]
+    },
+    {
+      "center_index": 0,
+      "matrix_rank_counts": {
+        "1": 1,
+        "2": 16,
+        "3": 88
+      },
+      "kernel_spaces": [
+        {
+          "type": "plane_B_zero",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              4
+            ],
+            [
+              -3,
+              3
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              -1,
+              1
+            ]
+          ],
+          "basis": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              3
+            ],
+            [
+              -3,
+              4
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              -1,
+              1
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -37
+          ]
+        },
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              2
+            ],
+            [
+              -3,
+              3
+            ],
+            [
+              -2,
+              4
+            ],
+            [
+              -1,
+              1
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -28
+          ]
+        },
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              1
+            ],
+            [
+              -3,
+              3
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              -1,
+              4
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -21
+          ]
+        },
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              4
+            ],
+            [
+              -3,
+              2
+            ],
+            [
+              -2,
+              3
+            ],
+            [
+              -1,
+              1
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -19
+          ]
+        },
+        {
+          "type": "ray",
+          "matching_count": 5,
+          "example_matching": [
+            [
+              -4,
+              -3
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -13
+          ]
+        },
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              -2
+            ],
+            [
+              -3,
+              3
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              2,
+              4
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -12
+          ]
+        },
+        {
+          "type": "ray",
+          "matching_count": 5,
+          "example_matching": [
+            [
+              -4,
+              4
+            ],
+            [
+              -3,
+              -2
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -7
+          ]
+        },
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              4
+            ],
+            [
+              -3,
+              3
+            ],
+            [
+              -2,
+              -1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -3
+          ]
+        }
+      ]
+    },
+    {
+      "center_index": 1,
+      "matrix_rank_counts": {
+        "2": 3,
+        "3": 102
+      },
+      "kernel_spaces": [
+        {
+          "type": "ray",
+          "matching_count": 2,
+          "example_matching": [
+            [
+              -4,
+              -3
+            ],
+            [
+              -2,
+              4
+            ],
+            [
+              -1,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            -3,
+            -18
+          ]
+        },
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              4
+            ],
+            [
+              -3,
+              3
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              -1,
+              0
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -1
+          ]
+        }
+      ]
+    },
+    {
+      "center_index": 2,
+      "matrix_rank_counts": {
+        "2": 1,
+        "3": 104
+      },
+      "kernel_spaces": [
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              4
+            ],
+            [
+              -3,
+              3
+            ],
+            [
+              -2,
+              0
+            ],
+            [
+              -1,
+              1
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -4
+          ]
+        }
+      ]
+    },
+    {
+      "center_index": 3,
+      "matrix_rank_counts": {
+        "2": 1,
+        "3": 104
+      },
+      "kernel_spaces": [
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              4
+            ],
+            [
+              -3,
+              0
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              -1,
+              1
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -9
+          ]
+        }
+      ]
+    },
+    {
+      "center_index": 4,
+      "matrix_rank_counts": {
+        "2": 2,
+        "3": 103
+      },
+      "kernel_spaces": [
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              0
+            ],
+            [
+              -3,
+              3
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              -1,
+              1
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            1,
+            0,
+            -16
+          ]
+        },
+        {
+          "type": "ray",
+          "matching_count": 1,
+          "example_matching": [
+            [
+              -4,
+              3
+            ],
+            [
+              -3,
+              2
+            ],
+            [
+              -2,
+              1
+            ],
+            [
+              -1,
+              0
+            ]
+          ],
+          "primitive_coefficients_A_B_C": [
+            2,
+            3,
+            -39
+          ]
+        }
+      ]
+    }
+  ],
+  "nonodd_ray_obstructions": [
+    {
+      "primitive_coefficients_A_B_C": [
+        1,
+        -3,
+        -18
+      ],
+      "positive_centered_quartet": [
+        "20",
+        "20",
+        "34",
+        "36"
+      ],
+      "magic_witness_count": 0,
+      "obstruction": "largest < sum of two smallest"
+    },
+    {
+      "primitive_coefficients_A_B_C": [
+        1,
+        3,
+        -18
+      ],
+      "positive_centered_quartet": [
+        "20",
+        "20",
+        "34",
+        "36"
+      ],
+      "magic_witness_count": 0,
+      "obstruction": "largest < sum of two smallest"
+    },
+    {
+      "primitive_coefficients_A_B_C": [
+        2,
+        -3,
+        -39
+      ],
+      "positive_centered_quartet": [
+        "20",
+        "54",
+        "56",
+        "70"
+      ],
+      "magic_witness_count": 0,
+      "obstruction": "largest < sum of two smallest"
+    },
+    {
+      "primitive_coefficients_A_B_C": [
+        2,
+        3,
+        -39
+      ],
+      "positive_centered_quartet": [
+        "20",
+        "54",
+        "56",
+        "70"
+      ],
+      "magic_witness_count": 0,
+      "obstruction": "largest < sum of two smallest"
+    }
+  ],
+  "odd_cubic_survivors": [
+    {
+      "t": "-15",
+      "permutation": [
+        3,
+        4,
+        1,
+        2
+      ],
+      "signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "t": "-15",
+      "permutation": [
+        3,
+        4,
+        1,
+        2
+      ],
+      "signs": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "t": "-15",
+      "permutation": [
+        3,
+        4,
+        2,
+        1
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "t": "-15",
+      "permutation": [
+        3,
+        4,
+        2,
+        1
+      ],
+      "signs": [
+        1,
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "t": "-15",
+      "permutation": [
+        4,
+        3,
+        1,
+        2
+      ],
+      "signs": [
+        -1,
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "t": "-15",
+      "permutation": [
+        4,
+        3,
+        1,
+        2
+      ],
+      "signs": [
+        1,
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "t": "-15",
+      "permutation": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "signs": [
+        -1,
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "t": "-15",
+      "permutation": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ]
+    }
+  ],
+  "odd_parameter_free_branches": 0,
+  "positive_controls": {
+    "linear_grid": [
+      [
+        3,
+        -4,
+        1
+      ],
+      [
+        -2,
+        0,
+        2
+      ],
+      [
+        -1,
+        4,
+        -3
+      ]
+    ],
+    "linear_line_sums": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "cubic_grid": [
+      [
+        4,
+        -22,
+        18
+      ],
+      [
+        14,
+        0,
+        -14
+      ],
+      [
+        -18,
+        22,
+        -4
+      ]
+    ],
+    "cubic_line_sums": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "scope_boundary": "These are numerical label assignments, not square-valued assignments; general magic squares of squares remain open."
+}

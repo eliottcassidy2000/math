@@ -1,0 +1,17 @@
+{
+  "checked_utc_date": "2026-11-03",
+  "primary_sources": [
+    {
+      "authors": ["Asher Auel", "Benjamin Singer"],
+      "title": "The algebraic geometry of 3-by-3 magic squares of squares",
+      "version": "arXiv:2609.09351v1",
+      "submitted": "2026-09-08",
+      "url": "https://arxiv.org/html/2609.09351v1",
+      "sections_inspected": ["Introduction", "Section 1.1: Equations and Basic Details"],
+      "supported_status": "Distinct rational/integer magic square of squares existence is still stated as unknown.",
+      "limits": "Status and formulation only; no independent audit of the entire paper or universal search for later papers."
+    }
+  ],
+  "repository_literature_inheritance": "Session57 already cites this primary paper and distinguishes the decorated MSOS surface from the bare square-sum biclique variety.",
+  "novelty_claim": false
+}

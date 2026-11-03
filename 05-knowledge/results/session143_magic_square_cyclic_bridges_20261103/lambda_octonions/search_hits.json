@@ -1,0 +1,166 @@
+{
+  "local_scope": 29025,
+  "local_bytes": 203356314,
+  "matches": [
+    {
+      "path": "01-canon/theorems/THM-3347-u-spine-signed-prime-clock-gram-and-projective-fold-boundary.md",
+      "git_blob": "07d7a5bfe9cec66344049d809ee757d7359f1e70",
+      "matches": [
+        {
+          "line": 297,
+          "text": "On the quotient cube, `Lambda_N^2` has Fourier support exactly at levels zero"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-3883-marked-root-complete-local-square-cube-descent-criterion.md",
+      "git_blob": "2bb599b6fd9da8672f8173ac955c5edb17dde235",
+      "matches": [
+        {
+          "line": 211,
+          "text": "nonzero values of `z` are `lambda,-lambda`, whose cubes are opposite, so all"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-3942-affine-linear-double-torus-factor-split-one-place-obstruction.md",
+      "git_blob": "ccc6b55497896a53c39baf7b5e7284572c66b333",
+      "matches": [
+        {
+          "line": 119,
+          "text": "for one subset `I` of the cube roots of unity and `lambda in k^*`.  Then"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/collatz_fixed_separation_content_spacing_20261020/FIXED_SEPARATION_CONTENT_AND_SPACING.md",
+      "git_blob": "ed6fa6bacd7843a869d5fa2d17e354e9f53b6aaf",
+      "matches": [
+        {
+          "line": 225,
+          "text": "Let lambda_1<=lambda_2<=lambda_3 be the successive minima of L for the cube [-1,1]^3. The cited Minkowski second theorem gives"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/collatz_procgen_20260923_theta.out",
+      "git_blob": "33c2721db1f5919019c7ff2a1dd9937c9def1059",
+      "matches": [
+        {
+          "line": 338,
+          "text": "Z2  heights of odd-leading (v2 < 10) forms in Lambda_(E, ceil(wE)) for the cube series"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/collatz_two_swap_neighbor_disjoint_content_20261020/NEIGHBOR_DISJOINT_CONTENT.md",
+      "git_blob": "9f988496955cfd75c03d25ddf339d9cc403a5775",
+      "matches": [
+        {
+          "line": 117,
+          "text": "The lattice determinant is p. Minkowski's second theorem for the sup-norm cube gives successive minima lambda_1 lambda_2 lambda_3<=p. Choose two independent vectors of heights H_1=lambda_1,H_2=lambda_2. Since lambda_3>=sqrt(lambda_1 lambda_2),"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/collatz_two_swap_neighbor_disjoint_content_20261020/audit/NEIGHBOR_DISJOINT_AUDIT.md",
+      "git_blob": "eae0dba315a9cefe74747b70eb416aee5107b465",
+      "matches": [
+        {
+          "line": 138,
+          "text": "The inherited Minkowski second-theorem bound for the cube is lambda1*lambda2*lambda3<=p. Since lambda3>=sqrt(lambda1*lambda2), the first two independent vectors have H1*H2<=p^(2/3). This is a product estimate, not two separate O(p^(1/3)) estimates."
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/collatz_two_swap_overlap_lattice_content_20261020/OVERLAPPING_TWO_ONE_CONTENT.md",
+      "git_blob": "fb0c5202bd3140a3d50b4231f29cd37fa6cd4282",
+      "matches": [
+        {
+          "line": 154,
+          "text": "Let lambda_1<=lambda_2<=lambda_3 be the successive minima of L for the closed cube [-1,1]^3. Since L is an integer lattice, these minima are positive integers, attained by independent lattice vectors."
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/dH_even_walsh_89.out",
+      "git_blob": "3a5207e8e8e28bd9cd5287fc12ba4f2a93edb6cf",
+      "matches": [
+        {
+          "line": 264,
+          "text": "  This is the STANDARD hypercube Laplacian eigenvalue: lambda_S = 2|S|."
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/k4_matching_monomial_tropical_clutch_thm3049.out",
+      "git_blob": "68c49621e2405e46b51cfc971742506602bc2e98",
+      "matches": [
+        {
+          "line": 10,
+          "text": "cube_total_value_obstruction=sum(lambda) mod3"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/liouville_mobius_eleven_20261027/ELEVEN.md",
+      "git_blob": "725da3db203548c7f41e21af5d436b1baed0c3b0",
+      "matches": [
+        {
+          "line": 185,
+          "text": "On these squarefree divisor cubes mu and lambda agree. If repeated directions"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/lucas_mirror_gap_spaces_20261028/LUCAS_MIRRORS.md",
+      "git_blob": "76652ed4ef829fc66e74d8daa6d2db7e0f9da3d6",
+      "matches": [
+        {
+          "line": 13,
+          "text": "cube Lambda_n: two words are adjacent iff they differ in one bit. See"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/merged_tiling_bucket_constraints_s95.out",
+      "git_blob": "ade2cd6de9236c87af392323669024b05c9cb117",
+      "matches": [
+        {
+          "line": 103,
+          "text": "   Let lambda_u be the number of one-tile cube edges staying inside merged node"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/rapid_perspectives.out",
+      "git_blob": "31e9a10a619cbedfb4e62d09ee23e3b1c72dcae8",
+      "matches": [
+        {
+          "line": 87,
+          "text": "  where lambda_k = k (the eigenvalue of level k on the hypercube)."
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/section_defect_stability_20261019/README.md",
+      "git_blob": "e7f5623c3266d320d4bcd5014e8a075326ea1b79",
+      "matches": [
+        {
+          "line": 181,
+          "text": "+1 or -1. Taking lambda_d from one cube vertex therefore places it in"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/sixth_clock_branches_20261004.md",
+      "git_blob": "68e445a88328ead10606f8bdec1f7bc435a0b7a2",
+      "matches": [
+        {
+          "line": 221,
+          "text": "The positive cube root is meant. Set t=1/lambda. Since"
+        }
+      ]
+    }
+  ]
+}

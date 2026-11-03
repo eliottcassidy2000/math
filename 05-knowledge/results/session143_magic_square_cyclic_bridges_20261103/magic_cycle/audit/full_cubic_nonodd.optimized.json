@@ -1,0 +1,224 @@
+{
+  "status": "PASS",
+  "scope": "All real cubic coefficient tuples with quadratic coefficient B!=0; repeated entries allowed",
+  "normalization": "B=1, D=0 by affine entry transformation",
+  "classification": "No such nonodd cubic sample can be a 3x3 magic square",
+  "centers": [
+    {
+      "center_index": -4,
+      "candidate_A_count": 20,
+      "parameter_free_edges": [],
+      "survivors": [
+        {
+          "A": "-2/3",
+          "B": "1",
+          "C": "13",
+          "positive_centered_quartet": [
+            "20/3",
+            "18",
+            "56/3",
+            "70/3"
+          ],
+          "perfect_matchings": [
+            [
+              [
+                -3,
+                4
+              ],
+              [
+                -2,
+                3
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          ],
+          "magic": false
+        }
+      ]
+    },
+    {
+      "center_index": -3,
+      "candidate_A_count": 24,
+      "parameter_free_edges": [],
+      "survivors": []
+    },
+    {
+      "center_index": -2,
+      "candidate_A_count": 20,
+      "parameter_free_edges": [],
+      "survivors": []
+    },
+    {
+      "center_index": -1,
+      "candidate_A_count": 19,
+      "parameter_free_edges": [],
+      "survivors": [
+        {
+          "A": "1/3",
+          "B": "1",
+          "C": "-6",
+          "positive_centered_quartet": [
+            "20/3",
+            "20/3",
+            "34/3",
+            "12"
+          ],
+          "perfect_matchings": [
+            [
+              [
+                -4,
+                2
+              ],
+              [
+                -3,
+                1
+              ],
+              [
+                -2,
+                0
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            [
+              [
+                -4,
+                2
+              ],
+              [
+                -3,
+                1
+              ],
+              [
+                -2,
+                3
+              ],
+              [
+                0,
+                4
+              ]
+            ]
+          ],
+          "magic": false
+        }
+      ]
+    },
+    {
+      "center_index": 1,
+      "candidate_A_count": 19,
+      "parameter_free_edges": [],
+      "survivors": [
+        {
+          "A": "-1/3",
+          "B": "1",
+          "C": "6",
+          "positive_centered_quartet": [
+            "20/3",
+            "20/3",
+            "34/3",
+            "12"
+          ],
+          "perfect_matchings": [
+            [
+              [
+                -4,
+                -3
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                -1,
+                3
+              ],
+              [
+                0,
+                2
+              ]
+            ],
+            [
+              [
+                -4,
+                0
+              ],
+              [
+                -3,
+                2
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                -1,
+                3
+              ]
+            ]
+          ],
+          "magic": false
+        }
+      ]
+    },
+    {
+      "center_index": 2,
+      "candidate_A_count": 20,
+      "parameter_free_edges": [],
+      "survivors": []
+    },
+    {
+      "center_index": 3,
+      "candidate_A_count": 24,
+      "parameter_free_edges": [],
+      "survivors": []
+    },
+    {
+      "center_index": 4,
+      "candidate_A_count": 20,
+      "parameter_free_edges": [],
+      "survivors": [
+        {
+          "A": "2/3",
+          "B": "1",
+          "C": "-13",
+          "positive_centered_quartet": [
+            "20/3",
+            "18",
+            "56/3",
+            "70/3"
+          ],
+          "perfect_matchings": [
+            [
+              [
+                -4,
+                3
+              ],
+              [
+                -3,
+                2
+              ],
+              [
+                -2,
+                1
+              ],
+              [
+                -1,
+                0
+              ]
+            ]
+          ],
+          "magic": false
+        }
+      ]
+    }
+  ]
+}

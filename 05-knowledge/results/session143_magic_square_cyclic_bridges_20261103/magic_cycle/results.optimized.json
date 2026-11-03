@@ -1,0 +1,290 @@
+{
+  "affine_element_orders": {
+    "1": 1,
+    "2": 45,
+    "3": 80,
+    "4": 54,
+    "6": 144,
+    "8": 108
+  },
+  "affine_group_universe": 432,
+  "carry_suppressed_order": 3,
+  "controls": [
+    "ordinary Lo Shu passes",
+    "d=0 constant-square boundary passes",
+    "mutated Lo Shu rejected",
+    "carry suppression drops order to3",
+    "square line totals do not imply equality"
+  ],
+  "cycle": [
+    4,
+    8,
+    3,
+    7,
+    2,
+    6,
+    10,
+    5,
+    9,
+    4
+  ],
+  "cycle_jump_counts": {
+    "-5": 4,
+    "4": 5
+  },
+  "cycle_order": 9,
+  "cycle_square_mean": "128/3",
+  "cycle_square_sum": 384,
+  "cycle_sum": 54,
+  "general_packet_moment_control_m_range": [
+    1,
+    30
+  ],
+  "index_power_sums": {
+    "2": 60,
+    "4": 708,
+    "6": 9780
+  },
+  "negative_quadratic_control_centered_cubic": "-500192/25",
+  "odd_cubic_branch_count": 384,
+  "odd_cubic_branch_rejections": {
+    "inconsistent_unique_parameters": 288,
+    "nonzero_constant_equation": 88
+  },
+  "odd_cubic_positive_witness": [
+    [
+      18,
+      -22,
+      4
+    ],
+    [
+      -14,
+      0,
+      14
+    ],
+    [
+      -4,
+      22,
+      -18
+    ]
+  ],
+  "odd_cubic_survivors": [
+    {
+      "b_over_a": "-15",
+      "indices": [
+        3,
+        4,
+        1,
+        2
+      ],
+      "signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "b_over_a": "-15",
+      "indices": [
+        3,
+        4,
+        1,
+        2
+      ],
+      "signs": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "b_over_a": "-15",
+      "indices": [
+        3,
+        4,
+        2,
+        1
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "b_over_a": "-15",
+      "indices": [
+        3,
+        4,
+        2,
+        1
+      ],
+      "signs": [
+        1,
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "b_over_a": "-15",
+      "indices": [
+        4,
+        3,
+        1,
+        2
+      ],
+      "signs": [
+        -1,
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "b_over_a": "-15",
+      "indices": [
+        4,
+        3,
+        1,
+        2
+      ],
+      "signs": [
+        1,
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "b_over_a": "-15",
+      "indices": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "signs": [
+        -1,
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "b_over_a": "-15",
+      "indices": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ]
+    }
+  ],
+  "quadratic_centered_cubic_coefficients": {
+    "A B^2": "924",
+    "A^2 B": "0",
+    "A^3": "2860/3",
+    "B^3": "0"
+  },
+  "scope": "Self-contained all-real proof plus independent finite-exact controls; general MSOS remains OPEN.",
+  "shifted_lo_shu_totals": [
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18
+  ],
+  "signed_ap_center_candidates": [
+    {
+      "a_over_d": "7/6",
+      "center_index": -4,
+      "center_over_d2": "289/36",
+      "maximum_minus_twice_center_over_d2": "383/36",
+      "noncentral_opposite_pairs": []
+    },
+    {
+      "a_over_d": "7/18",
+      "center_index": -3,
+      "center_over_d2": "2209/324",
+      "maximum_minus_twice_center_over_d2": "1823/324",
+      "noncentral_opposite_pairs": []
+    },
+    {
+      "a_over_d": "-2/3",
+      "center_index": -2,
+      "center_over_d2": "64/9",
+      "maximum_minus_twice_center_over_d2": "68/9",
+      "noncentral_opposite_pairs": []
+    },
+    {
+      "a_over_d": "-17/6",
+      "center_index": -1,
+      "center_over_d2": "529/36",
+      "maximum_minus_twice_center_over_d2": "623/36",
+      "noncentral_opposite_pairs": []
+    },
+    {
+      "a_over_d": "17/6",
+      "center_index": 1,
+      "center_over_d2": "529/36",
+      "maximum_minus_twice_center_over_d2": "623/36",
+      "noncentral_opposite_pairs": []
+    },
+    {
+      "a_over_d": "2/3",
+      "center_index": 2,
+      "center_over_d2": "64/9",
+      "maximum_minus_twice_center_over_d2": "68/9",
+      "noncentral_opposite_pairs": []
+    },
+    {
+      "a_over_d": "-7/18",
+      "center_index": 3,
+      "center_over_d2": "2209/324",
+      "maximum_minus_twice_center_over_d2": "1823/324",
+      "noncentral_opposite_pairs": []
+    },
+    {
+      "a_over_d": "-7/6",
+      "center_index": 4,
+      "center_over_d2": "289/36",
+      "maximum_minus_twice_center_over_d2": "383/36",
+      "noncentral_opposite_pairs": []
+    }
+  ],
+  "source_snapshots_verified": 7,
+  "square_line_total_witness_totals": [
+    16008001,
+    16008001,
+    16008001,
+    16008001,
+    16008001,
+    16008001,
+    26532801,
+    8526400
+  ],
+  "squared_shifted_lo_shu_totals": [
+    134,
+    116,
+    134,
+    122,
+    140,
+    122,
+    126,
+    110
+  ],
+  "status": "PASS"
+}

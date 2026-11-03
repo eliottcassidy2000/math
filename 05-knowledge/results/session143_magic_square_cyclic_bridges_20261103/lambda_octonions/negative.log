@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/tmp/session143_research/lambda_octonions/verify.py", line 88, in <module>
+    require(cd(3,a,b) == ((-1)**exponent(a,b), a^b), 'cochain vs Cayley-Dickson')
+  File "/tmp/session143_research/lambda_octonions/verify.py", line 13, in require
+    raise RuntimeError(why)
+RuntimeError: cochain vs Cayley-Dickson

@@ -1,0 +1,46 @@
+{
+  "schema": "session143-independent-puzzle-v1",
+  "status": "PASS additive finite audit; no earlier bundle modified",
+  "files": [
+    {
+      "path": "REVIEW.md",
+      "bytes": 3412,
+      "sha256": "db460583cc5ed2136c2231d2161afe966847660222a03c013395352a529c4c97"
+    },
+    {
+      "path": "check_puzzle.py",
+      "bytes": 5592,
+      "sha256": "48efc205ecb6e074c7d46c7440269d80b053fe475dc8e5f27667b1a450fdd97a"
+    },
+    {
+      "path": "hostile_results.json",
+      "bytes": 1029,
+      "sha256": "4bd6e4de6fc93e305e9b61c54fa48f76772ebdcb5bf9e7c2f0c0d588d1b47d80"
+    },
+    {
+      "path": "producer_replay.json",
+      "bytes": 558,
+      "sha256": "9ad3acaa59e1a3f204f4c898eea8a48f277c24658bd43180f755191e7feb0702"
+    },
+    {
+      "path": "result.json",
+      "bytes": 3465,
+      "sha256": "f6ed5959d8820ccf060241090bc6bfff1aedf8a0db5aa363515c3213e2c00da9"
+    },
+    {
+      "path": "result.optimized.json",
+      "bytes": 3465,
+      "sha256": "f6ed5959d8820ccf060241090bc6bfff1aedf8a0db5aa363515c3213e2c00da9"
+    },
+    {
+      "path": "reviewed_source_pins.json",
+      "bytes": 1938,
+      "sha256": "789693f53521a69e844e5dab83bb7514fab9174d8eb4a16ff097506733adb3c6"
+    },
+    {
+      "path": "verify_manifest.py",
+      "bytes": 1139,
+      "sha256": "ede105dd0cc8d633286ee6a75dd5ac7e10616220380a37eeafab8bfa3baa3def"
+    }
+  ]
+}

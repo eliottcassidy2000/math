@@ -1,0 +1,547 @@
+{
+  "checkpoint": "2",
+  "expected_rejections": 28,
+  "fresh_relocation": true,
+  "normal_and_optimized": true,
+  "positive_executions": 48,
+  "runs": [
+    {
+      "expected_rejection": false,
+      "label": "n5-census",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "ee229b05f85c44da5c949bc11033e5b5129ac803ba3a68ec58d2a68ad328933c"
+    },
+    {
+      "expected_rejection": false,
+      "label": "mckay-catalogue",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "259d4534d58a656d6e194f5cc88df11b0cbe840403b2da2fe364394b521ecea4"
+    },
+    {
+      "expected_rejection": false,
+      "label": "tournament-lane-manifest",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "bd3859324f8ddc3f43573f7da3ccdf345cffcfbf5e6ba494936116e96a787028"
+    },
+    {
+      "expected_rejection": false,
+      "label": "C5-operator",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "ab97021b4a53cdad2ce77af976fc651653cc46331a72769a5dda65f062746e18"
+    },
+    {
+      "expected_rejection": false,
+      "label": "C5-lane-hostile-suite",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "103a39f0f11baac12fa07d0a16413a9c0124b10b4a427e6752973eccc019f408"
+    },
+    {
+      "expected_rejection": true,
+      "label": "bad-eigenvalue",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "bad-character",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": false,
+      "label": "historical-source-pins",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "c10192fe5b69df5ad3db3173e88c4333c532f0a8c5dcf91a25457bd65417396a"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-census-C5",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "7f56abfa4ee290bfb05213fb848627a20e23f92461fdac65edbd668313cb4066"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-lane-manifest",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "47c9553026781c11e86800e4c0048e29ff6edf873f2d82c825d52df35037b73c"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-wrong-spectrum",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": false,
+      "label": "magic-cycle",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "3815dd05e3e74d321e4fb940fc6de08db23cdcecbdfe4a2100da4b0660bece89"
+    },
+    {
+      "expected_rejection": false,
+      "label": "full-cubic-classification",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "19ad49d1a99979ffeb32c4887eea634a7a87b9cc81e95d03c19d6bcb3c5ed18d"
+    },
+    {
+      "expected_rejection": false,
+      "label": "nonodd-independent-elimination",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "b2eb35bf8eb6126ad584fb689fcdd1b26baaa747cf27f3482b3e9b6f87099831"
+    },
+    {
+      "expected_rejection": false,
+      "label": "magic-lane-manifest",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "2d26952b9ecae0997e893d12ad2adb732cbe3758ddfdff6cc090dbd6b1540a72"
+    },
+    {
+      "expected_rejection": false,
+      "label": "magic-lane-hostile-suite",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "f256d692670c0b6bff8787485adf63a8eeb8a896d75ac4aeccf81e5da4289823"
+    },
+    {
+      "expected_rejection": false,
+      "label": "octonion-maps",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "1c56886808fb6d9982f75fb9019dc439e49b849c5ab810eb3ef6746c745c51dc"
+    },
+    {
+      "expected_rejection": true,
+      "label": "octonion-sign-hostile",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": false,
+      "label": "full-independent-audit",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "541739dd702546f6214c78ccf67189f9cb2b5c96d6d196a7fa9556320f1f84e7"
+    },
+    {
+      "expected_rejection": false,
+      "label": "full-independent-cubic",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "29b3d7a9067af3073f5f9418463d9bbb51e7802d9cc3a4406c65cac829483263"
+    },
+    {
+      "expected_rejection": false,
+      "label": "full-independent-manifest",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "404d9c1ea08e3130c3fd0bb4303e95d95034358fe31591a69ef21b2fcf4c8225"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-moment-hostile",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-octonion-hostile",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-nonodd-ray-hostile",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": false,
+      "label": "full-historical-source-pins",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "451ed24365a1981e95557f212719f5f54c19e5b60e497a70327497dc589cd85a"
+    },
+    {
+      "expected_rejection": false,
+      "label": "audit-proof-binding",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "fd4532736cff09a2ec0f742592b994b74e10df95a3066efa0787a0b6915123ac"
+    },
+    {
+      "expected_rejection": false,
+      "label": "projective-puzzle-witnesses",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "088a8810a3c9db272209226bfb728d4af187a575f6ad43abb7d57d6ae90f4b6f"
+    },
+    {
+      "expected_rejection": false,
+      "label": "projective-puzzle-hostile-suite",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "862213c511228206fdebf6abe1fdeba467278eb6dd979f4211511a8872a7384f"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-projective-puzzle",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "f6ed5959d8820ccf060241090bc6bfff1aedf8a0db5aa363515c3213e2c00da9"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-puzzle-manifest",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "4a2720546072fd826f274e88ff28482c3935e5626d18df040a81b488ca0eb532"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-illegal-puzzle-move",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-inverse-puzzle-normalizer",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-reciprocal-puzzle-adjacency",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "0d8d379fd524793a9983974e32aa46b1f59db1e0776f7e294a6d916b2607bca8"
+    },
+    {
+      "expected_rejection": false,
+      "label": "n5-census",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "ee229b05f85c44da5c949bc11033e5b5129ac803ba3a68ec58d2a68ad328933c"
+    },
+    {
+      "expected_rejection": false,
+      "label": "mckay-catalogue",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "259d4534d58a656d6e194f5cc88df11b0cbe840403b2da2fe364394b521ecea4"
+    },
+    {
+      "expected_rejection": false,
+      "label": "tournament-lane-manifest",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "bd3859324f8ddc3f43573f7da3ccdf345cffcfbf5e6ba494936116e96a787028"
+    },
+    {
+      "expected_rejection": false,
+      "label": "C5-operator",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "ab97021b4a53cdad2ce77af976fc651653cc46331a72769a5dda65f062746e18"
+    },
+    {
+      "expected_rejection": false,
+      "label": "C5-lane-hostile-suite",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "103a39f0f11baac12fa07d0a16413a9c0124b10b4a427e6752973eccc019f408"
+    },
+    {
+      "expected_rejection": true,
+      "label": "bad-eigenvalue",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "bad-character",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": false,
+      "label": "historical-source-pins",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "c10192fe5b69df5ad3db3173e88c4333c532f0a8c5dcf91a25457bd65417396a"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-census-C5",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "7f56abfa4ee290bfb05213fb848627a20e23f92461fdac65edbd668313cb4066"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-lane-manifest",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "47c9553026781c11e86800e4c0048e29ff6edf873f2d82c825d52df35037b73c"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-wrong-spectrum",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": false,
+      "label": "magic-cycle",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "3815dd05e3e74d321e4fb940fc6de08db23cdcecbdfe4a2100da4b0660bece89"
+    },
+    {
+      "expected_rejection": false,
+      "label": "full-cubic-classification",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "19ad49d1a99979ffeb32c4887eea634a7a87b9cc81e95d03c19d6bcb3c5ed18d"
+    },
+    {
+      "expected_rejection": false,
+      "label": "nonodd-independent-elimination",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "b2eb35bf8eb6126ad584fb689fcdd1b26baaa747cf27f3482b3e9b6f87099831"
+    },
+    {
+      "expected_rejection": false,
+      "label": "magic-lane-manifest",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "2d26952b9ecae0997e893d12ad2adb732cbe3758ddfdff6cc090dbd6b1540a72"
+    },
+    {
+      "expected_rejection": false,
+      "label": "magic-lane-hostile-suite",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "f256d692670c0b6bff8787485adf63a8eeb8a896d75ac4aeccf81e5da4289823"
+    },
+    {
+      "expected_rejection": false,
+      "label": "octonion-maps",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "1c56886808fb6d9982f75fb9019dc439e49b849c5ab810eb3ef6746c745c51dc"
+    },
+    {
+      "expected_rejection": true,
+      "label": "octonion-sign-hostile",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": false,
+      "label": "full-independent-audit",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "541739dd702546f6214c78ccf67189f9cb2b5c96d6d196a7fa9556320f1f84e7"
+    },
+    {
+      "expected_rejection": false,
+      "label": "full-independent-cubic",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "29b3d7a9067af3073f5f9418463d9bbb51e7802d9cc3a4406c65cac829483263"
+    },
+    {
+      "expected_rejection": false,
+      "label": "full-independent-manifest",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "404d9c1ea08e3130c3fd0bb4303e95d95034358fe31591a69ef21b2fcf4c8225"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-moment-hostile",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-octonion-hostile",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-nonodd-ray-hostile",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": false,
+      "label": "full-historical-source-pins",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "451ed24365a1981e95557f212719f5f54c19e5b60e497a70327497dc589cd85a"
+    },
+    {
+      "expected_rejection": false,
+      "label": "audit-proof-binding",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "fd4532736cff09a2ec0f742592b994b74e10df95a3066efa0787a0b6915123ac"
+    },
+    {
+      "expected_rejection": false,
+      "label": "projective-puzzle-witnesses",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "088a8810a3c9db272209226bfb728d4af187a575f6ad43abb7d57d6ae90f4b6f"
+    },
+    {
+      "expected_rejection": false,
+      "label": "projective-puzzle-hostile-suite",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "862213c511228206fdebf6abe1fdeba467278eb6dd979f4211511a8872a7384f"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-projective-puzzle",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "f6ed5959d8820ccf060241090bc6bfff1aedf8a0db5aa363515c3213e2c00da9"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-puzzle-manifest",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "4a2720546072fd826f274e88ff28482c3935e5626d18df040a81b488ca0eb532"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-illegal-puzzle-move",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-inverse-puzzle-normalizer",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-reciprocal-puzzle-adjacency",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "0d8d379fd524793a9983974e32aa46b1f59db1e0776f7e294a6d916b2607bca8"
+    },
+    {
+      "expected_rejection": true,
+      "label": "wrong-tournament-census",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "wrong-tournament-census",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "wrong-cyclotomic-inverse",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "wrong-cyclotomic-inverse",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "audited-proof-content-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "audited-proof-content-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Checkpoint2: all checkpoint1 science plus all-real degree<=3 magic-assignment classification, C9 carry/affine boundaries, signed octonion/subalgebra/character maps and one magic-predicate-preserving half-turn lift. Conditional lambda-cube comparison; integer-square existence remains OPEN. No external table/build reconstruction. Additive explicit PG(2,3) puzzle words and chosen five-orbit/four-orientation action; not a collineation or Baby Monster intertwiner.",
+  "source_files_verified": 132,
+  "source_manifest_sha256": "53eb332206c9d06a5413cae6324b0e5e274aadf9c052663ba91993e311d40893",
+  "status": "PASS",
+  "total_executions": 76,
+  "unrelated_cwd": true
+}

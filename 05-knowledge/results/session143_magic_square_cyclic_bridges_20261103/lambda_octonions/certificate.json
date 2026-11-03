@@ -1,0 +1,281 @@
+{
+  "Lucas_Lambda5_edges": 15,
+  "Lucas_Lambda5_vertices": 11,
+  "associator_coefficient_census": {
+    "-2": 84,
+    "0": 344,
+    "2": 84
+  },
+  "associator_triples": 512,
+  "cochain_pairs": 64,
+  "coordinate_boolean_cubes": 28,
+  "diagonal_character_automorphisms": 8,
+  "field_cocycle_triples": 512,
+  "gauge_count": 128,
+  "gauge_kernel_count": 8,
+  "gauge_orientations": 16,
+  "hostile_nonassociativity": {
+    "difference": [
+      2,
+      7
+    ],
+    "labels": [
+      1,
+      2,
+      4
+    ],
+    "left": [
+      1,
+      7
+    ],
+    "right": [
+      -1,
+      7
+    ]
+  },
+  "magic_XOR_translations_preserving_all_lines": [
+    0,
+    4
+  ],
+  "magic_left_signed_table": [
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      -1,
+      1
+    ],
+    [
+      -1,
+      2
+    ],
+    [
+      -1,
+      3
+    ]
+  ],
+  "magic_left_unit_label": 4,
+  "magic_lift_order": 4,
+  "magic_lines_permuted": 8,
+  "magic_other_translation_hostiles": {
+    "1": {
+      "line_sums": [
+        16,
+        15,
+        14,
+        8,
+        15,
+        22,
+        15,
+        15
+      ],
+      "values": [
+        1,
+        8,
+        7,
+        4,
+        5,
+        6,
+        3,
+        2,
+        9
+      ]
+    },
+    "2": {
+      "line_sums": [
+        21,
+        15,
+        9,
+        17,
+        15,
+        13,
+        15,
+        15
+      ],
+      "values": [
+        6,
+        7,
+        8,
+        9,
+        5,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "3": {
+      "line_sums": [
+        14,
+        15,
+        16,
+        18,
+        15,
+        12,
+        15,
+        15
+      ],
+      "values": [
+        7,
+        6,
+        1,
+        2,
+        5,
+        8,
+        9,
+        4,
+        3
+      ]
+    },
+    "5": {
+      "line_sums": [
+        14,
+        15,
+        16,
+        22,
+        15,
+        8,
+        15,
+        15
+      ],
+      "values": [
+        9,
+        2,
+        3,
+        6,
+        5,
+        4,
+        7,
+        8,
+        1
+      ]
+    },
+    "6": {
+      "line_sums": [
+        9,
+        15,
+        21,
+        13,
+        15,
+        17,
+        15,
+        15
+      ],
+      "values": [
+        4,
+        3,
+        2,
+        1,
+        5,
+        9,
+        8,
+        7,
+        6
+      ]
+    },
+    "7": {
+      "line_sums": [
+        16,
+        15,
+        14,
+        12,
+        15,
+        18,
+        15,
+        15
+      ],
+      "values": [
+        3,
+        4,
+        9,
+        8,
+        5,
+        2,
+        1,
+        6,
+        7
+      ]
+    }
+  },
+  "magic_perimeter_clockwise_cells": [
+    0,
+    1,
+    2,
+    5,
+    8,
+    7,
+    6,
+    3
+  ],
+  "magic_quotient_halfturn_order": 2,
+  "nine_cycle": [
+    4,
+    8,
+    3,
+    7,
+    2,
+    6,
+    10,
+    5,
+    9,
+    4
+  ],
+  "nine_cycle_step_mod9": 4,
+  "nonzero_associator_ordered_triples": 168,
+  "nonzero_associator_unordered_imaginary_triples": 28,
+  "norm_opposite_pairs_hostile_line_sums": [
+    1923,
+    12675,
+    23427,
+    9603,
+    12675,
+    15747,
+    12675,
+    12675
+  ],
+  "norm_opposite_pairs_hostile_perimeter_norm": 33800,
+  "norm_opposite_pairs_hostile_roots": [
+    13,
+    23,
+    35,
+    47,
+    65,
+    79,
+    85,
+    89,
+    91
+  ],
+  "scope": "No interpretation of user lambda-cube term is assumed; no LRC, magic-square, Baby Monster, or n5 spectral theorem is inferred.",
+  "status": "VERIFIED exact finite identities; accompanying proof states uniform claims",
+  "subspace_support_cardinality_census": {
+    "1": 1,
+    "2": 7,
+    "4": 7,
+    "8": 1
+  },
+  "symbolic_coboundary_monomial_masks": [
+    84,
+    98,
+    140,
+    161,
+    266,
+    273
+  ]
+}

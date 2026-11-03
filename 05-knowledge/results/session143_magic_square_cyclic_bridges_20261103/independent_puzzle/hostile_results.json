@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "optimized": false,
+      "mutation": "single-swap",
+      "exit_code": 1,
+      "last_error": "RuntimeError: g pinned cycle action"
+    },
+    {
+      "optimized": false,
+      "mutation": "inverse-h",
+      "exit_code": 1,
+      "last_error": "RuntimeError: global conjugation exponent two"
+    },
+    {
+      "optimized": false,
+      "mutation": "reciprocal-adjacency",
+      "exit_code": 1,
+      "last_error": "RuntimeError: exactly one directed edge per unordered pair"
+    },
+    {
+      "optimized": true,
+      "mutation": "single-swap",
+      "exit_code": 1,
+      "last_error": "RuntimeError: g pinned cycle action"
+    },
+    {
+      "optimized": true,
+      "mutation": "inverse-h",
+      "exit_code": 1,
+      "last_error": "RuntimeError: global conjugation exponent two"
+    },
+    {
+      "optimized": true,
+      "mutation": "reciprocal-adjacency",
+      "exit_code": 1,
+      "last_error": "RuntimeError: exactly one directed edge per unordered pair"
+    }
+  ]
+}

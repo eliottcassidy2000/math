@@ -1,0 +1,68 @@
+{
+  "status": "PINNED_SOURCE_SNAPSHOTS_NOT_ALL_DEPENDENCY_THEOREMS_REAUDITED",
+  "pins": [
+    {
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_repository": "eliottcassidy2000/math",
+      "source_path": "05-knowledge/results/session57_square_sum_magic_paths_20261025/square-matrix-geometry/geometry.md",
+      "git_blob": "3d842be01df855f7bdc62d250fdff96d056ea40f",
+      "snapshot_path": "sources/S57_geometry.md",
+      "sha256": "9fa6c58b89972c1c9cdf772eccb47a7d588a371f329ddf280e7e68ad3aa3623f",
+      "bytes": 12666
+    },
+    {
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_repository": "eliottcassidy2000/math",
+      "source_path": "05-knowledge/results/session57_square_sum_magic_paths_20261025/square-total-variant/RESULT.md",
+      "git_blob": "4165331ac02d81f21ffbf02f5379f91e49d9702f",
+      "snapshot_path": "sources/S57_square_totals.md",
+      "sha256": "e5344cc1ece3f4312429a230d2d20138bcc0aaca73604babf5340b0265f9ec6d",
+      "bytes": 3520
+    },
+    {
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_repository": "eliottcassidy2000/math",
+      "source_path": "05-knowledge/results/session57_square_sum_magic_paths_20261025/square-total-variant/certificate.py",
+      "git_blob": "a8cc594235c9119b91ec00bb487ba89b66fd7d71",
+      "snapshot_path": "sources/S57_square_totals_certificate.py",
+      "sha256": "f6849dae8c2425d0eac5cf0cb1a8d55133ed644ee86f5d45a6c3daf0da7149df",
+      "bytes": 1361
+    },
+    {
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_repository": "eliottcassidy2000/math",
+      "source_path": "05-knowledge/results/session57_square_sum_magic_paths_20261025/SYNTHESIS.md",
+      "git_blob": "5c802a20cdb8864282a7716114093117d7e580e1",
+      "snapshot_path": "sources/S57_synthesis.md",
+      "sha256": "f1f2dd02da56a5323aeb3efb06c3b3e26256af60be73fad359d828b8531040ea",
+      "bytes": 17864
+    },
+    {
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_repository": "eliottcassidy2000/math",
+      "source_path": "05-knowledge/results/session57_square_sum_magic_paths_20261025/biclique-bridge/THEOREM.md",
+      "git_blob": "8bcbfcaaa47de3b46dd0ce9aa2ab02b33ccfe764",
+      "snapshot_path": "sources/S57_biclique_bridge.md",
+      "sha256": "3abf8dcf8c863c199cb21fd8715776bc27faa24e39008964adcdfc4e1b0eaaf5",
+      "bytes": 8424
+    },
+    {
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_repository": "eliottcassidy2000/math",
+      "source_path": "01-canon/theorems/THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle.md",
+      "git_blob": "1cdd31726f1955d06d4127c312969616ff22f0dc",
+      "snapshot_path": "sources/THM2657_carry.md",
+      "sha256": "c6dc105080da89537b07d91f5be6c94595899c0c4b95ab86240d22ea6126a060",
+      "bytes": 8683
+    },
+    {
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_repository": "eliottcassidy2000/math",
+      "source_path": "01-canon/theorems/THM-2788-physical-modular-odometer-versus-heisenberg-bockstein-extension.md",
+      "git_blob": "5efd1615f59244d8ba533739642bcf1e051c5006",
+      "snapshot_path": "sources/THM2788_odometer.md",
+      "sha256": "5a8eafe1d3942a35324585e0ed6f20886e6a8cfbec06a5651442524a99c55a9d",
+      "bytes": 16384
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "baseline_normal_optimized_pairs": 4,
+  "expected_rejection_runs": 12,
+  "mutations": 3,
+  "original_bundle_mutated": false,
+  "receipts": [
+    {
+      "mutation": "source_snapshot_byte",
+      "outcomes": [
+        {
+          "failure": "RuntimeError: source byte length: sources/S57_square_totals.md",
+          "optimized": false,
+          "returncode": 1
+        },
+        {
+          "failure": "RuntimeError: source byte length: sources/S57_square_totals.md",
+          "optimized": true,
+          "returncode": 1
+        }
+      ],
+      "program": "verify.py"
+    },
+    {
+      "mutation": "source_snapshot_byte",
+      "outcomes": [
+        {
+          "failure": "RuntimeError: manifest mismatch: sources/S57_square_totals.md",
+          "optimized": false,
+          "returncode": 1
+        },
+        {
+          "failure": "RuntimeError: manifest mismatch: sources/S57_square_totals.md",
+          "optimized": true,
+          "returncode": 1
+        }
+      ],
+      "program": "verify_manifest.py"
+    },
+    {
+      "mutation": "duplicated_cycle_state",
+      "outcomes": [
+        {
+          "failure": "RuntimeError: nine states",
+          "optimized": false,
+          "returncode": 1
+        },
+        {
+          "failure": "RuntimeError: nine states",
+          "optimized": true,
+          "returncode": 1
+        }
+      ],
+      "program": "verify.py"
+    },
+    {
+      "mutation": "duplicated_cycle_state",
+      "outcomes": [
+        {
+          "failure": "RuntimeError: manifest mismatch: verify.py",
+          "optimized": false,
+          "returncode": 1
+        },
+        {
+          "failure": "RuntimeError: manifest mismatch: verify.py",
+          "optimized": true,
+          "returncode": 1
+        }
+      ],
+      "program": "verify_manifest.py"
+    },
+    {
+      "mutation": "damaged_cubic_witness",
+      "outcomes": [
+        {
+          "failure": "RuntimeError: Cubic sample mismatch",
+          "optimized": false,
+          "returncode": 1
+        },
+        {
+          "failure": "RuntimeError: Cubic sample mismatch",
+          "optimized": true,
+          "returncode": 1
+        }
+      ],
+      "program": "full_cubic_audit.py"
+    },
+    {
+      "mutation": "damaged_cubic_witness",
+      "outcomes": [
+        {
+          "failure": "RuntimeError: manifest mismatch: full_cubic_audit.py",
+          "optimized": false,
+          "returncode": 1
+        },
+        {
+          "failure": "RuntimeError: manifest mismatch: full_cubic_audit.py",
+          "optimized": true,
+          "returncode": 1
+        }
+      ],
+      "program": "verify_manifest.py"
+    }
+  ],
+  "status": "PASS"
+}

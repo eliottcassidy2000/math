@@ -1,0 +1,110 @@
+{
+  "status": "CITED primary inputs independently inspected",
+  "sources": [
+    {
+      "id": "atlas-b",
+      "url": "https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/B",
+      "locator": "Order; maximal subgroups; conjugacy classes",
+      "imported_facts": [
+        "group order",
+        "two order-five classes and centralizers",
+        "5:4 x HS:2 maximal subgroup",
+        "class ordering"
+      ],
+      "checked_utc_date": "2026-11-03",
+      "independent_review": "Opened primary source in browser and checked relevant claim; not a reconstruction of cited computation.",
+      "snapshot_sha256": "2dfac4ac49865ef042865be4fb18170ca3fd66709bbd38f0ef35293c43f354e3",
+      "snapshot_bytes": 76448,
+      "snapshot_excluded_from_portable_bundle": true
+    },
+    {
+      "id": "bmw-ctbl",
+      "url": "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/htm/ctblbm.htm",
+      "locator": "Section 6: galoisinfo and power maps; Section 7: chi reordered by bfuslabels, final Irr agreement",
+      "imported_facts": [
+        "5A and 5B rational classes",
+        "rational ordinary character degree 4371",
+        "4371-character values 21 and -4"
+      ],
+      "checked_utc_date": "2026-11-03",
+      "independent_review": "Opened primary source in browser and checked relevant claim; not a reconstruction of cited computation.",
+      "snapshot_sha256": "6f341f9b274f2b477f140de8b7453604ef4fe26e362c4aa16dcb8dd78ee2e436",
+      "snapshot_bytes": 186374,
+      "snapshot_excluded_from_portable_bundle": true
+    },
+    {
+      "id": "cem-m13",
+      "url": "https://arxiv.org/html/math/0508630v1",
+      "locator": "Introduction; Section 2.2; Section 5",
+      "imported_facts": [
+        "13-point PG(2,3) board",
+        "12 counters plus hole",
+        "double transposition move",
+        "M12 from closed paths; M13 pseudogroup not group"
+      ],
+      "checked_utc_date": "2026-11-03",
+      "independent_review": "Opened primary source in browser and checked relevant claim; not a reconstruction of cited computation.",
+      "snapshot_sha256": "c4033b7388c10a5eba58d8602a0d9918d8df0a9184ab2cb830a61f8de54147c7",
+      "snapshot_bytes": 585896,
+      "snapshot_excluded_from_portable_bundle": true
+    },
+    {
+      "id": "steel-thesis",
+      "url": "https://magma.maths.usyd.edu.au/~allan/reps/AllanSteelPhD.pdf",
+      "locator": "Section 5.11, printed page119 / PDF page129",
+      "imported_facts": [
+        "minimal faithful ordinary dimension4371",
+        "realizable overQ"
+      ],
+      "checked_utc_date": "2026-11-03",
+      "independent_review": "Opened primary source in browser and checked relevant claim; not a reconstruction of cited computation."
+    },
+    {
+      "id": "dlns-x013",
+      "url": "https://math.mit.edu/~drew/mcom3213.pdf",
+      "locator": "Section6.1, Proposition6.2 proof, printed page446 / PDF page22",
+      "imported_facts": [
+        "X0(13) genus0",
+        "explicit rational j(t) parameterization"
+      ],
+      "checked_utc_date": "2026-11-03",
+      "independent_review": "Opened primary source in browser and checked relevant claim; not a reconstruction of cited computation."
+    },
+    {
+      "id": "mckay",
+      "url": "https://users.cecs.anu.edu.au/~bdm/data/digraphs.html",
+      "locator": "Tournaments, Self-converse, Regular; order5",
+      "checked_utc_date": "2026-11-03",
+      "independent_review": "Catalogue directly lists12,8,1 respectively."
+    },
+    {
+      "title": "Albuquerque\u2013Majid, Quasialgebra structure of the octonions, v1 (1998)",
+      "url": "https://arxiv.org/html/math/9802116v1",
+      "sections": "4, Corollary 4.3 and Proposition 4.4",
+      "accessed_utc": "2026-11-03",
+      "use": "Classical twisted-algebra construction; formula independently recovered from CD recursion.",
+      "independent_review": "Primary text opened and checked; formula independently recomputed, not inferred from image rendering."
+    },
+    {
+      "title": "Baez, The Octonions, \u00a72.1",
+      "url": "https://math.ucr.edu/home/baez/octonions/node4.html",
+      "accessed_utc": "2026-11-03",
+      "use": "Classical Fano and binary cube representation, and lost cochain.",
+      "independent_review": "Primary text opened and checked; formula independently recomputed, not inferred from image rendering."
+    },
+    {
+      "title": "Barendregt, Introduction to generalized type systems (1991)",
+      "url": "https://homepages.inf.ed.ac.uk/wadler/papers/barendregt/pure-type-systems.pdf",
+      "sections": "2, printed pages126\u2013129",
+      "accessed_utc": "2026-11-03",
+      "use": "Conditional interpretation only: eight type systems ordered by inclusion.",
+      "independent_review": "Primary text opened and checked; formula independently recomputed, not inferred from image rendering."
+    },
+    {
+      "title": "Auel-Singer, The algebraic geometry of3x3magic squares of squares",
+      "url": "https://arxiv.org/html/2609.09351v1",
+      "checked_utc_date": "2026-11-03",
+      "independent_review": "Abstract and introduction retain the distinct integer-square existence question as open; not an audit of the whole paper."
+    }
+  ]
+}

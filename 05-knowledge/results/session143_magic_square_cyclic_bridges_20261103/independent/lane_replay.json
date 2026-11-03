@@ -1,0 +1,58 @@
+{
+  "status": "PASS completed producer checks",
+  "records": [
+    {
+      "lane": "tournaments",
+      "manifest": "manifest.json",
+      "sha256": "97f8f00d91d6e7b435379e124e3f75be02a72f4ef5526ef6892cbdaba60db26b",
+      "files_hashed": 7,
+      "status": "PASS"
+    },
+    {
+      "lane": "sporadic",
+      "manifest": "manifest.json",
+      "sha256": "20a2e90b012f482a301b6c4fd3560982414845d2157243c5658019293a2522ae",
+      "files_hashed": 8,
+      "status": "PASS"
+    },
+    {
+      "lane": "lambda_octonions",
+      "manifest": "PORTABLE_MANIFEST.json",
+      "sha256": "14b001f4bcb83e80a208b10a2cf800d6b46b17778159065df4e54a5c144bfae4",
+      "files_hashed": 17,
+      "status": "PASS"
+    },
+    {
+      "lane": "tournaments",
+      "script": "check_tournaments.py",
+      "sha256": "8da47091f761a8c2d9a7d0149f713fd34fc9546aee1d94b854850fddb2c277ee",
+      "status": "PASS normal and -O, output byte-match"
+    },
+    {
+      "lane": "lambda_octonions",
+      "script": "verify.py",
+      "sha256": "87077e30ceaa242b929194b8072edbbd3e6ac200b102c4a19f9ddd8466cb1598",
+      "status": "PASS normal and -O, output byte-match"
+    },
+    {
+      "lane": "magic_cycle",
+      "script": "verify.py",
+      "sha256": "98bd808507c4b4751f1f1e869a0e5954d0db066db0a447f22a39c49ed0c615a7",
+      "status": "PASS normal and -O, output byte-match"
+    },
+    {
+      "lane": "magic_cycle",
+      "script": "full_cubic_audit.py",
+      "sha256": "5fbc050bd270371a4a82499705bd0936785c575904dcd94907a127154c591328",
+      "status": "PASS normal and -O, output byte-match"
+    },
+    {
+      "lane": "magic_cycle",
+      "manifest": "PORTABLE_MANIFEST.json",
+      "sha256": "5bdf49c865b89558b699a0c0712a1a8c1192d8415b823bcc0eb4afcac81ca9b6",
+      "files_hashed": 26,
+      "status": "PASS"
+    }
+  ],
+  "boundary": "All four frozen producer manifests hashed; scripts replayed normal/-O; external data remain cited, not rebuilt."
+}

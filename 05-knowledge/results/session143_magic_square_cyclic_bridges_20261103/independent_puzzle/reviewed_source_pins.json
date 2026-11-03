@@ -1,0 +1,60 @@
+{
+  "producer_bundle": "puzzle_coordinates",
+  "status": "PASS",
+  "primary_rule": "https://arxiv.org/html/math/0508630v1",
+  "files": [
+    {
+      "path": "report.md",
+      "bytes": 6859,
+      "sha256": "de2fb4a71cbbf5e7df975b618a0431fd63deb9ba49bbfadb2ef448a7b59aeafc",
+      "status": "Producer bytes match sealed manifest"
+    },
+    {
+      "path": "check_coordinates.py",
+      "bytes": 7186,
+      "sha256": "f9cff1f69aa7b483af3a7ba9148dda8bbaa0cb9508b5279ca931ac6b3c9e12ef",
+      "status": "Producer bytes match sealed manifest"
+    },
+    {
+      "path": "check_output.json",
+      "bytes": 4197,
+      "sha256": "088a8810a3c9db272209226bfb728d4af187a575f6ad43abb7d57d6ae90f4b6f",
+      "status": "Producer bytes match sealed manifest"
+    },
+    {
+      "path": "test_coordinates.py",
+      "bytes": 1521,
+      "sha256": "f7ec804e5ba37ce6f5da0a4c74860161e5af66bd2925a4c0f6884403e0979b0f",
+      "status": "Producer bytes match sealed manifest"
+    },
+    {
+      "path": "test_output.json",
+      "bytes": 1315,
+      "sha256": "862213c511228206fdebf6abe1fdeba467278eb6dd979f4211511a8872a7384f",
+      "status": "Producer bytes match sealed manifest"
+    },
+    {
+      "path": "search.py",
+      "bytes": 2236,
+      "sha256": "1dd208491eb896a9dca91b3e2362018e9c73a55f59f8b6a4972baf69da540afa",
+      "status": "Producer bytes match sealed manifest"
+    },
+    {
+      "path": "search_result.json",
+      "bytes": 1384,
+      "sha256": "635db600841ec951df50f1cccfc796d0fc6d3472dfd50627ad32d9fd24d9c125",
+      "status": "Producer bytes match sealed manifest"
+    },
+    {
+      "path": "sources.json",
+      "bytes": 1359,
+      "sha256": "4c9e274cafb04740d054673c20b963615df4d3b2194608217d1a5d03a6f00b9c",
+      "status": "Producer bytes match sealed manifest"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 1986,
+      "sha256": "1f26239bd18518f4ce23cfdbbeebf8e0579d78095ae0cd5265f0d0f2571cee89"
+    }
+  ]
+}

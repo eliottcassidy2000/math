@@ -1,0 +1,148 @@
+{
+  "sources": [
+    {
+      "bytes": 11216,
+      "git_blob": "ab415482c9a32d0dbd3442135244c4eb7e22fd61",
+      "sha256": "e93209774784b915a1c7f63300974f2da53ba3957143511a84d4a19bacfefabf",
+      "snapshot": "inheritance/tournaments/THM-3447-regular-group-orbit-tournament-parity-and-involution-ties.md",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "01-canon/theorems/THM-3447-regular-group-orbit-tournament-parity-and-involution-ties.md"
+    },
+    {
+      "bytes": 4964,
+      "git_blob": "22d1e5681adb3ea0118183a692a72a3aca7efcf8",
+      "sha256": "8e9b6bacbc371b5a91b1a42f360dd1c9085b826723a959e294ba25ab6caf58f6",
+      "snapshot": "inheritance/tournaments/THM-1858-no-tournament-has-exactly-two-distinct-eigenvalues.md",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "01-canon/theorems/THM-1858-no-tournament-has-exactly-two-distinct-eigenvalues.md"
+    },
+    {
+      "bytes": 25351,
+      "git_blob": "cecfce235ca49fcd2f5847ae832184640ae378ec",
+      "sha256": "e8aa36c8f1c5d33d5c88e43c43d9c2ad9d43791aa0ec97417b38732ce31888a4",
+      "snapshot": "inheritance/tournaments/THM-2532-cyclic-tournament-cayley-algebra-and-chi7-even-quotient.md",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "01-canon/theorems/THM-2532-cyclic-tournament-cayley-algebra-and-chi7-even-quotient.md"
+    },
+    {
+      "bytes": 12666,
+      "git_blob": "3d842be01df855f7bdc62d250fdff96d056ea40f",
+      "sha256": "9fa6c58b89972c1c9cdf772eccb47a7d588a371f329ddf280e7e68ad3aa3623f",
+      "snapshot": "magic_cycle/sources/S57_geometry.md",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "05-knowledge/results/session57_square_sum_magic_paths_20261025/square-matrix-geometry/geometry.md"
+    },
+    {
+      "bytes": 3520,
+      "git_blob": "4165331ac02d81f21ffbf02f5379f91e49d9702f",
+      "sha256": "e5344cc1ece3f4312429a230d2d20138bcc0aaca73604babf5340b0265f9ec6d",
+      "snapshot": "magic_cycle/sources/S57_square_totals.md",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "05-knowledge/results/session57_square_sum_magic_paths_20261025/square-total-variant/RESULT.md"
+    },
+    {
+      "bytes": 1361,
+      "git_blob": "a8cc594235c9119b91ec00bb487ba89b66fd7d71",
+      "sha256": "f6849dae8c2425d0eac5cf0cb1a8d55133ed644ee86f5d45a6c3daf0da7149df",
+      "snapshot": "magic_cycle/sources/S57_square_totals_certificate.py",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "05-knowledge/results/session57_square_sum_magic_paths_20261025/square-total-variant/certificate.py"
+    },
+    {
+      "bytes": 17864,
+      "git_blob": "5c802a20cdb8864282a7716114093117d7e580e1",
+      "sha256": "f1f2dd02da56a5323aeb3efb06c3b3e26256af60be73fad359d828b8531040ea",
+      "snapshot": "magic_cycle/sources/S57_synthesis.md",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "05-knowledge/results/session57_square_sum_magic_paths_20261025/SYNTHESIS.md"
+    },
+    {
+      "bytes": 8424,
+      "git_blob": "8bcbfcaaa47de3b46dd0ce9aa2ab02b33ccfe764",
+      "sha256": "3abf8dcf8c863c199cb21fd8715776bc27faa24e39008964adcdfc4e1b0eaaf5",
+      "snapshot": "magic_cycle/sources/S57_biclique_bridge.md",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "05-knowledge/results/session57_square_sum_magic_paths_20261025/biclique-bridge/THEOREM.md"
+    },
+    {
+      "bytes": 8683,
+      "git_blob": "1cdd31726f1955d06d4127c312969616ff22f0dc",
+      "sha256": "c6dc105080da89537b07d91f5be6c94595899c0c4b95ab86240d22ea6126a060",
+      "snapshot": "magic_cycle/sources/THM2657_carry.md",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "01-canon/theorems/THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle.md"
+    },
+    {
+      "bytes": 16384,
+      "git_blob": "5efd1615f59244d8ba533739642bcf1e051c5006",
+      "sha256": "5a8eafe1d3942a35324585e0ed6f20886e6a8cfbec06a5651442524a99c55a9d",
+      "snapshot": "magic_cycle/sources/THM2788_odometer.md",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "01-canon/theorems/THM-2788-physical-modular-odometer-versus-heisenberg-bockstein-extension.md"
+    },
+    {
+      "bytes": 19876,
+      "git_blob": "4d2775faaabaf10a3f577b8f7e964044f9ab1da5",
+      "sha256": "ebf665a341dd4773a213dfae3cb390e75179b553767bcd7d6e87c152f2b743cf",
+      "snapshot": "lambda_octonions/sources/01-arithmetic_braids2_20260917_squarefree_symmetry.md",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "05-knowledge/results/arithmetic_braids2_20260917_squarefree_symmetry.md"
+    },
+    {
+      "bytes": 15216,
+      "git_blob": "d399cda3f20289368ad6a83517bd65cbf0f8d01e",
+      "sha256": "8e8d8b508eb0df90451af85d7de9bebddcd8d1b36da151da38a2b41ed3c34a31",
+      "snapshot": "lambda_octonions/sources/02-arithmetic_braids2_20260917_fano_code.md",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "05-knowledge/results/arithmetic_braids2_20260917_fano_code.md"
+    },
+    {
+      "bytes": 38182,
+      "git_blob": "217f21402b0eb91251caf6dbc719ca04af96db12",
+      "sha256": "e91bdda77e95033f7775cefef67309eb6809719cadc332110c7d6c5a08d05939",
+      "snapshot": "lambda_octonions/sources/03-collatz_mod6_20260922_paley_fano_octonion_design.md",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "05-knowledge/results/collatz_mod6_20260922_paley_fano_octonion_design.md"
+    },
+    {
+      "bytes": 3449,
+      "git_blob": "7fe77d733d9fcb95a7825bb966c68469a539c37c",
+      "sha256": "de42ddd0d114c7f0e3f41cfae407e703b91c71dd195908557563f54c61a4b37a",
+      "snapshot": "lambda_octonions/sources/04-lrc_octonion_associator_fano_macmini_S74.py",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "04-computation/lrc_octonion_associator_fano_macmini_S74.py"
+    },
+    {
+      "bytes": 1660,
+      "git_blob": "e3d46dde49b87aa3f1c2df86ba80be2f2ffb350e",
+      "sha256": "b54be509ab48125693d00a15e40cb956b259efee088e59d39a6cc2a5f430fdf1",
+      "snapshot": "lambda_octonions/sources/05-lrc_octonion_associator_fano_macmini_S74.out",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "05-knowledge/results/lrc_octonion_associator_fano_macmini_S74.out"
+    },
+    {
+      "bytes": 1474,
+      "git_blob": "386a73213bd9ea46bb506cdbde49438c6bf1c8e9",
+      "sha256": "c7f9e6fac6ee846a2189d86f2949f43023a59f06eec6d2be55969b06e4aa370f",
+      "snapshot": "lambda_octonions/sources/06-lrc_octonion_g2_fano_associator_kps.out",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "05-knowledge/results/lrc_octonion_g2_fano_associator_kps.out"
+    },
+    {
+      "bytes": 12197,
+      "git_blob": "76652ed4ef829fc66e74d8daa6d2db7e0f9da3d6",
+      "sha256": "8ca3e3139dea8bf95cb4c32950881acebfbda4fbdc95b17ff11e021c6938f4ab",
+      "snapshot": "lambda_octonions/sources/07-LUCAS_MIRRORS.md",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "05-knowledge/results/lucas_mirror_gap_spaces_20261028/LUCAS_MIRRORS.md"
+    },
+    {
+      "bytes": 15070,
+      "git_blob": "3bc64d77bfe314d6f0ebf0de9cd89cbdb3a50e77",
+      "sha256": "ae993401c37861705827f8074be6e066ebe9e7623d8ad45311c0258377477b02",
+      "snapshot": "lambda_octonions/sources/08-sixth_clock_branches_20261004.py",
+      "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "source_path": "04-computation/experiments/sixth_clock_branches_20261004.py"
+    }
+  ]
+}

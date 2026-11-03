@@ -1,0 +1,102 @@
+{
+  "schema": "session143-portable-packet-v1",
+  "entrypoints": [
+    "README.md",
+    "PROOF.md",
+    "verify.py"
+  ],
+  "reproduction": [
+    "python3 verify.py",
+    "python3 -O verify.py"
+  ],
+  "expected_failure": [
+    "python3 verify.py --mutate-sign"
+  ],
+  "files": [
+    {
+      "path": "PROOF.md",
+      "bytes": 14454,
+      "sha256": "25df351cd4f905217cc02f9763253f09ecc32f5bae881a78cf0da2bcf0aefb4e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2508,
+      "sha256": "855294f1f4424e8f60f6b950b99a46ac9b993210aa39374309c5fa35b97266be"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 4693,
+      "sha256": "66c8ff01d6f3ca049f9b5e07ad328eaf74100abe95a1c9811dddb30ebcd7bc3c"
+    },
+    {
+      "path": "VALIDATION.json",
+      "bytes": 326,
+      "sha256": "3599b89cbb6ea12cc3b39b4e9fc60f6811e0460a50782af250e858a2cc38f097"
+    },
+    {
+      "path": "certificate.json",
+      "bytes": 3754,
+      "sha256": "1c56886808fb6d9982f75fb9019dc439e49b849c5ab810eb3ef6746c745c51dc"
+    },
+    {
+      "path": "certificate.optimized.json",
+      "bytes": 3754,
+      "sha256": "1c56886808fb6d9982f75fb9019dc439e49b849c5ab810eb3ef6746c745c51dc"
+    },
+    {
+      "path": "negative.log",
+      "bytes": 350,
+      "sha256": "c0df968b7430a1a0c8175df958d6e489d098f54180a68deab44b344d48a4db56"
+    },
+    {
+      "path": "search_hits.json",
+      "bytes": 5875,
+      "sha256": "1a54934fc807885dfb4baafc4f56e9cee189f27588f9fa0b5bbf67b9699b34f4"
+    },
+    {
+      "path": "sources/01-arithmetic_braids2_20260917_squarefree_symmetry.md",
+      "bytes": 19876,
+      "sha256": "ebf665a341dd4773a213dfae3cb390e75179b553767bcd7d6e87c152f2b743cf"
+    },
+    {
+      "path": "sources/02-arithmetic_braids2_20260917_fano_code.md",
+      "bytes": 15216,
+      "sha256": "8e8d8b508eb0df90451af85d7de9bebddcd8d1b36da151da38a2b41ed3c34a31"
+    },
+    {
+      "path": "sources/03-collatz_mod6_20260922_paley_fano_octonion_design.md",
+      "bytes": 38182,
+      "sha256": "e91bdda77e95033f7775cefef67309eb6809719cadc332110c7d6c5a08d05939"
+    },
+    {
+      "path": "sources/04-lrc_octonion_associator_fano_macmini_S74.py",
+      "bytes": 3449,
+      "sha256": "de42ddd0d114c7f0e3f41cfae407e703b91c71dd195908557563f54c61a4b37a"
+    },
+    {
+      "path": "sources/05-lrc_octonion_associator_fano_macmini_S74.out",
+      "bytes": 1660,
+      "sha256": "b54be509ab48125693d00a15e40cb956b259efee088e59d39a6cc2a5f430fdf1"
+    },
+    {
+      "path": "sources/06-lrc_octonion_g2_fano_associator_kps.out",
+      "bytes": 1474,
+      "sha256": "c7f9e6fac6ee846a2189d86f2949f43023a59f06eec6d2be55969b06e4aa370f"
+    },
+    {
+      "path": "sources/07-LUCAS_MIRRORS.md",
+      "bytes": 12197,
+      "sha256": "8ca3e3139dea8bf95cb4c32950881acebfbda4fbdc95b17ff11e021c6938f4ab"
+    },
+    {
+      "path": "sources/08-sixth_clock_branches_20261004.py",
+      "bytes": 15070,
+      "sha256": "ae993401c37861705827f8074be6e066ebe9e7623d8ad45311c0258377477b02"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 10692,
+      "sha256": "87077e30ceaa242b929194b8072edbbd3e6ac200b102c4a19f9ddd8466cb1598"
+    }
+  ]
+}
