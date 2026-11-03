@@ -27,7 +27,11 @@ divided by 4. Exactly eight such starting values are bounded; all enter the cycl
     jagged odd-pair triangle.
 - **"Hourglass."** "Hourglass atom" appears nowhere else in the repository. The closest object is HYP-3053's
   bridge-to-bridge hourglass cycles of the diagonal-layer graph, C(n-2, 2) of them, so exactly one at n = 4. That cycle
-  belongs to the full layer flow, not to the 3-tile chart of section 2.2, so the identification is an interpretation. The Pythagorean hourglass of THM-4773 / THM-4780
+  belongs to the full layer flow, not to the 3-tile chart of section 2.2, so the identification is an interpretation.
+  - The concurrent packet `hourglass_triangular_dynamics_20261103/HOURGLASS.md` (commit c267d4d816, after this note's
+    pre-audit checkpoint) records the owner's clarification: the four-vertex hourglass is the diagonal-layer relation
+    of HYP-3053. That matches the reading here. The packet also proves a torsion-free rectangle/hourglass basis over
+    every abelian group, so see it for the hourglass itself. The Pythagorean hourglass of THM-4773 / THM-4780
   is a different object.
 - **{10, 20, 39}.** These are the clique-mean carrier dimensions of the concurrent packet `chart_clique_norm_20261103`
   (three colours, forbidden clique sizes (3,3,5)), at n = 3, 4, 5:
