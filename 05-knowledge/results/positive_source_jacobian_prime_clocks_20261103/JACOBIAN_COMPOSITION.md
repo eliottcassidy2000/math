@@ -169,3 +169,20 @@ partition function. The first bounds are2,4,7,11,17,25. They all have
 global monodromy S_n and are separated by the unordered boundary-component
 ledger (finite sheets, inertia type). These are inherited proved family
 results, not a count of all Keller maps and not new results of this packet.
+
+The final incoming W4 sharpens the obstruction: at least p(n-3) of these
+inequivalent maps can share the IDENTICAL positive coordinate
+x(1-xy/2+x^2z), while still having determinant1, degree n and group S_n.
+At degree5, seeds -w^2(w-1)(w-2)^2 and
+-(8/9)w^2(w-1)(w-5/2)(w-7/4) already give two such maps, separated by
+boundary inertia. Thus even retaining that entire coordinate cannot replace
+joint-map boundary data. This is directly analogous in form, but not
+identified by a map, to retaining a tournament scalar while forgetting
+which source realizes its future port responses.
+
+For arithmetic use, W1 also gives an exact two-gcd algorithm off C=0:
+n-2deg gcd(T,T')+deg gcd(D,D'), where D=gcd(T,T'). It counts complex
+geometric fibre points using rational coefficient-field arithmetic,
+without listing roots or expanding all map coordinates. It is unconditional
+and independent of ETH; bit complexity and rational-point counting are
+different problems.

@@ -91,6 +91,8 @@ Inherited base was5e1cedf452c7. A later fetch brought in b687cd28ca and
 7b76044ca1 (Session144),5e14c36ccf (weighted-family fibre/inertia extension),
 and2a836157af (Session145 parity carrier and exact571 minimum).
 Their overlapping results have priority and are explicitly credited.
+The final integration also reads d40bde5797's fixed-coordinate W4 and
+two-gcd fibre algorithm, and4c6f0ca135's separate portfolio scope updates.
 
 This packet adds a short bank of571 ACTUAL S/B words of depth at most5,
 verified by an independent full evaluation-matrix rank. The incoming
