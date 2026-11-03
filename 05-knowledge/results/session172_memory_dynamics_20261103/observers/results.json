@@ -1,0 +1,65 @@
+{
+  "easy_descent_checked_through": 10000,
+  "five_cycle": [
+    13,
+    33,
+    83,
+    208,
+    104,
+    52,
+    26
+  ],
+  "shared_periodic_word": [
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0
+  ],
+  "status": "PASS",
+  "systems": [
+    {
+      "base": 2,
+      "cylinders": 2046,
+      "depth": 10,
+      "metric_pairs": 1024,
+      "name": "ceil_half",
+      "precision_checks": 2046
+    },
+    {
+      "base": 2,
+      "cylinders": 2046,
+      "depth": 10,
+      "metric_pairs": 1024,
+      "name": "collatz_3",
+      "precision_checks": 2046
+    },
+    {
+      "base": 2,
+      "cylinders": 2046,
+      "depth": 10,
+      "metric_pairs": 1024,
+      "name": "collatz_5",
+      "precision_checks": 2046
+    },
+    {
+      "base": 3,
+      "cylinders": 3279,
+      "depth": 7,
+      "metric_pairs": 59049,
+      "name": "ternary_affine",
+      "precision_checks": 3279
+    },
+    {
+      "base": 4,
+      "cylinders": 1364,
+      "depth": 5,
+      "metric_pairs": 1048576,
+      "name": "composite_base",
+      "precision_checks": 1364
+    }
+  ],
+  "three_rational_cycle_start": "19/101"
+}
