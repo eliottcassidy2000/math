@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "random_admissible_distributions": 1000,
+  "coefficient_comparisons": 89000,
+  "quadratic_period": 9,
+  "linear_period": 72,
+  "exhaustive_tournament_census_replayed": false
+}

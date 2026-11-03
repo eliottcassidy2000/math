@@ -1,0 +1,87 @@
+{
+  "arbitrary_sum_interval_controls": 4095,
+  "certified_path_sizes": [
+    32,
+    44,
+    72,
+    527
+  ],
+  "degenerate_connector_a2_b7": {
+    "positive_solutions": [
+      2
+    ],
+    "simple_connector": false
+  },
+  "height_rows": [
+    {
+      "a": 7,
+      "b": 3,
+      "connectors": []
+    },
+    {
+      "a": 7,
+      "b": 4,
+      "connectors": []
+    },
+    {
+      "a": 7,
+      "b": 13,
+      "connectors": []
+    },
+    {
+      "a": 7,
+      "b": 44,
+      "connectors": [
+        317
+      ]
+    },
+    {
+      "a": 7,
+      "b": 8,
+      "connectors": []
+    },
+    {
+      "a": 527,
+      "b": 3,
+      "connectors": [
+        16897
+      ]
+    },
+    {
+      "a": 527,
+      "b": 4,
+      "connectors": [
+        68117
+      ]
+    },
+    {
+      "a": 527,
+      "b": 13,
+      "connectors": []
+    },
+    {
+      "a": 527,
+      "b": 44,
+      "connectors": [
+        917,
+        6197,
+        58037
+      ]
+    },
+    {
+      "a": 527,
+      "b": 8,
+      "connectors": [
+        7217,
+        67073
+      ]
+    }
+  ],
+  "minimum_count_height": 317,
+  "optimal_connector_sizes": [
+    2,
+    3
+  ],
+  "shift_controls_including_odd_orders": 22748,
+  "twin_shift": 6
+}
