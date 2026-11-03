@@ -60,6 +60,10 @@ the existing funnel recurrence, memoizing only requested P/E/S values.
 It avoids constructing/counting each large tournament. It is not a new
 general polynomial-time algorithm for Hamilton counting or a timing theorem.
 
+The supplied eighteen-polynomial observers concern the specified pairs.
+Their values plus a third separately queried port are not claimed to be a
+closed three-port observer: the full labelled source rows remain retained.
+
 ## Source and boundary discipline
 
 The source pins use SHA256 after LF newline normalization, making Windows

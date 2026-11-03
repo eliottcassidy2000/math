@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "mode": "optimized",
+  "python": "3.13.14",
+  "sympy": "1.14.0",
+  "inherited_files": 210,
+  "full_cpp_rerun": false,
+  "receipts": [
+    {
+      "script": "grandparent_repair",
+      "stdout": "PASS grandparent repair: defect27 -> 1; unique extra port2; two arcs; scalar debt explicit",
+      "sha256": "2009828c837ca56c3a4881c552d9f31128d106e48c546b48b82ad116d937f472"
+    },
+    {
+      "script": "apex_carry",
+      "stdout": "PASS apex carrier: all-size no uniform +2; +4 exactly oddpart(A)=7; explicit two-birth branch",
+      "sha256": "fbd84e70c4d623475f4e2128b288c9bfcd7c4a96d6698ebca143f9656eca240e"
+    },
+    {
+      "script": "square_splices",
+      "stdout": "PASS square splices: connector sets / unoriented paths [(9, 9), (17, 17)] best [(12, 317), (1, 12, 317)] hostile {'connectors': (212, 317), 'connected': True, 'Hamilton_paths': 0}",
+      "sha256": "e9e6fe9401b26dbf94d55aa904759993089e0bb19d658ed8ec05f10032633c45"
+    },
+    {
+      "script": "hostiles",
+      "stdout": "PASS hostile81/27, eight-source port selector and actual18979 clocks",
+      "sha256": "25bfd663b6a60ff949b360dd66444141b691b85381adbc1ed0c2da527f86a8cb"
+    },
+    {
+      "script": "moment_search",
+      "stdout": "moment bank 14 46368 hit False\nmoment bank 15 121393 hit False\nmoment bank 16 317811 hit False\nmoment bank 17 832040 hit False\nPASS moment search None",
+      "sha256": "42ce1871285ac4f4195047cce7524a822c9ee3814a7bc2219eba296182eede5b"
+    },
+    {
+      "script": "funnel_search",
+      "stdout": "small core bank through 3 3\nsmall core bank through 4 7\nsmall core bank through 5 19\nsmall core bank through 6 55\nsmall core bank through 7 162\nsmall core bank through 8 476\ntwo-entry small-core child 15 14848 hit False\ntwo-entry small-core child 16 29696 hit False\ntwo-entry small-core child 17 59392 hit False\ntwo-entry small-core child 18 118784 hit False\ntwo-entry small-core child 19 237568 hit False\nPASS funnel search None",
+      "sha256": "8ac6651263158613a3557a6294825317376241150c247201ba417f817f2cfbd1"
+    }
+  ]
+}

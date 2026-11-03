@@ -77,3 +77,16 @@ not a broader claim based on repeated favorable examples.
 No new universal meta-pattern is promoted from these related examples.
 The next enlargement is an actual two-feedback source language with an
 unbounded word, not a cosmetic tournament drawn over a numerical relation.
+
+## Final incoming reflection connection
+
+The final fetch also brought867fd6bcdc/02f6f85a19. The
+[S174 reflection note](../session174_palindrome_symmetry_20261103/reflections/README.md)
+retains parity and an integer translation for a square-sum edge word, and
+explicitly distinguishes that endpoint action from the internal word.
+SC1 identifies the extra data needed for minimum splicing: compatible old
+endpoint pairs and disjoint connector occupation. These are different
+carriers for different continuation menus. Its palindrome/trace clocks
+are not inputs to our count certificates. The useful comparison is that
+an exact action quotient can still omit the data that validates a later
+attachment, just as a modular phase does not cancel RC4's integer debt.

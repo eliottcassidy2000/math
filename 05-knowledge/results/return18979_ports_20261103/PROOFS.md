@@ -130,6 +130,11 @@ base is strong with profile (1425,181,181,1425). Its full old-root clone family 
     H_old(m)=5407*2^m-4489,
     H_repaired(m)=1243*2^m-1061,                         m>=1.
 
+The unique in-port permits at most two clone runs, so these counts lie in
+the span of1 and2^m; exact counts at m=1,2 determine both coefficients.
+BC1 supplies the matching certificate, and the word formula in RC3
+independently recovers the repaired coefficients.
+
 For m>=2 the repaired first-clone profile is
 
     (1243*2^m-1061, 1243*2^(m-1)-1062,
