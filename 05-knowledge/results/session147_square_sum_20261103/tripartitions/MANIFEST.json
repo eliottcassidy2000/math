@@ -1,0 +1,32 @@
+{
+  "files": [
+    {
+      "bytes": 6486,
+      "path": "RESULTS.md",
+      "sha256": "7bddeec27db5a6c301c4baeb799bb42184c5d59a6e98972bcf0b4afc916eba9f"
+    },
+    {
+      "bytes": 3954,
+      "path": "audit.py",
+      "sha256": "79f85f7db46196cab2d2549ddc4329f83f2056b6955bb1a96a36614336c12205"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "00-navigation/S147.md",
+    "00-navigation/S111-plus.md"
+  ],
+  "replay": [
+    {
+      "script": "audit.py",
+      "stdout_sha256": "30b4de76eb757f125023c0f56e365ef285b6bd103092cc8e945d694dae488327"
+    }
+  ],
+  "schema": 1,
+  "scope": "Square-sum graph three-way structures, modular partition, paths and triangle parameterization"
+}

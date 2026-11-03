@@ -1,0 +1,99 @@
+{
+  "files": [
+    {
+      "bytes": 8737,
+      "path": "REPORT.md",
+      "sha256": "b7c2e8f2abab294225ce97caf84299d81ee7ee6611e252325ed8f33798cdb3d7"
+    },
+    {
+      "bytes": 972,
+      "path": "center_check.out",
+      "sha256": "e45e1674147f0038250b3ef21711055c9df33fc86ec18c5a762544818c412543"
+    },
+    {
+      "bytes": 2751,
+      "path": "center_check.py",
+      "sha256": "44b65ebf96108a5fec1fd67e69396da5fa83b7054c47f45ee9a94080fc03853b"
+    },
+    {
+      "bytes": 972,
+      "path": "center_check_O.out",
+      "sha256": "e45e1674147f0038250b3ef21711055c9df33fc86ec18c5a762544818c412543"
+    },
+    {
+      "bytes": 1317,
+      "path": "check.out",
+      "sha256": "b7672696ccb7e7e31428912cb63883b2a1b2b12e359308d3fcb9551db15d5583"
+    },
+    {
+      "bytes": 6367,
+      "path": "check.py",
+      "sha256": "4dc65632910ea11c2c52ddefa1cde2b72ca05e67a02127d8e4a2e7433f2b69c0"
+    },
+    {
+      "bytes": 1317,
+      "path": "check_O.out",
+      "sha256": "b7672696ccb7e7e31428912cb63883b2a1b2b12e359308d3fcb9551db15d5583"
+    },
+    {
+      "bytes": 959,
+      "path": "hamilton_check.out",
+      "sha256": "f2744fa40a417a1f6d7eb28be6536de26b3528b141d35e0016ba6b659875de21"
+    },
+    {
+      "bytes": 1370,
+      "path": "hamilton_check.py",
+      "sha256": "0a939853127aefd124ff0c160b0449b3b0ba162ec1b1423c68cf99da5f1e88fb"
+    },
+    {
+      "bytes": 959,
+      "path": "hamilton_check_O.out",
+      "sha256": "f2744fa40a417a1f6d7eb28be6536de26b3528b141d35e0016ba6b659875de21"
+    },
+    {
+      "bytes": 746,
+      "path": "independent_check.out",
+      "sha256": "d6b6e7d55b954f3306596975c56f6c96a2fd6e0313b62312c97f9056445cbec5"
+    },
+    {
+      "bytes": 3350,
+      "path": "independent_check.py",
+      "sha256": "348e32b555a6777d044097e3109c693316eb156670d443c1661e6f11f1c82121"
+    },
+    {
+      "bytes": 746,
+      "path": "independent_check_O.out",
+      "sha256": "d6b6e7d55b954f3306596975c56f6c96a2fd6e0313b62312c97f9056445cbec5"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "00-navigation/S147.md",
+    "00-navigation/S111-plus.md"
+  ],
+  "replay": [
+    {
+      "script": "check.py",
+      "stdout_sha256": "b7672696ccb7e7e31428912cb63883b2a1b2b12e359308d3fcb9551db15d5583"
+    },
+    {
+      "script": "center_check.py",
+      "stdout_sha256": "e45e1674147f0038250b3ef21711055c9df33fc86ec18c5a762544818c412543"
+    },
+    {
+      "script": "hamilton_check.py",
+      "stdout_sha256": "f2744fa40a417a1f6d7eb28be6536de26b3528b141d35e0016ba6b659875de21"
+    },
+    {
+      "script": "independent_check.py",
+      "stdout_sha256": "d6b6e7d55b954f3306596975c56f6c96a2fd6e0313b62312c97f9056445cbec5"
+    }
+  ],
+  "schema": 1,
+  "scope": "Square-sum graph core: centers, separators, exact bounded Hamilton paths and distance"
+}

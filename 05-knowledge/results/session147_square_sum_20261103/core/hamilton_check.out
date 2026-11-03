@@ -1,0 +1,22 @@
+G1 ordered Hamilton paths: 1 [(1,)]
+G2 ordered Hamilton paths: 0 []
+G3 ordered Hamilton paths: 0 []
+G4 ordered Hamilton paths: 0 []
+G5 ordered Hamilton paths: 0 []
+G6 ordered Hamilton paths: 0 []
+G7 ordered Hamilton paths: 0 []
+G8 ordered Hamilton paths: 0 []
+G9 ordered Hamilton paths: 0 []
+G10 ordered Hamilton paths: 0 []
+G11 ordered Hamilton paths: 0 []
+G12 ordered Hamilton paths: 0 []
+G13 ordered Hamilton paths: 0 []
+G14 ordered Hamilton paths: 0 []
+G15 ordered Hamilton paths: 2 [(8, 1, 15, 10, 6, 3, 13, 12, 4, 5, 11, 14, 2, 7, 9)]
+G16 ordered Hamilton paths: 2 [(8, 1, 15, 10, 6, 3, 13, 12, 4, 5, 11, 14, 2, 7, 9, 16)]
+G17 ordered Hamilton paths: 2 [(16, 9, 7, 2, 14, 11, 5, 4, 12, 13, 3, 6, 10, 15, 1, 8, 17)]
+G18 ordered Hamilton paths: 0 []
+G15: 4–5 forced; 1–3 present but forbidden; 2–4 absent.
+G16: 4–5 forced; 1–3 present but forbidden; 2–4 absent.
+G17: 4–5 forced; 1–3 present but forbidden; 2–4 absent.
+All counts passed.

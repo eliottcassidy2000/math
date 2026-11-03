@@ -1,0 +1,15 @@
+G10 centers [3, 4, 5, 7] induced edges [(4, 5)] isomorphisms to G4 4
+G11 centers [3, 5, 7] induced edges [] isomorphisms to G3 0
+G12 centers [3, 4, 5, 7] induced edges [(4, 5)] isomorphisms to G4 4
+G13 centers [7, 12, 13] induced edges [(12, 13)] isomorphisms to G3 2
+G14 centers [4, 5] induced edges [(4, 5)] isomorphisms to G2 0
+G15 centers [4, 5] induced edges [(4, 5)] isomorphisms to G2 0
+G16 centers [5] induced edges [] isomorphisms to G1 1
+G17 centers [4, 5] induced edges [(4, 5)] isomorphisms to G2 0
+G18 centers [4, 5] induced edges [(4, 5)] isomorphisms to G2 0
+G19 centers [4, 5] induced edges [(4, 5)] isomorphisms to G2 0
+G20 centers [4] induced edges [] isomorphisms to G1 1
+G21 centers [4, 5] induced edges [(4, 5)] isomorphisms to G2 0
+G22 centers [14, 22] induced edges [(14, 22)] isomorphisms to G2 0
+G12 center graph is fixed; all four isomorphisms are non-order-preserving.
+4–5 remains a bridge for n=14..21 and first ceases at n=22; G22 radius 5.
