@@ -1,0 +1,133 @@
+{
+  "prime": 7417,
+  "trial_division_bound": 86,
+  "p_minus_1_factorization": "2^3*3^2*103",
+  "decimal_order": 2472,
+  "order_witnesses": {
+    "2": 7416,
+    "3": 5104,
+    "103": 4895
+  },
+  "bhs_squared_inequality": [
+    6110784,
+    66753
+  ],
+  "groups": {
+    "Fp_units": 7416,
+    "decimal_subgroup": 2472,
+    "index": 3,
+    "trace_image": 1237,
+    "dihedral_order": 4944,
+    "affine_group_order": 55004472
+  },
+  "trace_zero_distances": [
+    618,
+    1854
+  ],
+  "trace_first_return": 2472,
+  "palindrome_censuses": [
+    {
+      "digits": 3,
+      "total": 90,
+      "occupied": 90,
+      "minimum": 0,
+      "maximum": 1,
+      "divisible_by_7417": 0
+    },
+    {
+      "digits": 5,
+      "total": 900,
+      "occupied": 900,
+      "minimum": 0,
+      "maximum": 1,
+      "divisible_by_7417": 0
+    },
+    {
+      "digits": 7,
+      "total": 9000,
+      "occupied": 6467,
+      "minimum": 0,
+      "maximum": 3,
+      "divisible_by_7417": 1
+    },
+    {
+      "digits": 9,
+      "total": 90000,
+      "occupied": 7417,
+      "minimum": 8,
+      "maximum": 16,
+      "divisible_by_7417": 13
+    },
+    {
+      "digits": 11,
+      "total": 900000,
+      "occupied": 7417,
+      "minimum": 110,
+      "maximum": 133,
+      "divisible_by_7417": 128
+    },
+    {
+      "digits": 13,
+      "total": 9000000,
+      "occupied": 7417,
+      "minimum": 1193,
+      "maximum": 1233,
+      "divisible_by_7417": 1219
+    }
+  ],
+  "clock_moduli": {
+    "240": {
+      "factorization": "2^4*3*5",
+      "unit_group_order": 64,
+      "decimal_power_orbit": {
+        "preperiod": 4,
+        "period": 1,
+        "values_one_orbit": [
+          1,
+          10,
+          100,
+          40,
+          160
+        ]
+      }
+    },
+    "1001": {
+      "factorization": "7*11*13",
+      "unit_group_order": 720,
+      "decimal_power_orbit": {
+        "preperiod": 0,
+        "period": 6,
+        "values_one_orbit": [
+          1,
+          10,
+          100,
+          1000,
+          991,
+          901
+        ]
+      }
+    },
+    "2222": {
+      "factorization": "2*11*101",
+      "unit_group_order": 1000,
+      "decimal_power_orbit": {
+        "preperiod": 1,
+        "period": 4,
+        "values_one_orbit": [
+          1,
+          10,
+          100,
+          1000,
+          1112
+        ]
+      }
+    }
+  },
+  "explicit_collision": {
+    "digits": 1237,
+    "A": "10^1236+10^618+1",
+    "B": "2*10^1236+10^618+2",
+    "difference": "10^1236+1",
+    "common_residue": 2737
+  }
+}
