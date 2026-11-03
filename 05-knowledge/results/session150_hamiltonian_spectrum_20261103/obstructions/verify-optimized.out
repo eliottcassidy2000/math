@@ -1,0 +1,3 @@
+singleton-product assertions: 1485
+strong-component cycle witnesses: 150
+strong-component exponential lower-bound assertions: 600
