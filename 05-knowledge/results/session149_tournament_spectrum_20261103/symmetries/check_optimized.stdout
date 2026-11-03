@@ -1,0 +1,21 @@
+n= 3 classes= 2 fixed= 2
+{'mask': 0, 'converse': 0, 'paths': 1, 'aut': 1, 'path_orbits': 1, 'outdegrees': [0, 1, 2]}
+{'mask': 2, 'converse': 2, 'paths': 3, 'aut': 3, 'path_orbits': 1, 'outdegrees': [1, 1, 1]}
+n= 4 classes= 4 fixed= 2
+{'mask': 0, 'converse': 0, 'paths': 1, 'aut': 1, 'path_orbits': 1, 'outdegrees': [0, 1, 2, 3]}
+{'mask': 2, 'converse': 5, 'paths': 3, 'aut': 3, 'path_orbits': 1, 'outdegrees': [1, 1, 1, 3]}
+{'mask': 4, 'converse': 4, 'paths': 5, 'aut': 1, 'path_orbits': 5, 'outdegrees': [1, 1, 2, 2]}
+{'mask': 5, 'converse': 2, 'paths': 3, 'aut': 3, 'path_orbits': 1, 'outdegrees': [0, 2, 2, 2]}
+n= 5 classes= 12 fixed= 8
+{'mask': 0, 'converse': 0, 'paths': 1, 'aut': 1, 'path_orbits': 1, 'outdegrees': [0, 1, 2, 3, 4]}
+{'mask': 2, 'converse': 11, 'paths': 3, 'aut': 3, 'path_orbits': 1, 'outdegrees': [1, 1, 1, 3, 4]}
+{'mask': 4, 'converse': 9, 'paths': 5, 'aut': 1, 'path_orbits': 5, 'outdegrees': [1, 1, 2, 2, 4]}
+{'mask': 5, 'converse': 5, 'paths': 3, 'aut': 3, 'path_orbits': 1, 'outdegrees': [0, 2, 2, 2, 4]}
+{'mask': 8, 'converse': 8, 'paths': 9, 'aut': 1, 'path_orbits': 9, 'outdegrees': [1, 1, 2, 3, 3]}
+{'mask': 9, 'converse': 4, 'paths': 5, 'aut': 1, 'path_orbits': 5, 'outdegrees': [0, 2, 2, 3, 3]}
+{'mask': 10, 'converse': 10, 'paths': 9, 'aut': 1, 'path_orbits': 9, 'outdegrees': [1, 1, 2, 3, 3]}
+{'mask': 11, 'converse': 2, 'paths': 3, 'aut': 3, 'path_orbits': 1, 'outdegrees': [0, 1, 3, 3, 3]}
+{'mask': 12, 'converse': 12, 'paths': 11, 'aut': 1, 'path_orbits': 11, 'outdegrees': [1, 2, 2, 2, 3]}
+{'mask': 40, 'converse': 40, 'paths': 15, 'aut': 3, 'path_orbits': 5, 'outdegrees': [1, 2, 2, 2, 3]}
+{'mask': 41, 'converse': 41, 'paths': 13, 'aut': 1, 'path_orbits': 13, 'outdegrees': [1, 2, 2, 2, 3]}
+{'mask': 76, 'converse': 76, 'paths': 15, 'aut': 5, 'path_orbits': 3, 'outdegrees': [2, 2, 2, 2, 2]}

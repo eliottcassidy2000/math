@@ -1,0 +1,6 @@
+n=0: reversed=1, centralizer=1, self-converse classes=1
+n=1: reversed=1, centralizer=1, self-converse classes=1
+n=2: reversed=2, centralizer=2, self-converse classes=1
+n=3: reversed=4, centralizer=2, self-converse classes=2
+n=4: reversed=16, centralizer=8, self-converse classes=2
+n=5: reversed=64, centralizer=8, self-converse classes=8
