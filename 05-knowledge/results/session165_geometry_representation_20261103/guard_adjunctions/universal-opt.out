@@ -1,0 +1,6 @@
+All 61 closure systems on 3 labeled elements: exact optimal and squarefree codes passed
+{"r": 2, "guards": 1, "closed_sets": 2, "meet_irreducibles": 1, "minimum_primes": 1, "biclosed": 2, "denominators": [2], "chains": [[0]], "antichain": [0]}
+{"r": 3, "guards": 3, "closed_sets": 7, "meet_irreducibles": 4, "minimum_primes": 2, "biclosed": 6, "denominators": [9, 6, 4], "chains": [[1, 3], [4, 6]], "antichain": [3, 6]}
+{"r": 4, "guards": 6, "closed_sets": 40, "meet_irreducibles": 11, "minimum_primes": 5, "biclosed": 24, "denominators": [1089, 4235, 330, 875, 100, 24], "chains": [[11, 15, 31], [26, 62], [33, 39, 55], [53], [56, 60]], "antichain": [15, 26, 39, 53, 60]}
+{"r": 5, "guards": 10, "closed_sets": 357, "meet_irreducibles": 26, "minimum_primes": 10, "biclosed": 120, "denominators": [62678889, 2070958295, 11614639751, 16546530, 453551375, 5516604533, 4368100, 715081081, 415272, 8400], "chains": [[183, 191, 255, 511], [246, 1022], [421, 431, 1007], [500, 1020], [531, 543, 639, 895], [626, 890], [859, 863], [897, 911, 975], [969, 1005], [1008, 1016]], "antichain": [191, 246, 431, 500, 639, 863, 890, 975, 1005, 1016]}
+ALL UNIVERSAL CONTROLS PASS

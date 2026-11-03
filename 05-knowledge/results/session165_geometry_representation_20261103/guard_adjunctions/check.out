@@ -1,0 +1,16 @@
+denominators (4, 6, 9) closed 7 biclosed 6
+denominators (6, 10, 15) closed 5 biclosed 2
+denominators (2, 4) closed 3 biclosed 2
+denominators (2, 3, 5) closed 8 biclosed 8
+denominators (143, 85, 19, 17, 69, 29, 23, 62, 37, 31, 287, 43, 41) closed 2592 biclosed 512
+rank-two module 2 closed 4 cycle 4 minimum antipodal walks 8
+rank-two module 3 closed 7 cycle 6 minimum antipodal walks 12
+rank-two module 4 closed 11 cycle 8 minimum antipodal walks 16
+rank-two module 5 closed 16 cycle 10 minimum antipodal walks 20
+rank-two module 6 closed 22 cycle 12 minimum antipodal walks 24
+rank-two module 7 closed 29 cycle 14 minimum antipodal walks 28
+rank-two module 8 closed 37 cycle 16 minimum antipodal walks 32
+product C6 x C4: 24 states; shortest antipodal paths each = 40
+blue embedding [{"guards": "000", "least_integer": 1, "H": 1, "canonical": 0}, {"guards": "100", "least_integer": 4, "H": 11, "canonical": 12}, {"guards": "110", "least_integer": 12, "H": 11, "canonical": 12}, {"guards": "111", "least_integer": 36, "H": 9, "canonical": 10}, {"guards": "011", "least_integer": 18, "H": 15, "canonical": 76}, {"guards": "001", "least_integer": 9, "H": 9, "canonical": 8}]
+4 and 16 have the same guard observation but first rule 1/4 sends them to distinct observations
+ALL CHECKS PASS
