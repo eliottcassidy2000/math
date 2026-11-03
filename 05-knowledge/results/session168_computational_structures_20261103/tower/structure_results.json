@@ -1,0 +1,142 @@
+{
+  "checker_sha256": "83c10a55e16bcfbbc9792103ec0c5c0992ebbae9a6ebc5d2877c12bbf652f984",
+  "dimensions": [
+    {
+      "algebra_dimension": 8,
+      "canonical_clifford_order": 16,
+      "common_fixed_indices_of_stabilizer": [
+        0
+      ],
+      "derived_rank": 1,
+      "enumerated_group_order": 128,
+      "generator_pair_checks": 64,
+      "kernel_rank": 4,
+      "log2_group_order": 7,
+      "lower_central_ranks": {
+        "2": 1
+      },
+      "minimum_cycles_for_connected_cover": 3,
+      "minimum_generators": 6,
+      "n": 3,
+      "nilpotency_class": 2,
+      "signed_unit_states": 16
+    },
+    {
+      "algebra_dimension": 16,
+      "canonical_clifford_order": 32,
+      "common_fixed_indices_of_stabilizer": [
+        0
+      ],
+      "derived_rank": 4,
+      "enumerated_group_order": 4096,
+      "generator_pair_checks": 256,
+      "kernel_rank": 8,
+      "log2_group_order": 12,
+      "lower_central_ranks": {
+        "2": 4,
+        "3": 1
+      },
+      "minimum_cycles_for_connected_cover": 4,
+      "minimum_generators": 8,
+      "n": 4,
+      "nilpotency_class": 3,
+      "signed_unit_states": 32
+    },
+    {
+      "algebra_dimension": 32,
+      "canonical_clifford_order": 64,
+      "common_fixed_indices_of_stabilizer": [
+        0
+      ],
+      "derived_rank": 11,
+      "enumerated_group_order": null,
+      "generator_pair_checks": 1024,
+      "kernel_rank": 16,
+      "log2_group_order": 21,
+      "lower_central_ranks": {
+        "2": 11,
+        "3": 5,
+        "4": 1
+      },
+      "minimum_cycles_for_connected_cover": 5,
+      "minimum_generators": 10,
+      "n": 5,
+      "nilpotency_class": 4,
+      "signed_unit_states": 64
+    },
+    {
+      "algebra_dimension": 64,
+      "canonical_clifford_order": 128,
+      "common_fixed_indices_of_stabilizer": [
+        0
+      ],
+      "derived_rank": 26,
+      "enumerated_group_order": null,
+      "generator_pair_checks": 4096,
+      "kernel_rank": 32,
+      "log2_group_order": 38,
+      "lower_central_ranks": {
+        "2": 26,
+        "3": 16,
+        "4": 6,
+        "5": 1
+      },
+      "minimum_cycles_for_connected_cover": 6,
+      "minimum_generators": 12,
+      "n": 6,
+      "nilpotency_class": 5,
+      "signed_unit_states": 128
+    },
+    {
+      "algebra_dimension": 128,
+      "canonical_clifford_order": 256,
+      "common_fixed_indices_of_stabilizer": [
+        0
+      ],
+      "derived_rank": 57,
+      "enumerated_group_order": null,
+      "generator_pair_checks": 16384,
+      "kernel_rank": 64,
+      "log2_group_order": 71,
+      "lower_central_ranks": {
+        "2": 57,
+        "3": 42,
+        "4": 22,
+        "5": 7,
+        "6": 1
+      },
+      "minimum_cycles_for_connected_cover": 7,
+      "minimum_generators": 14,
+      "n": 7,
+      "nilpotency_class": 6,
+      "signed_unit_states": 256
+    }
+  ],
+  "fixed_base": {
+    "beta": 136,
+    "edges": 157,
+    "first_impossible_n": 69,
+    "largest_connected_clifford_n": 136,
+    "largest_full_transport_n": 68,
+    "scope": "formal permutation-voltage cover only",
+    "vertices": 22
+  },
+  "status": "PASS",
+  "zero_divisor": {
+    "n": 4,
+    "product": {},
+    "squared_norms": [
+      2,
+      2,
+      0
+    ],
+    "x": {
+      "1": 1,
+      "10": 1
+    },
+    "y": {
+      "4": 1,
+      "15": -1
+    }
+  }
+}
