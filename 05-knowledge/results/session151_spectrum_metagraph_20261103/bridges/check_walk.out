@@ -1,0 +1,4 @@
+n=1: 1 labelled tournaments, 1 marked pairs; transition balance and reflection verified
+n=2: 2 labelled tournaments, 2 marked pairs; transition balance and reflection verified
+n=3: 8 labelled tournaments, 12 marked pairs; transition balance and reflection verified
+n=4: 64 labelled tournaments, 192 marked pairs; transition balance and reflection verified

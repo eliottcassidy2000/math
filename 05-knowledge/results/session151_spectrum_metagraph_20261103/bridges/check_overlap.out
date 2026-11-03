@@ -1,0 +1,5 @@
+n=3: 2 marked tilings checked; delta range [-2,2]; distinct delta=2
+n=4: 8 marked tilings checked; delta range [-4,4]; distinct delta=5
+n=5: 64 marked tilings checked; delta range [-10,10]; distinct delta=11
+n=6: 1024 marked tilings checked; delta range [-28,28]; distinct delta=29
+n=5 explicit closed/open counterexample: profiles [0,4,0,4,1] and [0,4,6,0,1], H=9 and H=11
