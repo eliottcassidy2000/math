@@ -105,12 +105,17 @@ check raises an explicit exception rather than a removable assert.
 
 ## Recovery and source checks
 
-The post-rebase integration throughd9d9f3e483 is in INCOMING.md. The
+The post-rebase integrations throughd9d9f3e483 and25c9e96557 are in INCOMING.md. The
 incoming moving-guard theorem extends both ladders by any number of
 zero branches. Ten exact joint programs include small independent
 subset controls and two65-vertex k20,j20 controls. A before/after
 converse counterexample preserves the incoming query-polarity scope;
 no full-observer tripling is assumed after polarity reversal.
+The promoted H497 packet is credited at its new proved status. Its
+commuting-Frobenius pair chart cannot faithfully receive our noncommuting
+affine chart under the specified equivariance: the seven-element
+translation orbits must collapse. This is not a general obstruction
+to new actual source programs.
 
 Inherited exact mechanisms: two_entry_funnels READY/TWO_ENTRY/TRANSPORT;
 polarized_path_calculus unique-start grammar; source_selection_closure

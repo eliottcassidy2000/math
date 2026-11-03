@@ -33,7 +33,9 @@ def main():
                 'adaptive_metagraph_reformulation_20261103/metagraph_probe.py',
                 'session163_ternary_triples_20261103/strong_returns/MOVING_GUARD.md',
                 'session163_ternary_triples_20261103/strong_returns/FIRST_STEP.md',
-                'mrb_square_probe_spectrum_20261103/HORIZON.md'):
+                'mrb_square_probe_spectrum_20261103/HORIZON.md',
+                'rooted_carry_closure_20261103/SINGULAR_RETURN.md',
+                'rooted_carry_closure_20261103/PHASE_49_50_51.md'):
         result['inherited_hashes'][rel]=digest(HERE.parent/rel)
     result['checks']['languages.json']=dict(sha256=digest(HERE/'languages.json'))
     (HERE/'manifest.json').write_text(json.dumps(result,indent=2,sort_keys=True)+'\n',encoding='utf-8',newline='\n')

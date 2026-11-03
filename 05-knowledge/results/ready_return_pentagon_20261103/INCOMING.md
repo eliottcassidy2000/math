@@ -1,6 +1,6 @@
 # Incoming source returns and the polarity boundary
 
-Read after the clean rebase throughd9d9f3e483. These connections retain
+Read after clean rebases throughd9d9f3e483 and25c9e96557. These connections retain
 their source attribution and do not alter O3's all-order H35 obstruction.
 
 ## I1. The incoming zero return extends both new ladders indefinitely
@@ -66,16 +66,46 @@ family obstruction is distinct from our rejection of every possible
 1/2-ready presentation. We keep both scopes. The supplied witness is
 not needed to establish ours, since RETURN independently constructs H35.
 
-The [H497 checkpoint](../rooted_carry_closure_20261103/README.md) records
-exact phase-preserving shared attachments and primitive return signals,
-with its proof write-up pending. Its computational status is retained.
-We import no unproved all-length assertion from that checkpoint. Our
-normal-basis phase quotient instead has a fully explicit affine
-commutator and a proved integer precision clock; its missing step is
-the actual source realization of every synthetic phase operation.
+The [H497 packet](../rooted_carry_closure_20261103/README.md), initially a
+finite checkpoint atd9d9f3e483, was promoted with its proof write-up in
+fffa1865ba and extended in25c9e96557. It now supplies actual balanced
+primitive returns, shared phase legalizers, and, after adjoining the
+same moving-guard reset, the complete2401-element M2(F7) residue monoid.
+These are proved within their stated languages. Its balanced-pair
+phase is different from the golden Q4 observer used here; the packet
+itself gives literal zero-pair phases with nonzero golden phases.
 
 The most productive next combination is now specific: use the incoming
 fixed-horizon probes to search for nonzero-offset operations on the
 graded return states, then certify a returned **actual source**. The
 polarity counterexample above is a cheap hostile for any proposed
 compression that keeps only one of the two endpoint observers.
+
+## I3. A seven-to-one obstruction to identifying the two field charts
+
+The incoming [PC3 field pairing](../rooted_carry_closure_20261103/PHASE_49_50_51.md)
+uses shared F7 matrices on two F49 coordinates. Every such linear
+action commutes with componentwise Frobenius. Its42 nonrational
+directions therefore form21 Frobenius pairs. The later
+[complete monoid](../rooted_carry_closure_20261103/SINGULAR_RETURN.md)
+retains this commutation property, even when matrices are singular.
+
+Our plus controller's21-state action has a different exact law:
+`sigma G sigma G^(-1)=tau`, where tau is a nonzero trace-zero
+translation of order7. Suppose a proposed map from our phases into
+the incoming paired chart intertwines G with one shared F7-matrix
+action and sigma with componentwise Frobenius. Commutation in the
+target forces the map to identify p with tau(p). Therefore it must
+collapse each seven-element translation orbit, and has at most three
+distinct images on our21 states. In particular it cannot be faithful.
+This proof only uses equivariance; on the image the G action is
+invertible because G^3 is the identity there.
+
+Thus the incoming actual residue monoid does not by itself realize our
+synthetic phase controller with both field operations identified.
+The strongest survivor is a bridge retaining an additional source
+coordinate or implementing a non-Frobenius-fixed affine translation.
+In homogeneous field coordinates our G has an off-diagonal constant
+`-1+2theta`, outside F7, which pinpoints the missing operation. This is
+a concrete transport obstruction, not a disagreement between the two
+correct appearances of21,42 and F49.
