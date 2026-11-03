@@ -1,0 +1,1146 @@
+{
+  "status": "PASS",
+  "parent_rows": [
+    16,
+    1,
+    3,
+    7,
+    14
+  ],
+  "histogram": {
+    "15": 2,
+    "17": 4,
+    "19": 2,
+    "23": 6,
+    "25": 2,
+    "27": 2,
+    "29": 2,
+    "33": 4,
+    "37": 4,
+    "41": 2
+  },
+  "filter_B": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    27
+  ],
+  "filtered_coefficients": {
+    "17": 4,
+    "19": 2,
+    "23": 6,
+    "27": 2
+  },
+  "cuts": [
+    {
+      "cut": 1,
+      "H": 17,
+      "rows": [
+        16,
+        33,
+        35,
+        39,
+        46,
+        1
+      ],
+      "accepted_chart_count": 5,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          3,
+          2,
+          1,
+          5
+        ],
+        "processing_word": [
+          "r0",
+          "a"
+        ],
+        "state": [
+          17,
+          8,
+          9
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 2,
+      "H": 15,
+      "rows": [
+        48,
+        1,
+        35,
+        39,
+        46,
+        2
+      ],
+      "accepted_chart_count": 4,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          1,
+          0,
+          4,
+          3,
+          2,
+          5
+        ],
+        "processing_word": [
+          "r3",
+          "a"
+        ],
+        "state": [
+          15,
+          5,
+          10
+        ],
+        "port_in_original_labels": 1
+      }
+    },
+    {
+      "cut": 3,
+      "H": 17,
+      "rows": [
+        16,
+        1,
+        35,
+        39,
+        46,
+        3
+      ],
+      "accepted_chart_count": 5,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          3,
+          2,
+          5,
+          1
+        ],
+        "processing_word": [
+          "r0",
+          "a"
+        ],
+        "state": [
+          17,
+          8,
+          9
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 4,
+      "H": 23,
+      "rows": [
+        48,
+        33,
+        3,
+        39,
+        46,
+        4
+      ],
+      "accepted_chart_count": 5,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          1,
+          5,
+          2,
+          0,
+          4,
+          3
+        ],
+        "processing_word": [
+          "a",
+          "a",
+          "q5"
+        ],
+        "state": [
+          23,
+          13,
+          18
+        ],
+        "port_in_original_labels": 1
+      }
+    },
+    {
+      "cut": 5,
+      "H": 27,
+      "rows": [
+        16,
+        33,
+        3,
+        39,
+        46,
+        5
+      ],
+      "accepted_chart_count": 9,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          3,
+          1,
+          5,
+          2
+        ],
+        "processing_word": [
+          "r32",
+          "a"
+        ],
+        "state": [
+          27,
+          12,
+          15
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 6,
+      "H": 19,
+      "rows": [
+        48,
+        1,
+        3,
+        39,
+        46,
+        6
+      ],
+      "accepted_chart_count": 3,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          1,
+          0,
+          4,
+          3,
+          5,
+          2
+        ],
+        "processing_word": [
+          "r5",
+          "a"
+        ],
+        "state": [
+          19,
+          6,
+          14
+        ],
+        "port_in_original_labels": 1
+      }
+    },
+    {
+      "cut": 7,
+      "H": 17,
+      "rows": [
+        16,
+        1,
+        3,
+        39,
+        46,
+        7
+      ],
+      "accepted_chart_count": 5,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          3,
+          5,
+          2,
+          1
+        ],
+        "processing_word": [
+          "r0",
+          "a"
+        ],
+        "state": [
+          17,
+          8,
+          9
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 8,
+      "H": 33,
+      "rows": [
+        48,
+        33,
+        35,
+        7,
+        46,
+        8
+      ],
+      "accepted_chart_count": 7,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          1,
+          5,
+          3,
+          2,
+          0,
+          4
+        ],
+        "processing_word": [
+          "a",
+          "r27"
+        ],
+        "state": [
+          33,
+          19,
+          26
+        ],
+        "port_in_original_labels": 1
+      }
+    },
+    {
+      "cut": 9,
+      "H": 37,
+      "rows": [
+        16,
+        33,
+        35,
+        7,
+        46,
+        9
+      ],
+      "accepted_chart_count": 10,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          1,
+          5,
+          3,
+          2
+        ],
+        "processing_word": [
+          "r56",
+          "a"
+        ],
+        "state": [
+          37,
+          16,
+          21
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 10,
+      "H": 29,
+      "rows": [
+        48,
+        1,
+        35,
+        7,
+        46,
+        10
+      ],
+      "accepted_chart_count": 7,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          1,
+          0,
+          4,
+          2,
+          5,
+          3
+        ],
+        "processing_word": [
+          "r37",
+          "a"
+        ],
+        "state": [
+          29,
+          10,
+          21
+        ],
+        "port_in_original_labels": 1
+      }
+    },
+    {
+      "cut": 11,
+      "H": 27,
+      "rows": [
+        16,
+        1,
+        35,
+        7,
+        46,
+        11
+      ],
+      "accepted_chart_count": 9,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          2,
+          5,
+          3,
+          1
+        ],
+        "processing_word": [
+          "r8",
+          "a"
+        ],
+        "state": [
+          27,
+          12,
+          15
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 12,
+      "H": 37,
+      "rows": [
+        48,
+        33,
+        3,
+        7,
+        46,
+        12
+      ],
+      "accepted_chart_count": 4,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          1,
+          5,
+          3,
+          2,
+          0,
+          4
+        ],
+        "processing_word": [
+          "a",
+          "r19"
+        ],
+        "state": [
+          37,
+          18,
+          26
+        ],
+        "port_in_original_labels": 1
+      }
+    },
+    {
+      "cut": 13,
+      "H": 37,
+      "rows": [
+        16,
+        33,
+        3,
+        7,
+        46,
+        13
+      ],
+      "accepted_chart_count": 10,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          1,
+          5,
+          3,
+          2
+        ],
+        "processing_word": [
+          "r24",
+          "a"
+        ],
+        "state": [
+          37,
+          16,
+          21
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 14,
+      "H": 23,
+      "rows": [
+        48,
+        1,
+        3,
+        7,
+        46,
+        14
+      ],
+      "accepted_chart_count": 3,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          5,
+          3,
+          2,
+          1
+        ],
+        "processing_word": [
+          "s14"
+        ],
+        "state": [
+          23,
+          12,
+          13
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 15,
+      "H": 17,
+      "rows": [
+        16,
+        1,
+        3,
+        7,
+        46,
+        15
+      ],
+      "accepted_chart_count": 5,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          5,
+          3,
+          2,
+          1
+        ],
+        "processing_word": [
+          "r0",
+          "a"
+        ],
+        "state": [
+          17,
+          8,
+          9
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 16,
+      "H": 23,
+      "rows": [
+        48,
+        33,
+        35,
+        39,
+        14,
+        16
+      ],
+      "accepted_chart_count": 2,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          2,
+          1,
+          0,
+          5,
+          4,
+          3
+        ],
+        "processing_word": [
+          "a",
+          "r20"
+        ],
+        "state": [
+          23,
+          29,
+          31
+        ],
+        "port_in_original_labels": 2
+      }
+    },
+    {
+      "cut": 17,
+      "H": 23,
+      "rows": [
+        16,
+        33,
+        35,
+        39,
+        14,
+        17
+      ],
+      "accepted_chart_count": 2,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          3,
+          2,
+          1,
+          5
+        ],
+        "processing_word": [
+          "r4",
+          "a"
+        ],
+        "state": [
+          23,
+          8,
+          16
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 18,
+      "H": 25,
+      "rows": [
+        48,
+        1,
+        35,
+        39,
+        14,
+        18
+      ],
+      "accepted_chart_count": 4,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          1,
+          0,
+          4,
+          3,
+          2,
+          5
+        ],
+        "processing_word": [
+          "r19",
+          "a"
+        ],
+        "state": [
+          25,
+          10,
+          18
+        ],
+        "port_in_original_labels": 1
+      }
+    },
+    {
+      "cut": 19,
+      "H": 19,
+      "rows": [
+        16,
+        1,
+        35,
+        39,
+        14,
+        19
+      ],
+      "accepted_chart_count": 3,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          3,
+          2,
+          5,
+          1
+        ],
+        "processing_word": [
+          "r2",
+          "a"
+        ],
+        "state": [
+          19,
+          7,
+          12
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 20,
+      "H": 33,
+      "rows": [
+        48,
+        33,
+        3,
+        39,
+        14,
+        20
+      ],
+      "accepted_chart_count": 4,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          1,
+          5,
+          2,
+          0,
+          4,
+          3
+        ],
+        "processing_word": [
+          "a",
+          "r45"
+        ],
+        "state": [
+          33,
+          19,
+          27
+        ],
+        "port_in_original_labels": 1
+      }
+    },
+    {
+      "cut": 21,
+      "H": 29,
+      "rows": [
+        16,
+        33,
+        3,
+        39,
+        14,
+        21
+      ],
+      "accepted_chart_count": 6,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          3,
+          1,
+          5,
+          2
+        ],
+        "processing_word": [
+          "r34",
+          "a"
+        ],
+        "state": [
+          29,
+          11,
+          19
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 22,
+      "H": 25,
+      "rows": [
+        48,
+        1,
+        3,
+        39,
+        14,
+        22
+      ],
+      "accepted_chart_count": 4,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          1,
+          0,
+          4,
+          3,
+          5,
+          2
+        ],
+        "processing_word": [
+          "r13",
+          "a"
+        ],
+        "state": [
+          25,
+          9,
+          19
+        ],
+        "port_in_original_labels": 1
+      }
+    },
+    {
+      "cut": 23,
+      "H": 15,
+      "rows": [
+        16,
+        1,
+        3,
+        39,
+        14,
+        23
+      ],
+      "accepted_chart_count": 4,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          3,
+          5,
+          2,
+          1
+        ],
+        "processing_word": [
+          "r1",
+          "a"
+        ],
+        "state": [
+          15,
+          6,
+          9
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 24,
+      "H": 41,
+      "rows": [
+        48,
+        33,
+        35,
+        7,
+        14,
+        24
+      ],
+      "accepted_chart_count": 0,
+      "canonical_lift": null
+    },
+    {
+      "cut": 25,
+      "H": 37,
+      "rows": [
+        16,
+        33,
+        35,
+        7,
+        14,
+        25
+      ],
+      "accepted_chart_count": 5,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          1,
+          5,
+          3,
+          2
+        ],
+        "processing_word": [
+          "r57",
+          "a"
+        ],
+        "state": [
+          37,
+          14,
+          24
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 26,
+      "H": 33,
+      "rows": [
+        48,
+        1,
+        35,
+        7,
+        14,
+        26
+      ],
+      "accepted_chart_count": 3,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          1,
+          0,
+          4,
+          2,
+          5,
+          3
+        ],
+        "processing_word": [
+          "r45",
+          "a"
+        ],
+        "state": [
+          33,
+          12,
+          24
+        ],
+        "port_in_original_labels": 1
+      }
+    },
+    {
+      "cut": 27,
+      "H": 23,
+      "rows": [
+        16,
+        1,
+        35,
+        7,
+        14,
+        27
+      ],
+      "accepted_chart_count": 5,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          2,
+          5,
+          3,
+          1
+        ],
+        "processing_word": [
+          "r9",
+          "a"
+        ],
+        "state": [
+          23,
+          9,
+          14
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 28,
+      "H": 41,
+      "rows": [
+        48,
+        33,
+        3,
+        7,
+        14,
+        28
+      ],
+      "accepted_chart_count": 0,
+      "canonical_lift": null
+    },
+    {
+      "cut": 29,
+      "H": 33,
+      "rows": [
+        16,
+        33,
+        3,
+        7,
+        14,
+        29
+      ],
+      "accepted_chart_count": 7,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          4,
+          1,
+          5,
+          3,
+          2
+        ],
+        "processing_word": [
+          "r25",
+          "a"
+        ],
+        "state": [
+          33,
+          13,
+          21
+        ],
+        "port_in_original_labels": 0
+      }
+    },
+    {
+      "cut": 30,
+      "H": 23,
+      "rows": [
+        48,
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "accepted_chart_count": 3,
+      "canonical_lift": {
+        "path_in_original_labels": [
+          0,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "processing_word": [
+          "s14"
+        ],
+        "state": [
+          23,
+          12,
+          13
+        ],
+        "port_in_original_labels": 0
+      }
+    }
+  ],
+  "failed_lifts": [
+    {
+      "cut": 24,
+      "H": 41
+    },
+    {
+      "cut": 28,
+      "H": 41
+    }
+  ],
+  "repair_candidate_counts": {
+    "24": 41,
+    "28": 41
+  },
+  "shared_repair_atom_count": 41,
+  "minimum_added_atoms": [
+    "s76"
+  ],
+  "literal_repairs": [
+    {
+      "cut": 24,
+      "new_atom": "s76",
+      "path_in_original_labels": [
+        4,
+        3,
+        2,
+        1,
+        0,
+        5
+      ],
+      "port_in_original_labels": 4
+    },
+    {
+      "cut": 28,
+      "new_atom": "s76",
+      "path_in_original_labels": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "port_in_original_labels": 5
+    }
+  ],
+  "filtered_seed_state_polynomial": [
+    {
+      "initial_H": 17,
+      "state": [
+        17,
+        8,
+        9
+      ],
+      "multiplicity": 4
+    },
+    {
+      "initial_H": 19,
+      "state": [
+        19,
+        6,
+        14
+      ],
+      "multiplicity": 1
+    },
+    {
+      "initial_H": 19,
+      "state": [
+        19,
+        7,
+        12
+      ],
+      "multiplicity": 1
+    },
+    {
+      "initial_H": 23,
+      "state": [
+        23,
+        8,
+        16
+      ],
+      "multiplicity": 1
+    },
+    {
+      "initial_H": 23,
+      "state": [
+        23,
+        9,
+        14
+      ],
+      "multiplicity": 1
+    },
+    {
+      "initial_H": 23,
+      "state": [
+        23,
+        12,
+        13
+      ],
+      "multiplicity": 2
+    },
+    {
+      "initial_H": 23,
+      "state": [
+        23,
+        13,
+        18
+      ],
+      "multiplicity": 1
+    },
+    {
+      "initial_H": 23,
+      "state": [
+        23,
+        29,
+        31
+      ],
+      "multiplicity": 1
+    },
+    {
+      "initial_H": 27,
+      "state": [
+        27,
+        12,
+        15
+      ],
+      "multiplicity": 2
+    }
+  ],
+  "filtered_next_singleton_responses": {
+    "17": [
+      33,
+      33,
+      33,
+      33
+    ],
+    "23": [
+      49,
+      47,
+      81,
+      39,
+      41,
+      47
+    ],
+    "27": [
+      51,
+      51
+    ],
+    "19": [
+      31,
+      33
+    ]
+  }
+}

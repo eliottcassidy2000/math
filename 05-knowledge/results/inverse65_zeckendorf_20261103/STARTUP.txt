@@ -1,0 +1,114 @@
+MATH RESEARCH STARTUP PACKET (read-only, bounded)
+
+== Git state ==
+branch: codex/session-inverse65_zeckendorf_20261103
+HEAD:   7c371e94aae8
+target (cached refs): origin/main
+relative to target: behind 0, ahead 0
+working tree: DIRTY (1 paths; first 12 shown)
+  ?? .scratch-inverse65-startup.txt
+ACTION: identify ownership; do not sweep unrelated files into a commit.
+
+== Recent commits (8) ==
+7c371e94aa (HEAD -> codex/session-inverse65_zeckendorf_20261103, origin/main, origin/HEAD) Session152 checkpoint 10: fixed-rank cut moments
+19397cf498 Session152 checkpoint 9: ternary branch certificates
+9c4bc5e489 (codex/session-golden_hamilton_20261103) [golden-hamilton]: prove universal block closure and integrate concurrent six-vertex bank
+92638c9116 [golden-hamilton]: exact three-coordinate transfer and all-order family obstructions
+fba4ea8836 Session152 checkpoint 8: priority-preserving PRIMEGAME operator
+2be963e739 Session152 checkpoint 7: tournament-specific cut restrictions
+43b783a5ec Session152 checkpoint 6: ear carrier generating-function transfer
+0d6af13818 Session152 checkpoint 5: index sequence comparisons
+Freshness is cached-only: run `git fetch origin` before strict reliance.
+
+== Canonical startup route ==
+always read:
+  [OK] 00-navigation/START-HERE.md
+  [OK] 00-navigation/CURRENT-FRONTIER.md
+  [OK] 01-canon/ACTIVE-GUARDRAILS.md
+mathematical workflow:
+  [OK] 00-navigation/RESEARCH-PROTOCOL.md
+  [OK] 00-navigation/META-PATTERNS.md
+on demand:
+  [OK] 05-knowledge/reference/CORE-PAPERS.md
+  [OK] 00-navigation/PROBLEM-LEDGER.md
+Historical logs/reflections are searched for provenance, not read as truth.
+
+== Session posture ==
+Anchor: 65 symbol Hamilton inverse prime 7p Zeckendorf ear image source ports clocks
+Inheritance: name the closest proved mechanism, hostile example,
+corrected near miss, and least-used relevant sidecar before deriving.
+Choose one underexplored Niche and one freely generated Wildcard.
+Keep a 3–7 concept board; compare each new result against every item.
+Explain the mechanism or failure anatomy, not only the verdict.
+Type connections as map / preserved predicate / loss / sidecar / test.
+Select a relevant META-PATTERNS card; at closeout record cards used
+and evidence for any candidate card or counterindication.
+Treat RESERVED and CLAIMED files as unproved; never use them as proved dependencies.
+
+== Front-of-ledger correction headings ==
+- MISTAKE-597 (2026-10-13, opus-2026-10-13-S25 five-manuscripts note, THM-4627, THM-4628, HYP-9258; found by the session's independent adversarial audit after checkpoint 6dde94b60c was pushed) -- an inverted substitution misidentifying an elliptic curve, nonexistent fixed primes of order twenty, a run index reported as a location, and four overclaims
+- MISTAKE-593 (2026-10-12, opus-2026-10-12-S24 six-colour core and band-budget notes, THM-4614, HYP-9247, HYP-9248; found by the session's independent adversarial audit after checkpoint d75e3ac2a was pushed) -- a source charge read from a truncated trace, a ledger count recorded before the last rule, "PROVED under the random model" for a large-deviation heuristic, a residue-colouring no-go scoped to all primes from one, and a port quantifier
+- MISTAKE-592 (2026-10-12, opus-2026-10-12-S23 chess proof-system note, THM-4612 and THM-4613; found by the session's independent adversarial audit A after checkpoints fc6ead521, 95493b988 and cec488f34 were pushed) -- a retrograde solver that could not lose by boundary moves alone, an unsupported numeric range, a stale output file, and five wording overclaims
+- MISTAKE-591 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit H after checkpoints cd2dead5a5 and 6c272b0bc1 were pushed) -- float evidence typed as exact, "need" where only "were" was shown, a verification claimed for all maps that covered half, a lost log quoted as evidence, a one-form experiment stated as a theorem, an overgeneralized existence claim, "semi-decidable" misused, and a false reason in a proof (fixed before the audit finished)
+- MISTAKE-590 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit G after checkpoint 97b640656d was pushed) -- a per-offset "iff" claimed where only a limit was proved, a missing positivity hypothesis, a missed second kind of congruence obstruction, a wrong parameter restriction on a sketch route, an over-general impossibility claim, an uncredited criterion, a census miscount, an "equality" that was a strict failure, and a constant attached to the wrong form
+- MISTAKE-589 (2026-10-08, mac-mini-2026-10-08-reframes; found by independent audits E (THM-4606) and F (HYP-9244 and the results note) after checkpoint 8de8989efb was pushed) -- a conjecture stated without an accessibility clause, a false "sheet-blind" reading, a diagnostic that could not show what was claimed, a single-event estimate, an "exact" label on a pruned search, a density bound stated for all offsets, a proof sentence wrong for non-integer starts, heuristics stated as identities, and a per-depth tail read from correlated samples
+- MISTAKE-588 (2026-10-07, opus-2026-10-07-S21 Mersenne-line barriers note, THM-4605 and HYP-9243; found by the session's independent adversarial audit after checkpoint 023a49bcf was pushed) -- an absorbed block assumed to be an interval, a "collapse together" claim no committed code checked, a band "agreement" with the orphan law that was a bookkeeping artifact, a provable consequence typed as heuristic, an uncited published algorithm, and a Mahler analogy at the wrong place; then (second audit) a misstated trivial-cycle case and a missed canon theorem (THM-4593)
+- MISTAKE-587 (2026-10-07, mac-mini-2026-10-07-twoanchor continuation; found by independent audits C (Collatz) and D (reducible locus) after checkpoint a0a33b38cd was pushed) -- an orphan-law exponent claimed from data that cannot fix it, a selection artifact read as a signal, a classification typed PROVED that rests on an open periodicity question, non-realisable transitions listed, a lemma stated without its scope, and a frieze "reading" that was wrong about where friezes live and what minors see
+Topic-matched older corrections:
+- MISTAKE-693 (2026-10-28, opus-2026-10-28-S68, HYP-9437, THM-4839, MISTAKE-691 and the note `05-knowledge/results/attractors_modular_triangle_world_abc_genealogy_20261028.md` at the pre-audit commit 4e32454073; found by the independent audit `04-computation/experiments/attractors_census_bridges_20261028_audit_S68/AUDIT.md`, SOUND WITH CORRECTIONS, all applied) -- a lexicon bug ('Hecke' matching 'checked') that manufactured a census hub, the wrong modular curve for Pythagorean Frey curves, and over-statements in the bridges and the genealogy
+- MISTAKE-660 (2026-10-22, found by the mac-mini-2026-10-21-fanopsp packing decomposition, THM-4751 (7)) -- the March 2026 Paley/interval mechanism extrapolated two small-p facts
+- MISTAKE-680 (2026-10-27, opus-2026-10-27-S63, the note `05-knowledge/results/h_spectrum_atlas_complement_budgets_paley_clocks_20261027.md`, THM-4810 and HYP-9420 at the pre-audit commits e9b023a7ff / 4c3ba61b7c; found by the independent audit) -- a spectrum result typed new although canon had it, an uncited published conjecture, and two false sentences
+- MISTAKE-053: Systemic HYP-number collisions — five `HYP-N` reused in one 30-hour LRC burst
+Read ACTIVE-GUARDRAILS first; open the full entry only when relevant.
+
+== Topic packet: 65 symbol Hamilton inverse prime 7p Zeckendorf ear image source ports clocks ==
+rank terms: symbol Hamilton inverse prime Zeckendorf ear image source ports clocks, symbol, Hamilton, inverse, prime, Zeckendorf, ear, image
+Current-route matches (ranked):
+  00-navigation/LRC14-PROOF-MAP.md:52: Independently audited THM-2449 says any rational lawful anchored continuation either fires all `72` mixed source-target colours after one rectangle defect or is exactly delta plus six replicas. THM-2456 identifies that failure as a uniform owner-minus-replica root-density offset: it is trivial on one Boolean chart, but...
+  00-navigation/LRC14-PROOF-MAP.md:70: | Rank code / target landing | THM-2295/2298 force ranks five/six; THM-2307 gives the `77/7/1` dual ambiguity. THM-2323/2326/2327 force strict-row `91`-unit edges; THM-2349 extends the marked triangle and inverse boundary to all `165` rows at finite delayed clocks. THM-2331/2334/2337 retain target fibres, word twists, ...
+  00-navigation/LRC14-PROOF-MAP.md:51: THM-2334/2337 give the full-word target/first-jet Abel pushforward, THM-2340 gives the target ANOVA, and THM-2343/2344 identify zero-only landing with a shifted endpoint inverse. THM-2350 identifies the lawful target twists as two balanced target--graft dipoles and makes target survival equivalent to positive magnetic ...
+  05-knowledge/reference/CORE-PAPERS.md:36: - **Does not prove:** `k=13` (14 runners); the prime shortcut misses composite `k+1=14`. THM-1288 refutes literal v1 Conjecture 7.1: not an inverse theorem.
+  00-navigation/LRC14-PROOF-MAP.md:50: THM-2323/2326/2327 mark a `91`-unit deepest edge on positive strict shallow words. THM-2349 uses the universal depth-one owner to extend the same triangle and downstream current to all `165` rows at finite row-dependent clocks, including every strict resonance arm; repeated rows permit either shallow source. THM-2331's...
+  00-navigation/META-PATTERNS.md:368: **Action:** test negative preimages of zero before transferring positivity. Commutation need not reflect order; require a positive inverse, target factorization or transverse selector. **Evidence:** THM-3122/2551/3127.
+  00-navigation/CURRENT-FRONTIER.md:393: - **Jacobian/Dixmier:** `JC(2),DC(2)` **OPEN**. The [new source proof](../05-knowledge/results/shape_ports_20261025/anchors_quartic_sextic.md)
+  00-navigation/CURRENT-FRONTIER.md:93: - **REFUTED for `n>=3`:** GMC is false ([sources](../05-knowledge/reference/CORE-PAPERS.md)); THM-3290/3300/3301 give boundary/invariant/no-eigenvector controls. [THM-2801](../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md) proves `SIC(1)` / refutes `SIC(n>=2)`, not `JC(2)`.
+  05-knowledge/reference/CORE-PAPERS.md:415: THM-4169 imports only prime deletion; all other claims are in-repo.
+  00-navigation/CURRENT-FRONTIER.md:411: full torsion misses geometric fibres; source-linear repairs excluded. JC **OPEN**.
+  00-navigation/CURRENT-FRONTIER.md:418: [Ninth-source period](../05-knowledge/results/overnight8_20260906_jc_collision_period.md): J8 persists under collision-preserving O(t9) changes; earlier jets/entry remain open.
+  01-canon/ACTIVE-GUARDRAILS.md:171: reduced complement fiber-linear; THM-2084's cubic floor is also a source-
+  ... 6 more qualifying route matches
+Detailed files (truth precedence first; specificity within group):
+  Established canon:
+    [PROVED] 01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md
+    [PROVED] 01-canon/theorems/THM-2825-nearest-half-step-common-right-collar-and-semantic-parity-boundary.md
+    [PROVED] 01-canon/theorems/THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge.md
+    ... 3561 more; refine the query
+  Unproved candidates (not results):
+    [RESERVED] 01-canon/theorems/THM-2958-mixed-denominator-small-prime-fibre-compression.md
+    [CLAIMED] 01-canon/theorems/THM-454-blowup-product-and-lift-laws.md
+    [RESERVED] 01-canon/theorems/THM-3857-linear-kummer-tower-bichromatic-r2z-degree-nine-residue.md
+    ... 2 more; refine the query
+  Hypotheses:
+    [PROVED] 05-knowledge/hypotheses/HYP-6815-lrc14-affine-slope-threshold-suspension.md
+    [PROVED] 05-knowledge/hypotheses/HYP-6825-tournament-metagraph-address-tiling-fibers.md
+    [UNLABELLED] 05-knowledge/hypotheses/HYP-2998-farey-fibonacci-additive-basis-carrier.md
+    ... 1292 more; refine the query
+  Historical reflections:
+    [HISTORY] 07-reflections/snark-apex-boundary-atlas-defect-budget-and-cross-frontier-compilers-codex-20260825.md
+    [HISTORY] 07-reflections/tournament-matrix-classic-results-atlas-codex-s210.md
+    [HISTORY] 07-reflections/lrc-which-clocks-matter-prime-gears-and-wild-remodels-s564.md
+    ... 2276 more; refine the query
+Niche/artifact hits (evidence or inspiration; not truth authority):
+  05-knowledge/results/session68_tournament_composition_classification_20261026/session68-arithmetic/sources_universe.txt
+  05-knowledge/results/twelve_twenty_two_trace_20261029/archive_search.json
+  00-navigation/TANGENTS.md
+  05-knowledge/results/INDEX.md
+  05-knowledge/results/aliquot_66_five_fifteen_20261028/occurrences.json
+  05-knowledge/results/collatz_procgen_20260922_synthesis.md
+  ... 25297 more; refine the query
+
+== Coordination ==
+machine identity: opus
+Use `python3 agents/processor.py --status --peek --limit 8`;
+remove --peek only when intentionally consuming the displayed messages.
+Legacy IDs collide: cite every theorem as ID + slug/path.

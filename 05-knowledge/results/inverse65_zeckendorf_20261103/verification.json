@@ -1,0 +1,784 @@
+{
+  "status": "PASS",
+  "complete_forward_states_through151": 747,
+  "rejected_small_physical_cone_states": 942,
+  "false_state_with_allowed_H": [
+    37,
+    18,
+    19
+  ],
+  "scalar_inverse_examples": {
+    "1": {
+      "source_type": "actual_tournament",
+      "processing_word": [
+        "a"
+      ],
+      "source_order_word": [
+        "a"
+      ],
+      "clock": [
+        {
+          "letter": "a",
+          "vertices": 1,
+          "state": [
+            1,
+            0,
+            1
+          ],
+          "port_in_processing_frame": 0
+        }
+      ],
+      "vertices": 1,
+      "H": 1,
+      "state": [
+        1,
+        0,
+        1
+      ],
+      "target_rows": [
+        0
+      ]
+    },
+    "7": null,
+    "21": null,
+    "37": {
+      "source_type": "actual_tournament",
+      "processing_word": [
+        "s330"
+      ],
+      "source_order_word": [
+        "s330"
+      ],
+      "clock": [
+        {
+          "letter": "s330",
+          "vertices": 6,
+          "state": [
+            37,
+            33,
+            37
+          ],
+          "port_in_processing_frame": 5
+        }
+      ],
+      "vertices": 6,
+      "H": 37,
+      "state": [
+        37,
+        33,
+        37
+      ],
+      "target_rows": [
+        56,
+        1,
+        35,
+        6,
+        14,
+        26
+      ]
+    },
+    "41": {
+      "source_type": "actual_tournament",
+      "processing_word": [
+        "b",
+        "q5"
+      ],
+      "source_order_word": [
+        "q5",
+        "b"
+      ],
+      "clock": [
+        {
+          "letter": "b",
+          "vertices": 3,
+          "state": [
+            1,
+            2,
+            2
+          ],
+          "port_in_processing_frame": 2
+        },
+        {
+          "letter": "q5",
+          "vertices": 7,
+          "state": [
+            41,
+            22,
+            31
+          ],
+          "port_in_processing_frame": 6
+        }
+      ],
+      "vertices": 7,
+      "H": 41,
+      "state": [
+        41,
+        22,
+        31
+      ],
+      "target_rows": [
+        120,
+        121,
+        115,
+        36,
+        72,
+        16,
+        40
+      ]
+    },
+    "55": {
+      "source_type": "actual_tournament",
+      "processing_word": [
+        "a",
+        "a",
+        "r26"
+      ],
+      "source_order_word": [
+        "r26",
+        "a",
+        "a"
+      ],
+      "clock": [
+        {
+          "letter": "a",
+          "vertices": 1,
+          "state": [
+            1,
+            0,
+            1
+          ],
+          "port_in_processing_frame": 0
+        },
+        {
+          "letter": "a",
+          "vertices": 2,
+          "state": [
+            1,
+            1,
+            1
+          ],
+          "port_in_processing_frame": 1
+        },
+        {
+          "letter": "r26",
+          "vertices": 7,
+          "state": [
+            55,
+            48,
+            57
+          ],
+          "port_in_processing_frame": 6
+        }
+      ],
+      "vertices": 7,
+      "H": 55,
+      "state": [
+        55,
+        48,
+        57
+      ],
+      "target_rows": [
+        124,
+        121,
+        34,
+        100,
+        12,
+        16,
+        52
+      ]
+    },
+    "111": {
+      "source_type": "actual_tournament",
+      "processing_word": [
+        "a",
+        "s453"
+      ],
+      "source_order_word": [
+        "s453",
+        "a"
+      ],
+      "clock": [
+        {
+          "letter": "a",
+          "vertices": 1,
+          "state": [
+            1,
+            0,
+            1
+          ],
+          "port_in_processing_frame": 0
+        },
+        {
+          "letter": "s453",
+          "vertices": 7,
+          "state": [
+            111,
+            71,
+            85
+          ],
+          "port_in_processing_frame": 6
+        }
+      ],
+      "vertices": 7,
+      "H": 111,
+      "state": [
+        111,
+        71,
+        85
+      ],
+      "target_rows": [
+        124,
+        49,
+        82,
+        6,
+        72,
+        28,
+        42
+      ]
+    },
+    "133": {
+      "source_type": "actual_tournament",
+      "processing_word": [
+        "b",
+        "r10"
+      ],
+      "source_order_word": [
+        "r10",
+        "b"
+      ],
+      "clock": [
+        {
+          "letter": "b",
+          "vertices": 3,
+          "state": [
+            1,
+            2,
+            2
+          ],
+          "port_in_processing_frame": 2
+        },
+        {
+          "letter": "r10",
+          "vertices": 8,
+          "state": [
+            133,
+            101,
+            125
+          ],
+          "port_in_processing_frame": 7
+        }
+      ],
+      "vertices": 8,
+      "H": 133,
+      "state": [
+        133,
+        101,
+        125
+      ],
+      "target_rows": [
+        248,
+        249,
+        243,
+        4,
+        200,
+        24,
+        40,
+        104
+      ]
+    },
+    "491": {
+      "source_type": "actual_tournament",
+      "processing_word": [
+        "a",
+        "s248",
+        "a",
+        "a"
+      ],
+      "source_order_word": [
+        "a",
+        "a",
+        "s248",
+        "a"
+      ],
+      "clock": [
+        {
+          "letter": "a",
+          "vertices": 1,
+          "state": [
+            1,
+            0,
+            1
+          ],
+          "port_in_processing_frame": 0
+        },
+        {
+          "letter": "s248",
+          "vertices": 7,
+          "state": [
+            67,
+            103,
+            109
+          ],
+          "port_in_processing_frame": 6
+        },
+        {
+          "letter": "a",
+          "vertices": 8,
+          "state": [
+            273,
+            109,
+            170
+          ],
+          "port_in_processing_frame": 7
+        },
+        {
+          "letter": "a",
+          "vertices": 9,
+          "state": [
+            491,
+            170,
+            382
+          ],
+          "port_in_processing_frame": 8
+        }
+      ],
+      "vertices": 9,
+      "H": 491,
+      "state": [
+        491,
+        170,
+        382
+      ],
+      "target_rows": [
+        508,
+        481,
+        434,
+        422,
+        394,
+        400,
+        316,
+        64,
+        128
+      ]
+    }
+  },
+  "prime_source_examples": {
+    "499": {
+      "source_type": "actual_tournament",
+      "processing_word": [
+        "r43",
+        "q5",
+        "a"
+      ],
+      "source_order_word": [
+        "a",
+        "q5",
+        "r43"
+      ],
+      "clock": [
+        {
+          "letter": "r43",
+          "vertices": 5,
+          "state": [
+            11,
+            9,
+            11
+          ],
+          "port_in_processing_frame": 4
+        },
+        {
+          "letter": "q5",
+          "vertices": 9,
+          "state": [
+            233,
+            133,
+            182
+          ],
+          "port_in_processing_frame": 8
+        },
+        {
+          "letter": "a",
+          "vertices": 10,
+          "state": [
+            499,
+            182,
+            366
+          ],
+          "port_in_processing_frame": 9
+        }
+      ],
+      "vertices": 10,
+      "H": 499,
+      "state": [
+        499,
+        182,
+        366
+      ],
+      "target_rows": [
+        996,
+        1017,
+        1010,
+        997,
+        969,
+        656,
+        800,
+        576,
+        160,
+        256
+      ]
+    },
+    "1009": {
+      "source_type": "actual_tournament",
+      "processing_word": [
+        "r21",
+        "q0",
+        "a",
+        "a"
+      ],
+      "source_order_word": [
+        "a",
+        "a",
+        "q0",
+        "r21"
+      ],
+      "clock": [
+        {
+          "letter": "r21",
+          "vertices": 5,
+          "state": [
+            13,
+            8,
+            10
+          ],
+          "port_in_processing_frame": 4
+        },
+        {
+          "letter": "q0",
+          "vertices": 9,
+          "state": [
+            157,
+            204,
+            222
+          ],
+          "port_in_processing_frame": 8
+        },
+        {
+          "letter": "a",
+          "vertices": 10,
+          "state": [
+            565,
+            222,
+            361
+          ],
+          "port_in_processing_frame": 9
+        },
+        {
+          "letter": "a",
+          "vertices": 11,
+          "state": [
+            1009,
+            361,
+            787
+          ],
+          "port_in_processing_frame": 10
+        }
+      ],
+      "vertices": 11,
+      "H": 1009,
+      "state": [
+        1009,
+        361,
+        787
+      ],
+      "target_rows": [
+        2040,
+        2017,
+        2035,
+        2022,
+        1994,
+        1552,
+        1568,
+        1632,
+        1248,
+        256,
+        512
+      ]
+    },
+    "19861": {
+      "source_type": "actual_tournament",
+      "processing_word": [
+        "q0",
+        "r43",
+        "r49",
+        "a"
+      ],
+      "source_order_word": [
+        "a",
+        "r49",
+        "r43",
+        "q0"
+      ],
+      "clock": [
+        {
+          "letter": "q0",
+          "vertices": 4,
+          "state": [
+            1,
+            4,
+            4
+          ],
+          "port_in_processing_frame": 3
+        },
+        {
+          "letter": "r43",
+          "vertices": 9,
+          "state": [
+            227,
+            109,
+            167
+          ],
+          "port_in_processing_frame": 8
+        },
+        {
+          "letter": "r49",
+          "vertices": 14,
+          "state": [
+            7803,
+            6029,
+            7311
+          ],
+          "port_in_processing_frame": 13
+        },
+        {
+          "letter": "a",
+          "vertices": 15,
+          "state": [
+            19861,
+            7311,
+            13832
+          ],
+          "port_in_processing_frame": 14
+        }
+      ],
+      "vertices": 15,
+      "H": 19861,
+      "state": [
+        19861,
+        7311,
+        13832
+      ],
+      "target_rows": [
+        32752,
+        32753,
+        32755,
+        32743,
+        32328,
+        32656,
+        32544,
+        32336,
+        31888,
+        22784,
+        16896,
+        25600,
+        19456,
+        5632,
+        8192
+      ]
+    },
+    "21001": {
+      "source_type": "actual_tournament",
+      "processing_word": [
+        "b",
+        "r16",
+        "r48",
+        "a",
+        "a"
+      ],
+      "source_order_word": [
+        "a",
+        "a",
+        "r48",
+        "r16",
+        "b"
+      ],
+      "clock": [
+        {
+          "letter": "b",
+          "vertices": 3,
+          "state": [
+            1,
+            2,
+            2
+          ],
+          "port_in_processing_frame": 2
+        },
+        {
+          "letter": "r16",
+          "vertices": 8,
+          "state": [
+            61,
+            106,
+            110
+          ],
+          "port_in_processing_frame": 7
+        },
+        {
+          "letter": "r48",
+          "vertices": 13,
+          "state": [
+            2465,
+            4526,
+            4742
+          ],
+          "port_in_processing_frame": 12
+        },
+        {
+          "letter": "a",
+          "vertices": 14,
+          "state": [
+            11517,
+            4742,
+            6991
+          ],
+          "port_in_processing_frame": 13
+        },
+        {
+          "letter": "a",
+          "vertices": 15,
+          "state": [
+            21001,
+            6991,
+            16259
+          ],
+          "port_in_processing_frame": 14
+        }
+      ],
+      "vertices": 15,
+      "H": 21001,
+      "state": [
+        21001,
+        6991,
+        16259
+      ],
+      "target_rows": [
+        32760,
+        32761,
+        32755,
+        32580,
+        32520,
+        32536,
+        32560,
+        32376,
+        27776,
+        24832,
+        25088,
+        26112,
+        20224,
+        4096,
+        8192
+      ]
+    }
+  },
+  "literal_quadratic_examples": [
+    {
+      "word": [
+        "r29",
+        "b"
+      ],
+      "vertices": 8,
+      "H": 91,
+      "rows": [
+        248,
+        233,
+        243,
+        228,
+        202,
+        16,
+        32,
+        96
+      ]
+    },
+    {
+      "word": [
+        "r43",
+        "r21"
+      ],
+      "vertices": 10,
+      "H": 499,
+      "rows": [
+        996,
+        1017,
+        1010,
+        997,
+        969,
+        784,
+        32,
+        608,
+        192,
+        320
+      ]
+    },
+    {
+      "word": [
+        "r29",
+        "r21",
+        "r21",
+        "b"
+      ],
+      "vertices": 18,
+      "H": 147007,
+      "rows": [
+        262136,
+        262121,
+        262131,
+        262116,
+        262090,
+        261904,
+        261152,
+        261728,
+        261312,
+        260416,
+        254464,
+        230400,
+        248832,
+        235520,
+        206848,
+        16384,
+        32768,
+        98304
+      ]
+    },
+    {
+      "word": [
+        "r43",
+        "r21",
+        "r21",
+        "b"
+      ],
+      "vertices": 18,
+      "H": 139027,
+      "rows": [
+        262116,
+        262137,
+        262130,
+        262117,
+        262089,
+        261904,
+        261152,
+        261728,
+        261312,
+        260416,
+        254464,
+        230400,
+        248832,
+        235520,
+        206848,
+        16384,
+        32768,
+        98304
+      ]
+    }
+  ],
+  "inverse_cache_states": 1719,
+  "scope": "Decision and witness construction for the stated bank, not proof of its scalar surjectivity."
+}

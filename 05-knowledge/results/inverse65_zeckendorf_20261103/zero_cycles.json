@@ -1,0 +1,845 @@
+{
+  "status": "PASS",
+  "unit_letters": [
+    "a",
+    "b",
+    "q0",
+    "r0",
+    "r20",
+    "r30",
+    "r6"
+  ],
+  "norm_weights": {
+    "a": "9/5",
+    "b": "17/3",
+    "q0": "31/3",
+    "r0": "59/3",
+    "r20": "253/6",
+    "r30": "179/6",
+    "r6": "155/6"
+  },
+  "zero_period_candidates": [
+    3,
+    6,
+    9
+  ],
+  "maximum_emitted_lengths": [
+    2,
+    4,
+    7
+  ],
+  "complete_pruned_candidates": {
+    "3": [
+      {
+        "word": [
+          "a"
+        ],
+        "norm_lower_bound": "9/5",
+        "trace_second_det": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "81/25",
+        "trace_second_det": [
+          3,
+          -1,
+          1
+        ]
+      }
+    ],
+    "6": [
+      {
+        "word": [
+          "a"
+        ],
+        "norm_lower_bound": "9/5",
+        "trace_second_det": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "word": [
+          "b"
+        ],
+        "norm_lower_bound": "17/3",
+        "trace_second_det": [
+          7,
+          -9,
+          1
+        ]
+      },
+      {
+        "word": [
+          "q0"
+        ],
+        "norm_lower_bound": "31/3",
+        "trace_second_det": [
+          19,
+          -45,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "81/25",
+        "trace_second_det": [
+          3,
+          -1,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "b"
+        ],
+        "norm_lower_bound": "51/5",
+        "trace_second_det": [
+          15,
+          9,
+          1
+        ]
+      },
+      {
+        "word": [
+          "b",
+          "a"
+        ],
+        "norm_lower_bound": "51/5",
+        "trace_second_det": [
+          15,
+          9,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "729/125",
+        "trace_second_det": [
+          7,
+          5,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "6561/625",
+        "trace_second_det": [
+          11,
+          -5,
+          1
+        ]
+      }
+    ],
+    "9": [
+      {
+        "word": [
+          "a"
+        ],
+        "norm_lower_bound": "9/5",
+        "trace_second_det": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "word": [
+          "b"
+        ],
+        "norm_lower_bound": "17/3",
+        "trace_second_det": [
+          7,
+          -9,
+          1
+        ]
+      },
+      {
+        "word": [
+          "q0"
+        ],
+        "norm_lower_bound": "31/3",
+        "trace_second_det": [
+          19,
+          -45,
+          1
+        ]
+      },
+      {
+        "word": [
+          "r0"
+        ],
+        "norm_lower_bound": "59/3",
+        "trace_second_det": [
+          55,
+          -201,
+          1
+        ]
+      },
+      {
+        "word": [
+          "r20"
+        ],
+        "norm_lower_bound": "253/6",
+        "trace_second_det": [
+          49,
+          73,
+          1
+        ]
+      },
+      {
+        "word": [
+          "r30"
+        ],
+        "norm_lower_bound": "179/6",
+        "trace_second_det": [
+          39,
+          15,
+          -1
+        ]
+      },
+      {
+        "word": [
+          "r6"
+        ],
+        "norm_lower_bound": "155/6",
+        "trace_second_det": [
+          49,
+          73,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "81/25",
+        "trace_second_det": [
+          3,
+          -1,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "b"
+        ],
+        "norm_lower_bound": "51/5",
+        "trace_second_det": [
+          15,
+          9,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "q0"
+        ],
+        "norm_lower_bound": "93/5",
+        "trace_second_det": [
+          35,
+          17,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "r0"
+        ],
+        "norm_lower_bound": "177/5",
+        "trace_second_det": [
+          87,
+          33,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "r20"
+        ],
+        "norm_lower_bound": "759/10",
+        "trace_second_det": [
+          87,
+          31,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "r30"
+        ],
+        "norm_lower_bound": "537/10",
+        "trace_second_det": [
+          69,
+          -29,
+          -1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "r6"
+        ],
+        "norm_lower_bound": "93/2",
+        "trace_second_det": [
+          87,
+          31,
+          1
+        ]
+      },
+      {
+        "word": [
+          "b",
+          "a"
+        ],
+        "norm_lower_bound": "51/5",
+        "trace_second_det": [
+          15,
+          9,
+          1
+        ]
+      },
+      {
+        "word": [
+          "b",
+          "b"
+        ],
+        "norm_lower_bound": "289/9",
+        "trace_second_det": [
+          67,
+          67,
+          1
+        ]
+      },
+      {
+        "word": [
+          "b",
+          "q0"
+        ],
+        "norm_lower_bound": "527/9",
+        "trace_second_det": [
+          171,
+          395,
+          1
+        ]
+      },
+      {
+        "word": [
+          "q0",
+          "a"
+        ],
+        "norm_lower_bound": "93/5",
+        "trace_second_det": [
+          35,
+          17,
+          1
+        ]
+      },
+      {
+        "word": [
+          "q0",
+          "b"
+        ],
+        "norm_lower_bound": "527/9",
+        "trace_second_det": [
+          171,
+          395,
+          1
+        ]
+      },
+      {
+        "word": [
+          "r0",
+          "a"
+        ],
+        "norm_lower_bound": "177/5",
+        "trace_second_det": [
+          87,
+          33,
+          1
+        ]
+      },
+      {
+        "word": [
+          "r20",
+          "a"
+        ],
+        "norm_lower_bound": "759/10",
+        "trace_second_det": [
+          87,
+          31,
+          1
+        ]
+      },
+      {
+        "word": [
+          "r30",
+          "a"
+        ],
+        "norm_lower_bound": "537/10",
+        "trace_second_det": [
+          69,
+          -29,
+          -1
+        ]
+      },
+      {
+        "word": [
+          "r6",
+          "a"
+        ],
+        "norm_lower_bound": "93/2",
+        "trace_second_det": [
+          87,
+          31,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "729/125",
+        "trace_second_det": [
+          7,
+          5,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "b"
+        ],
+        "norm_lower_bound": "459/25",
+        "trace_second_det": [
+          27,
+          3,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "q0"
+        ],
+        "norm_lower_bound": "837/25",
+        "trace_second_det": [
+          67,
+          59,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "r0"
+        ],
+        "norm_lower_bound": "1593/25",
+        "trace_second_det": [
+          171,
+          339,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "b",
+          "a"
+        ],
+        "norm_lower_bound": "459/25",
+        "trace_second_det": [
+          27,
+          3,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "b",
+          "b"
+        ],
+        "norm_lower_bound": "289/5",
+        "trace_second_det": [
+          117,
+          -69,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "q0",
+          "a"
+        ],
+        "norm_lower_bound": "837/25",
+        "trace_second_det": [
+          67,
+          59,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "r0",
+          "a"
+        ],
+        "norm_lower_bound": "1593/25",
+        "trace_second_det": [
+          171,
+          339,
+          1
+        ]
+      },
+      {
+        "word": [
+          "b",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "459/25",
+        "trace_second_det": [
+          27,
+          3,
+          1
+        ]
+      },
+      {
+        "word": [
+          "b",
+          "a",
+          "b"
+        ],
+        "norm_lower_bound": "289/5",
+        "trace_second_det": [
+          117,
+          -69,
+          1
+        ]
+      },
+      {
+        "word": [
+          "b",
+          "b",
+          "a"
+        ],
+        "norm_lower_bound": "289/5",
+        "trace_second_det": [
+          117,
+          -69,
+          1
+        ]
+      },
+      {
+        "word": [
+          "q0",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "837/25",
+        "trace_second_det": [
+          67,
+          59,
+          1
+        ]
+      },
+      {
+        "word": [
+          "r0",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "1593/25",
+        "trace_second_det": [
+          171,
+          339,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "6561/625",
+        "trace_second_det": [
+          11,
+          -5,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "a",
+          "b"
+        ],
+        "norm_lower_bound": "4131/125",
+        "trace_second_det": [
+          49,
+          -21,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "a",
+          "q0"
+        ],
+        "norm_lower_bound": "7533/125",
+        "trace_second_det": [
+          121,
+          -121,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "b",
+          "a"
+        ],
+        "norm_lower_bound": "4131/125",
+        "trace_second_det": [
+          49,
+          -21,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "q0",
+          "a"
+        ],
+        "norm_lower_bound": "7533/125",
+        "trace_second_det": [
+          121,
+          -121,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "b",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "4131/125",
+        "trace_second_det": [
+          49,
+          -21,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "q0",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "7533/125",
+        "trace_second_det": [
+          121,
+          -121,
+          1
+        ]
+      },
+      {
+        "word": [
+          "b",
+          "a",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "4131/125",
+        "trace_second_det": [
+          49,
+          -21,
+          1
+        ]
+      },
+      {
+        "word": [
+          "q0",
+          "a",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "7533/125",
+        "trace_second_det": [
+          121,
+          -121,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "a",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "59049/3125",
+        "trace_second_det": [
+          21,
+          -1,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "a",
+          "a",
+          "b"
+        ],
+        "norm_lower_bound": "37179/625",
+        "trace_second_det": [
+          91,
+          27,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "a",
+          "b",
+          "a"
+        ],
+        "norm_lower_bound": "37179/625",
+        "trace_second_det": [
+          91,
+          27,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "b",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "37179/625",
+        "trace_second_det": [
+          91,
+          27,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "b",
+          "a",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "37179/625",
+        "trace_second_det": [
+          91,
+          27,
+          1
+        ]
+      },
+      {
+        "word": [
+          "b",
+          "a",
+          "a",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "37179/625",
+        "trace_second_det": [
+          91,
+          27,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "a",
+          "a",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "531441/15625",
+        "trace_second_det": [
+          39,
+          11,
+          1
+        ]
+      },
+      {
+        "word": [
+          "a",
+          "a",
+          "a",
+          "a",
+          "a",
+          "a",
+          "a"
+        ],
+        "norm_lower_bound": "4782969/78125",
+        "trace_second_det": [
+          71,
+          -15,
+          1
+        ]
+      }
+    ]
+  }
+}
