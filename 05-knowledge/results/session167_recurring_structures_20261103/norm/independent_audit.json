@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "symbolic_resultant_and_invariance": true,
+  "simplex_total_sum_limit": 50,
+  "equal_sum_events_checked": 100,
+  "complete_norm_two_roots": [
+    [
+      1,
+      0,
+      0
+    ]
+  ],
+  "brute_Hamilton_n_max": 8,
+  "direct_modular_orbits": {
+    "3": {
+      "shell_orbits": 1,
+      "base_period": 13,
+      "direct_prime_power_exponents": [
+        1,
+        2,
+        3
+      ]
+    },
+    "5": {
+      "shell_orbits": 1,
+      "base_period": 31,
+      "direct_prime_power_exponents": [
+        1,
+        2,
+        3
+      ]
+    },
+    "47": {
+      "shell_orbits": 46,
+      "base_period": 46,
+      "direct_prime_power_exponents": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  "higher_degree_factor_and_inverse_certificates": true
+}
