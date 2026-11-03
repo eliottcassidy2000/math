@@ -26,8 +26,14 @@ bool strong(const int *a,int n){
 int main(){
  const int src[2][10]={{1008,1017,1011,997,776,912,816,592,128,256},{996,993,994,999,975,912,800,576,128,256}};
  const long basewant[2]={855,873};
+ const long deletion[2][10]={{163,175,95,15,27,123,87,27,81,165},{97,97,97,159,27,15,81,51,81,159}};
  const long delta[2][10]={{2162,1000,760,1080,2790,4426,3670,4470,10572,12570},{1668,1668,1668,822,846,1524,4770,6288,10050,11508}};
  for(int k=0;k<2;k++){
+  for(int drop=0;drop<10;drop++){
+   int x[9]={},ii=0;
+   for(int i=0;i<10;i++)if(i!=drop){int jj=0;for(int j=0;j<10;j++)if(j!=drop){if((src[k][i]>>j)&1)x[ii]|=1<<jj;jj++;}ii++;}
+   need(paths(x,9)==deletion[k][drop],"deleted vertex path count");
+  }
   int a[13]={};for(int i=0;i<3;i++)a[i]=(1<<((i+1)%3))|(((1<<10)-1)<<3);
   for(int j=0;j<10;j++)a[3+j]=src[k][j]<<3;
   long h=paths(a,13);need(h==basewant[k],"base h");

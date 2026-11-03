@@ -28,13 +28,24 @@ For any fixed common suffix W in `{b,q2}` applied to both sides, the obstruction
 
 The universally available marked-source 0 branch gives the nonstrong ordinal products C3⊕R2 and C3⊕R4, with counts 855 and 873 and the original source port retained. For each product reverse exactly one of its 30 cross edges, leaving all internal edges unchanged. Every resulting graph is strong: its two internally strong blocks now have edges in both directions.
 
+The [odd-cycle-packing identity](https://github.com/eliottcassidy2000/math/blob/7589463e54e20585aff6a2e68019ee4a4af582cd/05-knowledge/results/session159_constructions_20261103/cycle_profiles/NOTE.md) gives a general lower bound. If the reversed cross edge is v→u, where v lies in X and u lies in C3, then
+
+    H(new) ≥ 3H(X)+2H(X−v).
+
+Indeed every old packing remains, and the new triangle u→w→v→u, with w the out-neighbor of u in C3, can be combined with every odd-cycle packing of X−v. By the same identity their total weight is 2H(X−v). Direct nine-vertex path enumeration gives
+
+    H(R2−v): 163, 175, 95, 15, 27, 123, 87, 27, 81, 165
+    H(R4−v):  97,  97, 97,159, 27,  15, 81, 51, 81, 159.
+
+Thus the symbolic lower bound alone gives a jump of at least 30 in either case, excluding +2 and +4.
+
 There are only ten distinct results by cyclic symmetry of C3. Listed by the R vertex label 0,…,9, exact Hamilton-path count changes are
 
     R2: 2162, 1000, 760, 1080, 2790, 4426, 3670, 4470, 10572, 12570
     R4: 1668, 1668, 1668, 822, 846, 1524, 4770, 6288, 10050, 11508.
 
-Thus every one-edge nonuniform strong repair overshoots the desired +2 and +4 count changes, by a minimum jump of 760 or 822. This excludes exactly this construction, not all nonuniform repair gadgets. The mechanism is also consistent with the positive odd-cycle-packing expansion: the reversed edge creates crossing odd cycles, while the original internal odd-cycle packings remain available. This qualitative argument alone does not yield the displayed exact jumps.
+Thus every one-edge nonuniform strong repair overshoots the desired +2 and +4 count changes, by a minimum jump of 760 or 822. This excludes exactly this construction, not all nonuniform repair gadgets. The general lower bound above does not yield the displayed exact jumps.
 
 ## Reproduction
 
-Place `bank65.json` beside `later_bank_check.py` and run both `python3 later_bank_check.py` and `python3 -O later_bank_check.py`. The program verifies the pinned checksum, h-monotonicity, full bounded reachable-state closure, the six exclusions and the modular orbits. Run `g++ -std=c++17 -O2 -Wall -Wextra crossing_check.cpp -o crossing_check && ./crossing_check`; this independently constructs all 60 labelled crossing reversals, checks strong connectivity, and uses endpoint/subset dynamic programming to verify every exact count. Assertions remain active under optimized Python and C++ builds.
+Place `bank65.json` beside `later_bank_check.py` and run both `python3 later_bank_check.py` and `python3 -O later_bank_check.py`. The program verifies the pinned checksum, h-monotonicity, full bounded reachable-state closure, the six exclusions and the modular orbits. Run `g++ -std=c++17 -O2 -Wall -Wextra crossing_check.cpp -o crossing_check && ./crossing_check`; this independently constructs all 60 labelled crossing reversals, checks strong connectivity, and uses endpoint/subset dynamic programming to verify every exact count and all 20 deletion counts. Assertions remain active under optimized Python and C++ builds.
