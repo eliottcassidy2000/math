@@ -1,0 +1,296 @@
+{
+  "incoming_reviewed_through": "1322afabdb2f6525b6fa85949313eb3b2d364c28",
+  "scope": "Direct local document links and computational inputs only; not a transitive dependency graph. The locally updated mistakes ledger is excluded.",
+  "session_base": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+  "sources": [
+    {
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "git_blob": "22ab0ca82d5c931ca6327b6355de952e0b867c0e",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ADAPTIVE.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "1e40bf058d9c86a8d5ff7f63dc6439a68eae3f62920794a7baa40694dfce4971"
+    },
+    {
+      "git_blob": "fe9bafa9f0dcf46b03acb03e328ba533dfb0d08f",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ANCESTRY.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "c3581c0a5341ef20ad094df4c1a07f8396302b1bd0d99b1010d068e1e9eb9f9b"
+    },
+    {
+      "git_blob": "ac327a8e9994e777c399ab18a196311934d5014b",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/HISTORY.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "e6623a184b77a3fe9e623b724fd68eb36930ab2d46f35c20ca8125ead2d57a3e"
+    },
+    {
+      "git_blob": "8daf85791686b534baac24107b6b16dd10024292",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/METAGRAPH.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "ee0cd2951e90d9659ed664c3ebfc10d2a3b3a17c55256610711b9610e84bb9ea"
+    },
+    {
+      "git_blob": "382f0776402f9c936e6bcc721f281576354b0dd4",
+      "kinds": [
+        "direct computational input"
+      ],
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/adaptive_probe.py",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "8a6e506b300bed57d2302f99766a51309be2394a4b11cee6e33aaa06c349f47f"
+    },
+    {
+      "git_blob": "d6375d7777b554a10c5827f0e3b6e1eef4716f14",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/BLOCK_SWITCH.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "459f737c674cf6d3dfbc8732b41a42b154af11b790922f74a2b673040404359a"
+    },
+    {
+      "git_blob": "c63cbb361cd6837f58148fcaa1a54619676c1aa7",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/COMMON_OBSERVER.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "9ac00fdf97ec7ae8758a96ca5f8db6912e61d41122ec7b545db1a794cbfd8563"
+    },
+    {
+      "git_blob": "782f59297ec2198ca23eafe2efc9889f5d42daf7",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/INCOMING.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "bc8ae896c2cf555e5b696ec5c3039757bda298ad47e34b4ab10349dd4f9f55ab"
+    },
+    {
+      "git_blob": "d1cc87e93020c7dde089c4986ce21631d6f59772",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/LIVE_PORTS.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "1933eb6fa2fd9244b910e4fd14319e546d0aac63227c09c18f0fb2a8b5f4c853"
+    },
+    {
+      "git_blob": "e1e4b58ecb2417c7aa67811d2c4f2605aac0fbf8",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/METAGRAPH_RESETS.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "ddeaa76a403b85e7df77c033b9d6a3e2406c6167dc432b9fd114c25608706f21"
+    },
+    {
+      "git_blob": "b15529136adf7c19cdfc03be816f9aa3d827cbd9",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/README.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "8a920ac04963abe1c30f9d9e5b51f4a938f9355dc049dffcf2cc2f68aa482148"
+    },
+    {
+      "git_blob": "da19c184d7d091c4bec6cee692079c047099b931",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/RETURN_BANKS.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "96c9493858200756c63ed52a83c3ac2842aa5ac19d99efbbb72b75b7900daf70"
+    },
+    {
+      "git_blob": "6f8d0dae821da436515990bcf9ec22f425c5641b",
+      "kinds": [
+        "direct computational input",
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/live_port.json",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "6703d24d3d1a4fe8b121c3a5d9942f2d57d67dc7ca8738d855f7260c7f8e2f23"
+    },
+    {
+      "git_blob": "4ca5808b9c9b93046fa86776114783beb522588e",
+      "kinds": [
+        "direct computational input"
+      ],
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/live_port.py",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "8eb8f928730dca30224d02e2a2b194287e86b198a0db571603710c036aebb524"
+    },
+    {
+      "git_blob": "8a32e98da533b1a2147540b379d30dbc66d4b90f",
+      "kinds": [
+        "direct computational input"
+      ],
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/two_port_envelope.json",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "fc14da2ead29fa9c9fe5218ad96c87bce606c0cf41f5f0d5a4325917ebaeeafe"
+    },
+    {
+      "git_blob": "c14a27963c1cec188ff9d59b07af0d05936ba23b",
+      "kinds": [
+        "direct computational input"
+      ],
+      "path": "05-knowledge/results/golden_seam_recurrence_20261103/atom_atlas.json",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "b7f7715f5e6577c056da67ea2752f4643bd4ae16a8ef06707c2286032b434eba"
+    },
+    {
+      "git_blob": "d9b68d3501cf6c78770ac44c0577ebd27441b305",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/inverse65_zeckendorf_20261103/INVERSE.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "971ec980c107b36b9f9d2078c111002214b0c6ce3f4ed82f36a6a53c292b0373"
+    },
+    {
+      "git_blob": "9cdf235a08db79f16bda4301b977541c6eab30ed",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/return_channels_20261103/INCOMING.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "e54b697adf20e2298a931978fb03af01e3ae6da9950440e9bc50a4d65a124597"
+    },
+    {
+      "git_blob": "f4294bb4de6be69d261d7238f3e5d957f1ac6c64",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/return_channels_20261103/THEORY.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "9b7068f869d361a69f02bbf92c7d0127ea4ce64b0e7bbe627afe5ed546f35541"
+    },
+    {
+      "git_blob": "c4e9fdacff9d7f665297a20a7fe95a4816c22eb9",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session155_spectrum_20261103/prefix31/NOTE.md",
+      "revision": "1322afabdb2f6525b6fa85949313eb3b2d364c28",
+      "sha256": "2f53dc67c7455d56dc6c42a650a4197640e55b6bd98ff3f2626947a1fc58d8c4"
+    },
+    {
+      "git_blob": "f5a218c9bce6f0665dbcc0043220bff23d795b45",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session155_spectrum_20261103/primes/README.md",
+      "revision": "1322afabdb2f6525b6fa85949313eb3b2d364c28",
+      "sha256": "2849fad78d84dde44191ddb9cc696e08d1bc27bc9292b20776ad8a0ae5ec1b0a"
+    },
+    {
+      "git_blob": "15005c5624997901305e7ed27ba9f3614dc8c660",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session155_spectrum_20261103/returns/MIXED.md",
+      "revision": "1322afabdb2f6525b6fa85949313eb3b2d364c28",
+      "sha256": "e9ed40ee5f4f57feeaf21859ac617527c71a714e39af4461e58e3baf2295e3a9"
+    },
+    {
+      "git_blob": "db438e8460bfb5207ec7724350111c70a52cbaa3",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session155_spectrum_20261103/returns/NOTE.md",
+      "revision": "1322afabdb2f6525b6fa85949313eb3b2d364c28",
+      "sha256": "5292ef81073818b4883970ca33cd76610f0c4686685996a96528ffc3e6a6da44"
+    },
+    {
+      "git_blob": "d8703df7f1b1c0391084ba665b6fb473d2e7441f",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session155_spectrum_20261103/sparse/NOTE.md",
+      "revision": "1322afabdb2f6525b6fa85949313eb3b2d364c28",
+      "sha256": "3d01454bb4dc54142c71b559714ee29bbb7cc881dfdd634d5a31dfcbdfd8a54c"
+    },
+    {
+      "git_blob": "7f82349eeb80087030e241eff2acc5479f3358b8",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session156_spectrum_20261103/exact/NOTE.md",
+      "revision": "1322afabdb2f6525b6fa85949313eb3b2d364c28",
+      "sha256": "5d3993d3b83c24be156dd37d6b1eda8193353aadd22eb17d5a7724fd667e8472"
+    },
+    {
+      "git_blob": "b21231459c5f011f03d3428e4ffb1b96abda790b",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session156_spectrum_20261103/interfaces/BRIDGE.md",
+      "revision": "1322afabdb2f6525b6fa85949313eb3b2d364c28",
+      "sha256": "3da3a587ec0438425d486b414cead5ba5076b0147e9b2013e5b9262e65d6ca50"
+    },
+    {
+      "git_blob": "869798307c56bd85d051472909dbbc37157c2a98",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session156_spectrum_20261103/interfaces/NOTE.md",
+      "revision": "1322afabdb2f6525b6fa85949313eb3b2d364c28",
+      "sha256": "46c97232a339608f6c91c6b23da1470c13568665470f5747f2ee71bd608975b3"
+    },
+    {
+      "git_blob": "06b73ad8e7280a51c6e2ec0b8d37d25a38dcf085",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/ternary_repair_clock_20261103/THEORY.md",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "b25942100346b808b5084b0637ada97ac175c41b20df412ecacbaafe47658898"
+    },
+    {
+      "git_blob": "9be9100cd64b3172d1cbf9a70e7d69bf246a533c",
+      "kinds": [
+        "direct computational input"
+      ],
+      "path": "05-knowledge/results/ternary_repair_clock_20261103/receipt.json",
+      "revision": "aa7514b988295fe0caac7fc06359a28b330dccf3",
+      "sha256": "6dd57691e399114b2623285397dd70bce9916a27ff707c3709f00fb3158f33ba"
+    },
+    {
+      "git_blob": "a99ec766d00fde0b138b6bde8b9dd66ab7ba3872",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "06-writeups/research-document-for-mathematicians.md",
+      "revision": "1322afabdb2f6525b6fa85949313eb3b2d364c28",
+      "sha256": "d2388c9ad1ff142aabdb2fe197587487af3f9c539c770edab904b3edc563e665"
+    }
+  ]
+}

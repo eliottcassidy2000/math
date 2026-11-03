@@ -1,0 +1,115 @@
+{
+  "files": [
+    {
+      "bytes": 6700,
+      "path": "AUDIT.md",
+      "sha256": "9eef00845685e1b2aff1d920a1730175af048bd133c7d02c8d5d9299c07bf3c6"
+    },
+    {
+      "bytes": 4898,
+      "path": "INCOMING.md",
+      "sha256": "6bec6cfa0a7306c84c7be0ab3addab9cf9432e619e008e9f921f67570a18fb56"
+    },
+    {
+      "bytes": 17325,
+      "path": "MIXED_RETURNS.md",
+      "sha256": "270ae1de96fd37ab530cca56cb2ff61264adaf0241cb932158447c3e09853200"
+    },
+    {
+      "bytes": 22386,
+      "path": "NATIVE_RESET_INDUCTION.md",
+      "sha256": "750b2dfced18d8165672e1a68f4425022a278f9f447bba049f3e43477aa2f64d"
+    },
+    {
+      "bytes": 17659,
+      "path": "OBSERVER_INDUCTION.md",
+      "sha256": "545c1540dcf626a7f293c926e1838203f6aae7e93bc90b25a04b0e07dbd3b2df"
+    },
+    {
+      "bytes": 11955,
+      "path": "README.md",
+      "sha256": "091c308c39add1f33bc8d2bdd7b45be7373855d25098f1449b80ce4381cc659b"
+    },
+    {
+      "bytes": 12534,
+      "path": "ROOTED_RESETS.md",
+      "sha256": "bb76b7566e1b114a5d81e19e08274380be37938ea71b8d6024d60f601591cf9f"
+    },
+    {
+      "bytes": 34186,
+      "path": "mixed_returns.json",
+      "sha256": "240a3b6fdf42f9d8ef7cf5cebb87b67fa65ada641a1c7d8220eecaef4cc9a53d"
+    },
+    {
+      "bytes": 17480,
+      "path": "mixed_returns.py",
+      "sha256": "9dd2b597ad67fcbb7868a985e73bce12fc61c8056ac655f8ebe379a00e010430"
+    },
+    {
+      "bytes": 606938,
+      "path": "native_reset_induction_probe.json",
+      "sha256": "99d340e50e0f045b76d5e86ac9e32efb6ae5f3a6f1bd71ce970a8a04fa86a17f"
+    },
+    {
+      "bytes": 19116,
+      "path": "native_reset_induction_probe.py",
+      "sha256": "b40553def8cc5ad7491532808d29e109afb44eb0e12c199f765454435b84b223"
+    },
+    {
+      "bytes": 7706,
+      "path": "observer_induction_basis.json",
+      "sha256": "a067d15958cd4f3d803a581190576786cc966c880e305fcb71f35669388c17b1"
+    },
+    {
+      "bytes": 4203,
+      "path": "observer_induction_basis.py",
+      "sha256": "0495459416498a25580c895bb2ad416b0d8a3264206a4fba9cab44f5902c3580"
+    },
+    {
+      "bytes": 12936,
+      "path": "observer_induction_probe.json",
+      "sha256": "fde7e705e02d9601ac2716dd713ab53af4b454d73d500ec8b28594f55e6c06fe"
+    },
+    {
+      "bytes": 10020,
+      "path": "observer_induction_probe.py",
+      "sha256": "ea04d82837b067aa0ad6b798932d1fe35e281d8e5b6f9bd51313b202ae812df8"
+    },
+    {
+      "bytes": 10094,
+      "path": "observer_induction_reset_audit.json",
+      "sha256": "6a58cf494a1e0d2b60587cd14603ec5252015ccbec6e6b048c65ef139d2cc38b"
+    },
+    {
+      "bytes": 6119,
+      "path": "observer_induction_reset_audit.py",
+      "sha256": "6b6773defe51b78c7868715fdd0ba9e0aa009318fa5c78a7eb38428b36990141"
+    },
+    {
+      "bytes": 543769,
+      "path": "rooted_resets.json",
+      "sha256": "fd303cc132feb5fda082ecafa9635334a3888d93107cc08797d77bedc686d3ce"
+    },
+    {
+      "bytes": 8174,
+      "path": "rooted_resets.py",
+      "sha256": "77010c7265ed0ad817aa1648d051bb23c526d2167a847829883bc3bef3a4cf69"
+    },
+    {
+      "bytes": 11988,
+      "path": "sources.json",
+      "sha256": "ad6836c2c30fea4e410692a3951fa758ef9b243c24ef73acbcda95112a0f5ed1"
+    },
+    {
+      "bytes": 2220,
+      "path": "verification.json",
+      "sha256": "0e63204ea5bbe0da514686823c5457d6d25a0e1d97f99159489eab054ed67dc3"
+    },
+    {
+      "bytes": 1684,
+      "path": "verify_packet.py",
+      "sha256": "ac7070c9e39e4c3a4dcedf5b915489cace534cb52cfe742064d3ebe5c67b5e19"
+    }
+  ],
+  "scope": "Packet files excluding this manifest; caches and directories excluded."
+}
