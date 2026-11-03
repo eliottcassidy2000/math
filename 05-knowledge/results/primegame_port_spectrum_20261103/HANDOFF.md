@@ -8,6 +8,9 @@ current finite prefix as an extension of the inherited99,999,999 bank.
    is20405 through11 vertices, but a proof needs a branch-closed family or
    overlapping intervals at every scale. The two H17 six-vertex classes
    supply opposite binary branches separately, not jointly.
+   Incoming TWO_BIRTH_THEOREM.md now excludes universal exact binary
+   induction even with arbitrary birth-word length: H=31 has neither
+   branch at any order. Seek other jump sizes or enlarge the operation.
 2. **How much of the derivative response suffices?** Full growth responses
    are proved faithful at every order. H plus its first edge derivatives
    already separates every labelled tournament at orders 3 through 7

@@ -68,3 +68,20 @@ theorem shows why a universal quotient for all named ports cannot simply
 forget the source orientation. A restricted sufficient construction language
 could still have a much smaller response state, as the current singleton/D
 grammar does. Its all-target entry theorem remains the decisive obligation.
+
+## Incoming obstruction: longer birth words do not repair a binary branch
+
+The concurrent [two-birth theorem](../metagraph_primegame_20261102/TWO_BIRTH_THEOREM.md)
+now proves that, for an initial count F>=3, an arbitrary B-word reaches
+2F-1 or 2F+1 only if a single birth already does. Its complete strong-core
+tables show that no source with H=31 has either binary branch, at any order.
+Thus a universal exact binary induction in this birth-only grammar is
+excluded, even with unbounded lookahead. This does not exclude the grammar
+from realizing all allowed counts by differently sized numerical jumps.
+
+The incoming [induced-source theorem](../metagraph_primegame_20261102/INDUCED_OBSTRUCTIONS.md)
+is stronger for some branches: no old-edge-preserving extension can send
+any count-31 source to a count-63 target. Its 47->73->117 example also shows
+why scalar existence arrows cannot be composed: the two middle H=73
+sources have different induced ancestry. A recurrence must retain actual
+compatible sources, not just endpoints in the numerical spectrum.

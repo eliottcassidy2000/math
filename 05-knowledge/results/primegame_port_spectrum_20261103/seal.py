@@ -16,6 +16,8 @@ INPUTS=[
  '05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md',
  '05-knowledge/results/primegame_path_orbits_20261102/THEORY.md',
  '05-knowledge/results/primegame_path_orbits_20261102/CONNECTIONS.md',
+ '05-knowledge/results/metagraph_primegame_20261102/TWO_BIRTH_THEOREM.md',
+ '05-knowledge/results/metagraph_primegame_20261102/INDUCED_OBSTRUCTIONS.md',
  '05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/cyclic_integral_order/PROOF.md',
 ]
 def main():

@@ -112,6 +112,15 @@ from A=P+P^2 using the extra entrywise operation P=A-A circ A^2, despite the
 index11 of Z[A] in Z[P]. This is a cited example of enlarging the operation
 language changing reconstruction, not a proof of tournament-H surjectivity.
 
+A later clean rebase integrated efeb5967a6 and fda1d845eb. Their
+metagraph_primegame_20261102 packet proves the arbitrary-length two-birth
+obstruction and several all-order induced branch exclusions from the
+complete small strong-core bank. Its noncomposable scalar arrows
+47->73->117 sharpen our source-entry warning. TREE_CONSTRUCTIONS and
+HANDOFF incorporate these stronger boundaries; the 20,405 constructor
+prefix remains a different statement. These incoming proofs were read,
+not silently claimed as this session's independent discovery.
+
 ## Literature and open scope
 
 [Chan--Pak, Section6.5, Conjecture6.2](https://www.math.ucla.edu/~pak/papers/DominoPermanent16.pdf)
