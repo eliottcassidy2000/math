@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "digit_words": 34631,
+  "reflection_words": 21844,
+  "exact_sturm_spectra": 96,
+  "Q15_labels": [
+    9,
+    16,
+    25,
+    16,
+    9,
+    16,
+    25,
+    16,
+    9,
+    16,
+    25,
+    16,
+    9,
+    16
+  ],
+  "Q15_translation": 1,
+  "order_7417_10": 2472,
+  "giant_residues": {
+    "3": 2,
+    "11": 8,
+    "240": 239,
+    "7417": 6663
+  },
+  "Belphegor_quotient_coefficients_ascending": [
+    6,
+    -9,
+    0,
+    140,
+    0,
+    -378,
+    0,
+    450,
+    0,
+    -275,
+    0,
+    90,
+    0,
+    -15,
+    0,
+    1
+  ],
+  "Belphegor_Sturm_variations_at_minus2_plus2": [
+    8,
+    7
+  ],
+  "Belphegor_unit_circle_roots": 2,
+  "Belphegor_off_unit_circle_roots": 28,
+  "huge_integer_primality": "NOT TESTED"
+}
