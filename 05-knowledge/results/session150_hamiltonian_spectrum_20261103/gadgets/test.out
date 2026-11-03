@@ -1,0 +1,3 @@
+rooted gadget checks: 16212
+counterexample n=2, bitmask=0, v=0, (H,s,H(T-v),F): (1, 0, 1, 2)
+distinct affine rays through order 5: 42
