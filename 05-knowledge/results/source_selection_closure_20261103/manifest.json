@@ -11,9 +11,9 @@
       "sha256": "f4ce18e04986dfaf5739e5a6e506b8232fff1cb79b86b6198693cd620b2b0db5"
     },
     {
-      "bytes": 15927,
+      "bytes": 16433,
       "path": "BRANCH.md",
-      "sha256": "540a1aa4888d271c1e20c542727a86d36d2674eaf1d94946978cb01d288db29f"
+      "sha256": "26822bbb84ac8b889806a357ae72f647535816f7e2b1e57fb58ee6919843b3da"
     },
     {
       "bytes": 8233,
@@ -26,14 +26,14 @@
       "sha256": "c3113efeab85ddde5e155d46de3d5327b2673874461d08f682ca5b1e59a03e7d"
     },
     {
-      "bytes": 9426,
+      "bytes": 11634,
       "path": "INCOMING.md",
-      "sha256": "a6f91e7ced17ec478c07cb4a326a84a7a085920c02611965f4158e86325105e8"
+      "sha256": "74e5bf02c5ba7137648bd21af05c814f1ed3bc802e101fd7f016472db2e0d3f6"
     },
     {
-      "bytes": 19713,
+      "bytes": 20676,
       "path": "NATIVE_SELECTION.md",
-      "sha256": "d1b2c379031259ae6673fbc16d710fb85e635abd33eeb9793581f956449cd820"
+      "sha256": "5e7c574cf63fe13db453d9c4f63f3d1035194516a0957e489d88b60d299db178"
     },
     {
       "bytes": 8735,
@@ -91,9 +91,9 @@
       "sha256": "4fed06f0ad93e9f37c78e7e759d658381f1f85f31b42ae4a2f3ef1d2adc0a4b5"
     },
     {
-      "bytes": 12017,
+      "bytes": 13443,
       "path": "sources.json",
-      "sha256": "593aaafaaab547d5bda860e0e541482ba75b904a5e02a21b363cdc669fc572e3"
+      "sha256": "3040f03fcc3483b74ff9c87839fed316eac3d849015c97d7a4ff21ef92143068"
     },
     {
       "bytes": 1805,

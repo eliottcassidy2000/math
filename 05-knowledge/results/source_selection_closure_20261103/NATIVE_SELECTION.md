@@ -92,6 +92,15 @@ Thus the oldest position has the smallest possible content, and all other
 positions have exactly the same content. The first gcd divides the second.
 Factor erasure is strict exactly when these two actual source gcds differ.
 
+**Interface guard.** This theorem concerns the existing pair (v,w). The
+concurrent [AGE A1/A4](../source_reset_branches_20261103/AGE.md) instead
+adds a child at w, discards v, and studies the new pair (w,newborn). Its
+divisor is the rooted-profile gcd at w and can depend on k. For the supplied
+actual profile (179,10,41,566), our oldest pair has divisor1 at every k,
+whereas resealing at that leaf gives divisor3 at k=2. The old root's name
+is therefore genuine attachment data. The balanced family below satisfies
+the stronger resealing guard by its explicit formulas.
+
 The physical construction is: perform B fixed-root births, seal at the next
 child w, then perform A more births at v while retaining w. The key point is
 that the latter A births lose no odd divisor of the sealed source profile.
@@ -166,6 +175,13 @@ Every macro endpoint has the same H and a valid marked source program.
 Intermediate temporary graphs need not have that H or belong to the adaptive
 language. For newest-to-oldest selection, d=k−1, improving the previous
 whole-reversal clock from k(k−1) to **2(k−1) native moves**.
+
+The concurrent [AGE A3](../source_reset_branches_20261103/AGE.md)
+independently derives this same stable rotation and clock. Its persistent-
+name degree argument also proves a linear lower bound allowing temporary
+vertices. These implementation results are credited as parallel work; our
+twin increment, existing-pair divisor and guarded balanced renewal have
+their separate stated scopes.
 
 The source-to-source map is exact: fixed named graph and ports → explicit
 adjacent arc changes → same ordinary class, altered port response → named

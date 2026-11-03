@@ -1,5 +1,5 @@
 {
-  "incoming_reviewed_through": "6bb391f902df4a6fd34b947a7923f64a0d5e6057",
+  "incoming_reviewed_through": "feb7bc7de43de37a8a94cb6c40da5ec63bdff791",
   "scope": "Direct document links and computational inputs, not transitive dependencies. The locally updated mistakes ledger is excluded. One incoming prose correction is pinned as its published source plus exact replacement and repaired hash.",
   "session_base": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
   "sources": [
@@ -223,6 +223,42 @@
       "path": "05-knowledge/results/session158_creative_20261103/square_overlap/ZECKENDORF.md",
       "revision": "6bb391f902df4a6fd34b947a7923f64a0d5e6057",
       "sha256": "f261c09002300bcf1b8029bec8120f2840da797f40203919f75cdda848e88cc4"
+    },
+    {
+      "git_blob": "4040e01e78ae6f20c2d724b974df42605c29e443",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/source_reset_branches_20261103/AGE.md",
+      "revision": "feb7bc7de43de37a8a94cb6c40da5ec63bdff791",
+      "sha256": "b02edd2a6e4191ddd0c70cdf5d82df016f251d8f8c7430463a1bb0b52c6e0b49"
+    },
+    {
+      "git_blob": "204449ad1b04386e562c2305da5a38dfd5ebbcfe",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/source_reset_branches_20261103/CONNECTIONS.md",
+      "revision": "feb7bc7de43de37a8a94cb6c40da5ec63bdff791",
+      "sha256": "f9ef159f9f18e8ea4dab4b96529a16f90c2097c18e568c39a9e4e11f4ac5c247"
+    },
+    {
+      "git_blob": "d6c31c133f42818e4a4689296b361ee997b44a7e",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/source_reset_branches_20261103/README.md",
+      "revision": "feb7bc7de43de37a8a94cb6c40da5ec63bdff791",
+      "sha256": "db6c47b3b62d7025e0d76f1cbc58e79f45602909d5006450560906fbd2fb8949"
+    },
+    {
+      "git_blob": "114f0b41f25aeaacca64613c3d1f34023b836fd2",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/source_reset_branches_20261103/REPAIR.md",
+      "revision": "feb7bc7de43de37a8a94cb6c40da5ec63bdff791",
+      "sha256": "7f92b77184042a04f257c6f4d21391f0b57b2d13d28198c78825295863fd3b77"
     },
     {
       "git_blob": "55e5a342ad499568c62de87ac17f66e68a517663",

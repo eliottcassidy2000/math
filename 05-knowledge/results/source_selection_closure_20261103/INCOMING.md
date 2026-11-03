@@ -166,3 +166,42 @@ as required by the declared increasing-label orientation. That phrase was
 corrected in the source and recorded in
 [MISTAKES](../../../01-canon/MISTAKES.md). The attachment theorem and its
 guard survive; the incoming 21-vertex computation was not rerun.
+
+## Concurrent module-age and finite native repairs
+
+The final fetched commit `feb7bc7de43de37a8a94cb6c40da5ec63bdff791` supplies
+[source-reset branches](../source_reset_branches_20261103/README.md).
+Its [AGE](../source_reset_branches_20261103/AGE.md) independently proves
+the stable rotation and the same 2(k-1) stabilized native clock, with an
+additional source-retaining lower bound allowing temporary vertices.
+These are parallel implementation results, not separate priority claims.
+
+Its divisor is measured at a different interface. Our NATIVE_SELECTION
+keeps (old root v, selected leaf w). AGE then births at w and replaces that
+pair by (w,newborn). With a=h-s,d=F-q, its oldest-leaf divisor is
+
+    gcd(d,a+q,s+(2^(k-1)-1)q),
+
+whereas our existing oldest pair has gcd(h,s,q,F). The actual H179 profile
+(179,10,41,566) makes the distinction decisive: the latter gcd is1, while
+the former is3 at k=2. AGE's doubling-clock selector answers the extra
+root-forgetting question. Our repeated balanced family retains and checks
+the stronger next-interface guard, rather than inferring it from old-pair
+primitivity. There is no conflict between the two theorems.
+
+[REPAIR](../source_reset_branches_20261103/REPAIR.md) independently recovers
+the arbitrary-root H31 obstruction and has a larger complete actual-source
+census. Its two-native repairs concern four general-ear children of a
+specified golden H31 source. They preserve H at endpoints, can change it
+at the intermediate graph, and support two immediate general ears. The
+H97 repair passes through a weak graph and explicitly deletes a universal
+source. The preserved object there is the golden three-coordinate
+single-bridge observer with a protected port, not automatically our two
+physical ports, seventeen queries, or graded polynomials. These successes
+and their stated clone-lift obstruction are compatible with our narrower
+nine-command failure and stepwise-neutral C6 classification.
+
+All three lanes reviewed these distinctions. The incoming census and reset
+searches were not rerun. Its [CONNECTIONS](../source_reset_branches_20261103/CONNECTIONS.md)
+and our repeated-renewal results still leave a productive all-target source
+family open.

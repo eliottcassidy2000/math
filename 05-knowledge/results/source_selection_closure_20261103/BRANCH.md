@@ -120,6 +120,14 @@ three actual sources under adaptive births alone. This strengthens the
 port-bound interpretation of the inherited H31 failure, within this fixed
 source fibre. It does not exclude different source graphs or different cuts.
 
+Concurrent [REPAIR R1](../source_reset_branches_20261103/REPAIR.md)
+independently reaches this arbitrary-root obstruction and extends its
+ordinary-source census through H295. We credit that overlap. Its two-move
+repairs of four supplied H95/H97 general-ear children concern a different
+source/operation predicate from our stepwise-neutral H31 component. Its
+universal-source deletion preserves a golden single-bridge observer and
+one protected port, not automatically both ports or our seventeen queries.
+
 ## B4. Mask3 repairs one level, with a genuine marked-port guard
 
 Recompute complete descendants through H97 from all 37 H31 observers under
