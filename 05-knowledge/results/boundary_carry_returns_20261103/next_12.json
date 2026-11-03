@@ -1,0 +1,17 @@
+{
+  "statistics": {
+    "source_H": 95,
+    "first_paths": 95,
+    "path_pairs": 9287,
+    "common_frames": 979,
+    "scalar_hits": 964,
+    "uniform_programmes": 0,
+    "clone_offset_counts": {
+      "3": {
+        "2": 0,
+        "4": 0
+      }
+    }
+  },
+  "programmes": []
+}

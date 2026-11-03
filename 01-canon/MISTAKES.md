@@ -4,6 +4,20 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — an ambient projective order need not be the chosen generator order
+
+**Draft candidate, not a retracted theorem:** in F_32=F_2[z]/(z^5+z^2+1),
+adjoin u with u^2+u+1=0 and expect z+u to generate all 33 projective states.
+Its linear order is 341 and its first scalar power is the eleventh, so its
+projective order is only 11. The missing factor is 3. Replacing it by
+z^2+z+u gives linear order 1023 and projective order 33, still with a
+31-valued scalar phase in the lift. The golden unit modulo 13 supplies
+another control: linear order 28, projective order 7, a four-valued fibre.
+Test first scalar return separately from identity return and do not transfer
+these arithmetic actions to tournament moves without an actual compiler.
+See [boundary-carry connections](../05-knowledge/results/boundary_carry_returns_20261103/CONNECTIONS.md)
+and its exact arithmetic receipt.
+
 ## 2026-11-03 — a sole-in-neighbor birth needs the starting-path correction
 
 **Draft candidate, not a retracted theorem:** for a new vertex w with only

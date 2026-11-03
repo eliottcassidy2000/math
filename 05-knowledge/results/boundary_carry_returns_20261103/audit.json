@@ -1,0 +1,35 @@
+{
+  "rooted_small_bank_checks": 420,
+  "first_programmes": 14,
+  "second_programmes": 37,
+  "repaired_returns": 3,
+  "marked_census_identifications": [
+    {
+      "from": 7,
+      "to": 0,
+      "map": [
+        0,
+        1,
+        6,
+        3,
+        4,
+        5,
+        2
+      ]
+    },
+    {
+      "from": 11,
+      "to": 10,
+      "map": [
+        6,
+        1,
+        2,
+        3,
+        4,
+        5,
+        0
+      ]
+    }
+  ],
+  "method": "same agent, independently implemented skeleton and boolean-word algorithms; not an independent agent audit"
+}

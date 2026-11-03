@@ -1,0 +1,48 @@
+{
+  "split_32_order": 31,
+  "nonsplit_32": {
+    "q": 32,
+    "element": [
+      6,
+      1
+    ],
+    "linear_order": 1023,
+    "projective_order": 33,
+    "first_scalar": 19,
+    "scalar_fibre_order": 31
+  },
+  "short_generator_32": {
+    "q": 32,
+    "element": [
+      2,
+      1
+    ],
+    "linear_order": 341,
+    "projective_order": 11,
+    "first_scalar": 29,
+    "scalar_fibre_order": 31
+  },
+  "split_13_order": 12,
+  "golden_13": {
+    "q": 13,
+    "element": [
+      0,
+      1
+    ],
+    "linear_order": 28,
+    "projective_order": 7,
+    "first_scalar": 8,
+    "scalar_fibre_order": 4
+  },
+  "shifted_golden_13": {
+    "q": 13,
+    "element": [
+      2,
+      1
+    ],
+    "linear_order": 56,
+    "projective_order": 14,
+    "first_scalar": 5,
+    "scalar_fibre_order": 4
+  }
+}
