@@ -98,7 +98,8 @@ This compiles three small C++20 programs into the OS temporary directory,
 regenerates the bounded target searches and literal return schedules,
 then runs the independent audits and response controls in ordinary and
 optimized Python. `reproduction.json` records output, script and direct
-input SHA256 hashes. The checks use explicit exceptions, not removable
+input SHA256 hashes, normalizing CRLF to LF so Windows file writes and Git
+checkout normalization have the same certificate. The checks use explicit exceptions, not removable
 assert statements. Inherited Python dependencies include SymPy; g++ is
 used for the exact finite scans. No binaries or temporary logs are committed.
 

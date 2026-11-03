@@ -1,23 +1,23 @@
 {
   "status": "PASS_NORMAL_AND_OPTIMIZED_IDENTICAL",
   "output_sha256": {
-    "audit_ready.json": "6d5dcfbe464f8db7d3f396b49549ce022924bc4f502c2032e1f1646307bd3e51",
-    "completion.json": "3c64db73e2bed76016e2aa52e3edb311f86676d5e944be4e52e7823cdbc225a2",
-    "halving_response.json": "f0209c836df5837d9512acb71ab4942f89fec984bb490c3ce86a18e91612e965",
-    "clone_probe.json": "68e8746a9b0ab2441021a4fbd11900ccb1d10186145a6ff0fbecb8c68d511f66",
-    "transport.json": "3ff6acce83a00359ff831f7a690af76ed8e0ec71ce919b0fd4c209522854ba11",
-    "audit.json": "b4cc4640bc42792ff81b71784e04493e3f28ea60d8d18a7d5fee3f64d39e7e7b",
-    "rank_depth.json": "e25253b6a8b1f76347159d12d44707790d5e909101ea02e6ab44d79daa2f8919"
+    "audit_ready.json": "945129d3ea72aad592f2124074a46c274b845fbdbd07627363d9d64a1ad3d7c7",
+    "completion.json": "e5b0f50efe105464d11c9914e9501098d9f0688d3e259b817b4a09725e447342",
+    "halving_response.json": "3d7b1af0e0f1f0be20985390b404096452ac9f238311653fa2521fa742585e35",
+    "clone_probe.json": "6df1249c300d4d7b160a4cee583bf151cc3dc237f7a4636b10b586c964d9a87f",
+    "transport.json": "0be407b3ab02983c9ce810046f05d10bb7ac8a8b692defa513d091c9f2c5dbf9",
+    "audit.json": "5b07f5dc77a76073eddb46a8650139d7afbe57463318d41771674b72d8e3f2b8",
+    "rank_depth.json": "3b739fcc5dd8f992a3e8590040551302181c0ab1f06c5c94cc9cca1dcf575005"
   },
   "source_pin": "31b13dd9a2c8",
   "input_sha256": {
-    "digit_cycle_ternary_20261103/return2107.json": "0041f693dd07af8dbf9e3a433d9f70c6ed9bae0102478c859c0b00d771c34734",
+    "digit_cycle_ternary_20261103/return2107.json": "c544a29d7e7bc185cba13e31713ce5ead2502a78cbb0e3295aab8053af7295b5",
     "two_entry_funnels_20261103/READY.md": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c",
     "ready_return_pentagon_20261103/ready_inverse.py": "4c9f06467d9acdaef9707e7542668d3fb5d8656f8ccc6eec1942a585c36cdbec",
     "polarized_path_calculus_20261103/recognize.py": "967693a89ed94465be01753b8b0b2e9c20e67bbcd5257200d224c39527b2fc85",
-    "adaptive_four_returns_20261103/lift_search.cpp": "b3f9a9abd463d29fe62a1234b3f4b15e5603b99050f5ad32a9c30f87218a6bdb",
+    "adaptive_four_returns_20261103/lift_search.cpp": "b6035585c3f9b4ec8adfd0b827330ca13531f07f23f2a798922687953a2c908d",
     "overnight_rank_return_20261029/atom_precision.py": "6913ca90dc6a1dcd8f572073d7b517288a3a65c4d9840c48cc75719563ccde6d",
-    "adaptive_four_returns_20261103/audit.json": "5f2b6b42a324057868459f7c0f14c157b2e9abc923f514983e4554c0f6542d7a"
+    "adaptive_four_returns_20261103/audit.json": "63d794c4ae7692b6609e36df872b1f0df56744b43df5019c698ec6bf690ec5ec"
   },
   "scripts_sha256": {
     "audit.py": "060954834cc94a23f0fc442189ad9da2ee2ec874f8f418b8b1762f0298f4d4b1",
@@ -29,7 +29,7 @@
     "halving_response.py": "c8bbd0e58e06545ae52d95c9781d4f6d86a4699e604594215c8b3085e6826b76",
     "one_ready_search.py": "b9d3e0582128d2552d7b2ada95a16ce9c379e3d5c3fb75aaaf14706304ed2931",
     "rank_depth.py": "0dfb617745d794bd8656a9414bcd13128b7cfeae3866e851788085de09e5aeea",
-    "reproduce.py": "57694995b10f3119ae200ff1fa0784c2ee0a546fa14d765fe8a20b03a5d1add2",
+    "reproduce.py": "87b4593115db02738c0a87e28a683a99b2fc1d786e2f8114038c0b258f109f72",
     "return6325.py": "a326d98274c6764cd82fbfebc4d2f9944a05aafe1d79327c7e07c223ffbdc47f",
     "return6325_plus2.py": "347b44682a3173f16dd0ef0e0b3a34c8d5b3e9e447287cd32ac44e1c5debcfca",
     "search_ready.cpp": "0b58c7baf0e43705634e76c4603ed5a0ffb13ece98bf3c7a58fa592b3f3635dd",
@@ -37,5 +37,7 @@
     "transport.py": "9e620a5e174d5c52686214206ba9b326ad7658dd9214f0ec0039bc681ec77f39"
   },
   "scope": "Exact saved words and bounded universes; same-agent proof review, independent algorithms, no external proof audit",
-  "supplement": "Rank-depth theorem added after the full replay; its controls separately passed normal/O, earlier output hashes rechecked unchanged."
+  "supplement": "Rank-depth theorem added after the full replay; its controls separately passed normal/O, earlier output hashes rechecked unchanged.",
+  "hash_format": "UTF-8 text bytes with CRLF normalized to LF",
+  "line_ending_audit": "All earlier content hashes verified modulo CRLF/LF; only reproduce.py changed to canonical text hashing."
 }

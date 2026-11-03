@@ -4,7 +4,7 @@ import subprocess,sys,tempfile,json,hashlib
 HERE=Path(__file__).resolve().parent
 def run(args):
     print('RUN',*map(str,args),flush=True);subprocess.run(list(map(str,args)),check=True,cwd=HERE)
-def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def digest(p):return hashlib.sha256(p.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
 def main():
     temp=Path(tempfile.gettempdir());bins={}
     for stem in ('ears','audit_ready','search_ready'):
@@ -35,7 +35,7 @@ def main():
         if first is None:first=hashes
         elif hashes!=first:raise ValueError('optimized-mode result drift')
     inputs=['digit_cycle_ternary_20261103/return2107.json','two_entry_funnels_20261103/READY.md','ready_return_pentagon_20261103/ready_inverse.py','polarized_path_calculus_20261103/recognize.py','adaptive_four_returns_20261103/lift_search.cpp','adaptive_four_returns_20261103/audit.json','overnight_rank_return_20261029/atom_precision.py']
-    payload=dict(status='PASS_NORMAL_AND_OPTIMIZED_IDENTICAL',output_sha256=first,
+    payload=dict(status='PASS_NORMAL_AND_OPTIMIZED_IDENTICAL',hash_format='UTF-8 text bytes with CRLF normalized to LF',output_sha256=first,
         source_pin='31b13dd9a2c8',input_sha256={name:digest(HERE.parent/name) for name in inputs},
         scripts_sha256={p.name:digest(p) for p in sorted(HERE.iterdir()) if p.suffix in ('.py','.cpp')},
         scope='Exact saved words and bounded universes; same-agent proof review, independent algorithms, no external proof audit')
