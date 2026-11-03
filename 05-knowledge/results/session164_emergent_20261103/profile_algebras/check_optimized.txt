@@ -1,0 +1,15 @@
+MOD12_STATES = [(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), (0, 3, 0, 9, 0, 3, 0, 9, 0, 3, 0, 9), (0, 1, 4, 9, 4, 1, 0, 1, 4, 9, 4, 1), (0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3), (0, 9, 0, 9, 0, 9, 0, 9, 0, 9, 0, 9), (0, 9, 0, 3, 0, 9, 0, 3, 0, 9, 0, 3), (0, 5, 8, 9, 8, 5, 0, 5, 8, 9, 8, 5), (0, 1, 8, 3, 4, 5, 0, 7, 8, 9, 4, 11), (0, 5, 4, 3, 8, 1, 0, 11, 4, 9, 8, 7)]
+MOD12_G_TABLE = [1, 1, 6, 3, 4, 5, 2, 5, 5]
+MOD12_PRODUCT_TABLE = [[2, 3, 7, 1, 5, 4, 8, 2, 6], [3, 4, 1, 5, 1, 3, 1, 3, 3], [7, 1, 2, 3, 4, 5, 6, 7, 8], [1, 5, 3, 4, 3, 1, 3, 1, 1], [5, 1, 4, 3, 4, 5, 4, 5, 5], [4, 3, 5, 1, 5, 4, 5, 4, 4], [8, 1, 6, 3, 4, 5, 2, 8, 7], [2, 3, 7, 1, 5, 4, 8, 2, 6], [6, 3, 8, 1, 5, 4, 7, 6, 2]]
+guard modulus 3 states 27
+guard modulus 5 states 125
+guard modulus 7 states 217
+guard modulus 9 states 573
+guard modulus 12 states 216
+guard modulus 15 states 3375
+guard modulus 16 states 512
+guard modulus 21 states 5859
+guard modulus 25 states 15625
+guard modulus 27 states 13911
+guard modulus 32 states 4096
+PASS: 75 triangle sources; 121 ordinal pairs; 110 guarded sources with full pointed C/D controls; 330 pointed ordinal grafts; 75 guarded triangle lifts; seven literal b-family controls; mod12 closure; power-of-two multiplier controls.
