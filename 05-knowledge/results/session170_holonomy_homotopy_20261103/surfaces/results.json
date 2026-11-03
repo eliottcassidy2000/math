@@ -1,0 +1,114 @@
+{
+  "prime_surface_capacity": [
+    {
+      "H1_rank": 0,
+      "component_genus": 0,
+      "components": 1,
+      "free_circles": 0,
+      "max_full_transport_n": null,
+      "p": 3,
+      "q": 3
+    },
+    {
+      "H1_rank": 51,
+      "component_genus": 0,
+      "components": 30,
+      "free_circles": 51,
+      "max_full_transport_n": 25,
+      "p": 3,
+      "q": 9
+    },
+    {
+      "H1_rank": 0,
+      "component_genus": 0,
+      "components": 1,
+      "free_circles": 0,
+      "max_full_transport_n": null,
+      "p": 5,
+      "q": 5
+    },
+    {
+      "H1_rank": 1119,
+      "component_genus": 0,
+      "components": 130,
+      "free_circles": 1119,
+      "max_full_transport_n": 559,
+      "p": 5,
+      "q": 25
+    },
+    {
+      "H1_rank": 6,
+      "component_genus": 3,
+      "components": 1,
+      "free_circles": 0,
+      "max_full_transport_n": 3,
+      "p": 7,
+      "q": 7
+    },
+    {
+      "H1_rank": 52,
+      "component_genus": 26,
+      "components": 1,
+      "free_circles": 0,
+      "max_full_transport_n": 26,
+      "p": 11,
+      "q": 11
+    },
+    {
+      "H1_rank": 100,
+      "component_genus": 50,
+      "components": 1,
+      "free_circles": 0,
+      "max_full_transport_n": 50,
+      "p": 13,
+      "q": 13
+    }
+  ],
+  "status": "PASS",
+  "surface_generators": [
+    {
+      "each_handle_commutes": true,
+      "handles": 3,
+      "independently_enumerated_group_order": 128,
+      "n": 3,
+      "sheet_count": 16,
+      "transitive": true
+    },
+    {
+      "each_handle_commutes": true,
+      "handles": 4,
+      "independently_enumerated_group_order": 4096,
+      "n": 4,
+      "sheet_count": 32,
+      "transitive": true
+    },
+    {
+      "each_handle_commutes": true,
+      "handles": 5,
+      "n": 5,
+      "sheet_count": 64,
+      "transitive": true
+    },
+    {
+      "each_handle_commutes": true,
+      "handles": 6,
+      "n": 6,
+      "sheet_count": 128,
+      "transitive": true
+    },
+    {
+      "each_handle_commutes": true,
+      "handles": 7,
+      "n": 7,
+      "sheet_count": 256,
+      "transitive": true
+    },
+    {
+      "each_handle_commutes": true,
+      "handles": 8,
+      "n": 8,
+      "sheet_count": 512,
+      "transitive": true
+    }
+  ]
+}
