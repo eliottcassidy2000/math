@@ -1,0 +1,96 @@
+[
+  {
+    "tournament_order": 5,
+    "strong_only": false,
+    "diamonds": 2,
+    "mapping_class_indices": null,
+    "mapping_masks": null,
+    "search_nodes": 39,
+    "seconds": 0.0
+  },
+  {
+    "tournament_order": 6,
+    "strong_only": false,
+    "diamonds": 3,
+    "mapping_class_indices": null,
+    "mapping_masks": null,
+    "search_nodes": 9961,
+    "seconds": 0.039
+  },
+  {
+    "tournament_order": 6,
+    "strong_only": true,
+    "diamonds": 3,
+    "mapping_class_indices": null,
+    "mapping_masks": null,
+    "search_nodes": 5023,
+    "seconds": 0.024
+  },
+  {
+    "tournament_order": 7,
+    "strong_only": true,
+    "diamonds": 3,
+    "mapping_class_indices": [
+      226,
+      89,
+      186,
+      353,
+      248,
+      234,
+      241,
+      321,
+      325,
+      327
+    ],
+    "mapping_masks": [
+      801,
+      296,
+      673,
+      4712,
+      825,
+      809,
+      817,
+      1584,
+      1589,
+      1593
+    ],
+    "search_nodes": 15966,
+    "seconds": 0.097
+  },
+  {
+    "tournament_order": 7,
+    "strong_only": true,
+    "diamonds": 4,
+    "mapping_class_indices": null,
+    "mapping_masks": null,
+    "search_nodes": 42493,
+    "seconds": 0.31
+  },
+  {
+    "tournament_order": 7,
+    "strong_only": true,
+    "diamonds": 5,
+    "mapping_class_indices": null,
+    "mapping_masks": null,
+    "search_nodes": 42186,
+    "seconds": 0.356
+  },
+  {
+    "tournament_order": 7,
+    "strong_only": false,
+    "diamonds": 4,
+    "mapping_class_indices": null,
+    "mapping_masks": null,
+    "search_nodes": 78468,
+    "seconds": 0.558
+  },
+  {
+    "tournament_order": 7,
+    "strong_only": false,
+    "diamonds": 5,
+    "mapping_class_indices": null,
+    "mapping_masks": null,
+    "search_nodes": 77894,
+    "seconds": 0.626
+  }
+]

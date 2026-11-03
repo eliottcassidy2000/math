@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "seed_tournaments": 7,
+  "seed_pairs": 21,
+  "permutations_per_pair": 720,
+  "exact_geometric_pairs": 21,
+  "profile_algorithms": 2,
+  "literal_Q3_flip_checks": 1224,
+  "wrapper_flip_checks": 780,
+  "parity_equivariance_checks": 122880,
+  "spindle_chromatic_number": 4,
+  "external_arbitrary_girth_theorem": "Tomon arXiv:2610.03517v2 Theorem 1.5 / 5.2; not computationally established here"
+}

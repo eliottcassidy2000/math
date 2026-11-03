@@ -1,0 +1,56 @@
+[
+  {
+    "order": 5,
+    "m": 2,
+    "found": null,
+    "calls": 78,
+    "diamonds_seen": 66
+  },
+  {
+    "order": 6,
+    "m": 3,
+    "found": null,
+    "calls": 1880,
+    "diamonds_seen": 1506
+  },
+  {
+    "order": 7,
+    "m": 4,
+    "found": null,
+    "calls": 10650,
+    "diamonds_seen": 8990
+  },
+  {
+    "order": 6,
+    "m": 2,
+    "found": [
+      0,
+      6,
+      2,
+      4,
+      11,
+      10,
+      12
+    ],
+    "calls": 4,
+    "diamonds_seen": 18
+  },
+  {
+    "order": 7,
+    "m": 3,
+    "found": [
+      2,
+      9,
+      0,
+      4,
+      11,
+      51,
+      52,
+      23,
+      25,
+      27
+    ],
+    "calls": 71,
+    "diamonds_seen": 98
+  }
+]
