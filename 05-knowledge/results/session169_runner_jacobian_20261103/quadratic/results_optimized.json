@@ -1,0 +1,261 @@
+{
+  "bank": [
+    {
+      "Hamilton_paths": 3,
+      "guard": 0,
+      "state": [
+        1,
+        2,
+        0
+      ],
+      "vertices": 3,
+      "word": ""
+    },
+    {
+      "Hamilton_paths": 5,
+      "guard": 3,
+      "state": [
+        2,
+        3,
+        1
+      ],
+      "vertices": 4,
+      "word": "C"
+    },
+    {
+      "Hamilton_paths": 5,
+      "guard": 0,
+      "state": [
+        1,
+        4,
+        0
+      ],
+      "vertices": 4,
+      "word": "D"
+    },
+    {
+      "Hamilton_paths": 9,
+      "guard": 4,
+      "state": [
+        3,
+        6,
+        2
+      ],
+      "vertices": 5,
+      "word": "CC"
+    },
+    {
+      "Hamilton_paths": 17,
+      "guard": 5,
+      "state": [
+        6,
+        11,
+        3
+      ],
+      "vertices": 6,
+      "word": "CCC"
+    },
+    {
+      "Hamilton_paths": 15,
+      "guard": 5,
+      "state": [
+        5,
+        10,
+        4
+      ],
+      "vertices": 6,
+      "word": "DCC"
+    }
+  ],
+  "checks": 70581,
+  "determinant": 64,
+  "determinantal_divisors": [
+    1,
+    1,
+    2,
+    4,
+    8,
+    64
+  ],
+  "field_rank_controls": {
+    "101": {
+      "evaluation": 6,
+      "period": 9
+    },
+    "11": {
+      "evaluation": 6,
+      "period": 9
+    },
+    "13": {
+      "evaluation": 6,
+      "period": 9
+    },
+    "17": {
+      "evaluation": 6,
+      "period": 9
+    },
+    "19": {
+      "evaluation": 6,
+      "period": 9
+    },
+    "23": {
+      "evaluation": 6,
+      "period": 9
+    },
+    "3": {
+      "evaluation": 6,
+      "period": 9
+    },
+    "31": {
+      "evaluation": 6,
+      "period": 9
+    },
+    "5": {
+      "evaluation": 6,
+      "period": 9
+    },
+    "7": {
+      "evaluation": 6,
+      "period": 9
+    },
+    "Q": {
+      "evaluation": 6,
+      "period": 9
+    }
+  },
+  "homogeneous_bank_determinants": [
+    {
+      "degree": 0,
+      "determinant": "1",
+      "dimension": 1,
+      "factorization": {}
+    },
+    {
+      "degree": 1,
+      "determinant": "2",
+      "dimension": 3,
+      "factorization": {
+        "2": 1
+      }
+    },
+    {
+      "degree": 2,
+      "determinant": "192",
+      "dimension": 6,
+      "factorization": {
+        "2": 6,
+        "3": 1
+      }
+    },
+    {
+      "degree": 3,
+      "determinant": "297271296",
+      "dimension": 10,
+      "factorization": {
+        "2": 19,
+        "3": 4,
+        "7": 1
+      }
+    },
+    {
+      "degree": 4,
+      "determinant": "35630874085169509171200",
+      "dimension": 15,
+      "factorization": {
+        "2": 46,
+        "3": 10,
+        "5": 2,
+        "7": 3
+      }
+    },
+    {
+      "degree": 5,
+      "determinant": "21645984156648130025979784778576211531005952000000",
+      "dimension": 21,
+      "factorization": {
+        "11": 1,
+        "2": 93,
+        "3": 20,
+        "31": 1,
+        "5": 6,
+        "7": 6
+      }
+    },
+    {
+      "degree": 6,
+      "determinant": "63128562984971771683888484458959711167631232743473899513446141246786334214898843648000000000000",
+      "dimension": 28,
+      "factorization": {
+        "11": 2,
+        "17": 1,
+        "19": 1,
+        "2": 169,
+        "3": 36,
+        "31": 3,
+        "5": 12,
+        "7": 11
+      }
+    },
+    {
+      "degree": 7,
+      "determinant": "12208221032298389857091577532920636414529371107868536042152352896659657315790866349351005995669202322223546308180789360746777834363120305730433843200000000000000000000",
+      "dimension": 36,
+      "factorization": {
+        "11": 4,
+        "127": 1,
+        "17": 4,
+        "19": 2,
+        "2": 281,
+        "3": 57,
+        "31": 6,
+        "37": 1,
+        "5": 20,
+        "7": 19
+      }
+    },
+    {
+      "degree": 8,
+      "determinant": "31586290294263496241592322891628957364533996115003881112526328509702874874176029525391432145591402365591728807788290806628925941274634355483794631573236104859518646288216282821436605468007931264549373497809957641916319844187912951325597368320000000000000000000000000000000",
+      "dimension": 45,
+      "factorization": {
+        "11": 7,
+        "127": 3,
+        "13": 1,
+        "17": 9,
+        "19": 3,
+        "2": 440,
+        "3": 86,
+        "31": 11,
+        "37": 2,
+        "5": 31,
+        "67": 1,
+        "7": 30
+      }
+    }
+  ],
+  "matrix_certificate_sha256": "60cf0037c62b0522d32fadace9278a377feffb36041254631e67ed984f576c22",
+  "maximum_control_word_length": 12,
+  "orbit_mod_2": [
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0
+    ]
+  ],
+  "radius_two_rank_mod_3": 5,
+  "smith_factors": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    8
+  ],
+  "status": "PASS",
+  "word_controls": 8191
+}
