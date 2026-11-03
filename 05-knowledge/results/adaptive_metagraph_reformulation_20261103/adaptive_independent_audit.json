@@ -1,0 +1,60 @@
+{
+  "all_labelled_n1_to4_root_checks": 285,
+  "boundary": "Minimal order six rests on producer complete ordinary augmentation; this independent audit validates the exact witnesses, not that census.",
+  "profile_nonclosure": [
+    {
+      "next_H": [
+        287,
+        321,
+        219,
+        329,
+        275,
+        233,
+        179
+      ],
+      "profile": [
+        37,
+        5,
+        13,
+        71
+      ],
+      "root": 2,
+      "source_rows": [
+        40,
+        17,
+        3,
+        6,
+        13,
+        30
+      ]
+    },
+    {
+      "next_H": [
+        289,
+        307,
+        339,
+        219,
+        271,
+        227,
+        179
+      ],
+      "profile": [
+        37,
+        5,
+        13,
+        71
+      ],
+      "root": 3,
+      "source_rows": [
+        34,
+        24,
+        3,
+        5,
+        13,
+        30
+      ]
+    }
+  ],
+  "size8_literal_children": 14,
+  "status": "PASS independent literal permutation audit"
+}

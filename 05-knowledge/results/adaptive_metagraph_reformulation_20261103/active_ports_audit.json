@@ -1,0 +1,35 @@
+{
+  "cap3_extra_forgotten_port_step": {
+    "forgotten_endpoint_parent_covers": 181,
+    "largest_transition_multiplicity": 1,
+    "positive_parent_covers": 106,
+    "signature_classes": 179,
+    "source_covers": 339,
+    "target_covers": 1499
+  },
+  "controls": {
+    "1": {
+      "degree_controls": 1,
+      "forgotten_endpoint_parent_observations": 144,
+      "largest_transition_multiplicity": 1,
+      "named_birth_edges": 6,
+      "source_cover_observations": 382
+    },
+    "2": {
+      "degree_controls": 6,
+      "forgotten_endpoint_parent_observations": 880,
+      "largest_transition_multiplicity": 2,
+      "named_birth_edges": 18,
+      "source_cover_observations": 1356
+    },
+    "3": {
+      "degree_controls": 24,
+      "forgotten_endpoint_parent_observations": 0,
+      "largest_transition_multiplicity": 1,
+      "named_birth_edges": 24,
+      "source_cover_observations": 1882
+    }
+  },
+  "scope": "All actual cap1/2/3 histories from normalized T4 through order6; all path-cover lifts per birth edge. Exact support dimensions15/460/9672 remain producer closure receipts, not independently recomputed here.",
+  "status": "PASS independent cover-by-cover endpoint lumpability"
+}

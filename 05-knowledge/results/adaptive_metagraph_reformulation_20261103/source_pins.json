@@ -1,0 +1,433 @@
+{
+  "base": "8b8310fbff889673355b269455512aa2d2c76620",
+  "incoming_reviewed": "7c371e94aae8bd4994c2569ea92b60b0c56cd822",
+  "scope": "Linked mathematical source identities; history inventory separately records review depth. No claim to replay all inherited results.",
+  "sources": [
+    {
+      "blob": "1f6de99ffeb6791c04fa2ebeb2653c2c743dd326",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "00-navigation/S150.md",
+      "sha256": "3f30dcf854d5aa26336bc2b084d021848578df37ed450803244fcf79dd1fee84"
+    },
+    {
+      "blob": "e9a08c64f3cf19fee0d34f2deb3dd66e2d97851e",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/MISTAKES.md",
+      "sha256": "a65f76292d6912870a480b229e1d098d5ec755142196980451cdc542ac34f3cb"
+    },
+    {
+      "blob": "e6e199d68d94829d68acfda1578fd1c21dc05fad",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-001-redei.md",
+      "sha256": "e89c0bf0e21d5a987dadbe0db82e02497cb7e74b52d62bb959f43edc2c673560"
+    },
+    {
+      "blob": "955d7bdf1c8a115b55f11cc60c719ff3ba6410cd",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1"
+    },
+    {
+      "blob": "246fb787743d5b94602d2cff369cc71b6b553898",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-012b-insertion-decomposition.md",
+      "sha256": "443174703a1fd3b815673fdafbbf1b00dd652ba2ddac845d21d20442d00df477"
+    },
+    {
+      "blob": "6790493ed88e7e2bad059a6cd476513aad109917",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-123-beta3-leq-1-proof-architecture.md",
+      "sha256": "01d11f3d3490e1230d5e35c993564738ad0a92c1bbaa273d647d7811fd24badf"
+    },
+    {
+      "blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "blob": "8ef9df35a1d5ff9446e011e4e50b7f1d57e2306c",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-1862-order-join-reduction-principle.md",
+      "sha256": "329eb02887d21f178db6ddb2c71806da0b9f2695552c645409be64360ac6d58e"
+    },
+    {
+      "blob": "c23bcd153c2ce1fcb38368fc886ac1beaff6dbea",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-1975-the-path-cover-polynomial-is-the-refined-compositional-invariant.md",
+      "sha256": "bbdb66405e8be8e7e34559282c80cf32071b50d7d8533f324f4f78f250c34109"
+    },
+    {
+      "blob": "21c54c68fac2c18efcacd26331006824fe891cda",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "blob": "b41de286398596e42fd56fa36a3725d5ac6898d2",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-343-H7-impossible.md",
+      "sha256": "2c604e1ac5de0fa5aca7d5207a778f916d4d168a35ecd61bc6e809176df1e325"
+    },
+    {
+      "blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "blob": "7a5c2349f4b74110d743dd443ae8f595e34c3599",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension.md",
+      "sha256": "73f5b6430abf1386c910968d8fc73081732c2800a6bff22b619cbe27d410ded7"
+    },
+    {
+      "blob": "90314aa6314e778900ba5370163fc48fad5b566a",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-4099-squarefree-gap-transfer-and-mixed-insertion-boundary.md",
+      "sha256": "18be31219197fe9f55d4fda83c51653b56a412416074ea79a4ad441607968b77"
+    },
+    {
+      "blob": "6081f4078ececbc237fbb8058f01a18cd9120f05",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-4102-selected-order-ten-strong-ear-solid-interval.md",
+      "sha256": "9c979167287771ae9eaa47d91ca60624849a1a2488a3f152d4671fed4f8ca2b7"
+    },
+    {
+      "blob": "8566eaaba93bd4f724891a0c5b19af8802f70427",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-4104-selected-order-eleven-strong-ear-solid-interval.md",
+      "sha256": "566e36860b24351fb40eee865dd03e8ff101658da92423265afcb3c8b26a22ac"
+    },
+    {
+      "blob": "687b273ebcf3e8b2f228c882c2174d057f000271",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md",
+      "sha256": "37ff5a53790ae3bcd834ffb6f81e08a619974b3dc661d5ba7634b120578bba2f"
+    },
+    {
+      "blob": "d7b6ad8320a0d2700531a49da25b71f8d231c883",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-4133-strong-cyclic-substitution-johnson-centrality-counterexample.md",
+      "sha256": "549273bf2103bb5dd41696ac72f0a3917977630e9c5cee3500cc9a903a6f7cd2"
+    },
+    {
+      "blob": "18220e0060a374f25a32761ab1391a28e559e8a6",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-4744-interval-chains-attain-busch-and-are-the-extremal-strong-tournaments-through-order-twelve.md",
+      "sha256": "c5c781024535ca3c82002a55579cf07a699dba7406ba484fc4fb18ced3ee404f"
+    },
+    {
+      "blob": "9236c40246428b65aaaa17cbfa0947f25ba75066",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-4745-exact-gluings-of-interval-chains-and-the-reduction-of-busch-equality-to-a-one-way-lemma.md",
+      "sha256": "83cabba17a1e17c9f76d02d460be53241347c43c41c67a9791ab1e71a75e8b27"
+    },
+    {
+      "blob": "406f66a4174239ff7b4b5f57df1d010e60b68d59",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md",
+      "sha256": "e83a80296e20d4ae93f24a64756a808368926d52ed08e31e2602c4f3905794fd"
+    },
+    {
+      "blob": "4a82aed8f3d47dc0df482a24e2ede39b13e1fcd7",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-4807-untraced-arcs-are-cycle-closing-chords-elementary-legal-path-reconstruction-endpoint-decoder-one-guard-separation.md",
+      "sha256": "8c886c105dc6692f2bcdcfd87d40d7fed283cf28eab1e90c1db3502261209935"
+    },
+    {
+      "blob": "ac24d286769752ec43c4c624bacf4f9f360f2e5a",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-4812-presentation-fibres-7-and-21-are-absent-at-every-order-orbit-product-lemma-vertex-transitive-lemma-closed-window.md",
+      "sha256": "7c40f6586d9f39dbdddfc9899b4dde9cd8b00e4cea0cb7e987042d52adf466f9"
+    },
+    {
+      "blob": "8436c8a856a33936387a4277a2c0f12b493996b9",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-4819-regular-tournaments-under-native-moves-the-transitive-slab-exact-distance-and-the-prescribed-black-core.md",
+      "sha256": "c74a00964dc37b9332c6630e3032fb77e6ab118d2fa1b51105e81da70b2aace6"
+    },
+    {
+      "blob": "a2fb7942e31cf479495eb1d2fe71fa7218fefbb5",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "01-canon/theorems/THM-643-blue-black-line-parity-structure.md",
+      "sha256": "64ca35cf912157882c2e5c788b20f3ade2349b275eee3b3728144793c35920ff"
+    },
+    {
+      "blob": "ce71db7b4526d3799989d5902448189ec6ba1e57",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/hypotheses/HYP-9029-strong-interval-tiling-law.md",
+      "sha256": "53e99d2dac64795ce25baea1615455e104cdb5ea4bff9ad830a1d3079ce969c2"
+    },
+    {
+      "blob": "2625493310bbc0d949b4cad50d5c7c7e97f99859",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/boolean_realization_71_17_20261102/README.md",
+      "sha256": "a0a3810ad82aa3d198d4a8b8820f7612d755b8adc8735b11508dacb8d1a33474"
+    },
+    {
+      "blob": "dd01af231d9f10bea525feec015db5f7e92677d9",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/feedback_word_hamilton_spectrum_20261020/README.md",
+      "sha256": "59fe46ec38c99b7cb04d62ee4be588c0000aa38a9ea2932ed471d87a2aad1353"
+    },
+    {
+      "blob": "5cb6d4e7efbd7a40a7e1359c84fc9b089d0ca39d",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/feedback_word_hamilton_spectrum_20261020/proofs.md",
+      "sha256": "c24aca5ffd092e216985eb794512d584c08db2610dd84982aabb6a5d24a69b6c"
+    },
+    {
+      "blob": "2cc8935936a11cbc6467a57f38e120190f67590d",
+      "commit": "7c371e94aae8bd4994c2569ea92b60b0c56cd822",
+      "path": "05-knowledge/results/golden_hamilton_transfer_20261103/INCOMING.md",
+      "sha256": "6c672d7550dd4302b5a3b961004d0abdb4bac38a098eb20b16bf67b29a716f92"
+    },
+    {
+      "blob": "60434481e16ee461dd548744d99d267ba3b36799",
+      "commit": "7c371e94aae8bd4994c2569ea92b60b0c56cd822",
+      "path": "05-knowledge/results/golden_hamilton_transfer_20261103/README.md",
+      "sha256": "f3fc57c3546b69e46013f32d7223c1513422f3f7e8a701420e6f6c54611b99e2"
+    },
+    {
+      "blob": "5435994b6e6df3be1329cec053012159ad607d79",
+      "commit": "7c371e94aae8bd4994c2569ea92b60b0c56cd822",
+      "path": "05-knowledge/results/golden_hamilton_transfer_20261103/RECURRENCE.md",
+      "sha256": "611d9a6792ec1805201f43c69313d59a3dd401539cef5dd238d481b76b506aed"
+    },
+    {
+      "blob": "7d2d24f6effb6f3a337104e17986d859088b6e0e",
+      "commit": "7c371e94aae8bd4994c2569ea92b60b0c56cd822",
+      "path": "05-knowledge/results/golden_seam_recurrence_20261103/README.md",
+      "sha256": "a52b2965a6a98a98ff5b490eb22b50b39c1bb62f3e60d2479df88c378f9f7e0b"
+    },
+    {
+      "blob": "bfbc3d705a2035bd4f9cc3c98da6158371e56e13",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/README.md",
+      "sha256": "fdb525052c97b7f0dbf824e418d754df34d23e4df00e6881c1de3cdf1b85cf7a"
+    },
+    {
+      "blob": "8ec9e1bb3fc79c799a5db14ff56573981cb4ea6a",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/metagraph_flag_transport_20261023/README.md",
+      "sha256": "59da0425fed5870261494dc26e363ae4d956a668cdd8a108d69b32b758631ed7"
+    },
+    {
+      "blob": "4248f6f056137cd0542e5d444e85356251fbf8a9",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/positive_source_jacobian_prime_clocks_20261103/README.md",
+      "sha256": "954c4ecd4911d24922be0c69a06f7269abe1a9a7f47efb0317096964ee9bab5a"
+    },
+    {
+      "blob": "b20795f1e2280119c2cee5f874ae5fb8e3729fcd",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/prime_inverse_ports_20261102/README.md",
+      "sha256": "fecc8aee65a0aaa36c12f099d759f7624028cdf825c7ab1e045968616c49ca6f"
+    },
+    {
+      "blob": "58084794cbf1462bc67ba2a5158f8c55b4c53e8d",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/prime_inverse_ports_20261102/SYMMETRY.md",
+      "sha256": "935a23a17888b07507a5fb17e3c97eceb37eb318631db6bf1afc150ed96c5fcc"
+    },
+    {
+      "blob": "3096899691b19504cce05c08e4d200ba8730e853",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/prime_lane_ports_five_groups_20261102/README.md",
+      "sha256": "04c84ba2399489d77c82c1a5cb1aa3263bb9e690157ed2a62b3904da2554a884"
+    },
+    {
+      "blob": "56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md",
+      "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042"
+    },
+    {
+      "blob": "35116f9937f048c3e4dc0b007c4afce9ae9f20c7",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session103_words_necklaces_20261029/README.md",
+      "sha256": "20f9e7c04bcde90e01587b94fe00686f7d02b172c16ace0d5a509aeaec73da76"
+    },
+    {
+      "blob": "eff0595e05fb85fc8c41ab0f6323cfef47bdd32e",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session103_words_necklaces_20261029/singularity/FORBIDDEN_WORDS_ARE_STRONG_BRIDGE_CUTS.md",
+      "sha256": "4cd2c6a5cb3bf16a1fe3fd1ae591a88b0c376584f9833246f57116c9b736f42a"
+    },
+    {
+      "blob": "2c8d3e398bc99e3834911783129a5404fc3e2f9c",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session105_metagraph_recursion_20261029/metagraph/WEIGHTED_NATIVE_RECURSION.md",
+      "sha256": "d3aa196082d95bca0a25a800828fdcd8e5fe305f94d19eb4d4a329dc385383be"
+    },
+    {
+      "blob": "967f7076cd82e61fc8e4f8cc2c886f6bf6cc01b5",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session124_bounded_width_tournaments_20261031/README.md",
+      "sha256": "77e2f9d26a1cf3fbb1f54e2b1550a0c95fddfcd4174e64898d329b8a3ff1106b"
+    },
+    {
+      "blob": "acfbd4adef63e727a2893b30153d317604c8845e",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session124_digital_constructor_inverse_20261031/global_reduction/README.md",
+      "sha256": "5c0682b6bd45edbc620ef8f1bdda1c0e5ea7fb2a861512d3670da96616ba1ec8"
+    },
+    {
+      "blob": "c3a3de22059398aac1220a8e1662a312f8b81315",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session124_million_path_spectrum_20261031/README.md",
+      "sha256": "79ecd62ffe78292b73b17f8f3fde72d165946953e8e07dc55e20672cd2c46f90"
+    },
+    {
+      "blob": "cf651da723eecbbb10e8741d318dd4172749e856",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/README.md",
+      "sha256": "b497fb33d662598913946bbeb818c7d758aec38782488f0ca6f0da4581ca5dc8"
+    },
+    {
+      "blob": "5364452e207471864d9aa7f4e5b7d76567373423",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session142_tournament_odd_spectrum_20261102/SYNTHESIS.md",
+      "sha256": "13c4acdafb69d5511b0a146aed7da9605b3e1633fbdbbaa5c2334e04f8105ce8"
+    },
+    {
+      "blob": "6f56e3a8c4a739dbdfad1b6c28a4e6f064e84d0c",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/adaptive/RESULT.md",
+      "sha256": "89a81021b0c32a226de74001ea210cd56172cfed4f8351456b17ab7a53b806eb"
+    },
+    {
+      "blob": "ff176451599ff152e65a79b8afb16d3375aeac6e",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/gadgets/RESULT.md",
+      "sha256": "1fe138c98ddcff609269b2b8437fbdd0432c47115646b984c9065ad41ef0bf86"
+    },
+    {
+      "blob": "23b72e33063fb21b7282f42e08821d83638a5211",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/obstructions/RESULT.md",
+      "sha256": "6c9785bc7c38c4124135934ff8677694875f951760f3fce3c4c997e3999e3f81"
+    },
+    {
+      "blob": "9d8d1b44ad3208d9e9f2a23b02170f16c29d25be",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/prime_induction/RESULT.md",
+      "sha256": "19462f34ba7c8b48ce91f79b954bd0c5977e125892dfb13f0fe900957344b568"
+    },
+    {
+      "blob": "a0b224afd060cfc1f4a1059670fb1064d946b0ff",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/status/STATUS.md",
+      "sha256": "6b269c69d22490ea33b94904d62349fcda2dc21fd233462c526f83c65d135549"
+    },
+    {
+      "blob": "a570f5a58e77d5ef31fdfc898224b7a8cb263f14",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/transfer/TRANSFER.md",
+      "sha256": "7286be338f9e0c15becc2e8187616014f39b1c4ed05a9bd7ec479404715d6ab0"
+    },
+    {
+      "blob": "aaaec0fd1d83646817359b69f48354742a984425",
+      "commit": "7c371e94aae8bd4994c2569ea92b60b0c56cd822",
+      "path": "05-knowledge/results/session151_spectrum_metagraph_20261103/incidence/INCIDENCE.md",
+      "sha256": "f56b70370b8b4bb9e658d78fa2a9cc88df9605ee6c707a1f95c96f36ccfd1b9b"
+    },
+    {
+      "blob": "c0dc40a738f0d33d2f11034a64c30d17ccf14de6",
+      "commit": "7c371e94aae8bd4994c2569ea92b60b0c56cd822",
+      "path": "05-knowledge/results/session151_spectrum_metagraph_20261103/strategy/TERNARY_COMPILER.md",
+      "sha256": "d55e5eac0b1b38b5fd2890f14be200ce2f952f53dd50f6363bfdab7400bdbfd4"
+    },
+    {
+      "blob": "bda5c56bfff87daa10e0af8077b48903a27182a1",
+      "commit": "7c371e94aae8bd4994c2569ea92b60b0c56cd822",
+      "path": "05-knowledge/results/session152_sequences_20261103/cut_induction/README.md",
+      "sha256": "c6bff12d5d62e39d32d7c614e4559a97456150b21a6a0bbdfe228dab3ee69d67"
+    },
+    {
+      "blob": "bad0896725c6a2eb255f8da4e725e4cb5907f9c5",
+      "commit": "7c371e94aae8bd4994c2569ea92b60b0c56cd822",
+      "path": "05-knowledge/results/session152_sequences_20261103/cut_moments/README.md",
+      "sha256": "69b1e6929fbdad940af9f61cd459b4f66f7767363979d3f908768750c23dcb4a"
+    },
+    {
+      "blob": "4fe0c9d535fc9faf014c34c920c000b53636e569",
+      "commit": "7c371e94aae8bd4994c2569ea92b60b0c56cd822",
+      "path": "05-knowledge/results/session152_sequences_20261103/cut_realizability/README.md",
+      "sha256": "4f1521df51d8c2d9f7d3fd9431b8ddf00b8e7bc9e1b0ca33d1cab43d72cb3c50"
+    },
+    {
+      "blob": "344fc67b3c73f7a891263ee1b10e5fa1ec447a4f",
+      "commit": "7c371e94aae8bd4994c2569ea92b60b0c56cd822",
+      "path": "05-knowledge/results/session152_sequences_20261103/inductive_target/README.md",
+      "sha256": "70914aa60135dcf4d14a118ae23201b7bc51950313eac3946782791157bea616"
+    },
+    {
+      "blob": "d1a285da763da011f5cf5b7db561299d0a337121",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session25_spectrum_wiring_20261021/session25-spectrum/PROOF.md",
+      "sha256": "4c32eb0fb63f4a89511eef58b4ccd659ae28db895ab7d1514f66b20dc0ca48a8"
+    },
+    {
+      "blob": "684c0c90a63e7d4b28f20cd25bd5f7bbdf75c337",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-root/COUNT_FREE_ENUMERATION.md",
+      "sha256": "4d1ce0b7022ed3d3a9c25cd124ec0e30ec7e65a9a4ddc454a1d2bd7f71d9aa7e"
+    },
+    {
+      "blob": "3b1d2b1b992035effd411e51764098850c7ea60b",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/spectrum_basins_20261020e/spectrum.md",
+      "sha256": "7cc05b1cbbe2a570a3f2ec86235695fb20a3390f87a271f675075758463dd75b"
+    },
+    {
+      "blob": "30c84d0458302b114f885c6211aa55b16bd3239f",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/spectrum_descent_jacobian_20261102/README.md",
+      "sha256": "4df5d13b18f4dd3e100c8ba8f3c4da7ccbcfa2fc34d5024a9d6a00c7e67c180a"
+    },
+    {
+      "blob": "04dfd5944a798017a554cd7c7f2e153f3c9305f2",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/README.md",
+      "sha256": "b102b091596bd0f7dd412daf1e691616c4385f0b2f9debcd9a697076657985e5"
+    },
+    {
+      "blob": "949858347bc1de3e1f9d075d753c94812f95881b",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031a/README.md",
+      "sha256": "ec3d6a2ec93438d1c031ae363c8de8fce7042929f56d24a8b7b4075cfba09552"
+    },
+    {
+      "blob": "22bc9c7572bead356fcd8b4f1b2424a07b4dad91",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/README.md",
+      "sha256": "70c63dba335d5372b607935b0c0e223a17659079b9467a2d3d1ef4cc2ede8c86"
+    },
+    {
+      "blob": "df569a73874e51300c1e05fc278272ef84f8b9fc",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/README.md",
+      "sha256": "0e0168986dadba716475072f9e3446cce75a88575b500760c881eee5ab3150c6"
+    },
+    {
+      "blob": "14e883e570d6d3c16ea3a8c7a01fe353239707b6",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031d/README.md",
+      "sha256": "626961a791a6e628db9f9a5df51690783743f66a09cc796ab943894fd8adce32"
+    },
+    {
+      "blob": "eab0f004b8ae34a5e4bed4b4f3fb7464a8006fe3",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/tournament_joint_parity_20261102/README.md",
+      "sha256": "7a07f041bdf433160c8665e98731a62af700a6cc11942bfd1681293c73ff1119"
+    },
+    {
+      "blob": "4751d5eae9f000e5f986d5f04599af9d65401f0a",
+      "commit": "8b8310fbff889673355b269455512aa2d2c76620",
+      "path": "05-knowledge/results/uniform_prime_transport_20261103/README.md",
+      "sha256": "7f16f0b7d81ca9374fa823efec49ed998d49a22d80faf818d291ad41079ea574"
+    }
+  ]
+}

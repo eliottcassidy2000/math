@@ -1,0 +1,140 @@
+{
+  "all_labelled_strong_controls": [
+    {
+      "irreducible_labelled": 2,
+      "labelled_strong": 2,
+      "n": 3
+    },
+    {
+      "irreducible_labelled": 0,
+      "labelled_strong": 24,
+      "n": 4
+    },
+    {
+      "irreducible_labelled": 64,
+      "labelled_strong": 544,
+      "n": 5
+    }
+  ],
+  "converse_controls": [
+    {
+      "converse_exit_histories": 0,
+      "named_histories": 3,
+      "order": 4
+    },
+    {
+      "converse_exit_histories": 0,
+      "named_histories": 12,
+      "order": 5
+    },
+    {
+      "converse_exit_histories": 9,
+      "named_histories": 60,
+      "order": 6
+    }
+  ],
+  "converse_hostile": {
+    "converse_rows": [
+      52,
+      41,
+      26,
+      49,
+      34,
+      4
+    ],
+    "core_orders": [
+      3,
+      6
+    ],
+    "history": [
+      0,
+      1,
+      2
+    ],
+    "source_rows": [
+      10,
+      20,
+      33,
+      6,
+      13,
+      27
+    ]
+  },
+  "primitive_core_controls": [
+    {
+      "automorphism_order": 5,
+      "core": "regular5",
+      "depths": [
+        {
+          "automorphism_order_histogram": {
+            "1": 1
+          },
+          "depth": 1,
+          "ordinary_classes": 1,
+          "root_words": 5
+        },
+        {
+          "automorphism_order_histogram": {
+            "1": 6
+          },
+          "depth": 2,
+          "ordinary_classes": 6,
+          "root_words": 30
+        }
+      ],
+      "fixed_points_by_automorphism": [
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "automorphism_order": 3,
+      "core": "C3_C3_1_1",
+      "depths": [
+        {
+          "automorphism_order_histogram": {
+            "1": 1,
+            "3": 2
+          },
+          "depth": 1,
+          "ordinary_classes": 3,
+          "root_words": 5
+        },
+        {
+          "automorphism_order_histogram": {
+            "1": 8,
+            "3": 6
+          },
+          "depth": 2,
+          "ordinary_classes": 14,
+          "root_words": 30
+        }
+      ],
+      "fixed_points_by_automorphism": [
+        5,
+        2,
+        2
+      ],
+      "rows": [
+        10,
+        12,
+        9,
+        16,
+        7
+      ]
+    }
+  ],
+  "scope": "Canonical peeling, exact residual automorphism groups, literal named root-word realizations; not a primitive-core inventory at all orders.",
+  "sources_audited": 570,
+  "status": "PASS"
+}

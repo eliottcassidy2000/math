@@ -1,0 +1,153 @@
+{
+  "A": {
+    "history": [
+      0,
+      1,
+      2
+    ],
+    "next_root_values": [
+      287,
+      321,
+      219,
+      329,
+      275,
+      233,
+      179
+    ],
+    "root": 2,
+    "rows": [
+      40,
+      17,
+      3,
+      6,
+      13,
+      30
+    ]
+  },
+  "B": {
+    "history": [
+      0,
+      2,
+      1
+    ],
+    "next_root_values": [
+      289,
+      307,
+      339,
+      219,
+      271,
+      227,
+      179
+    ],
+    "root": 3,
+    "rows": [
+      34,
+      24,
+      3,
+      5,
+      13,
+      30
+    ]
+  },
+  "C3_keep_new_first_missing": [
+    7,
+    11,
+    13,
+    19,
+    21,
+    23,
+    35,
+    37,
+    39,
+    41,
+    43,
+    47,
+    55,
+    59,
+    61
+  ],
+  "T4_all_roots_keep_new_missing_to199": [
+    7,
+    21,
+    39,
+    55,
+    67,
+    83,
+    103,
+    113,
+    121,
+    127,
+    139,
+    157,
+    163,
+    173,
+    181,
+    187
+  ],
+  "T4_restricted_states": 352,
+  "controls": {
+    "all_strong_ordered_old_root_pair_checks": 1188,
+    "all_strong_root_update_checks": 247,
+    "restricted_actual_recipe_replays": 352
+  },
+  "literal_targets": {
+    "A233": 233,
+    "A287": 287,
+    "B307": 307
+  },
+  "minimal_profile_scan": [
+    {
+      "accepted_classes": 1,
+      "n": 3,
+      "profile_collision": false
+    },
+    {
+      "accepted_classes": 1,
+      "n": 4,
+      "profile_collision": false
+    },
+    {
+      "accepted_classes": 4,
+      "n": 5,
+      "profile_collision": false
+    },
+    {
+      "accepted_classes": 20,
+      "n": 6,
+      "profile_collision": true
+    }
+  ],
+  "order5_nonadaptive_strong": [
+    {
+      "H": 15,
+      "indegree_one_vertices": [
+        4
+      ],
+      "rows": [
+        16,
+        9,
+        3,
+        5,
+        14
+      ]
+    },
+    {
+      "H": 15,
+      "indegree_one_vertices": [],
+      "rows": [
+        24,
+        17,
+        3,
+        6,
+        12
+      ]
+    }
+  ],
+  "same_profile": [
+    37,
+    5,
+    13,
+    71
+  ],
+  "status": "PROVED exact rooted updates/reset; finite exact minimal profile hostile and restricted-language exclusions"
+}

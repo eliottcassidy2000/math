@@ -1,6 +1,6 @@
 # Full boundaries, tournament families, and information
 
-[Prime/7p realization and the five prime groups](../05-knowledge/results/prime_lane_ports_five_groups_20261102/README.md): arbitrary-block source-order relocation, explicit strong dyadic lane exchanges, and a sharp multi-birth symmetry budget. The complete two-birth triangle detector identifies the circulation lost by one-step response; actual square-carry joins connect the25-prime graph while retaining individual ports and the obstruction at2. Independently audited scoped results; full Hamilton spectrum remains OPEN.
+[Adaptive induction and metagraph classification](../05-knowledge/results/adaptive_metagraph_reformulation_20261103/README.md): recovered proof history; unique oriented ancestry, bounded-port transfer, sharp127 obstruction and dual nonconfluence. Full spectrum OPEN. [Prior prime lanes/five groups](../05-knowledge/results/prime_lane_ports_five_groups_20261102/README.md).
 
 [Golden Hamilton transfer](../05-knowledge/results/golden_hamilton_transfer_20261103/README.md): coarsest three-coordinate future-H observer for one-reversed-bridge joins; all five Q4 matrices and an order12 aggregate recurrence. Complete all-order bounded-H certificates exclude37/133 from the golden image and47 even after all strong5 blocks. Both golden H55 sources fail every one-vertex55->111 attachment; a different source succeeds. Full spectrum remains OPEN.
 

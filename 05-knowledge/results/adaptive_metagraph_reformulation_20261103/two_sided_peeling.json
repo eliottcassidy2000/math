@@ -1,0 +1,216 @@
+{
+  "literal_family_controls": [
+    {
+      "K": "C3",
+      "irreducible_branch_order": 5,
+      "other_branch_reaches": 3,
+      "root": 0,
+      "source_order": 6
+    },
+    {
+      "K": "C3",
+      "irreducible_branch_order": 5,
+      "other_branch_reaches": 3,
+      "root": 1,
+      "source_order": 6
+    },
+    {
+      "K": "C3",
+      "irreducible_branch_order": 5,
+      "other_branch_reaches": 3,
+      "root": 2,
+      "source_order": 6
+    },
+    {
+      "K": "S4",
+      "irreducible_branch_order": 6,
+      "other_branch_reaches": 4,
+      "root": 0,
+      "source_order": 7
+    },
+    {
+      "K": "S4",
+      "irreducible_branch_order": 6,
+      "other_branch_reaches": 4,
+      "root": 1,
+      "source_order": 7
+    },
+    {
+      "K": "S4",
+      "irreducible_branch_order": 6,
+      "other_branch_reaches": 4,
+      "root": 2,
+      "source_order": 7
+    },
+    {
+      "K": "S4",
+      "irreducible_branch_order": 6,
+      "other_branch_reaches": 4,
+      "root": 3,
+      "source_order": 7
+    },
+    {
+      "K": "R5",
+      "irreducible_branch_order": 7,
+      "other_branch_reaches": 5,
+      "root": 0,
+      "source_order": 8
+    },
+    {
+      "K": "R5",
+      "irreducible_branch_order": 7,
+      "other_branch_reaches": 5,
+      "root": 1,
+      "source_order": 8
+    },
+    {
+      "K": "R5",
+      "irreducible_branch_order": 7,
+      "other_branch_reaches": 5,
+      "root": 2,
+      "source_order": 8
+    },
+    {
+      "K": "R5",
+      "irreducible_branch_order": 7,
+      "other_branch_reaches": 5,
+      "root": 3,
+      "source_order": 8
+    },
+    {
+      "K": "R5",
+      "irreducible_branch_order": 7,
+      "other_branch_reaches": 5,
+      "root": 4,
+      "source_order": 8
+    }
+  ],
+  "minimality_universe": [
+    {
+      "all_labelled_strong": 2,
+      "n": 3
+    },
+    {
+      "all_labelled_strong": 24,
+      "n": 4
+    },
+    {
+      "all_labelled_strong": 544,
+      "n": 5
+    }
+  ],
+  "scope": "Global all-order nonconfluence follows the written construction; finite checks validate named critical pairs, not every larger tournament.",
+  "smallest_hostile": {
+    "branches": [
+      {
+        "steps": [
+          {
+            "delete": 5,
+            "remaining": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "role": "in"
+          }
+        ],
+        "terminal": true,
+        "terminal_code": 40,
+        "terminal_names": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "terminal_rows": [
+          16,
+          9,
+          3,
+          5,
+          14
+        ]
+      },
+      {
+        "steps": [
+          {
+            "delete": 0,
+            "remaining": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "role": "out"
+          },
+          {
+            "delete": 4,
+            "remaining": [
+              1,
+              2,
+              3,
+              5
+            ],
+            "role": "in"
+          },
+          {
+            "delete": 5,
+            "remaining": [
+              1,
+              2,
+              3
+            ],
+            "role": "in"
+          }
+        ],
+        "terminal": true,
+        "terminal_code": 2,
+        "terminal_names": [
+          1,
+          2,
+          3
+        ],
+        "terminal_rows": [
+          4,
+          1,
+          2
+        ]
+      }
+    ],
+    "rows": [
+      16,
+      9,
+      3,
+      37,
+      14,
+      23
+    ]
+  },
+  "status": "REFUTED two-sided confluence; PROVED family at every order n>=6",
+  "wrapper_controls": [
+    {
+      "Aut_K_and_wrapper": 3,
+      "C2_nonempty": 6,
+      "H_K": 3,
+      "H_wrapper": 15,
+      "K": "C3"
+    },
+    {
+      "Aut_K_and_wrapper": 1,
+      "C2_nonempty": 22,
+      "H_K": 5,
+      "H_wrapper": 37,
+      "K": "S4"
+    },
+    {
+      "Aut_K_and_wrapper": 5,
+      "C2_nonempty": 90,
+      "H_K": 15,
+      "H_wrapper": 135,
+      "K": "R5"
+    }
+  ]
+}
