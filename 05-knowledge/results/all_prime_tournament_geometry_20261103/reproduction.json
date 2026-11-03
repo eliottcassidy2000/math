@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "script": "check.py",
+      "normal_optimized_identical": true,
+      "valid_json": true
+    },
+    {
+      "script": "audit.py",
+      "normal_optimized_identical": true,
+      "valid_json": true
+    }
+  ]
+}

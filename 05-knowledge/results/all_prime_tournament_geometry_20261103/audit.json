@@ -1,0 +1,40 @@
+{
+  "H55_all_cuts_independent": 512,
+  "H55_response_gcd": 1,
+  "H_through5": {
+    "1": [
+      1
+    ],
+    "2": [
+      1
+    ],
+    "3": [
+      1,
+      3
+    ],
+    "4": [
+      1,
+      3,
+      5
+    ],
+    "5": [
+      1,
+      3,
+      5,
+      9,
+      11,
+      13,
+      15
+    ]
+  },
+  "all_checks": "PASS",
+  "height_unique_controls": 169,
+  "permutation_cut_tournaments": 1099,
+  "status": "independent exact algorithms; same agent review",
+  "suffix_recursion_reader_counts": {
+    "(4, 4)": 3371,
+    "(4, 5)": 13873,
+    "(5, 4)": 12077,
+    "(5, 5)": 50391
+  }
+}
