@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "historical_controls": 4,
+  "all_field_elements_checked": 343,
+  "cubic_irreducible_mod7": true,
+  "F343_fixed_vectors": 7,
+  "F49_charge_fixed_vectors": 49,
+  "current_ports": [
+    {
+      "endpoint": "candidate",
+      "physical_name": 39,
+      "golden": [
+        512423,
+        10021081,
+        10021126
+      ],
+      "degree": 3
+    },
+    {
+      "endpoint": "candidate",
+      "physical_name": 6,
+      "golden": [
+        512423,
+        783411,
+        804793
+      ],
+      "degree": 3
+    },
+    {
+      "endpoint": "candidate",
+      "physical_name": 51,
+      "golden": [
+        512423,
+        47303769,
+        47303859
+      ],
+      "degree": 3
+    },
+    {
+      "endpoint": "candidate",
+      "physical_name": 4,
+      "golden": [
+        512423,
+        1227962,
+        1228007
+      ],
+      "degree": 3
+    },
+    {
+      "endpoint": "candidate",
+      "physical_name": 50,
+      "golden": [
+        512423,
+        72196954,
+        72196999
+      ],
+      "degree": 3
+    },
+    {
+      "endpoint": "continuation",
+      "physical_name": 39,
+      "golden": [
+        1537271,
+        16645853,
+        16647603
+      ],
+      "degree": 1
+    },
+    {
+      "endpoint": "continuation",
+      "physical_name": 6,
+      "golden": [
+        1537271,
+        1710234,
+        1769970
+      ],
+      "degree": 3
+    },
+    {
+      "endpoint": "continuation",
+      "physical_name": 51,
+      "golden": [
+        1537271,
+        34482174,
+        34485674
+      ],
+      "degree": 3
+    },
+    {
+      "endpoint": "continuation",
+      "physical_name": 4,
+      "golden": [
+        1537271,
+        2082557,
+        2136562
+      ],
+      "degree": 3
+    },
+    {
+      "endpoint": "continuation",
+      "physical_name": 50,
+      "golden": [
+        1537271,
+        53720193,
+        53721943
+      ],
+      "degree": 3
+    },
+    {
+      "endpoint": "continuation",
+      "physical_name": 8,
+      "golden": [
+        1537271,
+        1534965,
+        1536715
+      ],
+      "degree": 3
+    }
+  ],
+  "scope": "Exact endpoint source binding and independent algebra; joint endpoint DP is audited and replayed separately, no clock or automorphism inference."
+}

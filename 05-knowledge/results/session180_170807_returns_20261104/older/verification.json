@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "atlas_rows": 2131019,
+  "witnesses_permutation_checked": 22,
+  "all_labelled_orders_permutation_crosschecked": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "candidate_count": 53,
+  "candidate_max_p2": 198,
+  "realizable_candidates": [
+    {
+      "lattice": true,
+      "flip_a": 31,
+      "flip_b": 40,
+      "mark": 2,
+      "hA": 1,
+      "P2A": 16,
+      "h": 5655,
+      "f": 31673,
+      "target": 512423
+    }
+  ],
+  "cxx_sha256": "48748056167b2579bac06f55f9f0b09e43db5f9814075c8f952d337d797ddfbd"
+}

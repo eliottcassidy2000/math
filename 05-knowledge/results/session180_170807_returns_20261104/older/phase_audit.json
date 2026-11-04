@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "bank_witnesses_permutation_checked": 180,
+  "named_full_birth_checks": [
+    {
+      "s": 1,
+      "d": 2,
+      "root": 5,
+      "newborns": [
+        6,
+        7
+      ],
+      "h": 59,
+      "f": 59
+    },
+    {
+      "s": 1,
+      "d": 4,
+      "root": 5,
+      "newborns": [
+        6,
+        7
+      ],
+      "h": 61,
+      "f": 61
+    },
+    {
+      "s": 2,
+      "d": 2,
+      "root": 6,
+      "newborns": [
+        7,
+        8
+      ],
+      "h": 101,
+      "f": 101
+    },
+    {
+      "s": 2,
+      "d": 4,
+      "root": 6,
+      "newborns": [
+        7,
+        8
+      ],
+      "h": 103,
+      "f": 103
+    },
+    {
+      "s": 3,
+      "d": 2,
+      "root": 7,
+      "newborns": [
+        8,
+        9
+      ],
+      "h": 185,
+      "f": 185
+    },
+    {
+      "s": 3,
+      "d": 4,
+      "root": 7,
+      "newborns": [
+        8,
+        9
+      ],
+      "h": 187,
+      "f": 187
+    },
+    {
+      "s": 4,
+      "d": 2,
+      "root": 8,
+      "newborns": [
+        9,
+        10
+      ],
+      "h": 353,
+      "f": 353
+    },
+    {
+      "s": 4,
+      "d": 4,
+      "root": 8,
+      "newborns": [
+        9,
+        10
+      ],
+      "h": 355,
+      "f": 355
+    }
+  ],
+  "actual_C4_recipe_failures": [
+    {
+      "a": 1,
+      "d": 2,
+      "h": 57,
+      "f": 63
+    },
+    {
+      "a": 1,
+      "d": 4,
+      "h": 69,
+      "f": 73
+    },
+    {
+      "a": 2,
+      "d": 2,
+      "h": 105,
+      "f": 109
+    },
+    {
+      "a": 2,
+      "d": 4,
+      "h": 115,
+      "f": 117
+    }
+  ],
+  "scope": "finite bank witnesses and mathematical all-clock proof checked; original complete labelled census replay separate"
+}
