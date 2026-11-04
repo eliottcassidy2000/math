@@ -141,7 +141,8 @@ Run: `deletion_tower_order10 10` (2 min on 12 threads). Output: `04-computation/
 **The parity law.** The unweighted converse-merged deck collides at orders 3, 5, 7 and 9 (1, 2, 5 and 3 classes) and
 is injective at orders 4, 6, 8 and 10.
 
-The note, THM-4863 (P), (L) and (H), explains it as follows.
+The note, THM-4863 (P), (L) and (H), accounts for the odd-order side as follows. The even-order injectivity is observed,
+not explained.
 - **Even orders.** In the census (which reproduces McKay's complete list), every pair of non-isomorphic tournaments with
   the same ordinary deck consists of mutual converses.
 - **Odd orders.**
@@ -154,10 +155,17 @@ The note, THM-4863 (P), (L) and (H), explains it as follows.
 - **(A)** The tower is injective for every n >= 4.
 - **(B)** R_n has full column rank for every n >= 3.
 - **(C)** For every even n >= 4, the unweighted converse-merged deck determines the merged node.
-  - Equivalently: every same-deck pair of even order is a converse pair, and no two non-converse tournaments of even
-    order have the same deck up to converse cards.
+  - (C) implies that every same-deck pair of even order is a converse pair; the converse implication fails. Restated,
+    (C) says no two non-converse tournaments of even order have the same deck up to converse cards.
   - Stockmeyer's even families (orders 2^t and 2^s + 2^t with s >= 1) would have to consist of converse pairs. This is
     visible at order 4 (G_4 = 1 -> C_3, G*_4 = C_3 -> 1) and confirmed at orders 8 and 10.
 - **(D)** For every odd n >= 3, the unweighted converse-merged deck has a collision.
   - Lemma L forces this whenever order n - 1 has a non-isomorphic converse same-deck pair, for instance at
     n = 11 (from Stockmeyer's 2 + 8 pair).
+  - (D) is already established at many odd orders:
+    - at the orders 2^t + 1, by Stockmeyer's self-converse pairs (McKay (f));
+    - at 7, 11, 13 and 19, by Lemma L and the audit's Stockmeyer constructions.
+  - It is open, for example, at order 15.
+
+Audit: PASS WITH CORRECTIONS (MISTAKE-704). The census structure of section 3.2 of the note is largely published
+(McKay (f); Boudabbous-Ille 2018; Pouzet 1979 / Dumont).

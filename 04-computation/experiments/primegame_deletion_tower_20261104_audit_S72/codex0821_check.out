@@ -1,0 +1,8 @@
+catalogue 163: H=109 hc=8 H-2hc=93
+catalogue 401: H=111 hc=9 H-2hc=93
+catalogue 19: H=31 hc=0 H-2hc=31
+catalogue 64: H=113 hc=11 H-2hc=91
+catalogue 23: H=29 hc=0 H-2hc=29
+catalogue 57: H=117 hc=12 H-2hc=93
+5-deck pair 163/401: H-2hc 93 93
+6-deck affine relation D(19)+D(64)=D(23)+D(57): sums of H-2hc 122 122

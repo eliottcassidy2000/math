@@ -1,0 +1,103 @@
+==============================================================================================================
+0. Port check: Python canon reproduces the C canonical codes and |Aut| (orders <= 7 all classes, order 8-9 samples)
+  n=2: 1 classes checked, 0 mismatches
+  n=3: 2 classes checked, 0 mismatches
+  n=4: 4 classes checked, 0 mismatches
+  n=5: 12 classes checked, 0 mismatches
+  n=6: 56 classes checked, 0 mismatches
+  n=7: 456 classes checked, 0 mismatches
+  n=8: 300 classes checked, 0 mismatches
+  n=9: 300 classes checked, 0 mismatches
+==============================================================================================================
+M. Tiling sums sum_u |F(u)| = 2^binom(n-1,2); S_4 example
+  n=2: sum of node tilings = 1, 2^m = 1
+  n=3: sum of node tilings = 2, 2^m = 2
+  n=4: sum of node tilings = 8, 2^m = 8
+  n=5: sum of node tilings = 64, 2^m = 64
+  n=6: sum of node tilings = 1024, 2^m = 1024
+  n=7: sum of node tilings = 32768, 2^m = 32768
+  n=8: sum of node tilings = 2097152, 2^m = 2097152
+  n=9: sum of node tilings = 268435456, 2^m = 268435456
+  S_4: h_s=[1, 1, 2, 1] h_e=[2, 1, 1, 1] h_s+h_e=[3, 2, 3, 2] cards(merged id, 0/1 = H of order-3 node [3, 1])=[0, 1, 0, 1] W={0: 6, 1: 4} R={0: 3, 1: 2}
+==============================================================================================================
+T. Theorem H: decomposition of H(T) by the odd-cycle formula on every collision pair
+  n=3 merged-deck collision: H 3/1 (OCF ok True), hc 1/0, spanning covers by #cycles [1, 0, 0, 0] / [0, 0, 0, 0], c>=2 equal True, non-spanning part 1/1 equal True; Theorem H OK; det 1/0, det law OK
+  n=3 ordinary same-deck pair: H 3/1 (OCF ok True), hc 1/0, spanning covers by #cycles [1, 0, 0, 0] / [0, 0, 0, 0], c>=2 equal True, non-spanning part 1/1 equal True; Theorem H OK; det 1/0, det law OK
+  n=4 ordinary same-deck pair: H 3/3 (OCF ok True), hc 0/0, spanning covers by #cycles [0, 0, 0, 0] / [0, 0, 0, 0], c>=2 equal True, non-spanning part 3/3 equal True; Theorem H OK; det 0/0, det law OK
+  n=5 merged-deck collision: H 3/3 (OCF ok True), hc 0/0, spanning covers by #cycles [0, 0, 0, 0] / [0, 0, 0, 0], c>=2 equal True, non-spanning part 3/3 equal True; Theorem H OK; det 0/0, det law OK
+  n=5 merged-deck collision: H 13/15 (OCF ok True), hc 2/3, spanning covers by #cycles [2, 0, 0, 0] / [3, 0, 0, 0], c>=2 equal True, non-spanning part 9/9 equal True; Theorem H OK; det 2/3, det law OK
+  n=5 ordinary same-deck pair: H 13/15 (OCF ok True), hc 2/3, spanning covers by #cycles [2, 0, 0, 0] / [3, 0, 0, 0], c>=2 equal True, non-spanning part 9/9 equal True; Theorem H OK; det 2/3, det law OK
+  n=6 ordinary same-deck pair: H 43/43 (OCF ok True), hc 5/5, spanning covers by #cycles [0, 1, 0, 0] / [0, 1, 0, 0], c>=2 equal True, non-spanning part 39/39 equal True; Theorem H OK; det -4/-4, det law OK
+  n=6 ordinary same-deck pair: H 31/31 (OCF ok True), hc 3/3, spanning covers by #cycles [0, 1, 0, 0] / [0, 1, 0, 0], c>=2 equal True, non-spanning part 27/27 equal True; Theorem H OK; det -2/-2, det law OK
+  n=6 ordinary same-deck pair: H 23/23 (OCF ok True), hc 1/1, spanning covers by #cycles [0, 0, 0, 0] / [0, 0, 0, 0], c>=2 equal True, non-spanning part 23/23 equal True; Theorem H OK; det -1/-1, det law OK
+  n=6 ordinary same-deck pair: H 29/29 (OCF ok True), hc 3/3, spanning covers by #cycles [0, 1, 0, 0] / [0, 1, 0, 0], c>=2 equal True, non-spanning part 25/25 equal True; Theorem H OK; det -2/-2, det law OK
+  n=7 merged-deck collision: H 43/43 (OCF ok True), hc 0/0, spanning covers by #cycles [0, 0, 0, 0] / [0, 0, 0, 0], c>=2 equal True, non-spanning part 43/43 equal True; Theorem H OK; det 0/0, det law OK
+  n=7 merged-deck collision: H 141/143 (OCF ok True), hc 14/15, spanning covers by #cycles [14, 0, 0, 0] / [15, 0, 0, 0], c>=2 equal True, non-spanning part 113/113 equal True; Theorem H OK; det 11/12, det law OK
+  n=7 merged-deck collision: H 31/31 (OCF ok True), hc 0/0, spanning covers by #cycles [0, 0, 0, 0] / [0, 0, 0, 0], c>=2 equal True, non-spanning part 31/31 equal True; Theorem H OK; det 0/0, det law OK
+  n=7 merged-deck collision: H 23/23 (OCF ok True), hc 0/0, spanning covers by #cycles [0, 0, 0, 0] / [0, 0, 0, 0], c>=2 equal True, non-spanning part 23/23 equal True; Theorem H OK; det 0/0, det law OK
+  n=7 merged-deck collision: H 29/29 (OCF ok True), hc 0/0, spanning covers by #cycles [0, 0, 0, 0] / [0, 0, 0, 0], c>=2 equal True, non-spanning part 29/29 equal True; Theorem H OK; det 0/0, det law OK
+  n=8 ordinary same-deck pair: H 633/633 (OCF ok True), hc 48/48, spanning covers by #cycles [0, 27, 0, 0] / [0, 27, 0, 0], c>=2 equal True, non-spanning part 525/525 equal True; Theorem H OK; det -6/-6, det law OK
+  n=8 ordinary same-deck pair: H 645/645 (OCF ok True), hc 49/49, spanning covers by #cycles [0, 28, 0, 0] / [0, 28, 0, 0], c>=2 equal True, non-spanning part 533/533 equal True; Theorem H OK; det -6/-6, det law OK
+  n=9 merged-deck collision: H 633/633 (OCF ok True), hc 0/0, spanning covers by #cycles [0, 0, 0, 0] / [0, 0, 0, 0], c>=2 equal True, non-spanning part 633/633 equal True; Theorem H OK; det 0/0, det law OK
+  n=9 merged-deck collision: H 2917/2919 (OCF ok True), hc 210/211, spanning covers by #cycles [210, 0, 10, 0] / [211, 0, 10, 0], c>=2 equal True, non-spanning part 2417/2417 equal True; Theorem H OK; det 54/55, det law OK
+  n=9 merged-deck collision: H 645/645 (OCF ok True), hc 0/0, spanning covers by #cycles [0, 0, 0, 0] / [0, 0, 0, 0], c>=2 equal True, non-spanning part 645/645 equal True; Theorem H OK; det 0/0, det law OK
+  n=9 ordinary same-deck pair: H 2917/2919 (OCF ok True), hc 210/211, spanning covers by #cycles [210, 0, 10, 0] / [211, 0, 10, 0], c>=2 equal True, non-spanning part 2417/2417 equal True; Theorem H OK; det 54/55, det law OK
+  all decomposition checks passed: True
+  OCF H = sum_S G_S(2) re-derived on 134 classes (all n <= 6, 60 at n = 7): 0 failures
+==============================================================================================================
+L. Lemma L (source lift) and the classification of merged-deck collisions
+  order-4 same-deck pair (H=3, converse pair: True): lifts 1->S, 1->S' are merged nodes 2, 7 at order 5; distinct True; equal merged decks True
+  order-6 same-deck pair (H=43, converse pair: True): lifts 1->S, 1->S' are merged nodes 5, 207 at order 7; distinct True; equal merged decks True
+  order-6 same-deck pair (H=31, converse pair: True): lifts 1->S, 1->S' are merged nodes 76, 211 at order 7; distinct True; equal merged decks True
+  order-6 same-deck pair (H=23, converse pair: True): lifts 1->S, 1->S' are merged nodes 178, 228 at order 7; distinct True; equal merged decks True
+  order-6 same-deck pair (H=29, converse pair: True): lifts 1->S, 1->S' are merged nodes 206, 219 at order 7; distinct True; equal merged decks True
+  order-8 same-deck pair (H=633, converse pair: True): lifts 1->S, 1->S' are merged nodes 1628, 23410 at order 9; distinct True; equal merged decks True
+  order-8 same-deck pair (H=645, converse pair: True): lifts 1->S, 1->S' are merged nodes 63798, 64230 at order 9; distinct True; equal merged decks True
+  n=3 collision: node 0 H=3 hc=1 sc=1 strong=True source=False sink=False || node 1 H=1 hc=0 sc=1 strong=False source=True sink=True | same ordinary deck: True
+  n=5 collision: node 2 H=3 hc=0 sc=0 strong=False source=True sink=False || node 7 H=3 hc=0 sc=1 strong=False source=True sink=True | same ordinary deck: False | source-lift remainders [0, 2] = an order-4 converse same-deck pair: True
+  n=5 collision: node 5 H=13 hc=2 sc=1 strong=True source=False sink=False || node 6 H=15 hc=3 sc=1 strong=True source=False sink=False | same ordinary deck: True
+  n=7 collision: node 5 H=43 hc=0 sc=0 strong=False source=True sink=False || node 207 H=43 hc=0 sc=0 strong=False source=True sink=False | same ordinary deck: False | source-lift remainders [0, 31] = an order-6 converse same-deck pair: True
+  n=7 collision: node 65 H=141 hc=14 sc=1 strong=True source=False sink=False || node 98 H=143 hc=15 sc=0 strong=True source=False sink=False | same ordinary deck: False
+  n=7 collision: node 76 H=31 hc=0 sc=0 strong=False source=True sink=False || node 211 H=31 hc=0 sc=0 strong=False source=True sink=False | same ordinary deck: False | source-lift remainders [7, 32] = an order-6 converse same-deck pair: True
+  n=7 collision: node 178 H=23 hc=0 sc=0 strong=False source=True sink=False || node 228 H=23 hc=0 sc=0 strong=False source=True sink=False | same ordinary deck: False | source-lift remainders [23, 39] = an order-6 converse same-deck pair: True
+  n=7 collision: node 206 H=29 hc=0 sc=0 strong=False source=True sink=False || node 219 H=29 hc=0 sc=0 strong=False source=True sink=False | same ordinary deck: False | source-lift remainders [30, 34] = an order-6 converse same-deck pair: True
+  n=9 collision: node 1628 H=633 hc=0 sc=0 strong=False source=True sink=False || node 23410 H=633 hc=0 sc=0 strong=False source=True sink=False | same ordinary deck: False | source-lift remainders [18, 716] = an order-8 converse same-deck pair: True
+  n=9 collision: node 45348 H=2917 hc=210 sc=1 strong=True source=False sink=False || node 50863 H=2919 hc=211 sc=1 strong=True source=False sink=False | same ordinary deck: True
+  n=9 collision: node 63798 H=645 hc=0 sc=0 strong=False source=True sink=False || node 64230 H=645 hc=0 sc=0 strong=False source=True sink=False | same ordinary deck: False | source-lift remainders [2853, 2879] = an order-8 converse same-deck pair: True
+==============================================================================================================
+J. Lemma J (join rule) on every join A => B of ordinary classes with |A| + |B| <= 8
+  joins checked: 1295, failures: 0
+==============================================================================================================
+F. Face rows that are runs of consecutive Fibonacci numbers; strong-component structure of their nodes
+  order 4: 1 of 2 multi-entry rows are consecutive-Fibonacci runs
+     node 1 H=5 aut=1 sc row values [2, 3]; strong components (top to bottom): S4
+  order 5: 3 of 7 multi-entry rows are consecutive-Fibonacci runs
+     node 3 H=5 aut=1 pair row values [2, 3, 5]; strong components (top to bottom): 1 => S4
+     node 5 H=13 aut=1 sc row values [5, 8]; strong components (top to bottom): strong5(H=13)
+     node 6 H=15 aut=3 sc row values [2, 3]; strong components (top to bottom): strong5(H=15)
+  order 6: 1 of 29 multi-entry rows are consecutive-Fibonacci runs
+     node 12 H=5 aut=1 pair row values [2, 3, 5]; strong components (top to bottom): 1 => 1 => S4
+  order 7: 2 of 261 multi-entry rows are consecutive-Fibonacci runs
+     node 83 H=15 aut=3 pair row values [2, 3, 5]; strong components (top to bottom): S4 => C3
+     node 130 H=5 aut=1 pair row values [2, 3, 5]; strong components (top to bottom): 1 => 1 => 1 => S4
+  order 8: 3 of 3515 multi-entry rows are consecutive-Fibonacci runs
+     node 1363 H=15 aut=3 pair row values [2, 3, 5]; strong components (top to bottom): S4 => 1 => C3
+     node 1873 H=15 aut=3 pair row values [2, 3, 5]; strong components (top to bottom): 1 => C3 => S4
+     node 1884 H=5 aut=1 pair row values [2, 3, 5]; strong components (top to bottom): 1 => 1 => 1 => 1 => S4
+  order-5 node 5 (H=13, row [5, 8]) -> source extension = order-6 node 23, row values [2, 3, 8, 13]
+  order-5 node 6 (H=15, row [2, 3]) -> source extension = order-6 node 27, row values [1, 1, 3, 5]
+==============================================================================================================
+M2. Order-7 node with H=15, |Aut|=5, self-converse: is it 1 -> T5 -> 1 ?
+  1 -> T5 -> 1 is merged node 215 (H=15, aut=5, tilings=3); candidates with H=15, aut=5, sc: [215]
+==============================================================================================================
+P. PRIMEGAME fractions as moves between order-6 node codes
+  canonical assignment (by H, tilings, row): 2<-node9(H=1,til=1,R=[1]), 3<-node7(H=3,til=1,R=[1]), 5<-node2(H=3,til=2,R=[1, 1]), 7<-node3(H=5,til=10,R=[2, 3, 5]), 11<-node1(H=9,til=9,R=[1, 4, 4]), 13<-node4(H=9,til=9,R=[2, 7]), 17<-node8(H=11,til=11,R=[1, 10]), 19<-node5(H=13,til=13,R=[5, 8]), 23<-node0(H=15,til=3,R=[3]), 29<-node6(H=15,til=5,R=[2, 3])
+  distinct integer codes: 34/34; examples: TT6 -> 2
+     order-6 node 9 H=9 sc components C3 => C3: N = 5
+     order-6 node 11 H=3 pair components 1 => 1 => 1 => C3: N = 10
+     order-6 node 28 H=3 pair components 1 => 1 => C3 => 1: N = 15
+     order-6 node 31 H=5 sc components 1 => S4 => 1: N = 16807
+     order-6 node 33 H=1 sc components 1 => 1 => 1 => 1 => 1 => 1: N = 2
+  canonical assignment: 1 (pair, fraction) incidences
+  raw rows: canonical 1; random (20,000, my seed): min 0, median 1, mean 0.714, max 3; P(random >= canonical) = 0.5791
+  primitive rows: canonical 1; random (20,000, my seed): min 0, median 1, mean 1.559, max 7; P(random >= canonical) = 0.8145

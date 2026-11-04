@@ -1,8 +1,10 @@
 ---
 id: THM-4863
-title: "The path-weighted deletion tower and the deck. (W) THM-796's face row of a converse-merged tournament node is its Hamiltonian-endpoint-weighted converse-merged deck W(T) = sum_x (h_s(x) + h_e(x)) [T - x], divided by 2|Aut T| (self-converse) or |Aut T| (converse pair). (T) The tower is injective at orders 4-10 (4,870,920 nodes at order 10) and has full column rank at orders 3-9. (P) The unweighted converse-merged deck collides at orders 3, 5, 7, 9 and is injective at orders 4, 6, 8, 10; every collision is classified (source lifts of even-order converse same-deck pairs, plus one non-lift class per odd order), and McKay's same-deck census through order 10 is reproduced with even-order pairs converse and odd-order pairs self-converse. (H) If two tournaments have the same converse-merged deck then H(T) = H(T') at even order and H(T) - H(T') = 2(hc(T) - hc(T')) at odd order. (L) Source lift. (J) Join rule for W. (Phi) The line fraction; with the order-3 nodes named 11 and 13, the order-4 nodes have line fractions {11/13, 1, 13/11}, PRIMEGAME's first block with 1. (B) Line classes number (2^m + 2^h)/4."
+title: "The path-weighted deletion tower and the deck. (W) THM-796's face row of a converse-merged tournament node is its Hamiltonian-endpoint-weighted converse-merged deck W(T) = sum_x (h_s(x) + h_e(x)) [T - x], divided by 2|Aut T| (self-converse) or |Aut T| (converse pair). (T) The tower is injective at orders 4-10 (4,870,920 nodes at order 10) and has full column rank at orders 3-9. (P) The unweighted converse-merged deck collides at orders 3, 5, 7, 9 and is injective at orders 4, 6, 8, 10; every collision is classified (source lifts of even-order converse same-deck pairs, plus one non-lift class per odd order), and McKay's same-deck census through order 10 is reproduced (even-order pairs converse, odd-order pairs self-converse; largely published: McKay (f), Boudabbous-Ille 2018, Pouzet 1979 / Dumont via arXiv:1910.13914; new as found: the converse relation at orders 6 and 8). (H) If two tournaments have the same converse-merged deck then H(T) = H(T') at even order and H(T) - H(T') = 2(hc(T) - hc(T')) at odd order. (L) Source lift. (J) Join rule for W. (Phi) The line fraction; its order-4 identity is PROVED, and naming the order-3 nodes 11 and 13 gives {11/13, 1, 13/11} (the PRIMEGAME reading is a DICTIONARY). (B) CITED (THM-851 (14)): line classes number (2^m + 2^h)/4."
 status: >
-  PROVED: (W), (H), (L), (J), the order-4 line-fraction identity and the basic properties of Phi, and (B).
+  PROVED: (W), (H), (L), (J), the order-4 line-fraction identity and the basic properties of Phi. (H) is not found stated in the
+  literature; it is a short corollary of THM-002 and the Pouzet 1977 (I-2.2(a)) / Tutte / Kocay cycle-cover lemma; its determinant
+  analogue is Pouzet 1979 Equality (A).
   FINITE-EXACT: (T), (P), and Phi injective at orders 6-8 (exploratory).
   PRE-REGISTERED: HYP-9455, with P1-P3 and P6-P7 confirmed and P4 refuted at order 8.
   CITED:
@@ -15,9 +17,13 @@ status: >
   - Stockmeyer 1977 / 2021 (arXiv:2110.06158);
   - session129 (codec, the block assignment);
   - session29 (the order-5 same-deck pair with H 15 / 13);
-  - THM-4854 / S71 (blocks, reciprocal pair).
+  - THM-4854 / S71 (blocks, reciprocal pair);
+  - THM-851 (13)-(14) ((B), the line-class count), THM-801 section 4 (the face-row reading), session130 (fibre sizes;
+    the line counts at order 5);
+  - Pouzet 1977 and 1979; Bankoussou-mabiala et al. arXiv:1910.13914; Boudabbous-Ille 2018; Harary-Palmer 1967;
+  - the codex-20260821 deck reflection (H and hc not affine in the deck at n = 7; H - 2hc is).
   DICTIONARY / NUMEROLOGY: every PRIMEGAME label, as typed in the note.
-  AUDIT: see the note, section 8.
+  AUDIT: PASS WITH CORRECTIONS, all applied (MISTAKE-704); report 04-computation/experiments/primegame_deletion_tower_20261104_audit_S72/AUDIT.md.
 session: opus-2026-11-04-S72
 source: 05-knowledge/results/primegame_deletion_tower_path_weighted_decks_20261104.md
 related:
@@ -103,7 +109,10 @@ nodes with the same converse-merged deck.
 **Proof.**
 - **Same deck.** The cards are [S] = [S^op] and the multiset {[1 -> (S - x)]}, which the ordinary deck of S determines.
 - **Distinct nodes.** Removing the unique source distinguishes 1 -> S from 1 -> S^op. A converse would turn the
-  singleton source component into a singleton sink component.
+  singleton source component into a singleton sink component; the two component sequences could agree only if S were
+  transitive, which is excluded because transitive tournaments are self-converse.
+- **Corollary.** This forces a merged-deck collision at order 11 (from the order-10 converse pair), and at every order
+  m + 1 for which order m has such a pair. The even-order injectivity of (P) is observed, not explained.
 
 ## (H) The deck determines H up to Hamiltonian cycles
 
@@ -149,7 +158,7 @@ and 13, in either order. Then {Phi(TT_4), Phi(S_4)} = {11/13, 13/11}, PRIMEGAME'
 **Beyond order 4 (FINITE-EXACT, exploratory).** Phi takes 9 values on the 10 nodes of order 5, and is injective at
 orders 6, 7 and 8.
 
-## (B) Line classes
+## (B) Line classes (CITED: THM-851 (14))
 
 The orbits of <kappa, sigma> on X_n number (2^m + 2^h)/4, with m = binom(n-1, 2) and h = floor((n-1)^2/4). The values
 are 1, 3, 20, 272, 8320, ... for n = 3, 4, 5, 6, 7, ... This follows by Burnside, since kappa and sigma kappa fix no

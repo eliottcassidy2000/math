@@ -1,0 +1,8 @@
+order 3 (m=1, n=0): same deck True, isomorphic False, D' = converse(D) False, D self-converse True, D' self-converse True; H 1/3, hc 0/1; Theorem H OK
+order 5 (m=2, n=0): same deck True, isomorphic False, D' = converse(D) False, D self-converse True, D' self-converse True; H 15/13, hc 3/2; Theorem H OK
+order 6 (m=2, n=1): same deck True, isomorphic False, D' = converse(D) True, D self-converse False, D' self-converse False; H 43/43, hc 5/5; Theorem H OK
+order 9 (m=3, n=0): same deck True, isomorphic False, D' = converse(D) False, D self-converse True, D' self-converse True; H 2919/2917, hc 211/210; Theorem H OK
+order 10 (m=3, n=1): same deck True, isomorphic False, D' = converse(D) True, D self-converse False, D' self-converse False; H 15483/15483, hc 939/939; Theorem H OK
+order 12 (m=3, n=2): same deck True, isomorphic False, D' = converse(D) True, D self-converse False, D' self-converse False; H 527825/527825, hc 25763/25763; Theorem H OK
+order 17 (m=4, n=0): same deck True, isomorphic False, D' = converse(D) False, D self-converse True, D' self-converse True; H 12363896559/12363896557, hc 405661087/405661086; Theorem H OK
+order 18 (m=4, n=1): same deck True, isomorphic False, D' = converse(D) True, D self-converse False, D' self-converse False; H 116631062139/116631062139, hc 3602079871/3602079871; Theorem H OK

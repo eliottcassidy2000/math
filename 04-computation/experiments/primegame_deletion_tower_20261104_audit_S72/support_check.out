@@ -1,0 +1,7 @@
+n=3: nodes 2, distinct merged decks 1, distinct deck support sets 1, distinct W supports 1
+n=4: nodes 3, distinct merged decks 3, distinct deck support sets 2, distinct W supports 2
+n=5: nodes 10, distinct merged decks 8, distinct deck support sets 6, distinct W supports 7
+n=6: nodes 34, distinct merged decks 34, distinct deck support sets 34, distinct W supports 34
+n=7: nodes 272, distinct merged decks 267, distinct deck support sets 264, distinct W supports 264
+n=8: nodes 3528, distinct merged decks 3528, distinct deck support sets 3528, distinct W supports 3528
+n=9: nodes 97144, distinct merged decks 97141, distinct deck support sets 97141, distinct W supports 97141

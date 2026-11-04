@@ -22493,3 +22493,41 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - Write "outcomes appended" only after appending them.
   - Every rejection-sampling loop in a confirmatory harness needs a feasibility check on its parameter draw.
   - An evidence sentence must name its object class, transitive or not, and its model, weighted or actual graph.
+
+## MISTAKE-704 (2026-11-04, opus-2026-11-04-S72, the note `05-knowledge/results/primegame_deletion_tower_path_weighted_decks_20261104.md`, THM-4863 and HYP-9455 at the pre-audit commit cd2bc6a5e1; found by the independent audit `04-computation/experiments/primegame_deletion_tower_20261104_audit_S72/AUDIT.md`) -- a canon count typed as new, published reconstruction facts typed "New here", and an incomplete credit line for Theorem H
+
+- **What was claimed.**
+  - (1) The line-class count (2^m + 2^h)/4 = 1, 3, 20, 272, 8320 was typed as a new PROVED Burnside result.
+  - (2) "New here": in McKay's same-deck census the even-order pairs are converse pairs, and the odd-order pairs are
+    self-converse with Hamiltonian cycle counts differing by exactly one.
+  - (3) Theorem H (the merged deck determines H at even order and H - 2hc at odd order) was credited only to Kelly's
+    lemma and Kocay's covering lemma.
+  - (4) Smaller overclaims:
+    - "explains the parity law", where the even-order half is only observed;
+    - an "exact, labelling-independent" reading of the order-4 line fraction as PRIMEGAME's first block;
+    - the title "through order 10", which fails at order 3.
+- **Why it was wrong.**
+  - (1) THM-851 eqs. (13)-(14) tabulate and prove the same count. The kind-pasteur 2026-07-01 quarter-tiling reflection
+    has it too.
+  - (2) McKay 2022 p. 453 (f) records that Stockmeyer's odd-order pairs are self-complementary. Boudabbous-Ille 2018
+    p. 749 gives the even-order 2^n + 2 family as converse pairs. Pouzet 1979 Equality (A), with Dumont's check (via
+    Bankoussou-mabiala et al., arXiv:1910.13914, Lemma 6 and Proposition 1), gives the Hamiltonian-cycle difference of
+    one in determinant form. Only the converse relation of the order-6 and order-8 pairs remained new.
+  - (3) Steps 3-4 of the proof are Pouzet 1977 I-2.2(a). The codex reflection of 2026-08-21 on tournament subset decks
+    had n = 7 examples where H and hc fail to be affine in the deck while H - 2hc agrees. It was not cited.
+- **Repair.** All items retyped or reworded:
+  - (B) is CITED;
+  - the census structure is a reproduction plus citations;
+  - Theorem H is "PROVED, not found stated, a short corollary", with Pouzet cited and the codex reflection reconciled;
+  - Lemma L gained its transitivity line;
+  - "explains" became "accounts for";
+  - the second pre-registration's unfrozen program is recorded.
+- **How it was caught.** The independent audit. It reproduced every number with its own census through order 10,
+  built Stockmeyer's families, searched the half-reconstruction literature, and grepped canon and the reflections for
+  the numeric sequences.
+- **Lesson.**
+  - Before typing a count as new, grep canon and `07-reflections/` for its first terms ("1, 3, 20, 272"), not only the
+    results packets.
+  - For any reconstruction statement, read McKay's census paper to its last item, and search "half-reconstruction",
+    "up to duality" (Lopez, Pouzet, Boudabbous-Dammak-Ille) and Pouzet's determinant identities.
+  - Never write "New here" about a family whose source paper (here Stockmeyer's) is paywalled and unread.

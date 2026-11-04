@@ -1,0 +1,107 @@
+audit_tower NMAX=10 threads=12
+n=1 classes=1 self-converse=1 merged=1 (0.0 s)
+n=2 classes=1 self-converse=1 merged=1 (0.0 s)
+n=2 canonical-form self-test on 1 classes (3 random relabellings each, brute-force |Aut|): 0 failures
+n=3 classes=2 self-converse=2 merged=2 (0.0 s)
+n=3 canonical-form self-test on 2 classes (3 random relabellings each, brute-force |Aut|): 0 failures
+n=3 primitive W: 1 distinct of 2 merged nodes (1 collision classes)
+  n=3 merged-deck collision class 1 (size 2):
+     node 0: code=2 H=3 hc=1 aut=3 self-converse | W=0:6
+     node 1: code=7 H=1 hc=0 aut=1 self-converse | W=0:2
+     Theorem H check: dH=2, 2*dhc=2, n odd -> OK
+n=3 unweighted merged deck: 1 distinct of 2 (1 collision classes)
+  n=3 same ordinary deck (size 2): [code=2 H=3 hc=1 aut=3 self-converse] [code=7 H=1 hc=0 aut=1 self-converse] -> NOT converse pair
+n=3 ordinary deck: 1 distinct of 2 classes; 1 same-deck classes (0 converse pairs)
+n=3 rank_p(R^T D R) = 1 of 1 columns -> R_n has full column rank over Q
+n=4 classes=4 self-converse=2 merged=3 (0.0 s)
+n=4 canonical-form self-test on 4 classes (3 random relabellings each, brute-force |Aut|): 0 failures
+n=4 primitive W: 3 distinct of 3 merged nodes (0 collision classes)
+n=4 unweighted merged deck: 3 distinct of 3 (0 collision classes)
+  n=4 same ordinary deck (size 2): [code=23 H=3 hc=0 aut=3 non-self-converse] [code=54 H=3 hc=0 aut=3 non-self-converse] -> converse pair
+n=4 ordinary deck: 3 distinct of 4 classes; 1 same-deck classes (1 converse pairs)
+n=4 rank_p(R^T D R) = 2 of 2 columns -> R_n has full column rank over Q
+n=5 classes=12 self-converse=8 merged=10 (0.0 s)
+n=5 canonical-form self-test on 12 classes (3 random relabellings each, brute-force |Aut|): 0 failures
+n=5 primitive W: 10 distinct of 10 merged nodes (0 collision classes)
+  n=5 merged-deck collision class 1 (size 2):
+     node 5: code=718 H=13 hc=2 aut=1 self-converse | W=0:10,1:16
+     node 6: code=871 H=15 hc=3 aut=3 self-converse | W=0:12,1:18
+     Theorem H check: dH=-2, 2*dhc=-2, n odd -> OK
+  n=5 merged-deck collision class 2 (size 2):
+     node 2: code=383 H=3 hc=0 aut=3 non-self-converse | W=0:3,2:3
+     node 7: code=879 H=3 hc=0 aut=3 self-converse | W=0:6
+     Theorem H check: dH=0, 2*dhc=0, n odd -> OK
+n=5 unweighted merged deck: 8 distinct of 10 (2 collision classes)
+  n=5 same ordinary deck (size 2): [code=718 H=13 hc=2 aut=1 self-converse] [code=871 H=15 hc=3 aut=3 self-converse] -> NOT converse pair
+n=5 ordinary deck: 11 distinct of 12 classes; 1 same-deck classes (0 converse pairs)
+n=5 rank_p(R^T D R) = 3 of 3 columns -> R_n has full column rank over Q
+n=6 classes=56 self-converse=12 merged=34 (0.0 s)
+n=6 canonical-form self-test on 56 classes (3 random relabellings each, brute-force |Aut|): 0 failures
+n=6 primitive W: 34 distinct of 34 merged nodes (0 collision classes)
+n=6 unweighted merged deck: 34 distinct of 34 (0 collision classes)
+  n=6 same ordinary deck (size 2): [code=2970 H=43 hc=5 aut=1 non-self-converse] [code=24487 H=43 hc=5 aut=1 non-self-converse] -> converse pair
+  n=6 same ordinary deck (size 2): [code=12155 H=31 hc=3 aut=1 non-self-converse] [code=26526 H=31 hc=3 aut=1 non-self-converse] -> converse pair
+  n=6 same ordinary deck (size 2): [code=24443 H=29 hc=3 aut=1 non-self-converse] [code=27870 H=29 hc=3 aut=1 non-self-converse] -> converse pair
+  n=6 same ordinary deck (size 2): [code=20411 H=23 hc=1 aut=1 non-self-converse] [code=28350 H=23 hc=1 aut=1 non-self-converse] -> converse pair
+n=6 ordinary deck: 52 distinct of 56 classes; 4 same-deck classes (4 converse pairs)
+n=6 rank_p(R^T D R) = 10 of 10 columns -> R_n has full column rank over Q
+n=7 classes=456 self-converse=88 merged=272 (0.0 s)
+n=7 canonical-form self-test on 456 classes (3 random relabellings each, brute-force |Aut|): 0 failures
+n=7 primitive W: 272 distinct of 272 merged nodes (0 collision classes)
+  n=7 merged-deck collision class 1 (size 2):
+     node 65: code=733099 H=141 hc=14 aut=1 self-converse | W=0:84,7:78,19:84,24:36
+     node 98: code=904697 H=143 hc=15 aut=1 non-self-converse | W=0:85,7:78,19:84,24:39
+     Theorem H check: dH=-2, 2*dhc=-2, n odd -> OK
+  n=7 merged-deck collision class 2 (size 2):
+     node 5: code=190143 H=43 hc=0 aut=1 non-self-converse | W=0:43,2:9,8:7,23:15,27:6,32:6
+     node 207: code=1567231 H=43 hc=0 aut=1 non-self-converse | W=0:43,2:6,8:6,23:15,27:9,32:7
+     Theorem H check: dH=0, 2*dhc=0, n odd -> OK
+  n=7 merged-deck collision class 3 (size 2):
+     node 76: code=777983 H=31 hc=0 aut=1 non-self-converse | W=7:31,8:7,12:3,23:4,27:12,31:5
+     node 211: code=1697727 H=31 hc=0 aut=1 non-self-converse | W=7:31,8:13,12:3,23:7,27:3,31:5
+     Theorem H check: dH=0, 2*dhc=0, n odd -> OK
+  n=7 merged-deck collision class 4 (size 2):
+     node 206: code=1564415 H=29 hc=0 aut=1 non-self-converse | W=8:7,17:4,23:11,26:29,28:3,32:4
+     node 219: code=1783743 H=29 hc=0 aut=1 non-self-converse | W=8:13,17:5,23:3,26:29,28:3,32:5
+     Theorem H check: dH=0, 2*dhc=0, n odd -> OK
+  n=7 merged-deck collision class 5 (size 2):
+     node 178: code=1306367 H=23 hc=0 aut=1 non-self-converse | W=17:3,21:23,32:19,33:1
+     node 228: code=1814463 H=23 hc=0 aut=1 non-self-converse | W=17:15,21:23,32:7,33:1
+     Theorem H check: dH=0, 2*dhc=0, n odd -> OK
+n=7 unweighted merged deck: 267 distinct of 272 (5 collision classes)
+n=7 ordinary deck: 456 distinct of 456 classes; 0 same-deck classes (0 converse pairs)
+n=7 rank_p(R^T D R) = 34 of 34 columns -> R_n has full column rank over Q
+n=8 classes=6880 self-converse=176 merged=3528 (0.1 s)
+n=8 canonical-form self-test on 6880 classes (3 random relabellings each): 0 failures
+n=8 primitive W: 3528 distinct of 3528 merged nodes (0 collision classes)
+n=8 unweighted merged deck: 3528 distinct of 3528 (0 collision classes)
+  n=8 same ordinary deck (size 2): [code=11492679 H=633 hc=48 aut=3 non-self-converse] [code=71152998 H=633 hc=48 aut=3 non-self-converse] -> converse pair
+  n=8 same ordinary deck (size 2): [code=144684003 H=645 hc=49 aut=1 non-self-converse] [code=145706342 H=645 hc=49 aut=1 non-self-converse] -> converse pair
+n=8 ordinary deck: 6878 distinct of 6880 classes; 2 same-deck classes (2 converse pairs)
+n=8 rank_p(R^T D R) = 272 of 272 columns -> R_n has full column rank over Q
+n=9 classes=191536 self-converse=2752 merged=97144 (3.6 s)
+n=9 canonical-form self-test on 20000 classes (3 random relabellings each): 0 failures
+n=9 primitive W: 97144 distinct of 97144 merged nodes (0 collision classes)
+  n=9 merged-deck collision class 1 (size 2):
+     node 1628: code=2942126079 H=633 hc=0 aut=3 non-self-converse | W=18:633,382:99,1162:63,1524:258,3136:213
+     node 23410: code=18215167743 H=633 hc=0 aut=3 non-self-converse | W=18:633,382:75,1162:84,1524:198,3136:276
+     Theorem H check: dH=0, 2*dhc=0, n odd -> OK
+  n=9 merged-deck collision class 2 (size 2):
+     node 45348: code=29837548409 H=2917 hc=210 aut=1 self-converse | W=392:1300,395:1312,2287:656,2630:1284,2644:1282
+     node 50863: code=32039354035 H=2919 hc=211 aut=1 self-converse | W=392:1310,395:1298,2287:658,2630:1280,2644:1292
+     Theorem H check: dH=-2, 2*dhc=-2, n odd -> OK
+  n=9 merged-deck collision class 3 (size 2):
+     node 63798: code=37039105023 H=645 hc=0 aut=1 non-self-converse | W=414:70,1524:85,2067:68,2294:645,2295:73,3136:74,3364:90,3395:93,3398:92
+     node 64230: code=37300823807 H=645 hc=0 aut=1 non-self-converse | W=414:87,1524:70,2067:88,2294:645,2295:96,3136:89,3364:68,3395:74,3398:73
+     Theorem H check: dH=0, 2*dhc=0, n odd -> OK
+n=9 unweighted merged deck: 97141 distinct of 97144 (3 collision classes)
+  n=9 same ordinary deck (size 2): [code=29837548409 H=2917 hc=210 aut=1 self-converse] [code=32039354035 H=2919 hc=211 aut=1 self-converse] -> NOT converse pair
+n=9 ordinary deck: 191535 distinct of 191536 classes; 1 same-deck classes (0 converse pairs)
+n=9 rank_p(R^T D R) = 3528 of 3528 columns -> R_n has full column rank over Q
+n=10 classes=9733056 self-converse=8784 merged=4870920 (556.3 s)
+n=10 canonical-form self-test on 20000 classes (3 random relabellings each): 0 failures
+n=10 primitive W: 4870920 distinct of 4870920 merged nodes (0 collision classes)
+n=10 unweighted merged deck: 4870920 distinct of 4870920 (0 collision classes)
+  n=10 same ordinary deck (size 2): [code=5254470290029 H=15483 hc=939 aut=1 non-self-converse] [code=6698266774311 H=15483 hc=939 aut=1 non-self-converse] -> converse pair
+n=10 ordinary deck: 9733055 distinct of 9733056 classes; 1 same-deck classes (1 converse pairs)
+total 572.1 s
