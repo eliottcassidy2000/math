@@ -1,0 +1,4 @@
+C_75 of type (3,25,1^k): defect census (pynauty 2.8.8.1)
+p=3 q=25 k=0 n=28 R=416 RG=416 tau_T=410 tau_E=410 defect=0 W=4 E_T=6 E_even=0 E_wit=2 identity_ok=True theoremR_ok=True circ_T=(1, 208) circ_Geven=(1, 208) colT=1 colG=1 secs=0.2
+  brute: p=3 q=25 k=0 n=28 c=14 N=3000 R=416 RGeven=416 tau_T=410 tau_E=410 defect=0 W=4  AGREE
+p=3 q=25 k=1 n=29 R=1664 RG=1664 tau_T=1640 tau_E=1640 defect=0 W=16 E_T=24 E_even=0 E_wit=8 identity_ok=True theoremR_ok=True circ_T=(1, 208) circ_Geven=(1, 208) colT=4 colG=4 secs=0.6

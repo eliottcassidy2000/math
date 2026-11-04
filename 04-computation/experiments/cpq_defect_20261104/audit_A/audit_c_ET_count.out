@@ -1,0 +1,16 @@
+t_m by brute force: {3: 1, 5: 1, 7: 2, 11: 4, 13: 6}
+(p,q)=(3,5) k=3 n=11: t_p=1 t_q=1; circulant constant-colour N-orbits=8 (8 t_p^2 t_q = 8, 8 t_p t_q = 8); types=4; multiplicities=[2]; E_T contribution=4  [theorem: 4 t_p t_q = 4; corrected 4 t_p^2 t_q = 4]
+   VF2: 4 coincident pairs isomorphic, 6 distinct-certificate pairs non-isomorphic: OK
+   datum transformation (cross,(x,y),S_Q,kappa) -> (y,(1-x,cross),S_Q,T[P]) lands in the same type for all 4 types: yes
+(p,q)=(3,7) k=3 n=13: t_p=1 t_q=2; circulant constant-colour N-orbits=16 (8 t_p^2 t_q = 16, 8 t_p t_q = 16); types=8; multiplicities=[2]; E_T contribution=8  [theorem: 4 t_p t_q = 8; corrected 4 t_p^2 t_q = 8]
+   VF2: 8 coincident pairs isomorphic, 28 distinct-certificate pairs non-isomorphic: OK
+   datum transformation (cross,(x,y),S_Q,kappa) -> (y,(1-x,cross),S_Q,T[P]) lands in the same type for all 8 types: yes
+(p,q)=(5,7) k=5 n=17: t_p=1 t_q=2; circulant constant-colour N-orbits=16 (8 t_p^2 t_q = 16, 8 t_p t_q = 16); types=8; multiplicities=[2]; E_T contribution=8  [theorem: 4 t_p t_q = 8; corrected 4 t_p^2 t_q = 8]
+   VF2: 8 coincident pairs isomorphic, 28 distinct-certificate pairs non-isomorphic: OK
+   datum transformation (cross,(x,y),S_Q,kappa) -> (y,(1-x,cross),S_Q,T[P]) lands in the same type for all 8 types: yes
+(p,q)=(7,11) k=7 n=25: t_p=2 t_q=4; circulant constant-colour N-orbits=128 (8 t_p^2 t_q = 128, 8 t_p t_q = 64); types=64; multiplicities=[2]; E_T contribution=64  [theorem: 4 t_p t_q = 32; corrected 4 t_p^2 t_q = 64]
+   VF2: 64 coincident pairs isomorphic, 40 distinct-certificate pairs non-isomorphic: OK
+   datum transformation (cross,(x,y),S_Q,kappa) -> (y,(1-x,cross),S_Q,T[P]) lands in the same type for all 64 types: yes
+(p,q)=(7,13) k=7 n=27: t_p=2 t_q=6; circulant constant-colour N-orbits=192 (8 t_p^2 t_q = 192, 8 t_p t_q = 96); types=96; multiplicities=[2]; E_T contribution=96  [theorem: 4 t_p t_q = 48; corrected 4 t_p^2 t_q = 96]
+   VF2: 96 coincident pairs isomorphic, 40 distinct-certificate pairs non-isomorphic: OK
+   datum transformation (cross,(x,y),S_Q,kappa) -> (y,(1-x,cross),S_Q,T[P]) lands in the same type for all 96 types: yes

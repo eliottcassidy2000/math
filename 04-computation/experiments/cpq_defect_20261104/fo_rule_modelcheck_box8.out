@@ -1,0 +1,4 @@
+p=13: t_p=6 e_p=6 rules tested=594048 passing=0 (10s)
+   rules passing at every prime so far: 0 []
+p=17: t_p=16 e_p=16 rules tested=594048 passing=0 (19s)
+   rules passing at every prime so far: 0 []

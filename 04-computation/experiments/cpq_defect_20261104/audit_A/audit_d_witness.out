@@ -1,0 +1,17 @@
+(p,q)=(3,5) k=2 n=10: K_{5,5} parts Q=[3, 4, 5, 6, 7] and PuF=[0, 1, 2, 8, 9], 25 edges
+  H-fixed: True  |N| = 240  N <= Aut X: True  signs on N: [1]
+  |Aut X| (nauty) = 28800 = 2 (q!)^2 = 28800; generator signs: [1, 1, 1, 1, 1, 1, 1, 1, -1]
+  side swap is an automorphism: True  sign: -1
+  full Aut X by closure: order 28800, elements with odd sign: 14400 (half = 14400)
+  N cap Aut X by closure: 240 elements, all even: True
+(p,q)=(5,7) k=2 n=14: K_{7,7} parts Q=[5, 6, 7, 8, 9, 10, 11] and PuF=[0, 1, 2, 3, 4, 12, 13], 49 edges
+  H-fixed: True  |N| = 1680  N <= Aut X: True  signs on N: [1]
+  |Aut X| (nauty) = 50803200 = 2 (q!)^2 = 50803200; generator signs: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1]
+  side swap is an automorphism: True  sign: -1
+(3,7) k=3 n=13: 4 configurations (2 e_q, e_q = 2)
+  C_Q=[] cross=0: H-fixed True; N-even True (|N cap Aut| = 1512); sign-odd True (odd nauty generator exists: True; swap P<->F sign -1, reverses 9 edges)
+  C_Q=[] cross=1: H-fixed True; N-even True (|N cap Aut| = 1512); sign-odd True (odd nauty generator exists: True; swap P<->F sign -1, reverses 51 edges)
+  C_Q=[2, 3, 4, 5] cross=0: H-fixed True; N-even True (|N cap Aut| = 504); sign-odd True (odd nauty generator exists: True; swap P<->F sign -1, reverses 9 edges)
+  C_Q=[2, 3, 4, 5] cross=1: H-fixed True; N-even True (|N cap Aut| = 504); sign-odd True (odd nauty generator exists: True; swap P<->F sign -1, reverses 51 edges)
+  pairwise non-isomorphic (distinct certificates): True
+  VF2 pairwise non-isomorphic: True

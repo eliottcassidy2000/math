@@ -1,0 +1,17 @@
+C_15 of type (3,5,1^k): defect census (pynauty 2.8.8.1)
+p=3 q=5 k=0 n=8 R=2 RG=2 tau_T=2 tau_E=2 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 1) circ_Geven=(1, 1) colT=1 colG=1 secs=0.0
+  brute: p=3 q=5 k=0 n=8 c=4 N=120 R=2 RGeven=2 tau_T=2 tau_E=2 defect=0 W=0  AGREE
+p=3 q=5 k=1 n=9 R=8 RG=8 tau_T=8 tau_E=8 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 1) circ_Geven=(1, 1) colT=4 colG=4 secs=0.0
+  brute: p=3 q=5 k=1 n=9 c=6 N=120 R=8 RGeven=8 tau_T=8 tau_E=8 defect=0 W=0  AGREE
+p=3 q=5 k=2 n=10 R=32 RG=32 tau_T=32 tau_E=31 defect=1 W=1 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 1) circ_Geven=(1, 1) colT=16 colG=16 secs=0.0
+  brute: p=3 q=5 k=2 n=10 c=9 N=240 R=32 RGeven=32 tau_T=32 tau_E=31 defect=1 W=1  AGREE
+p=3 q=5 k=3 n=11 R=176 RG=176 tau_T=172 tau_E=168 defect=4 W=4 E_T=4 E_even=4 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 1) circ_Geven=(1, 1) colT=88 colG=88 secs=0.0
+  brute: p=3 q=5 k=3 n=11 c=13 N=720 R=176 RGeven=176 tau_T=172 tau_E=168 defect=4 W=4  AGREE
+p=3 q=5 k=4 n=12 R=1408 RG=1408 tau_T=1376 tau_E=1360 defect=16 W=14 E_T=32 E_even=34 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 1) circ_Geven=(1, 1) colT=704 colG=704 secs=0.1
+
+k  n   R  tau_T tau_E defect  W  E_T E_even E_wit
+0  8      2      2      2     0    0    0     0    0
+1  9      8      8      8     0    0    0     0    0
+2 10     32     32     31     1    1    0     0    0
+3 11    176    172    168     4    4    4     4    0
+4 12   1408   1376   1360    16   14   32    34    0

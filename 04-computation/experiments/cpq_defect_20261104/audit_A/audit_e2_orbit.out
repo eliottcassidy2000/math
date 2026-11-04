@@ -1,0 +1,32 @@
+(p,q,k)=(3,5,2) n=10: t=(1,1) e=(1,1); coloured tournament types 16, coloured graph types 20, colour-sign-even 16; Burnside b_k(4)=16  OK (b_k(4) = coloured tournament types = colour-sign-even coloured graph types)  [0.0s]
+  tournaments: R=32 tau_T=32 E_T=0  [0.0s]
+  graphs: RG=32 tau_E=31 E_even=0 W=1 E_wit=0; defect=1; identity W+E_even+E_wit-E_T=1 OK; Theorem R OK  [0.0s]
+  VF2 tournaments: 0 coincident pairs checked isomorphic, 300 sampled distinct pairs non-isomorphic, failures=0
+  VF2 graphs: 0 coincident pairs checked isomorphic, 300 sampled distinct pairs non-isomorphic, failures=0  [0.6s]
+  witness rep: (frozenset(), frozenset(), 1, frozenset(), (2, 2))
+(p,q,k)=(3,5,3) n=11: t=(1,1) e=(1,1); coloured tournament types 88, coloured graph types 120, colour-sign-even 88; Burnside b_k(4)=88  OK (b_k(4) = coloured tournament types = colour-sign-even coloured graph types)  [0.0s]
+  tournaments: R=176 tau_T=172 E_T=4  [0.0s]
+  graphs: RG=176 tau_E=168 E_even=4 W=4 E_wit=0; defect=4; identity W+E_even+E_wit-E_T=4 OK; Theorem R OK  [0.0s]
+  VF2 tournaments: 4 coincident pairs checked isomorphic, 300 sampled distinct pairs non-isomorphic, failures=0
+  VF2 graphs: 4 coincident pairs checked isomorphic, 300 sampled distinct pairs non-isomorphic, failures=0  [0.5s]
+  witness rep: (frozenset(), frozenset(), 0, frozenset(), (1, 1, 1))
+  witness rep: (frozenset(), frozenset(), 1, frozenset(), (0, 2, 2))
+  witness rep: (frozenset(), frozenset(), 1, frozenset(), (3, 3, 3))
+  witness rep: (frozenset(), frozenset(), 1, frozenset({(0, 2), (1, 2)}), (2, 2, 3))
+(p,q,k)=(3,5,4) n=12: t=(1,1) e=(1,1); coloured tournament types 704, coloured graph types 996, colour-sign-even 704; Burnside b_k(4)=704  OK (b_k(4) = coloured tournament types = colour-sign-even coloured graph types)  [0.0s]
+  tournaments: R=1408 tau_T=1376 E_T=32  [0.1s]
+  graphs: RG=1408 tau_E=1360 E_even=34 W=14 E_wit=0; defect=16; identity W+E_even+E_wit-E_T=16 OK; Theorem R OK  [0.1s]
+(p,q,k)=(3,5,5) n=13: t=(1,1) e=(1,1); coloured tournament types 8912, coloured graph types 12208, colour-sign-even 8912; Burnside b_k(4)=8912  OK (b_k(4) = coloured tournament types = colour-sign-even coloured graph types)  [0.1s]
+  tournaments: R=17824 tau_T=17564 E_T=260  [0.8s]
+  graphs: RG=17824 tau_E=17480 E_even=282 W=60 E_wit=2; defect=84; identity W+E_even+E_wit-E_T=84 OK; Theorem R OK  [2.0s]
+  VF2 tournaments: 260 coincident pairs checked isomorphic, 300 sampled distinct pairs non-isomorphic, failures=0
+  VF2 graphs: 288 coincident pairs checked isomorphic, 300 sampled distinct pairs non-isomorphic, failures=0  [23.8s]
+(p,q,k)=(3,7,4) n=14: t=(1,2) e=(1,2); coloured tournament types 704, coloured graph types 996, colour-sign-even 704; Burnside b_k(4)=704  OK (b_k(4) = coloured tournament types = colour-sign-even coloured graph types)  [0.0s]
+  tournaments: R=2816 tau_T=2752 E_T=64  [0.1s]
+  graphs: RG=2816 tau_E=2751 E_even=48 W=17 E_wit=0; defect=1; identity W+E_even+E_wit-E_T=1 OK; Theorem R OK  [0.4s]
+(p,q,k)=(5,7,5) n=17: t=(1,2) e=(1,2); coloured tournament types 8912, coloured graph types 12208, colour-sign-even 8912; Burnside b_k(4)=8912  OK (b_k(4) = coloured tournament types = colour-sign-even coloured graph types)  [0.2s]
+  tournaments: R=35648 tau_T=35640 E_T=8  [2.3s]
+  graphs: RG=35648 tau_E=35552 E_even=72 W=24 E_wit=0; defect=88; identity W+E_even+E_wit-E_T=88 OK; Theorem R OK  [6.4s]
+(p,q,k)=(3,5,6) n=14: t=(1,1) e=(1,1); coloured tournament types 188288, coloured graph types 241520, colour-sign-even 188288; Burnside b_k(4)=188288  OK (b_k(4) = coloured tournament types = colour-sign-even coloured graph types)  [4.5s]
+  tournaments: R=376576 tau_T=373804 E_T=2772  [23.4s]
+  graphs: RG=376576 tau_E=373132 E_even=3102 W=334 E_wit=8; defect=672; identity W+E_even+E_wit-E_T=672 OK; Theorem R OK  [52.1s]

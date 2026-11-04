@@ -22,8 +22,11 @@ on either side of the peak"; the uploaded PDF *The MRB Multiverse* (two constant
   owner's `2, 5, 13, 34, 89`) were reserved by **opus-2026-11-04-S75** (THM-4869, HYP-9461) an hour before this session;
   this session claimed its lanes by message (MSG-3303 broadcast) and does not touch them. The `{-3}`-self-duality
   statement the owner quotes ("a decomposable tournament with at least 9 vertices is `{-3}`-self dual iff it is
-  transitive or almost transitive") is a literature pointer (the Boudabbous-Lopez line on `(-k)`-self-duality of
-  tournaments); it is passed to S75 and not verified here.
+  transitive or almost transitive") is Theorem 4 of M. Achour, Y. Boudabbous, A. Boussairi, *The {-3}-reconstruction
+  and the {-3}-self duality of tournaments*, C. R. Math. Acad. Sci. Paris 350 (2012), arXiv:1204.2513 (`{-k}`-self dual:
+  every subtournament left by deleting `k` vertices is self dual; the paper shows `{-3}`-self duality equivalent to
+  strong self duality and improves Reid-Thomassen's bound `8`); CITED from the abstract (web search 2026-11-04), passed
+  to S75 by message MSG-2444, not used here.
 * The PDF's mathematical content (mirror bases `r_n`, `r_n = exp(-W_0(-ln n / n))`, the Cayley/tree-function expansion
   `r_n = sum (m+1)^(m-1)/m! (ln n/n)^m`, `B = 3 - length(E)`, `C = sqrt 2 - 1 - int_E f'`, the absolutely convergent
   bridge `B - C`) coincides with what session31 (`session31_mirror_mrb_20261022`) already proved on 2026-10-22
@@ -31,8 +34,9 @@ on either side of the peak"; the uploaded PDF *The MRB Multiverse* (two constant
   classification with `2 <-> 4` the only rational pair). Verified again here numerically (section 5); nothing new claimed.
 * **Closest proved mechanism:** THM-4721 Theorem R (normaliser orbits on tournaments = normaliser orbits on `N`-even
   graphs) with THM-4728's defect identity. **Hostile example:** the C15 counterexample (`K_(5,5)` with two fixed points
-  joining the 3-orbit). **Corrected near miss:** HYP-9344 (2)'s `88` (it took the witness count `b_(k-2)(4)` for the
-  defect and missed the tournament coincidences `E_T(k - 2)`; MISTAKE entry below if the audit confirms the reading).
+  joining the 3-orbit). **Corrected near miss:** HYP-9344 (2)'s `88` (it extrapolated `defect(k) = b_(k-2)(4)` from `k = 2, 3, 4`
+  and missed the correction `-E_T(k - 2)`, which first appears at `k = 5`; its separate witness list `W = 1, 4, 14` was
+  right; audit A).
   **Least-used sidecar:** THM-4723's remark that type counts need Sylow or inclusion-exclusion over disjoint markings —
   here the disjoint-orbit lemma makes the markings disjoint for free in the tournament half.
 
@@ -42,7 +46,8 @@ on either side of the peak"; the uploaded PDF *The MRB Multiverse* (two constant
 |---|---|
 | normaliser-orbit parametrisation `R = 2 t_p t_q b_k(4)`, product criterion for `N`-even | map (PROVED, THM-4871 (1)) |
 | disjoint-orbit lemma (odd-order groups; prime-length cycles) | preserved predicate (PROVED, THM-4871 (2)) |
-| `E_T = 0` for `k < p`, `E_T(p) = 4 t_p t_q` | PROVED (THM-4871 (3)) |
+| `E_T = 0` for `k < p`, `E_T(p) = 4 t_p^2 t_q` | PROVED (THM-4871 (3)) |
+| first-defect law `0, ..., 0, 1` for primes `p < q < 2p` | PROVED (THM-4871 (7), audit B) |
 | `K_(q,q)` witness at `k = q - p`; infinite failure family `p < q < 2p` at `n = 2q` | PROVED (THM-4871 (4)) |
 | census, HYP-9344 (2) refuted (`84`, not `88`) | FINITE-EXACT / REFUTED (THM-4871 (5)) |
 | first-defect law, `b_(k-d)(4) - E_T^F(k-d)` formula, sign | NUMERICAL (HYP-9463 (1)-(3)) |
@@ -57,12 +62,18 @@ of type `(p, q, 1^k)`, one representative of every `N`-orbit of `H`-fixed tourna
 `N`-even `N`-orbit of `H`-fixed graphs (multiplier-even dilation classes, cross, a colour-sign-even 4-coloured graph),
 canonically labels each full object with nauty (pynauty 2.8.8.1) and reads the automorphism generators for the sign.
 The `--brute` mode enumerates all `2^c` `H`-fixed objects and the normaliser by closure; it agrees with the orbit method
-at `(3,5)` `k <= 3`, `(9,5)` `k <= 1`, `(3,25)` `k <= 1`. The `(3,5)` rows `k <= 4` reproduce THM-4728 / HYP-9344 exactly
+at `(3,5)` `k <= 3` (`cpq_3_5_k4_brute3.out`), `(9,5)` `k <= 1` and `(3,25)` `k = 0` (the `(3,25) k = 2 --brute 1` job
+did not finish; its `k <= 1` orbit rows stand). Audit A's own definition-level brute force covers `(3,5)` `k <= 4`,
+`(5,7)` `k <= 3`, `(3,7)` `k = 3`, and its own orbit method the headline rows. The `(3,5)` rows `k <= 4` reproduce
+THM-4728 / HYP-9344 exactly
 (`R = 176, 1408`; `tau_T = 172, 1376`; `tau_E = 168, 1360`; `W = 4, 14`; `E_T = 4, 32`; `E_even = 4, 34`).
 
 One subtlety worth recording: nauty's canonical form under a vertex colouring is canonical only within a fixed ordered
-partition shape, so coloured types must be keyed by (colour-class sizes, canonical form); keying by the canonical form
-alone silently merged non-isomorphic coloured tournaments (`82` instead of `b_3(4) = 88`) and produced wrong rows.
+partition shape, so coloured types must be keyed by (colour-class sizes, canonical form); keying by (colours present,
+canonical form) without the class sizes silently merged non-isomorphic coloured tournaments (`82` keys instead of
+`b_3(4) = 88` in the session's first run; the figure depends on the construction) and produced wrong rows. With the
+class sizes in the key the number of keys equals the Burnside count in every case, which proves the key is a complete
+invariant on these sets.
 
 Running times on the 8 GB mac-mini: `(3,5)` through `k = 6` (`376,576` objects per side on 14 vertices) in 43 s;
 `(5,7)` and `(3,7)` through `k = 6` (`753,152` objects on 18 and 16 vertices) in a few minutes each.
@@ -70,10 +81,10 @@ Running times on the 8 GB mac-mini: `(3,5)` through `k = 6` (`376,576` objects p
 ### 2.1 The census (THM-4871 statement 5)
 
 Defects by family (`k = 0, 1, 2, ...`): `(3,5)`: `0, 0, 1, 4, 16, 84, 672`; `(3,7)`: `0, 0, 0, 0, 1, 4, 16`; `(5,7)`:
-`0, 0, 1, 4, 16, 88, 704`; `(3,11)`, `(3,13)`, `(7,13)`: `0` through `k = 4, 3, 3`; `(9,5)`: `0, 0, 0, 0, 1`; `(9,7)`,
-`(9,11)`: `0, 0, 1, 4`; `(9,13)`: `0, 0, 0, 0, 1`; `(3,25)`: `0` at `k = 0`. The full `tau_T, tau_E, W, E_T, E_even, E_wit`
-table is in THM-4871 and in the `.out` files. In every row THM-4721 Theorem R (`R = RG`) and THM-4728's identity hold,
-and `tau_T >= tau_E`.
+`0, 0, 1, 4, 16, 88, 704`; `(3,11)`, `(3,13)`, `(7,13)`: `0` through `k = 4, 3, 3`; `(7,11)`: `0, 0, 0, 0, 1`; `(11,13)`:
+`0, 0, 1`; `(9,5)`: `0, 0, 0, 0, 1`; `(9,7)`, `(9,11)`: `0, 0, 1, 4`; `(9,13)`: `0, 0, 0, 0, 1`; `(3,25)`: `0, 0` at `k <= 1`.
+That is 62 rows over thirteen families. The full `tau_T, tau_E, W, E_T, E_even, E_wit` table is in THM-4871 and in the
+`.out` files. In every row THM-4721 Theorem R (`R = RG`) and THM-4728's identity hold, and `tau_T >= tau_E`.
 
 ### 2.2 HYP-9344 (2) is refuted
 
@@ -93,11 +104,22 @@ What HYP-9344 (2) got right is the *scale*: the defect is `b_(k-2)(4)` minus the
   fixed-point set of a linear map has prime-power size, never `2`) rule out every overlap. Sanity: over all tournaments
   of orders 3-8, the 838 prime-length cycles in automorphism groups never overlap.
 * **Consequences** (THM-4871 (3)-(4)): tournament coincidences need a second `p`-cycle living on the fixed points, so
-  `E_T = 0` for `k < p` and `E_T(p) = 4 t_p t_q` exactly (the circulant constant-colour fixed-point tournaments, each type
-  with exactly two `N`-orbits, never `Aut`-conjugate); `K_(q,q)` on the large orbit against the small orbit plus `q - p`
+  `E_T = 0` for `k < p` and `E_T(p) = 4 t_p^2 t_q` exactly (the circulant constant-colour fixed-point tournaments, each
+  type with exactly two `N`-orbits, never `Aut`-conjugate; the first draft wrote `4 t_p t_q`, dropping the dilation class
+  of the `p`-orbit, which the census cannot see because `t_3 = t_5 = 1`: audit A, MISTAKE-710); `K_(q,q)` on the large
+  orbit against the small orbit plus `q - p`
   fixed points is an `N`-even sign-odd `H`-fixed graph, so for primes `p < q < 2p` the defect at `k = q - p` is `>= 1`:
   HYP-9340 (a) fails for every such pair at degree `2q`, with `K_(q,q)` as the explicit obstruction (the C15 failure at
   `n = 10` is the first member).
+* **The first-defect law for `q < 2p`** (THM-4871 (7), written after audit A and audited as audit B): below
+  `k = q - p` every `N`-even `H`-fixed graph is sign-even and carries one class of conjugates of `H`, and at `k = q - p`
+  the only sign-odd `N`-even type is `K_(q,q)`; so the defect is `0, ..., 0, 1`. The proof puts `Q` into a largest
+  independent module `M` (two overlapping `q`-cycles in `Aut X` generate a 2-transitive group on their union, by
+  Jordan, the `(m - 1)`-cycle case, or a block argument at `m = q + 2`, so the union is a homogeneous module; the prime
+  circulants are prime graphs, Gallai), does the same for `P`, factors the sign over `M`, `D` and the remaining fixed
+  points, and extends the remaining permutation by the identity on the twins to a colour-preserving automorphism of
+  `gamma`, which is even. The hypothesis `k < min(p, q - p)` is used exactly where `g(Q)` must meet `Q` and `g(P)` must
+  meet `P`; at `k = q - p` the one escape, `g(Q) = P cup F`, forces `X = K_(q,q)` or the empty graph.
 
 ### 2.4 The cancellation at `k = p` and the witness anatomy
 
@@ -111,10 +133,11 @@ and `17 + 48 - 64 = 1`.
 
 ## 3. The empirical laws (HYP-9463)
 
-* First defect exactly at `k = |p - q|`, value `1`, then `4`, `16` (all eleven families).
+* First defect exactly at `k = |p - q|`, value `1`, then `4`, `16` (all thirteen families; PROVED for primes `p < q < 2p`
+  by THM-4871 (7), numerical for `q > 2p` and for prime powers).
 * `defect(k) = b_(k-d)(4) - E_T^F(k - d)`: `(5,7)` gives the pure sequence `1, 4, 16, 88, 704` (`E_T(j) = 0` for `j < 5`),
   C15 gives `1, 4, 16, 88 - 4, 704 - 32`.
-* `tau_T >= tau_E` in all 64 rows.
+* `tau_T >= tau_E` in all 62 rows.
 
 ## 4. Uniform first-order rules
 
@@ -123,7 +146,10 @@ atoms `S(c_i x)` is dilation-equivariant with Boolean degree bounded by the numb
 excludes all of them uniformly in `p`; non-homogeneous atoms and quantifiers break equivariance, and then the
 well-definedness of the induced map on dilation classes is itself a uniform first-order constraint. No obstruction for
 the general case was found; the model-theoretic counting of definable sets in pseudofinite fields does not control sets
-defined with an arbitrary predicate `S`.
+defined with an arbitrary predicate `S`. The pre-registered model check was run (`fo_rule_modelcheck.py`,
+`fo_rule_modelcheck3.py`): no two-atom rule with `|c|, |d| <= 8` (594,048 rules) and no three-atom rule with
+`|c|, |d| <= 4` (16,594,944 rules) is a type bijection at `p = 13` or `17`, while at `p = 7, 11` exactly the XOR rules
+of the Codex affine class pass (HYP-9463 (4)(d)).
 
 ## 5. Folds, mirrors, the ball, and `-7/4`
 
@@ -182,7 +208,7 @@ All statements here are elementary; the PDF's identities were checked at 40 digi
 |---|---|
 | *The MRB Multiverse* (PDF, fan fiction with mathematical notes) | notes verified (section 5); identical in substance to session31's packet |
 | HYP-9459 (2), the Fibonacci law `u_3(n) = F(2n - 9)` | klein's; S75 lane; A001519 odd-indexed Fibonacci (OEIS 2026-11-04) |
-| `{-3}`-self-duality of decomposable tournaments | literature pointer (Boudabbous-Lopez line), unverified, passed to S75 |
+| `{-3}`-self-duality of decomposable tournaments | Achour-Boudabbous-Boussairi 2012, arXiv:1204.2513, Theorem 4 (CITED from the abstract); passed to S75 |
 | `b_k(4) = 1, 4, 16, 88, 704, 8912, 188288, 6847200, 437069312` | not in OEIS (2026-11-04); `1, 4, 16, 84, 672` not in OEIS |
 | THM-4721, THM-4728, HYP-9340, HYP-9344, Codex packets 2026-10-20 | inherited, CITED |
 | Jordan 1873, Burnside (prime degree), Galois, Feit-Thompson, Jones 2014, Alspach-Parsons 1979, Palfy 1987, Muzychuk 1997 | CITED (classical) |
@@ -192,21 +218,27 @@ All statements here are elementary; the PDF's identities were checked at 40 digi
     cd 04-computation/experiments/cpq_defect_20261104
     python3 cpq_defect_census.py 3 5 6 --brute 3      # C15 rows k <= 6 (43 s); brute-force cross-check k <= 3
     python3 cpq_defect_census.py 5 7 6 ; python3 cpq_defect_census.py 3 7 6
-    python3 cpq_defect_census.py 9 5 4 --brute 1 ; python3 cpq_defect_census.py 9 7 3 ; python3 cpq_defect_census.py 3 25 2 --brute 1
+    python3 cpq_defect_census.py 9 5 4 --brute 1 ; python3 cpq_defect_census.py 9 7 3 ; python3 cpq_defect_census.py 3 25 1 --brute 0
+    python3 cpq_defect_census.py 7 11 4 ; python3 cpq_defect_census.py 11 13 2     # the next members of the K_(q,q) family
+    python3 cpq_defect_census.py 3 5 4 --brute 3 > cpq_3_5_k4_brute3.out            # brute-force cross-check k <= 3
     python3 witness_examples.py                        # witness configurations at the first defects
+    python3 lemma_check.py                             # 838 prime-length cycles in Aut T, orders 3-8, no overlap
+    python3 fo_rule_modelcheck.py 5 7 11 13 17 ; python3 fo_rule_modelcheck.py --box 8 13 17 ; python3 fo_rule_modelcheck3.py 13 17
+    python3 cpq_defect_k7.py 3 5 7                     # the C15 k = 7 row (streaming; ~1 h, 15 vertices)
     # requires: pip install pynauty (2.8.8.1)
 
 ## 8. What was not done
 
-No proof of `defect = 0` below `|p - q|` or of the exact value `1` at `|p - q|`; no proof of the `b_(k-d)(4) - E_T^F` formula;
-no C15 `k = 7` row (memory); no definability obstruction beyond the quantifier-free reduction; nothing on HYP-9172 (b)'s
+No proof of the first-defect law for `q > 2p` or for prime powers (THM-4871 (7) covers primes `p < q < 2p`); no proof of
+the `b_(k-d)(4) - E_T^F` formula; no definability obstruction beyond the quantifier-free reduction and the bounded model
+check; nothing on HYP-9172 (b)'s
 decorated pairing (THM-4726 fixed what a carrier must carry; untouched here); the arc-connectivity and Fibonacci lane
 (S75); `{-3}`-self-duality not verified.
 
 ## 9. Next obligations
 
-1. Prove the first-defect law: classify the odd automorphisms of `N`-even `H`-fixed graphs for `k < |p - q|` through the
-   modular decomposition (`P`, `Q` are modules; the only candidate odd elements are swaps of twin classes of odd size).
+1. Extend the first-defect law (THM-4871 (7)) to `q > 2p`: there `g(Q)` can miss `Q` while `k < q - p`, and the
+   `K_(p,p)`-type witnesses at `k = p` must be matched against the coincidences (the `(3,7)` anatomy `17 + 48 - 64`).
 2. Prove the `k = p` cancellation in general (bijection between the `K_(p,p)` witnesses plus even-graph coincidences and
    the tournament coincidences), then the formula of HYP-9463 (2) by induction on `k`.
 3. The C15 `k = 7` row with hashed canonical forms (predicted `8652`).
@@ -214,12 +246,25 @@ decorated pairing (THM-4726 fixed what a carrier must carry; untouched here); th
 
 ## 10. Audit
 
-Pending at this checkpoint; to be filled when the independent audit returns.
+**Audit A** (independent adversarial audit, 2026-11-04; report
+[`cpq_defect_family_audit_A_20261104.md`](cpq_defect_family_audit_A_20261104.md), scripts
+`04-computation/experiments/cpq_defect_20261104/audit_A/`): THM-4871, HYP-9463 and this note PASS WITH CORRECTIONS;
+the scripts and outputs PASS. Independently confirmed: the headline refutation (own orbit method: `17564 / 17480 / 84`,
+`373804 / 373132 / 672`, VF2 cross-checks of all nauty coincidences), the small rows by a definition-level brute force,
+the disjoint-orbit lemma (every step; an exhaustive search of 17,752 overlapping prime-cycle pairs; the 838-cycle
+sanity number), statement 4's witnesses (`K_(5,5)`, `K_(7,7)`, the four `(3,7) k = 3` configurations), and every
+numeric and exact fact of section 5. Corrections applied: statement 3(c)'s constant is `E_T(p) = 4 t_p^2 t_q`
+(the first draft dropped the dilation class of the `p`-orbit; audit A computed `E_T(7) = 64, 96` for `(7,11)`,
+`(7,13)`), the brute-force agreement at `(3,25)` is only at `k = 0`, the row count is 62 over thirteen families (not
+64), Jones 2014 is Bull. Aust. Math. Soc. 89, HYP-9463 (1)'s unique-witness description holds only for prime rows
+with `d < p`, HYP-9463 (2)'s "equivalent form" and "indexing" reading were wrong, HYP-9344 (2) extrapolated the defect
+rather than mistaking a witness count, and the nauty "82" is construction-dependent. MISTAKE-710 logged. Statement 7
+(the first-defect law for `q < 2p`) was written after audit A and is covered by **audit B** (below, when it returns).
 
 ## 11. META-PATTERNS
 
 Cards used: *disjoint markings before counting types* (THM-4723's lesson; here the lemma supplies the disjointness),
 *compute the pre-registered test before theorising* (HYP-9344 (2) fell to a 2-second run once the orbit parametrisation
-replaced brute force), *agreement of numbers is not agreement of mechanism* (`b_(k-2)(4)` was the right scale and the wrong
-quantity). Candidate card: *when a census is "too large", look for the normaliser-orbit parametrisation* — the `2^24`
+replaced brute force), *agreement of numbers is not agreement of mechanism* (`b_(k-2)(4)` was the right first term; the missing term
+`-E_T(k-2)` only shows at `k = 5`). Candidate card: *when a census is "too large", look for the normaliser-orbit parametrisation* — the `2^24`
 objects were `17,824` orbits.

@@ -1,0 +1,59 @@
+== Part 1: overlapping prime cycles generate even-order groups ==
+r= 3 s= 3 overlap=1 degree= 5: 2 pairs tested (exhaustive), all even order: yes  [0.0s]
+r= 3 s= 3 overlap=2 degree= 4: 2 pairs tested (exhaustive), all even order: yes  [0.0s]
+r= 3 s= 5 overlap=1 degree= 7: 24 pairs tested (exhaustive), all even order: yes  [0.0s]
+r= 3 s= 5 overlap=2 degree= 6: 24 pairs tested (exhaustive), all even order: yes  [0.0s]
+r= 3 s= 5 overlap=3 degree= 5: 24 pairs tested (exhaustive), all even order: yes  [0.0s]
+r= 3 s= 7 overlap=1 degree= 9: 720 pairs tested (exhaustive), all even order: yes  [0.6s]
+r= 3 s= 7 overlap=2 degree= 8: 720 pairs tested (exhaustive), all even order: yes  [0.4s]
+r= 3 s= 7 overlap=3 degree= 7: 720 pairs tested (exhaustive), all even order: yes  [0.3s]
+r= 3 s=11 overlap=1 degree=13: 300 pairs tested (sampled), all even order: yes  [0.8s]
+r= 3 s=11 overlap=2 degree=12: 300 pairs tested (sampled), all even order: yes  [0.9s]
+r= 3 s=11 overlap=3 degree=11: 300 pairs tested (sampled), all even order: yes  [0.8s]
+r= 5 s= 5 overlap=1 degree= 9: 24 pairs tested (exhaustive), all even order: yes  [0.0s]
+r= 5 s= 5 overlap=2 degree= 8: 24 pairs tested (exhaustive), all even order: yes  [0.0s]
+r= 5 s= 5 overlap=3 degree= 7: 24 pairs tested (exhaustive), all even order: yes  [0.0s]
+r= 5 s= 5 overlap=4 degree= 6: 24 pairs tested (exhaustive), all even order: yes  [0.0s]
+r= 5 s= 7 overlap=1 degree=11: 720 pairs tested (exhaustive), all even order: yes  [1.7s]
+r= 5 s= 7 overlap=2 degree=10: 720 pairs tested (exhaustive), all even order: yes  [1.2s]
+r= 5 s= 7 overlap=3 degree= 9: 720 pairs tested (exhaustive), all even order: yes  [0.6s]
+r= 5 s= 7 overlap=4 degree= 8: 720 pairs tested (exhaustive), all even order: yes  [0.4s]
+r= 5 s= 7 overlap=5 degree= 7: 720 pairs tested (exhaustive), all even order: yes  [0.3s]
+r= 5 s=11 overlap=1 degree=15: 300 pairs tested (sampled), all even order: yes  [2.4s]
+r= 5 s=11 overlap=2 degree=14: 300 pairs tested (sampled), all even order: yes  [1.5s]
+r= 5 s=11 overlap=3 degree=13: 300 pairs tested (sampled), all even order: yes  [0.8s]
+r= 5 s=11 overlap=4 degree=12: 300 pairs tested (sampled), all even order: yes  [0.7s]
+r= 5 s=11 overlap=5 degree=11: 300 pairs tested (sampled), all even order: yes  [0.6s]
+r= 7 s= 7 overlap=1 degree=13: 720 pairs tested (exhaustive), all even order: yes  [4.6s]
+r= 7 s= 7 overlap=2 degree=12: 720 pairs tested (exhaustive), all even order: yes  [3.6s]
+r= 7 s= 7 overlap=3 degree=11: 720 pairs tested (exhaustive), all even order: yes  [2.1s]
+r= 7 s= 7 overlap=4 degree=10: 720 pairs tested (exhaustive), all even order: yes  [1.1s]
+r= 7 s= 7 overlap=5 degree= 9: 720 pairs tested (exhaustive), all even order: yes  [0.7s]
+r= 7 s= 7 overlap=6 degree= 8: 720 pairs tested (exhaustive), all even order: yes  [0.5s]
+r= 7 s=11 overlap=1 degree=17: 300 pairs tested (sampled), all even order: yes  [5.3s]
+r= 7 s=11 overlap=2 degree=16: 300 pairs tested (sampled), all even order: yes  [4.8s]
+r= 7 s=11 overlap=3 degree=15: 300 pairs tested (sampled), all even order: yes  [3.4s]
+r= 7 s=11 overlap=4 degree=14: 300 pairs tested (sampled), all even order: yes  [1.9s]
+r= 7 s=11 overlap=5 degree=13: 300 pairs tested (sampled), all even order: yes  [0.9s]
+r= 7 s=11 overlap=6 degree=12: 300 pairs tested (sampled), all even order: yes  [0.7s]
+r= 7 s=11 overlap=7 degree=11: 300 pairs tested (sampled), all even order: yes  [0.6s]
+r=11 s=11 overlap=1 degree=21: 300 pairs tested (sampled), all even order: yes  [21.0s]
+r=11 s=11 overlap=2 degree=20: 300 pairs tested (sampled), all even order: yes  [21.7s]
+r=11 s=11 overlap=3 degree=19: 300 pairs tested (sampled), all even order: yes  [15.6s]
+r=11 s=11 overlap=4 degree=18: 300 pairs tested (sampled), all even order: yes  [11.1s]
+r=11 s=11 overlap=5 degree=17: 300 pairs tested (sampled), all even order: yes  [7.2s]
+r=11 s=11 overlap=6 degree=16: 300 pairs tested (sampled), all even order: yes  [4.9s]
+r=11 s=11 overlap=7 degree=15: 300 pairs tested (sampled), all even order: yes  [3.0s]
+r=11 s=11 overlap=8 degree=14: 300 pairs tested (sampled), all even order: yes  [1.7s]
+r=11 s=11 overlap=9 degree=13: 300 pairs tested (sampled), all even order: yes  [0.9s]
+r=11 s=11 overlap=10 degree=12: 300 pairs tested (sampled), all even order: yes  [0.7s]
+total pairs tested: 17752  odd-order groups found: 0
+
+== Part 2: prime cycles in Aut(T), tournaments n <= 8 ==
+n=3: 2 tournament types, 2 prime-cycle elements in their automorphism groups
+n=4: 4 tournament types, 4 prime-cycle elements in their automorphism groups
+n=5: 12 tournament types, 12 prime-cycle elements in their automorphism groups
+n=6: 56 tournament types, 32 prime-cycle elements in their automorphism groups
+n=7: 456 tournament types, 124 prime-cycle elements in their automorphism groups
+n=8: 6880 tournament types, 664 prime-cycle elements in their automorphism groups
+orders 3-8: 838 prime-length cycles in automorphism groups, 0 overlapping unequal supports

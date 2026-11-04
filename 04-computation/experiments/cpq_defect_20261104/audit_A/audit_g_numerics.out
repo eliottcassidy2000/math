@@ -1,0 +1,60 @@
+== mirror bases ==
+  r_2 = 4.0   f(r_n) - f(n) = -9.6673e-17
+  r_3 = 2.4780526802883024119   f(r_n) - f(n) = 8.0549e-17
+  r_4 = 2.0   f(r_n) - f(n) = -9.6673e-17
+  r_5 = 1.7649219145257758828   f(r_n) - f(n) = -6.3333e-17
+  r_10 = 1.3712885742386235369   f(r_n) - f(n) = -7.1274e-17
+  Cayley sum (60 terms) at n = 3: 2.38666661 vs r_3 = 2.47805268, gap 0.09139
+  m(1.01) = 658.80549, m'(1.01) = f'(x)/f'(m) = -76722.444, asymptotic -m^2/(ln m - 1) = -79051.151
+
+== the two constants ==
+  MRB C = 0.18785964246206712024851793405427
+  claimed 0.18785964246206712024851793405...
+  B     = 2.0967911243915261257250306750849
+  claimed 2.09679112439152612572503067508...
+  B - C = 1.9089314819294590054765127410306 (claimed 1.90893148192945900547651274103...)
+  4 - sqrt2 + sum_{n>=3} (-1)^n (r_n - n^(1/n)) = 1.9089314819294590054765127410306
+  paired partial sums K=4000: 3 - length_K(E) = 2.09735361612 = alternating partial sum of B to 2K+2 = 2.09735361612 (tail < r_(2K+3) - 1 = 0.0011249)
+  paired partial sums K=4000: sqrt2 - 1 - int_K = 0.188421501757 = alternating partial sum of C to 2K+2 = 0.188421501757 (tail < 0.0011237); |B - (3 - length_K)| = 0.00056249, |C - (...)| = 0.00056186
+  check one interval: int_[r_4, r_3] f' = 0.0280360079343133, f(3) - f(4) = 0.0280360079343133
+  (r_n - n^(1/n)) / (ln n/n)^2 at n = 1000: 1.0175195
+  (r_n - n^(1/n)) / (ln n/n)^2 at n = 10000: 1.002307
+  (r_n - n^(1/n)) / (ln n/n)^2 at n = 100000: 1.0002879
+
+== unit ball ==
+  V(n), n = 0..8: ['1.0', '2.0', '3.14159', '4.18879', '4.9348', '5.26379', '5.16771', '4.72477', '4.05871']
+  x* = 5.2569464, V(x*) = 5.277768
+  mirror of 0: 12.764053 (V = 1.0 vs 1.0)
+  mirror of 1: 10.813567 (V = 2.0 vs 2.0)
+  mirror of 2: 9.2045818 (V = 3.1415927 vs 3.1415927)
+  mirror of 3: 7.8204472 (V = 4.1887902 vs 4.1887902)
+  mirror of 4: 6.602845 (V = 4.9348022 vs 4.9348022)
+  mirror of 5: 5.5174012 (V = 5.263789 vs 5.263789)
+  sum (-1)^n V(n) = 0.282059176175682645184119553197
+  e^pi erfc(sqrt pi) = 0.282059176175682645184119553197 (claimed 0.28205917617568264518411963...)
+  V(n)/V(n-1), n=1..14: ['2.0', '1.5708', '1.33333', '1.1781', '1.06667', '0.981748', '0.914286', '0.859029', '0.812698', '0.773126', '0.738817', '0.708699', '0.681985', '0.658078']  strictly decreasing: True
+  n=5: 16/15 = 1.066666667, n=6: 5pi/16 = 0.9817477042
+
+== -7/4 and -29/16 (sympy) ==
+  c = -7/4: (f^3 - x)/(f - x) = (8*x**3 + 4*x**2 - 18*x - 1)**2/64
+     cubic factor 8*x**3 + 4*x**2 - 18*x - 1 (mult 2): roots [-1.7469796, -0.054958132, 1.3019377], multiplier prod 2x_i = 8*CRootOf(8*x**3 + 4*x**2 - 18*x - 1, 0)*CRootOf(8*x**3 + 4*x**2 - 18*x - 1, 1)*CRootOf(8*x**3 + 4*x**2 - 18*x - 1, 2)
+  c = -29/16: (f^3 - x)/(f - x) = (4*x - 5)*(4*x + 1)*(4*x + 7)*(64*x**3 + 16*x**2 - 164*x + 23)/4096
+     cubic factor 64*x**3 + 16*x**2 - 164*x + 23 (mult 1): roots [-1.7919362, 0.14340091, 1.3985353], multiplier prod 2x_i = 8*CRootOf(64*x**3 + 16*x**2 - 164*x + 23, 0)*CRootOf(64*x**3 + 16*x**2 - 164*x + 23, 1)*CRootOf(64*x**3 + 16*x**2 - 164*x + 23, 2)
+  c(c+1)^2 at c=-7/4: -63/64  f^3(0) = -7/256
+  x^2 - 29/16 orbit of -7/4: [-7/4, 5/4, -1/4, -7/4]
+
+== cubic fields (gp) ==
+disc(P1) = 200704  field disc = 49  isisom with x^3+x^2-2x-1 (Q(zeta7)+): 1
+Galois group of P1: [3, 1, 1, "A3"]
+disc(P2) = 1007681536 = [2, 20; 31, 2]  field disc = 961 = Mat([31, 2])  galois: [3, 1, 1, "A3"]
+P2 multiplier 8*prod roots = -23/8
+***   Warning: new stack size = 64000000 (61.035 Mbytes).
+
+== five-vertex tournaments ==
+  n=1: 1 tournaments, 1 self-converse
+  n=2: 1 tournaments, 1 self-converse
+  n=3: 2 tournaments, 2 self-converse
+  n=4: 4 tournaments, 2 self-converse
+  n=5: 12 tournaments, 8 self-converse  |Aut| distribution {1: 7, 3: 4, 5: 1}, strong 6
+  n=6: 56 tournaments, 12 self-converse
+  n=7: 456 tournaments, 88 self-converse

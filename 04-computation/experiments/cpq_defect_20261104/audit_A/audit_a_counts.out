@@ -1,0 +1,27 @@
+== b_k(4) by Burnside (odd cycle types) ==
+k=0..8: [1, 4, 16, 88, 704, 8912, 188288, 6847200, 437069312]
+claimed: [1, 4, 16, 88, 704, 8912, 188288, 6847200, 437069312] MATCH
+== b_k(4) by explicit orbit enumeration (min over S_k), k <= 4 ==
+k=0..4: [1, 4, 16, 88, 704] MATCH
+
+== t_m, e_m by brute force; formula for primes ==
+m= 3  t_m=1  (sym classes 2)  e_m=1  formula t_p=1  iso types of circulant tournaments=1
+m= 5  t_m=1  (sym classes 3)  e_m=1  formula t_p=1  iso types of circulant tournaments=1
+m= 7  t_m=2  (sym classes 4)  e_m=2  formula t_p=2  iso types of circulant tournaments=2
+m= 9  t_m=4  (sym classes 8)  e_m=4  iso types of circulant tournaments=3
+m=11  t_m=4  (sym classes 8)  e_m=4  formula t_p=4  iso types of circulant tournaments=4
+m=13  t_m=6  (sym classes 14)  e_m=6  formula t_p=6  iso types of circulant tournaments=6
+m=25  t_m=208  (sym classes 424)  e_m=208  iso types of circulant tournaments=205
+
+== c and |N| ==
+(p,q,k)=(3,5,0) c=4 |N| formula=120 closure=120 OK
+(p,q,k)=(3,5,1) c=6 |N| formula=120 closure=120 OK
+(p,q,k)=(3,5,2) c=9 |N| formula=240 closure=240 OK
+(p,q,k)=(3,5,3) c=13 |N| formula=720 closure=720 OK
+(p,q,k)=(5,7,2) c=11 |N| formula=1680 closure=1680 OK
+(p,q,k)=(9,5,0) c=7 |N| formula=1080 closure=1080 OK
+(p,q,k)=(9,5,1) c=9 |N| formula=1080 closure=1080 OK
+(p,q,k)=(3,7,3) c=14 |N| formula=1512 closure=1512 OK
+
+== nauty keying subtlety: coloured 3-tournaments keyed by certificate alone vs (sizes, certificate) ==
+certificate-only keys: 8  (sizes, certificate) keys: 88  b_3(4) = 88
