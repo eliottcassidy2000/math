@@ -181,6 +181,8 @@ Thus the `n` negative evaluations in THM-3166 are sufficient but redundant:
 `ceil(n/2)` ordinary positive evaluations suffice.  No sharp minimality claim
 among the set of realized tournament polynomials is made.
 
+**Subsequent scoped completion (2026-11-03):** [R1--R4, exact uniform-interface dimension](../../05-knowledge/results/proof_principles_20261103/profiles/PROOF.md) prove that actual fixed-order profiles span this entire parity space: dimension `ceil(n/2)`, with monic affine hull of dimension one less. Explicit one-back-edge witnesses attain the bound, and actual context probes recover it. Minimality there concerns linear/affine reconstruction on the respective hulls, not unrestricted encodings of the finite realized set.
+
 ## 4. THM-087 Worpitzky is the discrete derivative
 
 Let `a_m(T)` be the degree-`n-1` Worpitzky sequence of THM-087.  Its

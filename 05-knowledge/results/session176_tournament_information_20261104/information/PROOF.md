@@ -2,6 +2,8 @@
 
 Session 176. General claims below are proved. Numerical census claims are bounded through order five. No Hamilton-spectrum completeness, new globally attained value, or historical novelty claim is made.
 
+**Subsequent sharp extension:** [R1--R4](../../proof_principles_20261103/profiles/PROOF.md) recover THM-3181's older pure-parity constraint and prove d_n=ceil(n/2), with affine dimension d_n-1. Actual shortened probes and fixed-order L/U gate saturation are independently audited there. The lower bound in section4 below remains valid but is no longer the sharp frontier.
+
 ## 1. The interface and its observer
 
 A **uniform one-hole tournament context** consists of an exterior tournament R, with each exterior vertex declared either an in-neighbor or an out-neighbor of the hole. Substituting a nonempty tournament T for the hole orients every edge between a fixed exterior vertex and T the declared same way. Write C[T] for this actual tournament. No formal vector is presumed realizable.

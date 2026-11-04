@@ -1,0 +1,17 @@
+{
+  "baseline_commit": "b7f9b297e75c",
+  "files": {
+    "01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md": "485f34b2186f3d7827c6c9ffc8305015b8f0fff66b0bd2ca76dceab08cdb3318",
+    "05-knowledge/results/circuit_flow_tournaments_20261103/PROOFS.md": "0655b677c715a7e208cb5591447fb424f71c9aee6ee24902476e30380c7a6315",
+    "05-knowledge/results/hn_metagraph_information_20261026/metric_transport/RESULT.md": "e358ea6713b75d59bf503ca718e944dad4f5744ed6dfd0b09890c293de5e80e6",
+    "05-knowledge/results/session176_tournament_information_20261104/circuits/PROOF.md": "74eb47a648f43d74e4d4784af6f1f2926ba52329a537e37d975922fb46ebe26d",
+    "05-knowledge/results/session176_tournament_information_20261104/information/PROOF.md": "d7789a47f83831cff7a96baf1e045a4a5154231262e57ea53fa5a3144027b687",
+    "05-knowledge/results/session176_tournament_information_20261104/spectrum/PROOF.md": "57ae1c4b58d9000debdc66353c0c3d4e0d65c44348eaac05dc9b90866b3405a7",
+    "05-knowledge/results/session177_odd_perfect_20261104/networks/README.md": "9af6f322ab897f5c122d26bc2dae37b6c5965fbe17c842309402cdf158a2e53f",
+    "05-knowledge/results/session177_odd_perfect_20261104/oddperfect/lcm_neighborhood_closure.md": "e31aec51b404f257106372a04a1afa737c8700de0c3f730003bff916e49a9be3",
+    "05-knowledge/results/session177_odd_perfect_20261104/oddperfect/odd_order_support_theorem.md": "310dfa54027d79d7aca6db56950e75edb38ceab5ea6727059062988f1d32557a",
+    "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/MODULAR_FAITHFULNESS.md": "2ace16955a840be4634770cc57f61ebdeba7432012c16159546128575540eab5",
+    "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/proof.md": "48aaefa2d059a56fb201a41d5f78bcd043eb2fbcb58f1ab9918c3e4d987917d7"
+  },
+  "hash_scope": "Integrated source bytes; this session adds cross-reference-only paragraphs to three inherited sources. All mathematical inputs were read before deriving."
+}

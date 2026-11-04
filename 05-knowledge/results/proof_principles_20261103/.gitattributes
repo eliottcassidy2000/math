@@ -1,0 +1,2 @@
+# Preserve the bytes pinned by this packet's receipts and manifest.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

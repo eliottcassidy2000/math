@@ -34,3 +34,5 @@ Neither antecedent alone implies that conclusion: exponents a=4 and a=2 witness 
 The implication is a direct consequence of standard order arithmetic, not a claimed new fact about these three primes. The reusable contribution is the exact closure-system formulation. It tells a graph search to store implications between edge sets instead of treating all subgraphs of H_q as feasible.
 
 An implementation can derive implications symbolically from the k_r labels, before selecting exponents or factoring large sigma values. This retains arithmetic information lost by the graph-only maximal support sieve. It still does not ensure closure under all prime divisors or perfect valuation balance.
+
+**Subsequent extension:** [A1--A4, exact valuation interfaces](../../proof_principles_20261103/arithmetic/PROOF.md) give a constructive iff for prescribed valuations at named targets, including zeros. Joint order requirements can force valuation overflow. For each specified complete prime support, exact incoming budgets bound every exponent and yield a terminating full-sigma decision procedure; varying prime supports and odd-perfect existence remain open.

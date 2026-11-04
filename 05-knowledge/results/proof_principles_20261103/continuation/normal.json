@@ -1,0 +1,172 @@
+{
+  "ambient_universe": {
+    "3": {
+      "all_probe_masks_compared": 4392,
+      "quotient_orders": [
+        1,
+        4
+      ],
+      "quotients": 75
+    },
+    "5": {
+      "all_probe_masks_compared": 1184,
+      "quotient_orders": [
+        1,
+        3
+      ],
+      "quotients": 11
+    }
+  },
+  "collision_census": [
+    {
+      "collision_pairs": 0,
+      "labelled_bases": 1,
+      "n": 1,
+      "response_classes": 1,
+      "smallest_arc_difference": null
+    },
+    {
+      "collision_pairs": 0,
+      "labelled_bases": 2,
+      "n": 2,
+      "response_classes": 2,
+      "smallest_arc_difference": null
+    },
+    {
+      "collision_pairs": 1,
+      "labelled_bases": 8,
+      "n": 3,
+      "response_classes": 7,
+      "smallest_arc_difference": 3
+    },
+    {
+      "collision_pairs": 8,
+      "labelled_bases": 64,
+      "n": 4,
+      "response_classes": 56,
+      "smallest_arc_difference": 3
+    },
+    {
+      "collision_pairs": 92,
+      "labelled_bases": 1024,
+      "n": 5,
+      "response_classes": 932,
+      "smallest_arc_difference": 3
+    }
+  ],
+  "independent_ambient_permutation_counts": 656,
+  "source_sha256": {
+    "check.py": "4f32eb1bc847c9229f106ae78970ab4ef8bcfff5081aca4e340b91492d8c578c",
+    "scout.py": "44b198098ff1b4dc47df9a68b0badde0a6ce0608814d209045702496782b42cf"
+  },
+  "status": "PASS",
+  "vertex_transitive_profile_controls": [
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      7,
+      7
+    ]
+  ],
+  "witnesses": {
+    "nonmodule_triangle": {
+      "first": [
+        5,
+        5
+      ],
+      "second": [
+        13,
+        11
+      ]
+    },
+    "old_weight_circulation": {
+      "counts": [
+        11,
+        15
+      ],
+      "old_triangle_weights": [
+        4,
+        4,
+        4
+      ]
+    },
+    "regular_seven": {
+      "base": [
+        171,
+        171
+      ],
+      "endpoint_at_0": [
+        24,
+        25
+      ],
+      "probe": [
+        403,
+        407
+      ]
+    },
+    "strong_ambient": {
+      "base": [
+        15,
+        15
+      ],
+      "first": [
+        31,
+        31
+      ],
+      "second": [
+        81,
+        87
+      ]
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "checks": 18179,
+  "direct_sigma_boxes": [
+    {
+      "B_exclusive": 13,
+      "C": 3,
+      "balanced": 0,
+      "baselines": [
+        1,
+        0,
+        2,
+        3,
+        1
+      ],
+      "euler": 5,
+      "first_failure": {
+        "11": 0,
+        "13": 0,
+        "3": 3612,
+        "5": 266,
+        "7": 10
+      },
+      "perfect": 0,
+      "support": [
+        3,
+        5,
+        7,
+        11,
+        13
+      ],
+      "vectors": 3888
+    },
+    {
+      "B_exclusive": 14,
+      "C": 4,
+      "balanced": 0,
+      "baselines": [
+        0,
+        0,
+        2,
+        4,
+        1
+      ],
+      "euler": 13,
+      "first_failure": {
+        "11": 0,
+        "13": 0,
+        "3": 5040,
+        "5": 144,
+        "7": 0
+      },
+      "perfect": 0,
+      "support": [
+        3,
+        5,
+        7,
+        11,
+        13
+      ],
+      "vectors": 5184
+    }
+  ],
+  "independent_periods": [
+    {
+      "feasible": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      ],
+      "period": 665500,
+      "source": 3,
+      "targets": [
+        5,
+        11
+      ]
+    },
+    {
+      "feasible": [
+        [
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      ],
+      "period": 665500,
+      "source": 7,
+      "targets": [
+        5,
+        11
+      ]
+    },
+    {
+      "feasible": [
+        [
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      ],
+      "period": 665500,
+      "source": 13,
+      "targets": [
+        5,
+        11
+      ]
+    }
+  ],
+  "scope": "Complete modular periods for two targets with exact valuations0..2, plus every9072 vector in the two proved fixed-support boxes. Universal claims audited separately.",
+  "sharp_source3_length55_valuations": [
+    3,
+    1
+  ],
+  "source_sha256": "5dad393446e9416b599a8211525faf12ffe6280c83e9ced73e04ab6d1d5d3376",
+  "status": "FINITE-EXACT independent arithmetic audit passed"
+}
