@@ -6,6 +6,9 @@ HERE=Path(__file__).resolve().parent
 def need(p,msg):
     if not p:raise ValueError(msg)
 def digest(p):return sha256(p.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
+def discovery_receipt():
+    names=['one_edge_search.json','two_edge_search.json','edge_birth.json','edge_two_births.json','two_edges_birth.json','three_births.json','two_births_degree2.json','two_births_degree3.json','two_births_all.json']
+    return dict(status='PASS_FULL_DISCOVERY_REPLAY',cpp_sha256={p.name:digest(p) for p in sorted(HERE.glob('*.cpp'))},receipts_sha256={name:digest(HERE/name) for name in names},input_sha256=digest(HERE.parent/'return18979_palindrome_20261103/returns.json'),uniform_input_sha256=digest(HERE.parent/'return56941_two_feedback_20261103/feedback_ports.json'))
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--full',action='store_true');args=parser.parse_args()
     compiler=shutil.which('g++');need(compiler is not None,'C++20 compiler required')
@@ -37,13 +40,16 @@ def main():
         # Nearby actual plus4 branch is a positive control for pruning/search.
         positive=run('two_births',T,170809,['-1']);need(any(z['strong'] for z in positive['hits']),'positive two-birth control')
         (HERE/'positive_birth_control.json').write_text(json.dumps(positive,indent=2)+'\n')
-        for name,argv,outputs in [('realize.py',[],['interface.json']),('audit.py',[tmp],['audit.json']),('clone_probe.py',[str(bin/'hp.exe')],['clone_probe.json']),('perfect_completion.py',[],['perfect_completion.json'])]:
+        for name,argv,outputs in [('realize.py',[],['interface.json']),('audit.py',[tmp],['audit.json','hostile_pair_deletions.json','zero_ready.json']),('clone_probe.py',[str(bin/'hp.exe')],['clone_probe.json']),('perfect_completion.py',[],['perfect_completion.json'])]:
             for optimized in (False,True):
                 subprocess.run([sys.executable,*(['-O'] if optimized else []),'-B','-X','utf8',str(HERE/name),*argv],check=True,stdout=subprocess.DEVNULL)
                 hashes={f:digest(HERE/f) for f in outputs}
                 if not optimized:normal=hashes
                 else:need(hashes==normal,'normal/-O receipts '+name)
             print('PASS independent controls',name,flush=True)
+    discovery=discovery_receipt()
+    if args.full:(HERE/'discovery_replay.json').write_text(json.dumps(discovery,indent=2)+'\n')
+    else:need(json.loads((HERE/'discovery_replay.json').read_text())==discovery,'previous complete discovery still pinned to current C++ and input sources')
     pins=['return18979_palindrome_20261103/returns.json','return56941_two_feedback_20261103/feedback_ports.json','return56941_two_feedback_20261103/feedback_transport.json','return6325_completion_20261103/halving_response.json','return6325_completion_20261103/transport.json','return6325_completion_20261103/audit.py','return6325_completion_20261103/transport.py','return56941_two_feedback_20261103/audit_moving.py','return18979_palindrome_20261103/phases_bridge.py']
     report=dict(status='PASS',full_discovery_replayed=args.full,compiler=Path(compiler).name,python=sys.version.split()[0],source_pins={p:digest(HERE.parent/p) for p in pins},owned_sources={p.name:digest(p) for p in sorted(HERE.iterdir()) if p.suffix in ('.py','.cpp')},scope='Same-agent independent algorithms; mathematical proofs and finite universes are in RETURN,TRIANGLE,PERFECT and AUDIT.')
     (HERE/'reproduction.json').write_text(json.dumps(report,indent=2)+'\n');print('PASS reproduction')

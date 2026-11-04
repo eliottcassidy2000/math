@@ -83,3 +83,10 @@ the full uniform profile span has dimension ceil(n/2) and that certain
 module converses remain invisible in every one-step ambient context.
 Our bilinear law concerns two slots with a specific single exit, not
 that full profile space or the continuation observer quotient.
+
+Incoming [Session179 modular one-apex synthesis](../session179_niche_methods_20261104/spectrum/REPORT.md)
+proves all residue classes modulo every odd modulus occur in strong one-apex
+tournaments. This reinforces the scope of our mod8 clock obstruction: it
+belongs to a specific realized interface, not the global exact spectrum.
+The new zero-ready decomposition similarly retains a full marked strong
+suffix while eliminating only the fixed prefix's count computation.

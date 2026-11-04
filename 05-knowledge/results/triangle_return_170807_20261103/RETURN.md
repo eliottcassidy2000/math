@@ -143,3 +143,9 @@ Incoming [gate-flow work](../circuit_flow_tournaments_20261103/README.md)
 independently finds a gate-order commutator measured by a three-run term.
 TR1 and that commutator have the same order-of-observation boundary; their
 operations and coefficients are different and have not been identified.
+
+There is now a sharper starting interface for that task:
+[ZERO_READY](ZERO_READY.md) selects physical port39 and proves the common
+zero-ready SCC grammar of both endpoints. Its fixed-component clocks still
+have only the observed+2 intersection and no+4 intersection. The next return
+must therefore transform the marked strong suffix, not just shift its clock.

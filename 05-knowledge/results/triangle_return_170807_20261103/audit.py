@@ -47,6 +47,38 @@ def main():
     hostile=json.loads((HERE.parent/'return6325_completion_20261103/halving_response.json').read_text())['hostile']
     need(hps(hostile['rows'])==[462915,462915],'81/27 common source H')
     need(hps([birth(tuple(T),256) for T in hostile['rows']])==hostile['responses'],'81/27 distinguished actual cut')
+    deletions=[]
+    for side,U in enumerate(hostile['rows']):
+        cases=[]
+        for a,b in combinations(range(len(U)),2):
+            V=[i for i in range(len(U)) if i not in (a,b)]
+            cases.append(tuple(sum(((U[v]>>w)&1)<<j for j,w in enumerate(V)) for v in V))
+        hh=hps(cases);need(min(hh)==7821,'81/27 pair-deletion floor')
+        group=[]
+        for t in range(3 if side==0 else 1):
+            for shifts in product(range(3),repeat=3):
+                perm=tuple(4*((b+t)%3)+(0 if q==0 else 1+(q-1+shifts[b])%3) for b in range(3) for q in range(4))
+                need(all(((U[i]>>j)&1)==((U[perm[i]]>>perm[j])&1) for i in range(12) for j in range(12)),'actual hostile group action');group.append(perm)
+        pool=set(group);need(len(pool)==(81 if side==0 else 27),'distinct inherited symmetry elements')
+        need(all(tuple(g[h[i]] for i in range(12)) in pool for g in group for h in group),'literal group closure')
+        deletions.append(dict(minimum=min(hh),counts=hh,subgroup_order=len(pool),guaranteed_positive_increment=2*min(len(pool),min(hh))))
+    (HERE/'hostile_pair_deletions.json').write_text(json.dumps(deletions,indent=2)+'\n')
+    zero=[]
+    for U,labels,root,inport,prefix,expected in [(tuple(z['source']),names,50,39,[51],[18977,18979]),(tuple(z['target']),z['target_names'],39,31,[50,51],[2195,42153])]:
+        rr=labels.index(root);ww=labels.index(inport);aa=[labels.index(v) for v in prefix];bb=[i for i in range(len(U)) if i!=rr and i not in aa]
+        def induced(V):return tuple(sum(((U[i]>>j)&1)<<b for b,j in enumerate(V)) for i in V)
+        A=induced(aa);B=induced(bb)
+        need([i for i in range(len(U)) if U[i]>>rr&1]==[ww],'unique actual in-port')
+        need(strong(B) and all(U[a]>>b&1 for a in aa for b in bb),'canonical SCC suffix and prefix order')
+        qa=endpoint(A,0,0);qb=endpoint(B,bb.index(ww),bb.index(labels.index(6)));qr=endpoint(U,rr,labels.index(6))
+        need([qb[0],qb[5]]==expected and qr[5]==qr[0],'zero-ready component fields')
+        need(qr[0]==qa[0]*qb[0]+qa[1]*qb[5],'literal Z1 formula')
+        ports=list(dict.fromkeys([root,6,50,51,inport]));pairs=[]
+        for a,b in combinations(ports,2):
+            vv=endpoint(U,labels.index(a),labels.index(b));pairs.append(dict(ports=[a,b],P2=vv[1],port_data=[vv[2:7],vv[7:12]],ordered_W2=vv[12:]))
+        g=[qr[0],(qr[6]-qr[2])//2,(qr[6]+qr[2])//2]
+        zero.append(dict(root=root,inport=inport,prefix_names=prefix,suffix_names=[labels[i] for i in bb],suffix_rows=B,H=qr[0],h_A=qa[0],P_A2=qa[1],h_B=qb[0],F_w=qb[5],joint_pairs=pairs,golden=g,charts=chart(g),five_Q4=bridge.five_charts(g)))
+    (HERE/'zero_ready.json').write_text(json.dumps(zero,indent=2)+'\n')
     # Every pruned-in second-birth prefix gets independent literal H replay.
     pref=json.loads((HERE/'three_births.json').read_text());source=tuple(z['source'])
     prefTs=[birth(birth(source,a),b) for a,b,_,_ in pref['prefixes']]
@@ -77,6 +109,7 @@ def main():
                 for v in range(n):modules.append(substitute(U,[[v]],[(2,4,1)]))
     observed=inspect(modules);need(all(x['plus2']==x['plus4']==0 for x in observed),'proper strong triangle universal finite controls')
     boundary=inspect([(2,4,1)])[0];need(boundary['plus2']>0,'proper-module hypothesis is necessary')
+    weak_boundary=inspect([(10,12,9,0)])[0];need(weak_boundary['plus2']>0,'strong-source hypothesis is necessary')
     saved=json.loads((HERE.parent/'return56941_two_feedback_20261103/feedback_ports.json').read_text())['states'];Urows=[];samples=[]
     for record in saved:
         if record['stage']!='second_port':continue

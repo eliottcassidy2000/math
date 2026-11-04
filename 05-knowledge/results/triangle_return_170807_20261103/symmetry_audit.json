@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "normal_optimized": {
+    "audit.json": "0f8329a2fdd3b827a5d9f4e1a2a7cb0a106e715c6e1d01ccbbd6f8dcf0b91ec8",
+    "hostile_pair_deletions.json": "4ae2d8a99025409abc2da6adbb7273ef56fdff349b52d33f19da8872da68a4f1"
+  },
+  "scope": "TR5 actual group closure, pair deletions, plus previous native/phase audit"
+}

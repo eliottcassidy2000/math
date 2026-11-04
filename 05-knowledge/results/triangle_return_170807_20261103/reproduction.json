@@ -15,7 +15,7 @@
     "return18979_palindrome_20261103/phases_bridge.py": "3c728e47c1939f65e29e9bf7ecca91a68e83f4c3ba1772fe745d4d3fd3aebb20"
   },
   "owned_sources": {
-    "audit.py": "cd957c12c85a097e920038c10071bd352703dbd8378094451d29f2dbe1392b5a",
+    "audit.py": "feee495a3d64146ac7e12d561a792531271ce2674736571e44dc24ccaa2738ae",
     "clone_probe.py": "dd0fb4629d647d4fc68818279aeb8b949a107951dd0b712e64484bfe9308f409",
     "edge_birth.cpp": "f08556ccc8eb8b835b7083b040341c50ce527a664ad2cac495b74a6b834ee9b3",
     "edge_two_births.cpp": "fff7ef181c6d77932bdf58c7506f0c47fd66d928cb91bfec5b756a53fcc02126",
@@ -23,7 +23,7 @@
     "inspect.cpp": "d1aa173425621b837be75e1c07cc43c28686b8a8cd5c335cba19ddcaf6ad7478",
     "perfect_completion.py": "d97707457bbe80db485c94d47a3e3d9daa63f5dfd13e87cde11c980c6e3ab8ae",
     "realize.py": "c477a10201dc098c01954fdca859d90c6b93260c5f25d5c29a2895ccd903c14d",
-    "reproduce.py": "679842c5fbb6a39110f6d84882468e213b50cf406469a1bc909ab2e09326e557",
+    "reproduce.py": "ee3af7d9abc7563bf3e6c277eacf65846d416e47ce3b8103944dea3a4a8dc449",
     "search.cpp": "6e287839077c1e9e9b409ab914cf162e618710e15585761f38b0f105a55ae923",
     "three_births.cpp": "53872077f07cc9851fe557f164a14ee9ab56160980f10ea15bbf7a216faeeef9",
     "two_births.cpp": "8ac04df8658b043e397a79c003cdf50e735ad45bf8abb92b23e5b2fd8c529e5e",

@@ -19,12 +19,21 @@ The same source cannot reach170807 by up to three arbitrary births alone,
 nor by one old-edge reversal and up to two births with a strong endpoint.
 Positive-cut pruning makes these complete finite menus inexpensive.
 
-Three all-size advances explain the reuse boundary:
+Selecting physical vertex39 at the new endpoint returns to a **zero-ready**
+interface. [ZERO_READY](ZERO_READY.md) gives its complete SCC decomposition
+and the count law H(A)H(B)+P_A(2)E_w(B,2). Both ends of the actual program
+lie in this grammar, but their fixed component clocks intersect in the+2
+relation only at the observed step; the+4 relation has no clock intersection.
+
+All-size advances explain the reuse boundary:
 
 * The saved3-ready family literally replaces TT2 by a homogeneous C3.
   Its smallest rooted defect over **every possible mark** is3 for m>=2.
   No number of births can fill its original+2/+4 deficit while retaining
   every old vertex and edge.
+  More generally, an actual odd-order symmetry group gives a first-split
+  lower bound for every induced extension. The81/27 control retains its
+  different guaranteed windows and the same pair-deletion minimum7821.
 * The new interface has a complete bilinear law for arbitrary tournaments
   in its two untouched modules. It gives+2 **only** at the original TT2/TT2
   input and never+4. Thus arbitrary internal enrichment of those modules

@@ -18,7 +18,7 @@ its declared finite universe; all-size extensions use the supplied proofs.
   values are computed by both forward and backward subset DPs. The full
   sixteen TT1,TT2,TT3,C3 input pairs agree. Positivity C2>=(n-1)H handles
   every larger input, so R5 is not inferred from samples.
-* **TR1--TR4 in TRIANGLE, PROVED:** uses the inherited maximal-run bijection,
+* **TR1--TR5 in TRIANGLE, PROVED:** uses the inherited maximal-run bijection,
   free action on ordered covers, rooted indegree defect, and stronger
   positive-cut bound w_uv>=H(T-{u,v}). Endpoints must be fixed individually;
   arbitrary weights need not be invariant. The all-mark result excludes
@@ -27,6 +27,17 @@ its declared finite universe; all-size extensions use the supplied proofs.
   birth extends the obstruction to every finite induced extension, without
   requiring strongness at subsequent prefixes.102 labelled strong quotient/module controls at quotient
   orders3,4 pass. A whole C3 has+2 births, testing the proper-module guard.
+  A nonstrong proper triangle example also has+2 births. TR5 uses the same
+  first-split argument on a group orbit. All81 and27 stated symmetry maps
+  are checked against the literal hostile matrices, including closure;
+  all132 pair deletions are counted independently. The windows are lower
+  bounds, not claimed sharp minima.
+* **Z1--Z2 in ZERO_READY, PROVED:** the indegree defect and exact single-port
+  birth identity locate the in-port in the last, but not first, SCC. The
+  ordered prefix/suffix boundary factors the two-bin response. Both literal
+  decompositions are checked for every cross incidence, strong suffix,
+  unique in-port and exact h_B,F_w. The new selected mark39 retains joint
+  responses with6,50,51,31 and all current field/Q4 charts in zero_ready.json.
 * **PC1--PC4 in PERFECT, PROVED:** the inverse retains positive deficiency,
   prime q, coprimality, integral prime-power ratio and Euler shape when
   applicable. The q interval is half-open; an integral A/D forces the
@@ -90,6 +101,11 @@ The first runs independent controls normally and under-O, comparing exact
 receipts. The second also recompiles and replays every discovery menu.
 Source hashes normalize CRLF to LF. reproduction.json records whether the
 full mode was run; a default rerun legitimately changes that field.
+The completed full discovery replay is additionally pinned in
+discovery_replay.json. Default runs verify that its C++ files, input sources
+and all complete/discovery receipts still match; later proof and audit
+extensions do not erase that provenance. symmetry_audit.json records the
+extra normal/-O group and pair-deletion replay after the original full run.
 
 Inherited results, incoming work and literature provenance are separated
 in RECOVERY. Global spectrum completeness, a reusable ternary source

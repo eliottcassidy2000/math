@@ -128,3 +128,37 @@ to relabel or reset a source. The12-vertex81/27 pair is replayed with its
 literal relations and distinguished birth; matching unrooted profiles do
 not identify their joint response carriers. None of TR1--TR4 asserts that
 the saved two-run responses form a carrier closed under all complements.
+
+## 6. A general symmetry barrier for every induced extension
+
+Let G be a nontrivial automorphism subgroup of a tournament T, of odd order
+g. Let mu_G be the minimum H(T-{u,v}) over distinct vertices in the same
+G-orbit. Every finite induced extension V of T satisfies
+
+    H(V)=H(T), or H(V)-H(T)>=2 min(g,mu_G).              (TR5)
+
+Proof. Order the new vertices in any way. As long as each birth is constant
+on every original G-orbit, G extends by fixing the newborn vertices. Every
+prefix H is divisible by g, and tournament parity makes each increase even.
+Thus a positive cumulative increase already costs at least2g. At the first
+birth that splits an orbit, that induced orbit is a vertex-transitive
+tournament and hence strong: its uniquely ordered strong components would
+otherwise be preserved separately, contradicting transitivity. The cut
+therefore crosses an arc u->v within the orbit. Its cost is at least
+2H(current-{u,v})>=2H(T-{u,v})>=2mu_G. Future births cannot decrease H.
+These two cases prove TR5. No transitivity of G on all vertices is required.
+
+All tournament automorphism groups have odd order: a nontrivial involution
+would swap a pair and reverse its edge, and Cauchy's theorem excludes even
+group order. Alternatively odd order can simply be retained as a hypothesis
+of TR5. The group must be actual; divisibility of H by g is insufficient.
+
+For the inherited81/27 pair, independent counts of all66 two-vertex
+deletions of each graph have the same minimum7821. Using their actual
+automorphism groups, TR5 excludes positive increments below162 for the
+order81 source and below54 for the order27 source, at every extension
+order. These are **guaranteed windows**, not claimed sharp gaps or unequal
+true minimum increments. Both scalar H values are divisible by81; this
+does not authorize the81-group argument for the second source. The full
+named-cut hostile still distinguishes them. The pair-deletion receipts
+are in hostile_pair_deletions.json, in lexicographic pair order.
