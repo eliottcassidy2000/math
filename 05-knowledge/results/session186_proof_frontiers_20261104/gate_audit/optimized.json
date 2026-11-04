@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "permutation_controls": [
+    {
+      "state": 0,
+      "case": "original",
+      "H": 177,
+      "L": 54
+    },
+    {
+      "state": 0,
+      "case": "whole",
+      "H": 177,
+      "L": -54
+    },
+    {
+      "state": 0,
+      "case": "module",
+      "H": 177,
+      "L": -54
+    },
+    {
+      "state": 1,
+      "case": "original",
+      "H": 179,
+      "L": 58
+    },
+    {
+      "state": 1,
+      "case": "whole",
+      "H": 179,
+      "L": -58
+    },
+    {
+      "state": 1,
+      "case": "module",
+      "H": 179,
+      "L": -58
+    },
+    {
+      "state": 2,
+      "case": "original",
+      "H": 181,
+      "L": 62
+    },
+    {
+      "state": 2,
+      "case": "whole",
+      "H": 181,
+      "L": -62
+    },
+    {
+      "state": 2,
+      "case": "module",
+      "H": 181,
+      "L": -62
+    }
+  ],
+  "two_port_queries": 24,
+  "hostile_profiles": [
+    [
+      3,
+      42,
+      162,
+      240,
+      120
+    ],
+    [
+      3,
+      42,
+      162,
+      240,
+      120
+    ]
+  ],
+  "hostile_pairs": [
+    [
+      [
+        3,
+        4
+      ]
+    ],
+    []
+  ],
+  "hostile_queries": [
+    15,
+    9
+  ],
+  "strong_contexts": [
+    {
+      "state": 0,
+      "H": [
+        1611,
+        1611
+      ],
+      "port_values": [
+        21015,
+        17793
+      ]
+    },
+    {
+      "state": 1,
+      "H": [
+        1617,
+        1617
+      ],
+      "port_values": [
+        21045,
+        17811
+      ]
+    },
+    {
+      "state": 2,
+      "H": [
+        1623,
+        1623
+      ],
+      "port_values": [
+        21075,
+        17829
+      ]
+    }
+  ]
+}

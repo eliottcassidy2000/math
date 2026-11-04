@@ -1,0 +1,4 @@
+34432bac7e1465f3ea0f57a69148bfbab4a411d31acad8ef60e8d32721711106  gate/PROOF.md
+bbce00172c10cd6f27fb6b157d52e4ab52c274babb85672f1541c9bdc4c0d461  gate/verify.py
+b1612a468ceebd2beee8be4ae0d3f5b9d3b21d1565c744b34ec1e798942d09e2  gate/query.py
+fd3b7f59bec40b2980a88a2f9afddd2946d09f4c2b8f480fa17cd59718c7cde2  gate/hostile.py
