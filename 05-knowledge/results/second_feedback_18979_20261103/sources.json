@@ -376,6 +376,10 @@
       "sha256": "27e5c6e4db879c69c72dd76eb4df1faa87c9679ca9f9c8e13470333b71080343"
     },
     {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/counting/README.md",
+      "sha256": "3def1841ef1824842eb24d1b17567093bc371dd4179dad754f849b3bb433282f"
+    },
+    {
       "path": "05-knowledge/results/lenses_tm_ca_fractran_tournaments_20261101.md",
       "sha256": "05a76f5255329b45109806fce7599efe0e2e5826654a5e530a0411e810a0159d"
     },
@@ -389,11 +393,11 @@
     },
     {
       "path": "05-knowledge/results/orbit_spectrum_session_20261103/README.md",
-      "sha256": "5d4fe5c88b63ce28235797436c96c6c42ee16ea9ebaee699085964c2bcb6a472"
+      "sha256": "bd066316defb89535a37c1bd71ee9b38841bc2bb083a310eb5c5a7e1bb199760"
     },
     {
       "path": "05-knowledge/results/orbit_spectrum_session_20261103/counting/NOTE.md",
-      "sha256": "27007bf5eb79679af81c253133ecdeb42d74c589f30d64c20cffe669270de26d"
+      "sha256": "e1e51de0740f23f57a6d191a3c51470150f3f54277bca66c742c04df0486d461"
     },
     {
       "path": "05-knowledge/results/ordered_response_ten_20261103/NEUTRAL_CARRIES.md",
@@ -892,6 +896,10 @@
       "sha256": "c8228c3325351f0f9d3bba0a3a3f9a9e4a948a7dd60e71092ab17d61bf072262"
     },
     {
+      "path": "05-knowledge/results/session105_metagraph_recursion_20261029/enumeration/INTEGER_PROJECTIVE.md",
+      "sha256": "5102ea38ef2a9e87348f8da92829c13846c410c3354d5ebd886fde66b52ee494"
+    },
+    {
       "path": "05-knowledge/results/session143_frobenius_magic_followup_20261103/producer/PROOF.md",
       "sha256": "92762cf5812c0f18bb86edce4a88f8453a49e7764c94c1336f31ad5232ba869f"
     },
@@ -977,7 +985,7 @@
     },
     {
       "path": "05-knowledge/results/session175_tournament_spectrum_20261104/a000568/README.md",
-      "sha256": "8f2b0af0974c459052ba7e78abd7e625aee77ea7157e3842a84cc8c0fa22c894"
+      "sha256": "55124e1ce9c41984f649f011a8322a9c3e2fbed43f080b4a9e2a3e51f5184995"
     },
     {
       "path": "05-knowledge/results/session175_tournament_spectrum_20261104/a000568/inherited_local_scale.py",
@@ -989,7 +997,7 @@
     },
     {
       "path": "05-knowledge/results/session175_tournament_spectrum_20261104/clone_obstruction/PROOF.md",
-      "sha256": "5ca4f9d3e3ceb199b80dec254cddfb94f34273c9bc45404ec63d4e6b3e96809d"
+      "sha256": "c0fa1d6773a42723f5a53f7645f0b22fa98db01168762ec0516b5f382f42afb0"
     },
     {
       "path": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/finite-fields/README.md",

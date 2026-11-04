@@ -28,6 +28,15 @@ affected README and synthesis now state these credits; formulas and
 measurements were not changed. Check the exact state map and gauge before
 claiming a newly compressed coordinate merely from a different notation.
 
+The same inheritance gap occurred in the subsequent
+[second-feedback counting lane](../05-knowledge/results/second_feedback_18979_20261103/PROOFS.md):
+its full-factorial gauge and later packed bucket combination were already
+Session105 sections1--3, not just consequences of the newly read Session175
+implementation. IC1/IC2 and the summary now identify them as recovered
+mechanisms. Its four-engine numerical comparisons remain valid; no new
+counting theorem or overall performance record is claimed. The distinct
+ready-family obstruction and literal11735 native return are unaffected.
+
 ## 2026-11-03 — positive clone lengths and empty exterior kernels have distinct boundaries
 
 **Draft errors caught before the constructive packet was published.** The

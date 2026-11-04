@@ -24,6 +24,8 @@ def main():
             'session175_tournament_spectrum_20261104/clone_obstruction/PROOF.md',
             'session87_four_vertices_enumeration_20261028/fast_counts.py',
             'session87_four_vertices_enumeration_20261028/FAST_COUNTS.md',
+            'session105_metagraph_recursion_20261029/enumeration/INTEGER_PROJECTIVE.md',
+            'lca_ports_reverse_20261025/counting/README.md',
             'orbit_spectrum_session_20261103/counting/NOTE.md',
             'orbit_spectrum_session_20261103/README.md'))
         changes=[{'path':d['path'],'previous_sha256':d['sha256'],'current_sha256':digest(ROOT/d['path'])} for d in old['dependencies'] if digest(ROOT/d['path'])!=d['sha256']]

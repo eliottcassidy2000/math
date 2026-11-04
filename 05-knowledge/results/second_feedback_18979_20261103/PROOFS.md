@@ -12,6 +12,14 @@ Cloning q means replacement by an ascending transitive module TT_m.
 
 ## IC1. An integral version of the projective Burnside recurrence
 
+**Recovered mechanism, not a new theorem.** The final inheritance pass
+located this exact full-factorial gauge, formula, divisibility proof and
+unit completion in [Session105 section1](../session105_metagraph_recursion_20261029/enumeration/INTEGER_PROJECTIVE.md).
+Sections2--3 there also contain the odd gauge and packed degree buckets
+used in IC2. The proof below is retained as a self-contained derivation
+and computational reference; this session contributes an independent
+implementation/comparison, not a new counting method or compression.
+
 The inherited recurrence is
 [Session98, recurrence](../session98_tournament_growth_20261029/recurrence/verify.py),
 with its unit-tail mechanism in
@@ -80,7 +88,7 @@ W_odd=O(d)*2^(e+r*h_1)/z_mu be the incoming weight. The exact change to IC1 is
     I=binom(N,d)*2^v2(d!)*W_odd.                          (IC4)
 
 Both sides are integer gauges of the same histories. `bucket_census.py`
-combines the projective packed response with the older bucket loop order,
+reimplements the inherited projective packing and degree-bucket combination,
 and implements both gauges. Store states[d][response], then loop over
 d,k,response, sharing each multiplicity factor and expired-coordinate
 mask. Packing is exact: each digit j*h_1-h_j is nonnegative and at most d,

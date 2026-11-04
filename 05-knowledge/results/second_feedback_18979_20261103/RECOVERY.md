@@ -109,3 +109,24 @@ reset source needs at least two old deletions. A literal22-native program
 attains that bound while retaining the old ports and both clone addresses,
 then reaches35207. Thus the obstruction redirected construction to a
 size-dependent return; it did not become a reason to abandon positive work.
+
+## Final attribution repair
+
+Incoming c549b6e871/e00c027680 supplied the missing exact pointer:
+[Session105 INTEGER_PROJECTIVE sections1--3](../session105_metagraph_recursion_20261029/enumeration/INTEGER_PROJECTIVE.md)
+already proves both IC1 gauges and implements packed degree buckets. The
+[October25 reverse-potential production graph](../lca_ports_reverse_20261025/counting/README.md)
+also realizes the same response quotient with a state-dependent gauge
+making all shifts nonnegative. Thus this counting lane is a recovered
+implementation and comparison, not a novel arithmetic or scheduling
+theorem. Reading Session98 and the recent incoming implementation without
+following the full historical gauge lineage caused the attribution gap.
+The correction is also recorded in the existing counting-provenance entry
+of MISTAKES. All counting values and measured comparisons are unchanged.
+
+Only four pinned reference documents changed during the final rebase;
+every computational dependency remained identical. The new incoming
+moving-mark family is complementary to SF3: its exact17-query interface
+supports a particular two-birth repair, while our fixed-exterior target
+fails and our literal11735 return takes paid deletions and native moves.
+Neither statement licenses unrestricted ready closure.

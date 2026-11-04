@@ -27,20 +27,20 @@ ternary continuation12833, but12833 has no one-ready presentation at
 any order. The adjacent12835 has exactly one strong one-ready rooted
 class; its clone coefficients miss the five required +4 continuations.
 
-[IC1](PROOFS.md) replaces the inherited projective A000568 weights by
-integer partial-permutation weights. Every negative power-of-two shift
+[IC1](PROOFS.md) recovers Session105's exact integer realization of the
+projective A000568 recurrence. Every negative power-of-two shift
 is proved and checked exactly divisible. Results match independent
 odd-partition Burnside through30 and rational evaluation at60,100,150,200.
 At200 the [initial recorded run](benchmark_observed.json) takes6.83s versus19.72s, about2.9 times faster,
-with the same95709 peak states. This improves exact class counting;
-it does not enumerate all representatives or metagraph edges.
+with the same95709 peak states. These are fresh implementation controls
+on an inherited algorithm, not a new class-counting method or record.
 
 An [incoming-baseline comparison](bucket_benchmark_observed.json) then
 combines the packed projective response with older degree buckets. At200,
 the placement-gauge version takes1.85s versus2.36s for the incoming packed
-scalar engine. The older full-prefix engine still wins at1.63s. Thus this
-is an exact alternative and a scheduling improvement for one scalar
-implementation, not a new overall performance record.
+scalar engine. The older full-prefix engine still wins at1.63s. Session105
+already combined these ingredients too. The comparisons retain the useful
+implementation choices without claiming a new overall performance result.
 
 A subsequent constructive test gives an actual
 [3911->11735 return->35207](PROOFS.md#sf5-an-actual-return-at-the-first-stable-clone-size).

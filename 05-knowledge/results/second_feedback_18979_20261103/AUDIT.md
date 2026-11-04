@@ -69,6 +69,10 @@ fibres, full automorphism actions or metagraph edges. Exact counts at200
 are an implementation extension of the comparison suite, not a literature
 record. Runtime ratios are observed once on this machine and stored
 separately from deterministic receipts.
+The final Session105 recovery shows that both integer gauges and their
+packed bucket realization are inherited too. IC1/IC2 are explicitly
+credited reconstructions; the numerical controls remain valid. Final
+integration changed reference-document pins only, not computational inputs.
 
 SP1 counts paths for a fixed endpoint skeleton, and its full square
 application is complete only for the specified anchors and minimum
