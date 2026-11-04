@@ -88,6 +88,10 @@ at mark0 converts e_0=1 back to start defect1, but changes H by S_0(2)-1.
 This is the positive route that survives; a repeated compensation of that
 charge remains **OPEN**.
 
+The closing S187 merge supplies an [exact named query for this charge](QUERY_COST.md):
+`cost=(F_(T^op)(unit_0,0)-H)/2-end_0`. Literal query counts8675/8501 recover
+the two costs3632/3536. This reads the debt; it does not cancel it.
+
 The exact [feedback-width calculation](CAP_WIDTH.md) adds a structural
 constraint: `fvs(D_j)=ceil(j/2)`. Small endpoint mass coexists with
 unbounded graph complexity. The first children fit the recovered two-apex
