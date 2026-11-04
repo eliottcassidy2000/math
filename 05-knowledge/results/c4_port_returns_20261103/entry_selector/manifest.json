@@ -1,0 +1,14 @@
+{
+  "normal_optimized_identical": true,
+  "previous_reader_packet_unchanged": true,
+  "files": {
+    "PROOF.md": "b7db31edac089afaf4b0ced92253a387b35c1a6e6fd79a9619523237474e03d7",
+    "check_selector.py": "e07d8d722acdad4d71d86f76741829d39f83ab973ff3085863208bed905bbe6a",
+    "reproduce.py": "f995a7e8375933951d3311731812bea1bd5d51faccba37ce38ac4d857613d0b9",
+    "receipt.json": "6562b6b48b3637e5cbd77b956d415e912bc0200f61dee120043ff8d5433ad669",
+    "profiles.json": "444492db7e05a1baf2a32e027a036f8c4c9da3e36eaa289f971963786317a1d0",
+    "normal.out": "4c755299da4b1ec3cd668fc6547acf62a3656664bad35af9b677175ff2b7ec13",
+    "optimized.out": "4c755299da4b1ec3cd668fc6547acf62a3656664bad35af9b677175ff2b7ec13"
+  },
+  "scope": "Three finite regenerated positive entries with actual native repairs/direct C2 children; six scoped nonneutral triangle restorations."
+}

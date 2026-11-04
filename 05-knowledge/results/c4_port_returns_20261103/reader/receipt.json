@@ -1,0 +1,19 @@
+{
+  "status": "INDEPENDENT_FINITE_EXACT_READER_FAMILY_AUDIT",
+  "targets": 20,
+  "bank_seeds": 219,
+  "independent_interval_integers": 27477,
+  "complete_section_and_interval_hit_sets_agree": true,
+  "fresh_actual_profiles": 40,
+  "source_and_target_orders_at_most": 17,
+  "all_target_vertex_entry_audit": {
+    "targets": 20,
+    "start_defect1_or2": 0,
+    "end_defect1_or2": 0,
+    "unique_end_zero_name": 99
+  },
+  "physical_name_embedding": true,
+  "native_transport_asserted": false,
+  "all_order_acceptance_asserted": false,
+  "scope": "Exact finite acceptance, minimum bank sizes, full actual graph counts and named observers; no extension above the separately bounded t16 tail."
+}

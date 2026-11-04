@@ -1,0 +1,50 @@
+{
+  "status": "PASS independent reader and native review",
+  "programs": 20,
+  "finite_targets": 32,
+  "bank_seeds": 219,
+  "complete_inverse_candidate_integers": 1758518,
+  "accepted_words_replayed": 176,
+  "actual_profiles_recomputed": 40,
+  "costs": {
+    "peak_order": 19,
+    "permanent_births": 13,
+    "arc_gadgets": 470,
+    "temporary_births": 491,
+    "native_moves": 940,
+    "temporary_deletions": 491,
+    "bridge_gadgets": 21
+  },
+  "hostile_rejections": [
+    {
+      "corruption": "guard",
+      "rejection": "directed guard"
+    },
+    {
+      "corruption": "birth_name",
+      "rejection": "fresh birth name"
+    },
+    {
+      "corruption": "old_deletion",
+      "rejection": "only new helper deletions"
+    },
+    {
+      "corruption": "target_arc",
+      "rejection": "declared named target equality"
+    }
+  ],
+  "scope": "All-t acceptance, branch regeneration and physical field actions remain unproved.",
+  "source_sha256": {
+    "recursive_seed_switching_20261103\\selector\\bank.json": "539fc52c0e9ca85ab6b58d76f216e61306fa4641fdc6ba625272d5f166774bd6",
+    "c4_port_returns_20261103\\reader\\PROOF.md": "b86f499c229c6c7bd2eda1ddd3f664771cd4dada94315ee13bd1fb57b9a4c0b4",
+    "c4_port_returns_20261103\\reader\\witnesses.json": "bd8c4cad91205f26994604bc75d8321a84f79d2970f960d3b5b74d3584fcb92c",
+    "c4_port_returns_20261103\\reader\\sidecars.json": "de48b5fd16ca811f7c8b2484bc1ce7d055051f69d1232f6a382d8b84a8e8c449",
+    "c4_port_returns_20261103\\reader\\tail.json": "7ba02430a7637ecc329ec4edc270db8ad8db942b61f0b8e8c99b786008be30ab",
+    "c4_port_returns_20261103\\reader\\ENTRY_DEFECTS.json": "4fa308ff489f3fc93a8cd9ffdea8a5272e5caec846027639d0ed34cc5ebc0c7c",
+    "c4_port_returns_20261103\\native\\reader_repairs\\PROOF.md": "745f35e5ebc0d893c421f9a5c472c737c33651f63e12be312565d1183b3ae391",
+    "c4_port_returns_20261103\\native\\reader_repairs\\check_repairs.py": "c87b72075d89dfaad1f9ccb4d947245b64e5f96f2fdafc44f8577a0cf98eae5e",
+    "c4_port_returns_20261103\\native\\reader_repairs\\receipt.json": "fb83905a76958d72580a896cacb58e0f725d71353e5f659205c07ed8be640180",
+    "c4_port_returns_20261103\\audit\\reader_profile.cpp": "a24cb72dff55df06c2e3f0db48c4d40e843646c4826cd8392147aa12567cfd0e",
+    "c4_port_returns_20261103\\audit\\check_reader_review.py": "58f37558c11f25dc8a4db2fd752f495679c416e25f7e0e6b325bb4c9cc462c95"
+  }
+}

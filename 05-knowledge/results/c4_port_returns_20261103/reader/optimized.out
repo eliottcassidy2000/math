@@ -1,0 +1,6 @@
+24 hits [9, 8, 10, 11, 4, 6, 2, 5, 9, 6] minimum orders [8, 8, 9, 10, 12, 13, 14, 15, 15, 17]
+44 hits [6, 4, 3, 7, 5, 7, 5, 3, 3, 3] minimum orders [8, 9, 10, 10, 12, 12, 13, 15, 16, 17]
+PASS: all20 strong actual targets retain every source name, including outerroot99
+PASS: both affine families accepted at t11..16; stopped at16 without extrapolation
+PASS: all20 complete hit sets match independent interval inverse over 27477 candidate integers
+PASS: 40 fresh actual-graph profiles, full named ordered J matrices, and regenerated endpoint/phase charts

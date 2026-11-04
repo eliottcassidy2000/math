@@ -1,0 +1,27 @@
+{
+  "parents": 135,
+  "births": 34560,
+  "strong_births": 34290,
+  "target_births": 39,
+  "class_counts": [
+    2,
+    7
+  ],
+  "status": "PASS independent clone review",
+  "marked_cases": 740,
+  "marked_strong_cases": 404,
+  "full_run_vectors_recomputed": 742,
+  "target_slope_cases": 0,
+  "producer_codes_over_32_bits": 5,
+  "source_sha256": {
+    "regeneration\\catalog8_f126.json": "3277121926628ceed9bb72b0894fbd8c51f12a536a68a4ddc877581ef164fe6a",
+    "native\\clone_escape\\PROOF.md": "d5a12d6326559cffe7f96860b2c120e2f1559e1464f0259d44644b43c15bfc2e",
+    "native\\clone_escape\\extend9.cpp": "538a776d18f97a2aef8c3f5f496c7946d07fb7b7008e44966264c8fe6a565676",
+    "native\\clone_escape\\check_clone.py": "9d3ab320c3e9b68dbac92ded4126a0b9971587de805e3584468dfc77bc734b6f",
+    "native\\clone_escape\\check_order9.py": "0c5ffdf055670889a4c5c23c1ac53713fccbcf50c376519a5581db26588c025c",
+    "native\\clone_escape\\receipt.json": "7eeaa5c74abadd3ff4d5636adc835351c61f8b690efb72c8e125a0fb7b7c6071",
+    "native\\clone_escape\\order9.json": "1b4aeabfac574a2d025bce6a4de5e78c8e312288973e70e18f7ca93ed18c1e57",
+    "audit\\clone_review.cpp": "f578656852124bcfc3d715928a5d2bcfa9dac694a5a73ef4c4ffca1bc72e5ef4",
+    "audit\\check_clone_review.py": "e813110a36558656cb55a074c67f74d61c0d8924267d74dd37e59739745c0ee1"
+  }
+}

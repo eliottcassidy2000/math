@@ -1,0 +1,19 @@
+{
+  "normal_optimized_identical": true,
+  "files": {
+    "PROOF.md": "b86f499c229c6c7bd2eda1ddd3f664771cd4dada94315ee13bd1fb57b9a4c0b4",
+    "export_reader.py": "f804742dd4f3fb1859dd8ed2a2c0533b956e5a0d82b54decb157250880415b30",
+    "probe_tail.py": "1fd8e84a9e6d01c3add33fac90cb657943d83301b1b10393df328629d836c940",
+    "check_reader.py": "0d61fc9cf172250f4ec0dc6648e41f6f16ed3d0e48874240411e9527552a9b3a",
+    "endpoint_profile.cpp": "e9d1a6fe1099ecb6243e443275857e6fd41e61dcd6945644f9ca3271da332dec",
+    "reproduce.py": "785110dbedbeaf79c4f6e3abda48664817514c95402d131d22b67a0f36bfd2f0",
+    "normal.out": "c0c5aa3dbf0084430684586229e7873700c02918769022a6da0d25b2fe8e1e87",
+    "optimized.out": "c0c5aa3dbf0084430684586229e7873700c02918769022a6da0d25b2fe8e1e87",
+    "witnesses.json": "bd8c4cad91205f26994604bc75d8321a84f79d2970f960d3b5b74d3584fcb92c",
+    "tail.json": "7ba02430a7637ecc329ec4edc270db8ad8db942b61f0b8e8c99b786008be30ab",
+    "sidecars.json": "de48b5fd16ca811f7c8b2484bc1ce7d055051f69d1232f6a382d8b84a8e8c449",
+    "ENTRY_DEFECTS.json": "4fa308ff489f3fc93a8cd9ffdea8a5272e5caec846027639d0ed34cc5ebc0c7c",
+    "receipt.json": "59fc82f44f6a269dca0a8206009f646ec02ac94c72ec5209f3894610eafcc129"
+  },
+  "scope": "32 finite arithmetic targets,20 actual retained-name targets,40 fresh named graph profiles; no all-t or regenerated-entry claim."
+}

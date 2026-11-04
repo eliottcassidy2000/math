@@ -1,0 +1,5109 @@
+{
+  "status": "FINITE_EXACT_TWENTY_AFFINE_READER_TARGETS",
+  "bank_scope": "The inherited219 actual eight-field seed representatives; all word lengths and all nonempty reader prefix clocks.",
+  "naming": "Old outerroot99, suffixnames0..4, and oldprefix10..t+9 survive injectively; old prefix names may move into the component.",
+  "minimum_scope": "Minimum vertex count among all accepted words/clocks in this fixed219-key bank; not a global tournament or native-cost minimum.",
+  "closure_scope": "Twenty successes do not prove all-t acceptance, essential infinite switching, native transport, or regenerated entry.",
+  "records": [
+    {
+      "family": "24",
+      "t": 1,
+      "target_H": 91,
+      "hit_count": 9,
+      "minimum_order_in_fixed_bank": 8,
+      "all_hits": [
+        {
+          "bank_index": 17,
+          "order": 8,
+          "fields": [
+            11,
+            3,
+            17,
+            20,
+            32,
+            5,
+            100,
+            72
+          ],
+          "word": "",
+          "prefix": 2,
+          "r": 0
+        },
+        {
+          "bank_index": 21,
+          "order": 8,
+          "fields": [
+            15,
+            3,
+            19,
+            19,
+            32,
+            5,
+            108,
+            75
+          ],
+          "word": "",
+          "prefix": 2,
+          "r": 0
+        },
+        {
+          "bank_index": 82,
+          "order": 8,
+          "fields": [
+            29,
+            3,
+            83,
+            31,
+            100,
+            11,
+            320,
+            393
+          ],
+          "word": "",
+          "prefix": 1,
+          "r": 0
+        },
+        {
+          "bank_index": 129,
+          "order": 8,
+          "fields": [
+            29,
+            2,
+            86,
+            31,
+            104,
+            13,
+            320,
+            397
+          ],
+          "word": "",
+          "prefix": 1,
+          "r": 0
+        },
+        {
+          "bank_index": 132,
+          "order": 8,
+          "fields": [
+            29,
+            2,
+            50,
+            31,
+            64,
+            5,
+            320,
+            265
+          ],
+          "word": "",
+          "prefix": 1,
+          "r": 0
+        },
+        {
+          "bank_index": 198,
+          "order": 8,
+          "fields": [
+            29,
+            3,
+            89,
+            31,
+            104,
+            13,
+            320,
+            405
+          ],
+          "word": "",
+          "prefix": 1,
+          "r": 0
+        },
+        {
+          "bank_index": 0,
+          "order": 9,
+          "fields": [
+            15,
+            1,
+            23,
+            19,
+            32,
+            1,
+            216,
+            173
+          ],
+          "word": "110",
+          "prefix": 2,
+          "r": 4
+        },
+        {
+          "bank_index": 213,
+          "order": 9,
+          "fields": [
+            15,
+            1,
+            23,
+            19,
+            32,
+            1,
+            216,
+            173
+          ],
+          "word": "",
+          "prefix": 2,
+          "r": 0
+        },
+        {
+          "bank_index": 215,
+          "order": 9,
+          "fields": [
+            15,
+            1,
+            59,
+            19,
+            84,
+            9,
+            216,
+            317
+          ],
+          "word": "",
+          "prefix": 2,
+          "r": 0
+        }
+      ],
+      "selected": {
+        "bank_index": 17,
+        "order": 8,
+        "fields": [
+          11,
+          3,
+          17,
+          20,
+          32,
+          5,
+          100,
+          72
+        ],
+        "word": "",
+        "prefix": 2,
+        "r": 0,
+        "seed": {
+          "rows": [
+            24,
+            1,
+            3,
+            6,
+            14
+          ],
+          "root": 2,
+          "fields": [
+            11,
+            3,
+            17,
+            20,
+            32,
+            5,
+            100,
+            72
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          62,
+          124,
+          120,
+          80,
+          32,
+          8,
+          49
+        ],
+        "names": [
+          10,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          1,
+          2
+        ],
+        "H": 29
+      },
+      "target": {
+        "rows": [
+          24,
+          1,
+          131,
+          6,
+          14,
+          95,
+          31,
+          123
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          10,
+          200,
+          99
+        ],
+        "root": 99,
+        "mark": 2,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "prefix": [
+          10,
+          200
+        ],
+        "promoted_prefix_names": [],
+        "fresh_names": [
+          200
+        ],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "24",
+      "t": 2,
+      "target_H": 217,
+      "hit_count": 8,
+      "minimum_order_in_fixed_bank": 8,
+      "all_hits": [
+        {
+          "bank_index": 122,
+          "order": 8,
+          "fields": [
+            37,
+            11,
+            39,
+            90,
+            104,
+            13,
+            376,
+            202
+          ],
+          "word": "",
+          "prefix": 1,
+          "r": 0
+        },
+        {
+          "bank_index": 16,
+          "order": 9,
+          "fields": [
+            35,
+            5,
+            43,
+            91,
+            128,
+            5,
+            676,
+            431
+          ],
+          "word": "10",
+          "prefix": 1,
+          "r": 2
+        },
+        {
+          "bank_index": 19,
+          "order": 9,
+          "fields": [
+            65,
+            5,
+            103,
+            76,
+            128,
+            5,
+            976,
+            836
+          ],
+          "word": "10",
+          "prefix": 1,
+          "r": 2
+        },
+        {
+          "bank_index": 163,
+          "order": 9,
+          "fields": [
+            33,
+            4,
+            68,
+            46,
+            104,
+            13,
+            360,
+            326
+          ],
+          "word": "",
+          "prefix": 2,
+          "r": 0
+        },
+        {
+          "bank_index": 4,
+          "order": 10,
+          "fields": [
+            63,
+            1,
+            103,
+            77,
+            128,
+            1,
+            1872,
+            1583
+          ],
+          "word": "0110",
+          "prefix": 1,
+          "r": 9
+        },
+        {
+          "bank_index": 4,
+          "order": 10,
+          "fields": [
+            37,
+            1,
+            51,
+            45,
+            64,
+            1,
+            740,
+            517
+          ],
+          "word": "010",
+          "prefix": 2,
+          "r": 5
+        },
+        {
+          "bank_index": 15,
+          "order": 10,
+          "fields": [
+            63,
+            1,
+            103,
+            77,
+            128,
+            1,
+            1872,
+            1583
+          ],
+          "word": "110",
+          "prefix": 1,
+          "r": 4
+        },
+        {
+          "bank_index": 15,
+          "order": 10,
+          "fields": [
+            37,
+            1,
+            51,
+            45,
+            64,
+            1,
+            740,
+            517
+          ],
+          "word": "10",
+          "prefix": 2,
+          "r": 2
+        }
+      ],
+      "selected": {
+        "bank_index": 122,
+        "order": 8,
+        "fields": [
+          37,
+          11,
+          39,
+          90,
+          104,
+          13,
+          376,
+          202
+        ],
+        "word": "",
+        "prefix": 1,
+        "r": 0,
+        "seed": {
+          "rows": [
+            22,
+            44,
+            56,
+            49,
+            34,
+            1
+          ],
+          "root": 5,
+          "fields": [
+            37,
+            11,
+            39,
+            90,
+            104,
+            13,
+            376,
+            202
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          126,
+          124,
+          248,
+          240,
+          160,
+          64,
+          16,
+          99
+        ],
+        "names": [
+          10,
+          11,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          1,
+          2
+        ],
+        "H": 71
+      },
+      "target": {
+        "rows": [
+          22,
+          44,
+          56,
+          49,
+          34,
+          129,
+          63,
+          95
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          10,
+          99
+        ],
+        "root": 99,
+        "mark": 11,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11
+        ],
+        "prefix": [
+          10
+        ],
+        "promoted_prefix_names": [
+          11
+        ],
+        "fresh_names": [],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "24",
+      "t": 3,
+      "target_H": 469,
+      "hit_count": 10,
+      "minimum_order_in_fixed_bank": 9,
+      "all_hits": [
+        {
+          "bank_index": 113,
+          "order": 9,
+          "fields": [
+            115,
+            15,
+            141,
+            177,
+            240,
+            15,
+            1460,
+            969
+          ],
+          "word": "0",
+          "prefix": 1,
+          "r": 1
+        },
+        {
+          "bank_index": 3,
+          "order": 10,
+          "fields": [
+            97,
+            3,
+            99,
+            186,
+            192,
+            3,
+            2512,
+            1326
+          ],
+          "word": "0000",
+          "prefix": 1,
+          "r": 15
+        },
+        {
+          "bank_index": 26,
+          "order": 10,
+          "fields": [
+            97,
+            3,
+            99,
+            186,
+            192,
+            3,
+            2512,
+            1326
+          ],
+          "word": "000",
+          "prefix": 1,
+          "r": 7
+        },
+        {
+          "bank_index": 28,
+          "order": 10,
+          "fields": [
+            107,
+            5,
+            143,
+            181,
+            256,
+            5,
+            2600,
+            1771
+          ],
+          "word": "010",
+          "prefix": 1,
+          "r": 5
+        },
+        {
+          "bank_index": 124,
+          "order": 10,
+          "fields": [
+            97,
+            3,
+            99,
+            186,
+            192,
+            3,
+            2512,
+            1326
+          ],
+          "word": "00",
+          "prefix": 1,
+          "r": 3
+        },
+        {
+          "bank_index": 151,
+          "order": 10,
+          "fields": [
+            139,
+            5,
+            207,
+            165,
+            256,
+            5,
+            3040,
+            2383
+          ],
+          "word": "10",
+          "prefix": 1,
+          "r": 2
+        },
+        {
+          "bank_index": 160,
+          "order": 10,
+          "fields": [
+            107,
+            5,
+            143,
+            181,
+            256,
+            5,
+            2600,
+            1771
+          ],
+          "word": "10",
+          "prefix": 1,
+          "r": 2
+        },
+        {
+          "bank_index": 0,
+          "order": 11,
+          "fields": [
+            73,
+            1,
+            93,
+            99,
+            128,
+            1,
+            2128,
+            1541
+          ],
+          "word": "11100",
+          "prefix": 2,
+          "r": 24
+        },
+        {
+          "bank_index": 4,
+          "order": 11,
+          "fields": [
+            45,
+            1,
+            53,
+            53,
+            64,
+            1,
+            852,
+            541
+          ],
+          "word": "100",
+          "prefix": 3,
+          "r": 6
+        },
+        {
+          "bank_index": 93,
+          "order": 11,
+          "fields": [
+            45,
+            1,
+            53,
+            53,
+            64,
+            1,
+            852,
+            541
+          ],
+          "word": "0",
+          "prefix": 3,
+          "r": 1
+        }
+      ],
+      "selected": {
+        "bank_index": 113,
+        "order": 9,
+        "fields": [
+          115,
+          15,
+          141,
+          177,
+          240,
+          15,
+          1460,
+          969
+        ],
+        "word": "0",
+        "prefix": 1,
+        "r": 1,
+        "seed": {
+          "rows": [
+            38,
+            28,
+            56,
+            17,
+            33,
+            10
+          ],
+          "root": 2,
+          "fields": [
+            43,
+            6,
+            78,
+            57,
+            120,
+            15,
+            424,
+            363
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          254,
+          252,
+          248,
+          496,
+          480,
+          320,
+          128,
+          32,
+          199
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          1,
+          2
+        ],
+        "H": 155
+      },
+      "target": {
+        "rows": [
+          102,
+          92,
+          312,
+          81,
+          97,
+          74,
+          4,
+          127,
+          251
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          10,
+          99
+        ],
+        "root": 99,
+        "mark": 2,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12
+        ],
+        "prefix": [
+          10
+        ],
+        "promoted_prefix_names": [
+          11,
+          12
+        ],
+        "fresh_names": [],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "24",
+      "t": 4,
+      "target_H": 973,
+      "hit_count": 11,
+      "minimum_order_in_fixed_bank": 10,
+      "all_hits": [
+        {
+          "bank_index": 176,
+          "order": 10,
+          "fields": [
+            235,
+            13,
+            261,
+            369,
+            416,
+            13,
+            4408,
+            2603
+          ],
+          "word": "00",
+          "prefix": 1,
+          "r": 3
+        },
+        {
+          "bank_index": 95,
+          "order": 11,
+          "fields": [
+            69,
+            9,
+            95,
+            113,
+            168,
+            9,
+            996,
+            729
+          ],
+          "word": "0",
+          "prefix": 3,
+          "r": 1
+        },
+        {
+          "bank_index": 105,
+          "order": 11,
+          "fields": [
+            45,
+            7,
+            71,
+            58,
+            100,
+            11,
+            432,
+            338
+          ],
+          "word": "",
+          "prefix": 4,
+          "r": 0
+        },
+        {
+          "bank_index": 130,
+          "order": 11,
+          "fields": [
+            129,
+            9,
+            191,
+            211,
+            336,
+            9,
+            2808,
+            2253
+          ],
+          "word": "10",
+          "prefix": 2,
+          "r": 2
+        },
+        {
+          "bank_index": 133,
+          "order": 11,
+          "fields": [
+            201,
+            9,
+            335,
+            386,
+            672,
+            9,
+            6528,
+            5766
+          ],
+          "word": "110",
+          "prefix": 1,
+          "r": 4
+        },
+        {
+          "bank_index": 209,
+          "order": 11,
+          "fields": [
+            261,
+            9,
+            479,
+            356,
+            672,
+            9,
+            7512,
+            8304
+          ],
+          "word": "110",
+          "prefix": 1,
+          "r": 4
+        },
+        {
+          "bank_index": 212,
+          "order": 11,
+          "fields": [
+            57,
+            9,
+            71,
+            229,
+            336,
+            9,
+            1584,
+            1047
+          ],
+          "word": "10",
+          "prefix": 2,
+          "r": 2
+        },
+        {
+          "bank_index": 3,
+          "order": 12,
+          "fields": [
+            133,
+            3,
+            237,
+            210,
+            384,
+            3,
+            5192,
+            5154
+          ],
+          "word": "01110",
+          "prefix": 2,
+          "r": 17
+        },
+        {
+          "bank_index": 23,
+          "order": 12,
+          "fields": [
+            85,
+            3,
+            141,
+            111,
+            192,
+            3,
+            2080,
+            1821
+          ],
+          "word": "110",
+          "prefix": 3,
+          "r": 4
+        },
+        {
+          "bank_index": 23,
+          "order": 12,
+          "fields": [
+            13,
+            2,
+            18,
+            15,
+            24,
+            3,
+            104,
+            71
+          ],
+          "word": "",
+          "prefix": 6,
+          "r": 0
+        },
+        {
+          "bank_index": 26,
+          "order": 12,
+          "fields": [
+            133,
+            3,
+            237,
+            210,
+            384,
+            3,
+            5192,
+            5154
+          ],
+          "word": "1110",
+          "prefix": 2,
+          "r": 8
+        }
+      ],
+      "selected": {
+        "bank_index": 176,
+        "order": 10,
+        "fields": [
+          235,
+          13,
+          261,
+          369,
+          416,
+          13,
+          4408,
+          2603
+        ],
+        "word": "00",
+        "prefix": 1,
+        "r": 3,
+        "seed": {
+          "rows": [
+            6,
+            44,
+            24,
+            49,
+            35,
+            5
+          ],
+          "root": 4,
+          "fields": [
+            43,
+            7,
+            75,
+            57,
+            104,
+            13,
+            424,
+            347
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          510,
+          508,
+          504,
+          496,
+          992,
+          960,
+          640,
+          256,
+          64,
+          399
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          13,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          1,
+          2
+        ],
+        "H": 323
+      },
+      "target": {
+        "rows": [
+          198,
+          236,
+          216,
+          241,
+          547,
+          197,
+          144,
+          16,
+          255,
+          495
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          10,
+          99
+        ],
+        "root": 99,
+        "mark": 4,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13
+        ],
+        "prefix": [
+          10
+        ],
+        "promoted_prefix_names": [
+          11,
+          12,
+          13
+        ],
+        "fresh_names": [],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "24",
+      "t": 5,
+      "target_H": 1981,
+      "hit_count": 4,
+      "minimum_order_in_fixed_bank": 12,
+      "all_hits": [
+        {
+          "bank_index": 23,
+          "order": 12,
+          "fields": [
+            511,
+            3,
+            531,
+            735,
+            768,
+            3,
+            25768,
+            14133
+          ],
+          "word": "10000",
+          "prefix": 1,
+          "r": 30
+        },
+        {
+          "bank_index": 27,
+          "order": 12,
+          "fields": [
+            545,
+            5,
+            767,
+            718,
+            1024,
+            5,
+            27272,
+            20422
+          ],
+          "word": "10010",
+          "prefix": 1,
+          "r": 22
+        },
+        {
+          "bank_index": 150,
+          "order": 12,
+          "fields": [
+            351,
+            9,
+            559,
+            815,
+            1344,
+            9,
+            18768,
+            15285
+          ],
+          "word": "0110",
+          "prefix": 1,
+          "r": 9
+        },
+        {
+          "bank_index": 0,
+          "order": 13,
+          "fields": [
+            165,
+            1,
+            185,
+            227,
+            256,
+            1,
+            7140,
+            4495
+          ],
+          "word": "111000",
+          "prefix": 3,
+          "r": 56
+        }
+      ],
+      "selected": {
+        "bank_index": 23,
+        "order": 12,
+        "fields": [
+          511,
+          3,
+          531,
+          735,
+          768,
+          3,
+          25768,
+          14133
+        ],
+        "word": "10000",
+        "prefix": 1,
+        "r": 30,
+        "seed": {
+          "rows": [
+            18,
+            8,
+            3,
+            5,
+            14
+          ],
+          "root": 0,
+          "fields": [
+            13,
+            2,
+            18,
+            15,
+            24,
+            3,
+            104,
+            71
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          1022,
+          1020,
+          1016,
+          1008,
+          992,
+          1984,
+          1920,
+          1280,
+          512,
+          128,
+          799
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          1,
+          2
+        ],
+        "H": 659
+      },
+      "target": {
+        "rows": [
+          2098,
+          1000,
+          995,
+          997,
+          1006,
+          960,
+          897,
+          769,
+          513,
+          1,
+          1023,
+          2046
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14,
+          200,
+          10,
+          99
+        ],
+        "root": 99,
+        "mark": 0,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14,
+          200
+        ],
+        "prefix": [
+          10
+        ],
+        "promoted_prefix_names": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "fresh_names": [
+          200
+        ],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "24",
+      "t": 6,
+      "target_H": 3997,
+      "hit_count": 6,
+      "minimum_order_in_fixed_bank": 13,
+      "all_hits": [
+        {
+          "bank_index": 95,
+          "order": 13,
+          "fields": [
+            521,
+            9,
+            787,
+            869,
+            1344,
+            9,
+            23600,
+            19767
+          ],
+          "word": "1010",
+          "prefix": 2,
+          "r": 10
+        },
+        {
+          "bank_index": 195,
+          "order": 13,
+          "fields": [
+            323,
+            9,
+            451,
+            1837,
+            2688,
+            9,
+            32020,
+            22605
+          ],
+          "word": "01010",
+          "prefix": 1,
+          "r": 21
+        },
+        {
+          "bank_index": 82,
+          "order": 14,
+          "fields": [
+            29,
+            3,
+            83,
+            31,
+            100,
+            11,
+            320,
+            393
+          ],
+          "word": "",
+          "prefix": 7,
+          "r": 0
+        },
+        {
+          "bank_index": 129,
+          "order": 14,
+          "fields": [
+            29,
+            2,
+            86,
+            31,
+            104,
+            13,
+            320,
+            397
+          ],
+          "word": "",
+          "prefix": 7,
+          "r": 0
+        },
+        {
+          "bank_index": 132,
+          "order": 14,
+          "fields": [
+            29,
+            2,
+            50,
+            31,
+            64,
+            5,
+            320,
+            265
+          ],
+          "word": "",
+          "prefix": 7,
+          "r": 0
+        },
+        {
+          "bank_index": 198,
+          "order": 14,
+          "fields": [
+            29,
+            3,
+            89,
+            31,
+            104,
+            13,
+            320,
+            405
+          ],
+          "word": "",
+          "prefix": 7,
+          "r": 0
+        }
+      ],
+      "selected": {
+        "bank_index": 95,
+        "order": 13,
+        "fields": [
+          521,
+          9,
+          787,
+          869,
+          1344,
+          9,
+          23600,
+          19767
+        ],
+        "word": "1010",
+        "prefix": 2,
+        "r": 10,
+        "seed": {
+          "rows": [
+            38,
+            60,
+            56,
+            49,
+            1,
+            16
+          ],
+          "root": 2,
+          "fields": [
+            19,
+            2,
+            52,
+            29,
+            84,
+            9,
+            256,
+            271
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          2046,
+          2044,
+          2040,
+          2032,
+          2016,
+          1984,
+          3968,
+          3840,
+          2560,
+          1024,
+          256,
+          1599
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          1,
+          2
+        ],
+        "H": 1331
+      },
+      "target": {
+        "rows": [
+          998,
+          1020,
+          4472,
+          1009,
+          961,
+          976,
+          896,
+          772,
+          512,
+          4,
+          3071,
+          1023,
+          4091
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          12,
+          13,
+          14,
+          15,
+          200,
+          10,
+          11,
+          99
+        ],
+        "root": 99,
+        "mark": 2,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          12,
+          13,
+          14,
+          15,
+          200
+        ],
+        "prefix": [
+          10,
+          11
+        ],
+        "promoted_prefix_names": [
+          12,
+          13,
+          14,
+          15
+        ],
+        "fresh_names": [
+          200
+        ],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "24",
+      "t": 7,
+      "target_H": 8029,
+      "hit_count": 2,
+      "minimum_order_in_fixed_bank": 14,
+      "all_hits": [
+        {
+          "bank_index": 111,
+          "order": 14,
+          "fields": [
+            2043,
+            9,
+            3655,
+            2993,
+            5376,
+            9,
+            196872,
+            192927
+          ],
+          "word": "001110",
+          "prefix": 1,
+          "r": 35
+        },
+        {
+          "bank_index": 136,
+          "order": 14,
+          "fields": [
+            485,
+            11,
+            797,
+            943,
+            1600,
+            11,
+            22856,
+            20233
+          ],
+          "word": "0110",
+          "prefix": 3,
+          "r": 9
+        }
+      ],
+      "selected": {
+        "bank_index": 111,
+        "order": 14,
+        "fields": [
+          2043,
+          9,
+          3655,
+          2993,
+          5376,
+          9,
+          196872,
+          192927
+        ],
+        "word": "001110",
+        "prefix": 1,
+        "r": 35,
+        "seed": {
+          "rows": [
+            38,
+            28,
+            56,
+            17,
+            33,
+            10
+          ],
+          "root": 0,
+          "fields": [
+            43,
+            6,
+            64,
+            53,
+            84,
+            9,
+            424,
+            315
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          4094,
+          4092,
+          4088,
+          4080,
+          4064,
+          4032,
+          3968,
+          7936,
+          7680,
+          5120,
+          2048,
+          512,
+          3199
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          1,
+          2
+        ],
+        "H": 2675
+      },
+      "target": {
+        "rows": [
+          10022,
+          4060,
+          4088,
+          4049,
+          4065,
+          4042,
+          3969,
+          3841,
+          3584,
+          3072,
+          2048,
+          1,
+          4095,
+          8190
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          200,
+          10,
+          99
+        ],
+        "root": 99,
+        "mark": 0,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          200
+        ],
+        "prefix": [
+          10
+        ],
+        "promoted_prefix_names": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "fresh_names": [
+          200
+        ],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "24",
+      "t": 8,
+      "target_H": 16093,
+      "hit_count": 5,
+      "minimum_order_in_fixed_bank": 15,
+      "all_hits": [
+        {
+          "bank_index": 16,
+          "order": 15,
+          "fields": [
+            301,
+            5,
+            309,
+            987,
+            1024,
+            5,
+            17440,
+            9205
+          ],
+          "word": "10000",
+          "prefix": 4,
+          "r": 30
+        },
+        {
+          "bank_index": 17,
+          "order": 15,
+          "fields": [
+            3125,
+            5,
+            3937,
+            6484,
+            8192,
+            5,
+            543832,
+            394760
+          ],
+          "word": "10101100",
+          "prefix": 1,
+          "r": 202
+        },
+        {
+          "bank_index": 162,
+          "order": 15,
+          "fields": [
+            93,
+            9,
+            119,
+            125,
+            168,
+            9,
+            1260,
+            849
+          ],
+          "word": "0",
+          "prefix": 7,
+          "r": 1
+        },
+        {
+          "bank_index": 0,
+          "order": 16,
+          "fields": [
+            2513,
+            1,
+            3029,
+            3395,
+            4096,
+            1,
+            554164,
+            385759
+          ],
+          "word": "1111010100",
+          "prefix": 2,
+          "r": 848
+        },
+        {
+          "bank_index": 9,
+          "order": 16,
+          "fields": [
+            445,
+            1,
+            465,
+            489,
+            512,
+            1,
+            27688,
+            15659
+          ],
+          "word": "10000",
+          "prefix": 5,
+          "r": 30
+        }
+      ],
+      "selected": {
+        "bank_index": 16,
+        "order": 15,
+        "fields": [
+          301,
+          5,
+          309,
+          987,
+          1024,
+          5,
+          17440,
+          9205
+        ],
+        "word": "10000",
+        "prefix": 4,
+        "r": 30,
+        "seed": {
+          "rows": [
+            24,
+            1,
+            3,
+            6,
+            14
+          ],
+          "root": 1,
+          "fields": [
+            11,
+            4,
+            12,
+            27,
+            32,
+            5,
+            100,
+            55
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          8190,
+          8188,
+          8184,
+          8176,
+          8160,
+          8128,
+          8064,
+          7936,
+          15872,
+          15360,
+          10240,
+          4096,
+          1024,
+          6399
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          1,
+          2
+        ],
+        "H": 5363
+      },
+      "target": {
+        "rows": [
+          1016,
+          16417,
+          995,
+          998,
+          1006,
+          960,
+          898,
+          770,
+          514,
+          2,
+          15359,
+          13311,
+          9215,
+          1023,
+          16381
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          14,
+          15,
+          16,
+          17,
+          200,
+          10,
+          11,
+          12,
+          13,
+          99
+        ],
+        "root": 99,
+        "mark": 1,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          14,
+          15,
+          16,
+          17,
+          200
+        ],
+        "prefix": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "promoted_prefix_names": [
+          14,
+          15,
+          16,
+          17
+        ],
+        "fresh_names": [
+          200
+        ],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "24",
+      "t": 9,
+      "target_H": 32221,
+      "hit_count": 9,
+      "minimum_order_in_fixed_bank": 15,
+      "all_hits": [
+        {
+          "bank_index": 113,
+          "order": 15,
+          "fields": [
+            2005,
+            15,
+            2031,
+            3777,
+            3840,
+            15,
+            120020,
+            62889
+          ],
+          "word": "00000",
+          "prefix": 3,
+          "r": 31
+        },
+        {
+          "bank_index": 100,
+          "order": 16,
+          "fields": [
+            5669,
+            11,
+            10901,
+            6638,
+            12800,
+            11,
+            689320,
+            841670
+          ],
+          "word": "1011110",
+          "prefix": 2,
+          "r": 66
+        },
+        {
+          "bank_index": 156,
+          "order": 16,
+          "fields": [
+            4021,
+            11,
+            7269,
+            7050,
+            12800,
+            11,
+            576008,
+            590570
+          ],
+          "word": "1001110",
+          "prefix": 2,
+          "r": 70
+        },
+        {
+          "bank_index": 216,
+          "order": 16,
+          "fields": [
+            4253,
+            9,
+            6515,
+            13984,
+            21504,
+            9,
+            1112648,
+            941916
+          ],
+          "word": "10011010",
+          "prefix": 1,
+          "r": 166
+        },
+        {
+          "bank_index": 0,
+          "order": 17,
+          "fields": [
+            8071,
+            1,
+            10947,
+            12075,
+            16384,
+            1,
+            4141700,
+            2879791
+          ],
+          "word": "101011000010",
+          "prefix": 1,
+          "r": 3018
+        },
+        {
+          "bank_index": 0,
+          "order": 17,
+          "fields": [
+            4289,
+            1,
+            5029,
+            6983,
+            8192,
+            1,
+            1406048,
+            912377
+          ],
+          "word": "01110100100",
+          "prefix": 2,
+          "r": 1745
+        },
+        {
+          "bank_index": 1,
+          "order": 17,
+          "fields": [
+            4289,
+            1,
+            5029,
+            6983,
+            8192,
+            1,
+            1406048,
+            912377
+          ],
+          "word": "1110100100",
+          "prefix": 2,
+          "r": 872
+        },
+        {
+          "bank_index": 10,
+          "order": 17,
+          "fields": [
+            8071,
+            1,
+            10947,
+            12075,
+            16384,
+            1,
+            4141700,
+            2879791
+          ],
+          "word": "1011000010",
+          "prefix": 1,
+          "r": 754
+        },
+        {
+          "bank_index": 53,
+          "order": 17,
+          "fields": [
+            10363,
+            1,
+            15531,
+            10929,
+            16384,
+            1,
+            4955252,
+            4096681
+          ],
+          "word": "010101010",
+          "prefix": 1,
+          "r": 341
+        }
+      ],
+      "selected": {
+        "bank_index": 113,
+        "order": 15,
+        "fields": [
+          2005,
+          15,
+          2031,
+          3777,
+          3840,
+          15,
+          120020,
+          62889
+        ],
+        "word": "00000",
+        "prefix": 3,
+        "r": 31,
+        "seed": {
+          "rows": [
+            38,
+            28,
+            56,
+            17,
+            33,
+            10
+          ],
+          "root": 2,
+          "fields": [
+            43,
+            6,
+            78,
+            57,
+            120,
+            15,
+            424,
+            363
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          16382,
+          16380,
+          16376,
+          16368,
+          16352,
+          16320,
+          16256,
+          16128,
+          15872,
+          31744,
+          30720,
+          20480,
+          8192,
+          2048,
+          12799
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          1,
+          2
+        ],
+        "H": 10739
+      },
+      "target": {
+        "rows": [
+          2022,
+          2012,
+          16440,
+          2001,
+          2017,
+          1994,
+          1924,
+          1796,
+          1540,
+          1028,
+          4,
+          14335,
+          10239,
+          2047,
+          16379
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          10,
+          11,
+          12,
+          99
+        ],
+        "root": 99,
+        "mark": 2,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "prefix": [
+          10,
+          11,
+          12
+        ],
+        "promoted_prefix_names": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "fresh_names": [],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "24",
+      "t": 10,
+      "target_H": 64477,
+      "hit_count": 6,
+      "minimum_order_in_fixed_bank": 17,
+      "all_hits": [
+        {
+          "bank_index": 16,
+          "order": 17,
+          "fields": [
+            2821,
+            5,
+            2997,
+            7707,
+            8192,
+            5,
+            552740,
+            327575
+          ],
+          "word": "11110000",
+          "prefix": 3,
+          "r": 240
+        },
+        {
+          "bank_index": 46,
+          "order": 17,
+          "fields": [
+            6045,
+            9,
+            8867,
+            29216,
+            43008,
+            9,
+            2287944,
+            1731228
+          ],
+          "word": "001001010",
+          "prefix": 1,
+          "r": 347
+        },
+        {
+          "bank_index": 164,
+          "order": 17,
+          "fields": [
+            4093,
+            11,
+            6909,
+            7548,
+            12800,
+            11,
+            595160,
+            541592
+          ],
+          "word": "0010110",
+          "prefix": 3,
+          "r": 75
+        },
+        {
+          "bank_index": 0,
+          "order": 18,
+          "fields": [
+            17303,
+            1,
+            24035,
+            23587,
+            32768,
+            1,
+            13664552,
+            10338917
+          ],
+          "word": "1110111100010",
+          "prefix": 1,
+          "r": 5896
+        },
+        {
+          "bank_index": 9,
+          "order": 18,
+          "fields": [
+            19691,
+            1,
+            28811,
+            22393,
+            32768,
+            1,
+            13767632,
+            10489955
+          ],
+          "word": "00010001010",
+          "prefix": 1,
+          "r": 1399
+        },
+        {
+          "bank_index": 29,
+          "order": 18,
+          "fields": [
+            19691,
+            1,
+            28811,
+            22393,
+            32768,
+            1,
+            13767632,
+            10489955
+          ],
+          "word": "0010001010",
+          "prefix": 1,
+          "r": 699
+        }
+      ],
+      "selected": {
+        "bank_index": 16,
+        "order": 17,
+        "fields": [
+          2821,
+          5,
+          2997,
+          7707,
+          8192,
+          5,
+          552740,
+          327575
+        ],
+        "word": "11110000",
+        "prefix": 3,
+        "r": 240,
+        "seed": {
+          "rows": [
+            24,
+            1,
+            3,
+            6,
+            14
+          ],
+          "root": 1,
+          "fields": [
+            11,
+            4,
+            12,
+            27,
+            32,
+            5,
+            100,
+            55
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          32766,
+          32764,
+          32760,
+          32752,
+          32736,
+          32704,
+          32640,
+          32512,
+          32256,
+          31744,
+          63488,
+          61440,
+          40960,
+          16384,
+          4096,
+          25599
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          1,
+          2
+        ],
+        "H": 21491
+      },
+      "target": {
+        "rows": [
+          8184,
+          66017,
+          8163,
+          8166,
+          8174,
+          8128,
+          8064,
+          7936,
+          7680,
+          7170,
+          6146,
+          4098,
+          2,
+          57343,
+          40959,
+          8191,
+          65533
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          200,
+          10,
+          11,
+          12,
+          99
+        ],
+        "root": 99,
+        "mark": 1,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          200
+        ],
+        "prefix": [
+          10,
+          11,
+          12
+        ],
+        "promoted_prefix_names": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "fresh_names": [
+          200
+        ],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "44",
+      "t": 1,
+      "target_H": 97,
+      "hit_count": 6,
+      "minimum_order_in_fixed_bank": 8,
+      "all_hits": [
+        {
+          "bank_index": 201,
+          "order": 8,
+          "fields": [
+            31,
+            3,
+            51,
+            33,
+            64,
+            5,
+            328,
+            267
+          ],
+          "word": "",
+          "prefix": 1,
+          "r": 0
+        },
+        {
+          "bank_index": 0,
+          "order": 9,
+          "fields": [
+            27,
+            1,
+            47,
+            35,
+            64,
+            1,
+            564,
+            535
+          ],
+          "word": "1110",
+          "prefix": 1,
+          "r": 8
+        },
+        {
+          "bank_index": 0,
+          "order": 9,
+          "fields": [
+            9,
+            1,
+            11,
+            11,
+            16,
+            1,
+            84,
+            55
+          ],
+          "word": "10",
+          "prefix": 3,
+          "r": 2
+        },
+        {
+          "bank_index": 10,
+          "order": 9,
+          "fields": [
+            9,
+            1,
+            11,
+            11,
+            16,
+            1,
+            84,
+            55
+          ],
+          "word": "",
+          "prefix": 3,
+          "r": 0
+        },
+        {
+          "bank_index": 13,
+          "order": 9,
+          "fields": [
+            9,
+            1,
+            23,
+            11,
+            32,
+            5,
+            84,
+            91
+          ],
+          "word": "",
+          "prefix": 3,
+          "r": 0
+        },
+        {
+          "bank_index": 209,
+          "order": 9,
+          "fields": [
+            17,
+            1,
+            61,
+            20,
+            84,
+            9,
+            224,
+            320
+          ],
+          "word": "",
+          "prefix": 2,
+          "r": 0
+        }
+      ],
+      "selected": {
+        "bank_index": 201,
+        "order": 8,
+        "fields": [
+          31,
+          3,
+          51,
+          33,
+          64,
+          5,
+          328,
+          267
+        ],
+        "word": "",
+        "prefix": 1,
+        "r": 0,
+        "seed": {
+          "rows": [
+            42,
+            60,
+            25,
+            48,
+            33,
+            4
+          ],
+          "root": 0,
+          "fields": [
+            31,
+            3,
+            51,
+            33,
+            64,
+            5,
+            328,
+            267
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          62,
+          124,
+          56,
+          112,
+          32,
+          64,
+          21
+        ],
+        "names": [
+          10,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          2,
+          4
+        ],
+        "H": 31
+      },
+      "target": {
+        "rows": [
+          170,
+          60,
+          25,
+          48,
+          33,
+          4,
+          63,
+          126
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          200,
+          10,
+          99
+        ],
+        "root": 99,
+        "mark": 0,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          200
+        ],
+        "prefix": [
+          10
+        ],
+        "promoted_prefix_names": [],
+        "fresh_names": [
+          200
+        ],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "44",
+      "t": 2,
+      "target_H": 223,
+      "hit_count": 4,
+      "minimum_order_in_fixed_bank": 9,
+      "all_hits": [
+        {
+          "bank_index": 44,
+          "order": 9,
+          "fields": [
+            23,
+            5,
+            31,
+            50,
+            84,
+            9,
+            272,
+            190
+          ],
+          "word": "",
+          "prefix": 2,
+          "r": 0
+        },
+        {
+          "bank_index": 9,
+          "order": 10,
+          "fields": [
+            23,
+            1,
+            29,
+            25,
+            32,
+            1,
+            296,
+            203
+          ],
+          "word": "0",
+          "prefix": 3,
+          "r": 1
+        },
+        {
+          "bank_index": 29,
+          "order": 10,
+          "fields": [
+            23,
+            1,
+            29,
+            25,
+            32,
+            1,
+            296,
+            203
+          ],
+          "word": "",
+          "prefix": 3,
+          "r": 0
+        },
+        {
+          "bank_index": 140,
+          "order": 10,
+          "fields": [
+            23,
+            2,
+            68,
+            25,
+            84,
+            9,
+            272,
+            343
+          ],
+          "word": "",
+          "prefix": 3,
+          "r": 0
+        }
+      ],
+      "selected": {
+        "bank_index": 44,
+        "order": 9,
+        "fields": [
+          23,
+          5,
+          31,
+          50,
+          84,
+          9,
+          272,
+          190
+        ],
+        "word": "",
+        "prefix": 2,
+        "r": 0,
+        "seed": {
+          "rows": [
+            46,
+            60,
+            24,
+            48,
+            33,
+            4
+          ],
+          "root": 3,
+          "fields": [
+            23,
+            5,
+            31,
+            50,
+            84,
+            9,
+            272,
+            190
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          126,
+          124,
+          248,
+          112,
+          224,
+          64,
+          128,
+          43
+        ],
+        "names": [
+          10,
+          11,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          2,
+          4
+        ],
+        "H": 73
+      },
+      "target": {
+        "rows": [
+          46,
+          60,
+          24,
+          304,
+          33,
+          4,
+          191,
+          63,
+          247
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          200,
+          10,
+          11,
+          99
+        ],
+        "root": 99,
+        "mark": 3,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          200
+        ],
+        "prefix": [
+          10,
+          11
+        ],
+        "promoted_prefix_names": [],
+        "fresh_names": [
+          200
+        ],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "44",
+      "t": 3,
+      "target_H": 475,
+      "hit_count": 3,
+      "minimum_order_in_fixed_bank": 10,
+      "all_hits": [
+        {
+          "bank_index": 112,
+          "order": 10,
+          "fields": [
+            43,
+            6,
+            72,
+            54,
+            104,
+            13,
+            424,
+            342
+          ],
+          "word": "",
+          "prefix": 3,
+          "r": 0
+        },
+        {
+          "bank_index": 0,
+          "order": 11,
+          "fields": [
+            63,
+            1,
+            77,
+            103,
+            128,
+            1,
+            1872,
+            1217
+          ],
+          "word": "01100",
+          "prefix": 2,
+          "r": 25
+        },
+        {
+          "bank_index": 1,
+          "order": 11,
+          "fields": [
+            63,
+            1,
+            77,
+            103,
+            128,
+            1,
+            1872,
+            1217
+          ],
+          "word": "1100",
+          "prefix": 2,
+          "r": 12
+        }
+      ],
+      "selected": {
+        "bank_index": 112,
+        "order": 10,
+        "fields": [
+          43,
+          6,
+          72,
+          54,
+          104,
+          13,
+          424,
+          342
+        ],
+        "word": "",
+        "prefix": 3,
+        "r": 0,
+        "seed": {
+          "rows": [
+            38,
+            28,
+            56,
+            17,
+            33,
+            10
+          ],
+          "root": 1,
+          "fields": [
+            43,
+            6,
+            72,
+            54,
+            104,
+            13,
+            424,
+            342
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          254,
+          252,
+          248,
+          496,
+          224,
+          448,
+          128,
+          256,
+          87
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          2,
+          4
+        ],
+        "H": 157
+      },
+      "target": {
+        "rows": [
+          38,
+          540,
+          56,
+          17,
+          33,
+          10,
+          447,
+          319,
+          63,
+          509
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          200,
+          10,
+          11,
+          12,
+          99
+        ],
+        "root": 99,
+        "mark": 1,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          200
+        ],
+        "prefix": [
+          10,
+          11,
+          12
+        ],
+        "promoted_prefix_names": [],
+        "fresh_names": [
+          200
+        ],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "44",
+      "t": 4,
+      "target_H": 979,
+      "hit_count": 7,
+      "minimum_order_in_fixed_bank": 10,
+      "all_hits": [
+        {
+          "bank_index": 154,
+          "order": 10,
+          "fields": [
+            277,
+            13,
+            321,
+            351,
+            416,
+            13,
+            4984,
+            3197
+          ],
+          "word": "00",
+          "prefix": 1,
+          "r": 3
+        },
+        {
+          "bank_index": 19,
+          "order": 11,
+          "fields": [
+            163,
+            5,
+            201,
+            204,
+            256,
+            5,
+            3472,
+            2380
+          ],
+          "word": "100",
+          "prefix": 2,
+          "r": 6
+        },
+        {
+          "bank_index": 21,
+          "order": 11,
+          "fields": [
+            59,
+            5,
+            61,
+            115,
+            128,
+            5,
+            940,
+            515
+          ],
+          "word": "00",
+          "prefix": 3,
+          "r": 3
+        },
+        {
+          "bank_index": 67,
+          "order": 11,
+          "fields": [
+            95,
+            9,
+            127,
+            221,
+            336,
+            9,
+            2216,
+            1587
+          ],
+          "word": "10",
+          "prefix": 2,
+          "r": 2
+        },
+        {
+          "bank_index": 183,
+          "order": 11,
+          "fields": [
+            59,
+            5,
+            61,
+            115,
+            128,
+            5,
+            940,
+            515
+          ],
+          "word": "0",
+          "prefix": 3,
+          "r": 1
+        },
+        {
+          "bank_index": 188,
+          "order": 11,
+          "fields": [
+            239,
+            9,
+            415,
+            370,
+            672,
+            9,
+            7096,
+            6954
+          ],
+          "word": "110",
+          "prefix": 1,
+          "r": 4
+        },
+        {
+          "bank_index": 201,
+          "order": 11,
+          "fields": [
+            273,
+            5,
+            383,
+            353,
+            512,
+            5,
+            8724,
+            6377
+          ],
+          "word": "010",
+          "prefix": 1,
+          "r": 5
+        }
+      ],
+      "selected": {
+        "bank_index": 154,
+        "order": 10,
+        "fields": [
+          277,
+          13,
+          321,
+          351,
+          416,
+          13,
+          4984,
+          3197
+        ],
+        "word": "00",
+        "prefix": 1,
+        "r": 3,
+        "seed": {
+          "rows": [
+            54,
+            12,
+            56,
+            17,
+            34,
+            10
+          ],
+          "root": 0,
+          "fields": [
+            37,
+            4,
+            90,
+            39,
+            104,
+            13,
+            376,
+            413
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          510,
+          508,
+          504,
+          496,
+          992,
+          448,
+          896,
+          256,
+          512,
+          175
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          13,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          2,
+          4
+        ],
+        "H": 325
+      },
+      "target": {
+        "rows": [
+          566,
+          204,
+          248,
+          209,
+          226,
+          202,
+          129,
+          1,
+          255,
+          510
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          10,
+          99
+        ],
+        "root": 99,
+        "mark": 0,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13
+        ],
+        "prefix": [
+          10
+        ],
+        "promoted_prefix_names": [
+          11,
+          12,
+          13
+        ],
+        "fresh_names": [],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "44",
+      "t": 5,
+      "target_H": 1987,
+      "hit_count": 5,
+      "minimum_order_in_fixed_bank": 12,
+      "all_hits": [
+        {
+          "bank_index": 94,
+          "order": 12,
+          "fields": [
+            603,
+            9,
+            1159,
+            692,
+            1344,
+            9,
+            23280,
+            28164
+          ],
+          "word": "1110",
+          "prefix": 1,
+          "r": 8
+        },
+        {
+          "bank_index": 133,
+          "order": 12,
+          "fields": [
+            375,
+            9,
+            607,
+            806,
+            1344,
+            9,
+            18360,
+            15366
+          ],
+          "word": "0110",
+          "prefix": 1,
+          "r": 9
+        },
+        {
+          "bank_index": 195,
+          "order": 12,
+          "fields": [
+            59,
+            9,
+            71,
+            241,
+            336,
+            9,
+            1712,
+            1083
+          ],
+          "word": "10",
+          "prefix": 3,
+          "r": 2
+        },
+        {
+          "bank_index": 0,
+          "order": 13,
+          "fields": [
+            139,
+            1,
+            153,
+            231,
+            256,
+            1,
+            5972,
+            3523
+          ],
+          "word": "011000",
+          "prefix": 3,
+          "r": 57
+        },
+        {
+          "bank_index": 1,
+          "order": 13,
+          "fields": [
+            139,
+            1,
+            153,
+            231,
+            256,
+            1,
+            5972,
+            3523
+          ],
+          "word": "11000",
+          "prefix": 3,
+          "r": 28
+        }
+      ],
+      "selected": {
+        "bank_index": 94,
+        "order": 12,
+        "fields": [
+          603,
+          9,
+          1159,
+          692,
+          1344,
+          9,
+          23280,
+          28164
+        ],
+        "word": "1110",
+        "prefix": 1,
+        "r": 8,
+        "seed": {
+          "rows": [
+            38,
+            60,
+            56,
+            49,
+            1,
+            16
+          ],
+          "root": 1,
+          "fields": [
+            19,
+            1,
+            73,
+            20,
+            84,
+            9,
+            256,
+            356
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          1022,
+          1020,
+          1016,
+          1008,
+          992,
+          1984,
+          896,
+          1792,
+          512,
+          1024,
+          351
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          2,
+          4
+        ],
+        "H": 661
+      },
+      "target": {
+        "rows": [
+          998,
+          2556,
+          1016,
+          1009,
+          961,
+          976,
+          896,
+          768,
+          512,
+          2,
+          1023,
+          2045
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14,
+          200,
+          10,
+          99
+        ],
+        "root": 99,
+        "mark": 1,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14,
+          200
+        ],
+        "prefix": [
+          10
+        ],
+        "promoted_prefix_names": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "fresh_names": [
+          200
+        ],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "44",
+      "t": 6,
+      "target_H": 4003,
+      "hit_count": 7,
+      "minimum_order_in_fixed_bank": 12,
+      "all_hits": [
+        {
+          "bank_index": 42,
+          "order": 12,
+          "fields": [
+            1037,
+            13,
+            1157,
+            1483,
+            1664,
+            13,
+            41504,
+            26261
+          ],
+          "word": "1000",
+          "prefix": 1,
+          "r": 14
+        },
+        {
+          "bank_index": 21,
+          "order": 13,
+          "fields": [
+            115,
+            5,
+            117,
+            243,
+            256,
+            5,
+            2680,
+            1417
+          ],
+          "word": "000",
+          "prefix": 4,
+          "r": 7
+        },
+        {
+          "bank_index": 33,
+          "order": 13,
+          "fields": [
+            163,
+            9,
+            219,
+            480,
+            672,
+            9,
+            6296,
+            4308
+          ],
+          "word": "010",
+          "prefix": 3,
+          "r": 5
+        },
+        {
+          "bank_index": 125,
+          "order": 13,
+          "fields": [
+            507,
+            9,
+            755,
+            874,
+            1344,
+            9,
+            24552,
+            20010
+          ],
+          "word": "1010",
+          "prefix": 2,
+          "r": 10
+        },
+        {
+          "bank_index": 126,
+          "order": 13,
+          "fields": [
+            1129,
+            5,
+            1599,
+            1437,
+            2048,
+            5,
+            78740,
+            59069
+          ],
+          "word": "10010",
+          "prefix": 1,
+          "r": 22
+        },
+        {
+          "bank_index": 130,
+          "order": 13,
+          "fields": [
+            893,
+            9,
+            1519,
+            1555,
+            2688,
+            9,
+            62596,
+            59487
+          ],
+          "word": "10110",
+          "prefix": 1,
+          "r": 18
+        },
+        {
+          "bank_index": 183,
+          "order": 13,
+          "fields": [
+            115,
+            5,
+            117,
+            243,
+            256,
+            5,
+            2680,
+            1417
+          ],
+          "word": "00",
+          "prefix": 4,
+          "r": 3
+        }
+      ],
+      "selected": {
+        "bank_index": 42,
+        "order": 12,
+        "fields": [
+          1037,
+          13,
+          1157,
+          1483,
+          1664,
+          13,
+          41504,
+          26261
+        ],
+        "word": "1000",
+        "prefix": 1,
+        "r": 14,
+        "seed": {
+          "rows": [
+            46,
+            60,
+            24,
+            48,
+            33,
+            4
+          ],
+          "root": 1,
+          "fields": [
+            23,
+            2,
+            78,
+            27,
+            104,
+            13,
+            272,
+            373
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          2046,
+          2044,
+          2040,
+          2032,
+          2016,
+          1984,
+          3968,
+          1792,
+          3584,
+          1024,
+          2048,
+          703
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          2,
+          4
+        ],
+        "H": 1333
+      },
+      "target": {
+        "rows": [
+          1006,
+          2172,
+          984,
+          1008,
+          993,
+          964,
+          896,
+          770,
+          514,
+          2,
+          1023,
+          2045
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14,
+          15,
+          10,
+          99
+        ],
+        "root": 99,
+        "mark": 1,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "prefix": [
+          10
+        ],
+        "promoted_prefix_names": [
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "fresh_names": [],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "44",
+      "t": 7,
+      "target_H": 8035,
+      "hit_count": 5,
+      "minimum_order_in_fixed_bank": 13,
+      "all_hits": [
+        {
+          "bank_index": 185,
+          "order": 13,
+          "fields": [
+            1497,
+            13,
+            1517,
+            3269,
+            3328,
+            13,
+            96444,
+            50713
+          ],
+          "word": "00000",
+          "prefix": 1,
+          "r": 31
+        },
+        {
+          "bank_index": 28,
+          "order": 14,
+          "fields": [
+            1039,
+            5,
+            1209,
+            1749,
+            2048,
+            5,
+            76748,
+            47849
+          ],
+          "word": "100100",
+          "prefix": 2,
+          "r": 54
+        },
+        {
+          "bank_index": 42,
+          "order": 14,
+          "fields": [
+            1271,
+            13,
+            2483,
+            1691,
+            3328,
+            13,
+            69076,
+            88975
+          ],
+          "word": "11110",
+          "prefix": 2,
+          "r": 16
+        },
+        {
+          "bank_index": 145,
+          "order": 14,
+          "fields": [
+            131,
+            13,
+            203,
+            494,
+            832,
+            13,
+            4936,
+            3958
+          ],
+          "word": "110",
+          "prefix": 4,
+          "r": 4
+        },
+        {
+          "bank_index": 157,
+          "order": 14,
+          "fields": [
+            2053,
+            5,
+            2799,
+            2991,
+            4096,
+            5,
+            212152,
+            145921
+          ],
+          "word": "100010",
+          "prefix": 1,
+          "r": 46
+        }
+      ],
+      "selected": {
+        "bank_index": 185,
+        "order": 13,
+        "fields": [
+          1497,
+          13,
+          1517,
+          3269,
+          3328,
+          13,
+          96444,
+          50713
+        ],
+        "word": "00000",
+        "prefix": 1,
+        "r": 31,
+        "seed": {
+          "rows": [
+            46,
+            20,
+            56,
+            50,
+            33,
+            2
+          ],
+          "root": 3,
+          "fields": [
+            31,
+            4,
+            60,
+            45,
+            104,
+            13,
+            328,
+            299
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          4094,
+          4092,
+          4088,
+          4080,
+          4064,
+          4032,
+          3968,
+          7936,
+          3584,
+          7168,
+          2048,
+          4096,
+          1407
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          2,
+          4
+        ],
+        "H": 2677
+      },
+      "target": {
+        "rows": [
+          2030,
+          2004,
+          2040,
+          4146,
+          2017,
+          1986,
+          1928,
+          1800,
+          1544,
+          1032,
+          8,
+          2047,
+          4087
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          10,
+          99
+        ],
+        "root": 99,
+        "mark": 3,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "prefix": [
+          10
+        ],
+        "promoted_prefix_names": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "fresh_names": [],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "44",
+      "t": 8,
+      "target_H": 16099,
+      "hit_count": 3,
+      "minimum_order_in_fixed_bank": 15,
+      "all_hits": [
+        {
+          "bank_index": 6,
+          "order": 15,
+          "fields": [
+            539,
+            5,
+            565,
+            1945,
+            2048,
+            5,
+            49156,
+            27401
+          ],
+          "word": "110000",
+          "prefix": 3,
+          "r": 60
+        },
+        {
+          "bank_index": 35,
+          "order": 15,
+          "fields": [
+            771,
+            9,
+            1067,
+            958,
+            1344,
+            9,
+            34152,
+            24870
+          ],
+          "word": "0010",
+          "prefix": 4,
+          "r": 11
+        },
+        {
+          "bank_index": 74,
+          "order": 15,
+          "fields": [
+            1325,
+            11,
+            2269,
+            7387,
+            12800,
+            11,
+            269284,
+            251207
+          ],
+          "word": "0110110",
+          "prefix": 1,
+          "r": 73
+        }
+      ],
+      "selected": {
+        "bank_index": 6,
+        "order": 15,
+        "fields": [
+          539,
+          5,
+          565,
+          1945,
+          2048,
+          5,
+          49156,
+          27401
+        ],
+        "word": "110000",
+        "prefix": 3,
+        "r": 60,
+        "seed": {
+          "rows": [
+            16,
+            1,
+            3,
+            7,
+            14
+          ],
+          "root": 1,
+          "fields": [
+            9,
+            4,
+            10,
+            25,
+            32,
+            5,
+            84,
+            49
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          8190,
+          8188,
+          8184,
+          8176,
+          8160,
+          8128,
+          8064,
+          7936,
+          15872,
+          7168,
+          14336,
+          4096,
+          8192,
+          2815
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          2,
+          4
+        ],
+        "H": 5365
+      },
+      "target": {
+        "rows": [
+          2032,
+          16481,
+          2019,
+          2023,
+          2030,
+          1984,
+          1920,
+          1794,
+          1538,
+          1026,
+          2,
+          14335,
+          10239,
+          2047,
+          16381
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          15,
+          16,
+          17,
+          200,
+          10,
+          11,
+          12,
+          99
+        ],
+        "root": 99,
+        "mark": 1,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          15,
+          16,
+          17,
+          200
+        ],
+        "prefix": [
+          10,
+          11,
+          12
+        ],
+        "promoted_prefix_names": [
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "fresh_names": [
+          200
+        ],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "44",
+      "t": 9,
+      "target_H": 32227,
+      "hit_count": 3,
+      "minimum_order_in_fixed_bank": 16,
+      "all_hits": [
+        {
+          "bank_index": 13,
+          "order": 16,
+          "fields": [
+            8013,
+            5,
+            10831,
+            12107,
+            16384,
+            5,
+            2169600,
+            1493233
+          ],
+          "word": "101000010",
+          "prefix": 1,
+          "r": 378
+        },
+        {
+          "bank_index": 16,
+          "order": 16,
+          "fields": [
+            3949,
+            5,
+            4569,
+            14139,
+            16384,
+            5,
+            1169824,
+            720805
+          ],
+          "word": "011000100",
+          "prefix": 1,
+          "r": 441
+        },
+        {
+          "bank_index": 97,
+          "order": 16,
+          "fields": [
+            3949,
+            5,
+            4569,
+            14139,
+            16384,
+            5,
+            1169824,
+            720805
+          ],
+          "word": "11000100",
+          "prefix": 1,
+          "r": 220
+        }
+      ],
+      "selected": {
+        "bank_index": 13,
+        "order": 16,
+        "fields": [
+          8013,
+          5,
+          10831,
+          12107,
+          16384,
+          5,
+          2169600,
+          1493233
+        ],
+        "word": "101000010",
+        "prefix": 1,
+        "r": 378,
+        "seed": {
+          "rows": [
+            20,
+            1,
+            2,
+            7,
+            14
+          ],
+          "root": 3,
+          "fields": [
+            9,
+            1,
+            23,
+            11,
+            32,
+            5,
+            84,
+            91
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          16382,
+          16380,
+          16376,
+          16368,
+          16352,
+          16320,
+          16256,
+          16128,
+          15872,
+          31744,
+          14336,
+          28672,
+          8192,
+          16384,
+          5631
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          2,
+          4
+        ],
+        "H": 10741
+      },
+      "target": {
+        "rows": [
+          16372,
+          16353,
+          16354,
+          37031,
+          16366,
+          16320,
+          16264,
+          16128,
+          15880,
+          15368,
+          14344,
+          12296,
+          8192,
+          8,
+          16383,
+          32759
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          200,
+          10,
+          99
+        ],
+        "root": 99,
+        "mark": 3,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          200
+        ],
+        "prefix": [
+          10
+        ],
+        "promoted_prefix_names": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "fresh_names": [
+          200
+        ],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    },
+    {
+      "family": "44",
+      "t": 10,
+      "target_H": 64483,
+      "hit_count": 3,
+      "minimum_order_in_fixed_bank": 17,
+      "all_hits": [
+        {
+          "bank_index": 52,
+          "order": 17,
+          "fields": [
+            5061,
+            9,
+            7307,
+            29711,
+            43008,
+            9,
+            2403396,
+            1924251
+          ],
+          "word": "011110010",
+          "prefix": 1,
+          "r": 353
+        },
+        {
+          "bank_index": 64,
+          "order": 17,
+          "fields": [
+            7927,
+            5,
+            9177,
+            14139,
+            16384,
+            5,
+            1675648,
+            1035733
+          ],
+          "word": "11000100",
+          "prefix": 2,
+          "r": 220
+        },
+        {
+          "bank_index": 101,
+          "order": 17,
+          "fields": [
+            14639,
+            9,
+            25231,
+            24922,
+            43008,
+            9,
+            4590328,
+            4584642
+          ],
+          "word": "111010110",
+          "prefix": 1,
+          "r": 296
+        }
+      ],
+      "selected": {
+        "bank_index": 52,
+        "order": 17,
+        "fields": [
+          5061,
+          9,
+          7307,
+          29711,
+          43008,
+          9,
+          2403396,
+          1924251
+        ],
+        "word": "011110010",
+        "prefix": 1,
+        "r": 353,
+        "seed": {
+          "rows": [
+            46,
+            60,
+            56,
+            16,
+            33,
+            8
+          ],
+          "root": 5,
+          "fields": [
+            15,
+            5,
+            19,
+            59,
+            84,
+            9,
+            216,
+            133
+          ]
+        }
+      },
+      "source": {
+        "rows": [
+          32766,
+          32764,
+          32760,
+          32752,
+          32736,
+          32704,
+          32640,
+          32512,
+          32256,
+          31744,
+          63488,
+          28672,
+          57344,
+          16384,
+          32768,
+          11263
+        ],
+        "names": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "root": 99,
+        "prefix": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "suffix": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ports": [
+          0,
+          2,
+          4
+        ],
+        "H": 21493
+      },
+      "target": {
+        "rows": [
+          32750,
+          32764,
+          32760,
+          32720,
+          32737,
+          75656,
+          32672,
+          32512,
+          32256,
+          31744,
+          30720,
+          28704,
+          24608,
+          16384,
+          32,
+          32767,
+          65503
+        ],
+        "names": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          200,
+          10,
+          99
+        ],
+        "root": 99,
+        "mark": 11,
+        "component": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          200
+        ],
+        "prefix": [
+          10
+        ],
+        "promoted_prefix_names": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "fresh_names": [
+          200
+        ],
+        "scope": "Actual named target with old names embedded; no native conversion or common-frame claim."
+      }
+    }
+  ],
+  "finite_common_key_observations": [
+    {
+      "family": "24",
+      "start_t": 1,
+      "end_t": 10,
+      "shared_seed_clock_keys": []
+    },
+    {
+      "family": "24",
+      "start_t": 2,
+      "end_t": 10,
+      "shared_seed_clock_keys": []
+    },
+    {
+      "family": "24",
+      "start_t": 3,
+      "end_t": 10,
+      "shared_seed_clock_keys": []
+    },
+    {
+      "family": "24",
+      "start_t": 4,
+      "end_t": 10,
+      "shared_seed_clock_keys": []
+    },
+    {
+      "family": "44",
+      "start_t": 1,
+      "end_t": 10,
+      "shared_seed_clock_keys": []
+    },
+    {
+      "family": "44",
+      "start_t": 2,
+      "end_t": 10,
+      "shared_seed_clock_keys": []
+    },
+    {
+      "family": "44",
+      "start_t": 3,
+      "end_t": 10,
+      "shared_seed_clock_keys": []
+    },
+    {
+      "family": "44",
+      "start_t": 4,
+      "end_t": 10,
+      "shared_seed_clock_keys": []
+    }
+  ],
+  "source_pins": {
+    "recursive_seed_switching_20261103/selector/bank.json": "132f8779ced72069de6cf2842522343fe72a650e02a451ebc45781ad56e11fe8",
+    "recursive_seed_switching_20261103/selector/inverse.py": "27b1c76b29737f85e2660d2d760444581fdeefabe8bac44dd09d902d5ff31300",
+    "zero_ready_component_returns_20261103/inverse/reader.py": "9351ca0c946e031643faac4dbe312a0b629e3d1a482b67203ea6c50676838533"
+  },
+  "reproduction": "python 05-knowledge/results/c4_port_returns_20261103/reader/export_reader.py"
+}
