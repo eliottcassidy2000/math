@@ -1,0 +1,189 @@
+{
+  "checker_sha256": "e50b23ccc8694e5210c005d1cac9a8b8d1897e59d068adce63dff1371f6f7dd1",
+  "complete_outputs": [
+    {
+      "bytes": 111748,
+      "file": "normal.json",
+      "group": 0,
+      "sha256": "5649b2f8fba372383b8a1014643f0863135fabbe66db604f40d025f59bbe5f8a"
+    },
+    {
+      "bytes": 111748,
+      "file": "optimized.json",
+      "group": 0,
+      "sha256": "5649b2f8fba372383b8a1014643f0863135fabbe66db604f40d025f59bbe5f8a"
+    }
+  ],
+  "complete_raw_bytes": 223496,
+  "groups": 1,
+  "isolated_controls": [
+    {
+      "mode": "fresh",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "fresh",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": true,
+      "passed": true
+    }
+  ],
+  "package": "prime_eight_uniform_anchor",
+  "package_sha256": {
+    "REASSEMBLY.json": "8d629a013e80b29008b18c31fde5577e90ee1e5e093cba2022dee72234fc84ca",
+    "REASSEMBLY.md": "4fffb8eeb964f7b7405a1c9e9cc85caddbea131ea13cd1b2ed7926bd3dc9a83d",
+    "full_records_00.json.gz.b64.part000": "2fa33f88bb348b7539ae198c535b1482128718244342bb6be6eb215b33a174ad",
+    "reassemble.py": "c2d3ff0e757ce78d7c1c77831763e5e4597f9ee5ec11ed6120e3a4b85507dfb8"
+  },
+  "parts": 1,
+  "reassembler_normalized_ast_sha256": "3f640f8fd33dec4ce19c1d81e92f03c21bbac47452af6382f5cb942c5ee88d14",
+  "status": "PASS",
+  "validated_existing_manifests": [
+    {
+      "file": "PROOF.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "ba091e78bfd55be80e03826883d35970a20014de7f550dccee52ad4e6c4fdd60"
+    },
+    {
+      "file": "README.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "d5e3200005c3dda3a83e94f7f61e71e70083f93bf22666fa3c032a66fe77639a"
+    },
+    {
+      "file": "verify.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "f3e163f7977bf83d5d3a813f1db045fdf61c369d2dea144e9f525832171399c1"
+    },
+    {
+      "file": "covers.cpp",
+      "manifest": "SHA256SUMS",
+      "sha256": "f0765d945456fe95012270270ea89918f1aeb4130c844445f3a3d83f01705976"
+    },
+    {
+      "file": "physical.cpp",
+      "manifest": "SHA256SUMS",
+      "sha256": "c47892c5fd8aaf6593c2468fe40d74809eb5b70ab28e7f6ded20be692e8c21b5"
+    },
+    {
+      "file": "normal.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "5649b2f8fba372383b8a1014643f0863135fabbe66db604f40d025f59bbe5f8a"
+    },
+    {
+      "file": "optimized.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "5649b2f8fba372383b8a1014643f0863135fabbe66db604f40d025f59bbe5f8a"
+    }
+  ],
+  "validated_mathematical_receipt_pins": {
+    "even_endpoint_obstruction/PROOF.md": "46dad3d2edd6f8ec4a9c42d8f33d9f0385b02e71df6f0f8ff055b6ac790fb12c",
+    "five_profile_types/PROOF.md": "0f837c969531d66c1f5f77e6e3aa02416154f852a3f79d2cfe8147059872c9f6",
+    "mod8_transfer/PROOF.md": "aaf6c9325b34b03187771d0731b3a6d6e9b9d31e25238d8adb4a9267fcb46521",
+    "module_decomposition/PROOF.md": "33f33731f3f21037a03e6a4eb9bcc11c746c5124439e49603e7c8faabe2565bc",
+    "monotone_dual_queries/PROOF.md": "f617b74aa6c9545e945d6c5f6d8258049a9dd68f3127c5252542b2592f746d5f",
+    "prime_eight_uniform_anchor/PROOF.md": "ba091e78bfd55be80e03826883d35970a20014de7f550dccee52ad4e6c4fdd60",
+    "prime_eight_uniform_anchor/covers.cpp": "f0765d945456fe95012270270ea89918f1aeb4130c844445f3a3d83f01705976",
+    "prime_eight_uniform_anchor/physical.cpp": "c47892c5fd8aaf6593c2468fe40d74809eb5b70ab28e7f6ded20be692e8c21b5",
+    "prime_eight_uniform_anchor/verify.py": "f3e163f7977bf83d5d3a813f1db045fdf61c369d2dea144e9f525832171399c1"
+  }
+}
