@@ -1,0 +1,21 @@
+P7 recurrence reproduces the note's section-4 rows (5-13): OK
+P7 recurrence reproduces HYP-9460's predicted rows (14-18): OK
+row sums = F(2n-6), n = 4..40: OK
+order-16 recurrence row reversed = S74's published T(16,k) row: OK
+generating function coefficients = N(n, r), n = 4..40: OK
+columns T(n,2)=2^(n-5) (n>=5), T(n,3)=n 2^(n-7) (n>=6), T(n,4)=(n^2+n-8) 2^(n-10) (n>=7), n <= 40: OK
+top diagonals N(n,2)=1, N(n,3)=n-4, N(n,4)=C(n-3,2), n <= 40: OK
+(F) table sums to F(2n-6) and a + 2b = F(2n-5), n = 5..60: OK
+HYP-9460 P5 values = formulas: OK
+HYP-9460 P1 values = F(2n-6), n = 14..18: OK
+even-n walk: permutation of Z_n with steps +2 (n-2 times), +1 at u_(n-2), +3 at u_(n-3) -> u_0, n = 6..200: OK
+   round tournaments n=5 with all k(u) >= 2: 1; walk not a second Hamiltonian cycle: 0; min hc = 2
+   round tournaments n=6 with all k(u) >= 2: 8; walk not a second Hamiltonian cycle: 0; min hc = 4
+   round tournaments n=7 with all k(u) >= 2: 29; walk not a second Hamiltonian cycle: 0; min hc = 8
+   round tournaments n=8 with all k(u) >= 2: 80; walk not a second Hamiltonian cycle: 0; min hc = 16
+   round tournaments n=9 with all k(u) >= 2: 193; walk not a second Hamiltonian cycle: 0; min hc = 32
+   round tournaments n=10 with all k(u) >= 2: 432; walk not a second Hamiltonian cycle: 0; min hc = 64
+   round tournaments n=11 with all k(u) >= 2: 925; walk not a second Hamiltonian cycle: 0; min hc = 128
+   round tournaments n=12 with all k(u) >= 2: 1928; walk not a second Hamiltonian cycle: 0
+   round tournaments n=13 with all k(u) >= 2: 3953; walk not a second Hamiltonian cycle: 0
+ALL OK (42.7 s)

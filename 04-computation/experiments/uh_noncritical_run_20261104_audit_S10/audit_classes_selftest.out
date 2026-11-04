@@ -1,0 +1,3 @@
+selftest RT5 (hc=2)                       hc=2  fired: B1 C1 C4 C5_shelor_parent D2 E
+selftest A_7 with chord 5->2 reversed     hc=2  fired: A1 A2 C1 C4 C5_shelor_parent D1 D2 D3 L1
+selftest A_7 with labels 2,4 swapped      hc=1  fired: D1 D2 D3 hc

@@ -1,0 +1,54 @@
+canon validation n=3: classes=2 partition_mismatch=0 aut_mismatch=0
+canon validation n=4: classes=4 partition_mismatch=0 aut_mismatch=0
+canon validation n=5: classes=12 partition_mismatch=0 aut_mismatch=0
+canon validation n=6: classes=56 partition_mismatch=0 aut_mismatch=0
+n=3  labelled=8 strong=2 UH_labelled=2 UH_classes=1 (Garey F(2n-6)=0) class_size!=n!:1 invariant_inconsistent=0
+   failures: A1_roundness=0 A2_propagation=0 B1_no_sole_exit_or_entry=0 B2_gt2_or_nonadjacent=2 C1_not_one_run_or_r_range=2 C2_run_ends=0 C3_succ_of_sole_exit_noncritical=0 C4_unique_nc_sole_entry_exit=2 C5_T_minus_y_not_UH_or_parent=2 D1_cut_predicate=0 D2_cut_plus_r=2 D3_components_at_critical_w=0 L1_lemma1_T_minus_v=0 HC_dfs_vs_dp=0 E_aut_nontrivial=2
+   N(n,r) r=2..n-1: 0   | r outside [2,n-1]: 1
+   cut arcs k=2..n-1: 0
+   (#sole exits,#sole entries): (1,1)=0 (1,2)=0 (2,1)=0 (2,2)=0 other=1 ; formula F(2n-10)+1=-2 F(2n-9)-1=1 F(2n-8)+1=0
+   one sole exit=0 (F(2n-8)=-1) two sole exits=0 (F(2n-7)=1) rooted (T,sole exit)=3 (F(2n-5)=1)
+   strong & min out>=2 & hc<2: 0 ; (n>=6) strong & min out>=2 & hc<3: 0
+   classes t_k (exactly k Ham cycles) k=1..5: 1 0 0 0 0 ; u_k (and min out>=2): 0 0 0 0 0
+   time 0.41 s
+n=4  labelled=64 strong=24 UH_labelled=24 UH_classes=1 (Garey F(2n-6)=1) class_size!=n!:0 invariant_inconsistent=0
+   failures: A1_roundness=0 A2_propagation=0 B1_no_sole_exit_or_entry=0 B2_gt2_or_nonadjacent=0 C1_not_one_run_or_r_range=0 C2_run_ends=0 C3_succ_of_sole_exit_noncritical=0 C4_unique_nc_sole_entry_exit=0 C5_T_minus_y_not_UH_or_parent=0 D1_cut_predicate=0 D2_cut_plus_r=0 D3_components_at_critical_w=0 L1_lemma1_T_minus_v=0 HC_dfs_vs_dp=0 E_aut_nontrivial=0
+   N(n,r) r=2..n-1: 1 0   | r outside [2,n-1]: 0
+   cut arcs k=2..n-1: 0 1
+   (#sole exits,#sole entries): (1,1)=0 (1,2)=0 (2,1)=0 (2,2)=1 other=0 ; formula F(2n-10)+1=0 F(2n-9)-1=0 F(2n-8)+1=1
+   one sole exit=0 (F(2n-8)=0) two sole exits=1 (F(2n-7)=1) rooted (T,sole exit)=2 (F(2n-5)=2)
+   Moon fails=0 ; strong classes with exactly 2 non-critical: 1, all = A_n: yes ; A_n hc=1
+   strong & min out>=2 & hc<2: 0 ; (n>=6) strong & min out>=2 & hc<3: 0
+   classes t_k (exactly k Ham cycles) k=1..5: 1 0 0 0 0 ; u_k (and min out>=2): 0 0 0 0 0
+   time 0.03 s
+n=5  labelled=1024 strong=544 UH_labelled=360 UH_classes=3 (Garey F(2n-6)=3) class_size!=n!:0 invariant_inconsistent=0
+   failures: A1_roundness=0 A2_propagation=0 B1_no_sole_exit_or_entry=0 B2_gt2_or_nonadjacent=0 C1_not_one_run_or_r_range=0 C2_run_ends=0 C3_succ_of_sole_exit_noncritical=0 C4_unique_nc_sole_entry_exit=0 C5_T_minus_y_not_UH_or_parent=0 D1_cut_predicate=0 D2_cut_plus_r=0 D3_components_at_critical_w=0 L1_lemma1_T_minus_v=0 HC_dfs_vs_dp=0 E_aut_nontrivial=0
+   N(n,r) r=2..n-1: 1 1 1   | r outside [2,n-1]: 0
+   cut arcs k=2..n-1: 1 1 1
+   (#sole exits,#sole entries): (1,1)=1 (1,2)=0 (2,1)=0 (2,2)=2 other=0 ; formula F(2n-10)+1=1 F(2n-9)-1=0 F(2n-8)+1=2
+   one sole exit=1 (F(2n-8)=1) two sole exits=2 (F(2n-7)=2) rooted (T,sole exit)=5 (F(2n-5)=5)
+   Moon fails=0 ; strong classes with exactly 2 non-critical: 1, all = A_n: yes ; A_n hc=1
+   strong & min out>=2 & hc<2: 0 ; (n>=6) strong & min out>=2 & hc<3: 0 ; RT5 hc=2
+   classes t_k (exactly k Ham cycles) k=1..5: 3 2 1 0 0 ; u_k (and min out>=2): 0 1 0 0 0
+   time 0.02 s
+n=6  labelled=32768 strong=22320 UH_labelled=5760 UH_classes=8 (Garey F(2n-6)=8) class_size!=n!:0 invariant_inconsistent=0
+   failures: A1_roundness=0 A2_propagation=0 B1_no_sole_exit_or_entry=0 B2_gt2_or_nonadjacent=0 C1_not_one_run_or_r_range=0 C2_run_ends=0 C3_succ_of_sole_exit_noncritical=0 C4_unique_nc_sole_entry_exit=0 C5_T_minus_y_not_UH_or_parent=0 D1_cut_predicate=0 D2_cut_plus_r=0 D3_components_at_critical_w=0 L1_lemma1_T_minus_v=0 HC_dfs_vs_dp=0 E_aut_nontrivial=0
+   N(n,r) r=2..n-1: 1 2 3 2   | r outside [2,n-1]: 0
+   cut arcs k=2..n-1: 2 3 2 1
+   (#sole exits,#sole entries): (1,1)=2 (1,2)=1 (2,1)=1 (2,2)=4 other=0 ; formula F(2n-10)+1=2 F(2n-9)-1=1 F(2n-8)+1=4
+   one sole exit=3 (F(2n-8)=3) two sole exits=5 (F(2n-7)=5) rooted (T,sole exit)=13 (F(2n-5)=13)
+   Moon fails=0 ; strong classes with exactly 2 non-critical: 1, all = A_n: yes ; A_n hc=1
+   strong & min out>=2 & hc<2: 0 ; (n>=6) strong & min out>=2 & hc<3: 0
+   classes t_k (exactly k Ham cycles) k=1..5: 8 5 11 6 5 ; u_k (and min out>=2): 0 0 2 3 4
+   time 0.06 s
+n=7  labelled=2097152 strong=1677488 UH_labelled=105840 UH_classes=21 (Garey F(2n-6)=21) class_size!=n!:0 invariant_inconsistent=0
+   failures: A1_roundness=0 A2_propagation=0 B1_no_sole_exit_or_entry=0 B2_gt2_or_nonadjacent=0 C1_not_one_run_or_r_range=0 C2_run_ends=0 C3_succ_of_sole_exit_noncritical=0 C4_unique_nc_sole_entry_exit=0 C5_T_minus_y_not_UH_or_parent=0 D1_cut_predicate=0 D2_cut_plus_r=0 D3_components_at_critical_w=0 L1_lemma1_T_minus_v=0 HC_dfs_vs_dp=0 E_aut_nontrivial=0
+   N(n,r) r=2..n-1: 1 3 6 7 4   | r outside [2,n-1]: 0
+   cut arcs k=2..n-1: 4 7 6 3 1
+   (#sole exits,#sole entries): (1,1)=4 (1,2)=4 (2,1)=4 (2,2)=9 other=0 ; formula F(2n-10)+1=4 F(2n-9)-1=4 F(2n-8)+1=9
+   one sole exit=8 (F(2n-8)=8) two sole exits=13 (F(2n-7)=13) rooted (T,sole exit)=34 (F(2n-5)=34)
+   Moon fails=0 ; strong classes with exactly 2 non-critical: 1, all = A_n: yes ; A_n hc=1
+   strong & min out>=2 & hc<2: 0 ; (n>=6) strong & min out>=2 & hc<3: 0
+   classes t_k (exactly k Ham cycles) k=1..5: 21 18 38 25 38 ; u_k (and min out>=2): 0 0 5 4 4
+   time 0.89 s
+total time 2.71 s

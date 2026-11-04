@@ -1,0 +1,70 @@
+mode A n=4 tournaments=64  UH(labelled)=24
+  bad: C-input=0 G=0 L3=0 H=0 facts=0 childstart=0
+  |adm|=2: 0  |adm|=3: 24  other: 0  sum|adm| = 72
+  child run-length deltas 0/1/2: 24 24 24
+  labelled N(n,r) r=2..n-1: 24 0
+  labelled N2(n,r) (two sole entries) r=2..n-1: 24 0
+  time 0.00s
+mode A n=5 tournaments=1024  UH(labelled)=360
+  bad: C-input=0 G=0 L3=0 H=0 facts=0 childstart=0
+  |adm|=2: 120  |adm|=3: 240  other: 0  sum|adm| = 960
+  child run-length deltas 0/1/2: 360 360 240
+  labelled N(n,r) r=2..n-1: 120 120 120
+  labelled N2(n,r) (two sole entries) r=2..n-1: 120 120 0
+  time 0.00s
+mode A n=6 tournaments=32768  UH(labelled)=5760
+  bad: C-input=0 G=0 L3=0 H=0 facts=0 childstart=0
+  |adm|=2: 2160  |adm|=3: 3600  other: 0  sum|adm| = 15120
+  child run-length deltas 0/1/2: 5760 5760 3600
+  labelled N(n,r) r=2..n-1: 720 1440 2160 1440
+  labelled N2(n,r) (two sole entries) r=2..n-1: 720 1440 1440 0
+  time 0.01s
+mode A n=7 tournaments=2097152  UH(labelled)=105840
+  bad: C-input=0 G=0 L3=0 H=0 facts=0 childstart=0
+  |adm|=2: 40320  |adm|=3: 65520  other: 0  sum|adm| = 277200
+  child run-length deltas 0/1/2: 105840 105840 65520
+  labelled N(n,r) r=2..n-1: 5040 15120 30240 35280 20160
+  labelled N2(n,r) (two sole entries) r=2..n-1: 5040 15120 25200 20160 0
+  time 0.51s
+mode B n=4 tournaments=4  UH(labelled, fixed cycle)=4
+  bad: C-input=0 G=0 L3=0 H=0 facts=0 childstart=0
+  |adm|=2: 0  |adm|=3: 4  other: 0  sum|adm| = 12
+  child run-length deltas 0/1/2: 4 4 4
+  labelled N(n,r) r=2..n-1: 4 0
+  labelled N2(n,r) (two sole entries) r=2..n-1: 4 0
+  time 0.00s
+mode B n=5 tournaments=32  UH(labelled, fixed cycle)=15
+  bad: C-input=0 G=0 L3=0 H=0 facts=0 childstart=0
+  |adm|=2: 5  |adm|=3: 10  other: 0  sum|adm| = 40
+  child run-length deltas 0/1/2: 15 15 10
+  labelled N(n,r) r=2..n-1: 5 5 5
+  labelled N2(n,r) (two sole entries) r=2..n-1: 5 5 0
+  time 0.00s
+mode B n=6 tournaments=512  UH(labelled, fixed cycle)=48
+  bad: C-input=0 G=0 L3=0 H=0 facts=0 childstart=0
+  |adm|=2: 18  |adm|=3: 30  other: 0  sum|adm| = 126
+  child run-length deltas 0/1/2: 48 48 30
+  labelled N(n,r) r=2..n-1: 6 12 18 12
+  labelled N2(n,r) (two sole entries) r=2..n-1: 6 12 12 0
+  time 0.00s
+mode B n=7 tournaments=16384  UH(labelled, fixed cycle)=147
+  bad: C-input=0 G=0 L3=0 H=0 facts=0 childstart=0
+  |adm|=2: 56  |adm|=3: 91  other: 0  sum|adm| = 385
+  child run-length deltas 0/1/2: 147 147 91
+  labelled N(n,r) r=2..n-1: 7 21 42 49 28
+  labelled N2(n,r) (two sole entries) r=2..n-1: 7 21 35 28 0
+  time 0.00s
+mode B n=8 tournaments=1048576  UH(labelled, fixed cycle)=440
+  bad: C-input=0 G=0 L3=0 H=0 facts=0 childstart=0
+  |adm|=2: 168  |adm|=3: 272  other: 0  sum|adm| = 1152
+  child run-length deltas 0/1/2: 440 440 272
+  labelled N(n,r) r=2..n-1: 8 32 80 128 128 64
+  labelled N2(n,r) (two sole entries) r=2..n-1: 8 32 72 96 64 0
+  time 0.03s
+mode B n=9 tournaments=134217728  UH(labelled, fixed cycle)=1296
+  bad: C-input=0 G=0 L3=0 H=0 facts=0 childstart=0
+  |adm|=2: 495  |adm|=3: 801  other: 0  sum|adm| = 3393
+  child run-length deltas 0/1/2: 1296 1296 801
+  labelled N(n,r) r=2..n-1: 9 45 135 270 369 324 144
+  labelled N2(n,r) (two sole entries) r=2..n-1: 9 45 126 225 252 144 0
+  time 2.64s

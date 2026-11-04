@@ -1,0 +1,113 @@
+# audit_classes NMAX=12 DIRECT=13 L1MAX=12 HCMAX_TY=15 threads=12
+PART I: all tournament classes of order 2: 1 (A000568: 1) OK
+PART I: all tournament classes of order 3: 2 (A000568: 2) OK
+PART I: all tournament classes of order 4: 4 (A000568: 4) OK
+PART I: all tournament classes of order 5: 12 (A000568: 12) OK
+PART I: all tournament classes of order 6: 56 (A000568: 56) OK
+PART I: all tournament classes of order 7: 456 (A000568: 456) OK
+PART I: all tournament classes of order 8: 6880 (A000568: 6880) OK
+PART I order 8: strong classes 6008; UH classes 55 (Garey 55); Moon fails 0; exactly-2-noncritical classes 1, = A_8: yes; strong & min out>=2 & hc<3: 0
+   t_k(8) k=1..5: 55 60 124 91 138 (HYP-9459: 55 60 124 91 138) ; u_k(8): 0 0 13 10 9 (HYP-9459: 0 0 13 10 9)
+PART I order 9: 1761280 extensions; UH instances 1448 -> UH classes 144 (Garey 144); exactly-2-noncritical classes 1, = A_9: yes; strong & min out>=2 & hc<3: 0
+   t_k(9) k=1..5: 144 191 390 315 466 (HYP-9459: 144 191 390 315 466) ; u_k(9): 0 0 34 26 23 (HYP-9459: 0 0 34 26 23)
+PART I time 1.8 s
+n= 4 Shelor candidates 3, accepted 3, distinct classes 1 (duplicates 2) Garey F(2n-6)=1 OK | hc vs e_p lemma mismatches 0, filter-accepted but hc!=1: 0
+   same class set as PART I (no-assumption): n/a ; as labelled enumeration: IDENTICAL
+   failures: A1=0 A2=0 B1=0 B2=0 C1=0 C2=0 C3=0 C4=0 C5_shelor_parent=0 D1=0 D2=0 D3=0 L1=0 E=0 hc=0
+   N(n,r) r=2..n-1: 1 0  | outside: 0
+   cut arcs k=2..n-1: 0 1
+   T(n,k) = N(n,n+1-k): yes
+   (#se,#sen): (1,1)=0 (1,2)=0 (2,1)=0 (2,2)=1 other=0 ; formula 0 0 0 1
+   one/two sole exits: 0 (F(2n-8)=0) / 1 (F(2n-7)=1) ; rooted (T, sole exit) 2 (F(2n-5)=2)
+   (F) bijection: two-sole-exit classes 1, map failures 0, rooted pairs of order 3: 3, hit exactly once 1, other 2
+   Las Vergnas/top diagonal: N(n,2)=1, that class = A_n: yes (hc(A_n)=1)
+   time: generation 0.0 s, checks 0.0 s
+n= 5 Shelor candidates 4, accepted 3, distinct classes 3 (duplicates 0) Garey F(2n-6)=3 OK | hc vs e_p lemma mismatches 0, filter-accepted but hc!=1: 0
+   same class set as PART I (no-assumption): n/a ; as labelled enumeration: IDENTICAL
+   failures: A1=0 A2=0 B1=0 B2=0 C1=0 C2=0 C3=0 C4=0 C5_shelor_parent=0 D1=0 D2=0 D3=0 L1=0 E=0 hc=0
+   N(n,r) r=2..n-1: 1 1 1  | outside: 0
+   cut arcs k=2..n-1: 1 1 1  [HYP-9458 table row: equal]
+   T(n,k) = N(n,n+1-k): yes ; note's section-4 row: equal
+   (#se,#sen): (1,1)=1 (1,2)=0 (2,1)=0 (2,2)=2 other=0 ; formula 1 0 0 2
+   one/two sole exits: 1 (F(2n-8)=1) / 2 (F(2n-7)=2) ; rooted (T, sole exit) 5 (F(2n-5)=5)
+   (F) bijection: two-sole-exit classes 2, map failures 0, rooted pairs of order 4: 2, hit exactly once 2, other 0
+   Las Vergnas/top diagonal: N(n,2)=1, that class = A_n: yes (hc(A_n)=1)
+   time: generation 0.0 s, checks 0.0 s
+n= 6 Shelor candidates 15, accepted 8, distinct classes 8 (duplicates 0) Garey F(2n-6)=8 OK | hc vs e_p lemma mismatches 0, filter-accepted but hc!=1: 0
+   same class set as PART I (no-assumption): n/a ; as labelled enumeration: IDENTICAL
+   failures: A1=0 A2=0 B1=0 B2=0 C1=0 C2=0 C3=0 C4=0 C5_shelor_parent=0 D1=0 D2=0 D3=0 L1=0 E=0 hc=0
+   N(n,r) r=2..n-1: 1 2 3 2  | outside: 0
+   cut arcs k=2..n-1: 2 3 2 1  [HYP-9458 table row: equal]
+   T(n,k) = N(n,n+1-k): yes ; note's section-4 row: equal ; P7 recurrence: holds
+   (#se,#sen): (1,1)=2 (1,2)=1 (2,1)=1 (2,2)=4 other=0 ; formula 2 1 1 4
+   one/two sole exits: 3 (F(2n-8)=3) / 5 (F(2n-7)=5) ; rooted (T, sole exit) 13 (F(2n-5)=13)
+   (F) bijection: two-sole-exit classes 5, map failures 0, rooted pairs of order 5: 5, hit exactly once 5, other 0
+   Las Vergnas/top diagonal: N(n,2)=1, that class = A_n: yes (hc(A_n)=1)
+   time: generation 0.0 s, checks 0.0 s
+n= 7 Shelor candidates 48, accepted 21, distinct classes 21 (duplicates 0) Garey F(2n-6)=21 OK | hc vs e_p lemma mismatches 0, filter-accepted but hc!=1: 0
+   same class set as PART I (no-assumption): n/a ; as labelled enumeration: IDENTICAL
+   failures: A1=0 A2=0 B1=0 B2=0 C1=0 C2=0 C3=0 C4=0 C5_shelor_parent=0 D1=0 D2=0 D3=0 L1=0 E=0 hc=0
+   N(n,r) r=2..n-1: 1 3 6 7 4  | outside: 0
+   cut arcs k=2..n-1: 4 7 6 3 1  [HYP-9458 table row: equal]
+   T(n,k) = N(n,n+1-k): yes ; note's section-4 row: equal ; P7 recurrence: holds
+   (#se,#sen): (1,1)=4 (1,2)=4 (2,1)=4 (2,2)=9 other=0 ; formula 4 4 4 9
+   one/two sole exits: 8 (F(2n-8)=8) / 13 (F(2n-7)=13) ; rooted (T, sole exit) 34 (F(2n-5)=34)
+   (F) bijection: two-sole-exit classes 13, map failures 0, rooted pairs of order 6: 13, hit exactly once 13, other 0
+   Las Vergnas/top diagonal: N(n,2)=1, that class = A_n: yes (hc(A_n)=1)
+   time: generation 0.0 s, checks 0.0 s
+n= 8 Shelor candidates 147, accepted 55, distinct classes 55 (duplicates 0) Garey F(2n-6)=55 OK | hc vs e_p lemma mismatches 0, filter-accepted but hc!=1: 0
+   same class set as PART I (no-assumption): IDENTICAL ; as labelled enumeration: n/a
+   failures: A1=0 A2=0 B1=0 B2=0 C1=0 C2=0 C3=0 C4=0 C5_shelor_parent=0 D1=0 D2=0 D3=0 L1=0 E=0 hc=0
+   N(n,r) r=2..n-1: 1 4 10 16 16 8  | outside: 0
+   cut arcs k=2..n-1: 8 16 16 10 4 1  [HYP-9458 table row: equal]
+   T(n,k) = N(n,n+1-k): yes ; note's section-4 row: equal ; P7 recurrence: holds
+   (#se,#sen): (1,1)=9 (1,2)=12 (2,1)=12 (2,2)=22 other=0 ; formula 9 12 12 22
+   one/two sole exits: 21 (F(2n-8)=21) / 34 (F(2n-7)=34) ; rooted (T, sole exit) 89 (F(2n-5)=89)
+   (F) bijection: two-sole-exit classes 34, map failures 0, rooted pairs of order 7: 34, hit exactly once 34, other 0
+   Las Vergnas/top diagonal: N(n,2)=1, that class = A_n: yes (hc(A_n)=1)
+   time: generation 0.0 s, checks 0.0 s
+n= 9 Shelor candidates 440, accepted 144, distinct classes 144 (duplicates 0) Garey F(2n-6)=144 OK | hc vs e_p lemma mismatches 0, filter-accepted but hc!=1: 0
+   same class set as PART I (no-assumption): IDENTICAL ; as labelled enumeration: n/a
+   failures: A1=0 A2=0 B1=0 B2=0 C1=0 C2=0 C3=0 C4=0 C5_shelor_parent=0 D1=0 D2=0 D3=0 L1=0 E=0 hc=0
+   N(n,r) r=2..n-1: 1 5 15 30 41 36 16  | outside: 0
+   cut arcs k=2..n-1: 16 36 41 30 15 5 1  [HYP-9458 table row: equal]
+   T(n,k) = N(n,n+1-k): yes ; note's section-4 row: equal ; P7 recurrence: holds
+   (#se,#sen): (1,1)=22 (1,2)=33 (2,1)=33 (2,2)=56 other=0 ; formula 22 33 33 56
+   one/two sole exits: 55 (F(2n-8)=55) / 89 (F(2n-7)=89) ; rooted (T, sole exit) 233 (F(2n-5)=233)
+   (F) bijection: two-sole-exit classes 89, map failures 0, rooted pairs of order 8: 89, hit exactly once 89, other 0
+   Las Vergnas/top diagonal: N(n,2)=1, that class = A_n: yes (hc(A_n)=1)
+   time: generation 0.0 s, checks 0.0 s
+n=10 Shelor candidates 1296, accepted 377, distinct classes 377 (duplicates 0) Garey F(2n-6)=377 OK | hc vs e_p lemma mismatches 0, filter-accepted but hc!=1: 0
+   same class set as PART I (no-assumption): n/a ; as labelled enumeration: n/a
+   failures: A1=0 A2=0 B1=0 B2=0 C1=0 C2=0 C3=0 C4=0 C5_shelor_parent=0 D1=0 D2=0 D3=0 L1=0 E=0 hc=0
+   N(n,r) r=2..n-1: 1 6 21 50 85 102 80 32  | outside: 0
+   cut arcs k=2..n-1: 32 80 102 85 50 21 6 1  [HYP-9458 table row: equal]
+   T(n,k) = N(n,n+1-k): yes ; note's section-4 row: equal ; P7 recurrence: holds
+   (#se,#sen): (1,1)=56 (1,2)=88 (2,1)=88 (2,2)=145 other=0 ; formula 56 88 88 145
+   one/two sole exits: 144 (F(2n-8)=144) / 233 (F(2n-7)=233) ; rooted (T, sole exit) 610 (F(2n-5)=610)
+   (F) bijection: two-sole-exit classes 233, map failures 0, rooted pairs of order 9: 233, hit exactly once 233, other 0
+   Las Vergnas/top diagonal: N(n,2)=1, that class = A_n: yes (hc(A_n)=1)
+   time: generation 0.0 s, checks 0.0 s
+n=11 Shelor candidates 3770, accepted 987, distinct classes 987 (duplicates 0) Garey F(2n-6)=987 OK | hc vs e_p lemma mismatches 0, filter-accepted but hc!=1: 0
+   same class set as PART I (no-assumption): n/a ; as labelled enumeration: n/a
+   failures: A1=0 A2=0 B1=0 B2=0 C1=0 C2=0 C3=0 C4=0 C5_shelor_parent=0 D1=0 D2=0 D3=0 L1=0 E=0 hc=0
+   N(n,r) r=2..n-1: 1 7 28 77 155 231 248 176 64  | outside: 0
+   cut arcs k=2..n-1: 64 176 248 231 155 77 28 7 1  [HYP-9458 table row: equal]
+   T(n,k) = N(n,n+1-k): yes ; note's section-4 row: equal ; P7 recurrence: holds
+   (#se,#sen): (1,1)=145 (1,2)=232 (2,1)=232 (2,2)=378 other=0 ; formula 145 232 232 378
+   one/two sole exits: 377 (F(2n-8)=377) / 610 (F(2n-7)=610) ; rooted (T, sole exit) 1597 (F(2n-5)=1597)
+   (F) bijection: two-sole-exit classes 610, map failures 0, rooted pairs of order 10: 610, hit exactly once 610, other 0
+   Las Vergnas/top diagonal: N(n,2)=1, that class = A_n: yes (hc(A_n)=1)
+   time: generation 0.0 s, checks 0.0 s
+n=12 Shelor candidates 10857, accepted 2584, distinct classes 2584 (duplicates 0) Garey F(2n-6)=2584 OK | hc vs e_p lemma mismatches 0, filter-accepted but hc!=1: 0
+   same class set as PART I (no-assumption): n/a ; as labelled enumeration: n/a
+   failures: A1=0 A2=0 B1=0 B2=0 C1=0 C2=0 C3=0 C4=0 C5_shelor_parent=0 D1=0 D2=0 D3=0 L1=0 E=0 hc=0
+   N(n,r) r=2..n-1: 1 8 36 112 259 456 608 592 384 128  | outside: 0
+   cut arcs k=2..n-1: 128 384 592 608 456 259 112 36 8 1  [HYP-9458 table row: equal]
+   T(n,k) = N(n,n+1-k): yes ; note's section-4 row: equal ; P7 recurrence: holds
+   (#se,#sen): (1,1)=378 (1,2)=609 (2,1)=609 (2,2)=988 other=0 ; formula 378 609 609 988
+   one/two sole exits: 987 (F(2n-8)=987) / 1597 (F(2n-7)=1597) ; rooted (T, sole exit) 4181 (F(2n-5)=4181)
+   (F) bijection: two-sole-exit classes 1597, map failures 0, rooted pairs of order 11: 1597, hit exactly once 1597, other 0
+   Las Vergnas/top diagonal: N(n,2)=1, that class = A_n: yes (hc(A_n)=1)
+   time: generation 0.1 s, checks 0.1 s
+total time 2.2 s

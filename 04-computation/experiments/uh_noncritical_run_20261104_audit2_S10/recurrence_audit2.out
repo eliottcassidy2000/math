@@ -1,0 +1,339 @@
+1. Elimination: the recurrence reproduces the coupled system of the proof (orders 4..18)
+  OK   n=4 recurrence row == coupled-system row [1, 0]
+  OK   n=5 recurrence row == coupled-system row [1, 1, 1]
+  OK   n=6 recurrence row == coupled-system row [1, 2, 3, 2]
+  OK   n=7 recurrence row == coupled-system row [1, 3, 6, 7, 4]
+  OK   n=8 recurrence row == coupled-system row [1, 4, 10, 16, 16, 8]
+  OK   n=9 recurrence row == coupled-system row [1, 5, 15, 30, 41, 36, 16]
+  OK   n=10 recurrence row == coupled-system row [1, 6, 21, 50, 85, 102, 80, 32]
+  OK   n=11 recurrence row == coupled-system row [1, 7, 28, 77, 155, 231, 248, 176, 64]
+  OK   n=12 recurrence row == coupled-system row [1, 8, 36, 112, 259, 456, 608, 592, 384, 128]
+  OK   n=13 recurrence row == coupled-system row [1, 9, 45, 156, 406, 819, 1289, 1560, 1392, 832, 256]
+  OK   n=14 recurrence row == coupled-system row [1, 10, 55, 210, 606, 1372, 2471, 3530, 3920, 3232, 1792, 512]
+  OK   n=15 recurrence row == coupled-system row [1, 11, 66, 275, 870, 2178, 4396, 7183, 9420, 9680, 7424, 3840, 1024]
+  OK   n=16 recurrence row == coupled-system row [1, 12, 78, 352, 1210, 3312, 7380, 13504, 20256, 24600, 23552, 16896, 8192, 2048]
+  OK   n=17 recurrence row == coupled-system row [1, 13, 91, 442, 1639, 4862, 11826, 23868, 40081, 55692, 63072, 56576, 38144, 17408, 4096]
+  OK   n=18 recurrence row == coupled-system row [1, 14, 105, 546, 2171, 6930, 18238, 40140, 74313, 115598, 149856, 159168, 134400, 85504, 36864, 8192]
+   totals: u(n) = sum_r N(n,r) and b(n) = sum_r N2(n,r) against F(2n-6), F(2n-7)
+  OK   n=4 u=1 (F=1) b=1 (F=1)
+  OK   n=5 u=3 (F=3) b=2 (F=2)
+  OK   n=6 u=8 (F=8) b=5 (F=5)
+  OK   n=7 u=21 (F=21) b=13 (F=13)
+  OK   n=8 u=55 (F=55) b=34 (F=34)
+  OK   n=9 u=144 (F=144) b=89 (F=89)
+  OK   n=10 u=377 (F=377) b=233 (F=233)
+  OK   n=11 u=987 (F=987) b=610 (F=610)
+  OK   n=12 u=2584 (F=2584) b=1597 (F=1597)
+  OK   n=13 u=6765 (F=6765) b=4181 (F=4181)
+  OK   n=14 u=17711 (F=17711) b=10946 (F=10946)
+  OK   n=15 u=46368 (F=46368) b=28657 (F=28657)
+  OK   n=16 u=121393 (F=121393) b=75025 (F=75025)
+  OK   n=17 u=317811 (F=317811) b=196418 (F=196418)
+  OK   n=18 u=832040 (F=832040) b=514229 (F=514229)
+
+2. Generating function t^2 x^4 (1 + (t^2 - t) x) / (1 - (1 + 2t) x + t x^2)
+  OK   x^4 coefficient == recurrence row
+  OK   x^5 coefficient == recurrence row
+  OK   x^6 coefficient == recurrence row
+  OK   x^7 coefficient == recurrence row
+  OK   x^8 coefficient == recurrence row
+  OK   x^9 coefficient == recurrence row
+  OK   x^10 coefficient == recurrence row
+  OK   x^11 coefficient == recurrence row
+  OK   x^12 coefficient == recurrence row
+  OK   x^13 coefficient == recurrence row
+  OK   x^14 coefficient == recurrence row
+  OK   x^15 coefficient == recurrence row
+  OK   x^16 coefficient == recurrence row
+  OK   x^17 coefficient == recurrence row
+  OK   x^18 coefficient == recurrence row
+  OK   G(x, 1) = x^4 / (1 - 3x + x^2)
+  OK   coupled system solved symbolically gives exactly G
+  OK   N_2 generating function = t^2 x^4 (1 - t x) / (1 - (1 + 2t) x + t x^2)  [audit-derived, not in the note]
+  OK   N_2: x^4 coefficient == coupled-system N_2 row
+  OK   N_2: x^5 coefficient == coupled-system N_2 row
+  OK   N_2: x^6 coefficient == coupled-system N_2 row
+  OK   N_2: x^7 coefficient == coupled-system N_2 row
+  OK   N_2: x^8 coefficient == coupled-system N_2 row
+  OK   N_2: x^9 coefficient == coupled-system N_2 row
+  OK   N_2: x^10 coefficient == coupled-system N_2 row
+  OK   N_2: x^11 coefficient == coupled-system N_2 row
+  OK   N_2: x^12 coefficient == coupled-system N_2 row
+  OK   N_2: x^13 coefficient == coupled-system N_2 row
+  OK   N_2: x^14 coefficient == coupled-system N_2 row
+  OK   N_2: x^15 coefficient == coupled-system N_2 row
+  OK   N_2: x^16 coefficient == coupled-system N_2 row
+  OK   N_2: x^17 coefficient == coupled-system N_2 row
+  OK   N_2: x^18 coefficient == coupled-system N_2 row
+
+3. Tables quoted in the repository
+  OK   note section 4 row n=5 == recurrence
+  OK   note section 4 row n=6 == recurrence
+  OK   note section 4 row n=7 == recurrence
+  OK   note section 4 row n=8 == recurrence
+  OK   note section 4 row n=9 == recurrence
+  OK   note section 4 row n=10 == recurrence
+  OK   note section 4 row n=11 == recurrence
+  OK   note section 4 row n=12 == recurrence
+  OK   note section 4 row n=13 == recurrence
+  OK   HYP-9460 P7 row n=14 == recurrence
+  OK   HYP-9460 P7 row n=15 == recurrence
+  OK   HYP-9460 P7 row n=16 == recurrence
+  OK   HYP-9460 P7 row n=17 == recurrence
+  OK   HYP-9460 P7 row n=18 == recurrence
+  OK   HYP-9458 published T(5, k) row == recurrence read through T(n,k) = N(n, n+1-k)
+  OK   HYP-9458 published T(6, k) row == recurrence read through T(n,k) = N(n, n+1-k)
+  OK   HYP-9458 published T(7, k) row == recurrence read through T(n,k) = N(n, n+1-k)
+  OK   HYP-9458 published T(8, k) row == recurrence read through T(n,k) = N(n, n+1-k)
+  OK   HYP-9458 published T(9, k) row == recurrence read through T(n,k) = N(n, n+1-k)
+  OK   HYP-9458 published T(10, k) row == recurrence read through T(n,k) = N(n, n+1-k)
+  OK   HYP-9458 published T(11, k) row == recurrence read through T(n,k) = N(n, n+1-k)
+  OK   HYP-9458 published T(12, k) row == recurrence read through T(n,k) = N(n, n+1-k)
+  OK   HYP-9458 published T(13, k) row == recurrence read through T(n,k) = N(n, n+1-k)
+  OK   HYP-9458 published T(16, k) row == recurrence read through T(n,k) = N(n, n+1-k)
+  OK   HYP-9458 P3-P6 at n=14: (512, 1792, 3232, 1, 10, 55)
+  OK   HYP-9458 P3-P6 at n=15: (1024, 3840, 7424, 1, 11, 66)
+  OK   HYP-9458 P3-P6 at n=16: (2048, 8192, 16896, 1, 12, 78)
+
+4. HYP-9458 closed forms from the recurrence (n up to 60)
+  OK   T(n,2) = 2^(n-5) for 5 <= n <= 60 (fails at n = [4], below the stated range)
+  OK   T(n,3) = n 2^(n-7) for 6 <= n <= 60 (fails at n = [4, 5], below the stated range)
+  OK   T(n,4) = (n^2+n-8) 2^(n-10) for 7 <= n <= 60 (fails at n = [4, 5, 6], below the stated range)
+  OK   top diagonal N(n,2) = 1 for 5 <= n <= 60
+  OK   top diagonal N(n,3) = n - 4 for 5 <= n <= 60
+  OK   top diagonal N(n,4) = C(n-3,2) for 5 <= n <= 60
+  note's T(n,3) = 2^(n-7) + 2 T(n-1,3) fails at n in [6] (valid for n >= 7)
+  note's T(n,4) = n 2^(n-9) + 2 T(n-1,4) fails at n in [7] (valid for n >= 8)
+  OK   symbolic: T2 satisfies T(n,2) = 2T(n-1,2) (T(.,1) = 0)
+  OK   symbolic: T3 satisfies T(n,3) = T(n-1,2) + 2T(n-1,3) - T(n-2,2)
+  OK   symbolic: T4 satisfies T(n,4) = T(n-1,3) + 2T(n-1,4) - T(n-2,3)
+
+5. This audit's own class census (classes_audit2 output) against the recurrence
+  OK   classes_audit2_n15.out: n=4 N row [1, 0]
+  OK   classes_audit2_n15.out: n=4 N2 row [1, 0]
+  OK   classes_audit2_n15.out: n=4 cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: n=4 classes = F(2n-6)
+  OK   classes_audit2_n15.out: n=5 N row [1, 1, 1]
+  OK   classes_audit2_n15.out: n=5 N2 row [1, 1, 0]
+  OK   classes_audit2_n15.out: n=5 cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: n=5 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15.out: n=5 classes = F(2n-6)
+  OK   classes_audit2_n15.out: n=6 N row [1, 2, 3, 2]
+  OK   classes_audit2_n15.out: n=6 N2 row [1, 2, 2, 0]
+  OK   classes_audit2_n15.out: n=6 cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: n=6 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15.out: n=6 classes = F(2n-6)
+  OK   classes_audit2_n15.out: n=7 N row [1, 3, 6, 7, 4]
+  OK   classes_audit2_n15.out: n=7 N2 row [1, 3, 5, 4, 0]
+  OK   classes_audit2_n15.out: n=7 cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: n=7 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15.out: n=7 classes = F(2n-6)
+  OK   classes_audit2_n15.out: n=8 N row [1, 4, 10, 16, 16, 8]
+  OK   classes_audit2_n15.out: n=8 N2 row [1, 4, 9, 12, 8, 0]
+  OK   classes_audit2_n15.out: n=8 cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: n=8 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15.out: n=8 classes = F(2n-6)
+  OK   classes_audit2_n15.out: n=9 N row [1, 5, 15, 30, 41, 36, 16]
+  OK   classes_audit2_n15.out: n=9 N2 row [1, 5, 14, 25, 28, 16, 0]
+  OK   classes_audit2_n15.out: n=9 cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: n=9 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15.out: n=9 classes = F(2n-6)
+  OK   classes_audit2_n15.out: n=10 N row [1, 6, 21, 50, 85, 102, 80, 32]
+  OK   classes_audit2_n15.out: n=10 N2 row [1, 6, 20, 44, 66, 64, 32, 0]
+  OK   classes_audit2_n15.out: n=10 cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: n=10 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15.out: n=10 classes = F(2n-6)
+  OK   classes_audit2_n15.out: n=11 N row [1, 7, 28, 77, 155, 231, 248, 176, 64]
+  OK   classes_audit2_n15.out: n=11 N2 row [1, 7, 27, 70, 129, 168, 144, 64, 0]
+  OK   classes_audit2_n15.out: n=11 cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: n=11 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15.out: n=11 classes = F(2n-6)
+  OK   classes_audit2_n15.out: n=12 N row [1, 8, 36, 112, 259, 456, 608, 592, 384, 128]
+  OK   classes_audit2_n15.out: n=12 N2 row [1, 8, 35, 104, 225, 360, 416, 320, 128, 0]
+  OK   classes_audit2_n15.out: n=12 cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: n=12 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15.out: n=12 classes = F(2n-6)
+  OK   classes_audit2_n15.out: n=13 N row [1, 9, 45, 156, 406, 819, 1289, 1560, 1392, 832, 256]
+  OK   classes_audit2_n15.out: n=13 N2 row [1, 9, 44, 147, 363, 681, 968, 1008, 704, 256, 0]
+  OK   classes_audit2_n15.out: n=13 cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: n=13 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15.out: n=13 classes = F(2n-6)
+  OK   classes_audit2_n15.out: n=14 N row [1, 10, 55, 210, 606, 1372, 2471, 3530, 3920, 3232, 1792, 512]
+  OK   classes_audit2_n15.out: n=14 N2 row [1, 10, 54, 200, 553, 1182, 1970, 2528, 2400, 1536, 512, 0]
+  OK   classes_audit2_n15.out: n=14 cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: n=14 classes = F(2n-6)
+  OK   classes_audit2_n15.out: children of order 5, N row [1, 1, 1]
+  OK   classes_audit2_n15.out: children of order 5, N2 row
+  OK   classes_audit2_n15.out: children of order 5, cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: children of order 5, cut-arc row == HYP-9458 published row [1, 1, 1]
+  OK   classes_audit2_n15.out: children of order 5 number F(2n-6) = 3
+  OK   classes_audit2_n15.out: children of order 6, N row [1, 2, 3, 2]
+  OK   classes_audit2_n15.out: children of order 6, N2 row
+  OK   classes_audit2_n15.out: children of order 6, cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: children of order 6, cut-arc row == HYP-9458 published row [2, 3, 2, 1]
+  OK   classes_audit2_n15.out: children of order 6 number F(2n-6) = 8
+  OK   classes_audit2_n15.out: children of order 7, N row [1, 3, 6, 7, 4]
+  OK   classes_audit2_n15.out: children of order 7, N2 row
+  OK   classes_audit2_n15.out: children of order 7, cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: children of order 7, cut-arc row == HYP-9458 published row [4, 7, 6, 3, 1]
+  OK   classes_audit2_n15.out: children of order 7 number F(2n-6) = 21
+  OK   classes_audit2_n15.out: children of order 8, N row [1, 4, 10, 16, 16, 8]
+  OK   classes_audit2_n15.out: children of order 8, N2 row
+  OK   classes_audit2_n15.out: children of order 8, cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: children of order 8, cut-arc row == HYP-9458 published row [8, 16, 16, 10, 4, 1]
+  OK   classes_audit2_n15.out: children of order 8 number F(2n-6) = 55
+  OK   classes_audit2_n15.out: children of order 9, N row [1, 5, 15, 30, 41, 36, 16]
+  OK   classes_audit2_n15.out: children of order 9, N2 row
+  OK   classes_audit2_n15.out: children of order 9, cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: children of order 9, cut-arc row == HYP-9458 published row [16, 36, 41, 30, 15, 5, 1]
+  OK   classes_audit2_n15.out: children of order 9 number F(2n-6) = 144
+  OK   classes_audit2_n15.out: children of order 10, N row [1, 6, 21, 50, 85, 102, 80, 32]
+  OK   classes_audit2_n15.out: children of order 10, N2 row
+  OK   classes_audit2_n15.out: children of order 10, cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: children of order 10, cut-arc row == HYP-9458 published row [32, 80, 102, 85, 50, 21, 6, 1]
+  OK   classes_audit2_n15.out: children of order 10 number F(2n-6) = 377
+  OK   classes_audit2_n15.out: children of order 11, N row [1, 7, 28, 77, 155, 231, 248, 176, 64]
+  OK   classes_audit2_n15.out: children of order 11, N2 row
+  OK   classes_audit2_n15.out: children of order 11, cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: children of order 11, cut-arc row == HYP-9458 published row [64, 176, 248, 231, 155, 77, 28, 7, 1]
+  OK   classes_audit2_n15.out: children of order 11 number F(2n-6) = 987
+  OK   classes_audit2_n15.out: children of order 12, N row [1, 8, 36, 112, 259, 456, 608, 592, 384, 128]
+  OK   classes_audit2_n15.out: children of order 12, N2 row
+  OK   classes_audit2_n15.out: children of order 12, cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: children of order 12, cut-arc row == HYP-9458 published row [128, 384, 592, 608, 456, 259, 112, 36, 8, 1]
+  OK   classes_audit2_n15.out: children of order 12 number F(2n-6) = 2584
+  OK   classes_audit2_n15.out: children of order 13, N row [1, 9, 45, 156, 406, 819, 1289, 1560, 1392, 832, 256]
+  OK   classes_audit2_n15.out: children of order 13, N2 row
+  OK   classes_audit2_n15.out: children of order 13, cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: children of order 13, cut-arc row == HYP-9458 published row [256, 832, 1392, 1560, 1289, 819, 406, 156, 45, 9, 1]
+  OK   classes_audit2_n15.out: children of order 13 number F(2n-6) = 6765
+  OK   classes_audit2_n15.out: children of order 14, N row [1, 10, 55, 210, 606, 1372, 2471, 3530, 3920, 3232, 1792, 512]
+  OK   classes_audit2_n15.out: children of order 14, N2 row
+  OK   classes_audit2_n15.out: children of order 14, cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: order 14, HYP-9458 P3-P6 values measured
+  OK   classes_audit2_n15.out: children of order 14 number F(2n-6) = 17711
+  OK   classes_audit2_n15.out: children of order 15, N row [1, 11, 66, 275, 870, 2178, 4396, 7183, 9420, 9680, 7424, 3840, 1024]
+  OK   classes_audit2_n15.out: children of order 15, N2 row
+  OK   classes_audit2_n15.out: children of order 15, cut-arc row is the run row reversed
+  OK   classes_audit2_n15.out: order 15, HYP-9458 P3-P6 values measured
+  OK   classes_audit2_n15.out: children of order 15 number F(2n-6) = 46368
+  OK   classes_audit2_n15top.out: n=4 N row [1, 0]
+  OK   classes_audit2_n15top.out: n=4 N2 row [1, 0]
+  OK   classes_audit2_n15top.out: n=4 cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: n=4 classes = F(2n-6)
+  OK   classes_audit2_n15top.out: n=5 N row [1, 1, 1]
+  OK   classes_audit2_n15top.out: n=5 N2 row [1, 1, 0]
+  OK   classes_audit2_n15top.out: n=5 cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: n=5 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15top.out: n=5 classes = F(2n-6)
+  OK   classes_audit2_n15top.out: n=6 N row [1, 2, 3, 2]
+  OK   classes_audit2_n15top.out: n=6 N2 row [1, 2, 2, 0]
+  OK   classes_audit2_n15top.out: n=6 cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: n=6 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15top.out: n=6 classes = F(2n-6)
+  OK   classes_audit2_n15top.out: n=7 N row [1, 3, 6, 7, 4]
+  OK   classes_audit2_n15top.out: n=7 N2 row [1, 3, 5, 4, 0]
+  OK   classes_audit2_n15top.out: n=7 cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: n=7 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15top.out: n=7 classes = F(2n-6)
+  OK   classes_audit2_n15top.out: n=8 N row [1, 4, 10, 16, 16, 8]
+  OK   classes_audit2_n15top.out: n=8 N2 row [1, 4, 9, 12, 8, 0]
+  OK   classes_audit2_n15top.out: n=8 cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: n=8 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15top.out: n=8 classes = F(2n-6)
+  OK   classes_audit2_n15top.out: n=9 N row [1, 5, 15, 30, 41, 36, 16]
+  OK   classes_audit2_n15top.out: n=9 N2 row [1, 5, 14, 25, 28, 16, 0]
+  OK   classes_audit2_n15top.out: n=9 cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: n=9 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15top.out: n=9 classes = F(2n-6)
+  OK   classes_audit2_n15top.out: n=10 N row [1, 6, 21, 50, 85, 102, 80, 32]
+  OK   classes_audit2_n15top.out: n=10 N2 row [1, 6, 20, 44, 66, 64, 32, 0]
+  OK   classes_audit2_n15top.out: n=10 cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: n=10 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15top.out: n=10 classes = F(2n-6)
+  OK   classes_audit2_n15top.out: n=11 N row [1, 7, 28, 77, 155, 231, 248, 176, 64]
+  OK   classes_audit2_n15top.out: n=11 N2 row [1, 7, 27, 70, 129, 168, 144, 64, 0]
+  OK   classes_audit2_n15top.out: n=11 cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: n=11 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15top.out: n=11 classes = F(2n-6)
+  OK   classes_audit2_n15top.out: n=12 N row [1, 8, 36, 112, 259, 456, 608, 592, 384, 128]
+  OK   classes_audit2_n15top.out: n=12 N2 row [1, 8, 35, 104, 225, 360, 416, 320, 128, 0]
+  OK   classes_audit2_n15top.out: n=12 cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: n=12 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15top.out: n=12 classes = F(2n-6)
+  OK   classes_audit2_n15top.out: n=13 N row [1, 9, 45, 156, 406, 819, 1289, 1560, 1392, 832, 256]
+  OK   classes_audit2_n15top.out: n=13 N2 row [1, 9, 44, 147, 363, 681, 968, 1008, 704, 256, 0]
+  OK   classes_audit2_n15top.out: n=13 cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: n=13 cut-arc row == HYP-9458 published row
+  OK   classes_audit2_n15top.out: n=13 classes = F(2n-6)
+  OK   classes_audit2_n15top.out: n=14 N row [1, 10, 55, 210, 606, 1372, 2471, 3530, 3920, 3232, 1792, 512]
+  OK   classes_audit2_n15top.out: n=14 N2 row [1, 10, 54, 200, 553, 1182, 1970, 2528, 2400, 1536, 512, 0]
+  OK   classes_audit2_n15top.out: n=14 cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: n=14 classes = F(2n-6)
+  OK   classes_audit2_n15top.out: n=15 N row [1, 11, 66, 275, 870, 2178, 4396, 7183, 9420, 9680, 7424, 3840, 1024]
+  OK   classes_audit2_n15top.out: n=15 N2 row [1, 11, 65, 264, 806, 1925, 3653, 5500, 6448, 5632, 3328, 1024, 0]
+  OK   classes_audit2_n15top.out: n=15 cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: n=15 classes = F(2n-6)
+  OK   classes_audit2_n15top.out: children of order 5, N row [1, 1, 1]
+  OK   classes_audit2_n15top.out: children of order 5, N2 row
+  OK   classes_audit2_n15top.out: children of order 5, cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: children of order 5, cut-arc row == HYP-9458 published row [1, 1, 1]
+  OK   classes_audit2_n15top.out: children of order 5 number F(2n-6) = 3
+  OK   classes_audit2_n15top.out: children of order 6, N row [1, 2, 3, 2]
+  OK   classes_audit2_n15top.out: children of order 6, N2 row
+  OK   classes_audit2_n15top.out: children of order 6, cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: children of order 6, cut-arc row == HYP-9458 published row [2, 3, 2, 1]
+  OK   classes_audit2_n15top.out: children of order 6 number F(2n-6) = 8
+  OK   classes_audit2_n15top.out: children of order 7, N row [1, 3, 6, 7, 4]
+  OK   classes_audit2_n15top.out: children of order 7, N2 row
+  OK   classes_audit2_n15top.out: children of order 7, cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: children of order 7, cut-arc row == HYP-9458 published row [4, 7, 6, 3, 1]
+  OK   classes_audit2_n15top.out: children of order 7 number F(2n-6) = 21
+  OK   classes_audit2_n15top.out: children of order 8, N row [1, 4, 10, 16, 16, 8]
+  OK   classes_audit2_n15top.out: children of order 8, N2 row
+  OK   classes_audit2_n15top.out: children of order 8, cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: children of order 8, cut-arc row == HYP-9458 published row [8, 16, 16, 10, 4, 1]
+  OK   classes_audit2_n15top.out: children of order 8 number F(2n-6) = 55
+  OK   classes_audit2_n15top.out: children of order 9, N row [1, 5, 15, 30, 41, 36, 16]
+  OK   classes_audit2_n15top.out: children of order 9, N2 row
+  OK   classes_audit2_n15top.out: children of order 9, cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: children of order 9, cut-arc row == HYP-9458 published row [16, 36, 41, 30, 15, 5, 1]
+  OK   classes_audit2_n15top.out: children of order 9 number F(2n-6) = 144
+  OK   classes_audit2_n15top.out: children of order 10, N row [1, 6, 21, 50, 85, 102, 80, 32]
+  OK   classes_audit2_n15top.out: children of order 10, N2 row
+  OK   classes_audit2_n15top.out: children of order 10, cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: children of order 10, cut-arc row == HYP-9458 published row [32, 80, 102, 85, 50, 21, 6, 1]
+  OK   classes_audit2_n15top.out: children of order 10 number F(2n-6) = 377
+  OK   classes_audit2_n15top.out: children of order 11, N row [1, 7, 28, 77, 155, 231, 248, 176, 64]
+  OK   classes_audit2_n15top.out: children of order 11, N2 row
+  OK   classes_audit2_n15top.out: children of order 11, cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: children of order 11, cut-arc row == HYP-9458 published row [64, 176, 248, 231, 155, 77, 28, 7, 1]
+  OK   classes_audit2_n15top.out: children of order 11 number F(2n-6) = 987
+  OK   classes_audit2_n15top.out: children of order 12, N row [1, 8, 36, 112, 259, 456, 608, 592, 384, 128]
+  OK   classes_audit2_n15top.out: children of order 12, N2 row
+  OK   classes_audit2_n15top.out: children of order 12, cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: children of order 12, cut-arc row == HYP-9458 published row [128, 384, 592, 608, 456, 259, 112, 36, 8, 1]
+  OK   classes_audit2_n15top.out: children of order 12 number F(2n-6) = 2584
+  OK   classes_audit2_n15top.out: children of order 13, N row [1, 9, 45, 156, 406, 819, 1289, 1560, 1392, 832, 256]
+  OK   classes_audit2_n15top.out: children of order 13, N2 row
+  OK   classes_audit2_n15top.out: children of order 13, cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: children of order 13, cut-arc row == HYP-9458 published row [256, 832, 1392, 1560, 1289, 819, 406, 156, 45, 9, 1]
+  OK   classes_audit2_n15top.out: children of order 13 number F(2n-6) = 6765
+  OK   classes_audit2_n15top.out: children of order 14, N row [1, 10, 55, 210, 606, 1372, 2471, 3530, 3920, 3232, 1792, 512]
+  OK   classes_audit2_n15top.out: children of order 14, N2 row
+  OK   classes_audit2_n15top.out: children of order 14, cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: order 14, HYP-9458 P3-P6 values measured
+  OK   classes_audit2_n15top.out: children of order 14 number F(2n-6) = 17711
+  OK   classes_audit2_n15top.out: children of order 15, N row [1, 11, 66, 275, 870, 2178, 4396, 7183, 9420, 9680, 7424, 3840, 1024]
+  OK   classes_audit2_n15top.out: children of order 15, N2 row
+  OK   classes_audit2_n15top.out: children of order 15, cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: order 15, HYP-9458 P3-P6 values measured
+  OK   classes_audit2_n15top.out: children of order 15 number F(2n-6) = 46368
+  OK   classes_audit2_n15top.out: children of order 16, N row [1, 12, 78, 352, 1210, 3312, 7380, 13504, 20256, 24600, 23552, 16896, 8192, 2048]
+  OK   classes_audit2_n15top.out: children of order 16, N2 row
+  OK   classes_audit2_n15top.out: children of order 16, cut-arc row is the run row reversed
+  OK   classes_audit2_n15top.out: children of order 16, cut-arc row == HYP-9458 published row [2048, 8192, 16896, 23552, 24600, 20256, 13504, 7380, 3312, 1210, 352, 78, 12, 1]
+  OK   classes_audit2_n15top.out: order 16, HYP-9458 P3-P6 values measured
+  OK   classes_audit2_n15top.out: children of order 16 number F(2n-6) = 121393
+
+ALL OK

@@ -1,4 +1,4 @@
-# The non-critical run of a uniquely Hamiltonian tournament: local roundness, one run from a sole entry to a sole exit, cut arcs + non-critical vertices = n + 1, a Shelor-free proof of the degree-1 theorem, the admissible Shelor parents (Garey's count re-derived), and the run-length recurrence (HYP-9458 proved)
+# The non-critical run of a uniquely Hamiltonian tournament: local roundness, one run from a sole entry to a sole exit, cut arcs + non-critical vertices = n + 1, a Shelor-free proof of the degree-1 theorem, the admissible Shelor parents (Garey's count re-derived), and the run-length recurrence (a second, Shelor-free proof of HYP-9458)
 
 **Session:** kind-pasteur-2026-11-04-S10. Worktree `.claude/worktrees/uh-one-arc-join-7beb92`.
 
@@ -20,14 +20,15 @@ and it adds several exact consequences.
 **Status.**
 - **PROVED (elementary) here.** THM-4868 (A)-(H), section 1:
   - local roundness of non-critical vertices and its propagation along the cycle;
-  - the degree-1 theorem (KNOWN: Shelor 1977, THM-4867) by a new route, which succeeds where THM-4867's failed route (c)
-    (non-critical vertices) stopped;
+  - the degree-1 theorem (KNOWN: Shelor 1977, THM-4867) by a route new to the repository, which succeeds where
+    THM-4867's failed route (c) (non-critical vertices) stopped;
   - the non-critical vertices form one run from a sole entry to a sole exit;
   - cut arcs + non-critical vertices = n + 1, which turns HYP-9458's cut-arc table into the run-length table;
   - asymmetry;
   - the refined Fibonacci counts by numbers of sole exits and sole entries;
-  - (G) the admissible Shelor parents are y, y- and (when y- is a sole entry) y--, which re-derives Garey's count
-    F(2n - 6) (KNOWN: Garey 1972, Moon 1982);
+  - (G) the admissible Shelor parents are y, y- and (when y- is a sole entry) y--. This is a Shelor-free proof of
+    Shelor's grammar (KNOWN: Shelor 1977, recorded in `operation_closed_synthesis_20261029` section II), and it re-derives
+    Garey's count F(2n - 6) (KNOWN: Garey 1972, Moon 1982);
   - (H) the run transitions r, r + 1, r + 2. They give a Shelor-free proof of the run-length recurrence (HYP-9460 P7)
     and of every formula of opus-S74's HYP-9458.
 - **Priority for HYP-9458 and P7.** HYP-9458's closed forms and generating function were PROVED first by opus-S74's
@@ -35,10 +36,15 @@ and it adds several exact consequences.
   k = 3 + #{b, e} - #{c} along the Shelor word, and it noted that P7 follows from it together with this session's (C).
   - (G)-(H) here are a second, independent proof that does not use Shelor's grammar: (G) proves the needed part of the
     grammar from scratch.
-  - Dictionary: Shelor's parent p = pred^j(newest vertex), j = 0, 1, 2, is (G)'s admissible set {y_U, y_U-, y_U--}.
+  - Dictionary: Shelor's parent p = pred^j(newest vertex), j = 0, 1, 2, is (G)'s admissible set {y_U, y_U-, y_U--};
+    j = 2 occurs only when y_U- is a sole entry.
     The count law's Delta k = +1, 0, -1 is (H)'s Delta r = 0, +1, +2 under k = n + 1 - r.
-- **FINITE-EXACT.** Every check, exhaustively over all F(2n - 6) classes at orders 4-18. Orders 14-18 were run after the
-  pre-registration commit `a8db6218f9` (HYP-9460 P1-P8).
+- **FINITE-EXACT.**
+  - On all F(2n - 6) classes at orders 4-18: (A), (C), (D), (E), the degree-1 and (F) counts, and one-arc cuts. Orders
+    14-18 were run after the pre-registration commit `a8db6218f9` (HYP-9460 P1-P8).
+  - (G) and (H) on every parent of order 4-14.
+  - Not checked by these programs: the (F) bijection, the rooted count, the identification of the r = 2 class with A_n,
+    and the "equivalently" form of (B). The independent audit checked them at orders 4-16 (the strong form at 5-9).
 - **Pre-registered, then proved twice (HYP-9460 P7).** The run-length recurrence
   N(n, r) = N(n - 1, r) + 2 N(n - 1, r - 1) - N(n - 2, r - 1).
   - It was conjectured from orders 6-13 and pre-registered with blind predictions at orders 17-18.
@@ -57,8 +63,8 @@ Independently audited: section 9.
   has a cyclic-interval out-neighbourhood. klein's block lemma (THM-4862 (f)) is the same insertion fact, and THM-4866's
   cut proof for interval chains is the sibling.
 - **Canonical hostile example.** RT_5 = Circ(Z_5, {1, 2}). It is round, has minimum out-degree 2, and has exactly two
-  Hamiltonian cycles, the pentagon and the pentagram (HYP-9459). It is the boundary of section 1 (A): the second cycle
-  built there is RT_5's pentagram.
+  Hamiltonian cycles, the pentagon and the pentagram (HYP-9459). It is the boundary of (B): the second cycle built in
+  section 2, proof of (B), step 3, is RT_5's pentagram.
 - **Corrected near miss.** HYP-9457 (b) was posed as open and is classical (MISTAKE-705). THM-4867's route (c), "every
   non-critical vertex has in- or out-degree 1", is false from order 5. The true statement is (A) below: non-critical
   vertices are locally round, and only the two ends of their run have degree 1.
@@ -88,7 +94,8 @@ predecessor on C, d+ and d- for out- and in-degree, and NC for the set of non-cr
   - Its first vertex y is a sole entry and its last vertex x is a sole exit.
   - For every sole exit z, z+ is critical; for every sole entry z, z- is critical.
   - y is the only non-critical sole entry and x the only non-critical sole exit. So T is Shelor's insertion of a
-    vertex (y) into the uniquely Hamiltonian tournament T - y with parent y-, and this decomposition is canonical.
+    vertex (y) into the uniquely Hamiltonian tournament T - y with parent y-, and y is the only vertex whose deletion is
+    such a step.
 - **(D) Cut arcs.**
   - An arc of C is a cut arc (T minus the arc is not strong) iff it is not internal to the run.
   - The cut arcs form the path x -> x+ -> ... -> y- -> y of C, so #cut arcs + |NC| = n + 1.
@@ -115,8 +122,16 @@ predecessor on C, d+ and d- for out- and in-degree, and NC for the set of non-cr
     entry. So there are 2 or 3 of them, and 3 exactly when T has two sole entries; those are then y- and y.
   - With (C) and (E), T ↦ (T - y, y-) is a bijection from the classes of order m + 1 onto the pairs (U, p) with U of
     order m and p admissible in U.
-  - Hence |UH(m)| = F(2m - 6). This is Garey's theorem (KNOWN: Garey 1972, Moon 1982) by a self-contained route, so (F)
-    does not need the citation.
+  - Hence |UH(m)| = F(2m - 6). This is Garey's theorem (KNOWN: Garey 1972, Moon 1982), by a route that is self-contained
+    except for Moon 1966 and Camion 1959. So (F) does not need Garey's citation.
+  - **Typing.** The statement of (G) is Shelor's grammar (KNOWN: Shelor 1977), as recorded in
+    `operation_closed_synthesis_20261029/THEORY.md` section II:
+    - type A, one sole entry a = y: parents a (letter b) and pred(a) (letter a);
+    - type B, two sole entries a0 = y- and a1 = y: parents a1, a0 and pred(a0) (letters e, d, c);
+    - child type B exactly when the parent is a sole entry;
+    - counts A' = A + B, B' = A + 2B.
+
+    What is new to the repository is the proof from the non-critical run, which does not use Shelor's paper.
 - **(H) Run transitions and the run-length recurrence.**
   - The child U^p has run length r(U), r(U) + 1 or r(U) + 2 according as p = y_U, y_U- or y_U--.
   - Hence N(n, r) = N(n - 1, r) + 2 N(n - 1, r - 1) - N(n - 2, r - 1) for n >= 6, with the generating function of
@@ -221,7 +236,8 @@ Hamiltonian:
   isomorphism classes.
 
 *The counts.* Let a(n) and b(n) be the numbers of classes with one and with two sole exits.
-1. By (E), rooted classes number a + 2b at order >= 4, and b(4) = 1. So b(n) = a(n - 1) + 2 b(n - 1).
+1. Rooted classes number a + 2b at order >= 4: the two sole exits of a class are distinguishable, since only x has a
+   sole exit as out-neighbour, and (E) gives the same. With b(4) = 1, b(n) = a(n - 1) + 2 b(n - 1).
 2. With a + b = F(2n - 6) (proved in (G), whose proof does not use (F); KNOWN as Garey's theorem),
    b(n) = b(n - 1) + F(2n - 8) = F(2n - 7), and a(n) = F(2n - 8).
 3. The bijection preserves the number of sole entries (n >= 5):
@@ -229,7 +245,7 @@ Hamiltonian:
    - y only gains an in-arc, and was not a sole entry, being a sole exit of order >= 4;
    - every other vertex is unchanged.
 4. So (2, j)(n) = (1, j)(n - 1) + 2 (2, j)(n - 1). The converse gives (1, 2) + (2, 2) = F(2n - 7).
-5. Hence (2, 2)(n) = (2, 2)(n - 1) + F(2n - 9) = F(2n - 8) + 1. The table follows, and the rooted count is
+5. Hence, from the base (2, 2)(4) = 1 (S_4), (2, 2)(n) = (2, 2)(n - 1) + F(2n - 9) = F(2n - 8) + 1. The table follows, and the rooted count is
    a + 2b = F(2n - 5). QED.
 
 **Lemma 3 (entry attachment; klein's THM-4862 (b), C(U + a_entry) = e_r(U)).** hc(U^p) = e_p(U).
@@ -237,10 +253,13 @@ Hamiltonian:
 - The rest of the cycle is a Hamiltonian path of U from z to p.
 - Conversely, every Hamiltonian path of U ending at p starts at some z other than p, which y beats.
 
-**Proof of (G).** Write adm(U) = {p : e_p(U) = 1}. Every sole entry z of U lies in adm(U): U = (U - z)^(z-), so by
-Lemma 3, e_z(U) = e_(z-)(U - z) = hc(U) = 1.
+**Proof of (G).** Write adm(U) = {p : e_p(U) = 1}. Every sole entry z of U lies in adm(U):
+- every path ending at z enters it from z-, so e_z(U) = e_(z-)(U - z);
+- U = (U - z)^(z-), so Lemma 3 gives e_(z-)(U - z) = hc(U) = 1.
 
-*Base, order 4.* S_4 has cycle 0 -> 1 -> 2 -> 3 -> 0 and chords 0 -> 2, 1 -> 3.
+*Base, order 4.* The strong 4-tournament is unique (score sequence (1, 1, 2, 2)) and has exactly one Hamiltonian cycle.
+So S_4 is the only uniquely Hamiltonian class of order 4, and u(4) = 1. S_4 has cycle 0 -> 1 -> 2 -> 3 -> 0 and chords
+0 -> 2, 1 -> 3; its sole entries are 0 and 1, so b(4) = 1.
 - Its Hamiltonian paths end at 3, 0, 2, 1, 2, so e = (1, 1, 2, 1).
 - The run is 1 -> 2 and y = 1. The vertex y- = 0 is a sole entry.
 - adm = {1, 0, 3} = {y, y-, y--}.
@@ -266,9 +285,10 @@ The cases:
     e_p(T) = hc(U) = 1.
   - **p = p_0-, p_0 not a sole entry.**
     - By induction, the admissible non-sole-entries of U are y_U- (if y_U- is not a sole entry) or y_U-- (if it is). So
-      p_0 is one of these, and p = p_0- is y_U-- or y_U---. This is not admissible in U (|U| >= 4), so e_p(U) >= 2.
-    - Let h = hp_U(p_0, p). Splitting each of these h paths after p_0 gives distinct pairs for W, so W >= max(1, h).
-    - Then e_p(T) >= (e_p(U) - h) + max(1, h) >= 2.
+      p_0 is one of these, and p = p_0- is y_U-- or y_U---. This is not admissible in U (|U| >= 4). Since e_p(U) >= 1 (the path P_p), it follows that e_p(U) >= 2.
+    - Let h = hp_U(p_0, p). Here p+ = p_0, so P_p is one of these paths and h >= 1. Splitting each of the h paths
+      after p_0 gives distinct pairs for W, so W >= h.
+    - Then e_p(T) >= (e_p(U) - h) + h = e_p(U) >= 2.
 
 So adm(T) = {y, y-} together with y-- iff y- is a sole entry. QED for the first claim.
 
@@ -288,8 +308,12 @@ So adm(T) = {y, y-} together with y-- iff y- is a sole entry. QED for the first 
 - b(m + 1) = sum over U of #(sole entries of U) = u(m) + b(m).
 - With u(4) = b(4) = 1, this gives u(m + 1) = 3 u(m) - u(m - 1), so u(m) = F(2m - 6) and b(m) = F(2m - 7). QED.
 
-**Proof of (H).** Let U have run [y_U, ..., x_U] of length r, let p be admissible, and T = U^p. Then C_T is C_U with y
-inserted after p, and by (C) the run of T starts at y. Three facts:
+**Proof of (H).** Let U have run [y_U, ..., x_U] of length r, let p be admissible, and T = U^p.
+- C_T is C_U with y inserted after p. The unique Hamiltonian cycle of T is y -> (the unique Hamiltonian path of U ending
+  at p) -> y, and that path is C_U - (p -> p+), because e_p(U) = 1.
+- By (C), the run of T starts at y.
+
+Three facts:
 - Non-critical vertices v of U other than p stay non-critical: in T - v, the vertex y has the in-neighbour p and some
   out-neighbour.
 - p is critical in T (Lemma 2).
@@ -299,10 +323,8 @@ inserted after p, and by (C) the run of T starts at y. Three facts:
 The run of T is therefore the segment of C_T from y up to x_U:
 - **p = y_U:** y, y_U+, ..., x_U, of length r.
 - **p = y_U-:** y, y_U, ..., x_U, of length r + 1.
-- **p = y_U-- (y_U- a sole entry):** y, y_U-, y_U, ..., x_U, of length r + 2. Here y_U- is non-critical in T:
-  - in U - y_U-, the vertex y_U is a source, and the C_U-path y_U -> ... -> y_U-- puts p = y_U-- in the last strong
-    component;
-  - y then closes it: p -> y -> y_U. QED.
+- **p = y_U-- (y_U- a sole entry):** y, y_U-, y_U, ..., x_U, of length r + 2. Here y_U- is non-critical in T, because
+  T - y_U- has the Hamiltonian cycle y -> y_U -> (C_U-path) -> y_U-- = p -> y. QED.
 
 *The recurrence.* Let N_2(m, r) count the classes with run length r and two sole entries. By the bijection, (H), and the
 sole-entry rule, for m >= 4:
@@ -314,8 +336,9 @@ Use the second line at m = n - 2 and the first at m = n - 2 to get N_2(n - 1, r 
 Substituting into the first line at m = n - 1 gives the recurrence for n >= 6. The closed forms of HYP-9458 follow by
 induction on n from the recurrence and (D):
 - T(n, 2) = 2 T(n - 1, 2);
-- T(n, 3) = 2^(n-7) + 2 T(n - 1, 3);
-- T(n, 4) = n 2^(n-9) + 2 T(n - 1, 4);
+- T(n, 3) = 2^(n-7) + 2 T(n - 1, 3) for n >= 7, from the base T(6, 3) = 3, so T(n, 3) = n 2^(n-7) for n >= 6;
+- T(n, 4) = n 2^(n-9) + 2 T(n - 1, 4) for n >= 8, from the base T(7, 4) = 6, so T(n, 4) = (n^2 + n - 8) 2^(n-10) for
+  n >= 7 (and T(n, 2) = 2^(n-5) for n >= 5);
 - the top diagonals N(n, 2) = N(n - 1, 2), N(n, 3) = N(n - 1, 3) + 1, N(n, 4) = N(n - 1, 4) + n - 4. QED.
 
 ## 3. Exhaustive checks (FINITE-EXACT)
@@ -365,7 +388,7 @@ N(n, r) for r = 2..n - 1. This equals HYP-9458's row read backwards (k = n + 1 -
 | 12 | 1, 8, 36, 112, 259, 456, 608, 592, 384, 128 |
 | 13 | 1, 9, 45, 156, 406, 819, 1289, 1560, 1392, 832, 256 |
 
-**Recurrence (HYP-9460 P7; PROVED by (G)-(H)).** For n >= 6,
+**Recurrence (HYP-9460 P7; PROVED by (G)-(H); the generating function sums over n >= 4).** For n >= 6,
 
     N(n, r) = N(n - 1, r) + 2 N(n - 1, r - 1) - N(n - 2, r - 1).
 
@@ -413,7 +436,7 @@ being written. All pre-registered predictions P1-P8 are CONFIRMED.
 | cut arcs under one Shelor insertion: nested largest one-arc cuts A(e), each containing the newest vertex | opus-S74 audit (`uh_one_arc_cut_20261104_audit_S74/AUDIT.md`, section A), given Shelor's grammar | (D) is the global form: the cut arcs are exactly the arcs off the non-critical run. (H) is the run-side form of the same insertion step |
 | sole exits, digits, Phi bijection, Fibonacci coincidence | THM-4862 (klein) | (F) counts the classes by sole exits; rooted (UH, sole exit) pairs number F(2n - 5). (G) is the Shelor-side grammar behind Garey's count. Its admissible parents are klein's entry attachments with digit 1, via Lemma 3 |
 | chord-language rules (end insertion, suffix of the last column) | klein two_branch packet section 5 (FINITE-EXACT, entry-attachment coordinates) | different coordinates. They are necessary conditions on forward chords; (A) and (C) describe the non-critical vertices instead |
-| out-degree-1 lemma for one and two cycles | HYP-9459 (1) (klein) | the one-cycle half is (B), KNOWN by Shelor. The two-cycle half, "minimum out-degree >= 2 and n >= 6 implies hc >= 3", stays OPEN; (B)'s round cycle is exactly RT_5's pentagram at n = 5 |
+| out-degree-1 lemma for one and two cycles | HYP-9459 (1) (klein) | the one-cycle half is (B), KNOWN by Shelor. The two-cycle half, "strong, minimum out-degree >= 2 and n >= 6 implies hc >= 3", stays OPEN; (B)'s round cycle is exactly RT_5's pentagram at n = 5 |
 
 ## 7. Inspiration sources (attached by the owner), checked for genuine connections
 
@@ -441,20 +464,63 @@ Lean-checked machine, then Robinson-style Wang tiles, then Demaine-Langerman pol
 | item | type |
 |---|---|
 | (A) local roundness and propagation | PROVED (elementary) |
-| (B) sole exit and sole entry exist; min out-degree >= 2 implies hc >= 2 | KNOWN (Shelor 1977; THM-4867); new proof PROVED here |
-| (C) one run; canonical Shelor parent | PROVED; the existence of Shelor's insertion is KNOWN (Shelor 1977), its canonical form is PROVED here |
-| (D) cut arcs + non-critical = n + 1; T(n, k) = N(n, n + 1 - k); T(n, n - 1) = 1 | PROVED; the top diagonal uses Las Vergnas 1975 (CITED via Burzio-Demaria 1988) |
+| (B) sole exit and sole entry exist; strong with min out-degree >= 2 implies hc >= 2 | KNOWN (Shelor 1977; THM-4867); a Shelor-free proof, new to the repository, PROVED here |
+| (C) one run; the unique Shelor deletion | PROVED; the existence of Shelor's insertion is KNOWN (Shelor 1977), the uniqueness of the deleted vertex is PROVED here |
+| (D) cut arcs + non-critical = n + 1; T(n, k) = N(n, n + 1 - k); T(n, n - 1) = 1 | PROVED. The top diagonal also follows from (H); Las Vergnas 1975 (CITED via Burzio-Demaria 1988) corroborates it |
 | (E) asymmetry | PROVED |
 | (F) refined counts F(2n-10)+1, F(2n-9)-1, F(2n-8)+1; F(2n-7); F(2n-5) | PROVED (using (G) for the total F(2n - 6)) |
-| (G) admissible parents {y, y-, (y--)}; the canonical Shelor bijection; Garey's F(2n - 6) | PROVED; Garey's count itself is KNOWN (Garey 1972; Moon 1982), re-derived here; the bijectivity of Shelor's construction is KNOWN (Shelor 1977) |
+| (G) admissible parents {y, y-, (y--)}; the unique Shelor deletion as a bijection; Garey's F(2n - 6) | statements KNOWN: Shelor 1977's grammar and its bijectivity, and Garey 1972 / Moon 1982. A Shelor-free proof, new to the repository, is PROVED here |
 | (H) run transitions r, r + 1, r + 2; run-length recurrence; HYP-9458's formulas | PROVED (second, Shelor-free proof). HYP-9458 was conjectured by opus-S74 and first proved by its audit, given Shelor's grammar |
-| all of the above at orders 4-18 | FINITE-EXACT (orders 14-18 pre-registered) |
+| (A), (C), (D), (E), degree-1 and (F) counts, one-arc cuts at orders 4-18; (G) and (H) on parents of orders 4-14 | FINITE-EXACT (orders 14-18 pre-registered). The audits add (G) and (H) at parent orders 4-15, and the (F) bijection, the rooted count, the A_n identification and the strong 'equivalently' form at orders 4-16 (strong form 5-9) |
 | run-length recurrence | PROVED. First by opus-S74's audit via HYP-9458 and (C), given Shelor's grammar; independently by (H). Pre-registered (HYP-9460 P7) and FINITE-EXACT through the confirmatory run |
 | tilings and topos readings | INTERPRETATION / no connection |
 
 ## 9. Audit
 
-(Filled after the independent audit.)
+Two independent adversarial audits were run. Each auditor wrote its own code and used none of this session's programs or
+outputs as evidence. Both verdicts are **SOUND WITH CORRECTIONS**, with no blocking finding. All corrections are applied,
+and MISTAKE-707 logs them.
+
+**Audit 1** ([report](../../04-computation/experiments/uh_noncritical_run_20261104_audit_S10/AUDIT.md)) covers (A)-(F) and
+re-read (G)-(H).
+- *Proofs.* Every step of Lemmas 1-3 and (A)-(H) holds. This includes the even-order second cycle of (B), the component
+  argument of (D), and the base cases of (F): sole-entry preservation genuinely fails at n = 4, which is why the step
+  starts at n = 5.
+- *Computation.*
+  - All labelled tournaments through order 7 (2^21 at order 7), with exact cycle counts and no generation lemma.
+  - Plain-extension classes at orders 8 and 9 (55 and 144).
+  - Shelor-style insertion at orders 10-16, equal to Garey's F(2n - 6).
+  - Zero failures at orders 4-16 for (A)-(F), Lemma 1 and the (D) component structure. The (F) bijection hits every
+    rooted pair once, and the r = 2 class is A_n.
+  - (G) and (H) on parents of orders 4-15, and P7 at orders 6-16.
+  - The quoted Las Vergnas statement over all strong tournaments of orders 4-9.
+  - Negative controls fire.
+- *Findings.*
+  - One correction: the theorem's title stated the "equivalently" form of (B) without "strong", which is false as
+    written (a source beating RT_5).
+  - Six minor items: the FINITE-EXACT scope, the HYP/THM label map, "new" against the novelty disclaimer, an internal
+    pointer, HYP-9460's P4 wording and stale note field, and the unstated base u(4) = 1.
+  - Five remarks.
+
+**Audit 2** ([report](../../04-computation/experiments/uh_noncritical_run_20261104_audit2_S10/AUDIT.md)) covers (G), (H)
+and everything built on them.
+- *Proofs.* No logical gap.
+  - Each Hamiltonian path of T ending at p is counted exactly once, including p adjacent to y or p_0.
+  - |U| >= 4 is exactly what keeps y_U--- outside {y_U, y_U-, y_U--}.
+  - The elimination is valid for n >= 6, and the generating function is confirmed symbolically.
+- *Computation.*
+  - Labelled tournaments through order 7, and all tournaments on a fixed cycle through order 9 (n F(2n - 6)).
+  - Two class generators agree as sets through order 16.
+  - On every class of orders 4-15: (G), (H), the decomposition e_p(T) = [e_p(U) - hp] + W with W computed
+    independently, and the bijection. Every class of orders 5-16 arises from exactly one admissible pair.
+  - The rows N, N_2 and T match the recurrence and every published row. The closed forms hold for n <= 60. S74's audit
+    closed form agrees with the recurrence for n <= 40.
+- *Findings.* Three minor items: the scope row in section 8, missing ranges on two one-step closed-form recursions (false
+  at n = 6 and 7 as written), and missing provisos in the (H) statement. Four remarks.
+
+**Found by the session itself during the audits.** The statement of (G) is Shelor's grammar. It is recorded in
+`operation_closed_synthesis_20261029/THEORY.md` section II, so (G) is retyped as a Shelor-free proof of a KNOWN statement
+(section 1 (G), typing table).
 
 ## 10. Reproduction
 

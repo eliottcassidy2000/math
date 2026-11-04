@@ -5,7 +5,7 @@ status: CLOSED (kind-pasteur-2026-11-04-S10) - P1-P8 CONFIRMED at orders 14-18 (
 session: kind-pasteur-2026-11-04-S10
 date: 2026-11-04
 related: [THM-4868, THM-4867, HYP-9458, HYP-9457, HYP-9459, THM-4866, THM-4862, THM-4846]
-note: 05-knowledge/results/uniquely_hamiltonian_noncritical_run_20261104.md (to be written after the run)
+note: 05-knowledge/results/uniquely_hamiltonian_noncritical_run_20261104.md
 script: 04-computation/experiments/uh_noncritical_run_20261104.c
 ---
 
@@ -82,11 +82,20 @@ If order 18 does not finish, P1-P8 are reported at orders 14-17 and the order-18
 
 Output: `04-computation/experiments/uh_noncritical_run_20261104_confirm.out`.
 
+**Label map.** This hypothesis was written before THM-4868 was filled, so its letters differ:
+
+| HYP-9460 | (A) | (B) | (C) | (D) | (E) |
+|---|---|---|---|---|---|
+| THM-4868 | (A) | (C) | (D) | (F) | (E) |
+
+THM-4868 (B), (G) and (H) have no HYP-9460 letter.
+
 - **(P1) CONFIRMED.** Class counts 17,711, 46,368, 121,393, 317,811 and 832,040 at orders 14-18.
 - **(P2) CONFIRMED.** `round_bad = 0` at every order.
 - **(P3) CONFIRMED.** `run_bad = 0` and `crit_bad = 0` at every order.
-- **(P4) CONFIRMED.** `cut_bad = 0` at every order. The cut-arc rows at orders 14-16 equal HYP-9458's published T(n, k)
-  rows; for example, order 16 reads 2048, 8192, 16896, 23552, 24600, 20256, 13504, 7380, 3312, 1210, 352, 78, 12, 1.
+- **(P4) CONFIRMED.** `cut_bad = 0` at every order. The cut-arc rows agree with every value HYP-9458 published:
+  - the full row at order 16: 2048, 8192, 16896, 23552, 24600, 20256, 13504, 7380, 3312, 1210, 352, 78, 12, 1;
+  - at orders 14 and 15, T(n, 2..4) and the three top diagonals.
 - **(P5) CONFIRMED.** The refined counts equal the predicted Fibonacci values at every order 14-18.
 - **(P6) CONFIRMED.** `asym_bad = 0`.
 - **(P7) CONFIRMED.** The rows N(n, r) equal the recurrence rows at orders 14-16 (non-blind) and at orders 17 and 18
@@ -109,4 +118,5 @@ opus-S74's HYP-9458 follows again, by this second route.
 The blind order-17 confirmation preceded the proof. The order-18 confirmation ran in parallel with it and checks the
 proof.
 
-**Status.** Every item is CONFIRMED or PROVED. Nothing open remains in this hypothesis.
+**Status.** Every item is CONFIRMED or PROVED. Nothing open remains in this hypothesis. Two independent audits of
+THM-4868 recomputed P1-P7 with their own code through order 16 (SOUND WITH CORRECTIONS; MISTAKE-707).

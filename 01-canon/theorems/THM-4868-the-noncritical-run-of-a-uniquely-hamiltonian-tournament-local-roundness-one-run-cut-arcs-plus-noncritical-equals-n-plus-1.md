@@ -1,26 +1,41 @@
 ---
 id: THM-4868
-title: "The non-critical run of a uniquely Hamiltonian tournament. For T of order n >= 4 with exactly one Hamiltonian cycle C: (A) every non-critical vertex v (T - v strong) beats exactly the d+(v) vertices that follow it on C, and d+(v) >= 2 makes v+ non-critical (dually d-(v) >= 2 makes v- non-critical); (B) hence T has a sole exit and a sole entry (KNOWN: Shelor 1977, THM-4867; new Shelor-free proof by roundness); equivalently, minimum out-degree >= 2 forces at least two Hamiltonian cycles, sharp at RT5; (C) the non-critical vertices form ONE run of C from a sole entry y to a sole exit x, 2 <= r <= n - 1, and y is the canonical Shelor vertex; (D) an arc of C is a cut arc iff it is not internal to the run, so #cut arcs + #non-critical = n + 1 and HYP-9458's T(n, k) = N(n, n + 1 - k); (E) T is asymmetric; (F) F(2n - 8) and F(2n - 7) classes with one and two sole exits, and F(2n - 10) + 1, F(2n - 9) - 1, F(2n - 9) - 1, F(2n - 8) + 1 by (sole exits, sole entries) = (1,1), (1,2), (2,1), (2,2); (G) the admissible Shelor parents (e_p(T) = 1) are exactly y, y- and, when y- is a sole entry, y--, so T -> (T - y, y-) is a bijection onto admissible pairs one order down and |UH(n)| = F(2n - 6) (Garey's theorem re-derived); (H) the child of an admissible parent y, y-, y-- has run length r, r + 1, r + 2, so N(n, r) = N(n - 1, r) + 2 N(n - 1, r - 1) - N(n - 2, r - 1) and every formula of HYP-9458 holds"
+title: "The non-critical run of a uniquely Hamiltonian tournament. For T of order n >= 4 with exactly one Hamiltonian cycle C: (A) every non-critical vertex v (T - v strong) beats exactly the d+(v) vertices that follow it on C, and d+(v) >= 2 makes v+ non-critical (dually d-(v) >= 2 makes v- non-critical); (B) hence T has a sole exit and a sole entry (KNOWN: Shelor 1977, THM-4867; Shelor-free proof by roundness, new to the repository); equivalently, every strong tournament with minimum out-degree >= 2 has at least two Hamiltonian cycles, sharp at RT5; (C) the non-critical vertices form ONE run of C from a sole entry y to a sole exit x, 2 <= r <= n - 1, and y is the unique vertex whose deletion is a Shelor step; (D) an arc of C is a cut arc iff it is not internal to the run, so #cut arcs + #non-critical = n + 1 and HYP-9458's T(n, k) = N(n, n + 1 - k); (E) T is asymmetric; (F) F(2n - 8) and F(2n - 7) classes with one and two sole exits, and F(2n - 10) + 1, F(2n - 9) - 1, F(2n - 9) - 1, F(2n - 8) + 1 by (sole exits, sole entries) = (1,1), (1,2), (2,1), (2,2); (G) the admissible Shelor parents (e_p(T) = 1) are exactly y, y- and, when y- is a sole entry, y--, so T -> (T - y, y-) is a bijection onto admissible pairs one order down and |UH(n)| = F(2n - 6) (Garey's theorem re-derived); (H) the child of an admissible parent y, y-, y-- has run length r, r + 1, r + 2, so N(n, r) = N(n - 1, r) + 2 N(n - 1, r - 1) - N(n - 2, r - 1) and every formula of HYP-9458 holds"
 status: >
   PROVED (elementary; kind-pasteur-2026-11-04-S10): (A), (C), (D), (E), (F), (G), (H);
-  - (B) is a new proof of a KNOWN theorem (Shelor 1977), recorded first in this repository as THM-4867 by
+  - (B) is a proof, new to the repository, of a KNOWN theorem (Shelor 1977), recorded first in this repository as THM-4867 by
     opus-2026-11-04-S74, which this theorem defers to for the statement;
-  - (G) re-derives KNOWN results: Garey 1972's F(2n - 6) (also Moon 1982) and the completeness of Shelor 1977's
-    insertion;
+  - (G) is a Shelor-free proof of KNOWN statements:
+    - Shelor 1977's grammar, with its parent rule and bijectivity, recorded in
+      05-knowledge/results/operation_closed_synthesis_20261029/THEORY.md section II. Its letters a, b and c, d, e are
+      the parents y-, y and y--, y-, y;
+    - Garey 1972's F(2n - 6), also Moon 1982;
   - (H) gives a second, Shelor-free proof of opus-S74's HYP-9458 and of this session's pre-registered HYP-9460 P7.
     HYP-9458 was conjectured and confirmed at orders 14-16 by opus-S74, and first PROVED by its independent audit
-    (a0518f53cd), given Shelor's grammar: the count law k = 3 + #{b, e} - #{c}, whose parent letters j = 0, 1, 2 are
+    (a0518f53cd), given Shelor's grammar: the count law k = 3 + #{b, e} - #{c}, whose parent letters j = 0, 1, 2 (j = 2 only
+    when y- is a sole entry) are
     (G)'s y, y-, y--. That audit noted that P7 follows from it with (C).
   CITED: Moon 1966 (a strong tournament of order n >= 4 has a strong subtournament of order n - 1), Camion 1959,
   Garey 1972 (F(2n - 6); re-derived in (G), used nowhere), klein THM-4862 (b) (entry attachment C(U + a_entry) =
   e_r(U), re-proved in the note as Lemma 3), Las Vergnas 1975 via Burzio-Demaria 1988 (the bineutral A_n is the only Hamiltonian tournament
-  with exactly two neutral vertices; used only for the top diagonal in (D)).
-  FINITE-EXACT: every statement on all F(2n - 6) classes at orders 4-18 (orders 14-18 pre-registered as HYP-9460 in
-  a8db6218f9 before the run).
-  FINITE-EXACT also: (G) and (H) on every parent of order 4-14 (shelor_parents_20261104.c).
+  with exactly two neutral vertices; corroborating only, since (H) proves the top diagonal in (D)).
+  FINITE-EXACT: on all F(2n - 6) classes at orders 4-18:
+  - (A), (C), (D) and (E);
+  - the degree-1 and (F) (#sole exits, #sole entries) counts;
+  - one-arc cuts;
+  - hc = 1 independently at orders <= 14.
+  Orders 14-18 were pre-registered as HYP-9460 in a8db6218f9 before the run.
+  Not machine-checked by these programs: the (F) bijection, the rooted count, the identification of the r = 2 class
+  with A_n, and the 'equivalently' form of (B). The independent audit checked these at orders 4-16 (the strong form at
+  orders 5-9).
+  FINITE-EXACT also: (G) and (H) on every parent of order 4-14 (shelor_parents_20261104.c). The audit re-checked them
+  at parent orders 4-15 with its own code.
   NOVELTY: not claimed against Douglas 1970, Shelor 1977 or Moon 1982, whose bodies could not be read (paywall, CAPTCHA,
   Cloudflare challenge); new to the repository.
-  AUDIT: see the note, section 9.
+  AUDIT: two independent adversarial audits, both SOUND WITH CORRECTIONS (no blocking finding; corrections applied;
+  MISTAKE-707):
+  - 04-computation/experiments/uh_noncritical_run_20261104_audit_S10/AUDIT.md ((A)-(F); title missing 'strong');
+  - 04-computation/experiments/uh_noncritical_run_20261104_audit2_S10/AUDIT.md ((G), (H), the recurrence).
 session: kind-pasteur-2026-11-04-S10
 source: 05-knowledge/results/uniquely_hamiltonian_noncritical_run_20261104.md
 related:
@@ -62,11 +77,11 @@ Let T be a tournament of order n >= 4 with exactly one Hamiltonian cycle C. Nota
   - NC is one run y -> ... -> x of C, of length 2 <= r <= n - 1, where y is a sole entry and x is a sole exit.
   - For every sole exit z, z+ is critical; for every sole entry z, z- is critical.
   - y is the only non-critical sole entry. So T is Shelor's insertion of y into the uniquely Hamiltonian tournament
-    T - y with parent y-, canonically.
+    T - y with parent y-, and y is the only vertex whose deletion is such a step.
 - **(D) Cut arcs.**
   - An arc of C is a cut arc iff it is not internal to the run.
   - So #cut arcs + |NC| = n + 1, and T(n, k) (HYP-9458) = N(n, n + 1 - k).
-  - With Las Vergnas, T(n, n - 1) = 1.
+  - T(n, n - 1) = 1, by (H); Las Vergnas's theorem corroborates it.
 - **(E) Asymmetry.** Aut(T) is trivial.
 - **(F) Refined counts** (n >= 5).
   - Exactly F(2n - 7) classes have two sole exits. They are in bijection with rooted pairs (T', sole exit) of order
@@ -83,7 +98,8 @@ Let T be a tournament of order n >= 4 with exactly one Hamiltonian cycle C. Nota
   - These p are exactly y and y-, together with y-- iff y- is a sole entry.
   - So T -> (T - y, y-) is a bijection from UH(n + 1) onto the admissible pairs of UH(n).
   - Hence |UH(n)| = F(2n - 6). This is Garey's theorem, re-derived without Douglas's characterization.
-- **(H) Run transitions.** The children T^y, T^(y-) and T^(y--) have run lengths r, r + 1 and r + 2. Therefore
+- **(H) Run transitions.** The children T^y, T^(y-) and, only when y- is a sole entry, T^(y--) have run lengths r,
+  r + 1 and r + 2 (as a bijection between isomorphism classes, with parents of order >= 4). Therefore
   N(n, r) = N(n - 1, r) + 2 N(n - 1, r - 1) - N(n - 2, r - 1) for n >= 6, and HYP-9458's T(n, k) satisfies
   T(n, k) = T(n - 1, k - 1) + 2 T(n - 1, k) - T(n - 2, k - 1). The latter gives 2^(n-5), n 2^(n-7),
   (n^2 + n - 8) 2^(n-10) and the diagonals 1, n - 4, C(n - 3, 2).

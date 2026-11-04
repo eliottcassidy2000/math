@@ -22607,3 +22607,56 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     klein's lane, whose THM-4862 already used the same construction, had the lemma at 10:05.
   - When a table is generated from a known grammar, try to prove the fit from the grammar before filing it OPEN.
   - Search the results tree and the reflections, not only canon, before writing "no session".
+
+## MISTAKE-707 (2026-11-04, kind-pasteur-2026-11-04-S10, THM-4868, HYP-9460 and the note `05-knowledge/results/uniquely_hamiltonian_noncritical_run_20261104.md` at the pre-audit commits e11d119988 and c2fbfacee9; found by the independent audits `04-computation/experiments/uh_noncritical_run_20261104_audit_S10/AUDIT.md` and `04-computation/experiments/uh_noncritical_run_20261104_audit2_S10/AUDIT.md`, and one item by the session itself while they ran) -- a theorem title that dropped "strong", an overstated FINITE-EXACT scope, a classical grammar not named as such, and one-step recursions without ranges
+
+- **What was claimed.**
+  - (1) THM-4868's frontmatter title: "equivalently, minimum out-degree >= 2 forces at least two Hamiltonian cycles".
+    The note's section 6 paraphrased HYP-9459 (1) as "minimum out-degree >= 2 and n >= 6 implies hc >= 3".
+  - (2) "FINITE-EXACT: every statement on all F(2n - 6) classes at orders 4-18": THM-4868's status, the note's status
+    block and its typing table.
+  - (3) (G), "the admissible Shelor parents are y, y- and (when y- is a sole entry) y--", was presented as a structure
+    result of the session and typed PROVED. Only Garey's count and the completeness of Shelor's insertion were named as
+    KNOWN.
+  - (4) Smaller errors:
+    - the one-step recursions T(n, 3) = 2^(n-7) + 2 T(n - 1, 3) and T(n, 4) = n 2^(n-9) + 2 T(n - 1, 4) carried no
+      ranges;
+    - "new proof" stood next to "novelty not claimed";
+    - "canonical" was used where the content is uniqueness;
+    - HYP-9460's P4 result line overstated what HYP-9458 had published at orders 14-15;
+    - a stale `note:` field, the unstated base u(4) = 1, and a wrong internal pointer.
+- **Why it was wrong.**
+  - (1) A non-strong tournament can have minimum out-degree >= 2 and no Hamiltonian cycle: a source beating RT_5 has
+    order 6, minimum out-degree 2 and hc = 0. The body of (B) said "strong"; the compressed title dropped it.
+  - (2) The programs check (A), (C), (D), (E), the degree and (F) counts and one-arc cuts at orders 4-18, but (G)-(H)
+    only on parents of orders 4-14. They never check the (F) bijection, the rooted count F(2n - 5), the
+    identification of the r = 2 class with A_n, or the "equivalently" form.
+  - (3) The statement of (G) is Shelor 1977's grammar, already recorded in
+    `05-knowledge/results/operation_closed_synthesis_20261029/THEORY.md` section II:
+    - type A has parents a and pred(a); type B has parents a1, a0 and pred(a0);
+    - the counts are A' = A + B and B' = A + 2B.
+
+    Only the Shelor-free proof from the non-critical run is new to the repository.
+  - (4) The T(n, 3) step needs n >= 7: at n = 6 it gives 5/2 instead of 3. The T(n, 4) step needs n >= 8.
+- **Repair.**
+  - (1) "Every strong tournament with minimum out-degree >= 2", in the title and the paraphrase.
+  - (2) The checked scope is stated per statement and per program, with the audits' additional checks: orders 4-16,
+    and (G)-(H) at parent orders 4-15.
+  - (3) (G) is retyped: its statements are KNOWN (Shelor 1977; Garey 1972; Moon 1982), and the proof is new to the
+    repository. A dictionary to Shelor's letters a-e is added.
+  - (4) Ranges and bases are stated. "New to the repository", "unique", the HYP/THM label map, the pointer, the P4
+    wording and the `note:` field are fixed. The (H) statement gets its provisos: T^(y--) only when y- is a sole entry,
+    and parents of order >= 4.
+- **How it was caught.**
+  - Audit 1 found (1), (2) and most of (4).
+  - Audit 2 found the ranges, the section-8 scope row and the (H) provisos.
+  - The session found (3) while the audits ran. After reading S74's MISTAKE-706 lesson, it grepped the results tree for
+    the classical construction's recorded form.
+- **Lesson.**
+  - When compressing a theorem into a frontmatter title, keep every hypothesis of the body. Titles are what indexes and
+    other sessions read.
+  - Type FINITE-EXACT scope per statement and per program, never as "every statement".
+  - Before typing a structural statement about a classical class as PROVED here, grep the results tree for the
+    classical construction's recorded form (here, Shelor's grammar in a 10-29 packet), not only canon and the same day's
+    log.
+  - Give every one-step recursion derived from a recurrence with base rows its own range.

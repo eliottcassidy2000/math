@@ -1,0 +1,85 @@
+# classes_audit2 NMAX=13 NCHECK=12 LAB=7 VERIFYB=12 threads=12
+order  4: exhaustive labelled classes = 1 (F(2)=1)
+order  5: methodA=3 methodB=3 (B hits 9, B hc-verify bad 0)  A==B:yes  F(2n-6)=3 OK  [A 0.0s, B 0.0s]
+          exhaustive labelled classes = 3, equal to method A set: yes
+order  6: methodA=8 methodB=8 (B hits 30, B hc-verify bad 0)  A==B:yes  F(2n-6)=8 OK  [A 0.0s, B 0.0s]
+          exhaustive labelled classes = 8, equal to method A set: yes
+order  7: methodA=21 methodB=21 (B hits 94, B hc-verify bad 0)  A==B:yes  F(2n-6)=21 OK  [A 0.0s, B 0.0s]
+          exhaustive labelled classes = 21, equal to method A set: yes
+order  8: methodA=55 methodB=55 (B hits 286, B hc-verify bad 0)  A==B:yes  F(2n-6)=55 OK  [A 0.0s, B 0.0s]
+order  9: methodA=144 methodB=144 (B hits 853, B hc-verify bad 0)  A==B:yes  F(2n-6)=144 OK  [A 0.0s, B 0.0s]
+order 10: methodA=377 methodB=377 (B hits 2506, B hc-verify bad 0)  A==B:yes  F(2n-6)=377 OK  [A 0.0s, B 0.0s]
+order 11: methodA=987 methodB=987 (B hits 7275, B hc-verify bad 0)  A==B:yes  F(2n-6)=987 OK  [A 0.0s, B 0.1s]
+order 12: methodA=2584 methodB=2584 (B hits 20916, B hc-verify bad 0)  A==B:yes  F(2n-6)=2584 OK  [A 0.1s, B 0.3s]
+order 13: methodA=6765 methodB=6765 (B hits 59654, B hc-verify bad 0)  A==B:yes  F(2n-6)=6765 OK  [A 0.8s, B 0.7s]
+order  4: brute-force (all n! relabellings) distinct canonical forms = 1 of 1 classes
+order  5: brute-force (all n! relabellings) distinct canonical forms = 3 of 3 classes
+order  6: brute-force (all n! relabellings) distinct canonical forms = 8 of 8 classes
+order  7: brute-force (all n! relabellings) distinct canonical forms = 21 of 21 classes
+order  8: brute-force (all n! relabellings) distinct canonical forms = 55 of 55 classes
+order  9: brute-force (all n! relabellings) distinct canonical forms = 144 of 144 classes
+
+# checks of (G), (H), Lemma 3, decomposition, bijection, cut arcs
+n= 4 classes=1  bad: hc=0 asym=0 C-input=0 G=0 L3=0 H=0 facts=0 canon=0 decomp=0 pathsplit=0 cut=0
+      |adm|=2:0 |adm|=3:1 other:0   child deltas 0/1/2: 1 1 1
+      bijection onto order 5 (3 classes): hit once 3, never 0, more than once 0
+      N(n,r) r=2..n-1: 1 0
+      N2(n,r) r=2..n-1: 1 0
+      T(n,k) k=2..n-1: 0 1
+n= 5 classes=3  bad: hc=0 asym=0 C-input=0 G=0 L3=0 H=0 facts=0 canon=0 decomp=0 pathsplit=0 cut=0
+      |adm|=2:1 |adm|=3:2 other:0   child deltas 0/1/2: 3 3 2
+      bijection onto order 6 (8 classes): hit once 8, never 0, more than once 0
+      decomposition: min W = 1, min (W - hp) = 0, case p=p0-, p0 not sole entry: min e_p(U) = 2, min hp_U(p0,p) = 1
+      N(n,r) r=2..n-1: 1 1 1
+      N2(n,r) r=2..n-1: 1 1 0
+      T(n,k) k=2..n-1: 1 1 1
+n= 6 classes=8  bad: hc=0 asym=0 C-input=0 G=0 L3=0 H=0 facts=0 canon=0 decomp=0 pathsplit=0 cut=0
+      |adm|=2:3 |adm|=3:5 other:0   child deltas 0/1/2: 8 8 5
+      bijection onto order 7 (21 classes): hit once 21, never 0, more than once 0
+      decomposition: min W = 1, min (W - hp) = 0, case p=p0-, p0 not sole entry: min e_p(U) = 3, min hp_U(p0,p) = 1
+      N(n,r) r=2..n-1: 1 2 3 2
+      N2(n,r) r=2..n-1: 1 2 2 0
+      T(n,k) k=2..n-1: 2 3 2 1
+n= 7 classes=21  bad: hc=0 asym=0 C-input=0 G=0 L3=0 H=0 facts=0 canon=0 decomp=0 pathsplit=0 cut=0
+      |adm|=2:8 |adm|=3:13 other:0   child deltas 0/1/2: 21 21 13
+      bijection onto order 8 (55 classes): hit once 55, never 0, more than once 0
+      decomposition: min W = 1, min (W - hp) = 0, case p=p0-, p0 not sole entry: min e_p(U) = 3, min hp_U(p0,p) = 1
+      N(n,r) r=2..n-1: 1 3 6 7 4
+      N2(n,r) r=2..n-1: 1 3 5 4 0
+      T(n,k) k=2..n-1: 4 7 6 3 1
+n= 8 classes=55  bad: hc=0 asym=0 C-input=0 G=0 L3=0 H=0 facts=0 canon=0 decomp=0 pathsplit=0 cut=0
+      |adm|=2:21 |adm|=3:34 other:0   child deltas 0/1/2: 55 55 34
+      bijection onto order 9 (144 classes): hit once 144, never 0, more than once 0
+      decomposition: min W = 1, min (W - hp) = 0, case p=p0-, p0 not sole entry: min e_p(U) = 3, min hp_U(p0,p) = 1
+      N(n,r) r=2..n-1: 1 4 10 16 16 8
+      N2(n,r) r=2..n-1: 1 4 9 12 8 0
+      T(n,k) k=2..n-1: 8 16 16 10 4 1
+n= 9 classes=144  bad: hc=0 asym=0 C-input=0 G=0 L3=0 H=0 facts=0 canon=0 decomp=0 pathsplit=0 cut=0
+      |adm|=2:55 |adm|=3:89 other:0   child deltas 0/1/2: 144 144 89
+      bijection onto order 10 (377 classes): hit once 377, never 0, more than once 0
+      decomposition: min W = 1, min (W - hp) = 0, case p=p0-, p0 not sole entry: min e_p(U) = 3, min hp_U(p0,p) = 1
+      N(n,r) r=2..n-1: 1 5 15 30 41 36 16
+      N2(n,r) r=2..n-1: 1 5 14 25 28 16 0
+      T(n,k) k=2..n-1: 16 36 41 30 15 5 1
+n=10 classes=377  bad: hc=0 asym=0 C-input=0 G=0 L3=0 H=0 facts=0 canon=0 decomp=0 pathsplit=0 cut=0
+      |adm|=2:144 |adm|=3:233 other:0   child deltas 0/1/2: 377 377 233
+      bijection onto order 11 (987 classes): hit once 987, never 0, more than once 0
+      decomposition: min W = 1, min (W - hp) = 0, case p=p0-, p0 not sole entry: min e_p(U) = 3, min hp_U(p0,p) = 1
+      N(n,r) r=2..n-1: 1 6 21 50 85 102 80 32
+      N2(n,r) r=2..n-1: 1 6 20 44 66 64 32 0
+      T(n,k) k=2..n-1: 32 80 102 85 50 21 6 1
+n=11 classes=987  bad: hc=0 asym=0 C-input=0 G=0 L3=0 H=0 facts=0 canon=0 decomp=0 pathsplit=0 cut=0
+      |adm|=2:377 |adm|=3:610 other:0   child deltas 0/1/2: 987 987 610
+      bijection onto order 12 (2584 classes): hit once 2584, never 0, more than once 0
+      decomposition: min W = 1, min (W - hp) = 0, case p=p0-, p0 not sole entry: min e_p(U) = 3, min hp_U(p0,p) = 1
+      N(n,r) r=2..n-1: 1 7 28 77 155 231 248 176 64
+      N2(n,r) r=2..n-1: 1 7 27 70 129 168 144 64 0
+      T(n,k) k=2..n-1: 64 176 248 231 155 77 28 7 1
+n=12 classes=2584  bad: hc=0 asym=0 C-input=0 G=0 L3=0 H=0 facts=0 canon=0 decomp=0 pathsplit=0 cut=0
+      |adm|=2:987 |adm|=3:1597 other:0   child deltas 0/1/2: 2584 2584 1597
+      bijection onto order 13 (6765 classes): hit once 6765, never 0, more than once 0
+      decomposition: min W = 1, min (W - hp) = 0, case p=p0-, p0 not sole entry: min e_p(U) = 3, min hp_U(p0,p) = 1
+      N(n,r) r=2..n-1: 1 8 36 112 259 456 608 592 384 128
+      N2(n,r) r=2..n-1: 1 8 35 104 225 360 416 320 128 0
+      T(n,k) k=2..n-1: 128 384 592 608 456 259 112 36 8 1
+# total time 2.9s
