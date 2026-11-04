@@ -22802,3 +22802,45 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     sessions included, not only the named agents.
   - Before calling a mechanism's payoff new, grep the repository for the payoff itself: here "+-2", "6 * 2^r" and
     "gate".
+
+## MISTAKE-712 (2026-11-04, kind-pasteur-2026-11-04-S10, HYP-9464 and the note `05-knowledge/results/fermat_self_duality_fewcycle_coincidences_20261104.md` at the pre-audit commit 220666527f (main 9aa6e0836f); found by the independent audit `04-computation/experiments/fermat_self_duality_20261104_audit_S10/AUDIT.md`) -- a canon parity theorem presented as new, a Fermat condition stated backwards, and small-range slips
+
+- **What was claimed.**
+  - (1) The parity reading of the AT_n converse involution: iota(P) = reverse(sigma(P)) pairs the Hamiltonian paths,
+    so H ≡ Fix (mod 2) and Fix is odd. It was typed "new and PROVED" in section 0 row 5, sections 2, 3 and 9, and the
+    HYP Results.
+  - (2) Section 4: "Fermat enters tournament theory through a power of 2 being one more than a prime".
+  - (3) "(x, x^2) is an x^(1/x) mirror pair iff x = 2".
+  - (4) "Every module of every decomposable {-3}-self-dual class at orders 7-10 is transitive (TT_2 to TT_8)", typed
+    FINITE-EXACT only, citing a scratch-only script.
+  - (5) Smaller items:
+    - the exclusion of C3 modules at orders 8-10 called "only FINITE-EXACT";
+    - "Garey's rooted count";
+    - hereditary self-converse presented without its 1976 source;
+    - "the Mersenne side needs three back arcs and a cyclic apex" and "you cannot subtract with two arcs";
+    - "the default nsum gets the fourth decimal of length(E) wrong (2.09688...)";
+    - networkx and raw census records cited but not committed;
+    - missing qualifiers (span d >= 2; n >= 4; two senses of "rigid"; "every Fermat tournament").
+- **Why it was wrong.**
+  - (1) This is THM-582 (mac-mini, 2026-06-29), THM-647 (Anti-Redei, monad) and THM-024. THM-583 is the half-data
+    principle behind the fixed-path count. Only the explicit count Fix(AT_(2k+2)) = H(AT_(k+2)) is new.
+  - (2) A Fermat prime is one more than a power of 2.
+  - (3) x = 1 also solves x^(x^2) = (x^2)^x.
+  - (4) At order 10, TT_10 has TT_9 modules. From order 9 on the claim follows from the cited Theorem 4, and the
+    script lived only in the scratchpad.
+  - (5) The smaller items:
+    - order 8 has a two-line proof (two outside vertices on one side), and n >= 9 is Theorem 4;
+    - Garey counts the classes, F(2m - 6), and the rooted count is THM-4868 (F);
+    - hereditary self-converse is Reid-Thomassen 1976, with the converse for order >= 8;
+    - nothing proves an apex necessary, and two arcs reach 15 and 23;
+    - 2.09688 is 3 - length(E), and the error depends on precision (2.09732, 2.09693, 2.09688 at dps 15, 30, 40);
+    - the remaining items are as stated in the audit.
+- **Repair.** All points corrected in the note and HYP-9464; the records and the networkx check are committed. The
+  audit also extended (A) to order 11 and (B) to orders 11-14.
+- **How it was caught.** The independent audit grepped canon for the mechanism (involution, palindromic paths,
+  anti-automorphism), not only for the object (AT_n). It also re-derived every claim and re-ran every census with its
+  own code.
+- **Lesson.**
+  - Before calling a structural reading new, grep canon for its mechanism words (here "anti-automorphism",
+    "palindromic", "involution", "Fix"), not only for the objects it is applied to.
+  - Read inequalities and "one more than" statements in both directions before committing them.
