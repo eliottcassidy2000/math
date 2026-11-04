@@ -1,0 +1,88 @@
+# HYP-9464 exploratory record (kind-pasteur-2026-11-04-S10), BEFORE the pre-registration commit
+## {-3}-self-dual classes, orders 6-9 (selfdual3 9)
+      1 SD3 n=6 decomposable=0 selfconverse=0 H=23 hc=2 scores: 1 1 3 3 3 4
+      1 SD3 n=6 decomposable=0 selfconverse=0 H=23 hc=2 scores: 1 2 2 2 4 4
+      2 SD3 n=6 decomposable=0 selfconverse=0 H=29 hc=3 scores: 1 2 2 3 3 4
+      2 SD3 n=6 decomposable=0 selfconverse=0 H=31 hc=3 scores: 1 2 2 3 3 4
+      1 SD3 n=6 decomposable=0 selfconverse=0 H=33 hc=3 scores: 1 2 3 3 3 3
+      1 SD3 n=6 decomposable=0 selfconverse=0 H=33 hc=3 scores: 2 2 2 2 3 4
+      1 SD3 n=6 decomposable=0 selfconverse=0 H=37 hc=4 scores: 1 2 3 3 3 3
+      1 SD3 n=6 decomposable=0 selfconverse=0 H=37 hc=4 scores: 2 2 2 2 3 4
+      2 SD3 n=6 decomposable=0 selfconverse=0 H=43 hc=5 scores: 2 2 2 3 3 3
+      1 SD3 n=6 decomposable=0 selfconverse=1 H=17 hc=1 scores: 1 1 2 3 4 4
+      1 SD3 n=6 decomposable=0 selfconverse=1 H=29 hc=2 scores: 1 2 2 3 3 4
+      1 SD3 n=6 decomposable=0 selfconverse=1 H=45 hc=5 scores: 2 2 2 3 3 3
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=11 hc=0 scores: 0 2 3 3 3 4
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=11 hc=0 scores: 1 2 2 2 3 5
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=13 hc=0 scores: 0 2 3 3 3 4
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=13 hc=0 scores: 1 2 2 2 3 5
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=15 hc=0 scores: 0 2 3 3 3 4
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=15 hc=0 scores: 0 3 3 3 3 3
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=15 hc=0 scores: 1 2 2 2 3 5
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=15 hc=0 scores: 2 2 2 2 2 5
+      2 SD3 n=6 decomposable=1 selfconverse=0 H=15 hc=1 scores: 1 1 2 3 4 4
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=19 hc=1 scores: 1 1 3 3 3 4
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=19 hc=1 scores: 1 2 2 2 4 4
+      2 SD3 n=6 decomposable=1 selfconverse=0 H=23 hc=1 scores: 1 2 2 3 3 4
+      2 SD3 n=6 decomposable=1 selfconverse=0 H=25 hc=2 scores: 1 2 2 3 3 4
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=27 hc=3 scores: 1 1 3 3 3 4
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=27 hc=3 scores: 1 2 2 2 4 4
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=3 hc=0 scores: 0 1 2 4 4 4
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=3 hc=0 scores: 0 1 3 3 3 5
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=3 hc=0 scores: 0 2 2 2 4 5
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=3 hc=0 scores: 1 1 1 3 4 5
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=33 hc=3 scores: 1 2 3 3 3 3
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=33 hc=3 scores: 2 2 2 2 3 4
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=37 hc=4 scores: 1 2 3 3 3 3
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=37 hc=4 scores: 2 2 2 2 3 4
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=5 hc=0 scores: 0 1 3 3 4 4
+      1 SD3 n=6 decomposable=1 selfconverse=0 H=5 hc=0 scores: 1 1 2 2 4 5
+      2 SD3 n=6 decomposable=1 selfconverse=0 H=9 hc=0 scores: 0 2 2 3 4 4
+      2 SD3 n=6 decomposable=1 selfconverse=0 H=9 hc=0 scores: 1 1 2 3 3 5
+      1 SD3 n=6 decomposable=1 selfconverse=1 H=1 hc=0 scores: 0 1 2 3 4 5
+      1 SD3 n=6 decomposable=1 selfconverse=1 H=17 hc=1 scores: 1 1 2 3 4 4
+      1 SD3 n=6 decomposable=1 selfconverse=1 H=29 hc=3 scores: 1 2 2 3 3 4
+      1 SD3 n=6 decomposable=1 selfconverse=1 H=33 hc=4 scores: 1 2 2 3 3 4
+      1 SD3 n=6 decomposable=1 selfconverse=1 H=37 hc=5 scores: 1 2 2 3 3 4
+      1 SD3 n=6 decomposable=1 selfconverse=1 H=41 hc=4 scores: 2 2 2 3 3 3
+      1 SD3 n=6 decomposable=1 selfconverse=1 H=45 hc=5 scores: 2 2 2 3 3 3
+      1 SD3 n=6 decomposable=1 selfconverse=1 H=5 hc=0 scores: 0 2 2 3 3 5
+      1 SD3 n=6 decomposable=1 selfconverse=1 H=9 hc=0 scores: 1 1 1 4 4 4
+      1 SD3 n=7 decomposable=0 selfconverse=1 H=175 hc=17 scores: 3 3 3 3 3 3 3
+      2 SD3 n=7 decomposable=1 selfconverse=0 H=47 hc=1 scores: 1 2 2 3 4 4 5
+      1 SD3 n=7 decomposable=1 selfconverse=1 H=1 hc=0 scores: 0 1 2 3 4 5 6
+      1 SD3 n=7 decomposable=1 selfconverse=1 H=105 hc=8 scores: 2 2 2 3 4 4 4
+      1 SD3 n=7 decomposable=1 selfconverse=1 H=123 hc=10 scores: 2 2 3 3 3 4 4
+      1 SD3 n=7 decomposable=1 selfconverse=1 H=137 hc=13 scores: 2 2 3 3 3 4 4
+      1 SD3 n=7 decomposable=1 selfconverse=1 H=151 hc=14 scores: 2 3 3 3 3 3 4
+      1 SD3 n=7 decomposable=1 selfconverse=1 H=33 hc=1 scores: 1 1 2 3 4 5 5
+      1 SD3 n=7 decomposable=1 selfconverse=1 H=51 hc=1 scores: 1 2 3 3 3 4 5
+      2 SD3 n=8 decomposable=0 selfconverse=0 H=633 hc=48 scores: 3 3 3 3 4 4 4 4
+      2 SD3 n=8 decomposable=1 selfconverse=0 H=107 hc=1 scores: 1 2 3 3 4 4 5 6
+      2 SD3 n=8 decomposable=1 selfconverse=0 H=347 hc=22 scores: 2 2 3 3 4 4 5 5
+      2 SD3 n=8 decomposable=1 selfconverse=0 H=479 hc=34 scores: 2 3 3 3 4 4 4 5
+      2 SD3 n=8 decomposable=1 selfconverse=0 H=95 hc=1 scores: 1 2 2 3 4 5 5 6
+      1 SD3 n=8 decomposable=1 selfconverse=1 H=1 hc=0 scores: 0 1 2 3 4 5 6 7
+      1 SD3 n=8 decomposable=1 selfconverse=1 H=269 hc=16 scores: 2 2 2 3 4 5 5 5
+      1 SD3 n=8 decomposable=1 selfconverse=1 H=393 hc=29 scores: 2 2 3 3 4 4 5 5
+      1 SD3 n=8 decomposable=1 selfconverse=1 H=465 hc=32 scores: 2 3 3 3 4 4 4 5
+      1 SD3 n=8 decomposable=1 selfconverse=1 H=509 hc=37 scores: 2 3 3 3 4 4 4 5
+      1 SD3 n=8 decomposable=1 selfconverse=1 H=629 hc=49 scores: 3 3 3 3 4 4 4 4
+      1 SD3 n=8 decomposable=1 selfconverse=1 H=65 hc=1 scores: 1 1 2 3 4 5 6 6
+      1 SD3 n=8 decomposable=1 selfconverse=1 H=653 hc=52 scores: 3 3 3 3 4 4 4 4
+      1 SD3 n=9 decomposable=1 selfconverse=1 H=1 hc=0 scores: 0 1 2 3 4 5 6 7 8
+      1 SD3 n=9 decomposable=1 selfconverse=1 H=129 hc=1 scores: 1 1 2 3 4 5 6 7 7
+## UH-deletion counts, sole-exit-free classes with hc = 2..5, orders <= 9
+u2_8.out: n=5 hc=2 classes=1 #(v: T - v uniquely Hamiltonian) -> {5: 1}
+u3_9.out: n=6 hc=3 classes=2 #(v: T - v uniquely Hamiltonian) -> {3: 2}
+u3_9.out: n=7 hc=3 classes=5 #(v: T - v uniquely Hamiltonian) -> {3: 5}
+u3_9.out: n=8 hc=3 classes=13 #(v: T - v uniquely Hamiltonian) -> {3: 13}
+u3_9.out: n=9 hc=3 classes=34 #(v: T - v uniquely Hamiltonian) -> {3: 34}
+u4_9.out: n=6 hc=4 classes=3 #(v: T - v uniquely Hamiltonian) -> {2: 1, 3: 1, 4: 1}
+u4_9.out: n=7 hc=4 classes=4 #(v: T - v uniquely Hamiltonian) -> {2: 4}
+u4_9.out: n=8 hc=4 classes=10 #(v: T - v uniquely Hamiltonian) -> {2: 10}
+u4_9.out: n=9 hc=4 classes=26 #(v: T - v uniquely Hamiltonian) -> {2: 26}
+u5_9.out: n=6 hc=5 classes=4 #(v: T - v uniquely Hamiltonian) -> {0: 1, 2: 2, 6: 1}
+u5_9.out: n=7 hc=5 classes=4 #(v: T - v uniquely Hamiltonian) -> {2: 3, 3: 1}
+u5_9.out: n=8 hc=5 classes=9 #(v: T - v uniquely Hamiltonian) -> {2: 7, 3: 2}
+u5_9.out: n=9 hc=5 classes=23 #(v: T - v uniquely Hamiltonian) -> {2: 18, 3: 5}
