@@ -1,4 +1,4 @@
-"""Independent check of the two spectrum witnesses quoted in README §7 / THM-4862 (h).
+"""Independent check of the spectrum witnesses quoted in README §7 / THM-4862 (h) (two at orders 12-13, eight at order 14).
 
 Each witness is a strong tournament given by out-row bitmasks; vertex 0 is the sole-exit vertex,
 its unique out-neighbour r is the root; the digit is e_r(T - 0) = number of Hamiltonian paths of
@@ -10,6 +10,15 @@ from functools import lru_cache
 WITNESSES = {
     "12877 in R2(12)": ([512, 17, 11, 19, 1797, 31, 63, 127, 239, 1518, 2543, 1023], 2),
     "38615 in R1(13)": ([2048, 257, 11, 259, 15, 31, 63, 127, 1781, 255, 2815, 5118, 2047], 1),
+    # order-14 digit-1 realisers from data/gen1_order14.txt (gen1 at order 14: 17711 classes = F(22))
+    "4289 in R1(14)": ([64, 5, 65, 71, 79, 31, 9890, 319, 127, 447, 959, 2047, 4095, 8127], 1),
+    "4291 in R1(14)": ([64, 65, 67, 23, 71, 31, 8872, 319, 127, 447, 1023, 2047, 4095, 8127], 1),
+    "12869 in R1(14)": ([256, 5, 9, 67, 15, 31, 311, 383, 10814, 1279, 511, 5887, 2047, 7935], 1),
+    "12875 in R1(14)": ([1024, 5, 73, 19, 7, 31, 1083, 127, 767, 1279, 6590, 1023, 11263, 4095], 1),
+    "12877 in R1(14)": ([1024, 9, 11, 1041, 39, 15, 191, 1087, 767, 1279, 14710, 1023, 3071, 7167], 1),
+    "38609 in R1(14)": ([1024, 17, 11, 19, 549, 79, 31, 127, 255, 1519, 10750, 5119, 2047, 7167], 1),
+    "38611 in R1(14)": ([1024, 5, 33, 7, 47, 2187, 63, 351, 127, 511, 5118, 2015, 11263, 4095], 1),
+    "38627 in R1(14)": ([4096, 5, 9, 35, 15, 151, 63, 351, 639, 1279, 4607, 2047, 11262, 4095], 1),
 }
 
 def is_tournament(rows):

@@ -1,0 +1,8 @@
+exhaustive: every rooted tournament of order <= 4 (height 5) and order 5 (height 3): 5405 towers, failures 0
+random: 40 rooted tournaments of orders 6-7, towers to height 3: failures 0
+tower over one vertex (T*_n, n = k+1): [1, 1, 3, 5, 9, 17, 31, 57, 105, 193, 355, 653] = A000213(2..13)
+A_k = [1, 1, 1, 3, 5, 9, 17, 31, 57, 105, 193]  C_k = [0, 1, 0, 1, 2, 3, 6, 11, 20, 37, 68]  D_k = [0, 1, 2, 3, 6, 11, 20, 37, 68, 125, 230]
+F = empty family, orders 4-13, direct: [5, 13, 31, 77, 193, 489, 1255, 3253, 8493, 22293]
+tower over a point re-rooted at the base, orders 4-13: [5, 13, 31, 77, 193, 489, 1255, 3253, 8493, 22293]
+agree: True
+digit-1 ready floors, orders 4-14 (from the sweep packet's censuses): [5, 9, 17, 33, 61, 115, 219, 423, 823, 1615, 3183]

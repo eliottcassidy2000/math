@@ -1,3 +1,11 @@
 12877 in R2(12): order 12, H = 12877, strong = True, sole exit 0 -> 9, digit e_r(T - 0) = 2 OK
 38615 in R1(13): order 13, H = 38615, strong = True, sole exit 0 -> 11, digit e_r(T - 0) = 1 OK
+4289 in R1(14): order 14, H = 4289, strong = True, sole exit 0 -> 6, digit e_r(T - 0) = 1 OK
+4291 in R1(14): order 14, H = 4291, strong = True, sole exit 0 -> 6, digit e_r(T - 0) = 1 OK
+12869 in R1(14): order 14, H = 12869, strong = True, sole exit 0 -> 8, digit e_r(T - 0) = 1 OK
+12875 in R1(14): order 14, H = 12875, strong = True, sole exit 0 -> 10, digit e_r(T - 0) = 1 OK
+12877 in R1(14): order 14, H = 12877, strong = True, sole exit 0 -> 10, digit e_r(T - 0) = 1 OK
+38609 in R1(14): order 14, H = 38609, strong = True, sole exit 0 -> 10, digit e_r(T - 0) = 1 OK
+38611 in R1(14): order 14, H = 38611, strong = True, sole exit 0 -> 10, digit e_r(T - 0) = 1 OK
+38627 in R1(14): order 14, H = 38627, strong = True, sole exit 0 -> 12, digit e_r(T - 0) = 1 OK
 ALL OK

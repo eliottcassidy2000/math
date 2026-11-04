@@ -1,0 +1,4 @@
+exhaustive: every rooted tournament of order <= 4 (height 5) and order 5 (height 3): 5405 towers, failures 0
+random: 40 rooted tournaments of orders 6-7, towers to height 3: failures 0
+tower over one vertex (T*_n, n = k+1): [1, 1, 3, 5, 9, 17, 31, 57, 105, 193, 355, 653] = A000213(2..13)
+A_k = [1, 1, 1, 3, 5, 9, 17, 31, 57, 105, 193]  C_k = [0, 1, 0, 1, 2, 3, 6, 11, 20, 37, 68]  D_k = [0, 1, 2, 3, 6, 11, 20, 37, 68, 125, 230]
