@@ -1,0 +1,142 @@
+{
+  "actual_hamilton_paths": [
+    {
+      "n": 15,
+      "omitted_even_even": 0,
+      "omitted_odd_odd": 1,
+      "path": [
+        8,
+        1,
+        15,
+        10,
+        6,
+        3,
+        13,
+        12,
+        4,
+        5,
+        11,
+        14,
+        2,
+        7,
+        9
+      ]
+    },
+    {
+      "n": 16,
+      "omitted_even_even": 0,
+      "omitted_odd_odd": 1,
+      "path": [
+        8,
+        1,
+        15,
+        10,
+        6,
+        3,
+        13,
+        12,
+        4,
+        5,
+        11,
+        14,
+        2,
+        7,
+        9,
+        16
+      ]
+    },
+    {
+      "n": 17,
+      "omitted_even_even": 0,
+      "omitted_odd_odd": 1,
+      "path": [
+        17,
+        8,
+        1,
+        15,
+        10,
+        6,
+        3,
+        13,
+        12,
+        4,
+        5,
+        11,
+        14,
+        2,
+        7,
+        9,
+        16
+      ]
+    }
+  ],
+  "inventory_and_births_through": 10000,
+  "parity_cycle_cases": 99291,
+  "parity_path_cases": 99293,
+  "samples": [
+    {
+      "births": 0,
+      "cross": 0,
+      "even_even": 0,
+      "n": 1,
+      "odd_odd": 0
+    },
+    {
+      "births": 0,
+      "cross": 0,
+      "even_even": 0,
+      "n": 2,
+      "odd_odd": 0
+    },
+    {
+      "births": 2,
+      "cross": 7,
+      "even_even": 3,
+      "n": 15,
+      "odd_odd": 5
+    },
+    {
+      "births": 1,
+      "cross": 8,
+      "even_even": 3,
+      "n": 16,
+      "odd_odd": 5
+    },
+    {
+      "births": 1,
+      "cross": 9,
+      "even_even": 3,
+      "n": 17,
+      "odd_odd": 5
+    },
+    {
+      "births": 2,
+      "cross": 17,
+      "even_even": 6,
+      "n": 25,
+      "odd_odd": 9
+    },
+    {
+      "births": 2,
+      "cross": 18,
+      "even_even": 7,
+      "n": 26,
+      "odd_odd": 9
+    },
+    {
+      "births": 4,
+      "cross": 136,
+      "even_even": 65,
+      "n": 100,
+      "odd_odd": 70
+    },
+    {
+      "births": 41,
+      "cross": 138040,
+      "even_even": 69005,
+      "n": 10000,
+      "odd_odd": 69055
+    }
+  ],
+  "status": "PASS"
+}
