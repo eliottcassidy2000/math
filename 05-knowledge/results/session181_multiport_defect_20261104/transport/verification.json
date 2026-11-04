@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "checks": {
+    "defect": 285,
+    "birth": 4306,
+    "dominant_prefix": 855
+  },
+  "scope": "Every labeled tournament orders 1 through 4, every mark and birth cut; dominant-prefix lengths1,2,3. Direct path-polynomial enumeration versus subset DP."
+}

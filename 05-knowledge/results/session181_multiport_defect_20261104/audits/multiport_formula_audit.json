@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "independent_multiport_formula_cases": 3069,
+  "scope": "all suffix tournaments of orders1..4, every nonempty port set, prefix lengths1..3"
+}

@@ -1,0 +1,7 @@
+#include <bits/stdc++.h>
+using namespace std;
+using U=uint64_t;
+vector<int> add(vector<int>r,int mask){int n=r.size();r.push_back(0);for(int i=0;i<n;i++){if(mask&(1<<i))r[i]|=1<<n;else r[n]|=1<<i;}return r;}
+bool sc(vector<int>r){int n=r.size();for(int i=0;i<n;i++)r[i]|=1<<i;for(int k=0;k<n;k++)for(int i=0;i<n;i++)if(r[i]>>k&1)r[i]|=r[k];for(int x:r)if(x!=(1<<n)-1)return false;return true;}
+vector<U> all(vector<int>r){int n=r.size(),N=1<<n;vector<U>d(N*n),h(N);h[0]=1;for(int v=0;v<n;v++)d[(1<<v)*n+v]=1;for(int s=1;s<N;s++)for(int v=0;v<n;v++)if(d[s*n+v]){h[s]+=d[s*n+v];for(int w=0;w<n;w++)if(!(s>>w&1)&&(r[v]>>w&1))d[(s|1<<w)*n+w]+=d[s*n+v];}vector<U>o(n+1);o[n]=h[N-1];for(int s=1;s<N;s++)for(int w=0;w<n;w++)o[w]+=d[s*n+w]*h[(N-1)^s];return o;}
+int main(){for(auto source:vector<vector<int>>{{56,33,51,54,2,16},{56,1,19,22,2,30}}){auto base=all(source);int fixed[2]={},any[2]={},weak[2]={},numStrong=0;cout<<"SOURCE "<<base[6]<<" "<<base[0]<<"\n";for(int a=0;a<64;a++)for(int b=0;b<128;b++){auto r=add(add(source,a),b);auto f=all(r);bool strong=sc(r);numStrong+=strong;for(int j=0;j<2;j++)if(f[8]==3*base[6]+2+2*j)for(int w=0;w<8;w++)if(f[w]==3*base[0]){if(strong){any[j]++;if(!w)fixed[j]++;cout<<"HIT "<<2+2*j<<" "<<a<<" "<<b<<" "<<w<<"\n";}else if(!w){weak[j]++;cout<<"WEAK "<<2+2*j<<" "<<a<<" "<<b<<"\n";}}}cout<<"STRONG "<<numStrong<<" FIXED "<<fixed[0]<<" "<<fixed[1]<<" ANY "<<any[0]<<" "<<any[1]<<" WEAK "<<weak[0]<<" "<<weak[1]<<"\n";}}

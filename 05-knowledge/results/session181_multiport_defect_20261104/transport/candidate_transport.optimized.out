@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "candidate_sha256": "c129c750e192584999558331937570ea7ca9e2e6038b7e803c92beeac0bb2818",
+  "h": 18583,
+  "F": 124383,
+  "J": 3690,
+  "H": 512425,
+  "E_root2": 516115,
+  "joint_suffix": [
+    {
+      "end": 4,
+      "start": 4,
+      "value": 0
+    },
+    {
+      "end": 4,
+      "start": 21,
+      "value": 1206
+    },
+    {
+      "end": 21,
+      "start": 4,
+      "value": 2484
+    },
+    {
+      "end": 21,
+      "start": 21,
+      "value": 0
+    }
+  ],
+  "clock_alpha": 14893,
+  "clock_F": 124383,
+  "constant_root_defect": 3690,
+  "shared_clock_offset_constant": 8308,
+  "shared_clock_offset_power2_coefficient": -2076,
+  "plus4_unique_positive_clock": 2,
+  "plus2_positive_clock": null
+}

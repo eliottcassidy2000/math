@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "triangle_counts": [
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      9
+    ],
+    [
+      4,
+      17
+    ],
+    [
+      5,
+      33
+    ],
+    [
+      6,
+      65
+    ],
+    [
+      7,
+      129
+    ],
+    [
+      8,
+      257
+    ],
+    [
+      9,
+      513
+    ],
+    [
+      10,
+      1025
+    ],
+    [
+      11,
+      2049
+    ]
+  ],
+  "strong_quotients": 26,
+  "blowup_controls": 1878,
+  "branch_depths_checked": 12,
+  "hostile_control": "TT2 with module lengths 7,7 has H=1; strong quotient essential"
+}

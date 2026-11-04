@@ -1,0 +1,1 @@
+{"status": "PASS", "induced_controls": 1023, "strong_quotients": 26, "blowup_controls": 400, "triangle_permutation_sizes": [1, 2, 3, 4, 5, 6], "finite_summation_bounds": 560, "branch_depths": 12, "method": "independent forward subset DP; explicit non-removable checks"}

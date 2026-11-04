@@ -1,0 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std; using U=unsigned long long;
+pair<U,U> eval(vector<int>& r,int w){int n=r.size(),N=1<<n; vector<U>d(N*n),h(N);h[0]=1;for(int S=1;S<N;S++){int b=S;while(b){int v=__builtin_ctz(b);b&=b-1;int Q=S^(1<<v);if(!Q)d[S*n+v]=1;else{int t=Q;while(t){int u=__builtin_ctz(t);t&=t-1;if(r[u]>>v&1)d[S*n+v]+=d[Q*n+u];}}h[S]+=d[S*n+v];}}U f=0;for(int S=1;S<N;S++)if(S>>w&1)f+=d[S*n+w]*h[(N-1)^S];return {h[N-1],f};}
+vector<int> birth(vector<int> r,int cut){int n=r.size();r.push_back(0);for(int i=0;i<n;i++)if(cut>>i&1)r[i]|=1<<n;else r[n]|=1<<i;return r;}
+int main(int argc,char**argv){vector<int> r; for(int i=1;i<argc;i++)r.push_back(stoi(argv[i]));auto [h,f]=eval(r,0);int n=r.size();cerr<<"source "<<h<<" "<<f<<"\n";map<int,int>counts;for(int a=0;a<(1<<n);a++){auto x=birth(r,a);for(int b=0;b<(1<<(n+1));b++){auto y=birth(x,b);auto [hh,ff]=eval(y,0);if(ff==3*f&&(hh==3*h+2||hh==3*h+4)){int d=hh-3*h;counts[d]++;cout<<d<<" "<<a<<" "<<b<<" :";for(int z:y)cout<<" "<<z;cout<<"\n";}}}for(auto [d,c]:counts)cerr<<d<<" count "<<c<<"\n";}

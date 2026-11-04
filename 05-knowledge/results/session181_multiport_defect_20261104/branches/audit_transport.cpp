@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;using U=uint64_t;
+vector<U> dp(vector<int>r){int n=r.size(),N=1<<n;vector<U>d(N*n);for(int v=0;v<n;v++)d[(1<<v)*n+v]=1;for(int s=1;s<N;s++)for(int v=0;v<n;v++)if(d[s*n+v])for(int w=0;w<n;w++)if(!(s>>w&1)&&(r[v]>>w&1))d[(s|1<<w)*n+w]+=d[s*n+v];return d;}
+int main(){int n;while(cin>>n){vector<int>r(n),rev(n);for(int&i:r)cin>>i;for(int i=0;i<n;i++)for(int j=0;j<n;j++)if(r[i]>>j&1)rev[j]|=1<<i;auto d=dp(r),t=dp(rev);int N=1<<n;vector<U>h(N);h[0]=1;for(int s=1;s<N;s++)for(int v=0;v<n;v++)h[s]+=d[s*n+v];cout<<"H "<<h[N-1]<<"\nF";for(int v=0;v<n;v++){U f=0;for(int s=1;s<N;s++)f+=d[s*n+v]*h[(N-1)^s];cout<<" "<<f;}cout<<"\n";int a,b;cin>>a>>b;if(a>=0){for(auto[u,v]:vector<pair<int,int>>{{a,a},{a,b},{b,a},{b,b}}){U J=0;for(int s=1;s<N;s++)J+=d[s*n+u]*t[((N-1)^s)*n+v];cout<<"J "<<u<<" "<<v<<" "<<J<<"\n";}}}}
