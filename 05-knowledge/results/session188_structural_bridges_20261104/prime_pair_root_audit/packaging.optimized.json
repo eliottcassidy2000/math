@@ -1,0 +1,94 @@
+{
+  "checker_sha256": "401e12242f146bcf916fd7a40d76fabb3424c71b096ceef3d74f9d11e984b44b",
+  "complete_originals": [
+    {
+      "file": "normal.json",
+      "sha256": "682ca3e2b464542f91edd5da3955d02d339a808747d6a1b09b32646648bc9d37",
+      "size": 272915
+    },
+    {
+      "file": "optimized.json",
+      "sha256": "682ca3e2b464542f91edd5da3955d02d339a808747d6a1b09b32646648bc9d37",
+      "size": 272915
+    }
+  ],
+  "isolated_controls": [
+    {
+      "mode": "fresh",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "corrupt_chunk",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_hash_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "fresh",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "corrupt_chunk",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_hash_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": true,
+      "passed": true
+    }
+  ],
+  "package_sha256": {
+    "REASSEMBLY.json": "ed21e764b7ba5013659c047eb6b4aa969647b93bfae89c901aae75674183c6d5",
+    "REASSEMBLY.md": "6fe965e3825db2ed2e1a89f4468392e5d7466de40373233ea83dfdbbfe1da97a",
+    "full_records.json.gz.b64.part000": "dcb8621fb670df6bee1084f8e81b518b98a6732277996ccd7d01405ddc7648e5",
+    "reassemble.py": "37c5ff41cdf08a52a0d3cc6983acdf094e415f1ca585a88e8a5893f2ce1b4b6b"
+  },
+  "status": "PASS"
+}

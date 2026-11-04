@@ -1,0 +1,101 @@
+{
+  "audit_sha256": {
+    "audit.py": "9da8ba55c5201a2b1bd5586efe7ec10a3e09dec173556183adf6781483163a3e",
+    "literal.cpp": "76fdc646b0a6e217635478e4556c87532aff628a22ddcf83bd22119cc5860915"
+  },
+  "independent_cases": [
+    {
+      "branches": {
+        "equal_pair_not_selected": 16,
+        "equal_pair_selected": 16,
+        "scalar_strict": 0
+      },
+      "family_count": 32,
+      "fixed_query_count": 23,
+      "label": "T5_all_pairs",
+      "old_order": 10,
+      "proper_module_count": 5
+    },
+    {
+      "branches": {
+        "equal_pair_not_selected": 16,
+        "equal_pair_selected": 16,
+        "scalar_strict": 0
+      },
+      "family_count": 32,
+      "fixed_query_count": 22,
+      "label": "U5_all_pairs",
+      "old_order": 10,
+      "proper_module_count": 5
+    },
+    {
+      "branches": {
+        "equal_pair_not_selected": 16,
+        "equal_pair_selected": 16,
+        "scalar_strict": 0
+      },
+      "family_count": 32,
+      "fixed_query_count": 21,
+      "label": "W5_all_pairs",
+      "old_order": 10,
+      "proper_module_count": 5
+    },
+    {
+      "branches": {
+        "equal_pair_not_selected": 48,
+        "equal_pair_selected": 48,
+        "scalar_strict": 32
+      },
+      "family_count": 128,
+      "fixed_query_count": 22,
+      "label": "U5_crossing_TT3",
+      "old_order": 11,
+      "proper_module_count": 7
+    },
+    {
+      "branches": {
+        "equal_pair_not_selected": 16,
+        "equal_pair_selected": 16,
+        "scalar_strict": 0
+      },
+      "family_count": 32,
+      "fixed_query_count": 21,
+      "label": "W5_cyclic_child",
+      "old_order": 11,
+      "proper_module_count": 5
+    },
+    {
+      "branches": {
+        "equal_pair_not_selected": 2,
+        "equal_pair_selected": 2,
+        "scalar_strict": 0
+      },
+      "family_count": 4,
+      "fixed_query_count": 24,
+      "label": "T7_local_size_boundary",
+      "old_order": 9,
+      "proper_module_count": 2
+    }
+  ],
+  "independent_literal_queries": 5829,
+  "producer_modes_equal": true,
+  "source_sha256": {
+    "arbitrary_third_root_family/verify.py": "5eef6af1683f6d2f7cdacda876e9c2867fc77dc051110c5e7b184cddc1867e14",
+    "critical_quotient_synthesis/PROOF.md": "e96884ad4e3eee1b2489cff75e602ace51314fd56ec3a4c5cbc6407dcb5f6c9f",
+    "marked_pair_quotient/PROOF.md": "baba1aeb86fddf83f000a63f4da0ccff1418a3f6add077c7495c35bfe85f6e09",
+    "module_decomposition/PROOF.md": "33f33731f3f21037a03e6a4eb9bcc11c746c5124439e49603e7c8faabe2565bc",
+    "ordered_module_skew/PROOF.md": "d807daa219c7cc749c3df8e8d9b609e84cc366ef4f1a06b09f61b27a9aff826d",
+    "prime_pair_root_family/PROOF.md": "8da65d84faed0eee8847282e8ef05d8904e04d2a0db0d1bfc500fc1e385874a2",
+    "prime_pair_root_family/count.cpp": "4f34e4aede4e9a14564f61f47fd609ae1324ee009dece48f36e4abc1eb227a5f",
+    "prime_pair_root_family/verify.py": "cee0da5814ec39c6dded1ffb517414950a10925fc1a23a449a52238b2b9d2754",
+    "returns_next/UNIFORM.md": "94df1aaefe0c5d6223f389d75726c3c7a55bfff87ed63007dc9707de20cb0de8"
+  },
+  "status": "PASS",
+  "totals": {
+    "equal_pair_not_selected": 114,
+    "equal_pair_selected": 114,
+    "families": 260,
+    "scalar_strict": 32
+  },
+  "uniform_profile_restoration_controls": 2626
+}
