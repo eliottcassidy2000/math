@@ -1,0 +1,48 @@
+{
+  "status": "FINITE-EXACT",
+  "universe": [
+    {
+      "n": 1,
+      "labelled_tournaments": 1,
+      "transitive_equality": 1,
+      "single_triangle_equality": 0
+    },
+    {
+      "n": 2,
+      "labelled_tournaments": 2,
+      "transitive_equality": 2,
+      "single_triangle_equality": 0
+    },
+    {
+      "n": 3,
+      "labelled_tournaments": 8,
+      "transitive_equality": 6,
+      "single_triangle_equality": 2
+    },
+    {
+      "n": 4,
+      "labelled_tournaments": 64,
+      "transitive_equality": 24,
+      "single_triangle_equality": 16
+    },
+    {
+      "n": 5,
+      "labelled_tournaments": 1024,
+      "transitive_equality": 120,
+      "single_triangle_equality": 120
+    }
+  ],
+  "graphs_checked": 1099,
+  "source_H": 170807,
+  "fixed_suffix": [
+    2195,
+    42153
+  ],
+  "prefix_order_at_most_3_values": [
+    86501,
+    170807,
+    339419,
+    512421
+  ],
+  "prefix_order_at_least_4_lower_bound": 676643
+}
