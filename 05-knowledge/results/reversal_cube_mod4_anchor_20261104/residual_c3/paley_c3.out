@@ -1,0 +1,9 @@
+runword validation 12 / 12
+ran 2116 queries in 42.6 s
+ran 2116 queries in 43.9 s
+ran 2116 queries in 54.9 s
+unchanged C3 : nonzero exact coefficient differences 870 2-adic valuations present [2, 3, 4, 6]
+  examples (S=a-vars,R=c-vars; vars 0-5 blocks 1..6, 6-8 named): [(((0,), (1,)), -18257826464676), (((0,), (2,)), -18257826464676), (((0,), (3,)), 18257826464676), (((0,), (4,)), -18257826464676), (((0,), (5,)), 18257826464676), (((0,), (6,)), -6068765713500)]
+reversed C3 : nonzero exact coefficient differences 636 2-adic valuations present [1, 2, 3, 4, 6]
+  examples (S=a-vars,R=c-vars; vars 0-5 blocks 1..6, 6-8 named): [(((6,), (7,)), -1946937659562), (((6,), (8,)), 1946937659562), (((7,), (6,)), 1946937659562), (((7,), (8,)), -1946937659562), (((8,), (6,)), -1946937659562), (((8,), (7,)), 1946937659562)]
+H(T)= 123156134945235 H(U)= 123156134945235
