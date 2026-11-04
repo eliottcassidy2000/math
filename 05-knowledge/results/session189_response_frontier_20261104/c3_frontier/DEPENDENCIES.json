@@ -1,0 +1,71 @@
+{
+  "session189-frontier-nine/PROOF.md": {
+    "sha256": "daf7180f381708a123f4afdb08ff66798a32b528c822011a5e71176879bdd21c",
+    "bytes": 9821
+  },
+  "session189-nine-integration-audit/REVIEW.md": {
+    "sha256": "75db72d7668626d0dfc12eb3e5a6f1150d6ca39b07bea0bea55080ef729af18a",
+    "bytes": 7869
+  },
+  "session189-tt4-cross/PROOF.md": {
+    "sha256": "c4c675f57c9be71c3aa588f60a7bcea42371d951e0bd30544fcfa13bd9e61cea",
+    "bytes": 13789
+  },
+  "session189-tt4-cross-audit/REVIEW.md": {
+    "sha256": "8a1c7131e8a8331029d78f230c0d909aeeb39cc471d658b7c165f5f52474b235",
+    "bytes": 8999
+  },
+  "session189-incoming-anchor-audit/REVIEW.md": {
+    "sha256": "c1adc5214533ab2cdca19a06a74bdfb93890d8563f0e659570e1ecd40b2f6f46",
+    "bytes": 13521
+  },
+  "session189-collision/PROOF.md": {
+    "sha256": "dcaad9182ddea6a9520a1fd15deaa9f32bb60b1f18e9e54dae52b2dc3619d824",
+    "bytes": 13002
+  },
+  "session189-collision-next/PROOF.md": {
+    "sha256": "492fe4d4f81e332437f70ce9db9b69b785745e779c01dbbc19afd78360892111",
+    "bytes": 9037
+  },
+  "session189-odd-transitive-audit/REVIEW.md": {
+    "sha256": "c8cfe32ed3bb6856648a4bc341e33c059f500e02d5556e7b7c0e78d55e519fdf",
+    "bytes": 13071
+  },
+  "session189-odd-collision-cross-audit/REVIEW.md": {
+    "sha256": "a51ea0640fa035ca420edaa653b25620e069f5b35a51124f84b27c8daaa789f3",
+    "bytes": 10706
+  },
+  "session189-prime8/PROOF.md": {
+    "sha256": "188dcd19fe2b47148427dc40c542afd65a72c4104fd2cdf47da0c532bbc6afc5",
+    "bytes": 13313
+  },
+  "session189-prime8-audit/REVIEW.md": {
+    "sha256": "a482956aacc99d2c8506eed3ff0e4e7372ef7f21acf907fc34c50b01bca3c6dc",
+    "bytes": 6938
+  },
+  "session189-deletion-incoming/source.c": {
+    "sha256": "58d4ba52022e7e081f925f2b92000c505de7ff851b4fc66839fd33527aa246fb",
+    "bytes": 23564
+  },
+  "session189-deletion-incoming/reproduced.out": {
+    "sha256": "b64975c69901cbd562e1d8eb56f75317ba05063662ed610d0b5c68dd9bf2970f",
+    "bytes": 5849
+  },
+  "source_census_export": {
+    "path": "session189-deletion-incoming/data/tower_9.txt",
+    "sha256": "d71d68aef1172cbfed8ee7a1f1f769bcaa6d567e281a68d5218fa2753f99c150",
+    "note": "The published compact census.tsv retains every node/code exactly; independent orbit mass certifies completeness without this full export."
+  },
+  "session189-c3-census-audit/REVIEW.md": {
+    "bytes": 12277,
+    "sha256": "fa5d1df1c6364d1860e104879a8ec83e70b6c61f97b06a562eed033e766be738"
+  },
+  "session189-c3-census-audit/receipt.json": {
+    "bytes": 7236,
+    "sha256": "5ec4612498debead3fb487821843a44792ac1f22a2d4bb23b9acf4319666ffed"
+  },
+  "session189-c3-census-audit/RELEASE_FILES.json": {
+    "bytes": 4573,
+    "sha256": "dff68a774fa146278016aaf62b0b3f82cf4dd9af3b86665b513c2c22d82dac80"
+  }
+}
