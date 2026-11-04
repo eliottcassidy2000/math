@@ -1,7 +1,7 @@
 ---
 id: HYP-9458
 title: "Cut arcs of the unique Hamiltonian cycle: the number T(n, k) of uniquely Hamiltonian tournaments of order n whose unique Hamiltonian cycle has exactly k cut arcs (arcs whose deletion destroys strong connectivity) satisfies T(n, 2) = 2^(n-5), T(n, 3) = n 2^(n-7), T(n, 4) = (n^2 + n - 8) 2^(n-10) and T(n, n-1-j) = C(n-5+j, j) for j = 0, 1, 2; pre-registered at orders 14, 15, 16 together with an independent (Shelor-free) generation check of Garey's counts"
-status: OPEN - PRE-REGISTERED (opus-2026-11-04-S74); predictions P1-P6 committed before the order 14-16 run
+status: OPEN (proof) - P1-P6 CONFIRMED at orders 14, 15, 16 (opus-2026-11-04-S74; run after the pre-registration commit 525d6c2d2e)
 session: opus-2026-11-04-S74
 date: 2026-11-04
 related: [THM-4867, THM-4866, THM-4862, THM-4846, HYP-9457]
@@ -69,3 +69,20 @@ Confirmatory run: `uh_one_arc_cut 16`.
   | 16 | 1 | 12 | 78 |
 
 Any failure is reported with the observed value.
+
+## Results (2026-11-04, after the pre-registration commit 525d6c2d2e)
+
+The run was `uh_one_arc_cut 16` (4 min). Its output is `04-computation/experiments/uh_one_arc_cut_20261104.out`.
+
+- **(P1)** The class counts are 17,711, 46,368 and 121,393, which are Garey's numbers.
+- **(P2)** Every class has a vertex of in-degree 1 and a vertex of out-degree 1.
+- **(P3)-(P6) CONFIRMED:**
+
+| n | T(n, 2) | T(n, 3) | T(n, 4) | top diagonals |
+|---:|---:|---:|---:|---|
+| 14 | 512 | 1,792 | 3,232 | 1, 10, 55 |
+| 15 | 1,024 | 3,840 | 7,424 | 1, 11, 66 |
+| 16 | 2,048 | 8,192 | 16,896 | 1, 12, 78 |
+
+**Open.** A proof of the closed forms, and the bivariate generating function of T(n, k). The natural route is a transfer
+matrix on Shelor's five-letter port grammar (operation_closed_synthesis section II).
