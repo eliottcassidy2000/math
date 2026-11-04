@@ -1,0 +1,128 @@
+{
+  "capacity_table": [
+    {
+      "L": 3,
+      "N": 10,
+      "capacity_necessary_order": 0,
+      "cores": 1,
+      "elementary_required_prime_values": 1
+    },
+    {
+      "L": 3,
+      "N": 10,
+      "capacity_necessary_order": 0,
+      "cores": 10,
+      "elementary_required_prime_values": 1
+    },
+    {
+      "L": 3,
+      "N": 10,
+      "capacity_necessary_order": 0,
+      "cores": 100,
+      "elementary_required_prime_values": 1
+    },
+    {
+      "L": 6,
+      "N": 100,
+      "capacity_necessary_order": 2,
+      "cores": 1,
+      "elementary_required_prime_values": 13
+    },
+    {
+      "L": 6,
+      "N": 100,
+      "capacity_necessary_order": 1,
+      "cores": 10,
+      "elementary_required_prime_values": 13
+    },
+    {
+      "L": 6,
+      "N": 100,
+      "capacity_necessary_order": 0,
+      "cores": 100,
+      "elementary_required_prime_values": 13
+    },
+    {
+      "L": 9,
+      "N": 1000,
+      "capacity_necessary_order": 3,
+      "cores": 1,
+      "elementary_required_prime_values": 98
+    },
+    {
+      "L": 9,
+      "N": 1000,
+      "capacity_necessary_order": 2,
+      "cores": 10,
+      "elementary_required_prime_values": 98
+    },
+    {
+      "L": 9,
+      "N": 1000,
+      "capacity_necessary_order": 0,
+      "cores": 100,
+      "elementary_required_prime_values": 98
+    },
+    {
+      "L": 13,
+      "N": 10000,
+      "capacity_necessary_order": 3,
+      "cores": 1,
+      "elementary_required_prime_values": 751
+    },
+    {
+      "L": 13,
+      "N": 10000,
+      "capacity_necessary_order": 2,
+      "cores": 10,
+      "elementary_required_prime_values": 751
+    },
+    {
+      "L": 13,
+      "N": 10000,
+      "capacity_necessary_order": 1,
+      "cores": 100,
+      "elementary_required_prime_values": 751
+    },
+    {
+      "L": 16,
+      "N": 100000,
+      "capacity_necessary_order": 4,
+      "cores": 1,
+      "elementary_required_prime_values": 6019
+    },
+    {
+      "L": 16,
+      "N": 100000,
+      "capacity_necessary_order": 3,
+      "cores": 10,
+      "elementary_required_prime_values": 6019
+    },
+    {
+      "L": 16,
+      "N": 100000,
+      "capacity_necessary_order": 2,
+      "cores": 100,
+      "elementary_required_prime_values": 6019
+    }
+  ],
+  "elementary_bound_cutoffs": 998,
+  "finite_prime_values": [
+    3,
+    5,
+    11,
+    17,
+    23,
+    47,
+    137
+  ],
+  "inflated_quotients": 1098,
+  "literal_path_crosschecks": 386,
+  "single_core_cases": 656,
+  "status": "PASS",
+  "two_core_hostile_counts": [
+    9,
+    9,
+    9
+  ]
+}

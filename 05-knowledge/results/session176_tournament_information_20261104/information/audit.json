@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "independent_literal_profile_examples": 2,
+  "independent_seven_vertex_H_examples": [
+    123,
+    135
+  ],
+  "literal_skeleton_rows": [
+    [
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      9,
+      10,
+      2
+    ],
+    [
+      31,
+      83,
+      50,
+      6
+    ]
+  ],
+  "actual_color_assignment_checks": 44
+}

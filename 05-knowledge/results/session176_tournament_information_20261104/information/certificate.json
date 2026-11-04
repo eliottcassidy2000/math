@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "probe_checks": 2251,
+  "kernels": [
+    [
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      9,
+      10,
+      2
+    ],
+    [
+      31,
+      83,
+      50,
+      6
+    ],
+    [
+      117,
+      684,
+      908,
+      336,
+      24
+    ],
+    [
+      459,
+      5781,
+      14876,
+      11820,
+      2856,
+      120
+    ],
+    [
+      1825,
+      50062,
+      235758,
+      345768,
+      180648,
+      29520,
+      720
+    ]
+  ],
+  "realized_profile_ranks_through_5": {
+    "1": {
+      "distinct_profiles": 1,
+      "linear_rank": 1
+    },
+    "2": {
+      "distinct_profiles": 1,
+      "linear_rank": 1
+    },
+    "3": {
+      "distinct_profiles": 2,
+      "linear_rank": 2
+    },
+    "4": {
+      "distinct_profiles": 3,
+      "linear_rank": 2
+    },
+    "5": {
+      "distinct_profiles": 8,
+      "linear_rank": 3
+    }
+  },
+  "same_H_distinguished_by_uniform_context": {
+    "n": 5,
+    "H": 15,
+    "A": [
+      16,
+      9,
+      3,
+      5,
+      14
+    ],
+    "B": [
+      24,
+      17,
+      3,
+      6,
+      12
+    ],
+    "qA": [
+      15,
+      78,
+      198,
+      240,
+      120
+    ],
+    "qB": [
+      15,
+      90,
+      210,
+      240,
+      120
+    ],
+    "probe_r": 1,
+    "observedA": 123,
+    "observedB": 135
+  }
+}
