@@ -63,13 +63,32 @@ feedback compiler. Its enumeration quotient and the incoming full256/head
 certificates prevent confusing a query compression with class generation.
 These are inherited incoming results, not new claims of this packet.
 
+The final fetch also brought
+[second-feedback SF1--SF5/FG1](../second_feedback_18979_20261103/PROOFS.md)
+and [Session176's cut circuit](../session176_tournament_information_20261104/circuits/PROOF.md).
+FG1 independently supplies the36-state two-feedback compiler and excludes
+the prefix1^m +2 lane. Our complete head additionally moves the block to
+every base gap, covers both bulk incidence types and both offsets, without
+requiring a ready target. SF3 excludes **one-ready** closure for the1243
+target with any fixed uniform-clone exterior, even with more feedback
+vertices. These are complementary scopes, not competing global claims.
+SF5 supplies the actual size-dependent3911->11735 return->35207; it does
+not contradict a uniform-family exclusion. Its two necessary old deletions
+give a precise loss boundary for that source, distinct from our seven
+569xx programs. Session176's opposite-triangle continuation hostile further
+confirms that even a complete scalar insertion table need not be closed
+under the next insertion. None of these incoming results is redone here.
+
 ## Next targets
 
 1. The actual56935 ->170807 branch needs a non-ready input law. No number
    of names or clocks can make an empty1-ready fibre nonempty.
 2. Split growing clone incidence while retaining the ordered three-run
    tensor; the all-size two-feedback exclusion only covers a uniform
-   interval on the same m clock. A third feedback vertex is another route.
+   interval on the same m clock. More feedback can enlarge scalar
+   realization, but incomingSF3 rules out fixed uniform1-ready closure
+   regardless of feedback count. Use split/growing incidence or a different
+   graded readiness law.
 3. Treat the seven saved children as actual sources and test return of
    their full marked data before extrapolating a common grammar.
 4. For counting, retain Session87 for full integers; use certified head

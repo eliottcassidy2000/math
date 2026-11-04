@@ -109,3 +109,10 @@ Next counting work should reduce core-state arithmetic or support genuinely
 shared queries. Retuning a soluble terminal tail alone is now a measured
 low-value route at200/256. The constructor work instead needs actual
 nonuniform incidence and joint path laws, which this scalar enumerator loses.
+
+The closing fetch also recovered
+[Session105's integral projective lineage through IC1--IC2](../second_feedback_18979_20261103/PROOFS.md).
+Its latest bucket comparisons independently retain Session87 as the faster
+full-prefix choice. Integral projective normalization and degree buckets
+must therefore remain credited to that earlier work, even when rederived
+in recent packets. This does not change the measured outcome above.

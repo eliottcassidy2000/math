@@ -131,6 +131,14 @@ Counts fit the declared unsigned storage: each apex order has at most
 readout uses64-bit sums. No floating-point comparison or unproved pruning
 criterion occurs.
 
+Concurrent [FG1](../second_feedback_18979_20261103/PROOFS.md) independently
+derives this36-state compiler and excludes the prefix1^m +2 architecture.
+The present search extends that scope to every base gap, both bulk
+incidence types and both offsets. Its SF3 proves a separate, stronger
+obstruction for **one-ready** closure with any fixed uniform exterior.
+Its actual3911->11735 return->35207 is size-dependent and lies outside
+the uniform-family conclusion; it is a positive continuation to retain.
+
 ## F4. The square-sum transfer is about paired runs and distinct names
 
 The inherited square-sum classification in

@@ -126,3 +126,7 @@ The next operator to seek is a realization-preserving return from this
 3-ready family, carrying d_m and the joint endpoint data. The missing
 56935+2 lane and the81/27 hostile prevent replacing that problem by a
 scalar recurrence or by equality in a finite-field chart.
+Incoming [SF3](../second_feedback_18979_20261103/PROOFS.md) additionally
+excludes repairing the desired +2 family to one-ready states inside any
+fixed uniform-clone exterior; simply adding more feedback while demanding
+that same closure is insufficient.
