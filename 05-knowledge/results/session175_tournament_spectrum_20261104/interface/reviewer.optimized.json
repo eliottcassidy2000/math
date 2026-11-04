@@ -1,0 +1,28 @@
+{
+  "certificate_sha256": "27659041a81a4e3f4872a2d55bf3d39df7bd02a72ff1240b09f1c7ae3a25e3b3",
+  "families": [
+    {
+      "family": "TT",
+      "full_components": 324,
+      "literal_states": 512,
+      "strong": 400,
+      "strong_components": 279
+    },
+    {
+      "family": "CC",
+      "full_components": 275,
+      "literal_states": 512,
+      "strong": 511,
+      "strong_components": 274
+    },
+    {
+      "family": "CT",
+      "full_components": 321,
+      "literal_states": 512,
+      "strong": 448,
+      "strong_components": 292
+    }
+  ],
+  "status": "PASS",
+  "witnesses": 30
+}
