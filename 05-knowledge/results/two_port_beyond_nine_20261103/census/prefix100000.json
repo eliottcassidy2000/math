@@ -1,0 +1,34 @@
+{
+  "bank_sha256": {
+    "flags10.varint.gz": "ef5cf3d13f5b679890cbe69bcd1f78189161953e726e12d169fb576845677ef7",
+    "parents9.u64.gz": "92cb19bbcdc0bcb58b0ded354aacdd1809c72251e2e29d28d23f92de2d8bbe05"
+  },
+  "classes": 100000,
+  "classes_with_endpoint_ties": 5529,
+  "collisions": [],
+  "complete_bank": false,
+  "cover_canonical_leaves": 20210,
+  "endpoint_balanced_classes": 0,
+  "endpoint_multiset_groups": 99891,
+  "full_cover_canonicalizations": 5529,
+  "max_cover_leaves": 720,
+  "max_endpoint_group": 5,
+  "nontrivial_endpoint_groups": 71,
+  "order": 10,
+  "sidecar_automorphism_collisions": 0,
+  "sidecar_automorphism_histogram": {
+    "1": 98697,
+    "15": 4,
+    "27": 1,
+    "3": 1237,
+    "5": 10,
+    "9": 51
+  },
+  "sidecar_class_collisions": 0,
+  "sidecar_labelled_mass": 359676871680,
+  "source_sha256": {
+    "census.cpp": "9a3eabd8c5a85869ae22899c5f5de99682d670e777bc46567f5979d428de22b0",
+    "run.py": "ea2cd310f893b09d03f5d0a408fcde13b7382bf191d67738bf941b0cb16a4349"
+  },
+  "status": "PASS_INJECTIVE"
+}

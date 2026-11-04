@@ -1,0 +1,133 @@
+{
+  "full_joint_response": {
+    "cores": 76,
+    "full_response_entries": 16933,
+    "independent_permutation_counts": 549,
+    "middle_singleton_nonzero_entries": 1200,
+    "quartic_coefficients": 2378,
+    "three_tensor_entries": 17065
+  },
+  "independent_modules": {
+    "families": 24,
+    "module_orders": [
+      [
+        3,
+        3,
+        1
+      ],
+      [
+        3,
+        5,
+        1
+      ],
+      [
+        3,
+        3,
+        3
+      ]
+    ],
+    "quotients": "all8 labelled order3",
+    "variants": 128
+  },
+  "named_controls": {
+    "eleven_vertex": {
+      "base": [
+        52875,
+        52875
+      ],
+      "first": [
+        542,
+        572,
+        632,
+        752,
+        992,
+        961,
+        899,
+        775,
+        527,
+        1024,
+        511
+      ],
+      "one_port": [
+        133903,
+        133903
+      ],
+      "second": [
+        992,
+        961,
+        899,
+        775,
+        527,
+        542,
+        572,
+        632,
+        752,
+        1024,
+        511
+      ],
+      "two_port": [
+        414055,
+        417121
+      ]
+    },
+    "odd_nonmodule_hostile": {
+      "current": -12,
+      "rows": [
+        0,
+        1,
+        3,
+        7,
+        15
+      ],
+      "subset": [
+        0,
+        1,
+        4
+      ]
+    },
+    "query_current_controls": [
+      {
+        "core_order": 5,
+        "module_order": 3,
+        "reference_currents": [
+          18,
+          -18
+        ]
+      },
+      {
+        "core_order": 7,
+        "module_order": 5,
+        "reference_currents": [
+          210,
+          -210
+        ]
+      }
+    ]
+  },
+  "odd_module": {
+    "all_five_vertex_module_quotient_orders": [
+      1,
+      2
+    ],
+    "all_three_vertex_module_quotient_orders": [
+      1,
+      4
+    ],
+    "ambient_pairs": 4280,
+    "gradient_transpose_entries": 97144,
+    "higher_run_contexts": 32,
+    "profile_derivative_cores": 1032,
+    "selected_five_vertex_masks_for_quotients_3_4_and_deep_probes": [
+      0,
+      1,
+      12,
+      123,
+      511,
+      729,
+      947,
+      1023
+    ]
+  },
+  "source_sha256": "fefdc255f6557054a3805b3dcf02fc7bc39d40b9142136cd70b6c1a78f699552",
+  "status": "PASS"
+}

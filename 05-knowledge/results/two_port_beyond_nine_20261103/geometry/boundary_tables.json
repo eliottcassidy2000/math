@@ -1,0 +1,4062 @@
+[
+  {
+    "5": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 20,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 16,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 16,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 16,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 16,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 4374,
+      "triangular": 6
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 49152,
+      "triangular": 12
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 7,
+      "full_bank": 5103,
+      "triangular": 7
+    },
+    "6": {
+      "free_angle": 13,
+      "full_bank": 53248,
+      "triangular": 13
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 1944,
+      "triangular": 4
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 27648,
+      "triangular": 9
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 13,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 1944,
+      "triangular": 4
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 27648,
+      "triangular": 9
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 13,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 5,
+      "full_bank": 2430,
+      "triangular": 5
+    },
+    "6": {
+      "free_angle": 10,
+      "full_bank": 30720,
+      "triangular": 10
+    },
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 16,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 13,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 13,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      2,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      2,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 13,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      2,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 5,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 10,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 16,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 13,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 13,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 13,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 5,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 10,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 1944,
+      "triangular": 4
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 27648,
+      "triangular": 9
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 1944,
+      "triangular": 4
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 27648,
+      "triangular": 9
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      0,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 5,
+      "full_bank": 2430,
+      "triangular": 5
+    },
+    "6": {
+      "free_angle": 10,
+      "full_bank": 30720,
+      "triangular": 10
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      0,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 648,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 13824,
+      "triangular": 6
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 972,
+      "triangular": 3
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 16128,
+      "triangular": 7
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 648,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 13824,
+      "triangular": 6
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 972,
+      "triangular": 3
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 16128,
+      "triangular": 7
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 5,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 10,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 972,
+      "triangular": 3
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 16128,
+      "triangular": 7
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 972,
+      "triangular": 3
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 16128,
+      "triangular": 7
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 5,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 10,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 1296,
+      "triangular": 4
+    },
+    "6": {
+      "free_angle": 8,
+      "full_bank": 18432,
+      "triangular": 8
+    },
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      2,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      2,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      2,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 1944,
+      "triangular": 4
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 27648,
+      "triangular": 9
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 1944,
+      "triangular": 6
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 27648,
+      "triangular": 12
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 1296,
+      "triangular": 4
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 20736,
+      "triangular": 9
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 1296,
+      "triangular": 4
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 20736,
+      "triangular": 9
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      2,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      2,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      2,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 648,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 13824,
+      "triangular": 6
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 972,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 18432,
+      "triangular": 6
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 1458,
+      "triangular": 3
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 21504,
+      "triangular": 7
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 1296,
+      "triangular": 4
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 20736,
+      "triangular": 9
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 648,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 13824,
+      "triangular": 6
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 972,
+      "triangular": 3
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 16128,
+      "triangular": 7
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      1,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 648,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 13824,
+      "triangular": 6
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      2,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      2,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 324,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 9216,
+      "triangular": 4
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      2,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 972,
+      "triangular": 3
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 16128,
+      "triangular": 7
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      3,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      3,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 324,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 9216,
+      "triangular": 4
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      3,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      3,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 648,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 5,
+      "full_bank": 11520,
+      "triangular": 5
+    },
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      2,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      2,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      2,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 12,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      2,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      2,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      2,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 1458,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 24576,
+      "triangular": 6
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      0,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 2187,
+      "triangular": 3
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 28672,
+      "triangular": 7
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      0,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 1944,
+      "triangular": 4
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 27648,
+      "triangular": 9
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 972,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 18432,
+      "triangular": 6
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 1458,
+      "triangular": 3
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 21504,
+      "triangular": 7
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 972,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 18432,
+      "triangular": 6
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 486,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 12288,
+      "triangular": 4
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 1458,
+      "triangular": 3
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 21504,
+      "triangular": 7
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      3,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      3,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 486,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 12288,
+      "triangular": 4
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      3,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      3,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 972,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 5,
+      "full_bank": 15360,
+      "triangular": 5
+    },
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 5,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 972,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 18432,
+      "triangular": 6
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 1458,
+      "triangular": 3
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 21504,
+      "triangular": 7
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      0,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 1296,
+      "triangular": 4
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 20736,
+      "triangular": 9
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 648,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 13824,
+      "triangular": 6
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 972,
+      "triangular": 3
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 16128,
+      "triangular": 7
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      1,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 648,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 13824,
+      "triangular": 6
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      2,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      2,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      2,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 324,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 9216,
+      "triangular": 4
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 972,
+      "triangular": 3
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 16128,
+      "triangular": 7
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 324,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 9216,
+      "triangular": 4
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 648,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 5,
+      "full_bank": 11520,
+      "triangular": 5
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      0,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      0,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 9,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      1,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      2,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      2,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      2,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      3,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      3,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      3,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 3,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 7,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      3,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 5,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 486,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 12288,
+      "triangular": 4
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 486,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 12288,
+      "triangular": 4
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 972,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 5,
+      "full_bank": 15360,
+      "triangular": 5
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 648,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 13824,
+      "triangular": 6
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      1,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 6,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      1,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 324,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 9216,
+      "triangular": 4
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      1,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 324,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 9216,
+      "triangular": 4
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      1,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 648,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 5,
+      "full_bank": 11520,
+      "triangular": 5
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      1,
+      4
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 324,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 9216,
+      "triangular": 4
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 0,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 2,
+      "full_bank": 4608,
+      "triangular": 2
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 324,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 3,
+      "full_bank": 6912,
+      "triangular": 3
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 324,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 9216,
+      "triangular": 4
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 0,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 2,
+      "full_bank": 4608,
+      "triangular": 2
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 324,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 3,
+      "full_bank": 6912,
+      "triangular": 3
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 648,
+      "triangular": 2
+    },
+    "6": {
+      "free_angle": 5,
+      "full_bank": 11520,
+      "triangular": 5
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      0
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 5,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 324,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 3,
+      "full_bank": 6912,
+      "triangular": 3
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 1,
+      "full_bank": 324,
+      "triangular": 1
+    },
+    "6": {
+      "free_angle": 3,
+      "full_bank": 6912,
+      "triangular": 3
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 2,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 5,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      4
+    ]
+  },
+  {
+    "5": {
+      "free_angle": 0,
+      "full_bank": 0,
+      "triangular": 0
+    },
+    "6": {
+      "free_angle": 4,
+      "full_bank": 9216,
+      "triangular": 4
+    },
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  }
+]

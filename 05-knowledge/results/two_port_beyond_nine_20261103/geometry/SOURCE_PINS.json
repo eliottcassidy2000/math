@@ -1,0 +1,22 @@
+[
+  {
+    "path": "05-knowledge/results/two_port_unit_distance_20261103/geometry/PROOF.md",
+    "sha256": "259b7ea947e51f85cb698063a07c6dbf95c20ded42f2f1b9c5772383def4cbe9"
+  },
+  {
+    "path": "05-knowledge/results/boundary_palette_compression_20261011.md",
+    "sha256": "c7318387c1c27acc2b7c17962405210bdc8cf0cd01b70982518d1268e2c2b7f7"
+  },
+  {
+    "path": "05-knowledge/results/hn_metagraph_information_20261026/six_color/RESULT.md",
+    "sha256": "23ee63b2fd28e938e275bce08ad205a1aaa760d9a87bc13e69476e9fad883a94"
+  },
+  {
+    "path": "05-knowledge/results/paired_budget_selectors_matrix_20261028/FIVE_INTERIORS.md",
+    "sha256": "cc68a1b4575a7fc13058e79e01a96e7829a1222fda162e6d09ef6d4a87891caf"
+  },
+  {
+    "path": "05-knowledge/results/unit_equality_quantized_guards_20261011e.md",
+    "sha256": "9c6e62a530e0136959ffd439dd10c41a4517665f01fc566b91102f066b3e363f"
+  }
+]

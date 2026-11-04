@@ -1,0 +1,111 @@
+{
+  "bank_sha256": "b4e559ad6cb31980852034f9c7f61e366a7cb479fee4d9a641ad3356745200d3",
+  "orders": [
+    {
+      "balanced_codes": [
+        0
+      ],
+      "balanced_count": 1,
+      "classes": 1,
+      "even_parity_balanced_codes": [],
+      "n": 1,
+      "parity_balanced_count": 1,
+      "sum_H": 1
+    },
+    {
+      "balanced_codes": [],
+      "balanced_count": 0,
+      "classes": 1,
+      "even_parity_balanced_codes": [],
+      "n": 2,
+      "parity_balanced_count": 0,
+      "sum_H": 1
+    },
+    {
+      "balanced_codes": [
+        5
+      ],
+      "balanced_count": 1,
+      "classes": 2,
+      "even_parity_balanced_codes": [],
+      "n": 3,
+      "parity_balanced_count": 1,
+      "sum_H": 4
+    },
+    {
+      "balanced_codes": [],
+      "balanced_count": 0,
+      "classes": 4,
+      "even_parity_balanced_codes": [],
+      "n": 4,
+      "parity_balanced_count": 0,
+      "sum_H": 12
+    },
+    {
+      "balanced_codes": [
+        152,
+        739
+      ],
+      "balanced_count": 2,
+      "classes": 12,
+      "even_parity_balanced_codes": [],
+      "n": 5,
+      "parity_balanced_count": 3,
+      "sum_H": 92
+    },
+    {
+      "balanced_codes": [],
+      "balanced_count": 0,
+      "classes": 56,
+      "even_parity_balanced_codes": [],
+      "n": 6,
+      "parity_balanced_count": 0,
+      "sum_H": 1224
+    },
+    {
+      "balanced_codes": [
+        307424,
+        1530695,
+        1881863
+      ],
+      "balanced_count": 3,
+      "classes": 456,
+      "even_parity_balanced_codes": [],
+      "n": 7,
+      "parity_balanced_count": 48,
+      "sum_H": 35180
+    },
+    {
+      "balanced_codes": [],
+      "balanced_count": 0,
+      "classes": 6880,
+      "even_parity_balanced_codes": [
+        39887362,
+        72392840
+      ],
+      "n": 8,
+      "parity_balanced_count": 2,
+      "sum_H": 2143304
+    },
+    {
+      "balanced_codes": [
+        10089826176,
+        11891771264,
+        24309033487,
+        66065447183,
+        67726374927
+      ],
+      "balanced_count": 5,
+      "classes": 191536,
+      "even_parity_balanced_codes": [],
+      "n": 9,
+      "parity_balanced_count": 4628,
+      "sum_H": 270447284
+    }
+  ],
+  "source_sha256": {
+    "endpoint_scout.py": "68fd112be9f398aa7e59d7a01cb1c91e633575b05277356e2061610cf538e93e",
+    "endpoints.cpp": "07eade8886b5fe7b501f0a8abe197f9a1fb281ed055034cbc0251c25efc83786"
+  },
+  "status": "FINITE-EXACT scout; universal hypothesis unproved"
+}

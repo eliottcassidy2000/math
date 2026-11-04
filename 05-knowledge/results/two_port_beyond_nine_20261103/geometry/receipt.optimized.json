@@ -1,0 +1,61 @@
+{
+  "bank_assemblies": 256,
+  "blocked_q5_extensions": 0,
+  "boundary_partitions": 203,
+  "complete_external_two_contact_centres": 8,
+  "free_angle_labelled_support5": 15385,
+  "free_angle_labelled_support6": 46656,
+  "full_counts": {
+    "free_angle": {
+      "5": 46080,
+      "6": 300000
+    },
+    "full_bank": {
+      "5": 6031260,
+      "6": 322775040
+    },
+    "triangular": {
+      "5": 14580,
+      "6": 122880
+    }
+  },
+  "inherited_source_pins": 5,
+  "normalized_prism_3lists_in_5palette": 100000,
+  "palettes": [
+    5,
+    6
+  ],
+  "prism_list_witness_sha256": "c4dbe31250f58308ff1df3464243c72c24065d4b0fd61111f2d36adba9c3d754",
+  "q5_assembly_support_type_sizes": [
+    64,
+    192
+  ],
+  "q6_assembly_support_type_sizes": [
+    256
+  ],
+  "represented_unrestricted_prism_list_assignments": 1000000,
+  "same_state_q6_extensions": 2,
+  "source_sha256": "090e00f093f75929c880f622e4bab16ecc8d238d2826ce58e461c25656346a4c",
+  "spindle_counts": {
+    "3": 0,
+    "4": 384,
+    "5": 5040
+  },
+  "spindle_external_triple_centres": 0,
+  "spindle_maximum_external_contacts": 2,
+  "spindle_triples": 35,
+  "support_counts": {
+    "free_angle": {
+      "5": 200,
+      "6": 203
+    },
+    "full_bank": {
+      "5": 64,
+      "6": 67
+    },
+    "triangular": {
+      "5": 64,
+      "6": 67
+    }
+  }
+}
