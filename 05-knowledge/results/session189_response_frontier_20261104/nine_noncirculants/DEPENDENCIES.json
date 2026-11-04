@@ -1,0 +1,22 @@
+[
+  {
+    "path": "session189-prime8/PROOF.md",
+    "role": "All-order singleton-sensitive anchor theorem and complete ambient check, Section2.",
+    "sha256": "188dcd19fe2b47148427dc40c542afd65a72c4104fd2cdf47da0c532bbc6afc5"
+  },
+  {
+    "path": "session189-prime8-audit/REVIEW.md",
+    "role": "Independent approval of the all-order anchor theorem.",
+    "sha256": "a482956aacc99d2c8506eed3ff0e4e7372ef7f21acf907fc34c50b01bca3c6dc"
+  },
+  {
+    "path": "session189-profiles/PROOF.md",
+    "role": "Complete nontrivial-child modulo8 formula and cycle-safe transfer, Sections5\u20136; complete modulo4 singleton reduction, Section3.",
+    "sha256": "ea7ca89df44ba732247291b00aadb6a70cd8f4c4fb13624ae51f63479502d9b8"
+  },
+  {
+    "path": "session189-prime7-audit/REVIEW.md",
+    "role": "Independent approval of the inherited profile and ambient arguments.",
+    "sha256": "f9711b92608bdc2abfa7171cb64d638ff4b78ded5eadd3cd155811106c97f57b"
+  }
+]

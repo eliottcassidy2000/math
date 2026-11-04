@@ -1,0 +1,155 @@
+{
+  "format": "lossless-compressed-base64-parts-v2",
+  "archives": [
+    {
+      "path": "nine_noncirculants/anchor_data.json",
+      "bytes": 142312,
+      "sha256": "d8827cf4726bae9aba1ce088f909445d42c69ed0343370d5aebcca7bbf4a0338",
+      "git_blob_sha": "249553c247b80b5e9c97f7a878e61bc46f6f3249",
+      "compression": "xz",
+      "compressed_bytes": 8532,
+      "compressed_sha256": "30c9a753141f1ddee2837fc2514ba112903ae533872eb93bfde0c7d3c6ed4212",
+      "parts": [
+        "nine_noncirculants/anchor_data.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "nine_noncirculants/analysis.json",
+      "bytes": 709271,
+      "sha256": "b9d020318e1ba31f40a06d9147d811f90f9cb0639f8712bcc2a036147bdf6473",
+      "git_blob_sha": "ab34134a172c7c5c1c313d6efce6212bca764496",
+      "compression": "xz",
+      "compressed_bytes": 268380,
+      "compressed_sha256": "967ed0d5ed65668ef88e2bb34a759c383573b80e1767a21c29856c7cfc033933",
+      "parts": [
+        "nine_noncirculants/analysis.json.xz.b64.parts/00001.txt",
+        "nine_noncirculants/analysis.json.xz.b64.parts/00002.txt",
+        "nine_noncirculants/analysis.json.xz.b64.parts/00003.txt",
+        "nine_noncirculants/analysis.json.xz.b64.parts/00004.txt",
+        "nine_noncirculants/analysis.json.xz.b64.parts/00005.txt",
+        "nine_noncirculants/analysis.json.xz.b64.parts/00006.txt",
+        "nine_noncirculants/analysis.json.xz.b64.parts/00007.txt",
+        "nine_noncirculants/analysis.json.xz.b64.parts/00008.txt",
+        "nine_noncirculants/analysis.json.xz.b64.parts/00009.txt"
+      ]
+    },
+    {
+      "path": "nine_noncirculants/run_values.txt",
+      "bytes": 606500,
+      "sha256": "1a06da27b2f6a3d5220a51cb66a774897ed9ef59dd267663f65861a578fb541c",
+      "git_blob_sha": "1e2f707f2780f4650d25d1aa76840e1d96490121",
+      "compression": "xz",
+      "compressed_bytes": 257576,
+      "compressed_sha256": "3a56a8464fba5e83f321f4c4817224c5f6823f16043e14b3883f3199aa1e8b03",
+      "parts": [
+        "nine_noncirculants/run_values.txt.xz.b64.parts/00001.txt",
+        "nine_noncirculants/run_values.txt.xz.b64.parts/00002.txt",
+        "nine_noncirculants/run_values.txt.xz.b64.parts/00003.txt",
+        "nine_noncirculants/run_values.txt.xz.b64.parts/00004.txt",
+        "nine_noncirculants/run_values.txt.xz.b64.parts/00005.txt",
+        "nine_noncirculants/run_values.txt.xz.b64.parts/00006.txt",
+        "nine_noncirculants/run_values.txt.xz.b64.parts/00007.txt",
+        "nine_noncirculants/run_values.txt.xz.b64.parts/00008.txt",
+        "nine_noncirculants/run_values.txt.xz.b64.parts/00009.txt"
+      ]
+    },
+    {
+      "path": "nine_noncirculants/named_banks.json",
+      "bytes": 183555,
+      "sha256": "99ac0ac4c315764d219c4a911745ab37099330eb9de83e8bdfebcc8a7608070b",
+      "git_blob_sha": "6be8034c74e17569b359f7735e25c5bf3ef2d8d0",
+      "compression": "xz",
+      "compressed_bytes": 55596,
+      "compressed_sha256": "6cdb6523a0b03438d0b01730e960652c6d1afda4feae9103212b65925f085969",
+      "parts": [
+        "nine_noncirculants/named_banks.json.xz.b64.parts/00001.txt",
+        "nine_noncirculants/named_banks.json.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "nine_noncirculants/named_values.txt",
+      "bytes": 101257,
+      "sha256": "5d225250d3c7422f29516de5477516a14f7042ca93f21ef5811fea87be360474",
+      "git_blob_sha": "4847c84567549b2db9a3596c58f786aa3e7babcd",
+      "compression": "xz",
+      "compressed_bytes": 33900,
+      "compressed_sha256": "873587cefd4996a386986bd9954901b451a371ed3ae52f3d080eae42e320f0d2",
+      "parts": [
+        "nine_noncirculants/named_values.txt.xz.b64.parts/00001.txt",
+        "nine_noncirculants/named_values.txt.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "nine_noncirculants/physical_mod8_records.json",
+      "bytes": 631222,
+      "sha256": "2a2b2b2215636670928ab16bd0816600eb9033ca475df244c2d6c2d824e1c7bf",
+      "git_blob_sha": "915152edff2f1e78d17e3ac27f98273af2b22534",
+      "compression": "xz",
+      "compressed_bytes": 40264,
+      "compressed_sha256": "82219891b51a38ab48400b784f9a2ca212a19b8f7885f5b64bc0a1d51b950ce0",
+      "parts": [
+        "nine_noncirculants/physical_mod8_records.json.xz.b64.parts/00001.txt",
+        "nine_noncirculants/physical_mod8_records.json.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "nine_noncirculants/query_records.json",
+      "bytes": 230075,
+      "sha256": "956db801493e6e37c4dc1860b5029d15e46d9d1d76aad8be250a4eccf5af7bce",
+      "git_blob_sha": "a94871ad523fb63b0939e53f61dd638b997dc77f",
+      "compression": "xz",
+      "compressed_bytes": 18540,
+      "compressed_sha256": "2f3657710f6fa5c5b69e23a0b2954cf451f7bfe2b360f8b877fd4e34ebb9cc0f",
+      "parts": [
+        "nine_noncirculants/query_records.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "four_row_audit/run_recount.txt",
+      "bytes": 606500,
+      "sha256": "25146c1d1fff607af0cd6d5fa075a295dfc7d041dc0cde9c1aa906390b81b2a8",
+      "git_blob_sha": "97db495dbd699c6a43a7be2cde97ac507a41f581",
+      "compression": "xz",
+      "compressed_bytes": 256084,
+      "compressed_sha256": "8b54418f48e202c51ba5df6a7f0a4b29307224ac53a05748fa33f839b1f24664",
+      "parts": [
+        "four_row_audit/run_recount.txt.xz.b64.parts/00001.txt",
+        "four_row_audit/run_recount.txt.xz.b64.parts/00002.txt",
+        "four_row_audit/run_recount.txt.xz.b64.parts/00003.txt",
+        "four_row_audit/run_recount.txt.xz.b64.parts/00004.txt",
+        "four_row_audit/run_recount.txt.xz.b64.parts/00005.txt",
+        "four_row_audit/run_recount.txt.xz.b64.parts/00006.txt",
+        "four_row_audit/run_recount.txt.xz.b64.parts/00007.txt",
+        "four_row_audit/run_recount.txt.xz.b64.parts/00008.txt",
+        "four_row_audit/run_recount.txt.xz.b64.parts/00009.txt"
+      ]
+    },
+    {
+      "path": "four_row_audit/physical_recount.txt",
+      "bytes": 115043,
+      "sha256": "5bce8e2622aa339c54457f174b82ee2a8ddad27f679a011e5b77b50170bbb5a1",
+      "git_blob_sha": "b965f3e2b7785ca2adbd6378fb1b184636491522",
+      "compression": "xz",
+      "compressed_bytes": 39988,
+      "compressed_sha256": "f83bedfd7c781f9f3ee63cf3c44dd379ae9e43c9be320dd54b7029342c4a6ed9",
+      "parts": [
+        "four_row_audit/physical_recount.txt.xz.b64.parts/00001.txt",
+        "four_row_audit/physical_recount.txt.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "four_row_audit/physical_counts.json",
+      "bytes": 722161,
+      "sha256": "29bc5f63c3c5c67907013a787cf0c3e4d73d4777dac9597376a9e2418e892b5b",
+      "git_blob_sha": "669a69176908affba0b9f7cd17707483f12f5c94",
+      "compression": "xz",
+      "compressed_bytes": 62660,
+      "compressed_sha256": "cc6300618b86f8c9f6245162381c6e3e3253915c15c784cd3814cfd57a6973c3",
+      "parts": [
+        "four_row_audit/physical_counts.json.xz.b64.parts/00001.txt",
+        "four_row_audit/physical_counts.json.xz.b64.parts/00002.txt",
+        "four_row_audit/physical_counts.json.xz.b64.parts/00003.txt"
+      ]
+    }
+  ]
+}

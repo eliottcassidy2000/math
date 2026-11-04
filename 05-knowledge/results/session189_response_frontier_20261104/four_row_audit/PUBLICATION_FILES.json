@@ -1,0 +1,18 @@
+[
+  "REVIEW.md",
+  "README.md",
+  "audit.py",
+  "recount.cpp",
+  "joint_endpoints.json",
+  "anchor_exact.txt",
+  "anchor_recount.json",
+  "run_recount.txt",
+  "affine_recount.json",
+  "physical_recount.txt",
+  "physical_counts.json",
+  "cube_recount.json",
+  "normal.json",
+  "optimized.json",
+  "PUBLICATION_FILES.json",
+  "SHA256SUMS"
+]
