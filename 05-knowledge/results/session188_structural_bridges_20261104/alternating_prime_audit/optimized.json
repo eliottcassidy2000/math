@@ -1,0 +1,35 @@
+{
+  "actual_queries_per_graph": 272,
+  "audit_sha256": "2b98b0fe202120817c011d5d5ce208e3bd8202d2fc19535c5d4ebcd845e43c0b",
+  "independent_structural_deletions_through_order17": 80,
+  "literal_batteries": 17,
+  "producer_modes_equal": true,
+  "quartic_values": [
+    8,
+    8,
+    8,
+    1116,
+    360,
+    360,
+    1116,
+    188,
+    66,
+    30,
+    18,
+    582,
+    126,
+    62,
+    0,
+    0,
+    0
+  ],
+  "source_sha256": {
+    "alternating_prime_quotient/PROOF.md": "859cf454b94ebb6a833550b2d0b56cdb0962e4814ae11bc4031d2bd32611db7a",
+    "alternating_prime_quotient/verify.py": "aa270c819a72042fa3b9e7189ef0a2e3d453cdd6e3b91842b3c46d57fac95a9d",
+    "marked_pair_quotient/PROOF.md": "baba1aeb86fddf83f000a63f4da0ccff1418a3f6add077c7495c35bfe85f6e09",
+    "marked_pair_quotient/verify.py": "dd20526244816c4477099d034be062a8a3b42d89512c61ba226c65d5e8157cea",
+    "ordered_module_skew/PROOF.md": "d807daa219c7cc749c3df8e8d9b609e84cc366ef4f1a06b09f61b27a9aff826d",
+    "ordered_module_skew_audit/audit.py": "6bffb87e0718f0ee2994711dc34fd7f31138be519657cfe383ddee2a806e8dee"
+  },
+  "status": "PASS"
+}
