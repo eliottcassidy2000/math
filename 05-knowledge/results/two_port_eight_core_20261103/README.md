@@ -88,7 +88,12 @@ between tournaments and unit-distance colouring.
 
 The [incoming-work integration](recovery/INCOMING.md) retains physical
 names, joint ports, accepted source words and operation scopes. A finite
-return is not reusable closure. [The independent reviews](recovery/ALGEBRA_RESPONSE_REVIEW.md)
+return is not reusable closure. The [latest integration](recovery/LATEST_INCOMING.md)
+adds full ambient modulo-four descent, an exact 1,753-query converse
+battery checked against our complete twelve-core data, and the incoming
+physical missing44 return with its all-order isolation. It also records
+the exact transitive-chart escape and fixed-support arithmetic boundaries.
+[The independent reviews](recovery/ALGEBRA_RESPONSE_REVIEW.md)
 and [geometry review](recovery/GEOMETRY_REVIEW.md) state the accepted
 quantifiers and computational limits.
 

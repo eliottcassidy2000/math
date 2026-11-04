@@ -28,3 +28,24 @@ rigidity of induced subgraphs, and anonymous path-component depth.
 The separate user-requested research chat is pursuing structural proofs and
 new main targets in its own worktree. This packet owns the complete private
 core census, concrete twelve-core tests and their independent audits.
+
+After the decisive computations, the core lane is reduced to prime,
+nonselfconverse twelve-vertex modules; exact twin signs also survive positive
+scaling. The full incoming modulo-four response descends through substitution,
+and the converse-only cubic battery maps our complete12 data to1753 queries
+without losing equality information within that class. The necessary tests
+remain separate from a collision certificate.
+
+The geometric lane has no eight-private-point blocker: thirty list certificates
+and eight metric exclusions close the complete core universe. The next
+Moser-containing nine-core has two adjacent hubs with two private contacts
+each; its exact identical-singleton condition must hold for every legal
+private-spindle colouring. In both lanes a proposed local obstruction must
+survive the entire named boundary relation, then the actual realization map.
+
+The arithmetic arrivals sharpen the language boundary: the physical missing44
+return exists but its rewrite is isolated toTT3, while transitive-suffix
+uniform iteration cannot carry a bounded digit alphabet indefinitely.
+Prescribed-support modular arithmetic becomes complete only after retaining
+integer bounds that prevent wraparound. These clarify the information losses;
+they do not identify the three different mathematical targets.

@@ -19,6 +19,7 @@ ENGINES = (
     ('modules', 'algebra/module_check.py', [], 'algebra/modules.json', 'algebra/modules.optimized.json'),
     ('response', 'response/run.py', [], 'response/normal.json', 'response/optimized.json'),
     ('algebra_review', 'recovery/algebra_review.py', [], 'recovery/algebra_review.json', 'recovery/algebra_review.optimized.json'),
+    ('converse_transfer', 'recovery/converse_transfer.py', [], 'recovery/converse_transfer.json', 'recovery/converse_transfer.optimized.json'),
 )
 
 
@@ -49,6 +50,24 @@ def pins():
     return len(files), len(sources)
 
 
+def receipt_sources(script, receipt):
+    """Check recorded producer/review source bytes, including after a rebase."""
+    source = receipt.get('source_sha256', {})
+    if isinstance(source, str):
+        need(sha(HERE / script) == source, 'receipt script changed: ' + script)
+    else:
+        for name, digest in source.items():
+            candidates = {(base / name).resolve() for base in
+                          ((HERE / script).parent, HERE, ROOT, ROOT / '05-knowledge/results')
+                          if (base / name).is_file()}
+            need(any(sha(p) == digest for p in candidates), 'receipt source changed: ' + name)
+    if 'verifier_sha256' in receipt:
+        need(sha(HERE / script) == receipt['verifier_sha256'], 'receipt verifier changed: ' + script)
+    if 'source_pins_sha256' in receipt:
+        need(sha((HERE / script).parent / 'SOURCE_PINS.json') == receipt['source_pins_sha256'],
+             'receipt source-pin file changed: ' + script)
+
+
 def main():
     need(sys.argv[1:] in ([], ['--replay']), 'usage: verify.py [--replay]')
     before = pins()
@@ -57,6 +76,7 @@ def main():
         need(key not in expected, 'duplicate engine key')
         expected[key] = load(normal)
         need(expected[key] == load(optimized), 'normal/optimized mismatch: ' + key)
+        receipt_sources(script, expected[key])
     core = expected['core8']
     need((core['all_graphs'], core['min_degree3_graphs'], core['metric_filter_graphs'], core['classes'])
          == (2**28, 53470067, 724080, 38), 'complete core scope')
@@ -93,6 +113,9 @@ def main():
     witness = response['first_actual_query_witness']
     need((witness['H_T_plus_ports'], witness['H_converse_plus_same_ports']) == (627597, 1139039),
          'actual distinguishing query')
+    transfer = expected['converse_transfer']
+    need(transfer['full_battery'] == 6241 and transfer['reduced_battery'] == 1753
+         and transfer['shared_label_cubic_nonzero'] == 60, 'incoming converse transfer')
     replayed = 0
     if sys.argv[1:] == ['--replay']:
         for key, script, args, _, _ in ENGINES:
