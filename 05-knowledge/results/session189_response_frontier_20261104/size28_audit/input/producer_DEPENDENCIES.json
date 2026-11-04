@@ -1,0 +1,54 @@
+{
+  "session189-minimum27-audit/REVIEW.md": {
+    "bytes": 12732,
+    "sha256": "dc4d6c8549712b7dfc813bac5c55224eb2be503a75cd54fad3e2d0433fd65b9c"
+  },
+  "session189-c3-frontier/PROOF.md": {
+    "bytes": 16069,
+    "sha256": "7e0612183fd4c546d94874a7bd3d042bd1800ef68c1137f1c3934e346ecc08a0"
+  },
+  "session189-c3-frontier/candidates.json": {
+    "bytes": 378162,
+    "sha256": "9eae7441d913bbc7f50f6f2283343e9d1751a50d8466278d340852c5d0cab45b"
+  },
+  "session189-c3-frontier/battery.json": {
+    "bytes": 1137,
+    "sha256": "84103f9b03f7c8f2e3006781fabefbfe56c5892c590fcb48a62285472951dd99"
+  },
+  "session189-c3-frontier/bank_input.txt": {
+    "bytes": 88405,
+    "sha256": "55f94197255bdf0bb6eae4127e6035209c867580a492a91d6f3d808fdacbc818"
+  },
+  "session189-c3-frontier/receipt.json": {
+    "bytes": 2214,
+    "sha256": "96484e2a033c7f4f19c9e3ac053acb16bd84822651b7dcab37aac4249dc7dec3"
+  },
+  "session189-c3-census-audit/REVIEW.md": {
+    "bytes": 12277,
+    "sha256": "fa5d1df1c6364d1860e104879a8ec83e70b6c61f97b06a562eed033e766be738"
+  },
+  "session189-c3-census-audit/receipt.json": {
+    "bytes": 7236,
+    "sha256": "5ec4612498debead3fb487821843a44792ac1f22a2d4bb23b9acf4319666ffed"
+  },
+  "session189-frontier-nine/PROOF.md": {
+    "bytes": 9821,
+    "sha256": "daf7180f381708a123f4afdb08ff66798a32b528c822011a5e71176879bdd21c"
+  },
+  "session189-nine-integration-audit/REVIEW.md": {
+    "bytes": 7869,
+    "sha256": "75db72d7668626d0dfc12eb3e5a6f1150d6ca39b07bea0bea55080ef729af18a"
+  },
+  "session189-tt4-cross-audit/REVIEW.md": {
+    "bytes": 8999,
+    "sha256": "8a1c7131e8a8331029d78f230c0d909aeeb39cc471d658b7c165f5f52474b235"
+  },
+  "session189-prime8/PROOF.md": {
+    "bytes": 13313,
+    "sha256": "188dcd19fe2b47148427dc40c542afd65a72c4104fd2cdf47da0c532bbc6afc5"
+  },
+  "session189-prime8-audit/REVIEW.md": {
+    "bytes": 6938,
+    "sha256": "a482956aacc99d2c8506eed3ff0e4e7372ef7f21acf907fc34c50b01bca3c6dc"
+  }
+}

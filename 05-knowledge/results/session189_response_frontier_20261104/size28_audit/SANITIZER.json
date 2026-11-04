@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "command": "g++ -O1 -g -std=c++17 -fsanitize=undefined,address -fno-omit-frame-pointer split_words.cpp -o split_words_san; ASAN_OPTIONS=detect_leaks=0 ./split_words_san < benchmark.in > sanitized_benchmark.out 2> sanitized_benchmark.log; cmp benchmark.out sanitized_benchmark.out",
+  "scope": "Three complete independent quotient/query word-count pairs, nine placements on both sides per pair; ASan and UBSan only, leak checking disabled",
+  "files": {
+    "split_words.cpp": {
+      "bytes": 2477,
+      "sha256": "d348161d2ec7ac7d1d6378687383e07fbc5c1de1f5de9aae45248fa95a482215"
+    },
+    "benchmark.in": {
+      "bytes": 122,
+      "sha256": "1d15e7e752e64dc28425f5e8a5149c4a2e902f7dffdb73b492b3803548152035"
+    },
+    "benchmark.out": {
+      "bytes": 324,
+      "sha256": "59d7e2f4ae57a644e5f1396341cde66ba6e5226b3c5511936bd599f387fdc9d1"
+    },
+    "sanitized_benchmark.out": {
+      "bytes": 324,
+      "sha256": "59d7e2f4ae57a644e5f1396341cde66ba6e5226b3c5511936bd599f387fdc9d1"
+    },
+    "sanitized_benchmark.log": {
+      "bytes": 26,
+      "sha256": "d05572c2b4cccc526127c524a82893ba62d762adfe0cbc13e51b4056c4000879"
+    }
+  }
+}
