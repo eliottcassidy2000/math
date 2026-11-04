@@ -1,0 +1,141 @@
+{
+  "formal_cutoffs": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      11
+    ],
+    [
+      5,
+      15
+    ],
+    [
+      6,
+      19
+    ],
+    [
+      7,
+      23
+    ],
+    [
+      8,
+      27
+    ],
+    [
+      9,
+      31
+    ],
+    [
+      10,
+      35
+    ],
+    [
+      11,
+      39
+    ],
+    [
+      12,
+      43
+    ],
+    [
+      13,
+      47
+    ],
+    [
+      14,
+      51
+    ],
+    [
+      15,
+      55
+    ],
+    [
+      16,
+      59
+    ],
+    [
+      17,
+      63
+    ],
+    [
+      18,
+      67
+    ],
+    [
+      19,
+      71
+    ],
+    [
+      20,
+      75
+    ],
+    [
+      21,
+      79
+    ],
+    [
+      22,
+      83
+    ],
+    [
+      23,
+      87
+    ],
+    [
+      24,
+      91
+    ],
+    [
+      25,
+      95
+    ],
+    [
+      26,
+      99
+    ],
+    [
+      27,
+      103
+    ],
+    [
+      28,
+      107
+    ],
+    [
+      29,
+      111
+    ],
+    [
+      30,
+      115
+    ]
+  ],
+  "numeric_sequences": 5460,
+  "producer_replayed_normal_and_optimized": true,
+  "scope": "Exact positive-square identity and lower bound. Tournament application depends separately on the physical response-gap identity; no unequal-profile or strong-ambient extension.",
+  "signed_and_boundary_controls": [
+    -9,
+    414,
+    -48,
+    162,
+    2
+  ],
+  "source_sha256": {
+    "PROOF.md": "7a9e1d0cbf71ce70c96e0b6158a89ae1c0ea0583736a0bf5f9cc8acc9b84bd56",
+    "receipt.json": "b7e1b343811e7c3630f960d8d91ff069afc2a2dc06d08d94467372bd38a95984",
+    "receipt_optimized.json": "b7e1b343811e7c3630f960d8d91ff069afc2a2dc06d08d94467372bd38a95984",
+    "verify.py": "9f6a0371e4b017568c128abc67813578c90c0e5568a8eed6abe1ff4d43f23c46"
+  },
+  "status": "PASS"
+}
