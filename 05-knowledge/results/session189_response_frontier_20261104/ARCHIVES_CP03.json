@@ -1,0 +1,80 @@
+{
+  "format": "deterministic-gzip-base64-parts-v1",
+  "archives": [
+    {
+      "path": "collision/ambient_controls.json",
+      "bytes": 63865,
+      "sha256": "b3d054a0685bb86de160fc5894ecff75108c762cdb43bed660a4dfc0cac1dc43",
+      "git_blob_sha": "786ae74da41ed6fe1586536ba03449778fcb1e50",
+      "gzip_bytes": 2247,
+      "gzip_sha256": "b1c74ffab48553d2c29f5ef527c42d122d99b8a3b4a430b626a0c01a48efaeb7",
+      "parts": [
+        "collision/ambient_controls.json.gz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "collision/bank.json",
+      "bytes": 283631,
+      "sha256": "a68ca5bd7b890bad201efcf093bd3f87e20ddae87e42f31e05bce0ebeca94919",
+      "git_blob_sha": "8cc38a420f0358d4b4b43cd1283bbf632a9d4bfa",
+      "gzip_bytes": 76094,
+      "gzip_sha256": "1c86a60ba8e42f70d38fd8c00f80b73620ad6d15e9ac8e2e61aa6ddbff446691",
+      "parts": [
+        "collision/bank.json.gz.b64.parts/00001.txt",
+        "collision/bank.json.gz.b64.parts/00002.txt",
+        "collision/bank.json.gz.b64.parts/00003.txt",
+        "collision/bank.json.gz.b64.parts/00004.txt",
+        "collision/bank.json.gz.b64.parts/00005.txt"
+      ]
+    },
+    {
+      "path": "collision/order_census_6.json",
+      "bytes": 113133,
+      "sha256": "b7c76be2d35ad8dd41a7f1c7718cb4fcceb472edbb5824ad43d64e4d9c77e7e5",
+      "git_blob_sha": "a1e1ebe20e02e20379d15ef232d179b15f6671d2",
+      "gzip_bytes": 9011,
+      "gzip_sha256": "346bf95a9d35bc8983317e5391114ac0cfa377fc070c6e09c1f5ff49e034ac7e",
+      "parts": [
+        "collision/order_census_6.json.gz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "collision/order_census_7.part0.json",
+      "bytes": 645213,
+      "sha256": "47a58511868cbc0fbf6e414d98d32f708396a361f7b3efeccd65c16bf1d35f1f",
+      "git_blob_sha": "c56278a8ea30bfdefcc865ef6d9099824f77a3b0",
+      "gzip_bytes": 48280,
+      "gzip_sha256": "2cb432eeb4583bd92b69fccac2c94422d241a1013a891bd1fc37c9e817516e4c",
+      "parts": [
+        "collision/order_census_7.part0.json.gz.b64.parts/00001.txt",
+        "collision/order_census_7.part0.json.gz.b64.parts/00002.txt",
+        "collision/order_census_7.part0.json.gz.b64.parts/00003.txt"
+      ]
+    },
+    {
+      "path": "collision/order_census_7.part1.json",
+      "bytes": 645216,
+      "sha256": "7dc5d6ab629f40500512faef8c711f3373fd248b2e55b72abc304fd6279f4787",
+      "git_blob_sha": "74607c084c5de27cb48ba66caafbfd28314f8e3e",
+      "gzip_bytes": 48608,
+      "gzip_sha256": "e859d99ea51e443735c94a7f97f06ec7f3c8336de67ea30c731a5224a2120a9a",
+      "parts": [
+        "collision/order_census_7.part1.json.gz.b64.parts/00001.txt",
+        "collision/order_census_7.part1.json.gz.b64.parts/00002.txt",
+        "collision/order_census_7.part1.json.gz.b64.parts/00003.txt"
+      ]
+    },
+    {
+      "path": "collision_audit/literal_coefficients.txt",
+      "bytes": 118210,
+      "sha256": "1d96013f6f8a66cee16eb53d4104085e8a6528ea5dda7ad191889e5926fff9ab",
+      "git_blob_sha": "149151e5f4c9dfdffdb4aa8ca7f8bc59b6b06b2f",
+      "gzip_bytes": 20474,
+      "gzip_sha256": "e2d975393c4da6eeb11dd7c7456e2e82efae9b769b104baa2bcae90681df819f",
+      "parts": [
+        "collision_audit/literal_coefficients.txt.gz.b64.parts/00001.txt",
+        "collision_audit/literal_coefficients.txt.gz.b64.parts/00002.txt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "actual_capacity_cases": 150,
+  "complete_named_response_banks": {
+    "additional_high_weight_queries": 176,
+    "all_named_cubic_quartic_zeros_retained": true,
+    "cases": 44,
+    "coordinates": 38888,
+    "literal_word_independent_ids": [
+      0,
+      12
+    ],
+    "old_orders": [
+      5,
+      7,
+      8
+    ]
+  },
+  "complete_physical_order_census": [
+    {
+      "classes": 60,
+      "m": 5,
+      "orders": 120,
+      "size_of_every_class": 2
+    },
+    {
+      "classes": 360,
+      "m": 6,
+      "orders": 720,
+      "size_of_every_class": 2
+    },
+    {
+      "classes": 2520,
+      "m": 7,
+      "orders": 5040,
+      "size_of_every_class": 2
+    }
+  ],
+  "data_sha256": {
+    "ambient_controls.json": "b3d054a0685bb86de160fc5894ecff75108c762cdb43bed660a4dfc0cac1dc43",
+    "bank.json": "a68ca5bd7b890bad201efcf093bd3f87e20ddae87e42f31e05bce0ebeca94919",
+    "distance_polynomials.json": "f08a86c36b7ecf118e3f96049186362e5703ca448c457bf2f1ecf581213407ed",
+    "order_census_5.json": "1466891d97ec43ad73000414881476c2ec87bfcf1f2b100ef487fe4a8a318c4b",
+    "order_census_6.json": "b7c76be2d35ad8dd41a7f1c7718cb4fcceb472edbb5824ad43d64e4d9c77e7e5",
+    "order_census_7.part0.json": "47a58511868cbc0fbf6e414d98d32f708396a361f7b3efeccd65c16bf1d35f1f",
+    "order_census_7.part1.json": "7dc5d6ab629f40500512faef8c711f3373fd248b2e55b72abc304fd6279f4787"
+  },
+  "exhaustive_ambient_rooted_patterns": 75,
+  "literal_distance_orders": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "positivity_formula_orders": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "scope": "exact finite controls; no collision or unrestricted reconstruction claimed"
+}
