@@ -1,0 +1,34 @@
+---
+id: HYP-9459
+title: "Tournaments with exactly k Hamiltonian cycles, split by whether a vertex of out-degree 1 exists (all tournaments of orders 5-10, nauty gentourng + C subset DP): (1) every tournament of order >= 6 with exactly one or exactly two Hamiltonian cycles has a vertex of out-degree 1 (so the sole-exit bijection of THM-4862 (b) reaches all of them; the regular tournament RT5 is the only exception, at order 5); (2) the tournaments with exactly three Hamiltonian cycles and no vertex of out-degree 1 are counted by F(2n - 9): 2, 5, 13, 34, 89 at orders 6-10; (3) those with exactly four and no vertex of out-degree 1 by 2 F(2n - 11): 4, 10, 26, 68 at orders 7-10 (3 at order 6); (4) the full columns k = 3, 4, 5 (1, 11, 38, 124, 390, 1193; 6, 25, 91, 315, 1049; 5, 38, 138, 466, 1500 at orders 5-10) are not in OEIS; together with Garey's F(2n - 6) (k = 1) and the two-cycle law (n - 2) F(2n - 9) - L(2n - 10) (k = 2, HYP-9454 (5)) this is the beginning of a spectrum of few-cycle tournaments by minimum out-degree"
+status: >
+  OPEN (klein-2026-11-04). (1) is FINITE-EXACT through order 10 (9,733,056 tournaments) and conjectured for all n >= 6;
+  (2) and (3) are conjectures from five and four exact terms; (4) is a record. The sweep packet's README section 8 holds
+  the table (k <= 24, orders 5-10) and the scripts; the two-cycle structure (segment swap; deleting either swapped
+  segment leaves a unique-cycle tournament) is there as well. No proof route beyond the gluing picture of the two-cycle
+  law is known; a proof of (2) would be the first count of a few-cycle class that the sole-exit bijection does not reach.
+session: klein-2026-11-04 (codex/session-spectrum-20261104)
+source: 05-knowledge/results/two_branch_rearming_sigma_sweep_20261104/README.md
+related:
+  - 05-knowledge/hypotheses/HYP-9454-the-full-digit-c2-sweep-as-the-unbounded-target-selector-ready-pair-density-sparse-r1-r2-and-the-name-retention-wall.md
+  - 01-canon/theorems/THM-4862-one-exit-extension-law-the-readiness-digit-is-the-cycle-count-of-the-entry-attachment-fibonacci-bijection-ready-floors-through-order-10-and-the-full-digit-c2-sweep-realises-every-odd-number-in-307-26551.md
+  - 01-canon/theorems/THM-4865-the-sole-exit-tower-is-tribonacci-h-k-equals-h-k-1-plus-h-k-2-plus-h-k-3-for-every-rooted-base-the-lineage-c2-law-at-any-vertex-and-the-three-root-response-numerations-attain-every-odd-number-in-69-702189.md
+---
+
+# HYP-9459 — few-cycle tournaments by minimum out-degree
+
+Let `t_k(n)` be the number of tournaments of order `n` with exactly `k` Hamiltonian cycles and `u_k(n)` the number of those with no vertex of out-degree 1 (so every vertex has out-degree at least 2, the tournament being strong). From the exhaustive table (sweep packet README §8):
+
+| `k` | `t_k(n)`, `n = 5..10` | `u_k(n)`, `n = 5..10` |
+|---|---|---|
+| 1 | 3, 8, 21, 55, 144, 377 (`F(2n − 6)`, Garey 1972 / Moon 1982) | 0, 0, 0, 0, 0, 0 |
+| 2 | 2, 5, 18, 60, 191, 589 (`(n − 2)F(2n − 9) − L(2n − 10)` for `n ≥ 6`, conjectural) | 1, 0, 0, 0, 0, 0 (`RT₅`) |
+| 3 | 1, 11, 38, 124, 390, 1193 | 0, 2, 5, 13, 34, 89 (`F(2n − 9)` for `n ≥ 6`?) |
+| 4 | 0, 6, 25, 91, 315, 1049 | 0, 3, 4, 10, 26, 68 (`2F(2n − 11)` for `n ≥ 7`?) |
+| 5 | 0, 5, 38, 138, 466, 1500 | 0, 4, 4, 9, 23, 60 |
+
+**Conjectures.** (1) `u_1(n) = u_2(n) = 0` for `n ≥ 6`. (2) `u_3(n) = F(2n − 9)` for `n ≥ 6`. (3) `u_4(n) = 2F(2n − 11)` for `n ≥ 7`.
+
+**Why it matters here.** The sole-exit bijection `(T, a) ↦ Φ(T, a)` of THM-4862 (b) identifies the digit-`k` ready classes with the `k`-cycle tournaments *having* an out-degree-1 vertex; (1) says the identification is onto for `k ≤ 2`, which is why the digit-2 class counts are the two-cycle counts. For `k = 3` the out-degree-1-free part is a Fibonacci-sized remainder: the digit-3 spectrum `R₃` sees `t_3 − u_3` of the three-cycle tournaments. Both the `u_3` law and the two-cycle law point at a common structure of few-cycle tournaments (near the all-backward cycle, with a bounded number of forward chords in nested positions) that would also give Douglas's characterisation in chord language (sweep packet README §8, end-insertion and suffix rules).
+
+**Tests that would move it.** Order 11 over all tournaments (903 million) needs about two days of the C counter; a generator restricted to minimum out-degree 2 and at most three cycles would be faster. A proof of (2) through the segment-swap structure is the natural next step.
