@@ -1,0 +1,66 @@
+{
+  "compiled_phase_counts": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      18
+    ],
+    [
+      4,
+      54
+    ],
+    [
+      5,
+      162
+    ],
+    [
+      6,
+      486
+    ],
+    [
+      7,
+      1458
+    ],
+    [
+      8,
+      4374
+    ]
+  ],
+  "compiled_phases": 6560,
+  "complexity_review": "PASS after repair: reset_phase, prefix_for_phase, completion(expand=False), and periodic_phase use modular carries. The symbolic certificate retains word and cost sidecars. Runtime depends on input bit length as well as L; exact B and source are materialized only with expand=True.",
+  "first_hit_routes": 3063,
+  "forbidden_phase_checks": 1093,
+  "independent_words": 1554,
+  "inspected_sha256": {
+    "PROOF.md": "b045d699a0d409caa6f951be1f8fd1d86e10393f2cf644ce2243ce8a3a9a344c",
+    "reset_phase.py": "98e16054b299a0814e8d4e55507befb15c05f2f4de7f570c81e097ee34e5b2ed"
+  },
+  "large_encoded_letter_modular_checks": [
+    {
+      "beta": 4,
+      "letters": [
+        "1000000000000000000000000000001"
+      ]
+    },
+    {
+      "beta": 52,
+      "letters": [
+        "10000000000000000000000000000000000000001",
+        "100000000000000000000000000000000002",
+        "7"
+      ]
+    }
+  ],
+  "literal_routes": 3108,
+  "non_first_hit_routes": 45,
+  "periodic_center_checks": 60,
+  "rational_address_word_checks": 9330,
+  "status": "PASS"
+}

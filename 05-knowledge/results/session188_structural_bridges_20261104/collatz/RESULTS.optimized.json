@@ -1,0 +1,119 @@
+{
+  "examples": [
+    {
+      "phase": 4,
+      "reset": 4,
+      "source": 3,
+      "states": [
+        3,
+        5,
+        1
+      ],
+      "word": [
+        1
+      ]
+    },
+    {
+      "phase": 10,
+      "reset": 10,
+      "source": 151,
+      "states": [
+        151,
+        227,
+        341,
+        1
+      ],
+      "word": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": 16,
+      "reset": 16,
+      "source": 38835,
+      "states": [
+        38835,
+        58253,
+        21845,
+        1
+      ],
+      "word": [
+        1,
+        3
+      ]
+    },
+    {
+      "phase": 2,
+      "reset": 20,
+      "source": 621377,
+      "states": [
+        621377,
+        466033,
+        349525,
+        1
+      ],
+      "word": [
+        2,
+        2
+      ]
+    },
+    {
+      "phase": 52,
+      "reset": 52,
+      "source": 1779199852788343,
+      "states": [
+        1779199852788343,
+        2668799779182515,
+        4003199668773773,
+        1501199875790165,
+        1
+      ],
+      "word": [
+        1,
+        1,
+        3
+      ]
+    }
+  ],
+  "exhaustive_words": 5460,
+  "explicit_check_count": 213575,
+  "inverse_phase_compilations": 59048,
+  "literal_root_routes": 10920,
+  "periodic_center_tests": 150,
+  "phase_spectra": [
+    {
+      "length": 1,
+      "phases": 2,
+      "words": 4
+    },
+    {
+      "length": 2,
+      "phases": 6,
+      "words": 16
+    },
+    {
+      "length": 3,
+      "phases": 18,
+      "words": 64
+    },
+    {
+      "length": 4,
+      "phases": 54,
+      "words": 256
+    },
+    {
+      "length": 5,
+      "phases": 162,
+      "words": 1024
+    },
+    {
+      "length": 6,
+      "phases": 486,
+      "words": 4096
+    }
+  ],
+  "rejected_controls": 8,
+  "status": "PASS",
+  "template_precision_tests": 15
+}
