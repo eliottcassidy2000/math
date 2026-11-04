@@ -1,0 +1,26 @@
+{
+  "baseline": "838b01cec4",
+  "files": {
+    "05-knowledge/results/boundary_palette_compression_20261011.md": "c7318387c1c27acc2b7c17962405210bdc8cf0cd01b70982518d1268e2c2b7f7",
+    "05-knowledge/results/consecutive_flags_order10_20261028/GENERATION.md": "c6fa09b6a3d25081b3224b48e4272f96babf4d3ce79721157c2a88ed046b5041",
+    "05-knowledge/results/consecutive_flags_order10_20261028/bank_manifest.json": "aed6852bfd8efbfebd26fd01d1580a2a8fd2d8d7c76740b4dfdca400dddba03f",
+    "05-knowledge/results/consecutive_flags_order10_20261028/flags10.varint.gz": "ef5cf3d13f5b679890cbe69bcd1f78189161953e726e12d169fb576845677ef7",
+    "05-knowledge/results/consecutive_flags_order10_20261028/parents9.u64.gz": "92cb19bbcdc0bcb58b0ded354aacdd1809c72251e2e29d28d23f92de2d8bbe05",
+    "05-knowledge/results/consecutive_flags_order10_20261028/verification10.json": "2d5c8e6fde58847a47eccbf3ba24e4a6581168597a8e5738e69d5e7d318a5f27",
+    "05-knowledge/results/hn_metagraph_information_20261026/enumeration/RESULT.md": "c17d9903024677d6f3198d3920cbb0e3e08de862f1f7f85e4210aa03421ebaf9",
+    "05-knowledge/results/hn_metagraph_information_20261026/enumeration/representatives9.json.gz": "b4e559ad6cb31980852034f9c7f61e366a7cb479fee4d9a641ad3356745200d3",
+    "05-knowledge/results/hn_metagraph_information_20261026/six_color/RESULT.md": "23ee63b2fd28e938e275bce08ad205a1aaa760d9a87bc13e69476e9fad883a94",
+    "05-knowledge/results/paired_budget_selectors_matrix_20261028/FIVE_INTERIORS.md": "cc68a1b4575a7fc13058e79e01a96e7829a1222fda162e6d09ef6d4a87891caf",
+    "05-knowledge/results/proof_principles_20261103/continuation/PROOF.md": "3ccc96e6c91167dd8c9457a205f5b39151fe55f8ceacc0d15581fc7e4ef24d62",
+    "05-knowledge/results/session180_170807_returns_20261104/older/PROOF.md": "b5281f391d491c130cd838174633c9d02b0118ce355a8b918cfcbe3d31813ca4",
+    "05-knowledge/results/session180_170807_returns_20261104/ports/PROOF.md": "9e0ffa087cade654f9264076c79961e4c2099475e433a041e1250649c4894dcd",
+    "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/proof.md": "48aaefa2d059a56fb201a41d5f78bcd043eb2fbcb58f1ab9918c3e4d987917d7",
+    "05-knowledge/results/two_port_unit_distance_20261103/algebra/PROOF.md": "5469f3409785d509c3d1151e8b3644263803b6f648c35910ba5e5d8f17c63442",
+    "05-knowledge/results/two_port_unit_distance_20261103/census/RESULT.md": "561cc86eff7fab96b7ee45b5dce86477d53931cf756bdf0d6597455ba3d55ee3",
+    "05-knowledge/results/two_port_unit_distance_20261103/geometry/PROOF.md": "259b7ea947e51f85cb698063a07c6dbf95c20ded42f2f1b9c5772383def4cbe9",
+    "05-knowledge/results/two_port_unit_distance_20261103/reconstruction/PROOF.md": "b59eac9c5143a76d650571b7b40efb33a59ce7219f4dcfb6cf5730da514c6191",
+    "05-knowledge/results/unit_equality_quantized_guards_20261011e.md": "9c6e62a530e0136959ffd439dd10c41a4517665f01fc566b91102f066b3e363f",
+    "05-knowledge/results/zero_ready_strong_switch_20261103/structure/README.md": "9bea791860b177033794c6020d7e8f338f18c901ef4ecb0819c81d5ac539f5af"
+  },
+  "integrated_incoming_head": "9f5bdfaea3"
+}
