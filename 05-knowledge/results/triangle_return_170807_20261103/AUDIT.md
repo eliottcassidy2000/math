@@ -23,7 +23,9 @@ its declared finite universe; all-size extensions use the supplied proofs.
   positive-cut bound w_uv>=H(T-{u,v}). Endpoints must be fixed individually;
   arbitrary weights need not be invariant. The all-mark result excludes
   m=1. The birth obstruction requires a proper triangle module and a
-  strong source.102 labelled strong quotient/module controls at quotient
+  strong original source. Monotonicity at the first triangle-splitting
+  birth extends the obstruction to every finite induced extension, without
+  requiring strongness at subsequent prefixes.102 labelled strong quotient/module controls at quotient
   orders3,4 pass. A whole C3 has+2 births, testing the proper-module guard.
 * **PC1--PC4 in PERFECT, PROVED:** the inverse retains positive deficiency,
   prime q, coprimality, integral prime-power ratio and Euler shape when

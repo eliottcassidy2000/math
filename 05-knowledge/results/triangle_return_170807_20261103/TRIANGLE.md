@@ -78,10 +78,10 @@ The m=1 boundary is excluded: its first-clone defect is zero. Naming a
 triangle vertex breaks the stabilizer but incurs the indegree obstruction;
 this is why simply retaining a symmetry frame does not produce a reset.
 
-## 4. A third birth cannot fill the original two-unit deficit
+## 4. No number of births can fill the original two-unit deficit
 
 More generally let T be strong and contain a proper homogeneous C3 module.
-Then no one-vertex extension of T has H(T)+2 or H(T)+4 paths.              (TR4)
+Then no induced extension of T, at any order, has H(T)+2 or H(T)+4 paths. (TR4)
 
 Proof. If the new incidence is constant on the triangle, its rotation
 remains an automorphism. Both counts are divisible by3, excluding increments
@@ -95,14 +95,25 @@ Here T-{u,v} is exactly the quotient contracting the proper triangle to its
 remaining vertex. That quotient is strong, has at least three vertices,
 and so has at least three Hamilton paths. The cut formula and bound are
 inherited from [Session124](../session124_tournament_cut_response_20261031/README.md),
-not new claims about generic weighted graphs. This proves TR4.
+not new claims about generic weighted graphs. This proves the one-birth
+case and supplies the uniform first-split cost.
 
-Applied to U_m, TR4 rules out **every** next birth producing
-3H(T_m)+2 or3H(T_m)+4, including arbitrary nonuniform incidences. The extra
-feedback port must therefore be accompanied by a rewrite/deletion, or by
-more than one further birth. This is stronger for this particular source
-than excluding a fixed uniform two-feedback template. It does not exclude
-other three-feedback sources or the larger targets3H(U_m)+2/+4.
+For any longer birth sequence, consider the first birth whose incidence
+splits the original triangle. Before it, the triangle rotation is still an
+automorphism. Every prefix count is an odd multiple of3, so any positive
+increase from H(T) is already at least6. If all those prefixes instead
+have count H(T), the first split costs at least2H(T-{u,v})>=6: its current
+pair-deleted graph contains the original T-{u,v} induced, and H cannot
+decrease under births. All later counts are no smaller. If no split ever
+occurs, the final count remains divisible by3. This proves TR4 for every
+finite extension, including nonstrong intermediate and final graphs.
+
+Applied to U_m, TR4 rules out **every birth-only continuation** producing
+3H(T_m)+2 or3H(T_m)+4, including arbitrary nonuniform incidences and any
+number of feedback vertices. A repair must change an old incidence or
+delete an old vertex. This is stronger for this particular source than
+excluding a fixed uniform two-feedback template. It does not exclude
+other sources or the larger targets3H(U_m)+2/+4.
 
 ## 5. Ports, phases, and the hostile control
 

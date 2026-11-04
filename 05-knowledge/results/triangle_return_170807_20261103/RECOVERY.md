@@ -26,7 +26,7 @@ not a request merely to recheck old claims.
 | Lane | Object / operation | What the session obtained |
 |---|---|---|
 | Anchor | Saved56935 source; actual complements then birth | Strong170807 endpoint with all old names |
-| Anchor | C3 substitution; moving the live mark | All-size defect floor3 and one-birth repair obstruction |
+| Anchor | C3 substitution; moving the live mark | All-size defect floor3 and birth-only repair obstruction at every order |
 | Anchor | Two arbitrary modules; joint run expansion | Exact bilinear law and complete reuse classification |
 | Niche | Odd square core; adjoin one prime power | Unique candidate prime and exponent test |
 | Wildcard | Positive costs; erase a future search variable | Prefix pruning and a width-one arithmetic inverse |
@@ -72,3 +72,14 @@ note prevents replacing arithmetic balance by a literal directed cycle.
 No A000568 record, generic smallest complement carrier, uniform ternary
 return, prime infinitude result, or odd-perfect nonexistence proof is
 claimed. Those targets require additional realization and closure work.
+
+Later incoming work through e2577ad225 includes
+[balanced ternary returns](../balanced_ternary_returns_20261103/README.md):
+the pinned H59 source has no induced H181 extension at any order, and
+needs a native source rewrite. This is complementary to TR4's uniform
+proper-triangle first-split bound; neither is inferred from the other.
+The [profile-rank packet](../proof_principles_20261103/README.md) proves
+the full uniform profile span has dimension ceil(n/2) and that certain
+module converses remain invisible in every one-step ambient context.
+Our bilinear law concerns two slots with a specific single exit, not
+that full profile space or the continuation observer quotient.

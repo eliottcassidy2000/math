@@ -23,7 +23,8 @@ Three all-size advances explain the reuse boundary:
 
 * The saved3-ready family literally replaces TT2 by a homogeneous C3.
   Its smallest rooted defect over **every possible mark** is3 for m>=2.
-  A further single birth cannot fill its original+2/+4 deficit.
+  No number of births can fill its original+2/+4 deficit while retaining
+  every old vertex and edge.
 * The new interface has a complete bilinear law for arbitrary tournaments
   in its two untouched modules. It gives+2 **only** at the original TT2/TT2
   input and never+4. Thus arbitrary internal enrichment of those modules
