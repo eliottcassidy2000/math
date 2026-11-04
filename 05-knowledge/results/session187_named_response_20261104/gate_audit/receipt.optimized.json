@@ -1,0 +1,11 @@
+{
+  "fresh_predecessor_DP_counts": 882,
+  "full_response_sha256": "09420f040e1294d429ab29d1cbd47e34b12717b695e8a93dafcbfe1d439bbfc7",
+  "independently_enumerated_gap_profiles": 15,
+  "literal_full_polynomial_cases_r1_r2": 9,
+  "named_reordering_family_cases_r3": 36,
+  "retained_paired_battery_counts": 221208,
+  "scope": "Independent direct gap-subset enumeration and predecessor DP; full coefficient inversion separately author replayed, not independently every large battery value.",
+  "status": "PASS",
+  "verified_unique_packets": 39
+}
