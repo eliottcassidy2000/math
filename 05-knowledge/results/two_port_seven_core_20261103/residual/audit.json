@@ -1,0 +1,12 @@
+{
+  "embedded_all_labelled_orders1_to5": 1099,
+  "integer_endpoint_comparisons": 2123,
+  "source_sha256": {
+    "05-knowledge/results/two_port_beyond_nine_20261103/census/census.cpp": "9a3eabd8c5a85869ae22899c5f5de99682d670e777bc46567f5979d428de22b0",
+    "05-knowledge/results/two_port_seven_core_20261103/residual/audit.cpp": "8744ca0077132bde34c10197e02d9f3bb431d29b7146f2e170d735412c16fc38",
+    "05-knowledge/results/two_port_seven_core_20261103/residual/audit.py": "3c5661e0de5e98a7f83f830ecedccd3e42fe8b00d853923703236739a9ae1da2",
+    "05-knowledge/results/two_port_seven_core_20261103/residual/check.cpp": "7fbf7c6a67a8329af55ed82d7f6f2d0d3e820d27dd7108cb1e090d6fdd8e0fc3"
+  },
+  "specified_random_order10_controls": 1024,
+  "status": "PASS"
+}

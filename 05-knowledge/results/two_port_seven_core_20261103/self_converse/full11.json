@@ -1,0 +1,170 @@
+{
+  "bank_sha256": "feffa1e43ffc168af2e4f1fa6a7ac881438535da7876ef8720f4e85bd614668c",
+  "orders": [
+    {
+      "anti_involution_histogram": {
+        "1": 1,
+        "3": 1
+      },
+      "canonical_leaves": 4,
+      "canonical_nodes": 5,
+      "centralizer_histogram": {
+        "1": 2
+      },
+      "class_collisions": 0,
+      "classes": 2,
+      "collisions": [],
+      "endpoint_balanced_classes": 1,
+      "extra_sidecar_symmetries": 0,
+      "full_automorphism_histogram": {
+        "1": 1,
+        "3": 1
+      },
+      "max_leaves": 3,
+      "n": 3,
+      "sidecar_classes": 2,
+      "source_labelled_mass": 2
+    },
+    {
+      "anti_involution_histogram": {
+        "1": 5,
+        "3": 2,
+        "5": 1
+      },
+      "canonical_leaves": 16,
+      "canonical_nodes": 19,
+      "centralizer_histogram": {
+        "1": 8
+      },
+      "class_collisions": 0,
+      "classes": 8,
+      "collisions": [],
+      "endpoint_balanced_classes": 2,
+      "extra_sidecar_symmetries": 0,
+      "full_automorphism_histogram": {
+        "1": 5,
+        "3": 2,
+        "5": 1
+      },
+      "max_leaves": 5,
+      "n": 5,
+      "sidecar_classes": 8,
+      "source_labelled_mass": 16
+    },
+    {
+      "anti_involution_histogram": {
+        "1": 72,
+        "3": 12,
+        "5": 2,
+        "7": 2
+      },
+      "canonical_leaves": 160,
+      "canonical_nodes": 190,
+      "centralizer_histogram": {
+        "1": 84,
+        "3": 4
+      },
+      "class_collisions": 0,
+      "classes": 88,
+      "collisions": [],
+      "endpoint_balanced_classes": 3,
+      "extra_sidecar_symmetries": 0,
+      "full_automorphism_histogram": {
+        "1": 71,
+        "21": 1,
+        "3": 11,
+        "5": 2,
+        "7": 1,
+        "9": 2
+      },
+      "max_leaves": 21,
+      "n": 7,
+      "sidecar_classes": 88,
+      "source_labelled_mass": 512
+    },
+    {
+      "anti_involution_histogram": {
+        "1": 2609,
+        "27": 1,
+        "3": 125,
+        "5": 8,
+        "7": 4,
+        "9": 5
+      },
+      "canonical_leaves": 3344,
+      "canonical_nodes": 3615,
+      "centralizer_histogram": {
+        "1": 2720,
+        "3": 32
+      },
+      "class_collisions": 0,
+      "classes": 2752,
+      "collisions": [],
+      "endpoint_balanced_classes": 5,
+      "extra_sidecar_symmetries": 0,
+      "full_automorphism_histogram": {
+        "1": 2597,
+        "21": 2,
+        "27": 1,
+        "3": 121,
+        "5": 8,
+        "7": 2,
+        "81": 1,
+        "9": 20
+      },
+      "max_leaves": 81,
+      "n": 9,
+      "sidecar_classes": 2752,
+      "source_labelled_mass": 65536
+    },
+    {
+      "anti_involution_histogram": {
+        "1": 276498,
+        "11": 4,
+        "15": 4,
+        "27": 2,
+        "3": 3318,
+        "5": 92,
+        "7": 16,
+        "9": 34
+      },
+      "canonical_leaves": 290128,
+      "canonical_nodes": 295010,
+      "centralizer_histogram": {
+        "1": 279448,
+        "3": 512,
+        "5": 8
+      },
+      "class_collisions": 0,
+      "classes": 279968,
+      "collisions": [],
+      "endpoint_balanced_classes": 7,
+      "extra_sidecar_symmetries": 0,
+      "full_automorphism_histogram": {
+        "1": 276263,
+        "11": 3,
+        "15": 4,
+        "21": 8,
+        "25": 2,
+        "27": 14,
+        "3": 3294,
+        "45": 2,
+        "5": 93,
+        "55": 1,
+        "7": 8,
+        "81": 2,
+        "9": 274
+      },
+      "max_leaves": 81,
+      "n": 11,
+      "sidecar_classes": 279968,
+      "source_labelled_mass": 33554432
+    }
+  ],
+  "scope": "All self-converse tournaments at odd orders3..11 (as requested max half-order); not all tournaments of order11",
+  "source_sha256": {
+    "census.cpp": "37312242df9c03eff19d3c9587e8d7a36942bec109e9d6424da5003944e9109a",
+    "run.py": "48ed6869acf5e05c235035c7f2aa37ee2ea2bbdde7070682b20612863ea93fd5"
+  },
+  "status": "PASS_WITHIN_SELF_CONVERSE_FAMILY"
+}

@@ -1,0 +1,19 @@
+{
+  "all_digraph_controls_orders0_to2": 4164,
+  "all_undirected_controls_orders0_to3": 1098,
+  "source_sha256": "017080a8a00d006216fee1efdfa262e9c60f544ce0ac2b4dd262e8bd168de44e",
+  "square_sum_example": {
+    "directed_hamilton_words": 10,
+    "new_labels": [
+      10,
+      15
+    ],
+    "old_labels": [
+      1,
+      3,
+      6
+    ],
+    "unoriented_hamilton_paths": 5
+  },
+  "status": "FINITE-EXACT PASS"
+}

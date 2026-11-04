@@ -1,5 +1,17 @@
 # Proof interfaces: current extensions
 
+[Beyond ten: full responses, module congruences and seven private points](../05-knowledge/results/two_port_seven_core_20261103/README.md):
+all279968 self-converse order11 classes pass H,S,E,C and symmetry tests;
+full endpoint/three-path tensors have8996 direct-query controls at11.
+Ambient module reversal requires endpoint parity balance and cover symmetry
+modulo4; the complete order10 sieve has no joint survivor, excluding every
+nontrivial module converse through size11 in every ambient quotient.
+Exact m-port content of s ordered triangles is3^max(s-2m,0), refuting universal
+primitive normalization. Every five-colouring of the fixed Moser spindle
+extends across any seven private unit points. Square-sum transfer, graceful
+sign gauges and Petersen maps retain their precise predicates and losses.
+Universal two-port reconstruction and six-chromatic forcing remain OPEN.
+
 [Beyond nine: full tensors and interacting geometry](../05-knowledge/results/two_port_beyond_nine_20261103/README.md):
 all9,733,056 order-ten classes and their endpoint-sidecar symmetries pass;
 two-port reconstruction holds through10, so a counterexample requires11.

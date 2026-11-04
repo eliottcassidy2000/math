@@ -1,0 +1,52 @@
+{
+  "checked_spindle_triples": 35,
+  "connected_control_counts": {
+    "4": {
+      "colourings": 16608,
+      "supported_boundary_partitions": 16
+    },
+    "5": {
+      "colourings": 4360320,
+      "supported_boundary_partitions": 42
+    }
+  },
+  "connected_control_cross_edges": 8,
+  "connected_control_points": 14,
+  "connected_control_unit_edges": 30,
+  "excluded_metric_masks": [
+    122616,
+    380278
+  ],
+  "fiveblock_patterns": 26,
+  "fourblock_patterns": 16,
+  "maximum_capacity": 8,
+  "proper_fivecolour_boundary_patterns": 42,
+  "reciprocal_capacity_cases": 420,
+  "required_contacts": 14,
+  "residual_uniform_badlist_mask": 378106,
+  "seven_graph_universe": {
+    "all_graphs": 2097152,
+    "minimum_degree3": 236926,
+    "survivor_mask_sha256": "7db4a87042f715987b83d2f89704ec8a127ca7515b47990515d0e3459a4bc388",
+    "unit_local_survivors": 8190,
+    "unlabelled_survivors": 6
+  },
+  "source_pins": 4,
+  "source_sha256": "259477cacf0f369a6d123ccdd326e3df4e16a9b44d1d9cc4d2402594fe75100d",
+  "spindle_independence_number": 2,
+  "standard_to_canonical_moser": [
+    0,
+    1,
+    2,
+    6,
+    3,
+    4,
+    5
+  ],
+  "three_choosable_masks": [
+    120383,
+    120444,
+    120568
+  ],
+  "unit_triples_with_old_centres": 10
+}

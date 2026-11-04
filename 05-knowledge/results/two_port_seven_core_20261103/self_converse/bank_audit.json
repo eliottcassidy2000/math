@@ -1,0 +1,32 @@
+{
+  "bank_sha256": "feffa1e43ffc168af2e4f1fa6a7ac881438535da7876ef8720f4e85bd614668c",
+  "orders": [
+    {
+      "classes": 1,
+      "labelled_tournaments": 1,
+      "n": 1
+    },
+    {
+      "classes": 1,
+      "labelled_tournaments": 2,
+      "n": 2
+    },
+    {
+      "classes": 2,
+      "labelled_tournaments": 8,
+      "n": 3
+    },
+    {
+      "classes": 4,
+      "labelled_tournaments": 64,
+      "n": 4
+    },
+    {
+      "classes": 12,
+      "labelled_tournaments": 1024,
+      "n": 5
+    }
+  ],
+  "source_sha256": "aa94e865df423d0a37cdbc5ecc6be8b555e55cac9eb7c9751eb01d4da228db64",
+  "status": "FINITE-EXACT PASS"
+}

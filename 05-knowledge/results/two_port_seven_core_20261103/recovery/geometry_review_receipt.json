@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "core_normal_optimized_equal": true,
+    "geometry_replay_equal": true,
+    "geometry_source_pins_current": true,
+    "list_normal_optimized_equal": true,
+    "reviewed_sources_stable": true
+  },
+  "files": {
+    "geometry/census.py": "cda4f4e105161536080fe6377886ee2b16fcd675f57cbcd4ce534050b9d15c17",
+    "geometry/census_receipt.json": "fbc220ae1481caf1be6a656d5492275b69ad9d3753d44a51933a9c0d179b6811",
+    "geometry/receipt.json": "50f42a52de57764d756bff90b0bb6273592f5f91190bcddf671726bac7287c44",
+    "geometry/verify.py": "259477cacf0f369a6d123ccdd326e3df4e16a9b44d1d9cc4d2402594fe75100d",
+    "lists/core_audit.json": "5ec94974929ed7754d5c852dc8173c707c289072516e9a1603aed596fec6e785",
+    "lists/normal.json": "c65e1d2841c78b6433e5b99eca3307dccb98289c9674bd12c8d450c4bdfbf593"
+  },
+  "scope": "Independent source/proof review and one geometry verifier replay; complete C++ core/list receipts read, not rerun here."
+}

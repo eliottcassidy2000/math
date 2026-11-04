@@ -1,0 +1,625 @@
+{
+  "ambient": {
+    "additional_cores": [
+      [
+        16,
+        5,
+        9,
+        3,
+        14
+      ],
+      [
+        34,
+        20,
+        9,
+        3,
+        13,
+        30
+      ],
+      [
+        4,
+        17,
+        42,
+        131,
+        45,
+        75,
+        31,
+        119
+      ],
+      [
+        250,
+        236,
+        209,
+        116,
+        194,
+        148,
+        160,
+        8
+      ]
+    ],
+    "ambient_pairs": 889,
+    "complete_core_orders": [
+      1,
+      4
+    ],
+    "complete_quotient_orders": [
+      1,
+      3
+    ],
+    "deep_quotients": [
+      [
+        10,
+        28,
+        25,
+        16,
+        1
+      ],
+      [
+        42,
+        124,
+        121,
+        112,
+        97,
+        64,
+        1
+      ]
+    ],
+    "fixed_slot_channels": 9564,
+    "hostile": {
+      "C_02": 162,
+      "C_20": 12,
+      "E": [
+        87,
+        42,
+        31,
+        13,
+        26,
+        19,
+        18,
+        13
+      ],
+      "H": 249,
+      "S": [
+        13,
+        22,
+        13,
+        29,
+        26,
+        29,
+        52,
+        65
+      ],
+      "rows": [
+        4,
+        17,
+        42,
+        131,
+        45,
+        75,
+        31,
+        119
+      ]
+    },
+    "internal_skew_entries": 14612,
+    "largest_run_tested": 4
+  },
+  "content": {
+    "complete_tables": [
+      {
+        "gcd": 1,
+        "m": 0,
+        "nonzero_coefficients": 1,
+        "queries": 1,
+        "s": 0,
+        "values_sha256": "080a9ed428559ef602668b4c00f114f1a11c3f6b02a435f0bdc154578e4d7f22"
+      },
+      {
+        "gcd": 1,
+        "m": 1,
+        "nonzero_coefficients": 1,
+        "queries": 1,
+        "s": 0,
+        "values_sha256": "080a9ed428559ef602668b4c00f114f1a11c3f6b02a435f0bdc154578e4d7f22"
+      },
+      {
+        "gcd": 1,
+        "m": 2,
+        "nonzero_coefficients": 1,
+        "queries": 1,
+        "s": 0,
+        "values_sha256": "080a9ed428559ef602668b4c00f114f1a11c3f6b02a435f0bdc154578e4d7f22"
+      },
+      {
+        "gcd": 3,
+        "m": 0,
+        "nonzero_coefficients": 1,
+        "queries": 1,
+        "s": 1,
+        "values_sha256": "06d033ece6645de592db973644cf7357255f24536ff7b03c3b2ace10736f7636"
+      },
+      {
+        "gcd": 1,
+        "m": 1,
+        "nonzero_coefficients": 7,
+        "queries": 8,
+        "s": 1,
+        "values_sha256": "85b48cb64721773ff9c9cd75413560954a4166a92d69aaadd7bc882803b90418"
+      },
+      {
+        "gcd": 1,
+        "m": 2,
+        "nonzero_coefficients": 37,
+        "queries": 64,
+        "s": 1,
+        "values_sha256": "bbe30197bd5e1ff5973ea2d4edc206afa5db84db5e754d2c33e86cb8809214ee"
+      },
+      {
+        "gcd": 9,
+        "m": 0,
+        "nonzero_coefficients": 1,
+        "queries": 1,
+        "s": 2,
+        "values_sha256": "16390873ae6b6a173fc894a873bab02283debbd320b5f0758849d01afa6ee8b6"
+      },
+      {
+        "gcd": 1,
+        "m": 1,
+        "nonzero_coefficients": 22,
+        "queries": 64,
+        "s": 2,
+        "values_sha256": "dfbef04990311eee908ca3c0df8d58249b6fad8c5bd2985a067647c05ef34d3d"
+      },
+      {
+        "gcd": 1,
+        "m": 2,
+        "nonzero_coefficients": 460,
+        "queries": 4096,
+        "s": 2,
+        "values_sha256": "5fef249d0465b880367798b2ba6fc03ce58152fef58766961976b20f7a5d500d"
+      },
+      {
+        "gcd": 27,
+        "m": 0,
+        "nonzero_coefficients": 1,
+        "queries": 1,
+        "s": 3,
+        "values_sha256": "b0d939fe538f1949286b919bd2f533ff3e2eb9d4d3e315fd5649a6cfe63cf946"
+      },
+      {
+        "gcd": 3,
+        "m": 1,
+        "nonzero_coefficients": 46,
+        "queries": 512,
+        "s": 3,
+        "values_sha256": "0c8e3416eec6cccce0445caf53e1578927ab163bc8801eabe38dbda3c62524d4"
+      }
+    ],
+    "literal_local_constants": [
+      {
+        "masks": [
+          0,
+          1
+        ],
+        "triangles": 1,
+        "values": [
+          3,
+          5
+        ]
+      },
+      {
+        "masks": [
+          0,
+          1,
+          8,
+          9
+        ],
+        "triangles": 2,
+        "values": [
+          9,
+          15,
+          45,
+          41
+        ]
+      }
+    ],
+    "sharpness": [
+      {
+        "coefficient": 1,
+        "m": 3,
+        "queries": [
+          {
+            "masks": [
+              0,
+              0,
+              0
+            ],
+            "value": 1
+          }
+        ],
+        "s": 0
+      },
+      {
+        "coefficient": 2,
+        "m": 3,
+        "queries": [
+          {
+            "masks": [
+              0,
+              7,
+              7
+            ],
+            "value": 3
+          },
+          {
+            "masks": [
+              1,
+              7,
+              7
+            ],
+            "value": 5
+          }
+        ],
+        "s": 1
+      },
+      {
+        "coefficient": -10,
+        "m": 3,
+        "queries": [
+          {
+            "masks": [
+              0,
+              63,
+              63
+            ],
+            "value": 9
+          },
+          {
+            "masks": [
+              1,
+              63,
+              63
+            ],
+            "value": 15
+          },
+          {
+            "masks": [
+              8,
+              63,
+              63
+            ],
+            "value": 45
+          },
+          {
+            "masks": [
+              9,
+              63,
+              63
+            ],
+            "value": 41
+          }
+        ],
+        "s": 2
+      },
+      {
+        "coefficient": -20,
+        "m": 2,
+        "queries": [
+          {
+            "masks": [
+              0,
+              63
+            ],
+            "value": 27
+          },
+          {
+            "masks": [
+              1,
+              63
+            ],
+            "value": 45
+          },
+          {
+            "masks": [
+              8,
+              63
+            ],
+            "value": 135
+          },
+          {
+            "masks": [
+              9,
+              63
+            ],
+            "value": 123
+          },
+          {
+            "masks": [
+              0,
+              127
+            ],
+            "value": 45
+          },
+          {
+            "masks": [
+              1,
+              127
+            ],
+            "value": 75
+          },
+          {
+            "masks": [
+              8,
+              127
+            ],
+            "value": 225
+          },
+          {
+            "masks": [
+              9,
+              127
+            ],
+            "value": 205
+          }
+        ],
+        "s": 3
+      },
+      {
+        "coefficient": 100,
+        "m": 2,
+        "queries": [
+          {
+            "masks": [
+              0,
+              63
+            ],
+            "value": 81
+          },
+          {
+            "masks": [
+              1,
+              63
+            ],
+            "value": 135
+          },
+          {
+            "masks": [
+              8,
+              63
+            ],
+            "value": 405
+          },
+          {
+            "masks": [
+              9,
+              63
+            ],
+            "value": 369
+          },
+          {
+            "masks": [
+              0,
+              127
+            ],
+            "value": 135
+          },
+          {
+            "masks": [
+              1,
+              127
+            ],
+            "value": 225
+          },
+          {
+            "masks": [
+              8,
+              127
+            ],
+            "value": 675
+          },
+          {
+            "masks": [
+              9,
+              127
+            ],
+            "value": 615
+          },
+          {
+            "masks": [
+              0,
+              575
+            ],
+            "value": 405
+          },
+          {
+            "masks": [
+              1,
+              575
+            ],
+            "value": 675
+          },
+          {
+            "masks": [
+              8,
+              575
+            ],
+            "value": 2025
+          },
+          {
+            "masks": [
+              9,
+              575
+            ],
+            "value": 1845
+          },
+          {
+            "masks": [
+              0,
+              639
+            ],
+            "value": 369
+          },
+          {
+            "masks": [
+              1,
+              639
+            ],
+            "value": 615
+          },
+          {
+            "masks": [
+              8,
+              639
+            ],
+            "value": 1845
+          },
+          {
+            "masks": [
+              9,
+              639
+            ],
+            "value": 1681
+          }
+        ],
+        "s": 4
+      },
+      {
+        "coefficient": 300,
+        "m": 2,
+        "queries": [
+          {
+            "masks": [
+              0,
+              63
+            ],
+            "value": 243
+          },
+          {
+            "masks": [
+              1,
+              63
+            ],
+            "value": 405
+          },
+          {
+            "masks": [
+              8,
+              63
+            ],
+            "value": 1215
+          },
+          {
+            "masks": [
+              9,
+              63
+            ],
+            "value": 1107
+          },
+          {
+            "masks": [
+              0,
+              127
+            ],
+            "value": 405
+          },
+          {
+            "masks": [
+              1,
+              127
+            ],
+            "value": 675
+          },
+          {
+            "masks": [
+              8,
+              127
+            ],
+            "value": 2025
+          },
+          {
+            "masks": [
+              9,
+              127
+            ],
+            "value": 1845
+          },
+          {
+            "masks": [
+              0,
+              575
+            ],
+            "value": 1215
+          },
+          {
+            "masks": [
+              1,
+              575
+            ],
+            "value": 2025
+          },
+          {
+            "masks": [
+              8,
+              575
+            ],
+            "value": 6075
+          },
+          {
+            "masks": [
+              9,
+              575
+            ],
+            "value": 5535
+          },
+          {
+            "masks": [
+              0,
+              639
+            ],
+            "value": 1107
+          },
+          {
+            "masks": [
+              1,
+              639
+            ],
+            "value": 1845
+          },
+          {
+            "masks": [
+              8,
+              639
+            ],
+            "value": 5535
+          },
+          {
+            "masks": [
+              9,
+              639
+            ],
+            "value": 5043
+          }
+        ],
+        "s": 5
+      }
+    ]
+  },
+  "multiport": {
+    "cases": 126,
+    "complete_suffix_orders": [
+      1,
+      3
+    ],
+    "prefixes": [
+      [
+        0
+      ],
+      [
+        2,
+        4,
+        1
+      ]
+    ]
+  },
+  "source_sha256": "ea2c0e43f0f49f3d0670984a56dd30294f815a626c01ca7bad22412e87c71f54",
+  "status": "FINITE-EXACT controls of proved B1-B5; universal two-port OPEN"
+}

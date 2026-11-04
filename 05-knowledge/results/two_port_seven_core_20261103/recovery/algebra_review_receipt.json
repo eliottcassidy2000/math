@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "normal_optimized_equal": true,
+    "replay_equal": true,
+    "source_matches_receipt": true,
+    "source_stable": true
+  },
+  "receipt_sha256": "5f188fe8d5ae4da0bca618078267768fbcff58e60ac9f1d33fc9a0423ef0a168",
+  "scope": "Independent B1-B5 proof/source review and one exact checker replay.",
+  "source_sha256": "ea2c0e43f0f49f3d0670984a56dd30294f815a626c01ca7bad22412e87c71f54"
+}

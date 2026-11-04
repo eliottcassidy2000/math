@@ -1,0 +1,9158 @@
+[
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      3
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      3
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      3
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      3
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 2,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      4
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2,
+      3
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1,
+      6
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      1
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      1
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      1
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      0,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      0,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      0,
+      4
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      2
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      2,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      1,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "capacity": 4,
+    "forbidden_colours": [
+      1,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      1,
+      4
+    ]
+  },
+  {
+    "capacity": 8,
+    "forbidden_colours": [
+      2,
+      3
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      2,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      2,
+      4,
+      6
+    ]
+  },
+  {
+    "capacity": 6,
+    "forbidden_colours": [
+      3,
+      4
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3,
+      2
+    ],
+    "required": 14,
+    "vertices": [
+      3,
+      4,
+      5
+    ]
+  }
+]

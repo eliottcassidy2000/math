@@ -1,0 +1,12 @@
+{
+  "files": {
+    "01-canon/theorems/THM-2761-graph-edge-sum-discriminant-codegree-factorization-and-graceful-sign-gauge.md": "ca492955b0ac2ad8a2c22103bdca84373025f0e090c706997734ba0970b4c84e",
+    "01-canon/theorems/THM-4701-kuratowski-graphs-the-petersen-graph-and-the-finite-unit-circle-graphs.md": "c685b5fa2a92f394cd0ae16d8fad446d43aa80299d9dbd4378b343a56381da1a",
+    "05-knowledge/results/defect_transitions_20261020/petersen.md": "ff585c8d3a77dc50fe4a93f8756ada0286ce6311e23dd9a8e37eba683f9e8db3",
+    "05-knowledge/results/graceful_square_exchange_20261019.md": "f508c08c6bd4b38133c95451bf05ad93b6bee83ab7bc5c8d843250e18660ceb8",
+    "05-knowledge/results/session180_170807_returns_20261104/ports/PROOF.md": "9e0ffa087cade654f9264076c79961e4c2099475e433a041e1250649c4894dcd",
+    "05-knowledge/results/square_sum_ports_20261023/README.md": "515660d7eb044ce694bd43ccddc6cb45e5b2908808e2c4b633acc5c67a8eea68",
+    "05-knowledge/results/two_port_beyond_nine_20261103/algebra/PROOF.md": "2a150054aae6904a84d9d616ec91127ab680d2d4f7b21ebf3c4c04cd79f14408",
+    "05-knowledge/results/two_port_beyond_nine_20261103/geometry/PROOF.md": "1563cfaf2ef99c0b45b48378315aee61b4a78df9856a5142ca46f2258b00e166"
+  }
+}

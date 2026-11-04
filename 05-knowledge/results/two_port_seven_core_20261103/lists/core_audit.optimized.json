@@ -1,0 +1,22 @@
+{
+  "all_graphs": 2097152,
+  "all_permutation_orbits_expanded": true,
+  "eligible_checksum_fnv64": 5920378917235525577,
+  "eligible_set_equals_orbit_union": true,
+  "metric_filter_graphs": 8190,
+  "min_degree3_graphs": 236926,
+  "orbit_sizes": {
+    "120383": 420,
+    "120444": 2520,
+    "120568": 1260,
+    "122616": 840,
+    "378106": 630,
+    "380278": 2520
+  },
+  "source_sha256": {
+    "core_audit.cpp": "6659782cc82829d3da8335e8ea03f35411ee6722fda0aae9876c198a0e2fef89",
+    "core_audit.py": "fb5a5ae4a0e8a1f8a947d27851dd7321fc763bc8dd8a5c8291db55c24d011bc6"
+  },
+  "status": "FINITE-EXACT PASS",
+  "unlabelled_representatives": 6
+}

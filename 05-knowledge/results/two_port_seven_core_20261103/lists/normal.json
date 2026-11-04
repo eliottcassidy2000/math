@@ -1,0 +1,91 @@
+{
+  "graphs": [
+    {
+      "bad": 0,
+      "bad_lists": [],
+      "code": 120383,
+      "degrees": [
+        6,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "normalized_lists": 1000000,
+      "represented_lists": 10000000,
+      "witness_checksum_fnv64": 4378726759282812479
+    },
+    {
+      "bad": 0,
+      "bad_lists": [],
+      "code": 120444,
+      "degrees": [
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "normalized_lists": 1000000,
+      "represented_lists": 10000000,
+      "witness_checksum_fnv64": 5792749755243804613
+    },
+    {
+      "bad": 0,
+      "bad_lists": [],
+      "code": 120568,
+      "degrees": [
+        3,
+        4,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "normalized_lists": 1000000,
+      "represented_lists": 10000000,
+      "witness_checksum_fnv64": 2687030582461182813
+    },
+    {
+      "bad": 1,
+      "bad_lists": [
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ]
+      ],
+      "code": 378106,
+      "degrees": [
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "normalized_lists": 1000000,
+      "represented_lists": 10000000,
+      "witness_checksum_fnv64": 4878463159914971079
+    }
+  ],
+  "list_size": 3,
+  "normalized_list": 7,
+  "normalized_vertex": 0,
+  "palette": 5,
+  "source_sha256": {
+    "check.cpp": "6e5199ff0c6aaf84bc54f7dc8dd1e08d824f1fc7a93ffc5265add55e9e21368f",
+    "run.py": "38d0a3b2438a7ec1d89fc1a778abb06cc4197b97afdc67127d040cefc3d6f36c"
+  },
+  "status": "FINITE-EXACT"
+}
