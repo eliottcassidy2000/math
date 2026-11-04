@@ -1,0 +1,26 @@
+{
+  "encoding": "Each group is a gzip stream encoded as base64 and split into ASCII chunks.",
+  "groups": [
+    {
+      "parts": [
+        {
+          "file": "ordered_records.json.gz.b64.part000",
+          "size": 7869,
+          "sha256": "e146577b7b4352f7d45ad0f292c76fa129618391f3264902029c213dbf1d282d"
+        }
+      ],
+      "outputs": [
+        {
+          "file": "ordered.json",
+          "size": 148161,
+          "sha256": "bc2e2a1e4016b0c71a05d28aa292b17c1734ea6bba04626fbafff3e0d973599b"
+        },
+        {
+          "file": "ordered.optimized.json",
+          "size": 148161,
+          "sha256": "bc2e2a1e4016b0c71a05d28aa292b17c1734ea6bba04626fbafff3e0d973599b"
+        }
+      ]
+    }
+  ]
+}

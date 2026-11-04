@@ -1,0 +1,137 @@
+{
+  "laminar_families": {
+    "by_n": [
+      {
+        "covered_nonstrong_maximal_cuts": 0,
+        "hereditary_subsets": 0,
+        "laminar_families": 0,
+        "n": 1
+      },
+      {
+        "covered_nonstrong_maximal_cuts": 0,
+        "hereditary_subsets": 6,
+        "laminar_families": 2,
+        "n": 2
+      },
+      {
+        "covered_nonstrong_maximal_cuts": 0,
+        "hereditary_subsets": 224,
+        "laminar_families": 32,
+        "n": 3
+      },
+      {
+        "covered_nonstrong_maximal_cuts": 24,
+        "hereditary_subsets": 9360,
+        "laminar_families": 624,
+        "n": 4
+      },
+      {
+        "covered_nonstrong_maximal_cuts": 1040,
+        "hereditary_subsets": 502944,
+        "laminar_families": 16224,
+        "n": 5
+      }
+    ],
+    "current_module_steps": 38454,
+    "families": 16882,
+    "hereditary_subsets": 512534,
+    "physical_port_cuts": 1064
+  },
+  "ordered_blocks": {
+    "cases": 130,
+    "examples": [
+      {
+        "ambient_gap": 18,
+        "blocks": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "cut": 2,
+        "gap": 2,
+        "lower": 2,
+        "pi": [
+          0,
+          2,
+          1
+        ]
+      },
+      {
+        "ambient_gap": 18,
+        "blocks": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "cut": 1,
+        "gap": 2,
+        "lower": 2,
+        "pi": [
+          1,
+          0,
+          2
+        ]
+      },
+      {
+        "ambient_gap": 36,
+        "blocks": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "cut": 1,
+        "gap": 4,
+        "lower": 2,
+        "pi": [
+          1,
+          2,
+          0
+        ]
+      },
+      {
+        "ambient_gap": 18,
+        "blocks": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "cut": 1,
+        "gap": 2,
+        "lower": 2,
+        "pi": [
+          2,
+          0,
+          1
+        ]
+      }
+    ],
+    "literal_cover_coordinates": 495,
+    "strong_ambient_lifts": 130
+  },
+  "scope": "All-order proof audit plus specified finite literal controls, not a universal response reconstruction theorem.",
+  "status": "PASS"
+}

@@ -1,0 +1,12 @@
+{
+  "independent_receipts_equal": true,
+  "producer_files": {
+    "ORDERED_BLOCKS.md": "07e2c5f0ed81b57a8d476f61adc5d74da030d563ad6f3621fd7c8fcabc7f3a16",
+    "ordered.json": "bc2e2a1e4016b0c71a05d28aa292b17c1734ea6bba04626fbafff3e0d973599b",
+    "ordered.optimized.json": "bc2e2a1e4016b0c71a05d28aa292b17c1734ea6bba04626fbafff3e0d973599b",
+    "verify_ordered.py": "58cf8a3c91d0c1e0d2cf1dd68e74af84572f0991cb377e945657152b46bc92aa"
+  },
+  "producer_replay_matches": true,
+  "scope_edit_review": "Confirmed removal of unrelated finite MOD4_SIX/order-ten paragraph; mathematical theorem, checker and receipts unchanged.",
+  "status": "PASS"
+}

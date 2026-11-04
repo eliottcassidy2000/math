@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "package": "covered_laminar",
+      "optimized": false,
+      "status": "PASS"
+    },
+    {
+      "package": "covered_laminar",
+      "optimized": true,
+      "status": "PASS"
+    },
+    {
+      "package": "covered_laminar",
+      "hostile": "corrupt_chunk",
+      "status": "PASS"
+    },
+    {
+      "package": "covered_laminar",
+      "hostile": "existing_conflict",
+      "status": "PASS"
+    },
+    {
+      "package": "ordered_blocks_audit",
+      "optimized": false,
+      "status": "PASS"
+    },
+    {
+      "package": "ordered_blocks_audit",
+      "optimized": true,
+      "status": "PASS"
+    },
+    {
+      "package": "ordered_blocks_audit",
+      "hostile": "corrupt_chunk",
+      "status": "PASS"
+    },
+    {
+      "package": "ordered_blocks_audit",
+      "hostile": "existing_conflict",
+      "status": "PASS"
+    }
+  ]
+}
