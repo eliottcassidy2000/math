@@ -1,0 +1,26 @@
+aud_routes threads=12
+CLASSES n=2: 1 (A000568: 1) [0.0 s]
+CLASSES n=3: 2 (A000568: 2) [0.0 s]
+CLASSES n=4: 4 (A000568: 4) [0.0 s]
+CLASSES n=5: 12 (A000568: 12) [0.0 s]
+CLASSES n=6: 56 (A000568: 56) [0.0 s]
+CLASSES n=7: 456 (A000568: 456) [0.0 s]
+CLASSES n=8: 6880 (A000568: 6880) [0.0 s]
+n=3: classes 2, strong 1, self-converse 2, uniquely Hamiltonian 1 | 2-arc-strong 0, (class, arc) pairs with T - e non-Hamiltonian 0 in 0 classes
+n=4: classes 4, strong 1, self-converse 2, uniquely Hamiltonian 1 | 2-arc-strong 0, (class, arc) pairs with T - e non-Hamiltonian 0 in 0 classes
+n=5: classes 12, strong 6, self-converse 8, uniquely Hamiltonian 3 | 2-arc-strong 1, (class, arc) pairs with T - e non-Hamiltonian 0 in 0 classes
+   order-5 strong class: out-rows 16 5 9 3 14 | scores 1 2 2 2 3 | H = 15, hc = 3
+   order-5 strong class: out-rows 8 1 3 22 7 | scores 1 1 2 3 3 | H = 9, hc = 1
+   order-5 strong class: out-rows 4 1 10 19 7 | scores 1 1 2 3 3 | H = 9, hc = 1
+   order-5 strong class: out-rows 2 20 9 3 13 | scores 1 2 2 2 3 | H = 11, hc = 1
+   order-5 strong class: out-rows 2 12 17 5 11 | scores 1 2 2 2 3 | H = 13, hc = 2
+   order-5 strong class: out-rows 6 24 10 17 5 | scores 2 2 2 2 2 | H = 15, hc = 2
+n=6: classes 56, strong 35, self-converse 12, uniquely Hamiltonian 8 | 2-arc-strong 5, (class, arc) pairs with T - e non-Hamiltonian 0 in 0 classes
+n=7: classes 456, strong 353, self-converse 88, uniquely Hamiltonian 21 | 2-arc-strong 87, (class, arc) pairs with T - e non-Hamiltonian 0 in 0 classes
+   local criterion (strong T, every strong 6-subtournament uniquely Hamiltonian): holds in 21 strong classes; uniquely Hamiltonian but criterion fails: 0; criterion holds but hc != 1: 0
+n=8: classes 6880, strong 6008, self-converse 176, uniquely Hamiltonian 55 | 2-arc-strong 2385, (class, arc) pairs with T - e non-Hamiltonian 0 in 0 classes
+   local criterion (strong T, every strong 6-subtournament uniquely Hamiltonian): holds in 55 strong classes; uniquely Hamiltonian but criterion fails: 0; criterion holds but hc != 1: 0
+
+real	0m0.058s
+user	0m0.015s
+sys	0m0.000s

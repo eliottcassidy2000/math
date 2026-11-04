@@ -22567,3 +22567,43 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - A same-day lane that cites a classical constructor (klein's THM-4862 citing Shelor) signals that the "open" structural
     question may be classical. Read that lane's sources before pre-registering.
   - S74's target (prove HYP-9457 (b)) was then already known, which S74 records.
+
+## MISTAKE-706 (2026-11-04, opus-2026-11-04-S74, the note `05-knowledge/results/uniquely_hamiltonian_one_arc_cut_shelor_20261104.md`, THM-4867 and HYP-9458 at the pre-audit commit addeb7d11b; found by the independent audit `04-computation/experiments/uh_one_arc_cut_20261104_audit_S74/AUDIT.md`) -- a same-day lemma typed "PROVED here", a provable table left OPEN, and a false "no prior session" claim
+
+- **What was claimed.**
+  - (1) The extension lemma (Moon deletion, cyclic-interval out-neighbourhoods, hc(T' + v) = sum P_T'(O -> I)) and the
+    Shelor-free generator through order 16 were typed "PROVED here" and "independent", with no precursor named.
+  - (2) HYP-9458's cut-arc formulas were filed as fits with "proof OPEN". Their binomial-diagonal pattern C(n - 5 + j, j)
+    was stated without a range.
+  - (3) "A search of canon found no session" on pi^(n/2)/(n/2)!.
+  - (4) Smaller errors:
+    - the counterexample code for routes (a) and (b) was not committed;
+    - "k >= 2" was justified by two degree-1 vertices whose cut arcs could coincide;
+    - a "1994 local criterion" was cited without a reference;
+    - klein's THM-4862 was said to cite Shelor before klein's 12:13 commit did;
+    - route (c) counted (parent, interval) pairs as classes;
+    - the lemma lacked n >= 4.
+- **Why it was wrong.**
+  - (1) klein's block lemma (`two_branch_rearming_sigma_sweep_20261104/PROOFS.md` section 6, Lemma 5, commit a92e0b49be,
+    10:05 the same day) already contains the cyclic-interval part, and klein's Shelor-free generators matched Garey's
+    counts through order 14. THM-4862 (b) is the |O| = 1 / |I| = 1 case of the cycle-count formula, and the S73 audit
+    had already generated U(10) by deletion and insertion. Only completeness for every n and orders 15-16 were new.
+  - (2) The audit proved the table in an afternoon from Shelor's grammar: k = 3 + #{b, e} - #{c}, the closed form
+    sum_d C(n - 4, k - 3 + 2d) C(k - 2 + d, d) and the generating function. The next diagonal is n(n - 4)(n - 5)/6
+    (A005581), so the binomial pattern stops at j = 2.
+  - (3) session127's `gsma_norm_collapse_20261031/volume/THEORY.md` is that session. The search covered canon only and
+    timed out on the reflections.
+- **Repair.**
+  - Credit klein's lemma, klein's generators, THM-4862 (b) and the S73 run, and retype the lemma's scope.
+  - Retype HYP-9458 as PROVED, given Shelor's grammar and machine-checked on 9,227,464 Shelor words of orders 4-20.
+  - Commit the route code, cite Fraisse-Thomassen for (b), drop the unreferenced criterion, add full Moon citations,
+    fix the remaining wording, and name session127.
+  - Cross-cite kind-pasteur-S10's HYP-9460. Its conjectured recurrence (P7), pre-registered at 12:28, is the denominator
+    of the proved generating function.
+- **How it was caught.** The independent audit read the full same-day git log, re-derived the cut-arc counts from
+  Shelor's grammar, and grepped the results tree for the pasted expressions.
+- **Lesson.**
+  - Before typing a lemma "PROVED here" on a busy day, read the same day's git log of every lane on the topic. Here
+    klein's lane, whose THM-4862 already used the same construction, had the lemma at 10:05.
+  - When a table is generated from a known grammar, try to prove the fit from the grammar before filing it OPEN.
+  - Search the results tree and the reflections, not only canon, before writing "no session".

@@ -1,0 +1,5 @@
+route (a) example: strong True | Hamiltonian cycles 0 | with 1->2 restored: hc 1 | with 2->1 restored: hc 1
+S4 + v with N+(v) = {0, 1} | hc = 2 | T - v strong: True | out-degree of v = 2, in-degree = 2
+S4 + v with N+(v) = {1, 2} | hc = 1 | T - v strong: True | out-degree of v = 2, in-degree = 2
+S4 + v with N+(v) = {2, 3} | hc = 1 | T - v strong: True | out-degree of v = 2, in-degree = 2
+S4 + v with N+(v) = {0, 3} | hc = 1 | T - v strong: True | out-degree of v = 2, in-degree = 2

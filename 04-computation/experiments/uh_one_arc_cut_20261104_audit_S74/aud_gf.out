@@ -1,0 +1,13 @@
+GF vs direct tables, orders 4-20 (GF expanded to x^16 = order 20): mismatches 0
+S74 row n = 5 agrees
+S74 row n = 6 agrees
+S74 row n = 7 agrees
+S74 row n = 8 agrees
+S74 row n = 9 agrees
+S74 row n = 10 agrees
+S74 row n = 11 agrees
+S74 row n = 12 agrees
+S74 row n = 13 agrees
+S74 row n = 16 agrees
+columns 2,3,4 and diagonals 1, n-4, C(n-3,2), n(n-4)(n-5)/6 hold for all computed orders <= 20: True
+row sums = F(2n-6): True

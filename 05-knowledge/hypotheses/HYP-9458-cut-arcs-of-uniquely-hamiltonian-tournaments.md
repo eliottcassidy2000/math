@@ -1,10 +1,10 @@
 ---
 id: HYP-9458
 title: "Cut arcs of the unique Hamiltonian cycle: the number T(n, k) of uniquely Hamiltonian tournaments of order n whose unique Hamiltonian cycle has exactly k cut arcs (arcs whose deletion destroys strong connectivity) satisfies T(n, 2) = 2^(n-5), T(n, 3) = n 2^(n-7), T(n, 4) = (n^2 + n - 8) 2^(n-10) and T(n, n-1-j) = C(n-5+j, j) for j = 0, 1, 2; pre-registered at orders 14, 15, 16 together with an independent (Shelor-free) generation check of Garey's counts"
-status: OPEN (proof) - P1-P6 CONFIRMED at orders 14, 15, 16 (opus-2026-11-04-S74; run after the pre-registration commit 525d6c2d2e)
+status: PROVED (by the S74 independent audit, given Shelor's grammar; machine-checked on all 9,227,464 Shelor words of orders 4-20). P1-P6 CONFIRMED at orders 14, 15, 16 (opus-2026-11-04-S74; run after the pre-registration commit 525d6c2d2e). The title's diagonal pattern C(n-5+j, j) holds only for j = 0, 1, 2; the next diagonal is n(n-4)(n-5)/6
 session: opus-2026-11-04-S74
 date: 2026-11-04
-related: [THM-4867, THM-4866, THM-4862, THM-4846, HYP-9457]
+related: [THM-4867, THM-4866, THM-4862, THM-4846, HYP-9457, HYP-9459, HYP-9460, THM-4868]
 note: 05-knowledge/results/uniquely_hamiltonian_one_arc_cut_shelor_20261104.md
 script: 04-computation/experiments/uh_one_arc_cut_20261104.c
 ---
@@ -86,3 +86,33 @@ The run was `uh_one_arc_cut 16` (4 min). Its output is `04-computation/experimen
 
 **Open.** A proof of the closed forms, and the bivariate generating function of T(n, k). The natural route is a transfer
 matrix on Shelor's five-letter port grammar (operation_closed_synthesis section II).
+
+## Proof (supplied by the independent audit, `uh_one_arc_cut_20261104_audit_S74/AUDIT.md` section A)
+
+**Setting.** In Shelor's grammar the parent of the new vertex is p = pred^j(v) of the newest vertex v, where:
+- j = 0 for the letters b and e;
+- j = 1 for a and d;
+- j = 2 for c.
+
+**Lemma 1.** The cut arcs after an insertion are (p, x) together with the old cut arcs e whose largest one-arc cut A(e)
+contains p.
+
+**Lemma 2.** Every A(e) contains the newest vertex.
+
+**Count law.** Hence k = 3 + #{b, e} - #{c}, starting from k = 3 at the seed S_4.
+
+**Closed form.** With m = n - 4:
+- T(n, k) = sum_d C(m, k - 3 + 2d) C(k - 2 + d, d);
+- the generating function is z^2 (x + (1 - x) z) / (1 - 2x - x(1 - x) z);
+- the columns are A045891 (k = 3) and A158920 (k = 4), and T(n, n - 4) is A005581.
+
+**Status.** The triangle itself is not in OEIS.
+
+## Concurrent: HYP-9460 (kind-pasteur-S10, pre-registered 12:28 the same day)
+
+- HYP-9460 (C) gives T(n, k) = N(n, n + 1 - k), where N counts the non-critical run lengths.
+- Its conjectured recurrence (P7), T(n, k) = T(n - 1, k - 1) + 2 T(n - 1, k) - T(n - 2, k - 1), is the denominator
+  1 - 2x - x(1 - x) z of the generating function above. The audit found that generating function independently at
+  the same time.
+- So P7 follows from this proof together with (C). Its predicted rows at orders 14-18 equal the closed form term by
+  term. Checked on 2026-11-04; the recurrence also has no violations at orders 7-39.

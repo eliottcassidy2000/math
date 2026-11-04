@@ -1,0 +1,17 @@
+Q5 (scores 1,2,2,2,3; H=15; hc=3) | charpoly: lam**5 - 4*lam**2 - 3*lam - 3 | factor: (lam**2 + lam + 1)*(lam**3 - lam**2 - 3)
+   eigenvalues: [1.86371, -0.5 - 0.866025*I, -0.5 + 0.866025*I, -0.431853 - 1.19298*I, -0.431853 + 1.19298*I]
+UH a (H=9) | charpoly: lam**5 - 3*lam**2 - 3*lam - 1 | factor: lam**5 - 3*lam**2 - 3*lam - 1
+   eigenvalues: [1.71939, -0.481495 - 0.264857*I, -0.481495 + 0.264857*I, -0.378202 - 1.33525*I, -0.378202 + 1.33525*I]
+UH b (H=9) | charpoly: lam**5 - 3*lam**2 - 2*lam - 1 | factor: lam**5 - 3*lam**2 - 2*lam - 1
+   eigenvalues: [1.65930, -0.471019 - 1.22767*I, -0.471019 + 1.22767*I, -0.358632 - 0.468974*I, -0.358632 + 0.468974*I]
+UH c (H=11) | charpoly: lam**5 - 4*lam**2 - 4*lam - 1 | factor: lam**5 - 4*lam**2 - 4*lam - 1
+   eigenvalues: [1.86040, -0.470762 - 0.0726328*I, -0.470762 + 0.0726328*I, -0.459438 - 1.469*I, -0.459438 + 1.469*I]
+H=13, hc=2 | charpoly: lam**5 - 4*lam**2 - 3*lam - 2 | factor: (lam**2 + lam + 2)*(lam**3 - lam**2 - lam - 1)
+   eigenvalues: [1.83929, -0.5 - 1.32288*I, -0.5 + 1.32288*I, -0.419643 - 0.606291*I, -0.419643 + 0.606291*I]
+RT5 (regular; H=15; hc=2) | charpoly: lam**5 - 5*lam**2 - 5*lam - 2 | factor: (lam - 2)*(lam**4 + 2*lam**3 + 4*lam**2 + 3*lam + 1)
+   eigenvalues: [2.00000, -0.5 - 0.363271*I, -0.5 + 0.363271*I, -0.5 - 1.53884*I, -0.5 + 1.53884*I]
+Circ(Z5,{1,2}) charpoly: (lam - 2)*(lam**4 + 2*lam**3 + 4*lam**2 + 3*lam + 1)
+owner polynomial lam**5 - 2*lam**2 - 2*lam - 1 coefficient of lam^3: 0 (tournaments: tr A = tr A^2 = 0 force coefficients of lam^4 and lam^3 to vanish; lam^2 coefficient = -(# cyclic triples))
+owner polynomial lam**5 - lam**3 - lam**2 coefficient of lam^3: -1 (tournaments: tr A = tr A^2 = 0 force coefficients of lam^4 and lam^3 to vanish; lam^2 coefficient = -(# cyclic triples))
+sum of squares of {2, i, -i, phi, -1/phi} = 5 (must be tr A^2 = 0 for a tournament)
+det[(0:1:0),(1:1:1),(1:2:1)] = 0 -> collinear over every field

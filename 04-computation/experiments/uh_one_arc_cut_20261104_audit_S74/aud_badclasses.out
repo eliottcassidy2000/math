@@ -1,0 +1,4 @@
+rows [34, 36, 33, 7, 15, 472, 159, 287, 95] | cut vertices [5] | 2-arc-strong True | arcs e with T - e non-Hamiltonian [(4, 3)] | reported (4, 3)
+rows [18, 20, 17, 7, 456, 31, 175, 303, 111] | cut vertices [4] | 2-arc-strong True | arcs e with T - e non-Hamiltonian [(5, 3)] | reported (5, 3)
+rows [10, 12, 9, 448, 15, 31, 183, 311, 119] | cut vertices [3] | 2-arc-strong True | arcs e with T - e non-Hamiltonian [(5, 4)] | reported (5, 4)
+rows [10, 12, 9, 464, 39, 15, 183, 311, 119] | cut vertices [3] | 2-arc-strong True | arcs e with T - e non-Hamiltonian [(4, 5)] | reported (4, 5)

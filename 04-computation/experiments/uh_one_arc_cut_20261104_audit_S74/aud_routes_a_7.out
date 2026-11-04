@@ -1,0 +1,9 @@
+aud_routes threads=12
+ROUTE_A n=4: labelled tournaments 64, strong 24; pairs (T, e) with T - e strong: 72, of which non-Hamiltonian: 24
+ROUTE_A n=5: labelled tournaments 1024, strong 544; pairs (T, e) with T - e strong: 4080, of which non-Hamiltonian: 720
+ROUTE_A n=6: labelled tournaments 32768, strong 22320; pairs (T, e) with T - e strong: 292320, of which non-Hamiltonian: 18480
+ROUTE_A n=7: labelled tournaments 2097152, strong 1677488; pairs (T, e) with T - e strong: 32981760, of which non-Hamiltonian: 608160
+
+real	0m2.465s
+user	0m0.000s
+sys	0m0.015s
