@@ -1,0 +1,15 @@
+# Independent review: complete two-cover affine compression
+
+PASS. No mathematical or code correction was needed. The source proof, verifier, counter and complete paired receipts are pinned in the independent receipts.
+
+The run-slot bijection is exact for ordered pairs of nonempty global paths. Equal child labels on opposite sides of the global cut are allowed; there is no arc constraint across the cut. Swapping the two entire words preserves multiplicities and every within-word arc. It has no fixed point because the actual port x occurs exactly once across the pair. This proves evenness of every abstract coefficient, not just evenness after evaluating child profiles.
+
+Each normalized repeat coordinate is even and all coordinates of index at least four vanish modulo eight. Two repeated children therefore contribute at least four, which becomes zero modulo eight against the even word coefficient. The same coefficient parity kills all 4b_i corrections. The remaining affine expression and the P/E, O/C identifications follow with the actual odd product of child Hamilton counts retained. The singleton indicator is still necessary. The all-one, one-pair and one-triple physical models have profiles (1), (1,2), (1,6,6), so the extraction numerators and divisibility by four/twelve are correct. The 1+2m models are offline known-graph counts, not oracle-query bounds for an unknown source.
+
+The independent checker imports no producer numerical code. A predecessor subset Hamilton DP plus ordered subset convolution reproduces every retained actual H and q2 value: 26,584 physical graph occurrences and 21,524 distinct graphs, including all 16,000 canonical source/target q2 values and the larger unequal-child controls. Exact physical masks and the actual odd-H products are independently reconstructed. Every model extraction is checked as an integer equality before reduction.
+
+A separate allocation of each child/port inventory between two nonempty slots enumerates all 2,588 retained word-pair instances and all 153,342 words. It verifies the involution on complete word sets, including 25,732 words with the same child label across the cut. Independent three-slot allocation recovers all nine words in the h=3 boundary, including identical port-free singleton paths. Thus a free h! action is not being assumed beyond h=2.
+
+Both independent normal and optimized runs agree byte for byte and all frozen source/dependency pins agree. The exact integer counter uses at most 18 physical names; H and q2 are bounded by 18! and 17 times 18!, respectively, below the unsigned 64-bit limit. This audit verifies compression only. Neither a nonzero quotient contrast nor arbitrary ambient non-annihilation follows from this lemma alone.
+
+Reproduce with python audit.py and python -O audit.py. The checker is repository-relative, uses the sibling frozen packet and proof/data dependencies, and compiles only its own count.cpp with the existing C++17 compiler. Exact audit allowlist: REVIEW.md, audit.py, count.cpp, normal.json, optimized.json, SHA256SUMS.

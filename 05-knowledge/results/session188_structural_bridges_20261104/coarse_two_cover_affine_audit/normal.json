@@ -1,0 +1,27 @@
+{
+  "actual_physical_occurrences": 26584,
+  "all_model_extractions_checked": true,
+  "canonical_individual_q2_values": 16000,
+  "checker_sha256": "e16facd56092c51152af6a23d3482fca54067112af24ecd868510eeb6fa11c48",
+  "dependency_pins": {
+    "coarse_mod8_affine/PROOF.md": "dcbbfa8895f41c4649369bd11faf861672ced4fb010ab047fa9addfcdf969924",
+    "coarse_mod8_affine/normal.json": "07c210dd54abde00805c70cbb06d9ef5947ad0b4d0203c1a8758efce4cb01592",
+    "five_profile_types/PROOF.md": "0f837c969531d66c1f5f77e6e3aa02416154f852a3f79d2cfe8147059872c9f6",
+    "five_profile_types/normal.json": "7b9cba1e667b794a050adb5ab412f52e5ad12880de280e27779f2faa660c6e90",
+    "uniform_block_starts/verify.py": "b7e944ad3278628b9470ed7347aaafd610bea988dbc01951926ccbcad70da0e5"
+  },
+  "distinct_actual_graphs": 21524,
+  "explicit_path_swap_instances": 2588,
+  "explicit_word_pairs": 153342,
+  "independent_counter_sha256": "3b5e258ca108cf0015d2a63a063f94fdc31f033420ba4e89ce25979112dd9340",
+  "same_label_cut_words": 25732,
+  "source_sha256": {
+    "PROOF.md": "730fb6c4f98c4bf67f275e2d0b563d252c3e3dbf5062a1423d05837f1573954f",
+    "count.cpp": "24670778d63869204bb8bf5a417f8327d6fb65221bc90a4788d2c120af0fd3f4",
+    "normal.json": "63f83da5fe785ee859daf2ed095479d52c1315fb2593bf07057e9c31b7f9643a",
+    "optimized.json": "63f83da5fe785ee859daf2ed095479d52c1315fb2593bf07057e9c31b7f9643a",
+    "verify.py": "c58d7eb906c0f14fbddcf05ca8bc6ead4ef4e2027fb4c495e8a2faee6f153575"
+  },
+  "status": "PASS",
+  "three_cover_boundary_count": 9
+}
