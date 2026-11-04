@@ -1,0 +1,13 @@
+{
+  "all_cubic_quartic_zeros_retained": true,
+  "bank_sha256": "62bd9c08f6f7aa9bc8eb7865911b47b97a15e8b7dc9b46c24d781c4abfe5ff45",
+  "cases": 4,
+  "complete_named_coordinates": 40449,
+  "graphs": 12,
+  "old_orders": [
+    8,
+    10,
+    11
+  ],
+  "physical_query_triples": 28
+}

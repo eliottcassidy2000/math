@@ -1,0 +1,20 @@
+{
+  "conversed_child_actual_queries": 28,
+  "conversed_child_contexts": 4,
+  "exact_complete_cover_coordinates": 8803,
+  "general_nontransitive_mixed_contrasts": 12,
+  "grouped_odd_source_contexts": 4,
+  "literal_augmented_query_instances": 771,
+  "maximum_augmented_order": 15,
+  "output_pins": {
+    "all_cover_anchor_controls.json": "d474aab5fcf161138434faf913ce2e1d0f3305a77cc1a1ecc2bcda52c954cbd6",
+    "all_cover_grouped_controls.json": "0410b74b16fbf4f8cdf978fd27e7c9f1ad168d3b2c9c9602acacdb35e4191974",
+    "general_mixed_controls.json": "d1214412460eeb6415e1f0b89a1834f6e8f34e6d0d22bad42a536f88dfade3be",
+    "literal_queries.json": "e4b96ca8bf368fbd34f7853929e88b7f9b342026ef3dbc8fcfb19c20a2341ead"
+  },
+  "source_pins": {
+    "algebra_audit.py": "372410704c011515be19a0d5b80cd64e4d88c659bacb860710f301c8fbb8ce45",
+    "physical_audit.py": "561ae032a071e8ec87f470cdba8d6437a24773bf60da91662749f61945430174"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,46 @@
+{
+  "PROOF.md": {
+    "bytes": 9037,
+    "sha256": "492fe4d4f81e332437f70ce9db9b69b785745e779c01dbbc19afd78360892111"
+  },
+  "README.md": {
+    "bytes": 1844,
+    "sha256": "cec1eac7046eaeb92d6b5fd9ad4361a5eac2313a05f27e0bf807cee2ebb99570"
+  },
+  "bank.cpp": {
+    "bytes": 1936,
+    "sha256": "96120df96deca1e2b09022f4925b3481f87804f72f9b4e421b49104ec7ccb40c"
+  },
+  "bank.json": {
+    "bytes": 484958,
+    "sha256": "62bd9c08f6f7aa9bc8eb7865911b47b97a15e8b7dc9b46c24d781c4abfe5ff45"
+  },
+  "controls.json": {
+    "bytes": 13762,
+    "sha256": "1efee6e2a7fe16ea1efe184047200f288ac940fd866881e6a2f467e0c8c77f25"
+  },
+  "controls.py": {
+    "bytes": 5013,
+    "sha256": "992e872f98f70572e7a895ce9e09d9d60ef450dc0e9c113b57b97dbdd4e5eb79"
+  },
+  "graphs.txt": {
+    "bytes": 507,
+    "sha256": "a2442e8bef4119093a1fd08aff8d2b2fec41e658bebc46f62391b663582f7496"
+  },
+  "prepare.optimized.stdout": {
+    "bytes": 36,
+    "sha256": "99351ee16d271ea297ca31a9bfa15ccc899fc2224469f181cf6e487d4494e1db"
+  },
+  "prepare.stdout": {
+    "bytes": 36,
+    "sha256": "99351ee16d271ea297ca31a9bfa15ccc899fc2224469f181cf6e487d4494e1db"
+  },
+  "receipt.json": {
+    "bytes": 278,
+    "sha256": "eccf20dcc577bbd3f7e5f42a92d7f3dec0c33700b7a658bacb30f026cef12ae4"
+  },
+  "receipt.optimized.json": {
+    "bytes": 278,
+    "sha256": "eccf20dcc577bbd3f7e5f42a92d7f3dec0c33700b7a658bacb30f026cef12ae4"
+  }
+}

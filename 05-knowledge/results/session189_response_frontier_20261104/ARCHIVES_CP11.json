@@ -1,0 +1,212 @@
+{
+  "format": "lossless-compressed-base64-parts-v2",
+  "archives": [
+    {
+      "path": "odd_transitive/bank.part1.json",
+      "bytes": 82387,
+      "sha256": "cf9af03d1bb3e01362fa9531cc1ae699600e8ffb53e6b7a2c0f695735853dc46",
+      "git_blob_sha": "3f2c7f175ecb59c9df71f14dc3cb49e8ea43f6de",
+      "compression": "xz",
+      "compressed_bytes": 17644,
+      "compressed_sha256": "0363b8d6f797a1d3a0decceef49200d9b88e6df1c4b83417f335e91db0d12c2b",
+      "parts": [
+        "odd_transitive/bank.part1.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "odd_transitive/bank.part2.json",
+      "bytes": 163286,
+      "sha256": "aeafc00713ad26d1e1c6dbe853aaa10b75cde0205b01aae90470eba44ffb2ac8",
+      "git_blob_sha": "011dffa232092ebe8b0d789ed4cb2ea56501b798",
+      "compression": "xz",
+      "compressed_bytes": 29860,
+      "compressed_sha256": "b523cf5cf4a4c43bb5ad96f413bc53fb66c4c10f925cada862ab7f2a38a81cb4",
+      "parts": [
+        "odd_transitive/bank.part2.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "odd_transitive/bank.part3.json",
+      "bytes": 304509,
+      "sha256": "3b3eb0d9227c911e93accd4a7e8983eee4e1b6df8107538f87867240e7d14f30",
+      "git_blob_sha": "ec06998522ff56898356c7f8ce822964b10b8d1c",
+      "compression": "xz",
+      "compressed_bytes": 45676,
+      "compressed_sha256": "1154efd562228062ef7b8866edef3199376d3291a92757aed3bdde13b09fe877",
+      "parts": [
+        "odd_transitive/bank.part3.json.xz.b64.parts/00001.txt",
+        "odd_transitive/bank.part3.json.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "odd_transitive/bank.part4.json",
+      "bytes": 740556,
+      "sha256": "a1cf49e9e71f5da6115b97d245f2be49055abbfe4a9b260005918ae46962b3c5",
+      "git_blob_sha": "e269a2d824dd667f4191166e9111fde759a236f6",
+      "compression": "xz",
+      "compressed_bytes": 146968,
+      "compressed_sha256": "4a99bce64c130282091ceab3433d4dd6bd581e75b500990f16adeba0fe9f3528",
+      "parts": [
+        "odd_transitive/bank.part4.json.xz.b64.parts/00001.txt",
+        "odd_transitive/bank.part4.json.xz.b64.parts/00002.txt",
+        "odd_transitive/bank.part4.json.xz.b64.parts/00003.txt",
+        "odd_transitive/bank.part4.json.xz.b64.parts/00004.txt",
+        "odd_transitive/bank.part4.json.xz.b64.parts/00005.txt"
+      ]
+    },
+    {
+      "path": "odd_transitive/physical_queries.json",
+      "bytes": 147528,
+      "sha256": "b689725bd2fa259bee38583a7a6d4270d2d43bfc199256b77cfccc6ffe60df7b",
+      "git_blob_sha": "643c56752fbdc3307963686ccab9c4f436825260",
+      "compression": "xz",
+      "compressed_bytes": 4724,
+      "compressed_sha256": "a3cb9ba5e99eade9744c81ff131f23fdabf04011449c0b59acd5b7b2d0a9b60a",
+      "parts": [
+        "odd_transitive/physical_queries.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "collision_next/bank.json",
+      "bytes": 484958,
+      "sha256": "62bd9c08f6f7aa9bc8eb7865911b47b97a15e8b7dc9b46c24d781c4abfe5ff45",
+      "git_blob_sha": "17b3ca8cc8237acb9c221d1a40bb2683b4a0a9c9",
+      "compression": "xz",
+      "compressed_bytes": 78724,
+      "compressed_sha256": "e4313a0ae876e57b103fa820bb965381ccdd06a2897d52419b5ce6f4faa2af05",
+      "parts": [
+        "collision_next/bank.json.xz.b64.parts/00001.txt",
+        "collision_next/bank.json.xz.b64.parts/00002.txt",
+        "collision_next/bank.json.xz.b64.parts/00003.txt"
+      ]
+    },
+    {
+      "path": "odd_transitive_audit/anchor-recount.bank.json",
+      "bytes": 484958,
+      "sha256": "62bd9c08f6f7aa9bc8eb7865911b47b97a15e8b7dc9b46c24d781c4abfe5ff45",
+      "git_blob_sha": "17b3ca8cc8237acb9c221d1a40bb2683b4a0a9c9",
+      "compression": "xz",
+      "compressed_bytes": 78724,
+      "compressed_sha256": "e4313a0ae876e57b103fa820bb965381ccdd06a2897d52419b5ce6f4faa2af05",
+      "parts": [
+        "odd_transitive_audit/anchor-recount.bank.json.xz.b64.parts/00001.txt",
+        "odd_transitive_audit/anchor-recount.bank.json.xz.b64.parts/00002.txt",
+        "odd_transitive_audit/anchor-recount.bank.json.xz.b64.parts/00003.txt"
+      ]
+    },
+    {
+      "path": "odd_transitive_audit/family_banks.json",
+      "bytes": 155767,
+      "sha256": "3fcca0cdcf98f56e19b95e2b022ef1dd1c3399272694899d6d22de0b2cfe4d91",
+      "git_blob_sha": "21d10ea2d34b4b08f34f9d30c6d831937225d449",
+      "compression": "xz",
+      "compressed_bytes": 35288,
+      "compressed_sha256": "14cdb91b86b051c09c21dbe42293e07a4165e5699af3e954c23e707977f444ca",
+      "parts": [
+        "odd_transitive_audit/family_banks.json.xz.b64.parts/00001.txt",
+        "odd_transitive_audit/family_banks.json.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "odd_transitive_audit/family_controls.json",
+      "bytes": 391163,
+      "sha256": "32afa5673029889ae7c099e76828a08c8dbedc044523352b3e2b150a40ab9b16",
+      "git_blob_sha": "33bf4a04808804f3195f3463009df2fe26b178dd",
+      "compression": "xz",
+      "compressed_bytes": 13784,
+      "compressed_sha256": "3e0e746b4b34eec937583aba586d7f4cc906cc351a264b99b63729862d4a8a2b",
+      "parts": [
+        "odd_transitive_audit/family_controls.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "odd_transitive_audit/odd-recount.bank.part1.json",
+      "bytes": 82387,
+      "sha256": "cf9af03d1bb3e01362fa9531cc1ae699600e8ffb53e6b7a2c0f695735853dc46",
+      "git_blob_sha": "3f2c7f175ecb59c9df71f14dc3cb49e8ea43f6de",
+      "compression": "xz",
+      "compressed_bytes": 17644,
+      "compressed_sha256": "0363b8d6f797a1d3a0decceef49200d9b88e6df1c4b83417f335e91db0d12c2b",
+      "parts": [
+        "odd_transitive_audit/odd-recount.bank.part1.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "odd_transitive_audit/odd-recount.bank.part2.json",
+      "bytes": 163286,
+      "sha256": "aeafc00713ad26d1e1c6dbe853aaa10b75cde0205b01aae90470eba44ffb2ac8",
+      "git_blob_sha": "011dffa232092ebe8b0d789ed4cb2ea56501b798",
+      "compression": "xz",
+      "compressed_bytes": 29860,
+      "compressed_sha256": "b523cf5cf4a4c43bb5ad96f413bc53fb66c4c10f925cada862ab7f2a38a81cb4",
+      "parts": [
+        "odd_transitive_audit/odd-recount.bank.part2.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "odd_transitive_audit/odd-recount.bank.part3.json",
+      "bytes": 304509,
+      "sha256": "3b3eb0d9227c911e93accd4a7e8983eee4e1b6df8107538f87867240e7d14f30",
+      "git_blob_sha": "ec06998522ff56898356c7f8ce822964b10b8d1c",
+      "compression": "xz",
+      "compressed_bytes": 45676,
+      "compressed_sha256": "1154efd562228062ef7b8866edef3199376d3291a92757aed3bdde13b09fe877",
+      "parts": [
+        "odd_transitive_audit/odd-recount.bank.part3.json.xz.b64.parts/00001.txt",
+        "odd_transitive_audit/odd-recount.bank.part3.json.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "odd_transitive_audit/odd-recount.bank.part4.json",
+      "bytes": 740556,
+      "sha256": "a1cf49e9e71f5da6115b97d245f2be49055abbfe4a9b260005918ae46962b3c5",
+      "git_blob_sha": "e269a2d824dd667f4191166e9111fde759a236f6",
+      "compression": "xz",
+      "compressed_bytes": 146968,
+      "compressed_sha256": "4a99bce64c130282091ceab3433d4dd6bd581e75b500990f16adeba0fe9f3528",
+      "parts": [
+        "odd_transitive_audit/odd-recount.bank.part4.json.xz.b64.parts/00001.txt",
+        "odd_transitive_audit/odd-recount.bank.part4.json.xz.b64.parts/00002.txt",
+        "odd_transitive_audit/odd-recount.bank.part4.json.xz.b64.parts/00003.txt",
+        "odd_transitive_audit/odd-recount.bank.part4.json.xz.b64.parts/00004.txt",
+        "odd_transitive_audit/odd-recount.bank.part4.json.xz.b64.parts/00005.txt"
+      ]
+    },
+    {
+      "path": "odd_collision_cross_audit/kernel_controls.json",
+      "bytes": 64181,
+      "sha256": "353bd533edd66f80eb207a3aae6f74985ab5c23a765f86f49c4a9751a4899f73",
+      "git_blob_sha": "6628b0074fe5f1d8a81fb1293d6c823f391e1f04",
+      "compression": "xz",
+      "compressed_bytes": 3452,
+      "compressed_sha256": "f5bc92e9b82b846cb110541f58058eff610f35502e3c2a01fc595c64ed802290",
+      "parts": [
+        "odd_collision_cross_audit/kernel_controls.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "odd_collision_cross_audit/binomial_controls.json",
+      "bytes": 89598,
+      "sha256": "3fce6b7d8899099677ba989117ac6d8767c180f64706e43310f318407e7a1781",
+      "git_blob_sha": "b7bb3f4500104b1d901ea0d09d590a09f61e73a0",
+      "compression": "xz",
+      "compressed_bytes": 19100,
+      "compressed_sha256": "818ca3b3acca8f7ffd7a23f48a839f3082b077c9d54a476989653ce04851c224",
+      "parts": [
+        "odd_collision_cross_audit/binomial_controls.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "odd_collision_cross_audit/literal_queries.json",
+      "bytes": 228574,
+      "sha256": "e4b96ca8bf368fbd34f7853929e88b7f9b342026ef3dbc8fcfb19c20a2341ead",
+      "git_blob_sha": "9e564888a7e1a8cca57ea4e9b16ef0cf201deecb",
+      "compression": "xz",
+      "compressed_bytes": 23700,
+      "compressed_sha256": "85ad374f804631ac0d4e5a68a27fac2c947d62df2fe35d967291fec2854ffa6c",
+      "parts": [
+        "odd_collision_cross_audit/literal_queries.json.xz.b64.parts/00001.txt"
+      ]
+    }
+  ]
+}

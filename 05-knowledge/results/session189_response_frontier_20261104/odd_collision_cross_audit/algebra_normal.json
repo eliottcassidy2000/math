@@ -1,0 +1,15 @@
+{
+  "additional_transitive_kernels": 25,
+  "all_even_combinations_retain_derivative_four": true,
+  "arbitrary_internal_kernels": 792,
+  "output_pins": {
+    "binomial_controls.json": "3fce6b7d8899099677ba989117ac6d8767c180f64706e43310f318407e7a1781",
+    "kernel_controls.json": "353bd533edd66f80eb207a3aae6f74985ab5c23a765f86f49c4a9751a4899f73"
+  },
+  "source_sha256": "372410704c011515be19a0d5b80cd64e4d88c659bacb860710f301c8fbb8ce45",
+  "status": "PASS",
+  "symbolic_binomial_orders": [
+    3,
+    101
+  ]
+}

@@ -1,0 +1,1857 @@
+{
+  "cases": [
+    {
+      "case": 0,
+      "m": 3,
+      "theta": [
+        1,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 3,
+          "individual_r_contrasts": {
+            "2": -4
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        },
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": 0
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "case": 1,
+      "m": 3,
+      "theta": [
+        3,
+        1
+      ],
+      "records": [
+        {
+          "physical_i": 3,
+          "individual_r_contrasts": {
+            "2": -4
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        },
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": 4
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "case": 2,
+      "m": 3,
+      "theta": [
+        1,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 3,
+          "individual_r_contrasts": {
+            "2": 0
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        },
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": 0
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "case": 3,
+      "m": 3,
+      "theta": [
+        1,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 3,
+          "individual_r_contrasts": {
+            "2": 0
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        },
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": 4
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "case": 4,
+      "m": 3,
+      "theta": [
+        1,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 3,
+          "individual_r_contrasts": {
+            "2": 0
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        },
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": -4
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        }
+      ]
+    },
+    {
+      "case": 5,
+      "m": 3,
+      "theta": [
+        1,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 3,
+          "individual_r_contrasts": {
+            "2": 0
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        },
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": 0
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "case": 6,
+      "m": 3,
+      "theta": [
+        3,
+        1
+      ],
+      "records": [
+        {
+          "physical_i": 3,
+          "individual_r_contrasts": {
+            "2": 4
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        },
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": -4
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        }
+      ]
+    },
+    {
+      "case": 7,
+      "m": 3,
+      "theta": [
+        1,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 3,
+          "individual_r_contrasts": {
+            "2": 4
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        },
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": 0
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "case": 8,
+      "m": 4,
+      "theta": [
+        1,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": -12
+          },
+          "K_i": -2,
+          "binomial_contrast": -12,
+          "expected": -12
+        },
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": -4
+          },
+          "K_i": 0,
+          "binomial_contrast": -4,
+          "expected": -4
+        }
+      ]
+    },
+    {
+      "case": 9,
+      "m": 4,
+      "theta": [
+        3,
+        1,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": -4
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        },
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 4
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "case": 10,
+      "m": 4,
+      "theta": [
+        1,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": -4
+          },
+          "K_i": 0,
+          "binomial_contrast": -4,
+          "expected": -4
+        },
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 4
+          },
+          "K_i": 0,
+          "binomial_contrast": 4,
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "case": 11,
+      "m": 4,
+      "theta": [
+        1,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 4
+          },
+          "K_i": 0,
+          "binomial_contrast": 4,
+          "expected": 4
+        },
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 12
+          },
+          "K_i": 2,
+          "binomial_contrast": 12,
+          "expected": 12
+        }
+      ]
+    },
+    {
+      "case": 12,
+      "m": 4,
+      "theta": [
+        1,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": -4
+          },
+          "K_i": 0,
+          "binomial_contrast": -4,
+          "expected": -4
+        },
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": -12
+          },
+          "K_i": -2,
+          "binomial_contrast": -12,
+          "expected": -12
+        }
+      ]
+    },
+    {
+      "case": 13,
+      "m": 4,
+      "theta": [
+        1,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 4
+          },
+          "K_i": 0,
+          "binomial_contrast": 4,
+          "expected": 4
+        },
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": -4
+          },
+          "K_i": 0,
+          "binomial_contrast": -4,
+          "expected": -4
+        }
+      ]
+    },
+    {
+      "case": 14,
+      "m": 4,
+      "theta": [
+        3,
+        1,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 4
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        },
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": -4
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        }
+      ]
+    },
+    {
+      "case": 15,
+      "m": 4,
+      "theta": [
+        1,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 4,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 12
+          },
+          "K_i": 2,
+          "binomial_contrast": 12,
+          "expected": 12
+        },
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 4
+          },
+          "K_i": 0,
+          "binomial_contrast": 4,
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "case": 16,
+      "m": 5,
+      "theta": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": 8,
+            "3": -8,
+            "4": -28
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        },
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": 4,
+            "3": -4,
+            "4": -12
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "case": 17,
+      "m": 5,
+      "theta": [
+        3,
+        1,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 0,
+            "4": -4
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        },
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 0,
+            "4": 4
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "case": 18,
+      "m": 5,
+      "theta": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": 4,
+            "3": -4,
+            "4": -12
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        },
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": -4,
+            "3": 4,
+            "4": 12
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "case": 19,
+      "m": 5,
+      "theta": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": -4,
+            "3": 4,
+            "4": 12
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        },
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": -8,
+            "3": 8,
+            "4": 28
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "case": 20,
+      "m": 5,
+      "theta": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": 4,
+            "3": -4,
+            "4": -12
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        },
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": 8,
+            "3": -8,
+            "4": -28
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        }
+      ]
+    },
+    {
+      "case": 21,
+      "m": 5,
+      "theta": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": -4,
+            "3": 4,
+            "4": 12
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        },
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": 4,
+            "3": -4,
+            "4": -12
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "case": 22,
+      "m": 5,
+      "theta": [
+        3,
+        1,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 0,
+            "4": 4
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        },
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 0,
+            "4": -4
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        }
+      ]
+    },
+    {
+      "case": 23,
+      "m": 5,
+      "theta": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": -8,
+            "3": 8,
+            "4": 28
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        },
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": -4,
+            "3": 4,
+            "4": 12
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "case": 24,
+      "m": 6,
+      "theta": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": 24,
+            "3": 0,
+            "4": -24,
+            "5": -60
+          },
+          "K_i": -2,
+          "binomial_contrast": -12,
+          "expected": -12
+        },
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": 12,
+            "3": 0,
+            "4": -12,
+            "5": -28
+          },
+          "K_i": 0,
+          "binomial_contrast": -4,
+          "expected": -4
+        }
+      ]
+    },
+    {
+      "case": 25,
+      "m": 6,
+      "theta": [
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": -4
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        },
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 4
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "case": 26,
+      "m": 6,
+      "theta": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": 12,
+            "3": 0,
+            "4": -12,
+            "5": -28
+          },
+          "K_i": 0,
+          "binomial_contrast": -4,
+          "expected": -4
+        },
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": -12,
+            "3": 0,
+            "4": 12,
+            "5": 28
+          },
+          "K_i": 0,
+          "binomial_contrast": 4,
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "case": 27,
+      "m": 6,
+      "theta": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": -12,
+            "3": 0,
+            "4": 12,
+            "5": 28
+          },
+          "K_i": 0,
+          "binomial_contrast": 4,
+          "expected": 4
+        },
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": -24,
+            "3": 0,
+            "4": 24,
+            "5": 60
+          },
+          "K_i": 2,
+          "binomial_contrast": 12,
+          "expected": 12
+        }
+      ]
+    },
+    {
+      "case": 28,
+      "m": 6,
+      "theta": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": 12,
+            "3": 0,
+            "4": -12,
+            "5": -28
+          },
+          "K_i": 0,
+          "binomial_contrast": -4,
+          "expected": -4
+        },
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": 24,
+            "3": 0,
+            "4": -24,
+            "5": -60
+          },
+          "K_i": -2,
+          "binomial_contrast": -12,
+          "expected": -12
+        }
+      ]
+    },
+    {
+      "case": 29,
+      "m": 6,
+      "theta": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": -12,
+            "3": 0,
+            "4": 12,
+            "5": 28
+          },
+          "K_i": 0,
+          "binomial_contrast": 4,
+          "expected": 4
+        },
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": 12,
+            "3": 0,
+            "4": -12,
+            "5": -28
+          },
+          "K_i": 0,
+          "binomial_contrast": -4,
+          "expected": -4
+        }
+      ]
+    },
+    {
+      "case": 30,
+      "m": 6,
+      "theta": [
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 4
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        },
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": -4
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        }
+      ]
+    },
+    {
+      "case": 31,
+      "m": 6,
+      "theta": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": -24,
+            "3": 0,
+            "4": 24,
+            "5": 60
+          },
+          "K_i": 2,
+          "binomial_contrast": 12,
+          "expected": 12
+        },
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": -12,
+            "3": 0,
+            "4": 12,
+            "5": 28
+          },
+          "K_i": 0,
+          "binomial_contrast": 4,
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "case": 32,
+      "m": 7,
+      "theta": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": 56,
+            "3": 16,
+            "4": -16,
+            "5": -56,
+            "6": -124
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        },
+        {
+          "physical_i": 8,
+          "individual_r_contrasts": {
+            "2": 28,
+            "3": 8,
+            "4": -8,
+            "5": -28,
+            "6": -60
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "case": 33,
+      "m": 7,
+      "theta": [
+        3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": -4
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        },
+        {
+          "physical_i": 8,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 4
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "case": 34,
+      "m": 7,
+      "theta": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": 28,
+            "3": 8,
+            "4": -8,
+            "5": -28,
+            "6": -60
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        },
+        {
+          "physical_i": 8,
+          "individual_r_contrasts": {
+            "2": -28,
+            "3": -8,
+            "4": 8,
+            "5": 28,
+            "6": 60
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "case": 35,
+      "m": 7,
+      "theta": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": -28,
+            "3": -8,
+            "4": 8,
+            "5": 28,
+            "6": 60
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        },
+        {
+          "physical_i": 8,
+          "individual_r_contrasts": {
+            "2": -56,
+            "3": -16,
+            "4": 16,
+            "5": 56,
+            "6": 124
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "case": 36,
+      "m": 7,
+      "theta": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": 28,
+            "3": 8,
+            "4": -8,
+            "5": -28,
+            "6": -60
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        },
+        {
+          "physical_i": 8,
+          "individual_r_contrasts": {
+            "2": 56,
+            "3": 16,
+            "4": -16,
+            "5": -56,
+            "6": -124
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        }
+      ]
+    },
+    {
+      "case": 37,
+      "m": 7,
+      "theta": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": -28,
+            "3": -8,
+            "4": 8,
+            "5": 28,
+            "6": 60
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        },
+        {
+          "physical_i": 8,
+          "individual_r_contrasts": {
+            "2": 28,
+            "3": 8,
+            "4": -8,
+            "5": -28,
+            "6": -60
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "case": 38,
+      "m": 7,
+      "theta": [
+        3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 4
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        },
+        {
+          "physical_i": 8,
+          "individual_r_contrasts": {
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": -4
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        }
+      ]
+    },
+    {
+      "case": 39,
+      "m": 7,
+      "theta": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": -56,
+            "3": -16,
+            "4": 16,
+            "5": 56,
+            "6": 124
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        },
+        {
+          "physical_i": 8,
+          "individual_r_contrasts": {
+            "2": -28,
+            "3": -8,
+            "4": 8,
+            "5": 28,
+            "6": 60
+          },
+          "K_i": 0,
+          "binomial_contrast": 0,
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "case": 40,
+      "m": 5,
+      "theta": [
+        51,
+        229,
+        216,
+        36
+      ],
+      "records": [
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": -908,
+            "3": 908,
+            "4": 2780
+          },
+          "K_i": 28,
+          "binomial_contrast": 56,
+          "expected": 56
+        },
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": -512,
+            "3": 512,
+            "4": 1560
+          },
+          "K_i": 12,
+          "binomial_contrast": 24,
+          "expected": 24
+        },
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": -140,
+            "3": 140,
+            "4": 428
+          },
+          "K_i": 4,
+          "binomial_contrast": 8,
+          "expected": 8
+        },
+        {
+          "physical_i": 8,
+          "individual_r_contrasts": {
+            "2": 140,
+            "3": -140,
+            "4": -428
+          },
+          "K_i": -4,
+          "binomial_contrast": -8,
+          "expected": -8
+        },
+        {
+          "physical_i": 9,
+          "individual_r_contrasts": {
+            "2": 512,
+            "3": -512,
+            "4": -1560
+          },
+          "K_i": -12,
+          "binomial_contrast": -24,
+          "expected": -24
+        },
+        {
+          "physical_i": 10,
+          "individual_r_contrasts": {
+            "2": 908,
+            "3": -908,
+            "4": -2780
+          },
+          "K_i": -28,
+          "binomial_contrast": -56,
+          "expected": -56
+        }
+      ],
+      "witness": {
+        "K_X": 44,
+        "K_Y": -44,
+        "grouped": [
+          {
+            "group": [
+              5,
+              6,
+              7
+            ],
+            "local_contrast": 88,
+            "quotient_contrast": 88
+          },
+          {
+            "group": [
+              8,
+              9,
+              10
+            ],
+            "local_contrast": -88,
+            "quotient_contrast": -88
+          }
+        ],
+        "positive_difference": 176
+      }
+    },
+    {
+      "case": 41,
+      "m": 7,
+      "theta": [
+        51,
+        229,
+        216,
+        36,
+        0,
+        0
+      ],
+      "records": [
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": -7220,
+            "3": -2104,
+            "4": 2104,
+            "5": 7220,
+            "6": 15116
+          },
+          "K_i": 28,
+          "binomial_contrast": 56,
+          "expected": 56
+        },
+        {
+          "physical_i": 8,
+          "individual_r_contrasts": {
+            "2": 1024,
+            "3": 512,
+            "4": -512,
+            "5": -1024,
+            "6": 24
+          },
+          "K_i": 12,
+          "binomial_contrast": 24,
+          "expected": 24
+        },
+        {
+          "physical_i": 9,
+          "individual_r_contrasts": {
+            "2": 9100,
+            "3": 3080,
+            "4": -3080,
+            "5": -9100,
+            "6": -14692
+          },
+          "K_i": 4,
+          "binomial_contrast": 8,
+          "expected": 8
+        },
+        {
+          "physical_i": 10,
+          "individual_r_contrasts": {
+            "2": -9100,
+            "3": -3080,
+            "4": 3080,
+            "5": 9100,
+            "6": 14692
+          },
+          "K_i": -4,
+          "binomial_contrast": -8,
+          "expected": -8
+        },
+        {
+          "physical_i": 11,
+          "individual_r_contrasts": {
+            "2": -1024,
+            "3": -512,
+            "4": 512,
+            "5": 1024,
+            "6": -24
+          },
+          "K_i": -12,
+          "binomial_contrast": -24,
+          "expected": -24
+        },
+        {
+          "physical_i": 12,
+          "individual_r_contrasts": {
+            "2": 7220,
+            "3": 2104,
+            "4": -2104,
+            "5": -7220,
+            "6": -15116
+          },
+          "K_i": -28,
+          "binomial_contrast": -56,
+          "expected": -56
+        }
+      ],
+      "witness": {
+        "K_X": 44,
+        "K_Y": -44,
+        "grouped": [
+          {
+            "group": [
+              7,
+              8,
+              9
+            ],
+            "local_contrast": 88,
+            "quotient_contrast": 88
+          },
+          {
+            "group": [
+              10,
+              11,
+              12
+            ],
+            "local_contrast": -88,
+            "quotient_contrast": -88
+          }
+        ],
+        "positive_difference": 176
+      }
+    },
+    {
+      "case": 42,
+      "m": 5,
+      "theta": [
+        111,
+        183,
+        94,
+        12
+      ],
+      "records": [
+        {
+          "physical_i": 5,
+          "individual_r_contrasts": {
+            "2": -300,
+            "3": 300,
+            "4": 984
+          },
+          "K_i": 42,
+          "binomial_contrast": 84,
+          "expected": 84
+        },
+        {
+          "physical_i": 6,
+          "individual_r_contrasts": {
+            "2": -60,
+            "3": 60,
+            "4": 216
+          },
+          "K_i": 18,
+          "binomial_contrast": 36,
+          "expected": 36
+        },
+        {
+          "physical_i": 7,
+          "individual_r_contrasts": {
+            "2": 60,
+            "3": -60,
+            "4": -216
+          },
+          "K_i": -18,
+          "binomial_contrast": -36,
+          "expected": -36
+        },
+        {
+          "physical_i": 8,
+          "individual_r_contrasts": {
+            "2": 300,
+            "3": -300,
+            "4": -984
+          },
+          "K_i": -42,
+          "binomial_contrast": -84,
+          "expected": -84
+        },
+        {
+          "physical_i": 9,
+          "individual_r_contrasts": {
+            "2": -88,
+            "3": 88,
+            "4": 268
+          },
+          "K_i": 2,
+          "binomial_contrast": 4,
+          "expected": 4
+        },
+        {
+          "physical_i": 10,
+          "individual_r_contrasts": {
+            "2": 88,
+            "3": -88,
+            "4": -268
+          },
+          "K_i": -2,
+          "binomial_contrast": -4,
+          "expected": -4
+        }
+      ],
+      "witness": {
+        "K_X": 60,
+        "K_Y": -60,
+        "grouped": [
+          {
+            "group": [
+              5,
+              6
+            ],
+            "local_contrast": 120,
+            "quotient_contrast": 120
+          },
+          {
+            "group": [
+              7,
+              8
+            ],
+            "local_contrast": -120,
+            "quotient_contrast": -120
+          }
+        ],
+        "positive_difference": 240
+      }
+    }
+  ],
+  "independent_joint_three_cover_controls": [
+    {
+      "graph_id": 80,
+      "checks": [
+        {
+          "r": 4,
+          "i": 5,
+          "coefficient": 10456
+        },
+        {
+          "r": 4,
+          "i": 8,
+          "coefficient": 7880
+        },
+        {
+          "r": 2,
+          "i": 5,
+          "coefficient": 8132
+        },
+        {
+          "r": 2,
+          "i": 8,
+          "coefficient": 7852
+        }
+      ]
+    },
+    {
+      "graph_id": 81,
+      "checks": [
+        {
+          "r": 4,
+          "i": 5,
+          "coefficient": 7676
+        },
+        {
+          "r": 4,
+          "i": 8,
+          "coefficient": 8308
+        },
+        {
+          "r": 2,
+          "i": 5,
+          "coefficient": 9040
+        },
+        {
+          "r": 2,
+          "i": 8,
+          "coefficient": 7712
+        }
+      ]
+    },
+    {
+      "graph_id": 82,
+      "checks": [
+        {
+          "r": 6,
+          "i": 7,
+          "coefficient": 142408
+        },
+        {
+          "r": 6,
+          "i": 10,
+          "coefficient": 135608
+        },
+        {
+          "r": 2,
+          "i": 7,
+          "coefficient": 113588
+        },
+        {
+          "r": 2,
+          "i": 10,
+          "coefficient": 107836
+        },
+        {
+          "r": 3,
+          "i": 7,
+          "coefficient": 107560
+        },
+        {
+          "r": 3,
+          "i": 10,
+          "coefficient": 103064
+        }
+      ]
+    },
+    {
+      "graph_id": 83,
+      "checks": [
+        {
+          "r": 6,
+          "i": 7,
+          "coefficient": 127292
+        },
+        {
+          "r": 6,
+          "i": 10,
+          "coefficient": 120916
+        },
+        {
+          "r": 2,
+          "i": 7,
+          "coefficient": 120808
+        },
+        {
+          "r": 2,
+          "i": 10,
+          "coefficient": 116936
+        },
+        {
+          "r": 3,
+          "i": 7,
+          "coefficient": 109664
+        },
+        {
+          "r": 3,
+          "i": 10,
+          "coefficient": 106144
+        }
+      ]
+    },
+    {
+      "graph_id": 84,
+      "checks": [
+        {
+          "r": 4,
+          "i": 5,
+          "coefficient": 5748
+        },
+        {
+          "r": 4,
+          "i": 7,
+          "coefficient": 4932
+        },
+        {
+          "r": 2,
+          "i": 5,
+          "coefficient": 4644
+        },
+        {
+          "r": 2,
+          "i": 7,
+          "coefficient": 4668
+        }
+      ]
+    },
+    {
+      "graph_id": 85,
+      "checks": [
+        {
+          "r": 4,
+          "i": 5,
+          "coefficient": 4764
+        },
+        {
+          "r": 4,
+          "i": 7,
+          "coefficient": 5148
+        },
+        {
+          "r": 2,
+          "i": 5,
+          "coefficient": 4944
+        },
+        {
+          "r": 2,
+          "i": 7,
+          "coefficient": 4608
+        }
+      ]
+    }
+  ]
+}

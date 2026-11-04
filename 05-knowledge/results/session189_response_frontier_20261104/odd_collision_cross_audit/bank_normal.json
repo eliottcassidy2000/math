@@ -1,0 +1,19 @@
+{
+  "complete_named_coordinates": 173831,
+  "degree_counts": {
+    "0": 101,
+    "1": 1570,
+    "2": 12277,
+    "3": 51368,
+    "4": 108515
+  },
+  "full_named_graphs": 101,
+  "new_literal_query_bank_matches": 235,
+  "output_pins": {
+    "named_bank_query_matches.json": "d27a5750b516f27692f191bb41d43fc4f57b87515098c8cd9ae464b9f2bf8d61",
+    "source_manifest_recount.json": "b8ad9002b74e25ec7ebe8763b813f9b27d3bdeba507f424d97a84e658530b2c5"
+  },
+  "scope": "Every existing named coefficient is independently inverted and source-pinned; full independent recount of all existing basis values is supplied by the separate primary audit. New literal queries here are recounted from scratch.",
+  "source_sha256": "8086a07b4331b2916852cba87f1b93c2aa100c89b8a6d3b59fe57438e855b840",
+  "status": "PASS"
+}

@@ -1,0 +1,70 @@
+{
+  "actual_hamilton_queries": 672,
+  "grouped_binomial_results": [
+    {
+      "case": 40,
+      "group": [
+        5,
+        6,
+        7
+      ],
+      "local": 88,
+      "quotient": 88
+    },
+    {
+      "case": 40,
+      "group": [
+        8,
+        9,
+        10
+      ],
+      "local": -88,
+      "quotient": -88
+    },
+    {
+      "case": 41,
+      "group": [
+        7,
+        8,
+        9
+      ],
+      "local": 88,
+      "quotient": 88
+    },
+    {
+      "case": 41,
+      "group": [
+        10,
+        11,
+        12
+      ],
+      "local": -88,
+      "quotient": -88
+    },
+    {
+      "case": 42,
+      "group": [
+        5,
+        6
+      ],
+      "local": 120,
+      "quotient": 120
+    },
+    {
+      "case": 42,
+      "group": [
+        7,
+        8
+      ],
+      "local": -120,
+      "quotient": -120
+    }
+  ],
+  "quartic_extractions": 14,
+  "source_sha256": {
+    "physical_queries.json": "b689725bd2fa259bee38583a7a6d4270d2d43bfc199256b77cfccc6ffe60df7b",
+    "query_input.txt": "1fef699af177a89b0a5a2e103b196a77ce82a1861ee9302d8052af655e390308",
+    "query_output.txt": "42dd696e2b24f2632d5600802aa9329eeb20807699cbfd2c3313da2f6ab5ea5b"
+  },
+  "status": "PASS"
+}

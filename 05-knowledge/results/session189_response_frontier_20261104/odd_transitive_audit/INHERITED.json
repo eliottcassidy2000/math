@@ -1,0 +1,22 @@
+[
+  {
+    "source": "https://github.com/eliottcassidy2000/math/blob/8f14b96ab020f7d5ceeb88e7bda413bb6f8bc9b7/05-knowledge/results/session188_structural_bridges_20261104/returns_next/UNIFORM.md",
+    "sha256": "71ca6256f0a473cb17f9e3016dd210f82a95b6c822a3db5b5816b42419688c7e"
+  },
+  {
+    "source": "https://github.com/eliottcassidy2000/math/blob/8f14b96ab020f7d5ceeb88e7bda413bb6f8bc9b7/05-knowledge/results/session188_structural_bridges_20261104/tt3_degree_tomography/PROOF.md",
+    "sha256": "277221ab86c8426c074051a63eda3a6612aaba99ca1af05ad28c9e0e51adb25d"
+  },
+  {
+    "source": "https://github.com/eliottcassidy2000/math/blob/8f14b96ab020f7d5ceeb88e7bda413bb6f8bc9b7/05-knowledge/results/session188_structural_bridges_20261104/tt3_degree_tomography_audit/REVIEW.md",
+    "sha256": "ccb5caea8b6ceae69396e414e1af1b5c719ce2f4f2e3f796cb4711765e6453b4"
+  },
+  {
+    "source_packet_file": "session189-collision/PROOF.md",
+    "sha256": "dcaad9182ddea6a9520a1fd15deaa9f32bb60b1f18e9e54dae52b2dc3619d824"
+  },
+  {
+    "source_packet_file": "session189-collision-audit/REVIEW.md",
+    "sha256": "891a07ade06dd09816e6ced5f8e2dab65766916ab70dad9031d7ac8f76db9a3a"
+  }
+]

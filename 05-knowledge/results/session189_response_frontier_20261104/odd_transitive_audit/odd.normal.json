@@ -1,0 +1,80 @@
+{
+  "all_named_cubic_quartic_zeros_retained": true,
+  "complete_named_coordinates": 133382,
+  "data_sha256": {
+    "bank.part0.json": "62bf158b61100e9f773cafc6a7d6214c733a0941f8bc15d679f2b6105cae4a24",
+    "bank.part1.json": "cf9af03d1bb3e01362fa9531cc1ae699600e8ffb53e6b7a2c0f695735853dc46",
+    "bank.part2.json": "aeafc00713ad26d1e1c6dbe853aaa10b75cde0205b01aae90470eba44ffb2ac8",
+    "bank.part3.json": "3b3eb0d9227c911e93accd4a7e8983eee4e1b6df8107538f87867240e7d14f30",
+    "bank.part4.json": "a1cf49e9e71f5da6115b97d245f2be49055abbfe4a9b260005918ae46962b3c5",
+    "binomial_controls.json": "a0df2d3b65073f2e9c13a4830733d4b52232e2059bc84913d05010b10f393903",
+    "controls.json": "30d22a96f2bce8b25a4022a4caedfc534489c25e8ba9f35d17d531d770d41b37",
+    "graphs.txt": "b9e9a292e6d846b95f0a4ffbc9b4797ba2873bcb6fb99ed73ca3a16e8946f280",
+    "inner_coefficients.json": "6e6cb70c6eb873af9f921dccef4a9f73390a3fa4c014b60f1b9300da350b26d7",
+    "physical_receipt.json": "d45bf1abd0847560176ce5b36408db550cdd066ac99ab02bf0eb67d63848508c"
+  },
+  "full_named_graphs": 89,
+  "genuine_higher_excursion_cases": [
+    40,
+    41,
+    42
+  ],
+  "joint_three_cover_coordinates": 28,
+  "joint_three_cover_graphs": 6,
+  "literal_inner_orders": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "old_orders": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    13
+  ],
+  "physical_cases": 43,
+  "quotient_only_controls": [
+    40,
+    41,
+    42
+  ],
+  "scope": "Exact identities with an ordered-witness root-family corollary; no arbitrary-prime closure.",
+  "status": "PASS",
+  "symbolic_binomial_orders": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ]
+}

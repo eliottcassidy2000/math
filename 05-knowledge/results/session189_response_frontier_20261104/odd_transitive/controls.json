@@ -1,0 +1,1949 @@
+{
+  "cases": [
+    {
+      "id": 0,
+      "m": 3,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 0,
+      "label": "all_rooted_two_exterior_0_0",
+      "graph_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 1,
+      "m": 3,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 1,
+      "label": "all_rooted_two_exterior_0_1",
+      "graph_ids": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "m": 3,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 2,
+      "label": "all_rooted_two_exterior_0_2",
+      "graph_ids": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": 3,
+      "m": 3,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 3,
+      "label": "all_rooted_two_exterior_0_3",
+      "graph_ids": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": 4,
+      "m": 3,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 0,
+      "label": "all_rooted_two_exterior_1_0",
+      "graph_ids": [
+        8,
+        9
+      ]
+    },
+    {
+      "id": 5,
+      "m": 3,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 1,
+      "label": "all_rooted_two_exterior_1_1",
+      "graph_ids": [
+        10,
+        11
+      ]
+    },
+    {
+      "id": 6,
+      "m": 3,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 2,
+      "label": "all_rooted_two_exterior_1_2",
+      "graph_ids": [
+        12,
+        13
+      ]
+    },
+    {
+      "id": 7,
+      "m": 3,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 3,
+      "label": "all_rooted_two_exterior_1_3",
+      "graph_ids": [
+        14,
+        15
+      ]
+    },
+    {
+      "id": 8,
+      "m": 4,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 0,
+      "label": "all_rooted_two_exterior_0_0",
+      "graph_ids": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": 9,
+      "m": 4,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 1,
+      "label": "all_rooted_two_exterior_0_1",
+      "graph_ids": [
+        18,
+        19
+      ]
+    },
+    {
+      "id": 10,
+      "m": 4,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 2,
+      "label": "all_rooted_two_exterior_0_2",
+      "graph_ids": [
+        20,
+        21
+      ]
+    },
+    {
+      "id": 11,
+      "m": 4,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 3,
+      "label": "all_rooted_two_exterior_0_3",
+      "graph_ids": [
+        22,
+        23
+      ]
+    },
+    {
+      "id": 12,
+      "m": 4,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 0,
+      "label": "all_rooted_two_exterior_1_0",
+      "graph_ids": [
+        24,
+        25
+      ]
+    },
+    {
+      "id": 13,
+      "m": 4,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 1,
+      "label": "all_rooted_two_exterior_1_1",
+      "graph_ids": [
+        26,
+        27
+      ]
+    },
+    {
+      "id": 14,
+      "m": 4,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 2,
+      "label": "all_rooted_two_exterior_1_2",
+      "graph_ids": [
+        28,
+        29
+      ]
+    },
+    {
+      "id": 15,
+      "m": 4,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 3,
+      "label": "all_rooted_two_exterior_1_3",
+      "graph_ids": [
+        30,
+        31
+      ]
+    },
+    {
+      "id": 16,
+      "m": 5,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 0,
+      "label": "all_rooted_two_exterior_0_0",
+      "graph_ids": [
+        32,
+        33
+      ]
+    },
+    {
+      "id": 17,
+      "m": 5,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 1,
+      "label": "all_rooted_two_exterior_0_1",
+      "graph_ids": [
+        34,
+        35
+      ]
+    },
+    {
+      "id": 18,
+      "m": 5,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 2,
+      "label": "all_rooted_two_exterior_0_2",
+      "graph_ids": [
+        36,
+        37
+      ]
+    },
+    {
+      "id": 19,
+      "m": 5,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 3,
+      "label": "all_rooted_two_exterior_0_3",
+      "graph_ids": [
+        38,
+        39
+      ]
+    },
+    {
+      "id": 20,
+      "m": 5,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 0,
+      "label": "all_rooted_two_exterior_1_0",
+      "graph_ids": [
+        40,
+        41
+      ]
+    },
+    {
+      "id": 21,
+      "m": 5,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 1,
+      "label": "all_rooted_two_exterior_1_1",
+      "graph_ids": [
+        42,
+        43
+      ]
+    },
+    {
+      "id": 22,
+      "m": 5,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 2,
+      "label": "all_rooted_two_exterior_1_2",
+      "graph_ids": [
+        44,
+        45
+      ]
+    },
+    {
+      "id": 23,
+      "m": 5,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 3,
+      "label": "all_rooted_two_exterior_1_3",
+      "graph_ids": [
+        46,
+        47
+      ]
+    },
+    {
+      "id": 24,
+      "m": 6,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 0,
+      "label": "all_rooted_two_exterior_0_0",
+      "graph_ids": [
+        48,
+        49
+      ]
+    },
+    {
+      "id": 25,
+      "m": 6,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 1,
+      "label": "all_rooted_two_exterior_0_1",
+      "graph_ids": [
+        50,
+        51
+      ]
+    },
+    {
+      "id": 26,
+      "m": 6,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 2,
+      "label": "all_rooted_two_exterior_0_2",
+      "graph_ids": [
+        52,
+        53
+      ]
+    },
+    {
+      "id": 27,
+      "m": 6,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 3,
+      "label": "all_rooted_two_exterior_0_3",
+      "graph_ids": [
+        54,
+        55
+      ]
+    },
+    {
+      "id": 28,
+      "m": 6,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 0,
+      "label": "all_rooted_two_exterior_1_0",
+      "graph_ids": [
+        56,
+        57
+      ]
+    },
+    {
+      "id": 29,
+      "m": 6,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 1,
+      "label": "all_rooted_two_exterior_1_1",
+      "graph_ids": [
+        58,
+        59
+      ]
+    },
+    {
+      "id": 30,
+      "m": 6,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 2,
+      "label": "all_rooted_two_exterior_1_2",
+      "graph_ids": [
+        60,
+        61
+      ]
+    },
+    {
+      "id": 31,
+      "m": 6,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 3,
+      "label": "all_rooted_two_exterior_1_3",
+      "graph_ids": [
+        62,
+        63
+      ]
+    },
+    {
+      "id": 32,
+      "m": 7,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 0,
+      "label": "all_rooted_two_exterior_0_0",
+      "graph_ids": [
+        64,
+        65
+      ]
+    },
+    {
+      "id": 33,
+      "m": 7,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 1,
+      "label": "all_rooted_two_exterior_0_1",
+      "graph_ids": [
+        66,
+        67
+      ]
+    },
+    {
+      "id": 34,
+      "m": 7,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 2,
+      "label": "all_rooted_two_exterior_0_2",
+      "graph_ids": [
+        68,
+        69
+      ]
+    },
+    {
+      "id": 35,
+      "m": 7,
+      "exterior_rows": [
+        0,
+        1
+      ],
+      "into_mask": 3,
+      "label": "all_rooted_two_exterior_0_3",
+      "graph_ids": [
+        70,
+        71
+      ]
+    },
+    {
+      "id": 36,
+      "m": 7,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 0,
+      "label": "all_rooted_two_exterior_1_0",
+      "graph_ids": [
+        72,
+        73
+      ]
+    },
+    {
+      "id": 37,
+      "m": 7,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 1,
+      "label": "all_rooted_two_exterior_1_1",
+      "graph_ids": [
+        74,
+        75
+      ]
+    },
+    {
+      "id": 38,
+      "m": 7,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 2,
+      "label": "all_rooted_two_exterior_1_2",
+      "graph_ids": [
+        76,
+        77
+      ]
+    },
+    {
+      "id": 39,
+      "m": 7,
+      "exterior_rows": [
+        2,
+        0
+      ],
+      "into_mask": 3,
+      "label": "all_rooted_two_exterior_1_3",
+      "graph_ids": [
+        78,
+        79
+      ]
+    },
+    {
+      "id": 40,
+      "m": 5,
+      "exterior_rows": [
+        62,
+        60,
+        56,
+        48,
+        32,
+        0
+      ],
+      "into_mask": 56,
+      "label": "strong_C3_TT_m_TT3_TT3",
+      "graph_ids": [
+        80,
+        81,
+        86
+      ],
+      "witness_groups": [
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ]
+      ]
+    },
+    {
+      "id": 41,
+      "m": 7,
+      "exterior_rows": [
+        62,
+        60,
+        56,
+        48,
+        32,
+        0
+      ],
+      "into_mask": 56,
+      "label": "strong_C3_TT_m_TT3_TT3",
+      "graph_ids": [
+        82,
+        83,
+        87
+      ],
+      "witness_groups": [
+        [
+          7,
+          8,
+          9
+        ],
+        [
+          10,
+          11,
+          12
+        ]
+      ]
+    },
+    {
+      "id": 42,
+      "m": 5,
+      "exterior_rows": [
+        30,
+        28,
+        24,
+        16,
+        32,
+        15
+      ],
+      "into_mask": 44,
+      "label": "fully_covered_root_in_strong_fixed_ambient",
+      "graph_ids": [
+        84,
+        85,
+        88
+      ],
+      "witness_groups": [
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "ambient_names": [
+        9,
+        10
+      ]
+    }
+  ],
+  "graphs": [
+    {
+      "id": 0,
+      "case": 0,
+      "kind": "source",
+      "rows": [
+        30,
+        28,
+        24,
+        0,
+        8
+      ]
+    },
+    {
+      "id": 1,
+      "case": 0,
+      "kind": "local_converse",
+      "rows": [
+        24,
+        25,
+        27,
+        0,
+        8
+      ]
+    },
+    {
+      "id": 2,
+      "case": 1,
+      "kind": "source",
+      "rows": [
+        22,
+        20,
+        16,
+        7,
+        8
+      ]
+    },
+    {
+      "id": 3,
+      "case": 1,
+      "kind": "local_converse",
+      "rows": [
+        16,
+        17,
+        19,
+        7,
+        8
+      ]
+    },
+    {
+      "id": 4,
+      "case": 2,
+      "kind": "source",
+      "rows": [
+        14,
+        12,
+        8,
+        0,
+        15
+      ]
+    },
+    {
+      "id": 5,
+      "case": 2,
+      "kind": "local_converse",
+      "rows": [
+        8,
+        9,
+        11,
+        0,
+        15
+      ]
+    },
+    {
+      "id": 6,
+      "case": 3,
+      "kind": "source",
+      "rows": [
+        6,
+        4,
+        0,
+        7,
+        15
+      ]
+    },
+    {
+      "id": 7,
+      "case": 3,
+      "kind": "local_converse",
+      "rows": [
+        0,
+        1,
+        3,
+        7,
+        15
+      ]
+    },
+    {
+      "id": 8,
+      "case": 4,
+      "kind": "source",
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        0
+      ]
+    },
+    {
+      "id": 9,
+      "case": 4,
+      "kind": "local_converse",
+      "rows": [
+        24,
+        25,
+        27,
+        16,
+        0
+      ]
+    },
+    {
+      "id": 10,
+      "case": 5,
+      "kind": "source",
+      "rows": [
+        22,
+        20,
+        16,
+        23,
+        0
+      ]
+    },
+    {
+      "id": 11,
+      "case": 5,
+      "kind": "local_converse",
+      "rows": [
+        16,
+        17,
+        19,
+        23,
+        0
+      ]
+    },
+    {
+      "id": 12,
+      "case": 6,
+      "kind": "source",
+      "rows": [
+        14,
+        12,
+        8,
+        16,
+        7
+      ]
+    },
+    {
+      "id": 13,
+      "case": 6,
+      "kind": "local_converse",
+      "rows": [
+        8,
+        9,
+        11,
+        16,
+        7
+      ]
+    },
+    {
+      "id": 14,
+      "case": 7,
+      "kind": "source",
+      "rows": [
+        6,
+        4,
+        0,
+        23,
+        7
+      ]
+    },
+    {
+      "id": 15,
+      "case": 7,
+      "kind": "local_converse",
+      "rows": [
+        0,
+        1,
+        3,
+        23,
+        7
+      ]
+    },
+    {
+      "id": 16,
+      "case": 8,
+      "kind": "source",
+      "rows": [
+        62,
+        60,
+        56,
+        48,
+        0,
+        16
+      ]
+    },
+    {
+      "id": 17,
+      "case": 8,
+      "kind": "local_converse",
+      "rows": [
+        48,
+        49,
+        51,
+        55,
+        0,
+        16
+      ]
+    },
+    {
+      "id": 18,
+      "case": 9,
+      "kind": "source",
+      "rows": [
+        46,
+        44,
+        40,
+        32,
+        15,
+        16
+      ]
+    },
+    {
+      "id": 19,
+      "case": 9,
+      "kind": "local_converse",
+      "rows": [
+        32,
+        33,
+        35,
+        39,
+        15,
+        16
+      ]
+    },
+    {
+      "id": 20,
+      "case": 10,
+      "kind": "source",
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        0,
+        31
+      ]
+    },
+    {
+      "id": 21,
+      "case": 10,
+      "kind": "local_converse",
+      "rows": [
+        16,
+        17,
+        19,
+        23,
+        0,
+        31
+      ]
+    },
+    {
+      "id": 22,
+      "case": 11,
+      "kind": "source",
+      "rows": [
+        14,
+        12,
+        8,
+        0,
+        15,
+        31
+      ]
+    },
+    {
+      "id": 23,
+      "case": 11,
+      "kind": "local_converse",
+      "rows": [
+        0,
+        1,
+        3,
+        7,
+        15,
+        31
+      ]
+    },
+    {
+      "id": 24,
+      "case": 12,
+      "kind": "source",
+      "rows": [
+        62,
+        60,
+        56,
+        48,
+        32,
+        0
+      ]
+    },
+    {
+      "id": 25,
+      "case": 12,
+      "kind": "local_converse",
+      "rows": [
+        48,
+        49,
+        51,
+        55,
+        32,
+        0
+      ]
+    },
+    {
+      "id": 26,
+      "case": 13,
+      "kind": "source",
+      "rows": [
+        46,
+        44,
+        40,
+        32,
+        47,
+        0
+      ]
+    },
+    {
+      "id": 27,
+      "case": 13,
+      "kind": "local_converse",
+      "rows": [
+        32,
+        33,
+        35,
+        39,
+        47,
+        0
+      ]
+    },
+    {
+      "id": 28,
+      "case": 14,
+      "kind": "source",
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        32,
+        15
+      ]
+    },
+    {
+      "id": 29,
+      "case": 14,
+      "kind": "local_converse",
+      "rows": [
+        16,
+        17,
+        19,
+        23,
+        32,
+        15
+      ]
+    },
+    {
+      "id": 30,
+      "case": 15,
+      "kind": "source",
+      "rows": [
+        14,
+        12,
+        8,
+        0,
+        47,
+        15
+      ]
+    },
+    {
+      "id": 31,
+      "case": 15,
+      "kind": "local_converse",
+      "rows": [
+        0,
+        1,
+        3,
+        7,
+        47,
+        15
+      ]
+    },
+    {
+      "id": 32,
+      "case": 16,
+      "kind": "source",
+      "rows": [
+        126,
+        124,
+        120,
+        112,
+        96,
+        0,
+        32
+      ]
+    },
+    {
+      "id": 33,
+      "case": 16,
+      "kind": "local_converse",
+      "rows": [
+        96,
+        97,
+        99,
+        103,
+        111,
+        0,
+        32
+      ]
+    },
+    {
+      "id": 34,
+      "case": 17,
+      "kind": "source",
+      "rows": [
+        94,
+        92,
+        88,
+        80,
+        64,
+        31,
+        32
+      ]
+    },
+    {
+      "id": 35,
+      "case": 17,
+      "kind": "local_converse",
+      "rows": [
+        64,
+        65,
+        67,
+        71,
+        79,
+        31,
+        32
+      ]
+    },
+    {
+      "id": 36,
+      "case": 18,
+      "kind": "source",
+      "rows": [
+        62,
+        60,
+        56,
+        48,
+        32,
+        0,
+        63
+      ]
+    },
+    {
+      "id": 37,
+      "case": 18,
+      "kind": "local_converse",
+      "rows": [
+        32,
+        33,
+        35,
+        39,
+        47,
+        0,
+        63
+      ]
+    },
+    {
+      "id": 38,
+      "case": 19,
+      "kind": "source",
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        0,
+        31,
+        63
+      ]
+    },
+    {
+      "id": 39,
+      "case": 19,
+      "kind": "local_converse",
+      "rows": [
+        0,
+        1,
+        3,
+        7,
+        15,
+        31,
+        63
+      ]
+    },
+    {
+      "id": 40,
+      "case": 20,
+      "kind": "source",
+      "rows": [
+        126,
+        124,
+        120,
+        112,
+        96,
+        64,
+        0
+      ]
+    },
+    {
+      "id": 41,
+      "case": 20,
+      "kind": "local_converse",
+      "rows": [
+        96,
+        97,
+        99,
+        103,
+        111,
+        64,
+        0
+      ]
+    },
+    {
+      "id": 42,
+      "case": 21,
+      "kind": "source",
+      "rows": [
+        94,
+        92,
+        88,
+        80,
+        64,
+        95,
+        0
+      ]
+    },
+    {
+      "id": 43,
+      "case": 21,
+      "kind": "local_converse",
+      "rows": [
+        64,
+        65,
+        67,
+        71,
+        79,
+        95,
+        0
+      ]
+    },
+    {
+      "id": 44,
+      "case": 22,
+      "kind": "source",
+      "rows": [
+        62,
+        60,
+        56,
+        48,
+        32,
+        64,
+        31
+      ]
+    },
+    {
+      "id": 45,
+      "case": 22,
+      "kind": "local_converse",
+      "rows": [
+        32,
+        33,
+        35,
+        39,
+        47,
+        64,
+        31
+      ]
+    },
+    {
+      "id": 46,
+      "case": 23,
+      "kind": "source",
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        0,
+        95,
+        31
+      ]
+    },
+    {
+      "id": 47,
+      "case": 23,
+      "kind": "local_converse",
+      "rows": [
+        0,
+        1,
+        3,
+        7,
+        15,
+        95,
+        31
+      ]
+    },
+    {
+      "id": 48,
+      "case": 24,
+      "kind": "source",
+      "rows": [
+        254,
+        252,
+        248,
+        240,
+        224,
+        192,
+        0,
+        64
+      ]
+    },
+    {
+      "id": 49,
+      "case": 24,
+      "kind": "local_converse",
+      "rows": [
+        192,
+        193,
+        195,
+        199,
+        207,
+        223,
+        0,
+        64
+      ]
+    },
+    {
+      "id": 50,
+      "case": 25,
+      "kind": "source",
+      "rows": [
+        190,
+        188,
+        184,
+        176,
+        160,
+        128,
+        63,
+        64
+      ]
+    },
+    {
+      "id": 51,
+      "case": 25,
+      "kind": "local_converse",
+      "rows": [
+        128,
+        129,
+        131,
+        135,
+        143,
+        159,
+        63,
+        64
+      ]
+    },
+    {
+      "id": 52,
+      "case": 26,
+      "kind": "source",
+      "rows": [
+        126,
+        124,
+        120,
+        112,
+        96,
+        64,
+        0,
+        127
+      ]
+    },
+    {
+      "id": 53,
+      "case": 26,
+      "kind": "local_converse",
+      "rows": [
+        64,
+        65,
+        67,
+        71,
+        79,
+        95,
+        0,
+        127
+      ]
+    },
+    {
+      "id": 54,
+      "case": 27,
+      "kind": "source",
+      "rows": [
+        62,
+        60,
+        56,
+        48,
+        32,
+        0,
+        63,
+        127
+      ]
+    },
+    {
+      "id": 55,
+      "case": 27,
+      "kind": "local_converse",
+      "rows": [
+        0,
+        1,
+        3,
+        7,
+        15,
+        31,
+        63,
+        127
+      ]
+    },
+    {
+      "id": 56,
+      "case": 28,
+      "kind": "source",
+      "rows": [
+        254,
+        252,
+        248,
+        240,
+        224,
+        192,
+        128,
+        0
+      ]
+    },
+    {
+      "id": 57,
+      "case": 28,
+      "kind": "local_converse",
+      "rows": [
+        192,
+        193,
+        195,
+        199,
+        207,
+        223,
+        128,
+        0
+      ]
+    },
+    {
+      "id": 58,
+      "case": 29,
+      "kind": "source",
+      "rows": [
+        190,
+        188,
+        184,
+        176,
+        160,
+        128,
+        191,
+        0
+      ]
+    },
+    {
+      "id": 59,
+      "case": 29,
+      "kind": "local_converse",
+      "rows": [
+        128,
+        129,
+        131,
+        135,
+        143,
+        159,
+        191,
+        0
+      ]
+    },
+    {
+      "id": 60,
+      "case": 30,
+      "kind": "source",
+      "rows": [
+        126,
+        124,
+        120,
+        112,
+        96,
+        64,
+        128,
+        63
+      ]
+    },
+    {
+      "id": 61,
+      "case": 30,
+      "kind": "local_converse",
+      "rows": [
+        64,
+        65,
+        67,
+        71,
+        79,
+        95,
+        128,
+        63
+      ]
+    },
+    {
+      "id": 62,
+      "case": 31,
+      "kind": "source",
+      "rows": [
+        62,
+        60,
+        56,
+        48,
+        32,
+        0,
+        191,
+        63
+      ]
+    },
+    {
+      "id": 63,
+      "case": 31,
+      "kind": "local_converse",
+      "rows": [
+        0,
+        1,
+        3,
+        7,
+        15,
+        31,
+        191,
+        63
+      ]
+    },
+    {
+      "id": 64,
+      "case": 32,
+      "kind": "source",
+      "rows": [
+        510,
+        508,
+        504,
+        496,
+        480,
+        448,
+        384,
+        0,
+        128
+      ]
+    },
+    {
+      "id": 65,
+      "case": 32,
+      "kind": "local_converse",
+      "rows": [
+        384,
+        385,
+        387,
+        391,
+        399,
+        415,
+        447,
+        0,
+        128
+      ]
+    },
+    {
+      "id": 66,
+      "case": 33,
+      "kind": "source",
+      "rows": [
+        382,
+        380,
+        376,
+        368,
+        352,
+        320,
+        256,
+        127,
+        128
+      ]
+    },
+    {
+      "id": 67,
+      "case": 33,
+      "kind": "local_converse",
+      "rows": [
+        256,
+        257,
+        259,
+        263,
+        271,
+        287,
+        319,
+        127,
+        128
+      ]
+    },
+    {
+      "id": 68,
+      "case": 34,
+      "kind": "source",
+      "rows": [
+        254,
+        252,
+        248,
+        240,
+        224,
+        192,
+        128,
+        0,
+        255
+      ]
+    },
+    {
+      "id": 69,
+      "case": 34,
+      "kind": "local_converse",
+      "rows": [
+        128,
+        129,
+        131,
+        135,
+        143,
+        159,
+        191,
+        0,
+        255
+      ]
+    },
+    {
+      "id": 70,
+      "case": 35,
+      "kind": "source",
+      "rows": [
+        126,
+        124,
+        120,
+        112,
+        96,
+        64,
+        0,
+        127,
+        255
+      ]
+    },
+    {
+      "id": 71,
+      "case": 35,
+      "kind": "local_converse",
+      "rows": [
+        0,
+        1,
+        3,
+        7,
+        15,
+        31,
+        63,
+        127,
+        255
+      ]
+    },
+    {
+      "id": 72,
+      "case": 36,
+      "kind": "source",
+      "rows": [
+        510,
+        508,
+        504,
+        496,
+        480,
+        448,
+        384,
+        256,
+        0
+      ]
+    },
+    {
+      "id": 73,
+      "case": 36,
+      "kind": "local_converse",
+      "rows": [
+        384,
+        385,
+        387,
+        391,
+        399,
+        415,
+        447,
+        256,
+        0
+      ]
+    },
+    {
+      "id": 74,
+      "case": 37,
+      "kind": "source",
+      "rows": [
+        382,
+        380,
+        376,
+        368,
+        352,
+        320,
+        256,
+        383,
+        0
+      ]
+    },
+    {
+      "id": 75,
+      "case": 37,
+      "kind": "local_converse",
+      "rows": [
+        256,
+        257,
+        259,
+        263,
+        271,
+        287,
+        319,
+        383,
+        0
+      ]
+    },
+    {
+      "id": 76,
+      "case": 38,
+      "kind": "source",
+      "rows": [
+        254,
+        252,
+        248,
+        240,
+        224,
+        192,
+        128,
+        256,
+        127
+      ]
+    },
+    {
+      "id": 77,
+      "case": 38,
+      "kind": "local_converse",
+      "rows": [
+        128,
+        129,
+        131,
+        135,
+        143,
+        159,
+        191,
+        256,
+        127
+      ]
+    },
+    {
+      "id": 78,
+      "case": 39,
+      "kind": "source",
+      "rows": [
+        126,
+        124,
+        120,
+        112,
+        96,
+        64,
+        0,
+        383,
+        127
+      ]
+    },
+    {
+      "id": 79,
+      "case": 39,
+      "kind": "local_converse",
+      "rows": [
+        0,
+        1,
+        3,
+        7,
+        15,
+        31,
+        63,
+        383,
+        127
+      ]
+    },
+    {
+      "id": 80,
+      "case": 40,
+      "kind": "source",
+      "rows": [
+        254,
+        252,
+        248,
+        240,
+        224,
+        1984,
+        1920,
+        1792,
+        1567,
+        1055,
+        31
+      ]
+    },
+    {
+      "id": 81,
+      "case": 40,
+      "kind": "local_converse",
+      "rows": [
+        224,
+        225,
+        227,
+        231,
+        239,
+        1984,
+        1920,
+        1792,
+        1567,
+        1055,
+        31
+      ]
+    },
+    {
+      "id": 82,
+      "case": 41,
+      "kind": "source",
+      "rows": [
+        1022,
+        1020,
+        1016,
+        1008,
+        992,
+        960,
+        896,
+        7936,
+        7680,
+        7168,
+        6271,
+        4223,
+        127
+      ]
+    },
+    {
+      "id": 83,
+      "case": 41,
+      "kind": "local_converse",
+      "rows": [
+        896,
+        897,
+        899,
+        903,
+        911,
+        927,
+        959,
+        7936,
+        7680,
+        7168,
+        6271,
+        4223,
+        127
+      ]
+    },
+    {
+      "id": 84,
+      "case": 42,
+      "kind": "source",
+      "rows": [
+        638,
+        636,
+        632,
+        624,
+        608,
+        960,
+        896,
+        799,
+        543,
+        1024,
+        511
+      ]
+    },
+    {
+      "id": 85,
+      "case": 42,
+      "kind": "local_converse",
+      "rows": [
+        608,
+        609,
+        611,
+        615,
+        623,
+        960,
+        896,
+        799,
+        543,
+        1024,
+        511
+      ]
+    },
+    {
+      "id": 86,
+      "case": 40,
+      "kind": "quotient_only",
+      "rows": [
+        1822,
+        1820,
+        1816,
+        1808,
+        1792,
+        223,
+        159,
+        31,
+        1760,
+        1248,
+        224
+      ]
+    },
+    {
+      "id": 87,
+      "case": 41,
+      "kind": "quotient_only",
+      "rows": [
+        7294,
+        7292,
+        7288,
+        7280,
+        7264,
+        7232,
+        7168,
+        895,
+        639,
+        127,
+        7040,
+        4992,
+        896
+      ]
+    },
+    {
+      "id": 88,
+      "case": 42,
+      "kind": "quotient_only",
+      "rows": [
+        926,
+        924,
+        920,
+        912,
+        896,
+        607,
+        543,
+        864,
+        608,
+        1024,
+        511
+      ]
+    }
+  ]
+}

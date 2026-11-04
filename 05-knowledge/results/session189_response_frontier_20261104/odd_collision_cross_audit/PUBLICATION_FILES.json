@@ -1,0 +1,28 @@
+{
+  "files": [
+    "REVIEW.md",
+    "README.md",
+    "DEPENDENCIES.json",
+    "algebra_audit.py",
+    "physical_audit.py",
+    "bank_integrity.py",
+    "scope_audit.py",
+    "kernel_controls.json",
+    "binomial_controls.json",
+    "general_mixed_controls.json",
+    "all_cover_grouped_controls.json",
+    "all_cover_anchor_controls.json",
+    "literal_queries.json",
+    "scope_controls.json",
+    "source_manifest_recount.json",
+    "named_bank_query_matches.json",
+    "algebra_normal.json",
+    "algebra_optimized.json",
+    "physical_normal.json",
+    "physical_optimized.json",
+    "bank_normal.json",
+    "bank_optimized.json",
+    "scope_normal.json",
+    "scope_optimized.json"
+  ]
+}
