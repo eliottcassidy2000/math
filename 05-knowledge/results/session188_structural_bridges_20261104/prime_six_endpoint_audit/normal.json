@@ -1,0 +1,101 @@
+{
+  "all_physical_values_sha256": "2e68ff042251dd368c4cb119f5b41b6175a15bd0ff7a2590fda26048dbdf4155",
+  "auditor_pins": {
+    "audit.py": "8e2ffabbe2268f92e91dc774896c4fbb43d53cfc126faf109ecdac1070bfda5f",
+    "count.cpp": "d2fe491f86897765d7063ac943983c46ce517dfa4a0c41aab44894d438a102fa"
+  },
+  "complete_labelled_codes": 32768,
+  "difference_histogram_by_degree": {
+    "0": 0,
+    "1": 12,
+    "2": 30,
+    "3": 170,
+    "4": 0
+  },
+  "distinct_physical_graphs": 8379,
+  "endpoint_support_histogram": {
+    "2": 13920,
+    "4": 12480,
+    "6": 6368
+  },
+  "full_endpoint_data_sha256": "86ab7e93a606c469e48f5633b7b0b04f91b53c5efbce3dca571241cbd07d0610",
+  "full_named_coefficients": 484,
+  "literal_word_completions": 737280,
+  "physical_control_kinds": {
+    "crossing_ambient": 6,
+    "family_source": 1,
+    "full_bank": 8192,
+    "mixed": 30,
+    "mixed_ambient": 30,
+    "pair_family": 64,
+    "pairs": 30,
+    "single": 30
+  },
+  "physical_graph_occurrences": 8383,
+  "prime8_boundary": {
+    "E": [
+      13,
+      65,
+      29,
+      22,
+      13,
+      29,
+      52,
+      26
+    ],
+    "S": [
+      87,
+      13,
+      13,
+      42,
+      31,
+      19,
+      18,
+      26
+    ],
+    "p": 0,
+    "rows": [
+      238,
+      4,
+      240,
+      118,
+      195,
+      146,
+      34,
+      74
+    ]
+  },
+  "prime_count": 10320,
+  "prime_endpoint_support_histogram": {
+    "2": 720,
+    "4": 5760,
+    "6": 3840
+  },
+  "prime_orbit_sizes": [
+    720,
+    720,
+    720,
+    720,
+    720,
+    720,
+    720,
+    720,
+    720,
+    720,
+    720,
+    720,
+    720,
+    720,
+    240
+  ],
+  "scope": "Complete six-name endpoint certificate and exact fixed-ambient physical controls; no claim for every even quotient order.",
+  "source_pins": {
+    "PROOF.md": "f270aec9732d87d2b7f9ec685b9655d7efeea00b89fbb052d5b73af6dfcfe894",
+    "endpoint_table.tsv": "902de128fc24d1460d611fdb1136bce64453a5d891d100f1c38ee46d399a4d56",
+    "endpoints.cpp": "c82edccfff29b694f7d16f412a0876e92fd907284befa34f5293c76d59a69da8",
+    "physical.cpp": "aab6c77e1f89c54a93e7d55ebecdacf0044691694044de7f36907774785873f6",
+    "verify.py": "1b2a9f0e8aede310104acfecad60f33c96eb73dc165923967e7a66431cda2582"
+  },
+  "status": "PASS",
+  "verified_physical_coordinates": 8635
+}
