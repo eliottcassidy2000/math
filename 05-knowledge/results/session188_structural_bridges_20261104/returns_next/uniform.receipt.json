@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "counts": {
+    "labelled_sources": 1096,
+    "module_anchor_cubic_sums": 6028,
+    "compressed_anchor_batteries": 11908,
+    "actual_uniform_queries": 61252,
+    "compressed_q2_batteries": 716
+  },
+  "examples": {
+    "q2": {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "blocks": [
+        6,
+        1
+      ],
+      "anchor": 0,
+      "d": 0,
+      "a_queries": [
+        6,
+        0
+      ],
+      "b_anchor": 1
+    }
+  },
+  "source_sha256": {
+    "UNIFORM.md": "94df1aaefe0c5d6223f389d75726c3c7a55bfff87ed63007dc9707de20cb0de8",
+    "uniform.py": "dbd37164ce3e818281d7950a770c785f8768e012ab8d484a1460990ecf4ac93e",
+    "verify.py": "78b2451a06e0f123eec76c72a12bc656e4a5fdc735cc6458faa94393a09c50da",
+    "probe.py": "c0129fd2c610b16faeafa68b0471b5eea54a7c48359171ef7330062ccb06ba49"
+  }
+}
