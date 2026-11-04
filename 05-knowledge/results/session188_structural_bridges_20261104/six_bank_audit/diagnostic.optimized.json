@@ -1,0 +1,66 @@
+{
+  "bank_sha256": "802a9f90073a934079c4c96e1bfa9f80a58d9cf5a59320db0363ae06151c3594",
+  "checker_sha256": "214122a0e3716a39cdd1ee7d9694be9b64ada72d8aeb1ee1732f6b555e2f1c38",
+  "degree_classes": [
+    {
+      "class_size_histogram": {
+        "12": 540,
+        "120": 6,
+        "144": 30,
+        "16": 90,
+        "24": 126,
+        "32": 60,
+        "36": 240,
+        "4": 80,
+        "48": 20,
+        "60": 20,
+        "64": 6,
+        "8": 420
+      },
+      "classes": 1638,
+      "coordinates": 13,
+      "maximum_degree": 1
+    },
+    {
+      "class_size_histogram": {
+        "1": 32288,
+        "2": 240
+      },
+      "classes": 32528,
+      "coordinates": 79,
+      "maximum_degree": 2
+    },
+    {
+      "class_size_histogram": {
+        "1": 32768
+      },
+      "classes": 32768,
+      "coordinates": 259,
+      "maximum_degree": 3
+    },
+    {
+      "class_size_histogram": {
+        "1": 32768
+      },
+      "classes": 32768,
+      "coordinates": 484,
+      "maximum_degree": 4
+    }
+  ],
+  "first_pair": [
+    408,
+    15462
+  ],
+  "first_pair_degree_counts": {
+    "3": 48,
+    "4": 48
+  },
+  "method": "Exact sorted vector tuples; exhaustive subsets of modules constructed from physical arc definition. No producer imports.",
+  "module_categories": {
+    "fully_covered_laminar": 120,
+    "outside_original_module_span": 120
+  },
+  "quadratic_pairs": 240,
+  "source_receipt_sha256": "55c05a1a8d566d6c9c8df468a068f6feef6aa2ac7dd5d8d448d9c00df69a0005",
+  "status": "PASS"
+}

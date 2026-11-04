@@ -1,0 +1,111 @@
+{
+  "encoding": "A deterministic gzip stream, base64 encoded and split into ASCII chunks. The restored file has byte-sized residues, not native multi-byte integers.",
+  "groups": [
+    {
+      "parts": [
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part000",
+          "size": 36001,
+          "sha256": "c08d6495957e004da46edd3042713967cb2d94b0fc38367e436352ac9dd7f5eb"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part001",
+          "size": 36001,
+          "sha256": "7d5b744667dbdb82e0a82e10221375cc2c69310a9bf1e1b343eb8d5f79d7a43c"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part002",
+          "size": 36001,
+          "sha256": "d9727f1f9dbcdfd6eabd93d94219ff7eff2fd8c80fdc33cc0bc0cbfefe3838ea"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part003",
+          "size": 36001,
+          "sha256": "ba8fba92358efa3e14a9952b8abc217d2924377d30061af19b5e1c95b00dabd3"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part004",
+          "size": 36001,
+          "sha256": "ab13dac60f132629fca76992d0b07a1a3a2ff87a5d66677874766464ffc6af82"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part005",
+          "size": 36001,
+          "sha256": "b3407335e1415a71b2f0e75b76c9383798cc8c952a56405d30dfdca8b169d8f4"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part006",
+          "size": 36001,
+          "sha256": "ac22acd04e0c8e4d7d56078a164263453e76c91658bb7f44e413d0fb5ce67f07"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part007",
+          "size": 36001,
+          "sha256": "622a34b3de98cd84f9ffb19b4e3cdde22bfeae6dbd4a42997eccf88160f6ac7d"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part008",
+          "size": 36001,
+          "sha256": "76c6e24da53ac63b345cd9965b791b3a3823909c8e81c4e6400c0e6a2c446ef7"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part009",
+          "size": 36001,
+          "sha256": "6d2e64159491570360ecd0d440f8971b25a5399070ab25193bd038399372f760"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part010",
+          "size": 36001,
+          "sha256": "aae81a59560a3cb25552b78bf0d9834fd89ad16852f7fe236b5a7b410c9193dc"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part011",
+          "size": 36001,
+          "sha256": "c7d55e7bf0196b47a4a3b4a815a9735f73f95a34009cc260b913e1f2bc6f1f18"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part012",
+          "size": 36001,
+          "sha256": "2602a538f15842ba8227cbad9c95d12a11b9da7086aa409f124382dceb637118"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part013",
+          "size": 36001,
+          "sha256": "d74a87d899ae89ccbe9a48d1b8e6ee513fa8e5e553efecc7373011a48d883813"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part014",
+          "size": 36001,
+          "sha256": "3f9af76e60c0546589cb6c382c37599acb8c9ceae42854c936ff142c4582d031"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part015",
+          "size": 36001,
+          "sha256": "ef98b8670cd4f39eddda76f6b25fbbda0334bc8ce1a34201d0bec48ff061de39"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part016",
+          "size": 36001,
+          "sha256": "462f7e610502aaa0ae3c267ebe6aaccb8431a5ab86df161f7d7c7d00aad1293b"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part017",
+          "size": 36001,
+          "sha256": "c6935685abe61fe14a3823f401de6141cc32533ce0dafd02993dd7b67b646c30"
+        },
+        {
+          "file": "mod4_six_vectors.bin.gz.b64.part018",
+          "size": 3977,
+          "sha256": "51d447a951670904ff0f96a60eba05517db50706c907c0e14c7277f5aed2222d"
+        }
+      ],
+      "outputs": [
+        {
+          "file": "mod4_six_vectors.bin",
+          "size": 15859712,
+          "sha256": "802a9f90073a934079c4c96e1bfa9f80a58d9cf5a59320db0363ae06151c3594"
+        }
+      ]
+    }
+  ]
+}

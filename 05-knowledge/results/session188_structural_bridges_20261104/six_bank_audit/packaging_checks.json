@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "raw_bytes": 15859712,
+  "parts": 19,
+  "normal_optimized_identical": true,
+  "raw_byte_equality": true,
+  "corrupt_chunk_no_write": true,
+  "existing_conflict_preserved": true
+}

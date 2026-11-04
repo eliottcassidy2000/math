@@ -1,0 +1,68 @@
+{
+  "source": {
+    "MOD4_SIX.md": {
+      "size": 5080,
+      "sha256": "9035c19ef01c0961c68dce859aa72a8abc0780c362dc03d46c25b040133ac5ce"
+    },
+    "mod4_six.cpp": {
+      "size": 2295,
+      "sha256": "fbbdc3afd1a0e42d4b03c4159b4fefe092d5f3e131bab92683bd2734cc5be439"
+    },
+    "mod4_six.json": {
+      "size": 197,
+      "sha256": "d52a3649da5f3496f4ee6fef571553d6f2c83c3b912f3b53fd123b8a49668d50"
+    },
+    "mod4_six.unoptimized.json": {
+      "size": 197,
+      "sha256": "d52a3649da5f3496f4ee6fef571553d6f2c83c3b912f3b53fd123b8a49668d50"
+    },
+    "mod4_six_vectors.bin": {
+      "size": 15859712,
+      "sha256": "802a9f90073a934079c4c96e1bfa9f80a58d9cf5a59320db0363ae06151c3594"
+    },
+    "mod4_six_collisions.json": {
+      "size": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "validate_six.cpp": {
+      "size": 2591,
+      "sha256": "c87c1c16a957b3b181f8e46ee2850f50f4b44abf8d1a2b39997fba61c6533c75"
+    },
+    "validation.json": {
+      "size": 192,
+      "sha256": "e17fa956bdd85f309823652498af935b34104ce368397fa339247d23ccc03fa2"
+    },
+    "validation.unoptimized.json": {
+      "size": 192,
+      "sha256": "e17fa956bdd85f309823652498af935b34104ce368397fa339247d23ccc03fa2"
+    },
+    "check_six.py": {
+      "size": 1909,
+      "sha256": "ccd64acd522f0003305ab1c72329930d2c8f5b41e830fc3b284d5b8d8e29c23c"
+    },
+    "six_python.json": {
+      "size": 4633,
+      "sha256": "edc10284888b1daa17e0c0c49f907f0ecce13166bb736be59c4332187ee50677"
+    },
+    "six_python.optimized.json": {
+      "size": 4633,
+      "sha256": "edc10284888b1daa17e0c0c49f907f0ecce13166bb736be59c4332187ee50677"
+    },
+    "degree_six.py": {
+      "size": 3285,
+      "sha256": "0dd2cd8699eb1349deaedf0aac7e97d36c12f1c6a7e1092140d1dd44fbd08378"
+    },
+    "degree_diagnostic.json": {
+      "size": 8278,
+      "sha256": "55c05a1a8d566d6c9c8df468a068f6feef6aa2ac7dd5d8d448d9c00df69a0005"
+    },
+    "degree_diagnostic.optimized.json": {
+      "size": 8278,
+      "sha256": "55c05a1a8d566d6c9c8df468a068f6feef6aa2ac7dd5d8d448d9c00df69a0005"
+    }
+  },
+  "independent_code": {
+    "audit.cpp": "22b1e67d3ee4c91da27ad010b662b2c9102a372ad92304cc171b8b3ce4b84057",
+    "diagnostic.py": "214122a0e3716a39cdd1ee7d9694be9b64ada72d8aeb1ee1732f6b555e2f1c38"
+  }
+}

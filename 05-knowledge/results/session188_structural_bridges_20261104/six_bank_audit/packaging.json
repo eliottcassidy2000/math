@@ -1,0 +1,193 @@
+{
+  "all_original_bytes_compared": 15859712,
+  "controls": [
+    {
+      "optimized": false,
+      "scenario": "roundtrip",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "corrupt_first_chunk",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "corrupt_last_chunk",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "conflicting_output",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "late_conflict",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "bad_output_hash",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "nonlocal_output",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "roundtrip",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "corrupt_first_chunk",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "corrupt_last_chunk",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "conflicting_output",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "late_conflict",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "bad_output_hash",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "nonlocal_output",
+      "status": "PASS"
+    }
+  ],
+  "gzip_bytes": 488980,
+  "gzip_sha256": "fc4d2d6922964baa7b186f9a8f4007720b8569e712c94b2311cbade81be12f0e",
+  "parts": 19,
+  "raw_bytes": 15859712,
+  "raw_sha256": "802a9f90073a934079c4c96e1bfa9f80a58d9cf5a59320db0363ae06151c3594",
+  "source_pins": [
+    {
+      "file": "SIX_REASSEMBLY.md",
+      "sha256": "741b0724b25f1ef4023dcb05625352f28563e14ae57545f4125294b2f9e8302e",
+      "size": 869
+    },
+    {
+      "file": "SIX_REASSEMBLY.json",
+      "sha256": "044c6fe5b34a261a460748e7c502c904908b88f1449ae6adaa1aaab86c4564c4",
+      "size": 4037
+    },
+    {
+      "file": "reassemble_six.py",
+      "sha256": "5e0c1bc35c14c12b3f631cabd5903d9d79ffa578c870642ab9a87d2709cfe38e",
+      "size": 1498
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part000",
+      "sha256": "c08d6495957e004da46edd3042713967cb2d94b0fc38367e436352ac9dd7f5eb",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part001",
+      "sha256": "7d5b744667dbdb82e0a82e10221375cc2c69310a9bf1e1b343eb8d5f79d7a43c",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part002",
+      "sha256": "d9727f1f9dbcdfd6eabd93d94219ff7eff2fd8c80fdc33cc0bc0cbfefe3838ea",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part003",
+      "sha256": "ba8fba92358efa3e14a9952b8abc217d2924377d30061af19b5e1c95b00dabd3",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part004",
+      "sha256": "ab13dac60f132629fca76992d0b07a1a3a2ff87a5d66677874766464ffc6af82",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part005",
+      "sha256": "b3407335e1415a71b2f0e75b76c9383798cc8c952a56405d30dfdca8b169d8f4",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part006",
+      "sha256": "ac22acd04e0c8e4d7d56078a164263453e76c91658bb7f44e413d0fb5ce67f07",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part007",
+      "sha256": "622a34b3de98cd84f9ffb19b4e3cdde22bfeae6dbd4a42997eccf88160f6ac7d",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part008",
+      "sha256": "76c6e24da53ac63b345cd9965b791b3a3823909c8e81c4e6400c0e6a2c446ef7",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part009",
+      "sha256": "6d2e64159491570360ecd0d440f8971b25a5399070ab25193bd038399372f760",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part010",
+      "sha256": "aae81a59560a3cb25552b78bf0d9834fd89ad16852f7fe236b5a7b410c9193dc",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part011",
+      "sha256": "c7d55e7bf0196b47a4a3b4a815a9735f73f95a34009cc260b913e1f2bc6f1f18",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part012",
+      "sha256": "2602a538f15842ba8227cbad9c95d12a11b9da7086aa409f124382dceb637118",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part013",
+      "sha256": "d74a87d899ae89ccbe9a48d1b8e6ee513fa8e5e553efecc7373011a48d883813",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part014",
+      "sha256": "3f9af76e60c0546589cb6c382c37599acb8c9ceae42854c936ff142c4582d031",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part015",
+      "sha256": "ef98b8670cd4f39eddda76f6b25fbbda0334bc8ce1a34201d0bec48ff061de39",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part016",
+      "sha256": "462f7e610502aaa0ae3c267ebe6aaccb8431a5ab86df161f7d7c7d00aad1293b",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part017",
+      "sha256": "c6935685abe61fe14a3823f401de6141cc32533ce0dafd02993dd7b67b646c30",
+      "size": 36001
+    },
+    {
+      "file": "mod4_six_vectors.bin.gz.b64.part018",
+      "sha256": "51d447a951670904ff0f96a60eba05517db50706c907c0e14c7277f5aed2222d",
+      "size": 3977
+    }
+  ],
+  "status": "PASS"
+}
