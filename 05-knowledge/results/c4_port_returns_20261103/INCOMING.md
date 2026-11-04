@@ -153,3 +153,18 @@ they select a target at an individual source clock and can change its
 seed, reader, and prefix roles. The next compensation obligations of30/66
 are physical endpoint tests, not another attempt to remain inside the
 now completely excluded clock-uniform four-vertex language.
+
+The final concurrent commit `110fbf7255` adds the audited
+[coloured multi-port grammar](../multiport_grammar_20261103/README.md).
+Its named endpoint forests provide an unbounded evaluator for typed words;
+its ordered-end obstruction rules out two uniform tripling steps using
+only end-appended/prepended blocks with old ports fixed. Its full component
+bank through order five accepts every odd value through2000 except7/21, a finite result inside
+that declared bank rather than an improvement of the global coverage
+frontier. Fixed-clock442/444 acceptance without their44 predecessor is a
+particularly relevant hostile: scalar target acceptance is not a
+prefix-closed physical grammar. Our prepared chains supply explicit source
+maps in selected cases, while the coloured evaluator can retain their
+changed joint defects. Neither result implies universal source acceptance.
+The incoming arbitrary-finite-bank shifted-return files remain RESERVED
+candidates and are not used as proved dependencies here.
