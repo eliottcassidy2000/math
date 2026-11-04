@@ -1,0 +1,1824 @@
+{
+  "audit_sha256": "1b941642b767dd3495cb68c7e29cd64b78552fc4ddfbc41477139d264b0697ef",
+  "coefficients_compared": 7434,
+  "coordinates": [
+    {
+      "coordinates": [
+        {
+          "count": 1,
+          "h": 2,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723"
+        },
+        {
+          "count": 1,
+          "h": 3,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723"
+        },
+        {
+          "count": 1,
+          "h": 4,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723"
+        },
+        {
+          "count": 1,
+          "h": 5,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723"
+        }
+      ],
+      "n": 1
+    },
+    {
+      "coordinates": [
+        {
+          "count": 1,
+          "h": 2,
+          "maximum": -168,
+          "minimum": -168,
+          "sha256": "457ca6c96353771d763bc9c89032b6b683718480a5d23d0348d662970492b36a"
+        },
+        {
+          "count": 1,
+          "h": 3,
+          "maximum": -288,
+          "minimum": -288,
+          "sha256": "b5938b18dbd85399f2e1a72b66ab8b8e370f7f67db29840be4a64a9098d5ba23"
+        },
+        {
+          "count": 1,
+          "h": 4,
+          "maximum": -192,
+          "minimum": -192,
+          "sha256": "56feef453c257eadb0f7e5780a23687dc06416c94976bbbef027efb7c22e0e90"
+        },
+        {
+          "count": 1,
+          "h": 5,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723"
+        },
+        {
+          "count": 1,
+          "h": 6,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723"
+        },
+        {
+          "count": 1,
+          "h": 7,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723"
+        },
+        {
+          "count": 1,
+          "h": 8,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723"
+        }
+      ],
+      "n": 2
+    },
+    {
+      "coordinates": [
+        {
+          "count": 4,
+          "h": 2,
+          "maximum": -116,
+          "minimum": -1318,
+          "sha256": "c09b129732f178a2b6f09cfa1c35f4610068e18dfa9ea4ce83a8213335340adc"
+        },
+        {
+          "count": 4,
+          "h": 3,
+          "maximum": -486,
+          "minimum": -5838,
+          "sha256": "19b34d80be856271e5c340d2dcee363525087458b377a1ba382a21aa974fa67b"
+        },
+        {
+          "count": 4,
+          "h": 4,
+          "maximum": -1160,
+          "minimum": -14080,
+          "sha256": "c7966f3154af595167cbb7ee701ff976eafaf2e1e0134e784e9ffed5e4659ee9"
+        },
+        {
+          "count": 4,
+          "h": 5,
+          "maximum": -1630,
+          "minimum": -19640,
+          "sha256": "467d0eb408d5738319e60ee9a136caf3f206ce742dc915ace2e9128295ca1788"
+        },
+        {
+          "count": 4,
+          "h": 6,
+          "maximum": -1260,
+          "minimum": -15120,
+          "sha256": "03f4a20e632bb926d58558d42c761d6364aab927b0fce5509df5193091f305ac"
+        },
+        {
+          "count": 4,
+          "h": 7,
+          "maximum": -420,
+          "minimum": -5040,
+          "sha256": "5f6efbbc23a02d520bae33f9dbfce788309cf76742dc6b6f516454678cce8b13"
+        },
+        {
+          "count": 4,
+          "h": 8,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba"
+        },
+        {
+          "count": 4,
+          "h": 9,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba"
+        },
+        {
+          "count": 4,
+          "h": 10,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba"
+        },
+        {
+          "count": 4,
+          "h": 11,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba"
+        }
+      ],
+      "n": 3
+    },
+    {
+      "coordinates": [
+        {
+          "count": 4,
+          "h": 2,
+          "maximum": -3692,
+          "minimum": -11054,
+          "sha256": "7940eb41b561231a30080291d08a150f036501abfdb01190b6aec715d0a10a51"
+        },
+        {
+          "count": 4,
+          "h": 3,
+          "maximum": -25824,
+          "minimum": -82728,
+          "sha256": "3172eb49e43b44ce75251f5e63204c24dbca587723276d1b2731f50ea5e2d9e2"
+        },
+        {
+          "count": 4,
+          "h": 4,
+          "maximum": -108736,
+          "minimum": -354272,
+          "sha256": "0126b589ba8ac3433b761191e5f53c168717fc5d32b99025e0f7569e2110fa3a"
+        },
+        {
+          "count": 4,
+          "h": 5,
+          "maximum": -302200,
+          "minimum": -974800,
+          "sha256": "8b301761fac3a826c5c92a79e90120b9f76aae00f11b165caab67ed310f2d34e"
+        },
+        {
+          "count": 4,
+          "h": 6,
+          "maximum": -571680,
+          "minimum": -1805040,
+          "sha256": "4eb49509ad6e91cfaa822dd9d2a7a998b50bdf65cebabc122546e6c84a484fb5"
+        },
+        {
+          "count": 4,
+          "h": 7,
+          "maximum": -733040,
+          "minimum": -2261840,
+          "sha256": "34b846b6faaba963ff766eda186d26b5afc7a22390a1de26a0c7a24087710629"
+        },
+        {
+          "count": 4,
+          "h": 8,
+          "maximum": -612640,
+          "minimum": -1855840,
+          "sha256": "307c7938ed0ee804a44773c4180ea61ab7375ba8ae758bd23ffa62f4a6bc95b6"
+        },
+        {
+          "count": 4,
+          "h": 9,
+          "maximum": -302400,
+          "minimum": -907200,
+          "sha256": "8c71a5db6322ec9e5b5c00a8631855f0efe5da8a6b2e6b8fc85937bdf38b8f99"
+        },
+        {
+          "count": 4,
+          "h": 10,
+          "maximum": -67200,
+          "minimum": -201600,
+          "sha256": "16d09bb076326acb572f188f6bb114e7d20060a5d5516714c772170ec370c893"
+        },
+        {
+          "count": 4,
+          "h": 11,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba"
+        },
+        {
+          "count": 4,
+          "h": 12,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba"
+        },
+        {
+          "count": 4,
+          "h": 13,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba"
+        },
+        {
+          "count": 4,
+          "h": 14,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba"
+        }
+      ],
+      "n": 4
+    },
+    {
+      "coordinates": [
+        {
+          "count": 10,
+          "h": 2,
+          "maximum": -1658,
+          "minimum": -55810,
+          "sha256": "ee5f290c0d3e80133af1025fc50dc7982f1c077e712980878950cfcd9e5b5c66"
+        },
+        {
+          "count": 10,
+          "h": 3,
+          "maximum": -16026,
+          "minimum": -554910,
+          "sha256": "e23ea859dc663fd53f7c20898b2189ddc46b44a2b026561774fac28e79f88550"
+        },
+        {
+          "count": 10,
+          "h": 4,
+          "maximum": -97028,
+          "minimum": -3325112,
+          "sha256": "d4eb5ee5c15a1db2c3d07535e9135587e283f07c13964482f949e068f866aad8"
+        },
+        {
+          "count": 10,
+          "h": 5,
+          "maximum": -406900,
+          "minimum": -13427540,
+          "sha256": "ab67087eec89bff28d7f9cadd3b969947b7cf7ec330f7aff781d773c53ef8b90"
+        },
+        {
+          "count": 10,
+          "h": 6,
+          "maximum": -1237320,
+          "minimum": -38699472,
+          "sha256": "0c7f3a07f25bba23303c64bbf9a020c580ea24c79127bc2f2daebad098b497c8"
+        },
+        {
+          "count": 10,
+          "h": 7,
+          "maximum": -2783508,
+          "minimum": -81977056,
+          "sha256": "7cd4aaa27860d4bddabd9750c6b869735af85a4cbb38548ed070e3b87ad9cece"
+        },
+        {
+          "count": 10,
+          "h": 8,
+          "maximum": -4649904,
+          "minimum": -129015936,
+          "sha256": "4a11b3c9fc9d442fddf9bc9026da026cf28f72e12a1a8752af7178b8089fd8d7"
+        },
+        {
+          "count": 10,
+          "h": 9,
+          "maximum": -5708556,
+          "minimum": -150091704,
+          "sha256": "f377cdbac5a1c84afcc0eec41989fa29e7cad467c5ebff1385ce16f2715fa815"
+        },
+        {
+          "count": 10,
+          "h": 10,
+          "maximum": -5012700,
+          "minimum": -126126000,
+          "sha256": "5c70d96976f095e1a6ed40b282f147625a902c9632900bd9a41a15c452f0a3e6"
+        },
+        {
+          "count": 10,
+          "h": 11,
+          "maximum": -2984520,
+          "minimum": -72792720,
+          "sha256": "4489208ffd9fa0ac5a37b85b047d80369c8e9f209e7e30b0ab85b3b4ba667c9f"
+        },
+        {
+          "count": 10,
+          "h": 12,
+          "maximum": -1081080,
+          "minimum": -25945920,
+          "sha256": "cba6ee4d3718bad4018ffebf7cf08fe2b4c99a930841486217e12d395a18f0c1"
+        },
+        {
+          "count": 10,
+          "h": 13,
+          "maximum": -180180,
+          "minimum": -4324320,
+          "sha256": "7dcfef8151a0af9180fca1726c5750fe2cefc881ae093590f5298488e14e8f2d"
+        },
+        {
+          "count": 10,
+          "h": 14,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d"
+        },
+        {
+          "count": 10,
+          "h": 15,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d"
+        },
+        {
+          "count": 10,
+          "h": 16,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d"
+        },
+        {
+          "count": 10,
+          "h": 17,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d"
+        }
+      ],
+      "n": 5
+    },
+    {
+      "coordinates": [
+        {
+          "count": 10,
+          "h": 2,
+          "maximum": -45142,
+          "minimum": -387890,
+          "sha256": "1550bf7a185faaa926bbc022c2fda8ed1cbe07bc6822e43cf253c9f2d84892a3"
+        },
+        {
+          "count": 10,
+          "h": 3,
+          "maximum": -571764,
+          "minimum": -4900914,
+          "sha256": "1f092599eb0dbeedd05537f2bbf6a81c911de5eb7486d9dbd47754eb3e7af12a"
+        },
+        {
+          "count": 10,
+          "h": 4,
+          "maximum": -4579260,
+          "minimum": -39790440,
+          "sha256": "af9312d81265b797a1bb78ebc963ab2a4ba6e41d036e39a0565bcb95e9659279"
+        },
+        {
+          "count": 10,
+          "h": 5,
+          "maximum": -25834350,
+          "minimum": -221601970,
+          "sha256": "2430ab47cb9ebb24fee1a64634e6f672b8f7cef9110da66ed13e961795b59d7b"
+        },
+        {
+          "count": 10,
+          "h": 6,
+          "maximum": -108374424,
+          "minimum": -901711788,
+          "sha256": "ff38448fc8406a3edc9a775409eef7e539877dcfe852cf17ddfa5c9f963b1457"
+        },
+        {
+          "count": 10,
+          "h": 7,
+          "maximum": -348218892,
+          "minimum": -2779916216,
+          "sha256": "7d5fc8e01a9dc01eac9ff52d0446254c76d6614760fcbc3c6ecad7672d1fff4c"
+        },
+        {
+          "count": 10,
+          "h": 8,
+          "maximum": -870610608,
+          "minimum": -6630187648,
+          "sha256": "b92f006b74b812bb73c711c452ee2d050fd8dd7db41e7896d02bdadb44206d97"
+        },
+        {
+          "count": 10,
+          "h": 9,
+          "maximum": -1704454920,
+          "minimum": -12360146400,
+          "sha256": "a98c2b8f4d6eb1e1f4992f6709552b93597aed2fbc5a6b7d445a07f43de2e331"
+        },
+        {
+          "count": 10,
+          "h": 10,
+          "maximum": -2609105100,
+          "minimum": -18041181480,
+          "sha256": "2945fceef2254abceb6d0b4d0f74777ce4e3bb4e2e33e353ae166d4206cce41a"
+        },
+        {
+          "count": 10,
+          "h": 11,
+          "maximum": -3093708156,
+          "minimum": -20479260648,
+          "sha256": "7f918c1d59be1522c6adb94a1d9e8a12926a38dcf9773333613ffe9ac1401543"
+        },
+        {
+          "count": 10,
+          "h": 12,
+          "maximum": -2788027704,
+          "minimum": -17776292688,
+          "sha256": "f35c73b52725bceb5394d2a9fecffb16c607d08bf3b573fea7f16e1a868b21a8"
+        },
+        {
+          "count": 10,
+          "h": 13,
+          "maximum": -1847325480,
+          "minimum": -11433742320,
+          "sha256": "143fd34a22539f79bc52a8a950f9c86ff6487c4e8988d19a9857c02bd96b6c96"
+        },
+        {
+          "count": 10,
+          "h": 14,
+          "maximum": -849248400,
+          "minimum": -5149304160,
+          "sha256": "90ab97825dd6d981136a2a1ea1ce7aee9e3e95851d7501ed83d41c715b8ac890"
+        },
+        {
+          "count": 10,
+          "h": 15,
+          "maximum": -242161920,
+          "minimum": -1452971520,
+          "sha256": "566f40c0e690ee8c0e4d8b7e7aa452e6813453381b828ff123cc851063a43185"
+        },
+        {
+          "count": 10,
+          "h": 16,
+          "maximum": -32288256,
+          "minimum": -193729536,
+          "sha256": "b66b1ccc8591f6617c59485d20470ca2bd7decdfe0330e02e7c8350941e59397"
+        },
+        {
+          "count": 10,
+          "h": 17,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d"
+        },
+        {
+          "count": 10,
+          "h": 18,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d"
+        },
+        {
+          "count": 10,
+          "h": 19,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d"
+        },
+        {
+          "count": 10,
+          "h": 20,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d"
+        }
+      ],
+      "n": 6
+    },
+    {
+      "coordinates": [
+        {
+          "count": 20,
+          "h": 2,
+          "maximum": -17736,
+          "minimum": -3151074,
+          "sha256": "51c880e6e17d3cfbb3b385eb963d1a7f444be07e4a88ed20a4eb8af9176be303"
+        },
+        {
+          "count": 20,
+          "h": 3,
+          "maximum": -274608,
+          "minimum": -41383311,
+          "sha256": "58154dec4d022bc16bbc32231a457df7c962d73f5a3e39255fd3475ac049dfc2"
+        },
+        {
+          "count": 20,
+          "h": 4,
+          "maximum": -2728632,
+          "minimum": -346359148,
+          "sha256": "72e5541ded46601476688cfff54dc46777b0859fef0b1a5a81e0395950e61801"
+        },
+        {
+          "count": 20,
+          "h": 5,
+          "maximum": -19409790,
+          "minimum": -2113312540,
+          "sha256": "59c1e8408c2eda0938a02a61ce7bf9d1c561cbecf1dcd054bfc175475183051c"
+        },
+        {
+          "count": 20,
+          "h": 6,
+          "maximum": -104562000,
+          "minimum": -10652112408,
+          "sha256": "28d0ea4f6a4838b819110f2774cccc141f4f516f8e12466cd80d7a5b1454f05d"
+        },
+        {
+          "count": 20,
+          "h": 7,
+          "maximum": -440711628,
+          "minimum": -41578031992,
+          "sha256": "bfbd53c2b68f70d12ae2c3fae93c5ab22ac690042afed9b019639a3416f00d8e"
+        },
+        {
+          "count": 20,
+          "h": 8,
+          "maximum": -1482254928,
+          "minimum": -128711162496,
+          "sha256": "756804d61d98c03315ddf686c0c52ba57e7e681d2da2c2dd2d8668d668021ca1"
+        },
+        {
+          "count": 20,
+          "h": 9,
+          "maximum": -4024598886,
+          "minimum": -320823102348,
+          "sha256": "e32c56e0443a8d1e588c2e5f27efea27f237fd036c34607108925807e516ca3b"
+        },
+        {
+          "count": 20,
+          "h": 10,
+          "maximum": -8873080920,
+          "minimum": -649579124040,
+          "sha256": "83f24d77cd7e337e41f0f033e667d7c46303daec9c154833e874f730b413c4ff"
+        },
+        {
+          "count": 20,
+          "h": 11,
+          "maximum": -15901263576,
+          "minimum": -1072212804432,
+          "sha256": "4dc71ba87c5c72c73cca416567e7ce53326e332098bb6b57f77edb44adc25694"
+        },
+        {
+          "count": 20,
+          "h": 12,
+          "maximum": -23083374600,
+          "minimum": -1441046486880,
+          "sha256": "5354ec709438b416bd243438b58ffeb7215d9e9d3f89f2bbe74c24c9d2fbed23"
+        },
+        {
+          "count": 20,
+          "h": 13,
+          "maximum": -26919746568,
+          "minimum": -1566936066696,
+          "sha256": "609bba6be4dccabdf0ffab82a569938d1487ae596eb46b141df160e9f0184eec"
+        },
+        {
+          "count": 20,
+          "h": 14,
+          "maximum": -24861452616,
+          "minimum": -1361156164368,
+          "sha256": "b4dbfd821eaa83303cfbeb387c114ac7297aec05b65f0f6d82c83e1710f0ff6c"
+        },
+        {
+          "count": 20,
+          "h": 15,
+          "maximum": -17774036280,
+          "minimum": -924697453680,
+          "sha256": "b6285cf92e9ecc8247e6771924c02b2ad2414fc2276c64682ed807b466890e3a"
+        },
+        {
+          "count": 20,
+          "h": 16,
+          "maximum": -9488134656,
+          "minimum": -474459009024,
+          "sha256": "d2616805671aee0e3546e7dd2c7e8d2fe0943b1899080efa68581b5ebb6a54f8"
+        },
+        {
+          "count": 20,
+          "h": 17,
+          "maximum": -3560500944,
+          "minimum": -173282613504,
+          "sha256": "92494abd156784404a34f50bd278758fb4da5b2a2a93b82d6fcd5c36dc0e955f"
+        },
+        {
+          "count": 20,
+          "h": 18,
+          "maximum": -838053216,
+          "minimum": -40226554368,
+          "sha256": "c37178decd786e8d9843c7a497156cd7fa43e115892950cd677e6c8f695f868f"
+        },
+        {
+          "count": 20,
+          "h": 19,
+          "maximum": -93117024,
+          "minimum": -4469617152,
+          "sha256": "f76883aa6bacb8e0277429fca33f04bf6223125601e8c868a8b872197e8af708"
+        },
+        {
+          "count": 20,
+          "h": 20,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68"
+        },
+        {
+          "count": 20,
+          "h": 21,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68"
+        },
+        {
+          "count": 20,
+          "h": 22,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68"
+        },
+        {
+          "count": 20,
+          "h": 23,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68"
+        }
+      ],
+      "n": 7
+    },
+    {
+      "coordinates": [
+        {
+          "count": 20,
+          "h": 2,
+          "maximum": -461724,
+          "minimum": -26210334,
+          "sha256": "c89624fcda958837bfc389424ece5faefe15686268fab90f0e3c9755e0fef351"
+        },
+        {
+          "count": 20,
+          "h": 3,
+          "maximum": -8586828,
+          "minimum": -397287099,
+          "sha256": "2a285235aac810f65ebcc5d99c71c8f23312328e1bb2f1de22a00a9e1a42d2c2"
+        },
+        {
+          "count": 20,
+          "h": 4,
+          "maximum": -102742344,
+          "minimum": -3838052084,
+          "sha256": "074016e5906b896c4920e5248336cc96d3b0116c2882be60b3c014f760763e74"
+        },
+        {
+          "count": 20,
+          "h": 5,
+          "maximum": -884833080,
+          "minimum": -26561824075,
+          "sha256": "3e40110b4f40ada8fc7e01437535582a1c1854594c0bb354f553fbf7a7cd0da1"
+        },
+        {
+          "count": 20,
+          "h": 6,
+          "maximum": -5818490892,
+          "minimum": -140212565406,
+          "sha256": "b0678b7f65145bcc468de4a44a12fbf247e22e24f35b3659952f6c20fcb36dc2"
+        },
+        {
+          "count": 20,
+          "h": 7,
+          "maximum": -30265085550,
+          "minimum": -590179049068,
+          "sha256": "e18c705e7fd26da6f913f3751ec7503ec8c023893cb2f03a15b5052cae2b20fb"
+        },
+        {
+          "count": 20,
+          "h": 8,
+          "maximum": -127367537856,
+          "minimum": -2201352615488,
+          "sha256": "d775ce296d2f06529907ae9993f3b6dbe92dfa0078674049940e73a0f4df3c83"
+        },
+        {
+          "count": 20,
+          "h": 9,
+          "maximum": -440121742398,
+          "minimum": -6739188924060,
+          "sha256": "9a33dd5c30added7cc9ba11bb6748458985bed2279376afd7d1e9be8016c9046"
+        },
+        {
+          "count": 20,
+          "h": 10,
+          "maximum": -1260655121520,
+          "minimum": -17125270975440,
+          "sha256": "1e0bf4462fe5a50799360fef1058efd754aece101ebddd67fe51407cbef6e6bd"
+        },
+        {
+          "count": 20,
+          "h": 11,
+          "maximum": -3009718864746,
+          "minimum": -36383806424196,
+          "sha256": "9f1be5d8bb564a1e9b566cdf6d74365e5234327d81c2c66de8bea7bb2f471443"
+        },
+        {
+          "count": 20,
+          "h": 12,
+          "maximum": -6002743687776,
+          "minimum": -64876598585568,
+          "sha256": "a6cc08858b3016176b38494229ada12a06a14fb4db2cf9657abb6bf5c27c4f2f"
+        },
+        {
+          "count": 20,
+          "h": 13,
+          "maximum": -9994858841682,
+          "minimum": -97166999345988,
+          "sha256": "031c93be415381b23132b081379648c9f4888e852652246bbd6a1d16eed70930"
+        },
+        {
+          "count": 20,
+          "h": 14,
+          "maximum": -13842894012948,
+          "minimum": -121957972816680,
+          "sha256": "b5b20603122697a259c4ac4fec4e9fd7fac4f2ecc9a8f2ed89ef3a0afc644d5b"
+        },
+        {
+          "count": 20,
+          "h": 15,
+          "maximum": -15837417984960,
+          "minimum": -127554675019200,
+          "sha256": "c51369266eb0829a98ba9fc6b45d34470600ff3fc5eff7ada79b7f3695e877ae"
+        },
+        {
+          "count": 20,
+          "h": 16,
+          "maximum": -14803683935040,
+          "minimum": -110080925670144,
+          "sha256": "54b4ff29f60a7bf5a94990310fce42f3ca6e3908f72d8dee75f638537c81c4e0"
+        },
+        {
+          "count": 20,
+          "h": 17,
+          "maximum": -11120753512440,
+          "minimum": -77194889106192,
+          "sha256": "4a3c2df24f9f52942a166f708a1306c47b9b40613d08b552e3e880524feed265"
+        },
+        {
+          "count": 20,
+          "h": 18,
+          "maximum": -6551544027600,
+          "minimum": -42967435766112,
+          "sha256": "78337ca061da3ed1f322238547f65e2497e107b776d0e794cbdb314bbe3e7d67"
+        },
+        {
+          "count": 20,
+          "h": 19,
+          "maximum": -2915427509280,
+          "minimum": -18301352921280,
+          "sha256": "663a78cd48d829fdb536a8e673f60914311266f45ce8d329fcd965acddc0d8a2"
+        },
+        {
+          "count": 20,
+          "h": 20,
+          "maximum": -921459464640,
+          "minimum": -5613892352640,
+          "sha256": "9a05aecf7bad6ad07b911662d974e79c7ca63875c13544f004e5177e3fd8feca"
+        },
+        {
+          "count": 20,
+          "h": 21,
+          "maximum": -184371707520,
+          "minimum": -1106230245120,
+          "sha256": "d88051ee90db420b8a5b443cce5322262a461057bb9cf22d72117d7d1c23d807"
+        },
+        {
+          "count": 20,
+          "h": 22,
+          "maximum": -17559210240,
+          "minimum": -105355261440,
+          "sha256": "edb20a7ee1d0cf1686c81cef4c5e05fef88fe09818a465fa1855d43be45d7387"
+        },
+        {
+          "count": 20,
+          "h": 23,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68"
+        },
+        {
+          "count": 20,
+          "h": 24,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68"
+        },
+        {
+          "count": 20,
+          "h": 25,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68"
+        },
+        {
+          "count": 20,
+          "h": 26,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68"
+        }
+      ],
+      "n": 8
+    },
+    {
+      "coordinates": [
+        {
+          "count": 35,
+          "h": 2,
+          "maximum": -169448,
+          "minimum": -215829586,
+          "sha256": "1feb381f617183e7ed8a2148bd1490311c92ddd4341304286ff8e3e887f90de1"
+        },
+        {
+          "count": 35,
+          "h": 3,
+          "maximum": -3648276,
+          "minimum": -3749109813,
+          "sha256": "e9a4ddf91cba0f8ce115691c242f01133a6738969829174fd7f80840a5eaad81"
+        },
+        {
+          "count": 35,
+          "h": 4,
+          "maximum": -50924004,
+          "minimum": -41590931652,
+          "sha256": "91a5276cb62e1677ac0045308fa859560d3b12006ee85c354478298032a1ad4b"
+        },
+        {
+          "count": 35,
+          "h": 5,
+          "maximum": -515767110,
+          "minimum": -331290487745,
+          "sha256": "28971b385bf150000fbcf58f3750b02cc84be51771c145c787541bdd03b68ce8"
+        },
+        {
+          "count": 35,
+          "h": 6,
+          "maximum": -4023477540,
+          "minimum": -2019154041114,
+          "sha256": "91216b6d6fb9429deb68565c65593c5084a95916b6e8b1989fc81db755f34cb5"
+        },
+        {
+          "count": 35,
+          "h": 7,
+          "maximum": -25065588940,
+          "minimum": -9795716263886,
+          "sha256": "6361819474c0d3a8542a3353beb04876aa5a9fd30e7993747ec9d1ab43d723f3"
+        },
+        {
+          "count": 35,
+          "h": 8,
+          "maximum": -127685885000,
+          "minimum": -38843848994672,
+          "sha256": "14a5c037709e280fb815e0cae27abde0384b49c965274b2a677ee6df4788430d"
+        },
+        {
+          "count": 35,
+          "h": 9,
+          "maximum": -540469066410,
+          "minimum": -129934591882488,
+          "sha256": "30f0708f3833959184eb429d8bfe090434849098e3fc4bc1628b7a2609b08953"
+        },
+        {
+          "count": 35,
+          "h": 10,
+          "maximum": -1922049993600,
+          "minimum": -391658192086920,
+          "sha256": "0f911320b7c971097d91c0ff603939048a691948820a4c943413590d05827f73"
+        },
+        {
+          "count": 35,
+          "h": 11,
+          "maximum": -5785960576572,
+          "minimum": -1002383703277308,
+          "sha256": "b987523bec6c5196614b5cfb2b1393cfe8c6bebda288720514c4b4fc3e632a4f"
+        },
+        {
+          "count": 35,
+          "h": 12,
+          "maximum": -14813598437352,
+          "minimum": -2191660375750560,
+          "sha256": "0643be0190730057c10d3d3e176ae8c3da583851562f456df07cb99b7dfbec5b"
+        },
+        {
+          "count": 35,
+          "h": 13,
+          "maximum": -32336168105384,
+          "minimum": -4109279676121620,
+          "sha256": "6f9fab8e17140c2acd603bfd9e80ad427c6a79f7ab19b5c556d945b6abd53152"
+        },
+        {
+          "count": 35,
+          "h": 14,
+          "maximum": -60206525435056,
+          "minimum": -6618125940594168,
+          "sha256": "b7811623fa4804a23c1ffe7083d4ee9fe0aa3c7dca1df5739c5e3926770da6bb"
+        },
+        {
+          "count": 35,
+          "h": 15,
+          "maximum": -95466996167400,
+          "minimum": -9152092853715240,
+          "sha256": "5ab5a4e40e2ff788588781afc69d3a78a7c30b5ed51666df00272fb927f66762"
+        },
+        {
+          "count": 35,
+          "h": 16,
+          "maximum": -128453888227808,
+          "minimum": -10840228751928576,
+          "sha256": "0dd6cf1640e47710f417af4aca759a1c6dc68754a208a5274983cf21be03ff65"
+        },
+        {
+          "count": 35,
+          "h": 17,
+          "maximum": -145793572798588,
+          "minimum": -10943774133946368,
+          "sha256": "240275a6aa73d6474d2177668718ea2d64d9fd5e38ae09ad4f2a0e63104c8433"
+        },
+        {
+          "count": 35,
+          "h": 18,
+          "maximum": -138357138615696,
+          "minimum": -9343878442243488,
+          "sha256": "d42805ddd4a495e7653b1065aa85550ccc0d3fc0ffaebed3ca47c09c1af32e77"
+        },
+        {
+          "count": 35,
+          "h": 19,
+          "maximum": -108416898196464,
+          "minimum": -6669715849594512,
+          "sha256": "e1bf84433d82a5b3e70f3f1865bf9815de4d2322a713e7bee638114c729a8058"
+        },
+        {
+          "count": 35,
+          "h": 20,
+          "maximum": -68917267419000,
+          "minimum": -3914031324403200,
+          "sha256": "c9bcab9643fba8f541c034b6da6788fe482dba7af3783ff4e8c707a3c9dfeafd"
+        },
+        {
+          "count": 35,
+          "h": 21,
+          "maximum": -34641802655460,
+          "minimum": -1842397374177360,
+          "sha256": "589ee6237d9b6adc6fece12b1d0d1447a309ec6740a9d8c2da245d26856bdd61"
+        },
+        {
+          "count": 35,
+          "h": 22,
+          "maximum": -13250314179960,
+          "minimum": -670012394319840,
+          "sha256": "0dff7c34a2a66964b2c8c3f38c605b83225023c2e27ce1a4a6b07827d0b7dae2"
+        },
+        {
+          "count": 35,
+          "h": 23,
+          "maximum": -3623538135360,
+          "minimum": -177020495377440,
+          "sha256": "4e42e5fdfa0a016ab380644c3d4cd27325bf466e593d70814f896b20c70aedd6"
+        },
+        {
+          "count": 35,
+          "h": 24,
+          "maximum": -631034118000,
+          "minimum": -30289637664000,
+          "sha256": "5facd493bde96637acbb96df30fbcb857e191ee0b8ea0bd2743b2d5a96665354"
+        },
+        {
+          "count": 35,
+          "h": 25,
+          "maximum": -52586176500,
+          "minimum": -2524136472000,
+          "sha256": "3185b536145a8e04d7b24523a8494d99083070a1c02082b10908a978a2c35d3e"
+        },
+        {
+          "count": 35,
+          "h": 26,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc"
+        },
+        {
+          "count": 35,
+          "h": 27,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc"
+        },
+        {
+          "count": 35,
+          "h": 28,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc"
+        },
+        {
+          "count": 35,
+          "h": 29,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc"
+        }
+      ],
+      "n": 9
+    },
+    {
+      "coordinates": [
+        {
+          "count": 35,
+          "h": 2,
+          "maximum": -4343936,
+          "minimum": -1759242286,
+          "sha256": "22ec715aa8d1022b38a240eccc85210adae42d738718c56fe19add46e84d654e"
+        },
+        {
+          "count": 35,
+          "h": 3,
+          "maximum": -107326116,
+          "minimum": -34539604761,
+          "sha256": "b5e6ed0132bb4f653dc12e21316c4d199d4556094e40e13fec074c80b7d1c0fe"
+        },
+        {
+          "count": 35,
+          "h": 4,
+          "maximum": -1720594484,
+          "minimum": -434709680840,
+          "sha256": "9df0c05f1f065384be2343e7d7adbaae7ba836d9215dc419a2aaf5eceafb5669"
+        },
+        {
+          "count": 35,
+          "h": 5,
+          "maximum": -20061615280,
+          "minimum": -3942099149870,
+          "sha256": "b9dd22e8f6caf428d6b814d21b73c953077fd38503f6ccb25ea71a43446b7b2a"
+        },
+        {
+          "count": 35,
+          "h": 6,
+          "maximum": -180833977092,
+          "minimum": -27447381401124,
+          "sha256": "4718441eb5335982f3e9c4af7178f4342bdf5b09da8ee9f273c4640d2fa0ea91"
+        },
+        {
+          "count": 35,
+          "h": 7,
+          "maximum": -1308227222232,
+          "minimum": -152673706061002,
+          "sha256": "3b8052fbb15551ffca66035df68a15ecd3ad05ae6f40a66c5064c8f9fa008890"
+        },
+        {
+          "count": 35,
+          "h": 8,
+          "maximum": -7786935395944,
+          "minimum": -696953119632392,
+          "sha256": "293e9ce519368899727bcb145cce68c50bdd213c946e33b0d3f28c072d926390"
+        },
+        {
+          "count": 35,
+          "h": 9,
+          "maximum": -38800554427692,
+          "minimum": -2661669367119315,
+          "sha256": "236b81eca6825dd381d574dcadd8be0770aa2e48e87208b4ade1c56cfe17e3e8"
+        },
+        {
+          "count": 35,
+          "h": 10,
+          "maximum": -163854456551520,
+          "minimum": -8624947665804170,
+          "sha256": "caca09b66e2185778cca455fcdf0c839d83cbe316a632738ceef468d7990d2a9"
+        },
+        {
+          "count": 35,
+          "h": 11,
+          "maximum": -591677078499540,
+          "minimum": -24635822150619372,
+          "sha256": "c9f8949f8fc536b7bdca7de51f0a3cb7e851aae5ace3268463ca4ffd046f452f"
+        },
+        {
+          "count": 35,
+          "h": 12,
+          "maximum": -1838464212250776,
+          "minimum": -63264703427746128,
+          "sha256": "0e83b1e0b74bd99dc23d8bed4c85f57900bc6c6936673223fbde7b39dc71f134"
+        },
+        {
+          "count": 35,
+          "h": 13,
+          "maximum": -4936562206529668,
+          "minimum": -141037724323804308,
+          "sha256": "290af72d71306c06ca7697e1fd814a46806cae5dd25dfb96ff3b59f192eab4a6"
+        },
+        {
+          "count": 35,
+          "h": 14,
+          "maximum": -11484457801857040,
+          "minimum": -273961768509909480,
+          "sha256": "46d7893df5be1940c19be2177bc7c4455895e8d94c21608fc7a4eb4fe80f7fab"
+        },
+        {
+          "count": 35,
+          "h": 15,
+          "maximum": -23172661618374840,
+          "minimum": -464679931890465720,
+          "sha256": "1ea0b23fdd55cb80df2ce3a1251d1160caaf2f882b6ed21e9331af96b3285c5a"
+        },
+        {
+          "count": 35,
+          "h": 16,
+          "maximum": -40538371595124832,
+          "minimum": -688686687363454208,
+          "sha256": "d08ec8bd304f602842cab48bd14509c4c68a228faa2410ea16137a1efb644d7a"
+        },
+        {
+          "count": 35,
+          "h": 17,
+          "maximum": -61377048538690456,
+          "minimum": -891152988973719472,
+          "sha256": "06e315c265fe797dfc496dce71ed1483b8a5fc6e4324e05d9b51836434e026de"
+        },
+        {
+          "count": 35,
+          "h": 18,
+          "maximum": -80159456420293536,
+          "minimum": -1004446894944502152,
+          "sha256": "dabaea442c63dbabee489f0b7d50ae9bd67d55a93077569da10d2159aa72ac0d"
+        },
+        {
+          "count": 35,
+          "h": 19,
+          "maximum": -89849795514226176,
+          "minimum": -982110383590104340,
+          "sha256": "99376248603e5dd7d76c12f9d21968e131f9ae5e64713236ff4298537c364d49"
+        },
+        {
+          "count": 35,
+          "h": 20,
+          "maximum": -85820087692224600,
+          "minimum": -827843412189794000,
+          "sha256": "ddee8b6a0d33305b4dffdec2a4aae5ebcb9bcef87fb3b92478ebf2286c0b8006"
+        },
+        {
+          "count": 35,
+          "h": 21,
+          "maximum": -69169044460580064,
+          "minimum": -596244061061829180,
+          "sha256": "d9f355f03a0e6990bda7b7f1be2ab92e7b977ef47b356c4faca12ea4bd198f37"
+        },
+        {
+          "count": 35,
+          "h": 22,
+          "maximum": -46417015073209352,
+          "minimum": -362381314571910920,
+          "sha256": "1529d15c6c10be8f21fc7fa18eb2e499a896835459fa45eb551421f9b8ac0c4c"
+        },
+        {
+          "count": 35,
+          "h": 23,
+          "maximum": -25460767056013432,
+          "minimum": -182617621230238480,
+          "sha256": "70006713fb6274a26120c86bf7cd128948de54c494031c3d0314ce382fd28d64"
+        },
+        {
+          "count": 35,
+          "h": 24,
+          "maximum": -11120488771989168,
+          "minimum": -74398905684623520,
+          "sha256": "d7fd6e4f95351999d9d66f1160facfd97833eb09f3e9d01ff11e2a014fbaa59e"
+        },
+        {
+          "count": 35,
+          "h": 25,
+          "maximum": -3719653980185000,
+          "minimum": -23587938472670000,
+          "sha256": "4a26b44675e14c3be9c183907cd4bca6ad25d2b395e3c81b1b255e9919ee0f95"
+        },
+        {
+          "count": 35,
+          "h": 26,
+          "maximum": -894783007690000,
+          "minimum": -5470299213464800,
+          "sha256": "17845b42ed371d1a0eae0ff7d73cacf5087ad5862c13c6a673d7558b5eefcd60"
+        },
+        {
+          "count": 35,
+          "h": 27,
+          "maximum": -137817851371200,
+          "minimum": -826907108227200,
+          "sha256": "e127d1734c51d5ddefca938256632fd237aea16c043a98da79751704b57fe55d"
+        },
+        {
+          "count": 35,
+          "h": 28,
+          "maximum": -10208729731200,
+          "minimum": -61252378387200,
+          "sha256": "fae8a9f2f62f36d842479e972d57dce8223c5fdeb045fb762d73d3bdab68f48c"
+        },
+        {
+          "count": 35,
+          "h": 29,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc"
+        },
+        {
+          "count": 35,
+          "h": 30,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc"
+        },
+        {
+          "count": 35,
+          "h": 31,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc"
+        },
+        {
+          "count": 35,
+          "h": 32,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc"
+        }
+      ],
+      "n": 10
+    },
+    {
+      "coordinates": [
+        {
+          "count": 56,
+          "h": 2,
+          "maximum": -1529300,
+          "minimum": -14255072710,
+          "sha256": "47db341b3b251ef1f04023a68d92007cade8cbbb38a09962f2f218c1a8d4772f"
+        },
+        {
+          "count": 56,
+          "h": 3,
+          "maximum": -42409350,
+          "minimum": -312115803075,
+          "sha256": "2e86dd0ca2404bc784e6b10f35f3cddbef2790761b2233d94842174dc12ce0ce"
+        },
+        {
+          "count": 56,
+          "h": 4,
+          "maximum": -766644300,
+          "minimum": -4398187740300,
+          "sha256": "8ffaa3c5a3e91c2df659230401a9eaf6598628d6753bd96f149f0c130e157430"
+        },
+        {
+          "count": 56,
+          "h": 5,
+          "maximum": -10128187230,
+          "minimum": -44827775038440,
+          "sha256": "0f55de73867be52cd9ce48daf6af52e8507e32c9439a31c0141966bfef9f91d1"
+        },
+        {
+          "count": 56,
+          "h": 6,
+          "maximum": -103968968712,
+          "minimum": -352132747492896,
+          "sha256": "025f2df54d0fa6349c62ec1b1eb76ee092b9a899f2913f9a6b1cdca8333c45a5"
+        },
+        {
+          "count": 56,
+          "h": 7,
+          "maximum": -861234104290,
+          "minimum": -2218204976694210,
+          "sha256": "02bc8653471b088059b28e32dae1e440714b3bc99e6a393c1ec6920f1d518a24"
+        },
+        {
+          "count": 56,
+          "h": 8,
+          "maximum": -5904134321240,
+          "minimum": -11512248972323760,
+          "sha256": "b1b6e806e8184bb31390a4eb71ff1fedebd870ac3b91a15b82a8e8fc6006c66b"
+        },
+        {
+          "count": 56,
+          "h": 9,
+          "maximum": -34098141411990,
+          "minimum": -50187382868745675,
+          "sha256": "2fd6aaa6a7125e0436c89602e2c61d663cff48bcd0b1f7ad0a46e3d4f6f8b8ad"
+        },
+        {
+          "count": 56,
+          "h": 10,
+          "maximum": -168057156447780,
+          "minimum": -186449764423773050,
+          "sha256": "c3faa8cfa776510bc1aa435dabd9e572a3be5af3a12e05c95cd243088104de4e"
+        },
+        {
+          "count": 56,
+          "h": 11,
+          "maximum": -713652389269446,
+          "minimum": -596800080779839574,
+          "sha256": "2338acba1a8cfb9ad72f5d7b0c85c4a0a9930c40aec38d5e9c921a52a885a996"
+        },
+        {
+          "count": 56,
+          "h": 12,
+          "maximum": -2629682283794280,
+          "minimum": -1659888914632444080,
+          "sha256": "9b2d06406d296e6bdfaeea14e87a43871ef5d2eab5758cb26acc98a2077eb856"
+        },
+        {
+          "count": 56,
+          "h": 13,
+          "maximum": -8452198986704330,
+          "minimum": -4221432964651401928,
+          "sha256": "a3480ee6f56360a8e12bec2a6010582672b70f5d3b7ebdef5b40f39cdba56036"
+        },
+        {
+          "count": 56,
+          "h": 14,
+          "maximum": -23784202508286220,
+          "minimum": -9562333127992717072,
+          "sha256": "d44e0746181f2416079a1e10e005c1f32a84e9d435b98eb3cded08a438787953"
+        },
+        {
+          "count": 56,
+          "h": 15,
+          "maximum": -58736106240600360,
+          "minimum": -19102022259651062160,
+          "sha256": "a5566339d26ee444fe8689c9b047153cfe2e235ee3d846e30186d175e4222554"
+        },
+        {
+          "count": 56,
+          "h": 16,
+          "maximum": -127459132146932768,
+          "minimum": -33730725160831542272,
+          "sha256": "7e9c4d2afd42d077b1ee1c2759e2ebeb2ef12ef3fc928dd808bbc41479015a23"
+        },
+        {
+          "count": 56,
+          "h": 17,
+          "maximum": -243096029610351580,
+          "minimum": -52717232101963597740,
+          "sha256": "6ac8768d0cc9f0fff5763a8cef52a081856683d5d06f14c91ec659915693d75b"
+        },
+        {
+          "count": 56,
+          "h": 18,
+          "maximum": -407161913828089680,
+          "minimum": -72937325700362093256,
+          "sha256": "a37c6fc476dbc87623f0a516e71e576438c85292d00c35596f1b4860adcce034"
+        },
+        {
+          "count": 56,
+          "h": 19,
+          "maximum": -597743953604768880,
+          "minimum": -89255029637121298808,
+          "sha256": "4a1171b544fe0be7978e353cbf9eef82b0369bfbabc46d74dc529c86e30140ea"
+        },
+        {
+          "count": 56,
+          "h": 20,
+          "maximum": -766821278059869240,
+          "minimum": -96405647167269028160,
+          "sha256": "7f3dcc4ea10a3d61509631abe98f4a373bceb17ef54e41eebc3a84b3bc564809"
+        },
+        {
+          "count": 56,
+          "h": 21,
+          "maximum": -855859311663416424,
+          "minimum": -91596067161530299368,
+          "sha256": "5fe225400603a5742c5baeb49e2ddd9c3664eed271ba6b62d1c2263cb4228d3e"
+        },
+        {
+          "count": 56,
+          "h": 22,
+          "maximum": -826141832117830800,
+          "minimum": -76169402619473589712,
+          "sha256": "db763c5a0575af42dc4307d36efccb54c88bc7a5c53312a337480d1ec1a7f5f6"
+        },
+        {
+          "count": 56,
+          "h": 23,
+          "maximum": -684249216565929300,
+          "minimum": -55052765791319488192,
+          "sha256": "8dae853f1685272737331100b0889f6723b2abb5a2ab7ff4b47f3b0154aa209d"
+        },
+        {
+          "count": 56,
+          "h": 24,
+          "maximum": -481212219335562000,
+          "minimum": -34254995961567638400,
+          "sha256": "6cd4612c0722013b47df7c323315531250623ecafd9ee63c89021ece24b299e1"
+        },
+        {
+          "count": 56,
+          "h": 25,
+          "maximum": -283377119349109500,
+          "minimum": -18111362569566180200,
+          "sha256": "2d0d1b4444c415e57716b508d562314ad8c06ee1d220191f86dbf526a123efad"
+        },
+        {
+          "count": 56,
+          "h": 26,
+          "maximum": -137109491479715040,
+          "minimum": -7991404594709730480,
+          "sha256": "9aedd35a3faca6b76e3450de1efb98f45bd3796a111c0e101ad393d1437f57c1"
+        },
+        {
+          "count": 56,
+          "h": 27,
+          "maximum": -53074079650577700,
+          "minimum": -2867975973725868720,
+          "sha256": "fdf7e5113860559d70127f146031e05e28e189c2f41412c54ca9de36950859a0"
+        },
+        {
+          "count": 56,
+          "h": 28,
+          "maximum": -15801837532681200,
+          "minimum": -805587568283097600,
+          "sha256": "245694aa6161a7bbe166597f536249fcb4b75b893ed22063c481d0831ee67124"
+        },
+        {
+          "count": 56,
+          "h": 29,
+          "maximum": -3397041824276100,
+          "minimum": -166422248044852800,
+          "sha256": "7f29f0de660efede50e19295b74f334c650e041540479f7498b24b2a5493d260"
+        },
+        {
+          "count": 56,
+          "h": 30,
+          "maximum": -469311546904200,
+          "minimum": -22526954251401600,
+          "sha256": "3026ac7b88c11b6abda47bb4eec4ef062a5200066240c3f5be466d0f4b30d062"
+        },
+        {
+          "count": 56,
+          "h": 31,
+          "maximum": -31287436460280,
+          "minimum": -1501796950093440,
+          "sha256": "76a182b8e78f95769f8f1be7782cd5901f4ca333b6ae613c1ddbdf098cab8740"
+        },
+        {
+          "count": 56,
+          "h": 32,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "b3b11c51c87214e4ef7dce0aa62d3f00e93210dfc472ab2cddd5bc731a020e30"
+        },
+        {
+          "count": 56,
+          "h": 33,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "b3b11c51c87214e4ef7dce0aa62d3f00e93210dfc472ab2cddd5bc731a020e30"
+        },
+        {
+          "count": 56,
+          "h": 34,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "b3b11c51c87214e4ef7dce0aa62d3f00e93210dfc472ab2cddd5bc731a020e30"
+        },
+        {
+          "count": 56,
+          "h": 35,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "b3b11c51c87214e4ef7dce0aa62d3f00e93210dfc472ab2cddd5bc731a020e30"
+        }
+      ],
+      "n": 11
+    },
+    {
+      "coordinates": [
+        {
+          "count": 56,
+          "h": 2,
+          "maximum": -39007576,
+          "minimum": -115145425284,
+          "sha256": "1cbeabbac861fcea1d7cb34ea576d4b3d872360bca732a82cc8b7f4a10b6c19f"
+        },
+        {
+          "count": 56,
+          "h": 3,
+          "maximum": -1207015326,
+          "minimum": -2780513291277,
+          "sha256": "bb35f030b4640df29e2c7b9b1c4b71f328c2e1f1226f60c98527771152b54c61"
+        },
+        {
+          "count": 56,
+          "h": 4,
+          "maximum": -24354667924,
+          "minimum": -43363088561604,
+          "sha256": "75c2adc25078d697210e5989ea71b4bbdca5b84723b8b6797289898c9ee8aacb"
+        },
+        {
+          "count": 56,
+          "h": 5,
+          "maximum": -359572005250,
+          "minimum": -490866741101525,
+          "sha256": "7b96fbd6dd71ede8d35b8b46e3b8b23b4c24d1baf7aa47df7e21dce25255778a"
+        },
+        {
+          "count": 56,
+          "h": 6,
+          "maximum": -4133287587756,
+          "minimum": -4297817745584514,
+          "sha256": "f98274a7d839c3929bf0fe5f06e97574fa6403bdb58c87d332d5973922bc262d"
+        },
+        {
+          "count": 56,
+          "h": 7,
+          "maximum": -38444439416348,
+          "minimum": -30286535481647487,
+          "sha256": "fa72347b8b1610dece74c5a08836ea3c335762991aa090ba860dd796630f0c60"
+        },
+        {
+          "count": 56,
+          "h": 8,
+          "maximum": -296934718616888,
+          "minimum": -176494244949591048,
+          "sha256": "5dfd3d88f8987e69c58ad8299e4e29efb10621b15e356fae7fa3d986dcf3f10e"
+        },
+        {
+          "count": 56,
+          "h": 9,
+          "maximum": -1939892999280912,
+          "minimum": -867262021288169517,
+          "sha256": "9f66f479e97da42f0231e9c14c3804407d572c378e09bb3deae7677c491fc92e"
+        },
+        {
+          "count": 56,
+          "h": 10,
+          "maximum": -10866052016708700,
+          "minimum": -3646085819389926870,
+          "sha256": "9972c50eeec361d35404015b959c29381b820ccef7381d3be6d05deee292cd2a"
+        },
+        {
+          "count": 56,
+          "h": 11,
+          "maximum": -52720089227430548,
+          "minimum": -13261867735913784141,
+          "sha256": "ecbd0420f9df7fd31055be869a5b31389d62720dfac36259a39f811245a79c6a"
+        },
+        {
+          "count": 56,
+          "h": 12,
+          "maximum": -223290414601735584,
+          "minimum": -42098405434881543828,
+          "sha256": "941ff1680358cd90f3b3268f39bb02def5fce2cd5921cf5362be266e6d01c81f"
+        },
+        {
+          "count": 56,
+          "h": 13,
+          "maximum": -830491336878744684,
+          "minimum": -117434201759716517481,
+          "sha256": "af8dcec0cdc6f5c7fef484d3a33e3957693da3140daea01422f2ed696c906d06"
+        },
+        {
+          "count": 56,
+          "h": 14,
+          "maximum": -2724734090335873616,
+          "minimum": -292724035992049519312,
+          "sha256": "72a914a7bf9829205bf41f581f82c526c84714a33915873a359c8903257c8060"
+        },
+        {
+          "count": 56,
+          "h": 15,
+          "maximum": -7911798316318213200,
+          "minimum": -673104130540241563800,
+          "sha256": "94b0fda06560454b905cf1b6766a6b183c4c1ebd73f77c75345d2991dd59ac3d"
+        },
+        {
+          "count": 56,
+          "h": 16,
+          "maximum": -20379246302650709344,
+          "minimum": -1377994316500079171712,
+          "sha256": "b7beda4ef1dd5a11ad4e51575321d1b607eb12916a51c10de22a98fa1c55ff86"
+        },
+        {
+          "count": 56,
+          "h": 17,
+          "maximum": -46630963045044204892,
+          "minimum": -2517512168744561253876,
+          "sha256": "cf6bb63b78e53ce711131dc344f73dda14c9076260d29235fa0db3c868ab4fa3"
+        },
+        {
+          "count": 56,
+          "h": 18,
+          "maximum": -94839069497023965672,
+          "minimum": -4110733790114509228320,
+          "sha256": "30e0366ba0289ce819cc82189991df5064e03f3777e4fbbb735024df2d06e823"
+        },
+        {
+          "count": 56,
+          "h": 19,
+          "maximum": -171409667955764224428,
+          "minimum": -6003653755511839463868,
+          "sha256": "e13ccceda8658f75214f34981b4bcd6565dadffc4e9b1f0c60afea8ba74e934d"
+        },
+        {
+          "count": 56,
+          "h": 20,
+          "maximum": -275030425720143295800,
+          "minimum": -7842290997914122719840,
+          "sha256": "fff632c74533b640f49e6dce99973d61520b8b3504421eb74523a1d62fc6044e"
+        },
+        {
+          "count": 56,
+          "h": 21,
+          "maximum": -391041800673176437512,
+          "minimum": -9154258713605919778956,
+          "sha256": "c9d8e98cdb5adb634fcdc28e2c0bd13d43e89052ed519c05b88bde5051c72d44"
+        },
+        {
+          "count": 56,
+          "h": 22,
+          "maximum": -491322346972540236296,
+          "minimum": -9531962338693702382904,
+          "sha256": "da72695769baf850d2edd196a1d7dbb5f0a7e8ae01d937df9819b4486c331dc2"
+        },
+        {
+          "count": 56,
+          "h": 23,
+          "maximum": -543457296863217609496,
+          "minimum": -8828663784261727217136,
+          "sha256": "997a90f6f5dec174e699805e3f1def19e1765b24db02bc5499f6d2cf94f9dd3e"
+        },
+        {
+          "count": 56,
+          "h": 24,
+          "maximum": -526556628405617828304,
+          "minimum": -7244402998560330492864,
+          "sha256": "bfca360a495c871a05511f88efefd6c9f61a4a775680dce17fd421787e6f2017"
+        },
+        {
+          "count": 56,
+          "h": 25,
+          "maximum": -444000139487269722500,
+          "minimum": -5237147149734888453000,
+          "sha256": "2d345000f0f9f507452b61ba5d2cbe810f9b02ad60722b390c81dfe8bcb1995b"
+        },
+        {
+          "count": 56,
+          "h": 26,
+          "maximum": -323098802383247639320,
+          "minimum": -3310820090751401189520,
+          "sha256": "287e579b2ca145545b7edca775975473a17c4fb503d9df84b453ebc617d4e248"
+        },
+        {
+          "count": 56,
+          "h": 27,
+          "maximum": -200712215441374214760,
+          "minimum": -1812187811982050717760,
+          "sha256": "ed92295b03e5555ff2bd48d628b4bbcb55eafbe2ff0674b1620d74e6c1255e20"
+        },
+        {
+          "count": 56,
+          "h": 28,
+          "maximum": -104924946015551276160,
+          "minimum": -847393190872096727040,
+          "sha256": "dc6db3ac3a98c782b187ccd7ed8e45479fd2afb1cc826f1c1eefcf93a164f402"
+        },
+        {
+          "count": 56,
+          "h": 29,
+          "maximum": -45276529134115592040,
+          "minimum": -332365243028680155840,
+          "sha256": "62b2fe63cb2d660b37bb3f163734d5074a32263caaa8945eed466cc9b57d3221"
+        },
+        {
+          "count": 56,
+          "h": 30,
+          "maximum": -15698673098374266000,
+          "minimum": -106542371527046582400,
+          "sha256": "3d130a1dbd802e176d58dfe23dce689e74a00589f0f406083d5ba0f79c6b7804"
+        },
+        {
+          "count": 56,
+          "h": 31,
+          "maximum": -4203651020640839040,
+          "minimum": -26854647632253692160,
+          "sha256": "9e605ed00fcdfb3b2b905e85af424060390bff7ff28c9ca789fbb4514e32af31"
+        },
+        {
+          "count": 56,
+          "h": 32,
+          "maximum": -815854985554801920,
+          "minimum": -5000468075161628160,
+          "sha256": "f2f95a2d93759c1fb8ad510563ec72f64e1ff022a4fd4fb4350664331ed747d9"
+        },
+        {
+          "count": 56,
+          "h": 33,
+          "maximum": -102122192606353920,
+          "minimum": -612733155638123520,
+          "sha256": "c59e923f75fe394fde66524da8e95b7670556cee3590aacb3f38442542c2848e"
+        },
+        {
+          "count": 56,
+          "h": 34,
+          "maximum": -6189223794324480,
+          "minimum": -37135342765946880,
+          "sha256": "fd74e72868ca6f14c1e6e26dc9ae88914a7590ebae93a073a6399e8df14e4164"
+        },
+        {
+          "count": 56,
+          "h": 35,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "b3b11c51c87214e4ef7dce0aa62d3f00e93210dfc472ab2cddd5bc731a020e30"
+        },
+        {
+          "count": 56,
+          "h": 36,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "b3b11c51c87214e4ef7dce0aa62d3f00e93210dfc472ab2cddd5bc731a020e30"
+        },
+        {
+          "count": 56,
+          "h": 37,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "b3b11c51c87214e4ef7dce0aa62d3f00e93210dfc472ab2cddd5bc731a020e30"
+        },
+        {
+          "count": 56,
+          "h": 38,
+          "maximum": 0,
+          "minimum": 0,
+          "sha256": "b3b11c51c87214e4ef7dce0aa62d3f00e93210dfc472ab2cddd5bc731a020e30"
+        }
+      ],
+      "n": 12
+    }
+  ],
+  "method": "Independent actual run-word kernel, explicit cut-subset generators and coefficient contraction; no producer imports",
+  "order13_method_boundary": 1930071780,
+  "small_controls": [
+    {
+      "count": 1,
+      "n": 1,
+      "sha256": "83ca5406e1c6458a3f6847abcc823404aaac48f3bf0e256db6b9ad5dc00dd570"
+    },
+    {
+      "count": 2,
+      "n": 2,
+      "sha256": "1165e9fe1117453ce5dc2670eebcab222a2353b5866229ba8e0b276ab4748e04"
+    },
+    {
+      "count": 8,
+      "n": 3,
+      "sha256": "19fdbc4fa3b1dc4bb6f27554abc5472f927c137f73d1faba2de47ee49b038f53"
+    },
+    {
+      "count": 64,
+      "n": 4,
+      "sha256": "c5446480b0e94ebc803077ccacc42b0fe18f5763abb4c2de02846146a051c429"
+    },
+    {
+      "count": 1024,
+      "n": 5,
+      "sha256": "ecf1b8e79c787f00770e8373000d38b0046c3a64b17b0283bcdafbb2c6823c3a"
+    }
+  ],
+  "source_pins": {
+    "PROOF.md": "b9688f2c037da3bb454a27a6d07e09af021f9cb21acef267f0bd14ba1e682d50",
+    "normal.json": "93740e9f655c220fcb2934f993f9e393914320cb00c266315eb110d14340263c",
+    "optimized.json": "93740e9f655c220fcb2934f993f9e393914320cb00c266315eb110d14340263c",
+    "verify.py": "5bbe90e3d00eb139f12bed6269ecfc36a837352db3a089d61755b905193f3b5b"
+  },
+  "status": "PASS"
+}
