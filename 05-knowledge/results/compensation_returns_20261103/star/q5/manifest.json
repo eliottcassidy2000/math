@@ -1,0 +1,21 @@
+{
+  "normal_optimized_identical": true,
+  "prior_packets_unchanged": true,
+  "files": {
+    "PROOF.md": "b7ca17d5487e5d206622b3fa873150efbe79babf41aa822c0e5abc41d621f11d",
+    "check_q5.py": "9a6e645716acf85298da7076e974e0eb6e2e551c1ae2bfa329261ec6b6fa69ba",
+    "reproduce.py": "805b00096860f995d1404b707f52913649df01eda428225d19eb091248b28111",
+    "normal.out": "866af172e8aa8d21acd4c4d269349b41ca6dcdaf776dbda55cc049bfc0337e0c",
+    "optimized.out": "866af172e8aa8d21acd4c4d269349b41ca6dcdaf776dbda55cc049bfc0337e0c",
+    "census.json": "b6798ba3195513e8e82f253a9125cc9284b9e0b1befa4981f6415cff60f002c4",
+    "witnesses.json": "f4f06d7eaff86a2176890f3a23ef345281a8f5b245fc935d494c24f23c952bd1",
+    "controls.json": "a674f08f8f77d450d37cf79f34b04c74b1ef675c724eb9a4dba8ba86d00b0c74",
+    "receipt.json": "db6347c24083509347d73bef93ee7d2b8e7126101e44031218dd19c1fa8ee8b3"
+  },
+  "inherited_dependencies": {
+    "c4_port_returns_20261103\\entry_selector\\receipt.json": "51fe34b8bfbfcbad2a4f3599ac06c00c7a3a08ace7fdfa09326ab873390ecdaf",
+    "c4_port_returns_20261103\\reader\\endpoint_profile.cpp": "e9d1a6fe1099ecb6243e443275857e6fd41e61dcd6945644f9ca3271da332dec",
+    "../q3/check_q3.py": "15b1e112f41a0ac71a1db6cb7c004bcdeb7226d133f4673ea31917c42009f5bc",
+    "../check_star.py": "fd17848761b2f15592242bdafc8f8b845916cdfd05db3563a4ba37f5bb2d0670"
+  }
+}

@@ -1,0 +1,2 @@
+PASS: initial C3->TT9 all4096 stars; 1792 strong; [{"H":1409,"strong_hits":6,"with_start_entry":0,"with_end_zero":6,"compatible":0},{"H":1427,"strong_hits":3,"with_start_entry":0,"with_end_zero":3,"compatible":0}]
+PASS: 9 full target profiles and two retained source controls

@@ -1,0 +1,3 @@
+PASS: 4096 literal-star words,1024 strong,512 root-end-ready,323 distinct typed counts;1409/1427 absent
+PASS: 790 independent full subset profiles;254 small formula controls;all512 typed port-entry banks
+PASS: nearest lower/upper counts1407/1417 and1425/1433;all actual rows,cuts,joints and retained seed fields saved

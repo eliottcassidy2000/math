@@ -1,0 +1,200 @@
+{
+  "status": "FINITE-EXACT independent controls of proved cap-width law",
+  "universe": "all deletion subsets at each depth0..6, orders1..13",
+  "records": [
+    {
+      "depth": 0,
+      "names": [
+        "x0"
+      ],
+      "rows": [
+        0
+      ],
+      "H": 1,
+      "endpoint_x0": 1,
+      "minimum_feedback": 0,
+      "achieving_set": []
+    },
+    {
+      "depth": 1,
+      "names": [
+        "x0",
+        "y1",
+        "x1"
+      ],
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "H": 3,
+      "endpoint_x0": 1,
+      "minimum_feedback": 1,
+      "achieving_set": [
+        "x1"
+      ]
+    },
+    {
+      "depth": 2,
+      "names": [
+        "x0",
+        "y1",
+        "x1",
+        "y2",
+        "x2"
+      ],
+      "rows": [
+        26,
+        28,
+        9,
+        16,
+        4
+      ],
+      "H": 9,
+      "endpoint_x0": 1,
+      "minimum_feedback": 1,
+      "achieving_set": [
+        "x1"
+      ]
+    },
+    {
+      "depth": 3,
+      "names": [
+        "x0",
+        "y1",
+        "x1",
+        "y2",
+        "x2",
+        "y3",
+        "x3"
+      ],
+      "rows": [
+        122,
+        124,
+        105,
+        112,
+        36,
+        64,
+        16
+      ],
+      "H": 27,
+      "endpoint_x0": 1,
+      "minimum_feedback": 2,
+      "achieving_set": [
+        "x1",
+        "x3"
+      ]
+    },
+    {
+      "depth": 4,
+      "names": [
+        "x0",
+        "y1",
+        "x1",
+        "y2",
+        "x2",
+        "y3",
+        "x3",
+        "y4",
+        "x4"
+      ],
+      "rows": [
+        506,
+        508,
+        489,
+        496,
+        420,
+        448,
+        144,
+        256,
+        64
+      ],
+      "H": 81,
+      "endpoint_x0": 1,
+      "minimum_feedback": 2,
+      "achieving_set": [
+        "x1",
+        "x3"
+      ]
+    },
+    {
+      "depth": 5,
+      "names": [
+        "x0",
+        "y1",
+        "x1",
+        "y2",
+        "x2",
+        "y3",
+        "x3",
+        "y4",
+        "x4",
+        "y5",
+        "x5"
+      ],
+      "rows": [
+        2042,
+        2044,
+        2025,
+        2032,
+        1956,
+        1984,
+        1680,
+        1792,
+        576,
+        1024,
+        256
+      ],
+      "H": 243,
+      "endpoint_x0": 1,
+      "minimum_feedback": 3,
+      "achieving_set": [
+        "x1",
+        "x3",
+        "x5"
+      ]
+    },
+    {
+      "depth": 6,
+      "names": [
+        "x0",
+        "y1",
+        "x1",
+        "y2",
+        "x2",
+        "y3",
+        "x3",
+        "y4",
+        "x4",
+        "y5",
+        "x5",
+        "y6",
+        "x6"
+      ],
+      "rows": [
+        8186,
+        8188,
+        8169,
+        8176,
+        8100,
+        8128,
+        7824,
+        7936,
+        6720,
+        7168,
+        2304,
+        4096,
+        1024
+      ],
+      "H": 729,
+      "endpoint_x0": 1,
+      "minimum_feedback": 3,
+      "achieving_set": [
+        "x1",
+        "x3",
+        "x5"
+      ]
+    }
+  ],
+  "source_sha256": "c9ec13200cce81c2c7e1ad0f33aae6532ccbf4405799bf1ddd9a097ee0cc0cfe"
+}

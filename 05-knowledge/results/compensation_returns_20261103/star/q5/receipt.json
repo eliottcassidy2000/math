@@ -1,0 +1,45 @@
+{
+  "status": "FINITE_EXACT_SINGLE_Q5_CARRIER",
+  "all_masks": 4096,
+  "strong": 1920,
+  "root_end_zero": 960,
+  "summary": [
+    {
+      "H": 1409,
+      "strong_hits": 1,
+      "with_root_end_zero": 0,
+      "with_start_entry": 0,
+      "compatible": 0
+    },
+    {
+      "H": 1427,
+      "strong_hits": 0,
+      "with_root_end_zero": 0,
+      "with_start_entry": 0,
+      "compatible": 0
+    }
+  ],
+  "unique_count_hostile": {
+    "mask": 3021,
+    "H": 1409,
+    "root_end_defect": 5,
+    "end_zero_names": [],
+    "start_one_two": [],
+    "flip": [
+      0,
+      10
+    ],
+    "after_flip_mask": 3020,
+    "after_flip_H": 975,
+    "after_flip_root_end_defect": 0
+  },
+  "full_target_profiles": 1,
+  "literal_controls": 30,
+  "dependencies": {
+    "c4_port_returns_20261103\\entry_selector\\receipt.json": "51fe34b8bfbfcbad2a4f3599ac06c00c7a3a08ace7fdfa09326ab873390ecdaf",
+    "c4_port_returns_20261103\\reader\\endpoint_profile.cpp": "e9d1a6fe1099ecb6243e443275857e6fd41e61dcd6945644f9ca3271da332dec",
+    "../q3/check_q3.py": "15b1e112f41a0ac71a1db6cb7c004bcdeb7226d133f4673ea31917c42009f5bc",
+    "../check_star.py": "fd17848761b2f15592242bdafc8f8b845916cdfd05db3563a4ba37f5bb2d0670"
+  },
+  "scope": "Exactly TT8->the specified strong C4, all4096 stars. No arbitrary q5 classification, neutral native conversion, or reusable return closure."
+}

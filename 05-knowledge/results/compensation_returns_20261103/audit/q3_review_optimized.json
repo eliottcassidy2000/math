@@ -1,0 +1,38 @@
+{
+  "status": "PASS independent literal q3 review",
+  "carriers": 2,
+  "all_stars_literal_H_checked": 8192,
+  "typed_full_profiles": 1408,
+  "deleted_and_control_profiles": 4,
+  "all_named_target_witnesses": 9,
+  "strong_counts": {
+    "original": 1792,
+    "relocated200": 1024
+  },
+  "entry_counts": {
+    "original": 0,
+    "relocated200": 384
+  },
+  "target_counts": [
+    {
+      "carrier": "original",
+      "H": 1409,
+      "count": 6
+    },
+    {
+      "carrier": "original",
+      "H": 1427,
+      "count": 3
+    }
+  ],
+  "scope": "Two fixed deleted carriers only; no new native programs, arbitrary-order exclusion, or returning-entry closure.",
+  "source_sha256": {
+    "compensation_returns_20261103\\star\\q3\\PROOF.md": "4ffbec5dcd43b3b2693643d31a748e48d8874638a3b823e9f711f5b75e61d7b4",
+    "compensation_returns_20261103\\star\\q3\\check_q3.py": "15b1e112f41a0ac71a1db6cb7c004bcdeb7226d133f4673ea31917c42009f5bc",
+    "compensation_returns_20261103\\star\\q3\\census.json": "6d35fb81c5baaf735c4b6991b68c26d9c17f3e01dbc3c688436fb5e530597fb9",
+    "compensation_returns_20261103\\star\\q3\\receipt.json": "f935a42261daa3cf9a9f79cd2e3022bf0615c5925c12ec5cbec1f925eccc22ee",
+    "compensation_returns_20261103\\star\\q3\\witnesses.json": "00a0cfa851f26b5a84a8137e4ef5157ea2e8f30dca34cb77a73b5b46a9ded0ab",
+    "compensation_returns_20261103\\audit\\exact_counter.cpp": "2bbe1149f78f074fbf454bdf3e1a0e12f7e28f1a6ed219480a95688fcb763796",
+    "compensation_returns_20261103\\audit\\check_q3_review.py": "b897f194d125ae06c7472f373743e1b8e9a88a99e64480bf87577b4eaee54e58"
+  }
+}

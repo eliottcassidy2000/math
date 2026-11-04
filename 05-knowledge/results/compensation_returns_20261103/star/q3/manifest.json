@@ -1,0 +1,19 @@
+{
+  "normal_optimized_identical": true,
+  "parent_packet_unchanged": true,
+  "files": {
+    "PROOF.md": "4ffbec5dcd43b3b2693643d31a748e48d8874638a3b823e9f711f5b75e61d7b4",
+    "check_q3.py": "15b1e112f41a0ac71a1db6cb7c004bcdeb7226d133f4673ea31917c42009f5bc",
+    "reproduce.py": "302b213418278473c547bd05d4baacff931760be4451d187e0faf33ab901312c",
+    "normal.out": "f30d6ac909a502ac4f25b1403fcf03fc37488f27f5aaefdeba95ef3d8b595d34",
+    "optimized.out": "f30d6ac909a502ac4f25b1403fcf03fc37488f27f5aaefdeba95ef3d8b595d34",
+    "census.json": "6d35fb81c5baaf735c4b6991b68c26d9c17f3e01dbc3c688436fb5e530597fb9",
+    "witnesses.json": "00a0cfa851f26b5a84a8137e4ef5157ea2e8f30dca34cb77a73b5b46a9ded0ab",
+    "receipt.json": "f935a42261daa3cf9a9f79cd2e3022bf0615c5925c12ec5cbec1f925eccc22ee"
+  },
+  "inherited_dependencies": {
+    "c4_port_returns_20261103\\entry_selector\\receipt.json": "51fe34b8bfbfcbad2a4f3599ac06c00c7a3a08ace7fdfa09326ab873390ecdaf",
+    "c4_port_returns_20261103\\reader\\endpoint_profile.cpp": "e9d1a6fe1099ecb6243e443275857e6fd41e61dcd6945644f9ca3271da332dec",
+    "../check_star.py": "fd17848761b2f15592242bdafc8f8b845916cdfd05db3563a4ba37f5bb2d0670"
+  }
+}

@@ -1,0 +1,2 @@
+PASS: TT8->C4 all4096 stars; 1920 strong; [{"H":1409,"strong_hits":1,"with_root_end_zero":0,"with_start_entry":0,"compatible":0},{"H":1427,"strong_hits":0,"with_root_end_zero":0,"with_start_entry":0,"compatible":0}]
+PASS: 1 full target profiles; 30 literal controls including both retained actual children

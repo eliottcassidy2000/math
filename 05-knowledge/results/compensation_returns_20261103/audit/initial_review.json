@@ -1,0 +1,25 @@
+{
+  "status": "PASS independent initial-cap q3 review",
+  "all_stars_literal_H_checked": 4096,
+  "strong_stars": 1792,
+  "named_target_full_profiles": 9,
+  "deleted_and_control_profiles": 3,
+  "target_counts": {
+    "1409": 6,
+    "1427": 3
+  },
+  "target_start_entry_count": 0,
+  "target_with_end_zero_count": 9,
+  "hostile_self_loop_rejected": true,
+  "scope": "Fixed initial C3->TT9 deleted carrier; no native program or arbitrary-carrier exclusion inferred.",
+  "source_sha256": {
+    "compensation_returns_20261103\\star\\q3\\initial\\PROOF.md": "31c0b990053485b91d6a8962dd125eeb40c2dea12d5b72592122cfc024b0ed3a",
+    "compensation_returns_20261103\\star\\q3\\initial\\check_initial.py": "261137135532f3241a8d9fb1315948dd4d933522cfe4e5f1de6fe4dea3fbf86b",
+    "compensation_returns_20261103\\star\\q3\\initial\\census.json": "e83837a7d34753aa6db5c8161e1b4f6eda1bdbac256e04d364ea3ba9e0d22157",
+    "compensation_returns_20261103\\star\\q3\\initial\\receipt.json": "34f0de9e8b25f795c2176a09c83a54583ce8ef8cfc311132c6e548469ab8372c",
+    "compensation_returns_20261103\\star\\q3\\initial\\witnesses.json": "3c1ca83c569852a93a8c24ea5c1d014638fe303137ca31a7d1414d9b90c9a7a8",
+    "compensation_returns_20261103\\audit\\exact_counter.cpp": "2bbe1149f78f074fbf454bdf3e1a0e12f7e28f1a6ed219480a95688fcb763796",
+    "compensation_returns_20261103\\audit\\check_q3_review.py": "b897f194d125ae06c7472f373743e1b8e9a88a99e64480bf87577b4eaee54e58",
+    "compensation_returns_20261103\\audit\\check_initial_review.py": "456ca6449bfd8c6d46e04682cd86d95365eebec7cd2eed45c77139908a9945af"
+  }
+}

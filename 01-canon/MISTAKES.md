@@ -4,6 +4,29 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — a deleted triangle's position does not exclude apex entry
+
+**Refuted draft implication, repaired before publication.** In the q3
+deletion classification `T-w=C3->TT_b`, excluding start defects1/2 at
+non-apex vertices does not exclude them at w. Let w beat two triangle
+vertices and lose to the third and every tail vertex. Then T is strong,
+`sigma_w=2`, and `H=6*2^b+1`. The smallest positive-tail example b1 has
+H13; b3 already refutes the proposed order-at-least-seven exclusion.
+The missing coordinate was the apex's actual outgoing cut. A second
+overstatement in the terminal-cap argument said its apex defect was at
+least3; a sole outgoing first-prefix vertex instead gives defect0.
+
+The repaired [full port case analysis](../05-knowledge/results/compensation_returns_20261103/structure/PROOF.md)
+retains both exceptions. Its numerical survivor is strong: if n>=7,
+q=3, and any start defect is1 or2, then H>=3*2^(n-4). Thus entry need
+not force an interior triangle, but it still costs too much for1409/1427
+with thirteen names. Independent review and exact exception controls are
+linked there. Separately, the [one-apex certificate](../05-knowledge/results/compensation_returns_20261103/recovery/ONE_APEX.md)
+proves that neither count admits q=1 at any order: the earlier30/66
+compensation question had an empty target class, not merely a missing
+local move. The revised question is how a larger deletion resource or a
+paid preparation can preserve the actual named entry and joint guards.
+
 ## 2026-11-03 — reader-entry polarity and the penultimate bit need separate guards
 
 **Local proof-scope correction; the finite named programs are unchanged.**

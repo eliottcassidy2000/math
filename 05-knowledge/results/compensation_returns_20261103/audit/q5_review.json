@@ -1,0 +1,28 @@
+{
+  "status": "PASS independent fixed-q5 witness review",
+  "literal_full_profiles": 5,
+  "saved_formula_cuts_replayed": 4096,
+  "strong_states": 1920,
+  "root_end_zero_states": 960,
+  "strong_targets": [
+    {
+      "mask": 3021,
+      "H": 1409
+    }
+  ],
+  "target_q": 5,
+  "target_root_defect": 5,
+  "target_end_zero_ports": 0,
+  "target_start_one_two_ports": 0,
+  "root_repair_H": 975,
+  "scope": "One fixed TT8->C4 carrier; all saved cuts replayed by proved formula with independently counted coefficients, not4096 literal full profiles.",
+  "source_sha256": {
+    "compensation_returns_20261103\\star\\q5\\PROOF.md": "b7ca17d5487e5d206622b3fa873150efbe79babf41aa822c0e5abc41d621f11d",
+    "compensation_returns_20261103\\star\\q5\\check_q5.py": "9a6e645716acf85298da7076e974e0eb6e2e551c1ae2bfa329261ec6b6fa69ba",
+    "compensation_returns_20261103\\star\\q5\\census.json": "b6798ba3195513e8e82f253a9125cc9284b9e0b1befa4981f6415cff60f002c4",
+    "compensation_returns_20261103\\star\\q5\\witnesses.json": "f4f06d7eaff86a2176890f3a23ef345281a8f5b245fc935d494c24f23c952bd1",
+    "compensation_returns_20261103\\audit\\exact_counter.cpp": "2bbe1149f78f074fbf454bdf3e1a0e12f7e28f1a6ed219480a95688fcb763796",
+    "compensation_returns_20261103\\audit\\check_q3_review.py": "b897f194d125ae06c7472f373743e1b8e9a88a99e64480bf87577b4eaee54e58",
+    "compensation_returns_20261103\\audit\\check_q5_review.py": "df4899d897681bff7d0a7fe8f3dd45d7e8c7d0db03f11918c0a5516353cbd0cd"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "status": "PROVED_FORMULA_AND_FINITE_EXACT_STAR_EXCLUSION",
+  "universe": 4096,
+  "strong": 1024,
+  "typed": 512,
+  "typed_distinct_H": 323,
+  "targets": [
+    1409,
+    1427
+  ],
+  "target_hits": [
+    0,
+    0
+  ],
+  "independent_full_profiles": 790,
+  "small_formula_controls": 254,
+  "typed_start_entry_states": 256,
+  "typed_end_entry_states": 1,
+  "retained_fields": [
+    {
+      "family": "24",
+      "stage": "source",
+      "H": 155,
+      "e": 7,
+      "s": 12,
+      "F": 424,
+      "S": 709,
+      "P2": 6244,
+      "q": 71,
+      "p_deleted": 1976,
+      "S3": 10192
+    },
+    {
+      "family": "24",
+      "stage": "prepared_target",
+      "H": 469,
+      "e": 1,
+      "s": 1,
+      "F": 791,
+      "S": 605,
+      "P2": 42740,
+      "q": 1,
+      "p_deleted": 1024,
+      "S3": 32011
+    },
+    {
+      "family": "24",
+      "stage": "C2_first_birth",
+      "H": 773,
+      "e": 1,
+      "s": 1,
+      "F": 1303,
+      "S": 1211,
+      "P2": 107720,
+      "q": 1,
+      "p_deleted": 2048,
+      "S3": 96545
+    },
+    {
+      "family": "24",
+      "stage": "C2_child",
+      "H": 1409,
+      "e": 1,
+      "s": 3,
+      "F": 2373,
+      "S": 3633,
+      "P2": 279796,
+      "q": 3,
+      "p_deleted": 6144,
+      "S3": 354169
+    },
+    {
+      "family": "24",
+      "stage": "debt",
+      "H": 1379,
+      "e": 1,
+      "s": 1,
+      "F": 2327,
+      "S": 2423,
+      "P2": 281044,
+      "q": 1,
+      "p_deleted": 4096,
+      "S3": 290659
+    },
+    {
+      "family": "44",
+      "stage": "source",
+      "H": 157,
+      "e": 7,
+      "s": 11,
+      "F": 459,
+      "S": 747,
+      "P2": 6692,
+      "q": 79,
+      "p_deleted": 2224,
+      "S3": 10891
+    },
+    {
+      "family": "44",
+      "stage": "prepared_target",
+      "H": 475,
+      "e": 1,
+      "s": 1,
+      "F": 823,
+      "S": 589,
+      "P2": 43316,
+      "q": 1,
+      "p_deleted": 1024,
+      "S3": 29419
+    },
+    {
+      "family": "44",
+      "stage": "C2_first_birth",
+      "H": 771,
+      "e": 1,
+      "s": 1,
+      "F": 1335,
+      "S": 1179,
+      "P2": 107208,
+      "q": 1,
+      "p_deleted": 2048,
+      "S3": 88769
+    },
+    {
+      "family": "44",
+      "stage": "C2_child",
+      "H": 1427,
+      "e": 1,
+      "s": 3,
+      "F": 2469,
+      "S": 3537,
+      "P2": 281716,
+      "q": 3,
+      "p_deleted": 6144,
+      "S3": 325657
+    },
+    {
+      "family": "44",
+      "stage": "debt",
+      "H": 1361,
+      "e": 1,
+      "s": 1,
+      "F": 2359,
+      "S": 2359,
+      "P2": 274900,
+      "q": 1,
+      "p_deleted": 4096,
+      "S3": 267331
+    }
+  ],
+  "nearest": [
+    {
+      "target": 1409,
+      "lower": 1407,
+      "upper": 1417,
+      "choices": 4
+    },
+    {
+      "target": 1427,
+      "lower": 1425,
+      "upper": 1433,
+      "choices": 6
+    }
+  ],
+  "dependencies": {
+    "c4_port_returns_20261103\\entry_selector\\receipt.json": "51fe34b8bfbfcbad2a4f3599ac06c00c7a3a08ace7fdfa09326ab873390ecdaf",
+    "c4_port_returns_20261103\\reader\\endpoint_profile.cpp": "e9d1a6fe1099ecb6243e443275857e6fd41e61dcd6945644f9ca3271da332dec"
+  },
+  "scope": "All reorientations of inner0 star with every other named edge fixed. No neutral compensation exists; nearest alternatives are exact graphs, not source replacements or native programs."
+}
