@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "literal_tournaments": 511,
+  "derivative_base_assignments": 1023,
+  "cut_factorizations": 4950,
+  "prefixes": 8191,
+  "scope": "finite audits supporting separately proved all-length statements"
+}
