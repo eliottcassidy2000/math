@@ -22763,3 +22763,42 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **A pre-registration mischaracterised.** The note said HYP-9344 (2) "took the witness count `b_(k-2)(4)` for the defect"; it tabulated the witnesses separately (`1, 4, 14`, correct) and extrapolated the *defect* sequence `1, 4, 16` without the `-E_T(k-2)` term. Reworded.
 - **Small slips.** Jones 2014 is Bull. Aust. Math. Soc. 89 (2014) 159-165, not J. Algebraic Combin.; the nauty keying figure "82 instead of 88" depends on the construction (stated now); the 838-cycle sanity check had no script in the packet (`lemma_check.py` added). All repaired (note section 10).
 - **Statement 7, Step 5 (pushed as PROVED with audit B pending; found by audit B).** The conjugate case said that a conjugate `H'` with `Q' = P cup F` forces `X in {K_(q,q), empty}` "by the argument just given", but that argument used an automorphism carrying `Q` onto `P cup F`, which a conjugate does not supply; audit B exhibited 18 `N`-even configurations with such a conjugate and a nonempty `X[Q]`. Repair: the `p`-cycle of `H'` lies inside `Q` and fixes `q - p >= 2` points, impossible in `AGL(1, q)` when `X[Q]` is a prime circulant, so `X[Q]` is empty and the conclusion follows. Also: `Sym(part) x Sym(part)` cannot carry `Q' = P cup F` to `Q` in `K_(q,q)` (the side swap is needed); `D cap M = empty` needs fact (i) when `M = Q`; "the least degree at which the pair `(p, q)` violates HYP-9340 (a) is `2q`" is proved only for `C_pq` of type `(p, q, 1^k)`; and 7(a) was stated for `q < 2p` although the proof gives it for all primes `p < q` and `k < min(p, q - p)`. All repaired.
+
+## MISTAKE-711 (2026-11-04, opus-2026-11-04-S76, the note `05-knowledge/results/unit_start_pm2_port_pairs_symmetry_split_mrb_20261104.md`, THM-4872 and HYP-9465 at the pre-audit commit 3192fab75f; found by the independent audit `04-computation/experiments/unit_start_pm2_pairs_20261104_audit_S76/AUDIT.md`) -- a same-prompt lane missed, and the +-2 payoff stated without its prior art
+
+- **What was claimed.**
+  - (1) The note credited only kind-pasteur's THM-4870 for the first half of the prompt.
+  - (2) "A reusable local +-2 adjustment across an entire clocked family" was presented as the payoff of the new order-7
+    pair, with no earlier +-2 mechanism cited.
+- **Why it was wrong.**
+  - (1) Session190's CP1 (15:08) and CP2 (15:22), `session190_constructive_links_20261104/`, had answered the same first
+    half before this session's first commit, whose parent is CP2.
+  - (2) Session176 section 1 (2026-11-03) proved a persistent single-edge +-2 gate H = 6 * 2^r -+ 1 at every clock, and
+    Session185 a three-state version. Non-unit wrapper +-2 pairs exist already at order 5. B is the order-7 core of the
+    named 170807 source (zero_ready_component_returns).
+  - (3) Smaller errors:
+    - 47 against 91;
+    - title order ranges;
+    - incomplete proof dependencies;
+    - a narrowly checked wrapper formula;
+    - route arc sets;
+    - the scope of "port response";
+    - the source of {2, 5, 13, 34, 89};
+    - MRB wording;
+    - the section 4 rows;
+    - prediction typing;
+    - stale comments.
+- **Repair.** All applied:
+  - Session190 credited;
+  - a prior-art and scope paragraph added;
+  - the general wrapper proof credited to the zero-ready clock;
+  - every minor fixed.
+
+  No number or proof changed. The audit reproduced everything with different methods.
+- **How it was caught.** The audit read the full same-day log from 13:00, grepped the numbered-session packets for +-2
+  gates, and rebuilt B from the 170807 source rows.
+- **Lesson.**
+  - When the owner re-sends a prompt, grep the same-day log of ALL lanes for its distinctive phrases, the numbered
+    sessions included, not only the named agents.
+  - Before calling a mechanism's payoff new, grep the repository for the payoff itself: here "+-2", "6 * 2^r" and
+    "gate".
