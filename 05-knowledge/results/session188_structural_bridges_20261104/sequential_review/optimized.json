@@ -1,0 +1,328 @@
+{
+  "alias_topology_census": [
+    {
+      "exact_gate_transfer_checks": 0,
+      "gates": 1,
+      "literal_reroutes": 2,
+      "live_topologies": 1
+    },
+    {
+      "exact_gate_transfer_checks": 0,
+      "gates": 2,
+      "literal_reroutes": 8,
+      "live_topologies": 2
+    },
+    {
+      "exact_gate_transfer_checks": 6,
+      "gates": 3,
+      "literal_reroutes": 42,
+      "live_topologies": 7
+    },
+    {
+      "exact_gate_transfer_checks": 78,
+      "gates": 4,
+      "literal_reroutes": 304,
+      "live_topologies": 38
+    },
+    {
+      "exact_gate_transfer_checks": 1008,
+      "gates": 5,
+      "literal_reroutes": 2950,
+      "live_topologies": 295
+    }
+  ],
+  "sharp_ladders": {
+    "exhaustive_semantic_assignments_checked": 1232,
+    "rows": [
+      {
+        "boundary_excess_sum": 1,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 6,
+        "initial_phi": 1,
+        "k": 1,
+        "total_deletions": 5
+      },
+      {
+        "boundary_excess_sum": 2,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 8,
+        "initial_phi": 1,
+        "k": 2,
+        "total_deletions": 7
+      },
+      {
+        "boundary_excess_sum": 3,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 10,
+        "initial_phi": 1,
+        "k": 3,
+        "total_deletions": 9
+      },
+      {
+        "boundary_excess_sum": 4,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 12,
+        "initial_phi": 1,
+        "k": 4,
+        "total_deletions": 11
+      },
+      {
+        "boundary_excess_sum": 5,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 14,
+        "initial_phi": 1,
+        "k": 5,
+        "total_deletions": 13
+      },
+      {
+        "boundary_excess_sum": 6,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 16,
+        "initial_phi": 1,
+        "k": 6,
+        "total_deletions": 15
+      },
+      {
+        "boundary_excess_sum": 7,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 18,
+        "initial_phi": 1,
+        "k": 7,
+        "total_deletions": 17
+      },
+      {
+        "boundary_excess_sum": 8,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 20,
+        "initial_phi": 1,
+        "k": 8,
+        "total_deletions": 19
+      },
+      {
+        "boundary_excess_sum": 9,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 22,
+        "initial_phi": 1,
+        "k": 9,
+        "total_deletions": 21
+      },
+      {
+        "boundary_excess_sum": 10,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 24,
+        "initial_phi": 1,
+        "k": 10,
+        "total_deletions": 23
+      },
+      {
+        "boundary_excess_sum": 11,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 26,
+        "initial_phi": 1,
+        "k": 11,
+        "total_deletions": 25
+      },
+      {
+        "boundary_excess_sum": 12,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 28,
+        "initial_phi": 1,
+        "k": 12,
+        "total_deletions": 27
+      },
+      {
+        "boundary_excess_sum": 13,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 30,
+        "initial_phi": 1,
+        "k": 13,
+        "total_deletions": 29
+      },
+      {
+        "boundary_excess_sum": 14,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 32,
+        "initial_phi": 1,
+        "k": 14,
+        "total_deletions": 31
+      },
+      {
+        "boundary_excess_sum": 15,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 34,
+        "initial_phi": 1,
+        "k": 15,
+        "total_deletions": 33
+      },
+      {
+        "boundary_excess_sum": 16,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 36,
+        "initial_phi": 1,
+        "k": 16,
+        "total_deletions": 35
+      },
+      {
+        "boundary_excess_sum": 17,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 38,
+        "initial_phi": 1,
+        "k": 17,
+        "total_deletions": 37
+      },
+      {
+        "boundary_excess_sum": 18,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 40,
+        "initial_phi": 1,
+        "k": 18,
+        "total_deletions": 39
+      },
+      {
+        "boundary_excess_sum": 19,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 42,
+        "initial_phi": 1,
+        "k": 19,
+        "total_deletions": 41
+      },
+      {
+        "boundary_excess_sum": 20,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 44,
+        "initial_phi": 1,
+        "k": 20,
+        "total_deletions": 43
+      },
+      {
+        "boundary_excess_sum": 21,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 46,
+        "initial_phi": 1,
+        "k": 21,
+        "total_deletions": 45
+      },
+      {
+        "boundary_excess_sum": 22,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 48,
+        "initial_phi": 1,
+        "k": 22,
+        "total_deletions": 47
+      },
+      {
+        "boundary_excess_sum": 23,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 50,
+        "initial_phi": 1,
+        "k": 23,
+        "total_deletions": 49
+      },
+      {
+        "boundary_excess_sum": 24,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 52,
+        "initial_phi": 1,
+        "k": 24,
+        "total_deletions": 51
+      },
+      {
+        "boundary_excess_sum": 25,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 54,
+        "initial_phi": 1,
+        "k": 25,
+        "total_deletions": 53
+      },
+      {
+        "boundary_excess_sum": 26,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 56,
+        "initial_phi": 1,
+        "k": 26,
+        "total_deletions": 55
+      },
+      {
+        "boundary_excess_sum": 27,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 58,
+        "initial_phi": 1,
+        "k": 27,
+        "total_deletions": 57
+      },
+      {
+        "boundary_excess_sum": 28,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 60,
+        "initial_phi": 1,
+        "k": 28,
+        "total_deletions": 59
+      },
+      {
+        "boundary_excess_sum": 29,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 62,
+        "initial_phi": 1,
+        "k": 29,
+        "total_deletions": 61
+      },
+      {
+        "boundary_excess_sum": 30,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 64,
+        "initial_phi": 1,
+        "k": 30,
+        "total_deletions": 63
+      },
+      {
+        "boundary_excess_sum": 31,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 66,
+        "initial_phi": 1,
+        "k": 31,
+        "total_deletions": 65
+      },
+      {
+        "boundary_excess_sum": 32,
+        "constant_region_excess_sum": 1,
+        "final_gates": 1,
+        "initial_gates": 68,
+        "initial_phi": 1,
+        "k": 32,
+        "total_deletions": 67
+      }
+    ]
+  },
+  "status": "PASS"
+}

@@ -41,3 +41,19 @@ The remaining frontier is unchanged: one must force additional f or E (or
 some different surplus) frequently in minimum circuits with a small affine
 constant-flat dimension. The exact accounting says where a surplus goes;
 it does not prove that such a surplus exists.
+
+## Sequential continuation
+
+[SEQUENTIAL_BUDGET.md](SEQUENTIAL_BUDGET.md) proves that constant-region
+fanout surplus cannot be reused: its cumulative value is bounded by the
+initial gate-only fanout potential. A sharp k-stage alias ladder shows why
+unary-boundary fanout is different: the same one-unit branch point can move
+backward through k boundary deletions before being consumed once.
+
+    python3 verify_sequential.py > sequential_receipt.json
+    python3 -O verify_sequential.py > sequential_receipt_optimized.json
+    cmp sequential_receipt.json sequential_receipt_optimized.json
+
+Both runs pass. The checker exhausts all literal reroutes through five-gate
+live distinct-pin topologies, verifies ladders through k=32, and compares
+literal Boolean functions exhaustively at k=1,2,3.

@@ -1,0 +1,14 @@
+{
+  "at_most_two_pin_DAG_presentations": 19866,
+  "constant_deletions": 78426,
+  "exact_gate_transfer_checks": 7680,
+  "ladder_max_k": 128,
+  "last_ladder": {
+    "boundary_excess": 128,
+    "constant_excess": 1,
+    "k": 128,
+    "total_deletions": 259
+  },
+  "literal_reroutes": 97098,
+  "status": "PASS"
+}
