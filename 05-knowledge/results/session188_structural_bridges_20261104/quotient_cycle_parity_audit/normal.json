@@ -1,0 +1,55 @@
+{
+  "checker_sha256": "c6aeba48e5879b94700bc6c0a362405676ae261d5d55b1bba3d589603e75aec1",
+  "coefficient_relations": 4360,
+  "complete_actual_collapse_controls": 663,
+  "counter_sha256": "7ea2aa19e2d549191f26c79e3bb857dfb98b0396eb848d8d0d2c467b02a7836d",
+  "dependency_pins": {
+    "coarse_mod8_affine/PROOF.md": "dcbbfa8895f41c4649369bd11faf861672ced4fb010ab047fa9addfcdf969924",
+    "coarse_mod8_affine/normal.json": "07c210dd54abde00805c70cbb06d9ef5947ad0b4d0203c1a8758efce4cb01592",
+    "coarse_two_cover_affine/PROOF.md": "730fb6c4f98c4bf67f275e2d0b563d252c3e3dbf5062a1423d05837f1573954f",
+    "coarse_two_cover_affine/normal.json": "63f83da5fe785ee859daf2ed095479d52c1315fb2593bf07057e9c31b7f9643a",
+    "five_profile_types/PROOF.md": "0f837c969531d66c1f5f77e6e3aa02416154f852a3f79d2cfe8147059872c9f6",
+    "five_profile_types/normal.json": "7b9cba1e667b794a050adb5ab412f52e5ad12880de280e27779f2faa660c6e90",
+    "mod8_transfer/PROOF.md": "aaf6c9325b34b03187771d0731b3a6d6e9b9d31e25238d8adb4a9267fcb46521",
+    "uniform_block_starts/verify.py": "b7e944ad3278628b9470ed7347aaafd610bea988dbc01951926ccbcad70da0e5"
+  },
+  "distinct_exact_cycle_graphs": 2060,
+  "negative_complete_core_profiles": [
+    [
+      0,
+      1685,
+      26970,
+      183330,
+      705840,
+      1698600,
+      2630880,
+      2570400,
+      1451520,
+      362880
+    ],
+    [
+      0,
+      1753,
+      27366,
+      184446,
+      707280,
+      1699320,
+      2630880,
+      2570400,
+      1451520,
+      362880
+    ]
+  ],
+  "negative_exact_ambient_counts": [
+    32025,
+    32625
+  ],
+  "source_sha256": {
+    "PROOF.md": "9ab01bb6ae3b84ccc985b1d0b5825627f6f2af9d6a898ced1646134162ba9f72",
+    "cycles.cpp": "5b52940b21489675b98b0cf8ce1ff362d8376908fbc4fd347e884635205db87e",
+    "normal.json": "4044909130e5c83cc222bb02567a9998e9fa06b1d21e357b41098fe656fe58f6",
+    "optimized.json": "4044909130e5c83cc222bb02567a9998e9fa06b1d21e357b41098fe656fe58f6",
+    "verify.py": "510f76273aebccc8ffab696ab5e81739168521d1e45a25ebb159d1da5d1e47c6"
+  },
+  "status": "PASS"
+}
