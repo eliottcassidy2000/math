@@ -1,0 +1,15 @@
+# Independent review of the positive formal-profile obstruction
+
+**PASS.** Every retained rational entry and all64 complete coarse equalities check exactly. This is a counterexample to positivity-only reasoning about arbitrary finite profile sequences. It is explicitly not a tournament collision, not a complete named-response collision, and not evidence that the displayed profiles are realizable.
+
+The first two sequences match the proof exactly. All fourteen entries of the third sequence are parsed as exact fractions; its initial entries are zero and one, and every subsequent supported entry is strictly positive. Every denominator-cleared integer equals the stated positive common denominator times the corresponding rational entry, without rounding or omitted entries. Scaling the entire third profile scales each formal query value once, since every word receives exactly one third-profile entry. Both normalization and denominator-cleared equality are independently verified.
+
+Tournament unrealizability is rigorous. Ordered spanning k-path covers admit a free action permuting the k nonempty slots, so q_k is divisible by k!. The displayed B has q_2=9, and A has q_3=2, violating necessary divisibility by two and six. No unproved classification or numerical fitting is involved in that obstruction. The proof carefully distinguishes formal weighted word counts from actual physical Hamilton counts.
+
+`audit.py` imports none of the producer code. It first enumerates the truncated old-run generating series through a five-label port automaton, with each old label occurring at most three times. Multiplication by(1-XYZ)^3 recovers every coefficient of the full rational numerator, whose individual exponents are at most three. This gives a separate construction of both numerator families, independent of the producer's rational expression. The audit then derives the full64-by14 integer contrast matrix acting on the third profile, verifies every exact rational dot product is zero, and computes both normalized and denominator-cleared query values. All128 values agree exactly with the complete retained records and are positive.
+
+The independent audit retains all64 contrast rows and all64 recomputed pairs of values. Normal and optimized audit receipts agree. Each run also replays the producer in normal and optimized Python and requires exact byte equality with its retained receipt. All five mathematical/source/data files are pinned before and after the calculation. There are no unresolved issues.
+
+The certificate needs no solver. Additional necessary constraints on realized tournament profiles may rule out this formal example; this packet does not claim otherwise. In particular its vanishing coarse contrasts cannot be transferred to an assertion about nonuniform physical attachments on a nonexistent realizing tournament.
+
+Run `python audit.py > normal.json` and `python -O audit.py > optimized.json`, then compare. The sibling source packet and its declared `coarse_response_rank` dependency must be present. The audit itself uses only Python's standard library.
