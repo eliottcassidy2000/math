@@ -1,0 +1,40 @@
+---
+id: THM-4862
+title: "In the C2 two-branch grammar (nonzero_preparation_20261103): (a) the one-exit extension law h(T + x) = h(T) - e_a(T) + [P A_a](T), i.e. 2h + sigma - e_a; (b) the readiness digit sigma = e_r(T - a) of a sole-exit vertex a -> r equals the number of Hamiltonian cycles of the entry attachment U + a_entry at the same root, C(U + a_exit) = s_r(U), C(U + a_entry) = e_r(U), so (T, a) -> ((T - a)^op + a_exit, a) is a bijection from sigma-ready strong tournaments onto strong sole-exit tournaments with exactly sigma Hamiltonian cycles, explaining the Fibonacci counts F(2n - 6) = 1, 3, 8, 21, 55, 144, 377 of the sigma = 1 classes through order 10 (Garey 1972, cited via THM-4846) and the counts 1, 5, 18, 60, 191, 589 of the sigma = 2 classes; (c) the ready floors, the least H of a strong tournament with a sole-exit vertex of digit sigma, are 5, 9, 17, 33, 61, 115, 219 (sigma = 1) and 9, 23, 51, 93, 177, 341 (sigma = 2) at orders 4..10; (d) the full-digit C2 sweep: every odd number in [307, 26551] equals 3H + 2 sigma for a strong tournament of order <= 10 with a sole-exit vertex of digit sigma, hence is the Hamilton count of a strong C2 child of order <= 12, and the 34 odd numbers below 307 that are not of this form are exactly those whose unique odd predecessor under 3h, 3h + 2, 3h + 4 lacks the required digit; (e) rearming: strong 15-vertex tournaments with H = 12875 and H = 12877 and a sole-exit vertex of digit 1 exist (explicit), so the +2 branches of the lineage's depth-2 leaves close by all-strong native transport"
+status: >
+  PROVED (klein-2026-11-04, elementary; not independently audited) for (a) and (b) (proofs in the source packet's
+  PROOFS.md; exhaustive checks on orders 3-7 and 3-6 respectively, 1,794 and 836 cases); FINITE-EXACT for (c), (d), (e)
+  (nauty gentourng censuses through order 10 with a C subset-DP counter; 1.7 million ready pairs at order 10; the
+  rearming witnesses re-verified by an independent Python count; byte-identical python3 / python3 -O receipts).
+  Inherited and not re-proved: the C2 operator law H' = 3h + 2 sigma and the sole-exit characterisation of the positive
+  joint guard (multiport_defect_grammar_20261103/construction/RESULT.md, nonzero_preparation_20261103/algebra/
+  JOINT_CLASSIFICATION.md, both audited there), the all-strong transport theorem (algebra/STRONG_COMPILER.md), the
+  ready floors 4841, 9545, 18905 at orders 14-16 (surgery/ORDER_OBSTRUCTION.md), and Garey's unique-Hamiltonian-cycle count F(2n - 6) (J. Combin. Theory Ser. B 13 (1972), cited via THM-4846).
+  The transport programs for (e) are the lineage's compiler and are not regenerated here. Nothing about the Chan-Pak
+  completeness of the spectrum is closed; the sweep's extension to all odd numbers is HYP-9454.
+session: klein-2026-11-04 (codex/session-spectrum-20261104)
+source: 05-knowledge/results/two_branch_rearming_sigma_sweep_20261104/README.md
+related:
+  - 05-knowledge/results/nonzero_preparation_20261103/README.md
+  - 05-knowledge/results/multiport_defect_grammar_20261103/construction/RESULT.md
+  - 01-canon/theorems/THM-4846-run-observers-of-tournaments-the-nauru-orientation-the-permanental-compound-t5-stars-and-the-ghost-lemma-behind-its-four-spurious-z6-factors.md
+  - 01-canon/theorems/THM-4860-the-prime-square-sum-graph-is-bipartite-by-residue-mod-4-two-primes-1-mod-3-are-never-adjacent-chebyshev-bias-obstruction-to-prime-square-sum-paths-none-below-615731-and-the-25-primes-below-100-by-ogg-layer.md
+  - 05-knowledge/hypotheses/HYP-9453-the-near-join-sweep-toward-chan-pak-completeness-density-of-b-sets-two-strong-realisers-for-every-attained-odd-count-at-least-15.md
+  - 05-knowledge/hypotheses/HYP-9454-the-full-digit-c2-sweep-as-the-unbounded-target-selector-ready-pair-density-sparse-r1-r2-and-the-name-retention-wall.md
+---
+
+# THM-4862 — one-exit law, digit = cycle count, ready floors, the full-digit sweep, and the rearming of 12875 and 12877
+
+Notation: `h(T)` Hamiltonian paths; `s_v`, `e_v` those starting / ending at `v`; `[P A_a](T) = Σ_{S ⊆ V − a} h(T[S]) s_a(T[V − S])`; a **sole exit** is a vertex `a` with `N⁺(a) = {r}`, its **digit** is `σ = e_r(T − a)` (inherited: `σ = [P A_a] − h`, and the C2 births give a strong child with `H′ = 3h + 2σ`).
+
+**(a) One-exit extension.** For `T + x` with `x → a` and `v → x` (`v ≠ a`): `h(T + x) = h(T) − e_a(T) + [P A_a](T)`. *Proof.* Paths with `x` last end `(…, v, x)` with `v ≠ a`: `h − e_a` of them; paths with `x` not last read `(path of T[S]), x, a, (path of T[V − S] from a)`: `[P A_a]` of them. ∎
+
+**(b) Digit = cycle count of the entry attachment.** For a tournament `U` and `r ∈ U`, `C(U + a_exit) = s_r(U)` and `C(U + a_entry) = e_r(U)`, where `a_exit → r`, all else `→ a_exit`, and `r → a_entry`, `a_entry →` all else. *Proof.* A Hamiltonian cycle through `a_exit` reads `(…, v, a_exit, r, …)` and is a Hamiltonian path of `U` from `r` to `v`; conversely every such path closes since `v ≠ r` beats `a_exit`. The entry case is the converse. ∎ Hence the digit of `(U + a_exit, a_exit)` is `C(U + a_entry)`, and `Φ(T, a) = ((T − a)^op + a_exit, a)` maps σ-ready strong tournaments bijectively onto strong sole-exit tournaments with exactly σ Hamiltonian cycles (`e_r(T − a) > 0` forces `T − a` strong, so the image is strong). The class counts therefore agree with Garey's unique-Hamiltonian-cycle Fibonacci numbers `F(2n − 6)` for σ = 1 (1972; cited via THM-4846) (verified 1, 3, 8, 21, 55, 144, 377 at orders 4–10) and give 1, 5, 18, 60, 191, 589 for σ = 2; `Φ` does not preserve `H`.
+
+**(c) Ready floors** (FINITE-EXACT, all tournaments of orders 4–10): least `H` of a strong tournament with a sole-exit vertex of digit σ: σ = 1: `5, 9, 17, 33, 61, 115, 219`; σ = 2: `—, 9, 23, 51, 93, 177, 341`. With the lineage's cited `4841, 9545, 18905` at orders 14–16 the σ = 2 floor grows by a factor 1.94–1.98 per vertex.
+
+**(d) Full-digit sweep** (FINITE-EXACT): the C2 children `3H + 2σ` of all strong sole-exit tournaments of order ≤ 10 cover every odd number in `[307, 26551]` (orders ≤ 9: `[307, 5153]`); the 34 odd numbers below 307 not covered are `1, 3, 5, 7, 9, 11, 13, 15, 19, 21, 23, 25, 27, 33, 37, 39, 43, 45, 47, 49, 55, 61, 63, 67, 79, 83, 103, 107, 121, 125, 127, 167, 203, 305`, each because its unique odd predecessor under `3h, 3h + 2, 3h + 4` lacks the needed digit (`47 = 3·15 + 2`, digits of 15 are `{0, 3, 4}`; `63 = 3·21`, 21 has no realiser). Digit sets are large (for `H ∈ [300, 1000)`, 86 digits on average with maximum about `0.29 H`), while the two-branch spectra `R₁ = {H : digit 1 available}` and `R₂` are sparse: below 321 (complete through order 10) they contain 108 and 79 of the 161 odd numbers, missing `25, 27, 35, 41, 43, …` and `25, 27, 31, 33, 35, 39, …`.
+
+**(e) Rearming.** Strong 15-vertex tournaments with a sole-exit vertex of digit 1 and `H = 12875`, resp. `12877`, exist; explicit out-row encodings (vertex 1 → vertex 0 only) are in the source packet §1 and re-verified independently. Relabelling the root as the lineage's old root 8, the all-strong transport theorem carries the actual depth-2 leaves 12875 and 12877 to these targets with every intermediate strong and all names retained, so the `+2` branches of both leaves close (level-3 values 38627 and 38633). Digit-2 targets at order 15 for these two values were not found in this session (closest digit-2 states `H = 12879` and `12879`); that side is HYP-9454 (4). ∎
+
+Scripts, censuses and receipts: the [source packet](../../05-knowledge/results/two_branch_rearming_sigma_sweep_20261104/README.md).
