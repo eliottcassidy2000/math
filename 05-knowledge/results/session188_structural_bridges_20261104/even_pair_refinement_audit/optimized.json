@@ -1,0 +1,48 @@
+{
+  "actual_quotient_attachment_values": 33792,
+  "audit_sha256": {
+    "audit.py": "3e1f734a593df4e1a3522fe6ff0d82f64315c5710c3b540ed9df12008c83e45d",
+    "literal.cpp": "6eea08b8ace62c1a30580b1d91502b8888a7989104c5141d6f2e75aaf9da40dd"
+  },
+  "complete_quotient_trace_controls": 72,
+  "hostile_b_mask": 763,
+  "hostile_disjoint_support_pairs": 46872,
+  "hostile_shared_cubic_columns": [
+    136,
+    705,
+    408,
+    432,
+    363,
+    990,
+    937,
+    272,
+    708,
+    169
+  ],
+  "independent_shared_cubic_coefficients": 816,
+  "physical_forward_dp": {
+    "augmented_order": 22,
+    "pair_flip_masks": [
+      0,
+      683
+    ],
+    "physical_a_mask": 3,
+    "physical_c_mask": 0,
+    "values_mod8": [
+      3,
+      7,
+      3,
+      7
+    ]
+  },
+  "producer_modes_equal": true,
+  "source_sha256": {
+    "even_pair_refinement/PROOF.md": "dab3da3b3377f1e8afa926be5657e4079586ab750ad84c6ecb6bf44483784b6d",
+    "even_pair_refinement/literal_hostile.cpp": "346d4dcf6dfa98f8acc73f6a1c397015ae3680d97d64f048f30020b553548f2c",
+    "even_pair_refinement/run_dp.cpp": "d715e003c20c3c0e2bfbfa25b0048f85d668c4cab239d417b4094fbbded210b9",
+    "even_pair_refinement/verify.py": "88219e998d9b656b05823a637025a0d9374dfa4a1ae86dcb82687b7e972d2f87",
+    "mod8_transfer/PROOF.md": "aaf6c9325b34b03187771d0731b3a6d6e9b9d31e25238d8adb4a9267fcb46521",
+    "odd_pair_quotient/PROOF.md": "6d741cbef4d88c31a0d39f8c0df28ca50bebfd4c3195d6b33591bd5f39fc18c4"
+  },
+  "status": "PASS"
+}

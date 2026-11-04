@@ -1,0 +1,1 @@
+{"status":"PASS","old_names":20,"augmented_names":22,"a_mask":3,"c_mask":0,"source_mod8":3,"target_mod8":7,"method":"Literal predecessor subset DP on all twenty-two physical names"}

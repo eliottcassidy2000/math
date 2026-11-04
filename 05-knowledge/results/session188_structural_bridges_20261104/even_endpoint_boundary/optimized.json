@@ -1,0 +1,56 @@
+{
+  "all_path_endpoint_vectors": {
+    "end": 296,
+    "start": 296
+  },
+  "all_simple_path_parity_rows": [
+    363,
+    834,
+    550,
+    555,
+    154,
+    168,
+    455,
+    739,
+    976,
+    970
+  ],
+  "asymmetric_pair": [
+    0,
+    1
+  ],
+  "hamilton_endpoint_vectors": {
+    "end": 296,
+    "start": 296
+  },
+  "hamilton_path_parity_rows": [
+    840,
+    717,
+    1018,
+    400,
+    489,
+    341,
+    933,
+    550,
+    701,
+    325
+  ],
+  "nontrivial_modules": [
+    1023
+  ],
+  "rows": [
+    598,
+    508,
+    344,
+    865,
+    40,
+    69,
+    656,
+    317,
+    113,
+    438
+  ],
+  "scope": "Counterexample to even-order endpoint-parity nonvanishing and to zero symmetric row sums implying a symmetric all-path matrix. No complete-response collision is asserted.",
+  "source_sha256": "e9d7783e681355525d27b4c4de17304443ae6f8da88d3e4ad1090301674322be",
+  "status": "PASS"
+}
