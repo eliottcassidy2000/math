@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "independent_truth_table_census": {
+    "1": {
+      "1": 1
+    },
+    "2": {
+      "3": 2
+    },
+    "3": {
+      "3": 8
+    },
+    "4": {
+      "4": 64
+    }
+  },
+  "deletion_skew_checks": 400
+}
