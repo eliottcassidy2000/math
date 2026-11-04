@@ -33,3 +33,23 @@ converse status is now superseded** by E4. Their source/receipt manifests
 are preserved, including historical UNKNOWN solver outcomes. General
 two-port injectivity for unrelated pairs and arbitrary multiple module
 changes is not claimed from this single-converse theorem.
+
+## Closing fetch: the rooted-skeleton transform
+
+The final clean-tree rebase integrated S188 commitsd973c82d2a,ee1bdef4ef
+and03fdab6c7c. Its [rooted-skeleton theorem](../session188_structural_bridges_20261104/skeleton/PROOF.md)
+gives H(Q[TT_r])=sum_k B_k k!S(r,k), including the deleted-root case r=0.
+For the three seed states the profile is(9+2j,27+2j,21,4). Thus B_3=4
+forces the genuine3^r term; shared B_2,B_3 and the two-unit B_1 difference
+give the persistent spacing for r>=1. The matching B_0 difference extends
+that spacing to r=0. The finite interpolation criterion is valid in this
+bounded scalar exponential space.
+
+This incoming result is consistent with E4 and exposes its scope precisely:
+the entire uniform-substitution profile q_k(M) is unchanged by M->M^op,
+whereas our nonuniform attachment queries extend M before applying T1.
+Scalar-profile equality therefore cannot suppress the new named separator.
+The S188 transform and its audit are credited; no fresh replay of its
+complete skeleton enumeration is claimed in this packet. Its weighted
+prime-factor closure and shared-circuit incidence theorems concern different
+carriers and supply no additional dependency or reconstruction inference here.

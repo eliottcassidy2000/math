@@ -9,6 +9,7 @@
     "05-knowledge/results/session187_named_response_20261104/converse/PROOF.md": "a68ce0abe780422df2e4e9fa1cb23274ba3f193314b0590eeaefd772b1830163",
     "05-knowledge/results/session187_named_response_20261104/gate/PROOF.md": "ffe97ecd5dda6ce2b14e9db8c63660822f7bc47077f709195f76118c5aa3b502",
     "05-knowledge/results/session187_named_response_20261104/prime12/PROOF.md": "56c134a057da77a2d0ed2441a9b696f1cde60bc64ea4a80f0e2e244efa4010f9",
+    "05-knowledge/results/session188_structural_bridges_20261104/skeleton/PROOF.md": "fe52812144edf77187c98787db8b45cf409da6344361fd3dc823d909febcc9ef",
     "05-knowledge/results/two_port_beyond_nine_20261103/audit/PARITY.md": "7084cd71f652a40949b65fb40d868124e78d4962973b6e3b720c5016310ee390",
     "05-knowledge/results/two_port_seven_core_20261103/algebra/PROOF.md": "ba530ca4397385d0b8b75406487c0a997bc242086da4737f487c217b4862b5d1",
     "05-knowledge/results/two_port_twelve_principles_20261103/PROOF.md": "06811fe45366352f924793be7dadddacef287607a380efc92043a1066f3056c0"
@@ -16,7 +17,7 @@
   "files": {
     ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
     "BOARD.md": "e3c0a10b096deff61a8937bbcea9ee09e73e4d5885ca7932428e17bd856ed392",
-    "INCOMING.md": "d6bcb5e4458841d4ba19fa77ff17b3329b0e3fb1b06eaf9bd3454ecf3cd16850",
+    "INCOMING.md": "d69fbe7fe876a53c05c35b30009411f56bb5e0d7e92f9d6b2f22cca8f51dcaf7",
     "PROOF.md": "311d7719cf3ff4d0d4d3638d31ed33c1c41cdf378ca1d55b43450c9435d2d0a0",
     "README.md": "477c0adce906190868a6a52ae718562d761466ab7bc741eb8f4f5b0cb38699c8",
     "REVIEW.md": "6582b15a05a6cee68d6c647b4a6b58340b937e27aa2ca037fdea764476bac885",
