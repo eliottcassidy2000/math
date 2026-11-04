@@ -38,7 +38,7 @@ def main():
         need(digest(HERE/name) == value, 'packet hash: '+name)
     for name, value in manifest['dependencies_lf_sha256'].items():
         need(digest(ROOT/name, True) == value, 'dependency hash: '+name)
-    for stem in ('current', 'switch', 'response', 'audit'):
+    for stem in ('current', 'switch', 'response', 'audit', 'incoming'):
         need((HERE/(stem+'.json')).read_bytes() ==
              (HERE/(stem+'.optimized.json')).read_bytes(), 'normal/-O: '+stem)
         pins = read(stem+'.json')['source_sha256']
@@ -63,6 +63,10 @@ def main():
     need(digest(HERE/'response_tables.json') == response['tables_sha256'], 'response table input')
     need(response['actual_compiled_queries'] == 49976 and response['exact_shared_cubic_checks'] == 1056, 'full named query counts')
     need(len(read('response_tables.json')['cases']) == len(response['cases']) == 4, 'prime control inventory')
+    incoming = read('incoming.json')
+    need(incoming['named_modular_cubic_checks'] == 7920 and
+         incoming['short_even_current_checks'] == 528, 'incoming full modular cubic')
+    need(incoming['gate_rank_queries'] == 27 and incoming['gate_whole_converse_queries'] == 6, 'incoming named clocks')
     for n in (8, 12):
         scout = read('sat'+str(n)+'.json')
         need(scout['status'].startswith('UNKNOWN') and scout['rows'] is None, 'SAT has no conclusion')
@@ -71,7 +75,7 @@ def main():
         with tempfile.TemporaryDirectory(prefix='prime12-replay-') as folder:
             for optimized in (False, True):
                 prefix = [sys.executable]+(['-O'] if optimized else [])
-                for stem in ('current', 'switch', 'response', 'audit'):
+                for stem in ('current', 'switch', 'response', 'audit', 'incoming'):
                     out = Path(folder)/(stem+'.json')
                     command = prefix+[str(HERE/(stem+'.py')), '--output', str(out)]
                     if stem == 'response':
@@ -85,7 +89,8 @@ def main():
                           dependencies=len(manifest['dependencies_lf_sha256']),
                           orbit=2048, strong_prime_presentations=2024,
                           complete_bank=198947, full_named_queries=49976,
-                          exact_shared_cubics=1056, receipt_pairs=4,
+                          exact_shared_cubics=1056, incoming_modular_cubics=7920,
+                          receipt_pairs=5,
                           replayed=args.replay,
                           scope='One complete orbit excluded; universal prime12 and missing-spectrum goals OPEN'),
                      indent=2, sort_keys=True))

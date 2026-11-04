@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "cubic_coordinates": 1584,
+      "name": "conference-switch-1",
+      "nonzero_modular_cubics": 0,
+      "ordered_disjoint_support_pairs": 237072
+    },
+    {
+      "cubic_coordinates": 1584,
+      "name": "conference-switch-3",
+      "nonzero_modular_cubics": 0,
+      "ordered_disjoint_support_pairs": 237072
+    },
+    {
+      "cubic_coordinates": 1584,
+      "name": "conference-switch-11",
+      "nonzero_modular_cubics": 0,
+      "ordered_disjoint_support_pairs": 237072
+    },
+    {
+      "cubic_coordinates": 1584,
+      "name": "inherited-endpoint-balanced-prime",
+      "nonzero_modular_cubics": 792,
+      "ordered_disjoint_support_pairs": 237072
+    },
+    {
+      "cubic_coordinates": 1584,
+      "name": "incoming-S187-P",
+      "nonzero_modular_cubics": 760,
+      "ordered_disjoint_support_pairs": 237072
+    }
+  ],
+  "gate_rank_queries": 27,
+  "gate_whole_converse_queries": 6,
+  "named_modular_cubic_checks": 7920,
+  "short_even_current_checks": 528,
+  "source_sha256": {
+    "../homogeneous_pair_response_20261103/response_tables.json": "149532bf34a8ecc38e40c3b477a687b2c1575afacd2e6756cd5b45c8a7c380e4",
+    "../session187_named_response_20261104/prime12/cubic.json": "3b4d785f06b78412cc8c2f7152a0414b34d1ebdc9142f7b4cdd84f6556522174",
+    "incoming.py": "c67c2b7f4d4129951e8855a6bc06f3f0317ac24f5ec03845e3d5c30d61550168",
+    "response.json": "03c5a5efb087cbfb2ef76fa5e518950ed7542d65ab001deb1eeff5518d307d21",
+    "response_tables.json": "895945a5968a384fa4d36eebedefb06020668f40170eaea981a52debac9a013e"
+  },
+  "status": "PASS scoped integration; no prime12 or spectrum closure"
+}

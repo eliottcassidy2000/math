@@ -3,6 +3,8 @@
   "dependencies_lf_sha256": {
     "01-canon/theorems/THM-002-ocf.md": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1",
     "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+    "05-knowledge/results/compensation_returns_20261103/CAP_WIDTH.md": "42cbcef4d82ed37f437b4bcf53f3f4c3a612049bfadf8e9ce5acc648bc3265e8",
+    "05-knowledge/results/compensation_returns_20261103/QUERY_COST.md": "0245467856e92ede8dd3f7e006eb35be97c9d61c98ae31a72f288b8d8c15a53f",
     "05-knowledge/results/homogeneous_pair_response_20261103/PROOF.md": "ede0dafd39231fde6ae33e9140f61b70bfdfd1c64bf29767a9e56b9205f539bb",
     "05-knowledge/results/homogeneous_pair_response_20261103/check.py": "d7f9b97e2b74114b9f8a879a473d1eb199b6f2c25a88e969dc5033669282e3c3",
     "05-knowledge/results/homogeneous_pair_response_20261103/response.cpp": "a732c73a9667d2ca67fb1abcdf85c4ea39aef91906ca4aa16d0a61930db407a9",
@@ -11,6 +13,11 @@
     "05-knowledge/results/session186_proof_frontiers_20261104/collision/PROOF.md": "20835102a7aed1182852c6bf1a4346cda97a8223b0fb957e2009e5973b6c58ae",
     "05-knowledge/results/session186_proof_frontiers_20261104/gate/PROOF.md": "34432bac7e1465f3ea0f57a69148bfbab4a411d31acad8ef60e8d32721711106",
     "05-knowledge/results/session186_proof_frontiers_20261104/structure/PROOF.md": "346cb02dcb19d388d65d4282c6c69cc87fcf84128280da1fdd9de0678794013d",
+    "05-knowledge/results/session187_named_response_20261104/collision/PROOF.md": "491dc3d42678c41ce6b05d5adefd340dc6ec926fb182f1d8698f8198b2c75032",
+    "05-knowledge/results/session187_named_response_20261104/converse/PROOF.md": "a68ce0abe780422df2e4e9fa1cb23274ba3f193314b0590eeaefd772b1830163",
+    "05-knowledge/results/session187_named_response_20261104/gate/PROOF.md": "ffe97ecd5dda6ce2b14e9db8c63660822f7bc47077f709195f76118c5aa3b502",
+    "05-knowledge/results/session187_named_response_20261104/prime12/PROOF.md": "56c134a057da77a2d0ed2441a9b696f1cde60bc64ea4a80f0e2e244efa4010f9",
+    "05-knowledge/results/session187_named_response_20261104/prime12_audit/REPORT.md": "1b4d9d067923d3734a647937f81931685c69f63a9ef4d707e2911583da871d1b",
     "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/proof.md": "48aaefa2d059a56fb201a41d5f78bcd043eb2fbcb58f1ab9918c3e4d987917d7",
     "05-knowledge/results/session35_dimensions_dualities_20261023/zeta/CONFERENCE_COLLAPSE.md": "11530a605669f749a6c4e2eef68409a203180b3678f4835ba8000d46ffe51953",
     "05-knowledge/results/session36_information_curl_contexts_20261023/lattice/METRIC_CURL_RECOVERY.md": "fab727785c18911d2cc3f14570acd16f92c9824990e6b964f9a336f00eff6aff",
@@ -22,11 +29,12 @@
   },
   "files": {
     ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
-    "BOARD.md": "a3b241b17f7b66360de656d04213a0b0b65e7c487bab8ff704682bd57a7c2883",
+    "BOARD.md": "3c19eedfa14f9b3d431b81e2e3566c7e9d7c9b5fefea74de167e13a211a6b08e",
     "BRIDGE.md": "d0706fbca67b7ee9af1f5e2179c147414ae0de60a9cbc2912b88987eab3cff52",
+    "INCOMING.md": "c034eb600f46b829e73719f93cb57da0f20b4a3d3edeeb14ac186e00bed61f26",
     "PROOF.md": "2cd25dce0c5e2ea2ffedde9ffe3ddfad971a76e529e580d5e5e976645aa2ce95",
-    "README.md": "88386e303f96581e97897d9e99620588cff6b199915bbc289c199619003692b1",
-    "REVIEW.md": "ce0ea4dcd6fecff670f08ecb7034f96a6c12870d2e80766b948e503b809a9e8e",
+    "README.md": "958c8c3e4d0c285362cf06215fb5c058e30383b5a1a3d90df2a6029773d90035",
+    "REVIEW.md": "e6d239ba8bb51f49bf123c188d2e73e5a1ab59201e96d60044731dbb15874e5c",
     "audit.json": "62e39601c8b18f632426802e36743461489580f3f2617ad1c0c1e03a7af80530",
     "audit.optimized.json": "62e39601c8b18f632426802e36743461489580f3f2617ad1c0c1e03a7af80530",
     "audit.py": "e142c0ccb3f11fc9c1702b1ba842d2059a2b99831da0ee2291f8958f515acb7b",
@@ -34,6 +42,9 @@
     "current.json": "dfed1575c25ecb2cf58a5d037ffbcc2cd9a9d492fdbab32885ad765080c94cf8",
     "current.optimized.json": "dfed1575c25ecb2cf58a5d037ffbcc2cd9a9d492fdbab32885ad765080c94cf8",
     "current.py": "8148a4b381b04b8f627ca73fbeefcf26665040032d1e0aabfc9c471097e10a89",
+    "incoming.json": "208bc9ce8d3e4d2c422491b50fbf2e5b011af9571962e9b47c613851ea96f59b",
+    "incoming.optimized.json": "208bc9ce8d3e4d2c422491b50fbf2e5b011af9571962e9b47c613851ea96f59b",
+    "incoming.py": "c67c2b7f4d4129951e8855a6bc06f3f0317ac24f5ec03845e3d5c30d61550168",
     "response.json": "03c5a5efb087cbfb2ef76fa5e518950ed7542d65ab001deb1eeff5518d307d21",
     "response.optimized.json": "03c5a5efb087cbfb2ef76fa5e518950ed7542d65ab001deb1eeff5518d307d21",
     "response.py": "96bb682f09c0ea17d9ca249b821fddbb6aed79bbfc549592befa5dc30ba32c31",
@@ -46,7 +57,7 @@
     "switch.json": "794dbef0a7dcfaf0e377ea92e5550760c8a5b8c7101a9379892593a834529094",
     "switch.optimized.json": "794dbef0a7dcfaf0e377ea92e5550760c8a5b8c7101a9379892593a834529094",
     "switch.py": "2413035646171e6508cabd1345e5ac4df072f731fc678ac0c050400a61e6f45a",
-    "verify.py": "19dafcc8f133b59dbc78a5806a80ed98a0bacd34c0a08addf38a65d3a98efea4"
+    "verify.py": "97a206811b2d9cbf7369d494172684f6fec6d71e7a0bad42acb97670fbd4b70b"
   },
   "status": "Frozen scoped proofs and finite exact certificates; universal goals OPEN"
 }

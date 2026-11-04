@@ -38,8 +38,16 @@ has all deletion currents zero. This is a finite classification only.
 The bounded SAT attempts at8 and12 both returned UNKNOWN; they supply
 neither a model nor an exclusion certificate.
 
+[Incoming S187 integration](INCOMING.md) combines its complete modular-cubic
+support cutoff with D1, checking7920 named cubic coordinates and528 short
+deletion-current sums against retained integer data. Its gate rank clock
+adds a genuine4^(k-1) channel:27 saved rank queries and six saved converse
+separators agree. Exact SCC localization preserves the strong-quotient
+obstruction; the incoming preparation observer measures a cost without
+providing a free reset.
+
 See [the review](REVIEW.md), [concept board](BOARD.md), and the frozen
-verifier. Reproduce `python verify.py`; `--replay` reruns the four exact
+verifier. Reproduce `python verify.py`; `--replay` reruns the five exact
 engines normally and under -O into a temporary directory. SAT exploration
 is separately scoped and is not replayed as proof evidence.
 

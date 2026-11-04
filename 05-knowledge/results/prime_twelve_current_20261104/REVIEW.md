@@ -45,6 +45,15 @@ a singleton query; they are not candidates for exact full-response equality.
 Incoming three-state gate and five-run scopes from the previous packet
 remain unchanged.
 
+After the first committed checkpoint, S187 and the compensation packet
+arrived. [INCOMING.md](INCOMING.md) records the exact dependencies and their
+scope. A new bit-packed path calculation checks all7920 modular cubics of
+five retained integer polynomials,528 deletion-current sums, and33 saved
+gate queries. It runs normally and under -O. The incoming radius-four
+search and its independent audit are credited, not claimed as our replay.
+Exact SCC descent applies through ordered exterior blocks; the active
+strong quotient cannot be canceled by that proof.
+
 No demonstrated false canon claim was used. The exploratory score-parity
 shortcut was rejected before promotion, with witness and repaired scope
 recorded on the board. There is no mathematical correction to an earlier

@@ -35,6 +35,14 @@ rows(110,148,248,194,137,26,50,97) have all odd outdegrees but endpoint
 boundary mask197, not all ones. The survivor is the stated finite
 conference-orbit property, not a score-parity rule.
 
+The incoming S187 cutoff reconnects the full modular cubic to every card
+current using supports2,4,6,8, without a new SAT condition. Its rank clock
+adds a4^(k-1) channel beyond the scalar3^r/2^r interval. Exact SCC localization
+removes ordered padding from the hidden-module search but leaves the strong
+quotient. The preparation-cost observer and unbounded cap feedback width
+show why neither a small endpoint state nor a linear walk state proves
+unlimited spectrum coverage. All six live concepts retain these boundaries.
+
 Meta-patterns used: “Type every analogy and every implication” and
 “Classify the target over the exceptional stratum before closing by density”
 in00-navigation/META-PATTERNS.md. No new universal card is promoted.
