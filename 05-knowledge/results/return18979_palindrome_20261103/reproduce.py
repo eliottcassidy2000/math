@@ -24,5 +24,7 @@ def main():
         discovery_sha256={p:digest(HERE/p) for p in ('one_start_bank.json','two_entry_bank.json','targets.json','returns.json')},
         input_sha256={p:digest(HERE.parent/p) for p in inputs},scripts_sha256={p.name:digest(p) for p in sorted(HERE.iterdir()) if p.suffix in ('.cpp','.py')},
         scope='Same-agent proof review, independent matrix/DP algorithms; no external audit or all-size spectrum claim')
+    incoming=['return18979_ports_20261103/PROOFS.md','session174_palindrome_symmetry_20261103/palindromes/REPORT.md','session174_palindrome_symmetry_20261103/counts7417/README.md','session174_palindrome_symmetry_20261103/synthesis/NOTE.md','all_prime_tournament_geometry_20261103/PROOFS.md']
+    result['incoming_pin']='a421cb1ac1';result['incoming_sha256']={p:digest(HERE.parent/p) for p in incoming}
     (HERE/'reproduction.json').write_text(json.dumps(result,indent=2)+'\n');print('PASS normal/O identical',flush=True)
 if __name__=='__main__':main()

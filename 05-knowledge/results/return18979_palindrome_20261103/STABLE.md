@@ -7,6 +7,12 @@ first nonempty ending at r, second possibly empty. A b-ready root has
 `E_r(2)-H=b`. Dependencies are [READY](../two_entry_funnels_20261103/READY.md)
 and [CL1/CL2](../return6325_completion_20261103/CLONE_LAW.md).
 
+**Concurrent inheritance:** after this packet's derivation, incoming
+[return18979_ports RC1--RC5](../return18979_ports_20261103/PROOFS.md)
+supplied the same clone classification, binary correction and two-birth
+branch, plus a stronger all-size classification of ternary offsets.
+These overlaps are credited there; see [INCOMING](INCOMING.md).
+
 ## S1. Complete classification of ready roots surviving cloning
 
 Let T be strong and r be one- or two-ready. Replace r by a transitive
@@ -122,6 +128,13 @@ not a finite-state realization of native returns. A finite search over
 odd cores<=200000 finds no offset2 and only v7 for offset4; no all-size
 exclusion is inferred from that search.
 
+**PROVED, inherited stronger result:** RC4 of the incoming packet proves
+`c(3v)-3c(v) !=2` for every v>=1, and equality to4 iff the odd part of v
+is7. Its B equals our c; its A equals2v in the same clone frame, with
+`B(2v)=B(v)`. The proof uses the carry equations above and upper/lower
+bounds on B, rather than extrapolating the finite scan. This closes the
+uniform one-apex +2 lane and classifies its entire +4 lane.
+
 ## S5. Converse is complemented reversal of the word
 
 Fix the apex p. Global converse followed by reversing the chain replaces
@@ -129,7 +142,7 @@ w by complement(reverse(w)), with an explicit transport of every chain
 name. It lies again in the displayed R grammar iff the last two original
 bits are11. For t=bit_length(v), L=t+2, the new parameter is
 
-    v* = [2^L-1-reverse_L(4v)]/4.                    (S6)
+    v* = [2^L-1-reverse_L(4v)]/4.                    (word dual)
 
 This is an involution on its domain and preserves H. It exchanges starting
 and ending port responses and moves the selected root to the old last
@@ -141,3 +154,31 @@ of such words at order n is `2^((n-5)/2)` for odd n>=5 and zero for even n.
 This counts apex-preserving self-converse sources; other maps moving the
 apex are outside the claim. The involution, unlike an equality of numerical
 counts, gives a concrete connection to mirrored-word constructions.
+
+## S6. A uniform retained-clone endpoint obstruction
+
+**PROVED corollary of incoming RC1/RC3/RC4.** Start with R(2^(m-1)v).
+Allow any program, including helpers and exterior arc repairs, whose
+final family is a fixed exterior tournament with a uniform transitive
+clone module of size m+s, for a fixed integer s. Suppose the final source
+is strong and one- or two-ready at a mark **inside that module** for every
+sufficiently large m. If its H is3 times the original H plus a constant b,
+then b cannot be2; b=4 requires oddpart(v)=7.
+
+Proof. Apply the incoming arbitrary-base clone classification RC1 to the
+endpoint, not to intermediate states. Readiness forces the first clone,
+one exterior in-port, and a transitive grandparent; no two-ready endpoint
+exists. RC3 therefore gives the endpoint count `A*2^(m+s)+B(A)` for a
+fixed A>=1. The input is `2v*2^m+B(v)`. Coefficient comparison gives
+`A*2^s=6v`; removing powers of2 gives `B(A)=B(3v)`. The offset is exactly
+Delta(v), classified by RC4. QED.
+
+This is a boundary on the **final relation**, regardless of how clever
+the intervening program is. In particular the v4768 family cannot receive
+either requested uniform ready return while satisfying these endpoint
+conditions, since oddpart(4768)=149. The missing158/160 constant terms
+cannot be supplied inside that endpoint class. A successful enlargement
+must, for example, move the live mark outside the old clone module, split
+its exterior incidence, use an m-dependent exterior source, or accept a
+higher-defect interface. A second feedback vertex alone does not evade
+the theorem if the endpoint still satisfies the same clone conditions.

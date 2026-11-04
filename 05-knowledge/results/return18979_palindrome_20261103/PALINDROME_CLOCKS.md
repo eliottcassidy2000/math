@@ -3,6 +3,11 @@
 **PROVED elementary statements below; CITED literature is identified
 separately.** No new primality record or infinite family of primes is claimed.
 
+Incoming [S174](../session174_palindrome_symmetry_20261103/palindromes/REPORT.md)
+independently derived the overlapping norm identities and7417 sieve.
+[INCOMING](INCOMING.md) credits that work and distinguishes the added
+all-modulus minimal-clock, integral-observer and valuation statements.
+
 ## P1. A clock theorem modulo every modulus
 
 For b>=2 and m>=0 put `P_b(m)=b^(2m+1)-b^m-1`. Its base-b digits are

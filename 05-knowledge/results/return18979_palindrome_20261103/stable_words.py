@@ -68,6 +68,8 @@ def main():
     hits={2:[],4:[]}
     for v in range(1,200001,2):
         delta=correction(3*v)-3*correction(v)
+        need(delta<=-4 if v%4==1 else delta==0 if v==3 else delta>=4,'incoming RC4 sign classification')
+        need(delta!=2 and ((delta==4)==(v==7)),'incoming RC4 normalized boundary')
         if delta in hits:hits[delta].append(v)
     # Exact multiplication-by-three carry state; no inference of global nonexistence.
     for v in range(1,10001):
@@ -77,7 +79,7 @@ def main():
         need(carry(2*v+1)==(B-2+4*e,C+3*v+3*e,C-2+2*e),'odd triple carry')
     out=dict(status='FINITE_EXACT_CHECKS_OF_ALL_SIZE_IDENTITIES',literal_sources=checks,dual_cases=dual_count,apex_fixed_census=fixed,
         stable_18977=dict(v=4768,coefficient=19072,correction=-95,triple_correction=correction(14304),uniform_offset=correction(14304)+285),
-        finite_odd_core_search=dict(bound=200000,hits=hits,scope='not a proof of no offset2 or unique offset4 at all sizes'),
+        finite_odd_core_search=dict(bound=200000,hits=hits,scope='finite support only; incoming RC4 separately proves the all-size boundary'),
         all_size_plus4=dict(source_core=7,target_core=21,source='28*2^(m-1)-5',target='84*2^(m-1)-11',birth_receipts=birth_receipts,
             scope='Two actual births retaining every old name, apex and 1-ready root; uniform in m, but no iterated return from the output family'))
     (HERE/'stable_words.json').write_text(json.dumps(out,indent=2)+'\n');print('PASS stable words, clone laws, converse and carry recurrences',flush=True)

@@ -1,5 +1,13 @@
 # Next: cancel the constant mode with a second feedback port
 
+**Continuation update:** [return18979_palindrome](../return18979_palindrome_20261103/README.md)
+now saves actual returns from18977/18979 to56933/56935/56939/56941 and
+completes the strong one-ready fibres at the two inputs. Its STABLE S6
+shows that even a second feedback port cannot repair a return ending with
+a fixed exterior and the same uniform ready clone mark. The no-return
+and unfinished one-entry census statements below describe this packet's
+earlier boundary; retain them as provenance, not the latest frontier.
+
 1. The actual18979 source is still the15-vertex child in
    `../return6325_observer_20261103/return6325.json`, authenticated again
    in `hostiles.json`. Names `[1,2,4,5,6,7,8,13,14,21,22,31,32,43,44]`,

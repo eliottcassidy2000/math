@@ -2,8 +2,12 @@
 
 **PROVED scoped / FINITE-EXACT.** Same-agent proof review with independent
 algorithms. The actual18979 source remains saved with its original root43,
-spare6, full observer and clocks. No ready return at18979 or closed ternary
-source grammar has yet been obtained.
+spare6, full observer and clocks. This packet does not construct a neutral
+ready return at18979. **Continuation:** the concurrent
+[literal-return packet](../return18979_palindrome_20261103/README.md)
+now supplies both18979 branches, with explicit old-name deletions, plus
+both18977 branches and complete strong one-ready value fibres. The closed
+ternary source grammar remains OPEN.
 
 The main advance is a complete structural boundary for one-root cloning:
 readiness survives growth exactly when the root has one in-port and deleting

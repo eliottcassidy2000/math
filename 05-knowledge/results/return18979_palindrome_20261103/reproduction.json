@@ -5,7 +5,7 @@
   "output_sha256": {
     "audit_bank.json": "e2be5b44f68b174222108c89ed179bb8db02195f4332e41519de2d8e0e94d32f",
     "audit_returns.json": "c457217676b3d121022dc9ed6bee2fbccfc7457cb51378499eb033ec55338c46",
-    "stable_words.json": "0bc91ca149aa49fb004da742268097fcf30366bea71346b545b9a7bab8bed7e4",
+    "stable_words.json": "58ff7b98c9724edec70b51695fb79c4663647533dc2c6b4b7e44486a8936aa71",
     "arithmetic.json": "aa15ceb58acad32b4269e3138c486648b5e7c08daeca7e82d757466013deb7bb"
   },
   "discovery_sha256": {
@@ -34,13 +34,21 @@
     "endpoint.cpp": "f1686e905b8698759595a0761c2697380f893c7b41d1da954160465002951586",
     "funnel_bank.cpp": "f96d368c1a48531340a505d0c63270600fbe1ae13e406f91f9bdb2456994377c",
     "phases_bridge.py": "3c728e47c1939f65e29e9bf7ecca91a68e83f4c3ba1772fe745d4d3fd3aebb20",
-    "reproduce.py": "13eda8f5288650b729919fe92c474f48badffa7167417197a40a4f4234a57732",
+    "reproduce.py": "284f289596986c73d5d23ecbc88f3f1038176fbbe5d18741bca9ba193a0ae907",
     "returns.py": "143e8fdeab8454af2fa41338b8d6ffab7a75d2649cdfe466ee1464c7c88d91f3",
     "search_funnels.py": "405d070465c22ad120241833956e93b84ba43191c91178a3f58936c09ad1d77f",
     "search_two_entry.py": "0b341fe18c8c6cc4ab0b294b9b437fac770d1db333d0650099c0b1a221a3055f",
-    "stable_words.py": "4a7dc540063aa2848efc080f7f6ba1e6e0e4f5b1e3148865dc25dec3bc3e51a4",
+    "stable_words.py": "44065fc6f574be77e6c91e8f841f9eb3ea85cfc17a5e0472085e04496acad81f",
     "targets.py": "a225e1de284690d825f6c7ac2d68308050b82edb57fd0d5c999b89372f25594b",
     "two_entry.cpp": "f8efa96436599b67be30eceb7858d74024e28409004d6a412a5b71ea32330010"
   },
-  "scope": "Same-agent proof review, independent matrix/DP algorithms; no external audit or all-size spectrum claim"
+  "scope": "Same-agent proof review, independent matrix/DP algorithms; no external audit or all-size spectrum claim",
+  "incoming_pin": "a421cb1ac1",
+  "incoming_sha256": {
+    "return18979_ports_20261103/PROOFS.md": "ab17e49da4b59fa57937c5567d2280bb9dd31b9fef9265aab8e16240a480f9f2",
+    "session174_palindrome_symmetry_20261103/palindromes/REPORT.md": "7d2ec3e80fda02cb5b686eaa7e637b61c9447a1542af4ae7b2f9d651a4529bc1",
+    "session174_palindrome_symmetry_20261103/counts7417/README.md": "259d4b348f41b1379ad9be5728542a4bdc8b7d7d12d52bc47b62053fd0d58a5b",
+    "session174_palindrome_symmetry_20261103/synthesis/NOTE.md": "0454aa944f9c6902d7ff88a29a9c3aa00d159370b84a43d76dd389f5dd4ae82a",
+    "all_prime_tournament_geometry_20261103/PROOFS.md": "391968379f9e7ea70fc17f66237874040b45bb8c248d5a16b4e0a44fea9a938b"
+  }
 }

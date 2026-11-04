@@ -5,6 +5,10 @@ below. Same-agent proof review with independent algorithms; no external
 proof audit or literature-priority claim. The full positive odd Hamilton
 spectrum conjecture, with gaps exactly7 and21, remains **OPEN**.
 
+[INCOMING](INCOMING.md) credits concurrent overlap on the binary grammar,
+the infinite+4 branch and palindrome norm sieves, and inherits the stronger
+all-size exclusion of uniform+2 within the one-apex carrier.
+
 The actual saved sources now reach **56933,56935,56939,56941** by explicit
 returns and the inherited ternary reset. Root39/43, in-port31 and spare6
 survive. The four branches use20,18,24,22 native complements; only the
@@ -26,7 +30,9 @@ names. [RETURNS R1](RETURNS.md) gives the complete receipts and scopes.
   names and the one-ready root. The output needs a further return law.
 * **PROVED boundary:** the chosen18977 return is clone-stable with
   `H_m=19072*2^(m-1)-95`. Its fixed-core ternary offset is -156, so +2/+4
-  need additional corrections158/160. The other three returns expose
+  need additional corrections158/160. Incoming RC4 and our endpoint
+  corollary S6 prove these cannot yield a ready return with a fixed
+  exterior and the retained uniform clone mark. The other three returns expose
   clone defects31,27,115; no closed bounded-defect grammar is claimed.
 * **PROVED arithmetic mechanism:** [PALINDROME_CLOCKS](PALINDROME_CLOCKS.md)
   gives exact scalar clocks modulo every modulus, three-row integral

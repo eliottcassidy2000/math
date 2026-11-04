@@ -24,7 +24,7 @@
         7
       ]
     },
-    "scope": "not a proof of no offset2 or unique offset4 at all sizes"
+    "scope": "finite support only; incoming RC4 separately proves the all-size boundary"
   },
   "all_size_plus4": {
     "source_core": 7,
