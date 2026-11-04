@@ -1,0 +1,291 @@
+{
+  "direct_dp_words": 1023,
+  "modular_bfs": [
+    {
+      "q": 1,
+      "states": 1,
+      "max_order": 3
+    },
+    {
+      "q": 3,
+      "states": 9,
+      "max_order": 8
+    },
+    {
+      "q": 5,
+      "states": 25,
+      "max_order": 10
+    },
+    {
+      "q": 7,
+      "states": 49,
+      "max_order": 12
+    },
+    {
+      "q": 9,
+      "states": 81,
+      "max_order": 15
+    },
+    {
+      "q": 11,
+      "states": 121,
+      "max_order": 15
+    },
+    {
+      "q": 13,
+      "states": 169,
+      "max_order": 14
+    },
+    {
+      "q": 15,
+      "states": 225,
+      "max_order": 16
+    },
+    {
+      "q": 17,
+      "states": 289,
+      "max_order": 17
+    },
+    {
+      "q": 19,
+      "states": 361,
+      "max_order": 19
+    },
+    {
+      "q": 21,
+      "states": 441,
+      "max_order": 18
+    },
+    {
+      "q": 23,
+      "states": 529,
+      "max_order": 16
+    },
+    {
+      "q": 25,
+      "states": 625,
+      "max_order": 18
+    },
+    {
+      "q": 27,
+      "states": 729,
+      "max_order": 20
+    },
+    {
+      "q": 29,
+      "states": 841,
+      "max_order": 19
+    },
+    {
+      "q": 31,
+      "states": 961,
+      "max_order": 20
+    },
+    {
+      "q": 33,
+      "states": 1089,
+      "max_order": 20
+    },
+    {
+      "q": 35,
+      "states": 1225,
+      "max_order": 22
+    },
+    {
+      "q": 37,
+      "states": 1369,
+      "max_order": 20
+    },
+    {
+      "q": 39,
+      "states": 1521,
+      "max_order": 22
+    },
+    {
+      "q": 41,
+      "states": 1681,
+      "max_order": 21
+    },
+    {
+      "q": 43,
+      "states": 1849,
+      "max_order": 21
+    },
+    {
+      "q": 45,
+      "states": 2025,
+      "max_order": 21
+    },
+    {
+      "q": 47,
+      "states": 2209,
+      "max_order": 23
+    },
+    {
+      "q": 49,
+      "states": 2401,
+      "max_order": 22
+    },
+    {
+      "q": 51,
+      "states": 2601,
+      "max_order": 25
+    },
+    {
+      "q": 53,
+      "states": 2809,
+      "max_order": 23
+    },
+    {
+      "q": 55,
+      "states": 3025,
+      "max_order": 24
+    },
+    {
+      "q": 57,
+      "states": 3249,
+      "max_order": 23
+    },
+    {
+      "q": 59,
+      "states": 3481,
+      "max_order": 23
+    },
+    {
+      "q": 61,
+      "states": 3721,
+      "max_order": 23
+    },
+    {
+      "q": 63,
+      "states": 3969,
+      "max_order": 24
+    },
+    {
+      "q": 65,
+      "states": 4225,
+      "max_order": 25
+    },
+    {
+      "q": 67,
+      "states": 4489,
+      "max_order": 22
+    },
+    {
+      "q": 69,
+      "states": 4761,
+      "max_order": 23
+    },
+    {
+      "q": 71,
+      "states": 5041,
+      "max_order": 24
+    },
+    {
+      "q": 73,
+      "states": 5329,
+      "max_order": 27
+    },
+    {
+      "q": 75,
+      "states": 5625,
+      "max_order": 26
+    },
+    {
+      "q": 77,
+      "states": 5929,
+      "max_order": 27
+    },
+    {
+      "q": 79,
+      "states": 6241,
+      "max_order": 25
+    },
+    {
+      "q": 81,
+      "states": 6561,
+      "max_order": 27
+    },
+    {
+      "q": 83,
+      "states": 6889,
+      "max_order": 26
+    },
+    {
+      "q": 85,
+      "states": 7225,
+      "max_order": 27
+    },
+    {
+      "q": 87,
+      "states": 7569,
+      "max_order": 25
+    },
+    {
+      "q": 89,
+      "states": 7921,
+      "max_order": 27
+    },
+    {
+      "q": 91,
+      "states": 8281,
+      "max_order": 29
+    },
+    {
+      "q": 93,
+      "states": 8649,
+      "max_order": 28
+    },
+    {
+      "q": 95,
+      "states": 9025,
+      "max_order": 27
+    },
+    {
+      "q": 97,
+      "states": 9409,
+      "max_order": 26
+    },
+    {
+      "q": 99,
+      "states": 9801,
+      "max_order": 27
+    },
+    {
+      "q": 101,
+      "states": 10201,
+      "max_order": 27
+    }
+  ],
+  "witnesses_q7": {
+    "0": [
+      "1001101010",
+      413
+    ],
+    "1": [
+      "10010011010",
+      771
+    ],
+    "2": [
+      "10010110110",
+      695
+    ],
+    "3": [
+      "10",
+      3
+    ],
+    "4": [
+      "111010",
+      39
+    ],
+    "5": [
+      "10101010",
+      117
+    ],
+    "6": [
+      "1101001010",
+      573
+    ]
+  },
+  "status": "PASS"
+}
