@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "independent_run_word_coefficients": 64,
+  "kernel_certificate": "After multiplication by (1-abc)^3, both numerators have each variable degree at most three, so the 4^3 series coefficients determine the identity.",
+  "independent_named_queries": 1471,
+  "independent_uniform_queries": 64,
+  "mixed7_degree_counts": {
+    "0": 0,
+    "1": 8,
+    "2": 64,
+    "3": 196,
+    "4": 244
+  },
+  "source_sha256": {
+    "PROOF.md": "2f5f6b782c5779316ed9a4057258f5d3c8189c8c28064d755e20a17849af43b3",
+    "verify.py": "93bf8333e24c44ccf2546be5b22acb4d93de586a667c2988d99f0bff9c55c798"
+  },
+  "audit_sha256": "ebc649971ff0d2c2264c0e8a7f92f2e8784489e5ed884caae11fedffd75aa0fc",
+  "producer_normal_optimized_equal": true
+}
