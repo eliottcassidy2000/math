@@ -80,10 +80,12 @@ Running times on the 8 GB mac-mini: `(3,5)` through `k = 6` (`376,576` objects p
 
 ### 2.1 The census (THM-4871 statement 5)
 
-Defects by family (`k = 0, 1, 2, ...`): `(3,5)`: `0, 0, 1, 4, 16, 84, 672`; `(3,7)`: `0, 0, 0, 0, 1, 4, 16`; `(5,7)`:
+Defects by family (`k = 0, 1, 2, ...`): `(3,5)`: `0, 0, 1, 4, 16, 84, 672, 8654` (the `k = 7` row, `n = 15`, by the streaming
+version `cpq_defect_k7.py`: `R = 13,694,400`, `tau_T = 13,650,288`, `tau_E = 13,641,634`, `W = 2638`, `E_T = 44,112`,
+`E_even = 50,088`, `E_wit = 40`; 36 min; not covered by audit A); `(3,7)`: `0, 0, 0, 0, 1, 4, 16`; `(5,7)`:
 `0, 0, 1, 4, 16, 88, 704`; `(3,11)`, `(3,13)`, `(7,13)`: `0` through `k = 4, 3, 3`; `(7,11)`: `0, 0, 0, 0, 1`; `(11,13)`:
 `0, 0, 1`; `(9,5)`: `0, 0, 0, 0, 1`; `(9,7)`, `(9,11)`: `0, 0, 1, 4`; `(9,13)`: `0, 0, 0, 0, 1`; `(3,25)`: `0, 0` at `k <= 1`.
-That is 62 rows over thirteen families. The full `tau_T, tau_E, W, E_T, E_even, E_wit` table is in THM-4871 and in the
+That is 63 rows over thirteen families. The full `tau_T, tau_E, W, E_T, E_even, E_wit` table is in THM-4871 and in the
 `.out` files. In every row THM-4721 Theorem R (`R = RG`) and THM-4728's identity hold, and `tau_T >= tau_E`.
 
 ### 2.2 HYP-9344 (2) is refuted
@@ -136,7 +138,11 @@ and `17 + 48 - 64 = 1`.
 * First defect exactly at `k = |p - q|`, value `1`, then `4`, `16` (all thirteen families; PROVED for primes `p < q < 2p`
   by THM-4871 (7), numerical for `q > 2p` and for prime powers).
 * `defect(k) = b_(k-d)(4) - E_T^F(k - d)`: `(5,7)` gives the pure sequence `1, 4, 16, 88, 704` (`E_T(j) = 0` for `j < 5`),
-  C15 gives `1, 4, 16, 88 - 4, 704 - 32`.
+  C15 gives `1, 4, 16, 88 - 4, 704 - 32`. **The pre-registered test at C15 `k = 7` refutes this form:** the prediction
+  `b_5(4) - E_T(5) = 8912 - 260 = 8652` against the computed `8654`. The difference is `2 = E_wit(5)`, the first nonzero
+  witness multiplicity, so the one-parameter repair `defect(k) = b_(k-d)(4) - E_T(k - d) + E_wit(k - d)` fits all C15 rows
+  (`k = 2..7`) and all other rows (`E_wit(k - d) = 0` there); it is a post-hoc one-point refinement, typed NUMERICAL,
+  and its next test (`E_wit(6) = 8` enters at C15 `k = 8`, `2 b_8(4) = 874,138,624` objects per side) is out of reach here.
 * `tau_T >= tau_E` in all 62 rows.
 
 ## 4. Uniform first-order rules
@@ -241,7 +247,9 @@ decorated pairing (THM-4726 fixed what a carrier must carry; untouched here); th
    `K_(p,p)`-type witnesses at `k = p` must be matched against the coincidences (the `(3,7)` anatomy `17 + 48 - 64`).
 2. Prove the `k = p` cancellation in general (bijection between the `K_(p,p)` witnesses plus even-graph coincidences and
    the tournament coincidences), then the formula of HYP-9463 (2) by induction on `k`.
-3. The C15 `k = 7` row with hashed canonical forms (predicted `8652`).
+3. (Done: the C15 `k = 7` row gives `8654`, refuting the predicted `8652`; HYP-9463 (2) now carries the `+E_wit(k-d)`
+   repair as a one-point fit.) Find the structural meaning of the `E_wit` term, or a second row with `E_wit(k - d) > 0`
+   in a cheaper family.
 4. Model-check the two-atom first-order rules at `p = 13, 17` (HYP-9463 (4)).
 
 ## 10. Audit
