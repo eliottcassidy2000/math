@@ -74,13 +74,8 @@ A hypothesis is unresolved unless a proved leaf is named explicitly. Search its 
 - **THM-2088--2090 and THM-2092/2093 (PROVED):** flat persistence, the global splice, height transfer, and dyadic cocircuit flags make every no-pair cut branch finite. The banks are not enumerated.
 - **THM-2091/THM-2094/THM-2096 (PROVED):** centered energy is necessary, the four-`7|q` branch is empty, and Cayley-tree variance raises bounded-bank thresholds; complete maximum-tree information can be stronger.
 - **THM-2097/2100/2112 (PROVED):** every depth-four rank-seven template has an explicit whole-row finite box, but no box is enumerated or proved empty.
-- **THM-2098/2099/2103/2119 (PROVED):** guarded sizes `8..10` split into pure, low-mixed, and high-vertical lanes; only pure rows inherit the collision budget. Pair trees miss dyadic rows; pure-transverse rank eight is projectively three-sparse under THM-2119's exact hypotheses. blockers; a joint Toeplitz certificate closes a row missed by scalar clocks. `13`-blocker or at least five nonblocker terminals projectively parallel to
-  the guard modulo thirteen. THM-2124 proves the complementary finite-plane
-  seven-pencil theorem; its all-eight pencil and moving offsets remain open.
-- **THM-2117/2121 (PROVED):** clocks, the maximum Hunter tree, and all scalar
-  minors can miss an open safe cell; every strict safe cell has a full
-  Toeplitz/Fejer certificate of order at most `14nV^2+1`. Boundary-only points
-  are outside that statement.
+- **THM-2098/2099/2103/2119 (PROVED):** guarded sizes `8..10` split into pure, low-mixed, and high-vertical lanes; only pure rows inherit the collision budget. Pair trees miss dyadic rows; pure-transverse rank eight is projectively three-sparse under THM-2119's exact hypotheses. blockers; a joint Toeplitz certificate closes a row missed by scalar clocks. `13`-blocker or at least five nonblocker terminals projectively parallel to the guard modulo thirteen. THM-2124 proves the complementary finite-plane seven-pencil theorem; its all-eight pencil and moving offsets remain open.
+- **THM-2117/2121 (PROVED):** clocks, the maximum Hunter tree, and all scalar minors can miss an open safe cell; every strict safe cell has a full Toeplitz/Fejer certificate of order at most `14nV^2+1`. Boundary-only points are outside that statement.
 - **THM-2126 (PROVED):** scalar pair filters have a neutral wall and no uniform positive margin. Relation labels, common fibers, and higher multiplicity are essential sidecars; its examples are excluded by other gates.
 - **THM-2130 (PROVED):** root capacity at `11/13` extends selected higher ranks and forces a rank-eight sparse mod-11 alternative or `143|det(g,c_i)`.
 - **THM-2102/2110/2113/2118/2127/2129 (PROVED planar-JC strata):** cubic source fibers, exact coprime two-face trains, and affine-root families close. The balanced quartic triple is empty in odd degree and has one twice-odd square.
@@ -89,32 +84,21 @@ A hypothesis is unresolved unless a proved leaf is named explicitly. Search its 
 - **THM-2074:** density-one strict LRC(14), not universal closure.
 - **THM-2080:** dyadic depth at most four, terminal size `7..10`, maximum at least `25`; depth-zero eleven and rank twelve remain separate.
 - **HYP-6820 (MIXED):** uniform `q<=25` is refuted; non-AP/deep multi-defect emptiness remains open.
-- **Live residues:** rank-seven finite banks; the guard-`13` pencil and
-  nontransverse guarded lanes; depth-zero eleven, marked circuits, and the
-  rank-twelve box.
+- **Live residues:** rank-seven finite banks; the guard-`13` pencil and nontransverse guarded lanes; depth-zero eleven, marked circuits, and the rank-twelve box.
 - **THM-741 (CLAIMED STUB / UNPROVED):** the global near-AP four-slot census is incomplete; route it as a candidate, not proved canon.
 
 ## NC2 / GMC and Lean
 - **Paper:** THM-2022 proves NC2/GMC(2); THM-2111 supplies an effective seed, THM-2101 two independent additive proofs, and THM-2067 the historical route.
-- **Formal:** `GMC2Main.gmc2` is unconditional, root-imported, and kernel-pure.
-  `GMC2DvdKOmegaWiring.singlePolyCrux_holds` closes the former `DvdK1` endpoint;
-  `HeightWitnessSupplier`, orbit-product, irreducibility, additive incidence, and the small-root frame are checked along its dependency chain.
-- **HYP-8925/HYP-8930:** positive coefficients and a fixed-support unique
-  channel prevent cancellation; neither is general `DvdK1`.
-- **HYP-8932:** monomial membership gives nonvanishing; `{-2,-1,1,2}` is
-  kernel-checked. `102/116` is bounded evidence with thirteen script-only rows.
+- **Formal:** `GMC2Main.gmc2` is unconditional, root-imported, and kernel-pure. `GMC2DvdKOmegaWiring.singlePolyCrux_holds` closes the former `DvdK1` endpoint; `HeightWitnessSupplier`, orbit-product, irreducibility, additive incidence, and the small-root frame are checked along its dependency chain.
+- **HYP-8925/HYP-8930:** positive coefficients and a fixed-support unique channel prevent cancellation; neither is general `DvdK1`.
+- **HYP-8932:** monomial membership gives nonvanishing; `{-2,-1,1,2}` is kernel-checked. `102/116` is bounded evidence with thirteen script-only rows.
 - **HYP-8931 (MISTAKE-240):** its empty-face predicate makes the bypass vacuous.
-- **HYP-8935 (MISTAKE-241):** its floating-asymptotic argument remains invalid.
-  Later exact modules close the route; the old branch-enumeration presentation is optional.
+- **HYP-8935 (MISTAKE-241):** its floating-asymptotic argument remains invalid. Later exact modules close the route; the old branch-enumeration presentation is optional.
 ## Other active lenses
-- **HYP-8945 (OPEN UNIT-DISTANCE ROUTE):** the sign-changing Bessel kernel
-  identifies cancellation, not a new asymptotic bound.
-- **Cross-domain incidence lesson:** HYP-2448's full barycentric root packet is
-  invertible, whereas HYP-2430's design-incidence map has enormous nullity.
-  Transfer must carry the rank defect and the lost-coordinate sidecar.
+- **HYP-8945 (OPEN UNIT-DISTANCE ROUTE):** the sign-changing Bessel kernel identifies cancellation, not a new asymptotic bound.
+- **Cross-domain incidence lesson:** HYP-2448's full barycentric root packet is invertible, whereas HYP-2430's design-incidence map has enormous nullity. Transfer must carry the rank defect and the lost-coordinate sidecar.
 - **Tournaments/sequences:** test gaps, residues, events, proof obligations, or support-collision profiles before choosing runners as vertices.
-- **Typed bridges only:** state source, target, map, preserved predicate, loss,
-  restoration sidecar, and hostile control.
+- **Typed bridges only:** state source, target, map, preserved predicate, loss, restoration sidecar, and hostile control.
 - **HYP-9120..9142 (Collatz procedural session collatz-procgen-20260922/24, mac-mini; 9120-9159 reserved; mixed statuses below):** choice collapses the exceptional set, and E-SCC's hostile rationals lie over the other prime (9120); rising-run excursions suffice (9121, REFUTED: dim >= 0.0536); loops through 1 of bounded ratio (9122) and through -1 (9125); supercritical strips, the smallest HARD instance of the Periodicity Conjecture (9123); no hostile integer >= 2, which implies Q2, verified < 1e18 (9124); no hostile point above 3/2 (9126); the cube-swap word, where sum (2^10/3^9)^(k^3) is conjectured irrational in Q_2, is the smallest open PC instance (9127). Wave 5: AMM 12592 super-blocks beat golden (9128, PROVED = THM-4468) and C*<3/2? (9129; C*>=11/8 is THM-4467); the cube-Pade zero estimate (9130); a square swap beyond phi (9131, now PROVED by 2-adic Hankel, mu_bar<7/4); p-adic Nesterenko for the square-swap number (9132; degree >= 3 PROVED mod KRVZ); the E-game zeta gap (9133, now PROVED). Wave 8: the smallest Mahler-bridge instance, Z(2187/1024, [4726,4727]/1163), equivalent to no-divergence on two 10-blocks by THM-4469 (9134). Finitely many fragile pairs, 24 to 10^7 (9135); the price of provable descent tends to 0 (9136, PROVED = THM-4475); pairing ladder THM-4470. Wave 11: sharp price exponent 1-h (9137, PROVED = THM-4478-critical-tube-affine-capacity-sharp-provability-price); cube distance to provability -> 0 (9138, PROVED = THM-4479, sharp exponent 1-h: flip exactly the undecided residues). Wave 12: hub-weight second moment polynomial, the 0.1001 bound (9139; THM-4477 proves 0.1445). Wave 14: the pairing price is peak-discounted, delta_L = rho^peak_L L^O(1) (9140; THM-4480 proves the two-sided arbitrary-edit version and the exponent 1-H(log_q 2) for every q). Is 5n+1 in the Haar closure of provable sign strategies? THM-4481 shows this needs unbounded concentration of invariant density on the flips; also, is any q in 7..21 ever provable? (9141) Wave 15: Conjecture R (the Robin inequality for the reflected barrier; max ratio 1.0033 for L <= 180) implies the private pairing price is peak-discounted (9142). HYP-9140's rationale was corrected: a single flip re-merges with probability 1/2. [synthesis](../results/collatz_procgen_20260922_synthesis.md) **Continuation, outside the reserved range:** **HYP-9160 (collatz-squares-doubles-20260925, opus; SETTLED, PROVED by THM-4476 the same day):** no slow divergence. Every divergent Syracuse orbit (either sheet, either sign) has `sum 1/m_l < infinity`; on the `3n-1` sheet this says the real value `R(d)` and the 2-adic value `R_2(d)` of the Bernstein series of a non-periodic word never coincide at the starting integer (`c = n prod(1 - 1/(3 m_l)) > 0`). Implied by no-divergence on the sheet; holds on bounded-critical-discrepancy words; first open regime is discrepancy `O(log l)`. From Proposition 6 of [the squares/doubles foundry](../results/collatz_sqdbl_20260925_squares_doubles_foundry.md). **HYP-9161 (OPEN, opus 2026-09-26): the landing multiplicity of THM-4476's recursion is polylogarithmic (conjecturally O(theta log X)); would lower THM-4499's exponent to the ballot floor -3/2; realised-by-residue-classes hostile recorded.**
 ## Promotion rule
 Record quantifiers, direction, mechanism, boundary, dependencies, hostile witness, and non-consequences. Lean needs satisfiable hypotheses and root reach; computation needs a universe, controls, command, and output. Route `CLAIMED` and `RESERVED` files as unproved candidates, never canon.
