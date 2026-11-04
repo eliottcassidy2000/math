@@ -66,3 +66,19 @@ the concurrent arithmetic compiler. The global obstruction is still control
 of possible prime supports. Honeycomb arithmetic wires do not by themselves
 realize a forcing six-colour boundary relation; that geometric task keeps
 its full metric and colouring constraints.
+
+## Last concurrent return packet
+
+A push race brought commitsd86be6a9d9 through90010d2c0d, also retained by
+clean rebase. The [balanced-ternary packet](../balanced_ternary_returns_20261103/README.md)
+supplies a source-preserving59-to181 obstruction and a named three-old-arc
+repair, plus a higher-feedback requirement in its239-to721 branch. These
+are incoming audited results, not recomputed claims of this packet.
+
+The exact comparison to C4 is a scope distinction: its repair preserves
+the endpoint H value and named ports, while C4 assumes equality of the
+entire one-insertion response. The shared minimum of three changed arcs
+therefore does not identify the two mechanisms. Both require retaining
+the actual source and the permitted operation, rather than a scalar H.
+The incoming coverage-provenance correction in Session176's synthesis is
+also retained. This packet states no numerical coverage frontier.

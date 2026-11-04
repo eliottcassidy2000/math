@@ -2,6 +2,7 @@
   "baseline_commit": "b7f9b297e75c",
   "files": {
     "01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md": "485f34b2186f3d7827c6c9ffc8305015b8f0fff66b0bd2ca76dceab08cdb3318",
+    "05-knowledge/results/balanced_ternary_returns_20261103/README.md": "c9e1b5874b635ded4c294e63e6c4aab9d6d02551f2ce4aecdbef1fbeab6ce9ee",
     "05-knowledge/results/circuit_flow_tournaments_20261103/PROOFS.md": "0655b677c715a7e208cb5591447fb424f71c9aee6ee24902476e30380c7a6315",
     "05-knowledge/results/hn_metagraph_information_20261026/metric_transport/RESULT.md": "e358ea6713b75d59bf503ca718e944dad4f5744ed6dfd0b09890c293de5e80e6",
     "05-knowledge/results/session176_tournament_information_20261104/circuits/PROOF.md": "74eb47a648f43d74e4d4784af6f1f2926ba52329a537e37d975922fb46ebe26d",
@@ -16,5 +17,5 @@
     "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/proof.md": "48aaefa2d059a56fb201a41d5f78bcd043eb2fbcb58f1ab9918c3e4d987917d7"
   },
   "hash_scope": "Integrated source bytes; this session adds cross-reference-only paragraphs to three inherited sources. All mathematical inputs were read before deriving.",
-  "integrated_head": "06316c266a"
+  "integrated_head": "90010d2c0d"
 }
