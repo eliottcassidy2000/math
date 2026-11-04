@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "insertion_orphan_checks": 1098,
+  "literal_subset_dp_binary_checks": 511,
+  "complete_class_bound": 10000,
+  "max_core_length": 15,
+  "attained_counts_through_10000": 2595,
+  "missing_through_199": [
+    7,
+    13,
+    21,
+    29,
+    35,
+    41,
+    43,
+    49,
+    55,
+    57,
+    59,
+    67,
+    71,
+    75,
+    77,
+    83,
+    89,
+    93,
+    101,
+    105,
+    109,
+    111,
+    113,
+    119,
+    125,
+    131,
+    133,
+    135,
+    137,
+    147,
+    149,
+    155,
+    161,
+    163,
+    173,
+    175,
+    177,
+    183,
+    189,
+    193,
+    197
+  ],
+  "five_vertex_H13_outmasks": [
+    12,
+    21,
+    24,
+    18,
+    1
+  ],
+  "distinct_small_profiles": 15,
+  "asymmetric_wrapper_checks": 225,
+  "odd_7_valuation_asymmetric_example": {
+    "A": [
+      0,
+      1
+    ],
+    "B": [
+      8,
+      1,
+      3,
+      6
+    ],
+    "count": 91,
+    "profiles": [
+      [
+        1,
+        4
+      ],
+      [
+        5,
+        32
+      ]
+    ]
+  },
+  "bank_sha256": "1a227aa1781944731f1c301c01184d6d19f21e2bebb6b8210897ea6239c03c95"
+}
