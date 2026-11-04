@@ -8,15 +8,26 @@ kind-pasteur-2026-11-04-S9, 4 November 2026. This note is a ledger, not a new th
 
 ## 0. One map, four questions
 
+**Later November4 integration:** [the recovered even-graph programme](even_graph_response_merge_20261104/MERGE.md)
+records already-constructed SCC/Lyndon, primitive-support, prime-local and
+prime-circulant type bijections, each with its preserved data. The remaining
+natural-map question must not erase these constructions or imply labelled
+equivariance. Its marked Fourier specialization keeps the complete cubic and
+quartic observer. Separately, reviewed Session189 commits `c5725b3a7f` and
+`c87ca88cff` advance the original-module XOR frontier below to **prime order
+at least nine**; see [the proof](session189_response_frontier_20261104/frontier_nine/PROOF.md)
+and [independent review](session189_response_frontier_20261104/nine_integration_audit/REVIEW.md).
+The older rows retain their dated input scopes, not a competing current boundary.
+
 Send a named tournament T to three things: its isomorphism class, its Hamilton count H(T), and its two-port response
 F_T. The response refines the count: F_T(0,0) = H(T). The four threads ask about this map.
 
 | thread | question about the map | current boundary |
 |---|---|---|
-| A000568 | How many classes are there? | Closed formulas are PROVED. Natural bijections with even graphs are OPEN. |
+| A000568 | How many classes are there? | Closed formulas and specified type bijections are PROVED. A general natural-map criterion remains OPEN; labelled equivariant orbit bijections are excluded from five. |
 | Tiling metagraph | How are classes wired by complement lines of tilings, with fibres H/\|Aut\|? | Parity and line counts are PROVED. Connectivity and a compressed recurrence are OPEN. |
 | {7,21} spectrum | Which odd values does H take? | 7 and 21 are excluded (PROVED). Completeness is OPEN (Chan–Pak Conj. 6.2). |
-| Response frontier | When does F separate T from an original-module XOR target? | Highest changed nodes must be prime of order ≥ 7 (S188). Transitive children of order ≥ 5 can only be unchanged or reversed (S189). THM-4864 separates both cases, and singleton children. |
+| Response frontier | When does F separate T from an original-module XOR target? | Highest changed nodes must now be prime of order ≥ 9 (reviewed S189 integration); earlier transitive-child and singleton exclusions retain their stated scopes. |
 
 ## 1. Counting layer (A000568 and companions)
 

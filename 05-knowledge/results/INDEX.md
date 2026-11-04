@@ -1,5 +1,7 @@
 # Script Results Index
 
+- [Tournament/even-graph bijections and marked Fourier response merge](even_graph_response_merge_20261104/README.md) (2026-11-04): **INHERITED PROVED/CITED maps; PROVED elementary specialization; FINITE-EXACT controls.** Recovers the ranked SCC/Lyndon, primitive-support, one-prime Sylow-action, prime-circulant derivative and sign-aware rooted constructions with their actual inverse and equivariance scopes. Signed trace gives12=10+2 and8=10-2 at five. A complete marked Fourier replay retains all1024 full named responses,265,216 actual queries,102,400 independent quartic checks and twelve literal full-polynomial controls; normal/-O agree. Integrates the previous sphere/MRB/projective refutation, the positive integral C5 repair, and reviewed incoming original-module collision frontier at prime order at least nine. No universal natural bijection, named reconstruction or missing-spectrum completeness is claimed.
+
 - [One-child modulo-four separation of module-reversal cubes](reversal_cube_mod4_anchor_20261104/README.md) (2026-11-04, kind-pasteur S9): **PROVED (THM-4864); pre-registered P1–P5; audit in packet.**
   - A weighted E1 identity holds at every vertex.
   - A singleton child gives a coarse mod-4 separator. A transitive child gives an anchored mod-4 separator for both the unchanged and the reversed case, the binary cube left by Session189, at every order and in every ambient.

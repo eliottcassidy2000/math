@@ -29,6 +29,15 @@ not an identity with all Eulerian graphs. At n=4 the respective unlabelled
 counts are4 and3. Labelled cardinalities also differ: at n=5 there are1024
 tournaments and396 sign-even graphs, despite12 types on both sides.
 
+If “categories” means their isomorphism groupoids, there is an additional
+elementary obstruction for every n>=2. A tournament automorphism group has
+odd order: an involution would swap the ends of some edge. The empty graph
+is sign-even and has automorphism group S_n, which has even order. An
+equivalence of groupoids must preserve automorphism groups up to isomorphism,
+so these groupoids are not equivalent. This does not prevent bijections of
+their sets of isomorphism classes. It is a different assertion from the
+more specific equivariant-map obstruction below.
+
 ## 2. What the prior bijections actually accomplish
 
 |Map / source|Construction and inverse|Preserved information|Boundary|
