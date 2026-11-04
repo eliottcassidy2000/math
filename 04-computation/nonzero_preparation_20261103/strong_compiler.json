@@ -1,0 +1,633 @@
+{
+  "all_strong_endpoint_root_cases": 2316,
+  "arbitrary_core_pair_cases": 10648,
+  "cleanup_premature_b_hostile": [
+    2,
+    4,
+    9,
+    3,
+    15
+  ],
+  "cleanup_wrong_order_hostile": [
+    18,
+    20,
+    25,
+    19,
+    0
+  ],
+  "example": {
+    "d": 4,
+    "retained_root": 0,
+    "source": [
+      8,
+      1,
+      3,
+      6
+    ],
+    "target": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "trace": [
+      {
+        "command": "initial",
+        "observer": {
+          "F_root": 7,
+          "H": 5,
+          "defect": 2
+        },
+        "rows": [
+          8,
+          1,
+          3,
+          6
+        ]
+      },
+      {
+        "command": "scaffold_a_birth",
+        "helper_out": 14,
+        "observer": {
+          "F_root": 13,
+          "H": 11,
+          "defect": 2
+        },
+        "rows": [
+          24,
+          1,
+          3,
+          6,
+          14
+        ]
+      },
+      {
+        "command": "scaffold_b_birth",
+        "helper_out": 16,
+        "observer": {
+          "F_root": 50,
+          "H": 37,
+          "defect": 13
+        },
+        "rows": [
+          56,
+          33,
+          35,
+          38,
+          14,
+          16
+        ]
+      },
+      {
+        "command": "helper_birth",
+        "helper_out": 3,
+        "observer": {
+          "F_root": 160,
+          "H": 109,
+          "defect": 51
+        },
+        "rows": [
+          56,
+          33,
+          99,
+          102,
+          78,
+          80,
+          3
+        ]
+      },
+      {
+        "command": "native_complement",
+        "guard": [
+          5,
+          4,
+          6,
+          0,
+          3,
+          2,
+          1
+        ],
+        "observer": {
+          "F_root": 168,
+          "H": 89,
+          "defect": 79
+        },
+        "rows": [
+          14,
+          88,
+          18,
+          20,
+          65,
+          31,
+          45
+        ]
+      },
+      {
+        "command": "native_complement",
+        "guard": [
+          5,
+          4,
+          0,
+          3,
+          2,
+          1,
+          6
+        ],
+        "observer": {
+          "F_root": 137,
+          "H": 91,
+          "defect": 46
+        },
+        "rows": [
+          104,
+          97,
+          99,
+          102,
+          15,
+          80,
+          16
+        ]
+      },
+      {
+        "command": "helper_delete",
+        "observer": {
+          "F_root": 59,
+          "H": 37,
+          "defect": 22
+        },
+        "rows": [
+          40,
+          33,
+          35,
+          38,
+          15,
+          16
+        ]
+      },
+      {
+        "command": "helper_birth",
+        "helper_out": 2,
+        "observer": {
+          "F_root": 116,
+          "H": 77,
+          "defect": 39
+        },
+        "rows": [
+          104,
+          33,
+          99,
+          102,
+          79,
+          80,
+          2
+        ]
+      },
+      {
+        "command": "native_complement",
+        "guard": [
+          4,
+          1,
+          0,
+          3,
+          2,
+          5,
+          6
+        ],
+        "observer": {
+          "F_root": 198,
+          "H": 105,
+          "defect": 93
+        },
+        "rows": [
+          28,
+          77,
+          48,
+          20,
+          34,
+          75,
+          29
+        ]
+      },
+      {
+        "command": "native_complement",
+        "guard": [
+          4,
+          1,
+          6,
+          0,
+          3,
+          2,
+          5
+        ],
+        "observer": {
+          "F_root": 131,
+          "H": 93,
+          "defect": 38
+        },
+        "rows": [
+          42,
+          96,
+          99,
+          102,
+          79,
+          16,
+          33
+        ]
+      },
+      {
+        "command": "helper_delete",
+        "observer": {
+          "F_root": 34,
+          "H": 27,
+          "defect": 7
+        },
+        "rows": [
+          42,
+          32,
+          35,
+          38,
+          15,
+          16
+        ]
+      },
+      {
+        "command": "helper_birth",
+        "helper_out": 1,
+        "observer": {
+          "F_root": 118,
+          "H": 77,
+          "defect": 41
+        },
+        "rows": [
+          42,
+          96,
+          99,
+          102,
+          79,
+          80,
+          1
+        ]
+      },
+      {
+        "command": "native_complement",
+        "guard": [
+          4,
+          0,
+          3,
+          2,
+          1,
+          5,
+          6
+        ],
+        "observer": {
+          "F_root": 181,
+          "H": 123,
+          "defect": 58
+        },
+        "rows": [
+          76,
+          57,
+          18,
+          20,
+          33,
+          77,
+          30
+        ]
+      },
+      {
+        "command": "native_complement",
+        "guard": [
+          4,
+          0,
+          6,
+          3,
+          2,
+          1,
+          5
+        ],
+        "observer": {
+          "F_root": 166,
+          "H": 93,
+          "defect": 73
+        },
+        "rows": [
+          98,
+          96,
+          99,
+          39,
+          79,
+          16,
+          40
+        ]
+      },
+      {
+        "command": "helper_delete",
+        "observer": {
+          "F_root": 44,
+          "H": 17,
+          "defect": 27
+        },
+        "rows": [
+          34,
+          32,
+          35,
+          39,
+          15,
+          16
+        ]
+      },
+      {
+        "command": "helper_birth",
+        "helper_out": 36,
+        "observer": {
+          "F_root": 137,
+          "H": 69,
+          "defect": 68
+        },
+        "rows": [
+          98,
+          96,
+          35,
+          103,
+          79,
+          16,
+          36
+        ]
+      },
+      {
+        "command": "native_complement",
+        "guard": [
+          4,
+          3,
+          1,
+          6,
+          2,
+          0,
+          5
+        ],
+        "observer": {
+          "F_root": 183,
+          "H": 109,
+          "defect": 74
+        },
+        "rows": [
+          56,
+          85,
+          25,
+          2,
+          40,
+          78,
+          29
+        ]
+      },
+      {
+        "command": "native_complement",
+        "guard": [
+          4,
+          3,
+          1,
+          2,
+          0,
+          5,
+          6
+        ],
+        "observer": {
+          "F_root": 123,
+          "H": 55,
+          "defect": 68
+        },
+        "rows": [
+          98,
+          36,
+          97,
+          103,
+          79,
+          80,
+          2
+        ]
+      },
+      {
+        "command": "helper_delete",
+        "observer": {
+          "F_root": 53,
+          "H": 27,
+          "defect": 26
+        },
+        "rows": [
+          34,
+          36,
+          33,
+          39,
+          15,
+          16
+        ]
+      },
+      {
+        "command": "helper_birth",
+        "helper_out": 40,
+        "observer": {
+          "F_root": 185,
+          "H": 123,
+          "defect": 62
+        },
+        "rows": [
+          98,
+          100,
+          97,
+          39,
+          79,
+          16,
+          40
+        ]
+      },
+      {
+        "command": "native_complement",
+        "guard": [
+          4,
+          2,
+          6,
+          3,
+          0,
+          1,
+          5
+        ],
+        "observer": {
+          "F_root": 218,
+          "H": 135,
+          "defect": 83
+        },
+        "rows": [
+          22,
+          56,
+          74,
+          17,
+          36,
+          77,
+          27
+        ]
+      },
+      {
+        "command": "native_complement",
+        "guard": [
+          4,
+          2,
+          3,
+          0,
+          1,
+          5,
+          6
+        ],
+        "observer": {
+          "F_root": 153,
+          "H": 91,
+          "defect": 62
+        },
+        "rows": [
+          98,
+          100,
+          41,
+          99,
+          79,
+          80,
+          4
+        ]
+      },
+      {
+        "command": "helper_delete",
+        "observer": {
+          "F_root": 68,
+          "H": 37,
+          "defect": 31
+        },
+        "rows": [
+          34,
+          36,
+          41,
+          35,
+          15,
+          16
+        ]
+      },
+      {
+        "command": "helper_birth",
+        "helper_out": 16,
+        "observer": {
+          "F_root": 154,
+          "H": 91,
+          "defect": 63
+        },
+        "rows": [
+          98,
+          100,
+          105,
+          99,
+          15,
+          80,
+          16
+        ]
+      },
+      {
+        "command": "native_complement",
+        "guard": [
+          5,
+          4,
+          0,
+          1,
+          2,
+          3,
+          6
+        ],
+        "observer": {
+          "F_root": 147,
+          "H": 83,
+          "defect": 64
+        },
+        "rows": [
+          14,
+          28,
+          24,
+          80,
+          65,
+          31,
+          39
+        ]
+      },
+      {
+        "command": "native_complement",
+        "guard": [
+          5,
+          4,
+          6,
+          0,
+          1,
+          2,
+          3
+        ],
+        "observer": {
+          "F_root": 216,
+          "H": 139,
+          "defect": 77
+        },
+        "rows": [
+          50,
+          100,
+          105,
+          35,
+          78,
+          80,
+          9
+        ]
+      },
+      {
+        "command": "helper_delete",
+        "observer": {
+          "F_root": 53,
+          "H": 37,
+          "defect": 16
+        },
+        "rows": [
+          50,
+          36,
+          41,
+          35,
+          14,
+          16
+        ]
+      },
+      {
+        "command": "scaffold_b_delete",
+        "observer": {
+          "F_root": 15,
+          "H": 13,
+          "defect": 2
+        },
+        "rows": [
+          18,
+          4,
+          9,
+          3,
+          14
+        ]
+      },
+      {
+        "command": "scaffold_a_delete",
+        "observer": {
+          "F_root": 9,
+          "H": 5,
+          "defect": 4
+        },
+        "rows": [
+          2,
+          4,
+          9,
+          3
+        ]
+      }
+    ]
+  },
+  "gadgets": 27860,
+  "gates": 424665,
+  "inverse_gadgets": 13770,
+  "scope": "finite controls for universal all-strong compiler; every old label survives; no count invariance or optimal helper claim",
+  "strong_setup_cleanup_cases": 2822
+}

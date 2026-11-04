@@ -1,0 +1,31 @@
+{
+  "audit": "DIRECT_CHILDREN_AUDIT.md",
+  "audited_pre_promotion_files": {
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/DIRECT_CHILDREN.md": {
+      "bytes": 6709,
+      "sha256": "4195d7e99439d347d2975f5bd09fe755f2dd1b43811cfc6acbb8e463be17682d"
+    }
+  },
+  "files": {
+    "04-computation/nonzero_preparation_20261103/surgery_direct_children.py": {
+      "bytes": 7091,
+      "sha256": "e0b40f5e7cd9acff4e818e88d3da71fb14dff893af99ed55cde370069656a8c5"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/DIRECT_CHILDREN.md": {
+      "bytes": 6799,
+      "sha256": "88acedaeb173b834e5ea759d2f317985f42a23c25b1723c5a4f8eed109332061"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/direct_children.json": {
+      "bytes": 91137,
+      "sha256": "10800aead142a80d5fa55443957ea821f7d9aa64a301896331eeaf255af5883c"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/direct_children.out": {
+      "bytes": 194,
+      "sha256": "7def00299af418ca9dbce03eb099a50d28043fee87a6f332d9db628744a09427"
+    }
+  },
+  "gates": 656,
+  "normal_optimized_frozen": "byte-identical",
+  "scope": "actual all-strong two-level four-leaf tree; two prepared leaves and two nonready C2 leaves; no unbounded closure",
+  "status": "PROVED actual construction; FINITE-EXACT controls; independent audit PASS"
+}

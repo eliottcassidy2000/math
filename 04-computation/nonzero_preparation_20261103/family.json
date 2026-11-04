@@ -1,0 +1,333 @@
+{
+  "checks": 604826,
+  "dependency_sha256": "024ac0b483d832865c6f12eabf0fe0f8676ac39188631e44910a0a4c9e66ca2f",
+  "positive_control": {
+    "A": 90,
+    "B": 5,
+    "divisor_queries": 20,
+    "hits": [
+      {
+        "A": 90,
+        "B": 5,
+        "bank_index": 0,
+        "bit": 1,
+        "core": [
+          2,
+          4,
+          1
+        ],
+        "gap": 1,
+        "ports": [
+          0
+        ],
+        "prefix": [],
+        "suffix": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "A": 90,
+        "B": 5,
+        "bank_index": 0,
+        "bit": 1,
+        "core": [
+          2,
+          4,
+          1
+        ],
+        "gap": 1,
+        "ports": [
+          0
+        ],
+        "prefix": [
+          1
+        ],
+        "suffix": [
+          0,
+          1
+        ]
+      },
+      {
+        "A": 90,
+        "B": 5,
+        "bank_index": 1,
+        "bit": 1,
+        "core": [
+          2,
+          4,
+          1
+        ],
+        "gap": 1,
+        "ports": [
+          1
+        ],
+        "prefix": [],
+        "suffix": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "A": 90,
+        "B": 5,
+        "bank_index": 1,
+        "bit": 1,
+        "core": [
+          2,
+          4,
+          1
+        ],
+        "gap": 1,
+        "ports": [
+          1
+        ],
+        "prefix": [
+          1
+        ],
+        "suffix": [
+          0,
+          1
+        ]
+      },
+      {
+        "A": 90,
+        "B": 5,
+        "bank_index": 2,
+        "bit": 1,
+        "core": [
+          2,
+          4,
+          1
+        ],
+        "gap": 1,
+        "ports": [
+          2
+        ],
+        "prefix": [],
+        "suffix": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "A": 90,
+        "B": 5,
+        "bank_index": 2,
+        "bit": 1,
+        "core": [
+          2,
+          4,
+          1
+        ],
+        "gap": 1,
+        "ports": [
+          2
+        ],
+        "prefix": [
+          1
+        ],
+        "suffix": [
+          0,
+          1
+        ]
+      },
+      {
+        "A": 90,
+        "B": 5,
+        "bank_index": 15,
+        "bit": 1,
+        "core": [
+          2,
+          4,
+          1
+        ],
+        "gap": 2,
+        "ports": [
+          0,
+          1
+        ],
+        "prefix": [],
+        "suffix": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "A": 90,
+        "B": 5,
+        "bank_index": 16,
+        "bit": 1,
+        "core": [
+          2,
+          4,
+          1
+        ],
+        "gap": 2,
+        "ports": [
+          0,
+          2
+        ],
+        "prefix": [],
+        "suffix": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "A": 90,
+        "B": 5,
+        "bank_index": 17,
+        "bit": 1,
+        "core": [
+          2,
+          4,
+          1
+        ],
+        "gap": 2,
+        "ports": [
+          1,
+          2
+        ],
+        "prefix": [],
+        "suffix": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "prefixes": 94
+  },
+  "requested": [
+    {
+      "A": 756,
+      "B": -83,
+      "address": "",
+      "divisor_queries": 65,
+      "hits": [],
+      "prefixes": 1014
+    },
+    {
+      "A": 2268,
+      "B": -247,
+      "address": "2",
+      "divisor_queries": 107,
+      "hits": [],
+      "prefixes": 3230
+    },
+    {
+      "A": 2268,
+      "B": -245,
+      "address": "4",
+      "divisor_queries": 107,
+      "hits": [],
+      "prefixes": 3230
+    },
+    {
+      "A": 6804,
+      "B": -739,
+      "address": "22",
+      "divisor_queries": 143,
+      "hits": [],
+      "prefixes": 10910
+    },
+    {
+      "A": 6804,
+      "B": -737,
+      "address": "24",
+      "divisor_queries": 143,
+      "hits": [],
+      "prefixes": 10910
+    },
+    {
+      "A": 6804,
+      "B": -733,
+      "address": "42",
+      "divisor_queries": 143,
+      "hits": [],
+      "prefixes": 10910
+    },
+    {
+      "A": 6804,
+      "B": -731,
+      "address": "44",
+      "divisor_queries": 143,
+      "hits": [],
+      "prefixes": 10910
+    },
+    {
+      "A": 20412,
+      "B": -2215,
+      "address": "222",
+      "divisor_queries": 167,
+      "hits": [],
+      "prefixes": 30686
+    },
+    {
+      "A": 20412,
+      "B": -2213,
+      "address": "224",
+      "divisor_queries": 167,
+      "hits": [],
+      "prefixes": 30686
+    },
+    {
+      "A": 20412,
+      "B": -2209,
+      "address": "242",
+      "divisor_queries": 167,
+      "hits": [],
+      "prefixes": 30686
+    },
+    {
+      "A": 20412,
+      "B": -2207,
+      "address": "244",
+      "divisor_queries": 167,
+      "hits": [],
+      "prefixes": 30686
+    },
+    {
+      "A": 20412,
+      "B": -2197,
+      "address": "422",
+      "divisor_queries": 167,
+      "hits": [],
+      "prefixes": 30686
+    },
+    {
+      "A": 20412,
+      "B": -2195,
+      "address": "424",
+      "divisor_queries": 167,
+      "hits": [],
+      "prefixes": 30686
+    },
+    {
+      "A": 20412,
+      "B": -2191,
+      "address": "442",
+      "divisor_queries": 167,
+      "hits": [],
+      "prefixes": 30686
+    },
+    {
+      "A": 20412,
+      "B": -2189,
+      "address": "444",
+      "divisor_queries": 167,
+      "hits": [],
+      "prefixes": 30686
+    }
+  ],
+  "requested_depth": 3,
+  "scope": "complete one-variable-run template inverse in the explicit 34-entry bank; not all ready families",
+  "source_sha256": "4e364088a89698dfd6e51e6b86682f9b295997762a28c425877f5c65bffb5d3a",
+  "state_controls": 127
+}

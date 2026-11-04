@@ -1,0 +1,2 @@
+# Preserve the independently audited source bytes and their downstream hash pins.
+surgery_native.py whitespace=-blank-at-eof

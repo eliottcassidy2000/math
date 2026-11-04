@@ -1,0 +1,29 @@
+{
+  "census": [
+    {
+      "ending_pairs": 2,
+      "n": 2,
+      "strong_marked_pairs": 0
+    },
+    {
+      "ending_pairs": 24,
+      "n": 3,
+      "strong_marked_pairs": 18
+    },
+    {
+      "ending_pairs": 384,
+      "n": 4,
+      "strong_marked_pairs": 384
+    },
+    {
+      "ending_pairs": 10240,
+      "n": 5,
+      "strong_marked_pairs": 13600
+    }
+  ],
+  "ending_pairs": 10650,
+  "gates": 26851,
+  "scope": "finite controls of analytic all-order terminal-SCC and unique-positive-auxiliary corollaries",
+  "sole_exit_auxiliaries": 814,
+  "strong_marked_pairs": 14002
+}

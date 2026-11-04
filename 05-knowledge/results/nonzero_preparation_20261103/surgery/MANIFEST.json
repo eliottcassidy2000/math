@@ -1,0 +1,42 @@
+{
+  "audit": "AUDIT.md",
+  "audited_pre_promotion_files": {
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/PROOF.md": {
+      "bytes": 12294,
+      "sha256": "6d3ca284a31a1d38cc324ba434cda8030e332898afd6b65d3ad423a511d3935e"
+    }
+  },
+  "files": {
+    "04-computation/nonzero_preparation_20261103/surgery_native.py": {
+      "bytes": 16235,
+      "sha256": "66eb9d682e0128bdf087c79b24a44dcfe127daf810ec560de85daa9689e220e2"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_ready.py": {
+      "bytes": 8410,
+      "sha256": "024ac0b483d832865c6f12eabf0fe0f8676ac39188631e44910a0a4c9e66ca2f"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/PROOF.md": {
+      "bytes": 12309,
+      "sha256": "557eb1003de3972b9a2f62652542c81e73746186b2ac85c12c4ecf423a38953a"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/native.json": {
+      "bytes": 42622,
+      "sha256": "5d3af77198b041ab4280ad250252fbd153ea6853869ce2b5caba87d4511680d1"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/native.out": {
+      "bytes": 191,
+      "sha256": "a200982060d1b2a41efbb91692617b05413107195828bbbeafff4a03ee916252"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/ready.json": {
+      "bytes": 15717,
+      "sha256": "4cc5a76fb0bd3ddb1276b86b3118c3dd7f51849a609b5cbad576cd1fbe128f44"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/ready.out": {
+      "bytes": 191,
+      "sha256": "6f6312f69ee3ee9944c39825aadcd98cf96e8b18423c576021561e2d5c3fc2a4"
+    }
+  },
+  "normal_optimized_frozen": "byte-identical for both programs",
+  "scope": "actual H1429 two-branch preparation, finite native paths, all-clock response formulas; no reusable closure",
+  "status": "PROVED scoped result; FINITE-EXACT controls; independent audit PASS"
+}

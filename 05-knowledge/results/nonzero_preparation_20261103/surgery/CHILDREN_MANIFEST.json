@@ -1,0 +1,30 @@
+{
+  "audit": "CHILDREN_AUDIT.md",
+  "audited_pre_promotion_files": {
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/CHILDREN.md": {
+      "bytes": 7571,
+      "sha256": "b6a4bf810a5e329c12183f559b10eb85ee9a3f132a95fd93116220f66c68e52b"
+    }
+  },
+  "files": {
+    "04-computation/nonzero_preparation_20261103/surgery_children.py": {
+      "bytes": 10698,
+      "sha256": "4142db9f3ee60b1b9a6bba2c017d0a38d4994895472f9f294122979c0d12d9a8"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/CHILDREN.md": {
+      "bytes": 7607,
+      "sha256": "e820e6ae9bb5d79fba451af281c0f3ad04d4c97046940aefa1edbc30aa8ec4fc"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/children.json": {
+      "bytes": 84963,
+      "sha256": "001a49cd1517da14752c3ec96559b688f0802393bf7e2fd28667017367456aac"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/children.out": {
+      "bytes": 191,
+      "sha256": "bca81dfdbc7dcffd529e323f5448492a0409b1797946eabceafb229f92e814a0"
+    }
+  },
+  "normal_optimized_frozen": "byte-identical634gates",
+  "scope": "actual finite two-round fork, three strong second-round leaves and one explicitly weak leaf",
+  "status": "PROVED scoped result; FINITE-EXACT controls; independent audit PASS"
+}

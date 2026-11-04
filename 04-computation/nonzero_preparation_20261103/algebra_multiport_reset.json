@@ -1,0 +1,209 @@
+{
+  "controls": [
+    {
+      "B": 3,
+      "F": [
+        3,
+        3,
+        3
+      ],
+      "F_new": [
+        18,
+        15,
+        14
+      ],
+      "H": 3,
+      "H_new": 13,
+      "first": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "name": "strong_C3_plus4",
+      "source": [
+        2,
+        4,
+        1
+      ],
+      "target": [
+        18,
+        20,
+        25,
+        3,
+        8
+      ]
+    },
+    {
+      "B": 3,
+      "F": [
+        1,
+        2
+      ],
+      "F_new": [
+        6,
+        9
+      ],
+      "H": 1,
+      "H_new": 5,
+      "first": [
+        2,
+        0,
+        3
+      ],
+      "name": "weak_TT2_plus2",
+      "source": [
+        2,
+        0
+      ],
+      "target": [
+        10,
+        8,
+        3,
+        4
+      ]
+    },
+    {
+      "B": 0,
+      "F": [
+        3,
+        3,
+        3
+      ],
+      "F_new": [
+        3,
+        3,
+        3
+      ],
+      "H": 3,
+      "H_new": 3,
+      "first": [
+        10,
+        12,
+        9,
+        0
+      ],
+      "name": "empty_cut",
+      "source": [
+        2,
+        4,
+        1
+      ],
+      "target": [
+        26,
+        28,
+        25,
+        0,
+        8
+      ]
+    }
+  ],
+  "cover_lift_images": 79757,
+  "gates": 296258,
+  "graph_exit_cuts": 1098,
+  "hamilton_lift_images": 12239,
+  "marked_cuts": 4306,
+  "operator_census": [
+    {
+      "graph_exit_cuts": 2,
+      "marked_cuts": 2,
+      "n": 1
+    },
+    {
+      "graph_exit_cuts": 8,
+      "marked_cuts": 16,
+      "n": 2
+    },
+    {
+      "graph_exit_cuts": 64,
+      "marked_cuts": 192,
+      "n": 3
+    },
+    {
+      "graph_exit_cuts": 1024,
+      "marked_cuts": 4096,
+      "n": 4
+    }
+  ],
+  "scope": "exact all-order formulas/injections have a separate proof; finite controls all labelled inputs<=4 and exits/roots, plus full strong<=5 scalar probe",
+  "small_positive_branches": [
+    {
+      "F_oldroot0": 56,
+      "H": 43,
+      "a": 3,
+      "digit": 4,
+      "rows": [
+        114,
+        116,
+        121,
+        67,
+        104,
+        8,
+        32
+      ],
+      "start_gaps": [
+        91,
+        93,
+        161,
+        14,
+        63,
+        0,
+        10
+      ]
+    },
+    {
+      "F_oldroot0": 58,
+      "H": 41,
+      "a": 4,
+      "digit": 2,
+      "rows": [
+        114,
+        116,
+        121,
+        99,
+        72,
+        16,
+        32
+      ],
+      "start_gaps": [
+        89,
+        83,
+        135,
+        58,
+        10,
+        0,
+        9
+      ]
+    }
+  ],
+  "small_positive_gaps": [
+    5,
+    5,
+    13,
+    2,
+    1
+  ],
+  "strong_scalar_probe": [
+    {
+      "multi_exit_sets": 8,
+      "n": 3,
+      "plus2": 0,
+      "plus4": 6,
+      "strong_inputs": 2
+    },
+    {
+      "multi_exit_sets": 264,
+      "n": 4,
+      "plus2": 0,
+      "plus4": 0,
+      "strong_inputs": 24
+    },
+    {
+      "multi_exit_sets": 14144,
+      "n": 5,
+      "plus2": 0,
+      "plus4": 0,
+      "strong_inputs": 544
+    }
+  ]
+}

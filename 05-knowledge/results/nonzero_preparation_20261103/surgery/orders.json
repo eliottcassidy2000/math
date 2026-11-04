@@ -1,0 +1,416 @@
+{
+  "core_entries": 258900,
+  "core_responses_sha256": "d2c0653334ab8024b45145e4e582d9d6850cbd8d4acfa6e8d0825164e7fdc657",
+  "cpp": {
+    "gates": 5035704,
+    "rows": 258900
+  },
+  "gates": 5564616,
+  "grammar_counts": [
+    {
+      "n": 3,
+      "one_start_rooted": 1,
+      "ordinary_unique_cycle": 1,
+      "two_start_rooted": 0,
+      "two_unique_entry_pairs": 1
+    },
+    {
+      "n": 4,
+      "one_start_rooted": 3,
+      "ordinary_unique_cycle": 1,
+      "two_start_rooted": 1,
+      "two_unique_entry_pairs": 3
+    },
+    {
+      "n": 5,
+      "one_start_rooted": 8,
+      "ordinary_unique_cycle": 3,
+      "two_start_rooted": 5,
+      "two_unique_entry_pairs": 7
+    },
+    {
+      "n": 6,
+      "one_start_rooted": 21,
+      "ordinary_unique_cycle": 8,
+      "two_start_rooted": 18,
+      "two_unique_entry_pairs": 18
+    },
+    {
+      "n": 7,
+      "one_start_rooted": 55,
+      "ordinary_unique_cycle": 21,
+      "two_start_rooted": 60,
+      "two_unique_entry_pairs": 47
+    },
+    {
+      "n": 8,
+      "one_start_rooted": 144,
+      "ordinary_unique_cycle": 55,
+      "two_start_rooted": 191,
+      "two_unique_entry_pairs": 123
+    },
+    {
+      "n": 9,
+      "one_start_rooted": 377,
+      "ordinary_unique_cycle": 144,
+      "two_start_rooted": 589,
+      "two_unique_entry_pairs": 322
+    },
+    {
+      "n": 10,
+      "one_start_rooted": 987,
+      "ordinary_unique_cycle": 377,
+      "two_start_rooted": 1775,
+      "two_unique_entry_pairs": 843
+    },
+    {
+      "n": 11,
+      "one_start_rooted": 2584,
+      "ordinary_unique_cycle": 987,
+      "two_start_rooted": 5257,
+      "two_unique_entry_pairs": 2207
+    },
+    {
+      "n": 12,
+      "one_start_rooted": 6765,
+      "ordinary_unique_cycle": 2584,
+      "two_start_rooted": 15360,
+      "two_unique_entry_pairs": 5778
+    },
+    {
+      "n": 13,
+      "one_start_rooted": 17711,
+      "ordinary_unique_cycle": 6765,
+      "two_start_rooted": 44394,
+      "two_unique_entry_pairs": 15127
+    },
+    {
+      "n": 14,
+      "one_start_rooted": 46368,
+      "ordinary_unique_cycle": 17711,
+      "two_start_rooted": 127171,
+      "two_unique_entry_pairs": 39603
+    }
+  ],
+  "input_sha256": "0cc4ca725f4d66b4e0f6580075adc21b033473a8d1d8d6e3e7365ceafe2e8ffd",
+  "orders": [
+    {
+      "all_scalar_classes": 44399,
+      "degree_one_classes": 44394,
+      "degree_one_minimum": 4841,
+      "distinct_counts": 32234,
+      "exceptional_classes": 5,
+      "exceptional_values": [
+        6143,
+        6145,
+        5119,
+        6659,
+        7171
+      ],
+      "histogram_sha256": "4b1872ad1117915c753d3afe9b882b48aa0e32fcb1a255fdff401fcc65316c2d",
+      "lowest_ten": [
+        [
+          4841,
+          1
+        ],
+        [
+          4865,
+          1
+        ],
+        [
+          4937,
+          1
+        ],
+        [
+          4967,
+          1
+        ],
+        [
+          5003,
+          1
+        ],
+        [
+          5021,
+          1
+        ],
+        [
+          5105,
+          1
+        ],
+        [
+          5111,
+          1
+        ],
+        [
+          5129,
+          1
+        ],
+        [
+          5141,
+          1
+        ]
+      ],
+      "minimum_F": 9405,
+      "minimum_aux": 13,
+      "minimum_constructor": {
+        "H": 4841,
+        "core": [
+          2,
+          4,
+          1
+        ],
+        "kind": "pair",
+        "ports": [
+          0,
+          1
+        ],
+        "word": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "minimum_root": 12,
+      "minimum_rows": [
+        12292,
+        12289,
+        8194,
+        8199,
+        8207,
+        8223,
+        12351,
+        12415,
+        12543,
+        12799,
+        13311,
+        10239,
+        2108,
+        4096
+      ],
+      "order": 14,
+      "scalar_minimum": 4841
+    },
+    {
+      "all_scalar_classes": 127176,
+      "degree_one_classes": 127171,
+      "degree_one_minimum": 9545,
+      "distinct_counts": 89195,
+      "exceptional_classes": 5,
+      "exceptional_values": [
+        12287,
+        12289,
+        10239,
+        13315,
+        14339
+      ],
+      "histogram_sha256": "d998e02e945d098dfc91c4f259f54dc403d0c3b044023fb49099056aacdf719f",
+      "lowest_ten": [
+        [
+          9545,
+          1
+        ],
+        [
+          9593,
+          1
+        ],
+        [
+          9665,
+          1
+        ],
+        [
+          9719,
+          1
+        ],
+        [
+          9791,
+          1
+        ],
+        [
+          9833,
+          1
+        ],
+        [
+          9899,
+          1
+        ],
+        [
+          9917,
+          1
+        ],
+        [
+          9953,
+          1
+        ],
+        [
+          9965,
+          1
+        ]
+      ],
+      "minimum_F": 18813,
+      "minimum_aux": 14,
+      "minimum_constructor": {
+        "H": 9545,
+        "core": [
+          2,
+          4,
+          1
+        ],
+        "kind": "pair",
+        "ports": [
+          0,
+          1
+        ],
+        "word": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "minimum_root": 13,
+      "minimum_rows": [
+        24580,
+        24577,
+        16386,
+        16391,
+        16399,
+        16415,
+        24639,
+        24703,
+        24831,
+        25087,
+        25599,
+        26623,
+        20479,
+        4156,
+        8192
+      ],
+      "order": 15,
+      "scalar_minimum": 9545
+    },
+    {
+      "all_scalar_classes": 361600,
+      "degree_one_classes": 361595,
+      "degree_one_minimum": 18905,
+      "distinct_counts": 260223,
+      "exceptional_classes": 5,
+      "exceptional_values": [
+        24575,
+        24577,
+        20479,
+        26627,
+        28675
+      ],
+      "histogram_sha256": "aefc894c80ee86a9ce5dc1d63b380a47583b726647209b78c7f8fd655186f4d1",
+      "lowest_ten": [
+        [
+          18905,
+          1
+        ],
+        [
+          18953,
+          1
+        ],
+        [
+          19097,
+          1
+        ],
+        [
+          19151,
+          1
+        ],
+        [
+          19223,
+          1
+        ],
+        [
+          19265,
+          1
+        ],
+        [
+          19421,
+          1
+        ],
+        [
+          19439,
+          1
+        ],
+        [
+          19469,
+          1
+        ],
+        [
+          19493,
+          1
+        ]
+      ],
+      "minimum_F": 37245,
+      "minimum_aux": 15,
+      "minimum_constructor": {
+        "H": 18905,
+        "core": [
+          2,
+          4,
+          1
+        ],
+        "kind": "pair",
+        "ports": [
+          0,
+          1
+        ],
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "minimum_root": 14,
+      "minimum_rows": [
+        49156,
+        49153,
+        32770,
+        32775,
+        32783,
+        32799,
+        32831,
+        49279,
+        49407,
+        49663,
+        50175,
+        51199,
+        53247,
+        40959,
+        8316,
+        16384
+      ],
+      "order": 16,
+      "scalar_minimum": 18905
+    }
+  ],
+  "python_core_controls": 34,
+  "python_gates": 528838,
+  "scope": "complete strong scalar gap2-ready minima at orders14,15,16; cited strong-order bound excludes higher4289 targets",
+  "shared_counter_gates": 74,
+  "target": 4289,
+  "target_hits": []
+}

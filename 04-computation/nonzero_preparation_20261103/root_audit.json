@@ -1,0 +1,28 @@
+{
+  "gates": 154382,
+  "independent_induced_levels": [
+    {
+      "cuts": 2048,
+      "depth": 1,
+      "raw_hits_0_2_4": [
+        0,
+        0,
+        1
+      ],
+      "retained": 37
+    },
+    {
+      "cuts": 151552,
+      "depth": 2,
+      "raw_hits_0_2_4": [
+        4,
+        0,
+        10
+      ],
+      "retained": 164
+    }
+  ],
+  "one_exit_literal_cases": 314,
+  "source_sha256": "68c809eeca40d312dfe38b5b116b31f4cf4c519b586b9ada47bf1d559e06e726",
+  "status": "PASS"
+}

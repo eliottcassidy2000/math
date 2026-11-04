@@ -1,0 +1,30 @@
+{
+  "audit": "TARGETS_AUDIT.md",
+  "audited_pre_promotion_files": {
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/TARGETS.md": {
+      "bytes": 2550,
+      "sha256": "c0b8f41e6408a15dc5530aa9d2502197ce5388fe2314a70fa133d3bf123f236b"
+    }
+  },
+  "files": {
+    "04-computation/nonzero_preparation_20261103/surgery_targets.py": {
+      "bytes": 3560,
+      "sha256": "efaf4f130d675d61e5b742758e6dc814c84808c2e41a3d8b35fb73bf56101f5a"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/TARGETS.md": {
+      "bytes": 2580,
+      "sha256": "97f9fcf0b14c29fa93e8c19cdc3bac522c159a39876fe9f379f3f6b651d985f4"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/targets.json": {
+      "bytes": 6393,
+      "sha256": "6c2693e85bc1560ab4132b3eec5a30da8bb773fe6a689e39e85d78011b635a78"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/targets.out": {
+      "bytes": 137,
+      "sha256": "f533d8f2cdc8cd472958fd6d7f52484b8d50a8acd07998239f8840aac56bccd6"
+    }
+  },
+  "normal_optimized_frozen": "byte-identical",
+  "scope": "eight actual strong sole-exit gap2 positive witnesses, no minimal-order or physical-transport assertion",
+  "status": "PROVED scoped result; FINITE-EXACT controls; independent audit PASS"
+}

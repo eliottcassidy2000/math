@@ -1,0 +1,85 @@
+{
+  "checks": 75804,
+  "construction": "independent maximum-outdegree insertion, compared with producer root-deletion unranking",
+  "independent_order11": {
+    "classes": 987,
+    "histogram_sha256": "0b1ab5c2a805f91008fab5787a25d9106e7e61eadff05e73a64b5b2596f21537",
+    "maximum": 9637,
+    "minimum": 423,
+    "target_hits": 0
+  },
+  "orders": [
+    {
+      "order": 3,
+      "ordinary_classes": 1,
+      "pair_classes": 1,
+      "pair_sha256": "677cfd62e3b31bb9a5a3c0c3d36acb3850c5227ee8b8319eb35a9b69d4e27870"
+    },
+    {
+      "order": 4,
+      "ordinary_classes": 1,
+      "pair_classes": 3,
+      "pair_sha256": "f0d914f724a4db85468f2b8b96dcb30eb086ef7693a978dc22bc8a3892fc929d"
+    },
+    {
+      "order": 5,
+      "ordinary_classes": 3,
+      "pair_classes": 7,
+      "pair_sha256": "266aebfbb85a84119b657a494e552cb7dd30ce0773f380f13be8850d0bee059a"
+    },
+    {
+      "order": 6,
+      "ordinary_classes": 8,
+      "pair_classes": 18,
+      "pair_sha256": "b9bfcf605fa2bddbbc9ed1e3e1d880cff32b78c63853a73c23e904d21bbb1d10"
+    },
+    {
+      "order": 7,
+      "ordinary_classes": 21,
+      "pair_classes": 47,
+      "pair_sha256": "b6792d815f5328b39f1020bef265ea9a298ff8a1525b5c5fae403722f898b7f7"
+    },
+    {
+      "order": 8,
+      "ordinary_classes": 55,
+      "pair_classes": 123,
+      "pair_sha256": "fde1c1f5ed85f28dbbf3f81eab41d2a449ec089bcbd4f6fe68876f8097685591"
+    },
+    {
+      "order": 9,
+      "ordinary_classes": 144,
+      "pair_classes": 322,
+      "pair_sha256": "e28888a292479b351b3a7264f430c828dab304c9d415fba899342633be38cf7c"
+    },
+    {
+      "order": 10,
+      "ordinary_classes": 377,
+      "pair_classes": 843,
+      "pair_sha256": "615dc15c607d432c67a6c99d0a0a20bf9ec8eb861956d58d03e9baabf75c0e83"
+    },
+    {
+      "order": 11,
+      "ordinary_classes": 987,
+      "pair_classes": 2207,
+      "pair_sha256": "28f2204fa641e92529a4b0e4aea263dd7c80e05572ce3e806b15470972b71132"
+    },
+    {
+      "order": 12,
+      "ordinary_classes": 2584,
+      "pair_classes": 5778,
+      "pair_sha256": "4153623dcd06b55967d70017799f7a38d0a1ae08529a8143213cd1ff7b48632c"
+    },
+    {
+      "order": 13,
+      "ordinary_classes": 6765,
+      "pair_classes": 15127,
+      "pair_sha256": "52ceb5c51bc7745d8370148101dca11456b592bd3786b1028ad436bafc510377"
+    },
+    {
+      "order": 14,
+      "ordinary_classes": 17711,
+      "pair_classes": 39603,
+      "pair_sha256": "eaf691624ebf545246906778494f2d8c7497b5449fafdb417afae67483e88706"
+    }
+  ]
+}

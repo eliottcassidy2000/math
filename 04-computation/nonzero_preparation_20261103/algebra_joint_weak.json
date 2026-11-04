@@ -1,0 +1,30 @@
+{
+  "census": [
+    {
+      "marked_cases": 1,
+      "n": 1
+    },
+    {
+      "marked_cases": 8,
+      "n": 2
+    },
+    {
+      "marked_cases": 72,
+      "n": 3
+    },
+    {
+      "marked_cases": 1024,
+      "n": 4
+    },
+    {
+      "marked_cases": 25600,
+      "n": 5
+    }
+  ],
+  "gates": 47221,
+  "literal_injection_images": 3966,
+  "marked_cases": 26705,
+  "nonreachable_marked_cases": 3212,
+  "scope": "all labelled tournaments through5, all ordered marks; exact nonreachability injection and full positive guard",
+  "weak_positive_guards": 312
+}

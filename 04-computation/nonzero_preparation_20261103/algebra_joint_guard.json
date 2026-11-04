@@ -1,0 +1,118 @@
+{
+  "census": [
+    {
+      "digit_guards": 0,
+      "graphs": 1,
+      "marked_cases": 1,
+      "n": 1,
+      "positive_cover_witnesses": 0,
+      "strong_graphs": 0
+    },
+    {
+      "digit_guards": 0,
+      "graphs": 2,
+      "marked_cases": 8,
+      "n": 2,
+      "positive_cover_witnesses": 2,
+      "strong_graphs": 0
+    },
+    {
+      "digit_guards": 0,
+      "graphs": 8,
+      "marked_cases": 72,
+      "n": 3,
+      "positive_cover_witnesses": 30,
+      "strong_graphs": 2
+    },
+    {
+      "digit_guards": 24,
+      "graphs": 64,
+      "marked_cases": 1024,
+      "n": 4,
+      "positive_cover_witnesses": 584,
+      "strong_graphs": 24
+    },
+    {
+      "digit_guards": 480,
+      "graphs": 1024,
+      "marked_cases": 25600,
+      "n": 5,
+      "positive_cover_witnesses": 18120,
+      "strong_graphs": 544
+    }
+  ],
+  "gates": 110927,
+  "positive": [
+    {
+      "F": 7,
+      "H": 5,
+      "a": 1,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "sigma": 1,
+      "tau": 0,
+      "w": 0
+    },
+    {
+      "F": 21,
+      "H": 9,
+      "a": 2,
+      "rows": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "sigma": 2,
+      "tau": 0,
+      "w": 1
+    }
+  ],
+  "scalar_two_exit": {
+    "a": 3,
+    "rows": [
+      8,
+      1,
+      3,
+      6
+    ],
+    "sigma": 2,
+    "tau": 7,
+    "w": 0
+  },
+  "scope": "complete all-strong theorem has an analytic proof; finite controls cover all labelled tournaments through5 and all ordered mark pairs",
+  "transported_zero": {
+    "F": 9,
+    "H": 9,
+    "a": 3,
+    "exit": 0,
+    "rows": [
+      18,
+      28,
+      25,
+      1,
+      8
+    ],
+    "sigma": 0,
+    "tau": 0,
+    "w": 1
+  },
+  "wrong_exit_zero": {
+    "a": 0,
+    "exit": 3,
+    "rows": [
+      8,
+      1,
+      3,
+      6
+    ],
+    "sigma": 0,
+    "tau": 0,
+    "w": 2
+  }
+}

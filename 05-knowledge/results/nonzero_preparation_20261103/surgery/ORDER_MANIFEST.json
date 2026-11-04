@@ -1,0 +1,46 @@
+{
+  "audit": "ORDER_AUDIT.md",
+  "audited_pre_promotion_files": {
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/ORDER_OBSTRUCTION.md": {
+      "bytes": 12491,
+      "sha256": "d712f56044ccc42e395b556327e17214b07c7f76a54a2acae11efd284f038a3c"
+    }
+  },
+  "files": {
+    "04-computation/nonzero_preparation_20261103/surgery_order11.py": {
+      "bytes": 2764,
+      "sha256": "f8564a63192e417d23deea1005180e65fdadb41447ea893c2ec62fce571f397e"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_orders.cpp": {
+      "bytes": 2163,
+      "sha256": "f9bc4f7d47c85236669c73ae6edda3252bdd941ce731a4c51c1c8082364568e0"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_orders.py": {
+      "bytes": 10212,
+      "sha256": "831f652ed3370ba0ce599592793be1a4395b8c63bc5958644067fb6cdaca040f"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/ORDER_OBSTRUCTION.md": {
+      "bytes": 12801,
+      "sha256": "27c34815dad6203180df0ba68fdbba1018fdf08bee4a20b17482596b934bdb93"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/order11.json": {
+      "bytes": 2045,
+      "sha256": "e337679fbac124ea947ff67b58acd8c7e8ca29943c198615357425801a578dbb"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/order11.out": {
+      "bytes": 152,
+      "sha256": "90f79a38c64567810ec324dc6d8cc6ea0d94d9cec94796eb3f809a288a34142e"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/orders.json": {
+      "bytes": 7470,
+      "sha256": "3be3db0232f596fd768616d7d2928cb9a21ee1580cd76f648a5122083702a17e"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/orders.out": {
+      "bytes": 225,
+      "sha256": "fbb1c1d299b51bc7fb691256928706d9f19c8c2a98349caab267bf552cf1294b"
+    }
+  },
+  "normal_optimized_frozen": "byte-identical for both programs",
+  "scope": "complete strong scalar-ready ranks and all-order retained-name (+2,+4) obstruction for H1429",
+  "status": "PROVED scoped result; FINITE-EXACT controls; independent audit PASS"
+}

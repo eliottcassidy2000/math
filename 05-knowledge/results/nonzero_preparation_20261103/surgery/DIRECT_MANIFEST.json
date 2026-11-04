@@ -1,0 +1,30 @@
+{
+  "audit": "DIRECT_AUDIT.md",
+  "audited_pre_promotion_files": {
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/DIRECT.md": {
+      "bytes": 6912,
+      "sha256": "c8ed805ff6c87ce2856f0f4287d421f241a64498f4265f988b903b755302574c"
+    }
+  },
+  "files": {
+    "04-computation/nonzero_preparation_20261103/surgery_direct.py": {
+      "bytes": 7746,
+      "sha256": "10c5e39d6439057818622607de83d97d666eddf187c3ff30099e051702538db9"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/DIRECT.md": {
+      "bytes": 6920,
+      "sha256": "9507ed54aac7f2214ab2e2463903917bbd0467b6a21e4ea89fc03fcec2c5961c"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/direct.json": {
+      "bytes": 82808,
+      "sha256": "316d0dc774d6399587b2269cd29403052e812f2ac98cc04d71cbbfab7453f2df"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/direct.out": {
+      "bytes": 191,
+      "sha256": "732042888eb6750d76085122be7a17cbea4f187aedd6786685c6d303e815f29b"
+    }
+  },
+  "normal_optimized_frozen": "byte-identical",
+  "scope": "three actual all-strong zero-first repair paths, finite scope; exact failed clock lift",
+  "status": "PROVED scoped result; FINITE-EXACT controls; independent audit PASS"
+}

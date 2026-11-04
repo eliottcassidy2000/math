@@ -1,0 +1,430 @@
+{
+  "files": {
+    "04-computation/nonzero_preparation_20261103/.gitattributes": {
+      "bytes": 125,
+      "sha256": "f03ba6ad95db488323f31a85580125d0b0bed73e150d8afc17cdf70ff84a1a4b"
+    },
+    "04-computation/nonzero_preparation_20261103/algebra_joint_guard.json": {
+      "bytes": 1855,
+      "sha256": "148a19cf1fd9bc54a75576782fc700030f3d53b27dcf3febb8c66e289224396a"
+    },
+    "04-computation/nonzero_preparation_20261103/algebra_joint_guard.py": {
+      "bytes": 7017,
+      "sha256": "219e9da4aeea70cd95eda6fee4ad9a5b2704602e1dd9e75aa02a78cbfb2c7233"
+    },
+    "04-computation/nonzero_preparation_20261103/algebra_joint_scc.json": {
+      "bytes": 581,
+      "sha256": "d136b727d13ef78b877e613a9b20a8d02f778cc3cf60dfc6bf6ce44870e40052"
+    },
+    "04-computation/nonzero_preparation_20261103/algebra_joint_scc.py": {
+      "bytes": 5039,
+      "sha256": "2fa1b5ee13f032f00e168ab41dfbe1f6785d441553b1ed9a27c727da7d096f11"
+    },
+    "04-computation/nonzero_preparation_20261103/algebra_joint_weak.json": {
+      "bytes": 555,
+      "sha256": "3103157b1b6214be3326a83309af6d8d1ac9d1d8aa7c8ff24c60ccf80da19a7f"
+    },
+    "04-computation/nonzero_preparation_20261103/algebra_joint_weak.py": {
+      "bytes": 5106,
+      "sha256": "fb56ac76151a3411c22728a9018f7d1aaa9a355140c53c3cc3a6d5d0e5c4d3cd"
+    },
+    "04-computation/nonzero_preparation_20261103/algebra_multiport_reset.json": {
+      "bytes": 2958,
+      "sha256": "e3cdcb0cf11d288cd0361eafe0d8913006b66226286c4401cb90b7044fa4a30a"
+    },
+    "04-computation/nonzero_preparation_20261103/algebra_multiport_reset.py": {
+      "bytes": 10813,
+      "sha256": "b91ca738b48b3fe1aebb3cd11b15b3b52a7ba9b9cd6d5fbf0b6edf1e7d468d08"
+    },
+    "04-computation/nonzero_preparation_20261103/algebra_one_exit.json": {
+      "bytes": 114078,
+      "sha256": "9e6a4dceca0bdaaf72697966313440331cc27764f68146ac49fc26cbb70c6570"
+    },
+    "04-computation/nonzero_preparation_20261103/algebra_one_exit.py": {
+      "bytes": 11515,
+      "sha256": "a2fa146f99ed10102d4a41cc699967575d8d2d2bdf726d820b72df4a253218c0"
+    },
+    "04-computation/nonzero_preparation_20261103/family.json": {
+      "bytes": 5502,
+      "sha256": "7bcff67f4d7c675c8b7f94b009892c45ec41bc7b6de0a524e31158b2c44798a4"
+    },
+    "04-computation/nonzero_preparation_20261103/family.py": {
+      "bytes": 5511,
+      "sha256": "4e364088a89698dfd6e51e6b86682f9b295997762a28c425877f5c65bffb5d3a"
+    },
+    "04-computation/nonzero_preparation_20261103/family_audit.py": {
+      "bytes": 2585,
+      "sha256": "182cac0f5c8fd29de309634b8e4273af58afdcc84c3f104c49264b711d2b8baf"
+    },
+    "04-computation/nonzero_preparation_20261103/frame.json": {
+      "bytes": 17972,
+      "sha256": "b317cdafa85e07160b8f4a558819ac1a9d6cd86b714688e3b4207dc67465088a"
+    },
+    "04-computation/nonzero_preparation_20261103/frame.py": {
+      "bytes": 7260,
+      "sha256": "7ae438d343f0ae84e66c986003f6a6abe6756c225b00ddd5091b9934135a7a21"
+    },
+    "04-computation/nonzero_preparation_20261103/induced_complete.cpp": {
+      "bytes": 8894,
+      "sha256": "3e2647525cc79a33788031e5b2e11dad425eb6744fa7cefb93215bc0ba3d83f1"
+    },
+    "04-computation/nonzero_preparation_20261103/induced_complete.json": {
+      "bytes": 2615,
+      "sha256": "9247ce871dde82aaca8b441e23fb2a07bd69c0a018f13e619f7a33af6c551cfa"
+    },
+    "04-computation/nonzero_preparation_20261103/induced_controls.json": {
+      "bytes": 1272,
+      "sha256": "08726835bd6b5419fc6c01691e3020d8da3c56423b1d96b6e54cde5a14cce38f"
+    },
+    "04-computation/nonzero_preparation_20261103/induced_controls.py": {
+      "bytes": 6958,
+      "sha256": "d9904ed81f8d53d502b321abac562860e694e99ecfe1907557d7798d83a48b89"
+    },
+    "04-computation/nonzero_preparation_20261103/root_audit.json": {
+      "bytes": 482,
+      "sha256": "9338c31ffa48971a8758d0eb17fa3d910e362a4672284801fc55b04740146b43"
+    },
+    "04-computation/nonzero_preparation_20261103/root_audit.py": {
+      "bytes": 5492,
+      "sha256": "68c809eeca40d312dfe38b5b116b31f4cf4c519b586b9ada47bf1d559e06e726"
+    },
+    "04-computation/nonzero_preparation_20261103/strong_compiler.json": {
+      "bytes": 10168,
+      "sha256": "b914205ecba7e9d805ece970b1bda3dc2ee5a67a059054f2add1d0ccf7803fff"
+    },
+    "04-computation/nonzero_preparation_20261103/strong_compiler.py": {
+      "bytes": 11052,
+      "sha256": "71c64d0caf21f22d454a7589dc2e05e87d66ab6a52378e13700e16ed0c362326"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_audit.py": {
+      "bytes": 4336,
+      "sha256": "128e0b033aed223ea7fc691b91cbb35dd011229bdb5e24d305c231f397863cbb"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_children.py": {
+      "bytes": 10698,
+      "sha256": "4142db9f3ee60b1b9a6bba2c017d0a38d4994895472f9f294122979c0d12d9a8"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_children_audit.py": {
+      "bytes": 5090,
+      "sha256": "47d7b0dd685a8e5cf076c592f6b281bff4e417ec431e8863937dda7ff6a3f5b3"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_direct.py": {
+      "bytes": 7746,
+      "sha256": "10c5e39d6439057818622607de83d97d666eddf187c3ff30099e051702538db9"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_direct_audit.py": {
+      "bytes": 7060,
+      "sha256": "15b7f3fba5ea12e1ea0fc8e3895da1d69223e2bb36981f0e5256990e8654c254"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_direct_children.py": {
+      "bytes": 7091,
+      "sha256": "e0b40f5e7cd9acff4e818e88d3da71fb14dff893af99ed55cde370069656a8c5"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_direct_children_audit.py": {
+      "bytes": 7362,
+      "sha256": "fdeb6dcd39e5f8bebdc39ea7bf316a769da579d0e959825e77ebcd7dc231274c"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_native.py": {
+      "bytes": 16235,
+      "sha256": "66eb9d682e0128bdf087c79b24a44dcfe127daf810ec560de85daa9689e220e2"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_order11.py": {
+      "bytes": 2764,
+      "sha256": "f8564a63192e417d23deea1005180e65fdadb41447ea893c2ec62fce571f397e"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_orders.cpp": {
+      "bytes": 2163,
+      "sha256": "f9bc4f7d47c85236669c73ae6edda3252bdd941ce731a4c51c1c8082364568e0"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_orders.py": {
+      "bytes": 10212,
+      "sha256": "831f652ed3370ba0ce599592793be1a4395b8c63bc5958644067fb6cdaca040f"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_orders_audit.py": {
+      "bytes": 4095,
+      "sha256": "3cb28ae09ddcbdb365afd74bcbc4c0f76e6eed9584d0795304f52aea0e5e3da7"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_ready.py": {
+      "bytes": 8410,
+      "sha256": "024ac0b483d832865c6f12eabf0fe0f8676ac39188631e44910a0a4c9e66ca2f"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_targets.py": {
+      "bytes": 3560,
+      "sha256": "efaf4f130d675d61e5b742758e6dc814c84808c2e41a3d8b35fb73bf56101f5a"
+    },
+    "04-computation/nonzero_preparation_20261103/surgery_targets_audit.py": {
+      "bytes": 3160,
+      "sha256": "1e2fe78627b0fd096c9cde6dfc9dd9fb255da12ccd35f5a32cc3e811e5d0aad0"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/INCOMING.md": {
+      "bytes": 4291,
+      "sha256": "ce60e121d6321c45be0ad6f5e271d9a0225d9bd7d1548a1bd1ea8dbad6b9bc38"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/README.md": {
+      "bytes": 14841,
+      "sha256": "2be5124ff2402b4b12a431d333a50f43d325bc6fbb6552cb12d82e5542866887"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/algebra/AUDIT.md": {
+      "bytes": 3432,
+      "sha256": "15b3d3cb62780421e35a0aae3782be1035ad320e515d4ae763242d29c2cf3eca"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/algebra/JOINT_AUDIT.md": {
+      "bytes": 4042,
+      "sha256": "a39209cff5b03ca93fada0a7fb013acafc6b2716015fd1ddbba200b0a3d73f5f"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/algebra/JOINT_CLASSIFICATION.md": {
+      "bytes": 14974,
+      "sha256": "7f0fef5b71883cf19bd47f440994cc19a2e26bbbd646d8f2e8d18d3006f1e470"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/algebra/MULTIPORT_AUDIT.md": {
+      "bytes": 3331,
+      "sha256": "18e1840891413ccd82ff9ff71e1dd5d5ea355a827c8afa98ec15ab2036c52b53"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/algebra/MULTIPORT_RESET.md": {
+      "bytes": 11734,
+      "sha256": "4683fceb9d0778532522c065b55bdcdec344eb8d343b2fdcfacc897392652a7a"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/algebra/ONE_EXIT_AND_PERSISTENCE.md": {
+      "bytes": 14266,
+      "sha256": "db644169cac34fcfca24c75a088e2d1e029fa3a222db80dac7f98d3ed53c851f"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/algebra/PREPARATION_AUDIT.md": {
+      "bytes": 7795,
+      "sha256": "fc96338b73002eee69bac7d4560dbf5b2ff3a9e5431f63c88e5ebf8162b4b580"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/algebra/PREPARATION_REDUCTION.md": {
+      "bytes": 7983,
+      "sha256": "a314d73516315a25ad276227461988b2ee834cb24a7682485ee48d9b2cb2c6f4"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/algebra/STRONG_AUDIT.md": {
+      "bytes": 11108,
+      "sha256": "cd035132a06c50c3f785ef82b5e31137eccb70e7d2fe4fb0c70848f0444eaa6d"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/algebra/STRONG_COMPILER.md": {
+      "bytes": 12515,
+      "sha256": "719fda127d75d42fc1bf190ea3638976cfbd00103bcffb9e732cf31e98861297"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/frame/AUDIT.md": {
+      "bytes": 6093,
+      "sha256": "6c4ff0cf9bd401dab7b1262238f2ac8513f5920996c45f50f3ae2b13042362cf"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/frame/FAMILY_AUDIT.md": {
+      "bytes": 5281,
+      "sha256": "8a8c1bb82e29cd898c4657556b85b6f29609eb544df2320f626cf5d9ce1c122e"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/frame/FAMILY_AUDIT.out": {
+      "bytes": 516,
+      "sha256": "e651e45582d60d2436c1bd5b6c0f001e9b42d22c858cc536e13a812788619bba"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/frame/FAMILY_INVERSE.md": {
+      "bytes": 5766,
+      "sha256": "86d0bb1af4507d075d0a704dba50f6bb0286b2863e8273c8c5437e46f00eea96"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/frame/ORDER_AUDIT.md": {
+      "bytes": 2578,
+      "sha256": "97c7afc6fd2124a3d41d388342ef2ca41ab03c45e06145fc1d10555d0e9d8b4a"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/frame/ORDER_BUDGET.md": {
+      "bytes": 2180,
+      "sha256": "a6fb11a9d4b3e13f1f62460871f5381230390e18b602fc7dfdbdaed78d202783"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/frame/PROOF.md": {
+      "bytes": 7173,
+      "sha256": "d923d0d9c0c7bd973e34d0dfa123c3ef6e96af9d427a72c74980cc6b636f41db"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/induced/AUDIT.md": {
+      "bytes": 4772,
+      "sha256": "e98c81ad10de22e7298b05bcdf9da2cb3f83fe4ad24977456ddccf239d9d93f6"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/induced/BOARD.md": {
+      "bytes": 3105,
+      "sha256": "e2fc3439a6634a1f7bf7c2213b3bc0bdbff3928fa89f8f53059367504ce6b279"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/induced/CONTROLS.out": {
+      "bytes": 109,
+      "sha256": "0c89424d98cf64f9ba76b73d1f811548dad431ca84404607dfd476ef9cd12873"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/induced/MANIFEST.json": {
+      "bytes": 2058,
+      "sha256": "a5c478f622725ddcd6152e3d8636297152099d796533f2f58146be180eeae979"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/induced/PROOF.md": {
+      "bytes": 17112,
+      "sha256": "2a807875ec12dbfc1af51fd9c6c86327c10acfc6947959b7ef2dd2b070df15a2"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/AUDIT.md": {
+      "bytes": 9025,
+      "sha256": "5af8aa00defd0aea07d7a84c8799bf15fbebf8b5d307fd2399f767fb01399d20"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/AUDIT.out": {
+      "bytes": 103,
+      "sha256": "18d264abac4e6bdc1cb31c0fb366081326573472e30af1a3d3017c08b8facc11"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/CHILDREN.md": {
+      "bytes": 7607,
+      "sha256": "e820e6ae9bb5d79fba451af281c0f3ad04d4c97046940aefa1edbc30aa8ec4fc"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/CHILDREN_AUDIT.md": {
+      "bytes": 7352,
+      "sha256": "76e67a459101add953dc867ef76147a1191893c81ba37f1e721591969cba95d0"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/CHILDREN_AUDIT.out": {
+      "bytes": 131,
+      "sha256": "1ccd07e63f05406b33ca6d545ab6c0246c5281c0b8c3f4ea46a488b72fd57c46"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/CHILDREN_MANIFEST.json": {
+      "bytes": 1283,
+      "sha256": "b0f16febd86203f3e658fc9c0861f51dd825b715ba3a5f3bd6805f17ae6db959"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/DIRECT.md": {
+      "bytes": 6920,
+      "sha256": "9507ed54aac7f2214ab2e2463903917bbd0467b6a21e4ea89fc03fcec2c5961c"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/DIRECT_AUDIT.md": {
+      "bytes": 7261,
+      "sha256": "d84ba8d0155f6e36bdbabb77e413077c2dcd18d0ff4d960a141de15b77fad2cf"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/DIRECT_AUDIT.out": {
+      "bytes": 127,
+      "sha256": "54a9ae3cd730710fee01e42a29087ae067eec2ef2a6a099a5d64c3d7ced68559"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/DIRECT_CHILDREN.md": {
+      "bytes": 6799,
+      "sha256": "88acedaeb173b834e5ea759d2f317985f42a23c25b1723c5a4f8eed109332061"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/DIRECT_CHILDREN_AUDIT.md": {
+      "bytes": 7265,
+      "sha256": "4764de0ee5f6eaffdf60ad3678c110ada5b8fb6500eb6be4306593d451e48138"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/DIRECT_CHILDREN_AUDIT.out": {
+      "bytes": 167,
+      "sha256": "32b42fb02f48ec713886cdeedf762f378ee735824af152fe9dd475ef42d7b344"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/DIRECT_CHILDREN_MANIFEST.json": {
+      "bytes": 1359,
+      "sha256": "0ab30e6b0dace822a90c29f5eecc51e69279f75c8b51286e9bf6781a5ebf2e62"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/DIRECT_MANIFEST.json": {
+      "bytes": 1257,
+      "sha256": "9d80a7d9a6e2407a8cf8339d90b39ffdcf09cb6493c49898dda25251c1d2ad8a"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/MANIFEST.json": {
+      "bytes": 1847,
+      "sha256": "aded455e1f3cf8ad54e4af71de9e6ca54b209cac841ca33aa8038dec0e481a6e"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/ORDER_AUDIT.json": {
+      "bytes": 2476,
+      "sha256": "b2af222da835c60c8b6c477e8f28a5dc40b6f13556f85117eebf6d997cb35988"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/ORDER_AUDIT.md": {
+      "bytes": 11149,
+      "sha256": "afe75a854b8c1e1fd651155f748a1c18315104e71a24de62fc6c2d39e5c8c675"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/ORDER_MANIFEST.json": {
+      "bytes": 2050,
+      "sha256": "f070cb88375ce1cb6c2b051a0b4bd9f0ce802c2e85c43adc344fd0b3b1860216"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/ORDER_OBSTRUCTION.md": {
+      "bytes": 12801,
+      "sha256": "27c34815dad6203180df0ba68fdbba1018fdf08bee4a20b17482596b934bdb93"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/PROOF.md": {
+      "bytes": 12309,
+      "sha256": "557eb1003de3972b9a2f62652542c81e73746186b2ac85c12c4ecf423a38953a"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/TARGETS.md": {
+      "bytes": 2580,
+      "sha256": "97f9fcf0b14c29fa93e8c19cdc3bac522c159a39876fe9f379f3f6b651d985f4"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/TARGETS_AUDIT.json": {
+      "bytes": 2522,
+      "sha256": "3ca688a1f26cba533caed61e7bd7dacfb3d5057fcc0093df9def550b64002fcf"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/TARGETS_AUDIT.md": {
+      "bytes": 3813,
+      "sha256": "4485238397f7a127fd84423e6a089fe8bf5744d74d5f1d47113aea45b95b5237"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/TARGETS_MANIFEST.json": {
+      "bytes": 1279,
+      "sha256": "ac07675217f649b4132e53334cc0dbfb0b0f32599464f705494b555e8fd6a95c"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/children.json": {
+      "bytes": 84963,
+      "sha256": "001a49cd1517da14752c3ec96559b688f0802393bf7e2fd28667017367456aac"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/children.out": {
+      "bytes": 191,
+      "sha256": "bca81dfdbc7dcffd529e323f5448492a0409b1797946eabceafb229f92e814a0"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/direct.json": {
+      "bytes": 82808,
+      "sha256": "316d0dc774d6399587b2269cd29403052e812f2ac98cc04d71cbbfab7453f2df"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/direct.out": {
+      "bytes": 191,
+      "sha256": "732042888eb6750d76085122be7a17cbea4f187aedd6786685c6d303e815f29b"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/direct_children.json": {
+      "bytes": 91137,
+      "sha256": "10800aead142a80d5fa55443957ea821f7d9aa64a301896331eeaf255af5883c"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/direct_children.out": {
+      "bytes": 194,
+      "sha256": "7def00299af418ca9dbce03eb099a50d28043fee87a6f332d9db628744a09427"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/native.json": {
+      "bytes": 42622,
+      "sha256": "5d3af77198b041ab4280ad250252fbd153ea6853869ce2b5caba87d4511680d1"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/native.out": {
+      "bytes": 191,
+      "sha256": "a200982060d1b2a41efbb91692617b05413107195828bbbeafff4a03ee916252"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/order11.json": {
+      "bytes": 2045,
+      "sha256": "e337679fbac124ea947ff67b58acd8c7e8ca29943c198615357425801a578dbb"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/order11.out": {
+      "bytes": 152,
+      "sha256": "90f79a38c64567810ec324dc6d8cc6ea0d94d9cec94796eb3f809a288a34142e"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/orders.json": {
+      "bytes": 7470,
+      "sha256": "3be3db0232f596fd768616d7d2928cb9a21ee1580cd76f648a5122083702a17e"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/orders.out": {
+      "bytes": 225,
+      "sha256": "fbb1c1d299b51bc7fb691256928706d9f19c8c2a98349caab267bf552cf1294b"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/ready.json": {
+      "bytes": 15717,
+      "sha256": "4cc5a76fb0bd3ddb1276b86b3118c3dd7f51849a609b5cbad576cd1fbe128f44"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/ready.out": {
+      "bytes": 191,
+      "sha256": "6f6312f69ee3ee9944c39825aadcd98cf96e8b18423c576021561e2d5c3fc2a4"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/targets.json": {
+      "bytes": 6393,
+      "sha256": "6c2693e85bc1560ab4132b3eec5a30da8bb773fe6a689e39e85d78011b635a78"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/surgery/targets.out": {
+      "bytes": 137,
+      "sha256": "f533d8f2cdc8cd472958fd6d7f52484b8d50a8acd07998239f8840aac56bccd6"
+    }
+  },
+  "incoming_reviewed_through": "8880585ffd",
+  "inherited_base": "1344165fc575",
+  "open": [
+    "unbounded nonzero target-selection closure",
+    "global Hamilton spectrum classification",
+    "fixed-order black-core connectivity"
+  ],
+  "status": "PROVED scoped analytic results and FINITE-EXACT actual programs; all promoted proof notes independently audited",
+  "verification": {
+    "docs_check": "PASS",
+    "frozen_source_whitespace": "surgery_native.py retains its audited terminal blank line under an explicit local gitattributes rule",
+    "local_markdown_targets": 151,
+    "nested_manifest_pins": 38
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "audit": "AUDIT.md",
+  "audited_pre_promotion_files": {
+    "05-knowledge/results/nonzero_preparation_20261103/induced/BOARD.md": {
+      "bytes": 3146,
+      "sha256": "2ac4e1dc1eb09cdb65fa11a7057157b3168fef8630c439eb15a0cffa09fa16ea"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/induced/PROOF.md": {
+      "bytes": 17086,
+      "sha256": "24629d6bdadb8971a5c739f06a9f6f179b9b9fcb4331538a7144446c2ae6154c"
+    }
+  },
+  "files": {
+    "04-computation/nonzero_preparation_20261103/induced_complete.cpp": {
+      "bytes": 8894,
+      "sha256": "3e2647525cc79a33788031e5b2e11dad425eb6744fa7cefb93215bc0ba3d83f1"
+    },
+    "04-computation/nonzero_preparation_20261103/induced_complete.json": {
+      "bytes": 2615,
+      "sha256": "9247ce871dde82aaca8b441e23fb2a07bd69c0a018f13e619f7a33af6c551cfa"
+    },
+    "04-computation/nonzero_preparation_20261103/induced_controls.json": {
+      "bytes": 1272,
+      "sha256": "08726835bd6b5419fc6c01691e3020d8da3c56423b1d96b6e54cde5a14cce38f"
+    },
+    "04-computation/nonzero_preparation_20261103/induced_controls.py": {
+      "bytes": 6958,
+      "sha256": "d9904ed81f8d53d502b321abac562860e694e99ecfe1907557d7798d83a48b89"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/induced/BOARD.md": {
+      "bytes": 3105,
+      "sha256": "e2fc3439a6634a1f7bf7c2213b3bc0bdbff3928fa89f8f53059367504ce6b279"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/induced/CONTROLS.out": {
+      "bytes": 109,
+      "sha256": "0c89424d98cf64f9ba76b73d1f811548dad431ca84404607dfd476ef9cd12873"
+    },
+    "05-knowledge/results/nonzero_preparation_20261103/induced/PROOF.md": {
+      "bytes": 17112,
+      "sha256": "2a807875ec12dbfc1af51fd9c6c86327c10acfc6947959b7ef2dd2b070df15a2"
+    }
+  },
+  "replays": "C++ O0/O3 identical; Python normal/-O identical",
+  "scope": "all-order induced-source exclusion via complete finite cores and cited strong minimum; exact clone continuation, not reusable closure",
+  "status": "PROVED scoped result; FINITE-EXACT controls; independent audit PASS"
+}
