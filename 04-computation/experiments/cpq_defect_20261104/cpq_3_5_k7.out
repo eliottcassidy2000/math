@@ -1,0 +1,30 @@
+(3,5,1^7) n=15: circulant classes t=(1,1) e=(1,1)
+  tournaments: 1000000 objects, 97s
+  tournaments: 2000000 objects, 163s
+  tournaments: 3000000 objects, 213s
+  tournaments: 4000000 objects, 274s
+  tournaments: 5000000 objects, 330s
+  tournaments: 6000000 objects, 380s
+  tournaments: 7000000 objects, 431s
+  tournaments: 8000000 objects, 496s
+  tournaments: 9000000 objects, 555s
+  tournaments: 10000000 objects, 615s
+  tournaments: 11000000 objects, 680s
+  tournaments: 12000000 objects, 736s
+  tournaments: 13000000 objects, 801s
+tournaments: R=13694400 tau_T=13650288 E_T=44112 (861s)
+  graphs: 1000000 objects, 987s
+  graphs: 2000000 objects, 1082s
+  graphs: 3000000 objects, 1173s
+  graphs: 4000000 objects, 1266s
+  graphs: 5000000 objects, 1358s
+  graphs: 6000000 objects, 1457s
+  graphs: 7000000 objects, 1543s
+  graphs: 8000000 objects, 1623s
+  graphs: 9000000 objects, 1701s
+  graphs: 10000000 objects, 1815s
+  graphs: 11000000 objects, 1902s
+  graphs: 12000000 objects, 1982s
+  graphs: 13000000 objects, 2068s
+graphs: RG=13694400 tau_E=13641634 E_even=50088 W=2638 E_wit=40 (2193s)
+RESULT (3,5,1^7) n=15: R=13694400 RG=13694400 tau_T=13650288 tau_E=13641634 defect=8654 W=2638 E_T=44112 E_even=50088 E_wit=40 identity_ok=True theoremR_ok=True
