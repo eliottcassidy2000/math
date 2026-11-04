@@ -10,8 +10,11 @@
     "05-knowledge/results/session177_odd_perfect_20261104/networks/README.md": "9af6f322ab897f5c122d26bc2dae37b6c5965fbe17c842309402cdf158a2e53f",
     "05-knowledge/results/session177_odd_perfect_20261104/oddperfect/lcm_neighborhood_closure.md": "e31aec51b404f257106372a04a1afa737c8700de0c3f730003bff916e49a9be3",
     "05-knowledge/results/session177_odd_perfect_20261104/oddperfect/odd_order_support_theorem.md": "310dfa54027d79d7aca6db56950e75edb38ceab5ea6727059062988f1d32557a",
+    "05-knowledge/results/session178_prime_flow_honeycomb_20261104/primeflow/PROOF.md": "da41c74502773a9d9d1af8762b64380d842c8cd6cc5e506c1bed9fd6dab5aa6a",
+    "05-knowledge/results/session178_prime_flow_honeycomb_20261104/unification/NOTE.md": "b31e8509963012efb0836e4faa94d27b8f89bdc636c6a0f80c670cb8a5ca872c",
     "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/MODULAR_FAITHFULNESS.md": "2ace16955a840be4634770cc57f61ebdeba7432012c16159546128575540eab5",
     "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/proof.md": "48aaefa2d059a56fb201a41d5f78bcd043eb2fbcb58f1ab9918c3e4d987917d7"
   },
-  "hash_scope": "Integrated source bytes; this session adds cross-reference-only paragraphs to three inherited sources. All mathematical inputs were read before deriving."
+  "hash_scope": "Integrated source bytes; this session adds cross-reference-only paragraphs to three inherited sources. All mathematical inputs were read before deriving.",
+  "integrated_head": "06316c266a"
 }

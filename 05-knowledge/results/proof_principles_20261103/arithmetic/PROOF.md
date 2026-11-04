@@ -5,6 +5,16 @@
 These are scoped extensions of Session177, with no claim of historical
 novelty, a new record bound, or odd-perfect-number nonexistence.
 
+**Concurrent integration:** the final fetch recovered
+[Session178 prime flow](../../session178_prime_flow_honeycomb_20261104/primeflow/PROOF.md),
+commit027589b2bb, which independently proves the same fixed-support exponent
+mechanism and excludes the same five-prime support. A3--A4 are independent
+derivations of that concurrent result, not an additional discovery. Its
+capacity propagation and strict cut filters complement our exact prescribed
+valuation-row iff A1 and the joint-overflow clause A2. Our integer bound
+certificates13/14 and its16/32 are different valid choices for the same
+finiteness inequality. See the parent [incoming comparison](../INCOMING.md).
+
 ## Inheritance and the question
 
 Closest proved mechanism: [Session177's LCM neighborhood closure](../../session177_odd_perfect_20261104/oddperfect/lcm_neighborhood_closure.md)

@@ -6,6 +6,10 @@ the incoming gate-flow work against older proved mechanisms, then extends
 them. It claims no literature priority or resolution of LRC(14), the
 six-colour unit-distance problem, or the unrestricted tournament spectrum.
 
+The final integration also recovered concurrent Session178: its fixed-support
+finiteness proof and five-prime test overlap ours and are explicitly credited
+as independent derivations. [Exact comparison and scope](INCOMING.md).
+
 ## 1. The uniform tournament profile has an exact information dimension
 
 For tournaments with a fixed number n of vertices, let q(k) count ordered
@@ -94,6 +98,12 @@ that specified support. The example S={3,5,7,11,13} passes maximal-graph
 strong connectivity and the abundancy ceiling, but the bound gives short
 valuation contradictions for both Euler roles. It is a mechanism control,
 not an improvement to known general odd-perfect-number restrictions.
+
+The same finiteness mechanism and test support were proved concurrently in
+[Session178](../session178_prime_flow_honeycomb_20261104/primeflow/PROOF.md).
+Our exact valuation-row iff and forced-overflow clause provide complementary
+local constraints; its capacity iteration and strict cut intervals provide
+further sound pruning. Finiteness is not counted as two separate advances.
 
 The prime support itself still varies without a bound. Exterior factors
 remain essential; internal budget equations alone are not asserted

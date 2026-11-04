@@ -33,3 +33,14 @@ Method cards used: search the statement before the method; correct the object
 before sharpening the technique; type every analogy; keep observer and
 recurrence class. A new method card will require audited evidence from the
 distinct tournament and arithmetic lanes, not just a verbal resemblance.
+
+Final pull, origin06316c266a: Session178 independently obtained our A3--A4
+mechanism and test support. This is credited in the proof, not duplicated
+as a fresh theorem. Its strict cut inequalities and capacity iteration
+complement A1's exact valuation rows. Its quotient-cycle exact sequence
+distinguishes signed-chain closure from arithmetic balance, reinforcing the
+scope of C4's positive circulation without identifying the observers.
+Uniform profile ranks are unchanged; nonuniform endpoint loss remains;
+support-family control remains the arithmetic gap; honeycomb wiring supplies
+no unit-distance colour-forcing map. Every live concept therefore keeps its
+declared operation and missing coordinate. See INCOMING.md.

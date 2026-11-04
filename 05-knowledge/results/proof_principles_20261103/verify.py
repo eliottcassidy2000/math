@@ -42,6 +42,11 @@ def verify_pins():
 
 def main():
     files, sources = verify_pins()
+    require(sys.argv[1:] in ([], ['--pins-only']), 'usage: verify.py [--pins-only]')
+    if sys.argv[1:] == ['--pins-only']:
+        print(json.dumps({'status': 'PASS', 'artifact_files': files,
+                          'inherited_source_files': sources, 'mode': 'pins-only'}, sort_keys=True))
+        return
     # Freeze ALL expectations before starting ANY producer.
     expected = {script: (HERE / receipt).read_text(encoding='utf8') for script, receipt in ENGINES}
     for text in expected.values():
