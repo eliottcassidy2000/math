@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "normal_optimized_identical": true,
+  "receipt_sha256": {
+    "named_tree.json": "875b556963e2043e9174a99df0b0569dc8f3a7770602cc336f53b1ee4ccfdb9d",
+    "native_tree.json": "9e3971fb27b0bc53d933a9090ed41424ff26ba317562981c8729d9cd3e027edd",
+    "verify.json": "69e7c0dd316d85ae5e7c9a0ebca391ffcb310252b308b730b3457c442d1e490a"
+  },
+  "scope": "All14 endpoints, native programs and named joint observers; depth3 only."
+}

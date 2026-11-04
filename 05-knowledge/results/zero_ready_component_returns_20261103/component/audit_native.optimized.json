@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "positive_and_hostile_native_controls": 4,
+  "programs": [
+    {
+      "H_label": 512423,
+      "old_names_retained": 17,
+      "permanent_births": 4,
+      "old_B_arc_changes": 26,
+      "guarded_native_moves": 52,
+      "temporary_births_and_deletions": 26,
+      "peak_order": 22,
+      "exact_final_graph_sha256": "f570dad42fd15c18c06251e942a59698aa3c732823bf928b08fd90f309e676b1",
+      "macro_cross_B_and_named_outside_stars_preserved": true
+    },
+    {
+      "H_label": 512425,
+      "old_names_retained": 17,
+      "permanent_births": 4,
+      "old_B_arc_changes": 4,
+      "guarded_native_moves": 8,
+      "temporary_births_and_deletions": 4,
+      "peak_order": 22,
+      "exact_final_graph_sha256": "60503d15c83f84d3f29817cad264184afe2bea5b63d1db43d4b1611d74fa48c2",
+      "macro_cross_B_and_named_outside_stars_preserved": true
+    }
+  ],
+  "stable_named_graph_payload_sha256": "c30a7162da13caaade1d5badc61e9c04684a6695a5e1caadb9e3d65d018dbec6",
+  "native_program_payload_sha256": "b45a472a2dee2d1310ec144399db475741c4cce5aaca5759feecaa3f5264189a",
+  "auditor_sha256": "afb13e7233f0f437dfe178857cbc6a7a3a88bd66a7ac0cde348c93e5588ca91c",
+  "scope": "Literal native reachability audit. H labels are not independently recounted here; the separate interface audit counts the final graphs. Native intermediates need not preserve H or port stars."
+}

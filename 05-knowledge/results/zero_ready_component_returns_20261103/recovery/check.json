@@ -1,0 +1,861 @@
+{
+  "RN_hits": [],
+  "RN_literal_profile_recounts": [
+    "",
+    "R",
+    "N",
+    "NR"
+  ],
+  "RN_pruned_children": 11,
+  "RN_states": [
+    {
+      "clocks": [
+        [
+          1,
+          86501
+        ],
+        [
+          2,
+          170807
+        ],
+        [
+          3,
+          339419
+        ]
+      ],
+      "component_names": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        21,
+        22,
+        31,
+        32,
+        33,
+        40,
+        54
+      ],
+      "profile": [
+        2195,
+        1,
+        53,
+        42153
+      ],
+      "root_name": 31,
+      "word": ""
+    },
+    {
+      "clocks": [
+        [
+          1,
+          212853
+        ],
+        [
+          2,
+          381359
+        ]
+      ],
+      "component_names": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        21,
+        22,
+        31,
+        32,
+        33,
+        40,
+        54,
+        "component_birth_14"
+      ],
+      "profile": [
+        44347,
+        53,
+        53,
+        84253
+      ],
+      "root_name": 31,
+      "word": "R"
+    },
+    {
+      "clocks": [
+        [
+          1,
+          133043
+        ],
+        [
+          2,
+          221739
+        ],
+        [
+          3,
+          399131
+        ]
+      ],
+      "component_names": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        21,
+        22,
+        31,
+        32,
+        33,
+        40,
+        54,
+        "component_birth_14"
+      ],
+      "profile": [
+        44347,
+        2194,
+        2195,
+        44348
+      ],
+      "root_name": "component_birth_14",
+      "word": "N"
+    },
+    {
+      "clocks": [
+        [
+          1,
+          465453
+        ]
+      ],
+      "component_names": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        21,
+        22,
+        31,
+        32,
+        33,
+        40,
+        54,
+        "component_birth_14",
+        "component_birth_15"
+      ],
+      "profile": [
+        128547,
+        53,
+        53,
+        168453
+      ],
+      "root_name": 31,
+      "word": "RR"
+    },
+    {
+      "clocks": [
+        [
+          1,
+          385747
+        ]
+      ],
+      "component_names": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        21,
+        22,
+        31,
+        32,
+        33,
+        40,
+        54,
+        "component_birth_14",
+        "component_birth_15"
+      ],
+      "profile": [
+        128547,
+        44294,
+        44347,
+        128600
+      ],
+      "root_name": "component_birth_15",
+      "word": "RN"
+    },
+    {
+      "clocks": [
+        [
+          1,
+          259503
+        ],
+        [
+          2,
+          432505
+        ]
+      ],
+      "component_names": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        21,
+        22,
+        31,
+        32,
+        33,
+        40,
+        54,
+        "component_birth_14",
+        "component_birth_15"
+      ],
+      "profile": [
+        86501,
+        2195,
+        2195,
+        86501
+      ],
+      "root_name": "component_birth_14",
+      "word": "NR"
+    },
+    {
+      "clocks": [
+        [
+          1,
+          263891
+        ],
+        [
+          2,
+          441281
+        ]
+      ],
+      "component_names": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        21,
+        22,
+        31,
+        32,
+        33,
+        40,
+        54,
+        "component_birth_14",
+        "component_birth_15"
+      ],
+      "profile": [
+        86501,
+        42153,
+        44347,
+        88695
+      ],
+      "root_name": "component_birth_15",
+      "word": "NN"
+    },
+    {
+      "clocks": [
+        [
+          1,
+          512421
+        ]
+      ],
+      "component_names": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        21,
+        22,
+        31,
+        32,
+        33,
+        40,
+        54,
+        "component_birth_14",
+        "component_birth_15",
+        "component_birth_16"
+      ],
+      "profile": [
+        170807,
+        2195,
+        2195,
+        170807
+      ],
+      "root_name": "component_birth_14",
+      "word": "NRR"
+    },
+    {
+      "clocks": [
+        [
+          1,
+          399129
+        ]
+      ],
+      "component_names": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        21,
+        22,
+        31,
+        32,
+        33,
+        40,
+        54,
+        "component_birth_14",
+        "component_birth_15",
+        "component_birth_16"
+      ],
+      "profile": [
+        133043,
+        44347,
+        44347,
+        133043
+      ],
+      "root_name": "component_birth_15",
+      "word": "NNR"
+    },
+    {
+      "clocks": [
+        [
+          1,
+          483435
+        ]
+      ],
+      "component_names": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        21,
+        22,
+        31,
+        32,
+        33,
+        40,
+        54,
+        "component_birth_14",
+        "component_birth_15",
+        "component_birth_16"
+      ],
+      "profile": [
+        133043,
+        44348,
+        86501,
+        175196
+      ],
+      "root_name": "component_birth_16",
+      "word": "NNN"
+    }
+  ],
+  "component_fields": {
+    "F": 42153,
+    "P2": 672920,
+    "S2": 2673,
+    "e": 53,
+    "h": 2195,
+    "q": 53,
+    "s": 1
+  },
+  "component_names": [
+    1,
+    2,
+    4,
+    6,
+    7,
+    8,
+    14,
+    21,
+    22,
+    31,
+    32,
+    33,
+    40,
+    54
+  ],
+  "component_rows": [
+    11134,
+    632,
+    2682,
+    112,
+    512,
+    80,
+    528,
+    9087,
+    126,
+    296,
+    13311,
+    10234,
+    11263,
+    894
+  ],
+  "fixed_clock_inverse": [
+    {
+      "equation": "h_prime+4F_prime=N",
+      "required_F_denominator": 4,
+      "required_F_numerator": 505838,
+      "scalar_triple_h": 6585,
+      "target": 512423
+    },
+    {
+      "equation": "h_prime+4F_prime=N",
+      "required_F_denominator": 4,
+      "required_F_numerator": 505840,
+      "scalar_triple_h": 6585,
+      "target": 512425
+    }
+  ],
+  "joint_lower_bound_hostile": {
+    "h": 5,
+    "hostile_vertex": 0,
+    "joint": [
+      2,
+      3,
+      2,
+      2
+    ],
+    "minimal_nontrivial_strong_order": 4,
+    "proposal": "For strong unique-start(D,w), every J_(v,w)>=H(D-w).",
+    "q": 3,
+    "root": 1,
+    "rows": [
+      8,
+      1,
+      3,
+      6
+    ],
+    "smaller_controls": 6,
+    "status": "REFUTED_PROPOSED_SIMPLIFICATION_ONLY",
+    "strong_cycle": [
+      0,
+      3,
+      2,
+      1,
+      0
+    ]
+  },
+  "one_start_funnel_F_lower_bound": 630767,
+  "physical_root": 31,
+  "retained_mark_six_scalar_controls": 570,
+  "retained_mark_six_scalar_seed": [
+    2195,
+    53,
+    2673,
+    42153,
+    52480,
+    53
+  ],
+  "scope": "One actual marked suffix; exact complete R/N plus transitive-prefix clock menu below512425; all-size one-seam and one-funnel exclusions use proved positive bounds. No arbitrary component-rewrite exclusion.",
+  "script_sha256": "ceaa8119b6f65ddbd5d2eb9fe429bc790b79158a1029a6d1a74903256208a9ca",
+  "seam_B_second_F_lower_bound": 1343167,
+  "seam_controls": {
+    "literal_hamilton_checks": 81,
+    "outer_functional_checks": 243,
+    "rooted_pairs": 81
+  },
+  "seam_large_Y_lower_bound": 760949,
+  "seam_small_clock_families": [
+    {
+      "Y": "singleton",
+      "clocks_through_first_overshoot": [
+        [
+          1,
+          259503
+        ],
+        [
+          2,
+          432505
+        ],
+        [
+          3,
+          778509
+        ]
+      ],
+      "constant": 86501,
+      "dyadic_coefficient": 86501
+    },
+    {
+      "Y": "TT2 first root",
+      "clocks_through_first_overshoot": [
+        [
+          1,
+          432505
+        ],
+        [
+          2,
+          778509
+        ]
+      ],
+      "constant": 86501,
+      "dyadic_coefficient": 173002
+    },
+    {
+      "Y": "TT2 second root",
+      "clocks_through_first_overshoot": [
+        [
+          1,
+          483437
+        ],
+        [
+          2,
+          833831
+        ]
+      ],
+      "constant": 133043,
+      "dyadic_coefficient": 175197
+    }
+  ],
+  "singleton_direct_return_control": {
+    "all_start_counts": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "minimum_start_count": 1,
+    "names": [
+      "base",
+      "dial_a",
+      "dial_b",
+      "dial_c"
+    ],
+    "new_root_profiles": {
+      "dial_a": [
+        5,
+        1,
+        1,
+        7
+      ],
+      "dial_b": [
+        5,
+        1,
+        1,
+        5
+      ],
+      "dial_c": [
+        5,
+        2,
+        3,
+        6
+      ]
+    },
+    "old_joint_same_bin_starts_ends_w": [
+      [
+        "base",
+        1
+      ]
+    ],
+    "old_w_deletion": 3,
+    "root_observations": [
+      {
+        "E1": 1,
+        "F49_charge": [
+          3,
+          3,
+          2
+        ],
+        "S2": 5,
+        "golden": [
+          5,
+          2,
+          3
+        ],
+        "name": "dial_a"
+      },
+      {
+        "E1": 1,
+        "F49_charge": [
+          0,
+          4,
+          1
+        ],
+        "S2": 7,
+        "golden": [
+          5,
+          3,
+          4
+        ],
+        "name": "dial_b"
+      },
+      {
+        "E1": 1,
+        "F49_charge": [
+          4,
+          5,
+          0
+        ],
+        "S2": 9,
+        "golden": [
+          5,
+          4,
+          5
+        ],
+        "name": "dial_c"
+      }
+    ],
+    "rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "wrapper_pairs": [
+      {
+        "clock": 1,
+        "difference": 2,
+        "first_root_value": 19,
+        "newest_root_value": 17
+      },
+      {
+        "clock": 2,
+        "difference": 4,
+        "first_root_value": 33,
+        "newest_root_value": 29
+      }
+    ]
+  },
+  "sources": {
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ADAPTIVE.md": "1e40bf058d9c86a8d5ff7f63dc6439a68eae3f62920794a7baa40694dfce4971",
+    "05-knowledge/results/apex_wedge_constructor_20261103/PROFILE.md": "9576fb0131d8d754a0b8ed7b6722ecbcb0c23dfa9b2d144c4ff8b1b068bdb295",
+    "05-knowledge/results/ordered_response_ten_20261103/NEUTRAL_CARRIES.md": "1eeddc0610234012034affe80e4bd512aa529aeb8001abb782b4991251c49b33",
+    "05-knowledge/results/polarized_path_calculus_20261103/CALCULUS.md": "e610e04041da3956aeb4ea2d965c2272e48c97000a393d2f1a2cae00d4088728",
+    "05-knowledge/results/polarized_path_calculus_20261103/FUNNELS.md": "d4415fe860bdcc737c05614d97f3909168dd73a783f892505e42103add064a8e",
+    "05-knowledge/results/session161_source_matching_20261103/matched_sources/CHAIN.md": "5c9d876fd8633ea6f1d3adb807c1b7b44434bf301ebd291cd58f7dfc88410f38",
+    "05-knowledge/results/session161_source_matching_20261103/matched_sources/FAN.md": "e65f6fec0a1d6ae7cb278599a4bd5907adb42380c018c366cb54ae08063bac7f",
+    "05-knowledge/results/triangle_return_170807_20261103/ZERO_READY.md": "4d70341e9ad2870f1249f352132e4340ef357cab941bba4dbcf4868fd6684338",
+    "05-knowledge/results/triangle_return_170807_20261103/zero_ready.json": "dc81ab1de77a54b3ce40808a19cf00f88ced844a481bb864b87ac633e150cddc"
+  },
+  "status": "PASS",
+  "targets": [
+    512423,
+    512425
+  ],
+  "three_birth_unit_dial": {
+    "all_start_counts": [
+      4600,
+      689,
+      1356,
+      318,
+      53,
+      159,
+      106,
+      5886,
+      1581,
+      53,
+      10514,
+      2240,
+      12002,
+      2596,
+      2195,
+      44347,
+      44348
+    ],
+    "minimum_start_count": 53,
+    "names": [
+      1,
+      2,
+      4,
+      6,
+      7,
+      8,
+      14,
+      21,
+      22,
+      31,
+      32,
+      33,
+      40,
+      54,
+      "dial_a",
+      "dial_b",
+      "dial_c"
+    ],
+    "new_root_profiles": {
+      "dial_a": [
+        133043,
+        2195,
+        2195,
+        175197
+      ],
+      "dial_b": [
+        133043,
+        44347,
+        44347,
+        133043
+      ],
+      "dial_c": [
+        133043,
+        44348,
+        86501,
+        175196
+      ]
+    },
+    "old_joint_same_bin_starts_ends_w": [
+      [
+        1,
+        4600
+      ],
+      [
+        2,
+        689
+      ],
+      [
+        4,
+        1356
+      ],
+      [
+        6,
+        318
+      ],
+      [
+        7,
+        53
+      ],
+      [
+        8,
+        159
+      ],
+      [
+        14,
+        106
+      ],
+      [
+        21,
+        5886
+      ],
+      [
+        22,
+        1581
+      ],
+      [
+        31,
+        53
+      ],
+      [
+        32,
+        10514
+      ],
+      [
+        33,
+        2240
+      ],
+      [
+        40,
+        12002
+      ],
+      [
+        54,
+        2596
+      ]
+    ],
+    "old_w_deletion": 159,
+    "root_observations": [
+      {
+        "E1": 53,
+        "F49_charge": [
+          0,
+          0,
+          1
+        ],
+        "S2": 2016087,
+        "golden": [
+          133043,
+          1008017,
+          1008070
+        ],
+        "name": "dial_a"
+      },
+      {
+        "E1": 53,
+        "F49_charge": [
+          1,
+          2,
+          6
+        ],
+        "S2": 15444737,
+        "golden": [
+          133043,
+          7722342,
+          7722395
+        ],
+        "name": "dial_b"
+      },
+      {
+        "E1": 53,
+        "F49_charge": [
+          4,
+          1,
+          0
+        ],
+        "S2": 15450083,
+        "golden": [
+          133043,
+          7725015,
+          7725068
+        ],
+        "name": "dial_c"
+      }
+    ],
+    "rows": [
+      11134,
+      632,
+      2682,
+      112,
+      512,
+      80,
+      528,
+      9087,
+      126,
+      16680,
+      13311,
+      10234,
+      11263,
+      894,
+      48639,
+      81919,
+      32767
+    ],
+    "wrapper_pairs": [
+      {
+        "clock": 1,
+        "difference": 2,
+        "first_root_value": 483437,
+        "newest_root_value": 483435
+      },
+      {
+        "clock": 2,
+        "difference": 4,
+        "first_root_value": 833831,
+        "newest_root_value": 833827
+      }
+    ]
+  }
+}

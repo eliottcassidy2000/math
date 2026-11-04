@@ -1,0 +1,493 @@
+{
+  "actual": [
+    {
+      "H": 56935,
+      "P2": 18550264,
+      "charts": {
+        "F343_codec_degree": 3,
+        "F343_vector_codec": [
+          [
+            4,
+            1,
+            4
+          ],
+          [
+            4,
+            2,
+            5
+          ],
+          [
+            0,
+            4,
+            5
+          ]
+        ],
+        "F49_charge": [
+          1,
+          4,
+          0
+        ],
+        "F49_frobenius": [
+          3,
+          3,
+          0
+        ],
+        "observer_mod7": [
+          4,
+          1,
+          4
+        ]
+      },
+      "golden": [
+        56935,
+        2556254,
+        2556285
+      ],
+      "inport": 39,
+      "mixed": [
+        1483,
+        186,
+        10079,
+        326484,
+        54093,
+        50317,
+        186,
+        50317,
+        163437,
+        1483,
+        19320,
+        34789,
+        10081
+      ],
+      "nine": [
+        18977,
+        2459,
+        2461,
+        18979,
+        31,
+        2769008,
+        425477,
+        1387531,
+        428504
+      ],
+      "root": 50,
+      "root_fields": [
+        31,
+        18977,
+        18977,
+        56935,
+        5112539
+      ],
+      "spare": 6,
+      "spare_fields": [
+        4449,
+        186,
+        30241,
+        2185924,
+        162311
+      ]
+    },
+    {
+      "H": 170807,
+      "P2": 65830996,
+      "charts": {
+        "F343_codec_degree": 3,
+        "F343_vector_codec": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            6,
+            2,
+            2
+          ],
+          [
+            5,
+            4,
+            0
+          ]
+        ],
+        "F49_charge": [
+          2,
+          5,
+          2
+        ],
+        "F49_frobenius": [
+          1,
+          2,
+          2
+        ],
+        "observer_mod7": [
+          0,
+          1,
+          5
+        ]
+      },
+      "golden": [
+        170807,
+        1344477,
+        1344530
+      ],
+      "inport": 31,
+      "mixed": [
+        177,
+        6,
+        1133,
+        79420,
+        6143,
+        177,
+        318,
+        177,
+        392789,
+        3280,
+        49200,
+        71544,
+        22473
+      ],
+      "nine": [
+        2195,
+        1,
+        53,
+        42153,
+        53,
+        672920,
+        2673,
+        3358499,
+        52480
+      ],
+      "root": 39,
+      "root_fields": [
+        53,
+        2195,
+        2195,
+        170807,
+        2689007
+      ],
+      "spare": 6,
+      "spare_fields": [
+        13297,
+        318,
+        91025,
+        7705208,
+        489119
+      ]
+    }
+  ],
+  "hostile81_27": [
+    {
+      "H": 1754919,
+      "P2": 78845616,
+      "charts": {
+        "F343_codec_degree": 1,
+        "F343_vector_codec": [
+          [
+            5,
+            0,
+            0
+          ],
+          [
+            5,
+            0,
+            0
+          ],
+          [
+            5,
+            0,
+            0
+          ]
+        ],
+        "F49_charge": [
+          6,
+          0,
+          5
+        ],
+        "F49_frobenius": [
+          6,
+          0,
+          5
+        ],
+        "observer_mod7": [
+          5,
+          0,
+          0
+        ]
+      },
+      "golden": [
+        1754919,
+        9440361,
+        9471546
+      ],
+      "mark": 8,
+      "nine": [
+        462915,
+        47142,
+        70335,
+        646002,
+        31185,
+        9937728,
+        963549,
+        6836967,
+        1409292
+      ],
+      "old_cut_response": 1061775,
+      "root_fields": [
+        31185,
+        462915,
+        462915,
+        1754919,
+        18911907
+      ],
+      "spare": 6,
+      "spare_fields": [
+        154332,
+        45684,
+        240237,
+        6596946,
+        2581596
+      ]
+    },
+    {
+      "H": 2390013,
+      "P2": 98527536,
+      "charts": {
+        "F343_codec_degree": 3,
+        "F343_vector_codec": [
+          [
+            3,
+            1,
+            5
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            1,
+            4,
+            0
+          ]
+        ],
+        "F49_charge": [
+          0,
+          5,
+          5
+        ],
+        "F49_frobenius": [
+          6,
+          2,
+          5
+        ],
+        "observer_mod7": [
+          3,
+          1,
+          5
+        ]
+      },
+      "golden": [
+        2390013,
+        9591156,
+        9638298
+      ],
+      "mark": 8,
+      "nine": [
+        462915,
+        31185,
+        70335,
+        963549,
+        47142,
+        9937728,
+        646002,
+        10011438,
+        1409292
+      ],
+      "old_cut_response": 1395279,
+      "root_fields": [
+        47142,
+        462915,
+        462915,
+        2390013,
+        19229454
+      ],
+      "spare": 6,
+      "spare_fields": [
+        236070,
+        66699,
+        353439,
+        8881191,
+        3410190
+      ]
+    }
+  ],
+  "phase_collision": [
+    {
+      "H": 53,
+      "P2": 1640,
+      "charts": {
+        "F343_codec_degree": 3,
+        "F343_vector_codec": [
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            6,
+            2,
+            4
+          ],
+          [
+            3,
+            4,
+            1
+          ]
+        ],
+        "F49_charge": [
+          2,
+          2,
+          2
+        ],
+        "F49_frobenius": [
+          3,
+          5,
+          2
+        ],
+        "observer_mod7": [
+          4,
+          1,
+          2
+        ]
+      },
+      "component_rows": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "golden": [
+        53,
+        162,
+        163
+      ],
+      "mark": 0,
+      "nine": [
+        9,
+        1,
+        1,
+        11,
+        1,
+        84,
+        11,
+        55,
+        16
+      ],
+      "root_fields": [
+        1,
+        9,
+        9,
+        53,
+        325
+      ],
+      "spare": 1
+    },
+    {
+      "H": 53,
+      "P2": 1544,
+      "charts": {
+        "F343_codec_degree": 3,
+        "F343_vector_codec": [
+          [
+            4,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            4
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "F49_charge": [
+          6,
+          3,
+          1
+        ],
+        "F49_frobenius": [
+          4,
+          4,
+          1
+        ],
+        "observer_mod7": [
+          4,
+          2,
+          3
+        ]
+      },
+      "component_rows": [
+        14,
+        8,
+        2,
+        20,
+        7
+      ],
+      "golden": [
+        53,
+        156,
+        157
+      ],
+      "mark": 0,
+      "nine": [
+        9,
+        3,
+        5,
+        11,
+        1,
+        84,
+        23,
+        51,
+        32
+      ],
+      "root_fields": [
+        1,
+        9,
+        9,
+        53,
+        313
+      ],
+      "spare": 1
+    }
+  ],
+  "scope": "FINITE-EXACT bounded controls; polynomial identities proved in NOTE.md",
+  "small": {
+    "cpp_mixed_literal_controls": 64,
+    "gap_literal_queries": 1024,
+    "native_R_N_transforms": 128,
+    "opposite_singleton_sink_transforms": 128,
+    "orders": [
+      4,
+      5
+    ],
+    "static17_query_controls": 68,
+    "tournaments": 64
+  },
+  "source_sha256": {
+    "adaptive_state_induction_20261103/COMMON_OBSERVER.md": "9ac00fdf97ec7ae8758a96ca5f8db6912e61d41122ec7b545db1a794cbfd8563",
+    "polarized_path_calculus_20261103/CALCULUS.md": "e610e04041da3956aeb4ea2d965c2272e48c97000a393d2f1a2cae00d4088728",
+    "return18979_palindrome_20261103/endpoint.cpp": "f1686e905b8698759595a0761c2697380f893c7b41d1da954160465002951586",
+    "return6325_completion_20261103/halving_response.json": "3d7b1af0e0f1f0be20985390b404096452ac9f238311653fa2521fa742585e35",
+    "triangle_return_170807_20261103/ZERO_READY.md": "4d70341e9ad2870f1249f352132e4340ef357cab941bba4dbcf4868fd6684338",
+    "triangle_return_170807_20261103/zero_ready.json": "dc81ab1de77a54b3ce40808a19cf00f88ced844a481bb864b87ac633e150cddc",
+    "zero_ready_component_returns_20261103/interface/NOTE.md": "9e9c4de25cb55553cb7f12f8c65a0fe6090fdc577614a766b43dc1fd794e2261",
+    "zero_ready_component_returns_20261103/interface/bin_fields.cpp": "3f0526edee16d66669cd911921a5f773caaca5bd241f25c025c8aa54e90cac52",
+    "zero_ready_component_returns_20261103/interface/check.py": "2f0457def6969a19f1ffe8188ca5f7b47903664222c2f177b88d1394d213df35",
+    "zero_ready_component_returns_20261103/interface/gap.py": "c965617d0c7a454fe940ac9e656f3661281f328e1d21665761f7a3a4056098f1"
+  }
+}

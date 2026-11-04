@@ -1,0 +1,244 @@
+{
+  "status": "FINITE-EXACT",
+  "scope": "Only the selected source and fourteen targets; no coverage inference",
+  "primality_method": "Trial division by every integer through floor(sqrt(n))",
+  "records": [
+    {
+      "H": 170807,
+      "branch": "",
+      "factors": [
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          1877,
+          1
+        ]
+      ],
+      "lane": "auxiliary composite"
+    },
+    {
+      "H": 512423,
+      "branch": "2",
+      "factors": [
+        [
+          107,
+          1
+        ],
+        [
+          4789,
+          1
+        ]
+      ],
+      "lane": "auxiliary composite"
+    },
+    {
+      "H": 512425,
+      "branch": "4",
+      "factors": [
+        [
+          5,
+          2
+        ],
+        [
+          103,
+          1
+        ],
+        [
+          199,
+          1
+        ]
+      ],
+      "lane": "auxiliary composite"
+    },
+    {
+      "H": 1537271,
+      "branch": "22",
+      "factors": [
+        [
+          19,
+          1
+        ],
+        [
+          80909,
+          1
+        ]
+      ],
+      "lane": "auxiliary composite"
+    },
+    {
+      "H": 1537273,
+      "branch": "24",
+      "factors": [
+        [
+          311,
+          1
+        ],
+        [
+          4943,
+          1
+        ]
+      ],
+      "lane": "auxiliary composite"
+    },
+    {
+      "H": 1537277,
+      "branch": "42",
+      "factors": [
+        [
+          7,
+          2
+        ],
+        [
+          137,
+          1
+        ],
+        [
+          229,
+          1
+        ]
+      ],
+      "lane": "auxiliary composite"
+    },
+    {
+      "H": 1537279,
+      "branch": "44",
+      "factors": [
+        [
+          1537279,
+          1
+        ]
+      ],
+      "lane": "prime"
+    },
+    {
+      "H": 4611815,
+      "branch": "222",
+      "factors": [
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          70951,
+          1
+        ]
+      ],
+      "lane": "auxiliary composite"
+    },
+    {
+      "H": 4611817,
+      "branch": "224",
+      "factors": [
+        [
+          7,
+          1
+        ],
+        [
+          658831,
+          1
+        ]
+      ],
+      "lane": "7p"
+    },
+    {
+      "H": 4611821,
+      "branch": "242",
+      "factors": [
+        [
+          4611821,
+          1
+        ]
+      ],
+      "lane": "prime"
+    },
+    {
+      "H": 4611823,
+      "branch": "244",
+      "factors": [
+        [
+          331,
+          1
+        ],
+        [
+          13933,
+          1
+        ]
+      ],
+      "lane": "auxiliary composite"
+    },
+    {
+      "H": 4611833,
+      "branch": "422",
+      "factors": [
+        [
+          4611833,
+          1
+        ]
+      ],
+      "lane": "prime"
+    },
+    {
+      "H": 4611835,
+      "branch": "424",
+      "factors": [
+        [
+          5,
+          1
+        ],
+        [
+          922367,
+          1
+        ]
+      ],
+      "lane": "auxiliary composite"
+    },
+    {
+      "H": 4611839,
+      "branch": "442",
+      "factors": [
+        [
+          31,
+          2
+        ],
+        [
+          4799,
+          1
+        ]
+      ],
+      "lane": "auxiliary composite"
+    },
+    {
+      "H": 4611841,
+      "branch": "444",
+      "factors": [
+        [
+          13,
+          2
+        ],
+        [
+          29,
+          1
+        ],
+        [
+          941,
+          1
+        ]
+      ],
+      "lane": "auxiliary composite"
+    }
+  ],
+  "source_sha256": {
+    "zero_ready_component_returns_20261103/continuation/named_tree.json": "875b556963e2043e9174a99df0b0569dc8f3a7770602cc336f53b1ee4ccfdb9d",
+    "zero_ready_component_returns_20261103/continuation/lanes.py": "d6ae4e9ab7253b5256816cf214bf08f8156daa43dfacd02b057c2c6c76e83a91"
+  }
+}

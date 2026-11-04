@@ -1,0 +1,256 @@
+{
+  "checked_hash_references": 70,
+  "external_source_files": 23,
+  "integration_validation_wall_seconds": 0.043,
+  "internal_pinned_inputs": 26,
+  "mode": "recorded evidence and current-input verification; no expensive search repeated",
+  "normal_optimized_evidence": [
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "component/check.optimized.json",
+      "normal_command": [
+        "python3",
+        "05-knowledge/results/zero_ready_component_returns_20261103/component/check.py"
+      ],
+      "normal_sha256": "b858a1b1ef8c9bdb5ec8a569697935ffb0ee854d6a20d3aaac8df933188d874d",
+      "optimized_command": [
+        "python3",
+        "-O",
+        "05-knowledge/results/zero_ready_component_returns_20261103/component/check.py"
+      ],
+      "optimized_sha256": "b858a1b1ef8c9bdb5ec8a569697935ffb0ee854d6a20d3aaac8df933188d874d",
+      "output_semantics": "stdout",
+      "receipt": "component/check.json",
+      "script": "component/check.py",
+      "script_sha256": "404569030306988873d135214f8595d897c0eb8da266457a66f249edf964cfb0"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "recovery/check.optimized.json",
+      "normal_command": [
+        "python3",
+        "05-knowledge/results/zero_ready_component_returns_20261103/recovery/check.py"
+      ],
+      "normal_sha256": "5e8a05728d12fcfbdf6c5ee85f25782e1d4764f73e30b03c4ba8bcfa49f29401",
+      "optimized_command": [
+        "python3",
+        "-O",
+        "05-knowledge/results/zero_ready_component_returns_20261103/recovery/check.py"
+      ],
+      "optimized_sha256": "5e8a05728d12fcfbdf6c5ee85f25782e1d4764f73e30b03c4ba8bcfa49f29401",
+      "output_semantics": "stdout",
+      "receipt": "recovery/check.json",
+      "script": "recovery/check.py",
+      "script_sha256": "ceaa8119b6f65ddbd5d2eb9fe429bc790b79158a1029a6d1a74903256208a9ca"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "component/audit_reader.optimized.json",
+      "normal_command": [
+        "python3",
+        "05-knowledge/results/zero_ready_component_returns_20261103/component/audit_reader.py"
+      ],
+      "normal_sha256": "947c906a40a9c848a0101316905d633a24b2b32d82876aef1552060ade1c6367",
+      "optimized_command": [
+        "python3",
+        "-O",
+        "05-knowledge/results/zero_ready_component_returns_20261103/component/audit_reader.py"
+      ],
+      "optimized_sha256": "947c906a40a9c848a0101316905d633a24b2b32d82876aef1552060ade1c6367",
+      "output_semantics": "stdout",
+      "receipt": "component/audit_reader.json",
+      "script": "component/audit_reader.py",
+      "script_sha256": "055ede6f9ec040338b7b492b857db645dee101ae4f07eea491ef92bbaa8df8bf"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "component/audit_native.optimized.json",
+      "normal_command": [
+        "python3",
+        "05-knowledge/results/zero_ready_component_returns_20261103/component/audit_native.py"
+      ],
+      "normal_sha256": "6e09ddaf47c3ed8cc15073f6d75d934f85eca88a45fb6a4b5a6ec9b9e8cc436e",
+      "optimized_command": [
+        "python3",
+        "-O",
+        "05-knowledge/results/zero_ready_component_returns_20261103/component/audit_native.py"
+      ],
+      "optimized_sha256": "6e09ddaf47c3ed8cc15073f6d75d934f85eca88a45fb6a4b5a6ec9b9e8cc436e",
+      "output_semantics": "stdout",
+      "receipt": "component/audit_native.json",
+      "script": "component/audit_native.py",
+      "script_sha256": "afb13e7233f0f437dfe178857cbc6a7a3a88bd66a7ac0cde348c93e5588ca91c"
+    },
+    {
+      "evidence_kind": "session normal/-O stdout compared byte-for-byte; digest preserved in this evidence record",
+      "evidence_reference": "session temporary receipt zero-ready-interface-check-O.json",
+      "normal_command": [
+        "python3",
+        "05-knowledge/results/zero_ready_component_returns_20261103/interface/check.py"
+      ],
+      "normal_sha256": "ef752be9887e8dde53add9cc8cb2f6d6228843209e2f146c585eff5b9120862c",
+      "optimized_command": [
+        "python3",
+        "-O",
+        "05-knowledge/results/zero_ready_component_returns_20261103/interface/check.py"
+      ],
+      "optimized_sha256": "ef752be9887e8dde53add9cc8cb2f6d6228843209e2f146c585eff5b9120862c",
+      "output_semantics": "stdout",
+      "receipt": "interface/check.json",
+      "script": "interface/check.py",
+      "script_sha256": "2f0457def6969a19f1ffe8188ca5f7b47903664222c2f177b88d1394d213df35"
+    },
+    {
+      "evidence_kind": "session normal/-O stdout compared byte-for-byte; digest preserved in this evidence record",
+      "evidence_reference": "session temporary receipt zero-ready-interface-phase-O.json",
+      "normal_command": [
+        "python3",
+        "05-knowledge/results/zero_ready_component_returns_20261103/interface/phase.py"
+      ],
+      "normal_sha256": "5e75b6758d10521b81f9f0fc75e7005190117eaebddd6eb78b438e39c98b64ca",
+      "optimized_command": [
+        "python3",
+        "-O",
+        "05-knowledge/results/zero_ready_component_returns_20261103/interface/phase.py"
+      ],
+      "optimized_sha256": "5e75b6758d10521b81f9f0fc75e7005190117eaebddd6eb78b438e39c98b64ca",
+      "output_semantics": "stdout",
+      "receipt": "interface/phase.json",
+      "script": "interface/phase.py",
+      "script_sha256": "f7dfdf91862c683f091cef9c1d8f9cce7dfd8a8c6b94a6bef768d36d387ed617"
+    },
+    {
+      "evidence_kind": "session normal/-O stdout compared byte-for-byte; digest preserved in this evidence record",
+      "evidence_reference": "session temporary receipt zero-ready-natural-pair-O.json",
+      "normal_command": [
+        "python3",
+        "05-knowledge/results/zero_ready_component_returns_20261103/interface/natural_pair.py"
+      ],
+      "normal_sha256": "e8f79ff68dca6132ea13de7443c9756a8f091363b54c038182fa701dbcabd30e",
+      "optimized_command": [
+        "python3",
+        "-O",
+        "05-knowledge/results/zero_ready_component_returns_20261103/interface/natural_pair.py"
+      ],
+      "optimized_sha256": "e8f79ff68dca6132ea13de7443c9756a8f091363b54c038182fa701dbcabd30e",
+      "output_semantics": "stdout",
+      "receipt": "interface/natural_pair.json",
+      "script": "interface/natural_pair.py",
+      "script_sha256": "0c57c82d1aa3dc68f08676c25e3691b48ff54ab63f46aed9201edcf257646136"
+    },
+    {
+      "evidence_kind": "recorded normal/-O replay with current receipt digest",
+      "evidence_reference": "continuation/replay.json",
+      "normal_command": [
+        "python3",
+        "05-knowledge/results/zero_ready_component_returns_20261103/continuation/build.py"
+      ],
+      "normal_sha256": "875b556963e2043e9174a99df0b0569dc8f3a7770602cc336f53b1ee4ccfdb9d",
+      "optimized_command": [
+        "python3",
+        "-O",
+        "05-knowledge/results/zero_ready_component_returns_20261103/continuation/build.py"
+      ],
+      "optimized_sha256": "875b556963e2043e9174a99df0b0569dc8f3a7770602cc336f53b1ee4ccfdb9d",
+      "output_semantics": "file",
+      "receipt": "continuation/named_tree.json",
+      "script": "continuation/build.py",
+      "script_sha256": "60f827fce35aacf6bf0179b879c319f7fe99409f4ba8bb7125518ca3ba45a283"
+    },
+    {
+      "evidence_kind": "recorded normal/-O replay with current receipt digest",
+      "evidence_reference": "continuation/replay.json",
+      "normal_command": [
+        "python3",
+        "05-knowledge/results/zero_ready_component_returns_20261103/continuation/native_tree.py"
+      ],
+      "normal_sha256": "9e3971fb27b0bc53d933a9090ed41424ff26ba317562981c8729d9cd3e027edd",
+      "optimized_command": [
+        "python3",
+        "-O",
+        "05-knowledge/results/zero_ready_component_returns_20261103/continuation/native_tree.py"
+      ],
+      "optimized_sha256": "9e3971fb27b0bc53d933a9090ed41424ff26ba317562981c8729d9cd3e027edd",
+      "output_semantics": "file",
+      "receipt": "continuation/native_tree.json",
+      "script": "continuation/native_tree.py",
+      "script_sha256": "c6e006bba51aa386a7da239740696369a0d0cf399cd0bdf436a640068e7fc7f8"
+    },
+    {
+      "evidence_kind": "recorded normal/-O replay with current receipt digest",
+      "evidence_reference": "continuation/replay.json",
+      "normal_command": [
+        "python3",
+        "05-knowledge/results/zero_ready_component_returns_20261103/continuation/verify.py"
+      ],
+      "normal_sha256": "69e7c0dd316d85ae5e7c9a0ebca391ffcb310252b308b730b3457c442d1e490a",
+      "optimized_command": [
+        "python3",
+        "-O",
+        "05-knowledge/results/zero_ready_component_returns_20261103/continuation/verify.py"
+      ],
+      "optimized_sha256": "69e7c0dd316d85ae5e7c9a0ebca391ffcb310252b308b730b3457c442d1e490a",
+      "output_semantics": "file",
+      "receipt": "continuation/verify.json",
+      "script": "continuation/verify.py",
+      "script_sha256": "b770daf21c4ab461eb90d268486f8fc47ce8548de935c9b4f46ce19f07a5b49b"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "component/audit_continuation.optimized.json",
+      "normal_command": [
+        "python3",
+        "05-knowledge/results/zero_ready_component_returns_20261103/component/audit_continuation.py"
+      ],
+      "normal_sha256": "a51adfea9694b99c5eed79e91f5bec87079cb4d9778bcac45bc9b91884f88b98",
+      "optimized_command": [
+        "python3",
+        "-O",
+        "05-knowledge/results/zero_ready_component_returns_20261103/component/audit_continuation.py"
+      ],
+      "optimized_sha256": "a51adfea9694b99c5eed79e91f5bec87079cb4d9778bcac45bc9b91884f88b98",
+      "output_semantics": "stdout",
+      "receipt": "component/audit_continuation.json",
+      "script": "component/audit_continuation.py",
+      "script_sha256": "486a52a5250ceee3b2a7dbb6f89f76198006603c5a7d2e0e98f58b3995d7ca59"
+    },
+    {
+      "evidence_kind": "session normal/-O stdout compared byte-for-byte; digest preserved in this evidence record",
+      "evidence_reference": "session temporary receipt zero-ready-lanes-O.json",
+      "normal_command": [
+        "python3",
+        "05-knowledge/results/zero_ready_component_returns_20261103/continuation/lanes.py"
+      ],
+      "normal_sha256": "5754d1bafb0cb416c67d152514d97eb31a17484f4938ff29e14d5b0df0c44d5d",
+      "optimized_command": [
+        "python3",
+        "-O",
+        "05-knowledge/results/zero_ready_component_returns_20261103/continuation/lanes.py"
+      ],
+      "optimized_sha256": "5754d1bafb0cb416c67d152514d97eb31a17484f4938ff29e14d5b0df0c44d5d",
+      "output_semantics": "stdout",
+      "receipt": "continuation/lanes.json",
+      "script": "continuation/lanes.py",
+      "script_sha256": "d6ae4e9ab7253b5256816cf214bf08f8156daa43dfacd02b057c2c6c76e83a91"
+    }
+  ],
+  "original_producer_scope": {
+    "claim": "Saved graph/program payloads independently audited normally and with -O; no original-producer normal/-O claim.",
+    "optional_reproduction": "--rerun --include-producers",
+    "scripts": [
+      "inverse/named.py",
+      "inverse/native.py"
+    ]
+  },
+  "payload_binding": {
+    "continuation_endpoints": 14,
+    "finite_tree_depth": 3,
+    "first_named_targets": 2,
+    "guarded_native_moves": 944,
+    "meaning": "Digest and cardinality binding to independently replayed/counting receipts; no new graph census."
+  },
+  "reproducer_sha256": "390f50dde3d32bea8a3a7697eb17888c0709bdafc381f776f6324da1b75a4402",
+  "scope": "All 12 routine producers/auditors have saved normal/-O equality evidence. Complete named return tree depth3 only; arbitrary-depth induction OPEN.",
+  "sources_sha256": "c2ed884204ede473a52abb4907ed8c2ca479292a123ad56a64f3e12aaaeb3aff",
+  "status": "PASS"
+}

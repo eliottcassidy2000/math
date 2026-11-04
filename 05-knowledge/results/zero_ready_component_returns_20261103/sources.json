@@ -1,0 +1,151 @@
+{
+  "external_file_count": 23,
+  "external_sources": {
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ADAPTIVE.md": {
+      "referenced_by": [
+        "recovery/check.json:/sources/05-knowledge/results/adaptive_metagraph_reformulation_20261103/ADAPTIVE.md"
+      ],
+      "sha256": "1e40bf058d9c86a8d5ff7f63dc6439a68eae3f62920794a7baa40694dfce4971"
+    },
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/metagraph_probe.py": {
+      "referenced_by": [
+        "inverse/native.json:/source_sha256"
+      ],
+      "sha256": "75266c143e3c4fbbadd5202984ec5cd6a0b7b9310a37850ff04fb6e92585ed84"
+    },
+    "05-knowledge/results/adaptive_state_induction_20261103/COMMON_OBSERVER.md": {
+      "referenced_by": [
+        "interface/check.json:/source_sha256/adaptive_state_induction_20261103/COMMON_OBSERVER.md"
+      ],
+      "sha256": "9ac00fdf97ec7ae8758a96ca5f8db6912e61d41122ec7b545db1a794cbfd8563"
+    },
+    "05-knowledge/results/adaptive_state_induction_20261103/two_port_envelope.json": {
+      "referenced_by": [
+        "interface/natural_pair.json:/source_sha256/adaptive_state_induction_20261103/two_port_envelope.json",
+        "interface/phase.json:/source_sha256/adaptive_state_induction_20261103/two_port_envelope.json"
+      ],
+      "sha256": "fc14da2ead29fa9c9fe5218ad96c87bce606c0cf41f5f0d5a4325917ebaeeafe"
+    },
+    "05-knowledge/results/apex_wedge_constructor_20261103/PROFILE.md": {
+      "referenced_by": [
+        "recovery/check.json:/sources/05-knowledge/results/apex_wedge_constructor_20261103/PROFILE.md"
+      ],
+      "sha256": "9576fb0131d8d754a0b8ed7b6722ecbcb0c23dfa9b2d144c4ff8b1b068bdb295"
+    },
+    "05-knowledge/results/metagraph_primegame_20261102/low_sources.txt": {
+      "referenced_by": [
+        "continuation/named_tree.json:/source_sha256/metagraph_primegame_20261102/low_sources.txt"
+      ],
+      "sha256": "7060af7278041973dac49ecedb1dbb2cc61424780f56abd7f10e097855a88845"
+    },
+    "05-knowledge/results/orbit_spectrum_session_20261103/coverage/check.py": {
+      "referenced_by": [
+        "component/check.json:/sha256/05-knowledge/results/orbit_spectrum_session_20261103/coverage/check.py"
+      ],
+      "sha256": "bbc75b4e8ee5137228a65303ab40a219b62bbd1397ce6556025ecd3a3223290e"
+    },
+    "05-knowledge/results/ordered_response_ten_20261103/NEUTRAL_CARRIES.md": {
+      "referenced_by": [
+        "recovery/check.json:/sources/05-knowledge/results/ordered_response_ten_20261103/NEUTRAL_CARRIES.md"
+      ],
+      "sha256": "1eeddc0610234012034affe80e4bd512aa529aeb8001abb782b4991251c49b33"
+    },
+    "05-knowledge/results/polarized_path_calculus_20261103/CALCULUS.md": {
+      "referenced_by": [
+        "interface/check.json:/source_sha256/polarized_path_calculus_20261103/CALCULUS.md",
+        "recovery/check.json:/sources/05-knowledge/results/polarized_path_calculus_20261103/CALCULUS.md"
+      ],
+      "sha256": "e610e04041da3956aeb4ea2d965c2272e48c97000a393d2f1a2cae00d4088728"
+    },
+    "05-knowledge/results/polarized_path_calculus_20261103/FUNNELS.md": {
+      "referenced_by": [
+        "recovery/check.json:/sources/05-knowledge/results/polarized_path_calculus_20261103/FUNNELS.md"
+      ],
+      "sha256": "d4415fe860bdcc737c05614d97f3909168dd73a783f892505e42103add064a8e"
+    },
+    "05-knowledge/results/polarized_path_calculus_20261103/explore.py": {
+      "referenced_by": [
+        "component/check.json:/sha256/05-knowledge/results/polarized_path_calculus_20261103/explore.py"
+      ],
+      "sha256": "343b6168f5116275538a87959e6a0949ad8518aaede6d5a5952479069255bbb4"
+    },
+    "05-knowledge/results/polarized_path_calculus_20261103/recognize.py": {
+      "referenced_by": [
+        "component/check.json:/sha256/05-knowledge/results/polarized_path_calculus_20261103/recognize.py"
+      ],
+      "sha256": "967693a89ed94465be01753b8b0b2e9c20e67bbcd5257200d224c39527b2fc85"
+    },
+    "05-knowledge/results/return18979_palindrome_20261103/endpoint.cpp": {
+      "referenced_by": [
+        "interface/check.json:/source_sha256/return18979_palindrome_20261103/endpoint.cpp"
+      ],
+      "sha256": "f1686e905b8698759595a0761c2697380f893c7b41d1da954160465002951586"
+    },
+    "05-knowledge/results/return6325_completion_20261103/halving_response.json": {
+      "referenced_by": [
+        "interface/check.json:/source_sha256/return6325_completion_20261103/halving_response.json"
+      ],
+      "sha256": "3d7b1af0e0f1f0be20985390b404096452ac9f238311653fa2521fa742585e35"
+    },
+    "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/two_apex/word_recovery.py": {
+      "referenced_by": [
+        "component/check.json:/sha256/05-knowledge/results/session134_constructive_spectrum_frontier_20261101/two_apex/word_recovery.py"
+      ],
+      "sha256": "d4869500e602eabb07cb3c1a481d62d55ddee06116c46fc52f668febee9d34d6"
+    },
+    "05-knowledge/results/session161_source_matching_20261103/matched_sources/CHAIN.md": {
+      "referenced_by": [
+        "recovery/check.json:/sources/05-knowledge/results/session161_source_matching_20261103/matched_sources/CHAIN.md"
+      ],
+      "sha256": "5c9d876fd8633ea6f1d3adb807c1b7b44434bf301ebd291cd58f7dfc88410f38"
+    },
+    "05-knowledge/results/session161_source_matching_20261103/matched_sources/FAN.md": {
+      "referenced_by": [
+        "recovery/check.json:/sources/05-knowledge/results/session161_source_matching_20261103/matched_sources/FAN.md"
+      ],
+      "sha256": "e65f6fec0a1d6ae7cb278599a4bd5907adb42380c018c366cb54ae08063bac7f"
+    },
+    "05-knowledge/results/triangle_return_170807_20261103/ZERO_READY.md": {
+      "referenced_by": [
+        "interface/check.json:/source_sha256/triangle_return_170807_20261103/ZERO_READY.md",
+        "recovery/check.json:/sources/05-knowledge/results/triangle_return_170807_20261103/ZERO_READY.md"
+      ],
+      "sha256": "4d70341e9ad2870f1249f352132e4340ef357cab941bba4dbcf4868fd6684338"
+    },
+    "05-knowledge/results/triangle_return_170807_20261103/interface.json": {
+      "referenced_by": [
+        "inverse/named.py explicit source input"
+      ],
+      "sha256": "6364c33ca624af6d332c0f95e27890a3c6c212a901e5dc11f1d783823796d31e"
+    },
+    "05-knowledge/results/triangle_return_170807_20261103/search.cpp": {
+      "referenced_by": [
+        "component/check.json:/sha256/05-knowledge/results/triangle_return_170807_20261103/search.cpp"
+      ],
+      "sha256": "6e287839077c1e9e9b409ab914cf162e618710e15585761f38b0f105a55ae923"
+    },
+    "05-knowledge/results/triangle_return_170807_20261103/zero_ready.json": {
+      "referenced_by": [
+        "component/check.json:/sha256/05-knowledge/results/triangle_return_170807_20261103/zero_ready.json",
+        "interface/check.json:/source_sha256/triangle_return_170807_20261103/zero_ready.json",
+        "interface/phase.json:/source_sha256/triangle_return_170807_20261103/zero_ready.json",
+        "recovery/check.json:/sources/05-knowledge/results/triangle_return_170807_20261103/zero_ready.json"
+      ],
+      "sha256": "dc81ab1de77a54b3ce40808a19cf00f88ced844a481bb864b87ac633e150cddc"
+    },
+    "05-knowledge/results/two_port_return_induction_20261103/ROOTED_RESETS.md": {
+      "referenced_by": [
+        "interface/natural_pair.json:/source_sha256/two_port_return_induction_20261103/ROOTED_RESETS.md"
+      ],
+      "sha256": "bb76b7566e1b114a5d81e19e08274380be37938ea71b8d6024d60f601591cf9f"
+    },
+    "05-knowledge/results/two_port_return_induction_20261103/rooted_resets.json": {
+      "referenced_by": [
+        "interface/natural_pair.json:/source_sha256/two_port_return_induction_20261103/rooted_resets.json"
+      ],
+      "sha256": "fd303cc132feb5fda082ecafa9635334a3888d93107cc08797d77bedc686d3ce"
+    }
+  },
+  "paths_relative_to": "repository root",
+  "scope": "External source inputs checked against existing receipt pins; explicit optional alignment input identified separately. This is not a packet artifact manifest."
+}

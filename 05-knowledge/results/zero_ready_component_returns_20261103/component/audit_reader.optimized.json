@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "literal_full_field_graphs": 93,
+  "independent_one_apex_pair_sum_controls": 255,
+  "word_maximum": 10,
+  "all_word_scalar_controls": 6141,
+  "target_cap": 1001,
+  "target_seed_inverse_checks": 3003,
+  "positive_target_checks": 462,
+  "negative_target_checks": 2541,
+  "inverse_candidate_integers": 34290,
+  "seeds": [
+    {
+      "seed_rows": [
+        2,
+        0
+      ],
+      "root": 0,
+      "fields": [
+        1,
+        0,
+        2,
+        1,
+        2,
+        1,
+        4,
+        3
+      ],
+      "include_empty": false,
+      "max_required_r": 199,
+      "positive_targets": 232,
+      "negative_targets": 769
+    },
+    {
+      "seed_rows": [
+        2,
+        4,
+        1
+      ],
+      "root": 0,
+      "fields": [
+        3,
+        1,
+        3,
+        3,
+        4,
+        1,
+        12,
+        7
+      ],
+      "include_empty": true,
+      "max_required_r": 99,
+      "positive_targets": 161,
+      "negative_targets": 840
+    },
+    {
+      "seed_rows": [
+        2,
+        12,
+        9,
+        1
+      ],
+      "root": 3,
+      "fields": [
+        5,
+        2,
+        6,
+        9,
+        12,
+        3,
+        32,
+        19
+      ],
+      "include_empty": true,
+      "max_required_r": 36,
+      "positive_targets": 69,
+      "negative_targets": 932
+    }
+  ],
+  "singleton_zero_boundary": {
+    "rows": [
+      0,
+      1
+    ],
+    "strong": false,
+    "h": 1,
+    "F": 2
+  },
+  "reader_source_sha256": "9351ca0c946e031643faac4dbe312a0b629e3d1a482b67203ea6c50676838533",
+  "auditor_sha256": "055ede6f9ec040338b7b492b857db645dee101ae4f07eea491ef92bbaa8df8bf",
+  "scope": "Independent finite checks of the narrow closed formula and inverse. The interval proof requires 0<=H_word-1<=r and the stated positive seed bounds. Strong-ending interpretation additionally assumes seed order>=2 and the retained mark reaches every seed vertex."
+}

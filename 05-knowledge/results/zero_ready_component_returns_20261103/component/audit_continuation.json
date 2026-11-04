@@ -1,0 +1,289 @@
+{
+  "status": "PASS",
+  "finite_tree_depth": 3,
+  "edges": 14,
+  "guarded_native_moves": 944,
+  "temporary_births_and_deletions": 472,
+  "permanent_births_summed_over_tree_edges": 22,
+  "peak_order": 25,
+  "all_immediate_parent_names_retained": true,
+  "fixed_physical_ports": [
+    39,
+    31,
+    6,
+    50,
+    51
+  ],
+  "records": [
+    {
+      "branch": "2",
+      "parent_branch": "",
+      "parent_H_label": 170807,
+      "target_H_label": 512423,
+      "old_names_retained": 17,
+      "endpoint_order": 21,
+      "actual_prefix_names": [
+        50,
+        51
+      ],
+      "permanent_births": 4,
+      "old_B_arcs_changed": 26,
+      "guarded_native_moves": 52,
+      "peak_order": 22,
+      "actual_parent_graph_sha256": "8ca44dee1f9db001544e769031316a0cdecd2a29c83457e81d94ad71e5082717",
+      "actual_target_graph_sha256": "f570dad42fd15c18c06251e942a59698aa3c732823bf928b08fd90f309e676b1"
+    },
+    {
+      "branch": "4",
+      "parent_branch": "",
+      "parent_H_label": 170807,
+      "target_H_label": 512425,
+      "old_names_retained": 17,
+      "endpoint_order": 21,
+      "actual_prefix_names": [
+        50,
+        51
+      ],
+      "permanent_births": 4,
+      "old_B_arcs_changed": 4,
+      "guarded_native_moves": 8,
+      "peak_order": 22,
+      "actual_parent_graph_sha256": "8ca44dee1f9db001544e769031316a0cdecd2a29c83457e81d94ad71e5082717",
+      "actual_target_graph_sha256": "60503d15c83f84d3f29817cad264184afe2bea5b63d1db43d4b1611d74fa48c2"
+    },
+    {
+      "branch": "22",
+      "parent_branch": "2",
+      "parent_H_label": 512423,
+      "target_H_label": 1537271,
+      "old_names_retained": 21,
+      "endpoint_order": 22,
+      "actual_prefix_names": [
+        50,
+        51,
+        1
+      ],
+      "permanent_births": 1,
+      "old_B_arcs_changed": 67,
+      "guarded_native_moves": 134,
+      "peak_order": 23,
+      "actual_parent_graph_sha256": "f570dad42fd15c18c06251e942a59698aa3c732823bf928b08fd90f309e676b1",
+      "actual_target_graph_sha256": "72644c00d3d8d26a8c0983592b400a1c7d9d97e2c53a9f33e2719e33eb9009ec"
+    },
+    {
+      "branch": "24",
+      "parent_branch": "2",
+      "parent_H_label": 512423,
+      "target_H_label": 1537273,
+      "old_names_retained": 21,
+      "endpoint_order": 21,
+      "actual_prefix_names": [
+        50,
+        51
+      ],
+      "permanent_births": 0,
+      "old_B_arcs_changed": 68,
+      "guarded_native_moves": 136,
+      "peak_order": 22,
+      "actual_parent_graph_sha256": "f570dad42fd15c18c06251e942a59698aa3c732823bf928b08fd90f309e676b1",
+      "actual_target_graph_sha256": "cc8c9896f11ad0e9db9a9217b628f605241a76eb6ddb07ec651c56939cf41118"
+    },
+    {
+      "branch": "42",
+      "parent_branch": "4",
+      "parent_H_label": 512425,
+      "target_H_label": 1537277,
+      "old_names_retained": 21,
+      "endpoint_order": 22,
+      "actual_prefix_names": [
+        50,
+        51,
+        1,
+        2,
+        4
+      ],
+      "permanent_births": 1,
+      "old_B_arcs_changed": 93,
+      "guarded_native_moves": 186,
+      "peak_order": 23,
+      "actual_parent_graph_sha256": "60503d15c83f84d3f29817cad264184afe2bea5b63d1db43d4b1611d74fa48c2",
+      "actual_target_graph_sha256": "ba2ff53b2c8e02b2eb949fab180073d9a19993303e370c88c3674c5179b2d0a0"
+    },
+    {
+      "branch": "44",
+      "parent_branch": "4",
+      "parent_H_label": 512425,
+      "target_H_label": 1537279,
+      "old_names_retained": 21,
+      "endpoint_order": 22,
+      "actual_prefix_names": [
+        50,
+        51,
+        1,
+        2
+      ],
+      "permanent_births": 1,
+      "old_B_arcs_changed": 97,
+      "guarded_native_moves": 194,
+      "peak_order": 23,
+      "actual_parent_graph_sha256": "60503d15c83f84d3f29817cad264184afe2bea5b63d1db43d4b1611d74fa48c2",
+      "actual_target_graph_sha256": "a7e6b6650e8b19741980d8e02e7913fa7529c8ecc001d38111c46e501da76da1"
+    },
+    {
+      "branch": "222",
+      "parent_branch": "22",
+      "parent_H_label": 1537271,
+      "target_H_label": 4611815,
+      "old_names_retained": 22,
+      "endpoint_order": 23,
+      "actual_prefix_names": [
+        50,
+        51,
+        1,
+        2
+      ],
+      "permanent_births": 1,
+      "old_B_arcs_changed": 14,
+      "guarded_native_moves": 28,
+      "peak_order": 24,
+      "actual_parent_graph_sha256": "72644c00d3d8d26a8c0983592b400a1c7d9d97e2c53a9f33e2719e33eb9009ec",
+      "actual_target_graph_sha256": "a31d412b234b39b2bed012869e6ebe737228953fe701646c2f585b6b423d1374"
+    },
+    {
+      "branch": "224",
+      "parent_branch": "22",
+      "parent_H_label": 1537271,
+      "target_H_label": 4611817,
+      "old_names_retained": 22,
+      "endpoint_order": 23,
+      "actual_prefix_names": [
+        50,
+        51,
+        1
+      ],
+      "permanent_births": 1,
+      "old_B_arcs_changed": 13,
+      "guarded_native_moves": 26,
+      "peak_order": 24,
+      "actual_parent_graph_sha256": "72644c00d3d8d26a8c0983592b400a1c7d9d97e2c53a9f33e2719e33eb9009ec",
+      "actual_target_graph_sha256": "1e9fb85a05950f6c99ddc2b83e7d36be2c863258e9e8abafe3b5a88d2eec98d6"
+    },
+    {
+      "branch": "242",
+      "parent_branch": "24",
+      "parent_H_label": 1537273,
+      "target_H_label": 4611821,
+      "old_names_retained": 21,
+      "endpoint_order": 23,
+      "actual_prefix_names": [
+        50,
+        51,
+        1,
+        2
+      ],
+      "permanent_births": 2,
+      "old_B_arcs_changed": 15,
+      "guarded_native_moves": 30,
+      "peak_order": 24,
+      "actual_parent_graph_sha256": "cc8c9896f11ad0e9db9a9217b628f605241a76eb6ddb07ec651c56939cf41118",
+      "actual_target_graph_sha256": "0fa7ce7bbb67002ab2190a39cee20d241b8c1e237dadcda502aa3723b778455d"
+    },
+    {
+      "branch": "244",
+      "parent_branch": "24",
+      "parent_H_label": 1537273,
+      "target_H_label": 4611823,
+      "old_names_retained": 21,
+      "endpoint_order": 23,
+      "actual_prefix_names": [
+        50,
+        51,
+        1
+      ],
+      "permanent_births": 2,
+      "old_B_arcs_changed": 14,
+      "guarded_native_moves": 28,
+      "peak_order": 24,
+      "actual_parent_graph_sha256": "cc8c9896f11ad0e9db9a9217b628f605241a76eb6ddb07ec651c56939cf41118",
+      "actual_target_graph_sha256": "71578201360054c74c6dcfb5b9895f74e89a9ae081d080ddff9fbe2ccf864b28"
+    },
+    {
+      "branch": "422",
+      "parent_branch": "42",
+      "parent_H_label": 1537277,
+      "target_H_label": 4611833,
+      "old_names_retained": 22,
+      "endpoint_order": 23,
+      "actual_prefix_names": [
+        50,
+        51,
+        1
+      ],
+      "permanent_births": 1,
+      "old_B_arcs_changed": 16,
+      "guarded_native_moves": 32,
+      "peak_order": 24,
+      "actual_parent_graph_sha256": "ba2ff53b2c8e02b2eb949fab180073d9a19993303e370c88c3674c5179b2d0a0",
+      "actual_target_graph_sha256": "0e89799f4c3fc1bf3697ce77e5bcaea62b7ea6eed62fb0faa1431bcf79bb80a0"
+    },
+    {
+      "branch": "424",
+      "parent_branch": "42",
+      "parent_H_label": 1537277,
+      "target_H_label": 4611835,
+      "old_names_retained": 22,
+      "endpoint_order": 24,
+      "actual_prefix_names": [
+        50,
+        51
+      ],
+      "permanent_births": 2,
+      "old_B_arcs_changed": 12,
+      "guarded_native_moves": 24,
+      "peak_order": 25,
+      "actual_parent_graph_sha256": "ba2ff53b2c8e02b2eb949fab180073d9a19993303e370c88c3674c5179b2d0a0",
+      "actual_target_graph_sha256": "81f294467e0600e730c42e0d6c498b966bf34319827ff736d780088ea3e32621"
+    },
+    {
+      "branch": "442",
+      "parent_branch": "44",
+      "parent_H_label": 1537279,
+      "target_H_label": 4611839,
+      "old_names_retained": 22,
+      "endpoint_order": 23,
+      "actual_prefix_names": [
+        50,
+        51
+      ],
+      "permanent_births": 1,
+      "old_B_arcs_changed": 15,
+      "guarded_native_moves": 30,
+      "peak_order": 24,
+      "actual_parent_graph_sha256": "a7e6b6650e8b19741980d8e02e7913fa7529c8ecc001d38111c46e501da76da1",
+      "actual_target_graph_sha256": "a5e6e38165cff762cd5735b2f2f9a13bdcce733a041a13c63067a5b4860e6506"
+    },
+    {
+      "branch": "444",
+      "parent_branch": "44",
+      "parent_H_label": 1537279,
+      "target_H_label": 4611841,
+      "old_names_retained": 22,
+      "endpoint_order": 23,
+      "actual_prefix_names": [
+        50,
+        51
+      ],
+      "permanent_births": 1,
+      "old_B_arcs_changed": 18,
+      "guarded_native_moves": 36,
+      "peak_order": 24,
+      "actual_parent_graph_sha256": "a7e6b6650e8b19741980d8e02e7913fa7529c8ecc001d38111c46e501da76da1",
+      "actual_target_graph_sha256": "7e2f7995b941693ab8386fd6e32fab5c8b294822ca3c7b05725dd7417c617c64"
+    }
+  ],
+  "stable_named_tree_payload_sha256": "07c820bfb422d713ff49d51658357cbb1d585745fafeb585389797a8049c3873",
+  "stable_native_program_payload_sha256": "49251a7d2374bda7a06146371095bff55832e81e797f47c0610abac882bb394b",
+  "auditor_sha256": "486a52a5250ceee3b2a7dbb6f89f76198006603c5a7d2e0e98f58b3995d7ca59",
+  "elementary_auditor_sha256": "afb13e7233f0f437dfe178857cbc6a7a3a88bd66a7ac0cde348c93e5588ca91c",
+  "scope": "Literal native reachability through depth3 from actual replayed parents. Physical39,31,6,50,51 stay fixed; additional old names may move between the actual prefix and suffix. No H recount or arbitrary-depth closure claim. H labels are independently counted by sibling interface audits."
+}
