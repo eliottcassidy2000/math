@@ -1,0 +1,47 @@
+{
+  "encoding": "Each group is a gzip stream encoded as base64 and split into ASCII chunks.",
+  "groups": [
+    {
+      "parts": [
+        {
+          "file": "receipt.json.gz.b64.part000",
+          "size": 36001,
+          "sha256": "47a1dbe9446fe8ab3df75837c86cf7ae718ae2cc77da91da3ada8a1d262cccce"
+        },
+        {
+          "file": "receipt.json.gz.b64.part001",
+          "size": 6833,
+          "sha256": "845314ff59738d6a3918c15641cfeecff1ba755df35131ef5e0625fce7d93d75"
+        }
+      ],
+      "outputs": [
+        {
+          "file": "receipt.json",
+          "size": 208058,
+          "sha256": "12030751f32270baf7c1fbdbd4aff5a0dcc9ba1c2daba029180d0fd4ca916b8e"
+        },
+        {
+          "file": "receipt.optimized.json",
+          "size": 208058,
+          "sha256": "12030751f32270baf7c1fbdbd4aff5a0dcc9ba1c2daba029180d0fd4ca916b8e"
+        }
+      ]
+    },
+    {
+      "parts": [
+        {
+          "file": "full_response.json.gz.b64.part000",
+          "size": 12301,
+          "sha256": "300be51908b3d57c2558461104b0f9ff289ca0426d33c04165fa14a7d4f925cb"
+        }
+      ],
+      "outputs": [
+        {
+          "file": "full_response.json",
+          "size": 85670,
+          "sha256": "336ae7ad73367606da2bbab1a49b2851f6226879d7dd0d60a8ff1ae277eb1969"
+        }
+      ]
+    }
+  ]
+}

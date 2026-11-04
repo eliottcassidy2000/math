@@ -1,0 +1,191 @@
+{
+  "audited_proof_sha256": "2bfba95bfe07d7a5ff8eaa88e0325754ddc639e4989821062341a009ca4ff5c6",
+  "checker_sha256": "782448db8dade31ab4be13f976e8c627cfd60fb5a7e5d53a6726291de7ab0798",
+  "independent_helper_sha256": "83df3573b1d1c7d2ae90845af790a9b53f05b77614f784bfac1e5f623087eda5",
+  "independent_run_coefficient_checks": [
+    {
+      "max_runs_per_block": 1,
+      "nonzero_cubic_profile_monomials": 1
+    },
+    {
+      "max_runs_per_block": 2,
+      "nonzero_cubic_profile_monomials": 3
+    },
+    {
+      "max_runs_per_block": 3,
+      "nonzero_cubic_profile_monomials": 7
+    },
+    {
+      "max_runs_per_block": 4,
+      "nonzero_cubic_profile_monomials": 11
+    },
+    {
+      "max_runs_per_block": 5,
+      "nonzero_cubic_profile_monomials": 15
+    },
+    {
+      "max_runs_per_block": 6,
+      "nonzero_cubic_profile_monomials": 19
+    },
+    {
+      "max_runs_per_block": 7,
+      "nonzero_cubic_profile_monomials": 23
+    }
+  ],
+  "literal_cases": [
+    {
+      "T_count": 11,
+      "U_count": 13,
+      "children": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "difference": -2,
+      "mask_a": 1,
+      "mask_c": 2,
+      "profile": [
+        0,
+        1
+      ]
+    },
+    {
+      "T_count": 509,
+      "U_count": 545,
+      "children": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "difference": -36,
+      "mask_a": 3,
+      "mask_c": 12,
+      "profile": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "T_count": 62129,
+      "U_count": 64513,
+      "children": [
+        [
+          6,
+          4,
+          0
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          6,
+          4,
+          0
+        ]
+      ],
+      "difference": -2384,
+      "mask_a": 7,
+      "mask_c": 56,
+      "profile": [
+        0,
+        1,
+        6,
+        6
+      ]
+    },
+    {
+      "T_count": 70335,
+      "U_count": 72387,
+      "children": [
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          2,
+          4,
+          1
+        ]
+      ],
+      "difference": -2052,
+      "mask_a": 7,
+      "mask_c": 56,
+      "profile": [
+        0,
+        3,
+        6,
+        6
+      ]
+    }
+  ],
+  "method": "No producer imports. Explicit bounded run words, collected as independent cubic profile variables, and actual full named attachments.",
+  "retained_full_table": {
+    "coefficient_checks": 6348,
+    "difference_nonzero_degrees": {
+      "2": 54,
+      "3": 432,
+      "4": 540
+    },
+    "literal_named_queries": [
+      [
+        7,
+        56,
+        70335,
+        72387,
+        72387
+      ],
+      [
+        341,
+        170,
+        91763,
+        91763,
+        91763
+      ],
+      [
+        511,
+        511,
+        3159,
+        3159,
+        3159
+      ],
+      [
+        17,
+        258,
+        50295,
+        50163,
+        50265
+      ]
+    ],
+    "source_sha256": {
+      "PROOF.md": "2bfba95bfe07d7a5ff8eaa88e0325754ddc639e4989821062341a009ca4ff5c6",
+      "full.cpp": "658fc3d5619930ac349418bc36d9018b07dce66130624312d6581746604bd51e",
+      "full_response.json": "336ae7ad73367606da2bbab1a49b2851f6226879d7dd0d60a8ff1ae277eb1969",
+      "verify.py": "9eeb8889b3fbc49c294c62a969983d3ce95ccc0cff45811cdd5b34ebb8a1e836"
+    }
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,45 @@
+{
+  "chunks": 3,
+  "groups": 2,
+  "isolated_modes": [
+    {
+      "idempotent": true,
+      "mode": "normal",
+      "roundtrip": true
+    },
+    {
+      "idempotent": true,
+      "mode": "optimized",
+      "roundtrip": true
+    }
+  ],
+  "late_conflicting_output_zero_writes": true,
+  "late_corrupt_chunk_zero_writes": true,
+  "outputs": [
+    {
+      "file": "receipt.json",
+      "sha256": "12030751f32270baf7c1fbdbd4aff5a0dcc9ba1c2daba029180d0fd4ca916b8e",
+      "size": 208058
+    },
+    {
+      "file": "receipt.optimized.json",
+      "sha256": "12030751f32270baf7c1fbdbd4aff5a0dcc9ba1c2daba029180d0fd4ca916b8e",
+      "size": 208058
+    },
+    {
+      "file": "full_response.json",
+      "sha256": "336ae7ad73367606da2bbab1a49b2851f6226879d7dd0d60a8ff1ae277eb1969",
+      "size": 85670
+    }
+  ],
+  "restored_total_bytes": 501786,
+  "source_sha256": {
+    "REASSEMBLY.json": "8624d4ec0515d5b47c0a74952505074cba520a47b069c2bd7a54e01cc4e70759",
+    "REASSEMBLY.md": "9542a812b06280c6ef7041c36eaeebf85dd43d8903ed1743e17560ab6d0c3836",
+    "full_response.json.gz.b64.part000": "300be51908b3d57c2558461104b0f9ff289ca0426d33c04165fa14a7d4f925cb",
+    "reassemble.py": "bca0ff99d94c45ca5e276e8e83cad952011ce459f1724ab1bd098389ceea0eab",
+    "receipt.json.gz.b64.part000": "47a1dbe9446fe8ab3df75837c86cf7ae718ae2cc77da91da3ada8a1d262cccce",
+    "receipt.json.gz.b64.part001": "845314ff59738d6a3918c15641cfeecff1ba755df35131ef5e0625fce7d93d75"
+  },
+  "status": "PASS"
+}
