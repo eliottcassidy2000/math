@@ -15,3 +15,5 @@ Sources inspected:
 - https://math.dartmouth.edu/~carlp/amicable032914.pdf (introduction)
 - https://arxiv.org/html/2610.05661v1 (introduction)
 - https://arxiv.org/html/2601.07444v1 (§3.8)
+
+Final clearance: author replaced assertion statements with an explicit require function and added independent divisor-pair sigma checks for every certificate. The hardened script was re-inspected and rerun both normally and with -O; outputs still match. The robustness recommendation is resolved.
