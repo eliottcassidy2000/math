@@ -1,0 +1,88 @@
+{
+  "core_difference_residue_counts": {
+    "0": 6840,
+    "2": 4560,
+    "4": 6840,
+    "6": 0
+  },
+  "independent_profile_cases": 1143,
+  "literal_ambient_comparisons": 18240,
+  "literal_cycle_cases": 1041,
+  "physical_controls": [
+    {
+      "ambient_gap": -276,
+      "core_order": 8,
+      "cycle_difference": 0,
+      "q_difference": [
+        0,
+        -36,
+        -168,
+        -288,
+        -192,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "ambient_gap": -600,
+      "core_order": 9,
+      "cycle_difference": -13,
+      "q_difference": [
+        0,
+        -68,
+        -396,
+        -1116,
+        -1440,
+        -720,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "ambient_gap": -720,
+      "core_order": 9,
+      "cycle_difference": -15,
+      "q_difference": [
+        0,
+        -84,
+        -468,
+        -1188,
+        -1440,
+        -720,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "ambient_gap": -60,
+      "core_order": 10,
+      "cycle_difference": 0,
+      "q_difference": [
+        0,
+        -60,
+        120,
+        720,
+        480,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "producer_pins": {
+    "PROOF.md": "aaf6c9325b34b03187771d0731b3a6d6e9b9d31e25238d8adb4a9267fcb46521",
+    "receipt.json": "b254d4e37dcae18c5dde7a28c5982da3bf808525930adb828f0abeb87158b913",
+    "receipt.optimized.json": "b254d4e37dcae18c5dde7a28c5982da3bf808525930adb828f0abeb87158b913",
+    "verify.py": "ffdbe80d9c55889759230314b2373836a89190edc0ec1e1e0bf54b593444f6ab"
+  },
+  "status": "PASS"
+}

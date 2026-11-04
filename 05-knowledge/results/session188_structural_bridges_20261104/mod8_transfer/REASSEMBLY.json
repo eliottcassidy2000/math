@@ -1,0 +1,26 @@
+{
+  "encoding": "Deterministic gzip stream encoded as base64 in ASCII chunks.",
+  "groups": [
+    {
+      "parts": [
+        {
+          "file": "receipt.json.gz.b64.part000",
+          "size": 25709,
+          "sha256": "a0f1d154aa3718447c55fa00c2ca4bcc8be17197701477a3ab3ec70a9dd92ce1"
+        }
+      ],
+      "outputs": [
+        {
+          "file": "receipt.json",
+          "size": 470986,
+          "sha256": "b254d4e37dcae18c5dde7a28c5982da3bf808525930adb828f0abeb87158b913"
+        },
+        {
+          "file": "receipt.optimized.json",
+          "size": 470986,
+          "sha256": "b254d4e37dcae18c5dde7a28c5982da3bf808525930adb828f0abeb87158b913"
+        }
+      ]
+    }
+  ]
+}

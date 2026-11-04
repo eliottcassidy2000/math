@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "independent_profiles_through5": 1099,
+  "literal_odd_order_cycle_counts": 1033,
+  "independent_even_ambient_substitutions": 570,
+  "physical_port_controls": [
+    {
+      "order": 8,
+      "core_gap": -36,
+      "ambient_gap": -276,
+      "odd_cycle_gap": 0
+    },
+    {
+      "order": 9,
+      "core_gap": -68,
+      "ambient_gap": -600,
+      "odd_cycle_gap": -13
+    },
+    {
+      "order": 9,
+      "core_gap": -84,
+      "ambient_gap": -720,
+      "odd_cycle_gap": -15
+    },
+    {
+      "order": 10,
+      "core_gap": -60,
+      "ambient_gap": -60,
+      "odd_cycle_gap": 0
+    }
+  ],
+  "producer_receipt_sha256": "b254d4e37dcae18c5dde7a28c5982da3bf808525930adb828f0abeb87158b913",
+  "producer_normal_optimized_equal": true,
+  "source_sha256": {
+    "mod8_transfer/PROOF.md": "aaf6c9325b34b03187771d0731b3a6d6e9b9d31e25238d8adb4a9267fcb46521",
+    "mod8_transfer/verify.py": "ffdbe80d9c55889759230314b2373836a89190edc0ec1e1e0bf54b593444f6ab",
+    "covered_response/verify.py": "9eeb8889b3fbc49c294c62a969983d3ce95ccc0cff45811cdd5b34ebb8a1e836",
+    "response/verify.py": "b3155093852df2e734d75f9a29fbe39c0a741d9fd439c1a9b5f647cd8e8d54d5"
+  },
+  "audit_sha256": "12934901e28bfa54daa88575b0b6ba81407d1f28bbaff18a1ab32a7dde1f836d"
+}

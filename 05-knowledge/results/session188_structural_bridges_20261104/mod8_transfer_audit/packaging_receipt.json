@@ -1,0 +1,38 @@
+{
+  "chunks": 1,
+  "groups": 1,
+  "isolated_modes": [
+    {
+      "idempotent": true,
+      "mode": "normal",
+      "roundtrip": true
+    },
+    {
+      "idempotent": true,
+      "mode": "optimized",
+      "roundtrip": true
+    }
+  ],
+  "late_conflicting_output_zero_writes": true,
+  "late_corrupt_chunk_zero_writes": true,
+  "outputs": [
+    {
+      "file": "receipt.json",
+      "sha256": "b254d4e37dcae18c5dde7a28c5982da3bf808525930adb828f0abeb87158b913",
+      "size": 470986
+    },
+    {
+      "file": "receipt.optimized.json",
+      "sha256": "b254d4e37dcae18c5dde7a28c5982da3bf808525930adb828f0abeb87158b913",
+      "size": 470986
+    }
+  ],
+  "restored_total_bytes": 941972,
+  "source_sha256": {
+    "REASSEMBLY.json": "ef0f4926cd0e3ec9fd00e2f0ebe79168f2ce5233caa7ea744715433d4755f97b",
+    "REASSEMBLY.md": "9831f098421e4cedf9a6ef519192eba22deb8129f4aeb241a9852f2ffb59090a",
+    "reassemble.py": "53fcdf66436f0faea8f7cd5bbf74d0960b5f52461a2c219851d9a4a7c2acc4eb",
+    "receipt.json.gz.b64.part000": "a0f1d154aa3718447c55fa00c2ca4bcc8be17197701477a3ab3ec70a9dd92ce1"
+  },
+  "status": "PASS"
+}

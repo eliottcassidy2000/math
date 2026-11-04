@@ -1,0 +1,32 @@
+{
+  "ambient_counts": [
+    211,
+    99
+  ],
+  "ambient_gap": 112,
+  "core_gap": 8,
+  "method": "Independent recursive endpoint DP and canonical unordered-cover partitions, not producer literal-word enumeration.",
+  "q_A": [
+    11,
+    178,
+    828,
+    1752,
+    1800,
+    720
+  ],
+  "q_B": [
+    3,
+    90,
+    612,
+    1608,
+    1800,
+    720
+  ],
+  "source_pins": {
+    "SHARPNESS.md": "eeb81f1ced75c006bd14c3f9339b20128d5fabfe723e079727350df16cca2635",
+    "sharpness.json": "b68d1a3d41ea76e77d30ce48cf11caded4940c2780c3cacacdc373016ea26012",
+    "sharpness.optimized.json": "b68d1a3d41ea76e77d30ce48cf11caded4940c2780c3cacacdc373016ea26012",
+    "sharpness.py": "c5d1d2a70975210dba16f8f11bc7cabcddfb9ba580c84379b8804e363a43f1a7"
+  },
+  "status": "PASS"
+}

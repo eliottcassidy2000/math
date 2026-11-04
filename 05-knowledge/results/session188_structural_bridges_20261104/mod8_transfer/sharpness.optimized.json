@@ -1,0 +1,64 @@
+{
+  "A": [
+    48,
+    17,
+    59,
+    19,
+    32,
+    10
+  ],
+  "B": [
+    50,
+    16,
+    59,
+    19,
+    0,
+    26
+  ],
+  "ambient_A": [
+    112,
+    81,
+    123,
+    83,
+    96,
+    74,
+    128,
+    63
+  ],
+  "ambient_B": [
+    114,
+    80,
+    123,
+    83,
+    64,
+    90,
+    128,
+    63
+  ],
+  "ambient_counts": [
+    211,
+    99
+  ],
+  "ambient_gap": 112,
+  "core_gap": 8,
+  "q_A": [
+    0,
+    11,
+    178,
+    828,
+    1752,
+    1800,
+    720
+  ],
+  "q_B": [
+    0,
+    3,
+    90,
+    612,
+    1608,
+    1800,
+    720
+  ],
+  "scope": "Failure of universal even-order mod16 odd-unit transfer, not an exact response or scalar collision.",
+  "status": "PASS"
+}
