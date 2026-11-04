@@ -1,0 +1,57 @@
+{
+  "files": [
+    "codes_4_0.txt",
+    "codes_5_0.txt",
+    "codes_6_0.txt",
+    "codes_7_0.txt",
+    "codes_8_0.txt",
+    "codes_9_0.txt",
+    "codes_9_1.txt",
+    "codes_9_2.txt"
+  ],
+  "provenance": [
+    {
+      "merged_nodes": 3,
+      "n": 4,
+      "ordinary_graphs": 4,
+      "sha256": "fa01dda22b210413a381deef24baf71074ee12c3e69261721dd5340c90ee7534",
+      "source": "session189-deletion-incoming/data/tower_4.txt"
+    },
+    {
+      "merged_nodes": 10,
+      "n": 5,
+      "ordinary_graphs": 12,
+      "sha256": "86eb254d9dc637d6989cfd2c48d3c77e78907918b3b16632992715ec76800e16",
+      "source": "session189-deletion-incoming/data/tower_5.txt"
+    },
+    {
+      "merged_nodes": 34,
+      "n": 6,
+      "ordinary_graphs": 56,
+      "sha256": "65730a4da3ffdd20e5016bf9797f46d5e87fa446ebc5f123eea63c144fff5c68",
+      "source": "session189-deletion-incoming/data/tower_6.txt"
+    },
+    {
+      "merged_nodes": 272,
+      "n": 7,
+      "ordinary_graphs": 456,
+      "sha256": "7a5c9fb3014cf6f447840ae77ef30d4f4c100b1ce8f282d8b3b84eaf542b2c7c",
+      "source": "session189-deletion-incoming/data/tower_7.txt"
+    },
+    {
+      "merged_nodes": 3528,
+      "n": 8,
+      "ordinary_graphs": 6880,
+      "sha256": "cf0dbff9999e36e4156a810f280b53cf2be0c16fa289b5a4ce4e7b06c4528201",
+      "source": "session189-deletion-incoming/data/tower_8.txt"
+    },
+    {
+      "merged_nodes": 97144,
+      "n": 9,
+      "ordinary_graphs": 191536,
+      "sha256": "d71d68aef1172cbfed8ee7a1f1f769bcaa6d567e281a68d5218fa2753f99c150",
+      "source": "session189-deletion-incoming/data/tower_9.txt"
+    }
+  ],
+  "scope": "These retained physical codes are positive construction inputs from the previously reproduced pinned deletion census. Full census completeness is not needed to certify attained values."
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "origin_local": "session189-returns/incoming_compare/REPAIR.md",
+    "sha256": "3b36463bc817479d70c5176bf5a81ae076864f0769c068370c25052e833afa9f"
+  },
+  {
+    "origin_local": "session189-deletion-incoming/source.c",
+    "sha256": "58d4ba52022e7e081f925f2b92000c505de7ff851b4fc66839fd33527aa246fb"
+  },
+  {
+    "origin_local": "session189-deletion-incoming-audit/REVIEW.md",
+    "sha256": "555815ec5e792cbefe4497217c451d44495c3e909193330a8fe70e0783e55704"
+  },
+  {
+    "origin_local": "session189-twohc-comparison/COMPARISON.md",
+    "sha256": "a8443d708c6df427a7fd2e0a91ce6c449fca3048760824b55355b466b7667a83"
+  }
+]

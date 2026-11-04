@@ -1,0 +1,17 @@
+{
+  "actual_graph_counts": 2859,
+  "artifacts": {
+    "actual_graphs.in": "c1b783c1857fa904117aa449278834d8532872a76dc4d8637ebbdc6096f8c88e",
+    "actual_values.txt": "3a7e30704613da5974b7472b6ef1e621eccc49c6617b4c9f1f17ff5fdb3e3dc4",
+    "membership_controls.json": "1e5d36e700904c4d854559df446548f66ed3c12981f79ad7d804684d0ac73268",
+    "tower_controls.json": "958eca5ae6def6f97547facc648c619d8dddcb4513f0a397824efb46f3d08370"
+  },
+  "nearjoin_controls": 963,
+  "readiness_memberships": 10,
+  "rooted_base_controls": 321,
+  "source_sha256": {
+    "controls.py": "50ba189ea89e636526073ba98218367cb2dbc15c27bd853b075abc2d98bd08a1",
+    "ham.cpp": "61ee8243cc3fe7797fdba4d2755b3904fee83a0305306d695a112c610b579836"
+  },
+  "status": "PASS"
+}

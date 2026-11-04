@@ -1,0 +1,195 @@
+{
+  "format": "lossless-compressed-base64-parts-v2",
+  "archives": [
+    {
+      "path": "tribonacci_audit/actual_graphs.in",
+      "bytes": 75951,
+      "sha256": "c1b783c1857fa904117aa449278834d8532872a76dc4d8637ebbdc6096f8c88e",
+      "git_blob_sha": "74924d07c9f2f0a2a6b3f918c607755b796ae228",
+      "compression": "xz",
+      "compressed_bytes": 8724,
+      "compressed_sha256": "17afdcf270cf33fdde4712f2835292184e2c314a2c9968918697da8b205590b4",
+      "parts": [
+        "tribonacci_audit/actual_graphs.in.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "tribonacci_audit/codes_9_0.txt",
+      "bytes": 663899,
+      "sha256": "5b3ead62488cb769a06ee9051b9f0831c2c8021b5e60fae2487edc64328e1af7",
+      "git_blob_sha": "56a4a2d02452e4a07cf8a891fed6a79252df07ce",
+      "compression": "xz",
+      "compressed_bytes": 108352,
+      "compressed_sha256": "9986ccd5138e212384773ab1d139fbc4a935c63a87943bada7430e3ff61be554",
+      "parts": [
+        "tribonacci_audit/codes_9_0.txt.xz.b64.parts/00001.txt",
+        "tribonacci_audit/codes_9_0.txt.xz.b64.parts/00002.txt",
+        "tribonacci_audit/codes_9_0.txt.xz.b64.parts/00003.txt",
+        "tribonacci_audit/codes_9_0.txt.xz.b64.parts/00004.txt"
+      ]
+    },
+    {
+      "path": "tribonacci_audit/codes_9_1.txt",
+      "bytes": 720000,
+      "sha256": "2133cc95f273d82d27200a73281a416c4875604025467566a8ead40e960899a9",
+      "git_blob_sha": "a0ed180663aa1c35b8dbea6e44a0a57fe0f4639d",
+      "compression": "xz",
+      "compressed_bytes": 110436,
+      "compressed_sha256": "dbbff4a53df82d79f1910ccd62ae5ee312e1416ab82109c4a92bc054f1d5e2ab",
+      "parts": [
+        "tribonacci_audit/codes_9_1.txt.xz.b64.parts/00001.txt",
+        "tribonacci_audit/codes_9_1.txt.xz.b64.parts/00002.txt",
+        "tribonacci_audit/codes_9_1.txt.xz.b64.parts/00003.txt",
+        "tribonacci_audit/codes_9_1.txt.xz.b64.parts/00004.txt"
+      ]
+    },
+    {
+      "path": "tribonacci_audit/codes_9_2.txt",
+      "bytes": 114304,
+      "sha256": "71d700421b4edf3271886a4453e75e27965fe4f1008760fb225b5639862b88f1",
+      "git_blob_sha": "238668c95c24d1cdef66caeac5e762cefa75b04a",
+      "compression": "xz",
+      "compressed_bytes": 20896,
+      "compressed_sha256": "2daaf4273894cd51ab33c07119656dee1287e499861fd6be79c1636b07b199cc",
+      "parts": [
+        "tribonacci_audit/codes_9_2.txt.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "tribonacci_audit/witnesses.part0.hex",
+      "bytes": 630000,
+      "sha256": "9fffc4fb48d54b5f650145eb3bb2d4995d83f6597819a22cf5c62cdb9b789051",
+      "git_blob_sha": "7a0f3c5636a6d7efb61ab1ebbc19152c9f76bbe4",
+      "compression": "xz",
+      "compressed_bytes": 141092,
+      "compressed_sha256": "dcb2a686545ed8b5764ea872d587b77386847b23dc492614c1f4e3a7bf1f78bf",
+      "parts": [
+        "tribonacci_audit/witnesses.part0.hex.xz.b64.parts/00001.txt",
+        "tribonacci_audit/witnesses.part0.hex.xz.b64.parts/00002.txt",
+        "tribonacci_audit/witnesses.part0.hex.xz.b64.parts/00003.txt",
+        "tribonacci_audit/witnesses.part0.hex.xz.b64.parts/00004.txt",
+        "tribonacci_audit/witnesses.part0.hex.xz.b64.parts/00005.txt"
+      ]
+    },
+    {
+      "path": "tribonacci_audit/witnesses.part1.hex",
+      "bytes": 630000,
+      "sha256": "ce07fd7181dcb82e8de6e12c951b5ac4e27f7f80207d6224bad26f0e171e7b85",
+      "git_blob_sha": "eb4ee56e6740eac1b8d099af6e4100cbd5e81f0e",
+      "compression": "xz",
+      "compressed_bytes": 161132,
+      "compressed_sha256": "738962cdd54d45bb2b04cab75def79139d40ed240c7430c03d40db997b7f89fa",
+      "parts": [
+        "tribonacci_audit/witnesses.part1.hex.xz.b64.parts/00001.txt",
+        "tribonacci_audit/witnesses.part1.hex.xz.b64.parts/00002.txt",
+        "tribonacci_audit/witnesses.part1.hex.xz.b64.parts/00003.txt",
+        "tribonacci_audit/witnesses.part1.hex.xz.b64.parts/00004.txt",
+        "tribonacci_audit/witnesses.part1.hex.xz.b64.parts/00005.txt",
+        "tribonacci_audit/witnesses.part1.hex.xz.b64.parts/00006.txt"
+      ]
+    },
+    {
+      "path": "tribonacci_audit/witnesses.part2.hex",
+      "bytes": 630000,
+      "sha256": "51e045fa3226ba2db921a7477ac78be22abacc486cc949c701ffecf64ce5edb0",
+      "git_blob_sha": "fbb8aba60401b82b290ae453874c26f9e13e02db",
+      "compression": "xz",
+      "compressed_bytes": 171636,
+      "compressed_sha256": "7e0e54d833919521dc1eb8f1d36c2ef8008a1863ed724d0549b68d141cf48835",
+      "parts": [
+        "tribonacci_audit/witnesses.part2.hex.xz.b64.parts/00001.txt",
+        "tribonacci_audit/witnesses.part2.hex.xz.b64.parts/00002.txt",
+        "tribonacci_audit/witnesses.part2.hex.xz.b64.parts/00003.txt",
+        "tribonacci_audit/witnesses.part2.hex.xz.b64.parts/00004.txt",
+        "tribonacci_audit/witnesses.part2.hex.xz.b64.parts/00005.txt",
+        "tribonacci_audit/witnesses.part2.hex.xz.b64.parts/00006.txt"
+      ]
+    },
+    {
+      "path": "tribonacci_audit/witnesses.part3.hex",
+      "bytes": 630000,
+      "sha256": "f0708e6caefa17faa26cb06c45ae3e977891e4e560322578f80ea93a4d03200c",
+      "git_blob_sha": "601390c126519a3eff7a6f5c8907859a6d1461d2",
+      "compression": "xz",
+      "compressed_bytes": 177352,
+      "compressed_sha256": "96684bcfaa3e27a478778faa21467b3831f444b96d7935f408b6323ca3e082d7",
+      "parts": [
+        "tribonacci_audit/witnesses.part3.hex.xz.b64.parts/00001.txt",
+        "tribonacci_audit/witnesses.part3.hex.xz.b64.parts/00002.txt",
+        "tribonacci_audit/witnesses.part3.hex.xz.b64.parts/00003.txt",
+        "tribonacci_audit/witnesses.part3.hex.xz.b64.parts/00004.txt",
+        "tribonacci_audit/witnesses.part3.hex.xz.b64.parts/00005.txt",
+        "tribonacci_audit/witnesses.part3.hex.xz.b64.parts/00006.txt"
+      ]
+    },
+    {
+      "path": "tribonacci_audit/witnesses.part4.hex",
+      "bytes": 630000,
+      "sha256": "baec16a0b1113f3cf0f5f45692c4c75382cb8a1d5b9742502ffbdcdb884c097d",
+      "git_blob_sha": "8969e3ff15d74bd6671a6d9042e4b2787a8b6a4b",
+      "compression": "xz",
+      "compressed_bytes": 176924,
+      "compressed_sha256": "4ab6473bd4ed38e7adbf92c484ac61c48f2b8fb845e882688c666bdc7ed413cf",
+      "parts": [
+        "tribonacci_audit/witnesses.part4.hex.xz.b64.parts/00001.txt",
+        "tribonacci_audit/witnesses.part4.hex.xz.b64.parts/00002.txt",
+        "tribonacci_audit/witnesses.part4.hex.xz.b64.parts/00003.txt",
+        "tribonacci_audit/witnesses.part4.hex.xz.b64.parts/00004.txt",
+        "tribonacci_audit/witnesses.part4.hex.xz.b64.parts/00005.txt",
+        "tribonacci_audit/witnesses.part4.hex.xz.b64.parts/00006.txt"
+      ]
+    },
+    {
+      "path": "tribonacci_audit/witnesses.part5.hex",
+      "bytes": 630000,
+      "sha256": "c5cf3b8de1b3a6ef26a1b1b2b2c0a94a58d8c96b9b5492744840b4ef1f3c3b40",
+      "git_blob_sha": "dfb76388e956a2206e1eb0bbe77c45544bb5a690",
+      "compression": "xz",
+      "compressed_bytes": 178788,
+      "compressed_sha256": "f3375d085212f7cb1f8df76e8ef7dc6628889c292f48d352afb04c347160965a",
+      "parts": [
+        "tribonacci_audit/witnesses.part5.hex.xz.b64.parts/00001.txt",
+        "tribonacci_audit/witnesses.part5.hex.xz.b64.parts/00002.txt",
+        "tribonacci_audit/witnesses.part5.hex.xz.b64.parts/00003.txt",
+        "tribonacci_audit/witnesses.part5.hex.xz.b64.parts/00004.txt",
+        "tribonacci_audit/witnesses.part5.hex.xz.b64.parts/00005.txt",
+        "tribonacci_audit/witnesses.part5.hex.xz.b64.parts/00006.txt"
+      ]
+    },
+    {
+      "path": "tribonacci_audit/witnesses.part6.hex",
+      "bytes": 630000,
+      "sha256": "d5e95654b5fb631abd999926c9f1b84ba5de3f80e28f467e070c3b81ddb5b9fa",
+      "git_blob_sha": "6f4154eb6d7680b068e49b55cb7d1d38a386d8ef",
+      "compression": "xz",
+      "compressed_bytes": 183072,
+      "compressed_sha256": "47b6dd8f7c7fca616c3d928381c80cd213563ff97e79be8b54796dca298cf9d4",
+      "parts": [
+        "tribonacci_audit/witnesses.part6.hex.xz.b64.parts/00001.txt",
+        "tribonacci_audit/witnesses.part6.hex.xz.b64.parts/00002.txt",
+        "tribonacci_audit/witnesses.part6.hex.xz.b64.parts/00003.txt",
+        "tribonacci_audit/witnesses.part6.hex.xz.b64.parts/00004.txt",
+        "tribonacci_audit/witnesses.part6.hex.xz.b64.parts/00005.txt",
+        "tribonacci_audit/witnesses.part6.hex.xz.b64.parts/00006.txt",
+        "tribonacci_audit/witnesses.part6.hex.xz.b64.parts/00007.txt"
+      ]
+    },
+    {
+      "path": "tribonacci_audit/witnesses.part7.hex",
+      "bytes": 504854,
+      "sha256": "90a4cf33717268c4d76dbe304d7ea62cc6fb770681a8fa0c8cf6a7dbfe0426d6",
+      "git_blob_sha": "de59c60a1605be966fc94c9aeebb68c5fbe0408d",
+      "compression": "xz",
+      "compressed_bytes": 150372,
+      "compressed_sha256": "9c516655672a4fab34c36852f55a16a2bc8dbc7a06420ea9644c6541e7f5bbd4",
+      "parts": [
+        "tribonacci_audit/witnesses.part7.hex.xz.b64.parts/00001.txt",
+        "tribonacci_audit/witnesses.part7.hex.xz.b64.parts/00002.txt",
+        "tribonacci_audit/witnesses.part7.hex.xz.b64.parts/00003.txt",
+        "tribonacci_audit/witnesses.part7.hex.xz.b64.parts/00004.txt",
+        "tribonacci_audit/witnesses.part7.hex.xz.b64.parts/00005.txt",
+        "tribonacci_audit/witnesses.part7.hex.xz.b64.parts/00006.txt"
+      ]
+    }
+  ]
+}

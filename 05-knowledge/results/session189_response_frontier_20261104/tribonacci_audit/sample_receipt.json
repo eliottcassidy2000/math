@@ -1,0 +1,18 @@
+{
+  "artifacts": {
+    "sample_controls.json": "b9717bc889d31682f7c36bc6f5ce63d93b68ec775681dec65272bb5db3af6e23",
+    "sample_counts.txt": "83c326a74b254c6f8fa3b68771e7ed95b61ab7cb1025be8fb3271365fd6029c8",
+    "sample_graphs.in": "15b6d4c70f33f8c40fc62a790527efe4cb711a198585eb317518395bd1b12fc1"
+  },
+  "direct_physical_values": [
+    69,
+    12875,
+    12877,
+    38629,
+    38635,
+    702189
+  ],
+  "maximum_sample_order": 18,
+  "source_sha256": "04ddf939e57c22abe25ad578ef952cf49e8526e8e5b8c06519709d2fbdcd01f4",
+  "status": "PASS"
+}

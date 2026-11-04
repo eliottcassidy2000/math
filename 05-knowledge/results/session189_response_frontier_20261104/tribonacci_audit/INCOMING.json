@@ -1,0 +1,57 @@
+{
+  "input/HYP-9453.md": {
+    "git_blob": "1a0f454ff131beca5ffde52eb95b4d09a6e72671",
+    "sha256": "805ffe9d3be99b55391f8f93c131fdcc6c47ad0ae47938c88ccbe0deaf4f2024",
+    "url": "https://github.com/eliottcassidy2000/math/blob/7002daf0f2b97257df431a3805715791b9283807/05-knowledge/hypotheses/HYP-9453-the-near-join-sweep-toward-chan-pak-completeness-density-of-b-sets-two-strong-realisers-for-every-attained-odd-count-at-least-15.md"
+  },
+  "input/HYP-9454.md": {
+    "git_blob": "c7844150dfe0514426a89a032472d01a1541a29c",
+    "sha256": "462ef2ad6374462b38ff4778041d85921a13aa3bc1d11ca68cc345a51219afd9",
+    "url": "https://github.com/eliottcassidy2000/math/blob/7002daf0f2b97257df431a3805715791b9283807/05-knowledge/hypotheses/HYP-9454-the-full-digit-c2-sweep-as-the-unbounded-target-selector-ready-pair-density-sparse-r1-r2-and-the-name-retention-wall.md"
+  },
+  "input/PROOF.md": {
+    "git_blob": "491b9e1ff4e89d1a8c7f7f5fd86d62d17fdc2938",
+    "sha256": "049e6d47a1f2d929bff92cfcf711083ca7da2d4a1a08052ecf5bbaaa505bcaa7",
+    "url": "https://github.com/eliottcassidy2000/math/blob/7002daf0f2b97257df431a3805715791b9283807/05-knowledge/results/sole_exit_tower_tribonacci_20261104/PROOF.md"
+  },
+  "input/README.md": {
+    "git_blob": "c5e72524d0a6aaf4c2129bcbd7ed1c1d08e0426c",
+    "sha256": "1f9d201d531d61fa5fe0afd423f3d7e088a6848259f447050d1bceb0e45a0069",
+    "url": "https://github.com/eliottcassidy2000/math/blob/7002daf0f2b97257df431a3805715791b9283807/05-knowledge/results/sole_exit_tower_tribonacci_20261104/README.md"
+  },
+  "input/READY_README.md": {
+    "git_blob": "3e8f0b689d2e44167fc36f597514d96be3767300",
+    "sha256": "37eaaff14c1af82f32ab86ac84443607cdf6d6a4cf277ecf1915dba4a0e8e641",
+    "url": "https://github.com/eliottcassidy2000/math/blob/7002daf0f2b97257df431a3805715791b9283807/05-knowledge/results/two_branch_rearming_sigma_sweep_20261104/README.md"
+  },
+  "input/THM-4865.md": {
+    "git_blob": "ea5b478fa85b254053ac18a2625b9db3121f25d2",
+    "sha256": "88ebeca85d7302a76207fb1472d398503333ec7d22ff9406701dc9c3bcf2b6ad",
+    "url": "https://github.com/eliottcassidy2000/math/blob/7002daf0f2b97257df431a3805715791b9283807/01-canon/theorems/THM-4865-the-sole-exit-tower-is-tribonacci-h-k-equals-h-k-1-plus-h-k-2-plus-h-k-3-for-every-rooted-base-the-lineage-c2-law-at-any-vertex-and-the-three-root-response-numerations-attain-every-odd-number-in-69-702189.md"
+  },
+  "input/receipts_coverage_9.normal.out": {
+    "git_blob": "2df68d6e72c66dc6b0c624728ea0f261db47d105",
+    "sha256": "71438a66c5885eef8373986edf5d2f5d3ce31948fc517d0ca5b6492765442513",
+    "url": "https://github.com/eliottcassidy2000/math/blob/7002daf0f2b97257df431a3805715791b9283807/05-knowledge/results/sole_exit_tower_tribonacci_20261104/receipts/coverage_9.normal.out"
+  },
+  "input/scripts_allpairs.c": {
+    "git_blob": "7b5c9be500dd4434440f549c86c316fa2b8fc65f",
+    "sha256": "55def33cbffa47ef3236f257277f6931f26c4f55d78c456d29735526c240715e",
+    "url": "https://github.com/eliottcassidy2000/math/blob/7002daf0f2b97257df431a3805715791b9283807/05-knowledge/results/sole_exit_tower_tribonacci_20261104/scripts/allpairs.c"
+  },
+  "input/scripts_coverage.py": {
+    "git_blob": "f90c7bc9516576c4ca735edeefee7f31778717b2",
+    "sha256": "e8572627e1f466698b766909a2463d157a5043c3cb0ea119d2e12c66dc65c421",
+    "url": "https://github.com/eliottcassidy2000/math/blob/7002daf0f2b97257df431a3805715791b9283807/05-knowledge/results/sole_exit_tower_tribonacci_20261104/scripts/coverage.py"
+  },
+  "input/scripts_dedupe_triples.sh": {
+    "git_blob": "c590a184e10f81c278ed7fdde442e1f530b99904",
+    "sha256": "07876ef445d9e966b04ad3b118404a2071859a6a41838e0eb30a3f035f3ae54f",
+    "url": "https://github.com/eliottcassidy2000/math/blob/7002daf0f2b97257df431a3805715791b9283807/05-knowledge/results/sole_exit_tower_tribonacci_20261104/scripts/dedupe_triples.sh"
+  },
+  "input/verify_memberships.py": {
+    "git_blob": "90e4ad8ee58d3fe1519cc426f7eb2dae62eeea23",
+    "sha256": "64a6c9fd755fc58d2616b5e8318ffce86cd9aa41c64ca6acc1f614e26c9f9525",
+    "url": "https://github.com/eliottcassidy2000/math/blob/7002daf0f2b97257df431a3805715791b9283807/05-knowledge/results/two_branch_rearming_sigma_sweep_20261104/scripts/verify_memberships.py"
+  }
+}

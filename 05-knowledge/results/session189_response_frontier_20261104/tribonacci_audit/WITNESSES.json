@@ -1,0 +1,18 @@
+{
+  "all_strong": true,
+  "encoding": "Unsigned hexadecimal. Bits0..35 column-major code;36..39 physical root;40..43 base order;44 converse;45..46 operation(0 C2,1 nearjoin,2 tower);47..50 parameter k;51 base strong flag. Line i certifies H=69+2i.",
+  "first_value": 69,
+  "maximum_output_order": 19,
+  "parts": [
+    "witnesses.part0.hex",
+    "witnesses.part1.hex",
+    "witnesses.part2.hex",
+    "witnesses.part3.hex",
+    "witnesses.part4.hex",
+    "witnesses.part5.hex",
+    "witnesses.part6.hex",
+    "witnesses.part7.hex"
+  ],
+  "value_step": 2,
+  "witness_count": 351061
+}

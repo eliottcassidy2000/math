@@ -1,0 +1,32 @@
+{
+  "input/README.md": {
+    "git_blob": "d4cff26fac12db2cfcd6ba913bd0c0a534080e45",
+    "sha256": "198e7ee27bf80a793544336e0e195d9cef25b5cf706f25a9fc84d636debe8c83",
+    "url": "https://github.com/eliottcassidy2000/math/blob/2cfc7bba/05-knowledge/results/two_branch_rearming_sigma_sweep_20261104/README.md"
+  },
+  "input/receipts_twohc_all_9.single_run.out": {
+    "git_blob": "a063a55dab2810ab5919f73938f306a26a1451d6",
+    "sha256": "04ed75d835af7db196c0665bf30dd0bba6ff8b5f065e2ccca033ef9149d6de1c",
+    "url": "https://github.com/eliottcassidy2000/math/blob/2cfc7bba/05-knowledge/results/two_branch_rearming_sigma_sweep_20261104/receipts/twohc_all_9.single_run.out"
+  },
+  "input/scripts_douglas_chords.py": {
+    "git_blob": "bda5ceb637b4bca76715256883fe4f0fbedeef0f",
+    "sha256": "07e090a5fe5d6aea538d51990364eac7d0dc6d736e32919c8baa1ad7d163b01e",
+    "url": "https://github.com/eliottcassidy2000/math/blob/2cfc7bba/05-knowledge/results/two_branch_rearming_sigma_sweep_20261104/scripts/douglas_chords.py"
+  },
+  "input/scripts_glue.py": {
+    "git_blob": "2896715fe401247237807622bdb472cac36b4959",
+    "sha256": "eaed1e74ae897792f729273d1153cb179de197a179067163f43c4d249cecba9f",
+    "url": "https://github.com/eliottcassidy2000/math/blob/2cfc7bba/05-knowledge/results/two_branch_rearming_sigma_sweep_20261104/scripts/glue.py"
+  },
+  "input/scripts_swapshape.py": {
+    "git_blob": "0b1b8f90732b6b07a3f117f7e20aff145a940dda",
+    "sha256": "4aab2a947b390ceee3671c05e046c26058d9ac23e806e001e70ea80ef9e41338",
+    "url": "https://github.com/eliottcassidy2000/math/blob/2cfc7bba/05-knowledge/results/two_branch_rearming_sigma_sweep_20261104/scripts/swapshape.py"
+  },
+  "input/scripts_twohc_all.py": {
+    "git_blob": "dbe3f5dd82db7c98c67ef884d9761d0a49a3b9b3",
+    "sha256": "ad7feacfc1c0bc7eef44e55a8485843383ddfffffda0db94f3fb0ad43598c0e1",
+    "url": "https://github.com/eliottcassidy2000/math/blob/2cfc7bba/05-knowledge/results/two_branch_rearming_sigma_sweep_20261104/scripts/twohc_all.py"
+  }
+}
