@@ -1,0 +1,34 @@
+{
+  "all_q_reversal_exhaustive": {
+    "actual_word_cut_profile_queries": 16932,
+    "nonzero_profile_coordinates": 3888,
+    "old_tournaments": 75,
+    "profile_quartic_coordinates": 14192,
+    "status": "PASS"
+  },
+  "ambient_cube_states": 16,
+  "ambient_local_quotient_controls": 15,
+  "audit_sha256": {
+    "audit.py": "d42953a44615d4f47cd95d69558727201acfd2c11aa0093573ef18b293964a3e",
+    "literal.cpp": "76fdc646b0a6e217635478e4556c87532aff628a22ddcf83bd22119cc5860915",
+    "profile_parity.cpp": "7d4309c345aded5ac6689c7f054682902134bef4403020a7163a1f6ada93e6b0",
+    "word_profiles.cpp": "3cda37053d6c9b2bc3cf7e0a827964888230aa318d16225fa0732c543bd35919"
+  },
+  "generic_master_controls": 64,
+  "independent_actual_ambient_counts": 10746,
+  "independent_retained_full_profile_queries": 2272,
+  "retained_profile_quartic_controls": 210,
+  "root_families": {
+    "equal": 96,
+    "families": 128,
+    "strict": 32
+  },
+  "source_sha256": {
+    "PROOF.md": "96cd57ec00afaf00db8577c73379cb8e7e3db493eb6b5329da01a8be8a5eefc3",
+    "count.cpp": "c1334867b96903ce30d020557b747f29ed203657858baaa33f13a83070d58cf2",
+    "normal.json": "9818501ed3b6ca71224461aaa2651be4e058b4ed3607955799f96d116ef8aa6c",
+    "optimized.json": "9818501ed3b6ca71224461aaa2651be4e058b4ed3607955799f96d116ef8aa6c",
+    "verify.py": "93e40940b258e0bd5a874915abf9e29f6bccffe097390f0379371daf084c2c42"
+  },
+  "status": "PASS"
+}
