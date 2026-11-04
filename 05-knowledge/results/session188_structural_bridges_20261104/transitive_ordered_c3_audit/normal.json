@@ -1,0 +1,187 @@
+{
+  "actual_quartic_controls": [
+    [
+      1,
+      1,
+      146
+    ],
+    [
+      2,
+      2,
+      3716
+    ],
+    [
+      3,
+      2,
+      19524
+    ],
+    [
+      4,
+      4,
+      3187640
+    ],
+    [
+      5,
+      7,
+      646514024
+    ],
+    [
+      6,
+      6,
+      -573454264
+    ],
+    [
+      6,
+      7,
+      -13468671736
+    ],
+    [
+      7,
+      6,
+      -20953480536
+    ],
+    [
+      8,
+      8,
+      -20005082500600
+    ]
+  ],
+  "audit_sha256": {
+    "audit.py": "e0b7bb7d9c2f48b147b898455d2851b0a7ece4a1dc639bb240a261cd28282e17",
+    "literal.cpp": "76fdc646b0a6e217635478e4556c87532aff628a22ddcf83bd22119cc5860915",
+    "weighted.cpp": "27d2033a709b855ec041c7f20971f1460e8abcb0255b071e3f34b4ff0a2562cb"
+  },
+  "complete_exterior_word_kernel_terms": 119,
+  "independent_full_name_counts": 144,
+  "independent_full_polynomial": [
+    [
+      0,
+      0,
+      8
+    ],
+    [
+      0,
+      1,
+      8
+    ],
+    [
+      1,
+      0,
+      28
+    ],
+    [
+      1,
+      1,
+      146
+    ],
+    [
+      1,
+      2,
+      113
+    ],
+    [
+      2,
+      0,
+      13
+    ],
+    [
+      2,
+      1,
+      270
+    ],
+    [
+      2,
+      2,
+      701
+    ],
+    [
+      2,
+      3,
+      384
+    ],
+    [
+      3,
+      1,
+      80
+    ],
+    [
+      3,
+      2,
+      720
+    ],
+    [
+      3,
+      3,
+      1136
+    ],
+    [
+      3,
+      4,
+      396
+    ],
+    [
+      4,
+      2,
+      84
+    ],
+    [
+      4,
+      3,
+      480
+    ],
+    [
+      4,
+      4,
+      396
+    ],
+    [
+      5,
+      3,
+      -96
+    ],
+    [
+      5,
+      4,
+      -288
+    ],
+    [
+      5,
+      5,
+      -336
+    ],
+    [
+      5,
+      6,
+      -120
+    ],
+    [
+      6,
+      4,
+      -120
+    ],
+    [
+      6,
+      5,
+      -240
+    ],
+    [
+      6,
+      6,
+      -120
+    ]
+  ],
+  "independent_weighted_actual_counts": 598,
+  "positive_bound_base": 2080753736,
+  "retained_negative_bound_base": -2560896000,
+  "root_battery_queries": 22,
+  "scope": "All a,b>=6 sign proof analytically reviewed; finite family controls only whole-child subfamilies, no arbitrary strong outer lift.",
+  "source_sha256": {
+    "transitive_ordered_c3/PROOF.md": "cde272a68fb8c752080871b34c8e86529ab5e7eb6a82e9bfe2a07a7340a3c61c",
+    "transitive_ordered_c3/algebra.py": "fc528667b92262931e0a29080cd6862e53451ea0f124e4995cc7929ccf96e73c",
+    "transitive_ordered_c3/literal.cpp": "4f34e4aede4e9a14564f61f47fd609ae1324ee009dece48f36e4abc1eb227a5f",
+    "transitive_ordered_c3/run_count.cpp": "dc174b2dbeeaa6306a80cb22b8f3a6f8eea6828e6f671ade1d381ecdab8ba607",
+    "transitive_ordered_c3/verify.py": "ee696dfe4d46eb1bd3c497ddcc3a08af41fbb5232dc9a220759cf5ede5cd2b20"
+  },
+  "status": "PASS",
+  "whole_child_root_family_controls": 32
+}
