@@ -1,0 +1,41 @@
+{
+  "encoding": "Deterministic gzip stream encoded as base64 in ASCII chunks.",
+  "groups": [
+    {
+      "parts": [
+        {
+          "file": "h_vectors.bin.gz.b64.part000",
+          "size": 36001,
+          "sha256": "ea795018ee373146a608b351a3a158a869ba449ff308029aa553097d2c1b48dc"
+        },
+        {
+          "file": "h_vectors.bin.gz.b64.part001",
+          "size": 36001,
+          "sha256": "45dbb00855414214c8399651f09a7ccbebf7f3daf3e1d14075aec116127a44c2"
+        },
+        {
+          "file": "h_vectors.bin.gz.b64.part002",
+          "size": 36001,
+          "sha256": "226c2554c6f8b3021081b20d6dd0e3ddb70e3e0cbcc665790695a26864c8695e"
+        },
+        {
+          "file": "h_vectors.bin.gz.b64.part003",
+          "size": 36001,
+          "sha256": "53acea6f21a97ee5a34c46b0d9d436dc0acf833e8894fd385c75e513e6d8e70c"
+        },
+        {
+          "file": "h_vectors.bin.gz.b64.part004",
+          "size": 9409,
+          "sha256": "48d1e0e00f7271f86325c90d846c6af55c086fb6ae660376a0a6711b87036f46"
+        }
+      ],
+      "outputs": [
+        {
+          "file": "h_vectors.bin",
+          "size": 131072,
+          "sha256": "182784ab88f16b360ad12371eb03991bbd8d8a8dcfde7c1ec92c9d0e76bb31f9"
+        }
+      ]
+    }
+  ]
+}

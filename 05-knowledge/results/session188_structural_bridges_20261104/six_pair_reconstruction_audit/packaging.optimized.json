@@ -1,0 +1,145 @@
+{
+  "all_original_bytes_compared": 131072,
+  "complete_little_endian_words_checked": 32768,
+  "controls": [
+    {
+      "optimized": false,
+      "scenario": "roundtrip",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "corrupt_first_chunk",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "corrupt_last_chunk",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "conflicting_output",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "late_conflict",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "bad_output_hash",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "nonlocal_output",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "duplicate_output",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "nonlocal_chunk",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "roundtrip",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "corrupt_first_chunk",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "corrupt_last_chunk",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "conflicting_output",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "late_conflict",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "bad_output_hash",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "nonlocal_output",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "duplicate_output",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "nonlocal_chunk",
+      "status": "PASS"
+    }
+  ],
+  "gzip_bytes": 115054,
+  "gzip_sha256": "58ceaabc8c1349d27a625025bad9ef552d6057cbb099da6cbb3ad2ab6a926ca6",
+  "named_bits_per_word": 30,
+  "parts": 5,
+  "raw_bytes": 131072,
+  "raw_sha256": "182784ab88f16b360ad12371eb03991bbd8d8a8dcfde7c1ec92c9d0e76bb31f9",
+  "source_pins": [
+    {
+      "file": "REASSEMBLY.md",
+      "sha256": "d4a82b5212cb77a1a31f4761b09de806dfa664ea07c2d996f7a276787b3afd5f",
+      "size": 699
+    },
+    {
+      "file": "REASSEMBLY.json",
+      "sha256": "1fb4c7ee1e8f58b8f7c75970083d634fb464a7aec77afb3382dd0f29d584d21e",
+      "size": 1246
+    },
+    {
+      "file": "reassemble.py",
+      "sha256": "82a94c3c888f921fba471cbebb264f5235a7fab64deb76b8b82f5a980e7e1923",
+      "size": 1500
+    },
+    {
+      "file": "h_vectors.bin.gz.b64.part000",
+      "sha256": "ea795018ee373146a608b351a3a158a869ba449ff308029aa553097d2c1b48dc",
+      "size": 36001
+    },
+    {
+      "file": "h_vectors.bin.gz.b64.part001",
+      "sha256": "45dbb00855414214c8399651f09a7ccbebf7f3daf3e1d14075aec116127a44c2",
+      "size": 36001
+    },
+    {
+      "file": "h_vectors.bin.gz.b64.part002",
+      "sha256": "226c2554c6f8b3021081b20d6dd0e3ddb70e3e0cbcc665790695a26864c8695e",
+      "size": 36001
+    },
+    {
+      "file": "h_vectors.bin.gz.b64.part003",
+      "sha256": "53acea6f21a97ee5a34c46b0d9d436dc0acf833e8894fd385c75e513e6d8e70c",
+      "size": 36001
+    },
+    {
+      "file": "h_vectors.bin.gz.b64.part004",
+      "sha256": "48d1e0e00f7271f86325c90d846c6af55c086fb6ae660376a0a6711b87036f46",
+      "size": 9409
+    }
+  ],
+  "status": "PASS"
+}

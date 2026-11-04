@@ -1,0 +1,30 @@
+{
+  "adaptive_queries": 194,
+  "coarse_queries": 188,
+  "complete_signature_vector_bits": 30,
+  "data_sha256": {
+    "h_vectors.bin": "182784ab88f16b360ad12371eb03991bbd8d8a8dcfde7c1ec92c9d0e76bb31f9",
+    "literal.json": "a35747f3e894655c1805994bcbb3c47146d6dbfa489e7f4851284080ef6a73fb"
+  },
+  "exact_signature_classes": 16384,
+  "five_name_tournaments": 1024,
+  "fixed_queries": 380,
+  "four_name_literal_endpoint_checks": 256,
+  "literal_query_count": 1138,
+  "literal_signature_states": [
+    0,
+    81,
+    32686,
+    81
+  ],
+  "nonzero_signatures": 32768,
+  "retained_vector_bank_bytes": 131072,
+  "scope": "Known partition into six pair modules, fixed exterior; no arbitrary twelve-name reconstruction and no full 2^21-state response census.",
+  "six_name_tournaments": 32768,
+  "source_sha256": {
+    "PROOF.md": "83981eb64f5b4820ed907381bc2bff8b4acc5e3628664053e8cd698c89d85c7f",
+    "literal.cpp": "5060e314e83af8384a8a301e3f9708c47859de3c4e88ed413b070682f0412779",
+    "verify.py": "827f89008b740e966c4022871ce925f9602102e6aa6cd28201fd6437498a1b96"
+  },
+  "status": "PASS"
+}
