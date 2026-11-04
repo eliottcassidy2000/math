@@ -1,0 +1,9 @@
+{
+  "review_type": "Independent all-order mathematical proof review; literal implementation controls belong to the separate companion checkers.",
+  "source_sha256": {
+    "mod8_transfer/PROOF.md": "aaf6c9325b34b03187771d0731b3a6d6e9b9d31e25238d8adb4a9267fcb46521",
+    "odd_pair_quotient/AMBIENT.md": "6dafdba2b13f7223c3cb98a49e7a915c1bf788fe6d9c35ef01ba61669f9dfac2",
+    "odd_pair_quotient/PROOF.md": "6d741cbef4d88c31a0d39f8c0df28ca50bebfd4c3195d6b33591bd5f39fc18c4"
+  },
+  "status": "PASS"
+}

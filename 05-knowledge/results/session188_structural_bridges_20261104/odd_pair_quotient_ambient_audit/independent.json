@@ -1,0 +1,22 @@
+{
+  "contexts": 6,
+  "cube_states": 16,
+  "literal_retained_values": 712,
+  "method": "No producer imports. Backward-ending Hamilton recursion, physical reconstruction, literal full queries.",
+  "source_sha256": {
+    "odd_pair_quotient/AMBIENT.md": "6dafdba2b13f7223c3cb98a49e7a915c1bf788fe6d9c35ef01ba61669f9dfac2",
+    "odd_pair_quotient/ambient.normal.json": "210fc55536ae9b981a5cfdd6571eb404325a30aaf9903c7bf05fddd18b043f61",
+    "odd_pair_quotient/ambient.optimized.json": "210fc55536ae9b981a5cfdd6571eb404325a30aaf9903c7bf05fddd18b043f61",
+    "odd_pair_quotient/verify_ambient.py": "fb40141a82470410664e46190df162ed8914af9cb6f69bc636dcbc88606edc49",
+    "odd_pair_quotient_ambient_audit/independent.py": "c7506499da61cbfad0d33826c19d7de871db026526e9ad62234886cba488e3fa"
+  },
+  "status": "PASS",
+  "traces": [
+    84,
+    84,
+    84,
+    420,
+    84,
+    3444
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "A": [
+    48,
+    17,
+    59,
+    19,
+    32,
+    10
+  ],
+  "B": [
+    50,
+    16,
+    59,
+    19,
+    0,
+    26
+  ],
+  "ambient_counts": [
+    211,
+    99
+  ],
+  "ambient_gap": 112,
+  "core_gap": 8,
+  "producer_normal_optimized_equal": true,
+  "producer_receipt_sha256": "b68d1a3d41ea76e77d30ce48cf11caded4940c2780c3cacacdc373016ea26012",
+  "qA": [
+    0,
+    11,
+    178,
+    828,
+    1752,
+    1800,
+    720
+  ],
+  "qB": [
+    0,
+    3,
+    90,
+    612,
+    1608,
+    1800,
+    720
+  ],
+  "source_sha256": {
+    "mod8_transfer/SHARPNESS.md": "eeb81f1ced75c006bd14c3f9339b20128d5fabfe723e079727350df16cca2635",
+    "mod8_transfer/sharpness.py": "c5d1d2a70975210dba16f8f11bc7cabcddfb9ba580c84379b8804e363a43f1a7",
+    "mod8_transfer_audit/audit.py": "12934901e28bfa54daa88575b0b6ba81407d1f28bbaff18a1ab32a7dde1f836d",
+    "mod8_transfer_audit/sharpness_audit.py": "d98be86710c42ecf9156da5630f2f28b219e4417dd4401fe79671903e593f201"
+  },
+  "status": "PASS"
+}

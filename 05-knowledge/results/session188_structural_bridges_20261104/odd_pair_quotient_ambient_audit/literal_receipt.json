@@ -1,0 +1,47 @@
+{
+  "adaptive_bound": 25,
+  "contexts": 6,
+  "cube_states": 16,
+  "fixed_queries": 28,
+  "literal_counts_replayed": 712,
+  "method": "No source verifier import; independent predecessor DP and ordinary finite-difference extraction.",
+  "root_traces": [
+    [
+      28,
+      28,
+      28
+    ],
+    [
+      28,
+      28,
+      28
+    ],
+    [
+      28,
+      28,
+      28
+    ],
+    [
+      140,
+      140,
+      140
+    ],
+    [
+      28,
+      28,
+      28
+    ],
+    [
+      1148,
+      1148,
+      1148
+    ]
+  ],
+  "source_sha256": {
+    "AMBIENT.md": "6dafdba2b13f7223c3cb98a49e7a915c1bf788fe6d9c35ef01ba61669f9dfac2",
+    "ambient.normal.json": "210fc55536ae9b981a5cfdd6571eb404325a30aaf9903c7bf05fddd18b043f61",
+    "ambient.optimized.json": "210fc55536ae9b981a5cfdd6571eb404325a30aaf9903c7bf05fddd18b043f61",
+    "verify_ambient.py": "fb40141a82470410664e46190df162ed8914af9cb6f69bc636dcbc88606edc49"
+  },
+  "status": "PASS"
+}
