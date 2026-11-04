@@ -1,0 +1,3 @@
+Q8 S = [87, 13, 13, 42, 31, 19, 18, 26]  E = [13, 65, 29, 22, 13, 29, 52, 26]  p = [0, 0, 0, 0, 0, 0, 0, 0]
+equal interiors (TT3 / TT3)  H(W)=277228941 H(W')=277228941  difference mod 4 = 0
+TT3 source / C3 target       H(W)=277228941 H(W')=320253963  difference mod 4 = 2

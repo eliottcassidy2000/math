@@ -83,3 +83,81 @@ A failure of any prediction will be recorded below, unedited, together with its 
 ## Outcomes
 
 (appended after the runs)
+
+### Run history and disclosures (appended 2026-11-04 after the runs; nothing above was edited)
+
+- **First run killed.** The first full run (started 10:15) completed P1-P4, then hung in P5(b).
+  - Cause: the rejection loop drawing child sizes never terminates when (m, k) = (5, 4). The core order would be
+    at least 4 + 2·4 = 12, above the cap of 11.
+  - The process was killed. The harness now redraws (m, k) until a feasible size vector exists. The pre-registered
+    design (k in {3,4}, other children nontrivial, n <= 11) and every prediction are unchanged.
+  - P1-P5 were then rerun from scratch. The counters below come from that rerun: `confirm.out` and `confirm.json`.
+- **P5(c) run separately.** In `confirm.py` the ambient controls were guarded by `n <= 8`. Every P5(b) core has order
+  >= 9, so P5(c) never executed.
+  - It was run separately, with the same prediction and a feasible guard, by `p5c.py`. Cores have order 9; exteriors
+    have 2-3 vertices; ports copy the core's exterior incidences. Output: `p5c.out` and `p5c.json`.
+  - This execution came after the other outcomes were known.
+  - The independent audit had already checked the ambient lift on its own controls, A4 and A5 (28/28 each).
+- **Outcome.** Every pre-registered prediction PASSED. There are no exceptions or counterexamples.
+
+#### confirm.py (P1-P5(b))
+
+| check | cases | failures |
+|---|---:|---:|
+| P1 exhaustive n=3 | 192 | 0 |
+| P1 exhaustive n=4 | 4096 | 0 |
+| P1 exhaustive n=5 | 163840 | 0 |
+| P1 random n=6 | 1800 | 0 |
+| P1 random n=7 | 2100 | 0 |
+| P1 random n=8 | 2400 | 0 |
+| P1 random n=9 | 2700 | 0 |
+| P2 m=2:(i) contrast nonzero | 32 | 0 |
+| P2 m=2:(ii) reversed L_u=1 | 32 | 0 |
+| P2 m=2:(iii) hard unchanged k>=3 Lambda'=1+p_j | 8 | 0 |
+| P2 m=2:(iv) hard unchanged k=2 L_u=1 | 8 | 0 |
+| P2 m=2:(v) nonhard L_z=1 both targets | 16 | 0 |
+| P2 m=3:(i) contrast nonzero | 384 | 0 |
+| P2 m=3:(ii) reversed L_u=1 | 384 | 0 |
+| P2 m=3:(iii) hard unchanged k>=3 Lambda'=1+p_j | 48 | 0 |
+| P2 m=3:(iv) hard unchanged k=2 L_u=1 | 48 | 0 |
+| P2 m=3:(v) nonhard L_z=1 both targets | 384 | 0 |
+| P2 m=4:(i) contrast nonzero | 8192 | 0 |
+| P2 m=4:(ii) reversed L_u=1 | 8192 | 0 |
+| P2 m=4:(iii) hard unchanged k>=3 Lambda'=1+p_j | 512 | 0 |
+| P2 m=4:(iv) hard unchanged k=2 L_u=1 | 512 | 0 |
+| P2 m=4:(v) nonhard L_z=1 both targets | 12288 | 0 |
+| P2 m=5:(i) contrast nonzero | 102400 | 0 |
+| P2 m=5:(ii) reversed L_u=1 | 102400 | 0 |
+| P2 m=5:(iii) hard unchanged k>=3 Lambda'=1+p_j | 10240 | 0 |
+| P2 m=5:(iv) hard unchanged k=2 L_u=1 | 10240 | 0 |
+| P2 m=5:(v) nonhard L_z=1 both targets | 81920 | 0 |
+| P3:(i) contrast nonzero | 400 | 0 |
+| P3:(ii) reversed L_u=1 | 400 | 0 |
+| P3:(iii) hard unchanged k>=3 Lambda'=1+p_j | 101 | 0 |
+| P3:(iv) hard unchanged k=2 L_u=1 | 101 | 0 |
+| P3:(v) nonhard L_z=1 both targets | 643 | 0 |
+| P4 Q8 coarse contrast zero | 8 | 0 |
+| P4 Q8 endpoint parity zero | 1 | 0 |
+| P4 Q8 kernel:(i) contrast nonzero | 32 | 0 |
+| P4 Q8 kernel:(ii) reversed L_u=1 | 32 | 0 |
+| P4 Q8 kernel:(iii) hard unchanged k>=3 Lambda'=1+p_j | 16 | 0 |
+| P4 Q8 kernel:(iv) hard unchanged k=2 L_u=1 | 16 | 0 |
+| P4 Q8 named TT_k both targets nonzero | 64 | 0 |
+| P4 Q8 prime | 1 | 0 |
+| P5a contrasts even | 12 | 0 |
+| P5a singleton coarse L_z=1 | 35 | 0 |
+| P5b nonzero | 24 | 0 |
+| P5b reversed L_u=1 | 12 | 0 |
+| P5b unchanged Lambda'=1+p_j | 12 | 0 |
+
+TOTAL FAILURES: 0
+
+#### p5c.py (P5(c))
+
+| check | cases | failures |
+|---|---:|---:|
+| P5c ambient restricted mod-4 contrast == bare core | 8 | 0 |
+| P5c ambient reversed L_u=1 | 4 | 0 |
+| P5c ambient unchanged Lambda'=1+p_j | 4 | 0 |
+
+TOTAL FAILURES: 0

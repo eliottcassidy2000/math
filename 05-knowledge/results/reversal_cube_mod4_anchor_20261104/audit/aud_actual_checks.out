@@ -1,0 +1,59 @@
+A7 m=1 reversed k=2: some named query separates mod 4: True
+A7 m=1 reversed k=3: some named query separates mod 4: True
+A7 m=1 reversed k=4: some named query separates mod 4: True
+A7 done (0.1s)
+A1 done (16.8s)
+A2 done (4.2s)
+A3 done (70.7s)
+A4/A5 done (4.9s)
+A6 done (4.3s)
+
+seed 4864
+A1 Lemma 1: actual half - delta_Z is query-independent                                               cases=  132  failures=0
+A1 actual blow-up: L_v(half) == w(v)  [Prop 4 + Lemma 1], n=3                                        cases=   90  failures=0
+A1 actual blow-up: L_v(half) == w(v)  [Prop 4 + Lemma 1], n=4                                        cases=  120  failures=0
+A1 actual blow-up: L_v(half) == w(v)  [Prop 4 + Lemma 1], n=5                                        cases=  125  failures=0
+A1 actual blow-up: L_v(half) == w(v)  [Prop 4 + Lemma 1], n=6                                        cases=  120  failures=0
+A1 actual blow-up: L_v(half) == w(v)  [Prop 4 + Lemma 1], n=7                                        cases=  105  failures=0
+A1 actual blow-up: L_v(half) == w(v)  [Prop 4 + Lemma 1], n=8                                        cases=   96  failures=0
+A2 Lemma 1: actual coarse half - delta_Q is query-independent                                        cases=   80  failures=0
+A2 Theorem A: L_z(actual coarse half) == 1                                                           cases=   60  failures=0
+A2 Theorem A: L_z(actual coarse half) == 1 [several singletons]                                      cases=   49  failures=0
+A2 Theorem A: some coarse battery query has F_W-F_W' = 2 mod 4                                       cases=   80  failures=0
+A2 battery size <= 4(m+1) for L_z                                                                    cases=   80  failures=0
+A3 p_j(Q) distribution (hard, unchanged-type, k>=3) p=0 / p=1                                        p=0: 66  p=1: 42
+A3 reversed-type non-hard: L_z == 1 (u=b1 k=2)                                                       cases=   40  failures=0
+A3 reversed-type non-hard: L_z == 1 (u=b1 k=>=3)                                                     cases=   76  failures=0
+A3 reversed-type non-hard: L_z == 1 (u=bk k=2)                                                       cases=   50  failures=0
+A3 reversed-type non-hard: L_z == 1 (u=bk k=>=3)                                                     cases=   70  failures=0
+A3 reversed-type: L_u == 1 (u=b1 k=2)                                                                cases=   64  failures=0
+A3 reversed-type: L_u == 1 (u=b1 k=>=3)                                                              cases=  106  failures=0
+A3 reversed-type: L_u == 1 (u=bk k=2)                                                                cases=   62  failures=0
+A3 reversed-type: L_u == 1 (u=bk k=>=3)                                                              cases=  108  failures=0
+A3 some query of the stated form has F_W-F_W' = 2 mod 4                                              cases=  680  failures=0
+A3 unchanged-type hard k=2: L_u == 1 (u=b1 k=2)                                                      cases=   32  failures=0
+A3 unchanged-type hard k=2: L_u == 1 (u=bk k=2)                                                      cases=   30  failures=0
+A3 unchanged-type hard k>=3, p_j=1: coarse [a_j] == 1 (u=b1 k=>=3)                                   cases=   20  failures=0
+A3 unchanged-type hard k>=3, p_j=1: coarse [a_j] == 1 (u=bk k=>=3)                                   cases=   22  failures=0
+A3 unchanged-type hard k>=3: Lambda' == 1+p_j(Q) (u=b1 k=>=3)                                        cases=   54  failures=0
+A3 unchanged-type hard k>=3: Lambda' == 1+p_j(Q) (u=bk k=>=3)                                        cases=   54  failures=0
+A3 unchanged-type non-hard: L_z == 1 (u=b1 k=2)                                                      cases=   40  failures=0
+A3 unchanged-type non-hard: L_z == 1 (u=b1 k=>=3)                                                    cases=   76  failures=0
+A3 unchanged-type non-hard: L_z == 1 (u=bk k=2)                                                      cases=   50  failures=0
+A3 unchanged-type non-hard: L_z == 1 (u=bk k=>=3)                                                    cases=   70  failures=0
+A4 ambient lift: half parity equals bare core at every battery query                                 cases=   28  failures=0
+A5 restoration (2nd changed node N -> N^op) + lift: half parity equals bare core at every battery query cases=   28  failures=0
+A6 [generalisation] reversed-type non-hard: L_z == 1 (u=b1 k=>=3)                                    cases=    5  failures=0
+A6 [generalisation] reversed-type non-hard: L_z == 1 (u=bk k=>=3)                                    cases=    5  failures=0
+A6 [generalisation] reversed-type: L_u == 1 (u=b1 k=>=3)                                             cases=   11  failures=0
+A6 [generalisation] reversed-type: L_u == 1 (u=bk k=>=3)                                             cases=   13  failures=0
+A6 [generalisation] some query of the stated form has F_W-F_W' = 2 mod 4                             cases=   48  failures=0
+A6 [generalisation] unchanged-type hard k>=3, p_j=1: coarse [a_j] == 1 (u=b1 k=>=3)                  cases=    2  failures=0
+A6 [generalisation] unchanged-type hard k>=3, p_j=1: coarse [a_j] == 1 (u=bk k=>=3)                  cases=    4  failures=0
+A6 [generalisation] unchanged-type hard k>=3: Lambda' == 1+p_j(Q) (u=b1 k=>=3)                       cases=    7  failures=0
+A6 [generalisation] unchanged-type hard k>=3: Lambda' == 1+p_j(Q) (u=bk k=>=3)                       cases=    8  failures=0
+A6 [generalisation] unchanged-type non-hard: L_z == 1 (u=b1 k=>=3)                                   cases=    5  failures=0
+A6 [generalisation] unchanged-type non-hard: L_z == 1 (u=bk k=>=3)                                   cases=    5  failures=0
+A7 m=1, unchanged: F_W == F_W' at every query (Theorem B needs m>=2)                                 cases=    3  failures=0
+FAILURES: none
+total time 101.0s

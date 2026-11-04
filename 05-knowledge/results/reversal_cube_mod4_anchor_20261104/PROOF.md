@@ -4,8 +4,14 @@ kind-pasteur-2026-11-04-S9.
 
 **Status.**
 - PROVED: Lemmas 1–3, Proposition 4, Theorems A and B, and the Corollary, given the cited reviewed inputs.
-- FINITE-EXACT: the pre-registered confirmations in `PREREGISTRATION.md` (outcomes appended there).
-- An independent audit is recorded in `audit/REVIEW.md` once it is complete.
+- FINITE-EXACT: the pre-registered confirmations in `PREREGISTRATION.md`. The outcomes are appended there.
+- AUDITED: independent audit `audit/REVIEW.md`, verdict SOUND WITH CORRECTIONS (0 MAJOR, 3 MINOR, 6 NOTE).
+  - All required corrections are applied in this revision: the hypothesis m ≥ 2 in Theorem B, the evidence
+    bookkeeping, and the evidence sentence in §6.
+  - The recommended NOTEs are also applied: the mirror sentence for u = b_k, the definition of [alpha_j], the
+    least-indexed segment wording, the widening of Theorem B beyond transitive children, the qualified sharpness
+    remark, and "nontrivial" in §1.
+  - Log: MISTAKE-703.
 
 ## 0. Setting and the question answered
 
@@ -27,7 +33,7 @@ alone.
 ## 1. Odd-cycle parity and the weighted port-cycle polynomial
 
 **Odd-cycle expansion.** Modulo four the classical odd-cycle Hamilton expansion reads
-H(R) = 1 + 2·(number of directed odd cycles of R) (mod 4).
+H(R) = 1 + 2·(number of nontrivial directed odd cycles of R) (mod 4).
 - Source: Grinberg–Stanley, arXiv:2307.05569, Theorem 1.39.
 - It is used in exactly this form in `session188_structural_bridges_20261104/parity_profile_transfer/PROOF.md` and
   in `odd_pair_quotient/PROOF.md`.
@@ -68,10 +74,12 @@ vertex of weight [|A_i| = 1], and every other vertex keeps weight 1. Hence
 sets.
 
 *Proof.*
-1. **Several segments cancel.** Suppose a port cycle meets A_i in r >= 2 maximal segments. Permuting the segment
-   contents among their slots preserves every boundary incidence, by the module property and uniform ports. The cycle
-   has a distinguished port, and its segments are disjoint and nonempty, so S_r acts freely. Such cycles therefore
-   cancel modulo two.
+1. **Several segments cancel.** Suppose a port cycle meets some A_i in r >= 2 maximal segments. Let A_i be the
+   least-indexed module with this property, so the involution is well defined across several modules.
+   - Permuting that module's segment contents among their slots preserves every boundary incidence, by the module
+     property and uniform ports. The runs between segments stay fixed.
+   - The cycle has a distinguished port, and its segments are disjoint and nonempty, so S_r acts freely.
+   - Such cycles therefore cancel modulo two.
 2. **One segment.** A single segment through A_i is a Hamilton path of some A_i[S] with S nonempty. Its number of
    realizations of a given length parity is the sum of H(A_i[S]) over the S of that parity. Since H(A_i[S]) is odd
    (Rédei), this is congruent modulo two to the number of nonempty subsets of that parity.
@@ -137,21 +145,30 @@ L_z needs at most 4(m+1) distinct coarse queries.
 
 ## 4. Transitive children: unchanged or reversed
 
-**Theorem B.** Let A_j be transitive with order k >= 2 and physical order b_1→...→b_k. Let u be b_1 or b_k. Suppose u
-is also the source or the sink of A'_j, which A'_j may be any transitive tournament on the same names satisfying.
-Then some actual query of the following form has F_W − F_W' ≡ 2 (mod 4):
+**Theorem B.** Let m >= 2. Let A_j have order k >= 2, and let u be a vertex that is a source or a sink of A_j and also
+a source or a sink of A'_j. Then some actual query of the following form has F_W − F_W' ≡ 2 (mod 4):
 - uniform on every other child;
 - uniform on beta = A_j − u;
 - with arbitrary bits at u.
 
-In particular **A'_j = A_j (unchanged) and A'_j = A_j^op (reversed) are both separated.**
+- **Transitivity is not used.** Only the end condition on u is needed (audit NOTE-4, check A6).
+- **The transitive case.** If A_j is transitive with physical order b_1→...→b_k and A'_j is transitive, take u = b_1
+  or u = b_k whenever that vertex is also an end of A'_j. In particular **A'_j = A_j (unchanged) and
+  A'_j = A_j^op (reversed) are both separated.**
+- **m = 1 is excluded.** There the unchanged case is W = W' and nothing can be separated.
 
 *Proof.*
-1. **Kernel.** beta is a module of A_j and of A'_j, because u is an end of both orders. Lemma 1 contracts the other
-   children, giving them weight [size 1], and contracts beta, giving it weight w_beta = [k=2]. Take u = b_1; the case
-   u = b_k is the mirror image. The kernel is Z = Q[u→beta] with w(u) = 1.
+1. **Kernel.** beta is a module of A_j and of A'_j, because u is an end, a source or a sink, of both. Lemma 1
+   contracts the other children, giving them weight [size 1], and contracts beta, giving it weight w_beta = [k=2].
+   - Assume first that u is the source of A_j. The kernel is Z = Q[u→beta] with w(u) = 1, and it has
+     n = m+1 >= 3 vertices.
+   - If u is the sink of A_j, apply the source case to the pair (W^op, W'^op) and pull back by J. The map J sends
+     queries of the stated form to queries of the stated form, and the parity of F_W − F_W' at a query equals that of
+     F_{W^op} − F_{W'^op} at its J-image.
+   - Equivalently, in the mirror kernel Z = Q[beta→u], the extra cubic in (b) below becomes [a_u a_beta c_u]. That
+     is the tau-partner missing from L_u. The value is the same, 1 + p_j(Q) (audit NOTE-1, checks M6 and A3).
 2. **Reversed type (u becomes the sink of A'_j).** The target kernel is Q^op[beta→u] = Z^op. Proposition 4 at u gives
-   L_u = 1, since n = m+1 >= 3.
+   L_u = 1.
 3. **Unchanged type (u stays the source).** The target kernel is Z_u = Q^op[u→beta].
    - **(a) Swap-orbit equality, for every k and every weight.**
      - Let Y = Q[beta→u] = Z with the u–beta arc reversed. By converse duality, g_{Z_u} = g_Y∘J, where
@@ -171,8 +188,14 @@ In particular **A'_j = A_j (unchanged) and A'_j = A_j^op (reversed) are both sep
        - By Lemma 2, h_ub counts the paths of Z−beta through u at either end. Every such path has odd weight, so by
          Lemma 3 h_ub ≡ S_j(Q) + E_j(Q) = p_j(Q).
        - Hence if p_j(Q) = 0, an anchored query separates.
-       - If p_j(Q) = 1, the coarse linear coefficient [alpha_j] equals p_j(Q) by Lemma 3, so a coarse query separates.
-         This is also `parity_profile_transfer` (1).
+       - If p_j(Q) = 1, a coarse query separates.
+         - Here [alpha_j] is the coefficient of the coarse variable a_j in the all-weight-0 coarse model.
+         - Extracting [a_v] from (1): [a_v] g_Z = (number of all paths ending at v, singleton included) − 1 + w(v).
+           Hence [a_v](g_Z − g_{Z^op}) = (paths ending at v) + (paths starting at v) = p_v(Q) by Lemma 3, whatever
+           the weights.
+         - So [alpha_j] = p_j(Q) = 1.
+         - `parity_profile_transfer` (1) agrees, but it assumes equal child profiles, so it is cited for consistency
+           only.
      - (c) **k = 2 (w_beta = 1).**
        - The half-contrast is delta_Z + (g_{Z^op} − g_{Z_u}). Z^op and Z_u differ only in the u–beta arc.
        - A port cycle using that arc has weight equal to its number of ports modulo two, because u and beta weigh 1 each
@@ -195,9 +218,12 @@ original strong node M, with prime quotient Q of order >= 7 (S188 prime_seven_fr
 2. p(Q) = 0 (`parity_profile_transfer` §3);
 3. no child is transitive of order 2 or 3;
 4. no child is transitive of order >= 5;
-5. every transitive child of order 4 is mapped in U to an order whose two ends are exactly its two middle names.
+5. every transitive child of order 4 is mapped in U to an order whose two ends are exactly its two middle names;
+6. no child A of order >= 2 has a vertex that is a source or a sink of both T[A] and U[A]. This is the widened
+   Theorem B. Together with Session189 §5 for order >= 5, it yields items 3–5.
 
 So every child of every highest changed prime node is **non-transitive, or a TT4 with that crossed reordering**.
+Moreover, no child has a vertex that is an end of both its source and target interiors.
 
 *Proof.*
 1. **Highest-node reduction and restoration.** Use `highest_quotient_reduction` and `prime_seven_frontier` §3, both
@@ -214,10 +240,21 @@ So every child of every highest changed prime node is **non-transitive, or a TT4
 
 - **Not claimed.**
   - No unrestricted full-response injectivity.
-  - No separation for non-transitive children, or for TT4 crossed reorderings. The FINITE-EXACT evidence for those is
-    in `PREREGISTRATION.md`, with 0 blind cases.
+  - No separation for children without a common end vertex: non-transitive children with no common source or sink,
+    and TT4 crossed reorderings.
   - No collision at any order.
   - No statement for linear nodes beyond the reviewed S188 results.
+- **Evidence beyond the theorem, by kind.**
+  - *Transitive reorderings, EXPLORATORY, weighted model, not pre-registered.* 2,272 comparisons, 0 blind, covering
+    every reordering of TT_k for k <= 4, including TT4 crossed.
+  - *Non-transitive children.* Not covered by that sweep. The packet's `residual_c3` probe exhibits a
+    **modulo-4-blind** configuration: Paley-7 with C3 children kept unchanged. An exact run-word computation separates
+    it only at 4 mod 8, so it is not a collision.
 - **Integer gaps.** The modulus 4 is essential to the proofs above. Integer gaps are not addressed.
-- **Sharpness.** The S188 prime-eight endpoint-obstruction quotient is blind to all coarse queries modulo 4, yet it is
-  separated by anchored queries at every TT_k child: P4. So the anchor, not the coarse layer, carries the separation.
+- **Sharpness.** The S188 prime-eight endpoint-obstruction quotient has no nonconstant coarse coefficient modulo 4
+  when every child is nontrivial. With equal child interiors (S188's setting), every coarse query is blind modulo 4.
+  It is nevertheless separated by anchored queries at every TT_k child (P4). So the anchor, not the coarse layer,
+  carries the separation.
+  - With arbitrary same-size interiors the constant term can differ. For example, a TT3 child in the source against a
+    C3 child in the target gives H(W) − H(W') ≡ 2 mod 4, so the query (0,0) separates
+    (`audit/aud_sharpness_constant.out`).

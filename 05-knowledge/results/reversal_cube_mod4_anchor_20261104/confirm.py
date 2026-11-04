@@ -235,7 +235,13 @@ def main():
     # (b) transitive child kernel on actual graphs, (c) ambient controls
     amb_done = 0
     for t in range(12):
-        m = rng.choice((4, 5)); Q = random_tournament(m, rng); j = rng.randrange(m); k = rng.choice((3, 4))
+        # Harness fix (disclosed in PREREGISTRATION outcomes): (m, k) = (5, 4) forces order >= 12 > 11 with all
+        # other children of size >= 2, and the original rejection loop never terminated. Redraw (m, k) until a
+        # feasible size vector exists; the pre-registered design (k in {3,4}, nontrivial others, n <= 11) is unchanged.
+        while True:
+            m = rng.choice((4, 5)); k = rng.choice((3, 4))
+            if k + 2 * (m - 1) <= 11: break
+        Q = random_tournament(m, rng); j = rng.randrange(m)
         while True:
             sizes = [k if i == j else rng.choice((2, 3)) for i in range(m)]
             if sum(sizes) <= 11: break

@@ -1,0 +1,41 @@
+M1 done (4.7s)
+M2 done (0.1s)
+M3 done (0.2s)
+M4 done (0.1s)
+M5 n=2: L_v != w(v) in 8 of 16 cases (boundary is real)
+M5 done (7.0s)
+M6 done (12.1s)
+
+seed 20261104
+M1 formula(1)==bruteforce, exhaustive n=1 (all queries)                                      cases=     2  failures=0
+M1 formula(1)==bruteforce, exhaustive n=2 (all queries)                                      cases=     8  failures=0
+M1 formula(1)==bruteforce, exhaustive n=3 (all queries)                                      cases=    64  failures=0
+M1 formula(1)==bruteforce, exhaustive n=4 (all queries)                                      cases=  1024  failures=0
+M1 formula(1)==bruteforce, random n=5 (all 1024 queries)                                     cases=    40  failures=0
+M2 [a_u a_v c_v]g_Z = #{P in Z-v ending at u, w(P)+w(v) odd}                                 cases=  2060  failures=0
+M2 [a_u c_v]g_Z = N_odd(v~>u)+Pi(->v,->u)                                                    cases=  2060  failures=0
+M3 g_{Z^op}(a,c)=g_Z(1+c,1+a)                                                                cases=   120  failures=0
+M4 #paths ending at v == S_v (mod 2)                                                         cases=   799  failures=0
+M4 #paths starting at v == E_v (mod 2)                                                       cases=   799  failures=0
+M4 sum_{v in S proper} eps_v(S) == 0                                                         cases=   630  failures=0
+M5 n=2 boundary: L_v == g(v) = w(u)+w(v)                                                     cases=    16  failures=0
+M5 weighted E1 L_v=w(v), exhaustive n=3 (all Z, all w, all v)                                cases=   192  failures=0
+M5 weighted E1 L_v=w(v), exhaustive n=4 (all Z, all w, all v)                                cases=  4096  failures=0
+M5 weighted E1 L_v=w(v), random n=5 (all v)                                                  cases=  3000  failures=0
+M5 weighted E1 L_v=w(v), random n=6 (all v)                                                  cases=  1800  failures=0
+M5 weighted E1 L_v=w(v), random n=7 (all v)                                                  cases=  1400  failures=0
+M5 weighted E1 L_v=w(v), random n=8 (all v)                                                  cases=   960  failures=0
+M5 weighted E1 L_v=w(v), random n=9 (all v)                                                  cases=   540  failures=0
+M6 hard, p_j=1: coarse [a_j] delta_Q = 1                                                     cases=   124  failures=0
+M6 k=2 hard: g_{Z^op}-g_{Z_u} has no mixed monomial                                          cases=   185  failures=0
+M6 non-hard: L_z = 1 (reversed target)                                                       cases=   223  failures=0
+M6 non-hard: L_z = 1 (unchanged target)                                                      cases=   223  failures=0
+M6 reversed: L_u = 1                                                                         cases=   500  failures=0
+M6 tau-orbit sums: unchanged half == delta_Z on EVERY orbit                                  cases=   500  failures=0
+M6 unchanged k=2 hard: L_u = 1                                                               cases=   185  failures=0
+M6 unchanged k>=3 hard (u=b_1): Lambda' literal [a_u a_b c_b] = 1+p_j                        cases=    84  failures=0
+M6 unchanged k>=3 hard (u=b_1): Lambda' with missing tau-partner = 1+p_j                     cases=    84  failures=0
+M6 unchanged k>=3 hard (u=b_k): Lambda' literal [a_u a_b c_b] = 1+p_j                        cases=    91  failures=0
+M6 unchanged k>=3 hard (u=b_k): Lambda' with missing tau-partner = 1+p_j                     cases=    91  failures=0
+FAILURES: none
+total time 24.1s

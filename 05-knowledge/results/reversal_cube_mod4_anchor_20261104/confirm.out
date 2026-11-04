@@ -1,0 +1,54 @@
+P1 done
+P2 m=2 done
+P2 m=3 done
+P2 m=4 done
+P2 m=5 done
+P3 done
+P4 done
+P5 done
+P1 exhaustive n=3                                            checks=    192 failures=0
+P1 exhaustive n=4                                            checks=   4096 failures=0
+P1 exhaustive n=5                                            checks= 163840 failures=0
+P1 random n=6                                                checks=   1800 failures=0
+P1 random n=7                                                checks=   2100 failures=0
+P1 random n=8                                                checks=   2400 failures=0
+P1 random n=9                                                checks=   2700 failures=0
+P2 m=2:(i) contrast nonzero                                  checks=     32 failures=0
+P2 m=2:(ii) reversed L_u=1                                   checks=     32 failures=0
+P2 m=2:(iii) hard unchanged k>=3 Lambda'=1+p_j               checks=      8 failures=0
+P2 m=2:(iv) hard unchanged k=2 L_u=1                         checks=      8 failures=0
+P2 m=2:(v) nonhard L_z=1 both targets                        checks=     16 failures=0
+P2 m=3:(i) contrast nonzero                                  checks=    384 failures=0
+P2 m=3:(ii) reversed L_u=1                                   checks=    384 failures=0
+P2 m=3:(iii) hard unchanged k>=3 Lambda'=1+p_j               checks=     48 failures=0
+P2 m=3:(iv) hard unchanged k=2 L_u=1                         checks=     48 failures=0
+P2 m=3:(v) nonhard L_z=1 both targets                        checks=    384 failures=0
+P2 m=4:(i) contrast nonzero                                  checks=   8192 failures=0
+P2 m=4:(ii) reversed L_u=1                                   checks=   8192 failures=0
+P2 m=4:(iii) hard unchanged k>=3 Lambda'=1+p_j               checks=    512 failures=0
+P2 m=4:(iv) hard unchanged k=2 L_u=1                         checks=    512 failures=0
+P2 m=4:(v) nonhard L_z=1 both targets                        checks=  12288 failures=0
+P2 m=5:(i) contrast nonzero                                  checks= 102400 failures=0
+P2 m=5:(ii) reversed L_u=1                                   checks= 102400 failures=0
+P2 m=5:(iii) hard unchanged k>=3 Lambda'=1+p_j               checks=  10240 failures=0
+P2 m=5:(iv) hard unchanged k=2 L_u=1                         checks=  10240 failures=0
+P2 m=5:(v) nonhard L_z=1 both targets                        checks=  81920 failures=0
+P3:(i) contrast nonzero                                      checks=    400 failures=0
+P3:(ii) reversed L_u=1                                       checks=    400 failures=0
+P3:(iii) hard unchanged k>=3 Lambda'=1+p_j                   checks=    101 failures=0
+P3:(iv) hard unchanged k=2 L_u=1                             checks=    101 failures=0
+P3:(v) nonhard L_z=1 both targets                            checks=    643 failures=0
+P4 Q8 coarse contrast zero                                   checks=      8 failures=0
+P4 Q8 endpoint parity zero                                   checks=      1 failures=0
+P4 Q8 kernel:(i) contrast nonzero                            checks=     32 failures=0
+P4 Q8 kernel:(ii) reversed L_u=1                             checks=     32 failures=0
+P4 Q8 kernel:(iii) hard unchanged k>=3 Lambda'=1+p_j         checks=     16 failures=0
+P4 Q8 kernel:(iv) hard unchanged k=2 L_u=1                   checks=     16 failures=0
+P4 Q8 named TT_k both targets nonzero                        checks=     64 failures=0
+P4 Q8 prime                                                  checks=      1 failures=0
+P5a contrasts even                                           checks=     12 failures=0
+P5a singleton coarse L_z=1                                   checks=     35 failures=0
+P5b nonzero                                                  checks=     24 failures=0
+P5b reversed L_u=1                                           checks=     12 failures=0
+P5b unchanged Lambda'=1+p_j                                  checks=     12 failures=0
+TOTAL FAILURES 0

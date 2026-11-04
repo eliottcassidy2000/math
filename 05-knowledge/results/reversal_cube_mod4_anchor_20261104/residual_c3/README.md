@@ -48,3 +48,12 @@ template. No further modulo-4 idea is needed.
     python paley_c3.py
 
 `rw.py` validates against `fcoef_named.cpp`, which must be compiled to `fcoef.exe` beside `lib.py`.
+
+## Common-end census (EXPLORATORY, FINITE-EXACT over labeled tournaments)
+
+`common_end_census.py` writes `common_end_census.out`.
+- **What is counted.** Each non-transitive child A of order 4 or 5 that has a source or sink, paired with each target
+  A' whose ordered-cover profile q_h(A[S]) = q_h(A'[S]) for every subset S.
+- **Order 4.** All 64 pairs share an end vertex. So the widened THM-4864 part 4 excludes every non-transitive order-4
+  child that has a source or sink. Only the 24 labeled strong order-4 children remain.
+- **Order 5.** 3,040 pairs share an end and 320 do not. There are also 544 labeled strong children with no end at all.

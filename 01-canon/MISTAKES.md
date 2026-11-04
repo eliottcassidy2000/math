@@ -22458,3 +22458,38 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - On busy days, grep the day's new packets for the concept's mathematical name as well as the owner's phrasing.
   - Re-run that grep immediately before the pre-registration commit.
   - Index lines must keep "proved one way" scope.
+
+## MISTAKE-703 (2026-11-04, kind-pasteur-2026-11-04-S9, THM-4864 and its packet `05-knowledge/results/reversal_cube_mod4_anchor_20261104/` at the pre-audit checkpoint 97632252db; found by the independent audit `audit/REVIEW.md` and a harness inspection)
+
+- **What was wrong.**
+  - **(1) A hypothesis was missing.** Theorem B and THM-4864 part 4 omitted m >= 2. The proof uses Proposition 4 on
+    the kernel with n = m+1 >= 3, and at m = 1 the "unchanged" case is W = W'. The Corollary was unaffected, since
+    m >= 7 there.
+  - **(2) The evidence was stated as present before it existed.**
+    - PROOF, README and THM-4864 said the P1-P5 outcomes were appended and that confirm.json existed. Neither was
+      true yet.
+    - The confirmatory harness had a non-terminating rejection loop in P5(b). With (m, k) = (5, 4) the order is at
+      least 12 > 11 when every other child has order >= 2, so the loop never exits. The first run hung after P4 and
+      was killed.
+  - **(3) One evidence sentence was inaccurate.**
+    - PROOF §6 and the THM-4864 Scope claimed "0 blind cases" for non-transitive children and crossed TT4. That sweep
+      was exploratory, used the weighted model, and covered transitive reorderings only.
+    - The packet's own residual_c3 probe is modulo-4 blind on non-transitive (C3) children.
+    - The HYP-9456 title still conjectured a modulo-4 one-child separator.
+- **Repair.**
+  - m >= 2 is added in PROOF, THM-4864 and its title.
+  - The P5 draw now redraws (m, k) until feasible. The design and predictions are unchanged, and this is disclosed in
+    the PREREGISTRATION outcomes. The full run P1-P5 was redone from scratch.
+  - The outcomes, confirm.out and confirm.json are committed.
+  - The evidence sentences are restricted and typed, and the HYP-9456 title is aligned to modulo 8.
+  - The audit NOTEs are also applied: the mirror case u = b_k, [alpha_j] defined, the least-indexed segment wording,
+    Theorem B widened to any child with a common source or sink (transitivity was never used), and the sharpness
+    remark qualified to equal interiors.
+- **How it was caught.**
+  - The referee re-derived every step and ran about 25,000 independent checks, with 0 mathematical failures.
+  - It compared the packet's claims with the files actually present.
+  - The author found the hang from the process's CPU profile.
+- **Lesson / reusable rule.**
+  - Write "outcomes appended" only after appending them.
+  - Every rejection-sampling loop in a confirmatory harness needs a feasibility check on its parameter draw.
+  - An evidence sentence must name its object class, transitive or not, and its model, weighted or actual graph.

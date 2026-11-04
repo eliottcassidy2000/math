@@ -1,0 +1,2 @@
+coarse: 24 instances (all 2^(2n) queries each), failures 0
+anchored kernel (source AND target contraction): 32 instances (all 2^(2(m+1)) queries), failures 0

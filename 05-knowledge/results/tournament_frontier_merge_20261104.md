@@ -73,7 +73,7 @@ Definitions (THM-643, THM-644, THM-1430):
 | session67, adaptive_metagraph_reformulation_20261103 | count-free reconstruction (exact, exponential); one-temporary-vertex native compiler PROVED | |
 | session68 METAGRAPH_BOUNDARY | flux law c3(U) − c3(T) = s(first) − s(last) − 1 | composition families not closed under lines |
 | THM-4857 | audited | a GF(2) automaton classifies merged nodes exactly for n ≤ 5 and fails for every n ≥ 6 |
-| HYP-9455 (opus-S72, today) | OPEN; P1–P3 confirmed at orders 8, 9; P4 refuted at 8 | path-weighted deletion tower determines merged nodes at orders 8, 9 |
+| HYP-9455, THM-4863 (opus-S72, today) | HYP OPEN, with P1–P3 confirmed at orders 8, 9 and P4 refuted at 8; THM-4863 checkpoint pre-audit | The path-weighted deletion tower determines merged nodes at orders 8 and 9. THM-796's face row is the Hamiltonian-endpoint-weighted deck. |
 
 **Open in this layer:** all-order connectivity; blue self-line counts (n = 12 is next); self-line closed forms; a
 compressed recurrence for A000568 on the metagraph.
@@ -95,7 +95,16 @@ compressed recurrence for A000568 on the metagraph.
   - CITED COMPUTATIONAL EVIDENCE: Royle's MathOverflow answer (updated January 2022) reports that every odd value
     below 80557 except 7 and 21 occurs by order 11.
   - Status note: `spectrum_basins_20261020e/spectrum.md`.
-- **The one-apex family is not a route (exploratory, this session).** Take a transitive tournament with one apex, so
+- **The two-prime-lane reduction (PROVED, already in canon).** THM-4094 is independently hostile-audited. Order joins
+  multiply H, 7 and 21 are omitted, and the finite strong carry atoms are 49, 63 and 343. With these, completeness is
+  equivalent to strong realization of two infinite lanes: p for odd primes p ≠ 7, and 7p for odd primes p ≥ 5.
+  - This session re-derived the same reduction independently and checked the closure identity
+    Odd∖{7,21} = ⟨primes ≠ 7, 7p (p ≥ 5), 63, 343⟩ up to 200,000. That is a reproduction, not a new result.
+- **Progress along the lanes.**
+  - THM-4097 (PROVED + VERIFIED-EXACT): the order-9 strong spectrum contains every odd value from 85 to 2881.
+  - THM-4102 and THM-4104 move the lane targets to 80407 and 7·11527 = 80689.
+  - Global completeness remains OPEN.
+- **The one-apex family is not a route.** `spectrum_basins_20261020e` §5 already shows that it misses the prime 13, so its product closure misses 13 too. Exploratory reproduction from this session: Take a transitive tournament with one apex, so
   that T − v is transitive. Then H = 1 + 2m, where m counts even subsets Y (|Y| ≥ 2) with min Y an out-neighbour of
   v and max Y not one.
   - Over at most 16 transitive vertices it misses 176 of the 401 values m ≤ 400.
@@ -111,8 +120,8 @@ compressed recurrence for A000568 on the metagraph.
 | E3/E4, 76b3b1a | proved | Every tournament differs from its named converse mod 4. A single module converse is never hidden. |
 | `simultaneous_module_reversal_20261104` | PROVED S1–S3 | With the quotient fixed, r disjoint nontrivial module reversals are decoded by r actual queries. This is the reversal cube without a quotient converse. |
 | **S189 collision (your statement)** | reviewed PASS | A **transitive** module of order ≥ 5 has its physical order fixed, up to whole converse, by its internal shared-name quartics in every fixed ambient. So a collision leaves such a child unchanged or reversed. The threshold 5 is sharp for this battery. |
-| **THM-4864 (this session)** | PROVED; pre-registered checks in the packet; audit pending | (A) A singleton child gives a coarse mod-4 separator, for any Q and any same-size target interiors. (B) A transitive child whose source or sink stays an end of its target order gives an anchored mod-4 separator; **both unchanged and reversed are separated**, at every order and in every ambient. |
-| **HYP-9456** | OPEN | Residual frontier: every child of every highest changed prime node of order ≥ 7 is non-transitive, or a TT4 whose target order has its two middle names as ends. Also p(Q) = 0. |
+| **THM-4864 (this session)** | PROVED; independently audited, SOUND WITH CORRECTIONS, corrections applied (MISTAKE-703); pre-registered P1–P5 | (A) A singleton child gives a coarse mod-4 separator, for any Q and any same-size target interiors. (B) For m ≥ 2, a child with a vertex that is a source or sink of both its source and target interiors gives an anchored mod-4 separator. In particular **unchanged and reversed transitive children are both separated**, at every order and in every ambient. |
+| **HYP-9456** | OPEN | Residual frontier at every highest changed prime node (order ≥ 7, p(Q) = 0): no singleton child, and no child with a common end vertex. So every child is non-transitive or a crossed TT4. Conjecture: one-child separation **modulo 8**. Modulo 4 already fails for Paley-7 with C3 children kept unchanged, and the exact gap there is 4 mod 8. |
 
 **What separates the unchanged and reversed cases.** Contract the child minus its source b_1 to one vertex β. Then:
 - **Reversal** is visible at b_1 through a weighted version of the E1 identity.
@@ -142,8 +151,8 @@ at every transitive child (P4 of the pre-registration).
      4 mod 8, already on a coarse coefficient. The next layer is a modulo-8 one-child law. Template: the S188
      five-type coarse_mod8_affine law.
    - Treat TT4 crossed reorderings with the full four-name weighted model; the evidence so far has 0 blind cases.
-2. **Chan–Pak 6.2.**
-   - Look for a strong-block family whose H values, under products, cover all odd values above a bound.
-   - Royle's < 80557 base would then finish the proof.
+2. **Chan–Pak 6.2.** By THM-4094 this is exactly the two prime lanes, p and 7p.
+   - Needed: a strong family realizing every prime p > 80407 and every 7p > 7·11527.
+   - THM-4097's one-vertex ears are the current engine. The one-apex family alone is insufficient: it misses the prime 13 (spectrum_basins §5).
 3. **The metagraph recurrence for A000568**, using HYP-9455's path-weighted deck as the candidate state.
 4. **A natural bijection between tournaments and even graphs** (HYP-3799). The refined version fails at n = 10.

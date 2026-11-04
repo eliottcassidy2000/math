@@ -1,12 +1,17 @@
 # One-child modulo-four separation of module-reversal cubes (THM-4864, HYP-9456)
 
 kind-pasteur-2026-11-04-S9.
-- **Status.** PROVED (THM-4864), given the cited reviewed inputs. The pre-registered confirmations are in
-  `PREREGISTRATION.md`. The independent audit is in `audit/REVIEW.md`.
+- **Status.** PROVED (THM-4864), given the cited reviewed inputs.
+  - The pre-registered confirmations and their outcomes are in `PREREGISTRATION.md`.
+  - The independent audit `audit/REVIEW.md` found it SOUND WITH CORRECTIONS. All corrections are applied
+    (MISTAKE-703).
 - **Question answered.** Session189 shows that, in a full-response collision, a transitive child of order ≥ 5 can
   only be **unchanged or wholly reversed**. This packet separates both cases modulo 4, at every order and in every
-  fixed ambient. The query is uniform on every other child and on the child minus its source, and named only at the
-  source.
+  fixed ambient.
+  - **The query.** It is uniform on every other child and on the child minus one end u, and named only at u. Here u
+    is the source or the sink.
+  - **Widened form.** Transitivity is never used. Any child with a vertex that is a source or sink of both its source
+    and target interiors is separated, provided m ≥ 2.
 - **Also separated by coarse queries alone:** any quotient converse with a **singleton child**, for arbitrary
   same-size target interiors.
 
@@ -22,7 +27,11 @@ kind-pasteur-2026-11-04-S9.
 - `wmodel.py`: the weighted port-cycle parity polynomial g_Z, computed exactly over F2.
 - `fcoef.cpp`: exact named response coefficients by Hamilton DP with Boolean Möbius inversion. It supports fixed
   exterior bits.
-- `confirm.py`, `confirm.out`, `confirm.json`: the confirmatory runs.
+- `confirm.py`, `confirm.out`, `confirm.json`: the confirmatory runs P1-P5(b). All passed, with 0 failures.
+- `p5c.py`, `p5c.out`, `p5c.json`: the P5(c) ambient controls. The guard in `confirm.py` was infeasible, so these
+  ran separately with the same prediction. All passed. The disclosure is in `PREREGISTRATION.md`.
+- `audit/`: the independent referee. It contains `REVIEW.md`, an engine of its own and drivers. Verdict: SOUND WITH
+  CORRECTIONS, all applied.
 - `residual_c3/`: EXPLORATORY probe of the residue. Paley-7 with C3 children, kept unchanged, is blind modulo 4 but
   exactly separated modulo 8.
   - 870 coefficient differences, minimum 2-adic valuation 2.
