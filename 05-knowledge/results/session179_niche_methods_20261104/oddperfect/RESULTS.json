@@ -1,0 +1,66 @@
+{
+  "support_euler_cases": 189,
+  "direct_closed_rows_preserved": 124,
+  "primitive_divisor_levels_checked": 129,
+  "concrete_support": {
+    "5": {
+      "domains": {
+        "3": [
+          3,
+          5
+        ],
+        "5": [
+          2
+        ],
+        "7": [],
+        "11": [
+          3
+        ],
+        "13": []
+      },
+      "maximal_graph_strong": true,
+      "order_labels_from_7": {
+        "3": 1,
+        "5": 4,
+        "11": 10,
+        "13": 12
+      }
+    },
+    "13": {
+      "domains": {
+        "3": [
+          3,
+          5
+        ],
+        "5": [
+          5
+        ],
+        "7": [],
+        "11": [
+          3
+        ],
+        "13": [
+          2
+        ]
+      },
+      "maximal_graph_strong": true,
+      "order_labels_from_7": {
+        "3": 1,
+        "5": 4,
+        "11": 10,
+        "13": 12
+      }
+    }
+  },
+  "lower_divisor_counterexample": {
+    "p": 5,
+    "n": 9,
+    "support": [
+      5,
+      13,
+      19
+    ],
+    "missing_order": 3
+  },
+  "all_checks": "PASS"
+}

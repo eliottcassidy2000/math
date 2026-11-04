@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "independent_support_cases": 189,
+  "independent_closed_rows": 124,
+  "trial_factored_primitive_levels": 25,
+  "source": "Gyory-Smyth 2010 Theorem 13, page 325 (PDF page 7), checked directly"
+}
