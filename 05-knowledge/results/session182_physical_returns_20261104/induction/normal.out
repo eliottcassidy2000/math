@@ -1,0 +1,104 @@
+{
+  "binary_signature_checks": 62,
+  "ordinal_signature_checks": 1380,
+  "strongness_checks": 1098,
+  "attachment_and_defect_checks": 1098,
+  "uniform_plus4_examples": [
+    {
+      "clock": 1,
+      "source_H": 9,
+      "target_H": 31,
+      "source_rows": [
+        14,
+        28,
+        24,
+        16,
+        1
+      ],
+      "target_rows": [
+        62,
+        124,
+        56,
+        112,
+        32,
+        64,
+        21
+      ]
+    },
+    {
+      "clock": 2,
+      "source_H": 23,
+      "target_H": 73,
+      "source_rows": [
+        30,
+        28,
+        56,
+        48,
+        32,
+        3
+      ],
+      "target_rows": [
+        126,
+        124,
+        248,
+        112,
+        224,
+        64,
+        128,
+        43
+      ]
+    },
+    {
+      "clock": 3,
+      "source_H": 51,
+      "target_H": 157,
+      "source_rows": [
+        62,
+        60,
+        56,
+        112,
+        96,
+        64,
+        7
+      ],
+      "target_rows": [
+        254,
+        252,
+        248,
+        496,
+        224,
+        448,
+        128,
+        256,
+        87
+      ]
+    },
+    {
+      "clock": 4,
+      "source_H": 107,
+      "target_H": 325,
+      "source_rows": [
+        126,
+        124,
+        120,
+        112,
+        224,
+        192,
+        128,
+        15
+      ],
+      "target_rows": [
+        510,
+        508,
+        504,
+        496,
+        992,
+        448,
+        896,
+        256,
+        512,
+        175
+      ]
+    }
+  ]
+}

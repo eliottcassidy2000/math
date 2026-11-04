@@ -1,0 +1,23 @@
+{
+  "binary_recurrence_direct_subset_checks": 4094,
+  "physical_named_strong_retention_schedules": 8,
+  "TT3_signature": [
+    1,
+    8,
+    7,
+    7,
+    6,
+    1,
+    1
+  ],
+  "TT5_signature": [
+    1,
+    32,
+    21,
+    21,
+    12,
+    1,
+    1
+  ],
+  "pass": true
+}

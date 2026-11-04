@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "joint_birth_cases": 33864,
+  "full_matrix_birth_cases": 1098,
+  "local_strong_guards": 402,
+  "clone_response_checks": 1140,
+  "mixed_spectrum": {
+    "rows": [
+      20,
+      1,
+      2,
+      7,
+      14
+    ],
+    "physical_clone_vertex": 0,
+    "A": [
+      9,
+      10,
+      2
+    ],
+    "H_t": "2*3^t+4*2^t-5",
+    "tested_t": [
+      1,
+      7
+    ]
+  },
+  "scope": "All labelled tournaments order1..4, all birth cuts, all old W and newborn port memberships; all cloned vertices t1..4. No ternary closure asserted."
+}

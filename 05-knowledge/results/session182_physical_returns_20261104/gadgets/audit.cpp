@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;using L=long long;
+L countpaths(const vector<int>&r){int n=r.size(),N=1<<n;vector<L>d(N*n);for(int v=0;v<n;v++)d[(1<<v)*n+v]=1;for(int m=1;m<N;m++)for(int u=0;u<n;u++)if(m>>u&1){int avail=r[u]&~m;while(avail){int b=avail&-avail,v=__builtin_ctz(b);d[(m|b)*n+v]+=d[m*n+u];avail-=b;}}L h=0;for(int u=0;u<n;u++)h+=d[(N-1)*n+u];return h;}
+int main(int argc,char**argv){int n;cin>>n;vector<int>r(n);for(auto&x:r)cin>>x;ifstream f(argv[1]);string tag;L expected;f>>tag>>expected;L h=countpaths(r);if(h!=expected)return 1;int u,v;L delta,a,b;int checked=0;while(f>>u>>v>>delta>>a>>b){auto q=r;q[u]^=1<<v;q[v]^=1<<u;L actual=countpaths(q);if(actual!=h+delta){cerr<<u<<" "<<v<<" fail\n";return 2;}checked++;}cout<<"{\"source_H\":"<<h<<",\"edge_reversals_directly_verified\":"<<checked<<",\"pass\":true}\n";}

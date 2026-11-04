@@ -1,0 +1,23 @@
+{
+  "small_literal_tripling_checks_including_nonstrong_suffixes": 63,
+  "source_induced_names_and_edges_preserved": true,
+  "homogeneous_C3_verified": true,
+  "complete_distinct_edge_responses": 153,
+  "zero_responses": [
+    [
+      6,
+      8
+    ]
+  ],
+  "minimum_nonzero_absolute_signed_response": [
+    28062,
+    22,
+    2,
+    -28062
+  ],
+  "input_sha256": {
+    "source.json": "c129c750e192584999558331937570ea7ca9e2e6038b7e803c92beeac0bb2818",
+    "triple.json": "86d663c9c65e9ed177df331a0caad327493b667722487bc804d030af8f39e2c2",
+    "triple_deltas.txt": "8b73886fc1fbe6ece755318ab60f23914d2c5ef90e607bbd23742eb8a41d3b41"
+  }
+}
