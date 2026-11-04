@@ -1,0 +1,185 @@
+{
+  "checker_sha256": "e50b23ccc8694e5210c005d1cac9a8b8d1897e59d068adce63dff1371f6f7dd1",
+  "complete_outputs": [
+    {
+      "bytes": 221971,
+      "file": "normal.json",
+      "group": 0,
+      "sha256": "d3c716273d77425c33cd061b4d0e2c180c963d9679b79158b90cc697f78bf061"
+    },
+    {
+      "bytes": 221971,
+      "file": "optimized.json",
+      "group": 0,
+      "sha256": "d3c716273d77425c33cd061b4d0e2c180c963d9679b79158b90cc697f78bf061"
+    }
+  ],
+  "complete_raw_bytes": 443942,
+  "groups": 1,
+  "isolated_controls": [
+    {
+      "mode": "fresh",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "fresh",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": true,
+      "passed": true
+    }
+  ],
+  "package": "ordered_pair_ambient",
+  "package_sha256": {
+    "REASSEMBLY.json": "f946f262f479e3a4cf50ead687bb04834ae5e0dc808ad25341ff017be82c5b66",
+    "REASSEMBLY.md": "6af4af44a362be251e3b872634dffea4c97c8d8e2926283aff25b82674cd9059",
+    "full_records_00.json.gz.b64.part000": "10a54615e1c7b50cb6b9b0c45d9a43812567f0f6b265c5e48a4ba0feda6c7674",
+    "reassemble.py": "be90578c3b0d2d3125ae37a2b69803dc0a8084be67110e236f84be574373e6ed"
+  },
+  "parts": 1,
+  "reassembler_normalized_ast_sha256": "3f640f8fd33dec4ce19c1d81e92f03c21bbac47452af6382f5cb942c5ee88d14",
+  "status": "PASS",
+  "validated_existing_manifests": [
+    {
+      "file": "PROOF.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "40bce2a4ee3f302781949af2e9c2ad4b93f40810d43340ccf43db3bfcdb470ff"
+    },
+    {
+      "file": "README.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "8c1fef0cdedc31603a7684ebbf4e8a25eb558fdcce7a920e5c05248c177b1b86"
+    },
+    {
+      "file": "verify.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "37ca8c79a72e56340fd3b92d6f94f5bb1db16ae458a7e43585b1a11f66339b91"
+    },
+    {
+      "file": "count.cpp",
+      "manifest": "SHA256SUMS",
+      "sha256": "4f34e4aede4e9a14564f61f47fd609ae1324ee009dece48f36e4abc1eb227a5f"
+    },
+    {
+      "file": "normal.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "d3c716273d77425c33cd061b4d0e2c180c963d9679b79158b90cc697f78bf061"
+    },
+    {
+      "file": "optimized.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "d3c716273d77425c33cd061b4d0e2c180c963d9679b79158b90cc697f78bf061"
+    }
+  ],
+  "validated_mathematical_receipt_pins": {
+    "critical_quotient_synthesis/PROOF.md": "e96884ad4e3eee1b2489cff75e602ace51314fd56ec3a4c5cbc6407dcb5f6c9f",
+    "marked_pair_quotient/PROOF.md": "baba1aeb86fddf83f000a63f4da0ccff1418a3f6add077c7495c35bfe85f6e09",
+    "module_decomposition/PROOF.md": "33f33731f3f21037a03e6a4eb9bcc11c746c5124439e49603e7c8faabe2565bc",
+    "ordered_module_skew/PROOF.md": "d807daa219c7cc749c3df8e8d9b609e84cc366ef4f1a06b09f61b27a9aff826d",
+    "ordered_pair_ambient/PROOF.md": "40bce2a4ee3f302781949af2e9c2ad4b93f40810d43340ccf43db3bfcdb470ff",
+    "ordered_pair_ambient/count.cpp": "4f34e4aede4e9a14564f61f47fd609ae1324ee009dece48f36e4abc1eb227a5f",
+    "ordered_pair_ambient/verify.py": "37ca8c79a72e56340fd3b92d6f94f5bb1db16ae458a7e43585b1a11f66339b91",
+    "prime_pair_root_family/PROOF.md": "8da65d84faed0eee8847282e8ef05d8904e04d2a0db0d1bfc500fc1e385874a2",
+    "quartic_cover_transfer/PROOF.md": "96cd57ec00afaf00db8577c73379cb8e7e3db493eb6b5329da01a8be8a5eefc3",
+    "returns_next/UNIFORM.md": "94df1aaefe0c5d6223f389d75726c3c7a55bfff87ed63007dc9707de20cb0de8"
+  }
+}

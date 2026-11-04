@@ -1,0 +1,15 @@
+# Independent review: ordered pair-child ambient theorem
+
+PASS. The frozen proof40bce2a4ee3f302781949af2e9c2ad4b93f40810d43340ccf43db3bfcdb470ff and complete source/data pins are bound in the paired receipts. No mathematical correction was needed.
+
+The all-cover master identity applies because each of the four grouped variables already consumes one of the two available incidences at its port. An extra aliased name or a prescribed nonzero outside bit cannot contribute to that saturated coefficient. Whole-core converse preserves each ordered-cover top quartic. Uniform non-pair children can then be restored through their complete q profiles in every cover coordinate. The fixed exterior sees the same augmented core module, so the same ambient run coefficients apply. This reduces exactly to the local pair flip, not a presumed sign transfer of an arbitrary core gap.
+
+I checked the q/p mark order against the local pair identity: the resulting contrast is C_YX-C_XY. The ordered module survives the arbitrary exterior because every added name sees the whole core uniformly. The injection's three disjoint missing-cover classes give the stated lower bound; strictness requires at least three total names in X union Y. Both the whole-core and strong-ambient cases are included.
+
+The root-family argument correctly retains all three branches. Core profile monotonicity makes the lifted internal-zero query strict when core H increases, since the augmented core is x->y->core and the first ambient run coefficient is positive. In scalar equality the selected pair has its original orientation and the same exact positive coefficient applies. If unselected, the pair is exposed and the fixed-ambient anchor congruence separates. The m+19 and odd-m m+18 bounds follow from the m+1 compressed blocks and already include the scalar query. All selected operations are inside the core; exterior changes and unrestricted reconstruction are not asserted.
+
+The independent checker imports no producer code. It independently computes every retained cover coordinate, reconstructs the physical port masks, augmented modules, original module lists and simultaneous XOR targets, recomputes the entire exterior endpoint-cover skew and its lower bound, and compares full exact response vectors. A separate predecessor Hamilton DP reproduces all3,142 retained augmented graphs. All128 complete original families pass:16 scalar-strict,56 pair-selected and56 pair-unselected. The grouped quartic, anchor construction and battery sizes are reconstructed independently.
+
+An additional independent strong-ambient control has two singleton ordered sides. Its complete sixteen-query source/quotient/local data give exactly zero quartic, validating the strictness exclusion rather than silently enlarging the theorem. Normal and optimized audit receipts agree byte-for-byte; explicit exceptions enforce all checks under -O.
+
+Replay with `python audit.py > normal.json` and `python -O audit.py > optimized.json`, then compare. The existing C++ compiler is used without installations. Audit allowlist: REVIEW.md, audit.py, count.cpp, normal.json, optimized.json, SHA256SUMS.
