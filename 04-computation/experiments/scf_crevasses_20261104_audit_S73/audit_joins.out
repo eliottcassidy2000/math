@@ -1,0 +1,56 @@
+classes per order 1..9: 1 1 2 4 12 56 456 6880 191536
+exhaustive joins |A|+|B| <= 9 over rooted class pairs: 138905 tests, H mismatches 0, hc mismatches 0 (|A|=|B|=1 case uses hc=0 by convention: 0)
+   |A|=|B|=1: H(J) = 1, hc(J) = 0, s_a e_b = 1 (so hc = s_a e_b fails here, as the exception states)
+random labelled joins (sides 1..6, independent seeds): 4000 tests, H mismatches 0, hc mismatches 0
+orders <= 5: 42 x-triples, 42 y-triples, sets equal: yes
+K=5 VMAX=3000: 42 distinct triples; odd N with r(N)=0: 7 21 47 67 83 103 127 139 163 173 235 247 ...; first gap above 21: 47
+   even N hit: 0
+   window [128,256) min r = 0
+   window [256,512) min r = 0
+   window [512,1024) min r = 0
+   window [1024,2048) min r = 0
+   [375,750) mean r by N mod 3 (relative): 0:1.488 1:0.711 2:0.797  ratio res0/others = 1.972
+   [375,750) mean r by N mod 5 (relative): 0:1.072 1:0.799 2:1.130 3:0.844 4:1.145
+   [375,750) mean r by N mod 7 (relative): 0:0.723 1:0.661 2:1.180 3:1.116 4:1.136 5:0.930 6:1.260
+   triples with h = 0 mod 3: 18/42; R = 0 mod 3: 19/42
+   mod 3 over all pairs: P(Q=0)/P(Q=c!=0) = 2.165 (generic 1 + p/(p^3-1) = 1.115); triples = 0 mod 3: 7/42
+   mod 5 over all pairs: P(Q=0)/P(Q=c!=0) = 1.474 (generic 1 + p/(p^3-1) = 1.040); triples = 0 mod 5: 2/42
+   mod 7 over all pairs: P(Q=0)/P(Q=c!=0) = 0.657 (generic 1 + p/(p^3-1) = 1.020); triples = 0 mod 7: 0/42
+orders <= 6: 254 x-triples, 254 y-triples, sets equal: yes
+K=6 VMAX=40000: 254 distinct triples; odd N with r(N)=0: 7 21 2395 3713 4075 4109 4163 4247 4285 4555 4859 4939 ...; first gap above 21: 2395
+   even N hit: 0
+   window [128,256) min r = 6
+   window [256,512) min r = 4
+   window [512,1024) min r = 6
+   window [1024,2048) min r = 6
+   window [2048,4096) min r = 0
+   window [4096,8192) min r = 0
+   window [8192,16384) min r = 0
+   window [16384,32768) min r = 0
+   [5000,10000) mean r by N mod 3 (relative): 0:1.530 1:0.702 2:0.767  ratio res0/others = 2.082
+   [5000,10000) mean r by N mod 5 (relative): 0:1.126 1:0.877 2:1.013 3:1.075 4:0.908
+   [5000,10000) mean r by N mod 7 (relative): 0:0.969 1:0.996 2:1.034 3:0.990 4:0.969 5:1.046 6:0.996
+   triples with h = 0 mod 3: 79/254; R = 0 mod 3: 103/254
+   mod 3 over all pairs: P(Q=0)/P(Q=c!=0) = 1.755 (generic 1 + p/(p^3-1) = 1.115); triples = 0 mod 3: 33/254
+   mod 5 over all pairs: P(Q=0)/P(Q=c!=0) = 1.248 (generic 1 + p/(p^3-1) = 1.040); triples = 0 mod 5: 7/254
+   mod 7 over all pairs: P(Q=0)/P(Q=c!=0) = 0.947 (generic 1 + p/(p^3-1) = 1.020); triples = 0 mod 7: 0/254
+orders <= 7: 2732 x-triples, 2732 y-triples, sets equal: yes
+K=7 VMAX=200000: 2732 distinct triples; odd N with r(N)=0: 7 21 84707 86261 86905 87505 87997 89227 90031 90317 90367 90881 ...; first gap above 21: 84707
+   even N hit: 0
+   window [128,256) min r = 34
+   window [256,512) min r = 40
+   window [512,1024) min r = 34
+   window [1024,2048) min r = 48
+   window [2048,4096) min r = 94
+   window [4096,8192) min r = 160
+   window [8192,16384) min r = 198
+   window [16384,32768) min r = 152
+   window [32768,65536) min r = 24
+   window [65536,131072) min r = 0
+   [25000,50000) mean r by N mod 3 (relative): 0:1.220 1:0.891 2:0.890  ratio res0/others = 1.370
+   [25000,50000) mean r by N mod 5 (relative): 0:1.039 1:0.988 2:0.992 3:0.990 4:0.991
+   [25000,50000) mean r by N mod 7 (relative): 0:1.010 1:0.996 2:1.001 3:0.998 4:0.996 5:0.997 6:1.003
+   triples with h = 0 mod 3: 891/2732; R = 0 mod 3: 995/2732
+   mod 3 over all pairs: P(Q=0)/P(Q=c!=0) = 1.446 (generic 1 + p/(p^3-1) = 1.115); triples = 0 mod 3: 238/2732
+   mod 5 over all pairs: P(Q=0)/P(Q=c!=0) = 1.095 (generic 1 + p/(p^3-1) = 1.040); triples = 0 mod 5: 38/2732
+   mod 7 over all pairs: P(Q=0)/P(Q=c!=0) = 0.997 (generic 1 + p/(p^3-1) = 1.020); triples = 0 mod 7: 4/2732

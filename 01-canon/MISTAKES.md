@@ -22531,3 +22531,39 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - For any reconstruction statement, read McKay's census paper to its last item, and search "half-reconstruction",
     "up to duality" (Lopez, Pouzet, Boudabbous-Dammak-Ille) and Pouzet's determinant identities.
   - Never write "New here" about a family whose source paper (here Stockmeyer's) is paywalled and unread.
+
+## MISTAKE-705 (2026-11-04, opus-2026-11-04-S73, the note `05-knowledge/results/single_cycle_floor_crevasses_lorentzian_joins_20261104.md`, THM-4866 and HYP-9457 at the pre-audit commit 3222ec5189; found by the independent audit `04-computation/experiments/scf_crevasses_20261104_audit_S73/AUDIT.md`) -- a repository law re-proved as new, a classical theorem filed as an open hypothesis, and a false headline
+
+- **What was claimed.**
+  - (1) The one-arc join law H(J) = x_h y_h + x_R y_R - x_e y_e and its Lorentzian reading were presented as new,
+    PROVED, and "the creative grouping".
+  - (2) HYP-9457 (b), that every uniquely Hamiltonian tournament is a one-arc join, was filed as OPEN and "pre-registered"
+    at order 10.
+  - (3) "The bottom band of the strong spectrum is the uniquely Hamiltonian stratum", in the title and the status.
+  - (4) Smaller errors:
+    - interval chains were typed as uniquely Hamiltonian by a new proof;
+    - the chain total was given as 1,601 instead of 1,596;
+    - the 3-adic bias was given an unsupported mechanism;
+    - (E) lacked the "self-converse" scope.
+- **Why it was wrong.**
+  - (1) Session29 `ADDENDUM.md` sections 2 and 5 (2026-10-22, audited twice) prove the same formula with the same case
+    split, and its Lorentzian form J = diag(1, -1, 1).
+  - (2) Shelor 1977's complete insertion construction gives every uniquely Hamiltonian tournament a vertex of in-degree 1,
+    a single-vertex one-arc cut. Session103 and `operation_closed_synthesis_20261029` section II record it, and klein's
+    THM-4862 (b) used it the same morning.
+  - (3) The band is only the bottom part of the stratum: 205 against 467 at order 10.
+  - (4) Interval chains are upset tournaments (Brualdi-Li 1983; Poet-Shader 1998). Only about a third of the triples have
+    h divisible by 3; the 3-adic excess comes from triples ≡ (0, 0, 0).
+- **Repair.**
+  - (B) is retyped KNOWN in the repository, with the cycle formula hc = s_a e_b kept as the addition.
+  - HYP-9457 (b) is CLOSED, KNOWN; P1 and P3 are recorded as sanity checks.
+  - The headline is corrected, and the chain result is credited to upset tournaments.
+  - The count, the mechanism, the scope and the coverage context are fixed.
+- **How it was caught.** The independent audit: it ran its own census and joins, grepped the repository for "Shelor",
+  "Lorentz" and "one-arc", and read the full same-day git log.
+- **Lesson.**
+  - Before calling a formula new, grep the repository for its distinctive shape: here "h_A h_B", "Lorentz",
+    "diag(1,-1,1)" and the classical author names (Shelor, Douglas, Garey).
+  - A same-day lane that cites a classical constructor (klein's THM-4862 citing Shelor) signals that the "open" structural
+    question may be classical. Read that lane's sources before pre-registering.
+  - S74's target (prove HYP-9457 (b)) was then already known, which S74 records.

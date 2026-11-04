@@ -1,10 +1,10 @@
 ---
 id: HYP-9457
-title: "The single-cycle floor and the crevasses: (a) the cycle ceiling H(T) >= f(n) + 2(hc(T) - 1) for every strong tournament (equality exactly at the Busch floor); (b) the bottom band of the strong spectrum is the uniquely Hamiltonian stratum, every member of which is a one-arc join; (c) Lorentzian joins H = x_h y_h + x_R y_R - x_e y_e cover every odd number except 7 and 21, with a 3-adic singular series; pre-registered tests at order 10 and for joins of orders <= 7"
-status: OPEN for all n (opus-2026-11-04-S73). Pre-registered P1-P5 CONFIRMED (order 10 and joins of orders <= 7); P6 REFUTED as stated (3-adic singular-series ratio 1.37, outside [1.6, 3.0])
+title: "The single-cycle floor and the crevasses: (a) the cycle ceiling H(T) >= f(n) + 2(hc(T) - 1) for every strong tournament (equality exactly at the Busch floor); (b) every uniquely Hamiltonian tournament is a one-arc join (CLOSED: KNOWN, Shelor 1977); (c) Lorentzian joins H = x_h y_h + x_R y_R - x_e y_e cover every odd number except 7 and 21, with a 3-adic singular series; pre-registered tests at order 10 and for joins of orders <= 7"
+status: OPEN for (a), (c) (opus-2026-11-04-S73); (b) CLOSED - KNOWN (Shelor 1977: a vertex of in-degree 1, a single-vertex one-arc cut). Pre-registered P2, P4, P5 CONFIRMED; P6 REFUTED (ratio 1.37); P1 and P3 were sanity checks (audit, MISTAKE-705)
 session: opus-2026-11-04-S73
 date: 2026-11-04
-related: [THM-4866, THM-4744, THM-4745, THM-1370, THM-4863, THM-4865, THM-4862, THM-4846, HYP-9453, HYP-9454]
+related: [THM-4866, THM-4744, THM-4745, THM-4655, THM-1370, THM-4863, THM-4865, THM-4862, THM-4846, HYP-9453, HYP-9454, session29 ADDENDUM, polarized_path_calculus_20261103]
 note: 05-knowledge/results/single_cycle_floor_crevasses_lorentzian_joins_20261104.md
 script: 04-computation/experiments/scf_crevasses_20261104.c
 ---
@@ -101,10 +101,9 @@ Runs: `census 10` (4.5 min) and `joins 7 7 200000`. Outputs:
 
 - **(a) The cycle ceiling.** H(T) >= f(n) + 2(hc(T) - 1) for every strong tournament, with equality exactly at the
   floor. At odd order this is G >= f(n) - 2 for the deck reading of THM-4863. It holds through order 10.
-- **(b) The bottom band.** Every uniquely Hamiltonian tournament has a vertex cut crossed backward by exactly one arc,
-  equivalently a cut arc. Every such tournament is then a one-arc join with s_a = e_b = 1 (THM-4866 (B)), so the bottom
-  band is a Lorentzian numeration. This holds through order 10, on 610 classes. Douglas's 1970 characterization is the
-  natural route to a proof.
+- **(b) CLOSED, KNOWN.** Every uniquely Hamiltonian tournament has a one-arc cut, which can always be taken to be a single
+  vertex of in-degree 1 (Shelor 1977's complete insertion construction; session103; operation_closed_synthesis section
+  II; klein THM-4862 (b), (f)).
 - **(c) Join completeness.** Every odd N other than 7 and 21 is a Lorentzian join value. This holds through 84,705 with
   pieces of order <= 7. As a Goldbach-type statement it would follow from a lower bound on representation counts of the
   kind the comet shows.

@@ -1,0 +1,86 @@
+n=3 classes=2 strong=1 f=3 floor classes=1 (hc=1: 1) ceiling: min slack 0, equality 1 (non-floor 0), violations 0
+   f_2-band end min{H: hc>=2} = 18446744073709551615; U(n): 1 classes, 1 distinct H, range [3, 3]
+   U(n) classes with a one-arc cut: 1 / 1; with a vertex of out-degree 1 or in-degree 1: 1 (out-deg 1: 1, in-deg 1: 1)
+   U(n) values: 3
+   odd values in [f, band) missed by strong classes: (0)
+   odd values in [f(n), f(n+1)) = [3, 5) missed by strong classes: (0)
+   k-cycle floors: f_1=3[1]
+   self-converse classes 2; decomposition H = H(M) s^2 with palindromic components verified in 2; H=5 at odd n: 0, H=3 at even n: 0
+   self-converse odd gaps below 200: 98
+   [0.0 s]
+n=4 classes=4 strong=1 f=5 floor classes=1 (hc=1: 1) ceiling: min slack 0, equality 1 (non-floor 0), violations 0
+   f_2-band end min{H: hc>=2} = 18446744073709551615; U(n): 1 classes, 1 distinct H, range [5, 5]
+   U(n) classes with a one-arc cut: 1 / 1; with a vertex of out-degree 1 or in-degree 1: 1 (out-deg 1: 1, in-deg 1: 1)
+   U(n) values: 5
+   odd values in [f, band) missed by strong classes: (0)
+   odd values in [f(n), f(n+1)) = [5, 9) missed by strong classes: 7 (1)
+   k-cycle floors: f_1=5[1]
+   self-converse classes 2; decomposition H = H(M) s^2 with palindromic components verified in 2; H=5 at odd n: 0, H=3 at even n: 0
+   self-converse odd gaps below 200: 98
+   |Pf| = H mod 4 in 4/4; (|Pf| = 1 mod 4) iff hc even in 1/4
+   [0.0 s]
+n=5 classes=12 strong=6 f=9 floor classes=2 (hc=1: 2) ceiling: min slack 0, equality 2 (non-floor 0), violations 0
+   f_2-band end min{H: hc>=2} = 13; U(n): 3 classes, 2 distinct H, range [9, 11]
+   U(n) classes with a one-arc cut: 3 / 3; with a vertex of out-degree 1 or in-degree 1: 3 (out-deg 1: 3, in-deg 1: 3)
+   U(n) values: 9 11
+   odd values in [f, band) missed by strong classes: (0)
+   odd values in [f(n), f(n+1)) = [9, 15) missed by strong classes: (0)
+   k-cycle floors: f_1=9[2] f_2=13[1] f_3=15[1]
+   self-converse classes 8; decomposition H = H(M) s^2 with palindromic components verified in 8; H=5 at odd n: 0, H=3 at even n: 0
+   self-converse odd gaps below 200: 94
+   [0.0 s]
+n=6 classes=56 strong=35 f=15 floor classes=2 (hc=1: 2) ceiling: min slack 0, equality 2 (non-floor 0), violations 0
+   f_2-band end min{H: hc>=2} = 23; U(n): 8 classes, 4 distinct H, range [15, 23]
+   U(n) classes with a one-arc cut: 8 / 8; with a vertex of out-degree 1 or in-degree 1: 8 (out-deg 1: 8, in-deg 1: 8)
+   U(n) values: 15 17 19 23
+   odd values in [f, band) missed by strong classes: 21 (1)
+   odd values in [f(n), f(n+1)) = [15, 25) missed by strong classes: 21 (1)
+   k-cycle floors: f_1=15[2] f_2=23[2] f_3=27[2] f_4=33[1] f_5=37[1]
+   self-converse classes 12; decomposition H = H(M) s^2 with palindromic components verified in 12; H=5 at odd n: 0, H=3 at even n: 0
+   self-converse odd gaps below 200: 91
+   |Pf| = H mod 4 in 30/56; (|Pf| = 1 mod 4) iff hc even in 34/56
+   [0.0 s]
+n=7 classes=456 strong=353 f=25 floor classes=1 (hc=1: 1) ceiling: min slack 0, equality 1 (non-floor 0), violations 0
+   f_2-band end min{H: hc>=2} = 41; U(n): 21 classes, 11 distinct H, range [25, 51]
+   U(n) classes with a one-arc cut: 21 / 21; with a vertex of out-degree 1 or in-degree 1: 21 (out-deg 1: 21, in-deg 1: 21)
+   U(n) values: 25 27 29 31 33 35 37 39 45 47 51
+   odd values in [f, band) missed by strong classes: (0)
+   odd values in [f(n), f(n+1)) = [25, 45) missed by strong classes: (0)
+   k-cycle floors: f_1=25[1] f_2=41[5] f_3=45[2] f_4=59[2] f_5=69[5] f_6=75[2]
+   self-converse classes 88; decomposition H = H(M) s^2 with palindromic components verified in 88; H=5 at odd n: 0, H=3 at even n: 0
+   self-converse odd gaps below 200: 46
+   [0.0 s]
+n=8 classes=6880 strong=6008 f=45 floor classes=5 (hc=1: 5) ceiling: min slack 0, equality 5 (non-floor 0), violations 0
+   f_2-band end min{H: hc>=2} = 69; U(n): 55 classes, 18 distinct H, range [45, 107]
+   U(n) classes with a one-arc cut: 55 / 55; with a vertex of out-degree 1 or in-degree 1: 55 (out-deg 1: 55, in-deg 1: 55)
+   U(n) values: 45 49 51 53 57 59 61 63 65 69 71 73 79 81 87 95 97 107
+   odd values in [f, band) missed by strong classes: 47 55 67 (3)
+   odd values in [f(n), f(n+1)) = [45, 75) missed by strong classes: 47 55 67 (3)
+   k-cycle floors: f_1=45[5] f_2=69[4] f_3=75[2] f_4=101[2] f_5=111[2] f_6=123[2]
+   self-converse classes 176; decomposition H = H(M) s^2 with palindromic components verified in 176; H=5 at odd n: 0, H=3 at even n: 0
+   self-converse odd gaps below 200: 70
+   |Pf| = H mod 4 in 3608/6880; (|Pf| = 1 mod 4) iff hc even in 3068/6880
+   [0.0 s]
+n=9 classes=191536 strong=178133 f=75 floor classes=3 (hc=1: 3) ceiling: min slack 0, equality 3 (non-floor 0), violations 0
+   f_2-band end min{H: hc>=2} = 115; U(n): 144 classes, 48 distinct H, range [75, 227]
+   U(n) classes with a one-arc cut: 144 / 144; with a vertex of out-degree 1 or in-degree 1: 144 (out-deg 1: 144, in-deg 1: 144)
+   odd values in [f, band) missed by strong classes: 77 79 83 (3)
+   odd values in [f(n), f(n+1)) = [75, 125) missed by strong classes: 77 79 83 (3)
+   k-cycle floors: f_1=75[3] f_2=115[2] f_3=135[9] f_4=169[2] f_5=185[2] f_6=207[2]
+   self-converse classes 2752; decomposition H = H(M) s^2 with palindromic components verified in 2752; H=5 at odd n: 0, H=3 at even n: 0
+   self-converse odd gaps below 200: 38
+   [2.7 s]
+n=10 classes=9733056 strong=9355949 f=125 floor classes=1 (hc=1: 1) ceiling: min slack 0, equality 1 (non-floor 0), violations 0
+   f_2-band end min{H: hc>=2} = 205; U(n): 377 classes, 91 distinct H, range [125, 467]
+   U(n) classes with a one-arc cut: 377 / 377; with a vertex of out-degree 1 or in-degree 1: 377 (out-deg 1: 377, in-deg 1: 377)
+   odd values in [f, band) missed by strong classes: 127 129 131 133 137 139 141 143 149 151 157 163 173 (13)
+   odd values in [f(n), f(n+1)) = [125, 225) missed by strong classes: 127 129 131 133 137 139 141 143 149 151 157 163 173 (13)
+   k-cycle floors: f_1=125[1] f_2=205[6] f_3=225[6] f_4=295[2] f_5=333[5] f_6=345[2]
+   self-converse classes 8784; decomposition H = H(M) s^2 with palindromic components verified in 8784; H=5 at odd n: 0, H=3 at even n: 0
+   self-converse odd gaps below 200: 67
+   |Pf| = H mod 4 in 4868460/9733056; (|Pf| = 1 mod 4) iff hc even in 4929248/9733056
+   [236.9 s]
+
+real	4m1.757s
+user	0m0.015s
+sys	0m0.062s
