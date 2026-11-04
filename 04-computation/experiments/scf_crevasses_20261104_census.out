@@ -1,0 +1,93 @@
+scf_crevasses_20261104 mode=census threads=12
+n=3 classes=2 strong=1 | strong floor f=3: 1 floor classes, 1 with exactly one Hamiltonian cycle | cycle ceiling H >= f + 2(hc-1): min slack 0, equality classes 1, violations 0
+   equality cases (H, hc): (3,1)sc
+   uniquely Hamiltonian stratum: 1 classes, 1 distinct H in [3, 3]; single-cycle band [f, 18446744073709551615): every strong class there has one Hamiltonian cycle
+   odd values in [f, 3] attained by strong classes but by no uniquely Hamiltonian one: (0); odd values in [f, 3] attained by no strong class: (0)
+   one-arc join test: 1 of 1 uniquely Hamiltonian classes have a cut crossed backward by exactly one arc
+   H-values of the uniquely Hamiltonian classes: 3
+   k-cycle floors f_k (k: min H [classes at min]): 1:3[1]
+   odd gaps of the order-3 spectrum below its max 3: (0)
+   self-converse (real-point) spectrum: max 3; odd gaps below 200: (0 below 200)
+   [0.0 s]
+n=4 classes=4 strong=1 | strong floor f=5: 1 floor classes, 1 with exactly one Hamiltonian cycle | cycle ceiling H >= f + 2(hc-1): min slack 0, equality classes 1, violations 0
+   equality cases (H, hc): (5,1)sc
+   uniquely Hamiltonian stratum: 1 classes, 1 distinct H in [5, 5]; single-cycle band [f, 18446744073709551615): every strong class there has one Hamiltonian cycle
+   odd values in [f, 5] attained by strong classes but by no uniquely Hamiltonian one: (0); odd values in [f, 5] attained by no strong class: (0)
+   one-arc join test: 1 of 1 uniquely Hamiltonian classes have a cut crossed backward by exactly one arc
+   H-values of the uniquely Hamiltonian classes: 5
+   k-cycle floors f_k (k: min H [classes at min]): 1:5[1]
+   odd gaps of the order-4 spectrum below its max 5: (0)
+   self-converse (real-point) spectrum: max 5; odd gaps below 200: 3 (1 below 200)
+   |Pf| vs H (n even): |Pf| = H mod 4 in 4/4 classes, mod 8 in 3/4; table [|Pf| mod 4][H mod 4]: 1->(2,0) 3->(0,2)
+   |Pf| mod 4 == 1 iff hc even: 1/4
+   (H, hc, |Pf|) by class: (1,0,1) (3,0,3) (3,0,3) (5,1,1)
+   [0.0 s]
+n=5 classes=12 strong=6 | strong floor f=9: 2 floor classes, 2 with exactly one Hamiltonian cycle | cycle ceiling H >= f + 2(hc-1): min slack 0, equality classes 2, violations 0
+   equality cases (H, hc): (9,1)sc (9,1)sc
+   uniquely Hamiltonian stratum: 3 classes, 2 distinct H in [9, 11]; single-cycle band [f, 13): every strong class there has one Hamiltonian cycle
+   odd values in [f, 11] attained by strong classes but by no uniquely Hamiltonian one: (0); odd values in [f, 11] attained by no strong class: (0)
+   one-arc join test: 3 of 3 uniquely Hamiltonian classes have a cut crossed backward by exactly one arc
+   H-values of the uniquely Hamiltonian classes: 9 11
+   k-cycle floors f_k (k: min H [classes at min]): 1:9[2] 2:13[1] 3:15[1]
+   odd gaps of the order-5 spectrum below its max 15: 7 (1)
+   self-converse (real-point) spectrum: max 15; odd gaps below 200: 5 7 (2 below 200)
+   [0.0 s]
+n=6 classes=56 strong=35 | strong floor f=15: 2 floor classes, 2 with exactly one Hamiltonian cycle | cycle ceiling H >= f + 2(hc-1): min slack 0, equality classes 2, violations 0
+   equality cases (H, hc): (15,1) (15,1)
+   uniquely Hamiltonian stratum: 8 classes, 4 distinct H in [15, 23]; single-cycle band [f, 23): every strong class there has one Hamiltonian cycle
+   odd values in [f, 23] attained by strong classes but by no uniquely Hamiltonian one: (0); odd values in [f, 23] attained by no strong class: 21 (1)
+   one-arc join test: 8 of 8 uniquely Hamiltonian classes have a cut crossed backward by exactly one arc
+   H-values of the uniquely Hamiltonian classes: 15 17 19 23
+   k-cycle floors f_k (k: min H [classes at min]): 1:15[2] 2:23[2] 3:27[2] 4:33[1] 5:37[1]
+   odd gaps of the order-6 spectrum below its max 45: 7 21 35 39 (4)
+   self-converse (real-point) spectrum: max 45; odd gaps below 200: 3 7 11 13 15 19 21 23 25 27 31 35 39 43 (14 below 200)
+   |Pf| vs H (n even): |Pf| = H mod 4 in 30/56 classes, mod 8 in 19/56; table [|Pf| mod 4][H mod 4]: 1->(20,14) 3->(12,10)
+   |Pf| mod 4 == 1 iff hc even: 34/56
+   (H, hc, |Pf|) by class: (1,0,1) (3,0,3) (3,0,3) (15,0,9) (33,3,3) (15,0,5) (37,4,5) (11,0,1) (37,4,3) (5,0,1) (3,0,3) (27,3,3) (13,0,7) (15,0,9) (15,0,5) (19,1,3) (11,0,1) (9,0,3) (5,0,1) (37,5,1) (33,4,1) (23,1,1) (9,0,5) (29,3,1) (31,3,7) (3,0,3) (9,0,9) (43,5,1) (29,3,1) (25,2,1) (45,5,7) (29,3,1) (45,5,1) (29,2,9) (23,2,5) (13,0,7) (37,4,3) (33,3,3) (23,1,1) (25,2,1) (37,4,5) (33,3,3) (17,1,1) (27,3,3) (9,0,3) (19,1,3) (33,3,3) (23,2,5) (5,0,1) (15,1,1) (15,1,1) (9,0,5) (31,3,7) (17,1,7) (41,4,1) (43,5,1)
+   [0.0 s]
+n=7 classes=456 strong=353 | strong floor f=25: 1 floor classes, 1 with exactly one Hamiltonian cycle | cycle ceiling H >= f + 2(hc-1): min slack 0, equality classes 1, violations 0
+   equality cases (H, hc): (25,1)sc
+   uniquely Hamiltonian stratum: 21 classes, 11 distinct H in [25, 51]; single-cycle band [f, 41): every strong class there has one Hamiltonian cycle
+   odd values in [f, 41] attained by strong classes but by no uniquely Hamiltonian one: 41 (1); odd values in [f, 41] attained by no strong class: (0)
+   one-arc join test: 21 of 21 uniquely Hamiltonian classes have a cut crossed backward by exactly one arc
+   H-values of the uniquely Hamiltonian classes: 25 27 29 31 33 35 37 39 45 47 51
+   k-cycle floors f_k (k: min H [classes at min]): 1:25[1] 2:41[5] 3:45[2] 4:59[2] 5:69[5] 6:75[2] 7:81[1] 8:85[1] 9:93[2] 10:109[4] 11:111[1] 12:111[1] 13:117[1] 14:141[2] 15:123[1]
+   odd gaps of the order-7 spectrum below its max 189: 7 21 63 107 119 149 161 163 165 167 169 173 177 179 181 183 (18)
+   self-converse (real-point) spectrum: max 189; odd gaps below 200: 5 7 17 19 21 23 29 35 37 39 43 47 53 55 57 59 63 73 89 97 101 103 107 109 113 119 121 131 149 161 163 165 167 169 173 177 179 181 183 185 187 (41 below 200)
+   [0.0 s]
+n=8 classes=6880 strong=6008 | strong floor f=45: 5 floor classes, 5 with exactly one Hamiltonian cycle | cycle ceiling H >= f + 2(hc-1): min slack 0, equality classes 5, violations 0
+   equality cases (H, hc): (45,1) (45,1) (45,1) (45,1)sc (45,1)
+   uniquely Hamiltonian stratum: 55 classes, 18 distinct H in [45, 107]; single-cycle band [f, 69): every strong class there has one Hamiltonian cycle
+   odd values in [f, 69] attained by strong classes but by no uniquely Hamiltonian one: (0); odd values in [f, 69] attained by no strong class: 47 55 67 (3)
+   one-arc join test: 55 of 55 uniquely Hamiltonian classes have a cut crossed backward by exactly one arc
+   H-values of the uniquely Hamiltonian classes: 45 49 51 53 57 59 61 63 65 69 71 73 79 81 87 95 97 107
+   k-cycle floors f_k (k: min H [classes at min]): 1:45[5] 2:69[4] 3:75[2] 4:101[2] 5:111[2] 6:123[2] 7:143[2] 8:155[2] 9:153[1] 10:183[2] 11:187[2] 12:197[4] 13:219[4] 14:225[6] 15:221[1] 16:225[1]
+   odd gaps of the order-8 spectrum below its max 661: 7 21 611 615 617 619 623 625 635 647 655 (11)
+   self-converse (real-point) spectrum: max 661; odd gaps below 200: 3 7 11 13 15 19 21 23 27 31 35 39 43 47 51 53 55 59 61 63 67 69 71 75 77 79 81 83 87 91 93 95 97 99 101 103 107 109 111 113 115 119 121 123 125 127 129 131 135 137 139 141 143 145 147 151 155 159 163 167 171 175 179 181 183 185 187 191 195 199 (70 below 200)
+   |Pf| vs H (n even): |Pf| = H mod 4 in 3608/6880 classes, mod 8 in 1762/6880; table [|Pf| mod 4][H mod 4]: 1->(2068,1768) 3->(1504,1540)
+   |Pf| mod 4 == 1 iff hc even: 3068/6880
+   [0.1 s]
+n=9 classes=191536 strong=178133 | strong floor f=75: 3 floor classes, 3 with exactly one Hamiltonian cycle | cycle ceiling H >= f + 2(hc-1): min slack 0, equality classes 3, violations 0
+   equality cases (H, hc): (75,1) (75,1)sc (75,1)
+   uniquely Hamiltonian stratum: 144 classes, 48 distinct H in [75, 227]; single-cycle band [f, 115): every strong class there has one Hamiltonian cycle
+   odd values in [f, 115] attained by strong classes but by no uniquely Hamiltonian one: (0); odd values in [f, 115] attained by no strong class: 77 79 83 (3)
+   one-arc join test: 144 of 144 uniquely Hamiltonian classes have a cut crossed backward by exactly one arc
+   k-cycle floors f_k (k: min H [classes at min]): 1:75[3] 2:115[2] 3:135[9] 4:169[2] 5:185[2] 6:207[2] 7:247[2] 8:257[2] 9:225[1] 10:311[2] 11:323[2] 12:327[2] 13:351[2] 14:369[2] 15:369[2] 16:419[2]
+   odd gaps of the order-9 spectrum below its max 3357: 7 21 2883 2887 2889 2893 2895 2897 2899 2901 2905 2907 2909 2911 2913 2915 (159)
+   self-converse (real-point) spectrum: max 3357; odd gaps below 200: 5 7 17 19 21 23 29 35 37 39 43 47 53 55 57 59 63 73 89 101 103 107 109 113 119 121 131 149 161 163 167 169 173 177 181 183 185 197 (38 below 200)
+   [1.5 s]
+n=10 classes=9733056 strong=9355949 | strong floor f=125: 1 floor classes, 1 with exactly one Hamiltonian cycle | cycle ceiling H >= f + 2(hc-1): min slack 0, equality classes 1, violations 0
+   equality cases (H, hc): (125,1)sc
+   uniquely Hamiltonian stratum: 377 classes, 91 distinct H in [125, 467]; single-cycle band [f, 205): every strong class there has one Hamiltonian cycle
+   odd values in [f, 205] attained by strong classes but by no uniquely Hamiltonian one: (0); odd values in [f, 205] attained by no strong class: 127 129 131 133 137 139 141 143 149 151 157 163 (13)
+   one-arc join test: 377 of 377 uniquely Hamiltonian classes have a cut crossed backward by exactly one arc
+   k-cycle floors f_k (k: min H [classes at min]): 1:125[1] 2:205[6] 3:225[6] 4:295[2] 5:333[5] 6:345[2] 7:413[2] 8:429[2] 9:405[4] 10:513[2] 11:555[2] 12:507[2] 13:585[2] 14:637[2] 15:555[2] 16:677[2]
+   odd gaps of the order-10 spectrum below its max 15745: 7 21 14685 14687 14695 14699 14703 14705 14707 14709 14713 14715 14717 14721 14723 14725 (210)
+   self-converse (real-point) spectrum: max 15745; odd gaps below 200: 3 7 11 13 15 19 21 23 27 31 35 39 43 47 51 53 55 59 61 63 67 69 71 75 77 79 83 87 91 93 95 97 99 101 103 107 109 111 113 115 119 123 127 129 131 135 137 139 141 143 145 147 151 155 159 163 167 171 175 179 181 183 185 187 191 195 199 (67 below 200)
+   |Pf| vs H (n even): |Pf| = H mod 4 in 4868460/9733056 classes, mod 8 in 2434282/9733056; table [|Pf| mod 4][H mod 4]: 1->(2536556,2523324) 3->(2341272,2331904)
+   |Pf| mod 4 == 1 iff hc even: 4929248/9733056
+   [270.9 s]
+
+real	4m32.638s
+user	0m0.015s
+sys	0m0.046s

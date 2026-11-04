@@ -1,7 +1,7 @@
 ---
 id: HYP-9457
 title: "The single-cycle floor and the crevasses: (a) the cycle ceiling H(T) >= f(n) + 2(hc(T) - 1) for every strong tournament (equality exactly at the Busch floor); (b) the bottom band of the strong spectrum is the uniquely Hamiltonian stratum, every member of which is a one-arc join; (c) Lorentzian joins H = x_h y_h + x_R y_R - x_e y_e cover every odd number except 7 and 21, with a 3-adic singular series; pre-registered tests at order 10 and for joins of orders <= 7"
-status: OPEN - PRE-REGISTERED (opus-2026-11-04-S73); predictions P1-P6 committed before the order-10 census and the order-7 join run
+status: OPEN for all n (opus-2026-11-04-S73). Pre-registered P1-P5 CONFIRMED (order 10 and joins of orders <= 7); P6 REFUTED as stated (3-adic singular-series ratio 1.37, outside [1.6, 3.0])
 session: opus-2026-11-04-S73
 date: 2026-11-04
 related: [THM-4866, THM-4744, THM-4745, THM-1370, THM-4863, THM-4865, THM-4862, THM-4846, HYP-9453, HYP-9454]
@@ -75,3 +75,36 @@ Confirmatory runs: `scf_crevasses_20261104 census 10` and `scf_crevasses_2026110
   - every residue-class mean mod 5 and mod 7 lies within 0.2 of the overall mean.
 
 Every outcome is reported, with the counterexample in the case of P1-P4.
+
+## Results (2026-11-04, after the pre-registration commit 4d5099bc95)
+
+Runs: `census 10` (4.5 min) and `joins 7 7 200000`. Outputs:
+- `04-computation/experiments/scf_crevasses_20261104_census.out`;
+- `04-computation/experiments/scf_crevasses_20261104_joins.out`.
+
+- **(P1) CONFIRMED.** f(10) = 125, attained by exactly one class, which has exactly one Hamiltonian cycle.
+- **(P2) CONFIRMED.** No strong class of order 10 violates the ceiling. The minimum slack is 0, and equality holds only
+  at the floor class.
+- **(P3) CONFIRMED.** There are 377 uniquely Hamiltonian classes at order 10, and 377 of them are one-arc joins.
+- **(P4) CONFIRMED.** f_2(10) = 205, inside [175, 215] and below f(11) = 225. The single-cycle band at order 10 is
+  [125, 205).
+- **(P5) CONFIRMED, with a larger reach than predicted.** Every odd N in [23, 84705] is a Lorentzian join value with
+  both sides of order <= 7. The first gap above 21 is 84707, at the edge of the range. 7 and 21 are never represented.
+- **(P6) REFUTED as stated.** On [25000, 50000):
+  - the mean of r(N) on N = 0 mod 3, divided by the mean on N != 0 mod 3, is 1.220 / 0.8905 = 1.37, not in
+    [1.6, 3.0];
+  - the mod 5 deviations (<= 0.04) and mod 7 deviations (<= 0.01) are within the predicted 0.2.
+
+  The 3-adic local factor is real but weaker than at orders <= 5 and <= 6, where the ratio was about 2.0-2.1.
+
+## Open statements after the tests
+
+- **(a) The cycle ceiling.** H(T) >= f(n) + 2(hc(T) - 1) for every strong tournament, with equality exactly at the
+  floor. At odd order this is G >= f(n) - 2 for the deck reading of THM-4863. It holds through order 10.
+- **(b) The bottom band.** Every uniquely Hamiltonian tournament has a vertex cut crossed backward by exactly one arc,
+  equivalently a cut arc. Every such tournament is then a one-arc join with s_a = e_b = 1 (THM-4866 (B)), so the bottom
+  band is a Lorentzian numeration. This holds through order 10, on 610 classes. Douglas's 1970 characterization is the
+  natural route to a proof.
+- **(c) Join completeness.** Every odd N other than 7 and 21 is a Lorentzian join value. This holds through 84,705 with
+  pieces of order <= 7. As a Goldbach-type statement it would follow from a lower bound on representation counts of the
+  kind the comet shows.

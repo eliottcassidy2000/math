@@ -1,0 +1,81 @@
+### exploratory: joins 5 5 3000 and joins 6 6 40000 (before the pre-registration commit 4d5099bc95)
+scf_crevasses_20261104 mode=joins threads=12
+joins KA=5 KB=5 VMAX=3000: 42 distinct rooted triples (h, R, e) of orders <= 5 (each kept at its least order)
+   join formula H(J) = x_h y_h + x_R y_R - x_e y_e verified by direct counting on 3000 random joins: 0 mismatches
+   pairs: 42 A-triples (order <= 5) x 42 B-triples (order <= 5)
+   odd N <= 3000 with no representation: 7 21 47 67 83 103 127 139 163 173 235 247 263 299 329 337 343 359 373 383 391 403 419 421 427 431 445 451 457 461 467 469 475 481 483 485 491 497 509 511 (1224 total)
+   representations landing on even N: 0 (must be 0: every H is odd)
+   window [1, 2): min r = 1, mean r = 1.0
+   window [2, 4): min r = 4, mean r = 4.0
+   window [4, 8): min r = 0, mean r = 3.5
+   window [8, 16): min r = 2, mean r = 10.2
+   window [16, 32): min r = 0, mean r = 11.9
+   window [32, 64): min r = 0, mean r = 9.8
+   window [64, 128): min r = 0, mean r = 9.7
+   window [128, 256): min r = 0, mean r = 7.6
+   window [256, 512): min r = 0, mean r = 3.9
+   window [512, 1024): min r = 0, mean r = 0.6
+   window [1024, 2048): min r = 0, mean r = 0.0
+   mean r(N)/overall on [375, 750) by N mod 3: 0:1.488 1:0.711 2:0.797
+   mean r(N)/overall on [375, 750) by N mod 5: 0:1.072 1:0.799 2:1.130 3:0.844 4:1.145
+   mean r(N)/overall on [375, 750) by N mod 7: 0:0.723 1:0.661 2:1.180 3:1.116 4:1.136 5:0.930 6:1.260
+   mean r(N)/overall on [375, 750) by N mod 9: 0:1.620 1:0.983 2:0.903 3:1.381 4:0.642 5:0.558 6:1.461 7:0.505 8:0.930
+
+scf_crevasses_20261104 mode=joins threads=12
+joins KA=6 KB=6 VMAX=40000: 254 distinct rooted triples (h, R, e) of orders <= 6 (each kept at its least order)
+   join formula H(J) = x_h y_h + x_R y_R - x_e y_e verified by direct counting on 3000 random joins: 0 mismatches
+   pairs: 254 A-triples (order <= 6) x 254 B-triples (order <= 6)
+   odd N <= 40000 with no representation: 7 21 2395 3713 4075 4109 4163 4247 4285 4555 4859 4939 4991 4997 5009 5041 5075 5095 5171 5179 5183 5263 5287 5311 5391 5431 5435 5511 5513 5531 5537 5563 5571 5581 5615 5621 5637 5639 5659 5695 (16282 total)
+   representations landing on even N: 0 (must be 0: every H is odd)
+   window [1, 2): min r = 1, mean r = 1.0
+   window [2, 4): min r = 4, mean r = 4.0
+   window [4, 8): min r = 0, mean r = 3.5
+   window [8, 16): min r = 4, mean r = 12.2
+   window [16, 32): min r = 0, mean r = 15.4
+   window [32, 64): min r = 4, mean r = 22.9
+   window [64, 128): min r = 8, mean r = 30.6
+   window [128, 256): min r = 6, mean r = 32.9
+   window [256, 512): min r = 4, mean r = 35.0
+   window [512, 1024): min r = 6, mean r = 38.0
+   window [1024, 2048): min r = 6, mean r = 33.9
+   window [2048, 4096): min r = 0, mean r = 19.3
+   window [4096, 8192): min r = 0, mean r = 4.5
+   window [8192, 16384): min r = 0, mean r = 0.1
+   window [16384, 32768): min r = 0, mean r = 0.0
+   mean r(N)/overall on [5000, 10000) by N mod 3: 0:1.530 1:0.702 2:0.767
+   mean r(N)/overall on [5000, 10000) by N mod 5: 0:1.126 1:0.877 2:1.013 3:1.075 4:0.908
+   mean r(N)/overall on [5000, 10000) by N mod 7: 0:0.969 1:0.996 2:1.034 3:0.990 4:0.969 5:1.046 6:0.996
+   mean r(N)/overall on [5000, 10000) by N mod 9: 0:1.537 1:0.663 2:0.739 3:1.514 4:0.722 5:0.747 6:1.539 7:0.723 8:0.814
+
+### confirmatory (HYP-9457 P5, P6): joins 7 7 200000
+scf_crevasses_20261104 mode=joins threads=12
+joins KA=7 KB=7 VMAX=200000: 2732 distinct rooted triples (h, R, e) of orders <= 7 (each kept at its least order)
+   join formula H(J) = x_h y_h + x_R y_R - x_e y_e verified by direct counting on 3000 random joins: 0 mismatches
+   pairs: 2732 A-triples (order <= 7) x 2732 B-triples (order <= 7)
+   odd N <= 200000 with no representation: 7 21 84707 86261 86905 87505 87997 89227 90031 90317 90367 90881 91001 91079 91101 91145 91259 91931 92111 92261 92435 92537 92647 92957 93055 93061 93115 93451 93475 93679 93733 93857 93923 94105 94229 94231 94325 94345 94469 94757 (41577 total)
+   representations landing on even N: 0 (must be 0: every H is odd)
+   window [1, 2): min r = 1, mean r = 1.0
+   window [2, 4): min r = 4, mean r = 4.0
+   window [4, 8): min r = 0, mean r = 3.5
+   window [8, 16): min r = 4, mean r = 12.2
+   window [16, 32): min r = 0, mean r = 17.1
+   window [32, 64): min r = 4, mean r = 29.6
+   window [64, 128): min r = 8, mean r = 55.9
+   window [128, 256): min r = 34, mean r = 94.8
+   window [256, 512): min r = 40, mean r = 115.3
+   window [512, 1024): min r = 34, mean r = 143.1
+   window [1024, 2048): min r = 48, mean r = 187.8
+   window [2048, 4096): min r = 94, mean r = 256.7
+   window [4096, 8192): min r = 160, mean r = 325.1
+   window [8192, 16384): min r = 198, mean r = 350.3
+   window [16384, 32768): min r = 152, mean r = 282.6
+   window [32768, 65536): min r = 24, mean r = 133.8
+   window [65536, 131072): min r = 0, mean r = 13.3
+   mean r(N)/overall on [25000, 50000) by N mod 3: 0:1.220 1:0.891 2:0.890
+   mean r(N)/overall on [25000, 50000) by N mod 5: 0:1.039 1:0.988 2:0.992 3:0.990 4:0.991
+   mean r(N)/overall on [25000, 50000) by N mod 7: 0:1.010 1:0.996 2:1.001 3:0.998 4:0.996 5:0.997 6:1.003
+   mean r(N)/overall on [25000, 50000) by N mod 9: 0:1.265 1:0.893 2:0.891 3:1.193 4:0.891 5:0.887 6:1.200 7:0.889 8:0.891
+
+real	0m0.427s
+user	0m0.031s
+sys	0m0.031s

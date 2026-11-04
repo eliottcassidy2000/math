@@ -1,0 +1,16 @@
+scf_crevasses_20261104 mode=chains threads=12
+order 3: 1 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
+order 4: 1 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
+order 5: 2 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
+order 6: 3 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
+order 7: 5 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
+order 8: 8 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
+order 9: 13 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
+order 10: 21 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
+order 11: 34 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
+order 12: 55 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
+order 13: 89 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
+order 14: 144 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
+order 15: 233 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
+order 16: 377 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
+order 17: 610 interval chains; H = prod(2^(p-1)+1) and exactly one Hamiltonian cycle in all but 0
