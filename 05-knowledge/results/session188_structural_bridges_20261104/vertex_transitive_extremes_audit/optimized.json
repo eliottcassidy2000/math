@@ -1,0 +1,26 @@
+{
+  "audit_sha256": {
+    "audit.py": "e6dbd7d4164b9ba98bc6975b2b6ec14611355e374da38fd1b3deab3cbe0e1070",
+    "literal.cpp": "76fdc646b0a6e217635478e4556c87532aff628a22ddcf83bd22119cc5860915",
+    "profiles.cpp": "476d38e6a8546476c6213aa3697542b8cd99c7b0cc2b00a6682351516ada56c4"
+  },
+  "independent_complete_word_cut_profiles": 34,
+  "literal_counts": 2860,
+  "marked_family_restorations": 256,
+  "nested_families": 16,
+  "regular_controls": 27,
+  "root_family_totals": {
+    "equal_hub_selected": 56,
+    "equal_hub_unselected": 56,
+    "families": 128,
+    "scalar_strict": 16
+  },
+  "source_sha256": {
+    "PROOF.md": "23aaf2f3ff68bf1f57bed21528a19e1d517d18afb02e1e6c2973ad541618c5f7",
+    "count.cpp": "4f34e4aede4e9a14564f61f47fd609ae1324ee009dece48f36e4abc1eb227a5f",
+    "normal.json": "74f0a56e1cb26e0b3b7008a37f71574827d22a2ba404ece6d3f0b85c0bbb00aa",
+    "optimized.json": "74f0a56e1cb26e0b3b7008a37f71574827d22a2ba404ece6d3f0b85c0bbb00aa",
+    "verify.py": "cd7385d116621654233f4f523ef58ac2820fa46327efaffce13543c0b6ab5264"
+  },
+  "status": "PASS"
+}
