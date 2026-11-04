@@ -1,0 +1,8 @@
+{
+  "complete_named_hamilton_values": 139264,
+  "cover_coordinates": 5,
+  "maximum_augmented_order": 14,
+  "physical_cases": 3994,
+  "physical_coarse_queries": 288,
+  "status": "PASS"
+}

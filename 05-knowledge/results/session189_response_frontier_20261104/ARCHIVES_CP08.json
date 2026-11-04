@@ -1,0 +1,122 @@
+{
+  "format": "lossless-compressed-base64-parts-v2",
+  "archives": [
+    {
+      "path": "seidel_energy/rational_banks.json",
+      "bytes": 1163714,
+      "sha256": "93291cb8387e2913e4291c0c3a61f1579c7b78c93cc9acf34c36b7c7c5a4b66e",
+      "git_blob_sha": "b9f75ae28a0a7f7ffa8aa185237330d2ab8745ba",
+      "compression": "xz",
+      "compressed_bytes": 61744,
+      "compressed_sha256": "fddc3e75ad164ee60a54c0ea4686a1b1bcbbd365c776d9ab2f4e7aaa64a8ffe8",
+      "parts": [
+        "seidel_energy/rational_banks.json.xz.b64.parts/00001.txt",
+        "seidel_energy/rational_banks.json.xz.b64.parts/00002.txt",
+        "seidel_energy/rational_banks.json.xz.b64.parts/00003.txt"
+      ]
+    },
+    {
+      "path": "seidel_energy_audit/physical_input.txt",
+      "bytes": 160531,
+      "sha256": "fb9660f00461addf8bb7c3ca90910bc922cdc7753d8e52e56275070d708d128c",
+      "git_blob_sha": "398fe03591dcdaa82632d04825733365280624ee",
+      "compression": "xz",
+      "compressed_bytes": 12896,
+      "compressed_sha256": "34788e9cd8310bd1a2a86c8f128a9f9045dad0c68b043d8a966a43a6979aaea2",
+      "parts": [
+        "seidel_energy_audit/physical_input.txt.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "seidel_energy_audit/rational_banks.json",
+      "bytes": 485630,
+      "sha256": "873246d9a4ceef183057a7e4458c4f82815cda846299e367164fbda71f5723b8",
+      "git_blob_sha": "4938de992fa33a538f54e0137864174cec2b1c29",
+      "compression": "xz",
+      "compressed_bytes": 29840,
+      "compressed_sha256": "d67fbfb1782c0e371c473a8c5ab77b2e35fb5aa170b9f658644ff5bf2008594a",
+      "parts": [
+        "seidel_energy_audit/rational_banks.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "seidel_energy_audit/run_input.txt",
+      "bytes": 79776,
+      "sha256": "29deefb7cfd503ba5554b05abff0fffc22a300e0bd3f9c7b4221bfe350ddd586",
+      "git_blob_sha": "93cf9dc0b58c9381652e89c35ea690d7eedd6a06",
+      "compression": "xz",
+      "compressed_bytes": 4124,
+      "compressed_sha256": "3530b162ec64ba49386096273ceb84ea25c94b79bcf37ee24430a01cbd753f90",
+      "parts": [
+        "seidel_energy_audit/run_input.txt.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "seidel_energy_audit/run_output.txt",
+      "bytes": 141007,
+      "sha256": "864f1285474cb72a5a13147580759a27c1c9066801e3b964d28548545c43dcf1",
+      "git_blob_sha": "40d678e53916e22a76b4df952bb8fdb451cb4cda",
+      "compression": "xz",
+      "compressed_bytes": 4748,
+      "compressed_sha256": "5ab0d8518054c910cfb29cd0e3a2d116cff112b07b18358db9998ba301c81166",
+      "parts": [
+        "seidel_energy_audit/run_output.txt.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "seidel_audit/rational_banks.json",
+      "bytes": 109583,
+      "sha256": "0ec3bb668060ea1d2b0fab8d64f05d0d08938b6261a689a628495675d4d1453b",
+      "git_blob_sha": "ed62e42a2534cac7cfeaf33cdd73856a049c3c37",
+      "compression": "xz",
+      "compressed_bytes": 6764,
+      "compressed_sha256": "d10b0599efb78860177f5547d04d2ee676758c6bf1d417de7ec92fa4bf03cf29",
+      "parts": [
+        "seidel_audit/rational_banks.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "seidel_audit/carousel_data.json",
+      "bytes": 117336,
+      "sha256": "b16951ed3b8dfeb0181457119554050f841b7e71ce88c108b98f08fbbadfa7d9",
+      "git_blob_sha": "9954bd4f0826799195a2e3a5b33b17238ccc092f",
+      "compression": "xz",
+      "compressed_bytes": 12688,
+      "compressed_sha256": "46819efb4f18fc478a443e55a68c1dd80c6fc03e5461110113b8a00ed97cd037",
+      "parts": [
+        "seidel_audit/carousel_data.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "seidel_audit/literal_cover_values.txt",
+      "bytes": 132504,
+      "sha256": "341e14d7a2c398a9e92b011ef0bdb39f61f4a74af55effaa7da1b030c048efc8",
+      "git_blob_sha": "8dcc32b3b7df169639cc44610c80d2ee679132c0",
+      "compression": "xz",
+      "compressed_bytes": 18152,
+      "compressed_sha256": "d74b71121a2e9a4b9f53350946f4e28c8df6a574a14aba5b525dfd3f3554cfa7",
+      "parts": [
+        "seidel_audit/literal_cover_values.txt.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "seidel_audit/physical_banks.json",
+      "bytes": 834492,
+      "sha256": "195639a53cdfb55e1ff6556c6b68fe6c546e90954f3aa7dcac1c548d823147c6",
+      "git_blob_sha": "f6d11cd6d9d07654def9e4523eda6cc432cf21cb",
+      "compression": "xz",
+      "compressed_bytes": 216052,
+      "compressed_sha256": "a1aa44358d61e33f3453285f8163be1b09fefe1959cf29d51edfa3c2f3a2ffe1",
+      "parts": [
+        "seidel_audit/physical_banks.json.xz.b64.parts/00001.txt",
+        "seidel_audit/physical_banks.json.xz.b64.parts/00002.txt",
+        "seidel_audit/physical_banks.json.xz.b64.parts/00003.txt",
+        "seidel_audit/physical_banks.json.xz.b64.parts/00004.txt",
+        "seidel_audit/physical_banks.json.xz.b64.parts/00005.txt",
+        "seidel_audit/physical_banks.json.xz.b64.parts/00006.txt",
+        "seidel_audit/physical_banks.json.xz.b64.parts/00007.txt",
+        "seidel_audit/physical_banks.json.xz.b64.parts/00008.txt"
+      ]
+    }
+  ]
+}

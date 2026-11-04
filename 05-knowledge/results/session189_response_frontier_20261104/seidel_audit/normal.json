@@ -1,0 +1,9 @@
+{
+  "modulus": 256,
+  "ordered_cover_coordinates": 5,
+  "quotient_types": 7,
+  "rational_bank_sha256": "0ec3bb668060ea1d2b0fab8d64f05d0d08938b6261a689a628495675d4d1453b",
+  "run_bank_sha256": "1296449d65011294713196b566f31a06723fefd63647c2fef1d986b1a4c1887c",
+  "source_and_target_query_coordinates": 2336,
+  "status": "PASS"
+}

@@ -1,0 +1,200 @@
+[
+  {
+    "coefficient": [
+      8,
+      1
+    ],
+    "cubic_sum": 1,
+    "order": 3,
+    "subsets": 1,
+    "switch_order": [
+      0,
+      2,
+      1
+    ]
+  },
+  {
+    "coefficient": [
+      -8,
+      1
+    ],
+    "cubic_sum": -4,
+    "order": 5,
+    "subsets": 4,
+    "switch_order": [
+      0,
+      3,
+      1,
+      4,
+      2
+    ]
+  },
+  {
+    "coefficient": [
+      -24,
+      1
+    ],
+    "cubic_sum": -48,
+    "order": 7,
+    "subsets": 16,
+    "switch_order": [
+      0,
+      4,
+      1,
+      5,
+      2,
+      6,
+      3
+    ]
+  },
+  {
+    "coefficient": [
+      -40,
+      1
+    ],
+    "cubic_sum": -320,
+    "order": 9,
+    "subsets": 64,
+    "switch_order": [
+      0,
+      5,
+      1,
+      6,
+      2,
+      7,
+      3,
+      8,
+      4
+    ]
+  },
+  {
+    "coefficient": [
+      -56,
+      1
+    ],
+    "cubic_sum": -1792,
+    "order": 11,
+    "subsets": 256,
+    "switch_order": [
+      0,
+      6,
+      1,
+      7,
+      2,
+      8,
+      3,
+      9,
+      4,
+      10,
+      5
+    ]
+  },
+  {
+    "coefficient": [
+      -72,
+      1
+    ],
+    "cubic_sum": -9216,
+    "order": 13,
+    "subsets": 1024,
+    "switch_order": [
+      0,
+      7,
+      1,
+      8,
+      2,
+      9,
+      3,
+      10,
+      4,
+      11,
+      5,
+      12,
+      6
+    ]
+  },
+  {
+    "coefficient": [
+      -88,
+      1
+    ],
+    "cubic_sum": -45056,
+    "order": 15,
+    "subsets": 4096,
+    "switch_order": [
+      0,
+      8,
+      1,
+      9,
+      2,
+      10,
+      3,
+      11,
+      4,
+      12,
+      5,
+      13,
+      6,
+      14,
+      7
+    ]
+  },
+  {
+    "coefficient": [
+      -104,
+      1
+    ],
+    "cubic_sum": -212992,
+    "order": 17,
+    "subsets": 16384,
+    "switch_order": [
+      0,
+      9,
+      1,
+      10,
+      2,
+      11,
+      3,
+      12,
+      4,
+      13,
+      5,
+      14,
+      6,
+      15,
+      7,
+      16,
+      8
+    ]
+  },
+  {
+    "coefficient": [
+      -120,
+      1
+    ],
+    "cubic_sum": -983040,
+    "order": 19,
+    "subsets": 65536,
+    "switch_order": [
+      0,
+      10,
+      1,
+      11,
+      2,
+      12,
+      3,
+      13,
+      4,
+      14,
+      5,
+      15,
+      6,
+      16,
+      7,
+      17,
+      8,
+      18,
+      9
+    ]
+  }
+]

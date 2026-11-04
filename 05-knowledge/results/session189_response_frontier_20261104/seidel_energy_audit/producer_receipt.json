@@ -1,0 +1,24 @@
+{
+  "artifacts": {
+    "producer.normal.json": "2c66bc0a74e8245ee6a5ef1fe62f93a6912e9214c511cd84af3923d3ecf06b4d",
+    "producer.optimized.json": "2c66bc0a74e8245ee6a5ef1fe62f93a6912e9214c511cd84af3923d3ecf06b4d"
+  },
+  "complete_named_producer_banks": 9,
+  "named_positions_per_side": 10098,
+  "producer_source_pins": {
+    "PROOF.md": "204d7cd868d3d83e019a20ea5bb6254ee455e5f0ecaa01a6635c55c7afecd3d0",
+    "carousel_controls.json": "9fd4b7ff0e3fbb6bee1af56fe870d6edf7ebd274ef869b3c64db3866db0fac86",
+    "normal.json": "2c66bc0a74e8245ee6a5ef1fe62f93a6912e9214c511cd84af3923d3ecf06b4d",
+    "optimized.json": "2c66bc0a74e8245ee6a5ef1fe62f93a6912e9214c511cd84af3923d3ecf06b4d",
+    "rational_banks.json": "93291cb8387e2913e4291c0c3a61f1579c7b78c93cc9acf34c36b7c7c5a4b66e",
+    "small_energy_bank.json": "666c32fa946f82674e856c7d331625a24692fb1ed1a18d543f569b8f37c42835",
+    "verify.py": "bc19002e71f92505237a74633ba01361ab4420ee1c72be4e8575416b85f4e9a6"
+  },
+  "quartic_positions_per_side": 6133,
+  "small_labeled_quotients": 75,
+  "sources": {
+    "audit.py": "a3fae8816e6df788e7f9e7c5f24103aeaa279424b57a93b582894ca908fbc6f8",
+    "producer_audit.py": "bb987daa5ec90567a298bc7107a8369476839e0be96f345aa703ca9ecdbba769"
+  },
+  "status": "PASS"
+}

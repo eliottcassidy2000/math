@@ -1,0 +1,1496 @@
+{
+  "carousel_orders": [
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19
+  ],
+  "data_sha256": {
+    "carousel_controls.json": "9fd4b7ff0e3fbb6bee1af56fe870d6edf7ebd274ef869b3c64db3866db0fac86",
+    "rational_banks.json": "93291cb8387e2913e4291c0c3a61f1579c7b78c93cc9acf34c36b7c7c5a4b66e",
+    "small_energy_bank.json": "666c32fa946f82674e856c7d331625a24692fb1ed1a18d543f569b8f37c42835"
+  },
+  "direct_resolvent_checks": 25188,
+  "named_coefficient_positions_per_side": 10098,
+  "named_complete_banks": 9,
+  "named_summaries": [
+    {
+      "energy": [
+        32,
+        1
+      ],
+      "energy_modulus_exponent": 6,
+      "name": "edge",
+      "rows": [
+        2,
+        0
+      ],
+      "witness": {
+        "corner_values": [
+          {
+            "a": 0,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              1,
+              1
+            ]
+          },
+          {
+            "a": 0,
+            "c": 1,
+            "contrast": [
+              -2,
+              1
+            ],
+            "residue": 30,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              3,
+              1
+            ]
+          },
+          {
+            "a": 2,
+            "c": 0,
+            "contrast": [
+              2,
+              1
+            ],
+            "residue": 2,
+            "source": [
+              3,
+              1
+            ],
+            "target": [
+              1,
+              1
+            ]
+          },
+          {
+            "a": 2,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              3,
+              1
+            ],
+            "target": [
+              3,
+              1
+            ]
+          },
+          {
+            "a": 1,
+            "c": 0,
+            "contrast": [
+              -2,
+              1
+            ],
+            "residue": 30,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              3,
+              1
+            ]
+          },
+          {
+            "a": 1,
+            "c": 1,
+            "contrast": [
+              -20,
+              1
+            ],
+            "residue": 12,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              21,
+              1
+            ]
+          },
+          {
+            "a": 3,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              1,
+              1
+            ]
+          },
+          {
+            "a": 3,
+            "c": 1,
+            "contrast": [
+              -2,
+              1
+            ],
+            "residue": 30,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              3,
+              1
+            ]
+          }
+        ],
+        "cubic": [
+          16,
+          1
+        ],
+        "i": 0,
+        "j": 1,
+        "sufficient_modulus_exponent": 5
+      }
+    },
+    {
+      "energy": [
+        48,
+        1
+      ],
+      "energy_modulus_exponent": 5,
+      "name": "C3",
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "witness": {
+        "corner_values": [
+          {
+            "a": 0,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              1,
+              1
+            ]
+          },
+          {
+            "a": 0,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              17,
+              9
+            ],
+            "target": [
+              17,
+              9
+            ]
+          },
+          {
+            "a": 2,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              17,
+              9
+            ],
+            "target": [
+              17,
+              9
+            ]
+          },
+          {
+            "a": 2,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              233,
+              81
+            ],
+            "target": [
+              233,
+              81
+            ]
+          },
+          {
+            "a": 1,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              17,
+              9
+            ],
+            "target": [
+              17,
+              9
+            ]
+          },
+          {
+            "a": 1,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              881,
+              81
+            ],
+            "target": [
+              881,
+              81
+            ]
+          },
+          {
+            "a": 3,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              17,
+              9
+            ],
+            "target": [
+              17,
+              9
+            ]
+          },
+          {
+            "a": 3,
+            "c": 1,
+            "contrast": [
+              8,
+              1
+            ],
+            "residue": 8,
+            "source": [
+              881,
+              81
+            ],
+            "target": [
+              233,
+              81
+            ]
+          }
+        ],
+        "cubic": [
+          8,
+          1
+        ],
+        "i": 0,
+        "j": 1,
+        "sufficient_modulus_exponent": 4
+      }
+    },
+    {
+      "energy": [
+        64,
+        1
+      ],
+      "energy_modulus_exponent": 7,
+      "name": "TT4",
+      "rows": [
+        14,
+        12,
+        8,
+        0
+      ],
+      "witness": {
+        "corner_values": [
+          {
+            "a": 0,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              1,
+              1
+            ]
+          },
+          {
+            "a": 0,
+            "c": 1,
+            "contrast": [
+              -2,
+              1
+            ],
+            "residue": 14,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              3,
+              1
+            ]
+          },
+          {
+            "a": 2,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              3,
+              1
+            ],
+            "target": [
+              3,
+              1
+            ]
+          },
+          {
+            "a": 2,
+            "c": 1,
+            "contrast": [
+              -2,
+              1
+            ],
+            "residue": 14,
+            "source": [
+              3,
+              1
+            ],
+            "target": [
+              5,
+              1
+            ]
+          },
+          {
+            "a": 1,
+            "c": 0,
+            "contrast": [
+              -2,
+              1
+            ],
+            "residue": 14,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              3,
+              1
+            ]
+          },
+          {
+            "a": 1,
+            "c": 1,
+            "contrast": [
+              -20,
+              1
+            ],
+            "residue": 12,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              21,
+              1
+            ]
+          },
+          {
+            "a": 3,
+            "c": 0,
+            "contrast": [
+              -2,
+              1
+            ],
+            "residue": 14,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              3,
+              1
+            ]
+          },
+          {
+            "a": 3,
+            "c": 1,
+            "contrast": [
+              -12,
+              1
+            ],
+            "residue": 4,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              13,
+              1
+            ]
+          }
+        ],
+        "cubic": [
+          8,
+          1
+        ],
+        "i": 0,
+        "j": 1,
+        "sufficient_modulus_exponent": 4
+      }
+    },
+    {
+      "energy": [
+        240,
+        1
+      ],
+      "energy_modulus_exponent": 5,
+      "name": "carousel5",
+      "rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ],
+      "witness": {
+        "corner_values": [
+          {
+            "a": 0,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              1,
+              1
+            ]
+          },
+          {
+            "a": 0,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              311,
+              75
+            ],
+            "target": [
+              311,
+              75
+            ]
+          },
+          {
+            "a": 4,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              311,
+              75
+            ],
+            "target": [
+              311,
+              75
+            ]
+          },
+          {
+            "a": 4,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              979873,
+              50625
+            ],
+            "target": [
+              979873,
+              50625
+            ]
+          },
+          {
+            "a": 1,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              311,
+              75
+            ],
+            "target": [
+              311,
+              75
+            ]
+          },
+          {
+            "a": 1,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              1778291,
+              16875
+            ],
+            "target": [
+              1778291,
+              16875
+            ]
+          },
+          {
+            "a": 5,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              1937,
+              225
+            ],
+            "target": [
+              1937,
+              225
+            ]
+          },
+          {
+            "a": 5,
+            "c": 1,
+            "contrast": [
+              -8,
+              1
+            ],
+            "residue": 8,
+            "source": [
+              2461199,
+              16875
+            ],
+            "target": [
+              2596199,
+              16875
+            ]
+          }
+        ],
+        "cubic": [
+          -8,
+          1
+        ],
+        "i": 0,
+        "j": 2,
+        "sufficient_modulus_exponent": 4
+      }
+    },
+    {
+      "energy": [
+        784,
+        3
+      ],
+      "energy_modulus_exponent": 5,
+      "name": "Paley7",
+      "rows": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ],
+      "witness": {
+        "corner_values": [
+          {
+            "a": 0,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              1,
+              1
+            ]
+          },
+          {
+            "a": 0,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              503,
+              147
+            ],
+            "target": [
+              503,
+              147
+            ]
+          },
+          {
+            "a": 2,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              503,
+              147
+            ],
+            "target": [
+              503,
+              147
+            ]
+          },
+          {
+            "a": 2,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              3858977,
+              194481
+            ],
+            "target": [
+              3858977,
+              194481
+            ]
+          },
+          {
+            "a": 1,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              503,
+              147
+            ],
+            "target": [
+              503,
+              147
+            ]
+          },
+          {
+            "a": 1,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              5188835,
+              64827
+            ],
+            "target": [
+              5188835,
+              64827
+            ]
+          },
+          {
+            "a": 3,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              2221,
+              441
+            ],
+            "target": [
+              2221,
+              441
+            ]
+          },
+          {
+            "a": 3,
+            "c": 1,
+            "contrast": [
+              56,
+              9
+            ],
+            "residue": 8,
+            "source": [
+              5001035,
+              64827
+            ],
+            "target": [
+              4597667,
+              64827
+            ]
+          }
+        ],
+        "cubic": [
+          56,
+          9
+        ],
+        "i": 0,
+        "j": 1,
+        "sufficient_modulus_exponent": 4
+      }
+    },
+    {
+      "energy": [
+        560,
+        1
+      ],
+      "energy_modulus_exponent": 5,
+      "name": "carousel7",
+      "rows": [
+        14,
+        28,
+        56,
+        112,
+        97,
+        67,
+        7
+      ],
+      "witness": {
+        "corner_values": [
+          {
+            "a": 0,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              1,
+              1
+            ]
+          },
+          {
+            "a": 0,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              13733,
+              2205
+            ],
+            "target": [
+              13733,
+              2205
+            ]
+          },
+          {
+            "a": 8,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              13733,
+              2205
+            ],
+            "target": [
+              13733,
+              2205
+            ]
+          },
+          {
+            "a": 8,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              3403739491,
+              40516875
+            ],
+            "target": [
+              3403739491,
+              40516875
+            ]
+          },
+          {
+            "a": 1,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              13733,
+              2205
+            ],
+            "target": [
+              13733,
+              2205
+            ]
+          },
+          {
+            "a": 1,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              7148648237,
+              24310125
+            ],
+            "target": [
+              7148648237,
+              24310125
+            ]
+          },
+          {
+            "a": 9,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              163409,
+              11025
+            ],
+            "target": [
+              163409,
+              11025
+            ]
+          },
+          {
+            "a": 9,
+            "c": 1,
+            "contrast": [
+              -24,
+              1
+            ],
+            "residue": 8,
+            "source": [
+              63165209209,
+              121550625
+            ],
+            "target": [
+              66082424209,
+              121550625
+            ]
+          }
+        ],
+        "cubic": [
+          -24,
+          1
+        ],
+        "i": 0,
+        "j": 3,
+        "sufficient_modulus_exponent": 4
+      }
+    },
+    {
+      "energy": [
+        152192,
+        495
+      ],
+      "energy_modulus_exponent": 8,
+      "name": "endpoint_flat8",
+      "rows": [
+        238,
+        4,
+        240,
+        118,
+        195,
+        146,
+        34,
+        74
+      ],
+      "witness": {
+        "corner_values": [
+          {
+            "a": 0,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              1,
+              1
+            ]
+          },
+          {
+            "a": 0,
+            "c": 1,
+            "contrast": [
+              -5716,
+              3465
+            ],
+            "residue": 12,
+            "source": [
+              18280001815,
+              7818613803
+            ],
+            "target": [
+              155889470111,
+              39093069015
+            ]
+          },
+          {
+            "a": 16,
+            "c": 0,
+            "contrast": [
+              -2312,
+              3465
+            ],
+            "residue": 8,
+            "source": [
+              44099150285369,
+              8467558748649
+            ],
+            "target": [
+              248745384654661,
+              42337793743245
+            ]
+          },
+          {
+            "a": 16,
+            "c": 1,
+            "contrast": [
+              118276395052,
+              41601569625
+            ],
+            "residue": 12,
+            "source": [
+              116721678273875309044076171,
+              8275571463737559875268375
+            ],
+            "target": [
+              93193605449962441495445879,
+              8275571463737559875268375
+            ]
+          },
+          {
+            "a": 1,
+            "c": 0,
+            "contrast": [
+              -5716,
+              3465
+            ],
+            "residue": 12,
+            "source": [
+              18280001815,
+              7818613803
+            ],
+            "target": [
+              155889470111,
+              39093069015
+            ]
+          },
+          {
+            "a": 1,
+            "c": 1,
+            "contrast": [
+              -2403574775816,
+              41601569625
+            ],
+            "residue": 8,
+            "source": [
+              688445237003331644292359,
+              22924020675173296053375
+            ],
+            "target": [
+              402580965430699091202547,
+              4584804135034659210675
+            ]
+          },
+          {
+            "a": 17,
+            "c": 0,
+            "contrast": [
+              -892,
+              385
+            ],
+            "residue": 4,
+            "source": [
+              44099150285369,
+              8467558748649
+            ],
+            "target": [
+              318587470956649,
+              42337793743245
+            ]
+          },
+          {
+            "a": 17,
+            "c": 1,
+            "contrast": [
+              -546198050752,
+              13867189875
+            ],
+            "residue": 0,
+            "source": [
+              116721678273875309044076171,
+              8275571463737559875268375
+            ],
+            "target": [
+              442678201772644424755811147,
+              8275571463737559875268375
+            ]
+          }
+        ],
+        "cubic": [
+          578076646408,
+          41601569625
+        ],
+        "i": 0,
+        "j": 4,
+        "sufficient_modulus_exponent": 4
+      }
+    },
+    {
+      "energy": [
+        1008,
+        1
+      ],
+      "energy_modulus_exponent": 5,
+      "name": "carousel9",
+      "rows": [
+        30,
+        60,
+        120,
+        240,
+        480,
+        449,
+        387,
+        263,
+        15
+      ],
+      "witness": {
+        "corner_values": [
+          {
+            "a": 0,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              1,
+              1
+            ]
+          },
+          {
+            "a": 0,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              117083,
+              14175
+            ],
+            "target": [
+              117083,
+              14175
+            ]
+          },
+          {
+            "a": 16,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              117083,
+              14175
+            ],
+            "target": [
+              117083,
+              14175
+            ]
+          },
+          {
+            "a": 16,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              386581208269,
+              1969120125
+            ],
+            "target": [
+              386581208269,
+              1969120125
+            ]
+          },
+          {
+            "a": 1,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              117083,
+              14175
+            ],
+            "target": [
+              117083,
+              14175
+            ]
+          },
+          {
+            "a": 1,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              813336704783,
+              1406514375
+            ],
+            "target": [
+              813336704783,
+              1406514375
+            ]
+          },
+          {
+            "a": 17,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              2073377,
+              99225
+            ],
+            "target": [
+              2073377,
+              99225
+            ]
+          },
+          {
+            "a": 17,
+            "c": 1,
+            "contrast": [
+              -40,
+              1
+            ],
+            "residue": 8,
+            "source": [
+              11149328520341,
+              9845600625
+            ],
+            "target": [
+              11543152545341,
+              9845600625
+            ]
+          }
+        ],
+        "cubic": [
+          -40,
+          1
+        ],
+        "i": 0,
+        "j": 4,
+        "sufficient_modulus_exponent": 4
+      }
+    },
+    {
+      "energy": [
+        1584,
+        1
+      ],
+      "energy_modulus_exponent": 5,
+      "name": "carousel11",
+      "rows": [
+        62,
+        124,
+        248,
+        496,
+        992,
+        1984,
+        1921,
+        1795,
+        1543,
+        1039,
+        31
+      ],
+      "witness": {
+        "corner_values": [
+          {
+            "a": 0,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              1,
+              1
+            ],
+            "target": [
+              1,
+              1
+            ]
+          },
+          {
+            "a": 0,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              13703729,
+              1334025
+            ],
+            "target": [
+              13703729,
+              1334025
+            ]
+          },
+          {
+            "a": 32,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              13703729,
+              1334025
+            ],
+            "target": [
+              13703729,
+              1334025
+            ]
+          },
+          {
+            "a": 32,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              7340807709049567,
+              20592776964375
+            ],
+            "target": [
+              7340807709049567,
+              20592776964375
+            ]
+          },
+          {
+            "a": 1,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              13703729,
+              1334025
+            ],
+            "target": [
+              13703729,
+              1334025
+            ]
+          },
+          {
+            "a": 1,
+            "c": 1,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              15348713779257209,
+              16016604305625
+            ],
+            "target": [
+              15348713779257209,
+              16016604305625
+            ]
+          },
+          {
+            "a": 33,
+            "c": 0,
+            "contrast": [
+              0,
+              1
+            ],
+            "residue": 0,
+            "source": [
+              12927569,
+              480249
+            ],
+            "target": [
+              12927569,
+              480249
+            ]
+          },
+          {
+            "a": 33,
+            "c": 1,
+            "contrast": [
+              -56,
+              1
+            ],
+            "residue": 8,
+            "source": [
+              95365594094285371,
+              48049812916875
+            ],
+            "target": [
+              98056383617630371,
+              48049812916875
+            ]
+          }
+        ],
+        "cubic": [
+          -56,
+          1
+        ],
+        "i": 0,
+        "j": 5,
+        "sufficient_modulus_exponent": 4
+      }
+    }
+  ],
+  "scope": "Structural all-order proof with exact rational producer controls; independent physical/run audits are separate.",
+  "small_labeled_quotients": 75,
+  "status": "PASS",
+  "transitive_congruence_checks": 885
+}

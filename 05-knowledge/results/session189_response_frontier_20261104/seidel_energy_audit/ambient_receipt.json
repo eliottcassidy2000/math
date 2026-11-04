@@ -1,0 +1,24 @@
+{
+  "ambient_controls": 6,
+  "ambient_word_queries": 96,
+  "artifacts": {
+    "ambient_controls.json": "2faa8d9e6aeaa2272b667d1c396af07c3f1aadb292f90b87965d44bcb0516626",
+    "ambient_input.txt": "9b95562a156fcadb9d89d49402b65c6d52de0aba145894cae7d275b9ce58fb8f",
+    "ambient_output.txt": "e72d4e1791feb74e9c3b18e725e530c464bf94fe7ca5f0e9adf0fc7c61314687"
+  },
+  "nonzero_second_cover_coefficients": [
+    1,
+    13,
+    1,
+    13,
+    1,
+    13
+  ],
+  "sources": {
+    "ambient_audit.py": "57d2d5f43183411dcc036a0278eb448677ba174514db92dd50def6e87fba9041",
+    "ambient_walk.cpp": "bc21bb1c59ed8ff557228963d0f35c5ddd2e9ca855f40003cda4430c0317f89b",
+    "audit.py": "a3fae8816e6df788e7f9e7c5f24103aeaa279424b57a93b582894ca908fbc6f8",
+    "physical.cpp": "18f5cf02e9ad64563e8ae83e8c88e9567d1024f4c38609d96d6504531e784780"
+  },
+  "status": "PASS"
+}
