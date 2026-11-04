@@ -1,0 +1,29 @@
+{
+  "relative_links": [
+    "../spectrum/PROOF.md",
+    "../spectrum_four/PROOF.md",
+    "../spectrum_four_audit/AUDIT.md",
+    "../spectrum_audit/AUDIT.md",
+    "../collatz/RESULT.md",
+    "../collatz_audit/AUDIT.md",
+    "../oddperfect/PROOF.md",
+    "../oddperfect_audit/AUDIT.md",
+    "../nearby/NOTE.md",
+    "../nearby_audit/AUDIT.md"
+  ],
+  "scope": "Relative links, source fingerprints and selected source phrases only; mathematical review is separate.",
+  "sha256": {
+    "synthesis/../collatz/RESULT.md": "ee21a2efdc91ab6608e80cbd5be4b332da3b2fc92aff75376eb99abe8ccb56e0",
+    "synthesis/../collatz_audit/AUDIT.md": "6e60158d7b5b13ac61b8c79aa35f7e108e5fb717d5d6d536442dabfb0e1eb2ee",
+    "synthesis/../nearby/NOTE.md": "2beb3c7465e4adb6d67d60e258e4b99c9e811c2fa25b83db500ad053c60a0784",
+    "synthesis/../nearby_audit/AUDIT.md": "6fb09e28c8c8fad1ea567efa7ebfc28d4078ac8504371c6adc25610f53698ea9",
+    "synthesis/../oddperfect/PROOF.md": "7cf06555ca18d5e0b346d3a80c93de26cafdb782c928f5e88f5ec53892c78305",
+    "synthesis/../oddperfect_audit/AUDIT.md": "00a53806211d10c12219b85cc91173d9431e32d7af5006e4df6aa419880464fb",
+    "synthesis/../spectrum/PROOF.md": "9a14d1f223c684bacbe5310e7caca6ab60f7bc97a15fc76ef6d162f775e79ffe",
+    "synthesis/../spectrum_audit/AUDIT.md": "e4ba0de7fe27b565d44913d4e51148983854a99461e6de0d6498049a7ed740a6",
+    "synthesis/../spectrum_four/PROOF.md": "458180c3ee2287126a50f2a3ec240421c80ff51900256b7bd7c2c2a7a31b7b81",
+    "synthesis/../spectrum_four_audit/AUDIT.md": "ff35fae90a7a008abc07008c8853b602330de1aa1d45a8f335a1c55b25089aed",
+    "synthesis/NOTE.md": "37d7a10f06b575c5d5d43b5cc8e48e5fae0257c62c1791728527e7ab616bdb4c"
+  },
+  "status": "PASS"
+}
