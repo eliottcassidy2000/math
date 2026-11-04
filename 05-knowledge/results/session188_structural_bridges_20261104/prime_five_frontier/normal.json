@@ -1,0 +1,177 @@
+{
+  "dependency_pins": {
+    "PROOF.md": "3ede97d419ae29f637d8b4ff338cf42a4fbe575f57ec44706828bdcc5ad9feb6",
+    "cyclic_ambient_synthesis/PROOF.md": "396a8876d98a7900a7b76797ea369d211583b744c43f01d80b498f7a09829f3e",
+    "highest_quotient_reduction/PROOF.md": "95437f44021ca708bfa2fde42637e53179ddb81a5cf93341c3bffa602e1b4678",
+    "module_decomposition/PROOF.md": "33f33731f3f21037a03e6a4eb9bcc11c746c5124439e49603e7c8faabe2565bc",
+    "monotone_dual_queries/PROOF.md": "f617b74aa6c9545e945d6c5f6d8258049a9dd68f3127c5252542b2592f746d5f",
+    "prime_five_all_ambient/PROOF.md": "1dad821eff721e77ede69a3b0b8a1b62d0a3b0dce7395b883e89ddfa5ad9cea4",
+    "prime_five_all_profiles/PROOF.md": "7771476a3389d58d05fded981c1b4e4a06bebba981c6d427ca7ccee47f17929a",
+    "prime_five_even_ambient/PROOF.md": "1da932d38f9dc57f83defc5ba88cc1736f9805fa827fd258db0ddd3ab03aa05e",
+    "verify.py": "014ea56141d159972e55a15ccd46c336ca1cade10db7529e8bfcddcf849cd293"
+  },
+  "multiple_highest_node_controls": [
+    {
+      "hamilton": 27,
+      "intermediate": [
+        234,
+        252,
+        249,
+        240,
+        225,
+        64,
+        128,
+        32
+      ],
+      "original_family_masks": [
+        31,
+        224
+      ],
+      "query": {
+        "a": 0,
+        "c": 2,
+        "values": [
+          87,
+          45,
+          45
+        ]
+      },
+      "quotient": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "source": [
+        244,
+        225,
+        226,
+        231,
+        238,
+        64,
+        128,
+        32
+      ],
+      "target": [
+        234,
+        252,
+        249,
+        240,
+        225,
+        128,
+        32,
+        64
+      ]
+    },
+    {
+      "hamilton": 39,
+      "intermediate": [
+        236,
+        245,
+        248,
+        242,
+        225,
+        64,
+        128,
+        32
+      ],
+      "original_family_masks": [
+        31,
+        224
+      ],
+      "query": {
+        "a": 0,
+        "c": 1,
+        "values": [
+          75,
+          87,
+          87
+        ]
+      },
+      "quotient": [
+        18,
+        8,
+        3,
+        5,
+        14
+      ],
+      "source": [
+        242,
+        232,
+        227,
+        229,
+        238,
+        64,
+        128,
+        32
+      ],
+      "target": [
+        236,
+        245,
+        248,
+        242,
+        225,
+        128,
+        32,
+        64
+      ]
+    },
+    {
+      "hamilton": 45,
+      "intermediate": [
+        230,
+        236,
+        248,
+        241,
+        227,
+        64,
+        128,
+        32
+      ],
+      "original_family_masks": [
+        31,
+        224
+      ],
+      "query": {
+        "a": 1,
+        "c": 2,
+        "values": [
+          273,
+          267,
+          267
+        ]
+      },
+      "quotient": [
+        24,
+        17,
+        3,
+        6,
+        12
+      ],
+      "source": [
+        248,
+        241,
+        227,
+        230,
+        236,
+        64,
+        128,
+        32
+      ],
+      "target": [
+        230,
+        236,
+        248,
+        241,
+        227,
+        128,
+        32,
+        64
+      ]
+    }
+  ],
+  "prime_four_codes": [],
+  "scope": "Original-module XOR only; residual highest prime quotient order at least six.",
+  "status": "PASS"
+}

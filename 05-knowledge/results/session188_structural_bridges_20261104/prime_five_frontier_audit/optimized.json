@@ -1,0 +1,651 @@
+{
+  "complete_hereditary_subset_rows": 1792,
+  "dependency_pins": {
+    "PROOF.md": "3ede97d419ae29f637d8b4ff338cf42a4fbe575f57ec44706828bdcc5ad9feb6",
+    "cyclic_ambient_synthesis/PROOF.md": "396a8876d98a7900a7b76797ea369d211583b744c43f01d80b498f7a09829f3e",
+    "highest_quotient_reduction/PROOF.md": "95437f44021ca708bfa2fde42637e53179ddb81a5cf93341c3bffa602e1b4678",
+    "module_decomposition/PROOF.md": "33f33731f3f21037a03e6a4eb9bcc11c746c5124439e49603e7c8faabe2565bc",
+    "monotone_dual_queries/PROOF.md": "f617b74aa6c9545e945d6c5f6d8258049a9dd68f3127c5252542b2592f746d5f",
+    "prime_five_all_ambient/PROOF.md": "1dad821eff721e77ede69a3b0b8a1b62d0a3b0dce7395b883e89ddfa5ad9cea4",
+    "prime_five_all_profiles/PROOF.md": "7771476a3389d58d05fded981c1b4e4a06bebba981c6d427ca7ccee47f17929a",
+    "prime_five_even_ambient/PROOF.md": "1da932d38f9dc57f83defc5ba88cc1736f9805fa827fd258db0ddd3ab03aa05e",
+    "verify.py": "014ea56141d159972e55a15ccd46c336ca1cade10db7529e8bfcddcf849cd293"
+  },
+  "independent_source_controls": [
+    {
+      "hereditary_profile_rows": 256,
+      "literal_values": [
+        87,
+        45,
+        45
+      ],
+      "original_tree": {
+        "all_original_strong_masks": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          31,
+          32,
+          64,
+          128,
+          224,
+          255
+        ],
+        "highest_changed": [
+          31,
+          224
+        ],
+        "nodes": [
+          {
+            "changed": true,
+            "children": [
+              1,
+              2,
+              4,
+              8,
+              16
+            ],
+            "mask": 31,
+            "quotients": [
+              [
+                20,
+                1,
+                2,
+                7,
+                14
+              ],
+              [
+                10,
+                28,
+                25,
+                16,
+                1
+              ]
+            ]
+          },
+          {
+            "changed": true,
+            "children": [
+              32,
+              64,
+              128
+            ],
+            "mask": 224,
+            "quotients": [
+              [
+                2,
+                4,
+                1
+              ],
+              [
+                4,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "changed": false,
+            "children": [
+              31,
+              224
+            ],
+            "mask": 255,
+            "quotients": [
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                0
+              ]
+            ]
+          }
+        ]
+      },
+      "source_control": {
+        "hamilton": 27,
+        "intermediate": [
+          234,
+          252,
+          249,
+          240,
+          225,
+          64,
+          128,
+          32
+        ],
+        "original_family_masks": [
+          31,
+          224
+        ],
+        "query": {
+          "a": 0,
+          "c": 2,
+          "values": [
+            87,
+            45,
+            45
+          ]
+        },
+        "quotient": [
+          20,
+          1,
+          2,
+          7,
+          14
+        ],
+        "source": [
+          244,
+          225,
+          226,
+          231,
+          238,
+          64,
+          128,
+          32
+        ],
+        "target": [
+          234,
+          252,
+          249,
+          240,
+          225,
+          128,
+          32,
+          64
+        ]
+      }
+    },
+    {
+      "hereditary_profile_rows": 256,
+      "literal_values": [
+        75,
+        87,
+        87
+      ],
+      "original_tree": {
+        "all_original_strong_masks": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          31,
+          32,
+          64,
+          128,
+          224,
+          255
+        ],
+        "highest_changed": [
+          31,
+          224
+        ],
+        "nodes": [
+          {
+            "changed": true,
+            "children": [
+              1,
+              2,
+              4,
+              8,
+              16
+            ],
+            "mask": 31,
+            "quotients": [
+              [
+                18,
+                8,
+                3,
+                5,
+                14
+              ],
+              [
+                12,
+                21,
+                24,
+                18,
+                1
+              ]
+            ]
+          },
+          {
+            "changed": true,
+            "children": [
+              32,
+              64,
+              128
+            ],
+            "mask": 224,
+            "quotients": [
+              [
+                2,
+                4,
+                1
+              ],
+              [
+                4,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "changed": false,
+            "children": [
+              31,
+              224
+            ],
+            "mask": 255,
+            "quotients": [
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                0
+              ]
+            ]
+          }
+        ]
+      },
+      "source_control": {
+        "hamilton": 39,
+        "intermediate": [
+          236,
+          245,
+          248,
+          242,
+          225,
+          64,
+          128,
+          32
+        ],
+        "original_family_masks": [
+          31,
+          224
+        ],
+        "query": {
+          "a": 0,
+          "c": 1,
+          "values": [
+            75,
+            87,
+            87
+          ]
+        },
+        "quotient": [
+          18,
+          8,
+          3,
+          5,
+          14
+        ],
+        "source": [
+          242,
+          232,
+          227,
+          229,
+          238,
+          64,
+          128,
+          32
+        ],
+        "target": [
+          236,
+          245,
+          248,
+          242,
+          225,
+          128,
+          32,
+          64
+        ]
+      }
+    },
+    {
+      "hereditary_profile_rows": 256,
+      "literal_values": [
+        273,
+        267,
+        267
+      ],
+      "original_tree": {
+        "all_original_strong_masks": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          31,
+          32,
+          64,
+          128,
+          224,
+          255
+        ],
+        "highest_changed": [
+          31,
+          224
+        ],
+        "nodes": [
+          {
+            "changed": true,
+            "children": [
+              1,
+              2,
+              4,
+              8,
+              16
+            ],
+            "mask": 31,
+            "quotients": [
+              [
+                24,
+                17,
+                3,
+                6,
+                12
+              ],
+              [
+                6,
+                12,
+                24,
+                17,
+                3
+              ]
+            ]
+          },
+          {
+            "changed": true,
+            "children": [
+              32,
+              64,
+              128
+            ],
+            "mask": 224,
+            "quotients": [
+              [
+                2,
+                4,
+                1
+              ],
+              [
+                4,
+                1,
+                2
+              ]
+            ]
+          },
+          {
+            "changed": false,
+            "children": [
+              31,
+              224
+            ],
+            "mask": 255,
+            "quotients": [
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                0
+              ]
+            ]
+          }
+        ]
+      },
+      "source_control": {
+        "hamilton": 45,
+        "intermediate": [
+          230,
+          236,
+          248,
+          241,
+          227,
+          64,
+          128,
+          32
+        ],
+        "original_family_masks": [
+          31,
+          224
+        ],
+        "query": {
+          "a": 1,
+          "c": 2,
+          "values": [
+            273,
+            267,
+            267
+          ]
+        },
+        "quotient": [
+          24,
+          17,
+          3,
+          6,
+          12
+        ],
+        "source": [
+          248,
+          241,
+          227,
+          230,
+          236,
+          64,
+          128,
+          32
+        ],
+        "target": [
+          230,
+          236,
+          248,
+          241,
+          227,
+          128,
+          32,
+          64
+        ]
+      }
+    }
+  ],
+  "literal_H_counts": 22,
+  "nested_prime_parent_control": {
+    "baseline": [
+      474,
+      472,
+      491,
+      496,
+      484,
+      451,
+      640,
+      768,
+      576,
+      63
+    ],
+    "child_restored": [
+      472,
+      473,
+      491,
+      496,
+      484,
+      451,
+      640,
+      768,
+      576,
+      63
+    ],
+    "hereditary_profile_rows": 1024,
+    "literal_values": [
+      37305,
+      38895,
+      38895,
+      38895
+    ],
+    "original_family_masks": [
+      63,
+      448
+    ],
+    "original_tree": {
+      "all_original_strong_masks": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        16,
+        32,
+        63,
+        64,
+        128,
+        256,
+        448,
+        512,
+        1023
+      ],
+      "highest_changed": [
+        63,
+        448
+      ],
+      "nodes": [
+        {
+          "changed": true,
+          "children": [
+            1,
+            2
+          ],
+          "mask": 3,
+          "quotients": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "changed": true,
+          "children": [
+            3,
+            4,
+            8,
+            16,
+            32
+          ],
+          "mask": 63,
+          "quotients": [
+            [
+              18,
+              8,
+              3,
+              5,
+              14
+            ],
+            [
+              12,
+              21,
+              24,
+              18,
+              1
+            ]
+          ]
+        },
+        {
+          "changed": true,
+          "children": [
+            64,
+            128,
+            256
+          ],
+          "mask": 448,
+          "quotients": [
+            [
+              2,
+              4,
+              1
+            ],
+            [
+              4,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "changed": false,
+          "children": [
+            63,
+            448,
+            512
+          ],
+          "mask": 1023,
+          "quotients": [
+            [
+              2,
+              4,
+              1
+            ],
+            [
+              2,
+              4,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    "query": [
+      515,
+      512
+    ],
+    "source": [
+      486,
+      484,
+      464,
+      455,
+      459,
+      476,
+      640,
+      768,
+      576,
+      63
+    ],
+    "target": [
+      472,
+      473,
+      491,
+      496,
+      484,
+      451,
+      768,
+      576,
+      640,
+      63
+    ]
+  },
+  "prime_four_codes": [],
+  "producer_replay_hashes": [
+    "1b4feee10013f5c2c10a2482430162d5c9f85869917e541c91ef18a02d0e0f70",
+    "1b4feee10013f5c2c10a2482430162d5c9f85869917e541c91ef18a02d0e0f70"
+  ],
+  "scope": "Highest changed prime quotients have order at least6 in any possible nontrivial full-response collision under simultaneous XOR of original modules. This is source-relative, not arbitrary-output injectivity or current-module inversion sequences.",
+  "source_pins": {
+    "PROOF.md": "3ede97d419ae29f637d8b4ff338cf42a4fbe575f57ec44706828bdcc5ad9feb6",
+    "README.md": "3e012153bfdffd85a179769a84b5f28d6db00cdbb958dcb36c3c205bd1724f70",
+    "normal.json": "1b4feee10013f5c2c10a2482430162d5c9f85869917e541c91ef18a02d0e0f70",
+    "optimized.json": "1b4feee10013f5c2c10a2482430162d5c9f85869917e541c91ef18a02d0e0f70",
+    "verify.py": "014ea56141d159972e55a15ccd46c336ca1cade10db7529e8bfcddcf849cd293"
+  },
+  "status": "PASS"
+}
