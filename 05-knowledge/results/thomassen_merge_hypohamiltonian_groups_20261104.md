@@ -40,23 +40,27 @@ Independently audited: section 10.
 
   Today's records: the smallest planar hypohamiltonian graph known has 40 vertices (Jooyandeh, McKay, Östergård,
   Pettersson, Zamfirescu), and the smallest planar hypotraceable graph known has 154.
-- **{6,4,8,9,12}** is the list of MathWorld crossing numbers of the five non-planar Thomassen graphs, in order:
-  20 has 6, 24 has 4, 32 has 8, 41 has 9, 60 has 12.
+- **{6,4,8,9,12}** is the set of distinct MathWorld crossing numbers of the six non-planar Thomassen graphs: 20 has 6,
+  24 has 4, 32 and 34 both have 8, 41 has 9, 60 has 12 (so 8 occurs twice). In MathWorld's listing order the values
+  read 6, 4, 8, (8), 9, 12.
 
 **Coincidence in the repository** (inheritance search; NUMEROLOGY).
 - The LRC radius-7 handoff `05-knowledge/results/radius7_multicluster_handoff_opus_S314.txt` lists the speed prefix
-  [4, 6, 8, 9, 12] with sixth-speed lifts x1 = 14 + 13j, and 105 = 14 + 7·13 is one of them.
+  [4, 6, 8, 9, 12] with sixth-speed lifts including 105 = 14 + 7·13. The audit found that the file lists all 792
+  five-element subsets of {1..12}, that 105 is a lift for 462 of them, and that 14 + 13j is only one of seven lift
+  residue classes. So the co-occurrence is forced by the file's design.
 - {4,6,8,9,12} is exactly the set of composite {2,3}-smooth numbers <= 12. THM-806 (16) has
   {ab mod 13 : a, b in {2,3,4}} = {3,4,6,8,9,12}.
-- The prefix is one of many in that file, so the joint appearance with 105 carries no evidential weight. No mechanism
-  connects crossing numbers to lonely-runner speeds.
+- The joint appearance with 105 therefore carries no evidential weight. No mechanism connects crossing numbers to
+  lonely-runner speeds.
 
 **The triangulation theorem.** Inoue, Kawarabayashi, Miyashita, Mohar, Thomassen, Thorup, *The Four Color Theorem with
 Linearly Many Reducible Configurations and Near-Linear Time Coloring*, arXiv:2603.24880 (v3, 1 Oct 2026).
 - Main theorem: every planar triangulation contains linearly many pairwise non-touching reducible configurations, or
   pairwise non-crossing obstructing cycles of length <= 5.
-- Consequence: an O(n log n) 4-colouring, using more than 8,200 D-reducible configurations.
-- Read from the abstract and listings only (CITED).
+- Consequence: an O(n log n) 4-colouring.
+- Read from the abstract and listings only (CITED). The figure of more than 8,200 D-reducible configurations comes from
+  the paper's text as quoted in secondary summaries, not from the abstract.
 
 **Thomassen's tournament paper.** *On the number of Hamiltonian cycles in tournaments*, Discrete Math. 31 (1980)
 315-323. It is not cited anywhere in the repository, and its body could not be read here (CAPTCHA).
@@ -84,20 +88,23 @@ that tournaments and even graphs are equinumerous for every n. The repository's 
   least (n + 1)/2 obstructions. The reductions form one run of the cycle and the obstructions form the complementary
   path.
 - (ii) Both extremes occur. A_n has r = 2 and k = n - 1. Classes with r = n - 1 and k = 2 number 2^(n-5).
-- (iii) Over the F(2n - 6) classes of order n, E[r] = ((5 + √5) n + 12 - 8√5) / 10 + O(φ^(-4n)) and E[k] = n + 1 - E[r].
+- (iii) Over the F(2n - 6) classes of order n, E[r] = ((5 + √5) n + 12 - 8√5) / 10 + O(n φ^(-4n)) and
+  E[k] = n + 1 - E[r]. The error is (72 + 161√5/5)(n - 8) φ^(-4n) + ..., per the audit.
   The typical fractions are therefore φ/√5 ≈ 0.7236 reductions and (5 - √5)/10 ≈ 0.2764 obstructions.
 
 **Proof of (iii).**
 - The generating function of THM-4868 (H) gives E[r] = [x^n] ∂_t G(x, 1) / [x^n] G(x, 1), with:
   - G(x, 1) = x^4 / (1 - 3x + x^2), which has a simple pole at φ^(-2);
   - ∂_t G(x, 1) = x^4 (x^3 - 2x^2 - 3x + 2) / (1 - 3x + x^2)^2, which has a double pole there.
-- Partial fractions give a mean that is linear in n up to O(φ^(-4n)). The slope is
+- Partial fractions give a mean that is linear in n up to O(n φ^(-4n)). The slope is
   -ρ'(1)/ρ(1) = (5 + √5)/10, where ρ(t) is the dominant root of 1 - (1 + 2t)x + t x^2.
 - The constant (6 - 4√5)/5 is checked exactly against the rows for n = 10-70, where the deviation is below 10^(-13)
   from n = 20 on.
 
 **The analogy (INTERPRETATION).** Both theorems say the same kind of thing: linearly many local reductions, or
-linearly many nested obstructions. Here the trade-off is exact (r + k = n + 1) rather than a lower bound.
+linearly many nested obstructions. Two differences:
+- the 2026 configurations are pairwise non-touching, while here the reductions form one run of adjacent vertices;
+- here the trade-off is an identity (r + k = n + 1), not a lower bound.
 
 ## 2. Hypohamiltonian graphs against non-critical vertices
 
@@ -119,8 +126,11 @@ vertices. The proved partial case: two "shortcut" deletions at consecutive verti
 **Square-sum graphs (THM-4870 (C)).** The inheritance comes from THM-4505, THM-4851 and the planarity fact recorded in
 `collatz_procgen_20260922_synthesis.md` ("Q_N is planar iff N <= 24", with the first K_(3,3) through the ear 11-25-24).
 New here:
-- **(C1)** No Q_N is hypohamiltonian or hypotraceable. For N <= 30 the minimum degree is 1 (THM-4505). Q_31 has
-  minimum degree 2 and is traceable. For N >= 32, Q_N is Hamiltonian (THM-4851 (a)). A hypohamiltonian graph cannot
+- **(C1)** No Q_N with N >= 3 is hypohamiltonian or hypotraceable. (Q_2, two isolated vertices, is trivially
+  hypotraceable.)
+  - For 3 <= N <= 30, Q_N has a vertex of degree <= 1: degree 0 for N <= 6, minimum degree 1 for 7 <= N <= 30
+    (THM-4505).
+  - Q_31 has minimum degree 2 and is traceable. For N >= 32, Q_N is Hamiltonian (THM-4851 (a)). A hypohamiltonian graph cannot
   have a vertex of degree <= 2, and a hypotraceable graph cannot have a leaf (delete its neighbour).
 - **(C2)** The vertex-deleted subgraphs of the non-traceable orders, which the repository had not studied:
 
@@ -137,19 +147,24 @@ New here:
   Each set is pairwise non-adjacent in the graph, and no two of its vertices are consecutive on the unique cycle. This
   is the "pairwise non-touching" pattern of the triangulation theorem, and the opposite of the tournament run. It is
   not a law for uniquely Hamiltonian graphs in general (the refutation above).
-- **Planar and hypohamiltonian.** The planar square-sum graphs (N <= 24) are exactly those of the leaf-ridden,
-  non-Hamiltonian regime, and the first Hamiltonian one (Q_32) is non-planar. So the square-sum family meets neither
+- **Planar and hypohamiltonian.** The planar square-sum graphs (N <= 24) lie inside the regime with vertices of degree
+  <= 1 (N <= 30), and the first Hamiltonian one (Q_32) is non-planar. So the square-sum family meets neither
   Thomassen's planar hypohamiltonian graphs (40-105 vertices and up) nor planar uniquely Hamiltonian ones.
 
 ## 3. The trivial group, C_2 and the pairs
 
 **(B) of THM-4870: the asymmetric spectrum.**
-- **PROVED.** H(T) = 3 forces a 3-cycle component, so Aut(T) contains Z_3.
+- **PROVED.** H(T) = 3 forces a 3-cycle component, since strong tournaments of order >= 4 have H >= 5. So Aut(T)
+  contains Z_3.
 - **FINITE-EXACT.** For every odd H <= 1125, some tournament with trivial automorphism group has H Hamiltonian paths iff
   H is not in {3, 7, 21}. HYP-9462 (A1) was pre-registered on [225, 1125].
-  - Below 225 the census is complete. Every value is realised by products of asymmetric strong classes of order <= 10
-    and of uniquely Hamiltonian tournaments, which are all asymmetric (THM-4868 (E)).
-  - The only strong value needing symmetry is 3. The |Aut| values seen are 1, 3, 5, 7, 9, 15 and 21.
+  - Below 225 the census is complete: strong order >= 11 has H >= f(11) = 225 (Busch 2006; THM-4744). Every value is
+    realised by products of asymmetric strong classes of order <= 10 and of uniquely Hamiltonian tournaments, which
+    are all asymmetric (THM-4868 (E)).
+  - The audit independently exhibited an explicit asymmetric tournament of order <= 9 for every odd H <= 1125 except
+    3, 7 and 21 (560 witnesses).
+  - Across orders <= 10 the only strong value needing symmetry is 3. Within smaller order caps more do (171, 175, 189
+    within orders <= 7). The |Aut| values seen are 1, 3, 5, 7, 9, 15 and 21.
   - The products of uniquely Hamiltonian H values alone miss 24 odd numbers up to 1125 (HYP-9462).
 - **Reading.** The trivial group sees exactly the two crevasses plus one forced value, 3 = |Z_3|. 21 = 3·7 is the
   product of the other two.
@@ -159,7 +174,8 @@ New here:
   (THM-4747), and H / |Aut| is never 7 or 21 (THM-4812).
 - *Converse.* The converse gives Aut±(T) / Aut(T) in {1, C_2}. The C_2 case is the self-converse "real points"
   (THM-4866 (E)), whose spectrum m·s^2 has the parity pair {3, 5}: 5 is impossible at odd order and 3 at even order.
-  Also |Aut±| ≡ 2 mod 4, with the primitive exceptions C_3, Z_5{1,2} and P_7 (THM-4743).
+  THM-4743 (2), Gluck's theorem with the converse added, shows that the primitive tournaments in which no vertex
+  subset has trivial stabilizer under Aut± are exactly C_3, Z_5{1,2} and P_7.
 - *Graphs.* The sign character χ_G : Aut(G) → C_2 (an automorphism's parity of reversed edges) has image 1 (even
   graph) or C_2 (odd graph). Even graphs and tournaments are equinumerous, and #graphs = #tournaments + #odd graphs.
 - So on the tournament side the trivial group/C_2 dichotomy is the converse quotient, and on the graph side it is the
@@ -195,7 +211,7 @@ The repository uses "Maschke" only for semisimplicity.
     - F_21, for P_7 (H = 189).
   - At order 6 every strong class has |Aut| 1 or 3.
 
-**Converse groups of the three primitive exceptions of THM-4743.**
+**Converse groups of the three primitive exceptional tournaments of THM-4743 (2).**
 - Aut±(C_3) = S_3 = D_3 and Aut±(Z_5{1,2}) = D_5: Maschke's dihedral family, the rotation groups of the triangular and
   pentagonal prisms.
 - Aut±(P_7) = AGL(1,7), of order 42, is not a planar group.
@@ -204,11 +220,14 @@ The repository uses "Maschke" only for semisimplicity.
 - The rotation families split as 2 infinite (Z_n, D_n) plus 3 exceptional (A_4, S_4, A_5).
 - Shelor's five letters split as 2 (type A: a, b) plus 3 (type B: c, d, e). These are the admissible parents of
   THM-4868 (G), with |adm| = 2 or 3.
-- ADE splits the same way (A_n, D_n; E_6, E_7, E_8).
+- ADE splits the same way (A_n, D_n; E_6, E_7, E_8). This one is NOT a coincidence: it is the McKay correspondence
+  between the finite subgroups of SU(2) (the binary versions of the rotation groups) and the simply-laced Dynkin
+  diagrams.
 - The Fermat five and the Platonic five share only {3, 5}
   (`gilbreath_fermat_platonic_20260926.md`).
-- `fermat_five_pepin_collatz_20261025/FIVE_LADDER.md` types the repository's fives as cardinality coincidences. Nothing
-  here changes that typing.
+- `fermat_five_pepin_collatz_20261025/FIVE_LADDER.md` types the repository's fives as cardinality coincidences.
+  Nothing here changes that typing for the repository's fives. The rotation-group/ADE match is the one genuine
+  correspondence (McKay).
 
 **One structural echo** (INTERPRETATION). The icosahedral group A_5 is the rotation group whose character table needs
 √5. φ^(±2) are the eigenvalues of Shelor's transfer matrix [[1,1],[1,2]], and φ/√5 is the reduction fraction of
@@ -216,8 +235,8 @@ section 1. No map is claimed.
 
 ## 5. Equinumerosity: what today's objects add
 
-- **Rigidity breaks equivariance on the tournament side.** Uniquely Hamiltonian tournaments are rigid (Aut = 1), and
-  there are F(2n - 6) of them, from n = 3 on. There are no asymmetric graphs on <= 5 vertices. So no bijection
+- **Rigidity breaks equivariance on the tournament side.** Uniquely Hamiltonian tournaments are rigid (Aut = 1) from
+  n = 4 on (C_3 has Aut = Z_3), and there are F(2n - 6) of them. There are no asymmetric graphs on <= 5 vertices. So no bijection
   preserves trivial automorphism groups. This is the repository's attempt-1 obstruction (|Aut| multisets) seen from
   the rigid side.
 - **The {1, C_2} dichotomy on both sides** (section 3) suggests one invariant to carry: the converse quotient on
@@ -228,14 +247,14 @@ section 1. No map is claimed.
 
 ## 6. Answers to the prompt, in one line each
 
-- **{6,4,8,9,12}:** the crossing numbers of the five non-planar Thomassen graphs. Their co-occurrence with 105 in the
-  LRC handoff is a coincidence.
+- **{6,4,8,9,12}:** the distinct crossing numbers of the six non-planar Thomassen graphs (8 occurs twice). Their
+  co-occurrence with 105 in the LRC handoff is forced by that file's design.
 - **The 8 Thomassen graphs and 105:** the hypo-family whose tournament analogue is the non-critical run, and whose
   square-sum analogue fails (THM-4870 (C)).
-- **Linearly many reducible configurations:** the exact tournament analogue is r + k = n + 1, with mean fraction φ/√5
-  (THM-4870 (A)).
+- **Linearly many reducible configurations:** the tournament analogue (INTERPRETATION) is r + k = n + 1, with mean
+  fraction φ/√5 (THM-4870 (A)).
 - **Equinumerosity:** rigid uniquely Hamiltonian tournaments and the {1, C_2} dichotomies (section 5). No bijection.
-- **Hypohamiltonian against square-sum:** no square-sum graph is hypo-anything. The vertex-deletion data are new, and
+- **Hypohamiltonian against square-sum:** no square-sum graph Q_N with N >= 3 is hypo-anything. The vertex-deletion data are new, and
   the non-touching non-critical sets in Q_32 and Q_33 are an instance only (section 2).
 - **Maschke and the fives:** tournament symmetry is planar iff cyclic. The fives are cardinality coincidences
   (section 4).
@@ -253,18 +272,21 @@ The Thomassen orders {20, 24, 32, 34, 41, 60, 94, 105} against the square-sum la
 | 34 | first terminal cycle |
 | 41 | Gerbicz pairs start; the Q_41 gate |
 
-Four of the five Thomassen orders in [20, 50] are landmarks. The landmark set
-{15, 16, 17, 23, 24, 25, 31, 32, 33, 34, 38, 39, 40, 41, 42} has 15 of the 31 integers in [20, 50], so about 2.4 hits
-are expected by chance and 4 is unremarkable. No mechanism is proposed.
+Four of the five Thomassen orders in [20, 50] are landmarks.
+- Only 12 of the 15 landmarks {15, 16, 17, 23, 24, 25, 31, 32, 33, 34, 38, 39, 40, 41, 42} lie in [20, 50] (31
+  integers).
+- So the expected number of chance hits is about 1.94, and P(>= 4 hits) is about 0.06 (corrected by the audit).
+- The landmark set was chosen after seeing the orders, so even 0.06 overstates the evidence. This stays NUMEROLOGY,
+  and no mechanism is proposed.
 
 ## 8. Typing
 
 | item | type |
 |---|---|
-| (A) r + k = n + 1 dichotomy; exact mean E[r] | PROVED (THM-4868 (D), (H), and singularity analysis); exact check n <= 70 |
+| (A) r + k = n + 1 dichotomy; mean E[r] with error O(n φ^(-4n)) | PROVED (THM-4868 (D), (H), and singularity analysis); exact check n <= 70; error term corrected by the audit |
 | (B) 3 forces Z_3 | PROVED |
 | (B) asymmetric spectrum = odd numbers minus {3, 7, 21}, for H <= 1125 | FINITE-EXACT (A1 pre-registered); all H: HYP-9462 (A), OPEN |
-| (C1) no Q_N is hypohamiltonian or hypotraceable | PROVED (from THM-4505, THM-4851) |
+| (C1) no Q_N with N >= 3 is hypohamiltonian or hypotraceable | PROVED (from THM-4505, THM-4851) |
 | (C2), (C3) square-sum vertex deletions | FINITE-EXACT |
 | (D) uniquely Hamiltonian graphs: consecutive non-critical pairs absent at n <= 9, present at n = 10 (1,300) | FINITE-EXACT (exhaustive); conjecture (B) REFUTED |
 | Maschke: tournament symmetry planar iff cyclic | PROVED (elementary) |
@@ -279,7 +301,29 @@ are expected by chance and 4 is unremarkable. No mechanism is proposed.
 
 ## 10. Audit
 
-(Filled after the independent audit.)
+An independent adversarial audit ([report](../../04-computation/experiments/thomassen_merge_20261104_audit_S10/AUDIT.md))
+wrote its own code. Verdict: **SOUND WITH CORRECTIONS**, with no blocking finding.
+
+**Reproduced.** Every finite claim in (A)-(D), including:
+- its own uniquely Hamiltonian census (n <= 11), with exact means;
+- 560 explicit asymmetric witnesses for all odd H <= 1125 except 3, 7, 21;
+- its own strong-class censuses (2,643 classes with H <= 224; 107,773 with H <= 1125 at orders <= 10);
+- the square-sum data, and the uniquely Hamiltonian graph counts by two methods;
+- the two non-cyclic groups at order 7, and the citations.
+
+**Corrected (MISTAKE-708).**
+- the error term (O(n φ^(-4n)), not O(φ^(-4n)));
+- "exact analogue", retyped as interpretation, with the differences stated;
+- six non-planar Thomassen graphs, not five (32 and 34 both have crossing number 8);
+- the coincidence-ledger arithmetic;
+- HYP-9462: chord-adjacent non-critical pairs first appear at n = 8 (16 graphs), not n = 9;
+- (C1) for small N;
+- rigid from n = 4, not n = 3;
+- the THM-4743 sentence;
+- the LRC file description;
+- the Busch citation for f(11) = 225;
+- smaller wording: the McKay correspondence named, "lies inside" for the planar regime, the source of the 8,200 figure,
+  and the order-cap qualification of "only 3 needs symmetry".
 
 ## 11. Reproduction
 

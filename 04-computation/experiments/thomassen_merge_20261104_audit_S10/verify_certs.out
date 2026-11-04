@@ -1,0 +1,4 @@
+certificates: 560  failures: 0
+odd H <= 1125 not certified: [3, 7, 21]
+max order used: 9  order histogram: {4: 2, 5: 3, 6: 11, 7: 57, 8: 244, 9: 243}
+composition spot-checks: 30 trials, H multiplicative in 30, |Aut| as predicted in 30

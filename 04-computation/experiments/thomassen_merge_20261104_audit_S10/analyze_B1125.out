@@ -1,0 +1,9 @@
+strong classes with H <= 1125 by order: [(1, 1), (3, 1), (4, 1), (5, 6), (6, 35), (7, 353), (8, 6008), (9, 53275), (10, 48094)]
+total incl. order 1: 107774   excl. order 1: 107773   (author's 'strong classes read': 107773)
+|Aut| values: [1, 3, 5, 7, 9, 15, 21]   |Aut| | H violations: 0
+non-cyclic Aut by order: [(7, 2), (8, 6), (9, 30), (10, 98)]
+orders <=  7: strong H values <= 1125 attained only with nontrivial Aut: [3, 171, 175, 189]
+orders <=  8: strong H values <= 1125 attained only with nontrivial Aut: [3, 621, 633]
+orders <=  9: strong H values <= 1125 attained only with nontrivial Aut: [3]
+orders <= 10: strong H values <= 1125 attained only with nontrivial Aut: [3]
+odd H <= 1125 not in the product closure of asymmetric strong classes of order <= 10: [3, 7, 21]

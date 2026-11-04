@@ -63,7 +63,7 @@ Hamiltonian cycle of G - c_i.
 - Exhaustive over every graph containing the cycle 0..n-1 at n = 4-7: 644 UH graphs, no consecutive non-critical
   pair.
 - Random UH graphs: 924 (Python) and 1,800 (C) at n = 6-11, none.
-- Two non-critical vertices can be adjacent through a chord (first at n = 9). So the non-critical set is independent
+- Two non-critical vertices can be adjacent through a chord (first at n = 8: 16 labelled graphs; corrected by the audit, MISTAKE-708). So the non-critical set is independent
   along C but not in G.
 - In the square-sum UH graphs Q_32 and Q_33 (THM-4851), the non-critical sets have sizes 6 and 9, are pairwise
   non-adjacent in the graph, and contain no two cycle-consecutive vertices.

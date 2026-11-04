@@ -1,0 +1,13 @@
+order 3: strong classes with H<=1125: 1
+order 4: strong classes with H<=1125: 1  (min H 5)  |Aut| IR/backtrack mismatches 0  |Aut| dist: 1:1
+order 5: strong classes with H<=1125: 6  (min H 9)  |Aut| IR/backtrack mismatches 0  |Aut| dist: 1:4 3:1 5:1
+order 6: strong classes with H<=1125: 35  (min H 15)  |Aut| IR/backtrack mismatches 0  |Aut| dist: 1:29 3:6
+order 7: strong classes with H<=1125: 353  (min H 25)  |Aut| IR/backtrack mismatches 0  |Aut| dist: 1:324 3:25 5:1 7:1 9:1 21:1
+order 8: strong classes with H<=1125: 6008  (min H 45)  |Aut| IR/backtrack mismatches 0  |Aut| dist: 1:5798 3:200 5:4 9:6
+order 9: strong classes with H<=1125: 53275  (min H 75)  |Aut| IR/backtrack mismatches 0  |Aut| dist: 1:51921 3:1307 5:15 9:30 15:2
+order 10: strong classes with H<=1125: 48094  (min H 125)  |Aut| IR/backtrack mismatches 0  |Aut| dist: 1:45322 3:2654 5:20 9:98
+
+real	5m22.881s
+user	0m0.000s
+sys	0m0.015s
+finished

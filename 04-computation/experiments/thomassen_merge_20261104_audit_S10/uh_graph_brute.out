@@ -1,0 +1,12 @@
+[brute] n= 4 chords=2  UH graphs=3  with two cycle-consecutive NC vertices=0  with two NC joined by a chord=0  (0.0s)
+      |NC| distribution: 0:1 2:2
+[brute] n= 5 chords=5  UH graphs=11  with two cycle-consecutive NC vertices=0  with two NC joined by a chord=0  (0.0s)
+      |NC| distribution: 0:1 1:5 2:5
+[brute] n= 6 chords=9  UH graphs=69  with two cycle-consecutive NC vertices=0  with two NC joined by a chord=0  (0.0s)
+      |NC| distribution: 0:4 1:18 2:21 3:26
+[brute] n= 7 chords=14  UH graphs=561  with two cycle-consecutive NC vertices=0  with two NC joined by a chord=0  (0.0s)
+      |NC| distribution: 0:15 1:84 2:203 3:259
+[brute] n= 8 chords=20  UH graphs=6903  with two cycle-consecutive NC vertices=0  with two NC joined by a chord=16  (0.0s)
+      |NC| distribution: 0:75 1:560 2:1812 3:2512 4:1944
+[brute] n= 9 chords=27  UH graphs=113107  with two cycle-consecutive NC vertices=0  with two NC joined by a chord=180  (3.7s)
+      |NC| distribution: 0:463 1:4545 2:17901 3:40248 4:49950

@@ -1,0 +1,10 @@
+order 3: strong classes with H<=224: 1
+order 4: strong classes with H<=224: 1  (min H 5)  |Aut| mismatches 0  |Aut| dist: 1:1
+order 5: strong classes with H<=224: 6  (min H 9)  |Aut| mismatches 0  |Aut| dist: 1:4 3:1 5:1
+order 6: strong classes with H<=224: 35  (min H 15)  |Aut| mismatches 0  |Aut| dist: 1:29 3:6
+order 7: strong classes with H<=224: 353  (min H 25)  |Aut| mismatches 0  |Aut| dist: 1:324 3:25 5:1 7:1 9:1 21:1
+order 8: strong classes with H<=224: 1233  (min H 45)  |Aut| mismatches 0  |Aut| dist: 1:1152 3:76 9:5
+order 9: strong classes with H<=224: 789  (min H 75)  |Aut| mismatches 0  |Aut| dist: 1:707 3:82
+order 10: strong classes with H<=224: 225  (min H 125)  |Aut| mismatches 0  |Aut| dist: 1:225
+order 11: strong classes with H<=224: 0  (min H 0)  |Aut| mismatches 0  |Aut| dist:
+no strong classes with H<=224 at order 11; by Moon + monotonicity none at any larger order

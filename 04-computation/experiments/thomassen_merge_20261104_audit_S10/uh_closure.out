@@ -1,0 +1,12 @@
+UH order 4: 1 distinct H values, min 5 max 5
+UH order 5: 2 distinct H values, min 9 max 11
+UH order 6: 4 distinct H values, min 15 max 23
+UH order 7: 11 distinct H values, min 25 max 51
+UH order 8: 18 distinct H values, min 45 max 107
+UH order 9: 48 distinct H values, min 75 max 227
+UH order 10: 91 distinct H values, min 125 max 467
+UH order 11: 201 distinct H values, min 225 max 963
+holes of the UH-product closure using UH orders 4..11 only: 144
+claimed 24 holes (UH orders 4..14) that my closure COVERS (would be a contradiction): []
+my extra holes (must be covered by UH orders 12..14 with H in [375,1125]): 120 [543, 553, 579, 593, 603, 609, 611, 623, 631, 643, 651, 673, 677, 681, 687, 689, 699, 701, 707, 719, 721, 723, 731, 737, 743, 747, 749, 751, 753, 757, 761, 763, 771, 773, 779, 789, 791, 793, 807, 809, 811, 813, 817, 823, 827, 839, 847, 849, 853, 857, 861, 863, 865, 871, 877, 881, 883, 887, 889, 903, 907, 911, 913, 917, 919, 921, 923, 929, 937, 939, 941, 943, 949, 951, 953, 959, 967, 971, 973, 977]
+smallest extra hole: 543

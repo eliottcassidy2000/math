@@ -1,0 +1,34 @@
+order 1: classes 1
+order 2: classes 1  strong 0  min H(strong) 18446744073709551615  |Aut| IR-vs-backtrack mismatches 0  |Aut| does not divide H: 0
+   |Aut| distribution (all classes): 1:1
+   |Aut| distribution (strong classes):
+   UH classes (hc=1): 0, asymmetric 0
+order 3: classes 2  strong 1  min H(strong) 3  |Aut| IR-vs-backtrack mismatches 0  |Aut| does not divide H: 0
+   |Aut| distribution (all classes): 1:1 3:1
+   |Aut| distribution (strong classes): 3:1
+   UH classes (hc=1): 1, asymmetric 0
+order 4: classes 4  strong 1  min H(strong) 5  |Aut| IR-vs-backtrack mismatches 0  |Aut| does not divide H: 0
+   |Aut| distribution (all classes): 1:2 3:2
+   |Aut| distribution (strong classes): 1:1
+   UH classes (hc=1): 1, asymmetric 1, violations of [r+k=n+1, one run, 2<=r<=n-1]: 0
+   N(n,r) r=2..n-1: 1 0   E[r] = 2/1 = 2.000000000000
+order 5: classes 12  strong 6  min H(strong) 9  |Aut| IR-vs-backtrack mismatches 0  |Aut| does not divide H: 0
+   |Aut| distribution (all classes): 1:7 3:4 5:1
+   |Aut| distribution (strong classes): 1:4 3:1 5:1
+   UH classes (hc=1): 3, asymmetric 3, violations of [r+k=n+1, one run, 2<=r<=n-1]: 0
+   N(n,r) r=2..n-1: 1 1 1   E[r] = 9/3 = 3.000000000000
+order 6: classes 56  strong 35  min H(strong) 15  |Aut| IR-vs-backtrack mismatches 0  |Aut| does not divide H: 0
+   |Aut| distribution (all classes): 1:41 3:12 5:2 9:1
+   |Aut| distribution (strong classes): 1:29 3:6
+   UH classes (hc=1): 8, asymmetric 8, violations of [r+k=n+1, one run, 2<=r<=n-1]: 0
+   N(n,r) r=2..n-1: 1 2 3 2   E[r] = 30/8 = 3.750000000000
+order 7: classes 456  strong 353  min H(strong) 25  |Aut| IR-vs-backtrack mismatches 0  |Aut| does not divide H: 0
+   |Aut| distribution (all classes): 1:399 3:47 5:4 7:1 9:4 21:1
+   |Aut| distribution (strong classes): 1:324 3:25 5:1 7:1 9:1 21:1
+   UH classes (hc=1): 21, asymmetric 21, violations of [r+k=n+1, one run, 2<=r<=n-1]: 0
+   N(n,r) r=2..n-1: 1 3 6 7 4   E[r] = 94/21 = 4.476190476190
+order 8: classes 6880  strong 6008  min H(strong) 45  |Aut| IR-vs-backtrack mismatches 0  |Aut| does not divide H: 0
+   |Aut| distribution (all classes): 1:6556 3:292 5:10 7:2 9:16 15:2 21:2
+   |Aut| distribution (strong classes): 1:5798 3:200 5:4 9:6
+   UH classes (hc=1): 55, asymmetric 55, violations of [r+k=n+1, one run, 2<=r<=n-1]: 0
+   N(n,r) r=2..n-1: 1 4 10 16 16 8   E[r] = 286/55 = 5.200000000000

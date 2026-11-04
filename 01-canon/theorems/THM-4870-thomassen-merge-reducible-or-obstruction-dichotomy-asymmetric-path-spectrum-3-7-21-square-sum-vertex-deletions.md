@@ -1,6 +1,6 @@
 ---
 id: THM-4870
-title: "The Thomassen merge. (A) Reducible-or-obstruction: a uniquely Hamiltonian tournament of order n has r non-critical vertices (each a reduction T -> T - v within the class) and k cut arcs (each a one-arc cut), with r + k = n + 1, so max(r, k) >= (n + 1)/2; over the F(2n - 6) classes, E[r] = ((5 + √5) n + 12 - 8√5)/10 + O(φ^(-4n)), i.e. the fractions φ/√5 and (5 - √5)/10, an exact analogue of the linearly-many-reducible-configurations-or-obstructing-cycles theorem for planar triangulations (Inoue-Kawarabayashi-Miyashita-Mohar-Thomassen-Thorup 2026). (B) The trivial group and {7, 21}: H(T) = 3 forces Aut(T) ⊇ Z_3, and for every odd H <= 1125, H is the Hamiltonian-path count of an asymmetric tournament iff H is not 3, 7 or 21. (C) Square-sum graphs: no Q_N is hypohamiltonian or hypotraceable; the vertex-deleted subgraphs of the non-traceable orders, of Q_23-Q_31, and the non-critical sets of the uniquely Hamiltonian Q_32 and Q_33 (6 and 9 vertices, pairwise non-adjacent, never cycle-consecutive). (D) Uniquely Hamiltonian graphs: no two consecutive non-critical cycle vertices for n <= 9, but 1,300 labelled examples at n = 10 (HYP-9462 (B) refuted). Also: a tournament automorphism group is a planar (Maschke) group iff it is cyclic."
+title: "The Thomassen merge. (A) Reducible-or-obstruction: a uniquely Hamiltonian tournament of order n has r non-critical vertices (each a reduction T -> T - v within the class) and k cut arcs (each a one-arc cut), with r + k = n + 1, so max(r, k) >= (n + 1)/2; over the F(2n - 6) classes, E[r] = ((5 + √5) n + 12 - 8√5)/10 + O(n φ^(-4n)), i.e. the fractions φ/√5 and (5 - √5)/10, a tournament analogue (INTERPRETATION) of the linearly-many-reducible-configurations-or-obstructing-cycles theorem for planar triangulations (Inoue-Kawarabayashi-Miyashita-Mohar-Thomassen-Thorup 2026). (B) The trivial group and {7, 21}: H(T) = 3 forces Aut(T) ⊇ Z_3, and for every odd H <= 1125, H is the Hamiltonian-path count of an asymmetric tournament iff H is not 3, 7 or 21. (C) Square-sum graphs: no Q_N with N >= 3 is hypohamiltonian or hypotraceable; the vertex-deleted subgraphs of the non-traceable orders, of Q_23-Q_31, and the non-critical sets of the uniquely Hamiltonian Q_32 and Q_33 (6 and 9 vertices, pairwise non-adjacent, never cycle-consecutive). (D) Uniquely Hamiltonian graphs: no two consecutive non-critical cycle vertices for n <= 9, but 1,300 labelled examples at n = 10 (HYP-9462 (B) refuted). Also: a tournament automorphism group is a planar (Maschke) group iff it is cyclic."
 status: >
   PROVED (elementary; kind-pasteur-2026-11-04-S10): (A) from THM-4868 (D) and (H) and singularity analysis of the
   rational generating function; (B) the forcing of Z_3; (C1) from THM-4505 and THM-4851 (a); the Maschke remark (odd
@@ -8,12 +8,16 @@ status: >
   FINITE-EXACT: (A) the exact mean checked for n <= 70; (B) for H <= 1125 (complete census below 225, sufficient
   construction on [225, 1125], pre-registered as HYP-9462 (A1) in ffedbba714 and CONFIRMED); (C2)-(C3); (D)
   exhaustive for n <= 10 on labelled graphs containing a fixed Hamiltonian cycle.
-  CITED: arXiv:2603.24880 (the 2026 four-colour theorem); Thomassen 1974/1976 and MathWorld for the Thomassen graphs;
+  CITED: arXiv:2603.24880 (the 2026 four-colour theorem); Busch 2006 (strong floor f(11) = 225); Thomassen 1974/1976
+  and MathWorld for the Thomassen graphs;
   Royle-Praeger-Glasby-Freedman-Devillers 2023 (equinumerosity); THM-4747 (|Aut| | H); THM-4812; THM-1370; THM-4810.
   INTERPRETATION / NUMEROLOGY: the four-colour analogy, the fives, and the coincidences of the note's section 7. The
-  {6,4,8,9,12} + 105 co-occurrence in the LRC handoff file is a coincidence.
+  {6,4,8,9,12} + 105 co-occurrence in the LRC handoff file is forced by that file's design: it lists all 792
+  five-subsets of {1..12}, and 105 is a lift for 462 of them.
   REFUTED (recorded here as (D)): HYP-9462 (B).
-  AUDIT: see the note, section 10.
+  AUDIT: independent adversarial audit, SOUND WITH CORRECTIONS (no blocking finding; all finite claims reproduced
+  with the auditor's own code; corrections applied; MISTAKE-708):
+  04-computation/experiments/thomassen_merge_20261104_audit_S10/AUDIT.md.
 session: kind-pasteur-2026-11-04-S10
 source: 05-knowledge/results/thomassen_merge_hypohamiltonian_groups_20261104.md
 related:
@@ -56,7 +60,9 @@ Let T be uniquely Hamiltonian of order n >= 4, with r non-critical vertices and 
 
 Over all classes of order n,
 
-    E[r] = ((5 + √5) n + 12 - 8√5)/10 + O(φ^(-4n)).
+    E[r] = ((5 + √5) n + 12 - 8√5)/10 + O(n φ^(-4n)).
+
+(The error term is (72 + 161√5/5)(n - 8) φ^(-4n) + ..., so the factor n is needed; independent audit.)
 
 *Proof.* E[r] = [x^n] ∂_t G(x, 1) / [x^n] G(x, 1) for the generating function of THM-4868 (H).
 - G(x, 1) = x^4 / (1 - 3x + x^2) has a simple pole at φ^(-2).
@@ -65,18 +71,22 @@ Over all classes of order n,
   1 - (1 + 2t) x + t x^2.
 - The constant was checked exactly against the rows for n <= 70.
 
-This is the exact counterpart of the 2026 triangulation theorem: linearly many reductions, or linearly many nested
-obstructions.
+This is a tournament analogue of the 2026 triangulation theorem (INTERPRETATION): linearly many reductions, or
+linearly many nested obstructions. Two differences:
+- here the reductions form one run of adjacent vertices, not a non-touching family;
+- r + k = n + 1 is an identity, not a lower bound.
 
 ## (B) The trivial group, Z_3 and {7, 21}
 
-- If H(T) = 3, then T has a strong component with H = 3, which is C_3, so Aut(T) ⊇ Z_3.
+- If H(T) = 3, then T has a strong component with H = 3. Strong tournaments of order >= 4 have H >= 5, so that
+  component is C_3, and Aut(T) ⊇ Z_3.
 - **FINITE-EXACT.** For odd H <= 1125, an asymmetric tournament with H Hamiltonian paths exists iff H is not 3, 7 or 21.
   - Below 225 this uses every strong class of order <= 10 with its automorphism group. Strong tournaments of order
-    >= 11 have H >= 225.
+    >= 11 have H >= f(11) = 225 (Busch 2006; THM-4744).
   - On [225, 1125] it uses products of asymmetric strong classes of order <= 10 and of uniquely Hamiltonian
     tournaments, which are asymmetric (THM-4868 (E)).
-  - The only strong value <= 1125 among orders <= 10 that needs a symmetry is 3.
+  - Across all orders <= 10, the only strong value <= 1125 that needs a symmetry is 3. Within smaller order caps
+    more do: 171, 175 and 189 within orders <= 7, and 621 and 633 within orders <= 8.
 
 Whether the statement holds for all H is HYP-9462 (A), which strengthens the open Chan-Pak completeness.
 
@@ -86,8 +96,10 @@ Z_3 × Z_3 (H = 99) and F_21 (P_7).
 
 ## (C) Square-sum graphs Q_N
 
-- **(C1)** No Q_N is hypohamiltonian or hypotraceable.
-  - For N <= 30 the minimum degree is 1 (THM-4505).
+- **(C1)** No Q_N with N >= 3 is hypohamiltonian or hypotraceable. (Q_2, two isolated vertices, is trivially
+  hypotraceable.)
+  - For 3 <= N <= 30, Q_N has a vertex of degree <= 1: degree 0 for N <= 6, and minimum degree 1 for 7 <= N <= 30
+    (THM-4505).
   - Q_31 has minimum degree 2 and is traceable.
   - For N >= 32, Q_N is Hamiltonian (THM-4851).
 - **(C2)** For the non-traceable N = 18, 19, 20, 21, 22, 24, the vertices v with Q_N - v traceable number 1, 1, 1, 1,

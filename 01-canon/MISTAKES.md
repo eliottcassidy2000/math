@@ -22660,3 +22660,46 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     classical construction's recorded form (here, Shelor's grammar in a 10-29 packet), not only canon and the same day's
     log.
   - Give every one-step recursion derived from a recurrence with base rows its own range.
+
+## MISTAKE-708 (2026-11-04, kind-pasteur-2026-11-04-S10, THM-4870, HYP-9462 and the note `05-knowledge/results/thomassen_merge_hypohamiltonian_groups_20261104.md` at the pre-audit commit aaaf77d896; found by the independent audit `04-computation/experiments/thomassen_merge_20261104_audit_S10/AUDIT.md`) -- a wrong error term, an interpretation typed as "exact", a miscount of non-planar Thomassen graphs, wrong coincidence-ledger arithmetic, and small-case slips
+
+- **What was claimed.**
+  - (1) E[r] = ((5 + √5) n + 12 - 8√5)/10 + O(φ^(-4n)) for the run length of uniquely Hamiltonian tournaments.
+  - (2) "An exact analogue" of the 2026 linear-reducibility four-colour theorem, in the THM-4870 title and body and in
+    the note.
+  - (3) {6,4,8,9,12} as "the crossing numbers of the five non-planar Thomassen graphs".
+  - (4) In the coincidence ledger, 15 landmarks in [20, 50] and about 2.4 expected chance hits.
+  - (5) Smaller errors:
+    - HYP-9462 said chord-adjacent non-critical pairs first appear at n = 9;
+    - "No Q_N is hypohamiltonian or hypotraceable", with "minimum degree 1 for N <= 30";
+    - uniquely Hamiltonian tournaments called rigid "from n = 3";
+    - a sentence calling C_3, Z_5{1,2}, P_7 exceptions to |Aut±| = 2 mod 4;
+    - the LRC handoff described as listing lifts 14 + 13j;
+    - "strong order >= 11 implies H >= 225" used without citation.
+- **Why it was wrong.**
+  - (1) The correction to the mean is (72 + 161√5/5)(n - 8) φ^(-4n) + ..., which grows like n φ^(-4n).
+  - (2) The tournament reductions form one run of adjacent vertices, while the 2026 configurations are pairwise
+    non-touching. And r + k = n + 1 is an identity, not a lower bound. The comparison is an interpretation.
+  - (3) MathWorld gives the 32- and 34-vertex Thomassen graphs crossing number 8 each. So six graphs are non-planar,
+    and {6,4,8,9,12} is the set of distinct values.
+  - (4) Only 12 of the 15 landmarks lie in [20, 50], so about 1.94 hits are expected and P(>= 4) is about 0.06.
+  - (5) The smaller errors:
+    - the n = 8 census already has 16 chord-adjacent pairs;
+    - Q_N has isolated vertices for N <= 6, and Q_2 is trivially hypotraceable;
+    - C_3 has Aut = Z_3;
+    - THM-4743 (2) is about Gluck-type exceptional tournaments (no subset of trivial Aut±-stabilizer), which those
+      three satisfy;
+    - the file lists all 792 five-subsets of {1..12}, with 105 a lift for 462 of them and seven lift residue classes;
+    - the bound is Busch's f(11) = 225 (Busch 2006; THM-4744).
+- **Repair.** All points corrected in THM-4870, the note and HYP-9462. The four-colour comparison is retyped
+  INTERPRETATION with its two differences stated, and the ADE/rotation-group match is now named as the McKay
+  correspondence, not a coincidence.
+- **How it was caught.** The independent audit:
+  - re-derived the generating-function asymptotics symbolically;
+  - re-read MathWorld and the LRC file;
+  - recomputed the ledger;
+  - re-ran every census with its own code.
+- **Lesson.**
+  - State asymptotic error terms only after computing the next term of the expansion; a double pole leaves a factor n.
+  - "Exact" belongs to identities, not to analogies.
+  - When a prompt's numbers are matched to a published table, re-read the table for repeated values before counting.

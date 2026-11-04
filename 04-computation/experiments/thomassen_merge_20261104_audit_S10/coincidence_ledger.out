@@ -1,0 +1,4 @@
+|L| = 15  |L in [20,50]| = 12 [23, 24, 25, 31, 32, 33, 34, 38, 39, 40, 41, 42]  |[20,50]| = 31
+Thomassen orders in [20,50]: [20, 24, 32, 34, 41]  hits: [24, 32, 34, 41]
+correct (12/31)                  expected hits 1.94   P(>= 4 hits) hypergeometric = 0.0600
+as written in the note (15/31)   expected hits 2.42   P(>= 4 hits) hypergeometric = 0.1462

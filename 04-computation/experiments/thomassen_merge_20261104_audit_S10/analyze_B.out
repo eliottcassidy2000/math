@@ -1,0 +1,46 @@
+=== consistency of the two censuses on orders <= 9, H <= 224 ===
+multisets of (n, H, |Aut|) agree: True  total 2419 2419
+strong classes with H <= 224 by order (orders 1..10): [(1, 1), (3, 1), (4, 1), (5, 6), (6, 35), (7, 353), (8, 1233), (9, 789), (10, 225)]
+total strong classes with H <= 224 (incl. order 1): 2644  excl. order 1: 2643
+min H of strong classes by order: [(1, 1), (3, 3), (4, 5), (5, 9), (6, 15), (7, 25), (8, 45), (9, 75), (10, 125)]
+
+=== asymmetric spectrum below 225 (complete: strong order >= 11 has H >= 225, verified by the census) ===
+holes of the FULL spectrum (all tournaments) in odd [1,224]: [7, 21]
+holes of the ASYMMETRIC spectrum in odd [1,224]: [3, 7, 21]
+strong H values <= 224 (orders <= 10) attained only by symmetric strong classes: [3]
+|Aut| values among strong classes with H <= 224: [1, 3, 5, 7, 9, 21]
+|Aut| | H violations (H<=224 census): 0
+strong classes with H = 7 or 21 (orders <= 10): []
+
+=== orders <= 8 and <= 9 (complete, all H): values needing symmetry ===
+orders <= 8: strong H values attained only with nontrivial Aut: [3, 621, 633]
+   ... of which <= 1125: [3, 621, 633]
+   |Aut| values among strong classes of order <= 8 (all H): [1, 3, 5, 7, 9, 21]; with H <= 1125: [1, 3, 5, 7, 9, 21]
+orders <= 9: strong H values attained only with nontrivial Aut: [3, 2931, 2961, 3159, 3243, 3267, 3279, 3303, 3333, 3357]
+   ... of which <= 1125: [3]
+   |Aut| values among strong classes of order <= 9 (all H): [1, 3, 5, 7, 9, 15, 21, 81]; with H <= 1125: [1, 3, 5, 7, 9, 15, 21]
+max H among classes of order 8 (all strong classes): 661
+
+=== automorphism groups of small strong classes ===
+order 1 strong: |Aut| distribution {1: 1}
+order 2 strong: |Aut| distribution {}
+order 3 strong: |Aut| distribution {3: 1}
+order 4 strong: |Aut| distribution {1: 1}
+order 5 strong: |Aut| distribution {1: 4, 3: 1, 5: 1}
+order 6 strong: |Aut| distribution {1: 29, 3: 6}
+order 7 strong: |Aut| distribution {1: 324, 3: 25, 5: 1, 7: 1, 9: 1, 21: 1}
+order 8 strong: |Aut| distribution {1: 5798, 3: 200, 5: 4, 9: 6}
+order 9 strong: |Aut| distribution {1: 175615, 3: 2440, 5: 22, 7: 1, 9: 51, 15: 2, 21: 1, 81: 1}
+strong classes with NON-CYCLIC Aut, orders <= 9:
+  order 1: 0 classes []
+  order 2: 0 classes []
+  order 3: 0 classes []
+  order 4: 0 classes []
+  order 5: 0 classes []
+  order 6: 0 classes []
+  order 7: 2 classes [(99, 9, 9), (189, 24, 21)]
+  order 8: 6 classes [(153, 9, 9), (207, 9, 9), (207, 9, 9), (207, 9, 9), (207, 9, 9), (621, 45, 9)]
+  order 9: 51 classes [(225, 9, 9), (297, 9, 9), (297, 9, 9), (297, 9, 9), (297, 9, 9), (297, 9, 9), (333, 9, 9), (333, 9, 9), (405, 9, 9), (423, 9, 9), (423, 9, 9), (423, 9, 9), (423, 9, 9), (423, 9, 9), (423, 9, 9), (423, 9, 9), (423, 9, 9), (441, 18, 9), (459, 9, 9), (459, 9, 9)]
+  order-7 non-cyclic: H=99 hc=9 |Aut|=9 scores=[2, 2, 2, 3, 4, 4, 4] self-converse=True
+  order-7 non-cyclic: H=189 hc=24 |Aut|=21 scores=[3, 3, 3, 3, 3, 3, 3] self-converse=True
+C3 => C3: H = 9

@@ -1,0 +1,4 @@
+[down ] n=10 chords=35  UH graphs=2689657  with two cycle-consecutive NC vertices=1300  with two NC joined by a chord=7480  (1.6s)
+      |NC| distribution: 0:3728 1:43350 2:233135 3:721590 4:1053650 5:632904 6:1300
+      witnesses' |NC| distribution: 6:1300
+      fewest edges among witnesses: 14; lexicographically first such chord set: {0,5} {1,7} {2,6} {3,8}

@@ -1,0 +1,3 @@
+C_3       |Aut+-| =  6, |Aut| =  3, abelian = False, max element order = 3, #involutions = 3, dihedral = True
+Z_5{1,2}  |Aut+-| = 10, |Aut| =  5, abelian = False, max element order = 5, #involutions = 5, dihedral = True
+P_7       |Aut+-| = 42, |Aut| = 21, abelian = False, max element order = 7, #involutions = 7, dihedral = False

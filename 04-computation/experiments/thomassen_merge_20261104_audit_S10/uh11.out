@@ -1,0 +1,17 @@
+order 3: UH classes 1 (C3, |Aut| = 3)
+order 4: UH classes 1  asymmetric 1  violations of [r+k=n+1, one run, 2<=r<=n-1] 0
+   N(n,r) r=2..n-1: 1 0   E[r] = 2/1 = 2.000000000000000
+order 5: UH classes 3  asymmetric 3  violations of [r+k=n+1, one run, 2<=r<=n-1] 0
+   N(n,r) r=2..n-1: 1 1 1   E[r] = 9/3 = 3.000000000000000
+order 6: UH classes 8  asymmetric 8  violations of [r+k=n+1, one run, 2<=r<=n-1] 0
+   N(n,r) r=2..n-1: 1 2 3 2   E[r] = 30/8 = 3.750000000000000
+order 7: UH classes 21  asymmetric 21  violations of [r+k=n+1, one run, 2<=r<=n-1] 0
+   N(n,r) r=2..n-1: 1 3 6 7 4   E[r] = 94/21 = 4.476190476190476
+order 8: UH classes 55  asymmetric 55  violations of [r+k=n+1, one run, 2<=r<=n-1] 0
+   N(n,r) r=2..n-1: 1 4 10 16 16 8   E[r] = 286/55 = 5.200000000000000
+order 9: UH classes 144  asymmetric 144  violations of [r+k=n+1, one run, 2<=r<=n-1] 0
+   N(n,r) r=2..n-1: 1 5 15 30 41 36 16   E[r] = 853/144 = 5.923611111111111
+order 10: UH classes 377  asymmetric 377  violations of [r+k=n+1, one run, 2<=r<=n-1] 0
+   N(n,r) r=2..n-1: 1 6 21 50 85 102 80 32   E[r] = 2506/377 = 6.647214854111406
+order 11: UH classes 987  asymmetric 987  violations of [r+k=n+1, one run, 2<=r<=n-1] 0
+   N(n,r) r=2..n-1: 1 7 28 77 155 231 248 176 64   E[r] = 7275/987 = 7.370820668693010

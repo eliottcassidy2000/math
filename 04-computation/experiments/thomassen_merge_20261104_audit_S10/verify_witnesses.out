@@ -1,0 +1,6 @@
+THM-4870 (D) witness: n=10 edges=14 contains cycle 0..n-1: True  #Ham cycles=1  NC=[0, 2, 3, 5, 7, 8]  cycle-consecutive NC pairs=[(2, 3), (7, 8)]
+n=13 rows symmetric: True  loops: False
+HYP-9462 n=13 witness: n=13 edges=19 contains cycle 0..n-1: True  #Ham cycles=1  NC=[2, 4, 5, 7]  cycle-consecutive NC pairs=[(4, 5)]
+  quoted Hamiltonian cycle of G - 4 valid: True
+  quoted Hamiltonian cycle of G - 5 valid: True
+planar Q_N for N in 1..40: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
