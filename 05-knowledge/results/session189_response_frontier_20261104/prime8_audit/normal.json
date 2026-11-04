@@ -1,0 +1,67 @@
+{
+  "endpoint_zero_representatives": [
+    [
+      4,
+      17,
+      42,
+      131,
+      45,
+      75,
+      31,
+      119
+    ],
+    [
+      16,
+      5,
+      41,
+      67,
+      46,
+      139,
+      55,
+      95
+    ]
+  ],
+  "independent_anchor_primitive_coordinates": 272,
+  "independent_cpp_sha256": "dfeab4b9968a763a7afa4082c3d3a90ef67968c314b5b1cb6784627274cbf0bb",
+  "input_pins": {
+    "all_representatives.json": "55409706be4f8c71f5e2b2cd0777c9c0f0f8de97eac4b174d648f50b638dc903",
+    "anchor_exploration.json": "3b4eea48684fa66c1eae52a8be7036795c9193e30a5c84d1541cc2a86b8610bf",
+    "cover.json": "7af3e95ebe2c20d594f8e7623a10fa08682a4963e6a5d1b61b9600d56ea06175",
+    "quotients.json": "7f50d34b7a7a9cb3efd02e4282ded6da9f7ab7df4b2333819217c3d48ada7b3a"
+  },
+  "joint_endpoint_coordinates": 256512,
+  "labeled_orbit_totals": [
+    1,
+    1,
+    2,
+    8,
+    64,
+    1024,
+    32768,
+    2097152,
+    268435456
+  ],
+  "level_sizes": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456,
+    6880
+  ],
+  "marginal_endpoint_coordinates": 64128,
+  "order8_extensions_checked": 58368,
+  "output_pins": {
+    "anchor_recount.json": "2c0c6152501fd8796f7907584ad0ae8d27187ed3edabacd0b4d39e7fb109de06",
+    "canonical_orbits.json": "0aa7a27f13202e1c0999882884df4c6856460268cf1eebeae82ffc4b940894cb",
+    "joint_endpoints.json": "559ad64e7415016f5c9cf3a03a3910310167235923e2a9721810ee4faa73e094"
+  },
+  "prime8_representatives": 4008,
+  "rooted_extension_isomorphisms_checked": 62423,
+  "singleton_position_patterns": 512,
+  "source_sha256": "552338aacb27976744dbfa22dbfc550907ff93280977a6ecfadfc4112d169609",
+  "status": "PASS"
+}

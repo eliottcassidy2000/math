@@ -1,0 +1,18 @@
+{
+  "ambient_patterns": 8,
+  "anchor_patterns": 512,
+  "complete_named_basis_coordinates": 5476,
+  "complete_retained_full_cube_values": 262144,
+  "independent_literal_counts": 6548,
+  "literal_order_max": 20,
+  "output_pins": {
+    "physical_counts.json": "34a8d387e5073b4e3bdb2f574f673dad7f25badf57db4ddec8ee1b59c73afca6",
+    "physical_probe_recount.json": "a71cc33e613b735a5e8ff016fac3dc372e9d452b78f5e943c6499f17da7ffb31"
+  },
+  "producer_physical_sha256": "01a313d64c4bf472b06ec2737979016d362e9254b76a23d9bdac6e1fecb74b9c",
+  "source_pins": {
+    "literal.cpp": "64115a2396f1b16713432422eb031a78d18f204a1c638f6f51ecdb84d14271f0",
+    "physical_audit.py": "07a543bdc600fb66563aabc0a65ad49f34cfba4f52877a986a54a01bf5e726b4"
+  },
+  "status": "PASS"
+}
