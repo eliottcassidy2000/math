@@ -1,0 +1,114 @@
+[
+  {
+    "actual_grouped_contrast": 8,
+    "case": 0,
+    "gamma": 2,
+    "symmetric_capacity": 4,
+    "target": 0
+  },
+  {
+    "actual_grouped_contrast": 8,
+    "case": 0,
+    "gamma": 2,
+    "symmetric_capacity": 4,
+    "target": 1
+  },
+  {
+    "actual_grouped_contrast": -8,
+    "case": 0,
+    "gamma": -2,
+    "symmetric_capacity": 4,
+    "target": 2
+  },
+  {
+    "actual_grouped_contrast": 4,
+    "case": 0,
+    "gamma": 1,
+    "symmetric_capacity": 4,
+    "target": 3
+  },
+  {
+    "actual_grouped_contrast": 48,
+    "case": 1,
+    "gamma": 2,
+    "symmetric_capacity": 24,
+    "target": 0
+  },
+  {
+    "actual_grouped_contrast": 48,
+    "case": 1,
+    "gamma": 2,
+    "symmetric_capacity": 24,
+    "target": 1
+  },
+  {
+    "actual_grouped_contrast": -48,
+    "case": 1,
+    "gamma": -2,
+    "symmetric_capacity": 24,
+    "target": 2
+  },
+  {
+    "actual_grouped_contrast": 24,
+    "case": 1,
+    "gamma": 1,
+    "symmetric_capacity": 24,
+    "target": 3
+  },
+  {
+    "actual_grouped_contrast": 432,
+    "case": 2,
+    "gamma": 2,
+    "symmetric_capacity": 216,
+    "target": 0
+  },
+  {
+    "actual_grouped_contrast": 432,
+    "case": 2,
+    "gamma": 2,
+    "symmetric_capacity": 216,
+    "target": 1
+  },
+  {
+    "actual_grouped_contrast": -432,
+    "case": 2,
+    "gamma": -2,
+    "symmetric_capacity": 216,
+    "target": 2
+  },
+  {
+    "actual_grouped_contrast": 216,
+    "case": 2,
+    "gamma": 1,
+    "symmetric_capacity": 216,
+    "target": 3
+  },
+  {
+    "actual_grouped_contrast": 72,
+    "case": 3,
+    "gamma": 2,
+    "symmetric_capacity": 36,
+    "target": 0
+  },
+  {
+    "actual_grouped_contrast": 72,
+    "case": 3,
+    "gamma": 2,
+    "symmetric_capacity": 36,
+    "target": 1
+  },
+  {
+    "actual_grouped_contrast": -72,
+    "case": 3,
+    "gamma": -2,
+    "symmetric_capacity": 36,
+    "target": 2
+  },
+  {
+    "actual_grouped_contrast": 36,
+    "case": 3,
+    "gamma": 1,
+    "symmetric_capacity": 36,
+    "target": 3
+  }
+]

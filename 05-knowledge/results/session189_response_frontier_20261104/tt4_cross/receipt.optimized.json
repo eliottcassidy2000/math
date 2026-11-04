@@ -1,0 +1,327 @@
+{
+  "degree_counts": {
+    "0": 36,
+    "1": 576,
+    "2": 4464,
+    "3": 17784,
+    "4": 34362
+  },
+  "full_named_coefficients": 57222,
+  "full_named_graphs": 36,
+  "individual_replacement_quartics": 768,
+  "kernel_certificates": [
+    {
+      "constant": 2,
+      "local_replacement": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "target": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "terms": [
+        {
+          "P": [
+            2,
+            2,
+            0
+          ],
+          "Q": [
+            0,
+            -2,
+            0
+          ],
+          "p": 0,
+          "q": 1,
+          "r": 3,
+          "weight": 1
+        },
+        {
+          "P": [
+            0,
+            2,
+            0
+          ],
+          "Q": [
+            -2,
+            -2,
+            0
+          ],
+          "p": 0,
+          "q": 1,
+          "r": 2,
+          "weight": -1
+        }
+      ]
+    },
+    {
+      "constant": 2,
+      "local_replacement": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "target": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "terms": [
+        {
+          "P": [
+            1,
+            1,
+            0
+          ],
+          "Q": [
+            0,
+            -1,
+            0
+          ],
+          "p": 0,
+          "q": 1,
+          "r": 3,
+          "weight": 2
+        },
+        {
+          "P": [
+            0,
+            2,
+            0
+          ],
+          "Q": [
+            -2,
+            -2,
+            0
+          ],
+          "p": 0,
+          "q": 1,
+          "r": 2,
+          "weight": -1
+        }
+      ]
+    },
+    {
+      "constant": -2,
+      "local_replacement": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "target": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "terms": [
+        {
+          "P": [
+            2,
+            3,
+            0
+          ],
+          "Q": [
+            -1,
+            -3,
+            0
+          ],
+          "p": 0,
+          "q": 1,
+          "r": 3,
+          "weight": 2
+        },
+        {
+          "P": [
+            -2,
+            -2,
+            0
+          ],
+          "Q": [
+            0,
+            2,
+            0
+          ],
+          "p": 0,
+          "q": 1,
+          "r": 2,
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "constant": 1,
+      "local_replacement": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "target": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "terms": [
+        {
+          "P": [
+            1,
+            1,
+            0
+          ],
+          "Q": [
+            0,
+            -1,
+            0
+          ],
+          "p": 0,
+          "q": 2,
+          "r": 3,
+          "weight": 1
+        },
+        {
+          "P": [
+            0,
+            1,
+            0
+          ],
+          "Q": [
+            -1,
+            -1,
+            0
+          ],
+          "p": 0,
+          "q": 2,
+          "r": 1,
+          "weight": -1
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "case": 0,
+      "constant": 2,
+      "contrast": 8,
+      "symmetric_capacity": 4,
+      "target": 0
+    },
+    {
+      "case": 0,
+      "constant": 2,
+      "contrast": 8,
+      "symmetric_capacity": 4,
+      "target": 1
+    },
+    {
+      "case": 0,
+      "constant": -2,
+      "contrast": -8,
+      "symmetric_capacity": 4,
+      "target": 2
+    },
+    {
+      "case": 0,
+      "constant": 1,
+      "contrast": 4,
+      "symmetric_capacity": 4,
+      "target": 3
+    },
+    {
+      "case": 1,
+      "constant": 2,
+      "contrast": 48,
+      "symmetric_capacity": 24,
+      "target": 0
+    },
+    {
+      "case": 1,
+      "constant": 2,
+      "contrast": 48,
+      "symmetric_capacity": 24,
+      "target": 1
+    },
+    {
+      "case": 1,
+      "constant": -2,
+      "contrast": -48,
+      "symmetric_capacity": 24,
+      "target": 2
+    },
+    {
+      "case": 1,
+      "constant": 1,
+      "contrast": 24,
+      "symmetric_capacity": 24,
+      "target": 3
+    },
+    {
+      "case": 2,
+      "constant": 2,
+      "contrast": 432,
+      "symmetric_capacity": 216,
+      "target": 0
+    },
+    {
+      "case": 2,
+      "constant": 2,
+      "contrast": 432,
+      "symmetric_capacity": 216,
+      "target": 1
+    },
+    {
+      "case": 2,
+      "constant": -2,
+      "contrast": -432,
+      "symmetric_capacity": 216,
+      "target": 2
+    },
+    {
+      "case": 2,
+      "constant": 1,
+      "contrast": 216,
+      "symmetric_capacity": 216,
+      "target": 3
+    },
+    {
+      "case": 3,
+      "constant": 2,
+      "contrast": 72,
+      "symmetric_capacity": 36,
+      "target": 0
+    },
+    {
+      "case": 3,
+      "constant": 2,
+      "contrast": 72,
+      "symmetric_capacity": 36,
+      "target": 1
+    },
+    {
+      "case": 3,
+      "constant": -2,
+      "contrast": -72,
+      "symmetric_capacity": 36,
+      "target": 2
+    },
+    {
+      "case": 3,
+      "constant": 1,
+      "contrast": 36,
+      "symmetric_capacity": 36,
+      "target": 3
+    }
+  ],
+  "physical_queries": 544,
+  "scope": "Crossed TT4 target branch, profile-preserving other children and every fixed ambient. General all-transitive exclusion requires separately reviewed incoming common-end theorem.",
+  "status": "PASS"
+}

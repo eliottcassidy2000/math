@@ -1,0 +1,70 @@
+{
+  "format": "lossless-compressed-base64-parts-v2",
+  "archives": [
+    {
+      "path": "tt4_cross/bank.json",
+      "bytes": 574644,
+      "sha256": "4fd71748c8bf9a0f7b03a2b7284f0d9ad03993287e9173026c3917ea145aac42",
+      "git_blob_sha": "f39c83f4cc5c2937155fbf5a38464940a3b915bb",
+      "compression": "xz",
+      "compressed_bytes": 82236,
+      "compressed_sha256": "40f9e54ce3e70b495d94c6a9e1ebfc5c6fe8e541450957c52ba795e27f2de84d",
+      "parts": [
+        "tt4_cross/bank.json.xz.b64.parts/00001.txt",
+        "tt4_cross/bank.json.xz.b64.parts/00002.txt",
+        "tt4_cross/bank.json.xz.b64.parts/00003.txt"
+      ]
+    },
+    {
+      "path": "tt4_cross/independent_values.txt",
+      "bytes": 322443,
+      "sha256": "801415bf8c0cb96f8735530356e2c134536a6412435b365a51ca6c833354cd0d",
+      "git_blob_sha": "ca6c44d5ac0f8c1e499b067264c865c2a9d6c538",
+      "compression": "xz",
+      "compressed_bytes": 48172,
+      "compressed_sha256": "97d1ce47ce9b31349bdba9c865764041bcdd5841ac29567173ee0aa2c591b4dc",
+      "parts": [
+        "tt4_cross/independent_values.txt.xz.b64.parts/00001.txt",
+        "tt4_cross/independent_values.txt.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "tt4_cross/physical_queries.json",
+      "bytes": 61448,
+      "sha256": "235f737c5f69c464025e4c973d4cc685347a9ba56ed1487d77d028f742547460",
+      "git_blob_sha": "90eb678d178130f09e692b516fb134196217ab30",
+      "compression": "xz",
+      "compressed_bytes": 4500,
+      "compressed_sha256": "136d312357d70f3fd4b28689504791c30d237851db4bd3a6d30a28469d69ba44",
+      "parts": [
+        "tt4_cross/physical_queries.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "tt4_cross_audit/arbitrary_replacement_banks.json",
+      "bytes": 110177,
+      "sha256": "873a596056232cdf6d50711777794808f3f67d588cc414a0e40445b3e122255e",
+      "git_blob_sha": "d5c7477876a7edd91fb40015c39bf2395dcde940",
+      "compression": "xz",
+      "compressed_bytes": 27888,
+      "compressed_sha256": "43e57c1bdc5a7ca3f749a6a1672d9566086b9ffa408a1122e2c2fc8d0eacb996",
+      "parts": [
+        "tt4_cross_audit/arbitrary_replacement_banks.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "tt4_cross_audit/literal_banks.json",
+      "bytes": 576904,
+      "sha256": "2cf208ed903b1020989be8ac126bf77f5649ca6463147183392455f8a57d2431",
+      "git_blob_sha": "5ac9e3078b801eb643c1a947dcccf875337f7d7a",
+      "compression": "xz",
+      "compressed_bytes": 82340,
+      "compressed_sha256": "6c1ca358de33922aaf2ebfe46f69e19d82257ca81f66a30ce83f1d28bfd3228c",
+      "parts": [
+        "tt4_cross_audit/literal_banks.json.xz.b64.parts/00001.txt",
+        "tt4_cross_audit/literal_banks.json.xz.b64.parts/00002.txt",
+        "tt4_cross_audit/literal_banks.json.xz.b64.parts/00003.txt"
+      ]
+    }
+  ]
+}
