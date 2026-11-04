@@ -139,6 +139,9 @@ Incoming Session180 independently verifies the full automorphism orders and
 provides the exact squarefree endpoint carrier G=(I-ZA)^(-1)Z, with sequential
 birth and edge-reversal updates. Its finite fixed-suffix-bank obstruction is
 integrated; none of its finite claims is used as an all-target theorem.
+The final [incoming-work audit](INCOMING.md) also integrates its genuine
+all-clock two-branch prototype on a different suffix and distinguishes its
+second +2 path from the exact name-preserving lineages here.
 
 The recovered August mechanisms are THM-3121
 [path-cover walk-content substitution](../../../01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md),

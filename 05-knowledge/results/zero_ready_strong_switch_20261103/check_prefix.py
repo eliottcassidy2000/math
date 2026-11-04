@@ -43,6 +43,7 @@ def main():
             h, p, tri = profile(rows)
             assert p >= 1 << n
             assert p >= 2 * h + (1 << n) - 2
+            assert p >= (n + 1) * h
             assert (p == 1 << n) == (tri == 0)
             equality[0] += p == 1 << n
             if tri:

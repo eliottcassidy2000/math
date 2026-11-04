@@ -73,6 +73,13 @@ The relative-order-preserving insertion observation also proves the
 monotonicity H(A[S])<=H(A) used in the argument. It does not assert induced
 extension of a prescribed path with fixed endpoints.
 
+An additional incoming bound from
+[Session180's prefix proof](../session180_170807_returns_20261104/older/PROOF.md)
+is P_A(2)>=(n+1)H(A). Split each Hamiltonian path at each of its n+1 cut
+positions; the ordered pair of resulting paths recovers both the path and
+its cut, so these are distinct two-slot covers. The exact checker includes
+this inequality too. It complements the capacity/equality bounds above.
+
 ## Complete exclusion at the actual 170807 state
 
 The actual marked strong suffix in the inherited named graph has
@@ -120,7 +127,7 @@ escapes this sieve and is precisely the live direction here.
 checks every labelled tournament of orders 1..5 (1099 graphs), including
 transitive and single-triangle equality controls, against direct subset
 Hamiltonian dynamic programming. It checks (P1), (P2), both equality
-characterizations, and the four actual target values. This finite audit is
+characterizations, the incoming cut bound, and the four actual target values. This finite audit is
 separate from the all-order proof above. It uses no spectrum exclusion as a
 filter, and performs no write to inherited packets.
 
