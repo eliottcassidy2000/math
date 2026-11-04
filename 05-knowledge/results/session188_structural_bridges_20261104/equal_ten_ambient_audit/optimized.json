@@ -1,0 +1,423 @@
+{
+  "audit_sha256": "73e290360a6fc9e1131049bc3b0f8fc524ff8e5654ceffc80774eac1f2bd7f5e",
+  "budget": 47249,
+  "complete_coefficients_compared": 1085,
+  "complete_maximum_count_hashes": [
+    {
+      "complete_orientation_count_bytes_sha256": "a9256f2b45b632c77e2f04aca82f251eee477c49def75b071f3463a39db1ad07",
+      "n": 4
+    },
+    {
+      "complete_orientation_count_bytes_sha256": "e489b69ed108ab234fb176655cd57293961e2a9b295f495c4cf18edf73145b06",
+      "n": 6
+    }
+  ],
+  "coordinates": [
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "5a4f8a4699c07edf1cca697a2bf552877c0b6908be972a7d24b07a9e7cbd33ec",
+      "h": 2,
+      "maximum": -4989085320769773110460000,
+      "minimum": -441145097063878581135952264453824
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "71937fe225fbb67ba2a8c4a9194b52e787b8af9e7fe6ac11ae61f500ec8cc130",
+      "h": 3,
+      "maximum": -651366052487953234459848000,
+      "minimum": -8284819111805952981826753224374208
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "b55176ae5dc24585345df125669858f4ac5db281ea934168995642a633ce6fba",
+      "h": 4,
+      "maximum": -12217503589417582616094867072,
+      "minimum": -99543422256293717964917592334238592
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "e3f5b35500056da565d31c3a8a1b25f1658ce1a16c70196d81c0c20fea3bebf8",
+      "h": 5,
+      "maximum": -142160405632711743684502972800,
+      "minimum": -857348973031744196608867697493936000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "15eb54eb945e09a9004b5bfd3a3c21d17fc9156408d9f696e32928b3616febae",
+      "h": 6,
+      "maximum": -1275384526375019868758220399360,
+      "minimum": -5621962169149778197046730552394141440
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "e6992f93f90b252ed5f11d25a0e5abe84c67754e1ac5b51103d01deff8b107a0",
+      "h": 7,
+      "maximum": -9163657824720680589249474247680,
+      "minimum": -29105308633556530235191650299575741440
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "db1d87dd3869cea12bfcafdc8b0b7d7d70dac2eab36c46f44a1e07ada1e09ff5",
+      "h": 8,
+      "maximum": -53630290084178705550343488000000,
+      "minimum": -121775152996773946783408613401886423040
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "94023a187ee7e8daaf75098097c141aaab4fb13e8b26a7ab3e3670c91168f357",
+      "h": 9,
+      "maximum": -265483623463134995235493128960000,
+      "minimum": -418167412838937661481538318786525696000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "046ec5e256b8933e72efa7bd31c6364011892ea32b141340c64d307c8432c124",
+      "h": 10,
+      "maximum": -1115051371404471888922432354867200,
+      "minimum": -1190463451157318417124157779306474240000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "6b76baf0cf5ab1433889530df991366b077e0a35cc66a33f05be9065d4bbb7ab",
+      "h": 11,
+      "maximum": -3981614808393083671756766265600000,
+      "minimum": -2826808812434262240442842769380843878400
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "8776a1669faab7928d5e869699bbebc66cb2bebc68b287db8bf9d96a7d2b3ca6",
+      "h": 12,
+      "maximum": -12230489450458312298470396548403200,
+      "minimum": -5614756939931672003497949929923295948800
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "6c7b1bdbb5f054374090fe85dab2bc55cc44f977b7b739ae20e8e4127c56fddf",
+      "h": 13,
+      "maximum": -32464372259503827244857391802265600,
+      "minimum": -9328619226599238027761376951666304512000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "c371106f6236c3da9271cb5f87ad3a9992de21c7cebb338edeb6177da96561ee",
+      "h": 14,
+      "maximum": -74671362686608021109312603664998400,
+      "minimum": -12928465207871148775835573328474307584000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "d8e8729d8afa79fe0eb7aa8700ce364ed795044453931e400496a91dd30249ef",
+      "h": 15,
+      "maximum": -149012329874146110958005400780800000,
+      "minimum": -14860504482369443532846965591036559360000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "7c42f959d41cd4ac32db446a9b086668e47c3536dbd1eb4ef2c769f59f060d72",
+      "h": 16,
+      "maximum": -257940039551406429807910095519744000,
+      "minimum": -14038871009807348703907072964066082816000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "94ba362a7217e99cbdfc7df52c051643d4fa5185c8249a874764497e5533ab14",
+      "h": 17,
+      "maximum": -386651374225220019158712367202304000,
+      "minimum": -10758019249960378187191839124890107904000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "59df3995cf80a227e52fa2b6da2e15ba3d65df04860d00c09f3666a64cbe3bc2",
+      "h": 18,
+      "maximum": -500295678943026712626828635111424000,
+      "minimum": -6566227188302902880724480837289672704000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "7e37635df42ab6ce19e4954959c860a8b0afa29848dafcdcd27be46e93abf3d4",
+      "h": 19,
+      "maximum": -556006095909582639024557216563200000,
+      "minimum": -3115001548969338664796237532159344640000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "64d3104193f60c4aaebeff8f0f2bf83618952cc55ab2c5a660544907213ac68e",
+      "h": 20,
+      "maximum": -526989599436285259133756011315200000,
+      "minimum": -1113740617228425647815611301647482880000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "45d7b1158e57208d6e43addb052b43bb78a9ccb8f0db177a95d149ee99c9c9c7",
+      "h": 21,
+      "maximum": -421850076328509425906227907788800000,
+      "minimum": -291031784611354815978949803892408320000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "ecc75f808bee6464d9fd2ab2471d4c1d247b4ffaff483ca855956617bf068fc0",
+      "h": 22,
+      "maximum": -281421377663768767941977722060800000,
+      "minimum": -55662644557851449203950632911503360000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "bf1f3c3f3007c72674911d1bf0897f86ad2930bebe7ba70df6a736f5048b9366",
+      "h": 23,
+      "maximum": -153602588163055220368848558489600000,
+      "minimum": -11383806734093814389854710225960960000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "e40071542fa00eda8b221fd3a4ac13e2fe9edc59f81ca3c4ac402b22934b9ec0",
+      "h": 24,
+      "maximum": -66822305672724899393134028390400000,
+      "minimum": -1988718117233024220323456263127040000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "ac5a824194b7a318d9e5bc43073ccf271eb35ed5959327cde4f5592b4c27e1ea",
+      "h": 25,
+      "maximum": -22284373798877002651238400000000000,
+      "minimum": -343312543507742902340222976000000000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "0e7f6f0fddaced883946df1a7e37671d14b04a7f7daa46c5e0e53d71fc2f29cf",
+      "h": 26,
+      "maximum": -5349943535867212379966668800000000,
+      "minimum": -48868165272361745194423418880000000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "a84fad0e9b7d6c24426a8cffc722e47e60a3ef5619da964e5890ec90b2d78e4f",
+      "h": 27,
+      "maximum": -823198530451627423354060800000000,
+      "minimum": -4939191182709764540124364800000000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "f334bdc7d871791ce79b7c50e397df1404d3c6b90671fa75fad1190cc7ee6a99",
+      "h": 28,
+      "maximum": -60977668922342772100300800000000,
+      "minimum": -365866013534056632601804800000000
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc",
+      "h": 29,
+      "maximum": 0,
+      "minimum": 0
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc",
+      "h": 30,
+      "maximum": 0,
+      "minimum": 0
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc",
+      "h": 31,
+      "maximum": 0,
+      "minimum": 0
+    },
+    {
+      "coefficients": 35,
+      "complete_list_sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc",
+      "h": 32,
+      "maximum": 0,
+      "minimum": 0
+    }
+  ],
+  "independent_small_maximum_censuses": [
+    {
+      "first_maximizer_code": 4,
+      "histogram": [
+        [
+          1,
+          24
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          5,
+          24
+        ]
+      ],
+      "labelled_tournaments": 64,
+      "maximum": 5,
+      "n": 4
+    },
+    {
+      "first_maximizer_code": 408,
+      "histogram": [
+        [
+          1,
+          720
+        ],
+        [
+          3,
+          960
+        ],
+        [
+          5,
+          2160
+        ],
+        [
+          9,
+          2960
+        ],
+        [
+          11,
+          1440
+        ],
+        [
+          13,
+          1440
+        ],
+        [
+          15,
+          2208
+        ],
+        [
+          17,
+          1440
+        ],
+        [
+          19,
+          1440
+        ],
+        [
+          23,
+          2880
+        ],
+        [
+          25,
+          1440
+        ],
+        [
+          27,
+          480
+        ],
+        [
+          29,
+          2880
+        ],
+        [
+          31,
+          1440
+        ],
+        [
+          33,
+          2640
+        ],
+        [
+          37,
+          3600
+        ],
+        [
+          41,
+          720
+        ],
+        [
+          43,
+          1440
+        ],
+        [
+          45,
+          480
+        ]
+      ],
+      "labelled_tournaments": 32768,
+      "maximum": 45,
+      "n": 6
+    }
+  ],
+  "literal_word_kernel_exponent_box": 10,
+  "producer_modes_equal": true,
+  "scope": "Order ten only: complete continuous certificate H<=47250; earlier orders separately audited. No inference above ten.",
+  "simplex_vertices": [
+    [
+      0,
+      47250,
+      95520,
+      55980,
+      818520,
+      5103000,
+      16435440,
+      29635200,
+      30240000,
+      16329600,
+      3628800
+    ],
+    [
+      0,
+      47250,
+      662508,
+      1756944,
+      1952496,
+      5103000,
+      16435440,
+      29635200,
+      30240000,
+      16329600,
+      3628800
+    ],
+    [
+      0,
+      47250,
+      2930460,
+      25570440,
+      74526960,
+      90151200,
+      50454720,
+      29635200,
+      30240000,
+      16329600,
+      3628800
+    ],
+    [
+      0,
+      47250,
+      12002268,
+      273911184,
+      1929711696,
+      5958477000,
+      9065563920,
+      6697414080,
+      1935319680,
+      16329600,
+      3628800
+    ],
+    [
+      0,
+      1,
+      1022,
+      55980,
+      818520,
+      5103000,
+      16435440,
+      29635200,
+      30240000,
+      16329600,
+      3628800
+    ]
+  ],
+  "source_sha256": {
+    "covered_ambient/PROOF.md": "e1696d6830d41ad95a0bd7b2d91ca4f3116312d304e739211f79a1d8eeddf5e3",
+    "covered_positivity/PROOF.md": "7a9e1d0cbf71ce70c96e0b6158a89ae1c0ea0583736a0bf5f9cc8acc9b84bd56",
+    "equal_nine_ambient/PROOF.md": "f5c32f6d93743d31083532ba9c3884685b96ef288524004b657ab4e466b0bbed",
+    "equal_small_ambient/PROOF.md": "1d82fbb2eeacd679c6196bbdccab61320eb041171f528f151dc91661c4f11141",
+    "equal_ten_ambient/PROOF.md": "e2ce7ca477a2eec99b16e87f5bafad62826040e153c7b3fbba6544ff693fc3b1",
+    "equal_ten_ambient/PROVENANCE.md": "eb5a9ae699bf699901daa94eea872392eccfd209c7ddb5a57972b01c4956262c",
+    "equal_ten_ambient/maxima.cpp": "b76f3fee0884cf4a22ed828b4f8cc7ab6894550649c9bd7b4a190dbdaf632d7c",
+    "equal_ten_ambient/verify.py": "faba9a4dfdcc00dbb28fe28dc55914ab59307fbade91b5a36a60bb57f13ceade",
+    "profile_cone_obstruction/PROOF.md": "ee2c2be62f355ba6dae151a30b8943c4314936d2fac787e37a0c2ede0f012705"
+  },
+  "split_bound": 47250,
+  "status": "PASS"
+}
