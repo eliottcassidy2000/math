@@ -1,0 +1,107 @@
+{
+  "checks": {
+    "lte": 34200,
+    "capacities": 58482,
+    "lcm_patterns": 600,
+    "cut_bookkeeping": 8
+  },
+  "support": [
+    3,
+    5,
+    7,
+    11,
+    13
+  ],
+  "abundancy_ceiling": "1001/384",
+  "certificates": [
+    {
+      "q": 5,
+      "C": 3,
+      "B": 16,
+      "rounds": [
+        {
+          "before": {
+            "3": 15,
+            "5": 15,
+            "7": 15,
+            "11": 15,
+            "13": 15
+          },
+          "raw_column_caps": {
+            "3": 6,
+            "5": 1,
+            "7": 2,
+            "11": 3,
+            "13": 1
+          },
+          "after_role_rounding": {
+            "3": 6,
+            "5": 1,
+            "7": 2,
+            "11": 2,
+            "13": 0
+          }
+        }
+      ],
+      "reason": "positive role exponent impossible"
+    },
+    {
+      "q": 13,
+      "C": 4,
+      "B": 32,
+      "rounds": [
+        {
+          "before": {
+            "3": 31,
+            "5": 31,
+            "7": 31,
+            "11": 31,
+            "13": 31
+          },
+          "raw_column_caps": {
+            "3": 5,
+            "5": 2,
+            "7": 4,
+            "11": 4,
+            "13": 1
+          },
+          "after_role_rounding": {
+            "3": 4,
+            "5": 2,
+            "7": 4,
+            "11": 4,
+            "13": 1
+          }
+        }
+      ],
+      "reason": "not strongly connected",
+      "remaining_edges": [
+        [
+          3,
+          11
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          13,
+          7
+        ]
+      ]
+    }
+  ],
+  "status": "all exact checks passed"
+}
