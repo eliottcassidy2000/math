@@ -1,0 +1,11 @@
+{
+  "all_small_base_tournaments": 75,
+  "data_sha256": "c04d80c522b0835d309aa1b60cd4d8aefca7b73ef9fc63a89f268de7a2d5bb46",
+  "literal_inflations": 155,
+  "maximum_physical_order": 18,
+  "nonempty_subsets_tested": 635370,
+  "prime_node_comparisons": 90,
+  "scope": "Literal verification of prime-quotient and physical-child preservation under transitive inflation. These small N=2,3 controls do not claim to meet the larger Seidel sufficient exponents or exhaust module-family targets.",
+  "source_sha256": "b2dfa4eb00502ec6b667e8d7f3a3bd305b8fa97a1daa195551121158e26d6ea3",
+  "status": "PASS"
+}

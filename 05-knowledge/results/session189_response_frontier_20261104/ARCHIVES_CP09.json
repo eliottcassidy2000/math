@@ -1,0 +1,29 @@
+{
+  "format": "lossless-compressed-base64-parts-v2",
+  "archives": [
+    {
+      "path": "thickening/structural_controls.json",
+      "bytes": 86436,
+      "sha256": "c04d80c522b0835d309aa1b60cd4d8aefca7b73ef9fc63a89f268de7a2d5bb46",
+      "git_blob_sha": "1822e1040a7ff38225cf9aa457a6de35477413aa",
+      "compression": "xz",
+      "compressed_bytes": 5892,
+      "compressed_sha256": "0c07e1d9a1c678406dcb54ad5ef810613b124e3434a4fbc1e9a19888cdbe4185",
+      "parts": [
+        "thickening/structural_controls.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "thickening_audit/structural_recount.json",
+      "bytes": 114693,
+      "sha256": "7aa15a78c70925befa9bd5bc2f21acd1db2546b082ccd10054b0a3c3d2343780",
+      "git_blob_sha": "ad4e02f75456b3d9d9284ed570fcfed6ce50c9b7",
+      "compression": "xz",
+      "compressed_bytes": 7140,
+      "compressed_sha256": "9d2d1dc9b06d7ca68fd1f237e619709db3e9a08073b62967b132fa15ec86174d",
+      "parts": [
+        "thickening_audit/structural_recount.json.xz.b64.parts/00001.txt"
+      ]
+    }
+  ]
+}

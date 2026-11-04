@@ -1,0 +1,1 @@
+Independent approved review of source-relative separation after uniform dyadic transitive thickening. Read REVIEW.md for exact scope and reproduction. The audit imports no producer implementation. normal.json and optimized.json are byte-identical PASS receipts. Full module/strong-tree data and actual complete-profile controls are retained.
