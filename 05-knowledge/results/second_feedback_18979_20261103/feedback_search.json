@@ -1,0 +1,8 @@
+{
+  "status": "FINITE_EXACT_BOUNDED_WORD_SEARCH",
+  "word_bound": 13,
+  "hit_cap": 100,
+  "counter": "nodes 2589833 pruned 1745718 hits 0",
+  "hits": [],
+  "scope": "two feedback vertices, uniform clone letter1, all four-letter tails up to13; stops at100 coefficient hits; all hits checked as actual tournaments"
+}

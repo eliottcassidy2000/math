@@ -1,0 +1,864 @@
+{
+  "status": "FINITE_EXACT_COMPLETE_ONE_READY_FIBRES_USING_CITED_ORDER_BOUND",
+  "source_coefficients": [
+    1243,
+    -1061
+  ],
+  "clone_mark_B3729": -1999,
+  "offsets": [
+    -4,
+    -2,
+    0,
+    2,
+    4
+  ],
+  "parent_classes_examined": 196417,
+  "fibres": [
+    {
+      "offset": 2,
+      "parent_n": 10,
+      "parent_rank": 685,
+      "rows": [
+        1026,
+        132,
+        1001,
+        1011,
+        999,
+        963,
+        899,
+        769,
+        515,
+        3,
+        1022
+      ],
+      "root": 10,
+      "profile": [
+        4277,
+        206,
+        207,
+        4278
+      ],
+      "queries": []
+    },
+    {
+      "offset": 0,
+      "parent_n": 11,
+      "parent_rank": 688,
+      "rows": [
+        2178,
+        1924,
+        1929,
+        1971,
+        2023,
+        1991,
+        1935,
+        1792,
+        1537,
+        1025,
+        1,
+        2046
+      ],
+      "root": 11,
+      "profile": [
+        4275,
+        508,
+        509,
+        4276
+      ],
+      "queries": [
+        {
+          "q": 7,
+          "H2": 8447,
+          "defect2": 1,
+          "coefficients": [
+            2086,
+            103
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              8,
+              0
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 8,
+          "H2": 8891,
+          "defect2": 1,
+          "coefficients": [
+            2308,
+            -341
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 9,
+          "H2": 8891,
+          "defect2": 1,
+          "coefficients": [
+            2308,
+            -341
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 10,
+          "H2": 8891,
+          "defect2": 1,
+          "coefficients": [
+            2308,
+            -341
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "offset": 4,
+      "parent_n": 11,
+      "parent_rank": 829,
+      "rows": [
+        2306,
+        1860,
+        2041,
+        2035,
+        2019,
+        1987,
+        1921,
+        1795,
+        1536,
+        1025,
+        1,
+        2046
+      ],
+      "root": 11,
+      "profile": [
+        4279,
+        378,
+        379,
+        4280
+      ],
+      "queries": [
+        {
+          "q": 8,
+          "H2": 8035,
+          "defect2": 1,
+          "coefficients": [
+            1878,
+            523
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              9,
+              0
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 9,
+          "H2": 9179,
+          "defect2": 1,
+          "coefficients": [
+            2450,
+            -621
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 10,
+          "H2": 9179,
+          "defect2": 1,
+          "coefficients": [
+            2450,
+            -621
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "offset": 0,
+      "parent_n": 11,
+      "parent_rank": 875,
+      "rows": [
+        2306,
+        1796,
+        1801,
+        1811,
+        1831,
+        1999,
+        1951,
+        1823,
+        1536,
+        1025,
+        1,
+        2046
+      ],
+      "root": 11,
+      "profile": [
+        4275,
+        372,
+        373,
+        4276
+      ],
+      "queries": [
+        {
+          "q": 8,
+          "H2": 8133,
+          "defect2": 1,
+          "coefficients": [
+            1929,
+            417
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              9,
+              0
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 9,
+          "H2": 9303,
+          "defect2": 1,
+          "coefficients": [
+            2514,
+            -753
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 10,
+          "H2": 9303,
+          "defect2": 1,
+          "coefficients": [
+            2514,
+            -753
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "offset": -2,
+      "parent_n": 12,
+      "parent_rank": 628,
+      "rows": [
+        4274,
+        4084,
+        4089,
+        4083,
+        4064,
+        4032,
+        3969,
+        3840,
+        3585,
+        3073,
+        2049,
+        1,
+        4094
+      ],
+      "root": 12,
+      "profile": [
+        4273,
+        1336,
+        1337,
+        4274
+      ],
+      "queries": [
+        {
+          "q": 4,
+          "H2": 8665,
+          "defect2": 1,
+          "coefficients": [
+            2196,
+            -119
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              6,
+              0
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 5,
+          "H2": 8665,
+          "defect2": 1,
+          "coefficients": [
+            2196,
+            -119
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              6,
+              0
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 6,
+          "H2": 8551,
+          "defect2": 1,
+          "coefficients": [
+            2139,
+            -5
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 7,
+          "H2": 8503,
+          "defect2": 1,
+          "coefficients": [
+            2115,
+            43
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              8,
+              0
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 8,
+          "H2": 8737,
+          "defect2": 1,
+          "coefficients": [
+            2232,
+            -191
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 9,
+          "H2": 8737,
+          "defect2": 1,
+          "coefficients": [
+            2232,
+            -191
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 10,
+          "H2": 8737,
+          "defect2": 1,
+          "coefficients": [
+            2232,
+            -191
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 11,
+          "H2": 8737,
+          "defect2": 1,
+          "coefficients": [
+            2232,
+            -191
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "offset": -4,
+      "parent_n": 12,
+      "parent_rank": 783,
+      "rows": [
+        4610,
+        4068,
+        4073,
+        4083,
+        4071,
+        4033,
+        3969,
+        3841,
+        3585,
+        3072,
+        2049,
+        1,
+        4094
+      ],
+      "root": 12,
+      "profile": [
+        4271,
+        696,
+        697,
+        4272
+      ],
+      "queries": [
+        {
+          "q": 5,
+          "H2": 8527,
+          "defect2": 1,
+          "coefficients": [
+            2128,
+            15
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 6,
+          "H2": 8527,
+          "defect2": 1,
+          "coefficients": [
+            2128,
+            15
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 7,
+          "H2": 8527,
+          "defect2": 1,
+          "coefficients": [
+            2128,
+            15
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 8,
+          "H2": 8527,
+          "defect2": 1,
+          "coefficients": [
+            2128,
+            15
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 9,
+          "H2": 7949,
+          "defect2": 1,
+          "coefficients": [
+            1839,
+            593
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              10,
+              0
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 10,
+          "H2": 9155,
+          "defect2": 1,
+          "coefficients": [
+            2442,
+            -613
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 11,
+          "H2": 9155,
+          "defect2": 1,
+          "coefficients": [
+            2442,
+            -613
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "offset": 2,
+      "parent_n": 13,
+      "parent_rank": 1047,
+      "rows": [
+        11906,
+        8180,
+        8185,
+        8179,
+        8161,
+        8129,
+        8065,
+        7936,
+        7681,
+        7168,
+        6144,
+        4096,
+        1,
+        8190
+      ],
+      "root": 13,
+      "profile": [
+        4277,
+        920,
+        921,
+        4278
+      ],
+      "queries": [
+        {
+          "q": 4,
+          "H2": 8477,
+          "defect2": 1,
+          "coefficients": [
+            2100,
+            77
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 5,
+          "H2": 8477,
+          "defect2": 1,
+          "coefficients": [
+            2100,
+            77
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 6,
+          "H2": 8477,
+          "defect2": 1,
+          "coefficients": [
+            2100,
+            77
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 7,
+          "H2": 8459,
+          "defect2": 1,
+          "coefficients": [
+            2091,
+            95
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              8,
+              0
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 8,
+          "H2": 8651,
+          "defect2": 1,
+          "coefficients": [
+            2187,
+            -97
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        },
+        {
+          "q": 9,
+          "H2": 8189,
+          "defect2": 1,
+          "coefficients": [
+            1956,
+            365
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              12,
+              0
+            ]
+          ],
+          "cover": [
+            12
+          ]
+        },
+        {
+          "q": 10,
+          "H2": 8189,
+          "defect2": 1,
+          "coefficients": [
+            1956,
+            365
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              12,
+              0
+            ]
+          ],
+          "cover": [
+            12
+          ]
+        },
+        {
+          "q": 11,
+          "H2": 8189,
+          "defect2": 1,
+          "coefficients": [
+            1956,
+            365
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              12,
+              0
+            ]
+          ],
+          "cover": [
+            12
+          ]
+        },
+        {
+          "q": 12,
+          "H2": 12095,
+          "defect2": 1,
+          "coefficients": [
+            3909,
+            -3541
+          ],
+          "exact_target": false,
+          "matching": [
+            [
+              0,
+              1
+            ]
+          ],
+          "cover": [
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "uniform_hits": 0,
+  "scope": "strong one-ready target at m=1; all one-start parents3..15; every matching-one exterior clone except the unique in-port, which cannot remain ready on cloning; clone-root cases handled by RC1/RC4"
+}

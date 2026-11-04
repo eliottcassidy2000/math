@@ -1,0 +1,95 @@
+{
+  "status": "FINITE_EXACT_WITH_ALL_SLOT_RECURRENCE",
+  "squares": [
+    {
+      "anchors": [
+        527,
+        2,
+        7,
+        44,
+        5,
+        4,
+        13,
+        3
+      ],
+      "component_count": 3,
+      "ordered_endpoint_guards": 48,
+      "nonzero_guards": 14,
+      "oriented_paths": 18,
+      "paths_modulo_reversal": 9
+    },
+    {
+      "anchors": [
+        527,
+        2,
+        7,
+        44,
+        5,
+        4,
+        13,
+        3,
+        8
+      ],
+      "component_count": 4,
+      "ordered_endpoint_guards": 192,
+      "nonzero_guards": 20,
+      "oriented_paths": 34,
+      "paths_modulo_reversal": 17
+    }
+  ],
+  "parity_hostiles": [
+    {
+      "slots": 2,
+      "universe_sizes": [
+        2,
+        2
+      ],
+      "proper_intersections_equal": true,
+      "injective_counts": [
+        0,
+        1
+      ],
+      "difference_absolute": 1
+    },
+    {
+      "slots": 3,
+      "universe_sizes": [
+        4,
+        4
+      ],
+      "proper_intersections_equal": true,
+      "injective_counts": [
+        2,
+        4
+      ],
+      "difference_absolute": 2
+    },
+    {
+      "slots": 4,
+      "universe_sizes": [
+        8,
+        8
+      ],
+      "proper_intersections_equal": true,
+      "injective_counts": [
+        102,
+        108
+      ],
+      "difference_absolute": 6
+    },
+    {
+      "slots": 5,
+      "universe_sizes": [
+        16,
+        16
+      ],
+      "proper_intersections_equal": true,
+      "injective_counts": [
+        16368,
+        16392
+      ],
+      "difference_absolute": 24
+    }
+  ],
+  "scope": "minimum square connectors on the specified anchors; arbitrary guarded slot menus in the theorem; not a classification of all square-sum graphs or tournaments"
+}

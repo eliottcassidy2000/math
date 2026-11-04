@@ -1,0 +1,163 @@
+{
+  "status": "FINITE_EXACT_DECLARED_ONE_READY_BANK",
+  "target_formula": "3729*2^m-3181",
+  "samples": [
+    4277,
+    11735
+  ],
+  "parent_banks": [
+    {
+      "parent_n": 3,
+      "classes": 1
+    },
+    {
+      "parent_n": 4,
+      "classes": 3
+    },
+    {
+      "parent_n": 5,
+      "classes": 8
+    },
+    {
+      "parent_n": 6,
+      "classes": 21
+    },
+    {
+      "parent_n": 7,
+      "classes": 55
+    },
+    {
+      "parent_n": 8,
+      "classes": 144
+    },
+    {
+      "parent_n": 9,
+      "classes": 377
+    },
+    {
+      "parent_n": 10,
+      "classes": 987
+    },
+    {
+      "parent_n": 11,
+      "classes": 2584
+    },
+    {
+      "parent_n": 12,
+      "classes": 6765
+    },
+    {
+      "parent_n": 13,
+      "classes": 17711
+    },
+    {
+      "parent_n": 14,
+      "classes": 46368
+    },
+    {
+      "parent_n": 15,
+      "classes": 121393
+    }
+  ],
+  "base_targets": [
+    {
+      "parent_n": 10,
+      "rank": 685,
+      "rows": [
+        1026,
+        132,
+        1001,
+        1011,
+        999,
+        963,
+        899,
+        769,
+        515,
+        3,
+        1022
+      ],
+      "profile": [
+        4277,
+        206,
+        207,
+        4278
+      ],
+      "matching_one_queries": []
+    },
+    {
+      "parent_n": 13,
+      "rank": 1047,
+      "rows": [
+        11906,
+        8180,
+        8185,
+        8179,
+        8161,
+        8129,
+        8065,
+        7936,
+        7681,
+        7168,
+        6144,
+        4096,
+        1,
+        8190
+      ],
+      "profile": [
+        4277,
+        920,
+        921,
+        4278
+      ],
+      "matching_one_queries": [
+        {
+          "clone_vertex": 4,
+          "H2": 8477,
+          "defect2": 1
+        },
+        {
+          "clone_vertex": 5,
+          "H2": 8477,
+          "defect2": 1
+        },
+        {
+          "clone_vertex": 6,
+          "H2": 8477,
+          "defect2": 1
+        },
+        {
+          "clone_vertex": 7,
+          "H2": 8459,
+          "defect2": 1
+        },
+        {
+          "clone_vertex": 8,
+          "H2": 8651,
+          "defect2": 1
+        },
+        {
+          "clone_vertex": 9,
+          "H2": 8189,
+          "defect2": 1
+        },
+        {
+          "clone_vertex": 10,
+          "H2": 8189,
+          "defect2": 1
+        },
+        {
+          "clone_vertex": 11,
+          "H2": 8189,
+          "defect2": 1
+        },
+        {
+          "clone_vertex": 12,
+          "H2": 12095,
+          "defect2": 1
+        }
+      ]
+    }
+  ],
+  "uniform_hits": [],
+  "scope": "all one-start parent classes orders3..15; inspect every exterior matching-one clone except unique in-port; no two-ready or split-incidence absence claim"
+}

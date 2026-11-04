@@ -1,0 +1,183 @@
+{
+  "status": "FINITE_EXACT_COMPLETE_ONE_READY_FIBRES_USING_CITED_ORDER_BOUND",
+  "bank": [
+    {
+      "kind": "census",
+      "n": 3,
+      "classes": 1
+    },
+    {
+      "kind": "census",
+      "n": 4,
+      "classes": 3
+    },
+    {
+      "kind": "census",
+      "n": 5,
+      "classes": 8
+    },
+    {
+      "kind": "census",
+      "n": 6,
+      "classes": 21
+    },
+    {
+      "kind": "census",
+      "n": 7,
+      "classes": 55
+    },
+    {
+      "kind": "census",
+      "n": 8,
+      "classes": 144
+    },
+    {
+      "kind": "census",
+      "n": 9,
+      "classes": 377
+    },
+    {
+      "kind": "census",
+      "n": 10,
+      "classes": 987
+    },
+    {
+      "kind": "census",
+      "n": 11,
+      "classes": 2584
+    },
+    {
+      "kind": "hit",
+      "n": 12,
+      "rank": 2611,
+      "target": 12835,
+      "h": 575,
+      "F": 12261,
+      "core_order": 9,
+      "core_rank": 171,
+      "tail_length": 2,
+      "tail_bits": 2
+    },
+    {
+      "kind": "census",
+      "n": 12,
+      "classes": 6765
+    },
+    {
+      "kind": "census",
+      "n": 13,
+      "classes": 17711
+    },
+    {
+      "kind": "census",
+      "n": 14,
+      "classes": 46368
+    },
+    {
+      "kind": "census",
+      "n": 15,
+      "classes": 121393
+    },
+    {
+      "kind": "census",
+      "n": 16,
+      "classes": 317811
+    },
+    {
+      "kind": "census",
+      "n": 17,
+      "classes": 832040
+    }
+  ],
+  "targets": [
+    {
+      "offset": 4,
+      "parent_order": 12,
+      "parent_rank": 2611,
+      "rows": [
+        5122,
+        3076,
+        3849,
+        3923,
+        4071,
+        4047,
+        3975,
+        3855,
+        3587,
+        3075,
+        2048,
+        1,
+        4094
+      ],
+      "root": 12,
+      "H": 12835,
+      "queries": [
+        {
+          "q": 10,
+          "coefficients": [
+            4602,
+            3631
+          ],
+          "coefficient_hit": false,
+          "defect2_if_hit": null
+        },
+        {
+          "q": 11,
+          "coefficients": [
+            9105,
+            -5375
+          ],
+          "coefficient_hit": false,
+          "defect2_if_hit": null
+        }
+      ]
+    }
+  ],
+  "wanted_coefficients": {
+    "2": [
+      [
+        5868,
+        1097
+      ],
+      [
+        6273,
+        287
+      ],
+      [
+        6300,
+        233
+      ],
+      [
+        6561,
+        -289
+      ],
+      [
+        11727,
+        -10621
+      ]
+    ],
+    "4": [
+      [
+        5868,
+        1099
+      ],
+      [
+        6273,
+        289
+      ],
+      [
+        6300,
+        235
+      ],
+      [
+        6561,
+        -287
+      ],
+      [
+        11727,
+        -10619
+      ]
+    ]
+  },
+  "scope": "all one-start parents through17; strong parent bound (12835+1)/2=6418<Busch f18=9375; exterior clone queries only, no native source substitution"
+}

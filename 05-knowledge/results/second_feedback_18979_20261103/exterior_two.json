@@ -1,0 +1,41 @@
+{
+  "status": "FINITE_EXACT_BOUNDED_TWO_ENTRY_CORE_BANK",
+  "core_count": 1387,
+  "core_bound": 9,
+  "parent_bound": 15,
+  "targets": [
+    {
+      "core_id": 479,
+      "tail": [],
+      "rows": [
+        2,
+        516,
+        521,
+        531,
+        615,
+        847,
+        911,
+        831,
+        543,
+        1025,
+        511
+      ],
+      "root": 10,
+      "profile": [
+        4277,
+        271,
+        273,
+        4279
+      ],
+      "queries": [
+        {
+          "q": 0,
+          "H2": 8019,
+          "defect2": 6
+        }
+      ]
+    }
+  ],
+  "uniform_hits": [],
+  "scope": "all legal binary tails on saved two-entry core presentations through order9; no complete all-order two-ready exclusion"
+}

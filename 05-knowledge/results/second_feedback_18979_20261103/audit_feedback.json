@@ -1,0 +1,9 @@
+{
+  "status": "FINITE_EXACT_INDEPENDENT_CONTROL",
+  "all_four_letter_words_through_length": 5,
+  "feedback_edge_orientations": 2,
+  "literal_cases": 2730,
+  "parity_checks": 2730,
+  "strong_cases": 1408,
+  "scope": "independent subset DP on actual Boolean relations; search pruning separately justified by canonical insertion of a new vertex"
+}

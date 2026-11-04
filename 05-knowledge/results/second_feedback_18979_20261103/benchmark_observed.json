@@ -1,0 +1,29 @@
+{
+  "status": "OBSERVED_WALL_CLOCK_NOT_A_THEOREM",
+  "runs": [
+    {
+      "n": 60,
+      "integer_seconds": 0.008761500008404255,
+      "fraction_seconds": 0.02935940001043491,
+      "ratio_fraction_over_integer": 3.35095588452578
+    },
+    {
+      "n": 100,
+      "integer_seconds": 0.11083639998105355,
+      "fraction_seconds": 0.30405040000914596,
+      "ratio_fraction_over_integer": 2.743235977180065
+    },
+    {
+      "n": 150,
+      "integer_seconds": 1.0112068000016734,
+      "fraction_seconds": 2.926496000000043,
+      "ratio_fraction_over_integer": 2.894062816819665
+    },
+    {
+      "n": 200,
+      "integer_seconds": 6.833089199993992,
+      "fraction_seconds": 19.72485779999988,
+      "ratio_fraction_over_integer": 2.88666768758371
+    }
+  ]
+}
