@@ -1,0 +1,4 @@
+maps SXPQ, depth 20: 1016391 states; h-values below 200000: 22403 of 100000; first missing [7, 11, 13, 19, 21, 23, 35, 37, 39, 41, 43, 47, 55, 59, 61, 63, 67, 69, 71, 73, 77, 79, 83, 95, 103]; count missing 77597
+   from 1: every odd in [1, 5] is an h-value
+   from 69: every odd in [69, 69] is an h-value
+   from 307: every odd in [307, 309] is an h-value

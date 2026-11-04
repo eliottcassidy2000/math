@@ -1,4 +1,4 @@
-"""Independent check of the spectrum witnesses quoted in README §7 / THM-4862 (h) (two at orders 12-13, eight at order 14).
+"""Independent check of the spectrum witnesses quoted in README §7 / THM-4862 (h) (two at orders 12-13, eight at order 14, five digit-2 witnesses at order 13).
 
 Each witness is a strong tournament given by out-row bitmasks; vertex 0 is the sole-exit vertex,
 its unique out-neighbour r is the root; the digit is e_r(T - 0) = number of Hamiltonian paths of
@@ -19,6 +19,12 @@ WITNESSES = {
     "38609 in R1(14)": ([1024, 17, 11, 19, 549, 79, 31, 127, 255, 1519, 10750, 5119, 2047, 7167], 1),
     "38611 in R1(14)": ([1024, 5, 33, 7, 47, 2187, 63, 351, 127, 511, 5118, 2015, 11263, 4095], 1),
     "38627 in R1(14)": ([4096, 5, 9, 35, 15, 151, 63, 351, 639, 1279, 4607, 2047, 11262, 4095], 1),
+    # order-13 digit-2 realisers from data/gen2_order13.txt (gen2 at order 13: 15360 classes = A377857(11), predicted)
+    "12875 in R2(13)": ([128, 9, 3, 85, 39, 15, 567, 4478, 639, 1215, 511, 2047, 3967], 2),
+    "4289 in R2(13)": ([128, 9, 11, 145, 135, 95, 159, 3366, 639, 255, 895, 6015, 2047], 2),
+    "4291 in R2(13)": ([64, 5, 25, 19, 35, 79, 4126, 127, 255, 511, 1023, 2047, 4031], 2),
+    "38617 in R2(13)": ([512, 5, 2049, 23, 2055, 31, 63, 383, 2175, 1534, 511, 5867, 2047], 2),
+    "38629 in R2(13)": ([2048, 5, 81, 7, 43, 79, 2715, 319, 127, 1471, 511, 6078, 2047], 2),
 }
 
 def is_tournament(rows):

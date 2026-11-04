@@ -8,4 +8,9 @@
 38609 in R1(14): order 14, H = 38609, strong = True, sole exit 0 -> 10, digit e_r(T - 0) = 1 OK
 38611 in R1(14): order 14, H = 38611, strong = True, sole exit 0 -> 10, digit e_r(T - 0) = 1 OK
 38627 in R1(14): order 14, H = 38627, strong = True, sole exit 0 -> 12, digit e_r(T - 0) = 1 OK
+12875 in R2(13): order 13, H = 12875, strong = True, sole exit 0 -> 7, digit e_r(T - 0) = 2 OK
+4289 in R2(13): order 13, H = 4289, strong = True, sole exit 0 -> 7, digit e_r(T - 0) = 2 OK
+4291 in R2(13): order 13, H = 4291, strong = True, sole exit 0 -> 6, digit e_r(T - 0) = 2 OK
+38617 in R2(13): order 13, H = 38617, strong = True, sole exit 0 -> 9, digit e_r(T - 0) = 2 OK
+38629 in R2(13): order 13, H = 38629, strong = True, sole exit 0 -> 11, digit e_r(T - 0) = 2 OK
 ALL OK

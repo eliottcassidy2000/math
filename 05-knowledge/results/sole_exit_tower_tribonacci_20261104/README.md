@@ -21,14 +21,16 @@ so `h(T_k) = h·A_k − e·C_k + B·D_k` with `A = A000213 (1,1,1,3,5,9,17,…)`
 
 [`scripts/allpairs.c`](scripts/allpairs.c) computes `(h, e_t, B_t, strong)` for every tournament `T` of order `n` (nauty `gentourng`) and every vertex `t`; [`data/triples_n.txt`](data/) holds the distinct rows with multiplicities for `n = 4..8` (orders 4–9 together: 1,782,468 rooted tournaments, 1,728,779 distinct rows; the order-9 file, 29 MB, is regenerated in ten seconds by [`scripts/dedupe_triples.sh`](scripts/dedupe_triples.sh) and is not committed). [`scripts/coverage.py`](scripts/coverage.py) forms three value sets from the rows and reports the largest `X` such that every odd number in `[69, X]` is attained:
 
-| family (value of the base `(h, e, B)`) | bases of order ≤ 8 | bases of order ≤ 9 |
-|---|---|---|
-| two-step `h + 2B` (C2 child at any vertex; tower height 2; near-join `k = 1`) | `[69, 3141]` | `[69, 15449]` |
-| the same, strong bases only | `[69, 3141]` | `[69, 15449]` |
-| near-join `h + 2^k B`, `1 ≤ k ≤ 8` | `[69, 22227]` | `[69, 382687]` |
-| tower `h_k = h A_k − e C_k + B D_k`, heights `3 ≤ k ≤ 10` alone | `[69, 77]` | `[69, 77]` |
-| tower, heights `1 ≤ k ≤ 10` (`k = 1, 2` are the one-step and two-step values) | `[69, 20351]` | `[69, 432485]` |
-| union of the three | `[69, 36165]` | `[69, 702189]` |
+| family (value of the base `(h, e, B)`) | bases of order ≤ 8 | bases of order ≤ 9 | bases of order ≤ 10 (streamed) |
+|---|---|---|---|
+| two-step `h + 2B` (C2 child at any vertex; tower height 2; near-join `k = 1`) | `[69, 3141]` | `[69, 15449]` | `[69, 86229]` |
+| the same, strong bases only | `[69, 3141]` | `[69, 15449]` | — |
+| near-join `h + 2^k B`, `1 ≤ k ≤ 8` | `[69, 22227]` | `[69, 382687]` | `[69, 6171561]` |
+| tower `h_k = h A_k − e C_k + B D_k`, heights `3 ≤ k ≤ 10` alone | `[69, 77]` | `[69, 77]` | — |
+| tower, heights `1 ≤ k ≤ 10` (`k = 1, 2` are the one-step and two-step values) | `[69, 20351]` | `[69, 432485]` | `[69, 7854129]` |
+| union of the three | `[69, 36165]` | `[69, 702189]` | `[69, 8079323]` |
+
+The order-10 column streams the 99,113,028 rooted bases of orders 4–10 (1.7 GB of rows, not stored) through [`scripts/coverage_stream.c`](scripts/coverage_stream.c) (bitsets to `2³¹`); the record is [`receipts/coverage_10_stream.out`](receipts/coverage_10_stream.out), a single C run reproducible by `gentourng -q 10 | ./allpairs 10 | ./coverage_stream` (about forty minutes).
 
 Below 69 the two-step family misses exactly `1, 11, 13, 47, 67` (besides the never-attained 7 and 21, THM-1370), the same exceptional set as the near-join; strong bases alone miss `1, 3, 5, 9, 11, 13, 25, 33, 47, 63, 67` there; the tower values of height ≥ 3 alone are thin at the bottom (gaps at 79, 83, 103, …) and matter only through the union, which they extend from 382,687 to 702,189 at order ≤ 9. Receipts: [`coverage_8`](receipts/coverage_8.normal.out) (from the committed rows) and [`coverage_9`](receipts/coverage_9.normal.out) (from the regenerated order-9 rows), each byte-identical under `python3 -O`.
 
@@ -36,7 +38,7 @@ Compared with the sole-exit sweep of THM-4862 (d) — every odd in `[307, 5153]`
 
 ## 4. The reformulated conjecture
 
-Let `𝒯 ⊆ ℕ³` be the set of triples `(h(T), e_t(T), B_t(T))` over all rooted tournaments. Then the odd spectrum contains `{h + 2B, h + 2^k B, h A_k − e C_k + B D_k : (h, e, B) ∈ 𝒯, k}`. HYP-9453 (1) and HYP-9454 (1) are the statements that already the first family, with bases of order `O(log v)`, contains every odd `v ≥ 69`; the census above is the evidence through 702,189. The proof problem is now a statement about `𝒯` alone: **which pairs `(h, B)` are realisable?** Known points: transitive bases give `(1, 0, 2^b)` and `(1, 1, 1)`; the tower itself maps `(h, e, B)` to `(h_k, h_{k−1} − e_{k−1}, B + h_0 + … + h_{k−1})`, so `𝒯` is closed under an explicit affine map; the near-join and the tower give two different weightings (`2^k` and tribonacci) of the same `B`. What is missing is a family in which `B` moves by controlled small steps at fixed `h` (HYP-9453 (2) in the old language); the one-exit law moves `h` by `B − e`, which is at least `h − e ≥ 0`.
+Let `𝒯 ⊆ ℕ³` be the set of triples `(h(T), e_t(T), B_t(T))` over all rooted tournaments. Then the odd spectrum contains `{h + 2B, h + 2^k B, h A_k − e C_k + B D_k : (h, e, B) ∈ 𝒯, k}`. HYP-9453 (1) and HYP-9454 (1) are the statements that already the first family, with bases of order `O(log v)`, contains every odd `v ≥ 69`; the census above is the evidence through 702,189. The proof problem is now a statement about `𝒯` alone: **which pairs `(h, B)` are realisable?** Known points: transitive bases give `(1, 0, 2^b)` and `(1, 1, 1)`; the tower itself maps `(h, e, B)` to `(h_k, h_{k−1} − e_{k−1}, B + h_0 + … + h_{k−1})`, so `𝒯` is closed under an explicit affine map; the near-join and the tower give two different weightings (`2^k` and tribonacci) of the same `B`. What is missing is a family in which `B` moves by controlled small steps at fixed `h` (HYP-9453 (2) in the old language); the one-exit law moves `h` by `B − e`, which is at least `h − e ≥ 0`; `h`-preserving one-vertex additions are sinks (`B ↦ 2B`) and sources (`B` unchanged) only. A negative control ([`scripts/triple_bank.py`](scripts/triple_bank.py), [receipt](receipts/triple_bank.normal.out)): the affine bank generated from the single vertex `(1, 1, 1)` by the sink map `(h, e, B) ↦ (h, 0, 2B)`, the sole-exit map `(h, e, B) ↦ (h − e + B, h − e, B + h)` (every element is an explicit tournament) and the `C₃` prefix and suffix joins `(3h, 3e, 3B)`, `(3h, 0, 12B)` reaches only 22,403 of the 100,000 odd numbers below 2·10⁵ (first misses 7, 11, 13, 19, 21, 23, 35, …): the numerations need genuinely general bases, and no small closed family of constructions can replace the census.
 
 ## 5. Two integer sequences not in OEIS (2026-11-04)
 

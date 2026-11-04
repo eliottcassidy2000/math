@@ -1,0 +1,6 @@
+# orders 4..10, 99,113,028 rooted bases (gentourng | allpairs | coverage_stream); single run, not a python receipt
+two-step h+2B               : every odd in [69, 86229] attained; missed below 69: 1 11 13 47 67; next gaps: 86231 86569 86759 86797 88579 88761
+near-join h+2^k B (k<=8)    : every odd in [69, 6171561] attained; missed below 69: 1 11 13 47 67; next gaps: 6171563
+tower heights 1..10         : every odd in [69, 7854129] attained; missed below 69:; next gaps: 7854131 7857581
+union                       : every odd in [69, 8079323] attained; missed below 69:; next gaps: 8079325
+rows 99113028
