@@ -1,0 +1,11 @@
+C_91 of type (7,13,1^k): defect census (pynauty 2.8.8.1)
+p=7 q=13 k=0 n=20 R=24 RG=24 tau_T=24 tau_E=24 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(2, 6) circ_Geven=(2, 6) colT=1 colG=1 secs=0.0
+p=7 q=13 k=1 n=21 R=96 RG=96 tau_T=96 tau_E=96 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(2, 6) circ_Geven=(2, 6) colT=4 colG=4 secs=0.0
+p=7 q=13 k=2 n=22 R=384 RG=384 tau_T=384 tau_E=384 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(2, 6) circ_Geven=(2, 6) colT=16 colG=16 secs=0.1
+p=7 q=13 k=3 n=23 R=2112 RG=2112 tau_T=2112 tau_E=2112 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(2, 6) circ_Geven=(2, 6) colT=88 colG=88 secs=0.4
+
+k  n   R  tau_T tau_E defect  W  E_T E_even E_wit
+0 20     24     24     24     0    0    0     0    0
+1 21     96     96     96     0    0    0     0    0
+2 22    384    384    384     0    0    0     0    0
+3 23   2112   2112   2112     0    0    0     0    0

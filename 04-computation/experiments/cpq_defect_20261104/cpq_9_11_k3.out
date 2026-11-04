@@ -1,0 +1,11 @@
+C_99 of type (9,11,1^k): defect census (pynauty 2.8.8.1)
+p=9 q=11 k=0 n=20 R=32 RG=32 tau_T=24 tau_E=24 defect=0 W=8 E_T=8 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(4, 4) circ_Geven=(4, 4) colT=1 colG=1 secs=0.0
+p=9 q=11 k=1 n=21 R=128 RG=128 tau_T=96 tau_E=96 defect=0 W=32 E_T=32 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(4, 4) circ_Geven=(4, 4) colT=4 colG=4 secs=0.0
+p=9 q=11 k=2 n=22 R=512 RG=512 tau_T=384 tau_E=383 defect=1 W=129 E_T=128 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(4, 4) circ_Geven=(4, 4) colT=16 colG=16 secs=0.1
+p=9 q=11 k=3 n=23 R=2816 RG=2816 tau_T=2112 tau_E=2108 defect=4 W=706 E_T=704 E_even=2 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(4, 4) circ_Geven=(4, 4) colT=88 colG=88 secs=0.6
+
+k  n   R  tau_T tau_E defect  W  E_T E_even E_wit
+0 20     32     24     24     0    8    8     0    0
+1 21    128     96     96     0   32   32     0    0
+2 22    512    384    383     1  129  128     0    0
+3 23   2816   2112   2108     4  706  704     2    0

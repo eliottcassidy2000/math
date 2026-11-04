@@ -1,0 +1,17 @@
+C_21 of type (3,7,1^k): defect census (pynauty 2.8.8.1)
+p=3 q=7 k=0 n=10 R=4 RG=4 tau_T=4 tau_E=4 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 2) circ_Geven=(1, 2) colT=1 colG=1 secs=0.0
+p=3 q=7 k=1 n=11 R=16 RG=16 tau_T=16 tau_E=16 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 2) circ_Geven=(1, 2) colT=4 colG=4 secs=0.0
+p=3 q=7 k=2 n=12 R=64 RG=64 tau_T=64 tau_E=64 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 2) circ_Geven=(1, 2) colT=16 colG=16 secs=0.0
+p=3 q=7 k=3 n=13 R=352 RG=352 tau_T=344 tau_E=344 defect=0 W=4 E_T=8 E_even=4 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 2) circ_Geven=(1, 2) colT=88 colG=88 secs=0.0
+p=3 q=7 k=4 n=14 R=2816 RG=2816 tau_T=2752 tau_E=2751 defect=1 W=17 E_T=64 E_even=48 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 2) circ_Geven=(1, 2) colT=704 colG=704 secs=0.3
+p=3 q=7 k=5 n=15 R=35648 RG=35648 tau_T=35136 tau_E=35132 defect=4 W=82 E_T=512 E_even=434 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 2) circ_Geven=(1, 2) colT=8912 colG=8912 secs=4.2
+p=3 q=7 k=6 n=16 R=753152 RG=753152 tau_T=747672 tau_E=747656 defect=16 W=482 E_T=5480 E_even=5014 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 2) circ_Geven=(1, 2) colT=188288 colG=188288 secs=98.6
+
+k  n   R  tau_T tau_E defect  W  E_T E_even E_wit
+0 10      4      4      4     0    0    0     0    0
+1 11     16     16     16     0    0    0     0    0
+2 12     64     64     64     0    0    0     0    0
+3 13    352    344    344     0    4    8     4    0
+4 14   2816   2752   2751     1   17   64    48    0
+5 15  35648  35136  35132     4   82  512   434    0
+6 16 753152 747672 747656    16  482 5480  5014    0
