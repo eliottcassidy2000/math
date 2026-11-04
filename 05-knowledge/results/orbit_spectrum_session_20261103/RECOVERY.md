@@ -48,6 +48,14 @@ exact symmetric7p correction and weighted marked-module floor. Wildcard:
 whether strong sources alone test every affine word identity; its positive
 rank certificate yielded a complete fixed-suffix obstruction.
 
+The final incoming [second-feedback result](INCOMING.md#second-feedback-update-an-attainable-count-can-lack-the-next-interface)
+sharpens the first three rows: an attained count can have no one-ready
+presentation, so the next-step predicate must travel with the source.
+Its example 12833 is outside the prime and 7p lanes. It leaves the marked
+module floor and symmetry correction unchanged. Its full-integer census
+also reinforces the last row's distinction between a full-count workload
+and a certified leading-bits query.
+
 ## Exact connection maps
 
 | Source → target | Map and preserved predicate | Information lost and required sidecar | Decisive control |

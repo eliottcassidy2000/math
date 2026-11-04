@@ -264,4 +264,3 @@ library two-apex transfer, independently implements labelled subset DP,
 and counts small examples directly by vertex permutations. No ordinary
 assertions carry validation. Exact universes and check counts are recorded
 in the JSON receipt. No new A000568 coefficient is claimed by this note.
-

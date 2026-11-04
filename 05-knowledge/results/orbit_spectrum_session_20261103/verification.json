@@ -1,5 +1,5 @@
 {
-  "direct_source_pins_checked": 40,
+  "direct_source_pins_checked": 42,
   "jobs": [
     {
       "normal_and_optimized_byte_identical": true,
@@ -46,20 +46,20 @@
     {
       "normal_and_optimized_byte_identical": true,
       "receipt": "coverage/check.json",
-      "receipt_sha256": "138cd09c4abaf5bf8f834706ba318ffc0b4ff188fa14894542f844d8a85e08ab",
+      "receipt_sha256": "4072857f3b656c34ae7dba1a36f8fc354346f9dbe039927a4a7266286781ce71",
       "script": "coverage/check.py",
-      "script_sha256": "a3e33bea40fb0d38f190248c93fa7b595db7e9280a212b9cb89bbeab417f91b1"
+      "script_sha256": "bbc75b4e8ee5137228a65303ab40a219b62bbd1397ce6556025ecd3a3223290e"
     },
     {
       "normal_and_optimized_byte_identical": true,
       "receipt": "coverage/independent_audit.json",
-      "receipt_sha256": "93da982720ea6c6b682dba82ff942f3158a4757ee91a3d8c642e75606fa61683",
+      "receipt_sha256": "610fa4e0c1a03c6aafd0f1a70cc97452087dda01d8652867124086b3ab29c7b4",
       "script": "coverage/independent_audit.py",
       "script_sha256": "a860ad1afa1123b0b854ac0fe9f65ba18ea4cd285186408caa3a1846d247140b"
     }
   ],
   "runner_sha256": "e61a4cc6fc33dca0263bd1c58570d97996442b7c486304db4932475d3a9cbac6",
   "scope": "Eight exact jobs replayed in normal and optimized Python; timing measurements excluded.",
-  "sources_sha256": "ec5f119a1223fa5ac12de9fd904e260f02379c03ef0624f303b18bff9669bef1",
+  "sources_sha256": "da6e3c1bc4653902fb7994b77da4e53e109561454b6fe41fd7d4244774b11f0d",
   "status": "PASS"
 }

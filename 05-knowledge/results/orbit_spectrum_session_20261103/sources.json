@@ -292,6 +292,20 @@
       "sha256_at_source_revision": "123e9a79464182ce9811c72cb2125e59bdea66e45cc632a20a058241996cbd36",
       "sha256_current": "123e9a79464182ce9811c72cb2125e59bdea66e45cc632a20a058241996cbd36",
       "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/second_feedback_18979_20261103/README.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "2feef09a13da2e9f1da31f9e1b5765b32e71c3018074abd27e165a62996013d7",
+      "sha256_current": "2feef09a13da2e9f1da31f9e1b5765b32e71c3018074abd27e165a62996013d7",
+      "source_revision": "3824d18620906e9fde097cd4c7f7f94156ddf43f"
+    },
+    {
+      "path": "05-knowledge/results/second_feedback_18979_20261103/PROOFS.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "e5b00ec4a1a28099592e9d7caa718732e36764838378b2e97a039706eb05aabf",
+      "sha256_current": "e5b00ec4a1a28099592e9d7caa718732e36764838378b2e97a039706eb05aabf",
+      "source_revision": "3824d18620906e9fde097cd4c7f7f94156ddf43f"
     }
   ],
   "startup_revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b",
