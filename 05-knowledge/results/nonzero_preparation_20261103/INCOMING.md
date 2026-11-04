@@ -59,3 +59,37 @@ adjacency carrier used here is compatible with that distinction: an actual
 realization map preserves the object, but a coincident summary does not
 authorize a future operation. The 2-SAT inverse does not prescribe H, and
 the global prime/7p realization lanes remain separate obligations.
+
+## Final concurrent reconciliation through57fd8b198e
+
+A later fetch added the audited
+[two-port parity separation](../two_port_parity_separation_20261104/README.md)
+and S188 structural bridges. The parity README and full proof, and the
+[S188 skeleton proof](../session188_structural_bridges_20261104/skeleton/PROOF.md)
+and [primeflow README](../session188_structural_bridges_20261104/primeflow/README.md)
+were reviewed in parallel; unrelated circuit and Collatz work was not made
+a dependency of this packet.
+
+The incoming parity E3–E4 now closes the single hidden-module-converse branch
+at every order, including the formerly open prime-twelve case. Every
+nontrivial fixed-name tournament differs from its converse in an actual
+named two-port query by2 modulo4. A single reversed module remains detectable
+in every ambient quotient because the quotient Hamilton factor is odd.
+This does not prove arbitrary two-port reconstruction or handle simultaneous
+unrelated module changes. It complements the new strong compiler: T can be
+physically transported to its converse while staying strong, but full named
+responses cannot all stay constant. Reachability is not observer equivalence.
+
+S188's skeleton supplies H(Q[A])=sum B_k q_k(A), and for a transitive module
+q_k(TT_r)=k!S(r,k). This explains why the fixed-clock direct repairs require
+an all-clock coefficient test: agreement of higher skeleton coefficients is
+an extra scalar obligation. The direct note pays its own exact dyadic errors
+and independently retains the root/joint guards; the scalar skeleton does
+not supply those marked observers or native strongness.
+
+The primeflow bridge compiles local simultaneous valuation constraints,
+with global compatibility and outside prime factors explicitly unpaid.
+It may prune an arithmetic selector, but it does not establish exact H
+membership or construct a graph with the old named port state. None of
+these incoming advances closes the target-selection or integer-coverage
+obligation left by the new all-strong compiler and finite nonzero tree.

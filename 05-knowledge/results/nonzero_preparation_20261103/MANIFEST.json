@@ -157,8 +157,8 @@
       "sha256": "1e2fe78627b0fd096c9cde6dfc9dd9fb255da12ccd35f5a32cc3e811e5d0aad0"
     },
     "05-knowledge/results/nonzero_preparation_20261103/INCOMING.md": {
-      "bytes": 4291,
-      "sha256": "ce60e121d6321c45be0ad6f5e271d9a0225d9bd7d1548a1bd1ea8dbad6b9bc38"
+      "bytes": 6346,
+      "sha256": "4198bba237b2b3f9e5f164bf623f0ca14bbe97ee23333765cc8ef0bd40edca99"
     },
     "05-knowledge/results/nonzero_preparation_20261103/README.md": {
       "bytes": 14841,
@@ -413,7 +413,8 @@
       "sha256": "f533d8f2cdc8cd472958fd6d7f52484b8d50a8acd07998239f8840aac56bccd6"
     }
   },
-  "incoming_reviewed_through": "8880585ffd",
+  "incoming_reviewed_through": "57fd8b198e",
+  "incoming_scope": "selected relevant proof routes; see INCOMING.md",
   "inherited_base": "1344165fc575",
   "open": [
     "unbounded nonzero target-selection closure",
