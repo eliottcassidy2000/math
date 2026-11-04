@@ -1,0 +1,13 @@
+Ordered-end old-port-preserving closure: exact finite controls PASS
+Labeled tournaments by order: {1: 1, 2: 2, 3: 8, 4: 64, 5: 1024}
+Actual suffix/port states: 33866 ; strong-attachment states: 27475
+Direct seven-coordinate transfer checks: 1380
+Raw append/prepend slope tests: 4066300
+One-step actual states: {'append': 775, 'prepend': 311}
+append finite offset distribution: {-42: 120, -20: 120, -16: 144, -12: 88, -10: 150, -4: 153}
+prepend finite offset distribution: {-48: 40, -30: 120, -28: 120, -16: 24, -10: 6, -4: 1}
+Second-step exclusions in declared finite block bank: 127062
+Positive +2/+4 controls: actual and strong; outside ordered-end/old-port scope
+Formal odd-p two-step control: rejected by actual two-slot parity
+Unbounded consequence is analytic; finite negative-offset census is not generalized
+Always-active gates: 213973

@@ -1,0 +1,1109 @@
+{
+  "complete_tree": true,
+  "max_atom_order": 5,
+  "normalization": "bounded normalized intercept plus finite unmarked-prefix monoid",
+  "scope": "FINITE-EXACT all-clock-shift scalar returns, each successor decision exhaustive at all orders",
+  "states": [
+    {
+      "R": 7,
+      "address": "",
+      "c": -5
+    },
+    {
+      "R": 21,
+      "address": "2",
+      "c": -13
+    },
+    {
+      "R": 21,
+      "address": "4",
+      "c": -11
+    },
+    {
+      "R": 63,
+      "address": "22",
+      "c": -37
+    },
+    {
+      "R": 63,
+      "address": "42",
+      "c": -31
+    },
+    {
+      "R": 189,
+      "address": "422",
+      "c": -91
+    },
+    {
+      "R": 567,
+      "address": "4222",
+      "c": -271
+    }
+  ],
+  "tests": [
+    {
+      "R": 21,
+      "address": "2",
+      "c": -13,
+      "searches": [
+        {
+          "candidates": 8,
+          "f": 21,
+          "normalized_c": -13,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4096
+        },
+        {
+          "candidates": 4,
+          "f": 42,
+          "normalized_c": -13,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4096
+        },
+        {
+          "candidates": 2,
+          "f": 84,
+          "normalized_c": -13,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4096
+        },
+        {
+          "candidates": 0,
+          "f": 168,
+          "normalized_c": -13,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4096
+        },
+        {
+          "candidates": 4,
+          "f": 336,
+          "normalized_c": -13,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4096
+        },
+        {
+          "candidates": 3,
+          "f": 672,
+          "normalized_c": -13,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4096
+        },
+        {
+          "candidates": 9,
+          "f": 1344,
+          "normalized_c": -13,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4096
+        },
+        {
+          "candidates": 6,
+          "f": 2688,
+          "normalized_c": -13,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4096
+        }
+      ],
+      "witnesses": [
+        {
+          "literal_checked": true,
+          "ports": 7,
+          "rows": [
+            30,
+            28,
+            8,
+            16,
+            4
+          ],
+          "sigma": [
+            3,
+            48,
+            21,
+            39,
+            16,
+            1,
+            3
+          ],
+          "word": [
+            "T1",
+            "T1",
+            "C1"
+          ]
+        }
+      ]
+    },
+    {
+      "R": 21,
+      "address": "4",
+      "c": -11,
+      "searches": [
+        {
+          "candidates": 8,
+          "f": 21,
+          "normalized_c": -11,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4077
+        },
+        {
+          "candidates": 4,
+          "f": 42,
+          "normalized_c": -11,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4077
+        },
+        {
+          "candidates": 2,
+          "f": 84,
+          "normalized_c": -11,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4077
+        },
+        {
+          "candidates": 0,
+          "f": 168,
+          "normalized_c": -11,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4077
+        },
+        {
+          "candidates": 4,
+          "f": 336,
+          "normalized_c": -11,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4077
+        },
+        {
+          "candidates": 3,
+          "f": 672,
+          "normalized_c": -11,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4077
+        },
+        {
+          "candidates": 9,
+          "f": 1344,
+          "normalized_c": -11,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4077
+        },
+        {
+          "candidates": 6,
+          "f": 2688,
+          "normalized_c": -11,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4077
+        }
+      ],
+      "witnesses": [
+        {
+          "literal_checked": true,
+          "ports": 21,
+          "rows": [
+            30,
+            28,
+            24,
+            16,
+            0
+          ],
+          "sigma": [
+            1,
+            32,
+            21,
+            21,
+            12,
+            1,
+            1
+          ],
+          "word": [
+            "T1",
+            "T0",
+            "T1",
+            "T0",
+            "T1"
+          ]
+        },
+        {
+          "literal_checked": true,
+          "ports": 25,
+          "rows": [
+            24,
+            1,
+            3,
+            6,
+            14
+          ],
+          "sigma": [
+            11,
+            100,
+            42,
+            60,
+            22,
+            4,
+            8
+          ],
+          "word": [
+            "V5_c_19"
+          ]
+        }
+      ]
+    },
+    {
+      "R": 63,
+      "address": "22",
+      "c": -37,
+      "searches": [
+        {
+          "candidates": 14,
+          "f": 63,
+          "normalized_c": -37,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4320
+        },
+        {
+          "candidates": 3,
+          "f": 126,
+          "normalized_c": -37,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4320
+        },
+        {
+          "candidates": 7,
+          "f": 252,
+          "normalized_c": -37,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4320
+        },
+        {
+          "candidates": 1,
+          "f": 504,
+          "normalized_c": -37,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4320
+        },
+        {
+          "candidates": 14,
+          "f": 1008,
+          "normalized_c": -37,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4320
+        },
+        {
+          "candidates": 8,
+          "f": 2016,
+          "normalized_c": -37,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4320
+        },
+        {
+          "candidates": 26,
+          "f": 4032,
+          "normalized_c": -37,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4320
+        }
+      ],
+      "witnesses": [
+        {
+          "literal_checked": true,
+          "ports": 29,
+          "rows": [
+            62,
+            60,
+            56,
+            16,
+            32,
+            8
+          ],
+          "sigma": [
+            3,
+            96,
+            63,
+            66,
+            40,
+            2,
+            3
+          ],
+          "word": [
+            "T1",
+            "T0",
+            "T1",
+            "C3"
+          ]
+        },
+        {
+          "literal_checked": true,
+          "ports": 67,
+          "rows": [
+            126,
+            124,
+            64,
+            4,
+            12,
+            28,
+            56
+          ],
+          "sigma": [
+            9,
+            336,
+            63,
+            267,
+            46,
+            1,
+            9
+          ],
+          "word": [
+            "T1",
+            "T1",
+            "V5_8_10"
+          ]
+        }
+      ]
+    },
+    {
+      "R": 63,
+      "address": "24",
+      "c": -35,
+      "searches": [
+        {
+          "candidates": 14,
+          "f": 63,
+          "normalized_c": -35,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4301
+        },
+        {
+          "candidates": 3,
+          "f": 126,
+          "normalized_c": -35,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4301
+        },
+        {
+          "candidates": 7,
+          "f": 252,
+          "normalized_c": -35,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4301
+        },
+        {
+          "candidates": 1,
+          "f": 504,
+          "normalized_c": -35,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4301
+        },
+        {
+          "candidates": 14,
+          "f": 1008,
+          "normalized_c": -35,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4301
+        },
+        {
+          "candidates": 8,
+          "f": 2016,
+          "normalized_c": -35,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4301
+        },
+        {
+          "candidates": 26,
+          "f": 4032,
+          "normalized_c": -35,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4301
+        },
+        {
+          "candidates": 14,
+          "f": 63,
+          "normalized_c": -7,
+          "prefix_h": 5,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4040
+        },
+        {
+          "candidates": 3,
+          "f": 126,
+          "normalized_c": -7,
+          "prefix_h": 5,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4040
+        },
+        {
+          "candidates": 7,
+          "f": 252,
+          "normalized_c": -7,
+          "prefix_h": 5,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4040
+        },
+        {
+          "candidates": 1,
+          "f": 504,
+          "normalized_c": -7,
+          "prefix_h": 5,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4040
+        },
+        {
+          "candidates": 14,
+          "f": 1008,
+          "normalized_c": -7,
+          "prefix_h": 5,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4040
+        },
+        {
+          "candidates": 8,
+          "f": 2016,
+          "normalized_c": -7,
+          "prefix_h": 5,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4040
+        },
+        {
+          "candidates": 26,
+          "f": 4032,
+          "normalized_c": -7,
+          "prefix_h": 5,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4040
+        }
+      ],
+      "witnesses": []
+    },
+    {
+      "R": 63,
+      "address": "42",
+      "c": -31,
+      "searches": [
+        {
+          "candidates": 14,
+          "f": 63,
+          "normalized_c": -31,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4264
+        },
+        {
+          "candidates": 3,
+          "f": 126,
+          "normalized_c": -31,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4264
+        },
+        {
+          "candidates": 7,
+          "f": 252,
+          "normalized_c": -31,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4264
+        },
+        {
+          "candidates": 1,
+          "f": 504,
+          "normalized_c": -31,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4264
+        },
+        {
+          "candidates": 14,
+          "f": 1008,
+          "normalized_c": -31,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4264
+        },
+        {
+          "candidates": 8,
+          "f": 2016,
+          "normalized_c": -31,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4264
+        },
+        {
+          "candidates": 26,
+          "f": 4032,
+          "normalized_c": -31,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4264
+        }
+      ],
+      "witnesses": [
+        {
+          "literal_checked": true,
+          "ports": 37,
+          "rows": [
+            62,
+            60,
+            40,
+            48,
+            36,
+            0
+          ],
+          "sigma": [
+            3,
+            96,
+            63,
+            57,
+            34,
+            3,
+            3
+          ],
+          "word": [
+            "T1",
+            "T0",
+            "C1",
+            "T1"
+          ]
+        }
+      ]
+    },
+    {
+      "R": 63,
+      "address": "44",
+      "c": -29,
+      "searches": [
+        {
+          "candidates": 14,
+          "f": 63,
+          "normalized_c": -29,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4245
+        },
+        {
+          "candidates": 3,
+          "f": 126,
+          "normalized_c": -29,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4245
+        },
+        {
+          "candidates": 7,
+          "f": 252,
+          "normalized_c": -29,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4245
+        },
+        {
+          "candidates": 1,
+          "f": 504,
+          "normalized_c": -29,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4245
+        },
+        {
+          "candidates": 14,
+          "f": 1008,
+          "normalized_c": -29,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4245
+        },
+        {
+          "candidates": 8,
+          "f": 2016,
+          "normalized_c": -29,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4245
+        },
+        {
+          "candidates": 26,
+          "f": 4032,
+          "normalized_c": -29,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4245
+        }
+      ],
+      "witnesses": []
+    },
+    {
+      "R": 189,
+      "address": "222",
+      "c": -109,
+      "searches": [
+        {
+          "candidates": 31,
+          "f": 189,
+          "normalized_c": -109,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4992
+        },
+        {
+          "candidates": 11,
+          "f": 378,
+          "normalized_c": -109,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4992
+        },
+        {
+          "candidates": 12,
+          "f": 756,
+          "normalized_c": -109,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4992
+        },
+        {
+          "candidates": 8,
+          "f": 1512,
+          "normalized_c": -109,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4992
+        },
+        {
+          "candidates": 32,
+          "f": 3024,
+          "normalized_c": -109,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4992
+        }
+      ],
+      "witnesses": []
+    },
+    {
+      "R": 189,
+      "address": "224",
+      "c": -107,
+      "searches": [
+        {
+          "candidates": 31,
+          "f": 189,
+          "normalized_c": -107,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4973
+        },
+        {
+          "candidates": 11,
+          "f": 378,
+          "normalized_c": -107,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4973
+        },
+        {
+          "candidates": 12,
+          "f": 756,
+          "normalized_c": -107,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4973
+        },
+        {
+          "candidates": 8,
+          "f": 1512,
+          "normalized_c": -107,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4973
+        },
+        {
+          "candidates": 32,
+          "f": 3024,
+          "normalized_c": -107,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4973
+        }
+      ],
+      "witnesses": []
+    },
+    {
+      "R": 189,
+      "address": "422",
+      "c": -91,
+      "searches": [
+        {
+          "candidates": 31,
+          "f": 189,
+          "normalized_c": -91,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4824
+        },
+        {
+          "candidates": 11,
+          "f": 378,
+          "normalized_c": -91,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4824
+        },
+        {
+          "candidates": 12,
+          "f": 756,
+          "normalized_c": -91,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4824
+        },
+        {
+          "candidates": 8,
+          "f": 1512,
+          "normalized_c": -91,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4824
+        },
+        {
+          "candidates": 32,
+          "f": 3024,
+          "normalized_c": -91,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4824
+        }
+      ],
+      "witnesses": [
+        {
+          "literal_checked": true,
+          "ports": 37,
+          "rows": [
+            254,
+            252,
+            232,
+            240,
+            228,
+            64,
+            128,
+            32
+          ],
+          "sigma": [
+            9,
+            576,
+            189,
+            333,
+            100,
+            3,
+            9
+          ],
+          "word": [
+            "T1",
+            "T0",
+            "C1",
+            "C1"
+          ]
+        }
+      ]
+    },
+    {
+      "R": 189,
+      "address": "424",
+      "c": -89,
+      "searches": [
+        {
+          "candidates": 31,
+          "f": 189,
+          "normalized_c": -89,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4805
+        },
+        {
+          "candidates": 11,
+          "f": 378,
+          "normalized_c": -89,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4805
+        },
+        {
+          "candidates": 12,
+          "f": 756,
+          "normalized_c": -89,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4805
+        },
+        {
+          "candidates": 8,
+          "f": 1512,
+          "normalized_c": -89,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4805
+        },
+        {
+          "candidates": 32,
+          "f": 3024,
+          "normalized_c": -89,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 4805
+        }
+      ],
+      "witnesses": []
+    },
+    {
+      "R": 567,
+      "address": "4222",
+      "c": -271,
+      "searches": [
+        {
+          "candidates": 53,
+          "f": 567,
+          "normalized_c": -271,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 7317
+        },
+        {
+          "candidates": 25,
+          "f": 1134,
+          "normalized_c": -271,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 7317
+        },
+        {
+          "candidates": 25,
+          "f": 2268,
+          "normalized_c": -271,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 7317
+        },
+        {
+          "candidates": 14,
+          "f": 4536,
+          "normalized_c": -271,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 7317
+        }
+      ],
+      "witnesses": [
+        {
+          "literal_checked": true,
+          "ports": 517,
+          "rows": [
+            1022,
+            1020,
+            1000,
+            1008,
+            996,
+            512,
+            32,
+            96,
+            224,
+            448
+          ],
+          "sigma": [
+            27,
+            4032,
+            567,
+            2313,
+            298,
+            3,
+            27
+          ],
+          "word": [
+            "T1",
+            "T0",
+            "C1",
+            "V5_8_10"
+          ]
+        },
+        {
+          "literal_checked": true,
+          "ports": 377,
+          "rows": [
+            506,
+            508,
+            505,
+            496,
+            480,
+            448,
+            384,
+            256,
+            0
+          ],
+          "sigma": [
+            3,
+            768,
+            567,
+            375,
+            274,
+            3,
+            1
+          ],
+          "word": [
+            "C1",
+            "T1",
+            "T1",
+            "T1",
+            "T1",
+            "T0",
+            "T1"
+          ]
+        }
+      ]
+    },
+    {
+      "R": 567,
+      "address": "4224",
+      "c": -269,
+      "searches": [
+        {
+          "candidates": 53,
+          "f": 567,
+          "normalized_c": -269,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 7263
+        },
+        {
+          "candidates": 25,
+          "f": 1134,
+          "normalized_c": -269,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 7263
+        },
+        {
+          "candidates": 25,
+          "f": 2268,
+          "normalized_c": -269,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 7263
+        },
+        {
+          "candidates": 14,
+          "f": 4536,
+          "normalized_c": -269,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 7263
+        }
+      ],
+      "witnesses": []
+    },
+    {
+      "R": 1701,
+      "address": "42222",
+      "c": -811,
+      "searches": [
+        {
+          "candidates": 116,
+          "f": 1701,
+          "normalized_c": -811,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 21897
+        },
+        {
+          "candidates": 45,
+          "f": 3402,
+          "normalized_c": -811,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 21897
+        },
+        {
+          "candidates": 30,
+          "f": 6804,
+          "normalized_c": -811,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 21897
+        },
+        {
+          "candidates": 17,
+          "f": 13608,
+          "normalized_c": -811,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 21897
+        }
+      ],
+      "witnesses": []
+    },
+    {
+      "R": 1701,
+      "address": "42224",
+      "c": -809,
+      "searches": [
+        {
+          "candidates": 116,
+          "f": 1701,
+          "normalized_c": -809,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 21843
+        },
+        {
+          "candidates": 45,
+          "f": 3402,
+          "normalized_c": -809,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 21843
+        },
+        {
+          "candidates": 30,
+          "f": 6804,
+          "normalized_c": -809,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 21843
+        },
+        {
+          "candidates": 17,
+          "f": 13608,
+          "normalized_c": -809,
+          "prefix_h": 1,
+          "prefix_odd_p": 1,
+          "proved_f_bound": 21843
+        }
+      ],
+      "witnesses": []
+    }
+  ],
+  "unexpanded_states": []
+}

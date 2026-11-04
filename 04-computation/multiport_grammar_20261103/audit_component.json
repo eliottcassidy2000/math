@@ -1,0 +1,102 @@
+{
+  "C_five": "28/3",
+  "C_four": "32/5",
+  "closure_independent_census": {
+    "actual_states": 33866,
+    "digits": {
+      "append": {
+        "-42": 120,
+        "-20": 120,
+        "-16": 144,
+        "-12": 88,
+        "-10": 150,
+        "-4": 153
+      },
+      "prepend": {
+        "-48": 40,
+        "-30": 120,
+        "-28": 120,
+        "-16": 24,
+        "-10": 6,
+        "-4": 1
+      }
+    },
+    "first_steps": {
+      "append": 775,
+      "prepend": 311
+    },
+    "raw_extension_comparisons_implied": 4066300,
+    "second_trials_implied": 127062,
+    "small_blocks": 74,
+    "small_terminal_blocks": 43,
+    "terminal_guard_states": 27475
+  },
+  "combined_signatures": 170,
+  "dense_inverse_queries": 100,
+  "five_signatures": 148,
+  "gates": 18770,
+  "levels": [
+    {
+      "accepted": [
+        ""
+      ],
+      "f": 7,
+      "level": 0,
+      "words": 2
+    },
+    {
+      "accepted": [
+        "2",
+        "4"
+      ],
+      "f": 21,
+      "level": 1,
+      "words": 5
+    },
+    {
+      "accepted": [
+        "22",
+        "42"
+      ],
+      "f": 63,
+      "level": 2,
+      "words": 9
+    },
+    {
+      "accepted": [
+        "422"
+      ],
+      "f": 189,
+      "level": 3,
+      "words": 18
+    },
+    {
+      "accepted": [
+        "4222"
+      ],
+      "f": 567,
+      "level": 4,
+      "words": 29
+    }
+  ],
+  "literal_two_atom_transfers": 484,
+  "marked_classes_through_four": 22,
+  "raw_marked_five_cases": 17408,
+  "scope": "Declared finite graph universes and implementation controls; analytic unbounded inverse audited separately.",
+  "signature_set_sha256": "68076e4ba43ee493e70cb5c9fd8b6daff62b83d707cec3c7764f65dd15d4bfe1",
+  "status": "FINITE-EXACT independent audit controls PASS",
+  "strong_labelled_counts": {
+    "1": 1,
+    "2": 0,
+    "3": 2,
+    "4": 24,
+    "5": 544
+  },
+  "strong_shape_counts_through_four": {
+    "1": 1,
+    "2": 0,
+    "3": 1,
+    "4": 1
+  },
+  "supplier_sha256": "a101041d142c2c5821eca7cd91b1dec145fbc71c671f4315e505e538f29a2dc5"
+}

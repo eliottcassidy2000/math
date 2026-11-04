@@ -1,0 +1,7 @@
+coloured endpoint-forest transport: PASS
+exact gates: 216070
+finite universe: {"births": 67732, "converses": 5422, "flips": 3530, "forgets": 14282, "graphs": 76, "merges": 5422, "states": 5422}
+long word last [births,H,F0,b0,profile terms]: [16, 131073, 262143, 131070, 2236]
+two-colour / split / same-component / paired-colour hostiles: PASS
+native guard and two-branch closure claims: NONE
+semantic sha256: c9601f087a73eb440bf18e940e31b0f9ad2e25dfdb255344a412f6388b8afc2a
