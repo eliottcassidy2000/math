@@ -1,0 +1,33 @@
+{
+  "audit_sha256": {
+    "audit.py": "cfd8945c774aaf12f5cc89fda714b2f9eb8a5565fc1f4ee153bbb0e6c9f33bb0",
+    "literal.cpp": "76fdc646b0a6e217635478e4556c87532aff628a22ddcf83bd22119cc5860915"
+  },
+  "complete_named_coordinates": 841,
+  "controls_with_unbalanced_marks": 181,
+  "cube_actual_battery": 332,
+  "cube_states": 16,
+  "grouped_coefficients_from_all_named_terms": [
+    92,
+    70,
+    78
+  ],
+  "independent_complete_q_E_S_profiles": 11,
+  "independent_physical_queries": 19393,
+  "physical_positive_controls": 190,
+  "root_families": {
+    "equal": 96,
+    "families": 128,
+    "strict": 32
+  },
+  "source_sha256": {
+    "PROOF.md": "6d8f97683f87f37d7397c0bab26efd68d60aa6bf85adedba58c9df5c85000e42",
+    "count.cpp": "4f34e4aede4e9a14564f61f47fd609ae1324ee009dece48f36e4abc1eb227a5f",
+    "kernel.py": "6d34008f36ce92ab7c01c3655ff9c2232065246e8ab2de4136aef201bfa75061",
+    "normal.json": "9d694ee02d8ee6febb7fc7e67708ee52bf4ce96bd32e28b9d33af5b2b5db8f58",
+    "optimized.json": "9d694ee02d8ee6febb7fc7e67708ee52bf4ce96bd32e28b9d33af5b2b5db8f58",
+    "run_algebra.py": "58408762dfbef77010b9e1b885dc49b312c578f0d152f2e6de9a0b09295363eb",
+    "verify.py": "a43308b8415cc129c3bf4781846f029311f861757628bdc1b21091318e559faf"
+  },
+  "status": "PASS"
+}

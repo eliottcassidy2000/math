@@ -1,0 +1,191 @@
+{
+  "checker_sha256": "acf42f7b3695322f54e2b4f11d01ed172c6b28f15923693e4049257a454031d3",
+  "complete_outputs": [
+    {
+      "bytes": 1504362,
+      "file": "normal.json",
+      "group": 0,
+      "sha256": "9d694ee02d8ee6febb7fc7e67708ee52bf4ce96bd32e28b9d33af5b2b5db8f58"
+    },
+    {
+      "bytes": 1504362,
+      "file": "optimized.json",
+      "group": 0,
+      "sha256": "9d694ee02d8ee6febb7fc7e67708ee52bf4ce96bd32e28b9d33af5b2b5db8f58"
+    }
+  ],
+  "complete_raw_bytes": 3008724,
+  "groups": 1,
+  "isolated_controls": [
+    {
+      "mode": "fresh",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "fresh",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": true,
+      "passed": true
+    }
+  ],
+  "package": "aggregated_cyclic_module",
+  "package_sha256": {
+    "REASSEMBLY.json": "f0c37b1883d8daea10e559eddf6fe0040ae963b914e7fdc4323a296e32d853c4",
+    "REASSEMBLY.md": "1dbaa8e1ea5b1bae903713f33f39290f1739d08cc5becd70ffa448b7920e20aa",
+    "full_records_00.json.gz.b64.part000": "5c3ab6ccac611cd6b49150426044a01b731aee084b37e6900c27def795717e2e",
+    "full_records_00.json.gz.b64.part001": "38d05d30a7a9ab297c216c5e79a4b111228a839a0a1c9a2745a4be60b03cd91a",
+    "full_records_00.json.gz.b64.part002": "5fb5a6352a817d6dfa24e5fa4688bf44d6131c4666399b06fbb4e469f5382514",
+    "reassemble.py": "a4c60bcdf8a3ea63f721de9f8774f7f7097a9e57be3d20704d57ed8c3e002499"
+  },
+  "parts": 3,
+  "reassembler_normalized_ast_sha256": "3f640f8fd33dec4ce19c1d81e92f03c21bbac47452af6382f5cb942c5ee88d14",
+  "status": "PASS",
+  "validated_existing_manifests": [
+    {
+      "file": "PROOF.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "6d8f97683f87f37d7397c0bab26efd68d60aa6bf85adedba58c9df5c85000e42"
+    },
+    {
+      "file": "verify.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "a43308b8415cc129c3bf4781846f029311f861757628bdc1b21091318e559faf"
+    },
+    {
+      "file": "run_algebra.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "58408762dfbef77010b9e1b885dc49b312c578f0d152f2e6de9a0b09295363eb"
+    },
+    {
+      "file": "kernel.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "6d34008f36ce92ab7c01c3655ff9c2232065246e8ab2de4136aef201bfa75061"
+    },
+    {
+      "file": "count.cpp",
+      "manifest": "SHA256SUMS",
+      "sha256": "4f34e4aede4e9a14564f61f47fd609ae1324ee009dece48f36e4abc1eb227a5f"
+    },
+    {
+      "file": "normal.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "9d694ee02d8ee6febb7fc7e67708ee52bf4ce96bd32e28b9d33af5b2b5db8f58"
+    },
+    {
+      "file": "optimized.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "9d694ee02d8ee6febb7fc7e67708ee52bf4ce96bd32e28b9d33af5b2b5db8f58"
+    }
+  ],
+  "validated_mathematical_receipt_pins": {
+    "aggregated_cyclic_module/PROOF.md": "6d8f97683f87f37d7397c0bab26efd68d60aa6bf85adedba58c9df5c85000e42",
+    "aggregated_cyclic_module/count.cpp": "4f34e4aede4e9a14564f61f47fd609ae1324ee009dece48f36e4abc1eb227a5f",
+    "aggregated_cyclic_module/kernel.py": "6d34008f36ce92ab7c01c3655ff9c2232065246e8ab2de4136aef201bfa75061",
+    "aggregated_cyclic_module/run_algebra.py": "58408762dfbef77010b9e1b885dc49b312c578f0d152f2e6de9a0b09295363eb",
+    "aggregated_cyclic_module/verify.py": "a43308b8415cc129c3bf4781846f029311f861757628bdc1b21091318e559faf",
+    "module_decomposition/PROOF.md": "33f33731f3f21037a03e6a4eb9bcc11c746c5124439e49603e7c8faabe2565bc",
+    "ordered_cyclic_module/PROOF.md": "d528ad7a713b16bb88971466bf1d7ba1f4e2260a1efe7abeafb790ddbcea01cf",
+    "returns_next/PROOF.md": "32246578bbbfad1f05dcb78fca0b84727040f514d8563a2c04337d37a99034da",
+    "returns_next/UNIFORM.md": "94df1aaefe0c5d6223f389d75726c3c7a55bfff87ed63007dc9707de20cb0de8"
+  }
+}
