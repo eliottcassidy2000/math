@@ -1,0 +1,235 @@
+{
+  "full_quartic_coordinates": 16432,
+  "mixed_quartic": {
+    "a": 5,
+    "c": 18,
+    "coefficient": -2,
+    "literal_counts": [
+      {
+        "a": 5,
+        "c": 18,
+        "counts": [
+          469,
+          481,
+          533,
+          539
+        ],
+        "mixed": -6,
+        "sign": 1
+      },
+      {
+        "a": 5,
+        "c": 16,
+        "counts": [
+          375,
+          415,
+          407,
+          453
+        ],
+        "mixed": 6,
+        "sign": -1
+      },
+      {
+        "a": 5,
+        "c": 2,
+        "counts": [
+          399,
+          397,
+          477,
+          467
+        ],
+        "mixed": -8,
+        "sign": -1
+      },
+      {
+        "a": 5,
+        "c": 0,
+        "counts": [
+          255,
+          275,
+          283,
+          307
+        ],
+        "mixed": 4,
+        "sign": 1
+      },
+      {
+        "a": 4,
+        "c": 18,
+        "counts": [
+          337,
+          309,
+          389,
+          351
+        ],
+        "mixed": -10,
+        "sign": -1
+      },
+      {
+        "a": 4,
+        "c": 16,
+        "counts": [
+          253,
+          253,
+          281,
+          281
+        ],
+        "mixed": 0,
+        "sign": 1
+      },
+      {
+        "a": 4,
+        "c": 2,
+        "counts": [
+          285,
+          261,
+          349,
+          313
+        ],
+        "mixed": -12,
+        "sign": 1
+      },
+      {
+        "a": 4,
+        "c": 0,
+        "counts": [
+          161,
+          161,
+          187,
+          187
+        ],
+        "mixed": 0,
+        "sign": -1
+      },
+      {
+        "a": 1,
+        "c": 18,
+        "counts": [
+          339,
+          371,
+          339,
+          371
+        ],
+        "mixed": 0,
+        "sign": -1
+      },
+      {
+        "a": 1,
+        "c": 16,
+        "counts": [
+          261,
+          313,
+          261,
+          313
+        ],
+        "mixed": 0,
+        "sign": 1
+      },
+      {
+        "a": 1,
+        "c": 2,
+        "counts": [
+          281,
+          293,
+          281,
+          293
+        ],
+        "mixed": 0,
+        "sign": 1
+      },
+      {
+        "a": 1,
+        "c": 0,
+        "counts": [
+          161,
+          187,
+          161,
+          187
+        ],
+        "mixed": 0,
+        "sign": -1
+      },
+      {
+        "a": 0,
+        "c": 18,
+        "counts": [
+          139,
+          123,
+          139,
+          123
+        ],
+        "mixed": 0,
+        "sign": 1
+      },
+      {
+        "a": 0,
+        "c": 16,
+        "counts": [
+          95,
+          95,
+          95,
+          95
+        ],
+        "mixed": 0,
+        "sign": -1
+      },
+      {
+        "a": 0,
+        "c": 2,
+        "counts": [
+          109,
+          95,
+          109,
+          95
+        ],
+        "mixed": 0,
+        "sign": -1
+      },
+      {
+        "a": 0,
+        "c": 0,
+        "counts": [
+          45,
+          45,
+          45,
+          45
+        ],
+        "mixed": 0,
+        "sign": 1
+      }
+    ]
+  },
+  "nested_separator": {
+    "a": 1,
+    "c": 5,
+    "counts": [
+      251,
+      249
+    ],
+    "rows": [
+      [
+        14,
+        12,
+        56,
+        48,
+        35,
+        3
+      ],
+      [
+        50,
+        48,
+        11,
+        3,
+        44,
+        12
+      ]
+    ]
+  },
+  "source_sha256": {
+    "audit.py": "eedea76eedf5e73799ad9ae5bd94b08ddc3b31c2856197a485ec946bf6b97d69",
+    "session188_structural_bridges_20261104\\response\\verify.py": "b3155093852df2e734d75f9a29fbe39c0a741d9fd439c1a9b5f647cd8e8d54d5"
+  },
+  "status": "PASS independent quartic/interaction audit; scope remains disjoint all-order, nested finite",
+  "tables_sha256": "d160b1c9b4a20f3100776b9dd09f07bd2d769644bf58c307920c066d67683b12",
+  "whole_converse_pairs": 20
+}

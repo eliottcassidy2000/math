@@ -1,0 +1,40 @@
+{
+  "dependencies_lf_sha256": {
+    "05-knowledge/results/homogeneous_pair_response_20261103/PROOF.md": "ede0dafd39231fde6ae33e9140f61b70bfdfd1c64bf29767a9e56b9205f539bb",
+    "05-knowledge/results/homogeneous_pair_response_20261103/check.py": "d7f9b97e2b74114b9f8a879a473d1eb199b6f2c25a88e969dc5033669282e3c3",
+    "05-knowledge/results/homogeneous_pair_response_20261103/response.cpp": "a732c73a9667d2ca67fb1abcdf85c4ea39aef91906ca4aa16d0a61930db407a9",
+    "05-knowledge/results/homogeneous_pair_response_20261103/response.py": "7a106231c28551030b1f1f7af44080f19b72fcca9fc231bf7c7b052bbfdef8b0",
+    "05-knowledge/results/nonzero_preparation_20261103/algebra/STRONG_COMPILER.md": "719fda127d75d42fc1bf190ea3638976cfbd00103bcffb9e732cf31e98861297",
+    "05-knowledge/results/session186_proof_frontiers_20261104/gate/PROOF.md": "34432bac7e1465f3ea0f57a69148bfbab4a411d31acad8ef60e8d32721711106",
+    "05-knowledge/results/session187_named_response_20261104/gate/PROOF.md": "ffe97ecd5dda6ce2b14e9db8c63660822f7bc47077f709195f76118c5aa3b502",
+    "05-knowledge/results/session188_structural_bridges_20261104/primeflow_extension/README.md": "7d29a42cb0d6b9fff3ddf2b34e32bd4f6e69b793f08869077f99385d8ed518ef",
+    "05-knowledge/results/session188_structural_bridges_20261104/response/CLASSIFICATION.md": "891fdf0e970327e4eb3902db431e4061e474b1409ce51565ef6704810c566f1a",
+    "05-knowledge/results/session188_structural_bridges_20261104/response/PROOF.md": "dcd7a33664f63039b937582f241910e98ccb3fa341f3ba3999f626f5c61b51ec",
+    "05-knowledge/results/session188_structural_bridges_20261104/response/verify.py": "b3155093852df2e734d75f9a29fbe39c0a741d9fd439c1a9b5f647cd8e8d54d5",
+    "05-knowledge/results/session188_structural_bridges_20261104/returns/README.md": "1b3053baf598d968a7d5f799519d60a9b6f278a9d09fa5cb75e7ee71a095b1ae",
+    "05-knowledge/results/session188_structural_bridges_20261104/skeleton/PROOF.md": "fe52812144edf77187c98787db8b45cf409da6344361fd3dc823d909febcc9ef",
+    "05-knowledge/results/session188_structural_bridges_20261104/squares/PROOF.md": "7b1342233410a4b53991e65f5d366fac1ff86f0a62fc7ed5489b0468997da54e",
+    "05-knowledge/results/two_port_parity_separation_20261104/PROOF.md": "311d7719cf3ff4d0d4d3638d31ed33c1c41cdf378ca1d55b43450c9435d2d0a0",
+    "05-knowledge/results/two_port_parity_separation_20261104/full_named_cubic.json": "68b06e9e1c3b9689d67f7173f940effced5d4865c1e65e0a30ff710d0637b7c6",
+    "05-knowledge/results/two_port_parity_separation_20261104/manifest.json": "0fc4cf5f530ff67dd2aa3bf7b7d2da266f5d597b6800e61dff334a8d989bbf30",
+    "05-knowledge/results/two_port_twelve_principles_20261103/PROOF.md": "06811fe45366352f924793be7dadddacef287607a380efc92043a1066f3056c0"
+  },
+  "files": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "BOARD.md": "b96e24dcdd1cd5d37fb8c8a6cfcd0a45e1191c638c4b996b027fce7559660267",
+    "INCOMING.md": "623761d3f076e4f86d4f13a304ef67095fba474f89216b00676933b52dda835a",
+    "PROOF.md": "4e184c9778ed703a46650b85d003cbae2a3b5a1480a7891dee369f63bc9ff75e",
+    "README.md": "022591d846cb21ac59538cac210832c04971c33baeb9c70e41147d3a99ec8923",
+    "REVIEW.md": "2631eaa62f4411ff98f393c922f87facea3ce88f1fdd4b9244c7599026c5be7c",
+    "audit.json": "577e8956ba2af8f579766ccfbaa9df13673f1461634d004ce15e0acb28574f48",
+    "audit.optimized.json": "577e8956ba2af8f579766ccfbaa9df13673f1461634d004ce15e0acb28574f48",
+    "audit.py": "eedea76eedf5e73799ad9ae5bd94b08ddc3b31c2856197a485ec946bf6b97d69",
+    "certificate.json": "bef518073d03d0ae0b7c8b327f0dbd710002cce0e8fc91b4508695a62e69bd05",
+    "certificate.optimized.json": "bef518073d03d0ae0b7c8b327f0dbd710002cce0e8fc91b4508695a62e69bd05",
+    "certify.py": "6d9e124001aa10b0bfbb00f0d012cba65a7527f42775eed0d76294df84d561ce",
+    "full_response.json": "d160b1c9b4a20f3100776b9dd09f07bd2d769644bf58c307920c066d67683b12",
+    "full_response.optimized.json": "d160b1c9b4a20f3100776b9dd09f07bd2d769644bf58c307920c066d67683b12",
+    "verify.py": "0ad15bc1bd3885ca71a81f4ad01ccbb7468f58736081c2d5d37608041a28ca98"
+  },
+  "status": "PROVED S1-S3: simultaneous disjoint module reversals cannot cancel; general nested and overlapping families OPEN"
+}

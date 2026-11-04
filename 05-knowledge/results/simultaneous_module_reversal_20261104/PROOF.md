@@ -1,6 +1,7 @@
 # Simultaneous disjoint module reversals cannot cancel
 
-**PROOF UNDER AUDIT.** Named statements S1-S3 below concern pairwise
+**PROVED S1-S3; same-session logical review and independent exact algorithms.**
+Named statements S1-S3 below concern pairwise
 disjoint modules in one fixed quotient. Nested or overlapping reversal
 families require the separate scope discussion at the end.
 
@@ -134,3 +135,42 @@ not an exact collision of distinct named tournaments. The broad nested/
 overlapping question is not declared closed by S1-S3. Retained complete
 two-level controls and their uniform-probe hostile are described in the
 certificate and review. No exact full-response collision is claimed.
+
+## Exact controls: interactions exist, but disappear on the decoder
+
+**FINITE-EXACT.** Take Q=C3 with rows (2,4,1), and three TT2 blocks
+on names {0,1},{2,3},{4,5}, respectively. The base tournament has rows
+
+    T=(14,12,56,48,35,3).
+
+Write F_e for the response when the blocks indicated by the binary mask e
+are reversed, with Q fixed. The complete mixed interaction is nonzero:
+
+    [a_0 a_2 c_1 c_4](F_0-F_1-F_2+F_3)=-2.             (2)
+
+Thus even modulo four, adding single-flip differences does not give the
+full simultaneous difference. The entire 484-coordinate interaction is
+retained, with 128 nonzero coordinates. A literal sixteen-assignment finite
+difference of four actual Hamilton counts independently verifies (2).
+
+Nevertheless the three decoder queries (a,c)=(48,49),(3,7),(12,28)
+have value393 if their selected block is unchanged and483 if it is
+reversed, independent of the other two bits. Their difference90 is2
+modulo4. These are integer bit masks, with physical name u at bit2^u.
+
+For the nested boundary, reverse Q alone, restoring all child interiors:
+
+    U=(50,48,11,3,44,12).
+
+This is the result of reversing the whole T and all three child pairs.
+All64 attachments uniform on the three pairs have F_T=F_U modulo4.
+Exactly24 of those assignments differ over the integers, so this is not
+an exact uniform-response collision. A nonuniform actual query gives
+
+    F_T(a=1,c=5)=251,     F_U(a=1,c=5)=249.
+
+The full difference also has nonzero quartics. This is a hostile to
+uniform-modulo-four quotient contraction, not to S1, and not a full-response
+collision. Both quotient orientations and all child reversals yield16
+distinct complete responses in this example. These finite facts do not
+establish the unrestricted nested theorem.
