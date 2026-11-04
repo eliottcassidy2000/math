@@ -1,0 +1,204 @@
+# aud_census exh threads=12
+CLASSES n=2: 1 (A000568 1), strong 0 (A051337 0)
+CLASSES n=3: 2 (A000568 2), strong 1 (A051337 1)
+n= 3 classes in list 2: strong 1, strong with hc<=40: 1
+   t_k (k=1..40): 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   u_k (k=1..40): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   2-strong by k:   (min hc of 2-strong <= 40: 0)
+   2-arc-strong with cut vertex by k:   (min: 0)
+   Theorem A: (class, cut vertex) pairs checked 0, formula failures 0, S+ or S- < 3: 0, min hc 0, min min(S+,S-) 0
+   forced arcs among 2-arc-strong classes: 0 classes, 0 arcs, without cut vertex 0; types (D1, Dm, junction, middle/skip, at v): 0 0 0 0 0
+   sole-exit-free hc<=5 classes 0: lambda>=2 0, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 1 (F(2n-6) = 0); rooted (UH, sole exit) pairs R(3) = 1 (F(2n-5) = 1)
+   k=3: classes by core order d:  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d:  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d:  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..2:
+     k=3:
+     k=4:
+     k=5:
+    block n=3 k=3 hc(W)=1 |A|=3 end counts 1 1 1 A: 0 1 2 rows 010 001 100
+   DIRECT core enumeration at order d=3: c_2..c_5 = 0 0 0 0 (formula 0 0 0 0); blocks (W,A) of order 3, k=2..5: 0 1 0 0
+CLASSES n=4: 4 (A000568 4), strong 1 (A051337 1)
+n= 4 classes in list 4: strong 1, strong with hc<=40: 1
+   t_k (k=1..40): 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   u_k (k=1..40): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   2-strong by k:   (min hc of 2-strong <= 40: 0)
+   2-arc-strong with cut vertex by k:   (min: 0)
+   Theorem A: (class, cut vertex) pairs checked 0, formula failures 0, S+ or S- < 3: 0, min hc 0, min min(S+,S-) 0
+   forced arcs among 2-arc-strong classes: 0 classes, 0 arcs, without cut vertex 0; types (D1, Dm, junction, middle/skip, at v): 0 0 0 0 0
+   sole-exit-free hc<=5 classes 0: lambda>=2 0, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 1 (F(2n-6) = 1); rooted (UH, sole exit) pairs R(4) = 2 (F(2n-5) = 2)
+   k=3: classes by core order d:  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d:  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d:  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..3:
+     k=3:
+     k=4:
+     k=5:
+    block n=4 k=3 hc(W)=1 |A|=2 end counts 1 2 1 1 A: 0 1 rows 0010 1000 0101 1100
+    block n=4 k=4 hc(W)=1 |A|=3 end counts 1 2 1 1 A: 0 1 2 rows 0010 1000 0101 1100
+    block n=4 k=4 hc(W)=1 |A|=3 end counts 1 2 1 1 A: 0 1 3 rows 0010 1000 0101 1100
+    block n=4 k=5 hc(W)=1 |A|=4 end counts 1 2 1 1 A: 0 1 2 3 rows 0010 1000 0101 1100
+   DIRECT core enumeration at order d=4: c_2..c_5 = 0 0 0 0 (formula 0 0 0 0); blocks (W,A) of order 4, k=2..5: 0 1 2 1
+CLASSES n=5: 12 (A000568 12), strong 6 (A051337 6)
+n= 5 classes in list 12: strong 6, strong with hc<=40: 6
+   t_k (k=1..40): 3 2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   u_k (k=1..40): 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   2-strong by k: 2:1   (min hc of 2-strong <= 40: 2)
+   2-arc-strong with cut vertex by k:   (min: 0)
+   Theorem A: (class, cut vertex) pairs checked 0, formula failures 0, S+ or S- < 3: 0, min hc 0, min min(S+,S-) 0
+   forced arcs among 2-arc-strong classes: 0 classes, 0 arcs, without cut vertex 0; types (D1, Dm, junction, middle/skip, at v): 0 0 0 0 0
+   sole-exit-free hc<=5 classes 1: lambda>=2 1, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 3 (F(2n-6) = 3); rooted (UH, sole exit) pairs R(5) = 5 (F(2n-5) = 5)
+   k=3: classes by core order d:  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d:  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d:  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..4:
+     k=3:
+     k=4:
+     k=5:
+    block n=5 k=5 hc(W)=1 |A|=2 end counts 1 4 2 1 1 A: 0 1 rows 00010 10000 11000 01101 11100
+    block n=5 k=5 hc(W)=1 |A|=2 end counts 4 1 2 3 1 A: 0 1 rows 01000 00101 10010 11000 10110
+    block n=5 k=5 hc(W)=1 |A|=2 end counts 4 1 2 3 1 A: 0 4 rows 01000 00101 10010 11000 10110
+   DIRECT core enumeration at order d=5: c_2..c_5 = 0 2 2 0 (formula 0 2 2 0); blocks (W,A) of order 5, k=2..5: 0 0 0 3
+CLASSES n=6: 56 (A000568 56), strong 35 (A051337 35)
+n= 6 classes in list 56: strong 35, strong with hc<=40: 35
+   t_k (k=1..40): 8 5 11 6 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   u_k (k=1..40): 0 0 2 3 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   2-strong by k: 4:1 5:4   (min hc of 2-strong <= 40: 4)
+   2-arc-strong with cut vertex by k:   (min: 0)
+   Theorem A: (class, cut vertex) pairs checked 0, formula failures 0, S+ or S- < 3: 0, min hc 0, min min(S+,S-) 0
+   forced arcs among 2-arc-strong classes: 0 classes, 0 arcs, without cut vertex 0; types (D1, Dm, junction, middle/skip, at v): 0 0 0 0 0
+   sole-exit-free hc<=5 classes 9: lambda>=2 5, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 8 (F(2n-6) = 8); rooted (UH, sole exit) pairs R(6) = 13 (F(2n-5) = 13)
+   k=3: classes by core order d: d=5:2  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d: d=5:2  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d:  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..5:
+     k=3: 2
+     k=4: 2
+     k=5: 0
+   DIRECT core enumeration at order d=6: c_2..c_5 = 0 3 2 4 (formula 0 3 2 4); blocks (W,A) of order 6, k=2..5: 0 0 0 0
+CLASSES n=7: 456 (A000568 456), strong 353 (A051337 353)
+n= 7 classes in list 456: strong 353, strong with hc<=40: 353
+   t_k (k=1..40): 21 18 38 25 38 33 24 29 29 14 30 22 10 9 10 0 2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   u_k (k=1..40): 0 0 5 4 4 12 9 17 15 11 26 18 9 9 8 0 2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   2-strong by k: 8:6 9:5 10:8 11:23 12:15 13:9 14:9 15:8 17:2 24:1   (min hc of 2-strong <= 40: 8)
+   2-arc-strong with cut vertex by k: 9:1   (min: 9)
+   Theorem A: (class, cut vertex) pairs checked 1, formula failures 0, S+ or S- < 3: 0, min hc 9, min min(S+,S-) 3
+   forced arcs among 2-arc-strong classes: 0 classes, 0 arcs, without cut vertex 0; types (D1, Dm, junction, middle/skip, at v): 0 0 0 0 0
+   sole-exit-free hc<=5 classes 13: lambda>=2 0, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 21 (F(2n-6) = 21); rooted (UH, sole exit) pairs R(7) = 34 (F(2n-5) = 34)
+   k=3: classes by core order d: d=5:2 d=6:3  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d: d=5:2 d=6:2  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d: d=6:4  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..6:
+     k=3: 2 3
+     k=4: 2 2
+     k=5: 0 4
+   DIRECT core enumeration at order d=7: c_2..c_5 = 0 6 4 5 (formula 0 6 4 5); blocks (W,A) of order 7, k=2..5: 0 0 0 0
+CLASSES n=8: 6880 (A000568 6880), strong 6008 (A051337 6008)
+n= 8 classes in list 6880: strong 6008, strong with hc<=40: 5524
+   t_k (k=1..40): 55 60 124 91 138 128 118 116 234 117 168 172 186 161 207 186 135 177 144 122 228 157 154 142 114 139 160 147 150 127 118 116 164 132 118 115 114 117 95 78
+   u_k (k=1..40): 0 0 13 10 9 28 18 24 47 30 36 61 61 74 80 83 70 96 83 63 128 102 106 89 81 109 124 119 132 102 104 106 152 128 116 109 103 116 94 78
+   2-strong by k: 13:5 14:14 15:10 16:8 17:19 18:34 19:26 20:14 21:42 22:51 23:65 24:38 25:52 26:81 27:93 28:91 29:118 30:77 31:92 32:97 33:145 34:124 35:114 36:103 37:97 38:115 39:93 40:78   (min hc of 2-strong <= 40: 13)
+   2-arc-strong with cut vertex by k: 9:4 12:4 15:2   (min: 9)
+   Theorem A: (class, cut vertex) pairs checked 10, formula failures 0, S+ or S- < 3: 0, min hc 9, min min(S+,S-) 3
+   forced arcs among 2-arc-strong classes: 0 classes, 0 arcs, without cut vertex 0; types (D1, Dm, junction, middle/skip, at v): 0 0 0 0 0
+   sole-exit-free hc<=5 classes 32: lambda>=2 0, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 55 (F(2n-6) = 55); rooted (UH, sole exit) pairs R(8) = 89 (F(2n-5) = 89)
+   k=3: classes by core order d: d=5:4 d=6:3 d=7:6  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d: d=5:4 d=6:2 d=7:4  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d: d=6:4 d=7:5  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..7:
+     k=3: 2 3 6
+     k=4: 2 2 4
+     k=5: 0 4 5
+   DIRECT core enumeration at order d=8: c_2..c_5 = 0 12 8 10 (formula 0 12 8 10); blocks (W,A) of order 8, k=2..5: 0 0 0 0
+CLASSES n=9: 191536 (A000568 191536), strong 178133 (A051337 178133)
+    forced-arc class n=9 hc=9 cutvertex=1 forced arcs: 5->4 | scores 2 2 2 3 4 5 6 6 6 | rows 010100000 001100000 100100000 000000111 111100000 111110000 111011010 111011001 111011100
+    forced-arc class n=9 hc=9 cutvertex=1 forced arcs: 5->3 | scores 2 2 2 3 4 5 6 6 6 | rows 010010000 001010000 100010000 111000000 000100111 111110000 111101010 111101001 111101100
+    forced-arc class n=9 hc=9 cutvertex=1 forced arcs: 4->5 | scores 2 2 2 4 4 4 6 6 6 | rows 010100000 001100000 100100000 000010111 111001000 111100000 111011010 111011001 111011100
+    forced-arc class n=9 hc=9 cutvertex=1 forced arcs: 4->3 | scores 2 2 2 3 4 5 6 6 6 | rows 010001000 001001000 100001000 111000000 111100000 000110111 111110010 111110001 111110100
+n= 9 classes in list 191536: strong 178133, strong with hc<=40: 35355
+   t_k (k=1..40): 144 191 390 315 466 484 406 437 864 507 655 741 719 656 1064 824 804 948 954 822 995 983 1122 999 1115 911 1136 1053 1181 1149 1160 1075 1332 1171 1067 1271 1567 1243 1292 1142
+   u_k (k=1..40): 0 0 34 26 23 79 45 67 128 69 76 170 113 143 227 220 150 250 241 233 301 301 244 359 318 309 373 412 330 474 385 441 466 515 488 582 568 554 626 546
+   2-strong by k: 19:1 20:4 21:10 22:12 23:10 24:27 25:27 26:33 27:45 28:66 29:38 30:56 31:34 32:77 33:98 34:98 35:88 36:114 37:88 38:87 39:147 40:128   (min hc of 2-strong <= 40: 19)
+   2-arc-strong with cut vertex by k: 9:9 12:12 15:12 16:4 18:23 20:4 21:18 24:22 25:1 27:22 30:6 33:8 36:6 39:2   (min: 9)
+   Theorem A: (class, cut vertex) pairs checked 154, formula failures 0, S+ or S- < 3: 0, min hc 9, min min(S+,S-) 3
+   forced arcs among 2-arc-strong classes: 4 classes, 4 arcs, without cut vertex 0; types (D1, Dm, junction, middle/skip, at v): 0 0 4 0 0
+   sole-exit-free hc<=5 classes 83: lambda>=2 0, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 144 (F(2n-6) = 144); rooted (UH, sole exit) pairs R(9) = 233 (F(2n-5) = 233)
+   k=3: classes by core order d: d=5:10 d=6:6 d=7:6 d=8:12  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d: d=5:10 d=6:4 d=7:4 d=8:8  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d: d=6:8 d=7:5 d=8:10  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..8:
+     k=3: 2 3 6 12
+     k=4: 2 2 4 8
+     k=5: 0 4 5 10
+   DIRECT core enumeration at order d=9: c_2..c_5 = 0 24 16 20 (formula 0 24 16 20); blocks (W,A) of order 9, k=2..5: 0 0 0 0
+CLASSES n=10: 9733056 (A000568 9733056), strong 9355949 (A051337 9355949)
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 5->4 | scores 2 2 2 2 4 5 7 7 7 7 | rows 0000001100 1010000000 1001000000 1100000000 1111000000 1111100000 0111110011 0111111010 1111110001 1111110100
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 5->4 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0101000000 0011000000 1001000000 0000001110 1111000000 1111100000 1110110100 1110110011 1110111001 1111111000
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 5->3 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0100100000 0010100000 1000100000 1110000000 0001001110 1111100000 1111010100 1111010011 1111011001 1111111000
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 4->5 | scores 2 2 2 4 4 4 6 7 7 7 | rows 0101000000 0011000000 1001000000 0000101110 1110010000 1111000000 1110110100 1110110011 1110111001 1111111000
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 4->3 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0100010000 0010010000 1000010000 1110000000 1111000000 0001101110 1111100100 1111100011 1111101001 1111111000
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 5->4 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0101000000 0011000000 1001000000 0000001110 1111000000 1111100000 1110110001 1110111001 1110111100 1111110010
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 5->3 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0100100000 0010100000 1000100000 1110000000 0001001110 1111100000 1111010001 1111011001 1111011100 1111110010
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 5->4 | scores 2 2 2 3 3 5 7 7 7 7 | rows 0101000000 0011000000 1001000000 0000101100 1110000000 1111100000 1110110011 1110111010 1111110001 1111110100
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 4->5 | scores 2 2 2 4 4 4 6 7 7 7 | rows 0101000000 0011000000 1001000000 0000101110 1110010000 1111000000 1110110001 1110111001 1110111100 1111110010
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 4->3 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0100010000 0010010000 1000010000 1110000000 1111000000 0001101110 1111100001 1111101001 1111101100 1111110010
+    forced-arc class n=10 hc=15 cutvertex=1 forced arcs: 5->4 | scores 2 2 2 4 4 5 6 6 7 7 | rows 0101000000 0011000000 1001000000 0000001111 1111000000 1111100000 1110110010 1110111000 1110110101 1110111100
+    forced-arc class n=10 hc=15 cutvertex=1 forced arcs: 5->3 | scores 2 2 2 3 5 5 6 6 7 7 | rows 0100100000 0010100000 1000100000 1110000000 0001001111 1111100000 1111010010 1111011000 1111010101 1111011100
+    forced-arc class n=10 hc=15 cutvertex=1 forced arcs: 4->3 | scores 2 2 2 4 4 5 6 6 7 7 | rows 0100010000 0010010000 1000010000 1110010000 1111000000 0000101111 1111100010 1111101000 1111100101 1111101100
+    forced-arc class n=10 hc=15 cutvertex=1 forced arcs: 4->3 | scores 2 2 2 3 4 6 6 6 7 7 | rows 0100010000 0010010000 1000010000 1110000000 1111000000 0001101111 1111100010 1111101000 1111100101 1111101100
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 4->5 | scores 2 2 2 3 4 4 7 7 7 7 | rows 0101000000 0011000000 1001000000 0000101100 1110010000 1111000000 1110110011 1110111010 1111110001 1111110100
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 5->3 | scores 2 2 2 3 4 4 7 7 7 7 | rows 0100100000 0010100000 1000100000 1110000000 0001011100 1111000000 1111010011 1111011010 1111110001 1111110100
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 5->4 6->5 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0101000000 0011000000 1001000000 0000000111 1111000000 1111100000 1111110000 1110111010 1110111001 1110111100
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 5->3 6->5 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0100100000 0010100000 1000100000 1110000000 0001000111 1111100000 1111110000 1111011010 1111011001 1111011100
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 4->5 6->4 | scores 2 2 2 4 4 4 6 7 7 7 | rows 0101000000 0011000000 1001000000 0000100111 1110010000 1111000000 1111110000 1110111010 1110111001 1110111100
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 4->3 6->4 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0100010000 0010010000 1000010000 1110000000 1111000000 0001100111 1111110000 1111101010 1111101001 1111101100
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 5->6 6->4 | scores 2 2 2 4 4 5 5 7 7 7 | rows 0101000000 0011000000 1001000000 0000010111 1111000000 1110101000 1111100000 1110111010 1110111001 1110111100
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 5->6 6->3 | scores 2 2 2 3 5 5 5 7 7 7 | rows 0100100000 0010100000 1000100000 1110000000 0001010111 1111001000 1111100000 1111011010 1111011001 1111011100
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 4->3 6->4 | scores 2 2 2 4 4 5 5 7 7 7 | rows 0100010000 0010010000 1000010000 1110010000 1111000000 0000101111 1111100000 1111101010 1111101001 1111101100
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 4->3 5->4 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0100001000 0010001000 1000001000 1110000000 1111000000 1111100000 0001110111 1111110010 1111110001 1111110100
+    forced-arc class n=10 hc=15 cutvertex=1 forced arcs: 6->5 | scores 2 2 3 3 3 5 6 7 7 7 | rows 0011000000 1010000000 0000000111 0110100000 1110000000 1111100000 1111110000 1101111010 1101111001 1101111100
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 6->5 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0010100000 1000100000 0101000000 1100100000 0010000111 1111100000 1111110000 1111011010 1111011001 1111011100
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 6->5 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0001100000 1000100000 1100000000 0110100000 0010000111 1111100000 1111110000 1111011010 1111011001 1111011100
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 6->5 | scores 2 2 2 2 5 5 6 7 7 7 | rows 0010100000 1000100000 0101000000 1100000000 0011000111 1111100000 1111110000 1111011010 1111011001 1111011100
+    forced-arc class n=10 hc=15 cutvertex=1 forced arcs: 6->5 | scores 2 2 3 3 4 4 6 7 7 7 | rows 0010100000 1000100000 0101100000 1100100000 0000010111 1111000000 1111110000 1111011010 1111011001 1111011100
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 6->4 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0010010000 1000010000 0101000000 1100010000 1111000000 0010100111 1111110000 1111101010 1111101001 1111101100
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 6->4 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0001010000 1000010000 1100000000 0110010000 1111000000 0010100111 1111110000 1111101010 1111101001 1111101100
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 6->4 | scores 2 2 2 2 4 6 6 7 7 7 | rows 0010010000 1000010000 0101000000 1100000000 1111000000 0011100111 1111110000 1111101010 1111101001 1111101100
+    forced-arc class n=10 hc=15 cutvertex=1 forced arcs: 5->6 | scores 2 2 3 3 4 5 5 7 7 7 | rows 0010100000 1000100000 0101100000 1100100000 0000010111 1111001000 1111100000 1111011010 1111011001 1111011100
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 5->6 | scores 2 2 2 3 5 5 5 7 7 7 | rows 0010100000 1000100000 0101000000 1100100000 0010010111 1111001000 1111100000 1111011010 1111011001 1111011100
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 5->6 | scores 2 2 2 3 5 5 5 7 7 7 | rows 0001100000 1000100000 1100000000 0110100000 0010010111 1111001000 1111100000 1111011010 1111011001 1111011100
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 5->4 | scores 2 2 2 2 5 5 6 7 7 7 | rows 0010001000 1000001000 0101000000 1100000000 1111001000 1111100000 0011010111 1111110010 1111110001 1111110100
+    forced-arc class n=10 hc=15 cutvertex=1 forced arcs: 6->4 | scores 2 2 3 3 4 5 5 7 7 7 | rows 0010010000 1000010000 0101010000 1100010000 1111000000 0000101111 1111100000 1111101010 1111101001 1111101100
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 5->4 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0010001000 1000001000 0101000000 1100001000 1111000000 1111100000 0010110111 1111110010 1111110001 1111110100
+    forced-arc class n=10 hc=12 cutvertex=1 forced arcs: 5->4 | scores 2 2 2 3 4 5 6 7 7 7 | rows 0001001000 1000001000 1100000000 0110001000 1111000000 1111100000 0010110111 1111110010 1111110001 1111110100
+    forced-arc class n=10 hc=9 cutvertex=1 forced arcs: 5->4 | scores 2 2 2 2 4 5 7 7 7 7 | rows 0010001000 1000001000 0101000000 1100000000 1111000000 1111100000 0011110111 1111110010 1111110001 1111110100
+    forced-arc class n=10 hc=18 cutvertex=1 forced arcs: 4->5 | scores 2 2 2 2 4 5 7 7 7 7 | rows 0000101000 1010000000 1001000000 1100000000 0111010000 1111001000 0111100111 1111110010 1111110001 1111110100
+n=10 classes in list 9733056: strong 9355949, strong with hc<=40: 148185
+   t_k (k=1..40): 377 589 1193 1049 1500 1750 1322 1583 3042 1982 2204 2949 2400 2354 4114 2982 2899 4041 3376 3360 3989 3806 4479 4260 4526 3858 5409 4421 5426 4923 5343 4810 6392 5207 5252 5867 6964 5861 6438 5888
+   u_k (k=1..40): 0 0 89 68 60 227 117 191 372 190 192 546 283 382 659 595 353 788 539 632 831 703 559 1042 741 759 1089 1040 837 1288 1005 1142 1273 1329 1303 1660 1467 1584 1694 1623
+   2-strong by k: 30:1 31:4 32:12 33:15 34:15 35:18 36:26 37:52 38:20 39:48 40:58   (min hc of 2-strong <= 40: 30)
+   2-arc-strong with cut vertex by k: 9:18 12:24 15:30 16:8 18:73 20:20 21:54 24:114 25:8 27:107 28:36 30:88 32:44 33:82 35:18 36:163 39:116 40:34   (min: 9)
+   Theorem A: (class, cut vertex) pairs checked 2928, formula failures 0, S+ or S- < 3: 0, min hc 9, min min(S+,S-) 3
+   forced arcs among 2-arc-strong classes: 41 classes, 49 arcs, without cut vertex 0; types (D1, Dm, junction, middle/skip, at v): 1 0 48 0 0
+   sole-exit-free hc<=5 classes 217: lambda>=2 0, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 377 (F(2n-6) = 377); rooted (UH, sole exit) pairs R(10) = 610 (F(2n-5) = 610)
+   k=3: classes by core order d: d=5:26 d=6:15 d=7:12 d=8:12 d=9:24  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d: d=5:26 d=6:10 d=7:8 d=8:8 d=9:16  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d: d=6:20 d=7:10 d=8:10 d=9:20  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..9:
+     k=3: 2 3 6 12 24
+     k=4: 2 2 4 8 16
+     k=5: 0 4 5 10 20
+   DIRECT core enumeration at order d=10: c_2..c_5 = 0 48 32 40 (formula 0 48 32 40); blocks (W,A) of order 10, k=2..5: 0 0 0 0
+wrote 148185 strong classes with hc <= 40 to aud_strong_hcle40_10.bin
+
+real	1m30.878s
+user	0m0.015s
+sys	0m0.015s

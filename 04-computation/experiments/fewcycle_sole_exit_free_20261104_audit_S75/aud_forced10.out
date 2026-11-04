@@ -1,0 +1,4 @@
+  non-junction forced arc 4->5, hc=18, cut vertices [0, 6], rows 0000101000 1010000000 1001000000 1100000000 0111010000 1111001000 0111100111 1111110010 1111110001 1111110100
+     v=0: components [[4, 5, 6, 7, 8, 9], [1, 2, 3]], N+(v) in D_1: [4, 6]
+     v=6: components [[7, 8, 9], [0, 1, 2, 3, 4, 5]], N+(v) in D_1: [7, 8, 9]
+order-10 forced-arc classes parsed: 41; forced arcs by type (over all cut vertices): {'junction': 48, 'D1/Dm': 1}

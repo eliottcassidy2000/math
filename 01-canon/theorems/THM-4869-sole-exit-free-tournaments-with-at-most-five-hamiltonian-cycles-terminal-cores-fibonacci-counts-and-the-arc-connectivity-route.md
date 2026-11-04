@@ -7,12 +7,16 @@ status: >
     Lemma B5 uses THM-4868 (C), Redei's parity theorem, and finite checks at orders <= 6.
   - The corollary of (A) uses Fraisse-Thomassen 1987 (CITED, not read).
   - (C3) and (C4) settle klein's HYP-9459 (1)-(3); the k = 5 law is new.
-  PRE-REGISTERED and CONFIRMED: HYP-9461 P1-P10 at orders 10-14 (c355721ce6, before the run).
+  PRE-REGISTERED and CONFIRMED: HYP-9461 P1-P10 at orders 10-14 (c355721ce6, before the run); blind at orders 11-14,
+  since order 10 reproduces klein's published table.
   FINITE-EXACT: the minimum hc of 2-strong tournaments (2, 4, 8, 13, 19, 30 at n = 5-10), and the core lineage.
   ANALOGY: the {-3}-self-duality parallel and the inspiration readings (note section 4).
-  NOVELTY: no prior source found (web search: Thomassen 1980, Busch 2006, Kuehn-Osthus survey, Demaria-Kiihl,
-  Burzio-Demaria; bodies not read).
-  AUDIT: see the note, section 7.
+  NOVELTY: no prior source found. The audit read Busch 2006 (the Thomassen 1980 and Busch bounds are vacuous below about
+  32 vertices), Kuehn-Osthus (the minimum is open), the Bang-Jensen-Gutin-Yeo 1997 abstract (a vertex-connectivity
+  result), and Burzio-Demaria 1988 (one-cycle tournaments only); OEIS has no tournament entries for these sequences.
+  CREDIT: the Fraisse-Thomassen remark "a forced arc needs a cut vertex" is S74's (same day).
+  AUDIT: PASS WITH CORRECTIONS (no major; 13 minor, all applied; MISTAKE-709);
+  04-computation/experiments/fewcycle_sole_exit_free_20261104_audit_S75/AUDIT.md.
 session: opus-2026-11-04-S75
 source: 05-knowledge/results/arc_connectivity_route_and_sole_exit_free_few_cycle_tournaments_20261104.md
 related:
@@ -24,6 +28,7 @@ related:
   - HYP-9461
   - HYP-9458
   - HYP-9460
+  - HYP-9454
 verification:
   - 04-computation/experiments/fewcycle_sole_exit_free_20261104.c
   - 04-computation/experiments/fewcycle_sole_exit_free_20261104_14_5.out
@@ -32,6 +37,7 @@ verification:
   - 04-computation/experiments/fewcycle_core_lineage_20261104.out
   - 04-computation/experiments/fewcycle_blocks_20261104.c
   - 04-computation/experiments/fewcycle_blocks_20261104.out
+  - 04-computation/experiments/fewcycle_sole_exit_free_20261104_audit_S75/AUDIT.md
 ---
 
 # THM-4869 - sole-exit-free tournaments with at most five Hamiltonian cycles
@@ -54,12 +60,14 @@ Let T be 2-arc-strong with a cut vertex v, and T - v = D_1 => ... => D_m. Then:
 
 where S_+ = sum over a in N+(v) & D_1 of start_a(D_1), and S_- is the dual sum over D_m.
 
-S_+ >= 3, and dually S_- >= 3, so hc >= 9. The bound is attained by v => C3 => C3 => v:
+S_+ >= 3, and dually S_- >= 3, so hc >= 9. The proof of S_+ >= 3 is by cases:
 - C3 forces v to beat all three vertices;
 - W4 forces v to beat both sole entries (1 + 2 paths);
 - hc(D_1) >= 2 gives at least 4;
 - a uniquely Hamiltonian D_1 of order m >= 5 has a non-critical sole entry y (THM-4868 (C)) with
   start_y >= m - 2 >= 3.
+
+The bound is attained by v => C3 => C3 => v.
 
 **Corollary.** A uniquely Hamiltonian tournament is not 2-arc-strong:
 - with a cut vertex, hc >= 4;
@@ -68,7 +76,7 @@ S_+ >= 3, and dually S_- >= 3, so hc >= 9. The bound is attained by v => C3 => C
 Hence it is a one-arc join, a proof using neither Shelor's grammar nor THM-4868.
 
 **Forced arcs.** In a 2-arc-strong tournament, an arc lying on every Hamiltonian cycle needs a cut vertex (by
-Fraisse-Thomassen) and must lie in every factor choice. The S74 audit's four order-9 witnesses are
+Fraisse-Thomassen; this remark is S74's, earlier the same day) and must lie in every factor choice. The S74 audit's four order-9 witnesses are
 v => C3 => x => y => C3 => v (1 + 3 + 1 + 1 + 3 = 9), with forced arc x -> y and hc = 9.
 
 ## (B) Terminal cores
@@ -80,6 +88,7 @@ satisfy |D_1| |D_2| <= 2. If there is no sole exit, the minimal set D is unique,
 is a sole exit of T/D.
 
 **B3.** (D, u) is a **core**:
+- D is strong (B1);
 - no vertex of D - u has out-degree 1 in D;
 - no non-empty Z inside D - u sends exactly one arc into D - Z;
 - e_u(D) >= 2.
@@ -87,7 +96,9 @@ is a sole exit of T/D.
 For the last condition: if e_u(D) = 1, then D is uniquely Hamiltonian with u as its only sole exit, and the
 non-critical sole exit of THM-4868 (C) gives e_u >= |D| - 2 >= 2.
 
-Every pair (strong Q with sole exit z, core (D, u)) gives a sole-exit-free T = Q[z <- (D, u)] with terminal core D.
+Every pair (strong Q with sole exit z, core (D, u) with D strong) gives a sole-exit-free T = Q[z <- (D, u)] with
+terminal core D. Strongness of D is needed: D = W + u with W => u satisfies the other three conditions but leaves u a sole
+exit.
 Isomorphism classes correspond.
 
 **B4.** Write D - u = W_1 => ... => W_r and A = N-(u) & W_r. Then

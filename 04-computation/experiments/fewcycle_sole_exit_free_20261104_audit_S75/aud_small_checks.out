@@ -1,0 +1,25 @@
+1. almost transitive AT_n versus the bineutral A_n (Burzio-Demaria Definition 2)
+   n= 4  AT_n: hc=1 non-critical=2 cut arcs=3 | A_n: hc=1 non-critical=2 cut arcs=3 | isomorphic: True
+   n= 5  AT_n: hc=1 non-critical=3 cut arcs=3 | A_n: hc=1 non-critical=2 cut arcs=4 | isomorphic: False
+   n= 6  AT_n: hc=1 non-critical=4 cut arcs=3 | A_n: hc=1 non-critical=2 cut arcs=5 | isomorphic: False
+   n= 7  AT_n: hc=1 non-critical=5 cut arcs=3 | A_n: hc=1 non-critical=2 cut arcs=6 | isomorphic: False
+   n= 8  AT_n: hc=1 non-critical=6 cut arcs=3 | A_n: hc=1 non-critical=2 cut arcs=7 | isomorphic: False
+   n= 9  AT_n: hc=1 non-critical=7 cut arcs=3 | A_n: hc=1 non-critical=2 cut arcs=8 | isomorphic: False
+   n=10  AT_n: hc=1 non-critical=8 cut arcs=3 | A_n: hc=1 non-critical=2 cut arcs=9 | isomorphic: False
+2. the four order-9 witnesses v => C3 => x => y => C3' => v
+   x->v, y->v   2-arc-strong=True  2-strong=False  hc=9  forced arcs=[(4, 5)]  |Aut|=9  self-converse=False
+   x->v, v->y   2-arc-strong=True  2-strong=False  hc=9  forced arcs=[(4, 5)]  |Aut|=9  self-converse=True
+   v->x, y->v   2-arc-strong=True  2-strong=False  hc=9  forced arcs=[(4, 5)]  |Aut|=9  self-converse=True
+   v->x, v->y   2-arc-strong=True  2-strong=False  hc=9  forced arcs=[(4, 5)]  |Aut|=9  self-converse=False
+   x->v, y->v vs x->v, v->y: isomorphic=False, converse-isomorphic=False
+   x->v, y->v vs v->x, y->v: isomorphic=False, converse-isomorphic=False
+   x->v, y->v vs v->x, v->y: isomorphic=False, converse-isomorphic=True
+   x->v, v->y vs v->x, y->v: isomorphic=False, converse-isomorphic=False
+   x->v, v->y vs v->x, v->y: isomorphic=False, converse-isomorphic=False
+   v->x, y->v vs v->x, v->y: isomorphic=False, converse-isomorphic=False
+   exhaustive-run classes matched to the family: [['x->v, y->v'], ['x->v, v->y'], ['v->x, y->v'], ['v->x, v->y']]
+3. sharpness family v => C3 => TT_j => C3' => v
+   n=7: 2-arc-strong=True, cut vertex=True, hc=9
+   n=8: 2-arc-strong=True, cut vertex=True, hc=9
+   n=9: 2-arc-strong=True, cut vertex=True, hc=9
+   n=10: 2-arc-strong=True, cut vertex=True, hc=9

@@ -22703,3 +22703,53 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - State asymptotic error terms only after computing the next term of the expansion; a double pole leaves a factor n.
   - "Exact" belongs to identities, not to analogies.
   - When a prompt's numbers are matched to a published table, re-read the table for repeated values before counting.
+
+## MISTAKE-709 (2026-11-04, opus-2026-11-04-S75, the note `05-knowledge/results/arc_connectivity_route_and_sole_exit_free_few_cycle_tournaments_20261104.md`, THM-4869 and HYP-9461 at the pre-audit commit 60620d918c; found by the independent audit `04-computation/experiments/fewcycle_sole_exit_free_20261104_audit_S75/AUDIT.md`) -- an imported class misidentified, "strong" dropped again, a missing hypothesis, and a same-day credit
+
+- **What was claimed.**
+  - (1) The almost transitive tournament of the owner's {-3}-self-duality quote (Achour-Boudabbous-Boussairi) was said to
+    be "the uniquely Hamiltonian A_n, the run-length-2 class of THM-4868". The four order-9 quotients were all called
+    "the almost transitive A_5".
+  - (2) The novelty sentence said "minimum out-degree >= 2 and n >= 6 implies at least 3 Hamiltonian cycles", without
+    "strong".
+  - (3) The converse of Lemma B3 listed three core properties without "D strong".
+  - (4) "A forced arc needs a cut vertex, by Fraisse-Thomassen" was given without credit.
+  - (5) Smaller errors:
+    - "exactly half the cores of each order are attached";
+    - the k = 4 orphan polynomial written with exponent d - 6;
+    - P1-P10 described as blind at orders 10-14;
+    - the session31 mirror map quoted as having "2 <-> 4 the only rational pair";
+    - a path missing its session127 prefix;
+    - the literature described as unread although readable;
+    - three wording slips.
+- **Why it was wrong.**
+  - (1) AT_n has a non-critical run of length n - 2 and 3 cut arcs. THM-4868's run-length-2 class is the bineutral
+    A_n of Burzio-Demaria / Las Vergnas, with 2 non-critical vertices and n - 1 cut arcs. They coincide only at n = 4.
+    One of the four witnesses has the bineutral A_5 as its quotient, and one has neither.
+  - (2) A source beating RT_5 has n = 6, minimum out-degree 2 and no Hamiltonian cycle. This is the same slip as
+    MISTAKE-707.
+  - (3) D = W + u with W => u satisfies the three properties but makes u a sole exit.
+  - (4) S74's note and its audit recorded the Fraisse-Thomassen deduction earlier the same day.
+  - (5) The attached/orphan split is uneven while p <= 1 cores exist (d <= 6 or 7). Lemma B4 gives exponent d - 7.
+    The order-10 totals were klein's published numbers. The README's statement concerns integer inputs (9/4 <-> 27/8 is
+    another rational pair). Busch's EJC note is open access.
+- **Repair.** All applied:
+  - AT_n is defined correctly and distinguished from A_n, and the quotients are labelled per witness;
+  - "strong" is restored and "D strong" added;
+  - S74 is credited;
+  - the lineage range and exponent are corrected;
+  - the blind range is stated as 11-14;
+  - the quote, the path, the literature bounds and the wording are fixed.
+
+  No theorem, count or proof step changed. The audit reproduced every number with independent code.
+- **How it was caught.** The independent audit:
+  - recomputed everything (Burnside over labelled tournaments to order 8; all 9,733,056 classes to order 10; its own
+    generator to order 14);
+  - built AT_n and the bineutral A_n side by side;
+  - read Busch 2006 and Burzio-Demaria 1988;
+  - read the full same-day log.
+- **Lesson.**
+  - When an outside paper names a class (almost transitive, bineutral, nearly transitive), construct it and compare
+    invariants before identifying it with a repository class.
+  - Keep "strong" in every degree-to-cycle statement (MISTAKE-707 recurs).
+  - grep one's own earlier same-day notes and audits for credit, not only other lanes'.

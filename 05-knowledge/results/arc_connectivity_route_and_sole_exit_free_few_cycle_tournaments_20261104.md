@@ -25,14 +25,19 @@ The prompt, verbatim:
 | A. The {-3}-self-duality parallel | ANALOGY, with the precise statement |
 | B. Unique terminal core, product law, the core lemma, and the block list for k <= 5 | PROVED (uses THM-4868 (C), Redei, and finite checks at orders <= 6) |
 | C. No 2-strong tournament of order n >= 6 has <= 3 Hamiltonian cycles, and none of order n >= 7 has <= 5 | PROVED (induction, with base orders 6-12 FINITE-EXACT) |
-| C. u_2(n) = 0 (n >= 6), u_3(n) = F(2n - 9) (n >= 6), u_4(n) = 2F(2n - 11) (n >= 7), u_5(n) = 4F(2n - 12) - 3F(2n - 14) (n >= 7). This is klein's HYP-9459 (1)-(3), plus a new k = 5 law. | PROVED; pre-registered and confirmed at orders 10-14 (HYP-9461) |
+| C. u_2(n) = 0 (n >= 6), u_3(n) = F(2n - 9) (n >= 6), u_4(n) = 2F(2n - 11) (n >= 7), u_5(n) = 4F(2n - 12) - 3F(2n - 14) (n >= 7). This is klein's HYP-9459 (1)-(3), plus a new k = 5 law. | PROVED; pre-registered and confirmed at orders 10-14, blind at 11-14 (HYP-9461) |
 | C. Minimum hc of 2-strong tournaments: 2, 4, 8, 13, 19, 30 at n = 5-10; > 40 at n = 11 | FINITE-EXACT |
 | Inspiration threads (section 4) | checked: ANALOGY or NUMEROLOGY, except where marked |
 
-New to the repository. No prior source was found for the sole-exit-free counts, for the bound "minimum out-degree >= 2
-and n >= 6 implies at least 3 Hamiltonian cycles", or for the core decomposition. The search covered Thomassen 1980,
-Busch 2006, the Kuehn-Osthus survey, Demaria-Kiihl and Burzio-Demaria. Their texts were not read, only abstracts and
-citations.
+New to the repository. No prior source was found for the sole-exit-free counts, for the bound "every strong tournament
+with minimum out-degree >= 2 and n >= 6 has at least 3 Hamiltonian cycles", or for the core decomposition.
+
+Checked by this session and its audit:
+- Thomassen 1980 and Busch 2006: exponential lower bounds that are vacuous below about 32 vertices (section 3);
+- Kuehn-Osthus: the minimum for 2-strong tournaments is open;
+- Bang-Jensen-Gutin-Yeo 1997: a vertex-connectivity result, with no characterisation of 2-arc-strong exceptions;
+- Burzio-Demaria 1988 and Demaria-Kiihl: one-cycle (Douglas) tournaments only;
+- OEIS: none of the sequences appears with a tournament meaning.
 
 ## 0. Notation
 
@@ -94,7 +99,9 @@ form, not the degree-1 form (Shelor 1977; THM-4868 (B)).
 
 **Why the strong form fails exactly as observed.** An arc is *forced* if it lies in every Hamiltonian cycle (then
 T - e is non-Hamiltonian).
-- By Fraisse-Thomassen, a 2-arc-strong T with a forced arc has a cut vertex.
+- By Fraisse-Thomassen, a 2-arc-strong T with a forced arc has a cut vertex. This remark is S74's (its note, section 3
+  (b), and its audit, earlier the same day). New here: the product formula, hc >= 9, the classification below, and the
+  explicit form of the witnesses.
 - In the product formula, a forced arc must lie in every choice of every factor. Arcs v -> a and b -> v are never
   forced (|N+(v) & D_1| >= 2). An arc inside a strong middle component is never forced (the rotations of one of its
   Hamiltonian cycles miss each cycle arc once).
@@ -117,13 +124,17 @@ T - e is non-Hamiltonian).
 statement read):
 - T is {-k}-self dual if T - X is self-dual for every k-set X;
 - a decomposable tournament with at least 9 vertices is {-3}-self dual iff it is transitive or almost transitive;
-- an almost transitive tournament is a transitive one with the arc between its two extreme vertices reversed. It is
-  the uniquely Hamiltonian A_n, the run-length-2 class of THM-4868.
+- an almost transitive tournament AT_n is a transitive one with the arc between its two extreme vertices reversed
+  (Busch's "nearly transitive"). It is uniquely Hamiltonian, with a non-critical run of length n - 2 and 3 cut arcs.
+- For n >= 5, AT_n is **not** the bineutral A_n of THM-4868 (run length 2, n - 1 cut arcs). The two coincide only at
+  n = 4, where both are W4 (S75 audit m1).
 
 The parallel is real but only structural:
 - The four route-(b) witnesses are decomposable at order 9: both C3's are modules.
-- Their 5-vertex quotient on {C3, x, y, C3', v} is the almost transitive A_5 exactly when v beats both x and y, or both
-  beat v.
+- Their 5-vertex quotient on {C3, x, y, C3', v} depends on the arcs between v and x, y (`aud_quotient5.out`):
+  - it is AT_5 exactly when v beats both x and y, or both beat v;
+  - it is the bineutral A_5 when x -> v -> y;
+  - it is neither when v -> x and y -> v.
 - They are not {-3}-self dual. By the theorem, a decomposable tournament of order 9 would have to be transitive or
   almost transitive, and these are neither.
 
@@ -164,11 +175,14 @@ traverses D as one block ending at u, and T - D as one block starting at l. If T
 s_l(T - D) = hc(Q) for the contraction Q = T/D. In Q, the contracted vertex z beats only l, so it is a sole exit.
 
 **Lemma B3 (the core).** Let T have no sole exit, lambda(T) = 1, and terminal core D with arc u -> l. Then:
+- D is strong (Lemma B1);
 - no vertex of D - u has out-degree 1 in D;
 - no non-empty Z inside D - u sends exactly one arc into D - Z;
 - e_u(D) >= 2.
 
-Conversely, take any strong Q with a sole exit z (or |Q| = 2) and any pair (D, u) with these properties. Replace z by
+Conversely, take any strong Q with a sole exit z (or |Q| = 2) and any pair (D, u) with these properties, including D
+strong. Strongness is needed: D = W + u with W => u satisfies the other three but makes u a sole exit (S75 audit m3).
+Replace z by
 D, keeping only u -> l from D. The result T = Q[z <- (D, u)] is strong, has no sole exit, and has D as its terminal core.
 Isomorphism classes correspond.
 
@@ -232,7 +246,7 @@ only this lemma's k <= 3 part) gives W a sole exit z, and z must lie in A.
   - hc(W) = start_(z')(Q_1) * prod_{i >= 2} H(Q_i) = 2.
   - Every H is odd (Redei), so start_(z')(Q_1) = 2 and Q_2, ..., Q_s are single vertices.
   - The last of them beats only z, so it is a sole exit and lies in A.
-  - So A = {z, q} and the sum is at least H(Q_1) + 2. H(Q_1) is odd and at least start_(z')(Q_1) = 2, so it is at
+  - So A contains {z, q}, and the sum is at least H(Q_1) + 2. H(Q_1) is odd and at least start_(z')(Q_1) = 2, so it is at
     least 3; a sum <= 5 forces H(Q_1) = 3, i.e. Q_1 = C3. But then start_(z')(C3) = 1, not 2, a contradiction.
 
 **hc(W) = 1 (uniquely Hamiltonian, order m).** A contains every sole exit.
@@ -318,8 +332,19 @@ with hc <= 5 occur only at orders 5 (RT_5) and 6 (hc 4 and 5).
 QED.
 
 **The minimum number of Hamiltonian cycles of a 2-strong tournament** is 2, 4, 8, 13, 19, 30 at n = 5-10, and above 40
-at n = 11 (FINITE-EXACT; `..._mincycles_11_40.out`). The general minimum is open (Kuehn-Osthus survey). Exponential lower
-bounds are attributed to Thomassen 1980 and Busch 2006 (not read). Theorem C gives the small cases.
+at n = 11 (FINITE-EXACT; `..._mincycles_11_40.out`). The general minimum is open (Kuehn-Osthus, arXiv:1006.0590, section
+4.2). Theorem C gives the small cases.
+
+The known bounds, read by the S75 audit:
+- Thomassen 1980 proved at least alpha^(n/32 - 1) Hamiltonian cycles, with alpha = 6^(1/4);
+- Busch 2006 (EJC 13, #N3, Corollary 2) improved this to beta^(n/32 - 1), with beta = 5^(1/3).
+
+Both are vacuous below about 32 vertices.
+
+**Two-cycle tournaments.** (C3) closes the gap flagged in Session189's
+`session189_response_frontier_20261104/twohc_comparison/COMPARISON.md` section 3. Every two-cycle tournament of order
+>= 6 has a sole exit, so klein's digit-2 ready counts (THM-4862 (g); HYP-9454 (5); A377857(n - 2)) count all two-cycle
+tournaments.
 
 ### 3.1 Computational record (HYP-9461)
 
@@ -327,7 +352,9 @@ bounds are attributed to Thomassen 1980 and Busch 2006 (not read). Theorem C giv
 extension. It is complete because a non-critical deletion never increases hc, and Moon 1966 provides a non-critical
 vertex.
 - It reproduces klein's exhaustive t_k, u_k (k <= 5) at orders 5-10 exactly.
-- Pre-registered in c355721ce6 before the run: P1-P10 at orders 10-14, **all confirmed**. Values:
+- Pre-registered in c355721ce6 before the run: P1-P10 at orders 10-14, **all confirmed**. The blind range is orders
+  11-14. At order 10 the totals are klein's published exhaustive values (the u_5 law was fitted on data that includes
+  klein's 60), and only the decomposition and core items there were new. Values:
   - u_3 = 89, 233, 610, 1,597, 4,181;
   - u_4 = 68, 178, 466, 1,220, 3,194;
   - u_5 = 60, 157, 411, 1,076, 2,817;
@@ -338,20 +365,23 @@ vertex.
   - c_3 = 24 ... 384;
   - c_4 = 16 ... 256;
   - c_5 = 20 ... 320.
-- There are no 2-strong or cut-vertex classes with hc <= 5. The run takes 27 s.
+- There are no 2-strong classes, and no 2-arc-strong classes with a cut vertex, with hc <= 5. The run takes 27 s.
 
 **Lineage** (`fewcycle_core_lineage_20261104.out`):
-- Exactly half the cores of each order are *attached*: deleting the chain vertex w_1, a sole entry, leaves a core, and
-  every core has exactly one attached child. This happens iff u -> w_2.
-- The other half are *orphans*. Their u-out-degrees are the coefficients of z(1 + z)^(d-7)(1 + z + z^2) for k = 3 and
-  2z^2 (1 + z)^(d-6) for k = 4: the binomial counts of the free arcs u -- w_i in Lemma B4.
+- From the order where every core has p >= 2 (core order d >= 7 for k = 3, 4; d >= 8 for k = 5), exactly half the
+  cores are *attached*: deleting the chain vertex w_1, a sole entry, leaves a core, and every core has exactly one
+  attached child. This happens iff u -> w_2.
+- At smaller orders the split is uneven: at d = 6 it is 2 of 3, 2 of 2 and 0 of 4 for k = 3, 4, 5, and at d = 7, k = 5
+  it is 4 of 5. A p = 1 core is attached iff A != W, and p = 0 cores are orphans.
+- The orphans' u-out-degrees are the coefficients of z(1 + z)^(d-7)(1 + z + z^2) for k = 3, and 2z^2 (1 + z)^(d-7) for
+  k = 4 (S75 audit m6 corrected the exponent). They are the binomial counts of the free arcs u -- w_i in Lemma B4.
 
 ## 4. The inspiration threads, checked
 
 **The unit ball and n = 5.**
 - The repository's own facts:
-  - V_n = pi^(n/2)/(n/2)! peaks at n = 5, since V_(n+2) = 2 pi V_n/(n+2) and V_6/V_5 = 5 pi/16 < 1 (session127
-    `gsma_norm_collapse_20261031/volume/THEORY.md`, VOL-1).
+  - V_n = pi^(n/2)/(n/2)! peaks at n = 5, since V_(n+2) = 2 pi V_n/(n+2) and V_6/V_5 = 5 pi/16 < 1
+    (`session127_gsma_norm_collapse_20261031/volume/THEORY.md`, VOL-1).
   - The self-converse share of tournament classes (8 of 12 at n = 5; 1, 1/2, 2/3, 12/56, 88/456, ...) has its unique
     interior local maximum at n = 5 (S74 audit m7; `two_selector_boolean_20261102/INSPIRATION.md`).
 - What this session adds is a *proved* reason why n = 5 is special for few-cycle tournaments:
@@ -379,7 +409,8 @@ vertex.
 - The owner's image of one value realized twice across a peak (one near 0, one near infinity, small changes on one side
   large on the other) already has two exact forms in the repository:
   - **Session31's mirror map for x^(1/x)** (`session31_mirror_mrb_20261022/mirror/README.md`): a decreasing involution
-    fixing e, with mu e^(-mu) = lambda e^(-lambda), and 2 <-> 4 the only rational pair.
+    fixing e, with mu e^(-mu) = lambda e^(-lambda). The only rational mirrors of integer inputs are r_2 = 4 and r_4 = 2;
+    non-integer rational pairs such as 9/4 <-> 27/8 exist.
   - **THM-062's palindromic forward-edge polynomial,** with root pairs r, 1/r.
 - Here the same shape is exact and PROVED. The denominator 1 - 3x + x^2 is self-reciprocal, with roots phi^(-2) (near 0)
   and phi^2 (near infinity) exchanged by x -> 1/x; and dx' = -dx/x^2 is the "small change near 0, large near infinity"
@@ -395,23 +426,53 @@ vertex.
 |---|---|
 | Theorem A: product formula, S_+, S_- >= 3, hc >= 9 | PROVED (uses THM-4868 (C) for the sharp constant; S_+, S_- >= 2 is elementary) |
 | Corollary A': uniquely Hamiltonian implies lambda = 1 | PROVED given Fraisse-Thomassen (CITED) |
-| Forced arcs need a cut vertex; the order-9 family | PROVED structure; order 9 minimal FINITE-EXACT (S74 audit) |
-| {-3}-self-duality parallel | ANALOGY (theorem statement read; paper body not read) |
+| Forced arcs need a cut vertex; the order-9 family | PROVED structure (the Fraisse-Thomassen remark is S74's); order 9 minimal FINITE-EXACT (S74 audit); 41 forced-arc classes at order 10, all with a cut vertex (S75 audit) |
+| {-3}-self-duality parallel | ANALOGY (theorem statement read; paper body not read; AT_n is not THM-4868's A_n) |
 | Lemmas B1-B5 | PROVED (B3 and B5 use THM-4868 (C); B5 uses Redei and finite checks at orders <= 6) |
-| Theorem C (C1)-(C4) | PROVED; base orders 6-12 FINITE-EXACT; P1-P10 pre-registered and confirmed at 10-14 |
+| Theorem C (C1)-(C4) | PROVED; base orders 6-12 FINITE-EXACT; P1-P10 pre-registered and confirmed at 10-14 (blind at 11-14) |
 | Minimum hc of 2-strong tournaments, n <= 11 | FINITE-EXACT |
-| Lineage halves and Pascal rows | FINITE-EXACT through order 12, explained by Lemma B4 |
+| Lineage halves (from p >= 2 on) and Pascal rows | FINITE-EXACT through order 12, explained by Lemma B4 |
 | Section 4 | as marked |
 
 ## 6. Pre-registration record
 
 HYP-9461 was committed (c355721ce6) with the generator and the order 3-9 evidence before orders 10-14 were run. All of
-P1-P10 hold. The proofs of section 2 and of (C1) were found after the run. They explain the doubling that the
+P1-P10 hold. The blind range is orders 11-14, since the order-10 totals were klein's published values. The proofs of section 2 and of (C1) were found after the run. They explain the doubling that the
 pre-registration predicted from the order 5-8 cores.
 
 ## 7. Audit
 
-(Filled after the independent audit.)
+Independent adversarial audit:
+[`AUDIT.md`](../../04-computation/experiments/fewcycle_sole_exit_free_20261104_audit_S75/AUDIT.md).
+Verdict: **PASS WITH CORRECTIONS.** There are no major findings. Theorems A, B1-B5 and C are correct, and the order of
+proof has no circularity.
+
+**Reproduced with the audit's own code** (none of the session's):
+- all labelled tournaments of orders 5-8, counted into classes by Burnside's lemma (no canonical form);
+- every tournament class through order 10 (9,733,056 classes, with no use of Moon's theorem);
+- an independent Moon-extension generator for orders 11-14;
+- direct enumeration of cores and blocks through order 14;
+- the generating-function algebra to n = 39.
+
+Every number in the note matched.
+
+**New from the audit.** At order 10 there are 41 forced-arc classes, all with a cut vertex.
+
+**Minor findings, all applied:**
+- **m1.** AT_n is not A_n; the quotient labels corrected.
+- **m2.** "strong" restored in the novelty sentence (a repeat of MISTAKE-707).
+- **m3.** "D strong" added to the converse of B3.
+- **m4.** S74 credited for the Fraisse-Thomassen remark.
+- **m5, m6.** Lineage range and the k = 4 exponent.
+- **m7-m9.** Wording.
+- **m10.** The blind range is 11-14.
+- **m11.** The session31 quote.
+- **m12.** A path.
+- **m13.** Literature bounds quoted exactly.
+
+Optional follow-up from the audit: the Session189 two-cycle gap is closed by (C3) (section 3).
+
+Logged as MISTAKE-709.
 
 ## 8. Reproduction
 

@@ -1,0 +1,38 @@
+# aud_census ext threads=12
+read 148185 strong classes of order 10 with hc <= 40
+n=10 classes in list 148185: strong 148185, strong with hc<=40: 148185
+   t_k (k=1..40): 377 589 1193 1049 1500 1750 1322 1583 3042 1982 2204 2949 2400 2354 4114 2982 2899 4041 3376 3360 3989 3806 4479 4260 4526 3858 5409 4421 5426 4923 5343 4810 6392 5207 5252 5867 6964 5861 6438 5888
+   u_k (k=1..40): 0 0 89 68 60 227 117 191 372 190 192 546 283 382 659 595 353 788 539 632 831 703 559 1042 741 759 1089 1040 837 1288 1005 1142 1273 1329 1303 1660 1467 1584 1694 1623
+   2-strong by k: 30:1 31:4 32:12 33:15 34:15 35:18 36:26 37:52 38:20 39:48 40:58   (min hc of 2-strong <= 40: 30)
+   2-arc-strong with cut vertex by k: 9:18 12:24 15:30 16:8 18:73 20:20 21:54 24:114 25:8 27:107 28:36 30:88 32:44 33:82 35:18 36:163 39:116 40:34   (min: 9)
+   Theorem A: (class, cut vertex) pairs checked 1054, formula failures 0, S+ or S- < 3: 0, min hc 9, min min(S+,S-) 3
+   sole-exit-free hc<=5 classes 217: lambda>=2 0, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 377 (F(2n-6) = 377); rooted (UH, sole exit) pairs R(10) = 610 (F(2n-5) = 610)
+   k=3: classes by core order d: d=5:26 d=6:15 d=7:12 d=8:12 d=9:24  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d: d=5:26 d=6:10 d=7:8 d=8:8 d=9:16  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d: d=6:20 d=7:10 d=8:10 d=9:20  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..9:
+     k=3: 2 3 6 12 24
+     k=4: 2 2 4 8 16
+     k=5: 0 4 5 10 20
+   DIRECT core enumeration at order d=10: c_2..c_5 = 0 48 32 40 (formula 0 48 32 40); blocks (W,A) of order 10, k=2..5: 0 0 0 0
+EXTENDED to n=11: 545489 classes with hc <= 40 (children re-checked by direct DP 4730806, rejected children sampled and re-checked 147090)
+n=11 classes in list 545489: strong 545489, strong with hc<=40: 545489
+   t_k (k=1..40): 987 1775 3574 3390 4664 6065 4150 5511 10244 7282 7082 11129 7684 8294 15054 10583 9558 16062 10996 13154 14510 13616 15016 17421 16065 14107 21272 16417 18624 21213 18177 18634 24469 18868 19330 25738 24332 21712 25186 23544
+   u_k (k=1..40): 0 0 233 178 157 649 306 542 1079 533 500 1718 736 1066 1963 1714 909 2574 1377 1943 2468 1902 1397 3552 1964 2049 3425 3040 1986 4420 2369 3344 3656 3341 3428 5861 3433 4067 4804 4783
+   2-strong by k:   (min hc of 2-strong <= 40: 0)
+   2-arc-strong with cut vertex by k: 9:36 12:48 15:60 16:16 18:159 20:40 21:108 24:244 25:25 27:277 28:72 30:302 32:92 33:222 35:90 36:682 39:342 40:230   (min: 9)
+   Theorem A: (class, cut vertex) pairs checked 3195, formula failures 0, S+ or S- < 3: 0, min hc 9, min min(S+,S-) 3
+   sole-exit-free hc<=5 classes 568: lambda>=2 0, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 987 (F(2n-6) = 987); rooted (UH, sole exit) pairs R(11) = 1597 (F(2n-5) = 1597)
+   k=3: classes by core order d: d=5:68 d=6:39 d=7:30 d=8:24 d=9:24 d=10:48  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d: d=5:68 d=6:26 d=7:20 d=8:16 d=9:16 d=10:32  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d: d=6:52 d=7:25 d=8:20 d=9:20 d=10:40  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..10:
+     k=3: 2 3 6 12 24 48
+     k=4: 2 2 4 8 16 32
+     k=5: 0 4 5 10 20 40
+
+real	0m13.976s
+user	0m0.000s
+sys	0m0.031s

@@ -1,0 +1,4 @@
+v->x v->y | almost transitive order: ('v', 'c', 'x', 'y', 'c2') | bineutral A_5 labelling: None
+v->x y->v | almost transitive order: None | bineutral A_5 labelling: None
+x->v v->y | almost transitive order: None | bineutral A_5 labelling: ('y', 'c2', 'v', 'c', 'x')
+x->v y->v | almost transitive order: ('c', 'x', 'y', 'c2', 'v') | bineutral A_5 labelling: None

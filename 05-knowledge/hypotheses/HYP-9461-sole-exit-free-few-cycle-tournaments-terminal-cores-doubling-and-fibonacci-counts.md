@@ -1,7 +1,7 @@
 ---
 id: HYP-9461
 title: "Sole-exit-free tournaments with few Hamiltonian cycles factor through a terminal core: for n >= 7, every strong tournament with hc in {3, 4, 5} and no vertex of out-degree 1 is a one-arc join with a unique minimal one-arc-leaving set D (tail u), e_u(D) = hc and a uniquely Hamiltonian rooted prefix; the cores double (c_3(d) = 3 * 2^(d-6), c_4(d) = 2^(d-5), c_5(d) = 5 * 2^(d-7)), which gives klein's F(2n - 9) and 2F(2n - 11) (HYP-9459 (2), (3)) and predicts u_5(n) = 4F(2n - 12) - 3F(2n - 14). Pre-registered at orders 10-14"
-status: CONFIRMED (P1-P10 all hold at orders 10-14; run after the pre-registration commit c355721ce6) and PROVED for all n as THM-4869 (opus-2026-11-04-S75)
+status: CONFIRMED (P1-P10 all hold at orders 10-14, blind at 11-14 since the order-10 totals were klein's published values; run after the pre-registration commit c355721ce6) and PROVED for all n as THM-4869 (opus-2026-11-04-S75)
 session: opus-2026-11-04-S75
 date: 2026-11-04
 related: [THM-4869, HYP-9459, THM-4868, THM-4867, HYP-9458, HYP-9460, THM-4862]

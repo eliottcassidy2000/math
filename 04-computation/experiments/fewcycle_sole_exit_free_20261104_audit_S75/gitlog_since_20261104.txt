@@ -1,0 +1,193 @@
+993f9330f2 14:26 Session189 checkpoint20: independently reviewed tribonacci tower, finite strong witnesses and two-cycle comparison
+53e2983fb9 14:15 Session189 checkpoint19: reviewed four fixed noncirculant prime-nine rows with arbitrary matching children
+60620d918c 14:13 opus-2026-11-04-S75: checkpoint (pre-audit) - THM-4869: a 2-arc-strong tournament with a cut vertex has hc >= 9 (arc-connectivity route to THM-4867 with Fraisse-Thomassen; route (b)'s order-9 witnesses are v => C3 => x => y => C3 => v); sole-exit-free tournaments with hc <= 5 are a uniquely Hamiltonian rooted prefix plus a unique terminal core (blocks C3 and W4 for k = 3; RT_5 seeds); no 2-strong tournament of order >= 6 has <= 3 Hamiltonian cycles (>= 7: <= 5), by induction with base orders 6-12; u_2 = 0, u_3 = F(2n-9), u_4 = 2F(2n-11), u_5 = 4F(2n-12) - 3F(2n-14) for all n (klein's HYP-9459 (1)-(3)); HYP-9461 P1-P10 confirmed at orders 10-14; inspiration threads checked
+ef4dd0e79b 14:10 Session189 checkpoint24: independently reviewed source-dependent canonical digit-one readiness bridge
+9bd88e9d44 14:08 Session189 checkpoint23: complete independently audited size29 archive and source-relative minimum30 boundary
+3a0d94c077 14:06 mac-mini-2026-11-04-oddprimes: reserve THM-4871 and HYP-9463 (C_pq (p,q,1^k) defect family of HYP-9340 beyond p-groups: the pre-registered C15 (3,5,1^5) test of HYP-9344 (2), (3,7)/(5,7) analogues; uniform first-order circulant rules; MRB mirror map)
+aaaf77d896 14:04 kind-pasteur-2026-11-04-S10: checkpoint (pre-audit) - THM-4870 the Thomassen merge: r + k = n + 1 reducible-or-obstruction dichotomy for uniquely Hamiltonian tournaments with mean fraction phi/sqrt5 (tournament form of the 2026 linear-reducibility four-colour theorem); asymmetric path spectrum = odd minus {3,7,21} up to 1125 (HYP-9462 A1 confirmed); no square-sum graph is hypohamiltonian/hypotraceable, vertex-deletion data; HYP-9462 (B) REFUTED (uniquely Hamiltonian graphs first have consecutive non-critical vertices at n = 10, exhaustive); Maschke and fives typed
+ffedbba714 13:53 kind-pasteur-2026-11-04-S10: reserve THM-4870 and pre-register HYP-9462 (asymmetric tournaments attain exactly the odd H other than 3, 7, 21: FINITE-EXACT <= 224, predicted on [225, 1125]; uniquely Hamiltonian graphs never have two consecutive non-critical cycle vertices: predicted exhaustive n = 8, random n = 12-15) with programs and exploratory record; confirmatory runs not yet made
+c355721ce6 13:48 opus-2026-11-04-S75: pre-register HYP-9461 (sole-exit-free few-cycle tournaments factor through a terminal core; doubling cores give F(2n-9), 2F(2n-11) and the new u_5 law; orders 10-14 not yet run) with the generator (reproduces klein's table at orders 5-9)
+605a620560 13:41 opus-2026-11-04-S75: reserve THM-4869 and HYP-9461 (arc-connectivity route to THM-4867; few-cycle tournaments without a sole exit, HYP-9459)
+c7f553e1a3 13:30 kind-pasteur-2026-11-04-S10: close-out letter (THM-4868 audited twice, SOUND WITH CORRECTIONS; HYP-9460 closed; MISTAKE-707)
+8665522b14 13:28 kind-pasteur-2026-11-04-S10: apply two independent audits (both SOUND WITH CORRECTIONS; MISTAKE-707) - THM-4868 title restores 'strong' in the min-out-degree form of (B); FINITE-EXACT scope stated per statement and program; (G) retyped as a Shelor-free proof of Shelor's grammar (KNOWN, operation_closed_synthesis section II); ranges for the T(n,3), T(n,4) steps; (H) provisos; label map, pointer and wording fixes; audit reports and code committed
+434449a85a 13:01 klein-2026-11-04: digit-1 spectrum at order 15 (46,368 classes = F(24), floor 6,303): 12871 and 38635 are digit-1-ready, so every level-2 value and seven of the eight level-3 values of the lineage's tree are ready at order <= 15 (only 38633 open); R1 window [4096, 8192) complete at 0.773
+c2fbfacee9 12:58 kind-pasteur-2026-11-04-S10: credit opus-S74's audit as the first proof of HYP-9458 (given Shelor's grammar; P7 follows with (C)); THM-4868 (G)-(H) retyped as a second, Shelor-free proof; dictionary Shelor j = 0, 1, 2 <-> admissible y, y-, y--
+e11d119988 12:56 kind-pasteur-2026-11-04-S10: checkpoint (pre-audit) - THM-4868 the non-critical run of a uniquely Hamiltonian tournament: local roundness and propagation, Shelor-free proof of the degree-1 theorem (KNOWN, THM-4867), one run from a sole entry to a sole exit, cut arcs + non-critical = n + 1, asymmetry, refined Fibonacci counts, admissible Shelor parents {y, y-, (y--)} re-deriving Garey's F(2n-6), run transitions r, r+1, r+2 proving the run-length recurrence and every formula of HYP-9458; HYP-9460 P1-P8 CONFIRMED at orders 14-18 (blind recurrence rows at 17, 18)
+143a50f217 12:51 klein-2026-11-04: note the B-only order-10 deck test as stopped (memory) and the all-n complete-invariant question as open
+5ffedc7ed0 12:56 Session189 navigation: reviewed source-relative minimum30 proof; full size29 archive pending
+7fa4f4d078 12:55 Session189 checkpoint23 proof: reviewed size29 boundary and source-relative minimum30; full archive uploading
+ba225e2824 12:53 opus-2026-11-04-S74: close-out - letter (THM-4867 KNOWN with proof; HYP-9458 PROVED by the audit; HYP-9460 P7 follows; MISTAKE-706)
+17398cf277 12:52 Session189 checkpoint22: complete independently audited size28 archive and source-relative minimum29 boundary
+a0518f53cd 12:51 opus-2026-11-04-S74: apply independent audit (PASS WITH CORRECTIONS) - HYP-9458 PROVED by the audit (given Shelor's grammar: cut arcs k = 3 + #{b,e} - #{c}; T(n,k) = sum_d C(n-4,k-3+2d) C(k-2+d,d); GF z^2(x+(1-x)z)/(1-2x-x(1-x)z); machine-checked on 9,227,464 Shelor words to order 20; next diagonal n(n-4)(n-5)/6 = A005581); klein's same-day block lemma, generators and THM-4862 (b) credited for the extension lemma; Fraisse-Thomassen context for route (b); session127 is the pi^(n/2) session; trace argument for the pasted spectra; kind-pasteur-S10 HYP-9460 P7 recurrence cross-cited (it is the GF's denominator, so it follows from the proof plus HYP-9460 (C)); MISTAKE-706; audit report
+1d9a342703 12:48 klein-2026-11-04: the multiset of root responses {B_t(T)} alone separates all tournaments of orders 7-9 (the path-end counts {e_t} alone do not)
+8d5e486861 12:45 klein-2026-11-04: the root-response deck separates all 9,733,056 tournaments of order 10 (streamed double hash of the sorted decks): a complete invariant through order 10
+6b88969b93 12:28 klein-2026-11-04: the root-response deck {(h, e_t, B_t)}_t is a complete invariant of tournaments through order 9 (56, 456, 6880, 191536 classes all separated; rooted triples injective on 97.1 % of rooted pairs at order 9); deckhash.c for the streamed order-10 test
+ec7816456c 12:35 Session189 navigation: reviewed minimum29 proof; complete extension data upload explicitly pending
+99a1767709 12:34 Session189 checkpoint22 proof: reviewed size28 boundary and source-relative minimum29; complete archive uploading
+846601b6cc 12:31 Session189 checkpoint21: reviewed complete C3-child nine census and source-relative 28-name minimum
+a8db6218f9 12:28 kind-pasteur-2026-11-04-S10: pre-register HYP-9460 (non-critical run of uniquely Hamiltonian tournaments: local roundness, one run from sole entry to sole exit, cut arcs + non-critical = n + 1, refined Fibonacci counts, asymmetry; conjectured run-length recurrence, blind at orders 17-18) with the program; orders 14-18 not yet run
+e83c9de2cd 12:26 kind-pasteur-2026-11-04-S10: reserve THM-4868 and HYP-9460 (non-critical run of uniquely Hamiltonian tournaments; complements opus-S74's THM-4867)
+0349b28e42 12:25 klein-2026-11-04: cross-cite opus S73's one-arc join law H(J) = h_A h_B + B_a B_b - e_a e_b (HYP-9457 (c)), the two-base generalisation of the one-exit law built on the root response the same day
+4f152dea83 12:20 klein-2026-11-04: digit-3..6 ready floors and the multi-digit unions (digits <= 2, 3, 4, 6 from orders <= 10 attain every odd in [69, 81], [69, 119], [69, 129], [69, 1649]) read off the e-slices of the root-response census
+9e4ea5ebe6 12:17 klein-2026-11-04: the ready spectra are the e-slices of the one-step values, R_sigma = {h - sigma + B : e_t(T) = sigma}; floors recovered from the strong rows of the census
+4b6ad434f2 12:13 klein-2026-11-04: cross-cite Shelor 1977 / THM-4867 (opus S74, same day): the out-degree-1 statement for uniquely Hamiltonian tournaments is known, the chord rules are consequences of Shelor's insertion grammar, and opus's extension lemma coincides with the block lemma; HYP-9459 (1) narrowed to the two-cycle half
+56c066725a 12:10 klein-2026-11-04: hypotheses INDEX back within its 120-line budget after parallel landings (continuation lines folded into their rows; no content removed)
+1df3d50e93 11:59 klein-2026-11-04: HYP-9459 few-cycle tournaments by minimum out-degree — every one- or two-cycle tournament of order >= 6 has an out-degree-1 vertex (exhaustive <= 10); the sole-exit-free three-cycle tournaments are counted by F(2n-9) (2, 5, 13, 34, 89) and the four-cycle ones by 2F(2n-11) (4, 10, 26, 68); columns k = 3, 4, 5 not in OEIS
+addeb7d11b 12:03 opus-2026-11-04-S74: checkpoint (pre-audit) - THM-4867 every uniquely Hamiltonian tournament is a one-arc join (KNOWN: Shelor 1977 in-degree-1 vertex; recorded with proof), equivalences, Shelor-free generator through order 16 (Garey counts), three failed proof routes, cut-arc distribution; HYP-9458 P1-P6 confirmed at orders 14-16
+525d6c2d2e 11:59 opus-2026-11-04-S74: pre-register HYP-9458 (cut-arc distribution T(n,k) of uniquely Hamiltonian tournaments: T(n,2) = 2^(n-5), T(n,3) = n 2^(n-7), T(n,4) = (n^2+n-8) 2^(n-10), top diagonals; independent Garey check at orders 14-16) with the generator; orders 14-16 not yet run
+1eb9542903 11:59 Session189 navigation: reviewed 28-name necessary minimum; complete C3 archive upload remains active
+48d37a449e 11:58 Session189 reviewed proof checkpoint: 28-name necessary minimum; full certificate archive uploading
+cfdc8b69e0 11:57 opus-2026-11-04-S73: close-out letter
+4884563b32 11:56 opus-2026-11-04-S73: apply independent audit (PASS WITH CORRECTIONS; MISTAKE-705) - one-arc join law retyped KNOWN (session29 ADDENDUM sections 2 and 5), cycle formula hc = s_a e_b kept as the addition; HYP-9457 (b) CLOSED KNOWN (Shelor 1977 in-degree-1 vertex = single-vertex one-arc cut); bottom band now lies in (not equals) the uniquely Hamiltonian stratum; interval chains KNOWN as upset tournaments (Brualdi-Li, Poet-Shader), chain total 1,596; P1, P3 sanity checks; mod-3 mechanism replaced; self-converse scope; coverage context; audit report
+a1c6c549f7 11:54 klein-2026-11-04: table of tournaments with exactly k Hamiltonian cycles (all tournaments of orders 5-10, k <= 24, with the out-degree-1 subcounts): k = 1 Garey, k = 2 the two-cycle law, k = 3..5 new columns not in OEIS; from order 6 on every one- and two-cycle tournament has an out-degree-1 vertex and some three-cycle ones do not
+6b4d761381 11:45 klein-2026-11-04: reflection — the root response as the one object behind the C2 grammar, the near-join and the tribonacci tower; what the night proved, measured, misread and left open
+05645e7a0c 11:47 Session189 checkpoint18: reviewed grouped-skew sign criterion and four fixed transitive-child families
+87166334f1 11:46 opus-2026-11-04-S74: reserve THM-4867 and HYP-9458 (every uniquely Hamiltonian tournament is a one-arc join)
+4eaeb8e878 11:45 Session189 checkpoint17: reviewed mixed-quartic kernel span, moment inversion and restricted local-converse battery
+f3102b5d0d 11:43 opus-2026-11-04-S72: close-out letter
+5557bd0910 11:43 opus-2026-11-04-S72: apply independent audit (PASS WITH CORRECTIONS; MISTAKE-704) - line-class count CITED (THM-851 (13)-(14)); McKay census structure largely published (McKay (f), Boudabbous-Ille 2018, Pouzet 1979 / Dumont via arXiv:1910.13914; new as found: converse relation at orders 6 and 8); Theorem H typed as a short corollary of THM-002 and Pouzet 1977 I-2.2(a), codex-20260821 deck reflection reconciled; Lemma L transitivity line and order-11 corollary; even-order injectivity observed not explained; PRIMEGAME readings retyped DICTIONARY; audit report
+67d95f2f65 11:40 klein-2026-11-04: exactly 589 tournaments of order 10 have two Hamiltonian cycles (all 9,733,056 checked by a C subset-DP counter), extending the exhaustive data for the two-cycle law to orders 6-10; end-insertion and suffix rules on the forward-chord sets of the 10,912 digit-1 classes
+2199b26afd 11:40 Session189 checkpoint16: reviewed bounded prime-nine cyclic families and complete circulant extension
+ab6af919b8 11:35 Session189 navigation: reviewed prime-nine, nontransitive-child and 27-vertex necessary frontier
+29318f72d0 11:34 klein-2026-11-04: two-cycle tournaments by the size of the relocated segment (s2(n) = s1(n-1) + 2, palindromic pair row); THM-1900's insertion-response calculus cited as the framework of the one-exit law
+4140b3a394 11:32 Session189 checkpoint15: reviewed crossed-TT4 positive quartics and highest-node transitive-child exclusion
+f602fa79d9 11:29 Session189 checkpoint14: independently reviewed incoming exposed-anchor theorem with corrected scope
+ad38ac192a 11:28 Session189 navigation: reviewed prime-nine frontier and dyadic separation snapshot
+2cfc7bba05 11:20 klein-2026-11-04: the digit-2 classes are the tournaments with exactly two Hamiltonian cycles (exhaustive 2, 5, 18, 60, 191 at orders 5-9; RT5 the only order-5 exception); the two cycles always differ by a segment swap, and deleting either swapped segment leaves a unique-cycle tournament
+1884da467d 11:25 Session189 checkpoint13: reviewed finite deletion-deck collisions excluded by full named-response data
+80147be9d0 11:23 Session189 checkpoint12: reviewed marked readiness inverse repair and bounded unmarked correspondence
+f45cb96173 11:21 Session189 checkpoint11: reviewed odd-transitive mixed identities and conversed-child reconstruction integration
+a3d1edcbab 11:20 kind-pasteur-2026-11-04-S9: close-out letter (THM-4864 audited; HYP-9456; merged ledger)
+6031eccb0f 11:18 kind-pasteur-2026-11-04-S9: hypotheses INDEX back within its 120-line budget after opus-S73's landing (THM-741 stub's wrapped line joined; no content removed)
+4f758673c0 11:17 kind-pasteur-2026-11-04-S9: ledger credits concurrent even_graph_response_merge packet
+b167bb9821 11:16 kind-pasteur-2026-11-04-S9: credit concurrent Session189 checkpoints 04-10 (frontier >=8 reviewed, >=9 pending; dyadic thickening is source-relative) in THM-4864/HYP-9456/ledger
+de04e9ba16 11:13 kind-pasteur-2026-11-04-S9: THM-4864 audited (SOUND WITH CORRECTIONS, applied; MISTAKE-703), widened to any common-end child; P1-P5 outcomes (0 failures; harness fixes disclosed); HYP-9456 aligned to mod 8 with common-end census
+d63f3a8d57 11:18 even-graph-merge: integrate reviewed dyadic thickening and ambient transfer
+2ab43fbea0 11:16 even-graph-merge: seal exact evidence and route recovered structural maps
+70de56c9c2 11:12 even-graph-merge: checkpoint recovered bijections and complete named Fourier evidence
+3222ec5189 11:16 opus-2026-11-04-S73: checkpoint (pre-audit) - THM-4866 single-cycle floor (CITED by combination: Moon-Yang + Burzio-Demaria 1990; cut proof that every interval chain is uniquely Hamiltonian), one-arc Lorentzian join law H = x_h y_h + x_R y_R - x_e y_e and hc = s_a e_b, bottom band = uniquely Hamiltonian stratum (all 610 classes of order <= 10 are one-arc joins), cycle ceiling and second floor through order 10, 7 and 21 as holes of the uniquely Hamiltonian stratum, joins of orders <= 7 cover [23, 84705] with a 3-adic singular series, real-point decomposition; HYP-9457 P1-P5 confirmed, P6 refuted
+d617652d2e 11:13 Session189 checkpoint10: reviewed all-even childwise-profile modulo-sixteen ambient transfer
+a25ecb565f 11:11 Session189 checkpoint09: reviewed dyadic thickening separates source-relative original-module XOR families
+2257c7662d 11:10 Session189 checkpoint08: independently reviewed Seidel-energy dyadic converse separation and carousel bounds
+d0a9ad0c69 11:08 klein-2026-11-04: 12875 in R2(13) closes the second +4 branch weak-allowed; A377857 ninth term 15360 predicted and confirmed; order-10 root-response census streamed (every odd in [69, 8079323] from bases of order <= 10); triple-bank negative control
+4d5099bc95 11:06 opus-2026-11-04-S73: pre-register HYP-9457 (single-cycle floor at order 10, cycle ceiling, bottom band = uniquely Hamiltonian one-arc joins, second floor f_2(10) in [175, 215], Lorentzian join coverage of [23, 20000] with orders <= 7, 3-adic singular series) with the program; order 10 and joins 7 7 not yet run
+c87ca88cff 11:06 Session189 checkpoint07: reviewed original-module highest changed prime frontier at least nine
+c5725b3a7f 11:04 Session189 checkpoint06: independently reviewed prime-eight arbitrary-child ambient quotient-converse separation
+9db3423759 10:57 opus-2026-11-04-S73: reserve THM-4866 and HYP-9457 (single-cycle floor and crevasses of the Hamiltonian-path spectrum)
+bdeac3b603 10:55 Session189 checkpoint05: reviewed original-module highest changed prime frontier at least eight
+2127b712fd 10:54 klein-2026-11-04: hypotheses INDEX back within its 120-line budget after the parallel landings (opus S72's nine-line THM-4863/HYP-9455 entry folded into one line, mac-mini's two THM-4780 rows folded into one; no content removed)
+0a333e256b 10:53 Session189 checkpoint04: independently reviewed complete prime-seven arbitrary-child ambient converse separation
+7002daf0f2 10:51 klein-2026-11-04: THM-4865 the sole-exit tower is tribonacci (h_k = h_{k-1} + h_{k-2} + h_{k-3} for every rooted base; C2 = height two at any vertex; near-join and tower are weightings of one root response B); all-vertex root-response census: every odd in [69, 702189] from bases of order <= 9; order-14 digit-1 spectrum (12875, 12877 in R1(14))
+97632252db 10:34 kind-pasteur-2026-11-04-S9: THM-4864 one-child mod-4 separation (weighted E1; singleton child; transitive child unchanged AND reversed), HYP-9456 residual frontier, Paley-7 C3 exact mod-8 probe, merged A000568/metagraph/{7,21}/response ledger
+cd2bc6a5e1 10:21 opus-2026-11-04-S72: checkpoint (pre-audit) - THM-4863 path-weighted deletion tower: THM-796's face row is the Hamiltonian-endpoint-weighted converse-merged deck (Lemma W, all tilings n <= 7); injective at orders 4-10 (4,870,920 nodes at 10), full rank 3-9 (HYP-9455 P1-P3, P6 confirmed); converse-merged decks collide exactly at odd orders 3-9 and are injective at even orders 4-10 (P4 refuted at 8, P7 confirmed at 10), all collisions classified (source lifts of even-order converse same-deck pairs + one class per odd order); McKay's census reproduced (even pairs converse, odd pairs self-converse with hc differing by one); Theorem H (merged deck determines H at even order, H - 2hc at odd); join rule; line fraction {11/13, 1, 13/11} at order 4; line classes (2^m+2^h)/4; PRIMEGAME labels typed DICTIONARY/NUMEROLOGY (fraction moves P = 0.58)
+92aaef65f8 10:13 kind-pasteur-2026-11-04-S9: reserve THM-4864, HYP-9456; pre-register one-child mod-4 reversal-cube predictions (P1-P5)
+a92e0b49be 10:05 klein-2026-11-04: exact digit-1/digit-2 ready spectra through orders 13/12 (self-certifying block-lemma generators, counts = Garey F(2n-6) and A377857(n-2)); 12877 in R2(12) closes its +4 branch weak-allowed; 38615 in R1(13); R1/R2 densities 0.65-0.77 not decaying (corrects the "sparse" reading in THM-4862/HYP-9454)
+e58a09c18b 09:58 opus-2026-11-04-S72: HYP-9455 results (P1-P3 confirmed at orders 8 and 9; P4 refuted at order 8, unweighted merged decks injective at even orders 4, 6, 8 and colliding at odd orders 3, 5, 7, 9) and second pre-registration P6-P7 for order 10 (path-weighted rows distinct on 4,870,920 nodes; unweighted merged decks injective)
+ce33106a23 09:51 opus-2026-11-04-S72: pre-register HYP-9455 (path-weighted deletion tower: merged tournament nodes determined by the Hamiltonian-endpoint-weighted deck; P1 injective at order 8, P2 at order 9, P3 full column rank of R_8, R_9, P4 unweighted merged decks collide at 8 and 9) with the census program; orders 8-9 not yet run
+d82961b8d0 09:43 opus-2026-11-04-S72: reserve THM-4863 and HYP-9455 (PRIMEGAME blocks vs the merged-metagraph deletion tower; path-weighted decks)
+74ebbdde57 09:21 klein-2026-11-04: THM-4862, HYP-9454 - rearming the two-branch tree at 12875 and 12877 (+2 branches closed by explicit order-15 digit-1 targets; +4 open, nearest digit-2 states at 12871/12879), the one-exit extension law h(T+x) = h - e_a + [P A_a], the readiness digit as the Hamiltonian-cycle count of the entry attachment (bijection explaining Garey's Fibonacci counts), ready floors through order 10 (doubling per vertex: name-retention wall at depth 4), and the full-digit C2 sweep: every odd number in [307, 26551] is 3H + 2 sigma for a strong sole-exit tournament of order <= 10, and at the tree's depth-3 scale every odd number in [38001, 39999] is reached from random order-11/12 ready pairs (all eight tree values); proposed as the unbounded target selector; R1/R2 sparse
+89c0723a76 09:22 Session189 checkpoint03: reviewed transitive-module distance tomography with full named quartic controls
+1572eb8a0b 09:19 Session189 checkpoint02: reviewed four-core joint-entry adapter, full observer lattice and spacing obstruction
+f6543fcd60 09:09 Session189 checkpoint01: reviewed constant-region port-cycle budgets and shielded circuit cores
+8f14b96ab0 07:10 Session188 checkpoint93: final reviewed navigation including TT3 tomography and unchanged order-seven frontier
+e0603deb65 07:08 Session188 checkpoint92: reviewed TT3 degree tomography and equal-profile source-family battery
+0aeb466d64 06:44 Session188 checkpoint91: navigable reviewed snapshot with all retained refinements and exact scope boundaries
+6d475395fc 06:43 Session188 checkpoint90: exact marked path-duality identity with complete physical boundary controls
+a64ee1d8cc 06:42 Session188 checkpoint89: exact transitive-triple circulation and cyclic-witness ambient battery
+8c30d27d09 06:41 Session188 checkpoint88: quotient cycle-parity criterion for the odd-core ambient correction
+1b3acb08a7 06:37 Session188 checkpoint87: all-order second-endpoint sufficient criterion with fixed-ambient transfer
+38397f8a08 06:37 Session188 checkpoint86: factorial return-segment symmetry and exact parity contraction
+56a5b704f8 06:36 Session188 checkpoint85: specified prime-eight uniform-anchor separation for arbitrary nontrivial children
+1212246c1e 06:36 Session188 checkpoint84: exact weighted AM-GM ambient certificates through common child order sixteen
+a886e80e90 06:35 Session188 checkpoint83: complete palindromic-descent profile certificates through common child order twelve
+a38c2af9af 06:35 Session188 checkpoint82: negative transitive-interface quartic for the explicit unbounded block family
+54fb1a5c80 06:35 Session188 checkpoint81: profile-monotone cyclic source-family response with certified baseline scope
+6fb688c6ed 06:28 Session188 checkpoint80: active navigation through prime-five and six closures with reviewed order-seven frontier
+7a5667dd58 06:24 Session188 checkpoint79: independently reviewed highest-prime frontier at order seven
+00351793a6 06:24 Session188 checkpoint78: complete six-quotient endpoint certificate and arbitrary-child ambient separation
+711e39f754 06:21 Session188 checkpoint77: independently reviewed highest-prime frontier at order six
+b9ecc8fe71 06:20 Session188 checkpoint76: complete prime-five all-cover separation in arbitrary fixed ambient
+b9b734ccc9 06:19 Session188 checkpoint75: complete prime-five local separation for arbitrary nonempty children
+1fe887a5f4 06:19 Session188 checkpoint74: all-order cut-aware two-cover affine compression
+4c66663fe8 06:06 Session188 checkpoint73: prime-five even-child all-cover fixed-ambient separation
+720532bef9 06:05 Session188 checkpoint72: complete prime-five even-child local separation with full named banks
+e340ba756e 06:05 Session188 checkpoint71: all-order offline coarse modulo-eight type compression
+b1a801dc72 06:00 Session188 checkpoint70: prime-eight endpoint-criterion obstruction with explicit named separators
+aa7d1417fc 05:59 Session188 checkpoint69: complete named marked-cover sufficient statistics without a separation claim
+6564508df6 05:58 Session188 checkpoint68: one-bit all-even coarse modulo-sixteen profile linearization
+8abb1dccb8 05:58 Session188 checkpoint67: ordered-module pair-child separators and root families in fixed ambient
+029ef86335 05:56 Session188 checkpoint66: active navigation for complete cyclic-ambient synthesis and verified research
+2af9f89298 05:53 Session188 checkpoint65: complete cyclic quotient and original-family separation in every fixed ambient
+c2100f00e6 05:51 Session188 checkpoint64: complete cyclic modulo-sixteen all-cover ambient lift
+0e45ba1f05 05:50 Session188 checkpoint63: complete local all-even cyclic modulo-sixteen separation
+a804121c31 05:45 Session188 checkpoint62: odd-core cyclic all-cover correction and fixed-ambient lift
+041129a78d 05:37 Session188 checkpoint61: five profile types and complete cyclic coarse-response classification
+f06f5ad3df 05:34 Session188 checkpoint60: fixed dual queries for profile-increasing root families
+5053148699 05:33 Session188 checkpoint59: endpoint-parity transfer and complete coarse modulo-four law
+05afdd44b2 05:27 Session188 checkpoint58: exact ordered-cover quartic transfer through arbitrary fixed ambients
+f35567505f 05:26 Session188 checkpoint57: grouped cyclic-module quartic with arbitrary witness children
+331ebe424c 05:24 Session188 checkpoint56: audited ordered cyclic-module quartic and pair-free critical families
+445bd97501 05:22 Session188 checkpoint55: vertex-transitive extreme-child profile restoration and root families
+cd92eaa299 05:20 Session188 checkpoint54: exact order-ten equal-profile cyclic ambient certificate
+de2158cefc 05:19 Session188 checkpoint53: equal-profile cyclic ambient separation through order nine
+5c722440a0 05:16 Session188 checkpoint52: exact order-eight skew-conference characterization
+f66ca0e07c 05:14 Session188 checkpoint51: exhaustive eight-quotient pair-converse certificate and complete banks
+d325709569 05:06 Session188 checkpoint50: equal-profile cyclic ambient separator through child order seven
+ec7ce1d7c9 05:03 Session188 checkpoint49: continuous Hamilton-bounded cone certificate through order seven
+e945c08f83 04:50 Session188 checkpoint48: audited Hamilton-bounded artificial profile-cone obstruction
+0c84b3175c 03:57 Session188 checkpoint47: audited cyclic-child kernel and pair-free W-family separation
+2187d00a73 03:34 Session188 checkpoint46: audit positivity-only formal coarse equality obstruction
+9c98c73e1a 03:32 Session188 checkpoint45: audit formal same-parity profile-cone obstruction
+37c81903d8 03:27 Session188 checkpoint44: audited marked-pair prime-root family detection with complete records
+9afc88aebf 03:26 Session188 checkpoint43: audited uniform-start tomography and arbitrary-third root families
+9004b80d45 03:24 Session188 checkpoint42: audited reconstruction on a known six-pair partition in fixed ambients
+9244c9ac00 03:19 Session188 checkpoint41: exact rank-ten compression of complete cyclic coarse contrasts
+621cd19acb 03:18 Session188 checkpoint40: audited marked-profile factorization for full named shared quartics
+56661c46c1 03:09 Session188 checkpoint39: reviewed critical-quotient classification and pair-child response synthesis
+f7ac3b7936 03:08 Session188 checkpoint38: audited staircase-prime quotient separators and complete batteries
+05990262d1 03:06 Session188 checkpoint37: audited endpoint hostile and positive even-pair refinement
+bbbe62dec0 02:57 Session188 checkpoint36: reviewed alternating-hub prime quotient pair-child separators
+1915ca2222 02:55 Session188 checkpoint35: audited all-order block-uniform mod8 blindness certificate
+dc453691b3 02:54 Session188 checkpoint34: exact prime-five triple-child separation with full label transport audit
+24ccff76dc 02:47 Session188 checkpoint33: reviewed odd-pair reversal cube in arbitrary ambient contexts
+d6ef0f239d 02:46 Session188 checkpoint32: audited even cyclic ambient families and highest-prime-node exclusion
+ec0bc8d452 02:43 Session188 checkpoint31: reviewed ordered-cover ambient reduction and exact obstruction
+5a77edaa33 02:41 Session188 checkpoint30: audited ordered-module skew and cyclic prime quotient family
+d043a4034f 02:39 Session188 checkpoint29: independently audited mod8 ambient transfer and mod16 boundary
+8c4b67e39f 02:35 Session188 checkpoint28: reviewed marked-pair quotient-converse quartic separator
+25864b6b71 02:33 Session188 checkpoint27: reviewed arbitrary-third cyclic separators and root families
+9cf37f3c5e 02:32 Session188 checkpoint26: audited cyclic root-family separation with complete records
+5de5e7137c 02:25 Session188 checkpoint 25: audited odd-quotient pair-block trace and full reversal cube
+8894cc7cbf 02:07 Session188 checkpoint 24: audited unequal cross-profile reversal-cube decoder
+3e83b21388 02:05 Session188 checkpoint 23: audited highest-changed-prime quotient reduction
+2527e03a5c 02:03 Session188 checkpoint 22: unconditional equal-profile cyclic reversal cube and complete nine-name data
+57c8f30c19 02:01 Session188 checkpoint 21: independently reconstructed six-name modulo-four bank with lossless complete vectors
+b07516ba01 01:57 Session188 checkpoint 20: audited positive-square identity for all finite nonnegative cover profiles
+86e730b112 01:51 Session188 checkpoint 19: audited unequal cyclic cross-profile separator and full mixed-seven contrast
+e1cc0d838a 01:51 Session188 checkpoint 18: audited physical cut-port detection and covered ordered blocks
+e0e9910119 01:40 Session188 checkpoint 17: audited unequal transitive cyclic-block separation
+8d086e8b82 01:36 Session188 checkpoint 16: audited uniform exposed-anchor compression and nested query batteries
+45459ce5f2 01:33 Session188 checkpoint 15: credit incoming reversal cube and independently audit exact interactions
+e906d2dd7b 01:31 Session188 checkpoint 14: audited hereditary module-XOR monotonicity and legal-class reduction
+c215b4cdcc 01:25 Session188 checkpoint 13: audited sequential fanout budget and alias-ladder boundary
+97f1484eaf 01:24 Session188 checkpoint 12: audited interval inversions and transitive-source replacement
+dde53393b0 01:23 Session188 checkpoint 11: audited crossing-module separation and pair-hull independence
+0a69e9f5e2 01:19 complement-ports: audit joint carriers and retain actual bulk transport
+e27d2a4732 01:14 complement-ports: joint entry grammar, sharp three-start adapters and named returns
+7cd0c969e0 01:19 Session188 checkpoint 10: exposed-anchor module reversals with complete named responses
+b6135263ba 01:13 two-port-simultaneous: prove disjoint reversal isolation and audit full quartic interactions
+4c69b5fe7d 01:04 two-port-simultaneous: checkpoint full named reversal cubes and isolation argument
+6285257e3e 00:53 Session188 checkpoint 9: audited arithmetic lattice intervals and coupled prime flow
+177f0a5d8e 00:52 Session188 checkpoint 8: audited square-sum parity inventory and order-25 paths
+21ba1b5c89 00:49 nonzero-reset-nov03: route audited transport and reconcile incoming structure
+863c774ea5 00:44 nonzero-reset-nov03: checkpoint - all-strong compiler and actual nonzero return tree
+9a62d5c9b2 00:48 Session188 checkpoint 7: exact order-five quartic classes and literal separator
+2e1abee23c 00:48 Session188 checkpoint 6: audited full named quartic response with lossless receipts
+79b5f4c135 00:46 Session188 checkpoint 5: audited arbitrary-module fixed-quotient return obstruction
+57fd8b198e 00:38 Session188 checkpoint 4: audited Collatz reset phases and rational-address boundary
+fb700dd3ca 00:35 two-port parity: integrate incoming rooted-skeleton scope
+f533115371 00:34 two-port parity: route proved prime-core closure and preserve open injectivity scope
+03fdab6c7c 00:34 Session188 checkpoint 3: audited constant-region circuit surplus and endpoint scope
+ee1bdef4ef 00:31 Session188 checkpoint 2: audited weighted prime-factor closure and arithmetic lattice
+d973c82d2a 00:29 Session188 checkpoint 1: audited rooted skeleton transform and finite spacing
+76b3b1a77d 00:27 two-port parity: prove all-order exclusion of hidden module converse

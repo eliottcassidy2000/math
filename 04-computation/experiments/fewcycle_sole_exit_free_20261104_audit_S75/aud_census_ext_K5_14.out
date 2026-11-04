@@ -1,0 +1,90 @@
+# aud_census ext threads=12
+read 4708 strong classes of order 10 with hc <= 5
+n=10 classes in list 4708: strong 4708, strong with hc<=5: 4708
+   t_k (k=1..5): 377 589 1193 1049 1500
+   u_k (k=1..5): 0 0 89 68 60
+   2-strong by k:   (min hc of 2-strong <= 5: 0)
+   2-arc-strong with cut vertex by k:   (min: 0)
+   Theorem A: (class, cut vertex) pairs checked 0, formula failures 0, S+ or S- < 3: 0, min hc 0, min min(S+,S-) 0
+   sole-exit-free hc<=5 classes 217: lambda>=2 0, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 377 (F(2n-6) = 377); rooted (UH, sole exit) pairs R(10) = 610 (F(2n-5) = 610)
+   k=3: classes by core order d: d=5:26 d=6:15 d=7:12 d=8:12 d=9:24  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d: d=5:26 d=6:10 d=7:8 d=8:8 d=9:16  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d: d=6:20 d=7:10 d=8:10 d=9:20  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..9:
+     k=3: 2 3 6 12 24
+     k=4: 2 2 4 8 16
+     k=5: 0 4 5 10 20
+   DIRECT core enumeration at order d=10: c_2..c_5 = 0 48 32 40 (formula 0 48 32 40); blocks (W,A) of order 10, k=2..5: 0 0 0 0
+EXTENDED to n=11: 14390 classes with hc <= 5 (children re-checked by direct DP 111648, rejected children sampled and re-checked 4710)
+n=11 classes in list 14390: strong 14390, strong with hc<=5: 14390
+   t_k (k=1..5): 987 1775 3574 3390 4664
+   u_k (k=1..5): 0 0 233 178 157
+   2-strong by k:   (min hc of 2-strong <= 5: 0)
+   2-arc-strong with cut vertex by k:   (min: 0)
+   Theorem A: (class, cut vertex) pairs checked 0, formula failures 0, S+ or S- < 3: 0, min hc 0, min min(S+,S-) 0
+   sole-exit-free hc<=5 classes 568: lambda>=2 0, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 987 (F(2n-6) = 987); rooted (UH, sole exit) pairs R(11) = 1597 (F(2n-5) = 1597)
+   k=3: classes by core order d: d=5:68 d=6:39 d=7:30 d=8:24 d=9:24 d=10:48  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d: d=5:68 d=6:26 d=7:20 d=8:16 d=9:16 d=10:32  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d: d=6:52 d=7:25 d=8:20 d=9:20 d=10:40  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..10:
+     k=3: 2 3 6 12 24 48
+     k=4: 2 2 4 8 16 32
+     k=5: 0 4 5 10 20 40
+   DIRECT core enumeration at order d=11: c_2..c_5 = 0 96 64 80 (formula 0 96 64 80); blocks (W,A) of order 11, k=2..5: 0 0 0 0
+EXTENDED to n=12: 43225 classes with hc <= 5 (children re-checked by direct DP 365366, rejected children sampled and re-checked 29152)
+n=12 classes in list 43225: strong 43225, strong with hc<=5: 43225
+   t_k (k=1..5): 2584 5257 10537 10705 14142
+   u_k (k=1..5): 0 0 610 466 411
+   2-strong by k:   (min hc of 2-strong <= 5: 0)
+   2-arc-strong with cut vertex by k:   (min: 0)
+   Theorem A: (class, cut vertex) pairs checked 0, formula failures 0, S+ or S- < 3: 0, min hc 0, min min(S+,S-) 0
+   sole-exit-free hc<=5 classes 1487: lambda>=2 0, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 2584 (F(2n-6) = 2584); rooted (UH, sole exit) pairs R(12) = 4181 (F(2n-5) = 4181)
+   k=3: classes by core order d: d=5:178 d=6:102 d=7:78 d=8:60 d=9:48 d=10:48 d=11:96  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d: d=5:178 d=6:68 d=7:52 d=8:40 d=9:32 d=10:32 d=11:64  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d: d=6:136 d=7:65 d=8:50 d=9:40 d=10:40 d=11:80  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..11:
+     k=3: 2 3 6 12 24 48 96
+     k=4: 2 2 4 8 16 32 64
+     k=5: 0 4 5 10 20 40 80
+   DIRECT core enumeration at order d=12: c_2..c_5 = 0 192 128 160 (formula 0 192 128 160); blocks (W,A) of order 12, k=2..5: 0 0 0 0
+EXTENDED to n=13: 128077 classes with hc <= 5 (children re-checked by direct DP 1171870, rejected children sampled and re-checked 176312)
+n=13 classes in list 128077: strong 128077, strong with hc<=5: 128077
+   t_k (k=1..5): 6765 15360 30676 33194 42082
+   u_k (k=1..5): 0 0 1597 1220 1076
+   2-strong by k:   (min hc of 2-strong <= 5: 0)
+   2-arc-strong with cut vertex by k:   (min: 0)
+   Theorem A: (class, cut vertex) pairs checked 0, formula failures 0, S+ or S- < 3: 0, min hc 0, min min(S+,S-) 0
+   sole-exit-free hc<=5 classes 3893: lambda>=2 0, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 6765 (F(2n-6) = 6765); rooted (UH, sole exit) pairs R(13) = 10946 (F(2n-5) = 10946)
+   k=3: classes by core order d: d=5:466 d=6:267 d=7:204 d=8:156 d=9:120 d=10:96 d=11:96 d=12:192  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d: d=5:466 d=6:178 d=7:136 d=8:104 d=9:80 d=10:64 d=11:64 d=12:128  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d: d=6:356 d=7:170 d=8:130 d=9:100 d=10:80 d=11:80 d=12:160  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..12:
+     k=3: 2 3 6 12 24 48 96 192
+     k=4: 2 2 4 8 16 32 64 128
+     k=5: 0 4 5 10 20 40 80 160
+   DIRECT core enumeration at order d=13: c_2..c_5 = 0 384 256 320 (formula 0 384 256 320); blocks (W,A) of order 13, k=2..5: 0 0 0 0
+EXTENDED to n=14: 375339 classes with hc <= 5 (children re-checked by direct DP 3696778, rejected children sampled and re-checked 1048471)
+n=14 classes in list 375339: strong 375339, strong with hc<=5: 375339
+   t_k (k=1..5): 17711 44394 88400 101420 123414
+   u_k (k=1..5): 0 0 4181 3194 2817
+   2-strong by k:   (min hc of 2-strong <= 5: 0)
+   2-arc-strong with cut vertex by k:   (min: 0)
+   Theorem A: (class, cut vertex) pairs checked 0, formula failures 0, S+ or S- < 3: 0, min hc 0, min min(S+,S-) 0
+   sole-exit-free hc<=5 classes 10192: lambda>=2 0, #minimal!=1 0, |D|<3 0, D not strong 0, product failures 0, s_l!=1 0, Q not UH 0, z not sole exit 0, no sole entry 0, list overflow 0
+   uniquely Hamiltonian classes 17711 (F(2n-6) = 17711); rooted (UH, sole exit) pairs R(14) = 28657 (F(2n-5) = 28657)
+   k=3: classes by core order d: d=5:1220 d=6:699 d=7:534 d=8:408 d=9:312 d=10:240 d=11:192 d=12:192 d=13:384  -> all equal c_k(d) R(n-d+1)
+   k=4: classes by core order d: d=5:1220 d=6:466 d=7:356 d=8:272 d=9:208 d=10:160 d=11:128 d=12:128 d=13:256  -> all equal c_k(d) R(n-d+1)
+   k=5: classes by core order d: d=6:932 d=7:445 d=8:340 d=9:260 d=10:200 d=11:160 d=12:160 d=13:320  -> all equal c_k(d) R(n-d+1)
+   distinct terminal cores seen so far, c_k(d) for d = 5..13:
+     k=3: 2 3 6 12 24 48 96 192 384
+     k=4: 2 2 4 8 16 32 64 128 256
+     k=5: 0 4 5 10 20 40 80 160 320
+   DIRECT core enumeration at order d=14: c_2..c_5 = 0 768 512 640 (formula 0 768 512 640); blocks (W,A) of order 14, k=2..5: 0 0 0 0
+
+real	2m48.865s
+user	0m0.015s
+sys	0m0.031s

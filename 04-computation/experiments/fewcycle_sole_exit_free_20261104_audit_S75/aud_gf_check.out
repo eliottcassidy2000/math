@@ -1,0 +1,12 @@
+R(x) = x^2 (1 - 2x)/(1 - 3x + x^2): OK (R(2) = 1, R(m) = F(2m-5))
+C_3 = x^5(2-x)/(1-2x), C_4 = 2x^5(1-x)/(1-2x), C_5 = x^6(4-3x)/(1-2x): OK
+U_3 = x^6(2-x)/den, U_4 = 2x^6(1-x)/den, U_5 = x^7(4-3x)/den: OK (as convolutions)
+u_3(n) = F(2n-9) (n>=6), u_4(n) = 2F(2n-11) (n>=7), u_5(n) = 4F(2n-12) - 3F(2n-14) = L(2n-12) + F(2n-13) (n>=7): OK to n = 39
+   at n = 6 the convolution gives u_4 = 2, u_5 = 0 (census: 3 and 4, the extra being 1 and 4 2-strong classes)
+census u_3, u_4, u_5 at n = 6..14 = convolution + 2-strong classes (only at n = 6): OK
+orphan distributions recomputed from Lemma B4 match the session's lineage output at (k,d) = [(3, 9), (3, 12), (4, 9), (4, 12), (5, 12)]
+k=4, d=12: note's 2z^2(1+z)^(d-6) gives [2, 12, 30, 40, 30, 12, 2] ; Lemma B4 and the lineage output give [2, 10, 20, 20, 10, 2] = 2z^2(1+z)^(d-7)
+k = 3 orphan polynomial z(1+z)^(d-7)(1+z+z^2): OK for d = 7..15; k = 4: correct exponent is d - 7, not d - 6
+k=3: d=5: 0 attached of 2; d=6: 2 attached of 3; d=7: 3 attached of 6; d=8: 6 attached of 12; d=9: 12 attached of 24
+k=4: d=5: 0 attached of 2; d=6: 2 attached of 2; d=7: 2 attached of 4; d=8: 4 attached of 8; d=9: 8 attached of 16
+k=5: d=5: 0 attached of 0; d=6: 0 attached of 4; d=7: 4 attached of 5; d=8: 5 attached of 10; d=9: 10 attached of 20

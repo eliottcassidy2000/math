@@ -1,0 +1,90 @@
+# aud_labelled_burnside NMIN=5 NMAX=8 threads=12
+  n=5 type 1 1 1 1 1  |class|=1  pair-orbits=10  fixed=1024  fixed strong=544
+  n=5 type 3 1 1  |class|=20  pair-orbits=4  fixed=16  fixed strong=4
+  n=5 type 5  |class|=24  pair-orbits=2  fixed=4  fixed strong=4
+n=5  classes=12  strong classes=6  (Burnside remainders must vanish)
+n=5  k : t_k (labelled) | u_k (labelled) | 2-strong classes | 2-arc-strong cut-vertex classes
+   k= 1  t=3 (360)  u=0 (0)  2-strong=0  cutvertex-2arcstrong=0
+   k= 2  t=2 (144)  u=1 (24)  2-strong=1  cutvertex-2arcstrong=0
+   k= 3  t=1 (40)  u=0 (0)  2-strong=0  cutvertex-2arcstrong=0
+n=5  Burnside divisibility ok
+  n=6 type 1 1 1 1 1 1  |class|=1  pair-orbits=15  fixed=32768  fixed strong=22320
+  n=6 type 3 1 1 1  |class|=40  pair-orbits=7  fixed=128  fixed strong=48
+  n=6 type 3 3  |class|=40  pair-orbits=5  fixed=32  fixed strong=24
+  n=6 type 5 1  |class|=144  pair-orbits=3  fixed=8  fixed strong=0
+n=6  classes=56  strong classes=35  (Burnside remainders must vanish)
+n=6  k : t_k (labelled) | u_k (labelled) | 2-strong classes | 2-arc-strong cut-vertex classes
+   k= 1  t=8 (5760)  u=0 (0)  2-strong=0  cutvertex-2arcstrong=0
+   k= 2  t=5 (3600)  u=0 (0)  2-strong=0  cutvertex-2arcstrong=0
+   k= 3  t=11 (6000)  u=2 (960)  2-strong=0  cutvertex-2arcstrong=0
+   k= 4  t=6 (4320)  u=3 (2160)  2-strong=1  cutvertex-2arcstrong=0
+   k= 5  t=5 (2640)  u=4 (1920)  2-strong=4  cutvertex-2arcstrong=0
+n=6  Burnside divisibility ok
+  n=7 type 1 1 1 1 1 1 1  |class|=1  pair-orbits=21  fixed=2097152  fixed strong=1677488
+  n=7 type 3 1 1 1 1  |class|=70  pair-orbits=11  fixed=2048  fixed strong=1088
+  n=7 type 3 3 1  |class|=280  pair-orbits=7  fixed=128  fixed strong=56
+  n=7 type 5 1 1  |class|=504  pair-orbits=5  fixed=32  fixed strong=8
+  n=7 type 7  |class|=720  pair-orbits=3  fixed=8  fixed strong=8
+n=7  classes=456  strong classes=353  (Burnside remainders must vanish)
+n=7  k : t_k (labelled) | u_k (labelled) | 2-strong classes | 2-arc-strong cut-vertex classes
+   k= 1  t=21 (105840)  u=0 (0)  2-strong=0  cutvertex-2arcstrong=0
+   k= 2  t=18 (90720)  u=0 (0)  2-strong=0  cutvertex-2arcstrong=0
+   k= 3  t=38 (147840)  u=5 (15120)  2-strong=0  cutvertex-2arcstrong=0
+   k= 4  t=25 (126000)  u=4 (20160)  2-strong=0  cutvertex-2arcstrong=0
+   k= 5  t=38 (191520)  u=4 (20160)  2-strong=0  cutvertex-2arcstrong=0
+   k= 6  t=33 (159600)  u=12 (57120)  2-strong=0  cutvertex-2arcstrong=0
+   k= 7  t=24 (120960)  u=9 (45360)  2-strong=0  cutvertex-2arcstrong=0
+   k= 8  t=29 (146160)  u=17 (85680)  2-strong=6  cutvertex-2arcstrong=0
+   k= 9  t=29 (138320)  u=15 (71120)  2-strong=5  cutvertex-2arcstrong=1
+   k=10  t=14 (70560)  u=11 (55440)  2-strong=8  cutvertex-2arcstrong=0
+   k=11  t=30 (151200)  u=26 (131040)  2-strong=23  cutvertex-2arcstrong=0
+   k=12  t=22 (94080)  u=18 (80640)  2-strong=15  cutvertex-2arcstrong=0
+   k=13  t=10 (50400)  u=9 (45360)  2-strong=9  cutvertex-2arcstrong=0
+   k=14  t=9 (45360)  u=9 (45360)  2-strong=9  cutvertex-2arcstrong=0
+   k=15  t=10 (32928)  u=8 (30240)  2-strong=8  cutvertex-2arcstrong=0
+   k=17  t=2 (5760)  u=2 (5760)  2-strong=2  cutvertex-2arcstrong=0
+   k=24  t=1 (240)  u=1 (240)  2-strong=1  cutvertex-2arcstrong=0
+n=7  Burnside divisibility ok
+  n=8 type 1 1 1 1 1 1 1 1  |class|=1  pair-orbits=28  fixed=268435456  fixed strong=236522496
+  n=8 type 3 1 1 1 1 1  |class|=112  pair-orbits=16  fixed=65536  fixed strong=44640
+  n=8 type 3 3 1 1  |class|=1120  pair-orbits=10  fixed=1024  fixed strong=528
+  n=8 type 5 1 1 1  |class|=1344  pair-orbits=8  fixed=256  fixed strong=96
+  n=8 type 5 3  |class|=2688  pair-orbits=4  fixed=16  fixed strong=0
+  n=8 type 7 1  |class|=5760  pair-orbits=4  fixed=16  fixed strong=0
+n=8  classes=6880  strong classes=6008  (Burnside remainders must vanish)
+n=8  k : t_k (labelled) | u_k (labelled) | 2-strong classes | 2-arc-strong cut-vertex classes
+   k= 1  t=55 (2217600)  u=0 (0)  2-strong=0  cutvertex-2arcstrong=0
+   k= 2  t=60 (2419200)  u=0 (0)  2-strong=0  cutvertex-2arcstrong=0
+   k= 3  t=124 (3924480)  u=13 (309120)  2-strong=0  cutvertex-2arcstrong=0
+   k= 4  t=91 (3669120)  u=10 (403200)  2-strong=0  cutvertex-2arcstrong=0
+   k= 5  t=138 (5564160)  u=9 (362880)  2-strong=0  cutvertex-2arcstrong=0
+   k= 6  t=128 (4784640)  u=28 (994560)  2-strong=0  cutvertex-2arcstrong=0
+   k= 7  t=118 (4757760)  u=18 (725760)  2-strong=0  cutvertex-2arcstrong=0
+   k= 8  t=116 (4677120)  u=24 (967680)  2-strong=0  cutvertex-2arcstrong=0
+   k= 9  t=234 (8825600)  u=47 (1599360)  2-strong=0  cutvertex-2arcstrong=4
+   k=10  t=117 (4717440)  u=30 (1209600)  2-strong=0  cutvertex-2arcstrong=0
+   k=11  t=168 (6773760)  u=36 (1451520)  2-strong=0  cutvertex-2arcstrong=0
+   k=12  t=172 (6504960)  u=61 (2271360)  2-strong=0  cutvertex-2arcstrong=4
+   k=13  t=186 (7499520)  u=61 (2459520)  2-strong=5  cutvertex-2arcstrong=0
+   k=14  t=161 (6491520)  u=74 (2983680)  2-strong=14  cutvertex-2arcstrong=0
+   k=15  t=207 (7733376)  u=80 (3058944)  2-strong=10  cutvertex-2arcstrong=2
+   k=16  t=186 (7499520)  u=83 (3346560)  2-strong=8  cutvertex-2arcstrong=0
+   k=17  t=135 (5443200)  u=70 (2822400)  2-strong=19  cutvertex-2arcstrong=0
+   k=18  t=177 (6975360)  u=96 (3816960)  2-strong=34  cutvertex-2arcstrong=0
+   k=19  t=144 (5806080)  u=83 (3346560)  2-strong=26  cutvertex-2arcstrong=0
+   k=20  t=122 (4919040)  u=63 (2540160)  2-strong=14  cutvertex-2arcstrong=0
+   k=21  t=228 (8816640)  u=128 (5026560)  2-strong=42  cutvertex-2arcstrong=0
+   k=22  t=157 (6330240)  u=102 (4112640)  2-strong=51  cutvertex-2arcstrong=0
+   k=23  t=154 (6209280)  u=106 (4273920)  2-strong=65  cutvertex-2arcstrong=0
+   k=24  t=142 (5187840)  u=89 (3319680)  2-strong=38  cutvertex-2arcstrong=0
+   k=25  t=114 (4596480)  u=81 (3265920)  2-strong=52  cutvertex-2arcstrong=0
+   k=26  t=139 (5604480)  u=109 (4394880)  2-strong=81  cutvertex-2arcstrong=0
+   k=27  t=160 (6128640)  u=124 (4811520)  2-strong=93  cutvertex-2arcstrong=0
+   k=28  t=147 (5927040)  u=119 (4798080)  2-strong=91  cutvertex-2arcstrong=0
+   k=29  t=150 (6048000)  u=132 (5322240)  2-strong=118  cutvertex-2arcstrong=0
+   k=30  t=127 (4878720)  u=102 (3951360)  2-strong=77  cutvertex-2arcstrong=0
+n=8  Burnside divisibility ok
+
+real	3m23.849s
+user	0m0.016s
+sys	0m0.015s
