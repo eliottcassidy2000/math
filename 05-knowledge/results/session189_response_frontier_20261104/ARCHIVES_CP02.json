@@ -1,0 +1,16 @@
+{
+  "format": "deterministic-gzip-base64-parts-v1",
+  "archives": [
+    {
+      "path": "returns_audit/audit_receipt.json",
+      "bytes": 71751,
+      "sha256": "4dde3f6e491004d2e389da928a17d3323d1212be4bd03ef26223884756543350",
+      "git_blob_sha": "78e4369770ff2ae41eb012093b66de47269354fc",
+      "gzip_bytes": 3013,
+      "gzip_sha256": "74b0fe0c7133885f9bc3caea1d0c1efe943b24970c001e9365527e57f180adca",
+      "parts": [
+        "returns_audit/audit_receipt.json.gz.b64.parts/00001.txt"
+      ]
+    }
+  ]
+}
