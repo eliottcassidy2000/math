@@ -54,6 +54,8 @@ and `h(T_k) = h·A_k − e·C_k + B·D_k` with `A = A000213`, `C = A001590`, `D_
 
 (f) *Reformulation.* With `𝒯 = {(h(T), e_t(T), B_t(T))}`, the spectrum contains `h + 2B`, `h + 2^k B` and `h A_k − e C_k + B D_k` for every `(h, e, B) ∈ 𝒯`; HYP-9453 (1) and HYP-9454 (1) both say that the first family alone, with `(T, t)` of order `O(log v)`, contains every odd `v ≥ 69`. `𝒯` is closed under the tower map `(h, e, B) ↦ (h_k, h_{k−1} − e_{k−1}, B + h_0 + … + h_{k−1})`; transitive bases give `(1, 0, 2^b)` and `(1, 1, 1)`. The missing ingredient is a construction that moves `B` in small controlled steps at fixed `h`. The same day opus-2026-11-04-S73 (HYP-9457 (c)) proved the two-base law `H(J(A, a; B, b)) = h_A h_B + B_a(A) B_b(B) − e_a(A) e_b(B)` for the one-arc join (`A ⇒ B` with `a → b` reversed), of which the one-exit law is the one-vertex-side case, and found every odd `N ≤ 2393` except 7, 21 among the join values of sides of order ≤ 6.
 
+(h) *The deck is a complete invariant through order 9 (FINITE-EXACT).* The multiset `{(h, e_t(T), B_t(T)) : t ∈ V}` distinguishes all 56, 456, 6,880, 191,536 tournaments of orders 6–9 (census rows grouped per tournament); the rooted triples are injective on 97.1 % of the rooted pairs at order 9.
+
 (g) *Two new sequences.* `5, 13, 31, 77, 193, 489, 1255, 3253, 8493, 22293` (the digit-1 class whose entry attachment is the pure backward cycle: the tower over a point re-rooted at its base vertex) and the digit-1 ready floors `5, 9, 17, 33, 61, 115, 219, 423, 823, 1615, 3183` (orders 4–14) are not in OEIS.
 
 Scripts, data and receipts: the [source packet](../../05-knowledge/results/sole_exit_tower_tribonacci_20261104/README.md).
