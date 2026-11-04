@@ -1,0 +1,75 @@
+{
+  "artifacts": {
+    "controls.json": {
+      "bytes": 646308,
+      "sha256": "d037f321109af5807651f3c69c5bee0eb45cd3a97c0d1b7d4b7a345e63f28c72"
+    },
+    "named_banks.json": {
+      "bytes": 447554,
+      "sha256": "3c4409487720f3921807c5ecbab6ae42696e943580ac1bbbc96961b4140d3c06"
+    }
+  },
+  "claim": "Every highest changed quotient of a nontrivial original-module full-response collision is prime of order at least eight.",
+  "complete_named_coordinates": 34800,
+  "controls": [
+    {
+      "actual_masks": [
+        2,
+        0
+      ],
+      "highest_nodes": [
+        127,
+        896
+      ],
+      "induced_subsets_with_complete_equal_profiles": 1024,
+      "name": "ordered_prime7_and_triangle",
+      "old_vertices": 10,
+      "response_values": [
+        1215,
+        369,
+        369
+      ]
+    },
+    {
+      "actual_masks": [
+        4104,
+        4096
+      ],
+      "highest_nodes": [
+        511,
+        3584
+      ],
+      "induced_subsets_with_complete_equal_profiles": 8192,
+      "name": "cyclic_ambient_descendant_and_other_highest",
+      "old_vertices": 13,
+      "response_values": [
+        807705,
+        284643,
+        284643
+      ]
+    }
+  ],
+  "reviewed_dependency_pins": {
+    "prime7/PROOF.md": "e382ce566c061626cb309467c58928f2a7b4a4e387835166bde252ccce7f7672",
+    "prime7/normal.json": "38165ed1a7a0bb195ed89b78360675d7382aa0c159c5bf6956eb0a8636403771",
+    "prime7_audit/REVIEW.md": "f9711b92608bdc2abfa7171cb64d638ff4b78ded5eadd3cd155811106c97f57b",
+    "prime7_audit/normal.json": "5511134b24c8186196c25757e57e3726cb6894964886a414a694da427ba1cb4d",
+    "prime7_audit/residual_normal.json": "91f82134c888f1a2f98e67475f7b12fbc10178447978f399ee85d614131a37ae",
+    "profiles/PROOF.md": "ea7ca89df44ba732247291b00aadb6a70cd8f4c4fb13624ae51f63479502d9b8",
+    "profiles/normal.json": "9b2c3f4baee64ae6e74804830c4dabd83afe81052042667f5ae76c5cad8ae35c"
+  },
+  "scope": "Source-relative original-module XOR, fixed physical names, exact equal-profile restoration of disjoint highest nodes. No unrestricted reconstruction or later-created-module sequences.",
+  "source_pins": {
+    "DEPENDENCIES.json": "50843302e0ddade31e9e76a3deef7ba1e3fefb2819f54904ddb4fe7e61de2950",
+    "INHERITED.json": "5ea37bcf18796d73a851212fba51374682679c9ae6c01ede09931a6ebd28d147",
+    "PROOF.md": "169b6ae55130d67bf83bb90ca407e8409663f8b733e070ac65f50ed944a2c8fb",
+    "build_banks.py": "94068ca582f772e5088ec5767875efa232d204b5727f6a65e631cc813dcf8aa3",
+    "controls.py": "079ecc0a3e6171d6601f435d35a4eb4c6995b3194ffb44e6df1d7152325044cb",
+    "inherited_highest_quotient_reduction.md": "95437f44021ca708bfa2fde42637e53179ddb81a5cf93341c3bffa602e1b4678",
+    "inherited_prime_seven_frontier.md": "25755ea7307cd9f1b4587755a46a24b085cc089903a8e6bbd1263f4662fb35f3",
+    "inherited_prime_seven_frontier_audit.md": "5e748ccec6476f0134a967eb076794242ab8ac59909e151f4f57f57cbdb53931",
+    "physical.cpp": "5e273fd1d127c041038504f7bc8827addc7fc367de3112ba59cbef34d3f93464",
+    "verify.py": "b9a393d7ef0e83a3fd0821a775f327ad2a87409506b648c2a9afc55f4e4b97d7"
+  },
+  "status": "PASS"
+}

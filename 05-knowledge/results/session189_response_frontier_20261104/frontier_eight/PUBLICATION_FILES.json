@@ -1,0 +1,17 @@
+[
+  "PROOF.md",
+  "README.md",
+  "verify.py",
+  "controls.py",
+  "build_banks.py",
+  "physical.cpp",
+  "DEPENDENCIES.json",
+  "INHERITED.json",
+  "inherited_prime_seven_frontier.md",
+  "inherited_prime_seven_frontier_audit.md",
+  "inherited_highest_quotient_reduction.md",
+  "controls.json",
+  "named_banks.json",
+  "normal.json",
+  "optimized.json"
+]

@@ -1,0 +1,31 @@
+{
+  "format": "lossless-compressed-base64-parts-v2",
+  "archives": [
+    {
+      "path": "frontier_eight/controls.json",
+      "bytes": 646308,
+      "sha256": "d037f321109af5807651f3c69c5bee0eb45cd3a97c0d1b7d4b7a345e63f28c72",
+      "git_blob_sha": "ac9257322561551c336ac862d49e95574f5b6dd8",
+      "compression": "xz",
+      "compressed_bytes": 7316,
+      "compressed_sha256": "977a1f8f7f0fd6635af3fa9fdf3b94d665ecb9d49315d71180223abd56363095",
+      "parts": [
+        "frontier_eight/controls.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "frontier_eight/named_banks.json",
+      "bytes": 447554,
+      "sha256": "3c4409487720f3921807c5ecbab6ae42696e943580ac1bbbc96961b4140d3c06",
+      "git_blob_sha": "044bb5a2fe36f9e215121a530555db492be6da77",
+      "compression": "xz",
+      "compressed_bytes": 71208,
+      "compressed_sha256": "3025a4f4700a976e1a230aa8a53a880d524dbea736e8833aa6c776eca47ef70f",
+      "parts": [
+        "frontier_eight/named_banks.json.xz.b64.parts/00001.txt",
+        "frontier_eight/named_banks.json.xz.b64.parts/00002.txt",
+        "frontier_eight/named_banks.json.xz.b64.parts/00003.txt"
+      ]
+    }
+  ]
+}
