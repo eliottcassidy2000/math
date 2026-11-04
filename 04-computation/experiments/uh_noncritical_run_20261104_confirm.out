@@ -1,0 +1,62 @@
+# uh_noncritical_run_20261104 NMAX=18 XC<=14 BF<=14
+n= 4 classes=1 (Garey F(2n-6)=1 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0 hc_xcheck_bad=0 bruteforce_cut_bad=0
+   (#out1,#in1): (1,1)=0 (1,2)=0 (2,1)=0 (2,2)=1
+   N(n,r) r=2..n-1: 1 0
+   cut-arc k=2..n-1: 0 1
+n= 5 classes=3 (Garey F(2n-6)=3 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0 hc_xcheck_bad=0 bruteforce_cut_bad=0
+   (#out1,#in1): (1,1)=1 (1,2)=0 (2,1)=0 (2,2)=2   predicted F(2n-10)+1=1 F(2n-9)-1=0 F(2n-8)+1=2
+   N(n,r) r=2..n-1: 1 1 1
+   cut-arc k=2..n-1: 1 1 1
+n= 6 classes=8 (Garey F(2n-6)=8 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0 hc_xcheck_bad=0 bruteforce_cut_bad=0
+   (#out1,#in1): (1,1)=2 (1,2)=1 (2,1)=1 (2,2)=4   predicted F(2n-10)+1=2 F(2n-9)-1=1 F(2n-8)+1=4
+   N(n,r) r=2..n-1: 1 2 3 2
+   cut-arc k=2..n-1: 2 3 2 1
+n= 7 classes=21 (Garey F(2n-6)=21 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0 hc_xcheck_bad=0 bruteforce_cut_bad=0
+   (#out1,#in1): (1,1)=4 (1,2)=4 (2,1)=4 (2,2)=9   predicted F(2n-10)+1=4 F(2n-9)-1=4 F(2n-8)+1=9
+   N(n,r) r=2..n-1: 1 3 6 7 4
+   cut-arc k=2..n-1: 4 7 6 3 1
+n= 8 classes=55 (Garey F(2n-6)=55 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0 hc_xcheck_bad=0 bruteforce_cut_bad=0
+   (#out1,#in1): (1,1)=9 (1,2)=12 (2,1)=12 (2,2)=22   predicted F(2n-10)+1=9 F(2n-9)-1=12 F(2n-8)+1=22
+   N(n,r) r=2..n-1: 1 4 10 16 16 8
+   cut-arc k=2..n-1: 8 16 16 10 4 1
+n= 9 classes=144 (Garey F(2n-6)=144 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0 hc_xcheck_bad=0 bruteforce_cut_bad=0
+   (#out1,#in1): (1,1)=22 (1,2)=33 (2,1)=33 (2,2)=56   predicted F(2n-10)+1=22 F(2n-9)-1=33 F(2n-8)+1=56
+   N(n,r) r=2..n-1: 1 5 15 30 41 36 16
+   cut-arc k=2..n-1: 16 36 41 30 15 5 1
+n=10 classes=377 (Garey F(2n-6)=377 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0 hc_xcheck_bad=0 bruteforce_cut_bad=0
+   (#out1,#in1): (1,1)=56 (1,2)=88 (2,1)=88 (2,2)=145   predicted F(2n-10)+1=56 F(2n-9)-1=88 F(2n-8)+1=145
+   N(n,r) r=2..n-1: 1 6 21 50 85 102 80 32
+   cut-arc k=2..n-1: 32 80 102 85 50 21 6 1
+n=11 classes=987 (Garey F(2n-6)=987 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0 hc_xcheck_bad=0 bruteforce_cut_bad=0
+   (#out1,#in1): (1,1)=145 (1,2)=232 (2,1)=232 (2,2)=378   predicted F(2n-10)+1=145 F(2n-9)-1=232 F(2n-8)+1=378
+   N(n,r) r=2..n-1: 1 7 28 77 155 231 248 176 64
+   cut-arc k=2..n-1: 64 176 248 231 155 77 28 7 1
+n=12 classes=2584 (Garey F(2n-6)=2584 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0 hc_xcheck_bad=0 bruteforce_cut_bad=0
+   (#out1,#in1): (1,1)=378 (1,2)=609 (2,1)=609 (2,2)=988   predicted F(2n-10)+1=378 F(2n-9)-1=609 F(2n-8)+1=988
+   N(n,r) r=2..n-1: 1 8 36 112 259 456 608 592 384 128
+   cut-arc k=2..n-1: 128 384 592 608 456 259 112 36 8 1
+n=13 classes=6765 (Garey F(2n-6)=6765 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0 hc_xcheck_bad=0 bruteforce_cut_bad=0
+   (#out1,#in1): (1,1)=988 (1,2)=1596 (2,1)=1596 (2,2)=2585   predicted F(2n-10)+1=988 F(2n-9)-1=1596 F(2n-8)+1=2585
+   N(n,r) r=2..n-1: 1 9 45 156 406 819 1289 1560 1392 832 256
+   cut-arc k=2..n-1: 256 832 1392 1560 1289 819 406 156 45 9 1
+n=14 classes=17711 (Garey F(2n-6)=17711 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0 hc_xcheck_bad=0 bruteforce_cut_bad=0
+   (#out1,#in1): (1,1)=2585 (1,2)=4180 (2,1)=4180 (2,2)=6766   predicted F(2n-10)+1=2585 F(2n-9)-1=4180 F(2n-8)+1=6766
+   N(n,r) r=2..n-1: 1 10 55 210 606 1372 2471 3530 3920 3232 1792 512
+   cut-arc k=2..n-1: 512 1792 3232 3920 3530 2471 1372 606 210 55 10 1
+n=15 classes=46368 (Garey F(2n-6)=46368 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0
+   (#out1,#in1): (1,1)=6766 (1,2)=10945 (2,1)=10945 (2,2)=17712   predicted F(2n-10)+1=6766 F(2n-9)-1=10945 F(2n-8)+1=17712
+   N(n,r) r=2..n-1: 1 11 66 275 870 2178 4396 7183 9420 9680 7424 3840 1024
+   cut-arc k=2..n-1: 1024 3840 7424 9680 9420 7183 4396 2178 870 275 66 11 1
+n=16 classes=121393 (Garey F(2n-6)=121393 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0
+   (#out1,#in1): (1,1)=17712 (1,2)=28656 (2,1)=28656 (2,2)=46369   predicted F(2n-10)+1=17712 F(2n-9)-1=28656 F(2n-8)+1=46369
+   N(n,r) r=2..n-1: 1 12 78 352 1210 3312 7380 13504 20256 24600 23552 16896 8192 2048
+   cut-arc k=2..n-1: 2048 8192 16896 23552 24600 20256 13504 7380 3312 1210 352 78 12 1
+n=17 classes=317811 (Garey F(2n-6)=317811 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0
+   (#out1,#in1): (1,1)=46369 (1,2)=75024 (2,1)=75024 (2,2)=121394   predicted F(2n-10)+1=46369 F(2n-9)-1=75024 F(2n-8)+1=121394
+   N(n,r) r=2..n-1: 1 13 91 442 1639 4862 11826 23868 40081 55692 63072 56576 38144 17408 4096
+   cut-arc k=2..n-1: 4096 17408 38144 56576 63072 55692 40081 23868 11826 4862 1639 442 91 13 1
+n=18 classes=832040 (Garey F(2n-6)=832040 OK)  asym_bad=0 round_bad=0 run_bad=0 crit_bad=0 cut_bad=0 deg1_bad=0 no_one_arc_cut=0
+   (#out1,#in1): (1,1)=121394 (1,2)=196417 (2,1)=196417 (2,2)=317812   predicted F(2n-10)+1=121394 F(2n-9)-1=196417 F(2n-8)+1=317812
+   N(n,r) r=2..n-1: 1 14 105 546 2171 6930 18238 40140 74313 115598 149856 159168 134400 85504 36864 8192
+   cut-arc k=2..n-1: 8192 36864 85504 134400 159168 149856 115598 74313 40140 18238 6930 2171 546 105 14 1
+# wall time 25m45s (12 threads, sharing the machine with two audit jobs); run started 2026-11-04 12:29 MST after pre-registration commit a8db6218f9

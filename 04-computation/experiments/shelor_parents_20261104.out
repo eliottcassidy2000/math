@@ -1,0 +1,11 @@
+parent order  4: classes=1  |adm|=2:0 |adm|=3:1  G_bad=0  H_bad=0
+parent order  5: classes=3  |adm|=2:1 |adm|=3:2  G_bad=0  H_bad=0
+parent order  6: classes=8  |adm|=2:3 |adm|=3:5  G_bad=0  H_bad=0
+parent order  7: classes=21  |adm|=2:8 |adm|=3:13  G_bad=0  H_bad=0
+parent order  8: classes=55  |adm|=2:21 |adm|=3:34  G_bad=0  H_bad=0
+parent order  9: classes=144  |adm|=2:55 |adm|=3:89  G_bad=0  H_bad=0
+parent order 10: classes=377  |adm|=2:144 |adm|=3:233  G_bad=0  H_bad=0
+parent order 11: classes=987  |adm|=2:377 |adm|=3:610  G_bad=0  H_bad=0
+parent order 12: classes=2584  |adm|=2:987 |adm|=3:1597  G_bad=0  H_bad=0
+parent order 13: classes=6765  |adm|=2:2584 |adm|=3:4181  G_bad=0  H_bad=0
+parent order 14: classes=17711  |adm|=2:6765 |adm|=3:10946  G_bad=0  H_bad=0

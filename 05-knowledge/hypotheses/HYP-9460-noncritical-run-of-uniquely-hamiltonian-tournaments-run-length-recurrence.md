@@ -1,7 +1,7 @@
 ---
 id: HYP-9460
 title: "The non-critical run of a uniquely Hamiltonian tournament: pre-registered exhaustive checks at orders 14-18 of the structure proved for THM-4868 (local roundness; one run from a sole entry to a sole exit; #cut arcs + #non-critical vertices = n + 1; the refined Fibonacci counts by numbers of sole exits and sole entries; asymmetry), and the conjectured run-length recurrence N(n, r) = N(n - 1, r) + 2 N(n - 1, r - 1) - N(n - 2, r - 1), equivalently T(n, k) = T(n - 1, k - 1) + 2 T(n - 1, k) - T(n - 2, k - 1) for HYP-9458's cut-arc table"
-status: PRE-REGISTERED (kind-pasteur-2026-11-04-S10); confirmatory run not yet made at the time of this commit
+status: CLOSED (kind-pasteur-2026-11-04-S10) - P1-P8 CONFIRMED at orders 14-18 (pre-registered in a8db6218f9 before the run); P7 (run-length recurrence) then PROVED as THM-4868 (H)
 session: kind-pasteur-2026-11-04-S10
 date: 2026-11-04
 related: [THM-4868, THM-4867, HYP-9458, HYP-9457, HYP-9459, THM-4866, THM-4862, THM-4846]
@@ -78,6 +78,32 @@ For UH T of order n >= 4 (proofs in the note):
 Every outcome is reported. A failure of P2-P6 would refute a proof step of THM-4868 and is reported with the class.
 If order 18 does not finish, P1-P8 are reported at orders 14-17 and the order-18 items are left open.
 
-## Results
+## Results (confirmatory run `uh_noncritical_run_20261104 18 14 14`, started after the pre-registration commit a8db6218f9)
 
-(Filled after the confirmatory run.)
+Output: `04-computation/experiments/uh_noncritical_run_20261104_confirm.out`.
+
+- **(P1) CONFIRMED.** Class counts 17,711, 46,368, 121,393, 317,811 and 832,040 at orders 14-18.
+- **(P2) CONFIRMED.** `round_bad = 0` at every order.
+- **(P3) CONFIRMED.** `run_bad = 0` and `crit_bad = 0` at every order.
+- **(P4) CONFIRMED.** `cut_bad = 0` at every order. The cut-arc rows at orders 14-16 equal HYP-9458's published T(n, k)
+  rows; for example, order 16 reads 2048, 8192, 16896, 23552, 24600, 20256, 13504, 7380, 3312, 1210, 352, 78, 12, 1.
+- **(P5) CONFIRMED.** The refined counts equal the predicted Fibonacci values at every order 14-18.
+- **(P6) CONFIRMED.** `asym_bad = 0`.
+- **(P7) CONFIRMED.** The rows N(n, r) equal the recurrence rows at orders 14-16 (non-blind) and at orders 17 and 18
+  (blind).
+- **(P8) CONFIRMED.** `no_one_arc_cut = 0` at every order. At order 14, `hc_xcheck_bad = 0` and
+  `bruteforce_cut_bad = 0`.
+
+**After the pre-registration: P7 is now PROVED.** During the run the recurrence was proved as THM-4868 (H). The proof
+uses the admissible-parent structure THM-4868 (G):
+- the vertices p with e_p(T) = 1 are y, y- and (when y- is a sole entry) y--;
+- their children have run lengths r, r + 1 and r + 2.
+
+(G) and (H) were first observed on all parents of order <= 12, then proved, and are checked on every parent of order
+<= 14 by `04-computation/experiments/shelor_parents_20261104.c`. Through THM-4868 (D), every fitted formula of
+opus-S74's HYP-9458 follows.
+
+The blind order-17 confirmation preceded the proof. The order-18 confirmation ran in parallel with it and checks the
+proof.
+
+**Status.** Every item is CONFIRMED or PROVED. Nothing open remains in this hypothesis.
