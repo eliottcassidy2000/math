@@ -1,0 +1,55 @@
+{
+  "format": "lossless-compressed-base64-parts-v2",
+  "archives": [
+    {
+      "path": "kernel_span_audit/moment_bank.json",
+      "bytes": 437462,
+      "sha256": "7f74daa04cb7f05565b6cd6ba28a1390112483d9820ba8d0abca0c5e1f6add1e",
+      "git_blob_sha": "d4f309242b44f6ca36105e9dc6514656811e0ab9",
+      "compression": "xz",
+      "compressed_bytes": 53744,
+      "compressed_sha256": "c503050aa6f42d5fb46c96dea389b2748f7fa9fb4266c59499f8c735b139beaa",
+      "parts": [
+        "kernel_span_audit/moment_bank.json.xz.b64.parts/00001.txt",
+        "kernel_span_audit/moment_bank.json.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "kernel_span_audit/physical_banks.json",
+      "bytes": 268925,
+      "sha256": "b17b21e0e9e0a6083ac0b912379df12689870df74be21560f4c2140953cf1e22",
+      "git_blob_sha": "0e41879f71d3e4cf6a8f6b8e91a25860b279b465",
+      "compression": "xz",
+      "compressed_bytes": 65248,
+      "compressed_sha256": "84f13a81bbc9b9f2fd2d17722d685551144f9e44d866b538d1385e3d72f6efd1",
+      "parts": [
+        "kernel_span_audit/physical_banks.json.xz.b64.parts/00001.txt",
+        "kernel_span_audit/physical_banks.json.xz.b64.parts/00002.txt",
+        "kernel_span_audit/physical_banks.json.xz.b64.parts/00003.txt"
+      ]
+    },
+    {
+      "path": "kernel_span_audit/polynomial_certificates.json",
+      "bytes": 897408,
+      "sha256": "a906f08482f8edd6465ffc420e445f27b623783d1ebba63c0d0bcc693dba4c21",
+      "git_blob_sha": "84ac978e538c3161bdd2a92f6228257da07832fe",
+      "compression": "xz",
+      "compressed_bytes": 336340,
+      "compressed_sha256": "0692bb4a934bc88cdc97a69d7f7cdd63d281cf279d653063bf6306be2391b96b",
+      "parts": [
+        "kernel_span_audit/polynomial_certificates.json.xz.b64.parts/00001.txt",
+        "kernel_span_audit/polynomial_certificates.json.xz.b64.parts/00002.txt",
+        "kernel_span_audit/polynomial_certificates.json.xz.b64.parts/00003.txt",
+        "kernel_span_audit/polynomial_certificates.json.xz.b64.parts/00004.txt",
+        "kernel_span_audit/polynomial_certificates.json.xz.b64.parts/00005.txt",
+        "kernel_span_audit/polynomial_certificates.json.xz.b64.parts/00006.txt",
+        "kernel_span_audit/polynomial_certificates.json.xz.b64.parts/00007.txt",
+        "kernel_span_audit/polynomial_certificates.json.xz.b64.parts/00008.txt",
+        "kernel_span_audit/polynomial_certificates.json.xz.b64.parts/00009.txt",
+        "kernel_span_audit/polynomial_certificates.json.xz.b64.parts/00010.txt",
+        "kernel_span_audit/polynomial_certificates.json.xz.b64.parts/00011.txt",
+        "kernel_span_audit/polynomial_certificates.json.xz.b64.parts/00012.txt"
+      ]
+    }
+  ]
+}

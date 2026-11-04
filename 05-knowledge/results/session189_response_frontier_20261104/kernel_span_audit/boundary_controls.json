@@ -1,0 +1,74 @@
+[
+  {
+    "exterior_rows": [
+      0
+    ],
+    "generic_nonzero_coefficient": {
+      "a_mask": 0,
+      "c_mask": 1,
+      "difference": -4
+    },
+    "into": 0,
+    "m": 3,
+    "name": "singleton_out",
+    "raw_moments": [
+      [
+        0,
+        -1
+      ]
+    ],
+    "restricted_quartics": [
+      0
+    ]
+  },
+  {
+    "exterior_rows": [
+      0
+    ],
+    "generic_nonzero_coefficient": {
+      "a_mask": 0,
+      "c_mask": 1,
+      "difference": -6
+    },
+    "into": 1,
+    "m": 3,
+    "name": "singleton_in",
+    "raw_moments": [
+      [
+        0,
+        1
+      ]
+    ],
+    "restricted_quartics": [
+      0
+    ]
+  },
+  {
+    "exterior_rows": [
+      2,
+      0
+    ],
+    "generic_nonzero_coefficient": {
+      "a_mask": 0,
+      "c_mask": 1,
+      "difference": -18
+    },
+    "into": 2,
+    "m": 3,
+    "name": "mixed_group_triangle",
+    "raw_moments": [
+      [
+        2,
+        0
+      ],
+      [
+        -2,
+        0
+      ]
+    ],
+    "restricted_quartics": [
+      4,
+      -4
+    ]
+  }
+]

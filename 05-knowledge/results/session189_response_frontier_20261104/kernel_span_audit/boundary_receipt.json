@@ -1,0 +1,10 @@
+{
+  "artifacts": {
+    "boundary_banks.json": "630446a1ce49e40fea05e3da4a71fd85a9fcdb7588113a6aa61cb2f99fdef0c4",
+    "boundary_controls.json": "2103c3e8528a95105b640dd28c2dc13fe643edd3aad5aefca54284e59cfae629"
+  },
+  "full_named_coefficients": 996,
+  "graphs": 6,
+  "source_sha256": "12e0307eda9d94c7258bffd98558cd4d202de49e457bed837c960c357e96fed2",
+  "status": "PASS"
+}

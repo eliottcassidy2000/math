@@ -1,0 +1,11 @@
+[
+  "PROOF.md",
+  "README.md",
+  "SOURCES.md",
+  "verify.py",
+  "receipt.json",
+  "verify.stdout",
+  "receipt.optimized.json",
+  "verify.optimized.stdout",
+  "RELEASE_FILES.json"
+]

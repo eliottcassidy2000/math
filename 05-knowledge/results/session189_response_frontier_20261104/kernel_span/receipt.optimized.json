@@ -1,0 +1,779 @@
+{
+  "novelty": "Restricted selected mixed-quartic battery, full kernel span/jet description, and constructive matching witness. Generic local module-converse detectability is prior incoming E4.",
+  "status": "PASS",
+  "kernel_span_controls": [
+    {
+      "m": 3,
+      "selected_r": [
+        2
+      ],
+      "rank": 1,
+      "invariant_dimension": 1
+    },
+    {
+      "m": 5,
+      "selected_r": [
+        2,
+        4
+      ],
+      "rank": 2,
+      "invariant_dimension": 2
+    },
+    {
+      "m": 7,
+      "selected_r": [
+        2,
+        3,
+        6
+      ],
+      "rank": 3,
+      "invariant_dimension": 3
+    },
+    {
+      "m": 9,
+      "selected_r": [
+        2,
+        3,
+        4,
+        8
+      ],
+      "rank": 4,
+      "invariant_dimension": 4
+    },
+    {
+      "m": 11,
+      "selected_r": [
+        2,
+        3,
+        4,
+        5,
+        10
+      ],
+      "rank": 5,
+      "invariant_dimension": 5
+    },
+    {
+      "m": 13,
+      "selected_r": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        12
+      ],
+      "rank": 6,
+      "invariant_dimension": 6
+    },
+    {
+      "m": 15,
+      "selected_r": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        14
+      ],
+      "rank": 7,
+      "invariant_dimension": 7
+    },
+    {
+      "m": 17,
+      "selected_r": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        16
+      ],
+      "rank": 8,
+      "invariant_dimension": 8
+    },
+    {
+      "m": 19,
+      "selected_r": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        18
+      ],
+      "rank": 9,
+      "invariant_dimension": 9
+    },
+    {
+      "m": 21,
+      "selected_r": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        20
+      ],
+      "rank": 10,
+      "invariant_dimension": 10
+    },
+    {
+      "m": 23,
+      "selected_r": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        22
+      ],
+      "rank": 11,
+      "invariant_dimension": 11
+    },
+    {
+      "m": 25,
+      "selected_r": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        24
+      ],
+      "rank": 12,
+      "invariant_dimension": 12
+    },
+    {
+      "m": 27,
+      "selected_r": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        26
+      ],
+      "rank": 13,
+      "invariant_dimension": 13
+    },
+    {
+      "m": 29,
+      "selected_r": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        28
+      ],
+      "rank": 14,
+      "invariant_dimension": 14
+    },
+    {
+      "m": 31,
+      "selected_r": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        30
+      ],
+      "rank": 15,
+      "invariant_dimension": 15
+    }
+  ],
+  "exhaustive_exterior_controls": [
+    {
+      "n": 1,
+      "cases": 2,
+      "perfect_matching_cases": 0
+    },
+    {
+      "n": 2,
+      "cases": 8,
+      "perfect_matching_cases": 2
+    },
+    {
+      "n": 3,
+      "cases": 64,
+      "perfect_matching_cases": 0
+    },
+    {
+      "n": 4,
+      "cases": 1024,
+      "perfect_matching_cases": 168
+    },
+    {
+      "n": 5,
+      "cases": 32768,
+      "perfect_matching_cases": 0
+    }
+  ],
+  "total_exteriors": 33866,
+  "physical_checks": [
+    {
+      "m": 5,
+      "exterior": {
+        "n": 1,
+        "rows": [
+          0
+        ],
+        "into": 0,
+        "matching": 0,
+        "perfect": false,
+        "raw_moments": [
+          [
+            0,
+            -1
+          ]
+        ],
+        "side_moments": [
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "checks": [
+        {
+          "i": 5,
+          "r": 2,
+          "quartic_difference": 4
+        },
+        {
+          "i": 5,
+          "r": 4,
+          "quartic_difference": -12
+        }
+      ]
+    },
+    {
+      "m": 5,
+      "exterior": {
+        "n": 1,
+        "rows": [
+          0
+        ],
+        "into": 1,
+        "matching": 0,
+        "perfect": false,
+        "raw_moments": [
+          [
+            0,
+            1
+          ]
+        ],
+        "side_moments": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "checks": [
+        {
+          "i": 5,
+          "r": 2,
+          "quartic_difference": -4
+        },
+        {
+          "i": 5,
+          "r": 4,
+          "quartic_difference": 12
+        }
+      ]
+    },
+    {
+      "m": 5,
+      "exterior": {
+        "n": 2,
+        "rows": [
+          2,
+          0
+        ],
+        "into": 2,
+        "matching": 1,
+        "perfect": true,
+        "raw_moments": [
+          [
+            2,
+            0
+          ],
+          [
+            -2,
+            0
+          ]
+        ],
+        "side_moments": [
+          [
+            2,
+            0
+          ],
+          [
+            -2,
+            0
+          ]
+        ]
+      },
+      "checks": [
+        {
+          "i": 5,
+          "r": 2,
+          "quartic_difference": 0
+        },
+        {
+          "i": 5,
+          "r": 4,
+          "quartic_difference": 4
+        },
+        {
+          "i": 6,
+          "r": 2,
+          "quartic_difference": 0
+        },
+        {
+          "i": 6,
+          "r": 4,
+          "quartic_difference": -4
+        }
+      ]
+    },
+    {
+      "m": 5,
+      "exterior": {
+        "n": 2,
+        "rows": [
+          0,
+          1
+        ],
+        "into": 2,
+        "matching": 0,
+        "perfect": false,
+        "raw_moments": [
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "side_moments": [
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "checks": [
+        {
+          "i": 5,
+          "r": 2,
+          "quartic_difference": 4
+        },
+        {
+          "i": 5,
+          "r": 4,
+          "quartic_difference": -12
+        },
+        {
+          "i": 6,
+          "r": 2,
+          "quartic_difference": -4
+        },
+        {
+          "i": 6,
+          "r": 4,
+          "quartic_difference": 12
+        }
+      ]
+    },
+    {
+      "m": 7,
+      "exterior": {
+        "n": 3,
+        "rows": [
+          2,
+          4,
+          1
+        ],
+        "into": 2,
+        "matching": 1,
+        "perfect": false,
+        "raw_moments": [
+          [
+            0,
+            -1,
+            0
+          ],
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            0,
+            -3,
+            -2
+          ]
+        ],
+        "side_moments": [
+          [
+            0,
+            -4,
+            -2
+          ],
+          [
+            -2,
+            -1,
+            0
+          ]
+        ]
+      },
+      "checks": [
+        {
+          "i": 7,
+          "r": 2,
+          "quartic_difference": 28
+        },
+        {
+          "i": 7,
+          "r": 3,
+          "quartic_difference": 8
+        },
+        {
+          "i": 7,
+          "r": 6,
+          "quartic_difference": -60
+        },
+        {
+          "i": 8,
+          "r": 2,
+          "quartic_difference": 28
+        },
+        {
+          "i": 8,
+          "r": 3,
+          "quartic_difference": 8
+        },
+        {
+          "i": 8,
+          "r": 6,
+          "quartic_difference": -64
+        },
+        {
+          "i": 9,
+          "r": 2,
+          "quartic_difference": 428
+        },
+        {
+          "i": 9,
+          "r": 3,
+          "quartic_difference": 136
+        },
+        {
+          "i": 9,
+          "r": 6,
+          "quartic_difference": -780
+        }
+      ]
+    },
+    {
+      "m": 7,
+      "exterior": {
+        "n": 3,
+        "rows": [
+          2,
+          4,
+          1
+        ],
+        "into": 3,
+        "matching": 1,
+        "perfect": false,
+        "raw_moments": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        "side_moments": [
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            0,
+            4,
+            2
+          ]
+        ]
+      },
+      "checks": [
+        {
+          "i": 7,
+          "r": 2,
+          "quartic_difference": -28
+        },
+        {
+          "i": 7,
+          "r": 3,
+          "quartic_difference": -8
+        },
+        {
+          "i": 7,
+          "r": 6,
+          "quartic_difference": 60
+        },
+        {
+          "i": 8,
+          "r": 2,
+          "quartic_difference": -428
+        },
+        {
+          "i": 8,
+          "r": 3,
+          "quartic_difference": -136
+        },
+        {
+          "i": 8,
+          "r": 6,
+          "quartic_difference": 780
+        },
+        {
+          "i": 9,
+          "r": 2,
+          "quartic_difference": -28
+        },
+        {
+          "i": 9,
+          "r": 3,
+          "quartic_difference": -8
+        },
+        {
+          "i": 9,
+          "r": 6,
+          "quartic_difference": 64
+        }
+      ]
+    },
+    {
+      "m": 7,
+      "exterior": {
+        "n": 4,
+        "rows": [
+          14,
+          12,
+          8,
+          0
+        ],
+        "into": 12,
+        "matching": 2,
+        "perfect": true,
+        "raw_moments": [
+          [
+            6,
+            9,
+            -2
+          ],
+          [
+            2,
+            5,
+            -2
+          ],
+          [
+            -2,
+            -5,
+            2
+          ],
+          [
+            -6,
+            -9,
+            2
+          ]
+        ],
+        "side_moments": [
+          [
+            8,
+            14,
+            -4
+          ],
+          [
+            -8,
+            -14,
+            4
+          ]
+        ]
+      },
+      "checks": [
+        {
+          "i": 7,
+          "r": 2,
+          "quartic_difference": 92
+        },
+        {
+          "i": 7,
+          "r": 3,
+          "quartic_difference": 40
+        },
+        {
+          "i": 7,
+          "r": 6,
+          "quartic_difference": -48
+        },
+        {
+          "i": 8,
+          "r": 2,
+          "quartic_difference": 204
+        },
+        {
+          "i": 8,
+          "r": 3,
+          "quartic_difference": 72
+        },
+        {
+          "i": 8,
+          "r": 6,
+          "quartic_difference": -296
+        },
+        {
+          "i": 9,
+          "r": 2,
+          "quartic_difference": -204
+        },
+        {
+          "i": 9,
+          "r": 3,
+          "quartic_difference": -72
+        },
+        {
+          "i": 9,
+          "r": 6,
+          "quartic_difference": 296
+        },
+        {
+          "i": 10,
+          "r": 2,
+          "quartic_difference": -92
+        },
+        {
+          "i": 10,
+          "r": 3,
+          "quartic_difference": -40
+        },
+        {
+          "i": 10,
+          "r": 6,
+          "quartic_difference": 48
+        }
+      ]
+    }
+  ],
+  "mixed_incidence_group_counterexample": {
+    "n": 2,
+    "rows": [
+      2,
+      0
+    ],
+    "into": 2,
+    "matching": 1,
+    "perfect": true,
+    "raw_moments": [
+      [
+        2,
+        0
+      ],
+      [
+        -2,
+        0
+      ]
+    ],
+    "side_moments": [
+      [
+        2,
+        0
+      ],
+      [
+        -2,
+        0
+      ]
+    ]
+  },
+  "scope": "All-order proofs are in PROOF.md. Finite controls validate full kernel rank, reflection, exact matching nilpotence, signed highest moments, strict homogeneous groups, finite-jet inversion, and literal physical quartics. No quotient-only or arbitrary-ambient source-root claim.",
+  "source_sha256": {
+    "session189-odd-transitive/PROOF.md": "4f0123e3244b4515d80122d23e8bb62cd671c569a411d3ad9602043ea2a25a6a",
+    "session189-odd-transitive/verify.py": "74cca05d0e5a88e3396359f121de786cb8158fcf6e3e9b5fdc94277af193eb4d",
+    "session189-kernel-span/PROOF.md": "01c05852cde9c315c199f34f89211ede98a0ab24b8b9efa2f99f8aef53af6e51",
+    "session189-kernel-span/verify.py": "3bad86d48997389c7aade3c6a3939ee3df5bbab24dc18c7e40e19ed11d2606b2"
+  }
+}

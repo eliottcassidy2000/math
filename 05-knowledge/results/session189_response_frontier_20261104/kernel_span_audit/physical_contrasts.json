@@ -1,0 +1,549 @@
+[
+  {
+    "checks": [
+      {
+        "difference": 4,
+        "i": 5,
+        "r": 2,
+        "source": 8,
+        "target": 4
+      },
+      {
+        "difference": -12,
+        "i": 5,
+        "r": 4,
+        "source": 4,
+        "target": 16
+      }
+    ],
+    "grouped_differences": [
+      {
+        "2": 4,
+        "4": -12
+      },
+      {
+        "2": 0,
+        "4": 0
+      }
+    ],
+    "m": 5,
+    "physical_source_rows": [
+      62,
+      60,
+      56,
+      48,
+      32,
+      0
+    ],
+    "physical_target_rows": [
+      32,
+      33,
+      35,
+      39,
+      47,
+      0
+    ]
+  },
+  {
+    "checks": [
+      {
+        "difference": -4,
+        "i": 5,
+        "r": 2,
+        "source": 4,
+        "target": 8
+      },
+      {
+        "difference": 12,
+        "i": 5,
+        "r": 4,
+        "source": 16,
+        "target": 4
+      }
+    ],
+    "grouped_differences": [
+      {
+        "2": 0,
+        "4": 0
+      },
+      {
+        "2": -4,
+        "4": 12
+      }
+    ],
+    "m": 5,
+    "physical_source_rows": [
+      30,
+      28,
+      24,
+      16,
+      0,
+      31
+    ],
+    "physical_target_rows": [
+      0,
+      1,
+      3,
+      7,
+      15,
+      31
+    ]
+  },
+  {
+    "checks": [
+      {
+        "difference": 0,
+        "i": 5,
+        "r": 2,
+        "source": 12,
+        "target": 12
+      },
+      {
+        "difference": 4,
+        "i": 5,
+        "r": 4,
+        "source": 20,
+        "target": 16
+      },
+      {
+        "difference": 0,
+        "i": 6,
+        "r": 2,
+        "source": 12,
+        "target": 12
+      },
+      {
+        "difference": -4,
+        "i": 6,
+        "r": 4,
+        "source": 16,
+        "target": 20
+      }
+    ],
+    "grouped_differences": [
+      {
+        "2": 0,
+        "4": 4
+      },
+      {
+        "2": 0,
+        "4": -4
+      }
+    ],
+    "m": 5,
+    "physical_source_rows": [
+      62,
+      60,
+      56,
+      48,
+      32,
+      64,
+      31
+    ],
+    "physical_target_rows": [
+      32,
+      33,
+      35,
+      39,
+      47,
+      64,
+      31
+    ]
+  },
+  {
+    "checks": [
+      {
+        "difference": 4,
+        "i": 5,
+        "r": 2,
+        "source": 8,
+        "target": 4
+      },
+      {
+        "difference": -12,
+        "i": 5,
+        "r": 4,
+        "source": 4,
+        "target": 16
+      },
+      {
+        "difference": -4,
+        "i": 6,
+        "r": 2,
+        "source": 4,
+        "target": 8
+      },
+      {
+        "difference": 12,
+        "i": 6,
+        "r": 4,
+        "source": 16,
+        "target": 4
+      }
+    ],
+    "grouped_differences": [
+      {
+        "2": 4,
+        "4": -12
+      },
+      {
+        "2": -4,
+        "4": 12
+      }
+    ],
+    "m": 5,
+    "physical_source_rows": [
+      62,
+      60,
+      56,
+      48,
+      32,
+      0,
+      63
+    ],
+    "physical_target_rows": [
+      32,
+      33,
+      35,
+      39,
+      47,
+      0,
+      63
+    ]
+  },
+  {
+    "checks": [
+      {
+        "difference": 28,
+        "i": 7,
+        "r": 2,
+        "source": 68,
+        "target": 40
+      },
+      {
+        "difference": 8,
+        "i": 7,
+        "r": 3,
+        "source": 40,
+        "target": 32
+      },
+      {
+        "difference": -60,
+        "i": 7,
+        "r": 6,
+        "source": 68,
+        "target": 128
+      },
+      {
+        "difference": 28,
+        "i": 8,
+        "r": 2,
+        "source": 68,
+        "target": 40
+      },
+      {
+        "difference": 8,
+        "i": 8,
+        "r": 3,
+        "source": 40,
+        "target": 32
+      },
+      {
+        "difference": -64,
+        "i": 8,
+        "r": 6,
+        "source": 68,
+        "target": 132
+      },
+      {
+        "difference": 428,
+        "i": 9,
+        "r": 2,
+        "source": 688,
+        "target": 260
+      },
+      {
+        "difference": 136,
+        "i": 9,
+        "r": 3,
+        "source": 464,
+        "target": 328
+      },
+      {
+        "difference": -780,
+        "i": 9,
+        "r": 6,
+        "source": 260,
+        "target": 1040
+      }
+    ],
+    "grouped_differences": [
+      {
+        "2": 456,
+        "3": 144,
+        "6": -840
+      },
+      {
+        "2": 28,
+        "3": 8,
+        "6": -64
+      }
+    ],
+    "m": 7,
+    "physical_source_rows": [
+      766,
+      764,
+      760,
+      752,
+      736,
+      704,
+      640,
+      256,
+      639,
+      128
+    ],
+    "physical_target_rows": [
+      640,
+      641,
+      643,
+      647,
+      655,
+      671,
+      703,
+      256,
+      639,
+      128
+    ]
+  },
+  {
+    "checks": [
+      {
+        "difference": -28,
+        "i": 7,
+        "r": 2,
+        "source": 40,
+        "target": 68
+      },
+      {
+        "difference": -8,
+        "i": 7,
+        "r": 3,
+        "source": 32,
+        "target": 40
+      },
+      {
+        "difference": 60,
+        "i": 7,
+        "r": 6,
+        "source": 128,
+        "target": 68
+      },
+      {
+        "difference": -428,
+        "i": 8,
+        "r": 2,
+        "source": 260,
+        "target": 688
+      },
+      {
+        "difference": -136,
+        "i": 8,
+        "r": 3,
+        "source": 328,
+        "target": 464
+      },
+      {
+        "difference": 780,
+        "i": 8,
+        "r": 6,
+        "source": 1040,
+        "target": 260
+      },
+      {
+        "difference": -28,
+        "i": 9,
+        "r": 2,
+        "source": 40,
+        "target": 68
+      },
+      {
+        "difference": -8,
+        "i": 9,
+        "r": 3,
+        "source": 32,
+        "target": 40
+      },
+      {
+        "difference": 64,
+        "i": 9,
+        "r": 6,
+        "source": 132,
+        "target": 68
+      }
+    ],
+    "grouped_differences": [
+      {
+        "2": -28,
+        "3": -8,
+        "6": 64
+      },
+      {
+        "2": -456,
+        "3": -144,
+        "6": 840
+      }
+    ],
+    "m": 7,
+    "physical_source_rows": [
+      638,
+      636,
+      632,
+      624,
+      608,
+      576,
+      512,
+      383,
+      639,
+      128
+    ],
+    "physical_target_rows": [
+      512,
+      513,
+      515,
+      519,
+      527,
+      543,
+      575,
+      383,
+      639,
+      128
+    ]
+  },
+  {
+    "checks": [
+      {
+        "difference": 92,
+        "i": 7,
+        "r": 2,
+        "source": 2164,
+        "target": 2072
+      },
+      {
+        "difference": 40,
+        "i": 7,
+        "r": 3,
+        "source": 1832,
+        "target": 1792
+      },
+      {
+        "difference": -48,
+        "i": 7,
+        "r": 6,
+        "source": 2756,
+        "target": 2804
+      },
+      {
+        "difference": 204,
+        "i": 8,
+        "r": 2,
+        "source": 2184,
+        "target": 1980
+      },
+      {
+        "difference": 72,
+        "i": 8,
+        "r": 3,
+        "source": 1824,
+        "target": 1752
+      },
+      {
+        "difference": -296,
+        "i": 8,
+        "r": 6,
+        "source": 2564,
+        "target": 2860
+      },
+      {
+        "difference": -204,
+        "i": 9,
+        "r": 2,
+        "source": 1980,
+        "target": 2184
+      },
+      {
+        "difference": -72,
+        "i": 9,
+        "r": 3,
+        "source": 1752,
+        "target": 1824
+      },
+      {
+        "difference": 296,
+        "i": 9,
+        "r": 6,
+        "source": 2860,
+        "target": 2564
+      },
+      {
+        "difference": -92,
+        "i": 10,
+        "r": 2,
+        "source": 2072,
+        "target": 2164
+      },
+      {
+        "difference": -40,
+        "i": 10,
+        "r": 3,
+        "source": 1792,
+        "target": 1832
+      },
+      {
+        "difference": 48,
+        "i": 10,
+        "r": 6,
+        "source": 2804,
+        "target": 2756
+      }
+    ],
+    "grouped_differences": [
+      {
+        "2": 296,
+        "3": 112,
+        "6": -344
+      },
+      {
+        "2": -296,
+        "3": -112,
+        "6": 344
+      }
+    ],
+    "m": 7,
+    "physical_source_rows": [
+      510,
+      508,
+      504,
+      496,
+      480,
+      448,
+      384,
+      1792,
+      1536,
+      1151,
+      127
+    ],
+    "physical_target_rows": [
+      384,
+      385,
+      387,
+      391,
+      399,
+      415,
+      447,
+      1792,
+      1536,
+      1151,
+      127
+    ]
+  }
+]

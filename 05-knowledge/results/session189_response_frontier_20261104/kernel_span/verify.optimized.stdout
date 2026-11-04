@@ -1,0 +1,6 @@
+{"n": 1, "cases": 2, "perfect_matching_cases": 0}
+{"n": 2, "cases": 8, "perfect_matching_cases": 2}
+{"n": 3, "cases": 64, "perfect_matching_cases": 0}
+{"n": 4, "cases": 1024, "perfect_matching_cases": 168}
+{"n": 5, "cases": 32768, "perfect_matching_cases": 0}
+{"status": "PASS", "total_exteriors": 33866, "literal_physical_quartics": 42}
