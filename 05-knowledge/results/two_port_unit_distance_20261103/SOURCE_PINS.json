@@ -12,8 +12,11 @@
     "05-knowledge/results/rooted_graph_costs_20261020/README.md": "74573790fa20c9d90b179fde2a14a3de7b4700c61f48fe60e3cdbea8ecc7cdc4",
     "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson_refinement/PROPER_UNIT_DISTANCE_REFINEMENT.md": "ed9f99c07f4d82c86f9f05be8a191e2ad3583804bb8e7652d28765e24a65657c",
     "05-knowledge/results/session176_tournament_information_20261104/circuits/PROOF.md": "74eb47a648f43d74e4d4784af6f1f2926ba52329a537e37d975922fb46ebe26d",
+    "05-knowledge/results/session179_niche_methods_20261104/spectrum/REPORT.md": "9c675656e578c2a83153431387edff4630681f253bfd5c16be68455bf906b470",
     "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/MODULAR_FAITHFULNESS.md": "2ace16955a840be4634770cc57f61ebdeba7432012c16159546128575540eab5",
     "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/faithfulness-proof.md": "e64ae1527002562379b8de71448eb355aa27217be71d3c32dba77ad79a5ebfe4",
-    "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/proof.md": "48aaefa2d059a56fb201a41d5f78bcd043eb2fbcb58f1ab9918c3e4d987917d7"
-  }
+    "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/proof.md": "48aaefa2d059a56fb201a41d5f78bcd043eb2fbcb58f1ab9918c3e4d987917d7",
+    "05-knowledge/results/triangle_return_170807_20261103/TRIANGLE.md": "b55d3503f26dd3d9d4786b877843aa59d95ee78622190ff8e9dcc0df960b8563"
+  },
+  "integrated_incoming_head": "4ad839b20d"
 }
