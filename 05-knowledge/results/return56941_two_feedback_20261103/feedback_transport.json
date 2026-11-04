@@ -1,0 +1,670 @@
+{
+  "status": "FINITE_EXACT_COEFFICIENTS_WITH_PROVED_FIVE_MODE_REDUCTION",
+  "m_range": [
+    1,
+    7
+  ],
+  "independent_interpolation_samples": 5,
+  "extra_size_controls": 2,
+  "spectral_roots": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "annihilator_ascending": [
+    0,
+    24,
+    -50,
+    35,
+    -10,
+    1
+  ],
+  "sample_smith_factors": [
+    1,
+    1,
+    2,
+    6,
+    24
+  ],
+  "sample_lattice_index": 288,
+  "delta_response_coefficients": {
+    "H": {
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "samples": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "E1": {
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "samples": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "S1": {
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "samples": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "deletion_H": {
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "samples": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "E2": {
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "samples": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "S2": {
+      "coefficients": [
+        0,
+        0,
+        -135276,
+        135276,
+        0
+      ],
+      "samples": [
+        0,
+        135276,
+        676380,
+        2570244,
+        8792940,
+        28543236,
+        89958540
+      ]
+    }
+  },
+  "field_transport": [
+    {
+      "m": 1,
+      "delta": 0,
+      "delta_mod7": 0,
+      "source_codec": {
+        "observer_mod7": [
+          4,
+          1,
+          2
+        ],
+        "F343_vector_codec": [
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            6,
+            2,
+            4
+          ],
+          [
+            3,
+            4,
+            1
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          2,
+          2,
+          2
+        ],
+        "F49_frobenius": [
+          3,
+          5,
+          2
+        ]
+      },
+      "target_codec": {
+        "observer_mod7": [
+          5,
+          3,
+          6
+        ],
+        "F343_vector_codec": [
+          [
+            5,
+            3,
+            6
+          ],
+          [
+            4,
+            6,
+            5
+          ],
+          [
+            2,
+            5,
+            3
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          6,
+          6,
+          6
+        ],
+        "F49_frobenius": [
+          2,
+          1,
+          6
+        ]
+      }
+    },
+    {
+      "m": 2,
+      "delta": 67638,
+      "delta_mod7": 4,
+      "source_codec": {
+        "observer_mod7": [
+          5,
+          6,
+          0
+        ],
+        "F343_vector_codec": [
+          [
+            5,
+            6,
+            0
+          ],
+          [
+            1,
+            5,
+            4
+          ],
+          [
+            3,
+            3,
+            3
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          5,
+          0,
+          5
+        ],
+        "F49_frobenius": [
+          5,
+          0,
+          5
+        ]
+      },
+      "target_codec": {
+        "observer_mod7": [
+          1,
+          1,
+          4
+        ],
+        "F343_vector_codec": [
+          [
+            1,
+            1,
+            4
+          ],
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            4,
+            4,
+            5
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          3,
+          4,
+          4
+        ],
+        "F49_frobenius": [
+          5,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "m": 3,
+      "delta": 338190,
+      "delta_mod7": 6,
+      "source_codec": {
+        "observer_mod7": [
+          0,
+          6,
+          0
+        ],
+        "F343_vector_codec": [
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            3,
+            5,
+            4
+          ],
+          [
+            5,
+            3,
+            3
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          6,
+          0,
+          0
+        ],
+        "F49_frobenius": [
+          6,
+          0,
+          0
+        ]
+      },
+      "target_codec": {
+        "observer_mod7": [
+          0,
+          3,
+          6
+        ],
+        "F343_vector_codec": [
+          [
+            0,
+            3,
+            6
+          ],
+          [
+            6,
+            6,
+            5
+          ],
+          [
+            4,
+            5,
+            3
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          0,
+          6,
+          1
+        ],
+        "F49_frobenius": [
+          3,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "m": 4,
+      "delta": 1285122,
+      "delta_mod7": 6,
+      "source_codec": {
+        "observer_mod7": [
+          4,
+          4,
+          5
+        ],
+        "F343_vector_codec": [
+          [
+            4,
+            4,
+            5
+          ],
+          [
+            1,
+            1,
+            4
+          ],
+          [
+            1,
+            2,
+            5
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          0,
+          5,
+          6
+        ],
+        "F49_frobenius": [
+          6,
+          2,
+          6
+        ]
+      },
+      "target_codec": {
+        "observer_mod7": [
+          5,
+          4,
+          0
+        ],
+        "F343_vector_codec": [
+          [
+            5,
+            4,
+            0
+          ],
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            6,
+            2,
+            2
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          3,
+          0,
+          5
+        ],
+        "F49_frobenius": [
+          3,
+          0,
+          5
+        ]
+      }
+    },
+    {
+      "m": 5,
+      "delta": 4396470,
+      "delta_mod7": 1,
+      "source_codec": {
+        "observer_mod7": [
+          5,
+          1,
+          2
+        ],
+        "F343_vector_codec": [
+          [
+            5,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            4,
+            4,
+            1
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          6,
+          2,
+          3
+        ],
+        "F49_frobenius": [
+          0,
+          5,
+          3
+        ]
+      },
+      "target_codec": {
+        "observer_mod7": [
+          1,
+          4,
+          0
+        ],
+        "F343_vector_codec": [
+          [
+            1,
+            4,
+            0
+          ],
+          [
+            3,
+            1,
+            5
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          1,
+          0,
+          1
+        ],
+        "F49_frobenius": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "m": 6,
+      "delta": 14271618,
+      "delta_mod7": 4,
+      "source_codec": {
+        "observer_mod7": [
+          0,
+          5,
+          6
+        ],
+        "F343_vector_codec": [
+          [
+            0,
+            5,
+            6
+          ],
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            1,
+            6,
+            4
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          2,
+          6,
+          1
+        ],
+        "F49_frobenius": [
+          5,
+          1,
+          1
+        ]
+      },
+      "target_codec": {
+        "observer_mod7": [
+          0,
+          5,
+          1
+        ],
+        "F343_vector_codec": [
+          [
+            0,
+            5,
+            1
+          ],
+          [
+            5,
+            3,
+            5
+          ],
+          [
+            5,
+            6,
+            1
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          1,
+          1,
+          6
+        ],
+        "F49_frobenius": [
+          5,
+          6,
+          6
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "delta": 44979270,
+      "delta_mod7": 0,
+      "source_codec": {
+        "observer_mod7": [
+          4,
+          1,
+          2
+        ],
+        "F343_vector_codec": [
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            6,
+            2,
+            4
+          ],
+          [
+            3,
+            4,
+            1
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          2,
+          2,
+          2
+        ],
+        "F49_frobenius": [
+          3,
+          5,
+          2
+        ]
+      },
+      "target_codec": {
+        "observer_mod7": [
+          5,
+          3,
+          6
+        ],
+        "F343_vector_codec": [
+          [
+            5,
+            3,
+            6
+          ],
+          [
+            4,
+            6,
+            5
+          ],
+          [
+            2,
+            5,
+            3
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          6,
+          6,
+          6
+        ],
+        "F49_frobenius": [
+          2,
+          1,
+          6
+        ]
+      }
+    }
+  ],
+  "all_size_claim": "Requires the ordered two-bin/two-feedback skeleton proof in TRANSPORT.md, not polynomial fitting alone."
+}

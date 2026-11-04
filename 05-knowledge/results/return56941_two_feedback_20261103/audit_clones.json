@@ -1,0 +1,149 @@
+{
+  "status": "FINITE_EXACT_INDEPENDENT_LITERAL_CONTROLS",
+  "rows": [
+    {
+      "H": 56933,
+      "base_h": 18977,
+      "b": 1,
+      "clone_counts_m123": [
+        56933,
+        94889,
+        170801
+      ],
+      "two_birth_hits": [
+        {
+          "H": 56933,
+          "offset": 2,
+          "first": 65536,
+          "second": 65536,
+          "pivot": 16,
+          "side": 0
+        },
+        {
+          "H": 56933,
+          "offset": 2,
+          "first": 65536,
+          "second": 327680,
+          "pivot": 16,
+          "side": 0
+        },
+        {
+          "H": 56933,
+          "offset": 2,
+          "first": 65536,
+          "second": 458752,
+          "pivot": 16,
+          "side": 0
+        }
+      ]
+    },
+    {
+      "H": 56935,
+      "base_h": 18977,
+      "b": 2,
+      "clone_counts_m123": [
+        56935,
+        94893,
+        170809
+      ],
+      "two_birth_hits": [
+        {
+          "H": 56935,
+          "offset": 4,
+          "first": 16384,
+          "second": 16384,
+          "pivot": 14,
+          "side": 0
+        },
+        {
+          "H": 56935,
+          "offset": 4,
+          "first": 16384,
+          "second": 81920,
+          "pivot": 14,
+          "side": 0
+        },
+        {
+          "H": 56935,
+          "offset": 4,
+          "first": 16384,
+          "second": 114688,
+          "pivot": 14,
+          "side": 0
+        }
+      ]
+    },
+    {
+      "H": 56939,
+      "base_h": 18979,
+      "b": 1,
+      "clone_counts_m123": [
+        56939,
+        94899,
+        170819
+      ],
+      "two_birth_hits": [
+        {
+          "H": 56939,
+          "offset": 2,
+          "first": 16384,
+          "second": 16384,
+          "pivot": 14,
+          "side": 0
+        },
+        {
+          "H": 56939,
+          "offset": 2,
+          "first": 16384,
+          "second": 81920,
+          "pivot": 14,
+          "side": 0
+        },
+        {
+          "H": 56939,
+          "offset": 2,
+          "first": 16384,
+          "second": 114688,
+          "pivot": 14,
+          "side": 0
+        }
+      ]
+    },
+    {
+      "H": 56941,
+      "base_h": 18979,
+      "b": 2,
+      "clone_counts_m123": [
+        56941,
+        94903,
+        170827
+      ],
+      "two_birth_hits": [
+        {
+          "H": 56941,
+          "offset": 4,
+          "first": 8192,
+          "second": 8192,
+          "pivot": 13,
+          "side": 0
+        },
+        {
+          "H": 56941,
+          "offset": 4,
+          "first": 8192,
+          "second": 40960,
+          "pivot": 13,
+          "side": 0
+        },
+        {
+          "H": 56941,
+          "offset": 4,
+          "first": 8192,
+          "second": 57344,
+          "pivot": 13,
+          "side": 0
+        }
+      ]
+    }
+  ]
+}

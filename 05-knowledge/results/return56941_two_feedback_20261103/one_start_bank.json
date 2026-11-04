@@ -1,0 +1,144 @@
+{
+  "status": "FINITE_EXACT_FULL_ONE_START_GRAMMAR_TO_PARENT20",
+  "rows": [
+    {
+      "kind": "census",
+      "n": 3,
+      "classes": 1
+    },
+    {
+      "kind": "census",
+      "n": 4,
+      "classes": 3
+    },
+    {
+      "kind": "census",
+      "n": 5,
+      "classes": 8
+    },
+    {
+      "kind": "census",
+      "n": 6,
+      "classes": 21
+    },
+    {
+      "kind": "census",
+      "n": 7,
+      "classes": 55
+    },
+    {
+      "kind": "census",
+      "n": 8,
+      "classes": 144
+    },
+    {
+      "kind": "census",
+      "n": 9,
+      "classes": 377
+    },
+    {
+      "kind": "census",
+      "n": 10,
+      "classes": 987
+    },
+    {
+      "kind": "census",
+      "n": 11,
+      "classes": 2584
+    },
+    {
+      "kind": "census",
+      "n": 12,
+      "classes": 6765
+    },
+    {
+      "kind": "census",
+      "n": 13,
+      "classes": 17711
+    },
+    {
+      "kind": "census",
+      "n": 14,
+      "classes": 46368
+    },
+    {
+      "kind": "hit",
+      "n": 15,
+      "rank": 10293,
+      "target": 56933,
+      "h": 4783,
+      "F": 52151,
+      "core_order": 6,
+      "core_rank": 14,
+      "tail_length": 8,
+      "tail_bits": 203
+    },
+    {
+      "kind": "hit",
+      "n": 15,
+      "rank": 10996,
+      "target": 56941,
+      "h": 5557,
+      "F": 51385,
+      "core_order": 6,
+      "core_rank": 3,
+      "tail_length": 8,
+      "tail_bits": 237
+    },
+    {
+      "kind": "hit",
+      "n": 15,
+      "rank": 13140,
+      "target": 56933,
+      "h": 2961,
+      "F": 53973,
+      "core_order": 7,
+      "core_rank": 43,
+      "tail_length": 7,
+      "tail_bits": 95
+    },
+    {
+      "kind": "census",
+      "n": 15,
+      "classes": 121393
+    },
+    {
+      "kind": "hit",
+      "n": 16,
+      "rank": 11421,
+      "target": 56939,
+      "h": 11573,
+      "F": 45367,
+      "core_order": 4,
+      "core_rank": 2,
+      "tail_length": 11,
+      "tail_bits": 1417
+    },
+    {
+      "kind": "census",
+      "n": 16,
+      "classes": 317811
+    },
+    {
+      "kind": "census",
+      "n": 17,
+      "classes": 832040
+    },
+    {
+      "kind": "census",
+      "n": 18,
+      "classes": 2178309
+    },
+    {
+      "kind": "census",
+      "n": 19,
+      "classes": 5702887
+    },
+    {
+      "kind": "census",
+      "n": 20,
+      "classes": 14930352
+    }
+  ],
+  "seconds": 2.8134305000130553
+}

@@ -1,0 +1,21 @@
+{
+  "status": "FINITE_EXACT_INDEPENDENT_COMPILER_CHECK",
+  "full_parent_classes": 24157816,
+  "subset_queries": 642,
+  "query_scope": "every class through9; first/middle/last rank at each order10..20",
+  "positive_targets": 12,
+  "one_ready_target_orders": {
+    "56933": [
+      16,
+      16
+    ],
+    "56935": [],
+    "56939": [
+      17
+    ],
+    "56941": [
+      16
+    ]
+  },
+  "all_order_bound": "Inherited complete READY classification; Hparent <= (H+1)/2 <=28471; Busch f(21)=46875"
+}

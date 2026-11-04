@@ -53,3 +53,9 @@ under complements or arbitrary re-marking.
 Run `python -B -X utf8 reproduce.py` in this directory; `--full` also
 regenerates discovery banks and schedules. See [AUDIT](AUDIT.md) and
 [HANDOFF](HANDOFF.md). No A000568 extension is claimed.
+
+The [next source-return packet](../return56941_two_feedback_20261103/README.md)
+records seven guarded moving-mark continuations of these four children,
+the all-order empty1-ready fibre at56935, and the same-clock two-feedback
+obstruction for the repaired1243 dyadic family. It also compares exact
+A000568 prefixes through256 and retains Session87 as the faster engine.

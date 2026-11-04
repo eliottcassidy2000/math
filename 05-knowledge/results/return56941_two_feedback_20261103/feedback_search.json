@@ -1,0 +1,32 @@
+{
+  "status": "FINITE_EXACT_COMPLETE_SEARCH_EXIT_ZERO",
+  "exterior_chain_bound": 13,
+  "bulk_positions": "every gap",
+  "bulk_letters": [
+    1,
+    3
+  ],
+  "other_letters": "covered by global converse and apex exchange",
+  "apex_edges": [
+    0,
+    1
+  ],
+  "target_samples": [
+    [
+      4277,
+      11735,
+      26651
+    ],
+    [
+      4279,
+      11737,
+      26653
+    ]
+  ],
+  "visits": 97648782,
+  "pruned": 62397763,
+  "prefixes": 10833829,
+  "hits": [],
+  "pruning": "Hamilton insertion is injective; every sample can only increase",
+  "source_sha256": "6646244cdb3750970899084fa24315a3e11478b328b2ca181bf5065d313ad556"
+}

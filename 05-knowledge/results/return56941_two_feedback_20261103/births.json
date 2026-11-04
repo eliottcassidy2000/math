@@ -1,0 +1,45 @@
+{
+  "status": "FINITE_EXACT_ALL_ONE_BIRTH_CUTS_OF_FOUR_ACTUAL_SOURCES",
+  "branches": [
+    {
+      "H": 56933,
+      "offset": 2,
+      "incoming_cuts": []
+    },
+    {
+      "H": 56933,
+      "offset": 4,
+      "incoming_cuts": []
+    },
+    {
+      "H": 56935,
+      "offset": 2,
+      "incoming_cuts": []
+    },
+    {
+      "H": 56935,
+      "offset": 4,
+      "incoming_cuts": []
+    },
+    {
+      "H": 56939,
+      "offset": 2,
+      "incoming_cuts": []
+    },
+    {
+      "H": 56939,
+      "offset": 4,
+      "incoming_cuts": []
+    },
+    {
+      "H": 56941,
+      "offset": 2,
+      "incoming_cuts": []
+    },
+    {
+      "H": 56941,
+      "offset": 4,
+      "incoming_cuts": []
+    }
+  ]
+}
