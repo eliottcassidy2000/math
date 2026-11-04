@@ -1,0 +1,144 @@
+{
+  "scope": "Independent bridge check, generated UH classes at orders 4-8 only",
+  "classes_checked": 88,
+  "insertion_edges_checked": 87,
+  "receipts": [
+    {
+      "n": 4,
+      "classes": 1,
+      "cut_histogram": {
+        "3": 1
+      },
+      "ready_H_min": 5,
+      "ready_H_max": 5
+    },
+    {
+      "n": 5,
+      "classes": 3,
+      "cut_histogram": {
+        "2": 1,
+        "3": 1,
+        "4": 1
+      },
+      "ready_H_min": 9,
+      "ready_H_max": 13
+    },
+    {
+      "n": 6,
+      "classes": 8,
+      "cut_histogram": {
+        "2": 2,
+        "3": 3,
+        "4": 2,
+        "5": 1
+      },
+      "ready_H_min": 17,
+      "ready_H_max": 37
+    },
+    {
+      "n": 7,
+      "classes": 21,
+      "cut_histogram": {
+        "2": 4,
+        "3": 7,
+        "4": 6,
+        "5": 3,
+        "6": 1
+      },
+      "ready_H_min": 33,
+      "ready_H_max": 109
+    },
+    {
+      "n": 8,
+      "classes": 55,
+      "cut_histogram": {
+        "2": 8,
+        "3": 16,
+        "4": 16,
+        "5": 10,
+        "6": 4,
+        "7": 1
+      },
+      "ready_H_min": 61,
+      "ready_H_max": 321
+    }
+  ],
+  "same_finite_state_different_ready_H": [
+    {
+      "n": 6,
+      "word": "01",
+      "uh_rows": [
+        6,
+        60,
+        8,
+        1,
+        13,
+        29
+      ],
+      "ready_rows": [
+        60,
+        5,
+        8,
+        50,
+        38,
+        6
+      ],
+      "cycle": [
+        0,
+        1,
+        5,
+        4,
+        2,
+        3
+      ],
+      "entry": 5,
+      "exit": 2,
+      "root": 3,
+      "run": 3,
+      "cut_arcs": 4,
+      "entries": 2,
+      "exits": 2,
+      "H_UH": 15,
+      "H_ready": 33,
+      "sigma": 1
+    },
+    {
+      "n": 6,
+      "word": "10",
+      "uh_rows": [
+        22,
+        12,
+        8,
+        1,
+        46,
+        15
+      ],
+      "ready_rows": [
+        44,
+        53,
+        8,
+        50,
+        5,
+        20
+      ],
+      "cycle": [
+        0,
+        4,
+        5,
+        1,
+        2,
+        3
+      ],
+      "entry": 5,
+      "exit": 2,
+      "root": 3,
+      "run": 3,
+      "cut_arcs": 4,
+      "entries": 2,
+      "exits": 2,
+      "H_UH": 15,
+      "H_ready": 29,
+      "sigma": 1
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+[
+  "REVIEW.md",
+  "check_witnesses.py",
+  "witnesses.json",
+  "witnesses.optimized.json",
+  "check_bridge.json",
+  "check_bridge.optimized.json",
+  "SHA256SUMS"
+]

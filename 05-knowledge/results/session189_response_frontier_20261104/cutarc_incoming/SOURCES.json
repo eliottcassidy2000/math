@@ -1,0 +1,37 @@
+[
+  {
+    "commit": "a0518f53cd622f71d2e268effa09519cce3bdc15",
+    "path": "04-computation/experiments/uh_one_arc_cut_20261104_audit_S74/AUDIT.md",
+    "local": "S74_AUDIT.md",
+    "blob": "54c614fe0ff4ebec0ca49783d43a6bbbeba8ff89",
+    "url": "https://github.com/eliottcassidy2000/math/blob/a0518f53cd622f71d2e268effa09519cce3bdc15/04-computation/experiments/uh_one_arc_cut_20261104_audit_S74/AUDIT.md"
+  },
+  {
+    "commit": "c2fbfacee956e64bc1320413614c2622195509fb",
+    "path": "01-canon/theorems/THM-4868-the-noncritical-run-of-a-uniquely-hamiltonian-tournament-local-roundness-one-run-cut-arcs-plus-noncritical-equals-n-plus-1.md",
+    "local": "THM4868.md",
+    "blob": "45289f07626f507ed8b0193d20bfdf9fcabfe06c",
+    "url": "https://github.com/eliottcassidy2000/math/blob/c2fbfacee956e64bc1320413614c2622195509fb/01-canon/theorems/THM-4868-the-noncritical-run-of-a-uniquely-hamiltonian-tournament-local-roundness-one-run-cut-arcs-plus-noncritical-equals-n-plus-1.md"
+  },
+  {
+    "commit": "c2fbfacee956e64bc1320413614c2622195509fb",
+    "path": "05-knowledge/results/uniquely_hamiltonian_noncritical_run_20261104.md",
+    "local": "S10_NOTE.md",
+    "blob": "e7544ce7ef7b41692a824ea9d5b1b1e5987c0a5e",
+    "url": "https://github.com/eliottcassidy2000/math/blob/c2fbfacee956e64bc1320413614c2622195509fb/05-knowledge/results/uniquely_hamiltonian_noncritical_run_20261104.md"
+  },
+  {
+    "commit": "80147be9d0693a3b1b0436d3fe4ac3781d492bd6",
+    "path": "05-knowledge/results/session189_response_frontier_20261104/readiness_repair/REPAIR.md",
+    "local": "../session189-returns/incoming_compare/REPAIR.md",
+    "blob": "6bcead86383ed61d6e13e199ee0288d2893e2568",
+    "url": "https://github.com/eliottcassidy2000/math/blob/80147be9d0693a3b1b0436d3fe4ac3781d492bd6/05-knowledge/results/session189_response_frontier_20261104/readiness_repair/REPAIR.md"
+  },
+  {
+    "commit": "80147be9d0693a3b1b0436d3fe4ac3781d492bd6",
+    "path": "05-knowledge/results/session189_response_frontier_20261104/readiness_audit/REVIEW.md",
+    "local": "../session189-root/READY_REVIEW.md",
+    "blob": "cac156222db2fc22f44a54085d900ffee0642b45",
+    "url": "https://github.com/eliottcassidy2000/math/blob/80147be9d0693a3b1b0436d3fe4ac3781d492bd6/05-knowledge/results/session189_response_frontier_20261104/readiness_audit/REVIEW.md"
+  }
+]

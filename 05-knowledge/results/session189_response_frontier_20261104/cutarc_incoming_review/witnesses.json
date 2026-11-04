@@ -1,0 +1,74 @@
+[
+  {
+    "UH_rows": [
+      6,
+      60,
+      8,
+      1,
+      13,
+      29
+    ],
+    "ready_rows": [
+      60,
+      5,
+      8,
+      50,
+      38,
+      6
+    ],
+    "unique_cycle": [
+      0,
+      1,
+      5,
+      4,
+      2,
+      3
+    ],
+    "H_UH": 15,
+    "H_ready": 33,
+    "sigma": 1,
+    "cut_arcs": 4,
+    "noncritical": [
+      2,
+      4,
+      5
+    ],
+    "all_five_distinct_p_updates_checked": true
+  },
+  {
+    "UH_rows": [
+      22,
+      12,
+      8,
+      1,
+      46,
+      15
+    ],
+    "ready_rows": [
+      44,
+      53,
+      8,
+      50,
+      5,
+      20
+    ],
+    "unique_cycle": [
+      0,
+      4,
+      5,
+      1,
+      2,
+      3
+    ],
+    "H_UH": 15,
+    "H_ready": 29,
+    "sigma": 1,
+    "cut_arcs": 4,
+    "noncritical": [
+      1,
+      2,
+      5
+    ],
+    "all_five_distinct_p_updates_checked": true
+  }
+]
