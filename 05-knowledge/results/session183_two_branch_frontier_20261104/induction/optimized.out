@@ -1,0 +1,52 @@
+{
+  "bounded_cutoff_odd_masks": 64,
+  "claim": "finite controls of the all-order proof, not evidence of closure",
+  "escape_odd_masks": 16384,
+  "hits": [
+    {
+      "digit": 4,
+      "odd_mask": 7
+    }
+  ],
+  "individual_joint_checks": 204,
+  "large_orbit_samples": [
+    {
+      "digit": 4,
+      "joint": 6,
+      "n": 0,
+      "odd_mask": 7
+    },
+    {
+      "digit": -28,
+      "joint": 12,
+      "n": 1,
+      "odd_mask": 21
+    },
+    {
+      "digit": 46,
+      "joint": 62,
+      "n": 2,
+      "odd_mask": 63
+    },
+    {
+      "digit": 31456,
+      "joint": 41404,
+      "n": 8,
+      "odd_mask": 45927
+    },
+    {
+      "digit": 8612615454969420,
+      "joint": 11434815314511260,
+      "n": 32,
+      "odd_mask": 12971141321962887
+    },
+    {
+      "digit": -4042629512566207372139688759352,
+      "joint": 5688925919785346939832695728198,
+      "n": 63,
+      "odd_mask": 8011928914015862464201647874989
+    }
+  ],
+  "physical_masks": 255,
+  "shifted_chart_checks": 1511
+}

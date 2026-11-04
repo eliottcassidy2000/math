@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "literal_cover_masks": 1539,
+  "independent_six_carry_checks": 256,
+  "independent_bounds_checks": 512,
+  "independent_classification_checks": 511,
+  "rerun_normal_optimized_identical": true,
+  "published_receipt_matches": true,
+  "reviewed_files": {
+    "PROOF.md": "9da7216386ec914dd3353f4cfeb3c2d4d3f85dcc3608a36883e6b58671110cb7",
+    "verify.py": "efc57f48f18465dc5969b08e5cfeafb78be9c6bfc36c0c461228d825c124ea7d",
+    "verification.json": "7371394fdc70025c3a5884c1dc96892c6681307f763628b13e2e8fd1af336eab"
+  }
+}

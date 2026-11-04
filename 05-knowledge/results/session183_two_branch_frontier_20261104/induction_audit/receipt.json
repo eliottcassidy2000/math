@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "checks": {
+    "physical_joint_terms": 204,
+    "physical_masks": 502,
+    "attachment_counts": 63,
+    "rational_identities": 512,
+    "escape_bounds": 100000,
+    "clock_shifts": 617
+  },
+  "small_digit_hits": {
+    "2": [],
+    "4": [
+      7
+    ]
+  },
+  "scope": "Independent exact finite controls; all-order symbolic theorem reviewed separately.",
+  "source_sha256": "19effb41f7ce173cc67c81b0f141a0c7dfc2c1e3d02d97a71acb208fb9bdd781"
+}

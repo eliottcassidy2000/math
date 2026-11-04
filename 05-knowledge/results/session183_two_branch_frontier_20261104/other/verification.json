@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "cover_checks": 2047,
+  "carry_and_bounds_range": [
+    0,
+    262143
+  ],
+  "classification_range": [
+    1,
+    262143
+  ],
+  "plus4_masks": [
+    7,
+    14,
+    28,
+    56,
+    112,
+    224,
+    448,
+    896,
+    1792,
+    3584,
+    7168,
+    14336,
+    28672,
+    57344,
+    114688,
+    229376
+  ],
+  "plus2_masks": [],
+  "actual_attachment_checks": 254,
+  "actual_shift_examples": [
+    {
+      "source_mask": 7,
+      "target_mask": 21,
+      "source_clock": 1,
+      "target_clock": 1,
+      "source_H": 9,
+      "target_H": 31
+    },
+    {
+      "source_mask": 7,
+      "target_mask": 21,
+      "source_clock": 2,
+      "target_clock": 2,
+      "source_H": 23,
+      "target_H": 73
+    },
+    {
+      "source_mask": 14,
+      "target_mask": 21,
+      "source_clock": 1,
+      "target_clock": 2,
+      "source_H": 23,
+      "target_H": 73
+    },
+    {
+      "source_mask": 7,
+      "target_mask": 42,
+      "source_clock": 2,
+      "target_clock": 1,
+      "source_H": 23,
+      "target_H": 73
+    },
+    {
+      "source_mask": 28,
+      "target_mask": 42,
+      "source_clock": 1,
+      "target_clock": 2,
+      "source_H": 51,
+      "target_H": 157
+    }
+  ],
+  "scope": "Finite independent controls; all-length classification proved in PROOF.md."
+}
