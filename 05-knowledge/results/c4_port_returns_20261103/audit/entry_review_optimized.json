@@ -1,0 +1,66 @@
+{
+  "status": "PASS independent three-entry-chain review",
+  "saved_target_cases": 32,
+  "qualifying_targets": 13,
+  "qualifying_tuples": 24,
+  "terminal_defect_counts": {
+    "1": 23,
+    "2": 1
+  },
+  "chains": [
+    [
+      155,
+      469,
+      773,
+      1409
+    ],
+    [
+      157,
+      475,
+      771,
+      1427
+    ],
+    [
+      323,
+      973,
+      1699,
+      2923
+    ]
+  ],
+  "operation_totals": {
+    "native_moves": 58,
+    "arc_gadgets": 29,
+    "temporary_helpers": 29,
+    "permanent_preparation_births": 5,
+    "direct_C2_births": 6
+  },
+  "fresh_stage_full_profiles": 12,
+  "exact_triangle_hostiles": 6,
+  "literal_deletion_checks": 12,
+  "terminal_scope_controls": 10,
+  "triangle_H_and_rootE2_deltas": [
+    [
+      -30,
+      -940,
+      -636
+    ],
+    [
+      -66,
+      -952,
+      -656
+    ]
+  ],
+  "corrupted_C2_cut_rejected": "C2 first sole-outport cut",
+  "scope": "Three finite selected entries and children; no unbounded selector, neutral deletion reset, or reusable two-branch closure.",
+  "source_sha256": {
+    "c4_port_returns_20261103\\entry_selector\\PROOF.md": "b7db31edac089afaf4b0ced92253a387b35c1a6e6fd79a9619523237474e03d7",
+    "c4_port_returns_20261103\\entry_selector\\check_selector.py": "e07d8d722acdad4d71d86f76741829d39f83ab973ff3085863208bed905bbe6a",
+    "c4_port_returns_20261103\\entry_selector\\receipt.json": "51fe34b8bfbfcbad2a4f3599ac06c00c7a3a08ace7fdfa09326ab873390ecdaf",
+    "c4_port_returns_20261103\\entry_selector\\profiles.json": "444492db7e05a1baf2a32e027a036f8c4c9da3e36eaa289f971963786317a1d0",
+    "c4_port_returns_20261103\\native\\reader_repairs\\ENTRY_SCOPE.md": "53f67192bca3ed3b7eabbd296aeabba8919a23173abdc354313747513af46a66",
+    "c4_port_returns_20261103\\native\\reader_repairs\\entry_scope.json": "050fea539004107d07fb93d504914ea62ccfffb9a82b477639891f7b93019388",
+    "c4_port_returns_20261103\\audit\\reader_profile.cpp": "a24cb72dff55df06c2e3f0db48c4d40e843646c4826cd8392147aa12567cfd0e",
+    "c4_port_returns_20261103\\audit\\check_reader_review.py": "58f37558c11f25dc8a4db2fd752f495679c416e25f7e0e6b325bb4c9cc462c95",
+    "c4_port_returns_20261103\\audit\\check_entry_review.py": "c8a61fda9266a1d3461bb33eb8960bd2db7275e2b4c93883d9779e52eca69872"
+  }
+}

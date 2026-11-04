@@ -111,3 +111,45 @@ nonexistence to tournament spectrum completeness. The required sidecar is
 the actual size/coordinate bound; the hostile is any nonzero multiple of a
 chosen smaller modulus. Both threads still need a separate argument over
 all supports or all accepted source types.
+
+## Closing pull: the whole SCC-order-four return language is now known
+
+Main advanced through `602eac4f1e` before close-out. The incoming
+[S184 order-four proof](../session184_proof_frontiers_20261104/spectrum_four/PROOF.md)
+and its [independent audit](../session184_proof_frontiers_20261104/spectrum_four_audit/AUDIT.md)
+complete the clock-uniform return language from the common TT3 entry:
+
+    {empty, 2, 4, 22, 42, 422, 4222}.
+
+This permits every suffix whose SCCs have order at most four, all actual
+port subsets, all suffix lengths, and arbitrary fixed integer clock
+shifts. Adding Q therefore creates no new address in that complete tree.
+Within this architecture a missing sibling +4 return needs an SCC of
+order at least five; this is necessary, not sufficient.
+
+The physical Q tables use different labels. Our rows[8,1,3,6] map to
+their rows[6,12,8,1] by the vertex bijection i->3-i. Transport port sets
+by that same bijection: our mask11, for example, is their mask13.
+The map preserves all seven response fields, but identical numerical
+mask names cannot be identified without this relabeling. It is an
+isomorphism of these small component tables, not a license to rename
+vertices in an existing physical lineage.
+
+The complete incoming normalization removes initial unmarked components.
+An unmarked Q contributes (h,p)=(5,32); its possible number is bounded
+by the 5-adic valuation of the target constant. A first marked component
+has v2(F)<=4 and v2(F)<v2(p), preserved under later assembly. This reduces
+every integer clock shift to five dyadic scales. The positive bound
+p_prefix<=F_target then finishes the all-length inverse. This last bound
+is also the mechanism used in our full-bank inverse; the incoming packet
+adds the complete arbitrary-shift return tree, and is credited for that
+extension rather than treating overlapping mechanisms as separate results.
+
+Our arbitrary-suffix exclusions at unchanged clock and one consumed clock,
+and the fixed homogeneous-clone exclusion, concern different larger
+operation classes under narrower clock hypotheses. The new finite readers
+and their regenerated entries remain compatible with every exclusion:
+they select a target at an individual source clock and can change its
+seed, reader, and prefix roles. The next compensation obligations of30/66
+are physical endpoint tests, not another attempt to remain inside the
+now completely excluded clock-uniform four-vertex language.

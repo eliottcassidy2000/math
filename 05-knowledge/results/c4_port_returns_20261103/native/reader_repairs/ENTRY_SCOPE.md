@@ -99,7 +99,8 @@ sigma2 iff the whole word is0 and e_seed=2, since the tournament deletion
 count q is odd. No assertion is made about the other ports by this exact
 terminal-vertex classification.
 
-The penultimate reader vertex specifically cannot supply sigma1 or2 either.
+For words ending00, the penultimate reader vertex specifically cannot
+supply sigma1 or2 either.
 Its exact out-neighbors are w and the final reader vertex. Its outdegree2
 already excludes sigma1. If it had sigma2, applying READY§2 to the converse
 would require a transitive residual and one of its five two-port words.

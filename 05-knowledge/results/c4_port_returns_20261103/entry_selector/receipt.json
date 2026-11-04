@@ -4143,7 +4143,7 @@
     "c4_port_returns_20261103/reader/export_reader.py": "f804742dd4f3fb1859dd8ed2a2c0533b956e5a0d82b54decb157250880415b30",
     "c4_port_returns_20261103/reader/endpoint_profile.cpp": "e9d1a6fe1099ecb6243e443275857e6fd41e61dcd6945644f9ca3271da332dec",
     "c4_port_returns_20261103/native/reader_repairs/check_repairs.py": "c87b72075d89dfaad1f9ccb4d947245b64e5f96f2fdafc44f8577a0cf98eae5e",
-    "c4_port_returns_20261103/native/reader_repairs/ENTRY_SCOPE.md": "eefbc5fd68b8a3a6d0ab8173fa0a86b47aa2b5c847babde35bac3dfa1165626f"
+    "c4_port_returns_20261103/native/reader_repairs/ENTRY_SCOPE.md": "53f67192bca3ed3b7eabbd296aeabba8919a23173abdc354313747513af46a66"
   },
   "scope": "All terminal-defect1/2 hits among the already computed32 target list; three actual old-name-preserving native repairs and direct C2 children. No all-t selector or repeated two-digit closure."
 }

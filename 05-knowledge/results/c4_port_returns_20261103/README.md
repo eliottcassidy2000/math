@@ -52,6 +52,13 @@ The same complete language tests at f=126,252,504,1008 do not restore either
 missing intercept. Those last four tests concern specified clock shifts,
 not all possible shifts or all tournament suffixes.
 
+The later incoming S184 proof, integrated in [INCOMING.md](INCOMING.md),
+now completes every fixed integer shift in this SCC-order-at-most-four
+carrier. Its entire return language is
+{empty,2,4,22,42,422,4222}. The incoming Q table is explicitly relabeled
+before comparing physical port masks. Our finite named repairs below do
+not assert a clock-uniform map inside that excluded carrier.
+
 ## Moving beyond the atom language
 
 The [regeneration directory](regeneration/) retains exact actual-source
