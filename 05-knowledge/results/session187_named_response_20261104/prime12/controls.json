@@ -1,0 +1,822 @@
+[
+  {
+    "H": 1,
+    "code": 0,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 15,
+    "nonzero_exact_coefficients": 4,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 2,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 1,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 15,
+    "nonzero_exact_coefficients": 4,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 2,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 0,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 1,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 2,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 3,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 4,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 5,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 6,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 7,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 8,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 9,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 10,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 11,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 12,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 13,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 14,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 15,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 16,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 17,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 18,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 19,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 20,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 21,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 22,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 23,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 24,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 25,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 26,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 27,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 28,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 29,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 30,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 31,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 32,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 33,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 34,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 35,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 36,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 37,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 38,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 39,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 40,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 41,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 42,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 43,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 44,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 45,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 46,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 47,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 48,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 49,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 50,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 51,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 52,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 53,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 54,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 55,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 56,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 57,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 58,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 5,
+    "code": 59,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 38,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 60,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 3,
+    "code": 61,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 50,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 62,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 63,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 90,
+    "nonzero_exact_coefficients": 54,
+    "nonzero_modular_cubic_coefficients": 0,
+    "order": 4,
+    "ordered_disjoint_support_pairs": 0
+  },
+  {
+    "H": 1,
+    "code": 7,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 196,
+    "nonzero_modular_cubic_coefficients": 64,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 43,
+    "code": 1938,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 180,
+    "nonzero_modular_cubic_coefficients": 96,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 5,
+    "code": 3869,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 216,
+    "nonzero_modular_cubic_coefficients": 80,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 3,
+    "code": 5800,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 192,
+    "nonzero_modular_cubic_coefficients": 64,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 37,
+    "code": 7731,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 204,
+    "nonzero_modular_cubic_coefficients": 96,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 15,
+    "code": 9662,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 208,
+    "nonzero_modular_cubic_coefficients": 96,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 33,
+    "code": 11593,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 192,
+    "nonzero_modular_cubic_coefficients": 96,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 33,
+    "code": 13524,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 192,
+    "nonzero_modular_cubic_coefficients": 96,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 9,
+    "code": 15455,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 212,
+    "nonzero_modular_cubic_coefficients": 80,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 9,
+    "code": 17386,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 209,
+    "nonzero_modular_cubic_coefficients": 80,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 3,
+    "code": 19317,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 192,
+    "nonzero_modular_cubic_coefficients": 64,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 13,
+    "code": 21248,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 212,
+    "nonzero_modular_cubic_coefficients": 80,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 33,
+    "code": 23179,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 192,
+    "nonzero_modular_cubic_coefficients": 96,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 15,
+    "code": 25110,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 198,
+    "nonzero_modular_cubic_coefficients": 80,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 15,
+    "code": 27041,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 208,
+    "nonzero_modular_cubic_coefficients": 96,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  },
+  {
+    "H": 23,
+    "code": 28972,
+    "independent_random_assignments": 24,
+    "literal_query_assignments": 283,
+    "nonzero_exact_coefficients": 200,
+    "nonzero_modular_cubic_coefficients": 96,
+    "order": 6,
+    "ordered_disjoint_support_pairs": 120
+  }
+]

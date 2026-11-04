@@ -1,0 +1,18 @@
+{
+  "files": {
+    "PROOF.md": "56c134a057da77a2d0ed2441a9b696f1cde60bc64ea4a80f0e2e244efa4010f9",
+    "controls.json": "f5be794437aae812c6aaef6df88818d73b617f68e05d56eb4e93d09a79b59fcc",
+    "cubic.cpp": "4ddc3fd045453b24fbcb1f45a9b517bb7544d8247ff7f6315b009e9b99db3d4e",
+    "cubic.json": "4bf5107b3399665c9d326a13448a11fe087ca68920bc4695a761ccb426cb84aa",
+    "neighbors.json": "fee3d4a05d471ac45cae75b6cdd2ebab0b8c643f01514ac4a251931af8ef541d",
+    "run_controls.py": "3c34445ebe0e538cab3bf9bf0b33a6219f2bc8db245ef463124bc9c407d687cf",
+    "search.cpp": "8f46cee106e17655d079f90493e094a1433750db8c32194195d32884217983f9",
+    "search.out": "728a479b9dbc4503287ab076cbba97d33e37805665d612a1209a57d5f1ceac5c",
+    "verification.json": "df470b6bd9e70bcc5f51e1341f8b46ef673f30dcb0b4768142ed69519ed2ad93",
+    "verification.optimized.json": "df470b6bd9e70bcc5f51e1341f8b46ef673f30dcb0b4768142ed69519ed2ad93",
+    "verify.py": "f29880ba186aab25c486b039257ad825baf6050aa0e45a54ec7d62122a12f04b",
+    "verify_neighbors.py": "393e98cb222efb5a228415f0b7d060ba9fbceb3496564b07ffe0ab684988a460"
+  },
+  "scope": "all-even-order support-cutoff theorem; full named prime12 integer cubic; finite radius4 exclusion around two fixed sources",
+  "source_twelve_sha256": "1ac6d238f6df0955bbff2e7c7450278f2c2c00a73e83656e2c5220d09798b2a2"
+}

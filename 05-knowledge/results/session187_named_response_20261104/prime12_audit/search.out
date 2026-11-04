@@ -1,0 +1,10 @@
+base 0 through_depth 0 tested 1 endpoint_balanced 1 prime_balanced 0 joint_survivors 0 seconds 0.000302378
+base 0 through_depth 1 tested 67 endpoint_balanced 7 prime_balanced 6 joint_survivors 0 seconds 0.00663055
+base 0 through_depth 2 tested 2212 endpoint_balanced 29 prime_balanced 11 joint_survivors 0 seconds 0.213594
+base 0 through_depth 3 tested 47972 endpoint_balanced 131 prime_balanced 90 joint_survivors 0 seconds 5.59098
+base 0 through_depth 4 tested 768692 endpoint_balanced 1021 prime_balanced 703 joint_survivors 0 seconds 76.9148
+base 1 through_depth 0 tested 1 endpoint_balanced 1 prime_balanced 1 joint_survivors 0 seconds 0.000420803
+base 1 through_depth 1 tested 67 endpoint_balanced 1 prime_balanced 1 joint_survivors 0 seconds 0.0116119
+base 1 through_depth 2 tested 2212 endpoint_balanced 3 prime_balanced 3 joint_survivors 0 seconds 0.383309
+base 1 through_depth 3 tested 47972 endpoint_balanced 32 prime_balanced 32 joint_survivors 0 seconds 8.99589
+base 1 through_depth 4 tested 768692 endpoint_balanced 386 prime_balanced 386 joint_survivors 0 seconds 129.48
