@@ -1,0 +1,157 @@
+{
+  "status": "FINITE_EXACT",
+  "selected": [
+    {
+      "seed": 1,
+      "index": 3,
+      "H": 1537271,
+      "fan_center": 21,
+      "fan_leaves": [
+        7,
+        8
+      ],
+      "isolated_edge": [
+        22,
+        31
+      ],
+      "inner_collar": true,
+      "inner_root_32_inports": [
+        33
+      ],
+      "B_H": 80399,
+      "B_endpoint_2": [
+        182109,
+        544885,
+        245595,
+        469501,
+        437483,
+        668612,
+        1287343,
+        218918,
+        304991,
+        1827996,
+        80399,
+        107053,
+        98893,
+        279183
+      ],
+      "B_zero_ready_roots": [
+        32
+      ]
+    },
+    {
+      "seed": 1,
+      "index": 5,
+      "H": 1537273,
+      "fan_center": 14,
+      "fan_leaves": [
+        22,
+        31
+      ],
+      "isolated_edge": [
+        33,
+        54
+      ],
+      "inner_collar": true,
+      "inner_root_32_inports": [
+        33
+      ],
+      "B_H": 65365,
+      "B_endpoint_2": [
+        195595,
+        475412,
+        252579,
+        386960,
+        456463,
+        1241082,
+        1091480,
+        156298,
+        367977,
+        832531,
+        65365,
+        89067,
+        82079,
+        221963
+      ],
+      "B_zero_ready_roots": [
+        32
+      ]
+    },
+    {
+      "seed": 4,
+      "index": 0,
+      "H": 1537277,
+      "fan_center": 2,
+      "fan_leaves": [
+        31,
+        33
+      ],
+      "isolated_edge": [
+        6,
+        14
+      ],
+      "inner_collar": true,
+      "inner_root_32_inports": [
+        33
+      ],
+      "B_H": 59237,
+      "B_endpoint_2": [
+        152051,
+        435375,
+        303452,
+        1077433,
+        1311200,
+        1025448,
+        540355,
+        142119,
+        184755,
+        242152,
+        59237,
+        87025,
+        73710,
+        195771
+      ],
+      "B_zero_ready_roots": [
+        32
+      ]
+    },
+    {
+      "seed": 4,
+      "index": 1,
+      "H": 1537279,
+      "fan_center": 33,
+      "fan_leaves": [
+        4,
+        31
+      ],
+      "isolated_edge": [
+        22,
+        32
+      ],
+      "inner_collar": false,
+      "inner_root_32_inports": [
+        22,
+        33
+      ],
+      "B_H": 80319,
+      "B_endpoint_2": [
+        181323,
+        617934,
+        436896,
+        992886,
+        1841456,
+        1408266,
+        618346,
+        170856,
+        135650,
+        285000,
+        83279,
+        123946,
+        91060,
+        236175
+      ],
+      "B_zero_ready_roots": []
+    }
+  ],
+  "limitation": "Edit support forgets directions, the inport and the surrounding relation; it is not a count recurrence."
+}

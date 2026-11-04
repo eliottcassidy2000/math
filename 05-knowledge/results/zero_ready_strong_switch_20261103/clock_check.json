@@ -1,0 +1,151 @@
+{
+  "status": "PROVED_SOLVER_WITH_FINITE_EXACT_INPUTS",
+  "input_file": "literal/realized_suffix_depth3_moving1_all_prefixes.json",
+  "bounded_control_equations": 3969,
+  "results": [
+    {
+      "index": 0,
+      "offset": 2,
+      "h": 5655,
+      "F": 31673,
+      "all_positive_clock_solutions": {
+        "infinite": false,
+        "solutions": [
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "fixed_shift_k": 2,
+      "fixed_shift_offset_constant": -930,
+      "fixed_shift_offset_coefficient_of_2_to_s": 233
+    },
+    {
+      "index": 1,
+      "offset": 4,
+      "h": 6377,
+      "F": 7907,
+      "all_positive_clock_solutions": {
+        "infinite": false,
+        "solutions": [
+          [
+            2,
+            6
+          ]
+        ]
+      },
+      "fixed_shift_k": 4,
+      "fixed_shift_offset_constant": -208,
+      "fixed_shift_offset_coefficient_of_2_to_s": 53
+    },
+    {
+      "index": 2,
+      "offset": 4,
+      "h": 2985,
+      "F": 7960,
+      "all_positive_clock_solutions": {
+        "infinite": false,
+        "solutions": [
+          [
+            2,
+            6
+          ]
+        ]
+      },
+      "fixed_shift_k": 4,
+      "fixed_shift_offset_constant": -3600,
+      "fixed_shift_offset_coefficient_of_2_to_s": 901
+    },
+    {
+      "index": 3,
+      "offset": 2,
+      "h": 39331,
+      "F": 118273,
+      "all_positive_clock_solutions": {
+        "infinite": false,
+        "solutions": [
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "fixed_shift_k": 0,
+      "fixed_shift_offset_constant": 32746,
+      "fixed_shift_offset_coefficient_of_2_to_s": -8186
+    },
+    {
+      "index": 4,
+      "offset": 2,
+      "h": 5655,
+      "F": 31673,
+      "all_positive_clock_solutions": {
+        "infinite": false,
+        "solutions": [
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "fixed_shift_k": 2,
+      "fixed_shift_offset_constant": -930,
+      "fixed_shift_offset_coefficient_of_2_to_s": 233
+    },
+    {
+      "index": 5,
+      "offset": 2,
+      "h": 5655,
+      "F": 31673,
+      "all_positive_clock_solutions": {
+        "infinite": false,
+        "solutions": [
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "fixed_shift_k": 2,
+      "fixed_shift_offset_constant": -930,
+      "fixed_shift_offset_coefficient_of_2_to_s": 233
+    },
+    {
+      "index": 6,
+      "offset": 4,
+      "h": 46073,
+      "F": 58294,
+      "all_positive_clock_solutions": {
+        "infinite": false,
+        "solutions": [
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "fixed_shift_k": 1,
+      "fixed_shift_offset_constant": 39488,
+      "fixed_shift_offset_coefficient_of_2_to_s": -9871
+    },
+    {
+      "index": 7,
+      "offset": 2,
+      "h": 28071,
+      "F": 30272,
+      "all_positive_clock_solutions": {
+        "infinite": false,
+        "solutions": [
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "fixed_shift_k": 2,
+      "fixed_shift_offset_constant": 21486,
+      "fixed_shift_offset_coefficient_of_2_to_s": -5371
+    }
+  ]
+}

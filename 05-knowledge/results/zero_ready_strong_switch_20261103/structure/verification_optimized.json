@@ -1,0 +1,772 @@
+{
+  "status": "PROVED identity with FINITE-EXACT controls; reusable carry closure OPEN",
+  "coordinate_order": [
+    "H(C)",
+    "start_w(C)",
+    "H(C-w)",
+    "E_w(C,2)"
+  ],
+  "source_H": 170807,
+  "nested_ladder": [
+    {
+      "root": 39,
+      "inport": 31,
+      "prefix": [
+        50,
+        51
+      ],
+      "suffix": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        21,
+        22,
+        31,
+        32,
+        33,
+        40,
+        54
+      ],
+      "H": 170807,
+      "suffix_H": 2195,
+      "suffix_F": 42153,
+      "suffix_rows": [
+        11134,
+        632,
+        2682,
+        112,
+        512,
+        80,
+        528,
+        9087,
+        126,
+        296,
+        13311,
+        10234,
+        11263,
+        894
+      ]
+    },
+    {
+      "root": 32,
+      "inport": 33,
+      "prefix": [
+        40
+      ],
+      "suffix": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        21,
+        22,
+        31,
+        33,
+        54
+      ],
+      "H": 2195,
+      "suffix_H": 633,
+      "suffix_F": 781,
+      "suffix_rows": [
+        3966,
+        632,
+        1658,
+        112,
+        512,
+        80,
+        528,
+        2943,
+        126,
+        296,
+        3066,
+        894
+      ]
+    },
+    {
+      "root": 21,
+      "inport": 33,
+      "prefix": [
+        1
+      ],
+      "suffix": [
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        22,
+        31,
+        33,
+        54
+      ],
+      "H": 633,
+      "suffix_H": 211,
+      "suffix_F": 211,
+      "suffix_rows": [
+        188,
+        445,
+        56,
+        128,
+        40,
+        136,
+        63,
+        84,
+        765,
+        255
+      ]
+    },
+    {
+      "root": 33,
+      "inport": 4,
+      "prefix": [
+        54
+      ],
+      "suffix": [
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        22,
+        31
+      ],
+      "H": 211,
+      "suffix_H": 63,
+      "suffix_F": 74,
+      "suffix_rows": [
+        188,
+        189,
+        56,
+        128,
+        40,
+        136,
+        63,
+        84
+      ]
+    },
+    {
+      "root": 22,
+      "inport": 31,
+      "prefix": [
+        4,
+        2
+      ],
+      "suffix": [
+        6,
+        7,
+        8,
+        14,
+        31
+      ],
+      "H": 63,
+      "suffix_H": 11,
+      "suffix_F": 13,
+      "suffix_rows": [
+        14,
+        16,
+        10,
+        18,
+        5
+      ]
+    }
+  ],
+  "bottom_names": [
+    6,
+    7,
+    8,
+    14,
+    31
+  ],
+  "bottom_rows": [
+    14,
+    16,
+    10,
+    18,
+    5
+  ],
+  "bottom_profile": [
+    11,
+    1,
+    1,
+    13
+  ],
+  "source_context_coefficients": [
+    53,
+    0,
+    -1948,
+    13244
+  ],
+  "suffix_h_coefficients": [
+    53,
+    0,
+    0,
+    124
+  ],
+  "suffix_F_coefficients": [
+    0,
+    0,
+    -487,
+    3280
+  ],
+  "exhaustive_context_controls": 2175,
+  "marked_cores_checked": 5405,
+  "same_h_F_hostile": [
+    {
+      "rows": [
+        4,
+        1,
+        2
+      ],
+      "root": 0,
+      "profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "context_H": 37943
+    },
+    {
+      "rows": [
+        4,
+        1,
+        2,
+        7
+      ],
+      "root": 3,
+      "profile": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "context_H": 34047
+    }
+  ],
+  "profile_rank_basis": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      0,
+      1,
+      4
+    ],
+    [
+      3,
+      1,
+      1,
+      3
+    ]
+  ],
+  "coefficient_rank_basis": [
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      -1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      2
+    ],
+    [
+      1,
+      -1,
+      -2,
+      3
+    ]
+  ],
+  "all_core_all_prefix_exclusion": {
+    "2": {
+      "target": 512423,
+      "s_max": 7,
+      "finite_boxes": [
+        {
+          "s": 1,
+          "F_max": 88
+        },
+        {
+          "s": 2,
+          "F_max": 45
+        },
+        {
+          "s": 3,
+          "F_max": 22
+        },
+        {
+          "s": 4,
+          "F_max": 11
+        },
+        {
+          "s": 5,
+          "F_max": 5
+        },
+        {
+          "s": 6,
+          "F_max": 2
+        },
+        {
+          "s": 7,
+          "F_max": 1
+        }
+      ],
+      "h_F_pairs_tested": 5289,
+      "integer_candidates_before_oddness": [],
+      "candidates_after_oddness": [],
+      "s2_h_residues": [
+        {
+          "F": 39,
+          "h_residue_mod_1948": 1687
+        },
+        {
+          "F": 40,
+          "h_residue_mod_1948": 555
+        },
+        {
+          "F": 41,
+          "h_residue_mod_1948": 1371
+        },
+        {
+          "F": 42,
+          "h_residue_mod_1948": 239
+        },
+        {
+          "F": 43,
+          "h_residue_mod_1948": 1055
+        },
+        {
+          "F": 44,
+          "h_residue_mod_1948": 1871
+        },
+        {
+          "F": 45,
+          "h_residue_mod_1948": 739
+        }
+      ]
+    },
+    "4": {
+      "target": 512425,
+      "s_max": 7,
+      "finite_boxes": [
+        {
+          "s": 1,
+          "F_max": 88
+        },
+        {
+          "s": 2,
+          "F_max": 45
+        },
+        {
+          "s": 3,
+          "F_max": 22
+        },
+        {
+          "s": 4,
+          "F_max": 11
+        },
+        {
+          "s": 5,
+          "F_max": 5
+        },
+        {
+          "s": 6,
+          "F_max": 2
+        },
+        {
+          "s": 7,
+          "F_max": 1
+        }
+      ],
+      "h_F_pairs_tested": 5289,
+      "integer_candidates_before_oddness": [
+        {
+          "s": 1,
+          "h": 73,
+          "F": 79,
+          "q": 20
+        }
+      ],
+      "candidates_after_oddness": [],
+      "s2_h_residues": [
+        {
+          "F": 39,
+          "h_residue_mod_1948": 1393
+        },
+        {
+          "F": 40,
+          "h_residue_mod_1948": 261
+        },
+        {
+          "F": 41,
+          "h_residue_mod_1948": 1077
+        },
+        {
+          "F": 42,
+          "h_residue_mod_1948": 1893
+        },
+        {
+          "F": 43,
+          "h_residue_mod_1948": 761
+        },
+        {
+          "F": 44,
+          "h_residue_mod_1948": 1577
+        },
+        {
+          "F": 45,
+          "h_residue_mod_1948": 445
+        }
+      ]
+    }
+  },
+  "two_exit_named_port_hostile": {
+    "source_core_names": [
+      6,
+      7,
+      8,
+      14,
+      31
+    ],
+    "source_core_rows": [
+      14,
+      16,
+      10,
+      18,
+      5
+    ],
+    "hostile_core_rows": [
+      10,
+      16,
+      11,
+      18,
+      5
+    ],
+    "same_root31_profile": [
+      11,
+      1,
+      1,
+      13
+    ],
+    "source_H_pair": [
+      170807,
+      170807
+    ],
+    "target_H_pair": [
+      512423,
+      654021
+    ],
+    "same_raw_operation": {
+      "named_edge_flips": [
+        [
+          4,
+          31
+        ],
+        [
+          6,
+          22
+        ],
+        [
+          39,
+          31
+        ],
+        [
+          39,
+          4
+        ]
+      ],
+      "target_prefix_names": [
+        50,
+        51,
+        55,
+        56
+      ],
+      "target_inport": 4
+    },
+    "J31_6_pair": [
+      7,
+      3
+    ],
+    "J6_31_pair": [
+      1,
+      1
+    ],
+    "source6_profile_pair": [
+      [
+        11,
+        4,
+        5,
+        12
+      ],
+      [
+        11,
+        3,
+        5,
+        17
+      ]
+    ],
+    "scope": "Same raw named edge/prefix operation; native Hamiltonian guards must be recompiled on hostile source."
+  },
+  "literal_branch_exit_width_audit": [
+    {
+      "index": 0,
+      "offset": 2,
+      "target_H": 512423,
+      "core_edge_changes": [],
+      "exit_relations": {
+        "6": [
+          22
+        ],
+        "31": [
+          4,
+          22
+        ]
+      },
+      "max_core_runs_from_exit_width": 3,
+      "suffix_zero_ready_roots": [
+        32
+      ],
+      "sharpness_path": [
+        1,
+        6,
+        22,
+        7,
+        31,
+        4,
+        39,
+        50,
+        51,
+        55,
+        56,
+        32,
+        40,
+        33,
+        21,
+        54,
+        2,
+        8,
+        14
+      ],
+      "core_runs": [
+        [
+          6
+        ],
+        [
+          7,
+          31
+        ],
+        [
+          8,
+          14
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "offset": 2,
+      "target_H": 512423,
+      "core_edge_changes": [
+        [
+          6,
+          31
+        ]
+      ],
+      "exit_relations": {
+        "6": [
+          54
+        ],
+        "7": [
+          1
+        ],
+        "31": [
+          22
+        ]
+      },
+      "max_core_runs_from_exit_width": 4,
+      "suffix_zero_ready_roots": [
+        32
+      ],
+      "sharpness_path": [
+        2,
+        6,
+        54,
+        7,
+        1,
+        39,
+        50,
+        51,
+        14,
+        31,
+        22,
+        4,
+        33,
+        32,
+        40,
+        21,
+        8
+      ],
+      "core_runs": [
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          8
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "offset": 2,
+      "target_H": 512423,
+      "core_edge_changes": [
+        [
+          7,
+          14
+        ]
+      ],
+      "exit_relations": {
+        "6": [
+          22
+        ],
+        "31": [
+          4,
+          22
+        ]
+      },
+      "max_core_runs_from_exit_width": 3,
+      "suffix_zero_ready_roots": [
+        32
+      ]
+    },
+    {
+      "index": 3,
+      "offset": 2,
+      "target_H": 512423,
+      "core_edge_changes": [
+        [
+          6,
+          8
+        ]
+      ],
+      "exit_relations": {
+        "8": [
+          22
+        ],
+        "31": [
+          4,
+          22
+        ]
+      },
+      "max_core_runs_from_exit_width": 3,
+      "suffix_zero_ready_roots": [
+        32
+      ]
+    },
+    {
+      "index": 4,
+      "offset": 4,
+      "target_H": 512425,
+      "core_edge_changes": [],
+      "exit_relations": {
+        "14": [
+          33
+        ],
+        "31": [
+          1,
+          22
+        ]
+      },
+      "max_core_runs_from_exit_width": 3,
+      "suffix_zero_ready_roots": [
+        32
+      ],
+      "sharpness_path": [
+        1,
+        6,
+        7,
+        31,
+        22,
+        14,
+        33,
+        32,
+        40,
+        39,
+        50,
+        51,
+        55,
+        21,
+        54,
+        4,
+        2,
+        8
+      ],
+      "core_runs": [
+        [
+          6,
+          7,
+          31
+        ],
+        [
+          14
+        ],
+        [
+          8
+        ]
+      ]
+    },
+    {
+      "index": 5,
+      "offset": 2,
+      "target_H": 512423,
+      "core_edge_changes": [],
+      "exit_relations": {
+        "8": [
+          4
+        ],
+        "31": [
+          22
+        ]
+      },
+      "max_core_runs_from_exit_width": 3,
+      "suffix_zero_ready_roots": []
+    }
+  ],
+  "input_sha256": {
+    "zero_ready_strong_switch_20261103\\literal\\realized_depth3.json": "18a8d193d75ec452cbce8332c736b085619a4dc36564066f80d8f15396e72b8c"
+  },
+  "checker_sha256": "a57372eb40e5a3026cd4d91c6c92e4d43a3b4e285e5ca152ef67602356514f18"
+}

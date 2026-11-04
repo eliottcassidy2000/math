@@ -1,0 +1,129 @@
+{
+  "source_H": 512425,
+  "source_h": 46073,
+  "source_F": 58294,
+  "maximum_flips": 3,
+  "minimum_prefix": 3,
+  "maximum_prefix": 60,
+  "hits": [
+    {
+      "offset": 2,
+      "prefix_size": 3,
+      "mark": 8,
+      "h": 59237,
+      "F": 184755,
+      "uniform_same_clock": false,
+      "edges": [
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "rows": [
+        10622,
+        2168,
+        2682,
+        48,
+        512,
+        80,
+        2584,
+        8831,
+        254,
+        299,
+        13311,
+        10168,
+        11263,
+        894
+      ]
+    },
+    {
+      "offset": 4,
+      "prefix_size": 4,
+      "mark": 12,
+      "h": 80319,
+      "F": 91060,
+      "uniform_same_clock": false,
+      "edges": [
+        [
+          2,
+          11
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          9,
+          11
+        ]
+      ],
+      "rows": [
+        10622,
+        632,
+        634,
+        112,
+        512,
+        80,
+        2576,
+        8831,
+        1278,
+        2345,
+        13055,
+        9662,
+        11263,
+        894
+      ]
+    }
+  ],
+  "checked": 125672,
+  "strong": 116479,
+  "nearest": [
+    0,
+    0
+  ],
+  "suffix_names": [
+    1,
+    2,
+    4,
+    6,
+    7,
+    8,
+    14,
+    21,
+    22,
+    31,
+    32,
+    33,
+    40,
+    54
+  ],
+  "source_rows": [
+    10622,
+    632,
+    2682,
+    112,
+    512,
+    80,
+    2576,
+    8831,
+    254,
+    297,
+    13311,
+    10170,
+    11263,
+    894
+  ],
+  "source_inport": 40,
+  "input_source": "realized_depth3.json index4",
+  "moving_inport": true,
+  "all_prefixes": true,
+  "prefix_termination": "h + 2^s F is strictly increasing since F > 0; stop after first overshoot"
+}

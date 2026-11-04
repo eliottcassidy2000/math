@@ -1,0 +1,24 @@
+[
+  {
+    "file": "05-knowledge/results/zero_ready_strong_switch_20261103/literal/realized_depth3.json",
+    "branches": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "file": "05-knowledge/results/zero_ready_strong_switch_20261103/literal/realized_generation2_seed1_depth3_all_prefixes.json",
+    "branches": [
+      3,
+      5
+    ]
+  },
+  {
+    "file": "05-knowledge/results/zero_ready_strong_switch_20261103/literal/realized_generation2_seed4_depth3_all_prefixes.json",
+    "branches": [
+      0,
+      1
+    ]
+  }
+]

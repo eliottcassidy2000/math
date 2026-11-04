@@ -1,0 +1,65 @@
+{
+  "source_h": 2195,
+  "source_F": 42153,
+  "maximum_flips": 2,
+  "hits": [
+    {
+      "offset": 2,
+      "prefix_size": 4,
+      "mark": 2,
+      "h": 5655,
+      "F": 31673,
+      "uniform_same_clock": false,
+      "edges": [
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "rows": [
+        11134,
+        632,
+        2170,
+        368,
+        512,
+        80,
+        528,
+        9087,
+        118,
+        300,
+        13311,
+        10234,
+        11263,
+        894
+      ]
+    }
+  ],
+  "checked": 4187,
+  "strong": 3815,
+  "nearest": [
+    0,
+    2
+  ],
+  "suffix_names": [
+    1,
+    2,
+    4,
+    6,
+    7,
+    8,
+    14,
+    21,
+    22,
+    31,
+    32,
+    33,
+    40,
+    54
+  ],
+  "input_source": "triangle_return_170807_20261103/zero_ready.json record1",
+  "moving_inport": true
+}

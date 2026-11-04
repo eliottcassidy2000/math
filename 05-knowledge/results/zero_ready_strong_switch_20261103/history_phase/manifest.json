@@ -1,0 +1,22 @@
+{
+  "status": "FINITE_EXACT_NORMAL_OPTIMIZED_MATCH",
+  "normal_optimized_identical": true,
+  "files": {
+    "HISTORY.md": "5de6f3178e24d8ebea5a63442dcb97d84ad8c3591a5f8837d0f90f36f3ee8647",
+    "REVIEW.md": "5e21edf04dda5ae1da096b6e2d6334ebc487f84e2d56610ba0f1057f4295052f",
+    "endpoint_backward.cpp": "a9de2853f0f7f5b425776620de7b7a07baafc644674440b9ffac06e54a3923b2",
+    "validate.py": "bac20e694a3768f371f1d104e7f6c814eec60c3464d6a7d3dd7679b1ac74e5d1",
+    "probe_marked_substitution.py": "b1b51ec6ed3d4395baab00bda00d55af3a5087f9062be081bc737a4eae0bbce8",
+    "check_collar.py": "552ee251e7010fbf090fdf7052ba9412c439ccbd12f3426bbdfb8ec289ce0dc1",
+    "reproduce.py": "53710101f5949f7ec6519ac315ce6d404ef613b7addc1230d9d83e815e706c7a",
+    "native_plan.json": "7bf1bb0d92faa0a47fcf6f2f57a34470e17cf39fea53c145fcdc167dd69b526f",
+    "new_states.json": "e1082bda16b2e51c88aa7f5688572eb0eedd2f2aaec12eba4620951a62a4fa08",
+    "validation_new.json": "507cc12296dd5d8a22b8f3abdd5f027ce6863cb92cfe1deee4340ebc07497f50",
+    "substitution_probe.json": "37dca96bfc3467185822c3e304bc2cea2b509343945019540f1862ce9a4ec25b",
+    "collar.json": "cbb1006c08402e8cd721c8de3ae8ff559f1d974b25828cb262fcfb8284e59d3e",
+    "normal.out": "aba0767776c7df05669f340235f51164eb7a5e4e4541192959e43a65109fe78d",
+    "optimized.out": "aba0767776c7df05669f340235f51164eb7a5e4e4541192959e43a65109fe78d"
+  },
+  "reproduction": "python 05-knowledge/results/zero_ready_strong_switch_20261103/history_phase/reproduce.py",
+  "scope": "Independent native guards, backward endpoints, named current codecs, old81/27 controls and small marked substitution counterexample; no all-value coverage theorem."
+}

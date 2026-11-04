@@ -55,7 +55,9 @@ outputs are distinct. These assignments therefore contribute at least two
 above the baseline one. This proves (P2).
 
 If there is a second directed triangle E, colour E monochromatically and
-some vertex of D\E with the other colour. Such an assignment makes D
+some vertex of D\E with the other colour. Also give another vertex of D
+the colour of E: this is automatic when the triangles meet, and can be
+chosen freely when they are disjoint. Such an assignment makes D
 nonmonochromatic but contributes more than the baseline. Consequently
 equality in (P2) permits exactly one directed triangle. Every vertex outside
 that triangle must uniformly dominate it or be dominated by it: a mixed

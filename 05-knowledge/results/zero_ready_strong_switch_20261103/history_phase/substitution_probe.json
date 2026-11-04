@@ -1,0 +1,129 @@
+{
+  "status": "FINITE_EXACT_COUNTEREXAMPLE_WITH_INDEPENDENT_PERMUTATION_CUT_REPLAY",
+  "universe": "Every labelled strong tournament B of order1 through5, every marked vertex; C3 substitution at that mark, keeping old name as first clone",
+  "strong_counts": {
+    "1": 1,
+    "2": 0,
+    "3": 2,
+    "4": 24,
+    "5": 544
+  },
+  "marked_aliases": 2797,
+  "split_aliases": 480,
+  "witness": {
+    "n": 5,
+    "before": [
+      9,
+      11
+    ],
+    "left": {
+      "rows": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "root": 0,
+      "after_rows": [
+        52,
+        97,
+        2,
+        103,
+        14,
+        84,
+        21
+      ],
+      "after": [
+        99,
+        161
+      ],
+      "run_partition": {
+        "path_counts_by_run_number": [
+          27,
+          60,
+          12
+        ],
+        "quotient_word_coefficients": [
+          9,
+          10,
+          2
+        ],
+        "C3_ordered_cover_profile": [
+          3,
+          6,
+          6
+        ]
+      },
+      "TT2_clone": {
+        "rows": [
+          52,
+          33,
+          2,
+          39,
+          14,
+          20
+        ],
+        "after": [
+          29,
+          41
+        ]
+      }
+    },
+    "right": {
+      "rows": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "root": 3,
+      "after_rows": [
+        20,
+        1,
+        2,
+        39,
+        110,
+        71,
+        15
+      ],
+      "after": [
+        45,
+        59
+      ],
+      "run_partition": {
+        "path_counts_by_run_number": [
+          27,
+          18,
+          0
+        ],
+        "quotient_word_coefficients": [
+          9,
+          3,
+          0
+        ],
+        "C3_ordered_cover_profile": [
+          3,
+          6,
+          6
+        ]
+      },
+      "TT2_clone": {
+        "rows": [
+          20,
+          1,
+          2,
+          39,
+          46,
+          7
+        ],
+        "after": [
+          15,
+          18
+        ]
+      }
+    }
+  },
+  "consequence": "No operation on (H(B),E_w(B,2)) alone can compute this marked C3 substitution on all strong B. This does not refute other operation-closed carriers or the gap conjecture."
+}
