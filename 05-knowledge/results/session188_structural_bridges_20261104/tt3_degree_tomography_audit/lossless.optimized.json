@@ -1,0 +1,185 @@
+{
+  "checker_sha256": "2b630bcde54440695d38cdaa6f85c0ed3ae4a74e0a439063120fbd0e36d43531",
+  "complete_outputs": [
+    {
+      "bytes": 387672,
+      "file": "normal.json",
+      "group": 0,
+      "sha256": "c6f71656e367da262d843612441ee66c8fccde2d18df259f7257b2f31eadc108"
+    },
+    {
+      "bytes": 387672,
+      "file": "optimized.json",
+      "group": 0,
+      "sha256": "c6f71656e367da262d843612441ee66c8fccde2d18df259f7257b2f31eadc108"
+    }
+  ],
+  "complete_raw_bytes": 775344,
+  "groups": 1,
+  "isolated_controls": [
+    {
+      "mode": "fresh",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "fresh",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": true,
+      "passed": true
+    }
+  ],
+  "package": "tt3_degree_tomography_audit",
+  "package_sha256": {
+    "REASSEMBLY.json": "e0b826939349df319b117df4758734efc7a11df8fb3e8abd72e49fb8ba7222f2",
+    "REASSEMBLY.md": "43e17ec36aff17c2acd527bb7718c8874f01938f8bffc7a04d2caa63e8fffad6",
+    "full_records_00.json.gz.b64.part000": "bb54c5d82013a4571f342a1c889f9a389be88b60aa17210865035367b6af3021",
+    "reassemble.py": "a4c7057004bef5d3056cfc4cb5c10d5bf700e7bd777da2984f1f993a77cb5b9b"
+  },
+  "parts": 1,
+  "reassembler_normalized_ast_sha256": "3f640f8fd33dec4ce19c1d81e92f03c21bbac47452af6382f5cb942c5ee88d14",
+  "status": "PASS",
+  "validated_existing_manifests": [
+    {
+      "file": "REVIEW.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "c7d3bc1eb1e37ac2367450a4d9bbe3bfc6f0ce5eededf6c2d44e16f9a6bf6b6d"
+    },
+    {
+      "file": "README.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "55dc651f66c0cdb6581ca409dd842b6ec42b59c5073069cabd87d567213f4708"
+    },
+    {
+      "file": "audit.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "81cfce7a49fccab53e39a1a94089e341e4fb71e763329895a847a6a7aefe568c"
+    },
+    {
+      "file": "count.cpp",
+      "manifest": "SHA256SUMS",
+      "sha256": "a10655d8eed86b28ec5dc938bf57cb650e41f08adfb6cdc08b8e660b3389d6bd"
+    },
+    {
+      "file": "run_covers.cpp",
+      "manifest": "SHA256SUMS",
+      "sha256": "23334e0493ce1ebb2b1a066827eeba0caa007f1e936d3015f812afee21d76b69"
+    },
+    {
+      "file": "normal.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "c6f71656e367da262d843612441ee66c8fccde2d18df259f7257b2f31eadc108"
+    },
+    {
+      "file": "optimized.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "c6f71656e367da262d843612441ee66c8fccde2d18df259f7257b2f31eadc108"
+    }
+  ],
+  "validated_mathematical_receipt_pins": {
+    "tt3_degree_tomography/PROOF.md": "991a8d07b28d0ed4d0ef4d153c83164e82a18b065c6f68e29e52915cb48ec220",
+    "tt3_degree_tomography/verify.py": "bf30a33f7f38209fe91cf575e6274770cc7c9343729e16abb9a341fa7baaffed",
+    "tt3_degree_tomography_audit/audit.py": "81cfce7a49fccab53e39a1a94089e341e4fb71e763329895a847a6a7aefe568c",
+    "tt3_degree_tomography_audit/count.cpp": "a10655d8eed86b28ec5dc938bf57cb650e41f08adfb6cdc08b8e660b3389d6bd",
+    "tt3_degree_tomography_audit/run_covers.cpp": "23334e0493ce1ebb2b1a066827eeba0caa007f1e936d3015f812afee21d76b69"
+  }
+}
