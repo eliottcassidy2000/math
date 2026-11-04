@@ -1,0 +1,63 @@
+{
+  "exhaustive": [
+    {
+      "distinct_labeled_response_functions": 1,
+      "extension_states": 2,
+      "max_response_fiber": 1,
+      "order": 1,
+      "tournaments": 1
+    },
+    {
+      "distinct_labeled_response_functions": 2,
+      "extension_states": 8,
+      "max_response_fiber": 1,
+      "order": 2,
+      "tournaments": 2
+    },
+    {
+      "distinct_labeled_response_functions": 7,
+      "extension_states": 64,
+      "max_response_fiber": 2,
+      "order": 3,
+      "tournaments": 8
+    },
+    {
+      "distinct_labeled_response_functions": 56,
+      "extension_states": 1024,
+      "max_response_fiber": 2,
+      "order": 4,
+      "tournaments": 64
+    },
+    {
+      "distinct_labeled_response_functions": 932,
+      "extension_states": 32768,
+      "max_response_fiber": 2,
+      "order": 5,
+      "tournaments": 1024
+    }
+  ],
+  "extension_states": 33866,
+  "independent_permutation_states": 1098,
+  "opposite_cycles_response": [
+    3,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    3
+  ],
+  "status": "PASS",
+  "transitive_orders_checked": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

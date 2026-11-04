@@ -1,0 +1,29 @@
+{
+  "fibers": [
+    {
+      "H": 3,
+      "blocks": 1,
+      "distinct_tournaments_with_identical_full_response": 2,
+      "vertices": 3
+    },
+    {
+      "H": 9,
+      "blocks": 2,
+      "distinct_tournaments_with_identical_full_response": 4,
+      "vertices": 6
+    },
+    {
+      "H": 27,
+      "blocks": 3,
+      "distinct_tournaments_with_identical_full_response": 8,
+      "vertices": 9
+    },
+    {
+      "H": 81,
+      "blocks": 4,
+      "distinct_tournaments_with_identical_full_response": 16,
+      "vertices": 12
+    }
+  ],
+  "status": "PASS"
+}

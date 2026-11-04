@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "literal_tournaments": 75,
+  "literal_extensions": 1098,
+  "submodularity_pairs": 16932,
+  "independent_method": "permutations and split positions; no imports from author code"
+}

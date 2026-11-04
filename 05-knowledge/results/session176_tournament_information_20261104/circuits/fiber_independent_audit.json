@@ -1,0 +1,23 @@
+{
+  "literal_cover_fiber_tournaments": 6,
+  "scope": "fiber bases are labelled and all isomorphic as unlabelled tournaments",
+  "status": "PASS",
+  "two_step_extension_pairs": 128,
+  "two_step_separation": {
+    "counts": [
+      13,
+      11
+    ],
+    "first_apex_outbits": [
+      0,
+      0,
+      1
+    ],
+    "second_apex_outbits_to_base_then_first_apex": [
+      0,
+      1,
+      0,
+      0
+    ]
+  }
+}

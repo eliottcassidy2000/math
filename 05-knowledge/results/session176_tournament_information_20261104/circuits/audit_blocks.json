@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "families": [
+    {
+      "blocks": 1,
+      "orientations": 2,
+      "distinct_signatures": 1
+    },
+    {
+      "blocks": 2,
+      "orientations": 4,
+      "distinct_signatures": 1
+    },
+    {
+      "blocks": 3,
+      "orientations": 8,
+      "distinct_signatures": 1
+    }
+  ],
+  "independent_literal_covers_through_blocks": 2
+}
