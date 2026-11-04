@@ -1,0 +1,20 @@
+{
+  "author_checker_sha256": "a7abf5f8d12a44055a63aa511c8b296c585a4caab6604f3bc96677ea7e277c2f",
+  "independent_binary_size_blowups": 400,
+  "literal_path_crosschecks": 134,
+  "ordered_sum_checks": 16,
+  "prime_bound_checks": 100,
+  "singleton_boundary_H": 1,
+  "status": "PASS",
+  "triangle_r": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}
