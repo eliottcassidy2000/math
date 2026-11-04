@@ -1,0 +1,95 @@
+{
+  "Euler_overflow": {
+    "closure": [
+      3,
+      1
+    ],
+    "length": 18,
+    "lower": [
+      0,
+      1
+    ],
+    "source": 5,
+    "targets": [
+      3,
+      19
+    ]
+  },
+  "bounded_length_limit": 180,
+  "configurations": 190,
+  "counts": {
+    "adjunction_comparisons": 76230,
+    "boxes": 41040,
+    "closures": 1198,
+    "direct_profiles": 14710,
+    "meet_checks": 3800,
+    "monotonicity_covers": 2532,
+    "rank_recurrences": 108,
+    "unbounded_extension_checks": 1198
+  },
+  "local_global_control": {
+    "Euler_prime": 13,
+    "column_prescribed_lengths": [
+      3,
+      2
+    ],
+    "incompatible": true,
+    "local_lengths": [
+      3,
+      18
+    ],
+    "support": [
+      3,
+      13
+    ]
+  },
+  "nondistributive_diamond": {
+    "constants": [
+      1,
+      1,
+      1
+    ],
+    "orders": [
+      15,
+      21,
+      35
+    ],
+    "physical_lengths": [
+      3,
+      15,
+      21,
+      35,
+      105
+    ],
+    "source": 3,
+    "targets": [
+      4561,
+      368089,
+      71
+    ]
+  },
+  "scope": "Exact single-source partial-target realization, not OPN nonexistence.",
+  "status": "PASS",
+  "weighted_join": {
+    "atoms": [
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "join": [
+      3,
+      1
+    ],
+    "length": 55,
+    "source": 3,
+    "targets": [
+      11,
+      23
+    ]
+  }
+}

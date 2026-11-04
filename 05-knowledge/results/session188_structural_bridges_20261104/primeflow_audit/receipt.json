@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "universe": "sources 3..43, two-target subsets of odd primes <=29 excluding source; all admissible roles; direct lengths <=240; bounds 0..2",
+  "counts": {
+    "rank_equivalences": 570240,
+    "source_role_target_pairs": 580,
+    "boxes": 20880,
+    "least_completions": 2102,
+    "fresh_extensions": 4204
+  },
+  "M3": {
+    "3": [
+      0,
+      0,
+      0
+    ],
+    "15": [
+      1,
+      0,
+      0
+    ],
+    "21": [
+      0,
+      1,
+      0
+    ],
+    "35": [
+      0,
+      0,
+      1
+    ],
+    "105": [
+      1,
+      1,
+      1
+    ]
+  },
+  "source_sha256": {
+    "PROOF.md": "9bc53a14f5f2cfd1bde33443d93ffddd2ef80ca5e48080cd9cfb4f34dd83f459",
+    "verify.py": "78fe584effcb08daaccb90b9d2357cf6e4573d1fd388a3c6b24cc45912280117"
+  }
+}
