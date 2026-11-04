@@ -1,0 +1,182 @@
+{
+  "audit_sha256": {
+    "audit.py": "16c3150245ffa7f4d0a35e4a218c8b8de5902b4bbe2e71c21d73850ef3a16255",
+    "literal.cpp": "76fdc646b0a6e217635478e4556c87532aff628a22ddcf83bd22119cc5860915"
+  },
+  "complete_color_polynomial_checks": [
+    {
+      "chain_order": 2,
+      "complete_support_monomials": 7,
+      "full_kernel_monomials": 7,
+      "kernel_sha256": "bcce97568bcc6ec6ec4dda4ce9e57d5c690ce9affc661ee907aa2babe2ce5ff6",
+      "projected_last_terms": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "chain_order": 4,
+      "complete_support_monomials": 64,
+      "full_kernel_monomials": 115,
+      "kernel_sha256": "1b4c89bc0c1c2db2d701f31c886db6210aa61c3c0a4d80345f3ce3ec4617b98b",
+      "projected_last_terms": [
+        [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "chain_order": 6,
+      "complete_support_monomials": 576,
+      "full_kernel_monomials": 1852,
+      "kernel_sha256": "e462e4f85264d232956599c97cd1cdbe63ff6d4bbc7649c74e87086d7cdf9aec",
+      "projected_last_terms": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "chain_order": 8,
+      "complete_support_monomials": 5184,
+      "full_kernel_monomials": 29677,
+      "kernel_sha256": "c9f032f816e528d9d572771a4408c06b89eafd5c33c2d9e3811a9b3585b88147",
+      "projected_last_terms": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "explicit_marked_child_profiles": 26,
+  "independent_physical_counts": 1100,
+  "ordered_hub_literal_cases": [
+    {
+      "chain_order": 2,
+      "coefficient": 60,
+      "last_term": 5,
+      "lower_bound": 2,
+      "physical_order": 9
+    },
+    {
+      "chain_order": 4,
+      "coefficient": 50184,
+      "last_term": 36,
+      "lower_bound": 18,
+      "physical_order": 15
+    },
+    {
+      "chain_order": 6,
+      "coefficient": 4284,
+      "last_term": 4,
+      "lower_bound": 2,
+      "physical_order": 13
+    },
+    {
+      "chain_order": 8,
+      "coefficient": 38796,
+      "last_term": 4,
+      "lower_bound": 2,
+      "physical_order": 15
+    },
+    {
+      "chain_order": 2,
+      "coefficient": 8532,
+      "last_term": 117,
+      "lower_bound": 18,
+      "physical_order": 13
+    },
+    {
+      "chain_order": 4,
+      "coefficient": 79920,
+      "last_term": 108,
+      "lower_bound": 18,
+      "physical_order": 15
+    }
+  ],
+  "root_family_controls": [
+    {
+      "families": 8,
+      "fixed_query_count": 20,
+      "hub_selected": 4,
+      "hub_unselected": 4,
+      "quotient_order": 3
+    },
+    {
+      "families": 32,
+      "fixed_query_count": 24,
+      "hub_selected": 16,
+      "hub_unselected": 16,
+      "quotient_order": 5
+    }
+  ],
+  "scope": "Independent Sections4\u20136 positivity and all-C3 root-family/cube audit; Sections1\u20133 are reviewed separately.",
+  "source_sha256": {
+    "alternating_prime_quotient/PROOF.md": "859cf454b94ebb6a833550b2d0b56cdb0962e4814ae11bc4031d2bd32611db7a",
+    "cyclic_child_disjoint/PROOF.md": "2c625e1a7c7cff166813d7f7243220b160fe04c3f32418e75bb07f267d9fb1be",
+    "cyclic_child_disjoint/count.cpp": "4f34e4aede4e9a14564f61f47fd609ae1324ee009dece48f36e4abc1eb227a5f",
+    "cyclic_child_disjoint/kernel.py": "8c5ed7860a61160da5bd7d3065339a2e11d2c30f4497ae24e1eb69f22eb72943",
+    "cyclic_child_disjoint/verify.py": "1d727aac578e9aef9377136b7f6cd1d8899ed259fedb379e4d19a9a479cd7133",
+    "response/PROOF.md": "dcd7a33664f63039b937582f241910e98ccb3fa341f3ba3999f626f5c61b51ec",
+    "returns_next/UNIFORM.md": "94df1aaefe0c5d6223f389d75726c3c7a55bfff87ed63007dc9707de20cb0de8"
+  },
+  "status": "PASS"
+}
