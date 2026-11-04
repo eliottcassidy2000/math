@@ -1,0 +1,51 @@
+{
+  "arbitrary_block_profile_controls": 320,
+  "exact_named_examples": [
+    {
+      "all_queries": 1024,
+      "degree": 4,
+      "name": "crossing",
+      "nonzero_coefficients": 144
+    },
+    {
+      "all_queries": 1024,
+      "degree": 4,
+      "name": "nested",
+      "nonzero_coefficients": 136
+    }
+  ],
+  "interval_inversion": [
+    {
+      "k": 1,
+      "patterns": 1,
+      "transitive_patterns": 1
+    },
+    {
+      "k": 2,
+      "patterns": 2,
+      "transitive_patterns": 2
+    },
+    {
+      "k": 3,
+      "patterns": 8,
+      "transitive_patterns": 6
+    },
+    {
+      "k": 4,
+      "patterns": 64,
+      "transitive_patterns": 24
+    },
+    {
+      "k": 5,
+      "patterns": 1024,
+      "transitive_patterns": 120
+    },
+    {
+      "k": 6,
+      "patterns": 32768,
+      "transitive_patterns": 720
+    }
+  ],
+  "status": "PASS",
+  "whole_converse_coefficients": 124
+}
