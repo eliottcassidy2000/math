@@ -1,0 +1,14 @@
+A -> B: 720 labelled copies of the target (root fixed); minimum Hamming distance 4 attained by 5 copies
+   copy with arc set [(0, 1), (0, 3), (1, 2), (3, 4)]: 9 of 24 orderings stay strong; keep s = 1: 0; keep wrappers below the start: 2
+   copy with arc set [(0, 1), (0, 3), (1, 4), (2, 3)]: 4 of 24 orderings stay strong; keep s = 1: 0; keep wrappers below the start: 0
+   copy with arc set [(1, 3), (1, 6), (2, 4), (3, 6)]: 12 of 24 orderings stay strong; keep s = 1: 0; keep wrappers below the start: 0
+   copy with arc set [(1, 2), (1, 6), (3, 4), (3, 6)]: 9 of 24 orderings stay strong; keep s = 1: 0; keep wrappers below the start: 0
+   copy with arc set [(0, 3), (0, 6), (2, 3), (4, 6)]: 4 of 24 orderings stay strong; keep s = 1: 0; keep wrappers below the start: 0
+   total shortest routes 38; keep s = 1: 0; below the start: 2
+B -> A: 720 labelled copies of the target (root fixed); minimum Hamming distance 4 attained by 5 copies
+   copy with arc set [(0, 1), (0, 4), (1, 2), (3, 4)]: 9 of 24 orderings stay strong; keep s = 1: 0; keep wrappers below the start: 2
+   copy with arc set [(0, 1), (0, 2), (1, 4), (2, 3)]: 4 of 24 orderings stay strong; keep s = 1: 0; keep wrappers below the start: 0
+   copy with arc set [(1, 2), (1, 6), (2, 6), (3, 4)]: 12 of 24 orderings stay strong; keep s = 1: 0; keep wrappers below the start: 0
+   copy with arc set [(1, 4), (1, 6), (2, 3), (3, 6)]: 9 of 24 orderings stay strong; keep s = 1: 0; keep wrappers below the start: 0
+   copy with arc set [(0, 1), (0, 2), (1, 5), (2, 4)]: 4 of 24 orderings stay strong; keep s = 1: 0; keep wrappers below the start: 0
+   total shortest routes 38; keep s = 1: 0; below the start: 2

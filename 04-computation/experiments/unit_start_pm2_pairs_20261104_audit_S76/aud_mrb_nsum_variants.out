@@ -1,0 +1,38 @@
+dps=15  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=None       -> 0.188382707291
+dps=15  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=r+s        -> 0.188382707291
+dps=15  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=richardson -> 0.187890081064
+dps=15  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=shanks     -> 0.188382707291
+dps=15  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=e          -> 0.187859642462
+dps=15  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=a          -> 0.197443575062
+dps=15  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=l          -> 0.197443575062
+dps=15  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=d          -> 0.197443575062
+dps=15  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=None       -> 0.188385740945
+dps=15  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=r+s        -> 0.188385740945
+dps=15  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=richardson -> 0.187890084706
+dps=15  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=shanks     -> 0.188385740945
+dps=15  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=e          -> 0.187859642462
+dps=15  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=a          -> 0.197390784411
+dps=15  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=l          -> 0.197390784411
+dps=15  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=d          -> 0.197390784411
+dps=15  C = sum_(n>=2) (-1)^n a_n (unpaired)             method=None       -> 0.187859642462
+dps=15  C = sum_(n>=2) (-1)^n a_n (unpaired)             method=a          -> 0.187859642462
+dps=15  C = sum_(n>=2) (-1)^n a_n (unpaired)             method=e          -> 0.171012576347
+dps=30  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=None       -> 0.188000002923
+dps=30  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=r+s        -> 0.188000002923
+dps=30  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=richardson -> 0.192446790407
+dps=30  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=shanks     -> 0.188000002923
+dps=30  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=e          -> 0.187859642462
+dps=30  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=a          -> 0.192446790407
+dps=30  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=l          -> 0.192446790407
+dps=30  C = sum_(k>=1) (a_2k - a_(2k-1))                 method=d          -> 0.192446790407
+dps=30  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=None       -> 0.187999757264
+dps=30  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=r+s        -> 0.187999757264
+dps=30  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=richardson -> 0.192435970416
+dps=30  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=shanks     -> 0.187999757264
+dps=30  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=e          -> 0.187859642462
+dps=30  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=a          -> 0.192435970416
+dps=30  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=l          -> 0.192435970416
+dps=30  C = sqrt2-1 - sum_(k>=1) (a_(2k+1) - a_(2k+2))   method=d          -> 0.192435970416
+dps=30  C = sum_(n>=2) (-1)^n a_n (unpaired)             method=None       -> 0.187859642462
+dps=30  C = sum_(n>=2) (-1)^n a_n (unpaired)             method=a          -> 0.187859642462
+dps=30  C = sum_(n>=2) (-1)^n a_n (unpaired)             method=e          -> 0.179645945431

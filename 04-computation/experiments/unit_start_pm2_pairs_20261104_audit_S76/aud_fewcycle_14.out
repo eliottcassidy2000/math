@@ -1,0 +1,110 @@
+# aud_fewcycle NMAX=14 (strong tournaments with hc <= 5 by vertex extension; own canonical form)
+n= 3 classes 1 (C3)
+   classes 1; t_k (k=1..5): 1 0 0 0 0; hc recounted by DP on 1 classes: 0 mismatches
+   sole-exit-free u_k (k=1..5): 0 0 0 0 0   [F(2n-9) = 0, 2F(2n-11) = 0, 4F(2n-12)-3F(2n-14) = 0]
+   u_3 by |Aut| (1,3,5,7,9,21,other): 0 0 0 0 0 0 0
+   u_4 by |Aut| (1,3,5,7,9,21,other): 0 0 0 0 0 0 0
+   u_5 by |Aut| (1,3,5,7,9,21,other): 0 0 0 0 0 0 0
+   all classes by hc and |Aut| (1,3,5,7,9,21,other):  k=1: 0 1 0 0 0 0 0  k=2: 0 0 0 0 0 0 0  k=3: 0 0 0 0 0 0 0  k=4: 0 0 0 0 0 0 0  k=5: 0 0 0 0 0 0 0
+   independent backtracking |Aut| on the sole-exit-free hc = 3,4,5 classes: 0 mismatches
+n= 4 extensions with hc<=5: 6 -> classes 1 (inconsistent duplicates 0)
+   classes 1; t_k (k=1..5): 1 0 0 0 0; hc recounted by DP on 1 classes: 0 mismatches
+   sole-exit-free u_k (k=1..5): 0 0 0 0 0   [F(2n-9) = 0, 2F(2n-11) = 0, 4F(2n-12)-3F(2n-14) = 0]
+   u_3 by |Aut| (1,3,5,7,9,21,other): 0 0 0 0 0 0 0
+   u_4 by |Aut| (1,3,5,7,9,21,other): 0 0 0 0 0 0 0
+   u_5 by |Aut| (1,3,5,7,9,21,other): 0 0 0 0 0 0 0
+   all classes by hc and |Aut| (1,3,5,7,9,21,other):  k=1: 1 0 0 0 0 0 0  k=2: 0 0 0 0 0 0 0  k=3: 0 0 0 0 0 0 0  k=4: 0 0 0 0 0 0 0  k=5: 0 0 0 0 0 0 0
+   independent backtracking |Aut| on the sole-exit-free hc = 3,4,5 classes: 0 mismatches
+n= 5 extensions with hc<=5: 14 -> classes 6 (inconsistent duplicates 0)
+   classes 6; t_k (k=1..5): 3 2 1 0 0; hc recounted by DP on 6 classes: 0 mismatches
+   sole-exit-free u_k (k=1..5): 0 1 0 0 0   [F(2n-9) = 1, 2F(2n-11) = 0, 4F(2n-12)-3F(2n-14) = 0]
+   u_3 by |Aut| (1,3,5,7,9,21,other): 0 0 0 0 0 0 0
+   u_4 by |Aut| (1,3,5,7,9,21,other): 0 0 0 0 0 0 0
+   u_5 by |Aut| (1,3,5,7,9,21,other): 0 0 0 0 0 0 0
+   all classes by hc and |Aut| (1,3,5,7,9,21,other):  k=1: 3 0 0 0 0 0 0  k=2: 1 0 1 0 0 0 0  k=3: 0 1 0 0 0 0 0  k=4: 0 0 0 0 0 0 0  k=5: 0 0 0 0 0 0 0
+   independent backtracking |Aut| on the sole-exit-free hc = 3,4,5 classes: 0 mismatches
+n= 6 extensions with hc<=5: 180 -> classes 35 (inconsistent duplicates 0)
+   classes 35; t_k (k=1..5): 8 5 11 6 5; hc recounted by DP on 35 classes: 0 mismatches
+   sole-exit-free u_k (k=1..5): 0 0 2 3 4   [F(2n-9) = 2, 2F(2n-11) = 2, 4F(2n-12)-3F(2n-14) = 0]
+   u_3 by |Aut| (1,3,5,7,9,21,other): 1 1 0 0 0 0 0
+   u_4 by |Aut| (1,3,5,7,9,21,other): 3 0 0 0 0 0 0
+   u_5 by |Aut| (1,3,5,7,9,21,other): 2 2 0 0 0 0 0
+   predicted u_3 split: Z_3 F(2n-10) = 1, asymmetric F(2n-11) = 1
+   all classes by hc and |Aut| (1,3,5,7,9,21,other):  k=1: 8 0 0 0 0 0 0  k=2: 5 0 0 0 0 0 0  k=3: 7 4 0 0 0 0 0  k=4: 6 0 0 0 0 0 0  k=5: 3 2 0 0 0 0 0
+   independent backtracking |Aut| on the sole-exit-free hc = 3,4,5 classes: 0 mismatches
+n= 7 extensions with hc<=5: 716 -> classes 140 (inconsistent duplicates 0)
+   classes 140; t_k (k=1..5): 21 18 38 25 38; hc recounted by DP on 140 classes: 0 mismatches
+   sole-exit-free u_k (k=1..5): 0 0 5 4 4   [F(2n-9) = 5, 2F(2n-11) = 4, 4F(2n-12)-3F(2n-14) = 4]
+   u_3 by |Aut| (1,3,5,7,9,21,other): 2 3 0 0 0 0 0
+   u_4 by |Aut| (1,3,5,7,9,21,other): 4 0 0 0 0 0 0
+   u_5 by |Aut| (1,3,5,7,9,21,other): 4 0 0 0 0 0 0
+   predicted u_3 split: Z_3 F(2n-10) = 3, asymmetric F(2n-11) = 2
+   all classes by hc and |Aut| (1,3,5,7,9,21,other):  k=1: 21 0 0 0 0 0 0  k=2: 18 0 0 0 0 0 0  k=3: 25 13 0 0 0 0 0  k=4: 25 0 0 0 0 0 0  k=5: 38 0 0 0 0 0 0
+   independent backtracking |Aut| on the sole-exit-free hc = 3,4,5 classes: 0 mismatches
+n= 8 extensions with hc<=5: 2678 -> classes 468 (inconsistent duplicates 0)
+   classes 468; t_k (k=1..5): 55 60 124 91 138; hc recounted by DP on 468 classes: 0 mismatches
+   sole-exit-free u_k (k=1..5): 0 0 13 10 9   [F(2n-9) = 13, 2F(2n-11) = 10, 4F(2n-12)-3F(2n-14) = 9]
+   u_3 by |Aut| (1,3,5,7,9,21,other): 5 8 0 0 0 0 0
+   u_4 by |Aut| (1,3,5,7,9,21,other): 10 0 0 0 0 0 0
+   u_5 by |Aut| (1,3,5,7,9,21,other): 9 0 0 0 0 0 0
+   predicted u_3 split: Z_3 F(2n-10) = 8, asymmetric F(2n-11) = 5
+   all classes by hc and |Aut| (1,3,5,7,9,21,other):  k=1: 55 0 0 0 0 0 0  k=2: 60 0 0 0 0 0 0  k=3: 84 40 0 0 0 0 0  k=4: 91 0 0 0 0 0 0  k=5: 138 0 0 0 0 0 0
+   independent backtracking |Aut| on the sole-exit-free hc = 3,4,5 classes: 0 mismatches
+n= 9 extensions with hc<=5: 9619 -> classes 1506 (inconsistent duplicates 0)
+   classes 1506; t_k (k=1..5): 144 191 390 315 466; hc recounted by DP on 1506 classes: 0 mismatches
+   sole-exit-free u_k (k=1..5): 0 0 34 26 23   [F(2n-9) = 34, 2F(2n-11) = 26, 4F(2n-12)-3F(2n-14) = 23]
+   u_3 by |Aut| (1,3,5,7,9,21,other): 13 21 0 0 0 0 0
+   u_4 by |Aut| (1,3,5,7,9,21,other): 26 0 0 0 0 0 0
+   u_5 by |Aut| (1,3,5,7,9,21,other): 23 0 0 0 0 0 0
+   predicted u_3 split: Z_3 F(2n-10) = 21, asymmetric F(2n-11) = 13
+   all classes by hc and |Aut| (1,3,5,7,9,21,other):  k=1: 144 0 0 0 0 0 0  k=2: 191 0 0 0 0 0 0  k=3: 270 120 0 0 0 0 0  k=4: 315 0 0 0 0 0 0  k=5: 466 0 0 0 0 0 0
+   independent backtracking |Aut| on the sole-exit-free hc = 3,4,5 classes: 0 mismatches
+n=10 extensions with hc<=5: 33282 -> classes 4708 (inconsistent duplicates 0)
+   classes 4708; t_k (k=1..5): 377 589 1193 1049 1500; hc recounted by DP on 4708 classes: 0 mismatches
+   sole-exit-free u_k (k=1..5): 0 0 89 68 60   [F(2n-9) = 89, 2F(2n-11) = 68, 4F(2n-12)-3F(2n-14) = 60]
+   u_3 by |Aut| (1,3,5,7,9,21,other): 34 55 0 0 0 0 0
+   u_4 by |Aut| (1,3,5,7,9,21,other): 68 0 0 0 0 0 0
+   u_5 by |Aut| (1,3,5,7,9,21,other): 60 0 0 0 0 0 0
+   predicted u_3 split: Z_3 F(2n-10) = 55, asymmetric F(2n-11) = 34
+   all classes by hc and |Aut| (1,3,5,7,9,21,other):  k=1: 377 0 0 0 0 0 0  k=2: 589 0 0 0 0 0 0  k=3: 839 354 0 0 0 0 0  k=4: 1049 0 0 0 0 0 0  k=5: 1500 0 0 0 0 0 0
+   independent backtracking |Aut| on the sole-exit-free hc = 3,4,5 classes: 0 mismatches
+n=11 extensions with hc<=5: 111648 -> classes 14390 (inconsistent duplicates 0)
+   classes 14390; t_k (k=1..5): 987 1775 3574 3390 4664; hc recounted by DP on 14390 classes: 0 mismatches
+   sole-exit-free u_k (k=1..5): 0 0 233 178 157   [F(2n-9) = 233, 2F(2n-11) = 178, 4F(2n-12)-3F(2n-14) = 157]
+   u_3 by |Aut| (1,3,5,7,9,21,other): 89 144 0 0 0 0 0
+   u_4 by |Aut| (1,3,5,7,9,21,other): 178 0 0 0 0 0 0
+   u_5 by |Aut| (1,3,5,7,9,21,other): 157 0 0 0 0 0 0
+   predicted u_3 split: Z_3 F(2n-10) = 144, asymmetric F(2n-11) = 89
+   all classes by hc and |Aut| (1,3,5,7,9,21,other):  k=1: 987 0 0 0 0 0 0  k=2: 1775 0 0 0 0 0 0  k=3: 2543 1031 0 0 0 0 0  k=4: 3390 0 0 0 0 0 0  k=5: 4664 0 0 0 0 0 0
+   independent backtracking |Aut| on the sole-exit-free hc = 3,4,5 classes: 0 mismatches
+n=12 extensions with hc<=5: 365366 -> classes 43225 (inconsistent duplicates 0)
+   classes 43225; t_k (k=1..5): 2584 5257 10537 10705 14142; hc recounted by DP on 43225 classes: 0 mismatches
+   sole-exit-free u_k (k=1..5): 0 0 610 466 411   [F(2n-9) = 610, 2F(2n-11) = 466, 4F(2n-12)-3F(2n-14) = 411]
+   u_3 by |Aut| (1,3,5,7,9,21,other): 233 377 0 0 0 0 0
+   u_4 by |Aut| (1,3,5,7,9,21,other): 466 0 0 0 0 0 0
+   u_5 by |Aut| (1,3,5,7,9,21,other): 411 0 0 0 0 0 0
+   predicted u_3 split: Z_3 F(2n-10) = 377, asymmetric F(2n-11) = 233
+   all classes by hc and |Aut| (1,3,5,7,9,21,other):  k=1: 2584 0 0 0 0 0 0  k=2: 5257 0 0 0 0 0 0  k=3: 7565 2972 0 0 0 0 0  k=4: 10705 0 0 0 0 0 0  k=5: 14142 0 0 0 0 0 0
+   independent backtracking |Aut| on the sole-exit-free hc = 3,4,5 classes: 0 mismatches
+n=13 extensions with hc<=5: 1171870 -> classes 128077 (inconsistent duplicates 0)
+   classes 128077; t_k (k=1..5): 6765 15360 30676 33194 42082; hc recounted by DP on 3893 classes: 0 mismatches
+   sole-exit-free u_k (k=1..5): 0 0 1597 1220 1076   [F(2n-9) = 1597, 2F(2n-11) = 1220, 4F(2n-12)-3F(2n-14) = 1076]
+   u_3 by |Aut| (1,3,5,7,9,21,other): 610 987 0 0 0 0 0
+   u_4 by |Aut| (1,3,5,7,9,21,other): 1220 0 0 0 0 0 0
+   u_5 by |Aut| (1,3,5,7,9,21,other): 1076 0 0 0 0 0 0
+   predicted u_3 split: Z_3 F(2n-10) = 987, asymmetric F(2n-11) = 610
+   all classes by hc and |Aut| (1,3,5,7,9,21,other):  k=1: 6765 0 0 0 0 0 0  k=2: 15360 0 0 0 0 0 0  k=3: 22181 8495 0 0 0 0 0  k=4: 33194 0 0 0 0 0 0  k=5: 42082 0 0 0 0 0 0
+   independent backtracking |Aut| on the sole-exit-free hc = 3,4,5 classes: 0 mismatches
+n=14 extensions with hc<=5: 3696778 -> classes 375339 (inconsistent duplicates 0)
+   classes 375339; t_k (k=1..5): 17711 44394 88400 101420 123414; hc recounted by DP on 10192 classes: 0 mismatches
+   sole-exit-free u_k (k=1..5): 0 0 4181 3194 2817   [F(2n-9) = 4181, 2F(2n-11) = 3194, 4F(2n-12)-3F(2n-14) = 2817]
+   u_3 by |Aut| (1,3,5,7,9,21,other): 1597 2584 0 0 0 0 0
+   u_4 by |Aut| (1,3,5,7,9,21,other): 3194 0 0 0 0 0 0
+   u_5 by |Aut| (1,3,5,7,9,21,other): 2817 0 0 0 0 0 0
+   predicted u_3 split: Z_3 F(2n-10) = 2584, asymmetric F(2n-11) = 1597
+   all classes by hc and |Aut| (1,3,5,7,9,21,other):  k=1: 17711 0 0 0 0 0 0  k=2: 44394 0 0 0 0 0 0  k=3: 64290 24110 0 0 0 0 0  k=4: 101420 0 0 0 0 0 0  k=5: 123414 0 0 0 0 0 0
+   independent backtracking |Aut| on the sole-exit-free hc = 3,4,5 classes: 0 mismatches
+
+real	0m23.250s
+user	0m0.000s
+sys	0m0.015s

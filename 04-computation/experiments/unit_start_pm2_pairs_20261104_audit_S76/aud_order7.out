@@ -1,0 +1,48 @@
+F (subset formula) vs brute force over all 7!*7 cut orderings, random sample: 0 / 3000 disagree
+Burnside: 225 odd-order elements of S_6 (expect 225), 2188800 fixed labelled tournaments in total (expect 2,188,800)
+distinct profiles (strong,h,s,q,F,e): 2864; non-integral class counts: 0
+rooted classes: 3040; strong: 2395; strong with s = 1: 55; any with s = 1: 89
+  unit pair profiles: (h,s,q,F,e) = (29,1,15,157,10) and (31,1,9,157,9), multiplicity 1
+pairs of strong rooted classes with h' = h + 2 and F' = F: 689
+  of these with s = s' = 1: 1
+  with q' = q (any s): 91
+  with s' = s (any q): 120
+  with s' = s and q' = q: 47 (of these with s = 1: 0; with e' = e also: 23)
+
+A (out-rows 8 73 3 4 15 31 61): strong 1 (h,s,q,F,e) = (29,1,15,157,10)
+B (out-rows 2 84 1 7 13 31 61): strong 1 (h,s,q,F,e) = (31,1,9,157,9)
+path-order codes: A 1869889, B 2096449
+labelled copies with root 0: A 720, B 720 (720 each iff the rooted automorphism groups are trivial)
+
+=== direction A -> B ===
+distance through strong labelled tournaments (root fixed): 4
+shortest routes: 38 (ending in 5 labelled target copies); with every intermediate s = 1: 0; with every intermediate wrapper below the start at every clock: 2
+  example route: (29,1,15,157) (51,3,19,213) (31,1,9,145) (49,2,9,134) (31,1,9,157)  flips: {3,4} {1,2} {0,1} {0,3}
+  BELOW-START route: (29,1,15,157) (41,2,15,134) (29,1,5,89) (49,2,9,134) (31,1,9,157)  flips: {0,1} {1,2} {3,4} {0,3}
+  BELOW-START route: (29,1,15,157) (41,2,15,134) (29,1,5,89) (25,1,5,121) (31,1,9,157)  flips: {0,1} {1,2} {0,3} {3,4}
+explicit enumeration: 38 shortest routes; keeping s = 1: 0; below the start (closed form): 2; below the start (literal, m = 1..60): 2
+literal wrapper H(D_m) = h + 2^m F on every intermediate of every shortest route (m = 1..4): 456 checks, 0 failures
+distance when every intermediate is strong with s = 1: 7
+distance with no strongness requirement on intermediates: 4
+
+=== direction B -> A ===
+distance through strong labelled tournaments (root fixed): 4
+shortest routes: 38 (ending in 5 labelled target copies); with every intermediate s = 1: 0; with every intermediate wrapper below the start at every clock: 2
+  example route: (31,1,9,157) (25,1,5,121) (33,1,15,193) (41,2,15,134) (29,1,15,157)  flips: {3,4} {1,2} {0,4} {0,1}
+  BELOW-START route: (31,1,9,157) (25,1,5,121) (29,1,5,89) (41,2,15,134) (29,1,15,157)  flips: {3,4} {0,4} {1,2} {0,1}
+  BELOW-START route: (31,1,9,157) (49,2,9,134) (29,1,5,89) (41,2,15,134) (29,1,15,157)  flips: {0,4} {3,4} {1,2} {0,1}
+explicit enumeration: 38 shortest routes; keeping s = 1: 0; below the start (closed form): 2; below the start (literal, m = 1..60): 2
+literal wrapper H(D_m) = h + 2^m F on every intermediate of every shortest route (m = 1..4): 456 checks, 0 failures
+distance when every intermediate is strong with s = 1: 7
+distance with no strongness requirement on intermediates: 4
+
+wrapper formula on 1500 random labelled tournaments (294 non-strong, 1453 with s != 1), m = 1..3: 0 / 4500 failures
+m = 1 (order 9): H(D_m(A)) = 343, H(D_m(B)) = 345, difference 2; formula 343 / 345
+m = 2 (order 10): H(D_m(A)) = 657, H(D_m(B)) = 659, difference 2; formula 657 / 659
+m = 3 (order 11): H(D_m(A)) = 1285, H(D_m(B)) = 1287, difference 2; formula 1285 / 1287
+m = 4 (order 12): H(D_m(A)) = 2541, H(D_m(B)) = 2543, difference 2; formula 2541 / 2543
+m = 5 (order 13): H(D_m(A)) = 5053, H(D_m(B)) = 5055, difference 2; formula 5053 / 5055
+
+real	0m4.267s
+user	0m0.015s
+sys	0m0.015s

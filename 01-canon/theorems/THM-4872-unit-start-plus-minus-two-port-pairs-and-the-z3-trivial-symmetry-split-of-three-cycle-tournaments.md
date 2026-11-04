@@ -1,13 +1,18 @@
 ---
 id: THM-4872
-title: "(A) The unit-start +-2 port pair of order 7. Among strong rooted 7-vertex tournaments with one Hamiltonian path from the root, exactly one pair has equal two-slot count F = 157 and path counts 29, 31. Its classes are 4 strong arc reversals apart (38 shortest routes, none keeping the unit root start, which forces distance 7; 2 keeping every intermediate wrapper below the start). So Session189's wrappers H(D_m) = h + 2^m F differ by exactly 2 at every clock. Such pairs occur sporadically at every order 7-14 (1, 2, 5, 1, 6, 10, 4, 8). (B) The sole-exit-free tournaments with exactly three Hamiltonian cycles split by symmetry as F(2n - 9) = F(2n - 10) (Aut = Z_3, C3-block cores) + F(2n - 11) (asymmetric); those with four or five cycles are asymmetric"
+title: "(A) The unit-start +-2 port pair of order 7. Among strong rooted 7-vertex tournaments with one Hamiltonian path from the root, exactly one pair has equal two-slot count F = 157 and path counts 29, 31. Its classes are 4 strong arc reversals apart (38 shortest routes from 5 arc sets, none keeping the unit root start, which forces distance 7; 2 per direction, one arc set, keep every intermediate wrapper below the start). So the zero-ready-clock wrappers H(D_m) = h + 2^m F differ by exactly 2 at every clock. Such pairs occur at every order 7-14 (1, 2, 5, 1, 6, 10, 4, 8). Prior art: Session176's +-2 gate, B = the core of the 170807 source. (B) For n >= 6 the sole-exit-free tournaments with exactly three Hamiltonian cycles split by symmetry as F(2n - 9) = F(2n - 10) (Aut = Z_3, C3-block cores) + F(2n - 11) (asymmetric); for n >= 7 those with four or five cycles are asymmetric"
 status: >
   (A) FINITE-EXACT (opus-2026-11-04-S76): exhaustive over all 2^21 labelled tournaments of order 7 and over all classes
   to order 9; orders 10-14 by the FUNNELS F1/F2 grammar (PROVED complete there), which reproduces F(2n - 4). The wrapper
   formula is Session189's (PROVED there), re-verified on 220 cases.
-  (B) PROVED from THM-4869 (B1, B4, B5) and THM-4868 (E); FINITE-EXACT at orders 6-14.
+  (B) PROVED from THM-4869 (B1-B5, (C2), (C4) with THM-4868 (F)) and THM-4868 (E); the base of THM-4869 (C1) is a
+  computer census. FINITE-EXACT at orders 6-14.
   PRE-REGISTERED: HYP-9465 P1-P3 (orders 13-14), all CONFIRMED.
-  AUDIT: see the note, section 7.
+  PRIOR ART: Session176 section 1 (+-2 gate H = 6 * 2^r -+ 1), Session185 section 5, the zero-ready clock
+  (triangle_return_170807_20261103/ZERO_READY.md), B in zero_ready_component_returns_20261103/component/COMPONENT.md;
+  Session190 CP3 later found the same pair.
+  AUDIT: PASS WITH CORRECTIONS (2 provenance majors, 13 minors, all applied; MISTAKE-711);
+  04-computation/experiments/unit_start_pm2_pairs_20261104_audit_S76/AUDIT.md.
 session: opus-2026-11-04-S76
 source: 05-knowledge/results/unit_start_pm2_port_pairs_symmetry_split_mrb_20261104.md
 related:
@@ -17,6 +22,8 @@ related:
   - THM-4862
   - HYP-9465
   - HYP-9464
+  - 05-knowledge/results/session176_tournament_information_20261104/spectrum/PROOF.md
+  - 05-knowledge/results/triangle_return_170807_20261103/ZERO_READY.md
 verification:
   - 04-computation/experiments/plus_minus_two_port_routes_20261104.c
   - 04-computation/experiments/plus_minus_two_port_routes_20261104.out
@@ -48,10 +55,12 @@ two-slot covers with the first path ending at v (ADAPTIVE.md section 2). The two
 - Two shortest routes keep F_i <= 157 and h_i + 2F_i < 343 at every intermediate step, hence the wrappers below the
   start at every clock m >= 1.
 
-**Wrappers.** Session189's wrapper gives H(D_m) = h + 2^m F (returns/PROOF.md (1)). Hence H(D_m(B)) = H(D_m(A)) + 2 for
-every m: 343/345, 657/659, 1285/1287, ...
+**Wrappers.** The zero-ready-clock wrapper gives H(D_m) = h + 2^m F for every rooted U and m >= 1 (Session189 returns/PROOF.md
+(1)): either w comes first and Z follows, giving h paths, or r -> w and Z splits freely between the two slots, giving
+2^m F paths. Hence H(D_m(B)) = H(D_m(A)) + 2 for every m: 343/345, 657/659, 1285/1287, ...
 
-**Not a ternary step.** The step stays within one exponentially sparse family. It supplies no 3H + 2 / 3H + 4 parent.
+**Not a ternary step.** The step stays within one exponentially sparse family. 29 + 157 * 2^m is congruent to
+2 + (-1)^m (mod 3), and Session190 CP3 section 5.1 proves that the pair gives no 3H + 2 / 3H + 4 parent.
 
 **Other orders.** Unique-start rooted strong classes number F(2n - 4) (FUNNELS F2). Among them, the +-2 port pairs
 number 1, 2, 5, 1, 6, 10, 4, 8 at orders 7-14.

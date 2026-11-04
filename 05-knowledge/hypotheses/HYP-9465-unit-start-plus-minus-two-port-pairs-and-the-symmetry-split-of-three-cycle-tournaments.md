@@ -32,6 +32,10 @@ this gives x^6/(1 - 3x + x^2), i.e. F(2n - 10).
 
 ## Predictions
 
+Typing (S76 audit): P2 is the PROVED F2 count, and P1 follows from the proof sketch above. Both are consistency
+checks. P3 is a low-risk existence prediction.
+
+
 - **(P1)** Orders 13, 14: hc = 3 sole-exit-free classes with |Aut| = 3: 987, 2,584; asymmetric: 610, 1,597. All 1,220
   and 1,076 (order 13) and 3,194 and 2,817 (order 14) classes with hc = 4 and 5 are asymmetric.
 - **(P2)** Unique-start rooted strong classes of order 14: 46,368 (FUNNELS F2), every one with s = 1.

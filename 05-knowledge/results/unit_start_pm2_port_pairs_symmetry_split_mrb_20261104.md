@@ -36,8 +36,21 @@ nearly verbatim, in THM-4870 and its audited note `thomassen_merge_hypohamiltoni
 - Maschke and the fives;
 - the trivial group and C_2 against {3, 7, 21}.
 
-kind-pasteur's HYP-9464, pre-registered at 15:12, continues with the {-3}-self-dual classes at order 10. This session
-does not redo any of that. It adds sections 1-3 and records the cross-references in section 4.
+kind-pasteur's HYP-9464 (confirmed at 15:34, 9aa6e0836f) continues with the {-3}-self-dual classes at order 10.
+
+**Session190 also answered this first half** before this session's first commit (S76 audit, M1):
+- CP1 (3f218bec77, 15:08): the four-colour, hypohamiltonian and Thomassen synthesis, with a boundary-state patch
+  transfer;
+- CP2 (a8108cfdb2, 15:22), `session190_constructive_links_20261104/`:
+  - `planar/`: planar interfaces and 124 square-sum deletion cards;
+  - `bijection/`: a tournament/even-graph Walsh coupling, with no natural bijection;
+  - `groups/session190-groups/PROOF.md`: SO(3) against Maschke's planar groups; P_7 with F_21 and AGL(1,7); Theorem 3,
+    the signed metagraph-edge stabiliser is 1 or C_2.
+
+Session190 CP3 (15:34), after this session's checkpoint, independently found the same order-7 pair and route,
+credits S76, and adds a mod-3 proof that the pair cannot give the ternary parent.
+
+This session does not redo any of that. It adds sections 1-3 and records the cross-references in section 4.
 
 ## Status
 
@@ -61,8 +74,12 @@ profile (h, s, q, F):
 
 **The wrapper.** Session189's dyadic wrapper (`session189_response_frontier_20261104/returns/PROOF.md` (1)) adds a
 transitive block Z of order m and a root w, with w -> Z -> U and r -> w -> U - {r}. It has H(D_m(U, r)) = h + 2^m F.
-This program re-verified the formula directly on all 55 strong rooted classes of order 7 with s = 1, for m = 1..4
-(220 cases, 0 failures).
+The formula holds for every rooted U and every m >= 1. If w comes first, Z follows, giving h paths. Otherwise r -> w,
+and Z splits freely between the two slots, giving 2^m F paths. At m = 0 the count is h + F - s.
+
+This is the zero-ready clock of `triangle_return_170807_20261103/ZERO_READY.md`, which Session189 inherits. This
+program re-verified it directly on all 55 strong rooted classes of order 7 with s = 1, for m = 1..4 (220 cases,
+0 failures). The S76 audit re-checked it on the literal wrappers for m = 1..5.
 
 **The pair** (`plus_minus_two_port_routes_20261104.out`; exhaustive over all 2^21 labelled tournaments on {0..6} with
 root 0). There are 3,040 rooted classes, of which 2,395 are strong.
@@ -73,14 +90,19 @@ root 0). There are 3,040 rooted classes, of which 2,395 are strong.
   | A | 8 73 3 4 15 31 61 | (29, 1, 15, 157) |
   | B | 2 84 1 7 13 31 61 | (31, 1, 9, 157) |
 
-- Requiring also q = q' leaves 47 pairs, none with s = 1. So the "selected root statistics" that match are s = 1 and
-  F = 157, while q (15 against 9) and the end count (10 against 9) differ.
+- Requiring also s = s' and q = q' leaves 47 pairs (91 with q = q' alone); none has s = s' = 1.
+- So the "selected root statistics" that match are s = 1 and F = 157. The other statistics differ: q (15 against 9),
+  the end count (10 against 9), P(2) (580 against 644) and S_w(2) (34 against 31).
+- Other attachments break the +-2: a sole exit x -> 0 gives 53/53, and x beating N+(0) gives 49/73 (S76 audit).
+- So the reusable +-2 is specific to the D_m wrappers. It also holds at m = 0, where h + F - s gives 185/187.
 
 **The routes.** Breadth-first search over strong labelled tournaments, root fixed, one arc reversal per step.
-- The shortest distance between the two rooted classes is **4**, in both directions. There are 38 shortest routes.
+- The shortest distance between the two rooted classes is **4**, in both directions. There are 38 shortest routes, the
+  orderings of 5 four-arc sets.
 - **None of the 38 keeps s = 1 throughout.** If s = 1 is required at every step, the distance becomes 7. So every
   shortest route must temporarily leave the unit root-start condition.
-- **Exactly 2 of the 38**, in each direction, keep every intermediate wrapper below the start at every clock
+- **Exactly 2 of the 38** in each direction, two orderings of one arc set, keep every intermediate wrapper below the
+  start at every clock
   (F_i <= F_0 and h_i + 2F_i < h_0 + 2F_0). For example:
 
       A = (29,1,15,157) -> (41,2,15,134) -> (29,1,5,89) -> (49,2,9,134) -> (31,1,9,157) = B,
@@ -93,9 +115,24 @@ at orders m + 8.
 - It sidesteps Session189's spacing obstruction, which concerns wrappers of a *fixed* component (no two differ by 2),
   because it switches components.
 
+**Prior art and scope** (S76 audit, M2).
+- Session176 section 1 (`session176_tournament_information_20261104/spectrum/PROOF.md`, 4fde8ff005, 2026-11-03)
+  already proved a persistent single-edge +-2 gate across a dyadic clock: H = 6 * 2^r -+ 1, both strong at every r.
+  Its section 2 explains why the gate does not recurse into ternary closure.
+- Session185 section 5 (`session185_proof_frontiers_20261104/alternative/PROOF.md`) has a three-state version.
+- Without the unit-start condition, D_m-wrapper +-2 pairs exist already at order 5: (h, s, F) = (13, 3, 15) and
+  (15, 3, 15), 3 arc reversals apart, and 27 profile pairs at order 6. Unit start is exactly what makes order 7 the
+  first.
+- B itself is already in the repository: it is the order-7 nested core of the named H = 170807 source
+  (`zero_ready_component_returns_20261103/component/COMPONENT.md` line 141).
+- New here: A, the pair, the routes, the uniqueness at order 7 and the counts at orders 8-14.
+
 **What it does not give.** The values h + 2^m F form one exponentially sparse family per pair. The +-2 step moves inside
 that family. Nothing in it produces a parent near N/3, the 3H + 2 / 3H + 4 step of the C2 births (THM-4862), which
 full spectrum coverage needs. So the prompt's caveat is correct.
+
+A one-line check: 29 + 157 * 2^m is congruent to 2 + (-1)^m (mod 3), so the lower wrapper is never 2 mod 3. Session190's
+spectrum packet (CP3, section 5.1) proves that the pair cannot give the ternary parent.
 
 **Beyond order 7.**
 - Unique-start rooted strong tournaments are counted by F(2n - 4) (FUNNELS F2, `polarized_path_calculus_20261103`).
@@ -147,8 +184,11 @@ For n >= 7, every sole-exit-free tournament with 4 or 5 Hamiltonian cycles is as
 | Z_3 | 1 | 3 | 8 | 21 | 55 | 144 | 377 | 987 | 2,584 |
 
 **For the prompt** (INTERPRETATION).
-- The five values {2, 5, 13, 34, 89} are u_3(6..10). By symmetry they split into consecutive Fibonacci pairs:
-  1 + 1, 2 + 3, 5 + 8, 13 + 21, 34 + 55. The trivial group takes the smaller part and Z_3 the larger.
+- The five values {2, 5, 13, 34, 89} are u_3(6..10): klein's HYP-9459 (2), proved as THM-4869, also recorded in HYP-9464
+  (C) and in mac-mini's `cpq_defect_family_mirror_folds_20261104.md` section 0. By symmetry they split into consecutive
+  Fibonacci pairs:
+  1 + 1, 2 + 3, 5 + 8, 13 + 21, 34 + 55. For n >= 7 the trivial group takes the smaller part and Z_3 the larger (at
+  n = 6 the parts are 1 + 1).
 - So the Fibonacci recursion F(2n - 9) = F(2n - 10) + F(2n - 11) is this symmetry split.
 - Z_3 is the rotation group of the triangle, a cyclic planar group in Maschke's list. This is consistent with
   kind-pasteur's observation that tournament symmetry is planar iff it is cyclic. C_2 cannot act on a tournament, so on
@@ -170,13 +210,20 @@ re-derived here.
 - the switching points: N(a_n) = n via W_(-1) (n = 3, 8);
 - the 200-term Euler-transformed interval series reproduces C_MRB to 40 digits, as in the note's table.
 
-A cautionary echo of the note's warning: mpmath's default extrapolation of the *paired* series gave 0.19164, which is
-wrong. Its alternating-series and Euler-Maclaurin methods give the correct value.
+**A cautionary echo of the note's warning.** One mpmath extrapolation of the *paired* series returned 0.19164 here,
+which is wrong. The S76 audit did not reproduce that exact value in 36 set-ups. On the paired series the alternating,
+Levin and Richardson methods give 0.192-0.197; on the unpaired series Euler-Maclaurin gives 0.171 or 0.180. The correct
+value comes from the alternating method on the unpaired series and from Euler-Maclaurin on the paired series.
+
+The reproducible MRB checks are the audit's `aud_mrb.py`. Two observations for the owner:
+- the attachment's table is labelled M = 51..201, but its code prints M = 50..200;
+- the 200-term value is right to 67 digits; "40 digits" was a precision limit.
 
 **The two branches are the previous prompt's mirror** (ANALOGY with an exact identity).
 - On t = n^(1/n) - 1, the W_(-1) branch returns x = n (> e).
 - The W_0 branch returns the mirror r_n < e with r_n^(1/r_n) = n^(1/n): r_3 = 2.478, r_4 = 2, r_5 = 1.765,
-  r_8 = 1.4625. This is session31's mirror map.
+  r_8 = 1.4625. This is session31's mirror map. The same reading is in mac-mini's same-day note (section 5, 14:44)
+  and in the S75 note.
 - So the "same value realized twice on either side of the peak" is literally the pair of real Lambert-W branches.
 - The note's parity selector lives on the far branch (switches accumulating at t = 0, x -> infinity). The mirrors
   accumulate at x -> 1.
@@ -194,7 +241,8 @@ wrong. Its alternating-series and Euler-Maclaurin methods give the correct value
 | planar hypohamiltonian/hypotraceable against square-sum | THM-4870 (C) | no Q_N with N >= 3 is hypo-anything; vertex-deletion data |
 | Maschke, the fives, {2,5,13,34,89} | THM-4870 section 4; section 2 here | tournament symmetry is planar iff cyclic; the five values split as {1, Z_3} Fibonacci pairs |
 | trivial group, C_2, {7, 21} | THM-4870 (B) | the asymmetric spectrum misses exactly {3, 7, 21} through H <= 1125 |
-| {-3}-self duality at order 10 | HYP-9464 (kind-pasteur, pending) | TT_10 and AT_10 (H = 257 = F_3) predicted |
+| (not in this prompt) {-3}-self duality at order 10 | HYP-9464 (kind-pasteur, confirmed at 15:34, 9aa6e0836f) | TT_10 and AT_10 (H = 257 = F_3) |
+| the same first half, independently | Session190 CP1/CP2 (`session190_constructive_links_20261104/`) | planar and square-sum deletion cards; Walsh coupling with no natural bijection; SO(3)/Maschke, P_7 with F_21; signed edge stabilisers 1 or C_2 |
 
 ## 5. Typing
 
@@ -217,9 +265,46 @@ and <= 12 (symmetry). All hold:
 - P2: 46,368 classes, all with s = 1;
 - P3: 8 pairs at order 14.
 
+**Typing of the predictions** (S76 audit, m10). P2 is the PROVED F2 count, and P1 follows from the proof sketch. Both
+are consistency checks. P3 is a low-risk existence prediction. The order 10-13 counts quoted in HYP-9465 had no
+committed output at 9036e4dcb9.
+
 ## 7. Audit
 
-(Filled after the independent audit.)
+Independent adversarial audit:
+[`AUDIT.md`](../../04-computation/experiments/unit_start_pm2_pairs_20261104_audit_S76/AUDIT.md). Verdict:
+**PASS WITH CORRECTIONS.**
+
+**Reproduced with different methods.**
+- Burnside counting at order 7;
+- a different unit-start generator, checked by brute force through order 8;
+- its own census, canonical form and automorphism counter for the symmetry split (orders 6-14);
+- the literal wrappers, m = 1..5;
+- the MRB checks to 40-60 digits.
+
+The Theorem B proof is correct.
+
+**Majors (provenance only), applied.**
+- **M1.** Session190's CP1 and CP2 had answered the same first half before this session's first commit.
+- **M2.** The +-2 clocked adjustment has prior art: Session176's gate H = 6 * 2^r -+ 1, Session185, non-unit pairs at
+  order 5, and B as the core of the 170807 source.
+
+**Minors, all applied.**
+- The 47/91 counts.
+- Order ranges in the title.
+- Proof dependencies.
+- The general wrapper proof, credited to the zero-ready clock.
+- Arc sets of the routes.
+- The scope of "port response".
+- The source of {2, 5, 13, 34, 89}.
+- MRB wording and credits.
+- The section 4 rows.
+- Typing of the predictions.
+- Stale program comments.
+- The n = 6 wording and the mod-3 check.
+- The INDEX lines.
+
+**Logged as MISTAKE-711.**
 
 ## 8. Reproduction
 
