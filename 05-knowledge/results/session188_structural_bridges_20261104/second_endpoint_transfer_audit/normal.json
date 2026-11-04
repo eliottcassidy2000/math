@@ -1,0 +1,41 @@
+{
+  "actual_graph_occurrences": 1556,
+  "checker_sha256": "6b555ebbe9f8a4748b51abdefa7abf4a91dff1591cba1b13fee65a16be5aa862",
+  "complete_profile_coordinates_checked": 4668,
+  "complete_quotient_cases": 1099,
+  "complete_small_physical_controls": 772,
+  "counter_sha256": "8bbd6a9f7d28c7f76b09e078f7189c08572de22fc458246d3ee0a15769257eb5",
+  "dependency_pins": {
+    "highest_quotient_reduction/PROOF.md": "95437f44021ca708bfa2fde42637e53179ddb81a5cf93341c3bffa602e1b4678",
+    "mod8_transfer/PROOF.md": "aaf6c9325b34b03187771d0731b3a6d6e9b9d31e25238d8adb4a9267fcb46521",
+    "module_decomposition/PROOF.md": "33f33731f3f21037a03e6a4eb9bcc11c746c5124439e49603e7c8faabe2565bc",
+    "monotone_dual_queries/PROOF.md": "f617b74aa6c9545e945d6c5f6d8258049a9dd68f3127c5252542b2592f746d5f",
+    "parity_profile_transfer/PROOF.md": "77994a1898361f12087b49914f991b150b0a0b41b4e9e846318ebe52116cfcdb",
+    "prime_eight_uniform_anchor/PROOF.md": "ba091e78bfd55be80e03826883d35970a20014de7f550dccee52ad4e6c4fdd60",
+    "uniform_block_starts/PROOF.md": "a3e44ac3ef099401971e055e42186ebf2674328483f12a1c00b3513543be5345"
+  },
+  "distinct_actual_graphs": 784,
+  "explicit_return_swap_words": 15702,
+  "literal_repeated_label_cases": 5405,
+  "singleton_boundary_values": [
+    [
+      771,
+      26490,
+      341604
+    ],
+    [
+      2403,
+      55074,
+      542844
+    ]
+  ],
+  "source_sha256": {
+    "PROOF.md": "580f8bd75bc27ea76454a3d77b6c982e8143a9d9b5761c5fc80582142ec71f01",
+    "normal.json": "01975e0975d1777d233f2906ab782fb7eb8c94b32a92649287e0405a4960bd7f",
+    "optimized.json": "01975e0975d1777d233f2906ab782fb7eb8c94b32a92649287e0405a4960bd7f",
+    "physical.cpp": "3cfa9f77824f493db327504dd8b55b6e55b9de4c644853c3cb2d6e0b94889078",
+    "verify.py": "e79dd2cc79ad7b9e97afe8977e1c2da30e19a8b8ace4114a042270e7e630d3b9"
+  },
+  "special_prime_ambient_controls": 5,
+  "status": "PASS"
+}
