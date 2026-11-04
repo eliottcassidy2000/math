@@ -1,0 +1,72 @@
+{
+  "bank_rows": 218,
+  "first_attachment_H": 107175,
+  "hits": [],
+  "labelled_strong_counts": {
+    "1": 1,
+    "2": 0,
+    "3": 2,
+    "4": 24,
+    "5": 544
+  },
+  "physically_recomputed_inverse_candidates": 867,
+  "source_sha256": {
+    "PROOF.md": "b3edee672f8352719f2d8e14dd6cb97ad9d6ddbf0385501ba8bfb1163f0b2245",
+    "bank.json": "45cd9362c659091f1146814584cd0c6c91453d9ffabe0e9e83fd43d47da1aa6f",
+    "escape_witnesses.json": "c548deadd430eb7a1ddec86f810cea0f1f0c1aa2bab851db240fc75412be3d76",
+    "inherited.py": "e4c640c8b559beb83ce10bf70b22026def7eaa714101ee78a78e9a237593cbb3",
+    "verify.py": "4d72e1c5c876dd8c92e7a959a6d6b3432bfcae0acec94adbdbf7e6850270ba60"
+  },
+  "status": "PASS",
+  "strong_types": 9,
+  "witnesses": [
+    [
+      "24",
+      [
+        469,
+        973,
+        1981
+      ]
+    ],
+    [
+      "44",
+      [
+        979,
+        1987,
+        4003
+      ]
+    ],
+    [
+      "242",
+      [
+        1409,
+        2921,
+        5945
+      ]
+    ],
+    [
+      "244",
+      [
+        2923,
+        5947,
+        11995
+      ]
+    ],
+    [
+      "442",
+      [
+        1427,
+        2939,
+        5963
+      ]
+    ],
+    [
+      "444",
+      [
+        673,
+        1429,
+        2941
+      ]
+    ]
+  ]
+}
