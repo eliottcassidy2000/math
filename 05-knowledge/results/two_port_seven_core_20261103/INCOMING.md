@@ -2,7 +2,8 @@
 
 Read clean baseline b38b53196388 after the prior packet ccfaa81587. Read
 incoming1eb1a780c1,9269928211 and654cec6a41 before integration, then
-5af5161fb9 and b486271d24 at the clean rebase. This file records
+5af5161fb9 and b486271d24 at the clean rebase, and8923c5fa5e after a
+concurrent push. This file records
 mathematical dependencies and their limits, not a replacement chronology.
 
 ## Session181: named defect rather than a scalar reset
@@ -98,6 +99,52 @@ only by stated bounded suffix/prefix menus. Their root port sizes6,1,3
 and defects129308,0,42972 again match the singleton criterion. Finite
 native certificates are credited to that packet; they do not close its
 branching construction and do not resolve the present reconstruction target.
+
+## Concurrent forest transport: an exact map to the retained three-path tensor
+
+The [forest-polynomial grammar](../multiport_defect_grammar_20261103/transport/PROOF.md)
+records unordered spanning path covers by their paired active endpoints,
+with z counting components whose two endpoints are forgotten. This admits
+an exact readout of our D tensor. For labels i,j,k,l with all distinct
+except possibly j=k, retain active set P={i,j,k,l}. Write `C_T[kappa](z)`
+for that grammar's coordinate and let * denote a forgotten endpoint. Then
+
+```text
+D_(i,j,k,l) = [z^0] sum C_T[{a,(j,k),b}](z),
+     a in {(*,i),(i,i)},  b in {(l,*),(l,l)}.
+```
+
+The middle pair(j,k) singles out the middle path (a singleton when j=k).
+The component ending at i is the first path; the one starting at l is the
+third. Their other endpoints are either forgotten or their own singleton
+vertex. Coefficient z^0 forbids extra anonymous components. These choices
+give mutually inverse maps between each forest counted on the right and
+each ordered three-path cover on the left, with no factorial multiplier.
+All other endpoint coincidences give zero by disjointness. This is an
+exact observer map retaining precisely the four endpoint constraints.
+
+This map does **not** say that scalar two-port queries recover the whole
+forest state, nor that forgetting is reversible. Incoming's hostile0->1
+versus1->0 has the same fully forgotten polynomial z+z^2 but different
+H values1 and3 after a cut distinguishes the old names. The carrier's
+future-birth rule must remain uniform on forgotten vertices. Its higher
+component layers matter for iterated flips even when today's observer
+reads only two or three paths; the actual five-component mixed term396
+is an explicit supplied hostile to truncation.
+
+The incoming [positive defect potential](../multiport_defect_grammar_20261103/DEFECT_POTENTIAL.md)
+also gives a direct extension of the B5 comparison. For a fixed deletion
+D=T-r and actual in-neighbours I,
+
+    b_r=sum_(i in I) S_i(D)+sum_({i,j} subset I)(C_ij(D)+C_ji(D)).
+
+Positive pair weights imply b_r>=|I|(|I|-1). Thus zero readiness requires
+I empty, or I={i} with S_i(D)=0. B5 is the ordered-prefix specialization
+where those start terms vanish. The result is a restriction on the actual
+root star; changing the deletion graph changes the coefficients, so this
+potential is not a decreasing rank for arbitrary edits. The incoming strong
+tripling channel and its preparation obligations remain separate from the
+present reconstruction and unit-distance questions.
 
 These incoming finite results are credited as inherited certificates. The
 present packet independently proves B1-B5 and the geometric/list results;
