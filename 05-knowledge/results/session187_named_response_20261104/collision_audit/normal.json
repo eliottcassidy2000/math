@@ -1,0 +1,24 @@
+{
+  "contrasts": [
+    {
+      "degree": 4,
+      "key": "arbitrary_difference",
+      "nonzero": 290
+    },
+    {
+      "degree": 3,
+      "key": "global_converse_difference",
+      "nonzero": 200
+    }
+  ],
+  "independent_full_truth_queries": 12288,
+  "literal_coloring_controls": 45,
+  "no_common_homogeneous_pair": true,
+  "source_hashes": {
+    "PROOF.md": "491dc3d42678c41ce6b05d5adefd340dc6ec926fb182f1d8698f8198b2c75032",
+    "receipt.json": "1685027acca8554824ba680103e0ee615ff686a1297779826bdbcb68e7437e66",
+    "verify.py": "4710260320cb21a850abf50f53eea2a5e276549a6e15ffe489b4f60e7280188e"
+  },
+  "status": "PASS",
+  "strong_T_U": true
+}
