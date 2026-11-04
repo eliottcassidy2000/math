@@ -1,0 +1,70 @@
+{
+  "H_bound": 39916800,
+  "coefficient_vector": [
+    -2756654916959793711894994556905685760,
+    72943657112400893970868442880,
+    533607768637358688000,
+    -10019483308800
+  ],
+  "contrast_at_threshold": 17479484165403215441873291520,
+  "contrast_before_threshold": -130041337668480578857116176640,
+  "cover_bound_violations": [
+    {
+      "k": 2,
+      "q_k": 1050002046,
+      "universal_word_cut_bound": 399168000
+    },
+    {
+      "k": 3,
+      "q_k": 5250171006,
+      "universal_word_cut_bound": 1796256000
+    },
+    {
+      "k": 4,
+      "q_k": 8403498000,
+      "universal_word_cut_bound": 4790016000
+    }
+  ],
+  "descent_coefficients": [
+    35000001,
+    700002036,
+    -2624847363,
+    2203488,
+    11559738114,
+    -19304275752,
+    11559738114,
+    2203488,
+    -2624847363,
+    700002036,
+    35000001
+  ],
+  "factorial_divisibility": true,
+  "first_even_positive_weight_in_this_ray": 34722116,
+  "h": 9,
+  "order": 11,
+  "positive_contrast": 20457251690201969885400943894314240,
+  "q": [
+    0,
+    35000001,
+    1050002046,
+    5250171006,
+    8403498000,
+    4229607600,
+    129230640,
+    322494480,
+    479001600,
+    419126400,
+    199584000,
+    39916800
+  ],
+  "scope": "H-bounded artificial same-parity cone counterexample, not a tournament profile or full-response collision.",
+  "small_generator": 5,
+  "source_sha256": {
+    "covered_ambient/PROOF.md": "e1696d6830d41ad95a0bd7b2d91ca4f3116312d304e739211f79a1d8eeddf5e3",
+    "covered_response/verify.py": "9eeb8889b3fbc49c294c62a969983d3ce95ccc0cff45811cdd5b34ebb8a1e836",
+    "profile_cone_hbound/PROOF.md": "d5ffc68a0c7486d9913c1e1771d50d15e18b430ce84973a2b09ab3321b12d285",
+    "profile_cone_hbound/verify.py": "f809acb796ea4ffe1fdb05718324879a42c62f6b43c3fe7d34c7dcaa78c7e3eb"
+  },
+  "status": "PASS",
+  "weight": 35000000
+}

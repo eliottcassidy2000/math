@@ -1,0 +1,55 @@
+{
+  "cover_bound_violations": [
+    2,
+    3,
+    4
+  ],
+  "derivative_positive_lower_bound": 25050000600740831833529556480,
+  "descent_coefficients": [
+    35000001,
+    700002036,
+    -2624847363,
+    2203488,
+    11559738114,
+    -19304275752,
+    11559738114,
+    2203488,
+    -2624847363,
+    700002036,
+    35000001
+  ],
+  "independent_coefficient_vector": [
+    -2756654916959793711894994556905685760,
+    72943657112400893970868442880,
+    533607768637358688000,
+    -10019483308800
+  ],
+  "profile": [
+    0,
+    35000001,
+    1050002046,
+    5250171006,
+    8403498000,
+    4229607600,
+    129230640,
+    322494480,
+    479001600,
+    419126400,
+    199584000,
+    39916800
+  ],
+  "scope": "Hamilton-bounded artificial cone obstruction, explicitly not tournament-realizable.",
+  "source_pins": {
+    "PROOF.md": "d5ffc68a0c7486d9913c1e1771d50d15e18b430ce84973a2b09ab3321b12d285",
+    "receipt.json": "d4c0a6907affa58e57396b5182b4a93826075a9f5f9d4506bca1b8351a321c9f",
+    "receipt.optimized.json": "d4c0a6907affa58e57396b5182b4a93826075a9f5f9d4506bca1b8351a321c9f",
+    "verify.py": "f809acb796ea4ffe1fdb05718324879a42c62f6b43c3fe7d34c7dcaa78c7e3eb"
+  },
+  "status": "PASS",
+  "threshold": 34722116,
+  "threshold_adjacent_values": [
+    -130041337668480578857116176640,
+    17479484165403215441873291520
+  ],
+  "value": 20457251690201969885400943894314240
+}
