@@ -1,6 +1,6 @@
 {
-  "scope": "Direct inherited inputs reviewed at the integrated revision; Session176 synthesis coverage sentence corrected locally before hashing.",
-  "source_revision": "14be4d33316710d4a7094fc59ae1abefa7447850",
+  "scope": "Direct inherited inputs reviewed after integrating through0e8fc761a0; source hashes are authoritative. Session176 synthesis coverage sentence corrected locally before hashing.",
+  "source_revision": "0e8fc761a0",
   "sources": [
     {
       "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
@@ -25,6 +25,10 @@
     {
       "path": "05-knowledge/results/adaptive_state_induction_20261103/two_port_envelope.json",
       "sha256": "fc14da2ead29fa9c9fe5218ad96c87bce606c0cf41f5f0d5a4325917ebaeeafe"
+    },
+    {
+      "path": "05-knowledge/results/circuit_flow_tournaments_20261103/PROOFS.md",
+      "sha256": "0655b677c715a7e208cb5591447fb424f71c9aee6ee24902476e30380c7a6315"
     },
     {
       "path": "05-knowledge/results/coverage_machine_induction_20261103/axiom/AXIOM.md",
@@ -71,6 +75,22 @@
       "sha256": "dc683f94f9ffcc8de2b3208626ec71dc3154c715cd7f7bdfcc8adc55b535d535"
     },
     {
+      "path": "05-knowledge/results/return56941_two_feedback_20261103/README.md",
+      "sha256": "c4ab62f14902950031a4482a0f7261ca47b9c86bfadbe6d383f802b577a28792"
+    },
+    {
+      "path": "05-knowledge/results/return56941_two_feedback_20261103/RETURNS.md",
+      "sha256": "1943a19a3017e485007c5ac53e98ef8757488149e4660dcae8eb6e19d993d586"
+    },
+    {
+      "path": "05-knowledge/results/return56941_two_feedback_20261103/TRANSPORT.md",
+      "sha256": "ca79b0cf1834242a1ae3e9eb2b790fd9e4858be0a9e089d8c6019949bda9bab1"
+    },
+    {
+      "path": "05-knowledge/results/return56941_two_feedback_20261103/TWO_FEEDBACK.md",
+      "sha256": "1c876c5e737c665d94858160762f6633ab3314aa48a9e2c9ee3c9a92d77aef48"
+    },
+    {
       "path": "05-knowledge/results/second_feedback_18979_20261103/PROOFS.md",
       "sha256": "2246ef7cb50c52db88305a1b9b9c0be58376d96b0be7f66d3f1a32870462d2eb"
     },
@@ -109,6 +129,10 @@
     {
       "path": "05-knowledge/results/session176_tournament_information_20261104/synthesis/NOTE.md",
       "sha256": "e426e30de12da858c8ac634c6248599cf2ddf0355483c7db407cd4ce36441716"
+    },
+    {
+      "path": "05-knowledge/results/session178_prime_flow_honeycomb_20261104/unification/NOTE.md",
+      "sha256": "b31e8509963012efb0836e4faa94d27b8f89bdc636c6a0f80c670cb8a5ca872c"
     },
     {
       "path": "05-knowledge/results/tournament_joint_parity_20261102/growth_obstruction.md",

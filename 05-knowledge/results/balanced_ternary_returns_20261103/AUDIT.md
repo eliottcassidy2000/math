@@ -4,6 +4,13 @@
 checks use a different path enumeration, state representation, or graph
 construction where stated. No theorem is justified merely by a numerical fit.
 
+A separate independent agent reviewed the final all-order C_2 obstruction,
+the guarded three-arc minimum, and the graded cover, rigidity, bridge and
+mod49 arguments. All passed within their stated scopes. Its sole wording
+correction specifies the first C_m output, rather than suggesting H59 is
+the first balanced source overall. No extra enumeration was used in this
+proof review.
+
 ## Proof obligations reviewed
 
 The relative SCC reduction uses both strongness of the old source and the

@@ -1,19 +1,19 @@
 {
   "files": [
     {
-      "bytes": 5490,
+      "bytes": 5873,
       "path": "AUDIT.md",
-      "sha256": "14091dbbc37a02d95f0acbf105fab25a3a446de0f78e6df0640576505c1b6144"
+      "sha256": "b8dcc50e649ebec7e7d215b847f1a265477ba6f72a542eb8da06340a5d1c5233"
     },
     {
-      "bytes": 4329,
+      "bytes": 6785,
       "path": "INCOMING.md",
-      "sha256": "83a8a9f1ae0429942b21a37d537c41d0458c1b6f8d92b2edeee3cc61d759ebfe"
+      "sha256": "f8285d8e9acae8ad2d8ac525239fab368ba8a20a64da53d2b9216ef0746efea5"
     },
     {
-      "bytes": 8286,
+      "bytes": 8274,
       "path": "README.md",
-      "sha256": "f9773ac9df269edff9bf38bcd919d303d0d3233e981e3eb4e0001ff0b3fc0817"
+      "sha256": "c9e1b5874b635ded4c294e63e6c4aab9d6d02551f2ce4aecdbef1fbeab6ce9ee"
     },
     {
       "bytes": 5196,
@@ -171,9 +171,9 @@
       "sha256": "6b6b0a3e09eb28797ec93d876427c77cd9c67a2fee151b7d48c7af8068df5f4d"
     },
     {
-      "bytes": 5813,
+      "bytes": 6920,
       "path": "sources.json",
-      "sha256": "154d3bf13a5d0add69cb7522a6d09914ee6b9f1de842fd49930703c599b9ab80"
+      "sha256": "00205d2b6625a1bb867ce674b97379b4dc4d6efb9891d9afded9e4a952e46808"
     },
     {
       "bytes": 7912,
@@ -213,7 +213,7 @@
     {
       "bytes": 3408,
       "path": "verification.json",
-      "sha256": "1f00e6313d0a61a71ae82b1d6f8496a917085682e2db42851c50a74e02e08f26"
+      "sha256": "54e62b5c470b15f0b098690545356cb72ecd8118c4576c37cd0561169c113036"
     }
   ],
   "scope": "Content hashes of the scoped research packet, excluding this manifest. Mathematical statuses and universes are declared in README.md and AUDIT.md.",

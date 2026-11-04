@@ -4,8 +4,8 @@
 certificates / CONDITIONAL induction reformulation.** The claim that every
 positive odd Hamiltonian-path count except 7 and 21 occurs remains **OPEN**.
 
-The strongest new result changes the induction's premise. The first actual
-balanced output, with H=59, cannot reach the prime 181=3*59+4 by any sequence
+The strongest new result changes the induction's premise. The first C_m
+output, with H=59, cannot reach the prime 181=3*59+4 by any sequence
 of births retaining its old arcs, at any order. Interior insertion repairs
 other branches, but a reusable construction must sometimes change the old
 source relation. An explicit native excursion repairs this particular

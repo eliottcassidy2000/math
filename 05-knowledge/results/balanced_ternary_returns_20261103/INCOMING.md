@@ -73,3 +73,42 @@ The six incoming commits through f9b895a65f were rebased into the clean
 checkpoint before final verification. The stale80,557 current-frontier
 sentence in Session176 was corrected to the inherited99,999 bound with
 its original source; both synthesis checkers were rerun in both modes.
+
+## Later incoming checkpoint: distinguish the two defect sectors
+
+Thirteen further commits through0e8fc761a0 were integrated before pushing.
+The relevant [moving-mark returns](../return56941_two_feedback_20261103/README.md)
+provide seven actual next targets and another complete empty one-ready
+fibre. Their [graded feedback law](../return56941_two_feedback_20261103/TRANSPORT.md)
+sends one-ready to three-ready in the q-s>0,delta=0 sector. Our H35 chart
+instead has q=s and delta>0. Both retain extra attachment data, but these
+are different interfaces. On their guarded family the extra three-run
+phase is already recovered by a golden coordinate; it is not a universally
+missing coordinate. Their [clone return analysis](../return56941_two_feedback_20261103/RETURNS.md)
+meets the same one-time equation 2^s=3*2^r+2 through a different actual
+source. No graph-family identification follows.
+
+Their native returns change old arcs, even when every old name survives.
+They therefore respect the distinction made by our induced-source
+obstruction. Their two-feedback exclusion also fixes its exterior and
+block-size clock; it is not an arbitrary-feedback or source-change theorem.
+An independent read-only review of these four incoming notes found no
+conflict with the present scopes.
+
+The incoming [circuit flow](../circuit_flow_tournaments_20261103/PROOFS.md)
+gives an actual H611 native reset preserving all names and the root star
+while changing F by44. Its gate-order error on a general module is
+-72*pc_3(A). This is a possible source of measured corrections for G6,
+but it is not yet a realization of the needed correction2 or4 at our
+specified sources. A root-marked joint transport law and an actual matched
+source remain necessary before composing it with the graded bridge.
+
+Finally [Session178's observer sequence](../session178_prime_flow_honeycomb_20261104/unification/NOTE.md)
+applies to a finite connected graph of actual source states and legal
+operations when every edge identity is retained. Identifying equal
+observers can create a closed signed edge chain with nonzero endpoint
+boundary inside the observer fibres. This precisely separates a modular
+return from a matched source return. The source graph, the observer map,
+and each original endpoint are required sidecars; zero boundary still
+does not certify an ordered executable trajectory. No finite-controller
+closure or full-spectrum consequence is inferred from this connection.
