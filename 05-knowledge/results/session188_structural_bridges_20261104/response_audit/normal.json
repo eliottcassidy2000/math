@@ -1,0 +1,331 @@
+{
+  "claim_review": "Repeated-label formulas, universal order-four ceiling, sharp strong order-five witness, and all-order transitive twin proof pass.",
+  "counts": {
+    "disjoint_pairs": 1284,
+    "double_shared_zero": 650,
+    "literal_queries": 16728,
+    "quartics": 5078,
+    "shared_name": 3144,
+    "tournaments": 97,
+    "transitive_twin_cases": 63
+  },
+  "limitations": "No full-response collision, named reconstruction, or hidden prime-core exclusion claimed.",
+  "status": "PASS",
+  "twin_records": [
+    {
+      "coefficient": 0,
+      "m": 2,
+      "root_mask": 0
+    },
+    {
+      "coefficient": 0,
+      "m": 2,
+      "root_mask": 1
+    },
+    {
+      "coefficient": 0,
+      "m": 2,
+      "root_mask": 2
+    },
+    {
+      "coefficient": 0,
+      "m": 2,
+      "root_mask": 3
+    },
+    {
+      "coefficient": 2,
+      "m": 3,
+      "root_mask": 0
+    },
+    {
+      "coefficient": 2,
+      "m": 3,
+      "root_mask": 1
+    },
+    {
+      "coefficient": 2,
+      "m": 3,
+      "root_mask": 2
+    },
+    {
+      "coefficient": 2,
+      "m": 3,
+      "root_mask": 3
+    },
+    {
+      "coefficient": 2,
+      "m": 3,
+      "root_mask": 4
+    },
+    {
+      "coefficient": 2,
+      "m": 3,
+      "root_mask": 5
+    },
+    {
+      "coefficient": 2,
+      "m": 3,
+      "root_mask": 6
+    },
+    {
+      "coefficient": 2,
+      "m": 3,
+      "root_mask": 7
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 0
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 1
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 2
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 3
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 4
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 5
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 6
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 7
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 8
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 9
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 10
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 11
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 12
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 13
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 14
+    },
+    {
+      "coefficient": 4,
+      "m": 4,
+      "root_mask": 15
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 0
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 1
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 2
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 3
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 4
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 5
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 6
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 7
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 8
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 9
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 10
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 11
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 12
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 13
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 14
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 15
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 16
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 17
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 18
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 19
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 20
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 21
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 22
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 23
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 24
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 25
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 26
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 27
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 28
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 29
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 30
+    },
+    {
+      "coefficient": 8,
+      "m": 5,
+      "root_mask": 31
+    },
+    {
+      "coefficient": 16,
+      "m": 6,
+      "root_mask": 1
+    },
+    {
+      "coefficient": 32,
+      "m": 7,
+      "root_mask": 1
+    },
+    {
+      "coefficient": 64,
+      "m": 8,
+      "root_mask": 1
+    }
+  ]
+}

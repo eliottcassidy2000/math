@@ -1,0 +1,32 @@
+{
+  "encoding": "gzip then base64, concatenate chunks after ASCII whitespace removal",
+  "parts": [
+    {
+      "file": "receipt.json.gz.b64.part000",
+      "sha256": "1210d2a1e3c48c957db55899a345b60efb0f5dc311cacba0cfcf85354eecd647",
+      "size": 36001
+    },
+    {
+      "file": "receipt.json.gz.b64.part001",
+      "sha256": "81f731eca8e130267821acbfc73ba76cd5f959abace6ff25698fafe53ab99484",
+      "size": 36001
+    },
+    {
+      "file": "receipt.json.gz.b64.part002",
+      "sha256": "d7d8a143e4e0b7522cae5dd9878e31ec7d1399f7b840dac6f7db5cff56373a93",
+      "size": 521
+    }
+  ],
+  "outputs": [
+    {
+      "file": "receipt.json",
+      "size": 382239,
+      "sha256": "23eda0baa010795ec10410b8332c330baaaab5caec070ac0d93e2d18e87a1c9a"
+    },
+    {
+      "file": "receipt.optimized.json",
+      "size": 382239,
+      "sha256": "23eda0baa010795ec10410b8332c330baaaab5caec070ac0d93e2d18e87a1c9a"
+    }
+  ]
+}
