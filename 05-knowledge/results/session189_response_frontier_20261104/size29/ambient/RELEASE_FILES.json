@@ -1,0 +1,14 @@
+[
+  "PROOF.md",
+  "DEPENDENCIES.json",
+  "verify.py",
+  "cycle_parity.cpp",
+  "cycle_parity.tsv",
+  "extra_input.txt",
+  "extra_residues.tsv",
+  "extra_cycles.tsv",
+  "witnesses.tsv",
+  "physical_witnesses.jsonl.gz",
+  "small_checks.json",
+  "RELEASE_FILES.json"
+]

@@ -1,0 +1,38 @@
+{
+  "quotients": 2348,
+  "exceptional_five_placements": 21132,
+  "two_four_placements": 84528,
+  "inherited_five_placements": 21132,
+  "initial_queries": 14,
+  "initial_misses": 11,
+  "extra_queries": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      17
+    ]
+  ],
+  "physical_witness_pairs": 126792,
+  "physical_graphs": 253584,
+  "endpoint_union_queries": 24,
+  "histogram": {
+    "3": 7382,
+    "0": 63683,
+    "2": 15625,
+    "7": 962,
+    "4": 3839,
+    "6": 1985,
+    "1": 32348,
+    "8": 454,
+    "9": 256,
+    "12": 28,
+    "10": 142,
+    "11": 67,
+    "14": 6,
+    "13": 10,
+    "15": 5
+  }
+}

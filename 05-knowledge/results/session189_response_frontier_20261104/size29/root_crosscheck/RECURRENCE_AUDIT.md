@@ -1,0 +1,25 @@
+# Independent root-bank recurrence check
+
+Scope: code-level mathematical audit of `../root_bank.cpp`, plus a bounded independent numerical cross-check described separately. This is not an exhaustive independent rerun of the root bank, nor certification of imported quotient data or all five-child profiles.
+
+A child-uniform augmented named Hamilton path has a unique maximal-run word on nine children and two singleton ports. Each original child occurs h times and is filled by an ordered spanning cover of h nonempty directed paths on its actual labeled vertices. Hence its factor is q_h, with no additional label quotient, h! correction, or multinomial. The ordered-cover definition is essential: the run positions distinguish the h paths. This accounts for every physical named contribution before reducing modulo 8.
+
+For the supplied normalized profiles C3=(1,2,2), five=(1,6,6,0,0), and four=(1,6,4,0), the first visit has factor 1, the second introduces factor 2, and the third has additional factor 1 in the baseline DP. Completion reweighting multiplies five visits 1/2/3 by 1/3/3, and four visits 1/2/3 by 1/3/2. The code implements exactly these integer multipliers, including products for pairs of distinct four positions. No division by an even residue is used.
+
+All normalized profiles in scope have even weights at h=2,3. Three distinct repeated children therefore force a factor divisible by 8, and their state can safely be omitted. The special fourth and fifth visits themselves have zero normalized weight modulo 8. For an actual ordered path-cover profile, q_h is divisible by h!, since permuting the nonempty paths acts freely. Consequently h=4,5 weights are zero modulo 8 independently of the specific child; multiplying by the inverse of odd q_1 preserves this. Thus no nonzero four/five-visit contribution is lost.
+
+The raw-state enumeration covers all nine occupancies 0..3 and two Boolean port occupancies, subject only to fewer than three repeated children. There are 4*(2^9+9*2*2^8+36*4*2^7)=94,208 states. Increasing a visit strictly increases raw state, so iteration is topological. Initialization places one unit at each possible first symbol. A transition follows exactly one augmented outgoing edge, increments exactly that symbol's occupancy, and applies factor 2 exactly at its second visit. Zero-state omission is safe because no nonempty word reaches it. Completion requires both ports and all nine children, and sums every possible last symbol.
+
+The target `aug` flips all off-diagonal edges among the nine quotient names only. Its old-to-port edges and x->y are identical to the source, and port-to-old edges are complementary to the fixed masks. Source and target therefore use the same names and query; no response relabeling occurs.
+
+Output order is baseline index 0; single-five positions 0..8 at indices 1..9; and distinct-four pairs (j,k), j<k, lexicographically at indices 10..45. Each completion is added to all outputs with the corresponding integer factors.
+
+The separate full-occupancy checker counts *unweighted* admissible run words, with every occupancy from 0 through the actual child order retained, including h=4 and h=5 and arbitrarily many repeated children. Only at a complete state does it multiply the complete physical q_h profiles and reduce modulo 8. This avoids both the producer's transition normalization and its repeated-child truncation. The graph/mask transport itself is implemented directly from the same specified quotient-only operation, not imported from the producer executable.
+
+## Bounded numerical result
+
+The completed full-grid recount contains 33 source/target pairs, hence 66 complete weighted physical counts on 29 old names plus the two actual ports. It covers all 11 configurations missed by the initial 14-query battery, at one of the selected queries (0,2) or (1,17); 20 initial-bank witnesses spanning all nine five positions and eleven pair-four columns; and two five-child code8 checks against the inherited C3 baseline. Every recounted physical pair agrees with the producer's normalized residues multiplied by the product of the actual q_1 factors, and every sample separates.
+
+The pair-four samples include both source-extended four children, one source and one strong, and both strong. The physical profiles used have independently been recomputed by enumerating all permutations of actual local names and all cuts into ordered runs. The full-grid checker never discards a child occupancy or repeated-child state, even when its final weight is zero. Files `manifest.json`, `input.txt`, and `output.txt` identify every sample, complete profile, factor, expected count and observed count. `physical_profiles.json` identifies the local labeled graphs. `check.py` uses explicit errors and not Python assertions.
+
+This bounded agreement plus the mathematical state audit supports the recurrence. It does not independently certify the 32,872-row full bank, all 46 columns of every row, the quotient census, family reduction, or ambient lifting.

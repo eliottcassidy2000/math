@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "five_labeled_sources": 1024,
+  "five_nontransitive_sources": 904,
+  "five_classes": 12,
+  "representative_family_outputs": 1122,
+  "labeled_family_outputs": 130288,
+  "nontransitive_labeled_family_outputs": 7408,
+  "profile_changing_classes": [
+    2,
+    5,
+    8,
+    11
+  ],
+  "named_coefficients": 24576,
+  "nonzero_cubics": 2184,
+  "nonzero_quartics": 2160,
+  "mod8_identity_controls": 1256,
+  "exact_exterior_controls": 672
+}

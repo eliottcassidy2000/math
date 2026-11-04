@@ -1,0 +1,15 @@
+{
+  "classes": 12,
+  "nontransitive_classes": 11,
+  "labeled_inputs": 1024,
+  "nontransitive_labeled": 904,
+  "family_outputs": 130288,
+  "nontransitive_family_outputs": 7408,
+  "profile_changing_classes": [
+    0,
+    2,
+    5,
+    8,
+    11
+  ]
+}

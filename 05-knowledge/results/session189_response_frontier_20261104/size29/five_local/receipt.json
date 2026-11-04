@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "method": "Independent ordered subset convolution profiles and symbolic seven-vertex permutation polynomials",
+  "summary": {
+    "classes": 12,
+    "nontransitive_classes": 11,
+    "labeled_inputs": 1024,
+    "nontransitive_labeled": 904,
+    "family_outputs": 130288,
+    "nontransitive_family_outputs": 7408,
+    "profile_changing_classes": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ]
+  },
+  "control_vectors": 24,
+  "all_named_coefficients": 24576,
+  "nonzero_coefficients_by_degree": {
+    "0": 24,
+    "1": 232,
+    "2": 1020,
+    "3": 2184,
+    "4": 2160
+  },
+  "sha256": {
+    "prepare.py": "8d3c0888835ad862ef5c84a56095e3cd16f107f97b362a116d30f61a6b3ef3b9",
+    "verify.py": "62c89a1b5335250038a15a9d69c9a17e45eb31df729a1d174712a8bb66c98c28",
+    "five_child_records.json": "d5a893eaa648da932170702b9da7760dc3212b1f9654478726b576f4d8d46cfc",
+    "named_controls.json": "f85e075b1d20bb3619535414600d9693b61940f3ed871ff32c45ac407deccf69",
+    "summary.json": "96c52aa1e932d6f00e7fb93a19ab2f08896849898a2884e875d87202b8f6c561",
+    "control_summary.json": "39c9fbfeb417a83e90493cd70b6ebaa56850090f66088aca6a3e84503696decb",
+    "PROOF.md": "782d6e80b70ec12248773dc0dfb636185fbcbddf3f79c02f807876449693e6c6"
+  }
+}

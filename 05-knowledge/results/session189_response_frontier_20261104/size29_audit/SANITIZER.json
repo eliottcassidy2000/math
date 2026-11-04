@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "scope": "Three root and three expanded cyclic-ambient quotient/query pairs; ASan/UBSan; leak detection disabled",
+  "commands": [
+    "g++ -O1 -g -std=c++17 -fsanitize=address,undefined -fno-omit-frame-pointer split_words.cpp -o split_words_san",
+    "g++ -O1 -g -std=c++17 -fsanitize=address,undefined -fno-omit-frame-pointer ambient_words.cpp -o ambient_words_san",
+    "ASAN_OPTIONS=detect_leaks=0 ./split_words_san < root_benchmark.in > root_sanitized.out 2> root_sanitized.log",
+    "ASAN_OPTIONS=detect_leaks=0 ./ambient_words_san < ambient_benchmark.in > ambient_sanitized.out 2> ambient_sanitized.log",
+    "cmp root_benchmark.out root_sanitized.out",
+    "cmp ambient_benchmark.out ambient_sanitized.out"
+  ],
+  "files": {
+    "split_words.cpp": {
+      "bytes": 2845,
+      "sha256": "c08d0a90c041cb43063c0c4c2c2b3f89abb78bb2328ad11df34bdc3d509210f1"
+    },
+    "ambient_words.cpp": {
+      "bytes": 2359,
+      "sha256": "9212a8feb5db0795818e497831283933c5cd8a8df9a96a741afea0cae6cec92c"
+    },
+    "root_benchmark.in": {
+      "bytes": 122,
+      "sha256": "1d15e7e752e64dc28425f5e8a5149c4a2e902f7dffdb73b492b3803548152035"
+    },
+    "root_benchmark.out": {
+      "bytes": 576,
+      "sha256": "5575158104ed1364540fccce6b1481452c0867a454f1e1e5cf78d31266741ca9"
+    },
+    "root_sanitized.out": {
+      "bytes": 576,
+      "sha256": "5575158104ed1364540fccce6b1481452c0867a454f1e1e5cf78d31266741ca9"
+    },
+    "root_sanitized.log": {
+      "bytes": 26,
+      "sha256": "6aa777737801e8168f3035c2286335a69ba14e552ba88d396122fe234827b4ff"
+    },
+    "ambient_benchmark.in": {
+      "bytes": 117,
+      "sha256": "ebcd7e00f8f201029a61c339c58abf3d00e84d22a026f064f4f27074dfbe8e06"
+    },
+    "ambient_benchmark.out": {
+      "bytes": 36,
+      "sha256": "bfb98eac0fb9ffb819f5667e9c3664c89438943b339b0cf126354354415d0616"
+    },
+    "ambient_sanitized.out": {
+      "bytes": 36,
+      "sha256": "bfb98eac0fb9ffb819f5667e9c3664c89438943b339b0cf126354354415d0616"
+    },
+    "ambient_sanitized.log": {
+      "bytes": 26,
+      "sha256": "73df8e190fdbb5cd6695c13e19d2c76d1f4187f42d8e89831187dc78201b81a0"
+    }
+  }
+}

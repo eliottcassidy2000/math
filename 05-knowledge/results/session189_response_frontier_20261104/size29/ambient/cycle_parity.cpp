@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;
+int cyc(vector<int> r){unsigned short d[2048]={};d[512]=512;for(int s=512;s<2048;s++){int ends=d[s];while(ends){int i=__builtin_ctz((unsigned)ends);ends&=ends-1;int todo=r[i]&~s;while(todo){int j=__builtin_ctz((unsigned)todo);todo&=todo-1;d[s|(1<<j)]^=1<<j;}}}int out=0;for(int i=0;i<11;i++)if((d[2047]>>i&1)&&(r[i]>>9&1))out^=1;return out;}
+int main(){int nq;cin>>nq;vector<pair<int,int>> qs(nq);for(auto &p:qs)cin>>p.first>>p.second;int n;cin>>n;cout<<"node";for(int j=0;j<nq;j++)cout<<"\tS"<<j<<"\tT"<<j<<"\tD"<<j;cout<<"\n";while(n--){int id;cin>>id;vector<int>q(9);for(int&v:q)cin>>v;cout<<id;for(auto[a,c]:qs){int p=0;for(int op=0;op<2;op++){vector<int>r(11);for(int i=0;i<9;i++)r[i]=(op?(511^q[i]^(1<<i)):q[i])|((a>>i&1)<<9)|((c>>i&1)<<10);r[9]=(511^a)|1024;r[10]=511^c;int z=cyc(r);cout<<"\t"<<z;p^=z;}cout<<"\t"<<p;}cout<<"\n";}}
