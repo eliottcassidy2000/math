@@ -64,7 +64,7 @@ By (i):
 | grandchildren with a digit-1 mark | 0 | 0 | 0 | 0 | 0 | 0 |
 | grandchildren with a digit-2 mark | 3 | 3 | 3 | 3 | 3 | 3 |
 
-The orders checked total 3,192 + 2,688 + ... (B, a) pairs and 28,728 grandchildren at order 7.
+Over orders 1-7 the check covers 3,613 pairs (B, a) and 31,973 grandchildren (28,728 of them at order 7).
 
 **Reading.** A ternary parent of N, a realiser of the unique odd predecessor with digit 0, 1 or 2, cannot be supplied
 hereditarily by C2. The same is true of:

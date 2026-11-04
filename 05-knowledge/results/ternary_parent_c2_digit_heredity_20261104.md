@@ -112,7 +112,7 @@ All three known self-reproducing routes stop at generation two.
 - So no single explicit digit-1 family is a ternary parent.
 
 **The any-mark one-step sweep** (`anymark_c2_digits_20261104`; a re-derivation of klein's height-two numeration).
-- From all 6,880 + ... classes of order <= 8, the odd v <= 1,500 that are not of the form h + 2B_a are
+- From all 7,412 classes of order <= 8, every mark, the odd v <= 1,500 that are not of the form h + 2B_a are
   {1, 7, 11, 13, 21, 47, 67}.
 - Only 65 of the 320 realised odd h <= 1,500 carry a digit-1 mark at orders <= 8, and 79 a digit-2 mark.
 
