@@ -1,0 +1,116 @@
+{
+  "status": "PASS: finite local construction only",
+  "method": "Explicit enumeration of all actual simple directed paths on each induced vertex set; exhaustive root-compatible relabelings and shortest edge orders.",
+  "conventions": {
+    "rows": "bit j of row i means i -> j",
+    "map": "p[i] is the original B label assigned to new label i",
+    "root_A": 2,
+    "root_B": 3
+  },
+  "endpoints": {
+    "A": {
+      "rows": [
+        6,
+        28,
+        8,
+        1,
+        109,
+        15,
+        47
+      ],
+      "root": 2,
+      "H": 29,
+      "s": 1,
+      "e": 10,
+      "F": 157,
+      "q": 15,
+      "strong": true,
+      "S2": 34,
+      "P2": 580,
+      "F_by_size": [
+        0,
+        15,
+        27,
+        27,
+        27,
+        27,
+        24,
+        10
+      ],
+      "H_by_size": [
+        1,
+        7,
+        21,
+        45,
+        75,
+        89,
+        71,
+        29
+      ]
+    },
+    "B": {
+      "rows": [
+        38,
+        28,
+        8,
+        1,
+        13,
+        94,
+        31
+      ],
+      "root": 3,
+      "H": 31,
+      "s": 1,
+      "e": 9,
+      "F": 157,
+      "q": 9,
+      "strong": true,
+      "S2": 31,
+      "P2": 644,
+      "F_by_size": [
+        0,
+        9,
+        25,
+        31,
+        28,
+        30,
+        25,
+        9
+      ],
+      "H_by_size": [
+        1,
+        7,
+        21,
+        47,
+        83,
+        109,
+        87,
+        31
+      ]
+    }
+  },
+  "root_compatible_relabelings": 720,
+  "distance_distribution": {
+    "4": 5,
+    "5": 22,
+    "6": 50,
+    "7": 82,
+    "8": 113,
+    "9": 132,
+    "10": 123,
+    "11": 95,
+    "12": 61,
+    "13": 26,
+    "14": 7,
+    "15": 3,
+    "16": 1
+  },
+  "minimum_edge_distance": 4,
+  "minimum_maps": 5,
+  "shortest_edge_orders": 120,
+  "all_strong_shortest_paths": 38,
+  "unit_start_shortest_paths": 0,
+  "minimum_peak_start_among_all_strong": 2,
+  "minimum_peak_H_among_all_strong": 41
+}
+Selected path: [(29, 1, 157), (41, 2, 134), (29, 1, 89), (25, 1, 121), (31, 1, 157)]

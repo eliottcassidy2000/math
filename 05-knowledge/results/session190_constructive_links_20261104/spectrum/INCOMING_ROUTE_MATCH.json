@@ -1,0 +1,37 @@
+{
+  "incoming_commit": "9036e4dcb9e1016ec42c11802ca193e6a09e6f34",
+  "incoming_path": "04-computation/experiments/plus_minus_two_port_routes_20261104.out",
+  "incoming_root": 0,
+  "session190_root": 2,
+  "incoming_arc_flips": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "permutation_convention": "p[i] is the incoming name corresponding to Session190 name i",
+  "permutations": [
+    [
+      2,
+      1,
+      0,
+      3,
+      6,
+      4,
+      5
+    ]
+  ],
+  "all_five_tournaments_match": true
+}

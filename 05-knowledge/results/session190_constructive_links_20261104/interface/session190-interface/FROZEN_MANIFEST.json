@@ -1,0 +1,11 @@
+{
+  "files": {
+    "PROOF.md": "f33466652c3d8a88b437185930da9034869e95327ba480c157d1360e4f3c7566",
+    "README.md": "0fc1208fea19bcd0b209770460ec73d9005590b427102a1e8d90761da4886758",
+    "RESULTS.json": "c8a3337459b6484ea61d6b99e6661be56824f45f06f1dedb8de344189b53164c",
+    "RESULTS.optimized.json": "c8a3337459b6484ea61d6b99e6661be56824f45f06f1dedb8de344189b53164c",
+    "verify.py": "1831f5eec0655ac178e024a654888893f65a152a3aa9342f9336d7d0b958e327"
+  },
+  "packet": "session190-interface",
+  "revision": "2: includes arbitrary-exterior parity corollary"
+}

@@ -1,0 +1,44 @@
+{
+  "checked_utc_date": "2026-11-04",
+  "repository_commit": "dcbe43e7fc9caf175baba4fef7b402fd9e3c51d9",
+  "sources": [
+    {
+      "title": "S188 return interface",
+      "url": "https://github.com/eliottcassidy2000/math/blob/dcbe43e7fc9caf175baba4fef7b402fd9e3c51d9/05-knowledge/results/session188_structural_bridges_20261104/returns/PROOF.md",
+      "use": "Fixed-quotient module-substitution boundary and response calculus."
+    },
+    {
+      "title": "S189 return interface",
+      "url": "https://github.com/eliottcassidy2000/math/blob/dcbe43e7fc9caf175baba4fef7b402fd9e3c51d9/05-knowledge/results/session189_response_frontier_20261104/returns/PROOF.md",
+      "use": "Four-core adapter and fixed-component spacing boundary."
+    },
+    {
+      "title": "Independently audited order-eight bank receipt",
+      "url": "https://github.com/eliottcassidy2000/math/blob/dcbe43e7fc9caf175baba4fef7b402fd9e3c51d9/05-knowledge/results/session189_response_frontier_20261104/prime8_audit/normal.json",
+      "local_copy": "inherited_bank8_receipt.json",
+      "bank_local_copy": "bank8.json",
+      "bank_sha256": "55409706be4f8c71f5e2b2cd0777c9c0f0f8de97eac4b174d648f50b638dc903",
+      "use": "Pins complete 6880-class input bank; primary receipt was refetched and hash matched."
+    },
+    {
+      "title": "Independent order-eight bank review",
+      "url": "https://github.com/eliottcassidy2000/math/blob/dcbe43e7fc9caf175baba4fef7b402fd9e3c51d9/05-knowledge/results/session189_response_frontier_20261104/prime8_audit/REVIEW.md",
+      "local_copy": "inherited_bank8_review.md",
+      "use": "Documents complete rooted extensions, independent canonicalization and disjoint labelled orbit-mass check."
+    },
+    {
+      "title": "Busch, A Note on the Number of Hamiltonian Paths in Strong Tournaments (2006)",
+      "doi": "https://doi.org/10.37236/1141",
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v13i1n3",
+      "access": "Publisher abstract read directly; full PDF unavailable.",
+      "use": "Lower bound H>=5^((n-1)/3); used only to exclude H<=201 at n>=11. No exact residue-dependent floor is needed."
+    },
+    {
+      "title": "Moon, On Subtournaments of a Tournament (1966), Theorem 1",
+      "doi": "https://doi.org/10.4153/CMB-1966-038-7",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/5D7CCBE66AB07BB3F90F771D1CD3CD08/S0008439500052875a.pdf/on-subtournaments-of-a-tournament.pdf",
+      "access": "Publisher original PDF read directly, page297, Theorem1.",
+      "use": "Cycles of all lengths through every vertex; a cycle of length n-1 gives a strong one-vertex deletion for n>=4."
+    }
+  ]
+}

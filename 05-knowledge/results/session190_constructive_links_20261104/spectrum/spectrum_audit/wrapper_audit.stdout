@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "method": "Explicit enumeration of simple directed paths in literal wrappers; no producer code imported.",
+  "selected_patch_controls": [
+    {
+      "k": 0,
+      "counts": [
+        185,
+        173,
+        117,
+        145,
+        187
+      ],
+      "endpoint_difference": 2
+    },
+    {
+      "k": 1,
+      "counts": [
+        343,
+        309,
+        207,
+        267,
+        345
+      ],
+      "endpoint_difference": 2
+    },
+    {
+      "k": 2,
+      "counts": [
+        657,
+        577,
+        385,
+        509,
+        659
+      ],
+      "endpoint_difference": 2
+    },
+    {
+      "k": 3,
+      "counts": [
+        1285,
+        1113,
+        741,
+        993,
+        1287
+      ],
+      "endpoint_difference": 2
+    },
+    {
+      "k": 4,
+      "counts": [
+        2541,
+        2185,
+        1453,
+        1961,
+        2543
+      ],
+      "endpoint_difference": 2
+    }
+  ],
+  "small_universe": "Every labeled tournament of orders 1 through 4, every root, k in {0,1,2}",
+  "small_universe_cases": 855,
+  "general_formula_k_ge_1": "H(W_k(T,v)) = H(T) + 2^k F_T(v)",
+  "boundary_formula_k_eq_0": "H(W_0(T,v)) = H(T) + F_T(v) - s_v(T)",
+  "strong_criterion_k_ge_1": "Every vertex of T reaches v by a directed path in T (length zero allowed).",
+  "all_k_nonovershoot_differences": [
+    "12 - 23*2^k",
+    "-68*2^k",
+    "-4 - 36*2^k"
+  ],
+  "all_k_endpoint_counts": [
+    "29+157*2^k",
+    "31+157*2^k"
+  ],
+  "excluded_conclusion": "No universal successor operation, arbitrary wrapped-order minimality, or global spectrum closure is established."
+}

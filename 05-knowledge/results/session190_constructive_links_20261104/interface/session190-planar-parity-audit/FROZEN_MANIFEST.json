@@ -1,0 +1,13 @@
+{
+  "files": {
+    "AUDIT.md": "771551748c60d2b95a9ea96599fd2ac63fdd4d2c56a8d8aa15dce1f4156430d5",
+    "PRODUCER_REPLAY.json": "c8a3337459b6484ea61d6b99e6661be56824f45f06f1dedb8de344189b53164c",
+    "PRODUCER_REPLAY.optimized.json": "c8a3337459b6484ea61d6b99e6661be56824f45f06f1dedb8de344189b53164c",
+    "RESULTS.json": "3929723a3d410b0f14634ee808ad7eb3f77a3f31b7897cede6a401660c97d189",
+    "RESULTS.optimized.json": "3929723a3d410b0f14634ee808ad7eb3f77a3f31b7897cede6a401660c97d189",
+    "audit.py": "6affd3549996e067584746e48a90f288d3c58e43b6845998a21928930e4303e4"
+  },
+  "packet": "session190-planar-parity-audit",
+  "producer_revision": 2,
+  "verdict": "PASS"
+}
