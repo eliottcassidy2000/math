@@ -1,0 +1,5 @@
+# gentourng -q n | ./twohc n  (C subset DP; orders 7-10; order 10 = 9,733,056 tournaments, single run ~25 min)
+order 7: 456 tournaments; exactly one Hamiltonian cycle: 21; exactly two: 18; out-degree-1 vertex counts among the two-cycle ones: 1:12 2:6
+order 8: 6880 tournaments; exactly one Hamiltonian cycle: 55; exactly two: 60; out-degree-1 vertex counts among the two-cycle ones: 1:36 2:24
+order 9: 191536 tournaments; exactly one Hamiltonian cycle: 144; exactly two: 191; out-degree-1 vertex counts among the two-cycle ones: 1:107 2:84
+order 10: 9733056 tournaments; exactly one Hamiltonian cycle: 377; exactly two: 589; out-degree-1 vertex counts among the two-cycle ones: 1:314 2:275
