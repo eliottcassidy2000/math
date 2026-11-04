@@ -1,0 +1,6 @@
+#include <cstdint>
+#include <iostream>
+#include <vector>
+using namespace std;
+uint64_t W(const vector<unsigned>&r,const vector<int>&k){int n=r.size(),states=1;vector<int> stride(n);for(int i=0;i<n;i++){stride[i]=states;states*=k[i]+1;}vector<uint64_t>d(states*n);for(int i=0;i<n;i++)d[stride[i]*n+i]=1;for(int st=1;st<states;st++){unsigned avail=0;for(int j=0;j<n;j++)if(st/stride[j]%(k[j]+1)<k[j])avail|=1<<j;for(int i=0;i<n;i++){auto v=d[st*n+i];if(!v)continue;unsigned z=r[i]&avail;while(z){int j=__builtin_ctz(z);z&=z-1;d[(st+stride[j])*n+j]+=v;}}}uint64_t out=0;for(int i=0;i<n;i++)out+=d[(states-1)*n+i];return out;}
+int main(){int nq;cin>>nq;for(int qq=0;qq<nq;qq++){vector<unsigned>Q(7);for(auto&v:Q)cin>>v;vector<vector<int>>ks(1,vector<int>(9,1));for(int i=0;i<7;i++)for(int k=2;k<=3;k++){vector<int>a(9,1);a[i]=k;ks.push_back(a);}for(int i=0;i<7;i++)for(int j=i+1;j<7;j++){vector<int>a(9,1);a[i]=a[j]=2;ks.push_back(a);}vector<int>ms;for(int a=0;a<128;a++)if(__builtin_popcount((unsigned)a)<=2)ms.push_back(a);for(int side=0;side<2;side++)for(int a:ms)for(int c:ms){auto r=Q;if(side)for(int i=0;i<7;i++)r[i]=127^(1<<i)^r[i];r.push_back(256|(127^a));r.push_back(127^c);for(int i=0;i<7;i++){if(a>>i&1)r[i]|=128;if(c>>i&1)r[i]|=256;}for(const auto&k:ks)cout<<W(r,k)<<" ";cout<<"\n";}cerr<<qq+1<<"/"<<nq<<"\n";}}

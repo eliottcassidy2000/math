@@ -1,0 +1,286 @@
+{
+  "format": "lossless-compressed-base64-parts-v2",
+  "archives": [
+    {
+      "path": "profiles/quotients.json",
+      "bytes": 84787,
+      "sha256": "cd7613fb8aee75f88498694579d05c56a0bf8192bb576e7f863eb1ba02bb3575",
+      "git_blob_sha": "ae380e74cd083a5276c1ea90f3fff41df73add38",
+      "compression": "xz",
+      "compressed_bytes": 5152,
+      "compressed_sha256": "aebe7148fa3b8c89fff21f64dbd99c7571fb7149979a02a6076843490c9ef48c",
+      "parts": [
+        "profiles/quotients.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "profiles/named_banks.json",
+      "bytes": 8407498,
+      "sha256": "e84c560fcc55f71f6628eb4988ac5f2f0d7f71c25be87d08d5a8f1d56dafa398",
+      "git_blob_sha": "68d0f065bc4e3a1826cfbdae3797dab0296857cf",
+      "compression": "xz",
+      "compressed_bytes": 2042808,
+      "compressed_sha256": "29ab553fa753773efb7c149969b643dfaa03ab29ad21e8aae769b354f1f76b16",
+      "parts": [
+        "profiles/named_banks.json.xz.b64.parts/00001.txt",
+        "profiles/named_banks.json.xz.b64.parts/00002.txt",
+        "profiles/named_banks.json.xz.b64.parts/00003.txt",
+        "profiles/named_banks.json.xz.b64.parts/00004.txt",
+        "profiles/named_banks.json.xz.b64.parts/00005.txt",
+        "profiles/named_banks.json.xz.b64.parts/00006.txt",
+        "profiles/named_banks.json.xz.b64.parts/00007.txt",
+        "profiles/named_banks.json.xz.b64.parts/00008.txt",
+        "profiles/named_banks.json.xz.b64.parts/00009.txt",
+        "profiles/named_banks.json.xz.b64.parts/00010.txt",
+        "profiles/named_banks.json.xz.b64.parts/00011.txt",
+        "profiles/named_banks.json.xz.b64.parts/00012.txt",
+        "profiles/named_banks.json.xz.b64.parts/00013.txt",
+        "profiles/named_banks.json.xz.b64.parts/00014.txt",
+        "profiles/named_banks.json.xz.b64.parts/00015.txt",
+        "profiles/named_banks.json.xz.b64.parts/00016.txt",
+        "profiles/named_banks.json.xz.b64.parts/00017.txt",
+        "profiles/named_banks.json.xz.b64.parts/00018.txt",
+        "profiles/named_banks.json.xz.b64.parts/00019.txt",
+        "profiles/named_banks.json.xz.b64.parts/00020.txt",
+        "profiles/named_banks.json.xz.b64.parts/00021.txt",
+        "profiles/named_banks.json.xz.b64.parts/00022.txt",
+        "profiles/named_banks.json.xz.b64.parts/00023.txt",
+        "profiles/named_banks.json.xz.b64.parts/00024.txt",
+        "profiles/named_banks.json.xz.b64.parts/00025.txt",
+        "profiles/named_banks.json.xz.b64.parts/00026.txt",
+        "profiles/named_banks.json.xz.b64.parts/00027.txt",
+        "profiles/named_banks.json.xz.b64.parts/00028.txt",
+        "profiles/named_banks.json.xz.b64.parts/00029.txt",
+        "profiles/named_banks.json.xz.b64.parts/00030.txt",
+        "profiles/named_banks.json.xz.b64.parts/00031.txt",
+        "profiles/named_banks.json.xz.b64.parts/00032.txt",
+        "profiles/named_banks.json.xz.b64.parts/00033.txt",
+        "profiles/named_banks.json.xz.b64.parts/00034.txt",
+        "profiles/named_banks.json.xz.b64.parts/00035.txt",
+        "profiles/named_banks.json.xz.b64.parts/00036.txt",
+        "profiles/named_banks.json.xz.b64.parts/00037.txt",
+        "profiles/named_banks.json.xz.b64.parts/00038.txt",
+        "profiles/named_banks.json.xz.b64.parts/00039.txt",
+        "profiles/named_banks.json.xz.b64.parts/00040.txt",
+        "profiles/named_banks.json.xz.b64.parts/00041.txt",
+        "profiles/named_banks.json.xz.b64.parts/00042.txt",
+        "profiles/named_banks.json.xz.b64.parts/00043.txt",
+        "profiles/named_banks.json.xz.b64.parts/00044.txt",
+        "profiles/named_banks.json.xz.b64.parts/00045.txt",
+        "profiles/named_banks.json.xz.b64.parts/00046.txt",
+        "profiles/named_banks.json.xz.b64.parts/00047.txt",
+        "profiles/named_banks.json.xz.b64.parts/00048.txt",
+        "profiles/named_banks.json.xz.b64.parts/00049.txt",
+        "profiles/named_banks.json.xz.b64.parts/00050.txt",
+        "profiles/named_banks.json.xz.b64.parts/00051.txt",
+        "profiles/named_banks.json.xz.b64.parts/00052.txt",
+        "profiles/named_banks.json.xz.b64.parts/00053.txt",
+        "profiles/named_banks.json.xz.b64.parts/00054.txt",
+        "profiles/named_banks.json.xz.b64.parts/00055.txt",
+        "profiles/named_banks.json.xz.b64.parts/00056.txt",
+        "profiles/named_banks.json.xz.b64.parts/00057.txt",
+        "profiles/named_banks.json.xz.b64.parts/00058.txt",
+        "profiles/named_banks.json.xz.b64.parts/00059.txt",
+        "profiles/named_banks.json.xz.b64.parts/00060.txt",
+        "profiles/named_banks.json.xz.b64.parts/00061.txt",
+        "profiles/named_banks.json.xz.b64.parts/00062.txt",
+        "profiles/named_banks.json.xz.b64.parts/00063.txt",
+        "profiles/named_banks.json.xz.b64.parts/00064.txt",
+        "profiles/named_banks.json.xz.b64.parts/00065.txt",
+        "profiles/named_banks.json.xz.b64.parts/00066.txt",
+        "profiles/named_banks.json.xz.b64.parts/00067.txt",
+        "profiles/named_banks.json.xz.b64.parts/00068.txt",
+        "profiles/named_banks.json.xz.b64.parts/00069.txt"
+      ]
+    },
+    {
+      "path": "profiles/extra_named_banks.json",
+      "bytes": 954502,
+      "sha256": "59e9c06d5a99632c102857be382a4622ae38db04bf57df7afcc91c56ee6f20a9",
+      "git_blob_sha": "08c5f292b6a452b9b29ef13b1cd80a0e244b8712",
+      "compression": "xz",
+      "compressed_bytes": 254924,
+      "compressed_sha256": "9229087116778c412d52a296fcee270f8f8af1ccf334de67c022e0643a45f423",
+      "parts": [
+        "profiles/extra_named_banks.json.xz.b64.parts/00001.txt",
+        "profiles/extra_named_banks.json.xz.b64.parts/00002.txt",
+        "profiles/extra_named_banks.json.xz.b64.parts/00003.txt",
+        "profiles/extra_named_banks.json.xz.b64.parts/00004.txt",
+        "profiles/extra_named_banks.json.xz.b64.parts/00005.txt",
+        "profiles/extra_named_banks.json.xz.b64.parts/00006.txt",
+        "profiles/extra_named_banks.json.xz.b64.parts/00007.txt",
+        "profiles/extra_named_banks.json.xz.b64.parts/00008.txt",
+        "profiles/extra_named_banks.json.xz.b64.parts/00009.txt"
+      ]
+    },
+    {
+      "path": "profiles/affine_banks.json",
+      "bytes": 937638,
+      "sha256": "8c9650f80faa37d7315d85edf57a13c6cae75277e98f93cfa36a29c51f201129",
+      "git_blob_sha": "ed2b908f514a25189607009c5efc0710f05fafbc",
+      "compression": "xz",
+      "compressed_bytes": 234884,
+      "compressed_sha256": "842af4e83d50cc936f8defdffc201019aa46fa36b171419513627488fd5c2fdf",
+      "parts": [
+        "profiles/affine_banks.json.xz.b64.parts/00001.txt",
+        "profiles/affine_banks.json.xz.b64.parts/00002.txt",
+        "profiles/affine_banks.json.xz.b64.parts/00003.txt",
+        "profiles/affine_banks.json.xz.b64.parts/00004.txt",
+        "profiles/affine_banks.json.xz.b64.parts/00005.txt",
+        "profiles/affine_banks.json.xz.b64.parts/00006.txt",
+        "profiles/affine_banks.json.xz.b64.parts/00007.txt",
+        "profiles/affine_banks.json.xz.b64.parts/00008.txt"
+      ]
+    },
+    {
+      "path": "profiles/anchor_exploration.json",
+      "bytes": 1399918,
+      "sha256": "c7fa370d6240095058f0e33d69ad65c302f1e4485004842c7eb679ae3da721f1",
+      "git_blob_sha": "380dcc7ba107c513a82e39aff144b7dd59ca2a6a",
+      "compression": "xz",
+      "compressed_bytes": 40288,
+      "compressed_sha256": "bea4b44f629d08f49507e4dc78ef97d7846334be68cd0116e6b0d823bdc1d18d",
+      "parts": [
+        "profiles/anchor_exploration.json.xz.b64.parts/00001.txt",
+        "profiles/anchor_exploration.json.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "profiles/cycle_banks.json",
+      "bytes": 85686,
+      "sha256": "f39d674978c6d56a8e04d81157b26951e938dfcb29dc126ba786a6e44ef988e7",
+      "git_blob_sha": "ea5c8d65f80522a38d7122bab3c1d988655299ed",
+      "compression": "xz",
+      "compressed_bytes": 10744,
+      "compressed_sha256": "544693ff5e26758ed1ff5457a650a1cce41886e0881192fcd27210bd75d4b5dc",
+      "parts": [
+        "profiles/cycle_banks.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "profiles/type_witnesses.json",
+      "bytes": 1143013,
+      "sha256": "9a91b4e796f39f7887787bfbffa1407b0b5eb078c978ae269f949511d553e035",
+      "git_blob_sha": "443c534b07508592832984b78514467b558526da",
+      "compression": "xz",
+      "compressed_bytes": 64792,
+      "compressed_sha256": "d9e75bc2fa93af46b88a1b20843061f9d718f7fd074c603fd1e0d33e2d21eda1",
+      "parts": [
+        "profiles/type_witnesses.json.xz.b64.parts/00001.txt",
+        "profiles/type_witnesses.json.xz.b64.parts/00002.txt",
+        "profiles/type_witnesses.json.xz.b64.parts/00003.txt"
+      ]
+    },
+    {
+      "path": "profiles/prime_owners.u16le",
+      "bytes": 4194304,
+      "sha256": "c8733b0c93ec489236b3cf449aad81554b263a7f473628afe915368935c99665",
+      "git_blob_sha": "b4d6832763bf17931e8e86807af90a5db4a2cde4",
+      "compression": "xz",
+      "compressed_bytes": 201788,
+      "compressed_sha256": "adc5d980a824e3c16f14404266e511467639a925f50f7c2868f84ccd5927a0d8",
+      "parts": [
+        "profiles/prime_owners.u16le.xz.b64.parts/00001.txt",
+        "profiles/prime_owners.u16le.xz.b64.parts/00002.txt",
+        "profiles/prime_owners.u16le.xz.b64.parts/00003.txt",
+        "profiles/prime_owners.u16le.xz.b64.parts/00004.txt",
+        "profiles/prime_owners.u16le.xz.b64.parts/00005.txt",
+        "profiles/prime_owners.u16le.xz.b64.parts/00006.txt",
+        "profiles/prime_owners.u16le.xz.b64.parts/00007.txt"
+      ]
+    },
+    {
+      "path": "profiles/run_values.txt",
+      "bytes": 1198744,
+      "sha256": "a8f01608e3435c1fe37cf65c517ace974550782c784c1c385d378938753f6d4a",
+      "git_blob_sha": "d5594ef0d03edeb796fdd3df5c27c0d8a3ddf2c5",
+      "compression": "xz",
+      "compressed_bytes": 339108,
+      "compressed_sha256": "a95da74646c30ea6455ce4b2169dd4b5f5663ab4bb4c11775e201b2b2250953a",
+      "parts": [
+        "profiles/run_values.txt.xz.b64.parts/00001.txt",
+        "profiles/run_values.txt.xz.b64.parts/00002.txt",
+        "profiles/run_values.txt.xz.b64.parts/00003.txt",
+        "profiles/run_values.txt.xz.b64.parts/00004.txt",
+        "profiles/run_values.txt.xz.b64.parts/00005.txt",
+        "profiles/run_values.txt.xz.b64.parts/00006.txt",
+        "profiles/run_values.txt.xz.b64.parts/00007.txt",
+        "profiles/run_values.txt.xz.b64.parts/00008.txt",
+        "profiles/run_values.txt.xz.b64.parts/00009.txt",
+        "profiles/run_values.txt.xz.b64.parts/00010.txt",
+        "profiles/run_values.txt.xz.b64.parts/00011.txt",
+        "profiles/run_values.txt.xz.b64.parts/00012.txt"
+      ]
+    },
+    {
+      "path": "profiles/bare_full_H_values.txt",
+      "bytes": 643832,
+      "sha256": "f518f5777d021e1d6dd8438053643ad625a58ee3692eca73b3c01f7e7a8bb6aa",
+      "git_blob_sha": "86f5f4bd17447aae91cdbc422c7885ee505675c3",
+      "compression": "xz",
+      "compressed_bytes": 165124,
+      "compressed_sha256": "da4689ff4579dc742c96e2f9fb4468905d52b455708da8f5e8b785330c16b513",
+      "parts": [
+        "profiles/bare_full_H_values.txt.xz.b64.parts/00001.txt",
+        "profiles/bare_full_H_values.txt.xz.b64.parts/00002.txt",
+        "profiles/bare_full_H_values.txt.xz.b64.parts/00003.txt",
+        "profiles/bare_full_H_values.txt.xz.b64.parts/00004.txt",
+        "profiles/bare_full_H_values.txt.xz.b64.parts/00005.txt",
+        "profiles/bare_full_H_values.txt.xz.b64.parts/00006.txt"
+      ]
+    },
+    {
+      "path": "profiles/bare_full_cycle_values.txt",
+      "bytes": 480812,
+      "sha256": "6d41abc472bbf3d1a6e2a3d5cc778a3c115363278fe3500482947a03f328124b",
+      "git_blob_sha": "4e024480936981ea7275ad48c4f70e1b1c0c64ca",
+      "compression": "xz",
+      "compressed_bytes": 123632,
+      "compressed_sha256": "c4ae770c1c5fb6b3cdb77f7d1d6cbe5fd5b1bb4d023d43ed721a7de7260a57a3",
+      "parts": [
+        "profiles/bare_full_cycle_values.txt.xz.b64.parts/00001.txt",
+        "profiles/bare_full_cycle_values.txt.xz.b64.parts/00002.txt",
+        "profiles/bare_full_cycle_values.txt.xz.b64.parts/00003.txt",
+        "profiles/bare_full_cycle_values.txt.xz.b64.parts/00004.txt",
+        "profiles/bare_full_cycle_values.txt.xz.b64.parts/00005.txt"
+      ]
+    },
+    {
+      "path": "prime7/even_bank.txt",
+      "bytes": 1496240,
+      "sha256": "6907ff3afd452909130a6f1766913732a073506c6ea5fb2b163cfb7d7f946269",
+      "git_blob_sha": "a729995e491056a7b7df80167fd9a65089afee47",
+      "compression": "xz",
+      "compressed_bytes": 25272,
+      "compressed_sha256": "1088be3bd09cdf6c129cc54dc4052ab8e0aa06623767fb8034b25c982beef05e",
+      "parts": [
+        "prime7/even_bank.txt.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "prime7/coefficients.json",
+      "bytes": 1521496,
+      "sha256": "2d65552651e4ae235682d25a7da570187bb1c244fa00679ef1c7b1a2cf885b29",
+      "git_blob_sha": "21ceae40a1784822644bde93ffcd6f4d260aec13",
+      "compression": "xz",
+      "compressed_bytes": 25788,
+      "compressed_sha256": "07f87b222e923978515d3a960af0290b59955dedf116517e528217352fe50995",
+      "parts": [
+        "prime7/coefficients.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "prime7/independent.json",
+      "bytes": 513270,
+      "sha256": "a8644235d2ebf8b9ca728b7d3e8754ee55b767894aa68cf883a71688d284e277",
+      "git_blob_sha": "b8af1930233b67ce283ace7d957f53a6dba8240f",
+      "compression": "xz",
+      "compressed_bytes": 50720,
+      "compressed_sha256": "d875c9e0383e5d3016bed3ac22f0a0e8fd49596b26a42f4428bfa511baefc9b2",
+      "parts": [
+        "prime7/independent.json.xz.b64.parts/00001.txt",
+        "prime7/independent.json.xz.b64.parts/00002.txt"
+      ]
+    }
+  ]
+}

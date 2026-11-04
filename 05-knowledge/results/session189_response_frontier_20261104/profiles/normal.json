@@ -1,0 +1,101 @@
+{
+  "anchor_pattern_records": 4864,
+  "artifacts": {
+    "affine_banks.json": {
+      "bytes": 937638,
+      "sha256": "8c9650f80faa37d7315d85edf57a13c6cae75277e98f93cfa36a29c51f201129"
+    },
+    "ambient_analysis.json": {
+      "bytes": 14994,
+      "sha256": "e0f49c92702881b28084b1ce53df750bcecbbbe508b165710cb1f2afdea45ea8"
+    },
+    "anchor_exploration.json": {
+      "bytes": 1399918,
+      "sha256": "c7fa370d6240095058f0e33d69ad65c302f1e4485004842c7eb679ae3da721f1"
+    },
+    "anchor_independent.txt": {
+      "bytes": 13819,
+      "sha256": "9e3bdc6b5645d3adc2262f3f47229976866a17fe4c24a3d813f8a8a9a453e606"
+    },
+    "bare_full_H_values.txt": {
+      "bytes": 643832,
+      "sha256": "f518f5777d021e1d6dd8438053643ad625a58ee3692eca73b3c01f7e7a8bb6aa"
+    },
+    "bare_full_cycle_values.txt": {
+      "bytes": 480812,
+      "sha256": "6d41abc472bbf3d1a6e2a3d5cc778a3c115363278fe3500482947a03f328124b"
+    },
+    "census_values.txt": {
+      "bytes": 8367,
+      "sha256": "7b01fccbc561c2f8991cd9edb098256ea2716f6cd427f1f060c4c635e3f15039"
+    },
+    "cycle_banks.json": {
+      "bytes": 85686,
+      "sha256": "f39d674978c6d56a8e04d81157b26951e938dfcb29dc126ba786a6e44ef988e7"
+    },
+    "extra_named_banks.json": {
+      "bytes": 954502,
+      "sha256": "59e9c06d5a99632c102857be382a4622ae38db04bf57df7afcc91c56ee6f20a9"
+    },
+    "named_banks.json": {
+      "bytes": 8407498,
+      "sha256": "e84c560fcc55f71f6628eb4988ac5f2f0d7f71c25be87d08d5a8f1d56dafa398"
+    },
+    "prime_owners.u16le": {
+      "bytes": 4194304,
+      "sha256": "c8733b0c93ec489236b3cf449aad81554b263a7f473628afe915368935c99665"
+    },
+    "residual_mod4.json": {
+      "bytes": 10580,
+      "sha256": "a8bf4f3f0a11070aaaaa321a80716778dc993fe7b7f88612628bc712ff59f6ea"
+    },
+    "run_values.txt": {
+      "bytes": 1198744,
+      "sha256": "a8f01608e3435c1fe37cf65c517ace974550782c784c1c385d378938753f6d4a"
+    },
+    "type_witnesses.json": {
+      "bytes": 1143013,
+      "sha256": "9a91b4e796f39f7887787bfbffa1407b0b5eb078c978ae269f949511d553e035"
+    }
+  },
+  "check_log": [
+    "complete independent run coefficient checks 242208",
+    "complete prime representative endpoints checked 2758 labeled prime coverage 973680"
+  ],
+  "endpoint_zero_representatives": 38,
+  "exact_endpoint_coordinates": 2758,
+  "full_physical_cube_checks": 262144,
+  "independent_anchor_coordinates": 3990,
+  "independent_exact_run_coordinates": 242208,
+  "labeled_prime_tournaments": 973680,
+  "labeled_tournaments_checked": 2097152,
+  "nontrivial_type_records": 65536,
+  "prime_representatives": 197,
+  "safe_query_ranks": [
+    14,
+    14,
+    13,
+    14
+  ],
+  "singleton_residuals_resolved": 6,
+  "sole_remaining_branch": "carousel (14,28,56,112,97,67,7), seven even children of order at least four",
+  "source_pins": {
+    "PROOF.md": "ea7ca89df44ba732247291b00aadb6a70cd8f4c4fb13624ae51f63479502d9b8",
+    "analyze_ambient.py": "f518cee851b1ed2ac15c3aa079c5af764e7b1e8204c35b05901a9fda2fba11ca",
+    "analyze_models.py": "1e6dde0b23564c958738bcc49c0b75163d39a8854bb0fe9ffc4cd8fec4bb14e9",
+    "analyze_residual.py": "9f321afbaa718b7c4bd169d284ef9a1b0d13f7e604968375ada841f99d38e2f9",
+    "anchor_check.cpp": "7c52f8613aa1da92279708ee344389478a6a6ee768154270054a135181c4f32a",
+    "anchor_explore.py": "af220718558ebe824d1a986f9b244ef97216676029bd10689060ad8612e5fb94",
+    "census.cpp": "78afcffd57081ece3727363af5b428bdd5115c41d17b32da64149c2685fb9a19",
+    "check_run.py": "00038e1df138907bb681cb6d5e8a982a87244bffc07579c1ed3528e732cab3e7",
+    "core.py": "8daaf5aae4653a60d61765bd9044bad43ecaf696cee8ef1b534c267efaa0a526",
+    "count_named.cpp": "5e273fd1d127c041038504f7bc8827addc7fc367de3112ba59cbef34d3f93464",
+    "cycle_named.cpp": "565f4ad7650543d5950f7d60b8974e823b2a4d1822310ff324c2bb658df872ae",
+    "prepare_extra.py": "fffff26a1e7115e712fc14d2be72647386641c03934ff4e6865e7f2eb2dc018d",
+    "prepare_models.py": "21b79fc24fc3e1a73f53e2798def6cc1c066c3f98c99ed38fc4d55013a27c9f0",
+    "quotients.json": "cd7613fb8aee75f88498694579d05c56a0bf8192bb576e7f863eb1ba02bb3575",
+    "run_words.cpp": "1f06b82da37223e848e80466082857eddd377481cfebeafde608b3486132f380",
+    "verify.py": "e730e266eb4a2124621b9ee6fe190175cccac7a2454e56ddfbdb4dc0451dd652"
+  },
+  "status": "PASS"
+}

@@ -1,7 +1,8 @@
 # Lossless receipt storage
 
-Large receipt files are stored as deterministic gzip data, base64-encoded and
-split into numbered text chunks. Each `ARCHIVES_CP*.json` records the original
+Large receipt files are stored as deterministic gzip or XZ data, base64-encoded and
+split into numbered text chunks. The manifest specifies the codec; older
+version-one manifests use gzip. Each `ARCHIVES_CP*.json` records the original
 relative filename, exact byte count, SHA-256, Git blob hash, and compressed
 byte count/hash. All entries, including named zeros and full response tables,
 are preserved; compression does not summarize the mathematical data.

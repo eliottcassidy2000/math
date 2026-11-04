@@ -1,0 +1,114 @@
+{
+  "census": {
+    "labeled_tournaments": 2097152,
+    "permutation_ownership_checks": 992880,
+    "prime_labels": 973680,
+    "representatives": 197
+  },
+  "endpoints_and_anchors": {
+    "anchor_patterns": 4864,
+    "anchor_primitive_integers": 3990,
+    "blind_patterns": 10,
+    "endpoint_integers": 2758,
+    "representatives": 197,
+    "singleton_residuals": 6
+  },
+  "even_identities": {
+    "additional_independent_physical_graphs": 72,
+    "affine_bits": 21,
+    "cover_coordinates": 5,
+    "physical_interpolation_cases": 1524,
+    "queries": 6,
+    "shapes": 127
+  },
+  "input_sha256": {
+    "prime7/even_bank.txt": "6907ff3afd452909130a6f1766913732a073506c6ea5fb2b163cfb7d7f946269",
+    "prime7/even_queries.json": "26689f2d50fe9e053a7b3815c1ce8c2312e7ca7c264acd828731330f6b34adc0",
+    "prime7/independent.json": "a8644235d2ebf8b9ca728b7d3e8754ee55b767894aa68cf883a71688d284e277",
+    "prime7/rows.json": "4700e784514859d13b681e1c8ce5f6dfaba1395d38d0bba153b0d1fb89ccc95b",
+    "profiles/affine_banks.json": "8c9650f80faa37d7315d85edf57a13c6cae75277e98f93cfa36a29c51f201129",
+    "profiles/ambient_analysis.json": "e0f49c92702881b28084b1ce53df750bcecbbbe508b165710cb1f2afdea45ea8",
+    "profiles/anchor_exploration.json": "c7fa370d6240095058f0e33d69ad65c302f1e4485004842c7eb679ae3da721f1",
+    "profiles/prime_owners.u16le": "c8733b0c93ec489236b3cf449aad81554b263a7f473628afe915368935c99665",
+    "profiles/quotients.json": "cd7613fb8aee75f88498694579d05c56a0bf8192bb576e7f863eb1ba02bb3575",
+    "profiles/residual_mod4.json": "a8bf4f3f0a11070aaaaa321a80716778dc993fe7b7f88612628bc712ff59f6ea"
+  },
+  "safe_affine": [
+    {
+      "full_rank": 14,
+      "local_blind": [],
+      "odd_uncovered": [],
+      "rows": [
+        8,
+        5,
+        17,
+        70,
+        43,
+        15,
+        55
+      ],
+      "safe_blind": [],
+      "safe_queries": 445,
+      "safe_rank": 14
+    },
+    {
+      "full_rank": 14,
+      "local_blind": [
+        127
+      ],
+      "odd_uncovered": [],
+      "rows": [
+        14,
+        28,
+        56,
+        112,
+        97,
+        67,
+        7
+      ],
+      "safe_blind": [
+        127
+      ],
+      "safe_queries": 589,
+      "safe_rank": 14
+    },
+    {
+      "full_rank": 14,
+      "local_blind": [],
+      "odd_uncovered": [],
+      "rows": [
+        14,
+        52,
+        88,
+        98,
+        41,
+        69,
+        19
+      ],
+      "safe_blind": [
+        0,
+        127
+      ],
+      "safe_queries": 421,
+      "safe_rank": 13
+    },
+    {
+      "full_rank": 14,
+      "local_blind": [],
+      "odd_uncovered": [],
+      "rows": [
+        66,
+        76,
+        25,
+        49,
+        35,
+        7,
+        60
+      ],
+      "safe_blind": [],
+      "safe_queries": 517,
+      "safe_rank": 14
+    }
+  ],
+  "status": "PASS"
+}

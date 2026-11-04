@@ -10,6 +10,7 @@ import base64
 import gzip
 import hashlib
 import json
+import lzma
 from pathlib import Path
 
 
@@ -33,7 +34,7 @@ def main():
     parser.add_argument('--verify-only', action='store_true')
     args = parser.parse_args()
     manifest = json.loads(args.manifest.read_text())
-    check(manifest['format'] == 'deterministic-gzip-base64-parts-v1',
+    check(manifest['format'] in ('deterministic-gzip-base64-parts-v1', 'lossless-compressed-base64-parts-v2'),
           'Unsupported receipt format')
     root = args.manifest.resolve().parent
     verified = []
@@ -41,10 +42,12 @@ def main():
         text = ''.join(safe_path(root, part).read_text().strip()
                        for part in record['parts'])
         compressed = base64.b64decode(text, validate=True)
-        check(len(compressed) == record['gzip_bytes'], 'Compressed byte mismatch')
-        check(hashlib.sha256(compressed).hexdigest() == record['gzip_sha256'],
+        check(len(compressed) == record.get('compressed_bytes', record.get('gzip_bytes')), 'Compressed byte mismatch')
+        check(hashlib.sha256(compressed).hexdigest() == record.get('compressed_sha256', record.get('gzip_sha256')),
               'Compressed SHA-256 mismatch')
-        data = gzip.decompress(compressed)
+        codec = record.get('compression', 'gzip')
+        check(codec in ('gzip', 'xz'), 'Unsupported compression')
+        data = lzma.decompress(compressed) if codec == 'xz' else gzip.decompress(compressed)
         check(len(data) == record['bytes'], 'Original byte mismatch')
         check(hashlib.sha256(data).hexdigest() == record['sha256'],
               'Original SHA-256 mismatch')
