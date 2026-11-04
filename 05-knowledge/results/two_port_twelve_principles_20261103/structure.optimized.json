@@ -1,0 +1,27 @@
+{
+  "cores": 1102,
+  "internal_endpoint_pairs": 5429,
+  "six_vertex_standard": [
+    14,
+    12,
+    56,
+    48,
+    35,
+    3
+  ],
+  "source_sha256": {
+    "check.py": "8ca59e0834cc20c9f3ea390fcf1078bc2e7e052ee5776e7c5087ab1e0cd9437d",
+    "structure.py": "a91dbe872b614c318516fe8b354d4a20b6de2d56c8beedc94aee4029a331548c"
+  },
+  "standard_to_survivor": [
+    3,
+    1,
+    4,
+    2,
+    5,
+    0
+  ],
+  "status": "FINITE-EXACT controls for proved T5",
+  "survivor_code": 22693,
+  "universe": "All1099 labelled cores orders1..5, plus code408 at6, the parity-balanced order8 hostile and its first cyclic extension at10"
+}

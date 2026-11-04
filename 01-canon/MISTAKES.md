@@ -4,6 +4,25 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — cover symmetry and a cubic projection are separate necessary gates
+
+**Refuted research premises, not retractions of accepted theorems.** The
+claim that C cannot be symmetric modulo four at any order >=3 fails for
+C3[TT2,TT2,TT2]: it has H45 and unequal endpoint parity. The complete
+unfiltered order-six bank has exactly this one symmetric-cover class;
+orders four and eight have none. Thus the odd-current theorem cannot be
+extended to all even cores by dropping endpoint data.
+
+The new shared-label cubic coefficient is a necessary full-response
+modulo-four test, but its universal nonvanishing at even order is also
+false. Paley11 with a universal source or sink has every such coefficient
+zero; both fail endpoint parity. The first failed implication is that
+one cubic projection detects the entire converse response. Retain all
+mixed coefficients and the old endpoint/ordered-cover gates. Exact rows,
+independent integer controls, the repaired cubic formula, and the remaining
+prime/pair split are in
+[two-port twelve principles](../05-knowledge/results/two_port_twelve_principles_20261103/STRUCTURE.md).
+
 ## 2026-11-03 — three accepted return rounds do not close a fixed seed bank
 
 **Refuted extension premise; the previous finite theorem remains valid.**

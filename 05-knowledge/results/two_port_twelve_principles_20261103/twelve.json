@@ -74,7 +74,7 @@
   "filters": "None before counting named presentations. Cover skew evaluated only on endpoint-parity survivors; cubic tested on every presentation. Families may overlap up to isomorphism.",
   "source_sha256": {
     "run_twelve.py": "3b9f95bc21f4dc4d7b2b5b05abc9c1d00627f1ffa0a45955f4e3c0f9b9ad0bc7",
-    "twelve.cpp": "a3d37b027aba36b50a81caeea3c75bb99878a6929253b3ccf23937137e4bbc71"
+    "twelve.cpp": "11f672402412f33057a1d8f4d7e13b895fef3c0330101078d940f8f0e39c01bf"
   },
   "status": "FINITE-EXACT declared families only",
   "universe": {

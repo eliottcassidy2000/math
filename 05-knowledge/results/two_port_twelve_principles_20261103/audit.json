@@ -1,0 +1,147 @@
+{
+  "controls": 96,
+  "cubic_columns_checked": 610,
+  "general_pair_quartic_hostile": {
+    "actual_queries": 32,
+    "codes": [
+      1023,
+      1021
+    ],
+    "coefficients": [
+      4,
+      2
+    ],
+    "monomial": "a_0 a_1 c_1 c_4",
+    "n": 5
+  },
+  "source_sha256": {
+    "audit.cpp": "c267174fd0e89b99705beee25f713d9861eaf2a006c6679a7c6f10af5ecb4bf7",
+    "audit.py": "c13fec8dd3fd5e0712037564a1a09da47dab332512a60c9902d72f055c26b152",
+    "check.py": "8ca59e0834cc20c9f3ea390fcf1078bc2e7e052ee5776e7c5087ab1e0cd9437d",
+    "twelve.cpp": "11f672402412f33057a1d8f4d7e13b895fef3c0330101078d940f8f0e39c01bf"
+  },
+  "status": "FINITE-EXACT independent implementation controls",
+  "true_cover_controls": 3,
+  "twelve_cubic_blind_witnesses": [
+    {
+      "E": [
+        8645,
+        8645,
+        8645,
+        8645,
+        8645,
+        8645,
+        8645,
+        8645,
+        8645,
+        8645,
+        8645,
+        0
+      ],
+      "H": 95095,
+      "S": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        95095
+      ],
+      "cubic_columns": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        570,
+        1140,
+        233,
+        466,
+        932,
+        1864,
+        1681,
+        1315,
+        583,
+        1166,
+        285,
+        2047
+      ]
+    },
+    {
+      "E": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        95095
+      ],
+      "H": 95095,
+      "S": [
+        8645,
+        8645,
+        8645,
+        8645,
+        8645,
+        8645,
+        8645,
+        8645,
+        8645,
+        8645,
+        8645,
+        0
+      ],
+      "cubic_columns": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        2618,
+        3188,
+        2281,
+        2514,
+        2980,
+        3912,
+        3729,
+        3363,
+        2631,
+        3214,
+        2333,
+        0
+      ]
+    }
+  ],
+  "universe": "All labelled orders2,4; order6 cover-symmetric and order8 endpoint-balanced hostiles; 27 declared order12 extensions (9 named masks for each of 3 cores); one endpoint-parity-balanced order12 cyclic tower over the order8 hostile",
+  "zero_cubic_controls": 68
+}

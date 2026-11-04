@@ -16,11 +16,28 @@ remain **OPEN**. No exact full-response collision is claimed.
 * Exact core/converse comparison needs at most 1+2n+n^3 queries: 1753 at
   twelve. General tournament pairs can still have a quartic difference.
 
+[T5 and the structural reduction](STRUCTURE.md) show that a surviving
+twelve-vertex module core must be **strong and either prime or contain a
+homogeneous pair**. This uses proved module descent plus complete finite
+cover-skew banks through eight and the inherited combined sieve at ten.
+Neither remaining branch is closed.
+
+The 6200 declared twelve-vertex presentations all fail endpoint parity.
+The shared-label cubic projection misses exactly two of them: Paley11 with
+a universal source or sink. A separate twelve-vertex cyclic tower supplies
+an endpoint-parity survivor and fails the cover and cubic tests. These are
+exact controls, not a complete order-twelve census or an independence proof
+for the new condition.
+
 The formula keeps the full response and its paired endpoints. None of these
 results equates it to H,S,E,C or promotes a necessary congruence to a collision.
 The inherited exclusion through module size eleven remains credited to
 [the complete sieve](../two_port_seven_core_20261103/residual/RESULT.md).
 
-Reproduce the controls with `python check.py --output check.json` and
-`python -O check.py --output check.optimized.json` from this directory.
-The [board](BOARD.md) names the inheritance, hostile probes, maps and losses.
+The frozen verifier is `python verify.py`; `--replay` repeats all five
+engines normally and under `-O`, without replacing the frozen receipts.
+Individual commands and scopes are in [the proof](PROOF.md) and
+[the structural note](STRUCTURE.md). The [board](BOARD.md) names the
+inheritance, hostile probes, maps, losses and remaining proof targets.
+The [validity review](REVIEW.md) records the proof boundaries and distinct
+verification methods; no separate-agent proof review is claimed.

@@ -1,0 +1,86 @@
+{
+  "bank_sha256": "b4e559ad6cb31980852034f9c7f61e366a7cb479fee4d9a641ad3356745200d3",
+  "families": [
+    {
+      "all_three_survivors": 0,
+      "cubic_rows": [],
+      "cubic_survivors": 0,
+      "endpoint_parity_survivors": 0,
+      "family": 0,
+      "named_presentations": 2048,
+      "old_combined_rows": [],
+      "old_combined_survivors": 0
+    },
+    {
+      "all_three_survivors": 0,
+      "cubic_rows": [],
+      "cubic_survivors": 0,
+      "endpoint_parity_survivors": 0,
+      "family": 1,
+      "named_presentations": 2048,
+      "old_combined_rows": [],
+      "old_combined_survivors": 0
+    },
+    {
+      "all_three_survivors": 0,
+      "cubic_rows": [
+        [
+          570,
+          1140,
+          233,
+          466,
+          932,
+          1864,
+          1681,
+          1315,
+          583,
+          1166,
+          285,
+          2047
+        ],
+        [
+          2618,
+          3188,
+          2281,
+          2514,
+          2980,
+          3912,
+          3729,
+          3363,
+          2631,
+          3214,
+          2333,
+          0
+        ]
+      ],
+      "cubic_survivors": 2,
+      "endpoint_parity_survivors": 0,
+      "family": 2,
+      "named_presentations": 2048,
+      "old_combined_rows": [],
+      "old_combined_survivors": 0
+    },
+    {
+      "all_three_survivors": 0,
+      "cubic_rows": [],
+      "cubic_survivors": 0,
+      "endpoint_parity_survivors": 0,
+      "family": 3,
+      "named_presentations": 56,
+      "old_combined_rows": [],
+      "old_combined_survivors": 0
+    }
+  ],
+  "filters": "None before counting named presentations. Cover skew evaluated only on endpoint-parity survivors; cubic tested on every presentation. Families may overlap up to isomorphism.",
+  "source_sha256": {
+    "run_twelve.py": "3b9f95bc21f4dc4d7b2b5b05abc9c1d00627f1ffa0a45955f4e3c0f9b9ad0bc7",
+    "twelve.cpp": "11f672402412f33057a1d8f4d7e13b895fef3c0330101078d940f8f0e39c01bf"
+  },
+  "status": "FINITE-EXACT declared families only",
+  "universe": {
+    "0": "Every 2048 named one-vertex extension of transitive11",
+    "1": "Every 2048 named one-vertex extension of cyclic11, steps1..5",
+    "2": "Every 2048 named one-vertex extension of Paley11, residues1,3,4,5,9",
+    "3": "Every 56 inherited order6 quotient classes inflated by TT2 at each vertex"
+  }
+}

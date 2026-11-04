@@ -7,28 +7,29 @@
 using Rows = std::array<unsigned,12>;
 using DP = std::array<unsigned,4096>;
 
-DP endpoints(const Rows& a) {
+DP endpoints(const Rows& a, int n=12) {
     DP d{};
-    for(unsigned m=1;m<4096;++m) {
+    unsigned full=(1u<<n)-1;
+    for(unsigned m=1;m<=full;++m) {
         unsigned todo=m;
         while(todo) {
             int v=__builtin_ctz(todo); todo&=todo-1;
-            unsigned rest=m^(1u<<v), pred=4095u^(1u<<v)^a[v];
+            unsigned rest=m^(1u<<v), pred=full^(1u<<v)^a[v];
             if(!rest || __builtin_parity(d[rest]&pred)) d[m]|=1u<<v;
         }
     }
     return d;
 }
 
-Rows reverse(const Rows& a) {
-    Rows b{}; for(int u=0;u<12;++u)b[u]=4095u^(1u<<u)^a[u]; return b;
+Rows reverse(const Rows& a, int n=12) {
+    Rows b{}; for(int u=0;u<n;++u)b[u]=((1u<<n)-1)^(1u<<u)^a[u]; return b;
 }
 
-bool cover_gate(const Rows& a) {
+bool cover_gate(const Rows& a, int n=12) {
     Rows odd{};
-    for(int start=0;start<12;++start) {
+    for(int start=0;start<n;++start) {
         DP d{}; d[1u<<start]=1u<<start;
-        for(unsigned m=1;m<4096;++m) {
+        for(unsigned m=1;m<(1u<<n);++m) {
             unsigned vs=d[m];
             if(__builtin_parity(m)) odd[start]^=vs;
             while(vs) {
@@ -38,9 +39,20 @@ bool cover_gate(const Rows& a) {
             }
         }
     }
-    for(int u=0;u<12;++u)for(int v=u+1;v<12;++v)
+    for(int u=0;u<n;++u)for(int v=u+1;v<n;++v)
         if(((odd[u]>>v)^(odd[v]>>u))&1)return false;
     return true;
+}
+
+Rows cubic_columns(const DP& s, int n=12) {
+    Rows columns{};unsigned full=(1u<<n)-1;
+    for(unsigned m=1;m<=full;++m) {
+        int size=__builtin_popcount(m);
+        if((size&1)||size>n-4)continue;
+        unsigned outside=full^m;
+        while(outside) {int v=__builtin_ctz(outside);outside&=outside-1;columns[v]^=s[m];}
+    }
+    return columns;
 }
 
 struct Stats {
@@ -56,13 +68,7 @@ void inspect(const Rows& a, Stats& z) {
     }
     DP e=endpoints(a),s=endpoints(reverse(a));
     bool ep=e[4095]==s[4095];
-    Rows columns{};
-    for(unsigned m=1;m<4096;++m) {
-        int size=__builtin_popcount(m);
-        if((size&1)||size>8)continue;
-        unsigned outside=4095^m;
-        while(outside) {int v=__builtin_ctz(outside);outside&=outside-1;columns[v]^=s[m];}
-    }
+    Rows columns=cubic_columns(s);
     bool cubic=true;for(unsigned col:columns)cubic&=col==0;
     ++z.total; z.endpoint+=ep; z.cubic+=cubic;
     if(cubic)z.cubic_survivors.push_back(a);

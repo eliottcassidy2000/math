@@ -1,0 +1,82 @@
+{
+  "bank_sha256": "b4e559ad6cb31980852034f9c7f61e366a7cb479fee4d9a641ad3356745200d3",
+  "completeness": "Inherited authenticated representative bank, not re-proved here",
+  "filters": "None: no endpoint-parity, strongness or symmetry filter",
+  "orders": [
+    {
+      "inherited_classes": 1,
+      "n": 2,
+      "survivors": [
+        {
+          "E": [
+            1,
+            0
+          ],
+          "H": 1,
+          "S": [
+            0,
+            1
+          ],
+          "code": 0,
+          "rows": [
+            0,
+            1
+          ]
+        }
+      ],
+      "symmetric_mod4": 1
+    },
+    {
+      "inherited_classes": 4,
+      "n": 4,
+      "survivors": [],
+      "symmetric_mod4": 0
+    },
+    {
+      "inherited_classes": 56,
+      "n": 6,
+      "survivors": [
+        {
+          "E": [
+            8,
+            8,
+            8,
+            7,
+            7,
+            7
+          ],
+          "H": 45,
+          "S": [
+            7,
+            7,
+            7,
+            8,
+            8,
+            8
+          ],
+          "code": 22693,
+          "rows": [
+            10,
+            20,
+            33,
+            22,
+            37,
+            11
+          ]
+        }
+      ],
+      "symmetric_mod4": 1
+    },
+    {
+      "inherited_classes": 6880,
+      "n": 8,
+      "survivors": [],
+      "symmetric_mod4": 0
+    }
+  ],
+  "source_sha256": {
+    "check.py": "8ca59e0834cc20c9f3ea390fcf1078bc2e7e052ee5776e7c5087ab1e0cd9437d",
+    "scout.py": "5483ad0d009672023f99c63ac62707d77c9d7ef6eaf2a83356ffbc3033cc31ef"
+  },
+  "status": "FINITE-EXACT complete inherited even-order banks through 8"
+}

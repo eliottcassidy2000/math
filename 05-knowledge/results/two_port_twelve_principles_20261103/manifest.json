@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "01-canon/theorems/THM-002-ocf.md": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1",
+    "01-canon/theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md": "2964ced6d038c6dd9f2b798cbebbf3d26459d051d7ff1316eceb1dcaf5f1521c",
+    "05-knowledge/results/two_port_beyond_nine_20261103/algebra/PROOF.md": "2a150054aae6904a84d9d616ec91127ab680d2d4f7b21ebf3c4c04cd79f14408",
+    "05-knowledge/results/two_port_beyond_nine_20261103/audit/PARITY.md": "7084cd71f652a40949b65fb40d868124e78d4962973b6e3b720c5016310ee390",
+    "05-knowledge/results/two_port_seven_core_20261103/algebra/PROOF.md": "ba530ca4397385d0b8b75406487c0a997bc242086da4737f487c217b4862b5d1",
+    "05-knowledge/results/two_port_seven_core_20261103/residual/RESULT.md": "ed66a0d16c8d7a4c8e853325b81c56078ae27e362d6df4f1ceea3d5086abfb6a",
+    "05-knowledge/results/two_port_seven_core_20261103/residual/full10.json": "a4772227f5e732c6d83e6ac2b235bf11e8a4ff37d7ab5db46302d064645e3da4"
+  },
+  "files": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "BOARD.md": "5606dde14f3b6408c4d69c3f1e7356260fa68cf6831c35c9129cba74ab262e97",
+    "PROOF.md": "06811fe45366352f924793be7dadddacef287607a380efc92043a1066f3056c0",
+    "README.md": "6977b9c9a2f61f9a15f19e0cc7a237a3e2f4123eab59882751f4dd427496b816",
+    "REVIEW.md": "7a8918ab120e69545d309fbfec0f3bafa9746c018a2fd95d0b493ad301eafcea",
+    "STRUCTURE.md": "5868e16e1ba763a104108245fcdd84978cb66b50ec3e58e0244273fc92e1582f",
+    "audit.cpp": "c267174fd0e89b99705beee25f713d9861eaf2a006c6679a7c6f10af5ecb4bf7",
+    "audit.json": "4921811a00eae0b7c7fb30922b10054f22116c8d29a98778dccbc1068307d143",
+    "audit.optimized.json": "4921811a00eae0b7c7fb30922b10054f22116c8d29a98778dccbc1068307d143",
+    "audit.py": "c13fec8dd3fd5e0712037564a1a09da47dab332512a60c9902d72f055c26b152",
+    "check.json": "075260cde03b22429acb1cf3309139c192c1c0a176aa4f851cf957a8de841bd0",
+    "check.optimized.json": "075260cde03b22429acb1cf3309139c192c1c0a176aa4f851cf957a8de841bd0",
+    "check.py": "8ca59e0834cc20c9f3ea390fcf1078bc2e7e052ee5776e7c5087ab1e0cd9437d",
+    "cover_scout.json": "ca3cb450ce37ae4122b86b2f902086187f002fa20f8af4825e59cca0132e3489",
+    "cover_scout.optimized.json": "ca3cb450ce37ae4122b86b2f902086187f002fa20f8af4825e59cca0132e3489",
+    "run_twelve.py": "3b9f95bc21f4dc4d7b2b5b05abc9c1d00627f1ffa0a45955f4e3c0f9b9ad0bc7",
+    "scout.py": "5483ad0d009672023f99c63ac62707d77c9d7ef6eaf2a83356ffbc3033cc31ef",
+    "structure.json": "1fcdb4ecc07cbeff3874b2fdf2efadf1159d340056d088c1109f92566f62629d",
+    "structure.optimized.json": "1fcdb4ecc07cbeff3874b2fdf2efadf1159d340056d088c1109f92566f62629d",
+    "structure.py": "a91dbe872b614c318516fe8b354d4a20b6de2d56c8beedc94aee4029a331548c",
+    "twelve.cpp": "11f672402412f33057a1d8f4d7e13b895fef3c0330101078d940f8f0e39c01bf",
+    "twelve.json": "753af711a2ca9b1dbd41cd1eb4d5a91e5b80b098491a1fbfc436bfacf2153e0f",
+    "twelve.optimized.json": "753af711a2ca9b1dbd41cd1eb4d5a91e5b80b098491a1fbfc436bfacf2153e0f",
+    "verify.py": "ab8d9a9c4a03bc963f4907d726046490fd039e10ee234fd30da031c2fd07a1e2"
+  },
+  "status": "Frozen scoped T1-T5 evidence; no universal reconstruction claim"
+}

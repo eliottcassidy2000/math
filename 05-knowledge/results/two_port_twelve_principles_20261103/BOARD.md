@@ -48,3 +48,39 @@ transitive-suffix rigidity statement. Those repair a physical construction
 menu and preserve names; they neither supply a full-response collision nor
 remove the paired-path data in (2). The fixed-bank failure remains a useful
 warning against turning finite acceptance into universal closure.
+
+Later checkpoints f58c823042/0e8bdcdb77 add a physical endpoint compiler
+and terminal-context escape laws. The native shared-clock +4 proof retains
+all old names and constructs its guards uniformly. Those are exact
+operation interfaces; the endpoint compiler is not an inverse from a
+two-port scalar table. Our paired-path projection deliberately retains
+that direction of implication and its lost information.
+
+The concept board after the new computations:
+
+* Full response: exact converse comparison is cubic, while arbitrary pairs
+  remain quartic. It is lawful to compress this symmetry comparison only.
+* Uniform runs: residues transfer without primitive normalization. The
+  C3 cyclic extension separately swaps endpoint parity, giving a genuine
+  descent in the near-full-module case and an infinite hostile control tower.
+* Old congruences: all6200 declared twelve presentations already fail endpoint
+  parity. This scan supplies no evidence that the new gate is independent.
+* Path supports: the new cubic has two twelve-vertex zero controls, so no
+  all-even nonvanishing conjecture survives. Both fail the endpoint gate.
+* Forests: singleton middle paths determine the shared-label coefficients;
+  forgetting them would erase the actual obstruction.
+* Structural quotient: a twelve-vertex residual is prime or has a pair.
+  The next exact target is to exclude the homogeneous-pair branch by a
+  named contraction retaining the full cubic response. Merely contracting
+  the pair without its attachment sidecar is not justified. The prime branch
+  needs a structural obstruction or an actual exact table collision.
+
+Incoming fe463f2d25 supplies an all-length inverse and a terminating
+singleton/triangle clock-uniform return tree in
+`session184_proof_frontiers_20261104/spectrum/PROOF.md`. Its leading
+3-adic coefficient retains adjacency of marked triangle components;
+the older capacity divisor alone did not determine sharpness. This agrees
+with retaining named incidence in our odd/even-support and paired-path
+observers. The map is between an ordered construction grammar and its
+scalar count, not between two full named response functions, so neither
+its finite return tree nor its divisor is a reconstruction collision.
