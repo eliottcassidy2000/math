@@ -1,0 +1,4 @@
+#include <cstdint>
+#include <iostream>
+#include <vector>
+int main(){unsigned cases;std::cin>>cases;for(unsigned t=0;t<cases;t++){unsigned n,a,c;std::cin>>n>>a>>c;std::vector<unsigned>rows(n+2);for(unsigned i=0;i<n;i++)std::cin>>rows[i];unsigned x=n,y=n+1;rows[x]|=1u<<y;for(unsigned i=0;i<n;i++){if(a&(1u<<i))rows[i]|=1u<<x;else rows[x]|=1u<<i;if(c&(1u<<i))rows[i]|=1u<<y;else rows[y]|=1u<<i;}n+=2;unsigned N=1u<<n;std::vector<std::uint64_t>d(size_t(N)*n);for(unsigned u=0;u<n;u++)d[size_t(1u<<u)*n+u]=1;for(unsigned mask=1;mask<N;mask++)for(unsigned u=0;u<n;u++){auto z=d[size_t(mask)*n+u];if(!z)continue;unsigned next=rows[u]&~mask;while(next){unsigned b=next&-next;next-=b;d[size_t(mask|b)*n+__builtin_ctz(b)]+=z;}}std::uint64_t sum=0;for(unsigned u=0;u<n;u++)sum+=d[size_t(N-1)*n+u];std::cout<<sum<<"\n";}return std::cin.fail()?1:0;}

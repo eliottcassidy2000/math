@@ -1,0 +1,26 @@
+{
+  "encoding": "Deterministic gzip streams encoded as base64 in ASCII chunks.",
+  "groups": [
+    {
+      "parts": [
+        {
+          "file": "full_records_00.json.gz.b64.part000",
+          "size": 5653,
+          "sha256": "fcf5d64b8739e6ccfa10be7dd9955b776bdfa025a7e1398e8719425bc197f3a4"
+        }
+      ],
+      "outputs": [
+        {
+          "file": "normal.json",
+          "size": 105566,
+          "sha256": "aade9bd679ec4d6b6269df340255fcaa20e191a08a8ae29423390d817020ccc5"
+        },
+        {
+          "file": "optimized.json",
+          "size": 105566,
+          "sha256": "aade9bd679ec4d6b6269df340255fcaa20e191a08a8ae29423390d817020ccc5"
+        }
+      ]
+    }
+  ]
+}
