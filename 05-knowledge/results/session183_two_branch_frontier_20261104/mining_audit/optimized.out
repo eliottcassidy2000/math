@@ -1,0 +1,1 @@
+{"status": "PASS", "independent_method": "Permutation counts for every induced-subset path; forward endpoint DP for full graphs; literal adjacency birth schedule.", "contexts": 75, "literal_full_graphs": 675, "strong_name_preserving_birth_schedules": 225, "paired_uniform_locus_checks": 75}

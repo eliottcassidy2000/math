@@ -1,0 +1,18 @@
+[
+  {
+    "H": 462915,
+    "birth_cut": 256,
+    "birth_H": 1061775,
+    "full_automorphism_order": 81,
+    "automorphism_search_nodes": 361,
+    "transitive_deletions": []
+  },
+  {
+    "H": 462915,
+    "birth_cut": 256,
+    "birth_H": 1395279,
+    "full_automorphism_order": 27,
+    "automorphism_search_nodes": 121,
+    "transitive_deletions": []
+  }
+]

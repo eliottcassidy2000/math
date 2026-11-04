@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "literal_two_birth_schedules": 225,
+  "independent_short_family_full_graph_pairs": 225,
+  "source_sha256": {
+    "PROOF.md": "22e5e49b322ba3f58184296a36051a1b78f8af826960085a2ad86f49aac62339",
+    "verify.py": "ef33d390739368561f9519c9cd4cf27cea136ef8d6930524ea11c0f3e1087b3a",
+    "FRONTIER.md": "0e1069c70806fa6673894ea09481626ea3fe6760077673e10fb19de3e5d5e03c"
+  }
+}
