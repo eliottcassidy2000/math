@@ -86,6 +86,28 @@ The named-return search here likewise constructs accepted targets only
 after the bank inverse and literal graph compiler have supplied them.
 Neither local construction proves arbitrary-depth or arbitrary-source closure.
 
+Before publication, incoming work through b6135263ba strengthened these
+connections. [Simultaneous disjoint reversal isolation](../simultaneous_module_reversal_20261104/README.md)
+now separates every nonempty selection of disjoint nontrivial module
+converses modulo4, with explicit decoder queries and retained mixed
+quartics. Our star statement remains a weighted-kernel statement and is
+not a hidden simultaneous-converse claim.
+
+The [nonzero-preparation packet](../nonzero_preparation_20261103/README.md)
+adds an all-strong compiler with at most three simultaneous helpers and
+2d+4 complements for d old-pair differences between strong same-name
+endpoints. This is a stronger transport option once its endpoint and
+order guards are met. Our saved shorter direct pair programs allow weak
+intermediates; they are not relabelled as all-strong without a new replay.
+Its actual two-round H1429 tree is a different source family and is
+credited as incoming progress, not incorporated by scalar identification.
+
+Session188's [contextual module obstruction](../session188_structural_bridges_20261104/returns/README.md)
+also explains a useful common mechanism: a genuine3^m cover mode can
+vanish in the selected actual attachment count. In JR1, H has no3^m
+term while E_a(2) has coefficient76. Thus the observer, as well as the
+source module, determines which recurrence modes must be retained.
+
 ## Next decisive targets
 
 The three-entry adapter supplies unit joint entry at every size, but its

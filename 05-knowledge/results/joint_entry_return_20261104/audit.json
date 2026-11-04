@@ -1,0 +1,127 @@
+{
+  "status": "PASS_SAME_AGENT_WITH_INDEPENDENT_ALGORITHMS",
+  "normal_optimized_equal": true,
+  "jobs": [
+    {
+      "script": "entry.py",
+      "result": "entry.json",
+      "sha256": "5de16fe06e01db89e1b4fd3aaea9e11632ec5a67f08e2da7fd2de8ba89f254f7",
+      "commands": [
+        {
+          "optimized": false,
+          "stdout": "strong checks {1: 1, 3: 9, 4: 16, 5: 150, 6: 1260, 7: 17297} entries 238 unique-start roots 91 labelled {1: 1, 2: 8, 3: 72, 4: 1024, 5: 25600} literal 1105"
+        },
+        {
+          "optimized": true,
+          "stdout": "strong checks {1: 1, 3: 9, 4: 16, 5: 150, 6: 1260, 7: 17297} entries 238 unique-start roots 91 labelled {1: 1, 2: 8, 3: 72, 4: 1024, 5: 25600} literal 1105"
+        }
+      ]
+    },
+    {
+      "script": "repair.py",
+      "result": "repair.json",
+      "sha256": "02da6997e437e183d2c99e7bc19bc6fcaf29772e9fec6165050416ff4685cba0",
+      "commands": [
+        {
+          "optimized": false,
+          "stdout": "marked small controls 102 native guards 204 chain [(3, 15), (15, 107), (107, 839)] hostile [1061775, 1395279]"
+        },
+        {
+          "optimized": true,
+          "stdout": "marked small controls 102 native guards 204 chain [(3, 15), (15, 107), (107, 839)] hostile [1061775, 1395279]"
+        }
+      ]
+    },
+    {
+      "script": "probe.py",
+      "result": "probe.json",
+      "sha256": "20072d1afa17f3a4dcedb022c7484761e460cc5bddf9c7512798e3bc1ebf91c1",
+      "commands": [
+        {
+          "optimized": false,
+          "stdout": "41506343 2 124519031 hits 10\n41506343 4 124519033 hits 3\n41506345 2 124519037 hits 7\n41506345 4 124519039 hits 6"
+        },
+        {
+          "optimized": true,
+          "stdout": "41506343 2 124519031 hits 10\n41506343 4 124519033 hits 3\n41506345 2 124519037 hits 7\n41506345 4 124519039 hits 6"
+        }
+      ]
+    },
+    {
+      "script": "next_returns.py",
+      "result": "next_returns.json",
+      "sha256": "e5512b972a3c9ae79c70d64a5f00b58235acbbae5455d458eaa96830dfce106d",
+      "commands": [
+        {
+          "optimized": false,
+          "stdout": "Native target 124519031 order 29 clock 1 moves 62\nJoint target 124519031 ports 39 6\nJoint target 124519031 ports 31 6\nJoint target 124519031 ports 4 6\nJoint target 124519031 ports 50 51\nNative target 124519033 order 29 clock 3 moves 28\nJoint target 124519033 ports 39 6\nJoint target 124519033 ports 31 6\nJoint target 124519033 ports 4 6\nJoint target 124519033 ports 50 51"
+        },
+        {
+          "optimized": true,
+          "stdout": "Native target 124519031 order 29 clock 1 moves 62\nJoint target 124519031 ports 39 6\nJoint target 124519031 ports 31 6\nJoint target 124519031 ports 4 6\nJoint target 124519031 ports 50 51\nNative target 124519033 order 29 clock 3 moves 28\nJoint target 124519033 ports 39 6\nJoint target 124519033 ports 31 6\nJoint target 124519033 ports 4 6\nJoint target 124519033 ports 50 51"
+        }
+      ]
+    },
+    {
+      "script": "response_recurrence.py",
+      "result": "response_recurrence.json",
+      "sha256": "6a46654c6ca21055f7950a8244cb2c4f994c0d122225c023eb8556de5e826d4a",
+      "commands": [
+        {
+          "optimized": false,
+          "stdout": "48 joint fields; proved space dimension9; active bases [1, 2, 3] independent holdout order 27 phase hostile [461, 7985]"
+        },
+        {
+          "optimized": true,
+          "stdout": "48 joint fields; proved space dimension9; active bases [1, 2, 3] independent holdout order 27 phase hostile [461, 7985]"
+        }
+      ]
+    },
+    {
+      "script": "star.py",
+      "result": "star.json",
+      "sha256": "e2418767c7d2f964969d353816b77c237e440b1dd6d76fe26cd724210bb893e7",
+      "commands": [
+        {
+          "optimized": false,
+          "stdout": "Native star exposure at module sizes [1, 2, 4, 9, 20]"
+        },
+        {
+          "optimized": true,
+          "stdout": "Native star exposure at module sizes [1, 2, 4, 9, 20]"
+        }
+      ]
+    }
+  ],
+  "hash_convention": "SHA256 of UTF8 source bytes after CRLF-to-LF normalization",
+  "source_sha256": {
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/metagraph_probe.py": "75266c143e3c4fbbadd5202984ec5cd6a0b7b9310a37850ff04fb6e92585ed84",
+    "05-knowledge/results/joint_entry_return_20261104/AUDIT.md": "ec55643be598026b5aea71178d458e0f157e0ce84c15d3d8f01fa503cf2dc179",
+    "05-knowledge/results/joint_entry_return_20261104/ENTRY.md": "7b9f409bfe865d88390aa6fa33f04024c2a1a541384cb46a6336bcf7da7a99b3",
+    "05-knowledge/results/joint_entry_return_20261104/entry.py": "2c4ec7183791c7195ec9c43870be65bd27ca029267c299bba19fc383f984bef8",
+    "05-knowledge/results/joint_entry_return_20261104/next_returns.py": "3312dbc911a93d6fe0159bca1a9ba84f28bb4cf4432fb6f578cc9351ce444a9a",
+    "05-knowledge/results/joint_entry_return_20261104/probe.py": "eccb6ff0dac26a5871f2c3903041d88755f27dd5109655702f85ed2ebc374e64",
+    "05-knowledge/results/joint_entry_return_20261104/README.md": "42e15cbac5e70c806979922c463c3753a95c7df05709cb3195c5320c5527545f",
+    "05-knowledge/results/joint_entry_return_20261104/RECOVERY.md": "1ed39cf8656e179b151417f050b67578fc6a38c13ddd2c16008315ff6884cc02",
+    "05-knowledge/results/joint_entry_return_20261104/REPAIR.md": "e70d0ec84c446b32009758e3831729e2e449f5864907cff51bcf89cc223979b2",
+    "05-knowledge/results/joint_entry_return_20261104/repair.py": "eda6011d1a7781759506d41f5611b9bc3808f15f45c87fd88011d7f762ed6e82",
+    "05-knowledge/results/joint_entry_return_20261104/RESPONSE.md": "98a49d81faf1cac586d1842a96f3cb3e16dc89e8891bbccf1b815e6aa57b52c1",
+    "05-knowledge/results/joint_entry_return_20261104/response_recurrence.py": "ac59c8193b89421748eacd70f9830f78930684e252da1231223edd827da01ac6",
+    "05-knowledge/results/joint_entry_return_20261104/star.py": "6dbce33cfe778054c65bb3fb293eef67095a39e2294f6c415e0c7a67c4da6b35",
+    "05-knowledge/results/joint_entry_return_20261104/verify.py": "c795c69f7e7ea0acc49ba033bb95bfa018f1ee0dd35bdd4d9962479ffdc4cf58",
+    "05-knowledge/results/polarized_path_calculus_20261103/FUNNELS.md": "d4415fe860bdcc737c05614d97f3909168dd73a783f892505e42103add064a8e",
+    "05-knowledge/results/recursive_seed_switching_20261103/selector/bank.json": "132f8779ced72069de6cf2842522343fe72a650e02a451ebc45781ad56e11fe8",
+    "05-knowledge/results/recursive_seed_switching_20261103/selector/followup_named.json": "a9dd30cbe6f319219dd653f6f8697edb1c0d00f9b527164b828a2d4edb8c2d88",
+    "05-knowledge/results/recursive_seed_switching_20261103/selector/inverse.py": "27b1c76b29737f85e2660d2d760444581fdeefabe8bac44dd09d902d5ff31300",
+    "05-knowledge/results/recursive_seed_switching_20261103/transport/fast_gap.cpp": "59876569f4393a88d3481858819515d21374c6887e59174df5480a8036f0c71a",
+    "05-knowledge/results/recursive_seed_switching_20261103/transport/followup.py": "985e19eb45692dfd8ec7e4e073b5f9088bf1d67ed60cba8b41875fcc1fc6bebf",
+    "05-knowledge/results/return56941_two_feedback_20261103/endpoint_checked.cpp": "ecd7fad885c5b3a9ae5e9b7eadb6609ac0c799fe074c2b864d1158e772008f31",
+    "05-knowledge/results/session103_words_necklaces_20261029/bridge/BRIDGE_SINK_STAR_LEMMA.md": "b774fa2b2402f04c46d19b88fc14868f1f58b452c0b4f4cc89ab7b7de72f0b96",
+    "05-knowledge/results/session188_structural_bridges_20261104/skeleton/PROOF.md": "fe52812144edf77187c98787db8b45cf409da6344361fd3dc823d909febcc9ef",
+    "05-knowledge/results/strong_atom_continuation_vitali_20261026/strong-atlas.json": "f140ee49cec729f9ab172970a7ad282214ff1e0dbbc76b6bca767fbde1d7e457",
+    "05-knowledge/results/zero_ready_component_returns_20261103/interface/check.py": "2f0457def6969a19f1ffe8188ca5f7b47903664222c2f177b88d1394d213df35",
+    "05-knowledge/results/zero_ready_component_returns_20261103/interface/gap.py": "c965617d0c7a454fe940ac9e656f3661281f328e1d21665761f7a3a4056098f1",
+    "05-knowledge/results/zero_ready_component_returns_20261103/interface/phase.py": "f7dfdf91862c683f091cef9c1d8f9cce7dfd8a8c6b94a6bef768d36d387ed617",
+    "05-knowledge/results/zero_ready_component_returns_20261103/recovery/NOTE.md": "c4a5b6c232ed96ac8fd919cfa073a29b59919a2707f9c0d8770ec73d4b48025d"
+  }
+}

@@ -218,5 +218,5 @@ The adapter is uniform but not a closed ternary return: its restored
 mark again has nontransitive deletion, and its scalar output is (9),
 not a claimed 3H+2 or 3H+4. The useful new search target is a source
 rewrite into such a three-entry interface with the required outer
-response equation. Full joint responses and F49/F343 charts for m=0..6
+response equation. Full joint responses and F49/F343 charts for m=0..9
 are retained in `repair.json`; all-size claims follow from the proof.

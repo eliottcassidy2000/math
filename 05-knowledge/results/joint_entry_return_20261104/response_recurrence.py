@@ -12,6 +12,14 @@ HERE=Path(__file__).resolve().parent
 def main():
     records=json.loads((HERE/'repair.json').read_text())['sharp_entry_bridges']
     samples={r['m']:[value for pair in r['pairs'] for value in pair['fields']] for r in records}
+    bulk_transport=[]
+    for m in range(9):
+        T=tuple(records[m]['target_rows']);U=native.extend(T,{0,1,2})
+        # Keep every old physical name; only the canonical role indices move.
+        order=list(range(m+4))+[len(T)]+list(range(m+4,m+7))
+        relabelled=[sum(1<<j for j,b in enumerate(order) if U[a]>>b&1) for a in order]
+        need(relabelled==records[m+1]['target_rows'],'Actual bulk birth with full role transport')
+        bulk_transport.append(dict(m=m,new_out_mask=7,canonical_to_actual_indices=order))
     A=[[Q(j**m) for j in range(1,10)]+list(map(Q,samples[m])) for m in range(1,10)]
     for c in range(9):
         p=next(r for r in range(c,9) if A[r][c]);A[c],A[p]=A[p],A[c]
@@ -67,6 +75,7 @@ def main():
              sample_m=list(range(1,10)),ports=[[0,3],[1,3],[2,3]],fields_per_pair=16,
              field_order=['H','P2','E1_first','S1_first','q_first','E2_first','S2_first','E1_second','S1_second','q_second','E2_second','S2_second','W2_00','W2_01','W2_10','W2_11'],
              bases=list(range(1,10)),coefficients=coefficients,active_bases=active,
+             actual_bulk_transport=bulk_transport,
              integral_row_lattice_diagonal=[1,6,38],smith_diagonal=[1,2,114],
              boundary_m0=samples[0],positive_formula_at_m0=evaluate(0),
              holdout=dict(m=20,order=holdout_order,feedback=list(fb),actual_fields=actual),

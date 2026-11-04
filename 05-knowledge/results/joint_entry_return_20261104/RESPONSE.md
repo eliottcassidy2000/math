@@ -6,6 +6,13 @@ be [JE5](ENTRY.md), m>=1. Name the original C3 vertices a,b,c, the old
 mark w, the m-vertex transitive module Z, and the three new vertices A,B,C.
 The seven vertices outside Z have a fixed relation at every m.
 
+Bulk insertion is a literal birth: add the next Z vertex beating exactly
+a,b,c, and losing to every other existing vertex. All old names and arcs
+remain. In the saved canonical bit rows, the old A,B,C indices move up
+one and the newborn takes their previous first index; the receipt retains
+this role-to-physical-index permutation. It is a coordinate change, not
+permission to rename or discard an old physical port.
+
 ## JR1. Forty-eight actual joint responses have a three-state recurrence
 
 For each pair (a,w),(b,w),(c,w), retain the sixteen fields in the inherited
