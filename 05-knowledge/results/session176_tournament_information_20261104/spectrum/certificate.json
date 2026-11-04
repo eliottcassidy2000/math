@@ -1,0 +1,95 @@
+{
+  "gate_profiles": [
+    [
+      11,
+      6,
+      0,
+      0,
+      0
+    ],
+    [
+      13,
+      6,
+      0,
+      0,
+      0
+    ]
+  ],
+  "gate_seeds": [
+    [
+      16,
+      17,
+      3,
+      7,
+      12
+    ],
+    [
+      16,
+      25,
+      3,
+      5,
+      12
+    ]
+  ],
+  "gates": [
+    {
+      "high": 13,
+      "low": 11,
+      "r": 1,
+      "strong": true
+    },
+    {
+      "high": 25,
+      "low": 23,
+      "r": 2,
+      "strong": true
+    },
+    {
+      "high": 49,
+      "low": 47,
+      "r": 3,
+      "strong": true
+    },
+    {
+      "high": 97,
+      "low": 95,
+      "r": 4,
+      "strong": true
+    },
+    {
+      "high": 193,
+      "low": 191,
+      "r": 5,
+      "strong": true
+    },
+    {
+      "high": 385,
+      "low": 383,
+      "r": 6,
+      "strong": true
+    },
+    {
+      "high": 769,
+      "low": 767,
+      "r": 7,
+      "strong": true
+    },
+    {
+      "high": 1537,
+      "low": 1535,
+      "r": 8,
+      "strong": true
+    },
+    {
+      "high": 3073,
+      "low": 3071,
+      "r": 9,
+      "strong": true
+    }
+  ],
+  "literal_checks": 682,
+  "module_checks": 75,
+  "profile_checks": 1024,
+  "status": "proved identities and finite checks; completeness open",
+  "streaming_checks": 2794
+}

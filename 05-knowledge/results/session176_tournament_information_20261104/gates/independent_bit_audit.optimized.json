@@ -1,0 +1,8 @@
+{
+  "bit_level_words_through_length_10": 2047,
+  "direct_formula_two_suffix_probes_through_k12": 8191,
+  "exact_gate_formula": "n*(11*(n+1)+1)",
+  "largest_test_gate_count": 1220,
+  "semantics": "multioutput binary Hamilton count; fixed n circuit; constants and wires supplied",
+  "status": "PASS"
+}
