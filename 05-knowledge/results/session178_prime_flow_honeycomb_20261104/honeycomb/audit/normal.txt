@@ -1,0 +1,156 @@
+{
+  "chart_checks": 200000,
+  "odd_formula_checks": 100000,
+  "embeddings": [
+    {
+      "depth": 0,
+      "branches": 1,
+      "interiors": 0,
+      "edges": 0
+    },
+    {
+      "depth": 1,
+      "branches": 3,
+      "interiors": 8,
+      "edges": 10
+    },
+    {
+      "depth": 2,
+      "branches": 7,
+      "interiors": 28,
+      "edges": 34
+    },
+    {
+      "depth": 3,
+      "branches": 15,
+      "interiors": 76,
+      "edges": 90
+    },
+    {
+      "depth": 4,
+      "branches": 31,
+      "interiors": 188,
+      "edges": 218
+    },
+    {
+      "depth": 5,
+      "branches": 63,
+      "interiors": 444,
+      "edges": 506
+    },
+    {
+      "depth": 6,
+      "branches": 127,
+      "interiors": 1020,
+      "edges": 1146
+    },
+    {
+      "depth": 7,
+      "branches": 255,
+      "interiors": 2300,
+      "edges": 2554
+    },
+    {
+      "depth": 8,
+      "branches": 511,
+      "interiors": 5116,
+      "edges": 5626
+    },
+    {
+      "depth": 9,
+      "branches": 1023,
+      "interiors": 11260,
+      "edges": 12282
+    },
+    {
+      "depth": 10,
+      "branches": 2047,
+      "interiors": 24572,
+      "edges": 26618
+    },
+    {
+      "depth": 11,
+      "branches": 4095,
+      "interiors": 53244,
+      "edges": 57338
+    }
+  ],
+  "ball_shells": [
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27,
+    30,
+    33,
+    36,
+    39,
+    42,
+    45,
+    48,
+    51,
+    54,
+    57,
+    60,
+    63,
+    66,
+    69,
+    72,
+    75,
+    78,
+    81,
+    84,
+    87,
+    90,
+    93,
+    96,
+    99,
+    102,
+    105,
+    108,
+    111,
+    114,
+    117,
+    120,
+    123,
+    126,
+    129,
+    132,
+    135,
+    138,
+    141,
+    144,
+    147,
+    150
+  ],
+  "inverse_level_counts": [
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    4,
+    5,
+    7,
+    9,
+    12,
+    15,
+    19,
+    23,
+    30,
+    37,
+    46,
+    57,
+    72,
+    92,
+    117,
+    147
+  ],
+  "inverse_ball": 704,
+  "status": "PASS"
+}

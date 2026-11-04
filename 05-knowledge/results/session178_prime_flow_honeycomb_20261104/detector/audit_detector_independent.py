@@ -1,6 +1,7 @@
+from pathlib import Path
 """Independent geometric enumeration and boundary checks; runs under -O."""
 import importlib.util, random
-spec=importlib.util.spec_from_file_location('detector','/workspace/shared/session178/detector.py')
+spec=importlib.util.spec_from_file_location('detector',Path(__file__).with_name('detector.py'))
 m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
 def check(c,msg):
     if not c: raise RuntimeError(msg)

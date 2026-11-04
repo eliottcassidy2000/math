@@ -2,7 +2,7 @@
 
 **Verdict: PASS. No mathematical correction required.**
 
-Reviewed `../honeycomb/RESULTS.md`, `check_honeycomb.py`, and `verification.txt`. Independent checker: `independent.py`; exact results: `RESULTS.json`; normal and optimized outputs: `normal.txt` and `optimized.txt`.
+Reviewed `../RESULTS.md`, `check_honeycomb.py`, and `verification.txt`. Independent checker: `independent.py`; exact results: `RESULTS.json`; normal and optimized outputs: `normal.txt` and `optimized.txt`.
 
 ## Proof audit
 
