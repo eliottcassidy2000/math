@@ -1,0 +1,13 @@
+C_77 of type (7,11,1^k): defect census (pynauty 2.8.8.1)
+p=7 q=11 k=0 n=18 R=16 RG=16 tau_T=16 tau_E=16 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(2, 4) circ_Geven=(2, 4) colT=1 colG=1 secs=0.0
+p=7 q=11 k=1 n=19 R=64 RG=64 tau_T=64 tau_E=64 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(2, 4) circ_Geven=(2, 4) colT=4 colG=4 secs=0.0
+p=7 q=11 k=2 n=20 R=256 RG=256 tau_T=256 tau_E=256 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(2, 4) circ_Geven=(2, 4) colT=16 colG=16 secs=0.0
+p=7 q=11 k=3 n=21 R=1408 RG=1408 tau_T=1408 tau_E=1408 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(2, 4) circ_Geven=(2, 4) colT=88 colG=88 secs=0.3
+p=7 q=11 k=4 n=22 R=11264 RG=11264 tau_T=11264 tau_E=11263 defect=1 W=1 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(2, 4) circ_Geven=(2, 4) colT=704 colG=704 secs=2.6
+
+k  n   R  tau_T tau_E defect  W  E_T E_even E_wit
+0 18     16     16     16     0    0    0     0    0
+1 19     64     64     64     0    0    0     0    0
+2 20    256    256    256     0    0    0     0    0
+3 21   1408   1408   1408     0    0    0     0    0
+4 22  11264  11264  11263     1    1    0     0    0
