@@ -1,7 +1,8 @@
 ---
 id: HYP-9464
 title: "Coincidences with a mechanism. (A) The {-3}-self-dual tournaments of order 10 are exactly the transitive TT_10 and the almost transitive AT_10 = NT_10, whose path count 257 = 2^8 + 1 is the Fermat prime F_3; in general the non-transitive decomposable {-3}-self-dual tournament of order 2^i + 2 >= 10 is the one with H = F_i (Achour-Boudabbous-Boussairi, with THM-4749 (4)). (B) Every sole-exit-free tournament with exactly 3 Hamiltonian cycles (n >= 6) has exactly 3 vertices whose deletion is uniquely Hamiltonian; with exactly 4 cycles (n >= 7), exactly 2. (C) The few-cycle Fibonacci table is the rooted uniquely Hamiltonian count two orders down: u_3(n) = R(n - 2), R(m) = F(2m - 5) (THM-4868 (F)). Pre-registered at order 10"
-status: PRE-REGISTERED (kind-pasteur-2026-11-04-S10); the order-10 runs are made after this commit
+status: CONFIRMED at order 10 (pre-registered in 3fc61b533c, all three predictions held, no failing class). (A) FINITE-EXACT at orders 9-10 and CITED for decomposable n >= 9, indecomposable n >= 11 OPEN; (B) FINITE-EXACT at orders 6-10, general n OPEN; (C) PROVED
+script_confirm: 04-computation/experiments/selfdual3_fewcycle_20261104_confirm.out, 04-computation/experiments/at_mirror_fixed_paths_20261104.py
 session: kind-pasteur-2026-11-04-S10
 date: 2026-11-04
 related: [THM-4868, THM-4869, THM-4870, THM-4749, THM-4866, HYP-9459, HYP-9461, HYP-9462]
@@ -30,8 +31,10 @@ script: 04-computation/experiments/selfdual3_fewcycle_20261104.c, 04-computation
 - At order 9 the two classes are TT_9 and AT_9 (H = 129, hc = 1). This checks the cited theorem at its threshold,
   with no indecomposable exception.
 - Every module of every decomposable {-3}-self-dual class at orders 7-9 is transitive.
-- At order 8 there are 16 decomposable exceptions besides TT_8 and AT_8, together with one non-self-converse
-  indecomposable pair.
+- At order 8 there are 16 decomposable classes, so 14 exceptions besides TT_8 and AT_8, together with one
+  non-self-converse indecomposable pair (16 + 2 = 18). *Corrected after the order-10 runs:* the pre-registered text
+  said "16 decomposable exceptions besides TT_8 and AT_8", but the record shows 16 decomposable classes in all. No
+  prediction depends on this count.
 
 **Uniquely Hamiltonian deletions** in sole-exit-free tournaments:
 
@@ -61,4 +64,33 @@ Every outcome will be reported, with the class if a prediction fails.
 
 ## Results
 
-(Filled after the order-10 runs.)
+The runs were made after the pre-registration commit 3fc61b533c. The record is
+`selfdual3_fewcycle_20261104_confirm.out`. All three predictions are **CONFIRMED**, with no failing class.
+
+- **(P1) CONFIRMED.** `selfdual3 10` checked all 9,733,056 classes of order 10 (38 s). Exactly two are
+  {-3}-self-dual:
+  - TT_10 (H = 1, hc = 0);
+  - one class with scores 1 1 2 3 4 5 6 7 8 8, H = 257, hc = 1.
+
+  Both are decomposable and self-converse; none is indecomposable. networkx isomorphism against explicit
+  constructions identifies the two classes as TT_10 and AT_10. Independent networkx code confirms that AT_n and TT_n
+  are {-3}-self-dual for n = 9, 10, 11 and that three random order-10 tournaments are not.
+- **(P2) CONFIRMED.** `hcdump 10 3 2` lists 89 classes (= u_3(10) = F(11)). Each has exactly 3 vertices v with
+  T - v uniquely Hamiltonian.
+- **(P3) CONFIRMED.** `hcdump 10 4 2` lists 68 classes (= u_4(10) = 2F(9)). Each has exactly 2.
+
+**Typing after the runs.**
+
+| part | status |
+|---|---|
+| (A) at orders 9 and 10 | FINITE-EXACT (exhaustive): the {-3}-self-dual classes are exactly TT_n and AT_n |
+| (A) the decomposable case, every n >= 9 | CITED (Achour-Boudabbous-Boussairi) |
+| (A) no indecomposable {-3}-self-dual tournament for n >= 11 | OPEN |
+| (A) H(AT_n) = 2^(n-2) + 1, hence F_i at order 2^i + 2 | PROVED (THM-4749 (4); re-derived in the note) |
+| (B) hc = 3, exactly 3 uniquely Hamiltonian deletions | FINITE-EXACT, orders 6-10; OPEN in general |
+| (B) hc = 4, exactly 2 | FINITE-EXACT, orders 7-10; OPEN in general |
+| (C) u_3(n) = R(n - 2) | PROVED (algebra from THM-4869); no bijection is known |
+
+The note adds a PROVED mirror law for AT_n (`at_mirror_fixed_paths_20261104.py`). The converse involution of AT_n
+fixes exactly H(AT_(k+2)) Hamiltonian paths when n = 2k + 2, and only one path when n is odd. So the Fermat recursion
+F_i = (F_(i-1) - 1)^2 + 1 is the count of a fixed-point set: at order 2^i + 2 the mirror-fixed paths number F_(i-1).

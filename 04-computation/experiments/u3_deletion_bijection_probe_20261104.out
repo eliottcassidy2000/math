@@ -1,0 +1,16 @@
+# u3_deletion_bijection_probe_20261104.py on the hcdump records (hc = 3, min out-degree >= 2), orders 6-10 (kind-pasteur-2026-11-04-S10)
+n=6: #T=2  rule 'two sole exits': each T has exactly one image class: False;  distinct images: 2
+n=6: #T=2  rule 'two sole entries': each T has exactly one image class: False;  distinct images: 2
+   UH-deletion profiles (#sole exits,#sole entries) per T: {((1, 1), (1, 1), (1, 1)): 1, ((1, 1), (2, 2), (2, 2)): 1}
+n=7: #T=5  rule 'two sole exits': each T has exactly one image class: False;  distinct images: 4
+n=7: #T=5  rule 'two sole entries': each T has exactly one image class: False;  distinct images: 5
+   UH-deletion profiles (#sole exits,#sole entries) per T: {((1, 1), (1, 1), (1, 1)): 2, ((1, 2), (1, 2), (1, 2)): 1, ((1, 1), (2, 2), (2, 2)): 1, ((1, 2), (2, 2), (2, 2)): 1}
+n=8: #T=13  rule 'two sole exits': each T has exactly one image class: False;  distinct images: 10
+n=8: #T=13  rule 'two sole entries': each T has exactly one image class: False;  distinct images: 12
+   UH-deletion profiles (#sole exits,#sole entries) per T: {((1, 1), (1, 1), (1, 1)): 4, ((1, 2), (1, 2), (1, 2)): 4, ((1, 1), (2, 2), (2, 2)): 1, ((1, 2), (2, 2), (2, 2)): 3, ((1, 1), (2, 1), (2, 1)): 1}
+n=9: #T=34  rule 'two sole exits': each T has exactly one image class: False;  distinct images: 26
+n=9: #T=34  rule 'two sole entries': each T has exactly one image class: False;  distinct images: 30
+   UH-deletion profiles (#sole exits,#sole entries) per T: {((1, 1), (1, 1), (1, 1)): 9, ((1, 2), (1, 2), (1, 2)): 12, ((1, 1), (2, 2), (2, 2)): 1, ((1, 2), (2, 2), (2, 2)): 8, ((1, 1), (2, 1), (2, 1)): 4}
+n=10: #T=89  rule 'two sole exits': each T has exactly one image class: False;  distinct images: 68
+n=10: #T=89  rule 'two sole entries': each T has exactly one image class: False;  distinct images: 77
+   UH-deletion profiles (#sole exits,#sole entries) per T: {((1, 1), (1, 1), (1, 1)): 22, ((1, 2), (1, 2), (1, 2)): 33, ((1, 1), (2, 2), (2, 2)): 1, ((1, 2), (2, 2), (2, 2)): 21, ((1, 1), (2, 1), (2, 1)): 12}

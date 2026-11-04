@@ -1,0 +1,21 @@
+# HYP-9464 confirmatory record (kind-pasteur-2026-11-04-S10), runs made AFTER the pre-registration commit 3fc61b533c
+## (P1) selfdual3 10 (38 s; all 9,733,056 classes of order 10)
+SD3 n=10 decomposable=1 selfconverse=1 H=1 hc=0 scores: 0 1 2 3 4 5 6 7 8 9
+SD3 n=10 decomposable=1 selfconverse=1 H=257 hc=1 scores: 1 1 2 3 4 5 6 7 8 8
+## (P2), (P3) hcdump 10 3 2 / hcdump 10 4 2, then uh_deletion_count_20261104.py
+u3(10) = 89, u4(10) = 68
+u3_10only.out: n=10 hc=3 classes=89 #(v: T - v uniquely Hamiltonian) -> {3: 89}
+u4_10only.out: n=10 hc=4 classes=68 #(v: T - v uniquely Hamiltonian) -> {2: 68}
+## independent sanity check (networkx isomorphism, different code): AT_n and TT_n are {-3}-self-dual, n = 9..11; three random tournaments of order 10 are not
+n=9: AT_n -3-self-dual: True; TT_n: True
+n=10: AT_n -3-self-dual: True; TT_n: True
+n=11: AT_n -3-self-dual: True; TT_n: True
+random order-10 tournament 0 {-3}-self-dual: False
+random order-10 tournament 1 {-3}-self-dual: False
+random order-10 tournament 2 {-3}-self-dual: False
+(in the three lines above, '-3-self-dual' is a Python f-string rendering of the label '{-3}-self-dual'; the values are as printed)
+## identity of the two order-10 classes (networkx isomorphism against explicit AT_10 and TT_10, rows from the selfdual3 output)
+SD3 n=10 ... H=1 hc=0: iso AT_10 False, iso TT_10 True
+SD3 n=10 ... H=257 hc=1: iso AT_10 True, iso TT_10 False
+## stderr of selfdual3 10
+order 10: 9733056 classes, 2 {-3}-self-dual ()
