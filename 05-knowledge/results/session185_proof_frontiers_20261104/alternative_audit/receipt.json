@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "profiles": [
+    [
+      27,
+      21,
+      4
+    ],
+    [
+      29,
+      21,
+      4
+    ],
+    [
+      31,
+      21,
+      4
+    ]
+  ],
+  "grouped_profiles_verified": true,
+  "direct_DFS_inflations": [
+    [
+      27,
+      29,
+      31
+    ],
+    [
+      69,
+      71,
+      73
+    ],
+    [
+      177,
+      179,
+      181
+    ],
+    [
+      465,
+      467,
+      469
+    ],
+    [
+      1257,
+      1259,
+      1261
+    ],
+    [
+      3489,
+      3491,
+      3493
+    ],
+    [
+      9897,
+      9899,
+      9901
+    ]
+  ],
+  "permutation_cut_arbitrary_module_checks": 225,
+  "mod49_period": 42,
+  "prime_cofactors": [
+    67,
+    499
+  ]
+}
