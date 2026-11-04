@@ -1,0 +1,1407 @@
+{
+  "adjacent_swap_orbit_controls": [
+    {
+      "largest_H_in_census": 1,
+      "orbit_bound": 1,
+      "order": 1,
+      "tournaments": 1
+    },
+    {
+      "largest_H_in_census": 1,
+      "orbit_bound": 1,
+      "order": 2,
+      "tournaments": 2
+    },
+    {
+      "largest_H_in_census": 3,
+      "orbit_bound": 3,
+      "order": 3,
+      "tournaments": 8
+    },
+    {
+      "largest_H_in_census": 5,
+      "orbit_bound": 6,
+      "order": 4,
+      "tournaments": 64
+    },
+    {
+      "largest_H_in_census": 15,
+      "orbit_bound": 30,
+      "order": 5,
+      "tournaments": 1024
+    }
+  ],
+  "all_coefficients_compared": 2373,
+  "audit_sha256": "53ba2d3ff305d9b7c320fc88f9496e7123038b29d61b7f60ed0c72cdd3d5020b",
+  "independent_simplex_vertex_records": [
+    {
+      "budget": 0,
+      "coordinates": [
+        {
+          "coefficients": 1,
+          "complete_list_sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723",
+          "h": 2,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 1,
+          "complete_list_sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723",
+          "h": 3,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 1,
+          "complete_list_sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723",
+          "h": 4,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 1,
+          "complete_list_sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723",
+          "h": 5,
+          "maximum": 0,
+          "minimum": 0
+        }
+      ],
+      "n": 1,
+      "scalar_vertex_controls": [
+        -2
+      ],
+      "simplex_vertices": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "budget": 1,
+      "coordinates": [
+        {
+          "coefficients": 1,
+          "complete_list_sha256": "457ca6c96353771d763bc9c89032b6b683718480a5d23d0348d662970492b36a",
+          "h": 2,
+          "maximum": -168,
+          "minimum": -168
+        },
+        {
+          "coefficients": 1,
+          "complete_list_sha256": "b5938b18dbd85399f2e1a72b66ab8b8e370f7f67db29840be4a64a9098d5ba23",
+          "h": 3,
+          "maximum": -288,
+          "minimum": -288
+        },
+        {
+          "coefficients": 1,
+          "complete_list_sha256": "56feef453c257eadb0f7e5780a23687dc06416c94976bbbef027efb7c22e0e90",
+          "h": 4,
+          "maximum": -192,
+          "minimum": -192
+        },
+        {
+          "coefficients": 1,
+          "complete_list_sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723",
+          "h": 5,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 1,
+          "complete_list_sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723",
+          "h": 6,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 1,
+          "complete_list_sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723",
+          "h": 7,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 1,
+          "complete_list_sha256": "09c8e114d92643168ef591efc35b627e9b26e3bb6b2b055faec66482b2eda723",
+          "h": 8,
+          "maximum": 0,
+          "minimum": 0
+        }
+      ],
+      "n": 2,
+      "scalar_vertex_controls": [
+        -36
+      ],
+      "simplex_vertices": [
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "budget": 5,
+      "coordinates": [
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "c961f6e3ddecbd9125ddf1e69bfb16e8b5752711f298bf4153f57ed3867c1f6a",
+          "h": 2,
+          "maximum": -22032,
+          "minimum": -69876
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "153a641f298957a148d4495426dc62486f2487c4b46b1b393186a47b90314e4b",
+          "h": 3,
+          "maximum": -105012,
+          "minimum": -316656
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "2ab428d35183cd5c9973cdd8bf288cb1e20b27436a79d32ebe3f5b3c1b6281f3",
+          "h": 4,
+          "maximum": -252000,
+          "minimum": -770400
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "d692811491d3791d25fdf16f7bc25a25d386fec17c7a52634f75a231dd3385b9",
+          "h": 5,
+          "maximum": -352800,
+          "minimum": -1065600
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "8d14d61898fa9fe519a669d654c6d839047190805fd111a6c3b22bffd720d961",
+          "h": 6,
+          "maximum": -272160,
+          "minimum": -816480
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "27896dba6b9a136dcd119ccbb636d380399b76bb216186859262de2c0d08060f",
+          "h": 7,
+          "maximum": -90720,
+          "minimum": -272160
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba",
+          "h": 8,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba",
+          "h": 9,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba",
+          "h": 10,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba",
+          "h": 11,
+          "maximum": 0,
+          "minimum": 0
+        }
+      ],
+      "n": 3,
+      "scalar_vertex_controls": [
+        -1944,
+        -2384
+      ],
+      "simplex_vertices": [
+        [
+          0,
+          6,
+          6,
+          6
+        ],
+        [
+          0,
+          1,
+          6,
+          6
+        ]
+      ]
+    },
+    {
+      "budget": 23,
+      "coordinates": [
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "0677077351d600f7d915b5d7faf8bf86eeaf644ab45879dceb7726b7f55d1665",
+          "h": 2,
+          "maximum": -6354240,
+          "minimum": -20943936
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "e717ee2bd5e20ca128862e8b7d2e7c2e06e4c144643a85e71e4b6b67c5da26ef",
+          "h": 3,
+          "maximum": -44904672,
+          "minimum": -159375168
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "ee00c5590b4b8f7529955347d9752cbb625345a402f3b48669f3aaf4d71e9e1b",
+          "h": 4,
+          "maximum": -189707328,
+          "minimum": -676841472
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "e23dd7f68981fce772770c760f55b5ea8beca62554aa61805854663dc22082b5",
+          "h": 5,
+          "maximum": -526896000,
+          "minimum": -1821470400
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "a10dde95e947f6f7f9ab2a40a07d8a6c6fa40a72cef8cdeb8ec74959d14082b6",
+          "h": 6,
+          "maximum": -994256640,
+          "minimum": -3286811520
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "874d0f2f2f86cee05bd0def0854a401bbfd2da54c340c9b23b799a61aba12123",
+          "h": 7,
+          "maximum": -1271208960,
+          "minimum": -4021355520
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "5faf473452e8be79cd88e6b1abbc763ccbc930f00e918c10c4b49535b391f8d7",
+          "h": 8,
+          "maximum": -1059932160,
+          "minimum": -3239147520
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "575b8558a242f3c29f410f5280147b18c323651332fd21390b5af63b064a1aeb",
+          "h": 9,
+          "maximum": -522547200,
+          "minimum": -1567641600
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "b063a31a6c1457983b6f223e49b726d9980f18a4d4c70b3119c94a786f6ce9dc",
+          "h": 10,
+          "maximum": -116121600,
+          "minimum": -348364800
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba",
+          "h": 11,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba",
+          "h": 12,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba",
+          "h": 13,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 4,
+          "complete_list_sha256": "43027f2449a9aa81edf4d4044b22893bec5317575f5df16438e541ed73c0efba",
+          "h": 14,
+          "maximum": 0,
+          "minimum": 0
+        }
+      ],
+      "n": 4,
+      "scalar_vertex_controls": [
+        -984960,
+        -407568
+      ],
+      "simplex_vertices": [
+        [
+          0,
+          24,
+          60,
+          36,
+          24
+        ],
+        [
+          0,
+          1,
+          14,
+          36,
+          24
+        ]
+      ]
+    },
+    {
+      "budget": 119,
+      "coordinates": [
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "e5e42e12aab565fec0456a136ce1f7605546092cb5bee620ae662452b7a555fd",
+          "h": 2,
+          "maximum": -2701404000,
+          "minimum": -63544725504
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "a13f2b23ec5e590cc2924059215d9cc81b429a68418b33997377a713223b5f9f",
+          "h": 3,
+          "maximum": -26977698000,
+          "minimum": -356131966464
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "40d91ee8036bf4f9d5322920ee3fd742f5815a413b23e21ac764569a3bd8d574",
+          "h": 4,
+          "maximum": -168302232000,
+          "minimum": -1458906825600
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "f2ccd691143b48b373ba5f089c637c32b31e7a50ca128dc98a143208c3f48cb3",
+          "h": 5,
+          "maximum": -719298090000,
+          "minimum": -6131234642400
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "ad053efd14437894991852605bae1995183343863385faee0f1178c883d1264f",
+          "h": 6,
+          "maximum": -2203296228000,
+          "minimum": -17936424354240
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "ff7db91c12f8a2aa7638c6fb120cf5a0f0a4489db1c886b49292592087b71cc7",
+          "h": 7,
+          "maximum": -4950517068000,
+          "minimum": -37949639273280
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "dcd9c80d7fc3c3c038e56b13adcfb78efff0509c70a2262c8c3c811c712deae2",
+          "h": 8,
+          "maximum": -8220756096000,
+          "minimum": -59035466649600
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "a971b6a370b9b1d5f6cf7d750af58eefe8b881df1ed983181df4df3e78361ebf",
+          "h": 9,
+          "maximum": -10015596864000,
+          "minimum": -67508917862400
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "33a7500492b8055abf7182a9f4c0b15db3eea183cce62fedee94ef2bdb22d42f",
+          "h": 10,
+          "maximum": -8731800000000,
+          "minimum": -55715869440000
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "318dc446150e39a5fcd27a1cc8d8bc266195da3e7602b3c20f1d40a0175a9919",
+          "h": 11,
+          "maximum": -5171221440000,
+          "minimum": -31692342528000
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "8529449d695feed7989afdf8baeb79a285b2a4177a0f8da65bc5fd824dc996cf",
+          "h": 12,
+          "maximum": -1868106240000,
+          "minimum": -11208637440000
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "222775761a2a50d603189cd876a7f4535d4ab3fd8ed8f25a05fc93b6e692da86",
+          "h": 13,
+          "maximum": -311351040000,
+          "minimum": -1868106240000
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d",
+          "h": 14,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d",
+          "h": 15,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d",
+          "h": 16,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d",
+          "h": 17,
+          "maximum": 0,
+          "minimum": 0
+        }
+      ],
+      "n": 5,
+      "scalar_vertex_controls": [
+        -133812000,
+        -5390074368,
+        -137421032
+      ],
+      "simplex_vertices": [
+        [
+          0,
+          120,
+          30,
+          150,
+          240,
+          120
+        ],
+        [
+          0,
+          120,
+          744,
+          864,
+          240,
+          120
+        ],
+        [
+          0,
+          1,
+          30,
+          150,
+          240,
+          120
+        ]
+      ]
+    },
+    {
+      "budget": 719,
+      "coordinates": [
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "0b4f84b204d1a052e2581e2f85cdfa6a6de10a94c75a39ea77c5787ae173fea6",
+          "h": 2,
+          "maximum": -1740967776000,
+          "minimum": -2645560887911424
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "e6195246863274895edc9ebbadae490ea8e940218097e2ce843cf5a41db6c596",
+          "h": 3,
+          "maximum": -22701544704000,
+          "minimum": -19501756962720768
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "5afb3bb78478a06e4b0c821a5de6032c21cb4af83fc98ec9a8e59fdeba260830",
+          "h": 4,
+          "maximum": -193783553280000,
+          "minimum": -87653434335639552
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "96cc46c30ff1c4d0990f94da5df6d06531cbb47024e955b7020664ac721bd17a",
+          "h": 5,
+          "maximum": -1151940018240000,
+          "minimum": -266760722558361600
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "8e000338e3605921afee3ee4dd385c706cdfdd0c21e2a2f707a14e984d0b46dd",
+          "h": 6,
+          "maximum": -5000533315200000,
+          "minimum": -578555841985320960
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "007e59bba72afa4ad16bb3f83e9d698096e50f2bf2f4f45481c77ae7a25f0b04",
+          "h": 7,
+          "maximum": -16376194929024000,
+          "minimum": -922977986737121280
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "1fcb78ecf6418b550eaf596c2f3a59ca5e7b51bc5ccc3eb0ad7feb3830afdc15",
+          "h": 8,
+          "maximum": -41285721351168000,
+          "minimum": -1114353308051988480
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "dc99846434f041b9b9a65b13facf087b317361e5d59c08133557d847236ec499",
+          "h": 9,
+          "maximum": -80953523340480000,
+          "minimum": -1315993359006950400
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "6014f4232c6c1259d23555bf1b3ff78f3661a533e10e9019331ce72132852261",
+          "h": 10,
+          "maximum": -123647437630080000,
+          "minimum": -1400529692888524800
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "3446f4b6e1ceae73e7a3b08574d743b927129c53568b16add495a52bb3c2545f",
+          "h": 11,
+          "maximum": -146047525569792000,
+          "minimum": -1408725367502745600
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "be4a3ed1314770e2e5f7a7b782c1dbf3c37dd2e04fa52d3f4f5448b86abd7c4b",
+          "h": 12,
+          "maximum": -131068661746176000,
+          "minimum": -1078784599211827200
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "300406c6304e50cb1945523c324f041d0a6477549fc818130c7f6e69c54ba9c7",
+          "h": 13,
+          "maximum": -86528812930560000,
+          "minimum": -616955536124928000
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "d5110c3f10a9e9ba3d67e2461add1062de0972da1a9dd7c46fd604484e3af43d",
+          "h": 14,
+          "maximum": -39674840325120000,
+          "minimum": -253092527880192000
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "a6d39b989b42d598830e615f229bead1959cc190d00bb8122f3e2799858d672f",
+          "h": 15,
+          "maximum": -11298306539520000,
+          "minimum": -67789839237120000
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "92da79ee2dcbd7120c32eedde9da11b3565635bbfdbb8c48951ad5cff217d897",
+          "h": 16,
+          "maximum": -1506440871936000,
+          "minimum": -9038645231616000
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d",
+          "h": 17,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d",
+          "h": 18,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d",
+          "h": 19,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 10,
+          "complete_list_sha256": "7af0cbc68c3bd331be86dac34896b40d0a5b722ec70c5a69ffe4e4a702bcc48d",
+          "h": 20,
+          "maximum": 0,
+          "minimum": 0
+        }
+      ],
+      "n": 6,
+      "scalar_vertex_controls": [
+        -77444208000,
+        -165071124163584,
+        -80513981376
+      ],
+      "simplex_vertices": [
+        [
+          0,
+          720,
+          1500,
+          540,
+          1560,
+          1800,
+          720
+        ],
+        [
+          0,
+          720,
+          10128,
+          26424,
+          18816,
+          1800,
+          720
+        ],
+        [
+          0,
+          1,
+          62,
+          540,
+          1560,
+          1800,
+          720
+        ]
+      ]
+    },
+    {
+      "budget": 5039,
+      "coordinates": [
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "0c44e501fd9e598b6ebfa52581bc14270d0f1d4b1bf2a4fe77762c5e60ad9831",
+          "h": 2,
+          "maximum": -2484441038380896,
+          "minimum": -381453951871058052096
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "fd6c450d9562f958651bd260105cce7d581861c87d798cedfe3ef3a897517831",
+          "h": 3,
+          "maximum": -25028251098624000,
+          "minimum": -3802622386155485331456
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "e1139454a6639b8301cf4065d98a661cd5264a394c4d94cbf17dc257b2581d94",
+          "h": 4,
+          "maximum": -224972410977792000,
+          "minimum": -23447908207583955671040
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "7d8f98e24eb9a32d787a969ebf8180394902b14a69f4ae9322a63cfe91d5f382",
+          "h": 5,
+          "maximum": -1875776055264000000,
+          "minimum": -99488948898656613473280
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "1a7a4f4637d1deceed2848f709556566907bca22d53dd282d7f105a9e9e1de38",
+          "h": 6,
+          "maximum": -11682365710804992000,
+          "minimum": -305678682174226285209600
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "5b808f98aaabb2606f1ebd58fba6eb144d0f3abe6e80ccffadce7948510997ac",
+          "h": 7,
+          "maximum": -54002662043968512000,
+          "minimum": -697467267121804848506880
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "262fedeff9579f77eb28d3d666f3790d4b3baa3345c561e250078376e57ccfa7",
+          "h": 8,
+          "maximum": -191245388487745536000,
+          "minimum": -1193625501362120540528640
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "f768ad7053732cbfd081b2af79ef57dfc3c646cdbed05e851d569fbeda2fadd3",
+          "h": 9,
+          "maximum": -532443249082547712000,
+          "minimum": -1530688143786141704232960
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "de2ffa3dafab93ebe1badb66940e6354cd1d68291a6db412ae72904facaa659a",
+          "h": 10,
+          "maximum": -1184153918176373760000,
+          "minimum": -1456979824587833973504000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "3af0b792dba8261f41b563f9c5eadf451d9fef07f249c1ae22c140ba462059ed",
+          "h": 11,
+          "maximum": -2120365646815933440000,
+          "minimum": -1014394911439775759308800
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "e512c9d6b81574e40903c4985632a84ba2216ec4dc2e6447cd7a7bf8ed8874e6",
+          "h": 12,
+          "maximum": -3060221292585160704000,
+          "minimum": -512163642067960967884800
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "0c332bf331eb3e943ee14bccc6250f7bcbcb4b06e6f0ee935c27f353d506f876",
+          "h": 13,
+          "maximum": -3540849143061694464000,
+          "minimum": -197298096201205051852800
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "14e368299850925bb4902e1ec6204e1582cb9027fdcf57e23d522dfc6da3527b",
+          "h": 14,
+          "maximum": -3243767199175286784000,
+          "minimum": -90017332943410768896000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "fa2f8ea875c984ba9cea09ba08015f00554746ef9e76b71aec1f2be273704274",
+          "h": 15,
+          "maximum": -2302330617917890560000,
+          "minimum": -33351679998527514624000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "b5276c4bb9545b726a343d6086a1d46a571a8fdc0ab4dbc073b9521aed500cd4",
+          "h": 16,
+          "maximum": -1221959890974670848000,
+          "minimum": -12550963008759791616000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "5eb3427d7140f1b3611f087a27578fc3019616b998aba6a068b1bc078ddbc8af",
+          "h": 17,
+          "maximum": -456736092293505024000,
+          "minimum": -3392817011625000960000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "3b12b00dd2ef1d29b76dd41d5d3e072fd76ef32f12d48cf003e4f3ecb5432287",
+          "h": 18,
+          "maximum": -107290978560589824000,
+          "minimum": -643745871363538944000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "36e396b191bae5d1f0f3973795193f901394f2951448438779efbe761e1f9ba0",
+          "h": 19,
+          "maximum": -11921219840065536000,
+          "minimum": -71527319040393216000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68",
+          "h": 20,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68",
+          "h": 21,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68",
+          "h": 22,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68",
+          "h": 23,
+          "maximum": 0,
+          "minimum": 0
+        }
+      ],
+      "n": 7,
+      "scalar_vertex_controls": [
+        -75783284875872,
+        -317047671936000,
+        -17925264943165965312,
+        -75561493532744
+      ],
+      "simplex_vertices": [
+        [
+          0,
+          5040,
+          126,
+          1806,
+          8400,
+          16800,
+          15120,
+          5040
+        ],
+        [
+          0,
+          5040,
+          30360,
+          32040,
+          8400,
+          16800,
+          15120,
+          5040
+        ],
+        [
+          0,
+          5040,
+          151296,
+          757656,
+          1217760,
+          621480,
+          15120,
+          5040
+        ],
+        [
+          0,
+          1,
+          126,
+          1806,
+          8400,
+          16800,
+          15120,
+          5040
+        ]
+      ]
+    },
+    {
+      "budget": 2519,
+      "coordinates": [
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "60258642721f30e8c6994fee2e67bf7836653599ed0fb9d6ddbf1741b8d42503",
+          "h": 2,
+          "maximum": -3267356945232384000,
+          "minimum": -37197657000358577058816
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "12f3d25b338ef9f3e9e45e77278304f23052cf75b2adee33bdeceb57ceeb23cc",
+          "h": 3,
+          "maximum": -64237596238349568000,
+          "minimum": -483526083480670048038912
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "e6adfc8e815f69d9e41850da6afda3f107b1c658c785a26108882e75f9c12f77",
+          "h": 4,
+          "maximum": -811306234776688128000,
+          "minimum": -3962458734132298479372288
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "b9307bd39c4df397b2e6444272cff484c85cd366f6986da26b57c9f78f4e7dcb",
+          "h": 5,
+          "maximum": -7287783378705423360000,
+          "minimum": -22873537917263504980915200
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "ec641e09d6d682438bd875fd112037060c4635d7d917486d6d31591285550bdf",
+          "h": 6,
+          "maximum": -49325319172428613632000,
+          "minimum": -98478329915302801198018560
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "15891e3b3a668ba3d80f1a1638cb77e287dd47e900aaee721f8ef915155126eb",
+          "h": 7,
+          "maximum": -261052704429293242368000,
+          "minimum": -326824773178251647547279360
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "665c7f8ca19fec8d857bfc02b2c42ee328ff67c1fab2c94600ae0bb39fa9763d",
+          "h": 8,
+          "maximum": -1107842324963004739584000,
+          "minimum": -852947182706077077049589760
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "aa3f49630881e6a8bdab64b291f55fdac34b8690e1c72a646c0c2bc63fbaeaee",
+          "h": 9,
+          "maximum": -3835196827811340235776000,
+          "minimum": -1771752950067827932621516800
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "858a29f1875c01605311704a6617bcddf0d4ee35077cbc0094b804afaae456b9",
+          "h": 10,
+          "maximum": -10956240423450746081280000,
+          "minimum": -2950019033389586276844902400
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "115667234ecbc70723b91afde76cbdaa8812b926304e5509e487653184f64357",
+          "h": 11,
+          "maximum": -26013956822135140497408000,
+          "minimum": -3953490618902985241201612800
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "42ea2e99cb5f226ecd6c59152af650a73b531821cb652b96710466e06460b27f",
+          "h": 12,
+          "maximum": -51517448365105738616832000,
+          "minimum": -4278518448587945852600217600
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "c668030bc53c74916b76fdcc05b1be966b2dccdc747aa788c662ea65460a863d",
+          "h": 13,
+          "maximum": -85117216289016078655488000,
+          "minimum": -3757862089781010523952640000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "0ad99cf5a942c53e6e588e760ac21bfa5fc655b5b47e5fd75721a02776f5738a",
+          "h": 14,
+          "maximum": -116978078286075182432256000,
+          "minimum": -2957574740032114812068659200
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "563fde72560173083952c3bcdf07a095c14ddaa3b41416b4f7d70aae62dc25cf",
+          "h": 15,
+          "maximum": -132860946991207870955520000,
+          "minimum": -2269045072579288738775040000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "f4c8d2384821da4915ef2e4e5eff40cdcb4fbeac423cb9de1c5647a56fd286d1",
+          "h": 16,
+          "maximum": -123380309402962198659072000,
+          "minimum": -1494582544297716254244864000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "55ce027f499e80c0ba518d45b175b361013c1bff830aabc79dffec6b9389979d",
+          "h": 17,
+          "maximum": -92168128516085913747456000,
+          "minimum": -931611824983524637016064000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "4dea5cc3a8e03124d6e6055c549b7ed13b8b00228e0c5ca6ceb433d70cd0a2c7",
+          "h": 18,
+          "maximum": -54052349578182059360256000,
+          "minimum": -458282415694751982157824000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "716982bd52e611b69ad648bf2eb2ed92233edede0251f6c796d5398d0c0b29fa",
+          "h": 19,
+          "maximum": -23970507641841490329600000,
+          "minimum": -173631973342464536739840000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "489a698154b1eed671e58c4dbfcfcf212482d7a4ffee311cb4615064a6f82ffc",
+          "h": 20,
+          "maximum": -7558734591163839283200000,
+          "minimum": -48490189388184677253120000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "b55f580f07502d4fc29733e4a88c699e0bf120a1068319f9698f382b1892c006",
+          "h": 21,
+          "maximum": -1510656978133104721920000,
+          "minimum": -9063941868798628331520000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "777fdce4ecade7a4f7483d367a311a0171ef0eceecb89db462a1b70828fd7bb3",
+          "h": 22,
+          "maximum": -143872093155533783040000,
+          "minimum": -863232558933202698240000
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68",
+          "h": 23,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68",
+          "h": 24,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68",
+          "h": 25,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 20,
+          "complete_list_sha256": "5d1a872d0a48a97797d87fef702f59dd80c0ce18356335649f40f6c4e1cb7f68",
+          "h": 26,
+          "maximum": 0,
+          "minimum": 0
+        }
+      ],
+      "n": 8,
+      "scalar_vertex_controls": [
+        -106632571187270016,
+        -83093638665600000,
+        -1361436897884845234176,
+        -106664408755239168
+      ],
+      "simplex_vertices": [
+        [
+          0,
+          2520,
+          5292,
+          5796,
+          40824,
+          126000,
+          191520,
+          141120,
+          40320
+        ],
+        [
+          0,
+          2520,
+          35520,
+          96480,
+          101280,
+          126000,
+          191520,
+          141120,
+          40320
+        ],
+        [
+          0,
+          2520,
+          156432,
+          1366056,
+          3970464,
+          4660200,
+          2005200,
+          141120,
+          40320
+        ],
+        [
+          0,
+          1,
+          254,
+          5796,
+          40824,
+          126000,
+          191520,
+          141120,
+          40320
+        ]
+      ]
+    },
+    {
+      "budget": 22679,
+      "coordinates": [
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "84378bc715e4dc9c654e41bf23041469f81cf711250148c162cae2dbb4271108",
+          "h": 2,
+          "maximum": -5537851454128415385600,
+          "minimum": -29330264913838580148867800064
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "8347a2a2d949349b60be3e84db8ee4e663ffa610dfe9a7b9efff011cdfeeb6ab",
+          "h": 3,
+          "maximum": -210770616421751468834304,
+          "minimum": -463175505463218268451810310144
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "7eb6d62c0e5684b9294244df7dd0bafee33182fbbb7ea9078c08089848d9f3e7",
+          "h": 4,
+          "maximum": -2953950935473936702402560,
+          "minimum": -4646130842484042565579168389120
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "81f1a842b3a917e76bd973af32b2e36260f9489b3087c704d51ad91e85f6436b",
+          "h": 5,
+          "maximum": -24855639755540179645440000,
+          "minimum": -33125135363363258131129487723520
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "137319754d3dedbd690166cdd7144712f7786f585192db98531983a5b8b8f176",
+          "h": 6,
+          "maximum": -187585679480012053277184000,
+          "minimum": -178006250400300679008487669585920
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "44a9e48a0f10f7067f609720b3139435ea142791781cc977f8e7e336f307ec8b",
+          "h": 7,
+          "maximum": -1212909099227972225146368000,
+          "minimum": -746302175300293294408155434833920
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "633507a2d2b1cd54dfe982e311e17c43de635251ebc3671914fc072047171622",
+          "h": 8,
+          "maximum": -6459269945018807129665536000,
+          "minimum": -2493702281923723211876559251619840
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "636c4267a31930e480a12683398ef7758b57a964c3d93135295bbfdd47036c8f",
+          "h": 9,
+          "maximum": -28221690029142395678699520000,
+          "minimum": -6727719707269734570372310188994560
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "80500d3ff78de5676ff2d6a11bb062188aa11579b4de2db3c35e69186a71a566",
+          "h": 10,
+          "maximum": -102050444081272019726131200000,
+          "minimum": -14759700759397779977786292764928000
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "d34bfae016753c3984774925366c5d956e091e38471af00a3dbdb74436ed3fcf",
+          "h": 11,
+          "maximum": -308579728367887285174677504000,
+          "minimum": -26396334066272000186159925433804800
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "da999debd3eb87bbf83e9b425d3c7bc0cbb75bbe62fa00069feb31dc8964531f",
+          "h": 12,
+          "maximum": -786831803409624623622107136000,
+          "minimum": -38418161425524554538947655270297600
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "b44a01f37410d34f0c93356d54fdbac6c4e0dc70b03db2171d5312335b057e0a",
+          "h": 13,
+          "maximum": -1697858647822735525624866969600,
+          "minimum": -45242218897855619077274266663833600
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "f69f1f401a2a3da84fb4dbdebe609b66153c93607c6a9986402030edd59aa050",
+          "h": 14,
+          "maximum": -3116293298421949826853184512000,
+          "minimum": -42670092764745894639578448821760000
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "0b7f4211168f427391e13478f43caa43609ecaf391b686c588b8c9a49f22144e",
+          "h": 15,
+          "maximum": -4874722372545416572504587264000,
+          "minimum": -31742441830193069983741719777792000
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "58e6d375c43b76c9faa31b2c60fde8bd8008a9398287ae3dddf9d9bfae93326e",
+          "h": 16,
+          "maximum": -6476693397954798836907048960000,
+          "minimum": -18240882234259691581637151817728000
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "27c6fcd4553f942dd14cb231f73bb02c6b30b5942aa6b7bd764c6b76adcbd3b6",
+          "h": 17,
+          "maximum": -7266615350602556775770431488000,
+          "minimum": -7895409019959919201266863628288000
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "8f43477c41b8d63e8d7d08da3af03d7fda4dec2ded50482eac33d06e6ecea878",
+          "h": 18,
+          "maximum": -6825236091343639975792410624000,
+          "minimum": -2520354371540559880059092975616000
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "d857c2c7a5b07229febc46cb6918a0c68859d2c2974f5321a8dab1fa807ace51",
+          "h": 19,
+          "maximum": -5300467204923199777037746176000,
+          "minimum": -602167373003897783503767650304000
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "b8b0a1f020d993b333abdc5557d5383105c50325a5a370c47c460cb59ce5d527",
+          "h": 20,
+          "maximum": -3343941984396892634903347200000,
+          "minimum": -164234937155787686455787520000000
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "fccb0948615578ba50a053943f26275c8164ca7f86404a8b03e0c6cbf17d086e",
+          "h": 21,
+          "maximum": -1670635773136816346786365440000,
+          "minimum": -35871787012286103487812403200000
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "2c1be24e9a157ce08f379da9140d9d55d2e2c7a93201fe509c988ff4f354ca36",
+          "h": 22,
+          "maximum": -636080288990707540414955520000,
+          "minimum": -8227787040405946268874178560000
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "261b2eec6feeb27b55b56915293268d3729274bfd575b805fa1357aa52759cd2",
+          "h": 23,
+          "maximum": -173415018060239556681400320000,
+          "minimum": -1441517863494319251577896960000
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "cd4debfcb614ccad40358b1c0dafb237d5c2e902b5224a038d47d56463d20b29",
+          "h": 24,
+          "maximum": -30153792324235436752896000000,
+          "minimum": -180922753945412620517376000000
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "0cec17bac6d31cb4f620502e3d5422bb00841b6125842b7bb028569bc770fff0",
+          "h": 25,
+          "maximum": -2512816027019619729408000000,
+          "minimum": -15076896162117718376448000000
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc",
+          "h": 26,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc",
+          "h": 27,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc",
+          "h": 28,
+          "maximum": 0,
+          "minimum": 0
+        },
+        {
+          "coefficients": 35,
+          "complete_list_sha256": "78dde6a885990a4994a3a7b1a3153901c124bc102a4dbac854cd6b4cd3d82edc",
+          "h": 29,
+          "maximum": 0,
+          "minimum": 0
+        }
+      ],
+      "n": 9,
+      "scalar_vertex_controls": [
+        -215745573400197300000,
+        -215207932590703600128,
+        -1517792623428324096000,
+        -889097933199437355422251008,
+        -215745565587135021512
+      ],
+      "simplex_vertices": [
+        [
+          0,
+          22680,
+          510,
+          18150,
+          186480,
+          834120,
+          1905120,
+          2328480,
+          1451520,
+          362880
+        ],
+        [
+          0,
+          22680,
+          136584,
+          154224,
+          186480,
+          834120,
+          1905120,
+          2328480,
+          1451520,
+          362880
+        ],
+        [
+          0,
+          22680,
+          680880,
+          3420000,
+          5629440,
+          3555600,
+          1905120,
+          2328480,
+          1451520,
+          362880
+        ],
+        [
+          0,
+          22680,
+          2858064,
+          40976424,
+          190690080,
+          381841320,
+          344811600,
+          116630640,
+          1451520,
+          362880
+        ],
+        [
+          0,
+          1,
+          510,
+          18150,
+          186480,
+          834120,
+          1905120,
+          2328480,
+          1451520,
+          362880
+        ]
+      ]
+    }
+  ],
+  "literal_port_word_kernel_box": 10,
+  "new_coefficients_compared": 1480,
+  "positive_order10_certificate_coefficient": 20098555126088950347840000,
+  "producer_modes_equal": true,
+  "scope": "Independent complete continuous certificate at child orders1..9; no conclusion at order10 or above.",
+  "source_sha256": {
+    "covered_ambient/PROOF.md": "e1696d6830d41ad95a0bd7b2d91ca4f3116312d304e739211f79a1d8eeddf5e3",
+    "covered_positivity/PROOF.md": "7a9e1d0cbf71ce70c96e0b6158a89ae1c0ea0583736a0bf5f9cc8acc9b84bd56",
+    "equal_nine_ambient/PROOF.md": "f5c32f6d93743d31083532ba9c3884685b96ef288524004b657ab4e466b0bbed",
+    "equal_nine_ambient/PROVENANCE.md": "3afab17205811cf32f9755ace86fef1aa376d92afd0e26a65c74ef7bbd5ce5d7",
+    "equal_nine_ambient/verify.py": "4a93445e79f2422e3e64b3f6d817596de27e7f1316ae8b9194f8befb777b8dee",
+    "equal_small_ambient/PROOF.md": "1d82fbb2eeacd679c6196bbdccab61320eb041171f528f151dc91661c4f11141",
+    "profile_cone_bounded/PROOF.md": "73bf9fec2a1a795ed2f348182163e2eaaa01aa4f68732b11cf7485eca40a92de",
+    "profile_cone_obstruction/PROOF.md": "ee2c2be62f355ba6dae151a30b8943c4314936d2fac787e37a0c2ede0f012705"
+  },
+  "status": "PASS"
+}

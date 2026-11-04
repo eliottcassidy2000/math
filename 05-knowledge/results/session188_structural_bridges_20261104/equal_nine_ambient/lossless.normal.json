@@ -1,0 +1,173 @@
+{
+  "checker_sha256": "acf42f7b3695322f54e2b4f11d01ed172c6b28f15923693e4049257a454031d3",
+  "complete_outputs": [
+    {
+      "bytes": 239765,
+      "file": "normal.json",
+      "group": 0,
+      "sha256": "852909fd8b401fe4b2c2c7c8d6da95fd9c36959d56ea40653c8394d8243d1e31"
+    },
+    {
+      "bytes": 239765,
+      "file": "optimized.json",
+      "group": 0,
+      "sha256": "852909fd8b401fe4b2c2c7c8d6da95fd9c36959d56ea40653c8394d8243d1e31"
+    }
+  ],
+  "complete_raw_bytes": 479530,
+  "groups": 1,
+  "isolated_controls": [
+    {
+      "mode": "fresh",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "fresh",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": true,
+      "passed": true
+    }
+  ],
+  "package": "equal_nine_ambient",
+  "package_sha256": {
+    "REASSEMBLY.json": "18064c76d294bcd17f4b7e449a6cf16072cd496d65e073e19a9502f6032ac75f",
+    "REASSEMBLY.md": "ff77edaa87b33c9ff48be30b7922dea3d162c90c68805cf72d67a2b7b85a848e",
+    "full_records_00.json.gz.b64.part000": "3bf636b6b7f2b64fbc01c3c51ce73dc3ba729ca605edf846157486831694498a",
+    "reassemble.py": "c72c4dc6ef37e8e0c6ac5b818309c0b213d4125d66f879fc2af57d4e5ece72b8"
+  },
+  "parts": 1,
+  "reassembler_normalized_ast_sha256": "3f640f8fd33dec4ce19c1d81e92f03c21bbac47452af6382f5cb942c5ee88d14",
+  "status": "PASS",
+  "validated_existing_manifests": [
+    {
+      "file": "PROOF.md",
+      "manifest": "manifest.sha256",
+      "sha256": "f5c32f6d93743d31083532ba9c3884685b96ef288524004b657ab4e466b0bbed"
+    },
+    {
+      "file": "PROVENANCE.md",
+      "manifest": "manifest.sha256",
+      "sha256": "3afab17205811cf32f9755ace86fef1aa376d92afd0e26a65c74ef7bbd5ce5d7"
+    },
+    {
+      "file": "verify.py",
+      "manifest": "manifest.sha256",
+      "sha256": "4a93445e79f2422e3e64b3f6d817596de27e7f1316ae8b9194f8befb777b8dee"
+    },
+    {
+      "file": "normal.json",
+      "manifest": "manifest.sha256",
+      "sha256": "852909fd8b401fe4b2c2c7c8d6da95fd9c36959d56ea40653c8394d8243d1e31"
+    },
+    {
+      "file": "optimized.json",
+      "manifest": "manifest.sha256",
+      "sha256": "852909fd8b401fe4b2c2c7c8d6da95fd9c36959d56ea40653c8394d8243d1e31"
+    }
+  ],
+  "validated_mathematical_receipt_pins": {
+    "equal_nine_ambient/PROOF.md": "f5c32f6d93743d31083532ba9c3884685b96ef288524004b657ab4e466b0bbed",
+    "equal_nine_ambient/PROVENANCE.md": "3afab17205811cf32f9755ace86fef1aa376d92afd0e26a65c74ef7bbd5ce5d7",
+    "equal_nine_ambient/verify.py": "4a93445e79f2422e3e64b3f6d817596de27e7f1316ae8b9194f8befb777b8dee"
+  }
+}
