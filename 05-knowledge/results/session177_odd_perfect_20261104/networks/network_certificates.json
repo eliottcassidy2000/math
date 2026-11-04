@@ -1,0 +1,505 @@
+{
+  "status": "FINITE-EXACT; not an all-exponent or all-prime exclusion",
+  "independent_sigma_checks": 500,
+  "perfect_unitary_cut_checks": 8,
+  "strong_connectivity_hostile": 120,
+  "clauses": [
+    {
+      "Euler_prime": 5,
+      "Euler_exponent": 1,
+      "fourth_power_disjunction": [
+        3,
+        13,
+        61
+      ],
+      "steps": [
+        {
+          "factors": {
+            "5": 1
+          },
+          "A": 5,
+          "sigma_A": 6,
+          "residual": 3
+        },
+        {
+          "factors": {
+            "5": 1,
+            "3": 2
+          },
+          "A": 45,
+          "sigma_A": 78,
+          "residual": 13
+        },
+        {
+          "factors": {
+            "5": 1,
+            "3": 2,
+            "13": 2
+          },
+          "A": 7605,
+          "sigma_A": 14274,
+          "residual": 61
+        },
+        {
+          "factors": {
+            "5": 1,
+            "3": 2,
+            "13": 2,
+            "61": 2
+          },
+          "A": 28298205,
+          "sigma_A": 53998542,
+          "residual": 291,
+          "stop": "fixed exponent capacity exceeded"
+        }
+      ]
+    },
+    {
+      "Euler_prime": 13,
+      "Euler_exponent": 1,
+      "fourth_power_disjunction": [
+        3,
+        7,
+        19,
+        127
+      ],
+      "steps": [
+        {
+          "factors": {
+            "13": 1
+          },
+          "A": 13,
+          "sigma_A": 14,
+          "residual": 7
+        },
+        {
+          "factors": {
+            "13": 1,
+            "7": 2
+          },
+          "A": 637,
+          "sigma_A": 798,
+          "residual": 57
+        },
+        {
+          "factors": {
+            "13": 1,
+            "7": 2,
+            "3": 2,
+            "19": 2
+          },
+          "A": 2069613,
+          "sigma_A": 3952494,
+          "residual": 127
+        },
+        {
+          "factors": {
+            "13": 1,
+            "7": 2,
+            "3": 2,
+            "19": 2,
+            "127": 2
+          },
+          "A": 33380788077,
+          "sigma_A": 64255694958,
+          "residual": 16257,
+          "stop": "fixed exponent capacity exceeded"
+        }
+      ]
+    },
+    {
+      "Euler_prime": 17,
+      "Euler_exponent": 1,
+      "fourth_power_disjunction": [
+        3,
+        13
+      ],
+      "steps": [
+        {
+          "factors": {
+            "17": 1
+          },
+          "A": 17,
+          "sigma_A": 18,
+          "residual": 9
+        },
+        {
+          "factors": {
+            "17": 1,
+            "3": 2
+          },
+          "A": 153,
+          "sigma_A": 234,
+          "residual": 13
+        },
+        {
+          "factors": {
+            "17": 1,
+            "3": 2,
+            "13": 2
+          },
+          "A": 25857,
+          "sigma_A": 42822,
+          "residual": 183,
+          "stop": "fixed exponent capacity exceeded"
+        }
+      ]
+    },
+    {
+      "Euler_prime": 29,
+      "Euler_exponent": 1,
+      "fourth_power_disjunction": [
+        3,
+        5,
+        13,
+        31
+      ],
+      "steps": [
+        {
+          "factors": {
+            "29": 1
+          },
+          "A": 29,
+          "sigma_A": 30,
+          "residual": 15
+        },
+        {
+          "factors": {
+            "29": 1,
+            "3": 2,
+            "5": 2
+          },
+          "A": 6525,
+          "sigma_A": 12090,
+          "residual": 403
+        },
+        {
+          "factors": {
+            "29": 1,
+            "3": 2,
+            "5": 2,
+            "13": 2,
+            "31": 2
+          },
+          "A": 1059718725,
+          "sigma_A": 2196982710,
+          "residual": 60573,
+          "stop": "abundancy exceeds two"
+        }
+      ]
+    },
+    {
+      "Euler_prime": 37,
+      "Euler_exponent": 1,
+      "fourth_power_disjunction": [
+        3,
+        13,
+        19,
+        127,
+        5419
+      ],
+      "steps": [
+        {
+          "factors": {
+            "37": 1
+          },
+          "A": 37,
+          "sigma_A": 38,
+          "residual": 19
+        },
+        {
+          "factors": {
+            "37": 1,
+            "19": 2
+          },
+          "A": 13357,
+          "sigma_A": 14478,
+          "residual": 381
+        },
+        {
+          "factors": {
+            "37": 1,
+            "19": 2,
+            "3": 2,
+            "127": 2
+          },
+          "A": 1938915477,
+          "sigma_A": 3059794998,
+          "residual": 70447
+        },
+        {
+          "factors": {
+            "37": 1,
+            "19": 2,
+            "3": 2,
+            "127": 2,
+            "13": 2,
+            "5419": 2
+          },
+          "A": 9622410580613203893,
+          "sigma_A": 16446060077278005954,
+          "residual": 5374889523,
+          "stop": "fixed exponent capacity exceeded"
+        }
+      ]
+    },
+    {
+      "Euler_prime": 41,
+      "Euler_exponent": 1,
+      "fourth_power_disjunction": [
+        3,
+        7,
+        13,
+        19
+      ],
+      "steps": [
+        {
+          "factors": {
+            "41": 1
+          },
+          "A": 41,
+          "sigma_A": 42,
+          "residual": 21
+        },
+        {
+          "factors": {
+            "41": 1,
+            "3": 2,
+            "7": 2
+          },
+          "A": 18081,
+          "sigma_A": 31122,
+          "residual": 247
+        },
+        {
+          "factors": {
+            "41": 1,
+            "3": 2,
+            "7": 2,
+            "13": 2,
+            "19": 2
+          },
+          "A": 1103103729,
+          "sigma_A": 2169919206,
+          "residual": 69723,
+          "stop": "fixed exponent capacity exceeded"
+        }
+      ]
+    },
+    {
+      "Euler_prime": 53,
+      "Euler_exponent": 1,
+      "fourth_power_disjunction": [
+        3
+      ],
+      "steps": [
+        {
+          "factors": {
+            "53": 1
+          },
+          "A": 53,
+          "sigma_A": 54,
+          "residual": 27,
+          "stop": "new prime forced to exponent at least four"
+        }
+      ]
+    },
+    {
+      "Euler_prime": 61,
+      "Euler_exponent": 1,
+      "fourth_power_disjunction": [
+        3,
+        7,
+        13,
+        31,
+        331,
+        5233
+      ],
+      "steps": [
+        {
+          "factors": {
+            "61": 1
+          },
+          "A": 61,
+          "sigma_A": 62,
+          "residual": 31
+        },
+        {
+          "factors": {
+            "61": 1,
+            "31": 2
+          },
+          "A": 58621,
+          "sigma_A": 61566,
+          "residual": 993
+        },
+        {
+          "factors": {
+            "61": 1,
+            "31": 2,
+            "3": 2,
+            "331": 2
+          },
+          "A": 57803178429,
+          "sigma_A": 87953741694,
+          "residual": 476203
+        },
+        {
+          "factors": {
+            "61": 1,
+            "31": 2,
+            "3": 2,
+            "331": 2,
+            "7": 2,
+            "13": 2,
+            "5233": 2
+          },
+          "A": 13107986148790758704661,
+          "sigma_A": 25128394065027248435622,
+          "residual": 21583449,
+          "stop": "fixed exponent capacity exceeded"
+        }
+      ]
+    },
+    {
+      "Euler_prime": 73,
+      "Euler_exponent": 1,
+      "fourth_power_disjunction": [
+        3,
+        7,
+        37,
+        67
+      ],
+      "steps": [
+        {
+          "factors": {
+            "73": 1
+          },
+          "A": 73,
+          "sigma_A": 74,
+          "residual": 37
+        },
+        {
+          "factors": {
+            "73": 1,
+            "37": 2
+          },
+          "A": 99937,
+          "sigma_A": 104118,
+          "residual": 1407
+        },
+        {
+          "factors": {
+            "73": 1,
+            "37": 2,
+            "3": 2,
+            "7": 2,
+            "67": 2
+          },
+          "A": 197840182113,
+          "sigma_A": 351579102966,
+          "residual": 160797,
+          "stop": "fixed exponent capacity exceeded"
+        }
+      ]
+    },
+    {
+      "Euler_prime": 89,
+      "Euler_exponent": 1,
+      "fourth_power_disjunction": [
+        3,
+        5,
+        13,
+        31
+      ],
+      "steps": [
+        {
+          "factors": {
+            "89": 1
+          },
+          "A": 89,
+          "sigma_A": 90,
+          "residual": 45
+        },
+        {
+          "factors": {
+            "89": 1,
+            "3": 2,
+            "5": 2
+          },
+          "A": 20025,
+          "sigma_A": 36270,
+          "residual": 403
+        },
+        {
+          "factors": {
+            "89": 1,
+            "3": 2,
+            "5": 2,
+            "13": 2,
+            "31": 2
+          },
+          "A": 3252240225,
+          "sigma_A": 6590948130,
+          "residual": 181719,
+          "stop": "abundancy exceeds two"
+        }
+      ]
+    },
+    {
+      "Euler_prime": 97,
+      "Euler_exponent": 1,
+      "fourth_power_disjunction": [
+        3,
+        7,
+        13,
+        19,
+        127
+      ],
+      "steps": [
+        {
+          "factors": {
+            "97": 1
+          },
+          "A": 97,
+          "sigma_A": 98,
+          "residual": 49
+        },
+        {
+          "factors": {
+            "97": 1,
+            "7": 2
+          },
+          "A": 4753,
+          "sigma_A": 5586,
+          "residual": 57
+        },
+        {
+          "factors": {
+            "97": 1,
+            "7": 2,
+            "3": 2,
+            "19": 2
+          },
+          "A": 15442497,
+          "sigma_A": 27667458,
+          "residual": 1651
+        },
+        {
+          "factors": {
+            "97": 1,
+            "7": 2,
+            "3": 2,
+            "19": 2,
+            "13": 2,
+            "127": 2
+          },
+          "A": 42093173765097,
+          "sigma_A": 82311545241198,
+          "residual": 2975031,
+          "stop": "fixed exponent capacity exceeded"
+        }
+      ]
+    }
+  ]
+}
