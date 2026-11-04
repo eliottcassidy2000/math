@@ -1,0 +1,71 @@
+{
+  "encoding": "Deterministic gzip streams encoded as base64 in ASCII chunks.",
+  "groups": [
+    {
+      "parts": [
+        {
+          "file": "full_records_00.json.gz.b64.part000",
+          "size": 36001,
+          "sha256": "b15b95d79091cb8637b160fdcf741abee8fa8c44516f8b86b1d32f22f8406270"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part001",
+          "size": 36001,
+          "sha256": "931e633c933309b309dca22113b75c0146aadf0a27606958518767427c94170f"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part002",
+          "size": 36001,
+          "sha256": "9c6f50ead50b1bbc59a5cb8d6536175f96b6024839870d5774ac7c15c7fb52e3"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part003",
+          "size": 36001,
+          "sha256": "7026671615c0bdfa0301e25ab405a86e9235dc609503f449af806096ea750b80"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part004",
+          "size": 36001,
+          "sha256": "566a2fa7a9adaf5cd227f903bdfc095d748fba769a59c54e72aa8952167495d0"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part005",
+          "size": 36001,
+          "sha256": "d0b9bd57ca2239989c2d6ec2c4c330fc2a2daadbf5a5ef938ac7a31ec4a42408"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part006",
+          "size": 36001,
+          "sha256": "8121e25f638280841e53eb08f331621f1ead90405003c5ce67ef6c23385d873f"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part007",
+          "size": 36001,
+          "sha256": "ebe5030089591de85513e1a63bfddb4c97a7e6ce269023e6be830d49e31fce58"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part008",
+          "size": 36001,
+          "sha256": "b5fd6156c9093b24caed3915cd89873522877042b104e750d48b7b18607e9400"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part009",
+          "size": 5545,
+          "sha256": "a9c68c5fe0b1c735447b92b96b73e4eb03fa0a7469461e140ecea5338bbd0453"
+        }
+      ],
+      "outputs": [
+        {
+          "file": "local.normal.json",
+          "size": 2480334,
+          "sha256": "2ece349a0089dfccb1614c3a34015c00ab2895896cc132bc07c5942287afe7ae"
+        },
+        {
+          "file": "local.optimized.json",
+          "size": 2480334,
+          "sha256": "2ece349a0089dfccb1614c3a34015c00ab2895896cc132bc07c5942287afe7ae"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "actual_complete_profiles": 120,
+  "audit_sha256": {
+    "audit.py": "7a4ff78de7d562e4772a32f153840d9449c059c5d0199e985de4b2ef8358ced7",
+    "count.cpp": "76fdc646b0a6e217635478e4556c87532aff628a22ddcf83bd22119cc5860915"
+  },
+  "complete_named_basis_size": 6241,
+  "complete_named_difference_histogram": {
+    "0": 0,
+    "1": 0,
+    "2": 168,
+    "3": 1344,
+    "4": 3360
+  },
+  "full_mask_queries": 32,
+  "independent_unique_actual_graph_queries": 13068,
+  "physical_controls": [
+    {
+      "child_orders": [
+        4,
+        4,
+        4
+      ],
+      "query_count": 64,
+      "types": [
+        4,
+        4,
+        4
+      ],
+      "value_sha256": "e4bd4bc951ad48f2d16bea07efbfae3d86773c5b1a508e3008658e7e97eb793f"
+    },
+    {
+      "child_orders": [
+        4,
+        4,
+        4
+      ],
+      "query_count": 64,
+      "types": [
+        4,
+        2,
+        4
+      ],
+      "value_sha256": "9ff43bfc0eeef8e0bece1850d3da1b412d3143fd5419cd41484890bca4146afb"
+    },
+    {
+      "child_orders": [
+        4,
+        4,
+        4
+      ],
+      "query_count": 64,
+      "types": [
+        2,
+        2,
+        2
+      ],
+      "value_sha256": "99199615a87739ba484a3432070209a14ec40837fdad28ff64f5fcd1d8007329"
+    },
+    {
+      "child_orders": [
+        4,
+        4,
+        6
+      ],
+      "query_count": 3,
+      "types": [
+        4,
+        4,
+        7
+      ],
+      "value_sha256": "97a199767f663828823b6d7472797599815c78ea0df9fc412640986d5656888a"
+    },
+    {
+      "child_orders": [
+        4,
+        4,
+        6
+      ],
+      "query_count": 3,
+      "types": [
+        4,
+        2,
+        7
+      ],
+      "value_sha256": "37c33d9e302b12497aa222ecf689d3fe6f88bf359d1d8877ea9a0bec9034b59e"
+    }
+  ],
+  "profile_records_sha256": "f7bc8ef5ec0a5fb7cdf274754955fb18ab8560ed3e9062c586dd10446a0a13bd",
+  "retained_physical_occurrences": 13202,
+  "root_family_controls": 64,
+  "scope": "Independent domain normalization, complete actual profiles and physical named/family controls. The512x64 formal table is independently audited in a separate packet. Local-only modulo16 theorem here.",
+  "source_sha256": {
+    "even_cyclic_mod16/PROOF.md": "d759e62510d0469dd9e864a46117f2bccc02e8256892162664a021821f07a78c",
+    "even_cyclic_mod16/literal.cpp": "ab6bc0b847283f2031b3d46c1b9690731f1497c02159152476fae8fbba27b8ec",
+    "even_cyclic_mod16/verify.py": "b64c97ad9784657af1ed8478a957deb71b129418d5507cb16d526a6bae8ebee0",
+    "five_profile_types/PROOF.md": "0f837c969531d66c1f5f77e6e3aa02416154f852a3f79d2cfe8147059872c9f6",
+    "mod8_transfer/PROOF.md": "aaf6c9325b34b03187771d0731b3a6d6e9b9d31e25238d8adb4a9267fcb46521",
+    "module_decomposition/PROOF.md": "33f33731f3f21037a03e6a4eb9bcc11c746c5124439e49603e7c8faabe2565bc",
+    "monotone_dual_queries/PROOF.md": "f617b74aa6c9545e945d6c5f6d8258049a9dd68f3127c5252542b2592f746d5f"
+  },
+  "status": "PASS",
+  "strict_families": 40
+}
