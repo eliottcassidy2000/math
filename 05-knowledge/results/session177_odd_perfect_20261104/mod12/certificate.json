@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "labelled_tournaments_by_n": {
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 1024
+  },
+  "total_tournaments": 1099,
+  "max_prime_label": 3023,
+  "max_exponent_decimal_digits": 9,
+  "mod12_local_tests": 5580,
+  "cycle": [
+    {
+      "source": 11,
+      "exponent": 40,
+      "target": 83,
+      "order": 41
+    },
+    {
+      "source": 83,
+      "exponent": 88,
+      "target": 179,
+      "order": 89
+    },
+    {
+      "source": 179,
+      "exponent": 4,
+      "target": 11,
+      "order": 5
+    }
+  ],
+  "scope": "Finite exact verification, not proof of OPN nonexistence or exhaustive exponent search."
+}
