@@ -1,12 +1,12 @@
 {
-  "distinct_local_targets": 12,
+  "distinct_local_targets": 13,
   "external_source_links_recorded_not_network_verified": [
     "https://github.com/eliottcassidy2000/math/blob/897db58335ce4f7f5c332a238caf572e46537806/00-navigation/S175.md",
     "https://github.com/eliottcassidy2000/math/blob/main/00-navigation/S118.md",
     "https://github.com/eliottcassidy2000/math/blob/main/05-knowledge/results/session123_realizers_and_binary_capacity_20261031/circuits/RESOURCE_COST_AND_BOUNDARY_KERNEL.md",
     "https://github.com/eliottcassidy2000/math/blob/main/05-knowledge/results/session171_knots_information_20261103/framework/NOTE.md"
   ],
-  "local_link_occurrences": 12,
+  "local_link_occurrences": 13,
   "matching_receipt_pairs": [
     {
       "normal": "gates/certificate.json",

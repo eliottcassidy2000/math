@@ -4,6 +4,17 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — a historical coverage prefix is not the current frontier
+
+**Provenance correction.** The incoming Session176 synthesis described the
+inherited prefix as strictly below80,557. Session134 already records inherited
+two-apex coverage through99,999. The synthesis now cites that recovery packet;
+no new coverage computation is claimed. This repeats the historical-boundary
+failure previously corrected in Session175: a historical claim can remain
+true without being the current best bound. See the
+[corrected synthesis](../05-knowledge/results/session176_tournament_information_20261104/synthesis/NOTE.md)
+and [source](../05-knowledge/results/session134_constructive_spectrum_frontier_20261101/two_apex/README.md).
+
 ## 2026-11-03 — a balanced prime source need not support its next ternary branch
 
 **Refuted research premise, not a retraction of the prior balanced construction.**

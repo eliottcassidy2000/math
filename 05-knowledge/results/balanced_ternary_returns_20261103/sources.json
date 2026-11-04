@@ -1,5 +1,6 @@
 {
-  "source_revision": "7a92049cf4c01624bf8ebff29d115943cffa6778",
+  "scope": "Direct inherited inputs reviewed at the integrated revision; Session176 synthesis coverage sentence corrected locally before hashing.",
+  "source_revision": "14be4d33316710d4a7094fc59ae1abefa7447850",
   "sources": [
     {
       "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
@@ -71,7 +72,7 @@
     },
     {
       "path": "05-knowledge/results/second_feedback_18979_20261103/PROOFS.md",
-      "sha256": "e5b00ec4a1a28099592e9d7caa718732e36764838378b2e97a039706eb05aabf"
+      "sha256": "2246ef7cb50c52db88305a1b9b9c0be58376d96b0be7f66d3f1a32870462d2eb"
     },
     {
       "path": "05-knowledge/results/second_feedback_18979_20261103/next_fibres.json",
@@ -100,6 +101,14 @@
     {
       "path": "05-knowledge/results/session176_tournament_information_20261104/gates/NOTE.md",
       "sha256": "96b6ff49b1af38817aa604c479423990737518f3f87a105f78f7e1eec695ede3"
+    },
+    {
+      "path": "05-knowledge/results/session176_tournament_information_20261104/spectrum/PROOF.md",
+      "sha256": "57ae1c4b58d9000debdc66353c0c3d4e0d65c44348eaac05dc9b90866b3405a7"
+    },
+    {
+      "path": "05-knowledge/results/session176_tournament_information_20261104/synthesis/NOTE.md",
+      "sha256": "e426e30de12da858c8ac634c6248599cf2ddf0355483c7db407cd4ce36441716"
     },
     {
       "path": "05-knowledge/results/tournament_joint_parity_20261102/growth_obstruction.md",

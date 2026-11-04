@@ -68,3 +68,8 @@ The two-apex numerical coverage through 99,999 is also inherited, as stated
 in [Session134's recovery packet](../session134_constructive_spectrum_frontier_20261101/two_apex/README.md).
 No finite coverage record is extended here. A historical bound strictly
 below 80,557 must not be substituted for this already-recorded frontier.
+
+The six incoming commits through f9b895a65f were rebased into the clean
+checkpoint before final verification. The stale80,557 current-frontier
+sentence in Session176 was corrected to the inherited99,999 bound with
+its original source; both synthesis checkers were rerun in both modes.

@@ -1,5 +1,5 @@
 {
-  "distinct_sibling_links": 12,
+  "distinct_sibling_links": 13,
   "matched_receipt_pairs": [
     "information/certificate.json",
     "spectrum/certificate.json",
@@ -10,6 +10,6 @@
     "resource/certificate.json"
   ],
   "scope": "link and selected receipt consistency, not an independent proof audit",
-  "sibling_links": 12,
+  "sibling_links": 13,
   "status": "PASS"
 }

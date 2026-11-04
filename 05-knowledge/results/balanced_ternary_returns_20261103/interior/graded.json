@@ -834,7 +834,7 @@
   ],
   "sources": {
     "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
-    "05-knowledge/results/balanced_ternary_returns_20261103/interior/NOTE.md": "b263147317bae50bbacd0d18c96fee6c53ea5eb0e508059880856d9a23107ead",
+    "05-knowledge/results/balanced_ternary_returns_20261103/interior/NOTE.md": "c609db725df4cb009d9413ad815ec32649ba4738d6f495848dd120717a03f4e7",
     "05-knowledge/results/balanced_ternary_returns_20261103/interior/kernel.py": "8279d42310c8752553610156759083f63d8257192387ef95bcb521fead083d90",
     "05-knowledge/results/ready_return_pentagon_20261103/ATLAS.md": "455588b2733871e3f80ac826c1bfa0bd65a62d9af2d516c6a444e3927a0e3a40",
     "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/two_apex/word_recovery.py": "d4869500e602eabb07cb3c1a481d62d55ddee06116c46fc52f668febee9d34d6",
