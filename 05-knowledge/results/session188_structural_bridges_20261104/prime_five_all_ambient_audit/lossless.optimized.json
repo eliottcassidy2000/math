@@ -1,0 +1,190 @@
+{
+  "checker_sha256": "e50b23ccc8694e5210c005d1cac9a8b8d1897e59d068adce63dff1371f6f7dd1",
+  "complete_outputs": [
+    {
+      "bytes": 5236838,
+      "file": "normal.json",
+      "group": 0,
+      "sha256": "0421755491a15e0abf47a572d22a35b022a52deba8f188b970aacea162228c6e"
+    },
+    {
+      "bytes": 5236838,
+      "file": "optimized.json",
+      "group": 0,
+      "sha256": "0421755491a15e0abf47a572d22a35b022a52deba8f188b970aacea162228c6e"
+    }
+  ],
+  "complete_raw_bytes": 10473676,
+  "groups": 1,
+  "isolated_controls": [
+    {
+      "mode": "fresh",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "fresh",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": true,
+      "passed": true
+    }
+  ],
+  "package": "prime_five_all_ambient_audit",
+  "package_sha256": {
+    "REASSEMBLY.json": "49061b190618d3b1727cb61995f568f160a94fd2b6babd558bd5e611a56144a6",
+    "REASSEMBLY.md": "23f1365a2366bd7b86a75e65c83d5318efec28f387ae7f7b9616db9224448b1c",
+    "full_records_00.json.gz.b64.part000": "d0bd41acb85fe317baa709433dee2bd713f3db7522ee87c33e839b9e126f59f2",
+    "full_records_00.json.gz.b64.part001": "cd5b1dc3e177972b6d034d739f6c42daf8def06bf75ed7e394e915d2b1b58397",
+    "full_records_00.json.gz.b64.part002": "f09b395bec1f2222a6b539880bd2fb629af36bf7ceb35815815cba13180662ce",
+    "full_records_00.json.gz.b64.part003": "21e75b35ca4d44aa2c078a31e60e05c8f724f829ab0a3c5f6325a690835d7422",
+    "full_records_00.json.gz.b64.part004": "7582f0010b2d1926b1f364d8ebec33abd803426019dad5c894d7d87ae9003290",
+    "full_records_00.json.gz.b64.part005": "82c135ca73a4e0c9a29dce90c4e29b70e515de78b04282f6fadcca51e79d3282",
+    "full_records_00.json.gz.b64.part006": "4867c726c695eb74465b45d82041b49405f383fe1e7b551bb70d4a3473148938",
+    "full_records_00.json.gz.b64.part007": "64dca299555c524d6077c71b08535b4ec78c950c649056c8fa2cf5cc12a03694",
+    "full_records_00.json.gz.b64.part008": "bf5febf5b25cab865f738c0c55eceada4e35d9095ca22ab89e37a52a2bac550d",
+    "full_records_00.json.gz.b64.part009": "228ba452c6ec95f699050ad4e4a7e6ed4dd23f3a2c5b8c408d40d4c21c08c65c",
+    "reassemble.py": "1f465367c202a3cccb6743469b8d09c0878d2c4d80ee532b66612b09838f9e59"
+  },
+  "parts": 10,
+  "reassembler_normalized_ast_sha256": "3f640f8fd33dec4ce19c1d81e92f03c21bbac47452af6382f5cb942c5ee88d14",
+  "status": "PASS",
+  "validated_existing_manifests": [
+    {
+      "file": "REVIEW.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "978c0a227b69c492e45bae3c8695c703f10c8e2ffd148f5461b6cd8d294d2a5d"
+    },
+    {
+      "file": "audit.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "c6e0fe4347339053022a5aa3b406d1f2107de63b8c85a5ed52d275151a3a0e83"
+    },
+    {
+      "file": "interpolate.cpp",
+      "manifest": "SHA256SUMS",
+      "sha256": "36db8866e22b59996e0637ebeaafe4e050b1f99614a711bc2fbc4134132df70e"
+    },
+    {
+      "file": "normal.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "0421755491a15e0abf47a572d22a35b022a52deba8f188b970aacea162228c6e"
+    },
+    {
+      "file": "optimized.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "0421755491a15e0abf47a572d22a35b022a52deba8f188b970aacea162228c6e"
+    }
+  ],
+  "validated_mathematical_receipt_pins": {
+    "mod8_transfer/PROOF.md": "aaf6c9325b34b03187771d0731b3a6d6e9b9d31e25238d8adb4a9267fcb46521",
+    "module_decomposition/PROOF.md": "33f33731f3f21037a03e6a4eb9bcc11c746c5124439e49603e7c8faabe2565bc",
+    "monotone_dual_queries/PROOF.md": "f617b74aa6c9545e945d6c5f6d8258049a9dd68f3127c5252542b2592f746d5f",
+    "prime_five_all_ambient/PROOF.md": "1dad821eff721e77ede69a3b0b8a1b62d0a3b0dce7395b883e89ddfa5ad9cea4",
+    "prime_five_all_ambient/covers.cpp": "434cf002661419b1335658d46e6a8dc3bd7f5c28920be4e367d4e9d55557aca7",
+    "prime_five_all_ambient/normal.json": "cdec4c53587ef40f5e33c31b83ee5b83a8522cf082ed6dfb6a068f4e3808fbea",
+    "prime_five_all_ambient/optimized.json": "cdec4c53587ef40f5e33c31b83ee5b83a8522cf082ed6dfb6a068f4e3808fbea",
+    "prime_five_all_ambient/physical.cpp": "86c1954ef7559b6226867706c204af9e19b0d002bbf1f94d92de5a80dcb027ce",
+    "prime_five_all_ambient/verify.py": "ec86992a83ee3a0fdf8aca4f7122139e1d514e4d261f9e9b6a71300aacd29fff",
+    "prime_five_all_profiles/PROOF.md": "7771476a3389d58d05fded981c1b4e4a06bebba981c6d427ca7ccee47f17929a",
+    "prime_five_even_ambient/PROOF.md": "1da932d38f9dc57f83defc5ba88cc1736f9805fa827fd258db0ddd3ab03aa05e"
+  }
+}

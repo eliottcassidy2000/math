@@ -1,0 +1,2421 @@
+{
+  "all22_source_physical_controls": [
+    {
+      "block_query": [
+        0,
+        4
+      ],
+      "full_physical_profile": [
+        143424865,
+        11688987486,
+        316471876566
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 1,
+      "quotient_code": 10,
+      "side": 0,
+      "types": "OOOOO"
+    },
+    {
+      "block_query": [
+        0,
+        4
+      ],
+      "full_physical_profile": [
+        39011525,
+        4160260086,
+        139790012286
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 1,
+      "quotient_code": 10,
+      "side": 1,
+      "types": "OOOOO"
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_physical_profile": [
+        173353527,
+        13456307250,
+        354386036250
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 3,
+      "quotient_code": 10,
+      "side": 0,
+      "types": "CCCCC"
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_physical_profile": [
+        42968475,
+        4548807882,
+        152677457442
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 3,
+      "quotient_code": 10,
+      "side": 1,
+      "types": "CCCCC"
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_physical_profile": [
+        1550535,
+        130435986,
+        3414462066
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 3,
+      "quotient_code": 10,
+      "side": 0,
+      "types": "EPOCS"
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_physical_profile": [
+        997521,
+        94821294,
+        2705658174
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 3,
+      "quotient_code": 10,
+      "side": 1,
+      "types": "EPOCS"
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_physical_profile": [
+        253513141,
+        19493006070,
+        497029137630
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 1,
+      "quotient_code": 41,
+      "side": 0,
+      "types": "OOOOO"
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_physical_profile": [
+        335063795,
+        23287821066,
+        556760327826
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 1,
+      "quotient_code": 41,
+      "side": 1,
+      "types": "OOOOO"
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_physical_profile": [
+        310578543,
+        22895931906,
+        567216933066
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 3,
+      "quotient_code": 41,
+      "side": 0,
+      "types": "CCCCC"
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_physical_profile": [
+        393302061,
+        26761450518,
+        628174038078
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 3,
+      "quotient_code": 41,
+      "side": 1,
+      "types": "CCCCC"
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_physical_profile": [
+        11610867,
+        605200026,
+        11122577946
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 3,
+      "quotient_code": 41,
+      "side": 0,
+      "types": "EPOCS"
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_physical_profile": [
+        4420953,
+        297232734,
+        6504170094
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 3,
+      "quotient_code": 41,
+      "side": 1,
+      "types": "EPOCS"
+    },
+    {
+      "block_query": [
+        1,
+        4
+      ],
+      "full_physical_profile": [
+        5780114497,
+        183976718766,
+        2748153941046
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 1,
+      "quotient_code": 76,
+      "side": 0,
+      "types": "OOOOO"
+    },
+    {
+      "block_query": [
+        1,
+        4
+      ],
+      "full_physical_profile": [
+        5725218093,
+        182810784714,
+        2736639311874
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 1,
+      "quotient_code": 76,
+      "side": 1,
+      "types": "OOOOO"
+    },
+    {
+      "block_query": [
+        1,
+        2
+      ],
+      "full_physical_profile": [
+        6163137315,
+        197686842786,
+        2955931291386
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 3,
+      "quotient_code": 76,
+      "side": 0,
+      "types": "CCCCC"
+    },
+    {
+      "block_query": [
+        1,
+        2
+      ],
+      "full_physical_profile": [
+        6106770063,
+        196493205402,
+        2944176504642
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 3,
+      "quotient_code": 76,
+      "side": 1,
+      "types": "CCCCC"
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_physical_profile": [
+        19835853,
+        968879670,
+        16656703830
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 3,
+      "quotient_code": 76,
+      "side": 0,
+      "types": "EPOCS"
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_physical_profile": [
+        14463273,
+        760151646,
+        13840299486
+      ],
+      "kind": "local",
+      "odd_normalization_unit": 3,
+      "quotient_code": 76,
+      "side": 1,
+      "types": "EPOCS"
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_core_profile": [
+        71889,
+        4393278,
+        86110758
+      ],
+      "full_physical_profile": [
+        4608945,
+        207799074,
+        3957264594
+      ],
+      "kind": "ambient",
+      "odd_normalization_unit": 1,
+      "quotient_code": 10,
+      "side": 0,
+      "types": "PPOPP"
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_core_profile": [
+        19189,
+        1701846,
+        43711566
+      ],
+      "full_physical_profile": [
+        1759413,
+        101153034,
+        2285949354
+      ],
+      "kind": "ambient",
+      "odd_normalization_unit": 1,
+      "quotient_code": 10,
+      "side": 1,
+      "types": "PPOPP"
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_core_profile": [
+        16767975,
+        851620482,
+        15099718482
+      ],
+      "full_physical_profile": [
+        901924407,
+        37113008670,
+        679761197190
+      ],
+      "kind": "ambient",
+      "odd_normalization_unit": 3,
+      "quotient_code": 76,
+      "side": 0,
+      "types": "CPEPP"
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_core_profile": [
+        11113635,
+        618455178,
+        11776869738
+      ],
+      "full_physical_profile": [
+        651796083,
+        28568062710,
+        549413939790
+      ],
+      "kind": "ambient",
+      "odd_normalization_unit": 3,
+      "quotient_code": 76,
+      "side": 1,
+      "types": "CPEPP"
+    }
+  ],
+  "all93_singleton_pattern_controls": [
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          3239,
+          154674,
+          2324514
+        ],
+        [
+          321,
+          37518,
+          942318
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 1
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          1887,
+          112242,
+          1909602
+        ],
+        [
+          2785,
+          142110,
+          2228190
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 2
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          139,
+          11666,
+          223884
+        ],
+        [
+          165,
+          13182,
+          243396
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 3
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          7515,
+          276474,
+          3482154
+        ],
+        [
+          2785,
+          142110,
+          2228190
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 4
+    },
+    {
+      "block_query": [
+        0,
+        8
+      ],
+      "full_profiles": [
+        [
+          371,
+          20338,
+          309708
+        ],
+        [
+          721,
+          32342,
+          424980
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 5
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          989,
+          39358,
+          485460
+        ],
+        [
+          1083,
+          40770,
+          492012
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 6
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          81,
+          4542,
+          61542
+        ],
+        [
+          87,
+          4674,
+          62154
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 7
+    },
+    {
+      "block_query": [
+        0,
+        4
+      ],
+      "full_profiles": [
+        [
+          7399,
+          276642,
+          3495282
+        ],
+        [
+          3233,
+          153150,
+          2306910
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 8
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          1141,
+          41726,
+          496692
+        ],
+        [
+          171,
+          13554,
+          246636
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 9
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          545,
+          25942,
+          363636
+        ],
+        [
+          1083,
+          40770,
+          492012
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 10
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          69,
+          3798,
+          53118
+        ],
+        [
+          87,
+          4674,
+          62154
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 11
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          2033,
+          62614,
+          656244
+        ],
+        [
+          1083,
+          40770,
+          492012
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 12
+    },
+    {
+      "block_query": [
+        0,
+        4
+      ],
+      "full_profiles": [
+        [
+          191,
+          7026,
+          77466
+        ],
+        [
+          121,
+          5262,
+          64662
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 13
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          275,
+          8874,
+          90354
+        ],
+        [
+          401,
+          11358,
+          105798
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 14
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          39,
+          1434,
+          14148
+        ],
+        [
+          45,
+          1614,
+          15372
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 15
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          2785,
+          142110,
+          2228190
+        ],
+        [
+          1887,
+          112242,
+          1909602
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 16
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          165,
+          13182,
+          243396
+        ],
+        [
+          139,
+          11666,
+          223884
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 17
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          467,
+          23410,
+          338508
+        ],
+        [
+          233,
+          15238,
+          257796
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 18
+    },
+    {
+      "block_query": [
+        1,
+        4
+      ],
+      "full_profiles": [
+        [
+          671,
+          14238,
+          118518
+        ],
+        [
+          213,
+          6570,
+          72210
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 19
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          1083,
+          40770,
+          492012
+        ],
+        [
+          545,
+          25942,
+          363636
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 20
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          87,
+          4674,
+          62154
+        ],
+        [
+          69,
+          3798,
+          53118
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 21
+    },
+    {
+      "block_query": [
+        0,
+        8
+      ],
+      "full_profiles": [
+        [
+          121,
+          5262,
+          64662
+        ],
+        [
+          451,
+          12042,
+          108402
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 22
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          71,
+          1882,
+          16020
+        ],
+        [
+          25,
+          1046,
+          11628
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 23
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          1083,
+          40770,
+          492012
+        ],
+        [
+          989,
+          39358,
+          485460
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 24
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          87,
+          4674,
+          62154
+        ],
+        [
+          81,
+          4542,
+          61542
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 25
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          169,
+          6654,
+          75894
+        ],
+        [
+          119,
+          5202,
+          64362
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 26
+    },
+    {
+      "block_query": [
+        0,
+        4
+      ],
+      "full_profiles": [
+        [
+          97,
+          2390,
+          18828
+        ],
+        [
+          35,
+          1282,
+          12996
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 27
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          401,
+          11358,
+          105798
+        ],
+        [
+          275,
+          8874,
+          90354
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 28
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          45,
+          1614,
+          15372
+        ],
+        [
+          39,
+          1434,
+          14148
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 29
+    },
+    {
+      "block_query": [
+        0,
+        4
+      ],
+      "full_profiles": [
+        [
+          109,
+          2510,
+          19116
+        ],
+        [
+          51,
+          1554,
+          14436
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 30
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          29,
+          582,
+          3702
+        ],
+        [
+          15,
+          402,
+          3042
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 10,
+      "singleton_mask": 31
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          6667,
+          260634,
+          3386634
+        ],
+        [
+          2725,
+          143094,
+          2244534
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 1
+    },
+    {
+      "block_query": [
+        0,
+        4
+      ],
+      "full_profiles": [
+        [
+          9309,
+          326502,
+          3938022
+        ],
+        [
+          6907,
+          266874,
+          3434154
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 2
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          565,
+          28838,
+          403884
+        ],
+        [
+          575,
+          28186,
+          389628
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 3
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          10653,
+          365478,
+          4312998
+        ],
+        [
+          4935,
+          211554,
+          2936754
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 4
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          469,
+          25238,
+          369900
+        ],
+        [
+          579,
+          29010,
+          404316
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 5
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          1753,
+          58238,
+          635436
+        ],
+        [
+          1923,
+          60930,
+          648252
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 6
+    },
+    {
+      "block_query": [
+        1,
+        0
+      ],
+      "full_profiles": [
+        [
+          267,
+          8490,
+          88530
+        ],
+        [
+          297,
+          8850,
+          89850
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 7
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          2949,
+          157206,
+          2452086
+        ],
+        [
+          5307,
+          219642,
+          2991402
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 8
+    },
+    {
+      "block_query": [
+        1,
+        0
+      ],
+      "full_profiles": [
+        [
+          515,
+          24538,
+          353844
+        ],
+        [
+          837,
+          31062,
+          400284
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 9
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          1857,
+          57006,
+          602316
+        ],
+        [
+          743,
+          30850,
+          402372
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 10
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          153,
+          6366,
+          74646
+        ],
+        [
+          175,
+          6786,
+          76506
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 11
+    },
+    {
+      "block_query": [
+        0,
+        4
+      ],
+      "full_profiles": [
+        [
+          503,
+          26434,
+          379044
+        ],
+        [
+          769,
+          32270,
+          421596
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 12
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          97,
+          4782,
+          62502
+        ],
+        [
+          163,
+          6522,
+          75282
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 13
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          301,
+          9606,
+          96126
+        ],
+        [
+          479,
+          12786,
+          114186
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 14
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          103,
+          2450,
+          18972
+        ],
+        [
+          45,
+          1494,
+          14292
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 15
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          8097,
+          302526,
+          3787326
+        ],
+        [
+          7515,
+          276474,
+          3482154
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 16
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          1997,
+          62134,
+          654300
+        ],
+        [
+          1231,
+          43106,
+          503172
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 17
+    },
+    {
+      "block_query": [
+        1,
+        0
+      ],
+      "full_profiles": [
+        [
+          4157,
+          88270,
+          792468
+        ],
+        [
+          2519,
+          61594,
+          614988
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 18
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          261,
+          8838,
+          90558
+        ],
+        [
+          223,
+          7458,
+          79098
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 19
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          2491,
+          73322,
+          737460
+        ],
+        [
+          1541,
+          51478,
+          573228
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 20
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          229,
+          8262,
+          88062
+        ],
+        [
+          259,
+          8730,
+          89970
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 21
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          545,
+          14046,
+          121926
+        ],
+        [
+          415,
+          11538,
+          106458
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 22
+    },
+    {
+      "block_query": [
+        0,
+        4
+      ],
+      "full_profiles": [
+        [
+          103,
+          2450,
+          18972
+        ],
+        [
+          73,
+          2030,
+          17172
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 23
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          941,
+          38902,
+          484380
+        ],
+        [
+          1255,
+          43946,
+          509148
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 24
+    },
+    {
+      "block_query": [
+        0,
+        4
+      ],
+      "full_profiles": [
+        [
+          221,
+          7878,
+          83838
+        ],
+        [
+          355,
+          10410,
+          99330
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 25
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          371,
+          10746,
+          100866
+        ],
+        [
+          197,
+          6726,
+          73326
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 26
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          73,
+          2030,
+          17172
+        ],
+        [
+          71,
+          1882,
+          16020
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 27
+    },
+    {
+      "block_query": [
+        1,
+        0
+      ],
+      "full_profiles": [
+        [
+          493,
+          11910,
+          107070
+        ],
+        [
+          835,
+          16158,
+          127878
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 28
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          49,
+          1646,
+          15444
+        ],
+        [
+          75,
+          2034,
+          17172
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 29
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          109,
+          2630,
+          20196
+        ],
+        [
+          123,
+          2754,
+          20484
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 30
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          37,
+          678,
+          4038
+        ],
+        [
+          23,
+          498,
+          3378
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 41,
+      "singleton_mask": 31
+    },
+    {
+      "block_query": [
+        0,
+        4
+      ],
+      "full_profiles": [
+        [
+          11667,
+          398682,
+          4656762
+        ],
+        [
+          8993,
+          332430,
+          4104030
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 1
+    },
+    {
+      "block_query": [
+        0,
+        8
+      ],
+      "full_profiles": [
+        [
+          11667,
+          398682,
+          4656762
+        ],
+        [
+          8993,
+          332430,
+          4104030
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 2
+    },
+    {
+      "block_query": [
+        0,
+        4
+      ],
+      "full_profiles": [
+        [
+          2413,
+          72110,
+          731412
+        ],
+        [
+          1243,
+          46082,
+          544428
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 3
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          8993,
+          332430,
+          4104030
+        ],
+        [
+          11667,
+          398682,
+          4656762
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 4
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          1451,
+          51730,
+          588924
+        ],
+        [
+          1705,
+          57446,
+          631188
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 5
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          1243,
+          46082,
+          544428
+        ],
+        [
+          2413,
+          72110,
+          731412
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 6
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          241,
+          8382,
+          88422
+        ],
+        [
+          359,
+          10818,
+          103818
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 7
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          11667,
+          398682,
+          4656762
+        ],
+        [
+          8993,
+          332430,
+          4104030
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 8
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          1705,
+          57446,
+          631188
+        ],
+        [
+          1451,
+          51730,
+          588924
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 9
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          2233,
+          69302,
+          718308
+        ],
+        [
+          2323,
+          70706,
+          724860
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 10
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          331,
+          10458,
+          102498
+        ],
+        [
+          345,
+          10638,
+          103158
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 11
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          1243,
+          46082,
+          544428
+        ],
+        [
+          2413,
+          72110,
+          731412
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 12
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          425,
+          12030,
+          111270
+        ],
+        [
+          599,
+          15186,
+          129306
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 13
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          241,
+          8382,
+          88422
+        ],
+        [
+          359,
+          10818,
+          103818
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 14
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          83,
+          2242,
+          18468
+        ],
+        [
+          101,
+          2542,
+          19980
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 15
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          11667,
+          398682,
+          4656762
+        ],
+        [
+          8993,
+          332430,
+          4104030
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 16
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          2413,
+          72110,
+          731412
+        ],
+        [
+          1243,
+          46082,
+          544428
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 17
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          1705,
+          57446,
+          631188
+        ],
+        [
+          1451,
+          51730,
+          588924
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 18
+    },
+    {
+      "block_query": [
+        0,
+        2
+      ],
+      "full_profiles": [
+        [
+          359,
+          10818,
+          103818
+        ],
+        [
+          241,
+          8382,
+          88422
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 19
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          2323,
+          70706,
+          724860
+        ],
+        [
+          2233,
+          69302,
+          718308
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 20
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          345,
+          10638,
+          103158
+        ],
+        [
+          331,
+          10458,
+          102498
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 21
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          425,
+          12030,
+          111270
+        ],
+        [
+          599,
+          15186,
+          129306
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 22
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          83,
+          2242,
+          18468
+        ],
+        [
+          101,
+          2542,
+          19980
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 23
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          2413,
+          72110,
+          731412
+        ],
+        [
+          1243,
+          46082,
+          544428
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 24
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          359,
+          10818,
+          103818
+        ],
+        [
+          241,
+          8382,
+          88422
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 25
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          599,
+          15186,
+          129306
+        ],
+        [
+          425,
+          12030,
+          111270
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 26
+    },
+    {
+      "block_query": [
+        0,
+        1
+      ],
+      "full_profiles": [
+        [
+          101,
+          2542,
+          19980
+        ],
+        [
+          83,
+          2242,
+          18468
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 27
+    },
+    {
+      "block_query": [
+        0,
+        4
+      ],
+      "full_profiles": [
+        [
+          241,
+          8382,
+          88422
+        ],
+        [
+          359,
+          10818,
+          103818
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 28
+    },
+    {
+      "block_query": [
+        0,
+        8
+      ],
+      "full_profiles": [
+        [
+          83,
+          2242,
+          18468
+        ],
+        [
+          101,
+          2542,
+          19980
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 29
+    },
+    {
+      "block_query": [
+        0,
+        4
+      ],
+      "full_profiles": [
+        [
+          83,
+          2242,
+          18468
+        ],
+        [
+          101,
+          2542,
+          19980
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 30
+    },
+    {
+      "block_query": [
+        1,
+        2
+      ],
+      "full_profiles": [
+        [
+          91,
+          1074,
+          5154
+        ],
+        [
+          89,
+          1062,
+          5142
+        ]
+      ],
+      "gap_mod4": 2,
+      "quotient_code": 76,
+      "singleton_mask": 31
+    }
+  ],
+  "auditor_pins": {
+    "audit.py": "19b70839ff8270ded52c952d798adda44fce2992de9435fc56668c566b7075c1",
+    "count.cpp": "d2fe491f86897765d7063ac943983c46ce517dfa4a0c41aab44894d438a102fa"
+  },
+  "distinct_physical_graphs": 212,
+  "literal_canonical_profiles": {
+    "C": [
+      0,
+      3,
+      6,
+      6
+    ],
+    "E": [
+      0,
+      1,
+      14,
+      36,
+      24
+    ],
+    "O": [
+      0,
+      1,
+      6,
+      6
+    ],
+    "P": [
+      0,
+      1,
+      2
+    ],
+    "S": [
+      0,
+      1
+    ]
+  },
+  "normalized_canonical_profiles": {
+    "C": [
+      0,
+      1,
+      2,
+      2
+    ],
+    "E": [
+      0,
+      1,
+      6,
+      4
+    ],
+    "O": [
+      0,
+      1,
+      6,
+      6
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "S": [
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "orbit_sizes": {
+    "10": 120,
+    "41": 120,
+    "76": 24
+  },
+  "physical_profile_occurrences": 212,
+  "prime_quotient_count": 264,
+  "scope": "Complementary scope/normalization/physical-lift audit; full finite run banks are independently reviewed in separate packets.",
+  "source_pins": {
+    "prime_five_all_ambient": {
+      "PROOF.md": "1dad821eff721e77ede69a3b0b8a1b62d0a3b0dce7395b883e89ddfa5ad9cea4",
+      "covers.cpp": "434cf002661419b1335658d46e6a8dc3bd7f5c28920be4e367d4e9d55557aca7",
+      "physical.cpp": "86c1954ef7559b6226867706c204af9e19b0d002bbf1f94d92de5a80dcb027ce",
+      "verify.py": "ec86992a83ee3a0fdf8aca4f7122139e1d514e4d261f9e9b6a71300aacd29fff"
+    },
+    "prime_five_all_profiles": {
+      "PROOF.md": "7771476a3389d58d05fded981c1b4e4a06bebba981c6d427ca7ccee47f17929a",
+      "physical.cpp": "86c1954ef7559b6226867706c204af9e19b0d002bbf1f94d92de5a80dcb027ce",
+      "run_bank.cpp": "6835a3af69126d2b59700055255f5d69287fd171d81f0ff7768e4530af74d098",
+      "verify.py": "89ce51a2beb75a61de804f3fa5b43083701e5071ce7c9013a04d8742769679bc"
+    }
+  },
+  "status": "PASS"
+}
