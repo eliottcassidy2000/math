@@ -3,6 +3,12 @@
 **PROVED scoped operation laws; FINITE-EXACT three complete branching rounds.
 Arbitrary-depth induction and the full odd spectrum remain OPEN.**
 
+**Extension update (2026-11-03):** the fixed 219-key bank is now proved not
+closed: its fourth all-+2 target 13835447 is absent at every word length and
+clock. The three-round theorem below is unchanged. An actual enlarged-seed
+repair and a switch back to the old bank are documented in
+[recursive seed switching](../recursive_seed_switching_20261103/README.md).
+
 Starting with the actual named zero-ready tournament of Hamilton count
 170807, we construct both `3H+2` and `3H+4`, then repeat at every child for
 two further rounds. Each edge has an explicit native program beginning at
@@ -58,8 +64,8 @@ nonempty-word witness satisfies `order <= floor(log2 H)+3`.
 
 The small inherited seed bank has 219 eight-coordinate keys, each retaining
 a literal representative and mark. It supplies all fourteen selected
-targets. Its acceptance at arbitrary depth is **OPEN**; a finite bank of
-seeds is not a finite bank of output components, because the appended words
+targets. The fixed-bank closure claim is **REFUTED** by 13835447. A finite
+bank of seeds is not a finite bank of output components, because the appended words
 have unbounded length. See [proof and first returns](inverse/NOTE.md).
 
 ## What the attachment data actually remembers

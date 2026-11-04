@@ -126,7 +126,15 @@ required port roles, the inherited arc compiler realizes it using at most
 n(n-1) native complements and peak order n+1. Nonempty reader witnesses
 have n<=floor(log2 N)+3. The new direct adjacent-pair guard implementation
 removes an unnecessary exponential search inside that compiler; it does
-not solve target selection. Full prime/7p coverage additionally needs a
+not solve target selection. It also supplies a uniform two-native-move
+implementation, after two permanent births, for Session182's already-proved
+infinite +4 family; see [the native corollary](transport/UNIFORM.md).
+Incoming work separately supplies indefinitely reusable fixed-clock
+tripling and a [common infinite entry family for both digits](../multiport_defect_grammar_20261103/transport/TWO_DIGIT_ENTRY.md).
+Our native +4 guards complete that entry's physical implementation, but its
+singleton/triangle grammar already misses two second-round words. Neither
+entry nor tripling proves repeated closure under both requested offsets.
+Full prime/7p coverage additionally needs a
 terminating target reduction and entry argument beyond this one source tree.
 
 [Recovery and incoming work](RECOVERY.md) records the concept board and

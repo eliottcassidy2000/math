@@ -1,5 +1,5 @@
 {
-  "external_file_count": 23,
+  "external_file_count": 25,
   "external_sources": {
     "01-canon/theorems/THM-452-doubling-tiling-coset-law.md": {
       "referenced_by": [
@@ -28,7 +28,8 @@
     "05-knowledge/results/adaptive_metagraph_reformulation_20261103/METAGRAPH.md": {
       "referenced_by": [
         "hilbert/check.json:/source_sha256/05-knowledge/results/adaptive_metagraph_reformulation_20261103/METAGRAPH.md",
-        "transport/followup.json:/source_sha256/adaptive_metagraph_reformulation_20261103/METAGRAPH.md"
+        "transport/followup.json:/source_sha256/adaptive_metagraph_reformulation_20261103/METAGRAPH.md",
+        "transport/uniform.json:/source_sha256/adaptive_metagraph_reformulation_20261103/METAGRAPH.md"
       ],
       "sha256": "ee0cd2951e90d9659ed664c3ebfc10d2a3b3a17c55256610711b9610e84bb9ea"
     },
@@ -36,7 +37,8 @@
       "referenced_by": [
         "hilbert/check.json:/source_sha256/05-knowledge/results/adaptive_metagraph_reformulation_20261103/metagraph_probe.py",
         "transport/followup.json:/source_sha256/adaptive_metagraph_reformulation_20261103/metagraph_probe.py",
-        "transport/native.json:/source_sha256/adaptive_metagraph_reformulation_20261103/metagraph_probe.py"
+        "transport/native.json:/source_sha256/adaptive_metagraph_reformulation_20261103/metagraph_probe.py",
+        "transport/uniform.json:/source_sha256/adaptive_metagraph_reformulation_20261103/metagraph_probe.py"
       ],
       "sha256": "75266c143e3c4fbbadd5202984ec5cd6a0b7b9310a37850ff04fb6e92585ed84"
     },
@@ -83,10 +85,23 @@
       ],
       "sha256": "5333f6c81b1a044d3d9851a53774c7bd92167d95ec871e75b48f5825d6c12c86"
     },
+    "05-knowledge/results/session182_physical_returns_20261104/induction/PROOF.md": {
+      "referenced_by": [
+        "transport/uniform.json:/source_sha256/session182_physical_returns_20261104/induction/PROOF.md"
+      ],
+      "sha256": "0b3a99c45f26218d851da90e938ea8178928bf6f0aea41b06386a13c40b861f3"
+    },
+    "05-knowledge/results/session182_physical_returns_20261104/induction_audit/AUDIT.md": {
+      "referenced_by": [
+        "transport/uniform.json:/source_sha256/session182_physical_returns_20261104/induction_audit/AUDIT.md"
+      ],
+      "sha256": "c73fa4471f07465febdad6e1c52516f5d4e5aae7e7ed73c6b8531b67c2389bbd"
+    },
     "05-knowledge/results/zero_ready_component_returns_20261103/component/audit_native.py": {
       "referenced_by": [
         "transport/audit_native.json:/source_sha256/zero_ready_component_returns_20261103/component/audit_native.py",
-        "transport/followupaudit.json:/source_sha256/zero_ready_component_returns_20261103/component/audit_native.py"
+        "transport/followupaudit.json:/source_sha256/zero_ready_component_returns_20261103/component/audit_native.py",
+        "transport/uniform.json:/source_sha256/zero_ready_component_returns_20261103/component/audit_native.py"
       ],
       "sha256": "afb13e7233f0f437dfe178857cbc6a7a3a88bd66a7ac0cde348c93e5588ca91c"
     },
@@ -106,7 +121,8 @@
     "05-knowledge/results/zero_ready_component_returns_20261103/continuation/native_tree.py": {
       "referenced_by": [
         "transport/followup.json:/source_sha256/zero_ready_component_returns_20261103/continuation/native_tree.py",
-        "transport/native.json:/source_sha256/zero_ready_component_returns_20261103/continuation/native_tree.py"
+        "transport/native.json:/source_sha256/zero_ready_component_returns_20261103/continuation/native_tree.py",
+        "transport/uniform.json:/source_sha256/zero_ready_component_returns_20261103/continuation/native_tree.py"
       ],
       "sha256": "c6e006bba51aa386a7da239740696369a0d0cf399cd0bdf436a640068e7fc7f8"
     },
@@ -115,6 +131,7 @@
         "hilbert/check.json:/source_sha256/05-knowledge/results/zero_ready_component_returns_20261103/interface/check.py",
         "transport/control.json:/source_sha256/zero_ready_component_returns_20261103/interface/check.py",
         "transport/followup.json:/source_sha256/zero_ready_component_returns_20261103/interface/check.py",
+        "transport/uniform.json:/source_sha256/zero_ready_component_returns_20261103/interface/check.py",
         "transport/verify.json:/source_sha256/zero_ready_component_returns_20261103/interface/check.py"
       ],
       "sha256": "2f0457def6969a19f1ffe8188ca5f7b47903664222c2f177b88d1394d213df35"
@@ -125,6 +142,7 @@
         "transport/fast_compare.json:/source_sha256/zero_ready_component_returns_20261103/interface/gap.py",
         "transport/fast_gap_check.json:/source_sha256/zero_ready_component_returns_20261103/interface/gap.py",
         "transport/followup.json:/source_sha256/zero_ready_component_returns_20261103/interface/gap.py",
+        "transport/uniform.json:/source_sha256/zero_ready_component_returns_20261103/interface/gap.py",
         "transport/verify.json:/source_sha256/zero_ready_component_returns_20261103/interface/gap.py"
       ],
       "sha256": "c965617d0c7a454fe940ac9e656f3661281f328e1d21665761f7a3a4056098f1"
@@ -147,7 +165,8 @@
       "referenced_by": [
         "hilbert/check.json:/source_sha256/05-knowledge/results/zero_ready_component_returns_20261103/inverse/native.py",
         "transport/followup.json:/source_sha256/zero_ready_component_returns_20261103/inverse/native.py",
-        "transport/native.json:/source_sha256/zero_ready_component_returns_20261103/inverse/native.py"
+        "transport/native.json:/source_sha256/zero_ready_component_returns_20261103/inverse/native.py",
+        "transport/uniform.json:/source_sha256/zero_ready_component_returns_20261103/inverse/native.py"
       ],
       "sha256": "3d704ae5e4c84718d64848f94cfab5bb4d78e0b214ac2bc7c8412b1f767727a8"
     },

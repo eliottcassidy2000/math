@@ -1,0 +1,3061 @@
+{
+  "records": [
+    {
+      "clock": 1,
+      "deleted_old_names": [],
+      "native_program": {
+        "after_delete_rows": [
+          118,
+          100,
+          112,
+          103,
+          74,
+          16,
+          32
+        ],
+        "case": "append_single_out",
+        "changed_pair": [
+          1,
+          39
+        ],
+        "helper": -1,
+        "helper_deletions": 1,
+        "helper_out_mask": 2,
+        "inverse": false,
+        "native_complements": 2,
+        "native_rows": [
+          [
+            4,
+            153,
+            74,
+            1,
+            45,
+            143,
+            59,
+            93
+          ],
+          [
+            246,
+            228,
+            240,
+            231,
+            74,
+            16,
+            160,
+            48
+          ]
+        ],
+        "pair_guard_names": [
+          1,
+          39,
+          100,
+          0,
+          2,
+          3,
+          4
+        ],
+        "paths": [
+          [
+            1,
+            39,
+            100,
+            0,
+            2,
+            3,
+            4,
+            -1
+          ],
+          [
+            1,
+            -1,
+            39,
+            100,
+            0,
+            2,
+            3,
+            4
+          ]
+        ],
+        "peak_order": 8,
+        "temporary_births": 1
+      },
+      "old_names": [
+        0,
+        1,
+        2,
+        100,
+        39
+      ],
+      "permanent_births": [
+        {
+          "beaten_old_names": [
+            39
+          ],
+          "name": 4,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            39,
+            4
+          ],
+          "out_mask": 16,
+          "rows": [
+            54,
+            52,
+            48,
+            39,
+            8,
+            16
+          ]
+        },
+        {
+          "beaten_old_names": [
+            4
+          ],
+          "name": 3,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            39,
+            4,
+            3
+          ],
+          "out_mask": 32,
+          "rows": [
+            118,
+            116,
+            112,
+            103,
+            72,
+            16,
+            32
+          ]
+        }
+      ],
+      "prefix": [
+        100
+      ],
+      "stage_labels": [
+        "source",
+        "birth_terminal_port4",
+        "birth_nonport3_before4",
+        "reverse_old_port1_root39"
+      ],
+      "stages": [
+        {
+          "H": 9,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                2,
+                4,
+                5
+              ],
+              [
+                6,
+                1,
+                4
+              ],
+              [
+                6,
+                2,
+                5
+              ]
+            ],
+            "F49_charge": [
+              6,
+              5,
+              4
+            ],
+            "F49_frobenius": [
+              5,
+              2,
+              4
+            ],
+            "observer_mod7": [
+              2,
+              4,
+              5
+            ]
+          },
+          "golden": [
+            9,
+            4,
+            5
+          ],
+          "independent_subset_H": 9,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            39
+          ],
+          "root": 39,
+          "root_defect": 6,
+          "root_eight": [
+            9,
+            1,
+            9,
+            15,
+            16,
+            1,
+            84,
+            43
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            15,
+            9
+          ],
+          "root_inports": [
+            0,
+            1,
+            2
+          ],
+          "root_old_port_pair": {
+            "H": 9,
+            "P2": 84,
+            "ordered_W2": [
+              0,
+              2,
+              2,
+              0
+            ],
+            "port_data": [
+              [
+                1,
+                1,
+                1,
+                15,
+                9
+              ],
+              [
+                2,
+                2,
+                5,
+                16,
+                16
+              ]
+            ],
+            "ports": [
+              39,
+              1
+            ]
+          },
+          "rows": [
+            22,
+            20,
+            16,
+            7,
+            8
+          ],
+          "strong": true
+        },
+        {
+          "H": 17,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                3,
+                1,
+                2
+              ],
+              [
+                5,
+                2,
+                4
+              ],
+              [
+                2,
+                4,
+                1
+              ]
+            ],
+            "F49_charge": [
+              5,
+              2,
+              1
+            ],
+            "F49_frobenius": [
+              6,
+              5,
+              1
+            ],
+            "observer_mod7": [
+              3,
+              1,
+              2
+            ]
+          },
+          "golden": [
+            17,
+            8,
+            9
+          ],
+          "independent_subset_H": 17,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            39,
+            4
+          ],
+          "root": 39,
+          "root_defect": 14,
+          "root_eight": [
+            17,
+            1,
+            17,
+            31,
+            32,
+            1,
+            224,
+            113
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            31,
+            17
+          ],
+          "root_inports": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "rows": [
+            54,
+            52,
+            48,
+            39,
+            8,
+            16
+          ],
+          "strong": true
+        },
+        {
+          "H": 27,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                6,
+                3,
+                4
+              ],
+              [
+                0,
+                6,
+                4
+              ],
+              [
+                6,
+                5,
+                6
+              ]
+            ],
+            "F49_charge": [
+              4,
+              4,
+              2
+            ],
+            "F49_frobenius": [
+              6,
+              3,
+              2
+            ],
+            "observer_mod7": [
+              6,
+              3,
+              4
+            ]
+          },
+          "golden": [
+            27,
+            17,
+            18
+          ],
+          "independent_subset_H": 27,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            39,
+            4,
+            3
+          ],
+          "root": 39,
+          "root_defect": 20,
+          "root_eight": [
+            27,
+            1,
+            35,
+            47,
+            64,
+            1,
+            564,
+            355
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            47,
+            35
+          ],
+          "root_inports": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "rows": [
+            118,
+            116,
+            112,
+            103,
+            72,
+            16,
+            32
+          ],
+          "strong": true
+        },
+        {
+          "H": 31,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                3,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                4
+              ],
+              [
+                5,
+                0,
+                2
+              ]
+            ],
+            "F49_charge": [
+              1,
+              1,
+              2
+            ],
+            "F49_frobenius": [
+              5,
+              6,
+              2
+            ],
+            "observer_mod7": [
+              3,
+              0,
+              1
+            ]
+          },
+          "golden": [
+            31,
+            21,
+            22
+          ],
+          "independent_subset_H": 31,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            39,
+            4,
+            3
+          ],
+          "root": 39,
+          "root_defect": 12,
+          "root_eight": [
+            31,
+            1,
+            43,
+            43,
+            64,
+            1,
+            644,
+            463
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            43,
+            43
+          ],
+          "root_inports": [
+            0,
+            2,
+            4
+          ],
+          "root_old_port_pair": {
+            "H": 31,
+            "P2": 644,
+            "ordered_W2": [
+              0,
+              6,
+              2,
+              0
+            ],
+            "port_data": [
+              [
+                1,
+                1,
+                1,
+                43,
+                43
+              ],
+              [
+                3,
+                5,
+                15,
+                71,
+                89
+              ]
+            ],
+            "ports": [
+              39,
+              1
+            ]
+          },
+          "rows": [
+            118,
+            100,
+            112,
+            103,
+            74,
+            16,
+            32
+          ],
+          "strong": true
+        }
+      ]
+    },
+    {
+      "clock": 2,
+      "deleted_old_names": [],
+      "native_program": {
+        "after_delete_rows": [
+          230,
+          196,
+          224,
+          215,
+          199,
+          154,
+          32,
+          64
+        ],
+        "case": "append_single_out",
+        "changed_pair": [
+          1,
+          39
+        ],
+        "helper": -1,
+        "helper_deletions": 1,
+        "helper_out_mask": 2,
+        "inverse": false,
+        "native_complements": 2,
+        "native_rows": [
+          [
+            12,
+            313,
+            154,
+            16,
+            33,
+            77,
+            287,
+            123,
+            189
+          ],
+          [
+            486,
+            452,
+            480,
+            471,
+            455,
+            154,
+            32,
+            320,
+            96
+          ]
+        ],
+        "pair_guard_names": [
+          1,
+          39,
+          100,
+          101,
+          0,
+          2,
+          3,
+          4
+        ],
+        "paths": [
+          [
+            1,
+            39,
+            100,
+            101,
+            0,
+            2,
+            3,
+            4,
+            -1
+          ],
+          [
+            1,
+            -1,
+            39,
+            100,
+            101,
+            0,
+            2,
+            3,
+            4
+          ]
+        ],
+        "peak_order": 9,
+        "temporary_births": 1
+      },
+      "old_names": [
+        0,
+        1,
+        2,
+        100,
+        101,
+        39
+      ],
+      "permanent_births": [
+        {
+          "beaten_old_names": [
+            39
+          ],
+          "name": 4,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            39,
+            4
+          ],
+          "out_mask": 32,
+          "rows": [
+            102,
+            100,
+            96,
+            87,
+            71,
+            24,
+            32
+          ]
+        },
+        {
+          "beaten_old_names": [
+            4
+          ],
+          "name": 3,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            39,
+            4,
+            3
+          ],
+          "out_mask": 64,
+          "rows": [
+            230,
+            228,
+            224,
+            215,
+            199,
+            152,
+            32,
+            64
+          ]
+        }
+      ],
+      "prefix": [
+        100,
+        101
+      ],
+      "stage_labels": [
+        "source",
+        "birth_terminal_port4",
+        "birth_nonport3_before4",
+        "reverse_old_port1_root39"
+      ],
+      "stages": [
+        {
+          "H": 23,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                2,
+                5,
+                6
+              ],
+              [
+                2,
+                3,
+                4
+              ],
+              [
+                3,
+                6,
+                4
+              ]
+            ],
+            "F49_charge": [
+              3,
+              6,
+              3
+            ],
+            "F49_frobenius": [
+              6,
+              1,
+              3
+            ],
+            "observer_mod7": [
+              2,
+              5,
+              6
+            ]
+          },
+          "golden": [
+            23,
+            12,
+            13
+          ],
+          "independent_subset_H": 23,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            39
+          ],
+          "root": 39,
+          "root_defect": 6,
+          "root_eight": [
+            23,
+            1,
+            25,
+            29,
+            32,
+            1,
+            296,
+            167
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            29,
+            25
+          ],
+          "root_inports": [
+            0,
+            1,
+            2
+          ],
+          "root_old_port_pair": {
+            "H": 23,
+            "P2": 296,
+            "ordered_W2": [
+              0,
+              2,
+              6,
+              0
+            ],
+            "port_data": [
+              [
+                1,
+                1,
+                1,
+                29,
+                25
+              ],
+              [
+                6,
+                2,
+                11,
+                60,
+                36
+              ]
+            ],
+            "ports": [
+              39,
+              1
+            ]
+          },
+          "rows": [
+            38,
+            36,
+            32,
+            23,
+            7,
+            24
+          ],
+          "strong": true
+        },
+        {
+          "H": 47,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                5,
+                3,
+                4
+              ],
+              [
+                6,
+                6,
+                4
+              ],
+              [
+                5,
+                5,
+                6
+              ]
+            ],
+            "F49_charge": [
+              0,
+              4,
+              1
+            ],
+            "F49_frobenius": [
+              2,
+              3,
+              1
+            ],
+            "observer_mod7": [
+              5,
+              3,
+              4
+            ]
+          },
+          "golden": [
+            47,
+            24,
+            25
+          ],
+          "independent_subset_H": 47,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            39,
+            4
+          ],
+          "root": 39,
+          "root_defect": 14,
+          "root_eight": [
+            47,
+            1,
+            49,
+            61,
+            64,
+            1,
+            868,
+            469
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            61,
+            49
+          ],
+          "root_inports": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "rows": [
+            102,
+            100,
+            96,
+            87,
+            71,
+            24,
+            32
+          ],
+          "strong": true
+        },
+        {
+          "H": 73,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                3,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                4
+              ],
+              [
+                5,
+                0,
+                2
+              ]
+            ],
+            "F49_charge": [
+              1,
+              1,
+              2
+            ],
+            "F49_frobenius": [
+              5,
+              6,
+              2
+            ],
+            "observer_mod7": [
+              3,
+              0,
+              1
+            ]
+          },
+          "golden": [
+            73,
+            49,
+            50
+          ],
+          "independent_subset_H": 73,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            39,
+            4,
+            3
+          ],
+          "root": 39,
+          "root_defect": 20,
+          "root_eight": [
+            73,
+            1,
+            99,
+            93,
+            128,
+            1,
+            2128,
+            1439
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            93,
+            99
+          ],
+          "root_inports": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "rows": [
+            230,
+            228,
+            224,
+            215,
+            199,
+            152,
+            32,
+            64
+          ],
+          "strong": true
+        },
+        {
+          "H": 73,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                0,
+                2,
+                5
+              ]
+            ],
+            "F49_charge": [
+              3,
+              5,
+              5
+            ],
+            "F49_frobenius": [
+              2,
+              2,
+              5
+            ],
+            "observer_mod7": [
+              3,
+              4,
+              5
+            ]
+          },
+          "golden": [
+            73,
+            53,
+            54
+          ],
+          "independent_subset_H": 73,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            39,
+            4,
+            3
+          ],
+          "root": 39,
+          "root_defect": 12,
+          "root_eight": [
+            73,
+            1,
+            107,
+            85,
+            128,
+            1,
+            2128,
+            1655
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            85,
+            107
+          ],
+          "root_inports": [
+            0,
+            2,
+            4
+          ],
+          "root_old_port_pair": {
+            "H": 73,
+            "P2": 2128,
+            "ordered_W2": [
+              0,
+              6,
+              6,
+              0
+            ],
+            "port_data": [
+              [
+                1,
+                1,
+                1,
+                85,
+                107
+              ],
+              [
+                7,
+                5,
+                37,
+                241,
+                209
+              ]
+            ],
+            "ports": [
+              39,
+              1
+            ]
+          },
+          "rows": [
+            230,
+            196,
+            224,
+            215,
+            199,
+            154,
+            32,
+            64
+          ],
+          "strong": true
+        }
+      ]
+    },
+    {
+      "clock": 3,
+      "deleted_old_names": [],
+      "native_program": {
+        "after_delete_rows": [
+          454,
+          388,
+          448,
+          439,
+          423,
+          391,
+          314,
+          64,
+          128
+        ],
+        "case": "append_single_out",
+        "changed_pair": [
+          1,
+          39
+        ],
+        "helper": -1,
+        "helper_deletions": 1,
+        "helper_out_mask": 2,
+        "inverse": false,
+        "native_complements": 2,
+        "native_rows": [
+          [
+            28,
+            633,
+            314,
+            16,
+            96,
+            73,
+            141,
+            575,
+            251,
+            381
+          ],
+          [
+            966,
+            900,
+            960,
+            951,
+            935,
+            903,
+            314,
+            64,
+            640,
+            192
+          ]
+        ],
+        "pair_guard_names": [
+          1,
+          39,
+          100,
+          101,
+          102,
+          0,
+          2,
+          3,
+          4
+        ],
+        "paths": [
+          [
+            1,
+            39,
+            100,
+            101,
+            102,
+            0,
+            2,
+            3,
+            4,
+            -1
+          ],
+          [
+            1,
+            -1,
+            39,
+            100,
+            101,
+            102,
+            0,
+            2,
+            3,
+            4
+          ]
+        ],
+        "peak_order": 10,
+        "temporary_births": 1
+      },
+      "old_names": [
+        0,
+        1,
+        2,
+        100,
+        101,
+        102,
+        39
+      ],
+      "permanent_births": [
+        {
+          "beaten_old_names": [
+            39
+          ],
+          "name": 4,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            39,
+            4
+          ],
+          "out_mask": 64,
+          "rows": [
+            198,
+            196,
+            192,
+            183,
+            167,
+            135,
+            56,
+            64
+          ]
+        },
+        {
+          "beaten_old_names": [
+            4
+          ],
+          "name": 3,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            39,
+            4,
+            3
+          ],
+          "out_mask": 128,
+          "rows": [
+            454,
+            452,
+            448,
+            439,
+            423,
+            391,
+            312,
+            64,
+            128
+          ]
+        }
+      ],
+      "prefix": [
+        100,
+        101,
+        102
+      ],
+      "stage_labels": [
+        "source",
+        "birth_terminal_port4",
+        "birth_nonport3_before4",
+        "reverse_old_port1_root39"
+      ],
+      "stages": [
+        {
+          "H": 51,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                2,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                4
+              ],
+              [
+                4,
+                0,
+                2
+              ]
+            ],
+            "F49_charge": [
+              4,
+              1,
+              1
+            ],
+            "F49_frobenius": [
+              1,
+              6,
+              1
+            ],
+            "observer_mod7": [
+              2,
+              0,
+              1
+            ]
+          },
+          "golden": [
+            51,
+            28,
+            29
+          ],
+          "independent_subset_H": 51,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            39
+          ],
+          "root": 39,
+          "root_defect": 6,
+          "root_eight": [
+            51,
+            1,
+            57,
+            57,
+            64,
+            1,
+            948,
+            577
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            57,
+            57
+          ],
+          "root_inports": [
+            0,
+            1,
+            2
+          ],
+          "root_old_port_pair": {
+            "H": 51,
+            "P2": 948,
+            "ordered_W2": [
+              0,
+              2,
+              14,
+              0
+            ],
+            "port_data": [
+              [
+                1,
+                1,
+                1,
+                57,
+                57
+              ],
+              [
+                14,
+                2,
+                23,
+                196,
+                76
+              ]
+            ],
+            "ports": [
+              39,
+              1
+            ]
+          },
+          "rows": [
+            70,
+            68,
+            64,
+            55,
+            39,
+            7,
+            56
+          ],
+          "strong": true
+        },
+        {
+          "H": 107,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                2,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                4
+              ],
+              [
+                4,
+                0,
+                2
+              ]
+            ],
+            "F49_charge": [
+              4,
+              1,
+              1
+            ],
+            "F49_frobenius": [
+              1,
+              6,
+              1
+            ],
+            "observer_mod7": [
+              2,
+              0,
+              1
+            ]
+          },
+          "golden": [
+            107,
+            56,
+            57
+          ],
+          "independent_subset_H": 107,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            39,
+            4
+          ],
+          "root": 39,
+          "root_defect": 14,
+          "root_eight": [
+            107,
+            1,
+            113,
+            121,
+            128,
+            1,
+            2936,
+            1667
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            121,
+            113
+          ],
+          "root_inports": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "rows": [
+            198,
+            196,
+            192,
+            183,
+            167,
+            135,
+            56,
+            64
+          ],
+          "strong": true
+        },
+        {
+          "H": 165,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                4,
+                1,
+                2
+              ],
+              [
+                6,
+                2,
+                4
+              ],
+              [
+                3,
+                4,
+                1
+              ]
+            ],
+            "F49_charge": [
+              2,
+              2,
+              2
+            ],
+            "F49_frobenius": [
+              3,
+              5,
+              2
+            ],
+            "observer_mod7": [
+              4,
+              1,
+              2
+            ]
+          },
+          "golden": [
+            165,
+            113,
+            114
+          ],
+          "independent_subset_H": 165,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            39,
+            4,
+            3
+          ],
+          "root": 39,
+          "root_defect": 20,
+          "root_eight": [
+            165,
+            1,
+            227,
+            185,
+            256,
+            1,
+            7140,
+            5065
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            185,
+            227
+          ],
+          "root_inports": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "rows": [
+            454,
+            452,
+            448,
+            439,
+            423,
+            391,
+            312,
+            64,
+            128
+          ],
+          "strong": true
+        },
+        {
+          "H": 157,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                3,
+                5,
+                6
+              ],
+              [
+                3,
+                3,
+                4
+              ],
+              [
+                4,
+                6,
+                4
+              ]
+            ],
+            "F49_charge": [
+              0,
+              6,
+              4
+            ],
+            "F49_frobenius": [
+              3,
+              1,
+              4
+            ],
+            "observer_mod7": [
+              3,
+              5,
+              6
+            ]
+          },
+          "golden": [
+            157,
+            117,
+            118
+          ],
+          "independent_subset_H": 157,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            39,
+            4,
+            3
+          ],
+          "root": 39,
+          "root_defect": 12,
+          "root_eight": [
+            157,
+            1,
+            235,
+            169,
+            256,
+            1,
+            6692,
+            5497
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            169,
+            235
+          ],
+          "root_inports": [
+            0,
+            2,
+            4
+          ],
+          "root_old_port_pair": {
+            "H": 157,
+            "P2": 6692,
+            "ordered_W2": [
+              0,
+              6,
+              14,
+              0
+            ],
+            "port_data": [
+              [
+                1,
+                1,
+                1,
+                169,
+                235
+              ],
+              [
+                15,
+                5,
+                81,
+                773,
+                449
+              ]
+            ],
+            "ports": [
+              39,
+              1
+            ]
+          },
+          "rows": [
+            454,
+            388,
+            448,
+            439,
+            423,
+            391,
+            314,
+            64,
+            128
+          ],
+          "strong": true
+        }
+      ]
+    },
+    {
+      "clock": 4,
+      "deleted_old_names": [],
+      "native_program": {
+        "after_delete_rows": [
+          902,
+          772,
+          896,
+          887,
+          871,
+          839,
+          775,
+          634,
+          128,
+          256
+        ],
+        "case": "append_single_out",
+        "changed_pair": [
+          1,
+          39
+        ],
+        "helper": -1,
+        "helper_deletions": 1,
+        "helper_out_mask": 2,
+        "inverse": false,
+        "native_complements": 2,
+        "native_rows": [
+          [
+            60,
+            1273,
+            634,
+            16,
+            160,
+            200,
+            153,
+            269,
+            1151,
+            507,
+            765
+          ],
+          [
+            1926,
+            1796,
+            1920,
+            1911,
+            1895,
+            1863,
+            1799,
+            634,
+            128,
+            1280,
+            384
+          ]
+        ],
+        "pair_guard_names": [
+          1,
+          39,
+          100,
+          101,
+          102,
+          103,
+          0,
+          2,
+          3,
+          4
+        ],
+        "paths": [
+          [
+            1,
+            39,
+            100,
+            101,
+            102,
+            103,
+            0,
+            2,
+            3,
+            4,
+            -1
+          ],
+          [
+            1,
+            -1,
+            39,
+            100,
+            101,
+            102,
+            103,
+            0,
+            2,
+            3,
+            4
+          ]
+        ],
+        "peak_order": 11,
+        "temporary_births": 1
+      },
+      "old_names": [
+        0,
+        1,
+        2,
+        100,
+        101,
+        102,
+        103,
+        39
+      ],
+      "permanent_births": [
+        {
+          "beaten_old_names": [
+            39
+          ],
+          "name": 4,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            103,
+            39,
+            4
+          ],
+          "out_mask": 128,
+          "rows": [
+            390,
+            388,
+            384,
+            375,
+            359,
+            327,
+            263,
+            120,
+            128
+          ]
+        },
+        {
+          "beaten_old_names": [
+            4
+          ],
+          "name": 3,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            103,
+            39,
+            4,
+            3
+          ],
+          "out_mask": 256,
+          "rows": [
+            902,
+            900,
+            896,
+            887,
+            871,
+            839,
+            775,
+            632,
+            128,
+            256
+          ]
+        }
+      ],
+      "prefix": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "stage_labels": [
+        "source",
+        "birth_terminal_port4",
+        "birth_nonport3_before4",
+        "reverse_old_port1_root39"
+      ],
+      "stages": [
+        {
+          "H": 107,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                2,
+                4,
+                5
+              ],
+              [
+                6,
+                1,
+                4
+              ],
+              [
+                6,
+                2,
+                5
+              ]
+            ],
+            "F49_charge": [
+              6,
+              5,
+              4
+            ],
+            "F49_frobenius": [
+              5,
+              2,
+              4
+            ],
+            "observer_mod7": [
+              2,
+              4,
+              5
+            ]
+          },
+          "golden": [
+            107,
+            60,
+            61
+          ],
+          "independent_subset_H": 107,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            103,
+            39
+          ],
+          "root": 39,
+          "root_defect": 6,
+          "root_eight": [
+            107,
+            1,
+            121,
+            113,
+            128,
+            1,
+            2936,
+            1883
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            113,
+            121
+          ],
+          "root_inports": [
+            0,
+            1,
+            2
+          ],
+          "root_old_port_pair": {
+            "H": 107,
+            "P2": 2936,
+            "ordered_W2": [
+              0,
+              2,
+              30,
+              0
+            ],
+            "port_data": [
+              [
+                1,
+                1,
+                1,
+                113,
+                121
+              ],
+              [
+                30,
+                2,
+                47,
+                612,
+                156
+              ]
+            ],
+            "ports": [
+              39,
+              1
+            ]
+          },
+          "rows": [
+            134,
+            132,
+            128,
+            119,
+            103,
+            71,
+            7,
+            120
+          ],
+          "strong": true
+        },
+        {
+          "H": 227,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                3,
+                1,
+                2
+              ],
+              [
+                5,
+                2,
+                4
+              ],
+              [
+                2,
+                4,
+                1
+              ]
+            ],
+            "F49_charge": [
+              5,
+              2,
+              1
+            ],
+            "F49_frobenius": [
+              6,
+              5,
+              1
+            ],
+            "observer_mod7": [
+              3,
+              1,
+              2
+            ]
+          },
+          "golden": [
+            227,
+            120,
+            121
+          ],
+          "independent_subset_H": 227,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            103,
+            39,
+            4
+          ],
+          "root": 39,
+          "root_defect": 14,
+          "root_eight": [
+            227,
+            1,
+            241,
+            241,
+            256,
+            1,
+            9412,
+            5521
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            241,
+            241
+          ],
+          "root_inports": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "rows": [
+            390,
+            388,
+            384,
+            375,
+            359,
+            327,
+            263,
+            120,
+            128
+          ],
+          "strong": true
+        },
+        {
+          "H": 349,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                6,
+                3,
+                4
+              ],
+              [
+                0,
+                6,
+                4
+              ],
+              [
+                6,
+                5,
+                6
+              ]
+            ],
+            "F49_charge": [
+              4,
+              4,
+              2
+            ],
+            "F49_frobenius": [
+              6,
+              3,
+              2
+            ],
+            "observer_mod7": [
+              6,
+              3,
+              4
+            ]
+          },
+          "golden": [
+            349,
+            241,
+            242
+          ],
+          "independent_subset_H": 349,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            103,
+            39,
+            4,
+            3
+          ],
+          "root": 39,
+          "root_defect": 20,
+          "root_eight": [
+            349,
+            1,
+            483,
+            369,
+            512,
+            1,
+            22816,
+            16691
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            369,
+            483
+          ],
+          "root_inports": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "rows": [
+            902,
+            900,
+            896,
+            887,
+            871,
+            839,
+            775,
+            632,
+            128,
+            256
+          ],
+          "strong": true
+        },
+        {
+          "H": 325,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                3,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                4
+              ],
+              [
+                5,
+                0,
+                2
+              ]
+            ],
+            "F49_charge": [
+              1,
+              1,
+              2
+            ],
+            "F49_frobenius": [
+              5,
+              6,
+              2
+            ],
+            "observer_mod7": [
+              3,
+              0,
+              1
+            ]
+          },
+          "golden": [
+            325,
+            245,
+            246
+          ],
+          "independent_subset_H": 325,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            103,
+            39,
+            4,
+            3
+          ],
+          "root": 39,
+          "root_defect": 12,
+          "root_eight": [
+            325,
+            1,
+            491,
+            337,
+            512,
+            1,
+            20608,
+            17555
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            337,
+            491
+          ],
+          "root_inports": [
+            0,
+            2,
+            4
+          ],
+          "root_old_port_pair": {
+            "H": 325,
+            "P2": 20608,
+            "ordered_W2": [
+              0,
+              6,
+              30,
+              0
+            ],
+            "port_data": [
+              [
+                1,
+                1,
+                1,
+                337,
+                491
+              ],
+              [
+                31,
+                5,
+                169,
+                2413,
+                929
+              ]
+            ],
+            "ports": [
+              39,
+              1
+            ]
+          },
+          "rows": [
+            902,
+            772,
+            896,
+            887,
+            871,
+            839,
+            775,
+            634,
+            128,
+            256
+          ],
+          "strong": true
+        }
+      ]
+    },
+    {
+      "clock": 8,
+      "deleted_old_names": [],
+      "native_program": {
+        "after_delete_rows": [
+          14342,
+          12292,
+          14336,
+          14327,
+          14311,
+          14279,
+          14215,
+          14087,
+          13831,
+          13319,
+          12295,
+          10234,
+          2048,
+          4096
+        ],
+        "case": "append_single_out",
+        "changed_pair": [
+          1,
+          39
+        ],
+        "helper": -1,
+        "helper_deletions": 1,
+        "helper_out_mask": 2,
+        "inverse": false,
+        "native_complements": 2,
+        "native_rows": [
+          [
+            1020,
+            20473,
+            10234,
+            16,
+            2080,
+            2120,
+            2200,
+            2360,
+            2680,
+            3320,
+            2553,
+            4109,
+            18431,
+            8187,
+            12285
+          ],
+          [
+            30726,
+            28676,
+            30720,
+            30711,
+            30695,
+            30663,
+            30599,
+            30471,
+            30215,
+            29703,
+            28679,
+            10234,
+            2048,
+            20480,
+            6144
+          ]
+        ],
+        "pair_guard_names": [
+          1,
+          39,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          0,
+          2,
+          3,
+          4
+        ],
+        "paths": [
+          [
+            1,
+            39,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            0,
+            2,
+            3,
+            4,
+            -1
+          ],
+          [
+            1,
+            -1,
+            39,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            0,
+            2,
+            3,
+            4
+          ]
+        ],
+        "peak_order": 15,
+        "temporary_births": 1
+      },
+      "old_names": [
+        0,
+        1,
+        2,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        39
+      ],
+      "permanent_births": [
+        {
+          "beaten_old_names": [
+            39
+          ],
+          "name": 4,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            39,
+            4
+          ],
+          "out_mask": 2048,
+          "rows": [
+            6150,
+            6148,
+            6144,
+            6135,
+            6119,
+            6087,
+            6023,
+            5895,
+            5639,
+            5127,
+            4103,
+            2040,
+            2048
+          ]
+        },
+        {
+          "beaten_old_names": [
+            4
+          ],
+          "name": 3,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            39,
+            4,
+            3
+          ],
+          "out_mask": 4096,
+          "rows": [
+            14342,
+            14340,
+            14336,
+            14327,
+            14311,
+            14279,
+            14215,
+            14087,
+            13831,
+            13319,
+            12295,
+            10232,
+            2048,
+            4096
+          ]
+        }
+      ],
+      "prefix": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ],
+      "stage_labels": [
+        "source",
+        "birth_terminal_port4",
+        "birth_nonport3_before4",
+        "reverse_old_port1_root39"
+      ],
+      "stages": [
+        {
+          "H": 1787,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                2,
+                5,
+                6
+              ],
+              [
+                2,
+                3,
+                4
+              ],
+              [
+                3,
+                6,
+                4
+              ]
+            ],
+            "F49_charge": [
+              3,
+              6,
+              3
+            ],
+            "F49_frobenius": [
+              6,
+              1,
+              3
+            ],
+            "observer_mod7": [
+              2,
+              5,
+              6
+            ]
+          },
+          "golden": [
+            1787,
+            1020,
+            1021
+          ],
+          "independent_subset_H": 1787,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            39
+          ],
+          "root": 39,
+          "root_defect": 6,
+          "root_eight": [
+            1787,
+            1,
+            2041,
+            1793,
+            2048,
+            1,
+            247256,
+            172283
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            1793,
+            2041
+          ],
+          "root_inports": [
+            0,
+            1,
+            2
+          ],
+          "root_old_port_pair": {
+            "H": 1787,
+            "P2": 247256,
+            "ordered_W2": [
+              0,
+              2,
+              510,
+              0
+            ],
+            "port_data": [
+              [
+                1,
+                1,
+                1,
+                1793,
+                2041
+              ],
+              [
+                510,
+                2,
+                767,
+                51972,
+                2556
+              ]
+            ],
+            "ports": [
+              39,
+              1
+            ]
+          },
+          "rows": [
+            2054,
+            2052,
+            2048,
+            2039,
+            2023,
+            1991,
+            1927,
+            1799,
+            1543,
+            1031,
+            7,
+            2040
+          ],
+          "strong": true
+        },
+        {
+          "H": 3827,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                5,
+                3,
+                4
+              ],
+              [
+                6,
+                6,
+                4
+              ],
+              [
+                5,
+                5,
+                6
+              ]
+            ],
+            "F49_charge": [
+              0,
+              4,
+              1
+            ],
+            "F49_frobenius": [
+              2,
+              3,
+              1
+            ],
+            "observer_mod7": [
+              5,
+              3,
+              4
+            ]
+          },
+          "golden": [
+            3827,
+            2040,
+            2041
+          ],
+          "independent_subset_H": 3827,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            39,
+            4
+          ],
+          "root": 39,
+          "root_defect": 14,
+          "root_eight": [
+            3827,
+            1,
+            4081,
+            3841,
+            4096,
+            1,
+            835492,
+            514801
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            3841,
+            4081
+          ],
+          "root_inports": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "rows": [
+            6150,
+            6148,
+            6144,
+            6135,
+            6119,
+            6087,
+            6023,
+            5895,
+            5639,
+            5127,
+            4103,
+            2040,
+            2048
+          ],
+          "strong": true
+        },
+        {
+          "H": 5869,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                3,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                4
+              ],
+              [
+                5,
+                0,
+                2
+              ]
+            ],
+            "F49_charge": [
+              1,
+              1,
+              2
+            ],
+            "F49_frobenius": [
+              5,
+              6,
+              2
+            ],
+            "observer_mod7": [
+              3,
+              0,
+              1
+            ]
+          },
+          "golden": [
+            5869,
+            4081,
+            4082
+          ],
+          "independent_subset_H": 5869,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            39,
+            4,
+            3
+          ],
+          "root": 39,
+          "root_defect": 20,
+          "root_eight": [
+            5869,
+            1,
+            8163,
+            5889,
+            8192,
+            1,
+            2019136,
+            1546451
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            5889,
+            8163
+          ],
+          "root_inports": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "rows": [
+            14342,
+            14340,
+            14336,
+            14327,
+            14311,
+            14279,
+            14215,
+            14087,
+            13831,
+            13319,
+            12295,
+            10232,
+            2048,
+            4096
+          ],
+          "strong": true
+        },
+        {
+          "H": 5365,
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                0,
+                2,
+                5
+              ]
+            ],
+            "F49_charge": [
+              3,
+              5,
+              5
+            ],
+            "F49_frobenius": [
+              2,
+              2,
+              5
+            ],
+            "observer_mod7": [
+              3,
+              4,
+              5
+            ]
+          },
+          "golden": [
+            5365,
+            4085,
+            4086
+          ],
+          "independent_subset_H": 5365,
+          "names": [
+            0,
+            1,
+            2,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            39,
+            4,
+            3
+          ],
+          "root": 39,
+          "root_defect": 12,
+          "root_eight": [
+            5365,
+            1,
+            8171,
+            5377,
+            8192,
+            1,
+            1730848,
+            1560275
+          ],
+          "root_fields": [
+            1,
+            1,
+            1,
+            5377,
+            8171
+          ],
+          "root_inports": [
+            0,
+            2,
+            4
+          ],
+          "root_old_port_pair": {
+            "H": 5365,
+            "P2": 1730848,
+            "ordered_W2": [
+              0,
+              6,
+              510,
+              0
+            ],
+            "port_data": [
+              [
+                1,
+                1,
+                1,
+                5377,
+                8171
+              ],
+              [
+                511,
+                5,
+                2809,
+                207133,
+                15329
+              ]
+            ],
+            "ports": [
+              39,
+              1
+            ]
+          },
+          "rows": [
+            14342,
+            12292,
+            14336,
+            14327,
+            14311,
+            14279,
+            14215,
+            14087,
+            13831,
+            13319,
+            12295,
+            10234,
+            2048,
+            4096
+          ],
+          "strong": true
+        }
+      ]
+    }
+  ],
+  "root_eight_fields": [
+    "H",
+    "E1",
+    "S2",
+    "E2",
+    "deletion_P2",
+    "deletion_H",
+    "P2",
+    "S3"
+  ],
+  "scope": "PROVED uniform native implementation of the inherited shared-clock +4 family; FINITE-EXACT controls at clocks1,2,3,4,8. No returning family, +2 map, or unrestricted spectrum coverage.",
+  "source_sha256": {
+    "adaptive_metagraph_reformulation_20261103/METAGRAPH.md": "ee0cd2951e90d9659ed664c3ebfc10d2a3b3a17c55256610711b9610e84bb9ea",
+    "adaptive_metagraph_reformulation_20261103/metagraph_probe.py": "75266c143e3c4fbbadd5202984ec5cd6a0b7b9310a37850ff04fb6e92585ed84",
+    "recursive_seed_switching_20261103/transport/FOLLOWUP.md": "09fc70845ea81b71364cedade595cc754359042736687baefaf41f9875cb8827",
+    "recursive_seed_switching_20261103/transport/UNIFORM.md": "1baa05d7db16dfcb3a214b571fcd4563a39dd3a5ccb91b0756e99cfdea84e201",
+    "recursive_seed_switching_20261103/transport/followup.py": "985e19eb45692dfd8ec7e4e073b5f9088bf1d67ed60cba8b41875fcc1fc6bebf",
+    "recursive_seed_switching_20261103/transport/uniform.py": "1f87ec448fc0a8b04b10cadc3063c72f14880842a3f43062b20bfc31360c5ccb",
+    "session182_physical_returns_20261104/induction/PROOF.md": "0b3a99c45f26218d851da90e938ea8178928bf6f0aea41b06386a13c40b861f3",
+    "session182_physical_returns_20261104/induction_audit/AUDIT.md": "c73fa4471f07465febdad6e1c52516f5d4e5aae7e7ed73c6b8531b67c2389bbd",
+    "zero_ready_component_returns_20261103/component/audit_native.py": "afb13e7233f0f437dfe178857cbc6a7a3a88bd66a7ac0cde348c93e5588ca91c",
+    "zero_ready_component_returns_20261103/continuation/native_tree.py": "c6e006bba51aa386a7da239740696369a0d0cf399cd0bdf436a640068e7fc7f8",
+    "zero_ready_component_returns_20261103/interface/check.py": "2f0457def6969a19f1ffe8188ca5f7b47903664222c2f177b88d1394d213df35",
+    "zero_ready_component_returns_20261103/interface/gap.py": "c965617d0c7a454fe940ac9e656f3661281f328e1d21665761f7a3a4056098f1",
+    "zero_ready_component_returns_20261103/inverse/native.py": "3d704ae5e4c84718d64848f94cfab5bb4d78e0b214ac2bc7c8412b1f767727a8"
+  },
+  "status": "PASS",
+  "totals": {
+    "clocks": 5,
+    "completed_strong_stages": 20,
+    "independent_subset_counts": 20,
+    "named_endpoint_pairs": 10,
+    "native_complements": 10,
+    "permanent_births": 10,
+    "positive_hostile_controls": 4,
+    "temporary_births_and_deletions": 5
+  }
+}

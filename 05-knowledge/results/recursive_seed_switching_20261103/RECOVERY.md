@@ -77,3 +77,77 @@ require a sidecar**, **Re-evaluate a certificate after every fibre-changing
 operation**, and **Turn certificate failure into an address, then change
 sidecars** in [META-PATTERNS](../../../00-navigation/META-PATTERNS.md).
 No new general method card is promoted from this single session.
+
+## Final incoming integration through 8864e989af
+
+Eight incoming commits were read and integrated before publication.
+[Session182](../session182_physical_returns_20261104/synthesis/NOTE.md)
+continues a different 17-name H512425 source with ports {4,21} and defect
+3690. Its named children/grandchildren and scoped local-menu failure at
+4611841 are not our fixed-bank miss or our zero-ready source lineage.
+The [seven-coordinate ordered-component law](../session182_physical_returns_20261104/induction/PROOF.md)
+contains the crossing term gF in its joint response; forgetting that term
+is another instance of the attachment loss guarded against here. Its
+equal-field/different-E2 example at physical 39 and 50 does not assert a
+collision of our full joint observer.
+
+That same note supplies the infinite +4 family
+`7*2^t-5 -> 21*2^t-11`, t>=1, but leaves native legality uncertified.
+Our direct pair-block compiler fills that particular implementation step:
+perform the two stated permanent births and reverse the single remaining
+root incidence with one helper and two native complements. The new
+[uniform native corollary](transport/UNIFORM.md) credits the count family
+and strongness to Session182. It does not supply both-digit reentry.
+
+The concurrent
+[multiport defect grammar](../multiport_defect_grammar_20261103/construction/RESULT.md)
+already proves a stronger tripling channel than our ordinal-prefix example:
+on its zero-defect chart, it indefinitely repeats `(h,F)->(3h,3F)` at fixed
+clock with strong actual sources. Our `(h,F)->(3h,12F)`, clock-minus-two
+grading is a different operation with a finite clock budget. It is not a
+new universal tripling result, and neither channel supplies offsets 2 and 4.
+
+Its [paired forest carrier](../multiport_defect_grammar_20261103/transport/PROOF.md)
+retains active endpoints and anonymous-component degree. The latest
+[forest-to-three-path reconciliation](../two_port_seven_core_20261103/INCOMING.md)
+gives an exact readout to the named three-path tensor without an extra
+factorial. Our ordered bins and restricted reader states are readouts of
+such richer interfaces, not replacements for their unbounded degree.
+The four-edge Hilbert reset fits only while all required endpoint names
+remain active; a forgotten spare needs the retained graph or a replay.
+These incoming mechanisms sharpen the missing sidecar while leaving target
+acceptance open.
+
+## Publication reconciliation through 1b50a1d763
+
+Two further incoming commits supply a stronger entry result and its exact
+language boundary. The [common two-digit entry](../multiport_defect_grammar_20261103/transport/TWO_DIGIT_ENTRY.md)
+constructs both offsets from every actual source `H_t=7*2^t-5`, t>=1.
+The +2 branch uses two induced births to replace the terminal singleton
+by a partially marked triangle; the +4 branch is exactly the family whose
+native guards are supplied in our uniform corollary. Thus their combination
+has actual constructions for both first digits, with the original physical
+names retained. It still does not regenerate the required port guard:
+the +2 output's new zero-defect gauge next gives tripling, not another +2.
+
+The [complete singleton/triangle inverse](../multiport_defect_grammar_20261103/COMPONENT_LANGUAGE.md)
+classifies every word at a fixed positive marginal f, including all word
+lengths and triangle port subsets. At the common clock it accepts both
+first digits, only 22 and 42 at the second level, and only 422 at the third.
+Its exclusions of 24 and 44 are joint-intercept failures after the marginal
+has been matched. This is a different declared grammar from our 219-key
+bank; neither exclusion is an unrestricted forbidden Hamilton count.
+The two independent obstructions point to the same proof obligation:
+expand the source grammar while controlling both its marginal and joint
+attachment correction, then prove repeated physical acceptance. The
+incoming four-vertex strong atom is a concrete next candidate, not a
+certified repair or a completed recursive selector.
+
+The subsequent `545c94b331` checkpoint also repairs the separate Session182
+physical target4611841 with three suffix reversals and seven root-edge
+reversals, preserving all18 names. Its [exact source and isolation proof](../session183_two_branch_frontier_20261104/missing44/PROOF.md)
+shows that this particular rewrite works only with a TT3 prefix, even when
+arbitrary prefix interiors are allowed. This crosses that session's
+two-suffix-reversal boundary; it neither contradicts the singleton/triangle
+language exclusion above nor supplies a reusable return family. The repeated
+word44 labels different source grammars in these two results.

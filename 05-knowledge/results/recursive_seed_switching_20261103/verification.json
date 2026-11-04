@@ -1,5 +1,5 @@
 {
-  "checked_hash_references": 90,
+  "checked_hash_references": 103,
   "checker_self_controls": {
     "controls": [
       "repair arc payload",
@@ -11,12 +11,12 @@
     "rejected_in_memory_hostiles": 5,
     "scope": "Checker integrity tests only; no saved file is modified."
   },
-  "external_source_files": 23,
+  "external_source_files": 25,
   "generated_artifact_sha256": {
     "selector/bank.json": "132f8779ced72069de6cf2842522343fe72a650e02a451ebc45781ad56e11fe8",
     "selector/growth.json": "785fc9d10196b6e84263e1d36267d143e30b4bf132c5753a1c2cd5b878c67bee"
   },
-  "internal_pinned_inputs": 25,
+  "internal_pinned_inputs": 27,
   "mode": "saved-evidence and current-input verification plus bounded trial division; no tournament search or phase count rerun",
   "normal_optimized_evidence": [
     {
@@ -293,6 +293,27 @@
       "receipt": "transport/followupaudit.json",
       "script": "transport/followupaudit.py",
       "script_sha256": "c33e82311d86aae75cb012309aecdaf09394028bd7aba0ae06083162fc1a9e47"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "transport/uniform.optimized.json",
+      "normal_command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/uniform.py"
+      ],
+      "normal_sha256": "6f107b016f8c619dbfa2b28c3d86aeea1573921fd78662121c9158cfb94e3ddc",
+      "optimized_command": [
+        "python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/uniform.py"
+      ],
+      "optimized_sha256": "6f107b016f8c619dbfa2b28c3d86aeea1573921fd78662121c9158cfb94e3ddc",
+      "output_semantics": "stdout",
+      "receipt": "transport/uniform.json",
+      "script": "transport/uniform.py",
+      "script_sha256": "1f87ec448fc0a8b04b10cadc3063c72f14880842a3f43062b20bfc31360c5ccb"
     }
   ],
   "optional_engine_scope": "The optional compiled counter self-test is included as a separate190-query implementation control with its source pins; full count receipts retain their own declared engine provenance.",
@@ -355,10 +376,31 @@
     "repair_native_complements": 36,
     "repair_order": 23,
     "repair_target": 13835447,
-    "total_native_complements": 122
+    "total_native_complements": 122,
+    "uniform_plus4_controls": {
+      "clocks": [
+        1,
+        2,
+        3,
+        4,
+        8
+      ],
+      "payload_sha256": "c4747e5a1954d900700ccc9c03a34c8449e14381345ae69f84e8076df8fd3565",
+      "scope": "Separate finite controls for the proved uniform +4 implementation; not part of the three-edge seed-switching chain and not recursive closure.",
+      "totals": {
+        "clocks": 5,
+        "completed_strong_stages": 20,
+        "independent_subset_counts": 20,
+        "named_endpoint_pairs": 10,
+        "native_complements": 10,
+        "permanent_births": 10,
+        "positive_hostile_controls": 4,
+        "temporary_births_and_deletions": 5
+      }
+    }
   },
-  "reproducer_sha256": "fe4271cc2e016852f629d972ae0b5f0686ad3dcd4061138d20a5c0f2321e0d34",
-  "scope": "Fixed219-bank counterexample, one named fourth+2 repair, and only its two declared next endpoints. Unlimited switching and complete spectrum OPEN.",
-  "sources_sha256": "63120e65deb5693e68088be7a520cca4a2ea1fdc0f0917041b6bfe94bc2b2c0d",
+  "reproducer_sha256": "2093b8ff01cc7ccb5f9c017a63a9cc7152fdacaeeb6d219580e34769fda2e605",
+  "scope": "Fixed219-bank counterexample, one named fourth+2 repair, its two declared next endpoints, and separate controls for the inherited uniform +4 family native implementation. Unlimited switching and complete spectrum OPEN.",
+  "sources_sha256": "01dab9d92acae575989f769f0b66d25888044cc665450f064bbb15beda96e368",
   "status": "PASS"
 }

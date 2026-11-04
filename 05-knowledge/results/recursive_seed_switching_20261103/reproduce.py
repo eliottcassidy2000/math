@@ -26,6 +26,7 @@ JOBS=[
  ('transport/verify.py','transport/verify.json','file','transport/verify.optimized.json'),
  ('transport/followup.py','transport/followup.json','file','transport/followup.optimized.json'),
  ('transport/followupaudit.py','transport/followupaudit.json','stdout','transport/followupaudit.optimized.json'),
+ ('transport/uniform.py','transport/uniform.json','stdout','transport/uniform.optimized.json'),
 ]
 JOB_ARGUMENTS={'transport/fast_gap.py':['--self-test']}
 ALIASES={
@@ -148,6 +149,17 @@ def payload_checks():
         need([z['ports'] for z in c['joint_pairs']]==pair_order and all(len(z['observer17'])==17 and z['observer17'][0]==t['H'] for z in c['joint_pairs']),'Four named joint observers per next target')
         need(c['named_port_charts']==a['named_port_charts'],'Independently audited named field codecs')
     need(fa['native_complements']==86 and fa['permanent_births']==7 and fa['direct_guard_controls']==410,'Declared follow-up transport totals and direct-guard controls')
+    uniform=read('transport/uniform.json')
+    need(uniform['status']=='PASS' and [z['clock'] for z in uniform['records']]==[1,2,3,4,8],'Uniform +4 control clocks')
+    for record in uniform['records']:
+        t=record['clock'];stages=record['stages'];program=record['native_program'];M=1<<t
+        need(len(stages)==4 and [z['H'] for z in stages]==[7*M-5,15*M-13,23*M-19,21*M-11],'Uniform completed stage count binding')
+        need([z['root_defect'] for z in stages]==[6,14,20,12] and all(z['strong'] and z['independent_subset_H']==z['H'] for z in stages),'Uniform defect and independent count binding')
+        need(stages[-1]['H']==3*stages[0]['H']+4 and stages[-1]['rows']==program['after_delete_rows'],'Uniform final count/program endpoint binding')
+        need([z['name'] for z in record['permanent_births']]==[4,3] and not record['deleted_old_names'],'Uniform physical births and old-name preservation')
+        need(program['changed_pair']==[1,39] and program['native_complements']==2 and len(program['paths'])==len(program['native_rows'])==2,'Uniform guarded native program scope')
+        need(all(z['root_old_port_pair']['ports']==[39,1] and z['root_old_port_pair']['H']==z['H'] for z in (stages[0],stages[-1])),'Uniform endpoint-pair binding')
+    need(uniform['totals']==dict(clocks=5,completed_strong_stages=20,independent_subset_counts=20,named_endpoint_pairs=10,native_complements=10,permanent_births=10,positive_hostile_controls=4,temporary_births_and_deletions=5),'Uniform finite control totals')
     prime=41506343;bound=isqrt(prime)
     need(bound==6442 and all(prime%d for d in range(2,bound+1)),'Prime endpoint by complete bounded trial division')
     factors={13835447:[37,179,2089],41506345:[5,8301269]}
@@ -155,6 +167,7 @@ def payload_checks():
     return dict(fixed_bank_keys=219,certified_bank_miss=13835447,repair_target=13835447,repair_order=23,repair_native_complements=36,
         followup_targets=sorted(targets),followup_orders=[len(targets[h]['names']) for h in sorted(targets)],followup_native_complements=86,followup_permanent_births=7,
         exact_named_edges=3,total_native_complements=122,direct_guard_controls=410,joint_pair_order=pair_order,
+        uniform_plus4_controls=dict(clocks=[1,2,3,4,8],totals=uniform['totals'],payload_sha256=payload_sha(uniform['records']),scope='Separate finite controls for the proved uniform +4 implementation; not part of the three-edge seed-switching chain and not recursive closure.'),
         prime_endpoint=dict(H=prime,method='Trial division by every integer from2 through floor(sqrt(H)), inclusive.',last_trial_divisor=bound,trial_divisors_checked=bound-1),composite_endpoint_factor_products={str(N):fs for N,fs in factors.items()},
         graph_and_program_payload_sha256=dict(repair_graph=payload_sha([target['names'],target['rows']]),repair_program=payload_sha(native['program']),followup_programs=payload_sha(full['programs'])),
         meaning='Saved count/audit input hashes plus explicit graph, program, frame and cardinality binding. This is not a fresh search, count or unbounded induction.')
@@ -220,7 +233,7 @@ def main():
     if args.record:
         (HERE/'sources.json').write_text(json.dumps(sources,indent=2,sort_keys=True)+'\n')
         report=dict(status='PASS',mode='saved-evidence and current-input verification plus bounded trial division; no tournament search or phase count rerun',
-            scope='Fixed219-bank counterexample, one named fourth+2 repair, and only its two declared next endpoints. Unlimited switching and complete spectrum OPEN.',
+            scope='Fixed219-bank counterexample, one named fourth+2 repair, its two declared next endpoints, and separate controls for the inherited uniform +4 family native implementation. Unlimited switching and complete spectrum OPEN.',
             normal_optimized_evidence=evidence,payload_binding=binding,checker_self_controls=controls,generated_artifact_sha256=generated,
             external_source_files=len(external),internal_pinned_inputs=len(internal),checked_hash_references=references,
             sources_sha256=sha(HERE/'sources.json'),reproducer_sha256=sha(Path(__file__)),
