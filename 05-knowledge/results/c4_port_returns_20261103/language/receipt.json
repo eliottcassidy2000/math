@@ -1,0 +1,6759 @@
+{
+  "status": "FINITE_EXACT_COMPLETE_FIXED_MARGINAL_C4_ATOM_LANGUAGE",
+  "source_pin": "1b50a1d763",
+  "scope": "All ordered words over T, C3, and strong C4 with positive terminal ports; fixed-f acceptance is complete without a chosen order cutoff. No physical conversion or native legality inferred.",
+  "inherited_checker": {
+    "path": "multiport_defect_grammar_20261103/check_component_language.py",
+    "normalized_sha256": "d66b548382de91bae348044aec29fd4023287dc33a2599cf9ecb91242c285b9a"
+  },
+  "atom_bank": [
+    {
+      "kind": "T",
+      "mask": 0,
+      "rows": [
+        0
+      ],
+      "signature": [
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "T",
+      "mask": 1,
+      "rows": [
+        0
+      ],
+      "signature": [
+        1,
+        2,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "kind": "C",
+      "mask": 0,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "signature": [
+        3,
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "C",
+      "mask": 1,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "signature": [
+        3,
+        12,
+        3,
+        3,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "kind": "C",
+      "mask": 3,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "signature": [
+        3,
+        12,
+        6,
+        6,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "kind": "C",
+      "mask": 7,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "signature": [
+        3,
+        12,
+        9,
+        9,
+        6,
+        3,
+        3
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 0,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 1,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        7,
+        5,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 2,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        9,
+        6,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 3,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        16,
+        11,
+        4,
+        3,
+        2
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 4,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        6,
+        9,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 5,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        13,
+        14,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 6,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        15,
+        15,
+        6,
+        3,
+        3
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 7,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        22,
+        20,
+        12,
+        4,
+        4
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 8,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        5,
+        7,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 9,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        12,
+        12,
+        4,
+        2,
+        2
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 10,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        14,
+        13,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 11,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        21,
+        18,
+        10,
+        4,
+        3
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 12,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        11,
+        16,
+        4,
+        2,
+        3
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 13,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        18,
+        21,
+        10,
+        3,
+        4
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 14,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        20,
+        22,
+        12,
+        4,
+        4
+      ]
+    },
+    {
+      "kind": "Q",
+      "mask": 15,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "signature": [
+        5,
+        32,
+        27,
+        27,
+        22,
+        5,
+        5
+      ]
+    }
+  ],
+  "independent_controls": {
+    "atom_permutation_signatures": 22,
+    "literal_word_signatures": 132,
+    "full_attachment_count_and_strongness": 64,
+    "prefix_inverse_equals_coefficient_inverse": true
+  },
+  "common_clock_f": [
+    21,
+    63,
+    189
+  ],
+  "shifted_clock": {
+    "source_f": 63,
+    "shifts": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "output_clock": "t-shift, valid for t>=shift+1",
+    "target_intercepts": [
+      -35,
+      -29
+    ],
+    "physical_prefix_absorption_proved": false
+  },
+  "results": [
+    {
+      "f": 21,
+      "prefix_states": 35,
+      "independent_inverse_stats": {
+        "skeletons": 12,
+        "coefficient_nodes": 72,
+        "gcd_rejections": 7
+      },
+      "candidate_count": 5,
+      "candidates": [
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            1,
+            32,
+            21,
+            21,
+            12,
+            1,
+            1
+          ],
+          "intercept": -11,
+          "rows": [
+            30,
+            28,
+            24,
+            16,
+            0
+          ],
+          "port_mask": 21,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            48,
+            21,
+            39,
+            16,
+            1,
+            3
+          ],
+          "intercept": -13,
+          "rows": [
+            30,
+            28,
+            8,
+            16,
+            4
+          ],
+          "port_mask": 7,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            }
+          ],
+          "signature": [
+            3,
+            24,
+            21,
+            21,
+            18,
+            3,
+            3
+          ],
+          "intercept": -15,
+          "rows": [
+            14,
+            4,
+            8,
+            2
+          ],
+          "port_mask": 15,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            24,
+            21,
+            21,
+            18,
+            3,
+            3
+          ],
+          "intercept": -15,
+          "rows": [
+            10,
+            12,
+            9,
+            0
+          ],
+          "port_mask": 15,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "Q",
+              "mask": 11
+            }
+          ],
+          "signature": [
+            5,
+            32,
+            21,
+            18,
+            10,
+            4,
+            3
+          ],
+          "intercept": -5,
+          "rows": [
+            8,
+            1,
+            3,
+            6
+          ],
+          "port_mask": 11,
+          "contains_C4": true
+        }
+      ],
+      "distinct_intercepts": [
+        -15,
+        -13,
+        -11,
+        -5
+      ],
+      "requested_intercepts": {
+        "-13": [
+          1
+        ],
+        "-11": [
+          0
+        ]
+      }
+    },
+    {
+      "f": 63,
+      "prefix_states": 147,
+      "independent_inverse_stats": {
+        "skeletons": 24,
+        "coefficient_nodes": 133,
+        "gcd_rejections": 23
+      },
+      "candidate_count": 9,
+      "candidates": [
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            192,
+            63,
+            123,
+            36,
+            1,
+            3
+          ],
+          "intercept": -33,
+          "rows": [
+            126,
+            124,
+            120,
+            112,
+            32,
+            64,
+            16
+          ],
+          "port_mask": 21,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            }
+          ],
+          "signature": [
+            3,
+            96,
+            63,
+            66,
+            40,
+            2,
+            3
+          ],
+          "intercept": -37,
+          "rows": [
+            62,
+            60,
+            56,
+            16,
+            32,
+            8
+          ],
+          "port_mask": 29,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            96,
+            63,
+            57,
+            34,
+            3,
+            3
+          ],
+          "intercept": -31,
+          "rows": [
+            62,
+            60,
+            40,
+            48,
+            36,
+            0
+          ],
+          "port_mask": 37,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 4
+            }
+          ],
+          "signature": [
+            5,
+            256,
+            63,
+            201,
+            46,
+            1,
+            5
+          ],
+          "intercept": -41,
+          "rows": [
+            126,
+            124,
+            120,
+            64,
+            8,
+            24,
+            48
+          ],
+          "port_mask": 35,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            1,
+            64,
+            63,
+            63,
+            62,
+            1,
+            1
+          ],
+          "intercept": -61,
+          "rows": [
+            62,
+            60,
+            56,
+            48,
+            32,
+            0
+          ],
+          "port_mask": 63,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "Q",
+              "mask": 9
+            }
+          ],
+          "signature": [
+            5,
+            128,
+            63,
+            108,
+            52,
+            2,
+            5
+          ],
+          "intercept": -47,
+          "rows": [
+            62,
+            60,
+            32,
+            4,
+            12,
+            24
+          ],
+          "port_mask": 39,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            96,
+            63,
+            75,
+            46,
+            3,
+            3
+          ],
+          "intercept": -43,
+          "rows": [
+            62,
+            52,
+            56,
+            50,
+            32,
+            0
+          ],
+          "port_mask": 39,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            96,
+            63,
+            39,
+            22,
+            3,
+            1
+          ],
+          "intercept": -19,
+          "rows": [
+            58,
+            60,
+            57,
+            48,
+            32,
+            0
+          ],
+          "port_mask": 41,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            144,
+            63,
+            117,
+            48,
+            3,
+            9
+          ],
+          "intercept": -39,
+          "rows": [
+            58,
+            60,
+            57,
+            16,
+            32,
+            8
+          ],
+          "port_mask": 15,
+          "contains_C4": false
+        }
+      ],
+      "distinct_intercepts": [
+        -61,
+        -47,
+        -43,
+        -41,
+        -39,
+        -37,
+        -33,
+        -31,
+        -19
+      ],
+      "requested_intercepts": {
+        "-37": [
+          1
+        ],
+        "-35": [],
+        "-31": [
+          2
+        ],
+        "-29": []
+      }
+    },
+    {
+      "f": 189,
+      "prefix_states": 739,
+      "independent_inverse_stats": {
+        "skeletons": 48,
+        "coefficient_nodes": 391,
+        "gcd_rejections": 104
+      },
+      "candidate_count": 18,
+      "candidates": [
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "Q",
+              "mask": 2
+            }
+          ],
+          "signature": [
+            5,
+            512,
+            189,
+            294,
+            102,
+            2,
+            5
+          ],
+          "intercept": -97,
+          "rows": [
+            254,
+            252,
+            248,
+            240,
+            128,
+            16,
+            48,
+            96
+          ],
+          "port_mask": 41,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            1,
+            256,
+            189,
+            189,
+            138,
+            1,
+            1
+          ],
+          "intercept": -137,
+          "rows": [
+            254,
+            252,
+            248,
+            240,
+            224,
+            192,
+            128,
+            0
+          ],
+          "port_mask": 189,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            576,
+            189,
+            333,
+            100,
+            3,
+            9
+          ],
+          "intercept": -91,
+          "rows": [
+            254,
+            252,
+            232,
+            240,
+            228,
+            64,
+            128,
+            32
+          ],
+          "port_mask": 37,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 10
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            5,
+            256,
+            189,
+            159,
+            110,
+            5,
+            5
+          ],
+          "intercept": -105,
+          "rows": [
+            126,
+            124,
+            96,
+            68,
+            76,
+            88,
+            0
+          ],
+          "port_mask": 105,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            384,
+            189,
+            375,
+            184,
+            1,
+            3
+          ],
+          "intercept": -181,
+          "rows": [
+            254,
+            252,
+            248,
+            240,
+            224,
+            64,
+            128,
+            32
+          ],
+          "port_mask": 63,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            }
+          ],
+          "signature": [
+            3,
+            192,
+            189,
+            189,
+            186,
+            3,
+            3
+          ],
+          "intercept": -183,
+          "rows": [
+            126,
+            124,
+            120,
+            112,
+            32,
+            64,
+            16
+          ],
+          "port_mask": 127,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            192,
+            189,
+            189,
+            186,
+            3,
+            3
+          ],
+          "intercept": -183,
+          "rows": [
+            126,
+            124,
+            120,
+            80,
+            96,
+            72,
+            0
+          ],
+          "port_mask": 127,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            192,
+            189,
+            189,
+            186,
+            3,
+            3
+          ],
+          "intercept": -183,
+          "rows": [
+            126,
+            124,
+            104,
+            112,
+            100,
+            64,
+            0
+          ],
+          "port_mask": 127,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "Q",
+              "mask": 4
+            }
+          ],
+          "signature": [
+            15,
+            768,
+            189,
+            507,
+            112,
+            3,
+            15
+          ],
+          "intercept": -97,
+          "rows": [
+            254,
+            244,
+            248,
+            242,
+            128,
+            16,
+            48,
+            96
+          ],
+          "port_mask": 67,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            576,
+            189,
+            441,
+            138,
+            3,
+            9
+          ],
+          "intercept": -129,
+          "rows": [
+            254,
+            244,
+            248,
+            242,
+            224,
+            64,
+            128,
+            32
+          ],
+          "port_mask": 39,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            }
+          ],
+          "signature": [
+            9,
+            288,
+            189,
+            234,
+            148,
+            6,
+            9
+          ],
+          "intercept": -139,
+          "rows": [
+            126,
+            116,
+            120,
+            114,
+            32,
+            64,
+            16
+          ],
+          "port_mask": 55,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            192,
+            189,
+            189,
+            186,
+            3,
+            3
+          ],
+          "intercept": -183,
+          "rows": [
+            126,
+            116,
+            120,
+            114,
+            96,
+            64,
+            0
+          ],
+          "port_mask": 127,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            576,
+            189,
+            225,
+            66,
+            3,
+            3
+          ],
+          "intercept": -57,
+          "rows": [
+            250,
+            252,
+            249,
+            240,
+            224,
+            64,
+            128,
+            32
+          ],
+          "port_mask": 41,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            }
+          ],
+          "signature": [
+            9,
+            288,
+            189,
+            126,
+            78,
+            6,
+            3
+          ],
+          "intercept": -69,
+          "rows": [
+            122,
+            124,
+            121,
+            112,
+            32,
+            64,
+            16
+          ],
+          "port_mask": 57,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            288,
+            189,
+            99,
+            58,
+            9,
+            3
+          ],
+          "intercept": -49,
+          "rows": [
+            122,
+            124,
+            121,
+            80,
+            96,
+            72,
+            0
+          ],
+          "port_mask": 73,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 4
+            }
+          ],
+          "signature": [
+            15,
+            768,
+            189,
+            603,
+            138,
+            3,
+            15
+          ],
+          "intercept": -123,
+          "rows": [
+            250,
+            252,
+            249,
+            240,
+            128,
+            16,
+            48,
+            96
+          ],
+          "port_mask": 71,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            192,
+            189,
+            189,
+            186,
+            3,
+            3
+          ],
+          "intercept": -183,
+          "rows": [
+            122,
+            124,
+            121,
+            112,
+            96,
+            64,
+            0
+          ],
+          "port_mask": 127,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "Q",
+              "mask": 9
+            }
+          ],
+          "signature": [
+            15,
+            384,
+            189,
+            324,
+            156,
+            6,
+            15
+          ],
+          "intercept": -141,
+          "rows": [
+            122,
+            124,
+            121,
+            64,
+            8,
+            24,
+            48
+          ],
+          "port_mask": 79,
+          "contains_C4": true
+        }
+      ],
+      "distinct_intercepts": [
+        -183,
+        -181,
+        -141,
+        -139,
+        -137,
+        -129,
+        -123,
+        -105,
+        -97,
+        -91,
+        -69,
+        -57,
+        -49
+      ],
+      "requested_intercepts": {
+        "-109": [],
+        "-107": [],
+        "-103": [],
+        "-101": [],
+        "-91": [
+          2
+        ],
+        "-89": [],
+        "-85": [],
+        "-83": []
+      }
+    },
+    {
+      "f": 126,
+      "prefix_states": 403,
+      "independent_inverse_stats": {
+        "skeletons": 38,
+        "coefficient_nodes": 233,
+        "gcd_rejections": 51
+      },
+      "candidate_count": 12,
+      "candidates": [
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            384,
+            126,
+            123,
+            36,
+            1,
+            0
+          ],
+          "intercept": -33,
+          "rows": [
+            254,
+            252,
+            248,
+            240,
+            224,
+            64,
+            128,
+            32
+          ],
+          "port_mask": 42,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            }
+          ],
+          "signature": [
+            3,
+            192,
+            126,
+            66,
+            40,
+            2,
+            0
+          ],
+          "intercept": -37,
+          "rows": [
+            126,
+            124,
+            120,
+            112,
+            32,
+            64,
+            16
+          ],
+          "port_mask": 58,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            192,
+            126,
+            57,
+            34,
+            3,
+            0
+          ],
+          "intercept": -31,
+          "rows": [
+            126,
+            124,
+            120,
+            80,
+            96,
+            72,
+            0
+          ],
+          "port_mask": 74,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 4
+            }
+          ],
+          "signature": [
+            5,
+            512,
+            126,
+            201,
+            46,
+            1,
+            0
+          ],
+          "intercept": -41,
+          "rows": [
+            254,
+            252,
+            248,
+            240,
+            128,
+            16,
+            48,
+            96
+          ],
+          "port_mask": 70,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            1,
+            128,
+            126,
+            63,
+            62,
+            1,
+            0
+          ],
+          "intercept": -61,
+          "rows": [
+            126,
+            124,
+            120,
+            112,
+            96,
+            64,
+            0
+          ],
+          "port_mask": 126,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "Q",
+              "mask": 9
+            }
+          ],
+          "signature": [
+            5,
+            256,
+            126,
+            108,
+            52,
+            2,
+            0
+          ],
+          "intercept": -47,
+          "rows": [
+            126,
+            124,
+            120,
+            64,
+            8,
+            24,
+            48
+          ],
+          "port_mask": 78,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            192,
+            126,
+            75,
+            46,
+            3,
+            0
+          ],
+          "intercept": -43,
+          "rows": [
+            126,
+            124,
+            104,
+            112,
+            100,
+            64,
+            0
+          ],
+          "port_mask": 78,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            192,
+            126,
+            39,
+            22,
+            3,
+            0
+          ],
+          "intercept": -19,
+          "rows": [
+            126,
+            116,
+            120,
+            114,
+            96,
+            64,
+            0
+          ],
+          "port_mask": 82,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            288,
+            126,
+            117,
+            48,
+            3,
+            0
+          ],
+          "intercept": -39,
+          "rows": [
+            126,
+            116,
+            120,
+            114,
+            32,
+            64,
+            16
+          ],
+          "port_mask": 30,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            192,
+            126,
+            111,
+            68,
+            3,
+            2
+          ],
+          "intercept": -65,
+          "rows": [
+            122,
+            124,
+            121,
+            112,
+            96,
+            64,
+            0
+          ],
+          "port_mask": 83,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            288,
+            126,
+            189,
+            78,
+            3,
+            6
+          ],
+          "intercept": -69,
+          "rows": [
+            122,
+            124,
+            121,
+            112,
+            32,
+            64,
+            16
+          ],
+          "port_mask": 27,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            }
+          ],
+          "signature": [
+            9,
+            144,
+            126,
+            99,
+            84,
+            9,
+            6
+          ],
+          "intercept": -75,
+          "rows": [
+            58,
+            60,
+            57,
+            16,
+            32,
+            8
+          ],
+          "port_mask": 59,
+          "contains_C4": false
+        }
+      ],
+      "distinct_intercepts": [
+        -75,
+        -69,
+        -65,
+        -61,
+        -47,
+        -43,
+        -41,
+        -39,
+        -37,
+        -33,
+        -31,
+        -19
+      ],
+      "requested_intercepts": {
+        "-35": [],
+        "-29": []
+      }
+    },
+    {
+      "f": 252,
+      "prefix_states": 1059,
+      "independent_inverse_stats": {
+        "skeletons": 59,
+        "coefficient_nodes": 445,
+        "gcd_rejections": 128
+      },
+      "candidate_count": 20,
+      "candidates": [
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            768,
+            252,
+            123,
+            36,
+            1,
+            0
+          ],
+          "intercept": -33,
+          "rows": [
+            510,
+            508,
+            504,
+            496,
+            480,
+            448,
+            128,
+            256,
+            64
+          ],
+          "port_mask": 84,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            }
+          ],
+          "signature": [
+            3,
+            384,
+            252,
+            66,
+            40,
+            2,
+            0
+          ],
+          "intercept": -37,
+          "rows": [
+            254,
+            252,
+            248,
+            240,
+            224,
+            64,
+            128,
+            32
+          ],
+          "port_mask": 116,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            384,
+            252,
+            57,
+            34,
+            3,
+            0
+          ],
+          "intercept": -31,
+          "rows": [
+            254,
+            252,
+            248,
+            240,
+            160,
+            192,
+            144,
+            0
+          ],
+          "port_mask": 148,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 4
+            }
+          ],
+          "signature": [
+            5,
+            1024,
+            252,
+            201,
+            46,
+            1,
+            0
+          ],
+          "intercept": -41,
+          "rows": [
+            510,
+            508,
+            504,
+            496,
+            480,
+            256,
+            32,
+            96,
+            192
+          ],
+          "port_mask": 140,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            1,
+            256,
+            252,
+            63,
+            62,
+            1,
+            0
+          ],
+          "intercept": -61,
+          "rows": [
+            254,
+            252,
+            248,
+            240,
+            224,
+            192,
+            128,
+            0
+          ],
+          "port_mask": 252,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "Q",
+              "mask": 9
+            }
+          ],
+          "signature": [
+            5,
+            512,
+            252,
+            108,
+            52,
+            2,
+            0
+          ],
+          "intercept": -47,
+          "rows": [
+            254,
+            252,
+            248,
+            240,
+            128,
+            16,
+            48,
+            96
+          ],
+          "port_mask": 156,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            384,
+            252,
+            75,
+            46,
+            3,
+            0
+          ],
+          "intercept": -43,
+          "rows": [
+            254,
+            252,
+            248,
+            208,
+            224,
+            200,
+            128,
+            0
+          ],
+          "port_mask": 156,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            384,
+            252,
+            39,
+            22,
+            3,
+            0
+          ],
+          "intercept": -19,
+          "rows": [
+            254,
+            252,
+            232,
+            240,
+            228,
+            192,
+            128,
+            0
+          ],
+          "port_mask": 164,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            576,
+            252,
+            117,
+            48,
+            3,
+            0
+          ],
+          "intercept": -39,
+          "rows": [
+            254,
+            252,
+            232,
+            240,
+            228,
+            64,
+            128,
+            32
+          ],
+          "port_mask": 60,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            384,
+            252,
+            111,
+            68,
+            3,
+            0
+          ],
+          "intercept": -65,
+          "rows": [
+            254,
+            244,
+            248,
+            242,
+            224,
+            192,
+            128,
+            0
+          ],
+          "port_mask": 166,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            576,
+            252,
+            189,
+            78,
+            3,
+            0
+          ],
+          "intercept": -69,
+          "rows": [
+            254,
+            244,
+            248,
+            242,
+            224,
+            64,
+            128,
+            32
+          ],
+          "port_mask": 54,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            }
+          ],
+          "signature": [
+            9,
+            288,
+            252,
+            99,
+            84,
+            9,
+            0
+          ],
+          "intercept": -75,
+          "rows": [
+            126,
+            116,
+            120,
+            114,
+            32,
+            64,
+            16
+          ],
+          "port_mask": 118,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            384,
+            252,
+            63,
+            36,
+            3,
+            0
+          ],
+          "intercept": -33,
+          "rows": [
+            250,
+            252,
+            249,
+            240,
+            224,
+            192,
+            128,
+            0
+          ],
+          "port_mask": 168,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            576,
+            252,
+            117,
+            48,
+            3,
+            0
+          ],
+          "intercept": -39,
+          "rows": [
+            250,
+            252,
+            249,
+            240,
+            224,
+            64,
+            128,
+            32
+          ],
+          "port_mask": 56,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            }
+          ],
+          "signature": [
+            9,
+            288,
+            252,
+            63,
+            54,
+            9,
+            0
+          ],
+          "intercept": -45,
+          "rows": [
+            122,
+            124,
+            121,
+            112,
+            32,
+            64,
+            16
+          ],
+          "port_mask": 120,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            288,
+            252,
+            63,
+            54,
+            9,
+            0
+          ],
+          "intercept": -45,
+          "rows": [
+            122,
+            124,
+            121,
+            80,
+            96,
+            72,
+            0
+          ],
+          "port_mask": 120,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 11
+            }
+          ],
+          "signature": [
+            15,
+            384,
+            252,
+            54,
+            30,
+            12,
+            0
+          ],
+          "intercept": -15,
+          "rows": [
+            122,
+            124,
+            121,
+            64,
+            8,
+            24,
+            48
+          ],
+          "port_mask": 88,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "Q",
+              "mask": 9
+            },
+            {
+              "kind": "Q",
+              "mask": 4
+            }
+          ],
+          "signature": [
+            25,
+            1024,
+            252,
+            429,
+            96,
+            5,
+            10
+          ],
+          "intercept": -71,
+          "rows": [
+            248,
+            241,
+            243,
+            246,
+            128,
+            16,
+            48,
+            96
+          ],
+          "port_mask": 73,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "Q",
+              "mask": 14
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            15,
+            768,
+            252,
+            543,
+            168,
+            5,
+            12
+          ],
+          "intercept": -153,
+          "rows": [
+            248,
+            241,
+            243,
+            246,
+            224,
+            64,
+            128,
+            32
+          ],
+          "port_mask": 46,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "Q",
+              "mask": 14
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            }
+          ],
+          "signature": [
+            15,
+            384,
+            252,
+            294,
+            186,
+            10,
+            12
+          ],
+          "intercept": -171,
+          "rows": [
+            120,
+            113,
+            115,
+            118,
+            32,
+            64,
+            16
+          ],
+          "port_mask": 62,
+          "contains_C4": true
+        }
+      ],
+      "distinct_intercepts": [
+        -171,
+        -153,
+        -75,
+        -71,
+        -69,
+        -65,
+        -61,
+        -47,
+        -45,
+        -43,
+        -41,
+        -39,
+        -37,
+        -33,
+        -31,
+        -19,
+        -15
+      ],
+      "requested_intercepts": {
+        "-35": [],
+        "-29": []
+      }
+    },
+    {
+      "f": 504,
+      "prefix_states": 2819,
+      "independent_inverse_stats": {
+        "skeletons": 91,
+        "coefficient_nodes": 766,
+        "gcd_rejections": 279
+      },
+      "candidate_count": 26,
+      "candidates": [
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            1536,
+            504,
+            123,
+            36,
+            1,
+            0
+          ],
+          "intercept": -33,
+          "rows": [
+            1022,
+            1020,
+            1016,
+            1008,
+            992,
+            960,
+            896,
+            256,
+            512,
+            128
+          ],
+          "port_mask": 168,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            }
+          ],
+          "signature": [
+            3,
+            768,
+            504,
+            66,
+            40,
+            2,
+            0
+          ],
+          "intercept": -37,
+          "rows": [
+            510,
+            508,
+            504,
+            496,
+            480,
+            448,
+            128,
+            256,
+            64
+          ],
+          "port_mask": 232,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            768,
+            504,
+            57,
+            34,
+            3,
+            0
+          ],
+          "intercept": -31,
+          "rows": [
+            510,
+            508,
+            504,
+            496,
+            480,
+            320,
+            384,
+            288,
+            0
+          ],
+          "port_mask": 296,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 4
+            }
+          ],
+          "signature": [
+            5,
+            2048,
+            504,
+            201,
+            46,
+            1,
+            0
+          ],
+          "intercept": -41,
+          "rows": [
+            1022,
+            1020,
+            1016,
+            1008,
+            992,
+            960,
+            512,
+            64,
+            192,
+            384
+          ],
+          "port_mask": 280,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            1,
+            512,
+            504,
+            63,
+            62,
+            1,
+            0
+          ],
+          "intercept": -61,
+          "rows": [
+            510,
+            508,
+            504,
+            496,
+            480,
+            448,
+            384,
+            256,
+            0
+          ],
+          "port_mask": 504,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "Q",
+              "mask": 9
+            }
+          ],
+          "signature": [
+            5,
+            1024,
+            504,
+            108,
+            52,
+            2,
+            0
+          ],
+          "intercept": -47,
+          "rows": [
+            510,
+            508,
+            504,
+            496,
+            480,
+            256,
+            32,
+            96,
+            192
+          ],
+          "port_mask": 312,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            768,
+            504,
+            75,
+            46,
+            3,
+            0
+          ],
+          "intercept": -43,
+          "rows": [
+            510,
+            508,
+            504,
+            496,
+            416,
+            448,
+            400,
+            256,
+            0
+          ],
+          "port_mask": 312,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            768,
+            504,
+            39,
+            22,
+            3,
+            0
+          ],
+          "intercept": -19,
+          "rows": [
+            510,
+            508,
+            504,
+            464,
+            480,
+            456,
+            384,
+            256,
+            0
+          ],
+          "port_mask": 328,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            1152,
+            504,
+            117,
+            48,
+            3,
+            0
+          ],
+          "intercept": -39,
+          "rows": [
+            510,
+            508,
+            504,
+            464,
+            480,
+            456,
+            128,
+            256,
+            64
+          ],
+          "port_mask": 120,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            768,
+            504,
+            111,
+            68,
+            3,
+            0
+          ],
+          "intercept": -65,
+          "rows": [
+            510,
+            508,
+            488,
+            496,
+            484,
+            448,
+            384,
+            256,
+            0
+          ],
+          "port_mask": 332,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            1152,
+            504,
+            189,
+            78,
+            3,
+            0
+          ],
+          "intercept": -69,
+          "rows": [
+            510,
+            508,
+            488,
+            496,
+            484,
+            448,
+            128,
+            256,
+            64
+          ],
+          "port_mask": 108,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            }
+          ],
+          "signature": [
+            9,
+            576,
+            504,
+            99,
+            84,
+            9,
+            0
+          ],
+          "intercept": -75,
+          "rows": [
+            254,
+            252,
+            232,
+            240,
+            228,
+            64,
+            128,
+            32
+          ],
+          "port_mask": 236,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            768,
+            504,
+            63,
+            36,
+            3,
+            0
+          ],
+          "intercept": -33,
+          "rows": [
+            510,
+            500,
+            504,
+            498,
+            480,
+            448,
+            384,
+            256,
+            0
+          ],
+          "port_mask": 336,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            1152,
+            504,
+            117,
+            48,
+            3,
+            0
+          ],
+          "intercept": -39,
+          "rows": [
+            510,
+            500,
+            504,
+            498,
+            480,
+            448,
+            128,
+            256,
+            64
+          ],
+          "port_mask": 112,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            }
+          ],
+          "signature": [
+            9,
+            576,
+            504,
+            63,
+            54,
+            9,
+            0
+          ],
+          "intercept": -45,
+          "rows": [
+            254,
+            244,
+            248,
+            242,
+            224,
+            64,
+            128,
+            32
+          ],
+          "port_mask": 240,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            576,
+            504,
+            63,
+            54,
+            9,
+            0
+          ],
+          "intercept": -45,
+          "rows": [
+            254,
+            244,
+            248,
+            242,
+            160,
+            192,
+            144,
+            0
+          ],
+          "port_mask": 240,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 11
+            }
+          ],
+          "signature": [
+            15,
+            768,
+            504,
+            54,
+            30,
+            12,
+            0
+          ],
+          "intercept": -15,
+          "rows": [
+            254,
+            244,
+            248,
+            242,
+            128,
+            16,
+            48,
+            96
+          ],
+          "port_mask": 176,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 9
+            },
+            {
+              "kind": "Q",
+              "mask": 4
+            }
+          ],
+          "signature": [
+            25,
+            2048,
+            504,
+            429,
+            96,
+            5,
+            0
+          ],
+          "intercept": -71,
+          "rows": [
+            510,
+            496,
+            482,
+            486,
+            492,
+            256,
+            32,
+            96,
+            192
+          ],
+          "port_mask": 146,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 14
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            15,
+            1536,
+            504,
+            543,
+            168,
+            5,
+            0
+          ],
+          "intercept": -153,
+          "rows": [
+            510,
+            496,
+            482,
+            486,
+            492,
+            448,
+            128,
+            256,
+            64
+          ],
+          "port_mask": 92,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 14
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            }
+          ],
+          "signature": [
+            15,
+            768,
+            504,
+            294,
+            186,
+            10,
+            0
+          ],
+          "intercept": -171,
+          "rows": [
+            254,
+            240,
+            226,
+            230,
+            236,
+            64,
+            128,
+            32
+          ],
+          "port_mask": 124,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            768,
+            504,
+            63,
+            36,
+            3,
+            0
+          ],
+          "intercept": -33,
+          "rows": [
+            506,
+            508,
+            505,
+            496,
+            480,
+            448,
+            384,
+            256,
+            0
+          ],
+          "port_mask": 336,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            1152,
+            504,
+            117,
+            48,
+            3,
+            0
+          ],
+          "intercept": -39,
+          "rows": [
+            506,
+            508,
+            505,
+            496,
+            480,
+            448,
+            128,
+            256,
+            64
+          ],
+          "port_mask": 112,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            }
+          ],
+          "signature": [
+            9,
+            576,
+            504,
+            63,
+            54,
+            9,
+            0
+          ],
+          "intercept": -45,
+          "rows": [
+            250,
+            252,
+            249,
+            240,
+            224,
+            64,
+            128,
+            32
+          ],
+          "port_mask": 240,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            576,
+            504,
+            63,
+            54,
+            9,
+            0
+          ],
+          "intercept": -45,
+          "rows": [
+            250,
+            252,
+            249,
+            240,
+            160,
+            192,
+            144,
+            0
+          ],
+          "port_mask": 240,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 11
+            }
+          ],
+          "signature": [
+            15,
+            768,
+            504,
+            54,
+            30,
+            12,
+            0
+          ],
+          "intercept": -15,
+          "rows": [
+            250,
+            252,
+            249,
+            240,
+            128,
+            16,
+            48,
+            96
+          ],
+          "port_mask": 176,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            576,
+            504,
+            99,
+            84,
+            9,
+            0
+          ],
+          "intercept": -75,
+          "rows": [
+            250,
+            252,
+            249,
+            208,
+            224,
+            200,
+            128,
+            0
+          ],
+          "port_mask": 216,
+          "contains_C4": false
+        }
+      ],
+      "distinct_intercepts": [
+        -171,
+        -153,
+        -75,
+        -71,
+        -69,
+        -65,
+        -61,
+        -47,
+        -45,
+        -43,
+        -41,
+        -39,
+        -37,
+        -33,
+        -31,
+        -19,
+        -15
+      ],
+      "requested_intercepts": {
+        "-35": [],
+        "-29": []
+      }
+    },
+    {
+      "f": 1008,
+      "prefix_states": 7555,
+      "independent_inverse_stats": {
+        "skeletons": 139,
+        "coefficient_nodes": 1301,
+        "gcd_rejections": 505
+      },
+      "candidate_count": 42,
+      "candidates": [
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            3072,
+            1008,
+            123,
+            36,
+            1,
+            0
+          ],
+          "intercept": -33,
+          "rows": [
+            2046,
+            2044,
+            2040,
+            2032,
+            2016,
+            1984,
+            1920,
+            1792,
+            512,
+            1024,
+            256
+          ],
+          "port_mask": 336,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            }
+          ],
+          "signature": [
+            3,
+            1536,
+            1008,
+            66,
+            40,
+            2,
+            0
+          ],
+          "intercept": -37,
+          "rows": [
+            1022,
+            1020,
+            1016,
+            1008,
+            992,
+            960,
+            896,
+            256,
+            512,
+            128
+          ],
+          "port_mask": 464,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            1536,
+            1008,
+            57,
+            34,
+            3,
+            0
+          ],
+          "intercept": -31,
+          "rows": [
+            1022,
+            1020,
+            1016,
+            1008,
+            992,
+            960,
+            640,
+            768,
+            576,
+            0
+          ],
+          "port_mask": 592,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 4
+            }
+          ],
+          "signature": [
+            5,
+            4096,
+            1008,
+            201,
+            46,
+            1,
+            0
+          ],
+          "intercept": -41,
+          "rows": [
+            2046,
+            2044,
+            2040,
+            2032,
+            2016,
+            1984,
+            1920,
+            1024,
+            128,
+            384,
+            768
+          ],
+          "port_mask": 560,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            1,
+            1024,
+            1008,
+            63,
+            62,
+            1,
+            0
+          ],
+          "intercept": -61,
+          "rows": [
+            1022,
+            1020,
+            1016,
+            1008,
+            992,
+            960,
+            896,
+            768,
+            512,
+            0
+          ],
+          "port_mask": 1008,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "Q",
+              "mask": 9
+            }
+          ],
+          "signature": [
+            5,
+            2048,
+            1008,
+            108,
+            52,
+            2,
+            0
+          ],
+          "intercept": -47,
+          "rows": [
+            1022,
+            1020,
+            1016,
+            1008,
+            992,
+            960,
+            512,
+            64,
+            192,
+            384
+          ],
+          "port_mask": 624,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            1536,
+            1008,
+            75,
+            46,
+            3,
+            0
+          ],
+          "intercept": -43,
+          "rows": [
+            1022,
+            1020,
+            1016,
+            1008,
+            992,
+            832,
+            896,
+            800,
+            512,
+            0
+          ],
+          "port_mask": 624,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            1536,
+            1008,
+            39,
+            22,
+            3,
+            0
+          ],
+          "intercept": -19,
+          "rows": [
+            1022,
+            1020,
+            1016,
+            1008,
+            928,
+            960,
+            912,
+            768,
+            512,
+            0
+          ],
+          "port_mask": 656,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            2304,
+            1008,
+            117,
+            48,
+            3,
+            0
+          ],
+          "intercept": -39,
+          "rows": [
+            1022,
+            1020,
+            1016,
+            1008,
+            928,
+            960,
+            912,
+            256,
+            512,
+            128
+          ],
+          "port_mask": 240,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            1536,
+            1008,
+            111,
+            68,
+            3,
+            0
+          ],
+          "intercept": -65,
+          "rows": [
+            1022,
+            1020,
+            1016,
+            976,
+            992,
+            968,
+            896,
+            768,
+            512,
+            0
+          ],
+          "port_mask": 664,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            2304,
+            1008,
+            189,
+            78,
+            3,
+            0
+          ],
+          "intercept": -69,
+          "rows": [
+            1022,
+            1020,
+            1016,
+            976,
+            992,
+            968,
+            896,
+            256,
+            512,
+            128
+          ],
+          "port_mask": 216,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            }
+          ],
+          "signature": [
+            9,
+            1152,
+            1008,
+            99,
+            84,
+            9,
+            0
+          ],
+          "intercept": -75,
+          "rows": [
+            510,
+            508,
+            504,
+            464,
+            480,
+            456,
+            128,
+            256,
+            64
+          ],
+          "port_mask": 472,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            1536,
+            1008,
+            63,
+            36,
+            3,
+            0
+          ],
+          "intercept": -33,
+          "rows": [
+            1022,
+            1020,
+            1000,
+            1008,
+            996,
+            960,
+            896,
+            768,
+            512,
+            0
+          ],
+          "port_mask": 672,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            2304,
+            1008,
+            117,
+            48,
+            3,
+            0
+          ],
+          "intercept": -39,
+          "rows": [
+            1022,
+            1020,
+            1000,
+            1008,
+            996,
+            960,
+            896,
+            256,
+            512,
+            128
+          ],
+          "port_mask": 224,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            }
+          ],
+          "signature": [
+            9,
+            1152,
+            1008,
+            63,
+            54,
+            9,
+            0
+          ],
+          "intercept": -45,
+          "rows": [
+            510,
+            508,
+            488,
+            496,
+            484,
+            448,
+            128,
+            256,
+            64
+          ],
+          "port_mask": 480,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            1152,
+            1008,
+            63,
+            54,
+            9,
+            0
+          ],
+          "intercept": -45,
+          "rows": [
+            510,
+            508,
+            488,
+            496,
+            484,
+            320,
+            384,
+            288,
+            0
+          ],
+          "port_mask": 480,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 11
+            }
+          ],
+          "signature": [
+            15,
+            1536,
+            1008,
+            54,
+            30,
+            12,
+            0
+          ],
+          "intercept": -15,
+          "rows": [
+            510,
+            508,
+            488,
+            496,
+            484,
+            256,
+            32,
+            96,
+            192
+          ],
+          "port_mask": 352,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 9
+            },
+            {
+              "kind": "Q",
+              "mask": 4
+            }
+          ],
+          "signature": [
+            25,
+            4096,
+            1008,
+            429,
+            96,
+            5,
+            0
+          ],
+          "intercept": -71,
+          "rows": [
+            1022,
+            1020,
+            992,
+            964,
+            972,
+            984,
+            512,
+            64,
+            192,
+            384
+          ],
+          "port_mask": 292,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 14
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            15,
+            3072,
+            1008,
+            543,
+            168,
+            5,
+            0
+          ],
+          "intercept": -153,
+          "rows": [
+            1022,
+            1020,
+            992,
+            964,
+            972,
+            984,
+            896,
+            256,
+            512,
+            128
+          ],
+          "port_mask": 184,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 14
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            }
+          ],
+          "signature": [
+            15,
+            1536,
+            1008,
+            294,
+            186,
+            10,
+            0
+          ],
+          "intercept": -171,
+          "rows": [
+            510,
+            508,
+            480,
+            452,
+            460,
+            472,
+            128,
+            256,
+            64
+          ],
+          "port_mask": 248,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            1536,
+            1008,
+            63,
+            36,
+            3,
+            0
+          ],
+          "intercept": -33,
+          "rows": [
+            1022,
+            1012,
+            1016,
+            1010,
+            992,
+            960,
+            896,
+            768,
+            512,
+            0
+          ],
+          "port_mask": 672,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            2304,
+            1008,
+            117,
+            48,
+            3,
+            0
+          ],
+          "intercept": -39,
+          "rows": [
+            1022,
+            1012,
+            1016,
+            1010,
+            992,
+            960,
+            896,
+            256,
+            512,
+            128
+          ],
+          "port_mask": 224,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            }
+          ],
+          "signature": [
+            9,
+            1152,
+            1008,
+            63,
+            54,
+            9,
+            0
+          ],
+          "intercept": -45,
+          "rows": [
+            510,
+            500,
+            504,
+            498,
+            480,
+            448,
+            128,
+            256,
+            64
+          ],
+          "port_mask": 480,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            1152,
+            1008,
+            63,
+            54,
+            9,
+            0
+          ],
+          "intercept": -45,
+          "rows": [
+            510,
+            500,
+            504,
+            498,
+            480,
+            320,
+            384,
+            288,
+            0
+          ],
+          "port_mask": 480,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 11
+            }
+          ],
+          "signature": [
+            15,
+            1536,
+            1008,
+            54,
+            30,
+            12,
+            0
+          ],
+          "intercept": -15,
+          "rows": [
+            510,
+            500,
+            504,
+            498,
+            480,
+            256,
+            32,
+            96,
+            192
+          ],
+          "port_mask": 352,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            1152,
+            1008,
+            99,
+            84,
+            9,
+            0
+          ],
+          "intercept": -75,
+          "rows": [
+            510,
+            500,
+            504,
+            498,
+            416,
+            448,
+            400,
+            256,
+            0
+          ],
+          "port_mask": 432,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            3,
+            1536,
+            1008,
+            63,
+            36,
+            3,
+            0
+          ],
+          "intercept": -33,
+          "rows": [
+            1018,
+            1020,
+            1017,
+            1008,
+            992,
+            960,
+            896,
+            768,
+            512,
+            0
+          ],
+          "port_mask": 672,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            2304,
+            1008,
+            117,
+            48,
+            3,
+            0
+          ],
+          "intercept": -39,
+          "rows": [
+            1018,
+            1020,
+            1017,
+            1008,
+            992,
+            960,
+            896,
+            256,
+            512,
+            128
+          ],
+          "port_mask": 224,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            }
+          ],
+          "signature": [
+            9,
+            1152,
+            1008,
+            63,
+            54,
+            9,
+            0
+          ],
+          "intercept": -45,
+          "rows": [
+            506,
+            508,
+            505,
+            496,
+            480,
+            448,
+            128,
+            256,
+            64
+          ],
+          "port_mask": 480,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 7
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            1152,
+            1008,
+            63,
+            54,
+            9,
+            0
+          ],
+          "intercept": -45,
+          "rows": [
+            506,
+            508,
+            505,
+            496,
+            480,
+            320,
+            384,
+            288,
+            0
+          ],
+          "port_mask": 480,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 11
+            }
+          ],
+          "signature": [
+            15,
+            1536,
+            1008,
+            54,
+            30,
+            12,
+            0
+          ],
+          "intercept": -15,
+          "rows": [
+            506,
+            508,
+            505,
+            496,
+            480,
+            256,
+            32,
+            96,
+            192
+          ],
+          "port_mask": 352,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            1152,
+            1008,
+            99,
+            84,
+            9,
+            0
+          ],
+          "intercept": -75,
+          "rows": [
+            506,
+            508,
+            505,
+            496,
+            416,
+            448,
+            400,
+            256,
+            0
+          ],
+          "port_mask": 432,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            9,
+            1152,
+            1008,
+            63,
+            54,
+            9,
+            0
+          ],
+          "intercept": -45,
+          "rows": [
+            506,
+            508,
+            505,
+            464,
+            480,
+            456,
+            384,
+            256,
+            0
+          ],
+          "port_mask": 448,
+          "contains_C4": false
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            45,
+            4608,
+            1008,
+            45,
+            0,
+            9,
+            0
+          ],
+          "intercept": 45,
+          "rows": [
+            1018,
+            1020,
+            1017,
+            976,
+            992,
+            968,
+            512,
+            64,
+            192,
+            384
+          ],
+          "port_mask": 64,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "C",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 14
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            15,
+            1536,
+            1008,
+            279,
+            168,
+            15,
+            0
+          ],
+          "intercept": -153,
+          "rows": [
+            506,
+            508,
+            505,
+            448,
+            392,
+            408,
+            432,
+            256,
+            0
+          ],
+          "port_mask": 368,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "Q",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            15,
+            3072,
+            1008,
+            1191,
+            372,
+            5,
+            6
+          ],
+          "intercept": -357,
+          "rows": [
+            1016,
+            1009,
+            1011,
+            1014,
+            992,
+            960,
+            896,
+            256,
+            512,
+            128
+          ],
+          "port_mask": 163,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "Q",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            }
+          ],
+          "signature": [
+            15,
+            1536,
+            1008,
+            618,
+            392,
+            10,
+            6
+          ],
+          "intercept": -377,
+          "rows": [
+            504,
+            497,
+            499,
+            502,
+            480,
+            448,
+            128,
+            256,
+            64
+          ],
+          "port_mask": 227,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "Q",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "C",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            15,
+            1536,
+            1008,
+            573,
+            362,
+            15,
+            6
+          ],
+          "intercept": -347,
+          "rows": [
+            504,
+            497,
+            499,
+            502,
+            480,
+            320,
+            384,
+            288,
+            0
+          ],
+          "port_mask": 291,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "Q",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "Q",
+              "mask": 4
+            }
+          ],
+          "signature": [
+            25,
+            4096,
+            1008,
+            1773,
+            414,
+            5,
+            10
+          ],
+          "intercept": -389,
+          "rows": [
+            1016,
+            1009,
+            1011,
+            1014,
+            992,
+            960,
+            512,
+            64,
+            192,
+            384
+          ],
+          "port_mask": 275,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "Q",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            5,
+            1024,
+            1008,
+            507,
+            498,
+            5,
+            2
+          ],
+          "intercept": -493,
+          "rows": [
+            504,
+            497,
+            499,
+            502,
+            480,
+            448,
+            384,
+            256,
+            0
+          ],
+          "port_mask": 499,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "Q",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            },
+            {
+              "kind": "Q",
+              "mask": 9
+            }
+          ],
+          "signature": [
+            25,
+            2048,
+            1008,
+            924,
+            444,
+            10,
+            10
+          ],
+          "intercept": -419,
+          "rows": [
+            504,
+            497,
+            499,
+            502,
+            480,
+            256,
+            32,
+            96,
+            192
+          ],
+          "port_mask": 307,
+          "contains_C4": true
+        },
+        {
+          "word": [
+            {
+              "kind": "Q",
+              "mask": 3
+            },
+            {
+              "kind": "C",
+              "mask": 3
+            },
+            {
+              "kind": "T",
+              "mask": 0
+            },
+            {
+              "kind": "T",
+              "mask": 1
+            }
+          ],
+          "signature": [
+            15,
+            1536,
+            1008,
+            663,
+            418,
+            15,
+            6
+          ],
+          "intercept": -403,
+          "rows": [
+            504,
+            497,
+            499,
+            502,
+            416,
+            448,
+            400,
+            256,
+            0
+          ],
+          "port_mask": 307,
+          "contains_C4": true
+        }
+      ],
+      "distinct_intercepts": [
+        -493,
+        -419,
+        -403,
+        -389,
+        -377,
+        -357,
+        -347,
+        -171,
+        -153,
+        -75,
+        -71,
+        -69,
+        -65,
+        -61,
+        -47,
+        -45,
+        -43,
+        -41,
+        -39,
+        -37,
+        -33,
+        -31,
+        -19,
+        -15,
+        45
+      ],
+      "requested_intercepts": {
+        "-35": [],
+        "-29": []
+      }
+    }
+  ],
+  "reproduction": [
+    "python 05-knowledge/results/c4_port_returns_20261103/language/check_language.py",
+    "python -O 05-knowledge/results/c4_port_returns_20261103/language/check_language.py"
+  ]
+}

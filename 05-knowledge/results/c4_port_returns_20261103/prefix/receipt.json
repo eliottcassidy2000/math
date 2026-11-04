@@ -1,0 +1,175 @@
+{
+  "orders": [
+    {
+      "n": 1,
+      "classes": 1,
+      "selected": []
+    },
+    {
+      "n": 2,
+      "classes": 1,
+      "selected": []
+    },
+    {
+      "n": 3,
+      "classes": 2,
+      "selected": []
+    },
+    {
+      "n": 4,
+      "classes": 4,
+      "selected": [
+        {
+          "h": 5,
+          "p": 32,
+          "rows": [
+            8,
+            1,
+            3,
+            6
+          ],
+          "odd_part_p": 1
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "classes": 12,
+      "selected": []
+    },
+    {
+      "n": 6,
+      "classes": 56,
+      "selected": [
+        {
+          "h": 29,
+          "p": 320,
+          "rows": [
+            48,
+            1,
+            35,
+            7,
+            46,
+            10
+          ],
+          "odd_part_p": 5
+        },
+        {
+          "h": 29,
+          "p": 320,
+          "rows": [
+            16,
+            33,
+            3,
+            39,
+            14,
+            21
+          ],
+          "odd_part_p": 5
+        },
+        {
+          "h": 29,
+          "p": 320,
+          "rows": [
+            48,
+            1,
+            35,
+            23,
+            6,
+            26
+          ],
+          "odd_part_p": 5
+        },
+        {
+          "h": 29,
+          "p": 320,
+          "rows": [
+            16,
+            33,
+            35,
+            23,
+            6,
+            25
+          ],
+          "odd_part_p": 5
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "classes": 456,
+      "selected": [
+        {
+          "h": 29,
+          "p": 580,
+          "rows": [
+            96,
+            1,
+            99,
+            103,
+            47,
+            2,
+            50
+          ],
+          "odd_part_p": 145
+        },
+        {
+          "h": 35,
+          "p": 676,
+          "rows": [
+            96,
+            1,
+            99,
+            39,
+            47,
+            2,
+            58
+          ],
+          "odd_part_p": 169
+        },
+        {
+          "h": 35,
+          "p": 676,
+          "rows": [
+            96,
+            1,
+            3,
+            103,
+            47,
+            6,
+            54
+          ],
+          "odd_part_p": 169
+        },
+        {
+          "h": 29,
+          "p": 580,
+          "rows": [
+            32,
+            1,
+            3,
+            103,
+            47,
+            70,
+            23
+          ],
+          "odd_part_p": 145
+        }
+      ]
+    }
+  ],
+  "summary_odd_parts": {
+    "5": [
+      1
+    ],
+    "29": [
+      5,
+      145
+    ],
+    "35": [
+      169
+    ]
+  },
+  "independent_permutation_checks": 9,
+  "scope": "All strong classes through order seven; larger-order prefix reduction requires the stated Busch bound and SCC factorization."
+}

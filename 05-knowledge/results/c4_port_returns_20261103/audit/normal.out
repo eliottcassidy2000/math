@@ -1,0 +1,8 @@
+order=1 graphs=1 all_portsets=2 strong_portsets=1 f63=0 hits22_24_42_44=0,0,0,0,
+order=2 graphs=1 all_portsets=4 strong_portsets=2 f63=0 hits22_24_42_44=0,0,0,0,
+order=3 graphs=2 all_portsets=16 strong_portsets=11 f63=0 hits22_24_42_44=0,0,0,0,
+order=4 graphs=4 all_portsets=64 strong_portsets=45 f63=0 hits22_24_42_44=0,0,0,0,
+order=5 graphs=12 all_portsets=384 strong_portsets=308 f63=10 hits22_24_42_44=0,0,0,0,
+order=6 graphs=56 all_portsets=3584 strong_portsets=3133 f63=22 hits22_24_42_44=3,0,3,0,
+order=7 graphs=3584 all_portsets=458752 strong_portsets=426587 f63=153 hits22_24_42_44=7,0,0,0,
+PASS independent orbit-marking, literal permutation-split covers, actual attachment strongness, and two full Hamilton counts for all 185 fixed-slope candidates

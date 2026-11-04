@@ -1,0 +1,8 @@
+f=21: 5 words; 35 prefix states; accepted intercepts=[-13, -11]
+f=63: 9 words; 147 prefix states; accepted intercepts=[-37, -31]
+f=189: 18 words; 739 prefix states; accepted intercepts=[-91]
+f=126: 12 words; 403 prefix states; accepted intercepts=[]
+f=252: 20 words; 1059 prefix states; accepted intercepts=[]
+f=504: 26 words; 2819 prefix states; accepted intercepts=[]
+f=1008: 42 words; 7555 prefix states; accepted intercepts=[]
+PASS: 22 atom permutation checks; 132 independent word signatures; 64 strong full attachments

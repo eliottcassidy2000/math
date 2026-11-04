@@ -1,0 +1,11 @@
+{
+  "normal_optimized_identical": true,
+  "files": {
+    "REVIEW.md": "a6a3562e21a38eacd2b7303d6d5545df8a65229bffbe78d1067a99ab41f3ed37",
+    "whole_attachment.cpp": "e87128a83c63bffd93f9924f36169fccd83cc22d61f4fcf46956b3ef57350f0c",
+    "check_audit.py": "cb10db07fb1c22a77f565b02d19d0de3d47a944520919c31994910a406dd13e9",
+    "receipt.json": "1321f8fc7e5a4305d54e6a9cf8819d77398dc0777dc702c6a71371d0f88f28a4",
+    "normal.out": "45bf0dbd3e7c093af1512187f8e5159e2098c3555b3350a649e38a77f834bee8",
+    "optimized.out": "45bf0dbd3e7c093af1512187f8e5159e2098c3555b3350a649e38a77f834bee8"
+  }
+}

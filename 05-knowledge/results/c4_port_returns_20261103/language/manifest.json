@@ -1,0 +1,11 @@
+{
+  "normal_optimized_identical": true,
+  "files": {
+    "PROOF.md": "f2009d7c5aca3139d51c7b0b4f0b57b539aa208ec90ed0e0eb66a15ffe8e39c4",
+    "check_language.py": "f6275ae6ff584edcd9ddc6489f1a706d368ab715b4432ed9c84ec739a4d8b3d9",
+    "receipt.json": "142a924afb429b26dde0efcdcd04921d414ec1f14bef01acb92dd29c013024e0",
+    "normal.out": "a8dd6a080836a57c7442d38e12710286d420a51d63fa47ef61dc5109657d0985",
+    "optimized.out": "a8dd6a080836a57c7442d38e12710286d420a51d63fa47ef61dc5109657d0985"
+  },
+  "scope": "Complete finite-f atom-language acceptance; no physical conversion claimed."
+}

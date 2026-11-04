@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "optimized_python": true,
+  "queries": [
+    {
+      "query": "local",
+      "counts": [
+        [
+          2,
+          9,
+          0
+        ],
+        [
+          4,
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "query": "full",
+      "counts": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "query": "two",
+      "counts": [
+        [
+          2,
+          18,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "query": "complete7",
+      "counts": [
+        [
+          7,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "order": 7,
+      "slope": 63,
+      "intercepts": [
+        -35,
+        -29
+      ],
+      "class_counts": [
+        1,
+        1,
+        2,
+        4,
+        12,
+        56,
+        456
+      ],
+      "hits": 0
+    },
+    {
+      "order": 8,
+      "slope": 126,
+      "intercepts": [
+        -35,
+        -29
+      ],
+      "class_counts": [
+        1,
+        1,
+        2,
+        4,
+        12,
+        56,
+        456,
+        6880
+      ],
+      "hits": 0
+    },
+    {
+      "order": 7,
+      "slope": 63,
+      "intercepts": [
+        -7
+      ],
+      "class_counts": [
+        1,
+        1,
+        2,
+        4,
+        12,
+        56,
+        456
+      ],
+      "hits": 0
+    }
+  ],
+  "literal_source_controls": 3,
+  "literal_positive_birth_controls": 30,
+  "source_sha256": {
+    "catalog.cpp": "f355cbd9beadc85ef00e5b4377e445dd5ee0a794d2ba4ab316fbd289ca6b8cc9",
+    "catalog.py": "eee8d6d71ac50fc0c074123be376cf8a20fee0deff2dff5566766ef8e9ac7122",
+    "catalog7_f63.json": "ed3e0bfda1a3df83fd1d47588620ddbfea3faa8087ac93e8edcfd827fe7ae538",
+    "catalog7_f63_c-7.json": "14d5e5f1f4b50b50bcde10bb4ed1d3ba810af1cf2f1f8a8e7ea7248ef2ae28b0",
+    "catalog8_f126.json": "3277121926628ceed9bb72b0894fbd8c51f12a536a68a4ddc877581ef164fe6a",
+    "check.py": "e38bbf7d67493f5474bcd9d2d9f50dd9099cb1e69898f7841cbfcf96c02ad509",
+    "complete7_small.json": "45beebd625458f4f8b2b259cfa8aa374a9eb0f4c563ef042b66c787fa425a4bd",
+    "full_small.json": "973e2f9778f73055cb46904779fe03b2561f49ee8eb95b7e767b705b9a037d06",
+    "local_small.json": "488705e31515eb3b337301ab23f0298c488041ee33e0c48ac3424a93fede77d0",
+    "PROOF.md": "7d05f2ff10731f21b82e2c143c2e1eaf21cdf7f27697daf3b5eef071e582263b",
+    "search_small.py": "d53085a386d2a325b912d05df8a601ff617eb6f6d14e675e957fb7a584f0073c",
+    "small_bank.cpp": "2e45fdebaeacfafe6bd14fdf40b0e9cebde4946910d97e169007bad6b7e254da",
+    "two_small.json": "4087f09f82aec9b52f51c85c78ea432cb6eca07bcd341a13166346bcd4deb3aa"
+  }
+}
