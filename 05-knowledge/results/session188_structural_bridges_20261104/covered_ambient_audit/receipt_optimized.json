@@ -1,0 +1,106 @@
+{
+  "artificial_h2": 146,
+  "independent_separated_numerator_terms": 54,
+  "literal_ordered_profiles": [
+    {
+      "T_minus_U_profile": [
+        0,
+        -2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "child": [
+        0
+      ],
+      "q": [
+        0,
+        1
+      ]
+    },
+    {
+      "T_minus_U_profile": [
+        0,
+        -36,
+        -168,
+        -288,
+        -192,
+        0,
+        0,
+        0,
+        0
+      ],
+      "child": [
+        2,
+        0
+      ],
+      "q": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "T_minus_U_profile": [
+        0,
+        -2384,
+        -24372,
+        -105012,
+        -252000,
+        -352800,
+        -272160,
+        -90720,
+        0,
+        0,
+        0,
+        0
+      ],
+      "child": [
+        6,
+        4,
+        0
+      ],
+      "q": [
+        0,
+        1,
+        6,
+        6
+      ]
+    },
+    {
+      "T_minus_U_profile": [
+        0,
+        -2052,
+        -23220,
+        -105300,
+        -254880,
+        -354240,
+        -272160,
+        -90720,
+        0,
+        0,
+        0,
+        0
+      ],
+      "child": [
+        2,
+        4,
+        1
+      ],
+      "q": [
+        0,
+        3,
+        6,
+        6
+      ]
+    }
+  ],
+  "source_sha256": {
+    "covered_ambient/PROOF.md": "e1696d6830d41ad95a0bd7b2d91ca4f3116312d304e739211f79a1d8eeddf5e3",
+    "covered_ambient/verify.py": "ad6a971c60fbc6ced35eb3e768a543d19b3f241d81e1c1b3eab996667b66c5d2",
+    "covered_ambient_audit/verify.py": "01345fb8d0918b3ac6a781d74ea3b48a3338afdf80437bdcec85e82da17d0ba4",
+    "covered_quotient/verify.py": "83df3573b1d1c7d2ae90845af790a9b53f05b77614f784bfac1e5f623087eda5"
+  },
+  "status": "PASS"
+}

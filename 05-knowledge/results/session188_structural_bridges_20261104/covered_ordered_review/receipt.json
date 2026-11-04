@@ -1,0 +1,13 @@
+{
+  "laminar_family_records": 1064,
+  "method": "Separately implemented predecessor Hamilton DP, independent reconstruction of physical queries and XOR targets, independent ordered-cover convolution.",
+  "ordered_block_records": 140,
+  "profile_coordinates": 942,
+  "source_sha256": {
+    "ORDERED_BLOCKS.md": "07e2c5f0ed81b57a8d476f61adc5d74da030d563ad6f3621fd7c8fcabc7f3a16",
+    "ordered.json": "bc2e2a1e4016b0c71a05d28aa292b17c1734ea6bba04626fbafff3e0d973599b",
+    "ordered.optimized.json": "bc2e2a1e4016b0c71a05d28aa292b17c1734ea6bba04626fbafff3e0d973599b",
+    "verify_ordered.py": "58cf8a3c91d0c1e0d2cf1dd68e74af84572f0991cb377e945657152b46bc92aa"
+  },
+  "status": "PASS"
+}
