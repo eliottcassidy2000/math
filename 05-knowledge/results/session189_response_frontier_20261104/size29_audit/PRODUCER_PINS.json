@@ -1,0 +1,72 @@
+{
+  "PROOF.md": {
+    "frozen_file": "root_PROOF.md",
+    "bytes": 13133,
+    "sha256": "dc50c092907d846e7baa195a43cb063f9e2d43e849cb21e270f3bcf1000080d7"
+  },
+  "root_bank.cpp": {
+    "frozen_file": "producer_root_bank.cpp",
+    "bytes": 2170,
+    "sha256": "f105b854db62b3586e248f97ac9cc8b6e6f8e4f9c0dd923315e6d28ddcefe311"
+  },
+  "receipt.json": {
+    "frozen_file": "producer_receipt.json",
+    "bytes": 5500,
+    "sha256": "2d0db7d154ab5e5586e1c4137b30b3ef38b7f5a91b245d0ac05cdd30f6a0fb47"
+  },
+  "receipt.normal.json": {
+    "frozen_file": "producer_receipt.normal.json",
+    "bytes": 5500,
+    "sha256": "2d0db7d154ab5e5586e1c4137b30b3ef38b7f5a91b245d0ac05cdd30f6a0fb47"
+  },
+  "receipt.optimized.json": {
+    "frozen_file": "producer_receipt.optimized.json",
+    "bytes": 5500,
+    "sha256": "2d0db7d154ab5e5586e1c4137b30b3ef38b7f5a91b245d0ac05cdd30f6a0fb47"
+  },
+  "DEPENDENCIES.json": {
+    "frozen_file": "producer_dependencies.json",
+    "bytes": 2527,
+    "sha256": "5865c8f26334d4965c7a4250768cf07502ff75d73dca5552802ecbb957540467"
+  },
+  "ambient/PROOF.md": {
+    "frozen_file": "ambient_PROOF.md",
+    "bytes": 6109,
+    "sha256": "73bf51e2a95696956400216abc9c671b0a1bc65491bb6ac3e95754a9bad3f0a6"
+  },
+  "five_local/PROOF.md": {
+    "frozen_file": "five_PROOF.md",
+    "bytes": 5910,
+    "sha256": "782d6e80b70ec12248773dc0dfb636185fbcbddf3f79c02f807876449693e6c6"
+  },
+  "root_battery.json": {
+    "frozen_file": "root_battery.json",
+    "bytes": 788,
+    "sha256": "b29f2d79e0bd15807391b72ca193e2c834fc361f6e6e41118a24be958c7234b1"
+  },
+  "root_residues.tsv": {
+    "frozen_file": "root_residues.tsv",
+    "bytes": 6399157,
+    "sha256": "d1ee91ac903abe43687767b7ffa4573d0e9226f85b9d1402a206c7eb8af82a25"
+  },
+  "root_selected_residues.tsv": {
+    "frozen_file": "root_selected_residues.tsv",
+    "bytes": 4636,
+    "sha256": "79d59f8804fcac7a139a18bd6b14d563b2a3ef68075777d61a238cd306587661"
+  },
+  "root_initial_misses.json": {
+    "frozen_file": "root_initial_misses.json",
+    "bytes": 573,
+    "sha256": "25549e76c2e1a058208ff7fadc6dd25c882241f37fe5f0127a3bad70f778aac2"
+  },
+  "root_witnesses.tsv": {
+    "frozen_file": "root_witnesses.tsv",
+    "bytes": 5161498,
+    "sha256": "6f55ad3d1b06b8ca6f6908cb17d677a89ab8b9f5c17052878992e94b2ee6293b"
+  },
+  "root_physical_witnesses.jsonl.gz": {
+    "frozen_file": "root_physical_witnesses.jsonl.gz",
+    "bytes": 8594985,
+    "sha256": "8ab10ec3cbfb7373f83fc9d3da814fbbfb9af1eed04bdd6984b0a62f43500387"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "session189-size28/PROOF.md": {
+    "frozen_file": "dependency_session189-size28_PROOF.md",
+    "bytes": 12189,
+    "sha256": "360d5bb08cf33c1ceba3fc8fcef90c86916b28e35b1d08a7dd0f00e800084ba5"
+  },
+  "session189-size28/receipt.json": {
+    "frozen_file": "dependency_session189-size28_receipt.json",
+    "bytes": 2516,
+    "sha256": "63f6724c9183f1345d8aef26638826240c6385bb9a15bf09c3a13327f3ec9e54"
+  },
+  "session189-size28/four_child_records.json": {
+    "frozen_file": "dependency_session189-size28_four_child_records.json",
+    "bytes": 445065,
+    "sha256": "d0149b88b79f8d4d833fe9f1debf83d995b6f371dac7daa3587e3c8c3fa07753"
+  },
+  "session189-size28/named_controls.json": {
+    "frozen_file": "dependency_session189-size28_named_controls.json",
+    "bytes": 36862,
+    "sha256": "da3a1645138f898b75fa56156453c8f423fbd3d2ff6b14ea32de4a0155d359f9"
+  },
+  "session189-size28/battery.json": {
+    "frozen_file": "dependency_session189-size28_battery.json",
+    "bytes": 689,
+    "sha256": "1b04877696c65f2e5ca0eda0c3fe10889f5eeb9adf9d98622b938f59b92a391e"
+  },
+  "session189-size28-audit/REVIEW.md": {
+    "frozen_file": "dependency_session189-size28-audit_REVIEW.md",
+    "bytes": 15826,
+    "sha256": "bc8c1455c27010f33ce5e4946afee9f602052b3f71eba92803307908d7a1f47a"
+  },
+  "session189-size28-audit/normal.json": {
+    "frozen_file": "dependency_session189-size28-audit_normal.json",
+    "bytes": 2380,
+    "sha256": "0bafe24956193a8c0baf8b8ece2c3dfa4871b75df841f912b1175fa3c81bb0a3"
+  },
+  "session189-size28-audit/optimized.json": {
+    "frozen_file": "dependency_session189-size28-audit_optimized.json",
+    "bytes": 2380,
+    "sha256": "0bafe24956193a8c0baf8b8ece2c3dfa4871b75df841f912b1175fa3c81bb0a3"
+  },
+  "session189-c3-frontier/candidates.json": {
+    "frozen_file": "dependency_session189-c3-frontier_candidates.json",
+    "bytes": 378162,
+    "sha256": "9eae7441d913bbc7f50f6f2283343e9d1751a50d8466278d340852c5d0cab45b"
+  },
+  "session189-c3-frontier/residues.tsv": {
+    "frozen_file": "dependency_session189-c3-frontier_residues.tsv",
+    "bytes": 126741,
+    "sha256": "4b889f6310ad90df62eee898abf28079212c22b51c64b3c44bf806e5592c6fcf"
+  },
+  "session189-c3-frontier/PROOF.md": {
+    "frozen_file": "dependency_session189-c3-frontier_PROOF.md",
+    "bytes": 16069,
+    "sha256": "7e0612183fd4c546d94874a7bd3d042bd1800ef68c1137f1c3934e346ecc08a0"
+  },
+  "session189-c3-frontier/battery.json": {
+    "frozen_file": "dependency_session189-c3-frontier_battery.json",
+    "bytes": 1137,
+    "sha256": "84103f9b03f7c8f2e3006781fabefbfe56c5892c590fcb48a62285472951dd99"
+  },
+  "session189-c3-frontier/receipt.json": {
+    "frozen_file": "dependency_session189-c3-frontier_receipt.json",
+    "bytes": 2214,
+    "sha256": "96484e2a033c7f4f19c9e3ac053acb16bd84822651b7dcab37aac4249dc7dec3"
+  },
+  "session189-frontier-nine/PROOF.md": {
+    "frozen_file": "dependency_session189-frontier-nine_PROOF.md",
+    "bytes": 9821,
+    "sha256": "daf7180f381708a123f4afdb08ff66798a32b528c822011a5e71176879bdd21c"
+  },
+  "session189-nine-integration-audit/REVIEW.md": {
+    "frozen_file": "dependency_session189-nine-integration-audit_REVIEW.md",
+    "bytes": 7869,
+    "sha256": "75db72d7668626d0dfc12eb3e5a6f1150d6ca39b07bea0bea55080ef729af18a"
+  },
+  "session189-minimum27-audit/REVIEW.md": {
+    "frozen_file": "dependency_session189-minimum27-audit_REVIEW.md",
+    "bytes": 12732,
+    "sha256": "dc4d6c8549712b7dfc813bac5c55224eb2be503a75cd54fad3e2d0433fd65b9c"
+  },
+  "session189-c3-census-audit/REVIEW.md": {
+    "frozen_file": "dependency_session189-c3-census-audit_REVIEW.md",
+    "bytes": 12277,
+    "sha256": "fa5d1df1c6364d1860e104879a8ec83e70b6c61f97b06a562eed033e766be738"
+  },
+  "session189-incoming-anchor-audit/INCOMING_PROOF.md": {
+    "frozen_file": "dependency_session189-incoming-anchor-audit_INCOMING_PROOF.md",
+    "bytes": 13753,
+    "sha256": "020f999ecffcd9085c5f31694c5ec2077b6a1aae77a6f015e60eb7f384b02fef"
+  },
+  "session189-prime8/PROOF.md": {
+    "frozen_file": "dependency_session189-prime8_PROOF.md",
+    "bytes": 13313,
+    "sha256": "188dcd19fe2b47148427dc40c542afd65a72c4104fd2cdf47da0c532bbc6afc5"
+  },
+  "session189-prime8-audit/REVIEW.md": {
+    "frozen_file": "dependency_session189-prime8-audit_REVIEW.md",
+    "bytes": 6938,
+    "sha256": "a482956aacc99d2c8506eed3ff0e4e7372ef7f21acf907fc34c50b01bca3c6dc"
+  },
+  "session189-tt4-cross-audit/REVIEW.md": {
+    "frozen_file": "dependency_session189-tt4-cross-audit_REVIEW.md",
+    "bytes": 8999,
+    "sha256": "8a1c7131e8a8331029d78f230c0d909aeeb39cc471d658b7c165f5f52474b235"
+  }
+}
