@@ -1,0 +1,103 @@
+{
+  "target": 13835447,
+  "parent_seed_rows": [
+    38,
+    60,
+    24,
+    49,
+    33,
+    4
+  ],
+  "parent_root": 5,
+  "rooted_candidates": 538,
+  "hits": 2,
+  "by_kind": {
+    "one_birth": 2
+  },
+  "witnesses": [
+    {
+      "operation": {
+        "kind": "one_birth",
+        "newborn_out_mask": 11,
+        "rows": [
+          38,
+          60,
+          88,
+          49,
+          97,
+          68,
+          11
+        ]
+      },
+      "root": 1,
+      "seed_strong": true,
+      "seed_fields": [
+        151,
+        16,
+        312,
+        186,
+        424,
+        43,
+        1796,
+        1714
+      ],
+      "component_strong": true,
+      "fields": [
+        3713347,
+        43,
+        5096801,
+        5061050,
+        6946816,
+        43,
+        11090004056,
+        8028829474
+      ],
+      "output_order": 23,
+      "word": "11111010100010",
+      "prefix": 1,
+      "r": 11936
+    },
+    {
+      "operation": {
+        "kind": "one_birth",
+        "newborn_out_mask": 37,
+        "rows": [
+          38,
+          124,
+          24,
+          113,
+          97,
+          4,
+          37
+        ]
+      },
+      "root": 6,
+      "seed_strong": true,
+      "seed_fields": [
+        81,
+        12,
+        144,
+        153,
+        320,
+        29,
+        1128,
+        957
+      ],
+      "component_strong": true,
+      "fields": [
+        2494341,
+        29,
+        4612307,
+        5670553,
+        10485760,
+        29,
+        11381644536,
+        12683018239
+      ],
+      "output_order": 24,
+      "word": "111000110101110",
+      "prefix": 1,
+      "r": 17720
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "H": 13835447,
+  "fields": [
+    13835447,
+    66982519612,
+    59,
+    6620304,
+    7215143,
+    14430286,
+    21087538759,
+    118,
+    3310152,
+    7215143,
+    22240268,
+    13438951796,
+    0,
+    7215143,
+    7215143,
+    0
+  ],
+  "observer17": [
+    13835447,
+    21645429,
+    32765563,
+    26145259,
+    42696019,
+    36075715,
+    67315643,
+    41765223,
+    58315983,
+    71815473,
+    62815813,
+    57385187,
+    116296009,
+    79625455,
+    168586527,
+    167655731,
+    119865043
+  ],
+  "ports": [
+    50,
+    51
+  ],
+  "scope": "Independent implementation of the same gap algorithm, compared with the completed original Python computation.",
+  "source_sha256": {
+    "recursive_seed_switching_20261103/selector/named_repair.json": "6cfb9497c5d3ad9d219a9184592046b9981a3ffef8a0a875981217fd6bd86b3a",
+    "recursive_seed_switching_20261103/transport/fast_compare.py": "3bfcdcda481eae6566a90ec9a79c44de5dcd32465929667a631f5697a8af2239",
+    "recursive_seed_switching_20261103/transport/fast_gap.cpp": "59876569f4393a88d3481858819515d21374c6887e59174df5480a8036f0c71a",
+    "recursive_seed_switching_20261103/transport/fast_gap.py": "97bf76c932ef816a1e3f5050b2df0f0c319fcc015a05b7a7a90d6037223c5b05",
+    "recursive_seed_switching_20261103/transport/verify.json": "0f46c0b885e6f5299f63640c161bdc5fb461e34154b7f6fcc2ccd08163be9b44",
+    "zero_ready_component_returns_20261103/interface/gap.py": "c965617d0c7a454fe940ac9e656f3661281f328e1d21665761f7a3a4056098f1",
+    "zero_ready_component_returns_20261103/interface/phase.py": "f7dfdf91862c683f091cef9c1d8f9cce7dfd8a8c6b94a6bef768d36d387ed617"
+  },
+  "status": "PASS"
+}

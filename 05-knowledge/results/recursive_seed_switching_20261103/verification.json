@@ -1,0 +1,364 @@
+{
+  "checked_hash_references": 90,
+  "checker_self_controls": {
+    "controls": [
+      "repair arc payload",
+      "counted graph payload",
+      "audited graph digest",
+      "partial checkpoint",
+      "stale source pin"
+    ],
+    "rejected_in_memory_hostiles": 5,
+    "scope": "Checker integrity tests only; no saved file is modified."
+  },
+  "external_source_files": 23,
+  "generated_artifact_sha256": {
+    "selector/bank.json": "132f8779ced72069de6cf2842522343fe72a650e02a451ebc45781ad56e11fe8",
+    "selector/growth.json": "785fc9d10196b6e84263e1d36267d143e30b4bf132c5753a1c2cd5b878c67bee"
+  },
+  "internal_pinned_inputs": 25,
+  "mode": "saved-evidence and current-input verification plus bounded trial division; no tournament search or phase count rerun",
+  "normal_optimized_evidence": [
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "arithmetic/check.optimized.json",
+      "normal_command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/recursive_seed_switching_20261103/arithmetic/check.py"
+      ],
+      "normal_sha256": "5c89259f1900f7a8042dc5e4690dee345dd5a7a8b613af519e8e4f948060d122",
+      "optimized_command": [
+        "python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/recursive_seed_switching_20261103/arithmetic/check.py"
+      ],
+      "optimized_sha256": "5c89259f1900f7a8042dc5e4690dee345dd5a7a8b613af519e8e4f948060d122",
+      "output_semantics": "stdout",
+      "receipt": "arithmetic/check.json",
+      "script": "arithmetic/check.py",
+      "script_sha256": "295fdd79c1e06d8f1ce87ce99b25ae3c7870284f5671f8338c75cd913f18cf4c"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "hilbert/check.optimized.json",
+      "normal_command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/recursive_seed_switching_20261103/hilbert/check.py"
+      ],
+      "normal_sha256": "85310f5afa1a9245203111d78c0f5632768068e3dcc49f04a3b33cc063bad7b9",
+      "optimized_command": [
+        "python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/recursive_seed_switching_20261103/hilbert/check.py"
+      ],
+      "optimized_sha256": "85310f5afa1a9245203111d78c0f5632768068e3dcc49f04a3b33cc063bad7b9",
+      "output_semantics": "stdout",
+      "receipt": "hilbert/check.json",
+      "script": "hilbert/check.py",
+      "script_sha256": "4288ea4bad46f694b71a5299f1f4157245b4ff46160e974ef230aca59c349e64"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "selector/check.optimized.json",
+      "normal_command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/recursive_seed_switching_20261103/selector/check.py"
+      ],
+      "normal_sha256": "0ead48d0e0690a1c5a7cdbc764f5e9207258c192ccfa77a3f260cfa2820706cf",
+      "optimized_command": [
+        "python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/recursive_seed_switching_20261103/selector/check.py"
+      ],
+      "optimized_sha256": "0ead48d0e0690a1c5a7cdbc764f5e9207258c192ccfa77a3f260cfa2820706cf",
+      "output_semantics": "stdout",
+      "receipt": "selector/check.json",
+      "script": "selector/check.py",
+      "script_sha256": "648ab8fde2eea568eeb6913b20205261fb1f9a17506d40e79368ccb49f803e02"
+    },
+    {
+      "evidence_kind": "saved normal/-O template replay with current receipt digest",
+      "evidence_reference": "selector/replay.json",
+      "normal_command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/recursive_seed_switching_20261103/selector/named.py"
+      ],
+      "normal_sha256": "6cfb9497c5d3ad9d219a9184592046b9981a3ffef8a0a875981217fd6bd86b3a",
+      "optimized_command": [
+        "python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/recursive_seed_switching_20261103/selector/named.py"
+      ],
+      "optimized_sha256": "6cfb9497c5d3ad9d219a9184592046b9981a3ffef8a0a875981217fd6bd86b3a",
+      "output_semantics": "file",
+      "receipt": "selector/named_repair.json",
+      "script": "selector/named.py",
+      "script_sha256": "8b329edc83f56db6d5478cff4499a582c82a22c60332cbb55baf75f4dfe8b698"
+    },
+    {
+      "evidence_kind": "saved normal/-O template replay with current receipt digest",
+      "evidence_reference": "selector/replay.json",
+      "normal_command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/recursive_seed_switching_20261103/selector/followup_named.py"
+      ],
+      "normal_sha256": "a9dd30cbe6f319219dd653f6f8697edb1c0d00f9b527164b828a2d4edb8c2d88",
+      "optimized_command": [
+        "python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/recursive_seed_switching_20261103/selector/followup_named.py"
+      ],
+      "optimized_sha256": "a9dd30cbe6f319219dd653f6f8697edb1c0d00f9b527164b828a2d4edb8c2d88",
+      "output_semantics": "file",
+      "receipt": "selector/followup_named.json",
+      "script": "selector/followup_named.py",
+      "script_sha256": "f5f2fe566caf8e7a83276677c1083131bf55d023a49085e81681bdda3737121d"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "transport/native.optimized.json",
+      "normal_command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/compile.py"
+      ],
+      "normal_sha256": "1ba342b1e7993f48ca8f9a818b0e156f03702f86e3dab4e5a8c6c69e50dfee2b",
+      "optimized_command": [
+        "python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/compile.py"
+      ],
+      "optimized_sha256": "1ba342b1e7993f48ca8f9a818b0e156f03702f86e3dab4e5a8c6c69e50dfee2b",
+      "output_semantics": "file",
+      "receipt": "transport/native.json",
+      "script": "transport/compile.py",
+      "script_sha256": "382344a70fbda0c7d5f52f7b5ee6ac6d8247202816c5c9abb7c718a3cfc2506e"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "transport/audit_native.optimized.json",
+      "normal_command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/audit_native.py"
+      ],
+      "normal_sha256": "4e8aa2a0747e292066909927010e890a6d865916d1ec0b6bf8c999fd12cdcb0b",
+      "optimized_command": [
+        "python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/audit_native.py"
+      ],
+      "optimized_sha256": "4e8aa2a0747e292066909927010e890a6d865916d1ec0b6bf8c999fd12cdcb0b",
+      "output_semantics": "stdout",
+      "receipt": "transport/audit_native.json",
+      "script": "transport/audit_native.py",
+      "script_sha256": "8331cc61da693296905661d6a90c3788457968db9c1973f063216915b9b8a763"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "transport/control.optimized.json",
+      "normal_command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/control.py"
+      ],
+      "normal_sha256": "2680e1e50709b758fe112718f4fc02dcd334d5cff76c5a3991b4da21a7a993a7",
+      "optimized_command": [
+        "python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/control.py"
+      ],
+      "optimized_sha256": "2680e1e50709b758fe112718f4fc02dcd334d5cff76c5a3991b4da21a7a993a7",
+      "output_semantics": "stdout",
+      "receipt": "transport/control.json",
+      "script": "transport/control.py",
+      "script_sha256": "ab7dc78b6feea5b732f8c4c5f1f99b0fedeed49257226108d31c68b11fef7d4a"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "transport/fast_gap_check.optimized.json",
+      "normal_command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/fast_gap.py",
+        "--self-test"
+      ],
+      "normal_sha256": "471c2c838c559d72543d1bd35ac8fb25f1cd3d0f52c5171556f62b3654bfe6af",
+      "optimized_command": [
+        "python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/fast_gap.py",
+        "--self-test"
+      ],
+      "optimized_sha256": "471c2c838c559d72543d1bd35ac8fb25f1cd3d0f52c5171556f62b3654bfe6af",
+      "output_semantics": "stdout",
+      "receipt": "transport/fast_gap_check.json",
+      "script": "transport/fast_gap.py",
+      "script_sha256": "97bf76c932ef816a1e3f5050b2df0f0c319fcc015a05b7a7a90d6037223c5b05"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "transport/fast_compare.optimized.json",
+      "normal_command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/fast_compare.py"
+      ],
+      "normal_sha256": "d9b1c808d8e4f8f08852d39be18afb92c159e186f0112072b64b2e211600ab73",
+      "optimized_command": [
+        "python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/fast_compare.py"
+      ],
+      "optimized_sha256": "d9b1c808d8e4f8f08852d39be18afb92c159e186f0112072b64b2e211600ab73",
+      "output_semantics": "stdout",
+      "receipt": "transport/fast_compare.json",
+      "script": "transport/fast_compare.py",
+      "script_sha256": "3bfcdcda481eae6566a90ec9a79c44de5dcd32465929667a631f5697a8af2239"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "transport/verify.optimized.json",
+      "normal_command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/verify.py"
+      ],
+      "normal_sha256": "0f46c0b885e6f5299f63640c161bdc5fb461e34154b7f6fcc2ccd08163be9b44",
+      "optimized_command": [
+        "python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/verify.py"
+      ],
+      "optimized_sha256": "0f46c0b885e6f5299f63640c161bdc5fb461e34154b7f6fcc2ccd08163be9b44",
+      "output_semantics": "file",
+      "receipt": "transport/verify.json",
+      "script": "transport/verify.py",
+      "script_sha256": "833837afb7fc4d2180702eeb77853b38c5c9a4514f1140e9bf3c03b0338ecd8f"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "transport/followup.optimized.json",
+      "normal_command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/followup.py"
+      ],
+      "normal_sha256": "3b3095d118f9024444b4d04b3e9bb04abcfc9079eb16714d8fbceea6179d84f5",
+      "optimized_command": [
+        "python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/followup.py"
+      ],
+      "optimized_sha256": "3b3095d118f9024444b4d04b3e9bb04abcfc9079eb16714d8fbceea6179d84f5",
+      "output_semantics": "file",
+      "receipt": "transport/followup.json",
+      "script": "transport/followup.py",
+      "script_sha256": "985e19eb45692dfd8ec7e4e073b5f9088bf1d67ed60cba8b41875fcc1fc6bebf"
+    },
+    {
+      "evidence_kind": "byte-identical saved normal and optimized receipts",
+      "evidence_reference": "transport/followupaudit.optimized.json",
+      "normal_command": [
+        "python3",
+        "-B",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/followupaudit.py"
+      ],
+      "normal_sha256": "6bc8088743dd70eb6ca842ab9e4b9a496c5bdffed41d6c37008fd5a87e0aa424",
+      "optimized_command": [
+        "python3",
+        "-B",
+        "-O",
+        "05-knowledge/results/recursive_seed_switching_20261103/transport/followupaudit.py"
+      ],
+      "optimized_sha256": "6bc8088743dd70eb6ca842ab9e4b9a496c5bdffed41d6c37008fd5a87e0aa424",
+      "output_semantics": "stdout",
+      "receipt": "transport/followupaudit.json",
+      "script": "transport/followupaudit.py",
+      "script_sha256": "c33e82311d86aae75cb012309aecdaf09394028bd7aba0ae06083162fc1a9e47"
+    }
+  ],
+  "optional_engine_scope": "The optional compiled counter self-test is included as a separate190-query implementation control with its source pins; full count receipts retain their own declared engine provenance.",
+  "payload_binding": {
+    "certified_bank_miss": 13835447,
+    "composite_endpoint_factor_products": {
+      "13835447": [
+        37,
+        179,
+        2089
+      ],
+      "41506345": [
+        5,
+        8301269
+      ]
+    },
+    "direct_guard_controls": 410,
+    "exact_named_edges": 3,
+    "fixed_bank_keys": 219,
+    "followup_native_complements": 86,
+    "followup_orders": [
+      26,
+      27
+    ],
+    "followup_permanent_births": 7,
+    "followup_targets": [
+      41506343,
+      41506345
+    ],
+    "graph_and_program_payload_sha256": {
+      "followup_programs": "6c8b1aff6239ac8844a6d37d44db8f9e00d2f460fd8c767c382d32e0aad3d843",
+      "repair_graph": "00a914647502d070228c334f35e38661518f8f76f6afff7b2837ec452003839d",
+      "repair_program": "86412e68a4161d5382af50e0d718ac59abe33a9e2f2002025d74fa5e03c30199"
+    },
+    "joint_pair_order": [
+      [
+        39,
+        6
+      ],
+      [
+        31,
+        6
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        50,
+        51
+      ]
+    ],
+    "meaning": "Saved count/audit input hashes plus explicit graph, program, frame and cardinality binding. This is not a fresh search, count or unbounded induction.",
+    "prime_endpoint": {
+      "H": 41506343,
+      "last_trial_divisor": 6442,
+      "method": "Trial division by every integer from2 through floor(sqrt(H)), inclusive.",
+      "trial_divisors_checked": 6441
+    },
+    "repair_native_complements": 36,
+    "repair_order": 23,
+    "repair_target": 13835447,
+    "total_native_complements": 122
+  },
+  "reproducer_sha256": "fe4271cc2e016852f629d972ae0b5f0686ad3dcd4061138d20a5c0f2321e0d34",
+  "scope": "Fixed219-bank counterexample, one named fourth+2 repair, and only its two declared next endpoints. Unlimited switching and complete spectrum OPEN.",
+  "sources_sha256": "63120e65deb5693e68088be7a520cca4a2ea1fdc0f0917041b6bfe94bc2b2c0d",
+  "status": "PASS"
+}

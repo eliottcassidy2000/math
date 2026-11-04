@@ -1,0 +1,270 @@
+{
+  "target": 13835447,
+  "parent_seed_rows": [
+    38,
+    60,
+    24,
+    49,
+    33,
+    4
+  ],
+  "parent_root": 5,
+  "first_menu": {
+    "scope": "15 single arc reversals or64 one-birth cuts; every resulting mark; every clock>=1 and every ending0 word; empty word included.",
+    "rooted_candidates": 538,
+    "witnesses": [
+      {
+        "operation": {
+          "kind": "one_birth",
+          "newborn_out_mask": 11,
+          "rows": [
+            38,
+            60,
+            88,
+            49,
+            97,
+            68,
+            11
+          ]
+        },
+        "root": 1,
+        "seed_rows": [
+          38,
+          60,
+          88,
+          49,
+          97,
+          68,
+          11
+        ],
+        "seed_fields": [
+          151,
+          16,
+          312,
+          186,
+          424,
+          43,
+          1796,
+          1714
+        ],
+        "seed_strong": true,
+        "component_strong": true,
+        "fields": [
+          3713347,
+          43,
+          5096801,
+          5061050,
+          6946816,
+          43,
+          11090004056,
+          8028829474
+        ],
+        "output_order": 23,
+        "word": "11111010100010",
+        "prefix": 1,
+        "r": 11936
+      },
+      {
+        "operation": {
+          "kind": "one_birth",
+          "newborn_out_mask": 37,
+          "rows": [
+            38,
+            124,
+            24,
+            113,
+            97,
+            4,
+            37
+          ]
+        },
+        "root": 6,
+        "seed_rows": [
+          38,
+          124,
+          24,
+          113,
+          97,
+          4,
+          37
+        ],
+        "seed_fields": [
+          81,
+          12,
+          144,
+          153,
+          320,
+          29,
+          1128,
+          957
+        ],
+        "seed_strong": true,
+        "component_strong": true,
+        "fields": [
+          2494341,
+          29,
+          4612307,
+          5670553,
+          10485760,
+          29,
+          11381644536,
+          12683018239
+        ],
+        "output_order": 24,
+        "word": "111000110101110",
+        "prefix": 1,
+        "r": 17720
+      }
+    ]
+  },
+  "inflation_menu": {
+    "scope": "C3 inflation of one of6 seed vertices; all8 marks; clocks>=2 and every ending0 word; empty included.",
+    "rooted_candidates": 48,
+    "witnesses": []
+  },
+  "second_menu": {
+    "scope": "Two births: first out-mask11 or37, second any of128 cuts; retain strong8-seeds, all8 marks; every clock>=2 and every ending0 word; empty included.",
+    "rooted_candidates": 2016,
+    "oldmark_or_newborn_rooted_candidates": 756,
+    "witnesses": [
+      {
+        "operation": {
+          "kind": "two_births",
+          "out_masks": [
+            11,
+            36
+          ]
+        },
+        "root": 3,
+        "seed_rows": [
+          166,
+          188,
+          88,
+          177,
+          225,
+          68,
+          139,
+          36
+        ],
+        "seed_fields": [
+          423,
+          40,
+          878,
+          616,
+          1424,
+          109,
+          6456,
+          6128
+        ],
+        "seed_strong": true,
+        "component_strong": true,
+        "fields": [
+          980343,
+          109,
+          1778851,
+          1606888,
+          2916352,
+          109,
+          978634512,
+          1040729296
+        ],
+        "output_order": 23,
+        "word": "11101001110",
+        "prefix": 3,
+        "r": 1128
+      },
+      {
+        "operation": {
+          "kind": "two_births",
+          "out_masks": [
+            11,
+            78
+          ]
+        },
+        "root": 4,
+        "seed_rows": [
+          166,
+          60,
+          88,
+          49,
+          225,
+          196,
+          11,
+          78
+        ],
+        "seed_fields": [
+          645,
+          70,
+          1078,
+          899,
+          1628,
+          133,
+          8784,
+          7109
+        ],
+        "seed_strong": true,
+        "component_strong": true,
+        "fields": [
+          128759,
+          133,
+          250299,
+          214167,
+          416768,
+          133,
+          33163640,
+          40499705
+        ],
+        "output_order": 23,
+        "word": "00111110",
+        "prefix": 6,
+        "r": 131
+      },
+      {
+        "operation": {
+          "kind": "two_births",
+          "out_masks": [
+            37,
+            55
+          ]
+        },
+        "root": 1,
+        "seed_rows": [
+          38,
+          124,
+          24,
+          241,
+          97,
+          4,
+          165,
+          55
+        ],
+        "seed_fields": [
+          269,
+          19,
+          679,
+          338,
+          940,
+          59,
+          4520,
+          5246
+        ],
+        "seed_strong": true,
+        "component_strong": true,
+        "fields": [
+          594839,
+          59,
+          691815,
+          827538,
+          962560,
+          59,
+          464901440,
+          300852334
+        ],
+        "output_order": 23,
+        "word": "1111000100",
+        "prefix": 4,
+        "r": 880
+      }
+    ]
+  }
+}

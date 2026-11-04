@@ -1,0 +1,26 @@
+{
+  "actual_seed_adjacent_descent": [
+    829016,
+    827822
+  ],
+  "digital_recurrence_inputs": 256,
+  "empty_word_hostile": "seed rows[2,0],mark0,clock1 is not strong",
+  "inverse_parameter_targets": 4648,
+  "kernel_basis_determinant": 16,
+  "limitations": "No fixed-bank census, exact spectrum claim, or arbitrary joint-attachment reduction.",
+  "literal_one_apex_graphs": 127,
+  "literal_prefix_grade_cases": 36,
+  "literal_weak_seed_strong_wrappers": 24,
+  "regular_pattern_diagonal_hits": 7,
+  "regular_pattern_pairs": 49,
+  "scalar_modular_inputs": {
+    "343": 256,
+    "49": 256
+  },
+  "source_sha256": {
+    "reader": "9351ca0c946e031643faac4dbe312a0b629e3d1a482b67203ea6c50676838533",
+    "s159": "5333f6c81b1a044d3d9851a53774c7bd92167d95ec871e75b48f5825d6c12c86",
+    "sections": "27b1c76b29737f85e2660d2d760444581fdeefabe8bac44dd09d902d5ff31300"
+  },
+  "status": "FINITE-EXACT controls; all-order arguments are in NOTE.md"
+}

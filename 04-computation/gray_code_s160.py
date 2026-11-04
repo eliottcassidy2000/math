@@ -154,24 +154,22 @@ print("""  THM-082: H(D) = H(D\\e) + H(D/e)  (deletion-contraction)
   A Gray code step flips one arc e. Before the flip: tournament T.
   After: tournament T' = T with arc e reversed.
 
-  H(T) = H(T\\e) + H(T/e)   (T without arc e + T contracted at e)
-  H(T') = H(T'\\e) + H(T'/e)
+  CORRECTION (2026-11-03): an ordinary tournament contraction does not
+  retain the required endpoint incidences. The previous H_max(n-1) bound
+  is false; this script's own n=4 scan already has a jump of magnitude4.
 
-  But T\\e = T'\\e (removing the arc gives the same graph).
-  So: H(T) - H(T') = H(T/e) - H(T'/e)
-
-  ΔH = the difference in CONTRACTION values.
-  The contraction T/e merges the two endpoints of e.
-  Flipping e changes the contraction but not the deletion.
-
-  THIS IS WHY ΔH is bounded:
-  |ΔH| = |H(T/e) - H(T'/e)| ≤ H_max(n-1)
-
-  At n=4: H_max(3) = 3, so |ΔH| ≤ 3.
-  At n=5: H_max(4) = 5, so |ΔH| ≤ 5.
+  For an arc a->b, let C_ab count ordered spanning two-path covers whose
+  first path ends at a and second starts at b. Then reversing this arc gives
+    H(T') - H(T) = C_ba - C_ab.
+  Both slots are nonempty and their internal edges avoid {a,b}.
+  This is a difference of actual directed attachment counts.
+  A coarse valid bound is |Delta H| <= (n-1)!, since contracting the adjacent
+  ordered pair in a permutation counts at most (n-1)! paths using that arc.
+  No tournament H_max(n-1) bound follows. See MISTAKES, 2026-11-03,
+  and recursive_seed_switching_20261103/hilbert/NOTE.md.
 """)
 
-# Verify the bound
+# Retain the counterexample to the historical, false tournament bound
 max_delta = max(abs(d) for d in delta_h)
 h_max_contracted = max(H_dp(tournament_adj(n-1, bits), n-1)
                        for bits in range(1 << comb(n-1, 2)))
@@ -424,18 +422,17 @@ print(f"""
 
   2. H ALONG THE GRAY CODE is a TIME SERIES.
      The ΔH distribution shows how H changes per flip.
-     At n=4: ΔH ∈ {{-2, 0, +2}} (always even, bounded by H_max(3)=3).
-     At n=5: ΔH ∈ {{-4, -2, 0, +2, +4}} (even, bounded by H_max(4)=5).
+     CORRECTED: the recorded n=4 scan includes |Delta H|=4.
+     Tournament Hamilton counts are odd, so every difference is even.
+     The previously printed n=4/n=5 ranges and H_max(n-1) bound were false.
 
-  3. THE LOCALITY PROPERTY: nearby Gray code positions have
-     similar H values. H varies SLOWLY along the path.
-     The Fourier spectrum is concentrated at low frequencies.
-     This is because single arc flips make SMALL changes to H.
+  3. GEOMETRIC LOCALITY preserves a one-arc difference, not scalar closeness.
+     The finite Fourier data above describe only the displayed scan.
+     One-arc Hamilton-count jumps can grow without bound as order grows.
 
-  4. THE DELETION-CONTRACTION IDENTITY explains ΔH:
-     ΔH = H(T/e) - H(T'/e) (contraction difference).
-     The arc flip changes the contraction but not the deletion.
-     |ΔH| ≤ H_max(n-1) (bounded by the contracted tournament).
+  4. THE ORDERED TWO-PATH COVER CURRENT explains Delta H:
+     reversing a->b gives C_ba-C_ab, retaining both physical endpoints.
+     An unmarked ordinary tournament contraction loses this information.
 
   5. THE META-LEVEL: H(T) counts paths in T.
      The Gray code counts paths in the cube of T's.

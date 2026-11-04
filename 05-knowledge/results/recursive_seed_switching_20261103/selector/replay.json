@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "normal_optimized_checker_identical": true,
+  "normal_optimized_named_templates_identical": true,
+  "source_pins_valid": true,
+  "template_sha256": {
+    "named_repair.json": "6cfb9497c5d3ad9d219a9184592046b9981a3ffef8a0a875981217fd6bd86b3a",
+    "followup_named.json": "a9dd30cbe6f319219dd653f6f8697edb1c0d00f9b527164b828a2d4edb8c2d88"
+  },
+  "check_sha256": "0ead48d0e0690a1c5a7cdbc764f5e9207258c192ccfa77a3f260cfa2820706cf"
+}

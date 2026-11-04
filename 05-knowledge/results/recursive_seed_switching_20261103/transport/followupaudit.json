@@ -1,0 +1,661 @@
+{
+  "actual_parent_H": 13835447,
+  "direct_guard_controls": 410,
+  "native_complements": 86,
+  "permanent_births": 7,
+  "positive_hostile_controls": 4,
+  "records": [
+    {
+      "active_mark": 4,
+      "actual_parent_graph_sha256": "00a914647502d070228c334f35e38661518f8f76f6afff7b2837ec452003839d",
+      "actual_target_graph_sha256": "a1ab6061e442815e995cc1ec45103ef149168d2185532844376780119eac591a",
+      "deleted_old_names": [],
+      "joint_pairs": [
+        [
+          39,
+          6
+        ],
+        [
+          31,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          50,
+          51
+        ]
+      ],
+      "named_port_charts": {
+        "31": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                4,
+                6,
+                1
+              ],
+              [
+                6,
+                5,
+                1
+              ],
+              [
+                4,
+                3,
+                5
+              ]
+            ],
+            "F49_charge": [
+              4,
+              1,
+              3
+            ],
+            "F49_frobenius": [
+              1,
+              6,
+              3
+            ],
+            "observer_mod7": [
+              4,
+              6,
+              1
+            ]
+          },
+          "golden": [
+            41506343,
+            3442863563,
+            3442866624
+          ]
+        },
+        "39": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                4,
+                6,
+                1
+              ],
+              [
+                6,
+                5,
+                1
+              ],
+              [
+                4,
+                3,
+                5
+              ]
+            ],
+            "F49_charge": [
+              4,
+              1,
+              3
+            ],
+            "F49_frobenius": [
+              1,
+              6,
+              3
+            ],
+            "observer_mod7": [
+              4,
+              6,
+              1
+            ]
+          },
+          "golden": [
+            41506343,
+            81884453573,
+            81884453582
+          ]
+        },
+        "4": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                4,
+                4,
+                6
+              ],
+              [
+                0,
+                1,
+                1
+              ],
+              [
+                3,
+                2,
+                0
+              ]
+            ],
+            "F49_charge": [
+              3,
+              6,
+              5
+            ],
+            "F49_frobenius": [
+              6,
+              1,
+              5
+            ],
+            "observer_mod7": [
+              4,
+              4,
+              6
+            ]
+          },
+          "golden": [
+            41506343,
+            25047866,
+            25047875
+          ]
+        },
+        "50": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                4,
+                2,
+                4
+              ],
+              [
+                1,
+                4,
+                1
+              ],
+              [
+                2,
+                1,
+                2
+              ]
+            ],
+            "F49_charge": [
+              2,
+              4,
+              0
+            ],
+            "F49_frobenius": [
+              4,
+              3,
+              0
+            ],
+            "observer_mod7": [
+              4,
+              2,
+              4
+            ]
+          },
+          "golden": [
+            41506343,
+            153518071296,
+            153518071305
+          ]
+        },
+        "51": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                4,
+                0,
+                4
+              ],
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                5,
+                0,
+                1
+              ]
+            ],
+            "F49_charge": [
+              0,
+              4,
+              0
+            ],
+            "F49_frobenius": [
+              2,
+              3,
+              0
+            ],
+            "observer_mod7": [
+              4,
+              0,
+              4
+            ]
+          },
+          "golden": [
+            41506343,
+            95523442595,
+            95523442613
+          ]
+        },
+        "6": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                4,
+                1,
+                1
+              ],
+              [
+                0,
+                2,
+                0
+              ],
+              [
+                1,
+                4,
+                6
+              ]
+            ],
+            "F49_charge": [
+              6,
+              1,
+              3
+            ],
+            "F49_frobenius": [
+              3,
+              6,
+              3
+            ],
+            "observer_mod7": [
+              4,
+              1,
+              1
+            ]
+          },
+          "golden": [
+            41506343,
+            39060924813,
+            39060924862
+          ]
+        }
+      },
+      "names": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        21,
+        22,
+        31,
+        32,
+        33,
+        39,
+        40,
+        50,
+        51,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "native_complements": 40,
+      "order": 26,
+      "parent_H": 13835447,
+      "peak_order": 27,
+      "permanent_births": 3,
+      "prefix": [
+        50,
+        51
+      ],
+      "retained_old_mark": 31,
+      "root": 39,
+      "spare": 6,
+      "target_H": 41506343,
+      "temporary_births_and_deletions": 20
+    },
+    {
+      "active_mark": 4,
+      "actual_parent_graph_sha256": "00a914647502d070228c334f35e38661518f8f76f6afff7b2837ec452003839d",
+      "actual_target_graph_sha256": "66e287bd72b5c5d88e75c2143671bcd034bd54b4f8e6aec401ee2794e2718555",
+      "deleted_old_names": [],
+      "joint_pairs": [
+        [
+          39,
+          6
+        ],
+        [
+          31,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          50,
+          51
+        ]
+      ],
+      "named_port_charts": {
+        "31": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                6,
+                5,
+                4
+              ],
+              [
+                1,
+                3,
+                3
+              ],
+              [
+                3,
+                6,
+                0
+              ]
+            ],
+            "F49_charge": [
+              6,
+              4,
+              2
+            ],
+            "F49_frobenius": [
+              1,
+              3,
+              2
+            ],
+            "observer_mod7": [
+              6,
+              5,
+              4
+            ]
+          },
+          "golden": [
+            41506345,
+            5586052442,
+            5586054254
+          ]
+        },
+        "39": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                6,
+                0,
+                3
+              ],
+              [
+                3,
+                0,
+                5
+              ],
+              [
+                5,
+                0,
+                6
+              ]
+            ],
+            "F49_charge": [
+              5,
+              3,
+              3
+            ],
+            "F49_frobenius": [
+              3,
+              4,
+              3
+            ],
+            "observer_mod7": [
+              6,
+              0,
+              3
+            ]
+          },
+          "golden": [
+            41506345,
+            182615560946,
+            182615560949
+          ]
+        },
+        "4": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                6,
+                3,
+                6
+              ],
+              [
+                5,
+                6,
+                5
+              ],
+              [
+                3,
+                5,
+                3
+              ]
+            ],
+            "F49_charge": [
+              3,
+              6,
+              0
+            ],
+            "F49_frobenius": [
+              6,
+              1,
+              0
+            ],
+            "observer_mod7": [
+              6,
+              3,
+              6
+            ]
+          },
+          "golden": [
+            41506345,
+            29691147,
+            29691150
+          ]
+        },
+        "50": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                6,
+                2,
+                5
+              ],
+              [
+                2,
+                4,
+                5
+              ],
+              [
+                6,
+                1,
+                4
+              ]
+            ],
+            "F49_charge": [
+              6,
+              5,
+              1
+            ],
+            "F49_frobenius": [
+              5,
+              2,
+              1
+            ],
+            "observer_mod7": [
+              6,
+              2,
+              5
+            ]
+          },
+          "golden": [
+            41506345,
+            313595579551,
+            313595579554
+          ]
+        },
+        "51": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                6,
+                3,
+                2
+              ],
+              [
+                2,
+                6,
+                3
+              ],
+              [
+                2,
+                5,
+                2
+              ]
+            ],
+            "F49_charge": [
+              5,
+              2,
+              4
+            ],
+            "F49_frobenius": [
+              6,
+              5,
+              4
+            ],
+            "observer_mod7": [
+              6,
+              3,
+              2
+            ]
+          },
+          "golden": [
+            41506345,
+            193848396059,
+            193848396065
+          ]
+        },
+        "6": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                6,
+                4,
+                4
+              ],
+              [
+                4,
+                1,
+                0
+              ],
+              [
+                1,
+                2,
+                3
+              ]
+            ],
+            "F49_charge": [
+              5,
+              4,
+              2
+            ],
+            "F49_frobenius": [
+              0,
+              3,
+              2
+            ],
+            "observer_mod7": [
+              6,
+              4,
+              4
+            ]
+          },
+          "golden": [
+            41506345,
+            48460268322,
+            48460268350
+          ]
+        }
+      },
+      "names": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        14,
+        21,
+        22,
+        31,
+        32,
+        33,
+        39,
+        40,
+        50,
+        51,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "native_complements": 46,
+      "order": 27,
+      "parent_H": 13835447,
+      "peak_order": 28,
+      "permanent_births": 4,
+      "prefix": [
+        50,
+        51
+      ],
+      "retained_old_mark": 31,
+      "root": 39,
+      "spare": 6,
+      "target_H": 41506345,
+      "temporary_births_and_deletions": 23
+    }
+  ],
+  "scope": "Independent native and named-field-codec audit of two next endpoints only. No compiler import, no endpoint H recount in this interpreter; exact small-feedback counts are bound by the sibling receipt.",
+  "source_sha256": {
+    "recursive_seed_switching_20261103/selector/followup_named.json": "a9dd30cbe6f319219dd653f6f8697edb1c0d00f9b527164b828a2d4edb8c2d88",
+    "recursive_seed_switching_20261103/selector/named_repair.json": "6cfb9497c5d3ad9d219a9184592046b9981a3ffef8a0a875981217fd6bd86b3a",
+    "recursive_seed_switching_20261103/transport/audit_native.json": "4e8aa2a0747e292066909927010e890a6d865916d1ec0b6bf8c999fd12cdcb0b",
+    "recursive_seed_switching_20261103/transport/followup.json": "3b3095d118f9024444b4d04b3e9bb04abcfc9079eb16714d8fbceea6179d84f5",
+    "recursive_seed_switching_20261103/transport/followupaudit.py": "c33e82311d86aae75cb012309aecdaf09394028bd7aba0ae06083162fc1a9e47",
+    "zero_ready_component_returns_20261103/component/audit_native.py": "afb13e7233f0f437dfe178857cbc6a7a3a88bd66a7ac0cde348c93e5588ca91c"
+  },
+  "status": "PASS",
+  "temporary_births_and_deletions": 43
+}

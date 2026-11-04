@@ -1,0 +1,169 @@
+{
+  "external_file_count": 23,
+  "external_sources": {
+    "01-canon/theorems/THM-452-doubling-tiling-coset-law.md": {
+      "referenced_by": [
+        "hilbert/check.json:/source_sha256/01-canon/theorems/THM-452-doubling-tiling-coset-law.md"
+      ],
+      "sha256": "0472446f649541c13043be637deb24deb4c4d5e9fc666b292f6da23cb537938a"
+    },
+    "01-canon/theorems/THM-830-b3-deletion-deck-mirror-current-calculus.md": {
+      "referenced_by": [
+        "hilbert/check.json:/source_sha256/01-canon/theorems/THM-830-b3-deletion-deck-mirror-current-calculus.md"
+      ],
+      "sha256": "abf03828bb5d1e56c5e464037ac406b0a56f05203835c796c5b95d4fd43825b3"
+    },
+    "04-computation/gray_code_s160.py": {
+      "referenced_by": [
+        "hilbert/check.json:/source_sha256/04-computation/gray_code_s160.py"
+      ],
+      "sha256": "6322e3a714c091e3815f07cd2466ab220c2d383b66ab858dc1461782e375c738"
+    },
+    "04-computation/gray_codes_space_filling_s136.py": {
+      "referenced_by": [
+        "hilbert/check.json:/source_sha256/04-computation/gray_codes_space_filling_s136.py"
+      ],
+      "sha256": "cc6b6e0e7e6b757d4486647b0dd0d64eb97ebce03045f6dd394c87295a5d1505"
+    },
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/METAGRAPH.md": {
+      "referenced_by": [
+        "hilbert/check.json:/source_sha256/05-knowledge/results/adaptive_metagraph_reformulation_20261103/METAGRAPH.md",
+        "transport/followup.json:/source_sha256/adaptive_metagraph_reformulation_20261103/METAGRAPH.md"
+      ],
+      "sha256": "ee0cd2951e90d9659ed664c3ebfc10d2a3b3a17c55256610711b9610e84bb9ea"
+    },
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/metagraph_probe.py": {
+      "referenced_by": [
+        "hilbert/check.json:/source_sha256/05-knowledge/results/adaptive_metagraph_reformulation_20261103/metagraph_probe.py",
+        "transport/followup.json:/source_sha256/adaptive_metagraph_reformulation_20261103/metagraph_probe.py",
+        "transport/native.json:/source_sha256/adaptive_metagraph_reformulation_20261103/metagraph_probe.py"
+      ],
+      "sha256": "75266c143e3c4fbbadd5202984ec5cd6a0b7b9310a37850ff04fb6e92585ed84"
+    },
+    "05-knowledge/results/adaptive_state_induction_20261103/two_port_envelope.json": {
+      "referenced_by": [
+        "hilbert/check.json:/source_sha256/05-knowledge/results/adaptive_state_induction_20261103/two_port_envelope.json",
+        "transport/followup.json:/source_sha256/adaptive_state_induction_20261103/two_port_envelope.json"
+      ],
+      "sha256": "fc14da2ead29fa9c9fe5218ad96c87bce606c0cf41f5f0d5a4325917ebaeeafe"
+    },
+    "05-knowledge/results/gray_selector_recursion_20261018e.md": {
+      "referenced_by": [
+        "hilbert/check.json:/source_sha256/05-knowledge/results/gray_selector_recursion_20261018e.md"
+      ],
+      "sha256": "913c33624f1e4af012542c81a48495ca00d538778a7bfa08b58f6c22e5efed0f"
+    },
+    "05-knowledge/results/metagraph_primegame_20261102/low_sources.txt": {
+      "referenced_by": [
+        "selector/check.json:/source_sha256/metagraph_primegame_20261102/low_sources.txt"
+      ],
+      "sha256": "7060af7278041973dac49ecedb1dbb2cc61424780f56abd7f10e097855a88845"
+    },
+    "05-knowledge/results/return6325_completion_20261103/halving_response.json": {
+      "referenced_by": [
+        "transport/control.json:/source_sha256/return6325_completion_20261103/halving_response.json"
+      ],
+      "sha256": "3d7b1af0e0f1f0be20985390b404096452ac9f238311653fa2521fa742585e35"
+    },
+    "05-knowledge/results/return701_algebra_20261103/SPACE_FILLING.md": {
+      "referenced_by": [
+        "hilbert/check.json:/source_sha256/05-knowledge/results/return701_algebra_20261103/SPACE_FILLING.md"
+      ],
+      "sha256": "473aeddbcb625a50f155725ee0ec5f892efefe43fcf0699a83868d5081d329ca"
+    },
+    "05-knowledge/results/return701_algebra_20261103/hilbert_collatz.py": {
+      "referenced_by": [
+        "hilbert/check.json:/source_sha256/05-knowledge/results/return701_algebra_20261103/hilbert_collatz.py"
+      ],
+      "sha256": "24993169df1d9e10d5574eb28555a178c445619a4c0cd3a471e766f2b7dbbdc9"
+    },
+    "05-knowledge/results/session159_constructions_20261103/automatic/NOTE.md": {
+      "referenced_by": [
+        "arithmetic/check.json:/source_sha256/s159"
+      ],
+      "sha256": "5333f6c81b1a044d3d9851a53774c7bd92167d95ec871e75b48f5825d6c12c86"
+    },
+    "05-knowledge/results/zero_ready_component_returns_20261103/component/audit_native.py": {
+      "referenced_by": [
+        "transport/audit_native.json:/source_sha256/zero_ready_component_returns_20261103/component/audit_native.py",
+        "transport/followupaudit.json:/source_sha256/zero_ready_component_returns_20261103/component/audit_native.py"
+      ],
+      "sha256": "afb13e7233f0f437dfe178857cbc6a7a3a88bd66a7ac0cde348c93e5588ca91c"
+    },
+    "05-knowledge/results/zero_ready_component_returns_20261103/continuation/build.py": {
+      "referenced_by": [
+        "selector/check.json:/source_sha256/zero_ready_component_returns_20261103/continuation/build.py"
+      ],
+      "sha256": "60f827fce35aacf6bf0179b879c319f7fe99409f4ba8bb7125518ca3ba45a283"
+    },
+    "05-knowledge/results/zero_ready_component_returns_20261103/continuation/named_tree.json": {
+      "referenced_by": [
+        "selector/check.json:/source_sha256/zero_ready_component_returns_20261103/continuation/named_tree.json",
+        "selector/named_repair.json:/source_sha256/zero_ready_component_returns_20261103/continuation/named_tree.json"
+      ],
+      "sha256": "875b556963e2043e9174a99df0b0569dc8f3a7770602cc336f53b1ee4ccfdb9d"
+    },
+    "05-knowledge/results/zero_ready_component_returns_20261103/continuation/native_tree.py": {
+      "referenced_by": [
+        "transport/followup.json:/source_sha256/zero_ready_component_returns_20261103/continuation/native_tree.py",
+        "transport/native.json:/source_sha256/zero_ready_component_returns_20261103/continuation/native_tree.py"
+      ],
+      "sha256": "c6e006bba51aa386a7da239740696369a0d0cf399cd0bdf436a640068e7fc7f8"
+    },
+    "05-knowledge/results/zero_ready_component_returns_20261103/interface/check.py": {
+      "referenced_by": [
+        "hilbert/check.json:/source_sha256/05-knowledge/results/zero_ready_component_returns_20261103/interface/check.py",
+        "transport/control.json:/source_sha256/zero_ready_component_returns_20261103/interface/check.py",
+        "transport/followup.json:/source_sha256/zero_ready_component_returns_20261103/interface/check.py",
+        "transport/verify.json:/source_sha256/zero_ready_component_returns_20261103/interface/check.py"
+      ],
+      "sha256": "2f0457def6969a19f1ffe8188ca5f7b47903664222c2f177b88d1394d213df35"
+    },
+    "05-knowledge/results/zero_ready_component_returns_20261103/interface/gap.py": {
+      "referenced_by": [
+        "hilbert/check.json:/source_sha256/05-knowledge/results/zero_ready_component_returns_20261103/interface/gap.py",
+        "transport/fast_compare.json:/source_sha256/zero_ready_component_returns_20261103/interface/gap.py",
+        "transport/fast_gap_check.json:/source_sha256/zero_ready_component_returns_20261103/interface/gap.py",
+        "transport/followup.json:/source_sha256/zero_ready_component_returns_20261103/interface/gap.py",
+        "transport/verify.json:/source_sha256/zero_ready_component_returns_20261103/interface/gap.py"
+      ],
+      "sha256": "c965617d0c7a454fe940ac9e656f3661281f328e1d21665761f7a3a4056098f1"
+    },
+    "05-knowledge/results/zero_ready_component_returns_20261103/interface/natural_pair.json": {
+      "referenced_by": [
+        "hilbert/check.json:/source_sha256/05-knowledge/results/zero_ready_component_returns_20261103/interface/natural_pair.json"
+      ],
+      "sha256": "e8f79ff68dca6132ea13de7443c9756a8f091363b54c038182fa701dbcabd30e"
+    },
+    "05-knowledge/results/zero_ready_component_returns_20261103/interface/phase.py": {
+      "referenced_by": [
+        "transport/fast_compare.json:/source_sha256/zero_ready_component_returns_20261103/interface/phase.py",
+        "transport/followup.json:/source_sha256/zero_ready_component_returns_20261103/interface/phase.py",
+        "transport/verify.json:/source_sha256/zero_ready_component_returns_20261103/interface/phase.py"
+      ],
+      "sha256": "f7dfdf91862c683f091cef9c1d8f9cce7dfd8a8c6b94a6bef768d36d387ed617"
+    },
+    "05-knowledge/results/zero_ready_component_returns_20261103/inverse/native.py": {
+      "referenced_by": [
+        "hilbert/check.json:/source_sha256/05-knowledge/results/zero_ready_component_returns_20261103/inverse/native.py",
+        "transport/followup.json:/source_sha256/zero_ready_component_returns_20261103/inverse/native.py",
+        "transport/native.json:/source_sha256/zero_ready_component_returns_20261103/inverse/native.py"
+      ],
+      "sha256": "3d704ae5e4c84718d64848f94cfab5bb4d78e0b214ac2bc7c8412b1f767727a8"
+    },
+    "05-knowledge/results/zero_ready_component_returns_20261103/inverse/reader.py": {
+      "referenced_by": [
+        "arithmetic/check.json:/source_sha256/reader",
+        "hilbert/check.json:/source_sha256/05-knowledge/results/zero_ready_component_returns_20261103/inverse/reader.py",
+        "selector/check.json:/source_sha256/zero_ready_component_returns_20261103/inverse/reader.py",
+        "selector/named_repair.json:/source_sha256/zero_ready_component_returns_20261103/inverse/reader.py",
+        "transport/control.json:/source_sha256/zero_ready_component_returns_20261103/inverse/reader.py",
+        "transport/followup.json:/source_sha256/zero_ready_component_returns_20261103/inverse/reader.py",
+        "transport/verify.json:/source_sha256/zero_ready_component_returns_20261103/inverse/reader.py"
+      ],
+      "sha256": "9351ca0c946e031643faac4dbe312a0b629e3d1a482b67203ea6c50676838533"
+    }
+  },
+  "paths_relative_to": "repository root",
+  "scope": "External source inputs verified against existing receipt pins. Internal packet artifacts belong to the separate manifest."
+}

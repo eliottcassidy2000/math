@@ -1,3 +1,8 @@
+HISTORICAL OUTPUT — PROSE CORRECTED 2026-11-03
+The claimed |Delta H|<=H_max(n-1), displayed jump ranges, and scalar-locality inference are false. The receipt itself has an n=4 jump of magnitude4. Use the directed two-path-cover current instead.
+The numerical output below is preserved as provenance, not as a proof of those assertions.
+See recursive_seed_switching_20261103/hilbert/NOTE.md and 01-canon/MISTAKES.md.
+
 ========================================================================
   GRAY CODES AND SPACE-FILLING CURVES ON THE TOURNAMENT CUBE
   opus-2026-03-22-S160

@@ -161,12 +161,12 @@ print(f"""
   The score sequence changes by a TRANSPOSITION-LIKE operation.
 
   For the SORTED score sequence:
-  If a and b had the same score: the sorted sequence is UNCHANGED.
-  If scores differed: the sorted sequence may change.
+  CORRECTION (2026-11-03): the sorted sequence is unchanged exactly
+  when score(a)=score(b)+1 before reversing a->b. Equal scores change it.
 
   THE SCORE-PRESERVING GRAY CODE STEPS:
   These are the steps within a single score class.
-  They correspond to arc flips between same-score vertices.
+  They correspond to a->b flips with score(a)=score(b)+1, not equal scores.
 
   From S133: the score = coboundary d₁ᵀ.
   Arc flip = change one coordinate of the tournament by ±1.

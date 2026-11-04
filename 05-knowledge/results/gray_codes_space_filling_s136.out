@@ -1,3 +1,8 @@
+HISTORICAL OUTPUT — PROSE CORRECTED 2026-11-03
+Equal-score arc flips do not preserve the sorted score sequence; the correct condition for a->b is score(a)=score(b)+1.
+The numerical output below is preserved as provenance, not as a proof of those assertions.
+See recursive_seed_switching_20261103/hilbert/NOTE.md and 01-canon/MISTAKES.md.
+
 ========================================================================
   GRAY CODES, SPACE-FILLING CURVES, AND TOURNAMENTS
   opus-2026-03-22-S2

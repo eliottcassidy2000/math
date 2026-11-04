@@ -1,0 +1,290 @@
+{
+  "records": [
+    {
+      "H": 462915,
+      "cut": 256,
+      "named_port_charts": {
+        "6": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                5,
+                6,
+                5
+              ],
+              [
+                3,
+                5,
+                3
+              ],
+              [
+                6,
+                3,
+                6
+              ]
+            ],
+            "F49_charge": [
+              6,
+              5,
+              0
+            ],
+            "F49_frobenius": [
+              5,
+              2,
+              0
+            ],
+            "observer_mod7": [
+              5,
+              6,
+              5
+            ]
+          },
+          "eight": [
+            462915,
+            41040,
+            731574,
+            837423,
+            1382724,
+            69417,
+            9937728,
+            7674129
+          ],
+          "golden": [
+            462915,
+            345267,
+            386307
+          ]
+        },
+        "8": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                5,
+                3,
+                3
+              ],
+              [
+                0,
+                6,
+                0
+              ],
+              [
+                3,
+                5,
+                4
+              ]
+            ],
+            "F49_charge": [
+              4,
+              3,
+              2
+            ],
+            "F49_frobenius": [
+              2,
+              4,
+              2
+            ],
+            "observer_mod7": [
+              5,
+              3,
+              3
+            ]
+          },
+          "eight": [
+            462915,
+            31185,
+            963549,
+            646002,
+            1409292,
+            70335,
+            9937728,
+            10011438
+          ],
+          "golden": [
+            462915,
+            466182,
+            497367
+          ]
+        }
+      },
+      "names": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "new_H": 1061775,
+      "rows": [
+        254,
+        244,
+        248,
+        242,
+        4064,
+        3904,
+        3968,
+        3872,
+        3599,
+        1039,
+        2063,
+        527
+      ]
+    },
+    {
+      "H": 462915,
+      "cut": 256,
+      "named_port_charts": {
+        "6": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                5,
+                6,
+                5
+              ],
+              [
+                3,
+                5,
+                3
+              ],
+              [
+                6,
+                3,
+                6
+              ]
+            ],
+            "F49_charge": [
+              6,
+              5,
+              0
+            ],
+            "F49_frobenius": [
+              5,
+              2,
+              0
+            ],
+            "observer_mod7": [
+              5,
+              6,
+              5
+            ]
+          },
+          "eight": [
+            462915,
+            41040,
+            731574,
+            837423,
+            1382724,
+            69417,
+            9937728,
+            7674129
+          ],
+          "golden": [
+            462915,
+            345267,
+            386307
+          ]
+        },
+        "8": {
+          "charts": {
+            "F343_codec_degree": 3,
+            "F343_vector_codec": [
+              [
+                5,
+                5,
+                2
+              ],
+              [
+                2,
+                3,
+                2
+              ],
+              [
+                5,
+                6,
+                3
+              ]
+            ],
+            "F49_charge": [
+              3,
+              2,
+              3
+            ],
+            "F49_frobenius": [
+              4,
+              5,
+              3
+            ],
+            "observer_mod7": [
+              5,
+              5,
+              2
+            ]
+          },
+          "eight": [
+            462915,
+            47142,
+            646002,
+            963549,
+            1409292,
+            70335,
+            9937728,
+            6836967
+          ],
+          "golden": [
+            462915,
+            299430,
+            346572
+          ]
+        }
+      },
+      "names": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "new_H": 1395279,
+      "rows": [
+        254,
+        244,
+        248,
+        242,
+        4064,
+        3904,
+        3968,
+        3872,
+        15,
+        2319,
+        783,
+        1295
+      ]
+    }
+  ],
+  "scope": "Actual 81/27 pair and distinguished cut; automorphism labels inherited, not recomputed.",
+  "source_sha256": {
+    "recursive_seed_switching_20261103/transport/control.py": "ab7dc78b6feea5b732f8c4c5f1f99b0fedeed49257226108d31c68b11fef7d4a",
+    "return6325_completion_20261103/halving_response.json": "3d7b1af0e0f1f0be20985390b404096452ac9f238311653fa2521fa742585e35",
+    "zero_ready_component_returns_20261103/interface/check.py": "2f0457def6969a19f1ffe8188ca5f7b47903664222c2f177b88d1394d213df35",
+    "zero_ready_component_returns_20261103/inverse/reader.py": "9351ca0c946e031643faac4dbe312a0b629e3d1a482b67203ea6c50676838533"
+  },
+  "status": "PASS"
+}

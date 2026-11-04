@@ -4,6 +4,47 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — three accepted return rounds do not close a fixed seed bank
+
+**Refuted extension premise; the previous finite theorem remains valid.**
+The exact 219-key reader bank accepts all fourteen targets in its saved
+three-round tree from 170807, but misses 13835447=3*4611815+2 at every reader
+length and every prefix clock. Both an exact binary-section inverse and
+the earlier complete interval inverse certify the miss. This is a failure
+of the specified bank, not a forbidden Hamilton count: promoting two old
+tail vertices into an enlarged seed and selecting physical vertex 4 gives
+an actual 23-vertex repair retaining every old name. Both next targets
+switch back into the old bank. A larger fixed bank or a recursive policy
+is not ruled out, and unlimited acceptance remains open. The missing
+obligation is a proved seed-selection/reentry rule; finite dimension of
+the arithmetic carrier is not such a rule. See the
+[counterexample, repair, and complete scopes](../05-knowledge/results/recursive_seed_switching_20261103/README.md).
+
+## 2026-11-03 — Gray adjacency preserves one arc, not score or count locality
+
+**Repairs to historical S136/S160 prose, not to their raw numerical data.**
+Reversing a->b changes scores from (d_a,d_b) to (d_a-1,d_b+1). The sorted
+score multiset is unchanged exactly when d_a=d_b+1; equal scores do not
+suffice. A directed triangle, with all scores one, is a smallest hostile.
+The first failed implication in S136 was confusing this change with a swap
+of equal scores. The producer prose is corrected; its old output is retained
+under a correction banner.
+
+S160's bound |Delta H|<=Hmax(n-1) is false: a transitive four-tournament has
+H=1, and reversing its long arc gives H=5, a jump of four although Hmax(3)=3.
+Its own output already recorded this jump. Contracting an arc does not in
+general produce an ordinary tournament with the required path predicate.
+The repaired identity for reversal of a->b is H(T')-H(T)=C_ba-C_ab, where
+C_uv counts directed ordered spanning two-path covers with the first ending
+at u and the second starting at v. A coarse valid bound is (n-1)!; the
+endpoint constraints cannot be discarded. The old jump-range and scalar
+locality assertions are also withdrawn. The
+[sealed Hilbert atlas](../05-knowledge/results/recursive_seed_switching_20261103/hilbert/NOTE.md)
+supplies adjacent cells with unbounded count jumps as order grows, while
+retaining exact named graph ancestry and native one-arc transport. The next
+question concerns arithmetic acceptance with these joint boundaries, not
+an intermediate-value argument from geometric proximity.
+
 ## 2026-11-03 — a unit response dial needs its joint reentry guard
 
 **Rejected research simplification, not a retraction of prior canon.**

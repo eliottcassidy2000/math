@@ -1,0 +1,1230 @@
+{
+  "all_seed_mark_full_strong_controls": 406,
+  "controller_states": [
+    [
+      -1,
+      0,
+      0
+    ],
+    [
+      -1,
+      0,
+      1
+    ],
+    [
+      -1,
+      1,
+      0
+    ],
+    [
+      -1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "edge_gradient_controls": 225,
+  "exact_observer_intertwining_commands": {
+    "bit0": 11,
+    "bit1": 8
+  },
+  "first_level_missing_returns": {
+    "actual_four_children": [
+      141,
+      107,
+      91,
+      127
+    ],
+    "parent_H": 33,
+    "targets": [
+      101,
+      103
+    ]
+  },
+  "four_state_matrices": {
+    "0": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        0,
+        0,
+        2
+      ]
+    ],
+    "1": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2
+      ]
+    ]
+  },
+  "gray_native_programs": [
+    {
+      "case": "append_single_out",
+      "from_index": 0,
+      "helper_out_mask": 1024,
+      "inverse": false,
+      "pair": [
+        0,
+        10
+      ],
+      "paths": [
+        [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          0,
+          6,
+          4,
+          5,
+          3,
+          11
+        ],
+        [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0,
+          6,
+          4,
+          5,
+          3
+        ]
+      ],
+      "to_index": 1
+    },
+    {
+      "case": "append_single_out",
+      "from_index": 1,
+      "helper_out_mask": 512,
+      "inverse": false,
+      "pair": [
+        0,
+        9
+      ],
+      "paths": [
+        [
+          1,
+          2,
+          7,
+          8,
+          9,
+          0,
+          6,
+          4,
+          5,
+          10,
+          3,
+          11
+        ],
+        [
+          1,
+          2,
+          7,
+          8,
+          9,
+          11,
+          0,
+          6,
+          4,
+          5,
+          10,
+          3
+        ]
+      ],
+      "to_index": 2
+    },
+    {
+      "case": "prepend_single_in",
+      "from_index": 2,
+      "helper_out_mask": 1023,
+      "inverse": false,
+      "pair": [
+        0,
+        10
+      ],
+      "paths": [
+        [
+          11,
+          6,
+          4,
+          5,
+          1,
+          2,
+          7,
+          8,
+          9,
+          3,
+          0,
+          10
+        ],
+        [
+          6,
+          4,
+          5,
+          1,
+          2,
+          7,
+          8,
+          9,
+          3,
+          0,
+          11,
+          10
+        ]
+      ],
+      "to_index": 3
+    },
+    {
+      "case": "append_single_out",
+      "from_index": 3,
+      "helper_out_mask": 256,
+      "inverse": false,
+      "pair": [
+        0,
+        8
+      ],
+      "paths": [
+        [
+          1,
+          2,
+          7,
+          8,
+          0,
+          6,
+          4,
+          5,
+          9,
+          10,
+          3,
+          11
+        ],
+        [
+          1,
+          2,
+          7,
+          8,
+          11,
+          0,
+          6,
+          4,
+          5,
+          9,
+          10,
+          3
+        ]
+      ],
+      "to_index": 4
+    },
+    {
+      "case": "append_single_out",
+      "from_index": 4,
+      "helper_out_mask": 1024,
+      "inverse": false,
+      "pair": [
+        0,
+        10
+      ],
+      "paths": [
+        [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          0,
+          6,
+          4,
+          5,
+          3,
+          11
+        ],
+        [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0,
+          6,
+          4,
+          5,
+          3
+        ]
+      ],
+      "to_index": 5
+    },
+    {
+      "case": "append_single_out",
+      "from_index": 5,
+      "helper_out_mask": 1,
+      "inverse": false,
+      "pair": [
+        0,
+        9
+      ],
+      "paths": [
+        [
+          6,
+          4,
+          5,
+          1,
+          2,
+          7,
+          8,
+          3,
+          0,
+          9,
+          10,
+          11
+        ],
+        [
+          6,
+          4,
+          5,
+          1,
+          2,
+          7,
+          8,
+          3,
+          0,
+          11,
+          9,
+          10
+        ]
+      ],
+      "to_index": 6
+    },
+    {
+      "case": "append_single_out",
+      "from_index": 6,
+      "helper_out_mask": 1,
+      "inverse": false,
+      "pair": [
+        0,
+        10
+      ],
+      "paths": [
+        [
+          6,
+          4,
+          5,
+          1,
+          2,
+          7,
+          8,
+          9,
+          0,
+          10,
+          3,
+          11
+        ],
+        [
+          6,
+          4,
+          5,
+          1,
+          2,
+          7,
+          8,
+          9,
+          0,
+          11,
+          10,
+          3
+        ]
+      ],
+      "to_index": 7
+    },
+    {
+      "case": "append_single_out",
+      "from_index": 7,
+      "helper_out_mask": 128,
+      "inverse": false,
+      "pair": [
+        0,
+        7
+      ],
+      "paths": [
+        [
+          1,
+          2,
+          7,
+          0,
+          6,
+          4,
+          5,
+          8,
+          9,
+          10,
+          3,
+          11
+        ],
+        [
+          1,
+          2,
+          7,
+          11,
+          0,
+          6,
+          4,
+          5,
+          8,
+          9,
+          10,
+          3
+        ]
+      ],
+      "to_index": 8
+    },
+    {
+      "case": "append_single_out",
+      "from_index": 8,
+      "helper_out_mask": 1024,
+      "inverse": false,
+      "pair": [
+        0,
+        10
+      ],
+      "paths": [
+        [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          0,
+          6,
+          4,
+          5,
+          3,
+          11
+        ],
+        [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0,
+          6,
+          4,
+          5,
+          3
+        ]
+      ],
+      "to_index": 9
+    },
+    {
+      "case": "append_single_out",
+      "from_index": 9,
+      "helper_out_mask": 512,
+      "inverse": false,
+      "pair": [
+        0,
+        9
+      ],
+      "paths": [
+        [
+          1,
+          2,
+          7,
+          8,
+          9,
+          0,
+          6,
+          4,
+          5,
+          10,
+          3,
+          11
+        ],
+        [
+          1,
+          2,
+          7,
+          8,
+          9,
+          11,
+          0,
+          6,
+          4,
+          5,
+          10,
+          3
+        ]
+      ],
+      "to_index": 10
+    },
+    {
+      "case": "prepend_single_in",
+      "from_index": 10,
+      "helper_out_mask": 1023,
+      "inverse": false,
+      "pair": [
+        0,
+        10
+      ],
+      "paths": [
+        [
+          11,
+          6,
+          4,
+          5,
+          1,
+          2,
+          7,
+          8,
+          9,
+          3,
+          0,
+          10
+        ],
+        [
+          6,
+          4,
+          5,
+          1,
+          2,
+          7,
+          8,
+          9,
+          3,
+          0,
+          11,
+          10
+        ]
+      ],
+      "to_index": 11
+    },
+    {
+      "case": "append_single_out",
+      "from_index": 11,
+      "helper_out_mask": 1,
+      "inverse": false,
+      "pair": [
+        0,
+        8
+      ],
+      "paths": [
+        [
+          6,
+          4,
+          5,
+          1,
+          2,
+          7,
+          3,
+          0,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          6,
+          4,
+          5,
+          1,
+          2,
+          7,
+          3,
+          0,
+          11,
+          8,
+          9,
+          10
+        ]
+      ],
+      "to_index": 12
+    },
+    {
+      "case": "append_single_out",
+      "from_index": 12,
+      "helper_out_mask": 1024,
+      "inverse": false,
+      "pair": [
+        0,
+        10
+      ],
+      "paths": [
+        [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          0,
+          6,
+          4,
+          5,
+          3,
+          11
+        ],
+        [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0,
+          6,
+          4,
+          5,
+          3
+        ]
+      ],
+      "to_index": 13
+    },
+    {
+      "case": "append_single_out",
+      "from_index": 13,
+      "helper_out_mask": 1,
+      "inverse": false,
+      "pair": [
+        0,
+        9
+      ],
+      "paths": [
+        [
+          6,
+          4,
+          5,
+          1,
+          2,
+          7,
+          8,
+          0,
+          9,
+          10,
+          3,
+          11
+        ],
+        [
+          6,
+          4,
+          5,
+          1,
+          2,
+          7,
+          8,
+          0,
+          11,
+          9,
+          10,
+          3
+        ]
+      ],
+      "to_index": 14
+    },
+    {
+      "case": "append_single_out",
+      "from_index": 14,
+      "helper_out_mask": 1,
+      "inverse": false,
+      "pair": [
+        0,
+        10
+      ],
+      "paths": [
+        [
+          6,
+          4,
+          5,
+          1,
+          2,
+          7,
+          8,
+          9,
+          0,
+          10,
+          3,
+          11
+        ],
+        [
+          6,
+          4,
+          5,
+          1,
+          2,
+          7,
+          8,
+          9,
+          0,
+          11,
+          10,
+          3
+        ]
+      ],
+      "to_index": 15
+    }
+  ],
+  "historical_hostiles": {
+    "H_values": [
+      1,
+      5
+    ],
+    "after": [
+      0,
+      5,
+      1
+    ],
+    "equal_score_triangle_before": [
+      2,
+      4,
+      1
+    ],
+    "reversed_long_arc_rows": [
+      6,
+      12,
+      8,
+      1
+    ],
+    "transitive4_rows": [
+      14,
+      12,
+      8,
+      0
+    ]
+  },
+  "interior_births": 168,
+  "levels": [
+    {
+      "cells": 1,
+      "depth": 0,
+      "full_record_sha256": "08eee57d093467f32e9abd9173fd7f5e7d7a2e2890ffefd994540eeba8d20c68",
+      "records": [
+        [
+          0,
+          "",
+          0,
+          0,
+          33
+        ]
+      ],
+      "value_max": 33,
+      "value_min": 33
+    },
+    {
+      "cells": 4,
+      "depth": 1,
+      "full_record_sha256": "4c8811969685b0a2bfc26e36735e6169aef5a03b1f6f37f4637eaef342bf863d",
+      "records": [
+        [
+          0,
+          "00",
+          0,
+          0,
+          141
+        ],
+        [
+          1,
+          "01",
+          0,
+          1,
+          107
+        ],
+        [
+          2,
+          "11",
+          1,
+          1,
+          91
+        ],
+        [
+          3,
+          "10",
+          1,
+          0,
+          127
+        ]
+      ],
+      "value_max": 141,
+      "value_min": 91
+    },
+    {
+      "cells": 16,
+      "depth": 2,
+      "full_record_sha256": "f1d8b51ea72f44fa5fb8706d21511d7965f6ff96a074a042cbec23e970fc788e",
+      "records": null,
+      "value_max": 573,
+      "value_min": 319
+    },
+    {
+      "cells": 64,
+      "depth": 3,
+      "full_record_sha256": "ca2ec17276e1ae34b047adfac38f1c8166b17490500b6b3a49eb997cf416fb03",
+      "records": null,
+      "value_max": 2347,
+      "value_min": 1217
+    }
+  ],
+  "literal_profile_controls": 85,
+  "promotion": {
+    "absorbed_seed_names": [
+      0,
+      1,
+      2,
+      7,
+      8
+    ],
+    "absorbed_seed_rows": [
+      2,
+      12,
+      25,
+      17,
+      3
+    ],
+    "naive_word_reinterpretation_differences": [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        7
+      ]
+    ],
+    "native_program": [
+      {
+        "case": "append_single_out",
+        "helper_out_mask": 8,
+        "inverse": false,
+        "pair": [
+          3,
+          0
+        ],
+        "paths": [
+          [
+            1,
+            2,
+            3,
+            0,
+            6,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          [
+            1,
+            2,
+            3,
+            9,
+            0,
+            6,
+            4,
+            5,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "case": "prepend_single_in",
+        "helper_out_mask": 503,
+        "inverse": false,
+        "pair": [
+          3,
+          1
+        ],
+        "paths": [
+          [
+            9,
+            0,
+            6,
+            4,
+            5,
+            2,
+            7,
+            8,
+            1,
+            3
+          ],
+          [
+            0,
+            6,
+            4,
+            5,
+            2,
+            7,
+            8,
+            1,
+            9,
+            3
+          ]
+        ]
+      },
+      {
+        "case": "append_single_out",
+        "helper_out_mask": 1,
+        "inverse": false,
+        "pair": [
+          6,
+          0
+        ],
+        "paths": [
+          [
+            0,
+            6,
+            4,
+            5,
+            1,
+            2,
+            7,
+            8,
+            3,
+            9
+          ],
+          [
+            0,
+            9,
+            6,
+            4,
+            5,
+            1,
+            2,
+            7,
+            8,
+            3
+          ]
+        ]
+      },
+      {
+        "case": "append_single_out",
+        "helper_out_mask": 72,
+        "inverse": true,
+        "pair": [
+          6,
+          1
+        ],
+        "paths": [
+          [
+            0,
+            1,
+            9,
+            6,
+            4,
+            5,
+            2,
+            7,
+            8,
+            3
+          ],
+          [
+            0,
+            1,
+            6,
+            4,
+            5,
+            2,
+            7,
+            8,
+            3,
+            9
+          ]
+        ]
+      }
+    ],
+    "old_spare_new_mark": 1,
+    "permanent_birth_name": 8,
+    "permanent_birth_out_mask": 11,
+    "promoted_rows": [
+      66,
+      140,
+      393,
+      1,
+      431,
+      399,
+      446,
+      265,
+      11
+    ],
+    "retarget_pairs": [
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        6,
+        1
+      ]
+    ],
+    "source_chart": {
+      "H": 69,
+      "charts": {
+        "F343_codec_degree": 3,
+        "F343_vector_codec": [
+          [
+            6,
+            2,
+            3
+          ],
+          [
+            4,
+            4,
+            4
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        "F49_charge": [
+          0,
+          3,
+          3
+        ],
+        "F49_frobenius": [
+          5,
+          4,
+          3
+        ],
+        "observer_mod7": [
+          6,
+          2,
+          3
+        ]
+      },
+      "golden": [
+        69,
+        163,
+        164
+      ]
+    },
+    "source_rows": [
+      66,
+      140,
+      137,
+      1,
+      175,
+      143,
+      190,
+      9
+    ],
+    "target_chart": {
+      "H": 139,
+      "charts": {
+        "F343_codec_degree": 3,
+        "F343_vector_codec": [
+          [
+            6,
+            5,
+            6
+          ],
+          [
+            6,
+            3,
+            4
+          ],
+          [
+            0,
+            6,
+            4
+          ]
+        ],
+        "F49_charge": [
+          5,
+          6,
+          0
+        ],
+        "F49_frobenius": [
+          1,
+          1,
+          0
+        ],
+        "observer_mod7": [
+          6,
+          5,
+          6
+        ]
+      },
+      "golden": [
+        139,
+        579,
+        580
+      ]
+    },
+    "target_rows": [
+      10,
+      196,
+      393,
+      2,
+      431,
+      399,
+      445,
+      265,
+      11
+    ]
+  },
+  "source_sha256": {
+    "01-canon/theorems/THM-452-doubling-tiling-coset-law.md": "0472446f649541c13043be637deb24deb4c4d5e9fc666b292f6da23cb537938a",
+    "01-canon/theorems/THM-830-b3-deletion-deck-mirror-current-calculus.md": "abf03828bb5d1e56c5e464037ac406b0a56f05203835c796c5b95d4fd43825b3",
+    "04-computation/gray_code_s160.py": "6322e3a714c091e3815f07cd2466ab220c2d383b66ab858dc1461782e375c738",
+    "04-computation/gray_codes_space_filling_s136.py": "cc6b6e0e7e6b757d4486647b0dd0d64eb97ebce03045f6dd394c87295a5d1505",
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/METAGRAPH.md": "ee0cd2951e90d9659ed664c3ebfc10d2a3b3a17c55256610711b9610e84bb9ea",
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/metagraph_probe.py": "75266c143e3c4fbbadd5202984ec5cd6a0b7b9310a37850ff04fb6e92585ed84",
+    "05-knowledge/results/adaptive_state_induction_20261103/two_port_envelope.json": "fc14da2ead29fa9c9fe5218ad96c87bce606c0cf41f5f0d5a4325917ebaeeafe",
+    "05-knowledge/results/gray_selector_recursion_20261018e.md": "913c33624f1e4af012542c81a48495ca00d538778a7bfa08b58f6c22e5efed0f",
+    "05-knowledge/results/recursive_seed_switching_20261103/hilbert/NOTE.md": "692152972ec924dac633f9e23c319a9c4c2ff76c2ed7b38adeed4e59b0469a2a",
+    "05-knowledge/results/recursive_seed_switching_20261103/hilbert/check.py": "4288ea4bad46f694b71a5299f1f4157245b4ff46160e974ef230aca59c349e64",
+    "05-knowledge/results/return701_algebra_20261103/SPACE_FILLING.md": "473aeddbcb625a50f155725ee0ec5f892efefe43fcf0699a83868d5081d329ca",
+    "05-knowledge/results/return701_algebra_20261103/hilbert_collatz.py": "24993169df1d9e10d5574eb28555a178c445619a4c0cd3a471e766f2b7dbbdc9",
+    "05-knowledge/results/zero_ready_component_returns_20261103/interface/check.py": "2f0457def6969a19f1ffe8188ca5f7b47903664222c2f177b88d1394d213df35",
+    "05-knowledge/results/zero_ready_component_returns_20261103/interface/gap.py": "c965617d0c7a454fe940ac9e656f3661281f328e1d21665761f7a3a4056098f1",
+    "05-knowledge/results/zero_ready_component_returns_20261103/interface/natural_pair.json": "e8f79ff68dca6132ea13de7443c9756a8f091363b54c038182fa701dbcabd30e",
+    "05-knowledge/results/zero_ready_component_returns_20261103/inverse/native.py": "3d704ae5e4c84718d64848f94cfab5bb4d78e0b214ac2bc7c8412b1f767727a8",
+    "05-knowledge/results/zero_ready_component_returns_20261103/inverse/reader.py": "9351ca0c946e031643faac4dbe312a0b629e3d1a482b67203ea6c50676838533"
+  },
+  "status": "PROVED identities with FINITE-EXACT controls; no coverage or recursive bank closure",
+  "unbounded_jump_controls": [
+    {
+      "delta_H": 36,
+      "depth": 1,
+      "indices": [
+        2,
+        3
+      ],
+      "words": [
+        "11",
+        "10"
+      ]
+    },
+    {
+      "delta_H": 150,
+      "depth": 2,
+      "indices": [
+        10,
+        11
+      ],
+      "words": [
+        "1111",
+        "1110"
+      ]
+    },
+    {
+      "delta_H": 606,
+      "depth": 3,
+      "indices": [
+        42,
+        43
+      ],
+      "words": [
+        "111111",
+        "111110"
+      ]
+    },
+    {
+      "delta_H": 2430,
+      "depth": 4,
+      "indices": [
+        170,
+        171
+      ],
+      "words": [
+        "11111111",
+        "11111110"
+      ]
+    }
+  ],
+  "weak_component_strong_wrapper_hostile": {
+    "component_rows": [
+      0,
+      1
+    ],
+    "full_rows": [
+      8,
+      1,
+      3,
+      6
+    ],
+    "mark": 0,
+    "prefix": 1,
+    "seed": [
+      0
+    ],
+    "word": ""
+  }
+}

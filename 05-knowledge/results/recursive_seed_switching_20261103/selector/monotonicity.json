@@ -1,0 +1,18 @@
+{
+  "scope": "Actual parent seed at clock4; ordinary global binary search is invalid.",
+  "K": 1620,
+  "q": 11,
+  "d": 2,
+  "r_excess_value": [
+    [
+      510,
+      256,
+      829016
+    ],
+    [
+      511,
+      0,
+      827822
+    ]
+  ]
+}
