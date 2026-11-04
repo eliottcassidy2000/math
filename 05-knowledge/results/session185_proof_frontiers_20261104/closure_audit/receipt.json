@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "permutation_signature_states": 9,
+  "directed_DFS_full_attachment_counts": {
+    "": 107,
+    "2": 323,
+    "4": 325,
+    "24": 973,
+    "44": 979,
+    "242": 2921,
+    "244": 2923,
+    "442": 2939,
+    "444": 2941
+  },
+  "edges": [
+    [
+      "",
+      "2",
+      0
+    ],
+    [
+      "",
+      "4",
+      0
+    ],
+    [
+      "2",
+      "24",
+      -2
+    ],
+    [
+      "4",
+      "44",
+      -3
+    ],
+    [
+      "24",
+      "242",
+      0
+    ],
+    [
+      "24",
+      "244",
+      -1
+    ],
+    [
+      "44",
+      "442",
+      1
+    ],
+    [
+      "44",
+      "444",
+      2
+    ]
+  ],
+  "valuation_seed_signature": [
+    11,
+    100,
+    64,
+    49,
+    28,
+    9,
+    6
+  ],
+  "independent_transitive_block_signature": [
+    1,
+    1048576,
+    671088,
+    60357,
+    38626,
+    1,
+    0
+  ],
+  "valuation_instances": 100,
+  "scope": "Finite verification plus written audit of all-order claims."
+}

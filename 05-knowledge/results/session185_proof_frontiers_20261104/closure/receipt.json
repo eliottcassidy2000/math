@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "literal_states": 9,
+  "new_strong_suffixes": 6,
+  "attachment_clocks_checked": [
+    1,
+    2
+  ],
+  "edges": [
+    {
+      "source": "",
+      "target": "2",
+      "digit": 2,
+      "local_clock_shift": 0,
+      "total_clock_shift": 0
+    },
+    {
+      "source": "",
+      "target": "4",
+      "digit": 4,
+      "local_clock_shift": 0,
+      "total_clock_shift": 0
+    },
+    {
+      "source": "2",
+      "target": "24",
+      "digit": 4,
+      "local_clock_shift": -2,
+      "total_clock_shift": -2
+    },
+    {
+      "source": "4",
+      "target": "44",
+      "digit": 4,
+      "local_clock_shift": -3,
+      "total_clock_shift": -3
+    },
+    {
+      "source": "24",
+      "target": "242",
+      "digit": 2,
+      "local_clock_shift": 0,
+      "total_clock_shift": -2
+    },
+    {
+      "source": "24",
+      "target": "244",
+      "digit": 4,
+      "local_clock_shift": -1,
+      "total_clock_shift": -3
+    },
+    {
+      "source": "44",
+      "target": "442",
+      "digit": 2,
+      "local_clock_shift": 1,
+      "total_clock_shift": -2
+    },
+    {
+      "source": "44",
+      "target": "444",
+      "digit": 4,
+      "local_clock_shift": 2,
+      "total_clock_shift": -1
+    }
+  ],
+  "root_clock4_counts": {
+    "": 107,
+    "2": 323,
+    "4": 325,
+    "24": 973,
+    "44": 979,
+    "242": 2921,
+    "244": 2923,
+    "442": 2939,
+    "444": 2941
+  },
+  "valuation_family": "F=2^(6+20k), c=1+k mod3; k=1..30 checked; all k>=1 proved"
+}
