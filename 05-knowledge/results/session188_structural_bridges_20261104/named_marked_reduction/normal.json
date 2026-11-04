@@ -1,0 +1,3339 @@
+{
+  "marked_profile_controls": [
+    {
+      "high_entries": 0,
+      "largest_high_count": 0,
+      "nonzero_marked_entries": 4,
+      "ordered_covers": 1,
+      "rows": [
+        0
+      ],
+      "tables_sha256": "c003e53898c0adca8deab1215328f95f8785c97c4ccd2443ed254cf0f5d754cd"
+    },
+    {
+      "high_entries": 0,
+      "largest_high_count": 0,
+      "nonzero_marked_entries": 29,
+      "ordered_covers": 3,
+      "rows": [
+        0,
+        1
+      ],
+      "tables_sha256": "3c5b4bf1543505ce90751c484afb767d6b52ba41938be206825bae51263121da"
+    },
+    {
+      "high_entries": 0,
+      "largest_high_count": 0,
+      "nonzero_marked_entries": 29,
+      "ordered_covers": 3,
+      "rows": [
+        2,
+        0
+      ],
+      "tables_sha256": "990d50fcac428146bdf5b3b9f6e5c3362979b8bf995eec4fd5665da09e94b548"
+    },
+    {
+      "high_entries": 0,
+      "largest_high_count": 0,
+      "nonzero_marked_entries": 249,
+      "ordered_covers": 13,
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "tables_sha256": "8c5c55dd96505fb7a86f11a96bfd868397beeb08158b69ebf9a49f769e19e2dd"
+    },
+    {
+      "high_entries": 0,
+      "largest_high_count": 0,
+      "nonzero_marked_entries": 249,
+      "ordered_covers": 13,
+      "rows": [
+        2,
+        0,
+        3
+      ],
+      "tables_sha256": "4b6b530a61473423a553bf2f50b8d1a4d27d3f6d427a207bf80936149247b703"
+    },
+    {
+      "high_entries": 0,
+      "largest_high_count": 0,
+      "nonzero_marked_entries": 255,
+      "ordered_covers": 15,
+      "rows": [
+        4,
+        1,
+        2
+      ],
+      "tables_sha256": "6959b2b5b0082da193ca7c782e623fc20dbe3dca482c1949478e553ac49cfd52"
+    },
+    {
+      "high_entries": 0,
+      "largest_high_count": 0,
+      "nonzero_marked_entries": 249,
+      "ordered_covers": 13,
+      "rows": [
+        6,
+        0,
+        2
+      ],
+      "tables_sha256": "f40fad8677bc5d777d89d75a6238d39addf30afbf0783e8a1e2d424eab84b580"
+    },
+    {
+      "high_entries": 0,
+      "largest_high_count": 0,
+      "nonzero_marked_entries": 249,
+      "ordered_covers": 13,
+      "rows": [
+        0,
+        5,
+        1
+      ],
+      "tables_sha256": "8d5884e9fa7e871efc5ded217cdd50a9e0e54b63dc0f9eaf8ed1db342e116993"
+    },
+    {
+      "high_entries": 0,
+      "largest_high_count": 0,
+      "nonzero_marked_entries": 255,
+      "ordered_covers": 15,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "tables_sha256": "d89d4b61e55fa021f4746674be8b77c4cf71f39fc280a0e9aa4a1a7a5cce92f3"
+    },
+    {
+      "high_entries": 0,
+      "largest_high_count": 0,
+      "nonzero_marked_entries": 249,
+      "ordered_covers": 13,
+      "rows": [
+        4,
+        5,
+        0
+      ],
+      "tables_sha256": "51059a9b9d635248b67bff6033303828ae5f0be6c2609a768994637bf47a4d93"
+    },
+    {
+      "high_entries": 0,
+      "largest_high_count": 0,
+      "nonzero_marked_entries": 249,
+      "ordered_covers": 13,
+      "rows": [
+        6,
+        4,
+        0
+      ],
+      "tables_sha256": "0ce377025239a1ec082e9690d4cf04409ec8955d581d7adf2b61c4afb97b1354"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        0,
+        1,
+        3,
+        7
+      ],
+      "tables_sha256": "5cb93b9d31073afbcfb7981f7d814318d2f260b9a684491d193da314f267c570"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        2,
+        0,
+        3,
+        7
+      ],
+      "tables_sha256": "9f26d75815484b2c377c80b73fbb61cd5cf7072e936e990ca79b62f526a4ba88"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        4,
+        1,
+        2,
+        7
+      ],
+      "tables_sha256": "0d98887c3df51f127ecd5d8b417a166eb40f1b8560d836e27a24272e227faeea"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        6,
+        0,
+        2,
+        7
+      ],
+      "tables_sha256": "e8579cb28c7440c869f29a5a3b03c160cfa83976bcc4df69888ab88779f1087c"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "tables_sha256": "9c995fd3f5b708a3f995ae7f2185662d5f4f015a477e5c10437ccf4249c687f6"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        10,
+        0,
+        3,
+        6
+      ],
+      "tables_sha256": "a357f93c5c6d28a5512d4894424c7e6c5d09c11de8b166157f398d579fad2757"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        12,
+        1,
+        2,
+        6
+      ],
+      "tables_sha256": "a8f039d6a76bdba861c78fdacb271aafd9e0aa7accdefc65a463ee00fc5c24dc"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        14,
+        0,
+        2,
+        6
+      ],
+      "tables_sha256": "4b2f274cbb2681fdee556385dbf7671bb1f02c652f85cd52ac9b116ba697dcba"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        0,
+        5,
+        1,
+        7
+      ],
+      "tables_sha256": "97943246c0b51cd91300dcc7da21bdf4ee9250dfa0d9a66138e2a363e7d9d59b"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        2,
+        4,
+        1,
+        7
+      ],
+      "tables_sha256": "6f9d3bb62cc6636cf51bdcbfb0465cf60410214c96f945ecba6e5609b07e2aa4"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        4,
+        5,
+        0,
+        7
+      ],
+      "tables_sha256": "b95eb981d56d9199c3ce8c5263dcd8155244da31cb990ff3df79834737a05a84"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        6,
+        4,
+        0,
+        7
+      ],
+      "tables_sha256": "c947fa59e7ad603fe4c50e2b7b806cb91b91c7ad0ded7a556f90d377672c9c46"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        8,
+        5,
+        1,
+        6
+      ],
+      "tables_sha256": "3b79ba656b85bf23dacb786cd297dd7823946201701f95f7b9ee0c8cc14adecd"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        10,
+        4,
+        1,
+        6
+      ],
+      "tables_sha256": "aa9e299cbbb71124ba19822d9dd8617d2ec09357757aa7a18e92b4f51d6814b8"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        12,
+        5,
+        0,
+        6
+      ],
+      "tables_sha256": "2f6fcb4a5f5b5dd1c77e2199e35eb975d9c37d68a331cfaa35ac83e44bfbf172"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        14,
+        4,
+        0,
+        6
+      ],
+      "tables_sha256": "b154a3289ae8b57e938464a03590aac6cde77e7fd247f1816f22c4ef8155d348"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        0,
+        9,
+        3,
+        5
+      ],
+      "tables_sha256": "5967edf78647dbe030e016b8ba53b93fe9cf05bfea09a35a3d38f0e350bdf1c8"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        2,
+        8,
+        3,
+        5
+      ],
+      "tables_sha256": "7c4200dd4e53c2863a4c480912c7f76205d1571c8a147019756696f4ab8c49cc"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        4,
+        9,
+        2,
+        5
+      ],
+      "tables_sha256": "3a719f03869b5e1306e5c480a233c3b69b7d9a48a94e518693c4dee314174874"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        6,
+        8,
+        2,
+        5
+      ],
+      "tables_sha256": "1cd97e5ad474fad580bf1f6b40e4996df345b600154c71d0fcec0088332a814e"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        8,
+        9,
+        3,
+        4
+      ],
+      "tables_sha256": "279808cf2c504b793840ca8eaf8b15ef4c34ae9d278108b1ab00ee2f7e8b0243"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        10,
+        8,
+        3,
+        4
+      ],
+      "tables_sha256": "52d3d47e557bd388ed7e229c0df65be8e71de9fdad84aee32b185093b1c4c437"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        12,
+        9,
+        2,
+        4
+      ],
+      "tables_sha256": "60c07f69bd4d75657e086183f89f4fcbe86ec64f8a67f1d29b93e8369bef39a7"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        14,
+        8,
+        2,
+        4
+      ],
+      "tables_sha256": "3c7c9e2b8316239460f16b0dcf9764192f5867a6b9638dd1aa62576cf0811114"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        0,
+        13,
+        1,
+        5
+      ],
+      "tables_sha256": "24069006834d54a98252741d3522d551602679cba50bf48a2335bc756807e273"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        2,
+        12,
+        1,
+        5
+      ],
+      "tables_sha256": "df37b5e38feb16a87fe0c9e5372ba9b43036b6c79acc36805f73732f3aadd8c3"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        4,
+        13,
+        0,
+        5
+      ],
+      "tables_sha256": "42375c1661b6bef414884e1c070c81b0b0b2d9485677ab27f0206d4b79487056"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        6,
+        12,
+        0,
+        5
+      ],
+      "tables_sha256": "58480ceff0f135b26c7df11d6758266305f2c9a3230c425490ef3771c9ee9037"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        8,
+        13,
+        1,
+        4
+      ],
+      "tables_sha256": "8140ab8e618cea300f69a7a1abcc1a14ce1d20b4f7d55e24aa95583cadd4793a"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        10,
+        12,
+        1,
+        4
+      ],
+      "tables_sha256": "65b0e7921116940e353e45d34fce01fab70c45137ed77b224c3d04e15cf2ba79"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        12,
+        13,
+        0,
+        4
+      ],
+      "tables_sha256": "a217fc9159dd884a71930844c7bc3eb3b3e76a7d19c2d953d3504c0be26d2692"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        14,
+        12,
+        0,
+        4
+      ],
+      "tables_sha256": "8cfa46d3dee783cd6c8a62217558b72afdb031cc4a30577bc82c75fedc0f7c2a"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        0,
+        1,
+        11,
+        3
+      ],
+      "tables_sha256": "ceba5c7f192137ea6258207ae8bdc1d249320a8f564eac2133c46123cc22c65b"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        2,
+        0,
+        11,
+        3
+      ],
+      "tables_sha256": "a79bd64d63d4ae8cb2d26295d753dd5e227fbe77e62e0208f12c2888d66c70b6"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        4,
+        1,
+        10,
+        3
+      ],
+      "tables_sha256": "313e237066f639da32871a4888e6d66f4df23f655fc764cbea2489b22ab58483"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        6,
+        0,
+        10,
+        3
+      ],
+      "tables_sha256": "a311416d078894f99da60ccd3758223992b3baa10522bb179d0b60fc62651241"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        8,
+        1,
+        11,
+        2
+      ],
+      "tables_sha256": "b72b285a81c7726f906ca2d6b00ec1505b5228d9c632003c9cb1d154005a0c15"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        10,
+        0,
+        11,
+        2
+      ],
+      "tables_sha256": "a7f487203cc3172f1149facc89b25b396adad63a4f4a760f2d1b159f79b783cf"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        12,
+        1,
+        10,
+        2
+      ],
+      "tables_sha256": "da77edb55519b8bcf449224ad418cac5dbc06c7fb2c855031af815dabe7f841f"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        14,
+        0,
+        10,
+        2
+      ],
+      "tables_sha256": "048f0a63a114f5c7b757eb3da4012ed1d30ef72b9ee658156a0db0beaa2449c8"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        0,
+        5,
+        9,
+        3
+      ],
+      "tables_sha256": "a8fa7ac25f5a6ba1002f7406f1eb37c5dc3d96c6553cfaf7bfcff1f33e3f14df"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "tables_sha256": "f032245327e8e869b7c7d527d610fdc274fad297a390799a1545ff0a4fc2d93a"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        4,
+        5,
+        8,
+        3
+      ],
+      "tables_sha256": "6d080d556f3e0e257c4b94fbf5df043954b0bb06dc444361fd1c328ced72b01e"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        6,
+        4,
+        8,
+        3
+      ],
+      "tables_sha256": "2277595ddf241c3521e2af9162b7af90429f9a972effc4e41f511c9431757718"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        8,
+        5,
+        9,
+        2
+      ],
+      "tables_sha256": "1a7a254a55cd41423a9c32aa54e66bebf46c48d57bf50454f5ff11cc3a7084c0"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        10,
+        4,
+        9,
+        2
+      ],
+      "tables_sha256": "2b64b7284bf604f59a8124de50ac18cc131df07cc3478f5a00faca8ef99405c3"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        12,
+        5,
+        8,
+        2
+      ],
+      "tables_sha256": "9d65b04211e474b9b9ccba11a319e8da82321728ccd30ab7f40c10b0fa122f09"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        14,
+        4,
+        8,
+        2
+      ],
+      "tables_sha256": "d120f0dcafb7b3b32790ea1d817b0692529a65ee58a13dfe83c0870ea0f86dd4"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        0,
+        9,
+        11,
+        1
+      ],
+      "tables_sha256": "a5a284e83ff0fda13bb8a9a277c72e206eb374d4cc1841c5453dfd851c49c53b"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        2,
+        8,
+        11,
+        1
+      ],
+      "tables_sha256": "76b598b14dba54373520eebd2827f382f2ec9538b9d855b1bb27f42855aa33c3"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        4,
+        9,
+        10,
+        1
+      ],
+      "tables_sha256": "43871eeb55045d0238cde5f55ad3c5b1ea94eb05adfbfccdab63ad9472957d92"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        6,
+        8,
+        10,
+        1
+      ],
+      "tables_sha256": "a5f7464653d5fc606508f66a9e01b3903e4f5113b33f201e79b775d3c24cb613"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        8,
+        9,
+        11,
+        0
+      ],
+      "tables_sha256": "f41cd7ca1479cad14f8695c44063733da2b307b0e35f8131be77e484be495e24"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        10,
+        8,
+        11,
+        0
+      ],
+      "tables_sha256": "f6fd15b1f5602cca80a96fbd9409a35eee5053502cfaf08471e7326cc155d89e"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        12,
+        9,
+        10,
+        0
+      ],
+      "tables_sha256": "1a6981434a5653adaf5b9cd76bd815c6100dde839cec5eda07ed4065fbb3d950"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        14,
+        8,
+        10,
+        0
+      ],
+      "tables_sha256": "62be5d851009c5b858c0f64c22b851ab9ff15f06d69a6df0a8e08d4cbee44a38"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        0,
+        13,
+        9,
+        1
+      ],
+      "tables_sha256": "2052c2b2c2a6e8e27ef701e85d4a726050b9e3afb4939c0a65a4a25630fed5d0"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        2,
+        12,
+        9,
+        1
+      ],
+      "tables_sha256": "a2682a9dfe7a6c2787eedd3a9049a156b207fd9e2c7940ecf290ddc0ef9268df"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        4,
+        13,
+        8,
+        1
+      ],
+      "tables_sha256": "a9474f5bc0129821ac4d8815c654f6d3c2a5cea96e15900f7006ec7f956316b8"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1902,
+      "ordered_covers": 87,
+      "rows": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "tables_sha256": "81cc5d09a2888d337af8cd6069e4f90728364e47104bf7c7a41e11953264fabd"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        8,
+        13,
+        9,
+        0
+      ],
+      "tables_sha256": "d1f77af04da1a8293ede45c0e280542a5488055036cc0bc7af83ce0363957e7a"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1862,
+      "ordered_covers": 81,
+      "rows": [
+        10,
+        12,
+        9,
+        0
+      ],
+      "tables_sha256": "6065c4576f710624c9a54ee14a867a378db062c1d0be3c8ef71d07932f48e19e"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        12,
+        13,
+        8,
+        0
+      ],
+      "tables_sha256": "0474d080603f46adb0fb7c1af7f888f215149beb4632b0fe0a184b16c720abd3"
+    },
+    {
+      "high_entries": 1,
+      "largest_high_count": 24,
+      "nonzero_marked_entries": 1827,
+      "ordered_covers": 75,
+      "rows": [
+        14,
+        12,
+        8,
+        0
+      ],
+      "tables_sha256": "ac3215700798da16524ad29204fd81f198506a8dbe0fbabb859f88c4a4de505a"
+    },
+    {
+      "high_entries": 17,
+      "largest_high_count": 240,
+      "nonzero_marked_entries": 9452,
+      "ordered_covers": 541,
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        0
+      ],
+      "tables_sha256": "fe47d6ea9b7f7be9777f7f82ee2315edb7e499357afd592619ba7e0b01b65867"
+    },
+    {
+      "high_entries": 324,
+      "largest_high_count": 1800,
+      "nonzero_marked_entries": 34011,
+      "ordered_covers": 4683,
+      "rows": [
+        62,
+        60,
+        56,
+        48,
+        32,
+        0
+      ],
+      "tables_sha256": "b39ae8e35a9026348d54f2a40d20d47be300feb99890e8bd6c04e442c8d5c363"
+    },
+    {
+      "high_entries": 324,
+      "largest_high_count": 1800,
+      "nonzero_marked_entries": 35997,
+      "ordered_covers": 4995,
+      "rows": [
+        58,
+        60,
+        57,
+        16,
+        32,
+        8
+      ],
+      "tables_sha256": "0fe3b2264d98469f323f83d080cafe4dc4eebbc1f738a28f1cf0e9c6d48dfcff"
+    }
+  ],
+  "physical_counts": 96,
+  "physical_four_variable_faces": [
+    {
+      "base_masks": [
+        15,
+        0
+      ],
+      "child_sizes": [
+        4,
+        2,
+        2
+      ],
+      "complete_face_coefficients_by_runs": [
+        [
+          0,
+          37,
+          1708,
+          3096,
+          288
+        ],
+        [
+          0,
+          16,
+          350,
+          360,
+          0
+        ],
+        [
+          0,
+          36,
+          266,
+          -72,
+          0
+        ],
+        [
+          0,
+          -8,
+          -98,
+          -72,
+          0
+        ],
+        [
+          0,
+          8,
+          784,
+          2304,
+          288
+        ],
+        [
+          0,
+          -16,
+          -350,
+          -360,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          -648,
+          -144
+        ],
+        [
+          0,
+          -4,
+          -28,
+          0,
+          0
+        ],
+        [
+          0,
+          38,
+          714,
+          648,
+          0
+        ],
+        [
+          0,
+          2,
+          -70,
+          -72,
+          0
+        ],
+        [
+          0,
+          -14,
+          -210,
+          -216,
+          0
+        ],
+        [
+          0,
+          -4,
+          -98,
+          -72,
+          0
+        ],
+        [
+          0,
+          -18,
+          -308,
+          -288,
+          0
+        ],
+        [
+          0,
+          -2,
+          70,
+          72,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count_by_first_child_runs": [
+        [
+          0,
+          37,
+          1708,
+          3096,
+          288
+        ],
+        [
+          0,
+          53,
+          2058,
+          3456,
+          288
+        ],
+        [
+          0,
+          73,
+          1974,
+          3024,
+          288
+        ],
+        [
+          0,
+          81,
+          2226,
+          3312,
+          288
+        ],
+        [
+          0,
+          45,
+          2492,
+          5400,
+          576
+        ],
+        [
+          0,
+          45,
+          2492,
+          5400,
+          576
+        ],
+        [
+          0,
+          89,
+          2758,
+          4680,
+          432
+        ],
+        [
+          0,
+          77,
+          2632,
+          4608,
+          432
+        ],
+        [
+          0,
+          75,
+          2422,
+          3744,
+          288
+        ],
+        [
+          0,
+          93,
+          2702,
+          4032,
+          288
+        ],
+        [
+          0,
+          97,
+          2478,
+          3456,
+          288
+        ],
+        [
+          0,
+          103,
+          2562,
+          3600,
+          288
+        ],
+        [
+          0,
+          65,
+          2898,
+          5760,
+          576
+        ],
+        [
+          0,
+          65,
+          2898,
+          5760,
+          576
+        ],
+        [
+          0,
+          95,
+          2954,
+          4824,
+          432
+        ],
+        [
+          0,
+          79,
+          2730,
+          4680,
+          432
+        ]
+      ],
+      "exceptional_names_in_first_child": 0,
+      "old_rows": [
+        62,
+        60,
+        56,
+        48,
+        224,
+        192,
+        143,
+        15
+      ],
+      "queries": [
+        [
+          15,
+          0
+        ],
+        [
+          31,
+          0
+        ],
+        [
+          79,
+          0
+        ],
+        [
+          95,
+          0
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          31,
+          16
+        ],
+        [
+          79,
+          16
+        ],
+        [
+          95,
+          16
+        ],
+        [
+          15,
+          64
+        ],
+        [
+          31,
+          64
+        ],
+        [
+          79,
+          64
+        ],
+        [
+          95,
+          64
+        ],
+        [
+          15,
+          80
+        ],
+        [
+          31,
+          80
+        ],
+        [
+          79,
+          80
+        ],
+        [
+          95,
+          80
+        ]
+      ],
+      "reverse": false,
+      "roles": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "total_values": [
+        5129,
+        5855,
+        5359,
+        5907,
+        8513,
+        8513,
+        7959,
+        7749,
+        6529,
+        7115,
+        6319,
+        6553,
+        9299,
+        9299,
+        8305,
+        7921
+      ]
+    },
+    {
+      "base_masks": [
+        15,
+        0
+      ],
+      "child_sizes": [
+        4,
+        2,
+        2
+      ],
+      "complete_face_coefficients_by_runs": [
+        [
+          0,
+          37,
+          1708,
+          3096,
+          288
+        ],
+        [
+          0,
+          36,
+          266,
+          -72,
+          0
+        ],
+        [
+          0,
+          16,
+          350,
+          360,
+          0
+        ],
+        [
+          0,
+          -8,
+          -98,
+          -72,
+          0
+        ],
+        [
+          0,
+          38,
+          714,
+          648,
+          0
+        ],
+        [
+          0,
+          -14,
+          -210,
+          -216,
+          0
+        ],
+        [
+          0,
+          2,
+          -70,
+          -72,
+          0
+        ],
+        [
+          0,
+          -4,
+          -98,
+          -72,
+          0
+        ],
+        [
+          0,
+          8,
+          784,
+          2304,
+          288
+        ],
+        [
+          0,
+          8,
+          0,
+          -648,
+          -144
+        ],
+        [
+          0,
+          -16,
+          -350,
+          -360,
+          0
+        ],
+        [
+          0,
+          -4,
+          -28,
+          0,
+          0
+        ],
+        [
+          0,
+          -18,
+          -308,
+          -288,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -2,
+          70,
+          72,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count_by_first_child_runs": [
+        [
+          0,
+          37,
+          1708,
+          3096,
+          288
+        ],
+        [
+          0,
+          73,
+          1974,
+          3024,
+          288
+        ],
+        [
+          0,
+          53,
+          2058,
+          3456,
+          288
+        ],
+        [
+          0,
+          81,
+          2226,
+          3312,
+          288
+        ],
+        [
+          0,
+          75,
+          2422,
+          3744,
+          288
+        ],
+        [
+          0,
+          97,
+          2478,
+          3456,
+          288
+        ],
+        [
+          0,
+          93,
+          2702,
+          4032,
+          288
+        ],
+        [
+          0,
+          103,
+          2562,
+          3600,
+          288
+        ],
+        [
+          0,
+          45,
+          2492,
+          5400,
+          576
+        ],
+        [
+          0,
+          89,
+          2758,
+          4680,
+          432
+        ],
+        [
+          0,
+          45,
+          2492,
+          5400,
+          576
+        ],
+        [
+          0,
+          77,
+          2632,
+          4608,
+          432
+        ],
+        [
+          0,
+          65,
+          2898,
+          5760,
+          576
+        ],
+        [
+          0,
+          95,
+          2954,
+          4824,
+          432
+        ],
+        [
+          0,
+          65,
+          2898,
+          5760,
+          576
+        ],
+        [
+          0,
+          79,
+          2730,
+          4680,
+          432
+        ]
+      ],
+      "exceptional_names_in_first_child": 0,
+      "old_rows": [
+        206,
+        204,
+        200,
+        192,
+        47,
+        15,
+        176,
+        48
+      ],
+      "queries": [
+        [
+          15,
+          0
+        ],
+        [
+          31,
+          0
+        ],
+        [
+          79,
+          0
+        ],
+        [
+          95,
+          0
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          31,
+          16
+        ],
+        [
+          79,
+          16
+        ],
+        [
+          95,
+          16
+        ],
+        [
+          15,
+          64
+        ],
+        [
+          31,
+          64
+        ],
+        [
+          79,
+          64
+        ],
+        [
+          95,
+          64
+        ],
+        [
+          15,
+          80
+        ],
+        [
+          31,
+          80
+        ],
+        [
+          79,
+          80
+        ],
+        [
+          95,
+          80
+        ]
+      ],
+      "reverse": true,
+      "roles": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "total_values": [
+        5129,
+        5359,
+        5855,
+        5907,
+        6529,
+        6319,
+        7115,
+        6553,
+        8513,
+        7959,
+        8513,
+        7749,
+        9299,
+        8305,
+        9299,
+        7921
+      ]
+    },
+    {
+      "base_masks": [
+        31,
+        0
+      ],
+      "child_sizes": [
+        5,
+        2,
+        2
+      ],
+      "complete_face_coefficients_by_runs": [
+        [
+          0,
+          37,
+          3660,
+          12900,
+          2880,
+          0
+        ],
+        [
+          0,
+          0,
+          60,
+          552,
+          288,
+          0
+        ],
+        [
+          0,
+          16,
+          750,
+          1500,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          105,
+          356,
+          0,
+          0
+        ],
+        [
+          0,
+          -2,
+          -444,
+          -440,
+          1872,
+          0
+        ],
+        [
+          0,
+          0,
+          34,
+          1190,
+          2232,
+          288
+        ],
+        [
+          0,
+          -1,
+          -75,
+          -244,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          8,
+          294,
+          360,
+          0
+        ],
+        [
+          0,
+          38,
+          1530,
+          2700,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          361,
+          1548,
+          720,
+          0
+        ],
+        [
+          0,
+          2,
+          -150,
+          -300,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          118,
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          -7,
+          -671,
+          -1396,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          14,
+          -42,
+          -216,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -8,
+          -98,
+          -72,
+          0
+        ]
+      ],
+      "count_by_first_child_runs": [
+        [
+          0,
+          37,
+          3660,
+          12900,
+          2880,
+          0
+        ],
+        [
+          0,
+          37,
+          3720,
+          13452,
+          3168,
+          0
+        ],
+        [
+          0,
+          53,
+          4410,
+          14400,
+          2880,
+          0
+        ],
+        [
+          0,
+          54,
+          4575,
+          15308,
+          3168,
+          0
+        ],
+        [
+          0,
+          35,
+          3216,
+          12460,
+          4752,
+          0
+        ],
+        [
+          0,
+          35,
+          3310,
+          14202,
+          7272,
+          288
+        ],
+        [
+          0,
+          50,
+          3891,
+          13716,
+          4752,
+          0
+        ],
+        [
+          0,
+          51,
+          4098,
+          16108,
+          7632,
+          288
+        ],
+        [
+          0,
+          75,
+          5190,
+          15600,
+          2880,
+          0
+        ],
+        [
+          0,
+          78,
+          5611,
+          17700,
+          3888,
+          0
+        ],
+        [
+          0,
+          93,
+          5790,
+          16800,
+          2880,
+          0
+        ],
+        [
+          0,
+          99,
+          6434,
+          19512,
+          3888,
+          0
+        ],
+        [
+          0,
+          66,
+          4075,
+          13764,
+          4752,
+          0
+        ],
+        [
+          0,
+          69,
+          4544,
+          17012,
+          7776,
+          288
+        ],
+        [
+          0,
+          83,
+          4600,
+          14720,
+          4752,
+          0
+        ],
+        [
+          0,
+          89,
+          5292,
+          18776,
+          8064,
+          288
+        ]
+      ],
+      "exceptional_names_in_first_child": 1,
+      "old_rows": [
+        126,
+        124,
+        120,
+        112,
+        96,
+        448,
+        384,
+        287,
+        31
+      ],
+      "queries": [
+        [
+          31,
+          0
+        ],
+        [
+          30,
+          0
+        ],
+        [
+          63,
+          0
+        ],
+        [
+          62,
+          0
+        ],
+        [
+          31,
+          1
+        ],
+        [
+          30,
+          1
+        ],
+        [
+          63,
+          1
+        ],
+        [
+          62,
+          1
+        ],
+        [
+          31,
+          128
+        ],
+        [
+          30,
+          128
+        ],
+        [
+          63,
+          128
+        ],
+        [
+          62,
+          128
+        ],
+        [
+          31,
+          129
+        ],
+        [
+          30,
+          129
+        ],
+        [
+          63,
+          129
+        ],
+        [
+          62,
+          129
+        ]
+      ],
+      "reverse": false,
+      "roles": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "total_values": [
+        19477,
+        20377,
+        21743,
+        23105,
+        20463,
+        25107,
+        22409,
+        28177,
+        23745,
+        27277,
+        25563,
+        29933,
+        22657,
+        29689,
+        24155,
+        32509
+      ]
+    },
+    {
+      "base_masks": [
+        31,
+        0
+      ],
+      "child_sizes": [
+        5,
+        2,
+        2
+      ],
+      "complete_face_coefficients_by_runs": [
+        [
+          0,
+          37,
+          3660,
+          12900,
+          2880,
+          0
+        ],
+        [
+          0,
+          0,
+          60,
+          552,
+          288,
+          0
+        ],
+        [
+          0,
+          36,
+          570,
+          -300,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          187,
+          284,
+          0,
+          0
+        ],
+        [
+          0,
+          -2,
+          -444,
+          -440,
+          1872,
+          0
+        ],
+        [
+          0,
+          0,
+          34,
+          1190,
+          2232,
+          288
+        ],
+        [
+          0,
+          -6,
+          -216,
+          -180,
+          -648,
+          0
+        ],
+        [
+          0,
+          0,
+          18,
+          224,
+          144,
+          0
+        ],
+        [
+          0,
+          8,
+          1680,
+          9600,
+          2880,
+          0
+        ],
+        [
+          0,
+          1,
+          197,
+          1560,
+          1368,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          -2700,
+          -1440,
+          0
+        ],
+        [
+          0,
+          2,
+          174,
+          652,
+          216,
+          0
+        ],
+        [
+          0,
+          -2,
+          -392,
+          -2480,
+          -720,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -2,
+          -28,
+          684,
+          360,
+          0
+        ],
+        [
+          0,
+          0,
+          -8,
+          -98,
+          -72,
+          0
+        ]
+      ],
+      "count_by_first_child_runs": [
+        [
+          0,
+          37,
+          3660,
+          12900,
+          2880,
+          0
+        ],
+        [
+          0,
+          37,
+          3720,
+          13452,
+          3168,
+          0
+        ],
+        [
+          0,
+          73,
+          4230,
+          12600,
+          2880,
+          0
+        ],
+        [
+          0,
+          76,
+          4477,
+          13436,
+          3168,
+          0
+        ],
+        [
+          0,
+          35,
+          3216,
+          12460,
+          4752,
+          0
+        ],
+        [
+          0,
+          35,
+          3310,
+          14202,
+          7272,
+          288
+        ],
+        [
+          0,
+          65,
+          3570,
+          11980,
+          4104,
+          0
+        ],
+        [
+          0,
+          68,
+          3869,
+          14230,
+          6768,
+          288
+        ],
+        [
+          0,
+          45,
+          5340,
+          22500,
+          5760,
+          0
+        ],
+        [
+          0,
+          46,
+          5597,
+          24612,
+          7416,
+          0
+        ],
+        [
+          0,
+          89,
+          5910,
+          19500,
+          4320,
+          0
+        ],
+        [
+          0,
+          95,
+          6528,
+          22548,
+          6192,
+          0
+        ],
+        [
+          0,
+          41,
+          4504,
+          19580,
+          6912,
+          0
+        ],
+        [
+          0,
+          42,
+          4795,
+          22882,
+          10800,
+          288
+        ],
+        [
+          0,
+          77,
+          4830,
+          17084,
+          5184,
+          0
+        ],
+        [
+          0,
+          83,
+          5492,
+          21448,
+          9360,
+          288
+        ]
+      ],
+      "exceptional_names_in_first_child": 1,
+      "old_rows": [
+        414,
+        412,
+        408,
+        400,
+        384,
+        95,
+        31,
+        352,
+        96
+      ],
+      "queries": [
+        [
+          31,
+          0
+        ],
+        [
+          30,
+          0
+        ],
+        [
+          63,
+          0
+        ],
+        [
+          62,
+          0
+        ],
+        [
+          31,
+          1
+        ],
+        [
+          30,
+          1
+        ],
+        [
+          63,
+          1
+        ],
+        [
+          62,
+          1
+        ],
+        [
+          31,
+          128
+        ],
+        [
+          30,
+          128
+        ],
+        [
+          63,
+          128
+        ],
+        [
+          62,
+          128
+        ],
+        [
+          31,
+          129
+        ],
+        [
+          30,
+          129
+        ],
+        [
+          63,
+          129
+        ],
+        [
+          62,
+          129
+        ]
+      ],
+      "reverse": true,
+      "roles": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "total_values": [
+        19477,
+        20377,
+        19783,
+        21157,
+        20463,
+        25107,
+        19719,
+        25223,
+        33645,
+        37671,
+        29819,
+        35363,
+        31037,
+        38807,
+        27175,
+        36671
+      ]
+    },
+    {
+      "base_masks": [
+        448,
+        3584
+      ],
+      "child_sizes": [
+        6,
+        3,
+        3
+      ],
+      "complete_face_coefficients_by_runs": [
+        [
+          0,
+          1685,
+          316572,
+          2682720,
+          2246400,
+          0,
+          0
+        ],
+        [
+          0,
+          -188,
+          -36114,
+          -156420,
+          331560,
+          172800,
+          0
+        ],
+        [
+          0,
+          0,
+          -15004,
+          13392,
+          527256,
+          190080,
+          0
+        ],
+        [
+          0,
+          0,
+          -1018,
+          -66360,
+          -237600,
+          -69120,
+          0
+        ],
+        [
+          0,
+          -107,
+          -47233,
+          -481860,
+          183600,
+          345600,
+          0
+        ],
+        [
+          0,
+          0,
+          -434,
+          -51060,
+          -252000,
+          -95040,
+          0
+        ],
+        [
+          0,
+          0,
+          2342,
+          9046,
+          -95628,
+          66960,
+          17280
+        ],
+        [
+          0,
+          0,
+          51,
+          6361,
+          16916,
+          -19872,
+          -3456
+        ],
+        [
+          0,
+          0,
+          -21878,
+          -233976,
+          448848,
+          380160,
+          0
+        ],
+        [
+          0,
+          0,
+          2386,
+          12826,
+          -91308,
+          64368,
+          17280
+        ],
+        [
+          0,
+          0,
+          -434,
+          -51060,
+          -252000,
+          -95040,
+          0
+        ],
+        [
+          0,
+          0,
+          51,
+          6361,
+          16916,
+          -19872,
+          -3456
+        ],
+        [
+          0,
+          0,
+          -214,
+          -47340,
+          -352800,
+          -172800,
+          0
+        ],
+        [
+          0,
+          0,
+          7,
+          2581,
+          12596,
+          -17280,
+          -3456
+        ],
+        [
+          0,
+          0,
+          7,
+          2581,
+          12596,
+          -17280,
+          -3456
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count_by_first_child_runs": [
+        [
+          0,
+          1685,
+          316572,
+          2682720,
+          2246400,
+          0,
+          0
+        ],
+        [
+          0,
+          1497,
+          280458,
+          2526300,
+          2577960,
+          172800,
+          0
+        ],
+        [
+          0,
+          1685,
+          301568,
+          2696112,
+          2773656,
+          190080,
+          0
+        ],
+        [
+          0,
+          1497,
+          264436,
+          2473332,
+          2867616,
+          293760,
+          0
+        ],
+        [
+          0,
+          1578,
+          269339,
+          2200860,
+          2430000,
+          345600,
+          0
+        ],
+        [
+          0,
+          1390,
+          232791,
+          1993380,
+          2509560,
+          423360,
+          0
+        ],
+        [
+          0,
+          1578,
+          256677,
+          2223298,
+          2861628,
+          602640,
+          17280
+        ],
+        [
+          0,
+          1390,
+          219162,
+          1955819,
+          2720504,
+          591408,
+          13824
+        ],
+        [
+          0,
+          1685,
+          294694,
+          2448744,
+          2695248,
+          380160,
+          0
+        ],
+        [
+          0,
+          1497,
+          260966,
+          2305150,
+          2935500,
+          617328,
+          17280
+        ],
+        [
+          0,
+          1685,
+          279256,
+          2411076,
+          2970504,
+          475200,
+          0
+        ],
+        [
+          0,
+          1497,
+          244561,
+          2207483,
+          2990072,
+          623376,
+          13824
+        ],
+        [
+          0,
+          1578,
+          247247,
+          1919544,
+          2526048,
+          552960,
+          0
+        ],
+        [
+          0,
+          1390,
+          213092,
+          1727471,
+          2526896,
+          677808,
+          13824
+        ],
+        [
+          0,
+          1578,
+          234158,
+          1893503,
+          2718272,
+          697680,
+          13824
+        ],
+        [
+          0,
+          1390,
+          199087,
+          1647792,
+          2515352,
+          713664,
+          20736
+        ]
+      ],
+      "exceptional_names_in_first_child": 2,
+      "old_rows": [
+        510,
+        508,
+        504,
+        496,
+        480,
+        448,
+        3968,
+        3840,
+        3584,
+        3135,
+        2111,
+        63
+      ],
+      "queries": [
+        [
+          448,
+          3584
+        ],
+        [
+          449,
+          3584
+        ],
+        [
+          450,
+          3584
+        ],
+        [
+          451,
+          3584
+        ],
+        [
+          448,
+          3585
+        ],
+        [
+          449,
+          3585
+        ],
+        [
+          450,
+          3585
+        ],
+        [
+          451,
+          3585
+        ],
+        [
+          448,
+          3586
+        ],
+        [
+          449,
+          3586
+        ],
+        [
+          450,
+          3586
+        ],
+        [
+          451,
+          3586
+        ],
+        [
+          448,
+          3587
+        ],
+        [
+          449,
+          3587
+        ],
+        [
+          450,
+          3587
+        ],
+        [
+          451,
+          3587
+        ]
+      ],
+      "reverse": false,
+      "roles": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "total_values": [
+        5247377,
+        5559015,
+        5963101,
+        5900641,
+        5247377,
+        5160481,
+        5963101,
+        5502107,
+        5820531,
+        6137721,
+        6137721,
+        6080813,
+        5247377,
+        5160481,
+        5559015,
+        5098021
+      ]
+    },
+    {
+      "base_masks": [
+        448,
+        3584
+      ],
+      "child_sizes": [
+        6,
+        3,
+        3
+      ],
+      "complete_face_coefficients_by_runs": [
+        [
+          0,
+          1729,
+          333312,
+          2747520,
+          2077920,
+          0,
+          0
+        ],
+        [
+          0,
+          -100,
+          -41166,
+          -357240,
+          416880,
+          380160,
+          0
+        ],
+        [
+          0,
+          0,
+          -18392,
+          -121952,
+          699408,
+          418176,
+          0
+        ],
+        [
+          0,
+          0,
+          -214,
+          -47340,
+          -352800,
+          -172800,
+          0
+        ],
+        [
+          0,
+          -239,
+          -50821,
+          -306240,
+          156600,
+          138240,
+          0
+        ],
+        [
+          0,
+          0,
+          -434,
+          -51060,
+          -252000,
+          -95040,
+          0
+        ],
+        [
+          0,
+          0,
+          2386,
+          12826,
+          -91308,
+          64368,
+          17280
+        ],
+        [
+          0,
+          0,
+          7,
+          2581,
+          12596,
+          -17280,
+          -3456
+        ],
+        [
+          0,
+          0,
+          -23350,
+          -119512,
+          332424,
+          152064,
+          0
+        ],
+        [
+          0,
+          0,
+          2342,
+          9046,
+          -95628,
+          66960,
+          17280
+        ],
+        [
+          0,
+          0,
+          -434,
+          -51060,
+          -252000,
+          -95040,
+          0
+        ],
+        [
+          0,
+          0,
+          7,
+          2581,
+          12596,
+          -17280,
+          -3456
+        ],
+        [
+          0,
+          0,
+          -1018,
+          -66360,
+          -237600,
+          -69120,
+          0
+        ],
+        [
+          0,
+          0,
+          51,
+          6361,
+          16916,
+          -19872,
+          -3456
+        ],
+        [
+          0,
+          0,
+          51,
+          6361,
+          16916,
+          -19872,
+          -3456
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count_by_first_child_runs": [
+        [
+          0,
+          1729,
+          333312,
+          2747520,
+          2077920,
+          0,
+          0
+        ],
+        [
+          0,
+          1629,
+          292146,
+          2390280,
+          2494800,
+          380160,
+          0
+        ],
+        [
+          0,
+          1729,
+          314920,
+          2625568,
+          2777328,
+          418176,
+          0
+        ],
+        [
+          0,
+          1629,
+          273540,
+          2220988,
+          2841408,
+          625536,
+          0
+        ],
+        [
+          0,
+          1490,
+          282491,
+          2441280,
+          2234520,
+          138240,
+          0
+        ],
+        [
+          0,
+          1390,
+          240891,
+          2032980,
+          2399400,
+          423360,
+          0
+        ],
+        [
+          0,
+          1490,
+          266485,
+          2332154,
+          2842620,
+          620784,
+          17280
+        ],
+        [
+          0,
+          1390,
+          224678,
+          1879095,
+          2667296,
+          715824,
+          13824
+        ],
+        [
+          0,
+          1729,
+          309962,
+          2628008,
+          2410344,
+          152064,
+          0
+        ],
+        [
+          0,
+          1629,
+          271138,
+          2279814,
+          2731596,
+          599184,
+          17280
+        ],
+        [
+          0,
+          1729,
+          291136,
+          2454996,
+          2857752,
+          475200,
+          0
+        ],
+        [
+          0,
+          1629,
+          252105,
+          2062043,
+          2838800,
+          732240,
+          13824
+        ],
+        [
+          0,
+          1490,
+          258123,
+          2255408,
+          2329344,
+          221184,
+          0
+        ],
+        [
+          0,
+          1390,
+          218916,
+          1862515,
+          2415512,
+          553392,
+          13824
+        ],
+        [
+          0,
+          1490,
+          241734,
+          2101583,
+          2702360,
+          588816,
+          13824
+        ],
+        [
+          0,
+          1390,
+          202327,
+          1666512,
+          2460920,
+          713664,
+          20736
+        ]
+      ],
+      "exceptional_names_in_first_child": 2,
+      "old_rows": [
+        3646,
+        3644,
+        3640,
+        3632,
+        3616,
+        3584,
+        447,
+        319,
+        63,
+        3520,
+        2496,
+        448
+      ],
+      "queries": [
+        [
+          448,
+          3584
+        ],
+        [
+          449,
+          3584
+        ],
+        [
+          450,
+          3584
+        ],
+        [
+          451,
+          3584
+        ],
+        [
+          448,
+          3585
+        ],
+        [
+          449,
+          3585
+        ],
+        [
+          450,
+          3585
+        ],
+        [
+          451,
+          3585
+        ],
+        [
+          448,
+          3586
+        ],
+        [
+          449,
+          3586
+        ],
+        [
+          450,
+          3586
+        ],
+        [
+          451,
+          3586
+        ],
+        [
+          448,
+          3587
+        ],
+        [
+          449,
+          3587
+        ],
+        [
+          450,
+          3587
+        ],
+        [
+          451,
+          3587
+        ]
+      ],
+      "reverse": true,
+      "roles": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "total_values": [
+        5160481,
+        5559015,
+        6137721,
+        5963101,
+        5098021,
+        5098021,
+        6080813,
+        5502107,
+        5502107,
+        5900641,
+        6080813,
+        5900641,
+        5065549,
+        5065549,
+        5649807,
+        5065549
+      ]
+    }
+  ],
+  "positive_high_run_queries": 54,
+  "scope": "Factorial marked-profile sufficiency for complete named responses modulo8, not reconstruction or a collision.",
+  "source_pins": {
+    "PROOF.md": "01b1f9b904d3db87f3e1882367ff9dcf045c22cd7c5ae35750507ce26424b5d4",
+    "runs.cpp": "23fa978197c336155d1ef5c95128ab03bcbb166f7447802701848a1b83819f15",
+    "verify.py": "9a22fd3641a20bd386710a3ba1cc0340a0ed1a9baf5bb439f9786a6c688d7251"
+  },
+  "status": "PASS"
+}

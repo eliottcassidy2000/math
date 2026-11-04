@@ -1,0 +1,87 @@
+{
+  "audit_sha256": {
+    "audit.py": "11fc031bfc16fad2a508b2bdcb71b3807f6b2c213c9bde7bb74d625e68e4cf23",
+    "runs.cpp": "93e088849389c0174d61af1a39ed752b33309de514e9ca935f327fbe1b5053ee"
+  },
+  "complete_actual_run_vectors": 96,
+  "complete_marked_table_controls": 78,
+  "complete_table_records_sha256": "253a6600de9fcc7eda7ff4d8eaab44a33dd9687fbda1e72b9b74db7c37f0b5e7",
+  "physical_faces": [
+    {
+      "complete_run_vectors_sha256": "eff3eb22f9d41c797f0a269bbfb9199d0b37878df0f43316b652ac561325462c",
+      "exceptional_names": 0,
+      "positive_high_run_queries": 16,
+      "reverse": false,
+      "sizes": [
+        4,
+        2,
+        2
+      ]
+    },
+    {
+      "complete_run_vectors_sha256": "b74d62da78f49a04ee34fe4c3b42cbff01cb789c255d89732d7ddd2c8ccf7645",
+      "exceptional_names": 0,
+      "positive_high_run_queries": 16,
+      "reverse": true,
+      "sizes": [
+        4,
+        2,
+        2
+      ]
+    },
+    {
+      "complete_run_vectors_sha256": "cda7cfa28699362064f73bc8734b086ae7c87edd0d67410755dae708a8490178",
+      "exceptional_names": 1,
+      "positive_high_run_queries": 4,
+      "reverse": false,
+      "sizes": [
+        5,
+        2,
+        2
+      ]
+    },
+    {
+      "complete_run_vectors_sha256": "9cbcdfd00211f5c42971ee3c64ae544ecdcc3ad7340f340f1f53d1948c3b8e57",
+      "exceptional_names": 1,
+      "positive_high_run_queries": 4,
+      "reverse": true,
+      "sizes": [
+        5,
+        2,
+        2
+      ]
+    },
+    {
+      "complete_run_vectors_sha256": "321e10b31d631eb8e49d79019cb2cbcdee13b5ffb3315fdcc32790fd9cf042ba",
+      "exceptional_names": 2,
+      "positive_high_run_queries": 7,
+      "reverse": false,
+      "sizes": [
+        6,
+        3,
+        3
+      ]
+    },
+    {
+      "complete_run_vectors_sha256": "95247b1070f99cb0793a6bba03457cc98ac5ff6c031a73bceafcdde605d84843",
+      "exceptional_names": 2,
+      "positive_high_run_queries": 7,
+      "reverse": true,
+      "sizes": [
+        6,
+        3,
+        3
+      ]
+    }
+  ],
+  "positive_high_run_queries": 54,
+  "repeated_name_zero_controls": 900,
+  "same_name_singleton_controls": 1202,
+  "scope": "All-order finite marked-profile sufficiency and coefficient/literal cutoffs; no nonannihilation or collision theorem.",
+  "source_sha256": {
+    "named_marked_reduction/PROOF.md": "01b1f9b904d3db87f3e1882367ff9dcf045c22cd7c5ae35750507ce26424b5d4",
+    "named_marked_reduction/runs.cpp": "23fa978197c336155d1ef5c95128ab03bcbb166f7447802701848a1b83819f15",
+    "named_marked_reduction/verify.py": "9a22fd3641a20bd386710a3ba1cc0340a0ed1a9baf5bb439f9786a6c688d7251"
+  },
+  "status": "PASS"
+}
