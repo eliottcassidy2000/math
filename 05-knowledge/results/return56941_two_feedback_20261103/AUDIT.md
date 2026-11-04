@@ -13,7 +13,7 @@ matrix/counting implementations, not an external human audit or Lean proof.
 |F1--F2 run expansion|All finite templates with the declared uniform block; q-feedback bound uses an interval in a transitive base|PROVED|
 |F3 infinite3H family|Full actual second-port cut; first three run samples and independent matrices through m5|PROVED from run expansion + FINITE-EXACT coefficients|
 |F4 two-feedback absence|Every exterior word of length<=13, block gap and apex edge; monotone pruning;97,648,782 visits;38,477 independent literal controls|PROVED reduction + FINITE-EXACT head|
-|T1--T4 graded port transport|Proved five-mode space; five exact sample matrices; two extra sizes; actual inherited m1 relation; all Q4 and F49/F343 frames|PROVED reduction + FINITE-EXACT coefficients|
+|T1--T5 graded port transport|Proved five-mode space; five exact sample matrices; two extra sizes; actual inherited m1 relation; all Q4 and F49/F343 frames; guarded recovery from H,X|PROVED reduction + FINITE-EXACT coefficients|
 |C2 integer tail convolution|Coefficient identity from inherited Burnside kernel; exact denominators|PROVED reformulation|
 |A000568 outputs|Complete prefixes through256 compared by independent engines; incoming full256 hash, bit length and2-adic valuation; seven small-order variants|FINITE-EXACT|
 |Timing|Three alternating samples per declared mode on a concurrent workstation|VERIFIED measurement; no robust speedup claim|

@@ -20,10 +20,15 @@ def main():
         delta=[obs(target[m])[j]-3*obs(source[m])[j] for m in range(1,8)];v=fit(delta)
         wanted=[0,0,-135276,135276,0] if name=='S2' else [0]*5
         need(v==wanted,'complete exact defect coefficients');need(all(sum(v[a]*(a**k) for a in range(5))==y for k,y in enumerate(delta)),'two extra sizes outside interpolation');series[name]=dict(coefficients=v,samples=delta)
+    source_coefficients={name:fit([source[m]['golden'][j] for m in range(1,8)]) for j,name in enumerate(('H','X','Y'))}
+    need(source_coefficients=={'H':[0,-1061,2486,0,0],'X':[0,-877,-74696,99409,0],'Y':[0,-876,-74696,99409,0]},'source modal coefficients')
     field=[];direction=chart([0,1,1])['F343_vector_codec'];qdir=bridge.five_charts([0,1,1])
     for m in range(1,8):
         k=m-1;d=67638*(3**k-2**k);g=source[m]['golden'];h=target[m]['golden'];need(h==[3*g[0],3*g[1]+d,3*g[2]+d],'exact golden affine transport')
         sc=source[m]['charts'];tc=target[m]['charts'];need(tc['F49_charge']==[(3*x+d*y)%7 for x,y in zip(sc['F49_charge'],(-3,1,-1))],'F49 and charge transport')
+        A,rem=divmod(g[0]+1061,2486);need(rem==0,'dyadic realization guard');B,rem=divmod(g[1]+74696*A+877,99409);need(rem==0 and d==67638*(B-A),'ternary realization guard and recovered correction')
+        need(d%7==(g[0]+2*g[1]+1)%7,'phase correction free from current golden vector')
+        a,b,c=sc['F49_charge'];need(tc['F49_charge']==[(4*a+4*b+4)%7,(2*a+4*b+1)%7,(4*a+5)%7],'affine F49 pair transport with source-family charge')
         for a,b,e in zip(sc['F343_vector_codec'],tc['F343_vector_codec'],direction):need(list(b)==[(3*x+d*y)%7 for x,y in zip(a,e)],'all three F343 Frobenius frames')
         need((d%7==0)==(m%6==1),'same source clock, six-step correction period')
         for name,a in source[m]['five_Q4'].items():
@@ -39,6 +44,8 @@ def main():
         need(obs(target[m])[4]-target[m]['H']==(0 if m==1 else 3),'target readiness boundary')
     result=dict(status='FINITE_EXACT_COEFFICIENTS_WITH_PROVED_FIVE_MODE_REDUCTION',m_range=[1,7],independent_interpolation_samples=5,extra_size_controls=2,
         spectral_roots=[0,1,2,3,4],annihilator_ascending=[0,24,-50,35,-10,1],sample_smith_factors=[1,1,2,6,24],sample_lattice_index=288,
-        delta_response_coefficients=series,field_transport=field,all_size_claim='Requires the ordered two-bin/two-feedback skeleton proof in TRANSPORT.md, not polynomial fitting alone.')
+        delta_response_coefficients=series,source_golden_coefficients=source_coefficients,field_transport=field,
+        F49_affine_matrix=[[4,4],[2,4]],F49_affine_translation=[4,1],F49_affine_determinant_mod7=1,
+        all_size_claim='Requires the ordered two-bin/two-feedback skeleton proof in TRANSPORT.md, not polynomial fitting alone.')
     (HERE/'feedback_transport.json').write_text(json.dumps(result,indent=2)+'\n');print('PASS exact3-ready transport, hidden3-mode, and characteristic7 phase')
 if __name__=='__main__':main()

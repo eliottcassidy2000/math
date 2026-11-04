@@ -29,7 +29,9 @@ This packet advances actual source continuations, not a proof of completeness.
   3-ready at every m>=2. Four rooted fields and H triple, but the other
   two-run response gains135276*(3^(m-1)-2^(m-1)). Its golden correction
   has an explicit six-step characteristic7 clock, transported through
-  F49/F343 and all five Q4 presentations. See [TRANSPORT](TRANSPORT.md).
+  F49/F343 and all five Q4 presentations. On this realized family its
+  phase correction is already H+2X+1 modulo7, so no additional phase
+  coordinate is needed for this operation. See [TRANSPORT](TRANSPORT.md).
 * **Counting:** exact complete A000568 prefixes through256 agree with an
   independent implementation and the incoming full256 certificate. The
   singleton-tail convolution is valid, but benchmarking must retain the

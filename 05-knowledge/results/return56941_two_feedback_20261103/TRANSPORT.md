@@ -122,6 +122,49 @@ lattice, not a full classification of physically realizable port tensors.
 It supplies an explicit link between ordered-run memory, integer precision
 and Frobenius transport; it does not identify288 with an unrelated object.
 
+## T5. On this source family, the phase correction comes for free
+
+The same proved five-mode space and literal samples give
+
+    H=2486*2^k-1061,
+    X=99409*3^k-74696*2^k-877,  Y=X+1,  k=m-1.
+
+Consequently the existing integral golden observation already contains
+both growth modes. Recover A=(H+1061)/2486, then
+B=(X+74696*A+877)/99409. For a realized source these divisions are exact,
+A=2^k, B=3^k and d_m=67638*(B-A). Divisibility alone is not a sufficient
+source-realization test; the actual source-family guard remains required.
+
+Modulo7 the divisions simplify to
+
+    d_m = H+2X+1 mod7.
+
+No additional m-clock bit is needed to compute this correction from the
+current golden vector **within the declared input family**. Using Y-X=1
+in the F49-plus-charge chart gives H=2a-b+2 and therefore the concrete map
+
+    (a',b')=(4a+4b+4, 2a+4b+1),
+    c'=4a+5,                                            (T5)
+
+over F7. Its2-by2 linear part has determinant1. Thus this particular
+phase transport is an invertible affine map of the coordinate plane;
+it is not identified with field multiplication or Frobenius. Equations
+(T3)--(T4) still give the correct transported Frobenius frames.
+
+This sharpens the memory statement: H alone loses the third growth mode,
+but the existing golden coordinate X already retains it, so no extra
+phase coordinate is necessary for this operation. The full joint-port
+carrier and source realization are still needed for arbitrary later
+complements. Invertible field-coordinate transport does not make the
+tournament construction invertible, nor put its3-ready outputs back in
+the original1-ready source family.
+
+There is a concrete boundary hostile inside this very family: m1 and m7
+both have golden vector(4,1,2) modulo7, hence identical current F49/F343
+observations, but their readiness gaps are0 and1. The initial-size guard
+cannot be inferred from that phase. Full integer data or the explicit
+steady-family guard m>=2 must remain in a carrier that tests readiness.
+
 The next operator to seek is a realization-preserving return from this
 3-ready family, carrying d_m and the joint endpoint data. The missing
 56935+2 lane and the81/27 hostile prevent replacing that problem by a

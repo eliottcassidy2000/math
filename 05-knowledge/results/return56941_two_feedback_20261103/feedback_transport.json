@@ -139,6 +139,29 @@
       ]
     }
   },
+  "source_golden_coefficients": {
+    "H": [
+      0,
+      -1061,
+      2486,
+      0,
+      0
+    ],
+    "X": [
+      0,
+      -877,
+      -74696,
+      99409,
+      0
+    ],
+    "Y": [
+      0,
+      -876,
+      -74696,
+      99409,
+      0
+    ]
+  },
   "field_transport": [
     {
       "m": 1,
@@ -666,5 +689,20 @@
       }
     }
   ],
+  "F49_affine_matrix": [
+    [
+      4,
+      4
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "F49_affine_translation": [
+    4,
+    1
+  ],
+  "F49_affine_determinant_mod7": 1,
   "all_size_claim": "Requires the ordered two-bin/two-feedback skeleton proof in TRANSPORT.md, not polynomial fitting alone."
 }
