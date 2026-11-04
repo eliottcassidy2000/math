@@ -20,8 +20,8 @@ The tree reaches primes 1537279, 4611821 and 4611833, and the 7p value
 4611817 = 7 * 658831 with prime quotient. Exact trial division is saved in
 [the lane receipt](continuation/lanes.json). The other targets, and
 170807 = 7 * 13 * 1877 itself, are auxiliary composites. A source selector
-for prime/7p outputs must therefore permit intermediate values outside
-those lanes.
+using this tree must therefore permit intermediate values outside the
+prime/7p lanes; this is not a necessity theorem for every possible selector.
 
 The fourteen programs use 944 native complements and reach peak order 25.
 An independent interpreter replays every guard, temporary birth/deletion,
