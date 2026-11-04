@@ -1,0 +1,29 @@
+{
+  "status": "NORMAL_OPTIMIZED_FINITE_CONTROLS_IDENTICAL_AND_SCOPED_MATHEMATICAL_REVIEW",
+  "normal_optimized_identical": true,
+  "files": {
+    "COVERAGE.md": "f5a7b222eb6d1af417fa4e2e995f6bb8e2be503f91bdbdf464eab34376ba26e8",
+    "REVIEW.md": "b40e91a22a06529e810738aef97092ae066cbf2ce80b518b3fd6f0c56f13fb77",
+    "check_coverage.py": "ac951133de70055a2b6fc6907a8daad8a23e71cf05a73a568b67ce8870818005",
+    "audit_c2.py": "6aa135f393e45178e21dc8515d75bc9ca03a54d6570bee69629f4eb9024069b1",
+    "reproduce.py": "ad7d02141b1bc0477ab6deae35188a635d1031a517345f8d378f34d658ae857a",
+    "coverage.json": "17a1ec3f27aee0863d34dbdf0b992936e91bc920f5195b83832b3fd0d5973b8a",
+    "c2_audit.json": "0ea07d34146f9bc47e601b980edb11ad133128be9ce44ced7fdfd76be43d1654",
+    "normal.out": "cc04020a87999c8d371aba0da3a3e2a4c4b8d8f2b232e19c5c30cca6e44e84d6",
+    "optimized.out": "cc04020a87999c8d371aba0da3a3e2a4c4b8d8f2b232e19c5c30cca6e44e84d6"
+  },
+  "reviewed_or_inherited_source_pins": {
+    "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+    "05-knowledge/results/balanced_ternary_returns_20261103/conditional/NOTE.md": "3d96fb2cdcd99fea0fc55c283ebf2ee6fdce2abdb2cec3b8672108f2ce72080a",
+    "05-knowledge/results/two_entry_funnels_20261103/READY.md": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c",
+    "05-knowledge/results/source_selection_closure_20261103/GRAMMAR.md": "c3113efeab85ddde5e155d46de3d5327b2673874461d08f682ca5b1e59a03e7d",
+    "05-knowledge/results/source_selection_closure_20261103/BRANCH.md": "26822bbb84ac8b889806a357ae72f647535816f7e2b1e57fb58ee6919843b3da",
+    "05-knowledge/results/multiport_defect_grammar_20261103/construction/algebra.py": "24c3193dacf557c7032bfa514f9f05b7c440b18371be9aa6693282d950c6b3d4",
+    "05-knowledge/results/multiport_defect_grammar_20261103/construction/RESULT.md": "3d4732cc535e91c9f6cfd6851e6f029c71020624af37e6cb3b4298d71c809a0f",
+    "05-knowledge/results/multiport_defect_grammar_20261103/transport/PROOF.md": "356a0a3dbdbf9c5da4693b82d1ef8ca3b6ed388bb4dd6faefa18a479b90cba8e",
+    "05-knowledge/results/multiport_defect_grammar_20261103/transport/check_transport.py": "9d333960a9e0e2490b8f39796289e4ef5331b56bdf8febf3f7d9770e4904f599",
+    "05-knowledge/results/zero_ready_strong_switch_20261103/literal/realized_generation2_seed4_depth3_all_prefixes.json": "695c53de7437906302f6d50cc55948fd603b283bfb23518ac9e98ba6469e252c"
+  },
+  "reproduction": "python 05-knowledge/results/multiport_defect_grammar_20261103/coverage/reproduce.py",
+  "scope": "Arithmetic induction and explicit source-type obligations; independent small C2/C4 and literal start-defect controls. Does not claim arbitrary-depth digit closure or global tournament spectrum completeness."
+}

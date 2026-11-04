@@ -1,0 +1,4 @@
+PASS: three exact seed grammars through10001, all unary170807 depths0..10, 75 exhaustive terminal-C3 port identities and 64 actual H9 birth cuts
+absorption29/31 hits [(31, 11, True), (31, 13, True), (31, 14, True), (31, 19, True), (31, 21, True), (31, 22, True), (31, 35, True), (31, 37, True), (31, 38, True)]
+PASS: 138 exact C2/C4 cases, transported-auxiliary strong tripling, wrong-auxiliary hostile, and all strong small-core11/13 controls
+auxiliary hostile {'source_rows': (26, 20, 25, 2, 8), 'source_H': 9, 'correct_auxiliary': 3, 'correct_H': 27, 'wrong_auxiliary': 4, 'wrong_H': 31}

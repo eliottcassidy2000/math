@@ -1,0 +1,108 @@
+{
+  "status": "FINITE_EXACT_INDEPENDENT_C2_C4_AND_AUXILIARY_TRANSPORT_AUDIT",
+  "universe": "all labelled inputs orders1..3 and every w,a, plus displayedTT4/Q4/strongH9 controls",
+  "formula_cases": 138,
+  "strong_cases": 60,
+  "source_sha256": "24c3193dacf557c7032bfa514f9f05b7c440b18371be9aa6693282d950c6b3d4",
+  "auxiliary_hostile": {
+    "source_rows": [
+      26,
+      20,
+      25,
+      2,
+      8
+    ],
+    "source_H": 9,
+    "correct_auxiliary": 3,
+    "correct_H": 27,
+    "wrong_auxiliary": 4,
+    "wrong_H": 31
+  },
+  "strong_small_core_control": {
+    "universe": "all labelled strong tournaments orders1..5",
+    "sources": 571,
+    "start_ready_counts": [
+      1,
+      3,
+      5,
+      9,
+      15
+    ]
+  },
+  "escaped_suffix": {
+    "outer_H": 1537279,
+    "carrier": "induced named B14",
+    "rows": [
+      10622,
+      632,
+      634,
+      112,
+      512,
+      80,
+      2576,
+      8831,
+      1278,
+      2345,
+      13055,
+      9662,
+      11263,
+      894
+    ],
+    "names": [
+      1,
+      2,
+      4,
+      6,
+      7,
+      8,
+      14,
+      21,
+      22,
+      31,
+      32,
+      33,
+      40,
+      54
+    ],
+    "H": 80319,
+    "start_defects": {
+      "1": 508482,
+      "2": 179379,
+      "4": 286884,
+      "6": 81606,
+      "7": 616,
+      "8": 32280,
+      "14": 28298,
+      "21": 719571,
+      "22": 392926,
+      "31": 28764,
+      "32": 1088101,
+      "33": 211466,
+      "40": 2044877,
+      "54": 495357
+    },
+    "end_defects": {
+      "1": 101004,
+      "2": 537615,
+      "4": 356577,
+      "6": 912567,
+      "7": 1761137,
+      "8": 1327947,
+      "14": 538027,
+      "21": 90537,
+      "22": 55331,
+      "31": 204681,
+      "32": 2960,
+      "33": 43627,
+      "40": 10741,
+      "54": 155856
+    },
+    "outdegree_one_names": [
+      7
+    ],
+    "minimum_start_defect": 616,
+    "minimum_C2_H": 242189,
+    "scope": "No auxiliary re-marking gives a zero-offset C2 scalar triple on this exact B14; this does not rule out another actual entry or macro."
+  },
+  "scope": "Independent finite formula/transport controls. General proof is the sibling construction theorem. Strong11/13 all-order exclusion also requires inherited strong-order lower bound, not this finite census alone. The no1/2-start-ready C2-output obstruction requires strong INPUT order>=4; C3 input is an explicit exception."
+}

@@ -1,0 +1,57 @@
+{
+  "status": "FINITE-EXACT",
+  "all_labelled_deletion_orders": [
+    0,
+    4
+  ],
+  "all_incoming_set_cases": 1099,
+  "actual_deletion_names": [
+    1,
+    2,
+    4,
+    6,
+    7,
+    8,
+    14,
+    21,
+    22,
+    31,
+    33,
+    40,
+    54
+  ],
+  "actual_deletion_rows": [
+    5502,
+    632,
+    634,
+    112,
+    512,
+    80,
+    1552,
+    4735,
+    254,
+    1321,
+    4542,
+    6143,
+    894
+  ],
+  "actual_H_deletion": 13043,
+  "start_counts": [
+    0,
+    0
+  ],
+  "directed_joint_counts": [
+    890,
+    2070
+  ],
+  "full_suffix_H_F32": [
+    80319,
+    83279
+  ],
+  "full_suffix_J32_to33_to22": [
+    890,
+    2070
+  ],
+  "defect": 2960,
+  "source": "previous packet literal generation2_seed4 index1"
+}

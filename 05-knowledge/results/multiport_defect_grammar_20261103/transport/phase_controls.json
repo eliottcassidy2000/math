@@ -1,0 +1,180 @@
+{
+  "status": "FINITE-EXACT readout compatibility; no physical Frobenius transport inferred",
+  "hostile_81_27": [
+    {
+      "rows": [
+        254,
+        244,
+        248,
+        242,
+        4064,
+        3904,
+        3968,
+        3872,
+        3599,
+        1039,
+        2063,
+        527
+      ],
+      "H": 462915,
+      "E8_2": 646002,
+      "start8": 47142,
+      "cut": 256,
+      "response": 1061775
+    },
+    {
+      "rows": [
+        254,
+        244,
+        248,
+        242,
+        4064,
+        3904,
+        3968,
+        3872,
+        15,
+        2319,
+        783,
+        1295
+      ],
+      "H": 462915,
+      "E8_2": 963549,
+      "start8": 31185,
+      "cut": 256,
+      "response": 1395279
+    }
+  ],
+  "literal_170807_gauges": [
+    {
+      "tag": "target",
+      "root_name": 50,
+      "H": 170807,
+      "end_root": 53,
+      "S_root_2": 21494161,
+      "golden": [
+        170807,
+        10747054,
+        10747107
+      ],
+      "charts": {
+        "observer_mod7": [
+          0,
+          3,
+          0
+        ],
+        "F343_vector_codec": [
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            5,
+            6,
+            2
+          ],
+          [
+            6,
+            5,
+            5
+          ]
+        ],
+        "F49_charge": [
+          3,
+          0,
+          0
+        ],
+        "F49_frobenius": [
+          3,
+          0,
+          0
+        ]
+      },
+      "joint_controls": [
+        {
+          "ports": [
+            50,
+            6
+          ],
+          "ordered_pair": [
+            689,
+            2515397
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "zero_target",
+      "root_name": 39,
+      "H": 170807,
+      "end_root": 53,
+      "S_root_2": 2689007,
+      "golden": [
+        170807,
+        1344477,
+        1344530
+      ],
+      "charts": {
+        "observer_mod7": [
+          0,
+          1,
+          5
+        ],
+        "F343_vector_codec": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            6,
+            2,
+            2
+          ],
+          [
+            5,
+            4,
+            0
+          ]
+        ],
+        "F49_charge": [
+          2,
+          5,
+          2
+        ],
+        "F49_frobenius": [
+          1,
+          2,
+          2
+        ]
+      },
+      "joint_controls": [
+        {
+          "ports": [
+            39,
+            6
+          ],
+          "ordered_pair": [
+            371,
+            317503
+          ]
+        },
+        {
+          "ports": [
+            39,
+            50
+          ],
+          "ordered_pair": [
+            86501,
+            2195
+          ]
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "return6325_completion_20261103\\halving_response.json": "3d7b1af0e0f1f0be20985390b404096452ac9f238311653fa2521fa742585e35",
+    "zero_ready_strong_switch_20261103\\history_phase\\validation_new.json": "2080f8eee99cf42d158331d69dd16a976d76d0b949eb3bede49a34aa2d6fe5f4"
+  },
+  "checker_sha256": "b653ccbd21acbea758bef0238f871ae58a36e1b6a828504e874ca3597a0e0f78"
+}

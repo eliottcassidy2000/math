@@ -1,0 +1,41 @@
+{
+  "status": "FINITE-EXACT_INDEPENDENT",
+  "exact_budget_statistics": [
+    {
+      "exact_edges": 0,
+      "examined": 1,
+      "strong": 1,
+      "repairable": 0
+    },
+    {
+      "exact_edges": 1,
+      "examined": 91,
+      "strong": 89,
+      "repairable": 2
+    },
+    {
+      "exact_edges": 2,
+      "examined": 4095,
+      "strong": 3938,
+      "repairable": 130
+    },
+    {
+      "exact_edges": 3,
+      "examined": 121485,
+      "strong": 115389,
+      "repairable": 4192
+    }
+  ],
+  "counted_repairable_graphs": 4324,
+  "target_H": 1537279,
+  "minimum_prefix": 4,
+  "hits": [],
+  "nearest_distance": 80,
+  "positive_control_H": 46073,
+  "hostile_minimum_defect": 2960,
+  "methods": [
+    "independent Warshall closure",
+    "backward endpoint deletion recurrence",
+    "exact monotone prefix equations on every actual mark"
+  ]
+}
