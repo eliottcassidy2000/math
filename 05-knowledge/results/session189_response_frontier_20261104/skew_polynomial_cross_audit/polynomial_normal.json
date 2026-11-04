@@ -1,0 +1,20 @@
+{
+  "exact_endpoint_coordinates": 72,
+  "exact_repeated_run_coordinates": 324,
+  "fixed_prime_quotients": 4,
+  "large_exact_coefficients": 576,
+  "large_grouped_polynomials": 36,
+  "output_pins": {
+    "all_polynomial_recount.json": "0d5f26772f83a95897fb2c69720b751c420f4f6f7932f8ef766055050a476a70",
+    "four_quotient_recount.json": "d5c2727ae30788e5f36a4422e5a90de67ccba6f32fa037499429353a3efaea2d"
+  },
+  "physical_contracted_order": 17,
+  "producer_proof_sha256": "d3cc81012316efe0d13a146016403dc7beef42683965c7ae7d763f7ddf5d0bb7",
+  "small_contexts": 3,
+  "source_pins": {
+    "polynomial_audit.py": "61ac24c70ef9d2ff436db055bc10af9ff10448e3af1e1f5677ef343051d7d618",
+    "weighted_forward.cpp": "c79c3d1347915a0403265743f59e25a3b3d6323124ad0a26bf01d018f281571c"
+  },
+  "status": "PASS",
+  "total_exact_polynomial_coordinates": 620
+}

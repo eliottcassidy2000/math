@@ -1,0 +1,26 @@
+{
+  "files": [
+    "REVIEW.md",
+    "README.md",
+    "DEPENDENCIES.json",
+    "polynomial_audit.py",
+    "weighted_forward.cpp",
+    "physical_audit.py",
+    "compressed_suffix.cpp",
+    "literal.cpp",
+    "replay_audit.py",
+    "four_quotient_recount.json",
+    "all_polynomial_recount.json",
+    "independent_small_banks.json",
+    "physical_query_recount.json",
+    "compression_recount.json",
+    "small_grouped_controls.json",
+    "producer_source_pins.json",
+    "polynomial_normal.json",
+    "polynomial_optimized.json",
+    "physical_normal.json",
+    "physical_optimized.json",
+    "replay_normal.json",
+    "replay_optimized.json"
+  ]
+}

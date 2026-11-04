@@ -1,0 +1,8 @@
+{
+  "allowlisted_files": 31,
+  "producer_normal_optimized_receipt_sha256": "6f63aac5a55a6028b56b971d656676e4017bd5f10cdcbaf7320602e46aeb33cd",
+  "replay_source_sha256": "bc56b1f01a8cf81c146be4e4d681f80eb6cc916a98701569de0c0538ed7ea721",
+  "scope": "The documented C++ computations are independently recounted by the other audit programs; this isolated replay additionally checks the exact frozen Python verifier and every source/artifact byte.",
+  "source_pins_sha256": "c4d2fb4548b1a25519792413fc405e3faf41126be18ad8f2da24f79e6cd182c8",
+  "status": "PASS"
+}

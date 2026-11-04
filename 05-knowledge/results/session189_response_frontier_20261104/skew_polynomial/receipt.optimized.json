@@ -1,0 +1,189 @@
+{
+  "certificates": [
+    {
+      "group": 1,
+      "k_coefficients": [
+        175478400,
+        4492193028,
+        55309078308,
+        430283945280,
+        2344430891040,
+        9403322261760,
+        28492042763520,
+        66016116633600,
+        117239622393600,
+        158532365376000,
+        160481263219200,
+        117840141619200,
+        59306146099200,
+        18307441152000,
+        2615348736000,
+        0
+      ],
+      "node": 860,
+      "strict_constant": 175478400
+    },
+    {
+      "group": 4,
+      "k_coefficients": [
+        158246148,
+        8124288348,
+        145881566988,
+        1432342229280,
+        9061699638000,
+        40041162181440,
+        129145014452160,
+        311358329533440,
+        566807409423360,
+        778060261440000,
+        794691196992000,
+        586585359360000,
+        296094839040000,
+        91537205760000,
+        13076743680000,
+        0
+      ],
+      "node": 2005,
+      "strict_constant": 158246148
+    },
+    {
+      "group": 4,
+      "k_coefficients": [
+        248375296,
+        6451706436,
+        78618630756,
+        594844812480,
+        3117630187680,
+        11960863850880,
+        34614308695680,
+        76720173788160,
+        130819988355840,
+        170733733632000,
+        167853337344000,
+        120530214604800,
+        59754491596800,
+        18307441152000,
+        2615348736000,
+        0
+      ],
+      "node": 4067,
+      "strict_constant": 248375296
+    },
+    {
+      "group": 1,
+      "k_coefficients": [
+        50196404,
+        5509504092,
+        116664281772,
+        1233992807520,
+        8153328009360,
+        37088950006080,
+        122166515943360,
+        299269661644800,
+        551574294163200,
+        764439850944000,
+        786487336588800,
+        583596389376000,
+        295596677376000,
+        91537205760000,
+        13076743680000,
+        0
+      ],
+      "node": 6501,
+      "strict_constant": 50196404
+    }
+  ],
+  "independent_compression_controls": 100,
+  "physical_actual_queries": 208,
+  "physical_controls": [
+    {
+      "ambient": false,
+      "contrast": 350956800,
+      "m": 3,
+      "node": 860
+    },
+    {
+      "ambient": false,
+      "contrast": 350956800,
+      "m": 5,
+      "node": 860
+    },
+    {
+      "ambient": true,
+      "contrast": 10037256456,
+      "m": 3,
+      "node": 860
+    },
+    {
+      "ambient": false,
+      "contrast": 316492296,
+      "m": 3,
+      "node": 2005
+    },
+    {
+      "ambient": false,
+      "contrast": 496750592,
+      "m": 3,
+      "node": 4067
+    },
+    {
+      "ambient": false,
+      "contrast": 100392808,
+      "m": 3,
+      "node": 6501
+    }
+  ],
+  "scope": "General sign-definite excursion-polynomial sufficient criterion; four explicit prime-nine odd-transitive-root families with eight TT2 children, every fixed ambient. No unrestricted prime-nine closure or response collision.",
+  "small_complete_graphs": 9,
+  "small_complete_named_coefficients": 15219,
+  "small_degree_counts": {
+    "0": 9,
+    "1": 150,
+    "2": 1191,
+    "3": 4770,
+    "4": 9099
+  },
+  "small_mixed_controls": [
+    {
+      "contrast": 16,
+      "graph": 0,
+      "group": 1
+    },
+    {
+      "contrast": -16,
+      "graph": 0,
+      "group": 2
+    },
+    {
+      "contrast": 120,
+      "graph": 3,
+      "group": 1
+    },
+    {
+      "contrast": -120,
+      "graph": 3,
+      "group": 2
+    },
+    {
+      "contrast": 4,
+      "graph": 6,
+      "group": 1
+    },
+    {
+      "contrast": 8,
+      "graph": 6,
+      "group": 2
+    },
+    {
+      "contrast": -8,
+      "graph": 6,
+      "group": 3
+    },
+    {
+      "contrast": -4,
+      "graph": 6,
+      "group": 4
+    }
+  ],
+  "status": "PASS"
+}

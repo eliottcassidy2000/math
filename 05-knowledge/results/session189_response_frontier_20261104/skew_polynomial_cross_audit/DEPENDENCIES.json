@@ -1,0 +1,8 @@
+{
+  "session189-collision-next/PROOF.md": "492fe4d4f81e332437f70ce9db9b69b785745e779c01dbbc19afd78360892111",
+  "session189-collision/PROOF.md": "dcaad9182ddea6a9520a1fd15deaa9f32bb60b1f18e9e54dae52b2dc3619d824",
+  "session189-odd-collision-cross-audit/REVIEW.md": "a51ea0640fa035ca420edaa653b25620e069f5b35a51124f84b27c8daaa789f3",
+  "session189-odd-transitive-audit/REVIEW.md": "c8cfe32ed3bb6856648a4bc341e33c059f500e02d5556e7b7c0e78d55e519fdf",
+  "session189-odd-transitive/PROOF.md": "4f0123e3244b4515d80122d23e8bb62cd671c569a411d3ad9602043ea2a25a6a",
+  "session189-skew-polynomial/PROOF.md": "d3cc81012316efe0d13a146016403dc7beef42683965c7ae7d763f7ddf5d0bb7"
+}

@@ -1,0 +1,79 @@
+{
+  "format": "lossless-compressed-base64-parts-v2",
+  "archives": [
+    {
+      "path": "skew_polynomial/physical_queries.json",
+      "bytes": 74229,
+      "sha256": "2a3396eca02342137f6a365479b99cfe30c61917d7368c65f1ab176d750917ed",
+      "git_blob_sha": "57c4bac12836e45af25adc5f3ae169f98670a818",
+      "compression": "xz",
+      "compressed_bytes": 4824,
+      "compressed_sha256": "91a650665443cd64c215f2eb4b914f24ec8b6b37ead43181d16034e23cc154c6",
+      "parts": [
+        "skew_polynomial/physical_queries.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "skew_polynomial/small_bank.json",
+      "bytes": 152527,
+      "sha256": "06d83ad28ec2f0e9400ead666418db04ae5c27aa30687b47b1a85a83ec7ac7e6",
+      "git_blob_sha": "8730cff77c1347b3409ca9e1f7402d36691b8c77",
+      "compression": "xz",
+      "compressed_bytes": 34224,
+      "compressed_sha256": "ae9fa657206e657953279b0b1f84ba22134f29d490b431cc80b4275b7edd99ac",
+      "parts": [
+        "skew_polynomial/small_bank.json.xz.b64.parts/00001.txt",
+        "skew_polynomial/small_bank.json.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "skew_polynomial/small_queries.txt",
+      "bytes": 705875,
+      "sha256": "ca5a0399ab70e166ff3cf12fabc0bd11093b66866a6d8d4d1774fc1af712835a",
+      "git_blob_sha": "06473f54ebfc03818862a00e43e72fe85d30cec4",
+      "compression": "xz",
+      "compressed_bytes": 29388,
+      "compressed_sha256": "3229384baae6ad2092c9b7678f0c4dfbb5dc31e44cfad1ac2d9244025ceee777",
+      "parts": [
+        "skew_polynomial/small_queries.txt.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "skew_polynomial/small_values.txt",
+      "bytes": 86559,
+      "sha256": "874e521730e7a62f8fbe328677007274b069932d93bb646712bf947c97c0837b",
+      "git_blob_sha": "94d7f5ba41c54ba0db2a9604593246905ad5567b",
+      "compression": "xz",
+      "compressed_bytes": 21456,
+      "compressed_sha256": "320657349bb620d78f7e75d0558cbe71260d1442df6e054fca3ef8d896f8eb68",
+      "parts": [
+        "skew_polynomial/small_values.txt.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "skew_polynomial_cross_audit/independent_small_banks.json",
+      "bytes": 152527,
+      "sha256": "06d83ad28ec2f0e9400ead666418db04ae5c27aa30687b47b1a85a83ec7ac7e6",
+      "git_blob_sha": "8730cff77c1347b3409ca9e1f7402d36691b8c77",
+      "compression": "xz",
+      "compressed_bytes": 34224,
+      "compressed_sha256": "ae9fa657206e657953279b0b1f84ba22134f29d490b431cc80b4275b7edd99ac",
+      "parts": [
+        "skew_polynomial_cross_audit/independent_small_banks.json.xz.b64.parts/00001.txt",
+        "skew_polynomial_cross_audit/independent_small_banks.json.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "skew_polynomial_cross_audit/physical_query_recount.json",
+      "bytes": 72272,
+      "sha256": "01f9b8b5e4b3a6abd0d92b61208dad877cb932c5ace2b766e00d5bb7d76bce14",
+      "git_blob_sha": "ff70e8d9425e1cc1d0b3a387ef7d21ffd12d1381",
+      "compression": "xz",
+      "compressed_bytes": 5740,
+      "compressed_sha256": "5935e7924c30cfd0e0f88dd3388e7ec75b489943b37797dd6d716cb33cec7247",
+      "parts": [
+        "skew_polynomial_cross_audit/physical_query_recount.json.xz.b64.parts/00001.txt"
+      ]
+    }
+  ]
+}

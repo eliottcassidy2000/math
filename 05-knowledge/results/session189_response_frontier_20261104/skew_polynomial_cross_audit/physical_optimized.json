@@ -1,0 +1,28 @@
+{
+  "complete_small_named_coordinates": 15219,
+  "complete_small_named_graphs": 9,
+  "independent_literal_compression_controls": 100,
+  "large_actual_queries": 208,
+  "maximum_large_physical_order": 23,
+  "named_degree_counts": {
+    "0": 9,
+    "1": 150,
+    "2": 1191,
+    "3": 4770,
+    "4": 9099
+  },
+  "output_pins": {
+    "compression_recount.json": "7a67a75bd66191fb2b0c40760bb502d9dc35ae4d05582f840650badb034eb1a2",
+    "independent_small_banks.json": "06d83ad28ec2f0e9400ead666418db04ae5c27aa30687b47b1a85a83ec7ac7e6",
+    "physical_query_recount.json": "01f9b8b5e4b3a6abd0d92b61208dad877cb932c5ace2b766e00d5bb7d76bce14",
+    "small_grouped_controls.json": "33be6708581044eca3456c55950e19b8e6cbb574e339de8b64910ce0ff9d5265"
+  },
+  "producer_proof_sha256": "d3cc81012316efe0d13a146016403dc7beef42683965c7ae7d763f7ddf5d0bb7",
+  "source_pins": {
+    "compressed_suffix.cpp": "5c050f7735fe9fe9e07ff02100cf98ee557bcf019c2e569a6d92990cc4c0165e",
+    "literal.cpp": "556f4c37dc7ea93d8d575149dc59f0127dee6acdfe87203b3bd1d0865f515888",
+    "physical_audit.py": "b35d53e1ca92fa2a30c0e8e153f9b3ad89578ec49f753be47da722d953afe2a5",
+    "polynomial_audit.py": "61ac24c70ef9d2ff436db055bc10af9ff10448e3af1e1f5677ef343051d7d618"
+  },
+  "status": "PASS"
+}
