@@ -1,0 +1,26 @@
+{
+  "hostile": [
+    {
+      "after": 611,
+      "before": 423,
+      "defect": 114
+    },
+    {
+      "after": 471,
+      "before": 423,
+      "defect": 84
+    }
+  ],
+  "physical_chain": [
+    157,
+    475,
+    1429
+  ],
+  "physical_root_F": [
+    169,
+    521,
+    1563
+  ],
+  "scope": "Independent small literal checks for NOTE.md, not replay of the incoming all-clock native compiler.",
+  "status": "PASS"
+}
