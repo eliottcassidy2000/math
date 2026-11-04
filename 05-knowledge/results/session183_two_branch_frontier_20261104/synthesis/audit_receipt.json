@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "relative_links": [
+    "../missing44/PROOF.md",
+    "../missing44_audit/REPORT.md",
+    "../missing44_mining_audit/REPORT.md",
+    "../ports/PROOF.md",
+    "../ports_audit/REPORT.md",
+    "../other/PROOF.md",
+    "../other_audit/REVIEW.md",
+    "../induction/PROOF.md",
+    "../induction_audit/AUDIT.md",
+    "../mining/PROOF.md",
+    "../mining_audit/REPORT.md"
+  ],
+  "synthesis_sha256": "34e2fe6c0f524b82e8605c4cf8909f52c3ae965871621386c8a5619dd4478080",
+  "scope": "Synthesis consistency and link checks; symbolic review in AUDIT.md."
+}

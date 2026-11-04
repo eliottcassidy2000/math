@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "source_byte_equal": true,
+  "names": 18,
+  "changed_pairs": 10,
+  "full_joint_coefficients": 196,
+  "all_endpoint_fields": 14,
+  "h": 40085,
+  "F": 633897,
+  "J": 499420,
+  "H": 4611841,
+  "arbitrary_prefix_difference": [
+    -503924,
+    62991
+  ],
+  "isolation": "p >= (n+1)a and p <= 8a force n <= 7; congruence a=1 mod62991 with a <=5040 forces a=1; p=8 then TT3",
+  "native_scope": "not audited here",
+  "source_sha256": "fd41d36a6bd6256c37d028a42babcdd269a3b4de8bbeebe680807e16678bcf7a"
+}
