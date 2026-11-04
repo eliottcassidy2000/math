@@ -1,0 +1,83 @@
+{
+  "bank_sha256": "b4e559ad6cb31980852034f9c7f61e366a7cb479fee4d9a641ad3356745200d3",
+  "classes": 198947,
+  "counts": [
+    {
+      "all_three_zero": 0,
+      "classes": 1,
+      "cover_and_shared_zero": 1,
+      "cover_skew_zero": 1,
+      "endpoint_balanced": 0,
+      "n": 2,
+      "shared_cubics_zero": 1
+    },
+    {
+      "all_three_zero": null,
+      "classes": 2,
+      "cover_and_shared_zero": null,
+      "cover_skew_zero": 0,
+      "endpoint_balanced": 1,
+      "n": 3,
+      "shared_cubics_zero": null
+    },
+    {
+      "all_three_zero": 0,
+      "classes": 4,
+      "cover_and_shared_zero": 0,
+      "cover_skew_zero": 0,
+      "endpoint_balanced": 0,
+      "n": 4,
+      "shared_cubics_zero": 4
+    },
+    {
+      "all_three_zero": null,
+      "classes": 12,
+      "cover_and_shared_zero": null,
+      "cover_skew_zero": 0,
+      "endpoint_balanced": 3,
+      "n": 5,
+      "shared_cubics_zero": null
+    },
+    {
+      "all_three_zero": 0,
+      "classes": 56,
+      "cover_and_shared_zero": 0,
+      "cover_skew_zero": 1,
+      "endpoint_balanced": 0,
+      "n": 6,
+      "shared_cubics_zero": 0
+    },
+    {
+      "all_three_zero": null,
+      "classes": 456,
+      "cover_and_shared_zero": null,
+      "cover_skew_zero": 0,
+      "endpoint_balanced": 48,
+      "n": 7,
+      "shared_cubics_zero": null
+    },
+    {
+      "all_three_zero": 0,
+      "classes": 6880,
+      "cover_and_shared_zero": 0,
+      "cover_skew_zero": 0,
+      "endpoint_balanced": 2,
+      "n": 8,
+      "shared_cubics_zero": 4
+    },
+    {
+      "all_three_zero": null,
+      "classes": 191536,
+      "cover_and_shared_zero": null,
+      "cover_skew_zero": 0,
+      "endpoint_balanced": 4628,
+      "n": 9,
+      "shared_cubics_zero": null
+    }
+  ],
+  "source_sha256": {
+    "census.py": "9bb931c201a814248416c22708f3c9b88243fcc0f9b57496e8e7038d71b71571",
+    "matrix.cpp": "60d872a6174a1ba9ef7b675ef62d6bc2d32a2dc0dd6d3e536810852199f9d662"
+  },
+  "status": "PASS finite complete bank; all-order claim rests on E1-E4 proof"
+}

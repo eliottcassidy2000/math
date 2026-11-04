@@ -1,0 +1,35 @@
+{
+  "bank_path": "05-knowledge/results/hn_metagraph_information_20261026/enumeration/representatives9.json.gz",
+  "bank_sha256": "b4e559ad6cb31980852034f9c7f61e366a7cb479fee4d9a641ad3356745200d3",
+  "dependencies_lf_sha256": {
+    "01-canon/theorems/THM-002-ocf.md": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1",
+    "01-canon/theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md": "2964ced6d038c6dd9f2b798cbebbf3d26459d051d7ff1316eceb1dcaf5f1521c",
+    "05-knowledge/results/compensation_returns_20261103/QUERY_COST.md": "0245467856e92ede8dd3f7e006eb35be97c9d61c98ae31a72f288b8d8c15a53f",
+    "05-knowledge/results/prime_twelve_current_20261104/PROOF.md": "2cd25dce0c5e2ea2ffedde9ffe3ddfad971a76e529e580d5e5e976645aa2ce95",
+    "05-knowledge/results/session187_named_response_20261104/converse/PROOF.md": "a68ce0abe780422df2e4e9fa1cb23274ba3f193314b0590eeaefd772b1830163",
+    "05-knowledge/results/session187_named_response_20261104/gate/PROOF.md": "ffe97ecd5dda6ce2b14e9db8c63660822f7bc47077f709195f76118c5aa3b502",
+    "05-knowledge/results/session187_named_response_20261104/prime12/PROOF.md": "56c134a057da77a2d0ed2441a9b696f1cde60bc64ea4a80f0e2e244efa4010f9",
+    "05-knowledge/results/two_port_beyond_nine_20261103/audit/PARITY.md": "7084cd71f652a40949b65fb40d868124e78d4962973b6e3b720c5016310ee390",
+    "05-knowledge/results/two_port_seven_core_20261103/algebra/PROOF.md": "ba530ca4397385d0b8b75406487c0a997bc242086da4737f487c217b4862b5d1",
+    "05-knowledge/results/two_port_twelve_principles_20261103/PROOF.md": "06811fe45366352f924793be7dadddacef287607a380efc92043a1066f3056c0"
+  },
+  "files": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "BOARD.md": "e3c0a10b096deff61a8937bbcea9ee09e73e4d5885ca7932428e17bd856ed392",
+    "INCOMING.md": "d6bcb5e4458841d4ba19fa77ff17b3329b0e3fb1b06eaf9bd3454ecf3cd16850",
+    "PROOF.md": "311d7719cf3ff4d0d4d3638d31ed33c1c41cdf378ca1d55b43450c9435d2d0a0",
+    "README.md": "477c0adce906190868a6a52ae718562d761466ab7bc741eb8f4f5b0cb38699c8",
+    "REVIEW.md": "6582b15a05a6cee68d6c647b4a6b58340b937e27aa2ca037fdea764476bac885",
+    "census.json": "2926914e79eaa0a3673e74e3e59c025d99dd0ec204102215b7114bb16fcd5752",
+    "census.optimized.json": "2926914e79eaa0a3673e74e3e59c025d99dd0ec204102215b7114bb16fcd5752",
+    "census.py": "9bb931c201a814248416c22708f3c9b88243fcc0f9b57496e8e7038d71b71571",
+    "certificate.json": "f1b3a5a50eae49456c6b34dfbd97939d453947d0221cbd2c28730b167f7b1496",
+    "certificate.optimized.json": "f1b3a5a50eae49456c6b34dfbd97939d453947d0221cbd2c28730b167f7b1496",
+    "certificate.py": "20a8b35b5c3184837b238476b0fe32442f92c4712d8a6760c53893e84e8c89ec",
+    "full_named_cubic.json": "68b06e9e1c3b9689d67f7173f940effced5d4865c1e65e0a30ff710d0637b7c6",
+    "full_named_cubic.optimized.json": "68b06e9e1c3b9689d67f7173f940effced5d4865c1e65e0a30ff710d0637b7c6",
+    "matrix.cpp": "60d872a6174a1ba9ef7b675ef62d6bc2d32a2dc0dd6d3e536810852199f9d662",
+    "verify.py": "d0fd08b99d2217b5966b3fcd9f96015508a181374c44173ace6c54347cb4d60a"
+  },
+  "status": "PROVED E1-E4 with separately scoped exact regression certificates"
+}
