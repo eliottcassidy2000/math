@@ -140,3 +140,13 @@ terminating target reduction and entry argument beyond this one source tree.
 [Recovery and incoming work](RECOVERY.md) records the concept board and
 credits. [Audit](AUDIT.md), [reproduction](reproduce.py), and the saved
 receipts separate proofs, exact finite results, and open obligations.
+
+## Subsequent named continuation and entry grammar
+
+[Joint-entry returns, November4](../joint_entry_return_20261104/README.md)
+continues the actual41506343 source to124519031/124519033 at order29,
+retaining every old name, joint ports and F49/F343 charts. Its +2 branch
+moves physical51 into the component as the prefix clock drops to one.
+The same packet proves an all-size unit-entry classification and a sharp
+three-start adapter, with exact joint recurrences and complement guards.
+No repeated ternary closure or larger global value-coverage bound is claimed.

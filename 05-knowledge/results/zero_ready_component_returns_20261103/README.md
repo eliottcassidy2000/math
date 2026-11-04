@@ -116,3 +116,12 @@ as an axiom, does not prove these stronger named-source conditions.
 [Recovery and next experiments](RECOVERY.md) records the concept board and
 the source/target maps. [Audit](AUDIT.md), [reproduction program](reproduce.py),
 and its receipts distinguish proof, exact finite evidence, and open steps.
+
+## Subsequent joint-entry classification
+
+[Joint-entry returns, November4](../joint_entry_return_20261104/README.md)
+classifies the unit J guard at every order, proves its Fibonacci marked-class
+count, and identifies the sharp three-start entry budget above order4.
+It also gives a uniform joint-response recurrence, a size-supplied phase
+bit, and two actual complements exposing the older bridge--sink star.
+These are scoped advances; the return and coverage obligations above remain.
