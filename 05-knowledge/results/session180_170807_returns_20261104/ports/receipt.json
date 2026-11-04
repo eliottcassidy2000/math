@@ -1,0 +1,62 @@
+{
+  "source_ref": "4ad839b20dd280cdcfbadf86cb62b2be3c9615ad",
+  "literal": [
+    {
+      "stage": "source",
+      "H": 56935
+    },
+    {
+      "stage": "edge1",
+      "H": 68533
+    },
+    {
+      "stage": "edge2",
+      "H": 67599
+    },
+    {
+      "stage": "target",
+      "H": 170807
+    }
+  ],
+  "zero": [
+    {
+      "H": 18977,
+      "F": 18979,
+      "J_end_start": 229
+    },
+    {
+      "H": 2195,
+      "F": 42153,
+      "J_end_start": 371
+    }
+  ],
+  "hostile": [
+    {
+      "H": 462915,
+      "cut256_H": 1061775
+    },
+    {
+      "H": 462915,
+      "cut256_H": 1395279
+    }
+  ],
+  "exhaustive": {
+    "base_orders": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "birth_full_matrix_checks": 1098,
+    "flip_full_matrix_checks": 410
+  },
+  "bank_bound": {
+    "seed": 56935,
+    "bank_size": 2,
+    "depth": 6,
+    "distinct_ternary_values": 64,
+    "upper_count": 41507071,
+    "bank_capacity_upper": 50
+  },
+  "status": "PASS exact arithmetic and full squarefree-matrix identities"
+}
