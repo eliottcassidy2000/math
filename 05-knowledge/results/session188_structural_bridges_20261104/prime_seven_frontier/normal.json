@@ -1,0 +1,626 @@
+{
+  "dependency_pins": {
+    "cyclic_ambient_synthesis/PROOF.md": "396a8876d98a7900a7b76797ea369d211583b744c43f01d80b498f7a09829f3e",
+    "highest_quotient_reduction/PROOF.md": "95437f44021ca708bfa2fde42637e53179ddb81a5cf93341c3bffa602e1b4678",
+    "module_decomposition/PROOF.md": "33f33731f3f21037a03e6a4eb9bcc11c746c5124439e49603e7c8faabe2565bc",
+    "monotone_dual_queries/PROOF.md": "f617b74aa6c9545e945d6c5f6d8258049a9dd68f3127c5252542b2592f746d5f",
+    "prime_five_all_ambient/PROOF.md": "1dad821eff721e77ede69a3b0b8a1b62d0a3b0dce7395b883e89ddfa5ad9cea4",
+    "prime_five_frontier/PROOF.md": "3ede97d419ae29f637d8b4ff338cf42a4fbe575f57ec44706828bdcc5ad9feb6",
+    "prime_five_frontier/normal.json": "1b4feee10013f5c2c10a2482430162d5c9f85869917e541c91ef18a02d0e0f70",
+    "prime_six_reconnaissance/PROOF.md": "f270aec9732d87d2b7f9ec685b9655d7efeea00b89fbb052d5b73af6dfcfe894",
+    "prime_six_reconnaissance/endpoint_table.tsv": "902de128fc24d1460d611fdb1136bce64453a5d891d100f1c38ee46d399a4d56",
+    "prime_six_reconnaissance/normal.json": "83ad3788c8f58ce7633c764e9cc07a9ddf337d0878c00a819cc69a1d32a551f7"
+  },
+  "maximum_augmented_order": 17,
+  "multiple_highest_node_controls": [
+    {
+      "chosen": 255,
+      "chosen_anchor": 0,
+      "chosen_target_only": [
+        8050,
+        8048,
+        8051,
+        8151,
+        8160,
+        8136,
+        8064,
+        7943,
+        14336,
+        12544,
+        8960,
+        9728,
+        11264,
+        255
+      ],
+      "highest": [
+        255,
+        7936
+      ],
+      "name": "six_with_descendant_and_five",
+      "old_H_counts": [
+        428505,
+        428505,
+        428505,
+        428505
+      ],
+      "original_family": [
+        255,
+        7936,
+        3
+      ],
+      "original_modules": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        16,
+        32,
+        64,
+        128,
+        255,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        7936,
+        8192,
+        16383
+      ],
+      "original_strong_nodes": [
+        1,
+        2,
+        4,
+        7,
+        8,
+        16,
+        32,
+        64,
+        128,
+        255,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        7936,
+        8192,
+        16383
+      ],
+      "original_tree_nodes": [
+        {
+          "children": [
+            1,
+            2,
+            4
+          ],
+          "mask": 7,
+          "source_quotient": [
+            6,
+            4,
+            0
+          ],
+          "target_quotient": [
+            2,
+            0,
+            3
+          ]
+        },
+        {
+          "children": [
+            7,
+            8,
+            16,
+            32,
+            64,
+            128
+          ],
+          "mask": 255,
+          "source_quotient": [
+            34,
+            8,
+            3,
+            5,
+            15,
+            30
+          ],
+          "target_quotient": [
+            28,
+            53,
+            56,
+            50,
+            32,
+            1
+          ]
+        },
+        {
+          "children": [
+            256,
+            512,
+            1024,
+            2048,
+            4096
+          ],
+          "mask": 7936,
+          "source_quotient": [
+            24,
+            17,
+            3,
+            6,
+            12
+          ],
+          "target_quotient": [
+            6,
+            12,
+            24,
+            17,
+            3
+          ]
+        },
+        {
+          "children": [
+            255,
+            7936,
+            8192
+          ],
+          "mask": 16383,
+          "source_quotient": [
+            2,
+            4,
+            1
+          ],
+          "target_quotient": [
+            2,
+            4,
+            1
+          ]
+        }
+      ],
+      "other": 7936,
+      "physical_query_counts": [
+        8588445,
+        6469215,
+        6469215,
+        6469215
+      ],
+      "profile_equalities": [
+        [
+          "other_highest",
+          7936,
+          [
+            0,
+            15,
+            90,
+            210,
+            240,
+            120
+          ]
+        ],
+        [
+          "child0",
+          7,
+          [
+            0,
+            1,
+            6,
+            6
+          ]
+        ],
+        [
+          "child1",
+          8,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child2",
+          16,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child3",
+          32,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child4",
+          64,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child5",
+          128,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "chosen_whole",
+          255,
+          [
+            0,
+            245,
+            3766,
+            24228,
+            84312,
+            172800,
+            210240,
+            141120,
+            40320
+          ]
+        ]
+      ],
+      "query": [
+        8199,
+        8192
+      ],
+      "restored_baseline": [
+        8054,
+        8052,
+        8048,
+        8151,
+        8160,
+        8136,
+        8064,
+        7943,
+        14336,
+        12544,
+        8960,
+        9728,
+        11264,
+        255
+      ],
+      "source": [
+        8078,
+        8076,
+        8072,
+        7968,
+        7951,
+        7959,
+        7999,
+        8056,
+        14336,
+        12544,
+        8960,
+        9728,
+        11264,
+        255
+      ],
+      "target": [
+        8050,
+        8048,
+        8051,
+        8151,
+        8160,
+        8136,
+        8064,
+        7943,
+        9728,
+        11264,
+        14336,
+        12544,
+        8960,
+        255
+      ]
+    },
+    {
+      "chosen": 63,
+      "chosen_anchor": 0,
+      "chosen_target_only": [
+        16348,
+        16373,
+        16376,
+        16370,
+        16352,
+        16321,
+        31616,
+        16640,
+        31744,
+        23936,
+        28864,
+        25728,
+        18560,
+        21120,
+        63
+      ],
+      "highest": [
+        63,
+        16320
+      ],
+      "name": "six_and_endpoint_balanced_eight",
+      "old_H_counts": [
+        989277,
+        989277,
+        989277,
+        989277
+      ],
+      "original_family": [
+        63,
+        16320
+      ],
+      "original_modules": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        63,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16320,
+        16384,
+        32767
+      ],
+      "original_strong_nodes": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        63,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16320,
+        16384,
+        32767
+      ],
+      "original_tree_nodes": [
+        {
+          "children": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32
+          ],
+          "mask": 63,
+          "source_quotient": [
+            34,
+            8,
+            3,
+            5,
+            15,
+            30
+          ],
+          "target_quotient": [
+            28,
+            53,
+            56,
+            50,
+            32,
+            1
+          ]
+        },
+        {
+          "children": [
+            64,
+            128,
+            256,
+            512,
+            1024,
+            2048,
+            4096,
+            8192
+          ],
+          "mask": 16320,
+          "source_quotient": [
+            238,
+            4,
+            240,
+            118,
+            195,
+            146,
+            34,
+            74
+          ],
+          "target_quotient": [
+            16,
+            249,
+            11,
+            129,
+            44,
+            77,
+            157,
+            53
+          ]
+        },
+        {
+          "children": [
+            63,
+            16320,
+            16384
+          ],
+          "mask": 32767,
+          "source_quotient": [
+            2,
+            4,
+            1
+          ],
+          "target_quotient": [
+            2,
+            4,
+            1
+          ]
+        }
+      ],
+      "other": 16320,
+      "physical_query_counts": [
+        8679795,
+        7852137,
+        7852137,
+        7852137
+      ],
+      "profile_equalities": [
+        [
+          "other_highest",
+          16320,
+          [
+            0,
+            249,
+            3678,
+            23220,
+            81240,
+            169200,
+            208800,
+            141120,
+            40320
+          ]
+        ],
+        [
+          "child0",
+          1,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child1",
+          2,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child2",
+          4,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child3",
+          8,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child4",
+          16,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child5",
+          32,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "chosen_whole",
+          63,
+          [
+            0,
+            23,
+            226,
+            900,
+            1800,
+            1800,
+            720
+          ]
+        ]
+      ],
+      "query": [
+        16385,
+        16384
+      ],
+      "restored_baseline": [
+        16348,
+        16373,
+        16376,
+        16370,
+        16352,
+        16321,
+        31616,
+        16640,
+        31744,
+        23936,
+        28864,
+        25728,
+        18560,
+        21120,
+        63
+      ],
+      "source": [
+        16354,
+        16328,
+        16323,
+        16325,
+        16335,
+        16350,
+        31616,
+        16640,
+        31744,
+        23936,
+        28864,
+        25728,
+        18560,
+        21120,
+        63
+      ],
+      "target": [
+        16348,
+        16373,
+        16376,
+        16370,
+        16352,
+        16321,
+        17408,
+        32320,
+        17088,
+        24640,
+        19200,
+        21312,
+        26432,
+        19776,
+        63
+      ]
+    }
+  ],
+  "physical_graphs": 16,
+  "scope": "Necessary highest changed prime quotient order at least seven for nontrivial original-module full-response collisions. Source-relative family restrictions and fixed exterior are explicit; no general reconstruction claim.",
+  "source_pins": {
+    "PROOF.md": "25755ea7307cd9f1b4587755a46a24b085cc089903a8e6bbd1263f4662fb35f3",
+    "count.cpp": "c1334867b96903ce30d020557b747f29ed203657858baaa33f13a83070d58cf2",
+    "verify.py": "4b93b4c058f6b85cc59160e4ac5b3ccaccde6390d69517a75cf4fc4bef738aa9"
+  },
+  "status": "PASS"
+}

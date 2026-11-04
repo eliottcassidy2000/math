@@ -1,0 +1,291 @@
+{
+  "audit_pins": {
+    "audit.py": "efe493d8dd557fd027be50eb8cabf279cad615fdd5f85050be7743943a0b047f",
+    "forward.cpp": "3e5109595fca6a9c1444f0e959040cdcb86ff59fea008fb862d13c44e620e075"
+  },
+  "controls": [
+    {
+      "counts": [
+        8588445,
+        6469215,
+        6469215,
+        6469215
+      ],
+      "highest": [
+        255,
+        7936
+      ],
+      "name": "six_with_descendant_and_five",
+      "old_counts": [
+        428505,
+        428505,
+        428505,
+        428505
+      ],
+      "profiles": [
+        [
+          "other_highest",
+          7936,
+          [
+            0,
+            15,
+            90,
+            210,
+            240,
+            120
+          ]
+        ],
+        [
+          "child0",
+          7,
+          [
+            0,
+            1,
+            6,
+            6
+          ]
+        ],
+        [
+          "child1",
+          8,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child2",
+          16,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child3",
+          32,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child4",
+          64,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child5",
+          128,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "chosen_whole",
+          255,
+          [
+            0,
+            245,
+            3766,
+            24228,
+            84312,
+            172800,
+            210240,
+            141120,
+            40320
+          ]
+        ]
+      ],
+      "query": [
+        8199,
+        8192
+      ],
+      "strong_nodes": [
+        1,
+        2,
+        4,
+        7,
+        8,
+        16,
+        32,
+        64,
+        128,
+        255,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        7936,
+        8192,
+        16383
+      ]
+    },
+    {
+      "counts": [
+        8679795,
+        7852137,
+        7852137,
+        7852137
+      ],
+      "highest": [
+        63,
+        16320
+      ],
+      "name": "six_and_endpoint_balanced_eight",
+      "old_counts": [
+        989277,
+        989277,
+        989277,
+        989277
+      ],
+      "profiles": [
+        [
+          "other_highest",
+          16320,
+          [
+            0,
+            249,
+            3678,
+            23220,
+            81240,
+            169200,
+            208800,
+            141120,
+            40320
+          ]
+        ],
+        [
+          "child0",
+          1,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child1",
+          2,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child2",
+          4,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child3",
+          8,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child4",
+          16,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "child5",
+          32,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "chosen_whole",
+          63,
+          [
+            0,
+            23,
+            226,
+            900,
+            1800,
+            1800,
+            720
+          ]
+        ]
+      ],
+      "query": [
+        16385,
+        16384
+      ],
+      "strong_nodes": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        63,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16320,
+        16384,
+        32767
+      ]
+    }
+  ],
+  "dependency_pins": {
+    "cyclic_ambient_synthesis/PROOF.md": "396a8876d98a7900a7b76797ea369d211583b744c43f01d80b498f7a09829f3e",
+    "highest_quotient_reduction/PROOF.md": "95437f44021ca708bfa2fde42637e53179ddb81a5cf93341c3bffa602e1b4678",
+    "module_decomposition/PROOF.md": "33f33731f3f21037a03e6a4eb9bcc11c746c5124439e49603e7c8faabe2565bc",
+    "monotone_dual_queries/PROOF.md": "f617b74aa6c9545e945d6c5f6d8258049a9dd68f3127c5252542b2592f746d5f",
+    "prime_five_all_ambient/PROOF.md": "1dad821eff721e77ede69a3b0b8a1b62d0a3b0dce7395b883e89ddfa5ad9cea4",
+    "prime_five_frontier/PROOF.md": "3ede97d419ae29f637d8b4ff338cf42a4fbe575f57ec44706828bdcc5ad9feb6",
+    "prime_five_frontier/normal.json": "1b4feee10013f5c2c10a2482430162d5c9f85869917e541c91ef18a02d0e0f70",
+    "prime_six_reconnaissance/PROOF.md": "f270aec9732d87d2b7f9ec685b9655d7efeea00b89fbb052d5b73af6dfcfe894",
+    "prime_six_reconnaissance/endpoint_table.tsv": "902de128fc24d1460d611fdb1136bce64453a5d891d100f1c38ee46d399a4d56",
+    "prime_six_reconnaissance/normal.json": "83ad3788c8f58ce7633c764e9cc07a9ddf337d0878c00a819cc69a1d32a551f7"
+  },
+  "maximum_order": 17,
+  "physical_graphs": 16,
+  "physical_values": [
+    8588445,
+    6469215,
+    6469215,
+    6469215,
+    428505,
+    428505,
+    428505,
+    428505,
+    8679795,
+    7852137,
+    7852137,
+    7852137,
+    989277,
+    989277,
+    989277,
+    989277
+  ],
+  "source_pins": {
+    "PROOF.md": "25755ea7307cd9f1b4587755a46a24b085cc089903a8e6bbd1263f4662fb35f3",
+    "count.cpp": "c1334867b96903ce30d020557b747f29ed203657858baaa33f13a83070d58cf2",
+    "normal.json": "cf86d02ea7d0a7aa4202ff4b468a6ced98cedb7810a2d2dd726fd8c83532381a",
+    "optimized.json": "cf86d02ea7d0a7aa4202ff4b468a6ced98cedb7810a2d2dd726fd8c83532381a",
+    "verify.py": "4b93b4c058f6b85cc59160e4ac5b3ccaccde6390d69517a75cf4fc4bef738aa9"
+  },
+  "status": "PASS"
+}
