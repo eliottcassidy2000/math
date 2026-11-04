@@ -1,0 +1,9 @@
+# Independent replay of every retained cyclic-root family
+
+**PASS.** This execution certificate supplements the separate mathematical proof review in `REVIEW.md`. The new `independent.py` imports no producer code. It reconstructs all original modules directly from physical exterior incidences, exhaustively enumerates their subsets, reconstructs every target by direct edge-XOR parity, and counts actual query values with a backward-ending Hamilton-path recursion.
+
+The exact retained universes are all 512 root-containing families of C3[TT3,TT3,TT3] and all 128 root-containing families of C3[TT2,TT3,TT3]. All 640 family records and physical target rows match; 352 cases strictly increase scalar H and 288 preserve it. Every one of the 1,286 retained source/target separator values matches, including the three twelve-name deep controls. All 864 values in the complete retained unequal-size endpoint batteries match, and each signed endpoint contrast is 192. The deep families are independently checked to use original modules, to be laminar, and to preserve scalar H.
+
+The producer was also replayed normally and with optimized Python, reproducing its full original receipts byte for byte. Both modes of the new independent checker produce identical receipts. All checks use explicit exceptions and bind the source receipt, source proof, verifier, and theorem dependencies. The finite controls do not replace the proof or extend its whole-core/ordered-SCC scope.
+
+Restore the sibling `covered_root_family` receipts using its lossless reassembler, then run `python independent.py` and `python -O independent.py`. The source `covered_response`, `covered_quotient`, and `module_decomposition` packets must also be present for their source pins. No coefficient or query value is reconstructed from a digest alone.

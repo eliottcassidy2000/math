@@ -1,0 +1,21 @@
+{
+  "checker_sha256": "deb734342279c557943caf521406c046399b24b5e925dc668a836a8db8f00909",
+  "counts": {
+    "deep_controls": 3,
+    "families": 640,
+    "full_endpoint_values": 864,
+    "literal_query_values": 1286,
+    "scalar_equal": 288,
+    "scalar_strict": 352
+  },
+  "method": "No producer imports. Exhaustive original module subsets, direct physical XOR, independent backward-ending recursion.",
+  "source_receipt_sha256": "1d88e6cd2ec39fcda446c49058e416cda7a492b0cf8aad594580fd7dc76e76e3",
+  "source_sha256": {
+    "covered_quotient/PROOF.md": "74bb90d5d9e70476e07a778d37216a315edb90ddf9fae27ed07337fa489e730a",
+    "covered_response/PROOF.md": "2bfba95bfe07d7a5ff8eaa88e0325754ddc639e4989821062341a009ca4ff5c6",
+    "covered_root_family/PROOF.md": "3216f5856bc60f6ed430572497d206a9f3985d2eb22efb29acc56c5317386184",
+    "covered_root_family/verify.py": "69cfaa4f98b74179dc49ee0c0c3f5e4bbb9871bd6f5ae9e8159fc97d38a02350",
+    "module_decomposition/PROOF.md": "33f33731f3f21037a03e6a4eb9bcc11c746c5124439e49603e7c8faabe2565bc"
+  },
+  "status": "PASS"
+}
