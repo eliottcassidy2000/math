@@ -1,9 +1,11 @@
-# The twelve-vertex residual is prime or has a homogeneous pair
+# The twelve-vertex structural split and its resolved pair branch
 
 **PROVED structural implications and T5 identity; FINITE-EXACT order-twelve
-reduction using the explicitly inherited complete banks.** The prime case
-and the homogeneous-pair case remain **OPEN**. This is not an exhaustive
-enumeration of twelve-vertex tournaments.
+reduction using the explicitly inherited complete banks.** The original
+necessary-congruence split below is retained. The incoming exact twin sign
+closes its homogeneous-pair branch for hidden ambient module converses;
+the prime case remains **OPEN**. This is not an exhaustive enumeration of
+twelve-vertex tournaments.
 
 Write R(T) for the necessary conditions S=E modulo two and C=C^t modulo four.
 By inherited B3-B4, any module whose converse is invisible in some ambient
@@ -66,8 +68,39 @@ case it contains a homogeneous pair, which remains a module of T.
 Consequently **any twelve-vertex hidden-module candidate is strongly
 connected and either prime (no proper nontrivial module) or contains a
 homogeneous transitive pair.** This is a necessary structural split, not a
-proof that either branch is empty. Self-converse candidates are already
-excluded by inherited P4/B3; that condition is retained.
+proof that either branch is empty using these congruences alone.
+Self-converse candidates are already excluded by inherited P4/B3; that
+condition is retained.
+
+## Incoming exact closure of the homogeneous-pair branch
+
+[C2 in the independently audited eight-core packet](../two_port_eight_core_20261103/algebra/PROOF.md#c2-an-exact-ordered-cover-sign-recovers-the-orientation-of-twins)
+supplies the missing exact obstruction. If the actual ambient tournament
+has named twins a->b, contract them to z in Q. For every exterior w,
+
+    C_bw-C_aw+C_wa-C_wb = C_zw(Q)+C_wz(Q) > 0.
+
+For the opposite orientation b->a of the same named twin pair the contrast
+is strictly negative, even if the remaining quotient changes. Full two-port
+response equality determines ordered C and thus cannot identify these two
+orientations. A homogeneous pair in a module remains a homogeneous pair
+in every uniform ambient substitution; reversing that module reverses the
+pair. This excludes every hidden module converse containing such a pair.
+At ambient order two the exact endpoint identities separate the orientations.
+
+Consequently [C4 of that packet](../two_port_eight_core_20261103/algebra/PROOF.md#c4-a-genuine-twelve-vertex-converse-collision-must-have-a-prime-core)
+closes the pair branch of the split above: a twelve-vertex module whose
+reversal is invisible inside any ambient tournament must be strong, prime,
+and nonselfconverse. The prime residual remains OPEN. The [independent
+review](../two_port_eight_core_20261103/recovery/ALGEBRA_RESPONSE_REVIEW.md)
+records the exact identity and finite dependencies.
+
+This conclusion does not upgrade the necessary congruences R(T) into a
+complete response test. Nor does the cubic battery of T4 apply directly
+to arbitrary ambient internal-module reversals: T4 compares a whole core
+with its whole converse. Ambient equality gives intrinsic response equality
+modulo four by T1; exact ambient separation here comes from the named twin
+contrast itself.
 
 ## Complete small cover-skew census
 

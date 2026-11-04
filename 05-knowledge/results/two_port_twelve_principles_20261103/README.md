@@ -20,7 +20,13 @@ remain **OPEN**. No exact full-response collision is claimed.
 twelve-vertex module core must be **strong and either prime or contain a
 homogeneous pair**. This uses proved module descent plus complete finite
 cover-skew banks through eight and the inherited combined sieve at ten.
-Neither remaining branch is closed.
+The homogeneous-pair branch is now closed for a hidden ambient module
+converse by the incoming [exact named twin-orientation sign theorem C2](../two_port_eight_core_20261103/algebra/PROOF.md#c2-an-exact-ordered-cover-sign-recovers-the-orientation-of-twins).
+Together with [C4](../two_port_eight_core_20261103/algebra/PROOF.md#c4-a-genuine-twelve-vertex-converse-collision-must-have-a-prime-core),
+a hidden twelve-vertex module reversal therefore requires a strong, prime,
+nonselfconverse core. The prime residual and universal reconstruction remain
+**OPEN**. This uses an exact contrast in the actual ambient response, not an
+assumption that exact core responses descend through arbitrary quotients.
 
 The 6200 declared twelve-vertex presentations all fail endpoint parity.
 The shared-label cubic projection misses exactly two of them: Paley11 with
