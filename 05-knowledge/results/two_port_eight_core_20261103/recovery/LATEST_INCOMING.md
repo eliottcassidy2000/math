@@ -2,7 +2,7 @@
 
 The baseline integration in [INCOMING.md](INCOMING.md) is retained unchanged
 with its original receipt pins. This addendum incorporates the actual
-proofs arriving through main checkpoint `7a64b40972`, including the separate
+proofs arriving through main checkpoint `ad09a24c8f`, including the separate
 user-requested two-port research session. Status and operation scope are
 kept separate from numerical acceptance.
 
@@ -61,6 +61,15 @@ contrast. The twin branch is already excluded by the actual ambient sign.
 Neither statement proves that a prime survivor exists or that all are
 excluded.
 
+The separate session's final [T5 and structural split](../../two_port_twelve_principles_20261103/STRUCTURE.md)
+independently recover the same cyclic endpoint identity as our C3. Its
+intrinsic congruence residual is strongly connected and either prime or
+contains a homogeneous pair. That remains a valid congruence-only split;
+our exact C2 sign closes the homogeneous-pair branch for **actual ambient
+response equality**. The two scopes are therefore compatible. The separate
+session completed and pushed its five audited engines; its 6,200 named
+presentations are not added to our scout as disjoint classes.
+
 ## The physical missing44 return is now present, and still isolated
 
 **FINITE-EXACT / VERIFIED:** [Session183 missing44](../../session183_two_branch_frontier_20261104/missing44/PROOF.md)
@@ -118,6 +127,20 @@ transitive clock, regardless of earlier markings. For the particular
 paired +4 recipe, arbitrary preceding marked context introduces a slope
 term `-2 P_A(2) f`. Both prescribed digits are uniform exactly when that
 context is unmarked and transitive. Alternative +4 recipes remain open.
+
+The final incoming [Session184 complete grammar inverse](../../session184_proof_frontiers_20261104/spectrum/PROOF.md)
+and [independent audit](../../session184_proof_frontiers_20261104/spectrum_audit/AUDIT.md)
+go further: allowing every ordered word of marked singletons and directed
+triangles, and every fixed integer clock shift, the normalized return
+language from the common entry is exactly
+`{empty,2,4,22,42,422,4222}`. Its seven states terminate by depth four.
+The all-length inverse uses nonoverlapping one-/two-bit chunks, and
+normalization reduces each target to two finite lists. Thus the exact
+112-candidate / 280-comparison certificate covers all depths in this
+specified grammar; it is not a bounded search extrapolation. The next
+arithmetic target must leave this component language, relax uniformity,
+or change the attachment interface. This does not exclude individual-clock
+physical returns or larger strongly connected suffix components.
 
 ## Orthogonal arithmetic arrivals and the common missing-coordinate test
 

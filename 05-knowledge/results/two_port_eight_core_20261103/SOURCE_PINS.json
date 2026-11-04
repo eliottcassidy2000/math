@@ -23,6 +23,8 @@
     "05-knowledge/results/session183_two_branch_frontier_20261104/ports/PROOF.md": "d18f22b9b8bc6bb9a5ec537d227abf6517ca39a77d8429c9aa4197c41c134835",
     "05-knowledge/results/session183_two_branch_frontier_20261104/ports_audit/REPORT.md": "46c16b6b40869db85fba72c58781735ebe813ce01b368604186afb20a51deb33",
     "05-knowledge/results/session184_proof_frontiers_20261104/oddperfect/PROOF.md": "7cf06555ca18d5e0b346d3a80c93de26cafdb782c928f5e88f5ec53892c78305",
+    "05-knowledge/results/session184_proof_frontiers_20261104/spectrum/PROOF.md": "9a14d1f223c684bacbe5310e7caca6ab60f7bc97a15fc76ef6d162f775e79ffe",
+    "05-knowledge/results/session184_proof_frontiers_20261104/spectrum_audit/AUDIT.md": "e4ba0de7fe27b565d44913d4e51148983854a99461e6de0d6498049a7ed740a6",
     "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/proof.md": "48aaefa2d059a56fb201a41d5f78bcd043eb2fbcb58f1ab9918c3e4d987917d7",
     "05-knowledge/results/two_port_beyond_nine_20261103/geometry/PROOF.md": "1563cfaf2ef99c0b45b48378315aee61b4a78df9856a5142ca46f2258b00e166",
     "05-knowledge/results/two_port_beyond_nine_20261103/geometry/coordinates.json": "2c2de10e2edc13df83001841be7a02d3abbeb921660b5f1e7300d10a2f86a384",
@@ -33,6 +35,7 @@
     "05-knowledge/results/two_port_seven_core_20261103/recovery/GEOMETRY_REVIEW.md": "9ff807f1d56fef36f22304cbb35b110e2d8175d870662ce0a761aad5dc479562",
     "05-knowledge/results/two_port_seven_core_20261103/residual/INDEPENDENT_REVIEW.md": "16876a6327937a3e4024ae4cddf7c956df585bff0138915973161c4e1cc08ba2",
     "05-knowledge/results/two_port_seven_core_20261103/residual/full10.json": "a4772227f5e732c6d83e6ac2b235bf11e8a4ff37d7ab5db46302d064645e3da4",
-    "05-knowledge/results/two_port_twelve_principles_20261103/PROOF.md": "06811fe45366352f924793be7dadddacef287607a380efc92043a1066f3056c0"
+    "05-knowledge/results/two_port_twelve_principles_20261103/PROOF.md": "06811fe45366352f924793be7dadddacef287607a380efc92043a1066f3056c0",
+    "05-knowledge/results/two_port_twelve_principles_20261103/STRUCTURE.md": "5868e16e1ba763a104108245fcdd84978cb66b50ec3e58e0244273fc92e1582f"
   }
 }
