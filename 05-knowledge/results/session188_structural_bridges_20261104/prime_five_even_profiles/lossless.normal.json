@@ -1,0 +1,205 @@
+{
+  "checker_sha256": "e50b23ccc8694e5210c005d1cac9a8b8d1897e59d068adce63dff1371f6f7dd1",
+  "complete_outputs": [
+    {
+      "bytes": 2246190,
+      "file": "normal.json",
+      "group": 0,
+      "sha256": "af99f39f941eb72cdd4e48fec2d04da5f31ebf541989d89313f2da3b628a9abe"
+    },
+    {
+      "bytes": 2246190,
+      "file": "optimized.json",
+      "group": 0,
+      "sha256": "af99f39f941eb72cdd4e48fec2d04da5f31ebf541989d89313f2da3b628a9abe"
+    }
+  ],
+  "complete_raw_bytes": 4492380,
+  "groups": 1,
+  "isolated_controls": [
+    {
+      "mode": "fresh",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "fresh",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": true,
+      "passed": true
+    }
+  ],
+  "package": "prime_five_even_profiles",
+  "package_sha256": {
+    "REASSEMBLY.json": "3eea59f3d902755e25adf0f305ac992e03a8e457b5d60f87c535b22c4d59719a",
+    "REASSEMBLY.md": "76219c6448d5b1d7c5d0984fd8ff0da06c641b87e1a324e84bcd6314eb3f25dd",
+    "full_records_00.json.gz.b64.part000": "eea6ac89c310bd398bcac27d1f88a7997bed21c1001d2b63c74cd6eccac76d75",
+    "full_records_00.json.gz.b64.part001": "7ed6218e4d751b6d32874147c88b90c4bd28452df993051ecd511c042b34344d",
+    "reassemble.py": "d5db86456816f72206e2ed15c9762f0cacc8c6f7fc7e1a66a9765285b2f6d083"
+  },
+  "parts": 2,
+  "reassembler_normalized_ast_sha256": "3f640f8fd33dec4ce19c1d81e92f03c21bbac47452af6382f5cb942c5ee88d14",
+  "status": "PASS",
+  "validated_existing_manifests": [
+    {
+      "file": "PROOF.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "102dc7b512c56a44586725d73dbd88af35a2f70db035103e462b6c33dc303673"
+    },
+    {
+      "file": "INTERPOLATION.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "289a96298108c3a49fa8efa7f8143330d86f35cf9156d9a31b801401c16b86d6"
+    },
+    {
+      "file": "README.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "306b233472b020eedddd68aeeb4132f2685e917cb2fda1a99e4a045ce4a5160f"
+    },
+    {
+      "file": "verify.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "f0f9d313b8274449cb1e8bfa797bba060a8f10b75f0bf635db38b95b7c1fa49d"
+    },
+    {
+      "file": "run_bank.cpp",
+      "manifest": "SHA256SUMS",
+      "sha256": "641110e85af5b040eef83f55cbc24e982edb1f4a1417f44991e18b2e4ef6ee82"
+    },
+    {
+      "file": "physical.cpp",
+      "manifest": "SHA256SUMS",
+      "sha256": "86c1954ef7559b6226867706c204af9e19b0d002bbf1f94d92de5a80dcb027ce"
+    },
+    {
+      "file": "physical_controls.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "1946257656264c551bf7a59c96af45abe1d3cafbfa59aa7c191b71d93cb1aed2"
+    },
+    {
+      "file": "quotients.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "01b214f418b85912712fdfd67c48115cc392aaf845d63c9c99febf1bc67cefa0"
+    },
+    {
+      "file": "normal.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "af99f39f941eb72cdd4e48fec2d04da5f31ebf541989d89313f2da3b628a9abe"
+    },
+    {
+      "file": "optimized.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "af99f39f941eb72cdd4e48fec2d04da5f31ebf541989d89313f2da3b628a9abe"
+    }
+  ],
+  "validated_mathematical_receipt_pins": {
+    "even_cyclic_mod16/PROOF.md": "d759e62510d0469dd9e864a46117f2bccc02e8256892162664a021821f07a78c",
+    "parity_profile_transfer/PROOF.md": "77994a1898361f12087b49914f991b150b0a0b41b4e9e846318ebe52116cfcdb",
+    "prime_five_even_profiles/INTERPOLATION.md": "289a96298108c3a49fa8efa7f8143330d86f35cf9156d9a31b801401c16b86d6",
+    "prime_five_even_profiles/PROOF.md": "102dc7b512c56a44586725d73dbd88af35a2f70db035103e462b6c33dc303673",
+    "prime_five_even_profiles/physical.cpp": "86c1954ef7559b6226867706c204af9e19b0d002bbf1f94d92de5a80dcb027ce",
+    "prime_five_even_profiles/physical_controls.py": "1946257656264c551bf7a59c96af45abe1d3cafbfa59aa7c191b71d93cb1aed2",
+    "prime_five_even_profiles/quotients.json": "01b214f418b85912712fdfd67c48115cc392aaf845d63c9c99febf1bc67cefa0",
+    "prime_five_even_profiles/run_bank.cpp": "641110e85af5b040eef83f55cbc24e982edb1f4a1417f44991e18b2e4ef6ee82",
+    "prime_five_even_profiles/verify.py": "f0f9d313b8274449cb1e8bfa797bba060a8f10b75f0bf635db38b95b7c1fa49d"
+  }
+}

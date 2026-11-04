@@ -1,0 +1,178 @@
+{
+  "checker_sha256": "e50b23ccc8694e5210c005d1cac9a8b8d1897e59d068adce63dff1371f6f7dd1",
+  "complete_outputs": [
+    {
+      "bytes": 2449360,
+      "file": "normal.json",
+      "group": 0,
+      "sha256": "62f4a31e68d1005c8ac16af679e6c148fdf6e9b129c88da8e2d61a98caca6d86"
+    },
+    {
+      "bytes": 2449360,
+      "file": "optimized.json",
+      "group": 0,
+      "sha256": "62f4a31e68d1005c8ac16af679e6c148fdf6e9b129c88da8e2d61a98caca6d86"
+    }
+  ],
+  "complete_raw_bytes": 4898720,
+  "groups": 1,
+  "isolated_controls": [
+    {
+      "mode": "fresh",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "fresh",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": true,
+      "passed": true
+    }
+  ],
+  "package": "prime_five_even_profiles_audit",
+  "package_sha256": {
+    "REASSEMBLY.json": "5df91362643b3c5ba5531f6e587e0291b9e8c4dc2160ddadd6ebb588a930b2a6",
+    "REASSEMBLY.md": "642a42b5b573af25cc082d7add51c341b461a621cbb953105b2136934bf422b3",
+    "full_records_00.json.gz.b64.part000": "3dccac2cb5f2dd33a643cdff12c26c0d5f9b8c7c81d16fb2024d3657d5e34d9e",
+    "full_records_00.json.gz.b64.part001": "28c18aa51fd126ed90544839b1999eeef5872e70c056c4c0574cc89a750ef079",
+    "full_records_00.json.gz.b64.part002": "5f857d9355687ac0ee33c9c19aed2600760866fcf2c0f3676071305534190c05",
+    "reassemble.py": "6ef90827b9e4ae7f07f34635bd2c3a974c20bd978e8767dcdea3a77053f496bc"
+  },
+  "parts": 3,
+  "reassembler_normalized_ast_sha256": "3f640f8fd33dec4ce19c1d81e92f03c21bbac47452af6382f5cb942c5ee88d14",
+  "status": "PASS",
+  "validated_existing_manifests": [
+    {
+      "file": "REVIEW.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "456f64ea6513c3afe851e92556c2ba11eb6c9e997fc0e4aaef28be7feb1c5777"
+    },
+    {
+      "file": "audit.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "1c7782b9f41e8d8843f3315463836f55f2821d4324c8bdb3d4cf9db6022f5d39"
+    },
+    {
+      "file": "interpolate.cpp",
+      "manifest": "SHA256SUMS",
+      "sha256": "c53f0c050bf58b2168e560ecc9fd580d9c730deba8c01446703ea27d1832bbd2"
+    },
+    {
+      "file": "normal.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "62f4a31e68d1005c8ac16af679e6c148fdf6e9b129c88da8e2d61a98caca6d86"
+    },
+    {
+      "file": "optimized.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "62f4a31e68d1005c8ac16af679e6c148fdf6e9b129c88da8e2d61a98caca6d86"
+    }
+  ],
+  "validated_mathematical_receipt_pins": {
+    "prime_five_even_profiles/INTERPOLATION.md": "289a96298108c3a49fa8efa7f8143330d86f35cf9156d9a31b801401c16b86d6",
+    "prime_five_even_profiles/PROOF.md": "102dc7b512c56a44586725d73dbd88af35a2f70db035103e462b6c33dc303673",
+    "prime_five_even_profiles/normal.json": "af99f39f941eb72cdd4e48fec2d04da5f31ebf541989d89313f2da3b628a9abe",
+    "prime_five_even_profiles/optimized.json": "af99f39f941eb72cdd4e48fec2d04da5f31ebf541989d89313f2da3b628a9abe",
+    "prime_five_even_profiles/run_bank.cpp": "641110e85af5b040eef83f55cbc24e982edb1f4a1417f44991e18b2e4ef6ee82",
+    "prime_five_even_profiles/verify.py": "f0f9d313b8274449cb1e8bfa797bba060a8f10b75f0bf635db38b95b7c1fa49d"
+  }
+}
