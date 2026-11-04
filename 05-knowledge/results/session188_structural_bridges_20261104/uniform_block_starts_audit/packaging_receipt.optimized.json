@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "case": "roundtrip",
+      "optimized": false,
+      "status": "PASS"
+    },
+    {
+      "case": "corrupt_chunk",
+      "optimized": false,
+      "status": "PASS"
+    },
+    {
+      "case": "late_existing_conflict",
+      "optimized": false,
+      "status": "PASS"
+    },
+    {
+      "case": "roundtrip",
+      "optimized": true,
+      "status": "PASS"
+    },
+    {
+      "case": "corrupt_chunk",
+      "optimized": true,
+      "status": "PASS"
+    },
+    {
+      "case": "late_existing_conflict",
+      "optimized": true,
+      "status": "PASS"
+    }
+  ],
+  "decoded_outputs": [
+    {
+      "bytes": 362393,
+      "file": "normal.json",
+      "sha256": "1cd7b49ea53b00e02494278bf223f93a0dbec6c2b3e13d3f77711ebfa2ecb522"
+    },
+    {
+      "bytes": 362393,
+      "file": "optimized.json",
+      "sha256": "1cd7b49ea53b00e02494278bf223f93a0dbec6c2b3e13d3f77711ebfa2ecb522"
+    }
+  ],
+  "package_pins": {
+    "REASSEMBLY.json": "43ae97dc23970dfd0303a47fd1c2049483bc1c8a30ed065af185fd752532fc00",
+    "REASSEMBLY.md": "6d6184bf4c1ddf892b105373cdadf258856101ae806ae13a995317bbdf5c6538",
+    "full_records.json.gz.b64.part000": "71f0698341b089bf9a5bb5d5909f01a816bcd5fe95c44b0d08cb3ae5878745e2",
+    "reassemble.py": "89939a993c3b1f343598c22e93ab4be710e64674c5f579a2589a0246183c2154"
+  },
+  "status": "PASS"
+}
