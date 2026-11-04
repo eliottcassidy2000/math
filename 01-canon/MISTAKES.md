@@ -4,6 +4,32 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — reader-entry polarity and the penultimate bit need separate guards
+
+**Local proof-scope correction; the finite named programs are unchanged.**
+After the terminal-entry law was extended from words ending00 to every
+nonempty word ending0, a subsequent paragraph still described the
+penultimate vertex as having out-neighbors exactly {mark,last reader}.
+That premise requires ending00. The saved ending10 control has only the
+last reader as an out-neighbor and start defect18, not the asserted
+two-outport geometry. The corrected paragraph states its ending00 guard;
+a lone0 has no penultimate reader at all. The audited full terminal law
+survives: defect is e_seed for lone0, q=H(B-w) for suffix00, and0 for
+suffix10. See the [proof and literal controls](../05-knowledge/results/c4_port_returns_20261103/native/reader_repairs/ENTRY_SCOPE.md).
+
+The same audit prevents a second unjustified extension: the end-defect
+exclusion for all strong wrappers does not exclude start defects in those
+same graphs. A strong four-vertex seed gives start defect1 at every prefix
+length, including arbitrarily long all-zero readers. Conversely, all twenty
+selected minimum-order targets fail the positive entry test. Alternative
+representatives of469,475,973 do carry the required entries and have actual
+named returns. The missing coordinate is the guard for the next operation,
+not just the target count or order. After these entries are spent, the
+deletion resource triples; the scoped next question is a compatible
+compensation of30/66 in the two unit-deletion examples. The
+[three chains and failed neutral repairs](../05-knowledge/results/c4_port_returns_20261103/entry_selector/PROOF.md)
+record that boundary without claiming recursive closure.
+
 ## 2026-11-03 — cover symmetry and a cubic projection are separate necessary gates
 
 **Refuted research premises, not retractions of accepted theorems.** The
