@@ -1,0 +1,90 @@
+{
+  "audit_sha256": "fc7c75876c2a3aa2109dbe21782ff88ce5c4a58cefab72ea035095f0024f740d",
+  "complete_original_sizes": {
+    "normal.json": 103600,
+    "optimized.json": 103600
+  },
+  "isolated_cases": [
+    {
+      "case": "clean",
+      "optimized": false,
+      "output_bytes_unchanged_on_failure": false,
+      "result": "PASS"
+    },
+    {
+      "case": "existing_equal",
+      "optimized": false,
+      "output_bytes_unchanged_on_failure": false,
+      "result": "PASS"
+    },
+    {
+      "case": "corrupt_chunk",
+      "optimized": false,
+      "output_bytes_unchanged_on_failure": true,
+      "result": "PASS"
+    },
+    {
+      "case": "late_output_conflict",
+      "optimized": false,
+      "output_bytes_unchanged_on_failure": true,
+      "result": "PASS"
+    },
+    {
+      "case": "bad_output_hash",
+      "optimized": false,
+      "output_bytes_unchanged_on_failure": true,
+      "result": "PASS"
+    },
+    {
+      "case": "duplicate_output",
+      "optimized": false,
+      "output_bytes_unchanged_on_failure": true,
+      "result": "PASS"
+    },
+    {
+      "case": "clean",
+      "optimized": true,
+      "output_bytes_unchanged_on_failure": false,
+      "result": "PASS"
+    },
+    {
+      "case": "existing_equal",
+      "optimized": true,
+      "output_bytes_unchanged_on_failure": false,
+      "result": "PASS"
+    },
+    {
+      "case": "corrupt_chunk",
+      "optimized": true,
+      "output_bytes_unchanged_on_failure": true,
+      "result": "PASS"
+    },
+    {
+      "case": "late_output_conflict",
+      "optimized": true,
+      "output_bytes_unchanged_on_failure": true,
+      "result": "PASS"
+    },
+    {
+      "case": "bad_output_hash",
+      "optimized": true,
+      "output_bytes_unchanged_on_failure": true,
+      "result": "PASS"
+    },
+    {
+      "case": "duplicate_output",
+      "optimized": true,
+      "output_bytes_unchanged_on_failure": true,
+      "result": "PASS"
+    }
+  ],
+  "source_sha256": {
+    "REASSEMBLY.json": "dadff7b685af84434bb04e0e4bcd1a49809c9300e4f2bb12be8b90b00e3ad4e3",
+    "REASSEMBLY.md": "d6331aa635ab1c1d92aad4013c8c645cb6cfdd14c318ac240dccfe6b7b2e71e0",
+    "full_records.json.gz.b64.part000": "38c777afa990b8fd8dfc5a6b3d292383b097372d5c6f97b0ab9088ffdc2453a5",
+    "normal.json": "93504a8baef218e05adcd63921374067107e515d5eea64257aa15d5696dd30d0",
+    "optimized.json": "93504a8baef218e05adcd63921374067107e515d5eea64257aa15d5696dd30d0",
+    "reassemble.py": "81291cd321095affa16aba9f0e895be0b0d91def06c8cc894beff9b8cd553cee"
+  },
+  "status": "PASS"
+}
