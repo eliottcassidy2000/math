@@ -5,6 +5,17 @@ adds five commits covering Session180's return and prefix packets and the
 zero-ready170807 structure packet. These are integrated with their own
 operation scopes; none is silently recast as a reconstruction theorem.
 
+The final concurrent checkpoint7e568d4296 adds the
+[three-generation component-return packet](../zero_ready_component_returns_20261103/README.md).
+Its [mixed-interface formulas](../zero_ready_component_returns_20261103/interface/NOTE.md)
+exhibit an actual3^k mode in named spare-port data even when the scalar
+Hamilton clock sees only2^k. This is another concrete consequence of keeping
+three path slots. Its17-query observer closes future H for a specified
+twelve-command two-active-port language; it is not the unrestricted
+arbitrary-attachment reconstruction theorem sought here. The finite return
+tree, native guards, phases and all-length reader inverse are preserved in
+the merge without importing an arbitrary-depth acceptance claim.
+
 ## Exact source-to-target maps
 
 Session180's [squarefree matrix](../session180_170807_returns_20261104/ports/PROOF.md)

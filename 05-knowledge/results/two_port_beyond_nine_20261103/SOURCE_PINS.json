@@ -20,7 +20,9 @@
     "05-knowledge/results/two_port_unit_distance_20261103/geometry/PROOF.md": "259b7ea947e51f85cb698063a07c6dbf95c20ded42f2f1b9c5772383def4cbe9",
     "05-knowledge/results/two_port_unit_distance_20261103/reconstruction/PROOF.md": "b59eac9c5143a76d650571b7b40efb33a59ce7219f4dcfb6cf5730da514c6191",
     "05-knowledge/results/unit_equality_quantized_guards_20261011e.md": "9c6e62a530e0136959ffd439dd10c41a4517665f01fc566b91102f066b3e363f",
+    "05-knowledge/results/zero_ready_component_returns_20261103/README.md": "e590af3cbbe9f0d227ca8f642a6f0f9e33058e862d4634c4ddaa0b432c73f650",
+    "05-knowledge/results/zero_ready_component_returns_20261103/interface/NOTE.md": "9e9c4de25cb55553cb7f12f8c65a0fe6090fdc577614a766b43dc1fd794e2261",
     "05-knowledge/results/zero_ready_strong_switch_20261103/structure/README.md": "9bea791860b177033794c6020d7e8f338f18c901ef4ecb0819c81d5ac539f5af"
   },
-  "integrated_incoming_head": "9f5bdfaea3"
+  "integrated_incoming_head": "7e568d4296"
 }
