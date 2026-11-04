@@ -1,0 +1,25 @@
+{
+  "files": [
+    "REVIEW.md",
+    "README.md",
+    "DEPENDENCIES.json",
+    "kernel_audit.py",
+    "kernel_recount.json",
+    "physical_audit.py",
+    "physical_controls.json",
+    "ambient_controls.json",
+    "producer_audit.py",
+    "literal.cpp",
+    "producer_physical_recount.json",
+    "named_audit.py",
+    "complete_named_banks.json",
+    "kernel_normal.json",
+    "kernel_optimized.json",
+    "physical_normal.json",
+    "physical_optimized.json",
+    "producer_normal.json",
+    "producer_optimized.json",
+    "named_normal.json",
+    "named_optimized.json"
+  ]
+}

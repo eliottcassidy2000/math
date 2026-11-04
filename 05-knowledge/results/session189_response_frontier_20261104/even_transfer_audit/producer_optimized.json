@@ -1,0 +1,19 @@
+{
+  "complete_child_profiles": 14,
+  "complete_kernel_records": 16212,
+  "exact_physical_cover_coordinates": 4720,
+  "independent_data_sha256": "f8a11a346cd99f01613cd4a9c2293db2779bdcbcd1aceb579ede3d89e2568eba",
+  "maximum_augmented_order": 18,
+  "padded_exact_kernel_coordinates": 145908,
+  "physical_sides": 944,
+  "producer_kernel_sha256": "8f18a0c0f8e4869faa7b9b7036ef3bf632db570dab8111aca05d075d368aaac2",
+  "producer_physical_sha256": "49f241af523d4cbcaad411208ff82d7f4e308aed804695542386fea6a5176047",
+  "producer_proof_sha256": "05921da21eebcfc97cdf462fd247615cc0fe2cb45899ab9dab868589f3f1fde3",
+  "source_pins": {
+    "kernel_audit.py": "74d5a9f1c7a9347431dbacde2975b1e53e127a8b064c2a6bc5dd0c71beb3a64b",
+    "literal.cpp": "51ced143bc5a89552359ea5c048feb67b68a4acdf976427d7435d2e8fdf778fe",
+    "physical_audit.py": "a5c49dd1e0a8217cc3b7049c2cd064e3f6ab3b24fdbda0f0de199baac3c78df0",
+    "producer_audit.py": "348be41c79465592cce90bb1994e72a79610d75e8d292920844a543232fcfaba"
+  },
+  "status": "PASS"
+}

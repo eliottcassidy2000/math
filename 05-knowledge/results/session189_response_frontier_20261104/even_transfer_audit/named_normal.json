@@ -1,0 +1,11 @@
+{
+  "all_cubic_coordinates_including_zero": 960,
+  "all_named_coefficient_coordinates": 3680,
+  "all_quartic_coordinates_including_zero": 340,
+  "bank_sha256": "a5e582fc61ff941a6010511cd8456f3e347ccc9a3cb44fffb0dd6920eff659b3",
+  "complete_physical_query_families": 20,
+  "ordered_cover_channels": 200,
+  "scope": "Complete block-uniform polynomial banks, with fixed physical child sets and query masks; no within-child nonuniform observer is asserted.",
+  "source_sha256": "ac76b523ad2e5742899683a3cb1fa8aa0a118ce10aff73d625743e88c25f5db2",
+  "status": "PASS"
+}

@@ -1,0 +1,10 @@
+{
+  "inherited_even_profile_domain": "https://github.com/eliottcassidy2000/math/blob/8f14b96ab020f7d5ceeb88e7bda413bb6f8bc9b7/05-knowledge/results/session188_structural_bridges_20261104/even_cyclic_mod16/PROOF.md",
+  "sha256": {
+    "session189-even-transfer/PROOF.md": "05921da21eebcfc97cdf462fd247615cc0fe2cb45899ab9dab868589f3f1fde3",
+    "session189-even-transfer/kernels.txt": "8f18a0c0f8e4869faa7b9b7036ef3bf632db570dab8111aca05d075d368aaac2",
+    "session189-even-transfer/physical_records.json": "49f241af523d4cbcaad411208ff82d7f4e308aed804695542386fea6a5176047",
+    "session189-seidel-energy-audit/REVIEW.md": "84db5f2ecd07b9e0021494efa403a98a36d7159b4018f86c649f581466750b9a",
+    "session189-seidel-energy/PROOF.md": "204d7cd868d3d83e019a20ea5bb6254ee455e5f0ecaa01a6635c55c7afecd3d0"
+  }
+}

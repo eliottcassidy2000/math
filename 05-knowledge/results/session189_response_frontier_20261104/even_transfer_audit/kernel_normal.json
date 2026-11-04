@@ -1,0 +1,11 @@
+{
+  "complete_kernel_records": 16212,
+  "data_sha256": "11fc590b73eb513ecaef5c0b8de307197e86e79264ced044a544485582e3dfdd",
+  "exact_cut_coordinates": 117940,
+  "h_beyond_word_length": "zero by nonempty path slots",
+  "labeled_tournaments_with_nonempty_complement": 1098,
+  "maximum_word_length": 9,
+  "method": "Independent suffix recurrence with one packed exact coefficient per cut count; no producer import.",
+  "source_sha256": "74d5a9f1c7a9347431dbacde2975b1e53e127a8b064c2a6bc5dd0c71beb3a64b",
+  "status": "PASS"
+}

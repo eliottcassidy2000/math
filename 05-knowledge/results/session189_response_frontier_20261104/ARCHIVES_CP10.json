@@ -1,0 +1,67 @@
+{
+  "format": "lossless-compressed-base64-parts-v2",
+  "archives": [
+    {
+      "path": "even_transfer/kernels.txt",
+      "bytes": 657740,
+      "sha256": "8f18a0c0f8e4869faa7b9b7036ef3bf632db570dab8111aca05d075d368aaac2",
+      "git_blob_sha": "6269529d0e2ca5d1e50126c6ac1f141746e3b0b7",
+      "compression": "xz",
+      "compressed_bytes": 23288,
+      "compressed_sha256": "09ccc71c5c305ca3c9828898589e2715d2e194d4bb5d3de87325ecf118d97a36",
+      "parts": [
+        "even_transfer/kernels.txt.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "even_transfer/physical_records.json",
+      "bytes": 322859,
+      "sha256": "49f241af523d4cbcaad411208ff82d7f4e308aed804695542386fea6a5176047",
+      "git_blob_sha": "8f1ed467690336ad3d7523c802926dd5cb28f66f",
+      "compression": "xz",
+      "compressed_bytes": 20220,
+      "compressed_sha256": "2a69d166f46afad05fa90c724c14c1d2473324500cab8c6621f9d4fa5357a4aa",
+      "parts": [
+        "even_transfer/physical_records.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "even_transfer_audit/kernel_recount.json",
+      "bytes": 1764756,
+      "sha256": "11fc590b73eb513ecaef5c0b8de307197e86e79264ced044a544485582e3dfdd",
+      "git_blob_sha": "9adca805f33d3dc4265c30bc8732a1268674c1b4",
+      "compression": "xz",
+      "compressed_bytes": 63944,
+      "compressed_sha256": "0eeac9340d1ae32fd4cb6ccced9802d99024dff2c4bce8bef4d50693ccd5d761",
+      "parts": [
+        "even_transfer_audit/kernel_recount.json.xz.b64.parts/00001.txt",
+        "even_transfer_audit/kernel_recount.json.xz.b64.parts/00002.txt",
+        "even_transfer_audit/kernel_recount.json.xz.b64.parts/00003.txt"
+      ]
+    },
+    {
+      "path": "even_transfer_audit/producer_physical_recount.json",
+      "bytes": 163917,
+      "sha256": "f8a11a346cd99f01613cd4a9c2293db2779bdcbcd1aceb579ede3d89e2568eba",
+      "git_blob_sha": "c11cd568c49aa64aaa7927fe8bdff22106f70a34",
+      "compression": "xz",
+      "compressed_bytes": 16496,
+      "compressed_sha256": "3488dec9e176513ec70929f455095d001bb13f9f4018774b0741888c433bf1e4",
+      "parts": [
+        "even_transfer_audit/producer_physical_recount.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "even_transfer_audit/complete_named_banks.json",
+      "bytes": 62163,
+      "sha256": "a5e582fc61ff941a6010511cd8456f3e347ccc9a3cb44fffb0dd6920eff659b3",
+      "git_blob_sha": "90e89be2d8ac7d310ab0bb9500a78531958c04c4",
+      "compression": "xz",
+      "compressed_bytes": 8312,
+      "compressed_sha256": "480503ff6dbfeb341a1fa5568a6dc624f4f847934e45a417de54246694f67a06",
+      "parts": [
+        "even_transfer_audit/complete_named_banks.json.xz.b64.parts/00001.txt"
+      ]
+    }
+  ]
+}

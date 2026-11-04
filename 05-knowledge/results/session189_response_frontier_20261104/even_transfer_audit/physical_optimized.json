@@ -1,0 +1,14 @@
+{
+  "ambient_queries": 3,
+  "complete_exact_cover_coordinates": 1012,
+  "local_queries": 40,
+  "maximum_augmented_order": 16,
+  "method": "Independent literal endpoint subset recurrence with exact packed cut-polynomial coefficients; no producer imports.",
+  "nonzero_local_mod16_queries": 22,
+  "output_pins": {
+    "ambient_controls.json": "122667a74a163b1aee6ce54577a89449dd39890f5c1775e08924ad0a85c6cbf0",
+    "physical_controls.json": "2bf95db9e8cb65b116b7f5be3d0e0c3e90349d73a5ff0d44b0290c73a25c77a1"
+  },
+  "source_sha256": "a5c49dd1e0a8217cc3b7049c2cd064e3f6ab3b24fdbda0f0de199baac3c78df0",
+  "status": "PASS"
+}
