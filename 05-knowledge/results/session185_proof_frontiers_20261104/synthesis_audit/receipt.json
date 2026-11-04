@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "relative_links_checked": [
+    "../closure/PROOF.md",
+    "../closure/witnesses.json",
+    "../closure_audit/AUDIT.md",
+    "../carriers_audit/AUDIT.md",
+    "../mining/PROOF.md",
+    "../mining_audit/AUDIT.md",
+    "../closure/PROOF.md",
+    "../closure_audit/AUDIT.md",
+    "../carriers/PROOF.md",
+    "../carriers_audit/AUDIT.md",
+    "../alternative/PROOF.md",
+    "../alternative_audit/AUDIT.md",
+    "../prime_lanes/PROOF.md",
+    "../prime_lanes_audit/AUDIT.md"
+  ],
+  "count_paths": {
+    "2": 323,
+    "4": 325,
+    "24": 973,
+    "44": 979,
+    "242": 2921,
+    "244": 2923,
+    "442": 2939,
+    "444": 2941
+  },
+  "audited_sha256": {
+    "synthesis/NOTE.md": "692cfa1335b07b9006a64dc3265253675aad00930046948d3b02439e4fb29414",
+    "closure/PROOF.md": "033dd2b1909d79bf25bb9abf43960d4f063b524cd6cb579afc374218e98e93a9",
+    "mining/PROOF.md": "e66510c4dceb791d3d0a52b427da121dc5717c5d70613c07fe5c878e8fc4fd41",
+    "carriers/PROOF.md": "b3edee672f8352719f2d8e14dd6cb97ad9d6ddbf0385501ba8bfb1163f0b2245",
+    "alternative/PROOF.md": "461ecf1b5498542fde54bee1faeaf23ce941a8a5dc942d43820dbdbc2c166063",
+    "prime_lanes/PROOF.md": "6014d5e8efddf1a8f9fa835cbd63c82a9deb0221d49d61edfcd16bbf190ce689",
+    "closure_audit/AUDIT.md": "849c715d40528db3ad063a86078aee797141f3cebd797477c79aefdc7376ef07",
+    "mining_audit/AUDIT.md": "f495b3ab66e81b0dee214191fdeb8155b193d4ed762d80bfc43aa92411f4928b",
+    "carriers_audit/AUDIT.md": "e4c4da145bd45203f87c1b8beeec6a136f9d2bbf319718f2cb27746ff9c5a93a",
+    "alternative_audit/AUDIT.md": "4d5055d1a42017bce4160e3752e073490853a508fafc48d147b473ba85b7fab5",
+    "prime_lanes_audit/AUDIT.md": "a8ad7708f2f597d211395f9315eea7fec2b27e65bf103415011d4f185ebb4144"
+  },
+  "scope": "Synthesis cross-packet consistency and arithmetic; remote pinned links not refetched."
+}
