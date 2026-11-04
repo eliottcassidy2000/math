@@ -1,0 +1,18 @@
+{
+  "exact_recovered_counts": 3520,
+  "interpolation_groups": 52,
+  "literal_physical_graphs": 3520,
+  "maximum_augmented_order": 14,
+  "output_pins": {
+    "literal_interpolation_records.json": "2af4be6ea0836f24333707775c12942c31e594812d497ddf4403e5e077c12567",
+    "signed_stirling_recovery.json": "f2df9cb8cb7791b342501cd7d5cb624b821e8cadbdde7e2ba70ea1e3c598bbce"
+  },
+  "physical_mod16_graphs": 880,
+  "physical_mod8_graphs": 2640,
+  "producer_proof_sha256": "986bf584be51d42e27a462097eb40897198134e23b7c8add6f83d2ab06f7b1bb",
+  "source_pins": {
+    "interpolation_audit.py": "e9c70b7f0f12227eed36685a05614e02b10bd18026bed698528abbe7817cf6a0",
+    "literal.cpp": "556f4c37dc7ea93d8d575149dc59f0127dee6acdfe87203b3bd1d0865f515888"
+  },
+  "status": "PASS"
+}

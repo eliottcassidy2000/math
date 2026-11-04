@@ -1,0 +1,20 @@
+{
+  "files": [
+    "REVIEW.md",
+    "README.md",
+    "DEPENDENCIES.json",
+    "run_audit.py",
+    "run_suffix.cpp",
+    "interpolation_audit.py",
+    "literal.cpp",
+    "run_recount.json",
+    "certificate_recount.json",
+    "even_recount.json",
+    "literal_interpolation_records.json",
+    "signed_stirling_recovery.json",
+    "run_normal.json",
+    "run_optimized.json",
+    "interpolation_normal.json",
+    "interpolation_optimized.json"
+  ]
+}

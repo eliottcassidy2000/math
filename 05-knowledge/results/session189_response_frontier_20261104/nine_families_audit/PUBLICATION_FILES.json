@@ -1,0 +1,20 @@
+{
+  "files": [
+    "REVIEW.md",
+    "README.md",
+    "DEPENDENCIES.json",
+    "affine_audit.py",
+    "physical_audit.py",
+    "literal.cpp",
+    "affine_recount.json",
+    "physical_transports.json",
+    "independent_named_banks.json",
+    "cube_hashes.json",
+    "physical_and_dual_controls.json",
+    "transport_controls.json",
+    "affine_normal.json",
+    "affine_optimized.json",
+    "physical_normal.json",
+    "physical_optimized.json"
+  ]
+}

@@ -1,0 +1,6 @@
+#include <cstdint>
+#include <iostream>
+#include <vector>
+#include <functional>
+struct Counter{std::vector<unsigned> rows;std::vector<int>stride,cap;std::vector<unsigned>avail;std::vector<int64_t>memo;int n,states,root;Counter(const std::vector<unsigned>&r,const std::vector<int>&k,int rt=-1):rows(r),cap(k),n(r.size()),states(1),root(rt){stride.resize(n);for(int i=0;i<n;++i){stride[i]=states;states*=cap[i]+1;}avail.resize(states);for(int s=1;s<states;++s)for(int i=0;i<n;++i)if(s/stride[i]%(cap[i]+1))avail[s]|=1u<<i;memo.assign(size_t(states)*n,-1);}int64_t suffix(int left,int last){if(!left)return root<0?1:((rows[last]>>root)&1);auto &z=memo[size_t(left)*n+last];if(z>=0)return z;z=0;unsigned choices=rows[last]&avail[left];while(choices){int v=__builtin_ctz(choices);choices&=choices-1;z+=suffix(left-stride[v],v);}return z;}uint64_t total(){if(root>=0)return suffix(states-1-stride[root],root);uint64_t out=0;for(int i=0;i<n;++i)out+=suffix(states-1-stride[i],i);return out;}};
+int main(){int cases;std::cin>>cases;while(cases--){int n,ns;std::cin>>n>>ns;std::vector<unsigned>R(n);for(auto&r:R)std::cin>>r;for(int s=0;s<ns;++s){std::vector<int>cap(n);for(auto&c:cap)std::cin>>c;std::cout<<Counter(R,cap).total()<<' ';}std::vector<int>cap(n,1);std::cout<<Counter(R,cap,n-2).total()<<'\n';}}

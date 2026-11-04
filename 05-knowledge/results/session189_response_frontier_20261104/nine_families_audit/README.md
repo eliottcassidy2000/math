@@ -1,0 +1,1 @@
+Independent approved review of the bounded sixteen-cyclic-plus-U9/W9 family packet. Exact scope and reproduction are in REVIEW.md. Complete named banks, all singleton patterns, physical label transports and new complete-profile/dual controls are retained. This base review does not close the all-nonsingleton cyclic residual or claim a prime-nine census.

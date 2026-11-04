@@ -1,0 +1,23 @@
+{
+  "actual_query_pairs": 412,
+  "even_q2_assignments_checked": 512,
+  "even_shapes": 220,
+  "exact_even_run_coordinates": 880,
+  "exact_run_and_cycle_coordinates": 46144,
+  "output_pins": {
+    "certificate_recount.json": "bc5e3b9dd85ebd29657a75ab91fcf6c02cb28e8862af7a4d862fdfff7ee12880",
+    "even_recount.json": "15537773669b0f028ec9632be6ebe83e0be3fe32c4ad2dc06fd4add13992d130",
+    "run_recount.json": "6476080a4e1d73966245f13f6feeb940643b0637fdc87714f0296ef07203728a"
+  },
+  "producer_proof_sha256": "986bf584be51d42e27a462097eb40897198134e23b7c8add6f83d2ab06f7b1bb",
+  "profile_assignments_checked": 524288,
+  "selected_safe_equations": [
+    18,
+    6
+  ],
+  "source_pins": {
+    "run_audit.py": "e231ef655b61923f9a5705da36379f6bad4930945a2742f31726f4b3eb1f3015",
+    "run_suffix.cpp": "f68fedc068793ee17f91edbb0a3a7f792bb87b9b6691921592d89b33405a1fb7"
+  },
+  "status": "PASS"
+}

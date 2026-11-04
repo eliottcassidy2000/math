@@ -1,0 +1,30 @@
+{
+  "additional_dual_physical_sides": 78,
+  "complete_mod8_profiles": 156,
+  "complete_named_coefficients": 16928,
+  "exact_named_basis_values": 16928,
+  "full_named_banks": 8,
+  "literal_singleton_transport_sides": 24,
+  "maximum_augmented_order": 20,
+  "named_degree_counts": [
+    8,
+    144,
+    1224,
+    5184,
+    10368
+  ],
+  "output_pins": {
+    "cube_hashes.json": "43bcfae44cc6846c4a0cdee162fb44fa8c34cafbbee568097cac7cbd17d2ad63",
+    "independent_named_banks.json": "c76c06fea01af5804ec1b3ece1b39d888527e197ac0380e3200c0c5d87d4adc0",
+    "physical_and_dual_controls.json": "8c408c4f0461178e60eb5e98c0095b6959b03c4ab61353db06c0e0de40dde1d5",
+    "transport_controls.json": "ec2ae73a3264683db061097effccd65f4c7ca59edcb56fa003eba20ec9967ec5"
+  },
+  "producer_physical_sides": 78,
+  "producer_proof_sha256": "4d57592533781aa4df3fd3f467e149bbf37698f0ab4c2a6be2f6d5662cbbbf0e",
+  "reconstructed_complete_cube_values": 2097152,
+  "source_pins": {
+    "literal.cpp": "556f4c37dc7ea93d8d575149dc59f0127dee6acdfe87203b3bd1d0865f515888",
+    "physical_audit.py": "aaa40b7fbc090b729e91bba7ec8c3b03ec78a0b644b3bbc8c046fe9bc93119db"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,16 @@
+{
+  "bounded_models": 18,
+  "complete_joint_endpoint_coordinates": 1458,
+  "independent_exact_anchor_primitives": 3078,
+  "output_pins": {
+    "affine_recount.json": "d3c6a423b0b4e0f84a4538aa6b2aad196029d17fdbbc6f4291fae34b41e856e3",
+    "physical_transports.json": "4e36ddbac38197a94a1e0d227f056b7d9fb8b37cc59209b683a45ed4144fbf44"
+  },
+  "physical_mask_transports": 6144,
+  "prime_circulants": 12,
+  "producer_proof_sha256": "4d57592533781aa4df3fd3f467e149bbf37698f0ab4c2a6be2f6d5662cbbbf0e",
+  "singleton_position_patterns": 9216,
+  "source_sha256": "2b7e2a7440643a7a6e622be47c60b1ed922b5aa5d4a40aba1d690fa66c0a6278",
+  "status": "PASS",
+  "unit_transport_records": 12
+}

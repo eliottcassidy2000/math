@@ -1,0 +1,16 @@
+[
+  {
+    "model_index": 0,
+    "assignments_checked": 262144,
+    "zero_assignments": [
+      511
+    ],
+    "odd_total_zero_assignments": []
+  },
+  {
+    "model_index": 1,
+    "assignments_checked": 262144,
+    "zero_assignments": [],
+    "odd_total_zero_assignments": []
+  }
+]

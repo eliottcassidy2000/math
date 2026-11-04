@@ -1,0 +1,175 @@
+{
+  "format": "lossless-compressed-base64-parts-v2",
+  "archives": [
+    {
+      "path": "nine_families/families.json",
+      "bytes": 829501,
+      "sha256": "dfaee1fd77a1bc210dc02e791aa2c2dc9132d22e9101d7bedd05a79e20bce580",
+      "git_blob_sha": "84bb7e104cf0758ed3617ca8b63cde7ea13e2f7e",
+      "compression": "xz",
+      "compressed_bytes": 21148,
+      "compressed_sha256": "2cce60ed45db8bb039afc3a2f63619c89120e31b6efe140c3d7ac7ec073c63f1",
+      "parts": [
+        "nine_families/families.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "nine_families/named_values.txt",
+      "bytes": 97374,
+      "sha256": "283d748c81b5f8345e3cfd3c3f1f00e1aa90dbedda5822336fcfc28733cf27b2",
+      "git_blob_sha": "6c9b256e6fd52872eb60a2cd65c069a0748d5e87",
+      "compression": "xz",
+      "compressed_bytes": 23512,
+      "compressed_sha256": "1a2fe00cc14aa6d0e4752462d6ccf9fc426d97d0c7a76315c7437e1dd0019513",
+      "parts": [
+        "nine_families/named_values.txt.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "nine_families/named_banks.json",
+      "bytes": 176278,
+      "sha256": "2bd37032c5890791522c872ab2fae502138cc667d94b85383247d4069aa0a59f",
+      "git_blob_sha": "371272fd04a7e7b98c101c293d44841f86536b57",
+      "compression": "xz",
+      "compressed_bytes": 39824,
+      "compressed_sha256": "631cd6ae545e276b5b3a902f1594156b7eb97b787cec7ab27786e7aa129ee7a2",
+      "parts": [
+        "nine_families/named_banks.json.xz.b64.parts/00001.txt",
+        "nine_families/named_banks.json.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "nine_families_audit/affine_recount.json",
+      "bytes": 828667,
+      "sha256": "d3c6a423b0b4e0f84a4538aa6b2aad196029d17fdbbc6f4291fae34b41e856e3",
+      "git_blob_sha": "dda4320b49c465d8016cb98457c9ce1fb896b87b",
+      "compression": "xz",
+      "compressed_bytes": 21148,
+      "compressed_sha256": "f409d1a5b2edd45cac2bd7e474730091779db0b95133f05c45f530b2a7923920",
+      "parts": [
+        "nine_families_audit/affine_recount.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "nine_families_audit/independent_named_banks.json",
+      "bytes": 175486,
+      "sha256": "c76c06fea01af5804ec1b3ece1b39d888527e197ac0380e3200c0c5d87d4adc0",
+      "git_blob_sha": "cc95d6cec69945ec1d439d997e530923612006a4",
+      "compression": "xz",
+      "compressed_bytes": 39696,
+      "compressed_sha256": "c082a915b50ecc26d3253b67f6f94912d4760975cbd0ec2302d8e4c34f54aac8",
+      "parts": [
+        "nine_families_audit/independent_named_banks.json.xz.b64.parts/00001.txt",
+        "nine_families_audit/independent_named_banks.json.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "nine_circulant_extension/analysis.json",
+      "bytes": 361379,
+      "sha256": "e8bcf1b8be7ca24d5686dd5a3a42a60386c2a14e7e920a26456e82a6bf5cf641",
+      "git_blob_sha": "587b2edc0ae28fdbf0582dd7871c53bb9d7ae3cd",
+      "compression": "xz",
+      "compressed_bytes": 103736,
+      "compressed_sha256": "3bf323dc490deb29663bd2a65ea19b71bd68c7e49941d359dd35b97a6d19c532",
+      "parts": [
+        "nine_circulant_extension/analysis.json.xz.b64.parts/00001.txt",
+        "nine_circulant_extension/analysis.json.xz.b64.parts/00002.txt",
+        "nine_circulant_extension/analysis.json.xz.b64.parts/00003.txt",
+        "nine_circulant_extension/analysis.json.xz.b64.parts/00004.txt"
+      ]
+    },
+    {
+      "path": "nine_circulant_extension/run_values.txt",
+      "bytes": 309999,
+      "sha256": "cf5b990fab46a9d9a4908f5070a5102849481cadfd183a83572ebffbc0a52a4f",
+      "git_blob_sha": "787c38628d1c4fe9a3929d1f292ca568881557a6",
+      "compression": "xz",
+      "compressed_bytes": 98720,
+      "compressed_sha256": "cc560b2cf0eaa2bf6ddcab57b73e0cca4fca4f1f07f4b74cf5fbb592ffc78a52",
+      "parts": [
+        "nine_circulant_extension/run_values.txt.xz.b64.parts/00001.txt",
+        "nine_circulant_extension/run_values.txt.xz.b64.parts/00002.txt",
+        "nine_circulant_extension/run_values.txt.xz.b64.parts/00003.txt",
+        "nine_circulant_extension/run_values.txt.xz.b64.parts/00004.txt"
+      ]
+    },
+    {
+      "path": "nine_circulant_extension/physical_even_records.json",
+      "bytes": 290449,
+      "sha256": "b1c9800f119ee52fa398936048e6be13aec837923dbfdb0b7c582316e9312cee",
+      "git_blob_sha": "569bfc6d57eab8926e224a0ebaebfb144d5e521f",
+      "compression": "xz",
+      "compressed_bytes": 15848,
+      "compressed_sha256": "74900a619c90297fac9a31c87885bd0dd2d68632a8656752db3b6dc0acc8c536",
+      "parts": [
+        "nine_circulant_extension/physical_even_records.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "nine_circulant_extension/physical_mod8_records.json",
+      "bytes": 886755,
+      "sha256": "9eae6d57edb2ce285dac4c8a75d918fece1d814c82f0c7f49547e9670db6bcda",
+      "git_blob_sha": "b55ada845816223d5479d88315309d3a1921853e",
+      "compression": "xz",
+      "compressed_bytes": 47580,
+      "compressed_sha256": "0989a5903c6b6420194cfa2946eca4ceff7c778bce71a6c4ec2a1ad28720a24d",
+      "parts": [
+        "nine_circulant_extension/physical_mod8_records.json.xz.b64.parts/00001.txt",
+        "nine_circulant_extension/physical_mod8_records.json.xz.b64.parts/00002.txt"
+      ]
+    },
+    {
+      "path": "nine_circulant_extension/query_records.json",
+      "bytes": 115276,
+      "sha256": "db787e0adebf25445ade1592a8c1d1fb724a4e08bedb921bf1e75e20b111f127",
+      "git_blob_sha": "b2c7642005590f969bdd3208f99421629d1bfbb5",
+      "compression": "xz",
+      "compressed_bytes": 9448,
+      "compressed_sha256": "2b59045311cc0ca8be658cbf316405bed9ed67136baa95dfd599ffb45463362d",
+      "parts": [
+        "nine_circulant_extension/query_records.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "nine_circulant_extension_audit/run_recount.json",
+      "bytes": 417057,
+      "sha256": "6476080a4e1d73966245f13f6feeb940643b0637fdc87714f0296ef07203728a",
+      "git_blob_sha": "cf28870aac5ccb71e8be7ee01f9f7f8cee349aad",
+      "compression": "xz",
+      "compressed_bytes": 110608,
+      "compressed_sha256": "aa92a43d1b97cb47d3d17aaeda14bce6e27aaf291d2e1037ac50f3e427806e79",
+      "parts": [
+        "nine_circulant_extension_audit/run_recount.json.xz.b64.parts/00001.txt",
+        "nine_circulant_extension_audit/run_recount.json.xz.b64.parts/00002.txt",
+        "nine_circulant_extension_audit/run_recount.json.xz.b64.parts/00003.txt",
+        "nine_circulant_extension_audit/run_recount.json.xz.b64.parts/00004.txt"
+      ]
+    },
+    {
+      "path": "nine_circulant_extension_audit/literal_interpolation_records.json",
+      "bytes": 1240562,
+      "sha256": "2af4be6ea0836f24333707775c12942c31e594812d497ddf4403e5e077c12567",
+      "git_blob_sha": "d124597d584b31434c92a71d185d45fa035f9eb8",
+      "compression": "xz",
+      "compressed_bytes": 60668,
+      "compressed_sha256": "6e7a6f2e283afa39092d83032bce30538aa411634e0326c6689a4c68ff1d2a7d",
+      "parts": [
+        "nine_circulant_extension_audit/literal_interpolation_records.json.xz.b64.parts/00001.txt",
+        "nine_circulant_extension_audit/literal_interpolation_records.json.xz.b64.parts/00002.txt",
+        "nine_circulant_extension_audit/literal_interpolation_records.json.xz.b64.parts/00003.txt"
+      ]
+    },
+    {
+      "path": "nine_circulant_extension_audit/signed_stirling_recovery.json",
+      "bytes": 117172,
+      "sha256": "f2df9cb8cb7791b342501cd7d5cb624b821e8cadbdde7e2ba70ea1e3c598bbce",
+      "git_blob_sha": "c38d3ffa54b7768ac50aeec43fe5dd781d49c563",
+      "compression": "xz",
+      "compressed_bytes": 13672,
+      "compressed_sha256": "09c436ff44b3e9fdf9a9f53711a0fea55a14272a4c0c147ce90c6cf0cef32e47",
+      "parts": [
+        "nine_circulant_extension_audit/signed_stirling_recovery.json.xz.b64.parts/00001.txt"
+      ]
+    }
+  ]
+}
