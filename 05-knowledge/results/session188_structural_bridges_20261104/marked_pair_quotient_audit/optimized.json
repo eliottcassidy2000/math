@@ -1,0 +1,86 @@
+{
+  "exhaustive_small_grouped_batteries": 3120,
+  "larger_retained_batteries": [
+    {
+      "coefficient": 0,
+      "order": 4
+    },
+    {
+      "coefficient": 2,
+      "order": 5
+    },
+    {
+      "coefficient": -2,
+      "order": 5
+    },
+    {
+      "coefficient": 0,
+      "order": 4
+    },
+    {
+      "coefficient": -2,
+      "order": 5
+    },
+    {
+      "coefficient": 2,
+      "order": 6
+    },
+    {
+      "coefficient": 6,
+      "order": 6
+    },
+    {
+      "coefficient": -2,
+      "order": 6
+    },
+    {
+      "coefficient": 0,
+      "order": 6
+    },
+    {
+      "coefficient": 6,
+      "order": 6
+    },
+    {
+      "coefficient": -6,
+      "order": 7
+    },
+    {
+      "coefficient": 20,
+      "order": 7
+    },
+    {
+      "coefficient": -78,
+      "order": 8
+    },
+    {
+      "coefficient": 8,
+      "order": 7
+    },
+    {
+      "coefficient": -18,
+      "order": 7
+    },
+    {
+      "coefficient": 224,
+      "order": 10
+    },
+    {
+      "coefficient": 132,
+      "order": 9
+    },
+    {
+      "coefficient": 8,
+      "order": 6
+    }
+  ],
+  "literal_integer_count_comparisons": 101568,
+  "ordered_cut_controls": 121,
+  "source_sha256": {
+    "marked_pair_quotient/PROOF.md": "baba1aeb86fddf83f000a63f4da0ccff1418a3f6add077c7495c35bfe85f6e09",
+    "marked_pair_quotient/verify.py": "dd20526244816c4477099d034be062a8a3b42d89512c61ba226c65d5e8157cea",
+    "response/PROOF.md": "dcd7a33664f63039b937582f241910e98ccb3fa341f3ba3999f626f5c61b51ec"
+  },
+  "status": "PASS",
+  "underlying_named_quartics": 4656
+}
