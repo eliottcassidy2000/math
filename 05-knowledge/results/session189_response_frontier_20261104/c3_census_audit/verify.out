@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "candidate_rows_checked": 2348,
+  "candidate_endpoint_values_checked": 42264,
+  "all_prime_endpoint_values_checked": 1250010
+}
+{
+  "n": 9,
+  "merged": 97144,
+  "ordinary": 191536,
+  "self_converse": 2752,
+  "labeled_mass": 68719476736,
+  "expected_mass": 68719476736,
+  "permutations": 33867002,
+  "prime_merged": 69445,
+  "p_nonzero": 67097,
+  "p_zero": 2348,
+  "prime_ordinary": 136655,
+  "p_zero_ordinary": 4293,
+  "path_prefixes": 778459859
+}

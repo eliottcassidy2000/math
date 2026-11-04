@@ -1,0 +1,1 @@
+PASS: module closure equals full subset predicate on 33866 labeled tournaments of orders 2..6 and all 97144 order-9 merged representatives; 1002 deterministic shuffled-label canonicalization controls.

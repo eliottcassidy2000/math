@@ -1,0 +1,131 @@
+{
+  "status": "FROZEN / VERIFIED",
+  "scope": "Independent complete order-9 census and prime/p-parity filter; no response polynomial or global minimum claim",
+  "files": {
+    "audit.cpp": {
+      "bytes": 7212,
+      "sha256": "a19f4e6e607b73f1952f0908fde97404ddf940fd328d7d279ed877463e733a44"
+    },
+    "controls.cpp": {
+      "bytes": 2185,
+      "sha256": "d7d5c9aa32274294bbd80ad36227ca8824ab2d7c3db88db1ea657b624e6d6ae7"
+    },
+    "verify.py": {
+      "bytes": 3714,
+      "sha256": "51cdb648b5e638d6a68ad261730a2e0ab6ba108346640e2ca93f68f416b95d4c"
+    },
+    "verify_compact.py": {
+      "bytes": 3666,
+      "sha256": "60babff2d620fec877678406654dc0f142a4378f99e70f3fa6d6962d5abacdad"
+    },
+    "REVIEW.md": {
+      "bytes": 12277,
+      "sha256": "fa5d1df1c6364d1860e104879a8ec83e70b6c61f97b06a562eed033e766be738"
+    },
+    "all_rows.tsv": {
+      "bytes": 10251358,
+      "sha256": "9fa9c5bacd8fe5560196d97d65dfdb442957be7bfbefcb1e2f8ef10c223d21d9"
+    },
+    "candidates.tsv": {
+      "bytes": 272433,
+      "sha256": "d9060da64d333957065ff4fbee5bbf3fbf26187b8cd0fb8914b89987587f73ab"
+    },
+    "summary.tsv": {
+      "bytes": 531,
+      "sha256": "ac201975dd162d242d09aa4f670cf961483ada5cd59644c361c63026fac5975b"
+    },
+    "run.out": {
+      "bytes": 112,
+      "sha256": "507191b2e366829e52858510dae6770bb360111986b3cc0e2c1f2d7b6c959879"
+    },
+    "run.log": {
+      "bytes": 540,
+      "sha256": "9d327f8e9c5f9f49ac7afa69ba75d8fb4af0b9c5c3fe1ab00748c2d1dd79d658"
+    },
+    "runtime.json": {
+      "bytes": 53,
+      "sha256": "aa968392f06d3e6099054023661987f5085ee467cc45068a62d1b74a3da112a2"
+    },
+    "controls.out": {
+      "bytes": 201,
+      "sha256": "403905818de09655a1235e948a73db0daaf95d5ed1fa302da61c7d8cdc10e53b"
+    },
+    "verify.out": {
+      "bytes": 471,
+      "sha256": "727ecca257348f02224e2a3a0c4ef13274f6d87b8601bb85115530d4d99c3bf5"
+    },
+    "verify.optimized.out": {
+      "bytes": 471,
+      "sha256": "727ecca257348f02224e2a3a0c4ef13274f6d87b8601bb85115530d4d99c3bf5"
+    },
+    "receipt.json": {
+      "bytes": 7236,
+      "sha256": "5ec4612498debead3fb487821843a44792ac1f22a2d4bb23b9acf4319666ffed"
+    },
+    "receipt.normal.json": {
+      "bytes": 7236,
+      "sha256": "5ec4612498debead3fb487821843a44792ac1f22a2d4bb23b9acf4319666ffed"
+    },
+    "compact_replay/summary.tsv": {
+      "bytes": 239,
+      "sha256": "49ee52b43d82aee503f3cb834e11d492e42cfa37552d06e662febbea80c21a5d"
+    },
+    "compact_replay/run.out": {
+      "bytes": 107,
+      "sha256": "fe7b0e72c8f71dd1dab2c6a9e3c4fc1720af5857fac2b3871cd7fe23055aabea"
+    },
+    "compact_replay/run.log": {
+      "bytes": 85,
+      "sha256": "f8531133753809bbd63bd38a51000c4b5d9c3b3f4591d168bc3f02dd51367b0b"
+    },
+    "compact_replay/runtime.json": {
+      "bytes": 54,
+      "sha256": "990342a938e028489adfeb9cc398af8e21e9a567ca22ec8b04fd51798ac2a981"
+    },
+    "compact_replay/controls.out": {
+      "bytes": 201,
+      "sha256": "403905818de09655a1235e948a73db0daaf95d5ed1fa302da61c7d8cdc10e53b"
+    },
+    "compact_replay/verify.out": {
+      "bytes": 133,
+      "sha256": "55e7dac8a4cdb3bf98e595acb54771d8e0f34e237173ab66e2be438db922fa24"
+    },
+    "compact_replay/verify.optimized.out": {
+      "bytes": 133,
+      "sha256": "55e7dac8a4cdb3bf98e595acb54771d8e0f34e237173ab66e2be438db922fa24"
+    },
+    "compact_replay/receipt.compact.json": {
+      "bytes": 1423,
+      "sha256": "630f8f1510d8552885a9fb26e6dd2b8f882a7710d51b1da70fc265cfd2b9e1c8"
+    },
+    "compact_replay/receipt.normal.json": {
+      "bytes": 1423,
+      "sha256": "630f8f1510d8552885a9fb26e6dd2b8f882a7710d51b1da70fc265cfd2b9e1c8"
+    }
+  },
+  "required_compact_inputs": {
+    "session189-c3-frontier/census.tsv": {
+      "bytes": 1681391,
+      "sha256": "1603ff1a56d9fb36eee03df6893c6e8b1af436a25536e9fae334a3ccd75acc8d"
+    },
+    "session189-c3-frontier/candidates.json": {
+      "bytes": 378162,
+      "sha256": "9eae7441d913bbc7f50f6f2283343e9d1751a50d8466278d340852c5d0cab45b"
+    }
+  },
+  "not_required_for_compact_replay": [
+    "session189-deletion-incoming/source.c",
+    "session189-deletion-incoming/data/tower_2.txt through tower_9.txt"
+  ],
+  "local_derived_files_omitted": [
+    "audit",
+    "controls",
+    "compact_replay/all_rows.tsv",
+    "compact_replay/candidates.tsv"
+  ],
+  "notes": [
+    "The retained all_rows.tsv contains orders 2..9. Compact output all_rows.tsv is exactly its header plus order-9 rows, as checked by complete equality.",
+    "Compiled binaries are omitted; compile the frozen sources.",
+    "The manifest does not hash itself."
+  ]
+}

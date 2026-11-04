@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "scope": "FINITE: every prime quotient of order nine with nine unchanged physical C3 interiors; source-relative <=27 consequence uses pinned reviewed inputs",
+  "merged_census": 97144,
+  "prime_merged": 69445,
+  "p_nonzero": 67097,
+  "p_zero": 2348,
+  "fixed_residual_queries": 12,
+  "endpoint_union_queries": 20,
+  "state_count": 94208,
+  "complete_residue_count": 56352,
+  "nonzero_query_pairs": 14025,
+  "first_witness_histogram": [
+    1159,
+    630,
+    296,
+    133,
+    68,
+    0,
+    30,
+    15,
+    7,
+    4,
+    4,
+    2
+  ],
+  "physical_witness_graphs": 4696,
+  "all_prime_endpoint_coordinates": 1250010,
+  "known_profile_control_queries": 16,
+  "all_named_terms": "Actual complete physical queries are counted; no quadratic or cubic truncation. This is not a full named-polynomial bank at order 27.",
+  "ambient_limit": "No new arbitrary-ambient lift is claimed. At <=27 the chosen core is the whole source."
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "summary": {
+    "n": 9,
+    "merged": 97144,
+    "ordinary": 191536,
+    "self_converse": 2752,
+    "labeled_mass": 68719476736,
+    "expected_mass": 68719476736,
+    "permutations": 33867002,
+    "prime_merged": 69445,
+    "p_nonzero": 67097,
+    "p_zero": 2348,
+    "prime_ordinary": 136655,
+    "p_zero_ordinary": 4293,
+    "path_prefixes": 778459859
+  },
+  "candidate_rows_checked": 2348,
+  "independent_label_mass": 68719476736,
+  "ordinary_keys_checked": 191536,
+  "sha256": {
+    "session189-c3-frontier/census.tsv": "1603ff1a56d9fb36eee03df6893c6e8b1af436a25536e9fae334a3ccd75acc8d",
+    "session189-c3-frontier/candidates.json": "9eae7441d913bbc7f50f6f2283343e9d1751a50d8466278d340852c5d0cab45b",
+    "/workspace/scratch/07d5532f2fce/session189-c3-census-audit/verify_compact.py": "60babff2d620fec877678406654dc0f142a4378f99e70f3fa6d6962d5abacdad",
+    "/workspace/scratch/07d5532f2fce/session189-c3-census-audit/audit.cpp": "a19f4e6e607b73f1952f0908fde97404ddf940fd328d7d279ed877463e733a44",
+    "session189-c3-census-audit/compact_replay/all_rows.tsv": "22e1c08ff7fee3fdfa3ce7cb789c2143f3a602bc0064384a136dbcb01ac79d58",
+    "session189-c3-census-audit/compact_replay/summary.tsv": "49ee52b43d82aee503f3cb834e11d492e42cfa37552d06e662febbea80c21a5d",
+    "session189-c3-census-audit/compact_replay/candidates.tsv": "d9060da64d333957065ff4fbee5bbf3fbf26187b8cd0fb8914b89987587f73ab"
+  }
+}

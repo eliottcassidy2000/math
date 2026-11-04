@@ -1,0 +1,8 @@
+n=2 merged=1 ordinary=1 orbit mass=2 prime=1 p-zero=0 PASS
+n=3 merged=2 ordinary=2 orbit mass=8 prime=1 p-zero=1 PASS
+n=4 merged=3 ordinary=4 orbit mass=64 prime=0 p-zero=0 PASS
+n=5 merged=10 ordinary=12 orbit mass=1024 prime=3 p-zero=2 PASS
+n=6 merged=34 ordinary=56 orbit mass=32768 prime=9 p-zero=0 PASS
+n=7 merged=272 ordinary=456 orbit mass=2097152 prime=126 p-zero=29 PASS
+n=8 merged=3528 ordinary=6880 orbit mass=268435456 prime=2040 p-zero=1 PASS
+n=9 merged=97144 ordinary=191536 orbit mass=68719476736 prime=69445 p-zero=2348 PASS
