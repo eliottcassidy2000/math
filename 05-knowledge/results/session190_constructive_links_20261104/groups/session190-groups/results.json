@@ -1,0 +1,476 @@
+{
+  "binary_representation": {
+    "GF8_primitive_powers": [
+      1,
+      2,
+      4,
+      3,
+      6,
+      7,
+      5
+    ],
+    "GL3_F2_order": 168,
+    "Maschke_not_available_for_GL3_F2": true,
+    "Maschke_valid_for_F21": true,
+    "Singer_normalizer_order": 21,
+    "field": "F2",
+    "kernel_dimensions": [
+      1,
+      3,
+      3
+    ],
+    "kernel_masks": [
+      [
+        0,
+        127
+      ],
+      [
+        0,
+        23,
+        46,
+        57,
+        75,
+        92,
+        101,
+        114
+      ],
+      [
+        0,
+        29,
+        39,
+        58,
+        78,
+        83,
+        105,
+        116
+      ]
+    ]
+  },
+  "circulants": [
+    {
+      "H": 3,
+      "aut_order": 3,
+      "n": 3,
+      "steps": [
+        2
+      ]
+    },
+    {
+      "H": 3,
+      "aut_order": 3,
+      "n": 3,
+      "steps": [
+        1
+      ]
+    },
+    {
+      "H": 15,
+      "aut_order": 5,
+      "n": 5,
+      "steps": [
+        3,
+        4
+      ]
+    },
+    {
+      "H": 15,
+      "aut_order": 5,
+      "n": 5,
+      "steps": [
+        2,
+        4
+      ]
+    },
+    {
+      "H": 15,
+      "aut_order": 5,
+      "n": 5,
+      "steps": [
+        1,
+        3
+      ]
+    },
+    {
+      "H": 15,
+      "aut_order": 5,
+      "n": 5,
+      "steps": [
+        1,
+        2
+      ]
+    },
+    {
+      "H": 175,
+      "aut_order": 7,
+      "n": 7,
+      "steps": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "H": 189,
+      "aut_order": 21,
+      "n": 7,
+      "steps": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "H": 175,
+      "aut_order": 7,
+      "n": 7,
+      "steps": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "H": 175,
+      "aut_order": 7,
+      "n": 7,
+      "steps": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "H": 175,
+      "aut_order": 7,
+      "n": 7,
+      "steps": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "H": 175,
+      "aut_order": 7,
+      "n": 7,
+      "steps": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "H": 189,
+      "aut_order": 21,
+      "n": 7,
+      "steps": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "H": 175,
+      "aut_order": 7,
+      "n": 7,
+      "steps": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "normalized_edge_cubes": [
+    {
+      "C2_stabilizer_ordinary_edge_orbits": 1,
+      "exhaustive_bit_cube": true,
+      "fixed_coordinates": 1,
+      "n": 3,
+      "ordinary_edge_orbits": 1,
+      "q": 1,
+      "reflection_cycles": 1,
+      "signed_edge_orbits": 1
+    },
+    {
+      "C2_stabilizer_ordinary_edge_orbits": 2,
+      "exhaustive_bit_cube": true,
+      "fixed_coordinates": 1,
+      "n": 4,
+      "ordinary_edge_orbits": 4,
+      "q": 3,
+      "reflection_cycles": 2,
+      "signed_edge_orbits": 3
+    },
+    {
+      "C2_stabilizer_ordinary_edge_orbits": 8,
+      "exhaustive_bit_cube": true,
+      "fixed_coordinates": 2,
+      "n": 5,
+      "ordinary_edge_orbits": 32,
+      "q": 6,
+      "reflection_cycles": 4,
+      "signed_edge_orbits": 20
+    },
+    {
+      "C2_stabilizer_ordinary_edge_orbits": 32,
+      "exhaustive_bit_cube": true,
+      "fixed_coordinates": 2,
+      "n": 6,
+      "ordinary_edge_orbits": 512,
+      "q": 10,
+      "reflection_cycles": 6,
+      "signed_edge_orbits": 272
+    },
+    {
+      "C2_stabilizer_ordinary_edge_orbits": 256,
+      "exhaustive_bit_cube": true,
+      "fixed_coordinates": 3,
+      "n": 7,
+      "ordinary_edge_orbits": 16384,
+      "q": 15,
+      "reflection_cycles": 9,
+      "signed_edge_orbits": 8320
+    },
+    {
+      "C2_stabilizer_ordinary_edge_orbits": 2048,
+      "exhaustive_bit_cube": false,
+      "fixed_coordinates": 3,
+      "n": 8,
+      "ordinary_edge_orbits": 1048576,
+      "q": 21,
+      "reflection_cycles": 12,
+      "signed_edge_orbits": 525312
+    }
+  ],
+  "paley_seven": {
+    "H": 189,
+    "S_squared": [
+      [
+        -6,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        -6,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        -6,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        -6,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        -6,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        -6,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        -6
+      ]
+    ],
+    "affine_orbit_sizes": {
+      "ordered_pair": 42,
+      "unordered_pair": 21,
+      "vertex": 7
+    },
+    "affine_stabilizer_orders": {
+      "ordered_pair": 1,
+      "unordered_pair": 2,
+      "vertex": 6
+    },
+    "anti_involutions": 7,
+    "aut_order": 21,
+    "conjugacy_class_sizes": [
+      1,
+      3,
+      3,
+      7,
+      7
+    ],
+    "endpoint_matrix": [
+      [
+        0,
+        1,
+        1,
+        8,
+        1,
+        8,
+        8
+      ],
+      [
+        8,
+        0,
+        1,
+        1,
+        8,
+        1,
+        8
+      ],
+      [
+        8,
+        8,
+        0,
+        1,
+        1,
+        8,
+        1
+      ],
+      [
+        1,
+        8,
+        8,
+        0,
+        1,
+        1,
+        8
+      ],
+      [
+        8,
+        1,
+        8,
+        8,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        8,
+        1,
+        8,
+        8,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        8,
+        1,
+        8,
+        8,
+        0
+      ]
+    ],
+    "fixed_paths_per_anti_involution": [
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9
+    ],
+    "mask": 1956555,
+    "neighbour_orbit_representatives": [
+      1592,
+      5937,
+      13874,
+      25708,
+      42534,
+      50997,
+      58406,
+      58725,
+      59174
+    ],
+    "neighbour_orbit_sizes": [
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21
+    ],
+    "signed_aut_order": 42,
+    "signed_path_orbit_sizes": [
+      21,
+      21,
+      21,
+      42,
+      42,
+      42
+    ]
+  },
+  "small_labelled_metagraphs": [
+    {
+      "checked_all_paths_by_permutations_and_subset_dp": true,
+      "labelled_edges": 6,
+      "labelled_tournaments": 8,
+      "n": 3,
+      "ordinary_edge_orbits": 1,
+      "signed_edge_orbits": 1,
+      "signed_edge_stabilizer_sizes": {
+        "2": 6
+      }
+    },
+    {
+      "checked_all_paths_by_permutations_and_subset_dp": true,
+      "labelled_edges": 96,
+      "labelled_tournaments": 64,
+      "n": 4,
+      "ordinary_edge_orbits": 4,
+      "signed_edge_orbits": 3,
+      "signed_edge_stabilizer_sizes": {
+        "1": 48,
+        "2": 48
+      }
+    },
+    {
+      "checked_all_paths_by_permutations_and_subset_dp": true,
+      "labelled_edges": 3840,
+      "labelled_tournaments": 1024,
+      "n": 5,
+      "ordinary_edge_orbits": 32,
+      "signed_edge_orbits": 20,
+      "signed_edge_stabilizer_sizes": {
+        "1": 2880,
+        "2": 960
+      }
+    }
+  ],
+  "status": "FINITE-EXACT PASS"
+}

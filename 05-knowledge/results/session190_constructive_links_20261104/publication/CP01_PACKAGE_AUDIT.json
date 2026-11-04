@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "checkpoint": "CP01",
+  "candidate": "/workspace/scratch/07d5532f2fce/session190-publish/CP01-final/package.json",
+  "candidate_package_sha256": "92d6fc2d8d5ed6967e2cb647ca47a5a3684cdfdfaddf6077669841e9cecf7f7f",
+  "source_count": 14,
+  "frozen_math_count": 10,
+  "source_bytes": 1097298,
+  "object_count": 39,
+  "stored_bytes": 923254,
+  "compressed_originals": 4,
+  "restore_first": "Verified 14 original files; restored 4 files.",
+  "restore_second": "Verified 14 original files; restored 0 files.",
+  "originals_unchanged_by_replay": true,
+  "tests": [
+    "exact allowlist",
+    "original/frozen/candidate byte identity",
+    "SHA256 and Git blob hashes",
+    "all objects bounded",
+    "lossless independent gzip reconstruction",
+    "verify-only no writes",
+    "standalone restore",
+    "idempotent restore",
+    "optimized restore verify-only",
+    "existing conflict refused without overwrite",
+    "corrupt chunk rejected",
+    "traversal destination rejected",
+    "portable original demo replay",
+    "portable independent replay excluding informational input path",
+    "relative publication links resolve after restoration"
+  ],
+  "frozen_math": [
+    {
+      "source": "attached_papers/constructive_paper_synthesis.md",
+      "path": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/attached_papers/constructive_paper_synthesis.md",
+      "bytes": 15476,
+      "sha256": "9b29989a8cc6e868872f2b5044460cb2f7827553f48f3f2b5615d44977187e3c",
+      "git_blob_sha1": "9a7b838b94efdb210a92cf9c4e857e9d661fdafc"
+    },
+    {
+      "source": "attached_papers/boundary_signature_demo.py",
+      "path": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/attached_papers/boundary_signature_demo.py",
+      "bytes": 3314,
+      "sha256": "9c96c752d657eaa62a5081347418791d8abe36b6b08c9665ed32457a8db39ac9",
+      "git_blob_sha1": "0492c45967ccbe90821eb6186f6d4fc4d9ccc9fc"
+    },
+    {
+      "source": "attached_papers/boundary_signature_demo.json",
+      "path": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/attached_papers/boundary_signature_demo.json",
+      "bytes": 17213,
+      "sha256": "fa9eace7c43b3e8920f63e714781cd681f8913c6c023b6610040fdd8c57a521e",
+      "git_blob_sha1": "7d1df007760500eb99ff96b89d00c601653552b6"
+    },
+    {
+      "source": "attached_papers/source_issues_for_independent_review.md",
+      "path": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/attached_papers/source_issues_for_independent_review.md",
+      "bytes": 3754,
+      "sha256": "7f5d6db028f717ac07f47cd272bf09388ff7f74e0263b865fa4ef1f0a035e1a3",
+      "git_blob_sha1": "1c3ce734259b1803fef9a823e92eaa653ca520e3"
+    },
+    {
+      "source": "session190-papers-audit/PATCH_AND_SOURCE_AUDIT.md",
+      "path": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/session190-papers-audit/PATCH_AND_SOURCE_AUDIT.md",
+      "bytes": 9461,
+      "sha256": "56374caa5b44360d36589c6181776d5dab2e049bbf45bcbde848117c1b0e0a8c",
+      "git_blob_sha1": "acf3924d619cbae0e206c6e56ada9ed947a599a0"
+    },
+    {
+      "source": "session190-papers-audit/independent_boundary_audit.py",
+      "path": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/session190-papers-audit/independent_boundary_audit.py",
+      "bytes": 6462,
+      "sha256": "134befe7de406d697f56403f4b48d46087a49a11bdf864cdfa561670cd9c0c63",
+      "git_blob_sha1": "defd8e2859623a717e87bf4e10ded7f663f8bac5"
+    },
+    {
+      "source": "session190-papers-audit/independent_boundary_audit.json",
+      "path": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/session190-papers-audit/independent_boundary_audit.json",
+      "bytes": 107206,
+      "sha256": "9023dafe35142a80d10e66052f34de9f0256ce79d0990c3ddf01a70e5b9e1c0a",
+      "git_blob_sha1": "f652bce77c2bbfb1a0b0f1dc832f1a29d2ce1c14"
+    },
+    {
+      "source": "session190-papers-audit/4ct-page50.png",
+      "path": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/session190-papers-audit/4ct-page50.png",
+      "bytes": 437255,
+      "sha256": "bbd3f2e055c924924da16978a0c1c7df5be527ec641ffe64366a5e5276a81d70",
+      "git_blob_sha1": "c77e1f2fd860bc27337bd591a46af0649549a6ce"
+    },
+    {
+      "source": "session190-papers-audit/hypo-page5.png",
+      "path": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/session190-papers-audit/hypo-page5.png",
+      "bytes": 243536,
+      "sha256": "299dee54e17e55bd93c3d804e1a4e7896a3744f592c3d7090c680430085902e1",
+      "git_blob_sha1": "378a2b761b3b648aa50487aec4bc0840d9bab025"
+    },
+    {
+      "source": "session190-papers-audit/hypo-page21.png",
+      "path": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/session190-papers-audit/hypo-page21.png",
+      "bytes": 243993,
+      "sha256": "a6e6e013b110ec8797c09b5f4f4b8c0512ebefe636d5482b781dbaef38770de2",
+      "git_blob_sha1": "8b56f931eb941437b37d3fa2264e4ba47e175e08"
+    }
+  ],
+  "publication_docs": [
+    {
+      "path": "00-navigation/S190.md",
+      "bytes": 3208,
+      "sha256": "1320eba61d70a9751889fedd6e025ac55d6ec31542824dba37830d9b100a1966",
+      "git_blob_sha1": "47701b940aef2eeac34ffeefb92101d17cff9ce0"
+    },
+    {
+      "path": "05-knowledge/results/session190_constructive_links_20261104/RECEIPTS.md",
+      "bytes": 1482,
+      "sha256": "e7c0211c66d10db7a20a290a4bdcd47ea1849998e38df6eb6bcd880cb3dfd3df",
+      "git_blob_sha1": "2f970606bdcfbc754dbbac2ed4a3034769eef404"
+    },
+    {
+      "path": "05-knowledge/results/session190_constructive_links_20261104/RESTORE_ARCHIVES.py",
+      "bytes": 2633,
+      "sha256": "355446ae891a9280de1d73bb32cda906e75183816a8c4d05c30e49f3678b896c",
+      "git_blob_sha1": "8a920cceac5010319ce190b62a2b7c8489fd2207"
+    },
+    {
+      "path": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/REPRODUCTION.md",
+      "bytes": 2305,
+      "sha256": "0c9973faaa59c683bc7ee620b65bf77769647ac1dd3b3238326ed12b10e0cb3f",
+      "git_blob_sha1": "4284197d369d265b19e7011e2cd7e4792cd400b9"
+    }
+  ],
+  "stage_path": "/workspace/scratch/07d5532f2fce/session190-packaging-audit/cp01_stage_vgbw7su3",
+  "replay_path": "/workspace/scratch/07d5532f2fce/session190-packaging-audit/cp01_replay_htgro9b5/paper_patch"
+}

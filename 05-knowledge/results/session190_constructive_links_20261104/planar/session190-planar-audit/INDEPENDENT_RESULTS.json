@@ -1,0 +1,165 @@
+{
+  "interfaces": {
+    "rows": [
+      {
+        "k": 2,
+        "states": 1,
+        "row_sum_distribution": {
+          "1": 1
+        },
+        "gf2_rank": 1
+      },
+      {
+        "k": 3,
+        "states": 6,
+        "row_sum_distribution": {
+          "1": 6
+        },
+        "gf2_rank": 6
+      },
+      {
+        "k": 4,
+        "states": 26,
+        "row_sum_distribution": {
+          "1": 26
+        },
+        "gf2_rank": 26
+      },
+      {
+        "k": 5,
+        "states": 100,
+        "row_sum_distribution": {
+          "1": 100
+        },
+        "gf2_rank": 100
+      },
+      {
+        "k": 6,
+        "states": 365,
+        "row_sum_distribution": {
+          "1": 362,
+          "2": 3
+        },
+        "gf2_rank": 364
+      }
+    ],
+    "independent_probes": 498,
+    "six_block": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "six_block_det": -2,
+    "full_six_det": -2,
+    "permutation_complement_size": 360,
+    "permutation_complement_cycles": 180,
+    "full_six_rational_rank": 365,
+    "full_six_gf2_rank": 364
+  },
+  "independent_physical_cycle_counts": 189,
+  "independent_square_subset_dp": {
+    "base_graphs": 6,
+    "deletion_cards": 124,
+    "results": [
+      {
+        "n": 18,
+        "restoring_deletions": [
+          18
+        ]
+      },
+      {
+        "n": 19,
+        "restoring_deletions": [
+          18
+        ]
+      },
+      {
+        "n": 20,
+        "restoring_deletions": [
+          18
+        ]
+      },
+      {
+        "n": 21,
+        "restoring_deletions": [
+          18
+        ]
+      },
+      {
+        "n": 22,
+        "restoring_deletions": [
+          2,
+          18
+        ]
+      },
+      {
+        "n": 24,
+        "restoring_deletions": [
+          11,
+          18,
+          22,
+          24
+        ]
+      }
+    ]
+  },
+  "stellation": {
+    "cycles": 0,
+    "deletion_cycles": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 6,
+      "6": 6,
+      "7": 6,
+      "8": 6,
+      "9": 6,
+      "10": 6
+    },
+    "traceable": true
+  },
+  "source_hashes": {
+    "PROOF.md": "9d0bf5c6d0ccc22a87dd48f8ddeb4f6023185060051db0cedaed372f3b04d34b",
+    "verify.py": "f7af54bfab7b068c3861c959ae6c358d534241b6534114e3a0fa5944f1eaabf3",
+    "independent_kernel.py": "6e6c4a6ac179855ef8c6e97cd65b149fb6ff39eba514b870848d6098299984ad",
+    "stellation.py": "8620f46d780eca27847feab47e19fad6a7836c8d04361ca34daf7551740adc20",
+    "RESULTS.json": "37ddde7324be994412d635d39911f83de10694fa4ec739fcfb507ed559c7f389",
+    "KERNEL_REPLAY.json": "7d069f58a018f0a584c7d5f2f90fc583642685257c5ae7a1d72738fa700506ea",
+    "STELLATION.json": "f413fc3cd90773aecdf1c9fdbefc90200b4c58a90b0223a1cfcd47ac80c70b27"
+  },
+  "status": "PASS"
+}

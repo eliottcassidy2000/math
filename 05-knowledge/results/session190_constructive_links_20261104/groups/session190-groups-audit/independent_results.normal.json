@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "signed_edges": [
+    {
+      "n": 3,
+      "normalized_tournaments": 2,
+      "all_permutations_per_pair": 6,
+      "signed_stabilizers_on_words": {
+        "2": 2
+      },
+      "ordinary_edge_orbits": 1,
+      "signed_edge_orbits": 1,
+      "reflection_fixed_words": 2
+    },
+    {
+      "n": 4,
+      "normalized_tournaments": 8,
+      "all_permutations_per_pair": 24,
+      "signed_stabilizers_on_words": {
+        "2": 4,
+        "1": 4
+      },
+      "ordinary_edge_orbits": 4,
+      "signed_edge_orbits": 3,
+      "reflection_fixed_words": 4
+    },
+    {
+      "n": 5,
+      "normalized_tournaments": 64,
+      "all_permutations_per_pair": 120,
+      "signed_stabilizers_on_words": {
+        "2": 16,
+        "1": 48
+      },
+      "ordinary_edge_orbits": 32,
+      "signed_edge_orbits": 20,
+      "reflection_fixed_words": 16
+    }
+  ],
+  "Paley7": {
+    "aut": 21,
+    "signed_aut": 42,
+    "H": 189,
+    "endpoint_matrix": [
+      [
+        0,
+        1,
+        1,
+        8,
+        1,
+        8,
+        8
+      ],
+      [
+        8,
+        0,
+        1,
+        1,
+        8,
+        1,
+        8
+      ],
+      [
+        8,
+        8,
+        0,
+        1,
+        1,
+        8,
+        1
+      ],
+      [
+        1,
+        8,
+        8,
+        0,
+        1,
+        1,
+        8
+      ],
+      [
+        8,
+        1,
+        8,
+        8,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        8,
+        1,
+        8,
+        8,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        8,
+        1,
+        8,
+        8,
+        0
+      ]
+    ],
+    "ordinary_path_orbits": [
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21
+    ],
+    "signed_path_orbits": [
+      21,
+      21,
+      21,
+      42,
+      42,
+      42
+    ],
+    "anti_involution_fixed_counts": [
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9
+    ],
+    "distinct_neighbors": 189
+  },
+  "binary": {
+    "GL3_order": 168,
+    "C7_order": 7,
+    "F21_order": 21,
+    "normalizer_order": 21,
+    "C_matrix_columns": [
+      2,
+      4,
+      3
+    ],
+    "F_matrix_columns": [
+      1,
+      4,
+      6
+    ],
+    "module_kernel_sizes": [
+      2,
+      8,
+      8
+    ]
+  },
+  "modular_nonsplit": [
+    {
+      "characteristic": 2,
+      "cyclic_permutation_dimension": 2,
+      "invariant_retraction_exists": false
+    },
+    {
+      "characteristic": 3,
+      "cyclic_permutation_dimension": 3,
+      "invariant_retraction_exists": false
+    },
+    {
+      "characteristic": 7,
+      "cyclic_permutation_dimension": 7,
+      "invariant_retraction_exists": false
+    }
+  ],
+  "SU3": {
+    "symbolic_group_order": 21,
+    "nontrivial_C7_character_orbits": [
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        3,
+        5,
+        6
+      ]
+    ],
+    "minimum_real_dimension_from_conjugate_orbits": 6
+  }
+}

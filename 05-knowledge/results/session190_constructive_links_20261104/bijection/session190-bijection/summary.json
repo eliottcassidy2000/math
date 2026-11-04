@@ -1,0 +1,124 @@
+{
+  "status": "all exact checks passed; normal and optimized outputs identical",
+  "orders": [
+    {
+      "n": 1,
+      "tournament_classes": 1,
+      "all_graph_classes": 1,
+      "automorphism_even_graph_classes": 1,
+      "even_order_automorphism_graph_classes": 0,
+      "labelled_even_graphs": 1,
+      "coupling_rank": 1,
+      "coupling_distinct_rows": 1,
+      "return_spectral_distinct_rows": 1,
+      "converse_merged_classes": 1,
+      "birkhoff_terms": 1,
+      "homology_automorphisms_checked": 1
+    },
+    {
+      "n": 2,
+      "tournament_classes": 1,
+      "all_graph_classes": 2,
+      "automorphism_even_graph_classes": 1,
+      "even_order_automorphism_graph_classes": 2,
+      "labelled_even_graphs": 1,
+      "coupling_rank": 1,
+      "coupling_distinct_rows": 1,
+      "return_spectral_distinct_rows": 1,
+      "converse_merged_classes": 1,
+      "birkhoff_terms": 1,
+      "homology_automorphisms_checked": 4
+    },
+    {
+      "n": 3,
+      "tournament_classes": 2,
+      "all_graph_classes": 4,
+      "automorphism_even_graph_classes": 2,
+      "even_order_automorphism_graph_classes": 4,
+      "labelled_even_graphs": 4,
+      "coupling_rank": 2,
+      "coupling_distinct_rows": 2,
+      "return_spectral_distinct_rows": 2,
+      "converse_merged_classes": 2,
+      "birkhoff_terms": 2,
+      "homology_automorphisms_checked": 16
+    },
+    {
+      "n": 4,
+      "tournament_classes": 4,
+      "all_graph_classes": 11,
+      "automorphism_even_graph_classes": 4,
+      "even_order_automorphism_graph_classes": 11,
+      "labelled_even_graphs": 20,
+      "coupling_rank": 2,
+      "coupling_distinct_rows": 2,
+      "return_spectral_distinct_rows": 2,
+      "converse_merged_classes": 3,
+      "birkhoff_terms": 4,
+      "homology_automorphisms_checked": 90
+    },
+    {
+      "n": 5,
+      "tournament_classes": 12,
+      "all_graph_classes": 34,
+      "automorphism_even_graph_classes": 12,
+      "even_order_automorphism_graph_classes": 34,
+      "labelled_even_graphs": 396,
+      "coupling_rank": 10,
+      "coupling_distinct_rows": 10,
+      "return_spectral_distinct_rows": 10,
+      "converse_merged_classes": 10,
+      "birkhoff_terms": 74,
+      "homology_automorphisms_checked": 460
+    },
+    {
+      "n": 6,
+      "tournament_classes": 56,
+      "all_graph_classes": 156,
+      "automorphism_even_graph_classes": 56,
+      "even_order_automorphism_graph_classes": 148,
+      "labelled_even_graphs": 16432,
+      "coupling_rank": 34,
+      "coupling_distinct_rows": 34,
+      "return_spectral_distinct_rows": 34,
+      "converse_merged_classes": 34,
+      "birkhoff_terms": 1337,
+      "homology_automorphisms_checked": 3064
+    }
+  ],
+  "path_complement_checks": [
+    {
+      "n": 2,
+      "ordered_representative_pairs_checked": 1,
+      "labelled_Walsh_entries_checked": 4,
+      "diagonal": true
+    },
+    {
+      "n": 3,
+      "ordered_representative_pairs_checked": 4,
+      "labelled_Walsh_entries_checked": 64,
+      "diagonal": false
+    },
+    {
+      "n": 4,
+      "ordered_representative_pairs_checked": 12,
+      "labelled_Walsh_entries_checked": 4096,
+      "diagonal": false
+    },
+    {
+      "n": 5,
+      "ordered_representative_pairs_checked": 92,
+      "labelled_Walsh_entries_checked": 0,
+      "diagonal": false
+    },
+    {
+      "n": 6,
+      "ordered_representative_pairs_checked": 1224,
+      "labelled_Walsh_entries_checked": 0,
+      "diagonal": false
+    }
+  ],
+  "total_homology_automorphisms": 3635,
+  "total_path_pairs": 1333,
+  "total_labelled_path_Walsh_entries": 4164
+}

@@ -1,0 +1,41 @@
+{
+  "files": {
+    "KERNEL_REPLAY.json": {
+      "bytes": 862,
+      "sha256": "7d069f58a018f0a584c7d5f2f90fc583642685257c5ae7a1d72738fa700506ea"
+    },
+    "PROOF.md": {
+      "bytes": 20820,
+      "sha256": "9d0bf5c6d0ccc22a87dd48f8ddeb4f6023185060051db0cedaed372f3b04d34b"
+    },
+    "README.md": {
+      "bytes": 2126,
+      "sha256": "2c48c9ef6b7fe7f135760fcb3c74d4c67961d67c42cd36d8e48950c00d1b78d2"
+    },
+    "RESULTS.json": {
+      "bytes": 214038,
+      "sha256": "37ddde7324be994412d635d39911f83de10694fa4ec739fcfb507ed559c7f389"
+    },
+    "RESULTS.optimized.json": {
+      "bytes": 214038,
+      "sha256": "37ddde7324be994412d635d39911f83de10694fa4ec739fcfb507ed559c7f389"
+    },
+    "STELLATION.json": {
+      "bytes": 1667,
+      "sha256": "f413fc3cd90773aecdf1c9fdbefc90200b4c58a90b0223a1cfcd47ac80c70b27"
+    },
+    "independent_kernel.py": {
+      "bytes": 2974,
+      "sha256": "6e6c4a6ac179855ef8c6e97cd65b149fb6ff39eba514b870848d6098299984ad"
+    },
+    "stellation.py": {
+      "bytes": 1213,
+      "sha256": "8620f46d780eca27847feab47e19fad6a7836c8d04361ca34daf7551740adc20"
+    },
+    "verify.py": {
+      "bytes": 8873,
+      "sha256": "f7af54bfab7b068c3861c959ae6c358d534241b6534114e3a0fa5944f1eaabf3"
+    }
+  },
+  "status": "FROZEN after scope correction; only these payload files plus this manifest are authorized for publication"
+}

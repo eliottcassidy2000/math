@@ -2,7 +2,7 @@
 
 This packet preserves the reviewed source files and their original sibling-directory layout. The independent checker reads `../attached_papers/boundary_signature_demo.json`; no installed packages or startup helper are needed.
 
-First, from the repository root, restore and verify the checkpoint manifest using the result root's `RESTORE_ARCHIVES.py` and `ARCHIVES_CP01.json`. Then replay in a temporary copy, because the independent checker writes its receipt beside its script:
+First, from the repository root, restore and verify all available checkpoint manifests in ascending order using the result root's `RESTORE_ARCHIVES.py`. Follow the current composite command in `../RECEIPTS.md`; on current main, using only CP01 would compare historical navigation/tool bytes against their newer versions. Then replay in a temporary copy, because the independent checker writes its receipt beside its script:
 
 ```sh
 packet=05-knowledge/results/session190_constructive_links_20261104/paper_patch

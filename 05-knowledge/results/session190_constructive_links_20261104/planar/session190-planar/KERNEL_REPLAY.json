@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "method": "independent endpoint-aware chain-kernel edge-subset search",
+  "base_graphs": 6,
+  "deletion_cards": 124,
+  "results": [
+    {
+      "n": 18,
+      "restoring_deletions": [
+        18
+      ],
+      "all_cards_checked": 18
+    },
+    {
+      "n": 19,
+      "restoring_deletions": [
+        18
+      ],
+      "all_cards_checked": 19
+    },
+    {
+      "n": 20,
+      "restoring_deletions": [
+        18
+      ],
+      "all_cards_checked": 20
+    },
+    {
+      "n": 21,
+      "restoring_deletions": [
+        18
+      ],
+      "all_cards_checked": 21
+    },
+    {
+      "n": 22,
+      "restoring_deletions": [
+        2,
+        18
+      ],
+      "all_cards_checked": 22
+    },
+    {
+      "n": 24,
+      "restoring_deletions": [
+        11,
+        18,
+        22,
+        24
+      ],
+      "all_cards_checked": 24
+    }
+  ]
+}

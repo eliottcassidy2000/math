@@ -1,0 +1,5 @@
+{'n': 2, 'ordered_representative_pairs_checked': 1, 'labelled_Walsh_entries_checked': 4, 'diagonal': True}
+{'n': 3, 'ordered_representative_pairs_checked': 4, 'labelled_Walsh_entries_checked': 64, 'diagonal': False}
+{'n': 4, 'ordered_representative_pairs_checked': 12, 'labelled_Walsh_entries_checked': 4096, 'diagonal': False}
+{'n': 5, 'ordered_representative_pairs_checked': 92, 'labelled_Walsh_entries_checked': 0, 'diagonal': False}
+{'n': 6, 'ordered_representative_pairs_checked': 1224, 'labelled_Walsh_entries_checked': 0, 'diagonal': False}
