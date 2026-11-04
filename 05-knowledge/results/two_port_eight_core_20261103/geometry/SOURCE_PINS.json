@@ -1,0 +1,34 @@
+[
+  {
+    "path": "05-knowledge/results/two_port_eight_core_20261103/cores/census.cpp",
+    "sha256": "70a94033b97b53e15b066bfa8fd528bde67ba427edd7928232d9c0dfae4254ec"
+  },
+  {
+    "path": "05-knowledge/results/two_port_eight_core_20261103/cores/run.py",
+    "sha256": "66dad57a43087807e3309d5aed306df2e122f5ff676652e0d8fe9ef9c25b741d"
+  },
+  {
+    "path": "05-knowledge/results/two_port_eight_core_20261103/cores/order8.json",
+    "sha256": "7b93d454a72012faa5348c95d4be5a3075976f4e5f9b2b13f7bfe056fe72371b"
+  },
+  {
+    "path": "05-knowledge/results/two_port_seven_core_20261103/geometry/PROOF.md",
+    "sha256": "fd339de29a64de0616b7e56f6db7ce9eaf5eb5aa5edbcd74f3573d3a866cf0b2"
+  },
+  {
+    "path": "05-knowledge/results/two_port_seven_core_20261103/recovery/GEOMETRY_REVIEW.md",
+    "sha256": "9ff807f1d56fef36f22304cbb35b110e2d8175d870662ce0a761aad5dc479562"
+  },
+  {
+    "path": "05-knowledge/results/two_port_beyond_nine_20261103/geometry/PROOF.md",
+    "sha256": "1563cfaf2ef99c0b45b48378315aee61b4a78df9856a5142ca46f2258b00e166"
+  },
+  {
+    "path": "05-knowledge/results/two_port_beyond_nine_20261103/geometry/verify.py",
+    "sha256": "090e00f093f75929c880f622e4bab16ecc8d238d2826ce58e461c25656346a4c"
+  },
+  {
+    "path": "05-knowledge/results/two_port_beyond_nine_20261103/geometry/coordinates.json",
+    "sha256": "2c2de10e2edc13df83001841be7a02d3abbeb921660b5f1e7300d10a2f86a384"
+  }
+]

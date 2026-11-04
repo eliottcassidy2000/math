@@ -1,0 +1,655 @@
+{
+  "census_sha256": "7b93d454a72012faa5348c95d4be5a3075976f4e5f9b2b13f7bfe056fe72371b",
+  "checks": 1377,
+  "controls": {
+    "all_labelled_graphs_through4": 76,
+    "monomials": 742,
+    "small_graph_certificates": 75
+  },
+  "order8_certificates": 30,
+  "order8_complete_orientations": 548864,
+  "order8_residuals": [
+    5675891,
+    5683827,
+    5691763,
+    5692274,
+    6215909,
+    6216436,
+    14587370,
+    48675698
+  ],
+  "representatives": [
+    {
+      "certificate": {
+        "coefficient": 2,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0
+        ]
+      },
+      "edges": 12,
+      "mask": 2022000,
+      "orientations": 4096,
+      "support": 254
+    },
+    {
+      "certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "edges": 13,
+      "mask": 2022001,
+      "orientations": 8192,
+      "support": 88
+    },
+    {
+      "certificate": {
+        "coefficient": 3,
+        "exponents": [
+          2,
+          2,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "edges": 14,
+      "mask": 2022132,
+      "orientations": 16384,
+      "support": 4
+    },
+    {
+      "certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "edges": 13,
+      "mask": 5675260,
+      "orientations": 8192,
+      "support": 75
+    },
+    {
+      "certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "edges": 13,
+      "mask": 5675512,
+      "orientations": 8192,
+      "support": 82
+    },
+    {
+      "certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "edges": 13,
+      "mask": 5675638,
+      "orientations": 8192,
+      "support": 77
+    },
+    {
+      "certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "edges": 13,
+      "mask": 5675764,
+      "orientations": 8192,
+      "support": 102
+    },
+    {
+      "certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "edges": 13,
+      "mask": 5675890,
+      "orientations": 8192,
+      "support": 78
+    },
+    {
+      "certificate": null,
+      "edges": 14,
+      "mask": 5675891,
+      "orientations": 16384,
+      "support": 0
+    },
+    {
+      "certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "edges": 14,
+      "mask": 5683704,
+      "orientations": 16384,
+      "support": 36
+    },
+    {
+      "certificate": {
+        "coefficient": -2,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0
+        ]
+      },
+      "edges": 12,
+      "mask": 5683824,
+      "orientations": 4096,
+      "support": 188
+    },
+    {
+      "certificate": {
+        "coefficient": -3,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "edges": 13,
+      "mask": 5683825,
+      "orientations": 8192,
+      "support": 90
+    },
+    {
+      "certificate": null,
+      "edges": 14,
+      "mask": 5683827,
+      "orientations": 16384,
+      "support": 0
+    },
+    {
+      "certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "edges": 14,
+      "mask": 5684082,
+      "orientations": 16384,
+      "support": 36
+    },
+    {
+      "certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          1,
+          0
+        ]
+      },
+      "edges": 12,
+      "mask": 5691760,
+      "orientations": 4096,
+      "support": 134
+    },
+    {
+      "certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "edges": 13,
+      "mask": 5691761,
+      "orientations": 8192,
+      "support": 56
+    },
+    {
+      "certificate": null,
+      "edges": 14,
+      "mask": 5691763,
+      "orientations": 16384,
+      "support": 0
+    },
+    {
+      "certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "edges": 13,
+      "mask": 5691888,
+      "orientations": 8192,
+      "support": 84
+    },
+    {
+      "certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "edges": 13,
+      "mask": 5692272,
+      "orientations": 8192,
+      "support": 86
+    },
+    {
+      "certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "edges": 14,
+      "mask": 5692273,
+      "orientations": 16384,
+      "support": 36
+    },
+    {
+      "certificate": null,
+      "edges": 14,
+      "mask": 5692274,
+      "orientations": 16384,
+      "support": 0
+    },
+    {
+      "certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "edges": 14,
+      "mask": 5692400,
+      "orientations": 16384,
+      "support": 36
+    },
+    {
+      "certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "edges": 12,
+      "mask": 6215777,
+      "orientations": 4096,
+      "support": 84
+    },
+    {
+      "certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "edges": 13,
+      "mask": 6215779,
+      "orientations": 8192,
+      "support": 56
+    },
+    {
+      "certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "edges": 13,
+      "mask": 6215785,
+      "orientations": 8192,
+      "support": 82
+    },
+    {
+      "certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "edges": 14,
+      "mask": 6215787,
+      "orientations": 16384,
+      "support": 36
+    },
+    {
+      "certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "edges": 13,
+      "mask": 6215908,
+      "orientations": 8192,
+      "support": 56
+    },
+    {
+      "certificate": null,
+      "edges": 14,
+      "mask": 6215909,
+      "orientations": 16384,
+      "support": 0
+    },
+    {
+      "certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "edges": 14,
+      "mask": 6215916,
+      "orientations": 16384,
+      "support": 36
+    },
+    {
+      "certificate": {
+        "coefficient": -2,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "edges": 14,
+      "mask": 6216305,
+      "orientations": 16384,
+      "support": 36
+    },
+    {
+      "certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "edges": 14,
+      "mask": 6216306,
+      "orientations": 16384,
+      "support": 36
+    },
+    {
+      "certificate": null,
+      "edges": 15,
+      "mask": 6216436,
+      "orientations": 32768,
+      "support": 0
+    },
+    {
+      "certificate": {
+        "coefficient": -3,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      },
+      "edges": 14,
+      "mask": 14333541,
+      "orientations": 16384,
+      "support": 16
+    },
+    {
+      "certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "edges": 14,
+      "mask": 14333542,
+      "orientations": 16384,
+      "support": 36
+    },
+    {
+      "certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "edges": 14,
+      "mask": 14587109,
+      "orientations": 16384,
+      "support": 36
+    },
+    {
+      "certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "edges": 14,
+      "mask": 14587362,
+      "orientations": 16384,
+      "support": 36
+    },
+    {
+      "certificate": null,
+      "edges": 15,
+      "mask": 14587370,
+      "orientations": 32768,
+      "support": 0
+    },
+    {
+      "certificate": null,
+      "edges": 16,
+      "mask": 48675698,
+      "orientations": 65536,
+      "support": 0
+    }
+  ],
+  "source_sha256": {
+    "INCOMING.md": "e26d87c97d9dbf360f43247c10238c999a6238fd434c09b997f6c92853650b23",
+    "LIST_CERTIFICATE.md": "390fd1a979f3123f1433117449f99356e5a2cce383a4500a0205c9442489e303",
+    "check.py": "d7e25d762c6e783cbd289fe870797cbdb675f27f04356fbdd74c0ba531664d45"
+  },
+  "status": "FINITE-EXACT INDEPENDENT COEFFICIENT AUDIT; THEOREM PROVED SEPARATELY"
+}

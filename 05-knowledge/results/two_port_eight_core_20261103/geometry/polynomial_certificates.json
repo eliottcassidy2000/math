@@ -1,0 +1,452 @@
+[
+  {
+    "coefficient": 2,
+    "endpoint_terms": 4096,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0,
+      0
+    ],
+    "mask": 2022000
+  },
+  {
+    "coefficient": 1,
+    "endpoint_terms": 8192,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      2,
+      0
+    ],
+    "mask": 2022001
+  },
+  {
+    "coefficient": 3,
+    "endpoint_terms": 16384,
+    "exponents": [
+      2,
+      2,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2
+    ],
+    "mask": 2022132
+  },
+  {
+    "coefficient": 1,
+    "endpoint_terms": 8192,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      0
+    ],
+    "mask": 5675260
+  },
+  {
+    "coefficient": 1,
+    "endpoint_terms": 8192,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      0
+    ],
+    "mask": 5675512
+  },
+  {
+    "coefficient": 1,
+    "endpoint_terms": 8192,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      0
+    ],
+    "mask": 5675638
+  },
+  {
+    "coefficient": 1,
+    "endpoint_terms": 8192,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      0
+    ],
+    "mask": 5675764
+  },
+  {
+    "coefficient": 1,
+    "endpoint_terms": 8192,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      0
+    ],
+    "mask": 5675890
+  },
+  {
+    "coefficient": 1,
+    "endpoint_terms": 16384,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0
+    ],
+    "mask": 5683704
+  },
+  {
+    "coefficient": -2,
+    "endpoint_terms": 4096,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0,
+      0
+    ],
+    "mask": 5683824
+  },
+  {
+    "coefficient": -3,
+    "endpoint_terms": 8192,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      2,
+      0
+    ],
+    "mask": 5683825
+  },
+  {
+    "coefficient": 1,
+    "endpoint_terms": 16384,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0
+    ],
+    "mask": 5684082
+  },
+  {
+    "coefficient": -1,
+    "endpoint_terms": 4096,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      1,
+      2,
+      1,
+      0
+    ],
+    "mask": 5691760
+  },
+  {
+    "coefficient": 1,
+    "endpoint_terms": 8192,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      2,
+      0
+    ],
+    "mask": 5691761
+  },
+  {
+    "coefficient": -1,
+    "endpoint_terms": 8192,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      0
+    ],
+    "mask": 5691888
+  },
+  {
+    "coefficient": 1,
+    "endpoint_terms": 8192,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      0
+    ],
+    "mask": 5692272
+  },
+  {
+    "coefficient": 1,
+    "endpoint_terms": 16384,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0
+    ],
+    "mask": 5692273
+  },
+  {
+    "coefficient": -1,
+    "endpoint_terms": 16384,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0
+    ],
+    "mask": 5692400
+  },
+  {
+    "coefficient": 1,
+    "endpoint_terms": 4096,
+    "exponents": [
+      2,
+      1,
+      2,
+      2,
+      2,
+      1,
+      2,
+      0
+    ],
+    "mask": 6215777
+  },
+  {
+    "coefficient": -1,
+    "endpoint_terms": 8192,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      2,
+      0
+    ],
+    "mask": 6215779
+  },
+  {
+    "coefficient": -1,
+    "endpoint_terms": 8192,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      2,
+      0
+    ],
+    "mask": 6215785
+  },
+  {
+    "coefficient": -1,
+    "endpoint_terms": 16384,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0
+    ],
+    "mask": 6215787
+  },
+  {
+    "coefficient": -1,
+    "endpoint_terms": 8192,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      2,
+      0
+    ],
+    "mask": 6215908
+  },
+  {
+    "coefficient": -1,
+    "endpoint_terms": 16384,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0
+    ],
+    "mask": 6215916
+  },
+  {
+    "coefficient": -2,
+    "endpoint_terms": 16384,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0
+    ],
+    "mask": 6216305
+  },
+  {
+    "coefficient": -1,
+    "endpoint_terms": 16384,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0
+    ],
+    "mask": 6216306
+  },
+  {
+    "coefficient": -3,
+    "endpoint_terms": 16384,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    "mask": 14333541
+  },
+  {
+    "coefficient": 1,
+    "endpoint_terms": 16384,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0
+    ],
+    "mask": 14333542
+  },
+  {
+    "coefficient": 1,
+    "endpoint_terms": 16384,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0
+    ],
+    "mask": 14587109
+  },
+  {
+    "coefficient": -1,
+    "endpoint_terms": 16384,
+    "exponents": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0
+    ],
+    "mask": 14587362
+  }
+]

@@ -1,0 +1,1439 @@
+{
+  "all_graphs": 268435456,
+  "classes": 38,
+  "eligible_checksum_fnv64": 15116465839101841735,
+  "metric_filter_graphs": 724080,
+  "min_degree3_graphs": 53470067,
+  "n": 8,
+  "representatives": [
+    {
+      "automorphisms": 48,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": 12,
+      "list_certificate": {
+        "coefficient": 2,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0
+        ]
+      },
+      "mask": 2022000,
+      "orbit": 840,
+      "polynomial_support": 254,
+      "rows": [
+        224,
+        208,
+        176,
+        112,
+        14,
+        13,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 4,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "edges": 13,
+      "list_certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "mask": 2022001,
+      "orbit": 10080,
+      "polynomial_support": 88,
+      "rows": [
+        226,
+        209,
+        176,
+        112,
+        14,
+        13,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 8,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 14,
+      "list_certificate": {
+        "coefficient": 3,
+        "exponents": [
+          2,
+          2,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "mask": 2022132,
+      "orbit": 5040,
+      "polynomial_support": 4,
+      "rows": [
+        232,
+        212,
+        178,
+        113,
+        14,
+        13,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        5
+      ],
+      "edges": 13,
+      "list_certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "mask": 5675260,
+      "orbit": 20160,
+      "polynomial_support": 75,
+      "rows": [
+        248,
+        196,
+        162,
+        81,
+        41,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "edges": 13,
+      "list_certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "mask": 5675512,
+      "orbit": 20160,
+      "polynomial_support": 82,
+      "rows": [
+        240,
+        204,
+        162,
+        82,
+        41,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        5
+      ],
+      "edges": 13,
+      "list_certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "mask": 5675638,
+      "orbit": 20160,
+      "polynomial_support": 77,
+      "rows": [
+        236,
+        208,
+        161,
+        81,
+        42,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "edges": 13,
+      "list_certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "mask": 5675764,
+      "orbit": 20160,
+      "polynomial_support": 102,
+      "rows": [
+        232,
+        212,
+        162,
+        81,
+        42,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "edges": 13,
+      "list_certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "mask": 5675890,
+      "orbit": 20160,
+      "polynomial_support": 78,
+      "rows": [
+        228,
+        216,
+        161,
+        82,
+        42,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        5,
+        5
+      ],
+      "edges": 14,
+      "list_certificate": null,
+      "mask": 5675891,
+      "orbit": 20160,
+      "polynomial_support": 0,
+      "rows": [
+        230,
+        217,
+        161,
+        82,
+        42,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 14,
+      "list_certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "mask": 5683704,
+      "orbit": 20160,
+      "polynomial_support": 36,
+      "rows": [
+        240,
+        204,
+        170,
+        86,
+        41,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 16,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": 12,
+      "list_certificate": {
+        "coefficient": -2,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0
+        ]
+      },
+      "mask": 5683824,
+      "orbit": 2520,
+      "polynomial_support": 188,
+      "rows": [
+        224,
+        208,
+        168,
+        84,
+        42,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "edges": 13,
+      "list_certificate": {
+        "coefficient": -3,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "mask": 5683825,
+      "orbit": 20160,
+      "polynomial_support": 90,
+      "rows": [
+        226,
+        209,
+        168,
+        84,
+        42,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5
+      ],
+      "edges": 14,
+      "list_certificate": null,
+      "mask": 5683827,
+      "orbit": 20160,
+      "polynomial_support": 0,
+      "rows": [
+        230,
+        209,
+        169,
+        84,
+        42,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 14,
+      "list_certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "mask": 5684082,
+      "orbit": 20160,
+      "polynomial_support": 36,
+      "rows": [
+        228,
+        216,
+        169,
+        86,
+        42,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 4,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": 12,
+      "list_certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          1,
+          0
+        ]
+      },
+      "mask": 5691760,
+      "orbit": 10080,
+      "polynomial_support": 134,
+      "rows": [
+        224,
+        200,
+        176,
+        82,
+        44,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 1,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "edges": 13,
+      "list_certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "mask": 5691761,
+      "orbit": 40320,
+      "polynomial_support": 56,
+      "rows": [
+        226,
+        201,
+        176,
+        82,
+        44,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5
+      ],
+      "edges": 14,
+      "list_certificate": null,
+      "mask": 5691763,
+      "orbit": 20160,
+      "polynomial_support": 0,
+      "rows": [
+        230,
+        201,
+        177,
+        82,
+        44,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "edges": 13,
+      "list_certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "mask": 5691888,
+      "orbit": 20160,
+      "polynomial_support": 84,
+      "rows": [
+        224,
+        204,
+        178,
+        82,
+        44,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 1,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "edges": 13,
+      "list_certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "mask": 5692272,
+      "orbit": 40320,
+      "polynomial_support": 86,
+      "rows": [
+        224,
+        216,
+        176,
+        82,
+        46,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 1,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5
+      ],
+      "edges": 14,
+      "list_certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "mask": 5692273,
+      "orbit": 40320,
+      "polynomial_support": 36,
+      "rows": [
+        226,
+        217,
+        176,
+        82,
+        46,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 1,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 14,
+      "list_certificate": null,
+      "mask": 5692274,
+      "orbit": 40320,
+      "polynomial_support": 0,
+      "rows": [
+        228,
+        216,
+        177,
+        82,
+        46,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 1,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5
+      ],
+      "edges": 14,
+      "list_certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "mask": 5692400,
+      "orbit": 40320,
+      "polynomial_support": 36,
+      "rows": [
+        224,
+        220,
+        178,
+        82,
+        46,
+        21,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 16,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "edges": 12,
+      "list_certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "mask": 6215777,
+      "orbit": 2520,
+      "polynomial_support": 84,
+      "rows": [
+        194,
+        193,
+        176,
+        112,
+        44,
+        28,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "edges": 13,
+      "list_certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "mask": 6215779,
+      "orbit": 20160,
+      "polynomial_support": 56,
+      "rows": [
+        198,
+        193,
+        177,
+        112,
+        44,
+        28,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 4,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "edges": 13,
+      "list_certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "mask": 6215785,
+      "orbit": 10080,
+      "polynomial_support": 82,
+      "rows": [
+        210,
+        193,
+        176,
+        112,
+        45,
+        28,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 1,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5
+      ],
+      "edges": 14,
+      "list_certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "mask": 6215787,
+      "orbit": 40320,
+      "polynomial_support": 36,
+      "rows": [
+        214,
+        193,
+        177,
+        112,
+        45,
+        28,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 8,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "edges": 13,
+      "list_certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          0
+        ]
+      },
+      "mask": 6215908,
+      "orbit": 5040,
+      "polynomial_support": 56,
+      "rows": [
+        200,
+        196,
+        178,
+        113,
+        44,
+        28,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 4,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 14,
+      "list_certificate": null,
+      "mask": 6215909,
+      "orbit": 10080,
+      "polynomial_support": 0,
+      "rows": [
+        202,
+        197,
+        178,
+        113,
+        44,
+        28,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 1,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 14,
+      "list_certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "mask": 6215916,
+      "orbit": 40320,
+      "polynomial_support": 36,
+      "rows": [
+        216,
+        196,
+        178,
+        113,
+        45,
+        28,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 8,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 14,
+      "list_certificate": {
+        "coefficient": -2,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "mask": 6216305,
+      "orbit": 5040,
+      "polynomial_support": 36,
+      "rows": [
+        226,
+        209,
+        176,
+        112,
+        46,
+        29,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 14,
+      "list_certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "mask": 6216306,
+      "orbit": 20160,
+      "polynomial_support": 36,
+      "rows": [
+        228,
+        208,
+        177,
+        112,
+        46,
+        29,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 15,
+      "list_certificate": null,
+      "mask": 6216436,
+      "orbit": 20160,
+      "polynomial_support": 0,
+      "rows": [
+        232,
+        212,
+        178,
+        113,
+        46,
+        29,
+        11,
+        7
+      ]
+    },
+    {
+      "automorphisms": 8,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 14,
+      "list_certificate": {
+        "coefficient": -3,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      },
+      "mask": 14333541,
+      "orbit": 5040,
+      "polynomial_support": 16,
+      "rows": [
+        202,
+        177,
+        168,
+        101,
+        98,
+        30,
+        25,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 14,
+      "list_certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "mask": 14333542,
+      "orbit": 20160,
+      "polynomial_support": 36,
+      "rows": [
+        204,
+        176,
+        169,
+        101,
+        98,
+        30,
+        25,
+        7
+      ]
+    },
+    {
+      "automorphisms": 4,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 14,
+      "list_certificate": {
+        "coefficient": 1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "mask": 14587109,
+      "orbit": 10080,
+      "polynomial_support": 36,
+      "rows": [
+        202,
+        165,
+        162,
+        113,
+        104,
+        30,
+        25,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 14,
+      "list_certificate": {
+        "coefficient": -1,
+        "exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      "mask": 14587362,
+      "orbit": 20160,
+      "polynomial_support": 36,
+      "rows": [
+        196,
+        172,
+        163,
+        114,
+        104,
+        30,
+        25,
+        7
+      ]
+    },
+    {
+      "automorphisms": 2,
+      "degrees": [
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 15,
+      "list_certificate": null,
+      "mask": 14587370,
+      "orbit": 20160,
+      "polynomial_support": 0,
+      "rows": [
+        212,
+        172,
+        163,
+        114,
+        105,
+        30,
+        25,
+        7
+      ]
+    },
+    {
+      "automorphisms": 16,
+      "degrees": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "edges": 16,
+      "list_certificate": null,
+      "mask": 48675698,
+      "orbit": 2520,
+      "polynomial_support": 0,
+      "rows": [
+        228,
+        216,
+        169,
+        150,
+        106,
+        85,
+        51,
+        15
+      ]
+    }
+  ],
+  "source_sha256": {
+    "census.cpp": "70a94033b97b53e15b066bfa8fd528bde67ba427edd7928232d9c0dfae4254ec",
+    "run.py": "66dad57a43087807e3309d5aed306df2e122f5ff676652e0d8fe9ef9c25b741d"
+  },
+  "status": "FINITE-EXACT COMPLETE NECESSARY-FILTER UNIVERSE"
+}

@@ -1,0 +1,52 @@
+{
+  "actual_nonunit_pairs": 80,
+  "actual_unit_pairs": 25,
+  "all_actual_pairs_checked": 105,
+  "artifacts_sha256": {
+    "boundary_tables.json": "ca20a5357f73a5393bad4803385c5ab4c686b5ce8ca4f86b4fd0fd3da444ebd6",
+    "coordinates.json": "0218dd74e73116946378a516252116a9098169f2d4c81777fa0f647c96698e3d",
+    "metric_exclusions.json": "828997b9e1e90a2fa06ae323f66b894df5d164f6e6253669fe8c98256093cabf",
+    "polynomial_certificates.json": "82d3c8da9bd9ae3f3a1657210fc2621d2e43f4830529724baa39be44eedaf5f6",
+    "spindle_contact_audit.json": "e99b2626c7c82258f54f2bfcf24ebbc029d7a1aa0fb22374f37f27834cd9ebc9"
+  },
+  "boundary_controls": {
+    "4": {
+      "boundary_partition_types": 16,
+      "extensions_per_boundary": [
+        1326
+      ],
+      "full_graph_colourings": 509184,
+      "private_assignment_universe": 65536,
+      "proper_cube_colourings": 2652
+    },
+    "5": {
+      "boundary_partition_types": 42,
+      "extensions_per_boundary": [
+        17796
+      ],
+      "full_graph_colourings": 89691840,
+      "private_assignment_universe": 390625,
+      "proper_cube_colourings": 29660
+    },
+    "6": {
+      "boundary_partition_types": 52,
+      "extensions_per_boundary": [
+        132020
+      ],
+      "full_graph_colourings": 4182393600,
+      "private_assignment_universe": 1679616,
+      "proper_cube_colourings": 198030
+    }
+  },
+  "circle_fan_exclusions": 2,
+  "classes": 38,
+  "complete_core_universe": 268435456,
+  "control_chromatic_number": 4,
+  "independent_polynomial_certificates": 30,
+  "metric_filter_graphs": 724080,
+  "moser_exterior_exclusions": 6,
+  "scope": "eight-private-point fixed-Moser extension certificates",
+  "source_pins_sha256": "06bc9f55400dacf5fff682d0fa6b0185da81495e932d4ebc4fd2bf976b0bcaf9",
+  "status": "PASS",
+  "verifier_sha256": "de8b31b967f5300fc8786e2a637c6e002604f06d9a564206dac0f048db4830ff"
+}

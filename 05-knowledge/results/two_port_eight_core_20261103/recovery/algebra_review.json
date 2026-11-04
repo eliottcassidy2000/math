@@ -1,0 +1,36 @@
+{
+  "actual_query_counts": [
+    627597,
+    1139039
+  ],
+  "checks": 36855,
+  "literal_controls": {
+    "module_inheritance_cases": 319,
+    "rooted_twin_quotients": 285,
+    "triangle_exact_cases": 78,
+    "twin_cross_signs": 820
+  },
+  "prime_controls_subsets": 8164,
+  "response_differences": 6240,
+  "source_sha256": {
+    "05-knowledge\\results\\session176_tournament_information_20261104\\circuits\\PROOF.md": "74eb47a648f43d74e4d4784af6f1f2926ba52329a537e37d975922fb46ebe26d",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\algebra\\PROOF.md": "8d240198038d4d8d5f0ebd69f3ad7f52c474a396b3350db769b218af2145357d",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\algebra\\module_check.py": "959d547b7afa6422cdcfbba5c75364555810463ba333247fe0d008eb2b5c6443",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\algebra\\module_checks.cpp": "970f7e99cf18bda835edb6415aaaca1bb42980bb5c570cf28a547bc816b2456c",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\algebra\\modules.json": "303715c587f2d8ed8463f395a32c6fee0ae60dd1bae30f54dae11996a2fee781",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\algebra\\modules.optimized.json": "303715c587f2d8ed8463f395a32c6fee0ae60dd1bae30f54dae11996a2fee781",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\algebra\\normal.json": "1aceadd0eb634f8abb5cef4c129838df28f9a7faad29b8e0d0cefe75053d65e7",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\algebra\\optimized.json": "1aceadd0eb634f8abb5cef4c129838df28f9a7faad29b8e0d0cefe75053d65e7",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\algebra\\run.py": "4ece74158749260582a34a2bc6d12344f9619552fe9e76b81d11322884c19b7f",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\algebra\\scout.cpp": "0b289506e98524904fb37f7e68aa1abb05e470b3b89c27fd36b16e2d3346ff1a",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\recovery\\ALGEBRA_RESPONSE_REVIEW.md": "2b22b5c535523f60a1b1539841065fa0ff13d033ca8ccca86bc78fa2a9e9cf20",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\recovery\\algebra_review.py": "d7c8a395fb4b61e19f665553c07a351429f349de9ee3a1ea994ac31bf79b3dc1",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\response\\check.cpp": "2be9cdc5924d8d877d34e2ed84cea8c13f45a73d41a350c59c0a61b832ce546b",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\response\\normal.json": "425a80fe1c311461295e6c51ef089bec93cdb22a647a9d340d0e399d21ca6a88",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\response\\optimized.json": "425a80fe1c311461295e6c51ef089bec93cdb22a647a9d340d0e399d21ca6a88",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\response\\run.py": "e55c18192939c2499241761e0f2defaee72563fd08d9d50026b125d1e3f65974",
+    "05-knowledge\\results\\two_port_seven_core_20261103\\residual\\INDEPENDENT_REVIEW.md": "16876a6327937a3e4024ae4cddf7c956df585bff0138915973161c4e1cc08ba2",
+    "05-knowledge\\results\\two_port_seven_core_20261103\\residual\\full10.json": "a4772227f5e732c6d83e6ac2b235bf11e8a4ff37d7ab5db46302d064645e3da4"
+  },
+  "status": "PASS INDEPENDENT ALGEBRA AND RESPONSE AUDIT"
+}

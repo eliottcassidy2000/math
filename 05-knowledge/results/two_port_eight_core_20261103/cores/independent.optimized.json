@@ -1,0 +1,16 @@
+{
+  "admissible_children_checked": 5392215,
+  "designated_vertex7_deletion_parents": 2097152,
+  "eligible_graphs": 724080,
+  "orbit_union_equals_complete_survivor_set": true,
+  "parents_min_degree2": 1052793,
+  "parents_passing_hereditary_filters": 217290,
+  "representative_classes": 38,
+  "source_sha256": {
+    "independent.cpp": "30e3cd4a9221017fd5c73dac7dd2ce1df1c0340cf16b7b7b025b22ab9d9ddb5d",
+    "independent.py": "af22aa3fc8d2d2dca6e6cb2e22eb68cb03f37ca3a2cab99628e862a63bc5c926",
+    "order8.json": "7b93d454a72012faa5348c95d4be5a3075976f4e5f9b2b13f7bfe056fe72371b"
+  },
+  "status": "FINITE-EXACT PASS",
+  "universe": 268435456
+}

@@ -1,5 +1,18 @@
 # Proof interfaces: current extensions
 
+[Prime twelve-core residuals and eight private points](../05-knowledge/results/two_port_eight_core_20261103/README.md):
+an exact ordered-cover sign detects reversal of named twins, including under
+positive response scaling. Any hidden twelve-vertex module reversal in an
+arbitrary ambient tournament must have a prime, nonselfconverse core.
+A specified 311,872-record scout has 146 endpoint-parity survivors and no
+joint modular survivor; it is not a complete order-twelve census. Full named
+endpoint and three-path tensors have 12,500 actual-query checks at order12.
+Every five-colouring of the fixed Moser spindle extends over any eight
+private unit points. A complete 2^28 graph census and exact geometry show
+that unit graphs on at most eight vertices are three-choosable exactly when
+they contain no Moser subgraph. Universal reconstruction remains OPEN;
+a blocker on this carrier requires at least nine private vertices.
+
 [Beyond ten: full responses, module congruences and seven private points](../05-knowledge/results/two_port_seven_core_20261103/README.md):
 all279968 self-converse order11 classes pass H,S,E,C and symmetry tests;
 full endpoint/three-path tensors have8996 direct-query controls at11.

@@ -1,0 +1,62 @@
+{
+  "bank_sha256": "b4e559ad6cb31980852034f9c7f61e366a7cb479fee4d9a641ad3356745200d3",
+  "clone_cross_identity_and_sign_controls": 210,
+  "clone_endpoint_identity_controls": 75,
+  "prime_controls": [
+    {
+      "proper_nontrivial_modules": 0,
+      "rows": [
+        3706,
+        680,
+        3603,
+        1508,
+        3914,
+        1300,
+        294,
+        1397,
+        519,
+        1256,
+        2370,
+        1002
+      ],
+      "tested_subsets": 4082
+    },
+    {
+      "proper_nontrivial_modules": 0,
+      "rows": [
+        3664,
+        3173,
+        1185,
+        839,
+        1422,
+        1113,
+        2068,
+        1899,
+        615,
+        3190,
+        328,
+        1468
+      ],
+      "tested_subsets": 4082
+    }
+  ],
+  "six_module_endpoint_parity_balanced": 0,
+  "six_module_joint_survivors": 0,
+  "six_module_quotient7_parity_classes": 48,
+  "six_module_rooted_expansions": 336,
+  "six_module_rows": [
+    10,
+    20,
+    33,
+    22,
+    37,
+    11
+  ],
+  "source_sha256": {
+    "module_check.py": "959d547b7afa6422cdcfbba5c75364555810463ba333247fe0d008eb2b5c6443",
+    "module_checks.cpp": "970f7e99cf18bda835edb6415aaaca1bb42980bb5c570cf28a547bc816b2456c",
+    "scout.cpp": "0b289506e98524904fb37f7e68aa1abb05e470b3b89c27fd36b16e2d3346ff1a"
+  },
+  "status": "PASS",
+  "triangle_parity_identity_controls": 1099
+}

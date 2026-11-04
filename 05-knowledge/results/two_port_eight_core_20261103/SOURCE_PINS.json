@@ -1,0 +1,25 @@
+{
+  "files": {
+    "05-knowledge/results/consecutive_flags_order10_20261028/flags10.varint.gz": "ef5cf3d13f5b679890cbe69bcd1f78189161953e726e12d169fb576845677ef7",
+    "05-knowledge/results/consecutive_flags_order10_20261028/parents9.u64.gz": "92cb19bbcdc0bcb58b0ded354aacdd1809c72251e2e29d28d23f92de2d8bbe05",
+    "05-knowledge/results/hn_metagraph_information_20261026/enumeration/representatives9.json.gz": "b4e559ad6cb31980852034f9c7f61e366a7cb479fee4d9a641ad3356745200d3",
+    "05-knowledge/results/multiport_defect_grammar_20261103/COMPONENT_LANGUAGE.md": "5cd3dfaa0eca07426f6f6659fc1ad83a1a852d2e10ed882432f5081aee1b7aeb",
+    "05-knowledge/results/multiport_defect_grammar_20261103/TRANSITIVE_CHART.md": "a5b3019e0abf1417f2f3899578960ba9432f65bf44d116339c4af845fd2d01b7",
+    "05-knowledge/results/multiport_defect_grammar_20261103/transport/PROOF.md": "356a0a3dbdbf9c5da4693b82d1ef8ca3b6ed388bb4dd6faefa18a479b90cba8e",
+    "05-knowledge/results/multiport_defect_grammar_20261103/transport/TWO_DIGIT_ENTRY.md": "e2929289fec998d5e2eb5ed8c0f43a8eec866c7db6ef32940cca5da3b26ca88a",
+    "05-knowledge/results/recursive_seed_switching_20261103/README.md": "b383e43bcb6c55989751ace1db51b9ddf609d594ab7f30416d678d31b8148879",
+    "05-knowledge/results/recursive_seed_switching_20261103/transport/FOLLOWUP.md": "09fc70845ea81b71364cedade595cc754359042736687baefaf41f9875cb8827",
+    "05-knowledge/results/session176_tournament_information_20261104/circuits/PROOF.md": "74eb47a648f43d74e4d4784af6f1f2926ba52329a537e37d975922fb46ebe26d",
+    "05-knowledge/results/session182_physical_returns_20261104/induction/PROOF.md": "0b3a99c45f26218d851da90e938ea8178928bf6f0aea41b06386a13c40b861f3",
+    "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/proof.md": "48aaefa2d059a56fb201a41d5f78bcd043eb2fbcb58f1ab9918c3e4d987917d7",
+    "05-knowledge/results/two_port_beyond_nine_20261103/geometry/PROOF.md": "1563cfaf2ef99c0b45b48378315aee61b4a78df9856a5142ca46f2258b00e166",
+    "05-knowledge/results/two_port_beyond_nine_20261103/geometry/coordinates.json": "2c2de10e2edc13df83001841be7a02d3abbeb921660b5f1e7300d10a2f86a384",
+    "05-knowledge/results/two_port_beyond_nine_20261103/geometry/verify.py": "090e00f093f75929c880f622e4bab16ecc8d238d2826ce58e461c25656346a4c",
+    "05-knowledge/results/two_port_seven_core_20261103/README.md": "4134a1c061d383b8fd7dc49aad9493ede45f38b8ae259da88b944f1e4ebc4666",
+    "05-knowledge/results/two_port_seven_core_20261103/algebra/PROOF.md": "ba530ca4397385d0b8b75406487c0a997bc242086da4737f487c217b4862b5d1",
+    "05-knowledge/results/two_port_seven_core_20261103/geometry/PROOF.md": "fd339de29a64de0616b7e56f6db7ce9eaf5eb5aa5edbcd74f3573d3a866cf0b2",
+    "05-knowledge/results/two_port_seven_core_20261103/recovery/GEOMETRY_REVIEW.md": "9ff807f1d56fef36f22304cbb35b110e2d8175d870662ce0a761aad5dc479562",
+    "05-knowledge/results/two_port_seven_core_20261103/residual/INDEPENDENT_REVIEW.md": "16876a6327937a3e4024ae4cddf7c956df585bff0138915973161c4e1cc08ba2",
+    "05-knowledge/results/two_port_seven_core_20261103/residual/full10.json": "a4772227f5e732c6d83e6ac2b235bf11e8a4ff37d7ab5db46302d064645e3da4"
+  }
+}

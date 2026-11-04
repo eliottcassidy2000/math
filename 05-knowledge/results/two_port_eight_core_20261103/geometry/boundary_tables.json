@@ -1,0 +1,2648 @@
+{
+  "4": [
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        1,
+        3,
+        2
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        3,
+        1
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        1,
+        2
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        2,
+        1
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        2,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        2,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        3,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        3,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        1,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        3,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        1,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 1326,
+      "named_boundary_assignments": 24,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        2,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    }
+  ],
+  "5": [
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        1,
+        3,
+        2
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        1,
+        3,
+        4
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        3,
+        1
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        3,
+        4
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        1,
+        2
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        1,
+        4
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        2,
+        1
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        2,
+        4
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        4,
+        1
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        4,
+        2
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        4
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        2,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        2,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        2,
+        4
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        3,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        3,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        3,
+        4
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        4,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        4,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        4,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        1,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        1,
+        4
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        3,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        3,
+        4
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        4,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        4,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        1,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        1,
+        4
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        2,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        2,
+        4
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        4,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        4,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        1,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        1,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        2,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        2,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        3,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 17796,
+      "named_boundary_assignments": 120,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        3,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    }
+  ],
+  "6": [
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        1,
+        3,
+        2
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        1,
+        3,
+        4
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        3,
+        1
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        3,
+        4
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        1,
+        2
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        1,
+        4
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        2,
+        1
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        2,
+        4
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        4,
+        1
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        4,
+        2
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 6,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "private_witness": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        4
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        2,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        2,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        2,
+        4
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        3,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        3,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        3,
+        4
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        4,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        4,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        4,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 6,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        4,
+        5
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        1,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        1,
+        4
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        3,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        3,
+        4
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        4,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        4,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 6,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        4,
+        5
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        1,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        1,
+        4
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 4,
+      "extension_count": 132020,
+      "named_boundary_assignments": 360,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        2,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        2,
+        4
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        4,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        4,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 6,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        4,
+        5
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        1,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        1,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 6,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        1,
+        5
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        2,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        2,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 6,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        2,
+        5
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        3,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 5,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        3,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 6,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        3,
+        5
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 6,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        1
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 6,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        2
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "blocks": 6,
+      "extension_count": 132020,
+      "named_boundary_assignments": 720,
+      "partition": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        3
+      ],
+      "private_witness": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    }
+  ]
+}

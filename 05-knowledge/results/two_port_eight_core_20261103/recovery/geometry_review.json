@@ -1,0 +1,32 @@
+{
+  "checks": 678,
+  "cube_chromatic_evaluations": {
+    "3": 114,
+    "4": 2652,
+    "5": 29660,
+    "6": 198030
+  },
+  "cube_edge_subsets": 4096,
+  "exclusions": 8,
+  "old_unit_circle_centers": 10,
+  "pair_count": 105,
+  "source_sha256": {
+    "05-knowledge\\results\\two_port_eight_core_20261103\\cores\\independent.cpp": "30e3cd4a9221017fd5c73dac7dd2ce1df1c0340cf16b7b7b025b22ab9d9ddb5d",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\cores\\independent.json": "479e2cb70d49ddadfa3cd2781c73f2f2acfee32cc528edd004b210f68aa37e72",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\cores\\independent.optimized.json": "479e2cb70d49ddadfa3cd2781c73f2f2acfee32cc528edd004b210f68aa37e72",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\cores\\independent.py": "af22aa3fc8d2d2dca6e6cb2e22eb68cb03f37ca3a2cab99628e862a63bc5c926",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\cores\\order8.json": "7b93d454a72012faa5348c95d4be5a3075976f4e5f9b2b13f7bfe056fe72371b",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\geometry\\PROOF.md": "7f0e3bc3b1eca1a47406f4f6a1a57e55865ef226f8ba247dc1d30fe3e8cf079f",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\geometry\\SOURCE_PINS.json": "06bc9f55400dacf5fff682d0fa6b0185da81495e932d4ebc4fd2bf976b0bcaf9",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\geometry\\receipt.json": "a6d2fa89c794f76602977024e26d6a0c7e3b3f34630a892d7a66992d646e5872",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\geometry\\verify.py": "de8b31b967f5300fc8786e2a637c6e002604f06d9a564206dac0f048db4830ff",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\recovery\\GEOMETRY_REVIEW.md": "79236a6f16cac9d3f17823261c62944b48e6171ca40d7205a9c56af3f4a63701",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\recovery\\geometry_replay.json": "3686428aaa6efcef4d5ef13c503a53638d40208b5d67359740a11250efa6f3d0",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\recovery\\geometry_review.py": "32edc187a0b3ff130c7a4ccc6ab0f8371b53cb95ed4878ab26674d1e2ecc8f3a",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\recovery\\normal.json": "062602786f182ef926956dcc101231fccea6b0ff52e939a681314b01235c66b8",
+    "05-knowledge\\results\\two_port_eight_core_20261103\\recovery\\optimized.json": "062602786f182ef926956dcc101231fccea6b0ff52e939a681314b01235c66b8"
+  },
+  "status": "PASS INDEPENDENT GEOMETRY AUDIT",
+  "triple_count": 35,
+  "unit_edges": 25
+}
