@@ -1,0 +1,142 @@
+{
+  "five_run_coefficients": [
+    241,
+    250,
+    78,
+    0,
+    0
+  ],
+  "graphs": [
+    {
+      "H": 59,
+      "clone_root": 3,
+      "fresh_F": 300,
+      "fresh_H": 299,
+      "m": 2,
+      "old_clone_F": 241,
+      "old_clone_start": 1,
+      "overshoot_plus4": 118,
+      "reset_child": 7,
+      "reset_root": 6,
+      "rows": [
+        114,
+        60,
+        57,
+        17,
+        32,
+        8,
+        190,
+        63
+      ]
+    },
+    {
+      "H": 119,
+      "clone_root": 4,
+      "fresh_F": 860,
+      "fresh_H": 859,
+      "m": 3,
+      "old_clone_F": 741,
+      "old_clone_start": 1,
+      "overshoot_plus4": 498,
+      "reset_child": 8,
+      "reset_root": 7,
+      "rows": [
+        226,
+        124,
+        121,
+        113,
+        33,
+        64,
+        16,
+        382,
+        127
+      ]
+    },
+    {
+      "H": 239,
+      "clone_root": 5,
+      "fresh_F": 2448,
+      "fresh_H": 2447,
+      "m": 4,
+      "old_clone_F": 2209,
+      "old_clone_start": 1,
+      "overshoot_plus4": 1726,
+      "reset_child": 9,
+      "reset_root": 8,
+      "rows": [
+        450,
+        252,
+        249,
+        241,
+        225,
+        65,
+        128,
+        32,
+        766,
+        255
+      ]
+    },
+    {
+      "H": 479,
+      "clone_root": 6,
+      "fresh_F": 7028,
+      "fresh_H": 7027,
+      "m": 5,
+      "old_clone_F": 6549,
+      "old_clone_start": 1,
+      "overshoot_plus4": 5586,
+      "reset_child": 10,
+      "reset_root": 9,
+      "rows": [
+        898,
+        508,
+        505,
+        497,
+        481,
+        449,
+        129,
+        256,
+        64,
+        1534,
+        511
+      ]
+    },
+    {
+      "H": 959,
+      "clone_root": 7,
+      "fresh_F": 20400,
+      "fresh_H": 20399,
+      "m": 6,
+      "old_clone_F": 19441,
+      "old_clone_start": 1,
+      "overshoot_plus4": 17518,
+      "reset_child": 11,
+      "reset_root": 10,
+      "rows": [
+        1794,
+        1020,
+        1017,
+        1009,
+        993,
+        961,
+        897,
+        257,
+        512,
+        128,
+        3070,
+        1023
+      ]
+    }
+  ],
+  "independent_scope": "No producer imports; full labelled graph construction; subset DP m2..6 and all-permutation m2; five-run coefficients reconstructed. All-order scope needs the reviewed skeleton bound.",
+  "producer_note_sha256": "f2384794ffa6bba45f9a44129446f8fcd1a360462296f3fa862fb6457fbe2e2a",
+  "script_sha256": "e9e04969119806b9d8bcb9e79795dbd1fd913feedfe8da033402b1873a7d484b",
+  "start_samples": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "status": "PASS"
+}

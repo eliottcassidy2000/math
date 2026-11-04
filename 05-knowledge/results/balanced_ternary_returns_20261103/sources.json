@@ -1,0 +1,114 @@
+{
+  "source_revision": "7a92049cf4c01624bf8ebff29d115943cffa6778",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ADAPTIVE.md",
+      "sha256": "1e40bf058d9c86a8d5ff7f63dc6439a68eae3f62920794a7baa40694dfce4971"
+    },
+    {
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/METAGRAPH.md",
+      "sha256": "ee0cd2951e90d9659ed664c3ebfc10d2a3b3a17c55256610711b9610e84bb9ea"
+    },
+    {
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/metagraph_probe.py",
+      "sha256": "75266c143e3c4fbbadd5202984ec5cd6a0b7b9310a37850ff04fb6e92585ed84"
+    },
+    {
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/two_port_envelope.json",
+      "sha256": "fc14da2ead29fa9c9fe5218ad96c87bce606c0cf41f5f0d5a4325917ebaeeafe"
+    },
+    {
+      "path": "05-knowledge/results/coverage_machine_induction_20261103/axiom/AXIOM.md",
+      "sha256": "e5c2a2f2265d92b325548192de4a5a13a2fe1f29b5bf8e58e0ff91f8c6fa38d5"
+    },
+    {
+      "path": "05-knowledge/results/metagraph_primegame_20261102/INDUCED_OBSTRUCTIONS.md",
+      "sha256": "4e27c4c91ad22038a1927cf912ef33062d5d165640f16f97f8cd3f1e01c833e4"
+    },
+    {
+      "path": "05-knowledge/results/metagraph_primegame_20261102/low_sources.txt",
+      "sha256": "7060af7278041973dac49ecedb1dbb2cc61424780f56abd7f10e097855a88845"
+    },
+    {
+      "path": "05-knowledge/results/orbit_spectrum_session_20261103/coverage/NOTE.md",
+      "sha256": "a9b633124dc4b905dd1ab1546f8ae6cb66729f63f4673c17e20d8df03db3f6a9"
+    },
+    {
+      "path": "05-knowledge/results/orbit_spectrum_session_20261103/coverage/check.json",
+      "sha256": "4072857f3b656c34ae7dba1a36f8fc354346f9dbe039927a4a7266286781ce71"
+    },
+    {
+      "path": "05-knowledge/results/orbit_spectrum_session_20261103/coverage/check.py",
+      "sha256": "bbc75b4e8ee5137228a65303ab40a219b62bbd1397ce6556025ecd3a3223290e"
+    },
+    {
+      "path": "05-knowledge/results/orbit_spectrum_session_20261103/words/check.py",
+      "sha256": "c9d5e04e5051481d2e347d0f9618a77e45b2cf2f1143f2a7e09f3078c70ab025"
+    },
+    {
+      "path": "05-knowledge/results/prime_lane_ports_five_groups_20261102/prime_groups.md",
+      "sha256": "c14b0e8bf534a268e43779ebe629c9f0a2b1930310dc4eac5bee1dd0298d69ba"
+    },
+    {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/ATLAS.md",
+      "sha256": "455588b2733871e3f80ac826c1bfa0bd65a62d9af2d516c6a444e3927a0e3a40"
+    },
+    {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/OBSTRUCTION.md",
+      "sha256": "5890c526288797d4bd80ffaa5eefaa9aa148ee928163f104dea76fc5c4fc39ef"
+    },
+    {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/inverse.json",
+      "sha256": "dc683f94f9ffcc8de2b3208626ec71dc3154c715cd7f7bdfcc8adc55b535d535"
+    },
+    {
+      "path": "05-knowledge/results/second_feedback_18979_20261103/PROOFS.md",
+      "sha256": "e5b00ec4a1a28099592e9d7caa718732e36764838378b2e97a039706eb05aabf"
+    },
+    {
+      "path": "05-knowledge/results/second_feedback_18979_20261103/next_fibres.json",
+      "sha256": "fb9810efb6c01ee371ecf3f650d58eb30f1dc88398e3bbcdce4184fc25a9eec0"
+    },
+    {
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/README.md",
+      "sha256": "b497fb33d662598913946bbeb818c7d758aec38782488f0ca6f0da4581ca5dc8"
+    },
+    {
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md",
+      "sha256": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5"
+    },
+    {
+      "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/two_apex/README.md",
+      "sha256": "9351c50d960c62ce8f2a14ff5b42ae53afebfcd5e73a1880896e4efd79c1d9c6"
+    },
+    {
+      "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/two_apex/word_recovery.py",
+      "sha256": "d4869500e602eabb07cb3c1a481d62d55ddee06116c46fc52f668febee9d34d6"
+    },
+    {
+      "path": "05-knowledge/results/session164_emergent_20261103/nonuniform_operator/NOTE.md",
+      "sha256": "9d8a3ebe14b4662e403491cfa04617c727a78877ff25e710d55658a753c80669"
+    },
+    {
+      "path": "05-knowledge/results/session176_tournament_information_20261104/gates/NOTE.md",
+      "sha256": "96b6ff49b1af38817aa604c479423990737518f3f87a105f78f7e1eec695ede3"
+    },
+    {
+      "path": "05-knowledge/results/tournament_joint_parity_20261102/growth_obstruction.md",
+      "sha256": "dc20e1e97aff4c0e82c04b3ed6759649b0c403b851e2d176b5f600491dd9fbb9"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/READY.md",
+      "sha256": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c"
+    }
+  ],
+  "status": "Direct inherited mathematical sources, implementation inputs, and reviewed incoming notes; not a transitive proof graph."
+}

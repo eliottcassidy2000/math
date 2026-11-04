@@ -4,6 +4,34 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — a balanced prime source need not support its next ternary branch
+
+**Refuted research premise, not a retraction of the prior balanced construction.**
+The actual C_2 word202032 has H59 and primitive balanced pair(59,17), yet
+admits no induced extension of H181 at any order. The complete two-birth
+cube is empty at181; the strong SCC/divisor reduction supplies the all-order
+cutoff. The first failed implication was promoting balance and primitivity
+to source-preserving branch availability. The surviving construction gives
+59->179->541. A three-old-arc source exchange, compiled into six native moves
+with temporary vertices, repairs59->181 and retains the physical port names.
+Its H and port edge return at macro endpoints, not at every intermediate step.
+
+**Validity boundaries recovered during audit.** Of five two-arc H59 mutants,
+one is weak and reverses the protected root-child edge. It cannot inherit
+the strong-source cutoff; the sharp three-arc lower bound explicitly fixes
+that endpoint edge. The independent birth audit uses out-masks, whereas the
+producer uses in-masks, so comparing raw mask integers without complementing
+them initially rejected matching positive witnesses. An independent feedback
+enumerator also initially computed degrees from the list being sorted;
+Python temporarily empties that list during sorting. Precomputing degrees
+restored all three old feedback pairs. Both draft failures were caught by
+positive controls before publishing any negative certificate.
+
+Proofs, full named rows, independent controls, and the repaired scope are in
+[balanced ternary returns](../05-knowledge/results/balanced_ternary_returns_20261103/README.md).
+The next obligation is a source-changing or larger-interface return with an
+actual target selector; no new forbidden Hamilton count is inferred.
+
 ## 2026-11-03 — counting refinements must retain the earlier finite bound and quotient
 
 **Provenance correction; the numerical formulas survive.** The

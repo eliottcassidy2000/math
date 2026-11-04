@@ -1,0 +1,83 @@
+{
+  "candidate_maps": 3600,
+  "endpoint_and_balanced_child_are_strong": false,
+  "endpoint_profiles": {
+    "final": [
+      181,
+      59,
+      59,
+      181
+    ],
+    "repair": [
+      59,
+      5,
+      5,
+      61
+    ],
+    "source": [
+      59,
+      17,
+      17,
+      59
+    ]
+  },
+  "general_two_port_joint_queries_checked": 68,
+  "input_sha256": "cc5a85f092843d709b6c066513a35944b3310ccd3f96185e1e58f278910eb423",
+  "interior_receipt_sha256": "fbb8f0513eaa7e23695676f2089f97b8cb925e4868850a49f9fa860bf7520ad1",
+  "min_by_template_child": {
+    "3": 3,
+    "4": 4,
+    "5": 6,
+    "6": 8,
+    "7": 9
+  },
+  "min_flips": 3,
+  "native_moves_checked": 6,
+  "neutral_endpoint_audit": {
+    "converse_isomorphic": 1,
+    "neutral_mutants": 5,
+    "one_arc_sets": 28,
+    "port_preserving_strong_mutants": 4,
+    "remaining_cube_sha256": "db7664e265a0316948aebdba009fc4d9bd6b4ed742b5bf85af5b7862ece203f2",
+    "remaining_full_two_birth_cube": 131072,
+    "remaining_mutant": [
+      66,
+      212,
+      249,
+      243,
+      129,
+      211,
+      144,
+      1
+    ],
+    "scope": "Together with the separately audited original-source181 exclusion and strong-component cutoff, three is the minimum old-arc distance to an eight-name H59 endpoint retaining2->3 and admitting any induced181 extension.",
+    "source_isomorphic": 2,
+    "two_arc_sets": 378
+  },
+  "physical_names": [
+    "c_2",
+    "x",
+    "reset_root",
+    "reset_child",
+    "y",
+    "c_1",
+    "birth_a",
+    "birth_b"
+  ],
+  "port_edge_preserved_at_endpoints_only": true,
+  "prior_C2_to_word202032": [
+    0,
+    1,
+    4,
+    5,
+    6,
+    7,
+    2,
+    3
+  ],
+  "retained_global_sink_name": 6,
+  "scope": "Independent direct native replay and subset-DP counts; full3600 padded-template port maps, not all possible H59 source classes or a globally shortest native route.",
+  "script_sha256": "fc44e61240ae25dc23f72423a22ed74b165fd3749d96757b6597cd3d7cbc52d1",
+  "stage_count_checks": 15,
+  "status": "PASS"
+}

@@ -1,0 +1,671 @@
+{
+  "F_c_m_skeleton_coefficients": [
+    241,
+    250,
+    78,
+    0,
+    0
+  ],
+  "controls": {
+    "endpoint_subset_checks": 84073,
+    "labelled_tournaments": 1099,
+    "literal_fixed_start_checks": 288,
+    "one_birth_old_port_checks": 6656
+  },
+  "families": [
+    {
+      "H": 59,
+      "fresh_ready": {
+        "H": 299,
+        "attachment_out_mask": 254,
+        "gap": 1,
+        "in_port": 0,
+        "names": [
+          "c_2",
+          "x",
+          "y",
+          "c_1",
+          "birth_a",
+          "birth_b",
+          "reset_root",
+          "reset_child",
+          "fresh_ready_root"
+        ],
+        "root": 8,
+        "rows": [
+          274,
+          116,
+          57,
+          51,
+          32,
+          1,
+          189,
+          63,
+          254
+        ]
+      },
+      "m": 2,
+      "names": [
+        "c_2",
+        "x",
+        "y",
+        "c_1",
+        "birth_a",
+        "birth_b",
+        "reset_root",
+        "reset_child"
+      ],
+      "old_triangle": [
+        "c_2",
+        "birth_a",
+        "birth_b"
+      ],
+      "profiles": [
+        {
+          "gap": 182,
+          "indegree": 5,
+          "name": "c_2",
+          "start": 1
+        },
+        {
+          "gap": 22,
+          "indegree": 3,
+          "name": "x",
+          "start": 3
+        },
+        {
+          "gap": 78,
+          "indegree": 3,
+          "name": "y",
+          "start": 9
+        },
+        {
+          "gap": 103,
+          "indegree": 3,
+          "name": "c_1",
+          "start": 6
+        },
+        {
+          "gap": 402,
+          "indegree": 6,
+          "name": "birth_a",
+          "start": 1
+        },
+        {
+          "gap": 380,
+          "indegree": 6,
+          "name": "birth_b",
+          "start": 1
+        },
+        {
+          "gap": 0,
+          "indegree": 1,
+          "name": "reset_root",
+          "start": 17
+        },
+        {
+          "gap": 14,
+          "indegree": 1,
+          "name": "reset_child",
+          "start": 21
+        }
+      ],
+      "rows": [
+        18,
+        116,
+        57,
+        51,
+        32,
+        1,
+        189,
+        63
+      ]
+    },
+    {
+      "H": 119,
+      "fresh_ready": {
+        "H": 859,
+        "attachment_out_mask": 510,
+        "gap": 1,
+        "in_port": 0,
+        "names": [
+          "c_3",
+          "x",
+          "y",
+          "c_1",
+          "c_2",
+          "birth_a",
+          "birth_b",
+          "reset_root",
+          "reset_child",
+          "fresh_ready_root"
+        ],
+        "root": 9,
+        "rows": [
+          546,
+          228,
+          121,
+          115,
+          99,
+          64,
+          1,
+          381,
+          127,
+          510
+        ]
+      },
+      "m": 3,
+      "names": [
+        "c_3",
+        "x",
+        "y",
+        "c_1",
+        "c_2",
+        "birth_a",
+        "birth_b",
+        "reset_root",
+        "reset_child"
+      ],
+      "old_triangle": [
+        "c_3",
+        "birth_a",
+        "birth_b"
+      ],
+      "profiles": [
+        {
+          "gap": 622,
+          "indegree": 6,
+          "name": "c_3",
+          "start": 1
+        },
+        {
+          "gap": 58,
+          "indegree": 4,
+          "name": "x",
+          "start": 3
+        },
+        {
+          "gap": 138,
+          "indegree": 3,
+          "name": "y",
+          "start": 21
+        },
+        {
+          "gap": 209,
+          "indegree": 3,
+          "name": "c_1",
+          "start": 12
+        },
+        {
+          "gap": 371,
+          "indegree": 4,
+          "name": "c_2",
+          "start": 6
+        },
+        {
+          "gap": 1218,
+          "indegree": 7,
+          "name": "birth_a",
+          "start": 1
+        },
+        {
+          "gap": 1164,
+          "indegree": 7,
+          "name": "birth_b",
+          "start": 1
+        },
+        {
+          "gap": 0,
+          "indegree": 1,
+          "name": "reset_root",
+          "start": 29
+        },
+        {
+          "gap": 26,
+          "indegree": 1,
+          "name": "reset_child",
+          "start": 45
+        }
+      ],
+      "rows": [
+        34,
+        228,
+        121,
+        115,
+        99,
+        64,
+        1,
+        381,
+        127
+      ]
+    },
+    {
+      "H": 239,
+      "fresh_ready": {
+        "H": 2447,
+        "attachment_out_mask": 1022,
+        "gap": 1,
+        "in_port": 0,
+        "names": [
+          "c_4",
+          "x",
+          "y",
+          "c_1",
+          "c_2",
+          "c_3",
+          "birth_a",
+          "birth_b",
+          "reset_root",
+          "reset_child",
+          "fresh_ready_root"
+        ],
+        "root": 10,
+        "rows": [
+          1090,
+          452,
+          249,
+          243,
+          227,
+          195,
+          128,
+          1,
+          765,
+          255,
+          1022
+        ]
+      },
+      "m": 4,
+      "names": [
+        "c_4",
+        "x",
+        "y",
+        "c_1",
+        "c_2",
+        "c_3",
+        "birth_a",
+        "birth_b",
+        "reset_root",
+        "reset_child"
+      ],
+      "old_triangle": [
+        "c_4",
+        "birth_a",
+        "birth_b"
+      ],
+      "profiles": [
+        {
+          "gap": 1970,
+          "indegree": 7,
+          "name": "c_4",
+          "start": 1
+        },
+        {
+          "gap": 130,
+          "indegree": 5,
+          "name": "x",
+          "start": 3
+        },
+        {
+          "gap": 258,
+          "indegree": 3,
+          "name": "y",
+          "start": 45
+        },
+        {
+          "gap": 401,
+          "indegree": 3,
+          "name": "c_1",
+          "start": 24
+        },
+        {
+          "gap": 729,
+          "indegree": 4,
+          "name": "c_2",
+          "start": 12
+        },
+        {
+          "gap": 1219,
+          "indegree": 5,
+          "name": "c_3",
+          "start": 6
+        },
+        {
+          "gap": 3630,
+          "indegree": 8,
+          "name": "birth_a",
+          "start": 1
+        },
+        {
+          "gap": 3512,
+          "indegree": 8,
+          "name": "birth_b",
+          "start": 1
+        },
+        {
+          "gap": 0,
+          "indegree": 1,
+          "name": "reset_root",
+          "start": 53
+        },
+        {
+          "gap": 50,
+          "indegree": 1,
+          "name": "reset_child",
+          "start": 93
+        }
+      ],
+      "rows": [
+        66,
+        452,
+        249,
+        243,
+        227,
+        195,
+        128,
+        1,
+        765,
+        255
+      ]
+    },
+    {
+      "H": 479,
+      "fresh_ready": {
+        "H": 7027,
+        "attachment_out_mask": 2046,
+        "gap": 1,
+        "in_port": 0,
+        "names": [
+          "c_5",
+          "x",
+          "y",
+          "c_1",
+          "c_2",
+          "c_3",
+          "c_4",
+          "birth_a",
+          "birth_b",
+          "reset_root",
+          "reset_child",
+          "fresh_ready_root"
+        ],
+        "root": 11,
+        "rows": [
+          2178,
+          900,
+          505,
+          499,
+          483,
+          451,
+          387,
+          256,
+          1,
+          1533,
+          511,
+          2046
+        ]
+      },
+      "m": 5,
+      "names": [
+        "c_5",
+        "x",
+        "y",
+        "c_1",
+        "c_2",
+        "c_3",
+        "c_4",
+        "birth_a",
+        "birth_b",
+        "reset_root",
+        "reset_child"
+      ],
+      "old_triangle": [
+        "c_5",
+        "birth_a",
+        "birth_b"
+      ],
+      "profiles": [
+        {
+          "gap": 6070,
+          "indegree": 8,
+          "name": "c_5",
+          "start": 1
+        },
+        {
+          "gap": 274,
+          "indegree": 6,
+          "name": "x",
+          "start": 3
+        },
+        {
+          "gap": 498,
+          "indegree": 3,
+          "name": "y",
+          "start": 93
+        },
+        {
+          "gap": 785,
+          "indegree": 3,
+          "name": "c_1",
+          "start": 48
+        },
+        {
+          "gap": 1425,
+          "indegree": 4,
+          "name": "c_2",
+          "start": 24
+        },
+        {
+          "gap": 2393,
+          "indegree": 5,
+          "name": "c_3",
+          "start": 12
+        },
+        {
+          "gap": 3851,
+          "indegree": 6,
+          "name": "c_4",
+          "start": 6
+        },
+        {
+          "gap": 10794,
+          "indegree": 9,
+          "name": "birth_a",
+          "start": 1
+        },
+        {
+          "gap": 10548,
+          "indegree": 9,
+          "name": "birth_b",
+          "start": 1
+        },
+        {
+          "gap": 0,
+          "indegree": 1,
+          "name": "reset_root",
+          "start": 101
+        },
+        {
+          "gap": 98,
+          "indegree": 1,
+          "name": "reset_child",
+          "start": 189
+        }
+      ],
+      "rows": [
+        130,
+        900,
+        505,
+        499,
+        483,
+        451,
+        387,
+        256,
+        1,
+        1533,
+        511
+      ]
+    },
+    {
+      "H": 959,
+      "fresh_ready": {
+        "H": 20399,
+        "attachment_out_mask": 4094,
+        "gap": 1,
+        "in_port": 0,
+        "names": [
+          "c_6",
+          "x",
+          "y",
+          "c_1",
+          "c_2",
+          "c_3",
+          "c_4",
+          "c_5",
+          "birth_a",
+          "birth_b",
+          "reset_root",
+          "reset_child",
+          "fresh_ready_root"
+        ],
+        "root": 12,
+        "rows": [
+          4354,
+          1796,
+          1017,
+          1011,
+          995,
+          963,
+          899,
+          771,
+          512,
+          1,
+          3069,
+          1023,
+          4094
+        ]
+      },
+      "m": 6,
+      "names": [
+        "c_6",
+        "x",
+        "y",
+        "c_1",
+        "c_2",
+        "c_3",
+        "c_4",
+        "c_5",
+        "birth_a",
+        "birth_b",
+        "reset_root",
+        "reset_child"
+      ],
+      "old_triangle": [
+        "c_6",
+        "birth_a",
+        "birth_b"
+      ],
+      "profiles": [
+        {
+          "gap": 18482,
+          "indegree": 9,
+          "name": "c_6",
+          "start": 1
+        },
+        {
+          "gap": 562,
+          "indegree": 7,
+          "name": "x",
+          "start": 3
+        },
+        {
+          "gap": 978,
+          "indegree": 3,
+          "name": "y",
+          "start": 189
+        },
+        {
+          "gap": 1553,
+          "indegree": 3,
+          "name": "c_1",
+          "start": 96
+        },
+        {
+          "gap": 2817,
+          "indegree": 4,
+          "name": "c_2",
+          "start": 48
+        },
+        {
+          "gap": 4721,
+          "indegree": 5,
+          "name": "c_3",
+          "start": 24
+        },
+        {
+          "gap": 7593,
+          "indegree": 6,
+          "name": "c_4",
+          "start": 12
+        },
+        {
+          "gap": 11923,
+          "indegree": 7,
+          "name": "c_5",
+          "start": 6
+        },
+        {
+          "gap": 32142,
+          "indegree": 10,
+          "name": "birth_a",
+          "start": 1
+        },
+        {
+          "gap": 31640,
+          "indegree": 10,
+          "name": "birth_b",
+          "start": 1
+        },
+        {
+          "gap": 0,
+          "indegree": 1,
+          "name": "reset_root",
+          "start": 197
+        },
+        {
+          "gap": 194,
+          "indegree": 1,
+          "name": "reset_child",
+          "start": 381
+        }
+      ],
+      "rows": [
+        258,
+        1796,
+        1017,
+        1011,
+        995,
+        963,
+        899,
+        771,
+        512,
+        1,
+        3069,
+        1023
+      ]
+    }
+  ],
+  "scope": "All labelled tournaments through5 for endpoint lemma; every one-birth cut for C_2,C_3; five fixed exterior skeleton evaluations; all-size conclusions require NOTE proofs.",
+  "script_sha256": "2331c7da9f7c99e0e5f3eab0bf3c7b7669733d3c5ffbade9bc78017735139297",
+  "sources": {
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ADAPTIVE.md": "1e40bf058d9c86a8d5ff7f63dc6439a68eae3f62920794a7baa40694dfce4971",
+    "05-knowledge/results/orbit_spectrum_session_20261103/coverage/NOTE.md": "a9b633124dc4b905dd1ab1546f8ae6cb66729f63f4673c17e20d8df03db3f6a9",
+    "05-knowledge/results/session124_tournament_cut_response_20261031/README.md": "b497fb33d662598913946bbeb818c7d758aec38782488f0ca6f0da4581ca5dc8",
+    "05-knowledge/results/two_entry_funnels_20261103/READY.md": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c"
+  },
+  "status": "PASS",
+  "zero_endpoint_hostile": [
+    2,
+    0,
+    3
+  ]
+}

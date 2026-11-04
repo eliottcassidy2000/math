@@ -1,0 +1,25 @@
+{
+  "comparisons": 20790,
+  "excluded_numeric_boundary": {
+    "H": 29,
+    "family": 4,
+    "k": 1,
+    "m": 1
+  },
+  "hits": [
+    {
+      "H": 59,
+      "family": 5,
+      "k": 2,
+      "m": 2
+    }
+  ],
+  "scope": "FINITE-EXACT controls m2..64,k1..66; all-exponent proof is EXCEPTIONAL.md.",
+  "script_sha256": "ec9a701c9ffbc6c55fb9851da16e52e57241baffc9a00dd559de2f574ffb6ed4",
+  "sources": {
+    "05-knowledge/results/orbit_spectrum_session_20261103/coverage/NOTE.md": "a9b633124dc4b905dd1ab1546f8ae6cb66729f63f4673c17e20d8df03db3f6a9",
+    "05-knowledge/results/ready_return_pentagon_20261103/OBSTRUCTION.md": "5890c526288797d4bd80ffaa5eefaa9aa148ee928163f104dea76fc5c4fc39ef",
+    "05-knowledge/results/two_entry_funnels_20261103/READY.md": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c"
+  },
+  "status": "PASS"
+}

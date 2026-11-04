@@ -1,0 +1,359 @@
+{
+  "complete_m4_superword_menus": [
+    {
+      "menu": [
+        {
+          "distinct_strong_superwords": 26,
+          "extra": 1,
+          "first_positive": null,
+          "hits": {
+            "719": 0,
+            "721": 0
+          }
+        },
+        {
+          "distinct_strong_superwords": 381,
+          "extra": 2,
+          "first_positive": "2020003332",
+          "hits": {
+            "719": 2,
+            "721": 0
+          }
+        },
+        {
+          "distinct_strong_superwords": 4140,
+          "extra": 3,
+          "first_positive": null,
+          "hits": {
+            "719": 0,
+            "721": 0
+          }
+        }
+      ],
+      "old_chain": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "physical_pair": [
+        0,
+        1
+      ],
+      "word": "20200032"
+    },
+    {
+      "menu": [
+        {
+          "distinct_strong_superwords": 26,
+          "extra": 1,
+          "first_positive": null,
+          "hits": {
+            "719": 0,
+            "721": 0
+          }
+        },
+        {
+          "distinct_strong_superwords": 381,
+          "extra": 2,
+          "first_positive": null,
+          "hits": {
+            "719": 0,
+            "721": 0
+          }
+        },
+        {
+          "distinct_strong_superwords": 4140,
+          "extra": 3,
+          "first_positive": null,
+          "hits": {
+            "719": 0,
+            "721": 0
+          }
+        }
+      ],
+      "old_chain": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        0
+      ],
+      "physical_pair": [
+        1,
+        8
+      ],
+      "word": "10100030"
+    },
+    {
+      "menu": [
+        {
+          "distinct_strong_superwords": 26,
+          "extra": 1,
+          "first_positive": null,
+          "hits": {
+            "719": 0,
+            "721": 0
+          }
+        },
+        {
+          "distinct_strong_superwords": 381,
+          "extra": 2,
+          "first_positive": "1010002111",
+          "hits": {
+            "719": 2,
+            "721": 0
+          }
+        },
+        {
+          "distinct_strong_superwords": 4140,
+          "extra": 3,
+          "first_positive": null,
+          "hits": {
+            "719": 0,
+            "721": 0
+          }
+        }
+      ],
+      "old_chain": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0,
+        8
+      ],
+      "physical_pair": [
+        1,
+        9
+      ],
+      "word": "10100021"
+    }
+  ],
+  "formula_controls": 144,
+  "graded_bridge_controls": [
+    {
+      "H": 5,
+      "input_pair": [
+        3,
+        1
+      ],
+      "k": 0,
+      "root": 4,
+      "rows": [
+        18,
+        4,
+        1,
+        23,
+        6
+      ]
+    },
+    {
+      "H": 17,
+      "input_pair": [
+        3,
+        1
+      ],
+      "k": 1,
+      "root": 5,
+      "rows": [
+        34,
+        4,
+        1,
+        39,
+        15,
+        22
+      ]
+    },
+    {
+      "H": 35,
+      "input_pair": [
+        3,
+        1
+      ],
+      "k": 2,
+      "root": 6,
+      "rows": [
+        66,
+        4,
+        1,
+        71,
+        47,
+        15,
+        54
+      ]
+    },
+    {
+      "H": 101,
+      "input_pair": [
+        59,
+        17
+      ],
+      "k": 0,
+      "root": 9,
+      "rows": [
+        66,
+        212,
+        761,
+        243,
+        225,
+        195,
+        128,
+        1,
+        767,
+        251
+      ]
+    },
+    {
+      "H": 337,
+      "input_pair": [
+        59,
+        17
+      ],
+      "k": 1,
+      "root": 10,
+      "rows": [
+        66,
+        212,
+        1273,
+        243,
+        225,
+        195,
+        128,
+        1,
+        1279,
+        511,
+        763
+      ]
+    },
+    {
+      "H": 691,
+      "input_pair": [
+        59,
+        17
+      ],
+      "k": 2,
+      "root": 11,
+      "rows": [
+        66,
+        212,
+        2297,
+        243,
+        225,
+        195,
+        128,
+        1,
+        2303,
+        1535,
+        511,
+        1787
+      ]
+    }
+  ],
+  "graded_word_controls": 36,
+  "literal_named_chain": [
+    {
+      "root_profile": [
+        59,
+        17,
+        17,
+        59
+      ],
+      "rows": [
+        66,
+        212,
+        249,
+        243,
+        225,
+        195,
+        128,
+        1
+      ],
+      "word": "202032"
+    },
+    {
+      "root_profile": [
+        179,
+        53,
+        53,
+        179
+      ],
+      "rows": [
+        450,
+        980,
+        1017,
+        1011,
+        993,
+        963,
+        896,
+        768,
+        512,
+        1
+      ],
+      "word": "20203332"
+    },
+    {
+      "root_profile": [
+        541,
+        147,
+        147,
+        541
+      ],
+      "rows": [
+        834,
+        1876,
+        2041,
+        2035,
+        2017,
+        1987,
+        1920,
+        1795,
+        1536,
+        1024,
+        1
+      ],
+      "word": "202030332"
+    }
+  ],
+  "m4_triangles": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      8,
+      9
+    ]
+  ],
+  "recurrence_certificates": [
+    {
+      "prefix": "2",
+      "residual_zero_outputs": 48,
+      "zero_state_identity": true
+    },
+    {
+      "prefix": "202",
+      "residual_zero_outputs": 48,
+      "zero_state_identity": true
+    }
+  ],
+  "scope": "All strong final two-apex extensions of actual C4 at H721 via proved SCC/order reduction; no FVS>=3 exclusion.",
+  "script_sha256": "adc862fd11008dac36b156cd87399e3e1fefa719f84ee1fe28dd0e2735b08bfd",
+  "source_hashes": {
+    "05-knowledge/results/balanced_ternary_returns_20261103/transport/check.py": "823e70740e99dd333ee77f1ad0d6ce09ceb7d54b2f7d97df1ae02258e7dfa141",
+    "05-knowledge/results/orbit_spectrum_session_20261103/words/check.py": "c9d5e04e5051481d2e347d0f9618a77e45b2cf2f1143f2a7e09f3078c70ab025"
+  },
+  "state_dimension": 24,
+  "status": "PASS"
+}

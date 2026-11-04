@@ -1,0 +1,72 @@
+{
+  "direct_source_pins_checked": 27,
+  "jobs": [
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "interior/check.json",
+      "receipt_sha256": "fbb8f0513eaa7e23695676f2089f97b8cb925e4868850a49f9fa860bf7520ad1",
+      "script": "interior/check.py",
+      "script_sha256": "a10fdf676630d6298e63a971feec99ab645872899e1f659ca420de0ba35f6a6b"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "interior/graded.json",
+      "receipt_sha256": "457869539dd0aac54ecc7dcccc0a967adb56da3117d7d6e46d4a209e9b34662a",
+      "script": "interior/graded.py",
+      "script_sha256": "36bc87c3fdd586ff23850de6c295b5ed1e716e7e11fb2f1ea0c25779f331f492"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "interfaces/check.json",
+      "receipt_sha256": "a25f99722097c7fb532eb94df0c47f2ca8942d28fa10d4250f5ecc1a74979cb0",
+      "script": "interfaces/check.py",
+      "script_sha256": "2331c7da9f7c99e0e5f3eab0bf3c7b7669733d3c5ffbade9bc78017735139297"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "interfaces/exceptional.json",
+      "receipt_sha256": "5563d699d451eb232e36d0898f0f87882c2873181d5d646ef5649e9acfb15e21",
+      "script": "interfaces/exceptional.py",
+      "script_sha256": "ec9a701c9ffbc6c55fb9851da16e52e57241baffc9a00dd559de2f574ffb6ed4"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "interfaces/audit_transport.json",
+      "receipt_sha256": "4fda3494492242d7050721f99eeb7b7133fc9f17da8af7f1ecf1e054bd5d9ab3",
+      "script": "interfaces/audit_transport.py",
+      "script_sha256": "fc44e61240ae25dc23f72423a22ed74b165fd3749d96757b6597cd3d7cbc52d1"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "conditional/check.json",
+      "receipt_sha256": "2399ad2aecb23d48e1aa7b508b5d2f0ecbdfa0bb6d4678de246a0f0c93fca715",
+      "script": "conditional/check.py",
+      "script_sha256": "aee4c76bce129193e9095013916071bd560b3f2fd5972e4f0b3fe78702db2afc"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "conditional/audit_interfaces.json",
+      "receipt_sha256": "9ca3ca138848ec98a0daf1afc5a6744925781f30df60fbf2c1d85bb63245482f",
+      "script": "conditional/audit_interfaces.py",
+      "script_sha256": "e9e04969119806b9d8bcb9e79795dbd1fd913feedfe8da033402b1873a7d484b"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "transport/check.json",
+      "receipt_sha256": "cc5a85f092843d709b6c066513a35944b3310ccd3f96185e1e58f278910eb423",
+      "script": "transport/check.py",
+      "script_sha256": "823e70740e99dd333ee77f1ad0d6ce09ceb7d54b2f7d97df1ae02258e7dfa141"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "transport/audit_interior.json",
+      "receipt_sha256": "54bac820167f9492b61b66d1536e98e5f8bd41cdf49833ac1f29dba3311dd92e",
+      "script": "transport/audit_interior.py",
+      "script_sha256": "adc862fd11008dac36b156cd87399e3e1fefa719f84ee1fe28dd0e2735b08bfd"
+    }
+  ],
+  "runner_sha256": "6b6b0a3e09eb28797ec93d876427c77cd9c67a2fee151b7d48c7af8068df5f4d",
+  "scope": "Nine scoped exact producers and auditors; all normal/optimized outputs match saved receipts. Universal source acceptance remains OPEN.",
+  "sources_sha256": "b17c7a33b5446ca43bebbb8f610986a2208c2365a7d4b39150f958964a45c1d1",
+  "status": "PASS"
+}

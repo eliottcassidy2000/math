@@ -1,0 +1,588 @@
+{
+  "all_order_no_balanced_H_using_f6_15": [
+    11,
+    13
+  ],
+  "balanced_H_through_order5": [
+    3,
+    5,
+    9,
+    15
+  ],
+  "balanced_witnesses": {
+    "3": {
+      "profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "root": 0,
+      "rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    "5": {
+      "profile": [
+        5,
+        1,
+        1,
+        5
+      ],
+      "root": 3,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ]
+    },
+    "9": {
+      "profile": [
+        9,
+        1,
+        1,
+        9
+      ],
+      "root": 4,
+      "rows": [
+        16,
+        1,
+        3,
+        7,
+        14
+      ]
+    },
+    "15": {
+      "profile": [
+        15,
+        3,
+        3,
+        15
+      ],
+      "root": 4,
+      "rows": [
+        16,
+        9,
+        3,
+        5,
+        14
+      ]
+    }
+  },
+  "forbidden_predecessor_lane_exceptions": [
+    23,
+    67
+  ],
+  "gcd_identities_checked": 3300,
+  "lane_predecessors_checked_through10000": 1449,
+  "levels": [
+    {
+      "balanced_rooted_labelled": 6,
+      "n": 3,
+      "strong_labelled": 2
+    },
+    {
+      "balanced_rooted_labelled": 24,
+      "n": 4,
+      "strong_labelled": 24
+    },
+    {
+      "balanced_rooted_labelled": 280,
+      "n": 5,
+      "strong_labelled": 544
+    }
+  ],
+  "positive_named_H35_both_branches": {
+    "children": [
+      {
+        "all_root_profiles": [
+          {
+            "profile": [
+              107,
+              9,
+              9,
+              117
+            ],
+            "root": 0
+          },
+          {
+            "profile": [
+              107,
+              44,
+              53,
+              116
+            ],
+            "root": 1
+          },
+          {
+            "profile": [
+              107,
+              27,
+              53,
+              169
+            ],
+            "root": 2
+          },
+          {
+            "profile": [
+              107,
+              18,
+              45,
+              188
+            ],
+            "root": 3
+          },
+          {
+            "profile": [
+              107,
+              1,
+              5,
+              283
+            ],
+            "root": 4
+          },
+          {
+            "profile": [
+              107,
+              4,
+              59,
+              540
+            ],
+            "root": 5
+          },
+          {
+            "profile": [
+              107,
+              1,
+              11,
+              773
+            ],
+            "root": 6
+          },
+          {
+            "profile": [
+              107,
+              2,
+              59,
+              860
+            ],
+            "root": 7
+          },
+          {
+            "profile": [
+              107,
+              1,
+              59,
+              1363
+            ],
+            "root": 8
+          }
+        ],
+        "balanced_roots": [],
+        "bank_to_named_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          6,
+          8
+        ],
+        "births": [
+          {
+            "beats_old": [
+              "u6"
+            ],
+            "loses_to_old": [
+              "u0",
+              "u1",
+              "u2",
+              "u3",
+              "u4",
+              "u5"
+            ],
+            "new_name": "new_a",
+            "prefix_H": 59
+          },
+          {
+            "beats_old": [
+              "u6"
+            ],
+            "loses_to_old": [
+              "u0",
+              "u1",
+              "u2",
+              "u3",
+              "u4",
+              "u5",
+              "new_a"
+            ],
+            "new_name": "new_b",
+            "prefix_H": 107
+          }
+        ],
+        "names": [
+          "u0",
+          "u1",
+          "u2",
+          "u3",
+          "u4",
+          "u5",
+          "u6",
+          "new_a",
+          "new_b"
+        ],
+        "old_to_new": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "retained_inports": [
+          "u3",
+          "u4"
+        ],
+        "retained_root": "u0",
+        "rows": [
+          486,
+          508,
+          504,
+          497,
+          417,
+          448,
+          16,
+          320,
+          64
+        ],
+        "source_bank_rows": [
+          486,
+          508,
+          504,
+          497,
+          353,
+          448,
+          384,
+          16,
+          128
+        ],
+        "source_bank_subset": 191,
+        "target": 107
+      },
+      {
+        "all_root_profiles": [
+          {
+            "profile": [
+              109,
+              5,
+              5,
+              121
+            ],
+            "root": 0
+          },
+          {
+            "profile": [
+              109,
+              46,
+              51,
+              114
+            ],
+            "root": 1
+          },
+          {
+            "profile": [
+              109,
+              29,
+              51,
+              165
+            ],
+            "root": 2
+          },
+          {
+            "profile": [
+              109,
+              17,
+              53,
+              203
+            ],
+            "root": 3
+          },
+          {
+            "profile": [
+              109,
+              3,
+              15,
+              369
+            ],
+            "root": 4
+          },
+          {
+            "profile": [
+              109,
+              1,
+              33,
+              1123
+            ],
+            "root": 5
+          },
+          {
+            "profile": [
+              109,
+              1,
+              19,
+              709
+            ],
+            "root": 6
+          },
+          {
+            "profile": [
+              109,
+              6,
+              65,
+              426
+            ],
+            "root": 7
+          },
+          {
+            "profile": [
+              109,
+              1,
+              57,
+              1241
+            ],
+            "root": 8
+          }
+        ],
+        "balanced_roots": [],
+        "bank_to_named_order": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          4,
+          8
+        ],
+        "births": [
+          {
+            "beats_old": [
+              "u4",
+              "u5",
+              "u6"
+            ],
+            "loses_to_old": [
+              "u0",
+              "u1",
+              "u2",
+              "u3"
+            ],
+            "new_name": "new_a",
+            "prefix_H": 57
+          },
+          {
+            "beats_old": [
+              "u5"
+            ],
+            "loses_to_old": [
+              "u0",
+              "u1",
+              "u2",
+              "u3",
+              "u4",
+              "u6",
+              "new_a"
+            ],
+            "new_name": "new_b",
+            "prefix_H": 109
+          }
+        ],
+        "names": [
+          "u0",
+          "u1",
+          "u2",
+          "u3",
+          "u4",
+          "u5",
+          "u6",
+          "new_a",
+          "new_b"
+        ],
+        "old_to_new": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "retained_inports": [
+          "u3",
+          "u4"
+        ],
+        "retained_root": "u0",
+        "rows": [
+          486,
+          508,
+          504,
+          497,
+          289,
+          64,
+          272,
+          368,
+          32
+        ],
+        "source_bank_rows": [
+          470,
+          508,
+          504,
+          497,
+          480,
+          321,
+          128,
+          288,
+          64
+        ],
+        "source_bank_subset": 239,
+        "target": 109
+      }
+    ],
+    "inherited_target_bank_scan": {
+      "107": {
+        "classes": 14,
+        "classes_containing_H35": 2
+      },
+      "109": {
+        "classes": 26,
+        "classes_containing_H35": 4
+      }
+    },
+    "retained_inports": [
+      "u3",
+      "u4"
+    ],
+    "retained_root": "u0",
+    "source_all_root_profiles": [
+      {
+        "profile": [
+          35,
+          3,
+          3,
+          39
+        ],
+        "root": 0
+      },
+      {
+        "profile": [
+          35,
+          14,
+          17,
+          38
+        ],
+        "root": 1
+      },
+      {
+        "profile": [
+          35,
+          9,
+          17,
+          55
+        ],
+        "root": 2
+      },
+      {
+        "profile": [
+          35,
+          6,
+          15,
+          62
+        ],
+        "root": 3
+      },
+      {
+        "profile": [
+          35,
+          1,
+          5,
+          91
+        ],
+        "root": 4
+      },
+      {
+        "profile": [
+          35,
+          1,
+          19,
+          183
+        ],
+        "root": 5
+      },
+      {
+        "profile": [
+          35,
+          1,
+          11,
+          173
+        ],
+        "root": 6
+      }
+    ],
+    "source_names": [
+      "u0",
+      "u1",
+      "u2",
+      "u3",
+      "u4",
+      "u5",
+      "u6"
+    ],
+    "source_rows": [
+      102,
+      124,
+      120,
+      113,
+      33,
+      64,
+      16
+    ]
+  },
+  "ready_gap_to_prime_targets": [
+    {
+      "source": 35,
+      "targets": [
+        107,
+        109
+      ]
+    },
+    {
+      "source": 12833,
+      "targets": [
+        38501
+      ]
+    }
+  ],
+  "scope": "Literal all labelled strong tournaments n3..5; independent subset controls; finite arithmetic checks. Ready fibre exclusions are inherited, not recomputed.",
+  "script_sha256": "aee4c76bce129193e9095013916071bd560b3f2fd5972e4f0b3fe78702db2afc",
+  "sources": {
+    "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ADAPTIVE.md": "1e40bf058d9c86a8d5ff7f63dc6439a68eae3f62920794a7baa40694dfce4971",
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/METAGRAPH.md": "ee0cd2951e90d9659ed664c3ebfc10d2a3b3a17c55256610711b9610e84bb9ea",
+    "05-knowledge/results/coverage_machine_induction_20261103/axiom/AXIOM.md": "e5c2a2f2265d92b325548192de4a5a13a2fe1f29b5bf8e58e0ff91f8c6fa38d5",
+    "05-knowledge/results/metagraph_primegame_20261102/INDUCED_OBSTRUCTIONS.md": "4e27c4c91ad22038a1927cf912ef33062d5d165640f16f97f8cd3f1e01c833e4",
+    "05-knowledge/results/metagraph_primegame_20261102/low_sources.txt": "7060af7278041973dac49ecedb1dbb2cc61424780f56abd7f10e097855a88845",
+    "05-knowledge/results/ready_return_pentagon_20261103/OBSTRUCTION.md": "5890c526288797d4bd80ffaa5eefaa9aa148ee928163f104dea76fc5c4fc39ef",
+    "05-knowledge/results/ready_return_pentagon_20261103/inverse.json": "dc683f94f9ffcc8de2b3208626ec71dc3154c715cd7f7bdfcc8adc55b535d535",
+    "05-knowledge/results/second_feedback_18979_20261103/PROOFS.md": "e5b00ec4a1a28099592e9d7caa718732e36764838378b2e97a039706eb05aabf",
+    "05-knowledge/results/second_feedback_18979_20261103/next_fibres.json": "fb9810efb6c01ee371ecf3f650d58eb30f1dc88398e3bbcdce4184fc25a9eec0"
+  },
+  "status": "PASS"
+}
