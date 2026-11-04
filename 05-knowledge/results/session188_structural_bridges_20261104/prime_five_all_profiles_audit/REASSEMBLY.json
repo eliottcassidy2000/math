@@ -1,0 +1,126 @@
+{
+  "encoding": "Deterministic gzip streams encoded as base64 in ASCII chunks.",
+  "groups": [
+    {
+      "parts": [
+        {
+          "file": "full_records_00.json.gz.b64.part000",
+          "size": 36001,
+          "sha256": "2af70c00882b0633e68ea9ef744d57724b42f512c19fca7b2199c6d8a06f97f3"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part001",
+          "size": 36001,
+          "sha256": "21f040ab631ef1465f1541fc978de43ef63a71a0745de391e00332361f091f81"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part002",
+          "size": 36001,
+          "sha256": "ece7cb5d7011b1af3116740db2b976588e2fb82f8b89d4eb27eeb648e7ca93aa"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part003",
+          "size": 36001,
+          "sha256": "30fd91ecf0732405a6161edba90d2751389ff06dc40d1223da9c2310dec3003e"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part004",
+          "size": 36001,
+          "sha256": "93d2838a5c726f833bce060b5a54868ee3ffd66be7a814d4e5671ff97c28bf26"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part005",
+          "size": 36001,
+          "sha256": "bed7bc1c31fe2d3c2086b9470a5ccda4fec8e49ee237cb9f0d5ec340eb19f1f1"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part006",
+          "size": 36001,
+          "sha256": "de5a622ff6d8f4e4acc9f3c66a2e33dbaa3d784d54560eb2671e2b9ea763ed04"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part007",
+          "size": 36001,
+          "sha256": "b65d0f0b4e6bedafda27bcf989ffb21f4bff69c0719e5be118d331c3369f39cf"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part008",
+          "size": 36001,
+          "sha256": "6f06f21f03a6ccce41644c6d0d196d7124d949f861780c8753742122c0620e8e"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part009",
+          "size": 36001,
+          "sha256": "96da5bc2c845ff7573b68a91436e660d8978264b110284e8d547a0e9a679303f"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part010",
+          "size": 36001,
+          "sha256": "dabfa7c35675358b165fdb676b30319aba6db540476d5d69383b91d641b4e5ea"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part011",
+          "size": 36001,
+          "sha256": "f56e3684886232a33dd5d9dce6b36fa739cf56082001be801269e481aeec3677"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part012",
+          "size": 36001,
+          "sha256": "0d6a9290e8bf95a1c92307e152470e27b1395aca2d818b1ec1549f97fdc59305"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part013",
+          "size": 36001,
+          "sha256": "3958d20080a0d6559976da5d425b481582d477555e8ac77f8e679abf4222020b"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part014",
+          "size": 36001,
+          "sha256": "2bff1d73b56e4d6a2796397b8a9d0531f6cc1456940b878b4c70f058f559325c"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part015",
+          "size": 36001,
+          "sha256": "ef8a3c6999b1b772d0507722200b8b57a1f83577b0ae961e1a995b2309e37a6d"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part016",
+          "size": 36001,
+          "sha256": "35db65a0c75574dd32737f0c151ee90df791190411e9f7aa01a1d73fa9ca1785"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part017",
+          "size": 36001,
+          "sha256": "929600450a425512bdbc309ec1640f3fddf5ba126010c3ddf01f87311d944b3f"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part018",
+          "size": 36001,
+          "sha256": "2d80740f70478059b61ecd35e360005cd916d192dad457786106ec80ad13b4fe"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part019",
+          "size": 36001,
+          "sha256": "e9280c2949f1d2c66647724f527cf4ef18de5c0d43db48e5d35ab84c25884b0e"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part020",
+          "size": 12581,
+          "sha256": "b4e91bf21a3f1e2e1656bbe1b34623e0474415bea919088397b8e31e3a640e88"
+        }
+      ],
+      "outputs": [
+        {
+          "file": "normal.json",
+          "size": 4149331,
+          "sha256": "e51c2deb22c9c594844ea91dec5546ac66e8ff09783652450e90f5af980deb88"
+        },
+        {
+          "file": "optimized.json",
+          "size": 4149331,
+          "sha256": "e51c2deb22c9c594844ea91dec5546ac66e8ff09783652450e90f5af980deb88"
+        }
+      ]
+    }
+  ]
+}
