@@ -1,0 +1,1 @@
+PASS: 4032 closure subsets; exact fixed-point realization; 11+13 -> 4561 implication

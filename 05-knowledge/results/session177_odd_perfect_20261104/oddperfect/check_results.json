@@ -1,0 +1,72 @@
+{
+  "realized_support_graphs": 648,
+  "direct_sigma_checks": 2952,
+  "excluded_support": [
+    3,
+    5,
+    23,
+    31,
+    43
+  ],
+  "Euler_candidate": 5,
+  "abundancy_ceiling": "30659/14784",
+  "closed_sink": [
+    3,
+    23,
+    43
+  ],
+  "Euler_aware_edges": [
+    [
+      3,
+      23
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      5,
+      23
+    ],
+    [
+      5,
+      31
+    ],
+    [
+      5,
+      43
+    ],
+    [
+      23,
+      43
+    ],
+    [
+      31,
+      3
+    ],
+    [
+      31,
+      5
+    ],
+    [
+      31,
+      23
+    ],
+    [
+      31,
+      43
+    ],
+    [
+      43,
+      3
+    ]
+  ],
+  "realizing_exponents": {
+    "3": 10,
+    "5": 461,
+    "23": 20,
+    "31": 1154,
+    "43": 2
+  },
+  "status": "PASS; arithmetic relaxation only, not an OPN nonexistence proof"
+}
