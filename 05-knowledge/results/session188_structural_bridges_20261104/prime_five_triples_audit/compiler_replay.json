@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "compiler_mode": "g++ -std=c++17 -O0 -Wall -Wextra -Werror",
+  "only_verifier_change": "'-O3' replaced by '-O0'",
+  "same_full_record_bytes": 130076,
+  "output_sha256": "9b672ba541282918e84755c50ba03caf400ef9d4e1e0de3fb17d7e6f550349c6",
+  "source_sha256": {
+    "verify.py": "e838a7b61865357e1abb8216e1a728ef10bba338d99eb903fc3c53325580e905",
+    "verify_unoptimized.py": "06bbf62a5e54f7666873ea9c19646ba9a8735ca3bb00fe535372efdcd096757f",
+    "count.cpp": "d9501aae4f5b9e827090f0c1039882de917488b6552722f17e9ab72057e7b009"
+  }
+}
