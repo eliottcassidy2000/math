@@ -24,6 +24,7 @@ related:
   - 05-knowledge/hypotheses/HYP-9453-the-near-join-sweep-toward-chan-pak-completeness-density-of-b-sets-two-strong-realisers-for-every-attained-odd-count-at-least-15.md
   - 05-knowledge/hypotheses/HYP-9454-the-full-digit-c2-sweep-as-the-unbounded-target-selector-ready-pair-density-sparse-r1-r2-and-the-name-retention-wall.md
   - 05-knowledge/results/multiport_defect_grammar_20261103/construction/RESULT.md
+  - 01-canon/theorems/THM-1900-the-insertion-response-calculus.md
 ---
 
 # THM-4865 — the sole-exit tower is tribonacci
@@ -43,6 +44,8 @@ and `h(T_k) = h·A_k − e·C_k + B·D_k` with `A = A000213`, `C = A001590`, `D_
 (b) *Digit identity.* For a sole exit `a → r` in `T = U + a`: `B_a(T) − h(T) = (B_r(U) + h(U)) − (h(U) − e_r(U) + B_r(U)) = e_r(U)`, which is THM-4862 (b).
 
 (c) *Tribonacci partner.* The tower over one vertex has `(h, e, B) = (1, 1, 1)` and `h(T_k) = A000213(k+1)`: THM-4731 (6).
+
+(d′) *Insertion response.* THM-1900's insertion of a vertex beating exactly `P` has, for `P = {t}`, the exact `H`-response `B_t(T) − e_t(T)` (Lemma 1); THM-1900's neutrality criterion (down-sets of the condensation) is the case `B_t = e_t`, i.e. `t` a sink of its own terminal component.
 
 (d) *Near-join.* HYP-9453's `h + 2^k B(T, t)` uses the same `B`; at `k = 1` it has the value of the height-two tower.
 
