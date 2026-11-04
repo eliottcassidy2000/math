@@ -1,0 +1,462 @@
+{
+  "actual_compiled_queries": 42668,
+  "cases": [
+    {
+      "H": 69,
+      "converse_pair_queries": [
+        313,
+        245
+      ],
+      "cubic_battery": 358,
+      "full_battery": 841,
+      "n": 7,
+      "nonzero_contrast_by_degree": {
+        "1": 14,
+        "2": 42,
+        "3": 286
+      },
+      "pair_queries": [
+        343,
+        449
+      ],
+      "r": 2,
+      "state": 0
+    },
+    {
+      "H": 71,
+      "converse_pair_queries": [
+        357,
+        271
+      ],
+      "cubic_battery": 358,
+      "full_battery": 841,
+      "n": 7,
+      "nonzero_contrast_by_degree": {
+        "1": 14,
+        "2": 42,
+        "3": 294
+      },
+      "pair_queries": [
+        345,
+        457
+      ],
+      "r": 2,
+      "state": 1
+    },
+    {
+      "H": 73,
+      "converse_pair_queries": [
+        367,
+        277
+      ],
+      "cubic_battery": 358,
+      "full_battery": 841,
+      "n": 7,
+      "nonzero_contrast_by_degree": {
+        "1": 14,
+        "2": 42,
+        "3": 290
+      },
+      "pair_queries": [
+        355,
+        475
+      ],
+      "r": 2,
+      "state": 2
+    },
+    {
+      "H": 9897,
+      "converse_pair_queries": [
+        148509,
+        110585
+      ],
+      "cubic_battery": 1753,
+      "full_battery": 6241,
+      "n": 12,
+      "nonzero_contrast_by_degree": {
+        "1": 24,
+        "2": 132,
+        "3": 1568
+      },
+      "pair_queries": [
+        41763,
+        53317
+      ],
+      "r": 7,
+      "state": 0
+    },
+    {
+      "H": 9899,
+      "converse_pair_queries": [
+        152449,
+        113043
+      ],
+      "cubic_battery": 1753,
+      "full_battery": 6241,
+      "n": 12,
+      "nonzero_contrast_by_degree": {
+        "1": 24,
+        "2": 132,
+        "3": 1576
+      },
+      "pair_queries": [
+        41517,
+        52951
+      ],
+      "r": 7,
+      "state": 1
+    },
+    {
+      "H": 9901,
+      "converse_pair_queries": [
+        152707,
+        113173
+      ],
+      "cubic_battery": 1753,
+      "full_battery": 6241,
+      "n": 12,
+      "nonzero_contrast_by_degree": {
+        "1": 24,
+        "2": 132,
+        "3": 1576
+      },
+      "pair_queries": [
+        41527,
+        52969
+      ],
+      "r": 7,
+      "state": 2
+    }
+  ],
+  "five_run_controls": [
+    {
+      "query": [
+        32,
+        64
+      ],
+      "run_counts": {
+        "1": 27,
+        "2": 1046,
+        "3": 5236,
+        "4": 4896,
+        "5": 576
+      },
+      "state": 0,
+      "witness": [
+        5,
+        10,
+        6,
+        11,
+        7,
+        0,
+        4,
+        3,
+        8,
+        1,
+        2,
+        9
+      ]
+    },
+    {
+      "query": [
+        32,
+        64
+      ],
+      "run_counts": {
+        "1": 29,
+        "2": 1034,
+        "3": 5128,
+        "4": 4824,
+        "5": 576
+      },
+      "state": 1,
+      "witness": [
+        5,
+        10,
+        6,
+        11,
+        7,
+        0,
+        4,
+        3,
+        8,
+        1,
+        2,
+        9
+      ]
+    },
+    {
+      "query": [
+        32,
+        64
+      ],
+      "run_counts": {
+        "1": 31,
+        "2": 1046,
+        "3": 5140,
+        "4": 4824,
+        "5": 576
+      },
+      "state": 2,
+      "witness": [
+        5,
+        10,
+        6,
+        11,
+        7,
+        0,
+        4,
+        3,
+        8,
+        1,
+        2,
+        9
+      ]
+    }
+  ],
+  "independent_forward_queries": 24,
+  "literal_seed_queries": 3,
+  "partial_module_pairs": [
+    {
+      "F": [
+        343,
+        449
+      ],
+      "F_module_op": [
+        449,
+        343
+      ],
+      "r": 2,
+      "state": 0
+    },
+    {
+      "F": [
+        345,
+        457
+      ],
+      "F_module_op": [
+        457,
+        345
+      ],
+      "r": 2,
+      "state": 1
+    },
+    {
+      "F": [
+        355,
+        475
+      ],
+      "F_module_op": [
+        475,
+        355
+      ],
+      "r": 2,
+      "state": 2
+    },
+    {
+      "F": [
+        843,
+        1117
+      ],
+      "F_module_op": [
+        1497,
+        1117
+      ],
+      "r": 3,
+      "state": 0
+    },
+    {
+      "F": [
+        837,
+        1111
+      ],
+      "F_module_op": [
+        1497,
+        1111
+      ],
+      "r": 3,
+      "state": 1
+    },
+    {
+      "F": [
+        847,
+        1129
+      ],
+      "F_module_op": [
+        1531,
+        1129
+      ],
+      "r": 3,
+      "state": 2
+    },
+    {
+      "F": [
+        2131,
+        2797
+      ],
+      "F_module_op": [
+        5057,
+        3737
+      ],
+      "r": 4,
+      "state": 0
+    },
+    {
+      "F": [
+        2109,
+        2767
+      ],
+      "F_module_op": [
+        5017,
+        3699
+      ],
+      "r": 4,
+      "state": 1
+    },
+    {
+      "F": [
+        2119,
+        2785
+      ],
+      "F_module_op": [
+        5083,
+        3733
+      ],
+      "r": 4,
+      "state": 2
+    },
+    {
+      "F": [
+        5571,
+        7237
+      ],
+      "F_module_op": [
+        17433,
+        12841
+      ],
+      "r": 5,
+      "state": 0
+    },
+    {
+      "F": [
+        5517,
+        7159
+      ],
+      "F_module_op": [
+        17241,
+        12691
+      ],
+      "r": 5,
+      "state": 1
+    },
+    {
+      "F": [
+        5527,
+        7177
+      ],
+      "F_module_op": [
+        17371,
+        12757
+      ],
+      "r": 5,
+      "state": 2
+    },
+    {
+      "F": [
+        15043,
+        19357
+      ],
+      "F_module_op": [
+        61409,
+        45233
+      ],
+      "r": 6,
+      "state": 0
+    },
+    {
+      "F": [
+        14925,
+        19183
+      ],
+      "F_module_op": [
+        60697,
+        44715
+      ],
+      "r": 6,
+      "state": 1
+    },
+    {
+      "F": [
+        14935,
+        19201
+      ],
+      "F_module_op": [
+        60955,
+        44845
+      ],
+      "r": 6,
+      "state": 2
+    },
+    {
+      "F": [
+        41763,
+        53317
+      ],
+      "F_module_op": [
+        220857,
+        162937
+      ],
+      "r": 7,
+      "state": 0
+    },
+    {
+      "F": [
+        41517,
+        52951
+      ],
+      "F_module_op": [
+        218457,
+        161251
+      ],
+      "r": 7,
+      "state": 1
+    },
+    {
+      "F": [
+        41527,
+        52969
+      ],
+      "F_module_op": [
+        218971,
+        161509
+      ],
+      "r": 7,
+      "state": 2
+    }
+  ],
+  "partial_module_quartic": {
+    "coefficient": 2,
+    "monomial": "a1*a3*c1*c4",
+    "reversed_rows": [
+      8,
+      17,
+      19,
+      6,
+      9
+    ],
+    "rows": [
+      24,
+      17,
+      19,
+      6,
+      8
+    ]
+  },
+  "source_sha256": {
+    "check.py": "d7f9b97e2b74114b9f8a879a473d1eb199b6f2c25a88e969dc5033669282e3c3",
+    "response.cpp": "a732c73a9667d2ca67fb1abcdf85c4ea39aef91906ca4aa16d0a61930db407a9",
+    "response.py": "7a106231c28551030b1f1f7af44080f19b72fcca9fc231bf7c7b052bbfdef8b0"
+  },
+  "status": "PASS: finite named controls; all-order claims proved separately",
+  "tables_sha256": "149532bf34a8ecc38e40c3b477a687b2c1575afacd2e6756cd5b45c8a7c380e4"
+}

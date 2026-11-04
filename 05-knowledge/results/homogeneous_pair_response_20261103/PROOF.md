@@ -99,6 +99,11 @@ Thus the two query vectors cannot agree or be positive scalar multiples.
 This gives the same projective exclusion as incoming C2 through a direct
 two-query measurement.
 
+Homogeneity cannot be omitted: a directed triangle has equal calibrated
+query values at all three vertices by cyclic symmetry, despite possessing
+oriented edges. The test is not an orientation rule for arbitrary pairs
+and does not certify that a proposed pair is homogeneous.
+
 ## P3. Ambient module converse and the remaining scope
 
 Let M be a module in an arbitrary tournament T. If a,b form a homogeneous

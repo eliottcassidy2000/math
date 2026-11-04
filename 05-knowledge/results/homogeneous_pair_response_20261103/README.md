@@ -30,8 +30,19 @@ The incoming three strong seed states have
 H(Q_j[TT_r])=4*3^r+9*2^r-3+2j. Their scalar path-cover law is converse
 invariant, while the named pair test exposes reversal for every r>=2.
 Two nonuniform ports can produce five module runs; the scalar three-run
-truncation is not a full-response truncation. Integration and full named
-response evidence are recorded alongside this proof as they are completed.
+truncation is not a full-response truncation. [The integration](INTEGRATION.md)
+credits the incoming scalar and cover-sign formulas, proves the sharp
+five-run bound, and retains [complete named response polynomials](response_tables.json)
+for all three seed states at orders7 and12. Their whole-converse contrasts
+are exactly cubic; the partial-module quartic hostile is preserved separately.
+
+The [response receipt](response.json) records42,668 actual compiled queries,
+24 independent forward-DP controls and three literal word checks.
+Both engines and the complete tables match their optimized replays.
+Run `python verify.py` to check frozen hashes and source pins; `--replay`
+reruns both engines normally and under -O into a temporary directory.
+The [review](REVIEW.md) records quantifiers, failure boundaries and provenance;
+the [concept board](BOARD.md) connects the three research lanes.
 
 The twelve-vertex hidden-converse residual is therefore strong, prime and
 nonselfconverse, using the inherited finite exclusions and **C4** of the

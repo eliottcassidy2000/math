@@ -1,0 +1,32 @@
+{
+  "dependencies_lf_sha256": {
+    "01-canon/theorems/THM-4145-rooted-homogeneous-pair-expansion-two-defect-formula.md": "3f29378d1651f0da6966ca8d98526df3f94a2dfab7b5e9ba7c888df4923eada4",
+    "05-knowledge/results/session185_proof_frontiers_20261104/alternative/PROOF.md": "461ecf1b5498542fde54bee1faeaf23ce941a8a5dc942d43820dbdbc2c166063",
+    "05-knowledge/results/session185_proof_frontiers_20261104/alternative_audit/AUDIT.md": "4d5055d1a42017bce4160e3752e073490853a508fafc48d147b473ba85b7fab5",
+    "05-knowledge/results/session186_proof_frontiers_20261104/gate/PROOF.md": "34432bac7e1465f3ea0f57a69148bfbab4a411d31acad8ef60e8d32721711106",
+    "05-knowledge/results/session186_proof_frontiers_20261104/structure/PROOF.md": "346cb02dcb19d388d65d4282c6c69cc87fcf84128280da1fdd9de0678794013d",
+    "05-knowledge/results/session186_proof_frontiers_20261104/structure_review/REVIEW.md": "473b97f0f3b5f2d575fcb3fee0d9e83703786aa40d379210027aa3c774d6d740",
+    "05-knowledge/results/two_port_eight_core_20261103/algebra/PROOF.md": "8d240198038d4d8d5f0ebd69f3ad7f52c474a396b3350db769b218af2145357d",
+    "05-knowledge/results/two_port_twelve_principles_20261103/PROOF.md": "06811fe45366352f924793be7dadddacef287607a380efc92043a1066f3056c0",
+    "05-knowledge/results/two_port_twelve_principles_20261103/STRUCTURE.md": "0f6473d236b7a8102bf8b446c67744e02203b6707522ae9db88ae2ee3577a4d5"
+  },
+  "files": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "BOARD.md": "a01f2328c6070f1de90f66f2598e93690308dbfb83a19248851d5ce232e9fa52",
+    "INTEGRATION.md": "abb6e988d22571eb70f87e6ef66466e1cf8babcf25c2111eb1c522d267ca6029",
+    "PROOF.md": "ede0dafd39231fde6ae33e9140f61b70bfdfd1c64bf29767a9e56b9205f539bb",
+    "README.md": "a21931b04599148099e0cadeecaafdb6dd9aac3cb5b5b868fe063b7cbfbf9d3d",
+    "REVIEW.md": "f8e68b6e6cf2599d99076be8b6d06d2d0074fe277bfda4870d55b610714572f8",
+    "check.json": "d766e855b3f47a686e82ca4ae2ff0a2989533b2ff6ca46d485175270d7221af4",
+    "check.optimized.json": "d766e855b3f47a686e82ca4ae2ff0a2989533b2ff6ca46d485175270d7221af4",
+    "check.py": "d7f9b97e2b74114b9f8a879a473d1eb199b6f2c25a88e969dc5033669282e3c3",
+    "response.cpp": "a732c73a9667d2ca67fb1abcdf85c4ea39aef91906ca4aa16d0a61930db407a9",
+    "response.json": "97cf6d6ea3b75d4f4e50467e3adc8052ee3446354ee5b7c5c5a54c652e69651e",
+    "response.optimized.json": "97cf6d6ea3b75d4f4e50467e3adc8052ee3446354ee5b7c5c5a54c652e69651e",
+    "response.py": "7a106231c28551030b1f1f7af44080f19b72fcca9fc231bf7c7b052bbfdef8b0",
+    "response_tables.json": "149532bf34a8ecc38e40c3b477a687b2c1575afacd2e6756cd5b45c8a7c380e4",
+    "response_tables.optimized.json": "149532bf34a8ecc38e40c3b477a687b2c1575afacd2e6756cd5b45c8a7c380e4",
+    "verify.py": "bb3539e371d871453eb91e52e81a0da6df76d057fc2d186f167a629c3206605d"
+  },
+  "status": "Frozen exact pair separation and named three-state integration; no universal reconstruction claim"
+}
