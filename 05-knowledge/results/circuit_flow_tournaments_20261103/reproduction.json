@@ -1,0 +1,26 @@
+[
+  {
+    "script": "check.py",
+    "receipt": "certificate.json",
+    "sha256": "b560715f3d7d39956855f5ef99c1e35bb1a7a47a7835b21ea26d51252eb3f083",
+    "normal_optimized_identical": true
+  },
+  {
+    "script": "clocks.py",
+    "receipt": "clocks.json",
+    "sha256": "21e204c4b0cd7928bc4a1811d9b1c683fb5fdb4353407a6be377aaa4f7bc42aa",
+    "normal_optimized_identical": true
+  },
+  {
+    "script": "native_reset.py",
+    "receipt": "native_reset.json",
+    "sha256": "da3514967d0a856fdb830cf51b21f6924f3958ad86f19b036d73abda4a3e5955",
+    "normal_optimized_identical": true
+  },
+  {
+    "script": "audit.py",
+    "receipt": "audit.json",
+    "sha256": "0a612c8b0f55b9da6fcab5c79d4b8441c8ecb010955c68ec998619e022357055",
+    "normal_optimized_identical": true
+  }
+]

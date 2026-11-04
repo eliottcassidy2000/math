@@ -1,0 +1,224 @@
+{
+  "common_H": 611,
+  "deleted_old_names": [],
+  "helper_births": 6,
+  "helper_deletions": 6,
+  "native_events": 4,
+  "peak_order": 12,
+  "reader_counts": [
+    88693,
+    86317
+  ],
+  "reader_word": "L",
+  "root_name": "source:0",
+  "scope": "root star and all old names preserved; root response phases may change; helper intermediates not claimed strong; not a rooted-ready ternary closure",
+  "source": {
+    "birth_clock": 8,
+    "birth_cuts": [
+      0,
+      0,
+      2,
+      3,
+      0,
+      0,
+      0,
+      63
+    ],
+    "names": [
+      "source:0",
+      "gate:0:1",
+      "gate:0:2",
+      "gate:0:3",
+      "gate:0:4",
+      "gate:1:1",
+      "gate:1:2",
+      "gate:1:3",
+      "gate:1:4"
+    ],
+    "native_complement_clock": 0,
+    "rows": [
+      272,
+      281,
+      259,
+      261,
+      268,
+      287,
+      63,
+      127,
+      192
+    ],
+    "source_names_retained": [
+      "source:0"
+    ],
+    "word_inner_to_outer": "UL"
+  },
+  "status": "FINITE_EXACT new specialization of inherited BC2 compiler",
+  "target": {
+    "birth_clock": 8,
+    "birth_cuts": [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0,
+      32,
+      63
+    ],
+    "names": [
+      "source:0",
+      "gate:0:1",
+      "gate:0:2",
+      "gate:0:3",
+      "gate:0:4",
+      "gate:1:1",
+      "gate:1:2",
+      "gate:1:3",
+      "gate:1:4"
+    ],
+    "native_complement_clock": 0,
+    "rows": [
+      272,
+      273,
+      259,
+      263,
+      268,
+      415,
+      63,
+      95,
+      192
+    ],
+    "source_names_retained": [
+      "source:0"
+    ],
+    "word_inner_to_outer": "LU"
+  },
+  "trace": [
+    {
+      "arc": [
+        "gate:0:1",
+        "gate:0:3"
+      ],
+      "completed_H": 589,
+      "completed_rows": [
+        272,
+        273,
+        259,
+        263,
+        268,
+        287,
+        63,
+        127,
+        192
+      ],
+      "completed_strong": true,
+      "cuts": [
+        8,
+        1023,
+        2045
+      ],
+      "helper_names": [
+        "repair0:z",
+        "repair0:sink",
+        "repair0:w"
+      ],
+      "paths": [
+        [
+          1,
+          3,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          2,
+          0,
+          10,
+          11
+        ],
+        [
+          1,
+          11,
+          3,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          2,
+          0,
+          10
+        ]
+      ],
+      "root_frame": [
+        2,
+        10
+      ]
+    },
+    {
+      "arc": [
+        "gate:1:3",
+        "gate:1:1"
+      ],
+      "completed_H": 611,
+      "completed_rows": [
+        272,
+        273,
+        259,
+        263,
+        268,
+        415,
+        63,
+        95,
+        192
+      ],
+      "completed_strong": true,
+      "cuts": [
+        32,
+        1023,
+        1919
+      ],
+      "helper_names": [
+        "repair1:z",
+        "repair1:sink",
+        "repair1:w"
+      ],
+      "paths": [
+        [
+          7,
+          5,
+          9,
+          8,
+          6,
+          4,
+          3,
+          2,
+          1,
+          0,
+          10,
+          11
+        ],
+        [
+          7,
+          11,
+          5,
+          9,
+          8,
+          6,
+          4,
+          3,
+          2,
+          1,
+          0,
+          10
+        ]
+      ],
+      "root_frame": [
+        1,
+        10
+      ]
+    }
+  ]
+}
