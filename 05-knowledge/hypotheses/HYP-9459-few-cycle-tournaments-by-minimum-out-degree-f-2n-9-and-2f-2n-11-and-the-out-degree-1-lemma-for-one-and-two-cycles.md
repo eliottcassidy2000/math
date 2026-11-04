@@ -2,7 +2,8 @@
 id: HYP-9459
 title: "Tournaments with exactly k Hamiltonian cycles, split by whether a vertex of out-degree 1 exists (all tournaments of orders 5-10, nauty gentourng + C subset DP): (1) every tournament of order >= 6 with exactly one or exactly two Hamiltonian cycles has a vertex of out-degree 1 (so the sole-exit bijection of THM-4862 (b) reaches all of them; the regular tournament RT5 is the only exception, at order 5); (2) the tournaments with exactly three Hamiltonian cycles and no vertex of out-degree 1 are counted by F(2n - 9): 2, 5, 13, 34, 89 at orders 6-10; (3) those with exactly four and no vertex of out-degree 1 by 2 F(2n - 11): 4, 10, 26, 68 at orders 7-10 (3 at order 6); (4) the full columns k = 3, 4, 5 (1, 11, 38, 124, 390, 1193; 6, 25, 91, 315, 1049; 5, 38, 138, 466, 1500 at orders 5-10) are not in OEIS; together with Garey's F(2n - 6) (k = 1) and the two-cycle law (n - 2) F(2n - 9) - L(2n - 10) (k = 2, HYP-9454 (5)) this is the beginning of a spectrum of few-cycle tournaments by minimum out-degree"
 status: >
-  OPEN (klein-2026-11-04). (1) is FINITE-EXACT through order 10 (9,733,056 tournaments) and conjectured for all n >= 6;
+  OPEN (klein-2026-11-04). (1) is KNOWN for k = 1 (Shelor 1977; THM-4867, opus-2026-11-04-S74) and for k = 2
+  FINITE-EXACT through order 10 (9,733,056 tournaments), conjectured for all n >= 6;
   (2) and (3) are conjectures from five and four exact terms; (4) is a record. The sweep packet's README section 8 holds
   the table (k <= 24, orders 5-10) and the scripts; the two-cycle structure (segment swap; deleting either swapped
   segment leaves a unique-cycle tournament) is there as well. No proof route beyond the gluing picture of the two-cycle
@@ -27,7 +28,7 @@ Let `t_k(n)` be the number of tournaments of order `n` with exactly `k` Hamilton
 | 4 | 0, 6, 25, 91, 315, 1049 | 0, 3, 4, 10, 26, 68 (`2F(2n − 11)` for `n ≥ 7`?) |
 | 5 | 0, 5, 38, 138, 466, 1500 | 0, 4, 4, 9, 23, 60 |
 
-**Conjectures.** (1) `u_1(n) = u_2(n) = 0` for `n ≥ 6`. (2) `u_3(n) = F(2n − 9)` for `n ≥ 6`. (3) `u_4(n) = 2F(2n − 11)` for `n ≥ 7`.
+**Conjectures.** (1) `u_1(n) = u_2(n) = 0` for `n ≥ 6`. For `k = 1` this is KNOWN: every uniquely Hamiltonian tournament has a vertex of out-degree 1 (Shelor 1977, recorded with its proof the same day by opus-2026-11-04-S74 as THM-4867, whose extension lemma — cyclic-interval out-neighbourhoods, Moon-1966 deletion — is the block lemma of the sweep packet's PROOFS.md §6 derived independently); the claim here is the `k = 2` half. (2) `u_3(n) = F(2n − 9)` for `n ≥ 6`. (3) `u_4(n) = 2F(2n − 11)` for `n ≥ 7`.
 
 **Why it matters here.** The sole-exit bijection `(T, a) ↦ Φ(T, a)` of THM-4862 (b) identifies the digit-`k` ready classes with the `k`-cycle tournaments *having* an out-degree-1 vertex; (1) says the identification is onto for `k ≤ 2`, which is why the digit-2 class counts are the two-cycle counts. For `k = 3` the out-degree-1-free part is a Fibonacci-sized remainder: the digit-3 spectrum `R₃` sees `t_3 − u_3` of the three-cycle tournaments. Both the `u_3` law and the two-cycle law point at a common structure of few-cycle tournaments (near the all-backward cycle, with a bounded number of forward chords in nested positions) that would also give Douglas's characterisation in chord language (sweep packet README §8, end-insertion and suffix rules).
 
