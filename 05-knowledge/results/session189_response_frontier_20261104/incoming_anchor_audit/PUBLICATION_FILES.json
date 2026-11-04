@@ -1,0 +1,20 @@
+{
+  "files": [
+    "INCOMING_PROOF.md",
+    "INCOMING_PREREGISTRATION.md",
+    "REVIEW.md",
+    "audit.py",
+    "q8_checks.py",
+    "physical_count.cpp",
+    "controls.normal.json",
+    "controls.optimized.json",
+    "q8_controls.json",
+    "optimization_match.json",
+    "q8_physical_input.txt",
+    "normal.stdout",
+    "optimized.stdout",
+    "q8.stdout",
+    "IMPORT_NOTES.md",
+    "SHA256SUMS"
+  ]
+}

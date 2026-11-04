@@ -1,0 +1,41 @@
+{
+  "format": "lossless-compressed-base64-parts-v2",
+  "archives": [
+    {
+      "path": "incoming_anchor_audit/controls.normal.json",
+      "bytes": 154006,
+      "sha256": "80135f33dec837b3f80b6ef986a32f171e57d61972fea77d3352a8b6c5ac27ee",
+      "git_blob_sha": "7393cf5be558731af3fc0b077c0e2d1c64ce7185",
+      "compression": "xz",
+      "compressed_bytes": 8480,
+      "compressed_sha256": "ebc86d799135af87c68ed9e36fbfc06f2edf6484045d9668d75ec4c426663efb",
+      "parts": [
+        "incoming_anchor_audit/controls.normal.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "incoming_anchor_audit/controls.optimized.json",
+      "bytes": 154006,
+      "sha256": "d823e0e9c980689d73bd523500c67708df93809b6eedac2d07360a916f9d8121",
+      "git_blob_sha": "ac5481a5cdfe5588b7e85f4c98d432ef88883fcd",
+      "compression": "xz",
+      "compressed_bytes": 8480,
+      "compressed_sha256": "82bea20492bd354455c50a29798c19fcb644d32a409de479187463ebf3f2bbd8",
+      "parts": [
+        "incoming_anchor_audit/controls.optimized.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "anchor_scope_audit/counts.json",
+      "bytes": 110005,
+      "sha256": "962cfa125259e1a6d67cd69c3279c5cde5c33838fab13c4d71fccc1a6793c5cc",
+      "git_blob_sha": "1f9d968ef670b76f6cf79ace5d6244e5d706a1cf",
+      "compression": "xz",
+      "compressed_bytes": 4116,
+      "compressed_sha256": "487f2e722e2ff7226b1378e7264b461ac6a7085826f65f5ff7825dc988e73bf2",
+      "parts": [
+        "anchor_scope_audit/counts.json.xz.b64.parts/00001.txt"
+      ]
+    }
+  ]
+}

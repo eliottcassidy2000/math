@@ -1,0 +1,14 @@
+Q8 vertex 0 passed
+Q8 vertex 1 passed
+Q8 vertex 2 passed
+Q8 vertex 3 passed
+Q8 vertex 4 passed
+Q8 vertex 5 passed
+Q8 vertex 6 passed
+Q8 vertex 7 passed
+actual local 2 unchanged 2117386219 1398623265 718762954
+actual ambient 2 unchanged 129428799899 88692826785 40735973114
+actual local 2 reversed 260233793 1453623587 -1193389794
+actual ambient 2 reversed 26292380785 89270782267 -62978401482
+actual local 3 unchanged 5624985995 48963414961 -43338428966
+actual local 3 reversed 869584029 6949554927 -6079970898

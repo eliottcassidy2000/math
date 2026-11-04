@@ -1,0 +1,14 @@
+weighted 3 192 0.0
+weighted 4 4096 0.01
+weighted 5 163840 0.89
+kernel 2 32
+kernel 3 384
+kernel 4 8192
+kernel 5 327680
+physical singleton 64 [15, 1, 729, 1779]
+physical unchanged_TT3 256 [25, 6, 2715, 2149]
+physical reversed_TT3 256 [1, 0, 485, 743]
+physical different_TT4_shared_end 256 [49, 14, 11831, 7841]
+physical unchanged_TT2 256 [0, 0, 137, 159]
+physical nontransitive_common_source 256 [0, 0, 483, 393]
+{"status": "PASS", "seconds": 57.362, "weighted": {"3": 192, "4": 4096, "5": 163840}, "kernel": {"exhaustive_kernel_comparisons": {"2": 32, "3": 384, "4": 8192, "5": 327680}}, "physical_query_comparisons": 1344, "ambient": [{"name": "singleton", "source": [142, 252, 248, 240, 161, 193, 145, 256, 127], "target": [240, 133, 137, 131, 238, 206, 142, 256, 127], "a": 271, "c": 257, "H_source": 17829, "H_target": 33855, "difference": -16026}, {"name": "unchanged_TT3", "source": [158, 156, 152, 240, 224, 199, 135, 256, 127], "target": [230, 228, 224, 135, 143, 216, 152, 256, 127], "a": 281, "c": 262, "H_source": 44727, "H_target": 37437, "difference": 7290}, {"name": "reversed_TT3", "source": [158, 156, 152, 240, 224, 199, 135, 256, 127], "target": [224, 225, 227, 135, 143, 216, 152, 256, 127], "a": 257, "c": 256, "H_source": 12705, "H_target": 16911, "difference": -4206}, {"name": "different_TT4_shared_end", "source": [318, 316, 312, 304, 480, 448, 399, 271, 512, 255], "target": [462, 456, 458, 448, 303, 271, 432, 304, 512, 255], "a": 561, "c": 526, "H_source": 225103, "H_target": 163441, "difference": 61662}]}
