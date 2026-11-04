@@ -1,0 +1,34 @@
+{
+  "COMPARISON.md": {
+    "bytes": 3875,
+    "sha256": "0090c528ed0c5c21c15dd4964028388d0d601d66214a49a53af0c5d45b4d2204"
+  },
+  "INCOMING.json": {
+    "bytes": 587,
+    "sha256": "4e7474cc46f16f47128ad4697d1c7b0964a513fdf7b149cdcea07c78ff0a1257"
+  },
+  "REPAIR.md": {
+    "bytes": 6230,
+    "sha256": "3b36463bc817479d70c5176bf5a81ae076864f0769c068370c25052e833afa9f"
+  },
+  "controls.json": {
+    "bytes": 1658,
+    "sha256": "fa0e09b1c53f61c7d7f9be82eb7cc88a675bae9c6c7504de39001098c1c75adb"
+  },
+  "normal.stdout": {
+    "bytes": 1175,
+    "sha256": "80b91be448a47bdcb52b1a4de25400a8e2fce0f3af7bbebd998f6ef27a12d88d"
+  },
+  "optimized.stdout": {
+    "bytes": 1175,
+    "sha256": "80b91be448a47bdcb52b1a4de25400a8e2fce0f3af7bbebd998f6ef27a12d88d"
+  },
+  "receipt.json": {
+    "bytes": 1273,
+    "sha256": "b921c41cd6447ddee4d0e99db34ecda02c7dc337011dcdbc0e8f4bda31a33b57"
+  },
+  "verify.py": {
+    "bytes": 5578,
+    "sha256": "7c01fd16f86795c1a601ff83c843e198f33a581adcff0bd757a76c858e0b3512"
+  }
+}

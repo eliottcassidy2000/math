@@ -1,0 +1,110 @@
+{
+  "C2_child": {
+    "H": 38635,
+    "order": 14,
+    "rows": [
+      8704,
+      12305,
+      12299,
+      12307,
+      14085,
+      12319,
+      12351,
+      12415,
+      12527,
+      13806,
+      14831,
+      13311,
+      1,
+      4096
+    ],
+    "strong": true
+  },
+  "boundary_cycle_three": {
+    "Hamilton_cycles": 3,
+    "admissible_exit_count": 0,
+    "rows": [
+      14,
+      20,
+      24,
+      18,
+      1
+    ]
+  },
+  "incoming_commit": "a92e0b49befb6ba1ac3fd4f42cca5130db76033b",
+  "marked_bijection_counterexample": {
+    "Hamilton_cycles": 1,
+    "Phi_inverse_rows": [
+      14,
+      4,
+      0,
+      6
+    ],
+    "Y_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "Y_strong": true,
+    "canonical_admissible_exit": 0,
+    "canonical_ready_inverse_rows": [
+      2,
+      8,
+      3,
+      5
+    ],
+    "deleted_core_strong": false,
+    "inverse_strong": false,
+    "root": 2,
+    "sole_exit": 1
+  },
+  "scope": "No ready-census completeness, density limit, all-order heredity, or order15 strong digit2 target is certified.",
+  "three_prefix_padding": {
+    "H": 12877,
+    "a": 3,
+    "digit": 2,
+    "order": 15,
+    "root": 12,
+    "rows": [
+      32766,
+      32764,
+      32760,
+      4096,
+      136,
+      88,
+      152,
+      14376,
+      248,
+      504,
+      1016,
+      1912,
+      12144,
+      20344,
+      8184
+    ],
+    "strong": false
+  },
+  "verified_witness": {
+    "H": 12877,
+    "a": 0,
+    "digit": 2,
+    "order": 12,
+    "root": 9,
+    "rows": [
+      512,
+      17,
+      11,
+      19,
+      1797,
+      31,
+      63,
+      127,
+      239,
+      1518,
+      2543,
+      1023
+    ],
+    "strong": true
+  }
+}
