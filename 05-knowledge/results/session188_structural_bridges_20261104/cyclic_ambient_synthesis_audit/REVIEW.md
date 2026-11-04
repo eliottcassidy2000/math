@@ -1,0 +1,17 @@
+# Independent review: complete cyclic ambient and root-family synthesis
+
+PASS. Frozen proof396a8876d98a7900a7b76797ea369d211583b744c43f01d80b498f7a09829f3e and all component dependencies are pinned in the paired receipts. No correction was needed.
+
+The three branches are disjoint and exhaustive:61 singleton-containing five-type triples;63 nontrivial triples outside EEE; and the all-even-at-least-four EEE domain. The singleton branch has a residue-two Hamilton query in each complete canonical row. Same-order universal cover residues modulo4 make every higher coordinate difference zero. The other branches explicitly use their separately certified all-cover modulo8 or modulo16 identities, including the odd-order correction. A nonzero scalar gap alone is never treated as an ambient theorem.
+
+Both ports have the unchanged root incidence to every exterior name, so the augmented core is a common module with the same collapsed rooted ambient. Its first run coefficient is the odd Hamilton count of that quotient. This proves the respective residues2,4,8 in their stated moduli and retains arbitrary unequal child orders and profiles.
+
+The source-relative original-module theorem uses complete child-profile monotonicity, not only scalar equality. Core converse-complement duality exchanges the entire baseline augmented profiles while the exterior bits stay fixed. The baseline-negative member therefore works for every allowed profile-increased target in that fixed ambient. Its sign may depend on the ambient. The theorem does not assert one predetermined sign across all ambients or pairwise injectivity of arbitrary internal orbit outputs.
+
+For the highest-node corollary, the inherited scalar-equality theorem supplies equality on the actual physical child sets. Other disjoint highest nodes remain modules and are uniform to both lifted ports, so they can be restored by equal q profiles without changing the query count. Changed descendants inside the selected C3 node can likewise be restored because its core query is child-uniform. The remaining baseline C3 converse contradicts the new ambient theorem. The complete four-name module check excludes a missing prime order4 case. Thus the prime-order-at-least5 residual, and the all-C3-prime-tree original-action corollary, have the stated scope.
+
+The independent checker reconstructs all61 canonical physical queries and their complete first-three profiles; all larger-child type normalizations and ambient incidences; all128 original-module families, profile increases and negative-dual choices; and the complete strong-module tree and two genuine highest changed nodes63 and448 in the restoration control. It independently recovers every retained physical value through409 distinct profile graphs using predecessor Hamilton DP and ordered subset convolution. Full exact values are retained. There is no hash-only vector comparison.
+
+Normal and optimized audit receipts agree byte-for-byte. The audit reuses only independently written graph/profile helpers from the separately retained even_mod16_audit packet, with their exact hashes recorded; it imports no producer code. All checks use explicit exceptions. The existing C++ compiler is used without installation.
+
+Run `python audit.py > normal.json` and `python -O audit.py > optimized.json`, then compare. Audit allowlist: REVIEW.md, audit.py, count.cpp, normal.json, optimized.json, SHA256SUMS. The pinned sibling independent helpers are required for replay.

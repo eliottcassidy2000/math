@@ -1,0 +1,175 @@
+{
+  "checker_sha256": "e50b23ccc8694e5210c005d1cac9a8b8d1897e59d068adce63dff1371f6f7dd1",
+  "complete_outputs": [
+    {
+      "bytes": 85559,
+      "file": "normal.json",
+      "group": 0,
+      "sha256": "de253baeb4a216d229a57807bac8c884c915855f3d41d544e77ee6a9fa3eccef"
+    },
+    {
+      "bytes": 85559,
+      "file": "optimized.json",
+      "group": 0,
+      "sha256": "de253baeb4a216d229a57807bac8c884c915855f3d41d544e77ee6a9fa3eccef"
+    }
+  ],
+  "complete_raw_bytes": 171118,
+  "groups": 1,
+  "isolated_controls": [
+    {
+      "mode": "fresh",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "fresh",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": true,
+      "passed": true
+    }
+  ],
+  "package": "cyclic_ambient_synthesis_audit",
+  "package_sha256": {
+    "REASSEMBLY.json": "f568c99985c9caef71721bcc95138d541a74c51528aedea3de4ada3de51d2cfb",
+    "REASSEMBLY.md": "2cceb1d807b9cf87a193405cf9a21975afe87ea304a6abe1051038d426c2ad19",
+    "full_records_00.json.gz.b64.part000": "888eabfa238a96abb244b493b6e81015568488ccb18699f56e257789f3a73343",
+    "reassemble.py": "fb72f3a453547f1e55e1f9b679397b502a8cdc3ed447628fd1df1d785d53f58c"
+  },
+  "parts": 1,
+  "reassembler_normalized_ast_sha256": "3f640f8fd33dec4ce19c1d81e92f03c21bbac47452af6382f5cb942c5ee88d14",
+  "status": "PASS",
+  "validated_existing_manifests": [
+    {
+      "file": "REVIEW.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "77e8202148d047848df1f6ecbce359dc381f5cb6953012b3056478c0cd03c01e"
+    },
+    {
+      "file": "audit.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "0f9aa7cb3b0cca36081c0eb90d25edfb21e605de9e87ed42fad5acb7da31cb6a"
+    },
+    {
+      "file": "count.cpp",
+      "manifest": "SHA256SUMS",
+      "sha256": "3d1a41f18cb6f767b480558775d64dfe685166c6acd16269d340d25a3c475e49"
+    },
+    {
+      "file": "normal.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "de253baeb4a216d229a57807bac8c884c915855f3d41d544e77ee6a9fa3eccef"
+    },
+    {
+      "file": "optimized.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "de253baeb4a216d229a57807bac8c884c915855f3d41d544e77ee6a9fa3eccef"
+    }
+  ],
+  "validated_mathematical_receipt_pins": {
+    "cyclic_ambient_synthesis/PROOF.md": "396a8876d98a7900a7b76797ea369d211583b744c43f01d80b498f7a09829f3e",
+    "cyclic_ambient_synthesis/normal.json": "e6116adaf3f31444245f24abfcb4107b28af59ee4c0983b0aa41038c9bb84d16",
+    "cyclic_ambient_synthesis/optimized.json": "e6116adaf3f31444245f24abfcb4107b28af59ee4c0983b0aa41038c9bb84d16",
+    "cyclic_ambient_synthesis/physical.cpp": "4d980994dfafa599ddb065768ce34fdf54abacc936a9fb89e177834e38b3152c",
+    "cyclic_ambient_synthesis/verify.py": "b3c341501408c3946b6113fbac94e1654f6a8d7cea8a85a841f6be3f705c2e92"
+  }
+}
