@@ -1,0 +1,153 @@
+{
+  "action": [
+    4,
+    5
+  ],
+  "all_clock_output_H_difference": "80*2^clock-20",
+  "output_defect_difference": 30,
+  "records": [
+    {
+      "after_rows": [
+        66,
+        68,
+        121,
+        99,
+        75,
+        83,
+        0
+      ],
+      "after_sigma": [
+        27,
+        576,
+        349,
+        223,
+        114,
+        27,
+        9
+      ],
+      "before_rows": [
+        66,
+        68,
+        121,
+        99,
+        107,
+        67,
+        0
+      ],
+      "before_sigma": [
+        17,
+        448,
+        259,
+        217,
+        112,
+        17,
+        9
+      ],
+      "clocks": [
+        {
+          "before_after": [
+            {
+              "F_root": 535,
+              "H": 423,
+              "defect": 112
+            },
+            {
+              "F_root": 725,
+              "H": 611,
+              "defect": 114
+            }
+          ],
+          "clock": 1
+        },
+        {
+          "before_after": [
+            {
+              "F_root": 1053,
+              "H": 941,
+              "defect": 112
+            },
+            {
+              "F_root": 1423,
+              "H": 1309,
+              "defect": 114
+            }
+          ],
+          "clock": 2
+        }
+      ],
+      "ports": 84
+    },
+    {
+      "after_rows": [
+        66,
+        68,
+        121,
+        67,
+        75,
+        91,
+        0
+      ],
+      "after_sigma": [
+        17,
+        448,
+        269,
+        167,
+        84,
+        17,
+        5
+      ],
+      "before_rows": [
+        66,
+        68,
+        121,
+        67,
+        107,
+        75,
+        0
+      ],
+      "before_sigma": [
+        17,
+        448,
+        259,
+        217,
+        112,
+        17,
+        9
+      ],
+      "clocks": [
+        {
+          "before_after": [
+            {
+              "F_root": 535,
+              "H": 423,
+              "defect": 112
+            },
+            {
+              "F_root": 555,
+              "H": 471,
+              "defect": 84
+            }
+          ],
+          "clock": 1
+        },
+        {
+          "before_after": [
+            {
+              "F_root": 1053,
+              "H": 941,
+              "defect": 112
+            },
+            {
+              "F_root": 1093,
+              "H": 1009,
+              "defect": 84
+            }
+          ],
+          "clock": 2
+        }
+      ],
+      "ports": 84
+    }
+  ],
+  "scope": "FINITE-EXACT explicit hostile; proves seven-coordinate quotient does not determine named flip transport"
+}

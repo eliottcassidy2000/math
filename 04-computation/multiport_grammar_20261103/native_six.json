@@ -1,0 +1,7703 @@
+{
+  "always_active_gates": 1521,
+  "bulk_compressed_compiler_patterns": [
+    {
+      "case": "append",
+      "first_native_outside_rows": [
+        388,
+        137,
+        130,
+        149,
+        39,
+        207,
+        287,
+        80,
+        190
+      ],
+      "guards": [
+        [
+          "s0",
+          "s2",
+          "r",
+          "PREFIX",
+          "s1",
+          "s3",
+          "s4",
+          "s5",
+          "s6",
+          "helper"
+        ],
+        [
+          "s0",
+          "helper",
+          "s2",
+          "r",
+          "PREFIX",
+          "s1",
+          "s3",
+          "s4",
+          "s5",
+          "s6"
+        ]
+      ],
+      "helper_beats_prefix": false,
+      "helper_outside_out_names": [
+        "s0"
+      ],
+      "inverse": false
+    },
+    {
+      "case": "append",
+      "first_native_outside_rows": [
+        134,
+        132,
+        16,
+        391,
+        43,
+        207,
+        287,
+        84,
+        183
+      ],
+      "guards": [
+        [
+          "r",
+          "PREFIX",
+          "s3",
+          "helper",
+          "s0",
+          "s1",
+          "s2",
+          "s4",
+          "s5",
+          "s6"
+        ],
+        [
+          "r",
+          "PREFIX",
+          "s3",
+          "s0",
+          "s1",
+          "s2",
+          "s4",
+          "s5",
+          "s6",
+          "helper"
+        ]
+      ],
+      "helper_beats_prefix": false,
+      "helper_outside_out_names": [
+        "s0",
+        "s6"
+      ],
+      "inverse": true
+    },
+    {
+      "case": "append",
+      "first_native_outside_rows": [
+        412,
+        133,
+        8,
+        162,
+        142,
+        215,
+        287,
+        68,
+        190
+      ],
+      "guards": [
+        [
+          "s0",
+          "s4",
+          "r",
+          "PREFIX",
+          "s1",
+          "s2",
+          "s3",
+          "s5",
+          "s6",
+          "helper"
+        ],
+        [
+          "s0",
+          "helper",
+          "s4",
+          "r",
+          "PREFIX",
+          "s1",
+          "s2",
+          "s3",
+          "s5",
+          "s6"
+        ]
+      ],
+      "helper_beats_prefix": false,
+      "helper_outside_out_names": [
+        "s0"
+      ],
+      "inverse": false
+    },
+    {
+      "case": "append",
+      "first_native_outside_rows": [
+        158,
+        132,
+        8,
+        146,
+        70,
+        415,
+        303,
+        84,
+        159
+      ],
+      "guards": [
+        [
+          "r",
+          "PREFIX",
+          "s5",
+          "helper",
+          "s0",
+          "s1",
+          "s2",
+          "s3",
+          "s4",
+          "s6"
+        ],
+        [
+          "r",
+          "PREFIX",
+          "s5",
+          "s0",
+          "s1",
+          "s2",
+          "s3",
+          "s4",
+          "s6",
+          "helper"
+        ]
+      ],
+      "helper_beats_prefix": false,
+      "helper_outside_out_names": [
+        "s0",
+        "s6"
+      ],
+      "inverse": true
+    },
+    {
+      "case": "append",
+      "first_native_outside_rows": [
+        220,
+        133,
+        16,
+        390,
+        42,
+        143,
+        318,
+        84,
+        183
+      ],
+      "guards": [
+        [
+          "r",
+          "PREFIX",
+          "s3",
+          "helper",
+          "s1",
+          "s2",
+          "s4",
+          "s5",
+          "s0",
+          "s6"
+        ],
+        [
+          "r",
+          "PREFIX",
+          "s3",
+          "s1",
+          "s2",
+          "s4",
+          "s5",
+          "s0",
+          "s6",
+          "helper"
+        ]
+      ],
+      "helper_beats_prefix": false,
+      "helper_outside_out_names": [
+        "s1",
+        "s6"
+      ],
+      "inverse": true
+    },
+    {
+      "case": "append",
+      "first_native_outside_rows": [
+        220,
+        409,
+        10,
+        160,
+        140,
+        151,
+        318,
+        68,
+        189
+      ],
+      "guards": [
+        [
+          "s1",
+          "s4",
+          "r",
+          "PREFIX",
+          "s2",
+          "s3",
+          "s5",
+          "s0",
+          "s6",
+          "helper"
+        ],
+        [
+          "s1",
+          "helper",
+          "s4",
+          "r",
+          "PREFIX",
+          "s2",
+          "s3",
+          "s5",
+          "s0",
+          "s6"
+        ]
+      ],
+      "helper_beats_prefix": false,
+      "helper_outside_out_names": [
+        "s1"
+      ],
+      "inverse": false
+    },
+    {
+      "case": "append",
+      "first_native_outside_rows": [
+        236,
+        157,
+        8,
+        144,
+        5,
+        414,
+        318,
+        84,
+        159
+      ],
+      "guards": [
+        [
+          "r",
+          "PREFIX",
+          "s5",
+          "helper",
+          "s1",
+          "s2",
+          "s3",
+          "s4",
+          "s0",
+          "s6"
+        ],
+        [
+          "r",
+          "PREFIX",
+          "s5",
+          "s1",
+          "s2",
+          "s3",
+          "s4",
+          "s0",
+          "s6",
+          "helper"
+        ]
+      ],
+      "helper_beats_prefix": false,
+      "helper_outside_out_names": [
+        "s1",
+        "s6"
+      ],
+      "inverse": true
+    },
+    {
+      "case": "append",
+      "first_native_outside_rows": [
+        158,
+        248,
+        34,
+        404,
+        132,
+        153,
+        317,
+        68,
+        183
+      ],
+      "guards": [
+        [
+          "s3",
+          "s4",
+          "r",
+          "PREFIX",
+          "s2",
+          "s5",
+          "s0",
+          "s1",
+          "s6",
+          "helper"
+        ],
+        [
+          "s3",
+          "helper",
+          "s4",
+          "r",
+          "PREFIX",
+          "s2",
+          "s5",
+          "s0",
+          "s1",
+          "s6"
+        ]
+      ],
+      "helper_beats_prefix": false,
+      "helper_outside_out_names": [
+        "s3"
+      ],
+      "inverse": false
+    },
+    {
+      "case": "append",
+      "first_native_outside_rows": [
+        158,
+        248,
+        18,
+        420,
+        8,
+        149,
+        317,
+        84,
+        183
+      ],
+      "guards": [
+        [
+          "r",
+          "PREFIX",
+          "s2",
+          "s4",
+          "s3",
+          "s5",
+          "s0",
+          "s1",
+          "s6",
+          "helper"
+        ],
+        [
+          "r",
+          "PREFIX",
+          "s2",
+          "s4",
+          "s3",
+          "helper",
+          "s5",
+          "s0",
+          "s1",
+          "s6"
+        ]
+      ],
+      "helper_beats_prefix": false,
+      "helper_outside_out_names": [
+        "s3"
+      ],
+      "inverse": false
+    },
+    {
+      "case": "append",
+      "first_native_outside_rows": [
+        182,
+        248,
+        10,
+        177,
+        132,
+        404,
+        317,
+        68,
+        159
+      ],
+      "guards": [
+        [
+          "s5",
+          "helper",
+          "s4",
+          "r",
+          "PREFIX",
+          "s2",
+          "s3",
+          "s0",
+          "s1",
+          "s6"
+        ],
+        [
+          "s5",
+          "s4",
+          "r",
+          "PREFIX",
+          "s2",
+          "s3",
+          "s0",
+          "s1",
+          "s6",
+          "helper"
+        ]
+      ],
+      "helper_beats_prefix": false,
+      "helper_outside_out_names": [
+        "s4",
+        "s6"
+      ],
+      "inverse": true
+    },
+    {
+      "case": "append",
+      "first_native_outside_rows": [
+        182,
+        248,
+        386,
+        165,
+        12,
+        148,
+        317,
+        80,
+        187
+      ],
+      "guards": [
+        [
+          "s2",
+          "r",
+          "PREFIX",
+          "s5",
+          "s4",
+          "s3",
+          "s0",
+          "s1",
+          "s6",
+          "helper"
+        ],
+        [
+          "s2",
+          "helper",
+          "r",
+          "PREFIX",
+          "s5",
+          "s4",
+          "s3",
+          "s0",
+          "s1",
+          "s6"
+        ]
+      ],
+      "helper_beats_prefix": false,
+      "helper_outside_out_names": [
+        "s2"
+      ],
+      "inverse": false
+    }
+  ],
+  "bulk_graph_domain": "integers t>=3; two separate finite patches at t=1,2",
+  "cases": [
+    {
+      "case": "finite_patch",
+      "clock": 1,
+      "completed_adjacency_root_observers": [
+        {
+          "F_root": 43,
+          "H": 31,
+          "defect": 12
+        },
+        {
+          "F_root": 63,
+          "H": 49,
+          "defect": 14
+        },
+        {
+          "F_root": 95,
+          "H": 77,
+          "defect": 18
+        },
+        {
+          "F_root": 69,
+          "H": 49,
+          "defect": 20
+        },
+        {
+          "F_root": 75,
+          "H": 51,
+          "defect": 24
+        },
+        {
+          "F_root": 103,
+          "H": 65,
+          "defect": 38
+        },
+        {
+          "F_root": 141,
+          "H": 97,
+          "defect": 44
+        },
+        {
+          "F_root": 171,
+          "H": 123,
+          "defect": 48
+        },
+        {
+          "F_root": 133,
+          "H": 111,
+          "defect": 22
+        },
+        {
+          "F_root": 123,
+          "H": 97,
+          "defect": 26
+        }
+      ],
+      "completed_adjacency_strongness": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "helper_deletions": 9,
+      "names": [
+        "p0",
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "r"
+      ],
+      "native_complements": 18,
+      "native_stage_strongness": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "peak_order": 8,
+      "permanent_births": 0,
+      "program": [
+        {
+          "after_first_rows": [
+            4,
+            137,
+            82,
+            69,
+            107,
+            143,
+            35,
+            93
+          ],
+          "after_helper_deletion_rows": [
+            62,
+            116,
+            56,
+            114,
+            32,
+            64,
+            21
+          ],
+          "after_second_rows": [
+            190,
+            244,
+            184,
+            114,
+            160,
+            64,
+            149,
+            40
+          ],
+          "birth_rows": [
+            190,
+            124,
+            184,
+            240,
+            160,
+            192,
+            149,
+            2
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b0",
+              "b2",
+              "r",
+              "p0",
+              "b1",
+              "b3",
+              "b4",
+              "helper0"
+            ],
+            [
+              "b0",
+              "helper0",
+              "b2",
+              "r",
+              "p0",
+              "b1",
+              "b3",
+              "b4"
+            ]
+          ],
+          "helper": "helper0",
+          "helper_out_names": [
+            "b0"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 245,
+              "H": 213,
+              "defect": 32
+            },
+            {
+              "F_root": 497,
+              "H": 301,
+              "defect": 196
+            },
+            {
+              "F_root": 217,
+              "H": 177,
+              "defect": 40
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b0",
+            "b2"
+          ],
+          "pair_block_word": [
+            "b0",
+            "b2",
+            "r",
+            "p0",
+            "b1",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            4,
+            73,
+            74,
+            33,
+            207,
+            151,
+            41,
+            79
+          ],
+          "after_helper_deletion_rows": [
+            62,
+            100,
+            56,
+            114,
+            34,
+            64,
+            21
+          ],
+          "after_second_rows": [
+            190,
+            228,
+            184,
+            242,
+            34,
+            192,
+            149,
+            16
+          ],
+          "birth_rows": [
+            190,
+            116,
+            184,
+            242,
+            160,
+            64,
+            149,
+            34
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b3",
+              "helper1",
+              "b0",
+              "r",
+              "p0",
+              "b1",
+              "b2",
+              "b4"
+            ],
+            [
+              "b3",
+              "b0",
+              "r",
+              "p0",
+              "b1",
+              "b2",
+              "b4",
+              "helper1"
+            ]
+          ],
+          "helper": "helper1",
+          "helper_out_names": [
+            "b0",
+            "b4"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 221,
+              "H": 181,
+              "defect": 40
+            },
+            {
+              "F_root": 422,
+              "H": 163,
+              "defect": 259
+            },
+            {
+              "F_root": 221,
+              "H": 179,
+              "defect": 42
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b0",
+            "b3"
+          ],
+          "pair_block_word": [
+            "b3",
+            "b0",
+            "r",
+            "p0",
+            "b1",
+            "b2",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            16,
+            41,
+            203,
+            65,
+            78,
+            157,
+            35,
+            91
+          ],
+          "after_helper_deletion_rows": [
+            62,
+            100,
+            48,
+            118,
+            34,
+            64,
+            21
+          ],
+          "after_second_rows": [
+            190,
+            228,
+            176,
+            118,
+            162,
+            64,
+            149,
+            40
+          ],
+          "birth_rows": [
+            190,
+            228,
+            56,
+            242,
+            162,
+            192,
+            149,
+            4
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b1",
+              "b2",
+              "r",
+              "p0",
+              "b3",
+              "b0",
+              "b4",
+              "helper2"
+            ],
+            [
+              "b1",
+              "helper2",
+              "b2",
+              "r",
+              "p0",
+              "b3",
+              "b0",
+              "b4"
+            ]
+          ],
+          "helper": "helper2",
+          "helper_out_names": [
+            "b1"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 275,
+              "H": 217,
+              "defect": 58
+            },
+            {
+              "F_root": 521,
+              "H": 271,
+              "defect": 250
+            },
+            {
+              "F_root": 299,
+              "H": 247,
+              "defect": 52
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b1",
+            "b2"
+          ],
+          "pair_block_word": [
+            "b1",
+            "b2",
+            "r",
+            "p0",
+            "b3",
+            "b0",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            8,
+            137,
+            235,
+            16,
+            71,
+            91,
+            11,
+            121
+          ],
+          "after_helper_deletion_rows": [
+            62,
+            100,
+            16,
+            118,
+            34,
+            68,
+            21
+          ],
+          "after_second_rows": [
+            190,
+            100,
+            144,
+            246,
+            162,
+            68,
+            149,
+            34
+          ],
+          "birth_rows": [
+            190,
+            228,
+            48,
+            246,
+            162,
+            192,
+            149,
+            4
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b1",
+              "b4",
+              "r",
+              "p0",
+              "b2",
+              "b3",
+              "b0",
+              "helper3"
+            ],
+            [
+              "b1",
+              "helper3",
+              "b4",
+              "r",
+              "p0",
+              "b2",
+              "b3",
+              "b0"
+            ]
+          ],
+          "helper": "helper3",
+          "helper_out_names": [
+            "b1"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 163,
+              "H": 115,
+              "defect": 48
+            },
+            {
+              "F_root": 306,
+              "H": 119,
+              "defect": 187
+            },
+            {
+              "F_root": 221,
+              "H": 161,
+              "defect": 60
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b1",
+            "b4"
+          ],
+          "pair_block_word": [
+            "b1",
+            "b4",
+            "r",
+            "p0",
+            "b2",
+            "b3",
+            "b0"
+          ]
+        },
+        {
+          "after_first_rows": [
+            8,
+            41,
+            235,
+            16,
+            71,
+            153,
+            43,
+            91
+          ],
+          "after_helper_deletion_rows": [
+            62,
+            100,
+            80,
+            118,
+            34,
+            68,
+            17
+          ],
+          "after_second_rows": [
+            190,
+            228,
+            80,
+            246,
+            162,
+            196,
+            145,
+            4
+          ],
+          "birth_rows": [
+            190,
+            228,
+            144,
+            246,
+            162,
+            68,
+            21,
+            96
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b1",
+              "helper4",
+              "r",
+              "p0",
+              "b2",
+              "b3",
+              "b0",
+              "b4"
+            ],
+            [
+              "b1",
+              "r",
+              "p0",
+              "b2",
+              "b3",
+              "b0",
+              "b4",
+              "helper4"
+            ]
+          ],
+          "helper": "helper4",
+          "helper_out_names": [
+            "b4",
+            "r"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 247,
+              "H": 161,
+              "defect": 86
+            },
+            {
+              "F_root": 236,
+              "H": 129,
+              "defect": 107
+            },
+            {
+              "F_root": 191,
+              "H": 125,
+              "defect": 66
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b1",
+            "r"
+          ],
+          "pair_block_word": [
+            "b1",
+            "r",
+            "p0",
+            "b2",
+            "b3",
+            "b0",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            56,
+            139,
+            65,
+            205,
+            29,
+            39,
+            107
+          ],
+          "after_helper_deletion_rows": [
+            62,
+            100,
+            80,
+            102,
+            42,
+            68,
+            17
+          ],
+          "after_second_rows": [
+            190,
+            228,
+            208,
+            230,
+            42,
+            196,
+            145,
+            16
+          ],
+          "birth_rows": [
+            190,
+            228,
+            80,
+            118,
+            162,
+            196,
+            145,
+            12
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b3",
+              "helper5",
+              "b2",
+              "r",
+              "p0",
+              "b0",
+              "b4",
+              "b1"
+            ],
+            [
+              "b3",
+              "b2",
+              "r",
+              "p0",
+              "b0",
+              "b4",
+              "b1",
+              "helper5"
+            ]
+          ],
+          "helper": "helper5",
+          "helper_out_names": [
+            "b1",
+            "b2"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 465,
+              "H": 343,
+              "defect": 122
+            },
+            {
+              "F_root": 472,
+              "H": 297,
+              "defect": 175
+            },
+            {
+              "F_root": 369,
+              "H": 245,
+              "defect": 124
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b2",
+            "b3"
+          ],
+          "pair_block_word": [
+            "b3",
+            "b2",
+            "r",
+            "p0",
+            "b0",
+            "b4",
+            "b1"
+          ]
+        },
+        {
+          "after_first_rows": [
+            16,
+            13,
+            169,
+            177,
+            70,
+            83,
+            15,
+            115
+          ],
+          "after_helper_deletion_rows": [
+            62,
+            100,
+            80,
+            70,
+            42,
+            76,
+            17
+          ],
+          "after_second_rows": [
+            190,
+            228,
+            80,
+            198,
+            170,
+            76,
+            145,
+            36
+          ],
+          "birth_rows": [
+            190,
+            228,
+            208,
+            102,
+            170,
+            196,
+            145,
+            8
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b2",
+              "b4",
+              "r",
+              "p0",
+              "b3",
+              "b0",
+              "b1",
+              "helper6"
+            ],
+            [
+              "b2",
+              "helper6",
+              "b4",
+              "r",
+              "p0",
+              "b3",
+              "b0",
+              "b1"
+            ]
+          ],
+          "helper": "helper6",
+          "helper_out_names": [
+            "b2"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 423,
+              "H": 325,
+              "defect": 98
+            },
+            {
+              "F_root": 546,
+              "H": 373,
+              "defect": 173
+            },
+            {
+              "F_root": 457,
+              "H": 353,
+              "defect": 104
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b2",
+            "b4"
+          ],
+          "pair_block_word": [
+            "b2",
+            "b4",
+            "r",
+            "p0",
+            "b3",
+            "b0",
+            "b1"
+          ]
+        },
+        {
+          "after_first_rows": [
+            16,
+            41,
+            139,
+            241,
+            70,
+            21,
+            39,
+            115
+          ],
+          "after_helper_deletion_rows": [
+            62,
+            100,
+            80,
+            6,
+            42,
+            76,
+            25
+          ],
+          "after_second_rows": [
+            190,
+            228,
+            80,
+            134,
+            170,
+            204,
+            25,
+            68
+          ],
+          "birth_rows": [
+            190,
+            228,
+            208,
+            70,
+            170,
+            204,
+            145,
+            8
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b2",
+              "r",
+              "p0",
+              "b3",
+              "b0",
+              "b4",
+              "b1",
+              "helper7"
+            ],
+            [
+              "b2",
+              "helper7",
+              "r",
+              "p0",
+              "b3",
+              "b0",
+              "b4",
+              "b1"
+            ]
+          ],
+          "helper": "helper7",
+          "helper_out_names": [
+            "b2"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 383,
+              "H": 293,
+              "defect": 90
+            },
+            {
+              "F_root": 500,
+              "H": 321,
+              "defect": 179
+            },
+            {
+              "F_root": 427,
+              "H": 327,
+              "defect": 100
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b2",
+            "r"
+          ],
+          "pair_block_word": [
+            "b2",
+            "r",
+            "p0",
+            "b3",
+            "b0",
+            "b4",
+            "b1"
+          ]
+        },
+        {
+          "after_first_rows": [
+            8,
+            21,
+            169,
+            114,
+            229,
+            67,
+            7,
+            107
+          ],
+          "after_helper_deletion_rows": [
+            62,
+            100,
+            80,
+            6,
+            10,
+            92,
+            25
+          ],
+          "after_second_rows": [
+            190,
+            228,
+            80,
+            134,
+            138,
+            92,
+            153,
+            36
+          ],
+          "birth_rows": [
+            190,
+            228,
+            208,
+            134,
+            42,
+            204,
+            153,
+            16
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b3",
+              "b4",
+              "r",
+              "p0",
+              "b2",
+              "b0",
+              "b1",
+              "helper8"
+            ],
+            [
+              "b3",
+              "helper8",
+              "b4",
+              "r",
+              "p0",
+              "b2",
+              "b0",
+              "b1"
+            ]
+          ],
+          "helper": "helper8",
+          "helper_out_names": [
+            "b3"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 341,
+              "H": 275,
+              "defect": 66
+            },
+            {
+              "F_root": 700,
+              "H": 359,
+              "defect": 341
+            },
+            {
+              "F_root": 411,
+              "H": 351,
+              "defect": 60
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b3",
+            "b4"
+          ],
+          "pair_block_word": [
+            "b3",
+            "b4",
+            "r",
+            "p0",
+            "b2",
+            "b0",
+            "b1"
+          ]
+        }
+      ],
+      "source_H": 31,
+      "source_prefix": [
+        "p0"
+      ],
+      "source_root_F": 43,
+      "source_rows": [
+        62,
+        124,
+        56,
+        112,
+        32,
+        64,
+        21
+      ],
+      "target_H": 97,
+      "target_prefix": [
+        "p0"
+      ],
+      "target_root_F": 123,
+      "target_rows": [
+        62,
+        100,
+        80,
+        6,
+        10,
+        92,
+        25
+      ],
+      "target_suffix_names": [
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "temporary_births": 9
+    },
+    {
+      "case": "finite_patch",
+      "clock": 2,
+      "completed_adjacency_root_observers": [
+        {
+          "F_root": 85,
+          "H": 73,
+          "defect": 12
+        },
+        {
+          "F_root": 83,
+          "H": 61,
+          "defect": 22
+        },
+        {
+          "F_root": 83,
+          "H": 61,
+          "defect": 22
+        },
+        {
+          "F_root": 91,
+          "H": 61,
+          "defect": 30
+        },
+        {
+          "F_root": 93,
+          "H": 73,
+          "defect": 20
+        },
+        {
+          "F_root": 135,
+          "H": 111,
+          "defect": 24
+        },
+        {
+          "F_root": 205,
+          "H": 171,
+          "defect": 34
+        },
+        {
+          "F_root": 177,
+          "H": 155,
+          "defect": 22
+        },
+        {
+          "F_root": 217,
+          "H": 177,
+          "defect": 40
+        },
+        {
+          "F_root": 261,
+          "H": 211,
+          "defect": 50
+        },
+        {
+          "F_root": 271,
+          "H": 231,
+          "defect": 40
+        },
+        {
+          "F_root": 237,
+          "H": 223,
+          "defect": 14
+        }
+      ],
+      "completed_adjacency_strongness": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "helper_deletions": 11,
+      "names": [
+        "p0",
+        "p1",
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "r"
+      ],
+      "native_complements": 22,
+      "native_stage_strongness": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "peak_order": 9,
+      "permanent_births": 0,
+      "program": [
+        {
+          "after_first_rows": [
+            8,
+            389,
+            129,
+            150,
+            39,
+            207,
+            287,
+            81,
+            189
+          ],
+          "after_helper_deletion_rows": [
+            126,
+            120,
+            250,
+            112,
+            224,
+            64,
+            128,
+            43
+          ],
+          "after_second_rows": [
+            382,
+            376,
+            250,
+            368,
+            480,
+            320,
+            128,
+            299,
+            68
+          ],
+          "birth_rows": [
+            382,
+            124,
+            504,
+            368,
+            480,
+            320,
+            384,
+            299,
+            2
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "p1",
+              "b0",
+              "r",
+              "p0",
+              "b1",
+              "b2",
+              "b3",
+              "b4",
+              "helper0"
+            ],
+            [
+              "p1",
+              "helper0",
+              "b0",
+              "r",
+              "p0",
+              "b1",
+              "b2",
+              "b3",
+              "b4"
+            ]
+          ],
+          "helper": "helper0",
+          "helper_out_names": [
+            "p1"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 647,
+              "H": 515,
+              "defect": 132
+            },
+            {
+              "F_root": 1686,
+              "H": 889,
+              "defect": 797
+            },
+            {
+              "F_root": 587,
+              "H": 517,
+              "defect": 70
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p1",
+            "b0"
+          ],
+          "pair_block_word": [
+            "p1",
+            "b0",
+            "r",
+            "p0",
+            "b1",
+            "b2",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            4,
+            393,
+            2,
+            149,
+            39,
+            207,
+            287,
+            85,
+            189
+          ],
+          "after_helper_deletion_rows": [
+            126,
+            112,
+            250,
+            114,
+            224,
+            64,
+            128,
+            43
+          ],
+          "after_second_rows": [
+            382,
+            368,
+            506,
+            114,
+            480,
+            320,
+            128,
+            299,
+            72
+          ],
+          "birth_rows": [
+            382,
+            120,
+            506,
+            368,
+            480,
+            320,
+            384,
+            299,
+            2
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "b0",
+              "p1",
+              "b1",
+              "b2",
+              "b3",
+              "b4",
+              "helper1"
+            ],
+            [
+              "r",
+              "p0",
+              "b0",
+              "p1",
+              "helper1",
+              "b1",
+              "b2",
+              "b3",
+              "b4"
+            ]
+          ],
+          "helper": "helper1",
+          "helper_out_names": [
+            "p1"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 439,
+              "H": 319,
+              "defect": 120
+            },
+            {
+              "F_root": 895,
+              "H": 531,
+              "defect": 364
+            },
+            {
+              "F_root": 427,
+              "H": 307,
+              "defect": 120
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p1",
+            "b1"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "b0",
+            "p1",
+            "b1",
+            "b2",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            4,
+            397,
+            8,
+            145,
+            39,
+            207,
+            287,
+            85,
+            189
+          ],
+          "after_helper_deletion_rows": [
+            126,
+            240,
+            250,
+            114,
+            224,
+            64,
+            128,
+            41
+          ],
+          "after_second_rows": [
+            382,
+            240,
+            506,
+            370,
+            480,
+            320,
+            384,
+            297,
+            2
+          ],
+          "birth_rows": [
+            382,
+            368,
+            506,
+            370,
+            480,
+            320,
+            128,
+            43,
+            192
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "p1",
+              "helper2",
+              "r",
+              "p0",
+              "b0",
+              "b1",
+              "b2",
+              "b3",
+              "b4"
+            ],
+            [
+              "p1",
+              "r",
+              "p0",
+              "b0",
+              "b1",
+              "b2",
+              "b3",
+              "b4",
+              "helper2"
+            ]
+          ],
+          "helper": "helper2",
+          "helper_out_names": [
+            "b4",
+            "r"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 211,
+              "H": 151,
+              "defect": 60
+            },
+            {
+              "F_root": 783,
+              "H": 441,
+              "defect": 342
+            },
+            {
+              "F_root": 379,
+              "H": 271,
+              "defect": 108
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p1",
+            "r"
+          ],
+          "pair_block_word": [
+            "p1",
+            "r",
+            "p0",
+            "b0",
+            "b1",
+            "b2",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            28,
+            129,
+            389,
+            45,
+            207,
+            287,
+            83,
+            183
+          ],
+          "after_helper_deletion_rows": [
+            126,
+            240,
+            242,
+            118,
+            224,
+            64,
+            128,
+            41
+          ],
+          "after_second_rows": [
+            382,
+            496,
+            498,
+            118,
+            480,
+            320,
+            384,
+            297,
+            8
+          ],
+          "birth_rows": [
+            382,
+            496,
+            250,
+            370,
+            480,
+            320,
+            128,
+            297,
+            68
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b1",
+              "helper3",
+              "b0",
+              "r",
+              "p0",
+              "p1",
+              "b2",
+              "b3",
+              "b4"
+            ],
+            [
+              "b1",
+              "b0",
+              "r",
+              "p0",
+              "p1",
+              "b2",
+              "b3",
+              "b4",
+              "helper3"
+            ]
+          ],
+          "helper": "helper3",
+          "helper_out_names": [
+            "b0",
+            "b4"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 643,
+              "H": 503,
+              "defect": 140
+            },
+            {
+              "F_root": 1418,
+              "H": 815,
+              "defect": 603
+            },
+            {
+              "F_root": 751,
+              "H": 507,
+              "defect": 244
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b0",
+            "b1"
+          ],
+          "pair_block_word": [
+            "b1",
+            "b0",
+            "r",
+            "p0",
+            "p1",
+            "b2",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            8,
+            37,
+            281,
+            130,
+            139,
+            221,
+            287,
+            71,
+            187
+          ],
+          "after_helper_deletion_rows": [
+            126,
+            240,
+            226,
+            118,
+            228,
+            64,
+            128,
+            41
+          ],
+          "after_second_rows": [
+            382,
+            496,
+            482,
+            374,
+            228,
+            320,
+            128,
+            297,
+            80
+          ],
+          "birth_rows": [
+            382,
+            496,
+            242,
+            374,
+            480,
+            320,
+            384,
+            297,
+            4
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b0",
+              "b2",
+              "r",
+              "p0",
+              "b1",
+              "p1",
+              "b3",
+              "b4",
+              "helper4"
+            ],
+            [
+              "b0",
+              "helper4",
+              "b2",
+              "r",
+              "p0",
+              "b1",
+              "p1",
+              "b3",
+              "b4"
+            ]
+          ],
+          "helper": "helper4",
+          "helper_out_names": [
+            "b0"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 545,
+              "H": 461,
+              "defect": 84
+            },
+            {
+              "F_root": 1237,
+              "H": 757,
+              "defect": 480
+            },
+            {
+              "F_root": 469,
+              "H": 393,
+              "defect": 76
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b0",
+            "b2"
+          ],
+          "pair_block_word": [
+            "b0",
+            "b2",
+            "r",
+            "p0",
+            "b1",
+            "p1",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            8,
+            21,
+            153,
+            130,
+            73,
+            415,
+            303,
+            83,
+            159
+          ],
+          "after_helper_deletion_rows": [
+            126,
+            240,
+            194,
+            118,
+            228,
+            68,
+            128,
+            41
+          ],
+          "after_second_rows": [
+            382,
+            496,
+            450,
+            374,
+            484,
+            68,
+            384,
+            297,
+            32
+          ],
+          "birth_rows": [
+            382,
+            496,
+            226,
+            374,
+            484,
+            320,
+            128,
+            297,
+            68
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b3",
+              "helper5",
+              "b0",
+              "r",
+              "p0",
+              "b1",
+              "p1",
+              "b2",
+              "b4"
+            ],
+            [
+              "b3",
+              "b0",
+              "r",
+              "p0",
+              "b1",
+              "p1",
+              "b2",
+              "b4",
+              "helper5"
+            ]
+          ],
+          "helper": "helper5",
+          "helper_out_names": [
+            "b0",
+            "b4"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 469,
+              "H": 393,
+              "defect": 76
+            },
+            {
+              "F_root": 924,
+              "H": 383,
+              "defect": 541
+            },
+            {
+              "F_root": 493,
+              "H": 407,
+              "defect": 86
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b0",
+            "b3"
+          ],
+          "pair_block_word": [
+            "b3",
+            "b0",
+            "r",
+            "p0",
+            "b1",
+            "p1",
+            "b2",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            8,
+            21,
+            441,
+            130,
+            41,
+            203,
+            287,
+            83,
+            187
+          ],
+          "after_helper_deletion_rows": [
+            126,
+            240,
+            66,
+            118,
+            228,
+            68,
+            128,
+            45
+          ],
+          "after_second_rows": [
+            382,
+            496,
+            322,
+            374,
+            484,
+            324,
+            128,
+            45,
+            192
+          ],
+          "birth_rows": [
+            382,
+            496,
+            194,
+            374,
+            484,
+            324,
+            384,
+            297,
+            4
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b0",
+              "r",
+              "p0",
+              "b1",
+              "p1",
+              "b2",
+              "b3",
+              "b4",
+              "helper6"
+            ],
+            [
+              "b0",
+              "helper6",
+              "r",
+              "p0",
+              "b1",
+              "p1",
+              "b2",
+              "b3",
+              "b4"
+            ]
+          ],
+          "helper": "helper6",
+          "helper_out_names": [
+            "b0"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 475,
+              "H": 405,
+              "defect": 70
+            },
+            {
+              "F_root": 1195,
+              "H": 691,
+              "defect": 504
+            },
+            {
+              "F_root": 433,
+              "H": 369,
+              "defect": 64
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b0",
+            "r"
+          ],
+          "pair_block_word": [
+            "b0",
+            "r",
+            "p0",
+            "b1",
+            "p1",
+            "b2",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            32,
+            73,
+            155,
+            401,
+            131,
+            158,
+            317,
+            67,
+            183
+          ],
+          "after_helper_deletion_rows": [
+            126,
+            240,
+            66,
+            102,
+            236,
+            68,
+            128,
+            45
+          ],
+          "after_second_rows": [
+            382,
+            496,
+            322,
+            358,
+            236,
+            324,
+            128,
+            301,
+            80
+          ],
+          "birth_rows": [
+            382,
+            496,
+            322,
+            118,
+            484,
+            324,
+            384,
+            301,
+            8
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b1",
+              "b2",
+              "r",
+              "p0",
+              "b3",
+              "b0",
+              "p1",
+              "b4",
+              "helper7"
+            ],
+            [
+              "b1",
+              "helper7",
+              "b2",
+              "r",
+              "p0",
+              "b3",
+              "b0",
+              "p1",
+              "b4"
+            ]
+          ],
+          "helper": "helper7",
+          "helper_out_names": [
+            "b1"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 987,
+              "H": 805,
+              "defect": 182
+            },
+            {
+              "F_root": 2705,
+              "H": 1247,
+              "defect": 1458
+            },
+            {
+              "F_root": 823,
+              "H": 719,
+              "defect": 104
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b1",
+            "b2"
+          ],
+          "pair_block_word": [
+            "b1",
+            "b2",
+            "r",
+            "p0",
+            "b3",
+            "b0",
+            "p1",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            16,
+            73,
+            155,
+            417,
+            10,
+            151,
+            317,
+            83,
+            183
+          ],
+          "after_helper_deletion_rows": [
+            126,
+            240,
+            66,
+            70,
+            236,
+            76,
+            128,
+            45
+          ],
+          "after_second_rows": [
+            382,
+            496,
+            322,
+            326,
+            492,
+            76,
+            128,
+            301,
+            96
+          ],
+          "birth_rows": [
+            382,
+            496,
+            322,
+            102,
+            492,
+            324,
+            384,
+            301,
+            8
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "b2",
+              "b1",
+              "b3",
+              "b0",
+              "p1",
+              "b4",
+              "helper8"
+            ],
+            [
+              "r",
+              "p0",
+              "b2",
+              "b1",
+              "helper8",
+              "b3",
+              "b0",
+              "p1",
+              "b4"
+            ]
+          ],
+          "helper": "helper8",
+          "helper_out_names": [
+            "b1"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 805,
+              "H": 637,
+              "defect": 168
+            },
+            {
+              "F_root": 1616,
+              "H": 789,
+              "defect": 827
+            },
+            {
+              "F_root": 801,
+              "H": 641,
+              "defect": 160
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b1",
+            "b3"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "b2",
+            "b1",
+            "b3",
+            "b0",
+            "p1",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            8,
+            73,
+            179,
+            180,
+            131,
+            403,
+            317,
+            67,
+            159
+          ],
+          "after_helper_deletion_rows": [
+            126,
+            240,
+            66,
+            70,
+            204,
+            92,
+            128,
+            45
+          ],
+          "after_second_rows": [
+            382,
+            496,
+            322,
+            326,
+            460,
+            92,
+            384,
+            301,
+            32
+          ],
+          "birth_rows": [
+            382,
+            496,
+            322,
+            326,
+            236,
+            332,
+            128,
+            301,
+            80
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b3",
+              "helper9",
+              "b2",
+              "r",
+              "p0",
+              "b1",
+              "b0",
+              "p1",
+              "b4"
+            ],
+            [
+              "b3",
+              "b2",
+              "r",
+              "p0",
+              "b1",
+              "b0",
+              "p1",
+              "b4",
+              "helper9"
+            ]
+          ],
+          "helper": "helper9",
+          "helper_out_names": [
+            "b2",
+            "b4"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 977,
+              "H": 847,
+              "defect": 130
+            },
+            {
+              "F_root": 2395,
+              "H": 1017,
+              "defect": 1378
+            },
+            {
+              "F_root": 969,
+              "H": 807,
+              "defect": 162
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b2",
+            "b3"
+          ],
+          "pair_block_word": [
+            "b3",
+            "b2",
+            "r",
+            "p0",
+            "b1",
+            "b0",
+            "p1",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            32,
+            73,
+            179,
+            149,
+            419,
+            138,
+            317,
+            67,
+            175
+          ],
+          "after_helper_deletion_rows": [
+            126,
+            240,
+            66,
+            70,
+            76,
+            92,
+            128,
+            61
+          ],
+          "after_second_rows": [
+            382,
+            496,
+            322,
+            326,
+            332,
+            348,
+            128,
+            61,
+            192
+          ],
+          "birth_rows": [
+            382,
+            496,
+            322,
+            326,
+            204,
+            348,
+            384,
+            301,
+            16
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b2",
+              "r",
+              "p0",
+              "b3",
+              "b1",
+              "b0",
+              "p1",
+              "b4",
+              "helper10"
+            ],
+            [
+              "b2",
+              "helper10",
+              "r",
+              "p0",
+              "b3",
+              "b1",
+              "b0",
+              "p1",
+              "b4"
+            ]
+          ],
+          "helper": "helper10",
+          "helper_out_names": [
+            "b2"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 809,
+              "H": 729,
+              "defect": 80
+            },
+            {
+              "F_root": 2297,
+              "H": 1037,
+              "defect": 1260
+            },
+            {
+              "F_root": 637,
+              "H": 575,
+              "defect": 62
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b2",
+            "r"
+          ],
+          "pair_block_word": [
+            "b2",
+            "r",
+            "p0",
+            "b3",
+            "b1",
+            "b0",
+            "p1",
+            "b4"
+          ]
+        }
+      ],
+      "source_H": 73,
+      "source_prefix": [
+        "p0",
+        "p1"
+      ],
+      "source_root_F": 85,
+      "source_rows": [
+        126,
+        124,
+        248,
+        112,
+        224,
+        64,
+        128,
+        43
+      ],
+      "target_H": 223,
+      "target_prefix": [
+        "p0"
+      ],
+      "target_root_F": 237,
+      "target_rows": [
+        126,
+        240,
+        66,
+        70,
+        76,
+        92,
+        128,
+        61
+      ],
+      "target_suffix_names": [
+        "p1",
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "temporary_births": 11
+    },
+    {
+      "case": "bulk",
+      "clock": 3,
+      "completed_adjacency_root_observers": [
+        {
+          "F_root": 169,
+          "H": 157,
+          "defect": 12
+        },
+        {
+          "F_root": 249,
+          "H": 213,
+          "defect": 36
+        },
+        {
+          "F_root": 337,
+          "H": 281,
+          "defect": 56
+        },
+        {
+          "F_root": 415,
+          "H": 335,
+          "defect": 80
+        },
+        {
+          "F_root": 589,
+          "H": 469,
+          "defect": 120
+        },
+        {
+          "F_root": 557,
+          "H": 453,
+          "defect": 104
+        },
+        {
+          "F_root": 535,
+          "H": 439,
+          "defect": 96
+        },
+        {
+          "F_root": 555,
+          "H": 471,
+          "defect": 84
+        },
+        {
+          "F_root": 535,
+          "H": 423,
+          "defect": 112
+        },
+        {
+          "F_root": 535,
+          "H": 423,
+          "defect": 112
+        },
+        {
+          "F_root": 555,
+          "H": 471,
+          "defect": 84
+        },
+        {
+          "F_root": 521,
+          "H": 475,
+          "defect": 46
+        }
+      ],
+      "completed_adjacency_strongness": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "helper_deletions": 11,
+      "names": [
+        "p0",
+        "p1",
+        "p2",
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "r"
+      ],
+      "native_complements": 22,
+      "native_stage_strongness": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "peak_order": 10,
+      "permanent_births": 0,
+      "program": [
+        {
+          "after_first_rows": [
+            4,
+            777,
+            274,
+            261,
+            299,
+            79,
+            415,
+            575,
+            161,
+            381
+          ],
+          "after_helper_deletion_rows": [
+            254,
+            244,
+            248,
+            498,
+            224,
+            448,
+            128,
+            256,
+            87
+          ],
+          "after_second_rows": [
+            766,
+            756,
+            760,
+            498,
+            736,
+            960,
+            640,
+            256,
+            599,
+            136
+          ],
+          "birth_rows": [
+            766,
+            252,
+            760,
+            1008,
+            736,
+            960,
+            640,
+            768,
+            599,
+            2
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "p1",
+              "b0",
+              "r",
+              "p0",
+              "p2",
+              "b1",
+              "b2",
+              "b3",
+              "b4",
+              "helper0"
+            ],
+            [
+              "p1",
+              "helper0",
+              "b0",
+              "r",
+              "p0",
+              "p2",
+              "b1",
+              "b2",
+              "b3",
+              "b4"
+            ]
+          ],
+          "helper": "helper0",
+          "helper_out_names": [
+            "p1"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 1827,
+              "H": 1575,
+              "defect": 252
+            },
+            {
+              "F_root": 5560,
+              "H": 2769,
+              "defect": 2791
+            },
+            {
+              "F_root": 1441,
+              "H": 1331,
+              "defect": 110
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p1",
+            "b0"
+          ],
+          "pair_block_word": [
+            "p1",
+            "b0",
+            "r",
+            "p0",
+            "p2",
+            "b1",
+            "b2",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            16,
+            269,
+            265,
+            33,
+            782,
+            87,
+            415,
+            575,
+            169,
+            367
+          ],
+          "after_helper_deletion_rows": [
+            254,
+            228,
+            248,
+            498,
+            226,
+            448,
+            128,
+            256,
+            87
+          ],
+          "after_second_rows": [
+            766,
+            740,
+            760,
+            1010,
+            226,
+            960,
+            640,
+            768,
+            599,
+            16
+          ],
+          "birth_rows": [
+            766,
+            244,
+            760,
+            1010,
+            736,
+            960,
+            640,
+            256,
+            599,
+            130
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "b1",
+              "helper1",
+              "p1",
+              "p2",
+              "b0",
+              "b2",
+              "b3",
+              "b4"
+            ],
+            [
+              "r",
+              "p0",
+              "b1",
+              "p1",
+              "p2",
+              "b0",
+              "b2",
+              "b3",
+              "b4",
+              "helper1"
+            ]
+          ],
+          "helper": "helper1",
+          "helper_out_names": [
+            "b4",
+            "p1"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 1441,
+              "H": 1195,
+              "defect": 246
+            },
+            {
+              "F_root": 5222,
+              "H": 2717,
+              "defect": 2505
+            },
+            {
+              "F_root": 1467,
+              "H": 1215,
+              "defect": 252
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p1",
+            "b1"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "b1",
+            "p1",
+            "p2",
+            "b0",
+            "b2",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            4,
+            825,
+            266,
+            17,
+            325,
+            285,
+            431,
+            575,
+            137,
+            381
+          ],
+          "after_helper_deletion_rows": [
+            254,
+            196,
+            248,
+            498,
+            226,
+            450,
+            128,
+            256,
+            87
+          ],
+          "after_second_rows": [
+            766,
+            708,
+            760,
+            1010,
+            738,
+            450,
+            640,
+            256,
+            599,
+            160
+          ],
+          "birth_rows": [
+            766,
+            228,
+            760,
+            1010,
+            738,
+            960,
+            640,
+            768,
+            599,
+            2
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "p1",
+              "b2",
+              "r",
+              "p0",
+              "p2",
+              "b0",
+              "b1",
+              "b3",
+              "b4",
+              "helper2"
+            ],
+            [
+              "p1",
+              "helper2",
+              "b2",
+              "r",
+              "p0",
+              "p2",
+              "b0",
+              "b1",
+              "b3",
+              "b4"
+            ]
+          ],
+          "helper": "helper2",
+          "helper_out_names": [
+            "p1"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 1343,
+              "H": 1109,
+              "defect": 234
+            },
+            {
+              "F_root": 4652,
+              "H": 2105,
+              "defect": 2547
+            },
+            {
+              "F_root": 1435,
+              "H": 1197,
+              "defect": 238
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p1",
+            "b2"
+          ],
+          "pair_block_word": [
+            "p1",
+            "b2",
+            "r",
+            "p0",
+            "p2",
+            "b0",
+            "b1",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            64,
+            317,
+            265,
+            17,
+            293,
+            141,
+            830,
+            607,
+            169,
+            319
+          ],
+          "after_helper_deletion_rows": [
+            254,
+            132,
+            248,
+            498,
+            226,
+            450,
+            130,
+            256,
+            87
+          ],
+          "after_second_rows": [
+            766,
+            644,
+            760,
+            1010,
+            738,
+            962,
+            130,
+            768,
+            599,
+            64
+          ],
+          "birth_rows": [
+            766,
+            196,
+            760,
+            1010,
+            738,
+            962,
+            640,
+            256,
+            599,
+            130
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "b3",
+              "helper3",
+              "p1",
+              "p2",
+              "b0",
+              "b1",
+              "b2",
+              "b4"
+            ],
+            [
+              "r",
+              "p0",
+              "b3",
+              "p1",
+              "p2",
+              "b0",
+              "b1",
+              "b2",
+              "b4",
+              "helper3"
+            ]
+          ],
+          "helper": "helper3",
+          "helper_out_names": [
+            "b4",
+            "p1"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 1369,
+              "H": 1095,
+              "defect": 274
+            },
+            {
+              "F_root": 6348,
+              "H": 3141,
+              "defect": 3207
+            },
+            {
+              "F_root": 1279,
+              "H": 1027,
+              "defect": 252
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p1",
+            "b3"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "b3",
+            "p1",
+            "p2",
+            "b0",
+            "b1",
+            "b2",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            16,
+            441,
+            267,
+            33,
+            780,
+            85,
+            287,
+            637,
+            169,
+            367
+          ],
+          "after_helper_deletion_rows": [
+            254,
+            132,
+            232,
+            498,
+            230,
+            450,
+            130,
+            256,
+            87
+          ],
+          "after_second_rows": [
+            766,
+            644,
+            744,
+            1010,
+            230,
+            962,
+            642,
+            768,
+            599,
+            16
+          ],
+          "birth_rows": [
+            766,
+            644,
+            248,
+            1010,
+            738,
+            962,
+            642,
+            256,
+            599,
+            132
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "b1",
+              "helper4",
+              "p2",
+              "b0",
+              "b2",
+              "b3",
+              "p1",
+              "b4"
+            ],
+            [
+              "r",
+              "p0",
+              "b1",
+              "p2",
+              "b0",
+              "b2",
+              "b3",
+              "p1",
+              "b4",
+              "helper4"
+            ]
+          ],
+          "helper": "helper4",
+          "helper_out_names": [
+            "b4",
+            "p2"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 2095,
+              "H": 1657,
+              "defect": 438
+            },
+            {
+              "F_root": 6106,
+              "H": 3205,
+              "defect": 2901
+            },
+            {
+              "F_root": 2589,
+              "H": 2059,
+              "defect": 530
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p2",
+            "b1"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "b1",
+            "p2",
+            "b0",
+            "b2",
+            "b3",
+            "p1",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            8,
+            441,
+            819,
+            20,
+            321,
+            281,
+            303,
+            637,
+            137,
+            379
+          ],
+          "after_helper_deletion_rows": [
+            254,
+            132,
+            200,
+            498,
+            230,
+            454,
+            130,
+            256,
+            87
+          ],
+          "after_second_rows": [
+            766,
+            644,
+            712,
+            1010,
+            742,
+            454,
+            642,
+            256,
+            599,
+            160
+          ],
+          "birth_rows": [
+            766,
+            644,
+            232,
+            1010,
+            742,
+            962,
+            642,
+            768,
+            599,
+            4
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "p2",
+              "b2",
+              "r",
+              "p0",
+              "b0",
+              "b1",
+              "b3",
+              "p1",
+              "b4",
+              "helper5"
+            ],
+            [
+              "p2",
+              "helper5",
+              "b2",
+              "r",
+              "p0",
+              "b0",
+              "b1",
+              "b3",
+              "p1",
+              "b4"
+            ]
+          ],
+          "helper": "helper5",
+          "helper_out_names": [
+            "p2"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 1557,
+              "H": 1279,
+              "defect": 278
+            },
+            {
+              "F_root": 5735,
+              "H": 2267,
+              "defect": 3468
+            },
+            {
+              "F_root": 2073,
+              "H": 1765,
+              "defect": 308
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p2",
+            "b2"
+          ],
+          "pair_block_word": [
+            "p2",
+            "b2",
+            "r",
+            "p0",
+            "b0",
+            "b1",
+            "b3",
+            "p1",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            64,
+            473,
+            315,
+            17,
+            289,
+            11,
+            828,
+            637,
+            169,
+            319
+          ],
+          "after_helper_deletion_rows": [
+            254,
+            132,
+            136,
+            498,
+            230,
+            454,
+            134,
+            256,
+            87
+          ],
+          "after_second_rows": [
+            766,
+            644,
+            648,
+            1010,
+            742,
+            966,
+            134,
+            768,
+            599,
+            64
+          ],
+          "birth_rows": [
+            766,
+            644,
+            200,
+            1010,
+            742,
+            966,
+            642,
+            256,
+            599,
+            132
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "b3",
+              "helper6",
+              "p2",
+              "b0",
+              "b1",
+              "b2",
+              "p1",
+              "b4"
+            ],
+            [
+              "r",
+              "p0",
+              "b3",
+              "p2",
+              "b0",
+              "b1",
+              "b2",
+              "p1",
+              "b4",
+              "helper6"
+            ]
+          ],
+          "helper": "helper6",
+          "helper_out_names": [
+            "b4",
+            "p2"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 1541,
+              "H": 1275,
+              "defect": 266
+            },
+            {
+              "F_root": 5252,
+              "H": 2709,
+              "defect": 2543
+            },
+            {
+              "F_root": 1543,
+              "H": 1295,
+              "defect": 248
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p2",
+            "b3"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "b3",
+            "p2",
+            "b0",
+            "b1",
+            "b2",
+            "p1",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            8,
+            317,
+            497,
+            68,
+            809,
+            265,
+            307,
+            635,
+            137,
+            367
+          ],
+          "after_helper_deletion_rows": [
+            254,
+            132,
+            136,
+            498,
+            198,
+            470,
+            134,
+            256,
+            87
+          ],
+          "after_second_rows": [
+            766,
+            644,
+            648,
+            1010,
+            710,
+            470,
+            646,
+            256,
+            599,
+            160
+          ],
+          "birth_rows": [
+            766,
+            644,
+            648,
+            1010,
+            230,
+            966,
+            646,
+            768,
+            599,
+            16
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b1",
+              "b2",
+              "r",
+              "p0",
+              "b0",
+              "b3",
+              "p1",
+              "p2",
+              "b4",
+              "helper7"
+            ],
+            [
+              "b1",
+              "helper7",
+              "b2",
+              "r",
+              "p0",
+              "b0",
+              "b3",
+              "p1",
+              "p2",
+              "b4"
+            ]
+          ],
+          "helper": "helper7",
+          "helper_out_names": [
+            "b1"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 2621,
+              "H": 2139,
+              "defect": 482
+            },
+            {
+              "F_root": 5978,
+              "H": 2439,
+              "defect": 3539
+            },
+            {
+              "F_root": 2637,
+              "H": 2261,
+              "defect": 376
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b1",
+            "b2"
+          ],
+          "pair_block_word": [
+            "b1",
+            "b2",
+            "r",
+            "p0",
+            "b0",
+            "b3",
+            "p1",
+            "p2",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            8,
+            317,
+            497,
+            36,
+            841,
+            17,
+            299,
+            635,
+            169,
+            367
+          ],
+          "after_helper_deletion_rows": [
+            254,
+            132,
+            136,
+            498,
+            134,
+            470,
+            150,
+            256,
+            87
+          ],
+          "after_second_rows": [
+            766,
+            644,
+            648,
+            1010,
+            646,
+            982,
+            150,
+            256,
+            599,
+            192
+          ],
+          "birth_rows": [
+            766,
+            644,
+            648,
+            1010,
+            198,
+            982,
+            646,
+            768,
+            599,
+            16
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "b0",
+              "b2",
+              "b1",
+              "b3",
+              "p1",
+              "p2",
+              "b4",
+              "helper8"
+            ],
+            [
+              "r",
+              "p0",
+              "b0",
+              "b2",
+              "b1",
+              "helper8",
+              "b3",
+              "p1",
+              "p2",
+              "b4"
+            ]
+          ],
+          "helper": "helper8",
+          "helper_out_names": [
+            "b1"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 1923,
+              "H": 1493,
+              "defect": 430
+            },
+            {
+              "F_root": 4514,
+              "H": 2273,
+              "defect": 2241
+            },
+            {
+              "F_root": 2071,
+              "H": 1601,
+              "defect": 470
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b1",
+            "b3"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "b0",
+            "b2",
+            "b1",
+            "b3",
+            "p1",
+            "p2",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            8,
+            365,
+            497,
+            20,
+            355,
+            265,
+            809,
+            635,
+            137,
+            319
+          ],
+          "after_helper_deletion_rows": [
+            254,
+            132,
+            136,
+            498,
+            134,
+            406,
+            182,
+            256,
+            87
+          ],
+          "after_second_rows": [
+            766,
+            644,
+            648,
+            1010,
+            646,
+            918,
+            182,
+            768,
+            599,
+            64
+          ],
+          "birth_rows": [
+            766,
+            644,
+            648,
+            1010,
+            646,
+            470,
+            662,
+            256,
+            599,
+            160
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b3",
+              "helper9",
+              "b2",
+              "r",
+              "p0",
+              "b0",
+              "b1",
+              "p1",
+              "p2",
+              "b4"
+            ],
+            [
+              "b3",
+              "b2",
+              "r",
+              "p0",
+              "b0",
+              "b1",
+              "p1",
+              "p2",
+              "b4",
+              "helper9"
+            ]
+          ],
+          "helper": "helper9",
+          "helper_out_names": [
+            "b2",
+            "b4"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 2637,
+              "H": 2261,
+              "defect": 376
+            },
+            {
+              "F_root": 5978,
+              "H": 2439,
+              "defect": 3539
+            },
+            {
+              "F_root": 2621,
+              "H": 2139,
+              "defect": 482
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b2",
+            "b3"
+          ],
+          "pair_block_word": [
+            "b3",
+            "b2",
+            "r",
+            "p0",
+            "b0",
+            "b1",
+            "p1",
+            "p2",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            64,
+            365,
+            497,
+            773,
+            331,
+            25,
+            296,
+            635,
+            161,
+            375
+          ],
+          "after_helper_deletion_rows": [
+            254,
+            132,
+            136,
+            242,
+            134,
+            406,
+            182,
+            256,
+            95
+          ],
+          "after_second_rows": [
+            766,
+            644,
+            648,
+            754,
+            646,
+            918,
+            694,
+            256,
+            95,
+            384
+          ],
+          "birth_rows": [
+            766,
+            644,
+            648,
+            498,
+            646,
+            918,
+            694,
+            768,
+            599,
+            8
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b0",
+              "r",
+              "p0",
+              "b3",
+              "b2",
+              "b1",
+              "p1",
+              "p2",
+              "b4",
+              "helper10"
+            ],
+            [
+              "b0",
+              "helper10",
+              "r",
+              "p0",
+              "b3",
+              "b2",
+              "b1",
+              "p1",
+              "p2",
+              "b4"
+            ]
+          ],
+          "helper": "helper10",
+          "helper_out_names": [
+            "b0"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 1803,
+              "H": 1603,
+              "defect": 200
+            },
+            {
+              "F_root": 7290,
+              "H": 3275,
+              "defect": 4015
+            },
+            {
+              "F_root": 1417,
+              "H": 1249,
+              "defect": 168
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b0",
+            "r"
+          ],
+          "pair_block_word": [
+            "b0",
+            "r",
+            "p0",
+            "b3",
+            "b2",
+            "b1",
+            "p1",
+            "p2",
+            "b4"
+          ]
+        }
+      ],
+      "source_H": 157,
+      "source_prefix": [
+        "p0",
+        "p1",
+        "p2"
+      ],
+      "source_root_F": 169,
+      "source_rows": [
+        254,
+        252,
+        248,
+        496,
+        224,
+        448,
+        128,
+        256,
+        87
+      ],
+      "target_H": 475,
+      "target_prefix": [
+        "p0"
+      ],
+      "target_root_F": 521,
+      "target_rows": [
+        254,
+        132,
+        136,
+        242,
+        134,
+        406,
+        182,
+        256,
+        95
+      ],
+      "target_suffix_names": [
+        "p1",
+        "p2",
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "temporary_births": 11
+    },
+    {
+      "case": "bulk",
+      "clock": 4,
+      "completed_adjacency_root_observers": [
+        {
+          "F_root": 337,
+          "H": 325,
+          "defect": 12
+        },
+        {
+          "F_root": 495,
+          "H": 459,
+          "defect": 36
+        },
+        {
+          "F_root": 669,
+          "H": 613,
+          "defect": 56
+        },
+        {
+          "F_root": 821,
+          "H": 741,
+          "defect": 80
+        },
+        {
+          "F_root": 1161,
+          "H": 1041,
+          "defect": 120
+        },
+        {
+          "F_root": 1099,
+          "H": 995,
+          "defect": 104
+        },
+        {
+          "F_root": 1055,
+          "H": 959,
+          "defect": 96
+        },
+        {
+          "F_root": 1093,
+          "H": 1009,
+          "defect": 84
+        },
+        {
+          "F_root": 1053,
+          "H": 941,
+          "defect": 112
+        },
+        {
+          "F_root": 1053,
+          "H": 941,
+          "defect": 112
+        },
+        {
+          "F_root": 1093,
+          "H": 1009,
+          "defect": 84
+        },
+        {
+          "F_root": 1025,
+          "H": 979,
+          "defect": 46
+        }
+      ],
+      "completed_adjacency_strongness": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "helper_deletions": 11,
+      "names": [
+        "p0",
+        "p1",
+        "p2",
+        "p3",
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "r"
+      ],
+      "native_complements": 22,
+      "native_stage_strongness": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "peak_order": 11,
+      "permanent_births": 0,
+      "program": [
+        {
+          "after_first_rows": [
+            2,
+            520,
+            1555,
+            549,
+            523,
+            599,
+            159,
+            831,
+            1151,
+            321,
+            763
+          ],
+          "after_helper_deletion_rows": [
+            510,
+            508,
+            488,
+            496,
+            996,
+            448,
+            896,
+            256,
+            512,
+            175
+          ],
+          "after_second_rows": [
+            1534,
+            1532,
+            1512,
+            1520,
+            996,
+            1472,
+            1920,
+            1280,
+            512,
+            1199,
+            272
+          ],
+          "birth_rows": [
+            1534,
+            1532,
+            504,
+            1520,
+            2016,
+            1472,
+            1920,
+            1280,
+            1536,
+            1199,
+            4
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "p2",
+              "b0",
+              "r",
+              "p0",
+              "p1",
+              "p3",
+              "b1",
+              "b2",
+              "b3",
+              "b4",
+              "helper0"
+            ],
+            [
+              "p2",
+              "helper0",
+              "b0",
+              "r",
+              "p0",
+              "p1",
+              "p3",
+              "b1",
+              "b2",
+              "b3",
+              "b4"
+            ]
+          ],
+          "helper": "helper0",
+          "helper_out_names": [
+            "p2"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 3589,
+              "H": 3337,
+              "defect": 252
+            },
+            {
+              "F_root": 15108,
+              "H": 7041,
+              "defect": 8067
+            },
+            {
+              "F_root": 2855,
+              "H": 2745,
+              "defect": 110
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p2",
+            "b0"
+          ],
+          "pair_block_word": [
+            "p2",
+            "b0",
+            "r",
+            "p0",
+            "p1",
+            "p3",
+            "b1",
+            "b2",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            544,
+            539,
+            531,
+            67,
+            1565,
+            175,
+            831,
+            1151,
+            337,
+            735
+          ],
+          "after_helper_deletion_rows": [
+            510,
+            508,
+            456,
+            496,
+            996,
+            452,
+            896,
+            256,
+            512,
+            175
+          ],
+          "after_second_rows": [
+            1534,
+            1532,
+            1480,
+            1520,
+            2020,
+            452,
+            1920,
+            1280,
+            1536,
+            1199,
+            32
+          ],
+          "birth_rows": [
+            1534,
+            1532,
+            488,
+            1520,
+            2020,
+            1472,
+            1920,
+            1280,
+            512,
+            1199,
+            260
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "p1",
+              "b1",
+              "helper1",
+              "p2",
+              "p3",
+              "b0",
+              "b2",
+              "b3",
+              "b4"
+            ],
+            [
+              "r",
+              "p0",
+              "p1",
+              "b1",
+              "p2",
+              "p3",
+              "b0",
+              "b2",
+              "b3",
+              "b4",
+              "helper1"
+            ]
+          ],
+          "helper": "helper1",
+          "helper_out_names": [
+            "b4",
+            "p2"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 2855,
+              "H": 2609,
+              "defect": 246
+            },
+            {
+              "F_root": 13280,
+              "H": 6385,
+              "defect": 6895
+            },
+            {
+              "F_root": 2881,
+              "H": 2629,
+              "defect": 252
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p2",
+            "b1"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "p1",
+            "b1",
+            "p2",
+            "p3",
+            "b0",
+            "b2",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            520,
+            1651,
+            533,
+            35,
+            651,
+            571,
+            863,
+            1151,
+            273,
+            763
+          ],
+          "after_helper_deletion_rows": [
+            510,
+            508,
+            392,
+            496,
+            996,
+            452,
+            900,
+            256,
+            512,
+            175
+          ],
+          "after_second_rows": [
+            1534,
+            1532,
+            1416,
+            1520,
+            2020,
+            1476,
+            900,
+            1280,
+            512,
+            1199,
+            320
+          ],
+          "birth_rows": [
+            1534,
+            1532,
+            456,
+            1520,
+            2020,
+            1476,
+            1920,
+            1280,
+            1536,
+            1199,
+            4
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "p2",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "p3",
+              "b0",
+              "b1",
+              "b3",
+              "b4",
+              "helper2"
+            ],
+            [
+              "p2",
+              "helper2",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "p3",
+              "b0",
+              "b1",
+              "b3",
+              "b4"
+            ]
+          ],
+          "helper": "helper2",
+          "helper_out_names": [
+            "p2"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 2641,
+              "H": 2407,
+              "defect": 234
+            },
+            {
+              "F_root": 13303,
+              "H": 5531,
+              "defect": 7772
+            },
+            {
+              "F_root": 2841,
+              "H": 2603,
+              "defect": 238
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p2",
+            "b2"
+          ],
+          "pair_block_word": [
+            "p2",
+            "b2",
+            "r",
+            "p0",
+            "p1",
+            "p3",
+            "b0",
+            "b1",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            640,
+            635,
+            531,
+            35,
+            587,
+            283,
+            1661,
+            1215,
+            337,
+            639
+          ],
+          "after_helper_deletion_rows": [
+            510,
+            508,
+            264,
+            496,
+            996,
+            452,
+            900,
+            260,
+            512,
+            175
+          ],
+          "after_second_rows": [
+            1534,
+            1532,
+            1288,
+            1520,
+            2020,
+            1476,
+            1924,
+            260,
+            1536,
+            1199,
+            128
+          ],
+          "birth_rows": [
+            1534,
+            1532,
+            392,
+            1520,
+            2020,
+            1476,
+            1924,
+            1280,
+            512,
+            1199,
+            260
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "p1",
+              "b3",
+              "helper3",
+              "p2",
+              "p3",
+              "b0",
+              "b1",
+              "b2",
+              "b4"
+            ],
+            [
+              "r",
+              "p0",
+              "p1",
+              "b3",
+              "p2",
+              "p3",
+              "b0",
+              "b1",
+              "b2",
+              "b4",
+              "helper3"
+            ]
+          ],
+          "helper": "helper3",
+          "helper_out_names": [
+            "b4",
+            "p2"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 2711,
+              "H": 2437,
+              "defect": 274
+            },
+            {
+              "F_root": 14757,
+              "H": 6595,
+              "defect": 8162
+            },
+            {
+              "F_root": 2505,
+              "H": 2253,
+              "defect": 252
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p2",
+            "b3"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "p1",
+            "b3",
+            "p2",
+            "p3",
+            "b0",
+            "b1",
+            "b2",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            544,
+            883,
+            535,
+            67,
+            1561,
+            171,
+            575,
+            1275,
+            337,
+            735
+          ],
+          "after_helper_deletion_rows": [
+            510,
+            508,
+            264,
+            464,
+            996,
+            460,
+            900,
+            260,
+            512,
+            175
+          ],
+          "after_second_rows": [
+            1534,
+            1532,
+            1288,
+            1488,
+            2020,
+            460,
+            1924,
+            1284,
+            1536,
+            1199,
+            32
+          ],
+          "birth_rows": [
+            1534,
+            1532,
+            1288,
+            496,
+            2020,
+            1476,
+            1924,
+            1284,
+            512,
+            1199,
+            264
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "p1",
+              "b1",
+              "helper4",
+              "p3",
+              "b0",
+              "b2",
+              "b3",
+              "p2",
+              "b4"
+            ],
+            [
+              "r",
+              "p0",
+              "p1",
+              "b1",
+              "p3",
+              "b0",
+              "b2",
+              "b3",
+              "p2",
+              "b4",
+              "helper4"
+            ]
+          ],
+          "helper": "helper4",
+          "helper_out_names": [
+            "b4",
+            "p3"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 4143,
+              "H": 3705,
+              "defect": 438
+            },
+            {
+              "F_root": 17885,
+              "H": 8643,
+              "defect": 9242
+            },
+            {
+              "F_root": 5045,
+              "H": 4515,
+              "defect": 530
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p3",
+            "b1"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "p1",
+            "b1",
+            "p3",
+            "b0",
+            "b2",
+            "b3",
+            "p2",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            528,
+            883,
+            1639,
+            41,
+            643,
+            563,
+            607,
+            1275,
+            273,
+            759
+          ],
+          "after_helper_deletion_rows": [
+            510,
+            508,
+            264,
+            400,
+            996,
+            460,
+            908,
+            260,
+            512,
+            175
+          ],
+          "after_second_rows": [
+            1534,
+            1532,
+            1288,
+            1424,
+            2020,
+            1484,
+            908,
+            1284,
+            512,
+            1199,
+            320
+          ],
+          "birth_rows": [
+            1534,
+            1532,
+            1288,
+            464,
+            2020,
+            1484,
+            1924,
+            1284,
+            1536,
+            1199,
+            8
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "p3",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "b0",
+              "b1",
+              "b3",
+              "p2",
+              "b4",
+              "helper5"
+            ],
+            [
+              "p3",
+              "helper5",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "b0",
+              "b1",
+              "b3",
+              "p2",
+              "b4"
+            ]
+          ],
+          "helper": "helper5",
+          "helper_out_names": [
+            "p3"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 3053,
+              "H": 2775,
+              "defect": 278
+            },
+            {
+              "F_root": 16380,
+              "H": 6045,
+              "defect": 10335
+            },
+            {
+              "F_root": 4093,
+              "H": 3785,
+              "defect": 308
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p3",
+            "b2"
+          ],
+          "pair_block_word": [
+            "p3",
+            "b2",
+            "r",
+            "p0",
+            "p1",
+            "b0",
+            "b1",
+            "b3",
+            "p2",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            640,
+            947,
+            631,
+            35,
+            579,
+            23,
+            1657,
+            1275,
+            337,
+            639
+          ],
+          "after_helper_deletion_rows": [
+            510,
+            508,
+            264,
+            272,
+            996,
+            460,
+            908,
+            268,
+            512,
+            175
+          ],
+          "after_second_rows": [
+            1534,
+            1532,
+            1288,
+            1296,
+            2020,
+            1484,
+            1932,
+            268,
+            1536,
+            1199,
+            128
+          ],
+          "birth_rows": [
+            1534,
+            1532,
+            1288,
+            400,
+            2020,
+            1484,
+            1932,
+            1284,
+            512,
+            1199,
+            264
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "p1",
+              "b3",
+              "helper6",
+              "p3",
+              "b0",
+              "b1",
+              "b2",
+              "p2",
+              "b4"
+            ],
+            [
+              "r",
+              "p0",
+              "p1",
+              "b3",
+              "p3",
+              "b0",
+              "b1",
+              "b2",
+              "p2",
+              "b4",
+              "helper6"
+            ]
+          ],
+          "helper": "helper6",
+          "helper_out_names": [
+            "b4",
+            "p3"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 3049,
+              "H": 2783,
+              "defect": 266
+            },
+            {
+              "F_root": 13367,
+              "H": 6257,
+              "defect": 7110
+            },
+            {
+              "F_root": 3013,
+              "H": 2765,
+              "defect": 248
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p3",
+            "b3"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "p1",
+            "b3",
+            "p3",
+            "b0",
+            "b1",
+            "b2",
+            "p2",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            528,
+            635,
+            995,
+            137,
+            1619,
+            531,
+            615,
+            1271,
+            273,
+            735
+          ],
+          "after_helper_deletion_rows": [
+            510,
+            508,
+            264,
+            272,
+            996,
+            396,
+            940,
+            268,
+            512,
+            175
+          ],
+          "after_second_rows": [
+            1534,
+            1532,
+            1288,
+            1296,
+            2020,
+            1420,
+            940,
+            1292,
+            512,
+            1199,
+            320
+          ],
+          "birth_rows": [
+            1534,
+            1532,
+            1288,
+            1296,
+            2020,
+            460,
+            1932,
+            1292,
+            1536,
+            1199,
+            32
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b1",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "b0",
+              "b3",
+              "p2",
+              "p3",
+              "b4",
+              "helper7"
+            ],
+            [
+              "b1",
+              "helper7",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "b0",
+              "b3",
+              "p2",
+              "p3",
+              "b4"
+            ]
+          ],
+          "helper": "helper7",
+          "helper_out_names": [
+            "b1"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 5087,
+              "H": 4605,
+              "defect": 482
+            },
+            {
+              "F_root": 17080,
+              "H": 6481,
+              "defect": 10599
+            },
+            {
+              "F_root": 5189,
+              "H": 4813,
+              "defect": 376
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b1",
+            "b2"
+          ],
+          "pair_block_word": [
+            "b1",
+            "b2",
+            "r",
+            "p0",
+            "p1",
+            "b0",
+            "b3",
+            "p2",
+            "p3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            528,
+            635,
+            995,
+            73,
+            1683,
+            35,
+            599,
+            1271,
+            337,
+            735
+          ],
+          "after_helper_deletion_rows": [
+            510,
+            508,
+            264,
+            272,
+            996,
+            268,
+            940,
+            300,
+            512,
+            175
+          ],
+          "after_second_rows": [
+            1534,
+            1532,
+            1288,
+            1296,
+            2020,
+            1292,
+            1964,
+            300,
+            512,
+            1199,
+            384
+          ],
+          "birth_rows": [
+            1534,
+            1532,
+            1288,
+            1296,
+            2020,
+            396,
+            1964,
+            1292,
+            1536,
+            1199,
+            32
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "p1",
+              "b0",
+              "b2",
+              "b1",
+              "b3",
+              "p2",
+              "p3",
+              "b4",
+              "helper8"
+            ],
+            [
+              "r",
+              "p0",
+              "p1",
+              "b0",
+              "b2",
+              "b1",
+              "helper8",
+              "b3",
+              "p2",
+              "p3",
+              "b4"
+            ]
+          ],
+          "helper": "helper8",
+          "helper_out_names": [
+            "b1"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 3741,
+              "H": 3311,
+              "defect": 430
+            },
+            {
+              "F_root": 14869,
+              "H": 6849,
+              "defect": 8020
+            },
+            {
+              "F_root": 4083,
+              "H": 3613,
+              "defect": 470
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b1",
+            "b3"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "p1",
+            "b0",
+            "b2",
+            "b1",
+            "b3",
+            "p2",
+            "p3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            528,
+            731,
+            995,
+            41,
+            711,
+            531,
+            1619,
+            1271,
+            273,
+            639
+          ],
+          "after_helper_deletion_rows": [
+            510,
+            508,
+            264,
+            272,
+            996,
+            268,
+            812,
+            364,
+            512,
+            175
+          ],
+          "after_second_rows": [
+            1534,
+            1532,
+            1288,
+            1296,
+            2020,
+            1292,
+            1836,
+            364,
+            1536,
+            1199,
+            128
+          ],
+          "birth_rows": [
+            1534,
+            1532,
+            1288,
+            1296,
+            2020,
+            1292,
+            940,
+            1324,
+            512,
+            1199,
+            320
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b3",
+              "helper9",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "b0",
+              "b1",
+              "p2",
+              "p3",
+              "b4"
+            ],
+            [
+              "b3",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "b0",
+              "b1",
+              "p2",
+              "p3",
+              "b4",
+              "helper9"
+            ]
+          ],
+          "helper": "helper9",
+          "helper_out_names": [
+            "b2",
+            "b4"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 5189,
+              "H": 4813,
+              "defect": 376
+            },
+            {
+              "F_root": 17080,
+              "H": 6481,
+              "defect": 10599
+            },
+            {
+              "F_root": 5087,
+              "H": 4605,
+              "defect": 482
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b2",
+            "b3"
+          ],
+          "pair_block_word": [
+            "b3",
+            "b2",
+            "r",
+            "p0",
+            "p1",
+            "b0",
+            "b1",
+            "p2",
+            "p3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            640,
+            731,
+            995,
+            1547,
+            663,
+            51,
+            593,
+            1271,
+            321,
+            751
+          ],
+          "after_helper_deletion_rows": [
+            510,
+            508,
+            264,
+            272,
+            484,
+            268,
+            812,
+            364,
+            512,
+            191
+          ],
+          "after_second_rows": [
+            1534,
+            1532,
+            1288,
+            1296,
+            1508,
+            1292,
+            1836,
+            1388,
+            512,
+            191,
+            768
+          ],
+          "birth_rows": [
+            1534,
+            1532,
+            1288,
+            1296,
+            996,
+            1292,
+            1836,
+            1388,
+            1536,
+            1199,
+            16
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b0",
+              "r",
+              "p0",
+              "p1",
+              "b3",
+              "b2",
+              "b1",
+              "p2",
+              "p3",
+              "b4",
+              "helper10"
+            ],
+            [
+              "b0",
+              "helper10",
+              "r",
+              "p0",
+              "p1",
+              "b3",
+              "b2",
+              "b1",
+              "p2",
+              "p3",
+              "b4"
+            ]
+          ],
+          "helper": "helper10",
+          "helper_out_names": [
+            "b0"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 3527,
+              "H": 3327,
+              "defect": 200
+            },
+            {
+              "F_root": 20435,
+              "H": 8361,
+              "defect": 12074
+            },
+            {
+              "F_root": 2817,
+              "H": 2649,
+              "defect": 168
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b0",
+            "r"
+          ],
+          "pair_block_word": [
+            "b0",
+            "r",
+            "p0",
+            "p1",
+            "b3",
+            "b2",
+            "b1",
+            "p2",
+            "p3",
+            "b4"
+          ]
+        }
+      ],
+      "source_H": 325,
+      "source_prefix": [
+        "p0",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "source_root_F": 337,
+      "source_rows": [
+        510,
+        508,
+        504,
+        496,
+        992,
+        448,
+        896,
+        256,
+        512,
+        175
+      ],
+      "target_H": 979,
+      "target_prefix": [
+        "p0",
+        "p1"
+      ],
+      "target_root_F": 1025,
+      "target_rows": [
+        510,
+        508,
+        264,
+        272,
+        484,
+        268,
+        812,
+        364,
+        512,
+        191
+      ],
+      "target_suffix_names": [
+        "p2",
+        "p3",
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "temporary_births": 11
+    },
+    {
+      "case": "bulk",
+      "clock": 5,
+      "completed_adjacency_root_observers": [
+        {
+          "F_root": 673,
+          "H": 661,
+          "defect": 12
+        },
+        {
+          "F_root": 987,
+          "H": 951,
+          "defect": 36
+        },
+        {
+          "F_root": 1333,
+          "H": 1277,
+          "defect": 56
+        },
+        {
+          "F_root": 1633,
+          "H": 1553,
+          "defect": 80
+        },
+        {
+          "F_root": 2305,
+          "H": 2185,
+          "defect": 120
+        },
+        {
+          "F_root": 2183,
+          "H": 2079,
+          "defect": 104
+        },
+        {
+          "F_root": 2095,
+          "H": 1999,
+          "defect": 96
+        },
+        {
+          "F_root": 2169,
+          "H": 2085,
+          "defect": 84
+        },
+        {
+          "F_root": 2089,
+          "H": 1977,
+          "defect": 112
+        },
+        {
+          "F_root": 2089,
+          "H": 1977,
+          "defect": 112
+        },
+        {
+          "F_root": 2169,
+          "H": 2085,
+          "defect": 84
+        },
+        {
+          "F_root": 2033,
+          "H": 1987,
+          "defect": 46
+        }
+      ],
+      "completed_adjacency_strongness": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "helper_deletions": 11,
+      "names": [
+        "p0",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "r"
+      ],
+      "native_complements": 22,
+      "native_stage_strongness": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "peak_order": 12,
+      "permanent_births": 0,
+      "program": [
+        {
+          "after_first_rows": [
+            2,
+            1028,
+            1041,
+            3111,
+            1099,
+            1047,
+            1199,
+            319,
+            1663,
+            2303,
+            641,
+            1527
+          ],
+          "after_helper_deletion_rows": [
+            1022,
+            1020,
+            1016,
+            976,
+            992,
+            1992,
+            896,
+            1792,
+            512,
+            1024,
+            351
+          ],
+          "after_second_rows": [
+            3070,
+            3068,
+            3064,
+            3024,
+            3040,
+            1992,
+            2944,
+            3840,
+            2560,
+            1024,
+            2399,
+            544
+          ],
+          "birth_rows": [
+            3070,
+            3068,
+            3064,
+            1008,
+            3040,
+            4032,
+            2944,
+            3840,
+            2560,
+            3072,
+            2399,
+            8
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "p3",
+              "b0",
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "p4",
+              "b1",
+              "b2",
+              "b3",
+              "b4",
+              "helper0"
+            ],
+            [
+              "p3",
+              "helper0",
+              "b0",
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "p4",
+              "b1",
+              "b2",
+              "b3",
+              "b4"
+            ]
+          ],
+          "helper": "helper0",
+          "helper_out_names": [
+            "p3"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 7113,
+              "H": 6861,
+              "defect": 252
+            },
+            {
+              "F_root": 42118,
+              "H": 18519,
+              "defect": 23599
+            },
+            {
+              "F_root": 5683,
+              "H": 5573,
+              "defect": 110
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p3",
+            "b0"
+          ],
+          "pair_block_word": [
+            "p3",
+            "b0",
+            "r",
+            "p0",
+            "p1",
+            "p2",
+            "p4",
+            "b1",
+            "b2",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            1028,
+            1089,
+            1079,
+            1063,
+            135,
+            3131,
+            351,
+            1663,
+            2303,
+            673,
+            1471
+          ],
+          "after_helper_deletion_rows": [
+            1022,
+            1020,
+            1016,
+            912,
+            992,
+            1992,
+            904,
+            1792,
+            512,
+            1024,
+            351
+          ],
+          "after_second_rows": [
+            3070,
+            3068,
+            3064,
+            2960,
+            3040,
+            4040,
+            904,
+            3840,
+            2560,
+            3072,
+            2399,
+            64
+          ],
+          "birth_rows": [
+            3070,
+            3068,
+            3064,
+            976,
+            3040,
+            4040,
+            2944,
+            3840,
+            2560,
+            1024,
+            2399,
+            520
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b1",
+              "helper1",
+              "p3",
+              "p4",
+              "b0",
+              "b2",
+              "b3",
+              "b4"
+            ],
+            [
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b1",
+              "p3",
+              "p4",
+              "b0",
+              "b2",
+              "b3",
+              "b4",
+              "helper1"
+            ]
+          ],
+          "helper": "helper1",
+          "helper_out_names": [
+            "b4",
+            "p3"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 5683,
+              "H": 5437,
+              "defect": 246
+            },
+            {
+              "F_root": 39326,
+              "H": 17905,
+              "defect": 21421
+            },
+            {
+              "F_root": 5709,
+              "H": 5457,
+              "defect": 252
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p3",
+            "b1"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "p1",
+            "p2",
+            "b1",
+            "p3",
+            "p4",
+            "b0",
+            "b2",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            1028,
+            1041,
+            3303,
+            1067,
+            71,
+            1303,
+            1143,
+            1727,
+            2303,
+            545,
+            1527
+          ],
+          "after_helper_deletion_rows": [
+            1022,
+            1020,
+            1016,
+            784,
+            992,
+            1992,
+            904,
+            1800,
+            512,
+            1024,
+            351
+          ],
+          "after_second_rows": [
+            3070,
+            3068,
+            3064,
+            2832,
+            3040,
+            4040,
+            2952,
+            1800,
+            2560,
+            1024,
+            2399,
+            640
+          ],
+          "birth_rows": [
+            3070,
+            3068,
+            3064,
+            912,
+            3040,
+            4040,
+            2952,
+            3840,
+            2560,
+            3072,
+            2399,
+            8
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "p3",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "p4",
+              "b0",
+              "b1",
+              "b3",
+              "b4",
+              "helper2"
+            ],
+            [
+              "p3",
+              "helper2",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "p4",
+              "b0",
+              "b1",
+              "b3",
+              "b4"
+            ]
+          ],
+          "helper": "helper2",
+          "helper_out_names": [
+            "p3"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 5237,
+              "H": 5003,
+              "defect": 234
+            },
+            {
+              "F_root": 38602,
+              "H": 15133,
+              "defect": 23469
+            },
+            {
+              "F_root": 5653,
+              "H": 5415,
+              "defect": 238
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p3",
+            "b2"
+          ],
+          "pair_block_word": [
+            "p3",
+            "b2",
+            "r",
+            "p0",
+            "p1",
+            "p2",
+            "p4",
+            "b0",
+            "b1",
+            "b3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            1028,
+            1281,
+            1271,
+            1063,
+            71,
+            1175,
+            567,
+            3323,
+            2431,
+            673,
+            1279
+          ],
+          "after_helper_deletion_rows": [
+            1022,
+            1020,
+            1016,
+            528,
+            992,
+            1992,
+            904,
+            1800,
+            520,
+            1024,
+            351
+          ],
+          "after_second_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            3040,
+            4040,
+            2952,
+            3848,
+            520,
+            3072,
+            2399,
+            256
+          ],
+          "birth_rows": [
+            3070,
+            3068,
+            3064,
+            784,
+            3040,
+            4040,
+            2952,
+            3848,
+            2560,
+            1024,
+            2399,
+            520
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b3",
+              "helper3",
+              "p3",
+              "p4",
+              "b0",
+              "b1",
+              "b2",
+              "b4"
+            ],
+            [
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b3",
+              "p3",
+              "p4",
+              "b0",
+              "b1",
+              "b2",
+              "b4",
+              "helper3"
+            ]
+          ],
+          "helper": "helper3",
+          "helper_out_names": [
+            "b4",
+            "p3"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 5395,
+              "H": 5121,
+              "defect": 274
+            },
+            {
+              "F_root": 44430,
+              "H": 18709,
+              "defect": 25721
+            },
+            {
+              "F_root": 4957,
+              "H": 4705,
+              "defect": 252
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p3",
+            "b3"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "p1",
+            "p2",
+            "b3",
+            "p3",
+            "p4",
+            "b0",
+            "b1",
+            "b2",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            1028,
+            1089,
+            1767,
+            1071,
+            135,
+            3123,
+            343,
+            1151,
+            2551,
+            673,
+            1471
+          ],
+          "after_helper_deletion_rows": [
+            1022,
+            1020,
+            1016,
+            528,
+            928,
+            1992,
+            920,
+            1800,
+            520,
+            1024,
+            351
+          ],
+          "after_second_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            2976,
+            4040,
+            920,
+            3848,
+            2568,
+            3072,
+            2399,
+            64
+          ],
+          "birth_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            992,
+            4040,
+            2952,
+            3848,
+            2568,
+            1024,
+            2399,
+            528
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b1",
+              "helper4",
+              "p4",
+              "b0",
+              "b2",
+              "b3",
+              "p3",
+              "b4"
+            ],
+            [
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b1",
+              "p4",
+              "b0",
+              "b2",
+              "b3",
+              "p3",
+              "b4",
+              "helper4"
+            ]
+          ],
+          "helper": "helper4",
+          "helper_out_names": [
+            "b4",
+            "p4"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 8239,
+              "H": 7801,
+              "defect": 438
+            },
+            {
+              "F_root": 54266,
+              "H": 24827,
+              "defect": 29439
+            },
+            {
+              "F_root": 9957,
+              "H": 9427,
+              "defect": 530
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p4",
+            "b1"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "p1",
+            "p2",
+            "b1",
+            "p4",
+            "b0",
+            "b2",
+            "b3",
+            "p3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            1028,
+            1057,
+            1767,
+            3279,
+            83,
+            1287,
+            1127,
+            1215,
+            2551,
+            545,
+            1519
+          ],
+          "after_helper_deletion_rows": [
+            1022,
+            1020,
+            1016,
+            528,
+            800,
+            1992,
+            920,
+            1816,
+            520,
+            1024,
+            351
+          ],
+          "after_second_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            2848,
+            4040,
+            2968,
+            1816,
+            2568,
+            1024,
+            2399,
+            640
+          ],
+          "birth_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            928,
+            4040,
+            2968,
+            3848,
+            2568,
+            3072,
+            2399,
+            16
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "p4",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b0",
+              "b1",
+              "b3",
+              "p3",
+              "b4",
+              "helper5"
+            ],
+            [
+              "p4",
+              "helper5",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b0",
+              "b1",
+              "b3",
+              "p3",
+              "b4"
+            ]
+          ],
+          "helper": "helper5",
+          "helper_out_names": [
+            "p4"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 6045,
+              "H": 5767,
+              "defect": 278
+            },
+            {
+              "F_root": 46773,
+              "H": 15981,
+              "defect": 30792
+            },
+            {
+              "F_root": 8133,
+              "H": 7825,
+              "defect": 308
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p4",
+            "b2"
+          ],
+          "pair_block_word": [
+            "p4",
+            "b2",
+            "r",
+            "p0",
+            "p1",
+            "p2",
+            "b0",
+            "b1",
+            "b3",
+            "p3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            1028,
+            1281,
+            1895,
+            1263,
+            71,
+            1159,
+            47,
+            3315,
+            2551,
+            673,
+            1279
+          ],
+          "after_helper_deletion_rows": [
+            1022,
+            1020,
+            1016,
+            528,
+            544,
+            1992,
+            920,
+            1816,
+            536,
+            1024,
+            351
+          ],
+          "after_second_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            2592,
+            4040,
+            2968,
+            3864,
+            536,
+            3072,
+            2399,
+            256
+          ],
+          "birth_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            800,
+            4040,
+            2968,
+            3864,
+            2568,
+            1024,
+            2399,
+            528
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b3",
+              "helper6",
+              "p4",
+              "b0",
+              "b1",
+              "b2",
+              "p3",
+              "b4"
+            ],
+            [
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b3",
+              "p4",
+              "b0",
+              "b1",
+              "b2",
+              "p3",
+              "b4",
+              "helper6"
+            ]
+          ],
+          "helper": "helper6",
+          "helper_out_names": [
+            "b4",
+            "p4"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 6065,
+              "H": 5799,
+              "defect": 266
+            },
+            {
+              "F_root": 41702,
+              "H": 18163,
+              "defect": 23539
+            },
+            {
+              "F_root": 5953,
+              "H": 5705,
+              "defect": 248
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "p4",
+            "b3"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "p1",
+            "p2",
+            "b3",
+            "p4",
+            "b0",
+            "b1",
+            "b2",
+            "p3",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            1028,
+            1057,
+            1271,
+            1991,
+            275,
+            3239,
+            1063,
+            1231,
+            2543,
+            545,
+            1471
+          ],
+          "after_helper_deletion_rows": [
+            1022,
+            1020,
+            1016,
+            528,
+            544,
+            1992,
+            792,
+            1880,
+            536,
+            1024,
+            351
+          ],
+          "after_second_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            2592,
+            4040,
+            2840,
+            1880,
+            2584,
+            1024,
+            2399,
+            640
+          ],
+          "birth_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            2592,
+            4040,
+            920,
+            3864,
+            2584,
+            3072,
+            2399,
+            64
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b1",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b0",
+              "b3",
+              "p3",
+              "p4",
+              "b4",
+              "helper7"
+            ],
+            [
+              "b1",
+              "helper7",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b0",
+              "b3",
+              "p3",
+              "p4",
+              "b4"
+            ]
+          ],
+          "helper": "helper7",
+          "helper_out_names": [
+            "b1"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 10019,
+              "H": 9537,
+              "defect": 482
+            },
+            {
+              "F_root": 48488,
+              "H": 17161,
+              "defect": 31327
+            },
+            {
+              "F_root": 10293,
+              "H": 9917,
+              "defect": 376
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b1",
+            "b2"
+          ],
+          "pair_block_word": [
+            "b1",
+            "b2",
+            "r",
+            "p0",
+            "p1",
+            "p2",
+            "b0",
+            "b3",
+            "p3",
+            "p4",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            1028,
+            1057,
+            1271,
+            1991,
+            147,
+            3367,
+            71,
+            1199,
+            2543,
+            673,
+            1471
+          ],
+          "after_helper_deletion_rows": [
+            1022,
+            1020,
+            1016,
+            528,
+            544,
+            1992,
+            536,
+            1880,
+            600,
+            1024,
+            351
+          ],
+          "after_second_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            2592,
+            4040,
+            2584,
+            3928,
+            600,
+            1024,
+            2399,
+            768
+          ],
+          "birth_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            2592,
+            4040,
+            792,
+            3928,
+            2584,
+            3072,
+            2399,
+            64
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b0",
+              "b2",
+              "b1",
+              "b3",
+              "p3",
+              "p4",
+              "b4",
+              "helper8"
+            ],
+            [
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b0",
+              "b2",
+              "b1",
+              "helper8",
+              "b3",
+              "p3",
+              "p4",
+              "b4"
+            ]
+          ],
+          "helper": "helper8",
+          "helper_out_names": [
+            "b1"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 7377,
+              "H": 6947,
+              "defect": 430
+            },
+            {
+              "F_root": 45456,
+              "H": 19463,
+              "defect": 25993
+            },
+            {
+              "F_root": 8107,
+              "H": 7637,
+              "defect": 470
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b1",
+            "b3"
+          ],
+          "pair_block_word": [
+            "r",
+            "p0",
+            "p1",
+            "p2",
+            "b0",
+            "b2",
+            "b1",
+            "b3",
+            "p3",
+            "p4",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            1028,
+            1057,
+            1463,
+            1991,
+            83,
+            1423,
+            1063,
+            3239,
+            2543,
+            545,
+            1279
+          ],
+          "after_helper_deletion_rows": [
+            1022,
+            1020,
+            1016,
+            528,
+            544,
+            1992,
+            536,
+            1624,
+            728,
+            1024,
+            351
+          ],
+          "after_second_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            2592,
+            4040,
+            2584,
+            3672,
+            728,
+            3072,
+            2399,
+            256
+          ],
+          "birth_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            2592,
+            4040,
+            2584,
+            1880,
+            2648,
+            1024,
+            2399,
+            640
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b3",
+              "helper9",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b0",
+              "b1",
+              "p3",
+              "p4",
+              "b4"
+            ],
+            [
+              "b3",
+              "b2",
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b0",
+              "b1",
+              "p3",
+              "p4",
+              "b4",
+              "helper9"
+            ]
+          ],
+          "helper": "helper9",
+          "helper_out_names": [
+            "b2",
+            "b4"
+          ],
+          "inverse": true,
+          "native_root_observers": [
+            {
+              "F_root": 10293,
+              "H": 9917,
+              "defect": 376
+            },
+            {
+              "F_root": 48488,
+              "H": 17161,
+              "defect": 31327
+            },
+            {
+              "F_root": 10019,
+              "H": 9537,
+              "defect": 482
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b2",
+            "b3"
+          ],
+          "pair_block_word": [
+            "b3",
+            "b2",
+            "r",
+            "p0",
+            "p1",
+            "p2",
+            "b0",
+            "b1",
+            "p3",
+            "p4",
+            "b4"
+          ]
+        },
+        {
+          "after_first_rows": [
+            2,
+            1028,
+            1281,
+            1463,
+            1991,
+            3095,
+            1327,
+            103,
+            1187,
+            2543,
+            641,
+            1503
+          ],
+          "after_helper_deletion_rows": [
+            1022,
+            1020,
+            1016,
+            528,
+            544,
+            968,
+            536,
+            1624,
+            728,
+            1024,
+            383
+          ],
+          "after_second_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            2592,
+            3016,
+            2584,
+            3672,
+            2776,
+            1024,
+            383,
+            1536
+          ],
+          "birth_rows": [
+            3070,
+            3068,
+            3064,
+            2576,
+            2592,
+            1992,
+            2584,
+            3672,
+            2776,
+            3072,
+            2399,
+            32
+          ],
+          "case": "append",
+          "guards": [
+            [
+              "b0",
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b3",
+              "b2",
+              "b1",
+              "p3",
+              "p4",
+              "b4",
+              "helper10"
+            ],
+            [
+              "b0",
+              "helper10",
+              "r",
+              "p0",
+              "p1",
+              "p2",
+              "b3",
+              "b2",
+              "b1",
+              "p3",
+              "p4",
+              "b4"
+            ]
+          ],
+          "helper": "helper10",
+          "helper_out_names": [
+            "b0"
+          ],
+          "inverse": false,
+          "native_root_observers": [
+            {
+              "F_root": 6975,
+              "H": 6775,
+              "defect": 200
+            },
+            {
+              "F_root": 57828,
+              "H": 22083,
+              "defect": 35745
+            },
+            {
+              "F_root": 5617,
+              "H": 5449,
+              "defect": 168
+            }
+          ],
+          "native_stage_strongness": [
+            true,
+            true,
+            true
+          ],
+          "old_pair": [
+            "b0",
+            "r"
+          ],
+          "pair_block_word": [
+            "b0",
+            "r",
+            "p0",
+            "p1",
+            "p2",
+            "b3",
+            "b2",
+            "b1",
+            "p3",
+            "p4",
+            "b4"
+          ]
+        }
+      ],
+      "source_H": 661,
+      "source_prefix": [
+        "p0",
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "source_root_F": 673,
+      "source_rows": [
+        1022,
+        1020,
+        1016,
+        1008,
+        992,
+        1984,
+        896,
+        1792,
+        512,
+        1024,
+        351
+      ],
+      "target_H": 1987,
+      "target_prefix": [
+        "p0",
+        "p1",
+        "p2"
+      ],
+      "target_root_F": 2033,
+      "target_rows": [
+        1022,
+        1020,
+        1016,
+        528,
+        544,
+        968,
+        536,
+        1624,
+        728,
+        1024,
+        383
+      ],
+      "target_suffix_names": [
+        "p3",
+        "p4",
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "temporary_births": 11
+    }
+  ],
+  "core_rows": [
+    2,
+    4,
+    57,
+    3,
+    11,
+    27
+  ],
+  "empty_prefix_hostile": {
+    "clock": 2,
+    "required_3H_plus4": 223,
+    "source_H": 73,
+    "target_H": 219
+  },
+  "scope": "FINITE-EXACT native programs at t=1..5; all-t piecewise proof uses inherited compiler",
+  "source_formula": "21*2^t-11",
+  "source_sha256": "fea5f50b76d21b81b9d2312fbc6b9203ae3c465ea640c69e107acc67be824e96",
+  "suffix_rows": [
+    66,
+    68,
+    121,
+    67,
+    75,
+    91,
+    0
+  ],
+  "target_formula": "63*2^t-29",
+  "target_port_mask": 80,
+  "uniform_algorithm_domain": "all integers t>=1"
+}

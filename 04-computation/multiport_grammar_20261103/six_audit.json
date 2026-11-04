@@ -1,0 +1,959 @@
+{
+  "bank_sha256": "e2283995f5ec7b288f0883605035d4530adfc2e15f0d3929986fea69b3cf0b75",
+  "bank_signatures": 2120,
+  "bulk_at_original_clock_two": {
+    "actual": 219,
+    "outside_nonempty_prefix_domain": true,
+    "required": 223
+  },
+  "class_census": [
+    {
+      "classes": 1,
+      "labelled": 1,
+      "n": 1,
+      "strong_classes": 1,
+      "strong_labelled": 1
+    },
+    {
+      "classes": 1,
+      "labelled": 2,
+      "n": 2,
+      "strong_classes": 0,
+      "strong_labelled": 0
+    },
+    {
+      "classes": 2,
+      "labelled": 8,
+      "n": 3,
+      "strong_classes": 1,
+      "strong_labelled": 2
+    },
+    {
+      "classes": 4,
+      "labelled": 64,
+      "n": 4,
+      "strong_classes": 1,
+      "strong_labelled": 24
+    },
+    {
+      "classes": 12,
+      "labelled": 1024,
+      "n": 5,
+      "strong_classes": 6,
+      "strong_labelled": 544
+    },
+    {
+      "classes": 56,
+      "labelled": 32768,
+      "n": 6,
+      "strong_classes": 35,
+      "strong_labelled": 22320
+    }
+  ],
+  "decisions": [
+    {
+      "accepted": 0,
+      "address": "24",
+      "queries": [
+        {
+          "candidate_words": 19,
+          "f": 63,
+          "f_bound": 114067,
+          "h_bound": 4085,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 8,
+          "f": 126,
+          "f_bound": 114067,
+          "h_bound": 4085,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 14,
+          "f": 252,
+          "f_bound": 114067,
+          "h_bound": 4085,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 9,
+          "f": 504,
+          "f_bound": 114067,
+          "h_bound": 4085,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 22,
+          "f": 1008,
+          "f_bound": 114067,
+          "h_bound": 4085,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 24,
+          "f": 2016,
+          "f_bound": 114067,
+          "h_bound": 4085,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 95,
+          "f": 4032,
+          "f_bound": 114067,
+          "h_bound": 4085,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 106,
+          "f": 8064,
+          "f_bound": 114067,
+          "h_bound": 4085,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 208,
+          "f": 16128,
+          "f_bound": 114067,
+          "h_bound": 4085,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 300,
+          "f": 32256,
+          "f_bound": 114067,
+          "h_bound": 4085,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 488,
+          "f": 64512,
+          "f_bound": 114067,
+          "h_bound": 4085,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 19,
+          "f": 63,
+          "f_bound": 112885,
+          "h_bound": 4057,
+          "prefix": [
+            5,
+            1
+          ]
+        },
+        {
+          "candidate_words": 8,
+          "f": 126,
+          "f_bound": 112885,
+          "h_bound": 4057,
+          "prefix": [
+            5,
+            1
+          ]
+        },
+        {
+          "candidate_words": 14,
+          "f": 252,
+          "f_bound": 112885,
+          "h_bound": 4057,
+          "prefix": [
+            5,
+            1
+          ]
+        },
+        {
+          "candidate_words": 9,
+          "f": 504,
+          "f_bound": 112885,
+          "h_bound": 4057,
+          "prefix": [
+            5,
+            1
+          ]
+        },
+        {
+          "candidate_words": 22,
+          "f": 1008,
+          "f_bound": 112885,
+          "h_bound": 4057,
+          "prefix": [
+            5,
+            1
+          ]
+        },
+        {
+          "candidate_words": 24,
+          "f": 2016,
+          "f_bound": 112885,
+          "h_bound": 4057,
+          "prefix": [
+            5,
+            1
+          ]
+        },
+        {
+          "candidate_words": 95,
+          "f": 4032,
+          "f_bound": 112885,
+          "h_bound": 4057,
+          "prefix": [
+            5,
+            1
+          ]
+        },
+        {
+          "candidate_words": 106,
+          "f": 8064,
+          "f_bound": 112885,
+          "h_bound": 4057,
+          "prefix": [
+            5,
+            1
+          ]
+        },
+        {
+          "candidate_words": 208,
+          "f": 16128,
+          "f_bound": 112885,
+          "h_bound": 4057,
+          "prefix": [
+            5,
+            1
+          ]
+        },
+        {
+          "candidate_words": 300,
+          "f": 32256,
+          "f_bound": 112885,
+          "h_bound": 4057,
+          "prefix": [
+            5,
+            1
+          ]
+        },
+        {
+          "candidate_words": 488,
+          "f": 64512,
+          "f_bound": 112885,
+          "h_bound": 4057,
+          "prefix": [
+            5,
+            1
+          ]
+        }
+      ],
+      "signature_count": 0
+    },
+    {
+      "accepted": 1,
+      "address": "44",
+      "queries": [
+        {
+          "candidate_words": 19,
+          "f": 63,
+          "f_bound": 113813,
+          "h_bound": 4079,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 8,
+          "f": 126,
+          "f_bound": 113813,
+          "h_bound": 4079,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 14,
+          "f": 252,
+          "f_bound": 113813,
+          "h_bound": 4079,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 9,
+          "f": 504,
+          "f_bound": 113813,
+          "h_bound": 4079,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 22,
+          "f": 1008,
+          "f_bound": 113813,
+          "h_bound": 4079,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 24,
+          "f": 2016,
+          "f_bound": 113813,
+          "h_bound": 4079,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 95,
+          "f": 4032,
+          "f_bound": 113813,
+          "h_bound": 4079,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 106,
+          "f": 8064,
+          "f_bound": 113813,
+          "h_bound": 4079,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 208,
+          "f": 16128,
+          "f_bound": 113813,
+          "h_bound": 4079,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 300,
+          "f": 32256,
+          "f_bound": 113813,
+          "h_bound": 4079,
+          "prefix": [
+            1,
+            1
+          ]
+        },
+        {
+          "candidate_words": 488,
+          "f": 64512,
+          "f_bound": 113813,
+          "h_bound": 4079,
+          "prefix": [
+            1,
+            1
+          ]
+        }
+      ],
+      "signature_count": 1
+    }
+  ],
+  "gates": 3443,
+  "named_adjacency_rewrite": [
+    {
+      "observed": [
+        [
+          3,
+          157,
+          169,
+          12
+        ],
+        [
+          4,
+          325,
+          337,
+          12
+        ],
+        [
+          5,
+          661,
+          673,
+          12
+        ]
+      ],
+      "step": 0,
+      "suffix_sigma": [
+        1,
+        128,
+        84,
+        21,
+        12,
+        1,
+        0
+      ]
+    },
+    {
+      "observed": [
+        [
+          3,
+          213,
+          249,
+          36
+        ],
+        [
+          4,
+          459,
+          495,
+          36
+        ],
+        [
+          5,
+          951,
+          987,
+          36
+        ]
+      ],
+      "step": 1,
+      "suffix_sigma": [
+        3,
+        192,
+        123,
+        63,
+        36,
+        3,
+        1
+      ]
+    },
+    {
+      "observed": [
+        [
+          3,
+          281,
+          337,
+          56
+        ],
+        [
+          4,
+          613,
+          669,
+          56
+        ],
+        [
+          5,
+          1277,
+          1333,
+          56
+        ]
+      ],
+      "step": 2,
+      "suffix_sigma": [
+        5,
+        256,
+        166,
+        97,
+        56,
+        5,
+        2
+      ]
+    },
+    {
+      "observed": [
+        [
+          3,
+          335,
+          415,
+          80
+        ],
+        [
+          4,
+          741,
+          821,
+          80
+        ],
+        [
+          5,
+          1553,
+          1633,
+          80
+        ]
+      ],
+      "step": 3,
+      "suffix_sigma": [
+        9,
+        336,
+        203,
+        149,
+        80,
+        9,
+        5
+      ]
+    },
+    {
+      "observed": [
+        [
+          3,
+          469,
+          589,
+          120
+        ],
+        [
+          4,
+          1041,
+          1161,
+          120
+        ],
+        [
+          5,
+          2185,
+          2305,
+          120
+        ]
+      ],
+      "step": 4,
+      "suffix_sigma": [
+        17,
+        448,
+        286,
+        211,
+        120,
+        17,
+        10
+      ]
+    },
+    {
+      "observed": [
+        [
+          3,
+          453,
+          557,
+          104
+        ],
+        [
+          4,
+          995,
+          1099,
+          104
+        ],
+        [
+          5,
+          2079,
+          2183,
+          104
+        ]
+      ],
+      "step": 5,
+      "suffix_sigma": [
+        15,
+        432,
+        271,
+        187,
+        104,
+        15,
+        7
+      ]
+    },
+    {
+      "observed": [
+        [
+          3,
+          439,
+          535,
+          96
+        ],
+        [
+          4,
+          959,
+          1055,
+          96
+        ],
+        [
+          5,
+          1999,
+          2095,
+          96
+        ]
+      ],
+      "step": 6,
+      "suffix_sigma": [
+        15,
+        432,
+        260,
+        185,
+        96,
+        15,
+        6
+      ]
+    },
+    {
+      "observed": [
+        [
+          3,
+          471,
+          555,
+          84
+        ],
+        [
+          4,
+          1009,
+          1093,
+          84
+        ],
+        [
+          5,
+          2085,
+          2169,
+          84
+        ]
+      ],
+      "step": 7,
+      "suffix_sigma": [
+        17,
+        448,
+        269,
+        167,
+        84,
+        17,
+        5
+      ]
+    },
+    {
+      "observed": [
+        [
+          3,
+          423,
+          535,
+          112
+        ],
+        [
+          4,
+          941,
+          1053,
+          112
+        ],
+        [
+          5,
+          1977,
+          2089,
+          112
+        ]
+      ],
+      "step": 8,
+      "suffix_sigma": [
+        17,
+        448,
+        259,
+        217,
+        112,
+        17,
+        9
+      ]
+    },
+    {
+      "observed": [
+        [
+          3,
+          423,
+          535,
+          112
+        ],
+        [
+          4,
+          941,
+          1053,
+          112
+        ],
+        [
+          5,
+          1977,
+          2089,
+          112
+        ]
+      ],
+      "step": 9,
+      "suffix_sigma": [
+        17,
+        448,
+        259,
+        217,
+        112,
+        17,
+        9
+      ]
+    },
+    {
+      "observed": [
+        [
+          3,
+          471,
+          555,
+          84
+        ],
+        [
+          4,
+          1009,
+          1093,
+          84
+        ],
+        [
+          5,
+          2085,
+          2169,
+          84
+        ]
+      ],
+      "step": 10,
+      "suffix_sigma": [
+        17,
+        448,
+        269,
+        167,
+        84,
+        17,
+        5
+      ]
+    },
+    {
+      "observed": [
+        [
+          3,
+          475,
+          521,
+          46
+        ],
+        [
+          4,
+          979,
+          1025,
+          46
+        ],
+        [
+          5,
+          1987,
+          2033,
+          46
+        ]
+      ],
+      "step": 11,
+      "suffix_sigma": [
+        17,
+        448,
+        252,
+        105,
+        46,
+        17,
+        4
+      ]
+    }
+  ],
+  "raw_six_port_cases": 2240,
+  "scope": "Complete <=6 atom quotient and all-shifts24/44 scalar decisions; named strong11-flip44 rewrite for t>=3. No native or reusable closure claim.",
+  "six_signatures": 1950,
+  "status": "INDEPENDENT ANALYTIC/SOURCE/FINITE-EXACT AUDIT PASS",
+  "supplier_receipt_sha256": "1a57397d99deacf460d6e7c01f80da705b0304240d0fec363108cedb5bc4d951",
+  "supplier_source_sha256": "ed295d2f7ce1a7815a7c377ede9544f3118efe3736458d1fc921d460c21900ba",
+  "tree_audit": {
+    "complete_tree": true,
+    "decisions": [
+      {
+        "accepted_signatures": 2,
+        "accepted_words": 2,
+        "address": "2"
+      },
+      {
+        "accepted_signatures": 2,
+        "accepted_words": 2,
+        "address": "4"
+      },
+      {
+        "accepted_signatures": 2,
+        "accepted_words": 2,
+        "address": "22"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "24"
+      },
+      {
+        "accepted_signatures": 1,
+        "accepted_words": 1,
+        "address": "42"
+      },
+      {
+        "accepted_signatures": 1,
+        "accepted_words": 1,
+        "address": "44"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "222"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "224"
+      },
+      {
+        "accepted_signatures": 1,
+        "accepted_words": 1,
+        "address": "422"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "424"
+      },
+      {
+        "accepted_signatures": 6,
+        "accepted_words": 6,
+        "address": "442"
+      },
+      {
+        "accepted_signatures": 2,
+        "accepted_words": 2,
+        "address": "444"
+      },
+      {
+        "accepted_signatures": 2,
+        "accepted_words": 2,
+        "address": "4222"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "4224"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "4422"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "4424"
+      },
+      {
+        "accepted_signatures": 1,
+        "accepted_words": 1,
+        "address": "4442"
+      },
+      {
+        "accepted_signatures": 2,
+        "accepted_words": 2,
+        "address": "4444"
+      },
+      {
+        "accepted_signatures": 1,
+        "accepted_words": 1,
+        "address": "42222"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "42224"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "44422"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "44424"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "44442"
+      },
+      {
+        "accepted_signatures": 1,
+        "accepted_words": 1,
+        "address": "44444"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "422222"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "422224"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "444442"
+      },
+      {
+        "accepted_signatures": 0,
+        "accepted_words": 0,
+        "address": "444444"
+      }
+    ],
+    "producer_candidate_visits": 43939,
+    "producer_queries": 288,
+    "receipt_sha256": "53e6eaf99e78acff793c24525338e25776c65f90a24ed147ca067caee87d0dc0",
+    "source_sha256": "cfb8e65193a9db580ab0613ec57f07439e3a236e2b2dd1b14b54a29621881d45",
+    "states": [
+      "",
+      "2",
+      "22",
+      "4",
+      "42",
+      "422",
+      "4222",
+      "42222",
+      "44",
+      "442",
+      "444",
+      "4442",
+      "4444",
+      "44444"
+    ],
+    "wider_queries": 324
+  },
+  "wider_queries": 33
+}

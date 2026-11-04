@@ -1,7 +1,7 @@
 # Frozen reproduction record
 
 2026-11-03. **FINITE-EXACT** producer replay; the unbounded proof in `PROOF.md`
-remains **RESERVED** until independently audited. No finite experiment is used
+is **PROVED** following the [independent audit](AUDIT.md). No finite experiment is used
 as the proof of its arbitrary-block classification.
 
 Commands, from the worktree root:
