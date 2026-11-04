@@ -1,0 +1,1 @@
+{"B7_feedback_arc_number": 3, "B7_proper_nontrivial_modules": [[0, 3]], "contexts_each_side": 75, "literal_signatures": {"24": [35, 676, 252, 267, 70, 13, 14], "44": [89, 2144, 504, 627, 118, 17, 24]}, "ordered_context_controls": 11250, "scope": "General all-order context obstruction proved in PROOF.md; finite controls are not its proof.", "status": "PASS"}
