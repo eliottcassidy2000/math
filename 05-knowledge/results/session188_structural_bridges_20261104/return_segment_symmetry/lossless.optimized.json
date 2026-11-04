@@ -1,0 +1,169 @@
+{
+  "checker_sha256": "e50b23ccc8694e5210c005d1cac9a8b8d1897e59d068adce63dff1371f6f7dd1",
+  "complete_outputs": [
+    {
+      "bytes": 2724427,
+      "file": "normal.json",
+      "group": 0,
+      "sha256": "ad4d7da87766ce6f62439647fc8150d76eca629f051c96ac68b1744b070ef28b"
+    },
+    {
+      "bytes": 2724427,
+      "file": "optimized.json",
+      "group": 0,
+      "sha256": "ad4d7da87766ce6f62439647fc8150d76eca629f051c96ac68b1744b070ef28b"
+    }
+  ],
+  "complete_raw_bytes": 5448854,
+  "groups": 1,
+  "isolated_controls": [
+    {
+      "mode": "fresh",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "fresh",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": true,
+      "passed": true
+    }
+  ],
+  "package": "return_segment_symmetry",
+  "package_sha256": {
+    "REASSEMBLY.json": "431c11f71f55b2fee3173f4ad4f725fd9aaad21d5d385818a7a72e295e880b6c",
+    "REASSEMBLY.md": "be0f4abd6c287f06f4b4928d9cef4d3f5ca61f49659baf0fa285905f636f577f",
+    "full_records_00.json.gz.b64.part000": "1d23bf98affbfa857782ceb662ec1b7cc9e9fb11181ee6dc102b3010c3fbe1b9",
+    "full_records_00.json.gz.b64.part001": "63dac1607c0d913354fc1ad85f385a6dde5a8a037d5bfe9ffdb157a1d83f5e6b",
+    "full_records_00.json.gz.b64.part002": "4410c8cebd1b6d2d8c02f5b69bd39697f695b964ff06ff1e09b60a02ac7250dd",
+    "reassemble.py": "6f83b6c4f13d7e31dd6dc4d1e2ae66dc810309d35da9f29c26d36a7ad0a1ef5c"
+  },
+  "parts": 3,
+  "reassembler_normalized_ast_sha256": "3f640f8fd33dec4ce19c1d81e92f03c21bbac47452af6382f5cb942c5ee88d14",
+  "status": "PASS",
+  "validated_existing_manifests": [
+    {
+      "file": "PROOF.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "1990b8614f3af232e49a565df1082abfe98add90d99e0e465262dea5b5a4f92f"
+    },
+    {
+      "file": "verify.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "d44be01b06b07a6753df3e2faa2b101236846842e2375e1a55a383111419de27"
+    },
+    {
+      "file": "normal.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "ad4d7da87766ce6f62439647fc8150d76eca629f051c96ac68b1744b070ef28b"
+    },
+    {
+      "file": "optimized.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "ad4d7da87766ce6f62439647fc8150d76eca629f051c96ac68b1744b070ef28b"
+    }
+  ],
+  "validated_mathematical_receipt_pins": {
+    "return_segment_symmetry/PROOF.md": "1990b8614f3af232e49a565df1082abfe98add90d99e0e465262dea5b5a4f92f",
+    "return_segment_symmetry/verify.py": "d44be01b06b07a6753df3e2faa2b101236846842e2375e1a55a383111419de27"
+  }
+}
