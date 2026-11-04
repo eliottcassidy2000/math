@@ -1,0 +1,5 @@
+order 4: unique-HC tournaments 1; exactly-two-HC tournaments 0; arc differences []; #vertices of out-degree 1 among two-HC tournaments []
+order 5: unique-HC tournaments 3; exactly-two-HC tournaments 2; arc differences [(3, 1), (5, 1)]; #vertices of out-degree 1 among two-HC tournaments [(0, 1), (1, 1)]
+order 6: unique-HC tournaments 8; exactly-two-HC tournaments 5; arc differences [(3, 5)]; #vertices of out-degree 1 among two-HC tournaments [(1, 4), (2, 1)]
+order 7: unique-HC tournaments 21; exactly-two-HC tournaments 18; arc differences [(3, 18)]; #vertices of out-degree 1 among two-HC tournaments [(1, 12), (2, 6)]
+order 8: unique-HC tournaments 55; exactly-two-HC tournaments 60; arc differences [(3, 60)]; #vertices of out-degree 1 among two-HC tournaments [(1, 36), (2, 24)]
