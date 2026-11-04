@@ -38,7 +38,7 @@ Deleting the edge between the two consecutive path slots proves this identity. E
 
 The separate `search.cpp` exhausts the same frozen source suffix, zero/one/two internal reversals, every nonempty actual port set W, and every transitive prefix clock. There are4187 edits,3946 strong suffixes and51 target hits:25 for1537277 and26 for1537279. There is no hit for the exact clock-uniform pairs(c,F)=(44681,373149) or(44683,373149). This is the same menu also searched by the session's closure packet, not a second independent audit.
 
-The clock enumeration is complete because J_W≤F_W implies H≥h+(2^s−1)F_W and the tested targets are below2^21. Four +4 hits retain at least the two old prefix names; one particularly small port set has flip indices66,73, W6144, s3, h58063,F190302,J43200. Its physical ports are40,54. The session's closure packet owns construction and native auditing of selected numerical children. The census alone gives neither native programs nor uniform affine closure.
+The clock enumeration is complete because J_W≤F_W implies H≥h+(2^s−1)F_W and the tested targets are below2^21. Four +4 hits retain at least the two old prefix names; one particularly small port set has flip indices66,73, W6144, s3, h58063,F190302,J43200. Its physical ports are33,40. The session's closure packet owns construction and native auditing of selected numerical children. The census alone gives neither native programs nor uniform affine closure.
 
 ## Reproduction and limits
 

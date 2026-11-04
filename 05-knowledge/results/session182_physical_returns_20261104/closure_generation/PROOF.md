@@ -1,6 +1,6 @@
 # A further partial generation on the literal defect-carrying lineage
 
-**FINITE-EXACT candidate endpoints and bounded menu. This is not an indefinitely reusable two-digit grammar.**
+**FINITE-EXACT native-certified endpoints and bounded menu. This is not an indefinitely reusable two-digit grammar.**
 
 The two sources are the actual18-name outputs in `../closure/candidate2.json` and `../closure/candidate4.json`. Both retain the original17 names and prefix55. Their counts are1537277 and1537279; root39's respective defects are0 and43200. They are not replaced by other representatives having the same H.
 
@@ -12,7 +12,7 @@ Suffixes have the same14-name order as the source packet. All three following wi
 - Word24:1537277→4611835. Suffix h73531, sole port6,F567288,J0. Thus H=73531+8·567288=4611835; root39 is zero-ready.
 - Word42:1537279→4611839. Suffix h33747, ports{14,21,31},F577633,J42972,c=−9225. Thus H=−9225+8·577633=4611839.
 
-The suffix changes are respectively{8,14}/{32,33}; {1,54}/{33,54}; and{14,32}/{21,32}. Root-star changes are exactly the symmetric difference between each parent's actual port set and the displayed child's. No field phase is copied from the parent. The literal guard schedule and actual-state phase audit belong to the independent audit packet when supplied; these endpoint candidates alone do not assert native legality.
+The suffix changes are respectively{8,14}/{32,33}; {1,54}/{33,54}; and{14,32}/{21,32}. Root-star changes are exactly the symmetric difference between each parent's actual port set and the displayed child's. No field phase is copied from the parent. The completed [independent audit](../generation_audit/REPORT.md) certifies literal native schedules using14,8,14 Hamilton-path complements and7,4,7 temporary helpers for22,24,42, respectively. All helpers are deleted, every completed repair is strong, and no permanent birth or deletion occurs. Its exact named endpoint and joint responses are recomputed from the current matrices; no ancestor field phase is copied. The recorded directed schedules, not arbitrary orders of the unordered pair lists, supply the native legality claims.
 
 ## 2. Complete transitive-prefix menus
 
