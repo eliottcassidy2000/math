@@ -1,7 +1,7 @@
 ---
 id: HYP-9460
 title: "The non-critical run of a uniquely Hamiltonian tournament: pre-registered exhaustive checks at orders 14-18 of the structure proved for THM-4868 (local roundness; one run from a sole entry to a sole exit; #cut arcs + #non-critical vertices = n + 1; the refined Fibonacci counts by numbers of sole exits and sole entries; asymmetry), and the conjectured run-length recurrence N(n, r) = N(n - 1, r) + 2 N(n - 1, r - 1) - N(n - 2, r - 1), equivalently T(n, k) = T(n - 1, k - 1) + 2 T(n - 1, k) - T(n - 2, k - 1) for HYP-9458's cut-arc table"
-status: CLOSED (kind-pasteur-2026-11-04-S10) - P1-P8 CONFIRMED at orders 14-18 (pre-registered in a8db6218f9 before the run); P7 (run-length recurrence) then PROVED as THM-4868 (H)
+status: CLOSED (kind-pasteur-2026-11-04-S10) - P1-P8 CONFIRMED at orders 14-18 (pre-registered in a8db6218f9 before the run); P7 (run-length recurrence) then PROVED, first via opus-S74's audit proof of HYP-9458 with (C) given Shelor's grammar, and independently (Shelor-free) as THM-4868 (H)
 session: kind-pasteur-2026-11-04-S10
 date: 2026-11-04
 related: [THM-4868, THM-4867, HYP-9458, HYP-9457, HYP-9459, THM-4866, THM-4862, THM-4846]
@@ -94,14 +94,17 @@ Output: `04-computation/experiments/uh_noncritical_run_20261104_confirm.out`.
 - **(P8) CONFIRMED.** `no_one_arc_cut = 0` at every order. At order 14, `hc_xcheck_bad = 0` and
   `bruteforce_cut_bad = 0`.
 
-**After the pre-registration: P7 is now PROVED.** During the run the recurrence was proved as THM-4868 (H). The proof
-uses the admissible-parent structure THM-4868 (G):
+**After the pre-registration: P7 is now PROVED, twice.**
+- First, opus-S74's independent audit proved HYP-9458's generating function (`a0518f53cd`, 12:51), given Shelor's
+  grammar, and noted that P7 follows from it with (C).
+- Independently, during this run, the recurrence was proved as THM-4868 (H) without Shelor's grammar. That proof uses
+  the admissible-parent structure THM-4868 (G):
 - the vertices p with e_p(T) = 1 are y, y- and (when y- is a sole entry) y--;
 - their children have run lengths r, r + 1 and r + 2.
 
 (G) and (H) were first observed on all parents of order <= 12, then proved, and are checked on every parent of order
 <= 14 by `04-computation/experiments/shelor_parents_20261104.c`. Through THM-4868 (D), every fitted formula of
-opus-S74's HYP-9458 follows.
+opus-S74's HYP-9458 follows again, by this second route.
 
 The blind order-17 confirmation preceded the proof. The order-18 confirmation ran in parallel with it and checks the
 proof.

@@ -7,8 +7,10 @@ status: >
     opus-2026-11-04-S74, which this theorem defers to for the statement;
   - (G) re-derives KNOWN results: Garey 1972's F(2n - 6) (also Moon 1982) and the completeness of Shelor 1977's
     insertion;
-  - (H) proves opus-S74's HYP-9458 (conjectured and confirmed at orders 14-16 there) and this session's pre-registered
-    HYP-9460 P7.
+  - (H) gives a second, Shelor-free proof of opus-S74's HYP-9458 and of this session's pre-registered HYP-9460 P7.
+    HYP-9458 was conjectured and confirmed at orders 14-16 by opus-S74, and first PROVED by its independent audit
+    (a0518f53cd), given Shelor's grammar: the count law k = 3 + #{b, e} - #{c}, whose parent letters j = 0, 1, 2 are
+    (G)'s y, y-, y--. That audit noted that P7 follows from it with (C).
   CITED: Moon 1966 (a strong tournament of order n >= 4 has a strong subtournament of order n - 1), Camion 1959,
   Garey 1972 (F(2n - 6); re-derived in (G), used nowhere), klein THM-4862 (b) (entry attachment C(U + a_entry) =
   e_r(U), re-proved in the note as Lemma 3), Las Vergnas 1975 via Burzio-Demaria 1988 (the bineutral A_n is the only Hamiltonian tournament

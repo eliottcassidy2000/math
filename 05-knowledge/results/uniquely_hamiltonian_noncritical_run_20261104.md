@@ -28,14 +28,22 @@ and it adds several exact consequences.
   - the refined Fibonacci counts by numbers of sole exits and sole entries;
   - (G) the admissible Shelor parents are y, y- and (when y- is a sole entry) y--, which re-derives Garey's count
     F(2n - 6) (KNOWN: Garey 1972, Moon 1982);
-  - (H) the run transitions r, r + 1, r + 2, which prove the run-length recurrence (HYP-9460 P7) and with it every
-    formula of opus-S74's HYP-9458.
+  - (H) the run transitions r, r + 1, r + 2. They give a Shelor-free proof of the run-length recurrence (HYP-9460 P7)
+    and of every formula of opus-S74's HYP-9458.
+- **Priority for HYP-9458 and P7.** HYP-9458's closed forms and generating function were PROVED first by opus-S74's
+  independent audit (`a0518f53cd`, pushed 12:51), given Shelor's grammar (CITED). Their proof is the count law
+  k = 3 + #{b, e} - #{c} along the Shelor word, and it noted that P7 follows from it together with this session's (C).
+  - (G)-(H) here are a second, independent proof that does not use Shelor's grammar: (G) proves the needed part of the
+    grammar from scratch.
+  - Dictionary: Shelor's parent p = pred^j(newest vertex), j = 0, 1, 2, is (G)'s admissible set {y_U, y_U-, y_U--}.
+    The count law's Delta k = +1, 0, -1 is (H)'s Delta r = 0, +1, +2 under k = n + 1 - r.
 - **FINITE-EXACT.** Every check, exhaustively over all F(2n - 6) classes at orders 4-18. Orders 14-18 were run after the
   pre-registration commit `a8db6218f9` (HYP-9460 P1-P8).
-- **Pre-registered and then proved (HYP-9460 P7).** The run-length recurrence
+- **Pre-registered, then proved twice (HYP-9460 P7).** The run-length recurrence
   N(n, r) = N(n - 1, r) + 2 N(n - 1, r - 1) - N(n - 2, r - 1).
   - It was conjectured from orders 6-13 and pre-registered with blind predictions at orders 17-18.
-  - It was then proved as (H) during the confirmatory run, from the admissible-parent structure (G). (G) and (H) were
+  - opus-S74's audit then proved it via HYP-9458 and (C), given Shelor's grammar. Independently, this session proved
+    it as (H) during the confirmatory run, from the admissible-parent structure (G). (G) and (H) were
     first observed on all parents through order 12, then proved; [`shelor_parents_20261104.c`](../../04-computation/experiments/shelor_parents_20261104.c) checks them on every parent through order 14 ([out](../../04-computation/experiments/shelor_parents_20261104.out)).
 - **Novelty.** Not claimed against the literature. Douglas 1970, Shelor 1977 and Moon 1982 characterize or construct
   this class. Their bodies could not be read here: paywall, a ScienceDirect CAPTCHA (not bypassed), and a Cloudflare
@@ -401,8 +409,10 @@ being written. All pre-registered predictions P1-P8 are CONFIRMED.
 | every uniquely Hamiltonian tournament is a one-arc join; in- and out-degree-1 vertices | THM-4867 (opus-S74), KNOWN: Shelor 1977 | deferred to. (B) here is a second, Shelor-free proof |
 | extension lemma, independent generator through order 16 | THM-4867 | used as Lemma 1 and re-implemented independently to order 18 |
 | failed route (c), non-critical vertices | THM-4867 section 3 | refined: non-critical vertices are locally round (A), and propagation along C proves the theorem |
-| T(n, k) cut-arc table and fitted columns | HYP-9458 (opus-S74; conjectured, confirmed at orders 14-16) | PROVED here: (D) gives T(n, k) = N(n, n + 1 - k), and (G)-(H) give the recurrence, hence every fitted form. Priority for the conjecture and the data is opus-S74's |
+| T(n, k) cut-arc table and fitted columns | HYP-9458 (opus-S74: conjectured, confirmed at orders 14-16, then PROVED by its audit given Shelor's grammar, 12:51) | (D) gives T(n, k) = N(n, n + 1 - k). (G)-(H) are a second, Shelor-free proof of the recurrence and of every fitted form. Priority for the conjecture, the data and the first proof is opus-S74's |
+| cut arcs under one Shelor insertion: nested largest one-arc cuts A(e), each containing the newest vertex | opus-S74 audit (`uh_one_arc_cut_20261104_audit_S74/AUDIT.md`, section A), given Shelor's grammar | (D) is the global form: the cut arcs are exactly the arcs off the non-critical run. (H) is the run-side form of the same insertion step |
 | sole exits, digits, Phi bijection, Fibonacci coincidence | THM-4862 (klein) | (F) counts the classes by sole exits; rooted (UH, sole exit) pairs number F(2n - 5). (G) is the Shelor-side grammar behind Garey's count. Its admissible parents are klein's entry attachments with digit 1, via Lemma 3 |
+| chord-language rules (end insertion, suffix of the last column) | klein two_branch packet section 5 (FINITE-EXACT, entry-attachment coordinates) | different coordinates. They are necessary conditions on forward chords; (A) and (C) describe the non-critical vertices instead |
 | out-degree-1 lemma for one and two cycles | HYP-9459 (1) (klein) | the one-cycle half is (B), KNOWN by Shelor. The two-cycle half, "minimum out-degree >= 2 and n >= 6 implies hc >= 3", stays OPEN; (B)'s round cycle is exactly RT_5's pentagram at n = 5 |
 
 ## 7. Inspiration sources (attached by the owner), checked for genuine connections
@@ -437,9 +447,9 @@ Lean-checked machine, then Robinson-style Wang tiles, then Demaine-Langerman pol
 | (E) asymmetry | PROVED |
 | (F) refined counts F(2n-10)+1, F(2n-9)-1, F(2n-8)+1; F(2n-7); F(2n-5) | PROVED (using (G) for the total F(2n - 6)) |
 | (G) admissible parents {y, y-, (y--)}; the canonical Shelor bijection; Garey's F(2n - 6) | PROVED; Garey's count itself is KNOWN (Garey 1972; Moon 1982), re-derived here; the bijectivity of Shelor's construction is KNOWN (Shelor 1977) |
-| (H) run transitions r, r + 1, r + 2; run-length recurrence; HYP-9458's formulas | PROVED (HYP-9458 conjectured by opus-S74) |
+| (H) run transitions r, r + 1, r + 2; run-length recurrence; HYP-9458's formulas | PROVED (second, Shelor-free proof). HYP-9458 was conjectured by opus-S74 and first proved by its audit, given Shelor's grammar |
 | all of the above at orders 4-18 | FINITE-EXACT (orders 14-18 pre-registered) |
-| run-length recurrence | PROVED by (H); also pre-registered (HYP-9460 P7) and FINITE-EXACT through the confirmatory run |
+| run-length recurrence | PROVED. First by opus-S74's audit via HYP-9458 and (C), given Shelor's grammar; independently by (H). Pre-registered (HYP-9460 P7) and FINITE-EXACT through the confirmatory run |
 | tilings and topos readings | INTERPRETATION / no connection |
 
 ## 9. Audit
