@@ -91,8 +91,7 @@ A hypothesis is unresolved unless a proved leaf is named explicitly. Search its 
 - **Live residues:** rank-seven finite banks; the guard-`13` pencil and
   nontransverse guarded lanes; depth-zero eleven, marked circuits, and the
   rank-twelve box.
-- **THM-741 (CLAIMED STUB / UNPROVED):** the global near-AP four-slot census is
-  incomplete; route it as a candidate, not proved canon.
+- **THM-741 (CLAIMED STUB / UNPROVED):** the global near-AP four-slot census is incomplete; route it as a candidate, not proved canon.
 
 ## NC2 / GMC and Lean
 - **Paper:** THM-2022 proves NC2/GMC(2); THM-2111 supplies an effective seed, THM-2101 two independent additive proofs, and THM-2067 the historical route.
