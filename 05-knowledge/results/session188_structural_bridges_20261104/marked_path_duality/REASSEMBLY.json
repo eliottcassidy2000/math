@@ -1,0 +1,41 @@
+{
+  "encoding": "Deterministic gzip streams encoded as base64 in ASCII chunks.",
+  "groups": [
+    {
+      "parts": [
+        {
+          "file": "full_records_00.json.gz.b64.part000",
+          "size": 36001,
+          "sha256": "4ced623149493512cdd8d479620b5b96436b001d4ced9106d7bddcf419bfb973"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part001",
+          "size": 36001,
+          "sha256": "2a8495b3182e1a1653fe0f69baa3c015afa9c3a5364953a4e2527419200ad62d"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part002",
+          "size": 36001,
+          "sha256": "86990e2b184d52a1be77f43300b825fec643ce035670abd5067e328171202d28"
+        },
+        {
+          "file": "full_records_00.json.gz.b64.part003",
+          "size": 28185,
+          "sha256": "ec770d63b3f2b91a8adcc4c70294d2c1dafc7541b10b20371d130a0cb09aad72"
+        }
+      ],
+      "outputs": [
+        {
+          "file": "normal.json",
+          "size": 3079719,
+          "sha256": "47adec547640b26fe6a4f6288c1d08b927ef8b3ba5342df56e45cf7717df7e71"
+        },
+        {
+          "file": "optimized.json",
+          "size": 3079719,
+          "sha256": "47adec547640b26fe6a4f6288c1d08b927ef8b3ba5342df56e45cf7717df7e71"
+        }
+      ]
+    }
+  ]
+}

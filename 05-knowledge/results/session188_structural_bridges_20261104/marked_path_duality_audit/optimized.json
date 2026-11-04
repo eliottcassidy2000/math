@@ -1,0 +1,105 @@
+{
+  "Paley_quartic_matrix": [
+    [
+      0,
+      8,
+      8,
+      -8,
+      8,
+      -8,
+      -8
+    ],
+    [
+      -8,
+      0,
+      8,
+      8,
+      -8,
+      8,
+      -8
+    ],
+    [
+      -8,
+      -8,
+      0,
+      8,
+      8,
+      -8,
+      8
+    ],
+    [
+      8,
+      -8,
+      -8,
+      0,
+      8,
+      8,
+      -8
+    ],
+    [
+      -8,
+      8,
+      -8,
+      -8,
+      0,
+      8,
+      8
+    ],
+    [
+      8,
+      -8,
+      8,
+      -8,
+      -8,
+      0,
+      8
+    ],
+    [
+      8,
+      8,
+      -8,
+      8,
+      -8,
+      -8,
+      0
+    ]
+  ],
+  "actual_residue_two_witness": {
+    "a": 1,
+    "c": 2,
+    "coefficients": [
+      4062,
+      4296
+    ],
+    "values": [
+      16185,
+      16419
+    ]
+  },
+  "algebra_sha256": "5223595a3afbdc63a927770f4a7a67fd7547a6fbd632b2119e353b6e6394ed40",
+  "audit_pins": {
+    "audit.py": "e3864ec011fb38b7edeadfc9e06547228b16b816357a4a82564f2728834c323b",
+    "physical.cpp": "4f6b397eaee930eed150df688a2104a16ba69f7593ab02c4546cb10798ece8bd"
+  },
+  "coefficientwise_identity_count": 33423,
+  "complete_algebra_controls": 1103,
+  "distinct_actual_graphs": 10144,
+  "literal_quartics": 820,
+  "named_coordinates": 2116,
+  "nonzero_difference_histogram": {
+    "0": 0,
+    "1": 0,
+    "2": 42,
+    "3": 420,
+    "4": 420
+  },
+  "physical_values_sha256": "fb6fe83e5730ac84c1f682f1729bc2fd4815387aba34d7b6666947457804fba7",
+  "source_pins": {
+    "PROOF.md": "b92f9c0b7ddd6ba95b772af876e6ec3ef144b52e6765df97e1e05aca999c3e33",
+    "count.cpp": "4f34e4aede4e9a14564f61f47fd609ae1324ee009dece48f36e4abc1eb227a5f",
+    "normal.json": "47adec547640b26fe6a4f6288c1d08b927ef8b3ba5342df56e45cf7717df7e71",
+    "paths.py": "fee93b1c320dc985b6596ab915df87458bd5c4586cad242dd6037f6aa4177739",
+    "verify.py": "fc97d44e0e2c8d46378ea360005796c27ca314f98e973f5cac14c8483ced7d85"
+  },
+  "status": "PASS"
+}
