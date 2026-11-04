@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "labelled_profiles_orders_1_through_5": 1099,
+  "method": "literal permutations and labelled slot assignments",
+  "checks": [
+    "coefficientwise Stirling bound",
+    "transitivity equality iff",
+    "nontransitive F bound",
+    "order-four profiles",
+    "order-five low-spectrum exclusion"
+  ]
+}
