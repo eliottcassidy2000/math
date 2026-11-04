@@ -1,0 +1,948 @@
+{
+  "census_reproduction": "All non-timing lines through order 9 match exactly; this reuses incoming census code.",
+  "comparisons": [
+    {
+      "all_old_name_bijections_excluded": true,
+      "converse_choices": [
+        0,
+        0
+      ],
+      "different_histogram_types": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "pair": [
+        20197,
+        48562
+      ]
+    },
+    {
+      "all_old_name_bijections_excluded": true,
+      "converse_choices": [
+        0,
+        1
+      ],
+      "different_histogram_types": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "pair": [
+        20197,
+        48562
+      ]
+    },
+    {
+      "all_old_name_bijections_excluded": true,
+      "converse_choices": [
+        1,
+        0
+      ],
+      "different_histogram_types": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "pair": [
+        20197,
+        48562
+      ]
+    },
+    {
+      "all_old_name_bijections_excluded": true,
+      "converse_choices": [
+        1,
+        1
+      ],
+      "different_histogram_types": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "pair": [
+        20197,
+        48562
+      ]
+    },
+    {
+      "all_old_name_bijections_excluded": true,
+      "converse_choices": [
+        0,
+        0
+      ],
+      "different_histogram_types": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "pair": [
+        86814,
+        89262
+      ]
+    },
+    {
+      "all_old_name_bijections_excluded": true,
+      "converse_choices": [
+        0,
+        1
+      ],
+      "different_histogram_types": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "pair": [
+        86814,
+        89262
+      ]
+    },
+    {
+      "all_old_name_bijections_excluded": true,
+      "converse_choices": [
+        1,
+        0
+      ],
+      "different_histogram_types": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "pair": [
+        86814,
+        89262
+      ]
+    },
+    {
+      "all_old_name_bijections_excluded": true,
+      "converse_choices": [
+        1,
+        1
+      ],
+      "different_histogram_types": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "pair": [
+        86814,
+        89262
+      ]
+    },
+    {
+      "all_old_name_bijections_excluded": true,
+      "converse_choices": [
+        0,
+        0
+      ],
+      "different_histogram_types": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "pair": [
+        23898,
+        23984
+      ]
+    },
+    {
+      "all_old_name_bijections_excluded": true,
+      "converse_choices": [
+        0,
+        1
+      ],
+      "different_histogram_types": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "pair": [
+        23898,
+        23984
+      ]
+    },
+    {
+      "all_old_name_bijections_excluded": true,
+      "converse_choices": [
+        1,
+        0
+      ],
+      "different_histogram_types": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "pair": [
+        23898,
+        23984
+      ]
+    },
+    {
+      "all_old_name_bijections_excluded": true,
+      "converse_choices": [
+        1,
+        1
+      ],
+      "different_histogram_types": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "pair": [
+        23898,
+        23984
+      ]
+    }
+  ],
+  "degree_counts": {
+    "0": 12,
+    "1": 216,
+    "2": 1836,
+    "3": 7776,
+    "4": 15552
+  },
+  "full_named_coefficients": 25392,
+  "graphs": 12,
+  "independent_old_card_canonicalizations": 108,
+  "invariants": [
+    {
+      "H": 633,
+      "converse": false,
+      "linear_c_coefficients": [
+        784,
+        784,
+        784,
+        852,
+        996,
+        1074,
+        1074,
+        1074,
+        8688
+      ],
+      "node": 20197
+    },
+    {
+      "H": 633,
+      "converse": true,
+      "linear_c_coefficients": [
+        0,
+        1680,
+        1820,
+        1820,
+        1820,
+        2184,
+        2184,
+        2184,
+        2418
+      ],
+      "node": 20197
+    },
+    {
+      "H": 633,
+      "converse": false,
+      "linear_c_coefficients": [
+        756,
+        818,
+        818,
+        818,
+        1026,
+        1026,
+        1026,
+        1134,
+        8688
+      ],
+      "node": 48562
+    },
+    {
+      "H": 633,
+      "converse": true,
+      "linear_c_coefficients": [
+        0,
+        1740,
+        1740,
+        1740,
+        1902,
+        2118,
+        2290,
+        2290,
+        2290
+      ],
+      "node": 48562
+    },
+    {
+      "H": 2919,
+      "converse": false,
+      "linear_c_coefficients": [
+        3410,
+        3476,
+        4164,
+        4232,
+        4276,
+        4342,
+        4416,
+        5090,
+        5216
+      ],
+      "node": 86814
+    },
+    {
+      "H": 2919,
+      "converse": true,
+      "linear_c_coefficients": [
+        3410,
+        3476,
+        4164,
+        4232,
+        4276,
+        4342,
+        4416,
+        5090,
+        5216
+      ],
+      "node": 86814
+    },
+    {
+      "H": 2917,
+      "converse": false,
+      "linear_c_coefficients": [
+        3408,
+        3470,
+        4172,
+        4244,
+        4266,
+        4336,
+        4416,
+        5062,
+        5248
+      ],
+      "node": 89262
+    },
+    {
+      "H": 2917,
+      "converse": true,
+      "linear_c_coefficients": [
+        3408,
+        3470,
+        4172,
+        4244,
+        4266,
+        4336,
+        4416,
+        5062,
+        5248
+      ],
+      "node": 89262
+    },
+    {
+      "H": 645,
+      "converse": false,
+      "linear_c_coefficients": [
+        796,
+        814,
+        838,
+        842,
+        1024,
+        1034,
+        1048,
+        1098,
+        8784
+      ],
+      "node": 23898
+    },
+    {
+      "H": 645,
+      "converse": true,
+      "linear_c_coefficients": [
+        0,
+        1780,
+        1790,
+        1852,
+        1878,
+        2156,
+        2236,
+        2286,
+        2300
+      ],
+      "node": 23898
+    },
+    {
+      "H": 645,
+      "converse": false,
+      "linear_c_coefficients": [
+        802,
+        808,
+        830,
+        850,
+        1008,
+        1050,
+        1070,
+        1076,
+        8784
+      ],
+      "node": 23984
+    },
+    {
+      "H": 645,
+      "converse": true,
+      "linear_c_coefficients": [
+        0,
+        1772,
+        1798,
+        1860,
+        1870,
+        2188,
+        2204,
+        2244,
+        2342
+      ],
+      "node": 23984
+    }
+  ],
+  "orientation_comparisons": 12,
+  "scope": "The three reported order-9 merged unweighted-deck collision pairs are excluded as full named two-port collisions under all relabelings and both converse choices. No global reconstruction theorem is asserted.",
+  "status": "PASS"
+}

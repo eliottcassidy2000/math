@@ -1,0 +1,16 @@
+{
+  "code": {
+    "path": "04-computation/experiments/deletion_tower_census_20261104.c",
+    "sha": "98953760287aa68650fb91728adea9686ea03e6d"
+  },
+  "hypothesis": {
+    "latest_sha": "bd2b6ba5fa5fc446414c7726ab158451a3d1ee2b",
+    "path": "05-knowledge/hypotheses/HYP-9455-path-weighted-deletion-tower-reconstruction-orders-8-and-9.md",
+    "sha": "bd2b6ba5fa5fc446414c7726ab158451a3d1ee2b"
+  },
+  "output": {
+    "path": "04-computation/experiments/deletion_tower_census_20261104.out",
+    "sha": "550a9cf686bdf6f130cc5db71fd2bb8e74a285f0"
+  },
+  "scope": "Independently retrieved exact pinned Git blobs, not a latest-main assertion."
+}

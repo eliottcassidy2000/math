@@ -1,0 +1,57 @@
+{
+  "all_bijections_excluded_by_linear_multisets": true,
+  "artifacts": {
+    "census_replay.out": "b64975c69901cbd562e1d8eb56f75317ba05063662ed610d0b5c68dd9bf2970f",
+    "exclusions.json": "35d94a2a79a6213f7d8068fd429f9cac7c91028c56670b27513e94af72efa3a0",
+    "literal_bank.json": "c73381a62a8af60d90ca8769f68c5de7e758b02d20c4264355b1f0b28ae22808",
+    "producer.normal.json": "de6187b799e4ef6f64f5aace92b12dc5d4ee65cef7b5d9af8fc630bb0227ab3b",
+    "producer.optimized.json": "de6187b799e4ef6f64f5aace92b12dc5d4ee65cef7b5d9af8fc630bb0227ab3b",
+    "row_major_cards.json": "95ce32199829dd094679a73eec03f1596d74167a209d8576a113e8eee7e80cf1"
+  },
+  "degree_counts": [
+    12,
+    216,
+    1836,
+    7776,
+    15552
+  ],
+  "independent_row_major_card_canonicalizations": 108,
+  "literal_named_coefficients": 25392,
+  "literal_response_graphs": 12,
+  "orientation_comparisons": 12,
+  "producer_pins": {
+    "HYP-9455.md": "9fa6cde9d0a1b1c1c2140efb43fcad5d19e36d6d68b4ae02fbd8787f1b50d936",
+    "PROOF.md": "f40ce81caf1b8f8bbf39ac374c95ba3f7e7991168a8ea32062f2d3445785a2b8",
+    "README.md": "f1225c37a872aec6a23e686b60640d69e1efb915c09638dcfeb30f8a122fdbee",
+    "bank.cpp": "96120df96deca1e2b09022f4925b3481f87804f72f9b4e421b49104ec7ccb40c",
+    "bank.json": "19a78d14d5d10e35960b6d16e8d7334ebfbf3ed678cf5dd3f2b6e793ec04f0a5",
+    "graphs.txt": "8b88521307e4fd08651650ad8483dd142a2663bc5cf059736d782d4d56d292ae",
+    "incoming_preregistration.md": "cf305129eece4f9af8234570d12746118b97be554c7ae01501d514bf079ab5bd",
+    "independent_values.txt": "37f273399ed32239149801d15394610423a2b2224c096cb9343ee78a3f5418cf",
+    "literal_cards.cpp": "eed6ee380e291ac4afa7cf36aa0b1032a5467acc1b7a4e4398eb7c9b2b756baf",
+    "literal_cards.json": "6285d78ec002b1f4ec6f804ee81771f0ddb79476d548ebf524d6a4576e73d1e8",
+    "predecessor.cpp": "857de0c451fe7b15fa7424ec86340c6a087934f4093d8b9cf641615821bd2c84",
+    "prepare.py": "25540d6ab34f4f213de581e3dd148b0ad66281c0f00de6987b0d24278e5f2b73",
+    "prepare_independent.py": "6d43c57c8c2df598d42626bf74b419a3f47cfdad837c29286adb65d7e1d2ee1b",
+    "receipt.json": "de6187b799e4ef6f64f5aace92b12dc5d4ee65cef7b5d9af8fc630bb0227ab3b",
+    "receipt.optimized.json": "de6187b799e4ef6f64f5aace92b12dc5d4ee65cef7b5d9af8fc630bb0227ab3b",
+    "representatives.json": "ef199f59b89709079d7a70130ec98111bdde1e35eeda8c7038509e269d3a3721",
+    "reproduced.out": "b64975c69901cbd562e1d8eb56f75317ba05063662ed610d0b5c68dd9bf2970f",
+    "source.c": "58d4ba52022e7e081f925f2b92000c505de7ff851b4fc66839fd33527aa246fb",
+    "source.out": "88a548195f09f5c36e9649b7029c89571edbea5f4e9a92ca012cceb934d4f9f4",
+    "source_metadata.json": "958aa7547d9126d51e77b1d86237ef3cb65c52aaa4095bd95df6d6a9484aee97",
+    "verify.py": "c25d24a8469bdde0b7870b4228fd382edcbff0bcd5b197774a7fc3fb7a49e330"
+  },
+  "source_census_status": "Exact original-code reproduction through9, not independent census/rank implementation",
+  "source_git_blobs": {
+    "HYP-9455.md": "bd2b6ba5fa5fc446414c7726ab158451a3d1ee2b",
+    "source.c": "98953760287aa68650fb91728adea9686ea03e6d",
+    "source.out": "550a9cf686bdf6f130cc5db71fd2bb8e74a285f0"
+  },
+  "sources": {
+    "audit.py": "23a4e441cce0b88f63b82a586c9da00df8c3f782003aa705b744cc9bb883f1de",
+    "canonical.cpp": "1a4805b49b2e8eb34b8a00a6dfd870188ddb2bd0a49fa92b53842e6aeb01d08d",
+    "literal_polynomial.cpp": "9bacec8123abbcc6552ab640855c30f0c5d7ab8149c9bdd97a6e28680b179276"
+  },
+  "status": "PASS"
+}

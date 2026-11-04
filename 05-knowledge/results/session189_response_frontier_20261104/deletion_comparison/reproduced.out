@@ -1,0 +1,82 @@
+deletion_tower_census NMAX=9
+n=1 ordinary_classes=1 self_converse=1 merged_nodes=1 (Burnside (a+s)/2=1)
+n=2 ordinary_classes=1 self_converse=1 merged_nodes=1 (Burnside (a+s)/2=1)
+  sum of node tilings = 1 (2^binom(n-1,2) = 1)
+n=3 ordinary_classes=2 self_converse=2 merged_nodes=2 (Burnside (a+s)/2=2)
+  sum of node tilings = 2 (2^binom(n-1,2) = 2)
+    primitive-W collision class of size 2: [node 0 H=1 aut=1 sc=1] [node 1 H=3 aut=3 sc=1]
+  primitive face profile: 1 distinct of 2 nodes; nodes in collisions=2; max class=2
+  raw face row R: 1 distinct
+    merged-deck collision class of size 2: [node 0 H=1 aut=1 sc=1] [node 1 H=3 aut=3 sc=1]
+  unweighted merged deck (multiset of [T-x]): 1 distinct; nodes in collisions=2; max class=2
+  deck support set: 1 distinct
+  support of the face row (endpoint cards only): 1 distinct
+  axis-profile nodes (face row supported on one lower node): 2
+  rank of R_n: modular Gram rank = 1 of 1 columns (full column rank over Q certified)
+  Lemma W check against all fixed-path tilings (both endpoint faces, fibre sizes): PASS (0 mismatches)
+n=4 ordinary_classes=4 self_converse=2 merged_nodes=3 (Burnside (a+s)/2=3)
+  sum of node tilings = 8 (2^binom(n-1,2) = 8)
+  primitive face profile: 3 distinct of 3 nodes; nodes in collisions=0; max class=1
+  raw face row R: 3 distinct
+  unweighted merged deck (multiset of [T-x]): 3 distinct; nodes in collisions=0; max class=1
+  deck support set: 2 distinct
+  support of the face row (endpoint cards only): 2 distinct
+  axis-profile nodes (face row supported on one lower node): 1
+  rank of R_n: modular Gram rank = 2 of 2 columns (full column rank over Q certified)
+  Lemma W check against all fixed-path tilings (both endpoint faces, fibre sizes): PASS (0 mismatches)
+n=5 ordinary_classes=12 self_converse=8 merged_nodes=10 (Burnside (a+s)/2=10)
+  sum of node tilings = 64 (2^binom(n-1,2) = 64)
+  primitive face profile: 10 distinct of 10 nodes; nodes in collisions=0; max class=1
+  raw face row R: 10 distinct
+    merged-deck collision class of size 2: [node 1 H=3 aut=3 sc=0] [node 2 H=3 aut=3 sc=1]
+    merged-deck collision class of size 2: [node 3 H=15 aut=3 sc=1] [node 7 H=13 aut=1 sc=1]
+  unweighted merged deck (multiset of [T-x]): 8 distinct; nodes in collisions=4; max class=2
+  deck support set: 6 distinct
+  support of the face row (endpoint cards only): 7 distinct
+  axis-profile nodes (face row supported on one lower node): 3
+  rank of R_n: modular Gram rank = 3 of 3 columns (full column rank over Q certified)
+  Lemma W check against all fixed-path tilings (both endpoint faces, fibre sizes): PASS (0 mismatches)
+n=6 ordinary_classes=56 self_converse=12 merged_nodes=34 (Burnside (a+s)/2=34)
+  sum of node tilings = 1024 (2^binom(n-1,2) = 1024)
+  primitive face profile: 34 distinct of 34 nodes; nodes in collisions=0; max class=1
+  raw face row R: 34 distinct
+  unweighted merged deck (multiset of [T-x]): 34 distinct; nodes in collisions=0; max class=1
+  deck support set: 34 distinct
+  support of the face row (endpoint cards only): 34 distinct
+  axis-profile nodes (face row supported on one lower node): 5
+  rank of R_n: modular Gram rank = 10 of 10 columns (full column rank over Q certified)
+  Lemma W check against all fixed-path tilings (both endpoint faces, fibre sizes): PASS (0 mismatches)
+n=7 ordinary_classes=456 self_converse=88 merged_nodes=272 (Burnside (a+s)/2=272)
+  sum of node tilings = 32768 (2^binom(n-1,2) = 32768)
+  primitive face profile: 272 distinct of 272 nodes; nodes in collisions=0; max class=1
+  raw face row R: 272 distinct
+    merged-deck collision class of size 2: [node 42 H=23 aut=1 sc=0] [node 86 H=23 aut=1 sc=0]
+    merged-deck collision class of size 2: [node 114 H=143 aut=1 sc=0] [node 253 H=141 aut=1 sc=1]
+    merged-deck collision class of size 2: [node 46 H=29 aut=1 sc=0] [node 58 H=29 aut=1 sc=0]
+  unweighted merged deck (multiset of [T-x]): 267 distinct; nodes in collisions=10; max class=2
+  deck support set: 264 distinct
+  support of the face row (endpoint cards only): 264 distinct
+  axis-profile nodes (face row supported on one lower node): 11
+  rank of R_n: modular Gram rank = 34 of 34 columns (full column rank over Q certified)
+  Lemma W check against all fixed-path tilings (both endpoint faces, fibre sizes): PASS (0 mismatches)
+n=8 ordinary_classes=6880 self_converse=176 merged_nodes=3528 (Burnside (a+s)/2=3528)
+  sum of node tilings = 2097152 (2^binom(n-1,2) = 2097152)
+  primitive face profile: 3528 distinct of 3528 nodes; nodes in collisions=0; max class=1
+  raw face row R: 3528 distinct
+  unweighted merged deck (multiset of [T-x]): 3528 distinct; nodes in collisions=0; max class=1
+  deck support set: 3528 distinct
+  support of the face row (endpoint cards only): 3528 distinct
+  axis-profile nodes (face row supported on one lower node): 13
+  rank of R_n: modular Gram rank = 272 of 272 columns (full column rank over Q certified)
+n=9 ordinary_classes=191536 self_converse=2752 merged_nodes=97144 (Burnside (a+s)/2=97144)
+  sum of node tilings = 268435456 (2^binom(n-1,2) = 268435456)
+  primitive face profile: 97144 distinct of 97144 nodes; nodes in collisions=0; max class=1
+  raw face row R: 97144 distinct
+    merged-deck collision class of size 2: [node 20197 H=633 aut=3 sc=0] [node 48562 H=633 aut=3 sc=0]
+    merged-deck collision class of size 2: [node 86814 H=2919 aut=1 sc=1] [node 89262 H=2917 aut=1 sc=1]
+    merged-deck collision class of size 2: [node 23898 H=645 aut=1 sc=0] [node 23984 H=645 aut=1 sc=0]
+  unweighted merged deck (multiset of [T-x]): 97141 distinct; nodes in collisions=6; max class=2
+  deck support set: 97141 distinct
+  support of the face row (endpoint cards only): 97141 distinct
+  axis-profile nodes (face row supported on one lower node): 94
+  rank of R_n: modular Gram rank = 3528 of 3528 columns (full column rank over Q certified)

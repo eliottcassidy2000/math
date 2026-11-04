@@ -1,0 +1,23 @@
+{
+  "checked_utc": "2026-11-04T17:20:57Z",
+  "commit": "e58a09c18bc7536e2388c85df239afd9d10a9c1d",
+  "hypothesis": {
+    "path": "05-knowledge/hypotheses/HYP-9455-path-weighted-deletion-tower-reconstruction-orders-8-and-9.md",
+    "sha": "bd2b6ba5fa5fc446414c7726ab158451a3d1ee2b",
+    "latest_sha": "bd2b6ba5fa5fc446414c7726ab158451a3d1ee2b"
+  },
+  "code": {
+    "path": "04-computation/experiments/deletion_tower_census_20261104.c",
+    "sha": "98953760287aa68650fb91728adea9686ea03e6d"
+  },
+  "output": {
+    "path": "04-computation/experiments/deletion_tower_census_20261104.out",
+    "sha": "550a9cf686bdf6f130cc5db71fd2bb8e74a285f0"
+  },
+  "latest_recent_commit": "92aaef65f87897b121539028e4fb50e3c957956f",
+  "missing_latest_paths": [
+    "05-knowledge/results/primegame_deletion_tower_path_weighted_decks_20261104.md",
+    "04-computation/experiments/deletion_tower_order10_20261104.c"
+  ],
+  "scope": "Exact source reproduction through 9. Independent finite card and full-response checks on the three reported order-9 pairs. No all-order reconstruction claim."
+}
