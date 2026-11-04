@@ -1,0 +1,44 @@
+[
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "8880585ffd98072e93aa39d97476c7a1d4c9129d",
+    "path": "05-knowledge/results/session118_shared_gate_deletions_20261030/audit_ap2/AUDIT.md",
+    "blob_sha": "828d919f5c79a176c78d3887630f62f39321f5ac",
+    "url": "https://github.com/eliottcassidy2000/math/blob/8880585ffd98072e93aa39d97476c7a1d4c9129d/05-knowledge/results/session118_shared_gate_deletions_20261030/audit_ap2/AUDIT.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "8880585ffd98072e93aa39d97476c7a1d4c9129d",
+    "path": "05-knowledge/results/session118_shared_gate_deletions_20261030/accounting/SEQUENCE_ACCOUNTING.md",
+    "blob_sha": "c53066f349993acf77661101c7ae18ae47ed86e6",
+    "url": "https://github.com/eliottcassidy2000/math/blob/8880585ffd98072e93aa39d97476c7a1d4c9129d/05-knowledge/results/session118_shared_gate_deletions_20261030/accounting/SEQUENCE_ACCOUNTING.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "8880585ffd98072e93aa39d97476c7a1d4c9129d",
+    "path": "05-knowledge/results/session118_shared_gate_deletions_20261030/worst_cases/TIGHT_CYCLE_HOSTILE.md",
+    "blob_sha": "bb61bcd39c409cdc339bb310ed8d707d59c6649d",
+    "url": "https://github.com/eliottcassidy2000/math/blob/8880585ffd98072e93aa39d97476c7a1d4c9129d/05-knowledge/results/session118_shared_gate_deletions_20261030/worst_cases/TIGHT_CYCLE_HOSTILE.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "8880585ffd98072e93aa39d97476c7a1d4c9129d",
+    "path": "05-knowledge/results/session118_shared_gate_deletions_20261030/audit_cycles/FACTORING_REWRITE.md",
+    "blob_sha": "f4252016d888d97edeba8094de2073103f172b29",
+    "url": "https://github.com/eliottcassidy2000/math/blob/8880585ffd98072e93aa39d97476c7a1d4c9129d/05-knowledge/results/session118_shared_gate_deletions_20261030/audit_cycles/FACTORING_REWRITE.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "8880585ffd98072e93aa39d97476c7a1d4c9129d",
+    "path": "05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/circuits/POINT_DEFECT_CIRCUITS.md",
+    "blob_sha": "5367ec1669c7ccd67c73c5e2b1e2af245b19acc9",
+    "url": "https://github.com/eliottcassidy2000/math/blob/8880585ffd98072e93aa39d97476c7a1d4c9129d/05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/circuits/POINT_DEFECT_CIRCUITS.md"
+  },
+  {
+    "repository": "Layr-Labs/circuitbreaker-llm-verifier",
+    "commit": "4a61f024a4993592d97b49ca7d00979029b7fece",
+    "path": "submission/elimination.md",
+    "url": "https://github.com/Layr-Labs/circuitbreaker-llm-verifier/blob/4a61f024a4993592d97b49ca7d00979029b7fece/submission/elimination.md",
+    "used_only_for": "Section 1 free final constant/literal convention; no global candidate theorem adopted"
+  }
+]

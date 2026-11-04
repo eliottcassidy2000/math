@@ -1,0 +1,36 @@
+{
+  "constant_boundary_output": true,
+  "endpoint_note": "If terminal constants are charged, at most one replacement constant-or-NOT gate is needed.",
+  "independent_universe": "all live at-most-two-pin DAGs, 2 external vertices, through 4 gates",
+  "rows": [
+    {
+      "closed_regions": 0,
+      "equality_cases": 0,
+      "gates": 1,
+      "live": 6,
+      "presentations": 6
+    },
+    {
+      "closed_regions": 12,
+      "equality_cases": 12,
+      "gates": 2,
+      "live": 24,
+      "presentations": 60
+    },
+    {
+      "closed_regions": 228,
+      "equality_cases": 168,
+      "gates": 3,
+      "live": 156,
+      "presentations": 900
+    },
+    {
+      "closed_regions": 4536,
+      "equality_cases": 2772,
+      "gates": 4,
+      "live": 1464,
+      "presentations": 18900
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,165 @@
+{
+  "all_table_semantic_census": {
+    "circuits": 6240,
+    "constant_region_cases": 11712,
+    "coordinate_restrictions_per_circuit": 18,
+    "nonconstant_restriction_cases": 32148,
+    "rows": [
+      {
+        "gates": 1,
+        "live_circuit_presentations": 96
+      },
+      {
+        "gates": 2,
+        "live_circuit_presentations": 6144
+      }
+    ],
+    "strict_terminal_correction_cases": 5856,
+    "universe": "all 16 gate tables, 3 inputs, unordered repeated pins, at most 2 gates"
+  },
+  "claim": "constant-region source/forcing/fanout identity",
+  "distinct_pin_topologies": [
+    {
+      "all_topologies": 1,
+      "closed_constant_regions": 0,
+      "gates": 1,
+      "live_topologies": 1,
+      "merge_forest_equalities": 0,
+      "regions_with_fanout_surplus": 0,
+      "regions_with_one_parent_constants": 0
+    },
+    {
+      "all_topologies": 3,
+      "closed_constant_regions": 2,
+      "gates": 2,
+      "live_topologies": 2,
+      "merge_forest_equalities": 2,
+      "regions_with_fanout_surplus": 0,
+      "regions_with_one_parent_constants": 0
+    },
+    {
+      "all_topologies": 18,
+      "closed_constant_regions": 18,
+      "gates": 3,
+      "live_topologies": 7,
+      "merge_forest_equalities": 12,
+      "regions_with_fanout_surplus": 2,
+      "regions_with_one_parent_constants": 4
+    },
+    {
+      "all_topologies": 180,
+      "closed_constant_regions": 206,
+      "gates": 4,
+      "live_topologies": 38,
+      "merge_forest_equalities": 110,
+      "regions_with_fanout_surplus": 50,
+      "regions_with_one_parent_constants": 72
+    },
+    {
+      "all_topologies": 2700,
+      "closed_constant_regions": 3120,
+      "gates": 5,
+      "live_topologies": 295,
+      "merge_forest_equalities": 1308,
+      "regions_with_fanout_surplus": 1116,
+      "regions_with_one_parent_constants": 1370
+    },
+    {
+      "all_topologies": 56700,
+      "closed_constant_regions": 61592,
+      "gates": 6,
+      "live_topologies": 3098,
+      "merge_forest_equalities": 20270,
+      "regions_with_fanout_surplus": 28110,
+      "regions_with_one_parent_constants": 32042
+    }
+  ],
+  "hostile_and_sharp_controls": {
+    "comparable_chain": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "fork_surplus": [
+      1,
+      0,
+      1,
+      2
+    ],
+    "merge_equality": [
+      2,
+      0,
+      0,
+      1
+    ],
+    "repeated_pin_constant": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "sharp_merge_family_r": [
+      1,
+      24
+    ],
+    "terminal_not_sizes": {
+      "before": 2,
+      "signed_after": 0,
+      "strict_after": 1
+    },
+    "two_essential_input_sizes": {
+      "before": 3,
+      "signed_after": 1,
+      "strict_after": 1
+    }
+  },
+  "repeated_pin_topologies": [
+    {
+      "all_topologies": 3,
+      "closed_constant_regions": 0,
+      "gates": 1,
+      "live_topologies": 3,
+      "merge_forest_equalities": 0,
+      "regions_with_fanout_surplus": 0,
+      "regions_with_one_parent_constants": 0
+    },
+    {
+      "all_topologies": 18,
+      "closed_constant_regions": 6,
+      "gates": 2,
+      "live_topologies": 9,
+      "merge_forest_equalities": 6,
+      "regions_with_fanout_surplus": 0,
+      "regions_with_one_parent_constants": 0
+    },
+    {
+      "all_topologies": 180,
+      "closed_constant_regions": 87,
+      "gates": 3,
+      "live_topologies": 45,
+      "merge_forest_equalities": 63,
+      "regions_with_fanout_surplus": 6,
+      "regions_with_one_parent_constants": 18
+    },
+    {
+      "all_topologies": 2700,
+      "closed_constant_regions": 1392,
+      "gates": 4,
+      "live_topologies": 333,
+      "merge_forest_equalities": 828,
+      "regions_with_fanout_surplus": 213,
+      "regions_with_one_parent_constants": 459
+    },
+    {
+      "all_topologies": 56700,
+      "closed_constant_regions": 27717,
+      "gates": 5,
+      "live_topologies": 3393,
+      "merge_forest_equalities": 13509,
+      "regions_with_fanout_surplus": 6612,
+      "regions_with_one_parent_constants": 11619
+    }
+  ],
+  "status": "PASS"
+}
