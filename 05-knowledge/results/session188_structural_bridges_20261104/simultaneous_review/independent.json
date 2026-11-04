@@ -1,0 +1,132 @@
+{
+  "census": [
+    {
+      "families_by_type": {},
+      "n": 1,
+      "two_member_families": {}
+    },
+    {
+      "families_by_type": {
+        "single": 2
+      },
+      "n": 2,
+      "two_member_families": {}
+    },
+    {
+      "families_by_type": {
+        "nested_laminar": 12,
+        "overlapping": 12,
+        "single": 20
+      },
+      "n": 3,
+      "two_member_families": {
+        "nested_laminar": 12,
+        "overlapping": 6
+      }
+    },
+    {
+      "families_by_type": {
+        "nested_laminar": 376,
+        "overlapping": 1008,
+        "pairwise_disjoint": 24,
+        "single": 224
+      },
+      "n": 4,
+      "two_member_families": {
+        "nested_laminar": 256,
+        "overlapping": 120,
+        "pairwise_disjoint": 24
+      }
+    },
+    {
+      "families_by_type": {
+        "nested_laminar": 11840,
+        "overlapping": 113040,
+        "pairwise_disjoint": 800,
+        "single": 3584
+      },
+      "n": 5,
+      "two_member_families": {
+        "nested_laminar": 5120,
+        "overlapping": 2040,
+        "pairwise_disjoint": 800
+      }
+    }
+  ],
+  "exact_named_coordinates_compared": 270316,
+  "examples": [
+    {
+      "degree_counts": {
+        "1": 8,
+        "2": 44,
+        "3": 140,
+        "4": 108
+      },
+      "independently_computed_full_truth_table_size": 4096,
+      "module_masks": [
+        3,
+        12
+      ],
+      "order": 6,
+      "published_queries_compared": 484
+    },
+    {
+      "degree_counts": {
+        "1": 8,
+        "2": 40,
+        "3": 156,
+        "4": 84
+      },
+      "independently_computed_full_truth_table_size": 4096,
+      "module_masks": [
+        3,
+        63
+      ],
+      "order": 6,
+      "published_queries_compared": 484
+    },
+    {
+      "degree_counts": {
+        "2": 36,
+        "3": 132,
+        "4": 132
+      },
+      "independently_computed_full_truth_table_size": 4096,
+      "module_masks": [
+        3,
+        12,
+        48,
+        63
+      ],
+      "order": 6,
+      "published_queries_compared": 4096
+    },
+    {
+      "degree_counts": {
+        "0": 1,
+        "1": 10,
+        "2": 44,
+        "3": 88,
+        "4": 46
+      },
+      "independently_computed_full_truth_table_size": 1024,
+      "module_masks": [
+        7,
+        28
+      ],
+      "order": 5,
+      "published_queries_compared": 256
+    }
+  ],
+  "families": 130942,
+  "families_by_type": {
+    "nested_laminar": 12228,
+    "overlapping": 114060,
+    "pairwise_disjoint": 824,
+    "single": 3830
+  },
+  "modules": 3830,
+  "pair_hulls": 10650,
+  "status": "PASS",
+  "tournaments": 1099
+}

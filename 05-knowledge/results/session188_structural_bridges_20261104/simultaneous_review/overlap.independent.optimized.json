@@ -1,0 +1,7 @@
+{
+  "largest_scalar_overlap_gap": 12,
+  "method": "Scalar and two-port values from independent literal-word banks; quotient and induced-block Hamilton counts from literal permutations.",
+  "proper_overlapping_original_module_pairs": 2166,
+  "status": "PASS",
+  "uniformly_split_nested_pairs": 3580
+}

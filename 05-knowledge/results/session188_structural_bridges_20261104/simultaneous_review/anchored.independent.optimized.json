@@ -1,0 +1,9 @@
+{
+  "anchor_certificates": 33808,
+  "exact_averaging_checks": 3828,
+  "exposed_laminar_families": 15818,
+  "fully_covered_out_of_scope_families": 1064,
+  "source": "Literal-word full banks independently reconstructed; no producer response functions imported.",
+  "status": "PASS",
+  "two_vertex_boundary_certificates": 6396
+}
