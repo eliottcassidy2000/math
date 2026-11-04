@@ -1,0 +1,125 @@
+{
+  "canonical_classes": 6880,
+  "cyclic_ambient_controls": 8,
+  "data_pins": {
+    "anchor_exploration.json": {
+      "bytes": 158379,
+      "sha256": "3b4eea48684fa66c1eae52a8be7036795c9193e30a5c84d1541cc2a86b8610bf"
+    },
+    "anchor_independent.txt": {
+      "bytes": 1078,
+      "sha256": "2aa64a366a1b2d86dc7cbbb78d3c18ffef8b2006cd2d89d48a50b06ce34b4f8a"
+    },
+    "cover.json": {
+      "bytes": 1174721,
+      "sha256": "7af3e95ebe2c20d594f8e7623a10fa08682a4963e6a5d1b61b9600d56ea06175"
+    },
+    "endpoint_independent.txt": {
+      "bytes": 199932,
+      "sha256": "a502d81819c27120678cd4608ca055577db849978d01b6018453de29c18a336b"
+    },
+    "physical_records.json": {
+      "bytes": 1565125,
+      "sha256": "01a313d64c4bf472b06ec2737979016d362e9254b76a23d9bdac6e1fecb74b9c"
+    },
+    "quotients.json": {
+      "bytes": 550295,
+      "sha256": "7f50d34b7a7a9cb3efd02e4282ded6da9f7ab7df4b2333819217c3d48ada7b3a"
+    }
+  },
+  "endpoint_zero_classes": 2,
+  "extension_records_checked": 62423,
+  "full_named_physical_response_values": 262144,
+  "independent_exact_anchor_primitives": 272,
+  "independent_exact_endpoint_coordinates": 64128,
+  "order_eight_rooted_extensions": 58368,
+  "physical_cases": 6548,
+  "prime_classes": 4008,
+  "scope": "All prime-eight quotient converses; arbitrary nonempty children, equal-profile target replacements, every fixed ambient. Explicit source-relative original-module root-family consequence; no unrestricted reconstruction.",
+  "singleton_position_patterns": 512,
+  "source_pins": {
+    "PROOF.md": {
+      "bytes": 13313,
+      "sha256": "188dcd19fe2b47148427dc40c542afd65a72c4104fd2cdf47da0c532bbc6afc5"
+    },
+    "anchor_check.cpp": {
+      "bytes": 1400,
+      "sha256": "0b24293221866055f5740b8d62e91cac0cacc2e7089a7735a952225b8f10a7f6"
+    },
+    "anchor_explore.py": {
+      "bytes": 1481,
+      "sha256": "d58c27fe542abbeecdba5a4cf5aa99ca075bc39efb6710e6036b33d29d5de1d1"
+    },
+    "core.py": {
+      "bytes": 828,
+      "sha256": "8daaf5aae4653a60d61765bd9044bad43ecaf696cee8ef1b534c267efaa0a526"
+    },
+    "endpoints.cpp": {
+      "bytes": 697,
+      "sha256": "09b7aac236303bc3165b8812e0e10c067d6675a891a5a03d62f0e7b50b8c5bac"
+    },
+    "make_cover.py": {
+      "bytes": 1262,
+      "sha256": "949e7f2a20e571166663b4f3e73058246063ddebd857d097fa2863c1167e5f41"
+    },
+    "physical_checks.py": {
+      "bytes": 6082,
+      "sha256": "b91edc1efb06dcca5f53da6847202f1f7638fa06ae5e632553c715bbd2015a99"
+    },
+    "physical_h.cpp": {
+      "bytes": 591,
+      "sha256": "13b79c2bb03835edebd1526925218f2d2c08cd996e7ead0cfe74b7c63c869923"
+    },
+    "prepare_quotients.py": {
+      "bytes": 998,
+      "sha256": "802b3d9dc55f677ae81755850b3ac1bbfac433be26561c2d2d35008157b337a2"
+    },
+    "verify.py": {
+      "bytes": 6402,
+      "sha256": "a8f5901d4f99d8dce6b3e0fd2a41d9eba753ab5766b5bc0835600415cfa6b5a8"
+    }
+  },
+  "status": "PASS",
+  "three_query_affine_certificates": [
+    [
+      [
+        0,
+        5,
+        0,
+        20
+      ],
+      [
+        0,
+        7,
+        1,
+        104
+      ],
+      [
+        1,
+        0,
+        0,
+        124
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        1,
+        22
+      ],
+      [
+        0,
+        2,
+        0,
+        40
+      ],
+      [
+        1,
+        7,
+        0,
+        62
+      ]
+    ]
+  ]
+}

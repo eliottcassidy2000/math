@@ -1,0 +1,57 @@
+{
+  "all_induced_profiles": 30720,
+  "audit_data_pins": {
+    "physical_controls.json": "98820efb3822f4e8818bb2078b2a3fb7b1f12e58171b4c8489106858a898f9a2",
+    "profile_recount.json": "5e8ee0c9a6be873510179e66b64175ba85e030193fcdb003a77c3e0e55e36881"
+  },
+  "cases": [
+    {
+      "masks": [
+        0,
+        128
+      ],
+      "name": "ordered_endpoint_zero_prime8_and_triangle",
+      "values": [
+        1317,
+        3435,
+        3435
+      ]
+    },
+    {
+      "masks": [
+        4096,
+        4099
+      ],
+      "name": "cyclic_endpoint_zero_prime8_changed_descendant_and_other_highest",
+      "values": [
+        2326623,
+        721833,
+        721833
+      ]
+    }
+  ],
+  "complete_profile_arrays": 6,
+  "dependency_pins": {
+    "inputs/frontier_eight_audit.json": "a002c2b0b5debabc2e98a8d54fc78028185fce2429a631ede110697dcf0507d4",
+    "inputs/frontier_eight_normal.json": "5acc131c357d25a6e4d3729575ff08f2b1719926947c9627af7f43ddb8ad88a8",
+    "inputs/frontier_eight_proof.md": "169b6ae55130d67bf83bb90ca407e8409663f8b733e070ac65f50ed944a2c8fb",
+    "inputs/frontier_eight_review.md": "8c1a173c8ce413c3a2510929bf9abd597aecb8e6b53ea2a7270b05ffb3dcc58b",
+    "inputs/prime8_audit.json": "1ea86e9908644d20727acb11b082073ace2aa655f75d5d31f0e1268a7c7507a0",
+    "inputs/prime8_label_audit.json": "7e6d4811ceaca3529f2afc998005f7b4d2b60df816f77fe0d1d2b32557b5e0f1",
+    "inputs/prime8_normal.json": "59f69a4596dd4a3d9a29da464c98f41cb73ca83feefad12499d8b068bfcaef79",
+    "inputs/prime8_physical_audit.json": "001a5499c0a932e4e8f3a03a338f36302094f2ea3b6ee8d9e24c9cfa490ce3c0",
+    "inputs/prime8_proof.md": "188dcd19fe2b47148427dc40c542afd65a72c4104fd2cdf47da0c532bbc6afc5",
+    "inputs/prime8_review.md": "a482956aacc99d2c8506eed3ff0e4e7372ef7f21acf907fc34c50b01bca3c6dc"
+  },
+  "full_named_coefficient_positions": 38859,
+  "independent_physical_queries": 48,
+  "maximum_physical_order": 15,
+  "producer_pins": {
+    "PROOF.md": "daf7180f381708a123f4afdb08ff66798a32b528c822011a5e71176879bdd21c",
+    "controls.json": "27b28ecfda3991d35fef597e6a1d3ae1e182a3bda76fae5bce03da3b60cdec37",
+    "named_banks.json": "c48abf1fe3f973012d2167c48a470f1ee68e387792cc3a019648311c960ca99e",
+    "verify.py": "a8fea3a0e9bfe2f6b00a20a49635b21d5f6608c07c61ba1bbab192d2f2a74946"
+  },
+  "scope": "Independent restoration controls and mathematical review; complete named Mobius data checked, selected physical queries recounted. Prime-eight completeness is inherited from its source-pinned independent audit, not re-censused here.",
+  "status": "PASS"
+}

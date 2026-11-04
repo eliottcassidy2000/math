@@ -1,0 +1,10 @@
+{
+  "anchor_input_sha256": "3b4eea48684fa66c1eae52a8be7036795c9193e30a5c84d1541cc2a86b8610bf",
+  "explicit_shared_transports": 3,
+  "physical_input_sha256": "01a313d64c4bf472b06ec2737979016d362e9254b76a23d9bdac6e1fecb74b9c",
+  "physical_side_metadata_checks": 1040,
+  "proof_sha256": "188dcd19fe2b47148427dc40c542afd65a72c4104fd2cdf47da0c532bbc6afc5",
+  "source_sha256": "e80e741e911001964803f0c0d4b75eea934627ab8b3b43b9de48951974b341a8",
+  "status": "PASS",
+  "three_affine_battery_patterns": 512
+}

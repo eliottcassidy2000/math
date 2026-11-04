@@ -1,0 +1,52 @@
+[
+  {
+    "path": "inputs/frontier_eight_proof.md",
+    "origin_local": "session189-frontier-eight/PROOF.md",
+    "sha256": "169b6ae55130d67bf83bb90ca407e8409663f8b733e070ac65f50ed944a2c8fb"
+  },
+  {
+    "path": "inputs/frontier_eight_normal.json",
+    "origin_local": "session189-frontier-eight/normal.json",
+    "sha256": "5acc131c357d25a6e4d3729575ff08f2b1719926947c9627af7f43ddb8ad88a8"
+  },
+  {
+    "path": "inputs/frontier_eight_review.md",
+    "origin_local": "session189-seven-integration-audit/REVIEW.md",
+    "sha256": "8c1a173c8ce413c3a2510929bf9abd597aecb8e6b53ea2a7270b05ffb3dcc58b"
+  },
+  {
+    "path": "inputs/frontier_eight_audit.json",
+    "origin_local": "session189-seven-integration-audit/frontier_controls_receipt.json",
+    "sha256": "a002c2b0b5debabc2e98a8d54fc78028185fce2429a631ede110697dcf0507d4"
+  },
+  {
+    "path": "inputs/prime8_proof.md",
+    "origin_local": "session189-prime8/PROOF.md",
+    "sha256": "188dcd19fe2b47148427dc40c542afd65a72c4104fd2cdf47da0c532bbc6afc5"
+  },
+  {
+    "path": "inputs/prime8_normal.json",
+    "origin_local": "session189-prime8/normal.json",
+    "sha256": "59f69a4596dd4a3d9a29da464c98f41cb73ca83feefad12499d8b068bfcaef79"
+  },
+  {
+    "path": "inputs/prime8_review.md",
+    "origin_local": "session189-prime8-audit/REVIEW.md",
+    "sha256": "a482956aacc99d2c8506eed3ff0e4e7372ef7f21acf907fc34c50b01bca3c6dc"
+  },
+  {
+    "path": "inputs/prime8_audit.json",
+    "origin_local": "session189-prime8-audit/normal.json",
+    "sha256": "1ea86e9908644d20727acb11b082073ace2aa655f75d5d31f0e1268a7c7507a0"
+  },
+  {
+    "path": "inputs/prime8_physical_audit.json",
+    "origin_local": "session189-prime8-audit/physical_normal.json",
+    "sha256": "001a5499c0a932e4e8f3a03a338f36302094f2ea3b6ee8d9e24c9cfa490ce3c0"
+  },
+  {
+    "path": "inputs/prime8_label_audit.json",
+    "origin_local": "session189-prime8-audit/label_normal.json",
+    "sha256": "7e6d4811ceaca3529f2afc998005f7b4d2b60df816f77fe0d1d2b32557b5e0f1"
+  }
+]

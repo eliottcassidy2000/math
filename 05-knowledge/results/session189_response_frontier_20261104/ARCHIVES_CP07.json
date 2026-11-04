@@ -1,0 +1,43 @@
+{
+  "format": "lossless-compressed-base64-parts-v2",
+  "archives": [
+    {
+      "path": "frontier_nine/controls.json",
+      "bytes": 714842,
+      "sha256": "27b28ecfda3991d35fef597e6a1d3ae1e182a3bda76fae5bce03da3b60cdec37",
+      "git_blob_sha": "702d33769c40f23a65cde1150635e358abd1a57c",
+      "compression": "xz",
+      "compressed_bytes": 11560,
+      "compressed_sha256": "6fdd07c435564c8f35683f05baded75136d814067012717bc323bb193e94b60b",
+      "parts": [
+        "frontier_nine/controls.json.xz.b64.parts/00001.txt"
+      ]
+    },
+    {
+      "path": "frontier_nine/named_banks.json",
+      "bytes": 516277,
+      "sha256": "c48abf1fe3f973012d2167c48a470f1ee68e387792cc3a019648311c960ca99e",
+      "git_blob_sha": "81baeb177b23f95987868a170832ad0c94b7c881",
+      "compression": "xz",
+      "compressed_bytes": 80720,
+      "compressed_sha256": "65de2c1da497cb093bd020131ce8f76957f6ef7c1d0ff12706382fae8f2829aa",
+      "parts": [
+        "frontier_nine/named_banks.json.xz.b64.parts/00001.txt",
+        "frontier_nine/named_banks.json.xz.b64.parts/00002.txt",
+        "frontier_nine/named_banks.json.xz.b64.parts/00003.txt"
+      ]
+    },
+    {
+      "path": "nine_integration_audit/profile_recount.json",
+      "bytes": 1069403,
+      "sha256": "5e8ee0c9a6be873510179e66b64175ba85e030193fcdb003a77c3e0e55e36881",
+      "git_blob_sha": "3ba392c693c713d01f0fcf2f26eceaf32a2f37be",
+      "compression": "xz",
+      "compressed_bytes": 11208,
+      "compressed_sha256": "9d6baab4ee490b0f51407fb630ab0f5cd72a647859f04b225602ad04b5a0aae8",
+      "parts": [
+        "nine_integration_audit/profile_recount.json.xz.b64.parts/00001.txt"
+      ]
+    }
+  ]
+}

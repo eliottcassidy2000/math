@@ -1,0 +1,23 @@
+[
+  "PROOF.md",
+  "README.md",
+  "verify.py",
+  "controls.py",
+  "build_banks.py",
+  "physical.cpp",
+  "DEPENDENCIES.json",
+  "controls.json",
+  "named_banks.json",
+  "normal.json",
+  "optimized.json",
+  "inputs/frontier_eight_proof.md",
+  "inputs/frontier_eight_normal.json",
+  "inputs/frontier_eight_review.md",
+  "inputs/frontier_eight_audit.json",
+  "inputs/prime8_proof.md",
+  "inputs/prime8_normal.json",
+  "inputs/prime8_review.md",
+  "inputs/prime8_audit.json",
+  "inputs/prime8_physical_audit.json",
+  "inputs/prime8_label_audit.json"
+]

@@ -1,0 +1,168 @@
+{
+  "status": "PASS_INDEPENDENT_HIGH_NODE_CONTROLS",
+  "method": "Backward endpoint polynomial recurrence in cut marker; no producer imports",
+  "all_subset_profile_coordinates_per_orientation": 67584,
+  "controls": [
+    {
+      "name": "ordered_prime7_and_triangle",
+      "old_order": 10,
+      "all_subset_profile_coordinates_checked": 6144,
+      "actual_rows": {
+        "source": [
+          898,
+          900,
+          905,
+          947,
+          935,
+          967,
+          927,
+          256,
+          512,
+          128
+        ],
+        "intermediate": [
+          1020,
+          1017,
+          1010,
+          964,
+          968,
+          920,
+          928,
+          256,
+          512,
+          128
+        ],
+        "target": [
+          1020,
+          1017,
+          1010,
+          964,
+          968,
+          920,
+          928,
+          512,
+          128,
+          256
+        ]
+      },
+      "highest_nodes": [
+        127,
+        896
+      ],
+      "query": [
+        2,
+        0
+      ],
+      "response_values": [
+        1215,
+        369,
+        369
+      ],
+      "core_only_dual_query": [
+        127,
+        125
+      ],
+      "dual_response_values": [
+        369,
+        1215,
+        1215
+      ]
+    },
+    {
+      "name": "cyclic_ambient_descendant_and_other_highest",
+      "old_order": 13,
+      "all_subset_profile_coordinates_checked": 61440,
+      "actual_rows": {
+        "source": [
+          3598,
+          3596,
+          3592,
+          3600,
+          3623,
+          3791,
+          3743,
+          3871,
+          3711,
+          5120,
+          6144,
+          4608,
+          511
+        ],
+        "intermediate": [
+          4082,
+          4080,
+          4083,
+          4071,
+          4040,
+          3856,
+          3872,
+          3680,
+          3712,
+          5120,
+          6144,
+          4608,
+          511
+        ],
+        "target": [
+          4082,
+          4080,
+          4083,
+          4071,
+          4040,
+          3856,
+          3872,
+          3680,
+          3712,
+          6144,
+          4608,
+          5120,
+          511
+        ]
+      },
+      "highest_nodes": [
+        511,
+        3584
+      ],
+      "query": [
+        4104,
+        4096
+      ],
+      "response_values": [
+        807705,
+        284643,
+        284643
+      ],
+      "core_only_dual_query": [
+        4607,
+        4599
+      ],
+      "dual_response_values": [
+        284643,
+        807705,
+        807705
+      ]
+    }
+  ],
+  "complete_named_bank_coordinates": 34800,
+  "independent_shared_quartics": 7308,
+  "independent_two_shared_zero_quartics": 369,
+  "source_pins": {
+    "PROOF.md": "169b6ae55130d67bf83bb90ca407e8409663f8b733e070ac65f50ed944a2c8fb",
+    "controls.py": "079ecc0a3e6171d6601f435d35a4eb4c6995b3194ffb44e6df1d7152325044cb",
+    "controls.json": "d037f321109af5807651f3c69c5bee0eb45cd3a97c0d1b7d4b7a345e63f28c72",
+    "INHERITED.json": "5ea37bcf18796d73a851212fba51374682679c9ae6c01ede09931a6ebd28d147",
+    "named_banks.json": "3c4409487720f3921807c5ecbab6ae42696e943580ac1bbbc96961b4140d3c06",
+    "build_banks.py": "94068ca582f772e5088ec5767875efa232d204b5727f6a65e631cc813dcf8aa3"
+  },
+  "producer_normal_optimized_byte_equal": true,
+  "producer_receipt_sha256": "5acc131c357d25a6e4d3729575ff08f2b1719926947c9627af7f43ddb8ad88a8",
+  "reviewed_dependency_pins": {
+    "prime7/PROOF.md": "e382ce566c061626cb309467c58928f2a7b4a4e387835166bde252ccce7f7672",
+    "prime7/normal.json": "38165ed1a7a0bb195ed89b78360675d7382aa0c159c5bf6956eb0a8636403771",
+    "prime7_audit/REVIEW.md": "f9711b92608bdc2abfa7171cb64d638ff4b78ded5eadd3cd155811106c97f57b",
+    "prime7_audit/normal.json": "5511134b24c8186196c25757e57e3726cb6894964886a414a694da427ba1cb4d",
+    "prime7_audit/residual_normal.json": "91f82134c888f1a2f98e67475f7b12fbc10178447978f399ee85d614131a37ae",
+    "profiles/PROOF.md": "ea7ca89df44ba732247291b00aadb6a70cd8f4c4fb13624ae51f63479502d9b8",
+    "profiles/normal.json": "9b2c3f4baee64ae6e74804830c4dabd83afe81052042667f5ae76c5cad8ae35c"
+  }
+}
