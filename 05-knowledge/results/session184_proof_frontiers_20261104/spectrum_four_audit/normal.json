@@ -1,0 +1,13 @@
+{
+  "distinct_target_pairs": 75,
+  "exception_unmarked_Q_prefix_counts": [
+    0,
+    1
+  ],
+  "independent_component_signatures": 22,
+  "maximum_F": 27216,
+  "one_pass_prefixes": 588218,
+  "status": "PASS",
+  "tested_terminal_candidates": 285,
+  "transitions_rechecked": 14
+}
