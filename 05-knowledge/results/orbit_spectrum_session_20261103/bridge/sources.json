@@ -54,6 +54,18 @@
       "revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b",
       "blob": "562816bb715606449f0a9390daac314c5bd6b165",
       "sha256": "59bc9e8a4edc755a1447082f7ea6e0bad4566464402d53d40764555b17e8dbce"
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/obstructions/PROOF.md",
+      "revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f",
+      "blob": "aa3d7be8aaf8a690afaa1ee55f6d3925ab1d8057",
+      "sha256": "2883b1a6bb9aa0fcbfdca5133900868d57df296d51a95825e1d1d9070b0ad1a7"
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/clone_obstruction/PROOF.md",
+      "revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f",
+      "blob": "8b300c896f1f163c8a974ff01eb14afab52e149b",
+      "sha256": "c0fa1d6773a42723f5a53f7645f0b22fa98db01168762ec0516b5f382f42afb0"
     }
   ]
 }

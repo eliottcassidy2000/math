@@ -1,11 +1,12 @@
 # Certified leading digits of tournament class counts
 
-**PROVED finite remainder bound and exact prefix certification / FINITE-EXACT
+**PROVED cutoff corollary of an inherited finite remainder bound and exact
+prefix certification / FINITE-EXACT
 implementation controls. This computes requested leading bits of A000568,
 not its entire integer at large orders and not the Hamiltonian spectrum.**
 
-The existing full-integer response DP is retained as the recommended engine
-when the complete integer is needed. The new interface answers a different
+The inherited full-integer response DP is retained for the full-prefix
+comparisons and complete-integer checkpoint. The new interface answers a different
 query: determine the exact binary length and first B binary digits of a(n),
 with an explicit rational certificate and work governed by the requested
 precision. It avoids constructing a(n) or its quadratic-length identity power.
@@ -22,12 +23,22 @@ and full prefixes through200. Their successor
 [Session89 fused channels](../../session89_consecutive_tournament_pairs_20261028/counting/README.md)
 already shares multiple counting queries. No such mechanism is claimed new.
 
-The least-used relevant sidecar was the explicit boundary in
-[Session98 all-poles expansion](../../session98_tournament_growth_20261029/limits/ALL_POLES_CORE_EXPANSION.md):
-asymptotic truncation does not license exact rounding without an absolute
-error bound after restoring2^binom(n,2)/n!. The present bound supplies that
-missing finite certificate. Its cycle-core expansion is inherited, as is
-[THM-4845 Gaussian and meromorphic synthesis](../../../../01-canon/theorems/THM-4845-a000568-as-a-gaussian-average-gcd-covariance-cycle-index-exponential-and-the-meromorphic-normalized-series-with-poles-at-powers-of-four.md).
+The closest finite bound is already[Session98 limits and normalization,
+Section2](../../session98_tournament_growth_20261029/limits/LIMITS_AND_NORMALIZATION.md):
+its moved-support loss is m(2n-m-1)/3, its support count is at most n^m,
+and its geometric remainder is q_n^3/(1-q_n), with
+q_n=n*2^(-(n-1)/3). It also already identifies f_n as expected automorphism
+order and derives the symmetry probability bound used below. Proposition C1
+only rationalizes q_n upward and starts that inherited tail after an arbitrary
+retained cutoff. No new asymptotic or finite-tail mechanism is claimed.
+
+The[Session98 all-poles expansion](../../session98_tournament_growth_20261029/limits/ALL_POLES_CORE_EXPANSION.md)
+still gives the relevant hostile: small normalized error alone does not
+license exact rounding of the raw integer. The computational contribution
+here is the adaptive leading-bit API, which scales the inherited bound and
+checks the actual distance to the next integer before certifying digits.
+The cycle-core expansion and[THM-4845 Gaussian and meromorphic synthesis](../../../../01-canon/theorems/THM-4845-a000568-as-a-gaussian-average-gcd-covariance-cycle-index-exponential-and-the-meromorphic-normalized-series-with-poles-at-powers-of-four.md)
+are also inherited.
 The public sequence and classical Davis formula were checked at
 [OEIS A000568](https://oeis.org/A000568) on2026-11-03. No external novelty or
 priority claim is made for this elementary bound.
@@ -65,7 +76,7 @@ The inherited exact formula is
 Here (n)_m=n!/(n-m)! and the empty-core term is1. Let S_(n,M) be the sum
 restricted to m<=M, with0<=M<=n.
 
-**Proposition C1.** Set c=floor((n-1)/3), r=n/2^c. If r<1 and M<n, then
+**Proposition C1 (cutoff corollary of the inherited bound).** Set c=floor((n-1)/3), r=n/2^c. If r<1 and M<n, then
 
     0 <= f_n-S_(n,M) <= r^s/(1-r),                 (2)
 
@@ -175,7 +186,7 @@ the scaled calculation has118,715 bits. This is not the full49,876,542-bit
 class count and is not an extension of the OEIS full-term table.
 
 `benchmark.json` records five alternating CPU measurements, with100 head
-queries per timing batch at moderate orders. The baseline is the current
+queries per timing batch at moderate orders. The baseline is the inherited
 Session87 exact full-prefix engine, followed by extracting the same head.
 These are different output workloads: the baseline also produces every
 complete integer through n. No speedup ratio for complete A000568 computation
@@ -234,7 +245,7 @@ For a uniformly labelled tournament, f_n equals the expected automorphism
 group order, by Burnside's double count. The truncation controls aggregate
 symmetry mass. Since nontrivial tournament automorphism groups have odd order
 at least3, the probability of nontrivial symmetry is at most(f_n-1)/2.
-This elementary consequence concerns a random labelled tournament.
+This inherited Session98 consequence concerns a random labelled tournament.
 
 The inherited prime-H asymmetry theorem says that every witness with prime
 H>3 is asymmetric. Its converse is false, and an abundance of asymmetric
@@ -265,3 +276,33 @@ Positive controls include the exact full endpoint at small orders. Hostile
 controls reject insufficient mass caps, identity-only full rounding, and
 nonunique modular intervals. Runtime checks remain enabled under`-O`.
 The separate benchmark receipt contains nondeterministic CPU measurements.
+
+## 9 Incoming exact-target counting and its recovered provenance
+
+The incoming[Session175 counting packet](../../session175_tournament_spectrum_20261104/a000568/README.md)
+independently implements the exact-target projective quotient and records
+state/transition reductions against an ungauged fixed-target comparator.
+Its normal and optimized timing comparisons change sign, and its measured
+allocation grows, so it establishes no robust runtime or memory advantage.
+The present benchmark remains a comparison with an inherited **full-prefix**
+API; it is not a claim to beat every single-coefficient implementation.
+
+A targeted inheritance audit found that the quotient and its iff continuation
+criterion are already[Session98, Sections3–4](../../session98_tournament_growth_20261029/recurrence/PROJECTIVE_RESPONSE.md).
+The exact odd-local integer realization and narrow packing are already
+[Session105, Sections2–3](../../session105_metagraph_recursion_20261029/enumeration/INTEGER_PROJECTIVE.md).
+The[October25 production recurrence, Section2](../../lca_ports_reverse_20261025/counting/README.md)
+also stores the identical defect D(j)=j*t-R_j and a weight differing by the
+state-local factor2^(M*b). These credits are now restored in the incoming
+README and synthesis; its formulas and numerical measurements are unchanged.
+The[correction receipt](incoming_credit_correction.json) preserves the old
+and repaired prose hashes.
+
+These exact-target quotients and the present leading-bit interval serve
+different queries. Projective merging retains every individually normalized
+completion at one target degree. The head calculation deliberately discards
+high moved-mass cores and supplies an explicit error bound instead. Their
+common starting point is the inherited singleton-tail split; neither map
+retains actual Hamiltonian-path counts or named attachment data. The new
+full a(256) checkpoint uses the inherited full-prefix engine and makes no
+record claim.

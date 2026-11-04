@@ -1,0 +1,22 @@
+{
+  "status": "Prose prior-art correction only; formulas, mathematical programs and measurements unchanged.",
+  "published_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f",
+  "files": [
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/a000568/README.md",
+      "before_sha256": "8f2b0af0974c459052ba7e78abd7e625aee77ea7157e3842a84cc8c0fa22c894",
+      "after_sha256": "55124e1ce9c41984f649f011a8322a9c3e2fbed43f080b4a9e2a3e51f5184995"
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/synthesis/NOTE.md",
+      "before_sha256": "1d12372d2ca2da3ef5797f07e08ea047a7feab3da7a1612a1931c107a8bece79",
+      "after_sha256": "b34e91b800f240e07b4c54e248ea11f1ecf1574ecee4344a299fe791247ed3db"
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/orbits/README.md",
+      "before_sha256": "c496959e891f9ff669450976b02383c6185af322426090de26a97a86fd1d54a7",
+      "after_sha256": "3a8d7668c6a10d60a9095b8b2cc437aa177532329071aead690f52df5e4ecaa7"
+    }
+  ],
+  "mechanism": "Existing exact-target quotient, integer realization and defect gauge were absent from the incoming inheritance pass."
+}

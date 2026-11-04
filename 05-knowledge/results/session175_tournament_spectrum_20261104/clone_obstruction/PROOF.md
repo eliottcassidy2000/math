@@ -1,6 +1,6 @@
 # Why transitive clone inflation cannot complete the prime lane
 
-Session 175. **Proved universal obstruction to a scalable constructor class.** This does not obstruct arbitrary nonuniform growing interfaces, and does not claim any particular uncovered integer is globally missing. Keep the previously published complete-prefix evidence separate: the repository reports coverage strictly below 80557, not nonattainment at 80557.
+Session 175. **Proved universal obstruction to a scalable constructor class.** This does not obstruct arbitrary nonuniform growing interfaces, and does not claim any particular uncovered integer is globally missing. The earlier complete-prefix statement strictly below80557 is historical evidence, not the current repository frontier or nonattainment at80557. [Session134's two-apex provenance](../../session134_constructive_spectrum_frontier_20261101/two_apex/README.md) already credits inherited coverage through99,999 except7 and21; the present clone obstruction does not extend or retract that finite coverage.
 
 ## 1. Constructor class
 

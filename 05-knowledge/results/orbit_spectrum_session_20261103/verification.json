@@ -1,0 +1,65 @@
+{
+  "direct_source_pins_checked": 40,
+  "jobs": [
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "counting/check.json",
+      "receipt_sha256": "d509313ef0ae5a189b05f48b644b547488ca3e34c1e6b4630af3f2a77c8c55d2",
+      "script": "counting/check.py",
+      "script_sha256": "8bf3ed34c57ff041562cdd6082d2a62ea0c0eb886831deccc45a049a759977a5"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "counting/full256.json",
+      "receipt_sha256": "1c5222810bcf7ffd71247e1753a47d35aa0adf38cece3662b8ccdbd37e64e9ef",
+      "script": "counting/full_checkpoint.py",
+      "script_sha256": "00181558c46d6e40208e51e59596577af74e86e58759a268fafefc193bc2a8bb"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "bridge/check.json",
+      "receipt_sha256": "21c34e7129c51dba5665445786b22c574b95801694e1eb897a226d28de25b46b",
+      "script": "bridge/check.py",
+      "script_sha256": "ee65e914bd8c7b58784ffb357fa3f1e2dd0e0562a2b07fadec1c1af42f3dc52e"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "counting/bridge_audit.json",
+      "receipt_sha256": "99531e1e5b8559e8665c8c97dcdde12a3e25643f29a02b5b322a3121bee45482",
+      "script": "counting/bridge_audit.py",
+      "script_sha256": "a111f256824b97a903fe3addf15d917ced65be9f2783c1686118ff1cd6d2b4fd"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "words/check.json",
+      "receipt_sha256": "cc5d1d816fd5ef04df045dd0096eba4f4b80da502debf7307719d0852f4fb3e6",
+      "script": "words/check.py",
+      "script_sha256": "c9d5e04e5051481d2e347d0f9618a77e45b2cf2f1143f2a7e09f3078c70ab025"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "words/independent_audit.json",
+      "receipt_sha256": "7ea4b12c0cf184b8a91cb9f1f5004b433c7917ed354f3be3a14da64220d3626c",
+      "script": "words/independent_audit.py",
+      "script_sha256": "291dd39044092aed3ff497d7871c75188eb44a0079ffcf21537e73f00b39cacb"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "coverage/check.json",
+      "receipt_sha256": "138cd09c4abaf5bf8f834706ba318ffc0b4ff188fa14894542f844d8a85e08ab",
+      "script": "coverage/check.py",
+      "script_sha256": "a3e33bea40fb0d38f190248c93fa7b595db7e9280a212b9cb89bbeab417f91b1"
+    },
+    {
+      "normal_and_optimized_byte_identical": true,
+      "receipt": "coverage/independent_audit.json",
+      "receipt_sha256": "93da982720ea6c6b682dba82ff942f3158a4757ee91a3d8c642e75606fa61683",
+      "script": "coverage/independent_audit.py",
+      "script_sha256": "a860ad1afa1123b0b854ac0fe9f65ba18ea4cd285186408caa3a1846d247140b"
+    }
+  ],
+  "runner_sha256": "e61a4cc6fc33dca0263bd1c58570d97996442b7c486304db4932475d3a9cbac6",
+  "scope": "Eight exact jobs replayed in normal and optimized Python; timing measurements excluded.",
+  "sources_sha256": "ec5f119a1223fa5ac12de9fd904e260f02379c03ef0624f303b18bff9669bef1",
+  "status": "PASS"
+}

@@ -59,7 +59,7 @@ reproduced under normal Python and optimization.
 affine identity on strong words exists exactly when s consists only of
 the letter3. In that case a=1 and b=0.
 
-Proof. By W1 the identity holds also on w=3^m, whose count is1. If s
+Proof. By W1 the identity holds also on w=3^m for m≥1, whose count is1. If s
 contains a letter c≠3, its vertex beats at least one apex r. The induced
 tournament on r, the m old chain vertices, and this new vertex has the
 cyclic block pattern r→TT_m→new→r. Its count is2^m+1. Hamiltonian-path

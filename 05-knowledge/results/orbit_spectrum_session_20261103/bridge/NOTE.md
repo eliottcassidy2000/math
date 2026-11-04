@@ -284,7 +284,26 @@ arbitrary target realization: it constrains how cheaply a marked module can
 be placed inside a strong graph. Target selection and reusable attachment
 states remain separate obligations.
 
-## 7 Reproduction and scope
+## 7 Relation to the concurrent cyclic module and clone results
+
+The incoming [Session175 arbitrary cyclic-module analysis](../../session175_tournament_spectrum_20261104/obstructions/PROOF.md)
+uses the same inherited THM-3121 positive kernel and completely classifies
+its constructor image through45. Its modules vary inside a fixed C3
+quotient; here the rooted strong quotient varies around one fixed module.
+Thus its fixed-size transitive minimum and our marked-quotient minimum
+address different parameters of the same substitution law. The exact
+low-spectrum exclusion supplies a hostile to treating uniform cyclic
+composition as a universal constructor.
+
+The [finite clone-library obstruction](../../session175_tournament_spectrum_20261104/clone_obstruction/PROOF.md)
+shows that finitely many fixed quotient templates, inflated only by
+transitive modules, supply only polylogarithmically many prime counts below
+a growing bound. Our formula(3) is an exact enumeration refinement, not a
+finite-template realization strategy, so there is no conflict. A successful
+prime-lane construction still needs growing interface structure or modules
+with additional arithmetic information.
+
+## 8 Reproduction and scope
 
 From the repository root:
 

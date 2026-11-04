@@ -6,7 +6,7 @@ Session 175, 2026-11-04. **PROVED** statements below are elementary deductions f
 
 The primary definition [OEIS A000568](https://oeis.org/A000568) is the number of unlabeled tournaments on n vertices, with offset zero. The page explicitly supplies Davis's odd-partition formula. The repository already contains the exact future-response quotient in `05-knowledge/results/tournament_future_boundary_20261020/README.md` and the odd-factorial packed transfer in `05-knowledge/results/degree_local_tournament_enumeration_20261021/session22-enumeration/local_scale.py`. The one-tail/core-kernel split is likewise inherited. The ordinary residual DP below is an independently implemented backward form of that existing quotient, not a new theorem.
 
-The companion Session 175 implementation in `../a000568/projective.py` uses a fixed-target projective quotient. The present folder supplies an independent backward implementation, a different normalization, a signed-edge permutation oracle, and a recurrence-class obstruction.
+The companion Session175 implementation in `../a000568/projective.py` reproduces the fixed-target projective quotient already proved in [Session98, Sections3–4](../../session98_tournament_growth_20261029/recurrence/PROJECTIVE_RESPONSE.md); [Session105, Sections2–3](../../session105_metagraph_recursion_20261029/enumeration/INTEGER_PROJECTIVE.md) already supplies its odd-local integer realization and packing. The present folder supplies an independent backward implementation, a different normalization, a signed-edge permutation oracle, and a recurrence-class obstruction.
 
 ## 1. Fixed-target projective equivalence is exact and minimal wordwise
 

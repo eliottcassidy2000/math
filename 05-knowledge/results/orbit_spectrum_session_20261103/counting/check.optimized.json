@@ -571,7 +571,7 @@
   "scope": "Certified leading bits; full-integer spectrum coverage remains open.",
   "source_hashes": {
     "05-knowledge/results/session87_four_vertices_enumeration_20261028/fast_counts.py": "3844a4a590daaf01410cf99d3584441bfa2f8e5e95371ccaafe534fd152b0ece",
-    "heads.py": "68e870a2ac59e50fa6f6247fefaabbe5ebfd7b10ceeac314910107bdde6e6421"
+    "heads.py": "ddc7dad4805f063a9b9a8e1dae7bea78c64c3b4a0c7e6ae560cb122eff2e9c92"
   },
   "status": "PASS",
   "universe": {

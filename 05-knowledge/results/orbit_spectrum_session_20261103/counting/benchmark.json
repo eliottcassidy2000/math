@@ -1,5 +1,11 @@
 {
   "comparison_scope": "Same requested head; baseline computes complete integer prefix, head API returns only a certified prefix. Not a full-count speedup.",
+  "documentation_only_source_update": {
+    "change": "Docstring credits inherited Session98 finite tail; all executable statements unchanged. Original measured source is preserved in commit83d4954e15.",
+    "current_sha256": "ddc7dad4805f063a9b9a8e1dae7bea78c64c3b4a0c7e6ae560cb122eff2e9c92",
+    "path": "heads.py",
+    "timed_sha256": "68e870a2ac59e50fa6f6247fefaabbe5ebfd7b10ceeac314910107bdde6e6421"
+  },
   "head_microbenchmark_calls_per_repetition": 100,
   "large_heads": [
     {

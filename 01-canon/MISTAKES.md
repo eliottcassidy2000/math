@@ -4,6 +4,47 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — counting refinements must retain the earlier finite bound and quotient
+
+**Provenance correction; the numerical formulas survive.** The
+`orbit_spectrum_session_20261103` checkpoint at83d4954e15 described its
+finite moved-mass error certificate as filling a missing bound in Session98.
+But [Session98 normalization section2](../05-knowledge/results/session98_tournament_growth_20261029/limits/LIMITS_AND_NORMALIZATION.md)
+already proves the support loss, the bound by n^m permutations, and the
+geometric remainder. The current C1 is its rationalized arbitrary-cutoff
+specialization. The adaptive leading-bit API, exact rounding-distance test,
+large-order certificates and independent complete-count controls remain
+the implementation contribution; the underlying remainder mechanism is
+inherited. Reading only the later all-poles warning missed its companion
+proof. The [repaired counting note](../05-knowledge/results/orbit_spectrum_session_20261103/counting/NOTE.md)
+credits both files.
+
+The same review found that incoming Session175's projective Burnside
+quotient and exact integer shifts also have earlier proofs: the October25
+defect gauge, Session98's projective-response iff theorem, and Session105's
+integer projective carrier. Its independent implementation, equality
+controls and honest no-robust-speedup measurements remain valid. The
+affected README and synthesis now state these credits; formulas and
+measurements were not changed. Check the exact state map and gauge before
+claiming a newly compressed coordinate merely from a different notation.
+
+## 2026-11-03 — positive clone lengths and empty exterior kernels have distinct boundaries
+
+**Draft errors caught before the constructive packet was published.** The
+moving-mark expression `20^(m-1)32` was initially tested as the plus-two
+constructor at all m≥1. At m=1 it is232, with H9 rather than the required11.
+The uniform proof actually adjoins a clone module of size m-1≥1. The
+repaired theorem uses m≥2 and the separate literal base220 with H11.
+Retain the empty-module boundary rather than extending its positive-length
+exponential formula backwards. See [coverage C5](../05-knowledge/results/orbit_spectrum_session_20261103/coverage/NOTE.md).
+
+Independently, a marked substitution-kernel helper omitted the empty word
+and returned A0=0 for the one-vertex quotient, whereas its stated convention
+requires A0=H(empty)=1. Both helpers and their q=1/2 controls were repaired.
+The production quotient census starts at q=3, so the symmetric seven-prime
+classification is unchanged. The [independent bridge audit](../05-knowledge/results/orbit_spectrum_session_20261103/bridge/AUDIT.md)
+records the exact boundary and first failed implementation implication.
+
 ## 2026-11-03 — a final square-sum path does not identify its old boundary
 
 **Research/commentary correction, not a retracted theorem:** the initial

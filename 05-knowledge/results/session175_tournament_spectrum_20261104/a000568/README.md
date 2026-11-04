@@ -11,7 +11,9 @@ The primary [OEIS A000568 entry](https://oeis.org/A000568/internal) defines the 
 - `05-knowledge/results/tournament_future_boundary_20261020/README.md`: merge histories with equal degree and all affordable future responses; exact n=200 computation.
 - `05-knowledge/results/degree_local_tournament_enumeration_20261021/session22-enumeration/local_scale.py`: degree-local odd-factorial integral transfers, retained verbatim here as `inherited_local_scale.py`.
 
-Those are inherited, not rediscovered advances. The change here is that asking for **exactly degree n**, instead of every degree up to n, permits proportional continuation responses to merge. This genuinely changes the state equivalence relation. Completing the singleton tail analytically is inherited and is applied identically in both benchmark modes.
+The fixed-target quotient itself is also inherited. [Session98, Sections3–4](../../session98_tournament_growth_20261029/recurrence/PROJECTIVE_RESPONSE.md), already proves the identical if-and-only-if criterion for individual continuations, with s_j=R_j-jR_1, and absorbs2^(M R_1) into the weight. [Session105, Sections2–3](../../session105_metagraph_recursion_20261029/enumeration/INTEGER_PROJECTIVE.md), already proves the odd-local integer scale, exact negative shifts, and the same narrow packing bound. This packet independently implements and measures those mechanisms; it does not introduce a new projective quotient or a new exact-right-shift theorem.
+
+The [October25 production defect recurrence, Section2](../../lca_ports_reverse_20261025/counting/README.md), retains exactly D(j)=j*t-R_j, omits t from the state, and already merges histories(23) and(9,9,5) before stage3 at target26. Its weight Y=O(d)*2^[M(t-b)]*w and this packet's W=O(d)*2^(Mt)*w satisfy W=2^(Mb)Y, where b=max_(j>=3)ceil(D(j)/(j-1)) is state-determined. That earlier gauge makes all shifts nonnegative; its reverse valuation potential additionally supports normalized low-bit queries. Thus the present state reduction relative to the ungauged comparator reproduces an existing quotient. The formulas, controls and measurements below remain valid. Completing the singleton tail analytically is inherited and is applied identically in both benchmark modes.
 
 ## 1. Exact-target continuation equivalence
 
@@ -79,7 +81,7 @@ A digit width bit_length(n), at least one, prevents carries between coordinates.
 
 The exact negative-shift check uses a low-bit mask, not long integer division. Since every T is odd, a negative shift is applied to W before multiplying by T. This preserves exactness and reduces the size of the integer product. Both optimizations are included in the final executable and receipts.
 
-At every stage and fixed d, the new signatures are images of the old signatures under R->S. Hence the projective number of states is no larger, and using the same allowed k and tail closure the number of mathematical transitions is no larger. This does **not** prove lower wall-clock time: weights can be larger, and right-shift divisibility checks cost work.
+At every stage and fixed d, the projective signatures are images of the ungauged signatures under R->S. Hence the projective number of states is no larger, and using the same allowed k and tail closure the number of mathematical transitions is no larger. This does **not** prove lower wall-clock time: weights can be larger, and right-shift divisibility checks cost work.
 
 Writing P_ell for encountered projected states before ell, the transition bound is the explicit sum over ell and (d,S) in P_ell of 1+floor((n-d)/ell). Transfer-table size is O(n^2 log(n+2)), as in the inherited ordinary local-scale method. Integer weights use O(n^2+n log n) bits. No polynomial bound on the number of response states is proved.
 
@@ -109,7 +111,7 @@ Both normal and optimized-mode runs passed 537 checks with identical exact answe
 
 Ratios below one mean slower. The two replay measurements change the sign of the n=200 timing comparison, so there is no demonstrated robust runtime advantage. The transition reduction is exact and reproducible; timing is host-dependent. The final implementation already incorporates narrow packing, low-bit divisibility tests, and shifting before odd multiplication. Earlier wider-packing spot timings are not the final benchmark.
 
-The inherited all-degree engine remains appropriate when a whole prefix is requested. The new quotient is a structural improvement, not an established fastest algorithm or a solution to the partition-growth barrier.
+The inherited all-degree engine remains appropriate when a whole prefix is requested. The inherited projective quotient is structurally coarser than its ungauged comparator. This independent implementation and measurement packet establishes neither a fastest algorithm nor a solution to the partition-growth barrier.
 
 Independent audit: `../orbits/independent_results_normal.json` and `../orbits/independent_results_optimized.json` pin the current projective source SHA-256 `1a37aa21e66f820473b14f38c544c021642b8a7436d3e970588cfb8565a0f63a`. Those audits check six implementations through 30, a direct permutation action on oriented edges through 7, 600 projective-equivalence cases, and reverse-recursion controls at 50,100,150,200. No defects were found.
 

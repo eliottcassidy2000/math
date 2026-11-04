@@ -1,10 +1,20 @@
 {
-  "note_sha256": "1d12372d2ca2da3ef5797f07e08ea047a7feab3da7a1612a1931c107a8bece79",
-  "relative_links_verified": 17,
+  "note_sha256": "b34e91b800f240e07b4c54e248ea11f1ecf1574ecee4344a299fe791247ed3db",
+  "relative_links_verified": 19,
   "links": [
     {
       "title": "enumeration packet",
       "relative_target": "../a000568/README.md",
+      "exists": true
+    },
+    {
+      "title": "Session98, Sections3\u20134",
+      "relative_target": "../../session98_tournament_growth_20261029/recurrence/PROJECTIVE_RESPONSE.md",
+      "exists": true
+    },
+    {
+      "title": "Session105, Sections2\u20133",
+      "relative_target": "../../session105_metagraph_recursion_20261029/enumeration/INTEGER_PROJECTIVE.md",
       "exists": true
     },
     {
@@ -87,6 +97,5 @@
       "relative_target": "../clone_obstruction/reviewer_replay.json",
       "exists": true
     }
-  ],
-  "scope": "Local link-existence check only; independent mathematical review is separate."
+  ]
 }

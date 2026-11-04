@@ -61,6 +61,48 @@
       "path": "05-knowledge/results/strong_attachment_tail_compiler_20261028/HISTORY.md",
       "sha256": "f88e908478f24f89b12f411d3b19c87726eb92965d4c61d308acec12d3c78768",
       "source_revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b"
+    },
+    {
+      "path": "05-knowledge/results/session98_tournament_growth_20261029/recurrence/PROJECTIVE_RESPONSE.md",
+      "sha256": "9a7842df21867e9c7760505d6f91d37ebcee5902e43b27a16486054b9904c017",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session105_metagraph_recursion_20261029/enumeration/INTEGER_PROJECTIVE.md",
+      "sha256": "5102ea38ef2a9e87348f8da92829c13846c410c3354d5ebd886fde66b52ee494",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/counting/README.md",
+      "sha256": "3def1841ef1824842eb24d1b17567093bc371dd4179dad754f849b3bb433282f",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/port_residual_integral_20261025/counting/README.md",
+      "sha256": "e3b44b2de0adde938eb1b9766c31c3397870195b867c97d4fdb179cfb6d26fee",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/metagraph_scheduled_recursion_20261029/RECOVERY.md",
+      "sha256": "f26fe78701bac50c7bbb6714c4d7b54c0c6c28089f3ae3f50ad3a1e6b66713c2",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/a000568/README.md",
+      "sha256": "55124e1ce9c41984f649f011a8322a9c3e2fbed43f080b4a9e2a3e51f5184995",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f",
+      "published_sha256": "8f2b0af0974c459052ba7e78abd7e625aee77ea7157e3842a84cc8c0fa22c894",
+      "note": "Prose credit correction; mathematical program unchanged."
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/a000568/projective.py",
+      "sha256": "1a37aa21e66f820473b14f38c544c021642b8a7436d3e970588cfb8565a0f63a",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session98_tournament_growth_20261029/limits/LIMITS_AND_NORMALIZATION.md",
+      "sha256": "fee711c1ae3cbd8beef64d3b36d67e1f6d1d662a889aae730180c42c8c126a17",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
     }
   ],
   "external": [

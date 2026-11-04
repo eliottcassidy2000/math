@@ -1,0 +1,1165 @@
+{
+  "arbitrary_labelled_rooted_exteriors": 244,
+  "clone_rows": [
+    {
+      "distinct_words": 1,
+      "hits_plus_four": [
+        [
+          "2",
+          "12"
+        ],
+        [
+          "2",
+          "30"
+        ]
+      ],
+      "hits_plus_two": [
+        [
+          "2",
+          "20"
+        ],
+        [
+          "2",
+          "21"
+        ]
+      ],
+      "m": 1,
+      "marked_pair_count": 3,
+      "maximum_suffix_length": 2,
+      "moving_mark_child": {
+        "H": 11,
+        "excluded_naive_H": 9,
+        "excluded_naive_word": "232",
+        "word": "220"
+      },
+      "source_H": 3
+    },
+    {
+      "distinct_words": 6,
+      "hits_plus_four": [
+        [
+          "12",
+          "32"
+        ],
+        [
+          "20",
+          "20"
+        ],
+        [
+          "20",
+          "21"
+        ],
+        [
+          "22",
+          "02"
+        ],
+        [
+          "22",
+          "31"
+        ],
+        [
+          "30",
+          "01"
+        ],
+        [
+          "32",
+          "32"
+        ]
+      ],
+      "hits_plus_two": [
+        [
+          "12",
+          "31"
+        ],
+        [
+          "20",
+          "00"
+        ],
+        [
+          "20",
+          "01"
+        ],
+        [
+          "20",
+          "11"
+        ],
+        [
+          "20",
+          "32"
+        ],
+        [
+          "21",
+          "11"
+        ],
+        [
+          "22",
+          "22"
+        ],
+        [
+          "30",
+          "31"
+        ]
+      ],
+      "m": 2,
+      "marked_pair_count": 6,
+      "maximum_suffix_length": 2,
+      "moving_mark_child": {
+        "balanced_graph": {
+          "child": 7,
+          "names": [
+            "c_2",
+            "x",
+            "y",
+            "c_1",
+            "birth_a",
+            "birth_b",
+            "reset_root",
+            "reset_child"
+          ],
+          "root": 6,
+          "rows": [
+            18,
+            116,
+            57,
+            51,
+            32,
+            1,
+            189,
+            63
+          ]
+        },
+        "balanced_profile": [
+          59,
+          17,
+          17,
+          59
+        ],
+        "names": [
+          "c_2",
+          "x",
+          "y",
+          "c_1",
+          "birth_a",
+          "birth_b"
+        ],
+        "old_to_new": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "profile_at_old_x": [
+          17,
+          3,
+          3,
+          21
+        ],
+        "rows": [
+          18,
+          52,
+          57,
+          51,
+          32,
+          1
+        ],
+        "word": "2032",
+        "word_continuation_profile": [
+          17,
+          57,
+          49,
+          35,
+          171,
+          171,
+          139,
+          115,
+          139,
+          109,
+          125,
+          83,
+          483,
+          561,
+          445,
+          475,
+          429
+        ]
+      },
+      "source_H": 5
+    },
+    {
+      "distinct_words": 7,
+      "hits_plus_four": [],
+      "hits_plus_two": [
+        [
+          "112",
+          "31"
+        ],
+        [
+          "200",
+          "32"
+        ]
+      ],
+      "m": 3,
+      "marked_pair_count": 7,
+      "maximum_suffix_length": 2,
+      "moving_mark_child": {
+        "balanced_graph": {
+          "child": 8,
+          "names": [
+            "c_3",
+            "x",
+            "y",
+            "c_1",
+            "c_2",
+            "birth_a",
+            "birth_b",
+            "reset_root",
+            "reset_child"
+          ],
+          "root": 7,
+          "rows": [
+            34,
+            228,
+            121,
+            115,
+            99,
+            64,
+            1,
+            381,
+            127
+          ]
+        },
+        "balanced_profile": [
+          119,
+          29,
+          29,
+          119
+        ],
+        "names": [
+          "c_3",
+          "x",
+          "y",
+          "c_1",
+          "c_2",
+          "birth_a",
+          "birth_b"
+        ],
+        "old_to_new": [
+          1,
+          2,
+          3,
+          4,
+          0
+        ],
+        "profile_at_old_x": [
+          29,
+          3,
+          3,
+          45
+        ],
+        "rows": [
+          34,
+          100,
+          121,
+          115,
+          99,
+          64,
+          1
+        ],
+        "word": "20032",
+        "word_continuation_profile": [
+          29,
+          99,
+          85,
+          59,
+          301,
+          299,
+          237,
+          197,
+          245,
+          193,
+          213,
+          143,
+          861,
+          989,
+          767,
+          841,
+          737
+        ]
+      },
+      "source_H": 9
+    },
+    {
+      "distinct_words": 9,
+      "hits_plus_four": [],
+      "hits_plus_two": [
+        [
+          "1112",
+          "31"
+        ],
+        [
+          "2000",
+          "32"
+        ]
+      ],
+      "m": 4,
+      "marked_pair_count": 9,
+      "maximum_suffix_length": 2,
+      "moving_mark_child": {
+        "balanced_graph": {
+          "child": 9,
+          "names": [
+            "c_4",
+            "x",
+            "y",
+            "c_1",
+            "c_2",
+            "c_3",
+            "birth_a",
+            "birth_b",
+            "reset_root",
+            "reset_child"
+          ],
+          "root": 8,
+          "rows": [
+            66,
+            452,
+            249,
+            243,
+            227,
+            195,
+            128,
+            1,
+            765,
+            255
+          ]
+        },
+        "balanced_profile": [
+          239,
+          53,
+          53,
+          239
+        ],
+        "names": [
+          "c_4",
+          "x",
+          "y",
+          "c_1",
+          "c_2",
+          "c_3",
+          "birth_a",
+          "birth_b"
+        ],
+        "old_to_new": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          0
+        ],
+        "profile_at_old_x": [
+          53,
+          3,
+          3,
+          93
+        ],
+        "rows": [
+          66,
+          196,
+          249,
+          243,
+          227,
+          195,
+          128,
+          1
+        ],
+        "word": "200032",
+        "word_continuation_profile": [
+          53,
+          183,
+          157,
+          107,
+          561,
+          555,
+          433,
+          361,
+          457,
+          361,
+          389,
+          263,
+          1617,
+          1845,
+          1411,
+          1573,
+          1353
+        ]
+      },
+      "source_H": 17
+    },
+    {
+      "distinct_words": 11,
+      "hits_plus_four": [],
+      "hits_plus_two": [
+        [
+          "11112",
+          "31"
+        ],
+        [
+          "20000",
+          "32"
+        ]
+      ],
+      "m": 5,
+      "marked_pair_count": 11,
+      "maximum_suffix_length": 2,
+      "moving_mark_child": {
+        "balanced_graph": null,
+        "balanced_profile": null,
+        "names": [
+          "c_5",
+          "x",
+          "y",
+          "c_1",
+          "c_2",
+          "c_3",
+          "c_4",
+          "birth_a",
+          "birth_b"
+        ],
+        "old_to_new": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0
+        ],
+        "profile_at_old_x": [
+          101,
+          3,
+          3,
+          189
+        ],
+        "rows": [
+          130,
+          388,
+          505,
+          499,
+          483,
+          451,
+          387,
+          256,
+          1
+        ],
+        "word": "2000032",
+        "word_continuation_profile": [
+          101,
+          351,
+          301,
+          203,
+          1081,
+          1067,
+          825,
+          689,
+          881,
+          697,
+          741,
+          503,
+          3129,
+          3557,
+          2699,
+          3037,
+          2585
+        ]
+      },
+      "source_H": 33
+    },
+    {
+      "distinct_words": 13,
+      "hits_plus_four": [],
+      "hits_plus_two": [
+        [
+          "111112",
+          "31"
+        ],
+        [
+          "200000",
+          "32"
+        ]
+      ],
+      "m": 6,
+      "marked_pair_count": 13,
+      "maximum_suffix_length": 2,
+      "moving_mark_child": {
+        "balanced_graph": {
+          "child": 11,
+          "names": [
+            "c_6",
+            "x",
+            "y",
+            "c_1",
+            "c_2",
+            "c_3",
+            "c_4",
+            "c_5",
+            "birth_a",
+            "birth_b",
+            "reset_root",
+            "reset_child"
+          ],
+          "root": 10,
+          "rows": [
+            258,
+            1796,
+            1017,
+            1011,
+            995,
+            963,
+            899,
+            771,
+            512,
+            1,
+            3069,
+            1023
+          ]
+        },
+        "balanced_profile": [
+          959,
+          197,
+          197,
+          959
+        ],
+        "names": [
+          "c_6",
+          "x",
+          "y",
+          "c_1",
+          "c_2",
+          "c_3",
+          "c_4",
+          "c_5",
+          "birth_a",
+          "birth_b"
+        ],
+        "old_to_new": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0
+        ],
+        "profile_at_old_x": [
+          197,
+          3,
+          3,
+          381
+        ],
+        "rows": [
+          258,
+          772,
+          1017,
+          1011,
+          995,
+          963,
+          899,
+          771,
+          512,
+          1
+        ],
+        "word": "20000032",
+        "word_continuation_profile": [
+          197,
+          687,
+          589,
+          395,
+          2121,
+          2091,
+          1609,
+          1345,
+          1729,
+          1369,
+          1445,
+          983,
+          6153,
+          6981,
+          5275,
+          5965,
+          5049
+        ]
+      },
+      "source_H": 65
+    },
+    {
+      "distinct_words": 15,
+      "hits_plus_four": [],
+      "hits_plus_two": [
+        [
+          "1111112",
+          "31"
+        ],
+        [
+          "2000000",
+          "32"
+        ]
+      ],
+      "m": 7,
+      "marked_pair_count": 15,
+      "maximum_suffix_length": 3,
+      "moving_mark_child": {
+        "balanced_graph": null,
+        "balanced_profile": null,
+        "names": [
+          "c_7",
+          "x",
+          "y",
+          "c_1",
+          "c_2",
+          "c_3",
+          "c_4",
+          "c_5",
+          "c_6",
+          "birth_a",
+          "birth_b"
+        ],
+        "old_to_new": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          0
+        ],
+        "profile_at_old_x": [
+          389,
+          3,
+          3,
+          765
+        ],
+        "rows": [
+          514,
+          1540,
+          2041,
+          2035,
+          2019,
+          1987,
+          1923,
+          1795,
+          1539,
+          1024,
+          1
+        ],
+        "word": "200000032",
+        "word_continuation_profile": [
+          389,
+          1359,
+          1165,
+          779,
+          4201,
+          4139,
+          3177,
+          2657,
+          3425,
+          2713,
+          2853,
+          1943,
+          12201,
+          13829,
+          10427,
+          11821,
+          9977
+        ]
+      },
+      "source_H": 129
+    },
+    {
+      "distinct_words": 17,
+      "hits_plus_four": [],
+      "hits_plus_two": [
+        [
+          "11111112",
+          "31"
+        ],
+        [
+          "20000000",
+          "32"
+        ]
+      ],
+      "m": 8,
+      "marked_pair_count": 17,
+      "maximum_suffix_length": 3,
+      "moving_mark_child": {
+        "balanced_graph": null,
+        "balanced_profile": null,
+        "names": [
+          "c_8",
+          "x",
+          "y",
+          "c_1",
+          "c_2",
+          "c_3",
+          "c_4",
+          "c_5",
+          "c_6",
+          "c_7",
+          "birth_a",
+          "birth_b"
+        ],
+        "old_to_new": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0
+        ],
+        "profile_at_old_x": [
+          773,
+          3,
+          3,
+          1533
+        ],
+        "rows": [
+          1026,
+          3076,
+          4089,
+          4083,
+          4067,
+          4035,
+          3971,
+          3843,
+          3587,
+          3075,
+          2048,
+          1
+        ],
+        "word": "2000000032",
+        "word_continuation_profile": [
+          773,
+          2703,
+          2317,
+          1547,
+          8361,
+          8235,
+          6313,
+          5281,
+          6817,
+          5401,
+          5669,
+          3863,
+          24297,
+          27525,
+          20731,
+          23533,
+          19833
+        ]
+      },
+      "source_H": 257
+    },
+    {
+      "distinct_words": 19,
+      "hits_plus_four": [],
+      "hits_plus_two": [
+        [
+          "111111112",
+          "31"
+        ],
+        [
+          "200000000",
+          "32"
+        ]
+      ],
+      "m": 9,
+      "marked_pair_count": 19,
+      "maximum_suffix_length": 3,
+      "moving_mark_child": {
+        "balanced_graph": {
+          "child": 14,
+          "names": [
+            "c_9",
+            "x",
+            "y",
+            "c_1",
+            "c_2",
+            "c_3",
+            "c_4",
+            "c_5",
+            "c_6",
+            "c_7",
+            "c_8",
+            "birth_a",
+            "birth_b",
+            "reset_root",
+            "reset_child"
+          ],
+          "root": 13,
+          "rows": [
+            2050,
+            14340,
+            8185,
+            8179,
+            8163,
+            8131,
+            8067,
+            7939,
+            7683,
+            7171,
+            6147,
+            4096,
+            1,
+            24573,
+            8191
+          ]
+        },
+        "balanced_profile": [
+          7679,
+          1541,
+          1541,
+          7679
+        ],
+        "names": [
+          "c_9",
+          "x",
+          "y",
+          "c_1",
+          "c_2",
+          "c_3",
+          "c_4",
+          "c_5",
+          "c_6",
+          "c_7",
+          "c_8",
+          "birth_a",
+          "birth_b"
+        ],
+        "old_to_new": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          0
+        ],
+        "profile_at_old_x": [
+          1541,
+          3,
+          3,
+          3069
+        ],
+        "rows": [
+          2050,
+          6148,
+          8185,
+          8179,
+          8163,
+          8131,
+          8067,
+          7939,
+          7683,
+          7171,
+          6147,
+          4096,
+          1
+        ],
+        "word": "20000000032",
+        "word_continuation_profile": [
+          1541,
+          5391,
+          4621,
+          3083,
+          16681,
+          16427,
+          12585,
+          10529,
+          13601,
+          10777,
+          11301,
+          7703,
+          48489,
+          54917,
+          41339,
+          46957,
+          39545
+        ]
+      },
+      "source_H": 513
+    },
+    {
+      "distinct_words": 21,
+      "hits_plus_four": [],
+      "hits_plus_two": [
+        [
+          "1111111112",
+          "31"
+        ],
+        [
+          "2000000000",
+          "32"
+        ]
+      ],
+      "m": 10,
+      "marked_pair_count": 21,
+      "maximum_suffix_length": 3,
+      "moving_mark_child": {
+        "balanced_graph": null,
+        "balanced_profile": null,
+        "names": [
+          "c_10",
+          "x",
+          "y",
+          "c_1",
+          "c_2",
+          "c_3",
+          "c_4",
+          "c_5",
+          "c_6",
+          "c_7",
+          "c_8",
+          "c_9",
+          "birth_a",
+          "birth_b"
+        ],
+        "old_to_new": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          0
+        ],
+        "profile_at_old_x": [
+          3077,
+          3,
+          3,
+          6141
+        ],
+        "rows": [
+          4098,
+          12292,
+          16377,
+          16371,
+          16355,
+          16323,
+          16259,
+          16131,
+          15875,
+          15363,
+          14339,
+          12291,
+          8192,
+          1
+        ],
+        "word": "200000000032",
+        "word_continuation_profile": [
+          3077,
+          10767,
+          9229,
+          6155,
+          33321,
+          32811,
+          25129,
+          21025,
+          27169,
+          21529,
+          22565,
+          15383,
+          96873,
+          109701,
+          82555,
+          93805,
+          78969
+        ]
+      },
+      "source_H": 1025
+    }
+  ],
+  "controls": {
+    "clone_formula_checks": 1364,
+    "complete_suffix_queries": 5360,
+    "direct_named_repairs": 5,
+    "literal_permutation_profiles": 25,
+    "marked_pairs": 121,
+    "suffix_profiles": 341
+  },
+  "five_vertex_exterior_profile": [
+    9,
+    3,
+    5,
+    11
+  ],
+  "joint_data_scope": "Seventeen two-apex suffix queries at feedback pair (c_m,x), plus full named graph rows; balanced child has its own named root and child. These are not identified with an unrestricted birth observer.",
+  "open": "all-target coverage; all-m plus-four with moving feedback marks",
+  "positive_bin_skeleton_coefficients": [
+    21,
+    12,
+    0
+  ],
+  "scope": "all-size proofs in NOTE.md; finite exact implementation controls",
+  "script_sha256": "a3e33bea40fb0d38f190248c93fa7b595db7e9280a212b9cb89bbeab417f91b1",
+  "seven_lane": [
+    {
+      "H": 119,
+      "j": 1,
+      "quotient": 17,
+      "quotient_prime": true,
+      "t": 29
+    },
+    {
+      "H": 959,
+      "j": 2,
+      "quotient": 137,
+      "quotient_prime": true,
+      "t": 197
+    },
+    {
+      "H": 7679,
+      "j": 3,
+      "quotient": 1097,
+      "quotient_prime": true,
+      "t": 1541
+    },
+    {
+      "H": 61439,
+      "j": 4,
+      "quotient": 8777,
+      "quotient_prime": false,
+      "t": 12293
+    },
+    {
+      "H": 491519,
+      "j": 5,
+      "quotient": 70217,
+      "quotient_prime": false,
+      "t": 98309
+    },
+    {
+      "H": 3932159,
+      "j": 6,
+      "quotient": 561737,
+      "quotient_prime": false,
+      "t": 786437
+    },
+    {
+      "H": 31457279,
+      "j": 7,
+      "quotient": 4493897,
+      "quotient_prime": false,
+      "t": 6291461
+    }
+  ],
+  "small_coefficient_pairs": [
+    {
+      "A": 1,
+      "B": 1,
+      "first_suffix": ""
+    },
+    {
+      "A": 2,
+      "B": 1,
+      "first_suffix": "2"
+    },
+    {
+      "A": 3,
+      "B": -1,
+      "first_suffix": "0"
+    },
+    {
+      "A": 3,
+      "B": 3,
+      "first_suffix": "32"
+    },
+    {
+      "A": 4,
+      "B": 1,
+      "first_suffix": "22"
+    },
+    {
+      "A": 5,
+      "B": -1,
+      "first_suffix": "02"
+    },
+    {
+      "A": 5,
+      "B": 5,
+      "first_suffix": "332"
+    },
+    {
+      "A": 6,
+      "B": -1,
+      "first_suffix": "20"
+    },
+    {
+      "A": 6,
+      "B": 1,
+      "first_suffix": "12"
+    },
+    {
+      "A": 6,
+      "B": 3,
+      "first_suffix": "232"
+    },
+    {
+      "A": 7,
+      "B": -5,
+      "first_suffix": "00"
+    },
+    {
+      "A": 7,
+      "B": 5,
+      "first_suffix": "322"
+    },
+    {
+      "A": 8,
+      "B": 1,
+      "first_suffix": "222"
+    }
+  ],
+  "sources": {
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ADAPTIVE.md": "1e40bf058d9c86a8d5ff7f63dc6439a68eae3f62920794a7baa40694dfce4971",
+    "05-knowledge/results/prime_lane_ports_five_groups_20261102/realization.md": "53553dbf93dd3b687c0eb4291a13311d6f514d68b43e51f0baab005ab805278d",
+    "05-knowledge/results/return18979_palindrome_20261103/STABLE.md": "18809b55a4fa02dd6c5203392a5ec6a7126cdd14cc300a04f6e11eae4ea2c8b7",
+    "05-knowledge/results/return6325_completion_20261103/CLONE_LAW.md": "59bc9e8a4edc755a1447082f7ea6e0bad4566464402d53d40764555b17e8dbce",
+    "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/two_apex/word_recovery.py": "d4869500e602eabb07cb3c1a481d62d55ddee06116c46fc52f668febee9d34d6"
+  },
+  "status": "PASS",
+  "word_continuation_suffixes": [
+    "",
+    "0",
+    "1",
+    "2",
+    "00",
+    "10",
+    "20",
+    "30",
+    "01",
+    "11",
+    "21",
+    "31",
+    "000",
+    "100",
+    "200",
+    "010",
+    "210"
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "external": [
+    {
+      "accessed": "2026-11-03",
+      "role": "Sequence definition and classical formula",
+      "url": "https://oeis.org/A000568"
+    },
+    {
+      "accessed": "2026-11-03",
+      "role": "Busch Theorem1 and Corollary1 strong minimum",
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf"
+    }
+  ],
+  "first_checkpoint": "83d4954e15310cc0cfe6328c5c57569cc8251f3f",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "sha256_current": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f",
+      "sha256_current": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+      "sha256_current": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "01-canon/theorems/THM-4845-a000568-as-a-gaussian-average-gcd-covariance-cycle-index-exponential-and-the-meromorphic-normalized-series-with-poles-at-powers-of-four.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "efd475b3b4ec7c28a7d3be6ad100e9b17984449961314b3312bd7a417a8f71b3",
+      "sha256_current": "efd475b3b4ec7c28a7d3be6ad100e9b17984449961314b3312bd7a417a8f71b3",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "01-canon/theorems/THM-514-the-a000568-unit-tail-core-kernel-and-prime-tail-ladder.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "da2cf8ca88a33c6ce1cb00dc9fe645da178e259ea360e03a3ac72daff76fccb9",
+      "sha256_current": "da2cf8ca88a33c6ce1cb00dc9fe645da178e259ea360e03a3ac72daff76fccb9",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "01-canon/theorems/THM-516-burnside-core-kernel-phi-reframe.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "10ef8808ad62bd5aee87ff0261380a0ec4648fed026747ec978e89eb157845f5",
+      "sha256_current": "10ef8808ad62bd5aee87ff0261380a0ec4648fed026747ec978e89eb157845f5",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
+      "sha256_current": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "40d8b722dc71233a2e6ab31f224cb5de20db56463be568148c865b438f16cdfe",
+      "sha256_current": "40d8b722dc71233a2e6ab31f224cb5de20db56463be568148c865b438f16cdfe",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ADAPTIVE.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "1e40bf058d9c86a8d5ff7f63dc6439a68eae3f62920794a7baa40694dfce4971",
+      "sha256_current": "1e40bf058d9c86a8d5ff7f63dc6439a68eae3f62920794a7baa40694dfce4971",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/exclusion_7_21_20261103/PROOF.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "12bd0d094f3250d2b838502519f9cb27eeec11b008ff4f5652b8404491cc5e1b",
+      "sha256_current": "12bd0d094f3250d2b838502519f9cb27eeec11b008ff4f5652b8404491cc5e1b",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/counting/README.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "3def1841ef1824842eb24d1b17567093bc371dd4179dad754f849b3bb433282f",
+      "sha256_current": "3def1841ef1824842eb24d1b17567093bc371dd4179dad754f849b3bb433282f",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/metagraph_scheduled_recursion_20261029/RECOVERY.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "f26fe78701bac50c7bbb6714c4d7b54c0c6c28089f3ae3f50ad3a1e6b66713c2",
+      "sha256_current": "f26fe78701bac50c7bbb6714c4d7b54c0c6c28089f3ae3f50ad3a1e6b66713c2",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/paired_recursions_20261103/FOUR_BITS.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "9c7b2adcdc4dafc9490f6784a0a42399a0d5ab79935cd7fdaa1d6ee393b99feb",
+      "sha256_current": "9c7b2adcdc4dafc9490f6784a0a42399a0d5ab79935cd7fdaa1d6ee393b99feb",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/port_residual_integral_20261025/counting/README.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "e3b44b2de0adde938eb1b9766c31c3397870195b867c97d4fdb179cfb6d26fee",
+      "sha256_current": "e3b44b2de0adde938eb1b9766c31c3397870195b867c97d4fdb179cfb6d26fee",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/port_residual_integral_20261025/precision/README.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "4339ed5bac7bed574ee6bded654d6be3c2792debf8dca3532385338ac2339a93",
+      "sha256_current": "4339ed5bac7bed574ee6bded654d6be3c2792debf8dca3532385338ac2339a93",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/port_residual_integral_20261025/precision/check.py",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "9107ca384b3f891c759932262769ecf741be76eb5b4e45fd45931a307a62fc6e",
+      "sha256_current": "9107ca384b3f891c759932262769ecf741be76eb5b4e45fd45931a307a62fc6e",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/prime_lane_ports_five_groups_20261102/prime_groups.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "c14b0e8bf534a268e43779ebe629c9f0a2b1930310dc4eac5bee1dd0298d69ba",
+      "sha256_current": "c14b0e8bf534a268e43779ebe629c9f0a2b1930310dc4eac5bee1dd0298d69ba",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/prime_lane_ports_five_groups_20261102/realization.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "53553dbf93dd3b687c0eb4291a13311d6f514d68b43e51f0baab005ab805278d",
+      "sha256_current": "53553dbf93dd3b687c0eb4291a13311d6f514d68b43e51f0baab005ab805278d",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/return18979_palindrome_20261103/STABLE.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "18809b55a4fa02dd6c5203392a5ec6a7126cdd14cc300a04f6e11eae4ea2c8b7",
+      "sha256_current": "18809b55a4fa02dd6c5203392a5ec6a7126cdd14cc300a04f6e11eae4ea2c8b7",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/return18979_ports_20261103/PROOFS.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "ab17e49da4b59fa57937c5567d2280bb9dd31b9fef9265aab8e16240a480f9f2",
+      "sha256_current": "ab17e49da4b59fa57937c5567d2280bb9dd31b9fef9265aab8e16240a480f9f2",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/return6325_completion_20261103/CLONE_LAW.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "59bc9e8a4edc755a1447082f7ea6e0bad4566464402d53d40764555b17e8dbce",
+      "sha256_current": "59bc9e8a4edc755a1447082f7ea6e0bad4566464402d53d40764555b17e8dbce",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session105_metagraph_recursion_20261029/enumeration/INTEGER_PROJECTIVE.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "5102ea38ef2a9e87348f8da92829c13846c410c3354d5ebd886fde66b52ee494",
+      "sha256_current": "5102ea38ef2a9e87348f8da92829c13846c410c3354d5ebd886fde66b52ee494",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5",
+      "sha256_current": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/two_apex/THEORY.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "46fd97379889f6a259e4cf882f22551ee548dd17ec452f68c4bda16d680848f3",
+      "sha256_current": "46fd97379889f6a259e4cf882f22551ee548dd17ec452f68c4bda16d680848f3",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/two_apex/word_recovery.py",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "d4869500e602eabb07cb3c1a481d62d55ddee06116c46fc52f668febee9d34d6",
+      "sha256_current": "d4869500e602eabb07cb3c1a481d62d55ddee06116c46fc52f668febee9d34d6",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session142_tournament_odd_spectrum_20261102/minimal_gap/PROOF.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "243d500c1d726c6ca66f766d6ce041dfc7a370196cc6b39563a43f22a1bb34db",
+      "sha256_current": "243d500c1d726c6ca66f766d6ce041dfc7a370196cc6b39563a43f22a1bb34db",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/a000568/README.md",
+      "repaired_in_current_session": true,
+      "sha256_at_source_revision": "8f2b0af0974c459052ba7e78abd7e625aee77ea7157e3842a84cc8c0fa22c894",
+      "sha256_current": "55124e1ce9c41984f649f011a8322a9c3e2fbed43f080b4a9e2a3e51f5184995",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/a000568/projective.py",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "1a37aa21e66f820473b14f38c544c021642b8a7436d3e970588cfb8565a0f63a",
+      "sha256_current": "1a37aa21e66f820473b14f38c544c021642b8a7436d3e970588cfb8565a0f63a",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/clone_obstruction/PROOF.md",
+      "repaired_in_current_session": true,
+      "sha256_at_source_revision": "5ca4f9d3e3ceb199b80dec254cddfb94f34273c9bc45404ec63d4e6b3e96809d",
+      "sha256_current": "c0fa1d6773a42723f5a53f7645f0b22fa98db01168762ec0516b5f382f42afb0",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/construction/README.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "3a810d4a26c649a9d79d616fa33c5755ff864fd23c04299d4a5d757d57e2cc60",
+      "sha256_current": "3a810d4a26c649a9d79d616fa33c5755ff864fd23c04299d4a5d757d57e2cc60",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/obstructions/PROOF.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "2883b1a6bb9aa0fcbfdca5133900868d57df296d51a95825e1d1d9070b0ad1a7",
+      "sha256_current": "2883b1a6bb9aa0fcbfdca5133900868d57df296d51a95825e1d1d9070b0ad1a7",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session87_four_vertices_enumeration_20261028/FAST_COUNTS.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "ab0595f9d9579655cd798afbe2dcb1dd2d848f2f08709b238da93b7569974e84",
+      "sha256_current": "ab0595f9d9579655cd798afbe2dcb1dd2d848f2f08709b238da93b7569974e84",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session87_four_vertices_enumeration_20261028/fast_counts.py",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "3844a4a590daaf01410cf99d3584441bfa2f8e5e95371ccaafe534fd152b0ece",
+      "sha256_current": "3844a4a590daaf01410cf99d3584441bfa2f8e5e95371ccaafe534fd152b0ece",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session89_consecutive_tournament_pairs_20261028/counting/README.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "965570bf3cad4d2ff26f14aaccc8659bfc27c84efc778e8333edc6224cd5081a",
+      "sha256_current": "965570bf3cad4d2ff26f14aaccc8659bfc27c84efc778e8333edc6224cd5081a",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session98_tournament_growth_20261029/limits/ALL_POLES_CORE_EXPANSION.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "f4548bcc8df4b7041eb1f972d0c0d4bb018ace56bc4746ae17606e98840e8d3b",
+      "sha256_current": "f4548bcc8df4b7041eb1f972d0c0d4bb018ace56bc4746ae17606e98840e8d3b",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session98_tournament_growth_20261029/limits/LIMITS_AND_NORMALIZATION.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "fee711c1ae3cbd8beef64d3b36d67e1f6d1d662a889aae730180c42c8c126a17",
+      "sha256_current": "fee711c1ae3cbd8beef64d3b36d67e1f6d1d662a889aae730180c42c8c126a17",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/session98_tournament_growth_20261029/recurrence/PROJECTIVE_RESPONSE.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "9a7842df21867e9c7760505d6f91d37ebcee5902e43b27a16486054b9904c017",
+      "sha256_current": "9a7842df21867e9c7760505d6f91d37ebcee5902e43b27a16486054b9904c017",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/strong_attachment_tail_compiler_20261028/HISTORY.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "f88e908478f24f89b12f411d3b19c87726eb92965d4c61d308acec12d3c78768",
+      "sha256_current": "f88e908478f24f89b12f411d3b19c87726eb92965d4c61d308acec12d3c78768",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/tournament_joint_parity_20261102/growth_obstruction.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "dc20e1e97aff4c0e82c04b3ed6759649b0c403b851e2d176b5f600491dd9fbb9",
+      "sha256_current": "dc20e1e97aff4c0e82c04b3ed6759649b0c403b851e2d176b5f600491dd9fbb9",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    },
+    {
+      "path": "05-knowledge/results/tournament_joint_parity_20261102/spectrum.md",
+      "repaired_in_current_session": false,
+      "sha256_at_source_revision": "123e9a79464182ce9811c72cb2125e59bdea66e45cc632a20a058241996cbd36",
+      "sha256_current": "123e9a79464182ce9811c72cb2125e59bdea66e45cc632a20a058241996cbd36",
+      "source_revision": "83d4954e15310cc0cfe6328c5c57569cc8251f3f"
+    }
+  ],
+  "startup_revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b",
+  "status": "Direct dependency and recovery pins, not a transitive proof graph"
+}

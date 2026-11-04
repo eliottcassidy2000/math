@@ -1,8 +1,10 @@
 {
   "metrics": "PASS",
-  "note_sha256": "1d12372d2ca2da3ef5797f07e08ea047a7feab3da7a1612a1931c107a8bece79",
+  "note_sha256": "b34e91b800f240e07b4c54e248ea11f1ecf1574ecee4344a299fe791247ed3db",
   "relative_links": [
     "../a000568/README.md",
+    "../../session98_tournament_growth_20261029/recurrence/PROJECTIVE_RESPONSE.md",
+    "../../session105_metagraph_recursion_20261029/enumeration/INTEGER_PROJECTIVE.md",
     "../orbits/README.md",
     "../orbits/README.md#3-no-finite-order-polynomial-coefficient-recurrence",
     "../construction/README.md",

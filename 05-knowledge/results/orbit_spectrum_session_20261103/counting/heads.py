@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Certified leading binary digits of A000568, without building its full integer.
 
-Davis/Burnside and the non-singleton cycle-core expansion are inherited.
-The finite moved-mass tail bound and adaptive rational interval are the
-contribution here. No float or stored sequence value enters the computation.
+Davis/Burnside, the non-singleton cycle-core expansion, and Session98's
+finite moved-support tail are inherited. Here the rational cutoff form
+supports an adaptive exact-head API with an explicit rounding-distance
+check. No float or stored sequence value enters the computation.
 """
 from fractions import Fraction
 from math import factorial, gcd
