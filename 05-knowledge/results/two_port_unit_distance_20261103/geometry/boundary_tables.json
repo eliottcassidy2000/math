@@ -1,0 +1,3047 @@
+[
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "query": 97219384920,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "query": 4629494520,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "query": 4686436440,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "query": 4686436440,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      2
+    ],
+    "query": 223163640,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "query": 4669502040,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    "query": 4613238000,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      2
+    ],
+    "query": 222357240,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    "query": 4726443960,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    "query": 4669502040,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      2
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      0
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      1
+    ],
+    "query": 222357240,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      2
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      3
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "query": 4686436440,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    "query": 4647381480,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      2
+    ],
+    "query": 223163640,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "query": 4686912720,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    "query": 4647381480,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      2
+    ],
+    "query": 223186320,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      2,
+      0
+    ],
+    "query": 225915480,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      2,
+      1
+    ],
+    "query": 224033040,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      2,
+      2
+    ],
+    "query": 225915480,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      0,
+      2,
+      3
+    ],
+    "query": 10757880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "query": 4726443960,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    "query": 4686912720,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      2
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    "query": 4726443960,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "query": 4686436440,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      2
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      0
+    ],
+    "query": 227820600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      1
+    ],
+    "query": 225915480,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      2
+    ],
+    "query": 227820600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      3
+    ],
+    "query": 10848600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      0,
+      0
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      0,
+      1
+    ],
+    "query": 223186320,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      0,
+      2
+    ],
+    "query": 222349680,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      0,
+      3
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      0
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      1
+    ],
+    "query": 223163640,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      2
+    ],
+    "query": 222349680,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      3
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      0
+    ],
+    "query": 227820600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      1
+    ],
+    "query": 225915480,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      2
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      2,
+      3
+    ],
+    "query": 10848600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      0
+    ],
+    "query": 10848600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      1
+    ],
+    "query": 10757880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      2
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      3
+    ],
+    "query": 10848600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "query": 516600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "query": 4629494520,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "query": 4573548000,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      2
+    ],
+    "query": 220452120,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    "query": 4647381480,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    "query": 4590757080,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      2
+    ],
+    "query": 221303880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      2,
+      0
+    ],
+    "query": 223163640,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      2,
+      1
+    ],
+    "query": 220467240,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      2,
+      2
+    ],
+    "query": 223163640,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      0,
+      2,
+      3
+    ],
+    "query": 10626840,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "query": 4613238000,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 120,
+    "mass": 120,
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    "query": 4557641880,
+    "recovered_mass": 120,
+    "weight": 4
+  },
+  {
+    "equality_moment": 480,
+    "mass": 360,
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      2
+    ],
+    "query": 219678000,
+    "recovered_mass": 360,
+    "weight": 3
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    "query": 4629812040,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      1
+    ],
+    "query": 4573548000,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      2
+    ],
+    "query": 220467240,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      2,
+      0
+    ],
+    "query": 222349680,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 480,
+    "mass": 360,
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      2,
+      1
+    ],
+    "query": 219670440,
+    "recovered_mass": 360,
+    "weight": 3
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      2,
+      2
+    ],
+    "query": 222349680,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 1560,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      0,
+      1,
+      2,
+      3
+    ],
+    "query": 10588080,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      0
+    ],
+    "query": 222357240,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 480,
+    "mass": 360,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      1
+    ],
+    "query": 219670440,
+    "recovered_mass": 360,
+    "weight": 3
+  },
+  {
+    "equality_moment": 480,
+    "mass": 360,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      2
+    ],
+    "query": 219678000,
+    "recovered_mass": 360,
+    "weight": 3
+  },
+  {
+    "equality_moment": 1920,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      3
+    ],
+    "query": 10588440,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      1,
+      0
+    ],
+    "query": 223186320,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      1,
+      1
+    ],
+    "query": 220467240,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 360,
+    "mass": 360,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      1,
+      2
+    ],
+    "query": 220497120,
+    "recovered_mass": 360,
+    "weight": 3
+  },
+  {
+    "equality_moment": 1080,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      1,
+      3
+    ],
+    "query": 10627920,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      2,
+      0
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      2,
+      1
+    ],
+    "query": 222349680,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      2,
+      2
+    ],
+    "query": 222357240,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      2,
+      3
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      3,
+      0
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 1560,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      3,
+      1
+    ],
+    "query": 10588080,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 1920,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      3,
+      2
+    ],
+    "query": 10588440,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      3,
+      3
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 6240,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      0,
+      2,
+      3,
+      4
+    ],
+    "query": 510360,
+    "recovered_mass": 720,
+    "weight": 1
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "query": 4686436440,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    "query": 4629812040,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      2
+    ],
+    "query": 223163640,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      0
+    ],
+    "query": 4704693840,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    "query": 4647381480,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      2
+    ],
+    "query": 224033040,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      2,
+      0
+    ],
+    "query": 225915480,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      2,
+      1
+    ],
+    "query": 223186320,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      2,
+      2
+    ],
+    "query": 225915480,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      0,
+      2,
+      3
+    ],
+    "query": 10757880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "query": 4669502040,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      1
+    ],
+    "query": 4613238000,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      2
+    ],
+    "query": 222357240,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    "query": 4686436440,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "query": 4629494520,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      2
+    ],
+    "query": 223163640,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      2,
+      0
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      2,
+      1
+    ],
+    "query": 222357240,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      2,
+      2
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      1,
+      2,
+      3
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      0,
+      0
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      0,
+      1
+    ],
+    "query": 222349680,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      0,
+      2
+    ],
+    "query": 222349680,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      0,
+      3
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      0
+    ],
+    "query": 225915480,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      1
+    ],
+    "query": 223163640,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2
+    ],
+    "query": 223186320,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      3
+    ],
+    "query": 10757880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      0
+    ],
+    "query": 227820600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      1
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      2
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      3
+    ],
+    "query": 10848600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      3,
+      0
+    ],
+    "query": 10848600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      3,
+      1
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      3,
+      2
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      3,
+      3
+    ],
+    "query": 10848600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      1,
+      2,
+      3,
+      4
+    ],
+    "query": 516600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "query": 223163640,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      1
+    ],
+    "query": 220467240,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      2
+    ],
+    "query": 221303880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      3
+    ],
+    "query": 10626840,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      0
+    ],
+    "query": 224033040,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      1
+    ],
+    "query": 221303880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 360,
+    "mass": 360,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      2
+    ],
+    "query": 222172920,
+    "recovered_mass": 360,
+    "weight": 3
+  },
+  {
+    "equality_moment": 1080,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      3
+    ],
+    "query": 10668240,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      0
+    ],
+    "query": 223186320,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 360,
+    "mass": 360,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      1
+    ],
+    "query": 220497120,
+    "recovered_mass": 360,
+    "weight": 3
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      2
+    ],
+    "query": 221303880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 1080,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      3
+    ],
+    "query": 10627920,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      0
+    ],
+    "query": 10757880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 1080,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      1
+    ],
+    "query": 10627920,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 1080,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      2
+    ],
+    "query": 10668240,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      3
+    ],
+    "query": 10757880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 4320,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      4
+    ],
+    "query": 512280,
+    "recovered_mass": 720,
+    "weight": 1
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      0,
+      0
+    ],
+    "query": 222357240,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 480,
+    "mass": 360,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      0,
+      1
+    ],
+    "query": 219678000,
+    "recovered_mass": 360,
+    "weight": 3
+  },
+  {
+    "equality_moment": 360,
+    "mass": 360,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      0,
+      2
+    ],
+    "query": 220497120,
+    "recovered_mass": 360,
+    "weight": 3
+  },
+  {
+    "equality_moment": 1920,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      0,
+      3
+    ],
+    "query": 10588440,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      1,
+      0
+    ],
+    "query": 223163640,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      1,
+      1
+    ],
+    "query": 220452120,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      1,
+      2
+    ],
+    "query": 221303880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      1,
+      3
+    ],
+    "query": 10626840,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      2,
+      0
+    ],
+    "query": 222349680,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 480,
+    "mass": 360,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      2,
+      1
+    ],
+    "query": 219678000,
+    "recovered_mass": 360,
+    "weight": 3
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      2,
+      2
+    ],
+    "query": 220467240,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 1560,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+    ],
+    "query": 10588080,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      0
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 1920,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      1
+    ],
+    "query": 10588440,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 1080,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      2
+    ],
+    "query": 10627920,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      3
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 6240,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      4
+    ],
+    "query": 510360,
+    "recovered_mass": 720,
+    "weight": 1
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      0,
+      0
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      0,
+      1
+    ],
+    "query": 222349680,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      0,
+      2
+    ],
+    "query": 223186320,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      0,
+      3
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      1,
+      0
+    ],
+    "query": 225915480,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      1,
+      1
+    ],
+    "query": 223163640,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      1,
+      2
+    ],
+    "query": 224033040,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      1,
+      3
+    ],
+    "query": 10757880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      2,
+      0
+    ],
+    "query": 225068760,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      2,
+      1
+    ],
+    "query": 222357240,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      2,
+      2
+    ],
+    "query": 223163640,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      2,
+      3
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      3,
+      0
+    ],
+    "query": 10848600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      3,
+      1
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      3,
+      2
+    ],
+    "query": 10757880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      3,
+      3
+    ],
+    "query": 10848600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      2,
+      3,
+      4
+    ],
+    "query": 516600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 1560,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1
+    ],
+    "query": 10588080,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 1080,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2
+    ],
+    "query": 10627920,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 1560,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      3
+    ],
+    "query": 10588080,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 6240,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      4
+    ],
+    "query": 510360,
+    "recovered_mass": 720,
+    "weight": 1
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      1,
+      0
+    ],
+    "query": 10757880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      1,
+      1
+    ],
+    "query": 10626840,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 1080,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      1,
+      2
+    ],
+    "query": 10668240,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 1080,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      1,
+      3
+    ],
+    "query": 10627920,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 4320,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      1,
+      4
+    ],
+    "query": 512280,
+    "recovered_mass": 720,
+    "weight": 1
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      0
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 1920,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "query": 10588440,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      2
+    ],
+    "query": 10626840,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 1560,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3
+    ],
+    "query": 10588080,
+    "recovered_mass": 720,
+    "weight": 2
+  },
+  {
+    "equality_moment": 6240,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      4
+    ],
+    "query": 510360,
+    "recovered_mass": 720,
+    "weight": 1
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      0
+    ],
+    "query": 10848600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      1
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      2
+    ],
+    "query": 10757880,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      3
+    ],
+    "query": 10717560,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4
+    ],
+    "query": 516600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "query": 516600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 6240,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "query": 510360,
+    "recovered_mass": 720,
+    "weight": 1
+  },
+  {
+    "equality_moment": 4320,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      2
+    ],
+    "query": 512280,
+    "recovered_mass": 720,
+    "weight": 1
+  },
+  {
+    "equality_moment": 6240,
+    "mass": 720,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      3
+    ],
+    "query": 510360,
+    "recovered_mass": 720,
+    "weight": 1
+  },
+  {
+    "equality_moment": 0,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      4
+    ],
+    "query": 516600,
+    "recovered_mass": 0,
+    "weight": 0
+  },
+  {
+    "equality_moment": 24600,
+    "mass": 0,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "query": 24600,
+    "recovered_mass": 0,
+    "weight": 0
+  }
+]

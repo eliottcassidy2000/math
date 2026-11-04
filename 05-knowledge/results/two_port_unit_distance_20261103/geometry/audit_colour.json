@@ -1,0 +1,10 @@
+{
+  "base_colorings": 24600,
+  "full_context_checks": 203,
+  "literal_37_vertex_coloring": true,
+  "literal_assignments": 279936,
+  "positive_patterns": 40,
+  "sharp_common_neighbor_control": "K2,2 square",
+  "source_sha256": "60d4d5efa002204ba501ac1cf338c76024a37f1b5cbe544f0668f0f85596cca2",
+  "status": "PASS"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "path": "05-knowledge/results/boundary_palette_compression_20261011.md",
+    "sha256": "c7318387c1c27acc2b7c17962405210bdc8cf0cd01b70982518d1268e2c2b7f7"
+  },
+  {
+    "path": "05-knowledge/results/hn_metagraph_information_20261026/six_color/RESULT.md",
+    "sha256": "23ee63b2fd28e938e275bce08ad205a1aaa760d9a87bc13e69476e9fad883a94"
+  },
+  {
+    "path": "05-knowledge/results/rank_geometry_metagraph_20261026/unit_distance/RESULT.md",
+    "sha256": "9af242cf6d6c2a9cdd40600123ff6d40da68baa68f228b90faa5b6d962557365"
+  },
+  {
+    "path": "05-knowledge/results/paired_budget_selectors_matrix_20261028/FIVE_INTERIORS.md",
+    "sha256": "cc68a1b4575a7fc13058e79e01a96e7829a1222fda162e6d09ef6d4a87891caf"
+  },
+  {
+    "path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson_refinement/PROPER_UNIT_DISTANCE_REFINEMENT.md",
+    "sha256": "ed9f99c07f4d82c86f9f05be8a191e2ad3583804bb8e7652d28765e24a65657c"
+  },
+  {
+    "path": "05-knowledge/results/rooted_graph_costs_20261020/README.md",
+    "sha256": "74573790fa20c9d90b179fde2a14a3de7b4700c61f48fe60e3cdbea8ecc7cdc4"
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "basic": {
+    "bidegree_reconstructions": 16932,
+    "cores": 75,
+    "cover_tomographies": 75,
+    "deletion_contractions": 2153,
+    "full_two_port_entries": 16932,
+    "new_old_weight_identities": 4306,
+    "permutation_counts": 548
+  },
+  "cycle_five_hostile": {
+    "converse": [
+      24,
+      17,
+      3,
+      6,
+      12
+    ],
+    "core": [
+      6,
+      12,
+      24,
+      17,
+      3
+    ],
+    "counts": [
+      89,
+      91
+    ],
+    "old_to_port_masks": [
+      30,
+      29
+    ]
+  },
+  "odd_converse": [
+    {
+      "cores": 2,
+      "n": 2,
+      "symmetric_C": 2
+    },
+    {
+      "cores": 8,
+      "n": 3,
+      "symmetric_C": 0
+    },
+    {
+      "cores": 64,
+      "n": 4,
+      "symmetric_C": 0
+    },
+    {
+      "cores": 1024,
+      "n": 5,
+      "symmetric_C": 0
+    }
+  ],
+  "repeated_contraction": {
+    "actual_three_port_queries": 1920,
+    "core_masks": [
+      0,
+      1,
+      12,
+      31,
+      63
+    ],
+    "deleted_size": 2,
+    "n": 4,
+    "trials": 120
+  },
+  "source_sha256": "852a24e8ab36e170d0e386bdbc85ecfc95f206194f8ef27c8ae7ad81e20f8a50",
+  "status": "PASS",
+  "three_port": {
+    "adjacent_pair_positions": [
+      0,
+      1
+    ],
+    "contractions": 1604,
+    "cores": "every labelled n=1,2,3",
+    "independent_permutation_counts": 272
+  }
+}

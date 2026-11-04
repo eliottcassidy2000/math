@@ -1,0 +1,62 @@
+{
+  "census": [
+    {
+      "labelled": 1,
+      "n": 1,
+      "odd_converse_separations": 0,
+      "symmetric_C": 1,
+      "triangle_flips": 0
+    },
+    {
+      "labelled": 2,
+      "n": 2,
+      "odd_converse_separations": 0,
+      "symmetric_C": 2,
+      "triangle_flips": 0
+    },
+    {
+      "labelled": 8,
+      "n": 3,
+      "odd_converse_separations": 8,
+      "symmetric_C": 0,
+      "triangle_flips": 2
+    },
+    {
+      "labelled": 64,
+      "n": 4,
+      "odd_converse_separations": 0,
+      "symmetric_C": 0,
+      "triangle_flips": 64
+    },
+    {
+      "labelled": 1024,
+      "n": 5,
+      "odd_converse_separations": 1024,
+      "symmetric_C": 0,
+      "triangle_flips": 2560
+    }
+  ],
+  "checks": 37845,
+  "directed_triangle_flip_tests": 2626,
+  "hostile_converse_polynomials": [
+    [
+      1,
+      2,
+      -2
+    ],
+    [
+      3,
+      -6,
+      6
+    ],
+    [
+      3,
+      0,
+      0,
+      0
+    ]
+  ],
+  "scope": "All1099 labelled tournaments n=1..5, every cyclic triple, complete permutation-derived H/S/E/C. Universal statements have separate proofs.",
+  "source_sha256": "0e7add21c5801ca25ef557f5ba03d3e423e9c8958a5c6763fe5ff688b6235fbe",
+  "status": "FINITE-EXACT PASS"
+}

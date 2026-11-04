@@ -1,0 +1,44 @@
+{
+  "all203_queries_recover_exact_table": true,
+  "base_colourings6": 24600,
+  "certified_nonunit_pairs": 609,
+  "full_boundary_support": 14910,
+  "independent_literal_assignments": 46656,
+  "inherited_source_pins": 6,
+  "literal_colour_loop_agreement": true,
+  "max_construction_attempts": 13,
+  "one_ear_counts": [
+    {
+      "count": 516600,
+      "terminals": [
+        0,
+        1
+      ]
+    },
+    {
+      "count": 510360,
+      "terminals": [
+        0,
+        2
+      ]
+    },
+    {
+      "count": 512280,
+      "terminals": [
+        0,
+        3
+      ]
+    }
+  ],
+  "partitions": 203,
+  "points": 37,
+  "positive_boundary_partitions": 40,
+  "q2_hostile_base": 2,
+  "q2_hostile_ear": 0,
+  "q3_hostile_ear": 30,
+  "query_max": 97219384920,
+  "query_min": 24600,
+  "source_sha256": "a49fd99b1180c7e92a7547a73cdb7760fcf4e7c68a224761adda54dcd0c6fd9e",
+  "unit_edges": 57,
+  "witness_colours": 3
+}

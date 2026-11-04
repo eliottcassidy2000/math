@@ -1,0 +1,84 @@
+{
+  "bank_path": "05-knowledge/results/hn_metagraph_information_20261026/enumeration/representatives9.json.gz",
+  "bank_sha256": "b4e559ad6cb31980852034f9c7f61e366a7cb479fee4d9a641ad3356745200d3",
+  "collision_count": 0,
+  "orders": [
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 1,
+      "classes": 1,
+      "max_leaves": 1,
+      "n": 1,
+      "sidecar_classes": 1
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 1,
+      "classes": 1,
+      "max_leaves": 1,
+      "n": 2,
+      "sidecar_classes": 1
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 7,
+      "classes": 2,
+      "max_leaves": 6,
+      "n": 3,
+      "sidecar_classes": 2
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 14,
+      "classes": 4,
+      "max_leaves": 6,
+      "n": 4,
+      "sidecar_classes": 4
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 151,
+      "classes": 12,
+      "max_leaves": 120,
+      "n": 5,
+      "sidecar_classes": 12
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 449,
+      "classes": 56,
+      "max_leaves": 120,
+      "n": 6,
+      "sidecar_classes": 56
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 11595,
+      "classes": 456,
+      "max_leaves": 5040,
+      "n": 7,
+      "sidecar_classes": 456
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 32584,
+      "classes": 6880,
+      "max_leaves": 5040,
+      "n": 8,
+      "sidecar_classes": 6880
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 1362537,
+      "classes": 191536,
+      "max_leaves": 362880,
+      "n": 9,
+      "sidecar_classes": 191536
+    }
+  ],
+  "source_sha256": {
+    "exact.cpp": "43252930f05cf74abe269c7423d20fbd8f29acb35f0ab68b8520691c09d8f19f",
+    "run_cpp.py": "e322883f518c2ce8099c1a493c2a18bd3ad9b31b35f9485fa64fa17a152ae655"
+  },
+  "status": "PASS_INJECTIVE"
+}

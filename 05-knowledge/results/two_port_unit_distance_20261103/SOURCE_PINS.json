@@ -1,0 +1,19 @@
+{
+  "baseline": "e2577ad225",
+  "files": {
+    "05-knowledge/results/boundary_palette_compression_20261011.md": "c7318387c1c27acc2b7c17962405210bdc8cf0cd01b70982518d1268e2c2b7f7",
+    "05-knowledge/results/hn_metagraph_information_20261026/enumeration/RESULT.md": "c17d9903024677d6f3198d3920cbb0e3e08de862f1f7f85e4210aa03421ebaf9",
+    "05-knowledge/results/hn_metagraph_information_20261026/enumeration/representatives.json": "feffa1e43ffc168af2e4f1fa6a7ac881438535da7876ef8720f4e85bd614668c",
+    "05-knowledge/results/hn_metagraph_information_20261026/enumeration/representatives9.json.gz": "b4e559ad6cb31980852034f9c7f61e366a7cb479fee4d9a641ad3356745200d3",
+    "05-knowledge/results/hn_metagraph_information_20261026/six_color/RESULT.md": "23ee63b2fd28e938e275bce08ad205a1aaa760d9a87bc13e69476e9fad883a94",
+    "05-knowledge/results/paired_budget_selectors_matrix_20261028/FIVE_INTERIORS.md": "cc68a1b4575a7fc13058e79e01a96e7829a1222fda162e6d09ef6d4a87891caf",
+    "05-knowledge/results/proof_principles_20261103/continuation/PROOF.md": "3ccc96e6c91167dd8c9457a205f5b39151fe55f8ceacc0d15581fc7e4ef24d62",
+    "05-knowledge/results/rank_geometry_metagraph_20261026/unit_distance/RESULT.md": "9af242cf6d6c2a9cdd40600123ff6d40da68baa68f228b90faa5b6d962557365",
+    "05-knowledge/results/rooted_graph_costs_20261020/README.md": "74573790fa20c9d90b179fde2a14a3de7b4700c61f48fe60e3cdbea8ecc7cdc4",
+    "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson_refinement/PROPER_UNIT_DISTANCE_REFINEMENT.md": "ed9f99c07f4d82c86f9f05be8a191e2ad3583804bb8e7652d28765e24a65657c",
+    "05-knowledge/results/session176_tournament_information_20261104/circuits/PROOF.md": "74eb47a648f43d74e4d4784af6f1f2926ba52329a537e37d975922fb46ebe26d",
+    "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/MODULAR_FAITHFULNESS.md": "2ace16955a840be4634770cc57f61ebdeba7432012c16159546128575540eab5",
+    "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/faithfulness-proof.md": "e64ae1527002562379b8de71448eb355aa27217be71d3c32dba77ad79a5ebfe4",
+    "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/proof.md": "48aaefa2d059a56fb201a41d5f78bcd043eb2fbcb58f1ab9918c3e4d987917d7"
+  }
+}

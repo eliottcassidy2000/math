@@ -1,0 +1,73 @@
+{
+  "bank_path": "05-knowledge/results/hn_metagraph_information_20261026/enumeration/representatives.json",
+  "bank_sha256": "feffa1e43ffc168af2e4f1fa6a7ac881438535da7876ef8720f4e85bd614668c",
+  "collisions": [],
+  "orders": [
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 1,
+      "classes": 1,
+      "max_leaves": 1,
+      "n": 1,
+      "sidecar_classes": 1
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 1,
+      "classes": 1,
+      "max_leaves": 1,
+      "n": 2,
+      "sidecar_classes": 1
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 7,
+      "classes": 2,
+      "max_leaves": 6,
+      "n": 3,
+      "sidecar_classes": 2
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 14,
+      "classes": 4,
+      "max_leaves": 6,
+      "n": 4,
+      "sidecar_classes": 4
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 151,
+      "classes": 12,
+      "max_leaves": 120,
+      "n": 5,
+      "sidecar_classes": 12
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 449,
+      "classes": 56,
+      "max_leaves": 120,
+      "n": 6,
+      "sidecar_classes": 56
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 11595,
+      "classes": 456,
+      "max_leaves": 5040,
+      "n": 7,
+      "sidecar_classes": 456
+    },
+    {
+      "automorphism_group_disagreements": 0,
+      "canonical_leaves": 32584,
+      "classes": 6880,
+      "max_leaves": 5040,
+      "n": 8,
+      "sidecar_classes": 6880
+    }
+  ],
+  "source_sha256": "cc2f9700d917b71a8dd367b120c355a9b3131c68106111f6dd0f06d35de39ab4",
+  "status": "PASS_INJECTIVE"
+}
