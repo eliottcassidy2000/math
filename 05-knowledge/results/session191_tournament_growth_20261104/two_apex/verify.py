@@ -51,6 +51,22 @@ def dp(rows):
    if old:d[s][v]=sum(d[old][u] for u in range(n) if rows[u]>>v&1)
  return sum(d[-1])
 
+def strong_rows(rows):
+ n=len(rows);allmask=(1<<n)-1
+ for source in range(n):
+  seen=1<<source
+  while True:
+   new=seen
+   for u in range(n):
+    if seen>>u&1:new|=rows[u]
+   if new==seen:break
+   seen=new
+  if seen!=allmask:return False
+ return True
+
+def strong_word(w):
+ return bool(w) and w[0]!=0 and w[-1]!=3 and (2 in w or any(a==3 and b==0 for i,a in enumerate(w) for b in w[i+1:]))
+
 def literal_slots(w):
  # Independent direct enumeration of a physical Hamilton word, not status states.
  rows=graph(w);total=0
@@ -94,7 +110,7 @@ def main():
  for m in range(6):
   for w in itertools.product(range(4),repeat=m):
    h=value(w);require(h==dp(graph(w))==literal_slots(w),'independent path count')
-   require(h%2==1,'parity');checks+=1
+   require(h%2==1,'parity');require(strong_word(w)==strong_rows(graph(w)),'strongness characterization');checks+=1
  receipt['complete_independent_presentations']=checks
  rng=random.Random(191)
  samples=[]
