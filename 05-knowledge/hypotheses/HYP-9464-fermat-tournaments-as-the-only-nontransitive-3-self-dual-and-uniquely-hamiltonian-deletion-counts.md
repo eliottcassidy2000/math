@@ -1,8 +1,8 @@
 ---
 id: HYP-9464
 title: "Coincidences with a mechanism. (A) The {-3}-self-dual tournaments of order 10 are exactly the transitive TT_10 and the almost transitive AT_10 = NT_10, whose path count 257 = 2^8 + 1 is the Fermat prime F_3; in general the non-transitive decomposable {-3}-self-dual tournament of order 2^i + 2 >= 10 is the one with H = F_i (Achour-Boudabbous-Boussairi, with THM-4749 (4)). (B) Every sole-exit-free tournament with exactly 3 Hamiltonian cycles (n >= 6) has exactly 3 vertices whose deletion is uniquely Hamiltonian; with exactly 4 cycles (n >= 7), exactly 2. (C) The few-cycle Fibonacci table is the rooted uniquely Hamiltonian count two orders down: u_3(n) = R(n - 2), R(m) = F(2m - 5) (THM-4868 (F)). Pre-registered at order 10"
-status: CONFIRMED at order 10 (pre-registered in 3fc61b533c, all three predictions held, no failing class). (A) FINITE-EXACT at orders 9-10 and CITED for decomposable n >= 9, indecomposable n >= 11 OPEN; (B) FINITE-EXACT at orders 6-10, general n OPEN; (C) PROVED
-script_confirm: 04-computation/experiments/selfdual3_fewcycle_20261104_confirm.out, 04-computation/experiments/at_mirror_fixed_paths_20261104.py
+status: CONFIRMED at order 10 (pre-registered in 3fc61b533c, all three predictions held, no failing class); audited PASS WITH CORRECTIONS (MISTAKE-712). (A) FINITE-EXACT at orders 9-11 (11 by the audit) and CITED for decomposable n >= 9, indecomposable n >= 12 OPEN; (B) FINITE-EXACT at orders 6-14 (11-14 by the audit), general n OPEN; (C) PROVED
+script_confirm: 04-computation/experiments/selfdual3_fewcycle_20261104_confirm.out, 04-computation/experiments/selfdual3_networkx_check_20261104.py, 04-computation/experiments/at_mirror_fixed_paths_20261104.py, 04-computation/experiments/selfdual3_fewcycle_20261104_records/
 session: kind-pasteur-2026-11-04-S10
 date: 2026-11-04
 related: [THM-4868, THM-4869, THM-4870, THM-4749, THM-4866, HYP-9459, HYP-9461, HYP-9462]
@@ -72,9 +72,9 @@ The runs were made after the pre-registration commit 3fc61b533c. The record is
   - TT_10 (H = 1, hc = 0);
   - one class with scores 1 1 2 3 4 5 6 7 8 8, H = 257, hc = 1.
 
-  Both are decomposable and self-converse; none is indecomposable. networkx isomorphism against explicit
-  constructions identifies the two classes as TT_10 and AT_10. Independent networkx code confirms that AT_n and TT_n
-  are {-3}-self-dual for n = 9, 10, 11 and that three random order-10 tournaments are not.
+  Both are decomposable and self-converse; none is indecomposable. Independent networkx code
+  (`selfdual3_networkx_check_20261104.py`) identifies the two classes as TT_10 and AT_10. It also confirms that AT_n
+  and TT_n are {-3}-self-dual for n = 9, 10, 11 and that three random order-10 tournaments are not.
 - **(P2) CONFIRMED.** `hcdump 10 3 2` lists 89 classes (= u_3(10) = F(11)). Each has exactly 3 vertices v with
   T - v uniquely Hamiltonian.
 - **(P3) CONFIRMED.** `hcdump 10 4 2` lists 68 classes (= u_4(10) = 2F(9)). Each has exactly 2.
@@ -84,13 +84,28 @@ The runs were made after the pre-registration commit 3fc61b533c. The record is
 | part | status |
 |---|---|
 | (A) at orders 9 and 10 | FINITE-EXACT (exhaustive): the {-3}-self-dual classes are exactly TT_n and AT_n |
+| (A) at order 11 | FINITE-EXACT by the audit's complete pruned search (validated at orders 7, 8): only TT_11 and AT_11 |
 | (A) the decomposable case, every n >= 9 | CITED (Achour-Boudabbous-Boussairi) |
-| (A) no indecomposable {-3}-self-dual tournament for n >= 11 | OPEN |
+| (A) no indecomposable {-3}-self-dual tournament for n >= 12 | OPEN |
 | (A) H(AT_n) = 2^(n-2) + 1, hence F_i at order 2^i + 2 | PROVED (THM-4749 (4); re-derived in the note) |
-| (B) hc = 3, exactly 3 uniquely Hamiltonian deletions | FINITE-EXACT, orders 6-10; OPEN in general |
-| (B) hc = 4, exactly 2 | FINITE-EXACT, orders 7-10; OPEN in general |
+| (B) hc = 3, exactly 3 uniquely Hamiltonian deletions | FINITE-EXACT, orders 6-14 (11-14 by the audit's `aud_fewcycle.c`); OPEN in general |
+| (B) hc = 4, exactly 2 | FINITE-EXACT, orders 7-14 (11-14 by the audit); OPEN in general |
 | (C) u_3(n) = R(n - 2) | PROVED (algebra from THM-4869); no bijection is known |
 
-The note adds a PROVED mirror law for AT_n (`at_mirror_fixed_paths_20261104.py`). The converse involution of AT_n
-fixes exactly H(AT_(k+2)) Hamiltonian paths when n = 2k + 2, and only one path when n is odd. So the Fermat recursion
-F_i = (F_(i-1) - 1)^2 + 1 is the count of a fixed-point set: at order 2^i + 2 the mirror-fixed paths number F_(i-1).
+**The mirror law.** The note proves it for AT_n (`at_mirror_fixed_paths_20261104.py`). The converse involution of
+AT_n fixes exactly H(AT_(k+2)) Hamiltonian paths when n = 2k + 2, and only one path when n is odd. So the Fermat
+recursion F_i = (F_(i-1) - 1)^2 + 1 is the count of a fixed-point set: at order 2^i + 2 the mirror-fixed paths number
+F_(i-1). The involution and the parity congruence are THM-582 and THM-647 (with THM-024 and THM-583). The AT_n
+fixed-point count is the new part.
+
+**Audit observation (not pre-registered).** For hc = 5 at orders 7-14 the deletion counts split term by term along
+S75's u_5 = L(2n - 12) + F(2n - 13):
+- L(2n - 12) classes have exactly 2 uniquely Hamiltonian deletions;
+- F(2n - 13) classes have exactly 3.
+
+This is a candidate extension of (B), to be pre-registered before any confirmatory run.
+
+**Audit.** The independent adversarial audit gave PASS WITH CORRECTIONS (1 major, 11 minor; MISTAKE-712). Its report
+is `04-computation/experiments/fermat_self_duality_20261104_audit_S10/AUDIT.md`. Two corrections concern this file:
+- the order-8 count in the exploratory section, corrected above;
+- the networkx check, now committed.

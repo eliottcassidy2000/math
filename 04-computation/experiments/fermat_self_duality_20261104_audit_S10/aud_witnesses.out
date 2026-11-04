@@ -1,0 +1,7 @@
+witness      hc  |Aut|  #modules  #C3-modules  #non-transitive  x->y forced  2-arc-strong  quotient=AT_5  quotient hc  quotient #non-critical  self-converse  {-3}-self-dual
+v->x,v->y     9      9         5            2                4  True         True          True                     1                       3  False          False
+v->x,y->v     9      9         4            2                4  True         True          False                    1                       4  True           False
+x->v,v->y     9      9         2            2                2  True         True          False                    1                       2  True           False
+x->v,y->v     9      9         5            2                4  True         True          True                     1                       3  False          False
+v beats both  vs  both beat v: converses of each other: True
+all four pairwise non-isomorphic: True

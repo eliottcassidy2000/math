@@ -1,0 +1,50 @@
+== (a) substitution form AT_n = C3[1, TT_(n-2), 1], n = 3..20
+  I = {2..n-1} is a transitive module and the quotient on {1, I, n} is 1 -> I -> n -> 1: verified for n = 3..20
+== (b) induced subtournaments of AT_n are AT_k (if they contain 1 and n) or TT_k, all subsets, n = 3..12
+  verified for every subset at n = 3..12; AT_k and TT_k are self-converse via i -> k+1-i (k <= 16)
+== (c), (d) path count and the mirror law (two independent path enumerators)
+  n= 3: H=     3 = 2^1+1, Fix(iota)=   1   [n = 2^0 + 2: H = F_0 = 3, Fix = 1]
+  n= 4: H=     5 = 2^2+1, Fix(iota)=   3 = H(AT_3) = 3   [n = 2^1 + 2: H = F_1 = 5, Fix = F_0 = 3]
+  n= 5: H=     9 = 2^3+1, Fix(iota)=   1
+  n= 6: H=    17 = 2^4+1, Fix(iota)=   5 = H(AT_4) = 5   [n = 2^2 + 2: H = F_2 = 17, Fix = F_1 = 5]
+  n= 7: H=    33 = 2^5+1, Fix(iota)=   1
+  n= 8: H=    65 = 2^6+1, Fix(iota)=   9 = H(AT_5) = 9
+  n= 9: H=   129 = 2^7+1, Fix(iota)=   1
+  n=10: H=   257 = 2^8+1, Fix(iota)=  17 = H(AT_6) = 17   [n = 2^3 + 2: H = F_3 = 257, Fix = F_2 = 17]
+  n=11: H=   513 = 2^9+1, Fix(iota)=   1
+  n=12: H=  1025 = 2^10+1, Fix(iota)=  33 = H(AT_7) = 33
+  n=13: H=  2049 = 2^11+1, Fix(iota)=   1
+  n=14: H=  4097 = 2^12+1, Fix(iota)=  65 = H(AT_8) = 65
+  n=15: H=  8193 = 2^13+1, Fix(iota)=   1
+  n=16: H= 16385 = 2^14+1, Fix(iota)= 129 = H(AT_9) = 129
+== (e) parity: H = Fix(iota) (mod 2) for tournaments with an involutive anti-automorphism (random, n = 4..9)
+  240 random tournaments with an involutive anti-automorphism: H = Fix (mod 2) and Fix odd in all
+== (f) (x, x^2) as an x^(1/x) mirror pair
+  x^(x^2) = (x^2)^x, x > 0  <=>  x^2 ln x = 2x ln x: solutions [1, 2]  (x = 1 gives the degenerate pair (1, 1))
+== (g) end counts of AT_m: end_(m-1) + end_m = 2^(m-3) + 1 = H(AT_(m-1))
+  end_(m-1) = 2^(m-3) and end_m = 1 for m = 4..16
+== (h) W4 = AT_4; S75's blocks by brute force (orders 3..6); (AT_m, {m-1, m}) as a block
+  W4 = AT_4 exactly; 24 labelled strong 4-tournaments, all isomorphic to AT_4; end counts (a,b,c,d) = (1, 1, 2, 1); sole exits = [3, 4]
+  blocks of type 3 (orders 3..6): 2: order 3 (AT_3), |A| = 3 A = all; order 4 (AT_4), |A| = 2 A = the two sole exits
+  blocks of type 4 (orders 3..6): 2: order 4 (AT_4), |A| = 3; order 4 (AT_4), |A| = 3
+  blocks of type 5 (orders 3..6): 4: order 4 (AT_4), |A| = 4 A = all; order 5 (AT_5), |A| = 2 A = the two sole exits; order 5, |A| = 2; order 5, |A| = 2
+  (AT_5, its two sole exits) is one of the order-5 type-5 blocks: True
+  (AT_m, {m-1, m}) satisfies all of S75's block conditions with type 2^(m-3) + 1, for every m = 4..12
+== (i) u_3(n) = F(2n - 9) = R(n - 2) and U_3(x) = x^2 (R(x) - x^2 - x^3)
+  symbolic identity holds; R(m) = F(2m-5) for m = 2..42 (R(2) = F(-1) = 1, R(3) = 1); u_3(n) = F(2n-9) = R(n-2) for n = 6..44; u_3(4) = u_3(5) = 0 (the subtracted x^4, x^5)
+== (j) automorphism groups of AT_n
+  |Aut(AT_n)|, n = 3..12: [3, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+== (k) C3 modules in {-3}-self-dual tournaments
+  x => C3 and C3 => x are each other's converse and not isomorphic, so neither is self-converse (order-7 lemma)
+  M (C3 module) + x + y: self-converse configurations: [(0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 1)] (1 = dominates M); same-side configurations self-converse: 0
+  => at order 8 a C3 module leaves 5 outside vertices, two of them on the same side; deleting the other three
+     gives a non-self-converse 5-tournament.  So C3 modules are excluded at order 8 by proof as well.
+== (l) section 1 Fact 4: AT_n uniquely Hamiltonian, non-critical run = interior, 3 cut arcs, sole exits {n-1, n} (n = 4..12)
+  hc = 1, non-critical vertices = {2..n-1} (run of length n-2), 3 cut arcs, sole exits {n-1, n}, sole entries {1, 2}: n = 4..12 (n = 3 is C3: three sole exits, no non-critical vertex; THM-4868 assumes n >= 4)
+== (m) the arithmetic of section 4
+  Fermat primes & Ogg primes = [3, 5, 17]; primes <= 31 all supersingular: True
+  3, 5 in the Fi22 layer: True; 17 in B but not Fi22: True
+  Schlafli pairs with 1/p + 1/q > 1/2: [(3, 3), (3, 4), (3, 5), (4, 3), (5, 3)]; face sizes [3, 4, 5]
+  2^m + 1 prime for m <= 64 only at m = [1, 2, 4, 8, 16] (powers of 2)
+
+ALL CHECKS PASSED

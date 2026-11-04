@@ -1,0 +1,32 @@
+== mirror base
+  r_3: Newton 2.47805268028830241189373651689  lambertw 2.47805268028830241189373651689  |diff| = 5.35e-51  r^(1/r) - n^(1/n) = 2.67e-51
+  r_4: Newton 2.0  lambertw 2.0  |diff| = 2.67e-51  r^(1/r) - n^(1/n) = 2.67e-51
+  r_5: Newton 1.76492191452577588275872359091  lambertw 1.76492191452577588275872359091  |diff| = 0.0  r^(1/r) - n^(1/n) = 0.0
+  r_10: Newton 1.3712885742386235368613621063  lambertw 1.3712885742386235368613621063  |diff| = 0.0  r^(1/r) - n^(1/n) = -2.67e-51
+  r_1000: Newton 1.00698022191602647319697903929  lambertw 1.00698022191602647319697903929  |diff| = 0.0  r^(1/r) - n^(1/n) = 0.0
+== B
+  Euler-Boole N=200, K=24: 2.0967911243915261257250306750849
+  Euler-Boole N=400, K=24: 2.0967911243915261257250306750849   |difference| = 1.81e-47
+  CVZ (40 terms):           2.0967911243915261257250306750849   |CVZ - Boole| = 5.44e-34
+  CVZ (80 terms):           2.0967911243915261257250306750849   |CVZ - Boole| = 3.43e-50
+  CVZ (120 terms):           2.0967911243915261257250306750849   |CVZ - Boole| = 2.36e-50
+  PDF value 2.096791124391526125725030675: |Boole - PDF| = 8.49e-29
+  note value 2.0967911243915261257 (20 digits): |Boole - note| = 2.5e-20
+== length(E), independently of the alternating series
+  Euler-Maclaurin K=150: length(E) = 0.903208875608473874274969324915;  K=300: 0.903208875608473874274969324915
+  3 - length(E) = 2.09679112439152612572503067508;  |3 - length(E) - B| = 2.23e-51
+== MRB constant C = sum (-1)^n (n^(1/n) - 1)
+  C (Euler-Boole) = 0.1878596424620671202485179340542732300559
+  |C - OEIS A037077 digits| = 3.4e-52
+  C = sqrt2 - 1 - sum_k [f(r_(2k+1)) - f(r_(2k+2))] is the FTC form of the PDF's integral over E: check at 30 digits:
+  first five interval terms via f(r_n) and via f(n) agree: |diff| = 1.56e-61
+== tree function: r_n = exp(T(ln n / n)), T(z) = sum m^(m-1) z^m / m!
+  n=3: exp(series, 20000 terms) = 2.478052680288302411893737; r_n = 2.478052680288302411893737; |diff| = 1.7e-44 (tail bound 6.96e-45)
+  n=5: exp(series, 4000 terms) = 1.764921914525775882758724; r_n = 1.764921914525775882758724; |diff| = 1.6e-50 (tail bound 1.09e-237)
+  n=10: exp(series, 4000 terms) = 1.371288574238623536861362; r_n = 1.371288574238623536861362; |diff| = 8.02e-51 (tail bound 2.9e-820)
+== the note's caution about mpmath's default nsum
+  default nsum length(E) = 0.90306873439740050715  -> 3 - length(E) = 2.0969312656025994928  (true B = 2.0967911243915261257)
+  default nsum on the alternating series B = 2.0967911243915261257
+  default nsum at dps=15: 3 - length(E) = 2.09731645575
+  default nsum at dps=30: 3 - length(E) = 2.0969312656
+  default nsum at dps=40: 3 - length(E) = 2.09688394912

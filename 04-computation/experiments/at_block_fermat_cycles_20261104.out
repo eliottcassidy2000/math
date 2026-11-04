@@ -1,0 +1,9 @@
+m= 4 block conditions: strong=True outdeg>=2 off A=True bad Z=0; type end_(m-1)+end_m=3 (2^(m-3)+1=3); T order 6: min out-degree 2, hc=3  ok=True
+m= 5 block conditions: strong=True outdeg>=2 off A=True bad Z=0; type end_(m-1)+end_m=5 (2^(m-3)+1=5); T order 7: min out-degree 2, hc=5  ok=True
+m= 6 block conditions: strong=True outdeg>=2 off A=True bad Z=0; type end_(m-1)+end_m=9 (2^(m-3)+1=9); T order 8: min out-degree 2, hc=9  ok=True
+m= 7 block conditions: strong=True outdeg>=2 off A=True bad Z=0; type end_(m-1)+end_m=17 (2^(m-3)+1=17); T order 9: min out-degree 2, hc=17  ok=True
+m= 8 block conditions: strong=True outdeg>=2 off A=True bad Z=0; type end_(m-1)+end_m=33 (2^(m-3)+1=33); T order 10: min out-degree 2, hc=33  ok=True
+m= 9 block conditions: strong=True outdeg>=2 off A=True bad Z=0; type end_(m-1)+end_m=65 (2^(m-3)+1=65); T order 11: min out-degree 2, hc=65  ok=True
+m=10 block conditions: strong=True outdeg>=2 off A=True bad Z=0; type end_(m-1)+end_m=129 (2^(m-3)+1=129); T order 12: min out-degree 2, hc=129  ok=True
+m=11 block conditions: strong=True outdeg>=2 off A=True bad Z=0; type end_(m-1)+end_m=257 (2^(m-3)+1=257); T order 13: min out-degree 2, hc=257  ok=True
+m=12 block conditions: strong=True outdeg>=2 off A=True bad Z=0; type end_(m-1)+end_m=513 (2^(m-3)+1=513); T order 14: min out-degree 2, hc=513  ok=True

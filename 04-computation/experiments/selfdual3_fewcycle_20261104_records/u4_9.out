@@ -1,0 +1,44 @@
+scf_crevasses_20261104 mode=hcdump threads=12
+T n=6 H=37 hc=4 rows: c 9 12 24 b 17
+T n=6 H=37 hc=4 rows: c 5 18 22 b 17
+T n=6 H=41 hc=4 rows: 6 24 30 7 b 19
+T n=7 H=65 hc=4 rows: c 5 18 42 b 1f 37
+T n=7 H=81 hc=4 rows: 14 11 a 13 64 f 2f
+T n=7 H=65 hc=4 rows: c 9 12 44 b 1f 37
+T n=7 H=79 hc=4 rows: 6 14 18 13 61 f 2f
+T n=8 H=163 hc=4 rows: 14 11 a 13 c4 1f 2f 6f
+T n=8 H=135 hc=4 rows: 14 11 a 13 a4 f 3f 6f
+T n=8 H=119 hc=4 rows: c 9 12 84 b 1f 3f 77
+T n=8 H=113 hc=4 rows: c 9 12 24 b 97 3f 5f
+T n=8 H=117 hc=4 rows: c 5 18 82 b 1f 3f 77
+T n=8 H=115 hc=4 rows: c 5 18 22 b 97 3f 5f
+T n=8 H=169 hc=4 rows: a 24 21 26 f d1 1f 5f
+T n=8 H=163 hc=4 rows: 6 24 28 23 f d1 1f 5f
+T n=8 H=159 hc=4 rows: 6 14 18 13 c1 1f 2f 6f
+T n=8 H=131 hc=4 rows: 6 14 18 13 a1 f 3f 6f
+T n=9 H=233 hc=4 rows: 14 11 a 13 124 f 3f 7f ef
+T n=9 H=253 hc=4 rows: 14 11 a 13 64 f 12f 7f bf
+T n=9 H=325 hc=4 rows: 14 11 a 13 184 1f 3f 6f ef
+T n=9 H=271 hc=4 rows: 14 11 a 13 144 1f 2f 7f ef
+T n=9 H=243 hc=4 rows: c 9 12 84 b 9f 3f 157 7f
+T n=9 H=195 hc=4 rows: c 9 12 44 b 1f 137 7f bf
+T n=9 H=189 hc=4 rows: c 9 12 24 b 117 3f 7f df
+T n=9 H=215 hc=4 rows: c 9 12 24 b 57 11f 7f bf
+T n=9 H=227 hc=4 rows: c 9 12 104 b 1f 3f 7f f7
+T n=9 H=221 hc=4 rows: c 5 18 102 b 1f 3f 7f f7
+T n=9 H=245 hc=4 rows: c 5 18 82 b 9f 3f 157 7f
+T n=9 H=195 hc=4 rows: c 5 18 42 b 1f 137 7f bf
+T n=9 H=193 hc=4 rows: c 5 18 22 b 117 3f 7f df
+T n=9 H=217 hc=4 rows: c 5 18 22 b 57 11f 7f bf
+T n=9 H=345 hc=4 rows: a 44 41 46 f 1f 1b1 3f bf
+T n=9 H=321 hc=4 rows: a 24 21 26 f 191 3f 5f df
+T n=9 H=267 hc=4 rows: a 24 21 26 f 151 1f 7f df
+T n=9 H=359 hc=4 rows: a 14 11 16 1c1 1f 2f 6f ef
+T n=9 H=331 hc=4 rows: 6 44 48 43 f 1f 1b1 3f bf
+T n=9 H=309 hc=4 rows: 6 24 28 23 f 191 3f 5f df
+T n=9 H=257 hc=4 rows: 6 24 28 23 f 151 1f 7f df
+T n=9 H=315 hc=4 rows: 6 14 18 13 181 1f 3f 6f ef
+T n=9 H=263 hc=4 rows: 6 14 18 13 141 1f 2f 7f ef
+T n=9 H=347 hc=4 rows: 6 14 18 13 1c1 1f 2f 6f ef
+T n=9 H=225 hc=4 rows: 6 14 18 13 121 f 3f 7f ef
+T n=9 H=247 hc=4 rows: 6 14 18 13 61 f 12f 7f bf

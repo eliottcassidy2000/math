@@ -1,0 +1,29 @@
+n=7 H=1 hc=0 sc=1  #modules=20  module types: {'TT2': 6, 'TT3': 5, 'TT4': 4, 'TT5': 3, 'TT6': 2}
+n=7 H=47 hc=1 sc=0  #modules=7  module types: {'TT2': 4, 'TT3': 2, 'TT4': 1}
+n=7 H=33 hc=1 sc=1  #modules=10  module types: {'TT2': 4, 'TT3': 3, 'TT4': 2, 'TT5': 1}
+n=7 H=51 hc=1 sc=1  #modules=6  module types: {'TT2': 4, 'TT3': 2}
+n=7 H=123 hc=10 sc=1  #modules=2  module types: {'TT2': 2}
+n=7 H=151 hc=14 sc=1  #modules=2  module types: {'TT2': 2}
+n=7 H=137 hc=13 sc=1  #modules=5  module types: {'TT2': 4, 'TT3': 1}
+n=7 H=47 hc=1 sc=0  #modules=7  module types: {'TT2': 4, 'TT3': 2, 'TT4': 1}
+n=7 H=105 hc=8 sc=1  #modules=3  module types: {'TT2': 2, 'TT3': 1}
+n=8 H=1 hc=0 sc=1  #modules=27  module types: {'TT2': 7, 'TT3': 6, 'TT4': 5, 'TT5': 4, 'TT6': 3, 'TT7': 2}
+n=8 H=479 hc=34 sc=0  #modules=4  module types: {'TT2': 3, 'TT3': 1}
+n=8 H=107 hc=1 sc=0  #modules=9  module types: {'TT2': 5, 'TT3': 3, 'TT4': 1}
+n=8 H=95 hc=1 sc=0  #modules=11  module types: {'TT2': 5, 'TT3': 3, 'TT4': 2, 'TT5': 1}
+n=8 H=107 hc=1 sc=0  #modules=9  module types: {'TT2': 5, 'TT3': 3, 'TT4': 1}
+n=8 H=509 hc=37 sc=1  #modules=7  module types: {'TT2': 5, 'TT3': 2}
+n=8 H=479 hc=34 sc=0  #modules=4  module types: {'TT2': 3, 'TT3': 1}
+n=8 H=65 hc=1 sc=1  #modules=15  module types: {'TT2': 5, 'TT3': 4, 'TT4': 3, 'TT5': 2, 'TT6': 1}
+n=8 H=347 hc=22 sc=0  #modules=4  module types: {'TT2': 3, 'TT3': 1}
+n=8 H=347 hc=22 sc=0  #modules=4  module types: {'TT2': 3, 'TT3': 1}
+n=8 H=465 hc=32 sc=1  #modules=3  module types: {'TT2': 3}
+n=8 H=393 hc=29 sc=1  #modules=8  module types: {'TT2': 5, 'TT3': 2, 'TT4': 1}
+n=8 H=653 hc=52 sc=1  #modules=3  module types: {'TT2': 3}
+n=8 H=95 hc=1 sc=0  #modules=11  module types: {'TT2': 5, 'TT3': 3, 'TT4': 2, 'TT5': 1}
+n=8 H=269 hc=16 sc=1  #modules=6  module types: {'TT2': 3, 'TT3': 2, 'TT4': 1}
+n=8 H=629 hc=49 sc=1  #modules=1  module types: {'TT2': 1}
+n=9 H=1 hc=0 sc=1  #modules=35  module types: {'TT2': 8, 'TT3': 7, 'TT4': 6, 'TT5': 5, 'TT6': 4, 'TT7': 3, 'TT8': 2}
+n=9 H=129 hc=1 sc=1  #modules=21  module types: {'TT2': 6, 'TT3': 5, 'TT4': 4, 'TT5': 3, 'TT6': 2, 'TT7': 1}
+n=10 H=1 hc=0 sc=1  #modules=44  module types: {'TT2': 9, 'TT3': 8, 'TT4': 7, 'TT5': 6, 'TT6': 5, 'TT7': 4, 'TT8': 3, 'TT9': 2}
+n=10 H=257 hc=1 sc=1  #modules=28  module types: {'TT2': 7, 'TT3': 6, 'TT4': 5, 'TT5': 4, 'TT6': 3, 'TT7': 2, 'TT8': 1}
