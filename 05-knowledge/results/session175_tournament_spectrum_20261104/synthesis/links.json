@@ -1,0 +1,92 @@
+{
+  "note_sha256": "1d12372d2ca2da3ef5797f07e08ea047a7feab3da7a1612a1931c107a8bece79",
+  "relative_links_verified": 17,
+  "links": [
+    {
+      "title": "enumeration packet",
+      "relative_target": "../a000568/README.md",
+      "exists": true
+    },
+    {
+      "title": "independent orbit packet",
+      "relative_target": "../orbits/README.md",
+      "exists": true
+    },
+    {
+      "title": "orbit packet",
+      "relative_target": "../orbits/README.md#3-no-finite-order-polynomial-coefficient-recurrence",
+      "exists": true
+    },
+    {
+      "title": "construction packet",
+      "relative_target": "../construction/README.md",
+      "exists": true
+    },
+    {
+      "title": "cyclic-module obstruction packet",
+      "relative_target": "../obstructions/PROOF.md",
+      "exists": true
+    },
+    {
+      "title": "interface packet",
+      "relative_target": "../interface/PROOF.md",
+      "exists": true
+    },
+    {
+      "title": "clone obstruction",
+      "relative_target": "../clone_obstruction/PROOF.md",
+      "exists": true
+    },
+    {
+      "title": "Enumeration derivation and measurements",
+      "relative_target": "../a000568/README.md",
+      "exists": true
+    },
+    {
+      "title": "independent orbit audit and recurrence obstruction",
+      "relative_target": "../orbits/README.md",
+      "exists": true
+    },
+    {
+      "title": "Constructors",
+      "relative_target": "../construction/README.md",
+      "exists": true
+    },
+    {
+      "title": "independent audit",
+      "relative_target": "../construction/AUDIT.md",
+      "exists": true
+    },
+    {
+      "title": "Uniform cyclic classification",
+      "relative_target": "../obstructions/PROOF.md",
+      "exists": true
+    },
+    {
+      "title": "independent audit",
+      "relative_target": "../obstructions/AUDIT.md",
+      "exists": true
+    },
+    {
+      "title": "Endpoint/interface proof",
+      "relative_target": "../interface/PROOF.md",
+      "exists": true
+    },
+    {
+      "title": "independent reviewer audit",
+      "relative_target": "../interface/REVIEWER_AUDIT.md",
+      "exists": true
+    },
+    {
+      "title": "Clone obstruction proof",
+      "relative_target": "../clone_obstruction/PROOF.md",
+      "exists": true
+    },
+    {
+      "title": "reviewer replay receipt",
+      "relative_target": "../clone_obstruction/reviewer_replay.json",
+      "exists": true
+    }
+  ],
+  "scope": "Local link-existence check only; independent mathematical review is separate."
+}

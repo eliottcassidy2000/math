@@ -1,0 +1,71 @@
+{
+  "1": {
+    "values": [
+      1
+    ],
+    "labelled_tournaments": 1,
+    "seconds": 1.6093006706796587e-05
+  },
+  "2": {
+    "values": [
+      1
+    ],
+    "labelled_tournaments": 2,
+    "seconds": 1.9238999811932445e-05
+  },
+  "3": {
+    "values": [
+      1,
+      3
+    ],
+    "labelled_tournaments": 8,
+    "seconds": 0.0002347570116398856
+  },
+  "4": {
+    "values": [
+      1,
+      3,
+      5
+    ],
+    "labelled_tournaments": 64,
+    "seconds": 0.0011514660000102594
+  },
+  "5": {
+    "values": [
+      1,
+      3,
+      5,
+      9,
+      11,
+      13,
+      15
+    ],
+    "labelled_tournaments": 1024,
+    "seconds": 0.03747982799541205
+  },
+  "6": {
+    "values": [
+      1,
+      3,
+      5,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19,
+      23,
+      25,
+      27,
+      29,
+      31,
+      33,
+      37,
+      41,
+      43,
+      45
+    ],
+    "labelled_tournaments": 32768,
+    "seconds": 3.1587468159996206
+  }
+}

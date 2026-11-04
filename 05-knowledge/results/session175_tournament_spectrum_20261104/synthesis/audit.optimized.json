@@ -1,0 +1,89 @@
+{
+  "metrics": "PASS",
+  "note_sha256": "1d12372d2ca2da3ef5797f07e08ea047a7feab3da7a1612a1931c107a8bece79",
+  "relative_links": [
+    "../a000568/README.md",
+    "../orbits/README.md",
+    "../orbits/README.md#3-no-finite-order-polynomial-coefficient-recurrence",
+    "../construction/README.md",
+    "../obstructions/PROOF.md",
+    "../interface/PROOF.md",
+    "../clone_obstruction/PROOF.md",
+    "../a000568/README.md",
+    "../orbits/README.md",
+    "../construction/README.md",
+    "../construction/AUDIT.md",
+    "../obstructions/PROOF.md",
+    "../obstructions/AUDIT.md",
+    "../interface/PROOF.md",
+    "../interface/REVIEWER_AUDIT.md",
+    "../clone_obstruction/PROOF.md",
+    "../clone_obstruction/reviewer_replay.json"
+  ],
+  "small_spectra": {
+    "1": {
+      "H_values": [
+        1
+      ],
+      "labelled_tournaments": 1
+    },
+    "2": {
+      "H_values": [
+        1
+      ],
+      "labelled_tournaments": 2
+    },
+    "3": {
+      "H_values": [
+        1,
+        3
+      ],
+      "labelled_tournaments": 8
+    },
+    "4": {
+      "H_values": [
+        1,
+        3,
+        5
+      ],
+      "labelled_tournaments": 64
+    },
+    "5": {
+      "H_values": [
+        1,
+        3,
+        5,
+        9,
+        11,
+        13,
+        15
+      ],
+      "labelled_tournaments": 1024
+    },
+    "6": {
+      "H_values": [
+        1,
+        3,
+        5,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        37,
+        41,
+        43,
+        45
+      ],
+      "labelled_tournaments": 32768
+    }
+  },
+  "status": "PASS"
+}
