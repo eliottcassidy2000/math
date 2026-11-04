@@ -1,0 +1,13 @@
+# CP03 shared-credit revision and inline-tree test
+
+**PASS.** This addendum approves `CP03-credit-final/package.json`, SHA-256 `010604e7f2c0054e2a0d3e735c594d821b4b3091a5e8a689dc37f21cbd6603e9`. It supersedes the candidate identifier in the earlier prepublication review, without changing its mathematical replay findings.
+
+The revised package has 68 originals and 78 stored objects. Independent decoding and hash verification finds exactly four additional spectrum credit files and one changed navigation paragraph. All 62 frozen mathematical files, and the CP03 reproduction instructions, are unchanged. Therefore the completed 16 exact mathematical replays remain applicable; no full census was repeated solely for this attribution change.
+
+The two permitted incoming repository files were independently retrieved at immutable commit `9036e4dcb9e1016ec42c11802ca193e6a09e6f34`. Their returned Git blob IDs and exact content match the retained source record. The incoming starting rows and second below-start route were parsed from those bytes. A separate edge-transport computation finds exactly one common root-compatible relabeling for all five tournaments: `(2,1,0,3,6,4,5)`, carrying root 2 to root 0. This is equality of the physical sequence, not merely its scalar counts. The published credit checker also reproduces its receipt byte-for-byte in normal and optimized modes from the intended packaged layout.
+
+The credit correctly names the shared incoming S76 result, disclaims Session190 priority, and distinguishes the preregistration's then-unrun higher-order predictions from completed evidence. This review does not independently reproduce that incoming higher-order programme.
+
+A separate live idempotence test used GitHub's `create_tree` with exact UTF-8 bytes of the already-published CP01 `00-navigation/S190.md`, path mode `100644`, and base tree `1e80086e91cd2822a4f358341758615dd90c99d2`. The API returned the identical tree SHA. No branch/reference update was performed. This validates the inline-content representation on those bytes. Later batches must still preserve their exact approved UTF-8 bytes, enforce the intended aggregate byte limit, keep binary data in separately verified blobs, use a known base tree and non-force publication lease, and verify every resulting immutable remote object. The idempotence test is not itself a remote verification of CP03.
+
+`CREDIT_DELTA_RECEIPT.json`, `INDEPENDENT_INCOMING_READS.json`, `CREDIT_NAVIGATION_DELTA.txt`, and `IDEMPOTENT_TREE_TEST.json` retain the exact independent evidence. Immutable CP03 readback and CI observation remain pending.

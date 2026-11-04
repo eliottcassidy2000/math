@@ -1,0 +1,75 @@
+{
+  "status": "PREPUBLICATION_PASS_REMOTE_PENDING",
+  "candidate_package_sha256": "1d7dc7a9da557dbd45ca5bbfc987782f1bd208ffd7c579d3cf069bf72c4264ec",
+  "publication_files": [
+    "PREPUBLICATION_REVIEW.md",
+    "SOURCE_REPLAY_RECEIPT.json",
+    "PACKAGE_REVIEW_RECEIPT.json",
+    "NAVIGATION_LINKS.json",
+    "replay_sources.py",
+    "validate_package.py",
+    "source_replay.stdout",
+    "package_review.stdout",
+    "composite_restore.stdout",
+    "composite_verify.stdout",
+    "composite_verify.optimized.stdout",
+    "PREPUBLICATION_FILES.json"
+  ],
+  "files": [
+    {
+      "path": "PREPUBLICATION_REVIEW.md",
+      "bytes": 4504,
+      "sha256": "4ffd6fb102a2da867cb20511e822e955c02f5408fef8a1b9b5203fea7301197c"
+    },
+    {
+      "path": "SOURCE_REPLAY_RECEIPT.json",
+      "bytes": 10727,
+      "sha256": "d47526666acc0e96cd167a9959ebcebdf1753fd18eb3eefa5b92f76584e13626"
+    },
+    {
+      "path": "PACKAGE_REVIEW_RECEIPT.json",
+      "bytes": 40627,
+      "sha256": "e1860229e888c920aaeaa616a8a4cf0c0ac74035ef38d18a3e69dfeb6560f4e8"
+    },
+    {
+      "path": "NAVIGATION_LINKS.json",
+      "bytes": 4811,
+      "sha256": "002a78b8df92f0b5428d6c936f69f02aa1357b622c3c4e3782902fca936a3101"
+    },
+    {
+      "path": "replay_sources.py",
+      "bytes": 3806,
+      "sha256": "3a1db767c6c5f44aadbc9df3e13b8fcaca52bfd7a27735d34cefeb836380cddb"
+    },
+    {
+      "path": "validate_package.py",
+      "bytes": 6104,
+      "sha256": "5b9983d5c8eda3146f430daa59d85870d72a08903595e962d6cc0fffb6403ba5"
+    },
+    {
+      "path": "source_replay.stdout",
+      "bytes": 273,
+      "sha256": "8142218e77b9895435a82a8b6cc6b9f1e033463a1713134725468d3204d2158b"
+    },
+    {
+      "path": "package_review.stdout",
+      "bytes": 901,
+      "sha256": "3577cdf05e03ecba9519d330fe3d8a92e59261d9d0411ba6ce2cdd8de575a092"
+    },
+    {
+      "path": "composite_restore.stdout",
+      "bytes": 1915,
+      "sha256": "fe0ab2cc3a8411c168c98a19e9bfa479670de0f88343a6a631f6466820a01ed6"
+    },
+    {
+      "path": "composite_verify.stdout",
+      "bytes": 1914,
+      "sha256": "d00dc7e0cfbfdd04eaa5c50293b66e99587eba9c16e242a288463234414d4b60"
+    },
+    {
+      "path": "composite_verify.optimized.stdout",
+      "bytes": 1914,
+      "sha256": "d00dc7e0cfbfdd04eaa5c50293b66e99587eba9c16e242a288463234414d4b60"
+    }
+  ]
+}

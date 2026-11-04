@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "candidate": "CP03-credit-final",
+  "package_sha256": "010604e7f2c0054e2a0d3e735c594d821b4b3091a5e8a689dc37f21cbd6603e9",
+  "originals": 68,
+  "objects": 78,
+  "added_paths": [
+    "05-knowledge/results/session190_constructive_links_20261104/spectrum/INCOMING_CREDIT.md",
+    "05-knowledge/results/session190_constructive_links_20261104/spectrum/INCOMING_ROUTE_MATCH.json",
+    "05-knowledge/results/session190_constructive_links_20261104/spectrum/INCOMING_SPECTRUM_SOURCES.json",
+    "05-knowledge/results/session190_constructive_links_20261104/spectrum/check_incoming_credit.py"
+  ],
+  "changed_paths": [
+    "00-navigation/S190.md"
+  ],
+  "frozen_mathematical_originals_unchanged": 62,
+  "independently_fetched_incoming_commit": "9036e4dcb9e1016ec42c11802ca193e6a09e6f34",
+  "unique_common_relabeling": [
+    2,
+    1,
+    0,
+    3,
+    6,
+    4,
+    5
+  ],
+  "normal_optimized_credit_replay": true,
+  "inline_tree_test_sha256": "16e2248d4a2b117b1b3464bd3119c73287b1f714dba4fd5800a543d1b5c2e7a1"
+}
+--- CP03-original
++++ CP03-shared-credit
+@@ -42,6 +42,8 @@
+ 
+ The [spectrum proof](../05-knowledge/results/session190_constructive_links_20261104/spectrum/spectrum/PROOF.md) and [independent audit](../05-knowledge/results/session190_constructive_links_20261104/spectrum/spectrum_audit/REVIEW.md) give, for every k>=1, strong tournaments with Hamiltonian-path counts `29 + 157*2^k` and `31 + 157*2^k`. Four specified old arcs change while the physical root and exterior stay fixed; all three intermediate counts lie strictly below the lower endpoint. The exact wrapper identity is `H(W_k(T,r)) = H(T) + 2^k F_T(r)` for k>=1; the k=0 correction is retained separately.
+ 
++The pair and route are shared with incoming **opus-2026-11-04-S76** work, preserved before this checkpoint; the [explicit credit and exact rooted comparison](../05-knowledge/results/session190_constructive_links_20261104/spectrum/INCOMING_CREDIT.md) identify the same five physical tournaments under one relabeling. No Session190 priority claim is made. The incoming order-13/14 preregistration is not treated as completed work.
++
+ The seed comparison is checked across all 720 root-compatible relabelings and 120 shortest flip orders. Its minimum distance four and minimum maximum component order seven have their stated restricted meanings. The shared scalar F is not a full rooted response or general attachment-equivalence certificate. Two separate fixed-parent exclusions, at rooted profiles (191,1273) and (201,5303), retain the common-clock/fixed-parent hypothesis, complete finite extension cover, and sourced all-order cutoff. Clock-dependent parents, unequal clocks, arbitrary targets, repeatable successor operations, and global spectrum closure remain outside the result.
+ 
+ ## Narrow source repairs
+

@@ -1,0 +1,71 @@
+{
+  "direct_py": "Imported and exercised through producer verify.py in both modes; standalone exploratory main is not a release replay command.",
+  "runs": [
+    {
+      "expected": "squareports/session190-squareports/RESULTS.json",
+      "mode": "normal",
+      "output_bytes": 248772,
+      "sha256": "9c9b23281548bfcee9199c5ce1eab26e340f43ae0880911ab8107bd89a5e787c",
+      "status": "PASS",
+      "test": "squareports_transfer"
+    },
+    {
+      "expected": "squareports/session190-squareports/STRUCTURAL.json",
+      "mode": "normal",
+      "output_bytes": 617,
+      "sha256": "067d12b349fd5c5fdc18b9ab2baea9b0a1b9c45b13dfe902e9bc9dc1caa60fe7",
+      "status": "PASS",
+      "test": "squareports_structural"
+    },
+    {
+      "expected": "squareports/session190-squareports-audit/INDEPENDENT.normal.json",
+      "mode": "normal",
+      "output_bytes": 1533,
+      "sha256": "b81ecb0b578d00382459cd6cff690507464251e7c47aea4a94ab95532c7f7584",
+      "status": "PASS",
+      "test": "squareports_independent"
+    },
+    {
+      "expected": "cyclic/session190-cyclic/results.json",
+      "mode": "normal",
+      "output_bytes": 807,
+      "sha256": "ae570d9d7470d9fe39a79163ac12474acb44b57d7b158761020bbaf8b1655fdb",
+      "status": "PASS",
+      "test": "cyclic"
+    },
+    {
+      "expected": "squareports/session190-squareports/RESULTS.json",
+      "mode": "optimized",
+      "output_bytes": 248772,
+      "sha256": "9c9b23281548bfcee9199c5ce1eab26e340f43ae0880911ab8107bd89a5e787c",
+      "status": "PASS",
+      "test": "squareports_transfer"
+    },
+    {
+      "expected": "squareports/session190-squareports/STRUCTURAL.json",
+      "mode": "optimized",
+      "output_bytes": 617,
+      "sha256": "067d12b349fd5c5fdc18b9ab2baea9b0a1b9c45b13dfe902e9bc9dc1caa60fe7",
+      "status": "PASS",
+      "test": "squareports_structural"
+    },
+    {
+      "expected": "squareports/session190-squareports-audit/INDEPENDENT.normal.json",
+      "mode": "optimized",
+      "output_bytes": 1533,
+      "sha256": "b81ecb0b578d00382459cd6cff690507464251e7c47aea4a94ab95532c7f7584",
+      "status": "PASS",
+      "test": "squareports_independent"
+    },
+    {
+      "expected": "cyclic/session190-cyclic/results.json",
+      "mode": "optimized",
+      "output_bytes": 807,
+      "sha256": "ae570d9d7470d9fe39a79163ac12474acb44b57d7b158761020bbaf8b1655fdb",
+      "status": "PASS",
+      "test": "cyclic"
+    }
+  ],
+  "scope": "All CP4 canonical verification entry points replayed from restored package in a separate temporary copy.",
+  "status": "PASS"
+}

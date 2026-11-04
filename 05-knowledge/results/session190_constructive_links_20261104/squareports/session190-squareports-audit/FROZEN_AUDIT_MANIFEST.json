@@ -1,0 +1,26 @@
+{
+  "excluded": [
+    "session190-squareports/prototype.py",
+    "session190-squareports/explore.py",
+    "all __pycache__ files",
+    "session190-squareports-audit/REPLAY.*.json",
+    "session190-squareports-audit/STRUCTURAL.*.json"
+  ],
+  "files": {
+    "session190-squareports-audit/AUDIT.md": "fc56eb92d3590788a64e158b414ca4c83b3d5264697ded1af980f198653dc738",
+    "session190-squareports-audit/INDEPENDENT.normal.json": "b81ecb0b578d00382459cd6cff690507464251e7c47aea4a94ab95532c7f7584",
+    "session190-squareports-audit/INDEPENDENT.optimized.json": "b81ecb0b578d00382459cd6cff690507464251e7c47aea4a94ab95532c7f7584",
+    "session190-squareports-audit/independent_check.py": "d92ea3f34b56516c2bbdad21348bb361db7a408aa13c1cefa1e8e301c4cc424e",
+    "session190-squareports/FROZEN_MANIFEST.json": "a3d9b37e0bc6fcdc353b64934bbc27756bcae7f23b9219ff61cdf2f06c83b91f",
+    "session190-squareports/PROOF.md": "634fb598634282b8c17cad9a3c8ce117a2498d1c97fbcced04da2d9af1cd33ae",
+    "session190-squareports/README.md": "c4dfcef5a5ff8ee0402c44fb63264c64b44d138fca6eb0b097de0b4f645e01ba",
+    "session190-squareports/RESULTS.json": "9c9b23281548bfcee9199c5ce1eab26e340f43ae0880911ab8107bd89a5e787c",
+    "session190-squareports/RESULTS.optimized.json": "9c9b23281548bfcee9199c5ce1eab26e340f43ae0880911ab8107bd89a5e787c",
+    "session190-squareports/STRUCTURAL.json": "067d12b349fd5c5fdc18b9ab2baea9b0a1b9c45b13dfe902e9bc9dc1caa60fe7",
+    "session190-squareports/STRUCTURAL.optimized.json": "067d12b349fd5c5fdc18b9ab2baea9b0a1b9c45b13dfe902e9bc9dc1caa60fe7",
+    "session190-squareports/direct.py": "124d0f0e52d1b0f54ba86d504ceac6a90dbe56e29fdbdeeb59c2cde3a49caa11",
+    "session190-squareports/verify.py": "793778aadd99b8c93076af39729b2b97c3c4098ec38285d8fdc19888119c0266",
+    "session190-squareports/verify_structural.py": "23ce23adbaa0112ee58f13adc1fe1d45bb8f2a07fb140fdfc5b91c0625deaa5b"
+  },
+  "status": "PASS: frozen producer and independent audit publication allowlist"
+}

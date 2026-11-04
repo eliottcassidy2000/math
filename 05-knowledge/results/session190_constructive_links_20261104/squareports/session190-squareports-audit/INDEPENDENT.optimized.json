@@ -1,0 +1,57 @@
+{
+  "arbitrary_label_arrivals": 1099,
+  "deletion_commutation_cases": 4306,
+  "exhaustive_graphs_including_empty": 1100,
+  "finite_rows_25_to_30": [
+    {
+      "endpoint_extensions": 0,
+      "endpoint_pair_count": 10,
+      "n": 25,
+      "path_count": 10,
+      "two_component_joins": 10
+    },
+    {
+      "endpoint_extensions": 2,
+      "endpoint_pair_count": 9,
+      "n": 26,
+      "path_count": 12,
+      "two_component_joins": 10
+    },
+    {
+      "endpoint_extensions": 3,
+      "endpoint_pair_count": 16,
+      "n": 27,
+      "path_count": 35,
+      "two_component_joins": 32
+    },
+    {
+      "endpoint_extensions": 5,
+      "endpoint_pair_count": 19,
+      "n": 28,
+      "path_count": 52,
+      "two_component_joins": 47
+    },
+    {
+      "endpoint_extensions": 0,
+      "endpoint_pair_count": 15,
+      "n": 29,
+      "path_count": 19,
+      "two_component_joins": 19
+    },
+    {
+      "endpoint_extensions": 2,
+      "endpoint_pair_count": 15,
+      "n": 30,
+      "path_count": 20,
+      "two_component_joins": 18
+    }
+  ],
+  "four_port_queries_with_fifth_internal_vertex": 3072,
+  "frozen_manifest_sha256": "a3d9b37e0bc6fcdc353b64934bbc27756bcae7f23b9219ff61cdf2f06c83b91f",
+  "human_certificate": "Q25-3 path and eight Q26-3 adjacency lists; endpoints 18/22 force saturation at 7/23, leaving internal 2 only neighbor 14",
+  "independent_deletion_endpoint_matrices": 134,
+  "independent_square_endpoint_matrices": 30,
+  "singleton_and_cycle_controls": 3,
+  "status": "PASS",
+  "strict_horizon_witnesses": 10
+}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "checkpoint": "CP02",
+  "candidate": "/workspace/scratch/07d5532f2fce/session190-publish/CP02-final-v2/package.json",
+  "candidate_sha256": "e51395cedf5680034eafcff52efcb2e9ce00a57ef7627d4d8be287f784a22847",
+  "source_files": 60,
+  "frozen_math_files": 50,
+  "objects": 65,
+  "source_bytes": 3871514,
+  "stored_bytes": 478669,
+  "current_original_files_after_CP01_CP02": 70,
+  "archived_originals_restored": 10,
+  "superseded_admin_records": 4,
+  "tests": [
+    "exact frozen mathematical and administration allowlists",
+    "all original/part/stream hashes",
+    "independent lossless decompression",
+    "relative dependency layouts",
+    "composite ascending-manifest restore",
+    "verify-only no writes",
+    "idempotent restore",
+    "optimized verify-only",
+    "latest direct conflict refused without overwrite",
+    "corrupt chunk rejected",
+    "within-manifest duplicate rejected",
+    "path traversal rejected",
+    "unknown schema rejected",
+    "reverse checkpoint ordering fails safely",
+    "publication relative links resolve"
+  ],
+  "stage": "/workspace/scratch/07d5532f2fce/session190-packaging-audit/cp02_final_stage_szhv0y4e",
+  "restoration_output": "Verified 70 current original files; restored 10 files; superseded 4 earlier records.\nSuperseded 00-navigation/S190.md: /workspace/scratch/07d5532f2fce/session190-packaging-audit/cp02_final_stage_szhv0y4e/05-knowledge/results/session190_constructive_links_20261104/ARCHIVES_CP01.json -> /workspace/scratch/07d5532f2fce/session190-packaging-audit/cp02_final_stage_szhv0y4e/05-knowledge/results/session190_constructive_links_20261104/ARCHIVES_CP02.json\nSuperseded 05-knowledge/results/session190_constructive_links_20261104/RECEIPTS.md: /workspace/scratch/07d5532f2fce/session190-packaging-audit/cp02_final_stage_szhv0y4e/05-knowledge/results/session190_constructive_links_20261104/ARCHIVES_CP01.json -> /workspace/scratch/07d5532f2fce/session190-packaging-audit/cp02_final_stage_szhv0y4e/05-knowledge/results/session190_constructive_links_20261104/ARCHIVES_CP02.json\nSuperseded 05-knowledge/results/session190_constructive_links_20261104/RESTORE_ARCHIVES.py: /workspace/scratch/07d5532f2fce/session190-packaging-audit/cp02_final_stage_szhv0y4e/05-knowledge/results/session190_constructive_links_20261104/ARCHIVES_CP01.json -> /workspace/scratch/07d5532f2fce/session190-packaging-audit/cp02_final_stage_szhv0y4e/05-knowledge/results/session190_constructive_links_20261104/ARCHIVES_CP02.json\nSuperseded 05-knowledge/results/session190_constructive_links_20261104/paper_patch/REPRODUCTION.md: /workspace/scratch/07d5532f2fce/session190-packaging-audit/cp02_final_stage_szhv0y4e/05-knowledge/results/session190_constructive_links_20261104/ARCHIVES_CP01.json -> /workspace/scratch/07d5532f2fce/session190-packaging-audit/cp02_final_stage_szhv0y4e/05-knowledge/results/session190_constructive_links_20261104/ARCHIVES_CP02.json",
+  "portable_replay": {
+    "receipt": "CP02_PORTABLE_REPLAY.json",
+    "sha256": "c2bc979992a5fcecb5cc9acdc0ea1905ca9206401091bc3d7cd4b4f64f99dbce",
+    "tests": 15,
+    "all_frozen_math_files_still_exact": 50
+  }
+}

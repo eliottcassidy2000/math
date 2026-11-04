@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "candidate": "CP03-credit-final",
+  "package_sha256": "010604e7f2c0054e2a0d3e735c594d821b4b3091a5e8a689dc37f21cbd6603e9",
+  "originals": 68,
+  "objects": 78,
+  "added_paths": [
+    "05-knowledge/results/session190_constructive_links_20261104/spectrum/INCOMING_CREDIT.md",
+    "05-knowledge/results/session190_constructive_links_20261104/spectrum/INCOMING_ROUTE_MATCH.json",
+    "05-knowledge/results/session190_constructive_links_20261104/spectrum/INCOMING_SPECTRUM_SOURCES.json",
+    "05-knowledge/results/session190_constructive_links_20261104/spectrum/check_incoming_credit.py"
+  ],
+  "changed_paths": [
+    "00-navigation/S190.md"
+  ],
+  "frozen_mathematical_originals_unchanged": 62,
+  "independently_fetched_incoming_commit": "9036e4dcb9e1016ec42c11802ca193e6a09e6f34",
+  "unique_common_relabeling": [
+    2,
+    1,
+    0,
+    3,
+    6,
+    4,
+    5
+  ],
+  "normal_optimized_credit_replay": true,
+  "inline_tree_test_sha256": "16e2248d4a2b117b1b3464bd3119c73287b1f714dba4fd5800a543d1b5c2e7a1"
+}

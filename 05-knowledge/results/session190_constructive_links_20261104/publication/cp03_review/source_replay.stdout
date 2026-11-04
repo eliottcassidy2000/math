@@ -1,0 +1,9 @@
+PASS producer-spectrum
+PASS producer-census
+PASS independent-spectrum
+PASS independent-wrapper
+PASS independent-census
+PASS independent-binding
+PASS producer-interface
+PASS independent-interface
+PASS all isolated source-bound CP3 replays and final original-byte comparison

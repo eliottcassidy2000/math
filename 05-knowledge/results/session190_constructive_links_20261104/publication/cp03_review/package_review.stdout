@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checkpoint": "CP03",
+  "original_files": 64,
+  "stored_objects": 74,
+  "source_bytes": 2668296,
+  "stored_bytes": 740691,
+  "approved_source_count": 64,
+  "package_pins": {
+    "CP01-final": "92d6fc2d8d5ed6967e2cb647ca47a5a3684cdfdfaddf6077669841e9cecf7f7f",
+    "CP02-final-v2": "e51395cedf5680034eafcff52efcb2e9ce00a57ef7627d4d8be287f784a22847",
+    "CP03-candidate": "1d7dc7a9da557dbd45ca5bbfc987782f1bd208ffd7c579d3cf069bf72c4264ec"
+  },
+  "composite_current_original_count": 133,
+  "superseded_paths": [
+    "00-navigation/S190.md",
+    "05-knowledge/results/session190_constructive_links_20261104/RECEIPTS.md",
+    "05-knowledge/results/session190_constructive_links_20261104/RESTORE_ARCHIVES.py",
+    "05-knowledge/results/session190_constructive_links_20261104/paper_patch/REPRODUCTION.md",
+    "00-navigation/S190.md"
+  ],
+  "normal_optimized_restorer_equal": true
+}

@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "checked_relative_links": 16,
+  "links": [
+    {
+      "label": "constructive synthesis",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/paper_patch/attached_papers/constructive_paper_synthesis.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/attached_papers/constructive_paper_synthesis.md"
+    },
+    {
+      "label": "independent audit",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/paper_patch/session190-papers-audit/PATCH_AND_SOURCE_AUDIT.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/session190-papers-audit/PATCH_AND_SOURCE_AUDIT.md"
+    },
+    {
+      "label": "planar proof",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/planar/session190-planar/PROOF.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/planar/session190-planar/PROOF.md"
+    },
+    {
+      "label": "independent audit",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/planar/session190-planar-audit/PLANAR_INTERFACE_AUDIT.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/planar/session190-planar-audit/PLANAR_INTERFACE_AUDIT.md"
+    },
+    {
+      "label": "Walsh-coupling proof",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/bijection/session190-bijection/NOTE.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/bijection/session190-bijection/NOTE.md"
+    },
+    {
+      "label": "independent audit",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/bijection/session190-bijection-audit/AUDIT.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/bijection/session190-bijection-audit/AUDIT.md"
+    },
+    {
+      "label": "group-action proof",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/groups/session190-groups/PROOF.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/groups/session190-groups/PROOF.md"
+    },
+    {
+      "label": "independent audit",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/groups/session190-groups-audit/AUDIT.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/groups/session190-groups-audit/AUDIT.md"
+    },
+    {
+      "label": "interface-gadget proof",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/interface/session190-interface/PROOF.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/interface/session190-interface/PROOF.md"
+    },
+    {
+      "label": "independent audit",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/interface/session190-planar-parity-audit/AUDIT.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/interface/session190-planar-parity-audit/AUDIT.md"
+    },
+    {
+      "label": "spectrum proof",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/spectrum/spectrum/PROOF.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/spectrum/spectrum/PROOF.md"
+    },
+    {
+      "label": "independent audit",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/spectrum/spectrum_audit/REVIEW.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/spectrum/spectrum_audit/REVIEW.md"
+    },
+    {
+      "label": "source-issue note",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/paper_patch/attached_papers/source_issues_for_independent_review.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/attached_papers/source_issues_for_independent_review.md"
+    },
+    {
+      "label": "independent audit",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/paper_patch/session190-papers-audit/PATCH_AND_SOURCE_AUDIT.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/session190-papers-audit/PATCH_AND_SOURCE_AUDIT.md"
+    },
+    {
+      "label": "packet reproduction note",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/paper_patch/REPRODUCTION.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/paper_patch/REPRODUCTION.md"
+    },
+    {
+      "label": "lossless receipt instructions",
+      "url": "../05-knowledge/results/session190_constructive_links_20261104/RECEIPTS.md",
+      "resolved": "05-knowledge/results/session190_constructive_links_20261104/RECEIPTS.md"
+    }
+  ]
+}

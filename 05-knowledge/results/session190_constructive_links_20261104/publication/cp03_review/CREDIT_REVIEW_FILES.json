@@ -1,0 +1,51 @@
+{
+  "status": "CREDIT_REVISION_APPROVED_REMOTE_PENDING",
+  "package_sha256": "010604e7f2c0054e2a0d3e735c594d821b4b3091a5e8a689dc37f21cbd6603e9",
+  "publication_files": [
+    "CREDIT_DELTA_REVIEW.md",
+    "CREDIT_DELTA_RECEIPT.json",
+    "INDEPENDENT_INCOMING_READS.json",
+    "IDEMPOTENT_TREE_TEST.json",
+    "CREDIT_NAVIGATION_DELTA.txt",
+    "check_credit_delta.py",
+    "credit_delta.stdout",
+    "CREDIT_REVIEW_FILES.json"
+  ],
+  "files": [
+    {
+      "path": "CREDIT_DELTA_REVIEW.md",
+      "sha256": "50b2e0953c6855e1408c38b1f10b232f5353ee5da13aa47bfa2f976c0a2c78cc",
+      "bytes": 2616
+    },
+    {
+      "path": "CREDIT_DELTA_RECEIPT.json",
+      "sha256": "96ad976efb6fab2d06f3997e1dcad5d9aa05ba277c468301f6b6a31a5837ae83",
+      "bytes": 1025
+    },
+    {
+      "path": "INDEPENDENT_INCOMING_READS.json",
+      "sha256": "267f27785600cae9e53845ad4828400e253101d4c7efe0ea76352633dd4731f6",
+      "bytes": 5679
+    },
+    {
+      "path": "IDEMPOTENT_TREE_TEST.json",
+      "sha256": "16e2248d4a2b117b1b3464bd3119c73287b1f714dba4fd5800a543d1b5c2e7a1",
+      "bytes": 607
+    },
+    {
+      "path": "CREDIT_NAVIGATION_DELTA.txt",
+      "sha256": "4b81a0eb324c2f62dae9cbfea205b480ee31b87f75b9361cb12b7f190a7a1c2e",
+      "bytes": 1782
+    },
+    {
+      "path": "check_credit_delta.py",
+      "sha256": "9e9d11df668555581c8b98dc8a570c2493072839d6142971780f30337251c12d",
+      "bytes": 3907
+    },
+    {
+      "path": "credit_delta.stdout",
+      "sha256": "b36908ca7763ca6dd9a263b4cace5093071cc373e95312a26d3401be52f84629",
+      "bytes": 2808
+    }
+  ]
+}

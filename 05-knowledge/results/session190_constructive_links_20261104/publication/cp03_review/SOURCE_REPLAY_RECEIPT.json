@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "scope": "Source-bound isolated CP3 mathematical packet replays; publication bytes and immutable remote commit remain separately checked.",
+  "packets": [
+    {
+      "source": "session190-spectrum",
+      "manifest": "RELEASE_FILES.json",
+      "manifest_sha256": "8cdc1d0f46cc78aa616609f27de99f321b604d6d4557f122114cc4ae398ccc5e",
+      "destination": "spectrum/spectrum",
+      "files": 21
+    },
+    {
+      "source": "session190-spectrum-audit",
+      "manifest": "PUBLICATION_FILES.json",
+      "manifest_sha256": "b74f98385607e79bc4ee326bb4162cafcacc655a56a1b696efcb24c98534f7d5",
+      "destination": "spectrum/spectrum_audit",
+      "files": 28
+    },
+    {
+      "source": "session190-interface",
+      "manifest": "FROZEN_MANIFEST.json",
+      "manifest_sha256": "394bd565f2e5ee4c990de2658ca49e9b82a4ef559505dd62a4a4cf84482467a0",
+      "destination": "interface/session190-interface",
+      "files": 6
+    },
+    {
+      "source": "session190-planar-parity-audit",
+      "manifest": "FROZEN_MANIFEST.json",
+      "manifest_sha256": "c55bbe61f68bf7484e1cf301ce590cc15b9e4638f955eee0731861f6679239ac",
+      "destination": "interface/session190-planar-parity-audit",
+      "files": 7
+    }
+  ],
+  "original_file_count": 62,
+  "source_pins": {
+    "spectrum/spectrum/README.md": "0755aa922368b886ad85740e042e2c21ee0814c6270126a89958c4679f4597ba",
+    "spectrum/spectrum/PROOF.md": "d1e5debdf607c3eb83f8054c08f94ec1137ef0b4b17aac775973f878429d5479",
+    "spectrum/spectrum/SOURCES.json": "b0cd18a75203828ea1daa020c174bee8e4e5ca97191f87f64b75b328a135bdd0",
+    "spectrum/spectrum/verify.py": "dd719f1278355be303dfe64d573264f77506605d1c2a955a45130fc23b7ff99f",
+    "spectrum/spectrum/receipt.json": "6c6b503b574664229b0a89486b84d6d23e4ec7375aed62a53151369199d22fd9",
+    "spectrum/spectrum/normal.stdout": "333ae4b7e816a4d9051c19ab6026facb6538be723bad24d143e9f14ced59a662",
+    "spectrum/spectrum/optimized.stdout": "333ae4b7e816a4d9051c19ab6026facb6538be723bad24d143e9f14ced59a662",
+    "spectrum/spectrum/certify.cpp": "7b713f425a2092b42589e022f781e4436b0e2ef9bbfa1f9eb682d71b930aaefe",
+    "spectrum/spectrum/run_census.py": "633dc5c56c751942653eb5401a815a736278b2e1a7befdde76578b9efdf713de",
+    "spectrum/spectrum/census_receipt.json": "6da9746b180af9ff8514c4d80a6b85e476578510b47d174e93cd26bcbc920c7e",
+    "spectrum/spectrum/census.stdout": "77d89cb817d909b5c6109c7fdbbfa2d4e8396efa28461d69d622b681cd1ee413",
+    "spectrum/spectrum/bank8.json": "55409706be4f8c71f5e2b2cd0777c9c0f0f8de97eac4b174d648f50b638dc903",
+    "spectrum/spectrum/inherited_bank8_receipt.json": "1ea86e9908644d20727acb11b082073ace2aa655f75d5d31f0e1268a7c7507a0",
+    "spectrum/spectrum/inherited_bank8_review.md": "a482956aacc99d2c8506eed3ff0e4e7372ef7f21acf907fc34c50b01bca3c6dc",
+    "spectrum/spectrum/low9_bank.json": "911f0e6326843669cfaf8f0f166f108e7addb51f334fadd43ccd1f883ba200d5",
+    "spectrum/spectrum/small.out": "6e74e4f8350e3730b74d321041e83b40c99d3c46824e053c6468fd341a1ae70c",
+    "spectrum/spectrum/bank8.out": "7ae891dc0004ad96a6f8838ec89a067de624b160d2a8f522ac24cbf124cc52ac",
+    "spectrum/spectrum/extend8.out": "10e2857d0eb889ee362e9d392472e9fff95ac8a3e9983a3db24c486cb488a1a2",
+    "spectrum/spectrum/extend9.out": "0002f974c3d714af6a45c9e820932f958e7d480b0f052e4823790c541959fcc2",
+    "spectrum/spectrum/RELEASE_FILES.json": "8cdc1d0f46cc78aa616609f27de99f321b604d6d4557f122114cc4ae398ccc5e",
+    "spectrum/spectrum/SHA256SUMS": "eb8511b40a71993652aef4f288d9d0d7324ad8632ce60a6ed81aad6a542fa411",
+    "spectrum/spectrum_audit/README.md": "bbf58d55082f3d403857fc27cc7d473fb354433385fefcbcba5abeefb44d77ee",
+    "spectrum/spectrum_audit/REVIEW.md": "044b420c175a96d3b6519f28687dc434d6c2c071a1fa40a4f98ed468c2c6afe3",
+    "spectrum/spectrum_audit/independent_audit.py": "b432311a930b0785997cad2dc8e096825da82119f0d59bd864bfc18c435e59ba",
+    "spectrum/spectrum_audit/wrapper_audit.py": "c88acc889cfb455076202a7c0ab2580aea2d0f8bf5c194195041058f000a2ab1",
+    "spectrum/spectrum_audit/census_audit.py": "8d9720b812154fe419251c2d659a8f51f3324bbfb1118f3343c8f9d902ddc448",
+    "spectrum/spectrum_audit/independent_census.cpp": "e911f4a3e86ac70d43e37b2e106e287a0f84d3dc7400cff7a1289f45d00e0fc5",
+    "spectrum/spectrum_audit/bind_audit.py": "046c8d42abe2fe6b9e2f4be7bb7505822621a969825b381ba7e20afe7f8b79bb",
+    "spectrum/spectrum_audit/local_audit_results.json": "3c65f525d8381adaa462b640d574ad94258c159b62781473e1c73850fad6b3c5",
+    "spectrum/spectrum_audit/wrapper_audit_results.json": "128a103161822d1ac56c68cef4cf2b1b46fb3615c4a2c8d00ce379b937a17912",
+    "spectrum/spectrum_audit/census_audit_results.json": "1aba3d1e7fc0ad02115978ad90a659dfd27dc00f0719ab91443a50118ff8072d",
+    "spectrum/spectrum_audit/census_audit_normal.json": "1aba3d1e7fc0ad02115978ad90a659dfd27dc00f0719ab91443a50118ff8072d",
+    "spectrum/spectrum_audit/audit_receipt.json": "9f8e5933dcc61c5aac6d9fa3a92adef4c4b1a34a2852d10cf164ec356f217b2a",
+    "spectrum/spectrum_audit/inherited_cover8.json": "7af3e95ebe2c20d594f8e7623a10fa08682a4963e6a5d1b61b9600d56ea06175",
+    "spectrum/spectrum_audit/independent_low9_bank.json": "523a66ff198730bef2a56642cc3faefb88a5ca46ed332b78d3189286faf7acb9",
+    "spectrum/spectrum_audit/audit.stdout": "da9ad22c1f1c9dcee3a12cec9e028f0f4951ceb2ed22b3f48078dfc441561f78",
+    "spectrum/spectrum_audit/audit.optimized.stdout": "da9ad22c1f1c9dcee3a12cec9e028f0f4951ceb2ed22b3f48078dfc441561f78",
+    "spectrum/spectrum_audit/wrapper_audit.stdout": "128a103161822d1ac56c68cef4cf2b1b46fb3615c4a2c8d00ce379b937a17912",
+    "spectrum/spectrum_audit/wrapper_audit.optimized.stdout": "128a103161822d1ac56c68cef4cf2b1b46fb3615c4a2c8d00ce379b937a17912",
+    "spectrum/spectrum_audit/census_audit.stdout": "db82363936b7b71cbe7c033572ee20f600361674fce3c6743aebc3057a9ae672",
+    "spectrum/spectrum_audit/census_audit.optimized.stdout": "db82363936b7b71cbe7c033572ee20f600361674fce3c6743aebc3057a9ae672",
+    "spectrum/spectrum_audit/bind_audit.stdout": "19c20540e532f31cf6d6aa57306a1bdb19ee7614814545f573c76b65ff2e9c90",
+    "spectrum/spectrum_audit/bind_audit.optimized.stdout": "19c20540e532f31cf6d6aa57306a1bdb19ee7614814545f573c76b65ff2e9c90",
+    "spectrum/spectrum_audit/small.out": "6e74e4f8350e3730b74d321041e83b40c99d3c46824e053c6468fd341a1ae70c",
+    "spectrum/spectrum_audit/bank8.out": "7ae891dc0004ad96a6f8838ec89a067de624b160d2a8f522ac24cbf124cc52ac",
+    "spectrum/spectrum_audit/extend8.out": "10e2857d0eb889ee362e9d392472e9fff95ac8a3e9983a3db24c486cb488a1a2",
+    "spectrum/spectrum_audit/extend9.out": "0002f974c3d714af6a45c9e820932f958e7d480b0f052e4823790c541959fcc2",
+    "spectrum/spectrum_audit/PUBLICATION_FILES.json": "b74f98385607e79bc4ee326bb4162cafcacc655a56a1b696efcb24c98534f7d5",
+    "spectrum/spectrum_audit/SHA256SUMS": "c8eb758b6001ea47f1d699d7bb301f9cf6158f36f35814f6c54ede84483168a3",
+    "interface/session190-interface/PROOF.md": "f33466652c3d8a88b437185930da9034869e95327ba480c157d1360e4f3c7566",
+    "interface/session190-interface/README.md": "0fc1208fea19bcd0b209770460ec73d9005590b427102a1e8d90761da4886758",
+    "interface/session190-interface/RESULTS.json": "c8a3337459b6484ea61d6b99e6661be56824f45f06f1dedb8de344189b53164c",
+    "interface/session190-interface/RESULTS.optimized.json": "c8a3337459b6484ea61d6b99e6661be56824f45f06f1dedb8de344189b53164c",
+    "interface/session190-interface/verify.py": "1831f5eec0655ac178e024a654888893f65a152a3aa9342f9336d7d0b958e327",
+    "interface/session190-interface/FROZEN_MANIFEST.json": "394bd565f2e5ee4c990de2658ca49e9b82a4ef559505dd62a4a4cf84482467a0",
+    "interface/session190-planar-parity-audit/AUDIT.md": "771551748c60d2b95a9ea96599fd2ac63fdd4d2c56a8d8aa15dce1f4156430d5",
+    "interface/session190-planar-parity-audit/PRODUCER_REPLAY.json": "c8a3337459b6484ea61d6b99e6661be56824f45f06f1dedb8de344189b53164c",
+    "interface/session190-planar-parity-audit/PRODUCER_REPLAY.optimized.json": "c8a3337459b6484ea61d6b99e6661be56824f45f06f1dedb8de344189b53164c",
+    "interface/session190-planar-parity-audit/RESULTS.json": "3929723a3d410b0f14634ee808ad7eb3f77a3f31b7897cede6a401660c97d189",
+    "interface/session190-planar-parity-audit/RESULTS.optimized.json": "3929723a3d410b0f14634ee808ad7eb3f77a3f31b7897cede6a401660c97d189",
+    "interface/session190-planar-parity-audit/audit.py": "6affd3549996e067584746e48a90f288d3c58e43b6845998a21928930e4303e4",
+    "interface/session190-planar-parity-audit/FROZEN_MANIFEST.json": "c55bbe61f68bf7484e1cf301ce590cc15b9e4638f955eee0731861f6679239ac"
+  },
+  "checks": [
+    {
+      "label": "producer-spectrum",
+      "script": "spectrum/spectrum/verify.py",
+      "normal_optimized_equal": true,
+      "stdout_sha256": "333ae4b7e816a4d9051c19ab6026facb6538be723bad24d143e9f14ced59a662",
+      "reference": "normal.stdout"
+    },
+    {
+      "label": "producer-census",
+      "script": "spectrum/spectrum/run_census.py",
+      "normal_optimized_equal": true,
+      "stdout_sha256": "77d89cb817d909b5c6109c7fdbbfa2d4e8396efa28461d69d622b681cd1ee413",
+      "reference": "census.stdout"
+    },
+    {
+      "label": "independent-spectrum",
+      "script": "spectrum/spectrum_audit/independent_audit.py",
+      "normal_optimized_equal": true,
+      "stdout_sha256": "da9ad22c1f1c9dcee3a12cec9e028f0f4951ceb2ed22b3f48078dfc441561f78",
+      "reference": "audit.stdout"
+    },
+    {
+      "label": "independent-wrapper",
+      "script": "spectrum/spectrum_audit/wrapper_audit.py",
+      "normal_optimized_equal": true,
+      "stdout_sha256": "128a103161822d1ac56c68cef4cf2b1b46fb3615c4a2c8d00ce379b937a17912",
+      "reference": "wrapper_audit.stdout"
+    },
+    {
+      "label": "independent-census",
+      "script": "spectrum/spectrum_audit/census_audit.py",
+      "normal_optimized_equal": true,
+      "stdout_sha256": "db82363936b7b71cbe7c033572ee20f600361674fce3c6743aebc3057a9ae672",
+      "reference": "census_audit.stdout"
+    },
+    {
+      "label": "independent-binding",
+      "script": "spectrum/spectrum_audit/bind_audit.py",
+      "normal_optimized_equal": true,
+      "stdout_sha256": "19c20540e532f31cf6d6aa57306a1bdb19ee7614814545f573c76b65ff2e9c90",
+      "reference": "bind_audit.stdout"
+    },
+    {
+      "label": "producer-interface",
+      "script": "interface/session190-interface/verify.py",
+      "normal_optimized_equal": true,
+      "stdout_sha256": "c8a3337459b6484ea61d6b99e6661be56824f45f06f1dedb8de344189b53164c",
+      "reference": "RESULTS.json"
+    },
+    {
+      "label": "independent-interface",
+      "script": "interface/session190-planar-parity-audit/audit.py",
+      "normal_optimized_equal": true,
+      "stdout_sha256": "3929723a3d410b0f14634ee808ad7eb3f77a3f31b7897cede6a401660c97d189",
+      "reference": "RESULTS.json"
+    }
+  ]
+}

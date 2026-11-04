@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "scope": "Packaging/portable full replay; prior independent mathematical audits retained",
+  "tests": [
+    {
+      "test": "planar_verify",
+      "exit_code": 0
+    },
+    {
+      "test": "planar_verify_optimized",
+      "exit_code": 0
+    },
+    {
+      "test": "planar_independent_kernel",
+      "exit_code": 0
+    },
+    {
+      "test": "planar_stellation",
+      "exit_code": 0
+    },
+    {
+      "test": "planar_independent_planar_audit",
+      "exit_code": 0
+    },
+    {
+      "test": "bijection_check",
+      "exit_code": 0
+    },
+    {
+      "test": "bijection_check_optimized",
+      "exit_code": 0
+    },
+    {
+      "test": "bijection_path_complement",
+      "exit_code": 0
+    },
+    {
+      "test": "bijection_path_complement_optimized",
+      "exit_code": 0
+    },
+    {
+      "test": "bijection_audit",
+      "exit_code": 0
+    },
+    {
+      "test": "bijection_audit_optimized",
+      "exit_code": 0
+    },
+    {
+      "test": "groups_verify",
+      "exit_code": 0
+    },
+    {
+      "test": "groups_verify_optimized",
+      "exit_code": 0
+    },
+    {
+      "test": "groups_independent_check",
+      "exit_code": 0
+    },
+    {
+      "test": "groups_independent_check_optimized",
+      "exit_code": 0
+    }
+  ],
+  "all_frozen_math_files_still_exact": 50,
+  "seconds": 52.949,
+  "replay": "/workspace/scratch/07d5532f2fce/session190-packaging-audit/cp02_replay_pavdvc54"
+}
