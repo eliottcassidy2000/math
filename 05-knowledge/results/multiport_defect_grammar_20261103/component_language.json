@@ -1,0 +1,1343 @@
+{
+  "status": "FINITE_EXACT_COMPLETE_FIXED_MARGINAL_ATOM_LANGUAGE_ACCEPTANCE",
+  "alphabet": {
+    "T": "singleton with port bit0 or1",
+    "C": "directed triangle with0..3 ports"
+  },
+  "scope": "Ordered sums, nonempty terminal port set, common transitive prefix clock; no native or old-name transformation claim.",
+  "source": {
+    "f": 7,
+    "intercept": -5,
+    "word": [
+      [
+        "T",
+        1
+      ],
+      [
+        "T",
+        1
+      ],
+      [
+        "T",
+        1
+      ]
+    ]
+  },
+  "inverse": "For every c with3^c dividing f, decode f/3^c in radices2/4 with exactlyc radix4 positions and nonzero top digit.",
+  "independent_controls": {
+    "binary_domino_inverse": true,
+    "literal_seven_coordinate_signatures": 25,
+    "literal_full_attachment_counts_and_strongness": 50,
+    "final_C3_single_bit_boundary": true
+  },
+  "richer_atom_control": {
+    "rows": [
+      8,
+      1,
+      3,
+      6
+    ],
+    "h": 5,
+    "p": 32,
+    "one_port_marginals": [
+      7,
+      9,
+      6,
+      5
+    ],
+    "scope": "Known strong C4 breaks integral normalized atom ratios; no extended-language search performed."
+  },
+  "levels": [
+    {
+      "level": 0,
+      "f": 7,
+      "candidates": [
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ]
+          ],
+          "signature": [
+            1,
+            8,
+            7,
+            7,
+            6,
+            1,
+            1
+          ],
+          "intercept": -5,
+          "rows": [
+            6,
+            4,
+            0
+          ],
+          "ports": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "letters": "",
+          "intercept": -5,
+          "candidate_indices": [
+            0
+          ]
+        }
+      ],
+      "distinct_intercepts": [
+        -5
+      ]
+    },
+    {
+      "level": 1,
+      "f": 21,
+      "candidates": [
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              0
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              0
+            ],
+            [
+              "T",
+              1
+            ]
+          ],
+          "signature": [
+            1,
+            32,
+            21,
+            21,
+            12,
+            1,
+            1
+          ],
+          "intercept": -11,
+          "rows": [
+            30,
+            28,
+            24,
+            16,
+            0
+          ],
+          "ports": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "C",
+              1
+            ]
+          ],
+          "signature": [
+            3,
+            48,
+            21,
+            39,
+            16,
+            1,
+            3
+          ],
+          "intercept": -13,
+          "rows": [
+            30,
+            28,
+            8,
+            16,
+            4
+          ],
+          "ports": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "C",
+              3
+            ]
+          ],
+          "signature": [
+            3,
+            24,
+            21,
+            21,
+            18,
+            3,
+            3
+          ],
+          "intercept": -15,
+          "rows": [
+            14,
+            4,
+            8,
+            2
+          ],
+          "ports": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "word": [
+            [
+              "C",
+              3
+            ],
+            [
+              "T",
+              1
+            ]
+          ],
+          "signature": [
+            3,
+            24,
+            21,
+            21,
+            18,
+            3,
+            3
+          ],
+          "intercept": -15,
+          "rows": [
+            10,
+            12,
+            9,
+            0
+          ],
+          "ports": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "letters": "2",
+          "intercept": -13,
+          "candidate_indices": [
+            1
+          ]
+        },
+        {
+          "letters": "4",
+          "intercept": -11,
+          "candidate_indices": [
+            0
+          ]
+        }
+      ],
+      "distinct_intercepts": [
+        -15,
+        -13,
+        -11
+      ]
+    },
+    {
+      "level": 2,
+      "f": 63,
+      "candidates": [
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ]
+          ],
+          "signature": [
+            1,
+            64,
+            63,
+            63,
+            62,
+            1,
+            1
+          ],
+          "intercept": -61,
+          "rows": [
+            62,
+            60,
+            56,
+            48,
+            32,
+            0
+          ],
+          "ports": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              0
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              0
+            ],
+            [
+              "C",
+              1
+            ]
+          ],
+          "signature": [
+            3,
+            192,
+            63,
+            123,
+            36,
+            1,
+            3
+          ],
+          "intercept": -33,
+          "rows": [
+            126,
+            124,
+            120,
+            112,
+            32,
+            64,
+            16
+          ],
+          "ports": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              0
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "C",
+              2
+            ]
+          ],
+          "signature": [
+            3,
+            96,
+            63,
+            66,
+            40,
+            2,
+            3
+          ],
+          "intercept": -37,
+          "rows": [
+            62,
+            60,
+            56,
+            16,
+            32,
+            8
+          ],
+          "ports": [
+            0,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              0
+            ],
+            [
+              "C",
+              1
+            ],
+            [
+              "T",
+              1
+            ]
+          ],
+          "signature": [
+            3,
+            96,
+            63,
+            57,
+            34,
+            3,
+            3
+          ],
+          "intercept": -31,
+          "rows": [
+            62,
+            60,
+            40,
+            48,
+            36,
+            0
+          ],
+          "ports": [
+            0,
+            2,
+            5
+          ]
+        },
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "C",
+              2
+            ],
+            [
+              "T",
+              0
+            ],
+            [
+              "T",
+              1
+            ]
+          ],
+          "signature": [
+            3,
+            96,
+            63,
+            75,
+            46,
+            3,
+            3
+          ],
+          "intercept": -43,
+          "rows": [
+            62,
+            52,
+            56,
+            50,
+            32,
+            0
+          ],
+          "ports": [
+            0,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "word": [
+            [
+              "C",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              0
+            ],
+            [
+              "T",
+              1
+            ]
+          ],
+          "signature": [
+            3,
+            96,
+            63,
+            39,
+            22,
+            3,
+            1
+          ],
+          "intercept": -19,
+          "rows": [
+            58,
+            60,
+            57,
+            48,
+            32,
+            0
+          ],
+          "ports": [
+            0,
+            3,
+            5
+          ]
+        },
+        {
+          "word": [
+            [
+              "C",
+              3
+            ],
+            [
+              "C",
+              1
+            ]
+          ],
+          "signature": [
+            9,
+            144,
+            63,
+            117,
+            48,
+            3,
+            9
+          ],
+          "intercept": -39,
+          "rows": [
+            58,
+            60,
+            57,
+            16,
+            32,
+            8
+          ],
+          "ports": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "letters": "22",
+          "intercept": -37,
+          "candidate_indices": [
+            2
+          ]
+        },
+        {
+          "letters": "24",
+          "intercept": -35,
+          "candidate_indices": []
+        },
+        {
+          "letters": "42",
+          "intercept": -31,
+          "candidate_indices": [
+            3
+          ]
+        },
+        {
+          "letters": "44",
+          "intercept": -29,
+          "candidate_indices": []
+        }
+      ],
+      "distinct_intercepts": [
+        -61,
+        -43,
+        -39,
+        -37,
+        -33,
+        -31,
+        -19
+      ]
+    },
+    {
+      "level": 3,
+      "f": 189,
+      "candidates": [
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              0
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              0
+            ],
+            [
+              "T",
+              1
+            ]
+          ],
+          "signature": [
+            1,
+            256,
+            189,
+            189,
+            138,
+            1,
+            1
+          ],
+          "intercept": -137,
+          "rows": [
+            254,
+            252,
+            248,
+            240,
+            224,
+            192,
+            128,
+            0
+          ],
+          "ports": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "C",
+              1
+            ]
+          ],
+          "signature": [
+            3,
+            384,
+            189,
+            375,
+            184,
+            1,
+            3
+          ],
+          "intercept": -181,
+          "rows": [
+            254,
+            252,
+            248,
+            240,
+            224,
+            64,
+            128,
+            32
+          ],
+          "ports": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "C",
+              3
+            ]
+          ],
+          "signature": [
+            3,
+            192,
+            189,
+            189,
+            186,
+            3,
+            3
+          ],
+          "intercept": -183,
+          "rows": [
+            126,
+            124,
+            120,
+            112,
+            32,
+            64,
+            16
+          ],
+          "ports": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "C",
+              3
+            ],
+            [
+              "T",
+              1
+            ]
+          ],
+          "signature": [
+            3,
+            192,
+            189,
+            189,
+            186,
+            3,
+            3
+          ],
+          "intercept": -183,
+          "rows": [
+            126,
+            124,
+            120,
+            80,
+            96,
+            72,
+            0
+          ],
+          "ports": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "C",
+              3
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ]
+          ],
+          "signature": [
+            3,
+            192,
+            189,
+            189,
+            186,
+            3,
+            3
+          ],
+          "intercept": -183,
+          "rows": [
+            126,
+            124,
+            104,
+            112,
+            100,
+            64,
+            0
+          ],
+          "ports": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "C",
+              3
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ]
+          ],
+          "signature": [
+            3,
+            192,
+            189,
+            189,
+            186,
+            3,
+            3
+          ],
+          "intercept": -183,
+          "rows": [
+            126,
+            116,
+            120,
+            114,
+            96,
+            64,
+            0
+          ],
+          "ports": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "word": [
+            [
+              "C",
+              3
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              1
+            ]
+          ],
+          "signature": [
+            3,
+            192,
+            189,
+            189,
+            186,
+            3,
+            3
+          ],
+          "intercept": -183,
+          "rows": [
+            122,
+            124,
+            121,
+            112,
+            96,
+            64,
+            0
+          ],
+          "ports": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              0
+            ],
+            [
+              "C",
+              1
+            ],
+            [
+              "C",
+              1
+            ]
+          ],
+          "signature": [
+            9,
+            576,
+            189,
+            333,
+            100,
+            3,
+            9
+          ],
+          "intercept": -91,
+          "rows": [
+            254,
+            252,
+            232,
+            240,
+            228,
+            64,
+            128,
+            32
+          ],
+          "ports": [
+            0,
+            2,
+            5
+          ]
+        },
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "C",
+              2
+            ],
+            [
+              "T",
+              0
+            ],
+            [
+              "C",
+              1
+            ]
+          ],
+          "signature": [
+            9,
+            576,
+            189,
+            441,
+            138,
+            3,
+            9
+          ],
+          "intercept": -129,
+          "rows": [
+            254,
+            244,
+            248,
+            242,
+            224,
+            64,
+            128,
+            32
+          ],
+          "ports": [
+            0,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "word": [
+            [
+              "T",
+              1
+            ],
+            [
+              "C",
+              2
+            ],
+            [
+              "C",
+              2
+            ]
+          ],
+          "signature": [
+            9,
+            288,
+            189,
+            234,
+            148,
+            6,
+            9
+          ],
+          "intercept": -139,
+          "rows": [
+            126,
+            116,
+            120,
+            114,
+            32,
+            64,
+            16
+          ],
+          "ports": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ]
+        },
+        {
+          "word": [
+            [
+              "C",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "T",
+              0
+            ],
+            [
+              "C",
+              1
+            ]
+          ],
+          "signature": [
+            9,
+            576,
+            189,
+            225,
+            66,
+            3,
+            3
+          ],
+          "intercept": -57,
+          "rows": [
+            250,
+            252,
+            249,
+            240,
+            224,
+            64,
+            128,
+            32
+          ],
+          "ports": [
+            0,
+            3,
+            5
+          ]
+        },
+        {
+          "word": [
+            [
+              "C",
+              1
+            ],
+            [
+              "T",
+              1
+            ],
+            [
+              "C",
+              2
+            ]
+          ],
+          "signature": [
+            9,
+            288,
+            189,
+            126,
+            78,
+            6,
+            3
+          ],
+          "intercept": -69,
+          "rows": [
+            122,
+            124,
+            121,
+            112,
+            32,
+            64,
+            16
+          ],
+          "ports": [
+            0,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "word": [
+            [
+              "C",
+              1
+            ],
+            [
+              "C",
+              1
+            ],
+            [
+              "T",
+              1
+            ]
+          ],
+          "signature": [
+            9,
+            288,
+            189,
+            99,
+            58,
+            9,
+            3
+          ],
+          "intercept": -49,
+          "rows": [
+            122,
+            124,
+            121,
+            80,
+            96,
+            72,
+            0
+          ],
+          "ports": [
+            0,
+            3,
+            6
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "letters": "222",
+          "intercept": -109,
+          "candidate_indices": []
+        },
+        {
+          "letters": "224",
+          "intercept": -107,
+          "candidate_indices": []
+        },
+        {
+          "letters": "242",
+          "intercept": -103,
+          "candidate_indices": []
+        },
+        {
+          "letters": "244",
+          "intercept": -101,
+          "candidate_indices": []
+        },
+        {
+          "letters": "422",
+          "intercept": -91,
+          "candidate_indices": [
+            7
+          ]
+        },
+        {
+          "letters": "424",
+          "intercept": -89,
+          "candidate_indices": []
+        },
+        {
+          "letters": "442",
+          "intercept": -85,
+          "candidate_indices": []
+        },
+        {
+          "letters": "444",
+          "intercept": -83,
+          "candidate_indices": []
+        }
+      ],
+      "distinct_intercepts": [
+        -183,
+        -181,
+        -139,
+        -137,
+        -129,
+        -91,
+        -69,
+        -57,
+        -49
+      ]
+    }
+  ],
+  "reproduction": [
+    "python 05-knowledge/results/multiport_defect_grammar_20261103/check_component_language.py",
+    "python -O 05-knowledge/results/multiport_defect_grammar_20261103/check_component_language.py"
+  ],
+  "guards": "Explicit RuntimeError checks; no Python assertions."
+}

@@ -164,6 +164,16 @@ Thus both digits cannot stay in those transitive charts. The new +2 output
 leaves that class in the smallest possible strong component. This is a
 proved boundary for that operation language, not an unrestricted obstruction.
 
+The [singleton/triangle component inverse](COMPONENT_LANGUAGE.md) then tests
+the first larger candidate language completely, with no arbitrary word-length
+cutoff. It accepts both first digits, only 22 and 42 at level two, and only
+422 at level three, at the common prefix clock. The missing second-level
+intercepts cannot be supplied by any word in that atom language. These are
+typed acceptance results, not physical return programs or globally forbidden
+Hamilton counts. The next concrete extension is the full port bank of the
+strong four-vertex atom, whose response ratios break the integral mixed-radix
+restriction behind this exact inverse.
+
 ## 5. Global coverage has an exact arithmetic target
 
 [coverage](coverage/COVERAGE.md) separates source-compatible construction from
@@ -204,8 +214,10 @@ extra guards remain. No numerical coincidence is used as a theorem transfer.
 Incoming Session181 independently supplies the unbounded attachment
 `M(A;B,W)` with outer defect `H(A) J_W`, and a distinct 17-vertex +4 example
 whose outer defect is 3690. Concurrent component-reader work supplies three
-finite branching rounds with a complete word inverse, but its unbounded
-target-acceptance lemma is open. These are complementary interfaces; equal
+finite branching rounds with a complete word inverse. The final incoming
+checkpoint refutes unlimited closure of its fixed 219-key bank at 13835447,
+then repairs that actual miss by seed enlargement. Acceptance for a growing
+recursive selector remains open. These are complementary interfaces; equal
 H values do not permit identifying their named sources.
 
 The later [Session182 integration](INCOMING.md) adds actual continuations of

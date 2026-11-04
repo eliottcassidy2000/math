@@ -31,7 +31,8 @@ either of these unrelated equal-H states.
 uses an eight-coordinate retained-mark binary reader and219 actual seed keys.
 Its inverse is complete over all word lengths within each chosen seed family.
 It constructs three full +2/+4 branching rounds from170807 with exact named
-programs. Its unrestricted target-acceptance statement remains open.
+programs. At that checkpoint unrestricted target acceptance was open; the
+later fixed-bank counterexample below supersedes that status for 219 keys.
 
 An unbounded word constructor is not a finite bank of fixed suffix clocks.
 It is likewise not limited by the counting bound for the subset of outputs
@@ -89,6 +90,31 @@ eventual affine ternary recurrence in that model must have digit congruent
 to 2 modulo 4, excluding persistent +4. Changing the module or its external
 incidences lies outside that theorem, as does our two-birth auxiliary
 transport. No unrestricted recurrence obstruction is inferred.
+
+## Final incoming correction: the fixed reader bank fails
+
+Commit `0a463a024f` supplies a decisive
+[recursive-seed result](../recursive_seed_switching_20261103/README.md).
+The fixed 219-key reader bank misses 13835447, the fourth all-+2 descendant
+of 170807, at every reader length and prefix clock. Its unlimited closure
+is therefore **REFUTED**. The previously certified three rounds remain
+valid; the missing count is not a forbidden tournament count.
+
+An actual seed enlargement repairs that miss, and the following two targets
+return to the old bank, with named native certificates. Thus the surviving
+target is a growing recursive selector, not restoration of the same fixed
+bank's claimed acceptance. Its Hilbert/Gray construction retains named
+boundary data and supplies a physical mark reset that absorbs the old reader
+into the seed. That reset leaves the arithmetic target equation unpaid.
+This is consistent with the present polynomial carrier: exact evaluation
+and a legal state change are different obligations from target acceptance.
+
+The same fetch includes the [four-endpoint tensor integration](../two_port_seven_core_20261103/INCOMING.md)
+at `8864e989af`. Its ordered three-path tensor is an exact readout of our
+three-component forest layer, with paired middle endpoints and no factorial
+multiplier. This connects the growing return carrier to the separate
+tournament-reconstruction query language. It supplies neither recovery of
+the whole forest from scalar queries nor reversible forgetting.
 
 The surviving shared lesson is operational and now explicit. The polynomial
 grammar retains joint components; the strong tripler transports its entry

@@ -45,6 +45,12 @@ the global Hamiltonian-path spectrum.
   link. Normal and optimized receipts agree. Independent permutation
   controls in the construction bridge distinguish the equal-count graphs
   and check the remaining exceptional clock in its C2-entry obstruction.
+- **Component language:** two independent inverse implementations and an
+  all-order word-count formula agree. Literal DP checks all seven fields
+  on every one of the 25 relevant atom words and full attachments at two
+  clocks. Normal and optimized runs agree. The missing targets are excluded
+  in the declared singleton/triangle language at the common clock, not in
+  arbitrary tournaments or under arbitrary clock changes.
 
 All scripts include explicit source universes and reproduction commands in
 their accompanying notes. The documentation checker passes. Incoming
