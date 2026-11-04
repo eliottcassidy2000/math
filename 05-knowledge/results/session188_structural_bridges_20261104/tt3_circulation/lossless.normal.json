@@ -1,0 +1,204 @@
+{
+  "checker_sha256": "9a037f2596b63ebba65000cfc934c94c40be9f74b6f28bfddba343cd90c06fe7",
+  "complete_outputs": [
+    {
+      "bytes": 8313817,
+      "file": "normal.json",
+      "group": 0,
+      "sha256": "318ef31b357ff02a70fa593e459e05e1d9fae391b2aee652e1c85e0cc9daf601"
+    },
+    {
+      "bytes": 8313817,
+      "file": "optimized.json",
+      "group": 0,
+      "sha256": "318ef31b357ff02a70fa593e459e05e1d9fae391b2aee652e1c85e0cc9daf601"
+    }
+  ],
+  "complete_raw_bytes": 16627634,
+  "groups": 1,
+  "isolated_controls": [
+    {
+      "mode": "fresh",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "fresh",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": true,
+      "passed": true
+    }
+  ],
+  "package": "tt3_circulation",
+  "package_sha256": {
+    "REASSEMBLY.json": "2977c449e1bd51f0525bfb1cb6b867b2162a5704f6494b8b6766b9323a4684b7",
+    "REASSEMBLY.md": "5cbfcbcae814535d5c43f9246163c32f12cabac88059a60d1824667d4d05253a",
+    "full_records_00.json.gz.b64.part000": "6b4e66f92621d05b4c8707123672b02cdecc377432fd7523eb8449a7116e6adb",
+    "full_records_00.json.gz.b64.part001": "999a254fb38fc63799bc205aab37340ab50adc250714cc07dfa0780b31ccdd6a",
+    "full_records_00.json.gz.b64.part002": "880d8ac040b69942414f1378b955820ef0ccb44fd5b504d73b68b859b05331e6",
+    "full_records_00.json.gz.b64.part003": "8bc82914d895fc7fcb88409fc429636ee0083a4e492197b0aacf196acff0e6c2",
+    "full_records_00.json.gz.b64.part004": "7fbd6bff4ea8a714c62f3879b4c548c8cb25ae402415610837c068a6be06f109",
+    "full_records_00.json.gz.b64.part005": "96e237193200118a81066fa735378cc81c4f935467baa7c96160c886c1e400ef",
+    "full_records_00.json.gz.b64.part006": "83d31ad4bb79b781d252860352f5e18cd33b2b39abb400adc6fc490925f634ce",
+    "full_records_00.json.gz.b64.part007": "f94f326408863ccbb6ab3a8159a4fa11143610ac0bd00978578c6891a81df2ba",
+    "full_records_00.json.gz.b64.part008": "4237c50efa34ac0eaf6682fd303ad95938c3121123e6e96e55485197dec488a2",
+    "full_records_00.json.gz.b64.part009": "d09558b1b7121ce85063c4204f6c79325a7c03747668d5fc6352db322e58feba",
+    "full_records_00.json.gz.b64.part010": "f8fe8dfd361a6043f0ada23e07795d55ee7803c8ee486ec7c21a56ebd94b4327",
+    "reassemble.py": "aaaf20361cf6157c1e0423a769b66144a0414ed02a4e8d28b989035a3320d5c2"
+  },
+  "parts": 11,
+  "reassembler_normalized_ast_sha256": "3f640f8fd33dec4ce19c1d81e92f03c21bbac47452af6382f5cb942c5ee88d14",
+  "status": "PASS",
+  "validated_existing_manifests": [
+    {
+      "file": "PROOF.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "df1900581da0ac6755884fd45f64f13d049ab903a0202062e69294f3911807ec"
+    },
+    {
+      "file": "README.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "60126241f3dd3c2cc2cf4efea15c04d23b5a0990dbb1f3c15be74552db98947c"
+    },
+    {
+      "file": "verify.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "4db45f5d111c47fd655852035a9977d8ba949ce368b5aabd3c4e037dd772dc43"
+    },
+    {
+      "file": "positive.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "34b15db6cd33f4e560c536435784c999b68c26a1358676e823021dd07fbed2c6"
+    },
+    {
+      "file": "kernel.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "fee93b1c320dc985b6596ab915df87458bd5c4586cad242dd6037f6aa4177739"
+    },
+    {
+      "file": "count.cpp",
+      "manifest": "SHA256SUMS",
+      "sha256": "4f34e4aede4e9a14564f61f47fd609ae1324ee009dece48f36e4abc1eb227a5f"
+    },
+    {
+      "file": "normal.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "318ef31b357ff02a70fa593e459e05e1d9fae391b2aee652e1c85e0cc9daf601"
+    },
+    {
+      "file": "optimized.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "318ef31b357ff02a70fa593e459e05e1d9fae391b2aee652e1c85e0cc9daf601"
+    }
+  ],
+  "validated_mathematical_receipt_pins": {
+    "aggregated_cyclic_module/PROOF.md": "6d8f97683f87f37d7397c0bab26efd68d60aa6bf85adedba58c9df5c85000e42",
+    "cyclic_child_disjoint/PROOF.md": "2c625e1a7c7cff166813d7f7243220b160fe04c3f32418e75bb07f267d9fb1be",
+    "ordered_cyclic_module/PROOF.md": "d528ad7a713b16bb88971466bf1d7ba1f4e2260a1efe7abeafb790ddbcea01cf",
+    "quartic_cover_transfer/PROOF.md": "96cd57ec00afaf00db8577c73379cb8e7e3db493eb6b5329da01a8be8a5eefc3",
+    "tt3_circulation/PROOF.md": "df1900581da0ac6755884fd45f64f13d049ab903a0202062e69294f3911807ec",
+    "tt3_circulation/count.cpp": "4f34e4aede4e9a14564f61f47fd609ae1324ee009dece48f36e4abc1eb227a5f",
+    "tt3_circulation/kernel.py": "fee93b1c320dc985b6596ab915df87458bd5c4586cad242dd6037f6aa4177739",
+    "tt3_circulation/positive.py": "34b15db6cd33f4e560c536435784c999b68c26a1358676e823021dd07fbed2c6",
+    "tt3_circulation/verify.py": "4db45f5d111c47fd655852035a9977d8ba949ce368b5aabd3c4e037dd772dc43"
+  }
+}
