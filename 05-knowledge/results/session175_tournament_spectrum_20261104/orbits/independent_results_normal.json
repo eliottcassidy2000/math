@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "companion_sha256": "1a37aa21e66f820473b14f38c544c021642b8a7436d3e970588cfb8565a0f63a",
+  "python": "3.12.14",
+  "small_range": [
+    0,
+    30
+  ],
+  "signed_permutation_range": [
+    0,
+    7
+  ],
+  "projective_equivalence_checks": 600,
+  "benchmarks": [
+    {
+      "n": 50,
+      "reverse_seconds": 0.007004970000707544,
+      "reverse_projective_seconds": 0.007433323000441305,
+      "packed_projective_seconds": 0.003122837995761074,
+      "reverse_cache": {
+        "hits": 1648,
+        "misses": 870,
+        "maxsize": null,
+        "currsize": 870
+      },
+      "reverse_projective_cache": {
+        "hits": 1622,
+        "misses": 648,
+        "maxsize": null,
+        "currsize": 648
+      },
+      "packed_stats": {
+        "peak_states": 187,
+        "transitions": 2684,
+        "negative_shifts": 476,
+        "precomputed_transfers": 1169
+      },
+      "bits": 1011,
+      "decimal_sha256": "068b12b4e214ca8ad582482116db6922e90e3d4a333c55dd677a435dd8127be1"
+    },
+    {
+      "n": 100,
+      "reverse_seconds": 0.16518146599992178,
+      "reverse_projective_seconds": 0.14291979400150012,
+      "packed_projective_seconds": 0.04444014398904983,
+      "reverse_cache": {
+        "hits": 43473,
+        "misses": 13010,
+        "maxsize": null,
+        "currsize": 13010
+      },
+      "reverse_projective_cache": {
+        "hits": 34771,
+        "misses": 10547,
+        "maxsize": null,
+        "currsize": 10547
+      },
+      "packed_stats": {
+        "peak_states": 2721,
+        "transitions": 49946,
+        "negative_shifts": 14292,
+        "precomputed_transfers": 6254
+      },
+      "bits": 4426,
+      "decimal_sha256": "1d290d31b74fb08a9e73a6de3e842fc4a1d5bca8c1657107e7f14c0a0471e9c4"
+    },
+    {
+      "n": 150,
+      "reverse_seconds": 1.6019874069897924,
+      "reverse_projective_seconds": 1.5320771260012407,
+      "packed_projective_seconds": 0.47144787399156485,
+      "reverse_cache": {
+        "hits": 373171,
+        "misses": 100041,
+        "maxsize": null,
+        "currsize": 100041
+      },
+      "reverse_projective_cache": {
+        "hits": 292713,
+        "misses": 86546,
+        "maxsize": null,
+        "currsize": 86546
+      },
+      "packed_stats": {
+        "peak_states": 18207,
+        "transitions": 408188,
+        "negative_shifts": 150167,
+        "precomputed_transfers": 16244
+      },
+      "bits": 10303,
+      "decimal_sha256": "94537f9062d8bbfe950982ef2b124bca66407c5d89c26ef925e02d7795b0314c"
+    },
+    {
+      "n": 200,
+      "reverse_seconds": 10.30053184099961,
+      "reverse_projective_seconds": 10.980546858001617,
+      "packed_projective_seconds": 3.0034427780046826,
+      "reverse_cache": {
+        "hits": 2065633,
+        "misses": 550134,
+        "maxsize": null,
+        "currsize": 550134
+      },
+      "reverse_projective_cache": {
+        "hits": 1669340,
+        "misses": 495656,
+        "maxsize": null,
+        "currsize": 495656
+      },
+      "packed_stats": {
+        "peak_states": 95709,
+        "transitions": 2303050,
+        "negative_shifts": 992759,
+        "precomputed_transfers": 31669
+      },
+      "bits": 18655,
+      "decimal_sha256": "f3b799a195877c94345f682c46fb0a70435c709002e80c6e7198fedde662013d"
+    }
+  ]
+}
