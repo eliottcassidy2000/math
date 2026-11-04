@@ -1,0 +1,49 @@
+{
+  "cases": 4187,
+  "hits": 29,
+  "pair_targets": 0,
+  "suffixes_evaluated": 4187,
+  "meaning": "Every suffix considered; port set must meet terminal SCC, so full attachment is strong",
+  "extra_nonstrong_suffix_hits": [
+    {
+      "a": 86,
+      "b": -1,
+      "W": 6791,
+      "s": 2,
+      "h": 10987,
+      "J": 325434,
+      "F": 462931,
+      "target": 1537277
+    },
+    {
+      "a": 11,
+      "b": 85,
+      "W": 2356,
+      "s": 1,
+      "h": 8415,
+      "J": 87914,
+      "F": 808388,
+      "target": 1537277
+    },
+    {
+      "a": 37,
+      "b": 86,
+      "W": 6791,
+      "s": 2,
+      "h": 10987,
+      "J": 325434,
+      "F": 462931,
+      "target": 1537277
+    },
+    {
+      "a": 85,
+      "b": 88,
+      "W": 3719,
+      "s": 2,
+      "h": 10987,
+      "J": 325434,
+      "F": 462931,
+      "target": 1537277
+    }
+  ]
+}

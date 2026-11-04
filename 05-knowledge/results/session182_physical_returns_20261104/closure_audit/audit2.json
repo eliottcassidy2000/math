@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "source_H": 512425,
+  "target_H": 1537277,
+  "h": 80637,
+  "F": 182080,
+  "J": 0,
+  "root_E2": 1537277,
+  "root_defect": 0,
+  "strong": true,
+  "physical_inports": [
+    21
+  ],
+  "old_names_preserved": true,
+  "changed_pairs": [
+    [
+      2,
+      6
+    ],
+    [
+      4,
+      39
+    ],
+    [
+      31,
+      40
+    ]
+  ],
+  "candidate_sha256": "9b0d41264dcb1efa2cb7944fdf3c7242619a3af26d72ff457dad288bde80fc16",
+  "native_compilation": "independently replayed in native_audit.py"
+}

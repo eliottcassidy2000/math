@@ -1,0 +1,7164 @@
+{
+  "scope": "Recomputed named endpoint fields and observer codecs; not native legality or field actions as automorphisms. Independent of discovery counts, using inherited S180 endpoint DP and codec.",
+  "codec_source_ref": "4ad839b20dd280cdcfbadf86cb62b2be3c9615ad",
+  "historical_codec_controls": 4,
+  "field_modulus": [
+    1,
+    0,
+    1,
+    1
+  ],
+  "states": [
+    {
+      "file": "source.json",
+      "H": 512425,
+      "fields_order": [
+        "E1",
+        "S1",
+        "deletion_H",
+        "E2",
+        "S2"
+      ],
+      "root_defect": 3690,
+      "in_ports": [
+        4,
+        21
+      ],
+      "ports": [
+        {
+          "physical_name": 1,
+          "fields": [
+            5644,
+            16870,
+            150507,
+            2200118,
+            6744638
+          ],
+          "golden": [
+            512425,
+            3369497,
+            3375141
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              5,
+              0
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                5,
+                0
+              ],
+              [
+                3,
+                3,
+                1
+              ],
+              [
+                0,
+                6,
+                6
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              0,
+              0,
+              4
+            ],
+            "F49_frobenius": [
+              0,
+              0,
+              4
+            ]
+          }
+        },
+        {
+          "physical_name": 2,
+          "fields": [
+            40343,
+            3040,
+            227663,
+            10507390,
+            1848163
+          ],
+          "golden": [
+            512425,
+            903910,
+            944253
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              0,
+              2
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                0,
+                2
+              ],
+              [
+                2,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                4
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              1,
+              2,
+              2
+            ],
+            "F49_frobenius": [
+              2,
+              5,
+              2
+            ]
+          }
+        },
+        {
+          "physical_name": 4,
+          "fields": [
+            5869,
+            5594,
+            50255,
+            2199208,
+            2920609
+          ],
+          "golden": [
+            512425,
+            1457370,
+            1463239
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              5,
+              1
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                5,
+                1
+              ],
+              [
+                2,
+                3,
+                5
+              ],
+              [
+                2,
+                6,
+                1
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              3,
+              1,
+              3
+            ],
+            "F49_frobenius": [
+              0,
+              6,
+              3
+            ]
+          }
+        },
+        {
+          "physical_name": 6,
+          "fields": [
+            72181,
+            1448,
+            193041,
+            17718784,
+            985453
+          ],
+          "golden": [
+            512425,
+            456636,
+            528817
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              5,
+              2
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                5,
+                2
+              ],
+              [
+                1,
+                3,
+                2
+              ],
+              [
+                4,
+                6,
+                3
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              6,
+              2,
+              2
+            ],
+            "F49_frobenius": [
+              0,
+              5,
+              2
+            ]
+          }
+        },
+        {
+          "physical_name": 7,
+          "fields": [
+            156800,
+            703,
+            168029,
+            32965255,
+            523654
+          ],
+          "golden": [
+            512425,
+            183427,
+            340227
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              6,
+              6
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                6,
+                6
+              ],
+              [
+                1,
+                5,
+                0
+              ],
+              [
+                0,
+                3,
+                1
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              5,
+              6,
+              5
+            ],
+            "F49_frobenius": [
+              1,
+              1,
+              5
+            ]
+          }
+        },
+        {
+          "physical_name": 8,
+          "fields": [
+            106905,
+            937,
+            193041,
+            24360755,
+            707063
+          ],
+          "golden": [
+            512425,
+            300079,
+            406984
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              3,
+              4
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                3,
+                4
+              ],
+              [
+                5,
+                6,
+                4
+              ],
+              [
+                4,
+                5,
+                6
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              3,
+              4,
+              0
+            ],
+            "F49_frobenius": [
+              5,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "physical_name": 14,
+          "fields": [
+            30298,
+            970,
+            41435,
+            10207046,
+            733856
+          ],
+          "golden": [
+            512425,
+            351779,
+            382077
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              1,
+              3
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                1,
+                3
+              ],
+              [
+                5,
+                2,
+                1
+              ],
+              [
+                5,
+                4,
+                3
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              5,
+              3,
+              1
+            ],
+            "F49_frobenius": [
+              3,
+              4,
+              1
+            ]
+          }
+        },
+        {
+          "physical_name": 21,
+          "fields": [
+            5862,
+            2266,
+            18963,
+            2131138,
+            1967422
+          ],
+          "golden": [
+            512425,
+            980780,
+            986642
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              3,
+              6
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                3,
+                6
+              ],
+              [
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                5,
+                3
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              2,
+              6,
+              5
+            ],
+            "F49_frobenius": [
+              5,
+              1,
+              5
+            ]
+          }
+        },
+        {
+          "physical_name": 22,
+          "fields": [
+            20469,
+            2702,
+            87003,
+            6026902,
+            1736563
+          ],
+          "golden": [
+            512425,
+            858047,
+            878516
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              1,
+              2
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                1,
+                2
+              ],
+              [
+                6,
+                2,
+                4
+              ],
+              [
+                3,
+                4,
+                1
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              2,
+              2,
+              2
+            ],
+            "F49_frobenius": [
+              3,
+              5,
+              2
+            ]
+          }
+        },
+        {
+          "physical_name": 31,
+          "fields": [
+            43291,
+            703,
+            43291,
+            11610849,
+            667959
+          ],
+          "golden": [
+            512425,
+            312334,
+            355625
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              1,
+              4
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                1,
+                4
+              ],
+              [
+                4,
+                2,
+                5
+              ],
+              [
+                0,
+                4,
+                5
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              1,
+              4,
+              0
+            ],
+            "F49_frobenius": [
+              3,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "physical_name": 32,
+          "fields": [
+            2888,
+            28013,
+            128969,
+            1313563,
+            10439218
+          ],
+          "golden": [
+            512425,
+            5218165,
+            5221053
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              1,
+              5
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                1,
+                5
+              ],
+              [
+                3,
+                2,
+                2
+              ],
+              [
+                2,
+                4,
+                0
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              4,
+              5,
+              6
+            ],
+            "F49_frobenius": [
+              3,
+              2,
+              6
+            ]
+          }
+        },
+        {
+          "physical_name": 33,
+          "fields": [
+            3996,
+            14887,
+            94559,
+            1831931,
+            6097742
+          ],
+          "golden": [
+            512425,
+            3046873,
+            3050869
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              4,
+              3
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                4,
+                3
+              ],
+              [
+                3,
+                1,
+                3
+              ],
+              [
+                4,
+                2,
+                1
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              1,
+              3,
+              1
+            ],
+            "F49_frobenius": [
+              6,
+              4,
+              1
+            ]
+          }
+        },
+        {
+          "physical_name": 39,
+          "fields": [
+            703,
+            18583,
+            18583,
+            516115,
+            9000217
+          ],
+          "golden": [
+            512425,
+            4499757,
+            4500460
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              3,
+              6
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                3,
+                6
+              ],
+              [
+                3,
+                6,
+                5
+              ],
+              [
+                1,
+                5,
+                3
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              2,
+              6,
+              5
+            ],
+            "F49_frobenius": [
+              5,
+              1,
+              5
+            ]
+          }
+        },
+        {
+          "physical_name": 40,
+          "fields": [
+            3380,
+            34880,
+            198011,
+            1499926,
+            11934310
+          ],
+          "golden": [
+            512425,
+            5965465,
+            5968845
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              2,
+              1
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                2,
+                1
+              ],
+              [
+                4,
+                4,
+                3
+              ],
+              [
+                3,
+                1,
+                3
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              0,
+              1,
+              3
+            ],
+            "F49_frobenius": [
+              4,
+              6,
+              3
+            ]
+          }
+        },
+        {
+          "physical_name": 50,
+          "fields": [
+            703,
+            245076,
+            263659,
+            531008,
+            41587559
+          ],
+          "golden": [
+            512425,
+            20793428,
+            20794131
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              5,
+              1
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                5,
+                1
+              ],
+              [
+                2,
+                3,
+                5
+              ],
+              [
+                2,
+                6,
+                1
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              3,
+              1,
+              3
+            ],
+            "F49_frobenius": [
+              0,
+              6,
+              3
+            ]
+          }
+        },
+        {
+          "physical_name": 51,
+          "fields": [
+            1406,
+            124383,
+            263659,
+            812287,
+            27264436
+          ],
+          "golden": [
+            512425,
+            13631515,
+            13632921
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              2,
+              1
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                2,
+                1
+              ],
+              [
+                4,
+                4,
+                3
+              ],
+              [
+                3,
+                1,
+                3
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              0,
+              1,
+              3
+            ],
+            "F49_frobenius": [
+              4,
+              6,
+              3
+            ]
+          }
+        },
+        {
+          "physical_name": 54,
+          "fields": [
+            11687,
+            11370,
+            202409,
+            3711584,
+            4984997
+          ],
+          "golden": [
+            512425,
+            2486655,
+            2498342
+          ],
+          "charts": {
+            "observer_mod7": [
+              4,
+              3,
+              0
+            ],
+            "F343_vector_codec": [
+              [
+                4,
+                3,
+                0
+              ],
+              [
+                2,
+                6,
+                2
+              ],
+              [
+                3,
+                5,
+                5
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              5,
+              0,
+              4
+            ],
+            "F49_frobenius": [
+              5,
+              0,
+              4
+            ]
+          }
+        }
+      ],
+      "joints": [
+        {
+          "value": 48138,
+          "end": 1,
+          "start": 2
+        },
+        {
+          "value": 57378,
+          "end": 1,
+          "start": 4
+        },
+        {
+          "value": 21997,
+          "end": 1,
+          "start": 6
+        },
+        {
+          "value": 11190,
+          "end": 1,
+          "start": 7
+        },
+        {
+          "value": 13758,
+          "end": 1,
+          "start": 8
+        },
+        {
+          "value": 6772,
+          "end": 1,
+          "start": 14
+        },
+        {
+          "value": 13583,
+          "end": 1,
+          "start": 21
+        },
+        {
+          "value": 34660,
+          "end": 1,
+          "start": 22
+        },
+        {
+          "value": 9035,
+          "end": 1,
+          "start": 31
+        },
+        {
+          "value": 157134,
+          "end": 1,
+          "start": 32
+        },
+        {
+          "value": 159208,
+          "end": 1,
+          "start": 33
+        },
+        {
+          "value": 153552,
+          "end": 1,
+          "start": 39
+        },
+        {
+          "value": 202992,
+          "end": 1,
+          "start": 40
+        },
+        {
+          "value": 701538,
+          "end": 1,
+          "start": 50
+        },
+        {
+          "value": 458894,
+          "end": 1,
+          "start": 51
+        },
+        {
+          "value": 144645,
+          "end": 1,
+          "start": 54
+        },
+        {
+          "value": 546558,
+          "end": 2,
+          "start": 1
+        },
+        {
+          "value": 238468,
+          "end": 2,
+          "start": 4
+        },
+        {
+          "value": 166286,
+          "end": 2,
+          "start": 6
+        },
+        {
+          "value": 75222,
+          "end": 2,
+          "start": 7
+        },
+        {
+          "value": 106930,
+          "end": 2,
+          "start": 8
+        },
+        {
+          "value": 65425,
+          "end": 2,
+          "start": 14
+        },
+        {
+          "value": 124147,
+          "end": 2,
+          "start": 21
+        },
+        {
+          "value": 129833,
+          "end": 2,
+          "start": 22
+        },
+        {
+          "value": 58219,
+          "end": 2,
+          "start": 31
+        },
+        {
+          "value": 836488,
+          "end": 2,
+          "start": 32
+        },
+        {
+          "value": 492332,
+          "end": 2,
+          "start": 33
+        },
+        {
+          "value": 730548,
+          "end": 2,
+          "start": 39
+        },
+        {
+          "value": 958200,
+          "end": 2,
+          "start": 40
+        },
+        {
+          "value": 3346388,
+          "end": 2,
+          "start": 50
+        },
+        {
+          "value": 2191467,
+          "end": 2,
+          "start": 51
+        },
+        {
+          "value": 400536,
+          "end": 2,
+          "start": 54
+        },
+        {
+          "value": 127940,
+          "end": 4,
+          "start": 1
+        },
+        {
+          "value": 47104,
+          "end": 4,
+          "start": 2
+        },
+        {
+          "value": 21210,
+          "end": 4,
+          "start": 6
+        },
+        {
+          "value": 9439,
+          "end": 4,
+          "start": 7
+        },
+        {
+          "value": 13542,
+          "end": 4,
+          "start": 8
+        },
+        {
+          "value": 8398,
+          "end": 4,
+          "start": 14
+        },
+        {
+          "value": 19114,
+          "end": 4,
+          "start": 21
+        },
+        {
+          "value": 20104,
+          "end": 4,
+          "start": 22
+        },
+        {
+          "value": 7154,
+          "end": 4,
+          "start": 31
+        },
+        {
+          "value": 148649,
+          "end": 4,
+          "start": 32
+        },
+        {
+          "value": 127923,
+          "end": 4,
+          "start": 33
+        },
+        {
+          "value": 271786,
+          "end": 4,
+          "start": 39
+        },
+        {
+          "value": 187834,
+          "end": 4,
+          "start": 40
+        },
+        {
+          "value": 677188,
+          "end": 4,
+          "start": 50
+        },
+        {
+          "value": 435573,
+          "end": 4,
+          "start": 51
+        },
+        {
+          "value": 70381,
+          "end": 4,
+          "start": 54
+        },
+        {
+          "value": 918471,
+          "end": 6,
+          "start": 1
+        },
+        {
+          "value": 254418,
+          "end": 6,
+          "start": 2
+        },
+        {
+          "value": 400170,
+          "end": 6,
+          "start": 4
+        },
+        {
+          "value": 114375,
+          "end": 6,
+          "start": 7
+        },
+        {
+          "value": 193041,
+          "end": 6,
+          "start": 8
+        },
+        {
+          "value": 132828,
+          "end": 6,
+          "start": 14
+        },
+        {
+          "value": 231144,
+          "end": 6,
+          "start": 21
+        },
+        {
+          "value": 241510,
+          "end": 6,
+          "start": 22
+        },
+        {
+          "value": 62015,
+          "end": 6,
+          "start": 31
+        },
+        {
+          "value": 1412953,
+          "end": 6,
+          "start": 32
+        },
+        {
+          "value": 828735,
+          "end": 6,
+          "start": 33
+        },
+        {
+          "value": 1224774,
+          "end": 6,
+          "start": 39
+        },
+        {
+          "value": 1617266,
+          "end": 6,
+          "start": 40
+        },
+        {
+          "value": 5642242,
+          "end": 6,
+          "start": 50
+        },
+        {
+          "value": 3696780,
+          "end": 6,
+          "start": 51
+        },
+        {
+          "value": 675881,
+          "end": 6,
+          "start": 54
+        },
+        {
+          "value": 1698602,
+          "end": 7,
+          "start": 1
+        },
+        {
+          "value": 462726,
+          "end": 7,
+          "start": 2
+        },
+        {
+          "value": 722139,
+          "end": 7,
+          "start": 4
+        },
+        {
+          "value": 223095,
+          "end": 7,
+          "start": 6
+        },
+        {
+          "value": 156480,
+          "end": 7,
+          "start": 8
+        },
+        {
+          "value": 168456,
+          "end": 7,
+          "start": 14
+        },
+        {
+          "value": 530361,
+          "end": 7,
+          "start": 21
+        },
+        {
+          "value": 407304,
+          "end": 7,
+          "start": 22
+        },
+        {
+          "value": 355625,
+          "end": 7,
+          "start": 31
+        },
+        {
+          "value": 2636868,
+          "end": 7,
+          "start": 32
+        },
+        {
+          "value": 1537636,
+          "end": 7,
+          "start": 33
+        },
+        {
+          "value": 2271970,
+          "end": 7,
+          "start": 39
+        },
+        {
+          "value": 3011236,
+          "end": 7,
+          "start": 40
+        },
+        {
+          "value": 10490185,
+          "end": 7,
+          "start": 50
+        },
+        {
+          "value": 6878562,
+          "end": 7,
+          "start": 51
+        },
+        {
+          "value": 1257210,
+          "end": 7,
+          "start": 54
+        },
+        {
+          "value": 1259046,
+          "end": 8,
+          "start": 1
+        },
+        {
+          "value": 348068,
+          "end": 8,
+          "start": 2
+        },
+        {
+          "value": 548602,
+          "end": 8,
+          "start": 4
+        },
+        {
+          "value": 193041,
+          "end": 8,
+          "start": 6
+        },
+        {
+          "value": 179836,
+          "end": 8,
+          "start": 7
+        },
+        {
+          "value": 225684,
+          "end": 8,
+          "start": 14
+        },
+        {
+          "value": 341568,
+          "end": 8,
+          "start": 21
+        },
+        {
+          "value": 318381,
+          "end": 8,
+          "start": 22
+        },
+        {
+          "value": 84150,
+          "end": 8,
+          "start": 31
+        },
+        {
+          "value": 1944279,
+          "end": 8,
+          "start": 32
+        },
+        {
+          "value": 1137985,
+          "end": 8,
+          "start": 33
+        },
+        {
+          "value": 1680931,
+          "end": 8,
+          "start": 39
+        },
+        {
+          "value": 2224428,
+          "end": 8,
+          "start": 40
+        },
+        {
+          "value": 7755452,
+          "end": 8,
+          "start": 50
+        },
+        {
+          "value": 5083020,
+          "end": 8,
+          "start": 51
+        },
+        {
+          "value": 929379,
+          "end": 8,
+          "start": 54
+        },
+        {
+          "value": 498176,
+          "end": 14,
+          "start": 1
+        },
+        {
+          "value": 118305,
+          "end": 14,
+          "start": 2
+        },
+        {
+          "value": 212280,
+          "end": 14,
+          "start": 4
+        },
+        {
+          "value": 56892,
+          "end": 14,
+          "start": 6
+        },
+        {
+          "value": 41008,
+          "end": 14,
+          "start": 7
+        },
+        {
+          "value": 38158,
+          "end": 14,
+          "start": 8
+        },
+        {
+          "value": 411025,
+          "end": 14,
+          "start": 21
+        },
+        {
+          "value": 107006,
+          "end": 14,
+          "start": 22
+        },
+        {
+          "value": 30094,
+          "end": 14,
+          "start": 31
+        },
+        {
+          "value": 834933,
+          "end": 14,
+          "start": 32
+        },
+        {
+          "value": 462091,
+          "end": 14,
+          "start": 33
+        },
+        {
+          "value": 666452,
+          "end": 14,
+          "start": 39
+        },
+        {
+          "value": 942234,
+          "end": 14,
+          "start": 40
+        },
+        {
+          "value": 3231198,
+          "end": 14,
+          "start": 50
+        },
+        {
+          "value": 2135822,
+          "end": 14,
+          "start": 51
+        },
+        {
+          "value": 391074,
+          "end": 14,
+          "start": 54
+        },
+        {
+          "value": 138291,
+          "end": 21,
+          "start": 1
+        },
+        {
+          "value": 33733,
+          "end": 21,
+          "start": 2
+        },
+        {
+          "value": 49536,
+          "end": 21,
+          "start": 4
+        },
+        {
+          "value": 14892,
+          "end": 21,
+          "start": 6
+        },
+        {
+          "value": 8335,
+          "end": 21,
+          "start": 7
+        },
+        {
+          "value": 9126,
+          "end": 21,
+          "start": 8
+        },
+        {
+          "value": 1077,
+          "end": 21,
+          "start": 14
+        },
+        {
+          "value": 24528,
+          "end": 21,
+          "start": 22
+        },
+        {
+          "value": 6066,
+          "end": 21,
+          "start": 31
+        },
+        {
+          "value": 154552,
+          "end": 21,
+          "start": 32
+        },
+        {
+          "value": 108088,
+          "end": 21,
+          "start": 33
+        },
+        {
+          "value": 222056,
+          "end": 21,
+          "start": 39
+        },
+        {
+          "value": 183483,
+          "end": 21,
+          "start": 40
+        },
+        {
+          "value": 668502,
+          "end": 21,
+          "start": 50
+        },
+        {
+          "value": 430746,
+          "end": 21,
+          "start": 51
+        },
+        {
+          "value": 72265,
+          "end": 21,
+          "start": 54
+        },
+        {
+          "value": 315630,
+          "end": 22,
+          "start": 1
+        },
+        {
+          "value": 139187,
+          "end": 22,
+          "start": 2
+        },
+        {
+          "value": 208802,
+          "end": 22,
+          "start": 4
+        },
+        {
+          "value": 61146,
+          "end": 22,
+          "start": 6
+        },
+        {
+          "value": 17456,
+          "end": 22,
+          "start": 7
+        },
+        {
+          "value": 38187,
+          "end": 22,
+          "start": 8
+        },
+        {
+          "value": 27178,
+          "end": 22,
+          "start": 14
+        },
+        {
+          "value": 63784,
+          "end": 22,
+          "start": 21
+        },
+        {
+          "value": 9369,
+          "end": 22,
+          "start": 31
+        },
+        {
+          "value": 471836,
+          "end": 22,
+          "start": 32
+        },
+        {
+          "value": 279484,
+          "end": 22,
+          "start": 33
+        },
+        {
+          "value": 422131,
+          "end": 22,
+          "start": 39
+        },
+        {
+          "value": 550417,
+          "end": 22,
+          "start": 40
+        },
+        {
+          "value": 1914489,
+          "end": 22,
+          "start": 50
+        },
+        {
+          "value": 1256219,
+          "end": 22,
+          "start": 51
+        },
+        {
+          "value": 231118,
+          "end": 22,
+          "start": 54
+        },
+        {
+          "value": 602201,
+          "end": 31,
+          "start": 1
+        },
+        {
+          "value": 152221,
+          "end": 31,
+          "start": 2
+        },
+        {
+          "value": 260834,
+          "end": 31,
+          "start": 4
+        },
+        {
+          "value": 113803,
+          "end": 31,
+          "start": 6
+        },
+        {
+          "value": 11229,
+          "end": 31,
+          "start": 7
+        },
+        {
+          "value": 65754,
+          "end": 31,
+          "start": 8
+        },
+        {
+          "value": 51898,
+          "end": 31,
+          "start": 14
+        },
+        {
+          "value": 130090,
+          "end": 31,
+          "start": 21
+        },
+        {
+          "value": 289577,
+          "end": 31,
+          "start": 22
+        },
+        {
+          "value": 929892,
+          "end": 31,
+          "start": 32
+        },
+        {
+          "value": 541092,
+          "end": 31,
+          "start": 33
+        },
+        {
+          "value": 782391,
+          "end": 31,
+          "start": 39
+        },
+        {
+          "value": 1061576,
+          "end": 31,
+          "start": 40
+        },
+        {
+          "value": 3703786,
+          "end": 31,
+          "start": 50
+        },
+        {
+          "value": 2426486,
+          "end": 31,
+          "start": 51
+        },
+        {
+          "value": 444728,
+          "end": 31,
+          "start": 54
+        },
+        {
+          "value": 90070,
+          "end": 32,
+          "start": 1
+        },
+        {
+          "value": 28112,
+          "end": 32,
+          "start": 2
+        },
+        {
+          "value": 21027,
+          "end": 32,
+          "start": 4
+        },
+        {
+          "value": 12969,
+          "end": 32,
+          "start": 6
+        },
+        {
+          "value": 6232,
+          "end": 32,
+          "start": 7
+        },
+        {
+          "value": 8251,
+          "end": 32,
+          "start": 8
+        },
+        {
+          "value": 5311,
+          "end": 32,
+          "start": 14
+        },
+        {
+          "value": 11802,
+          "end": 32,
+          "start": 21
+        },
+        {
+          "value": 17826,
+          "end": 32,
+          "start": 22
+        },
+        {
+          "value": 5136,
+          "end": 32,
+          "start": 31
+        },
+        {
+          "value": 27428,
+          "end": 32,
+          "start": 33
+        },
+        {
+          "value": 73794,
+          "end": 32,
+          "start": 39
+        },
+        {
+          "value": 226115,
+          "end": 32,
+          "start": 40
+        },
+        {
+          "value": 422543,
+          "end": 32,
+          "start": 50
+        },
+        {
+          "value": 277373,
+          "end": 32,
+          "start": 51
+        },
+        {
+          "value": 76686,
+          "end": 32,
+          "start": 54
+        },
+        {
+          "value": 76126,
+          "end": 33,
+          "start": 1
+        },
+        {
+          "value": 36012,
+          "end": 33,
+          "start": 2
+        },
+        {
+          "value": 23207,
+          "end": 33,
+          "start": 4
+        },
+        {
+          "value": 16629,
+          "end": 33,
+          "start": 6
+        },
+        {
+          "value": 8028,
+          "end": 33,
+          "start": 7
+        },
+        {
+          "value": 10579,
+          "end": 33,
+          "start": 8
+        },
+        {
+          "value": 6479,
+          "end": 33,
+          "start": 14
+        },
+        {
+          "value": 14338,
+          "end": 33,
+          "start": 21
+        },
+        {
+          "value": 22398,
+          "end": 33,
+          "start": 22
+        },
+        {
+          "value": 6516,
+          "end": 33,
+          "start": 31
+        },
+        {
+          "value": 286068,
+          "end": 33,
+          "start": 32
+        },
+        {
+          "value": 103002,
+          "end": 33,
+          "start": 39
+        },
+        {
+          "value": 141147,
+          "end": 33,
+          "start": 40
+        },
+        {
+          "value": 589327,
+          "end": 33,
+          "start": 50
+        },
+        {
+          "value": 386697,
+          "end": 33,
+          "start": 51
+        },
+        {
+          "value": 101382,
+          "end": 33,
+          "start": 54
+        },
+        {
+          "value": 17506,
+          "end": 39,
+          "start": 1
+        },
+        {
+          "value": 4806,
+          "end": 39,
+          "start": 2
+        },
+        {
+          "value": 2484,
+          "end": 39,
+          "start": 4
+        },
+        {
+          "value": 2178,
+          "end": 39,
+          "start": 6
+        },
+        {
+          "value": 1072,
+          "end": 39,
+          "start": 7
+        },
+        {
+          "value": 1371,
+          "end": 39,
+          "start": 8
+        },
+        {
+          "value": 592,
+          "end": 39,
+          "start": 14
+        },
+        {
+          "value": 1206,
+          "end": 39,
+          "start": 21
+        },
+        {
+          "value": 2735,
+          "end": 39,
+          "start": 22
+        },
+        {
+          "value": 805,
+          "end": 39,
+          "start": 31
+        },
+        {
+          "value": 27538,
+          "end": 39,
+          "start": 32
+        },
+        {
+          "value": 15362,
+          "end": 39,
+          "start": 33
+        },
+        {
+          "value": 35355,
+          "end": 39,
+          "start": 40
+        },
+        {
+          "value": 267349,
+          "end": 39,
+          "start": 50
+        },
+        {
+          "value": 124383,
+          "end": 39,
+          "start": 51
+        },
+        {
+          "value": 10670,
+          "end": 39,
+          "start": 54
+        },
+        {
+          "value": 145526,
+          "end": 40,
+          "start": 1
+        },
+        {
+          "value": 36228,
+          "end": 40,
+          "start": 2
+        },
+        {
+          "value": 34038,
+          "end": 40,
+          "start": 4
+        },
+        {
+          "value": 16734,
+          "end": 40,
+          "start": 6
+        },
+        {
+          "value": 8124,
+          "end": 40,
+          "start": 7
+        },
+        {
+          "value": 10650,
+          "end": 40,
+          "start": 8
+        },
+        {
+          "value": 7138,
+          "end": 40,
+          "start": 14
+        },
+        {
+          "value": 15895,
+          "end": 40,
+          "start": 21
+        },
+        {
+          "value": 24345,
+          "end": 40,
+          "start": 22
+        },
+        {
+          "value": 6840,
+          "end": 40,
+          "start": 31
+        },
+        {
+          "value": 100865,
+          "end": 40,
+          "start": 32
+        },
+        {
+          "value": 103307,
+          "end": 40,
+          "start": 33
+        },
+        {
+          "value": 88839,
+          "end": 40,
+          "start": 39
+        },
+        {
+          "value": 481967,
+          "end": 40,
+          "start": 50
+        },
+        {
+          "value": 315830,
+          "end": 40,
+          "start": 51
+        },
+        {
+          "value": 100220,
+          "end": 40,
+          "start": 54
+        },
+        {
+          "value": 34376,
+          "end": 50,
+          "start": 1
+        },
+        {
+          "value": 7846,
+          "end": 50,
+          "start": 2
+        },
+        {
+          "value": 8078,
+          "end": 50,
+          "start": 4
+        },
+        {
+          "value": 3626,
+          "end": 50,
+          "start": 6
+        },
+        {
+          "value": 1775,
+          "end": 50,
+          "start": 7
+        },
+        {
+          "value": 2308,
+          "end": 50,
+          "start": 8
+        },
+        {
+          "value": 1562,
+          "end": 50,
+          "start": 14
+        },
+        {
+          "value": 3472,
+          "end": 50,
+          "start": 21
+        },
+        {
+          "value": 5437,
+          "end": 50,
+          "start": 22
+        },
+        {
+          "value": 1508,
+          "end": 50,
+          "start": 31
+        },
+        {
+          "value": 55551,
+          "end": 50,
+          "start": 32
+        },
+        {
+          "value": 30249,
+          "end": 50,
+          "start": 33
+        },
+        {
+          "value": 18583,
+          "end": 50,
+          "start": 39
+        },
+        {
+          "value": 70235,
+          "end": 50,
+          "start": 40
+        },
+        {
+          "value": 263659,
+          "end": 50,
+          "start": 51
+        },
+        {
+          "value": 22040,
+          "end": 50,
+          "start": 54
+        },
+        {
+          "value": 69786,
+          "end": 51,
+          "start": 1
+        },
+        {
+          "value": 16013,
+          "end": 51,
+          "start": 2
+        },
+        {
+          "value": 16799,
+          "end": 51,
+          "start": 4
+        },
+        {
+          "value": 7406,
+          "end": 51,
+          "start": 6
+        },
+        {
+          "value": 3626,
+          "end": 51,
+          "start": 7
+        },
+        {
+          "value": 4716,
+          "end": 51,
+          "start": 8
+        },
+        {
+          "value": 3228,
+          "end": 51,
+          "start": 14
+        },
+        {
+          "value": 7190,
+          "end": 51,
+          "start": 21
+        },
+        {
+          "value": 11167,
+          "end": 51,
+          "start": 22
+        },
+        {
+          "value": 3092,
+          "end": 51,
+          "start": 31
+        },
+        {
+          "value": 115255,
+          "end": 51,
+          "start": 32
+        },
+        {
+          "value": 61489,
+          "end": 51,
+          "start": 33
+        },
+        {
+          "value": 36203,
+          "end": 51,
+          "start": 39
+        },
+        {
+          "value": 145840,
+          "end": 51,
+          "start": 40
+        },
+        {
+          "value": 263659,
+          "end": 51,
+          "start": 50
+        },
+        {
+          "value": 45412,
+          "end": 51,
+          "start": 54
+        },
+        {
+          "value": 189463,
+          "end": 54,
+          "start": 1
+        },
+        {
+          "value": 112206,
+          "end": 54,
+          "start": 2
+        },
+        {
+          "value": 111173,
+          "end": 54,
+          "start": 4
+        },
+        {
+          "value": 52101,
+          "end": 54,
+          "start": 6
+        },
+        {
+          "value": 26004,
+          "end": 54,
+          "start": 7
+        },
+        {
+          "value": 33275,
+          "end": 54,
+          "start": 8
+        },
+        {
+          "value": 20860,
+          "end": 54,
+          "start": 14
+        },
+        {
+          "value": 46437,
+          "end": 54,
+          "start": 21
+        },
+        {
+          "value": 77050,
+          "end": 54,
+          "start": 22
+        },
+        {
+          "value": 21632,
+          "end": 54,
+          "start": 31
+        },
+        {
+          "value": 298344,
+          "end": 54,
+          "start": 32
+        },
+        {
+          "value": 170446,
+          "end": 54,
+          "start": 33
+        },
+        {
+          "value": 234622,
+          "end": 54,
+          "start": 39
+        },
+        {
+          "value": 341072,
+          "end": 54,
+          "start": 40
+        },
+        {
+          "value": 1186670,
+          "end": 54,
+          "start": 50
+        },
+        {
+          "value": 778542,
+          "end": 54,
+          "start": 51
+        }
+      ]
+    },
+    {
+      "file": "candidate2.json",
+      "H": 1537277,
+      "fields_order": [
+        "E1",
+        "S1",
+        "deletion_H",
+        "E2",
+        "S2"
+      ],
+      "root_defect": 0,
+      "in_ports": [
+        21
+      ],
+      "ports": [
+        {
+          "physical_name": 1,
+          "fields": [
+            21215,
+            34197,
+            507195,
+            9268081,
+            18393917
+          ],
+          "golden": [
+            1537277,
+            9186351,
+            9207566
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              6,
+              4
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                6,
+                4
+              ],
+              [
+                6,
+                5,
+                6
+              ],
+              [
+                6,
+                3,
+                4
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              4,
+              4,
+              3
+            ],
+            "F49_frobenius": [
+              6,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "physical_name": 2,
+          "fields": [
+            200303,
+            4163,
+            549829,
+            54032751,
+            3380283
+          ],
+          "golden": [
+            1537277,
+            1589990,
+            1790293
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              3,
+              1
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                3,
+                1
+              ],
+              [
+                4,
+                6,
+                6
+              ],
+              [
+                1,
+                5,
+                0
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              6,
+              1,
+              6
+            ],
+            "F49_frobenius": [
+              3,
+              6,
+              6
+            ]
+          }
+        },
+        {
+          "physical_name": 4,
+          "fields": [
+            44474,
+            10700,
+            323423,
+            17426792,
+            7076254
+          ],
+          "golden": [
+            1537277,
+            3515890,
+            3560364
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              0,
+              3
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                0,
+                3
+              ],
+              [
+                4,
+                0,
+                5
+              ],
+              [
+                6,
+                0,
+                6
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              2,
+              3,
+              4
+            ],
+            "F49_frobenius": [
+              0,
+              4,
+              4
+            ]
+          }
+        },
+        {
+          "physical_name": 6,
+          "fields": [
+            134839,
+            5922,
+            570311,
+            43938820,
+            4230965
+          ],
+          "golden": [
+            1537277,
+            2048063,
+            2182902
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              3,
+              1
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                3,
+                1
+              ],
+              [
+                4,
+                6,
+                6
+              ],
+              [
+                1,
+                5,
+                0
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              6,
+              1,
+              6
+            ],
+            "F49_frobenius": [
+              3,
+              6,
+              6
+            ]
+          }
+        },
+        {
+          "physical_name": 7,
+          "fields": [
+            510889,
+            1709,
+            524843,
+            123006495,
+            1551231
+          ],
+          "golden": [
+            1537277,
+            520171,
+            1031060
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              1,
+              2
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                2,
+                2,
+                4
+              ],
+              [
+                6,
+                4,
+                1
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              0,
+              2,
+              5
+            ],
+            "F49_frobenius": [
+              1,
+              5,
+              5
+            ]
+          }
+        },
+        {
+          "physical_name": 8,
+          "fields": [
+            319296,
+            2411,
+            628147,
+            89360379,
+            2205660
+          ],
+          "golden": [
+            1537277,
+            943182,
+            1262478
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              2,
+              0
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                2,
+                0
+              ],
+              [
+                1,
+                4,
+                6
+              ],
+              [
+                4,
+                1,
+                1
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              2,
+              0,
+              0
+            ],
+            "F49_frobenius": [
+              2,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "physical_name": 14,
+          "fields": [
+            102031,
+            2389,
+            140593,
+            39710981,
+            2112919
+          ],
+          "golden": [
+            1537277,
+            1005444,
+            1107475
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              6,
+              5
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                6,
+                5
+              ],
+              [
+                5,
+                5,
+                3
+              ],
+              [
+                1,
+                3,
+                6
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              0,
+              5,
+              2
+            ],
+            "F49_frobenius": [
+              6,
+              2,
+              2
+            ]
+          }
+        },
+        {
+          "physical_name": 21,
+          "fields": [
+            1709,
+            5519,
+            5519,
+            2907761,
+            5644387
+          ],
+          "golden": [
+            1537277,
+            2821339,
+            2823048
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              3,
+              4
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                6,
+                4
+              ],
+              [
+                0,
+                5,
+                6
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              1,
+              4,
+              3
+            ],
+            "F49_frobenius": [
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "physical_name": 22,
+          "fields": [
+            59943,
+            11083,
+            439715,
+            22599665,
+            6854593
+          ],
+          "golden": [
+            1537277,
+            3397325,
+            3457268
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              1,
+              3
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                1,
+                3
+              ],
+              [
+                1,
+                2,
+                1
+              ],
+              [
+                1,
+                4,
+                3
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              3,
+              3,
+              4
+            ],
+            "F49_frobenius": [
+              1,
+              4,
+              4
+            ]
+          }
+        },
+        {
+          "physical_name": 31,
+          "fields": [
+            38347,
+            1709,
+            38347,
+            17074373,
+            2014429
+          ],
+          "golden": [
+            1537277,
+            988041,
+            1026388
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              5,
+              6
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                5,
+                6
+              ],
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                6,
+                4
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              2,
+              6,
+              1
+            ],
+            "F49_frobenius": [
+              5,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "physical_name": 32,
+          "fields": [
+            14788,
+            46328,
+            447411,
+            6550474,
+            24122996
+          ],
+          "golden": [
+            1537277,
+            12054104,
+            12068892
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              6,
+              3
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                6,
+                3
+              ],
+              [
+                0,
+                5,
+                2
+              ],
+              [
+                4,
+                3,
+                2
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              1,
+              3,
+              4
+            ],
+            "F49_frobenius": [
+              6,
+              4,
+              4
+            ]
+          }
+        },
+        {
+          "physical_name": 33,
+          "fields": [
+            17876,
+            17305,
+            196529,
+            8105259,
+            11066544
+          ],
+          "golden": [
+            1537277,
+            5524334,
+            5542210
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              4,
+              2
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                4,
+                2
+              ],
+              [
+                0,
+                1,
+                6
+              ],
+              [
+                5,
+                2,
+                6
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              3,
+              2,
+              5
+            ],
+            "F49_frobenius": [
+              4,
+              5,
+              5
+            ]
+          }
+        },
+        {
+          "physical_name": 39,
+          "fields": [
+            1709,
+            80637,
+            80637,
+            1537277,
+            52103485
+          ],
+          "golden": [
+            1537277,
+            26050888,
+            26052597
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              3,
+              4
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                6,
+                4
+              ],
+              [
+                0,
+                5,
+                6
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              1,
+              4,
+              3
+            ],
+            "F49_frobenius": [
+              3,
+              3,
+              3
+            ]
+          }
+        },
+        {
+          "physical_name": 40,
+          "fields": [
+            19129,
+            18776,
+            218633,
+            7907100,
+            12166047
+          ],
+          "golden": [
+            1537277,
+            6073459,
+            6092588
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              0,
+              5
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                0,
+                5
+              ],
+              [
+                2,
+                0,
+                6
+              ],
+              [
+                3,
+                0,
+                3
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              1,
+              5,
+              2
+            ],
+            "F49_frobenius": [
+              0,
+              2,
+              2
+            ]
+          }
+        },
+        {
+          "physical_name": 50,
+          "fields": [
+            1709,
+            728320,
+            808957,
+            1617914,
+            146963767
+          ],
+          "golden": [
+            1537277,
+            73481029,
+            73482738
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              6,
+              0
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                6,
+                0
+              ],
+              [
+                3,
+                5,
+                4
+              ],
+              [
+                5,
+                3,
+                3
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              6,
+              0,
+              0
+            ],
+            "F49_frobenius": [
+              6,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "physical_name": 51,
+          "fields": [
+            3418,
+            364160,
+            808957,
+            2507508,
+            93797484
+          ],
+          "golden": [
+            1537277,
+            46897033,
+            46900451
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              1,
+              3
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                1,
+                3
+              ],
+              [
+                1,
+                2,
+                1
+              ],
+              [
+                1,
+                4,
+                3
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              3,
+              3,
+              4
+            ],
+            "F49_frobenius": [
+              1,
+              4,
+              4
+            ]
+          }
+        },
+        {
+          "physical_name": 54,
+          "fields": [
+            38766,
+            19869,
+            495383,
+            14354361,
+            11792490
+          ],
+          "golden": [
+            1537277,
+            5876862,
+            5915628
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              5,
+              5
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                5,
+                5
+              ],
+              [
+                1,
+                3,
+                0
+              ],
+              [
+                6,
+                6,
+                2
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              6,
+              5,
+              2
+            ],
+            "F49_frobenius": [
+              5,
+              2,
+              2
+            ]
+          }
+        },
+        {
+          "physical_name": 55,
+          "fields": [
+            6836,
+            182080,
+            808957,
+            3920452,
+            60348992
+          ],
+          "golden": [
+            1537277,
+            30171078,
+            30177914
+          ],
+          "charts": {
+            "observer_mod7": [
+              0,
+              0,
+              4
+            ],
+            "F343_vector_codec": [
+              [
+                0,
+                0,
+                4
+              ],
+              [
+                3,
+                0,
+                2
+              ],
+              [
+                1,
+                0,
+                1
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              5,
+              4,
+              3
+            ],
+            "F49_frobenius": [
+              0,
+              3,
+              3
+            ]
+          }
+        }
+      ],
+      "joints": [
+        {
+          "value": 89434,
+          "end": 1,
+          "start": 2
+        },
+        {
+          "value": 202530,
+          "end": 1,
+          "start": 4
+        },
+        {
+          "value": 134593,
+          "end": 1,
+          "start": 6
+        },
+        {
+          "value": 35934,
+          "end": 1,
+          "start": 7
+        },
+        {
+          "value": 55366,
+          "end": 1,
+          "start": 8
+        },
+        {
+          "value": 31564,
+          "end": 1,
+          "start": 14
+        },
+        {
+          "value": 66938,
+          "end": 1,
+          "start": 21
+        },
+        {
+          "value": 223175,
+          "end": 1,
+          "start": 22
+        },
+        {
+          "value": 27190,
+          "end": 1,
+          "start": 31
+        },
+        {
+          "value": 441323,
+          "end": 1,
+          "start": 32
+        },
+        {
+          "value": 302428,
+          "end": 1,
+          "start": 33
+        },
+        {
+          "value": 1025030,
+          "end": 1,
+          "start": 39
+        },
+        {
+          "value": 221915,
+          "end": 1,
+          "start": 40
+        },
+        {
+          "value": 2916503,
+          "end": 1,
+          "start": 50
+        },
+        {
+          "value": 1861146,
+          "end": 1,
+          "start": 51
+        },
+        {
+          "value": 413848,
+          "end": 1,
+          "start": 54
+        },
+        {
+          "value": 1197949,
+          "end": 1,
+          "start": 55
+        },
+        {
+          "value": 2137368,
+          "end": 2,
+          "start": 1
+        },
+        {
+          "value": 831682,
+          "end": 2,
+          "start": 4
+        },
+        {
+          "value": 498448,
+          "end": 2,
+          "start": 6
+        },
+        {
+          "value": 293912,
+          "end": 2,
+          "start": 7
+        },
+        {
+          "value": 520098,
+          "end": 2,
+          "start": 8
+        },
+        {
+          "value": 311698,
+          "end": 2,
+          "start": 14
+        },
+        {
+          "value": 582040,
+          "end": 2,
+          "start": 21
+        },
+        {
+          "value": 795356,
+          "end": 2,
+          "start": 22
+        },
+        {
+          "value": 211266,
+          "end": 2,
+          "start": 31
+        },
+        {
+          "value": 2789394,
+          "end": 2,
+          "start": 32
+        },
+        {
+          "value": 1294700,
+          "end": 2,
+          "start": 33
+        },
+        {
+          "value": 6030144,
+          "end": 2,
+          "start": 39
+        },
+        {
+          "value": 1359526,
+          "end": 2,
+          "start": 40
+        },
+        {
+          "value": 16991239,
+          "end": 2,
+          "start": 50
+        },
+        {
+          "value": 10842028,
+          "end": 2,
+          "start": 51
+        },
+        {
+          "value": 1367983,
+          "end": 2,
+          "start": 54
+        },
+        {
+          "value": 6975566,
+          "end": 2,
+          "start": 55
+        },
+        {
+          "value": 709026,
+          "end": 4,
+          "start": 1
+        },
+        {
+          "value": 179522,
+          "end": 4,
+          "start": 2
+        },
+        {
+          "value": 270700,
+          "end": 4,
+          "start": 6
+        },
+        {
+          "value": 68657,
+          "end": 4,
+          "start": 7
+        },
+        {
+          "value": 112885,
+          "end": 4,
+          "start": 8
+        },
+        {
+          "value": 66579,
+          "end": 4,
+          "start": 14
+        },
+        {
+          "value": 141671,
+          "end": 4,
+          "start": 21
+        },
+        {
+          "value": 237468,
+          "end": 4,
+          "start": 22
+        },
+        {
+          "value": 50010,
+          "end": 4,
+          "start": 31
+        },
+        {
+          "value": 843736,
+          "end": 4,
+          "start": 32
+        },
+        {
+          "value": 744450,
+          "end": 4,
+          "start": 33
+        },
+        {
+          "value": 1823777,
+          "end": 4,
+          "start": 39
+        },
+        {
+          "value": 421302,
+          "end": 4,
+          "start": 40
+        },
+        {
+          "value": 5501779,
+          "end": 4,
+          "start": 50
+        },
+        {
+          "value": 3519592,
+          "end": 4,
+          "start": 51
+        },
+        {
+          "value": 421026,
+          "end": 4,
+          "start": 54
+        },
+        {
+          "value": 2270138,
+          "end": 4,
+          "start": 55
+        },
+        {
+          "value": 1739457,
+          "end": 6,
+          "start": 1
+        },
+        {
+          "value": 621692,
+          "end": 6,
+          "start": 2
+        },
+        {
+          "value": 677254,
+          "end": 6,
+          "start": 4
+        },
+        {
+          "value": 193839,
+          "end": 6,
+          "start": 7
+        },
+        {
+          "value": 367772,
+          "end": 6,
+          "start": 8
+        },
+        {
+          "value": 219135,
+          "end": 6,
+          "start": 14
+        },
+        {
+          "value": 424636,
+          "end": 6,
+          "start": 21
+        },
+        {
+          "value": 657130,
+          "end": 6,
+          "start": 22
+        },
+        {
+          "value": 119312,
+          "end": 6,
+          "start": 31
+        },
+        {
+          "value": 2262452,
+          "end": 6,
+          "start": 32
+        },
+        {
+          "value": 1052930,
+          "end": 6,
+          "start": 33
+        },
+        {
+          "value": 4900908,
+          "end": 6,
+          "start": 39
+        },
+        {
+          "value": 1150771,
+          "end": 6,
+          "start": 40
+        },
+        {
+          "value": 13818792,
+          "end": 6,
+          "start": 50
+        },
+        {
+          "value": 8816540,
+          "end": 6,
+          "start": 51
+        },
+        {
+          "value": 1108751,
+          "end": 6,
+          "start": 54
+        },
+        {
+          "value": 5672610,
+          "end": 6,
+          "start": 55
+        },
+        {
+          "value": 4814194,
+          "end": 7,
+          "start": 1
+        },
+        {
+          "value": 878610,
+          "end": 7,
+          "start": 2
+        },
+        {
+          "value": 1830785,
+          "end": 7,
+          "start": 4
+        },
+        {
+          "value": 1055675,
+          "end": 7,
+          "start": 6
+        },
+        {
+          "value": 531695,
+          "end": 7,
+          "start": 8
+        },
+        {
+          "value": 524934,
+          "end": 7,
+          "start": 14
+        },
+        {
+          "value": 1574828,
+          "end": 7,
+          "start": 21
+        },
+        {
+          "value": 1758771,
+          "end": 7,
+          "start": 22
+        },
+        {
+          "value": 1026388,
+          "end": 7,
+          "start": 31
+        },
+        {
+          "value": 6362632,
+          "end": 7,
+          "start": 32
+        },
+        {
+          "value": 2915434,
+          "end": 7,
+          "start": 33
+        },
+        {
+          "value": 13743548,
+          "end": 7,
+          "start": 39
+        },
+        {
+          "value": 3142005,
+          "end": 7,
+          "start": 40
+        },
+        {
+          "value": 38672507,
+          "end": 7,
+          "start": 50
+        },
+        {
+          "value": 24681952,
+          "end": 7,
+          "start": 51
+        },
+        {
+          "value": 3102916,
+          "end": 7,
+          "start": 54
+        },
+        {
+          "value": 15878732,
+          "end": 7,
+          "start": 55
+        },
+        {
+          "value": 3531142,
+          "end": 8,
+          "start": 1
+        },
+        {
+          "value": 657878,
+          "end": 8,
+          "start": 2
+        },
+        {
+          "value": 1370191,
+          "end": 8,
+          "start": 4
+        },
+        {
+          "value": 830686,
+          "end": 8,
+          "start": 6
+        },
+        {
+          "value": 555475,
+          "end": 8,
+          "start": 7
+        },
+        {
+          "value": 662506,
+          "end": 8,
+          "start": 14
+        },
+        {
+          "value": 1003564,
+          "end": 8,
+          "start": 21
+        },
+        {
+          "value": 1323647,
+          "end": 8,
+          "start": 22
+        },
+        {
+          "value": 299224,
+          "end": 8,
+          "start": 31
+        },
+        {
+          "value": 4616857,
+          "end": 8,
+          "start": 32
+        },
+        {
+          "value": 2134654,
+          "end": 8,
+          "start": 33
+        },
+        {
+          "value": 9927732,
+          "end": 8,
+          "start": 39
+        },
+        {
+          "value": 2275148,
+          "end": 8,
+          "start": 40
+        },
+        {
+          "value": 28107019,
+          "end": 8,
+          "start": 50
+        },
+        {
+          "value": 17939890,
+          "end": 8,
+          "start": 51
+        },
+        {
+          "value": 2261217,
+          "end": 8,
+          "start": 54
+        },
+        {
+          "value": 11544253,
+          "end": 8,
+          "start": 55
+        },
+        {
+          "value": 1503928,
+          "end": 14,
+          "start": 1
+        },
+        {
+          "value": 228800,
+          "end": 14,
+          "start": 2
+        },
+        {
+          "value": 548937,
+          "end": 14,
+          "start": 4
+        },
+        {
+          "value": 308879,
+          "end": 14,
+          "start": 6
+        },
+        {
+          "value": 140502,
+          "end": 14,
+          "start": 7
+        },
+        {
+          "value": 136688,
+          "end": 14,
+          "start": 8
+        },
+        {
+          "value": 1192732,
+          "end": 14,
+          "start": 21
+        },
+        {
+          "value": 544944,
+          "end": 14,
+          "start": 22
+        },
+        {
+          "value": 102012,
+          "end": 14,
+          "start": 31
+        },
+        {
+          "value": 2075656,
+          "end": 14,
+          "start": 32
+        },
+        {
+          "value": 852311,
+          "end": 14,
+          "start": 33
+        },
+        {
+          "value": 4530356,
+          "end": 14,
+          "start": 39
+        },
+        {
+          "value": 915240,
+          "end": 14,
+          "start": 40
+        },
+        {
+          "value": 12452953,
+          "end": 14,
+          "start": 50
+        },
+        {
+          "value": 7958500,
+          "end": 14,
+          "start": 51
+        },
+        {
+          "value": 1002150,
+          "end": 14,
+          "start": 54
+        },
+        {
+          "value": 5114362,
+          "end": 14,
+          "start": 55
+        },
+        {
+          "value": 36492,
+          "end": 21,
+          "start": 1
+        },
+        {
+          "value": 4728,
+          "end": 21,
+          "start": 2
+        },
+        {
+          "value": 11073,
+          "end": 21,
+          "start": 4
+        },
+        {
+          "value": 7088,
+          "end": 21,
+          "start": 6
+        },
+        {
+          "value": 2408,
+          "end": 21,
+          "start": 7
+        },
+        {
+          "value": 2756,
+          "end": 21,
+          "start": 8
+        },
+        {
+          "value": 254,
+          "end": 21,
+          "start": 14
+        },
+        {
+          "value": 12655,
+          "end": 21,
+          "start": 22
+        },
+        {
+          "value": 1728,
+          "end": 21,
+          "start": 31
+        },
+        {
+          "value": 46720,
+          "end": 21,
+          "start": 32
+        },
+        {
+          "value": 16913,
+          "end": 21,
+          "start": 33
+        },
+        {
+          "value": 1456640,
+          "end": 21,
+          "start": 39
+        },
+        {
+          "value": 18664,
+          "end": 21,
+          "start": 40
+        },
+        {
+          "value": 722801,
+          "end": 21,
+          "start": 50
+        },
+        {
+          "value": 364160,
+          "end": 21,
+          "start": 51
+        },
+        {
+          "value": 18892,
+          "end": 21,
+          "start": 54
+        },
+        {
+          "value": 182080,
+          "end": 21,
+          "start": 55
+        },
+        {
+          "value": 895565,
+          "end": 22,
+          "start": 1
+        },
+        {
+          "value": 227846,
+          "end": 22,
+          "start": 2
+        },
+        {
+          "value": 579890,
+          "end": 22,
+          "start": 4
+        },
+        {
+          "value": 352896,
+          "end": 22,
+          "start": 6
+        },
+        {
+          "value": 78907,
+          "end": 22,
+          "start": 7
+        },
+        {
+          "value": 147485,
+          "end": 22,
+          "start": 8
+        },
+        {
+          "value": 90310,
+          "end": 22,
+          "start": 14
+        },
+        {
+          "value": 191815,
+          "end": 22,
+          "start": 21
+        },
+        {
+          "value": 51482,
+          "end": 22,
+          "start": 31
+        },
+        {
+          "value": 1152253,
+          "end": 22,
+          "start": 32
+        },
+        {
+          "value": 507505,
+          "end": 22,
+          "start": 33
+        },
+        {
+          "value": 2542665,
+          "end": 22,
+          "start": 39
+        },
+        {
+          "value": 599063,
+          "end": 22,
+          "start": 40
+        },
+        {
+          "value": 7104504,
+          "end": 22,
+          "start": 50
+        },
+        {
+          "value": 4530202,
+          "end": 22,
+          "start": 51
+        },
+        {
+          "value": 573551,
+          "end": 22,
+          "start": 54
+        },
+        {
+          "value": 2913783,
+          "end": 22,
+          "start": 55
+        },
+        {
+          "value": 667676,
+          "end": 31,
+          "start": 1
+        },
+        {
+          "value": 77718,
+          "end": 31,
+          "start": 2
+        },
+        {
+          "value": 221850,
+          "end": 31,
+          "start": 4
+        },
+        {
+          "value": 149190,
+          "end": 31,
+          "start": 6
+        },
+        {
+          "value": 13954,
+          "end": 31,
+          "start": 7
+        },
+        {
+          "value": 68078,
+          "end": 31,
+          "start": 8
+        },
+        {
+          "value": 50454,
+          "end": 31,
+          "start": 14
+        },
+        {
+          "value": 121618,
+          "end": 31,
+          "start": 21
+        },
+        {
+          "value": 281604,
+          "end": 31,
+          "start": 22
+        },
+        {
+          "value": 849266,
+          "end": 31,
+          "start": 32
+        },
+        {
+          "value": 349108,
+          "end": 31,
+          "start": 33
+        },
+        {
+          "value": 1651046,
+          "end": 31,
+          "start": 39
+        },
+        {
+          "value": 1000058,
+          "end": 31,
+          "start": 40
+        },
+        {
+          "value": 5413911,
+          "end": 31,
+          "start": 50
+        },
+        {
+          "value": 3474456,
+          "end": 31,
+          "start": 51
+        },
+        {
+          "value": 398727,
+          "end": 31,
+          "start": 54
+        },
+        {
+          "value": 2247312,
+          "end": 31,
+          "start": 55
+        },
+        {
+          "value": 440903,
+          "end": 32,
+          "start": 1
+        },
+        {
+          "value": 64626,
+          "end": 32,
+          "start": 2
+        },
+        {
+          "value": 103260,
+          "end": 32,
+          "start": 4
+        },
+        {
+          "value": 97236,
+          "end": 32,
+          "start": 6
+        },
+        {
+          "value": 27444,
+          "end": 32,
+          "start": 7
+        },
+        {
+          "value": 39933,
+          "end": 32,
+          "start": 8
+        },
+        {
+          "value": 22606,
+          "end": 32,
+          "start": 14
+        },
+        {
+          "value": 49206,
+          "end": 32,
+          "start": 21
+        },
+        {
+          "value": 157669,
+          "end": 32,
+          "start": 22
+        },
+        {
+          "value": 21586,
+          "end": 32,
+          "start": 31
+        },
+        {
+          "value": 88899,
+          "end": 32,
+          "start": 33
+        },
+        {
+          "value": 673050,
+          "end": 32,
+          "start": 39
+        },
+        {
+          "value": 229866,
+          "end": 32,
+          "start": 40
+        },
+        {
+          "value": 2070520,
+          "end": 32,
+          "start": 50
+        },
+        {
+          "value": 1325352,
+          "end": 32,
+          "start": 51
+        },
+        {
+          "value": 268154,
+          "end": 32,
+          "start": 54
+        },
+        {
+          "value": 855376,
+          "end": 32,
+          "start": 55
+        },
+        {
+          "value": 282676,
+          "end": 33,
+          "start": 1
+        },
+        {
+          "value": 67454,
+          "end": 33,
+          "start": 2
+        },
+        {
+          "value": 58278,
+          "end": 33,
+          "start": 4
+        },
+        {
+          "value": 102032,
+          "end": 33,
+          "start": 6
+        },
+        {
+          "value": 26570,
+          "end": 33,
+          "start": 7
+        },
+        {
+          "value": 43444,
+          "end": 33,
+          "start": 8
+        },
+        {
+          "value": 25983,
+          "end": 33,
+          "start": 14
+        },
+        {
+          "value": 57815,
+          "end": 33,
+          "start": 21
+        },
+        {
+          "value": 142017,
+          "end": 33,
+          "start": 22
+        },
+        {
+          "value": 19392,
+          "end": 33,
+          "start": 31
+        },
+        {
+          "value": 764093,
+          "end": 33,
+          "start": 32
+        },
+        {
+          "value": 765465,
+          "end": 33,
+          "start": 39
+        },
+        {
+          "value": 165682,
+          "end": 33,
+          "start": 40
+        },
+        {
+          "value": 2573114,
+          "end": 33,
+          "start": 50
+        },
+        {
+          "value": 1652846,
+          "end": 33,
+          "start": 51
+        },
+        {
+          "value": 270601,
+          "end": 33,
+          "start": 54
+        },
+        {
+          "value": 1069921,
+          "end": 33,
+          "start": 55
+        },
+        {
+          "value": 36492,
+          "end": 39,
+          "start": 1
+        },
+        {
+          "value": 4728,
+          "end": 39,
+          "start": 2
+        },
+        {
+          "value": 11073,
+          "end": 39,
+          "start": 4
+        },
+        {
+          "value": 7088,
+          "end": 39,
+          "start": 6
+        },
+        {
+          "value": 2408,
+          "end": 39,
+          "start": 7
+        },
+        {
+          "value": 2756,
+          "end": 39,
+          "start": 8
+        },
+        {
+          "value": 254,
+          "end": 39,
+          "start": 14
+        },
+        {
+          "value": 0,
+          "end": 39,
+          "start": 21
+        },
+        {
+          "value": 12655,
+          "end": 39,
+          "start": 22
+        },
+        {
+          "value": 1728,
+          "end": 39,
+          "start": 31
+        },
+        {
+          "value": 46720,
+          "end": 39,
+          "start": 32
+        },
+        {
+          "value": 16913,
+          "end": 39,
+          "start": 33
+        },
+        {
+          "value": 18664,
+          "end": 39,
+          "start": 40
+        },
+        {
+          "value": 808957,
+          "end": 39,
+          "start": 50
+        },
+        {
+          "value": 364160,
+          "end": 39,
+          "start": 51
+        },
+        {
+          "value": 18892,
+          "end": 39,
+          "start": 54
+        },
+        {
+          "value": 182080,
+          "end": 39,
+          "start": 55
+        },
+        {
+          "value": 485093,
+          "end": 40,
+          "start": 1
+        },
+        {
+          "value": 51894,
+          "end": 40,
+          "start": 2
+        },
+        {
+          "value": 133440,
+          "end": 40,
+          "start": 4
+        },
+        {
+          "value": 86089,
+          "end": 40,
+          "start": 6
+        },
+        {
+          "value": 14725,
+          "end": 40,
+          "start": 7
+        },
+        {
+          "value": 38674,
+          "end": 40,
+          "start": 8
+        },
+        {
+          "value": 26764,
+          "end": 40,
+          "start": 14
+        },
+        {
+          "value": 62174,
+          "end": 40,
+          "start": 21
+        },
+        {
+          "value": 145083,
+          "end": 40,
+          "start": 22
+        },
+        {
+          "value": 7134,
+          "end": 40,
+          "start": 31
+        },
+        {
+          "value": 393078,
+          "end": 40,
+          "start": 32
+        },
+        {
+          "value": 208910,
+          "end": 40,
+          "start": 33
+        },
+        {
+          "value": 867522,
+          "end": 40,
+          "start": 39
+        },
+        {
+          "value": 2489630,
+          "end": 40,
+          "start": 50
+        },
+        {
+          "value": 1589258,
+          "end": 40,
+          "start": 51
+        },
+        {
+          "value": 265302,
+          "end": 40,
+          "start": 54
+        },
+        {
+          "value": 1023201,
+          "end": 40,
+          "start": 55
+        },
+        {
+          "value": 70689,
+          "end": 50,
+          "start": 1
+        },
+        {
+          "value": 8891,
+          "end": 50,
+          "start": 2
+        },
+        {
+          "value": 21773,
+          "end": 50,
+          "start": 4
+        },
+        {
+          "value": 13010,
+          "end": 50,
+          "start": 6
+        },
+        {
+          "value": 4117,
+          "end": 50,
+          "start": 7
+        },
+        {
+          "value": 5167,
+          "end": 50,
+          "start": 8
+        },
+        {
+          "value": 2643,
+          "end": 50,
+          "start": 14
+        },
+        {
+          "value": 5519,
+          "end": 50,
+          "start": 21
+        },
+        {
+          "value": 23738,
+          "end": 50,
+          "start": 22
+        },
+        {
+          "value": 3437,
+          "end": 50,
+          "start": 31
+        },
+        {
+          "value": 93048,
+          "end": 50,
+          "start": 32
+        },
+        {
+          "value": 34218,
+          "end": 50,
+          "start": 33
+        },
+        {
+          "value": 80637,
+          "end": 50,
+          "start": 39
+        },
+        {
+          "value": 37440,
+          "end": 50,
+          "start": 40
+        },
+        {
+          "value": 808957,
+          "end": 50,
+          "start": 51
+        },
+        {
+          "value": 38761,
+          "end": 50,
+          "start": 54
+        },
+        {
+          "value": 364160,
+          "end": 50,
+          "start": 55
+        },
+        {
+          "value": 141378,
+          "end": 51,
+          "start": 1
+        },
+        {
+          "value": 17782,
+          "end": 51,
+          "start": 2
+        },
+        {
+          "value": 43546,
+          "end": 51,
+          "start": 4
+        },
+        {
+          "value": 26020,
+          "end": 51,
+          "start": 6
+        },
+        {
+          "value": 8234,
+          "end": 51,
+          "start": 7
+        },
+        {
+          "value": 10334,
+          "end": 51,
+          "start": 8
+        },
+        {
+          "value": 5286,
+          "end": 51,
+          "start": 14
+        },
+        {
+          "value": 11038,
+          "end": 51,
+          "start": 21
+        },
+        {
+          "value": 47476,
+          "end": 51,
+          "start": 22
+        },
+        {
+          "value": 6874,
+          "end": 51,
+          "start": 31
+        },
+        {
+          "value": 186096,
+          "end": 51,
+          "start": 32
+        },
+        {
+          "value": 68436,
+          "end": 51,
+          "start": 33
+        },
+        {
+          "value": 161274,
+          "end": 51,
+          "start": 39
+        },
+        {
+          "value": 74880,
+          "end": 51,
+          "start": 40
+        },
+        {
+          "value": 808957,
+          "end": 51,
+          "start": 50
+        },
+        {
+          "value": 77522,
+          "end": 51,
+          "start": 54
+        },
+        {
+          "value": 808957,
+          "end": 51,
+          "start": 55
+        },
+        {
+          "value": 575608,
+          "end": 54,
+          "start": 1
+        },
+        {
+          "value": 157335,
+          "end": 54,
+          "start": 2
+        },
+        {
+          "value": 328788,
+          "end": 54,
+          "start": 4
+        },
+        {
+          "value": 231035,
+          "end": 54,
+          "start": 6
+        },
+        {
+          "value": 65308,
+          "end": 54,
+          "start": 7
+        },
+        {
+          "value": 98513,
+          "end": 54,
+          "start": 8
+        },
+        {
+          "value": 58070,
+          "end": 54,
+          "start": 14
+        },
+        {
+          "value": 129114,
+          "end": 54,
+          "start": 21
+        },
+        {
+          "value": 380799,
+          "end": 54,
+          "start": 22
+        },
+        {
+          "value": 49549,
+          "end": 54,
+          "start": 31
+        },
+        {
+          "value": 752352,
+          "end": 54,
+          "start": 32
+        },
+        {
+          "value": 316813,
+          "end": 54,
+          "start": 33
+        },
+        {
+          "value": 1522590,
+          "end": 54,
+          "start": 39
+        },
+        {
+          "value": 359454,
+          "end": 54,
+          "start": 40
+        },
+        {
+          "value": 4528507,
+          "end": 54,
+          "start": 50
+        },
+        {
+          "value": 2895328,
+          "end": 54,
+          "start": 51
+        },
+        {
+          "value": 1866432,
+          "end": 54,
+          "start": 55
+        },
+        {
+          "value": 292033,
+          "end": 55,
+          "start": 1
+        },
+        {
+          "value": 37182,
+          "end": 55,
+          "start": 2
+        },
+        {
+          "value": 91204,
+          "end": 55,
+          "start": 4
+        },
+        {
+          "value": 54378,
+          "end": 55,
+          "start": 6
+        },
+        {
+          "value": 17128,
+          "end": 55,
+          "start": 7
+        },
+        {
+          "value": 21605,
+          "end": 55,
+          "start": 8
+        },
+        {
+          "value": 11490,
+          "end": 55,
+          "start": 14
+        },
+        {
+          "value": 24160,
+          "end": 55,
+          "start": 21
+        },
+        {
+          "value": 99323,
+          "end": 55,
+          "start": 22
+        },
+        {
+          "value": 14408,
+          "end": 55,
+          "start": 31
+        },
+        {
+          "value": 400992,
+          "end": 55,
+          "start": 32
+        },
+        {
+          "value": 144617,
+          "end": 55,
+          "start": 33
+        },
+        {
+          "value": 320464,
+          "end": 55,
+          "start": 39
+        },
+        {
+          "value": 157593,
+          "end": 55,
+          "start": 40
+        },
+        {
+          "value": 1253754,
+          "end": 55,
+          "start": 50
+        },
+        {
+          "value": 808957,
+          "end": 55,
+          "start": 51
+        },
+        {
+          "value": 164328,
+          "end": 55,
+          "start": 54
+        }
+      ]
+    },
+    {
+      "file": "candidate4.json",
+      "H": 1537279,
+      "fields_order": [
+        "E1",
+        "S1",
+        "deletion_H",
+        "E2",
+        "S2"
+      ],
+      "root_defect": 43200,
+      "in_ports": [
+        33,
+        40
+      ],
+      "ports": [
+        {
+          "physical_name": 1,
+          "fields": [
+            20777,
+            23454,
+            463095,
+            10240852,
+            17114207
+          ],
+          "golden": [
+            1537279,
+            8546715,
+            8567492
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              2,
+              3
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                2,
+                3
+              ],
+              [
+                0,
+                4,
+                4
+              ],
+              [
+                5,
+                1,
+                0
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              5,
+              3,
+              6
+            ],
+            "F49_frobenius": [
+              3,
+              4,
+              6
+            ]
+          }
+        },
+        {
+          "physical_name": 2,
+          "fields": [
+            136621,
+            4921,
+            622455,
+            44396077,
+            4892993
+          ],
+          "golden": [
+            1537279,
+            2378186,
+            2514807
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              6,
+              1
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                6,
+                1
+              ],
+              [
+                4,
+                5,
+                1
+              ],
+              [
+                2,
+                3,
+                5
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              3,
+              1,
+              1
+            ],
+            "F49_frobenius": [
+              0,
+              6,
+              1
+            ]
+          }
+        },
+        {
+          "physical_name": 4,
+          "fields": [
+            44411,
+            8345,
+            331565,
+            19653565,
+            7155221
+          ],
+          "golden": [
+            1537279,
+            3555405,
+            3599816
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              0,
+              3
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                0,
+                3
+              ],
+              [
+                6,
+                0,
+                5
+              ],
+              [
+                1,
+                0,
+                6
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              3,
+              3,
+              6
+            ],
+            "F49_frobenius": [
+              1,
+              4,
+              6
+            ]
+          }
+        },
+        {
+          "physical_name": 6,
+          "fields": [
+            231645,
+            2390,
+            539579,
+            72147206,
+            2726401
+          ],
+          "golden": [
+            1537279,
+            1247378,
+            1479023
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              6,
+              0
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                6,
+                0
+              ],
+              [
+                5,
+                5,
+                4
+              ],
+              [
+                0,
+                3,
+                3
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              0,
+              0,
+              2
+            ],
+            "F49_frobenius": [
+              0,
+              0,
+              2
+            ]
+          }
+        },
+        {
+          "physical_name": 7,
+          "fields": [
+            455138,
+            1231,
+            486453,
+            126330997,
+            1568594
+          ],
+          "golden": [
+            1537279,
+            556728,
+            1011866
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              4,
+              2
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                4,
+                2
+              ],
+              [
+                2,
+                1,
+                6
+              ],
+              [
+                0,
+                2,
+                6
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              4,
+              2,
+              0
+            ],
+            "F49_frobenius": [
+              5,
+              5,
+              0
+            ]
+          }
+        },
+        {
+          "physical_name": 8,
+          "fields": [
+            330691,
+            1575,
+            539579,
+            96537845,
+            1999561
+          ],
+          "golden": [
+            1537279,
+            834435,
+            1165126
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              0,
+              4
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                0,
+                4
+              ],
+              [
+                5,
+                0,
+                2
+              ],
+              [
+                3,
+                0,
+                1
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              6,
+              4,
+              5
+            ],
+            "F49_frobenius": [
+              1,
+              3,
+              5
+            ]
+          }
+        },
+        {
+          "physical_name": 14,
+          "fields": [
+            24060,
+            1672,
+            32685,
+            15545006,
+            2222008
+          ],
+          "golden": [
+            1537279,
+            1098974,
+            1123034
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              2,
+              3
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                2,
+                3
+              ],
+              [
+                0,
+                4,
+                4
+              ],
+              [
+                5,
+                1,
+                0
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              5,
+              3,
+              6
+            ],
+            "F49_frobenius": [
+              3,
+              4,
+              6
+            ]
+          }
+        },
+        {
+          "physical_name": 21,
+          "fields": [
+            21436,
+            18037,
+            293355,
+            10846017,
+            11924214
+          ],
+          "golden": [
+            1537279,
+            5951389,
+            5972825
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              3,
+              5
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                3,
+                5
+              ],
+              [
+                2,
+                6,
+                1
+              ],
+              [
+                4,
+                5,
+                1
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              5,
+              5,
+              4
+            ],
+            "F49_frobenius": [
+              4,
+              2,
+              4
+            ]
+          }
+        },
+        {
+          "physical_name": 22,
+          "fields": [
+            70595,
+            4577,
+            285109,
+            26525943,
+            4875255
+          ],
+          "golden": [
+            1537279,
+            2402330,
+            2472925
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              0,
+              0
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0
+              ]
+            ],
+            "F343_codec_degree": 1,
+            "F49_charge": [
+              1,
+              0,
+              2
+            ],
+            "F49_frobenius": [
+              1,
+              0,
+              2
+            ]
+          }
+        },
+        {
+          "physical_name": 31,
+          "fields": [
+            138239,
+            1231,
+            138239,
+            48021019,
+            2026043
+          ],
+          "golden": [
+            1537279,
+            943902,
+            1082141
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              1,
+              4
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                1,
+                4
+              ],
+              [
+                2,
+                2,
+                5
+              ],
+              [
+                5,
+                4,
+                5
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              0,
+              4,
+              5
+            ],
+            "F49_frobenius": [
+              2,
+              3,
+              5
+            ]
+          }
+        },
+        {
+          "physical_name": 32,
+          "fields": [
+            10170,
+            20984,
+            175955,
+            6010576,
+            15152066
+          ],
+          "golden": [
+            1537279,
+            7570948,
+            7581118
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              0,
+              6
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                0,
+                6
+              ],
+              [
+                3,
+                0,
+                3
+              ],
+              [
+                0,
+                0,
+                5
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              5,
+              6,
+              3
+            ],
+            "F49_frobenius": [
+              1,
+              1,
+              3
+            ]
+          }
+        },
+        {
+          "physical_name": 33,
+          "fields": [
+            9017,
+            13822,
+            105225,
+            5726550,
+            11400381
+          ],
+          "golden": [
+            1537279,
+            5695682,
+            5704699
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              6,
+              0
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                6,
+                0
+              ],
+              [
+                5,
+                5,
+                4
+              ],
+              [
+                0,
+                3,
+                3
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              0,
+              0,
+              2
+            ],
+            "F49_frobenius": [
+              0,
+              0,
+              2
+            ]
+          }
+        },
+        {
+          "physical_name": 39,
+          "fields": [
+            1231,
+            58063,
+            58063,
+            1580479,
+            42397109
+          ],
+          "golden": [
+            1537279,
+            21197939,
+            21199170
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              0,
+              6
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                0,
+                6
+              ],
+              [
+                3,
+                0,
+                3
+              ],
+              [
+                0,
+                0,
+                5
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              5,
+              6,
+              3
+            ],
+            "F49_frobenius": [
+              1,
+              1,
+              3
+            ]
+          }
+        },
+        {
+          "physical_name": 40,
+          "fields": [
+            7996,
+            68456,
+            395031,
+            4462700,
+            36796336
+          ],
+          "golden": [
+            1537279,
+            18394170,
+            18402166
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              4,
+              6
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                4,
+                6
+              ],
+              [
+                5,
+                1,
+                1
+              ],
+              [
+                1,
+                2,
+                0
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              2,
+              6,
+              3
+            ],
+            "F49_frobenius": [
+              5,
+              1,
+              3
+            ]
+          }
+        },
+        {
+          "physical_name": 50,
+          "fields": [
+            1231,
+            718008,
+            776071,
+            1595342,
+            158060503
+          ],
+          "golden": [
+            1537279,
+            79029636,
+            79030867
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              0,
+              6
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                0,
+                6
+              ],
+              [
+                3,
+                0,
+                3
+              ],
+              [
+                0,
+                0,
+                5
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              5,
+              6,
+              3
+            ],
+            "F49_frobenius": [
+              1,
+              1,
+              3
+            ]
+          }
+        },
+        {
+          "physical_name": 51,
+          "fields": [
+            2462,
+            380604,
+            776071,
+            2429476,
+            105079244
+          ],
+          "golden": [
+            1537279,
+            52538391,
+            52540853
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              3,
+              1
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                3,
+                1
+              ],
+              [
+                6,
+                6,
+                6
+              ],
+              [
+                3,
+                5,
+                0
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              0,
+              1,
+              1
+            ],
+            "F49_frobenius": [
+              4,
+              6,
+              1
+            ]
+          }
+        },
+        {
+          "physical_name": 54,
+          "fields": [
+            26635,
+            19607,
+            529475,
+            13338949,
+            14480993
+          ],
+          "golden": [
+            1537279,
+            7227179,
+            7253814
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              1,
+              1
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                1,
+                1
+              ],
+              [
+                5,
+                2,
+                0
+              ],
+              [
+                6,
+                4,
+                6
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              5,
+              1,
+              1
+            ],
+            "F49_frobenius": [
+              2,
+              6,
+              1
+            ]
+          }
+        },
+        {
+          "physical_name": 55,
+          "fields": [
+            4924,
+            190302,
+            776071,
+            3688538,
+            69206008
+          ],
+          "golden": [
+            1537279,
+            34600542,
+            34605466
+          ],
+          "charts": {
+            "observer_mod7": [
+              2,
+              4,
+              0
+            ],
+            "F343_vector_codec": [
+              [
+                2,
+                4,
+                0
+              ],
+              [
+                4,
+                1,
+                5
+              ],
+              [
+                3,
+                2,
+                2
+              ]
+            ],
+            "F343_codec_degree": 3,
+            "F49_charge": [
+              5,
+              0,
+              2
+            ],
+            "F49_frobenius": [
+              5,
+              0,
+              2
+            ]
+          }
+        }
+      ],
+      "joints": [
+        {
+          "value": 156161,
+          "end": 1,
+          "start": 2
+        },
+        {
+          "value": 199875,
+          "end": 1,
+          "start": 4
+        },
+        {
+          "value": 75329,
+          "end": 1,
+          "start": 6
+        },
+        {
+          "value": 43020,
+          "end": 1,
+          "start": 7
+        },
+        {
+          "value": 49295,
+          "end": 1,
+          "start": 8
+        },
+        {
+          "value": 25914,
+          "end": 1,
+          "start": 14
+        },
+        {
+          "value": 197842,
+          "end": 1,
+          "start": 21
+        },
+        {
+          "value": 129029,
+          "end": 1,
+          "start": 22
+        },
+        {
+          "value": 35626,
+          "end": 1,
+          "start": 31
+        },
+        {
+          "value": 265435,
+          "end": 1,
+          "start": 32
+        },
+        {
+          "value": 279214,
+          "end": 1,
+          "start": 33
+        },
+        {
+          "value": 830002,
+          "end": 1,
+          "start": 39
+        },
+        {
+          "value": 738907,
+          "end": 1,
+          "start": 40
+        },
+        {
+          "value": 3168926,
+          "end": 1,
+          "start": 50
+        },
+        {
+          "value": 2110406,
+          "end": 1,
+          "start": 51
+        },
+        {
+          "value": 523039,
+          "end": 1,
+          "start": 54
+        },
+        {
+          "value": 1392055,
+          "end": 1,
+          "start": 55
+        },
+        {
+          "value": 1501897,
+          "end": 2,
+          "start": 1
+        },
+        {
+          "value": 637086,
+          "end": 2,
+          "start": 4
+        },
+        {
+          "value": 461768,
+          "end": 2,
+          "start": 6
+        },
+        {
+          "value": 241634,
+          "end": 2,
+          "start": 7
+        },
+        {
+          "value": 311308,
+          "end": 2,
+          "start": 8
+        },
+        {
+          "value": 197153,
+          "end": 2,
+          "start": 14
+        },
+        {
+          "value": 1030528,
+          "end": 2,
+          "start": 21
+        },
+        {
+          "value": 396651,
+          "end": 2,
+          "start": 22
+        },
+        {
+          "value": 188795,
+          "end": 2,
+          "start": 31
+        },
+        {
+          "value": 1240841,
+          "end": 2,
+          "start": 32
+        },
+        {
+          "value": 1004901,
+          "end": 2,
+          "start": 33
+        },
+        {
+          "value": 3679556,
+          "end": 2,
+          "start": 39
+        },
+        {
+          "value": 3203002,
+          "end": 2,
+          "start": 40
+        },
+        {
+          "value": 13740861,
+          "end": 2,
+          "start": 50
+        },
+        {
+          "value": 9137158,
+          "end": 2,
+          "start": 51
+        },
+        {
+          "value": 1267514,
+          "end": 2,
+          "start": 54
+        },
+        {
+          "value": 6018803,
+          "end": 2,
+          "start": 55
+        },
+        {
+          "value": 677503,
+          "end": 4,
+          "start": 1
+        },
+        {
+          "value": 316934,
+          "end": 4,
+          "start": 2
+        },
+        {
+          "value": 148450,
+          "end": 4,
+          "start": 6
+        },
+        {
+          "value": 71697,
+          "end": 4,
+          "start": 7
+        },
+        {
+          "value": 98080,
+          "end": 4,
+          "start": 8
+        },
+        {
+          "value": 61696,
+          "end": 4,
+          "start": 14
+        },
+        {
+          "value": 450804,
+          "end": 4,
+          "start": 21
+        },
+        {
+          "value": 146230,
+          "end": 4,
+          "start": 22
+        },
+        {
+          "value": 55124,
+          "end": 4,
+          "start": 31
+        },
+        {
+          "value": 508304,
+          "end": 4,
+          "start": 32
+        },
+        {
+          "value": 740887,
+          "end": 4,
+          "start": 33
+        },
+        {
+          "value": 1618316,
+          "end": 4,
+          "start": 39
+        },
+        {
+          "value": 1397819,
+          "end": 4,
+          "start": 40
+        },
+        {
+          "value": 6062845,
+          "end": 4,
+          "start": 50
+        },
+        {
+          "value": 4045682,
+          "end": 4,
+          "start": 51
+        },
+        {
+          "value": 539102,
+          "end": 4,
+          "start": 54
+        },
+        {
+          "value": 2669681,
+          "end": 4,
+          "start": 55
+        },
+        {
+          "value": 2428097,
+          "end": 6,
+          "start": 1
+        },
+        {
+          "value": 700266,
+          "end": 6,
+          "start": 2
+        },
+        {
+          "value": 1023708,
+          "end": 6,
+          "start": 4
+        },
+        {
+          "value": 360263,
+          "end": 6,
+          "start": 7
+        },
+        {
+          "value": 539579,
+          "end": 6,
+          "start": 8
+        },
+        {
+          "value": 405792,
+          "end": 6,
+          "start": 14
+        },
+        {
+          "value": 1674358,
+          "end": 6,
+          "start": 21
+        },
+        {
+          "value": 702036,
+          "end": 6,
+          "start": 22
+        },
+        {
+          "value": 197219,
+          "end": 6,
+          "start": 31
+        },
+        {
+          "value": 2063656,
+          "end": 6,
+          "start": 32
+        },
+        {
+          "value": 1622534,
+          "end": 6,
+          "start": 33
+        },
+        {
+          "value": 5987700,
+          "end": 6,
+          "start": 39
+        },
+        {
+          "value": 5197231,
+          "end": 6,
+          "start": 40
+        },
+        {
+          "value": 22331554,
+          "end": 6,
+          "start": 50
+        },
+        {
+          "value": 14847380,
+          "end": 6,
+          "start": 51
+        },
+        {
+          "value": 2054966,
+          "end": 6,
+          "start": 54
+        },
+        {
+          "value": 9779222,
+          "end": 6,
+          "start": 55
+        },
+        {
+          "value": 4224300,
+          "end": 7,
+          "start": 1
+        },
+        {
+          "value": 1204210,
+          "end": 7,
+          "start": 2
+        },
+        {
+          "value": 1734469,
+          "end": 7,
+          "start": 4
+        },
+        {
+          "value": 604609,
+          "end": 7,
+          "start": 6
+        },
+        {
+          "value": 432234,
+          "end": 7,
+          "start": 8
+        },
+        {
+          "value": 491568,
+          "end": 7,
+          "start": 14
+        },
+        {
+          "value": 2957196,
+          "end": 7,
+          "start": 21
+        },
+        {
+          "value": 1102448,
+          "end": 7,
+          "start": 22
+        },
+        {
+          "value": 1082141,
+          "end": 7,
+          "start": 31
+        },
+        {
+          "value": 3821305,
+          "end": 7,
+          "start": 32
+        },
+        {
+          "value": 2824885,
+          "end": 7,
+          "start": 33
+        },
+        {
+          "value": 10498559,
+          "end": 7,
+          "start": 39
+        },
+        {
+          "value": 9102590,
+          "end": 7,
+          "start": 40
+        },
+        {
+          "value": 39105030,
+          "end": 7,
+          "start": 50
+        },
+        {
+          "value": 25996270,
+          "end": 7,
+          "start": 51
+        },
+        {
+          "value": 3573432,
+          "end": 7,
+          "start": 54
+        },
+        {
+          "value": 17120613,
+          "end": 7,
+          "start": 55
+        },
+        {
+          "value": 3234005,
+          "end": 8,
+          "start": 1
+        },
+        {
+          "value": 935392,
+          "end": 8,
+          "start": 2
+        },
+        {
+          "value": 1365794,
+          "end": 8,
+          "start": 4
+        },
+        {
+          "value": 539579,
+          "end": 8,
+          "start": 6
+        },
+        {
+          "value": 551832,
+          "end": 8,
+          "start": 7
+        },
+        {
+          "value": 654756,
+          "end": 8,
+          "start": 14
+        },
+        {
+          "value": 2239298,
+          "end": 8,
+          "start": 21
+        },
+        {
+          "value": 903523,
+          "end": 8,
+          "start": 22
+        },
+        {
+          "value": 261638,
+          "end": 8,
+          "start": 31
+        },
+        {
+          "value": 2813624,
+          "end": 8,
+          "start": 32
+        },
+        {
+          "value": 2169660,
+          "end": 8,
+          "start": 33
+        },
+        {
+          "value": 8019999,
+          "end": 8,
+          "start": 39
+        },
+        {
+          "value": 6942609,
+          "end": 8,
+          "start": 40
+        },
+        {
+          "value": 29882270,
+          "end": 8,
+          "start": 50
+        },
+        {
+          "value": 19865562,
+          "end": 8,
+          "start": 51
+        },
+        {
+          "value": 2744090,
+          "end": 8,
+          "start": 54
+        },
+        {
+          "value": 13083523,
+          "end": 8,
+          "start": 55
+        },
+        {
+          "value": 420396,
+          "end": 14,
+          "start": 1
+        },
+        {
+          "value": 91127,
+          "end": 14,
+          "start": 2
+        },
+        {
+          "value": 157270,
+          "end": 14,
+          "start": 4
+        },
+        {
+          "value": 44934,
+          "end": 14,
+          "start": 6
+        },
+        {
+          "value": 32136,
+          "end": 14,
+          "start": 7
+        },
+        {
+          "value": 30048,
+          "end": 14,
+          "start": 8
+        },
+        {
+          "value": 409312,
+          "end": 14,
+          "start": 21
+        },
+        {
+          "value": 87088,
+          "end": 14,
+          "start": 22
+        },
+        {
+          "value": 23726,
+          "end": 14,
+          "start": 31
+        },
+        {
+          "value": 1048045,
+          "end": 14,
+          "start": 32
+        },
+        {
+          "value": 257200,
+          "end": 14,
+          "start": 33
+        },
+        {
+          "value": 1331955,
+          "end": 14,
+          "start": 39
+        },
+        {
+          "value": 1095335,
+          "end": 14,
+          "start": 40
+        },
+        {
+          "value": 4826375,
+          "end": 14,
+          "start": 50
+        },
+        {
+          "value": 3193932,
+          "end": 14,
+          "start": 51
+        },
+        {
+          "value": 375299,
+          "end": 14,
+          "start": 54
+        },
+        {
+          "value": 2096768,
+          "end": 14,
+          "start": 55
+        },
+        {
+          "value": 610040,
+          "end": 21,
+          "start": 1
+        },
+        {
+          "value": 145292,
+          "end": 21,
+          "start": 2
+        },
+        {
+          "value": 187528,
+          "end": 21,
+          "start": 4
+        },
+        {
+          "value": 69594,
+          "end": 21,
+          "start": 6
+        },
+        {
+          "value": 40416,
+          "end": 21,
+          "start": 7
+        },
+        {
+          "value": 45330,
+          "end": 21,
+          "start": 8
+        },
+        {
+          "value": 20274,
+          "end": 21,
+          "start": 14
+        },
+        {
+          "value": 119473,
+          "end": 21,
+          "start": 22
+        },
+        {
+          "value": 32816,
+          "end": 21,
+          "start": 31
+        },
+        {
+          "value": 317087,
+          "end": 21,
+          "start": 32
+        },
+        {
+          "value": 265354,
+          "end": 21,
+          "start": 33
+        },
+        {
+          "value": 851702,
+          "end": 21,
+          "start": 39
+        },
+        {
+          "value": 784281,
+          "end": 21,
+          "start": 40
+        },
+        {
+          "value": 3364507,
+          "end": 21,
+          "start": 50
+        },
+        {
+          "value": 2240628,
+          "end": 21,
+          "start": 51
+        },
+        {
+          "value": 251853,
+          "end": 21,
+          "start": 54
+        },
+        {
+          "value": 1478406,
+          "end": 21,
+          "start": 55
+        },
+        {
+          "value": 903507,
+          "end": 22,
+          "start": 1
+        },
+        {
+          "value": 394603,
+          "end": 22,
+          "start": 2
+        },
+        {
+          "value": 602864,
+          "end": 22,
+          "start": 4
+        },
+        {
+          "value": 193726,
+          "end": 22,
+          "start": 6
+        },
+        {
+          "value": 54846,
+          "end": 22,
+          "start": 7
+        },
+        {
+          "value": 125461,
+          "end": 22,
+          "start": 8
+        },
+        {
+          "value": 95184,
+          "end": 22,
+          "start": 14
+        },
+        {
+          "value": 616913,
+          "end": 22,
+          "start": 21
+        },
+        {
+          "value": 29907,
+          "end": 22,
+          "start": 31
+        },
+        {
+          "value": 728239,
+          "end": 22,
+          "start": 32
+        },
+        {
+          "value": 589236,
+          "end": 22,
+          "start": 33
+        },
+        {
+          "value": 2152710,
+          "end": 22,
+          "start": 39
+        },
+        {
+          "value": 1918125,
+          "end": 22,
+          "start": 40
+        },
+        {
+          "value": 8217001,
+          "end": 22,
+          "start": 50
+        },
+        {
+          "value": 5467420,
+          "end": 22,
+          "start": 51
+        },
+        {
+          "value": 761664,
+          "end": 22,
+          "start": 54
+        },
+        {
+          "value": 3603942,
+          "end": 22,
+          "start": 55
+        },
+        {
+          "value": 1627074,
+          "end": 31,
+          "start": 1
+        },
+        {
+          "value": 424719,
+          "end": 31,
+          "start": 2
+        },
+        {
+          "value": 660696,
+          "end": 31,
+          "start": 4
+        },
+        {
+          "value": 333419,
+          "end": 31,
+          "start": 6
+        },
+        {
+          "value": 31315,
+          "end": 31,
+          "start": 7
+        },
+        {
+          "value": 200868,
+          "end": 31,
+          "start": 8
+        },
+        {
+          "value": 169018,
+          "end": 31,
+          "start": 14
+        },
+        {
+          "value": 1117540,
+          "end": 31,
+          "start": 21
+        },
+        {
+          "value": 864753,
+          "end": 31,
+          "start": 22
+        },
+        {
+          "value": 1324348,
+          "end": 31,
+          "start": 32
+        },
+        {
+          "value": 1036600,
+          "end": 31,
+          "start": 33
+        },
+        {
+          "value": 3989827,
+          "end": 31,
+          "start": 39
+        },
+        {
+          "value": 3472640,
+          "end": 31,
+          "start": 40
+        },
+        {
+          "value": 14864656,
+          "end": 31,
+          "start": 50
+        },
+        {
+          "value": 9881506,
+          "end": 31,
+          "start": 51
+        },
+        {
+          "value": 1375794,
+          "end": 31,
+          "start": 54
+        },
+        {
+          "value": 6508007,
+          "end": 31,
+          "start": 55
+        },
+        {
+          "value": 229647,
+          "end": 32,
+          "start": 1
+        },
+        {
+          "value": 50865,
+          "end": 32,
+          "start": 2
+        },
+        {
+          "value": 70800,
+          "end": 32,
+          "start": 4
+        },
+        {
+          "value": 24638,
+          "end": 32,
+          "start": 6
+        },
+        {
+          "value": 15555,
+          "end": 32,
+          "start": 7
+        },
+        {
+          "value": 16174,
+          "end": 32,
+          "start": 8
+        },
+        {
+          "value": 3869,
+          "end": 32,
+          "start": 14
+        },
+        {
+          "value": 157019,
+          "end": 32,
+          "start": 21
+        },
+        {
+          "value": 43821,
+          "end": 32,
+          "start": 22
+        },
+        {
+          "value": 11982,
+          "end": 32,
+          "start": 31
+        },
+        {
+          "value": 101676,
+          "end": 32,
+          "start": 33
+        },
+        {
+          "value": 446534,
+          "end": 32,
+          "start": 39
+        },
+        {
+          "value": 707054,
+          "end": 32,
+          "start": 40
+        },
+        {
+          "value": 1848690,
+          "end": 32,
+          "start": 50
+        },
+        {
+          "value": 1245688,
+          "end": 32,
+          "start": 51
+        },
+        {
+          "value": 199554,
+          "end": 32,
+          "start": 54
+        },
+        {
+          "value": 826840,
+          "end": 32,
+          "start": 55
+        },
+        {
+          "value": 164064,
+          "end": 33,
+          "start": 1
+        },
+        {
+          "value": 65795,
+          "end": 33,
+          "start": 2
+        },
+        {
+          "value": 38919,
+          "end": 33,
+          "start": 4
+        },
+        {
+          "value": 32050,
+          "end": 33,
+          "start": 6
+        },
+        {
+          "value": 16983,
+          "end": 33,
+          "start": 7
+        },
+        {
+          "value": 21066,
+          "end": 33,
+          "start": 8
+        },
+        {
+          "value": 12406,
+          "end": 33,
+          "start": 14
+        },
+        {
+          "value": 102456,
+          "end": 33,
+          "start": 21
+        },
+        {
+          "value": 45894,
+          "end": 33,
+          "start": 22
+        },
+        {
+          "value": 13800,
+          "end": 33,
+          "start": 31
+        },
+        {
+          "value": 151422,
+          "end": 33,
+          "start": 32
+        },
+        {
+          "value": 984128,
+          "end": 33,
+          "start": 39
+        },
+        {
+          "value": 402392,
+          "end": 33,
+          "start": 40
+        },
+        {
+          "value": 1702510,
+          "end": 33,
+          "start": 50
+        },
+        {
+          "value": 1090524,
+          "end": 33,
+          "start": 51
+        },
+        {
+          "value": 184718,
+          "end": 33,
+          "start": 54
+        },
+        {
+          "value": 688406,
+          "end": 33,
+          "start": 55
+        },
+        {
+          "value": 33384,
+          "end": 39,
+          "start": 1
+        },
+        {
+          "value": 9822,
+          "end": 39,
+          "start": 2
+        },
+        {
+          "value": 8614,
+          "end": 39,
+          "start": 4
+        },
+        {
+          "value": 4774,
+          "end": 39,
+          "start": 6
+        },
+        {
+          "value": 2585,
+          "end": 39,
+          "start": 7
+        },
+        {
+          "value": 3139,
+          "end": 39,
+          "start": 8
+        },
+        {
+          "value": 1919,
+          "end": 39,
+          "start": 14
+        },
+        {
+          "value": 20906,
+          "end": 39,
+          "start": 21
+        },
+        {
+          "value": 7392,
+          "end": 39,
+          "start": 22
+        },
+        {
+          "value": 2151,
+          "end": 39,
+          "start": 31
+        },
+        {
+          "value": 21542,
+          "end": 39,
+          "start": 32
+        },
+        {
+          "value": 5976,
+          "end": 39,
+          "start": 33
+        },
+        {
+          "value": 37224,
+          "end": 39,
+          "start": 40
+        },
+        {
+          "value": 819271,
+          "end": 39,
+          "start": 50
+        },
+        {
+          "value": 380604,
+          "end": 39,
+          "start": 51
+        },
+        {
+          "value": 29643,
+          "end": 39,
+          "start": 54
+        },
+        {
+          "value": 190302,
+          "end": 39,
+          "start": 55
+        },
+        {
+          "value": 242149,
+          "end": 40,
+          "start": 1
+        },
+        {
+          "value": 66762,
+          "end": 40,
+          "start": 2
+        },
+        {
+          "value": 76311,
+          "end": 40,
+          "start": 4
+        },
+        {
+          "value": 32401,
+          "end": 40,
+          "start": 6
+        },
+        {
+          "value": 18026,
+          "end": 40,
+          "start": 7
+        },
+        {
+          "value": 21283,
+          "end": 40,
+          "start": 8
+        },
+        {
+          "value": 12877,
+          "end": 40,
+          "start": 14
+        },
+        {
+          "value": 157119,
+          "end": 40,
+          "start": 21
+        },
+        {
+          "value": 54051,
+          "end": 40,
+          "start": 22
+        },
+        {
+          "value": 15204,
+          "end": 40,
+          "start": 31
+        },
+        {
+          "value": 119948,
+          "end": 40,
+          "start": 32
+        },
+        {
+          "value": 100688,
+          "end": 40,
+          "start": 33
+        },
+        {
+          "value": 495088,
+          "end": 40,
+          "start": 39
+        },
+        {
+          "value": 1323072,
+          "end": 40,
+          "start": 50
+        },
+        {
+          "value": 892838,
+          "end": 40,
+          "start": 51
+        },
+        {
+          "value": 237324,
+          "end": 40,
+          "start": 54
+        },
+        {
+          "value": 589563,
+          "end": 40,
+          "start": 55
+        },
+        {
+          "value": 56838,
+          "end": 50,
+          "start": 1
+        },
+        {
+          "value": 14743,
+          "end": 50,
+          "start": 2
+        },
+        {
+          "value": 16959,
+          "end": 50,
+          "start": 4
+        },
+        {
+          "value": 7164,
+          "end": 50,
+          "start": 6
+        },
+        {
+          "value": 3816,
+          "end": 50,
+          "start": 7
+        },
+        {
+          "value": 4714,
+          "end": 50,
+          "start": 8
+        },
+        {
+          "value": 3591,
+          "end": 50,
+          "start": 14
+        },
+        {
+          "value": 38943,
+          "end": 50,
+          "start": 21
+        },
+        {
+          "value": 11969,
+          "end": 50,
+          "start": 22
+        },
+        {
+          "value": 3382,
+          "end": 50,
+          "start": 31
+        },
+        {
+          "value": 42526,
+          "end": 50,
+          "start": 32
+        },
+        {
+          "value": 19798,
+          "end": 50,
+          "start": 33
+        },
+        {
+          "value": 58063,
+          "end": 50,
+          "start": 39
+        },
+        {
+          "value": 105680,
+          "end": 50,
+          "start": 40
+        },
+        {
+          "value": 776071,
+          "end": 50,
+          "start": 51
+        },
+        {
+          "value": 49250,
+          "end": 50,
+          "start": 54
+        },
+        {
+          "value": 380604,
+          "end": 50,
+          "start": 55
+        },
+        {
+          "value": 113676,
+          "end": 51,
+          "start": 1
+        },
+        {
+          "value": 29486,
+          "end": 51,
+          "start": 2
+        },
+        {
+          "value": 33918,
+          "end": 51,
+          "start": 4
+        },
+        {
+          "value": 14328,
+          "end": 51,
+          "start": 6
+        },
+        {
+          "value": 7632,
+          "end": 51,
+          "start": 7
+        },
+        {
+          "value": 9428,
+          "end": 51,
+          "start": 8
+        },
+        {
+          "value": 7182,
+          "end": 51,
+          "start": 14
+        },
+        {
+          "value": 77886,
+          "end": 51,
+          "start": 21
+        },
+        {
+          "value": 23938,
+          "end": 51,
+          "start": 22
+        },
+        {
+          "value": 6764,
+          "end": 51,
+          "start": 31
+        },
+        {
+          "value": 85052,
+          "end": 51,
+          "start": 32
+        },
+        {
+          "value": 39596,
+          "end": 51,
+          "start": 33
+        },
+        {
+          "value": 116126,
+          "end": 51,
+          "start": 39
+        },
+        {
+          "value": 211360,
+          "end": 51,
+          "start": 40
+        },
+        {
+          "value": 776071,
+          "end": 51,
+          "start": 50
+        },
+        {
+          "value": 98500,
+          "end": 51,
+          "start": 54
+        },
+        {
+          "value": 776071,
+          "end": 51,
+          "start": 55
+        },
+        {
+          "value": 396085,
+          "end": 54,
+          "start": 1
+        },
+        {
+          "value": 223194,
+          "end": 54,
+          "start": 2
+        },
+        {
+          "value": 264546,
+          "end": 54,
+          "start": 4
+        },
+        {
+          "value": 108728,
+          "end": 54,
+          "start": 6
+        },
+        {
+          "value": 60420,
+          "end": 54,
+          "start": 7
+        },
+        {
+          "value": 71216,
+          "end": 54,
+          "start": 8
+        },
+        {
+          "value": 42877,
+          "end": 54,
+          "start": 14
+        },
+        {
+          "value": 503809,
+          "end": 54,
+          "start": 21
+        },
+        {
+          "value": 184768,
+          "end": 54,
+          "start": 22
+        },
+        {
+          "value": 51086,
+          "end": 54,
+          "start": 31
+        },
+        {
+          "value": 412000,
+          "end": 54,
+          "start": 32
+        },
+        {
+          "value": 250434,
+          "end": 54,
+          "start": 33
+        },
+        {
+          "value": 1075131,
+          "end": 54,
+          "start": 39
+        },
+        {
+          "value": 966902,
+          "end": 54,
+          "start": 40
+        },
+        {
+          "value": 4137318,
+          "end": 54,
+          "start": 50
+        },
+        {
+          "value": 2750900,
+          "end": 54,
+          "start": 51
+        },
+        {
+          "value": 1812900,
+          "end": 54,
+          "start": 55
+        },
+        {
+          "value": 228091,
+          "end": 55,
+          "start": 1
+        },
+        {
+          "value": 58701,
+          "end": 55,
+          "start": 2
+        },
+        {
+          "value": 67519,
+          "end": 55,
+          "start": 4
+        },
+        {
+          "value": 28520,
+          "end": 55,
+          "start": 6
+        },
+        {
+          "value": 15187,
+          "end": 55,
+          "start": 7
+        },
+        {
+          "value": 18763,
+          "end": 55,
+          "start": 8
+        },
+        {
+          "value": 14260,
+          "end": 55,
+          "start": 14
+        },
+        {
+          "value": 154248,
+          "end": 55,
+          "start": 21
+        },
+        {
+          "value": 47614,
+          "end": 55,
+          "start": 22
+        },
+        {
+          "value": 13451,
+          "end": 55,
+          "start": 31
+        },
+        {
+          "value": 167708,
+          "end": 55,
+          "start": 32
+        },
+        {
+          "value": 77920,
+          "end": 55,
+          "start": 33
+        },
+        {
+          "value": 203650,
+          "end": 55,
+          "start": 39
+        },
+        {
+          "value": 444729,
+          "end": 55,
+          "start": 40
+        },
+        {
+          "value": 1171538,
+          "end": 55,
+          "start": 50
+        },
+        {
+          "value": 776071,
+          "end": 55,
+          "start": 51
+        },
+        {
+          "value": 195644,
+          "end": 55,
+          "start": 54
+        }
+      ]
+    }
+  ],
+  "hostile": [
+    {
+      "H": 462915,
+      "cut": 256,
+      "response": 1061775,
+      "full_automorphism_order": 81,
+      "search_nodes": 361
+    },
+    {
+      "H": 462915,
+      "cut": 256,
+      "response": 1395279,
+      "full_automorphism_order": 27,
+      "search_nodes": 121
+    }
+  ],
+  "input_sha256": {
+    "source.json": "c129c750e192584999558331937570ea7ca9e2e6038b7e803c92beeac0bb2818",
+    "candidate2.json": "9b0d41264dcb1efa2cb7944fdf3c7242619a3af26d72ff457dad288bde80fc16",
+    "candidate4.json": "fd41d36a6bd6256c37d028a42babcdd269a3b4de8bbeebe680807e16678bcf7a",
+    "input_audit.json": "ca8ead97514332b7e981a7a5f6ea9addb679f88fedc96cf5223a9d39c5913231"
+  }
+}

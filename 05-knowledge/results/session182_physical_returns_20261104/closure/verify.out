@@ -1,0 +1,72 @@
+[
+  {
+    "digit": 2,
+    "H": 1537277,
+    "h": 80637,
+    "F": 182080,
+    "J": 0,
+    "c": 80637,
+    "root_E2": 1537277,
+    "port_responses": {
+      "21": 182080
+    },
+    "joint": [
+      {
+        "end": 21,
+        "start": 21,
+        "value": 0
+      }
+    ],
+    "hits_by_clock": {
+      "1": 21,
+      "2": 3,
+      "3": 1
+    },
+    "all_old_names_preserved": true,
+    "source_H": 512425,
+    "candidate_sha256": "9b0d41264dcb1efa2cb7944fdf3c7242619a3af26d72ff457dad288bde80fc16"
+  },
+  {
+    "digit": 4,
+    "H": 1537279,
+    "h": 58063,
+    "F": 190302,
+    "J": 43200,
+    "c": 14863,
+    "root_E2": 1580479,
+    "port_responses": {
+      "33": 127669,
+      "40": 62633
+    },
+    "joint": [
+      {
+        "end": 33,
+        "start": 33,
+        "value": 0
+      },
+      {
+        "end": 33,
+        "start": 40,
+        "value": 37224
+      },
+      {
+        "end": 40,
+        "start": 33,
+        "value": 5976
+      },
+      {
+        "end": 40,
+        "start": 40,
+        "value": 0
+      }
+    ],
+    "hits_by_clock": {
+      "1": 22,
+      "2": 2,
+      "3": 2
+    },
+    "all_old_names_preserved": true,
+    "source_H": 512425,
+    "candidate_sha256": "fd41d36a6bd6256c37d028a42babcdd269a3b4de8bbeebe680807e16678bcf7a"
+  }
+]

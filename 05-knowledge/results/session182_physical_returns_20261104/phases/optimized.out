@@ -1,0 +1,10 @@
+source.json 512425 root defect 3690
+39 [512425, 4499757, 4500460] {'observer_mod7': (4, 3, 6), 'F343_vector_codec': [(4, 3, 6), (3, 6, 5), (1, 5, 3)], 'F343_codec_degree': 3, 'F49_charge': [2, 6, 5], 'F49_frobenius': [5, 1, 5]}
+50 [512425, 20793428, 20794131] {'observer_mod7': (4, 5, 1), 'F343_vector_codec': [(4, 5, 1), (2, 3, 5), (2, 6, 1)], 'F343_codec_degree': 3, 'F49_charge': [3, 1, 3], 'F49_frobenius': [0, 6, 3]}
+candidate2.json 1537277 root defect 0
+39 [1537277, 26050888, 26052597] {'observer_mod7': (0, 3, 4), 'F343_vector_codec': [(0, 3, 4), (1, 6, 4), (0, 5, 6)], 'F343_codec_degree': 3, 'F49_charge': [1, 4, 3], 'F49_frobenius': [3, 3, 3]}
+50 [1537277, 73481029, 73482738] {'observer_mod7': (0, 6, 0), 'F343_vector_codec': [(0, 6, 0), (3, 5, 4), (5, 3, 3)], 'F343_codec_degree': 3, 'F49_charge': [6, 0, 0], 'F49_frobenius': [6, 0, 0]}
+candidate4.json 1537279 root defect 43200
+39 [1537279, 21197939, 21199170] {'observer_mod7': (2, 0, 6), 'F343_vector_codec': [(2, 0, 6), (3, 0, 3), (0, 0, 5)], 'F343_codec_degree': 3, 'F49_charge': [5, 6, 3], 'F49_frobenius': [1, 1, 3]}
+50 [1537279, 79029636, 79030867] {'observer_mod7': (2, 0, 6), 'F343_vector_codec': [(2, 0, 6), (3, 0, 3), (0, 0, 5)], 'F343_codec_degree': 3, 'F49_charge': [5, 6, 3], 'F49_frobenius': [1, 1, 3]}
+PASS all named fields, directed joints, historical codecs and full 81/27 hostile controls
