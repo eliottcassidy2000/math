@@ -66,6 +66,37 @@ At200 it checks983315 exact negative shifts and2303050 transitions, with
 95709 peak states. Observed times were6.83s integral versus19.72s rational;
 timings are measurements, not part of the mathematical certificate.
 
+### IC2. Integration with the incoming integral production engines
+
+Incoming [Session175 projective arithmetic](../session175_tournament_spectrum_20261104/a000568/projective.py)
+already combines the same projective quotient with a degree-local odd
+factorial denominator. The older [Session87 degree buckets](../session87_four_vertices_enumeration_20261028/FAST_COUNTS.md)
+already share multiplicity work across response states. Integer arithmetic,
+the projective quotient and bucket scheduling are therefore inherited.
+
+For used degree d=N-r, let O(d)=odd(d!) and let
+W_odd=O(d)*2^(e+r*h_1)/z_mu be the incoming weight. The exact change to IC1 is
+
+    I=binom(N,d)*2^v2(d!)*W_odd.                          (IC4)
+
+Both sides are integer gauges of the same histories. `bucket_census.py`
+combines the projective packed response with the older bucket loop order,
+and implements both gauges. Store states[d][response], then loop over
+d,k,response, sharing each multiplicity factor and expired-coordinate
+mask. Packing is exact: each digit j*h_1-h_j is nonnegative and at most d,
+because every processed length l>j and j-gcd(l,j)<=l. Width bit_length(N)
+therefore prevents carries. The k=0 branch still expires coordinates.
+Every other transition is IC2 or its algebraically equivalent odd gauge.
+
+The four-engine comparison matches every value tested, including0..30
+for both new gauges and100,150,200 against incoming packed arithmetic and
+the older full-prefix counter. At200 the first observation was2.361s
+incoming packed,1.994s bucket odd,1.850s bucket placement, and1.634s for
+the older full-prefix counter. Thus the bucket combination improves that
+packed scalar implementation in this test, but **does not beat the older
+full-prefix engine**. The2.9x number above is only the comparison with
+Fractions. No general speed or memory improvement is claimed.
+
 ## SF1. Dyadic growth forces a matching-one boundary
 
 Use the proved ordered-run law
@@ -111,6 +142,15 @@ Only the first clone can work; its exterior grandparent must be transitive.
 This is a compactness statement for a *fixed finite exterior*, proved by
 finite pigeonhole and two exponential modes. It gives no license to
 identify different sources having equal H or equal phases.
+
+The same obstruction extends to a bounded number of exterior vertices
+whose orientation may vary with m: there are finitely many base isomorphism
+types, so one recurs infinitely often. SF1's positive leading exponential
+forces matching one even if its H values equal the target only on that
+infinite subsequence; two distinct dyadic affine laws cannot agree there.
+Apply SF2 to that recurring base. Thus a successful one-ready repair of
+SF3's target with a single uniform TT_m module needs unbounded exterior
+order, or must change the module hypothesis itself.
 
 ## SF3. The1182 debt cannot be removed by any fixed exterior with one-ready closure
 
@@ -191,6 +231,68 @@ The adjacent12835=3*4277+4 has exactly one strong one-ready rooted class,
 with parent order12/rank2611. Its two matching-one exterior clones have
 coefficients (4602,3631) and (9105,-5375), neither matching any of the five
 desired +4 continuations. This is an interface gap, not a spectrum gap.
+
+Moving the live mark back into the clone module does not repair these
+continuations either. The same binary B recurrence gives:
+
+|Target coefficient|B(coefficient)|Required +2 constant|Required +4 constant|
+|---:|---:|---:|---:|
+|6300|-1403|233|235|
+|6273|-3161|287|289|
+|6561|-3421|-289|-287|
+|5868|-1267|1097|1099|
+|11727|-11161|-10621|-10619|
+
+Every row disagrees. Combine this table with SF1--SF2 and the complete
+12833/12835 exterior-root fibres: neither ternary continuation of any
+of the five families can return to one-ready sources infinitely often
+within a fixed uniform-clone strong family, even with changing marks.
+The eventual-readiness quantifier matters: a clone mark could fail at
+m=1 and become ready at m>=2, so the empty12833 base fibre alone would
+not have justified this stronger conclusion.
+
+## SF5. An actual return at the first stable clone size
+
+The uniform obstruction does not prevent size-dependent returns. At m=2
+the named repaired source has H=3911 and F_root=3912. Its literal two-birth
+reset gives a strong16-vertex source with H=11735. The complete one-ready
+fibre at11735 has exactly two strong rooted classes, of orders12 and14:
+their parents have (order,rank)=(11,2277),(13,2056). For11737 the five
+parent addresses are (12,2616),(12,2668),(13,2083),(13,2231),(13,2965).
+Parent orders through17 suffice, since5869<f(18)=9375. `first_ready.py`
+uses the complete graded grammar and checks all seven positives literally.
+
+The same script constructs a return of the actual11735 child to the
+order14 one-ready target. It deletes exactly old names2 and5, retaining
+the two clone addresses31/31.1, old ports6/21/31, and both reset vertices.
+It then reverses11 exterior arcs, using BC2's three-helper common-frame
+compiler for each:22 legal native complements,33 helper births and33
+helper deletions. Every completed arc repair is strong; peak repair order
+is17. The live root's whole star and common guard frame are retained.
+Helper-expanded intermediate strongness is not asserted.
+
+This uses no physical relabelling: a target-to-retained-address map designs
+the final Boolean relation on the existing names, and every change is
+implemented by its saved legal guards. One literal birth realizes the
+initial transitive clone, with its address map recorded. Actual starting,
+returned and next source rows, root/spare phases and native clocks remain
+in `first_ready.json`. `audit_first_ready.py` independently reconstructs
+the births, matrix complements, deletions and Hamilton counts.
+
+Two old deletions are **necessary** for a strong one-ready return from this
+16-vertex source: every strong one-ready endpoint of H11735 has at most14
+vertices, so retaining all16 old names as distinct vertices is impossible,
+regardless of extra helpers. The construction attains this loss bound;
+22 is not claimed to be the minimum native-event cost.
+
+The next literal two-birth step gives35207=3*11735+2. Thus we obtain
+
+    3911 -> 11735 --(actual neutral ready return)--> 11735 -> 35207.
+
+This is the first stable clone size on the previously repaired source
+branch. It is not a return of the separate18979 source, a uniform family
+identity, or a ready return at35207. Those distinctions prevent a single
+positive program from being promoted to closed ternary induction.
 
 ## FG1. A source-word recurrence and the two-feedback test
 

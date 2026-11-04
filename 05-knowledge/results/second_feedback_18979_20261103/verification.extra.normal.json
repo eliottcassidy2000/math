@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "mode": "normal",
+  "python": "3.13.14",
+  "inherited_files": 276,
+  "receipts": [
+    {
+      "script": "first_ready",
+      "sha256": "dead6a207ce464a51780fd05cdffb8fd851f59330ace4b9d03f44d7ea3649d6d",
+      "stdout": "PASS actual 11735 return 22 native events; deleted ['2', '5'] ; completed strong 11 of 11"
+    },
+    {
+      "script": "audit_first_ready",
+      "sha256": "05628b0c1600393310979d765e5117d6c33344de83fb230cbff378b0e5215873",
+      "stdout": "PASS independent11735 native return and next35207"
+    }
+  ],
+  "timings": "not hash checked; latest census_timings.json is an observed run"
+}

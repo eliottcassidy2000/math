@@ -9,6 +9,10 @@ positive-odd spectrum and a closed physical ternary source family are OPEN.
   integral and rational projective algorithms at60,100,150,200; original
   implementation at60,100. Known float-rounding failures at14/15 are exact
   controls. Every division checks its remainder; Python -O removes no checks.
+* `bucket_census.py`: both integral gauges through30 and four exact
+  engines at100,150,200. Same projective state counts; all power-of-two
+  divisions checked. The older full-prefix baseline remains faster at200
+  in the first recorded run; no overall speed record is claimed.
 * `exterior_search.py`: every196417 rooted unique-start parent class at
   orders3..15, with literal DP on the two4277 positives and all eligible
   matching-one exterior clones. The all-order consequence additionally
@@ -39,6 +43,11 @@ positive-odd spectrum and a closed physical ternary source family are OPEN.
 * `splice_mobius.py`: all endpoint guards for the two fixed-anchor square
   catalogues, each checked by independent subset matching; all proper
   intersections in parity controls r=2..5. SP2 proves the general-r claim.
+* `first_ready.py` and `audit_first_ready.py`: complete parent banks
+  through17 for11735/11737, seven literal positives, the actual repaired
+  m=2 source, a22-native return with minimum old-name loss2, and next35207.
+  The independent audit uses separate matrix and Hamilton routines;
+  all completed repairs are strong, with no native-cost minimum claimed.
 
 ## Quantifier and type boundaries
 
@@ -74,10 +83,18 @@ From the repository root:
     python -X utf8 -B 05-knowledge/results/second_feedback_18979_20261103/reproduce.py
     python -X utf8 -B -O 05-knowledge/results/second_feedback_18979_20261103/reproduce.py
 
-Both modes compile their own C++ tools, regenerate all ten deterministic
+Both modes compile their own C++ tools, regenerate all thirteen deterministic
 receipts, and compare LF-normalized SHA256 pins. The dependency set
 includes the inherited failed55 source certificate and previous81/27
 construction. Timings regenerate but are intentionally not hash-checked.
 The original measurement quoted in the summary is retained in
 `benchmark_observed.json`.
 `--pin` is a maintainer action after review, not part of verification.
+
+The stored normal and optimized verification files cover the first eleven
+programs. After adding the constructive11735 branch, only its two new
+programs needed rerunning, in both modes; their separate receipts are
+`verification.extra.normal.json` and `verification.extra.optimized.json`.
+The default command now replays all thirteen. For that last targeted batch:
+
+    python -X utf8 -B 05-knowledge/results/second_feedback_18979_20261103/reproduce.py --only=first_ready,audit_first_ready

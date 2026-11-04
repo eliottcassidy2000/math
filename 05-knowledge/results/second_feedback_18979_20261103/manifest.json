@@ -5,6 +5,14 @@
       "sha256": "c71ac3132b8b30aae5d1321668fd701e970ed0f349d80864a18d1f59a63b1edb"
     },
     {
+      "file": "audit_first_ready.py",
+      "sha256": "f9dbccea928c287e9a6bde73f234118cdfc57125a3601066ff89d3d39452d0a8"
+    },
+    {
+      "file": "bucket_census.py",
+      "sha256": "3983713894311906944b8f919b989642e02f5eedd84a319b489e568ffc904117"
+    },
+    {
       "file": "exterior_search.py",
       "sha256": "101f11d345c463ee8a159012735572caf14ea473f0ae78350eafe1b1f26018e9"
     },
@@ -19,6 +27,14 @@
     {
       "file": "feedback_search.py",
       "sha256": "84588b98cffc7b646401de1a6e6ddbabecbf4cf8b81e9e11a8c182c855b06550"
+    },
+    {
+      "file": "first_ready.generated.cpp",
+      "sha256": "fdae74ad49f91837d16193856f9681611e28de86d169d6fc7e30ba614c0fc390"
+    },
+    {
+      "file": "first_ready.py",
+      "sha256": "cd43a64c8f2c2c76fab3166b5c56cf5e1b067f840aaa3796b9477b4823a22365"
     },
     {
       "file": "integer_census.py",
@@ -38,7 +54,7 @@
     },
     {
       "file": "reproduce.py",
-      "sha256": "bbaef3a71bcf4717d732975a8db1299bd50167ef1d9b6c22311d3f0900b298c6"
+      "sha256": "0768bdae5dce0ee3c81b47e9becac71cfc29261a9ad568070143c92767e6ddab"
     },
     {
       "file": "source_pins.py",
@@ -65,6 +81,10 @@
     {
       "file": "integer_census.json",
       "sha256": "9fdba20c5c40853250475ddc622ea40b30cc63563ea53fcb65cf27e9c10e8cf2"
+    },
+    {
+      "file": "bucket_census.json",
+      "sha256": "c8ecfbe2749efa5423837039805a4ffed34e14e9dabf8a9a54cd34027e6c4cd9"
     },
     {
       "file": "exterior_search.json",
@@ -101,6 +121,14 @@
     {
       "file": "splice_mobius.json",
       "sha256": "aaad98fd679b221253f06dd51954447599f57035f58b7afeb2485786dd141f44"
+    },
+    {
+      "file": "first_ready.json",
+      "sha256": "dead6a207ce464a51780fd05cdffb8fd851f59330ace4b9d03f44d7ea3649d6d"
+    },
+    {
+      "file": "audit_first_ready.json",
+      "sha256": "05628b0c1600393310979d765e5117d6c33344de83fb230cbff378b0e5215873"
     }
   ]
 }

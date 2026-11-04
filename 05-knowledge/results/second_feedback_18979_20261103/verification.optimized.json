@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "mode": "optimized",
+  "python": "3.13.14",
+  "inherited_files": 276,
+  "receipts": [
+    {
+      "script": "integer_census",
+      "sha256": "9fdba20c5c40853250475ddc622ea40b30cc63563ea53fcb65cf27e9c10e8cf2",
+      "stdout": "census 60 integer 0.008 fraction 0.027 negative shifts 1058\ncensus 100 integer 0.102 fraction 0.289 negative shifts 13981\ncensus 150 integer 0.921 fraction 2.743 negative shifts 148156\ncensus 200 integer 9.953 fraction 36.052 negative shifts 983315\nPASS integer census"
+    },
+    {
+      "script": "bucket_census",
+      "sha256": "c8ecfbe2749efa5423837039805a4ffed34e14e9dabf8a9a54cd34027e6c4cd9",
+      "stdout": "100 incoming_packed_scalar 0.039\n100 bucket_odd 0.039\n100 bucket_placements 0.034\n100 prior_bucket_full_prefix 0.041\n150 incoming_packed_scalar 0.395\n150 bucket_odd 0.301\n150 bucket_placements 0.304\n150 prior_bucket_full_prefix 0.315\n200 incoming_packed_scalar 2.714\n200 bucket_odd 2.195\n200 bucket_placements 2.195\n200 prior_bucket_full_prefix 1.729\nPASS four-engine bucket census"
+    },
+    {
+      "script": "exterior_search",
+      "sha256": "d7ff52b1e9e7a0611facc2300d7500aa42bd89060940e4b0069876b4ee705d95",
+      "stdout": "4277 parent 10 685 eligible clones 0 hits 0\n4277 parent 13 1047 eligible clones 9 hits 0\nPASS exterior search 2 bases 0 uniform hits"
+    },
+    {
+      "script": "exterior_two",
+      "sha256": "85e6e02388b83d0f2e5f55e78e8614d3d0f87f5c91d224bf2eea222188731a37",
+      "stdout": "PASS exterior two-ready search 1 bases 0 uniform hits"
+    },
+    {
+      "script": "audit_feedback",
+      "sha256": "3d5cd09353f3939715a1520a1ed39d722d07cbcc10d527c572d2b9fd7455e529",
+      "stdout": "PASS feedback automaton 2730 literal cases"
+    },
+    {
+      "script": "feedback_search",
+      "sha256": "cb6cc8ee792b240fc4aacba4c9ea932e6f6da9920cc92807a4ad9636dc034120",
+      "stdout": "PASS two-feedback coefficient search nodes 2589833 pruned 1745718 hits 0 strong 0"
+    },
+    {
+      "script": "offset_fibres",
+      "sha256": "f9b5f0d9c794effb1628ebac295a8fd3a4a2db1aa85cb190ffb15225fe34f61a",
+      "stdout": "PASS offset fibres 196417 parents 7 targets 34 clone queries\nhits []"
+    },
+    {
+      "script": "next_fibres",
+      "sha256": "fb9810efb6c01ee371ecf3f650d58eb30f1dc88398e3bbcdce4184fc25a9eec0",
+      "stdout": "next fibre 12835 12 2611 clones 2 hits 0\nPASS next fibres 1 ready targets"
+    },
+    {
+      "script": "family_certificate",
+      "sha256": "19c896d6df9010abfb37a8fe893620fdcc06b21b8e86abcff0544ab9f4fe3419",
+      "stdout": "positive exterior law 4 2100 77\npositive exterior law 7 2091 95\npositive exterior law 8 2187 -97\npositive exterior law 9 1956 365\npositive exterior law 12 3909 -3541\nPASS positive families, two physical births, full seed observer"
+    },
+    {
+      "script": "source_pins",
+      "sha256": "af9b777351d5110a1ee8490e03ae38fbba689c190222787e37bce07a32747b26",
+      "stdout": "PASS actual 18979 returns, sources/ports/clocks and 81/27"
+    },
+    {
+      "script": "splice_mobius",
+      "sha256": "aaad98fd679b221253f06dd51954447599f57035f58b7afeb2485786dd141f44",
+      "stdout": "PASS square splice recurrence and sharp joint-depth parity hostiles"
+    }
+  ],
+  "timings": "not hash checked; latest census_timings.json is an observed run"
+}

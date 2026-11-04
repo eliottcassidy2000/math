@@ -1,0 +1,65 @@
+{
+  "status": "OBSERVED_WALL_CLOCK_NOT_A_THEOREM",
+  "runs": [
+    {
+      "n": 100,
+      "engine": "incoming_packed_scalar",
+      "seconds": 0.03880170002230443
+    },
+    {
+      "n": 100,
+      "engine": "bucket_odd",
+      "seconds": 0.03876759999548085
+    },
+    {
+      "n": 100,
+      "engine": "bucket_placements",
+      "seconds": 0.03382690000580624
+    },
+    {
+      "n": 100,
+      "engine": "prior_bucket_full_prefix",
+      "seconds": 0.04104199999710545
+    },
+    {
+      "n": 150,
+      "engine": "incoming_packed_scalar",
+      "seconds": 0.3946363999857567
+    },
+    {
+      "n": 150,
+      "engine": "bucket_odd",
+      "seconds": 0.30100360000506043
+    },
+    {
+      "n": 150,
+      "engine": "bucket_placements",
+      "seconds": 0.30439090001164004
+    },
+    {
+      "n": 150,
+      "engine": "prior_bucket_full_prefix",
+      "seconds": 0.3152832000050694
+    },
+    {
+      "n": 200,
+      "engine": "incoming_packed_scalar",
+      "seconds": 2.713549200008856
+    },
+    {
+      "n": 200,
+      "engine": "bucket_odd",
+      "seconds": 2.1950362999923527
+    },
+    {
+      "n": 200,
+      "engine": "bucket_placements",
+      "seconds": 2.1949319999839645
+    },
+    {
+      "n": 200,
+      "engine": "prior_bucket_full_prefix",
+      "seconds": 1.7285843999998178
+    }
+  ]
+}

@@ -3,27 +3,27 @@
   "runs": [
     {
       "n": 60,
-      "integer_seconds": 0.008278799999970943,
-      "fraction_seconds": 0.026783400011481717,
-      "ratio_fraction_over_integer": 3.2351790128491715
+      "integer_seconds": 0.00840219997917302,
+      "fraction_seconds": 0.026881600002525374,
+      "ratio_fraction_over_integer": 3.1993525587534486
     },
     {
       "n": 100,
-      "integer_seconds": 0.09502300000167452,
-      "fraction_seconds": 0.2862635999917984,
-      "ratio_fraction_over_integer": 3.0125716930296225
+      "integer_seconds": 0.10190259999944828,
+      "fraction_seconds": 0.28902820000075735,
+      "ratio_fraction_over_integer": 2.836318209764247
     },
     {
       "n": 150,
-      "integer_seconds": 0.9449052000127267,
-      "fraction_seconds": 3.0801727999933064,
-      "ratio_fraction_over_integer": 3.259769128111286
+      "integer_seconds": 0.9209340999950655,
+      "fraction_seconds": 2.7426564999914262,
+      "ratio_fraction_over_integer": 2.978124601973281
     },
     {
       "n": 200,
-      "integer_seconds": 11.689095100009581,
-      "fraction_seconds": 29.263022800005274,
-      "ratio_fraction_over_integer": 2.503446378837425
+      "integer_seconds": 9.953137599979527,
+      "fraction_seconds": 36.05171260001953,
+      "ratio_fraction_over_integer": 3.6221455031520597
     }
   ]
 }

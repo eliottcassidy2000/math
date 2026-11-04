@@ -2,12 +2,17 @@
   "status": "PASS",
   "mode": "normal",
   "python": "3.13.14",
-  "inherited_files": 268,
+  "inherited_files": 276,
   "receipts": [
     {
       "script": "integer_census",
       "sha256": "9fdba20c5c40853250475ddc622ea40b30cc63563ea53fcb65cf27e9c10e8cf2",
-      "stdout": "census 60 integer 0.008 fraction 0.027 negative shifts 1058\ncensus 100 integer 0.095 fraction 0.286 negative shifts 13981\ncensus 150 integer 0.945 fraction 3.08 negative shifts 148156\ncensus 200 integer 11.689 fraction 29.263 negative shifts 983315\nPASS integer census"
+      "stdout": "census 60 integer 0.01 fraction 0.026 negative shifts 1058\ncensus 100 integer 0.095 fraction 0.29 negative shifts 13981\ncensus 150 integer 0.965 fraction 2.825 negative shifts 148156\ncensus 200 integer 6.72 fraction 18.572 negative shifts 983315\nPASS integer census"
+    },
+    {
+      "script": "bucket_census",
+      "sha256": "c8ecfbe2749efa5423837039805a4ffed34e14e9dabf8a9a54cd34027e6c4cd9",
+      "stdout": "100 incoming_packed_scalar 0.041\n100 bucket_odd 0.029\n100 bucket_placements 0.029\n100 prior_bucket_full_prefix 0.038\n150 incoming_packed_scalar 0.46\n150 bucket_odd 0.309\n150 bucket_placements 0.273\n150 prior_bucket_full_prefix 0.255\n200 incoming_packed_scalar 2.319\n200 bucket_odd 1.635\n200 bucket_placements 1.74\n200 prior_bucket_full_prefix 1.493\nPASS four-engine bucket census"
     },
     {
       "script": "exterior_search",

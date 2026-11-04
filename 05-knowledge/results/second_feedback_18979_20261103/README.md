@@ -35,6 +35,20 @@ At200 the [initial recorded run](benchmark_observed.json) takes6.83s versus19.72
 with the same95709 peak states. This improves exact class counting;
 it does not enumerate all representatives or metagraph edges.
 
+An [incoming-baseline comparison](bucket_benchmark_observed.json) then
+combines the packed projective response with older degree buckets. At200,
+the placement-gauge version takes1.85s versus2.36s for the incoming packed
+scalar engine. The older full-prefix engine still wins at1.63s. Thus this
+is an exact alternative and a scheduling improvement for one scalar
+implementation, not a new overall performance record.
+
+A subsequent constructive test gives an actual
+[3911->11735 return->35207](PROOFS.md#sf5-an-actual-return-at-the-first-stable-clone-size).
+The neutral11735 return takes22 native complements and exactly two old
+deletions, proved minimal for old-name loss. Both clone addresses and old
+ports6/21/31 survive; all completed repairs are strong. This preserves a
+positive size-dependent route while the uniform one-ready route is blocked.
+
 [SP1--SP2](SPLICES.md) turn minimum square-sum splicing into an all-order
 distinct-connector recurrence. It recovers the9/17 fixed-anchor catalogues
 and proves a sharp joint-data obstruction: all proper intersections of

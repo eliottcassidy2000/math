@@ -1,0 +1,21 @@
+{
+  "status": "PASS_INDEPENDENT_MATRIX_AND_HAMILTON_REPLAY",
+  "source_H": 11735,
+  "target_H": 11735,
+  "next_H": 35207,
+  "old_names_deleted": [
+    "2",
+    "5"
+  ],
+  "native_events": 22,
+  "completed_repairs_strong": true,
+  "persistent_pins": [
+    "6",
+    "21",
+    "31",
+    "31.1",
+    "reset-internal",
+    "reset-tip"
+  ],
+  "scope": "actual first stable clone size only; exact old-loss minimum via complete ready fibre, no native-cost minimum or uniform return claim"
+}

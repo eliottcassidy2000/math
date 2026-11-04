@@ -388,6 +388,14 @@
       "sha256": "d06b0101e45faa2158f6d423c8523f50882029b4c18341cfb988a57aa46cf6e1"
     },
     {
+      "path": "05-knowledge/results/orbit_spectrum_session_20261103/README.md",
+      "sha256": "5d4fe5c88b63ce28235797436c96c6c42ee16ea9ebaee699085964c2bcb6a472"
+    },
+    {
+      "path": "05-knowledge/results/orbit_spectrum_session_20261103/counting/NOTE.md",
+      "sha256": "27007bf5eb79679af81c253133ecdeb42d74c589f30d64c20cffe669270de26d"
+    },
+    {
       "path": "05-knowledge/results/ordered_response_ten_20261103/NEUTRAL_CARRIES.md",
       "sha256": "1eeddc0610234012034affe80e4bd512aa529aeb8001abb782b4991251c49b33"
     },
@@ -968,8 +976,32 @@
       "sha256": "e0f977f98ec8115775e4bd113e0cdf67faa4a7338838f934550d47ec314b9913"
     },
     {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/a000568/README.md",
+      "sha256": "8f2b0af0974c459052ba7e78abd7e625aee77ea7157e3842a84cc8c0fa22c894"
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/a000568/inherited_local_scale.py",
+      "sha256": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad"
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/a000568/projective.py",
+      "sha256": "1a37aa21e66f820473b14f38c544c021642b8a7436d3e970588cfb8565a0f63a"
+    },
+    {
+      "path": "05-knowledge/results/session175_tournament_spectrum_20261104/clone_obstruction/PROOF.md",
+      "sha256": "5ca4f9d3e3ceb199b80dec254cddfb94f34273c9bc45404ec63d4e6b3e96809d"
+    },
+    {
       "path": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/finite-fields/README.md",
       "sha256": "4c7ba043935f21db5e54efd46652d4aee61aea98290f4fb2f6a311ccc437397c"
+    },
+    {
+      "path": "05-knowledge/results/session87_four_vertices_enumeration_20261028/FAST_COUNTS.md",
+      "sha256": "ab0595f9d9579655cd798afbe2dcb1dd2d848f2f08709b238da93b7569974e84"
+    },
+    {
+      "path": "05-knowledge/results/session87_four_vertices_enumeration_20261028/fast_counts.py",
+      "sha256": "3844a4a590daaf01410cf99d3584441bfa2f8e5e95371ccaafe534fd152b0ece"
     },
     {
       "path": "05-knowledge/results/session98_tournament_growth_20261029/README.md",

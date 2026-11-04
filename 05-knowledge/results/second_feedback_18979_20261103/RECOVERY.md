@@ -77,3 +77,35 @@ f(18)=9375. These are cited inputs, not discoveries or finite extrapolations.
 
 These maps are not interchangeable. No universal meta-pattern is promoted
 without distinct-thread evidence beyond this related collection.
+
+## Incoming mainline integration
+
+The clean rebase brought83d4954e15 and the six Session175 checkpoints.
+[Session175](../../../00-navigation/S175.md) audits the same projective
+quotient, already with integral odd-factorial and packed implementations.
+This prompted the four-engine benchmark and the combined bucket version,
+rather than leaving Fractions as the only performance baseline. The
+older Session87 full-prefix engine remains fastest in the observed200 test.
+IC4 identifies the exact degree-dependent scale between the integer gauges.
+
+The [orbit-spectrum packet](../orbit_spectrum_session_20261103/README.md)
+already supplies a full256 checkpoint and certified leading bits at10000.
+Our200 controls are not a record. Its distinction between full integers,
+leading bits and low residues is another example of selecting the carrier
+for the actual query, without pretending these answers reconstruct sources.
+
+[Session175's finite-clone-library theorem](../session175_tournament_spectrum_20261104/clone_obstruction/PROOF.md)
+rules out prime-lane completeness for any fixed finite set of transitive
+inflation templates. SF3 is a different, local obstruction: it excludes the
+specific1182 repair even with arbitrarily large fixed exteriors. Completing
+the prime lane therefore requires a grammar allowing unbounded distinct
+interface structure or genuinely different internal modules. A successful
+fixed split-clone test would be a local return mechanism, not yet that proof.
+
+The final positive probe deliberately changed scale: it asked for the first
+actual stable clone, m=2, rather than another uniform coefficient match.
+The complete11735 fibre has endpoints of orders12 and14, so its16-vertex
+reset source needs at least two old deletions. A literal22-native program
+attains that bound while retaining the old ports and both clone addresses,
+then reaches35207. Thus the obstruction redirected construction to a
+size-dependent return; it did not become a reason to abandon positive work.
