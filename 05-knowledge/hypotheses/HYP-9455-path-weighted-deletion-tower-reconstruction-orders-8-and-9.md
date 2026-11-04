@@ -1,7 +1,7 @@
 ---
 id: HYP-9455
-title: "Path-weighted deletion tower: every converse-merged tournament node of order n >= 4 is determined, up to a positive scalar, by its Hamiltonian-endpoint-weighted converse-merged deck W(T) = sum_x (h_s(x) + h_e(x)) [T - x] (equivalently by THM-796's primitive face row), and the face matrix R_n has full column rank |M_(n-1)|; pre-registered tests at orders 8 (3,528 nodes) and 9 (97,144 nodes)"
-status: OPEN (opus-2026-11-04-S72). P1, P2, P3 CONFIRMED at orders 8 and 9 (3,528 and 97,144 distinct rows; ranks 272 and 3,528); P4 REFUTED at order 8 (the unweighted merged deck is injective there) and confirmed at order 9; second pre-registration P6-P7 (order 10) committed before its run
+title: "Path-weighted deletion tower (and the parity law of converse-merged decks): every converse-merged tournament node of order n >= 4 is determined, up to a positive scalar, by its Hamiltonian-endpoint-weighted converse-merged deck W(T) = sum_x (h_s(x) + h_e(x)) [T - x] (equivalently by THM-796's primitive face row), and the face matrix R_n has full column rank |M_(n-1)|; pre-registered tests at orders 8 (3,528 nodes) and 9 (97,144 nodes)"
+status: "OPEN for all n (opus-2026-11-04-S72). CONFIRMED at orders 8, 9, 10 by pre-registered tests: P1, P2, P3, P6, P7 confirmed; P4 refuted at order 8 (the unweighted merged deck is injective at even orders 4-10 and collides at odd orders 3-9: the parity law, explained in THM-4863 (P), (L), (H)); (C) even-order deck reconstruction and (D) odd-order failure added as post-census conjectures"
 session: opus-2026-11-04-S72
 date: 2026-11-04
 related: [THM-4863, THM-796, THM-830, THM-4854, HYP-6865]
@@ -124,3 +124,40 @@ collision is resolved by recomputing the exact vectors.
   - 4,870,920 merged nodes.
 
 The rank statement (B) is not tested at order 10: the Gram matrix would be 97,144 x 97,144.
+
+## Results of the order-10 run (2026-11-04, after the second pre-registration commit e58a09c18b)
+
+Run: `deletion_tower_order10 10` (2 min on 12 threads). Output: `04-computation/experiments/deletion_tower_order10_20261104.out`, run 1.
+
+- **(P8) Sanity checks: pass.** 9,733,056 ordinary classes, 8,784 self-converse, 4,870,920 merged nodes.
+- **(P6) CONFIRMED.** The 4,870,920 primitive rows are pairwise distinct; no two rows share even a 64-bit hash. So (A)
+  holds at n = 10.
+- **(P7) CONFIRMED.** The unweighted converse-merged deck is injective at order 10.
+
+## What the tests established, and what remains open
+
+**Established.** (A) holds at every order 4 <= n <= 10, and (B) at every order 3 <= n <= 9.
+
+**The parity law.** The unweighted converse-merged deck collides at orders 3, 5, 7 and 9 (1, 2, 5 and 3 classes) and
+is injective at orders 4, 6, 8 and 10.
+
+The note, THM-4863 (P), (L) and (H), explains it as follows.
+- **Even orders.** In the census (which reproduces McKay's complete list), every pair of non-isomorphic tournaments with
+  the same ordinary deck consists of mutual converses.
+- **Odd orders.**
+  - The source lifts {1 -> S, 1 -> S^op} of those even-order converse pairs collide in the merged deck one order up
+    (Lemma L).
+  - Each odd order 3, 5, 7, 9 has exactly one further collision class.
+- **H.** The merged deck determines H at even order and H - 2hc at odd order (Theorem H).
+
+**Open conjectures (formulated after the census, not pre-registered).**
+- **(A)** The tower is injective for every n >= 4.
+- **(B)** R_n has full column rank for every n >= 3.
+- **(C)** For every even n >= 4, the unweighted converse-merged deck determines the merged node.
+  - Equivalently: every same-deck pair of even order is a converse pair, and no two non-converse tournaments of even
+    order have the same deck up to converse cards.
+  - Stockmeyer's even families (orders 2^t and 2^s + 2^t with s >= 1) would have to consist of converse pairs. This is
+    visible at order 4 (G_4 = 1 -> C_3, G*_4 = C_3 -> 1) and confirmed at orders 8 and 10.
+- **(D)** For every odd n >= 3, the unweighted converse-merged deck has a collision.
+  - Lemma L forces this whenever order n - 1 has a non-isomorphic converse same-deck pair, for instance at
+    n = 11 (from Stockmeyer's 2 + 8 pair).

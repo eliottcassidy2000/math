@@ -1,0 +1,75 @@
+### run 1: deletion_tower_order10 10   (HYP-9455 P6-P8; the pre-registered order-10 test)
+deletion_tower_order10 NMAX=10 threads=12
+n=1 ordinary=1 self_converse=1 merged=1
+n=2 ordinary=1 self_converse=1 merged=1
+n=3 ordinary=2 self_converse=2 merged=2
+n=4 ordinary=4 self_converse=2 merged=3
+n=4 merged nodes=3 self_converse=2 (node vectors in 0.0 s)
+  order 4 primitive W: 0 hash groups of size > 1, 0 exact collision classes
+  order 4 unweighted deck: 0 hash groups of size > 1, 0 exact collision classes
+n=5 ordinary=12 self_converse=8 merged=10
+n=5 merged nodes=10 self_converse=8 (node vectors in 0.0 s)
+  order 5 primitive W: 0 hash groups of size > 1, 0 exact collision classes
+    order 5 exact unweighted-deck collision class (size 2): codes 40 (H=15, Ham. cycles=3) 305 (H=13, Ham. cycles=2)
+    order 5 exact unweighted-deck collision class (size 2): codes 2 (H=3, Ham. cycles=0) 32 (H=3, Ham. cycles=0)
+  order 5 unweighted deck: 2 hash groups of size > 1, 2 exact collision classes
+n=6 ordinary=56 self_converse=12 merged=34
+n=6 merged nodes=34 self_converse=12 (node vectors in 0.0 s)
+  order 6 primitive W: 0 hash groups of size > 1, 0 exact collision classes
+  order 6 unweighted deck: 0 hash groups of size > 1, 0 exact collision classes
+n=7 ordinary=456 self_converse=88 merged=272
+n=7 merged nodes=272 self_converse=88 (node vectors in 0.0 s)
+  order 7 primitive W: 0 hash groups of size > 1, 0 exact collision classes
+    order 7 exact unweighted-deck collision class (size 2): codes 182418 (H=143, Ham. cycles=15) 1364052 (H=141, Ham. cycles=14)
+    order 7 exact unweighted-deck collision class (size 2): codes 35393 (H=29, Ham. cycles=0) 65796 (H=29, Ham. cycles=0)
+    order 7 exact unweighted-deck collision class (size 2): codes 65688 (H=43, Ham. cycles=0) 364741 (H=43, Ham. cycles=0)
+    order 7 exact unweighted-deck collision class (size 2): codes 33409 (H=23, Ham. cycles=0) 98436 (H=23, Ham. cycles=0)
+    order 7 exact unweighted-deck collision class (size 2): codes 41153 (H=31, Ham. cycles=0) 295172 (H=31, Ham. cycles=0)
+  order 7 unweighted deck: 5 hash groups of size > 1, 5 exact collision classes
+n=8 ordinary=6880 self_converse=176 merged=3528
+n=8 merged nodes=3528 self_converse=176 (node vectors in 0.0 s)
+  order 8 primitive W: 0 hash groups of size > 1, 0 exact collision classes
+  order 8 unweighted deck: 0 hash groups of size > 1, 0 exact collision classes
+n=9 ordinary=191536 self_converse=2752 merged=97144
+n=9 merged nodes=97144 self_converse=2752 (node vectors in 1.1 s)
+  order 9 primitive W: 0 hash groups of size > 1, 0 exact collision classes
+    order 9 exact unweighted-deck collision class (size 2): codes 3565331737 (H=645, Ham. cycles=0) 3573618716 (H=645, Ham. cycles=0)
+    order 9 exact unweighted-deck collision class (size 2): codes 2617447753 (H=633, Ham. cycles=0) 11142336824 (H=633, Ham. cycles=0)
+    order 9 exact unweighted-deck collision class (size 2): codes 36680122700 (H=2919, Ham. cycles=211) 38881928326 (H=2917, Ham. cycles=210)
+  order 9 unweighted deck: 3 hash groups of size > 1, 3 exact collision classes
+n=10 ordinary=9733056 (generated in 32.9 s)
+n=10 merged nodes=4870920 self_converse=8784 (node vectors in 120.3 s)
+  order 10 primitive W: 0 hash groups of size > 1, 0 exact collision classes
+  order 10 unweighted deck: 0 hash groups of size > 1, 0 exact collision classes
+
+### run 2: deletion_tower_order10 10 full   (ordinary same-deck pairs; McKay census; H and Hamiltonian cycles)
+deletion_tower_order10 NMAX=10 threads=12 mode=full (ordinary decks)
+n=1 ordinary classes=1
+n=2 ordinary classes=1
+n=3 ordinary classes=2
+    order 3 same full deck (size 2): 0(self-converse)[H=1, Ham. cycles=0] 2(self-converse)[H=3, Ham. cycles=1] -> NOT a converse pair
+  order 3 full (ordinary) deck: 1 collision classes among 2 classes: 0 converse pairs, 1 others
+n=4 ordinary classes=4
+    order 4 same full deck (size 2): 2[H=3, Ham. cycles=0] 16[H=3, Ham. cycles=0] -> the two are converses of each other
+  order 4 full (ordinary) deck: 1 collision classes among 4 classes: 1 converse pairs, 0 others
+n=5 ordinary classes=12
+    order 5 same full deck (size 2): 40(self-converse)[H=15, Ham. cycles=3] 305(self-converse)[H=13, Ham. cycles=2] -> NOT a converse pair
+  order 5 full (ordinary) deck: 1 collision classes among 12 classes: 0 converse pairs, 1 others
+n=6 ordinary classes=56
+    order 6 same full deck (size 2): 4897[H=29, Ham. cycles=3] 8324[H=29, Ham. cycles=3] -> the two are converses of each other
+    order 6 same full deck (size 2): 8280[H=43, Ham. cycles=5] 29797[H=43, Ham. cycles=5] -> the two are converses of each other
+    order 6 same full deck (size 2): 4417[H=23, Ham. cycles=1] 12356[H=23, Ham. cycles=1] -> the two are converses of each other
+    order 6 same full deck (size 2): 6241[H=31, Ham. cycles=3] 20612[H=31, Ham. cycles=3] -> the two are converses of each other
+  order 6 full (ordinary) deck: 4 collision classes among 56 classes: 4 converse pairs, 0 others
+n=7 ordinary classes=456
+  order 7 full (ordinary) deck: 0 collision classes among 456 classes: 0 converse pairs, 0 others
+n=8 ordinary classes=6880
+    order 8 same full deck (size 2): 122729113[H=645, Ham. cycles=49] 123751452[H=645, Ham. cycles=49] -> the two are converses of each other
+    order 8 same full deck (size 2): 96520905[H=633, Ham. cycles=48] 226797752[H=633, Ham. cycles=48] -> the two are converses of each other
+  order 8 full (ordinary) deck: 2 collision classes among 6880 classes: 2 converse pairs, 0 others
+n=9 ordinary classes=191536
+    order 9 same full deck (size 2): 36680122700(self-converse)[H=2919, Ham. cycles=211] 38881928326(self-converse)[H=2917, Ham. cycles=210] -> NOT a converse pair
+  order 9 full (ordinary) deck: 1 collision classes among 191536 classes: 0 converse pairs, 1 others
+n=10 ordinary classes=9733056
+    order 10 same full deck (size 2): 28486105314520[H=15483, Ham. cycles=939] 29929901798802[H=15483, Ham. cycles=939] -> the two are converses of each other
+  order 10 full (ordinary) deck: 1 collision classes among 9733056 classes: 1 converse pairs, 0 others

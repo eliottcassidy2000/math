@@ -1,0 +1,109 @@
+deletion_tower_line_fraction NMAX=9
+  n=3 deck collision #1 (size 2), deck {0:3}
+     node 0: H=1 |Aut|=1 self-converse, code 0, path-weighted deck W={0:2}
+     node 1: H=3 |Aut|=3 self-converse, code 2, path-weighted deck W={0:6}
+  n=3: 1 unweighted-deck collision classes
+  n=4: 0 unweighted-deck collision classes
+n=4 Phi type by colour: pure-blue (zero/single/other) = 0/1/0; mixed = 0/1/0; pure-black = 1/0/0
+n=4 line fraction Phi: faces agree=yes, sum over nodes = 0: yes, Phi = 0 at 1 nodes, Phi a single ratio p_a/p_b at 2 nodes, 3 distinct values over 3 nodes
+   node 0 (H=1 |Aut|=1 sc, pure-blue, tilings 1): Phi = -1*[0] +1*[1]
+   node 1 (H=3 |Aut|=3 pair, pure-black, tilings 2): Phi = 0
+   node 2 (H=5 |Aut|=1 sc, mixed, tilings 5): Phi = +1*[0] -1*[1]
+  n=5 deck collision #1 (size 2), deck {0:3,1:2}
+     node 1: H=3 |Aut|=3 converse pair, code 2, path-weighted deck W={0:3,1:3}
+     node 2: H=3 |Aut|=3 self-converse, code 32, path-weighted deck W={1:6}
+  n=5 deck collision #2 (size 2), deck {1:2,2:3}
+     node 3: H=15 |Aut|=3 self-converse, code 40, path-weighted deck W={1:12,2:18}
+     node 7: H=13 |Aut|=1 self-converse, code 305, path-weighted deck W={1:10,2:16}
+  n=5: 2 unweighted-deck collision classes
+n=5 Phi type by colour: pure-blue (zero/single/other) = 0/3/0; mixed = 1/0/4; pure-black = 0/0/2
+n=5 line fraction Phi: faces agree=yes, sum over nodes = 0: yes, Phi = 0 at 1 nodes, Phi a single ratio p_a/p_b at 3 nodes, 9 distinct values over 10 nodes
+   node 0 (H=1 |Aut|=1 sc, pure-blue, tilings 1): Phi = -1*[0] +1*[2]
+   node 1 (H=3 |Aut|=3 pair, pure-black, tilings 2): Phi = -1*[0] -1*[1] +2*[2]
+   node 2 (H=3 |Aut|=3 sc, pure-blue, tilings 1): Phi = -1*[1] +1*[2]
+   node 3 (H=15 |Aut|=3 sc, mixed, tilings 5): Phi = 0
+   node 4 (H=15 |Aut|=5 sc, pure-blue, tilings 3): Phi = +1*[1] -1*[2]
+   node 5 (H=11 |Aut|=1 sc, mixed, tilings 11): Phi = +1*[0] +3*[1] -4*[2]
+   node 6 (H=5 |Aut|=1 pair, pure-black, tilings 10): Phi = -1*[0] -1*[1] +2*[2]
+   node 7 (H=13 |Aut|=1 sc, mixed, tilings 13): Phi = +1*[0] -2*[1] +1*[2]
+   node 8 (H=9 |Aut|=1 sc, mixed, tilings 9): Phi = +4*[1] -4*[2]
+   node 9 (H=9 |Aut|=1 sc, mixed, tilings 9): Phi = +1*[0] -3*[1] +2*[2]
+  n=6: 0 unweighted-deck collision classes
+n=6 Phi type by colour: pure-blue (zero/single/other) = 0/2/0; mixed = 0/0/10; pure-black = 0/0/22
+n=6 line fraction Phi: faces agree=yes, sum over nodes = 0: yes, Phi = 0 at 0 nodes, Phi a single ratio p_a/p_b at 2 nodes, 34 distinct values over 34 nodes
+   node 0 (H=1 |Aut|=1 sc, pure-blue, tilings 1): Phi = -1*[0] +1*[9]
+   node 1 (H=3 |Aut|=3 pair, pure-black, tilings 2): Phi = -1*[0] -1*[1] +1*[8] +1*[9]
+   node 2 (H=3 |Aut|=3 pair, pure-black, tilings 2): Phi = -1*[1] -1*[2] +1*[7] +1*[8]
+   node 3 (H=15 |Aut|=3 pair, pure-black, tilings 10): Phi = -1*[1] -1*[2] -4*[3] +1*[4] +1*[5] -1*[6] +1*[7] +1*[8] +3*[9]
+   node 4 (H=33 |Aut|=3 pair, pure-black, tilings 22): Phi = -2*[1] -10*[3] +4*[4] -7*[5] +4*[6] +3*[7] +2*[8] +6*[9]
+   node 5 (H=15 |Aut|=5 pair, pure-black, tilings 6): Phi = +2*[3] -3*[4] +2*[5] -3*[6] +2*[7]
+   node 6 (H=37 |Aut|=1 pair, pure-black, tilings 74): Phi = +1*[2] -10*[3] +7*[4] +1*[5] +5*[6] -12*[7] +8*[8]
+   node 7 (H=11 |Aut|=1 pair, pure-black, tilings 22): Phi = -1*[0] +2*[3] +1*[4] -5*[5] -8*[6] +5*[7] +3*[8] +3*[9]
+   node 8 (H=37 |Aut|=1 pair, pure-black, tilings 74): Phi = +1*[1] +2*[2] +2*[3] +5*[4] -9*[5] +2*[6] -9*[7] -2*[8] +8*[9]
+   node 9 (H=5 |Aut|=1 pair, pure-black, tilings 10): Phi = -2*[0] -3*[1] +1*[3] +1*[5] -5*[6] +1*[7] +4*[8] +3*[9]
+   node 10 (H=27 |Aut|=3 pair, pure-black, tilings 18): Phi = -2*[2] -5*[3] +6*[6] +4*[7] -7*[8] +4*[9]
+   node 11 (H=13 |Aut|=1 pair, pure-black, tilings 26): Phi = -2*[1] -2*[2] +2*[3] +1*[4] +4*[5] -6*[6] -4*[7] +5*[8] +2*[9]
+   node 12 (H=19 |Aut|=1 pair, pure-black, tilings 38): Phi = +3*[1] +4*[3] -3*[5] +3*[6] +5*[7] -1*[8] -11*[9]
+   node 13 (H=9 |Aut|=1 pair, pure-black, tilings 18): Phi = -2*[0] +2*[1] +1*[3] +2*[5] -5*[6] +2*[7] -7*[8] +7*[9]
+   node 14 (H=5 |Aut|=1 sc, mixed, tilings 5): Phi = +1*[3] +1*[5] -5*[6] +1*[7] +1*[8] +1*[9]
+   node 15 (H=37 |Aut|=1 sc, mixed, tilings 37): Phi = +1*[1] -13*[3] +2*[5] +3*[6] +6*[7] -10*[8] +11*[9]
+   node 16 (H=33 |Aut|=1 sc, mixed, tilings 33): Phi = +1*[1] +2*[2] +2*[3] +3*[5] -3*[6] -5*[7] -7*[8] +7*[9]
+   node 17 (H=23 |Aut|=1 pair, pure-black, tilings 46): Phi = -2*[0] +4*[1] +1*[4] -16*[5] +10*[6] +9*[7] -16*[8] +10*[9]
+   node 18 (H=9 |Aut|=1 pair, pure-black, tilings 18): Phi = -1*[1] -3*[2] +2*[3] +1*[5] -2*[6] +5*[7] +5*[8] -7*[9]
+   node 19 (H=29 |Aut|=1 pair, pure-black, tilings 58): Phi = +1*[0] +2*[1] -5*[2] +5*[3] +1*[4] -2*[5] +13*[6] +1*[7] -16*[9]
+   node 20 (H=31 |Aut|=1 pair, pure-black, tilings 62): Phi = +1*[0] +2*[2] -7*[3] +3*[4] +6*[5] -2*[6] -3*[7] +9*[8] -9*[9]
+   node 21 (H=9 |Aut|=9 sc, pure-blue, tilings 1): Phi = -1*[1] +1*[8]
+   node 22 (H=43 |Aut|=1 pair, pure-black, tilings 86): Phi = -6*[3] -3*[4] +5*[5] +7*[6] -7*[7] +7*[8] -3*[9]
+   node 23 (H=25 |Aut|=1 pair, pure-black, tilings 50): Phi = -2*[1] +3*[2] +1*[3] +2*[4] +1*[5] -1*[6] -11*[7] +2*[8] +5*[9]
+   node 24 (H=45 |Aut|=3 sc, mixed, tilings 15): Phi = +2*[4] +3*[5] +1*[6] -9*[7] +2*[8] +1*[9]
+   node 25 (H=29 |Aut|=1 sc, mixed, tilings 29): Phi = +2*[0] +4*[3] +1*[4] -3*[5] -5*[6] +2*[7] +7*[8] -8*[9]
+   node 26 (H=45 |Aut|=3 sc, mixed, tilings 15): Phi = +2*[4] -8*[5] +2*[6] +2*[7] +2*[8]
+   node 27 (H=29 |Aut|=1 sc, mixed, tilings 29): Phi = +1*[0] +1*[2] +3*[3] +1*[4] +4*[5] -3*[6] -6*[7] +6*[8] -7*[9]
+   node 28 (H=23 |Aut|=1 pair, pure-black, tilings 46): Phi = +2*[0] -3*[1] +2*[2] +4*[3] +6*[5] -8*[6] -5*[7] +3*[8] -1*[9]
+   node 29 (H=33 |Aut|=1 pair, pure-black, tilings 66): Phi = +1*[0] +2*[1] +1*[2] +10*[3] -13*[4] +7*[5] -2*[6] +4*[7] -3*[8] -7*[9]
+   node 30 (H=17 |Aut|=1 sc, mixed, tilings 17): Phi = -2*[0] +5*[1] +5*[6] +2*[7] -15*[8] +5*[9]
+   node 31 (H=15 |Aut|=1 pair, pure-black, tilings 30): Phi = +1*[0] -1*[1] +2*[3] +2*[5] +2*[7] +1*[8] -7*[9]
+   node 32 (H=17 |Aut|=1 sc, mixed, tilings 17): Phi = +2*[0] -4*[1] +2*[3] +2*[5] -5*[6] +1*[7] +8*[8] -6*[9]
+   node 33 (H=41 |Aut|=1 sc, mixed, tilings 41): Phi = +1*[1] +5*[3] -13*[4] -1*[5] +3*[6] +12*[7] -11*[8] +4*[9]
+  n=7 deck collision #1 (size 2), deck {0:1,7:3,13:2,17:1}
+     node 42: H=23 |Aut|=1 converse pair, code 33409, path-weighted deck W={0:1,7:19,13:3,17:23}
+     node 86: H=23 |Aut|=1 converse pair, code 98436, path-weighted deck W={0:1,7:7,13:15,17:23}
+  n=7 deck collision #2 (size 2), deck {6:2,20:2,22:2,27:1}
+     node 114: H=143 |Aut|=1 converse pair, code 182418, path-weighted deck W={6:84,20:78,22:85,27:39}
+     node 253: H=141 |Aut|=1 self-converse, code 1364052, path-weighted deck W={6:84,20:78,22:84,27:36}
+  n=7 deck collision #3 (size 2), deck {2:1,7:1,11:1,13:1,18:2,19:1}
+     node 46: H=29 |Aut|=1 converse pair, code 35393, path-weighted deck W={2:3,7:4,11:11,13:4,18:7,19:29}
+     node 58: H=29 |Aut|=1 converse pair, code 65796, path-weighted deck W={2:3,7:5,11:3,13:5,18:13,19:29}
+  n=7 deck collision #4 (size 2), deck {3:1,5:1,7:1,11:2,18:1,22:1}
+     node 56: H=43 |Aut|=1 converse pair, code 65688, path-weighted deck W={3:6,5:9,7:6,11:15,18:7,22:43}
+     node 159: H=43 |Aut|=1 converse pair, code 364741, path-weighted deck W={3:9,5:6,7:7,11:15,18:6,22:43}
+  n=7 deck collision #5 (size 2), deck {3:1,9:1,11:1,14:1,18:2,20:1}
+     node 48: H=31 |Aut|=1 converse pair, code 41153, path-weighted deck W={3:12,9:3,11:4,14:5,18:7,20:31}
+     node 142: H=31 |Aut|=1 converse pair, code 295172, path-weighted deck W={3:3,9:3,11:7,14:5,18:13,20:31}
+  n=7: 5 unweighted-deck collision classes
+n=7 Phi type by colour: pure-blue (zero/single/other) = 0/3/1; mixed = 0/0/84; pure-black = 0/0/184
+n=7 line fraction Phi: faces agree=yes, sum over nodes = 0: yes, Phi = 0 at 0 nodes, Phi a single ratio p_a/p_b at 3 nodes, 272 distinct values over 272 nodes
+   node 0 (H=1 |Aut|=1 sc, pure-blue, tilings 1): Phi = -1*[0] +1*[32]
+   node 10 (H=3 |Aut|=3 sc, pure-blue, tilings 1): Phi = -1*[2] +1*[28]
+   node 18 (H=15 |Aut|=5 sc, pure-blue, tilings 3): Phi = +1*[4] -3*[5] +1*[6] +1*[8]
+   node 170 (H=9 |Aut|=9 sc, pure-blue, tilings 1): Phi = -1*[1] +1*[31]
+  n=8: 0 unweighted-deck collision classes
+n=8 Phi type by colour: pure-blue (zero/single/other) = 0/3/0; mixed = 0/0/173; pure-black = 0/0/3352
+n=8 line fraction Phi: faces agree=yes, sum over nodes = 0: yes, Phi = 0 at 0 nodes, Phi a single ratio p_a/p_b at 3 nodes, 3528 distinct values over 3528 nodes
+   node 0 (H=1 |Aut|=1 sc, pure-blue, tilings 1): Phi = -1*[0] +1*[251]
+   node 529 (H=9 |Aut|=9 sc, pure-blue, tilings 1): Phi = -1*[54] +1*[194]
+   node 2254 (H=9 |Aut|=9 sc, pure-blue, tilings 1): Phi = -1*[1] +1*[234]
+  n=9 deck collision #1 (size 2), deck {61:1,429:3,546:1,1622:3,2752:1}
+     node 20197: H=633 |Aut|=3 converse pair, code 2617447753, path-weighted deck W={61:99,429:213,546:63,1622:258,2752:633}
+     node 48562: H=633 |Aut|=3 converse pair, code 11142336824, path-weighted deck W={61:75,429:276,546:84,1622:198,2752:633}
+  n=9 deck collision #2 (size 2), deck {670:2,1532:2,2079:2,2383:2,2928:1}
+     node 86814: H=2919 |Aut|=1 self-converse, code 36680122700, path-weighted deck W={670:1292,1532:1298,2079:1280,2383:1310,2928:658}
+     node 89262: H=2917 |Aut|=1 self-converse, code 38881928326, path-weighted deck W={670:1282,1532:1312,2079:1284,2383:1300,2928:656}
+  n=9 deck collision #3 (size 2), deck {255:1,258:1,286:1,429:1,879:1,1448:1,1622:1,1861:1,2910:1}
+     node 23898: H=645 |Aut|=1 converse pair, code 3565331737, path-weighted deck W={255:92,258:93,286:90,429:74,879:73,1448:68,1622:85,1861:70,2910:645}
+     node 23984: H=645 |Aut|=1 converse pair, code 3573618716, path-weighted deck W={255:73,258:74,286:68,429:89,879:96,1448:88,1622:70,1861:87,2910:645}
+  n=9: 3 unweighted-deck collision classes
+
+real	0m15.863s
+user	0m0.015s
+sys	0m0.015s

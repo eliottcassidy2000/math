@@ -1,0 +1,8 @@
+order 5: collision (2, 32): extensions (sink, source); remainders form the order-4 converse same-deck pair (2, 16): YES
+order 7: collision (35393, 65796): extensions (sink, sink); remainders form the order-6 converse same-deck pair (4897, 8324): YES
+order 7: collision (65688, 364741): extensions (sink, sink); remainders form the order-6 converse same-deck pair (8280, 29797): YES
+order 7: collision (33409, 98436): extensions (sink, sink); remainders form the order-6 converse same-deck pair (4417, 12356): YES
+order 7: collision (41153, 295172): extensions (sink, sink); remainders form the order-6 converse same-deck pair (6241, 20612): YES
+order 9: collision (3565331737, 3573618716): extensions (sink, sink); remainders form the order-8 converse same-deck pair (122729113, 123751452): YES
+order 9: collision (2617447753, 11142336824): extensions (sink, sink); remainders form the order-8 converse same-deck pair (96520905, 226797752): YES
+ALL ODD-ORDER HAMILTONIAN-CYCLE-FREE COLLISIONS ARE SOURCE LIFTS OF EVEN-ORDER CONVERSE PAIRS: True
