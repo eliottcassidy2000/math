@@ -1,0 +1,585 @@
+{
+  "baseline_work": {
+    "peak_states": 96836,
+    "precomputed_transfers": 51374,
+    "transitions": 2994814
+  },
+  "controls": {
+    "identity_full_rounding_rejected": true,
+    "insufficient_cap_rejected": true,
+    "nonunique_modular_interval_rejected": true
+  },
+  "head_table": [
+    {
+      "attempts": [
+        {
+          "cores": 1,
+          "cutoff": 0,
+          "integer_width": 14316007793791752062959582997017964705
+        },
+        {
+          "cores": 2,
+          "cutoff": 3,
+          "integer_width": 1398047636112475787398396777052535616
+        },
+        {
+          "cores": 2,
+          "cutoff": 4,
+          "integer_width": 1398047636112475787398396777052535616
+        },
+        {
+          "cores": 3,
+          "cutoff": 5,
+          "integer_width": 436889886285148683561998992828917380
+        },
+        {
+          "cores": 4,
+          "cutoff": 6,
+          "integer_width": 136528089464108963613124685259036681
+        },
+        {
+          "cores": 5,
+          "cutoff": 7,
+          "integer_width": 42665027957534051129101464143448963
+        },
+        {
+          "cores": 6,
+          "cutoff": 8,
+          "integer_width": 13332821236729390977844207544827801
+        },
+        {
+          "cores": 8,
+          "cutoff": 9,
+          "integer_width": 4166506636477934680576314857758687
+        },
+        {
+          "cores": 10,
+          "cutoff": 10,
+          "integer_width": 1302033323899354587680098393049590
+        },
+        {
+          "cores": 12,
+          "cutoff": 11,
+          "integer_width": 406885413718548308650030747827997
+        },
+        {
+          "cores": 15,
+          "cutoff": 12,
+          "integer_width": 127151691787046346453134608696249
+        },
+        {
+          "cores": 18,
+          "cutoff": 13,
+          "integer_width": 39734903683451983266604565217578
+        },
+        {
+          "cores": 22,
+          "cutoff": 14,
+          "integer_width": 12417157401078744770813926630493
+        },
+        {
+          "cores": 27,
+          "cutoff": 15,
+          "integer_width": 3880361687837107740879352072029
+        },
+        {
+          "cores": 32,
+          "cutoff": 16,
+          "integer_width": 1212613027449096169024797522509
+        },
+        {
+          "cores": 38,
+          "cutoff": 17,
+          "integer_width": 378941571077842552820249225784
+        },
+        {
+          "cores": 46,
+          "cutoff": 18,
+          "integer_width": 118419240961825797756327883058
+        },
+        {
+          "cores": 54,
+          "cutoff": 19,
+          "integer_width": 37006012800570561798852463456
+        },
+        {
+          "cores": 64,
+          "cutoff": 20,
+          "integer_width": 0
+        }
+      ],
+      "bit_length": 129,
+      "core_types": 64,
+      "cutoff": 20,
+      "discarded_bits": 1,
+      "factorial_bits": 62,
+      "head_bits": 128,
+      "head_hex": "0xf2a15da71ee96fb29493d53b01877800",
+      "n": 20,
+      "requested_bits": 128,
+      "scaled_floor_hex": "0xf2a15da71ee96fb29493d53b01877800",
+      "scaled_numerator_bits": 190,
+      "tail_denominator_bits": 1,
+      "tail_numerator_bits": 0,
+      "width_denominator_bits": 1,
+      "width_numerator_bits": 0
+    },
+    {
+      "attempts": [
+        {
+          "cores": 1,
+          "cutoff": 0,
+          "integer_width": 6768860131276221847700716809321377
+        },
+        {
+          "cores": 2,
+          "cutoff": 3,
+          "integer_width": 6610214971949435398145231259103
+        },
+        {
+          "cores": 2,
+          "cutoff": 4,
+          "integer_width": 6610214971949435398145231259103
+        },
+        {
+          "cores": 3,
+          "cutoff": 5,
+          "integer_width": 206569217873419856192038476847
+        },
+        {
+          "cores": 4,
+          "cutoff": 6,
+          "integer_width": 6455288058544370506001202401
+        },
+        {
+          "cores": 5,
+          "cutoff": 7,
+          "integer_width": 201727751829511578312537575
+        },
+        {
+          "cores": 6,
+          "cutoff": 8,
+          "integer_width": 6303992244672236822266799
+        },
+        {
+          "cores": 8,
+          "cutoff": 9,
+          "integer_width": 196999757646007400695838
+        },
+        {
+          "cores": 10,
+          "cutoff": 10,
+          "integer_width": 6156242426437731271745
+        },
+        {
+          "cores": 12,
+          "cutoff": 11,
+          "integer_width": 192382575826179102242
+        },
+        {
+          "cores": 15,
+          "cutoff": 12,
+          "integer_width": 6011955494568096945
+        },
+        {
+          "cores": 18,
+          "cutoff": 13,
+          "integer_width": 187873609205253030
+        },
+        {
+          "cores": 22,
+          "cutoff": 14,
+          "integer_width": 5871050287664157
+        },
+        {
+          "cores": 27,
+          "cutoff": 15,
+          "integer_width": 183470321489505
+        },
+        {
+          "cores": 32,
+          "cutoff": 16,
+          "integer_width": 5733447546547
+        },
+        {
+          "cores": 38,
+          "cutoff": 17,
+          "integer_width": 179170235830
+        },
+        {
+          "cores": 46,
+          "cutoff": 18,
+          "integer_width": 5599069870
+        },
+        {
+          "cores": 54,
+          "cutoff": 19,
+          "integer_width": 174970934
+        },
+        {
+          "cores": 64,
+          "cutoff": 20,
+          "integer_width": 5467842
+        },
+        {
+          "cores": 76,
+          "cutoff": 21,
+          "integer_width": 170870
+        },
+        {
+          "cores": 89,
+          "cutoff": 22,
+          "integer_width": 5340
+        },
+        {
+          "cores": 104,
+          "cutoff": 23,
+          "integer_width": 167
+        },
+        {
+          "cores": 122,
+          "cutoff": 24,
+          "integer_width": 5
+        },
+        {
+          "cores": 142,
+          "cutoff": 25,
+          "integer_width": 0
+        }
+      ],
+      "bit_length": 379,
+      "core_types": 142,
+      "cutoff": 25,
+      "discarded_bits": 251,
+      "factorial_bits": 118,
+      "head_bits": 128,
+      "head_hex": "0xa1a6973c1faf699685b7d4e6b898b14e",
+      "n": 32,
+      "requested_bits": 128,
+      "scaled_floor_hex": "0xa1a6973c1faf699685b7d4e6b898b14e",
+      "scaled_numerator_bits": 246,
+      "tail_denominator_bits": 130,
+      "tail_numerator_bits": 1,
+      "width_denominator_bits": 92,
+      "width_numerator_bits": 90
+    },
+    {
+      "attempts": [
+        {
+          "cores": 1,
+          "cutoff": 0,
+          "integer_width": 35653289297237920634729206916567
+        },
+        {
+          "cores": 2,
+          "cutoff": 3,
+          "integer_width": 850040657454441085689764188
+        },
+        {
+          "cores": 2,
+          "cutoff": 4,
+          "integer_width": 850040657454441085689764188
+        },
+        {
+          "cores": 3,
+          "cutoff": 5,
+          "integer_width": 4150589147726763113719551
+        },
+        {
+          "cores": 4,
+          "cutoff": 6,
+          "integer_width": 20266548572884585516209
+        },
+        {
+          "cores": 5,
+          "cutoff": 7,
+          "integer_width": 98957756703538015216
+        },
+        {
+          "cores": 6,
+          "cutoff": 8,
+          "integer_width": 483192171403994215
+        },
+        {
+          "cores": 8,
+          "cutoff": 9,
+          "integer_width": 2359336774433566
+        },
+        {
+          "cores": 10,
+          "cutoff": 10,
+          "integer_width": 11520199093914
+        },
+        {
+          "cores": 12,
+          "cutoff": 11,
+          "integer_width": 56250972138
+        },
+        {
+          "cores": 15,
+          "cutoff": 12,
+          "integer_width": 274662950
+        },
+        {
+          "cores": 18,
+          "cutoff": 13,
+          "integer_width": 1341128
+        },
+        {
+          "cores": 22,
+          "cutoff": 14,
+          "integer_width": 6549
+        },
+        {
+          "cores": 27,
+          "cutoff": 15,
+          "integer_width": 32
+        },
+        {
+          "cores": 32,
+          "cutoff": 16,
+          "integer_width": 0
+        }
+      ],
+      "bit_length": 621,
+      "core_types": 32,
+      "cutoff": 16,
+      "discarded_bits": 493,
+      "factorial_bits": 160,
+      "head_bits": 128,
+      "head_hex": "0xe5476a15095718052250a71952a486db",
+      "n": 40,
+      "requested_bits": 128,
+      "scaled_floor_hex": "0xe5476a15095718052250a71952a486db",
+      "scaled_numerator_bits": 288,
+      "tail_denominator_bits": 170,
+      "tail_numerator_bits": 40,
+      "width_denominator_bits": 111,
+      "width_numerator_bits": 108
+    },
+    {
+      "attempts": [
+        {
+          "cores": 1,
+          "cutoff": 0,
+          "integer_width": 4852155577619129425002319
+        },
+        {
+          "cores": 2,
+          "cutoff": 3,
+          "integer_width": 4518922024983102
+        },
+        {
+          "cores": 2,
+          "cutoff": 4,
+          "integer_width": 4518922024983102
+        },
+        {
+          "cores": 3,
+          "cutoff": 5,
+          "integer_width": 137906555938
+        },
+        {
+          "cores": 4,
+          "cutoff": 6,
+          "integer_width": 4208574
+        },
+        {
+          "cores": 5,
+          "cutoff": 7,
+          "integer_width": 129
+        },
+        {
+          "cores": 6,
+          "cutoff": 8,
+          "integer_width": 0
+        }
+      ],
+      "bit_length": 1721,
+      "core_types": 6,
+      "cutoff": 8,
+      "discarded_bits": 1593,
+      "factorial_bits": 296,
+      "head_bits": 128,
+      "head_hex": "0x806e7b519070ddb8c130b5502ed7b466",
+      "n": 64,
+      "requested_bits": 128,
+      "scaled_floor_hex": "0x806e7b519070ddb8c130b5502ed7b466",
+      "scaled_numerator_bits": 424,
+      "tail_denominator_bits": 135,
+      "tail_numerator_bits": 1,
+      "width_denominator_bits": 248,
+      "width_numerator_bits": 241
+    },
+    {
+      "attempts": [
+        {
+          "cores": 1,
+          "cutoff": 0,
+          "integer_width": 315924969708727
+        },
+        {
+          "cores": 2,
+          "cutoff": 3,
+          "integer_width": 0
+        }
+      ],
+      "bit_length": 4426,
+      "core_types": 2,
+      "cutoff": 3,
+      "discarded_bits": 4298,
+      "factorial_bits": 525,
+      "head_bits": 128,
+      "head_hex": "0x96a50f303f3c07af3894032cf329f7d2",
+      "n": 100,
+      "requested_bits": 128,
+      "scaled_floor_hex": "0x96a50f303f3c07af3894032cf329f7d2",
+      "scaled_numerator_bits": 653,
+      "tail_denominator_bits": 155,
+      "tail_numerator_bits": 24,
+      "width_denominator_bits": 436,
+      "width_numerator_bits": 432
+    },
+    {
+      "attempts": [
+        {
+          "cores": 1,
+          "cutoff": 0,
+          "integer_width": 7499058
+        },
+        {
+          "cores": 2,
+          "cutoff": 3,
+          "integer_width": 0
+        }
+      ],
+      "bit_length": 7412,
+      "core_types": 2,
+      "cutoff": 3,
+      "discarded_bits": 7284,
+      "factorial_bits": 717,
+      "head_bits": 128,
+      "head_hex": "0xe4da63a3b6632259cde566d662d51df3",
+      "n": 128,
+      "requested_bits": 128,
+      "scaled_floor_hex": "0xe4da63a3b6632259cde566d662d51df3",
+      "scaled_numerator_bits": 845,
+      "tail_denominator_bits": 175,
+      "tail_numerator_bits": 1,
+      "width_denominator_bits": 625,
+      "width_numerator_bits": 578
+    },
+    {
+      "attempts": [
+        {
+          "cores": 1,
+          "cutoff": 0,
+          "integer_width": 0
+        }
+      ],
+      "bit_length": 11775,
+      "core_types": 1,
+      "cutoff": 0,
+      "discarded_bits": 11647,
+      "factorial_bits": 946,
+      "head_bits": 128,
+      "head_hex": "0xa17bea8f00534a856f2e7fd8204e96f9",
+      "n": 160,
+      "requested_bits": 128,
+      "scaled_floor_hex": "0xa17bea8f00534a856f2e7fd8204e96f9",
+      "scaled_numerator_bits": 1074,
+      "tail_denominator_bits": 144,
+      "tail_numerator_bits": 7,
+      "width_denominator_bits": 829,
+      "width_numerator_bits": 820
+    },
+    {
+      "attempts": [
+        {
+          "cores": 1,
+          "cutoff": 0,
+          "integer_width": 0
+        }
+      ],
+      "bit_length": 18655,
+      "core_types": 1,
+      "cutoff": 0,
+      "discarded_bits": 18527,
+      "factorial_bits": 1246,
+      "head_bits": 128,
+      "head_hex": "0xc4a6a10b0e8708f278f8d7db0481811e",
+      "n": 200,
+      "requested_bits": 128,
+      "scaled_floor_hex": "0xc4a6a10b0e8708f278f8d7db0481811e",
+      "scaled_numerator_bits": 1374,
+      "tail_denominator_bits": 189,
+      "tail_numerator_bits": 14,
+      "width_denominator_bits": 1098,
+      "width_numerator_bits": 1051
+    }
+  ],
+  "large_heads": [
+    {
+      "attempts": [
+        {
+          "cores": 1,
+          "cutoff": 0,
+          "integer_width": 0
+        }
+      ],
+      "bit_length": 490971,
+      "core_types": 1,
+      "cutoff": 0,
+      "discarded_bits": 490715,
+      "factorial_bits": 8530,
+      "head_bits": 256,
+      "head_hex": "0xc247c19e849245a1af797961742d6a6d4e5ec17d7d3874d0d51a5b101961d7fd",
+      "n": 1000,
+      "requested_bits": 256,
+      "scaled_floor_hex": "0xc247c19e849245a1af797961742d6a6d4e5ec17d7d3874d0d51a5b101961d7fd",
+      "scaled_numerator_bits": 8786,
+      "tail_denominator_bits": 990,
+      "tail_numerator_bits": 21,
+      "width_denominator_bits": 7845,
+      "width_numerator_bits": 7132
+    },
+    {
+      "attempts": [
+        {
+          "cores": 1,
+          "cutoff": 0,
+          "integer_width": 0
+        }
+      ],
+      "bit_length": 49876542,
+      "core_types": 1,
+      "cutoff": 0,
+      "discarded_bits": 49876286,
+      "factorial_bits": 118459,
+      "head_bits": 256,
+      "head_hex": "0xe7d782997a96b31a0cb2523c988f010034622aef43f5aa98b08af4148e3c84b7",
+      "n": 10000,
+      "requested_bits": 256,
+      "scaled_floor_hex": "0xe7d782997a96b31a0cb2523c988f010034622aef43f5aa98b08af4148e3c84b7",
+      "scaled_numerator_bits": 118715,
+      "tail_denominator_bits": 9987,
+      "tail_numerator_bits": 28,
+      "width_denominator_bits": 111765,
+      "width_numerator_bits": 102062
+    }
+  ],
+  "scope": "Certified leading bits; full-integer spectrum coverage remains open.",
+  "source_hashes": {
+    "05-knowledge/results/session87_four_vertices_enumeration_20261028/fast_counts.py": "3844a4a590daaf01410cf99d3584441bfa2f8e5e95371ccaafe534fd152b0ece",
+    "heads.py": "68e870a2ac59e50fa6f6247fefaabbe5ebfd7b10ceeac314910107bdde6e6421"
+  },
+  "status": "PASS",
+  "universe": {
+    "exact_prefix": 200,
+    "head_queries": 804,
+    "hybrid_reconstruction_controls": 68,
+    "independent_Davis": 40,
+    "literal_pair_cycle_types": 25,
+    "tail_checks": 973
+  }
+}

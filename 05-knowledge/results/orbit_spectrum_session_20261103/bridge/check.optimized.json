@@ -1,0 +1,544 @@
+{
+  "burnside_correction_H4151": "12/7",
+  "circulant7_table": [
+    [
+      0,
+      175,
+      7
+    ],
+    [
+      1,
+      175,
+      7
+    ],
+    [
+      2,
+      175,
+      7
+    ],
+    [
+      3,
+      189,
+      21
+    ],
+    [
+      4,
+      189,
+      21
+    ],
+    [
+      5,
+      175,
+      7
+    ],
+    [
+      6,
+      175,
+      7
+    ],
+    [
+      7,
+      175,
+      7
+    ]
+  ],
+  "coefficientwise_monotonicity_controls": 4732,
+  "complete_symmetric_inventory": [
+    {
+      "H": 4151,
+      "kernel": [
+        3,
+        5,
+        2,
+        0,
+        0
+      ],
+      "multiplicity": 2,
+      "order": 10,
+      "p": 593,
+      "quotient_frame": 0,
+      "quotient_rows": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "rows": [
+        142,
+        156,
+        184,
+        240,
+        225,
+        195,
+        135,
+        256,
+        639,
+        255
+      ]
+    },
+    {
+      "H": 5789,
+      "kernel": [
+        1,
+        5,
+        3,
+        0,
+        0
+      ],
+      "multiplicity": 2,
+      "order": 10,
+      "p": 827,
+      "quotient_frame": 4,
+      "quotient_rows": [
+        2,
+        12,
+        9,
+        1
+      ],
+      "rows": [
+        142,
+        156,
+        184,
+        240,
+        225,
+        195,
+        135,
+        768,
+        639,
+        127
+      ]
+    },
+    {
+      "H": 14791,
+      "kernel": [
+        11,
+        19,
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "multiplicity": 2,
+      "order": 12,
+      "p": 2113,
+      "quotient_frame": 75,
+      "quotient_rows": [
+        46,
+        36,
+        8,
+        18,
+        39,
+        12
+      ],
+      "rows": [
+        2958,
+        2972,
+        3000,
+        3056,
+        3041,
+        3011,
+        2951,
+        2304,
+        512,
+        1152,
+        2559,
+        768
+      ]
+    },
+    {
+      "H": 16079,
+      "kernel": [
+        9,
+        17,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "multiplicity": 4,
+      "order": 12,
+      "p": 2297,
+      "quotient_frame": 19,
+      "quotient_rows": [
+        14,
+        12,
+        8,
+        16,
+        39,
+        15
+      ],
+      "rows": [
+        910,
+        924,
+        952,
+        1008,
+        993,
+        963,
+        903,
+        768,
+        512,
+        1024,
+        2559,
+        1023
+      ]
+    },
+    {
+      "H": 17717,
+      "kernel": [
+        5,
+        17,
+        9,
+        0,
+        0,
+        0,
+        0
+      ],
+      "multiplicity": 2,
+      "order": 12,
+      "p": 2531,
+      "quotient_frame": 119,
+      "quotient_rows": [
+        30,
+        60,
+        8,
+        16,
+        36,
+        13
+      ],
+      "rows": [
+        1934,
+        1948,
+        1976,
+        2032,
+        2017,
+        1987,
+        1927,
+        3840,
+        512,
+        1024,
+        2304,
+        895
+      ]
+    }
+  ],
+  "fixed_C7_H4151": 72,
+  "frame_universes": [
+    {
+      "frames": 2,
+      "minimum": 2163,
+      "pareto_kernels": [
+        {
+          "coefficients": [
+            3,
+            1,
+            0
+          ],
+          "frame": 0
+        }
+      ],
+      "prime_H_strong_classes": {},
+      "q": 3,
+      "strong_frames": 1,
+      "targets": {}
+    },
+    {
+      "frames": 8,
+      "minimum": 4151,
+      "pareto_kernels": [
+        {
+          "coefficients": [
+            5,
+            2,
+            0,
+            0
+          ],
+          "frame": 0
+        }
+      ],
+      "prime_H_strong_classes": {
+        "5": 1
+      },
+      "q": 4,
+      "strong_frames": 5,
+      "targets": {
+        "4151": 2,
+        "5789": 2
+      }
+    },
+    {
+      "frames": 64,
+      "minimum": 6489,
+      "pareto_kernels": [
+        {
+          "coefficients": [
+            9,
+            3,
+            0,
+            0,
+            0
+          ],
+          "frame": 0
+        }
+      ],
+      "prime_H_strong_classes": {
+        "11": 1,
+        "13": 1
+      },
+      "q": 5,
+      "strong_frames": 50,
+      "targets": {}
+    },
+    {
+      "frames": 1024,
+      "minimum": 10815,
+      "pareto_kernels": [
+        {
+          "coefficients": [
+            15,
+            5,
+            0,
+            0,
+            0,
+            0
+          ],
+          "frame": 23
+        }
+      ],
+      "prime_H_strong_classes": {
+        "17": 2,
+        "19": 2,
+        "23": 4,
+        "29": 4,
+        "31": 2,
+        "37": 5,
+        "41": 1,
+        "43": 2
+      },
+      "q": 6,
+      "strong_frames": 903,
+      "targets": {
+        "14791": 2,
+        "16079": 4,
+        "17717": 2
+      }
+    },
+    {
+      "frames": 32768,
+      "minimum": 19467,
+      "pareto_kernels": [
+        {
+          "coefficients": [
+            25,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "frame": 39
+        },
+        {
+          "coefficients": [
+            27,
+            9,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "frame": 3
+        }
+      ],
+      "prime_H_strong_classes": {
+        "101": 10,
+        "103": 10,
+        "109": 14,
+        "113": 4,
+        "127": 1,
+        "131": 8,
+        "137": 6,
+        "139": 6,
+        "151": 5,
+        "157": 1,
+        "29": 2,
+        "31": 2,
+        "37": 2,
+        "41": 5,
+        "43": 2,
+        "47": 2,
+        "53": 4,
+        "59": 8,
+        "61": 1,
+        "67": 6,
+        "71": 7,
+        "73": 8,
+        "79": 5,
+        "83": 7,
+        "89": 14,
+        "97": 6
+      },
+      "q": 7,
+      "strong_frames": 30773,
+      "targets": {}
+    }
+  ],
+  "hostile_identity_only_contribution_from_symmetric_H4151_classes": "2/7 instead of2",
+  "independent_literal_kernel_controls": 72,
+  "labelled_controls": [
+    {
+      "graphs": 8,
+      "q": 3,
+      "targets": {}
+    },
+    {
+      "graphs": 64,
+      "q": 4,
+      "targets": {
+        "4151": 2,
+        "5789": 2
+      }
+    },
+    {
+      "graphs": 1024,
+      "q": 5,
+      "targets": {}
+    },
+    {
+      "graphs": 32768,
+      "q": 6,
+      "targets": {
+        "14791": 2,
+        "16079": 4,
+        "17717": 2
+      }
+    }
+  ],
+  "minimum_controls": [
+    {
+      "H": 2163,
+      "frame": 0,
+      "kernel": [
+        1,
+        3,
+        1,
+        0
+      ],
+      "q": 3,
+      "rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "H": 4151,
+      "frame": 0,
+      "kernel": [
+        3,
+        5,
+        2,
+        0,
+        0
+      ],
+      "q": 4,
+      "rows": [
+        2,
+        4,
+        9,
+        3
+      ]
+    },
+    {
+      "H": 6489,
+      "frame": 0,
+      "kernel": [
+        5,
+        9,
+        3,
+        0,
+        0,
+        0
+      ],
+      "q": 5,
+      "rows": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ]
+    },
+    {
+      "H": 10815,
+      "frame": 23,
+      "kernel": [
+        9,
+        15,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "q": 6,
+      "rows": [
+        30,
+        12,
+        8,
+        16,
+        38,
+        15
+      ]
+    },
+    {
+      "H": 19467,
+      "frame": 3,
+      "kernel": [
+        17,
+        27,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "q": 7,
+      "rows": [
+        14,
+        4,
+        8,
+        18,
+        39,
+        79,
+        31
+      ]
+    }
+  ],
+  "module_ordered_covers": [
+    0,
+    175,
+    1638,
+    6678,
+    15120,
+    20160,
+    15120,
+    5040
+  ],
+  "module_rows": [
+    14,
+    28,
+    56,
+    112,
+    97,
+    67,
+    7
+  ],
+  "scope": "complete symmetric strong 7p inventory for prime p>=11 and7p<19467; all-order proof in NOTE.md",
+  "script_sha256": "ee65e914bd8c7b58784ffb357fa3f1e2dd0e0562a2b07fadec1c1af42f3dc52e",
+  "status": "PASS"
+}

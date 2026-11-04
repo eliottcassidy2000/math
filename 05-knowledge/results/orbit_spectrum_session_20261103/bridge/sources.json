@@ -1,0 +1,59 @@
+{
+  "scope": "direct inherited sources, not a transitive proof graph",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b",
+      "blob": "f211c178796e36dbba8c59904ffb02166c62dcde",
+      "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95"
+    },
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b",
+      "blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b",
+      "blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b",
+      "blob": "21c54c68fac2c18efcacd26331006824fe891cda",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "path": "05-knowledge/results/session142_tournament_odd_spectrum_20261102/minimal_gap/PROOF.md",
+      "revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b",
+      "blob": "8d41f3f2ab04b59013b8af9cab50e03737d2a3e6",
+      "sha256": "243d500c1d726c6ca66f766d6ce041dfc7a370196cc6b39563a43f22a1bb34db"
+    },
+    {
+      "path": "05-knowledge/results/exclusion_7_21_20261103/PROOF.md",
+      "revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b",
+      "blob": "a2c5700d81171e76d19879fc6369cfd1e66e8428",
+      "sha256": "12bd0d094f3250d2b838502519f9cb27eeec11b008ff4f5652b8404491cc5e1b"
+    },
+    {
+      "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md",
+      "revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b",
+      "blob": "1bc14b5444a366c2dc1b6988a53fccc0089037be",
+      "sha256": "40d8b722dc71233a2e6ab31f224cb5de20db56463be568148c865b438f16cdfe"
+    },
+    {
+      "path": "05-knowledge/results/tournament_joint_parity_20261102/spectrum.md",
+      "revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b",
+      "blob": "e250b70a2e46691c0a040fa084c73f5c42606309",
+      "sha256": "123e9a79464182ce9811c72cb2125e59bdea66e45cc632a20a058241996cbd36"
+    },
+    {
+      "path": "05-knowledge/results/return6325_completion_20261103/CLONE_LAW.md",
+      "revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b",
+      "blob": "562816bb715606449f0a9390daac314c5bd6b165",
+      "sha256": "59bc9e8a4edc755a1447082f7ea6e0bad4566464402d53d40764555b17e8dbce"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "actual_witnesses": [
+    [
+      4151,
+      10
+    ],
+    [
+      5789,
+      10
+    ],
+    [
+      14791,
+      12
+    ],
+    [
+      16079,
+      12
+    ],
+    [
+      17717,
+      12
+    ]
+  ],
+  "inventory": {
+    "14791:12": 2,
+    "16079:12": 4,
+    "17717:12": 2,
+    "4151:10": 2,
+    "5789:10": 2
+  },
+  "pareto_sources": [
+    {
+      "coefficients": [
+        3,
+        1,
+        0
+      ],
+      "frame": 0,
+      "q": 3
+    },
+    {
+      "coefficients": [
+        5,
+        2,
+        0,
+        0
+      ],
+      "frame": 0,
+      "q": 4
+    },
+    {
+      "coefficients": [
+        9,
+        3,
+        0,
+        0,
+        0
+      ],
+      "frame": 0,
+      "q": 5
+    },
+    {
+      "coefficients": [
+        15,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "frame": 23,
+      "q": 6
+    },
+    {
+      "coefficients": [
+        25,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "frame": 39,
+      "q": 7
+    },
+    {
+      "coefficients": [
+        27,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "frame": 3,
+      "q": 7
+    }
+  ],
+  "producer_receipt_sha256": "21c34e7129c51dba5665445786b22c574b95801694e1eb897a226d28de25b46b",
+  "scope": "Targeted independent audit, not a second full q7 scan",
+  "status": "PASS",
+  "strong_root_frames_q3_through6": 959
+}

@@ -1,0 +1,73 @@
+{
+  "status": "direct dependency pins, not a transitive proof graph",
+  "base_revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-514-the-a000568-unit-tail-core-kernel-and-prime-tail-ladder.md",
+      "sha256": "da2cf8ca88a33c6ce1cb00dc9fe645da178e259ea360e03a3ac72daff76fccb9",
+      "last_commit": "51c8eda68870437eb7ece2076ba282be9decc40f"
+    },
+    {
+      "path": "01-canon/theorems/THM-516-burnside-core-kernel-phi-reframe.md",
+      "sha256": "10ef8808ad62bd5aee87ff0261380a0ec4648fed026747ec978e89eb157845f5",
+      "last_commit": "fe2d5a1e10e1477c42a925c27dc4434698038f2b"
+    },
+    {
+      "path": "01-canon/theorems/THM-4845-a000568-as-a-gaussian-average-gcd-covariance-cycle-index-exponential-and-the-meromorphic-normalized-series-with-poles-at-powers-of-four.md",
+      "sha256": "efd475b3b4ec7c28a7d3be6ad100e9b17984449961314b3312bd7a417a8f71b3",
+      "last_commit": "64afe74cdd0c58c897aa380d2de5fe2b5910ec2c"
+    },
+    {
+      "path": "05-knowledge/results/session87_four_vertices_enumeration_20261028/FAST_COUNTS.md",
+      "sha256": "ab0595f9d9579655cd798afbe2dcb1dd2d848f2f08709b238da93b7569974e84",
+      "last_commit": "909d48ae3bdaf52ddcf9fdfe52e7b9eb56de2480"
+    },
+    {
+      "path": "05-knowledge/results/session87_four_vertices_enumeration_20261028/fast_counts.py",
+      "sha256": "3844a4a590daaf01410cf99d3584441bfa2f8e5e95371ccaafe534fd152b0ece",
+      "last_commit": "0e1707da275d1586bba4d4ff262b589e88251b2f"
+    },
+    {
+      "path": "05-knowledge/results/session89_consecutive_tournament_pairs_20261028/counting/README.md",
+      "sha256": "965570bf3cad4d2ff26f14aaccc8659bfc27c84efc778e8333edc6224cd5081a",
+      "last_commit": "74aa3144443058310211f5addce88d26d9614494"
+    },
+    {
+      "path": "05-knowledge/results/session98_tournament_growth_20261029/limits/ALL_POLES_CORE_EXPANSION.md",
+      "sha256": "f4548bcc8df4b7041eb1f972d0c0d4bb018ace56bc4746ae17606e98840e8d3b",
+      "last_commit": "e6199da417d9e0b9a6b8c41be9032ed5f1d5b0e0"
+    },
+    {
+      "path": "05-knowledge/results/session142_tournament_odd_spectrum_20261102/minimal_gap/PROOF.md",
+      "sha256": "243d500c1d726c6ca66f766d6ce041dfc7a370196cc6b39563a43f22a1bb34db",
+      "last_commit": "0040dca1285542b81b305d96aa97181dfe8d8376"
+    },
+    {
+      "path": "05-knowledge/results/port_residual_integral_20261025/precision/check.py",
+      "sha256": "9107ca384b3f891c759932262769ecf741be76eb5b4e45fd45931a307a62fc6e",
+      "source_revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b"
+    },
+    {
+      "path": "05-knowledge/results/port_residual_integral_20261025/precision/README.md",
+      "sha256": "4339ed5bac7bed574ee6bded654d6be3c2792debf8dca3532385338ac2339a93",
+      "source_revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b"
+    },
+    {
+      "path": "05-knowledge/results/paired_recursions_20261103/FOUR_BITS.md",
+      "sha256": "9c7b2adcdc4dafc9490f6784a0a42399a0d5ab79935cd7fdaa1d6ee393b99feb",
+      "source_revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b"
+    },
+    {
+      "path": "05-knowledge/results/strong_attachment_tail_compiler_20261028/HISTORY.md",
+      "sha256": "f88e908478f24f89b12f411d3b19c87726eb92965d4c61d308acec12d3c78768",
+      "source_revision": "9af43540fd6e0d6ea063e241ac1f225fd2cb5e9b"
+    }
+  ],
+  "external": [
+    {
+      "url": "https://oeis.org/A000568",
+      "accessed": "2026-11-03",
+      "role": "Sequence definition and classical Davis formula, no priority claim"
+    }
+  ]
+}

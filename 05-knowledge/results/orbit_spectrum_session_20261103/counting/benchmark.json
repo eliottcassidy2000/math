@@ -1,0 +1,158 @@
+{
+  "comparison_scope": "Same requested head; baseline computes complete integer prefix, head API returns only a certified prefix. Not a full-count speedup.",
+  "head_microbenchmark_calls_per_repetition": 100,
+  "large_heads": [
+    {
+      "bit_length": 490971,
+      "bits": 256,
+      "core_types": 1,
+      "cpu_seconds": [
+        0.0004359999999987707,
+        0.0003580000000003025,
+        0.00034299999999909403,
+        0.00034100000000059083,
+        0.0003399999999995629
+      ],
+      "cutoff": 0,
+      "head_hex": "0xc247c19e849245a1af797961742d6a6d4e5ec17d7d3874d0d51a5b101961d7fd",
+      "median_cpu_seconds": 0.00034299999999909403,
+      "n": 1000
+    },
+    {
+      "bit_length": 49876542,
+      "bits": 256,
+      "core_types": 1,
+      "cpu_seconds": [
+        0.03227899999999906,
+        0.03233400000000053,
+        0.03230100000000036,
+        0.032260000000000844,
+        0.03232400000000091
+      ],
+      "cutoff": 0,
+      "head_hex": "0xe7d782997a96b31a0cb2523c988f010034622aef43f5aa98b08af4148e3c84b7",
+      "median_cpu_seconds": 0.03230100000000036,
+      "n": 10000
+    }
+  ],
+  "platform": "macOS-15.3.2-arm64-arm-64bit",
+  "python": "3.10.0",
+  "repetitions": 5,
+  "source_hashes": {
+    "05-knowledge/results/session87_four_vertices_enumeration_20261028/fast_counts.py": "3844a4a590daaf01410cf99d3584441bfa2f8e5e95371ccaafe534fd152b0ece",
+    "heads.py": "68e870a2ac59e50fa6f6247fefaabbe5ebfd7b10ceeac314910107bdde6e6421"
+  },
+  "status": "PASS",
+  "table": [
+    {
+      "bit_length": 379,
+      "bits": 128,
+      "full_prefix_cpu_seconds": [
+        0.0007969999999999922,
+        0.0008029999999999982,
+        0.0007920000000001259,
+        0.0007499999999998064,
+        0.0007900000000000684
+      ],
+      "head_hex": "0xa1a6973c1faf699685b7d4e6b898b14e",
+      "head_query_cpu_seconds": [
+        0.0037920000000000002,
+        0.0037924599999999997,
+        0.00376672,
+        0.0037676900000000015,
+        0.0037665799999999994
+      ],
+      "median_full_prefix_cpu_seconds": 0.0007920000000001259,
+      "median_head_query_cpu_seconds": 0.0037676900000000015,
+      "n": 32
+    },
+    {
+      "bit_length": 1721,
+      "bits": 128,
+      "full_prefix_cpu_seconds": [
+        0.005510000000000126,
+        0.005513000000000101,
+        0.005514000000000019,
+        0.005612999999999868,
+        0.005587000000000231
+      ],
+      "head_hex": "0x806e7b519070ddb8c130b5502ed7b466",
+      "head_query_cpu_seconds": [
+        0.00013303000000000064,
+        0.0001333900000000021,
+        0.00013207999999999886,
+        0.00013405000000000112,
+        0.00013055999999999734
+      ],
+      "median_full_prefix_cpu_seconds": 0.005514000000000019,
+      "median_head_query_cpu_seconds": 0.00013303000000000064,
+      "n": 64
+    },
+    {
+      "bit_length": 4426,
+      "bits": 128,
+      "full_prefix_cpu_seconds": [
+        0.029417000000000026,
+        0.028856000000000215,
+        0.029106999999999772,
+        0.029020000000000046,
+        0.02923000000000009
+      ],
+      "head_hex": "0x96a50f303f3c07af3894032cf329f7d2",
+      "head_query_cpu_seconds": [
+        3.5089999999997626e-05,
+        3.63099999999994e-05,
+        3.471999999999919e-05,
+        3.676999999999708e-05,
+        3.496000000000166e-05
+      ],
+      "median_full_prefix_cpu_seconds": 0.029106999999999772,
+      "median_head_query_cpu_seconds": 3.5089999999997626e-05,
+      "n": 100
+    },
+    {
+      "bit_length": 11775,
+      "bits": 128,
+      "full_prefix_cpu_seconds": [
+        0.3306690000000003,
+        0.33097299999999974,
+        0.33040400000000014,
+        0.32933199999999996,
+        0.3297380000000003
+      ],
+      "head_hex": "0xa17bea8f00534a856f2e7fd8204e96f9",
+      "head_query_cpu_seconds": [
+        2.562999999999871e-05,
+        2.8039999999998068e-05,
+        2.514999999999823e-05,
+        2.8409999999996494e-05,
+        2.5020000000002264e-05
+      ],
+      "median_full_prefix_cpu_seconds": 0.33040400000000014,
+      "median_head_query_cpu_seconds": 2.562999999999871e-05,
+      "n": 160
+    },
+    {
+      "bit_length": 18655,
+      "bits": 128,
+      "full_prefix_cpu_seconds": [
+        1.4664969999999995,
+        1.4733960000000002,
+        1.4635589999999992,
+        1.4791170000000005,
+        1.4702059999999992
+      ],
+      "head_hex": "0xc4a6a10b0e8708f278f8d7db0481811e",
+      "head_query_cpu_seconds": [
+        3.201999999999927e-05,
+        3.58200000000064e-05,
+        3.0589999999994786e-05,
+        3.5690000000005996e-05,
+        3.2490000000002794e-05
+      ],
+      "median_full_prefix_cpu_seconds": 1.4702059999999992,
+      "median_head_query_cpu_seconds": 3.2490000000002794e-05,
+      "n": 200
+    }
+  ]
+}
