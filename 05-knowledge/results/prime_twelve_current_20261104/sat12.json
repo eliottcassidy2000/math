@@ -1,0 +1,17 @@
+{
+  "clauses": 1295202,
+  "conflict_budget": 20000,
+  "elapsed_seconds": 284.22,
+  "n": 12,
+  "rows": null,
+  "scope": "Hamilton-path labeling; all endpoint parities balanced and all shared cubic residues zero. No C-skew condition or full-response equality imposed.",
+  "solver_stats": {
+    "conflicts": 40377,
+    "decisions": 55968,
+    "propagations": 1470266717,
+    "restarts": 13
+  },
+  "source_sha256": "ad98c9a0f053f1213efd79431143d70a03c1c2b13e231dee81ce2b3492224c19",
+  "status": "UNKNOWN: conflict budget exhausted",
+  "variables": 356531
+}

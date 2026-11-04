@@ -1,0 +1,132 @@
+{
+  "bank_sha256": "b4e559ad6cb31980852034f9c7f61e366a7cb479fee4d9a641ad3356745200d3",
+  "counts": {
+    "2": {
+      "all_cards": 0,
+      "blind": 0,
+      "classes": 1,
+      "prime": 0,
+      "regular": 0,
+      "strong": 0
+    },
+    "3": {
+      "all_cards": 0,
+      "blind": 1,
+      "classes": 2,
+      "prime": 1,
+      "regular": 1,
+      "strong": 1
+    },
+    "4": {
+      "all_cards": 0,
+      "blind": 0,
+      "classes": 4,
+      "prime": 0,
+      "regular": 0,
+      "strong": 0
+    },
+    "5": {
+      "all_cards": 0,
+      "blind": 1,
+      "classes": 12,
+      "prime": 1,
+      "regular": 1,
+      "strong": 1
+    },
+    "6": {
+      "all_cards": 0,
+      "blind": 0,
+      "classes": 56,
+      "prime": 0,
+      "regular": 0,
+      "strong": 0
+    },
+    "7": {
+      "all_cards": 0,
+      "blind": 2,
+      "classes": 456,
+      "prime": 2,
+      "regular": 2,
+      "strong": 2
+    },
+    "8": {
+      "all_cards": 0,
+      "blind": 0,
+      "classes": 6880,
+      "prime": 0,
+      "regular": 0,
+      "strong": 0
+    },
+    "9": {
+      "all_cards": 0,
+      "blind": 3,
+      "classes": 191536,
+      "prime": 2,
+      "regular": 3,
+      "strong": 3
+    }
+  },
+  "records": [
+    {
+      "all_deletion_currents_zero": false,
+      "code": 5,
+      "n": 3,
+      "prime": true,
+      "regular": true,
+      "strong": true
+    },
+    {
+      "all_deletion_currents_zero": false,
+      "code": 739,
+      "n": 5,
+      "prime": true,
+      "regular": true,
+      "strong": true
+    },
+    {
+      "all_deletion_currents_zero": false,
+      "code": 1530695,
+      "n": 7,
+      "prime": true,
+      "regular": true,
+      "strong": true
+    },
+    {
+      "all_deletion_currents_zero": false,
+      "code": 1881863,
+      "n": 7,
+      "prime": true,
+      "regular": true,
+      "strong": true
+    },
+    {
+      "all_deletion_currents_zero": false,
+      "code": 24309033487,
+      "n": 9,
+      "prime": true,
+      "regular": true,
+      "strong": true
+    },
+    {
+      "all_deletion_currents_zero": false,
+      "code": 66065447183,
+      "n": 9,
+      "prime": false,
+      "regular": true,
+      "strong": true
+    },
+    {
+      "all_deletion_currents_zero": false,
+      "code": 67726374927,
+      "n": 9,
+      "prime": true,
+      "regular": true,
+      "strong": true
+    }
+  ],
+  "source_sha256": {
+    "current.cpp": "e6109358cccbd4be2c3519600d63e63be7a2b95c2231a466300dd83375d6e328",
+    "current.py": "8148a4b381b04b8f627ca73fbeefcf26665040032d1e0aabfc9c471097e10a89"
+  },
+  "status": "FINITE-EXACT complete inherited bank through9; not an order12 result"
+}
