@@ -1,0 +1,841 @@
+{
+  "audit_sha256": {
+    "audit.py": "38ebcf205e855109969a3ef237e6f01f32b3c9bd5fe0d8051f6db3a4e45d4abb",
+    "count.cpp": "c3a3d33cad27447c9ad38d0834aafa272186303699203ce7ce27f9f0b6abbba5"
+  },
+  "canonical_records": [
+    {
+      "complete_values_sha256": "5a0621e6ec3c7fdf14e91a65274a85d177648df09a4e1eb13e989bbe5f539a49",
+      "good_indices": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        13,
+        15,
+        18,
+        22,
+        23,
+        25,
+        26,
+        41,
+        44,
+        45,
+        47,
+        50,
+        52,
+        54,
+        55
+      ],
+      "types": [
+        "P",
+        "P",
+        "O"
+      ]
+    },
+    {
+      "complete_values_sha256": "8ee57d6b230f0862bef5b4e92d8250bd89c7d4590534a47d0f92d7a368f04a25",
+      "good_indices": [
+        13,
+        22,
+        41,
+        50
+      ],
+      "types": [
+        "P",
+        "P",
+        "C"
+      ]
+    },
+    {
+      "complete_values_sha256": "a8fa8d8d99b91b18551ac3c6b29dd43cac2d3b3fc8be85790963babdae6a289e",
+      "good_indices": [
+        2,
+        3,
+        4,
+        5,
+        13,
+        18,
+        22,
+        23,
+        25,
+        27,
+        31,
+        36,
+        39,
+        45,
+        47,
+        52
+      ],
+      "types": [
+        "P",
+        "E",
+        "O"
+      ]
+    },
+    {
+      "complete_values_sha256": "6d4c3e1bfb09f0fa355b6689960245c72b9d32cc9add96fa6b2ee4e07eebad53",
+      "good_indices": [
+        1,
+        3,
+        4,
+        6,
+        9,
+        13,
+        15,
+        22,
+        26,
+        27,
+        31,
+        36,
+        39,
+        44,
+        54,
+        55
+      ],
+      "types": [
+        "P",
+        "E",
+        "C"
+      ]
+    },
+    {
+      "complete_values_sha256": "48c48f4959360951098cafdad4a3e2c21f4eb0f534dfc8df34e009d438a71fd7",
+      "good_indices": [
+        1,
+        3,
+        4,
+        6,
+        9,
+        11,
+        15,
+        25,
+        26,
+        27,
+        31,
+        36,
+        38,
+        39,
+        41,
+        44,
+        50,
+        52,
+        54,
+        55
+      ],
+      "types": [
+        "P",
+        "O",
+        "P"
+      ]
+    },
+    {
+      "complete_values_sha256": "adf649350578e522c4b30e3f42c1e3d9c4c0c86036f5f4fefb0266608bc3780d",
+      "good_indices": [
+        2,
+        3,
+        4,
+        5,
+        11,
+        18,
+        23,
+        27,
+        31,
+        36,
+        38,
+        39,
+        41,
+        45,
+        47,
+        50
+      ],
+      "types": [
+        "P",
+        "O",
+        "E"
+      ]
+    },
+    {
+      "complete_values_sha256": "b97428a8bf2fe7bd1a7c5aa9df653591ada19c0769a30482c5a4bd4f5b469973",
+      "good_indices": [
+        11,
+        25,
+        38,
+        52
+      ],
+      "types": [
+        "P",
+        "C",
+        "P"
+      ]
+    },
+    {
+      "complete_values_sha256": "83a4be529642c30cda68c31a2033ad94dbda3e9f2b2b1c4bab03a058f5f0e381",
+      "good_indices": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        11,
+        15,
+        18,
+        23,
+        26,
+        38,
+        44,
+        45,
+        47,
+        54,
+        55
+      ],
+      "types": [
+        "P",
+        "C",
+        "E"
+      ]
+    },
+    {
+      "complete_values_sha256": "acb1d76a42403456b03d951181175ef2a0836b0e91678c0f7356153edec2cdc0",
+      "good_indices": [
+        1,
+        3,
+        4,
+        6,
+        9,
+        13,
+        15,
+        22,
+        26,
+        27,
+        31,
+        36,
+        39,
+        44,
+        54,
+        55
+      ],
+      "types": [
+        "E",
+        "P",
+        "O"
+      ]
+    },
+    {
+      "complete_values_sha256": "10f726db7292560739dd0e8e6ea40c480bffd5144906a9ca2d78d26353803490",
+      "good_indices": [
+        2,
+        3,
+        4,
+        5,
+        13,
+        18,
+        22,
+        23,
+        25,
+        27,
+        31,
+        36,
+        39,
+        45,
+        47,
+        52
+      ],
+      "types": [
+        "E",
+        "P",
+        "C"
+      ]
+    },
+    {
+      "complete_values_sha256": "c50d502fd1bfbc1461093df60715a99de68e6b516530a3a091cb54f2f4fb5d7d",
+      "good_indices": [
+        13,
+        22,
+        41,
+        50
+      ],
+      "types": [
+        "E",
+        "E",
+        "O"
+      ]
+    },
+    {
+      "complete_values_sha256": "be68ef4aa0cff4009356a113a08f9c1d019de4d62a883ad7ceebaa747aba6a98",
+      "good_indices": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        13,
+        15,
+        18,
+        22,
+        23,
+        25,
+        26,
+        41,
+        44,
+        45,
+        47,
+        50,
+        52,
+        54,
+        55
+      ],
+      "types": [
+        "E",
+        "E",
+        "C"
+      ]
+    },
+    {
+      "complete_values_sha256": "bffe6fcfa626382cf201d63c0f43981e3aaf24040c7d71c9f61920f4edd7137e",
+      "good_indices": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        11,
+        15,
+        18,
+        23,
+        26,
+        38,
+        44,
+        45,
+        47,
+        54,
+        55
+      ],
+      "types": [
+        "E",
+        "O",
+        "P"
+      ]
+    },
+    {
+      "complete_values_sha256": "f6c69d4da34aa49b4f5cee675ccfd80c11a618aae58a062e07e46bbcfa963fc9",
+      "good_indices": [
+        11,
+        25,
+        38,
+        52
+      ],
+      "types": [
+        "E",
+        "O",
+        "E"
+      ]
+    },
+    {
+      "complete_values_sha256": "5fcb47b964b3fcbd7971fd40f703030d58d58dbb5b6e2a3f018275b662d7bd08",
+      "good_indices": [
+        2,
+        3,
+        4,
+        5,
+        11,
+        18,
+        23,
+        27,
+        31,
+        36,
+        38,
+        39,
+        41,
+        45,
+        47,
+        50
+      ],
+      "types": [
+        "E",
+        "C",
+        "P"
+      ]
+    },
+    {
+      "complete_values_sha256": "50c56a650ece77c31db65951154fc18573a704e40e97ea27e25ec4b9a897bb00",
+      "good_indices": [
+        1,
+        3,
+        4,
+        6,
+        9,
+        11,
+        15,
+        25,
+        26,
+        27,
+        31,
+        36,
+        38,
+        39,
+        41,
+        44,
+        50,
+        52,
+        54,
+        55
+      ],
+      "types": [
+        "E",
+        "C",
+        "E"
+      ]
+    },
+    {
+      "complete_values_sha256": "7d8769b4a4b154298131f8d4d13b15472b42a4bd1c9ddf203f5be0a10dd6d932",
+      "good_indices": [
+        2,
+        3,
+        4,
+        5,
+        18,
+        19,
+        23,
+        25,
+        26,
+        27,
+        31,
+        36,
+        37,
+        39,
+        41,
+        44,
+        45,
+        47,
+        50,
+        52
+      ],
+      "types": [
+        "O",
+        "P",
+        "P"
+      ]
+    },
+    {
+      "complete_values_sha256": "dd0ad26b3b242eda976693c9eac3120f57b46ffeeb6639c969f67bde10adcac9",
+      "good_indices": [
+        1,
+        3,
+        4,
+        6,
+        9,
+        15,
+        19,
+        27,
+        31,
+        36,
+        37,
+        39,
+        41,
+        50,
+        54,
+        55
+      ],
+      "types": [
+        "O",
+        "P",
+        "E"
+      ]
+    },
+    {
+      "complete_values_sha256": "e8205e053a82084285bfe27a06fa2bcb43dc5d4cab5998a3f0d37518bd99ff0c",
+      "good_indices": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        15,
+        18,
+        19,
+        23,
+        25,
+        37,
+        45,
+        47,
+        52,
+        54,
+        55
+      ],
+      "types": [
+        "O",
+        "E",
+        "P"
+      ]
+    },
+    {
+      "complete_values_sha256": "68ecacc80d5299d1a3f09b7e1bf3b3877e36c31470e4af91e9710c53492df328",
+      "good_indices": [
+        19,
+        26,
+        37,
+        44
+      ],
+      "types": [
+        "O",
+        "E",
+        "E"
+      ]
+    },
+    {
+      "complete_values_sha256": "77f7a62524f63591959dc6344e84bd2976c157a8c312e1d32478025f5ecb9c19",
+      "good_indices": [
+        11,
+        13,
+        19,
+        22,
+        25,
+        26,
+        37,
+        38,
+        41,
+        44,
+        50,
+        52
+      ],
+      "types": [
+        "O",
+        "O",
+        "O"
+      ]
+    },
+    {
+      "complete_values_sha256": "8cd343a525d7f9d9fc5016c8387e433321e9c64c7f5d8ae5f1fc94c3d9db49db",
+      "good_indices": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        11,
+        13,
+        15,
+        18,
+        19,
+        22,
+        23,
+        37,
+        38,
+        41,
+        45,
+        47,
+        50,
+        54,
+        55
+      ],
+      "types": [
+        "O",
+        "O",
+        "C"
+      ]
+    },
+    {
+      "complete_values_sha256": "7d6277b4ccf2eac2662e4672b2dc6ddf30c915bdabc2861f3ef194c3982fcc38",
+      "good_indices": [
+        1,
+        3,
+        4,
+        6,
+        9,
+        11,
+        13,
+        15,
+        19,
+        22,
+        25,
+        27,
+        31,
+        36,
+        37,
+        38,
+        39,
+        52,
+        54,
+        55
+      ],
+      "types": [
+        "O",
+        "C",
+        "O"
+      ]
+    },
+    {
+      "complete_values_sha256": "ae5de2971f403fbc22caf6ce269bd8f09d71cf8c193183c5bc536d80b3e68a1a",
+      "good_indices": [
+        2,
+        3,
+        4,
+        5,
+        11,
+        13,
+        18,
+        19,
+        22,
+        23,
+        26,
+        27,
+        31,
+        36,
+        37,
+        38,
+        39,
+        44,
+        45,
+        47
+      ],
+      "types": [
+        "O",
+        "C",
+        "C"
+      ]
+    },
+    {
+      "complete_values_sha256": "585ca01d706f54eeed030e041281375b671a5fe52766534ceb3aef59791e78ea",
+      "good_indices": [
+        19,
+        26,
+        37,
+        44
+      ],
+      "types": [
+        "C",
+        "P",
+        "P"
+      ]
+    },
+    {
+      "complete_values_sha256": "fc6e51646a936d027a30926da1965b84ae7c4183e263020067e5860f7f7d3701",
+      "good_indices": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        15,
+        18,
+        19,
+        23,
+        25,
+        37,
+        45,
+        47,
+        52,
+        54,
+        55
+      ],
+      "types": [
+        "C",
+        "P",
+        "E"
+      ]
+    },
+    {
+      "complete_values_sha256": "4726e225ced3960acaf33833958d2d82aaf1aba74c35247ae31810e11f838a44",
+      "good_indices": [
+        1,
+        3,
+        4,
+        6,
+        9,
+        15,
+        19,
+        27,
+        31,
+        36,
+        37,
+        39,
+        41,
+        50,
+        54,
+        55
+      ],
+      "types": [
+        "C",
+        "E",
+        "P"
+      ]
+    },
+    {
+      "complete_values_sha256": "d5098be7b9eec2f138b15a8767d9e395257dbd7562507b3b851a69bb64d15796",
+      "good_indices": [
+        2,
+        3,
+        4,
+        5,
+        18,
+        19,
+        23,
+        25,
+        26,
+        27,
+        31,
+        36,
+        37,
+        39,
+        41,
+        44,
+        45,
+        47,
+        50,
+        52
+      ],
+      "types": [
+        "C",
+        "E",
+        "E"
+      ]
+    },
+    {
+      "complete_values_sha256": "4b3dea5fa37639be315fe8cf68651c6ecb6adf5afdd6982d50ef8f3a2f2a903d",
+      "good_indices": [
+        2,
+        3,
+        4,
+        5,
+        11,
+        13,
+        18,
+        19,
+        22,
+        23,
+        26,
+        27,
+        31,
+        36,
+        37,
+        38,
+        39,
+        44,
+        45,
+        47
+      ],
+      "types": [
+        "C",
+        "O",
+        "O"
+      ]
+    },
+    {
+      "complete_values_sha256": "e54664a7c073e24d98f32a2624a74130f1db77de6c298efc8ee54af59180dae6",
+      "good_indices": [
+        1,
+        3,
+        4,
+        6,
+        9,
+        11,
+        13,
+        15,
+        19,
+        22,
+        25,
+        27,
+        31,
+        36,
+        37,
+        38,
+        39,
+        52,
+        54,
+        55
+      ],
+      "types": [
+        "C",
+        "O",
+        "C"
+      ]
+    },
+    {
+      "complete_values_sha256": "86084adacfee132a5783884a5de48e4ad15aab8175333bbee8c4e4b8b90d6555",
+      "good_indices": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        11,
+        13,
+        15,
+        18,
+        19,
+        22,
+        23,
+        37,
+        38,
+        41,
+        45,
+        47,
+        50,
+        54,
+        55
+      ],
+      "types": [
+        "C",
+        "C",
+        "O"
+      ]
+    },
+    {
+      "complete_values_sha256": "8af4c1598a541ab7dd1993a3925ef96fddb2fc10e4466686937a68b1c6b77681",
+      "good_indices": [
+        11,
+        13,
+        19,
+        22,
+        25,
+        26,
+        37,
+        38,
+        41,
+        44,
+        50,
+        52
+      ],
+      "types": [
+        "C",
+        "C",
+        "C"
+      ]
+    }
+  ],
+  "canonical_type_triples": 32,
+  "complete_queries_per_type": 64,
+  "family_contexts": 64,
+  "independent_unique_physical_graph_queries": 4246,
+  "larger_child_ambient_controls": 11,
+  "physical_count_occurrences_with_repeated_family_sources": 4638,
+  "same_negative_query_by_context": [
+    [
+      [
+        0
+      ],
+      1
+    ],
+    [
+      [
+        2,
+        4,
+        1
+      ],
+      1
+    ]
+  ],
+  "scope": "All-cover homogeneous residue transfer, complete odd-type certificates and fixed-ambient dual family theorem; no exact collision or unrestricted prime reconstruction.",
+  "source_sha256": {
+    "cyclic_odd_profile_lift/PROOF.md": "83d680473577c98772b70c37d3f6b240cddc29af98888a71700b3f68e0a82458",
+    "cyclic_odd_profile_lift/literal.cpp": "7fd87ac327260507029531de0987a6f185ef84f6dfc8930eab566e748ea36bd9",
+    "cyclic_odd_profile_lift/verify.py": "fa417e3a2f53d3e6786e79b517da3d8b43d21aa6f918757fbdd092901e466ae2",
+    "five_profile_types/PROOF.md": "0f837c969531d66c1f5f77e6e3aa02416154f852a3f79d2cfe8147059872c9f6",
+    "mod8_transfer/PROOF.md": "aaf6c9325b34b03187771d0731b3a6d6e9b9d31e25238d8adb4a9267fcb46521",
+    "monotone_dual_queries/PROOF.md": "f617b74aa6c9545e945d6c5f6d8258049a9dd68f3127c5252542b2592f746d5f"
+  },
+  "status": "PASS",
+  "strict_contexts": 16
+}
