@@ -44,6 +44,7 @@ F_T. The response refines the count: F_T(0,0) = H(T). The four threads ask about
 | trijection S3 note | `trijection_four_nodes_three_edges_20261020.md` | PROVED | marked line, cycle or star ⇔ Tour(n−1) modulo 1, Z_{n−1} or S_{n−1}; (8,4,4), (64,16,8), (1024,208,24) |
 | THM-4835, THM-4836 | canon | PROVED; audited (MISTAKE-689) | Euler-characteristic trijection criterion; pair-or-triple law exactly for n ≤ 5; t_8 = 6880, s_8 = 6008 |
 | THM-4845 | canon | audited | A000568 as a Gaussian average; Davis values to n = 80 |
+| even_graph_response_merge_20261104 (concurrent, pushed 11:12 today) | INHERITED PROVED / CITED bijections; PROVED Fourier specialization; FINITE-EXACT at order 5 | An automorphism-even graph indexes a signed Fourier basis function on tournament types. Named two-port responses need the marked version of that basis. At order 5 the 12 graph types split 10 + 2 by edge parity, and the converse trace 8 equals the self-converse count. |
 | THM-4803 | canon | CITED + PROVED + FINITE-EXACT; all-order Aut/isotype invariance REFUTED (corrected) | A000568 from the prime cycle-index census. Boussaïri–Ille–Lopez–Thomassé: a prime tournament is determined up to duality by its 3-cycles. |
 | THM-4814, THM-4816 | canon | FINITE-EXACT (4814, unaudited); PROVED (A) + FINITE-EXACT (4816) | The prime cycle-index tower: the nine order-10 types of 7,906,161 prime tournaments, and orders 11–13 from non-rigid primes. |
 
