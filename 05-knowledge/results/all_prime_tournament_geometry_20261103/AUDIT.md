@@ -73,7 +73,7 @@ claim. Local theorem labels AP1--AP7 are scoped to PROOFS.md.
   of111,167,169. No inference from sampled cuts is used for this audit.
 *169 bounded-height uniqueness controls. The general equivalence is proved.
 
-`reproduce.py` runs both programs normally and with `python -O`; all checks
+`reproduce.py` runs all three programs normally and with `python -O`; all checks
 use explicit exceptions, so optimized mode cannot discard validation.
 The JSON receipts are deterministic and compared byte-for-byte. See
 `reproduction.json` for the completed replay result.
@@ -82,6 +82,12 @@ Repository checks: `git diff --check` and `python3 agents/check_docs.py`
 pass. The first documentation run encountered absent files in the sparse
 checkout; restoring the unmodified required documents and full theorem
 status surface made the check complete. No unrelated source file was edited.
+
+After integrating origin/main at a55a46e2a9, `incoming_check.py` adds six
+literal norm-wrapper controls, a full vertex isomorphism for the H11 seed,
+and22,320 local norm tests. Its normal/-O outputs also agree. The inherited
+general norm proof and incoming one-apex obstruction were read before
+updating the handoff; neither is claimed as a new theorem of this packet.
 
 ## Boundaries kept open
 

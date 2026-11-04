@@ -94,3 +94,58 @@ returns at18977/18979, with the saved root/spare and Q4 phases. Alternatively
 advance Q2 only with literal graph witnesses. A productive obstruction is
 one that locates the lost phase or endpoint, as the nine-vertex example
 does; gcd1 and finite residue surjectivity are never coverage certificates.
+
+## Incoming integration at a55a46e2a9
+
+The new `../return18979_ports_20261103/PROOFS.md`, RC1--RC5, strengthens the
+handoff above. Ready transitive-root growth requires a unique in-port and
+a transitive grandparent; the saved6325 repair needs one extra editable
+port,2 or21, and changes H by a stated nonzero amount. The complete one-apex
+law H_A(m)=A*2^m+B(A) admits no uniform+2 ternary return; +4 occurs exactly
+when the odd part of A is7 and stops being eligible after its next step.
+Do not reopen that solved one-apex +2 lane. The next two-feedback target
+is (3729,-3181), with constant debt1182 relative to the forced one-apex
+value(3729,-1999). AP4's two-exceptional-vertex architecture may provide an
+evaluation scaffold, but its root-selecting cut menu has **not** been shown
+to realize that repair. Their actual18979 source remains unreturned.
+
+The square-sum correction in the same packet also matters: the old boundary
+contains44, not317. One final path admits two source interpretations with
+different connector catalogues. This is a literal example of the shared-
+source requirement in AP5; successful endpoint equations cannot recover
+which old vertex set was intended.
+
+S174 adds a different, exact all-prime restriction. Its
+`../session174_palindrome_symmetry_20261103/synthesis/NOTE.md` proves that
+the mirrored cyclic wrapper A->A*->z->A has
+
+    H=(b-a)^2+2a^2,       a=F_A(1), b=F_A(2).
+
+For every odd p where -2 is a nonsquare, divisibility of this norm by p
+forces p to divide both coordinates. Hence its valuation is exactly
+2*min(v_p(b-a),v_p(a)). This inherited theorem is stronger than a bounded
+residue scan. The same packet proves H=3 mod8 and excludes7,21 even with
+arbitrary nonempty uniform feedback. Those values are already globally
+excluded; for the completeness goal, the useful fact is that this
+constructor also misses many *allowed* counts, so cannot be the sole bank.
+
+There is a literal connection to AP3: its H11 seed B is isomorphic to the
+mirrored wrapper of the two-vertex transitive tournament. With a=1,b=4,
+the norm is3^2+2=11. `incoming.json` gives the explicit vertex permutation,
+not just an equal-count assertion. This B is the modulo5 phase complement
+of our H5 seed. Mirroring their nine-vertex ordinal sum instead gives
+
+    (3200-55)^2+2*55^2 = 9,897,075,
+
+whose5-adic valuation is2. In the ordinal sum5 appeared once through
+complementary slot phases; in the mirrored construction the norm geometry
+forces its exponent even. Different composition operations impose
+different prime laws. Modulo11, -2=9 is a square and the H11 seed gives an
+odd exponent; a norm obstruction at5 therefore cannot be copied to11.
+
+`incoming_check.py` checks six literal mirrored wrappers against the norm,
+the H11 isomorphism, and22,320 bounded norm valuations at the six selected
+inert primes5,7,13,23,29,31. The19-vertex H55 mirror count above is calculated
+by the inherited proved formula, not claimed as an independent full DP.
+This supplies an additional source -> quadratic norm -> local prime-law
+map, while retaining the full module profiles and ports as sidecars.

@@ -6,6 +6,8 @@ Hamilton-spectrum, Collatz, planar-Jacobian or plane-colouring claim.
 
 This continues `digit_memory_all_bases_20261103` from clean origin/main
 `d53992645e` in `/tmp/math-wt-digit_memory_all_bases_20261103`.
+The clean integration at `a55a46e2a9` adds the S174 norm bridge and the
+return18979 carrier obstruction; see the final section of CONNECTIONS.
 
 The main result is an all-prime extension of the two-boundary-incidences
 principle. With M old uniform modules of fixed path-cover contents c_i,
@@ -91,10 +93,12 @@ DP. Runs normal and optimized modes and checks byte-identical receipts.
 See [AUDIT](AUDIT.md) for the complete finite universes and independent
 paths. No subagent was used.
 
-The next decisive experiment is a **marked prime-phase return atlas**:
-for the actual18977/18979 sources, retain their supplied names and root/
-spare responses; compute the ideals and feasible values of allowed
-contexts separately, then ask which locally admissible phase targets
-possess compatible next ports. Extending the new compiler to arbitrary
-two readers requires joint endpoint profiles; replacing them by marginal
-counts is not licensed. Full ternary source closure remains OPEN.
+The next decisive experiment is a **marked prime-phase return atlas** with
+two feedback ports. Incoming `return18979_ports_20261103` closes the uniform
+one-apex +2 route and identifies the constant-mode debt1182. Retain the
+actual18979 root43/spare6 and the separately supplied18977 source; compute
+ideals and feasible values separately. Seek the exact target coefficients
+(3729,-3181), rather than accepting the one-apex substitute(3729,-1999).
+Extending the new compiler to arbitrary two readers requires joint endpoint
+profiles; replacing them by marginals is not licensed. Full ternary source
+closure remains OPEN.

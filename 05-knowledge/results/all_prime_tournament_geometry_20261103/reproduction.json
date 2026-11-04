@@ -10,6 +10,11 @@
       "script": "audit.py",
       "normal_optimized_identical": true,
       "valid_json": true
+    },
+    {
+      "script": "incoming_check.py",
+      "normal_optimized_identical": true,
+      "valid_json": true
     }
   ]
 }

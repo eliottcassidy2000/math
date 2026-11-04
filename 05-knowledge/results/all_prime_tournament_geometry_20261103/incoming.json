@@ -1,0 +1,100 @@
+{
+  "H11_isomorphism_to_mirrored_TT2": [
+    4,
+    2,
+    3,
+    1,
+    0
+  ],
+  "H55_mirrored_norm": {
+    "H": 9897075,
+    "a": 55,
+    "b": 3200,
+    "count_method": "inherited universal norm formula",
+    "v5": 2
+  },
+  "inert_norm_controls": 22320,
+  "literal_wrappers": [
+    {
+      "H": 3,
+      "norm_coordinates": [
+        1,
+        1
+      ],
+      "order_wrapper": 3,
+      "rows": [
+        0
+      ]
+    },
+    {
+      "H": 11,
+      "norm_coordinates": [
+        3,
+        1
+      ],
+      "order_wrapper": 5,
+      "rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "H": 99,
+      "norm_coordinates": [
+        9,
+        3
+      ],
+      "order_wrapper": 7,
+      "rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "H": 779,
+      "norm_coordinates": [
+        27,
+        5
+      ],
+      "order_wrapper": 9,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "H": 8163,
+      "norm_coordinates": [
+        89,
+        11
+      ],
+      "order_wrapper": 11,
+      "rows": [
+        24,
+        1,
+        3,
+        6,
+        14
+      ]
+    },
+    {
+      "H": 11475,
+      "norm_coordinates": [
+        105,
+        15
+      ],
+      "order_wrapper": 11,
+      "rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    }
+  ],
+  "status": "FINITE-EXACT inherited-norm integration"
+}

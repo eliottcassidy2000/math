@@ -7,7 +7,7 @@ import sys
 
 root=Path(__file__).resolve().parent
 records=[]
-for script,output in [('check.py','receipt.json'),('audit.py','audit.json')]:
+for script,output in [('check.py','receipt.json'),('audit.py','audit.json'),('incoming_check.py','incoming.json')]:
     a=subprocess.check_output([sys.executable,'-B',str(root/script)],cwd=root)
     b=subprocess.check_output([sys.executable,'-B','-O',str(root/script)],cwd=root)
     if a!=b:
