@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "all_binary_words_lengths_1_to_13": 16382,
+  "independent_positive_and_zero_lift_checks": 49146,
+  "minimal_positive_descent_witnesses": 13522,
+  "first_descent_starts_2_to_10000": 9999,
+  "first_descent_records": [
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      27,
+      59
+    ],
+    [
+      703,
+      81
+    ]
+  ],
+  "conservative_grammar_starts_2_to_10000": 9999,
+  "conservative_max_depth": [
+    4255,
+    95
+  ],
+  "near_critical_exact_checks": 500,
+  "near_critical_examples": [
+    {
+      "ones": 1,
+      "length": 2,
+      "first_witness_bits": 3,
+      "A_bits": 2,
+      "C_bits": 1
+    },
+    {
+      "ones": 2,
+      "length": 4,
+      "first_witness_bits": 2,
+      "A_bits": 4,
+      "C_bits": 3
+    },
+    {
+      "ones": 10,
+      "length": 16,
+      "first_witness_bits": 15,
+      "A_bits": 16,
+      "C_bits": 16
+    },
+    {
+      "ones": 100,
+      "length": 159,
+      "first_witness_bits": 158,
+      "A_bits": 159,
+      "C_bits": 159
+    },
+    {
+      "ones": 500,
+      "length": 793,
+      "first_witness_bits": 793,
+      "A_bits": 793,
+      "C_bits": 793
+    }
+  ],
+  "semilinear_uniform_margin_checks": 4096,
+  "hostile_controls": [
+    "all-odd expanding words reject",
+    "1 cycle equality rejects",
+    "5n+1 13 cycle equality rejects"
+  ],
+  "scope": "Finite checks validate identities and implementation, not Parikh theorem or universal Collatz coverage."
+}

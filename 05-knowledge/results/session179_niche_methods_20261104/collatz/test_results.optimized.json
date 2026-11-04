@@ -1,0 +1,168 @@
+{
+  "long_controls": [
+    {
+      "word": [
+        1
+      ],
+      "repeats": 10,
+      "match": 11,
+      "source_bits": 12
+    },
+    {
+      "word": [
+        1
+      ],
+      "repeats": 50,
+      "match": 51,
+      "source_bits": 52
+    },
+    {
+      "word": [
+        1
+      ],
+      "repeats": 200,
+      "match": 201,
+      "source_bits": 202
+    },
+    {
+      "word": [
+        2
+      ],
+      "repeats": 10,
+      "match": 10,
+      "source_bits": 22
+    },
+    {
+      "word": [
+        2
+      ],
+      "repeats": 50,
+      "match": 50,
+      "source_bits": 102
+    },
+    {
+      "word": [
+        2
+      ],
+      "repeats": 200,
+      "match": 200,
+      "source_bits": 402
+    },
+    {
+      "word": [
+        1,
+        1,
+        3
+      ],
+      "repeats": 10,
+      "match": 30,
+      "source_bits": 52
+    },
+    {
+      "word": [
+        1,
+        1,
+        3
+      ],
+      "repeats": 50,
+      "match": 150,
+      "source_bits": 252
+    },
+    {
+      "word": [
+        1,
+        1,
+        3
+      ],
+      "repeats": 200,
+      "match": 602,
+      "source_bits": 1002
+    },
+    {
+      "word": [
+        1,
+        2,
+        1,
+        4
+      ],
+      "repeats": 10,
+      "match": 40,
+      "source_bits": 82
+    },
+    {
+      "word": [
+        1,
+        2,
+        1,
+        4
+      ],
+      "repeats": 50,
+      "match": 203,
+      "source_bits": 402
+    },
+    {
+      "word": [
+        1,
+        2,
+        1,
+        4
+      ],
+      "repeats": 200,
+      "match": 803,
+      "source_bits": 1602
+    },
+    {
+      "word": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "repeats": 10,
+      "match": 40,
+      "source_bits": 102
+    },
+    {
+      "word": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "repeats": 50,
+      "match": 200,
+      "source_bits": 502
+    },
+    {
+      "word": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "repeats": 200,
+      "match": 800,
+      "source_bits": 2002
+    }
+  ],
+  "status": "PASS",
+  "words": 1364,
+  "sources": 51702,
+  "checks": 145920,
+  "fixed_point_controls": 5,
+  "maximum_matched_letters": 11,
+  "example": {
+    "word": [
+      1,
+      1,
+      3
+    ],
+    "source": 55,
+    "predicted_matched_letters": 5,
+    "replay": [
+      5,
+      107,
+      1
+    ]
+  }
+}

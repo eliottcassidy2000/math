@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "precision_cylinder_cases": 3060,
+  "positive_D_words": 317,
+  "negative_D_words": 23,
+  "largest_short_match": 30,
+  "long_exact_matches": [
+    205,
+    205,
+    615,
+    820,
+    820
+  ],
+  "neutral_towers": 11,
+  "repeated_powers": [
+    2,
+    3
+  ]
+}

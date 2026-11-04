@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "simple_cycles": 44,
+  "cycle_length_odd_counts": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      8,
+      3
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      10,
+      4
+    ],
+    [
+      11,
+      4
+    ],
+    [
+      11,
+      5
+    ],
+    [
+      12,
+      5
+    ],
+    [
+      14,
+      7
+    ],
+    [
+      15,
+      7
+    ]
+  ],
+  "sharp_five_step_words": 26,
+  "independent_divisor_sum_columns": 30,
+  "note": "No source module imported; finite checks do not prove Collatz or exclude all odd perfect numbers."
+}
