@@ -1,0 +1,154 @@
+{
+  "base_homogeneous_pairs": [
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      10
+    ]
+  ],
+  "base_rows": [
+    16,
+    5,
+    2017,
+    2023,
+    2030,
+    1987,
+    1923,
+    1795,
+    1539,
+    1027,
+    3
+  ],
+  "scalar_hostiles": [
+    {
+      "H": 3489,
+      "prime": true,
+      "query": {
+        "a_mask": 1,
+        "base_response": 17055,
+        "c_mask": 0,
+        "other_response": 15579
+      },
+      "reversed_pairs": [
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "rows": [
+        592,
+        5,
+        2017,
+        2023,
+        2030,
+        1987,
+        1666,
+        1795,
+        1603,
+        1026,
+        3
+      ],
+      "strong": true
+    },
+    {
+      "H": 3489,
+      "prime": true,
+      "query": {
+        "a_mask": 1,
+        "base_response": 17055,
+        "c_mask": 0,
+        "other_response": 15579
+      },
+      "reversed_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "rows": [
+        656,
+        5,
+        2017,
+        2023,
+        2030,
+        1987,
+        1667,
+        1794,
+        1603,
+        1026,
+        3
+      ],
+      "strong": true
+    },
+    {
+      "H": 3489,
+      "prime": true,
+      "query": {
+        "a_mask": 1,
+        "base_response": 17055,
+        "c_mask": 0,
+        "other_response": 15579
+      },
+      "reversed_pairs": [
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "rows": [
+        784,
+        5,
+        2017,
+        2023,
+        2030,
+        1987,
+        1667,
+        1795,
+        1602,
+        1026,
+        3
+      ],
+      "strong": true
+    }
+  ],
+  "scope": "Three scalar matches in prescribed finite search, all separated by an actual full-response query."
+}

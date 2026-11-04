@@ -1,0 +1,71 @@
+{
+  "cases": 464709,
+  "census_method": "Independently built inflations, incoming-based pair predicate, predecessor endpoint DP",
+  "hostiles": [
+    {
+      "H": 3489,
+      "flips": [
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "prime": true,
+      "response": 15579,
+      "strong": true
+    },
+    {
+      "H": 3489,
+      "flips": [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "prime": true,
+      "response": 15579,
+      "strong": true
+    },
+    {
+      "H": 3489,
+      "flips": [
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "prime": true,
+      "response": 15579,
+      "strong": true
+    }
+  ],
+  "literal_count_method": "Uncached DFS over every valid directed Hamilton word",
+  "named_query_source": 17055,
+  "pairfree": 28293,
+  "scalar_matches": 3,
+  "status": "ACCEPT"
+}

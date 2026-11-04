@@ -1,0 +1,30 @@
+SAMEH n=11 seed=0 radius=3 rows=592,5,2017,2023,2030,1987,1666,1795,1603,1026,3,
+SAMEH n=11 seed=0 radius=3 rows=656,5,2017,2023,2030,1987,1667,1794,1603,1026,3,
+SAMEH n=11 seed=0 radius=3 rows=784,5,2017,2023,2030,1987,1667,1795,1602,1026,3,
+n=11 seed=0 H=3489 radius=1 total=55 no_pair=0 same_H=0 same_E=0 same_SE=0
+n=11 seed=0 H=3489 radius=2 total=1485 no_pair=67 same_H=0 same_E=0 same_SE=0
+n=11 seed=0 H=3489 radius=3 total=26235 no_pair=3323 same_H=3 same_E=0 same_SE=0
+n=11 seed=1 H=3491 radius=1 total=55 no_pair=0 same_H=0 same_E=0 same_SE=0
+n=11 seed=1 H=3491 radius=2 total=1485 no_pair=68 same_H=0 same_E=0 same_SE=0
+n=11 seed=1 H=3491 radius=3 total=26235 no_pair=3580 same_H=0 same_E=0 same_SE=0
+n=11 seed=2 H=3493 radius=1 total=55 no_pair=0 same_H=0 same_E=0 same_SE=0
+n=11 seed=2 H=3493 radius=2 total=1485 no_pair=68 same_H=0 same_E=0 same_SE=0
+n=11 seed=2 H=3493 radius=3 total=26235 no_pair=3580 same_H=0 same_E=0 same_SE=0
+n=12 seed=0 H=9897 radius=1 total=66 no_pair=0 same_H=0 same_E=0 same_SE=0
+n=12 seed=0 H=9897 radius=2 total=2145 no_pair=37 same_H=0 same_E=0 same_SE=0
+n=12 seed=0 H=9897 radius=3 total=45760 no_pair=3167 same_H=0 same_E=0 same_SE=0
+n=12 seed=1 H=9899 radius=1 total=66 no_pair=0 same_H=0 same_E=0 same_SE=0
+n=12 seed=1 H=9899 radius=2 total=2145 no_pair=37 same_H=0 same_E=0 same_SE=0
+n=12 seed=1 H=9899 radius=3 total=45760 no_pair=3331 same_H=0 same_E=0 same_SE=0
+n=12 seed=2 H=9901 radius=1 total=66 no_pair=0 same_H=0 same_E=0 same_SE=0
+n=12 seed=2 H=9901 radius=2 total=2145 no_pair=37 same_H=0 same_E=0 same_SE=0
+n=12 seed=2 H=9901 radius=3 total=45760 no_pair=3331 same_H=0 same_E=0 same_SE=0
+n=13 seed=0 H=28545 radius=1 total=78 no_pair=0 same_H=0 same_E=0 same_SE=0
+n=13 seed=0 H=28545 radius=2 total=3003 no_pair=12 same_H=0 same_E=0 same_SE=0
+n=13 seed=0 H=28545 radius=3 total=76076 no_pair=2495 same_H=0 same_E=0 same_SE=0
+n=13 seed=1 H=28547 radius=1 total=78 no_pair=0 same_H=0 same_E=0 same_SE=0
+n=13 seed=1 H=28547 radius=2 total=3003 no_pair=12 same_H=0 same_E=0 same_SE=0
+n=13 seed=1 H=28547 radius=3 total=76076 no_pair=2568 same_H=0 same_E=0 same_SE=0
+n=13 seed=2 H=28549 radius=1 total=78 no_pair=0 same_H=0 same_E=0 same_SE=0
+n=13 seed=2 H=28549 radius=2 total=3003 no_pair=12 same_H=0 same_E=0 same_SE=0
+n=13 seed=2 H=28549 radius=3 total=76076 no_pair=2568 same_H=0 same_E=0 same_SE=0
