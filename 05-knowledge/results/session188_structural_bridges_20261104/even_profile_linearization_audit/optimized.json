@@ -1,0 +1,123 @@
+{
+  "audit_sha256": "cce9adfa650812b7930a231b09380d9b4642f2989b8fded3356be34e46ad388c",
+  "explicit_return_involution_controls": [
+    {
+      "multiplicity": 3,
+      "word_count": 7396,
+      "word_set_sha256": "9bfe4ab8ad9c74d25a0aa4e9206aaa5ab402dacba9b13d3bbe45d69ab7dbede4"
+    },
+    {
+      "multiplicity": 5,
+      "word_count": 576,
+      "word_set_sha256": "ab41aa03ca2bbfeb3ad5f2efa95676fbf419e5dd29c6978c1ac04e4eb28cab54"
+    }
+  ],
+  "formal_states": 264224,
+  "independent_physical_counts": 2188,
+  "queries": 548,
+  "records": [
+    {
+      "Q": [
+        0
+      ],
+      "complete_summary_sha256": "e0bdd8294234b205b341cac84e4ce858d648f0309ca96c8994e4c38a0e79b619",
+      "query_count": 4
+    },
+    {
+      "Q": [
+        0,
+        1
+      ],
+      "complete_summary_sha256": "6e82c7bc6839a9a363cb3a900be6a7a4cc0352902e90d953fa27a4e2eb794e94",
+      "query_count": 16
+    },
+    {
+      "Q": [
+        2,
+        0
+      ],
+      "complete_summary_sha256": "e38e21b8a024d3e82e94d04d534d79173f7b467aa8d21892f4f894ac6dc4d2d2",
+      "query_count": 16
+    },
+    {
+      "Q": [
+        0,
+        1,
+        3
+      ],
+      "complete_summary_sha256": "3eee6514c92f7fde0a1c77a64cdab3c0317025a4b4809fd3e6cc8c424ff03c10",
+      "query_count": 64
+    },
+    {
+      "Q": [
+        2,
+        0,
+        3
+      ],
+      "complete_summary_sha256": "fb4a746e630ce1323363f2bcf930cb331d74b383eed1b6cbbe4946a2c8332692",
+      "query_count": 64
+    },
+    {
+      "Q": [
+        4,
+        1,
+        2
+      ],
+      "complete_summary_sha256": "b553513f4b383f732ad1889d887946032eff1f214453333727f89db336faded0",
+      "query_count": 64
+    },
+    {
+      "Q": [
+        6,
+        0,
+        2
+      ],
+      "complete_summary_sha256": "0690fddaab055c831f4260ac3d8f71ce2ac5123b907d9fd9c3d78b052e0fd8aa",
+      "query_count": 64
+    },
+    {
+      "Q": [
+        0,
+        5,
+        1
+      ],
+      "complete_summary_sha256": "077b4b188c0fa07193f03426406018695be7b85a415909282211214861c484f5",
+      "query_count": 64
+    },
+    {
+      "Q": [
+        2,
+        4,
+        1
+      ],
+      "complete_summary_sha256": "7c653dd4d63052c6dbba36140c324381e1dd25abf252d7ef0d130b3eb6f4822f",
+      "query_count": 64
+    },
+    {
+      "Q": [
+        4,
+        5,
+        0
+      ],
+      "complete_summary_sha256": "adbcc0b723bd88ce32d36f1078efa99ce4a58bc1e3097066e21f3da81983605f",
+      "query_count": 64
+    },
+    {
+      "Q": [
+        6,
+        4,
+        0
+      ],
+      "complete_summary_sha256": "65c481d3e420f594a301149b9e380d9a65b72f86708dc05637a7805f99a1c32e",
+      "query_count": 64
+    }
+  ],
+  "scope": "All-order Hamilton-only one-bit reduction. Not ordered covers and not universal noncollision.",
+  "source_pins": {
+    "PROOF.md": "aa851d4d69bdb587cf1d0739e1be72416015170161550542dd1fea18f0f1bf3f",
+    "normal.json": "7fe2538df09a471894b5ce63f69a01b70756ea0807a6ccd6ee66ddf68fd92b22",
+    "optimized.json": "7fe2538df09a471894b5ce63f69a01b70756ea0807a6ccd6ee66ddf68fd92b22",
+    "verify.py": "687f4e6fe4fc4c34169e1e2ce3233162453d17cce576f7dc5fbd4539cf8b4ef5"
+  },
+  "status": "PASS"
+}

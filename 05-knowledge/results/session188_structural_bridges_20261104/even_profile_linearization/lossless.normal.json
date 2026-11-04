@@ -1,0 +1,170 @@
+{
+  "checker_sha256": "e50b23ccc8694e5210c005d1cac9a8b8d1897e59d068adce63dff1371f6f7dd1",
+  "complete_outputs": [
+    {
+      "bytes": 1889020,
+      "file": "normal.json",
+      "group": 0,
+      "sha256": "7fe2538df09a471894b5ce63f69a01b70756ea0807a6ccd6ee66ddf68fd92b22"
+    },
+    {
+      "bytes": 1889020,
+      "file": "optimized.json",
+      "group": 0,
+      "sha256": "7fe2538df09a471894b5ce63f69a01b70756ea0807a6ccd6ee66ddf68fd92b22"
+    }
+  ],
+  "complete_raw_bytes": 3778040,
+  "groups": 1,
+  "isolated_controls": [
+    {
+      "mode": "fresh",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "fresh",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": true,
+      "passed": true
+    }
+  ],
+  "package": "even_profile_linearization",
+  "package_sha256": {
+    "REASSEMBLY.json": "fc5e07ede7a5512f1e827e1ef5527ef325dd738ead63129d5b3c6f51e49d8070",
+    "REASSEMBLY.md": "1b824e5749b72f7010b7b4315c473e2ab1c50d30e454e95b76c2daeeb962f98c",
+    "full_records_00.json.gz.b64.part000": "c248cf6bca4e2178d8a0e28395f49c4e5c81ff92422dbbdabce962fbabe9a0fb",
+    "full_records_00.json.gz.b64.part001": "562ac68f6ff11323fa51d2db6da6cfbf9554fb3c32a4d2d2e35351ab0103f73a",
+    "reassemble.py": "ff11465ed7f11ab5629d72e8b26165b801b1faed4f51943424142176ac33dd5d"
+  },
+  "parts": 2,
+  "reassembler_normalized_ast_sha256": "3f640f8fd33dec4ce19c1d81e92f03c21bbac47452af6382f5cb942c5ee88d14",
+  "status": "PASS",
+  "validated_existing_manifests": [
+    {
+      "file": "PROOF.md",
+      "manifest": "SHA256SUMS",
+      "sha256": "aa851d4d69bdb587cf1d0739e1be72416015170161550542dd1fea18f0f1bf3f"
+    },
+    {
+      "file": "verify.py",
+      "manifest": "SHA256SUMS",
+      "sha256": "687f4e6fe4fc4c34169e1e2ce3233162453d17cce576f7dc5fbd4539cf8b4ef5"
+    },
+    {
+      "file": "normal.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "7fe2538df09a471894b5ce63f69a01b70756ea0807a6ccd6ee66ddf68fd92b22"
+    },
+    {
+      "file": "optimized.json",
+      "manifest": "SHA256SUMS",
+      "sha256": "7fe2538df09a471894b5ce63f69a01b70756ea0807a6ccd6ee66ddf68fd92b22"
+    }
+  ],
+  "validated_mathematical_receipt_pins": {
+    "even_cyclic_mod16/PROOF.md": "d759e62510d0469dd9e864a46117f2bccc02e8256892162664a021821f07a78c",
+    "even_profile_linearization/PROOF.md": "aa851d4d69bdb587cf1d0739e1be72416015170161550542dd1fea18f0f1bf3f",
+    "even_profile_linearization/verify.py": "687f4e6fe4fc4c34169e1e2ce3233162453d17cce576f7dc5fbd4539cf8b4ef5",
+    "parity_profile_transfer/PROOF.md": "77994a1898361f12087b49914f991b150b0a0b41b4e9e846318ebe52116cfcdb"
+  }
+}
