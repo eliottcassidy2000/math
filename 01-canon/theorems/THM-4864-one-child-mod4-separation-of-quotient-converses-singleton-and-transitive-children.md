@@ -53,7 +53,8 @@ W' = Q^op[A'_1..A'_m] share their child sets, with |A'_i| = |A_i|. Let p_j(Q) = 
    - m = 1 is excluded: there W = W' in the unchanged case.
 5. **Lift and corollary.** These residue-2 queries lift to every fixed ambient when the ports copy the core's exterior
    incidences. Suppose a collision F_T = F_U exists with U an original-module XOR target. Then at every highest changed
-   prime node M (order >= 7 by S188):
+   prime node M (order >= 7 by S188; >= 8 by Session189 checkpoint05; >= 9 claimed in checkpoint07, pending integration
+   approval):
    - no child is a singleton;
    - p(Q) = 0;
    - no child is transitive of order 2, 3 or >= 5 (order >= 5 via Session189);

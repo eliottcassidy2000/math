@@ -19,7 +19,8 @@ related: [THM-4864, S188 prime_seven_frontier, S189 collision, S188 parity_profi
 ## What is left
 
 After THM-4864, a still-possible original-module collision needs, at every highest changed prime node M:
-- **order and parity:** quotient order >= 7 and zero endpoint parity p(Q) = 0;
+- **order and parity:** quotient order >= 7 and zero endpoint parity p(Q) = 0. Concurrent Session189 work raises the
+  order to >= 8 (checkpoint05, reviewed) and >= 9 (checkpoint07, integration approval pending);
 - **singletons:** no child is a singleton;
 - **common ends:** no child A has a vertex that is a source or a sink of both T[A] and U[A] (widened THM-4864
   part 4).

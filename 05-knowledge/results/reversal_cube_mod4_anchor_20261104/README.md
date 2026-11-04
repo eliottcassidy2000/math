@@ -45,7 +45,8 @@ kind-pasteur-2026-11-04-S9.
 ## What the collision frontier looks like now
 
 Combining S188, S189 and THM-4864: in a surviving original-module collision, every highest changed node satisfies
-- its quotient Q is prime of order ≥ 7, with p(Q) = 0;
+- its quotient Q is prime of order ≥ 7 with p(Q) = 0. The order is ≥ 8 by Session189 checkpoint05, and ≥ 9 by
+  checkpoint07 (pending integration approval);
 - none of its children is a singleton;
 - none is a transitive tournament of order 2, 3 or ≥ 5;
 - every transitive child of order 4 is reordered so that its two middle names become the ends.

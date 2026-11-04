@@ -213,7 +213,7 @@ exterior incidences. Source: `parity_profile_transfer` §3 (reviewed). The unive
 q_{>=4} modulo 4 depend only on the augmented order, and the outer Hamilton coefficient is odd.
 
 **Corollary.** Suppose T differs from an original-module XOR target U but F_T = F_U. Then at every highest changed
-original strong node M, with prime quotient Q of order >= 7 (S188 prime_seven_frontier):
+original strong node M, with prime quotient Q of order >= 7 (S188 prime_seven_frontier). Concurrent Session189 work, pushed after this packet's pre-registration, raises the bound: order >= 8 in checkpoint05 (reviewed) and order >= 9 in checkpoint07 (integration approval pending). The items below are independent of the order bound:
 1. no child of M is a singleton (Theorem A);
 2. p(Q) = 0 (`parity_profile_transfer` §3);
 3. no child is transitive of order 2 or 3;
