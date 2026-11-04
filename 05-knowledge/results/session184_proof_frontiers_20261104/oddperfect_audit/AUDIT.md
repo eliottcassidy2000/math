@@ -1,0 +1,15 @@
+# Independent fixed-support modular certificate audit
+
+**PASS. No mathematical correction requested.** This is a prescribed-support decision theorem, not a global odd-perfect-number exclusion or a demonstrated computational improvement over S179.
+
+The primitive-divisor domain step includes every divisor d>1 of a genuine exponent length. For odd bases the only relevant exceptional d=2 case requires p+1 to be a power of two: non-Euler lengths exclude d=2, while the Euler prime q=1 mod 4 has q+1=2 mod 4 and q+1>=6. The base-two exception is absent. Since n itself must be an order modulo a different support prime, the finite candidate list has at most s-1 entries. Exact stripping of 2 and the support detects closure without general factorization.
+
+The signed valuation equation is necessary and sufficient. The prescribed exponent parity identifies exactly one Euler factor; the 2-adic row test fixes the total factor 2, and the odd-coordinate zero equation yields sigma(N)=2N. Every exponent is positive, so the support is exactly S. Although the checker stores vectors rather than explicit length labels, its own-prime coordinate is -(n-1), because sigma(p^(n-1)) is 1 modulo p. Thus different lengths cannot collide within a source catalogue.
+
+The displayed lower and upper bounds contain every integral selection sum, including negative and one-sided intervals. With m=1+max(|L|,|U|), both bounds lie strictly between -m and m, and only zero is divisible by m there. Modulus one is valid when every selected sum coordinate is zero. Group-algebra coefficients and the recurrence count individual row choices with their multiplicities using nonnegative integers. Fractional convex feasibility is not substituted for integral selection, and small-modulus acceptance is explicitly inconclusive.
+
+The two abstract controls are correct. The even-perfect controls correspond to 6=2*3 and 28=2^2*7 after subtracting the single target 2-adic unit; they are generic balance controls, not odd-support examples. The stated O(T product m_r) count-addition bound does not claim bit-complexity or polynomial runtime.
+
+The author's normal and optimized checks agree: 1,000 signed catalogues, 174 positive catalogues, 189 support/Euler cases, 124 exact rows and 116 nonempty arithmetic prefixes. An independent checker additionally compares direct geometric sums for every parity-compatible length below max(S) against all 189 row catalogues, without using multiplicative-order filtering. It compares another 1,000 random catalogues against integer convolution before modular reduction, and checks modulus-one and selection-multiplicity cases. Normal and optimized receipts agree. The direct length bound relies on the inherited primitive-divisor theorem, not on a purported unbounded finite search.
+
+No substantive mathematical issue was found. The all-support quantifier and the absence of demonstrated arithmetic advantage remain explicit limitations. The proof hash in receipt.json identifies the reviewed text.

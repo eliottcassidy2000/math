@@ -1,0 +1,8 @@
+{
+  "independent_direct_row_cases": 189,
+  "independent_integer_convolutions": 1000,
+  "modulus_one_and_multiplicity_controls": true,
+  "proof_sha256": "7cf06555ca18d5e0b346d3a80c93de26cafdb782c928f5e88f5ec53892c78305",
+  "scope": "Fixed prescribed support only; no global OPN theorem.",
+  "status": "PASS"
+}

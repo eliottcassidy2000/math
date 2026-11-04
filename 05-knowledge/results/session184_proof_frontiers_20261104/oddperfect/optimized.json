@@ -1,0 +1,15 @@
+{
+  "arithmetic_nonempty_prefix_checks": 116,
+  "controls": [
+    "fractional feasible but modular impossible",
+    "small-modulus false positive detected",
+    "two positive integer perfect-number balances"
+  ],
+  "exact_closed_rows": 124,
+  "global_odd_perfect_nonexistence": "NOT PROVED",
+  "maximum_prefix_sources": 3,
+  "positive_random_catalogues": 174,
+  "random_signed_catalogues": 1000,
+  "status": "PASS",
+  "support_euler_cases": 189
+}
