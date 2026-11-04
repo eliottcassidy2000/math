@@ -1,0 +1,207 @@
+{
+  "checker_sha256": "97171c9b5ec6a5298bb16dd87fa744d785a4e4d06e00407cd5654a79751f14d1",
+  "complete_outputs": [
+    {
+      "bytes": 280317,
+      "file": "ambient.normal.json",
+      "group": 0,
+      "sha256": "0a21a17128b096012d1eb1269ff82f7d23913d09045868e3c69ed05ba6d3a305"
+    },
+    {
+      "bytes": 280317,
+      "file": "ambient.optimized.json",
+      "group": 0,
+      "sha256": "0a21a17128b096012d1eb1269ff82f7d23913d09045868e3c69ed05ba6d3a305"
+    }
+  ],
+  "complete_raw_bytes": 560634,
+  "groups": 1,
+  "isolated_controls": [
+    {
+      "mode": "fresh",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": false,
+      "passed": true
+    },
+    {
+      "mode": "fresh",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "idempotent",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "first_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_group_chunk_corrupt",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_existing_conflict",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_conflict_with_good_first",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_hash",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "late_raw_size",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "duplicate_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_output",
+      "optimized": true,
+      "passed": true
+    },
+    {
+      "mode": "nonlocal_chunk",
+      "optimized": true,
+      "passed": true
+    }
+  ],
+  "package": "even_mod16_audit",
+  "package_sha256": {
+    "AMBIENT_REASSEMBLY.json": "4e501aa1159b9801836633f94f983c05355bdfa58a9b12c10cf7fa86242bc9c8",
+    "AMBIENT_REASSEMBLY.md": "cc46f1b10847f1b3fe2f59483b279ec746ad704497a50c055d88ebd0f1e95276",
+    "ambient_full_records_00.json.gz.b64.part000": "b3f2e252785b9c25739996cc1f29adbdd36c4ea3439269944fb9b27e075015aa",
+    "ambient_full_records_00.json.gz.b64.part001": "a2e5d413c2a57c2f48644afadbb37c3770227070c13a7efc817b65264ca0906c",
+    "ambient_reassemble.py": "05ecedb020aa896439c2bc357221b8cc2e8a3e674c5c7911b61a2e2781e8351b"
+  },
+  "parts": 2,
+  "reassembler_normalized_ast_sha256": "8a0940fd38e7ee254f83f9c40b127d00d7b1829dd46af3d8e8633cb1628a0770",
+  "status": "PASS",
+  "validated_existing_manifests": [
+    {
+      "file": "AMBIENT_REVIEW.md",
+      "manifest": "AMBIENT_SHA256SUMS",
+      "sha256": "2a83da5b7fddfdca4206b3881a4647acaf2fd89cbbd5122376767e2772870a13"
+    },
+    {
+      "file": "automaton.py",
+      "manifest": "AMBIENT_SHA256SUMS",
+      "sha256": "965f2ac9c92330dd34b4a80bfc2a3dff1d4f73de2effc3cf0a87b3da2185a65f"
+    },
+    {
+      "file": "cover_automaton.py",
+      "manifest": "AMBIENT_SHA256SUMS",
+      "sha256": "60c0cd8d98dcf03e894695a5576d79792189ec4458ec55343da12ebeb52a07d6"
+    },
+    {
+      "file": "cover_physical.py",
+      "manifest": "AMBIENT_SHA256SUMS",
+      "sha256": "38570bf146c8d3a252570c79ad3bb2da6ef5ee7ca85fd4bfdd959dab0df03d1f"
+    },
+    {
+      "file": "cover_count.cpp",
+      "manifest": "AMBIENT_SHA256SUMS",
+      "sha256": "67eef2c8ab814fe059edb3fab080308f19704392836b9c1e9d2eef89954d047f"
+    },
+    {
+      "file": "cover_physical.normal.json",
+      "manifest": "AMBIENT_SHA256SUMS",
+      "sha256": "83a1eb0e4d7ee8664ef12e670feabf652d103e4ea4de7c55714b1755580bbec3"
+    },
+    {
+      "file": "cover_physical.optimized.json",
+      "manifest": "AMBIENT_SHA256SUMS",
+      "sha256": "83a1eb0e4d7ee8664ef12e670feabf652d103e4ea4de7c55714b1755580bbec3"
+    },
+    {
+      "file": "audit_ambient.py",
+      "manifest": "AMBIENT_SHA256SUMS",
+      "sha256": "56777e1cf322d1d8d3ca95f07c56aefd21b7fbd88d4b09f4dcb1ea58a518c305"
+    },
+    {
+      "file": "ambient_count.cpp",
+      "manifest": "AMBIENT_SHA256SUMS",
+      "sha256": "3d1a41f18cb6f767b480558775d64dfe685166c6acd16269d340d25a3c475e49"
+    },
+    {
+      "file": "ambient.normal.json",
+      "manifest": "AMBIENT_SHA256SUMS",
+      "sha256": "0a21a17128b096012d1eb1269ff82f7d23913d09045868e3c69ed05ba6d3a305"
+    },
+    {
+      "file": "ambient.optimized.json",
+      "manifest": "AMBIENT_SHA256SUMS",
+      "sha256": "0a21a17128b096012d1eb1269ff82f7d23913d09045868e3c69ed05ba6d3a305"
+    }
+  ],
+  "validated_mathematical_receipt_pins": {
+    "even_cyclic_mod16_ambient/PROOF.md": "afa692b80873b3f49e05767c8ff316405ea3df0bf2e2738ff99ae491d4118b83",
+    "even_cyclic_mod16_ambient/cover_words.py": "9055ff08ea35ac726cd6bb04a24b3a3822c81a9fdfbb379af80c024e5d932a21",
+    "even_cyclic_mod16_ambient/normal.json": "ba3c4ac5b4a1e2d8faf485244a60a31193938bce5f30b1fc421458e6d882b62b",
+    "even_cyclic_mod16_ambient/optimized.json": "ba3c4ac5b4a1e2d8faf485244a60a31193938bce5f30b1fc421458e6d882b62b",
+    "even_cyclic_mod16_ambient/physical.cpp": "4d980994dfafa599ddb065768ce34fdf54abacc936a9fb89e177834e38b3152c",
+    "even_cyclic_mod16_ambient/verify.py": "97b1acb85e6dab0c593809362a4007a9fceee5974dff9901f6f9d9f0b2ec66a4"
+  }
+}

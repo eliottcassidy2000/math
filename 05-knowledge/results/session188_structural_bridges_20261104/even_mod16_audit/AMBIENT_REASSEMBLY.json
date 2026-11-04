@@ -1,0 +1,31 @@
+{
+  "encoding": "Deterministic gzip streams encoded as base64 in ASCII chunks.",
+  "groups": [
+    {
+      "parts": [
+        {
+          "file": "ambient_full_records_00.json.gz.b64.part000",
+          "size": 36001,
+          "sha256": "b3f2e252785b9c25739996cc1f29adbdd36c4ea3439269944fb9b27e075015aa"
+        },
+        {
+          "file": "ambient_full_records_00.json.gz.b64.part001",
+          "size": 24901,
+          "sha256": "a2e5d413c2a57c2f48644afadbb37c3770227070c13a7efc817b65264ca0906c"
+        }
+      ],
+      "outputs": [
+        {
+          "file": "ambient.normal.json",
+          "size": 280317,
+          "sha256": "0a21a17128b096012d1eb1269ff82f7d23913d09045868e3c69ed05ba6d3a305"
+        },
+        {
+          "file": "ambient.optimized.json",
+          "size": 280317,
+          "sha256": "0a21a17128b096012d1eb1269ff82f7d23913d09045868e3c69ed05ba6d3a305"
+        }
+      ]
+    }
+  ]
+}
