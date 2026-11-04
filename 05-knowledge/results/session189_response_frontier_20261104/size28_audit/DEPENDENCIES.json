@@ -1,0 +1,47 @@
+{
+  "session189-minimum27-audit/REVIEW.md": {
+    "frozen_file": "dependency_session189-minimum27-audit_REVIEW.md",
+    "sha256": "dc4d6c8549712b7dfc813bac5c55224eb2be503a75cd54fad3e2d0433fd65b9c",
+    "bytes": 12732
+  },
+  "session189-minimum27-audit/normal.json": {
+    "frozen_file": "dependency_session189-minimum27-audit_normal.json",
+    "sha256": "fb68cb7f0b43b7192cc07409db890d12679c2645480c768bdd1ea2eed74c9060",
+    "bytes": 2327
+  },
+  "session189-c3-census-audit/REVIEW.md": {
+    "frozen_file": "dependency_session189-c3-census-audit_REVIEW.md",
+    "sha256": "fa5d1df1c6364d1860e104879a8ec83e70b6c61f97b06a562eed033e766be738",
+    "bytes": 12277
+  },
+  "session189-c3-census-audit/receipt.json": {
+    "frozen_file": "dependency_session189-c3-census-audit_receipt.json",
+    "sha256": "5ec4612498debead3fb487821843a44792ac1f22a2d4bb23b9acf4319666ffed",
+    "bytes": 7236
+  },
+  "session189-frontier-nine/PROOF.md": {
+    "frozen_file": "dependency_session189-frontier-nine_PROOF.md",
+    "sha256": "daf7180f381708a123f4afdb08ff66798a32b528c822011a5e71176879bdd21c",
+    "bytes": 9821
+  },
+  "session189-nine-integration-audit/REVIEW.md": {
+    "frozen_file": "dependency_session189-nine-integration-audit_REVIEW.md",
+    "sha256": "75db72d7668626d0dfc12eb3e5a6f1150d6ca39b07bea0bea55080ef729af18a",
+    "bytes": 7869
+  },
+  "session189-tt4-cross-audit/REVIEW.md": {
+    "frozen_file": "dependency_session189-tt4-cross-audit_REVIEW.md",
+    "sha256": "8a1c7131e8a8331029d78f230c0d909aeeb39cc471d658b7c165f5f52474b235",
+    "bytes": 8999
+  },
+  "session189-prime8/PROOF.md": {
+    "frozen_file": "dependency_session189-prime8_PROOF.md",
+    "sha256": "188dcd19fe2b47148427dc40c542afd65a72c4104fd2cdf47da0c532bbc6afc5",
+    "bytes": 13313
+  },
+  "session189-prime8-audit/REVIEW.md": {
+    "frozen_file": "dependency_session189-prime8-audit_REVIEW.md",
+    "sha256": "a482956aacc99d2c8506eed3ff0e4e7372ef7f21acf907fc34c50b01bca3c6dc",
+    "bytes": 6938
+  }
+}
