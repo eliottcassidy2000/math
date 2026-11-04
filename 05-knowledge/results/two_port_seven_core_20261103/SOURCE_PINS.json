@@ -2,6 +2,7 @@
   "files": {
     "01-canon/theorems/THM-2761-graph-edge-sum-discriminant-codegree-factorization-and-graceful-sign-gauge.md": "ca492955b0ac2ad8a2c22103bdca84373025f0e090c706997734ba0970b4c84e",
     "01-canon/theorems/THM-4701-kuratowski-graphs-the-petersen-graph-and-the-finite-unit-circle-graphs.md": "c685b5fa2a92f394cd0ae16d8fad446d43aa80299d9dbd4378b343a56381da1a",
+    "05-knowledge/results/consecutive_flags_order10_20261028/GENERATION.md": "c6fa09b6a3d25081b3224b48e4272f96babf4d3ce79721157c2a88ed046b5041",
     "05-knowledge/results/consecutive_flags_order10_20261028/THEORY.md": "80f172a373418c9bb60f25c6ba9a7946e10c223699607a343ac62e5bd9d40104",
     "05-knowledge/results/consecutive_flags_order10_20261028/bank_manifest.json": "aed6852bfd8efbfebd26fd01d1580a2a8fd2d8d7c76740b4dfdca400dddba03f",
     "05-knowledge/results/consecutive_flags_order10_20261028/flags10.varint.gz": "ef5cf3d13f5b679890cbe69bcd1f78189161953e726e12d169fb576845677ef7",
@@ -15,6 +16,10 @@
     "05-knowledge/results/session181_multiport_defect_20261104/older/PROOF.md": "ad793a5a811718edb47c512b9a2a0a0c35ae51012afdcda9751f1be6421b9413",
     "05-knowledge/results/session181_multiport_defect_20261104/transport/PROOF.md": "5ec724ff4616c85f7ff6f3abe40aa9951ed13746aa47269e12e42df1680d8289",
     "05-knowledge/results/session182_physical_returns_20261104/closure/PROOF.md": "075993b9402410453fa725193e190d0b08517d81d5a060ca5750f44c46865aec",
+    "05-knowledge/results/session182_physical_returns_20261104/closure_generation/PROOF.md": "818848080815624b3f22040cb054694cdf6177bac273889615571b025ee568d5",
+    "05-knowledge/results/session182_physical_returns_20261104/defect/PROOF.md": "7d4df3fc6446b59c0abfb7c8e4cde1d4eda3b597822ebc53ee61395cc9502724",
+    "05-knowledge/results/session182_physical_returns_20261104/gadgets/PROOF.md": "5c4c99ef72bd6d00cc25e76d57bafee91c22561a1abc6422276463ce81134f11",
+    "05-knowledge/results/session182_physical_returns_20261104/induction/PROOF.md": "0b3a99c45f26218d851da90e938ea8178928bf6f0aea41b06386a13c40b861f3",
     "05-knowledge/results/session182_physical_returns_20261104/phases/PROOF.md": "635fc5851ba774775024263398030bd3ce02e5ccd25c32d7d8b7daace1a654e0",
     "05-knowledge/results/session89_consecutive_tournament_pairs_20261028/encoding/ODD_SELF_CONVERSE_LIFT.md": "5beff4bf90aacb9053bf0cb49ade09a19d189b35131c993305bdfbdf38fae306",
     "05-knowledge/results/square_sum_ports_20261023/README.md": "515660d7eb044ce694bd43ccddc6cb45e5b2908808e2c4b633acc5c67a8eea68",
