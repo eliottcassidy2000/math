@@ -1,0 +1,13 @@
+{
+  "author_reassembled_bytes_equal": true,
+  "bytes": 2149227,
+  "independent_decoder": "zlib gzip wrapper, eof and no unused data",
+  "negative_controls": [
+    "corrupted chunk rejected before output mutation",
+    "wrong final hash rejected before output mutation"
+  ],
+  "parts": 23,
+  "scope": "workspace split/reassembly transport, not remote GitHub readback",
+  "sha256": "09420f040e1294d429ab29d1cbd47e34b12717b695e8a93dafcbfe1d439bbfc7",
+  "status": "PASS"
+}

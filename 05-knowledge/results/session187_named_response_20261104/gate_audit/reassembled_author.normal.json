@@ -1,0 +1,459 @@
+{
+  "all_order_formula_controls": [
+    {
+      "H": 27,
+      "global_query_gap": 36,
+      "module_scores": [
+        53
+      ],
+      "pair_reversal_quartic": null,
+      "r": 1,
+      "state": 0
+    },
+    {
+      "H": 69,
+      "global_query_gap": 108,
+      "module_scores": [
+        137,
+        190
+      ],
+      "pair_reversal_quartic": 2,
+      "r": 2,
+      "state": 0
+    },
+    {
+      "H": 177,
+      "global_query_gap": 300,
+      "module_scores": [
+        333,
+        470,
+        660
+      ],
+      "pair_reversal_quartic": 4,
+      "r": 3,
+      "state": 0
+    },
+    {
+      "H": 465,
+      "global_query_gap": 828,
+      "module_scores": [
+        833,
+        1166,
+        1636,
+        2296
+      ],
+      "pair_reversal_quartic": 6,
+      "r": 4,
+      "state": 0
+    },
+    {
+      "H": 1257,
+      "global_query_gap": 2316,
+      "module_scores": [
+        2157,
+        2990,
+        4156,
+        5792,
+        8088
+      ],
+      "pair_reversal_quartic": 10,
+      "r": 5,
+      "state": 0
+    },
+    {
+      "H": 3489,
+      "global_query_gap": 6588,
+      "module_scores": [
+        5777,
+        7934,
+        10924,
+        15080,
+        20872,
+        28960
+      ],
+      "pair_reversal_quartic": 18,
+      "r": 6,
+      "state": 0
+    },
+    {
+      "H": 9897,
+      "global_query_gap": 19020,
+      "module_scores": [
+        15933,
+        21710,
+        29644,
+        40568,
+        55648,
+        76520,
+        105480
+      ],
+      "pair_reversal_quartic": 34,
+      "r": 7,
+      "state": 0
+    },
+    {
+      "H": 29,
+      "global_query_gap": 90,
+      "module_scores": [
+        56
+      ],
+      "pair_reversal_quartic": null,
+      "r": 1,
+      "state": 1
+    },
+    {
+      "H": 71,
+      "global_query_gap": 258,
+      "module_scores": [
+        137,
+        193
+      ],
+      "pair_reversal_quartic": 2,
+      "r": 2,
+      "state": 1
+    },
+    {
+      "H": 179,
+      "global_query_gap": 714,
+      "module_scores": [
+        329,
+        466,
+        659
+      ],
+      "pair_reversal_quartic": 4,
+      "r": 3,
+      "state": 1
+    },
+    {
+      "H": 467,
+      "global_query_gap": 1986,
+      "module_scores": [
+        821,
+        1150,
+        1616,
+        2275
+      ],
+      "pair_reversal_quartic": 6,
+      "r": 4,
+      "state": 1
+    },
+    {
+      "H": 1259,
+      "global_query_gap": 5610,
+      "module_scores": [
+        2129,
+        2950,
+        4100,
+        5716,
+        7991
+      ],
+      "pair_reversal_quartic": 10,
+      "r": 5,
+      "state": 1
+    },
+    {
+      "H": 3491,
+      "global_query_gap": 16098,
+      "module_scores": [
+        5717,
+        7846,
+        10796,
+        14896,
+        20612,
+        28603
+      ],
+      "pair_reversal_quartic": 18,
+      "r": 6,
+      "state": 1
+    },
+    {
+      "H": 9899,
+      "global_query_gap": 46794,
+      "module_scores": [
+        15809,
+        21526,
+        29372,
+        40168,
+        55064,
+        75676,
+        104279
+      ],
+      "pair_reversal_quartic": 34,
+      "r": 7,
+      "state": 1
+    },
+    {
+      "H": 31,
+      "global_query_gap": 30,
+      "module_scores": [
+        60
+      ],
+      "pair_reversal_quartic": null,
+      "r": 1,
+      "state": 2
+    },
+    {
+      "H": 73,
+      "global_query_gap": 138,
+      "module_scores": [
+        141,
+        201
+      ],
+      "pair_reversal_quartic": 2,
+      "r": 2,
+      "state": 2
+    },
+    {
+      "H": 181,
+      "global_query_gap": 474,
+      "module_scores": [
+        333,
+        474,
+        675
+      ],
+      "pair_reversal_quartic": 4,
+      "r": 3,
+      "state": 2
+    },
+    {
+      "H": 469,
+      "global_query_gap": 1506,
+      "module_scores": [
+        825,
+        1158,
+        1632,
+        2307
+      ],
+      "pair_reversal_quartic": 6,
+      "r": 4,
+      "state": 2
+    },
+    {
+      "H": 1261,
+      "global_query_gap": 4650,
+      "module_scores": [
+        2133,
+        2958,
+        4116,
+        5748,
+        8055
+      ],
+      "pair_reversal_quartic": 10,
+      "r": 5,
+      "state": 2
+    },
+    {
+      "H": 3493,
+      "global_query_gap": 14178,
+      "module_scores": [
+        5721,
+        7854,
+        10812,
+        14928,
+        20676,
+        28731
+      ],
+      "pair_reversal_quartic": 18,
+      "r": 6,
+      "state": 2
+    },
+    {
+      "H": 9901,
+      "global_query_gap": 42954,
+      "module_scores": [
+        15813,
+        21534,
+        29388,
+        40200,
+        55128,
+        75804,
+        104535
+      ],
+      "pair_reversal_quartic": 34,
+      "r": 7,
+      "state": 2
+    }
+  ],
+  "full_response_cases": 39,
+  "independent_literal_counts": 714,
+  "profiles": [
+    {
+      "exterior0_score_profile": [
+        15,
+        45,
+        39,
+        8,
+        0,
+        0,
+        0
+      ],
+      "first_score_profile": [
+        53,
+        137,
+        98,
+        18,
+        0,
+        0,
+        0,
+        0
+      ],
+      "op_exterior0_score_profile": [
+        9,
+        27,
+        21,
+        4,
+        0,
+        0,
+        0
+      ],
+      "quartic_backward_profile": [
+        1,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "quartic_difference": [
+        2,
+        4,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "quartic_forward_profile": [
+        3,
+        6,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "state": 0
+    },
+    {
+      "exterior0_score_profile": [
+        27,
+        75,
+        63,
+        14,
+        0,
+        0,
+        0
+      ],
+      "first_score_profile": [
+        56,
+        137,
+        96,
+        18,
+        0,
+        0,
+        0,
+        0
+      ],
+      "op_exterior0_score_profile": [
+        12,
+        30,
+        21,
+        4,
+        0,
+        0,
+        0
+      ],
+      "quartic_backward_profile": [
+        4,
+        7,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "quartic_difference": [
+        2,
+        4,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "quartic_forward_profile": [
+        6,
+        11,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "state": 1
+    },
+    {
+      "exterior0_score_profile": [
+        18,
+        54,
+        51,
+        14,
+        0,
+        0,
+        0
+      ],
+      "first_score_profile": [
+        60,
+        141,
+        96,
+        18,
+        0,
+        0,
+        0,
+        0
+      ],
+      "op_exterior0_score_profile": [
+        18,
+        39,
+        24,
+        4,
+        0,
+        0,
+        0
+      ],
+      "quartic_backward_profile": [
+        4,
+        7,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "quartic_difference": [
+        2,
+        4,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "quartic_forward_profile": [
+        6,
+        11,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "state": 2
+    }
+  ],
+  "retained_battery_counts": 221208,
+  "retained_nonzero_coefficients": 39763,
+  "scope": "All 3 states r=1..7; complete named global-converse data and pair-reversal data for r>=2. All-order claims separately proved.",
+  "status": "PASS"
+}
