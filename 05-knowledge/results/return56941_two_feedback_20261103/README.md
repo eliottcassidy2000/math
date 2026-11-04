@@ -52,3 +52,8 @@ arithmetic environment used Python3.13 and python-flint0.9.0.
 Next: realize170807 by a non-ready interface; retain the nonzero three-run
 sector when splitting clone incidence; then prove that the resulting
 source grammar returns rather than merely producing another scalar value.
+
+Continuation: [the170807 interface and triangle return barriers](../triangle_return_170807_20261103/README.md)
+realizes the missing branch by four actual complements and one permanent
+birth, retaining every old name. Its two-module reuse family is completely
+classified; the unrestricted ternary source grammar remains open.

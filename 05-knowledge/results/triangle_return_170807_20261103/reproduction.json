@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "full_discovery_replayed": false,
+  "compiler": "g++.EXE",
+  "python": "3.13.14",
+  "source_pins": {
+    "return18979_palindrome_20261103/returns.json": "166eefc11b6f31de635cc2afc5e7fdb96d6fd06f86cb8dce98aad9aac9a75116",
+    "return56941_two_feedback_20261103/feedback_ports.json": "5afe38dac6dcfb7bdd03d730bd48010e57c5fbc905c1fe7d79bb3cd3f10465fc",
+    "return56941_two_feedback_20261103/feedback_transport.json": "610c4df406f7dd73500bd024007385dc1e6faa42569b1ded980ef0f1571d46f6",
+    "return6325_completion_20261103/halving_response.json": "3d7b1af0e0f1f0be20985390b404096452ac9f238311653fa2521fa742585e35",
+    "return6325_completion_20261103/transport.json": "0be407b3ab02983c9ce810046f05d10bb7ac8a8b692defa513d091c9f2c5dbf9",
+    "return6325_completion_20261103/audit.py": "060954834cc94a23f0fc442189ad9da2ee2ec874f8f418b8b1762f0298f4d4b1",
+    "return6325_completion_20261103/transport.py": "9e620a5e174d5c52686214206ba9b326ad7658dd9214f0ec0039bc681ec77f39",
+    "return56941_two_feedback_20261103/audit_moving.py": "49bebe51f432f960386d3af6487d0f5d277ea7261ec9c148d173766fecf8d6d4",
+    "return18979_palindrome_20261103/phases_bridge.py": "3c728e47c1939f65e29e9bf7ecca91a68e83f4c3ba1772fe745d4d3fd3aebb20"
+  },
+  "owned_sources": {
+    "audit.py": "cd957c12c85a097e920038c10071bd352703dbd8378094451d29f2dbe1392b5a",
+    "clone_probe.py": "dd0fb4629d647d4fc68818279aeb8b949a107951dd0b712e64484bfe9308f409",
+    "edge_birth.cpp": "f08556ccc8eb8b835b7083b040341c50ce527a664ad2cac495b74a6b834ee9b3",
+    "edge_two_births.cpp": "fff7ef181c6d77932bdf58c7506f0c47fd66d928cb91bfec5b756a53fcc02126",
+    "hp.cpp": "8b893df62c3c746258809621fc7a6f76f84dada54e54683b82fdfa096fea16ac",
+    "inspect.cpp": "d1aa173425621b837be75e1c07cc43c28686b8a8cd5c335cba19ddcaf6ad7478",
+    "perfect_completion.py": "d97707457bbe80db485c94d47a3e3d9daa63f5dfd13e87cde11c980c6e3ab8ae",
+    "realize.py": "c477a10201dc098c01954fdca859d90c6b93260c5f25d5c29a2895ccd903c14d",
+    "reproduce.py": "679842c5fbb6a39110f6d84882468e213b50cf406469a1bc909ab2e09326e557",
+    "search.cpp": "6e287839077c1e9e9b409ab914cf162e618710e15585761f38b0f105a55ae923",
+    "three_births.cpp": "53872077f07cc9851fe557f164a14ee9ab56160980f10ea15bbf7a216faeeef9",
+    "two_births.cpp": "8ac04df8658b043e397a79c003cdf50e735ad45bf8abb92b23e5b2fd8c529e5e",
+    "two_edges.cpp": "3fe21041a929f59c467e084d582f9421d2402027aac81acf4287915aafaac0ef",
+    "two_edges_birth.cpp": "802807a2765d820ce16d980d1c54be5441bfc35032d050fbca5870258f58016f"
+  },
+  "scope": "Same-agent independent algorithms; mathematical proofs and finite universes are in RETURN,TRIANGLE,PERFECT and AUDIT."
+}

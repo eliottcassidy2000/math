@@ -1,0 +1,255 @@
+{
+  "status": "PROVED_INVERSE_WITH_FINITE_EXACT_CONTROLS",
+  "bounded_control_cores": 2000,
+  "bounded_realizations": [
+    {
+      "C": 2,
+      "A": 3,
+      "D": 1,
+      "q": 3,
+      "B": 1,
+      "exponent": 1,
+      "residual": 1,
+      "N": 6,
+      "status": "realized perfect completion"
+    },
+    {
+      "C": 3,
+      "A": 4,
+      "D": 2,
+      "q": 2,
+      "B": 2,
+      "exponent": 1,
+      "residual": 1,
+      "N": 6,
+      "status": "realized perfect completion"
+    },
+    {
+      "C": 4,
+      "A": 7,
+      "D": 1,
+      "q": 7,
+      "B": 1,
+      "exponent": 1,
+      "residual": 1,
+      "N": 28,
+      "status": "realized perfect completion"
+    },
+    {
+      "C": 7,
+      "A": 8,
+      "D": 6,
+      "q": 2,
+      "B": 2,
+      "exponent": 2,
+      "residual": 1,
+      "N": 28,
+      "status": "realized perfect completion"
+    },
+    {
+      "C": 16,
+      "A": 31,
+      "D": 1,
+      "q": 31,
+      "B": 1,
+      "exponent": 1,
+      "residual": 1,
+      "N": 496,
+      "status": "realized perfect completion"
+    },
+    {
+      "C": 31,
+      "A": 32,
+      "D": 30,
+      "q": 2,
+      "B": 2,
+      "exponent": 4,
+      "residual": 1,
+      "N": 496,
+      "status": "realized perfect completion"
+    },
+    {
+      "C": 64,
+      "A": 127,
+      "D": 1,
+      "q": 127,
+      "B": 1,
+      "exponent": 1,
+      "residual": 1,
+      "N": 8128,
+      "status": "realized perfect completion"
+    },
+    {
+      "C": 127,
+      "A": 128,
+      "D": 126,
+      "q": 2,
+      "B": 2,
+      "exponent": 6,
+      "residual": 1,
+      "N": 8128,
+      "status": "realized perfect completion"
+    }
+  ],
+  "fixed_base": 53361,
+  "fixed_base_ratio": "4693/389",
+  "q13_discriminant": 1945874977956,
+  "q_ge17_p_bound": 53,
+  "exhaustive_core_extensions": [
+    {
+      "p": 5,
+      "C": 1334025,
+      "A": 3055143,
+      "D": -387093,
+      "rejection": "nonpositive deficiency"
+    },
+    {
+      "p": 13,
+      "C": 9018009,
+      "A": 18035199,
+      "D": 819,
+      "q": 22021,
+      "B": 819,
+      "rejection": "composite forced q",
+      "factors": {
+        "19": 2,
+        "61": 1
+      }
+    },
+    {
+      "p": 17,
+      "C": 15421329,
+      "A": 30255771,
+      "D": 586887,
+      "q": 52,
+      "B": 324534,
+      "rejection": "composite forced q",
+      "factors": {
+        "2": 2,
+        "13": 1
+      }
+    },
+    {
+      "p": 19,
+      "C": 19263321,
+      "A": 37548693,
+      "D": 977949,
+      "q": 39,
+      "B": 386631,
+      "rejection": "composite forced q",
+      "factors": {
+        "3": 1,
+        "13": 1
+      }
+    },
+    {
+      "p": 23,
+      "C": 28227969,
+      "A": 54499809,
+      "D": 1956129,
+      "q": 28,
+      "B": 1684326,
+      "rejection": "composite forced q",
+      "factors": {
+        "2": 2,
+        "7": 1
+      }
+    },
+    {
+      "p": 29,
+      "C": 44876601,
+      "A": 85839663,
+      "D": 3913539,
+      "q": 22,
+      "B": 3655344,
+      "rejection": "composite forced q",
+      "factors": {
+        "2": 1,
+        "11": 1
+      }
+    },
+    {
+      "p": 31,
+      "C": 51279921,
+      "A": 97863129,
+      "D": 4696713,
+      "q": 21,
+      "B": 3928869,
+      "rejection": "composite forced q",
+      "factors": {
+        "3": 1,
+        "7": 1
+      }
+    },
+    {
+      "p": 37,
+      "C": 73051209,
+      "A": 138664071,
+      "D": 7438347,
+      "q": 19,
+      "B": 4773825,
+      "rejection": "Euler shape"
+    },
+    {
+      "p": 41,
+      "C": 89699841,
+      "A": 169806819,
+      "D": 9592863,
+      "q": 18,
+      "B": 6728148,
+      "rejection": "composite forced q",
+      "factors": {
+        "2": 1,
+        "3": 2
+      }
+    },
+    {
+      "p": 43,
+      "C": 98664489,
+      "A": 186560829,
+      "D": 10768149,
+      "q": 18,
+      "B": 3502296,
+      "rejection": "composite forced q",
+      "factors": {
+        "2": 1,
+        "3": 2
+      }
+    },
+    {
+      "p": 47,
+      "C": 117874449,
+      "A": 222434121,
+      "D": 13314777,
+      "q": 17,
+      "B": 9397689,
+      "rejection": "nonintegral power ratio"
+    },
+    {
+      "p": 53,
+      "C": 149891049,
+      "A": 282157239,
+      "D": 17624859,
+      "q": 17,
+      "B": 159495,
+      "rejection": "nonintegral power ratio"
+    }
+  ],
+  "descartes": {
+    "completion": {
+      "C": 9018009,
+      "A": 18035199,
+      "D": 819,
+      "q": 22021,
+      "B": 819,
+      "rejection": "composite forced q",
+      "factors": {
+        "19": 2,
+        "61": 1
+      }
+    },
+    "formal_number": 198585576189,
+    "actual_excess": 28856318400
+  },
+  "scope": "All primes p,q and all Euler exponents for base3^2*7^2*11^2; not a new global odd-perfect bound."
+}
