@@ -1,0 +1,73 @@
+{
+  "limitations": "All-order reasoning is audited in AUDIT.md; these finite tests are corroboration.",
+  "literal_families": [
+    {
+      "first_clone_signature": [
+        17,
+        224,
+        105,
+        93,
+        34,
+        9,
+        7
+      ],
+      "literal_directed_paths": 139,
+      "m": 1,
+      "vertices": 6
+    },
+    {
+      "first_clone_signature": [
+        35,
+        676,
+        252,
+        267,
+        70,
+        13,
+        14
+      ],
+      "literal_directed_paths": 385,
+      "m": 2,
+      "vertices": 7
+    },
+    {
+      "first_clone_signature": [
+        71,
+        1976,
+        516,
+        759,
+        140,
+        13,
+        28
+      ],
+      "literal_directed_paths": 1063,
+      "m": 3,
+      "vertices": 8
+    },
+    {
+      "first_clone_signature": [
+        143,
+        5764,
+        1044,
+        2175,
+        280,
+        13,
+        56
+      ],
+      "literal_directed_paths": 2977,
+      "m": 4,
+      "vertices": 9
+    }
+  ],
+  "marked_context_presentations_including_empty": 75,
+  "method": "literal enumeration of every directed simple path; no producer imports",
+  "named_masks_checked": 26,
+  "ordered_context_pairs_checked": 16875,
+  "producer_source_hashes": {
+    "carrier.py": "a1905f895e91b8626223e0bfe684d666cc761882f6760034314f2ecfd10b3c89",
+    "family_coeffs.py": "84479e00cc1740b9d9fa70867249b87326bcfbf412c8e495f027734edf5b4b7e",
+    "inherited.py": "47f14dffe3e24582feca9c6ba8fa03c234274e55d4b9c04b2b6e85633a03db08",
+    "skeleton.py": "c5e3f80c0f37f60cd3385e087255c16f2dea2ec342838e2395e861889d7980ba",
+    "verify.py": "8a0d7ebf938275e2654f554863b805aa03fdf541440a6b768e7527a18cefc753"
+  },
+  "status": "PASS"
+}

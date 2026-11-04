@@ -1,0 +1,10 @@
+{
+  "explicit_injection_images_checked": 5569,
+  "labelled_modules": 75,
+  "method": "Literal module permutations with nonempty cuts; explicit injection collision checks; literal paths in substituted graph. No producer imports.",
+  "nonempty_masks": 1023,
+  "producer_proof_sha256": "c45d0ce3fa10599914b5f7a8b3b6fc0d555c1e07cc481859f50dc3fe89b9dd69",
+  "singleton_vertices": 285,
+  "status": "PASS",
+  "triangle_singleton_constant": -115
+}

@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "normal_optimized_stdout_identical": true,
+  "normal_optimized_receipts_match_original": true,
+  "receipt_sha256": "5b6f38c28d5496638b1cbba302a95a66054fbbc62781b19c512462e84119f2ab",
+  "replay": "isolated temporary directory; original packet unchanged"
+}
