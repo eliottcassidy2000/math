@@ -1,0 +1,53 @@
+{
+  "status": "FINITE_EXACT_CONTROLS_FOR_PROVED_CLOCK_AND_NORM_LAWS",
+  "clock_cases": 3289,
+  "bases": [
+    2,
+    12
+  ],
+  "moduli": [
+    2,
+    300
+  ],
+  "free_weight_smith_decimal": [
+    1,
+    9,
+    89100
+  ],
+  "belphegor_smith": [
+    1,
+    18,
+    296703000
+  ],
+  "prime7417": {
+    "order": 2472,
+    "wing_zero_phases": [
+      1312,
+      2395
+    ],
+    "belphegor_zero_phases": [],
+    "discriminant_legendre": 7416,
+    "supplied_record_phase": 2432
+  },
+  "wing_nonresidue_primes": [
+    7,
+    11,
+    13,
+    101
+  ],
+  "belphegor_mod2401": {
+    "period": 2058,
+    "valuation_counts": {
+      "0": 1715,
+      "2": 294,
+      "3": 49
+    }
+  },
+  "residue_ring_clocks": {
+    "49": 42,
+    "343": 294,
+    "1001": 6,
+    "7417": 2472
+  },
+  "scope": "No primality claim for a whole family; no re-proving the published 1888529-digit certificate; residue-ring clocks are not finite-field Frobenius"
+}

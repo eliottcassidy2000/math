@@ -5,6 +5,13 @@ review with independent computational algorithms; no external proof audit
 or literature-priority claim. Full {7,21} spectrum classification and a
 closed physical ternary source grammar remain **OPEN**.
 
+**Continuation:** [four18977/18979 returns and the clone-stable binary
+grammar](../return18979_palindrome_20261103/README.md) reaches
+56933/56935/56939/56941, gives a complete one-ready fibre at the two
+sources, and classifies readiness surviving root cloning. The new return
+programs explicitly record old-name deletions where needed; this packet's
+zero-deletion6325 statements are unchanged.
+
 [INCOMING](INCOMING.md) credits concurrent completion of the +4 return,
 its clone obstruction, and the general equal-profile interaction bound.
 The +2 return and complete depth-r rank classification extend those results.

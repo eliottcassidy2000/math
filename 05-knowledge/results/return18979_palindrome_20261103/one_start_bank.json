@@ -1,0 +1,158 @@
+{
+  "status": "FINITE_EXACT_FULL_ONE_START_GRAMMAR_TO_PARENT18",
+  "rows": [
+    {
+      "kind": "census",
+      "n": 3,
+      "classes": 1
+    },
+    {
+      "kind": "census",
+      "n": 4,
+      "classes": 3
+    },
+    {
+      "kind": "census",
+      "n": 5,
+      "classes": 8
+    },
+    {
+      "kind": "census",
+      "n": 6,
+      "classes": 21
+    },
+    {
+      "kind": "census",
+      "n": 7,
+      "classes": 55
+    },
+    {
+      "kind": "census",
+      "n": 8,
+      "classes": 144
+    },
+    {
+      "kind": "census",
+      "n": 9,
+      "classes": 377
+    },
+    {
+      "kind": "census",
+      "n": 10,
+      "classes": 987
+    },
+    {
+      "kind": "census",
+      "n": 11,
+      "classes": 2584
+    },
+    {
+      "kind": "hit",
+      "n": 12,
+      "rank": 2368,
+      "target": 18977,
+      "h": 729,
+      "F": 18249,
+      "core_order": 8,
+      "core_rank": 72,
+      "tail_length": 3,
+      "tail_bits": 7
+    },
+    {
+      "kind": "hit",
+      "n": 12,
+      "rank": 3939,
+      "target": 18977,
+      "h": 573,
+      "F": 18405,
+      "core_order": 10,
+      "core_rank": 745,
+      "tail_length": 1,
+      "tail_bits": 1
+    },
+    {
+      "kind": "census",
+      "n": 12,
+      "classes": 6765
+    },
+    {
+      "kind": "hit",
+      "n": 13,
+      "rank": 3625,
+      "target": 18979,
+      "h": 1543,
+      "F": 17437,
+      "core_order": 7,
+      "core_rank": 7,
+      "tail_length": 5,
+      "tail_bits": 30
+    },
+    {
+      "kind": "hit",
+      "n": 13,
+      "rank": 3724,
+      "target": 18977,
+      "h": 1083,
+      "F": 17895,
+      "core_order": 7,
+      "core_rank": 51,
+      "tail_length": 5,
+      "tail_bits": 31
+    },
+    {
+      "kind": "hit",
+      "n": 13,
+      "rank": 4282,
+      "target": 18979,
+      "h": 903,
+      "F": 18077,
+      "core_order": 8,
+      "core_rank": 122,
+      "tail_length": 4,
+      "tail_bits": 11
+    },
+    {
+      "kind": "census",
+      "n": 13,
+      "classes": 17711
+    },
+    {
+      "kind": "census",
+      "n": 14,
+      "classes": 46368
+    },
+    {
+      "kind": "hit",
+      "n": 15,
+      "rank": 672,
+      "target": 18977,
+      "h": 9441,
+      "F": 9537,
+      "core_order": 1,
+      "core_rank": 0,
+      "tail_length": 13,
+      "tail_bits": 4768
+    },
+    {
+      "kind": "census",
+      "n": 15,
+      "classes": 121393
+    },
+    {
+      "kind": "census",
+      "n": 16,
+      "classes": 317811
+    },
+    {
+      "kind": "census",
+      "n": 17,
+      "classes": 832040
+    },
+    {
+      "kind": "census",
+      "n": 18,
+      "classes": 2178309
+    }
+  ],
+  "seconds": 0.6725608000124339
+}

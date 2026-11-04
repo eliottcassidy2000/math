@@ -1,0 +1,46 @@
+{
+  "status": "PASS_NORMAL_AND_OPTIMIZED_IDENTICAL",
+  "source_pin": "d53992645e",
+  "hash_format": "CRLF normalized to LF",
+  "output_sha256": {
+    "audit_bank.json": "e2be5b44f68b174222108c89ed179bb8db02195f4332e41519de2d8e0e94d32f",
+    "audit_returns.json": "c457217676b3d121022dc9ed6bee2fbccfc7457cb51378499eb033ec55338c46",
+    "stable_words.json": "0bc91ca149aa49fb004da742268097fcf30366bea71346b545b9a7bab8bed7e4",
+    "arithmetic.json": "aa15ceb58acad32b4269e3138c486648b5e7c08daeca7e82d757466013deb7bb"
+  },
+  "discovery_sha256": {
+    "one_start_bank.json": "f02bcb5d7a65149d04b072412b5e16943ff65e4bf2216aac24fc3c9993835f7f",
+    "two_entry_bank.json": "f1a71f9088d2a8f6cc9b5ebd7dca9abf0e1b989ab6fa124f485511029b2c6a7a",
+    "targets.json": "0c12fecc3920467ba2811b8bc1528469edc914ce86e982db903998614f46a66c",
+    "returns.json": "166eefc11b6f31de635cc2afc5e7fdb96d6fd06f86cb8dce98aad9aac9a75116"
+  },
+  "input_sha256": {
+    "return6325_completion_20261103/return6325.json": "11a4c314704a13b236b70231d19213935682424c196ead988ec6553207792c5d",
+    "return6325_completion_20261103/return6325_plus2.json": "f8172120849bf262e1dcdfbe553ee5e889572c097ed000cb7bbe4ffef4535106",
+    "return6325_completion_20261103/halving_response.json": "3d7b1af0e0f1f0be20985390b404096452ac9f238311653fa2521fa742585e35",
+    "return6325_completion_20261103/transport.json": "0be407b3ab02983c9ce810046f05d10bb7ac8a8b692defa513d091c9f2c5dbf9",
+    "return6325_completion_20261103/CLONE_LAW.md": "59bc9e8a4edc755a1447082f7ea6e0bad4566464402d53d40764555b17e8dbce",
+    "two_entry_funnels_20261103/READY.md": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c",
+    "polarized_path_calculus_20261103/recognize.py": "967693a89ed94465be01753b8b0b2e9c20e67bbcd5257200d224c39527b2fc85",
+    "polarized_path_calculus_20261103/FUNNELS.md": "d4415fe860bdcc737c05614d97f3909168dd73a783f892505e42103add064a8e",
+    "ready_return_pentagon_20261103/OBSTRUCTION.md": "5890c526288797d4bd80ffaa5eefaa9aa148ee928163f104dea76fc5c4fc39ef",
+    "golden_inverse_defects_20261103/inverse.py": "6d168811df51cc876283973587251361ad957144665f01d11ea2091f6c7b9feb",
+    "digit_memory_all_bases_20261103/TOURNAMENT.md": "cd73a459254abddc742daa9eb6364717c19d906e29326a207c6366b0488c8f29"
+  },
+  "scripts_sha256": {
+    "arithmetic.py": "ee919ae2041ad772dec5348258bbca54920152e973e058d1f74e8a3c15293043",
+    "audit_bank.py": "13149a88f747fce536a7a5d63bc244b4ddef8c8ebfd59e5ab45df9ff6df2af9a",
+    "audit_returns.py": "b283eef20b602046174c5470a0c55347e371e01e80fea05161d29fde1c2411dd",
+    "endpoint.cpp": "f1686e905b8698759595a0761c2697380f893c7b41d1da954160465002951586",
+    "funnel_bank.cpp": "f96d368c1a48531340a505d0c63270600fbe1ae13e406f91f9bdb2456994377c",
+    "phases_bridge.py": "3c728e47c1939f65e29e9bf7ecca91a68e83f4c3ba1772fe745d4d3fd3aebb20",
+    "reproduce.py": "13eda8f5288650b729919fe92c474f48badffa7167417197a40a4f4234a57732",
+    "returns.py": "143e8fdeab8454af2fa41338b8d6ffab7a75d2649cdfe466ee1464c7c88d91f3",
+    "search_funnels.py": "405d070465c22ad120241833956e93b84ba43191c91178a3f58936c09ad1d77f",
+    "search_two_entry.py": "0b341fe18c8c6cc4ab0b294b9b437fac770d1db333d0650099c0b1a221a3055f",
+    "stable_words.py": "4a7dc540063aa2848efc080f7f6ba1e6e0e4f5b1e3148865dc25dec3bc3e51a4",
+    "targets.py": "a225e1de284690d825f6c7ac2d68308050b82edb57fd0d5c999b89372f25594b",
+    "two_entry.cpp": "f8efa96436599b67be30eceb7858d74024e28409004d6a412a5b71ea32330010"
+  },
+  "scope": "Same-agent proof review, independent matrix/DP algorithms; no external audit or all-size spectrum claim"
+}
