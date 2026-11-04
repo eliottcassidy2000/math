@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "outputs": [
+    {
+      "package": "arbitrary_third_root_family",
+      "file": "normal.json",
+      "size": 116275,
+      "sha256": "1eeb68cde54a8316bfbabd88462fbbbe979d9a0d2055b8d32d96a53cc792c1e9"
+    },
+    {
+      "package": "arbitrary_third_root_family",
+      "file": "optimized.json",
+      "size": 116275,
+      "sha256": "1eeb68cde54a8316bfbabd88462fbbbe979d9a0d2055b8d32d96a53cc792c1e9"
+    },
+    {
+      "package": "arbitrary_third_audit",
+      "file": "arbitrary_third_root_family.normal.stdout",
+      "size": 116275,
+      "sha256": "1eeb68cde54a8316bfbabd88462fbbbe979d9a0d2055b8d32d96a53cc792c1e9"
+    },
+    {
+      "package": "arbitrary_third_audit",
+      "file": "arbitrary_third_root_family.optimized.stdout",
+      "size": 116275,
+      "sha256": "1eeb68cde54a8316bfbabd88462fbbbe979d9a0d2055b8d32d96a53cc792c1e9"
+    }
+  ],
+  "checks": [
+    {
+      "package": "arbitrary_third_root_family",
+      "optimized": false,
+      "status": "PASS"
+    },
+    {
+      "package": "arbitrary_third_root_family",
+      "optimized": true,
+      "status": "PASS"
+    },
+    {
+      "package": "arbitrary_third_root_family",
+      "hostile": "corrupt_chunk",
+      "status": "PASS"
+    },
+    {
+      "package": "arbitrary_third_root_family",
+      "hostile": "existing_conflict",
+      "status": "PASS"
+    },
+    {
+      "package": "arbitrary_third_audit",
+      "optimized": false,
+      "status": "PASS"
+    },
+    {
+      "package": "arbitrary_third_audit",
+      "optimized": true,
+      "status": "PASS"
+    },
+    {
+      "package": "arbitrary_third_audit",
+      "hostile": "corrupt_chunk",
+      "status": "PASS"
+    },
+    {
+      "package": "arbitrary_third_audit",
+      "hostile": "existing_conflict",
+      "status": "PASS"
+    }
+  ]
+}
