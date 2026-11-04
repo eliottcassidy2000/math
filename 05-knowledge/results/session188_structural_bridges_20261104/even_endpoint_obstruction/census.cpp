@@ -1,0 +1,4 @@
+#include <iostream>
+#include <vector>
+unsigned endpoint(const std::vector<unsigned>&T){unsigned n=T.size(),N=1u<<n;std::vector<unsigned>d(N);for(unsigned S=1;S<N;++S){unsigned R=S;while(R){unsigned b=R&-R;R-=b;unsigned v=__builtin_ctz(b),prev=S^b;if(!prev||(__builtin_popcount(d[prev]&T[v])&1))d[S]|=b;}}return d.back();}
+int main(){for(unsigned n:{2u,4u,6u}){unsigned total=1u<<(n*(n-1)/2),balanced=0;std::vector<unsigned>hist(n+1);for(unsigned code=0;code<total;++code){std::vector<unsigned>T(n),U(n);unsigned k=0;for(unsigned i=0;i<n;++i)for(unsigned j=i+1;j<n;++j){if(code>>k++&1)T[i]|=1u<<j;else T[j]|=1u<<i;}for(unsigned i=0;i<n;++i)U[i]=((1u<<n)-1)^T[i]^(1u<<i);unsigned p=endpoint(T)^endpoint(U);balanced+=p==0;++hist[__builtin_popcount(p)];}std::cout<<n<<' '<<total<<' '<<balanced;for(auto x:hist)std::cout<<' '<<x;std::cout<<'\n';}}

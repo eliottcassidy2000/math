@@ -1,0 +1,81 @@
+{
+  "auditor_pins": {
+    "audit.py": "a275429a440f2f5d29960490c9741ba5887a3c69b1a11e3e9a4812b86279ab51",
+    "count.cpp": "a10655d8eed86b28ec5dc938bf57cb650e41f08adfb6cdc08b8e660b3389d6bd"
+  },
+  "census": [
+    [
+      2,
+      2,
+      0,
+      0,
+      0,
+      2
+    ],
+    [
+      4,
+      64,
+      0,
+      0,
+      0,
+      48,
+      0,
+      16
+    ],
+    [
+      6,
+      32768,
+      0,
+      0,
+      0,
+      13920,
+      0,
+      12480,
+      0,
+      6368
+    ]
+  ],
+  "complete_named_coordinates": 1369,
+  "difference_histogram": [
+    0,
+    16,
+    56,
+    444,
+    0
+  ],
+  "end": [
+    13,
+    65,
+    29,
+    22,
+    13,
+    29,
+    52,
+    26
+  ],
+  "full_mask_reconstructions": 32,
+  "literal_Hamilton_paths": 249,
+  "literal_subsets": 255,
+  "pair_shared_cubic": -56897620,
+  "physical_counts": 2818,
+  "physical_values_sha256": "3daf5ac937af34ea46dc25b60c28f00c705cbc3b711dff40db43c47c960d51ca",
+  "prime": true,
+  "scope": "Endpoint-parity obstruction, not a response collision.",
+  "source_pins": {
+    "PROOF.md": "46dad3d2edd6f8ec4a9c42d8f33d9f0385b02e71df6f0f8ff055b6ac790fb12c",
+    "census.cpp": "a194efb19241bf99186a44becff3615103dee27c57eac439b6c29c42dc165a31",
+    "literal.cpp": "c7f27b14e27b0ab5f9ba88b7635755bb4bb2eb657f53040f07393df2c2a14b57",
+    "verify.py": "a85e75c5dce335cdbe254a9a4e95e3ad0318872e61b5555914dc12f86613fea1"
+  },
+  "start": [
+    87,
+    13,
+    13,
+    42,
+    31,
+    19,
+    18,
+    26
+  ],
+  "status": "PASS"
+}
