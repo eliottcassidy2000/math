@@ -1,0 +1,34 @@
+#include <algorithm>
+#include <cstdint>
+#include <fstream>
+#include <iostream>
+#include <set>
+#include <stdexcept>
+#include <tuple>
+#include <vector>
+using namespace std;using I=long long;
+void need(bool a,const char*s){if(!a)throw runtime_error(s);}int rem(I x,int m){return (x%m+m)%m;}
+vector<int> graph(int n,int code){vector<int>a(n);int b=0;for(int i=0;i<n;i++)for(int j=i+1;j<n;j++,b++){if(code>>b&1)a[i]|=1<<j;else a[j]|=1<<i;}return a;}
+vector<int> opposite(vector<int>a){int all=(1<<a.size())-1;for(int i=0;i<(int)a.size();i++)a[i]^=all^(1<<i);return a;}
+vector<int> pairs(vector<int>Q,int flips=0){int q=Q.size();vector<int>a(2*q);for(int i=0;i<q;i++){if(flips>>i&1)a[2*i+1]|=1<<(2*i);else a[2*i]|=1<<(2*i+1);for(int j=0;j<q;j++)if(Q[i]>>j&1){a[2*i]|=3<<(2*j);a[2*i+1]|=3<<(2*j);}}return a;}
+vector<int> extend(vector<int>a,int x,int c){int n=a.size();a.push_back(1<<(n+1));a.push_back(0);for(int i=0;i<n;i++){if(x>>i&1)a[i]|=1<<n;else a[n]|=1<<i;if(c>>i&1)a[i]|=1<<(n+1);else a[n+1]|=1<<i;}return a;}
+I hp(const vector<int>&a){int n=a.size(),N=1<<n;vector<I>d(N*n);for(int i=0;i<n;i++)d[(1<<i)*n+i]=1;for(int s=1;s<N;s++)for(int i=0;i<n;i++){I z=d[s*n+i];if(!z)continue;int r=a[i]&~s;while(r){int b=r&-r;r-=b;d[(s|b)*n+__builtin_ctz((unsigned)b)]+=z;}}I out=0;for(int i=0;i<n;i++)out+=d[(N-1)*n+i];return out;}
+vector<int> basis(int n){vector<int>B;int full=(1<<n)-1;for(int s=0;s<(1<<(2*n));s++)if(__builtin_popcount((unsigned)(s&full))<=2&&__builtin_popcount((unsigned)(s>>n))<=2)B.push_back(s);return B;}
+int expanded(int x,int q){int m=0;for(int i=0;i<q;i++)if(x>>i&1)m|=3<<(2*i);return m;}
+long long query_count=0,coef_count=0,mixed_count=0;
+vector<I> coefficients(const vector<int>&a,int variables,bool coarse){auto B=basis(variables);vector<I>v(1<<(2*variables));int mask=(1<<variables)-1;for(int s:B){int x=s&mask,c=s>>variables;if(coarse){x=expanded(x,variables);c=expanded(c,variables);}v[s]=hp(extend(a,x,c));query_count++;}vector<I>p(v.size());for(int s:B){for(int t=s;;t=(t-1)&s){p[s]+=((__builtin_popcount((unsigned)(s^t))&1)?-1:1)*v[t];if(!t)break;}coef_count++;}return p;}
+struct Path{int mask,start,end;};
+void paths_rec(const vector<int>&Q,int start,int last,int mask,vector<Path>&ps){if(__builtin_popcount((unsigned)mask)>=2)ps.push_back({mask,start,last});int r=Q[last]&~mask;while(r){int b=r&-r;r-=b;paths_rec(Q,start,__builtin_ctz((unsigned)b),mask|b,ps);}}
+vector<int> cycle_pair_contrast(const vector<int>&Q){int q=Q.size();vector<int>p(1<<(2*q));for(auto R:{Q,opposite(Q)}){vector<Path>ps;for(int i=0;i<q;i++)paths_rec(R,i,i,1<<i,ps);for(auto P:ps)for(auto S:ps)if(!(P.mask&S.mask)){int m=(1<<P.end)|(1<<(q+S.end)),x=1<<P.start,c=1<<(q+S.start);p[m]^=1;p[m|x]^=1;p[m|c]^=1;p[m|x|c]^=1;}}return p;}
+I trace(const vector<int>&Q,const vector<I>&d){int q=Q.size();I total=0;for(int j=0;j<q;j++){I L=0;for(int i=0;i<q;i++)if(i!=j){L+=d[(1<<i)|(1<<(q+j))];if(Q[j]>>i&1)L+=d[(1<<i)|(1<<j)|(1<<(q+j))];}need(rem(L,4)==0,"individual trace divisible four");total+=L;}need(rem(total,8)==(q>=3?4*(q%2):0),"trace boundary");return total;}
+vector<I> trace_only(const vector<int>&Q){int q=Q.size(),F=(1<<q)-1;set<int>queries;for(int j=0;j<q;j++){queries.insert(1<<(q+j));for(int i=0;i<q;i++)queries.insert((1<<i)|(1<<(q+j)));for(int i=0;i<q;i++)if(Q[j]>>i&1)queries.insert((1<<i)|(1<<j)|(1<<(q+j)));}for(int a=0;a<(1<<q);a++)if(__builtin_popcount((unsigned)a)<=2)queries.insert(a);vector<I>v(1<<(2*q)),d(v.size());auto T=pairs(Q),U=pairs(opposite(Q));for(int m:queries){v[m]=hp(extend(T,expanded(m&F,q),expanded(m>>q,q)))-hp(extend(U,expanded(m&F,q),expanded(m>>q,q)));query_count+=2;}for(int j=0;j<q;j++)for(int i=0;i<q;i++)if(i!=j){for(int m:{(1<<i)|(1<<(q+j)),(1<<i)|(1<<j)|(1<<(q+j))}){if(__builtin_popcount((unsigned)m)==3&&!(Q[j]>>i&1))continue;I z=0;for(int s=m;;s=(s-1)&m){need(queries.count(s),"trace lower closure");z+=((__builtin_popcount((unsigned)(m^s))&1)?-1:1)*v[s];if(!s)break;}d[m]=z;}}return d;}
+int main(){vector<tuple<int,int,I>>records;int cases=0;for(int q=1;q<=5;q++){vector<int>codes;if(q<=4){for(int c=0;c<(1<<(q*(q-1)/2));c++)codes.push_back(c);}else codes={0,31,187,511,613,1023};for(int code:codes){auto Q=graph(q,code);auto ft=coefficients(pairs(Q),q,true),fu=coefficients(pairs(opposite(Q)),q,true),fq=coefficients(Q,q,false),fo=coefficients(opposite(Q),q,false);auto B=cycle_pair_contrast(Q);auto bs=basis(q);vector<I>d(ft.size());int F=(1<<q)-1,quadratic_sum=0;for(int m:bs){d[m]=ft[m]-fu[m];if((m&F)&&(m>>q)){need((fq[m]-fo[m])%2==0,"integer half difference");need(rem(d[m],8)==4*((rem((fq[m]-fo[m])/2,2)+B[m])%2),"complete mixed identity");mixed_count++;}if(__builtin_popcount((unsigned)m)==4)need(B[m]==0,"cycle-pair quartic cancellation");}
+for(int j=0;j<q;j++){for(int i=0;i<q;i++){if(i!=j){quadratic_sum^=B[(1<<i)|(1<<(q+j))];need(B[(1<<i)|(1<<j)|(1<<(q+j))]==0,"no shared cycle-pair cubic");}}}
+need(quadratic_sum==0,"cycle-pair mixed quadratic trace");I tr=trace(Q,d);records.emplace_back(q,code,tr);cases++;}}
+for(auto qc:vector<pair<int,int>>{{6,11223},{7,88888},{7,1234567}}){auto Q=graph(qc.first,qc.second);auto d=trace_only(Q);records.emplace_back(qc.first,qc.second,trace(Q,d));}
+// Retain all named physical coefficients on the 16-state C3/twin-orientation cube.
+vector<int>C3={2,4,1};auto physical_basis=basis(6);vector<vector<I>>cube;vector<vector<I>>coarse(2);ofstream data("full_named_cube.json");data<<"{\"basis\":[";for(int i=0;i<(int)physical_basis.size();i++){if(i)data<<",";data<<"["<<(physical_basis[i]&63)<<","<<(physical_basis[i]>>6)<<"]";}data<<"],\"states\":[";
+for(int direction=0;direction<2;direction++)for(int flips=0;flips<8;flips++){auto Q=direction?opposite(C3):C3;auto T=pairs(Q,flips);auto p=coefficients(T,6,false);vector<I>v;for(int m:physical_basis)v.push_back(p[m]);cube.push_back(v);if(direction||flips)data<<",";data<<"{\"quotient_conversed\":"<<direction<<",\"pair_bits\":"<<flips<<",\"rows\":[";for(int i=0;i<6;i++){if(i)data<<",";data<<T[i];}data<<"],\"vector\":[";for(int i=0;i<(int)v.size();i++){if(i)data<<",";data<<v[i];}data<<"]}";
+vector<I>cvalues;for(int a=0;a<8;a++)for(int c=0;c<8;c++){I h=hp(extend(T,expanded(a,3),expanded(c,3)));query_count++;cvalues.push_back(h);}if(!flips)coarse[direction]=cvalues;else need(coarse[direction]==cvalues,"pair flips invisible to every coarse query");}
+data<<"]}\n";need(set<vector<I>>(cube.begin(),cube.end()).size()==16,"exact full named cube injectivity");need(coarse[0]!=coarse[1],"coarse quotient separator");
+cout<<"{\"status\":\"PASS\",\"full_coefficient_identity_quotients\":"<<cases<<",\"mixed_coefficients_compared\":"<<mixed_count<<",\"literal_integer_queries\":"<<query_count<<",\"interpolated_coefficients\":"<<coef_count<<",\"full_named_cube_states\":16,\"full_named_cube_coordinates\":"<<16*physical_basis.size()<<",\"traces\":[";bool first=true;for(auto [q,c,t]:records){if(!first)cout<<",";first=false;cout<<"["<<q<<","<<c<<","<<t<<","<<rem(t,8)<<"]";}cout<<"]}\n";}

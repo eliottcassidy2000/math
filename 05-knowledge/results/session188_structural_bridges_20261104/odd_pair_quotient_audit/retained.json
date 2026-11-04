@@ -1,0 +1,155 @@
+{
+  "complete_physical_coefficients_compared": 968,
+  "complete_physical_contrast_nonzeros": 300,
+  "data_sha256": {
+    "coarse_cases.json": "8be528587a6751ee951ca1e9d703e5d588758780eba6e6c245fa348cc3bfbda6",
+    "full_named6.json": "bb60c41be686c4859e99eb689772d708442b2d060ef398978021cca4088bc948"
+  },
+  "full_named_cube_states": 16,
+  "independent_backward_dp_values": 44,
+  "literal_controls": [
+    [
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      3,
+      1,
+      1
+    ],
+    [
+      2,
+      0,
+      1,
+      1
+    ],
+    [
+      2,
+      5,
+      1,
+      45
+    ],
+    [
+      2,
+      14,
+      11,
+      1
+    ],
+    [
+      2,
+      15,
+      1,
+      1
+    ],
+    [
+      3,
+      0,
+      45,
+      45
+    ],
+    [
+      3,
+      9,
+      393,
+      393
+    ],
+    [
+      3,
+      26,
+      401,
+      393
+    ],
+    [
+      3,
+      63,
+      45,
+      45
+    ],
+    [
+      5,
+      0,
+      2785,
+      2785
+    ],
+    [
+      5,
+      33,
+      36709,
+      36709
+    ],
+    [
+      5,
+      98,
+      152957,
+      26005
+    ],
+    [
+      5,
+      1023,
+      2785,
+      2785
+    ],
+    [
+      5,
+      0,
+      8097,
+      8097
+    ],
+    [
+      5,
+      33,
+      85185,
+      118113
+    ],
+    [
+      5,
+      98,
+      308301,
+      98355
+    ],
+    [
+      5,
+      1023,
+      8097,
+      8097
+    ],
+    [
+      5,
+      0,
+      15565,
+      15565
+    ],
+    [
+      5,
+      33,
+      188721,
+      188721
+    ],
+    [
+      5,
+      98,
+      262161,
+      266049
+    ],
+    [
+      5,
+      1023,
+      15565,
+      15565
+    ]
+  ],
+  "physical_truth_values_compared": 8192,
+  "primary_cycle_result": "Theorem 1.39, arXiv v1, PDF page14; verified directly.",
+  "primary_cycle_source": "https://arxiv.org/pdf/2307.05569",
+  "source_sha256": {
+    "PROOF.md": "6d741cbef4d88c31a0d39f8c0df28ca50bebfd4c3195d6b33591bd5f39fc18c4",
+    "query_bank.cpp": "73a9d35dc41db2fe8aaa2b1c1debce63e2c9a47cb7d385282834dc922054e241",
+    "trace_mod8.cpp": "436d6f99bee56c96a5bb6b7a616458b0b76871cd1fb371e75590efa1a6e1593d",
+    "trace_mod8_samples.cpp": "9c4f685fc7d392dc0fad24ee01fa41ef2de27de5dcaddac8a0c48d8ffb47a248",
+    "verify.py": "49242a1cc790dc26a6a42a27e28a36b15f3fe0068bdd81f5cbdb619391d4f1eb"
+  },
+  "status": "PASS"
+}
