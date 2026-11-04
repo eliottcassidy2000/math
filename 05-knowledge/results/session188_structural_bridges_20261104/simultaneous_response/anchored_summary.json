@@ -1,0 +1,40 @@
+{
+  "anchor_certificates": 33808,
+  "by_order": [
+    {
+      "anchor_certificates": 0,
+      "exposed_laminar_families": 0,
+      "fully_covered_laminar_families": 0,
+      "n": 1
+    },
+    {
+      "anchor_certificates": 4,
+      "exposed_laminar_families": 2,
+      "fully_covered_laminar_families": 0,
+      "n": 2
+    },
+    {
+      "anchor_certificates": 60,
+      "exposed_laminar_families": 32,
+      "fully_covered_laminar_families": 0,
+      "n": 3
+    },
+    {
+      "anchor_certificates": 1184,
+      "exposed_laminar_families": 600,
+      "fully_covered_laminar_families": 24,
+      "n": 4
+    },
+    {
+      "anchor_certificates": 32560,
+      "exposed_laminar_families": 15184,
+      "fully_covered_laminar_families": 1040,
+      "n": 5
+    }
+  ],
+  "exact_averaging_checks": 3828,
+  "exposed_laminar_families": 15818,
+  "fully_covered_laminar_families": 1064,
+  "scope": "The proof covers exposed-anchor laminar families at arbitrary order; these are exact bounded controls on complete named responses. Fully covered laminar families are counted but not claimed excluded by this theorem.",
+  "status": "PASS"
+}

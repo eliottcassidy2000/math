@@ -1,0 +1,246 @@
+{
+  "census": [
+    {
+      "complete_named_coordinate_count": 4,
+      "families_by_type": {},
+      "full_bank_sha256": "d731d1366033cb9af5707e67c4014a90fbc269bea95bc5447cf421bd8d83f252",
+      "n": 1,
+      "tournaments": 1,
+      "two_module_families_by_type": {}
+    },
+    {
+      "complete_named_coordinate_count": 16,
+      "families_by_type": {
+        "single": 2
+      },
+      "full_bank_sha256": "706a42eebeadf9238eab9a71ab2ebae8f82ba76279af67b17cae78bbd0f5fb15",
+      "n": 2,
+      "tournaments": 2,
+      "two_module_families_by_type": {}
+    },
+    {
+      "complete_named_coordinate_count": 49,
+      "families_by_type": {
+        "nested_laminar": 12,
+        "overlapping": 12,
+        "single": 20
+      },
+      "full_bank_sha256": "507a8f6babd541b482398bed67067d46ad283d4ab58bbe2417bfc3a2ffb65b0f",
+      "n": 3,
+      "tournaments": 8,
+      "two_module_families_by_type": {
+        "nested_laminar": 12,
+        "overlapping": 6
+      }
+    },
+    {
+      "complete_named_coordinate_count": 121,
+      "families_by_type": {
+        "nested_laminar": 376,
+        "overlapping": 1008,
+        "pairwise_disjoint": 24,
+        "single": 224
+      },
+      "full_bank_sha256": "432bea3116c8afe37344e7a6f5b387a1fb3a20d53b641797cce04c66f741aa3e",
+      "n": 4,
+      "tournaments": 64,
+      "two_module_families_by_type": {
+        "nested_laminar": 256,
+        "overlapping": 120,
+        "pairwise_disjoint": 24
+      }
+    },
+    {
+      "complete_named_coordinate_count": 256,
+      "families_by_type": {
+        "nested_laminar": 11840,
+        "overlapping": 113040,
+        "pairwise_disjoint": 800,
+        "single": 3584
+      },
+      "full_bank_sha256": "3b8c79a5b52148f8d504b93604e428a2fd961909d04fc7a6a15336f8ca8c4222",
+      "n": 5,
+      "tournaments": 1024,
+      "two_module_families_by_type": {
+        "nested_laminar": 5120,
+        "overlapping": 2040,
+        "pairwise_disjoint": 800
+      }
+    }
+  ],
+  "exact_named_full_response_collisions": [],
+  "examples": [
+    {
+      "H_T": 45,
+      "H_U": 45,
+      "T": [
+        14,
+        12,
+        56,
+        48,
+        35,
+        3
+      ],
+      "U": [
+        12,
+        13,
+        48,
+        52,
+        35,
+        3
+      ],
+      "family_type": "pairwise_disjoint",
+      "first_separator": [
+        0,
+        1,
+        95,
+        109
+      ],
+      "literal_query_count": 484,
+      "nonzero_difference_by_degree": {
+        "1": 8,
+        "2": 44,
+        "3": 140,
+        "4": 108
+      },
+      "original_module_masks": [
+        3,
+        12
+      ],
+      "strong_T": true,
+      "strong_U": true
+    },
+    {
+      "H_T": 45,
+      "H_U": 45,
+      "T": [
+        14,
+        12,
+        56,
+        48,
+        35,
+        3
+      ],
+      "U": [
+        50,
+        48,
+        3,
+        7,
+        12,
+        28
+      ],
+      "family_type": "nested_laminar",
+      "first_separator": [
+        0,
+        4,
+        95,
+        109
+      ],
+      "literal_query_count": 484,
+      "nonzero_difference_by_degree": {
+        "1": 8,
+        "2": 40,
+        "3": 156,
+        "4": 84
+      },
+      "original_module_masks": [
+        3,
+        63
+      ],
+      "strong_T": true,
+      "strong_U": true
+    },
+    {
+      "H_T": 45,
+      "H_U": 45,
+      "T": [
+        14,
+        12,
+        56,
+        48,
+        35,
+        3
+      ],
+      "U": [
+        50,
+        48,
+        11,
+        3,
+        44,
+        12
+      ],
+      "family_type": "nested_laminar",
+      "first_separator": [
+        0,
+        6,
+        131,
+        139
+      ],
+      "literal_query_count": 4096,
+      "nonzero_difference_by_degree": {
+        "2": 36,
+        "3": 132,
+        "4": 132
+      },
+      "original_module_masks": [
+        3,
+        12,
+        48,
+        63
+      ],
+      "strong_T": true,
+      "strong_U": true
+    },
+    {
+      "H_T": 1,
+      "H_U": 11,
+      "T": [
+        30,
+        28,
+        24,
+        16,
+        0
+      ],
+      "U": [
+        24,
+        25,
+        3,
+        4,
+        12
+      ],
+      "family_type": "overlapping",
+      "first_separator": [
+        0,
+        0,
+        1,
+        11
+      ],
+      "literal_query_count": 256,
+      "nonzero_difference_by_degree": {
+        "0": 1,
+        "1": 10,
+        "2": 44,
+        "3": 88,
+        "4": 46
+      },
+      "original_module_masks": [
+        7,
+        28
+      ],
+      "strong_T": false,
+      "strong_U": true
+    }
+  ],
+  "families_by_type": {
+    "nested_laminar": 12228,
+    "overlapping": 114060,
+    "pairwise_disjoint": 824,
+    "single": 3830
+  },
+  "nonempty_family_presentations": 130942,
+  "nonempty_identity_families": 0,
+  "operation": "Choose distinct nontrivial modules of the original tournament, then reverse an edge iff it lies in an odd number of chosen sets. This is simultaneous edge XOR, not an assumption that each overlapping set remains a module after another flip.",
+  "scope": "Exhaustive only through five old names; larger examples are individually specified controls. This is a mechanism-specific census rather than a claimed new general reconstruction bound.",
+  "status": "PASS",
+  "tournaments": 1099
+}

@@ -1,0 +1,66 @@
+{
+  "controls": [
+    {
+      "full_queries_per_side": 4096,
+      "modules": [
+        3,
+        12
+      ],
+      "n": 6,
+      "nonzero_difference_by_degree": {
+        "1": 8,
+        "2": 44,
+        "3": 140,
+        "4": 108
+      }
+    },
+    {
+      "full_queries_per_side": 4096,
+      "modules": [
+        3,
+        63
+      ],
+      "n": 6,
+      "nonzero_difference_by_degree": {
+        "1": 8,
+        "2": 40,
+        "3": 156,
+        "4": 84
+      }
+    },
+    {
+      "full_queries_per_side": 4096,
+      "modules": [
+        3,
+        12,
+        48,
+        63
+      ],
+      "n": 6,
+      "nonzero_difference_by_degree": {
+        "2": 36,
+        "3": 132,
+        "4": 132
+      }
+    },
+    {
+      "full_queries_per_side": 1024,
+      "modules": [
+        7,
+        28
+      ],
+      "n": 5,
+      "nonzero_difference_by_degree": {
+        "0": 1,
+        "1": 10,
+        "2": 44,
+        "3": 88,
+        "4": 46
+      }
+    }
+  ],
+  "literal_counts": 26624,
+  "method": "Independent literal Hamilton counts for every full Boolean attachment, followed by full integer Mobius transform; no producer polynomial routines",
+  "receipt_sha256": "a6c1c70f99cdbe9e5de8d31a7ad966cd965245ac766ba35715ed311b2c139ede",
+  "status": "PASS"
+}
