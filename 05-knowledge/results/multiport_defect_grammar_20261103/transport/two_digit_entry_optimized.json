@@ -1,0 +1,2997 @@
+{
+  "status": "PROVED two uniform letters on one infinite entry family; output closure OPEN",
+  "triangle_all_port_subsets": [
+    {
+      "ports": [],
+      "signature": [
+        3,
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "ports": [
+        0
+      ],
+      "signature": [
+        3,
+        12,
+        3,
+        3,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "ports": [
+        1
+      ],
+      "signature": [
+        3,
+        12,
+        3,
+        3,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "ports": [
+        0,
+        1
+      ],
+      "signature": [
+        3,
+        12,
+        6,
+        6,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "ports": [
+        2
+      ],
+      "signature": [
+        3,
+        12,
+        3,
+        3,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "ports": [
+        0,
+        2
+      ],
+      "signature": [
+        3,
+        12,
+        6,
+        6,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "ports": [
+        1,
+        2
+      ],
+      "signature": [
+        3,
+        12,
+        6,
+        6,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "ports": [
+        0,
+        1,
+        2
+      ],
+      "signature": [
+        3,
+        12,
+        9,
+        9,
+        6,
+        3,
+        3
+      ]
+    }
+  ],
+  "suffixes": {
+    "source": {
+      "rows": [
+        6,
+        4,
+        0
+      ],
+      "ports": [
+        0,
+        1,
+        2
+      ],
+      "expected": [
+        1,
+        8,
+        7,
+        7,
+        6,
+        1,
+        1
+      ],
+      "signature": [
+        1,
+        8,
+        7,
+        7,
+        6,
+        1,
+        1
+      ]
+    },
+    "digit2": {
+      "rows": [
+        30,
+        28,
+        8,
+        16,
+        4
+      ],
+      "ports": [
+        0,
+        1,
+        2
+      ],
+      "expected": [
+        3,
+        48,
+        21,
+        39,
+        16,
+        1,
+        3
+      ],
+      "signature": [
+        3,
+        48,
+        21,
+        39,
+        16,
+        1,
+        3
+      ]
+    },
+    "digit4": {
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        0
+      ],
+      "ports": [
+        0,
+        2,
+        4
+      ],
+      "expected": [
+        1,
+        32,
+        21,
+        21,
+        12,
+        1,
+        1
+      ],
+      "signature": [
+        1,
+        32,
+        21,
+        21,
+        12,
+        1,
+        1
+      ]
+    }
+  },
+  "literal_t1_to8": [
+    {
+      "t": 1,
+      "source_rows": [
+        14,
+        28,
+        24,
+        16,
+        1
+      ],
+      "source_names": [
+        10,
+        0,
+        1,
+        2,
+        99
+      ],
+      "source": {
+        "H": 9,
+        "outer_root_defect": 6,
+        "start_defects": {
+          "2": 1
+        },
+        "strong": true
+      },
+      "branches": [
+        {
+          "digit": 2,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                0,
+                1,
+                99
+              ],
+              "rows": [
+                46,
+                60,
+                56,
+                16,
+                33,
+                8
+              ],
+              "names": [
+                10,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 15,
+              "outer_root_defect": 8,
+              "start_defects": {
+                "2": 0,
+                "4": 4
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                110,
+                124,
+                120,
+                80,
+                97,
+                8,
+                32
+              ],
+              "names": [
+                10,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 29,
+              "outer_root_defect": 16,
+              "start_defects": {
+                "2": 6,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": []
+        },
+        {
+          "digit": 4,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                0,
+                1,
+                2
+              ],
+              "rows": [
+                46,
+                60,
+                56,
+                48,
+                1,
+                16
+              ],
+              "names": [
+                10,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 17,
+              "outer_root_defect": 14,
+              "start_defects": {
+                "2": 11,
+                "4": 1
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                110,
+                124,
+                120,
+                112,
+                65,
+                16,
+                32
+              ],
+              "names": [
+                10,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 27,
+              "outer_root_defect": 20,
+              "start_defects": {
+                "2": 41,
+                "4": 0
+              },
+              "strong": true
+            },
+            {
+              "operation": "reverse1_to_root99",
+              "rows": [
+                110,
+                124,
+                104,
+                112,
+                69,
+                16,
+                32
+              ],
+              "names": [
+                10,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 31,
+              "outer_root_defect": 12,
+              "start_defects": {
+                "2": 40,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": [
+            [
+              1,
+              99
+            ]
+          ]
+        }
+      ],
+      "literal_sibling_path": [
+        {
+          "old_arc": [
+            99,
+            4
+          ],
+          "rows": [
+            110,
+            124,
+            120,
+            80,
+            65,
+            24,
+            32
+          ],
+          "H": 41,
+          "outer_root_defect": 28,
+          "start_defects": {
+            "2": 12,
+            "4": 6
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            1,
+            99
+          ],
+          "rows": [
+            110,
+            124,
+            104,
+            80,
+            69,
+            24,
+            32
+          ],
+          "H": 43,
+          "outer_root_defect": 14,
+          "start_defects": {
+            "2": 13,
+            "4": 6
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            4,
+            2
+          ],
+          "rows": [
+            110,
+            124,
+            104,
+            112,
+            69,
+            16,
+            32
+          ],
+          "H": 31,
+          "outer_root_defect": 12,
+          "start_defects": {
+            "2": 40,
+            "4": 0
+          },
+          "strong": true
+        }
+      ]
+    },
+    {
+      "t": 2,
+      "source_rows": [
+        30,
+        28,
+        56,
+        48,
+        32,
+        3
+      ],
+      "source_names": [
+        10,
+        11,
+        0,
+        1,
+        2,
+        99
+      ],
+      "source": {
+        "H": 23,
+        "outer_root_defect": 6,
+        "start_defects": {
+          "2": 1
+        },
+        "strong": true
+      },
+      "branches": [
+        {
+          "digit": 2,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                11,
+                0,
+                1,
+                99
+              ],
+              "rows": [
+                94,
+                92,
+                120,
+                112,
+                32,
+                67,
+                16
+              ],
+              "names": [
+                10,
+                11,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 37,
+              "outer_root_defect": 8,
+              "start_defects": {
+                "2": 0,
+                "4": 10
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                11,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                222,
+                220,
+                248,
+                240,
+                160,
+                195,
+                16,
+                64
+              ],
+              "names": [
+                10,
+                11,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 71,
+              "outer_root_defect": 16,
+              "start_defects": {
+                "2": 14,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": []
+        },
+        {
+          "digit": 4,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                11,
+                0,
+                1,
+                2
+              ],
+              "rows": [
+                94,
+                92,
+                120,
+                112,
+                96,
+                3,
+                32
+              ],
+              "names": [
+                10,
+                11,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 47,
+              "outer_root_defect": 14,
+              "start_defects": {
+                "2": 25,
+                "4": 1
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                11,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                222,
+                220,
+                248,
+                240,
+                224,
+                131,
+                32,
+                64
+              ],
+              "names": [
+                10,
+                11,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 73,
+              "outer_root_defect": 20,
+              "start_defects": {
+                "2": 99,
+                "4": 0
+              },
+              "strong": true
+            },
+            {
+              "operation": "reverse1_to_root99",
+              "rows": [
+                222,
+                220,
+                248,
+                208,
+                224,
+                139,
+                32,
+                64
+              ],
+              "names": [
+                10,
+                11,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 73,
+              "outer_root_defect": 12,
+              "start_defects": {
+                "2": 86,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": [
+            [
+              1,
+              99
+            ]
+          ]
+        }
+      ],
+      "literal_sibling_path": [
+        {
+          "old_arc": [
+            99,
+            4
+          ],
+          "rows": [
+            222,
+            220,
+            248,
+            240,
+            160,
+            131,
+            48,
+            64
+          ],
+          "H": 107,
+          "outer_root_defect": 28,
+          "start_defects": {
+            "2": 28,
+            "4": 14
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            1,
+            99
+          ],
+          "rows": [
+            222,
+            220,
+            248,
+            208,
+            160,
+            139,
+            48,
+            64
+          ],
+          "H": 97,
+          "outer_root_defect": 14,
+          "start_defects": {
+            "2": 29,
+            "4": 14
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            4,
+            2
+          ],
+          "rows": [
+            222,
+            220,
+            248,
+            208,
+            224,
+            139,
+            32,
+            64
+          ],
+          "H": 73,
+          "outer_root_defect": 12,
+          "start_defects": {
+            "2": 86,
+            "4": 0
+          },
+          "strong": true
+        }
+      ]
+    },
+    {
+      "t": 3,
+      "source_rows": [
+        62,
+        60,
+        56,
+        112,
+        96,
+        64,
+        7
+      ],
+      "source_names": [
+        10,
+        11,
+        12,
+        0,
+        1,
+        2,
+        99
+      ],
+      "source": {
+        "H": 51,
+        "outer_root_defect": 6,
+        "start_defects": {
+          "2": 1
+        },
+        "strong": true
+      },
+      "branches": [
+        {
+          "digit": 2,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                0,
+                1,
+                99
+              ],
+              "rows": [
+                190,
+                188,
+                184,
+                240,
+                224,
+                64,
+                135,
+                32
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 81,
+              "outer_root_defect": 8,
+              "start_defects": {
+                "2": 0,
+                "4": 22
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                446,
+                444,
+                440,
+                496,
+                480,
+                320,
+                391,
+                32,
+                128
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 155,
+              "outer_root_defect": 16,
+              "start_defects": {
+                "2": 30,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": []
+        },
+        {
+          "digit": 4,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                0,
+                1,
+                2
+              ],
+              "rows": [
+                190,
+                188,
+                184,
+                240,
+                224,
+                192,
+                7,
+                64
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 107,
+              "outer_root_defect": 14,
+              "start_defects": {
+                "2": 53,
+                "4": 1
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                446,
+                444,
+                440,
+                496,
+                480,
+                448,
+                263,
+                64,
+                128
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 165,
+              "outer_root_defect": 20,
+              "start_defects": {
+                "2": 215,
+                "4": 0
+              },
+              "strong": true
+            },
+            {
+              "operation": "reverse1_to_root99",
+              "rows": [
+                446,
+                444,
+                440,
+                496,
+                416,
+                448,
+                279,
+                64,
+                128
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 157,
+              "outer_root_defect": 12,
+              "start_defects": {
+                "2": 178,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": [
+            [
+              1,
+              99
+            ]
+          ]
+        }
+      ],
+      "literal_sibling_path": [
+        {
+          "old_arc": [
+            99,
+            4
+          ],
+          "rows": [
+            446,
+            444,
+            440,
+            496,
+            480,
+            320,
+            263,
+            96,
+            128
+          ],
+          "H": 239,
+          "outer_root_defect": 28,
+          "start_defects": {
+            "2": 60,
+            "4": 30
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            1,
+            99
+          ],
+          "rows": [
+            446,
+            444,
+            440,
+            496,
+            416,
+            320,
+            279,
+            96,
+            128
+          ],
+          "H": 205,
+          "outer_root_defect": 14,
+          "start_defects": {
+            "2": 61,
+            "4": 30
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            4,
+            2
+          ],
+          "rows": [
+            446,
+            444,
+            440,
+            496,
+            416,
+            448,
+            279,
+            64,
+            128
+          ],
+          "H": 157,
+          "outer_root_defect": 12,
+          "start_defects": {
+            "2": 178,
+            "4": 0
+          },
+          "strong": true
+        }
+      ]
+    },
+    {
+      "t": 4,
+      "source_rows": [
+        126,
+        124,
+        120,
+        112,
+        224,
+        192,
+        128,
+        15
+      ],
+      "source_names": [
+        10,
+        11,
+        12,
+        13,
+        0,
+        1,
+        2,
+        99
+      ],
+      "source": {
+        "H": 107,
+        "outer_root_defect": 6,
+        "start_defects": {
+          "2": 1
+        },
+        "strong": true
+      },
+      "branches": [
+        {
+          "digit": 2,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                0,
+                1,
+                99
+              ],
+              "rows": [
+                382,
+                380,
+                376,
+                368,
+                480,
+                448,
+                128,
+                271,
+                64
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 169,
+              "outer_root_defect": 8,
+              "start_defects": {
+                "2": 0,
+                "4": 46
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                894,
+                892,
+                888,
+                880,
+                992,
+                960,
+                640,
+                783,
+                64,
+                256
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 323,
+              "outer_root_defect": 16,
+              "start_defects": {
+                "2": 62,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": []
+        },
+        {
+          "digit": 4,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                0,
+                1,
+                2
+              ],
+              "rows": [
+                382,
+                380,
+                376,
+                368,
+                480,
+                448,
+                384,
+                15,
+                128
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 227,
+              "outer_root_defect": 14,
+              "start_defects": {
+                "2": 109,
+                "4": 1
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                894,
+                892,
+                888,
+                880,
+                992,
+                960,
+                896,
+                527,
+                128,
+                256
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 349,
+              "outer_root_defect": 20,
+              "start_defects": {
+                "2": 447,
+                "4": 0
+              },
+              "strong": true
+            },
+            {
+              "operation": "reverse1_to_root99",
+              "rows": [
+                894,
+                892,
+                888,
+                880,
+                992,
+                832,
+                896,
+                559,
+                128,
+                256
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 325,
+              "outer_root_defect": 12,
+              "start_defects": {
+                "2": 362,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": [
+            [
+              1,
+              99
+            ]
+          ]
+        }
+      ],
+      "literal_sibling_path": [
+        {
+          "old_arc": [
+            99,
+            4
+          ],
+          "rows": [
+            894,
+            892,
+            888,
+            880,
+            992,
+            960,
+            640,
+            527,
+            192,
+            256
+          ],
+          "H": 503,
+          "outer_root_defect": 28,
+          "start_defects": {
+            "2": 124,
+            "4": 62
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            1,
+            99
+          ],
+          "rows": [
+            894,
+            892,
+            888,
+            880,
+            992,
+            832,
+            640,
+            559,
+            192,
+            256
+          ],
+          "H": 421,
+          "outer_root_defect": 14,
+          "start_defects": {
+            "2": 125,
+            "4": 62
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            4,
+            2
+          ],
+          "rows": [
+            894,
+            892,
+            888,
+            880,
+            992,
+            832,
+            896,
+            559,
+            128,
+            256
+          ],
+          "H": 325,
+          "outer_root_defect": 12,
+          "start_defects": {
+            "2": 362,
+            "4": 0
+          },
+          "strong": true
+        }
+      ]
+    },
+    {
+      "t": 5,
+      "source_rows": [
+        254,
+        252,
+        248,
+        240,
+        224,
+        448,
+        384,
+        256,
+        31
+      ],
+      "source_names": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        0,
+        1,
+        2,
+        99
+      ],
+      "source": {
+        "H": 219,
+        "outer_root_defect": 6,
+        "start_defects": {
+          "2": 1
+        },
+        "strong": true
+      },
+      "branches": [
+        {
+          "digit": 2,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                0,
+                1,
+                99
+              ],
+              "rows": [
+                766,
+                764,
+                760,
+                752,
+                736,
+                960,
+                896,
+                256,
+                543,
+                128
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 345,
+              "outer_root_defect": 8,
+              "start_defects": {
+                "2": 0,
+                "4": 94
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                1790,
+                1788,
+                1784,
+                1776,
+                1760,
+                1984,
+                1920,
+                1280,
+                1567,
+                128,
+                512
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 659,
+              "outer_root_defect": 16,
+              "start_defects": {
+                "2": 126,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": []
+        },
+        {
+          "digit": 4,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                0,
+                1,
+                2
+              ],
+              "rows": [
+                766,
+                764,
+                760,
+                752,
+                736,
+                960,
+                896,
+                768,
+                31,
+                256
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 467,
+              "outer_root_defect": 14,
+              "start_defects": {
+                "2": 221,
+                "4": 1
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                1790,
+                1788,
+                1784,
+                1776,
+                1760,
+                1984,
+                1920,
+                1792,
+                1055,
+                256,
+                512
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 717,
+              "outer_root_defect": 20,
+              "start_defects": {
+                "2": 911,
+                "4": 0
+              },
+              "strong": true
+            },
+            {
+              "operation": "reverse1_to_root99",
+              "rows": [
+                1790,
+                1788,
+                1784,
+                1776,
+                1760,
+                1984,
+                1664,
+                1792,
+                1119,
+                256,
+                512
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 661,
+              "outer_root_defect": 12,
+              "start_defects": {
+                "2": 730,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": [
+            [
+              1,
+              99
+            ]
+          ]
+        }
+      ],
+      "literal_sibling_path": [
+        {
+          "old_arc": [
+            99,
+            4
+          ],
+          "rows": [
+            1790,
+            1788,
+            1784,
+            1776,
+            1760,
+            1984,
+            1920,
+            1280,
+            1055,
+            384,
+            512
+          ],
+          "H": 1031,
+          "outer_root_defect": 28,
+          "start_defects": {
+            "2": 252,
+            "4": 126
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            1,
+            99
+          ],
+          "rows": [
+            1790,
+            1788,
+            1784,
+            1776,
+            1760,
+            1984,
+            1664,
+            1280,
+            1119,
+            384,
+            512
+          ],
+          "H": 853,
+          "outer_root_defect": 14,
+          "start_defects": {
+            "2": 253,
+            "4": 126
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            4,
+            2
+          ],
+          "rows": [
+            1790,
+            1788,
+            1784,
+            1776,
+            1760,
+            1984,
+            1664,
+            1792,
+            1119,
+            256,
+            512
+          ],
+          "H": 661,
+          "outer_root_defect": 12,
+          "start_defects": {
+            "2": 730,
+            "4": 0
+          },
+          "strong": true
+        }
+      ]
+    },
+    {
+      "t": 6,
+      "source_rows": [
+        510,
+        508,
+        504,
+        496,
+        480,
+        448,
+        896,
+        768,
+        512,
+        63
+      ],
+      "source_names": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        0,
+        1,
+        2,
+        99
+      ],
+      "source": {
+        "H": 443,
+        "outer_root_defect": 6,
+        "start_defects": {
+          "2": 1
+        },
+        "strong": true
+      },
+      "branches": [
+        {
+          "digit": 2,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                0,
+                1,
+                99
+              ],
+              "rows": [
+                1534,
+                1532,
+                1528,
+                1520,
+                1504,
+                1472,
+                1920,
+                1792,
+                512,
+                1087,
+                256
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 697,
+              "outer_root_defect": 8,
+              "start_defects": {
+                "2": 0,
+                "4": 190
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                3582,
+                3580,
+                3576,
+                3568,
+                3552,
+                3520,
+                3968,
+                3840,
+                2560,
+                3135,
+                256,
+                1024
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 1331,
+              "outer_root_defect": 16,
+              "start_defects": {
+                "2": 254,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": []
+        },
+        {
+          "digit": 4,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                0,
+                1,
+                2
+              ],
+              "rows": [
+                1534,
+                1532,
+                1528,
+                1520,
+                1504,
+                1472,
+                1920,
+                1792,
+                1536,
+                63,
+                512
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 947,
+              "outer_root_defect": 14,
+              "start_defects": {
+                "2": 445,
+                "4": 1
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                3582,
+                3580,
+                3576,
+                3568,
+                3552,
+                3520,
+                3968,
+                3840,
+                3584,
+                2111,
+                512,
+                1024
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 1453,
+              "outer_root_defect": 20,
+              "start_defects": {
+                "2": 1839,
+                "4": 0
+              },
+              "strong": true
+            },
+            {
+              "operation": "reverse1_to_root99",
+              "rows": [
+                3582,
+                3580,
+                3576,
+                3568,
+                3552,
+                3520,
+                3968,
+                3328,
+                3584,
+                2239,
+                512,
+                1024
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 1333,
+              "outer_root_defect": 12,
+              "start_defects": {
+                "2": 1466,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": [
+            [
+              1,
+              99
+            ]
+          ]
+        }
+      ],
+      "literal_sibling_path": [
+        {
+          "old_arc": [
+            99,
+            4
+          ],
+          "rows": [
+            3582,
+            3580,
+            3576,
+            3568,
+            3552,
+            3520,
+            3968,
+            3840,
+            2560,
+            2111,
+            768,
+            1024
+          ],
+          "H": 2087,
+          "outer_root_defect": 28,
+          "start_defects": {
+            "2": 508,
+            "4": 254
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            1,
+            99
+          ],
+          "rows": [
+            3582,
+            3580,
+            3576,
+            3568,
+            3552,
+            3520,
+            3968,
+            3328,
+            2560,
+            2239,
+            768,
+            1024
+          ],
+          "H": 1717,
+          "outer_root_defect": 14,
+          "start_defects": {
+            "2": 509,
+            "4": 254
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            4,
+            2
+          ],
+          "rows": [
+            3582,
+            3580,
+            3576,
+            3568,
+            3552,
+            3520,
+            3968,
+            3328,
+            3584,
+            2239,
+            512,
+            1024
+          ],
+          "H": 1333,
+          "outer_root_defect": 12,
+          "start_defects": {
+            "2": 1466,
+            "4": 0
+          },
+          "strong": true
+        }
+      ]
+    },
+    {
+      "t": 7,
+      "source_rows": [
+        1022,
+        1020,
+        1016,
+        1008,
+        992,
+        960,
+        896,
+        1792,
+        1536,
+        1024,
+        127
+      ],
+      "source_names": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        0,
+        1,
+        2,
+        99
+      ],
+      "source": {
+        "H": 891,
+        "outer_root_defect": 6,
+        "start_defects": {
+          "2": 1
+        },
+        "strong": true
+      },
+      "branches": [
+        {
+          "digit": 2,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                0,
+                1,
+                99
+              ],
+              "rows": [
+                3070,
+                3068,
+                3064,
+                3056,
+                3040,
+                3008,
+                2944,
+                3840,
+                3584,
+                1024,
+                2175,
+                512
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 1401,
+              "outer_root_defect": 8,
+              "start_defects": {
+                "2": 0,
+                "4": 382
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                7166,
+                7164,
+                7160,
+                7152,
+                7136,
+                7104,
+                7040,
+                7936,
+                7680,
+                5120,
+                6271,
+                512,
+                2048
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 2675,
+              "outer_root_defect": 16,
+              "start_defects": {
+                "2": 510,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": []
+        },
+        {
+          "digit": 4,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                0,
+                1,
+                2
+              ],
+              "rows": [
+                3070,
+                3068,
+                3064,
+                3056,
+                3040,
+                3008,
+                2944,
+                3840,
+                3584,
+                3072,
+                127,
+                1024
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 1907,
+              "outer_root_defect": 14,
+              "start_defects": {
+                "2": 893,
+                "4": 1
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                7166,
+                7164,
+                7160,
+                7152,
+                7136,
+                7104,
+                7040,
+                7936,
+                7680,
+                7168,
+                4223,
+                1024,
+                2048
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 2925,
+              "outer_root_defect": 20,
+              "start_defects": {
+                "2": 3695,
+                "4": 0
+              },
+              "strong": true
+            },
+            {
+              "operation": "reverse1_to_root99",
+              "rows": [
+                7166,
+                7164,
+                7160,
+                7152,
+                7136,
+                7104,
+                7040,
+                7936,
+                6656,
+                7168,
+                4479,
+                1024,
+                2048
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 2677,
+              "outer_root_defect": 12,
+              "start_defects": {
+                "2": 2938,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": [
+            [
+              1,
+              99
+            ]
+          ]
+        }
+      ],
+      "literal_sibling_path": [
+        {
+          "old_arc": [
+            99,
+            4
+          ],
+          "rows": [
+            7166,
+            7164,
+            7160,
+            7152,
+            7136,
+            7104,
+            7040,
+            7936,
+            7680,
+            5120,
+            4223,
+            1536,
+            2048
+          ],
+          "H": 4199,
+          "outer_root_defect": 28,
+          "start_defects": {
+            "2": 1020,
+            "4": 510
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            1,
+            99
+          ],
+          "rows": [
+            7166,
+            7164,
+            7160,
+            7152,
+            7136,
+            7104,
+            7040,
+            7936,
+            6656,
+            5120,
+            4479,
+            1536,
+            2048
+          ],
+          "H": 3445,
+          "outer_root_defect": 14,
+          "start_defects": {
+            "2": 1021,
+            "4": 510
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            4,
+            2
+          ],
+          "rows": [
+            7166,
+            7164,
+            7160,
+            7152,
+            7136,
+            7104,
+            7040,
+            7936,
+            6656,
+            7168,
+            4479,
+            1024,
+            2048
+          ],
+          "H": 2677,
+          "outer_root_defect": 12,
+          "start_defects": {
+            "2": 2938,
+            "4": 0
+          },
+          "strong": true
+        }
+      ]
+    },
+    {
+      "t": 8,
+      "source_rows": [
+        2046,
+        2044,
+        2040,
+        2032,
+        2016,
+        1984,
+        1920,
+        1792,
+        3584,
+        3072,
+        2048,
+        255
+      ],
+      "source_names": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        0,
+        1,
+        2,
+        99
+      ],
+      "source": {
+        "H": 1787,
+        "outer_root_defect": 6,
+        "start_defects": {
+          "2": 1
+        },
+        "strong": true
+      },
+      "branches": [
+        {
+          "digit": 2,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                0,
+                1,
+                99
+              ],
+              "rows": [
+                6142,
+                6140,
+                6136,
+                6128,
+                6112,
+                6080,
+                6016,
+                5888,
+                7680,
+                7168,
+                2048,
+                4351,
+                1024
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 2809,
+              "outer_root_defect": 8,
+              "start_defects": {
+                "2": 0,
+                "4": 766
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                14334,
+                14332,
+                14328,
+                14320,
+                14304,
+                14272,
+                14208,
+                14080,
+                15872,
+                15360,
+                10240,
+                12543,
+                1024,
+                4096
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 5363,
+              "outer_root_defect": 16,
+              "start_defects": {
+                "2": 1022,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": []
+        },
+        {
+          "digit": 4,
+          "stages": [
+            {
+              "operation": "birth4",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                0,
+                1,
+                2
+              ],
+              "rows": [
+                6142,
+                6140,
+                6136,
+                6128,
+                6112,
+                6080,
+                6016,
+                5888,
+                7680,
+                7168,
+                6144,
+                255,
+                2048
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                0,
+                1,
+                2,
+                99,
+                4
+              ],
+              "H": 3827,
+              "outer_root_defect": 14,
+              "start_defects": {
+                "2": 1789,
+                "4": 1
+              },
+              "strong": true
+            },
+            {
+              "operation": "birth3",
+              "incoming_names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                0,
+                1,
+                2,
+                99
+              ],
+              "rows": [
+                14334,
+                14332,
+                14328,
+                14320,
+                14304,
+                14272,
+                14208,
+                14080,
+                15872,
+                15360,
+                14336,
+                8447,
+                2048,
+                4096
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 5869,
+              "outer_root_defect": 20,
+              "start_defects": {
+                "2": 7407,
+                "4": 0
+              },
+              "strong": true
+            },
+            {
+              "operation": "reverse1_to_root99",
+              "rows": [
+                14334,
+                14332,
+                14328,
+                14320,
+                14304,
+                14272,
+                14208,
+                14080,
+                15872,
+                13312,
+                14336,
+                8959,
+                2048,
+                4096
+              ],
+              "names": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                0,
+                1,
+                2,
+                99,
+                4,
+                3
+              ],
+              "H": 5365,
+              "outer_root_defect": 12,
+              "start_defects": {
+                "2": 5882,
+                "4": 0
+              },
+              "strong": true
+            }
+          ],
+          "changed_old_pairs": [
+            [
+              1,
+              99
+            ]
+          ]
+        }
+      ],
+      "literal_sibling_path": [
+        {
+          "old_arc": [
+            99,
+            4
+          ],
+          "rows": [
+            14334,
+            14332,
+            14328,
+            14320,
+            14304,
+            14272,
+            14208,
+            14080,
+            15872,
+            15360,
+            10240,
+            8447,
+            3072,
+            4096
+          ],
+          "H": 8423,
+          "outer_root_defect": 28,
+          "start_defects": {
+            "2": 2044,
+            "4": 1022
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            1,
+            99
+          ],
+          "rows": [
+            14334,
+            14332,
+            14328,
+            14320,
+            14304,
+            14272,
+            14208,
+            14080,
+            15872,
+            13312,
+            10240,
+            8959,
+            3072,
+            4096
+          ],
+          "H": 6901,
+          "outer_root_defect": 14,
+          "start_defects": {
+            "2": 2045,
+            "4": 1022
+          },
+          "strong": true
+        },
+        {
+          "old_arc": [
+            4,
+            2
+          ],
+          "rows": [
+            14334,
+            14332,
+            14328,
+            14320,
+            14304,
+            14272,
+            14208,
+            14080,
+            15872,
+            13312,
+            14336,
+            8959,
+            2048,
+            4096
+          ],
+          "H": 5365,
+          "outer_root_defect": 12,
+          "start_defects": {
+            "2": 5882,
+            "4": 0
+          },
+          "strong": true
+        }
+      ]
+    }
+  ],
+  "terminal_singleton_controls": [
+    {
+      "triangle_port_count": 0,
+      "signature": [
+        3,
+        24,
+        12,
+        3,
+        0,
+        3,
+        0
+      ],
+      "TT1_attachment_H": 27
+    },
+    {
+      "triangle_port_count": 1,
+      "signature": [
+        3,
+        24,
+        15,
+        9,
+        4,
+        3,
+        1
+      ],
+      "TT1_attachment_H": 29
+    },
+    {
+      "triangle_port_count": 2,
+      "signature": [
+        3,
+        24,
+        18,
+        15,
+        10,
+        3,
+        2
+      ],
+      "TT1_attachment_H": 29
+    },
+    {
+      "triangle_port_count": 3,
+      "signature": [
+        3,
+        24,
+        21,
+        21,
+        18,
+        3,
+        3
+      ],
+      "TT1_attachment_H": 27
+    }
+  ],
+  "checker_sha256": "cd20cba63acf6620c6142aa6c66fb4dc9404af7a200298c9a0b90bea5bfbc36d"
+}

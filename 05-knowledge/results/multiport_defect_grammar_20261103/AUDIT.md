@@ -33,6 +33,18 @@ the global Hamiltonian-path spectrum.
   tournament construction. `coverage/REVIEW.md` independently reviews the
   transport and construction proofs; `coverage/manifest.json` pins its
   inputs and matching normal/optimized receipts.
+- **Transitive-chart boundary:** the proof permits arbitrary fixed target
+  masks and independent fixed clock shifts. Three evaluators agree on all
+  masks through 255, and actual small attachments independently check the
+  count and strongness formulas. The larger odd-mask scan is explicitly
+  finite; no all-mask digit classification is inferred from it.
+- **Common two-digit entry:** exact suffix signatures prove both uniform
+  returns from the same infinite source family. Literal graph checks at
+  eight prefix lengths verify every completed strongness condition, old
+  name retention, the changing root defects and the three-reversal sibling
+  link. Normal and optimized receipts agree. Independent permutation
+  controls in the construction bridge distinguish the equal-count graphs
+  and check the remaining exceptional clock in its C2-entry obstruction.
 
 All scripts include explicit source universes and reproduction commands in
 their accompanying notes. The documentation checker passes. Incoming

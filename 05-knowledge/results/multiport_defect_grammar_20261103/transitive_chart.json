@@ -1,0 +1,90 @@
+{
+  "status": "FINITE_EXACT_INDEPENDENT_TRANSITIVE_CHART_CONTROLS",
+  "scope": "All-order uniqueness is proved in TRANSITIVE_CHART.md; no global digit classification, two-digit closure, or native legality claimed.",
+  "source": {
+    "path": "../session182_physical_returns_20261104/induction/PROOF.md",
+    "read_commit": "b486271d24",
+    "normalized_sha256": "0b3a99c45f26218d851da90e938ea8178928bf6f0aea41b06386a13c40b861f3"
+  },
+  "ordered_subset_masks": {
+    "first": 1,
+    "last": 255,
+    "count": 255
+  },
+  "fixed_clock_shifts": {
+    "first": -4,
+    "last": 4,
+    "integral_cases": 1511,
+    "clocks_per_case": 2
+  },
+  "literal_attachments": {
+    "first_mask": 1,
+    "last_mask": 31,
+    "prefix_lengths": [
+      1,
+      2,
+      3
+    ],
+    "count": 93,
+    "independent_strongness": true
+  },
+  "controls": [
+    {
+      "f": 1,
+      "j": 0,
+      "target_f": 3,
+      "target_j": 2,
+      "digit": -4
+    },
+    {
+      "f": 3,
+      "j": 2,
+      "target_f": 9,
+      "target_j": 4,
+      "digit": 0
+    },
+    {
+      "f": 5,
+      "j": 2,
+      "target_f": 15,
+      "target_j": 14,
+      "digit": -10
+    },
+    {
+      "f": 7,
+      "j": 6,
+      "target_f": 21,
+      "target_j": 12,
+      "digit": 4
+    },
+    {
+      "f": 11,
+      "j": 8,
+      "target_f": 33,
+      "target_j": 16,
+      "digit": 6
+    },
+    {
+      "f": 21,
+      "j": 12,
+      "target_f": 63,
+      "target_j": 62,
+      "digit": -28
+    }
+  ],
+  "finite_odd_scan": {
+    "lower_inclusive": 1,
+    "upper_exclusive": 65536,
+    "count": 32768,
+    "digit_two": [],
+    "digit_four": [
+      7
+    ],
+    "all_order_classification_claimed": false
+  },
+  "reproduction": [
+    "python 05-knowledge/results/multiport_defect_grammar_20261103/check_transitive_chart.py",
+    "python -O 05-knowledge/results/multiport_defect_grammar_20261103/check_transitive_chart.py"
+  ],
+  "guards": "Explicit RuntimeError checks; no Python assertions."
+}

@@ -121,7 +121,50 @@ it has no start-ready marking (minimum start defect 616), as well as no
 end-ready marking (minimum 2960). Entry requires an actual change of source,
 not a switch between equivalent scalar descriptions.
 
-## 4. Global coverage has an exact arithmetic target
+## 4. Both uniform digits from one infinite entry family
+
+The late incoming merge led to a concrete positive result. For every t >= 1,
+the same strong source with transitive prefix TT_t and an all-ported TT3
+suffix has
+
+    H_t = -5+7*2^t.
+
+Replacing the terminal suffix vertex by a directed triangle with that old
+vertex as its only port gives a TT2 -> C3 suffix and
+
+    H_t^(2) = -13+21*2^t = 3H_t+2.
+
+Two strong births retain every old name and edge. The incoming alternating
+TT5 port pattern gives the other output
+
+    H_t^(4) = -11+21*2^t = 3H_t+4.
+
+The physical root defects are 6 at the source, 16 at the +2 output, and 12
+at the +4 output. See the [literal entry construction](transport/TWO_DIGIT_ENTRY.md).
+This gives both letters on the same infinite source family, but neither
+output has been proved to return to a class admitting both letters.
+Native Hamilton-complement guards remain separate from adjacency strongness.
+
+The [construction bridge](construction/INCOMING_BRIDGE.md) identifies the +2
+operation as C2 with entry defects (1,0). The +4 operation changes an old
+root incidence and escapes C2's nonnegative endpoint correction. Equal H
+values alone would have hidden this distinction. It also proves a separate
+rigidity result: a nontrivial strong zero-ready port with exactly one
+Hamilton path starting there forces H=2^m+1; only 3 -> 9 triples within that
+specified boundary.
+
+A new [transitive-chart theorem](TRANSITIVE_CHART.md) explains why the triangle
+matters. In a transitive suffix the port mask f determines its joint defect
+j(f). Even allowing arbitrary new port masks and independent fixed output
+clock shifts, a uniform return has the unique possible digit
+
+    d(f) = 3j(f)-j(3f)-2.
+
+Thus both digits cannot stay in those transitive charts. The new +2 output
+leaves that class in the smallest possible strong component. This is a
+proved boundary for that operation language, not an unrestricted obstruction.
+
+## 5. Global coverage has an exact arithmetic target
 
 [coverage](coverage/COVERAGE.md) separates source-compatible construction from
 scalar arithmetic. On positive odd integers the three maps
@@ -144,7 +187,7 @@ Finite unions of such fixed-seed binary trees have sublinear power growth
 and miss infinitely many primes and 7p values. The incoming binary-word reader
 has a different, unbounded output language and is not ruled out by this bound.
 
-## 5. Inheritance, incoming work, and the next proof obligation
+## 6. Inheritance, incoming work, and the next proof obligation
 
 The anchor was the actual failed inner collar; the niche was a growing
 path-cover interface; the wildcard was the third arithmetic letter and its
@@ -166,8 +209,8 @@ target-acceptance lemma is open. These are complementary interfaces; equal
 H values do not permit identifying their named sources.
 
 The later [Session182 integration](INCOMING.md) adds actual continuations of
-that distinct defect-carrying source and an infinite clock-uniform +4 family
-using transitive suffixes with changing port membership. Its seven-coordinate
+that distinct defect-carrying source and the infinite clock-uniform +4 family
+used above, with changing port membership. Its seven-coordinate
 ordered-component law is a useful small quotient of our carrier for that
 specific operation. It does not supply the missing two-branch closure.
 
