@@ -1,0 +1,92 @@
+{
+  "algorithm": "Original-module incidence spans, explicit original strong trees, complete response-bank queries and independent literal integer DP.",
+  "by_order": [
+    {
+      "equal_families": 1,
+      "equal_nonidentity": 0,
+      "families": 1,
+      "linear_highest_nodes": 0,
+      "multiple_highest_families": 0,
+      "n": 1,
+      "prime_highest_nodes": 0,
+      "prime_only_families": 0
+    },
+    {
+      "equal_families": 4,
+      "equal_nonidentity": 2,
+      "families": 4,
+      "linear_highest_nodes": 2,
+      "multiple_highest_families": 0,
+      "n": 2,
+      "prime_highest_nodes": 0,
+      "prime_only_families": 0
+    },
+    {
+      "equal_families": 40,
+      "equal_nonidentity": 32,
+      "families": 52,
+      "linear_highest_nodes": 30,
+      "multiple_highest_families": 0,
+      "n": 3,
+      "prime_highest_nodes": 2,
+      "prime_only_families": 2
+    },
+    {
+      "equal_families": 736,
+      "equal_nonidentity": 672,
+      "families": 1696,
+      "linear_highest_nodes": 608,
+      "multiple_highest_families": 0,
+      "n": 4,
+      "prime_highest_nodes": 64,
+      "prime_only_families": 64
+    },
+    {
+      "equal_families": 20848,
+      "equal_nonidentity": 19824,
+      "families": 130288,
+      "linear_highest_nodes": 17760,
+      "multiple_highest_families": 120,
+      "n": 5,
+      "prime_highest_nodes": 2184,
+      "prime_only_families": 2184
+    }
+  ],
+  "controls": [
+    {
+      "all_changed": [
+        3,
+        28
+      ],
+      "highest": [
+        3,
+        28
+      ],
+      "name": "multiple_highest_control"
+    },
+    {
+      "all_changed": [
+        3,
+        12,
+        48,
+        63
+      ],
+      "highest": [
+        63
+      ],
+      "name": "prime_three_control"
+    }
+  ],
+  "full_response_query_comparisons": 36800,
+  "literal_integer_dp_comparisons": 36800,
+  "status": "PASS",
+  "totals": {
+    "equal_families": 21629,
+    "equal_nonidentity": 20530,
+    "families": 132041,
+    "linear_highest_nodes": 18400,
+    "multiple_highest_families": 120,
+    "prime_highest_nodes": 2250,
+    "prime_only_families": 2250
+  }
+}
