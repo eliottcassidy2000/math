@@ -1,0 +1,196 @@
+{
+  "complete_eight_words_checked": 30720,
+  "complete_seven_vectors_checked": 2097152,
+  "controls": [
+    {
+      "optimized": false,
+      "scenario": "roundtrip",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "corrupt_first",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "corrupt_late",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "conflict_first",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "conflict_late",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "correct_first_conflicting_late",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "bad_late_hash",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "nonlocal_late_output",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "duplicate_output",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "scenario": "nonlocal_late_chunk",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "roundtrip",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "corrupt_first",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "corrupt_late",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "conflict_first",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "conflict_late",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "correct_first_conflicting_late",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "bad_late_hash",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "nonlocal_late_output",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "duplicate_output",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "scenario": "nonlocal_late_chunk",
+      "status": "PASS"
+    }
+  ],
+  "physical_deletion_indices_checked": 245760,
+  "scope": "Lossless complete finite-certificate banks; mathematical completeness is separately audited, not inferred from packaging hashes.",
+  "source_sha256": {
+    "REASSEMBLY.json": "e48fbade77548304e0664869762a297dbf2b2a17f5239ab9730960038ff70bb6",
+    "REASSEMBLY.md": "afabcf13aac21cb675fa1fe57bfe6819373c05d1ae66c94684c8349857d699d8",
+    "blind8.bin.gz.b64.part000": "04d651481606200f747e9060481a8fa9f88d4d7f7b77c323daf3f74ffc07c946",
+    "blind8.bin.gz.b64.part001": "79956b2b9f57967cd99783113e1896cf04b41fb1ff041d9efe3f64d6efc73d94",
+    "blind8.bin.gz.b64.part002": "5f2939484be16b2067f81c0d35baeced48a93acd68e80d6790d52f90e302b36d",
+    "blind8.bin.gz.b64.part003": "ab0be74f4424d0ceda014d4cf39e8d3c2662ec86c1645bf62f6fd8b96c463860",
+    "reassemble.py": "d2ff240d19f8c698d4eb6f00510dbca82e76698a098cfb952d96955033e19d10",
+    "t7.bin.gz.b64.part000": "f7a4d46d6f7ef20b23071a22b1421ecc821aeb4f45c1037495093694b9a16bdd",
+    "t7.bin.gz.b64.part001": "a9559e2727ba2b526b4ec142b057255e68c49da3b9353c5391bb89009fd5f3ed",
+    "t7.bin.gz.b64.part002": "059e8520faab4f7c1013b1661ef1daccba9d2398782fe6a5ca87a9b3fadc3530",
+    "t7.bin.gz.b64.part003": "b7202375fc3643250e7c510355338bb9da6094332d54be2e14ee1e0a139ef62f",
+    "t7.bin.gz.b64.part004": "2933757062a74b75dd902e2c35fb3b57c78d29b4a476d3be2db08cdf344015ad",
+    "t7.bin.gz.b64.part005": "9b3e2d6b6922d96b411e699fc792d529dc7aa1227e09034a71d468e40c62206a",
+    "t7.bin.gz.b64.part006": "0d12fad0dd7560b0df9cec1cff1b84593f07537cabb980f0d2f86a57668f40fe",
+    "t7.bin.gz.b64.part007": "75e31c97ce70f951790aa26634a691db2c144d8f465c7c4e0f8cd38604c002fd",
+    "t7.bin.gz.b64.part008": "db930982d986d871775eeef01052d09d5b2bd0d5e74c52d4ed05284ac96a2d03",
+    "t7.bin.gz.b64.part009": "574e67e37dc4bb21e8a195148134cfd7e94082e369aecb5f28702801db11b081",
+    "t7.bin.gz.b64.part010": "bb86bf12f6a1fed663d8dacfd2e0e3cb8810ce71397f6e03b0695a12652665b5",
+    "t7.bin.gz.b64.part011": "632084795dbe7ae63964e9f83313a747033fea62e965bd6b7e9acce6844c6b57",
+    "t7.bin.gz.b64.part012": "3cdc5c02b04437a68cb65677a9682a2c7b0c259539b6ab4a1027fb4eebe7d9eb",
+    "t7.bin.gz.b64.part013": "0c94671eb60dcda9767f16c14335438369551cf0c84529feae29e81b206bd844",
+    "t7.bin.gz.b64.part014": "9e357f47e9da7e881e11c15dee2d322f7cc85cb2aa011248135ebbe4759558eb",
+    "t7.bin.gz.b64.part015": "7ddb7c36a0259dce71e79f7fa7a72ee7be1fb2b62e43b599c1ee2f778a7d1ef9",
+    "t7.bin.gz.b64.part016": "c14065cef39737edcfdd15af43bf20915cc455d82cf2eb42680fe2e37b49b3b8",
+    "t7.bin.gz.b64.part017": "250fc528ea3c36da33cebdc44fad082dbc5500c32ffe048bbc6303a2869cd30d",
+    "t7.bin.gz.b64.part018": "ad1378b3440ea8ffb469bea402db0317499dd6dcda3dcc6c8d74987361f6880d",
+    "t7.bin.gz.b64.part019": "2427c9c09a30e8e131543bb2058d1a55c6eb516d4f2567dc73a989adf0d358aa",
+    "t7.bin.gz.b64.part020": "7c6f6bc794b68c25b7d87b473af5ca611d2946c5ae6ae60dc8223718caa557d2",
+    "t7.bin.gz.b64.part021": "4b57023eedb0a65948894e0a8a2f8fba0ac4baf5acbd68670bb4e18896f9e46d",
+    "t7.bin.gz.b64.part022": "8b8f35592639db81371f3bcc0231d3abfd53997d0fe9517445d3378eac54cb64",
+    "t7.bin.gz.b64.part023": "acf8f4ac5b902c900b9a5dc006104d2ab6057818ed8042a492c1c34584c8849d",
+    "t7.bin.gz.b64.part024": "60b3c3c56f34f90e175643ba924942fae38f18a61e71af1e6f94ea8613a8c655",
+    "t7.bin.gz.b64.part025": "9f488f436e8f7a0365309613e106a5a90eec61272f2f02554b853d1ea9c51161",
+    "t7.bin.gz.b64.part026": "b442bc0cbd689684b6a91c52ba1b4e72c37d6ce88a66d5fecc0659466dd353e8",
+    "t7.bin.gz.b64.part027": "e757977b5982da568671bff26c2f636eca7eb3ae425c41044a6460f1bcb0272e",
+    "t7.bin.gz.b64.part028": "08fbf85d5c631b692b7f9804d17a9ad06d8146a7f3f01ed11d3199c76e29e39a",
+    "t7.bin.gz.b64.part029": "469dd2302b60acff8f5cc2e47ad95558235cadb60d15c66fd9a0597c0c6dabfa",
+    "t7.bin.gz.b64.part030": "0178177e0fcf8e459f6bd62397df9e8195dcc6b57474f547586c0face709ebb5",
+    "t7.bin.gz.b64.part031": "eb386b77a2635a6788c3789bba6400bdfc7560895c151d37921c47d0246c60b0",
+    "t7.bin.gz.b64.part032": "57bb7d284791561b27220af8a7f6f3760ca82f03a8204c357566313cded5afeb",
+    "t7.bin.gz.b64.part033": "3ec98caf3936fcc075972170a0e91f8d4ef642b5ed4387d8028d16a8db42f3a2",
+    "t7.bin.gz.b64.part034": "7c0ea3f0c03f9b0ba78b35b63048e8e5ab550747a0a171329a835e09011e6fc0",
+    "t7.bin.gz.b64.part035": "b6eb3bc921d11cbff6be0e55dda43d4457922f5e2711bc3c1e8e123906b5e23d",
+    "t7.bin.gz.b64.part036": "42bff43c866e3d2a63e3139f2bd9acdd03e7c7a1d5a41a38d797f576178b6899",
+    "t7.bin.gz.b64.part037": "e20dd1af399a29d61580c02cedc60eb369384a4df68f3d9abaaa21fba4c98780",
+    "t7.bin.gz.b64.part038": "2dcbb7e737aedae3a6bb6f40bbb18cda3d9b3411d2e80dde13868546fcef4ded",
+    "t7.bin.gz.b64.part039": "98c247f26670578808407f78b4bdf41c81aae78f4ec63be4ea4bceabe3b66fea",
+    "t7.bin.gz.b64.part040": "8bde127274032eaa0171d67e839c29009e6f70c1462af943fb5fd2d0f0302d62",
+    "t7.bin.gz.b64.part041": "52ba5e0b4b8b0896fb00e2ef6b93d87592844391da0644676d53e515acb25803",
+    "t7.bin.gz.b64.part042": "879d50c658d07794deefa3b79deaab1107c419ab5dd2105d0388d14b3e6d0874",
+    "t7.bin.gz.b64.part043": "d965a0d0849fb6779ded42e031ff9795905a39b5c41feb52b32a0795fb3cd35e",
+    "t7.bin.gz.b64.part044": "763b2f394f2d5947c132a54c64094a741286b8f2573eed94682a75c81d4ce60f",
+    "t7.bin.gz.b64.part045": "c4d46dc6a79b6df8bda20b70ba0a9c4a26dec2e6f6c5198c3c0c314b1d2c4339",
+    "t7.bin.gz.b64.part046": "6bf20215fb0742c2a760a38c11034d0595932cab5509888dc0f1785b09806fa7",
+    "t7.bin.gz.b64.part047": "c7d41fd49ac36c00312f1a91fc69754df7c9827033381c2f1e0473c33bdf64a4",
+    "t7.bin.gz.b64.part048": "8a07a99a6c7bf59e3efefcb546cb4f59e344c08ab153839120378a374fcd6c80",
+    "t7.bin.gz.b64.part049": "df675f6af66b9eb671c85472bc8ccd4cc1d1e31e56ff2a4f1d30cdd7cd82d3c5",
+    "t7.bin.gz.b64.part050": "e34094b7dd6d2c7b7f6e89a670a41480266469127e3b15343d76688bd2c4b8ec",
+    "t7.bin.gz.b64.part051": "c5b6da0ff9ed213444d37359c804f3684d1185f28e040317b0660c444685f09c",
+    "t7.bin.gz.b64.part052": "b801006903792d0b1e075d46d09b723dbb5e1841c9dbc23e4ef32535881fdd3b",
+    "t7.bin.gz.b64.part053": "e5b2d13b4e844360b15506d4047ce0717b771744bc821250505bd0f36573552d",
+    "t7.bin.gz.b64.part054": "c2b147d47dd36b374bea8126a98a4e5c8ce67f4fba8809b8b48c27405698bd30",
+    "t7.bin.gz.b64.part055": "c15e2f1b1c8796947284fe0dc18e331fb49cb0f330c0c39cfa30f1c9b43e0463",
+    "t7.bin.gz.b64.part056": "179c062c03814ae079fb994906263be7d8c68b66c2e65fd102b80dd52fc9cb2d",
+    "t7.bin.gz.b64.part057": "430a4252e06361613be2db5169ef01717404e82845a10d9718e52a0fcb2c1c43",
+    "t7.bin.gz.b64.part058": "6347180fb6b48cb4cbeeb7835f566b8d5af6167d7eb8ed65a9bb53f7513e86fc"
+  },
+  "status": "PASS",
+  "streams": [
+    {
+      "file": "t7.bin",
+      "gzip_bytes": 1577055,
+      "gzip_sha256": "a3f2eee6e1167ed18ad2465500c31c22bc0fc5e70f7cc549327d7eaffd4a1eea",
+      "parts": 59,
+      "raw_bytes": 2097152,
+      "raw_sha256": "d2e134b9a1f8d25e1f06a3b3feaa9231463daf642c0fa27172aecc59b5ed997b"
+    },
+    {
+      "file": "blind8.bin",
+      "gzip_bytes": 81035,
+      "gzip_sha256": "b4c14ce0548c663cae868670f2c768e1b13b417a0363e676fd1542d61746f99f",
+      "parts": 4,
+      "raw_bytes": 122880,
+      "raw_sha256": "2fb59e122ab3625ba1c5a3dd311ff3abe39ef7ceb1390083a6fda4a7367457ba"
+    }
+  ],
+  "total_original_bytes_compared": 2220032
+}
