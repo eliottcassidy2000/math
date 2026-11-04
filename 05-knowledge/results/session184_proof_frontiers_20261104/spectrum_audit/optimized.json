@@ -1,0 +1,23 @@
+{
+  "candidate_counts": {
+    "21": 5,
+    "63": 10,
+    "189": 18,
+    "567": 29,
+    "1701": 50
+  },
+  "language": [
+    "",
+    "2",
+    "22",
+    "4",
+    "42",
+    "422",
+    "4222"
+  ],
+  "leading_coefficient_checks": 624,
+  "normalization_checks": 1792,
+  "return_tests": 280,
+  "status": "PASS",
+  "unique_candidate_words": 112
+}

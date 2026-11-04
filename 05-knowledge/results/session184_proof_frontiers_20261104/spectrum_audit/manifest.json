@@ -1,0 +1,17 @@
+{
+  "artifacts": {
+    "AUDIT.md": "e4ba0de7fe27b565d44913d4e51148983854a99461e6de0d6498049a7ed740a6",
+    "audit.py": "d08a47d6d0342bc88b3a768616fb448e51429f0982b10989fd93651191856724",
+    "author.normal.out": "9e72e5a4d12218bacc4f5cc12da149164f6ed5cacb7eae66599098a58079dda3",
+    "author.optimized.out": "9e72e5a4d12218bacc4f5cc12da149164f6ed5cacb7eae66599098a58079dda3",
+    "normal.json": "d92289c587851d37589a1d0b7290a8e520d4a257254463b898f3c49d89aaa6e9",
+    "optimized.json": "d92289c587851d37589a1d0b7290a8e520d4a257254463b898f3c49d89aaa6e9"
+  },
+  "inputs": {
+    "PROOF.md": "9a14d1f223c684bacbe5310e7caca6ab60f7bc97a15fc76ef6d162f775e79ffe",
+    "candidates.json": "34691467497a1c7a121f22fb6828e8c07192889dc53fc997f353ece13faab1ff",
+    "receipt.json": "0f8629af8653f4cb74fd21dae2c831d9fd0edfce23a19ce14a9fdfa1af4a8519",
+    "verify.py": "1bdb293921f6c024b73876eb994bb594a7df91cb3c4f91c688fba03aba04b6ef"
+  },
+  "verdict": "PASS"
+}
