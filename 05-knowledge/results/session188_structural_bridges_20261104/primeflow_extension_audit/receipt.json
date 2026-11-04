@@ -1,0 +1,185 @@
+{
+  "N5_fixed_profiles": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "coupled_complete_domains": [
+    {
+      "domain": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "guard_orders": [
+        55,
+        253
+      ],
+      "length_classes_checked": 1265,
+      "period": 2530,
+      "physical_witnesses": {
+        "(0, 0)": 2531,
+        "(0, 1)": 11,
+        "(2, 0)": 5
+      },
+      "source": 3
+    },
+    {
+      "domain": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "guard_orders": [
+        55,
+        506
+      ],
+      "length_classes_checked": 1265,
+      "period": 5060,
+      "physical_witnesses": {
+        "(0, 0)": 2,
+        "(0, 1)": 22,
+        "(1, 0)": 10
+      },
+      "source": 5
+    }
+  ],
+  "method": "Exact prime/order certificates and complete modular periods at valuation upper-bound guards. No producer imports.",
+  "parity_complete_domains": [
+    {
+      "domain": [
+        [
+          0
+        ],
+        [
+          2
+        ]
+      ],
+      "guard_orders": [
+        39
+      ],
+      "length_classes_checked": 39,
+      "period": 78,
+      "physical_witnesses": {
+        "(0,)": 79,
+        "(2,)": 3
+      },
+      "source": 191
+    },
+    {
+      "domain": [
+        [
+          0
+        ],
+        [
+          2
+        ]
+      ],
+      "guard_orders": [
+        39
+      ],
+      "length_classes_checked": 39,
+      "period": 78,
+      "physical_witnesses": {
+        "(0,)": 79,
+        "(2,)": 3
+      },
+      "source": 653
+    },
+    {
+      "domain": [
+        [
+          0
+        ],
+        [
+          2
+        ]
+      ],
+      "guard_orders": [
+        39
+      ],
+      "length_classes_checked": 39,
+      "period": 78,
+      "physical_witnesses": {
+        "(0,)": 79,
+        "(2,)": 3
+      },
+      "source": 991
+    },
+    {
+      "domain": [
+        [
+          0
+        ],
+        [
+          2
+        ]
+      ],
+      "guard_orders": [
+        39
+      ],
+      "length_classes_checked": 39,
+      "period": 78,
+      "physical_witnesses": {
+        "(0,)": 79,
+        "(2,)": 3
+      },
+      "source": 1543
+    }
+  ],
+  "parity_sumset": [
+    0,
+    2,
+    4,
+    6,
+    8
+  ],
+  "producer_checker_sha256": "0ddbdfbc92059dd9d2a7b9b4de289d171793240fb874f221d97e1001e2a128b5",
+  "producer_proof_sha256": "035e018484342377528933fe74b067a0b02d2fffdfe3d9f1629870f09f88e11a",
+  "status": "PASS"
+}
