@@ -1,0 +1,23 @@
+{
+  "cases": [
+    {
+      "all_named_ambient_coefficients": 396,
+      "all_named_global_coefficients": 342,
+      "literal_C_match": true,
+      "state": 0
+    },
+    {
+      "all_named_ambient_coefficients": 380,
+      "all_named_global_coefficients": 350,
+      "literal_C_match": true,
+      "state": 1
+    },
+    {
+      "all_named_ambient_coefficients": 388,
+      "all_named_global_coefficients": 346,
+      "literal_C_match": true,
+      "state": 2
+    }
+  ],
+  "status": "PASS: independent literal permutation count agrees with every supplied coefficient and C coordinate"
+}
