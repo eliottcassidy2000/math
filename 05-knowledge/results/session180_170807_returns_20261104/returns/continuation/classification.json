@@ -1,0 +1,30 @@
+{
+  "lattice_candidates": 16,
+  "max_P2": 336,
+  "excluded_order8": [
+    {
+      "lattice": true,
+      "flip_a": 31,
+      "flip_b": 65,
+      "mark": 11,
+      "hA": 113,
+      "P2A": 336,
+      "h": 2647,
+      "f": 3685,
+      "target": 1537271
+    }
+  ],
+  "unique_match": [
+    {
+      "lattice": true,
+      "flip_a": 43,
+      "flip_b": 59,
+      "mark": 5,
+      "hA": 1,
+      "P2A": 4,
+      "h": 100007,
+      "f": 359316,
+      "target": 1537271
+    }
+  ]
+}

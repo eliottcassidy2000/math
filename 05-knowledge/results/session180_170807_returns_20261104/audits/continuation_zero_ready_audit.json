@@ -1,0 +1,37 @@
+{
+  "status": "INDEPENDENT_ZERO_READY_AUDIT",
+  "root": 39,
+  "inport": 8,
+  "prefix": [
+    50,
+    51
+  ],
+  "suffix": [
+    1,
+    2,
+    4,
+    6,
+    7,
+    8,
+    14,
+    21,
+    22,
+    31,
+    32,
+    33,
+    40,
+    54
+  ],
+  "suffix_strong": true,
+  "deleted_names": [
+    55,
+    56
+  ],
+  "original_17_labels_retained": true,
+  "h_B": 100007,
+  "F_w": 359316,
+  "H": 1537271,
+  "E_root2": 1537271,
+  "rooted_defect": 0,
+  "literal_identity": "100007 + 4*359316 = 1537271"
+}

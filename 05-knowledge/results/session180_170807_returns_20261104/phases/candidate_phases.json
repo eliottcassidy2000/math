@@ -1,0 +1,254 @@
+{
+  "status": "EXACT_CODECS_FROM_INDEPENDENT_ENDPOINT_COUNTS",
+  "modulus": [
+    1,
+    0,
+    1,
+    1
+  ],
+  "source_ref": "4ad839b20dd280cdcfbadf86cb62b2be3c9615ad",
+  "historical_codec_controls": 4,
+  "states": [
+    {
+      "name": 39,
+      "index": 12,
+      "H": 512423,
+      "E1": 45,
+      "S2": 20042207,
+      "golden": [
+        512423,
+        10021081,
+        10021126
+      ],
+      "charts": {
+        "observer_mod7": [
+          2,
+          0,
+          3
+        ],
+        "F343_vector_codec": [
+          [
+            2,
+            0,
+            3
+          ],
+          [
+            6,
+            0,
+            5
+          ],
+          [
+            1,
+            0,
+            6
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          3,
+          3,
+          6
+        ],
+        "F49_frobenius": [
+          1,
+          4,
+          6
+        ]
+      }
+    },
+    {
+      "name": 6,
+      "index": 3,
+      "H": 512423,
+      "E1": 21382,
+      "S2": 1588204,
+      "golden": [
+        512423,
+        783411,
+        804793
+      ],
+      "charts": {
+        "observer_mod7": [
+          2,
+          6,
+          3
+        ],
+        "F343_vector_codec": [
+          [
+            2,
+            6,
+            3
+          ],
+          [
+            2,
+            5,
+            2
+          ],
+          [
+            6,
+            3,
+            2
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          2,
+          3,
+          6
+        ],
+        "F49_frobenius": [
+          0,
+          4,
+          6
+        ]
+      }
+    },
+    {
+      "name": 51,
+      "index": 15,
+      "H": 512423,
+      "E1": 90,
+      "S2": 94607628,
+      "golden": [
+        512423,
+        47303769,
+        47303859
+      ],
+      "charts": {
+        "observer_mod7": [
+          2,
+          2,
+          1
+        ],
+        "F343_vector_codec": [
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            4,
+            3
+          ],
+          [
+            1,
+            1,
+            3
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          6,
+          1,
+          1
+        ],
+        "F49_frobenius": [
+          3,
+          6,
+          1
+        ]
+      }
+    },
+    {
+      "name": 4,
+      "index": 2,
+      "H": 512423,
+      "E1": 45,
+      "S2": 2455969,
+      "golden": [
+        512423,
+        1227962,
+        1228007
+      ],
+      "charts": {
+        "observer_mod7": [
+          2,
+          1,
+          4
+        ],
+        "F343_vector_codec": [
+          [
+            2,
+            1,
+            4
+          ],
+          [
+            2,
+            2,
+            5
+          ],
+          [
+            5,
+            4,
+            5
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          0,
+          4,
+          5
+        ],
+        "F49_frobenius": [
+          2,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "name": 50,
+      "index": 14,
+      "H": 512423,
+      "E1": 45,
+      "S2": 144393953,
+      "golden": [
+        512423,
+        72196954,
+        72196999
+      ],
+      "charts": {
+        "observer_mod7": [
+          2,
+          4,
+          0
+        ],
+        "F343_vector_codec": [
+          [
+            2,
+            4,
+            0
+          ],
+          [
+            4,
+            1,
+            5
+          ],
+          [
+            3,
+            2,
+            2
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          5,
+          0,
+          2
+        ],
+        "F49_frobenius": [
+          5,
+          0,
+          2
+        ]
+      }
+    }
+  ],
+  "scope": "Current observer charts; not inherited spectral-clock transport, automorphisms, or permission for phase resets.",
+  "input_sha256": {
+    "ports/input_audit.json": "ca8ead97514332b7e981a7a5f6ea9addb679f88fedc96cf5223a9d39c5913231",
+    "ports/candidate.out": "0a9435fdfefc6a060ae514c3588593177079eadcf3bf2d812e74f669947511f0",
+    "returns/candidate.json": "2b6b3c0774b58459128e2492b65fdf8fe68d7a3310b48e3d54651941b71b847f"
+  }
+}

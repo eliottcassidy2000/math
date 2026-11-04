@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "summary": {
+    "cases": 4187,
+    "strongs": 3815,
+    "hits": 1,
+    "lattice": 53
+  },
+  "lattice_candidates": 53,
+  "maximum_candidate_P2": 198,
+  "unique_match": {
+    "lattice": true,
+    "flip_a": 31,
+    "flip_b": 40,
+    "mark": 2,
+    "hA": 1,
+    "P2A": 16,
+    "h": 5655,
+    "f": 31673,
+    "target": 512423
+  },
+  "all_order_prefix_bound": 7,
+  "source_pin": "4ad839b20dd280cdcfbadf86cb62b2be3c9615ad",
+  "sha256": {
+    "search.cpp": "f3aa2a313eed8a26fff3398304ee63de588e905c56df2e6f5200af9266fd0d6d",
+    "prefix.cpp": "45b0d3df5a706a269789b558fd6a2446fac5483ebb564268d8bf22e68a8f447e",
+    "source_interface.json": "dbaa821196214e540e0c971ccb2cc3ab570cfdf03854ac37220f5de8149d0604",
+    "source_zero_ready.json": "e0e025e78e269635c04c82eea4b0083926e7911ff7799de7631a24801de70c10"
+  }
+}

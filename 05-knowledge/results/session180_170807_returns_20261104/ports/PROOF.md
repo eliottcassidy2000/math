@@ -66,6 +66,8 @@ would be necessary for every n. The right side is O(n) and the left side exponen
 
 This is stronger than failure to synchronize two particular clocks. NO finite bank of fixed marked suffixes, however chosen and however richly phase-labelled, can represent a fully branching reusable ternary grammar solely by changing transitive-prefix lengths. It is not an obstruction to an infinite family of genuinely changing suffixes, a different prefix grammar, or a single selected branch.
 
+More quantitatively, representing all depth-n values requires at least ceil(2^n / floor(log_2 X_n)) distinct fixed-suffix evaluator pairs(h,F), which is Ω(2^n/n). Distinct physical suffixes with the same evaluator pair do not increase numerical coverage. This is a necessary growth bound for this interface grammar, not an obstruction to the full tournament spectrum.
+
 Quantitative control: for H_0=56935 and k=2, depth6 requires64 distinct counts at most41507071, but any two fixed clock families offer at most50. This bound does not require the particular suffix values or phase coordinates.
 
 ## 3. Literal independent controls and phase scope
@@ -116,3 +118,7 @@ Reproduce the candidate control with the existing system compiler (no software i
 `./joint < candidate.in > candidate.out`
 
 The arithmetic is uint64_t and the actual order19 control is safe: the total number of ordered two-slot path covers is at most20·19!=2432902008176640000<2^64. All nonnegative partial sums are bounded by that number. Do not extrapolate this implementation to larger orders without changing its integer type or proving a new bound. The Python matrix and automorphism checks use arbitrary-precision integers.
+
+## 5. Further independent continuation control
+
+The sibling returns/continuation/candidate.json supplies a17-vertex continuation, deleting only the recently born55,56 while preserving the original17 names. Independent joint.cpp replay confirms1537271=3·512423+2. At physical39 the endpoint fields are [1750,100007,100007,1537271,33293456], so this state too is zero-ready. At physical50 they are [1750,718632,818639,1637278,107442136]. All six ports39,6,51,4,50,8 and all30 directed joint end/start responses are recorded in continuation_joint.json. replay_joint.py reproduces both new candidates and additionally checks24 inherited five-field port vectors. Native legality, source-edge trajectory, and any search exclusions remain the responsibility of the return packet. No additional reusable closure is inferred from this second finite continuation.

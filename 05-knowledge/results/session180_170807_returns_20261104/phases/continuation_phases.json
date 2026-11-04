@@ -1,0 +1,326 @@
+{
+  "status": "EXACT_CURRENT_OBSERVER_CODECS_FROM_INDEPENDENT_ENDPOINT_DP",
+  "H": 1537271,
+  "source_H": 512423,
+  "source_ref": "4ad839b20dd280cdcfbadf86cb62b2be3c9615ad",
+  "codec_source": "05-knowledge/results/return6325_completion_20261103/transport.py",
+  "field_modulus": [
+    1,
+    0,
+    1,
+    1
+  ],
+  "historical_codec_controls": 4,
+  "input_sha256": {
+    "ports/continuation_joint.json": "43f6994e1bdc29567453487879a32203b6852939a0147f9cf1bdeb816ab12d3c",
+    "returns/continuation/candidate.json": "7a935abc82ea2b30c4e98e3d10352f441060fa8e3bb5c0ddb588a024c9577dde"
+  },
+  "states": [
+    {
+      "physical_name": 39,
+      "endpoint_fields": [
+        1750,
+        100007,
+        100007,
+        1537271,
+        33293456
+      ],
+      "golden": [
+        1537271,
+        16645853,
+        16647603
+      ],
+      "charts": {
+        "observer_mod7": [
+          1,
+          0,
+          0
+        ],
+        "F343_vector_codec": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "F343_codec_degree": 1,
+        "F49_charge": [
+          4,
+          0,
+          1
+        ],
+        "F49_frobenius": [
+          4,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "physical_name": 6,
+      "endpoint_fields": [
+        59736,
+        6254,
+        240405,
+        20012358,
+        3480204
+      ],
+      "golden": [
+        1537271,
+        1710234,
+        1769970
+      ],
+      "charts": {
+        "observer_mod7": [
+          1,
+          1,
+          6
+        ],
+        "F343_vector_codec": [
+          [
+            1,
+            1,
+            6
+          ],
+          [
+            6,
+            2,
+            6
+          ],
+          [
+            1,
+            4,
+            2
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          2,
+          6,
+          2
+        ],
+        "F49_frobenius": [
+          5,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "physical_name": 51,
+      "endpoint_fields": [
+        3500,
+        359316,
+        818639,
+        2554370,
+        68967848
+      ],
+      "golden": [
+        1537271,
+        34482174,
+        34485674
+      ],
+      "charts": {
+        "observer_mod7": [
+          1,
+          6,
+          6
+        ],
+        "F343_vector_codec": [
+          [
+            1,
+            6,
+            6
+          ],
+          [
+            5,
+            5,
+            0
+          ],
+          [
+            4,
+            3,
+            1
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          0,
+          6,
+          2
+        ],
+        "F49_frobenius": [
+          3,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "physical_name": 4,
+      "endpoint_fields": [
+        54005,
+        7899,
+        252741,
+        17614125,
+        4219119
+      ],
+      "golden": [
+        1537271,
+        2082557,
+        2136562
+      ],
+      "charts": {
+        "observer_mod7": [
+          1,
+          1,
+          1
+        ],
+        "F343_vector_codec": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            4,
+            2,
+            0
+          ],
+          [
+            5,
+            4,
+            6
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          1,
+          1,
+          0
+        ],
+        "F49_frobenius": [
+          5,
+          6,
+          0
+        ]
+      }
+    },
+    {
+      "physical_name": 50,
+      "endpoint_fields": [
+        1750,
+        718632,
+        818639,
+        1637278,
+        107442136
+      ],
+      "golden": [
+        1537271,
+        53720193,
+        53721943
+      ],
+      "charts": {
+        "observer_mod7": [
+          1,
+          2,
+          2
+        ],
+        "F343_vector_codec": [
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            2,
+            1,
+            5
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          5,
+          2,
+          6
+        ],
+        "F49_frobenius": [
+          6,
+          5,
+          6
+        ]
+      }
+    },
+    {
+      "physical_name": 8,
+      "endpoint_fields": [
+        1750,
+        5531,
+        5531,
+        2868997,
+        3071680
+      ],
+      "golden": [
+        1537271,
+        1534965,
+        1536715
+      ],
+      "charts": {
+        "observer_mod7": [
+          1,
+          5,
+          5
+        ],
+        "F343_vector_codec": [
+          [
+            1,
+            5,
+            5
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            0,
+            6,
+            2
+          ]
+        ],
+        "F343_codec_degree": 3,
+        "F49_charge": [
+          3,
+          5,
+          3
+        ],
+        "F49_frobenius": [
+          2,
+          2,
+          3
+        ]
+      }
+    }
+  ],
+  "assumptions": [
+    "Endpoint fields are the independently recomputed physical-name fields supplied by ports/continuation_joint.json; the chart audit does not independently enumerate tournament paths.",
+    "The candidate1537271 is a separate supplied relation. No equality of phases is inferred from the preceding512423 relation.",
+    "Current F343 vector codec is not the ancestral spectral clock; these observations do not establish tournament automorphisms or authorize re-marking.",
+    "Native guards and deletions are audited separately; this file establishes observer values at the stated endpoint only."
+  ]
+}

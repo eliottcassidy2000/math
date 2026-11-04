@@ -1,0 +1,95 @@
+{
+  "source_H": 170807,
+  "target_H": 512423,
+  "names": [
+    1,
+    2,
+    4,
+    6,
+    7,
+    8,
+    14,
+    21,
+    22,
+    31,
+    32,
+    33,
+    39,
+    40,
+    50,
+    51,
+    54,
+    55,
+    56
+  ],
+  "rows": [
+    68478,
+    632,
+    6266,
+    368,
+    512,
+    80,
+    528,
+    66431,
+    118,
+    300,
+    74751,
+    67578,
+    520187,
+    68607,
+    503807,
+    471039,
+    894,
+    339967,
+    77823
+  ],
+  "root": 39,
+  "inport": 4,
+  "prefix": [
+    50,
+    51,
+    55,
+    56
+  ],
+  "suffix": [
+    1,
+    2,
+    4,
+    6,
+    7,
+    8,
+    14,
+    21,
+    22,
+    31,
+    32,
+    33,
+    40,
+    54
+  ],
+  "old_edge_flips": [
+    [
+      4,
+      31
+    ],
+    [
+      6,
+      22
+    ],
+    [
+      39,
+      31
+    ],
+    [
+      39,
+      4
+    ]
+  ],
+  "birth_names": [
+    55,
+    56
+  ],
+  "h_B": 5655,
+  "F_w": 31673,
+  "scope": "Four old-edge reversals and two births. Independent native compilation passed (eight complements, four temporary helpers). No reusable closure claimed."
+}

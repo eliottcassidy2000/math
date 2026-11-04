@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "file": "candidate.json",
+      "mutated_field": "h_B",
+      "optimized_replay_rejected": true,
+      "error": "RuntimeError: candidate reconstruction mismatch"
+    },
+    {
+      "file": "classification.json",
+      "mutated_field": "lattice_candidates",
+      "optimized_replay_rejected": true,
+      "error": "RuntimeError: classification.json reconstruction mismatch"
+    }
+  ]
+}

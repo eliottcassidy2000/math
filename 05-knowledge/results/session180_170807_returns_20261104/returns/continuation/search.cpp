@@ -1,0 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std; using L=long long;
+int main(int argc,char**argv){int maxflip=argc>1?atoi(argv[1]):2; int n;cin>>n;vector<int> base(n);for(auto &x:base)cin>>x; vector<pair<int,int>> edges;for(int i=0;i<n;i++)for(int j=i+1;j<n;j++)edges.push_back({i,j});int N=1<<n,full=N-1; vector<L> dp(N*n),h(N);long long cases=0,strongs=0,hits=0,lattice=0;ofstream out("hits.jsonl");
+ auto run=[&](int a,int b){auto r=base;for(int k:{a,b})if(k>=0){auto[i,j]=edges[k];r[i]^=1<<j;r[j]^=1<<i;} cases++; bool strong=true;for(int start=0;start<n;start++){int seen=1<<start,old=0;while(seen!=old){old=seen;for(int i=0;i<n;i++)if(seen>>i&1)seen|=r[i];}if(seen!=full){strong=false;break;}}if(!strong)return;strongs++;fill(dp.begin(),dp.end(),0);h[0]=1;for(int mask=1;mask<N;mask++){L tot=0;int mm=mask;while(mm){int v=__builtin_ctz(mm);mm&=mm-1;int sub=mask^(1<<v);L val=0;if(!sub)val=1;else {int pred=sub&~r[v];while(pred){int u=__builtin_ctz(pred);pred&=pred-1;val+=dp[sub*n+u];}}dp[mask*n+v]=val;tot+=val;}h[mask]=tot;}
+ for(int w=0;w<n;w++){L f=0;for(int mask=1;mask<N;mask++)if(mask>>w&1)f+=dp[mask*n+w]*h[full^mask];for(L target:{1537271LL,1537273LL}){for(int s=1;s<30;s++){L z=h[full]+(1LL<<s)*f;if(z>target)break;if(z==target){hits++;out<<"{\"flip_a\":"<<a<<",\"flip_b\":"<<b<<",\"mark\":"<<w<<",\"s\":"<<s<<",\"h\":"<<h[full]<<",\"f\":"<<f<<",\"target\":"<<target<<"}\n";out.flush();}}
+ // necessary all-size arbitrary-prefix test (hA positive odd; P_A even >=2hA)
+ for(L x=1;x*(h[full]+2*f)<=target;x+=2){L rem=target-h[full]*x;if(rem%f==0 && (rem/f)%2==0){lattice++;out<<"{\"lattice\":true,\"flip_a\":"<<a<<",\"flip_b\":"<<b<<",\"mark\":"<<w<<",\"hA\":"<<x<<",\"P2A\":"<<rem/f<<",\"h\":"<<h[full]<<",\"f\":"<<f<<",\"target\":"<<target<<"}\n";}}
+ }}
+ };run(-1,-1);if(maxflip>=1)for(int a=0;a<(int)edges.size();a++)run(a,-1);if(maxflip>=2)for(int a=0;a<(int)edges.size();a++)for(int b=a+1;b<(int)edges.size();b++)run(a,b);cout<<"{\"cases\":"<<cases<<",\"strongs\":"<<strongs<<",\"hits\":"<<hits<<",\"lattice\":"<<lattice<<"}\n";
+}
