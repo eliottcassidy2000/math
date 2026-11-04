@@ -1,0 +1,32 @@
+{
+  "encoding": "gzip then base64",
+  "parts": [
+    {
+      "file": "classification.json.gz.b64",
+      "sha256": "f63337b3f4bfcd64c67c500d0b8697d0c7974961c21252d953b7aee1d2f2220a",
+      "size": 32237
+    }
+  ],
+  "outputs": [
+    {
+      "file": "classification.json",
+      "size": 159614,
+      "sha256": "c0f5364be4de5992d7a727f54a01cf3b66f06253aa530376c1084c105f96754f"
+    },
+    {
+      "file": "classification.optimized.json",
+      "size": 159614,
+      "sha256": "c0f5364be4de5992d7a727f54a01cf3b66f06253aa530376c1084c105f96754f"
+    },
+    {
+      "file": "../response_review/classification.normal.json",
+      "size": 159614,
+      "sha256": "c0f5364be4de5992d7a727f54a01cf3b66f06253aa530376c1084c105f96754f"
+    },
+    {
+      "file": "../response_review/classification.optimized.json",
+      "size": 159614,
+      "sha256": "c0f5364be4de5992d7a727f54a01cf3b66f06253aa530376c1084c105f96754f"
+    }
+  ]
+}
