@@ -121,6 +121,8 @@ all-order obstruction identifies the lower H=41 branch specifically. A few
 successful fans, even at two successive levels along the upper branch, do
 not establish a common-state induction that preserves both branches.
 
+A further positive control is the strong word `321`, with H=13, and its strong end extension `32120`, with H=125. Thus the obstruction is specifically the intermediate H=41 ancestry, not growth from H=13 to H=125 in general.
+
 A potential proof may treat 41 as a fresh seed represented by a different
 physical word, or use operations outside (1). The theorem does not show that
 no sufficiently large closed grammar exists after finitely many exceptions,
