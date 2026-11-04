@@ -1,0 +1,14 @@
+C_55 of type (5,11,1^k): defect census (pynauty 2.8.8.1)
+p=5 q=11 k=0 n=16 R=8 RG=8 tau_T=8 tau_E=8 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 4) circ_Geven=(1, 4) colT=1 colG=1 secs=0.0
+p=5 q=11 k=1 n=17 R=32 RG=32 tau_T=32 tau_E=32 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 4) circ_Geven=(1, 4) colT=4 colG=4 secs=0.0
+p=5 q=11 k=2 n=18 R=128 RG=128 tau_T=128 tau_E=128 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 4) circ_Geven=(1, 4) colT=16 colG=16 secs=0.0
+p=5 q=11 k=3 n=19 R=704 RG=704 tau_T=704 tau_E=704 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 4) circ_Geven=(1, 4) colT=88 colG=88 secs=0.1
+p=5 q=11 k=4 n=20 R=5632 RG=5632 tau_T=5632 tau_E=5632 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity_ok=True theoremR_ok=True circ_T=(1, 4) circ_Geven=(1, 4) colT=704 colG=704 secs=1.3
+
+k  n   R  tau_T tau_E defect  W  E_T E_even E_wit
+0 16      8      8      8     0    0    0     0    0
+1 17     32     32     32     0    0    0     0    0
+2 18    128    128    128     0    0    0     0    0
+3 19    704    704    704     0    0    0     0    0
+4 20   5632   5632   5632     0    0    0     0    0
+exit=0

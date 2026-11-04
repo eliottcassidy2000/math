@@ -1,0 +1,23 @@
+audit B: (7,11,1^k), k <= 4, brute force for k <= 3
+p=7 q=11 k=0 n=18 R=16 RG=16 tau_T=16 tau_E=16 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(2,4) e=(2,4) b_k=1
+  BRUTE p=7 q=11 k=0 c=9 |N|=4620 R=16 RGeven=16 tau_T=16 tau_E=16 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True (0.2s)
+  brute vs orbit: AGREE
+p=7 q=11 k=1 n=19 R=64 RG=64 tau_T=64 tau_E=64 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(2,4) e=(2,4) b_k=4
+  BRUTE p=7 q=11 k=1 c=11 |N|=4620 R=64 RGeven=64 tau_T=64 tau_E=64 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True (0.5s)
+  brute vs orbit: AGREE
+p=7 q=11 k=2 n=20 R=256 RG=256 tau_T=256 tau_E=256 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(2,4) e=(2,4) b_k=16
+  BRUTE p=7 q=11 k=2 c=14 |N|=9240 R=256 RGeven=256 tau_T=256 tau_E=256 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True (4.8s)
+  brute vs orbit: AGREE
+p=7 q=11 k=3 n=21 R=1408 RG=1408 tau_T=1408 tau_E=1408 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(2,4) e=(2,4) b_k=88
+  BRUTE p=7 q=11 k=3 c=18 |N|=27720 R=1408 RGeven=1408 tau_T=1408 tau_E=1408 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True (220.8s)
+  brute vs orbit: AGREE
+p=7 q=11 k=4 n=22 R=11264 RG=11264 tau_T=11264 tau_E=11263 defect=1 W=1 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(2,4) e=(2,4) b_k=704
+   witness: C_P=[] C_Q=[] cross=1 E_F=[] col=(2, 2, 2, 2) edges=121 |Aut|=318670  -> K_{q,q} on Q vs P u F: True
+
+k  R  tau_T tau_E defect W E_T E_even E_wit
+0 16 16 16 0 0 0 0 0
+1 64 64 64 0 0 0 0 0
+2 256 256 256 0 0 0 0 0
+3 1408 1408 1408 0 0 0 0 0
+4 11264 11264 11263 1 1 0 0 0
+exit=0

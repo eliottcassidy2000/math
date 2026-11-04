@@ -1,11 +1,12 @@
 ---
 id: HYP-9463
-title: "After THM-4871 (the (p, q, 1^k) defect family of HYP-9340): (1) first-defect law: for coprime odd prime powers p != q and H = C_pq of type (p, q, 1^k), tau_T(H) - tau_E(H) = 0 for k < |p - q| and = 1 at k = |p - q| (62 census rows over thirteen families; PROVED for primes p < q < 2p by THM-4871 statement 7, numerical for q > 2p and for prime powers); (2) the defect formula tau_T(k) - tau_E(k) = b_(k-d)(4) - E_T^F(k - d), d = |p - q|, where b_j(4) counts 4-coloured tournaments on j points and E_T^F(j) the tournament coincidences created by the fixed points (true in every computed row, giving 1, 4, 16, 84, 672 for C15 and 1, 4, 16, 88, 704 for (5,7)); (3) tau_T(H) >= tau_E(H) for every odd-order H (HYP-9344 (1), now with 64 further rows); (4) the uniform first-order rule question for prime circulants (HYP-9344 (3)) in its exact form, with the quantifier-free reduction to the Codex degree bound; (5) the fold reading of the owner's mirror remarks is typed, not conjectured"
+title: "After THM-4871 (the (p, q, 1^k) defect family of HYP-9340): (1) first-defect law: for coprime odd prime powers p != q and H = C_pq of type (p, q, 1^k), tau_T(H) - tau_E(H) = 0 for k < |p - q| and = 1 at k = |p - q| (63 census rows over thirteen families; PROVED for primes p < q < 2p by THM-4871 statement 7, numerical for q > 2p and for prime powers); (2) the defect formula tau_T(k) - tau_E(k) = b_(k-d)(4) - E_T^F(k - d), d = |p - q|, where b_j(4) counts 4-coloured tournaments on j points and E_T^F(j) the tournament coincidences created by the fixed points (true in every row through k = 6, giving 1, 4, 16, 84, 672 for C15 and 1, 4, 16, 88, 704 for (5,7); REFUTED in this form by the pre-registered C15 k = 7 row, 8654 against 8652, the gap being the witness multiplicity E_wit(5) = 2, so the one-point repair + E_wit(k - d) is now the candidate); (3) tau_T(H) >= tau_E(H) for every odd-order H (HYP-9344 (1), now with 63 further rows); (4) the uniform first-order rule question for prime circulants (HYP-9344 (3)) in its exact form, with the quantifier-free reduction to the Codex degree bound; (5) the fold reading of the owner's mirror remarks is typed, not conjectured"
 status: >
-  (1) PROVED for primes p < q < 2p (THM-4871 statement 7: 0 below k = q - p, exactly 1 at k = q - p); NUMERICAL for
-  q > 2p and for the prime-power families (all 62 rows of THM-4871 statement 5). (2) NUMERICAL
-  (every computed row, including the rows with E_T^F > 0: C15 k = 5, 6 and the prime-power rows where the non-CI
-  coincidences are excluded from E_T^F); for primes E_T^F = E_T by THM-4871 statement 3. (3) NUMERICAL. (4) OPEN;
+  (1) PROVED for primes p < q < 2p (THM-4871 statement 7: 0 below k = q - p, exactly 1 at k = q - p; audit B), and the
+  vanishing half PROVED for every prime pair p < q and k < min(p, q - p); NUMERICAL for the first defect when q > 2p
+  and for the prime-power families (all 63 rows of THM-4871 statement 5, plus audit B's (13,17), (17,19), (5,11)). (2) REFUTED in the stated form by
+  the pre-registered C15 k = 7 test (8654, not 8652); the repaired form with + E_wit(k - d) is NUMERICAL (all rows
+  through k = 7, one of them with E_wit(k - d) > 0); for primes E_T^F = E_T by THM-4871 statement 3. (3) NUMERICAL. (4) OPEN;
   the quantifier-free homogeneous fragment is excluded by the Codex Boolean-degree theorem (CITED). (5) typed in the
   note (section 5); no claim. (4)'s pre-registered model check is FINITE-EXACT (section 4 (d)). Audit A (2026-11-04,
   PASS WITH CORRECTIONS) applied: statement 1's first-defect description restricted to the proved range, statement
@@ -38,11 +39,17 @@ points), `E_T^F(j)` = the part of the tournament multiplicity excess at level `j
    first defect `1` is a net value of many witnesses and coincidences: `(3,7) k = 4`: `W = 17` (one `K_(7,7)` and
    sixteen `K_(3,3)`-type configurations), `E_even = 48`, `E_T = 64`; `(9,5) k = 4`: `W = 1409`, `E_T = 1408`;
    `(9,7) k = 2`: `65 / 64`; `(9,11) k = 2`: `129 / 128`; `(9,13) k = 4`: `8449 / 8448`; `(3,11)`, `(3,13)`, `(7,13)`
-   are zero through the computed range (`k <= 4 < d`). Open exactly there: `q > 2p` and prime powers.
+   are zero through the computed range (`k <= 4 < d`), and for `k < p` these zeros are THM-4871 7(a) (audit B: the
+   proof uses only `p + k < q` and `k < p`). Open exactly there: the rows `p <= k < q - p` when `q > 2p`, and the
+   prime powers.
 2. **Defect formula.** `tau_T(k) - tau_E(k) = b_(k-d)(4) - E_T^F(k - d)` for `k >= d` (and `0` below). Rows with a
    nonzero correction: C15 `k = 5`: `88 - E_T(3) = 88 - 4 = 84`; `k = 6`: `704 - E_T(4) = 704 - 32 = 672`. Rows without:
    `(5,7)` `k = 2..6`: `1, 4, 16, 88, 704` (`E_T(j) = 0` for `j <= 4 < p`); `(3,7)` `k = 4, 5, 6`: `1, 4, 16`; `(9,7)`,
-   `(9,11)` `k = 2, 3`: `1, 4`; `(9,5)`, `(9,13)` `k = 4`: `1`. Equivalent form: `tau_E(k) = tau_T(k) - R(k - d)/(2 t_p t_q)
+   `(9,11)` `k = 2, 3`: `1, 4`; `(9,5)`, `(9,13)` `k = 4`: `1`. **Pre-registered test, run after this hypothesis was
+   committed: C15 `k = 7` gives `8654`, not `8652`** (`cpq_3_5_k7.out`: `tau_T = 13,650,288`, `tau_E = 13,641,634`,
+   `W = 2638`, `E_T = 44,112`, `E_even = 50,088`, `E_wit = 40`); the stated form is refuted, and the difference `2` is
+   `E_wit(5)`, the first nonzero witness multiplicity, so the candidate is now
+   `defect(k) = b_(k-d)(4) - E_T(k - d) + E_wit(k - d)` (consistent with every row, a one-point repair). Equivalent form: `tau_E(k) = tau_T(k) - R(k - d)/(2 t_p t_q)
    + E_T^F(k - d)`: the defect is the number of 4-coloured tournaments on the `k - d` non-padding fixed points minus the
    fixed-point coincidences at that level, with no factor `t_p t_q` (the `(5,7)` and `(9,q)` families have
    `t_p t_q > 1` and the same `1, 4, 16, ...`). The formula is supported only as a net identity: the witnesses are not
@@ -50,7 +57,7 @@ points), `E_T^F(j)` = the part of the tournament multiplicity excess at level `j
    there are `W + E_even - E_T = 2 + 2, 6 + 10, 24 + 72 - 8`). A proof would have to match the `K_(p,p)`-type witnesses,
    the even-graph coincidences and the tournament coincidences bijectively, as the `k = p = 3` case does explicitly
    (`W = E_even = 2 t_q`, `E_T = 4 t_q`) and as THM-4871 statement 7 does for `k <= q - p`, `q < 2p`.
-3. **Sign.** `tau_T(H) >= tau_E(H)` for every odd-order `H <= S_n` (HYP-9344 (1)); all 62 rows here satisfy it,
+3. **Sign.** `tau_T(H) >= tau_E(H)` for every odd-order `H <= S_n` (HYP-9344 (1)); all 63 rows here satisfy it,
    including the prime-power rows where `E_T` is large (`(9,13)` at `k = 4`: `E_T = 8448`, `W = 8449`).
 4. **Uniform first-order rules for prime circulants (OPEN).** Precisely: is there a first-order formula `phi(x)` in
    the language `{+, ., 0, 1, S}` (`S` a unary predicate) such that for every prime `p` and every skew set `S <= F_p^*`
@@ -89,10 +96,10 @@ points), `E_T^F(j)` = the part of the tournament multiplicity excess at level `j
   proved case, THM-4871 statement 7); `(5,11)` (`d = 6`, `k <= 3` predicted `0`) did not run (the chain stalled behind
   the `(3,25) k = 2` job) and remains pre-registered; the first open cases of the law are `(3,7) k <= 3` -> `0` (done)
   and the prime-power rows, all consistent.
-- Statement 2 at C15 `k = 7` (`n = 15`, `2 b_7(4) = 13,694,400` objects per side): predicted defect
-  `b_5(4) - E_T(5) = 8912 - 260 = 8652`; at `(3,7)` `k = 7`: `b_3(4) - E_T(3) = 88 - 8 = 80`; at `(5,7)` `k = 7`:
-  `b_5(4) - E_T(5) = 8912 - 8 = 8904`. Memory on the 8 GB machine, not time, is the obstacle (hash the canonical
-  forms, stream the coloured types).
+- Statement 2 at C15 `k = 7`: RUN (streaming version, 128-bit digests, 36 min): `8654`, refuting the predicted `8652`.
+  Remaining pre-registered tests of the repaired form: `(3,7)` `k = 7`: `b_3(4) - E_T(3) + E_wit(3) = 88 - 8 + 0 = 80`;
+  `(5,7)` `k = 7`: `8912 - 8 + 0 = 8904` (both `2 b_7(4) t_p t_q = 27.4` million objects per side); the first row that
+  separates the two forms beyond C15 `k = 7` is C15 `k = 8` (`E_wit(6) = 8`), out of reach.
 - Statement 3: a counterexample needs a type with many `Aut`-classes of `H` and few witnesses; the natural place is
   `k >= q` (alternative `q`-orbits inside the fixed points), first reachable at `(3,5)` `k = 5` where `E_wit` first
   appears (`2`), and the sign still holds there by `84`.

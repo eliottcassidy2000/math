@@ -1,0 +1,18 @@
+audit B: (5,11,1^k), k <= 4, brute force for k <= 1
+p=5 q=11 k=0 n=16 R=8 RG=8 tau_T=8 tau_E=8 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(1,4) e=(1,4) b_k=1
+  BRUTE p=5 q=11 k=0 c=8 |N|=2200 R=8 RGeven=8 tau_T=8 tau_E=8 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True (1.1s)
+  brute vs orbit: AGREE
+p=5 q=11 k=1 n=17 R=32 RG=32 tau_T=32 tau_E=32 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(1,4) e=(1,4) b_k=4
+  BRUTE p=5 q=11 k=1 c=10 |N|=2200 R=32 RGeven=32 tau_T=32 tau_E=32 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True (5.2s)
+  brute vs orbit: AGREE
+p=5 q=11 k=2 n=18 R=128 RG=128 tau_T=128 tau_E=128 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(1,4) e=(1,4) b_k=16
+p=5 q=11 k=3 n=19 R=704 RG=704 tau_T=704 tau_E=704 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(1,4) e=(1,4) b_k=88
+p=5 q=11 k=4 n=20 R=5632 RG=5632 tau_T=5632 tau_E=5632 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(1,4) e=(1,4) b_k=704
+
+k  R  tau_T tau_E defect W E_T E_even E_wit
+0 8 8 8 0 0 0 0 0
+1 32 32 32 0 0 0 0 0
+2 128 128 128 0 0 0 0 0
+3 704 704 704 0 0 0 0 0
+4 5632 5632 5632 0 0 0 0 0
+exit=0

@@ -1,6 +1,6 @@
 ---
 id: THM-4871
-title: "The C_pq (p, q, 1^k) defect family of HYP-9340 beyond p-groups. For coprime odd prime powers p != q and H = <c_P c_Q> <= S_n of orbit type (p, q, 1^k): (1) the normaliser N = Hol(Z_p) x Hol(Z_q) x Sym(F) has exactly 2 t_p t_q b_k(4) orbits on H-fixed tournaments (circulant multiplier classes on the two orbits, the cross orientation, a 4-coloured tournament on the k fixed points) and an H-fixed graph is N-even iff its two circulant parts are multiplier-even and its 4-coloured fixed-point graph is colour-sign-even; (2) in a permutation group of odd order the supports of two cycles of prime lengths are equal or disjoint, and disjoint for distinct primes; (3) for primes p < q every conjugate of H inside the automorphism group of an H-fixed tournament has p-orbit P or a p-subset of the fixed points and q-orbit Q or a q-subset, so the tournament multiplicity excess E_T vanishes for k < p and equals 4 t_p^2 t_q at k = p; (4) K_{q,q} on Q against P plus q - p fixed points is an N-even sign-odd H-fixed graph, so tau_T(H) - tau_E(H) >= 1 at k = q - p whenever p < q < 2p: HYP-9340 (a) fails for every such prime pair at degree 2q; (5) census (3,5) k <= 6, (3,7) k <= 6, (5,7) k <= 6, (3,11) k <= 4, (3,13) k <= 3, (7,13) k <= 3, (7,11) k <= 4, (11,13) k <= 2, (9,5) k <= 4, (9,7) k <= 3, (9,11) k <= 3, (9,13) k <= 4, (3,25) k <= 1 (62 rows, thirteen families): HYP-9344 (2)'s pre-registered defect(5) = 88 is refuted (84; defect(6) = 672), the first defect sits at k = |p - q| with value 1 in every family, and tau_T >= tau_E in every row; (7) for primes p < q < 2p the defect is 0 for k < q - p and exactly 1 at k = q - p (below the first defect every N-even H-fixed graph is sign-even with one class of conjugates of H; at k = q - p the only sign-odd N-even type is K_{q,q}), so the least degree at which (p, q) violates HYP-9340 (a) is 2q"
+title: "The C_pq (p, q, 1^k) defect family of HYP-9340 beyond p-groups. For coprime odd prime powers p != q and H = <c_P c_Q> <= S_n of orbit type (p, q, 1^k): (1) the normaliser N = Hol(Z_p) x Hol(Z_q) x Sym(F) has exactly 2 t_p t_q b_k(4) orbits on H-fixed tournaments (circulant multiplier classes on the two orbits, the cross orientation, a 4-coloured tournament on the k fixed points) and an H-fixed graph is N-even iff its two circulant parts are multiplier-even and its 4-coloured fixed-point graph is colour-sign-even; (2) in a permutation group of odd order the supports of two cycles of prime lengths are equal or disjoint, and disjoint for distinct primes; (3) for primes p < q every conjugate of H inside the automorphism group of an H-fixed tournament has p-orbit P or a p-subset of the fixed points and q-orbit Q or a q-subset, so the tournament multiplicity excess E_T vanishes for k < p and equals 4 t_p^2 t_q at k = p; (4) K_{q,q} on Q against P plus q - p fixed points is an N-even sign-odd H-fixed graph, so tau_T(H) - tau_E(H) >= 1 at k = q - p whenever p < q < 2p: HYP-9340 (a) fails for every such prime pair at degree 2q; (5) census (3,5) k <= 7, (3,7) k <= 6, (5,7) k <= 6, (3,11) k <= 4, (3,13) k <= 3, (7,13) k <= 3, (7,11) k <= 4, (11,13) k <= 2, (9,5) k <= 4, (9,7) k <= 3, (9,11) k <= 3, (9,13) k <= 4, (3,25) k <= 1 (63 rows, thirteen families): HYP-9344 (2)'s pre-registered defect(5) = 88 is refuted (84; defect(6) = 672), the first defect sits at k = |p - q| with value 1 in every family, and tau_T >= tau_E in every row; (7) for primes p < q < 2p the defect is 0 for k < q - p and exactly 1 at k = q - p (below the first defect every N-even H-fixed graph is sign-even with one class of conjugates of H; at k = q - p the only sign-odd N-even type is K_{q,q}), so the least degree at which C_pq of type (p, q, 1^k) violates HYP-9340 (a) is 2q; (a) holds for every prime pair p < q and k < min(p, q - p)"
 status: >
   PROVED: statements 1-4 and 7 (elementary and classical group theory: THM-4721 Theorem R for the orbit identity;
   the sign homomorphism; Jordan's prime-cycle theorem, Burnside's prime-degree theorem, Galois's theorem on
@@ -18,7 +18,10 @@ status: >
   (HYP-9463): the first-defect law for q > 2p and for prime powers (statement 7 covers primes p < q < 2p), the
   formula defect(k) = b_(k-d)(4) - E_T^F(k - d), and the sign tau_T >= tau_E. Audited: audit A (2026-11-04, PASS
   WITH CORRECTIONS, applied: statement 3(c)'s constant 4 t_p t_q -> 4 t_p^2 t_q, the brute-force and row-count
-  claims, the Jones citation; MISTAKE-710); statement 7 was added after audit A and is covered by audit B.
+  claims, the Jones citation; MISTAKE-710); statement 7 was added after audit A; audit B (2026-11-04, PASS WITH
+  CORRECTIONS, applied: the conjugate case of Step 5, the twin argument when M = Q, the side swap in K_(q,q), the
+  least-degree wording, and the range of 7(a); audit B also verified 7 on (13,17) k <= 4 and (17,19) k <= 2 and 7(a)
+  on (5,11) k <= 4; the Step 5 gap is recorded in MISTAKE-710).
 session: mac-mini-2026-11-04-oddprimes
 source: 05-knowledge/results/cpq_defect_family_mirror_folds_20261104.md
 scripts:
@@ -105,11 +108,11 @@ excess counted over `N`-even representatives; the *defect* is `tau_T(H) - tau_E(
    (b) For `p = 3`, `q >= 7`, `k = 3`: the `2 t_q` graphs with `P cup F` carrying `K_(3,3)` between `P` and `F`, `Q`
    carrying a multiplier-even circulant `C_Q`, and `Q` joined to all of `P cup F` or to none, are pairwise non-isomorphic
    witnesses, so `W(3) >= 2 t_q`, while `E_T(3) = 4 t_q` by 3(c) (`t_3 = 1`).
-5. **Census (FINITE-EXACT; 62 rows, thirteen families).** `tau_T, tau_E, W, E_T, E_even, E_wit` (tournament side first; `R = 2 t_p t_q b_k(4)`):
+5. **Census (FINITE-EXACT; 63 rows, thirteen families; the (3,5) k = 7 row by the streaming version cpq_defect_k7.py, 128-bit digests of the canonical forms, not covered by audit A).** `tau_T, tau_E, W, E_T, E_even, E_wit` (tournament side first; `R = 2 t_p t_q b_k(4)`):
 
    | family | k = 0, 1, 2, ... | defect | W | E_T | E_even | E_wit |
    |---|---|---|---|---|---|---|
-   | (3,5), t = 1,1 | tau_T 2, 8, 32, 172, 1376, 17564, 373804; tau_E 2, 8, 31, 168, 1360, 17480, 373132 | 0, 0, 1, 4, 16, **84**, 672 | 0, 0, 1, 4, 14, 60, 334 | 0, 0, 0, 4, 32, 260, 2772 | 0, 0, 0, 4, 34, 282, 3102 | 0, 0, 0, 0, 0, 2, 8 |
+   | (3,5), t = 1,1 | tau_T 2, 8, 32, 172, 1376, 17564, 373804, 13650288; tau_E 2, 8, 31, 168, 1360, 17480, 373132, 13641634 | 0, 0, 1, 4, 16, **84**, 672, 8654 | 0, 0, 1, 4, 14, 60, 334, 2638 | 0, 0, 0, 4, 32, 260, 2772, 44112 | 0, 0, 0, 4, 34, 282, 3102, 50088 | 0, 0, 0, 0, 0, 2, 8, 40 |
    | (3,7), t = 1,2 | tau_T 4, 16, 64, 344, 2752, 35136, 747672; tau_E 4, 16, 64, 344, 2751, 35132, 747656 | 0, 0, 0, 0, 1, 4, 16 | 0, 0, 0, 4, 17, 82, 482 | 0, 0, 0, 8, 64, 512, 5480 | 0, 0, 0, 4, 48, 434, 5014 | 0 |
    | (5,7), t = 1,2 | tau_T 4, 16, 64, 352, 2816, 35640, 753088; tau_E 4, 16, 63, 348, 2800, 35552, 752384 | 0, 0, 1, 4, 16, 88, 704 | 0, 0, 1, 2, 6, 24, 112 | 0, 0, 0, 0, 0, 8, 64 | 0, 0, 0, 2, 10, 72, 656 | 0 |
    | (3,11), t = 1,4 | tau_T 8, 32, 128, 688, 5504 | 0, 0, 0, 0, 0 | 0, 0, 0, 8, 32 | 0, 0, 0, 16, 128 | 0, 0, 0, 8, 96 | 0 |
@@ -126,7 +129,8 @@ excess counted over `N`-even representatives; the *defect* is `tau_T(H) - tau_E(
    HYP-9344 (2) pre-registered `defect(5) = 88` (against the alternative `64`) for C15 `(3,5,1^5)` at `n = 13`: the
    value is `84`, with `W = 60`, `E_T = 260`, `E_even = 282` and the first nonzero `E_wit = 2`; `defect(6) = 672`.
    In every family the first nonzero defect is at `k = |p - q|` and equals `1`, followed by `4` and then `16`
-   where computed; `tau_T >= tau_E` in all 62 rows; THM-4721 Theorem R and THM-4728's identity hold in all 62 rows.
+   where computed; `tau_T >= tau_E` in all 63 rows; THM-4721 Theorem R and THM-4728's identity hold in all 63 rows.
+   The `(3,5) k = 7` row refutes the pre-registered formula of HYP-9463 (2) in its stated form (`8654` against `8652`).
    The rows `(7,11) k = 4` and `(11,13) k = 2` are the next two members of the family of statement 4(a) and show
    exactly one witness and no excess, as statement 7 proves.
 6. **Prime powers (FINITE-EXACT).** For `p = 9` the four dilation classes of circulant 9-tournaments fall into three
@@ -134,15 +138,19 @@ excess counted over `N`-even representatives; the *defect* is `tau_T(H) - tau_E(
    number of witnesses `W(k) = E_T(k)` (sign-odd circulant graphs on `Z_9` that are multiplier-even), cancelling exactly
    for `k < |p - q|`; the first defect is again `1` at `k = |p - q|` (`k = 4` for `(9,5)`, `(9,13)`; `k = 2` for `(9,7)`,
    `(9,11)`), and `(3,25)` shows the same non-CI cancellation with witness multiplicities `E_wit = 2, 8`.
-7. **First-defect law for primes `p < q < 2p` (PROVED; added after audit A, audited separately as audit B).**
+7. **First-defect law for primes `p < q < 2p` (PROVED; added after audit A; audit B PASS WITH CORRECTIONS, applied).**
    Let `p < q` be primes and `H` of type `(p, q, 1^k)`.
-   (a) If `k < q - p`, every `N`-even `H`-fixed graph is sign-even and carries a single `Aut`-class of `S_n`-conjugates of
-   `H`; so `W = E_even = E_wit = 0`, and with 3(b) (`k < q - p < p`) also `E_T = 0`: `tau_T(H) = tau_E(H)`.
+   (a) For all primes `p < q` and `k < min(p, q - p)` (which is `k < q - p` when `q < 2p`), every `N`-even `H`-fixed
+   graph is sign-even and carries a single `Aut`-class of `S_n`-conjugates of `H`; so `W = E_even = E_wit = 0`, and with
+   3(b) (`k < p`) also `E_T = 0`: `tau_T(H) = tau_E(H)`.
    (b) If `k = q - p`, the only sign-odd `N`-even `H`-fixed graph type is `K_(q,q)` (parts `Q` and `P cup F`), every
    `N`-even type carries a single `Aut`-class of conjugates of `H`, and `tau_T(H) - tau_E(H) = 1`.
    Hence for `p < q < 2p` the defect vanishes for `k < q - p` and equals `1` at `k = q - p`: HYP-9463 (1) holds in the
-   range `q < 2p`, and the least degree at which the pair `(p, q)` violates the refined equinumerosity HYP-9340 (a) is
-   exactly `n = 2q` (for `(3, 5)` this is the Codex "least failure degree ten").
+   range `q < 2p`, and the least degree at which `C_pq` acting with one `p`-orbit, one `q`-orbit and fixed points
+   violates the refined equinumerosity HYP-9340 (a) is exactly `n = 2q` (for `(3, 5)` this is the Codex "least failure
+   degree ten"; other groups with orbits of sizes `p` and `q`, such as `C_pq x C_3` of type `(p, q, 3)`, are not covered).
+   Audit B's census rows `(13,17) k <= 4` and `(17,19) k <= 2` show `0, ..., 0, 1` with the single witness `K_(q,q)` and
+   zero excesses, and `(5,11) k <= 4` is all zero, as 7 predicts (`audit_B/`).
 
 ## Proofs
 
@@ -236,7 +244,8 @@ mode enumerates all `2^c` `H`-fixed objects, computes types directly and the `N`
 the rows with two independent implementations (a definition-level brute force and an own orbit method with VF2
 cross-checks of the nauty coincidences). ∎
 
-**7.** Throughout, `X` is an `N`-even `H`-fixed graph with datum `(C_P, C_Q, cross, gamma)` and `k <= q - p < p`;
+**7.** Throughout, `X` is an `N`-even `H`-fixed graph with datum `(C_P, C_Q, cross, gamma)`, `k < p` and `k <= q - p`
+(Steps 1-4 use only `p + k < q` and `k < p`, i.e. `k < min(p, q - p)`, which is (a); Step 5 uses `k = q - p < p`);
 "module" means a homogeneous set of `X` (every outside vertex adjacent to all or to none of it), and an *independent
 module* is a module inducing the empty graph, i.e. a set of pairwise non-adjacent twins; `Sym(I) <= Aut X` for every
 independent module `I`, and the union of two overlapping independent modules is an independent module (a vertex of
@@ -276,8 +285,9 @@ independent (and trivially when `M = Q`), and for `g in Aut X`, `g(P) <= V \ M <
 impossible since it contains the prime circulant `X[P]`; so `g(P) = P`. If `C_P` is empty, all vertices of `P` are twins
 of one another (common neighbourhood `(Q if cross) cup {f : x_f = 1}`), so either `P <= M` (when some, hence every,
 vertex of `P` is a twin of the vertices of `Q`, which requires `X[Q]` empty) or `P cap M = empty`; in the latter case
-let `D` be the union of all independent modules containing `P`: `D cap M = empty` (otherwise `D cup M` is an
-independent module containing `P` and `Q`, forcing `P <= M`), and `g(D) = D` for all `g` by the argument of Step 1
+let `D` be the union of all independent modules containing `P`: `D cap M = empty` (when `M` is independent,
+`D cup M` would otherwise be an independent module containing `P` and `Q`, forcing `P <= M`; when `M = Q` is a prime
+circulant, no vertex of `Q` is a twin of a vertex of `P`, by (i)), and `g(D) = D` for all `g` by the argument of Step 1
 (`g(P)` meets `P` because `g(P) <= V \ M` and `|F| < p`; then `g(P) = P` or `P cup g(P)` is an independent module, so
 `g(P) <= D` and `g(D) cup D <= D`). In the case `P <= M` put `D = M`.
 *Step 3: every automorphism is even.* Put `F' = F \ (M cup D)`. Each `g in Aut X` preserves `M`, `D` and `F'`, so by
@@ -315,11 +325,15 @@ is empty and `P cup F` is independent; `Q` and `P cup F` are modules (the latter
 each automorphism satisfies `g(Q) cap Q != empty`, and Steps 1-3 apply verbatim (they used `k < p` and that
 overlap): `X` is sign-even. The empty graph is sign-even, so the sign-odd `N`-even types are exactly `K_(q,q)`
 (`W = 1`; sign-odd and `N`-even by 4(a)). Step 4 applies to every `N`-even `X` other than `K_(q,q)` and the empty
-graph (a conjugate with `Q' cap Q = empty` has `Q' = P cup F` and forces, by the argument just given with `c''` in place
-of `g c_Q g^(-1)`, `X in {K_(q,q), empty}`), the empty graph has `Sym(V) <= Aut X`, and in `K_(q,q)` a `q`-cycle
-preserves the bipartition (an odd power of a part-swapping automorphism swaps the parts), so `Q'` is a part, `P'` lies in
-the other, and `Sym(part) x Sym(part) <= Aut X` conjugates `H'` to `H`: `m_X(H) = 1` for all `N`-even `X`, i.e.
-`E_even = E_wit = 0`, while `E_T = 0` by 3(b). Hence `tau_T - tau_E = W = 1`. ∎
+graph: a conjugate `H' = <c' c''>` with `Q' cap Q = empty` has `Q' = P cup F` and `P' <= Q`, so `c'|Q in Aut X[Q]` is
+a `p`-cycle fixing the other `q - p >= 2` points of `Q`, impossible in `AGL(1, q)` if `X[Q]` were a prime circulant
+(fact (i)); hence `X[Q]` is empty, `X[P cup F]` is a circulant for `c''` containing the module `P` and so is empty by
+(i) (complete is excluded by `C_P`), both `Q` and `P cup F` are modules, and `X in {K_(q,q), empty}`. The empty graph
+has `Sym(V) <= Aut X`, and `Aut K_(q,q) = Sym(part) wr C_2` contains an element carrying `Q'` to `Q` and `P'` onto `P`
+(a `q`-cycle preserves the bipartition, since an odd power of a part-swapping automorphism swaps the parts, so `Q'` is
+a part and `P'` lies in the other; the side swap is used when `Q' = P cup F`); then `Sym(P) x Sym(Q)` conjugates `H'`
+to `H`. So `m_X(H) = 1` for all `N`-even `X`, i.e. `E_even = E_wit = 0`, while `E_T = 0` by 3(b). Hence
+`tau_T - tau_E = W = 1`. ∎
 
 ## Scope and boundary
 
@@ -329,10 +343,13 @@ the other, and `Sym(part) x Sym(part) <= Aut X` conjugates `H'` to `H`: `m_X(H) 
 * Statement 7 settles the first-defect law for primes `p < q < 2p`: `0` below `k = q - p` and exactly `1` there. For
   `q > 2p` (`(3,7)`, `(3,11)`, `(3,13)`, `(7,13)`) and for prime powers (`(9,q)`, `(3,25)`) the census shows the same law,
   but there the first defect `1` is a net value of many witnesses and coincidences (`(3,7) k = 4`: `17 + 48 - 64`;
-  `(9,5) k = 4`: `1409 - 1408`) and nothing is proved beyond `E_T = 0` for `k < p` (primes); the complete cancellation
-  at `k = p = 3` (`W(3) = E_even(3) = 2 t_q` against `E_T(3) = 4 t_q`) is proved as lower bounds plus census.
-* Statement 7's Step 2 uses `|F| < p` and Step 1 uses `|V \ Q| < q`, i.e. `k < min(p, q - p) = q - p`; the proof does
-  not extend to `q - p >= p`, where `g(Q)` can miss `Q` without `X` being `K_(q,q)` or empty.
+  `(9,5) k = 4`: `1409 - 1408`) and nothing is proved beyond 7(a) (`k < p`, primes) and `E_T = 0`; the complete
+  cancellation at `k = p = 3` (`W(3) = E_even(3) = 2 t_q` against `E_T(3) = 4 t_q`) is proved as lower bounds plus census.
+* Statement 7's Step 2 uses `|F| < p` and Step 1 uses `|V \ Q| < q`, so 7(a) holds for every prime pair `p < q` and
+  `k < min(p, q - p)` (audit B; this proves the zero rows `(3,7) k <= 2`, `(3,11)`, `(3,13)`, `(7,13) k <= 2` and
+  `(5,11) k <= 4`); the identification of the first defect, 7(b), needs `k = q - p < p`, and for `q - p >= p` the proof
+  does not extend (`g(Q)` can miss `Q` without `X` being `K_(q,q)` or empty, and the `K_(p,p)`-type witnesses enter at
+  `k = p`).
 * The lemma uses Feit-Thompson only in the case `m = r + 2`; Jones 2014 gives the same case without it. The sanity
   check over all tournaments of orders 3-8 (838 prime-length cycles in automorphism groups; `lemma_check.py`,
   reproduced by audit A's `audit_b_lemma_search.py`) found no overlapping supports at all.

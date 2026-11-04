@@ -1,0 +1,22 @@
+audit B: (3,7,1^k), k <= 3, brute force for k <= 2
+p=3 q=7 k=0 n=10 R=4 RG=4 tau_T=4 tau_E=4 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(1,2) e=(1,2) b_k=1
+  BRUTE p=3 q=7 k=0 c=5 |N|=252 R=4 RGeven=4 tau_T=4 tau_E=4 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True (0.0s)
+  brute vs orbit: AGREE
+p=3 q=7 k=1 n=11 R=16 RG=16 tau_T=16 tau_E=16 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(1,2) e=(1,2) b_k=4
+  BRUTE p=3 q=7 k=1 c=7 |N|=252 R=16 RGeven=16 tau_T=16 tau_E=16 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True (0.0s)
+  brute vs orbit: AGREE
+p=3 q=7 k=2 n=12 R=64 RG=64 tau_T=64 tau_E=64 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(1,2) e=(1,2) b_k=16
+  BRUTE p=3 q=7 k=2 c=10 |N|=504 R=64 RGeven=64 tau_T=64 tau_E=64 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True (1.0s)
+  brute vs orbit: AGREE
+p=3 q=7 k=3 n=13 R=352 RG=352 tau_T=344 tau_E=344 defect=0 W=4 E_T=8 E_even=4 E_wit=0 identity=True theoremR=True  t=(1,2) e=(1,2) b_k=88
+   witness: C_P=[] C_Q=[] cross=0 E_F=[] col=(1, 1, 1) edges=9 |Aut|=362880  -> K_{q,q} on Q vs P u F: False
+   witness: C_P=[] C_Q=[] cross=1 E_F=[] col=(3, 3, 3) edges=51 |Aut|=362880  -> K_{q,q} on Q vs P u F: False
+   witness: C_P=[] C_Q=[2, 3, 4, 5] cross=0 E_F=[] col=(1, 1, 1) edges=23 |Aut|=1008  -> K_{q,q} on Q vs P u F: False
+   witness: C_P=[] C_Q=[2, 3, 4, 5] cross=1 E_F=[] col=(3, 3, 3) edges=65 |Aut|=1008  -> K_{q,q} on Q vs P u F: False
+
+k  R  tau_T tau_E defect W E_T E_even E_wit
+0 4 4 4 0 0 0 0 0
+1 16 16 16 0 0 0 0 0
+2 64 64 64 0 0 0 0 0
+3 352 344 344 0 4 8 4 0
+exit=0

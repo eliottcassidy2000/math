@@ -7,7 +7,7 @@ powers; the arc-connectivity shortcut and `{-3}`-self-dual decomposable tourname
 odd-indexed Fibonacci numbers `2, 5, 13, 34, 89`; the unit-ball volume peak and the `8 : 4` split at `n = 5`; the past
 work around `-7/4` and `-29/16`; the MRB constant and the microcosm-macrocosm reading of "the same value realised twice
 on either side of the peak"; the uploaded PDF *The MRB Multiverse* (two constants `C` and `B`, mirror bases, Lambert W).
-**Truth typing:** PROVED (THM-4871 statements 1-4) + FINITE-EXACT (64 census rows) + REFUTED (HYP-9344 (2)) + NUMERICAL
+**Truth typing:** PROVED (THM-4871 statements 1-4, 7) + FINITE-EXACT (63 census rows) + REFUTED (HYP-9344 (2); HYP-9463 (2) in its stated form) + NUMERICAL
 (HYP-9463 (1)-(3)) + OPEN (HYP-9463 (4)) + CITED/typed (the fold section, the PDF).
 
 ## 0. Concurrency and inheritance
@@ -113,7 +113,9 @@ What HYP-9344 (2) got right is the *scale*: the defect is `b_(k-2)(4)` minus the
   fixed points is an `N`-even sign-odd `H`-fixed graph, so for primes `p < q < 2p` the defect at `k = q - p` is `>= 1`:
   HYP-9340 (a) fails for every such pair at degree `2q`, with `K_(q,q)` as the explicit obstruction (the C15 failure at
   `n = 10` is the first member).
-* **The first-defect law for `q < 2p`** (THM-4871 (7), written after audit A and audited as audit B): below
+* **The first-defect law for `q < 2p`** (THM-4871 (7), written after audit A; audit B PASS WITH CORRECTIONS, applied:
+  the conjugate case of Step 5 needed the `AGL(1,q)` fixed-point bound, and the proof's hypotheses are only
+  `p + k < q` and `k < p`, so the vanishing half holds for all primes `p < q` and `k < min(p, q - p)`): below
   `k = q - p` every `N`-even `H`-fixed graph is sign-even and carries one class of conjugates of `H`, and at `k = q - p`
   the only sign-odd `N`-even type is `K_(q,q)`; so the defect is `0, ..., 0, 1`. The proof puts `Q` into a largest
   independent module `M` (two overlapping `q`-cycles in `Aut X` generate a 2-transitive group on their union, by
@@ -266,8 +268,23 @@ numeric and exact fact of section 5. Corrections applied: statement 3(c)'s const
 `(7,13)`), the brute-force agreement at `(3,25)` is only at `k = 0`, the row count is 62 over thirteen families (not
 64), Jones 2014 is Bull. Aust. Math. Soc. 89, HYP-9463 (1)'s unique-witness description holds only for prime rows
 with `d < p`, HYP-9463 (2)'s "equivalent form" and "indexing" reading were wrong, HYP-9344 (2) extrapolated the defect
-rather than mistaking a witness count, and the nauty "82" is construction-dependent. MISTAKE-710 logged. Statement 7
-(the first-defect law for `q < 2p`) was written after audit A and is covered by **audit B** (below, when it returns).
+rather than mistaking a witness count, and the nauty "82" is construction-dependent. MISTAKE-710 logged.
+
+**Audit B** (independent adversarial audit of statement 7, 2026-11-04; report
+[`cpq_defect_family_audit_B_20261104.md`](cpq_defect_family_audit_B_20261104.md), scripts
+`04-computation/experiments/cpq_defect_20261104/audit_B/`): PASS WITH CORRECTIONS. Verified: fact (i) on every
+circulant of `Z_r`, `r = 5..19` (prime graphs, `Aut = Z_r x| M(C)`, no twins, `K_r` never multiplier-even), fact (ii)
+exhaustively for `r = 3, 5, 7` (90,720 pairs at `r = 7`, all 2-transitive; at `|Delta| = r + 1` the group can be
+`PSL(2,5)`, so only 2-transitivity may be claimed there), fact (iii), the Step 1-3 objects on all 24,762 `N`-even
+representatives of 26 rows (the only sign-odd one being `K_(q,q)` at `k = q - p`), the census rows by an own orbit method
+and a definition-level brute force, and two new pairs in the proved range, `(13,17) k <= 4` and `(17,19) k <= 2`
+(`0, ..., 0, 1`, single witness `K_(q,q)`, zero excesses). Corrections applied: the conjugate case of Step 5 (a
+conjugate with `Q' = P cup F` has its `p`-cycle inside `Q` fixing `q - p >= 2` points, impossible in `AGL(1,q)` for a
+prime circulant `X[Q]` — the draft's "by the argument just given" was a gap, since that argument needed an automorphism
+carrying `Q` to `P cup F`), the twin argument when `M = Q`, the side swap in `Aut K_(q,q)`, the least-degree sentence
+(now restricted to `C_pq` of type `(p, q, 1^k)`), and the range of 7(a) (all primes `p < q`, `k < min(p, q - p)`, which
+makes the zero rows of `(3,7) k <= 2`, `(3,11)`, `(3,13)`, `(7,13) k <= 2` and `(5,11) k <= 4` proved). The gap is
+recorded in MISTAKE-710.
 
 ## 11. META-PATTERNS
 

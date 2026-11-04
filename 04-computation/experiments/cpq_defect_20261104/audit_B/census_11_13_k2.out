@@ -1,0 +1,18 @@
+audit B: (11,13,1^k), k <= 2, brute force for k <= 2
+p=11 q=13 k=0 n=24 R=48 RG=48 tau_T=48 tau_E=48 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(4,6) e=(4,6) b_k=1
+  BRUTE p=11 q=13 k=0 c=12 |N|=17160 R=48 RGeven=48 tau_T=48 tau_E=48 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True (2.7s)
+  brute vs orbit: AGREE
+p=11 q=13 k=1 n=25 R=192 RG=192 tau_T=192 tau_E=192 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(4,6) e=(4,6) b_k=4
+  BRUTE p=11 q=13 k=1 c=14 |N|=17160 R=192 RGeven=192 tau_T=192 tau_E=192 defect=0 W=0 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True (8.4s)
+  brute vs orbit: AGREE
+p=11 q=13 k=2 n=26 R=768 RG=768 tau_T=768 tau_E=767 defect=1 W=1 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True  t=(4,6) e=(4,6) b_k=16
+   witness: C_P=[] C_Q=[] cross=1 E_F=[] col=(2, 2) edges=169 |Aut|=7755157608  -> K_{q,q} on Q vs P u F: True
+  BRUTE p=11 q=13 k=2 c=17 |N|=34320 R=768 RGeven=768 tau_T=768 tau_E=767 defect=1 W=1 E_T=0 E_even=0 E_wit=0 identity=True theoremR=True (121.5s)
+     N-even sign-odd H-fixed graph: 169 edges, degree multiset [(13, 26)], type 000000000000fc7f
+  brute vs orbit: AGREE
+
+k  R  tau_T tau_E defect W E_T E_even E_wit
+0 48 48 48 0 0 0 0 0
+1 192 192 192 0 0 0 0 0
+2 768 768 767 1 1 0 0 0
+exit=0
