@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "checked_sources": 880,
+  "checked_steps": 135132,
+  "examples": [
+    {
+      "word": [
+        1,
+        2
+      ],
+      "repetitions": 1,
+      "two_reset_length": 1,
+      "first_descent_index": 3,
+      "single_reset_minimum": 2,
+      "source_bits": 6,
+      "source": "43",
+      "target": "37"
+    },
+    {
+      "word": [
+        1,
+        2
+      ],
+      "repetitions": 5,
+      "two_reset_length": 3,
+      "first_descent_index": 13,
+      "single_reset_minimum": 3,
+      "source_bits": 20,
+      "source": "720891",
+      "target": "548047"
+    },
+    {
+      "word": [
+        1,
+        2
+      ],
+      "repetitions": 100,
+      "two_reset_length": 41,
+      "first_descent_index": 241,
+      "single_reset_minimum": 19,
+      "source_bits": 379,
+      "source": "620716489111831177235059068167368135883948968648990899881200820261107657189533181117771189959413639122049445134331",
+      "target": "610460160057690423131730977608365729171683930246254896999822606484416773168630963283630465704723245016519322978061"
+    },
+    {
+      "word": [
+        1,
+        2
+      ],
+      "repetitions": 1,
+      "two_reset_length": 1,
+      "first_descent_index": 3,
+      "single_reset_minimum": 2,
+      "source_bits": 6,
+      "source": "43",
+      "target": "37"
+    },
+    {
+      "word": [
+        1,
+        2
+      ],
+      "repetitions": 5,
+      "two_reset_length": 3,
+      "first_descent_index": 13,
+      "single_reset_minimum": 3,
+      "source_bits": 20,
+      "source": "720891",
+      "target": "548047"
+    },
+    {
+      "word": [
+        1,
+        2
+      ],
+      "repetitions": 100,
+      "two_reset_length": 41,
+      "first_descent_index": 241,
+      "single_reset_minimum": 19,
+      "source_bits": 379,
+      "source": "620716489111831177235059068167368135883948968648990899881200820261107657189533181117771189959413639122049445134331",
+      "target": "610460160057690423131730977608365729171683930246254896999822606484416773168630963283630465704723245016519322978061"
+    }
+  ],
+  "long_controls": [
+    {
+      "q": 1,
+      "r": 1,
+      "first_descent": 3,
+      "source_bits": 6
+    },
+    {
+      "q": 2,
+      "r": 1,
+      "first_descent": 5,
+      "source_bits": 9
+    },
+    {
+      "q": 10,
+      "r": 5,
+      "first_descent": 25,
+      "source_bits": 38
+    },
+    {
+      "q": 100,
+      "r": 41,
+      "first_descent": 241,
+      "source_bits": 379
+    },
+    {
+      "q": 1000,
+      "r": 410,
+      "first_descent": 2410,
+      "source_bits": 3821
+    }
+  ]
+}
