@@ -1,0 +1,16 @@
+{
+  "checks": "python3 verify.py; python3 -O verify.py; cmp normal.json optimized.json",
+  "files": {
+    "NOTE.md": "2beb3c7465e4adb6d67d60e258e4b99c9e811c2fa25b83db500ad053c60a0784",
+    "inputs/THM-2500.md": "ecbf5a84a2c0f59cad82d81bfacb333ef2728f7418a16542ff31eec722852b6b",
+    "normal.json": "6e16c38b3839453cda9a6752cd38c638b705536fa844fd87066c52df0b47b7be",
+    "optimized.json": "6e16c38b3839453cda9a6752cd38c638b705536fa844fd87066c52df0b47b7be",
+    "verify.py": "f3169427ccdc8f55d86302b8af7ea9af3f5b0efe483eff798a38bce3dfe2c92f"
+  },
+  "source": {
+    "github_blob_sha": "91198c2bf33b5f104d87ea01c6c16d01d6ce22e3",
+    "path": "01-canon/theorems/THM-2500-finite-hole-relative-atoms-prime-rays-and-cover-bounds.md",
+    "ref": "main",
+    "retrieved": "2026-11-04"
+  }
+}

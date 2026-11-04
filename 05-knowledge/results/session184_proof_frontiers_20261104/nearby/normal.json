@@ -1,0 +1,9 @@
+{
+  "bounded_rank_target_cases": 204288,
+  "exact_series_coefficient_cases": 7196,
+  "hostiles": 6,
+  "prime_hole_target_cases": 159936,
+  "rank_ideal_target_cases": 12495,
+  "sharp_endpoint_checks": 30,
+  "status": "PASS"
+}
