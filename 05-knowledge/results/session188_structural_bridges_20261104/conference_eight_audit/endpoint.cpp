@@ -1,0 +1,4 @@
+#include <array>
+#include <iostream>
+#include <stdexcept>
+int main(){unsigned total;std::cin>>total;unsigned checked=0;while(checked<total){unsigned code;std::cin>>code;std::array<unsigned,8>out{},in{};unsigned bit=0;for(unsigned i=0;i<8;++i)for(unsigned j=i+1;j<8;++j,++bit){unsigned u=(code>>bit&1)?i:j,v=u==i?j:i;out[u]|=1u<<v;in[v]|=1u<<u;}std::array<unsigned,256>S{},E{};for(unsigned mask=1;mask<256;++mask){unsigned todo=mask;while(todo){unsigned v=__builtin_ctz(todo);todo&=todo-1;unsigned rest=mask^(1u<<v);if(!rest){S[mask]|=1u<<v;E[mask]|=1u<<v;}else{if(__builtin_parity(S[rest]&out[v]))S[mask]|=1u<<v;if(__builtin_parity(E[rest]&in[v]))E[mask]|=1u<<v;}}}if((S[255]^E[255])!=255)throw std::runtime_error("endpoint mask is not all ones");for(unsigned j=0;j<8;++j){unsigned h=0;for(unsigned m=0;m<256;++m)if(!(m>>j&1)&&!(__builtin_popcount(m)&1))h^=S[m]^E[m];if(h)throw std::runtime_error("nonzero shared cubic column");}++checked;}std::cout<<checked<<'\n';}

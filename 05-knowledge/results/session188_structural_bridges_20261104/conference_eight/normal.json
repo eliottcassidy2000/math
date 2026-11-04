@@ -1,0 +1,23 @@
+{
+  "all_seven_tournaments": 2097152,
+  "complete_h_zero_code_equality": true,
+  "data_sha256": {
+    "census.json": "ac23ca7269bbe8707b3009898a353b7ec0b48d5f8886fa2d78b09b84185177fe"
+  },
+  "dependency_sha256": {
+    "eight_pair_quotient/blind8.bin": "2fb59e122ab3625ba1c5a3dd311ff3abe39ef7ceb1390083a6fda4a7367457ba"
+  },
+  "independent_integer_gram_entries": 11760,
+  "labelled_eight_conference_tournaments": 30720,
+  "nonconference_order_four_row_inner_product": 2,
+  "normalized_blocks": 240,
+  "regular_seven_tournaments": 2640,
+  "scope": "Order-eight equivalence of the complete h-zero kernel and skew-conference tournaments, not a general-order characterization.",
+  "source_sha256": {
+    "PROOF.md": "b28e4170e99c4056b8575dcfd996e7f2868d87870b9ca8d7916d9c746adf1462",
+    "census.cpp": "3363dcb3fd14525f0cd27968cc2649a8ad95449a73d4de3b7ec8395921d7c4b4",
+    "verify.py": "b5bea3e3d3bde363ed15f0ebc7ccd4ab12a66ea4f7a52086fd287fe017c6f943"
+  },
+  "status": "PASS",
+  "switchings_per_normalized_block": 128
+}
