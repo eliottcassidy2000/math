@@ -1,0 +1,215 @@
+# fewcycle_sole_exit_free_20261104 NMAX=14 K=5 DUMPN=0 threads=12
+n= 3 classes(hc<=5)=1   F(2n-6)=0 F(2n-9)=0 2F(2n-11)=0
+   k=1  t=1  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=4  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=5  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..8): 0 0 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 0 0 0 0 0 0 0
+n= 4 classes(hc<=5)=1   F(2n-6)=1 F(2n-9)=0 2F(2n-11)=0
+   k=1  t=1  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=4  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=5  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..8): 0 0 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 0 0 0 0 0 0 0
+n= 5 classes(hc<=5)=6   F(2n-6)=3 F(2n-9)=1 2F(2n-11)=0
+   k=1  t=3  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=2  [2-strong 1, 2-arc-strong with cut vertex 0]   u=1  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 1]  u by #sole entries (0,1,2,3+): 1 0 0 0
+   k=3  t=1  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=4  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=5  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..8): 0 0 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 0 0 0 0 0 0 0
+n= 6 classes(hc<=5)=35   F(2n-6)=8 F(2n-9)=2 2F(2n-11)=2
+   k=1  t=8  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=5  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=11  [2-strong 0, 2-arc-strong with cut vertex 0]   u=2  [lambda=1 2, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 2 0 0
+   k=4  t=6  [2-strong 1, 2-arc-strong with cut vertex 0]   u=3  [lambda=1 2, 2-arc-strong cut vertex 0, 2-strong 1]  u by #sole entries (0,1,2,3+): 1 2 0 0
+   k=5  t=5  [2-strong 4, 2-arc-strong with cut vertex 0]   u=4  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 4]  u by #sole entries (0,1,2,3+): 4 0 0 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..8): 0 4 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 4 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 2
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 2
+n= 7 classes(hc<=5)=140   F(2n-6)=21 F(2n-9)=5 2F(2n-11)=4
+   k=1  t=21  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=18  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=38  [2-strong 0, 2-arc-strong with cut vertex 0]   u=5  [lambda=1 5, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 3 2 0
+   k=4  t=25  [2-strong 0, 2-arc-strong with cut vertex 0]   u=4  [lambda=1 4, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 2 2 0
+   k=5  t=38  [2-strong 0, 2-arc-strong with cut vertex 0]   u=4  [lambda=1 4, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 4 0 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..8): 0 13 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 13 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 2
+   core[k=3] first minimal set |D|=6 e_u(D)=3 : 3
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 2
+   core[k=4] first minimal set |D|=6 e_u(D)=4 : 2
+   core[k=5] first minimal set |D|=6 e_u(D)=5 : 4
+n= 8 classes(hc<=5)=468   F(2n-6)=55 F(2n-9)=13 2F(2n-11)=10
+   k=1  t=55  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=60  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=124  [2-strong 0, 2-arc-strong with cut vertex 0]   u=13  [lambda=1 13, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 6 7 0
+   k=4  t=91  [2-strong 0, 2-arc-strong with cut vertex 0]   u=10  [lambda=1 10, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 4 6 0
+   k=5  t=138  [2-strong 0, 2-arc-strong with cut vertex 0]   u=9  [lambda=1 9, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 5 4 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..8): 0 32 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 32 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 4
+   core[k=3] first minimal set |D|=6 e_u(D)=3 : 3
+   core[k=3] first minimal set |D|=7 e_u(D)=3 : 6
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 4
+   core[k=4] first minimal set |D|=6 e_u(D)=4 : 2
+   core[k=4] first minimal set |D|=7 e_u(D)=4 : 4
+   core[k=5] first minimal set |D|=6 e_u(D)=5 : 4
+   core[k=5] first minimal set |D|=7 e_u(D)=5 : 5
+n= 9 classes(hc<=5)=1506   F(2n-6)=144 F(2n-9)=34 2F(2n-11)=26
+   k=1  t=144  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=191  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=390  [2-strong 0, 2-arc-strong with cut vertex 0]   u=34  [lambda=1 34, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 14 20 0
+   k=4  t=315  [2-strong 0, 2-arc-strong with cut vertex 0]   u=26  [lambda=1 26, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 10 16 0
+   k=5  t=466  [2-strong 0, 2-arc-strong with cut vertex 0]   u=23  [lambda=1 23, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 10 13 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..8): 0 83 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 83 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 10
+   core[k=3] first minimal set |D|=6 e_u(D)=3 : 6
+   core[k=3] first minimal set |D|=7 e_u(D)=3 : 6
+   core[k=3] first minimal set |D|=8 e_u(D)=3 : 12
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 10
+   core[k=4] first minimal set |D|=6 e_u(D)=4 : 4
+   core[k=4] first minimal set |D|=7 e_u(D)=4 : 4
+   core[k=4] first minimal set |D|=8 e_u(D)=4 : 8
+   core[k=5] first minimal set |D|=6 e_u(D)=5 : 8
+   core[k=5] first minimal set |D|=7 e_u(D)=5 : 5
+   core[k=5] first minimal set |D|=8 e_u(D)=5 : 10
+n=10 classes(hc<=5)=4708   F(2n-6)=377 F(2n-9)=89 2F(2n-11)=68
+   k=1  t=377  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=589  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=1193  [2-strong 0, 2-arc-strong with cut vertex 0]   u=89  [lambda=1 89, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 35 54 0
+   k=4  t=1049  [2-strong 0, 2-arc-strong with cut vertex 0]   u=68  [lambda=1 68, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 26 42 0
+   k=5  t=1500  [2-strong 0, 2-arc-strong with cut vertex 0]   u=60  [lambda=1 60, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 24 36 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..8): 0 217 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 217 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 26
+   core[k=3] first minimal set |D|=6 e_u(D)=3 : 15
+   core[k=3] first minimal set |D|=7 e_u(D)=3 : 12
+   core[k=3] first minimal set |D|=8 e_u(D)=3 : 12
+   core[k=3] first minimal set |D|=9 e_u(D)=3 : 24
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 26
+   core[k=4] first minimal set |D|=6 e_u(D)=4 : 10
+   core[k=4] first minimal set |D|=7 e_u(D)=4 : 8
+   core[k=4] first minimal set |D|=8 e_u(D)=4 : 8
+   core[k=4] first minimal set |D|=9 e_u(D)=4 : 16
+   core[k=5] first minimal set |D|=6 e_u(D)=5 : 20
+   core[k=5] first minimal set |D|=7 e_u(D)=5 : 10
+   core[k=5] first minimal set |D|=8 e_u(D)=5 : 10
+   core[k=5] first minimal set |D|=9 e_u(D)=5 : 20
+n=11 classes(hc<=5)=14390   F(2n-6)=987 F(2n-9)=233 2F(2n-11)=178
+   k=1  t=987  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=1775  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=3574  [2-strong 0, 2-arc-strong with cut vertex 0]   u=233  [lambda=1 233, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 90 143 0
+   k=4  t=3390  [2-strong 0, 2-arc-strong with cut vertex 0]   u=178  [lambda=1 178, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 68 110 0
+   k=5  t=4664  [2-strong 0, 2-arc-strong with cut vertex 0]   u=157  [lambda=1 157, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 61 96 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..8): 0 568 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 568 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 68
+   core[k=3] first minimal set |D|=6 e_u(D)=3 : 39
+   core[k=3] first minimal set |D|=7 e_u(D)=3 : 30
+   core[k=3] first minimal set |D|=8 e_u(D)=3 : 24
+   core[k=3] first minimal set |D|=9 e_u(D)=3 : 24
+   core[k=3] first minimal set |D|=10 e_u(D)=3 : 48
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 68
+   core[k=4] first minimal set |D|=6 e_u(D)=4 : 26
+   core[k=4] first minimal set |D|=7 e_u(D)=4 : 20
+   core[k=4] first minimal set |D|=8 e_u(D)=4 : 16
+   core[k=4] first minimal set |D|=9 e_u(D)=4 : 16
+   core[k=4] first minimal set |D|=10 e_u(D)=4 : 32
+   core[k=5] first minimal set |D|=6 e_u(D)=5 : 52
+   core[k=5] first minimal set |D|=7 e_u(D)=5 : 25
+   core[k=5] first minimal set |D|=8 e_u(D)=5 : 20
+   core[k=5] first minimal set |D|=9 e_u(D)=5 : 20
+   core[k=5] first minimal set |D|=10 e_u(D)=5 : 40
+n=12 classes(hc<=5)=43225   F(2n-6)=2584 F(2n-9)=610 2F(2n-11)=466
+   k=1  t=2584  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=5257  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=10537  [2-strong 0, 2-arc-strong with cut vertex 0]   u=610  [lambda=1 610, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 234 376 0
+   k=4  t=10705  [2-strong 0, 2-arc-strong with cut vertex 0]   u=466  [lambda=1 466, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 178 288 0
+   k=5  t=14142  [2-strong 0, 2-arc-strong with cut vertex 0]   u=411  [lambda=1 411, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 158 253 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..8): 0 1487 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 1487 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 178
+   core[k=3] first minimal set |D|=6 e_u(D)=3 : 102
+   core[k=3] first minimal set |D|=7 e_u(D)=3 : 78
+   core[k=3] first minimal set |D|=8 e_u(D)=3 : 60
+   core[k=3] first minimal set |D|=9 e_u(D)=3 : 48
+   core[k=3] first minimal set |D|=10 e_u(D)=3 : 48
+   core[k=3] first minimal set |D|=11 e_u(D)=3 : 96
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 178
+   core[k=4] first minimal set |D|=6 e_u(D)=4 : 68
+   core[k=4] first minimal set |D|=7 e_u(D)=4 : 52
+   core[k=4] first minimal set |D|=8 e_u(D)=4 : 40
+   core[k=4] first minimal set |D|=9 e_u(D)=4 : 32
+   core[k=4] first minimal set |D|=10 e_u(D)=4 : 32
+   core[k=4] first minimal set |D|=11 e_u(D)=4 : 64
+   core[k=5] first minimal set |D|=6 e_u(D)=5 : 136
+   core[k=5] first minimal set |D|=7 e_u(D)=5 : 65
+   core[k=5] first minimal set |D|=8 e_u(D)=5 : 50
+   core[k=5] first minimal set |D|=9 e_u(D)=5 : 40
+   core[k=5] first minimal set |D|=10 e_u(D)=5 : 40
+   core[k=5] first minimal set |D|=11 e_u(D)=5 : 80
+n=13 classes(hc<=5)=128077   F(2n-6)=6765 F(2n-9)=1597 2F(2n-11)=1220
+   k=1  t=6765  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=15360  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=30676  [2-strong 0, 2-arc-strong with cut vertex 0]   u=1597  [lambda=1 1597, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 611 986 0
+   k=4  t=33194  [2-strong 0, 2-arc-strong with cut vertex 0]   u=1220  [lambda=1 1220, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 466 754 0
+   k=5  t=42082  [2-strong 0, 2-arc-strong with cut vertex 0]   u=1076  [lambda=1 1076, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 412 664 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..8): 0 3893 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 3893 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 466
+   core[k=3] first minimal set |D|=6 e_u(D)=3 : 267
+   core[k=3] first minimal set |D|=7 e_u(D)=3 : 204
+   core[k=3] first minimal set |D|=8 e_u(D)=3 : 156
+   core[k=3] first minimal set |D|=9 e_u(D)=3 : 120
+   core[k=3] first minimal set |D|=10 e_u(D)=3 : 96
+   core[k=3] first minimal set |D|=11 e_u(D)=3 : 96
+   core[k=3] first minimal set |D|=12 e_u(D)=3 : 192
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 466
+   core[k=4] first minimal set |D|=6 e_u(D)=4 : 178
+   core[k=4] first minimal set |D|=7 e_u(D)=4 : 136
+   core[k=4] first minimal set |D|=8 e_u(D)=4 : 104
+   core[k=4] first minimal set |D|=9 e_u(D)=4 : 80
+   core[k=4] first minimal set |D|=10 e_u(D)=4 : 64
+   core[k=4] first minimal set |D|=11 e_u(D)=4 : 64
+   core[k=4] first minimal set |D|=12 e_u(D)=4 : 128
+   core[k=5] first minimal set |D|=6 e_u(D)=5 : 356
+   core[k=5] first minimal set |D|=7 e_u(D)=5 : 170
+   core[k=5] first minimal set |D|=8 e_u(D)=5 : 130
+   core[k=5] first minimal set |D|=9 e_u(D)=5 : 100
+   core[k=5] first minimal set |D|=10 e_u(D)=5 : 80
+   core[k=5] first minimal set |D|=11 e_u(D)=5 : 80
+   core[k=5] first minimal set |D|=12 e_u(D)=5 : 160
+n=14 classes(hc<=5)=375339   F(2n-6)=17711 F(2n-9)=4181 2F(2n-11)=3194
+   k=1  t=17711  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=44394  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=88400  [2-strong 0, 2-arc-strong with cut vertex 0]   u=4181  [lambda=1 4181, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 1598 2583 0
+   k=4  t=101420  [2-strong 0, 2-arc-strong with cut vertex 0]   u=3194  [lambda=1 3194, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 1220 1974 0
+   k=5  t=123414  [2-strong 0, 2-arc-strong with cut vertex 0]   u=2817  [lambda=1 2817, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 1077 1740 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..8): 0 10192 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 10192 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 1220
+   core[k=3] first minimal set |D|=6 e_u(D)=3 : 699
+   core[k=3] first minimal set |D|=7 e_u(D)=3 : 534
+   core[k=3] first minimal set |D|=8 e_u(D)=3 : 408
+   core[k=3] first minimal set |D|=9 e_u(D)=3 : 312
+   core[k=3] first minimal set |D|=10 e_u(D)=3 : 240
+   core[k=3] first minimal set |D|=11 e_u(D)=3 : 192
+   core[k=3] first minimal set |D|=12 e_u(D)=3 : 192
+   core[k=3] first minimal set |D|=13 e_u(D)=3 : 384
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 1220
+   core[k=4] first minimal set |D|=6 e_u(D)=4 : 466
+   core[k=4] first minimal set |D|=7 e_u(D)=4 : 356
+   core[k=4] first minimal set |D|=8 e_u(D)=4 : 272
+   core[k=4] first minimal set |D|=9 e_u(D)=4 : 208
+   core[k=4] first minimal set |D|=10 e_u(D)=4 : 160
+   core[k=4] first minimal set |D|=11 e_u(D)=4 : 128
+   core[k=4] first minimal set |D|=12 e_u(D)=4 : 128
+   core[k=4] first minimal set |D|=13 e_u(D)=4 : 256
+   core[k=5] first minimal set |D|=6 e_u(D)=5 : 932
+   core[k=5] first minimal set |D|=7 e_u(D)=5 : 445
+   core[k=5] first minimal set |D|=8 e_u(D)=5 : 340
+   core[k=5] first minimal set |D|=9 e_u(D)=5 : 260
+   core[k=5] first minimal set |D|=10 e_u(D)=5 : 200
+   core[k=5] first minimal set |D|=11 e_u(D)=5 : 160
+   core[k=5] first minimal set |D|=12 e_u(D)=5 : 160
+   core[k=5] first minimal set |D|=13 e_u(D)=5 : 320
+
+real	0m24.908s
+user	0m0.015s
+sys	0m0.000s

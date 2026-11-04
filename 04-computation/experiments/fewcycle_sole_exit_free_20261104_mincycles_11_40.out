@@ -1,0 +1,937 @@
+# fewcycle_sole_exit_free_20261104 NMAX=11 K=40 DUMPN=0 threads=12
+n= 3 classes(hc<=40)=1   F(2n-6)=0 F(2n-9)=0 2F(2n-11)=0
+   k=1  t=1  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=4  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=5  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=6  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=7  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=8  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=9  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=10  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=11  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=12  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=13  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=14  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=15  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=16  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=17  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=18  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=19  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=20  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=21  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=22  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=23  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=24  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=25  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=26  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=27  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=28  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=29  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=30  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=31  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=32  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=33  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=34  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=35  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=36  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=37  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=38  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=39  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=40  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..60): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 0 0 0 0 0 0 0
+n= 4 classes(hc<=40)=1   F(2n-6)=1 F(2n-9)=0 2F(2n-11)=0
+   k=1  t=1  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=4  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=5  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=6  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=7  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=8  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=9  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=10  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=11  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=12  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=13  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=14  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=15  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=16  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=17  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=18  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=19  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=20  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=21  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=22  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=23  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=24  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=25  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=26  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=27  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=28  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=29  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=30  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=31  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=32  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=33  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=34  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=35  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=36  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=37  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=38  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=39  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=40  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..60): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 0 0 0 0 0 0 0
+n= 5 classes(hc<=40)=6   F(2n-6)=3 F(2n-9)=1 2F(2n-11)=0
+   k=1  t=3  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=2  [2-strong 1, 2-arc-strong with cut vertex 0]   u=1  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 1]  u by #sole entries (0,1,2,3+): 1 0 0 0
+   k=3  t=1  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=4  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=5  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=6  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=7  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=8  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=9  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=10  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=11  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=12  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=13  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=14  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=15  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=16  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=17  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=18  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=19  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=20  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=21  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=22  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=23  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=24  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=25  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=26  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=27  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=28  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=29  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=30  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=31  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=32  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=33  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=34  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=35  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=36  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=37  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=38  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=39  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=40  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..60): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 0 0 0 0 0 0 0
+n= 6 classes(hc<=40)=35   F(2n-6)=8 F(2n-9)=2 2F(2n-11)=2
+   k=1  t=8  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=5  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=11  [2-strong 0, 2-arc-strong with cut vertex 0]   u=2  [lambda=1 2, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 2 0 0
+   k=4  t=6  [2-strong 1, 2-arc-strong with cut vertex 0]   u=3  [lambda=1 2, 2-arc-strong cut vertex 0, 2-strong 1]  u by #sole entries (0,1,2,3+): 1 2 0 0
+   k=5  t=5  [2-strong 4, 2-arc-strong with cut vertex 0]   u=4  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 4]  u by #sole entries (0,1,2,3+): 4 0 0 0
+   k=6  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=7  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=8  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=9  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=10  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=11  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=12  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=13  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=14  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=15  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=16  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=17  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=18  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=19  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=20  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=21  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=22  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=23  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=24  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=25  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=26  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=27  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=28  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=29  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=30  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=31  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=32  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=33  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=34  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=35  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=36  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=37  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=38  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=39  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=40  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..60): 0 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 4 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 2
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 2
+n= 7 classes(hc<=40)=353   F(2n-6)=21 F(2n-9)=5 2F(2n-11)=4
+   k=1  t=21  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=18  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=38  [2-strong 0, 2-arc-strong with cut vertex 0]   u=5  [lambda=1 5, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 3 2 0
+   k=4  t=25  [2-strong 0, 2-arc-strong with cut vertex 0]   u=4  [lambda=1 4, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 2 2 0
+   k=5  t=38  [2-strong 0, 2-arc-strong with cut vertex 0]   u=4  [lambda=1 4, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 4 0 0
+   k=6  t=33  [2-strong 0, 2-arc-strong with cut vertex 0]   u=12  [lambda=1 12, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 12 0 0
+   k=7  t=24  [2-strong 0, 2-arc-strong with cut vertex 0]   u=9  [lambda=1 9, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 9 0 0
+   k=8  t=29  [2-strong 6, 2-arc-strong with cut vertex 0]   u=17  [lambda=1 11, 2-arc-strong cut vertex 0, 2-strong 6]  u by #sole entries (0,1,2,3+): 6 11 0 0
+   k=9  t=29  [2-strong 5, 2-arc-strong with cut vertex 1]   u=15  [lambda=1 9, 2-arc-strong cut vertex 1, 2-strong 5]  u by #sole entries (0,1,2,3+): 6 9 0 0
+   k=10  t=14  [2-strong 8, 2-arc-strong with cut vertex 0]   u=11  [lambda=1 3, 2-arc-strong cut vertex 0, 2-strong 8]  u by #sole entries (0,1,2,3+): 8 3 0 0
+   k=11  t=30  [2-strong 23, 2-arc-strong with cut vertex 0]   u=26  [lambda=1 3, 2-arc-strong cut vertex 0, 2-strong 23]  u by #sole entries (0,1,2,3+): 23 3 0 0
+   k=12  t=22  [2-strong 15, 2-arc-strong with cut vertex 0]   u=18  [lambda=1 3, 2-arc-strong cut vertex 0, 2-strong 15]  u by #sole entries (0,1,2,3+): 15 3 0 0
+   k=13  t=10  [2-strong 9, 2-arc-strong with cut vertex 0]   u=9  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 9]  u by #sole entries (0,1,2,3+): 9 0 0 0
+   k=14  t=9  [2-strong 9, 2-arc-strong with cut vertex 0]   u=9  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 9]  u by #sole entries (0,1,2,3+): 9 0 0 0
+   k=15  t=10  [2-strong 8, 2-arc-strong with cut vertex 0]   u=8  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 8]  u by #sole entries (0,1,2,3+): 8 0 0 0
+   k=16  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=17  t=2  [2-strong 2, 2-arc-strong with cut vertex 0]   u=2  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 2]  u by #sole entries (0,1,2,3+): 2 0 0 0
+   k=18  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=19  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=20  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=21  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=22  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=23  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=24  t=1  [2-strong 1, 2-arc-strong with cut vertex 0]   u=1  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 1]  u by #sole entries (0,1,2,3+): 1 0 0 0
+   k=25  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=26  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=27  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=28  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=29  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=30  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=31  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=32  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=33  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=34  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=35  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=36  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=37  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=38  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=39  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=40  t=0  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..60): 0 63 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 63 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 2
+   core[k=3] first minimal set |D|=6 e_u(D)=3 : 3
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 2
+   core[k=4] first minimal set |D|=6 e_u(D)=4 : 2
+   core[k=5] first minimal set |D|=6 e_u(D)=5 : 4
+   core[k=6] first minimal set |D|=6 e_u(D)=6 : 12
+   core[k=7] first minimal set |D|=6 e_u(D)=7 : 9
+   core[k=8] first minimal set |D|=6 e_u(D)=8 : 11
+   core[k=9] first minimal set |D|=6 e_u(D)=9 : 9
+   core[k=10] first minimal set |D|=6 e_u(D)=10 : 3
+   core[k=11] first minimal set |D|=6 e_u(D)=11 : 3
+   core[k=12] first minimal set |D|=6 e_u(D)=12 : 3
+n= 8 classes(hc<=40)=5524   F(2n-6)=55 F(2n-9)=13 2F(2n-11)=10
+   k=1  t=55  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=60  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=124  [2-strong 0, 2-arc-strong with cut vertex 0]   u=13  [lambda=1 13, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 6 7 0
+   k=4  t=91  [2-strong 0, 2-arc-strong with cut vertex 0]   u=10  [lambda=1 10, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 4 6 0
+   k=5  t=138  [2-strong 0, 2-arc-strong with cut vertex 0]   u=9  [lambda=1 9, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 5 4 0
+   k=6  t=128  [2-strong 0, 2-arc-strong with cut vertex 0]   u=28  [lambda=1 28, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 16 12 0
+   k=7  t=118  [2-strong 0, 2-arc-strong with cut vertex 0]   u=18  [lambda=1 18, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 9 9 0
+   k=8  t=116  [2-strong 0, 2-arc-strong with cut vertex 0]   u=24  [lambda=1 24, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 13 11 0
+   k=9  t=234  [2-strong 0, 2-arc-strong with cut vertex 4]   u=47  [lambda=1 43, 2-arc-strong cut vertex 4, 2-strong 0]  u by #sole entries (0,1,2,3+): 4 34 9 0
+   k=10  t=117  [2-strong 0, 2-arc-strong with cut vertex 0]   u=30  [lambda=1 30, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 27 3 0
+   k=11  t=168  [2-strong 0, 2-arc-strong with cut vertex 0]   u=36  [lambda=1 36, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 33 3 0
+   k=12  t=172  [2-strong 0, 2-arc-strong with cut vertex 4]   u=61  [lambda=1 57, 2-arc-strong cut vertex 4, 2-strong 0]  u by #sole entries (0,1,2,3+): 4 54 3 0
+   k=13  t=186  [2-strong 5, 2-arc-strong with cut vertex 0]   u=61  [lambda=1 56, 2-arc-strong cut vertex 0, 2-strong 5]  u by #sole entries (0,1,2,3+): 5 56 0 0
+   k=14  t=161  [2-strong 14, 2-arc-strong with cut vertex 0]   u=74  [lambda=1 60, 2-arc-strong cut vertex 0, 2-strong 14]  u by #sole entries (0,1,2,3+): 14 60 0 0
+   k=15  t=207  [2-strong 10, 2-arc-strong with cut vertex 2]   u=80  [lambda=1 68, 2-arc-strong cut vertex 2, 2-strong 10]  u by #sole entries (0,1,2,3+): 12 68 0 0
+   k=16  t=186  [2-strong 8, 2-arc-strong with cut vertex 0]   u=83  [lambda=1 75, 2-arc-strong cut vertex 0, 2-strong 8]  u by #sole entries (0,1,2,3+): 8 75 0 0
+   k=17  t=135  [2-strong 19, 2-arc-strong with cut vertex 0]   u=70  [lambda=1 51, 2-arc-strong cut vertex 0, 2-strong 19]  u by #sole entries (0,1,2,3+): 19 51 0 0
+   k=18  t=177  [2-strong 34, 2-arc-strong with cut vertex 0]   u=96  [lambda=1 62, 2-arc-strong cut vertex 0, 2-strong 34]  u by #sole entries (0,1,2,3+): 34 62 0 0
+   k=19  t=144  [2-strong 26, 2-arc-strong with cut vertex 0]   u=83  [lambda=1 57, 2-arc-strong cut vertex 0, 2-strong 26]  u by #sole entries (0,1,2,3+): 26 57 0 0
+   k=20  t=122  [2-strong 14, 2-arc-strong with cut vertex 0]   u=63  [lambda=1 49, 2-arc-strong cut vertex 0, 2-strong 14]  u by #sole entries (0,1,2,3+): 14 49 0 0
+   k=21  t=228  [2-strong 42, 2-arc-strong with cut vertex 0]   u=128  [lambda=1 86, 2-arc-strong cut vertex 0, 2-strong 42]  u by #sole entries (0,1,2,3+): 42 86 0 0
+   k=22  t=157  [2-strong 51, 2-arc-strong with cut vertex 0]   u=102  [lambda=1 51, 2-arc-strong cut vertex 0, 2-strong 51]  u by #sole entries (0,1,2,3+): 51 51 0 0
+   k=23  t=154  [2-strong 65, 2-arc-strong with cut vertex 0]   u=106  [lambda=1 41, 2-arc-strong cut vertex 0, 2-strong 65]  u by #sole entries (0,1,2,3+): 65 41 0 0
+   k=24  t=142  [2-strong 38, 2-arc-strong with cut vertex 0]   u=89  [lambda=1 51, 2-arc-strong cut vertex 0, 2-strong 38]  u by #sole entries (0,1,2,3+): 38 51 0 0
+   k=25  t=114  [2-strong 52, 2-arc-strong with cut vertex 0]   u=81  [lambda=1 29, 2-arc-strong cut vertex 0, 2-strong 52]  u by #sole entries (0,1,2,3+): 52 29 0 0
+   k=26  t=139  [2-strong 81, 2-arc-strong with cut vertex 0]   u=109  [lambda=1 28, 2-arc-strong cut vertex 0, 2-strong 81]  u by #sole entries (0,1,2,3+): 81 28 0 0
+   k=27  t=160  [2-strong 93, 2-arc-strong with cut vertex 0]   u=124  [lambda=1 31, 2-arc-strong cut vertex 0, 2-strong 93]  u by #sole entries (0,1,2,3+): 93 31 0 0
+   k=28  t=147  [2-strong 91, 2-arc-strong with cut vertex 0]   u=119  [lambda=1 28, 2-arc-strong cut vertex 0, 2-strong 91]  u by #sole entries (0,1,2,3+): 91 28 0 0
+   k=29  t=150  [2-strong 118, 2-arc-strong with cut vertex 0]   u=132  [lambda=1 14, 2-arc-strong cut vertex 0, 2-strong 118]  u by #sole entries (0,1,2,3+): 118 14 0 0
+   k=30  t=127  [2-strong 77, 2-arc-strong with cut vertex 0]   u=102  [lambda=1 25, 2-arc-strong cut vertex 0, 2-strong 77]  u by #sole entries (0,1,2,3+): 77 25 0 0
+   k=31  t=118  [2-strong 92, 2-arc-strong with cut vertex 0]   u=104  [lambda=1 12, 2-arc-strong cut vertex 0, 2-strong 92]  u by #sole entries (0,1,2,3+): 92 12 0 0
+   k=32  t=116  [2-strong 97, 2-arc-strong with cut vertex 0]   u=106  [lambda=1 9, 2-arc-strong cut vertex 0, 2-strong 97]  u by #sole entries (0,1,2,3+): 97 9 0 0
+   k=33  t=164  [2-strong 145, 2-arc-strong with cut vertex 0]   u=152  [lambda=1 7, 2-arc-strong cut vertex 0, 2-strong 145]  u by #sole entries (0,1,2,3+): 145 7 0 0
+   k=34  t=132  [2-strong 124, 2-arc-strong with cut vertex 0]   u=128  [lambda=1 4, 2-arc-strong cut vertex 0, 2-strong 124]  u by #sole entries (0,1,2,3+): 124 4 0 0
+   k=35  t=118  [2-strong 114, 2-arc-strong with cut vertex 0]   u=116  [lambda=1 2, 2-arc-strong cut vertex 0, 2-strong 114]  u by #sole entries (0,1,2,3+): 114 2 0 0
+   k=36  t=115  [2-strong 103, 2-arc-strong with cut vertex 0]   u=109  [lambda=1 6, 2-arc-strong cut vertex 0, 2-strong 103]  u by #sole entries (0,1,2,3+): 103 6 0 0
+   k=37  t=114  [2-strong 97, 2-arc-strong with cut vertex 0]   u=103  [lambda=1 6, 2-arc-strong cut vertex 0, 2-strong 97]  u by #sole entries (0,1,2,3+): 97 6 0 0
+   k=38  t=117  [2-strong 115, 2-arc-strong with cut vertex 0]   u=116  [lambda=1 1, 2-arc-strong cut vertex 0, 2-strong 115]  u by #sole entries (0,1,2,3+): 115 1 0 0
+   k=39  t=95  [2-strong 93, 2-arc-strong with cut vertex 0]   u=94  [lambda=1 1, 2-arc-strong cut vertex 0, 2-strong 93]  u by #sole entries (0,1,2,3+): 93 1 0 0
+   k=40  t=78  [2-strong 78, 2-arc-strong with cut vertex 0]   u=78  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 78]  u by #sole entries (0,1,2,3+): 78 0 0 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..60): 0 1178 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 1178 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 4
+   core[k=3] first minimal set |D|=6 e_u(D)=3 : 3
+   core[k=3] first minimal set |D|=7 e_u(D)=3 : 6
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 4
+   core[k=4] first minimal set |D|=6 e_u(D)=4 : 2
+   core[k=4] first minimal set |D|=7 e_u(D)=4 : 4
+   core[k=5] first minimal set |D|=6 e_u(D)=5 : 4
+   core[k=5] first minimal set |D|=7 e_u(D)=5 : 5
+   core[k=6] first minimal set |D|=6 e_u(D)=6 : 12
+   core[k=6] first minimal set |D|=7 e_u(D)=6 : 16
+   core[k=7] first minimal set |D|=6 e_u(D)=7 : 9
+   core[k=7] first minimal set |D|=7 e_u(D)=7 : 9
+   core[k=8] first minimal set |D|=6 e_u(D)=8 : 11
+   core[k=8] first minimal set |D|=7 e_u(D)=8 : 13
+   core[k=9] first minimal set |D|=6 e_u(D)=9 : 9
+   core[k=9] first minimal set |D|=7 e_u(D)=9 : 34
+   core[k=10] first minimal set |D|=6 e_u(D)=10 : 3
+   core[k=10] first minimal set |D|=7 e_u(D)=10 : 27
+   core[k=11] first minimal set |D|=6 e_u(D)=11 : 3
+   core[k=11] first minimal set |D|=7 e_u(D)=11 : 33
+   core[k=12] first minimal set |D|=6 e_u(D)=12 : 3
+   core[k=12] first minimal set |D|=7 e_u(D)=12 : 54
+   core[k=13] first minimal set |D|=7 e_u(D)=13 : 56
+   core[k=14] first minimal set |D|=7 e_u(D)=14 : 60
+   core[k=15] first minimal set |D|=7 e_u(D)=15 : 68
+   core[k=16] first minimal set |D|=7 e_u(D)=16 : 75
+   core[k=17] first minimal set |D|=7 e_u(D)=17 : 51
+   core[k=18] first minimal set |D|=7 e_u(D)=18 : 62
+   core[k=19] first minimal set |D|=7 e_u(D)=19 : 57
+   core[k=20] first minimal set |D|=7 e_u(D)=20 : 49
+   core[k=21] first minimal set |D|=7 e_u(D)=21 : 86
+   core[k=22] first minimal set |D|=7 e_u(D)=22 : 51
+   core[k=23] first minimal set |D|=7 e_u(D)=23 : 41
+   core[k=24] first minimal set |D|=7 e_u(D)=24 : 51
+   core[k=25] first minimal set |D|=7 e_u(D)=25 : 29
+   core[k=26] first minimal set |D|=7 e_u(D)=26 : 28
+   core[k=27] first minimal set |D|=7 e_u(D)=27 : 31
+   core[k=28] first minimal set |D|=7 e_u(D)=28 : 28
+   core[k=29] first minimal set |D|=7 e_u(D)=29 : 14
+   core[k=30] first minimal set |D|=7 e_u(D)=30 : 25
+   core[k=31] first minimal set |D|=7 e_u(D)=31 : 12
+   core[k=32] first minimal set |D|=7 e_u(D)=32 : 9
+   core[k=33] first minimal set |D|=7 e_u(D)=33 : 7
+   core[k=34] first minimal set |D|=7 e_u(D)=34 : 4
+   core[k=35] first minimal set |D|=7 e_u(D)=35 : 2
+   core[k=36] first minimal set |D|=7 e_u(D)=36 : 6
+   core[k=37] first minimal set |D|=7 e_u(D)=37 : 6
+   core[k=38] first minimal set |D|=7 e_u(D)=38 : 1
+   core[k=39] first minimal set |D|=7 e_u(D)=39 : 1
+n= 9 classes(hc<=40)=35355   F(2n-6)=144 F(2n-9)=34 2F(2n-11)=26
+   k=1  t=144  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=191  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=390  [2-strong 0, 2-arc-strong with cut vertex 0]   u=34  [lambda=1 34, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 14 20 0
+   k=4  t=315  [2-strong 0, 2-arc-strong with cut vertex 0]   u=26  [lambda=1 26, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 10 16 0
+   k=5  t=466  [2-strong 0, 2-arc-strong with cut vertex 0]   u=23  [lambda=1 23, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 10 13 0
+   k=6  t=484  [2-strong 0, 2-arc-strong with cut vertex 0]   u=79  [lambda=1 79, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 39 40 0
+   k=7  t=406  [2-strong 0, 2-arc-strong with cut vertex 0]   u=45  [lambda=1 45, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 18 27 0
+   k=8  t=437  [2-strong 0, 2-arc-strong with cut vertex 0]   u=67  [lambda=1 67, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 32 35 0
+   k=9  t=864  [2-strong 0, 2-arc-strong with cut vertex 9]   u=128  [lambda=1 119, 2-arc-strong cut vertex 9, 2-strong 0]  u by #sole entries (0,1,2,3+): 9 67 52 0
+   k=10  t=507  [2-strong 0, 2-arc-strong with cut vertex 0]   u=69  [lambda=1 69, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 36 33 0
+   k=11  t=655  [2-strong 0, 2-arc-strong with cut vertex 0]   u=76  [lambda=1 76, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 37 39 0
+   k=12  t=741  [2-strong 0, 2-arc-strong with cut vertex 12]   u=170  [lambda=1 158, 2-arc-strong cut vertex 12, 2-strong 0]  u by #sole entries (0,1,2,3+): 12 98 60 0
+   k=13  t=719  [2-strong 0, 2-arc-strong with cut vertex 0]   u=113  [lambda=1 113, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 57 56 0
+   k=14  t=656  [2-strong 0, 2-arc-strong with cut vertex 0]   u=143  [lambda=1 143, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 83 60 0
+   k=15  t=1064  [2-strong 0, 2-arc-strong with cut vertex 12]   u=227  [lambda=1 215, 2-arc-strong cut vertex 12, 2-strong 0]  u by #sole entries (0,1,2,3+): 12 147 68 0
+   k=16  t=824  [2-strong 0, 2-arc-strong with cut vertex 4]   u=220  [lambda=1 216, 2-arc-strong cut vertex 4, 2-strong 0]  u by #sole entries (0,1,2,3+): 4 141 75 0
+   k=17  t=804  [2-strong 0, 2-arc-strong with cut vertex 0]   u=150  [lambda=1 150, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 99 51 0
+   k=18  t=948  [2-strong 0, 2-arc-strong with cut vertex 23]   u=250  [lambda=1 227, 2-arc-strong cut vertex 23, 2-strong 0]  u by #sole entries (0,1,2,3+): 23 165 62 0
+   k=19  t=954  [2-strong 1, 2-arc-strong with cut vertex 0]   u=241  [lambda=1 240, 2-arc-strong cut vertex 0, 2-strong 1]  u by #sole entries (0,1,2,3+): 1 183 57 0
+   k=20  t=822  [2-strong 4, 2-arc-strong with cut vertex 4]   u=233  [lambda=1 225, 2-arc-strong cut vertex 4, 2-strong 4]  u by #sole entries (0,1,2,3+): 8 176 49 0
+   k=21  t=995  [2-strong 10, 2-arc-strong with cut vertex 18]   u=301  [lambda=1 273, 2-arc-strong cut vertex 18, 2-strong 10]  u by #sole entries (0,1,2,3+): 28 187 86 0
+   k=22  t=983  [2-strong 12, 2-arc-strong with cut vertex 0]   u=301  [lambda=1 289, 2-arc-strong cut vertex 0, 2-strong 12]  u by #sole entries (0,1,2,3+): 12 238 51 0
+   k=23  t=1122  [2-strong 10, 2-arc-strong with cut vertex 0]   u=244  [lambda=1 234, 2-arc-strong cut vertex 0, 2-strong 10]  u by #sole entries (0,1,2,3+): 10 193 41 0
+   k=24  t=999  [2-strong 27, 2-arc-strong with cut vertex 22]   u=359  [lambda=1 310, 2-arc-strong cut vertex 22, 2-strong 27]  u by #sole entries (0,1,2,3+): 49 259 51 0
+   k=25  t=1115  [2-strong 27, 2-arc-strong with cut vertex 1]   u=318  [lambda=1 290, 2-arc-strong cut vertex 1, 2-strong 27]  u by #sole entries (0,1,2,3+): 28 261 29 0
+   k=26  t=911  [2-strong 33, 2-arc-strong with cut vertex 0]   u=309  [lambda=1 276, 2-arc-strong cut vertex 0, 2-strong 33]  u by #sole entries (0,1,2,3+): 33 248 28 0
+   k=27  t=1136  [2-strong 45, 2-arc-strong with cut vertex 22]   u=373  [lambda=1 306, 2-arc-strong cut vertex 22, 2-strong 45]  u by #sole entries (0,1,2,3+): 67 275 31 0
+   k=28  t=1053  [2-strong 66, 2-arc-strong with cut vertex 0]   u=412  [lambda=1 346, 2-arc-strong cut vertex 0, 2-strong 66]  u by #sole entries (0,1,2,3+): 66 318 28 0
+   k=29  t=1181  [2-strong 38, 2-arc-strong with cut vertex 0]   u=330  [lambda=1 292, 2-arc-strong cut vertex 0, 2-strong 38]  u by #sole entries (0,1,2,3+): 38 278 14 0
+   k=30  t=1149  [2-strong 56, 2-arc-strong with cut vertex 6]   u=474  [lambda=1 412, 2-arc-strong cut vertex 6, 2-strong 56]  u by #sole entries (0,1,2,3+): 62 387 25 0
+   k=31  t=1160  [2-strong 34, 2-arc-strong with cut vertex 0]   u=385  [lambda=1 351, 2-arc-strong cut vertex 0, 2-strong 34]  u by #sole entries (0,1,2,3+): 34 339 12 0
+   k=32  t=1075  [2-strong 77, 2-arc-strong with cut vertex 0]   u=441  [lambda=1 364, 2-arc-strong cut vertex 0, 2-strong 77]  u by #sole entries (0,1,2,3+): 77 355 9 0
+   k=33  t=1332  [2-strong 98, 2-arc-strong with cut vertex 8]   u=466  [lambda=1 360, 2-arc-strong cut vertex 8, 2-strong 98]  u by #sole entries (0,1,2,3+): 106 353 7 0
+   k=34  t=1171  [2-strong 98, 2-arc-strong with cut vertex 0]   u=515  [lambda=1 417, 2-arc-strong cut vertex 0, 2-strong 98]  u by #sole entries (0,1,2,3+): 98 413 4 0
+   k=35  t=1067  [2-strong 88, 2-arc-strong with cut vertex 0]   u=488  [lambda=1 400, 2-arc-strong cut vertex 0, 2-strong 88]  u by #sole entries (0,1,2,3+): 88 398 2 0
+   k=36  t=1271  [2-strong 114, 2-arc-strong with cut vertex 6]   u=582  [lambda=1 462, 2-arc-strong cut vertex 6, 2-strong 114]  u by #sole entries (0,1,2,3+): 120 456 6 0
+   k=37  t=1567  [2-strong 88, 2-arc-strong with cut vertex 0]   u=568  [lambda=1 480, 2-arc-strong cut vertex 0, 2-strong 88]  u by #sole entries (0,1,2,3+): 88 474 6 0
+   k=38  t=1243  [2-strong 87, 2-arc-strong with cut vertex 0]   u=554  [lambda=1 467, 2-arc-strong cut vertex 0, 2-strong 87]  u by #sole entries (0,1,2,3+): 87 466 1 0
+   k=39  t=1292  [2-strong 147, 2-arc-strong with cut vertex 2]   u=626  [lambda=1 477, 2-arc-strong cut vertex 2, 2-strong 147]  u by #sole entries (0,1,2,3+): 149 476 1 0
+   k=40  t=1142  [2-strong 128, 2-arc-strong with cut vertex 0]   u=546  [lambda=1 418, 2-arc-strong cut vertex 0, 2-strong 128]  u by #sole entries (0,1,2,3+): 128 418 0 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..60): 0 9441 4 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 9449 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 10
+   core[k=3] first minimal set |D|=6 e_u(D)=3 : 6
+   core[k=3] first minimal set |D|=7 e_u(D)=3 : 6
+   core[k=3] first minimal set |D|=8 e_u(D)=3 : 12
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 10
+   core[k=4] first minimal set |D|=6 e_u(D)=4 : 4
+   core[k=4] first minimal set |D|=7 e_u(D)=4 : 4
+   core[k=4] first minimal set |D|=8 e_u(D)=4 : 8
+   core[k=5] first minimal set |D|=6 e_u(D)=5 : 8
+   core[k=5] first minimal set |D|=7 e_u(D)=5 : 5
+   core[k=5] first minimal set |D|=8 e_u(D)=5 : 10
+   core[k=6] first minimal set |D|=5 e_u(D)=3 : 2
+   core[k=6] first minimal set |D|=6 e_u(D)=6 : 24
+   core[k=6] first minimal set |D|=7 e_u(D)=6 : 16
+   core[k=6] first minimal set |D|=8 e_u(D)=6 : 37
+   core[k=7] first minimal set |D|=6 e_u(D)=7 : 18
+   core[k=7] first minimal set |D|=7 e_u(D)=7 : 9
+   core[k=7] first minimal set |D|=8 e_u(D)=7 : 18
+   core[k=8] first minimal set |D|=5 e_u(D)=4 : 2
+   core[k=8] first minimal set |D|=6 e_u(D)=8 : 22
+   core[k=8] first minimal set |D|=7 e_u(D)=8 : 13
+   core[k=8] first minimal set |D|=8 e_u(D)=8 : 30
+   core[k=9] first minimal set |D|=5 e_u(D)=3 : 2
+   core[k=9] first minimal set |D|=6 e_u(D)=9 : 18
+   core[k=9] first minimal set |D|=7 e_u(D)=9 : 34
+   core[k=9] first minimal set |D|=8 e_u(D)=9 : 65
+   core[k=10] first minimal set |D|=6 e_u(D)=10 : 6
+   core[k=10] first minimal set |D|=7 e_u(D)=10 : 27
+   core[k=10] first minimal set |D|=8 e_u(D)=10 : 36
+   core[k=11] first minimal set |D|=6 e_u(D)=11 : 6
+   core[k=11] first minimal set |D|=7 e_u(D)=11 : 33
+   core[k=11] first minimal set |D|=8 e_u(D)=11 : 37
+   core[k=12] first minimal set |D|=5 e_u(D)=4 : 2
+   core[k=12] first minimal set |D|=6 e_u(D)=12 : 6
+   core[k=12] first minimal set |D|=7 e_u(D)=12 : 54
+   core[k=12] first minimal set |D|=8 e_u(D)=12 : 96
+   core[k=13] first minimal set |D|=7 e_u(D)=13 : 56
+   core[k=13] first minimal set |D|=8 e_u(D)=13 : 57
+   core[k=14] first minimal set |D|=7 e_u(D)=14 : 60
+   core[k=14] first minimal set |D|=8 e_u(D)=14 : 83
+   core[k=15] first minimal set |D|=7 e_u(D)=15 : 68
+   core[k=15] first minimal set |D|=8 e_u(D)=15 : 147
+   core[k=16] first minimal set |D|=7 e_u(D)=16 : 75
+   core[k=16] first minimal set |D|=8 e_u(D)=16 : 141
+   core[k=17] first minimal set |D|=7 e_u(D)=17 : 51
+   core[k=17] first minimal set |D|=8 e_u(D)=17 : 99
+   core[k=18] first minimal set |D|=7 e_u(D)=18 : 62
+   core[k=18] first minimal set |D|=8 e_u(D)=18 : 165
+   core[k=19] first minimal set |D|=7 e_u(D)=19 : 57
+   core[k=19] first minimal set |D|=8 e_u(D)=19 : 183
+   core[k=20] first minimal set |D|=7 e_u(D)=20 : 49
+   core[k=20] first minimal set |D|=8 e_u(D)=20 : 176
+   core[k=21] first minimal set |D|=7 e_u(D)=21 : 86
+   core[k=21] first minimal set |D|=8 e_u(D)=21 : 187
+   core[k=22] first minimal set |D|=7 e_u(D)=22 : 51
+   core[k=22] first minimal set |D|=8 e_u(D)=22 : 238
+   core[k=23] first minimal set |D|=7 e_u(D)=23 : 41
+   core[k=23] first minimal set |D|=8 e_u(D)=23 : 193
+   core[k=24] first minimal set |D|=7 e_u(D)=24 : 51
+   core[k=24] first minimal set |D|=8 e_u(D)=24 : 259
+   core[k=25] first minimal set |D|=7 e_u(D)=25 : 29
+   core[k=25] first minimal set |D|=8 e_u(D)=25 : 261
+   core[k=26] first minimal set |D|=7 e_u(D)=26 : 28
+   core[k=26] first minimal set |D|=8 e_u(D)=26 : 248
+   core[k=27] first minimal set |D|=7 e_u(D)=27 : 31
+   core[k=27] first minimal set |D|=8 e_u(D)=27 : 275
+   core[k=28] first minimal set |D|=7 e_u(D)=28 : 28
+   core[k=28] first minimal set |D|=8 e_u(D)=28 : 318
+   core[k=29] first minimal set |D|=7 e_u(D)=29 : 14
+   core[k=29] first minimal set |D|=8 e_u(D)=29 : 278
+   core[k=30] first minimal set |D|=7 e_u(D)=30 : 25
+   core[k=30] first minimal set |D|=8 e_u(D)=30 : 387
+   core[k=31] first minimal set |D|=7 e_u(D)=31 : 12
+   core[k=31] first minimal set |D|=8 e_u(D)=31 : 339
+   core[k=32] first minimal set |D|=7 e_u(D)=32 : 9
+   core[k=32] first minimal set |D|=8 e_u(D)=32 : 355
+   core[k=33] first minimal set |D|=7 e_u(D)=33 : 7
+   core[k=33] first minimal set |D|=8 e_u(D)=33 : 353
+   core[k=34] first minimal set |D|=7 e_u(D)=34 : 4
+   core[k=34] first minimal set |D|=8 e_u(D)=34 : 413
+   core[k=35] first minimal set |D|=7 e_u(D)=35 : 2
+   core[k=35] first minimal set |D|=8 e_u(D)=35 : 398
+   core[k=36] first minimal set |D|=7 e_u(D)=36 : 6
+   core[k=36] first minimal set |D|=8 e_u(D)=36 : 456
+   core[k=37] first minimal set |D|=7 e_u(D)=37 : 6
+   core[k=37] first minimal set |D|=8 e_u(D)=37 : 474
+   core[k=38] first minimal set |D|=7 e_u(D)=38 : 1
+   core[k=38] first minimal set |D|=8 e_u(D)=38 : 466
+   core[k=39] first minimal set |D|=7 e_u(D)=39 : 1
+   core[k=39] first minimal set |D|=8 e_u(D)=39 : 476
+   core[k=40] first minimal set |D|=8 e_u(D)=40 : 418
+n=10 classes(hc<=40)=148185   F(2n-6)=377 F(2n-9)=89 2F(2n-11)=68
+   k=1  t=377  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=589  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=1193  [2-strong 0, 2-arc-strong with cut vertex 0]   u=89  [lambda=1 89, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 35 54 0
+   k=4  t=1049  [2-strong 0, 2-arc-strong with cut vertex 0]   u=68  [lambda=1 68, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 26 42 0
+   k=5  t=1500  [2-strong 0, 2-arc-strong with cut vertex 0]   u=60  [lambda=1 60, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 24 36 0
+   k=6  t=1750  [2-strong 0, 2-arc-strong with cut vertex 0]   u=227  [lambda=1 227, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 108 119 0
+   k=7  t=1322  [2-strong 0, 2-arc-strong with cut vertex 0]   u=117  [lambda=1 117, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 45 72 0
+   k=8  t=1583  [2-strong 0, 2-arc-strong with cut vertex 0]   u=191  [lambda=1 191, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 89 102 0
+   k=9  t=3042  [2-strong 0, 2-arc-strong with cut vertex 18]   u=372  [lambda=1 354, 2-arc-strong cut vertex 18, 2-strong 0]  u by #sole entries (0,1,2,3+): 22 179 171 0
+   k=10  t=1982  [2-strong 0, 2-arc-strong with cut vertex 0]   u=190  [lambda=1 190, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 88 102 0
+   k=11  t=2204  [2-strong 0, 2-arc-strong with cut vertex 0]   u=192  [lambda=1 192, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 77 115 0
+   k=12  t=2949  [2-strong 0, 2-arc-strong with cut vertex 24]   u=546  [lambda=1 522, 2-arc-strong cut vertex 24, 2-strong 0]  u by #sole entries (0,1,2,3+): 32 296 218 0
+   k=13  t=2400  [2-strong 0, 2-arc-strong with cut vertex 0]   u=283  [lambda=1 283, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 114 169 0
+   k=14  t=2354  [2-strong 0, 2-arc-strong with cut vertex 0]   u=382  [lambda=1 382, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 179 203 0
+   k=15  t=4114  [2-strong 0, 2-arc-strong with cut vertex 30]   u=659  [lambda=1 629, 2-arc-strong cut vertex 30, 2-strong 0]  u by #sole entries (0,1,2,3+): 30 346 283 0
+   k=16  t=2982  [2-strong 0, 2-arc-strong with cut vertex 8]   u=595  [lambda=1 587, 2-arc-strong cut vertex 8, 2-strong 0]  u by #sole entries (0,1,2,3+): 12 292 291 0
+   k=17  t=2899  [2-strong 0, 2-arc-strong with cut vertex 0]   u=353  [lambda=1 353, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 152 201 0
+   k=18  t=4041  [2-strong 0, 2-arc-strong with cut vertex 73]   u=788  [lambda=1 715, 2-arc-strong cut vertex 73, 2-strong 0]  u by #sole entries (0,1,2,3+): 73 426 289 0
+   k=19  t=3376  [2-strong 0, 2-arc-strong with cut vertex 0]   u=539  [lambda=1 539, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 242 297 0
+   k=20  t=3360  [2-strong 0, 2-arc-strong with cut vertex 20]   u=632  [lambda=1 612, 2-arc-strong cut vertex 20, 2-strong 0]  u by #sole entries (0,1,2,3+): 20 338 274 0
+   k=21  t=3989  [2-strong 0, 2-arc-strong with cut vertex 54]   u=831  [lambda=1 777, 2-arc-strong cut vertex 54, 2-strong 0]  u by #sole entries (0,1,2,3+): 54 418 359 0
+   k=22  t=3806  [2-strong 0, 2-arc-strong with cut vertex 0]   u=703  [lambda=1 703, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 363 340 0
+   k=23  t=4479  [2-strong 0, 2-arc-strong with cut vertex 0]   u=559  [lambda=1 559, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 284 275 0
+   k=24  t=4260  [2-strong 0, 2-arc-strong with cut vertex 114]   u=1042  [lambda=1 928, 2-arc-strong cut vertex 114, 2-strong 0]  u by #sole entries (0,1,2,3+): 114 567 361 0
+   k=25  t=4526  [2-strong 0, 2-arc-strong with cut vertex 8]   u=741  [lambda=1 733, 2-arc-strong cut vertex 8, 2-strong 0]  u by #sole entries (0,1,2,3+): 8 414 319 0
+   k=26  t=3858  [2-strong 0, 2-arc-strong with cut vertex 0]   u=759  [lambda=1 759, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 455 304 0
+   k=27  t=5409  [2-strong 0, 2-arc-strong with cut vertex 107]   u=1089  [lambda=1 982, 2-arc-strong cut vertex 107, 2-strong 0]  u by #sole entries (0,1,2,3+): 107 645 337 0
+   k=28  t=4421  [2-strong 0, 2-arc-strong with cut vertex 36]   u=1040  [lambda=1 1004, 2-arc-strong cut vertex 36, 2-strong 0]  u by #sole entries (0,1,2,3+): 36 630 374 0
+   k=29  t=5426  [2-strong 0, 2-arc-strong with cut vertex 0]   u=837  [lambda=1 837, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 531 306 0
+   k=30  t=4923  [2-strong 1, 2-arc-strong with cut vertex 88]   u=1288  [lambda=1 1199, 2-arc-strong cut vertex 88, 2-strong 1]  u by #sole entries (0,1,2,3+): 89 762 437 0
+   k=31  t=5343  [2-strong 4, 2-arc-strong with cut vertex 0]   u=1005  [lambda=1 1001, 2-arc-strong cut vertex 0, 2-strong 4]  u by #sole entries (0,1,2,3+): 4 638 363 0
+   k=32  t=4810  [2-strong 12, 2-arc-strong with cut vertex 44]   u=1142  [lambda=1 1086, 2-arc-strong cut vertex 44, 2-strong 12]  u by #sole entries (0,1,2,3+): 56 713 373 0
+   k=33  t=6392  [2-strong 15, 2-arc-strong with cut vertex 82]   u=1273  [lambda=1 1176, 2-arc-strong cut vertex 82, 2-strong 15]  u by #sole entries (0,1,2,3+): 97 809 367 0
+   k=34  t=5207  [2-strong 15, 2-arc-strong with cut vertex 0]   u=1329  [lambda=1 1314, 2-arc-strong cut vertex 0, 2-strong 15]  u by #sole entries (0,1,2,3+): 15 893 421 0
+   k=35  t=5252  [2-strong 18, 2-arc-strong with cut vertex 18]   u=1303  [lambda=1 1267, 2-arc-strong cut vertex 18, 2-strong 18]  u by #sole entries (0,1,2,3+): 36 865 402 0
+   k=36  t=5867  [2-strong 26, 2-arc-strong with cut vertex 163]   u=1660  [lambda=1 1471, 2-arc-strong cut vertex 163, 2-strong 26]  u by #sole entries (0,1,2,3+): 189 1003 468 0
+   k=37  t=6964  [2-strong 52, 2-arc-strong with cut vertex 0]   u=1467  [lambda=1 1415, 2-arc-strong cut vertex 0, 2-strong 52]  u by #sole entries (0,1,2,3+): 52 929 486 0
+   k=38  t=5861  [2-strong 20, 2-arc-strong with cut vertex 0]   u=1584  [lambda=1 1564, 2-arc-strong cut vertex 0, 2-strong 20]  u by #sole entries (0,1,2,3+): 20 1096 468 0
+   k=39  t=6438  [2-strong 48, 2-arc-strong with cut vertex 116]   u=1694  [lambda=1 1530, 2-arc-strong cut vertex 116, 2-strong 48]  u by #sole entries (0,1,2,3+): 164 1052 478 0
+   k=40  t=5888  [2-strong 58, 2-arc-strong with cut vertex 34]   u=1623  [lambda=1 1531, 2-arc-strong cut vertex 34, 2-strong 58]  u by #sole entries (0,1,2,3+): 92 1113 418 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..60): 0 27748 83 99 12 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 27946 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 26
+   core[k=3] first minimal set |D|=6 e_u(D)=3 : 15
+   core[k=3] first minimal set |D|=7 e_u(D)=3 : 12
+   core[k=3] first minimal set |D|=8 e_u(D)=3 : 12
+   core[k=3] first minimal set |D|=9 e_u(D)=3 : 24
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 26
+   core[k=4] first minimal set |D|=6 e_u(D)=4 : 10
+   core[k=4] first minimal set |D|=7 e_u(D)=4 : 8
+   core[k=4] first minimal set |D|=8 e_u(D)=4 : 8
+   core[k=4] first minimal set |D|=9 e_u(D)=4 : 16
+   core[k=5] first minimal set |D|=6 e_u(D)=5 : 20
+   core[k=5] first minimal set |D|=7 e_u(D)=5 : 10
+   core[k=5] first minimal set |D|=8 e_u(D)=5 : 10
+   core[k=5] first minimal set |D|=9 e_u(D)=5 : 20
+   core[k=6] first minimal set |D|=5 e_u(D)=3 : 12
+   core[k=6] first minimal set |D|=6 e_u(D)=3 : 3
+   core[k=6] first minimal set |D|=6 e_u(D)=6 : 60
+   core[k=6] first minimal set |D|=7 e_u(D)=6 : 32
+   core[k=6] first minimal set |D|=8 e_u(D)=6 : 37
+   core[k=6] first minimal set |D|=9 e_u(D)=6 : 83
+   core[k=7] first minimal set |D|=6 e_u(D)=7 : 45
+   core[k=7] first minimal set |D|=7 e_u(D)=7 : 18
+   core[k=7] first minimal set |D|=8 e_u(D)=7 : 18
+   core[k=7] first minimal set |D|=9 e_u(D)=7 : 36
+   core[k=8] first minimal set |D|=5 e_u(D)=4 : 12
+   core[k=8] first minimal set |D|=6 e_u(D)=4 : 2
+   core[k=8] first minimal set |D|=6 e_u(D)=8 : 55
+   core[k=8] first minimal set |D|=7 e_u(D)=8 : 26
+   core[k=8] first minimal set |D|=8 e_u(D)=8 : 30
+   core[k=8] first minimal set |D|=9 e_u(D)=8 : 66
+   core[k=9] first minimal set |D|=5 e_u(D)=3 : 20
+   core[k=9] first minimal set |D|=6 e_u(D)=3 : 3
+   core[k=9] first minimal set |D|=6 e_u(D)=9 : 45
+   core[k=9] first minimal set |D|=7 e_u(D)=9 : 68
+   core[k=9] first minimal set |D|=8 e_u(D)=9 : 65
+   core[k=9] first minimal set |D|=9 e_u(D)=9 : 153
+   core[k=10] first minimal set |D|=6 e_u(D)=5 : 4
+   core[k=10] first minimal set |D|=6 e_u(D)=10 : 15
+   core[k=10] first minimal set |D|=7 e_u(D)=10 : 54
+   core[k=10] first minimal set |D|=8 e_u(D)=10 : 36
+   core[k=10] first minimal set |D|=9 e_u(D)=10 : 81
+   core[k=11] first minimal set |D|=6 e_u(D)=11 : 15
+   core[k=11] first minimal set |D|=7 e_u(D)=11 : 66
+   core[k=11] first minimal set |D|=8 e_u(D)=11 : 37
+   core[k=11] first minimal set |D|=9 e_u(D)=11 : 74
+   core[k=12] first minimal set |D|=5 e_u(D)=3 : 6
+   core[k=12] first minimal set |D|=5 e_u(D)=4 : 20
+   core[k=12] first minimal set |D|=6 e_u(D)=4 : 2
+   core[k=12] first minimal set |D|=6 e_u(D)=6 : 12
+   core[k=12] first minimal set |D|=6 e_u(D)=12 : 15
+   core[k=12] first minimal set |D|=7 e_u(D)=12 : 108
+   core[k=12] first minimal set |D|=8 e_u(D)=12 : 96
+   core[k=12] first minimal set |D|=9 e_u(D)=12 : 263
+   core[k=13] first minimal set |D|=7 e_u(D)=13 : 112
+   core[k=13] first minimal set |D|=8 e_u(D)=13 : 57
+   core[k=13] first minimal set |D|=9 e_u(D)=13 : 114
+   core[k=14] first minimal set |D|=6 e_u(D)=7 : 9
+   core[k=14] first minimal set |D|=7 e_u(D)=14 : 120
+   core[k=14] first minimal set |D|=8 e_u(D)=14 : 83
+   core[k=14] first minimal set |D|=9 e_u(D)=14 : 170
+   core[k=15] first minimal set |D|=5 e_u(D)=3 : 2
+   core[k=15] first minimal set |D|=6 e_u(D)=5 : 4
+   core[k=15] first minimal set |D|=7 e_u(D)=15 : 136
+   core[k=15] first minimal set |D|=8 e_u(D)=15 : 147
+   core[k=15] first minimal set |D|=9 e_u(D)=15 : 340
+   core[k=16] first minimal set |D|=5 e_u(D)=4 : 6
+   core[k=16] first minimal set |D|=6 e_u(D)=8 : 11
+   core[k=16] first minimal set |D|=7 e_u(D)=16 : 150
+   core[k=16] first minimal set |D|=8 e_u(D)=16 : 141
+   core[k=16] first minimal set |D|=9 e_u(D)=16 : 279
+   core[k=17] first minimal set |D|=7 e_u(D)=17 : 102
+   core[k=17] first minimal set |D|=8 e_u(D)=17 : 99
+   core[k=17] first minimal set |D|=9 e_u(D)=17 : 152
+   core[k=18] first minimal set |D|=6 e_u(D)=6 : 12
+   core[k=18] first minimal set |D|=6 e_u(D)=9 : 9
+   core[k=18] first minimal set |D|=7 e_u(D)=18 : 124
+   core[k=18] first minimal set |D|=8 e_u(D)=18 : 165
+   core[k=18] first minimal set |D|=9 e_u(D)=18 : 405
+   core[k=19] first minimal set |D|=7 e_u(D)=19 : 114
+   core[k=19] first minimal set |D|=8 e_u(D)=19 : 183
+   core[k=19] first minimal set |D|=9 e_u(D)=19 : 242
+   core[k=20] first minimal set |D|=5 e_u(D)=4 : 2
+   core[k=20] first minimal set |D|=6 e_u(D)=10 : 3
+   core[k=20] first minimal set |D|=7 e_u(D)=20 : 98
+   core[k=20] first minimal set |D|=8 e_u(D)=20 : 176
+   core[k=20] first minimal set |D|=9 e_u(D)=20 : 333
+   core[k=21] first minimal set |D|=6 e_u(D)=7 : 9
+   core[k=21] first minimal set |D|=7 e_u(D)=21 : 172
+   core[k=21] first minimal set |D|=8 e_u(D)=21 : 187
+   core[k=21] first minimal set |D|=9 e_u(D)=21 : 409
+   core[k=22] first minimal set |D|=6 e_u(D)=11 : 3
+   core[k=22] first minimal set |D|=7 e_u(D)=22 : 102
+   core[k=22] first minimal set |D|=8 e_u(D)=22 : 238
+   core[k=22] first minimal set |D|=9 e_u(D)=22 : 360
+   core[k=23] first minimal set |D|=7 e_u(D)=23 : 82
+   core[k=23] first minimal set |D|=8 e_u(D)=23 : 193
+   core[k=23] first minimal set |D|=9 e_u(D)=23 : 284
+   core[k=24] first minimal set |D|=6 e_u(D)=8 : 11
+   core[k=24] first minimal set |D|=6 e_u(D)=12 : 3
+   core[k=24] first minimal set |D|=7 e_u(D)=24 : 102
+   core[k=24] first minimal set |D|=8 e_u(D)=24 : 259
+   core[k=24] first minimal set |D|=9 e_u(D)=24 : 553
+   core[k=25] first minimal set |D|=7 e_u(D)=25 : 58
+   core[k=25] first minimal set |D|=8 e_u(D)=25 : 261
+   core[k=25] first minimal set |D|=9 e_u(D)=25 : 414
+   core[k=26] first minimal set |D|=7 e_u(D)=26 : 56
+   core[k=26] first minimal set |D|=8 e_u(D)=26 : 248
+   core[k=26] first minimal set |D|=9 e_u(D)=26 : 455
+   core[k=27] first minimal set |D|=6 e_u(D)=9 : 9
+   core[k=27] first minimal set |D|=7 e_u(D)=27 : 62
+   core[k=27] first minimal set |D|=8 e_u(D)=27 : 275
+   core[k=27] first minimal set |D|=9 e_u(D)=27 : 636
+   core[k=28] first minimal set |D|=7 e_u(D)=28 : 56
+   core[k=28] first minimal set |D|=8 e_u(D)=28 : 318
+   core[k=28] first minimal set |D|=9 e_u(D)=28 : 630
+   core[k=29] first minimal set |D|=7 e_u(D)=29 : 28
+   core[k=29] first minimal set |D|=8 e_u(D)=29 : 278
+   core[k=29] first minimal set |D|=9 e_u(D)=29 : 531
+   core[k=30] first minimal set |D|=6 e_u(D)=10 : 3
+   core[k=30] first minimal set |D|=7 e_u(D)=30 : 50
+   core[k=30] first minimal set |D|=8 e_u(D)=30 : 387
+   core[k=30] first minimal set |D|=9 e_u(D)=30 : 759
+   core[k=31] first minimal set |D|=7 e_u(D)=31 : 24
+   core[k=31] first minimal set |D|=8 e_u(D)=31 : 339
+   core[k=31] first minimal set |D|=9 e_u(D)=31 : 638
+   core[k=32] first minimal set |D|=7 e_u(D)=32 : 18
+   core[k=32] first minimal set |D|=8 e_u(D)=32 : 355
+   core[k=32] first minimal set |D|=9 e_u(D)=32 : 713
+   core[k=33] first minimal set |D|=6 e_u(D)=11 : 3
+   core[k=33] first minimal set |D|=7 e_u(D)=33 : 14
+   core[k=33] first minimal set |D|=8 e_u(D)=33 : 353
+   core[k=33] first minimal set |D|=9 e_u(D)=33 : 806
+   core[k=34] first minimal set |D|=7 e_u(D)=34 : 8
+   core[k=34] first minimal set |D|=8 e_u(D)=34 : 413
+   core[k=34] first minimal set |D|=9 e_u(D)=34 : 893
+   core[k=35] first minimal set |D|=7 e_u(D)=35 : 4
+   core[k=35] first minimal set |D|=8 e_u(D)=35 : 398
+   core[k=35] first minimal set |D|=9 e_u(D)=35 : 865
+   core[k=36] first minimal set |D|=6 e_u(D)=12 : 3
+   core[k=36] first minimal set |D|=7 e_u(D)=36 : 12
+   core[k=36] first minimal set |D|=8 e_u(D)=36 : 456
+   core[k=36] first minimal set |D|=9 e_u(D)=36 : 1000
+   core[k=37] first minimal set |D|=7 e_u(D)=37 : 12
+   core[k=37] first minimal set |D|=8 e_u(D)=37 : 474
+   core[k=37] first minimal set |D|=9 e_u(D)=37 : 929
+   core[k=38] first minimal set |D|=7 e_u(D)=38 : 2
+   core[k=38] first minimal set |D|=8 e_u(D)=38 : 466
+   core[k=38] first minimal set |D|=9 e_u(D)=38 : 1096
+   core[k=39] first minimal set |D|=7 e_u(D)=39 : 2
+   core[k=39] first minimal set |D|=8 e_u(D)=39 : 476
+   core[k=39] first minimal set |D|=9 e_u(D)=39 : 1052
+   core[k=40] first minimal set |D|=8 e_u(D)=40 : 418
+   core[k=40] first minimal set |D|=9 e_u(D)=40 : 1113
+n=11 classes(hc<=40)=545489   F(2n-6)=987 F(2n-9)=233 2F(2n-11)=178
+   k=1  t=987  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=2  t=1775  [2-strong 0, 2-arc-strong with cut vertex 0]   u=0  [lambda=1 0, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 0 0 0
+   k=3  t=3574  [2-strong 0, 2-arc-strong with cut vertex 0]   u=233  [lambda=1 233, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 90 143 0
+   k=4  t=3390  [2-strong 0, 2-arc-strong with cut vertex 0]   u=178  [lambda=1 178, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 68 110 0
+   k=5  t=4664  [2-strong 0, 2-arc-strong with cut vertex 0]   u=157  [lambda=1 157, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 61 96 0
+   k=6  t=6065  [2-strong 0, 2-arc-strong with cut vertex 0]   u=649  [lambda=1 649, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 303 346 0
+   k=7  t=4150  [2-strong 0, 2-arc-strong with cut vertex 0]   u=306  [lambda=1 306, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 117 189 0
+   k=8  t=5511  [2-strong 0, 2-arc-strong with cut vertex 0]   u=542  [lambda=1 542, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 249 293 0
+   k=9  t=10244  [2-strong 0, 2-arc-strong with cut vertex 36]   u=1079  [lambda=1 1043, 2-arc-strong cut vertex 36, 2-strong 0]  u by #sole entries (0,1,2,3+): 56 502 521 0
+   k=10  t=7282  [2-strong 0, 2-arc-strong with cut vertex 0]   u=533  [lambda=1 533, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 241 292 0
+   k=11  t=7082  [2-strong 0, 2-arc-strong with cut vertex 0]   u=500  [lambda=1 500, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 193 307 0
+   k=12  t=11129  [2-strong 0, 2-arc-strong with cut vertex 48]   u=1718  [lambda=1 1670, 2-arc-strong cut vertex 48, 2-strong 0]  u by #sole entries (0,1,2,3+): 84 902 732 0
+   k=13  t=7684  [2-strong 0, 2-arc-strong with cut vertex 0]   u=736  [lambda=1 736, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 284 452 0
+   k=14  t=8294  [2-strong 0, 2-arc-strong with cut vertex 0]   u=1066  [lambda=1 1066, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 481 585 0
+   k=15  t=15054  [2-strong 0, 2-arc-strong with cut vertex 60]   u=1963  [lambda=1 1903, 2-arc-strong cut vertex 60, 2-strong 0]  u by #sole entries (0,1,2,3+): 76 975 912 0
+   k=16  t=10583  [2-strong 0, 2-arc-strong with cut vertex 16]   u=1714  [lambda=1 1698, 2-arc-strong cut vertex 16, 2-strong 0]  u by #sole entries (0,1,2,3+): 32 808 874 0
+   k=17  t=9558  [2-strong 0, 2-arc-strong with cut vertex 0]   u=909  [lambda=1 909, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 355 554 0
+   k=18  t=16062  [2-strong 0, 2-arc-strong with cut vertex 159]   u=2574  [lambda=1 2415, 2-arc-strong cut vertex 159, 2-strong 0]  u by #sole entries (0,1,2,3+): 207 1363 1004 0
+   k=19  t=10996  [2-strong 0, 2-arc-strong with cut vertex 0]   u=1377  [lambda=1 1377, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 541 836 0
+   k=20  t=13154  [2-strong 0, 2-arc-strong with cut vertex 40]   u=1943  [lambda=1 1903, 2-arc-strong cut vertex 40, 2-strong 0]  u by #sole entries (0,1,2,3+): 56 1001 886 0
+   k=21  t=14510  [2-strong 0, 2-arc-strong with cut vertex 108]   u=2468  [lambda=1 2360, 2-arc-strong cut vertex 108, 2-strong 0]  u by #sole entries (0,1,2,3+): 144 1188 1136 0
+   k=22  t=13616  [2-strong 0, 2-arc-strong with cut vertex 0]   u=1902  [lambda=1 1902, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 859 1043 0
+   k=23  t=15016  [2-strong 0, 2-arc-strong with cut vertex 0]   u=1397  [lambda=1 1397, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 563 834 0
+   k=24  t=17421  [2-strong 0, 2-arc-strong with cut vertex 244]   u=3552  [lambda=1 3308, 2-arc-strong cut vertex 244, 2-strong 0]  u by #sole entries (0,1,2,3+): 336 1927 1289 0
+   k=25  t=16065  [2-strong 0, 2-arc-strong with cut vertex 25]   u=1964  [lambda=1 1939, 2-arc-strong cut vertex 25, 2-strong 0]  u by #sole entries (0,1,2,3+): 25 887 1052 0
+   k=26  t=14107  [2-strong 0, 2-arc-strong with cut vertex 0]   u=2049  [lambda=1 2049, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 986 1063 0
+   k=27  t=21272  [2-strong 0, 2-arc-strong with cut vertex 277]   u=3425  [lambda=1 3148, 2-arc-strong cut vertex 277, 2-strong 0]  u by #sole entries (0,1,2,3+): 313 1793 1319 0
+   k=28  t=16417  [2-strong 0, 2-arc-strong with cut vertex 72]   u=3040  [lambda=1 2968, 2-arc-strong cut vertex 72, 2-strong 0]  u by #sole entries (0,1,2,3+): 108 1554 1378 0
+   k=29  t=18624  [2-strong 0, 2-arc-strong with cut vertex 0]   u=1986  [lambda=1 1986, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 843 1143 0
+   k=30  t=21213  [2-strong 0, 2-arc-strong with cut vertex 302]   u=4420  [lambda=1 4118, 2-arc-strong cut vertex 302, 2-strong 0]  u by #sole entries (0,1,2,3+): 314 2470 1636 0
+   k=31  t=18177  [2-strong 0, 2-arc-strong with cut vertex 0]   u=2369  [lambda=1 2369, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 1005 1364 0
+   k=32  t=18634  [2-strong 0, 2-arc-strong with cut vertex 92]   u=3344  [lambda=1 3252, 2-arc-strong cut vertex 92, 2-strong 0]  u by #sole entries (0,1,2,3+): 136 1749 1459 0
+   k=33  t=24469  [2-strong 0, 2-arc-strong with cut vertex 222]   u=3656  [lambda=1 3434, 2-arc-strong cut vertex 222, 2-strong 0]  u by #sole entries (0,1,2,3+): 234 1879 1543 0
+   k=34  t=18868  [2-strong 0, 2-arc-strong with cut vertex 0]   u=3341  [lambda=1 3341, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 1606 1735 0
+   k=35  t=19330  [2-strong 0, 2-arc-strong with cut vertex 90]   u=3428  [lambda=1 3338, 2-arc-strong cut vertex 90, 2-strong 0]  u by #sole entries (0,1,2,3+): 90 1669 1669 0
+   k=36  t=25738  [2-strong 0, 2-arc-strong with cut vertex 682]   u=5861  [lambda=1 5179, 2-arc-strong cut vertex 682, 2-strong 0]  u by #sole entries (0,1,2,3+): 730 3192 1939 0
+   k=37  t=24332  [2-strong 0, 2-arc-strong with cut vertex 0]   u=3433  [lambda=1 3433, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 1532 1901 0
+   k=38  t=21712  [2-strong 0, 2-arc-strong with cut vertex 0]   u=4067  [lambda=1 4067, 2-arc-strong cut vertex 0, 2-strong 0]  u by #sole entries (0,1,2,3+): 0 2035 2032 0
+   k=39  t=25186  [2-strong 0, 2-arc-strong with cut vertex 342]   u=4804  [lambda=1 4462, 2-arc-strong cut vertex 342, 2-strong 0]  u by #sole entries (0,1,2,3+): 342 2454 2008 0
+   k=40  t=23544  [2-strong 0, 2-arc-strong with cut vertex 230]   u=4783  [lambda=1 4553, 2-arc-strong cut vertex 230, 2-strong 0]  u by #sole entries (0,1,2,3+): 242 2592 1949 0
+   product check hc(T) = s_l(T - D) e_u(D) over minimal one-arc sets: failures 0;  s_l of the first minimal set (0..60): 0 77559 1129 1019 255 181 84 60 48 56 12 8 8 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;  #minimal sets per u-class (0..6,7+): 0 80421 0 0 0 0 0 0
+   core[k=3] first minimal set |D|=5 e_u(D)=3 : 68
+   core[k=3] first minimal set |D|=6 e_u(D)=3 : 39
+   core[k=3] first minimal set |D|=7 e_u(D)=3 : 30
+   core[k=3] first minimal set |D|=8 e_u(D)=3 : 24
+   core[k=3] first minimal set |D|=9 e_u(D)=3 : 24
+   core[k=3] first minimal set |D|=10 e_u(D)=3 : 48
+   core[k=4] first minimal set |D|=5 e_u(D)=4 : 68
+   core[k=4] first minimal set |D|=6 e_u(D)=4 : 26
+   core[k=4] first minimal set |D|=7 e_u(D)=4 : 20
+   core[k=4] first minimal set |D|=8 e_u(D)=4 : 16
+   core[k=4] first minimal set |D|=9 e_u(D)=4 : 16
+   core[k=4] first minimal set |D|=10 e_u(D)=4 : 32
+   core[k=5] first minimal set |D|=6 e_u(D)=5 : 52
+   core[k=5] first minimal set |D|=7 e_u(D)=5 : 25
+   core[k=5] first minimal set |D|=8 e_u(D)=5 : 20
+   core[k=5] first minimal set |D|=9 e_u(D)=5 : 20
+   core[k=5] first minimal set |D|=10 e_u(D)=5 : 40
+   core[k=6] first minimal set |D|=5 e_u(D)=3 : 48
+   core[k=6] first minimal set |D|=6 e_u(D)=3 : 18
+   core[k=6] first minimal set |D|=6 e_u(D)=6 : 156
+   core[k=6] first minimal set |D|=7 e_u(D)=3 : 6
+   core[k=6] first minimal set |D|=7 e_u(D)=6 : 80
+   core[k=6] first minimal set |D|=8 e_u(D)=6 : 74
+   core[k=6] first minimal set |D|=9 e_u(D)=6 : 83
+   core[k=6] first minimal set |D|=10 e_u(D)=6 : 184
+   core[k=7] first minimal set |D|=6 e_u(D)=7 : 117
+   core[k=7] first minimal set |D|=7 e_u(D)=7 : 45
+   core[k=7] first minimal set |D|=8 e_u(D)=7 : 36
+   core[k=7] first minimal set |D|=9 e_u(D)=7 : 36
+   core[k=7] first minimal set |D|=10 e_u(D)=7 : 72
+   core[k=8] first minimal set |D|=5 e_u(D)=4 : 48
+   core[k=8] first minimal set |D|=6 e_u(D)=4 : 12
+   core[k=8] first minimal set |D|=6 e_u(D)=8 : 143
+   core[k=8] first minimal set |D|=7 e_u(D)=4 : 4
+   core[k=8] first minimal set |D|=7 e_u(D)=8 : 65
+   core[k=8] first minimal set |D|=8 e_u(D)=8 : 60
+   core[k=8] first minimal set |D|=9 e_u(D)=8 : 66
+   core[k=8] first minimal set |D|=10 e_u(D)=8 : 144
+   core[k=9] first minimal set |D|=5 e_u(D)=3 : 86
+   core[k=9] first minimal set |D|=6 e_u(D)=3 : 30
+   core[k=9] first minimal set |D|=6 e_u(D)=9 : 117
+   core[k=9] first minimal set |D|=7 e_u(D)=3 : 6
+   core[k=9] first minimal set |D|=7 e_u(D)=9 : 170
+   core[k=9] first minimal set |D|=8 e_u(D)=9 : 130
+   core[k=9] first minimal set |D|=9 e_u(D)=9 : 153
+   core[k=9] first minimal set |D|=10 e_u(D)=9 : 351
+   core[k=10] first minimal set |D|=6 e_u(D)=5 : 24
+   core[k=10] first minimal set |D|=6 e_u(D)=10 : 39
+   core[k=10] first minimal set |D|=7 e_u(D)=5 : 5
+   core[k=10] first minimal set |D|=7 e_u(D)=10 : 135
+   core[k=10] first minimal set |D|=8 e_u(D)=10 : 72
+   core[k=10] first minimal set |D|=9 e_u(D)=10 : 81
+   core[k=10] first minimal set |D|=10 e_u(D)=10 : 177
+   core[k=11] first minimal set |D|=6 e_u(D)=11 : 39
+   core[k=11] first minimal set |D|=7 e_u(D)=11 : 165
+   core[k=11] first minimal set |D|=8 e_u(D)=11 : 74
+   core[k=11] first minimal set |D|=9 e_u(D)=11 : 74
+   core[k=11] first minimal set |D|=10 e_u(D)=11 : 148
+   core[k=12] first minimal set |D|=5 e_u(D)=3 : 48
+   core[k=12] first minimal set |D|=5 e_u(D)=4 : 86
+   core[k=12] first minimal set |D|=6 e_u(D)=3 : 9
+   core[k=12] first minimal set |D|=6 e_u(D)=4 : 20
+   core[k=12] first minimal set |D|=6 e_u(D)=6 : 72
+   core[k=12] first minimal set |D|=6 e_u(D)=12 : 39
+   core[k=12] first minimal set |D|=7 e_u(D)=4 : 4
+   core[k=12] first minimal set |D|=7 e_u(D)=6 : 16
+   core[k=12] first minimal set |D|=7 e_u(D)=12 : 270
+   core[k=12] first minimal set |D|=8 e_u(D)=12 : 192
+   core[k=12] first minimal set |D|=9 e_u(D)=12 : 263
+   core[k=12] first minimal set |D|=10 e_u(D)=12 : 651
+   core[k=13] first minimal set |D|=7 e_u(D)=13 : 280
+   core[k=13] first minimal set |D|=8 e_u(D)=13 : 114
+   core[k=13] first minimal set |D|=9 e_u(D)=13 : 114
+   core[k=13] first minimal set |D|=10 e_u(D)=13 : 228
+   core[k=14] first minimal set |D|=6 e_u(D)=7 : 54
+   core[k=14] first minimal set |D|=7 e_u(D)=7 : 9
+   core[k=14] first minimal set |D|=7 e_u(D)=14 : 300
+   core[k=14] first minimal set |D|=8 e_u(D)=14 : 166
+   core[k=14] first minimal set |D|=9 e_u(D)=14 : 170
+   core[k=14] first minimal set |D|=10 e_u(D)=14 : 367
+   core[k=15] first minimal set |D|=5 e_u(D)=3 : 70
+   core[k=15] first minimal set |D|=6 e_u(D)=3 : 3
+   core[k=15] first minimal set |D|=6 e_u(D)=5 : 40
+   core[k=15] first minimal set |D|=7 e_u(D)=5 : 5
+   core[k=15] first minimal set |D|=7 e_u(D)=15 : 340
+   core[k=15] first minimal set |D|=8 e_u(D)=15 : 294
+   core[k=15] first minimal set |D|=9 e_u(D)=15 : 340
+   core[k=15] first minimal set |D|=10 e_u(D)=15 : 811
+   core[k=16] first minimal set |D|=5 e_u(D)=4 : 48
+   core[k=16] first minimal set |D|=6 e_u(D)=4 : 6
+   core[k=16] first minimal set |D|=6 e_u(D)=8 : 66
+   core[k=16] first minimal set |D|=7 e_u(D)=8 : 13
+   core[k=16] first minimal set |D|=7 e_u(D)=16 : 375
+   core[k=16] first minimal set |D|=8 e_u(D)=16 : 282
+   core[k=16] first minimal set |D|=9 e_u(D)=16 : 279
+   core[k=16] first minimal set |D|=10 e_u(D)=16 : 629
+   core[k=17] first minimal set |D|=7 e_u(D)=17 : 255
+   core[k=17] first minimal set |D|=8 e_u(D)=17 : 198
+   core[k=17] first minimal set |D|=9 e_u(D)=17 : 152
+   core[k=17] first minimal set |D|=10 e_u(D)=17 : 304
+   core[k=18] first minimal set |D|=5 e_u(D)=3 : 42
+   core[k=18] first minimal set |D|=6 e_u(D)=6 : 120
+   core[k=18] first minimal set |D|=6 e_u(D)=9 : 54
+   core[k=18] first minimal set |D|=7 e_u(D)=6 : 16
+   core[k=18] first minimal set |D|=7 e_u(D)=9 : 34
+   core[k=18] first minimal set |D|=7 e_u(D)=18 : 310
+   core[k=18] first minimal set |D|=8 e_u(D)=18 : 330
+   core[k=18] first minimal set |D|=9 e_u(D)=18 : 405
+   core[k=18] first minimal set |D|=10 e_u(D)=18 : 1104
+   core[k=19] first minimal set |D|=7 e_u(D)=19 : 285
+   core[k=19] first minimal set |D|=8 e_u(D)=19 : 366
+   core[k=19] first minimal set |D|=9 e_u(D)=19 : 242
+   core[k=19] first minimal set |D|=10 e_u(D)=19 : 484
+   core[k=20] first minimal set |D|=5 e_u(D)=4 : 70
+   core[k=20] first minimal set |D|=6 e_u(D)=4 : 2
+   core[k=20] first minimal set |D|=6 e_u(D)=5 : 12
+   core[k=20] first minimal set |D|=6 e_u(D)=10 : 18
+   core[k=20] first minimal set |D|=7 e_u(D)=10 : 27
+   core[k=20] first minimal set |D|=7 e_u(D)=20 : 245
+   core[k=20] first minimal set |D|=8 e_u(D)=20 : 352
+   core[k=20] first minimal set |D|=9 e_u(D)=20 : 333
+   core[k=20] first minimal set |D|=10 e_u(D)=20 : 844
+   core[k=21] first minimal set |D|=5 e_u(D)=3 : 30
+   core[k=21] first minimal set |D|=6 e_u(D)=7 : 90
+   core[k=21] first minimal set |D|=7 e_u(D)=7 : 9
+   core[k=21] first minimal set |D|=7 e_u(D)=21 : 430
+   core[k=21] first minimal set |D|=8 e_u(D)=21 : 374
+   core[k=21] first minimal set |D|=9 e_u(D)=21 : 409
+   core[k=21] first minimal set |D|=10 e_u(D)=21 : 1018
+   core[k=22] first minimal set |D|=6 e_u(D)=11 : 18
+   core[k=22] first minimal set |D|=7 e_u(D)=11 : 33
+   core[k=22] first minimal set |D|=7 e_u(D)=22 : 255
+   core[k=22] first minimal set |D|=8 e_u(D)=22 : 476
+   core[k=22] first minimal set |D|=9 e_u(D)=22 : 360
+   core[k=22] first minimal set |D|=10 e_u(D)=22 : 760
+   core[k=23] first minimal set |D|=7 e_u(D)=23 : 205
+   core[k=23] first minimal set |D|=8 e_u(D)=23 : 386
+   core[k=23] first minimal set |D|=9 e_u(D)=23 : 284
+   core[k=23] first minimal set |D|=10 e_u(D)=23 : 522
+   core[k=24] first minimal set |D|=5 e_u(D)=3 : 24
+   core[k=24] first minimal set |D|=5 e_u(D)=4 : 42
+   core[k=24] first minimal set |D|=6 e_u(D)=6 : 36
+   core[k=24] first minimal set |D|=6 e_u(D)=8 : 110
+   core[k=24] first minimal set |D|=6 e_u(D)=12 : 18
+   core[k=24] first minimal set |D|=7 e_u(D)=8 : 13
+   core[k=24] first minimal set |D|=7 e_u(D)=12 : 54
+   core[k=24] first minimal set |D|=7 e_u(D)=24 : 255
+   core[k=24] first minimal set |D|=8 e_u(D)=24 : 518
+   core[k=24] first minimal set |D|=9 e_u(D)=24 : 553
+   core[k=24] first minimal set |D|=10 e_u(D)=24 : 1685
+   core[k=25] first minimal set |D|=6 e_u(D)=5 : 4
+   core[k=25] first minimal set |D|=7 e_u(D)=25 : 145
+   core[k=25] first minimal set |D|=8 e_u(D)=25 : 522
+   core[k=25] first minimal set |D|=9 e_u(D)=25 : 414
+   core[k=25] first minimal set |D|=10 e_u(D)=25 : 854
+   core[k=26] first minimal set |D|=7 e_u(D)=13 : 56
+   core[k=26] first minimal set |D|=7 e_u(D)=26 : 140
+   core[k=26] first minimal set |D|=8 e_u(D)=26 : 496
+   core[k=26] first minimal set |D|=9 e_u(D)=26 : 455
+   core[k=26] first minimal set |D|=10 e_u(D)=26 : 902
+   core[k=27] first minimal set |D|=5 e_u(D)=3 : 28
+   core[k=27] first minimal set |D|=6 e_u(D)=9 : 90
+   core[k=27] first minimal set |D|=7 e_u(D)=9 : 34
+   core[k=27] first minimal set |D|=7 e_u(D)=27 : 155
+   core[k=27] first minimal set |D|=8 e_u(D)=27 : 550
+   core[k=27] first minimal set |D|=9 e_u(D)=27 : 636
+   core[k=27] first minimal set |D|=10 e_u(D)=27 : 1655
+   core[k=28] first minimal set |D|=5 e_u(D)=4 : 30
+   core[k=28] first minimal set |D|=6 e_u(D)=7 : 27
+   core[k=28] first minimal set |D|=7 e_u(D)=14 : 60
+   core[k=28] first minimal set |D|=7 e_u(D)=28 : 140
+   core[k=28] first minimal set |D|=8 e_u(D)=28 : 636
+   core[k=28] first minimal set |D|=9 e_u(D)=28 : 630
+   core[k=28] first minimal set |D|=10 e_u(D)=28 : 1445
+   core[k=29] first minimal set |D|=7 e_u(D)=29 : 70
+   core[k=29] first minimal set |D|=8 e_u(D)=29 : 556
+   core[k=29] first minimal set |D|=9 e_u(D)=29 : 531
+   core[k=29] first minimal set |D|=10 e_u(D)=29 : 829
+   core[k=30] first minimal set |D|=5 e_u(D)=3 : 6
+   core[k=30] first minimal set |D|=6 e_u(D)=6 : 12
+   core[k=30] first minimal set |D|=6 e_u(D)=10 : 30
+   core[k=30] first minimal set |D|=7 e_u(D)=10 : 27
+   core[k=30] first minimal set |D|=7 e_u(D)=15 : 68
+   core[k=30] first minimal set |D|=7 e_u(D)=30 : 125
+   core[k=30] first minimal set |D|=8 e_u(D)=30 : 774
+   core[k=30] first minimal set |D|=9 e_u(D)=30 : 759
+   core[k=30] first minimal set |D|=10 e_u(D)=30 : 2317
+   core[k=31] first minimal set |D|=7 e_u(D)=31 : 60
+   core[k=31] first minimal set |D|=8 e_u(D)=31 : 678
+   core[k=31] first minimal set |D|=9 e_u(D)=31 : 638
+   core[k=31] first minimal set |D|=10 e_u(D)=31 : 993
+   core[k=32] first minimal set |D|=5 e_u(D)=4 : 24
+   core[k=32] first minimal set |D|=6 e_u(D)=8 : 33
+   core[k=32] first minimal set |D|=7 e_u(D)=16 : 75
+   core[k=32] first minimal set |D|=7 e_u(D)=32 : 45
+   core[k=32] first minimal set |D|=8 e_u(D)=32 : 710
+   core[k=32] first minimal set |D|=9 e_u(D)=32 : 713
+   core[k=32] first minimal set |D|=10 e_u(D)=32 : 1652
+   core[k=33] first minimal set |D|=5 e_u(D)=3 : 8
+   core[k=33] first minimal set |D|=6 e_u(D)=11 : 30
+   core[k=33] first minimal set |D|=7 e_u(D)=11 : 33
+   core[k=33] first minimal set |D|=7 e_u(D)=33 : 35
+   core[k=33] first minimal set |D|=8 e_u(D)=33 : 706
+   core[k=33] first minimal set |D|=9 e_u(D)=33 : 806
+   core[k=33] first minimal set |D|=10 e_u(D)=33 : 1816
+   core[k=34] first minimal set |D|=7 e_u(D)=17 : 51
+   core[k=34] first minimal set |D|=7 e_u(D)=34 : 20
+   core[k=34] first minimal set |D|=8 e_u(D)=34 : 826
+   core[k=34] first minimal set |D|=9 e_u(D)=34 : 893
+   core[k=34] first minimal set |D|=10 e_u(D)=34 : 1551
+   core[k=35] first minimal set |D|=6 e_u(D)=7 : 9
+   core[k=35] first minimal set |D|=7 e_u(D)=35 : 10
+   core[k=35] first minimal set |D|=8 e_u(D)=35 : 796
+   core[k=35] first minimal set |D|=9 e_u(D)=35 : 865
+   core[k=35] first minimal set |D|=10 e_u(D)=35 : 1658
+   core[k=36] first minimal set |D|=5 e_u(D)=3 : 8
+   core[k=36] first minimal set |D|=5 e_u(D)=4 : 28
+   core[k=36] first minimal set |D|=6 e_u(D)=9 : 27
+   core[k=36] first minimal set |D|=6 e_u(D)=12 : 30
+   core[k=36] first minimal set |D|=7 e_u(D)=12 : 54
+   core[k=36] first minimal set |D|=7 e_u(D)=18 : 62
+   core[k=36] first minimal set |D|=7 e_u(D)=36 : 30
+   core[k=36] first minimal set |D|=8 e_u(D)=36 : 912
+   core[k=36] first minimal set |D|=9 e_u(D)=36 : 1000
+   core[k=36] first minimal set |D|=10 e_u(D)=36 : 3028
+   core[k=37] first minimal set |D|=7 e_u(D)=37 : 30
+   core[k=37] first minimal set |D|=8 e_u(D)=37 : 948
+   core[k=37] first minimal set |D|=9 e_u(D)=37 : 929
+   core[k=37] first minimal set |D|=10 e_u(D)=37 : 1526
+   core[k=38] first minimal set |D|=7 e_u(D)=19 : 57
+   core[k=38] first minimal set |D|=7 e_u(D)=38 : 5
+   core[k=38] first minimal set |D|=8 e_u(D)=38 : 932
+   core[k=38] first minimal set |D|=9 e_u(D)=38 : 1096
+   core[k=38] first minimal set |D|=10 e_u(D)=38 : 1977
+   core[k=39] first minimal set |D|=5 e_u(D)=3 : 2
+   core[k=39] first minimal set |D|=7 e_u(D)=13 : 56
+   core[k=39] first minimal set |D|=7 e_u(D)=39 : 5
+   core[k=39] first minimal set |D|=8 e_u(D)=39 : 952
+   core[k=39] first minimal set |D|=9 e_u(D)=39 : 1052
+   core[k=39] first minimal set |D|=10 e_u(D)=39 : 2395
+   core[k=40] first minimal set |D|=5 e_u(D)=4 : 6
+   core[k=40] first minimal set |D|=6 e_u(D)=8 : 11
+   core[k=40] first minimal set |D|=6 e_u(D)=10 : 9
+   core[k=40] first minimal set |D|=7 e_u(D)=20 : 49
+   core[k=40] first minimal set |D|=8 e_u(D)=40 : 836
+   core[k=40] first minimal set |D|=9 e_u(D)=40 : 1113
+   core[k=40] first minimal set |D|=10 e_u(D)=40 : 2529
+
+real	0m7.111s
+user	0m0.000s
+sys	0m0.000s

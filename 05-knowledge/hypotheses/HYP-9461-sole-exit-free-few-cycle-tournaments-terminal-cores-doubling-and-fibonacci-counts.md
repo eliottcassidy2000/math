@@ -1,10 +1,10 @@
 ---
 id: HYP-9461
 title: "Sole-exit-free tournaments with few Hamiltonian cycles factor through a terminal core: for n >= 7, every strong tournament with hc in {3, 4, 5} and no vertex of out-degree 1 is a one-arc join with a unique minimal one-arc-leaving set D (tail u), e_u(D) = hc and a uniquely Hamiltonian rooted prefix; the cores double (c_3(d) = 3 * 2^(d-6), c_4(d) = 2^(d-5), c_5(d) = 5 * 2^(d-7)), which gives klein's F(2n - 9) and 2F(2n - 11) (HYP-9459 (2), (3)) and predicts u_5(n) = 4F(2n - 12) - 3F(2n - 14). Pre-registered at orders 10-14"
-status: PRE-REGISTERED (opus-2026-11-04-S75); the run at orders 10-14 is made after this commit
+status: CONFIRMED (P1-P10 all hold at orders 10-14; run after the pre-registration commit c355721ce6) and PROVED for all n as THM-4869 (opus-2026-11-04-S75)
 session: opus-2026-11-04-S75
 date: 2026-11-04
-related: [HYP-9459, THM-4868, THM-4867, HYP-9458, HYP-9460, THM-4862]
+related: [THM-4869, HYP-9459, THM-4868, THM-4867, HYP-9458, HYP-9460, THM-4862]
 script: 04-computation/experiments/fewcycle_sole_exit_free_20261104.c
 ---
 
@@ -93,4 +93,31 @@ the class.
 
 ## Results
 
-(Filled after the run.)
+Run: `fewcycle 14 5`, 27 s. Output: `04-computation/experiments/fewcycle_sole_exit_free_20261104_14_5.out`.
+
+| | n = 10 | 11 | 12 | 13 | 14 | prediction |
+|---|---|---|---|---|---|---|
+| t_1 | 377 | 987 | 2,584 | 6,765 | 17,711 | P1 holds |
+| t_2 | 589 | 1,775 | 5,257 | 15,360 | 44,394 | P2 holds |
+| t_3, t_4, t_5 | 1,193, 1,049, 1,500 | 3,574, 3,390, 4,664 | 10,537, 10,705, 14,142 | 30,676, 33,194, 42,082 | 88,400, 101,420, 123,414 | P3 holds (n = 10) |
+| u_1, u_2 | 0, 0 | 0, 0 | 0, 0 | 0, 0 | 0, 0 | P4 holds |
+| u_3 | 89 | 233 | 610 | 1,597 | 4,181 | P5 holds |
+| u_4 | 68 | 178 | 466 | 1,220 | 3,194 | P6 holds |
+| u_5 | 60 | 157 | 411 | 1,076 | 2,817 | P7 holds |
+
+**(P8) holds.** Every class counted in u_3, u_4 or u_5 has lambda = 1 and exactly one minimal one-arc-leaving set,
+with s_l = 1 and e_u = hc. There are 0 product-law failures, on 217, 568, 1,487, 3,893 and 10,192 classes at orders
+10-14.
+
+**(P9) holds.** Every core-table entry equals c_k(d) R(n - d + 1). The new cores, at d = 9-13, are:
+- c_3 = 24, 48, 96, 192, 384;
+- c_4 = 16, 32, 64, 128, 256;
+- c_5 = 20, 40, 80, 160, 320.
+
+**(P10) holds.** There is no 2-strong class and no 2-arc-strong class with a cut vertex with hc <= 5.
+
+**After the run, the statements were proved for all n (THM-4869).**
+- u_2(n) = 0 and u_3(n) = F(2n - 9) for n >= 6; u_4(n) = 2F(2n - 11) and the u_5 law for n >= 7.
+- The proof goes through the unique terminal core, the block list (C3 and W4 for k = 3), and an induction excluding
+  2-strong tournaments with hc <= 5 at n >= 7 (hc <= 3 at n = 6).
+- The doubling of the cores is the free choice of the arcs between u and the chain vertices w_2, ..., w_p.

@@ -18,7 +18,9 @@
  * For every sole-exit-free class with lambda = 1 the program also records the minimal one-arc-leaving sets D (exactly
  * one arc u -> l leaves D) and checks hc(T) = hc(T/D) * e_u(T[D]), where e_u counts Hamiltonian paths of T[D] ending at u.
  *
- * Usage: fewcycle NMAX K [DUMPN]   (NMAX <= 15, K <= 8; classes of order <= DUMPN with no sole exit are printed)
+ * Usage: fewcycle NMAX K [DUMPN]   (NMAX <= 15, K <= MAXK; classes of order <= DUMPN with no sole exit are printed)
+ *   fewcycle 14 5      : the census of HYP-9461 (orders 3-14)
+ *   fewcycle 11 40     : built with -DMAXK=60, the minimum number of Hamiltonian cycles of 2-strong tournaments
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,7 +29,9 @@
 #include <omp.h>
 
 #define MAXN 16
-#define MAXK 8
+#ifndef MAXK
+#define MAXK 8   /* compile with -DMAXK=60 for the minimum-cycle table of 2-strong tournaments */
+#endif
 typedef unsigned long long u64;
 typedef long long i64;
 typedef unsigned __int128 u128;
@@ -177,16 +181,16 @@ static int is_strong_mask(int n, const uint32_t *out, uint32_t V) {
 }
 
 /* ---------------- hash set ---------------- */
-typedef struct { u128 *key; signed char *hc; char *used; size_t cap, cnt; } HSet;
+typedef struct { u128 *key; int *hc; char *used; size_t cap, cnt; } HSet;
 static void hs_init(HSet *h, size_t cap) {
-    h->cap = cap; h->cnt = 0; h->key = malloc(sizeof(u128) * cap); h->hc = malloc(cap); h->used = calloc(cap, 1);
+    h->cap = cap; h->cnt = 0; h->key = malloc(sizeof(u128) * cap); h->hc = malloc(sizeof(int) * cap); h->used = calloc(cap, 1);
     if (!h->key || !h->hc || !h->used) { fprintf(stderr, "alloc\n"); exit(1); }
 }
 static int hs_insert(HSet *h, u128 k, int hc) {
     u64 x = (u64)k * 0x9E3779B97F4A7C15ULL ^ (u64)(k >> 64) * 0xC2B2AE3D27D4EB4FULL;
     size_t i = (size_t)(x >> 11) % h->cap;
     while (h->used[i]) { if (h->key[i] == k) return 0; i++; if (i == h->cap) i = 0; }
-    h->used[i] = 1; h->key[i] = k; h->hc[i] = (signed char)hc; h->cnt++; return 1;
+    h->used[i] = 1; h->key[i] = k; h->hc[i] = hc; h->cnt++; return 1;
 }
 
 typedef struct { u128 code; int hc; } Rec;
