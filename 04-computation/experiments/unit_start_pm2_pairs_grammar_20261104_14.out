@@ -1,0 +1,17 @@
+# unit_start_pm2_pairs_grammar_20261104 NMAX=14
+n= 3 unit-start rooted strong classes 1 (F(2n-4) = 1) s!=1: 0 | distinct F values 1 | +-2 pairs (F=F', h'=h+2) 0 (with q=q' also: 0)
+n= 4 unit-start rooted strong classes 3 (F(2n-4) = 3) s!=1: 0 | distinct F values 3 | +-2 pairs (F=F', h'=h+2) 0 (with q=q' also: 0)
+n= 5 unit-start rooted strong classes 8 (F(2n-4) = 8) s!=1: 0 | distinct F values 8 | +-2 pairs (F=F', h'=h+2) 0 (with q=q' also: 0)
+n= 6 unit-start rooted strong classes 21 (F(2n-4) = 21) s!=1: 0 | distinct F values 19 | +-2 pairs (F=F', h'=h+2) 0 (with q=q' also: 0)
+n= 7 unit-start rooted strong classes 55 (F(2n-4) = 55) s!=1: 0 | distinct F values 48 | +-2 pairs (F=F', h'=h+2) 1 (with q=q' also: 0)  smallest h pair: (h, h+2) = (29, 31), F = 157
+n= 8 unit-start rooted strong classes 144 (F(2n-4) = 144) s!=1: 0 | distinct F values 126 | +-2 pairs (F=F', h'=h+2) 2 (with q=q' also: 0)  smallest h pair: (h, h+2) = (59, 61), F = 485
+n= 9 unit-start rooted strong classes 377 (F(2n-4) = 377) s!=1: 0 | distinct F values 323 | +-2 pairs (F=F', h'=h+2) 5 (with q=q' also: 0)  smallest h pair: (h, h+2) = (97, 99), F = 1197
+n=10 unit-start rooted strong classes 987 (F(2n-4) = 987) s!=1: 0 | distinct F values 868 | +-2 pairs (F=F', h'=h+2) 1 (with q=q' also: 0)  smallest h pair: (h, h+2) = (241, 243), F = 4187
+n=11 unit-start rooted strong classes 2584 (F(2n-4) = 2584) s!=1: 0 | distinct F values 2242 | +-2 pairs (F=F', h'=h+2) 6 (with q=q' also: 0)  smallest h pair: (h, h+2) = (379, 381), F = 10371
+n=12 unit-start rooted strong classes 6765 (F(2n-4) = 6765) s!=1: 0 | distinct F values 5880 | +-2 pairs (F=F', h'=h+2) 10 (with q=q' also: 0)  smallest h pair: (h, h+2) = (493, 495), F = 21507
+n=13 unit-start rooted strong classes 17711 (F(2n-4) = 17711) s!=1: 0 | distinct F values 15415 | +-2 pairs (F=F', h'=h+2) 4 (with q=q' also: 0)  smallest h pair: (h, h+2) = (1267, 1269), F = 63975
+n=14 unit-start rooted strong classes 46368 (F(2n-4) = 46368) s!=1: 0 | distinct F values 40639 | +-2 pairs (F=F', h'=h+2) 8 (with q=q' also: 2)  smallest h pair: (h, h+2) = (1959, 1961), F = 39273
+
+real	0m9.153s
+user	0m0.000s
+sys	0m0.015s

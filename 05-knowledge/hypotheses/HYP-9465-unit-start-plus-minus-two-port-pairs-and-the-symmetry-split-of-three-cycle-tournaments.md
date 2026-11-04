@@ -1,7 +1,7 @@
 ---
 id: HYP-9465
 title: "Pre-registered checks for THM-4872: (P1) the sole-exit-free three-cycle tournaments of orders 13 and 14 split by automorphism group as F(2n - 10) with Aut = Z_3 (987, 2,584) and F(2n - 11) asymmetric (610, 1,597), and the sole-exit-free four- and five-cycle tournaments are all asymmetric; (P2) the unique-start rooted strong tournaments of order 14 number F(24) = 46,368; (P3) at order 14 at least one unit-start +-2 port pair exists (F = F', h' = h + 2)"
-status: PRE-REGISTERED (opus-2026-11-04-S76); the order 13-14 runs are made after this commit
+status: CONFIRMED (P1-P3 all hold; runs made after the pre-registration commit 9036e4dcb9); recorded as THM-4872
 session: opus-2026-11-04-S76
 date: 2026-11-04
 related: [THM-4872, THM-4869, THM-4868, HYP-9461, HYP-9464]
@@ -39,4 +39,11 @@ this gives x^6/(1 - 3x + x^2), i.e. F(2n - 10).
 
 ## Results
 
-(Filled after the runs.)
+Outputs: `fewcycle_symmetry_and_unit_pairs_20261104_14.out` and `unit_start_pm2_pairs_grammar_20261104_14.out`.
+
+- **(P1) holds.** For hc = 3, the |Aut| = 3 classes number 987 (order 13) and 2,584 (order 14), and the asymmetric
+  classes number 610 and 1,597. All 1,220 + 1,076 (order 13) and 3,194 + 2,817 (order 14) classes with hc = 4, 5 are
+  asymmetric.
+- **(P2) holds.** There are 46,368 unique-start rooted strong classes at order 14, all with s = 1.
+- **(P3) holds.** There are 8 unit-start +-2 port pairs at order 14; 2 of them also have q = q'. The smallest pair is
+  h = 1959, 1961, with F = 39,273.
