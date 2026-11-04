@@ -115,3 +115,23 @@ chat; it does not deduce noncancellation from an unmarked graph bijection.
 The original full cubics and quartics remain in their frozen packets; the
 present Fourier replay adds a new complete order-five view without replacing
 those named data by a graph-type count.
+
+### Closing fetch through d617652d2e
+
+The reviewed [dyadic thickening theorem](../session189_response_frontier_20261104/thickening/PROOF.md),
+with its [independent review](../session189_response_frontier_20261104/thickening_audit/REVIEW.md),
+now gives every nonempty source T a computable power-of-two divisibility
+condition on N such that T[TT_N] is separated from every distinct
+original-module XOR target of that inflated source. This changes the
+physical object and its vertex set; it does not reconstruct T or provide
+an H-preserving graph bijection. The contrast illustrates precisely why
+the operation, names and source family must accompany a correspondence.
+
+The [all-even-child transfer](../session189_response_frontier_20261104/even_transfer/README.md)
+proves the complete contrast (Delta H,2 Delta H,0,...) modulo16 and its
+odd ambient multiplier. Child profiles need match only between source and
+target at each position, not across different children. This is ambient
+transfer of a nonzero local gap, not a theorem that every local gap is
+nonzero, and it does not advance the uninflated frontier beyond nine.
+These incoming results reinforce the marked-operation interpretation of
+the old even-graph basis without altering the bijection guarantees.
