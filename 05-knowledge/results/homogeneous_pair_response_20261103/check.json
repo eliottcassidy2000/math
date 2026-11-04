@@ -1,0 +1,51 @@
+{
+  "counts": {
+    "ambient_module_pairs": 121,
+    "calibrated_queries": 2618,
+    "cross_identities": 42600,
+    "literal_queries": 58,
+    "literal_sidecars": 293,
+    "quotients": 1099,
+    "rooted_expansions": 5405
+  },
+  "endpoint_only_hostile": {
+    "changed_rows": [
+      8,
+      9,
+      11,
+      0
+    ],
+    "common_HSE": [
+      1,
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "pair_queries": [
+      5,
+      9
+    ],
+    "reversed_pair_queries": [
+      9,
+      5
+    ],
+    "rows": [
+      10,
+      8,
+      11,
+      0
+    ]
+  },
+  "source_sha256": "d7f9b97e2b74114b9f8a879a473d1eb199b6f2c25a88e969dc5033669282e3c3",
+  "status": "FINITE-EXACT controls for all-order pair separation",
+  "universe": "All1099 labelled quotients orders1..5, every distinguished root; every labelled quotient/module context orders1..3 in the declared nested construction"
+}
