@@ -43,3 +43,16 @@ were rerun and which cached outputs were independently audited.
 [Source hashes](sources.json) pin inherited inputs; the packet manifest
 pins the published artifacts. Cache replay and independent interpretation
 are distinguished from regenerating a native program from scratch.
+
+From the repository root, check the frozen evidence and every packet file:
+
+```
+python3 -B 05-knowledge/results/zero_ready_component_returns_20261103/reproduce.py
+python3 -B 05-knowledge/results/zero_ready_component_returns_20261103/manifest.py
+```
+
+Add `--rerun` to the first command to execute all twelve routine checks
+normally and under `-O`. Add `--include-producers` as well to rebuild the
+original two named/native producer outputs. The default only verifies
+saved evidence, source hashes, and graph/program bindings; its quick
+runtime is not a timing claim for the underlying mathematical searches.

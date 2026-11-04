@@ -50,3 +50,16 @@ alone omitted it. This records that source's status, not a claim that every
 later publication has been surveyed. The repository's independent all-order
 [7/21 exclusion audit](../exclusion_7_21_20261103/README.md) is inherited.
 No new exclusion, complete spectrum proof, or A000568 count is claimed here.
+
+The final merge also integrates three commits through `ccfaa81587`, adding
+[joint path tensors beyond order nine](../two_port_beyond_nine_20261103/README.md).
+Its arbitrary-attachment two-port response varies incidences at every old
+vertex; our 17-query observer concerns a restricted two-active-port birth
+language. Its exact reconstruction check through order ten therefore does
+not conflict with our three-number natural-pair factor. The full three-path
+tensor refines our mixed spare coordinates, including their empty-slot
+terms: our `3^k` mode is a concrete contraction of those joint slots. Its
+odd-module reversal obstruction concerns uniform odd modules, whereas our
+component resets are not asserted to be module reversals. Neither result
+supplies arbitrary-depth acceptance. The incoming note explicitly credits
+our first checkpoint `7e568d4296` and retains these scope distinctions.

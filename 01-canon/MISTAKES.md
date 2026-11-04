@@ -4,6 +4,29 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — a unit response dial needs its joint reentry guard
+
+**Rejected research simplification, not a retraction of prior canon.**
+Three new-root births on a unique-start marked component give two marks
+whose F responses differ by one. That does not make the operation reusable:
+an old vertex v has new start count J(v,w), the ordered two-cover count whose
+first path starts at v and ends at w. Reentry needs J(v,w)=1 at an actual
+physical vertex. For the H2195 component inside H170807, the minimum is 53.
+Scalar balance and field compatibility do not supply this missing coordinate.
+
+The proposed shortcut J(v,w)>=H(B-w) is false on the strong four-vertex
+tournament with outgoing rows (8,1,3,6): w=1, v=0 gives J=2 and H(B-w)=3.
+Order three has no such hostile. The strongest surviving statement is the
+exact joint-cover identity and its explicit source-specific test, not the
+false lower bound. Likewise the binary reader's sufficient strong-ending
+criterion needs at least two seed vertices; a singleton followed by bit 0
+is a transitive pair. Singleton seeds require a separate literal check.
+
+The [repaired unit-dial proof](../05-knowledge/results/zero_ready_component_returns_20261103/recovery/NOTE.md)
+and [reader proof and hostile audit](../05-knowledge/results/zero_ready_component_returns_20261103/inverse/NOTE.md)
+retain these boundaries. The next question is a source-changing rule that
+restores the actual joint entry condition while meeting the target equation.
+
 ## 2026-11-03 — a historical coverage prefix is not the current frontier
 
 **Provenance correction.** The incoming Session176 synthesis described the

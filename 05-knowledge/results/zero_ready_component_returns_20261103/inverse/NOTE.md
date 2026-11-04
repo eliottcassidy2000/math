@@ -101,6 +101,10 @@ The full wrapper has n=m+L+s+1 vertices, giving
 
     n <= floor(log2 N)+3.
 
+Both first-round witnesses below attain this integer bound: they have
+21 vertices and their counts lie between 2^18 and 2^19. Thus the additive
+constant cannot be reduced uniformly for this grammar.
+
 This applies to every accepted nonempty word, even if the seed bank is
 enlarged. The empty-word case is separate. The bound proves neither
 acceptance nor a polylogarithmic running time: the inverse integer interval
