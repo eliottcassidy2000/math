@@ -1,0 +1,75 @@
+{
+  "distinct_local_targets": 12,
+  "external_source_links_recorded_not_network_verified": [
+    "https://github.com/eliottcassidy2000/math/blob/897db58335ce4f7f5c332a238caf572e46537806/00-navigation/S175.md",
+    "https://github.com/eliottcassidy2000/math/blob/main/00-navigation/S118.md",
+    "https://github.com/eliottcassidy2000/math/blob/main/05-knowledge/results/session123_realizers_and_binary_capacity_20261031/circuits/RESOURCE_COST_AND_BOUNDARY_KERNEL.md",
+    "https://github.com/eliottcassidy2000/math/blob/main/05-knowledge/results/session171_knots_information_20261103/framework/NOTE.md"
+  ],
+  "local_link_occurrences": 12,
+  "matching_receipt_pairs": [
+    {
+      "normal": "gates/certificate.json",
+      "optimized": "gates/certificate.optimized.json"
+    },
+    {
+      "normal": "gates/independent_bit_audit.json",
+      "optimized": "gates/independent_bit_audit.optimized.json"
+    },
+    {
+      "normal": "circuits/audit.json",
+      "optimized": "circuits/audit.optimized.json"
+    },
+    {
+      "normal": "circuits/certificate.json",
+      "optimized": "circuits/certificate.optimized.json"
+    },
+    {
+      "normal": "circuits/fiber_certificate.json",
+      "optimized": "circuits/fiber_certificate.optimized.json"
+    },
+    {
+      "normal": "circuits/fiber_independent_audit.json",
+      "optimized": "circuits/fiber_independent_audit.optimized.json"
+    },
+    {
+      "normal": "circuits/certificate.json",
+      "optimized": "circuits/reviewer_check.optimized.json"
+    },
+    {
+      "normal": "information/audit.json",
+      "optimized": "information/audit.optimized.json"
+    },
+    {
+      "normal": "information/certificate.json",
+      "optimized": "information/certificate.optimized.json"
+    },
+    {
+      "normal": "information/reviewer.json",
+      "optimized": "information/reviewer.optimized.json"
+    },
+    {
+      "normal": "spectrum/certificate.json",
+      "optimized": "spectrum/certificate.optimized.json"
+    },
+    {
+      "normal": "spectrum/reviewer_audit.json",
+      "optimized": "spectrum/reviewer_audit.optimized.json"
+    },
+    {
+      "normal": "resource/certificate.json",
+      "optimized": "resource/certificate.optimized.json"
+    },
+    {
+      "normal": "resource/independent_audit.json",
+      "optimized": "resource/independent_audit.optimized.json"
+    },
+    {
+      "normal": "resource/reviewer_producer.json",
+      "optimized": "resource/reviewer_producer.optimized.json"
+    }
+  ],
+  "receipt_pair_count": 15,
+  "scope": "Five-packet links, complete paired JSON receipt consistency, and key scope markers. Mathematical review is documented separately.",
+  "status": "PASS"
+}

@@ -1,0 +1,15 @@
+{
+  "distinct_sibling_links": 12,
+  "matched_receipt_pairs": [
+    "information/certificate.json",
+    "spectrum/certificate.json",
+    "gates/certificate.json",
+    "gates/independent_bit_audit.json",
+    "circuits/certificate.json",
+    "circuits/fiber_independent_audit.json",
+    "resource/certificate.json"
+  ],
+  "scope": "link and selected receipt consistency, not an independent proof audit",
+  "sibling_links": 12,
+  "status": "PASS"
+}
