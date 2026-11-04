@@ -1,0 +1,659 @@
+{
+  "distinct_pin_topologies": [
+    {
+      "E_zero_Q_positive": 0,
+      "all_topologies": 1,
+      "closed_regions": 0,
+      "gates": 1,
+      "live_topologies": 1,
+      "positive_port_corrections": 0,
+      "whole_certificate_consumed": 0
+    },
+    {
+      "E_zero_Q_positive": 0,
+      "all_topologies": 3,
+      "closed_regions": 2,
+      "gates": 2,
+      "live_topologies": 2,
+      "positive_port_corrections": 0,
+      "whole_certificate_consumed": 0
+    },
+    {
+      "E_zero_Q_positive": 2,
+      "all_topologies": 18,
+      "closed_regions": 18,
+      "gates": 3,
+      "live_topologies": 7,
+      "positive_port_corrections": 2,
+      "whole_certificate_consumed": 0
+    },
+    {
+      "E_zero_Q_positive": 52,
+      "all_topologies": 180,
+      "closed_regions": 206,
+      "gates": 4,
+      "live_topologies": 38,
+      "positive_port_corrections": 56,
+      "whole_certificate_consumed": 4
+    },
+    {
+      "E_zero_Q_positive": 1072,
+      "all_topologies": 2700,
+      "closed_regions": 3120,
+      "gates": 5,
+      "live_topologies": 295,
+      "positive_port_corrections": 1322,
+      "whole_certificate_consumed": 118
+    },
+    {
+      "E_zero_Q_positive": 23418,
+      "all_topologies": 56700,
+      "closed_regions": 61592,
+      "gates": 6,
+      "live_topologies": 3098,
+      "positive_port_corrections": 34330,
+      "whole_certificate_consumed": 2954
+    }
+  ],
+  "four_gate_hostile": {
+    "deleted_gates": [
+      1,
+      2
+    ],
+    "final_Phi": 0,
+    "final_gates": {
+      "0": [
+        -3,
+        -2
+      ],
+      "3": [
+        0,
+        -1
+      ]
+    },
+    "initial_Phi": 1,
+    "inventory": {
+      "B": [
+        2
+      ],
+      "C": [
+        1
+      ],
+      "E": 0,
+      "Q": 1,
+      "a": 1,
+      "f": 0,
+      "kappa": 1,
+      "lambda": 1,
+      "r": 1
+    },
+    "output_vector_a_zero": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "grid_shielding": [
+    {
+      "Phi": 1,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 1,
+      "core_gates": 8,
+      "deleted_gates": 2,
+      "k": 1,
+      "m": 2,
+      "trace": null
+    },
+    {
+      "Phi": 1,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 2,
+      "core_gates": 8,
+      "deleted_gates": 4,
+      "k": 2,
+      "m": 2,
+      "trace": null
+    },
+    {
+      "Phi": 1,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 3,
+      "core_gates": 8,
+      "deleted_gates": 6,
+      "k": 3,
+      "m": 2,
+      "trace": [
+        {
+          "Q": 0,
+          "boundary": 10,
+          "constant": 9,
+          "remaining_gates": 12
+        },
+        {
+          "Q": 0,
+          "boundary": 8,
+          "constant": 7,
+          "remaining_gates": 10
+        },
+        {
+          "Q": 0,
+          "boundary": 6,
+          "constant": 5,
+          "remaining_gates": 8
+        }
+      ]
+    },
+    {
+      "Phi": 1,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 8,
+      "core_gates": 8,
+      "deleted_gates": 16,
+      "k": 8,
+      "m": 2,
+      "trace": null
+    },
+    {
+      "Phi": 1,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 16,
+      "core_gates": 8,
+      "deleted_gates": 32,
+      "k": 16,
+      "m": 2,
+      "trace": null
+    },
+    {
+      "Phi": 1,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 32,
+      "core_gates": 8,
+      "deleted_gates": 64,
+      "k": 32,
+      "m": 2,
+      "trace": null
+    },
+    {
+      "Phi": 4,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 1,
+      "core_gates": 15,
+      "deleted_gates": 2,
+      "k": 1,
+      "m": 3,
+      "trace": null
+    },
+    {
+      "Phi": 4,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 2,
+      "core_gates": 15,
+      "deleted_gates": 4,
+      "k": 2,
+      "m": 3,
+      "trace": null
+    },
+    {
+      "Phi": 4,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 3,
+      "core_gates": 15,
+      "deleted_gates": 6,
+      "k": 3,
+      "m": 3,
+      "trace": null
+    },
+    {
+      "Phi": 4,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 8,
+      "core_gates": 15,
+      "deleted_gates": 16,
+      "k": 8,
+      "m": 3,
+      "trace": null
+    },
+    {
+      "Phi": 4,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 16,
+      "core_gates": 15,
+      "deleted_gates": 32,
+      "k": 16,
+      "m": 3,
+      "trace": null
+    },
+    {
+      "Phi": 4,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 32,
+      "core_gates": 15,
+      "deleted_gates": 64,
+      "k": 32,
+      "m": 3,
+      "trace": null
+    },
+    {
+      "Phi": 9,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 1,
+      "core_gates": 24,
+      "deleted_gates": 2,
+      "k": 1,
+      "m": 4,
+      "trace": null
+    },
+    {
+      "Phi": 9,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 2,
+      "core_gates": 24,
+      "deleted_gates": 4,
+      "k": 2,
+      "m": 4,
+      "trace": null
+    },
+    {
+      "Phi": 9,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 3,
+      "core_gates": 24,
+      "deleted_gates": 6,
+      "k": 3,
+      "m": 4,
+      "trace": null
+    },
+    {
+      "Phi": 9,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 8,
+      "core_gates": 24,
+      "deleted_gates": 16,
+      "k": 8,
+      "m": 4,
+      "trace": null
+    },
+    {
+      "Phi": 9,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 16,
+      "core_gates": 24,
+      "deleted_gates": 32,
+      "k": 16,
+      "m": 4,
+      "trace": null
+    },
+    {
+      "Phi": 9,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 32,
+      "core_gates": 24,
+      "deleted_gates": 64,
+      "k": 32,
+      "m": 4,
+      "trace": null
+    },
+    {
+      "Phi": 16,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 1,
+      "core_gates": 35,
+      "deleted_gates": 2,
+      "k": 1,
+      "m": 5,
+      "trace": null
+    },
+    {
+      "Phi": 16,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 2,
+      "core_gates": 35,
+      "deleted_gates": 4,
+      "k": 2,
+      "m": 5,
+      "trace": null
+    },
+    {
+      "Phi": 16,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 3,
+      "core_gates": 35,
+      "deleted_gates": 6,
+      "k": 3,
+      "m": 5,
+      "trace": null
+    },
+    {
+      "Phi": 16,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 8,
+      "core_gates": 35,
+      "deleted_gates": 16,
+      "k": 8,
+      "m": 5,
+      "trace": null
+    },
+    {
+      "Phi": 16,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 16,
+      "core_gates": 35,
+      "deleted_gates": 32,
+      "k": 16,
+      "m": 5,
+      "trace": null
+    },
+    {
+      "Phi": 16,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 32,
+      "core_gates": 35,
+      "deleted_gates": 64,
+      "k": 32,
+      "m": 5,
+      "trace": null
+    },
+    {
+      "Phi": 25,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 1,
+      "core_gates": 48,
+      "deleted_gates": 2,
+      "k": 1,
+      "m": 6,
+      "trace": null
+    },
+    {
+      "Phi": 25,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 2,
+      "core_gates": 48,
+      "deleted_gates": 4,
+      "k": 2,
+      "m": 6,
+      "trace": null
+    },
+    {
+      "Phi": 25,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 3,
+      "core_gates": 48,
+      "deleted_gates": 6,
+      "k": 3,
+      "m": 6,
+      "trace": null
+    },
+    {
+      "Phi": 25,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 8,
+      "core_gates": 48,
+      "deleted_gates": 16,
+      "k": 8,
+      "m": 6,
+      "trace": null
+    },
+    {
+      "Phi": 25,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 16,
+      "core_gates": 48,
+      "deleted_gates": 32,
+      "k": 16,
+      "m": 6,
+      "trace": null
+    },
+    {
+      "Phi": 25,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 32,
+      "core_gates": 48,
+      "deleted_gates": 64,
+      "k": 32,
+      "m": 6,
+      "trace": null
+    },
+    {
+      "Phi": 36,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 1,
+      "core_gates": 63,
+      "deleted_gates": 2,
+      "k": 1,
+      "m": 7,
+      "trace": null
+    },
+    {
+      "Phi": 36,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 2,
+      "core_gates": 63,
+      "deleted_gates": 4,
+      "k": 2,
+      "m": 7,
+      "trace": null
+    },
+    {
+      "Phi": 36,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 3,
+      "core_gates": 63,
+      "deleted_gates": 6,
+      "k": 3,
+      "m": 7,
+      "trace": null
+    },
+    {
+      "Phi": 36,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 8,
+      "core_gates": 63,
+      "deleted_gates": 16,
+      "k": 8,
+      "m": 7,
+      "trace": null
+    },
+    {
+      "Phi": 36,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 16,
+      "core_gates": 63,
+      "deleted_gates": 32,
+      "k": 16,
+      "m": 7,
+      "trace": null
+    },
+    {
+      "Phi": 36,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 32,
+      "core_gates": 63,
+      "deleted_gates": 64,
+      "k": 32,
+      "m": 7,
+      "trace": null
+    },
+    {
+      "Phi": 49,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 1,
+      "core_gates": 80,
+      "deleted_gates": 2,
+      "k": 1,
+      "m": 8,
+      "trace": null
+    },
+    {
+      "Phi": 49,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 2,
+      "core_gates": 80,
+      "deleted_gates": 4,
+      "k": 2,
+      "m": 8,
+      "trace": null
+    },
+    {
+      "Phi": 49,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 3,
+      "core_gates": 80,
+      "deleted_gates": 6,
+      "k": 3,
+      "m": 8,
+      "trace": null
+    },
+    {
+      "Phi": 49,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 8,
+      "core_gates": 80,
+      "deleted_gates": 16,
+      "k": 8,
+      "m": 8,
+      "trace": null
+    },
+    {
+      "Phi": 49,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 16,
+      "core_gates": 80,
+      "deleted_gates": 32,
+      "k": 16,
+      "m": 8,
+      "trace": null
+    },
+    {
+      "Phi": 49,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 32,
+      "core_gates": 80,
+      "deleted_gates": 64,
+      "k": 32,
+      "m": 8,
+      "trace": null
+    },
+    {
+      "Phi": 64,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 1,
+      "core_gates": 99,
+      "deleted_gates": 2,
+      "k": 1,
+      "m": 9,
+      "trace": null
+    },
+    {
+      "Phi": 64,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 2,
+      "core_gates": 99,
+      "deleted_gates": 4,
+      "k": 2,
+      "m": 9,
+      "trace": null
+    },
+    {
+      "Phi": 64,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 3,
+      "core_gates": 99,
+      "deleted_gates": 6,
+      "k": 3,
+      "m": 9,
+      "trace": null
+    },
+    {
+      "Phi": 64,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 8,
+      "core_gates": 99,
+      "deleted_gates": 16,
+      "k": 8,
+      "m": 9,
+      "trace": null
+    },
+    {
+      "Phi": 64,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 16,
+      "core_gates": 99,
+      "deleted_gates": 32,
+      "k": 16,
+      "m": 9,
+      "trace": null
+    },
+    {
+      "Phi": 64,
+      "Q_sum": 0,
+      "boundary_fanout_sum": 32,
+      "core_gates": 99,
+      "deleted_gates": 64,
+      "k": 32,
+      "m": 9,
+      "trace": null
+    }
+  ],
+  "repeated_pin_topologies": [
+    {
+      "E_zero_Q_positive": 0,
+      "all_topologies": 3,
+      "closed_regions": 0,
+      "gates": 1,
+      "live_topologies": 3,
+      "positive_port_corrections": 0,
+      "whole_certificate_consumed": 0
+    },
+    {
+      "E_zero_Q_positive": 0,
+      "all_topologies": 18,
+      "closed_regions": 6,
+      "gates": 2,
+      "live_topologies": 9,
+      "positive_port_corrections": 0,
+      "whole_certificate_consumed": 0
+    },
+    {
+      "E_zero_Q_positive": 9,
+      "all_topologies": 180,
+      "closed_regions": 87,
+      "gates": 3,
+      "live_topologies": 45,
+      "positive_port_corrections": 9,
+      "whole_certificate_consumed": 0
+    },
+    {
+      "E_zero_Q_positive": 306,
+      "all_topologies": 2700,
+      "closed_regions": 1392,
+      "gates": 4,
+      "live_topologies": 333,
+      "positive_port_corrections": 321,
+      "whole_certificate_consumed": 18
+    },
+    {
+      "E_zero_Q_positive": 8775,
+      "all_topologies": 56700,
+      "closed_regions": 27717,
+      "gates": 5,
+      "live_topologies": 3393,
+      "positive_port_corrections": 10008,
+      "whole_certificate_consumed": 720
+    }
+  ],
+  "scope": "Finite checks corroborating the displayed all-size proofs; no lower-bound claim.",
+  "status": "PASS",
+  "truth_table_universe": {
+    "gates_through": 2,
+    "inputs": 3,
+    "live_circuits": 6240,
+    "nonconstant_output_cases": 32148,
+    "nonempty_constant_region_cases": 11712,
+    "proper_coordinate_restrictions": 162240
+  }
+}
