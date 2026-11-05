@@ -1,0 +1,44 @@
+{
+  "digest": "f1b3e7c5a17f6a4f62b3f96d3d4a0fa05a0d1b009c007f6a55e5326d9c602fae",
+  "general_pairs": 841,
+  "status": "PASS",
+  "three_cycle_pairs": 812,
+  "triangle_constants": [
+    [
+      3,
+      0,
+      3,
+      3,
+      12,
+      3,
+      12
+    ],
+    [
+      5,
+      1,
+      2,
+      6,
+      9,
+      3,
+      12
+    ],
+    [
+      5,
+      2,
+      1,
+      9,
+      6,
+      3,
+      12
+    ],
+    [
+      3,
+      3,
+      0,
+      12,
+      3,
+      3,
+      12
+    ]
+  ]
+}

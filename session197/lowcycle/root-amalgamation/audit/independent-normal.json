@@ -1,0 +1,11 @@
+{
+  "status":"PASS",
+  "rooted_labelled_inputs_through_four":285,
+  "general_amalgamation_pairs":81225,
+  "physical_C3_pairs":72092,
+  "all_singleton_boundary_pairs":72900,
+  "canonical_triangle_tail_reconstructions":210,
+  "closing_only_singleton_bundles":42,
+  "direct_degree_one_triangle_tail_closures":18,
+  "j_counts":[18090,17956,17956,18090]
+}
