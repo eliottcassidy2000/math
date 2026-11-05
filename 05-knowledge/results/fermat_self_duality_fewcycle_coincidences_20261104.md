@@ -1,7 +1,10 @@
 # Fermat tournaments, {-3}-self-duality, the few-cycle table and 31 | 32 | 33: which coincidences have a mechanism
 
 **Session:** kind-pasteur-2026-11-04-S10 (third owner prompt of the session). Hypothesis: HYP-9464 (pre-registered in
-3fc61b533c, confirmed at order 10). No new canon theorem.
+3fc61b533c, confirmed at order 10).
+
+Canon from the follow-up: THM-4874, the uniquely Hamiltonian deletion law. It proves HYP-9464 (B) and its hc = 5
+extension, and was confirmed to order 15 by HYP-9467.
 
 **Predecessors, credited throughout.**
 - THM-4868 (this session): non-critical runs of uniquely Hamiltonian tournaments, and the rooted count
@@ -48,7 +51,7 @@
 | 5. 31, 32, 33 = 2^5 - 1, 2^5, 2^5 + 1: needs three back arcs, forbidden by parity, realised with one back arc by AT_7. | KNOWN (THM-4748, THM-4749); the parity reading is THM-582 / THM-647 (Anti-Redei) applied to AT_n |
 | 6. The few-cycle table is built from the first two Fermat tournaments: S75's only blocks of type 3 are AT_3 = C3 and AT_4 = W4. With S76's split, Z_3-symmetric classes come from the AT_3 block and asymmetric ones from AT_4. In general (AT_m, its two sole exits) is a block of type 2^(m-3) + 1, so F_i Hamiltonian cycles occur at order 2^i + 5. | PROVED (an identification in S75's Lemma B5; the split is S76's THM-4872 (B); the general block is new) |
 | 7. u_3(n) = R(n - 2): the Fibonacci table is the rooted uniquely Hamiltonian count R of THM-4868 (F), two orders down. (Garey 1972 counts the unrooted classes, F(2m - 6).) | PROVED (algebra); no bijection known |
-| 8. **Uniquely Hamiltonian deletion law.** A sole-exit-free tournament with exactly 3 Hamiltonian cycles has exactly 3 uniquely Hamiltonian deletions; with exactly 4 cycles (n >= 7), exactly 2. | FINITE-EXACT, orders 6-14 (pre-registered at 10; orders 11-14 by the audit); OPEN in general |
+| 8. **Uniquely Hamiltonian deletion law.** A sole-exit-free tournament with exactly 3 Hamiltonian cycles has exactly 3 uniquely Hamiltonian deletions; with exactly 4 cycles (n >= 7), exactly 2. | PROVED in its range (n >= 6 for hc = 3, n >= 7 for hc = 4) by THM-4874: the core block decides hc(T - v) for every v. FINITE-EXACT at orders 6-15 (10-15 pre-registered as HYP-9467) |
 | 9. Fermat ∩ Ogg = {3, 5, 17}, and the Platonic face sizes {3, 4, 5} contain the Fermat primes 3, 5. | NUMEROLOGY: both are forced by size |
 | 10. The "three 9s" (the self-duality threshold; the first order with route-(b) witnesses; hc = |Aut| = 9). | ANALOGY (S75), sharpened by a module-type dichotomy: transitive modules only (FINITE-EXACT at orders 7 and 8, CITED from 9); no C3 module (PROVED at 7 and 8, CITED from 9) |
 | 11. The MRB mirror and the microcosm. The x^(1/x) mirror pairs values across the peak at e. The AT_n mirror pairs the binomial row across its peak, and its fixed part is the half-size AT. | the two laws PROVED; the parallel is ANALOGY |
@@ -275,13 +278,17 @@ extends the law:
 | 3 | 233, all 3 | 610, all 3 | 1,597, all 3 | 4,181, all 3 |
 | 4 | 178, all 2 | 466, all 2 | 1,220, all 2 | 3,194, all 2 |
 
-The status is FINITE-EXACT at orders 6-14; a proof is OPEN. The data suggest that the 3 (or 2) deletions are vertices
-of the core block or its attachment, but this was not established.
+**PROVED (THM-4874).** The deletion count is decided by the block (W, A) of the terminal core:
+- T - v is uniquely Hamiltonian iff v ∈ W and sum over x in A - v of end_x(W - v) = 1;
+- the C3 block gives its three vertices, and the W4 = AT_4 blocks give a, d, plus c for type 3.
+
+The proof is the one-arc product law hc(T - v) = e_u(D - v) s_l(R - v), and the law is confirmed to order 15
+(HYP-9467).
 
 **Audit observation (not pre-registered).** For hc = 5 at orders 7-14, L(2n - 12) classes have exactly 2 uniquely
 Hamiltonian deletions (3, 7, 18, 47, ..., 2,207), and F(2n - 13) have exactly 3 (1, 2, 5, 13, ..., 610). This matches
-S75's u_5 = 4F(2n - 12) - 3F(2n - 14) = L(2n - 12) + F(2n - 13) term by term. It is a candidate extension of
-HYP-9464 (B).
+S75's u_5 = 4F(2n - 12) - 3F(2n - 14) = L(2n - 12) + F(2n - 13) term by term. It is now PROVED (THM-4874): the
+three-deletion classes are exactly those whose core block is (AT_5, its two sole exits).
 
 **(d) Disjointness.** For orders 7-10 no {-3}-self-dual tournament has hc = 3 or 4. Their hc values are:
 - order 7: 0, 1, 8, 10, 13, 14, 17;
@@ -379,7 +386,7 @@ caution: mpmath's default `nsum` on length(E) is wrong from the third or fourth 
   - for x > 0, x != 1, (x, x^2) is an x^(1/x) mirror pair iff x = 2.
 - **FINITE-EXACT:**
   - the {-3}-self-dual classes at orders 6-11, with orders 9-11 exactly {TT_n, AT_n} (order 11 by the audit);
-  - the uniquely Hamiltonian deletion law at orders 6-14 (pre-registered at 10; 11-14 by the audit);
+  - the uniquely Hamiltonian deletion law at orders 6-15. The law itself is now PROVED (THM-4874).
   - transitive modules only, at orders 7 and 8;
   - the PDF numerics.
 - **CITED:**
@@ -394,7 +401,6 @@ caution: mpmath's default `nsum` on length(E) is wrong from the third or fourth 
   - THM-024, THM-582, THM-583, THM-647.
 - **OPEN:**
   - indecomposable {-3}-self-dual tournaments at orders >= 12;
-  - the deletion law in general, and its hc = 5 extension (audit observation);
   - a bijection for u_3(n) = R(n - 2).
 - **ANALOGY / NUMEROLOGY:** sections 4, 6 and 7 as marked, and the MRB parallel.
 

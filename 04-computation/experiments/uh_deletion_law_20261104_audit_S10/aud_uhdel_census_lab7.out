@@ -1,0 +1,51 @@
+lab order 3: 2 labelled tournaments with 1 <= hc <= 5
+lab order 3: 1 strong classes with 1 <= hc <= 5; t_k: 1 0 0 0 0; u_k (min out-degree >= 2): 0 0 0 0 0
+lab JOINT n=3 hc=3 (k1,k2,|Aut|):
+lab JOINT n=3 hc=4 (k1,k2,|Aut|):
+lab JOINT n=3 hc=5 (k1,k2,|Aut|):
+lab order 4: 24 labelled tournaments with 1 <= hc <= 5
+lab order 4: 1 strong classes with 1 <= hc <= 5; t_k: 1 0 0 0 0; u_k (min out-degree >= 2): 0 0 0 0 0
+lab JOINT n=4 hc=3 (k1,k2,|Aut|):
+lab JOINT n=4 hc=4 (k1,k2,|Aut|):
+lab JOINT n=4 hc=5 (k1,k2,|Aut|):
+lab order 5: 544 labelled tournaments with 1 <= hc <= 5
+lab order 5: 6 strong classes with 1 <= hc <= 5; t_k: 3 2 1 0 0; u_k (min out-degree >= 2): 0 1 0 0 0
+lab JOINT n=5 hc=3 (k1,k2,|Aut|):
+lab JOINT n=5 hc=4 (k1,k2,|Aut|):
+lab JOINT n=5 hc=5 (k1,k2,|Aut|):
+lab order 6: 22320 labelled tournaments with 1 <= hc <= 5
+DUMP lab 6 5 3 10 20 33 22 37 11 | 1 1 1 1 1 1
+DUMP lab 6 5 3 10 20 33 38 13 19 | 2 2 2 2 2 2
+DUMP lab 6 5 1 18 12 9 49 38 7 | 1 2 3 1 2 2
+DUMP lab 6 3 1 20 17 10 3 44 15 | 1 1 1 2 0 2
+DUMP lab 6 4 1 24 9 3 52 38 7 | 1 1 2 1 1 2
+DUMP lab 6 5 1 24 33 3 38 14 21 | 1 2 2 2 3 1
+DUMP lab 6 4 1 34 20 9 3 13 30 | 0 1 2 1 2 1
+DUMP lab 6 4 1 36 17 10 3 13 30 | 0 1 3 2 1 2
+DUMP lab 6 3 3 48 5 9 3 14 30 | 0 1 1 1 3 3
+lab order 6: 35 strong classes with 1 <= hc <= 5; t_k: 8 5 11 6 5; u_k (min out-degree >= 2): 0 0 2 3 4
+lab JOINT n=6 hc=3 (k1,k2,|Aut|): (3,0,3):1 (3,2,1):1
+lab JOINT n=6 hc=4 (k1,k2,|Aut|): (2,2,1):1 (3,2,1):1 (4,2,1):1
+lab JOINT n=6 hc=5 (k1,k2,|Aut|): (0,6,3):1 (2,3,1):2 (6,0,3):1
+lab order 7: 661920 labelled tournaments with 1 <= hc <= 5
+DUMP lab 7 3 3 10 12 9 112 7 23 55 | 1 1 1 0 3 3 3
+DUMP lab 7 4 1 18 12 9 97 14 23 55 | 1 2 1 0 2 4 4
+DUMP lab 7 3 1 20 17 10 3 44 79 31 | 1 1 1 2 0 0 3
+DUMP lab 7 3 1 20 17 10 3 108 15 47 | 1 1 1 2 0 3 3
+DUMP lab 7 4 1 24 9 3 100 14 23 55 | 1 2 3 0 1 4 4
+DUMP lab 7 4 1 34 20 9 3 13 94 31 | 0 1 2 1 2 0 4
+DUMP lab 7 4 1 36 17 10 3 13 94 31 | 0 1 3 2 1 0 4
+DUMP lab 7 5 1 36 17 10 3 77 30 47 | 1 1 3 2 0 2 4
+DUMP lab 7 5 1 40 9 3 52 7 86 31 | 1 2 3 1 3 0 4
+DUMP lab 7 5 1 40 33 3 22 7 92 31 | 1 1 3 1 3 0 4
+DUMP lab 7 3 3 48 5 9 3 14 94 31 | 0 1 1 1 3 0 3
+DUMP lab 7 3 3 80 5 9 3 46 15 62 | 0 1 1 1 3 3 3
+DUMP lab 7 5 1 96 9 3 21 7 30 62 | 0 1 3 1 3 5 5
+lab order 7: 140 strong classes with 1 <= hc <= 5; t_k: 21 18 38 25 38; u_k (min out-degree >= 2): 0 0 5 4 4
+lab JOINT n=7 hc=3 (k1,k2,|Aut|): (3,0,3):3 (3,1,1):2
+lab JOINT n=7 hc=4 (k1,k2,|Aut|): (2,1,1):2 (2,2,1):2
+lab JOINT n=7 hc=5 (k1,k2,|Aut|): (2,0,1):1 (2,1,1):1 (2,2,1):1 (3,0,1):1
+
+real	0m3.133s
+user	0m0.030s
+sys	0m0.031s

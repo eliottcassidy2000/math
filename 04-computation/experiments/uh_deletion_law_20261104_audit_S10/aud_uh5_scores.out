@@ -1,0 +1,4 @@
+uniquely Hamiltonian 5-tournament classes: 3
+  scores [1, 1, 2, 3, 3], sole exits 2, sole entries 2, out-nbr lists [[4], [0], [0, 1], [0, 1, 2], [1, 2, 3]]
+  scores [1, 1, 2, 3, 3], sole exits 2, sole entries 2, out-nbr lists [[2, 4], [0], [1], [0, 1, 2], [1, 2, 3]]
+  scores [1, 2, 2, 2, 3], sole exits 1, sole entries 1, out-nbr lists [[3, 4], [0], [0, 1], [1, 2], [1, 2, 3]]

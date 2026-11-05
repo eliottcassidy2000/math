@@ -1,0 +1,25 @@
+per-block counts vs (3):
+  C3 all: formula F(2n-2w-4) with w = 3 holds for all n in [5, 40] (theorem's range starts at n = 6); counts n=6..11: [1, 3, 8, 21, 55, 144]
+  W4 {c,d}: formula F(2n-2w-3) with w = 4 holds for all n in [6, 40] (theorem's range starts at n = 6); counts n=6..11: [1, 2, 5, 13, 34, 89]
+  W4 {a,c,d}: formula F(2n-2w-3) with w = 4 holds for all n in [6, 40] (theorem's range starts at n = 7); counts n=6..11: [1, 2, 5, 13, 34, 89]
+  W4 {b,c,d}: formula F(2n-2w-3) with w = 4 holds for all n in [6, 40] (theorem's range starts at n = 7); counts n=6..11: [1, 2, 5, 13, 34, 89]
+  W4 all: formula F(2n-2w-4) with w = 4 holds for all n in [6, 40] (theorem's range starts at n = 7); counts n=6..11: [0, 1, 3, 8, 21, 55]
+  AT5 {4,5}: formula F(2n-2w-3) with w = 5 holds for all n in [7, 40] (theorem's range starts at n = 7); counts n=6..11: [0, 1, 2, 5, 13, 34]
+  W5 A1: formula F(2n-2w-3) with w = 5 holds for all n in [7, 40] (theorem's range starts at n = 7); counts n=6..11: [0, 1, 2, 5, 13, 34]
+  W5 A2: formula F(2n-2w-3) with w = 5 holds for all n in [7, 40] (theorem's range starts at n = 7); counts n=6..11: [0, 1, 2, 5, 13, 34]
+core counts per type vs THM-4869 c_k(d):
+  k = 3: mismatching d: []
+  k = 4: mismatching d: []
+  k = 5: mismatching d: []
+sums by type vs THM-4869 (C4):
+  u_3(6) from blocks = 2 (F(3) = 2)
+Lucas identity L(2n-12) = F(2n-12) + 2F(2n-13) = F(2n-13) + F(2n-11), n = 7..40: True
+k = 5 split: 3-deletion classes F(2n-13), 2-deletion classes L(2n-12), n = 7..14: [(1, 3), (2, 7), (5, 18), (13, 47), (34, 123), (89, 322), (233, 843), (610, 2207)]
+HYP-9467 table rows n = 10..15 (C3, W4{c,d}, W4 type 4 each, W4 all, each 5-block):
+  n=10: 55, 34, 34, 21, 13; u3=89 u4=68 u5=60
+  n=11: 144, 89, 89, 55, 34; u3=233 u4=178 u5=157
+  n=12: 377, 233, 233, 144, 89; u3=610 u4=466 u5=411
+  n=13: 987, 610, 610, 377, 233; u3=1597 u4=1220 u5=1076
+  n=14: 2584, 1597, 1597, 987, 610; u3=4181 u4=3194 u5=2817
+  n=15: 6765, 4181, 4181, 2584, 1597; u3=10946 u4=8362 u5=7375
+ALL OK: True

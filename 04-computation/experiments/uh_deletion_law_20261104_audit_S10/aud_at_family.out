@@ -1,0 +1,10 @@
+rooted uniquely Hamiltonian prefixes (Q, z) of order 3: 1
+rooted uniquely Hamiltonian prefixes (Q, z) of order 4: 2
+rooted uniquely Hamiltonian prefixes (Q, z) of order 5: 5
+m=4: type k = 2^(m-3)+1 = 3, interior value 2^(m-4)+1 = 2, h0 = 2^(m-3) = 2; one-arc joins built and checked: 36
+m=5: type k = 2^(m-3)+1 = 5, interior value 2^(m-4)+1 = 3, h0 = 2^(m-3) = 4; one-arc joins built and checked: 36
+m=6: type k = 2^(m-3)+1 = 9, interior value 2^(m-4)+1 = 5, h0 = 2^(m-3) = 8; one-arc joins built and checked: 36
+m=7: type k = 2^(m-3)+1 = 17, interior value 2^(m-4)+1 = 9, h0 = 2^(m-3) = 16; one-arc joins built and checked: 36
+m=8: type k = 2^(m-3)+1 = 33, interior value 2^(m-4)+1 = 17, h0 = 2^(m-3) = 32; one-arc joins built and checked: 36
+m=9: type k = 2^(m-3)+1 = 65, interior value 2^(m-4)+1 = 33, h0 = 2^(m-3) = 64; one-arc joins built and checked: 36
+total: 216 tournaments, 2586 vertex deletions, 0 failures

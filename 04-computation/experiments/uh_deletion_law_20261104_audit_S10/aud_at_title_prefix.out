@@ -1,0 +1,4 @@
+prefix Q (out-nbr lists): [[1, 4], [3], [0, 1], [0, 2], [1, 2, 3]] z = 1 l = 3
+m=4: n=9, min out-degree 2, hc(T) = 6, #(hc(T-v) = 1) = 0, block values [2, 4, 2, 2]
+m=5: n=10, min out-degree 2, hc(T) = 10, #(hc(T-v) = 1) = 0, block values [2, 6, 6, 2, 2]
+m=6: n=11, min out-degree 2, hc(T) = 18, #(hc(T-v) = 1) = 0, block values [2, 10, 10, 10, 2, 2]

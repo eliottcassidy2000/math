@@ -1,7 +1,7 @@
 ---
 id: HYP-9464
 title: "Coincidences with a mechanism. (A) The {-3}-self-dual tournaments of order 10 are exactly the transitive TT_10 and the almost transitive AT_10 = NT_10, whose path count 257 = 2^8 + 1 is the Fermat prime F_3; in general the non-transitive decomposable {-3}-self-dual tournament of order 2^i + 2 >= 10 is the one with H = F_i (Achour-Boudabbous-Boussairi, with THM-4749 (4)). (B) Every sole-exit-free tournament with exactly 3 Hamiltonian cycles (n >= 6) has exactly 3 vertices whose deletion is uniquely Hamiltonian; with exactly 4 cycles (n >= 7), exactly 2. (C) The few-cycle Fibonacci table is the rooted uniquely Hamiltonian count two orders down: u_3(n) = R(n - 2), R(m) = F(2m - 5) (THM-4868 (F)). Pre-registered at order 10"
-status: CONFIRMED at order 10 (pre-registered in 3fc61b533c, all three predictions held, no failing class); audited PASS WITH CORRECTIONS (MISTAKE-712). (A) FINITE-EXACT at orders 9-11 (11 by the audit) and CITED for decomposable n >= 9, indecomposable n >= 12 OPEN; (B) FINITE-EXACT at orders 6-14 (11-14 by the audit), general n OPEN; (C) PROVED
+status: CONFIRMED at order 10 (pre-registered in 3fc61b533c, all three predictions held, no failing class); audited PASS WITH CORRECTIONS (MISTAKE-712). (A) FINITE-EXACT at orders 9-11 (11 by the audit) and CITED for decomposable n >= 9, indecomposable n >= 12 OPEN; (B) PROVED for every n in its range (n >= 6 for hc = 3, n >= 7 for hc = 4) by THM-4874, with the hc = 5 extension (n >= 7); confirmed to order 15 by HYP-9467; (C) PROVED
 script_confirm: 04-computation/experiments/selfdual3_fewcycle_20261104_confirm.out, 04-computation/experiments/selfdual3_networkx_check_20261104.py, 04-computation/experiments/at_mirror_fixed_paths_20261104.py, 04-computation/experiments/selfdual3_fewcycle_20261104_records/
 session: kind-pasteur-2026-11-04-S10
 date: 2026-11-04
@@ -88,8 +88,8 @@ The runs were made after the pre-registration commit 3fc61b533c. The record is
 | (A) the decomposable case, every n >= 9 | CITED (Achour-Boudabbous-Boussairi) |
 | (A) no indecomposable {-3}-self-dual tournament for n >= 12 | OPEN |
 | (A) H(AT_n) = 2^(n-2) + 1, hence F_i at order 2^i + 2 | PROVED (THM-4749 (4); re-derived in the note) |
-| (B) hc = 3, exactly 3 uniquely Hamiltonian deletions | FINITE-EXACT, orders 6-14 (11-14 by the audit's `aud_fewcycle.c`); OPEN in general |
-| (B) hc = 4, exactly 2 | FINITE-EXACT, orders 7-14 (11-14 by the audit); OPEN in general |
+| (B) hc = 3, exactly 3 uniquely Hamiltonian deletions | PROVED for every n >= 6 (THM-4874); FINITE-EXACT at orders 6-15 (11-14 by the audit's `aud_fewcycle.c`, 10-15 by HYP-9467) |
+| (B) hc = 4, exactly 2 | PROVED for every n >= 7 (THM-4874); FINITE-EXACT at orders 7-15 |
 | (C) u_3(n) = R(n - 2) | PROVED (algebra from THM-4869); no bijection is known |
 
 **The mirror law.** The note proves it for AT_n (`at_mirror_fixed_paths_20261104.py`). The converse involution of
@@ -103,7 +103,9 @@ S75's u_5 = L(2n - 12) + F(2n - 13):
 - L(2n - 12) classes have exactly 2 uniquely Hamiltonian deletions;
 - F(2n - 13) classes have exactly 3.
 
-This is a candidate extension of (B), to be pre-registered before any confirmatory run.
+This is a candidate extension of (B). It is now PROVED by THM-4874 (2) and (3): the 3-deletion classes are those whose core block is
+(AT_5, its two sole exits). It was pre-registered as part of HYP-9467 and confirmed at orders 10-15. It was blind only
+at order 15, since the k1 split at orders 10-14 was the audit's data.
 
 **Audit.** The independent adversarial audit gave PASS WITH CORRECTIONS (1 major, 11 minor; MISTAKE-712). Its report
 is `04-computation/experiments/fermat_self_duality_20261104_audit_S10/AUDIT.md`. Two corrections concern this file:
