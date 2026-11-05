@@ -1,0 +1,58 @@
+{
+  "Q_minimal_width_controls": 8192,
+  "Q_split_controls": 4080,
+  "dependencies": {
+    "ROOTED.md": "ba7e632518219eeb8d86b6db7da386a88e98317ea417c9b22e649278c132b32e",
+    "SQRT_FIXED_PREFIX_INVERSE.md": "084b7c372524f41e99a4087179e0fd30baf35a0de58a0166e3bdcd84c5e407bf"
+  },
+  "exhaustive_inverse_controls": 49698,
+  "g_block_controls": 4080,
+  "invalid_inputs": 7,
+  "large": [
+    {
+      "coefficients": [
+        9,
+        9,
+        30,
+        30,
+        3
+      ],
+      "evaluations": 442432,
+      "solutions": [
+        1234567
+      ],
+      "target": 119881395
+    },
+    {
+      "coefficients": [
+        39,
+        54,
+        156,
+        216,
+        6
+      ],
+      "evaluations": 1376320,
+      "solutions": [
+        9876543
+      ],
+      "target": 5703260151
+    },
+    {
+      "coefficients": [
+        100,
+        300,
+        400,
+        1234,
+        100
+      ],
+      "evaluations": 4587584,
+      "solutions": [
+        100000007
+      ],
+      "target": 235297253052
+    }
+  ],
+  "physical_gadget_controls": 256,
+  "status": "PASS",
+  "strict_branch_controls": 26880
+}
