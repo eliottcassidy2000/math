@@ -1,0 +1,1 @@
+PASS rooted_labelled_sources 5405 physical_clone_symmetry_checks 32110 maximal_block_checks 5405 persistent 1853 finite 3552 finite_length_histogram 0:1664 1:1600 2:288 sharp_controls 81 binary_positive_controls 105 negative_binary_controls 8 automorphism_checks 64220
