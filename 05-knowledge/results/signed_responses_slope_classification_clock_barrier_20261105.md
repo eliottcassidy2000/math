@@ -190,10 +190,18 @@ of them), which is what G(0,2) and G(1,1) do in the censuses of THM-4878.
 ## 7. Beyond: what the clock says about the two-radix grades
 
 In G(2,0) a block d has eigenvalues 1 (with a Jordan block of size up to 3), 2^L and 3^L (Session 194), so the
-eigenvalue-1 left eigenspace carries two independent drift functionals (degree-1 and degree-2 counters). The
-analogue of Session 198's theorem would program a pair of signed functionals of the 17-dimensional profile jointly;
-HYP-9475 (B) records this as the next test, together with the question whether the recipe's witness size (n of
-about B^h digits) can be reduced by mixing two clocks with coprime drops.
+eigenvalue-1 left eigenspace carries two independent drift functionals (degree-1 and degree-2 counters). A first
+test (`two_apex_drift_functionals_20261105.py`, FINITE-EXACT: the six coefficients of Session 194's form solved
+exactly from k = 3..8 for all 21,845 two-apex prefixes of length <= 7 on the 200-state automaton of THM-4878, the
+form confirmed at k = 9, 10 without failure) shows that the coefficients are rational: for the block 12 the
+quadratic term vanishes for every prefix and the drift is J(u) = (6t + 4)/9 with t an integer, every value of this
+progression being attained in [-56/9, 58/9] (192 distinct drifts for |u| <= 7); for 120 and 0312 the drifts are
+sparse rationals with denominators 4459 and 375 and the quadratic terms are 13/49 and 8/15. Appending the block
+leaves J unchanged and shifts the constant term A by J, so the pair (A(u), J(u)) is the two-apex analogue of
+(aU - bD, K): the constant term is the response and the drift its seed-dependent clock constant. HYP-9475 (B)
+records the revised conjecture (the lattice (6t + 4)/9 for block 12 and full progressions of constant terms) and
+(C) the question whether mixing two clocks with coprime drops shortens Session 198's witnesses from h = O(|r|)
+periods to O(log |r|).
 
 ## 8. Audit
 

@@ -19,14 +19,22 @@ the data refuted it (the negative side is confined to one class modulo 4) and th
 why: the even-m branch is eventually positive above 3/4, so negative values come only from the odd-m branch, which
 has a fixed residue modulo 4.
 
-## (B) Two-apex drift functionals (OPEN)
+## (B) Two-apex drift functionals (FINITE-EXACT data; the naive form withdrawn, the lattice form OPEN)
 
 For a block d of the two-apex grammar G(2,0), Session 194 proved H(u d^k) = A + Jk + Kk^2 + (D + Ek) 2^(Lk) + G 3^(Lk)
-with A, J, K depending on the prefix u. The eigenvalue-1 generalized left eigenspace of M_d therefore carries drift
-functionals of degree 1 and 2. Conjecture: for every mixed block d of length <= 6 the degree-1 functional (the
-coefficient J as a linear functional of the 17-dimensional prefix profile) is a signed response in the sense of
-THM-4882 (3): onto the integers of its parity on strong two-apex words, by a modular seed theorem for two-apex
-profiles. Test: compute the left Jordan chains of M_d from the G(2,0) automaton dump of THM-4878 and scan prefixes.
+with A, J, K depending on the prefix u. The first draft conjectured that the degree-1 drift J(u) is onto the integers
+of a parity. The test (`two_apex_drift_functionals_20261105.py` on the 200-state automaton dump of THM-4878: the six
+coefficients solved exactly from k = 3..8 for all 21,845 prefixes of length <= 7, the form verified at k = 9, 10 with
+no failure) shows the coefficients are rational, not integral: for d = 12, K = 0 for every prefix and J(u) = (6t + 4)/9
+for an integer t(u), with 192 distinct values in [-758/9, 556/9] and every value of that progression attained in the
+window [-56/9, 58/9]; for d = 120, K = 13/49 and J has denominator 4459 (2,439 distinct values, none in [-60, 60]/4459);
+for d = 0312, K = 8/15 and J has denominator 375 with numerators 2 mod 4 (675 values). Appending the block to the
+prefix leaves J unchanged and shifts the constant term A by J, so the two-apex analogue of Session 198's signed
+response is the pair (A(u), J(u)): the constant term is the programmable response and the drift is its clock
+constant, which here depends on the seed. Revised conjecture: for d = 12, {J(u)} = {(6t + 4)/9 : t in an interval
+growing linearly with |u|} and the constant terms A(u) over prefixes with a fixed J form a full arithmetic
+progression of difference J; a modular seed theorem for two-apex profiles would then give exact coverage of a signed
+response of G(2,0) with the ternary radix present. Untested beyond the data above.
 
 ## (C) Witness size (OPEN)
 
