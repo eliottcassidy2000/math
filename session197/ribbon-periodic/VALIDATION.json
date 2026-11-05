@@ -1,0 +1,61 @@
+{
+  "short_block_certificates": {
+    "1": {
+      "classes": 8,
+      "first_nonzero_modulus": {
+        "3": 3,
+        "5": 4,
+        "7": 1,
+        "11": 0,
+        "13": 0
+      }
+    },
+    "2": {
+      "classes": 36,
+      "first_nonzero_modulus": {
+        "3": 31,
+        "5": 5,
+        "7": 0,
+        "11": 0,
+        "13": 0
+      }
+    },
+    "3": {
+      "classes": 176,
+      "first_nonzero_modulus": {
+        "3": 112,
+        "5": 56,
+        "7": 4,
+        "11": 0,
+        "13": 4
+      }
+    }
+  },
+  "intertwining_rows": 952,
+  "reset_rows": 118,
+  "boundary_deletion_counterexample": {
+    "word": "0001500",
+    "deletion_counts": [
+      15,
+      5,
+      15,
+      5,
+      15,
+      5,
+      15,
+      5
+    ],
+    "append_1_count": 91
+  },
+  "eigenvalue2_counterexample": {
+    "word": "001476",
+    "initial_counts": [
+      9,
+      543,
+      40461
+    ],
+    "formula": "(7*75^k+66*2^k)/73"
+  },
+  "overlap_geometry_checks": 504,
+  "transitive_tail_prefix_checks": 92
+}
