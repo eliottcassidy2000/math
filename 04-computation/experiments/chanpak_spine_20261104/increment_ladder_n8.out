@@ -1,0 +1,36 @@
+n=3: Claim A at v checked on 10 cuts with increment <= 8: mismatches 0
+   increment 2k=2: (h, #odd cycles through v, complement counts) -> cases: [((1, 1, (1,)), 2), ((3, 1, (1,)), 6)]
+   increment 2k=4: (h, #odd cycles through v, complement counts) -> cases: [((1, 2, (1, 1)), 2)]
+   increment 2k=6: (h, #odd cycles through v, complement counts) -> cases: []
+   increment 2k=8: (h, #odd cycles through v, complement counts) -> cases: []
+   minimal positive increment k per h (h <= 40): {1: 1, 3: 1}
+n=4: Claim A at v checked on 40 cuts with increment <= 8: mismatches 0
+   increment 2k=2: (h, #odd cycles through v, complement counts) -> cases: [((1, 1, (1,)), 3), ((3, 1, (1,)), 12)]
+   increment 2k=4: (h, #odd cycles through v, complement counts) -> cases: [((1, 2, (1, 1)), 4), ((5, 2, (1, 1)), 5)]
+   increment 2k=6: (h, #odd cycles through v, complement counts) -> cases: [((3, 3, (1, 1, 1)), 6), ((5, 3, (1, 1, 1)), 4)]
+   increment 2k=8: (h, #odd cycles through v, complement counts) -> cases: [((1, 4, (1, 1, 1, 1)), 3), ((5, 4, (1, 1, 1, 1)), 3)]
+   minimal positive increment k per h (h <= 40): {1: 1, 3: 1, 5: 2}
+n=5: Claim A at v checked on 86 cuts with increment <= 8: mismatches 0
+   increment 2k=2: (h, #odd cycles through v, complement counts) -> cases: [((1, 1, (1,)), 4), ((3, 1, (1,)), 18)]
+   increment 2k=4: (h, #odd cycles through v, complement counts) -> cases: [((1, 2, (1, 1)), 6), ((5, 2, (1, 1)), 10)]
+   increment 2k=6: (h, #odd cycles through v, complement counts) -> cases: [((3, 1, (3,)), 2), ((3, 3, (1, 1, 1)), 12), ((5, 3, (1, 1, 1)), 8), ((9, 3, (1, 1, 1)), 6)]
+   increment 2k=8: (h, #odd cycles through v, complement counts) -> cases: [((1, 4, (1, 1, 1, 1)), 6), ((5, 4, (1, 1, 1, 1)), 6), ((9, 2, (1, 3)), 2), ((9, 4, (1, 1, 1, 1)), 4), ((11, 4, (1, 1, 1, 1)), 2)]
+   minimal positive increment k per h (h <= 40): {1: 1, 3: 1, 5: 2, 9: 3, 11: 4, 13: 5, 15: 6}
+n=6: Claim A at v checked on 146 cuts with increment <= 8: mismatches 0
+   increment 2k=2: (h, #odd cycles through v, complement counts) -> cases: [((1, 1, (1,)), 5), ((3, 1, (1,)), 24)]
+   increment 2k=4: (h, #odd cycles through v, complement counts) -> cases: [((1, 2, (1, 1)), 8), ((5, 2, (1, 1)), 15)]
+   increment 2k=6: (h, #odd cycles through v, complement counts) -> cases: [((3, 1, (3,)), 6), ((3, 3, (1, 1, 1)), 18), ((5, 3, (1, 1, 1)), 12), ((9, 1, (3,)), 12), ((9, 3, (1, 1, 1)), 12)]
+   increment 2k=8: (h, #odd cycles through v, complement counts) -> cases: [((1, 4, (1, 1, 1, 1)), 9), ((5, 4, (1, 1, 1, 1)), 9), ((9, 2, (1, 3)), 4), ((9, 4, (1, 1, 1, 1)), 8), ((11, 4, (1, 1, 1, 1)), 4)]
+   minimal positive increment k per h (h <= 40): {1: 1, 3: 1, 5: 2, 9: 3, 11: 4, 13: 5, 15: 5, 17: 5, 19: 6, 23: 7, 25: 9, 27: 9, 29: 10, 31: 11, 33: 12, 37: 14}
+n=7: Claim A at v checked on 220 cuts with increment <= 8: mismatches 0
+   increment 2k=2: (h, #odd cycles through v, complement counts) -> cases: [((1, 1, (1,)), 6), ((3, 1, (1,)), 30)]
+   increment 2k=4: (h, #odd cycles through v, complement counts) -> cases: [((1, 2, (1, 1)), 10), ((5, 2, (1, 1)), 20)]
+   increment 2k=6: (h, #odd cycles through v, complement counts) -> cases: [((3, 1, (3,)), 12), ((3, 3, (1, 1, 1)), 24), ((5, 3, (1, 1, 1)), 16), ((9, 1, (3,)), 36), ((9, 3, (1, 1, 1)), 18)]
+   increment 2k=8: (h, #odd cycles through v, complement counts) -> cases: [((1, 4, (1, 1, 1, 1)), 12), ((5, 4, (1, 1, 1, 1)), 12), ((9, 2, (1, 3)), 6), ((9, 4, (1, 1, 1, 1)), 12), ((11, 4, (1, 1, 1, 1)), 6)]
+   minimal positive increment k per h (h <= 40): {1: 1, 3: 1, 5: 2, 9: 3, 11: 4, 13: 5, 15: 5, 17: 5, 19: 6, 23: 7, 25: 9, 27: 9, 29: 8, 31: 10, 33: 9, 35: 11, 37: 12, 39: 11}
+n=8: Claim A at v checked on 308 cuts with increment <= 8: mismatches 0
+   increment 2k=2: (h, #odd cycles through v, complement counts) -> cases: [((1, 1, (1,)), 7), ((3, 1, (1,)), 36)]
+   increment 2k=4: (h, #odd cycles through v, complement counts) -> cases: [((1, 2, (1, 1)), 12), ((5, 2, (1, 1)), 25)]
+   increment 2k=6: (h, #odd cycles through v, complement counts) -> cases: [((3, 1, (3,)), 20), ((3, 3, (1, 1, 1)), 30), ((5, 3, (1, 1, 1)), 20), ((9, 1, (3,)), 72), ((9, 3, (1, 1, 1)), 24)]
+   increment 2k=8: (h, #odd cycles through v, complement counts) -> cases: [((1, 4, (1, 1, 1, 1)), 15), ((5, 4, (1, 1, 1, 1)), 15), ((9, 2, (1, 3)), 8), ((9, 4, (1, 1, 1, 1)), 16), ((11, 4, (1, 1, 1, 1)), 8)]
+   minimal positive increment k per h (h <= 40): {1: 1, 3: 1, 5: 2, 9: 3, 11: 4, 13: 5, 15: 5, 17: 5, 19: 6, 23: 7, 25: 9, 27: 9, 29: 8, 31: 10, 33: 9, 35: 11, 37: 12, 39: 11}
