@@ -86,6 +86,13 @@ lattice-coset alignment: S78's descent lemma rules out unimodular coverings, and
 
 Every outcome will be reported. P2 and P3 are measured with the same program, seeds, bands and X as the baseline.
 
+**Addendum (committed after P1 was read, before any order-8 computation).**
+- P1 came out D_7(2) = 0.8479 and D_7(3) = 0.4374, both inside the predicted ranges.
+- The growth ratio per order is slowing: x2.20, x1.89, x1.74.
+- **P4 (blind).** D_8(2) lies in [1.1, 1.8], so the threshold D = 1 is crossed at order 8, not 7. D_8(3) lies in
+  [0.55, 0.95].
+- **P5 (blind).** No S-row-zero gadget of order <= 8 has an odd 2x2 determinant. This holds at every order <= 7.
+
 ## What this would and would not mean
 
 - **Confirmation would show** that the recursive composition of pieces of order <= 7 is near the critical

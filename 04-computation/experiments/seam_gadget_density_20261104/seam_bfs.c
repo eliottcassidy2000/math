@@ -9,8 +9,8 @@ static size_t hsh(ll h,ll s,ll r){ unsigned long long x=(unsigned long long)h*0x
 static int ins(ll h,ll s,ll r){ size_t i=hsh(h,s,r); while(tab[i].h){ if(tab[i].h==h&&tab[i].s==s&&tab[i].r==r) return 0; i=(i+1)&(cap-1);} tab[i].h=h;tab[i].s=s;tab[i].r=r; cnt++; return 1; }
 int main(int argc,char**argv){
   ll X=atoll(argv[1]); const char*mf=argv[2]; int onlyP = argc>3 ? atoi(argv[3]) : 0;
-  FILE*f=fopen(mf,"r"); ll (*M)[9]=malloc(sizeof(ll)*9*5000); int nm=0;
-  while(nm<5000 && fscanf(f,"%lld %lld %lld %lld %lld %lld %lld %lld %lld",&M[nm][0],&M[nm][1],&M[nm][2],&M[nm][3],&M[nm][4],&M[nm][5],&M[nm][6],&M[nm][7],&M[nm][8])==9) nm++;
+  FILE*f=fopen(mf,"r"); ll (*M)[9]=malloc(sizeof(ll)*9*40000); int nm=0;
+  while(nm<40000 && fscanf(f,"%lld %lld %lld %lld %lld %lld %lld %lld %lld",&M[nm][0],&M[nm][1],&M[nm][2],&M[nm][3],&M[nm][4],&M[nm][5],&M[nm][6],&M[nm][7],&M[nm][8])==9) nm++;
   fclose(f);
   cap=1ULL<<26; tab=calloc(cap,sizeof(st));
   st *q=malloc(sizeof(st)*(cap/2)); size_t qh=0,qt=0;
