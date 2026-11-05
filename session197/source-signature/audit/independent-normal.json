@@ -1,0 +1,9 @@
+{
+  "complete_state_sha256": "82223401b636d4b555f21f287f15854d5845d77237fbe02ae1411c933fcb5a61",
+  "integer_cube": 184512,
+  "literal_sources": 1695,
+  "physical_pairs": 10609,
+  "physical_quadruples": 32549,
+  "relaxed_cone_slack_pairs": 57600,
+  "status": "PASS"
+}
