@@ -75,7 +75,7 @@ def build(w, verbose=True):
         frontier = [vecmat(f, mats[a], d) for f in frontier for a in L]
         gens = gens + frontier
         newbasis = echelon(gens, d)
-        if verbose: print(f"  words of length <= {k}: module rank {len(newbasis)}, generators {len(gens)}", flush=True)
+        if verbose: print(f"  generator depth {k} (suffix functionals of length <= {k + 1} from the second round on): module rank {len(newbasis)}, generators {len(gens)}", flush=True)
         # invariance test: every basis row times every letter lies in the module
         invariant = all(in_module_coeffs(newbasis, vecmat(f, mats[a], d)) is not None for f in newbasis for a in L)
         same = (newbasis == basis)

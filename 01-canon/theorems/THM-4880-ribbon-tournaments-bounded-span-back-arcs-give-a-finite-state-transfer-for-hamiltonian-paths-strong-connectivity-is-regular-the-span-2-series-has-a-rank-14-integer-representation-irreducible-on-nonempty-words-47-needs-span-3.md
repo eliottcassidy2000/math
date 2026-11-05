@@ -1,19 +1,32 @@
 ---
 id: THM-4880
-title: "Ribbon tournaments (back arcs of span <= w on an ordered vertex set). (A) The Hamiltonian-path count is a finite-state series: H(a_1 ... a_n) = final . M_{a_n} ... M_{a_1} . init with nonnegative integer profile matrices on 7, 27, 119 states for w = 1, 2, 3; the minimal dimension is 4 (w = 1) and 14 (w = 2), and the span-2 series has an exact integer representation of rank 14 with entries in [-5, 5] (span 3: rank 62, entries in [-4, 4] after LLL). (B) Strong connectivity of ribbon words is regular: a condensation automaton with 4, 17, 121 states; strong components need not be intervals. (C) The value set of the span-w family is the multiplicative closure of its strong values. (D) End-twin lemma: if b's only out-neighbour is a and c -> a with every other vertex beating c, reversing the arc between b and c keeps H. (E) 47 is not a span-2 count (Busch floor + exhaustive orders <= 9); every realiser of 47 has width 3 and explicit span-3 words realise it. (F) The constant-letter runs satisfy proved linear recurrences: {2}: order 8 (growth 2.288291), {1,2}: order 12 (growth 2.562972), {1}: tribonacci. (G) The span-2 letters generate the full matrix algebra M_13(Q) on the span of nonempty-word states (irreducible). (H) No block of length <= 5 is a bounded-residual digit block for any multiplier 2..9 except ordinal-sum blocks (residual 0), and no block of length <= 4 is identity-plus-nilpotent. FINITE-EXACT: strong span-2 words attain every odd number <= 100,000 except exactly 7, 21, 47, with the solid prefix [49, d_n] of the length-<= n values growing geometrically (ribbon tiling law)."
+title: "Ribbon tournaments (back arcs of span <= w on an ordered vertex set). (A) The Hamiltonian-path count is a finite-state series: H(a_1 ... a_n) = final . M_{a_n} ... M_{a_1} . init with nonnegative integer profile matrices on 7, 27, 119 states for w = 1, 2, 3; the minimal dimension is 4 (w = 1) and 14 (w = 2), and the span-2 series has an exact integer representation of rank 14 with entries in [-5, 5] (span 3: rank 62, entries in [-4, 4] after LLL). (B) Strong connectivity of ribbon words is regular: a condensation automaton with 4, 17, 121 states; strong components need not be intervals. (C) The value set of the span-w family is the multiplicative closure of its strong values. (D) End-twin lemma: if b's only out-neighbour is a and c -> a with every other vertex beating c, reversing the arc between b and c keeps H. (E) 47 is not a span-2 count (Busch floor + exhaustive orders <= 9); every realiser of 47 has width 3 and explicit span-3 words realise it. (F) The constant-letter runs satisfy proved linear recurrences: {2}: order 8 (growth 2.288291), {1,2}: order 12 (growth 2.562972), {1}: tribonacci. (G) The span-2 letters generate the full matrix algebra M_13(Q) on the span of nonempty-word states (irreducible). (H) For blocks of length <= 5 and multipliers 2..9 the residual H(uB) - alpha H(u) is constant on the 8,040 prefix states only for the ordinal-sum blocks (then 0) and takes at least 227 values otherwise; on the 14-dimensional quotient the eigenvalue 1 of every block matrix of length <= 4 is at most simple, so no block is unipotent on the reachable space and none inserts a non-constant arithmetic progression. FINITE-EXACT: strong span-2 words attain every odd number <= 100,000 except exactly 7, 21, 47, with the solid prefix [49, d_n] of the length-<= n values growing geometrically (ribbon tiling law)."
 status: >
+  KNOWN (method; audit correction 4): the profile transfer of (A) is the standard frontier-based / bounded-bandwidth
+  transfer-matrix dynamic programme for Hamiltonian paths (Knuth, TAOCP 4A, section 7.1.4, simpath; frontier-based
+  search), and the regularity of (B) follows abstractly from the MSO-definability of strong connectivity
+  (Buechi-Elgot-Trakhtenbrot); new here are the tournament specialisation (free tails, at most one unfed head,
+  7/27/119 states), the explicit merge-lemma automaton, the integer quotient, (G), (H) and the census.
   PROVED (mac-mini-2026-11-04-ribbon, elementary): (A) profile transfer and the exact integer quotient (exact
   arithmetic: Hankel rank, Z-module echelon/LLL bases, verified transfer on 996 + 500 random words), (B) the
   condensation automaton (merge lemma; verified against brute-force reachability on 86,778 words), (C) closure,
   (D) end twins (300 random checks), (E) via Busch's floor (THM-4744, CITED) and exhaustive enumeration, (F) Krylov
   minimal polynomials plus Berlekamp-Massey minimal recurrences verified beyond the proved orders, (G) exact integer
-  computation (python-flint), (H) exact finite computation over 8,040 prefix states and 340/342 blocks.
+  computation (python-flint), (H) exact finite computation over 8,040 prefix states, 583 blocks x 8 multipliers, and
+  the exact characteristic polynomials of the 340 block matrices of length <= 4 on the 14-dimensional quotient (the
+  unipotency half was supplied by the audit: the session's rank bound rank(M_B - I) >= 25 did not exclude a single
+  nilpotent Jordan block, MISTAKE-719).
   CITED/KNOWN: the insertion lemma H(T) <= H(T + v) (THM-1370), Busch's strong floor (THM-4744), the one-exit law
   THM-4862 (a), multiplicativity over strong components (THM-1862/THM-4094), the tribonacci tower (THM-4865 (c)),
   the one-arc join (SEAM.md (G1), THM-4875 (B)) and the near-join (HYP-9453) which appear here as the junctions of
   coupling rank 3 and 2. FINITE-EXACT: section 7 of the note (ribbon_enum.c to 5,000 with 27 coordinates;
-  ribbon_levels.c to 50,000 on the 14 reduced coordinates; probe47.py orders <= 9; width.py orders <= 8). Not
-  independently audited at the pre-audit commit; audit section in the note. NOT CLAIMED: Chan-Pak completeness
+  ribbon_levels.c to 50,000 on the 14 reduced coordinates; probe47.py orders <= 9; width.py orders <= 8). AUDIT: PASS WITH CORRECTIONS (independent, adversarial; 05-knowledge/results/ribbon_transfer_audit_20261104.md):
+  one major (the (H2) proof gap, repaired as above) and twelve minors, all applied on 2026-11-04 (file name and index
+  wording: the 14-dimensional representation is reducible, irreducibility holds on the 13-dimensional nonempty-word
+  space; (A), (B) KNOWN as methods; (H1) stated as the computed fact; the general-w ordinal-sum rule; components
+  inside A are singletons for w = 2; width-table entries 0 at orders 3-4; the all-order width argument for 47; DFS
+  first-encounter lengths; level-receipt caveats). The audit reproduced every proof and computation with its own
+  code, including an independent undeduplicated DFS to 50,000 (misses exactly 7, 21, 47). NOT CLAIMED: Chan-Pak completeness
   (OPEN; HYP-9473 records the ribbon tiling law and the span-3 completeness conjecture that would imply it).
 session: mac-mini-2026-11-04-ribbon
 source: 05-knowledge/results/ribbon_tournaments_bounded_span_transfer_20261104.md
@@ -78,7 +91,9 @@ the value set of the family is the multiplicative closure of its strong values (
 vertices beating `c`, the orientations `b -> c` and `c -> b` give equal `H` (proof in the note, section 5).
 
 **(E) 47.** No span-2 ribbon word has `H = 47` (a strong realiser has order `<= 8` by Busch's floor; the strong span-2
-words of orders `<= 9` are enumerated; 47 is prime). All six classes with `H = 47` of orders 7-8 have width 3;
+words of orders `<= 9` are enumerated; 47 is prime). Every tournament with `H = 47` has width exactly 3: its strong realisers are the two order-7 classes (the four order-8
+classes with `H = 47` are ordinal sums of one of them with a vertex), both of width 3, and an ordinal sum with transitive
+pieces keeps the width (at least 3 by the induced-subtournament bound of (C), at most 3 by its closure);
 `---.1--.---.-2-.--3.12-.-23` and `---.---.---.-23.1--.-2-.--3` are span-3 words with `H = 47`. Width distribution of
 all classes of orders 3-8: note, section 6.
 
@@ -92,15 +107,21 @@ with characteristic polynomial `x^12 - 2x^11 - 2x^9 - 2x^8 - 4x^7 - 4x^6 - 4x^5 
 the three nonempty letters - generate the full matrix algebra `M_13(Q)`: there is no common invariant subspace and no
 lower-dimensional quotient of the series.
 
-**(H) No-go.** For blocks `B` of length `<= 5` (three nonempty letters) or `<= 4` (with the empty letter) and multipliers
-`alpha = 2, ..., 9`, the residual `H(uB) - alpha H(u)` over 8,040 prefix states is bounded only when it vanishes,
-which happens exactly for the ordinal-sum blocks (`alpha = 3`: a C3 after a sink; `alpha = 5`: the strong 4-tournament
-after a sink). Every block of length `<= 4` has `rank(M_B - I) >= 25` on the 26-dimensional reachable space. Hence no
-bounded-carry digit system and no arithmetic-progression gadget exist among short blocks; with (G), a proof of
-completeness for the family must be a collective statement about the reachable set in `Z^13` (note, section 9).
+**(H) No-go.** For the 583 blocks `B` of length `<= 5` (three nonempty letters) or `<= 4` (with the empty letter) and the
+multipliers `alpha = 2, ..., 9`, the residual `H(uB) - alpha H(u)` over the 8,040 prefix states (7,873 distinct reduced
+states) is constant for exactly 22 of the 4,664 pairs, all ordinal-sum blocks with `H(B) = alpha` (then the residual is 0:
+`alpha = 3`, a C3 after a sink; `alpha = 5`, the strong 4-tournament after a sink), and takes at least 227 distinct values
+for every other pair. On the 14-dimensional quotient the eigenvalue 1 of the block matrix `A_B` has algebraic
+multiplicity 0 for 289 and 1 for 51 of the 340 blocks of length `<= 4`, never 2 or more (exact characteristic
+polynomials, audit); since the reachable space maps onto `Q^14`, no block is identity-plus-nilpotent on it, and a
+non-constant arithmetic progression `H(u B^k) = H(u) + kc` would need a Jordan block of size at least 2 at the
+eigenvalue 1. (`rank(M_B - I) >= 25` on the 26-dimensional reachable space is a datum, not a proof: a single nilpotent
+Jordan block of size 26 has rank 25.) Hence no bounded-carry digit system and no arithmetic-progression gadget exist
+among short blocks; with (G), a proof of completeness for the family must be a collective statement about the
+reachable set in `Z^13` (note, section 9).
 
 **FINITE-EXACT.** Strong span-2 words: every odd number `<= 5,000` except 7, 21, 47 (27-coordinate DFS, 6,133,659 strong
-words), every odd number `<= 50,000` except 7, 21, 47 by the deduplicated level enumeration on the reduced states
+words; the audit's own undeduplicated DFS to 50,000 agrees), every odd number `<= 50,000` except 7, 21, 47 by the deduplicated level enumeration on the reduced states
 (27,797,197 distinct states at length 17; every value realised at length <= 17), and every odd number `<= 100,000`
 except 7, 21, 47 by the same enumeration restricted to the three nonempty letters (strong words of length `<= 16`;
 per-length solid intervals `[49,165], [49,257], [129,639], [249,1833], [397,3033], [725,8609], [1281,19097],
