@@ -1,0 +1,9 @@
+(a) mean D_8 over all 54994 states with 801<=H<=1799: 0.8819
+(b) mean over distinct slopes (51495): 0.8744
+(c) states with slope <= 2.75 (30441): 1.119
+(d) histogram bin centres: 0.8272
+(e) D at median slope 2.6424: 0.9132; at mean slope 2.9044: 0.7807
+(f) slopes binned at 0.01, centre: 0.8819
+(f) slopes binned at 0.05, centre: 0.8820
+(f) slopes binned at 0.10, centre: 0.8820
+(g) slopes rounded to 2 decimals: 0.8819

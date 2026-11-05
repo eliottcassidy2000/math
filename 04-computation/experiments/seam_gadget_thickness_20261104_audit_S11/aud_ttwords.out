@@ -1,0 +1,6 @@
+X=2000 K=10: distinct maps 237, kept states 11452; missed odd H (a) kept-only 261 first [7, 11, 19, 21, 35, 37, 43, 47, 55, 61, 63, 67, 71, 79]; (b) all images 261 first [7, 11, 19, 21, 35, 37, 43, 47, 55, 61, 63, 67, 71, 79]
+X=2000 K=12: distinct maps 385, kept states 11452; missed odd H (a) kept-only 261 first [7, 11, 19, 21, 35, 37, 43, 47, 55, 61, 63, 67, 71, 79]; (b) all images 261 first [7, 11, 19, 21, 35, 37, 43, 47, 55, 61, 63, 67, 71, 79]
+X=2000 K=15: distinct maps 707, kept states 11452; missed odd H (a) kept-only 261 first [7, 11, 19, 21, 35, 37, 43, 47, 55, 61, 63, 67, 71, 79]; (b) all images 261 first [7, 11, 19, 21, 35, 37, 43, 47, 55, 61, 63, 67, 71, 79]
+X=2000 K=20: distinct maps 1577, kept states 11452; missed odd H (a) kept-only 261 first [7, 11, 19, 21, 35, 37, 43, 47, 55, 61, 63, 67, 71, 79]; (b) all images 261 first [7, 11, 19, 21, 35, 37, 43, 47, 55, 61, 63, 67, 71, 79]
+X=2000 K=25: distinct maps 2972, kept states 11452; missed odd H (a) kept-only 261 first [7, 11, 19, 21, 35, 37, 43, 47, 55, 61, 63, 67, 71, 79]; (b) all images 261 first [7, 11, 19, 21, 35, 37, 43, 47, 55, 61, 63, 67, 71, 79]
+X=2000 K=30: distinct maps 5017, kept states 11452; missed odd H (a) kept-only 261 first [7, 11, 19, 21, 35, 37, 43, 47, 55, 61, 63, 67, 71, 79]; (b) all images 261 first [7, 11, 19, 21, 35, 37, 43, 47, 55, 61, 63, 67, 71, 79]

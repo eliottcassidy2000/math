@@ -1,0 +1,29 @@
+distinct gadget matrices of order <= 5: 264
+integer eigenvalues found: 206 (matrix, lambda) pairs; of which nonzero eigenvalues of SINGULAR matrices (not examined by the audited search): 68
+right eigen-directions shared by two distinct matrices with nonzero eigenvalues: 10
+   (1, 1, 1): 12 matrices, eigenvalues [1, 3, 5, 9, 11, 13, 15]   <-- EXPANDING
+   (1, 0, 2): 11 matrices, eigenvalues [3, 5, 9, 15, 17, 27]   <-- EXPANDING
+   (1, 0, 4): 8 matrices, eigenvalues [5, 9, 15, 17, 27]   <-- EXPANDING
+   (3, 1, 3): 5 matrices, eigenvalues [3, 5, 9, 15, 17]   <-- EXPANDING
+   (5, 1, 5): 4 matrices, eigenvalues [5, 9, 15]   <-- EXPANDING
+   (1, 0, 8): 4 matrices, eigenvalues [9, 17, 27]   <-- EXPANDING
+   (2, 1, -1): 2 matrices, eigenvalues [-1, 1]
+   (9, 1, 9): 2 matrices, eigenvalues [9, 27]   <-- EXPANDING
+   (5, 2, 6): 2 matrices, eigenvalues [9, 17]   <-- EXPANDING
+   (3, 0, -2): 2 matrices, eigenvalues [-1, 1]
+left eigen-directions shared by two distinct matrices with nonzero eigenvalues: 10
+   (1, -1, 1): 12 matrices, eigenvalues [1, 3, 5, 9, 11, 13, 15]   <-- EXPANDING
+   (1, 0, 2): 11 matrices, eigenvalues [3, 5, 9, 15, 17, 27]   <-- EXPANDING
+   (1, 0, 4): 8 matrices, eigenvalues [5, 9, 15, 17, 27]   <-- EXPANDING
+   (3, -1, 3): 5 matrices, eigenvalues [3, 5, 9, 15, 17]   <-- EXPANDING
+   (5, -1, 5): 4 matrices, eigenvalues [5, 9, 15]   <-- EXPANDING
+   (1, 0, 8): 4 matrices, eigenvalues [9, 17, 27]   <-- EXPANDING
+   (2, -1, -1): 2 matrices, eigenvalues [-1, 1]
+   (9, -1, 9): 2 matrices, eigenvalues [9, 27]   <-- EXPANDING
+   (5, -2, 6): 2 matrices, eigenvalues [9, 17]   <-- EXPANDING
+   (3, 0, -2): 2 matrices, eigenvalues [-1, 1]
+audited-style search (det-divisor eigenvalues only, basis vectors only), shared with nonzero eigenvalue: {('R', (2, 1, -1)): [-1, 1], ('L', (2, -1, -1)): [-1, 1]}
+distinct gadget matrices of order <= 4: 56
+words with |det| = 1, |tr|, |c2| <= 3 (audited filter): (length, tr, c2, det) -> count {(1, 1, -1, 1): 1, (1, 3, -1, 1): 1, (2, 3, -1, 1): 1}
+words with eigenvalue 1 (any det): 38 ; polynomials: [(1, 0, 0), (19, 23, 5), (67, 67, 1), (81, 80, 0), (217, 216, 0), (299, 739, 441), (315, 339, 25), (343, 423, 81), (1171, 1175, 5), (3041, 3040, 0), (5563, 5687, 125)]
+words with (t-1)^2 dividing the characteristic polynomial (any det): 0 {}

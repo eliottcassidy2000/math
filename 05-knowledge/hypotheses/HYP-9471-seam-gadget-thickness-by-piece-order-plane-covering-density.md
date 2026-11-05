@@ -1,7 +1,7 @@
 ---
 id: HYP-9471
-title: "Seam-gadget semigroup thickness by piece order. On the plane P = {S = 0} of SEAM states (H, S, R) whose exit starts no Hamiltonian path, the S-row-zero gadgets act by 2x2 integer maps [[a, b], [c, d]] on (H, R). The covering density D_k(t) = sum over the distinct nonsingular such maps of order <= k of (a + b t)^(-2) is 0.117, 0.257, 0.486 at t = 2 for k = 4, 5, 6, roughly doubling per order. D_k(t) >= 1 is the necessary density condition for a finite-alphabet self-covering of a 2D cone of states. Pre-registered: D_7(2) lies in [0.75, 1.25], and the order-7 alphabet thickens the realised P-slice"
-status: "PARTLY CONFIRMED: P1, P2, P4, P5 CONFIRMED; P3, P6 REFUTED. Pre-registered in a98199e8bb (P1-P3) and 973c1f8312 (P4-P5), both under the colliding name HYP-9470, and in 7297af7bf9 (P6). Renumbered HYP-9471 because opus-S79 reserved HYP-9470 first, in 395a317b0e. The 2D covering density crosses 1 at order 8 at slope 2, but the realised plane orbit still thins with scale at order 8: the density averaged over its slopes is 0.88"
+title: "Seam-gadget semigroup thickness by piece order. On the plane P = {S = 0} of SEAM states (H, S, R) whose exit starts no Hamiltonian path, the S-row-zero gadgets act by 2x2 integer maps [[a, b], [c, d]] on (H, R). The covering density D_k(t) = sum over the distinct nonsingular such maps of order <= k of (a + b t)^(-2) is 0.117, 0.257, 0.486 at t = 2 for k = 4, 5, 6, roughly doubling per order. D_k(t0) >= 1 at the dense end t0 of a cone is a weak necessary condition for a finite-alphabet self-covering of that cone; the sharp counting condition is much stronger (audit S11). Pre-registered: D_7(2) lies in [0.75, 1.25], and the order-7 alphabet thickens the realised P-slice"
+status: "PARTLY CONFIRMED: P1, P2, P4, P5 CONFIRMED; P3, P6 REFUTED. Pre-registered in a98199e8bb (P1-P3) and 973c1f8312 (P4-P5), both under the colliding name HYP-9470, and in 7297af7bf9 (P6). Renumbered HYP-9471 because opus-S79 reserved HYP-9470 first, in 395a317b0e. The density D_8(2) passes 1 at slope 2, but the realised plane orbit still thins with scale at order 8: the density averaged over its slopes is 0.882. The sharp counting condition for a self-covering cone is <= 0.27 at order 8 (audit S11). Audited PASS WITH CORRECTIONS (MISTAKE-717)"
 session: kind-pasteur-2026-11-04-S11
 date: 2026-11-04
 related: [HYP-9468, HYP-9469, THM-4865, THM-4875, THM-4876]
@@ -51,8 +51,10 @@ script: 04-computation/experiments/seam_gadget_density_20261104/
   | 5 | 0.2571 | 0.1315 |
   | 6 | 0.4861 | 0.2498 |
 
-  The realised P-states have R/H >= 2.01 in the runs below, so t = 2 is the dense end of the cone.
-- **Seam BFS, order <= 6** (all 1,941 matrices; states with H, R <= X expanded; seeds = small realisable triples):
+  The realised P-states have R/H >= 2, with equality attained, in the runs below, so t = 2 is the dense end of the cone.
+  (Corrected after the audit; first written "R/H >= 2.01".)
+- **Seam BFS, order <= 6** (1,941 matrix lines, 1,884 distinct matrices; states with H, R <= X expanded; seeds =
+  small realisable triples):
   - every odd H <= 20,000 except 7 and 21 is attained;
   - distinct states: 240,925, 4,743,006 and 17,081,577 for X = 2,000, 10,000 and 20,000. That is growth about X^1.85,
     a thin orbit in Z^3.
@@ -156,7 +158,8 @@ The fill rises 2.4-fold per order, but the decay with scale does not soften.
 - The order-8 plane states with H in [801, 1799] number 54,994.
 - Their slopes have median 2.64 and 90th percentile 4.15, with histogram 2: 36,235, 3: 12,363, 4: 5,221,
   5: 1,150, 6: 25.
-- D_8 averaged over those realised slopes is 0.8825 < 1. The threshold is crossed only at the dense end
+- D_8 averaged over those realised slopes is 0.8819 < 1. The audit's exact mean is `aud_slope_variants.py`; the first
+  version subsampled the slopes and gave 0.8825. The threshold is crossed only at the dense end
   (t <= 2.5), and the maps push states toward larger slopes, where the density is lower. So the realised plane orbit
   is still subcritical at order 8.
 - Continuing the per-order ratio (about 1.6-1.7) would put the slope-averaged density above 1 at order 9.
@@ -167,3 +170,25 @@ roughly doubles per order, and it crosses the 2D covering threshold at the dense
 alphabet of order <= 8 yet makes the realised plane orbit stop thinning. A finite self-covering certificate for the
 {7, 21} spectrum on this plane is therefore not available at order 8. Even above the threshold, exact coset alignment
 would still be needed: every plane map has even determinant (THM-4879 (E), P5).
+
+## Audit corrections (audit S11, PASS WITH CORRECTIONS; MISTAKE-717)
+
+Audit report: `04-computation/experiments/seam_gadget_thickness_20261104_audit_S11/AUDIT.md`. Every pre-registered
+number reproduced exactly with the audit's own code, and git confirms the registration order.
+
+- **P1 blindness.** The order-7 matrix list existed when P1 was registered (its count is quoted above). P1's
+  blindness therefore rests on this file's statement that D_7 had not been computed. git cannot prove it.
+- **The threshold framing.** D_k(t) >= 1 at one slope is necessary but weak. The sharp necessary condition for
+  self-covering the lattice points of a cone t0 <= R/H <= t1 comes from counting points with H <= X:
+
+      (1/(t1 - t0)) Σ_i ∫ (a_i + b_i t)^(-2) dt >= 1,
+
+  where the integral runs over the slopes t in [t0, t1] whose image slope A_i.t also lies in [t0, t1].
+  - For the order-<=8 alphabet this is at most 0.2634 on all 40 cones tested with 2 <= t0 <= 4
+    (`aud_cone_condition.out`). So order 8 misses it by about a factor of 4.
+  - "Crosses 1 at order 8" therefore means only that the weakest condition now holds at the dense end. This agrees
+    with P6 and with the session's own slope-preserving sub-alphabet check.
+- **Counts.** "1,941 matrices" was a count of matrix lines including cross-order repeats; 1,884 are distinct. The
+  results do not depend on the difference.
+- **P5 is now a theorem.** THM-4879 (F) proves M_(z,u)(G) even for every gadget that maps the plane into itself, at
+  every order. Every plane map therefore has even determinant.

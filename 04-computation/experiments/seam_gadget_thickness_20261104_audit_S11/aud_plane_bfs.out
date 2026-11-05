@@ -1,0 +1,21 @@
+== plane, orders <= 6
+plane BFS X=5000 seeds=12 maps=191 states=20149
+band H in [801,999]: lattice points 33800 realised 865 fill 0.0256
+band H in [1601,1799]: lattice points 63800 realised 1419 fill 0.0222
+ratio = 0.8691
+states with H in [801,1799]: 9678; slope min 2.0056 median 2.5373 p90 4.2019 max 6.1834; histogram floor(t): 2:6420 3:2110 4:922 5:223 6:3
+average over those states of D(t) for this alphabet: 0.3067 (states with D(t) < 1: 9678)
+== plane, orders <= 7
+plane BFS X=5000 seeds=12 maps=1632 states=46521
+band H in [801,999]: lattice points 33800 realised 2080 fill 0.0615
+band H in [1601,1799]: lattice points 63800 realised 2817 fill 0.0442
+ratio = 0.7175
+states with H in [801,1799]: 21012; slope min 2.0048 median 2.5492 p90 4.2707 max 6.1834; histogram floor(t): 2:14125 3:4193 4:2297 5:390 6:7
+average over those states of D(t) for this alphabet: 0.5330 (states with D(t) < 1: 21012)
+== plane, orders <= 8
+plane BFS X=5000 seeds=12 maps=21023 states=124006
+band H in [801,999]: lattice points 33800 realised 5091 fill 0.1506
+band H in [1601,1799]: lattice points 63800 realised 6894 fill 0.1081
+ratio = 0.7174
+states with H in [801,1799]: 54994; slope min 2.0011 median 2.6424 p90 4.1468 max 6.2167; histogram floor(t): 2:36235 3:12363 4:5221 5:1150 6:25
+average over those states of D(t) for this alphabet: 0.8819 (states with D(t) < 1: 32522)

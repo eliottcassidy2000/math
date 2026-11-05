@@ -1,0 +1,12 @@
+k<=1: S-row-zero distinct 0, distinct nonsingular 2x2 restrictions 0, odd det 0; D(2.0)=0.0000, D(2.5)=0.0000, D(3.0)=0.0000, D(4.0)=0.0000; growth D(2) -; [over distinct 3x3 instead: D(2)=0.0000]
+k<=2: S-row-zero distinct 1, distinct nonsingular 2x2 restrictions 0, odd det 0; D(2.0)=0.0000, D(2.5)=0.0000, D(3.0)=0.0000, D(4.0)=0.0000; growth D(2) -; [over distinct 3x3 instead: D(2)=0.0000]
+k<=3: S-row-zero distinct 5, distinct nonsingular 2x2 restrictions 1, odd det 0; D(2.0)=0.0400, D(2.5)=0.0278, D(3.0)=0.0204, D(4.0)=0.0123; growth D(2) -; [over distinct 3x3 instead: D(2)=0.0400]
+k<=4: S-row-zero distinct 16, distinct nonsingular 2x2 restrictions 5, odd det 0; D(2.0)=0.1170, D(2.5)=0.0812, D(3.0)=0.0596, D(4.0)=0.0361; growth D(2) 2.93; [over distinct 3x3 instead: D(2)=0.1294]
+k<=5: S-row-zero distinct 57, distinct nonsingular 2x2 restrictions 29, odd det 0; D(2.0)=0.2571, D(2.5)=0.1787, D(3.0)=0.1315, D(4.0)=0.0798; growth D(2) 2.20; [over distinct 3x3 instead: D(2)=0.2818]
+k<=6: S-row-zero distinct 267, distinct nonsingular 2x2 restrictions 191, odd det 0; D(2.0)=0.4861, D(2.5)=0.3388, D(3.0)=0.2498, D(4.0)=0.1521; growth D(2) 1.89; [over distinct 3x3 instead: D(2)=0.5269]
+k<=7: S-row-zero distinct 1919, distinct nonsingular 2x2 restrictions 1632, odd det 0; D(2.0)=0.8479, D(2.5)=0.5923, D(3.0)=0.4374, D(4.0)=0.2668; growth D(2) 1.74; [over distinct 3x3 instead: D(2)=0.9076]
+k<=8: S-row-zero distinct 22522, distinct nonsingular 2x2 restrictions 21023, odd det 0; D(2.0)=1.4288, D(2.5)=0.9999, D(3.0)=0.7395, D(4.0)=0.4519; growth D(2) 1.69; [over distinct 3x3 instead: D(2)=1.5098]
+   uniform slope average of D_8 over [2, 2.5]: 1.1951
+   uniform slope average of D_8 over [2, 3.0]: 1.0275
+   uniform slope average of D_8 over [2, 4.0]: 0.8027
+   uniform slope average of D_8 over [2, 5.0]: 0.6589

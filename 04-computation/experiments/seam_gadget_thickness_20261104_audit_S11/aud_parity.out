@@ -1,0 +1,41 @@
+DP validation vs permutation brute force: 1163 rooted cases, 0 mismatches
+order 1 (all 1 labelled): (D) rooted 1 viol 0 | (F1) viol 0 | (F2) rows 0: L!=M 0, M!=Pzu+Puz 0 | rows s_z=P_zu=L=0: 0, with M odd: 0
+order 2 (all 2 labelled): (D) rooted 4 viol 0 | (F1) viol 0 | (F2) rows 4: L!=M 0, M!=Pzu+Puz 0 | rows s_z=P_zu=L=0: 0, with M odd: 0
+order 3 (all 8 labelled): (D) rooted 24 viol 0 | (F1) viol 0 | (F2) rows 48: L!=M 0, M!=Pzu+Puz 0 | rows s_z=P_zu=L=0: 12, with M odd: 0
+order 4 (all 64 labelled): (D) rooted 256 viol 0 | (F1) viol 0 | (F2) rows 768: L!=M 0, M!=Pzu+Puz 0 | rows s_z=P_zu=L=0: 192, with M odd: 0
+order 5 (all 1024 labelled): (D) rooted 5120 viol 0 | (F1) viol 0 | (F2) rows 20480: L!=M 0, M!=Pzu+Puz 0 | rows s_z=P_zu=L=0: 3920, with M odd: 0
+order 6 (all 32768 labelled): (D) rooted 196608 viol 0 | (F1) viol 0 | (F2) rows 983040: L!=M 0, M!=Pzu+Puz 0 | rows s_z=P_zu=L=0: 126240, with M odd: 0
+cumulative orders 1-6: (D) rooted 202013; (F2) rows 1004340; rows with s_z=P_zu=L=0: 130364 (M odd: 0)
+orders 2-6: homogeneous relations c.x = 0 (mod 2) holding on every row:
+   P_zu + P_uz + L == 0
+   Lmix + Mmix == 0
+   P_zu + P_uz + L + Lmix + Mmix == 0
+   P_zu + P_uz + M == 0
+   L + M == 0
+   P_zu + P_uz + Lmix + Mmix + M == 0
+   L + Lmix + Mmix + M == 0
+   (7 nonzero relations => relation space of dimension 3)
+   affine relations c.x = 1 holding on every row: 0
+   distinct parity patterns observed: 105
+order 7 (all 2097152 labelled): (D) rooted 14680064 viol 0 | (F1) viol 0 | (F2) rows 88080384: L!=M 0, M!=Pzu+Puz 0 | rows s_z=P_zu=L=0: 7021056, with M odd: 0
+orders 2-7: homogeneous relations c.x = 0 (mod 2) holding on every row:
+   P_zu + P_uz + L == 0
+   Lmix + Mmix == 0
+   P_zu + P_uz + L + Lmix + Mmix == 0
+   P_zu + P_uz + M == 0
+   L + M == 0
+   P_zu + P_uz + Lmix + Mmix + M == 0
+   L + Lmix + Mmix + M == 0
+   (7 nonzero relations => relation space of dimension 3)
+   affine relations c.x = 1 holding on every row: 0
+   distinct parity patterns observed: 128
+random order 8 (300 tournaments): (D) rooted 2400 viol 0 | (F1) viol 0 | (F2) rows 16800 viol 0/0
+random order 9 (300 tournaments): (D) rooted 2700 viol 0 | (F1) viol 0 | (F2) rows 21600 viol 0/0
+random order 10 (300 tournaments): (D) rooted 3000 viol 0 | (F1) viol 0 | (F2) rows 27000 viol 0/0
+random order 11 (40 tournaments): (D) rooted 440 viol 0 | (F1) viol 0 | (F2) rows 0 viol 0/0
+random order 12 (40 tournaments): (D) rooted 480 viol 0 | (F1) viol 0 | (F2) rows 0 viol 0/0
+TOTAL (D) rooted 14891097 violations 0; (F1) tournaments 2131999 violations 0; (F2) rows 89150124 violations 0 + 0
+
+real	1m34.901s
+user	0m0.046s
+sys	0m0.015s

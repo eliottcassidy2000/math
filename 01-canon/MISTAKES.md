@@ -22976,3 +22976,56 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - Re-read your own previous theorem's statement verbatim before describing what it covers. A same-day theorem by the
     same author is still prior art.
   - A no-go must name a true target: check that the target set it excludes is ever realised.
+
+## MISTAKE-717 (2026-11-04, kind-pasteur-2026-11-04-S11, THM-4879, HYP-9471 and the note `05-knowledge/results/seam_gadget_thickness_spectrum_20261104.md` at the pre-audit commit 4b0b0c740b; found by the independent audit `04-computation/experiments/seam_gadget_thickness_20261104_audit_S11/AUDIT.md`) -- a 13-day-old parity typed as the session's own, a finite search with a candidate-set bug, and three barriers stated wider than their proofs
+
+- **What was claimed.**
+  - (1) THM-4879 (D), "R ≡ S (mod 2) for every rooted tournament", was presented as a one-line consequence of Redei
+    and the singleton seam, with no prior credit.
+  - (2) The note, section 4 (c): "Among the 281 gadget matrices of order <= 5, the only rational eigen-direction
+    shared by two of them with nonzero eigenvalue is (2, 1, -1) ... So no line of states is preserved by two
+    expanding gadgets."
+  - (3) The note, section 4 (d) and summary: "A closed {3N, 3N + 2, 3N + 4} grammar is impossible in the triple
+    calculus".
+  - (4) The note, section 0 and section 4 (b): "no orbit contains an arithmetic progression".
+- **Why it was wrong.**
+  - (1) Session29 converse-congruences REPORT section 5 (2026-10-22) states exactly "R≡S modulo two for every X and
+    every a" in the same convention. Session 193 multiple_triangles PROOF.md section 2 (committed 18:47, before this
+    session's first commit) proves an exact identity whose mod-2 shadow is the same congruence.
+  - (2) `small_gadget_structure.py` took eigenvalue candidates from the divisors of det. For a singular matrix that
+    is only 0, so every nonzero eigenvalue of the 147 singular matrices was skipped. A complete search finds 10 shared
+    right and 10 shared left directions, 8 of them expanding; the singleton ray (1, 1, 1) is fixed by 12 reset gadgets.
+    The conclusion about affine digit grammars survives only in the narrower form "no common invariant affine line
+    off the origin".
+  - (3) The proof covers only the scalar ×3 step X => C3 with the exit kept in X. The other ordinal sum, C3 => X, stays
+    inside the triple calculus with the non-scalar maps (3H, 0, 12R) and (3H, H, 3H).
+  - (4) The search showed only that no short word is quasi-unipotent. The orbit's H-values themselves contain long
+    progressions (23, 25, ..., 19,999).
+  - Also (minor): the "necessary density condition D_k(t) >= 1" was the weakest form of the condition. The sharp
+    counting condition is at most 0.27 at order 8.
+  - Also (minor): matrix counts included cross-order repeats (1,941 for 1,884 distinct); a subsampled slope mean
+    (0.8825 for 0.8819); slips in the (E) proof; an inverted sentence; a missing hypothesis in (E); a wrong formula
+    (H + 2pc_2 for 6(H + pc_2)); a nonexistent script name.
+- **Repair.**
+  - (D) retyped KNOWN, with both sources credited and the singleton-seam proof kept as a shorter alternative.
+  - Section 4 (c) rewritten from the corrected search; the script fixed and rerun. It reproduces the audit's 10 / 10 / 8.
+  - Section 4 (d) retitled "The scalar ×3 step admits no affine digits", with the uncovered steps listed and Session
+    195's equal-response theorem cited.
+  - Section 4 (b) restricted to iterating one word.
+  - The threshold reframed with the audit's sharp condition.
+  - The 12 minor findings fixed.
+  - The audit also verified the addendum (F) (L ≡ M ≡ P(z->u) + P(u->z) mod 2, with the extra relation
+    Lmix ≡ Mmix). It is now THM-4879 (F) and makes P5 a theorem at all orders.
+- **How it was caught.**
+  - The audit grepped the results tree for the parity statement itself, in every convention ("R≡S", e_a and R_a,
+    O_a ± V_a).
+  - It recomputed the eigen-search with exact integer roots of the characteristic polynomial and eigenspace
+    intersections.
+  - It brute-forced the omitted ordinal sums.
+- **Lesson.**
+  - Grep for the *statement* of an identity (its symbols in every convention), not just the session's own
+    derivation. That rule was already in memory (verify-inherited-residues) and was not applied to a "one-line"
+    corollary.
+  - In an eigen-search, take candidates from the characteristic polynomial's own integer roots: divisors of the
+    constant term, or of the next coefficient when det = 0. Then intersect eigenspaces, not basis vectors.
+  - State a barrier at the scope of its proof, naming the steps it does not cover.

@@ -1,0 +1,38 @@
+isomorphism classes by order: 1 1 2 4 12 56 456  (A000568: 1 1 2 4 12 56 456)
+order 1: (G,u,z) triples 1, distinct matrices 1
+order 2: (G,u,z) triples 4, distinct matrices 4
+order 3: (G,u,z) triples 18, distinct matrices 12
+order 4: (G,u,z) triples 64, distinct matrices 44
+order 5: (G,u,z) triples 300, distinct matrices 220
+order 6: (G,u,z) triples 2016, distinct matrices 1660
+order 7: (G,u,z) triples 22344, distinct matrices 20500
+order 8: route I vs II checked on a random sample of 942 (G,u,z)
+order 8: (G,u,z) triples 3735552, distinct matrices 427412
+route I (prefix fit) vs route II ((A) statistics): 25689 comparisons, 0 mismatches
+k | per-order distinct | cumulative distinct | S-row-zero per order | S-row-zero cumulative | distinct nonsingular 2x2 restrictions cumulative | per-order S-row-zero: R_z odd, M odd, det2 odd, det2!=M mod 2 | all per-order matrices: det2 != M mod 2 (no S-row hypothesis)
+1 | 1 | 1 | 0 | 0 | 0 | 0, 0, 0, 0 | 0
+2 | 4 | 5 | 1 | 1 | 0 | 0, 0, 0, 0 | 2
+3 | 12 | 16 | 4 | 5 | 1 | 0, 0, 0, 0 | 4
+4 | 44 | 56 | 13 | 16 | 5 | 0, 0, 0, 0 | 12
+5 | 220 | 264 | 47 | 57 | 29 | 0, 0, 0, 0 | 73
+6 | 1660 | 1884 | 228 | 267 | 191 | 0, 0, 0, 0 | 556
+7 | 20500 | 22243 | 1702 | 1919 | 1632 | 0, 0, 0, 0 | 7867
+8 | 427412 | 448915 | 20787 | 22522 | 21023 | 0, 0, 0, 0 | 171897
+  order-3 matrix [1 -1 1; 0 0 0; 2 -2 2] det 0
+  order-3 matrix [1 -1 1; 0 0 0; 4 0 4] det 0
+  order-3 matrix [1 -1 1; 1 -1 1; 1 -1 1] det 0
+  order-3 matrix [1 0 2; 0 0 0; 2 0 4] det 0
+  order-3 matrix [1 0 2; 0 0 0; 4 -2 4] det 0
+  order-3 matrix [1 0 2; 1 0 2; 1 0 2] det 0
+  order-3 matrix [1 0 4; 0 0 1; 4 -1 6] det 1
+  order-3 matrix [1 0 4; 0 0 2; 2 0 4] det 0
+  order-3 matrix [1 0 4; 1 0 0; 1 0 4] det 0
+  order-3 matrix [3 -1 3; 1 -1 1; 3 -1 3] det 0
+  order-3 matrix [3 -1 3; 1 0 0; 3 0 4] det 4
+  order-3 matrix [3 -1 3; 1 0 1; 3 -1 4] det 1
+order 3: 12 matrices, det 0 for 9, det range [0, 4]
+order 5: 220 matrices, det 0 for 107, det range [-29, 288]
+
+real	0m20.140s
+user	0m0.015s
+sys	0m0.030s

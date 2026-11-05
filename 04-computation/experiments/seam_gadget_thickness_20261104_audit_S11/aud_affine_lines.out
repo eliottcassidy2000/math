@@ -1,0 +1,11 @@
+direction (1, 1, 1): 12 matrices with M e = lam e (lam != 0), eigenvalues [Fraction(1, 1), Fraction(3, 1), Fraction(5, 1), Fraction(9, 1), Fraction(11, 1), Fraction(13, 1), Fraction(15, 1)], rank-1 among them 12; pairs with a common invariant affine line not through 0: 0 []
+direction (1, 0, 2): 11 matrices with M e = lam e (lam != 0), eigenvalues [Fraction(3, 1), Fraction(5, 1), Fraction(9, 1), Fraction(15, 1), Fraction(17, 1), Fraction(27, 1)], rank-1 among them 10; pairs with a common invariant affine line not through 0: 0 []
+direction (1, 0, 4): 8 matrices with M e = lam e (lam != 0), eigenvalues [Fraction(5, 1), Fraction(9, 1), Fraction(15, 1), Fraction(17, 1), Fraction(27, 1)], rank-1 among them 6; pairs with a common invariant affine line not through 0: 0 []
+direction (3, 1, 3): 5 matrices with M e = lam e (lam != 0), eigenvalues [Fraction(3, 1), Fraction(5, 1), Fraction(9, 1), Fraction(15, 1), Fraction(17, 1)], rank-1 among them 4; pairs with a common invariant affine line not through 0: 0 []
+direction (5, 1, 5): 4 matrices with M e = lam e (lam != 0), eigenvalues [Fraction(5, 1), Fraction(9, 1), Fraction(15, 1)], rank-1 among them 2; pairs with a common invariant affine line not through 0: 0 []
+direction (1, 0, 8): 4 matrices with M e = lam e (lam != 0), eigenvalues [Fraction(9, 1), Fraction(17, 1), Fraction(27, 1)], rank-1 among them 2; pairs with a common invariant affine line not through 0: 0 []
+direction (2, 1, -1): 2 matrices with M e = lam e (lam != 0), eigenvalues [Fraction(-1, 1), Fraction(1, 1)], rank-1 among them 0; pairs with a common invariant affine line not through 0: 0 []
+direction (9, 1, 9): 2 matrices with M e = lam e (lam != 0), eigenvalues [Fraction(9, 1), Fraction(27, 1)], rank-1 among them 0; pairs with a common invariant affine line not through 0: 0 []
+direction (5, 2, 6): 2 matrices with M e = lam e (lam != 0), eigenvalues [Fraction(9, 1), Fraction(17, 1)], rank-1 among them 2; pairs with a common invariant affine line not through 0: 0 []
+direction (3, 0, -2): 2 matrices with M e = lam e (lam != 0), eigenvalues [Fraction(-1, 1), Fraction(1, 1)], rank-1 among them 0; pairs with a common invariant affine line not through 0: 0 []
+total pairs of distinct order<=5 gadgets sharing an invariant affine line not through the origin: 0

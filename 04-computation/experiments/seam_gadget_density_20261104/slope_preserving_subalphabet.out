@@ -1,0 +1,5 @@
+slope band [2.0,3.0]: maps preserving it 8815 of 21023; D at lo/mid/hi = [0.2598, 0.1821, 0.1348]
+slope band [2.0,2.75]: maps preserving it 6886 of 21023; D at lo/mid/hi = [0.2297, 0.1748, 0.1376]
+slope band [2.2,3.2]: maps preserving it 8388 of 21023; D at lo/mid/hi = [0.2004, 0.1444, 0.1091]
+slope band [2.0,4.0]: maps preserving it 14019 of 21023; D at lo/mid/hi = [0.386, 0.2005, 0.1227]
+X=5000 maps=8815 states=60603 fill[801,999]=0.1416 fill[1601,1799]=0.0928 ratio=0.6557

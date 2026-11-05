@@ -1,22 +1,31 @@
 ---
 id: THM-4879
-title: "Two-port transitive seam gadgets and the seam parity. In SEAM's three-coordinate transfer v = (H, S, R), the transitive gadget TT_k (vertex 0 the source) with entry u and exit z has a closed integer matrix. Its H-row is (1, -[u = k-1], 2^(k-1-u)). The R-row is (2^z, -mu, c), where mu = 2^u if z = k-1 > u, mu = 2^z if u = k-1 > z, and mu = 0 otherwise. The R-to-R coefficient is c = 2^(k-1-u+z) for z <= u and c = 2^(k-z+u) 3^(z-u-1) for z > u, because each vertex strictly between an earlier entry and a later exit has three admissible slots. Separately, every rooted tournament has R ≡ S (mod 2). So on the plane S = 0 every state has H odd and R even. Every gadget whose S-row vanishes has an even entry R_z(G), and its 2x2 restriction has determinant ≡ M_(z,u)(G) (mod 2)"
+title: "Two-port transitive seam gadgets and seam parities. In SEAM's three-coordinate transfer v = (H, S, R), the transitive gadget TT_k (vertex 0 the source) with entry u and exit z has a closed integer matrix. Its H-row is (1, -[u = k-1], 2^(k-1-u)). Its R-row is (2^z, -mu, c), with mu = 2^u if z = k-1 > u, mu = 2^z if u = k-1 > z, and mu = 0 otherwise. The R-to-R coefficient is c = 2^(k-1-u+z) for z <= u and c = 2^(k-z+u) 3^(z-u-1) for z > u, because each vertex strictly between an earlier entry and a later exit has three admissible slots. Every rooted tournament has R ≡ S (mod 2) (KNOWN, Session29). The two-endpoint refinement: for distinct z, u, the counts of ordered two-path covers starting at z and u, and of those ending at z and u, are both ≡ P(z->u) + P(u->z) (mod 2), and every nonempty tournament has an odd number of directed paths. Hence every gadget that maps the plane S = 0 into itself acts there by a 2x2 map of even determinant, at every order"
 status: >
   PROVED (kind-pasteur-2026-11-04-S11; elementary).
   (A) restates the general row formulas of the seam transfer (KNOWN in substance: SEAM.md eqs. (1)-(3) build the
-  matrix; opus-S78 THM-4875 (B) gives closed entries in the converse convention). (B) and (C) are proved here by
-  direct counting. (D) is a one-line consequence of Redei's theorem and the singleton seam.
-  CHECKED: (B) against SEAM's own matrix() for all 204 cases k <= 8; (D) on all 202,013 labelled rooted tournaments
-  of order <= 6 and 300 random ones of orders 7-10; (E) on all 1,995 S-row-zero gadget matrices of order <= 7 (per-order
-  files), where M_(z,u)(G) and R_z(G) were also always even.
-  Audit pending.
+  matrix; opus-S78 THM-4875 (B) gives closed entries in the converse convention).
+  (B), (C), (E) and (F) are proved here by direct counting and parity.
+  (D) is KNOWN: Session29 session29-converse-congruences REPORT section 5 (2026-10-22, same convention), and the mod-2
+  reduction of Session 193 multiple_triangles PROOF.md section 2 applied to the converse. The singleton-seam proof
+  given here is a shorter alternative.
+  (F) is new as far as the audit found. It upgrades the order-8 check of (E) (HYP-9471 P5) to all orders.
+  AUDIT: independent adversarial audit PASS WITH CORRECTIONS (4 major, all in the companion note or the credit of
+  (D); 12 minor; all applied; MISTAKE-717), 04-computation/experiments/seam_gadget_thickness_20261104_audit_S11/AUDIT.md.
+  The audit's own code reproduced:
+  (A) by permutation brute force (all labelled gadgets of order <= 5 with every prefix of order <= 3, plus random
+  cases);
+  (B) and (C) for k <= 9 by three routes;
+  (D), (F1) and (F2) on all labelled tournaments of order <= 7 (89 million ordered pairs), plus random ones to
+  order 10;
+  (E) and (F3) on all 22,522 S-row-zero matrices of order <= 8.
 session: kind-pasteur-2026-11-04-S11
 date: 2026-11-04
 related: [THM-4875, THM-4865, HYP-9471, THM-4876]
 script: 04-computation/experiments/seam_gadget_density_20261104/ (transitive_two_port.py, parity_check.py)
 ---
 
-# THM-4879 - two-port transitive seam gadgets and the seam parity
+# THM-4879 - two-port transitive seam gadgets and seam parities
 
 ## Setting (SEAM convention)
 
@@ -27,6 +36,8 @@ For a tournament X with a marked exit a:
 - **The seam.** For a marked gadget (G, u, z) (u the entry, z the exit, u = z allowed), X ⊙ G keeps all internal arcs
   and orients every cross arc from G to X, except the seam arc a -> u. Its exit is z.
 - **The transfer** (SEAM.md (1)) is v(X ⊙ G, z) = M_G v(X, a).
+- **Words are gadgets.** Every seam word is itself a marked gadget, so every statement below about gadgets also holds
+  for words.
 
 ## Statement
 
@@ -57,22 +68,32 @@ where all counts are of ordered vertex-disjoint path tuples covering V(G):
             c = 2^(k-1-u+z) if z <= u,   c = 2^(k-z+u) 3^(z-u-1) if z > u.
 
 The single-port case u = z has only powers of 2. It is the transitive-gadget formula of Session 195
-(`session195/rooted-interfaces/EQUAL_RESPONSE_BARRIER.md` section 2, in the four-coordinate convention there). The
-factor 3^(z-u-1) appears exactly when the entry precedes the exit.
+(`session195/rooted-interfaces/EQUAL_RESPONSE_BARRIER.md` section 2, in the converse four-coordinate convention
+there). The factor 3^(z-u-1) appears exactly when the entry precedes the exit.
 
-**(C) Ranks.** Note M_(z,u)(G) = 0 when u = z. Among transitive gadgets:
-- the matrix is unimodular iff (u, z) = (0, k-1), with det 1;
-- every other two-port transitive gadget with k >= 2 is singular.
+**(C) Ranks.** For k >= 2, the matrix of (TT_k, u, z) has determinant 1 if (u, z) = (0, k-1) and is singular
+otherwise. (k = 1 is the singleton, det 1.) Note also M_(z,u)(G) = 0 when u = z.
 
-(This was checked for k <= 8. The general proof is the determinant of the closed form, (B).)
-
-**(D) The seam parity.** For every rooted tournament (X, a), R_a(X) ≡ S_a(X) (mod 2).
+**(D) The seam parity** (KNOWN: Session29, see Status). For every rooted tournament (X, a),
+R_a(X) ≡ S_a(X) (mod 2).
 
 **(E) Consequences on the plane P = {S = 0}.**
 - States in P have H odd and R even.
-- If the S-row of M_G vanishes (G maps every state into P), then R_z(G) is even.
-- The determinant of the restriction [[h(G), L_u(G)], [R_z(G), K1 + K2]] acting on (H, R) is ≡ M_(z,u)(G)
-  (mod 2).
+- Suppose G maps every state into P, that is, its S-row (s_z, -P_(z->u), L_(z,u)) vanishes. Then R_z(G) is even.
+- For such G (S-row zero), the determinant of the restriction [[h(G), L_u(G)], [R_z(G), K1 + K2]] acting on (H, R)
+  is ≡ M_(z,u)(G) (mod 2).
+  - Without the hypothesis this congruence fails, for example for 171,897 of the distinct order-8 matrices (audit).
+
+**(F) Two-endpoint parity.** Write Pi(W) for the number of nonempty directed paths of a tournament W, of any length,
+single vertices included. For a tournament G and distinct vertices z, u, define the Lmix and Mmix analogues of L and
+M: Lmix counts covers (A from z, B ending at u), and Mmix counts covers (A ending at z, B from u).
+
+- **(F1)** Pi(W) is odd for every nonempty tournament W.
+- **(F2)** L_(z,u)(G) ≡ M_(z,u)(G) ≡ P_(z->u)(G) + P_(u->z)(G) (mod 2), and Lmix ≡ Mmix (mod 2).
+- **(F3)** For a gadget (G, u, z), these are equivalent: it maps P into P; s_z(G) = L_(z,u)(G) = 0; its S-row is zero.
+  (The last two agree because P_(z->u) <= s_z.) For every such gadget, at every order, M_(z,u)(G) is even, and so
+  its 2x2 restriction to P has even determinant. No gadget, and no seam word, acts on P by a unimodular map or by a
+  map of odd determinant.
 
 ## Proof
 
@@ -112,31 +133,72 @@ a number of slot assignments.
   - For z > u they multiply to 2^u 3^(z-u-1) 2^(k-1-z), since every vertex strictly between has all three slots.
 - **c = K1 + K2.** Summing gives the stated c in all three cases (u = z, z < u, z > u).
 
-**(D).** The singleton seam gives H(X ⊙ {z}) = H - S + R (the first row of SEAM's singleton matrix [1 -1 1; 1 -1 0;
-1 0 1], and klein's T_1 = h - e + B in THM-4865). X ⊙ {z} and X are tournaments, so both H-values are odd (Redei).
-Hence R - S is even.
+**(C).** Read the closed form (B).
+- **u, z >= 1.** The S-row is zero.
+- **u = 0, 1 <= z <= k-2.** Every row has middle entry 0: the H-row since u ≠ k-1, the S-row (0, 0, 2^(k-1-z)), and
+  the R-row since mu = 0. So the middle column is zero.
+- **u = z = 0.** The middle column is again zero.
+- **z = 0 < u.** The S-row equals the H-row.
+- **(u, z) = (0, k-1).** The matrix is [[1, 0, 2^(k-1)], [0, 0, 1], [2^(k-1), -1, c]]. Expanding along the middle
+  column gives det = (-(-1)) * det [[1, 2^(k-1)], [0, 1]] = 1.
+
+These cases cover all port pairs with k >= 2. (Checked numerically for k <= 9.)
+
+**(D)** (alternative proof). The singleton seam gives H(X ⊙ {z}) = H - S + R (the first row of SEAM's singleton
+matrix [1 -1 1; 1 -1 0; 1 0 1], and klein's T_1 = h - e + B in THM-4865). X ⊙ {z} and X are tournaments, so both
+H-values are odd (Redei). Hence R - S is even.
+- Session29 derived the same congruence from H(X ⊙ X^op) = H² - S² + R².
+- Session 193's identity gives the exact value R - S = 2V in the converse reading.
 
 **(E).**
 - **P-states.** If S = 0 then R is even by (D), and H is odd by Redei.
-- **R_z(G) even.** If the S-row of M_G vanishes, then on input (1, 1, 1) the output's S-coordinate is 0. Since S' =
-  s_z(G)H - ..., this forces s_z(G) = 0, and (D) for (G, z) gives R_z(G) even.
-- **Parity of the R-row.** The output always lies in P, so R' ≡ S' = 0 (mod 2) on every realisable input. The inputs
-  (1, 1, 1) and (1, 0, 2) are realisable (singleton; TT_2 at its sink) and give R_z(G) ≡ 0 and
-  R_z(G) - M + (K1 + K2) ≡ 0. So K1 + K2 ≡ M (mod 2).
+- **R_z(G) even.** By (A) the S-row is (s_z(G), -P_(z->u)(G), L_(z,u)(G)). If it vanishes, then s_z(G) = 0, and (D)
+  for (G, z) gives R_z(G) ≡ s_z(G) = 0.
+- **Parity of the R-row.** The output always lies in P, so R' ≡ S' = 0 (mod 2) on every realisable input. The
+  realisable inputs (1, 1, 1) (singleton) and (1, 0, 2) (TT_2 at its sink) give, respectively,
+  R_z(G) - M + (K1 + K2) ≡ 0 and R_z(G) + 2(K1 + K2) ≡ R_z(G) ≡ 0. So K1 + K2 ≡ M (mod 2).
 - **Determinant.** It equals h(G)(K1 + K2) - L_u R_z(G) ≡ K1 + K2 ≡ M_(z,u)(G) (mod 2), since h(G) is odd and
-  R_z(G) is even. QED.
+  R_z(G) is even.
+
+**(F).**
+- **The reduction mod 2.** Write pi_z(T) for the number of paths of T, of any vertex set, ending at z. Every
+  H(T \ U) is odd, so R_z(T) ≡ pi_z(T) (mod 2). With (D), pi_z(T) ≡ S_z(T) for every rooted tournament (T, z).
+- **(F1).** Pi(W) = sum over v of pi_v(W) ≡ sum over v of S_v(W) = H(W) ≡ 1.
+  - Alternatively, Pi(W) is the sum over nonempty U of H(W[U]), a sum of 2^|W| - 1 odd numbers.
+- **The auxiliary tournament.** Let T = G + w, where w beats u only and every other vertex of G beats w.
+  - A Hamiltonian path of T starting at z either ends with w, preceded by a vertex other than u, or has w in the
+    middle, followed by u. So S_z(T) = (s_z(G) - P_(z->u)(G)) + L_(z,u)(G).
+  - A path of T ending at z either avoids w, or has the form [A] w [C], where C is a path of G from u to z and A is
+    a path of G - V(C), possibly empty. So pi_z(T) = pi_z(G) + sum over u->z paths C of (1 + Pi(G - V(C))).
+  - By (F1), 1 + Pi(W) is even unless W is empty, so the sum is ≡ P_(u->z)(G).
+- **(F2), the first congruence.** pi_z(T) ≡ S_z(T) and pi_z(G) ≡ s_z(G) give
+  L_(z,u)(G) ≡ P_(z->u)(G) + P_(u->z)(G).
+- **(F2), M.** Reversing both paths gives M_(z,u)(G) = L_(z,u)(G^op), and the right-hand side is symmetric under
+  reversal.
+- **(F2), Lmix and Mmix.** By (D) for G^op, e(W, u) ≡ sum over V ⊆ W with V ∋ u of s(V, u). Substituting this into
+  Lmix = sum_U s(U, z) e(U^c, u) and into Mmix = sum_U e(U, z) s(U^c, u) turns both into the sum over disjoint
+  (W ∋ z, V ∋ u) of s(W, z) s(V, u). The same substitution gives M ≡ L directly.
+- **(F3).** If s_z(G) = 0 then P_(z->u)(G) = 0. So the S-row is zero iff s_z = L_(z,u) = 0, iff G maps P into P.
+  - Then P_(u->z)(G) is even by (F2), and M_(z,u)(G) ≡ L_(z,u)(G) = 0.
+  - (E) then gives an even determinant. If z = u, M = 0. QED.
 
 ## Checks
 
-- `transitive_two_port.py` compares the closed form (B) with SEAM's own `matrix()` (an independent construction: it
-  contracts the prefix) for every k <= 8 and every port pair: 204 cases, 0 mismatches.
-- `parity_check.py` checks (D) on all 202,013 labelled rooted tournaments of order <= 6 and 300 random rooted
-  tournaments of orders 7-10, with 0 violations.
-- (E) was checked on the 1,995 S-row-zero matrices in the per-order files of order <= 7 (`gadget_matrices.c`). In all
-  of them det ≡ M_(z,u) (mod 2), and also M_(z,u)(G) and R_z(G) are even, so every such 2x2 restriction of order <= 7
-  has even determinant.
-  - Whether M_(z,u)(G) is always even for S-row-zero gadgets is OPEN. It is the order-8 test P5 of HYP-9471, which
-    was blind when this file was written.
+- **(B).** `transitive_two_port.py` compares the closed form with SEAM's own `matrix()` (an independent construction:
+  it contracts the prefix) for every k <= 8 and every port pair: 204 cases, 0 mismatches. The audit used three
+  routes to k <= 9 (285 cases).
+- **(D).** `parity_check.py` checks all 202,013 labelled rooted tournaments of order <= 6 and 300 random rooted
+  tournaments of orders 7-10, with 0 violations. The audit extended this to 14.9 million rooted tournaments.
+- **(E).** Checked on the 1,995 S-row-zero matrices in the per-order files of order <= 7. In all of them
+  det ≡ M_(z,u) (mod 2), and M_(z,u)(G) and R_z(G) are even. The audit checked all 22,522 distinct S-row-zero
+  matrices of order <= 8.
+- **(F).**
+  - **Session search.** An exhaustive search of all labelled tournaments of order 2-6 and all ordered pairs z ≠ u
+    (1,004,340 rows) looked for mod-2 linear relations among (s_z, e_z, s_u, e_u, P_(z->u), P_(u->z), L, Lmix,
+    Mmix). The relation space has dimension 3, spanned by M ≡ L, M ≡ P_(z->u) + P_(u->z) and Lmix ≡ Mmix (the
+    audit's count; the session's first summary listed only two).
+  - **Audit brute force.** No violations over all labelled tournaments of order <= 7 (89,084,724 rows), plus random
+    ones of orders 8-10. The proof's two counting identities hold exactly on every G of order 2-5 (21,300 rows).
 
 ## What this does and does not give
 
@@ -144,13 +206,22 @@ Hence R - S is even.
   3-power entry.
 - **Not a spectrum route.** Seam words built only from transitive gadgets are thin. Over k <= 10 and all port pairs
   they attain only about 3/4 of the odd numbers <= 2,000: 261 are missed, among them 11, 19, 35 and 37
-  (FINITE-EXACT, `ttbfs` in the session's note). They cannot carry the {7, 21} spectrum alone.
-- **Parity.** (D) and (E) are parity facts. They forbid odd-determinant maps on P only for gadgets with
-  M_(z,u)(G) odd, and no such gadget has been seen.
+  (FINITE-EXACT, `transitive_words_bfs.py`, `transitive_words_bfs.out`). The audit showed the 261 misses are
+  unchanged for every k_max from 10 to 30, and that larger k cannot add values <= 2,000. They cannot carry the
+  {7, 21} spectrum alone.
+- **Parity.** (E) shows that a plane map of odd determinant could only come from a gadget with M_(z,u)(G) odd, and
+  (F) shows no such gadget exists. So any self-covering argument on the plane S = 0 must align lattice cosets: no
+  plane map is unimodular, and S78's descent lemma for unimodular maps is moot there.
 
 ## Credits
 
 - SEAM.md (2026-10-29) for the transfer, its spanning-prefix construction and the singleton matrix.
 - opus-S78 THM-4875 (B) for closed entries in the converse convention.
+- Session29 (`session29_framed_profiles_20261022/session29-converse-congruences/REPORT.md` section 5, 2026-10-22)
+  for (D).
+- Session 193 (`session193_triangulated_proof_20261105/multiple_triangles/PROOF.md` section 2) for the exact
+  identity whose mod-2 shadow is (D).
 - Session 195 for the single-port transitive formulas.
 - klein THM-4865 for the tower step T_1.
+- The independent audit S11 for the Lmix ≡ Mmix relation and its proof, the direct proof of M ≡ L, and the
+  equivalence in (F3).

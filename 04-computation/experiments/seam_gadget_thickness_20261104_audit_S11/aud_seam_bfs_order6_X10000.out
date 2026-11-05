@@ -1,0 +1,11 @@
+== seam, orders <= 6, X=10000
+seam BFS X=10000 distinct matrices=1884 kept states=4743006
+missed odd H <= X: 7 21  (count 2)
+kept S=0 states 730111, min slope R/H 2.0000 (over those with H >= 801: 2.0000)
+band H in [801,999], R in [2H,2.75H]: lattice points 33800, realised 8923, fill 0.2640
+band H in [1601,1799], R in [2H,2.75H]: lattice points 63800, realised 15245, fill 0.2389
+ratio fill2/fill1 = 0.9051
+
+real	0m11.021s
+user	0m0.015s
+sys	0m0.015s

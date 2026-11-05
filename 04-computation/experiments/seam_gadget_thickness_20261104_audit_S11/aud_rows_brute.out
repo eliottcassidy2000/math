@@ -1,0 +1,17 @@
+exhaustive: gadget order 1: 29 instances, 0 mismatches
+exhaustive: gadget order 2: 232 instances, 0 mismatches
+exhaustive: gadget order 3: 2088 instances, 0 mismatches
+exhaustive: gadget order 4: 29696 instances, 0 mismatches
+total instances 32045 mismatches 0 checksum 7498041
+order5: all 1024 labelled gadgets x 25 port pairs x 1 random prefix (order 1-3): 25600 instances, 0 mismatches
+total instances 25600 mismatches 0 checksum 12051650
+
+real	0m9.211s
+user	0m0.016s
+sys	0m0.000s
+random: 6000 instances (gadget order 1-5 x prefix order 1-4), 0 mismatches; per (g,p): (1,1):296 (1,2):311 (1,3):309 (1,4):325 (2,1):296 (2,2):324 (2,3):324 (2,4):304 (3,1):280 (3,2):297 (3,3):299 (3,4):287 (4,1):292 (4,2):281 (4,3):311 (4,4):292 (5,1):336 (5,2):258 (5,3):307 (5,4):271
+total instances 6000 mismatches 0 checksum 1406676
+
+real	0m3.021s
+user	0m0.015s
+sys	0m0.000s
