@@ -1,0 +1,247 @@
+{
+  "C1_targets": 2471,
+  "budget_counts": {
+    "2": {
+      "cores": 1,
+      "represented_targets": 37
+    },
+    "4": {
+      "cores": 2,
+      "represented_targets": 82
+    },
+    "6": {
+      "cores": 4,
+      "represented_targets": 156
+    },
+    "8": {
+      "cores": 5,
+      "represented_targets": 181
+    },
+    "16": {
+      "cores": 15,
+      "represented_targets": 411
+    },
+    "32": {
+      "cores": 41,
+      "represented_targets": 798
+    },
+    "64": {
+      "cores": 119,
+      "represented_targets": 1360
+    }
+  },
+  "canonical_nonbalanced_profiles": 29,
+  "cap": 5001,
+  "core_deficit_bound": 2500,
+  "core_triples": 27198,
+  "hostile_pairs": [
+    [
+      15,
+      13
+    ],
+    [
+      11,
+      7
+    ]
+  ],
+  "joint_pairs": 29322,
+  "literal_graphs": [
+    {
+      "cycles": 1,
+      "paths": 5,
+      "word": "OJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 11,
+      "word": "OZJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 9,
+      "word": "OOJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 23,
+      "word": "OOZJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 9,
+      "word": "ZOJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 19,
+      "word": "ZOZJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 15,
+      "word": "ZOOJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 37,
+      "word": "ZOOZJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 15,
+      "word": "ZZOJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 33,
+      "word": "ZZOZJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 25,
+      "word": "ZZOOJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 63,
+      "word": "ZZOOZJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 19,
+      "word": "OZOJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 45,
+      "word": "OZOZJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 33,
+      "word": "OZOOJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 87,
+      "word": "OZOOZJ"
+    }
+  ],
+  "ray_parameter_choices": 42447,
+  "scope": "finite exact implementation checks; proof candidate awaits independent audit",
+  "source_profiles": 126910,
+  "status": "PASS",
+  "verifier_sha256": "56cf3c2a0254efdf2d8da67474083a478d6e5d56b14cb0db7621e26ecd032d28",
+  "witnesses": {
+    "5": {
+      "J_cost": 0,
+      "a": 0,
+      "core": [
+        1,
+        2,
+        1
+      ],
+      "deficit": 2,
+      "k": 0,
+      "source_word": "O"
+    },
+    "11": {
+      "J_cost": 0,
+      "a": 0,
+      "core": [
+        1,
+        2,
+        1
+      ],
+      "deficit": 2,
+      "k": 1,
+      "source_word": "OZ"
+    },
+    "15": {
+      "J_cost": 0,
+      "a": 1,
+      "core": [
+        3,
+        3,
+        1
+      ],
+      "deficit": 4,
+      "k": 0,
+      "source_word": "ZOO"
+    },
+    "23": {
+      "J_cost": 0,
+      "a": 1,
+      "core": [
+        1,
+        2,
+        1
+      ],
+      "deficit": 2,
+      "k": 1,
+      "source_word": "OOZ"
+    },
+    "45": {
+      "J_cost": 0,
+      "a": 0,
+      "core": [
+        5,
+        7,
+        1
+      ],
+      "deficit": 6,
+      "k": 1,
+      "source_word": "OZOZ"
+    },
+    "51": {
+      "J_cost": 0,
+      "a": 1,
+      "core": [
+        1,
+        2,
+        1
+      ],
+      "deficit": 2,
+      "k": 2,
+      "source_word": "OOZZ"
+    },
+    "227": {
+      "J_cost": 0,
+      "a": 2,
+      "core": [
+        1,
+        2,
+        1
+      ],
+      "deficit": 2,
+      "k": 3,
+      "source_word": "OOOZZZ"
+    },
+    "443": {
+      "J_cost": 0,
+      "a": 4,
+      "core": [
+        1,
+        2,
+        1
+      ],
+      "deficit": 2,
+      "k": 2,
+      "source_word": "OOOOOZZ"
+    },
+    "617": {
+      "J_cost": 1,
+      "a": 0,
+      "core": [
+        47,
+        48,
+        17
+      ],
+      "deficit": 64,
+      "k": 2,
+      "source_word": "OOOZJOZZ"
+    }
+  },
+  "word_checks": 9841,
+  "word_length": 8
+}

@@ -1,0 +1,154 @@
+{
+  "C1_targets": 475,
+  "all_word_checks_through_length8": 9841,
+  "canonical_nonbalanced_scalar_profiles_checked": 25,
+  "compiled_core_deficit_cap": 500,
+  "compiled_cores": 2505,
+  "complete_cumulative_core_counts": {
+    "2": 1,
+    "3": 1,
+    "4": 2,
+    "5": 2,
+    "6": 4,
+    "8": 5,
+    "16": 15,
+    "32": 41,
+    "64": 119,
+    "128": 334
+  },
+  "forward_cover_cap": 1000,
+  "forward_profiles": 11721,
+  "independent_literal_graphs": [
+    {
+      "C": 1,
+      "H": 5,
+      "vertices": 4,
+      "word": "OJ"
+    },
+    {
+      "C": 1,
+      "H": 11,
+      "vertices": 5,
+      "word": "OZJ"
+    },
+    {
+      "C": 1,
+      "H": 9,
+      "vertices": 5,
+      "word": "OOJ"
+    },
+    {
+      "C": 1,
+      "H": 23,
+      "vertices": 6,
+      "word": "OOZJ"
+    },
+    {
+      "C": 1,
+      "H": 9,
+      "vertices": 5,
+      "word": "ZOJ"
+    },
+    {
+      "C": 1,
+      "H": 19,
+      "vertices": 6,
+      "word": "ZOZJ"
+    },
+    {
+      "C": 1,
+      "H": 15,
+      "vertices": 6,
+      "word": "ZOOJ"
+    },
+    {
+      "C": 1,
+      "H": 37,
+      "vertices": 7,
+      "word": "ZOOZJ"
+    },
+    {
+      "C": 1,
+      "H": 15,
+      "vertices": 6,
+      "word": "ZZOJ"
+    },
+    {
+      "C": 1,
+      "H": 33,
+      "vertices": 7,
+      "word": "ZZOZJ"
+    },
+    {
+      "C": 1,
+      "H": 25,
+      "vertices": 7,
+      "word": "ZZOOJ"
+    },
+    {
+      "C": 1,
+      "H": 63,
+      "vertices": 8,
+      "word": "ZZOOZJ"
+    },
+    {
+      "C": 1,
+      "H": 19,
+      "vertices": 6,
+      "word": "OZOJ"
+    },
+    {
+      "C": 1,
+      "H": 45,
+      "vertices": 7,
+      "word": "OZOZJ"
+    },
+    {
+      "C": 1,
+      "H": 33,
+      "vertices": 7,
+      "word": "OZOOJ"
+    },
+    {
+      "C": 1,
+      "H": 87,
+      "vertices": 8,
+      "word": "OZOOZJ"
+    }
+  ],
+  "joint_minimum_J_costs_match": true,
+  "joint_values": 2593,
+  "low_deficit_target_counts_through100001": {
+    "2": 66,
+    "4": 170,
+    "6": 334,
+    "16": 1007,
+    "32": 2313
+  },
+  "same_joint_different_core": {
+    "cores": [
+      [
+        27,
+        35,
+        17
+      ],
+      [
+        29,
+        34,
+        15
+      ]
+    ],
+    "joint": [
+      97,
+      53
+    ],
+    "words": [
+      "ZZZJJ",
+      "ZZJJJ"
+    ]
+  },
+  "scope": "Canonical projection of a supplied source; finite complete joint/target and core counts; density obstruction only for low-deficit C1 subfamilies, not the whole spectrum.",
+  "status": "PASS",
+  "target_cap": 1001,
+  "target_minimum_J_costs_match": true
+}
