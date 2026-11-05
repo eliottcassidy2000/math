@@ -1,0 +1,20 @@
+{
+  "arithmetic_inverse_controls": 599495,
+  "cone_controls": 42564,
+  "literal_base_assignments": 2796203,
+  "literal_gadgets": 2048,
+  "prefix_banks": [
+    {
+      "B": 500,
+      "csv_sha256": "c93102a17660ef4210368a08a9c08ad0e4d569a700e4dcb8ebab6dc42226291d",
+      "states": 2717
+    },
+    {
+      "B": 1000,
+      "csv_sha256": "efb8573cf0e181e83be9c7de4ce3e2407995ce04cb4dc1d64bd6283aab15eb8d",
+      "states": 7497
+    }
+  ],
+  "status": "PASS",
+  "virtual_profiles": 1495
+}

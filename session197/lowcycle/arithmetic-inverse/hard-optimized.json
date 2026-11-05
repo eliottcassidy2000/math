@@ -1,0 +1,54 @@
+{
+  "hard_witnesses": [
+    {
+      "cycles": 1,
+      "order": 26,
+      "profile": [
+        5099741,
+        799,
+        9281553
+      ],
+      "root": 12,
+      "target": 5099741,
+      "word_length": 24
+    },
+    {
+      "cycles": 1,
+      "order": 25,
+      "profile": [
+        5477461,
+        689,
+        5524209
+      ],
+      "root": 12,
+      "target": 5477461,
+      "word_length": 23
+    },
+    {
+      "cycles": 1,
+      "order": 26,
+      "profile": [
+        8231473,
+        903,
+        13847505
+      ],
+      "root": 12,
+      "target": 8231473,
+      "word_length": 24
+    },
+    {
+      "cycles": 1,
+      "order": 27,
+      "profile": [
+        9551177,
+        853,
+        16249891
+      ],
+      "root": 12,
+      "target": 9551177,
+      "word_length": 25
+    }
+  ],
+  "independent_arc_checks": 1301,
+  "status": "PASS"
+}

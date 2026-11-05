@@ -1,0 +1,697 @@
+[
+  {
+    "target": 13,
+    "source_rows": [
+      2,
+      4,
+      1
+    ],
+    "pair": [
+      0,
+      1
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      3,
+      2,
+      6,
+      2
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1
+    ]
+  },
+  {
+    "target": 41,
+    "source_rows": [
+      2,
+      4,
+      1
+    ],
+    "pair": [
+      0,
+      1
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      3,
+      2,
+      6,
+      2
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 43,
+    "source_rows": [
+      2,
+      4,
+      1
+    ],
+    "pair": [
+      0,
+      1
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      3,
+      2,
+      6,
+      2
+    ],
+    "pair_L": 2,
+    "ordinary_Ls": [
+      1,
+      1
+    ]
+  },
+  {
+    "target": 55,
+    "source_rows": [
+      2,
+      4,
+      25,
+      19,
+      3
+    ],
+    "pair": [
+      2,
+      0
+    ],
+    "pair_type": "nonadjacent",
+    "response": [
+      9,
+      5,
+      25,
+      4
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1
+    ]
+  },
+  {
+    "target": 77,
+    "source_rows": [
+      2,
+      4,
+      1
+    ],
+    "pair": [
+      0,
+      1
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      3,
+      2,
+      6,
+      2
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 83,
+    "source_rows": [
+      2,
+      12,
+      9,
+      1
+    ],
+    "pair": [
+      0,
+      1
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      5,
+      2,
+      12,
+      4
+    ],
+    "pair_L": 2,
+    "ordinary_Ls": [
+      1,
+      1
+    ]
+  },
+  {
+    "target": 163,
+    "source_rows": [
+      2,
+      28,
+      25,
+      17,
+      1
+    ],
+    "pair": [
+      0,
+      1
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      9,
+      2,
+      24,
+      8
+    ],
+    "pair_L": 2,
+    "ordinary_Ls": [
+      1,
+      1
+    ]
+  },
+  {
+    "target": 173,
+    "source_rows": [
+      2,
+      4,
+      25,
+      19,
+      3
+    ],
+    "pair": [
+      2,
+      0
+    ],
+    "pair_type": "nonadjacent",
+    "response": [
+      9,
+      5,
+      25,
+      4
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 231,
+    "source_rows": [
+      2,
+      4,
+      1
+    ],
+    "pair": [
+      2,
+      0
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      3,
+      2,
+      6,
+      2
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1,
+      1,
+      2,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 233,
+    "source_rows": [
+      30,
+      124,
+      120,
+      112,
+      96,
+      65,
+      1
+    ],
+    "pair": [
+      6,
+      0
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      47,
+      17,
+      109,
+      32
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1
+    ]
+  },
+  {
+    "target": 247,
+    "source_rows": [
+      2,
+      60,
+      57,
+      49,
+      33,
+      1
+    ],
+    "pair": [
+      5,
+      0
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      17,
+      9,
+      35,
+      10
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 251,
+    "source_rows": [
+      2,
+      12,
+      9,
+      1
+    ],
+    "pair": [
+      3,
+      0
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      5,
+      3,
+      11,
+      4
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 277,
+    "source_rows": [
+      6,
+      12,
+      8,
+      1
+    ],
+    "pair": [
+      3,
+      0
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      5,
+      2,
+      12,
+      4
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 299,
+    "source_rows": [
+      14,
+      28,
+      24,
+      16,
+      1
+    ],
+    "pair": [
+      4,
+      0
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      9,
+      2,
+      24,
+      8
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 421,
+    "source_rows": [
+      94,
+      252,
+      248,
+      240,
+      224,
+      193,
+      128,
+      1
+    ],
+    "pair": [
+      7,
+      0
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      79,
+      18,
+      202,
+      62
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1
+    ]
+  },
+  {
+    "target": 449,
+    "source_rows": [
+      22,
+      252,
+      248,
+      241,
+      224,
+      193,
+      129,
+      1
+    ],
+    "pair": [
+      7,
+      0
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      97,
+      45,
+      203,
+      54
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1
+    ]
+  },
+  {
+    "target": 503,
+    "source_rows": [
+      30,
+      252,
+      248,
+      240,
+      224,
+      193,
+      129,
+      1
+    ],
+    "pair": [
+      7,
+      0
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      107,
+      47,
+      229,
+      62
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1
+    ]
+  },
+  {
+    "target": 533,
+    "source_rows": [
+      2,
+      4,
+      9,
+      19,
+      7
+    ],
+    "pair": [
+      2,
+      0
+    ],
+    "pair_type": "nonadjacent",
+    "response": [
+      9,
+      4,
+      22,
+      4
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 569,
+    "source_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "pair": [
+      2,
+      0
+    ],
+    "pair_type": "nonadjacent",
+    "response": [
+      5,
+      3,
+      13,
+      2
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 583,
+    "source_rows": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "pair": [
+      0,
+      1
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      5,
+      3,
+      11,
+      4
+    ],
+    "pair_L": 5,
+    "ordinary_Ls": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 637,
+    "source_rows": [
+      2,
+      4,
+      1
+    ],
+    "pair": [
+      0,
+      1
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      3,
+      2,
+      6,
+      2
+    ],
+    "pair_L": 7,
+    "ordinary_Ls": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 821,
+    "source_rows": [
+      2,
+      4,
+      1
+    ],
+    "pair": [
+      0,
+      1
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      3,
+      2,
+      6,
+      2
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 1067,
+    "source_rows": [
+      2,
+      140,
+      249,
+      241,
+      227,
+      195,
+      131,
+      1
+    ],
+    "pair": [
+      7,
+      0
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      73,
+      48,
+      168,
+      70
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 1339,
+    "source_rows": [
+      2,
+      4,
+      1
+    ],
+    "pair": [
+      0,
+      1
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      3,
+      2,
+      6,
+      2
+    ],
+    "pair_L": 13,
+    "ordinary_Ls": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "target": 1861,
+    "source_rows": [
+      2,
+      4,
+      25,
+      19,
+      3
+    ],
+    "pair": [
+      2,
+      0
+    ],
+    "pair_type": "nonadjacent",
+    "response": [
+      9,
+      5,
+      25,
+      4
+    ],
+    "pair_L": 1,
+    "ordinary_Ls": [
+      35
+    ]
+  },
+  {
+    "target": 2647,
+    "source_rows": [
+      2,
+      12,
+      9,
+      1
+    ],
+    "pair": [
+      0,
+      1
+    ],
+    "pair_type": "adjacent",
+    "response": [
+      5,
+      2,
+      12,
+      4
+    ],
+    "pair_L": 2,
+    "ordinary_Ls": [
+      63
+    ]
+  }
+]
