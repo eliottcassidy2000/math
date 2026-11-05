@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "proof_sha256": "2a75ad55f56377cd430d16a05e4ca3be3dceb20c0bd70f0a17b14c892fe90508",
+  "script_sha256": "da494dac5011efcd7fd1038371f5450e06ddb4a9463755eb84445aa40d68e82e",
+  "full_Pareto_state_scaling_identity": true,
+  "Pareto_recurrence_checked_through": 40,
+  "unpruned_source_state_minima_through_word_length10": [
+    2,
+    3,
+    5,
+    9,
+    15,
+    25,
+    45,
+    75,
+    125,
+    225,
+    375
+  ],
+  "physical_U_cap": 256,
+  "complete_profiles_in_bank": 1557,
+  "all_ten_product_matrices_verified": true,
+  "exact_rational_bilinear_norm_identity": true,
+  "manual_proof_audit": "Sharp all-order minima, attainability, rooted-class exponent, norm chamber/involution, common-source density, sublogarithmic thickening, and fixed-bank multiplicative closure are valid. No mathematical correction needed.",
+  "scope": "Independent-source spectrum remains open."
+}
