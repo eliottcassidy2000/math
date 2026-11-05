@@ -1,0 +1,15 @@
+{
+  "clock_count": 297,
+  "clocks_checked_odd_denominator_through": 53,
+  "cyclic_complement_checks": 11422,
+  "h": 600342,
+  "new_C2_target": 2972894005,
+  "short_companion": [
+    6003419,
+    1,
+    10806159,
+    1
+  ],
+  "small_C2_target": 7649,
+  "status": "PASS"
+}

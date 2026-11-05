@@ -1,0 +1,23 @@
+{
+  "C2_target": 2972894005,
+  "bounded_positive_fiber_inputs": [],
+  "coprime_slopes": 16382,
+  "fiber_odd_n_checked": 100000,
+  "largest_selected_block_length": 16,
+  "maximum_odd_denominator": 401,
+  "odd_numerator_slopes": 8187,
+  "positive_image": [
+    6003419,
+    1,
+    10806159,
+    1
+  ],
+  "positive_index_j": 37521,
+  "positive_predecessor": [
+    600339,
+    1,
+    675385,
+    1
+  ],
+  "status": "PASS"
+}

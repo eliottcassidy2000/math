@@ -1,0 +1,14 @@
+{
+  "common_C2_count": 2972894005,
+  "graph_order": 34,
+  "h": 600342,
+  "left_word": "ZJOZO",
+  "right_profile": [
+    6003419,
+    1,
+    10806159,
+    1
+  ],
+  "right_word": "ZOZZOZZOOOZZZOOOZZZOOOZ",
+  "verification": "Exact source word, independent g recurrence and bilinear graft law; no literal 34-vertex count."
+}

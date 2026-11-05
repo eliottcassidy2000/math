@@ -1,0 +1,11 @@
+# Independent short-block affine transport audit
+
+Status: PASS. Frozen proof SHA256 `0ba9797ef23260f5e15f295a137a44ced677456b9541c9d70572e529f3f9a365`; verifier SHA256 `14e8bf6a3fb417fb60140b92a5e641d27e40c2d47279560e5638024b9f6652c9`.
+
+Checked the complete O^ell Z^j raw profile formula on arbitrary coordinates and its exact signed affine readout. For every reduced interior slope with odd denominator, minimal j keeps t strictly positive and odd while putting it below b/2; minimal ell then places the effective even numerator strictly inside (b/2,b). Coprimality, the O(log b) vertex bound, parity of the shift, preserved unit endpoint/deletion interfaces, injectivity on strong unit profiles, and transport of infinitely many old witnesses are all justified. The argument is not limited to odd numerator and does not accidentally include even denominators or interval endpoints.
+
+The exact 5U-9D=24 fiber normalization is sound. The m-odd branch is excluded by the strong cone; the odd part q=1 is handled; valuations s<=2 and s>=4 are impossible; hence s=3. The converse uses g(16q-1)=g(q)+8q and the actual O^3 Z profile map. The predecessor is unique as a numerical profile, not as a graph class. The later parameterization U_q=18j+7,D_q=16j+3 and positive target 79232j+30133 are exact. Physical membership remains the explicit g condition, and j=0 is a valid hostile.
+
+Independent `check_block_transport.py` checks 16,382 reduced slopes through odd denominator 401, including 8,187 odd numerators, all four coordinate-basis controls, word length and parity. It also checks both fiber directions on 100,000 odd inputs through 200,001, the nontrivial exact predecessor (600339,1,675385,1), its successor (6003419,1,10806159,1), and target 2972894005 at index 37521. The bounded interval has no positive left-fiber witness, so the separate large positive control is retained rather than presenting a vacuous census as evidence of existence.
+
+Independent normal and optimized receipts match. Final author normal and optimized replays are byte-identical with SHA256 `14b1886206df98f5f6fba379c85a86b0a31009fd26f23896d7e9e436c5ea1939`. No unresolved correctness issue found. Status promotion and packaging-only path changes are permitted; new mathematical additions need another audit.
