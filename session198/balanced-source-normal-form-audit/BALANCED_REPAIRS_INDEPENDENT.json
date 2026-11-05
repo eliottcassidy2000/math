@@ -1,0 +1,59 @@
+{
+  "method": "compile each M_L into J plus a low-bit O/Z word, then independent subset counting",
+  "new_C1_repairs": [
+    {
+      "order": 5,
+      "target": 11
+    },
+    {
+      "order": 9,
+      "target": 149
+    },
+    {
+      "order": 13,
+      "target": 1903
+    },
+    {
+      "order": 6,
+      "target": 23
+    },
+    {
+      "order": 10,
+      "target": 317
+    },
+    {
+      "order": 13,
+      "target": 3187
+    },
+    {
+      "order": 10,
+      "target": 391
+    },
+    {
+      "order": 11,
+      "target": 433
+    },
+    {
+      "order": 10,
+      "target": 443
+    },
+    {
+      "order": 7,
+      "target": 47
+    },
+    {
+      "order": 11,
+      "target": 519
+    },
+    {
+      "order": 11,
+      "target": 617
+    },
+    {
+      "order": 12,
+      "target": 911
+    }
+  ],
+  "prior_C2_C3_records_unchanged": 27,
+  "status": "PASS"
+}
