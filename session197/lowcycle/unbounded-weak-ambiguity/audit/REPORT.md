@@ -1,0 +1,13 @@
+# Independent audit of unbounded weak deletion ambiguity
+
+Verdict: PASS, no correction.
+
+Frozen proof UNBOUNDED_WEAK_AMBIGUITY.md SHA25654f787b692828020241003e0ccfe04bda752abd084dc5f3ab2b0a92c0c3f3113; Python verifier c19ec01586976500e3ff6d4995c588365d02842379a8c6c1d3bf33f6edce189c; C++ counter533bfadfba9af30c3aaa2e290fa3334dcf8fb7d1005c1fd7595902ef545fc58e; receipt7258644f0c1a9ff8ecef805ae46e86621403b34562deb2f27ecaaae8f8b7f3b8. The source copy includes the two hash-pinned proof dependencies.
+
+For each power-two gadget, g=Q=1 and B=L. Thus the balanced locus h=R is preserved and multiplied by L+1 independently of the old ending response. The new endpoint and deletion responses are exactly the old H. Every gadget adds j+1 vertices, and its nonempty tail ensures that the first output is already a strong C1 graph. Permuting these gadgets therefore leaves the total H and order unchanged, while its last index determines d. A final sink preserves d and starting count one, kills the ending response and doubles R. The factors 2^j+1 are distinct positive integers, so all m specified deletion values are different. This proves arbitrarily large ambiguity even at a specified common order. It does not prove exhaustiveness or the need for more than the one additional coordinate d; the proof states these limits correctly.
+
+Copied normal and optimized Python replays match the frozen certificate; each independently compiles optimized and debug C++ builds with identical results. The new independent.py constructs all ten graphs for m<=4 directly in the transitive gadget order and checks every edge against the frozen witnesses. A separate recursive predecessor DP counts all five responses, including the root deletion; it agrees through the order16 cases. Three smaller graphs additionally pass literal Hamilton-permutation and deletion-permutation counting. An exact reordering control tests all5,913 permutations of gadget indices for m<=7, confirming the common order and the complete m-element deletion image for those constructions. Independent normal and optimized receipts are identical.
+
+The source counter's fixed length16 arrays suffice precisely for its largest tested order16; it makes no larger physical-DP claim. Large m through50 is symbolic integer arithmetic, clearly separated from the direct graph controls. The all-order theorem rests on the physical gadget laws, not a numerical extrapolation.
+
+Reproduction: run independent.py from this directory. The frozen wrapper can be replayed under source/; it writes its receipt beside itself. No frozen author source was changed.
