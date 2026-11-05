@@ -1,0 +1,58 @@
+{
+  "C2_H43_presentations": [
+    [
+      "N",
+      [
+        3,
+        0,
+        6,
+        1
+      ],
+      [
+        1,
+        0,
+        2,
+        1
+      ]
+    ],
+    [
+      "N",
+      [
+        1,
+        0,
+        2,
+        1
+      ],
+      [
+        3,
+        0,
+        6,
+        1
+      ]
+    ]
+  ],
+  "C2_profiles_cap7": 7,
+  "C3_admissible_pairs": 2964,
+  "C3_profiles_cap14": 20,
+  "C3_support_through43": [
+    15,
+    27,
+    29,
+    31,
+    33
+  ],
+  "all_birth_masks_independently_classified": 128,
+  "alternative_source_grammar": "indexed M_L and O",
+  "descendant_support_through87": [
+    43,
+    69,
+    77,
+    79,
+    81,
+    83
+  ],
+  "descendant_tests": 340,
+  "literal_graphs_permutation_counted": 5,
+  "small_source_rooted_occurrences": 26,
+  "status": "PASS"
+}

@@ -1,0 +1,624 @@
+{
+  "C2_candidates": [
+    {
+      "H": 13,
+      "family": "N",
+      "left": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "right": [
+        1,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "H": 23,
+      "family": "N",
+      "left": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "right": [
+        3,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "H": 25,
+      "family": "N",
+      "left": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "right": [
+        1,
+        0,
+        4,
+        1
+      ]
+    },
+    {
+      "H": 41,
+      "family": "N",
+      "left": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "right": [
+        5,
+        1,
+        5,
+        1
+      ]
+    },
+    {
+      "H": 43,
+      "family": "N",
+      "left": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "right": [
+        3,
+        0,
+        6,
+        1
+      ]
+    },
+    {
+      "H": 41,
+      "family": "N",
+      "left": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "right": [
+        5,
+        2,
+        6,
+        3
+      ]
+    },
+    {
+      "H": 53,
+      "family": "N",
+      "left": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "right": [
+        5,
+        1,
+        7,
+        1
+      ]
+    },
+    {
+      "H": 41,
+      "family": "N",
+      "left": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "right": [
+        3,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "H": 45,
+      "family": "N",
+      "left": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "right": [
+        1,
+        0,
+        4,
+        1
+      ]
+    },
+    {
+      "H": 29,
+      "family": "M",
+      "left": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "right": [
+        1,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "H": 49,
+      "family": "M",
+      "left": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "right": [
+        3,
+        1,
+        3,
+        1
+      ]
+    }
+  ],
+  "C2_hits": [
+    {
+      "H": 43,
+      "family": "N",
+      "left": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "right": [
+        3,
+        0,
+        6,
+        1
+      ]
+    }
+  ],
+  "C2_source_cap": 7,
+  "C2_sources": [
+    [
+      1,
+      0,
+      2,
+      1
+    ],
+    [
+      3,
+      1,
+      3,
+      1
+    ],
+    [
+      1,
+      0,
+      4,
+      1
+    ],
+    [
+      5,
+      1,
+      5,
+      1
+    ],
+    [
+      3,
+      0,
+      6,
+      1
+    ],
+    [
+      5,
+      2,
+      6,
+      3
+    ],
+    [
+      5,
+      1,
+      7,
+      1
+    ]
+  ],
+  "C3_admissible_pairs": 2964,
+  "C3_source_cap": 14,
+  "C3_sources": 20,
+  "C3_support": [
+    15,
+    27,
+    29,
+    31,
+    33
+  ],
+  "arbitrary_births": 128,
+  "birth_counts": [
+    43,
+    177,
+    245,
+    345,
+    175,
+    285,
+    349,
+    425,
+    97,
+    215,
+    281,
+    365,
+    209,
+    303,
+    365,
+    425,
+    73,
+    175,
+    225,
+    293,
+    173,
+    251,
+    297,
+    341,
+    97,
+    183,
+    231,
+    283,
+    177,
+    239,
+    283,
+    311,
+    81,
+    173,
+    219,
+    277,
+    169,
+    237,
+    279,
+    313,
+    117,
+    193,
+    237,
+    279,
+    185,
+    237,
+    277,
+    295,
+    73,
+    133,
+    161,
+    187,
+    129,
+    165,
+    189,
+    191,
+    79,
+    123,
+    149,
+    159,
+    115,
+    135,
+    157,
+    143,
+    143,
+    251,
+    303,
+    377,
+    243,
+    327,
+    375,
+    425,
+    181,
+    273,
+    323,
+    381,
+    261,
+    329,
+    375,
+    409,
+    137,
+    213,
+    247,
+    289,
+    205,
+    257,
+    287,
+    305,
+    145,
+    205,
+    237,
+    263,
+    193,
+    229,
+    257,
+    259,
+    133,
+    199,
+    229,
+    261,
+    189,
+    231,
+    257,
+    265,
+    153,
+    203,
+    231,
+    247,
+    189,
+    215,
+    239,
+    231,
+    89,
+    123,
+    135,
+    135,
+    113,
+    123,
+    131,
+    107,
+    79,
+    97,
+    107,
+    91,
+    83,
+    77,
+    83,
+    43
+  ],
+  "dependency_hashes": {
+    "dependencies/BILINEAR_C2.md": "5eab9deb2871819d8a1b5684c4987f2f4da807adc55063a30675d531c5ad3813",
+    "dependencies/C3_TWO_SOURCE.md": "103a0c347881c7641f17d53bb8796187ac80f057a90af0a3acf8e6f89032c64d",
+    "dependencies/POSITIVE_SOURCE_GRAMMAR.md": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537",
+    "dependencies/bilinear.py": "33cfe6cea487b17da44e083d7e81bd860dfeddcab3096deb6d135191e5537ac0",
+    "dependencies/c3.py": "564034e130625d8bfd06ac04f7f365c14c93cd22e9ef8f33da3f5330a0825bb9",
+    "dependencies/core.py": "dc32dc1ef3647b694015cb4ff1ef99415c162bfbaf58d3b545175b09f0378042",
+    "dependencies/source_oracle.py": "33cfe6cea487b17da44e083d7e81bd860dfeddcab3096deb6d135191e5537ac0"
+  },
+  "descendant_spectrum_through87": {
+    "43": [
+      [
+        "N",
+        "",
+        ""
+      ]
+    ],
+    "69": [
+      [
+        "N",
+        "",
+        "J"
+      ]
+    ],
+    "77": [
+      [
+        "N",
+        "Z",
+        ""
+      ],
+      [
+        "N",
+        "J",
+        ""
+      ]
+    ],
+    "79": [
+      [
+        "N",
+        "",
+        "O"
+      ]
+    ],
+    "81": [
+      [
+        "J0",
+        "",
+        ""
+      ]
+    ],
+    "83": [
+      [
+        "N",
+        "O",
+        ""
+      ]
+    ]
+  },
+  "distinct_extension_readouts": 298,
+  "extension_tests": 340,
+  "literal_graphs": [
+    {
+      "C": 2,
+      "H": 43,
+      "family": "N",
+      "left_word": "",
+      "right_word": "ZO",
+      "rows": [
+        114,
+        124,
+        113,
+        37,
+        8,
+        16,
+        56
+      ]
+    },
+    {
+      "C": 2,
+      "H": 43,
+      "family": "N",
+      "left_word": "ZO",
+      "right_word": "",
+      "rows": [
+        74,
+        124,
+        121,
+        112,
+        65,
+        17,
+        32
+      ]
+    },
+    {
+      "C": 2,
+      "H": 85,
+      "family": "M",
+      "left_word": "Z",
+      "right_word": "Z",
+      "rows": [
+        210,
+        252,
+        249,
+        225,
+        200,
+        145,
+        32,
+        64
+      ]
+    },
+    {
+      "C": 2,
+      "H": 87,
+      "family": "N",
+      "left_word": "",
+      "right_word": "OZJ",
+      "rows": [
+        122,
+        252,
+        121,
+        192,
+        8,
+        24,
+        48,
+        117
+      ]
+    },
+    {
+      "C": 3,
+      "H": 87,
+      "family": "J0",
+      "left_word": "",
+      "right_word": "ZJ",
+      "rows": [
+        194,
+        252,
+        233,
+        241,
+        229,
+        129,
+        32,
+        64
+      ]
+    }
+  ],
+  "literal_ray_parameters": [
+    {
+      "k": 1,
+      "lower_child": 1221,
+      "lower_parent": 611,
+      "lower_source": [
+        35,
+        5,
+        43,
+        5
+      ],
+      "positive_C2_child": 3451,
+      "positive_C2_parent": 1725,
+      "positive_C2_source": [
+        101,
+        15,
+        121,
+        15
+      ],
+      "upper_child": 87,
+      "upper_parent": 43,
+      "upper_source": [
+        3,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "k": 2,
+      "lower_child": 2421,
+      "lower_parent": 1211,
+      "lower_source": [
+        71,
+        11,
+        85,
+        11
+      ],
+      "positive_C2_child": 7051,
+      "positive_C2_parent": 3525,
+      "positive_C2_source": [
+        209,
+        33,
+        247,
+        33
+      ],
+      "upper_child": 147,
+      "upper_parent": 73,
+      "upper_source": [
+        5,
+        1,
+        5,
+        1
+      ]
+    },
+    {
+      "k": 3,
+      "lower_child": 4821,
+      "lower_parent": 2411,
+      "lower_source": [
+        143,
+        23,
+        169,
+        23
+      ],
+      "positive_C2_child": 14251,
+      "positive_C2_parent": 7125,
+      "positive_C2_source": [
+        425,
+        69,
+        499,
+        69
+      ],
+      "upper_child": 267,
+      "upper_parent": 133,
+      "upper_source": [
+        9,
+        1,
+        9,
+        1
+      ]
+    }
+  ],
+  "lower_upper_ray_algebra_tests": 100,
+  "parent_converse_map": [
+    5,
+    6,
+    4,
+    0,
+    1,
+    2,
+    3
+  ],
+  "scope": "Exact target43 C2/C3 inverse and source-extension failure, plus actual restricted target-dependent replacement branches; not general odd coverage.",
+  "status": "PASS"
+}
