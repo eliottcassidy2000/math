@@ -23,3 +23,5 @@ refutes nothing proved; a hit is exact).
   necessary above 3/4.
 - P5 (outside the interval: (1,3), (2,7), (4,3), (5,4)): the image misses one sign entirely, as Session198's sharpness
   argument says.
+
+- P6 (added before running the recipe script, after the probe): for a, b both odd, the clock word W of Session198 (bits of A = a(B-1)/b, which is odd, so W starts with Z) lowers the response of a strong input by K_cyc = K_lin - b per period, where K_lin = aR - bC is Session198's constant and the cyclic term eps_(k-1) eps_0 = 1 is added to C; the recipe seed -> O -> W^h then hits every even target exactly (P2 becomes a theorem). For a even, b odd the recipe reproduces Session198 on random odd targets.
