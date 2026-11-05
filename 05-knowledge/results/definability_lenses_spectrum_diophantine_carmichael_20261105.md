@@ -178,10 +178,13 @@ mode 1. Outcome: "mode 1 complete" REFUTED, "mode 2 complete" REFUTED, "mode 3 m
 mode 1" REFUTED (both ranks are 14: first-in-first-out closing removes no dimension but loses sixteen more values),
 "mode 3 < mode 1" CONFIRMED. The structural reading is the useful part: **the double events are indispensable.** A
 vertex that opens two slots (two later vertices beat it: a shared head) or terminates two (it beats two earlier
-vertices: a shared tail) is needed already for 43, 47, 63, 79, 103, 113 below 256. S79's minimal-arc witnesses confirm
-this for the values they cover: 47 = chain 0..6 with 6 -> 0 and 6 -> 1 (one shared tail; THM-4748's shared-endpoint
-case), 43 = 0..6 with 3 -> 0, 3 -> 2, 4 -> 3, 6 -> 3, 6 -> 4 (two shared tails), 63 = 0..8 with 4 -> 0, 4 -> 3, 6 -> 4,
-8 -> 4, 8 -> 7 (two shared tails). So a proof of completeness through cutwidth 2 must use the shared-endpoint
+vertices: a shared tail) is needed already for 43, 47, 63, 79, 103, 113 below 256. S79's exact minimal-arc
+witnesses (to 511) confirm this for the seven lost values they cover, each having a shared endpoint: 43 = chain 0..6
+with 2 -> 0, 4 -> 2, 6 -> 2, 6 -> 4 (head 2 and tail 6 shared); 47 = 0..6 with 6 -> 0, 6 -> 1 (shared tail; THM-4748's
+shared-endpoint case); 63 = 0..7 with 3 -> 0, 6 -> 3, 7 -> 3 (shared head 3); 79 = 0..7 with 7 -> 0, 7 -> 2 (shared
+tail); 103 = 0..8 with 3 -> 0, 6 -> 3, 8 -> 3 (shared head); 113 = 0..8 with 2 -> 0, 6 -> 2, 6 -> 3, 8 -> 6 (shared tail
+6); 235 = 0..9 with 6 -> 0, 6 -> 4, 8 -> 6, 9 -> 6 (vertex 6 shared as tail and as head). So a proof of completeness
+through cutwidth 2 must use the shared-endpoint
 pairs, i.e. the vertices of backward out-degree or in-degree two, and the crossing chains alone (rank 14, 998 of
 1024) are not a complete candidate; the full grammar (rank 17) remains the smallest complete one found. The minimal
 rank of a complete candidate therefore lies between 5 and 17, with 14 excluded for these two natural sub-languages.

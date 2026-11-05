@@ -57,8 +57,9 @@ related:
    pending arcs, attains 1014 of the 1024 odd numbers <= 2047 and misses 7, 21, 43, 47, 63, 79, 103, 113, 235, 709;
    crossing chains (additionally first-in-first-out closing): rank 14, 998 of 1024; nested chains (last-in-first-out):
    58 states, rank 10, 440 of 1024. Consequently the shared-endpoint configurations (a vertex beaten by two later
-   vertices or beating two earlier ones) are indispensable for completeness through cutwidth 2 (S79's minimal-arc
-   witnesses of 43, 47, 63 each contain a shared tail), and the smallest complete candidate found keeps rank 17.
+   vertices or beating two earlier ones) are indispensable for completeness through cutwidth 2 (S79's exact
+   minimal-arc witnesses of 43, 47, 63, 79, 103, 113, 235 each contain a shared tail or a shared head), and the
+   smallest complete candidate found keeps rank 17.
 
 4. **Architecture map (reasoning, no claim).** The attached paper's assembly (indices on a rank-one group, guarded
    multiplication, height estimate, local conditions) corresponds to the one-apex orbit, ordered joins, Moon's floor

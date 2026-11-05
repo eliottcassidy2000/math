@@ -108,7 +108,6 @@ A hypothesis is unresolved unless a proved leaf is named explicitly. Search its 
 - **Formal:** `GMC2Main.gmc2` is unconditional, root-imported, and kernel-pure. `GMC2DvdKOmegaWiring.singlePolyCrux_holds` closes the former `DvdK1` endpoint; `HeightWitnessSupplier`, orbit-product, irreducibility, additive incidence, and the small-root frame are checked along its dependency chain.
 - **HYP-8925/HYP-8930:** positive coefficients and a fixed-support unique channel prevent cancellation; neither is general `DvdK1`.
 - **HYP-8932:** monomial membership gives nonvanishing; `{-2,-1,1,2}` is kernel-checked. `102/116` is bounded evidence with thirteen script-only rows.
-- **HYP-8931 (MISTAKE-240):** its empty-face predicate makes the bypass vacuous.
 - **HYP-8935 (MISTAKE-241):** its floating-asymptotic argument remains invalid. Later exact modules close the route; the old branch-enumeration presentation is optional.
 ## Other active lenses
 - **HYP-8945 (OPEN UNIT-DISTANCE ROUTE):** the sign-changing Bessel kernel identifies cancellation, not a new asymptotic bound.
