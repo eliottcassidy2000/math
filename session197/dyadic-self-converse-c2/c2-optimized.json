@@ -1,0 +1,59 @@
+{
+  "all_small_dyadic_targets": 510,
+  "constructed_count_digest": "d43926a3744fdacea27318309cf1f6734df945e6c1cccc08accd079a9be27828",
+  "large_exact_targets": 16,
+  "literal_anti_edges": 7872,
+  "literal_final_H_and_C_counts": 16,
+  "scope": "Exact dyadic residue image conditional on named reviewed structural dependencies; not exact integer coverage.",
+  "small_constructor_examples": [
+    {
+      "count": 62160641945304729,
+      "final_order": 57,
+      "k": 3,
+      "source_order": 28,
+      "target": 1,
+      "word": "111000110001100011000000"
+    },
+    {
+      "count": 17744176147669,
+      "final_order": 45,
+      "k": 3,
+      "source_order": 22,
+      "target": 5,
+      "word": "1110001100011000000"
+    },
+    {
+      "count": 15458995101041,
+      "final_order": 45,
+      "k": 4,
+      "source_order": 22,
+      "target": 1,
+      "word": "111100001100000000"
+    },
+    {
+      "count": 18686433927603493,
+      "final_order": 55,
+      "k": 4,
+      "source_order": 27,
+      "target": 5,
+      "word": "111100001100001100000000"
+    },
+    {
+      "count": 259363747896109809689,
+      "final_order": 69,
+      "k": 4,
+      "source_order": 34,
+      "target": 9,
+      "word": "111100001100001100001100000000"
+    },
+    {
+      "count": 1111882365,
+      "final_order": 31,
+      "k": 4,
+      "source_order": 15,
+      "target": 13,
+      "word": "111100000000"
+    }
+  ],
+  "status": "PASS"
+}
