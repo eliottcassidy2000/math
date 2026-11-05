@@ -1,0 +1,63 @@
+{
+  "all_real_anchor_corner_checks": 703120,
+  "candidate_verifier_sha256": "4e37d887a3831adf04c2096d06a9fea0a2d1780f1ed6b64955aaf94bab8f3f7d",
+  "dyadic_net_cells": 4082,
+  "exact_identity_controls": 201024,
+  "exact_small_shell_suprema": [
+    {
+      "bound": 6,
+      "exact_anchored_supremum": "1",
+      "k": 1
+    },
+    {
+      "bound": 8,
+      "exact_anchored_supremum": "1",
+      "k": 2
+    },
+    {
+      "bound": 10,
+      "exact_anchored_supremum": "9/5",
+      "k": 3
+    },
+    {
+      "bound": 12,
+      "exact_anchored_supremum": "5/2",
+      "k": 4
+    },
+    {
+      "bound": 14,
+      "exact_anchored_supremum": "63/22",
+      "k": 5
+    },
+    {
+      "bound": 16,
+      "exact_anchored_supremum": "7/2",
+      "k": 6
+    },
+    {
+      "bound": 18,
+      "exact_anchored_supremum": "353/90",
+      "k": 7
+    },
+    {
+      "bound": 20,
+      "exact_anchored_supremum": "911/202",
+      "k": 8
+    },
+    {
+      "bound": 22,
+      "exact_anchored_supremum": "1803/362",
+      "k": 9
+    },
+    {
+      "bound": 24,
+      "exact_anchored_supremum": "901/162",
+      "k": 10
+    }
+  ],
+  "independent_verifier_sha256": "fa50f8882bdb834015a9ee28db1b54ffbad645e062f74e37b88afc6355bf382e",
+  "literal_permutation_sources": 63,
+  "proof_sha256": "23303755af466732f515038487b61368f27c57b26c4503df7dd36f977e8d4650",
+  "scope": "Theorems1-2 PASS; the separate exploratory fixed-bank census is not certified by this audit; no exact coverage claim.",
+  "status": "PASS"
+}

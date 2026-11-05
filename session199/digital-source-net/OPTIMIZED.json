@@ -1,0 +1,10 @@
+{
+  "checks": 414295,
+  "exact_initial_indices": 100000,
+  "large_integer_controls": 2048,
+  "largest_anchored_error_fraction_of_bound": "19/96",
+  "proof_sha256": "23303755af466732f515038487b61368f27c57b26c4503df7dd36f977e8d4650",
+  "rectangle_checks": 3883,
+  "script_sha256": "4e37d887a3831adf04c2096d06a9fea0a2d1780f1ed6b64955aaf94bab8f3f7d",
+  "status": "PASS"
+}
