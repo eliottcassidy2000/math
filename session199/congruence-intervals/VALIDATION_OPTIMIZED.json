@@ -1,0 +1,123 @@
+{
+  "actual_integer_prefix_checks": 6640,
+  "approximation_checks": 5313,
+  "arbitrary_modular_start_and_target_checks": 18704,
+  "dyadic_suffix_lengths": {
+    "1": 2,
+    "10": 252,
+    "11": 305,
+    "12": 363,
+    "13": 426,
+    "14": 494,
+    "2": 8,
+    "3": 21,
+    "4": 39,
+    "5": 62,
+    "6": 90,
+    "7": 123,
+    "8": 161,
+    "9": 204
+  },
+  "general_dyadic_constructor_checks": 90,
+  "hostile_unreset_prefix": {
+    "M": 6,
+    "final": [
+      2,
+      3
+    ],
+    "initial": [
+      1,
+      1
+    ],
+    "word": "110"
+  },
+  "literal_balanced_graphs": 30,
+  "one_apex_sources_through_U": 10000,
+  "proof_sha256": "aa62ce77eaeb039a702d8af784e41d6480d1867efa7d2919c9003dcbbef55bff",
+  "sample_outputs": [
+    {
+      "D": 9,
+      "H": 27,
+      "L": 2,
+      "N": 37,
+      "Q": 2,
+      "U": 9,
+      "deficit": 10,
+      "m": 1,
+      "vertices": 7
+    },
+    {
+      "D": 9,
+      "H": 27,
+      "L": 2,
+      "N": 39,
+      "Q": 2,
+      "U": 9,
+      "deficit": 12,
+      "m": 1,
+      "vertices": 7
+    },
+    {
+      "D": 9,
+      "H": 27,
+      "L": 2,
+      "N": 41,
+      "Q": 2,
+      "U": 9,
+      "deficit": 14,
+      "m": 1,
+      "vertices": 7
+    },
+    {
+      "D": 9,
+      "H": 27,
+      "L": 2,
+      "N": 43,
+      "Q": 2,
+      "U": 9,
+      "deficit": 16,
+      "m": 1,
+      "vertices": 7
+    }
+  ],
+  "sample_word": {
+    "D": 39,
+    "H": 203,
+    "L": 2,
+    "N": 237,
+    "Q": 4,
+    "U": 41,
+    "deficit": 34,
+    "m": 1,
+    "vertices": 10,
+    "word": "ZOZZZOOJ"
+  },
+  "small_zero_J_missing_odds": [
+    3,
+    7,
+    11,
+    13,
+    21,
+    23,
+    29,
+    35,
+    41,
+    43,
+    47,
+    49,
+    55,
+    57,
+    59,
+    67,
+    71,
+    75,
+    77,
+    83,
+    87,
+    89,
+    93,
+    95
+  ],
+  "status": "PASS: all-order statements proved in text; finite controls only",
+  "verifier_sha256": "243918e4a0978e5a8ec1670cc0a748f5ad9558d479d2efb25a862f7ec7a2bf46"
+}

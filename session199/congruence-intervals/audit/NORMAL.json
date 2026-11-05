@@ -1,0 +1,10 @@
+{
+  "checks": 208703,
+  "independent_approximations": 442,
+  "independent_large_integer_prefixes": 500,
+  "independent_modular_endpoints": 101332,
+  "primary_output_sha256": "d3a317e45feacccbba97cac35ca82601a3428290715920655a568b5cdc08a9d5",
+  "proof_sha256": "aa62ce77eaeb039a702d8af784e41d6480d1867efa7d2919c9003dcbbef55bff",
+  "status": "PASS",
+  "verifier_sha256": "243918e4a0978e5a8ec1670cc0a748f5ad9558d479d2efb25a862f7ec7a2bf46"
+}
