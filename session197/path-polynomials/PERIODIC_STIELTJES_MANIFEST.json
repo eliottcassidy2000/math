@@ -1,0 +1,70 @@
+{
+  "PERIODIC_STIELTJES_DEPENDENCIES.json": {
+    "bytes": 460,
+    "sha256": "d4397a001cdbeea66f398e48a3e7bd064027fb0b0a42f92abc8785823a130da3"
+  },
+  "PERIODIC_STIELTJES_README.md": {
+    "bytes": 1336,
+    "sha256": "cc4bfcf947098e653fdc3a673e55e8c5627e401c4f89b91b661eefbbdb6686e5"
+  },
+  "PERIODIC_STIELTJES_WORDS.md": {
+    "bytes": 9778,
+    "sha256": "82b941c9ce53b41ca73ee0224b240fe59c61df701df5fde6f9d29283f0fad166"
+  },
+  "periodic-stieltjes-review/REPORT.md": {
+    "bytes": 5660,
+    "sha256": "c31dca6b60dafe70197cdb7ed5fa9dda7bc6b5b6d4d7742547d56bd51ca656a9"
+  },
+  "periodic-stieltjes-review/independent-normal.json": {
+    "bytes": 1216,
+    "sha256": "b967c4742685b7109b4a35224b39032f02b797876932c6b615aa4eff40a344f2"
+  },
+  "periodic-stieltjes-review/independent-optimized.json": {
+    "bytes": 1216,
+    "sha256": "b967c4742685b7109b4a35224b39032f02b797876932c6b615aa4eff40a344f2"
+  },
+  "periodic-stieltjes-review/independent.py": {
+    "bytes": 5390,
+    "sha256": "1c8801a77c49749c10caf3b745429dc4b3a53549be8c9b913c1d214e8c8dfcaf"
+  },
+  "periodic-stieltjes-review/source-normal.json": {
+    "bytes": 3126,
+    "sha256": "25b76f0827e580aff425cdf69ad17189d0f59c037f68f0554c96cc06e2368460"
+  },
+  "periodic-stieltjes-review/source-optimized.json": {
+    "bytes": 3126,
+    "sha256": "25b76f0827e580aff425cdf69ad17189d0f59c037f68f0554c96cc06e2368460"
+  },
+  "periodic-stieltjes-review/source/PERIODIC_STIELTJES_WORDS.md": {
+    "bytes": 9778,
+    "sha256": "82b941c9ce53b41ca73ee0224b240fe59c61df701df5fde6f9d29283f0fad166"
+  },
+  "periodic-stieltjes-review/source/PROOF.md": {
+    "bytes": 18117,
+    "sha256": "b88c86ac0afa64d3a1bf399c56fa7f8aad046fb93424c70a9ace8d164708183b"
+  },
+  "periodic-stieltjes-review/source/STIELTJES_VACUA.md": {
+    "bytes": 6245,
+    "sha256": "dbe7c0e68e77e5e14e389c57221578191a22381b086cb4c5864c7b2d1abc6fe9"
+  },
+  "periodic-stieltjes-review/source/verify.py": {
+    "bytes": 9973,
+    "sha256": "10c2a35ce3f506aefb031645e81cffc1a2fb4d73bf9bbb38a163ccbf8e35dfcb"
+  },
+  "periodic-stieltjes-review/source/verify_periodic_stieltjes_words.py": {
+    "bytes": 4247,
+    "sha256": "6464caf1620bb77e88924cfe7e43485384c7090828783cfa86108bc058a1f391"
+  },
+  "periodic_stieltjes_normal.stdout": {
+    "bytes": 3126,
+    "sha256": "25b76f0827e580aff425cdf69ad17189d0f59c037f68f0554c96cc06e2368460"
+  },
+  "periodic_stieltjes_optimized.stdout": {
+    "bytes": 3126,
+    "sha256": "25b76f0827e580aff425cdf69ad17189d0f59c037f68f0554c96cc06e2368460"
+  },
+  "verify_periodic_stieltjes_words.py": {
+    "bytes": 4247,
+    "sha256": "6464caf1620bb77e88924cfe7e43485384c7090828783cfa86108bc058a1f391"
+  }
+}

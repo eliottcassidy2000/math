@@ -1,0 +1,8 @@
+{
+  "files": {
+    "PROOF.md": "b88c86ac0afa64d3a1bf399c56fa7f8aad046fb93424c70a9ace8d164708183b",
+    "STIELTJES_VACUA.md": "dbe7c0e68e77e5e14e389c57221578191a22381b086cb4c5864c7b2d1abc6fe9",
+    "verify.py": "10c2a35ce3f506aefb031645e81cffc1a2fb4d73bf9bbb38a163ccbf8e35dfcb"
+  },
+  "note": "These dependencies already occur in this repository directory; identical copies are retained in periodic-stieltjes-review/source for the frozen independent replay."
+}
