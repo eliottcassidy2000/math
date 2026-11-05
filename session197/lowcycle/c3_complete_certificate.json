@@ -1,0 +1,136 @@
+{
+  "all_order_theorem": "Every strong tournament with exactly three Hamiltonian cycles has a strong bridge, and hence an indegree-one or outdegree-one vertex.",
+  "all_records_sha256": "1d0159168c03fcd011e90caab5f0fe1dd170362ba414d2f74730fe9d644b480a",
+  "inventory": [
+    {
+      "C1": 1,
+      "C2": 0,
+      "C3": 0,
+      "canonical_graph_sha256": "8c07d21b980492ab45675cbe146c2a35599a4e0ebbdde1aab7a5db7a8eb99eab",
+      "extension_candidates": 0,
+      "insertion_filter_survivors": 0,
+      "no_degree_one_C3": 0,
+      "order": 4,
+      "retained_labelled_extensions": 0
+    },
+    {
+      "C1": 3,
+      "C2": 2,
+      "C3": 1,
+      "canonical_graph_sha256": "896b5af59a8c018ed62df11cc508c880ffd31ca21095d1e03cefcbd9710db952",
+      "extension_candidates": 14,
+      "insertion_filter_survivors": 14,
+      "no_degree_one_C3": 0,
+      "order": 5,
+      "retained_labelled_extensions": 14
+    },
+    {
+      "C1": 8,
+      "C2": 5,
+      "C3": 11,
+      "canonical_graph_sha256": "d4a58004de16acf1d5252cb26bb1b8cfcd35feb9ab3c6538ee5e77a8c4f2a6d9",
+      "extension_candidates": 180,
+      "insertion_filter_survivors": 158,
+      "no_degree_one_C3": 0,
+      "order": 6,
+      "retained_labelled_extensions": 102
+    },
+    {
+      "C1": 21,
+      "C2": 18,
+      "C3": 38,
+      "canonical_graph_sha256": "c709bf26dc9915a49426008d857276a22011803da69fbb3b69b60c7f2c98775b",
+      "extension_candidates": 1488,
+      "insertion_filter_survivors": 884,
+      "no_degree_one_C3": 0,
+      "order": 7,
+      "retained_labelled_extensions": 346
+    },
+    {
+      "C1": 55,
+      "C2": 60,
+      "C3": 124,
+      "canonical_graph_sha256": "9541da27303fad8692469d436be13e2944aa294b552a9c28d038a975fe3cfe9c",
+      "extension_candidates": 9702,
+      "insertion_filter_survivors": 4594,
+      "no_degree_one_C3": 0,
+      "order": 8,
+      "retained_labelled_extensions": 1234
+    },
+    {
+      "C1": 144,
+      "C2": 191,
+      "C3": 390,
+      "canonical_graph_sha256": "123f8d1797df686f469beaeb42460a49354777599143fa394df856a9742a9c6d",
+      "extension_candidates": 60706,
+      "insertion_filter_survivors": 22560,
+      "no_degree_one_C3": 0,
+      "order": 9,
+      "retained_labelled_extensions": 4246
+    },
+    {
+      "C1": 377,
+      "C2": 589,
+      "C3": 1193,
+      "canonical_graph_sha256": "ecc98ed1797f919274172c4b5b5f207dcf6557077ea842690e3647b0e8dfa180",
+      "extension_candidates": 369750,
+      "insertion_filter_survivors": 106738,
+      "no_degree_one_C3": 0,
+      "order": 10,
+      "retained_labelled_extensions": 14160
+    },
+    {
+      "C1": 987,
+      "C2": 1775,
+      "C3": 3574,
+      "canonical_graph_sha256": "94bd536aed9c683c1a0f918fc8472d6dce6829982a1149a044c195fb5305192d",
+      "extension_candidates": 2206498,
+      "insertion_filter_survivors": 490098,
+      "no_degree_one_C3": 0,
+      "order": 11,
+      "retained_labelled_extensions": 46034
+    },
+    {
+      "C1": 2584,
+      "C2": 5257,
+      "C3": 10537,
+      "canonical_graph_sha256": "c082dcb69518f184d67cef4a5d697f501fde458e0ca9aa578c1b0f92af313dcc",
+      "extension_candidates": 12963456,
+      "insertion_filter_survivors": 2189744,
+      "no_degree_one_C3": 0,
+      "order": 12,
+      "retained_labelled_extensions": 146576
+    }
+  ],
+  "maximum_order": 12,
+  "minimal_bridge_free_C3_order_bound": 12,
+  "one_sided_hostile": {
+    "C": 3,
+    "outdegrees": [
+      3,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "rows": [
+      14,
+      52,
+      56,
+      50,
+      33,
+      1
+    ]
+  },
+  "status": "PASS",
+  "total_canonical_graphs": 27945,
+  "two_sided_cover_bounds": [
+    0,
+    3,
+    5,
+    6,
+    6,
+    5
+  ]
+}
