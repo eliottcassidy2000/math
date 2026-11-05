@@ -1,0 +1,11 @@
+{
+  "balanced": true,
+  "budget": 3,
+  "cover_cap": 333,
+  "left_inventory": 2249,
+  "right_inventory": 1563,
+  "scope": "Complete inverse for the selected C1 class only, not the unrestricted tournament spectrum.",
+  "status": "REJECT",
+  "target": 27781,
+  "tested_pairs": 526536
+}

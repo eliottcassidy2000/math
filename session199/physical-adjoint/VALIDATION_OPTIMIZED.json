@@ -1,0 +1,581 @@
+{
+  "adjoint_letters": 3,
+  "dependency_sha256": {
+    "BALANCED_SOURCE_NORMAL_FORM.md": "00ddcec08dd88e6c91917ff2915bc52662c4e23fe4ba2e1d948bad5d1461a6b3",
+    "C1_COMPLETE.md": "d38a53b1c475df3578d58e83d9e9f97785d9455084c0a094aaed752577d8b289",
+    "C1_SOURCE_READOUT.md": "6fbdadfe70609af384a6277f02262822f5bb00225d24c2abb2b60a044f71973c",
+    "FOUR_BLOCK_LANGUAGE.md": "c7500f3a9bda14aa4a5142d55518e9091b1b0bb56a6aa61e37435cf857b90ac5",
+    "POSITIVE_SOURCE_GRAMMAR.md": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537"
+  },
+  "determinant": -1,
+  "exact_target_examples": [
+    {
+      "J_cost": 0,
+      "balanced": false,
+      "budget": null,
+      "cover_cap": 2,
+      "graph_order": 3,
+      "graph_word_from_transitive_edge": "J",
+      "left": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "left_inventory": 1,
+      "left_word": "",
+      "right": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "right_inventory": 1,
+      "right_word": "",
+      "status": "ACCEPT",
+      "target": 3,
+      "tested_pairs": 1
+    },
+    {
+      "J_cost": 0,
+      "balanced": false,
+      "budget": null,
+      "cover_cap": 4,
+      "graph_order": 4,
+      "graph_word_from_transitive_edge": "ZJ",
+      "left": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "left_inventory": 3,
+      "left_word": "",
+      "right": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "right_inventory": 3,
+      "right_word": "Z",
+      "status": "ACCEPT",
+      "target": 5,
+      "tested_pairs": 1
+    },
+    {
+      "balanced": false,
+      "budget": null,
+      "cover_cap": 4,
+      "left_inventory": 3,
+      "right_inventory": 3,
+      "scope": "Complete inverse for the selected C1 class only, not the unrestricted tournament spectrum.",
+      "status": "REJECT",
+      "target": 7,
+      "tested_pairs": 3
+    },
+    {
+      "J_cost": 0,
+      "balanced": false,
+      "budget": null,
+      "cover_cap": 6,
+      "graph_order": 5,
+      "graph_word_from_transitive_edge": "OZJ",
+      "left": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "left_inventory": 6,
+      "left_word": "O",
+      "right": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "right_inventory": 6,
+      "right_word": "O",
+      "status": "ACCEPT",
+      "target": 11,
+      "tested_pairs": 7
+    },
+    {
+      "balanced": false,
+      "budget": null,
+      "cover_cap": 6,
+      "left_inventory": 6,
+      "right_inventory": 6,
+      "scope": "Complete inverse for the selected C1 class only, not the unrestricted tournament spectrum.",
+      "status": "REJECT",
+      "target": 13,
+      "tested_pairs": 7
+    },
+    {
+      "J_cost": 0,
+      "balanced": false,
+      "budget": null,
+      "cover_cap": 8,
+      "graph_order": 6,
+      "graph_word_from_transitive_edge": "OZOJ",
+      "left": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "left_inventory": 8,
+      "left_word": "Z",
+      "right": [
+        5,
+        1,
+        7,
+        1
+      ],
+      "right_inventory": 8,
+      "right_word": "OZ",
+      "status": "ACCEPT",
+      "target": 19,
+      "tested_pairs": 1
+    },
+    {
+      "balanced": false,
+      "budget": null,
+      "cover_cap": 16,
+      "left_inventory": 23,
+      "right_inventory": 23,
+      "scope": "Complete inverse for the selected C1 class only, not the unrestricted tournament spectrum.",
+      "status": "REJECT",
+      "target": 67,
+      "tested_pairs": 96
+    },
+    {
+      "J_cost": 0,
+      "balanced": false,
+      "budget": null,
+      "cover_cap": 22,
+      "graph_order": 9,
+      "graph_word_from_transitive_edge": "ZZZZZZJ",
+      "left": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "left_inventory": 40,
+      "left_word": "OO",
+      "right": [
+        17,
+        1,
+        17,
+        1
+      ],
+      "right_inventory": 40,
+      "right_word": "ZZZZ",
+      "status": "ACCEPT",
+      "target": 129,
+      "tested_pairs": 16
+    },
+    {
+      "J_cost": 1,
+      "balanced": false,
+      "budget": null,
+      "cover_cap": 46,
+      "graph_order": 11,
+      "graph_word_from_transitive_edge": "OZJOZOOZJ",
+      "left": [
+        11,
+        1,
+        13,
+        1
+      ],
+      "left_inventory": 118,
+      "left_word": "OZZ",
+      "right": [
+        35,
+        5,
+        43,
+        5
+      ],
+      "right_inventory": 118,
+      "right_word": "OZJOZ",
+      "status": "ACCEPT",
+      "target": 541,
+      "tested_pairs": 14
+    },
+    {
+      "balanced": false,
+      "budget": null,
+      "cover_cap": 102,
+      "left_inventory": 386,
+      "right_inventory": 386,
+      "scope": "Complete inverse for the selected C1 class only, not the unrestricted tournament spectrum.",
+      "status": "REJECT",
+      "target": 2647,
+      "tested_pairs": 25414
+    },
+    {
+      "J_cost": 0,
+      "balanced": false,
+      "budget": null,
+      "cover_cap": 112,
+      "graph_order": 13,
+      "graph_word_from_transitive_edge": "OZZOZZZZZZJ",
+      "left": [
+        1,
+        0,
+        32,
+        1
+      ],
+      "left_inventory": 437,
+      "left_word": "OOOO",
+      "right": [
+        87,
+        1,
+        101,
+        1
+      ],
+      "right_inventory": 437,
+      "right_word": "OZZOZZ",
+      "status": "ACCEPT",
+      "target": 3187,
+      "tested_pairs": 284
+    },
+    {
+      "J_cost": 1,
+      "balanced": false,
+      "budget": null,
+      "cover_cap": 141,
+      "graph_order": 15,
+      "graph_word_from_transitive_edge": "OZZJZOZOOZOOJ",
+      "left": [
+        33,
+        1,
+        37,
+        1
+      ],
+      "left_inventory": 641,
+      "left_word": "ZZOZZ",
+      "right": [
+        111,
+        11,
+        137,
+        11
+      ],
+      "right_inventory": 641,
+      "right_word": "OZZJZOZ",
+      "status": "ACCEPT",
+      "target": 4999,
+      "tested_pairs": 137
+    },
+    {
+      "J_cost": 1,
+      "balanced": false,
+      "budget": null,
+      "cover_cap": 141,
+      "graph_order": 15,
+      "graph_word_from_transitive_edge": "ZOJOOZOOOZOOJ",
+      "left": [
+        33,
+        1,
+        37,
+        1
+      ],
+      "left_inventory": 641,
+      "left_word": "ZZOZZ",
+      "right": [
+        45,
+        0,
+        138,
+        3
+      ],
+      "right_inventory": 641,
+      "right_word": "ZOJOOZO",
+      "status": "ACCEPT",
+      "target": 5001,
+      "tested_pairs": 143
+    },
+    {
+      "J_cost": 0,
+      "boundary": "singleton OJ gives triangle",
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "status": "ACCEPT",
+      "target": 3
+    },
+    {
+      "J_cost": 0,
+      "balanced": true,
+      "budget": 3,
+      "cover_cap": 4,
+      "graph_order": 4,
+      "graph_word_from_transitive_edge": "OJ",
+      "left": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "left_inventory": 3,
+      "left_word": "",
+      "right": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "right_inventory": 1,
+      "right_word": "",
+      "status": "ACCEPT",
+      "target": 5,
+      "tested_pairs": 1
+    },
+    {
+      "balanced": true,
+      "budget": 3,
+      "cover_cap": 4,
+      "left_inventory": 3,
+      "right_inventory": 1,
+      "scope": "Complete inverse for the selected C1 class only, not the unrestricted tournament spectrum.",
+      "status": "REJECT",
+      "target": 7,
+      "tested_pairs": 2
+    },
+    {
+      "balanced": true,
+      "budget": 3,
+      "cover_cap": 6,
+      "left_inventory": 6,
+      "right_inventory": 4,
+      "scope": "Complete inverse for the selected C1 class only, not the unrestricted tournament spectrum.",
+      "status": "REJECT",
+      "target": 11,
+      "tested_pairs": 10
+    },
+    {
+      "J_cost": 0,
+      "balanced": true,
+      "budget": 3,
+      "cover_cap": 8,
+      "graph_order": 6,
+      "graph_word_from_transitive_edge": "OZOJ",
+      "left": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "left_inventory": 8,
+      "left_word": "O",
+      "right": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "right_inventory": 4,
+      "right_word": "O",
+      "status": "ACCEPT",
+      "target": 19,
+      "tested_pairs": 2
+    },
+    {
+      "balanced": true,
+      "budget": 3,
+      "cover_cap": 112,
+      "left_inventory": 437,
+      "right_inventory": 303,
+      "scope": "Complete inverse for the selected C1 class only, not the unrestricted tournament spectrum.",
+      "status": "REJECT",
+      "target": 3187,
+      "tested_pairs": 30304
+    },
+    {
+      "J_cost": 2,
+      "balanced": true,
+      "budget": 3,
+      "cover_cap": 141,
+      "graph_order": 15,
+      "graph_word_from_transitive_edge": "ZZOZZZZJJOOOJ",
+      "left": [
+        33,
+        1,
+        37,
+        1
+      ],
+      "left_inventory": 641,
+      "left_word": "ZZOZZ",
+      "right": [
+        27,
+        0,
+        140,
+        17
+      ],
+      "right_inventory": 450,
+      "right_word": "ZZJJOO",
+      "status": "ACCEPT",
+      "target": 4999,
+      "tested_pairs": 69
+    },
+    {
+      "J_cost": 1,
+      "balanced": true,
+      "budget": 3,
+      "cover_cap": 141,
+      "graph_order": 15,
+      "graph_word_from_transitive_edge": "ZZOZZZOZZJZOJ",
+      "left": [
+        33,
+        1,
+        37,
+        1
+      ],
+      "left_inventory": 641,
+      "left_word": "ZZOZZ",
+      "right": [
+        45,
+        0,
+        138,
+        3
+      ],
+      "right_inventory": 450,
+      "right_word": "OJOOZO",
+      "status": "ACCEPT",
+      "target": 5001,
+      "tested_pairs": 63
+    }
+  ],
+  "finite_comparison": {
+    "C1_gaps": [
+      7,
+      13,
+      21,
+      41,
+      43,
+      55,
+      67,
+      77,
+      83,
+      163,
+      173,
+      231,
+      233,
+      247,
+      251,
+      277,
+      299,
+      421,
+      449,
+      503,
+      533,
+      569,
+      583,
+      637,
+      821,
+      1067,
+      1339,
+      1861,
+      2647
+    ],
+    "C1_support": 2471,
+    "balanced_support": 2458,
+    "bounded_root_support": [
+      1168,
+      2104,
+      2391,
+      2439
+    ],
+    "forward_profiles": 126910,
+    "ordinary_sqrt_profiles": 641,
+    "pair_tests": 352204,
+    "square_root_cover_cap": 141,
+    "target_cap": 5001,
+    "triangle_sqrt_profiles": 450
+  },
+  "literal_pair_graphs": 338,
+  "midpoint_word_checks": 6560,
+  "positive_matrix": [
+    [
+      1,
+      1,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      1,
+      4,
+      3
+    ],
+    [
+      2,
+      1,
+      3,
+      3
+    ]
+  ],
+  "product_lower_certificate": [
+    [
+      1,
+      1,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0
+    ]
+  ],
+  "product_upper_certificate": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1
+    ]
+  ],
+  "scope": "All-order physical adjoint and complete square-root-height inverses; universal odd coverage remains open.",
+  "status": "PASS"
+}

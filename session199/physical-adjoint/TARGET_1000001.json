@@ -1,0 +1,27 @@
+{
+  "J_cost": 3,
+  "balanced": true,
+  "budget": 3,
+  "cover_cap": 2000,
+  "graph_order": 23,
+  "graph_word_from_transitive_edge": "ZZZZZZJJOOOOZOOOZJOOJ",
+  "left": [
+    195,
+    0,
+    518,
+    129
+  ],
+  "left_inventory": 32548,
+  "left_word": "ZZZZZZJJO",
+  "right": [
+    1839,
+    5,
+    1965,
+    5
+  ],
+  "right_inventory": 22681,
+  "right_word": "ZJOZZZOZZZ",
+  "status": "ACCEPT",
+  "target": 1000001,
+  "tested_pairs": 25551
+}

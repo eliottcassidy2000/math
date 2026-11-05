@@ -1,0 +1,23 @@
+{
+  "C1_support": 972,
+  "balanced_support": 960,
+  "budget_support": [
+    464,
+    818,
+    932,
+    951
+  ],
+  "candidate_verifier_sha256": "7fe93d2fe23b794af616557da0baab80344174c59320362a7108de0d6fe1c558",
+  "finite_target_cap": 2001,
+  "forward_profile_count": 32548,
+  "independent_pair_tests": 168618,
+  "independent_verifier_sha256": "6e97e087c0a280cb0e67c5685e24f6d5f929da58be04b2fd93ab6e6c8c5ca246",
+  "literal_permutation_graphs": 32,
+  "midpoint_word_tests": 6760,
+  "ordinary_bounded_profiles": 314,
+  "proof_sha256": "f9c337b3cfee1cd1134ee02276890238c30ff0e84a14c26fbcd5cd78ab82dc05",
+  "scope": "Physical adjoint, two-sided cutoff and exact inverse PASS; no universal coverage inference.",
+  "source_height_cap": 89,
+  "status": "PASS",
+  "triangle_bounded_profiles": 223
+}
