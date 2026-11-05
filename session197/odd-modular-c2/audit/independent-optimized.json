@@ -1,0 +1,40 @@
+{
+  "counts": {
+    "elementary": 732,
+    "physical": 14,
+    "positive_inverse": 28,
+    "primitive_vectors": 61900,
+    "relative": 122,
+    "seed_maps": 204,
+    "seeds": 2186,
+    "targets": 401
+  },
+  "graphs_sha256": "f0724e6a45d02ab8ad6c54a36e350a41f72d3245523dd91cd4efa47b9ce03b30",
+  "positive_orbit_sizes": [
+    [
+      5,
+      124
+    ],
+    [
+      7,
+      342
+    ],
+    [
+      11,
+      1330
+    ],
+    [
+      13,
+      2196
+    ],
+    [
+      25,
+      15500
+    ],
+    [
+      35,
+      42408
+    ]
+  ],
+  "status": "PASS"
+}
