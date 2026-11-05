@@ -1,0 +1,12 @@
+[
+  {
+    "receipt_sha256": "8d4aa981b4b57cd587f06269b87bad4ef176c7ead656d7af272190674798aff4",
+    "script": "verify_minimum_cover_polynomial.py",
+    "status": "PASS"
+  },
+  {
+    "receipt_sha256": "6b6b09b6796a35e7a5f63f95854105b1ae2a9eb270b30e3bd69cd67a0fb2c106",
+    "script": "verify_endpoint_reciprocity.py",
+    "status": "PASS"
+  }
+]

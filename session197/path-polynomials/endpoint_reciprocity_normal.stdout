@@ -1,0 +1,26 @@
+{
+  "full_matrix_entries_checked": 2625,
+  "nonunit_response_witness": {
+    "H": 5,
+    "Hamilton_paths_starting_at_root": 5,
+    "alternating_response": -5,
+    "root": 4,
+    "rows": [
+      8,
+      1,
+      3,
+      6,
+      15
+    ]
+  },
+  "rooted_tournaments": 5405,
+  "signed_response_histogram": {
+    "-5": 120,
+    "-4": 360,
+    "-3": 888,
+    "-2": 744,
+    "-1": 1695,
+    "0": 1598
+  },
+  "status": "PASS"
+}

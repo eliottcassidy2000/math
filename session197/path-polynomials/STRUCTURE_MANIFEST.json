@@ -1,0 +1,57 @@
+[
+  {
+    "bytes": 5480,
+    "file": "ENDPOINT_RECIPROCITY.md",
+    "sha256": "4761f31465aabbe5e079c73131cabbece27dabca299a5900e5065baeb221a74c"
+  },
+  {
+    "bytes": 9880,
+    "file": "MINIMUM_COVER_POLYNOMIAL.md",
+    "sha256": "b03c91bdade816d3b62d5464364bfb6d6fa0913e53a199273eb3dbc3f75bb8a8"
+  },
+  {
+    "bytes": 1385,
+    "file": "STRUCTURE_README.md",
+    "sha256": "39903494dbd777bd25858a79c6417cf42f7a2332175730f90c2593d60acabbcb"
+  },
+  {
+    "bytes": 906,
+    "file": "audit_structure.py",
+    "sha256": "dd6c3efcff3abea2a7f14aa3a267c5e2dc31dd5c68c2212e87ec83c2a2674ac4"
+  },
+  {
+    "bytes": 423,
+    "file": "endpoint_reciprocity_normal.stdout",
+    "sha256": "6b6b09b6796a35e7a5f63f95854105b1ae2a9eb270b30e3bd69cd67a0fb2c106"
+  },
+  {
+    "bytes": 423,
+    "file": "endpoint_reciprocity_optimized.stdout",
+    "sha256": "6b6b09b6796a35e7a5f63f95854105b1ae2a9eb270b30e3bd69cd67a0fb2c106"
+  },
+  {
+    "bytes": 85,
+    "file": "minimum_cover_normal.stdout",
+    "sha256": "8d4aa981b4b57cd587f06269b87bad4ef176c7ead656d7af272190674798aff4"
+  },
+  {
+    "bytes": 85,
+    "file": "minimum_cover_optimized.stdout",
+    "sha256": "8d4aa981b4b57cd587f06269b87bad4ef176c7ead656d7af272190674798aff4"
+  },
+  {
+    "bytes": 343,
+    "file": "structure_aggregate.stdout",
+    "sha256": "a84ab977ede654ba7fbc790c960663dfaaefd6d9e9fdf28af161c9340505d9e6"
+  },
+  {
+    "bytes": 2786,
+    "file": "verify_endpoint_reciprocity.py",
+    "sha256": "baeaab7d9a0bff868d563cb5c631d502ab7bfb18ca32921d252c798617ee1ef1"
+  },
+  {
+    "bytes": 2629,
+    "file": "verify_minimum_cover_polynomial.py",
+    "sha256": "8a8f292953705a57fb3b1d716c09090bdf710dab3c366986b777e1f0e08c037f"
+  }
+]
