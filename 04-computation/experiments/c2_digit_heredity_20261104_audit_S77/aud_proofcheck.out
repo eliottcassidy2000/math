@@ -1,0 +1,15 @@
+|B|=2: 2 (B,a) | (R12) failures 0 | sink cases 1: identity failures 0, sigma_z<4: 0 | outdeg-1 marks 1: (W) failures 0; outdeg-0 mark sigma!=0: 0 | outdeg>=3 with digit<6: 0 | small digit at a vertex other than y, a: 0
+|B|=3: 6 (B,a) | (R12) failures 0 | sink cases 2: identity failures 0, sigma_z<4: 0 | outdeg-1 marks 4: (W) failures 0; outdeg-0 mark sigma!=0: 0 | outdeg>=3 with digit<6: 0 | small digit at a vertex other than y, a: 0
+|B|=4: 16 (B,a) | (R12) failures 0 | sink cases 6: identity failures 0, sigma_z<4: 0 | outdeg-1 marks 6: (W) failures 0; outdeg-0 mark sigma!=0: 0 | outdeg>=3 with digit<6: 0 | small digit at a vertex other than y, a: 0
+|B|=5: 60 (B,a) | (R12) failures 0 | sink cases 16: identity failures 0, sigma_z<4: 0 | outdeg-1 marks 14: (W) failures 0; outdeg-0 mark sigma!=0: 0 | outdeg>=3 with digit<6: 0 | small digit at a vertex other than y, a: 0
+|B|=6: 336 (B,a) | (R12) failures 0 | sink cases 60: identity failures 0, sigma_z<4: 0 | outdeg-1 marks 52: (W) failures 0; outdeg-0 mark sigma!=0: 0 | outdeg>=3 with digit<6: 0 | small digit at a vertex other than y, a: 0
+|B|=7: 3192 (B,a) | (R12) failures 0 | sink cases 336: identity failures 0, sigma_z<4: 0 | outdeg-1 marks 304: (W) failures 0; outdeg-0 mark sigma!=0: 0 | outdeg>=3 with digit<6: 0 | small digit at a vertex other than y, a: 0
+|B|=8: 55040 (B,a) | (R12) failures 0 | sink cases 3192: identity failures 0, sigma_z<4: 0 | outdeg-1 marks 3064: (W) failures 0; outdeg-0 mark sigma!=0: 0 | outdeg>=3 with digit<6: 0 | small digit at a vertex other than y, a: 0
+(L) order 1: 1 marks | outside last component with sigma < H: 0 | last-component scaling failures: 0
+(L) order 2: 2 marks | outside last component with sigma < H: 0 | last-component scaling failures: 0
+(L) order 3: 6 marks | outside last component with sigma < H: 0 | last-component scaling failures: 0
+(L) order 4: 16 marks | outside last component with sigma < H: 0 | last-component scaling failures: 0
+(L) order 5: 60 marks | outside last component with sigma < H: 0 | last-component scaling failures: 0
+(L) order 6: 336 marks | outside last component with sigma < H: 0 | last-component scaling failures: 0
+(L) order 7: 3192 marks | outside last component with sigma < H: 0 | last-component scaling failures: 0
+(L) order 8: 55040 marks | outside last component with sigma < H: 0 | last-component scaling failures: 0

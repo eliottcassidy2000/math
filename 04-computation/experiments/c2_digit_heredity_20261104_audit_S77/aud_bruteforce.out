@@ -1,0 +1,10 @@
+labelled (B, a), |B| <= 4: 285 cases; C2 law failures 0; native digit failures 0; broken-cover reading failures 0
+|B|=1 transitive, a = sink, u = a: H(child) = 3, H(grandchild) = 9, marks with digit 1/2: ['u:2', 'y2:2']
+|B|=1 transitive, a = sink, u = x1: H(child) = 3, H(grandchild) = 9, marks with digit 1/2: ['u:2', 'y2:2']
+|B|=1 transitive, a = sink, u = y1: H(child) = 3, H(grandchild) = 9, marks with digit 1/2: ['u:2', 'y2:2']
+|B|=2 transitive, a = sink, u = a: H(child) = 3, H(grandchild) = 9, marks with digit 1/2: ['u:2', 'y2:2']
+|B|=2 transitive, a = sink, u = x1: H(child) = 3, H(grandchild) = 9, marks with digit 1/2: ['u:2', 'y2:2']
+|B|=2 transitive, a = sink, u = y1: H(child) = 3, H(grandchild) = 9, marks with digit 1/2: ['u:2', 'y2:2']
+|B|=3 transitive, a = sink, u = a: H(child) = 3, H(grandchild) = 9, marks with digit 1/2: ['u:2', 'y2:2']
+|B|=3 transitive, a = sink, u = x1: H(child) = 3, H(grandchild) = 9, marks with digit 1/2: ['u:2', 'y2:2']
+|B|=3 transitive, a = sink, u = y1: H(child) = 3, H(grandchild) = 9, marks with digit 1/2: ['u:2', 'y2:2']
