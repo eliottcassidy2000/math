@@ -1,6 +1,6 @@
 # Fixed-feedback growth has two boundary laws, not concentration
 
-**PROVED by the elementary arguments below; independent audit pending.**
+**PROVED by the elementary arguments below; independently audited.**
 Session 192, 2026-11-05. No literature-priority claim. The exact `{7,21}`
 Hamilton-path spectrum remains open.
 
