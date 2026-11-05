@@ -1,0 +1,86 @@
+{
+  "complete_labelled_C3_counts_through6": [
+    0,
+    0,
+    0,
+    0,
+    40,
+    6000
+  ],
+  "inventory": [
+    {
+      "C3_classes": 0,
+      "automorphism_order_three": 0,
+      "exceptional_rooted_stabilizer_three": 0,
+      "labelled_C3": 0,
+      "order": 4,
+      "rooted_start_three_stabilizer_three": 0
+    },
+    {
+      "C3_classes": 1,
+      "automorphism_order_three": 1,
+      "exceptional_rooted_stabilizer_three": 1,
+      "labelled_C3": 40,
+      "order": 5,
+      "rooted_start_three_stabilizer_three": 2
+    },
+    {
+      "C3_classes": 11,
+      "automorphism_order_three": 4,
+      "exceptional_rooted_stabilizer_three": 3,
+      "labelled_C3": 6000,
+      "order": 6,
+      "rooted_start_three_stabilizer_three": 8
+    },
+    {
+      "C3_classes": 38,
+      "automorphism_order_three": 13,
+      "exceptional_rooted_stabilizer_three": 8,
+      "labelled_C3": 147840,
+      "order": 7,
+      "rooted_start_three_stabilizer_three": 27
+    },
+    {
+      "C3_classes": 124,
+      "automorphism_order_three": 40,
+      "exceptional_rooted_stabilizer_three": 21,
+      "labelled_C3": 3924480,
+      "order": 8,
+      "rooted_start_three_stabilizer_three": 86
+    },
+    {
+      "C3_classes": 390,
+      "automorphism_order_three": 120,
+      "exceptional_rooted_stabilizer_three": 55,
+      "labelled_C3": 112492800,
+      "order": 9,
+      "rooted_start_three_stabilizer_three": 265
+    },
+    {
+      "C3_classes": 1193,
+      "automorphism_order_three": 354,
+      "exceptional_rooted_stabilizer_three": 144,
+      "labelled_C3": 3472761600,
+      "order": 10,
+      "rooted_start_three_stabilizer_three": 798
+    },
+    {
+      "C3_classes": 3574,
+      "automorphism_order_three": 1031,
+      "exceptional_rooted_stabilizer_three": 377,
+      "labelled_C3": 115226496000,
+      "order": 11,
+      "rooted_start_three_stabilizer_three": 2362
+    },
+    {
+      "C3_classes": 10537,
+      "automorphism_order_three": 2972,
+      "exceptional_rooted_stabilizer_three": 987,
+      "labelled_C3": 4098178022400,
+      "order": 12,
+      "rooted_start_three_stabilizer_three": 6898
+    }
+  ],
+  "nonrigid_generating_function": "z^5(1-2z)/(1-3z+z^2)^2",
+  "status": "PASS"
+}
