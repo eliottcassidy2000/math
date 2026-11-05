@@ -1,0 +1,19 @@
+{
+  "even_moduli": [
+    2,
+    40
+  ],
+  "exact_big_integer_replays": 55,
+  "joint_interface_tests": 2870,
+  "literal_L": [
+    2,
+    128
+  ],
+  "max_word_bits": 709,
+  "physical_graphs": 127,
+  "physical_profile_hash": "808f4558c7a9db86cc1c8c86aaf0c9adf98f742330a254f8e7c468f0377d8b88",
+  "scope": "All-order unit-interface congruence theorem only, not exact-value coverage.",
+  "singleton_boundary": "correctly excluded",
+  "status": "PASS",
+  "word_digest": "64bab6b4259be70835b0c1423c4cb4700e8b38bc835a358cdb3d437d7285cd2b"
+}
