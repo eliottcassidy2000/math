@@ -1,0 +1,39 @@
+{
+  "C1_values": 49956,
+  "basis_absorption_checks": 1536,
+  "bound": 100001,
+  "certificate_sha256": "b4c13474bb3214154ba12c27928f38295fa68f8d8d2af75c452f99b455748259",
+  "covered_with_repairs_except": [
+    7,
+    21
+  ],
+  "gadget_constant_checks": 100001,
+  "independent_positive_replays": 49992,
+  "literal_repairs": 6,
+  "maximum_selected_graph_order": 20,
+  "normalized_prefixes": 1117860,
+  "one_apex_unordered_pairs": 142907,
+  "prefix_levels": [
+    1,
+    28770,
+    148177,
+    367095,
+    573817
+  ],
+  "restricted_family_missing": [
+    7,
+    21,
+    67,
+    231,
+    247,
+    533,
+    821,
+    1861
+  ],
+  "selected_certificate_types": {
+    "C1": 49956,
+    "M": 9,
+    "N": 27
+  },
+  "status": "PASS"
+}
