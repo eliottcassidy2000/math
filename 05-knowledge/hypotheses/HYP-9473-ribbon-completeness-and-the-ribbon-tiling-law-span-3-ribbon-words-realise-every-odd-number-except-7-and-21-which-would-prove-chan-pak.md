@@ -4,8 +4,9 @@ title: "Ribbon completeness and the ribbon tiling law (after THM-4880). (1) Ever
 status: >
   OPEN (mac-mini-2026-11-04-ribbon). (1) NUMERICAL: 47 realised by explicit span-3 words; strong span-3 values to the
   bound of the note's section 7. (2) FINITE-EXACT to 50,000 (level enumeration on the 14 reduced coordinates) and to
-  5,000 by an independent 27-coordinate DFS; 47's absence PROVED (THM-4880 (E)). (3) FINITE-EXACT for n <= 16 (all
-  letters) and n <= 12 (three letters); pre-registered as P3 in PREDICTIONS.md for n = 13..18 (status in the note).
+  5,000 by an independent 27-coordinate DFS; 47's absence PROVED (THM-4880 (E)). (3) FINITE-EXACT for n <= 17 (all
+  letters) and n <= 18 (three letters; the pre-registered overlap clause of P3 holds for n = 13..18, its growth clause
+  was false already in sample, MISTAKE-718).
   (4) rank 62 of the observable module PROVED; the Hankel rank and irreducibility for span 3 are open (minrep.py's
   span-3 run is recorded in minrep_w3.log if it finished). (5) is a reformulation, not progress on Chan-Pak, which
   remains OPEN (MISTAKE-559).
@@ -24,12 +25,12 @@ finite-state series (14 reduced integer coordinates for span 2, 62 for span 3), 
 
 **(1) Span-3 completeness => Chan-Pak.** By THM-4094 the completeness of the odd spectrum is equivalent to strong
 realisation of every prime `p != 7` and of `7p`; by THM-4880 (C) the strong span-3 words suffice if they attain every
-odd number other than 7 and 21. Evidence: the span-2 strong words attain every odd `<= 50,000` except 7, 21, 47, and 47
-is a span-3 word. So the conjecture is a statement about one explicit automaton: a 62-dimensional integer
+odd number other than 7 and 21. Evidence: the span-2 strong words attain every odd `<= 100,000` except 7, 21, 47, the span-3 strong words every odd
+`<= 5,000` except 7, 21, and 47 is a span-3 word. So the conjecture is a statement about one explicit automaton: a 62-dimensional integer
 representation over 8 letters together with a 121-state strong-connectivity automaton.
 
-**(2) Span 2 misses exactly 7, 21, 47.** 47 is absent (proved); every other odd number `<= 50,000` is attained by a strong
-span-2 word; the only odd numbers in `[1, 50000]` not attained by words of length `<= 16` are listed in the note.
+**(2) Span 2 misses exactly 7, 21, 47.** 47 is absent (proved); every other odd number `<= 100,000` is attained by a strong
+span-2 word of length `<= 16` (note, section 7).
 
 **(3) Ribbon tiling law.** Let `V_n` be the set of counts of span-2 words of length `<= n` (nested: the empty letter keeps
 `H`) and `d_n` the largest odd number with `[49, d_n] subset V_n`. Then `d_n -> infinity`; observed

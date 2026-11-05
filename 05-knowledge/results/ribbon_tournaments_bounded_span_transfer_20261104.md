@@ -6,7 +6,7 @@ grow with size in order to come to the proof of the full {7,21} spectrum".
 **Status in one line.** PROVED: the ribbon transfer calculus (Theorem A), the regularity of strong connectivity
 (Theorem B), the closure corollary (C), the end-twin lemma (D), the absence of 47 from span 2 and its presence in
 span 3 (E), the run recurrences (F), the irreducibility of the span-2 representation (G) and two no-go statements
-(H). FINITE-EXACT: the strong span-2 values below 5 x 10^4 miss exactly 7, 21, 47; the solid prefix of the value
+(H). FINITE-EXACT: the strong span-2 values below 10^5 miss exactly 7, 21, 47; the solid prefix of the value
 set grows geometrically (section 7). HYPOTHESIS: HYP-9473 (span-3 completeness implies Chan-Pak; the ribbon tiling
 law). The Chan-Pak conjecture itself remains OPEN; nothing here is a proof of completeness (MISTAKE-559 applies).
 Canon: THM-4880 (this note is its source), HYP-9473. Scripts: `04-computation/experiments/ribbon_spectrum_20261104/`.
@@ -184,13 +184,24 @@ The strong values coincide with the values at every level (every attained value 
 word of the same length bound). With the length cap 17 the run finishes: the odd numbers `<= 50,000` not attained by words of length `<= 17` are exactly `7, 21, 47` (the fourth entry of the raw file, 50001, is the bound itself), and the same holds for strong words; since 7 and 21 are never attained (THM-1370) and 47 never in span 2 (Proposition E), the strong span-2 value set below 50,000 is exactly the odd numbers minus {7, 21, 47}, every value realised at length `<= 17`. An earlier run of the same program to length 18 (lv2_5e4_levels_partial18.txt) gives the identical rows through 17 before it was stopped for memory (27.8 million states at length 17). The solid prefix `d_n` grows by factors 1.6-2.9 per vertex: this is the
 **ribbon tiling law** (HYP-9473 (3)). Per-length value sets of the three-letter alphabet alone (no empty letter; not
 nested), from alphabets.py/probe47.py for `n <= 12`: solid intervals [49,165], [49,257], [129,639], [249,1833],
-[397,3033] for `n = 8..12`, each overlapping the next (pre-registered P3 for `n = 13..18`: the three-letter level run lv2s_3e5 was still queued at this commit; its outcome is recorded in the close-out commit).
+[397,3033] for `n = 8..12`, each overlapping the next (pre-registered P3 for `n = 13..18`). The deduplicated level run restricted to that alphabet (lv2s_1e5_levels.txt; the
+letters at vertices 1-2 effectively truncated as in alphabets.py; `H <= 100,000`) reproduces these five intervals
+exactly and continues with `[725, 8609]`, `[1281, 19097]`, `[2715, 45457]`, `[4681, >= 99999]`, `[8743, >= 99999]`,
+`[14463, >= 99999]` for `n = 13..18` (the upper ends from `n = 16` on are the bound): every consecutive pair overlaps,
+`c_{n+1} <= d_n`. The same run shows that every odd number `<= 100,000` other than `7, 21, 47` is attained by a
+**strong** word of this alphabet of length `<= 16` (the accepting-state column coincides with the all-words column
+at every level; distinct states 684, 1,934, 5,517, 15,741, 44,858, 127,722, 363,493, 1,031,691, 2,596,270,
+4,458,863, 4,769,028 at `n = 8..18`). The strict variant in which every vertex `q >= 2` carries a real back arc
+(lv2s_strict_1e5_levels.txt) has the intervals `[49,151], [129,257], [249,639], [397,1833], [725,2817],
+[1281,7037], [2715,18575], [4681,42369], [8743,89309], [14463, >= 99999]` for `n = 8..17`, again overlapping.
 
-**Span 3.** 47 is a span-3 count (E). The deduplicated level enumeration of span 3 to 20,000 (62 reduced coordinates, 121-state automaton; lv3_2e4) and the 119-coordinate DFS to 20,000 (s3_2e4) were still running at this commit; their outcomes are recorded in the close-out commit.
+**Span 3.** 47 is a span-3 count (E). The deduplicated level enumeration of span 3 (62 reduced coordinates, the 121-state automaton, `H <= 5,000`; lv3_5e3_levels_partial.txt) gives 66,350 / 394,690 / 2,417,506 distinct states at lengths 8, 9, 10 and, already at length 10, every odd number `<= 5,000` except 7 and 21 (by words of length `<= 10`; the raw file lists 7, 21 and the bound 5001); since 7 and 21 are never attained, the strong span-3 value set below 5,000 is complete, and the solid prefix is `[23, 4999]`. Level 11 exceeded the 8-million-state memory cap and was stopped. The 119-coordinate DFS to 20,000 (s3_2e4) was still running at the close-out commit.
 
 **Pre-registration.** PREDICTIONS.md (committed 32d1356382 before any C run): P1 (strong span-2 words attain every odd
-`<= 10^6` except 7, 21, 47) - confirmed to 50,000 by the level method (and to 5,000 by the independent 27-coordinate DFS; the DFS to 10^5 was still running at this commit),
-not to 10^6; P2 (span 3: every odd `<= 10^5` except 7, 21) - not yet tested beyond 47 at this commit (runs queued, see above); P3 - queued at this commit. The claim in the same
+`<= 10^6` except 7, 21, 47) - confirmed to 100,000 (three-letter level run) and to 50,000 with all four letters, and to 5,000
+by the independent 27-coordinate DFS; not to 10^6 (memory); P2 (span 3: every odd `<= 10^5` except 7, 21) - confirmed to 5,000 by the level method, not to 10^5 (memory); P3 - its overlap clause `c_{n+1} <= d_n` is CONFIRMED for `n = 13..18`; its growth clause
+(`c_n < 2c_{n-1}` and `d_n > 2d_{n-1}`) is REFUTED: `c_10 = 129 > 2 c_9 = 98` and `d_9 = 257 < 2 d_8 = 330` already in the
+data the prediction was written from (a careless clause; MISTAKE-718), and `c_15 = 2715 > 2 c_14 = 2562` out of sample. The claim in the same
 file that every three-letter word is strong was false (MISTAKE-718) and was corrected before the enumerations ran.
 
 ## 8. Junctions, and two no-go statements (Theorem H, PROVED by exact finite computation)

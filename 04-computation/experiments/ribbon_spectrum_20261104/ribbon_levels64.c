@@ -88,7 +88,8 @@ int main(int argc, char **argv) {
             const state_t *s = &cur.tab[i];
             for (int li = 0; li < nl; li++) {
                 int m = lmask[li];
-                if (skip_empty && n >= 2 && m == 0) continue;
+                if (skip_empty == 1 && n >= 3 && m == 0) continue;   /* alphabets.py convention: letters at vertices 1-2 are effectively truncated */
+                if (skip_empty == 2 && n >= 2 && m == 0) continue;   /* strict: every vertex q >= 2 has a real back arc */
                 if (n >= 2 && (m >> (n - 1))) continue;
                 if (n == 1 && m) continue;
                 int c2 = (s->c < 0) ? -1 : trans[s->c][li];

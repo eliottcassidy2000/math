@@ -1,0 +1,13 @@
+# span-3 ribbon words by length, deduplicated on (observable integer state of rank 62, condensation state); H <= 5000
+# n  distinct_states  values_n  min_n  max_n  solid_lo  solid_hi  misses_inside_[min,max]  strong_values_n  cumulative_odd_misses_all  cumulative_odd_misses_strong
+1 1 1 1 1 1 1 0 2500 2498
+2 2 1 1 1 1 1 0 2500 2498
+3 8 2 1 3 1 3 0 2499 2498
+4 64 3 1 5 1 5 0 2498 2498
+5 384 7 1 15 9 15 1 2494 2494
+6 2144 19 1 45 9 19 4 2482 2482
+7 11666 75 1 175 65 105 13 2426 2426
+8 66350 279 1 629 23 537 36 2222 2222
+9 394690 904 1 2121 23 1653 157 1597 1597
+10 2417506 2498 1 4999 23 4999 2 3 3
+11 8000000 2498 1 4999 23 4999 2 3 3
