@@ -4,7 +4,7 @@ Session 195, 2026-11-05. **PROVED physical returning transfers and exact finite 
 
 ## 1. Starting point and scope
 
-The named Session 195 `rooted-interfaces/PROOF.md` establishes a returning rooted one-seam interface and the complete bank of 65 matrices coming from all rooted tournaments of order at most five. The named `prime-growth/PROOF.md` integrates stationary-root near-sink and sink moves. Their combined grammar misses precisely `{7,21,67,173}` through 20,000. Its absence claims at a fixed count bound are exact over arbitrary composition depth, not just over graphs of a bounded order.
+The named Session 195 [rooted-interface proof](../rooted-interfaces/PROOF.md) establishes a returning rooted one-seam interface and the complete bank of 65 matrices coming from all rooted tournaments of order at most five. The named [combined-growth proof](../combined-growth/PROOF.md) integrates stationary-root near-sink and sink moves. Their combined grammar misses precisely `{7,21,67,173}` through 20,000. Its absence claims at a fixed count bound are exact over arbitrary composition depth, not just over graphs of a bounded order.
 
 The present packet makes two changes: add two **actual six-vertex rooted tournaments** as reusable pieces, and retain exactly the same four physical coordinates and elementary operations. It independently verifies every constant, the resulting literal adjacency rows, the exact bounded spectrum, and a restricted minimality result. No priority claim or all-integer extrapolation is made.
 
