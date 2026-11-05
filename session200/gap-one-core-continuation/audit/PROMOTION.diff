@@ -1,0 +1,86 @@
+--- frozen/README.md
++++ reviewed/README.md
+@@ -1,8 +1,9 @@
+-# Gap-one cores: an unreviewed constructive continuation
++# Physical gap-one cores and a positive-density obstruction
+ 
+-**UNREVIEWED CONTINUATION. Not covered by the independent deficit-core audit.**
+-The physical formulas below have author checks, but this note and its density
+-calculation are separate research, not a promoted theorem or coverage proof.
++**PROVED in the stated scope; independently audited.** The physical compiler
++and its positive-density obstruction have a separate audit in `audit/REPORT.md`.
++This does not enlarge the independent deficit-core audit or prove universal
++coverage.
+ 
+ The audited sibling packet is `../canonical-deficit-cores/`. It supplies the
+ physical grammar, core parameterization, and distinction between physical
+@@ -14,7 +15,8 @@
+ 
+     v.OJ=(G(v),D,G(v),D).
+ 
+-Thus the balanced-core slice is exactly `(D_core,u_core,d_core)=(G,G,D)`.
++The OJ construction therefore supplies the balanced-core subfamily
++`(D_core,u_core,d_core)=(G,G,D)`.
+ The synchronized one-return word `C=Z^j OJ` has dagger `JZO^j`.
+ The chronological identity `JZ=OJ` makes its source `v.OJ.O^j`, so its
+ joint readouts are
+@@ -69,9 +71,9 @@
+ a component of a larger construction, but cannot alone close universal
+ coverage.
+ 
+-This negative control is part of this UNREVIEWED continuation and not part of
+-the audit of the sibling core theorem. It prevents treating the new offset
+-as an automatic positive solution.
++This negative control has its own audit and is not part of the earlier audit
++of the sibling core theorem. It prevents treating the new offset as an
++automatic positive solution.
+ 
+ ## 4. Reproduction and scope
+ 
+@@ -83,3 +85,32 @@
+ on the stated finite universe and an affine-coordinate basis. Finite formula
+ checks are not an all-target theorem. The audited deficit-core proof remains
+ byte-identical apart from its recorded status-only promotion.
++
++## Independent audit and frozen dependencies
++
++`audit/REPORT.md` reviews the all-order physical construction and density
++argument. It independently checks 122,500 physical formula choices and 32
++literal C1 graphs, and enumerates the complete family through 20,001. These
++finite checks corroborate the implementation, not universal coverage.
++
++The original source files are archived in `audit/` and identified by
++`audit/INPUTS.json`. `audit/PROMOTION.md` checks the exact status, wording,
++and navigation changes for this release. Author verifier and receipts are
++unchanged; their pre-audit UNREVIEWED strings are historical run metadata,
++not this packet's current review status.
++
++The separately audited core proof, its audit/promotion records, and the
++physical adjoint and binary-word dependencies are frozen in `dependencies/`.
++The published core source is also available at
++`../canonical-deficit-cores/PROOF.md`. This packet does not change its claims.
++
++Reproduce the independent audit from `audit/`:
++
++    python3 independent.py > check-normal.json
++    python3 -O independent.py > check-optimized.json
++    cmp check-normal.json check-optimized.json
++    cmp check-normal.json INDEPENDENT_NORMAL.json
++    sha256sum -c MANIFEST.sha256
++
++From this packet's root, `sha256sum -c MANIFEST.sha256` verifies the complete
++release. Both verifiers use only the Python standard library.
+--- frozen/DENSITY-CALCULATION.md
++++ reviewed/DENSITY-CALCULATION.md
+@@ -1,8 +1,8 @@
+ # Positive-density obstruction for the gap-one family
+ 
+-**UNREVIEWED continuation calculation.** Derived in coordination with the
+-one-return coverage investigation. This file is not covered by the independent
+-audit of `../canonical-deficit-cores/`.
++**PROVED in the stated scope; independently audited in `audit/REPORT.md`.**
++Derived in coordination with the one-return coverage investigation. This is
++a separate audit from that of `../canonical-deficit-cores/`.
+ 
+ Let t range over odd integers at least 3, a,k over nonnegative integers, and
+ 

@@ -1,0 +1,67 @@
+{
+  "affine_basis_checks": 243,
+  "coarse_tail_bound": "1/40",
+  "density_partial": "20593545677466916099390598509876098684854833555402924646512/46183268987021881387682308601099847754889488896195377856225",
+  "density_partial_square": 6,
+  "density_upper": "173985019217139705072661249799228759029816566222462472743341/369466151896175051101458468808798782039115911169563022849800",
+  "density_upper_decimal": 0.470909224902507,
+  "examples": [
+    {
+      "a0k0": 17,
+      "core": [
+        5,
+        6,
+        3
+      ],
+      "t": 3,
+      "word": "Z"
+    },
+    {
+      "a0k0": 29,
+      "core": [
+        9,
+        10,
+        5
+      ],
+      "t": 5,
+      "word": "ZZ"
+    },
+    {
+      "a0k0": 35,
+      "core": [
+        11,
+        12,
+        5
+      ],
+      "t": 7,
+      "word": "OZ"
+    },
+    {
+      "a0k0": 53,
+      "core": [
+        17,
+        18,
+        9
+      ],
+      "t": 9,
+      "word": "ZZZ"
+    },
+    {
+      "a0k0": 59,
+      "core": [
+        19,
+        20,
+        9
+      ],
+      "t": 11,
+      "word": "ZOZ"
+    }
+  ],
+  "odd_cover_max": 2001,
+  "physical_formula_checks": 49000,
+  "scope": "UNREVIEWED continuation, not part of the core audit",
+  "short_density_bound": "27199346/56025585",
+  "short_density_ceiling": "17/35",
+  "status": "AUTHOR_CHECK_PASS",
+  "verifier_sha256": "91047e89190b76692ef81751d247398638cdd95da6acc36d783e56181d333328"
+}

@@ -1,0 +1,310 @@
+{
+  "alternative_density_bound": "173985019217139705072661249799228759029816566222462472743341/369466151896175051101458468808798782039115911169563022849800",
+  "alternative_density_decimal": 0.470909224902507,
+  "complete_target_universe": {
+    "complete": true,
+    "cover_max": 5001,
+    "presentations": 7933,
+    "target_max": 20001,
+    "targets": 4389
+  },
+  "cover_max": 5001,
+  "literal_graph_controls": [
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 0,
+      "order": 6,
+      "paths": 17,
+      "t": 3,
+      "word": "ZJOJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 1,
+      "order": 7,
+      "paths": 35,
+      "t": 3,
+      "word": "ZJOZJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 0,
+      "order": 7,
+      "paths": 29,
+      "t": 3,
+      "word": "ZJOOJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 1,
+      "order": 8,
+      "paths": 71,
+      "t": 3,
+      "word": "ZJOOZJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 0,
+      "order": 7,
+      "paths": 29,
+      "t": 5,
+      "word": "ZZJOJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 1,
+      "order": 8,
+      "paths": 59,
+      "t": 5,
+      "word": "ZZJOZJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 0,
+      "order": 8,
+      "paths": 49,
+      "t": 5,
+      "word": "ZZJOOJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 1,
+      "order": 9,
+      "paths": 119,
+      "t": 5,
+      "word": "ZZJOOZJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 0,
+      "order": 7,
+      "paths": 35,
+      "t": 7,
+      "word": "OZJOJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 1,
+      "order": 8,
+      "paths": 73,
+      "t": 7,
+      "word": "OZJOZJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 0,
+      "order": 8,
+      "paths": 59,
+      "t": 7,
+      "word": "OZJOOJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 1,
+      "order": 9,
+      "paths": 145,
+      "t": 7,
+      "word": "OZJOOZJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 0,
+      "order": 8,
+      "paths": 53,
+      "t": 9,
+      "word": "ZZZJOJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 1,
+      "order": 9,
+      "paths": 107,
+      "t": 9,
+      "word": "ZZZJOZJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 0,
+      "order": 9,
+      "paths": 89,
+      "t": 9,
+      "word": "ZZZJOOJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 1,
+      "order": 10,
+      "paths": 215,
+      "t": 9,
+      "word": "ZZZJOOZJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 0,
+      "order": 8,
+      "paths": 59,
+      "t": 11,
+      "word": "ZOZJOJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 1,
+      "order": 9,
+      "paths": 121,
+      "t": 11,
+      "word": "ZOZJOZJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 0,
+      "order": 9,
+      "paths": 99,
+      "t": 11,
+      "word": "ZOZJOOJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 1,
+      "order": 10,
+      "paths": 241,
+      "t": 11,
+      "word": "ZOZJOOZJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 0,
+      "order": 8,
+      "paths": 71,
+      "t": 13,
+      "word": "OZZJOJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 1,
+      "order": 9,
+      "paths": 145,
+      "t": 13,
+      "word": "OZZJOZJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 0,
+      "order": 9,
+      "paths": 119,
+      "t": 13,
+      "word": "OZZJOOJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 1,
+      "order": 10,
+      "paths": 289,
+      "t": 13,
+      "word": "OZZJOOZJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 0,
+      "order": 8,
+      "paths": 71,
+      "t": 15,
+      "word": "OOZJOJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 1,
+      "order": 9,
+      "paths": 149,
+      "t": 15,
+      "word": "OOZJOZJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 0,
+      "order": 9,
+      "paths": 119,
+      "t": 15,
+      "word": "OOZJOOJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 1,
+      "order": 10,
+      "paths": 293,
+      "t": 15,
+      "word": "OOZJOOZJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 0,
+      "order": 9,
+      "paths": 101,
+      "t": 17,
+      "word": "ZZZZJOJ"
+    },
+    {
+      "a": 0,
+      "cycles": 1,
+      "k": 1,
+      "order": 10,
+      "paths": 203,
+      "t": 17,
+      "word": "ZZZZJOZJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 0,
+      "order": 10,
+      "paths": 169,
+      "t": 17,
+      "word": "ZZZZJOOJ"
+    },
+    {
+      "a": 1,
+      "cycles": 1,
+      "k": 1,
+      "order": 11,
+      "paths": 407,
+      "t": 17,
+      "word": "ZZZZJOOZJ"
+    }
+  ],
+  "odd_formula_checks": 122500,
+  "short_density_bound": "27199346/56025585",
+  "status": "PASS_WITH_ONE_WORDING_CLARIFICATION",
+  "strict_ceiling": "17/35",
+  "strict_gap": "13081/56025585",
+  "universal_return_basis_checks": 16,
+  "verifier_sha256": "6e7669b06b09f3d8dc982b33adeb08264205104342224e4eb1544e56ce2e332b",
+  "zero_J_profiles": 5000
+}
