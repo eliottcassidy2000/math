@@ -1,0 +1,11097 @@
+{
+  "bound": 1861,
+  "family_support": {
+    "13": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 1,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "23": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 2,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "25": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 4,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "29": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 2,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "41": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 3,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "43": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 6,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "45": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 3,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "49": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 8,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "53": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 7,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "55": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 4,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "69": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 5,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "73": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 10,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "77": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 8,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "79": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 12,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "81": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 3,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "83": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 6,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "85": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 5,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "87": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 7,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "89": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 11,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "91": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 6,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "93": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 3,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "95": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 7,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "97": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 14,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "103": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 7,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "105": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 4,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "107": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 13,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "111": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 7,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "113": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 15,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "115": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 10,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "123": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 12,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "125": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 9,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "129": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 4,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "131": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 3,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "133": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 18,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "135": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 6,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "137": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 8,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "139": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 3,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "141": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 10,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "143": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 11,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "145": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "N",
+      "parameter": 3,
+      "source": [
+        5,
+        0,
+        12,
+        3
+      ],
+      "tail": 1
+    },
+    "147": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 9,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "149": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 16,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "151": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 14,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "153": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 10,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "155": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 19,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "157": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 22,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "159": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 11,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "161": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 5,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "163": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 6,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "165": {
+      "core_recipe": [
+        2,
+        3
+      ],
+      "family": "N",
+      "parameter": 2,
+      "source": [
+        17,
+        3,
+        21,
+        3
+      ],
+      "tail": 0
+    },
+    "167": {
+      "core_recipe": [
+        3
+      ],
+      "family": "N",
+      "parameter": 5,
+      "source": [
+        5,
+        1,
+        7,
+        1
+      ],
+      "tail": 0
+    },
+    "169": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 12,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "171": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 13,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "173": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 6,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "175": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 14,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "177": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 3,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "179": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 15,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "181": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 28,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "183": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 11,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "187": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 26,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "189": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 14,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "191": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 13,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "193": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 32,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "203": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 7,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "205": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 20,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "207": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 18,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "211": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 16,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "215": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 25,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "217": {
+      "core_recipe": [
+        2
+      ],
+      "family": "P",
+      "parameter": 5,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "219": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 13,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "221": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 5,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "223": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 9,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "225": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 10,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "229": {
+      "core_recipe": [
+        4
+      ],
+      "family": "N",
+      "parameter": 10,
+      "source": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "tail": 0
+    },
+    "231": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 24,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "233": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 31,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "235": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 15,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "237": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 17,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "239": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 29,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "241": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 36,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "243": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 22,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "245": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 19,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "247": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 3,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "249": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 9,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "251": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 9,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "253": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 34,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "255": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 11,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "257": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 18,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "259": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 3,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "261": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 20,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "265": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 16,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "267": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 6,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "269": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 14,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "271": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 38,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "273": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 5,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "275": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 24,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "277": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 28,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "279": {
+      "core_recipe": [
+        4
+      ],
+      "family": "N",
+      "parameter": 11,
+      "source": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "tail": 0
+    },
+    "281": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 23,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "283": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 21,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "285": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 6,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "287": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 35,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "289": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 26,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "291": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 10,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "293": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 32,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "295": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 48,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "297": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 19,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "299": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 24,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "301": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 17,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "305": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 39,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "307": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 42,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "309": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "N",
+      "parameter": 8,
+      "source": [
+        5,
+        0,
+        12,
+        3
+      ],
+      "tail": 1
+    },
+    "311": {
+      "core_recipe": [
+        3
+      ],
+      "family": "N",
+      "parameter": 9,
+      "source": [
+        5,
+        1,
+        7,
+        1
+      ],
+      "tail": 0
+    },
+    "313": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 5,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "315": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 30,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "317": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 37,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "319": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 46,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "321": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 3,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "323": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 12,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "325": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 24,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "327": {
+      "core_recipe": [
+        2,
+        7
+      ],
+      "family": "N",
+      "parameter": 2,
+      "source": [
+        35,
+        3,
+        39,
+        3
+      ],
+      "tail": 0
+    },
+    "329": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 22,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "331": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "N",
+      "parameter": 7,
+      "source": [
+        5,
+        0,
+        12,
+        3
+      ],
+      "tail": 1
+    },
+    "333": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "M",
+      "parameter": 4,
+      "source": [
+        5,
+        0,
+        12,
+        3
+      ],
+      "tail": 1
+    },
+    "335": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 11,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "337": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 27,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "339": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 25,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "341": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 21,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "343": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 52,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "345": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 23,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "347": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 43,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "349": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 56,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "351": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 15,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "353": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 3,
+      "source": [
+        1,
+        0,
+        32,
+        1
+      ],
+      "tail": 5
+    },
+    "355": {
+      "core_recipe": [
+        4
+      ],
+      "family": "N",
+      "parameter": 15,
+      "source": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "tail": 0
+    },
+    "357": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 28,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "359": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 41,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "361": {
+      "core_recipe": [
+        3
+      ],
+      "family": "N",
+      "parameter": 11,
+      "source": [
+        5,
+        1,
+        7,
+        1
+      ],
+      "tail": 0
+    },
+    "363": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 31,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "365": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 20,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "367": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 50,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "369": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 36,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "371": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 30,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "373": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 14,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "375": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 29,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "377": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 45,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "379": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 54,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "383": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 25,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "385": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 40,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "387": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 28,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "391": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 34,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "393": {
+      "core_recipe": [
+        2
+      ],
+      "family": "P",
+      "parameter": 9,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "395": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 20,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "397": {
+      "core_recipe": [
+        3
+      ],
+      "family": "N",
+      "parameter": 14,
+      "source": [
+        5,
+        1,
+        7,
+        1
+      ],
+      "tail": 0
+    },
+    "399": {
+      "core_recipe": [
+        2,
+        4
+      ],
+      "family": "N",
+      "parameter": 2,
+      "source": [
+        15,
+        0,
+        60,
+        3
+      ],
+      "tail": 2
+    },
+    "401": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 30,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "403": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 7,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "405": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 16,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "409": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 25,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "411": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 24,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "413": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 51,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "415": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 58,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "417": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 38,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "419": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 32,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "421": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 62,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "423": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 17,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "425": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 55,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "427": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 29,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "429": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 6,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "431": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 49,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "433": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 30,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "435": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 25,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "437": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 19,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "439": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 20,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "441": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 44,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "443": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 10,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "445": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 10,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "447": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 48,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "449": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 35,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "451": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 31,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "453": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "N",
+      "parameter": 10,
+      "source": [
+        5,
+        0,
+        12,
+        3
+      ],
+      "tail": 1
+    },
+    "455": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 34,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "457": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 68,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "459": {
+      "core_recipe": [
+        2,
+        4
+      ],
+      "family": "M",
+      "parameter": 2,
+      "source": [
+        15,
+        0,
+        30,
+        3
+      ],
+      "tail": 1
+    },
+    "461": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 33,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "463": {
+      "core_recipe": [
+        3
+      ],
+      "family": "P",
+      "parameter": 5,
+      "source": [
+        5,
+        1,
+        7,
+        1
+      ],
+      "tail": 0
+    },
+    "465": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 16,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "467": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 59,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "469": {
+      "core_recipe": [
+        2,
+        1,
+        1
+      ],
+      "family": "N",
+      "parameter": 5,
+      "source": [
+        9,
+        0,
+        22,
+        5
+      ],
+      "tail": 1
+    },
+    "471": {
+      "core_recipe": [
+        2,
+        6
+      ],
+      "family": "N",
+      "parameter": 2,
+      "source": [
+        27,
+        0,
+        66,
+        3
+      ],
+      "tail": 1
+    },
+    "473": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 42,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "475": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 39,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "477": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 14,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "479": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 3,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "481": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 20,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "483": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 31,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "485": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 19,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "487": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 29,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "489": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 46,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "491": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 57,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "493": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 66,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "495": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 5,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "497": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 37,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "499": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 70,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "501": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 23,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "503": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 61,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "505": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 21,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "507": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "N",
+      "parameter": 6,
+      "source": [
+        5,
+        0,
+        24,
+        3
+      ],
+      "tail": 2
+    },
+    "509": {
+      "core_recipe": [
+        2,
+        1,
+        1
+      ],
+      "family": "N",
+      "parameter": 3,
+      "source": [
+        9,
+        0,
+        44,
+        5
+      ],
+      "tail": 2
+    },
+    "511": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 36,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "513": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 35,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "515": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 26,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "517": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 20,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "519": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 17,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "521": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 32,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "523": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 52,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "525": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 34,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "527": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 38,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "529": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 56,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "531": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 28,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "533": {
+      "core_recipe": [
+        7,
+        2
+      ],
+      "family": "N",
+      "parameter": 2,
+      "source": [
+        37,
+        0,
+        74,
+        11
+      ],
+      "tail": 1
+    },
+    "535": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "M",
+      "parameter": 12,
+      "source": [
+        5,
+        2,
+        6,
+        3
+      ],
+      "tail": 0
+    },
+    "537": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 11,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "539": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 48,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "541": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 43,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "543": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 40,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "545": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 5,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "547": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 13,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "549": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 35,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "551": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 67,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "553": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 88,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "555": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 33,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "557": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 47,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "559": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 84,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "561": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 30,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "563": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 41,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "565": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 50,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "567": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 38,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "569": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 44,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "571": {
+      "core_recipe": [
+        3
+      ],
+      "family": "N",
+      "parameter": 5,
+      "source": [
+        5,
+        0,
+        28,
+        1
+      ],
+      "tail": 2
+    },
+    "573": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 11,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "575": {
+      "core_recipe": [
+        4,
+        3
+      ],
+      "family": "M",
+      "parameter": 2,
+      "source": [
+        29,
+        5,
+        35,
+        5
+      ],
+      "tail": 0
+    },
+    "577": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 9,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "579": {
+      "core_recipe": [
+        3,
+        2
+      ],
+      "family": "M",
+      "parameter": 2,
+      "source": [
+        19,
+        0,
+        38,
+        5
+      ],
+      "tail": 1
+    },
+    "581": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 54,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "583": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 96,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "585": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 60,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "587": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 39,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "589": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 45,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "591": {
+      "core_recipe": [
+        4
+      ],
+      "family": "N",
+      "parameter": 13,
+      "source": [
+        5,
+        0,
+        10,
+        1
+      ],
+      "tail": 1
+    },
+    "593": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 69,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "595": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 92,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "597": {
+      "core_recipe": [
+        3
+      ],
+      "family": "Q",
+      "parameter": 11,
+      "source": [
+        5,
+        1,
+        7,
+        1
+      ],
+      "tail": 0
+    },
+    "599": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 28,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "601": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 27,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "603": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 37,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "605": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 75,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "607": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 82,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "609": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 30,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "611": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 12,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "613": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 26,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "615": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 44,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "617": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 5,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "619": {
+      "core_recipe": [
+        3
+      ],
+      "family": "Q",
+      "parameter": 14,
+      "source": [
+        5,
+        1,
+        7,
+        1
+      ],
+      "tail": 0
+    },
+    "621": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 43,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "623": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 46,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "625": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 21,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "627": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 39,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "629": {
+      "core_recipe": [
+        4
+      ],
+      "family": "N",
+      "parameter": 15,
+      "source": [
+        5,
+        0,
+        10,
+        1
+      ],
+      "tail": 1
+    },
+    "631": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 12,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "633": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 23,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "635": {
+      "core_recipe": [
+        3,
+        1
+      ],
+      "family": "N",
+      "parameter": 8,
+      "source": [
+        11,
+        0,
+        24,
+        5
+      ],
+      "tail": 1
+    },
+    "637": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 58,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "639": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 42,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "641": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 73,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "643": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 51,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "645": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 20,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "647": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 77,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "649": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 90,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "651": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "M",
+      "parameter": 14,
+      "source": [
+        5,
+        2,
+        6,
+        3
+      ],
+      "tail": 0
+    },
+    "655": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 104,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "657": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 36,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "659": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 55,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "661": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 50,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "663": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 11,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "665": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 43,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "667": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 100,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "669": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 29,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "671": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 46,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "673": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 45,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "675": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 49,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "677": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 83,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "679": {
+      "core_recipe": [
+        3,
+        1
+      ],
+      "family": "M",
+      "parameter": 4,
+      "source": [
+        11,
+        0,
+        24,
+        5
+      ],
+      "tail": 1
+    },
+    "681": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 41,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "683": {
+      "core_recipe": [
+        9,
+        1
+      ],
+      "family": "N",
+      "parameter": 2,
+      "source": [
+        47,
+        0,
+        96,
+        17
+      ],
+      "tail": 1
+    },
+    "685": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 112,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "687": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 21,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "689": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 15,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "693": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 72,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "695": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 15,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "697": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 68,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "699": {
+      "core_recipe": [
+        3,
+        1
+      ],
+      "family": "M",
+      "parameter": 8,
+      "source": [
+        11,
+        4,
+        12,
+        5
+      ],
+      "tail": 0
+    },
+    "701": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 53,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "703": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 108,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "705": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 3,
+      "source": [
+        1,
+        0,
+        64,
+        1
+      ],
+      "tail": 6
+    },
+    "707": {
+      "core_recipe": [
+        4,
+        1,
+        2
+      ],
+      "family": "P",
+      "parameter": 2,
+      "source": [
+        29,
+        9,
+        29,
+        9
+      ],
+      "tail": 0
+    },
+    "709": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 43,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "711": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 50,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "713": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "P",
+      "parameter": 5,
+      "source": [
+        5,
+        0,
+        12,
+        3
+      ],
+      "tail": 1
+    },
+    "715": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 26,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "717": {
+      "core_recipe": [
+        8
+      ],
+      "family": "Q",
+      "parameter": 6,
+      "source": [
+        9,
+        0,
+        18,
+        1
+      ],
+      "tail": 1
+    },
+    "719": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 81,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "721": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 102,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "723": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 41,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "725": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 59,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "727": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 98,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "729": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 52,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "731": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 63,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "733": {
+      "core_recipe": [
+        8
+      ],
+      "family": "Q",
+      "parameter": 5,
+      "source": [
+        9,
+        0,
+        18,
+        1
+      ],
+      "tail": 1
+    },
+    "735": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 40,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "737": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 30,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "739": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 54,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "741": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 47,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "743": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 38,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "745": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 80,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "747": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 12,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "749": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 58,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "751": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 56,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "753": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 24,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "755": {
+      "core_recipe": [
+        4,
+        2
+      ],
+      "family": "N",
+      "parameter": 2,
+      "source": [
+        15,
+        0,
+        120,
+        5
+      ],
+      "tail": 3
+    },
+    "757": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 110,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "759": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 66,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "761": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 60,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "763": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 116,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "765": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 70,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "767": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 57,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "769": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 106,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "771": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "P",
+      "parameter": 3,
+      "source": [
+        5,
+        0,
+        24,
+        3
+      ],
+      "tail": 2
+    },
+    "773": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 89,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "775": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 20,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "777": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 29,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "779": {
+      "core_recipe": [
+        3,
+        2
+      ],
+      "family": "P",
+      "parameter": 2,
+      "source": [
+        19,
+        0,
+        38,
+        5
+      ],
+      "tail": 1
+    },
+    "781": {
+      "core_recipe": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "family": "P",
+      "parameter": 2,
+      "source": [
+        29,
+        12,
+        34,
+        17
+      ],
+      "tail": 0
+    },
+    "783": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 61,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "785": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 44,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "787": {
+      "core_recipe": [
+        3
+      ],
+      "family": "M",
+      "parameter": 14,
+      "source": [
+        5,
+        1,
+        7,
+        1
+      ],
+      "tail": 0
+    },
+    "789": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "P",
+      "parameter": 8,
+      "source": [
+        5,
+        0,
+        12,
+        3
+      ],
+      "tail": 1
+    },
+    "791": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 51,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "793": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 124,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "795": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 54,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "797": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 25,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "799": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 9,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "801": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 35,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "803": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 103,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "805": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 32,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "807": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 58,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "809": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 99,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "811": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 38,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "813": {
+      "core_recipe": [
+        4
+      ],
+      "family": "M",
+      "parameter": 18,
+      "source": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "tail": 0
+    },
+    "815": {
+      "core_recipe": [
+        3,
+        4
+      ],
+      "family": "P",
+      "parameter": 2,
+      "source": [
+        33,
+        5,
+        33,
+        5
+      ],
+      "tail": 0
+    },
+    "817": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 49,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "819": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 55,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "821": {
+      "core_recipe": [
+        3,
+        2
+      ],
+      "family": "P",
+      "parameter": 3,
+      "source": [
+        19,
+        5,
+        19,
+        5
+      ],
+      "tail": 0
+    },
+    "823": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 118,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "825": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 62,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "827": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 78,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "829": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 68,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "831": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 74,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "833": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 72,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "835": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 114,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "837": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 88,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "839": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 40,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "841": {
+      "core_recipe": [
+        3
+      ],
+      "family": "N",
+      "parameter": 30,
+      "source": [
+        5,
+        1,
+        7,
+        1
+      ],
+      "tail": 0
+    },
+    "843": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 51,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "845": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 111,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "847": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 39,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "849": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 48,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "851": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 84,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "853": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 126,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "855": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 53,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "857": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 67,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "859": {
+      "core_recipe": [
+        3,
+        1
+      ],
+      "family": "P",
+      "parameter": 4,
+      "source": [
+        11,
+        0,
+        24,
+        5
+      ],
+      "tail": 1
+    },
+    "861": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 11,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "863": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 71,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "865": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 136,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "867": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 49,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "869": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 28,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "871": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 122,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "873": {
+      "core_recipe": [
+        4
+      ],
+      "family": "N",
+      "parameter": 22,
+      "source": [
+        5,
+        0,
+        10,
+        1
+      ],
+      "tail": 1
+    },
+    "875": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 55,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "877": {
+      "core_recipe": [
+        2,
+        7
+      ],
+      "family": "P",
+      "parameter": 1,
+      "source": [
+        35,
+        0,
+        78,
+        3
+      ],
+      "tail": 1
+    },
+    "879": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 96,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "881": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 9,
+      "source": [
+        3,
+        0,
+        24,
+        1
+      ],
+      "tail": 3
+    },
+    "883": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "M",
+      "parameter": 18,
+      "source": [
+        5,
+        2,
+        6,
+        3
+      ],
+      "tail": 0
+    },
+    "885": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 10,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "887": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 37,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "889": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 132,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "891": {
+      "core_recipe": [
+        2
+      ],
+      "family": "P",
+      "parameter": 21,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "893": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 29,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "895": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 23,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "897": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 59,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "899": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 61,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "901": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 70,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "903": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 92,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "905": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 72,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "907": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 21,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "909": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 65,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "911": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 109,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "913": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 32,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "915": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 63,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "917": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 105,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "919": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 140,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "921": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 33,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "923": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 29,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "925": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 69,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "927": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 14,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "929": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 86,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "931": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 52,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "933": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 82,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "935": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 79,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "937": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 36,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "939": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 75,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "941": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 56,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "943": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 3,
+      "source": [
+        1,
+        0,
+        32,
+        1
+      ],
+      "tail": 5
+    },
+    "945": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 17,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "947": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 46,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "949": {
+      "core_recipe": [
+        3
+      ],
+      "family": "N",
+      "parameter": 31,
+      "source": [
+        5,
+        1,
+        7,
+        1
+      ],
+      "tail": 0
+    },
+    "951": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 5,
+      "source": [
+        3,
+        0,
+        24,
+        1
+      ],
+      "tail": 3
+    },
+    "953": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 127,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "955": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 134,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "957": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 59,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "959": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 22,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "961": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 61,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "963": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 26,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "965": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 43,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "967": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 68,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "969": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "M",
+      "parameter": 17,
+      "source": [
+        5,
+        2,
+        6,
+        3
+      ],
+      "tail": 0
+    },
+    "971": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 123,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "973": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 130,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "975": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 74,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "977": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 36,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "979": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 63,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "981": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 94,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "983": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 76,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "985": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 142,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "987": {
+      "core_recipe": [
+        3
+      ],
+      "family": "Q",
+      "parameter": 6,
+      "source": [
+        5,
+        0,
+        28,
+        1
+      ],
+      "tail": 2
+    },
+    "989": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 117,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "991": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 104,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "993": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 47,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "995": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 90,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "997": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 40,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "999": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 34,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1001": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 73,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1003": {
+      "core_recipe": [
+        4
+      ],
+      "family": "N",
+      "parameter": 46,
+      "source": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "tail": 0
+    },
+    "1005": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 41,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1007": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 77,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1009": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 138,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1011": {
+      "core_recipe": [
+        7
+      ],
+      "family": "Q",
+      "parameter": 6,
+      "source": [
+        11,
+        0,
+        26,
+        1
+      ],
+      "tail": 1
+    },
+    "1013": {
+      "core_recipe": [
+        3
+      ],
+      "family": "Q",
+      "parameter": 5,
+      "source": [
+        5,
+        0,
+        28,
+        1
+      ],
+      "tail": 2
+    },
+    "1015": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 100,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1017": {
+      "core_recipe": [
+        3
+      ],
+      "family": "N",
+      "parameter": 10,
+      "source": [
+        5,
+        0,
+        28,
+        1
+      ],
+      "tail": 2
+    },
+    "1019": {
+      "core_recipe": [
+        3
+      ],
+      "family": "P",
+      "parameter": 14,
+      "source": [
+        5,
+        1,
+        7,
+        1
+      ],
+      "tail": 0
+    },
+    "1021": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 66,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1023": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 61,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1025": {
+      "core_recipe": [
+        4
+      ],
+      "family": "P",
+      "parameter": 10,
+      "source": [
+        5,
+        0,
+        10,
+        1
+      ],
+      "tail": 1
+    },
+    "1027": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 18,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1029": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 20,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "1031": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 125,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1033": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 112,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1035": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 54,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1037": {
+      "core_recipe": [
+        4,
+        5
+      ],
+      "family": "N",
+      "parameter": 2,
+      "source": [
+        49,
+        0,
+        150,
+        5
+      ],
+      "tail": 1
+    },
+    "1039": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 38,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1041": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 60,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1043": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 121,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1045": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 44,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1047": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 87,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1049": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 74,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1051": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 83,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1053": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 67,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1055": {
+      "core_recipe": [
+        3
+      ],
+      "family": "N",
+      "parameter": 9,
+      "source": [
+        5,
+        0,
+        28,
+        1
+      ],
+      "tail": 2
+    },
+    "1057": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 150,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1059": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 6,
+      "source": [
+        1,
+        0,
+        32,
+        1
+      ],
+      "tail": 5
+    },
+    "1061": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 135,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1063": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 168,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1065": {
+      "core_recipe": [
+        2
+      ],
+      "family": "P",
+      "parameter": 27,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1067": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 108,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1069": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 43,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1071": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 71,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1073": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 35,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1075": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 27,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1077": {
+      "core_recipe": [
+        2,
+        3
+      ],
+      "family": "M",
+      "parameter": 6,
+      "source": [
+        17,
+        3,
+        21,
+        3
+      ],
+      "tail": 0
+    },
+    "1079": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 131,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1081": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 146,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1083": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 75,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1085": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 13,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "1087": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 25,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1089": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 5,
+      "source": [
+        1,
+        0,
+        32,
+        1
+      ],
+      "tail": 5
+    },
+    "1091": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 42,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1093": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 47,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1095": {
+      "core_recipe": [
+        2
+      ],
+      "family": "P",
+      "parameter": 20,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "1097": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 143,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1099": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 164,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1101": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "N",
+      "parameter": 21,
+      "source": [
+        5,
+        0,
+        12,
+        3
+      ],
+      "tail": 1
+    },
+    "1103": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 102,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1105": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 17,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1107": {
+      "core_recipe": [
+        2
+      ],
+      "family": "P",
+      "parameter": 18,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "1109": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 95,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1111": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 154,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1113": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 33,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1115": {
+      "core_recipe": [
+        4
+      ],
+      "family": "P",
+      "parameter": 9,
+      "source": [
+        5,
+        0,
+        10,
+        1
+      ],
+      "tail": 1
+    },
+    "1117": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 98,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1119": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 60,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1121": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 139,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1123": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 81,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1125": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 120,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1127": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 69,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1129": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 85,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1131": {
+      "core_recipe": [
+        7
+      ],
+      "family": "Q",
+      "parameter": 3,
+      "source": [
+        11,
+        0,
+        52,
+        1
+      ],
+      "tail": 2
+    },
+    "1133": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 52,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "1135": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 58,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1137": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 78,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1139": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 27,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "1141": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 73,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1143": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 71,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1145": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 133,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1147": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 184,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1149": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 19,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "1151": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 39,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1153": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 31,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1155": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 110,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1157": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 128,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1159": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 116,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1161": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 36,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1163": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 96,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1165": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 65,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1167": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 79,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1169": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 45,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1171": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 42,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1173": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 47,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "1175": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 151,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1177": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 166,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1179": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 106,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1181": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "M",
+      "parameter": 23,
+      "source": [
+        5,
+        2,
+        6,
+        3
+      ],
+      "tail": 0
+    },
+    "1183": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 86,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1185": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 84,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1187": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 141,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1189": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 180,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1191": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 39,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1193": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 22,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "1195": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 104,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1197": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 69,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1199": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 147,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1201": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 93,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1203": {
+      "core_recipe": [
+        2
+      ],
+      "family": "P",
+      "parameter": 9,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "1205": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 89,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1207": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 162,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1209": {
+      "core_recipe": [
+        2,
+        2
+      ],
+      "family": "M",
+      "parameter": 15,
+      "source": [
+        9,
+        3,
+        9,
+        3
+      ],
+      "tail": 0
+    },
+    "1211": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 83,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1213": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 37,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1215": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 73,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1217": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 42,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1219": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 24,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1221": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "N",
+      "parameter": 32,
+      "source": [
+        5,
+        0,
+        12,
+        3
+      ],
+      "tail": 1
+    },
+    "1223": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 48,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1225": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 5,
+      "source": [
+        1,
+        0,
+        32,
+        1
+      ],
+      "tail": 5
+    },
+    "1227": {
+      "core_recipe": [
+        2,
+        5
+      ],
+      "family": "M",
+      "parameter": 3,
+      "source": [
+        29,
+        3,
+        45,
+        3
+      ],
+      "tail": 0
+    },
+    "1229": {
+      "core_recipe": [
+        2,
+        3
+      ],
+      "family": "N",
+      "parameter": 14,
+      "source": [
+        17,
+        3,
+        21,
+        3
+      ],
+      "tail": 0
+    },
+    "1231": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 46,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1233": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 72,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1235": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 155,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1237": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 170,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1239": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 58,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1241": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 103,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1243": {
+      "core_recipe": [
+        7
+      ],
+      "family": "Q",
+      "parameter": 14,
+      "source": [
+        11,
+        1,
+        13,
+        1
+      ],
+      "tail": 0
+    },
+    "1245": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 41,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1247": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 79,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1249": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 7,
+      "source": [
+        3,
+        0,
+        24,
+        1
+      ],
+      "tail": 3
+    },
+    "1251": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 53,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1253": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 112,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1255": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 99,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1257": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 118,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1259": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 82,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1261": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 96,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1263": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 30,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "1265": {
+      "core_recipe": [
+        4,
+        4
+      ],
+      "family": "M",
+      "parameter": 5,
+      "source": [
+        25,
+        5,
+        25,
+        5
+      ],
+      "tail": 0
+    },
+    "1267": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 200,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1269": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 92,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1271": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 149,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1273": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 182,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1275": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 60,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "1277": {
+      "core_recipe": [
+        3,
+        1,
+        1
+      ],
+      "family": "M",
+      "parameter": 4,
+      "source": [
+        19,
+        0,
+        46,
+        11
+      ],
+      "tail": 1
+    },
+    "1279": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 208,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1281": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 114,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1283": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 6,
+      "source": [
+        1,
+        0,
+        64,
+        1
+      ],
+      "tail": 6
+    },
+    "1285": {
+      "core_recipe": [
+        7
+      ],
+      "family": "Q",
+      "parameter": 7,
+      "source": [
+        11,
+        0,
+        26,
+        1
+      ],
+      "tail": 1
+    },
+    "1287": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 18,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "1289": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 145,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1291": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 190,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1293": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 59,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1295": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 83,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1297": {
+      "core_recipe": [
+        3,
+        3
+      ],
+      "family": "N",
+      "parameter": 8,
+      "source": [
+        35,
+        5,
+        43,
+        5
+      ],
+      "tail": 0
+    },
+    "1299": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 126,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1301": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 43,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1303": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 111,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1305": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "Q",
+      "parameter": 18,
+      "source": [
+        5,
+        0,
+        12,
+        3
+      ],
+      "tail": 1
+    },
+    "1307": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 157,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1309": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 136,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1311": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 77,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1313": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 21,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "1315": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 196,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1317": {
+      "core_recipe": [
+        2,
+        2
+      ],
+      "family": "N",
+      "parameter": 20,
+      "source": [
+        9,
+        0,
+        18,
+        3
+      ],
+      "tail": 1
+    },
+    "1319": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 38,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1321": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 27,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1323": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 72,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1325": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 80,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1327": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 107,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1329": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "N",
+      "parameter": 27,
+      "source": [
+        5,
+        0,
+        12,
+        3
+      ],
+      "tail": 1
+    },
+    "1331": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 153,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1333": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 122,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1335": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 21,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1337": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 163,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1339": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 52,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1341": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 144,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1343": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 101,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1345": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 43,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1347": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 97,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1349": {
+      "core_recipe": [
+        4
+      ],
+      "family": "N",
+      "parameter": 36,
+      "source": [
+        5,
+        0,
+        10,
+        1
+      ],
+      "tail": 1
+    },
+    "1351": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 216,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1353": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 132,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1355": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 94,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1357": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 224,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1359": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 30,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "1361": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 81,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1363": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 70,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1365": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 112,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1367": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 41,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1369": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 57,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1371": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 110,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1373": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 171,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1375": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 10,
+      "source": [
+        3,
+        0,
+        24,
+        1
+      ],
+      "tail": 3
+    },
+    "1377": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 89,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1379": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 83,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1381": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 56,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1383": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 15,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "1385": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 44,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1387": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 108,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1389": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 95,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1391": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 87,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1393": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 53,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1395": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 140,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1397": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 61,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1399": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 50,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1401": {
+      "core_recipe": [
+        4
+      ],
+      "family": "N",
+      "parameter": 53,
+      "source": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "tail": 0
+    },
+    "1403": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 45,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1405": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 198,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1407": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 98,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1409": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 47,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1411": {
+      "core_recipe": [
+        2
+      ],
+      "family": "P",
+      "parameter": 44,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1413": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 100,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1415": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 109,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1417": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 220,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1419": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 26,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "1421": {
+      "core_recipe": [
+        4
+      ],
+      "family": "M",
+      "parameter": 31,
+      "source": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "tail": 0
+    },
+    "1423": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 206,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1425": {
+      "core_recipe": [
+        4
+      ],
+      "family": "N",
+      "parameter": 40,
+      "source": [
+        5,
+        0,
+        10,
+        1
+      ],
+      "tail": 1
+    },
+    "1427": {
+      "core_recipe": [
+        4,
+        1,
+        1
+      ],
+      "family": "N",
+      "parameter": 10,
+      "source": [
+        15,
+        0,
+        38,
+        9
+      ],
+      "tail": 1
+    },
+    "1429": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 105,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1431": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 63,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1433": {
+      "core_recipe": [
+        8,
+        1
+      ],
+      "family": "P",
+      "parameter": 8,
+      "source": [
+        17,
+        8,
+        18,
+        9
+      ],
+      "tail": 0
+    },
+    "1435": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 35,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1437": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 17,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1439": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 115,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1441": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 56,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1443": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 152,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1445": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 124,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1447": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 194,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1449": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 45,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1451": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 173,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1453": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 50,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1455": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 53,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "1457": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 76,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1459": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 232,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1461": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 134,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1463": {
+      "core_recipe": [
+        3,
+        2
+      ],
+      "family": "P",
+      "parameter": 1,
+      "source": [
+        19,
+        0,
+        152,
+        5
+      ],
+      "tail": 3
+    },
+    "1465": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 160,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1467": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 127,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1469": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 9,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "1471": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 202,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1473": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 78,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1475": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 93,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1477": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 14,
+      "source": [
+        1,
+        0,
+        32,
+        1
+      ],
+      "tail": 5
+    },
+    "1479": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 112,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1481": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 169,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1483": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 91,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1485": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 95,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1487": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 70,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1489": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 88,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1491": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 36,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "1493": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 106,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1495": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 130,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1497": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 148,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1499": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 42,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1501": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 123,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1503": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 142,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1505": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 114,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1507": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 98,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1509": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 102,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1511": {
+      "core_recipe": [
+        8
+      ],
+      "family": "Q",
+      "parameter": 11,
+      "source": [
+        9,
+        0,
+        18,
+        1
+      ],
+      "tail": 1
+    },
+    "1513": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 222,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1515": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 84,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1517": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 54,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1519": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 228,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1521": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 59,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "1523": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 35,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "1525": {
+      "core_recipe": [
+        3
+      ],
+      "family": "Q",
+      "parameter": 20,
+      "source": [
+        5,
+        0,
+        14,
+        1
+      ],
+      "tail": 1
+    },
+    "1527": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 57,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1529": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 156,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1531": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 236,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1533": {
+      "core_recipe": [
+        2,
+        8
+      ],
+      "family": "M",
+      "parameter": 2,
+      "source": [
+        27,
+        0,
+        108,
+        3
+      ],
+      "tail": 2
+    },
+    "1535": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 181,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1537": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 117,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1539": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 71,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1541": {
+      "core_recipe": [
+        4
+      ],
+      "family": "M",
+      "parameter": 34,
+      "source": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "tail": 0
+    },
+    "1543": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 46,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1545": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 103,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1547": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 138,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1549": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 210,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1551": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 113,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1553": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "P",
+      "parameter": 14,
+      "source": [
+        5,
+        0,
+        12,
+        3
+      ],
+      "tail": 1
+    },
+    "1555": {
+      "core_recipe": [
+        3
+      ],
+      "family": "Q",
+      "parameter": 40,
+      "source": [
+        5,
+        1,
+        7,
+        1
+      ],
+      "tail": 0
+    },
+    "1557": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 89,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1559": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 199,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1561": {
+      "core_recipe": [
+        4
+      ],
+      "family": "Q",
+      "parameter": 14,
+      "source": [
+        5,
+        0,
+        20,
+        1
+      ],
+      "tail": 2
+    },
+    "1563": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 96,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1565": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 177,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1567": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 218,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1569": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 93,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1571": {
+      "core_recipe": [
+        4
+      ],
+      "family": "N",
+      "parameter": 61,
+      "source": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "tail": 0
+    },
+    "1573": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 25,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "1575": {
+      "core_recipe": [
+        3
+      ],
+      "family": "Q",
+      "parameter": 18,
+      "source": [
+        5,
+        0,
+        14,
+        1
+      ],
+      "tail": 1
+    },
+    "1577": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 60,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1579": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 33,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "1581": {
+      "core_recipe": [
+        6
+      ],
+      "family": "Q",
+      "parameter": 9,
+      "source": [
+        9,
+        0,
+        22,
+        1
+      ],
+      "tail": 1
+    },
+    "1583": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 207,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1585": {
+      "core_recipe": [
+        5
+      ],
+      "family": "Q",
+      "parameter": 15,
+      "source": [
+        9,
+        1,
+        15,
+        1
+      ],
+      "tail": 0
+    },
+    "1587": {
+      "core_recipe": [
+        3,
+        4
+      ],
+      "family": "N",
+      "parameter": 6,
+      "source": [
+        33,
+        0,
+        66,
+        5
+      ],
+      "tail": 1
+    },
+    "1589": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 49,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1591": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 58,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1593": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 110,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1595": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 88,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1597": {
+      "core_recipe": [
+        9
+      ],
+      "family": "Q",
+      "parameter": 7,
+      "source": [
+        17,
+        1,
+        31,
+        1
+      ],
+      "tail": 0
+    },
+    "1599": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 125,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1601": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 185,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1603": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 244,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1605": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 64,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1607": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 168,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1609": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 252,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1611": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 7,
+      "source": [
+        1,
+        0,
+        32,
+        1
+      ],
+      "tail": 5
+    },
+    "1613": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 132,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1615": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 150,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1617": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 18,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "1619": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 114,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1621": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 230,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1623": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 121,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1625": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 144,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1627": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 109,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1629": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 176,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1631": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 203,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1633": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 238,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1635": {
+      "core_recipe": [
+        6
+      ],
+      "family": "N",
+      "parameter": 36,
+      "source": [
+        9,
+        1,
+        11,
+        1
+      ],
+      "tail": 0
+    },
+    "1637": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 84,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1639": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 135,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1641": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 101,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1643": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 107,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1645": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 68,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1647": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 158,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1649": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 103,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1651": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 69,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1653": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 58,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1655": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 86,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1657": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 38,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "1659": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 146,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1661": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 72,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1663": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 82,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1665": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 96,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1667": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 215,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1669": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 11,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "1671": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 164,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1673": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 131,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1675": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 226,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1677": {
+      "core_recipe": [
+        14
+      ],
+      "family": "Q",
+      "parameter": 12,
+      "source": [
+        19,
+        1,
+        21,
+        1
+      ],
+      "tail": 0
+    },
+    "1679": {
+      "core_recipe": [
+        3
+      ],
+      "family": "P",
+      "parameter": 11,
+      "source": [
+        5,
+        0,
+        14,
+        1
+      ],
+      "tail": 1
+    },
+    "1681": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 264,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1683": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 23,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1685": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 223,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1687": {
+      "core_recipe": [
+        2,
+        1
+      ],
+      "family": "N",
+      "parameter": 38,
+      "source": [
+        5,
+        0,
+        12,
+        3
+      ],
+      "tail": 1
+    },
+    "1689": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 17,
+      "source": [
+        3,
+        0,
+        24,
+        1
+      ],
+      "tail": 3
+    },
+    "1691": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 143,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1693": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 234,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1695": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 124,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1697": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 67,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1699": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 62,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1701": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 154,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1703": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 172,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1705": {
+      "core_recipe": [
+        2
+      ],
+      "family": "M",
+      "parameter": 57,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1707": {
+      "core_recipe": [
+        2
+      ],
+      "family": "P",
+      "parameter": 15,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "1709": {
+      "core_recipe": [
+        2
+      ],
+      "family": "P",
+      "parameter": 43,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1711": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 246,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1713": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 136,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1715": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 211,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1717": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 254,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1719": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 15,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "1721": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 205,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1723": {
+      "core_recipe": [
+        4
+      ],
+      "family": "M",
+      "parameter": 35,
+      "source": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "tail": 0
+    },
+    "1725": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 14,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "1727": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 193,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1729": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 92,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1731": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 184,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1733": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 33,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "1735": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 139,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1737": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 109,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1739": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 219,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1741": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 123,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1743": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 192,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1745": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 132,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1747": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 94,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1749": {
+      "core_recipe": [
+        2,
+        2
+      ],
+      "family": "N",
+      "parameter": 2,
+      "source": [
+        9,
+        0,
+        288,
+        3
+      ],
+      "tail": 5
+    },
+    "1751": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 107,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1753": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 260,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1755": {
+      "core_recipe": [
+        2,
+        2
+      ],
+      "family": "N",
+      "parameter": 23,
+      "source": [
+        9,
+        0,
+        18,
+        3
+      ],
+      "tail": 1
+    },
+    "1757": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 59,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1759": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 268,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1761": {
+      "core_recipe": [
+        3
+      ],
+      "family": "P",
+      "parameter": 14,
+      "source": [
+        5,
+        0,
+        14,
+        1
+      ],
+      "tail": 1
+    },
+    "1763": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 201,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1765": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 29,
+      "source": [
+        1,
+        0,
+        16,
+        1
+      ],
+      "tail": 4
+    },
+    "1767": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 119,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1769": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 144,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1771": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 242,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1773": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 90,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1775": {
+      "core_recipe": [
+        5
+      ],
+      "family": "M",
+      "parameter": 13,
+      "source": [
+        9,
+        1,
+        15,
+        1
+      ],
+      "tail": 0
+    },
+    "1777": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 68,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1779": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 115,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1781": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 133,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1783": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 250,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1785": {
+      "core_recipe": [
+        2
+      ],
+      "family": "Q",
+      "parameter": 26,
+      "source": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "tail": 2
+    },
+    "1787": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 73,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1789": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 148,
+      "source": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "tail": 0
+    },
+    "1791": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 50,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1793": {
+      "core_recipe": [
+        4
+      ],
+      "family": "P",
+      "parameter": 27,
+      "source": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "tail": 0
+    },
+    "1795": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 29,
+      "source": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "tail": 3
+    },
+    "1797": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 77,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1799": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 166,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1801": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 126,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1803": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 86,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1805": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 129,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1807": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 100,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1809": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 64,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1811": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 213,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1813": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 151,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1815": {
+      "core_recipe": [
+        2
+      ],
+      "family": "N",
+      "parameter": 71,
+      "source": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "tail": 1
+    },
+    "1817": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 239,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1819": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 122,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1821": {
+      "core_recipe": [
+        4
+      ],
+      "family": "N",
+      "parameter": 23,
+      "source": [
+        5,
+        0,
+        20,
+        1
+      ],
+      "tail": 2
+    },
+    "1823": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 82,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1825": {
+      "core_recipe": [
+        4
+      ],
+      "family": "P",
+      "parameter": 20,
+      "source": [
+        5,
+        0,
+        10,
+        1
+      ],
+      "tail": 1
+    },
+    "1827": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 188,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1829": {
+      "core_recipe": [
+        5
+      ],
+      "family": "N",
+      "parameter": 25,
+      "source": [
+        9,
+        1,
+        15,
+        1
+      ],
+      "tail": 0
+    },
+    "1831": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 174,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1833": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 60,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1835": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 221,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1837": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 276,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1839": {
+      "core_recipe": [
+        6
+      ],
+      "family": "N",
+      "parameter": 19,
+      "source": [
+        9,
+        0,
+        22,
+        1
+      ],
+      "tail": 1
+    },
+    "1841": {
+      "core_recipe": [],
+      "family": "Q",
+      "parameter": 69,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1843": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 141,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1845": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 105,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1847": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 109,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1849": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 68,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1851": {
+      "core_recipe": [],
+      "family": "M",
+      "parameter": 136,
+      "source": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "tail": 1
+    },
+    "1853": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 162,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1855": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 159,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1857": {
+      "core_recipe": [],
+      "family": "P",
+      "parameter": 147,
+      "source": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "tail": 0
+    },
+    "1859": {
+      "core_recipe": [],
+      "family": "N",
+      "parameter": 134,
+      "source": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "tail": 2
+    },
+    "1861": {
+      "core_recipe": [
+        4,
+        1
+      ],
+      "family": "N",
+      "parameter": 21,
+      "source": [
+        9,
+        0,
+        20,
+        5
+      ],
+      "tail": 1
+    }
+  }
+}
