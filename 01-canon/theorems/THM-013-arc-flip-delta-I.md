@@ -2,7 +2,7 @@
 
 **Type:** Theorem (verified n=4,...,9; proved at n<=7)
 **Certainty:** 5 -- PROVED at n<=7 (exhaustive); VERIFIED at n=8,9 (sampled)
-**Status:** PROVED at n<=7, VERIFIED for general n up to n=9
+**Status:** PROVED at n<=7, VERIFIED for general n up to n=9 (March 2026); **PROVED for all n on 2026-11-04** (see the upgrade section at the end)
 **Added by:** opus-2026-03-05-S2
 **Tags:** #ocf #arc-reversal #independence-polynomial #open-q-009 #claim-a
 
@@ -144,3 +144,16 @@ D5 - C5 = sum_x sum_{P path in B_x} [T[j][P[0]]*T[P[2]][i] - T[i][P[0]]*T[P[2]][
 
 Counts net 5-cycle changes weighted by whether 3-vertex paths in complement
 can be "extended" through the flipped arc.
+
+---
+
+## Upgrade (2026-11-04, mac-mini-2026-11-04-chanpak; THM-4876 (4))
+
+The general formula `DeltaH = H(T) - H(T') = DeltaI(Omega(T), 2) = sum_k 2^k Delta(alpha_k)` holds for **all n**: the
+odd-cycle formula `H(T) = I(Omega(T), 2)` is now a theorem (Grinberg--Stanley, *The Rédei--Berge symmetric function of a
+directed graph*, arXiv:2307.05569; also Lass; see CORE-PAPERS and THM-070), so both sides are `I(Omega(T), 2) -
+I(Omega(T'), 2)`. The "Significance" paragraph above (OCF would follow from this identity plus the base case) is thereby
+reversed: the identity follows from OCF. Elementarily, the flip increment is the difference of two unsigned subset
+convolutions, `H(T') - H(T) = U(L_j, R_i) - U(L_i, R_j)` (the Hamiltonian paths of `T'` with `j` immediately before `i`
+minus those of `T` with `i` immediately before `j`), whose signed companions coincide by THM-017. Verification scripts
+listed above remain the historical record for `n <= 9`.
