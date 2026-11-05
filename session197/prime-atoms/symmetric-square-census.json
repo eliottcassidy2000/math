@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "physical_order_rows": [[3,0,0,0],[5,5,10,0],[7,21,168,0],[9,62,3968,0],[11,160,163840,8240]],
+  "direct_run_square_controls": 4146,
+  "exact_clone_counts": 12438,
+  "order11_target_tests": 8240,
+  "q7_tests": 2640,
+  "q9_tests": 5600,
+  "first_equation_survivors": 0
+}
