@@ -1,0 +1,158 @@
+# Hamilton-path orbits, prime rigidity, and the first symmetric 7p atom
+
+Session 196, 2026-11-05. **PROVED all-order symmetry restrictions, conditional on the inherited odd-cycle collection formula; exact finite orbit calculations supply the stated small-prime constants.** The full Hamilton-path spectrum with proposed exceptions `{7,21}` remains **OPEN**. No literature-priority claim is made.
+
+## 1. What A000568 counts
+
+[OEIS A000568](https://oeis.org/A000568) counts **isomorphism classes of n-vertex tournaments**, not Hamiltonian paths. Its values from n=0 through 8 are `1,1,1,2,4,12,56,456,6880`. Write `a(n)` for this sequence and `H(T)` for the number of directed Hamiltonian vertex words of T, with `H(empty)=1`.
+
+The new connection uses tournaments with a distinguished Hamiltonian path and the action of `Aut(T)`, rather than another recursive marked interface. The [Session 195 guide](https://github.com/eliottcassidy2000/math/blob/ee07a5aac9cdfd8d3834fa834df4fb357fcaf769/00-navigation/S195.md) routes the prior structural results. This packet does not infer arithmetic coverage from a graph census.
+
+The inherited Grinberg--Stanley odd-cycle collection formula, `01-canon/theorems/THM-002-ocf.md`, is also explained in [S194 weak-deletion, equation (1)](https://github.com/eliottcassidy2000/math/blob/188bb29fa08b6dfd51ab94cc8e494d6d56f5e9ec/session194/weak-deletion/PROOF.md). In unrooted form it is
+
+    H(T) = sum_Gamma 2^|Gamma|,                         (1)
+
+where Gamma ranges over collections of pairwise vertex-disjoint directed odd cycles of length at least three, including the empty collection. Cycles are counted modulo rotation. We use only its positivity, its single-triangle terms, and its behavior on disjoint vertex sets. In particular H is odd.
+
+## 2. An exact bridge from A000568 to H
+
+**Theorem 1 (path-orbit mass).** For every nonempty tournament T,
+
+    q(T) = H(T) / |Aut(T)|
+
+is a positive odd integer. For n>=1,
+
+    sum_[T], |T|=n q(T) = 2^binom(n-1,2).               (2)
+
+Consequently `a(n)` is even for n>=3.
+
+**Proof.** An automorphism fixing an ordered Hamiltonian vertex word fixes every vertex, so the action on these words is free. Thus its order divides H and the quotient counts the orbits. Since H is odd, both divisor and quotient are odd.
+
+An isomorphism class of pairs `(T,P)` with P a distinguished Hamiltonian word has a unique normalized representation: label P successively `0,1,...,n-1`. The n-1 consecutive arcs are forced forward. Every other unordered pair can be oriented independently. There are `binom(n,2)-(n-1)=binom(n-1,2)` such pairs. A fixed T contributes exactly q(T) pair classes. This proves (2). Its left side has a(n) odd summands; its right side is even for n>=3. QED.
+
+This is also an independent census checksum. It is stronger than merely checking the number of isomorphism classes: the exact multiplicity of each class among normalized path tournaments must equal H/Aut. There is no assertion that these unequal odd summands yield every odd integer.
+
+**Corollary 2 (prime strata).** Once rigidity below is established, every isomorphism class with H=p>=5 prime has exactly n! labelled realizations. Hence the labelled cardinality of each such H stratum is exactly n! times its unlabelled cardinality.
+
+## 3. Prime-order symmetry has an induced regular witness
+
+**Lemma 3 (induced monotonicity and products).** If S is induced in T, then `H(T)>=H(S)`. For pairwise disjoint vertex sets `S_1,...,S_k`,
+
+    H(T) >= product_i H(T[S_i]).                        (3)
+
+**Proof.** By (1), every collection supported inside S is a collection of T. For (3), independently choose collections in the disjoint sets; their union is an injective weight-preserving map into T's collections. Cross-set arcs impose no restriction on such cycles. QED.
+
+The first inequality also has the direct insertion injection recorded in S195: insert each omitted named vertex immediately before the first path vertex it beats, or append it if there is none. Deleting the inserted labels recovers the old path.
+
+**Lemma 4 (regular triangle count).** A regular tournament R of odd order q has
+
+    c3(R) = q(q^2-1)/24.                               (4)
+
+**Proof.** Every triple is either cyclic or transitive. A transitive triple is counted once at its source, so its count is `sum_v binom(d+(v),2)`. Subtracting `q binom((q-1)/2,2)` from `binom(q,3)` gives (4). QED.
+
+**Theorem 5 (symmetry threshold).** If prime q>=5 divides `|Aut(T)|`, then
+
+    H(T) >= q(q^2+11)/12.                              (5)
+
+**Proof.** Cauchy's theorem supplies an automorphism g of order q. Its vertex cycles have lengths one or q, and at least one has length q because g is nonidentity. Select any one q-cycle O, whether or not there are other cycles or fixed vertices. The restriction of g is transitive on O and preserves the induced tournament R=T[O], so R is regular. Equation (1) and (4) give
+
+    H(R) >= 1+q(q^2-1)/12.
+
+The cyclic group generated by `g|O` acts freely on Hamiltonian words of R, so q divides H(R). Also H(R)/q is odd. For prime q>=5, `q^2=1 mod 24`; thus `(q^2-1)/12` is even. The next allowed odd quotient above `(q^2-1)/12+1/q` is `(q^2+11)/12`. Apply induced monotonicity. QED.
+
+This concerns an induced orbit tournament. It does **not** assume the whole T is vertex-transitive, regular, or of order q.
+
+**Corollary 6 (prime rigidity).** If H(T)=p is prime and p>=5, then Aut(T) is trivial.
+
+**Proof.** Theorem 1 gives `|Aut(T)|` in `{1,p}`. The second case contradicts (5), since `(p^2+11)/12>1` for p>=5. QED.
+
+**Boundary p=3.** H(T)=3 if and only if T is an ordinal sum of transitive singleton components and exactly one directed triangle. There are n-2 such isomorphism classes on n>=3 vertices, and each has automorphism group C3.
+
+Indeed (1) forces exactly one cyclic triangle. A vertex mixed on that triangle creates another cyclic triangle, so the triangle is a module. A larger strong component containing it contains a cyclic two-vertex extension, which would have H>=9. Thus it is a whole strong component. Every other strong component is a singleton, since any nontrivial one contains another cyclic triangle. Conversely such an ordinal sum has H=3 and only the triangle rotations can act nontrivially.
+
+## 4. Exact finite orbit constants
+
+Any q-vertex tournament admitting a q-cycle automorphism can be labelled by Z/q so the automorphism is translation. Its arcs are specified by choosing exactly one of i and -i for each `1<=i<q/2`. Thus all such labelled connection sets number `2^((q-1)/2)`. This finite enumeration is complete for this symmetry question even though it is not a census of all regular tournaments.
+
+`verify.py` checks all connection sets for q=3,5,7,11,13. The values needed below are:
+
+- q=5: all four sets have H=15.
+- q=7: six sets have H=175; two have H=189. Every set has `F2=1638`, where F2 counts ordered spanning covers by two nonempty directed paths.
+- q=11: the 32 sets have H values `92411,93027,93467,95095`, each far above 121.
+
+The q<=7 Hamilton counts are independently checked by literal permutation enumeration. The q=11 computations are independently checked using both forward and terminal-removal subset recurrences. F2 uses all nonempty proper subsets and is checked independently by permutations with a cut for q<=7. These finite constants certify exclusions at **all ambient orders**, through the existence of an induced orbit.
+
+## 5. Prime-square rigidity and the small order-five case
+
+**Lemma 7 (small order-five symmetry exclusion).** No tournament with H=25 or H=35 has an automorphism of order five.
+
+**Proof.** Every five-cycle orbit has H=15. Two such orbits imply H>=225 by (3), so there can be only one. All other vertices are fixed by the selected order-five automorphism. Each fixed vertex has uniform incidence with the orbit, so the orbit M is a module.
+
+Let S be the strong component containing M. If S=M, SCC factorization makes 15 divide H(T), impossible. If S is larger, M is a proper strong module in S. There are vertices a,b outside M with `M->a->b->M`: partition the exterior into those beaten by M and those beating M, and use strongness to obtain an arc from the former class to the latter. The induced cyclic extension has
+
+    H(M->a->b->M) = 3H(M)+F2(M) >=45,
+
+contradicting H(T)<=35. The equality formula follows by counting either one M run (three placements) or two nonempty M runs (one placement). QED.
+
+**Theorem 8 (prime-square rigidity).** If H(T)=p^2 for prime p>=5, then T is rigid.
+
+**Proof.** Any nontrivial automorphism group has order p or p^2 and hence an element of order p. For p>=13, (5) exceeds p^2. For p=11 and p=7, the exact induced orbit minima 92411 and 175 exceed 121 and 49. For p=5 use Lemma 7. QED.
+
+## 6. The first nonrigid 7p atom
+
+**Theorem 9.** Among tournaments with H(T)=7p, p>=5 prime, the smallest possible H for a nontrivial automorphism group is
+
+    4151 = 7*593.                                     (6)
+
+Every such count below 4151 forces rigidity. The bound is attained by an explicit ten-vertex tournament. For every p>=11, irrespective of the size of H, Aut(T) has order either one or seven.
+
+**Proof of the unrestricted group-order statement.** Aut(T) divides 7p by Theorem 1. If p>=11, (5) with q=p gives a lower bound at least p^2>7p, excluding p as a divisor. The only remaining orders are one and seven.
+
+**Proof of exclusion below 4151.** For p=5, Lemma 7 excludes order-five symmetry and the seven-orbit minimum excludes order-seven symmetry. For p=7, the seven-orbit minimum already exceeds49. For p>=11, only order-seven symmetry needs consideration.
+
+Choose an order-seven automorphism. Two seven-cycle orbits would imply H>=175^2=30625, so there is exactly one seven-cycle orbit M. All other vertices are fixed; M is therefore a module. Put h=H(M), so h is 175 or189, and F2(M)=1638.
+
+Let S be its containing strong component. If S=M, h divides H(T)=7p, forcing 25 or27 to divide p, impossible. Otherwise collapse M to one marked vertex in the strong quotient Q. Every vertex of a strong tournament belongs to a directed triangle: a shortest directed cycle through it must have length three, as a chord at distance two otherwise shortens it. Choose a triangle Q0 containing the marked vertex. Its expansion is `U=M->a->b->M`, with
+
+    H(U)=3h+1638 in {2163,2205}.
+
+If Q has exactly three vertices then S=U. SCC factorization would force 309 or315 to divide the prime p, impossible.
+
+Suppose Q has more than three vertices. If some exterior quotient vertex is mixed on Q0, adjoining it yields a strong four-vertex quotient. There is a unique strong four-tournament, represented by outgoing rows `[2,8,3,5]`. Replacing any of its four vertices by M gives exactly one of
+
+    5h+2F2(M),     5h+3F2(M).                         (7)
+
+For clarity, roots0,2 of this representative give coefficient2; roots1,3 give coefficient3. Its maximal-run words have coefficients `(5,2,0,...)` or `(5,3,0,...)`. This small complete classification is verified by all64 labelled four-tournaments and their marks. The least count in (7) is4151.
+
+If no exterior quotient vertex is mixed on Q0, Q0 is a proper module of Q. Strongness supplies an exterior pair with `Q0->c->d->Q0`. Expansion contains `U->c->d->U`, whose count is `3H(U)+F2(U)>=6489>4151`. In either case induced monotonicity contradicts H(T)<4151. This proves the lower bound.
+
+**Attainment.** Use the cyclic seven-tournament
+
+    M=[112,97,67,7,14,28,56], H(M)=175, F2(M)=1638,
+
+and replace vertex0 of `[2,8,3,5]` by M. The result has outgoing rows
+
+    [240,225,195,135,142,156,184,512,255,383].
+
+Equation (7) gives `H=5*175+2*1638=4151`. The integer593 is prime (trial division by primes at most23 suffices). Rotation on vertices0 through6, fixing vertices7,8,9, is an order-seven automorphism. The preceding general result gives full automorphism-group order exactly seven. This proves attainment and completes the theorem. QED.
+
+The theorem is not claiming that every p<593 yields an attainable7p; it states that **any** witness for those values is rigid. It is also not a proof of the full spectrum. The symmetric witness at4151 shows why prime-atom rigidity cannot simply be extended to all7p atoms.
+
+## 7. Relation to external literature and next research uses
+
+Moon's [Topics on Tournaments, Section9, Theorem14](https://www.gutenberg.org/files/42833/42833-pdf.pdf) records the oddness of H; its Section10 gives the elementary labelled mean `n!/2^(n-1)`. Equation (2) is the corresponding path-orbit refinement, with a direct normalization proof.
+
+[Royle, Praeger, Glasby, Freedman, and Devillers, *Tournaments and Even Graphs are Equinumerous* (2023)](https://arxiv.org/abs/2204.01947) establishes that A000568 also counts even graphs and asks for a natural bijection. Their “even” concerns automorphism-induced orientation parity, **not** even vertex degrees. That equinumerosity does not provide an H-preserving correspondence or settle this spectrum; transporting H to that side remains a research question.
+
+The concrete directions supported here are:
+
+1. Use path-normalized tournaments as a complete, independently auditable enumeration universe. Their fibres are exactly H/Aut; the n<=6 receipt reproduces all56 unlabelled classes at n=6 from1024 path-normalized objects.
+2. Search prime atoms in the rigid stratum, where labelled/unlabelled conversion has no stabilizer ambiguity. For7p, retain the C7 sector rather than falsely assuming rigidity at all targets.
+3. Apply induced cyclic-orbit certificates to prune symmetry hypotheses before expensive target searches. The prime-square theorem and exact4151 threshold show this can yield all-order information from a small, completely specified finite bank.
+4. Explore prime values in scalar formulas such as `5h+2F2` for symmetric modules. The explicit4151 witness is a physical construction and a limitation test, not an infinitude result for prime values.
+
+## 8. Verification scope
+
+Run `python3 verify.py` and `python3 -O verify.py`, compare outputs byte for byte. Checks use explicit exceptions rather than assertions. The verifier uses only the standard library and writes `receipt.json`.
+
+It independently normalizes all distinguished Hamilton paths through order6, canonicalizes each graph under every vertex permutation, computes its full automorphism group, matches the A000568 class count, and verifies each fibre equals H/Aut. Forward subset DP and literal Hamilton words agree for every retained class. It also checks all needed cyclic-orbit inventories, F2 counts, the complete strong4 rooted coefficient table, and the explicit4151 witness. The all-order assertions come from the proofs above, not extrapolation of these tests.
