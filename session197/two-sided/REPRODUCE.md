@@ -1,0 +1,1 @@
+To regenerate the complete rightward state certificates, run `python3 build_rightward.py` in this directory. This creates `rightward_certificates.json` and `rightward_seeds.txt`. Then follow the compilation and verification commands in Section 7 of PROOF.md. The large generated certificates are deliberately not stored in this repository copy.
