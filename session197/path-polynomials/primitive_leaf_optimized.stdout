@@ -1,0 +1,50 @@
+{
+  "accepted_leaf_lengths": [
+    7
+  ],
+  "leaf_lengths_checked": 4094,
+  "obstruction_controls": {
+    "outside_support": 4093,
+    "valuation_relation": 0
+  },
+  "order37_residues": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    27,
+    17,
+    34,
+    31,
+    25,
+    13,
+    26,
+    15,
+    30,
+    23,
+    9,
+    18,
+    36,
+    35,
+    33,
+    29,
+    21,
+    5,
+    10,
+    20,
+    3,
+    6,
+    12,
+    24,
+    11,
+    22,
+    7,
+    14,
+    28,
+    19,
+    1
+  ],
+  "status": "PASS",
+  "valuation_group_controls": 1331
+}

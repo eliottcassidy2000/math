@@ -1,0 +1,17 @@
+[
+  {
+    "receipt_sha256": "0ae795c723231398ea3f8e4bdc5dd27050e104edb236a93a7a5f092e91194fb7",
+    "script": "verify_primitive_cancellation.py",
+    "status": "PASS"
+  },
+  {
+    "receipt_sha256": "82484ee2f8d4edc967f874c064a65d0e63c06258f8c00b5fb4d25281e5368f27",
+    "script": "verify_primitive_target_inverse.py",
+    "status": "PASS"
+  },
+  {
+    "receipt_sha256": "0a512c956f9ac7f7a665a419858dde1fd15e38210dbb284d15b09919ad902f4b",
+    "script": "verify_primitive_leaf_rigidity.py",
+    "status": "PASS"
+  }
+]

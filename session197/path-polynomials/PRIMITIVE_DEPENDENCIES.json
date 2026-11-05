@@ -1,0 +1,22 @@
+[
+  {
+    "file": "UNIT_OFFSET_RIGIDITY.md",
+    "repository_path": "session197/path-polynomials/UNIT_OFFSET_RIGIDITY.md",
+    "sha256": "3c116086bfd697eaeaf5fcbf46308f1e31cdf653eb2a651053f01bce46ce374b"
+  },
+  {
+    "file": "RATIO_LATTICE.md",
+    "repository_path": "session197/path-polynomials/RATIO_LATTICE.md",
+    "sha256": "a6f9c0b09d715865d01bbd62d95f2261c59e1f4a7eea2ed05cc09ac90aff60a3"
+  },
+  {
+    "file": "verify_unit_offset_rigidity.py",
+    "repository_path": "session197/path-polynomials/verify_unit_offset_rigidity.py",
+    "sha256": "756ea2c09f32d4830a05ebf92bee079812b3b013d9526b173a04ca2f70bbab0f"
+  },
+  {
+    "file": "verify.py",
+    "repository_path": "session197/path-polynomials/verify.py",
+    "sha256": "10c2a35ce3f506aefb031645e81cffc1a2fb4d73bf9bbb38a163ccbf8e35dfcb"
+  }
+]

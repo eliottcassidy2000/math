@@ -1,0 +1,38 @@
+{
+  "absent_prime": {
+    "all_remainders_sha256": "4f189ac6f1a6089b5172b5ed66116d47be3ada3d10b9c512d4beedb5b2a2074d",
+    "floor_sqrt": 77395,
+    "integers_tested": 77394,
+    "minimum_nonzero_remainder": 1,
+    "prime": 5990037979
+  },
+  "complete_table_cap": 10000000000000,
+  "complete_table_members": 24,
+  "finite_box_recipes_recovered": 216,
+  "positive_targets": [
+    {
+      "N": 5990037973,
+      "recipes": [
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "N": 161868952021,
+      "recipes": [
+        [
+          0,
+          0,
+          0,
+          4
+        ]
+      ]
+    }
+  ],
+  "status": "PASS",
+  "tested_targets": 624
+}
