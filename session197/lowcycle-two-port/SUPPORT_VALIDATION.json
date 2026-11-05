@@ -1,0 +1,51 @@
+{
+  "closures": [
+    {
+      "admissible_edges": 17844,
+      "bound": 21,
+      "complete": true,
+      "cycle_rejected_edges": 6465,
+      "max_shortest_word": 12,
+      "missing_odds": [
+        7,
+        21
+      ],
+      "processed": 4670,
+      "states": 4670
+    },
+    {
+      "admissible_edges": 1384593,
+      "bound": 173,
+      "complete": true,
+      "cycle_rejected_edges": 760692,
+      "max_shortest_word": 19,
+      "missing_odds": [
+        7,
+        21,
+        67
+      ],
+      "processed": 386077,
+      "states": 386077
+    },
+    {
+      "admissible_edges": 12232554,
+      "bound": 501,
+      "complete": true,
+      "cycle_rejected_edges": 6773457,
+      "max_shortest_word": 21,
+      "missing_odds": [
+        7,
+        21,
+        67
+      ],
+      "processed": 3455583,
+      "states": 3455583
+    }
+  ],
+  "edge_control_classes": 39,
+  "literal_cycle_readout_checks": 3280,
+  "raw_control_states": 1369,
+  "refinement_rounds": 3,
+  "status": "PASS",
+  "uncapped_physical_witness_replays": 338
+}
