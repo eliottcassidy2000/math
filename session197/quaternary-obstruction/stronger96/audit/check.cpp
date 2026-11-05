@@ -1,0 +1,16 @@
+#include <algorithm>
+#include <array>
+#include <fstream>
+#include <iostream>
+#include <numeric>
+#include <set>
+#include <sstream>
+#include <stdexcept>
+#include <vector>
+using namespace std;using R=vector<int>;
+void need(bool b,const char*s){if(!b)throw runtime_error(s);}int bit(unsigned b){return __builtin_ctz(b);}void pluscap(int&a,int b){a=min(1024,a+b);}
+array<int,4>run(R const&r,int root){int n=r.size();vector<int>V;for(int v=0;v<n;v++)if(v!=root)V.push_back(v);int q=V.size(),N=1<<q;vector<array<int,4>>d(size_t(N)*q);for(int v=0;v<q;v++){d[size_t(1<<v)*q+v][0]=1;d[size_t(1<<v)*q+v][1]=r[root]>>V[v]&1;}for(int s=1;s<N;s++)for(int v=0;v<q;v++)if(s>>v&1)for(int w=0;w<q;w++)if(!(s>>w&1)){auto const&a=d[size_t(s)*q+v];auto &b=d[size_t(s|1<<w)*q+w];if(r[V[v]]>>V[w]&1)for(int k=0;k<4;k++)pluscap(b[k],a[k]);if((r[V[v]]>>root&1)&&(r[root]>>V[w]&1))for(int k=0;k<3;k++)pluscap(b[k+1],a[k]);}array<int,4>a{};for(int v=0;v<q;v++)for(int k=0;k<4;k++){pluscap(a[k],d[size_t(N-1)*q+v][k]);if(k<3&&(r[V[v]]>>root&1))pluscap(a[k+1],d[size_t(N-1)*q+v][k]);}return a;}
+int match(R const&r,int root){vector<int>O,I;for(int v=0;v<(int)r.size();v++)if(v!=root)(r[root]>>v&1?O:I).push_back(v);vector<bool>dp(1<<I.size());dp[0]=true;for(int u:O){auto next=dp;for(int s=0;s<(int)dp.size();s++)if(dp[s])for(int j=0;j<(int)I.size();j++)if(!(s>>j&1)&&(r[u]>>I[j]&1))next[s|1<<j]=true;dp=next;}int ans=0;for(int s=0;s<(int)dp.size();s++)if(dp[s])ans=max(ans,__builtin_popcount((unsigned)s));return ans;}
+void structure(R const&r){int n=r.size(),F=(1<<n)-1;for(int v=0;v<n;v++){need(!(r[v]>>v&1)&&r[v]>=0&&r[v]<=F,"bank row");for(int u=v+1;u<n;u++)need(((r[v]>>u&1)+(r[u]>>v&1))==1,"tournament edge");unsigned reach=1<<v,old=0;while(reach!=old){old=reach;for(int u=0;u<n;u++)if(reach>>u&1)reach|=r[u];}need(reach==(unsigned)F,"strong bank graph");}}
+int main(int argc,char**argv){need(argc==2,"bank csv argument");ifstream in(argv[1]);string line;int graphs=0,eligible=0,roots=0,rank3=0,first=0,second=0,calls=0;vector<array<int,8>>survivors;set<R>unique;while(getline(in,line)){replace(line.begin(),line.end(),',',' ');istringstream ss(line);int n,h;ss>>n>>h;R r(n);for(int&v:r)ss>>v;need(n>=3&&n<=11&&h<=361&&(h&1),"bank domain");need(unique.insert(r).second,"bank duplicate");structure(r);graphs++;int A=0,beta=0;for(int e:{-1,1})if((h-e)%4==0){int x=(h-e)/4;if(x>0&&x<=90&&x%6==0){A=x;beta=e;}}eligible+=A>0;for(int root=0;root<n;root++){rank3+=match(r,root)==3;if(!A&&root)continue;auto a=run(r,root);calls++;need(a[1]==h,"independent root-gap recount");if(!A)continue;roots++;if(a[2]!=6*A)continue;first++;survivors.push_back({n,h,root,A,beta,a[0],a[2],a[3]});if(a[3]==4*A)second++;}}
+need(graphs==8740&&eligible==1398&&roots==12263&&rank3==13456&&first==6&&second==0,"independent census result");cout<<"{\"status\":\"PASS\",\"graphs\":"<<graphs<<",\"eligible_graph_signs\":"<<eligible<<",\"eligible_roots\":"<<roots<<",\"rank3_roots\":"<<rank3<<",\"root_gap_calls\":"<<calls<<",\"first_equation_survivors\":"<<first<<",\"second_equation_survivors\":"<<second<<",\"first_survivors\":[";for(int i=0;i<(int)survivors.size();i++){if(i)cout<<',';cout<<'[';for(int j=0;j<8;j++){if(j)cout<<',';cout<<survivors[i][j];}cout<<']';}cout<<"]}\n";}
