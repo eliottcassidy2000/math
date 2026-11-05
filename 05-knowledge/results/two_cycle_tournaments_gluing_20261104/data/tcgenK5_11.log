@@ -1,0 +1,1 @@
+order 11: 4708 parents, 110796 labelled extensions; one-cycle 987 (Garey F(2n-6) = 987); two-cycle 1775 ((n-2)F(2n-9)-L(2n-10) = 1775); two-cycle classes without an out-degree-1 vertex: 0, without an in-degree-1 vertex: 0 (one-cycle: 568, 568); 2 s classes by hc: {1: 987, 2: 1775, 3: 3574, 4: 3390, 5: 4664}

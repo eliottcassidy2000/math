@@ -1,0 +1,5 @@
+order 5: 12 tournaments, 1 2-connected, minimum hc among 2-connected = 2; histogram of hc (2-connected, hc < 40): 2:1
+order 6: 56 tournaments, 5 2-connected, minimum hc among 2-connected = 4; histogram of hc (2-connected, hc < 40): 4:1 5:4
+order 7: 456 tournaments, 86 2-connected, minimum hc among 2-connected = 8; histogram of hc (2-connected, hc < 40): 8:6 9:5 10:8 11:23 12:15 13:9 14:9 15:8 17:2 24:1
+order 8: 6880 tournaments, 2375 2-connected, minimum hc among 2-connected = 13; histogram of hc (2-connected, hc < 40): 13:5 14:14 15:10 16:8 17:19 18:34 19:26 20:14 21:42 22:51 23:65 24:38 25:52 26:81 27:93 28:91 29:118 30:77 31:92 32:97 33:145 34:124 35:114 36:103 37:97 38:115 39:93
+order 9: 191536 tournaments, 99465 2-connected, minimum hc among 2-connected = 19; histogram of hc (2-connected, hc < 40): 19:1 20:4 21:10 22:12 23:10 24:27 25:27 26:33 27:45 28:66 29:38 30:56 31:34 32:77 33:98 34:98 35:88 36:114 37:88 38:87 39:147
