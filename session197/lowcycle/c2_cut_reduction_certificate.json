@@ -1,0 +1,80 @@
+{
+  "C9_bridgefree_cut_example": {
+    "rows": [
+      10,
+      12,
+      9,
+      112,
+      39,
+      71,
+      23
+    ],
+    "separating_vertices": [
+      3
+    ]
+  },
+  "bridgefree_C2_order_bound": 73,
+  "bridgefree_C3_order_bound": 97,
+  "labelled_tournaments": 33867,
+  "low_cycle_cut_bridge_checks": 15906,
+  "maximum_labelled_order": 6,
+  "non_Hamiltonian_arc_control": {
+    "C": 5,
+    "arc": [
+      2,
+      5
+    ],
+    "rows": [
+      14,
+      20,
+      56,
+      50,
+      33,
+      3
+    ]
+  },
+  "status": "PASS",
+  "two_strong_inventory": [
+    {
+      "cycle_histogram": {},
+      "minimum_cycles": null,
+      "order": 1,
+      "two_strong_labelled": 0
+    },
+    {
+      "cycle_histogram": {},
+      "minimum_cycles": null,
+      "order": 2,
+      "two_strong_labelled": 0
+    },
+    {
+      "cycle_histogram": {},
+      "minimum_cycles": null,
+      "order": 3,
+      "two_strong_labelled": 0
+    },
+    {
+      "cycle_histogram": {},
+      "minimum_cycles": null,
+      "order": 4,
+      "two_strong_labelled": 0
+    },
+    {
+      "cycle_histogram": {
+        "2": 24
+      },
+      "minimum_cycles": 2,
+      "order": 5,
+      "two_strong_labelled": 24
+    },
+    {
+      "cycle_histogram": {
+        "4": 720,
+        "5": 1920
+      },
+      "minimum_cycles": 4,
+      "order": 6,
+      "two_strong_labelled": 2640
+    }
+  ]
+}
