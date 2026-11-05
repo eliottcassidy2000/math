@@ -1,0 +1,26 @@
+{
+  "active_steps": 288,
+  "adaptive_sequences": 192,
+  "integer_depth_boundaries": 24024,
+  "labelled_cut_graphs": 1099,
+  "literal_labelled_cuts": 47096,
+  "physical_weighted_comparisons": 3420,
+  "rooted_contexts": 285,
+  "status": "PASS",
+  "strict_weighted_comparisons": 1056,
+  "transitive_wrapper_counts": [
+    3,
+    5,
+    9,
+    17,
+    33,
+    65,
+    129,
+    257,
+    513
+  ],
+  "weighted_exterior_triangle": [
+    3,
+    3
+  ]
+}
