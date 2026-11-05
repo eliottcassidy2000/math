@@ -1,0 +1,1 @@
+{"status":"PASS","graphs":8740,"eligible_graph_signs":1398,"eligible_roots":12263,"rank3_roots":13456,"root_gap_calls":19605,"first_equation_survivors":6,"second_equation_survivors":0,"first_survivors":[[8,145,3,36,1,15,216,78],[8,289,3,72,1,67,432,244],[8,289,4,72,1,67,432,244],[8,145,4,36,1,15,216,78],[9,265,3,66,1,53,396,198],[9,265,5,66,1,53,396,198]]}
