@@ -1,0 +1,53 @@
+{
+  "bound": 13,
+  "cap": 27,
+  "certificate_sha256": "376bcc84f28b996c69aac9fac86bedc3086c784f80a7d4934ef514965f09d622",
+  "charge_counts": [
+    3,
+    5,
+    9,
+    11
+  ],
+  "closed_vectors": 2382,
+  "frontier_coordinates": 119,
+  "low_R_profiles_at_H13": [
+    [
+      0,
+      26
+    ],
+    [
+      2,
+      18
+    ],
+    [
+      2,
+      26
+    ],
+    [
+      3,
+      15
+    ],
+    [
+      4,
+      14
+    ],
+    [
+      13,
+      13
+    ]
+  ],
+  "ordinary_H13_witness": {
+    "profile": [
+      13,
+      2,
+      18
+    ],
+    "width": 2,
+    "word": "00113"
+  },
+  "physical_readout_checks": 4683,
+  "pruned_edges": 13318,
+  "retained_edges": 5738,
+  "saturation_stress_checks": 1000,
+  "width": 3
+}
