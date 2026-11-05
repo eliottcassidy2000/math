@@ -1,0 +1,16 @@
+order 7: 14 vertex gluings
+    NC(Y) = NC(A)|NC(B)|{s,a_1,b_l}                                14 / 14
+    cut(Y) = cut(A)|cut(B) minus the cut arcs incident to s        14 / 14
+    piece: cut arcs = cycle arcs not inside the NC run             28 / 28
+order 8: 46 vertex gluings
+    NC(Y) = NC(A)|NC(B)|{s,a_1,b_l}                                46 / 46
+    cut(Y) = cut(A)|cut(B) minus the cut arcs incident to s        46 / 46
+    piece: cut arcs = cycle arcs not inside the NC run             92 / 92
+order 9: 145 vertex gluings
+    NC(Y) = NC(A)|NC(B)|{s,a_1,b_l}                                145 / 145
+    cut(Y) = cut(A)|cut(B) minus the cut arcs incident to s        145 / 145
+    piece: cut arcs = cycle arcs not inside the NC run             290 / 290
+order 10: 444 vertex gluings
+    NC(Y) = NC(A)|NC(B)|{s,a_1,b_l}                                444 / 444
+    cut(Y) = cut(A)|cut(B) minus the cut arcs incident to s        444 / 444
+    piece: cut arcs = cycle arcs not inside the NC run             888 / 888

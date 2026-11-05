@@ -39,3 +39,25 @@ def cutarcs(rows, verts):
 def ncset(rows, verts): return set(v for v in verts if strong(rows,[x for x in verts if x!=v]))
 
 D = os.path.join(HERE, '..', 'data') + '/'
+for n in range(int(sys.argv[1]), int(sys.argv[2])+1):
+    ok=Counter(); tested=0
+    for l in open(D+'cls_%d.txt'%n):
+        h,d6=l.split()
+        if h!='2': continue
+        rows=rows_from_d6(d6); runs=runs_of(rows,n); sizes=[len(r) for r in runs]
+        if 1 not in sizes: continue
+        j=sizes.index(1); s=runs[j][0]; S2=runs[(j+1)%3]; PR=runs[(j+2)%3]; a_1=S2[0]; a_k=S2[-1]; b_1=PR[0]; b_l=PR[-1]
+        X=[s]+S2; Bv=[s]+PR; tested+=1
+        NCY=ncset(rows,range(n)); NCA=ncset(rows,X); NCB=ncset(rows,Bv)
+        cutY=cutarcs(rows,range(n)); cutA=cutarcs(rows,X); cutB=cutarcs(rows,Bv)
+        inc_s=set(e for e in (cutA|cutB) if s in e)
+        ok['cut(Y) = cut(A)|cut(B) minus the cut arcs incident to s']+= cutY==((cutA|cutB)-inc_s)
+        ok['NC(Y) = NC(A)|NC(B)|{s,a_1,b_l}']+= NCY==(NCA|NCB|{s,a_1,b_l})
+        # cut arcs of the UH pieces = cycle arcs outside the non-critical run (run = NC, an interval of the cycle)
+        for (V,NC,cut) in ((X,NCA,cutA),(Bv,NCB,cutB)):
+            k=len(V); sub=[sum(((rows[v]>>u)&1)<<jj for jj,u in enumerate(V)) for v in V]; C=cycles(sub,k)[0]; cyc=[V[i] for i in C]
+            arcs=[(cyc[i],cyc[(i+1)%k]) for i in range(k)]
+            outside=set(e for e in arcs if not (e[0] in NC and e[1] in NC))
+            ok['piece: cut arcs = cycle arcs not inside the NC run']+= cut==outside
+    print("order %d: %d vertex gluings"%(n,tested))
+    for k_,v in sorted(ok.items()): print("    %-62s %d / %d"%(k_,v,tested if 'piece' not in k_ else 2*tested))
