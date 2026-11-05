@@ -1,0 +1,169 @@
+{
+  "complete_labelled_max_order": 6,
+  "complete_labelled_tournaments": 33867,
+  "complete_root_two_inventory": [
+    {
+      "order": 1,
+      "rooted_start_two": 0
+    },
+    {
+      "order": 2,
+      "rooted_start_two": 0
+    },
+    {
+      "order": 3,
+      "rooted_start_two": 0
+    },
+    {
+      "order": 4,
+      "rooted_start_two": 1
+    },
+    {
+      "order": 5,
+      "rooted_start_two": 5
+    },
+    {
+      "order": 6,
+      "rooted_start_two": 18
+    }
+  ],
+  "recurrence_checked_through_order": 100,
+  "root_one_inventory": [
+    {
+      "order": 3,
+      "rooted_start_one": 1,
+      "start_one_size_histogram": {
+        "3": 1
+      },
+      "unordered_start_one_pairs": 1,
+      "unrooted_C1": 1
+    },
+    {
+      "order": 4,
+      "rooted_start_one": 3,
+      "start_one_size_histogram": {
+        "3": 1
+      },
+      "unordered_start_one_pairs": 3,
+      "unrooted_C1": 1
+    },
+    {
+      "order": 5,
+      "rooted_start_one": 8,
+      "start_one_size_histogram": {
+        "2": 1,
+        "3": 2
+      },
+      "unordered_start_one_pairs": 7,
+      "unrooted_C1": 3
+    },
+    {
+      "order": 6,
+      "rooted_start_one": 21,
+      "start_one_size_histogram": {
+        "2": 3,
+        "3": 5
+      },
+      "unordered_start_one_pairs": 18,
+      "unrooted_C1": 8
+    },
+    {
+      "order": 7,
+      "rooted_start_one": 55,
+      "start_one_size_histogram": {
+        "2": 8,
+        "3": 13
+      },
+      "unordered_start_one_pairs": 47,
+      "unrooted_C1": 21
+    },
+    {
+      "order": 8,
+      "rooted_start_one": 144,
+      "start_one_size_histogram": {
+        "2": 21,
+        "3": 34
+      },
+      "unordered_start_one_pairs": 123,
+      "unrooted_C1": 55
+    },
+    {
+      "order": 9,
+      "rooted_start_one": 377,
+      "start_one_size_histogram": {
+        "2": 55,
+        "3": 89
+      },
+      "unordered_start_one_pairs": 322,
+      "unrooted_C1": 144
+    }
+  ],
+  "root_one_physical_graphs": 609,
+  "root_two_inventory": [
+    {
+      "adjacency_bank_sha256": "9cce17ed39235ece43ee1dbee5b65f39c3562feddac4df0104b3df54a8036c48",
+      "cycle_count_histogram": {
+        "1": 1,
+        "2": 0
+      },
+      "order": 4,
+      "rooted_start_two": 1
+    },
+    {
+      "adjacency_bank_sha256": "0f5e904d4c7b64b71dc82e2c774f5b8741ea83f19ef42766f2dd95c95b8cfa47",
+      "cycle_count_histogram": {
+        "1": 2,
+        "2": 3
+      },
+      "order": 5,
+      "rooted_start_two": 5
+    },
+    {
+      "adjacency_bank_sha256": "867edabde7c15e333d938600558e49958443357fe79758adf1ef84dc53268135",
+      "cycle_count_histogram": {
+        "1": 5,
+        "2": 13
+      },
+      "order": 6,
+      "rooted_start_two": 18
+    },
+    {
+      "adjacency_bank_sha256": "390993ddf8904e290dcbf574cd2120b8ba4c66ec6aee9555ef1ead70656c2e85",
+      "cycle_count_histogram": {
+        "1": 13,
+        "2": 47
+      },
+      "order": 7,
+      "rooted_start_two": 60
+    },
+    {
+      "adjacency_bank_sha256": "9a24cad1dfca15f563e26327c245fc829bdf236d9d1d94c1ea9736163206a4ed",
+      "cycle_count_histogram": {
+        "1": 34,
+        "2": 157
+      },
+      "order": 8,
+      "rooted_start_two": 191
+    },
+    {
+      "adjacency_bank_sha256": "ae3c5569660ba95644b69158cf6f7a2a3311c6d571a4fe6928cbe59bd9896759",
+      "cycle_count_histogram": {
+        "1": 89,
+        "2": 500
+      },
+      "order": 9,
+      "rooted_start_two": 589
+    },
+    {
+      "adjacency_bank_sha256": "0023932d651da0234e93a4ff583ff93a73816146025eae6a48b5c1dc62b62072",
+      "cycle_count_histogram": {
+        "1": 233,
+        "2": 1542
+      },
+      "order": 10,
+      "rooted_start_two": 1775
+    }
+  ],
+  "root_two_physical_graphs": 2639,
+  "status": "PASS"
+}
