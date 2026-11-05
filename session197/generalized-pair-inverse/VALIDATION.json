@@ -1,0 +1,122 @@
+{
+  "bound": 1861,
+  "c1_quadruples": 23432,
+  "candidate_sources": 2000,
+  "complete_support_physical_witnesses": 883,
+  "family_output_values": 883,
+  "literal_path_checks": 486,
+  "max_witness_order": 14,
+  "oversized_rectangle": 49723,
+  "repairs": {
+    "533": {
+      "C": 2,
+      "H": 533,
+      "core_recipe": [
+        7,
+        2
+      ],
+      "family": "N",
+      "order": 11,
+      "parameter": 2,
+      "root": 8,
+      "rows": [
+        2044,
+        1989,
+        2040,
+        2034,
+        2018,
+        1154,
+        1952,
+        1792,
+        544,
+        1056,
+        256
+      ],
+      "source": [
+        37,
+        0,
+        74,
+        11
+      ],
+      "tail": 1
+    },
+    "821": {
+      "C": 2,
+      "H": 821,
+      "core_recipe": [
+        3,
+        2
+      ],
+      "family": "P",
+      "order": 12,
+      "parameter": 3,
+      "root": 9,
+      "rows": [
+        4092,
+        4069,
+        4088,
+        4082,
+        3970,
+        4048,
+        3600,
+        3392,
+        3648,
+        1152,
+        2048,
+        512
+      ],
+      "source": [
+        19,
+        5,
+        19,
+        5
+      ],
+      "tail": 0
+    },
+    "1861": {
+      "C": 2,
+      "H": 1861,
+      "core_recipe": [
+        4,
+        1
+      ],
+      "family": "N",
+      "order": 13,
+      "parameter": 21,
+      "root": 6,
+      "rows": [
+        8188,
+        8161,
+        8186,
+        8178,
+        7970,
+        8128,
+        2960,
+        7952,
+        7680,
+        7168,
+        6208,
+        4096,
+        64
+      ],
+      "source": [
+        9,
+        0,
+        20,
+        5
+      ],
+      "tail": 1
+    }
+  },
+  "seed_profiles": 403,
+  "small_physical_outputs": 2014,
+  "source_graph_controls": 324,
+  "source_quadruples": 1316,
+  "status": "PASS",
+  "targeted_inverse_checks": 501,
+  "union_missing": [
+    7,
+    21,
+    67
+  ]
+}
