@@ -1,0 +1,104 @@
+{
+  "all_order_minimum_cycles": 9,
+  "complete_labelled_tournaments": 33867,
+  "literal_cut_products": 37094,
+  "minimum_order": 7,
+  "separating_vertex_cases": 37094,
+  "status": "PASS",
+  "witness_cycles": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      4
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      6,
+      4,
+      5
+    ],
+    [
+      0,
+      2,
+      3,
+      1,
+      4,
+      5,
+      6
+    ],
+    [
+      0,
+      2,
+      3,
+      1,
+      5,
+      6,
+      4
+    ],
+    [
+      0,
+      2,
+      3,
+      1,
+      6,
+      4,
+      5
+    ],
+    [
+      0,
+      3,
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    [
+      0,
+      3,
+      1,
+      2,
+      5,
+      6,
+      4
+    ],
+    [
+      0,
+      3,
+      1,
+      2,
+      6,
+      4,
+      5
+    ]
+  ],
+  "witness_rows": [
+    14,
+    116,
+    120,
+    114,
+    33,
+    65,
+    17
+  ],
+  "witness_separating_vertices": [
+    0
+  ],
+  "witness_strong_arc_deletions": 21
+}
