@@ -1,0 +1,17 @@
+{
+  "collision_deletions": [
+    1,
+    3
+  ],
+  "independent_forward_quadruples": 324,
+  "large_tail_exponents": [
+    20,
+    80,
+    200
+  ],
+  "literal_start_one_roots": 1695,
+  "method": "Independent forward quadruple closure plus literal permutation/cut inventories and exact dyadic edge controls",
+  "status": "PASS",
+  "strong_core_tests": 323,
+  "weak_numeric_controls": 82416
+}
