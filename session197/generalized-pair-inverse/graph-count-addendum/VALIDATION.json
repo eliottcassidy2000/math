@@ -1,0 +1,112 @@
+{
+  "coefficient_controls": 101,
+  "first_coefficient_separation": 14,
+  "order14": {
+    "all_C2": 44394,
+    "minimum_missing": 2658,
+    "presentations": 41736
+  },
+  "rows": [
+    {
+      "all_C2": 2,
+      "order": 5,
+      "presentations": 4
+    },
+    {
+      "all_C2": 5,
+      "order": 6,
+      "presentations": 12
+    },
+    {
+      "all_C2": 18,
+      "order": 7,
+      "presentations": 36
+    },
+    {
+      "all_C2": 60,
+      "order": 8,
+      "presentations": 104
+    },
+    {
+      "all_C2": 191,
+      "order": 9,
+      "presentations": 292
+    },
+    {
+      "all_C2": 589,
+      "order": 10,
+      "presentations": 804
+    },
+    {
+      "all_C2": 1775,
+      "order": 11,
+      "presentations": 2184
+    },
+    {
+      "all_C2": 5257,
+      "order": 12,
+      "presentations": 5876
+    },
+    {
+      "all_C2": 15360,
+      "order": 13,
+      "presentations": 15700
+    },
+    {
+      "all_C2": 44394,
+      "order": 14,
+      "presentations": 41736
+    },
+    {
+      "all_C2": 127171,
+      "order": 15,
+      "presentations": 110532
+    },
+    {
+      "all_C2": 361595,
+      "order": 16,
+      "presentations": 291908
+    },
+    {
+      "all_C2": 1021693,
+      "order": 17,
+      "presentations": 769288
+    },
+    {
+      "all_C2": 2871245,
+      "order": 18,
+      "presentations": 2024148
+    },
+    {
+      "all_C2": 8031246,
+      "order": 19,
+      "presentations": 5319540
+    },
+    {
+      "all_C2": 22372344,
+      "order": 20,
+      "presentations": 13967240
+    },
+    {
+      "all_C2": 62096135,
+      "order": 21,
+      "presentations": 36647716
+    },
+    {
+      "all_C2": 171797257,
+      "order": 22,
+      "presentations": 96106980
+    },
+    {
+      "all_C2": 473928875,
+      "order": 23,
+      "presentations": 251935368
+    },
+    {
+      "all_C2": 1304007889,
+      "order": 24,
+      "presentations": 660223412
+    }
+  ],
+  "status": "PASS"
+}
