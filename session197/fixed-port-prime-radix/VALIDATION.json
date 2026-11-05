@@ -1,0 +1,103 @@
+{
+  "necessary_offsets": [
+    {
+      "amplitude_divisor": 2,
+      "minimum_ports": 2,
+      "modulus": 4,
+      "prime": 3,
+      "residue": 2
+    },
+    {
+      "amplitude_divisor": 24,
+      "minimum_ports": 4,
+      "modulus": 8,
+      "prime": 5,
+      "residue": 4
+    },
+    {
+      "amplitude_divisor": 720,
+      "minimum_ports": 6,
+      "modulus": 12,
+      "prime": 7,
+      "residue": 6
+    },
+    {
+      "amplitude_divisor": 3628800,
+      "minimum_ports": 10,
+      "modulus": 20,
+      "prime": 11,
+      "residue": 10
+    }
+  ],
+  "physical_examples": [
+    {
+      "counts": [
+        179,
+        539,
+        1619,
+        4859,
+        14579
+      ],
+      "offset": 2,
+      "ports": [
+        0,
+        1,
+        4
+      ],
+      "root": 7,
+      "rows": [
+        2,
+        12,
+        145,
+        149,
+        99,
+        143,
+        175,
+        19
+      ],
+      "runs": [
+        59,
+        179,
+        180,
+        60
+      ]
+    },
+    {
+      "counts": [
+        217,
+        649,
+        1945,
+        5833,
+        17497
+      ],
+      "offset": -2,
+      "ports": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "root": 0,
+      "rows": [
+        30,
+        64,
+        10,
+        66,
+        174,
+        335,
+        21,
+        367,
+        95
+      ],
+      "runs": [
+        73,
+        217,
+        216,
+        72
+      ]
+    }
+  ],
+  "prime_factorization_controls": 3920,
+  "rooted_literal_controls": 5405,
+  "status": "PASS"
+}
