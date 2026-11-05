@@ -152,6 +152,15 @@ for this certificate. Thus the obstruction is not a blanket inability to
 grow through two generations: the 13->43->{131,133} branch has an explicit
 induced physical realization, whereas 13->41->127 does not.
 
+A direct induced H13-to-H127 route also exists if the intermediate H41 is
+bypassed. Starting from D, use masks29,7,1. The successive strong counts are
+
+    13 ->29 ->75 ->127,
+
+with final rows (2,172,137,209,199,221,135,1). This is a relabeling of the
+S193 H127 positive control, independently checked here. Thus the theorem
+isolates the intermediate41, rather than excluding all H13 ancestry of127.
+
 No outgoing return operations from H131 or H133 are asserted. The reusable
 induced-only ternary tree must fail, but reconstruction, old-arc resets,
 branch-specific products and existential target selection remain available.
