@@ -1,0 +1,12 @@
+QUOTIENT 0 rows 0 aut 1 anti 1 anti_involutions 1 ordinary_7_11 1 1 1 1 1 self_converse_7_11 1 1 1 1 1
+QUOTIENT 1 rows 0 5 9 3 aut 3 anti 0 anti_involutions 0 ordinary_7_11 8 13 20 30 42 self_converse_7_11 0 0 0 0 0
+QUOTIENT 2 rows 0 5 9 3 15 aut 3 anti 3 anti_involutions 3 ordinary_7_11 7 15 28 48 78 self_converse_7_11 3 3 6 6 10
+QUOTIENT 3 rows 2 4 1 aut 3 anti 3 anti_involutions 3 ordinary_7_11 5 7 10 12 15 self_converse_7_11 3 3 4 4 5
+QUOTIENT 4 rows 2 4 1 7 aut 3 anti 0 anti_involutions 0 ordinary_7_11 8 13 20 30 42 self_converse_7_11 0 0 0 0 0
+QUOTIENT 5 rows 2 4 9 19 7 aut 1 anti 1 anti_involutions 1 ordinary_7_11 15 35 70 126 210 self_converse_7_11 3 3 6 6 10
+QUOTIENT 6 rows 2 12 9 17 7 aut 1 anti 1 anti_involutions 1 ordinary_7_11 15 35 70 126 210 self_converse_7_11 3 3 6 6 10
+QUOTIENT 7 rows 2 28 9 17 5 aut 3 anti 3 anti_involutions 3 ordinary_7_11 7 15 28 48 78 self_converse_7_11 3 3 6 6 10
+QUOTIENT 8 rows 6 12 24 17 3 aut 5 anti 5 anti_involutions 5 ordinary_7_11 3 7 14 26 42 self_converse_7_11 3 3 6 6 10
+QUOTIENT 9 rows 22 44 88 49 98 69 11 aut 21 anti 21 anti_involutions 7 ordinary_7_11 1 1 2 6 12 self_converse_7_11 1 1 2 2 4
+QUOTIENT 10 rows 60 57 50 36 8 16 aut 1 anti 1 anti_involutions 1 ordinary_7_11 6 21 56 126 252 self_converse_7_11 0 3 0 6 0
+PASS quotient_seeds 11 physical_blowups 3938 full_map_comparisons 7876 maximal_block_controls 1095 orbit_order_controls 82 affine_clone_controls 29322 minimum_completion_controls 368286 coefficient_limit 100
