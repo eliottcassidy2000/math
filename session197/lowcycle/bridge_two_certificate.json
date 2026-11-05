@@ -1,0 +1,95 @@
+{
+  "C1_pair_indegree_controls": 523,
+  "bridge_C2_rigidity_checks": 864,
+  "complete_labelled_max_order": 6,
+  "complete_labelled_tournaments": 33867,
+  "complete_unrooted_C2_inventory": [
+    {
+      "bridge_classes": 0,
+      "bridgefree_classes": 0,
+      "order": 1
+    },
+    {
+      "bridge_classes": 0,
+      "bridgefree_classes": 0,
+      "order": 2
+    },
+    {
+      "bridge_classes": 0,
+      "bridgefree_classes": 0,
+      "order": 3
+    },
+    {
+      "bridge_classes": 0,
+      "bridgefree_classes": 0,
+      "order": 4
+    },
+    {
+      "bridge_classes": 1,
+      "bridgefree_classes": 1,
+      "order": 5
+    },
+    {
+      "bridge_classes": 5,
+      "bridgefree_classes": 0,
+      "order": 6
+    }
+  ],
+  "exact_total_C2_formula_from_order": 74,
+  "formula_checked_through_order": 100,
+  "physical_inventory": [
+    {
+      "marked_outdegree_one": 0,
+      "order": 4,
+      "rooted_start_two": 1,
+      "two_outdegree_one": 0,
+      "unrooted_bridge_C2": 0
+    },
+    {
+      "marked_outdegree_one": 1,
+      "order": 5,
+      "rooted_start_two": 5,
+      "two_outdegree_one": 0,
+      "unrooted_bridge_C2": 1
+    },
+    {
+      "marked_outdegree_one": 6,
+      "order": 6,
+      "rooted_start_two": 18,
+      "two_outdegree_one": 1,
+      "unrooted_bridge_C2": 5
+    },
+    {
+      "marked_outdegree_one": 24,
+      "order": 7,
+      "rooted_start_two": 60,
+      "two_outdegree_one": 6,
+      "unrooted_bridge_C2": 18
+    },
+    {
+      "marked_outdegree_one": 84,
+      "order": 8,
+      "rooted_start_two": 191,
+      "two_outdegree_one": 24,
+      "unrooted_bridge_C2": 60
+    },
+    {
+      "marked_outdegree_one": 275,
+      "order": 9,
+      "rooted_start_two": 589,
+      "two_outdegree_one": 84,
+      "unrooted_bridge_C2": 191
+    },
+    {
+      "marked_outdegree_one": 864,
+      "order": 10,
+      "rooted_start_two": 1775,
+      "two_outdegree_one": 275,
+      "unrooted_bridge_C2": 589
+    }
+  ],
+  "start_two_indegree_controls": 2639,
+  "status": "PASS",
+  "two_strong_root_lower_bound_checks": 15960,
+  "two_vertex_inverse_checks": 390
+}
