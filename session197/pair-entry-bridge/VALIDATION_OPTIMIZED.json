@@ -1,0 +1,49 @@
+{
+  "checks": {
+    "adjacent_profiles": 23,
+    "general_pair_grafts": 755,
+    "literal_hamilton_counts": 68,
+    "nonadjacent_maps": 23,
+    "pair_grafts": 248,
+    "tail_moves": 255
+  },
+  "formal_inverse_hostile": {
+    "nonphysical_inverse": [
+      3,
+      2,
+      4
+    ],
+    "physical": [
+      5,
+      1,
+      7
+    ]
+  },
+  "nonadjacent_example": {
+    "desired_profile": [
+      13,
+      2,
+      18
+    ],
+    "desired_root": 0,
+    "other_profile": [
+      13,
+      3,
+      15
+    ],
+    "other_root": 3,
+    "ports": [
+      0,
+      4
+    ],
+    "rows": [
+      18,
+      20,
+      25,
+      3,
+      8
+    ]
+  },
+  "scope": "All-order identities proved by bijections; finite physical controls are not a coverage extrapolation.",
+  "status": "PASS"
+}

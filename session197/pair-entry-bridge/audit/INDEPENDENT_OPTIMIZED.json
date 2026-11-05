@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "adjacent": 54,
+    "birth_rows": 306,
+    "nonadjacent": 54,
+    "pair": 208
+  },
+  "method": "Literal permutation/cut inventories and independent adjacency construction; no subset DP or imported source counter.",
+  "status": "PASS"
+}
