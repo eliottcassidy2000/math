@@ -1,0 +1,442 @@
+{
+  "all_support_graph_checks": 884,
+  "arbitrary_pair_grafts": 11890,
+  "bilinear_pairs_evaluated": 10678,
+  "bound": 1861,
+  "complete_C2_values": 884,
+  "complete_labelled_C2_factorizations": 3744,
+  "left_response_controls": 269,
+  "literal_graft_counts": 2674,
+  "marked_root_hostile": {
+    "C": 2,
+    "H": 41,
+    "root": 6,
+    "rows": [
+      58,
+      124,
+      57,
+      16,
+      96,
+      8,
+      45
+    ],
+    "start": 6
+  },
+  "max_witness_order": 14,
+  "physical_oracle_controls": 103,
+  "selected_factors": [
+    {
+      "H": 13,
+      "factor": {
+        "bundled_entry": 3,
+        "kind": "N",
+        "left_root": 0,
+        "left_rows": [
+          2,
+          0
+        ],
+        "map_to_target": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "right_root": 0,
+        "right_rows": [
+          2,
+          0
+        ]
+      },
+      "record": {
+        "kind": "N",
+        "left": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "left_recipe": [
+          [
+            "O",
+            null
+          ]
+        ],
+        "right": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "right_recipe": [
+          [
+            "O",
+            null
+          ]
+        ]
+      },
+      "rows": [
+        18,
+        28,
+        17,
+        5,
+        8
+      ]
+    },
+    {
+      "H": 15,
+      "factor": {
+        "kind": "R5"
+      },
+      "record": {
+        "kind": "R5"
+      },
+      "rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "H": 41,
+      "factor": {
+        "bundled_entry": 4,
+        "kind": "N",
+        "left_root": 0,
+        "left_rows": [
+          2,
+          0
+        ],
+        "map_to_target": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "right_root": 1,
+        "right_rows": [
+          12,
+          1,
+          10,
+          2
+        ]
+      },
+      "record": {
+        "kind": "N",
+        "left": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "left_recipe": [
+          [
+            "O",
+            null
+          ]
+        ],
+        "right": [
+          5,
+          1,
+          5,
+          1
+        ],
+        "right_recipe": [
+          [
+            "M",
+            4
+          ]
+        ]
+      },
+      "rows": [
+        106,
+        124,
+        105,
+        16,
+        101,
+        8,
+        40
+      ]
+    },
+    {
+      "H": 533,
+      "factor": {
+        "bundled_entry": 8,
+        "kind": "N",
+        "left_root": 0,
+        "left_rows": [
+          2,
+          0
+        ],
+        "map_to_target": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "right_root": 5,
+        "right_rows": [
+          252,
+          197,
+          248,
+          242,
+          226,
+          130,
+          160,
+          0
+        ]
+      },
+      "record": {
+        "kind": "N",
+        "left": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "left_recipe": [
+          [
+            "O",
+            null
+          ]
+        ],
+        "right": [
+          37,
+          0,
+          74,
+          11
+        ],
+        "right_recipe": [
+          [
+            "M",
+            7
+          ],
+          [
+            "M",
+            2
+          ],
+          [
+            "O",
+            null
+          ]
+        ]
+      },
+      "rows": [
+        1786,
+        2044,
+        1785,
+        16,
+        448,
+        24,
+        40,
+        104,
+        749,
+        248,
+        1016
+      ]
+    },
+    {
+      "H": 821,
+      "factor": {
+        "bundled_entry": 10,
+        "kind": "N",
+        "left_root": 0,
+        "left_rows": [
+          2,
+          0
+        ],
+        "map_to_target": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "right_root": 7,
+        "right_rows": [
+          508,
+          497,
+          506,
+          482,
+          456,
+          400,
+          288,
+          64,
+          128
+        ]
+      },
+      "record": {
+        "kind": "N",
+        "left": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "left_recipe": [
+          [
+            "O",
+            null
+          ]
+        ],
+        "right": [
+          105,
+          31,
+          105,
+          31
+        ],
+        "right_recipe": [
+          [
+            "M",
+            2
+          ],
+          [
+            "M",
+            1
+          ],
+          [
+            "M",
+            1
+          ],
+          [
+            "M",
+            1
+          ],
+          [
+            "M",
+            1
+          ],
+          [
+            "M",
+            2
+          ]
+        ]
+      },
+      "rows": [
+        3066,
+        4092,
+        3065,
+        16,
+        96,
+        8,
+        168,
+        312,
+        632,
+        1272,
+        2557,
+        1016
+      ]
+    },
+    {
+      "H": 1861,
+      "factor": {
+        "bundled_entry": 7,
+        "kind": "N",
+        "left_root": 0,
+        "left_rows": [
+          2,
+          0
+        ],
+        "map_to_target": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "right_root": 4,
+        "right_rows": [
+          1020,
+          1009,
+          1018,
+          994,
+          136,
+          976,
+          912,
+          768,
+          528,
+          16
+        ]
+      },
+      "record": {
+        "kind": "N",
+        "left": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "left_recipe": [
+          [
+            "O",
+            null
+          ]
+        ],
+        "right": [
+          193,
+          5,
+          217,
+          5
+        ],
+        "right_recipe": [
+          [
+            "M",
+            2
+          ],
+          [
+            "M",
+            1
+          ],
+          [
+            "M",
+            28
+          ]
+        ]
+      },
+      "rows": [
+        8058,
+        8188,
+        8057,
+        16,
+        96,
+        8,
+        168,
+        6973,
+        120,
+        376,
+        1016,
+        1912,
+        3960
+      ]
+    }
+  ],
+  "source_quadruples": 2048,
+  "status": "PASS"
+}
