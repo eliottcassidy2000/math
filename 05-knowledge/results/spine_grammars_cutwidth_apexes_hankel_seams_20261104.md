@@ -286,6 +286,14 @@ plus a touching (26 values, e.g. 4 -> 0, 5 -> 1, 6 -> 4), crossing + shared tail
 cutwidth-2 layer in the style of THM-4748 is therefore the natural next theorem: with the two-arc layer it covers 217
 of the 256 odd numbers below 512.
 
+**The smallest two-radix family: one apex plus at most one reversed chain arc.** In the G(1,1) census to 2047 every
+value is attained with at most one reversed chain arc: the 560 one-apex values and the 462 remaining odd numbers
+below 2048 other than 7 and 21, each of which is the count of a one-apex tournament (chain transitive, apex x beating
+the chain vertices with bit 1) with exactly one chain arc v_j -> v_i reversed. So the one-apex formula with a single
+reversed arc is a complete candidate family in range, and the closed form for it (the one-apex cycles, the cycles
+through the arc, and the interleaved pairs that bring the factor 3) is the most economical target for a numeration
+proof. G(1,1) itself attains every odd number <= 2047 except 7 and 21 (1022 of 1024; 498,938,267 nodes).
+
 | grammar | X | attained (with products) | misses besides 7, 21 | search nodes |
 |---|---|---|---|---|
 | G(0,1) | 2047 | 360 of 1024 | 662 | 49,184 |
@@ -296,8 +304,9 @@ of the 256 odd numbers below 512.
 | **G(0,2)** | **2047** | **1022 of 1024** | **0** | 14,796,241 (closer bound; at most 5 reversed arcs per value: 1, 10, 127, 542, 328, 14 values with 0..5 arcs, upper bounds on the minima from the deduplicated run) |
 | **G(0,2)** | **8191** | **4094 of 4096** | **0** | 197,660,299 (at most 5 reversed arcs per value: 1, 12, 208, 1522, 2209, 142 values with 0..5 arcs) |
 | G(0,3) | 511 | 254 of 256 | 0 | 101,209,735 (521 cut states; at most 4 reversed arcs per value: 1, 8, 48, 174, 23) |
+| **G(1,1)** | **2047** | **1022 of 1024** | **0** | 498,938,267 (every value with the apex and **at most one** reversed chain arc: 560 one-apex values plus 462 with one arc) |
 | G(1,2) | 511 | RUNNING | | |
-| G(1,1), G(0,3), G(1,2) | 2047 | RUNNING | | |
+| G(0,3), G(1,2) | 2047 | RUNNING | | |
 | G(0,2) | 32767 | RUNNING | | |
 
 Outcomes of the pre-registered predictions: P1 REFUTED in both clauses (G(0,2) misses nothing below 8192, so the

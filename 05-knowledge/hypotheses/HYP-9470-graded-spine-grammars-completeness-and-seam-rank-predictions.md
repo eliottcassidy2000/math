@@ -51,7 +51,15 @@ must grow (at least like log N / (2 log log N), note section 7), but slowly: at 
 repository: 83 cut states, Hankel rank 18, THM-4748 as its two-arc layer, and the three-arc layer (15 configuration
 types) as the next closed-form target.
 
-## (D) Seam ranks (FINITE-EXACT within cutwidth <= 3; universality OPEN)
+## (E) One apex plus one reversed arc (OPEN; FINITE-EXACT to 2047)
+
+Every odd number other than 7 and 21 is the Hamiltonian-path count of a one-apex tournament (transitive chain, apex
+beating an arbitrary subset) with at most one chain arc reversed. Evidence: the G(1,1) census to 2047 attains every
+value with at most one reversed chain arc (560 one-apex values, 462 with one arc). This is the smallest family in the
+grading that carries both radices, and the closed form of its count is the most economical target for a numeration
+proof of Chan-Pak.
+
+## (D) Seam ranks (FINITE-EXACT within cutwidth <= 4; universality OPEN)
 
 The composition law across a cut crossed by c reversed arcs has minimal rank 3, 13, 62, 310 for c = 1, 2, 3, 4
 (apex-free sides of cutwidth <= 4; the ranks 3, 13, 62 are the same in every ambient G(0,2), G(0,3), G(0,4) computed).
