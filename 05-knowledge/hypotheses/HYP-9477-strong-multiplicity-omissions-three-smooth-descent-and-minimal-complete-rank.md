@@ -16,6 +16,9 @@ THM-4884 (2): below 625 the multiplicities 9, 13, 21, 22, 34, 37 do not occur an
 Conjecture: m(h) grows without bound along the odd numbers above 623 (the strong inventories at orders 10-12 show
 m(h) of order 10^2 at h near 600), so the six values are never multiplicities, and the unique-class counts are exactly
 3, 5, 11, 13. Test: extend THM-4744's ear inventories to H < 1,000 (orders <= 14) and read m(h).
+Session 200's open source-fiber conjecture (every n in F(S) other than 3 and 11 has at least two physical profiles)
+is the profile-level analogue; THM-4884 (2b) shows the exceptional sets differ (5 collides on one class, 13 is not a
+C1 readout at all), so neither conjecture implies the other.
 
 ## (B) Two realisations above 63
 
