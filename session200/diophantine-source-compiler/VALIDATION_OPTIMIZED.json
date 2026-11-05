@@ -1,0 +1,274 @@
+{
+  "finite_field_selectors": {
+    "2": {
+      "full": 4,
+      "naive": 8
+    },
+    "3": {
+      "full": 4,
+      "naive": 5
+    },
+    "5": {
+      "full": 4,
+      "naive": 4
+    },
+    "7": {
+      "full": 4,
+      "naive": 4
+    }
+  },
+  "literal_pairs_three_gates": 64,
+  "literal_sources": 21,
+  "positive_C1": {
+    "alpha": "OO",
+    "beta": "ZJOJ",
+    "left": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "literal_counts": [
+      101,
+      1
+    ],
+    "right": [
+      17,
+      5,
+      17,
+      5
+    ],
+    "rows": [
+      498,
+      508,
+      505,
+      465,
+      480,
+      8,
+      416,
+      288,
+      32
+    ],
+    "target": 101
+  },
+  "scope": "Finite exact controls; all-order completeness uses frozen physical source theorems.",
+  "source_words_tested": 3280,
+  "status": "PASS",
+  "target_controls": [
+    {
+      "B": 4,
+      "C1_equations": 39,
+      "L": 1,
+      "accepted": false,
+      "kind": "K",
+      "prime": 17,
+      "profiles": 3,
+      "target": 7,
+      "variables": 24
+    },
+    {
+      "B": 6,
+      "C1_equations": 69,
+      "L": 2,
+      "accepted": false,
+      "kind": "K",
+      "prime": 67,
+      "profiles": 8,
+      "target": 13,
+      "variables": 40
+    },
+    {
+      "B": 7,
+      "C1_equations": 69,
+      "L": 2,
+      "accepted": true,
+      "kind": "K",
+      "prime": 67,
+      "profiles": 8,
+      "target": 15,
+      "variables": 40
+    },
+    {
+      "B": 8,
+      "C1_equations": 69,
+      "L": 2,
+      "accepted": false,
+      "kind": "K",
+      "prime": 67,
+      "profiles": 8,
+      "target": 21,
+      "variables": 40
+    },
+    {
+      "B": 9,
+      "C1_equations": 99,
+      "L": 3,
+      "accepted": true,
+      "kind": "K",
+      "prime": 257,
+      "profiles": 21,
+      "target": 25,
+      "variables": 56
+    },
+    {
+      "B": 12,
+      "C1_equations": 99,
+      "L": 3,
+      "accepted": false,
+      "kind": "K",
+      "prime": 257,
+      "profiles": 21,
+      "target": 41,
+      "variables": 56
+    },
+    {
+      "B": 12,
+      "C1_equations": 99,
+      "L": 3,
+      "accepted": false,
+      "kind": "K",
+      "prime": 257,
+      "profiles": 21,
+      "target": 43,
+      "variables": 56
+    },
+    {
+      "B": 16,
+      "C1_equations": 129,
+      "L": 4,
+      "accepted": false,
+      "kind": "K",
+      "prime": 1031,
+      "profiles": 55,
+      "target": 67,
+      "variables": 72
+    },
+    {
+      "B": 20,
+      "C1_equations": 129,
+      "L": 4,
+      "accepted": true,
+      "kind": "K",
+      "prime": 1031,
+      "profiles": 55,
+      "target": 101,
+      "variables": 72
+    },
+    {
+      "B": 22,
+      "C1_equations": 129,
+      "L": 4,
+      "accepted": true,
+      "kind": "K",
+      "prime": 1031,
+      "profiles": 55,
+      "target": 127,
+      "variables": 72
+    },
+    {
+      "accepted": false,
+      "kind": "C2",
+      "reason": "proved minimum13",
+      "target": 7
+    },
+    {
+      "B": 2,
+      "C1_equations": 9,
+      "L": 0,
+      "accepted": true,
+      "kind": "C2",
+      "prime": 47,
+      "profiles": 1,
+      "target": 13,
+      "variables": 8
+    },
+    {
+      "B": 2,
+      "C1_equations": 9,
+      "L": 0,
+      "accepted": true,
+      "kind": "C2",
+      "prime": 47,
+      "profiles": 1,
+      "target": 15,
+      "variables": 8
+    },
+    {
+      "B": 3,
+      "C1_equations": 39,
+      "L": 1,
+      "accepted": false,
+      "kind": "C2",
+      "prime": 179,
+      "profiles": 3,
+      "target": 21,
+      "variables": 24
+    },
+    {
+      "B": 4,
+      "C1_equations": 39,
+      "L": 1,
+      "accepted": true,
+      "kind": "C2",
+      "prime": 179,
+      "profiles": 3,
+      "target": 25,
+      "variables": 24
+    },
+    {
+      "B": 6,
+      "C1_equations": 69,
+      "L": 2,
+      "accepted": true,
+      "kind": "C2",
+      "prime": 709,
+      "profiles": 8,
+      "target": 41,
+      "variables": 40
+    },
+    {
+      "B": 7,
+      "C1_equations": 69,
+      "L": 2,
+      "accepted": true,
+      "kind": "C2",
+      "prime": 709,
+      "profiles": 8,
+      "target": 43,
+      "variables": 40
+    },
+    {
+      "B": 11,
+      "C1_equations": 99,
+      "L": 3,
+      "accepted": false,
+      "kind": "C2",
+      "prime": 2819,
+      "profiles": 21,
+      "target": 67,
+      "variables": 56
+    },
+    {
+      "B": 16,
+      "C1_equations": 129,
+      "L": 4,
+      "accepted": false,
+      "kind": "C2",
+      "prime": 11273,
+      "profiles": 55,
+      "target": 101,
+      "variables": 72
+    },
+    {
+      "B": 21,
+      "C1_equations": 129,
+      "L": 4,
+      "accepted": false,
+      "kind": "C2",
+      "prime": 11273,
+      "profiles": 55,
+      "target": 127,
+      "variables": 72
+    }
+  ]
+}
