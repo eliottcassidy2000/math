@@ -1,0 +1,17 @@
+[
+  {
+    "receipt_sha256": "a5931452d19b5fd6df234d277fda12d9856c18a0ddd60276bd9454129d788814",
+    "script": "verify_ratio_lattice.py",
+    "status": "PASS"
+  },
+  {
+    "receipt_sha256": "42eabf561f5391ce6445101e7fb913a5ea70d81a76e91401a920cd16b5953db4",
+    "script": "verify_target_ray_inverse.py",
+    "status": "PASS"
+  },
+  {
+    "receipt_sha256": "0ce70d7faf00b1eaecd7f31b598d58c7117a032eb18fbc0333bfe8da59992429",
+    "script": "verify_two_generator_classification.py",
+    "status": "PASS"
+  }
+]

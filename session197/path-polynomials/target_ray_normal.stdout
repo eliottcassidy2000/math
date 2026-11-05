@@ -1,0 +1,327 @@
+{
+  "early_lattice_obstruction": {
+    "certificate": {
+      "D": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "E": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "F": [
+        [
+          -1,
+          4
+        ],
+        [
+          1,
+          -3
+        ]
+      ],
+      "functional": [
+        1,
+        2
+      ],
+      "kappa": "5/2",
+      "matrix": [
+        [
+          3,
+          5
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "modulus": 3,
+      "primes": [
+        2,
+        5
+      ],
+      "ratios": [
+        "8",
+        "32/5"
+      ],
+      "solvable": false,
+      "target": [
+        -1,
+        1
+      ],
+      "target_value": 1
+    },
+    "reason": "lattice obstruction",
+    "solvable": false
+  },
+  "fixed_offset_cases": [
+    {
+      "A": 15360,
+      "power_of_two": 0,
+      "reason": null,
+      "solvable": true,
+      "u": [
+        4,
+        0
+      ],
+      "v": [
+        0,
+        1
+      ],
+      "w": [
+        4,
+        1
+      ]
+    },
+    {
+      "A": 30720,
+      "power_of_two": 1,
+      "reason": "bounded integer allocations exhausted",
+      "solvable": false,
+      "u": null,
+      "v": null,
+      "w": null
+    },
+    {
+      "A": 61440,
+      "power_of_two": 2,
+      "reason": null,
+      "solvable": true,
+      "u": [
+        5,
+        0
+      ],
+      "v": [
+        1,
+        1
+      ],
+      "w": [
+        6,
+        1
+      ]
+    },
+    {
+      "A": 122880,
+      "power_of_two": 3,
+      "reason": "bounded integer allocations exhausted",
+      "solvable": false,
+      "u": null,
+      "v": null,
+      "w": null
+    },
+    {
+      "A": 245760,
+      "power_of_two": 4,
+      "reason": null,
+      "solvable": true,
+      "u": [
+        6,
+        0
+      ],
+      "v": [
+        2,
+        1
+      ],
+      "w": [
+        8,
+        1
+      ]
+    },
+    {
+      "A": 491520,
+      "power_of_two": 5,
+      "reason": "bounded integer allocations exhausted",
+      "solvable": false,
+      "u": null,
+      "v": null,
+      "w": null
+    },
+    {
+      "A": 983040,
+      "power_of_two": 6,
+      "reason": null,
+      "solvable": true,
+      "u": [
+        7,
+        0
+      ],
+      "v": [
+        3,
+        1
+      ],
+      "w": [
+        10,
+        1
+      ]
+    },
+    {
+      "A": 1966080,
+      "power_of_two": 7,
+      "reason": "bounded integer allocations exhausted",
+      "solvable": false,
+      "u": null,
+      "v": null,
+      "w": null
+    },
+    {
+      "A": 3932160,
+      "power_of_two": 8,
+      "reason": null,
+      "solvable": true,
+      "u": [
+        8,
+        0
+      ],
+      "v": [
+        4,
+        1
+      ],
+      "w": [
+        12,
+        1
+      ]
+    },
+    {
+      "A": 7864320,
+      "power_of_two": 9,
+      "reason": "bounded integer allocations exhausted",
+      "solvable": false,
+      "u": null,
+      "v": null,
+      "w": null
+    },
+    {
+      "A": 15728640,
+      "power_of_two": 10,
+      "reason": null,
+      "solvable": true,
+      "u": [
+        9,
+        0
+      ],
+      "v": [
+        5,
+        1
+      ],
+      "w": [
+        14,
+        1
+      ]
+    },
+    {
+      "A": 31457280,
+      "power_of_two": 11,
+      "reason": "bounded integer allocations exhausted",
+      "solvable": false,
+      "u": null,
+      "v": null,
+      "w": null
+    },
+    {
+      "A": 62914560,
+      "power_of_two": 12,
+      "reason": null,
+      "solvable": true,
+      "u": [
+        10,
+        0
+      ],
+      "v": [
+        6,
+        1
+      ],
+      "w": [
+        16,
+        1
+      ]
+    }
+  ],
+  "nonempty_boundary_obstruction": {
+    "allocations_tested": 2,
+    "copy_bound": 1,
+    "factorizations_tested": 1,
+    "reason": "bounded integer allocations exhausted",
+    "solvable": false
+  },
+  "physical_sources": [
+    {
+      "A": 15360,
+      "C": -65,
+      "H": 46015,
+      "n": 16,
+      "rows": [
+        126,
+        2048,
+        58,
+        50,
+        34,
+        2,
+        1982,
+        65343,
+        65087,
+        64575,
+        63551,
+        125,
+        34943,
+        6271,
+        14463,
+        26751
+      ]
+    },
+    {
+      "A": 61440,
+      "C": -65,
+      "H": 184255,
+      "n": 18,
+      "rows": [
+        254,
+        4096,
+        122,
+        114,
+        98,
+        66,
+        2,
+        3966,
+        261759,
+        261247,
+        260223,
+        258175,
+        253,
+        250111,
+        135423,
+        20735,
+        53503,
+        102655
+      ]
+    },
+    {
+      "A": 72,
+      "C": 1,
+      "H": 217,
+      "n": 9,
+      "rows": [
+        30,
+        132,
+        128,
+        6,
+        110,
+        463,
+        399,
+        25,
+        159
+      ]
+    }
+  ],
+  "status": "PASS"
+}
