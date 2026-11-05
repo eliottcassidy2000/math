@@ -1,0 +1,74 @@
+{
+  "PAIRED_CATALOG_DEPENDENCIES.json": {
+    "bytes": 288,
+    "sha256": "503b50185f780dfd926f878147545735c51ea2e4bf4810f907fbf9fa48148230"
+  },
+  "PAIRED_CATALOG_README.md": {
+    "bytes": 1585,
+    "sha256": "8653a6ed7fd47eb955dd541149bc726f3165807f02509656f7b9670b89c20298"
+  },
+  "PAIRED_GATE_CATALOG.md": {
+    "bytes": 6060,
+    "sha256": "fb9be988cfc42bb2768e26576bb925ca5c7c9681173626b5bca4c93827e9e947"
+  },
+  "paired-gate-catalog-review/REPORT.md": {
+    "bytes": 6739,
+    "sha256": "a585aab867ea884e6d42f82355decae43d88c1e154fc1ca57157f66f7c80390b"
+  },
+  "paired-gate-catalog-review/independent-debug.json": {
+    "bytes": 1327,
+    "sha256": "7c18347617d394fe9e5445468ebbfce09940f74ed2e2fc7d6339d0ea2acd631b"
+  },
+  "paired-gate-catalog-review/independent-normal.json": {
+    "bytes": 1327,
+    "sha256": "7c18347617d394fe9e5445468ebbfce09940f74ed2e2fc7d6339d0ea2acd631b"
+  },
+  "paired-gate-catalog-review/independent.cpp": {
+    "bytes": 5771,
+    "sha256": "4ebffc1bcb41fdbfc74459285bdc1f4d72c5b0a6acc33344b134a16412bcbd94"
+  },
+  "paired-gate-catalog-review/inputs.csv": {
+    "bytes": 4980,
+    "sha256": "6037849d9fedf4f1753232837bc04fa2ef22260d08379f5ad648ac6334c2c118"
+  },
+  "paired-gate-catalog-review/source-debug.json": {
+    "bytes": 16654,
+    "sha256": "9ffcd678e33279dc8ad4ce41331a10190431baa7d707c6466f07a8a560c267ac"
+  },
+  "paired-gate-catalog-review/source-normal.json": {
+    "bytes": 16654,
+    "sha256": "9ffcd678e33279dc8ad4ce41331a10190431baa7d707c6466f07a8a560c267ac"
+  },
+  "paired-gate-catalog-review/source-witness-normal.json": {
+    "bytes": 3348,
+    "sha256": "70bc118d4eaa03fab016a45ae8494d623d45c80e940e59192bfbdb4726b11c6b"
+  },
+  "paired-gate-catalog-review/source-witness-optimized.json": {
+    "bytes": 3348,
+    "sha256": "70bc118d4eaa03fab016a45ae8494d623d45c80e940e59192bfbdb4726b11c6b"
+  },
+  "paired_gate_catalog_debug.json": {
+    "bytes": 16654,
+    "sha256": "9ffcd678e33279dc8ad4ce41331a10190431baa7d707c6466f07a8a560c267ac"
+  },
+  "paired_gate_catalog_normal.json": {
+    "bytes": 16654,
+    "sha256": "9ffcd678e33279dc8ad4ce41331a10190431baa7d707c6466f07a8a560c267ac"
+  },
+  "paired_gate_witnesses_normal.json": {
+    "bytes": 3348,
+    "sha256": "70bc118d4eaa03fab016a45ae8494d623d45c80e940e59192bfbdb4726b11c6b"
+  },
+  "paired_gate_witnesses_optimized.json": {
+    "bytes": 3348,
+    "sha256": "70bc118d4eaa03fab016a45ae8494d623d45c80e940e59192bfbdb4726b11c6b"
+  },
+  "verify_paired_gate_catalog.cpp": {
+    "bytes": 2514,
+    "sha256": "4364be58afb33c75bf3f701c1b2fa19d7ee0954914827472e6e37271caddc99d"
+  },
+  "verify_paired_gate_catalog_witnesses.py": {
+    "bytes": 1859,
+    "sha256": "4ea154abf46f9e670cf7e5f244783f3fdb96a8bbf720c918a5dc18b38f6186e2"
+  }
+}
