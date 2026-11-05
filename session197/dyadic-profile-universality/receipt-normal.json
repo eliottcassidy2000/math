@@ -1,0 +1,204 @@
+{
+  "joint_residue_triples": 3170,
+  "joint_witness_digest": "e81baebf1ec336298b82d3eedcf64cb7dd48acad04b2f31979ebbddf832557b0",
+  "k2_examples": [
+    {
+      "B": 1024,
+      "L": 820,
+      "Q": 205,
+      "g": 165,
+      "requested": [
+        0,
+        1,
+        1
+      ],
+      "word": "1100110011"
+    },
+    {
+      "B": 64,
+      "L": 36,
+      "Q": 15,
+      "g": 9,
+      "requested": [
+        0,
+        1,
+        3
+      ],
+      "word": "100011"
+    },
+    {
+      "B": 64,
+      "L": 52,
+      "Q": 13,
+      "g": 11,
+      "requested": [
+        0,
+        3,
+        1
+      ],
+      "word": "110011"
+    },
+    {
+      "B": 1024,
+      "L": 564,
+      "Q": 207,
+      "g": 115,
+      "requested": [
+        0,
+        3,
+        3
+      ],
+      "word": "1000110011"
+    },
+    {
+      "B": 1024,
+      "L": 817,
+      "Q": 973,
+      "g": 777,
+      "requested": [
+        1,
+        1,
+        1
+      ],
+      "word": "1100110000"
+    },
+    {
+      "B": 64,
+      "L": 33,
+      "Q": 63,
+      "g": 33,
+      "requested": [
+        1,
+        1,
+        3
+      ],
+      "word": "100000"
+    },
+    {
+      "B": 64,
+      "L": 49,
+      "Q": 61,
+      "g": 47,
+      "requested": [
+        1,
+        3,
+        1
+      ],
+      "word": "110000"
+    },
+    {
+      "B": 1024,
+      "L": 561,
+      "Q": 975,
+      "g": 535,
+      "requested": [
+        1,
+        3,
+        3
+      ],
+      "word": "1000110000"
+    },
+    {
+      "B": 1024,
+      "L": 818,
+      "Q": 461,
+      "g": 369,
+      "requested": [
+        2,
+        1,
+        1
+      ],
+      "word": "1100110001"
+    },
+    {
+      "B": 64,
+      "L": 34,
+      "Q": 31,
+      "g": 17,
+      "requested": [
+        2,
+        1,
+        3
+      ],
+      "word": "100001"
+    },
+    {
+      "B": 64,
+      "L": 50,
+      "Q": 29,
+      "g": 23,
+      "requested": [
+        2,
+        3,
+        1
+      ],
+      "word": "110001"
+    },
+    {
+      "B": 1024,
+      "L": 562,
+      "Q": 463,
+      "g": 255,
+      "requested": [
+        2,
+        3,
+        3
+      ],
+      "word": "1000110001"
+    },
+    {
+      "B": 64,
+      "L": 51,
+      "Q": 45,
+      "g": 37,
+      "requested": [
+        3,
+        1,
+        1
+      ],
+      "word": "110010"
+    },
+    {
+      "B": 1024,
+      "L": 563,
+      "Q": 719,
+      "g": 397,
+      "requested": [
+        3,
+        1,
+        3
+      ],
+      "word": "1000110010"
+    },
+    {
+      "B": 1024,
+      "L": 819,
+      "Q": 717,
+      "g": 575,
+      "requested": [
+        3,
+        3,
+        1
+      ],
+      "word": "1100110010"
+    },
+    {
+      "B": 64,
+      "L": 35,
+      "Q": 47,
+      "g": 27,
+      "requested": [
+        3,
+        3,
+        3
+      ],
+      "word": "100010"
+    }
+  ],
+  "large_exact_triples": 9,
+  "literal_gadget_and_strong_pairs": 168,
+  "literal_sink_controls": 254,
+  "neutral_extension_checks": 3170,
+  "scope": "Simultaneous dyadic residues of actual physical responses; no exact-target or prime infinitude claim.",
+  "status": "PASS"
+}

@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "boundary": 1,
+    "joint": 4182,
+    "loop": 680,
+    "neutral": 8340,
+    "physical": 512,
+    "sinks": 128,
+    "slot": 4096,
+    "suffix": 16368
+  },
+  "joint_digest": "2b182f101b7942b3c1a51dc3f0d74a7da23ee9502a2d7b00ae59f7c03c16dfc6",
+  "scope": "Independent proof audit plus direct integer evaluation, literal base slots, and directed-word counting; constructor imported only as the system under test.",
+  "status": "PASS"
+}
