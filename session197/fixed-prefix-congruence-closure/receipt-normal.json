@@ -1,0 +1,20 @@
+{
+  "actual_constructed_local_witnesses": 986,
+  "cardinality_checks": 7712,
+  "complete_modular_images": 7712,
+  "composite_branch_hostile": {
+    "N": 143,
+    "mod11": 0,
+    "mod3": 2,
+    "mod33": 11,
+    "prefix": [
+      33,
+      1,
+      33
+    ]
+  },
+  "maximum_constructed_index_bit_length": 690,
+  "physical_prefix_states": 241,
+  "scope": "Complete congruence criterion, not exact-target sufficiency.",
+  "status": "PASS"
+}
