@@ -1,0 +1,37 @@
+{
+  "complete_C1_image_cap8": [
+    3,
+    5,
+    9,
+    11,
+    15,
+    17,
+    19,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    37,
+    39,
+    45,
+    47,
+    51
+  ],
+  "crt_modulus": 1365,
+  "crt_pair_values": [
+    3,
+    11,
+    35,
+    47
+  ],
+  "idempotents": [
+    910,
+    456
+  ],
+  "range_growth_targets_through": 200,
+  "status": "PASS",
+  "terminal_wrap_actual_count": 201
+}

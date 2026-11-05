@@ -1,0 +1,85 @@
+{
+  "actual_integer_circuit_witnesses": 183,
+  "complete_modular_circuit_target_checks": 99,
+  "crt_hostile": {
+    "all_polynomial_equations_hold_mod_product": true,
+    "complete_pair_values": [
+      3,
+      5,
+      9,
+      11,
+      15,
+      17,
+      19,
+      23,
+      25,
+      27,
+      29,
+      31,
+      33,
+      35,
+      37,
+      39,
+      45,
+      47,
+      51
+    ],
+    "cover_cap": 8,
+    "first_left_selectors": {
+      "I": 910,
+      "J": 0,
+      "O": 456,
+      "Z": 0
+    },
+    "integer_target_absent": true,
+    "length_cap": 3,
+    "modulus": 1365,
+    "primes": [
+      3,
+      5,
+      7,
+      13
+    ],
+    "target": 21,
+    "values": [
+      3,
+      11,
+      35,
+      47
+    ],
+    "words": [
+      [
+        "",
+        ""
+      ],
+      [
+        "OZ",
+        ""
+      ],
+      [
+        "OZ",
+        "ZJ"
+      ],
+      [
+        "OZ",
+        "OO"
+      ]
+    ]
+  },
+  "formal_box_residual_checks": 245056,
+  "integer_targets_checked_through": 401,
+  "proof_sha256": "fef3789115b01f54d1658d9d08a618f8c11f96c635836c1f9be02434fb40737c",
+  "status": "PASS: all-order lifting proved in text; finite controls exact",
+  "terminal_wrap_hostile": {
+    "actual_count": 201,
+    "cover_cap": 16,
+    "prime": 67,
+    "target": 67,
+    "terminal_integer_residual": 134,
+    "words": [
+      "OZO",
+      "OOO"
+    ]
+  },
+  "verifier_sha256": "835ceb923165708bef33199ad39977019ff593ab011b6132b9e155d4448b1ae2"
+}

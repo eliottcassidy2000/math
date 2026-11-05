@@ -1,0 +1,53 @@
+{
+  "status": "AUDITED; full quadratic system, safe prime threshold p>4n",
+  "files": [
+    {
+      "path": "PROOF.md",
+      "sha256": "fef3789115b01f54d1658d9d08a618f8c11f96c635836c1f9be02434fb40737c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "10f47862c0f2970db259577d3feed07553cf5d73ae55a4635f7937666ee934dd"
+    },
+    {
+      "path": "VALIDATION_NORMAL.json",
+      "sha256": "4b058a081c8bdf5df26b0a0c7ae644d7d3f2b940c7d3ee94ecf17562ffd3d1ca"
+    },
+    {
+      "path": "VALIDATION_OPTIMIZED.json",
+      "sha256": "4b058a081c8bdf5df26b0a0c7ae644d7d3f2b940c7d3ee94ecf17562ffd3d1ca"
+    },
+    {
+      "path": "audit/INDEPENDENT_NORMAL.json",
+      "sha256": "3041fcb2536001666f375f042ecad9c5fc4d8c33d6cba82dac3a13ac1a3102f1"
+    },
+    {
+      "path": "audit/INDEPENDENT_OPTIMIZED.json",
+      "sha256": "3041fcb2536001666f375f042ecad9c5fc4d8c33d6cba82dac3a13ac1a3102f1"
+    },
+    {
+      "path": "audit/REPLAY_NORMAL.json",
+      "sha256": "4b058a081c8bdf5df26b0a0c7ae644d7d3f2b940c7d3ee94ecf17562ffd3d1ca"
+    },
+    {
+      "path": "audit/REPLAY_OPTIMIZED.json",
+      "sha256": "4b058a081c8bdf5df26b0a0c7ae644d7d3f2b940c7d3ee94ecf17562ffd3d1ca"
+    },
+    {
+      "path": "audit/REPORT.md",
+      "sha256": "580466d15f8a134ffd4658834132228b5a2744864134ec536398db51f72e0f0e"
+    },
+    {
+      "path": "audit/independent.py",
+      "sha256": "29f3d5a6e7498324238f5722961a5100413c5e8f71c9c19f63b6c73ca0f90b44"
+    },
+    {
+      "path": "dependencies/PHYSICAL_ADJOINT.md",
+      "sha256": "f9c337b3cfee1cd1134ee02276890238c30ff0e84a14c26fbcd5cd78ab82dc05"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "835ceb923165708bef33199ad39977019ff593ab011b6132b9e155d4448b1ae2"
+    }
+  ]
+}
