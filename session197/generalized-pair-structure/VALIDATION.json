@@ -1,0 +1,365 @@
+{
+  "P_redundancy_checks": 352,
+  "complete_C2_graphs": 865,
+  "hostiles": [
+    {
+      "H": 77,
+      "converse_compilation": {
+        "family": "M",
+        "parameter": 1,
+        "root": 5,
+        "source": [
+          28,
+          25,
+          18,
+          4,
+          8
+        ],
+        "source_root": 4,
+        "vertex_map": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          5,
+          7
+        ]
+      },
+      "converse_root_tests": [
+        {
+          "initial": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "initial_cycles": 1,
+          "root": 5,
+          "tail": []
+        },
+        {
+          "initial": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "initial_cycles": 1,
+          "root": 6,
+          "tail": [
+            [
+              7
+            ]
+          ]
+        },
+        {
+          "initial": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "initial_cycles": 1,
+          "root": 7,
+          "tail": []
+        }
+      ],
+      "repair": {
+        "family": "P",
+        "parameter": 8,
+        "root": 4,
+        "rows": [
+          252,
+          241,
+          234,
+          242,
+          4,
+          208,
+          144,
+          16
+        ],
+        "source": [
+          0
+        ],
+        "source_root": 0
+      },
+      "root_tests": [
+        {
+          "initial": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "initial_cycles": 2,
+          "root": 0,
+          "tail": []
+        },
+        {
+          "initial": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "initial_cycles": 2,
+          "root": 1,
+          "tail": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "initial": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "initial_cycles": 2,
+          "root": 2,
+          "tail": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ]
+        }
+      ],
+      "rows": [
+        2,
+        4,
+        9,
+        19,
+        103,
+        79,
+        143,
+        63
+      ]
+    },
+    {
+      "H": 289,
+      "converse_compilation": null,
+      "converse_root_tests": [
+        {
+          "initial": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "initial_cycles": 2,
+          "root": 7,
+          "tail": [
+            [
+              9
+            ],
+            [
+              8
+            ]
+          ]
+        },
+        {
+          "initial": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "initial_cycles": 2,
+          "root": 8,
+          "tail": [
+            [
+              9
+            ]
+          ]
+        },
+        {
+          "initial": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "initial_cycles": 2,
+          "root": 9,
+          "tail": []
+        }
+      ],
+      "repair": {
+        "family": "P",
+        "parameter": 26,
+        "root": 4,
+        "rows": [
+          1020,
+          1009,
+          1002,
+          1010,
+          196,
+          976,
+          896,
+          768,
+          528,
+          16
+        ],
+        "source": [
+          0
+        ],
+        "source_root": 0
+      },
+      "root_tests": [
+        {
+          "initial": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "initial_cycles": 2,
+          "root": 0,
+          "tail": []
+        },
+        {
+          "initial": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "initial_cycles": 2,
+          "root": 1,
+          "tail": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "initial": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "initial_cycles": 2,
+          "root": 2,
+          "tail": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ]
+        }
+      ],
+      "rows": [
+        2,
+        4,
+        9,
+        83,
+        39,
+        79,
+        151,
+        319,
+        639,
+        255
+      ]
+    }
+  ],
+  "inventory": [
+    {
+      "Gamma_graphs": 1,
+      "all_C2": 2,
+      "canonical_rooted_presentations": 3,
+      "order": 5,
+      "outside_both_orientations": 1,
+      "presentations": 4
+    },
+    {
+      "Gamma_graphs": 5,
+      "all_C2": 5,
+      "canonical_rooted_presentations": 10,
+      "order": 6,
+      "outside_both_orientations": 0,
+      "presentations": 12
+    },
+    {
+      "Gamma_graphs": 18,
+      "all_C2": 18,
+      "canonical_rooted_presentations": 31,
+      "order": 7,
+      "outside_both_orientations": 0,
+      "presentations": 36
+    },
+    {
+      "Gamma_graphs": 57,
+      "all_C2": 60,
+      "canonical_rooted_presentations": 91,
+      "order": 8,
+      "outside_both_orientations": 0,
+      "presentations": 104
+    },
+    {
+      "Gamma_graphs": 169,
+      "all_C2": 191,
+      "canonical_rooted_presentations": 258,
+      "order": 9,
+      "outside_both_orientations": 0,
+      "presentations": 292
+    },
+    {
+      "Gamma_graphs": 482,
+      "all_C2": 589,
+      "canonical_rooted_presentations": 715,
+      "order": 10,
+      "outside_both_orientations": 1,
+      "presentations": 804
+    }
+  ],
+  "start_two_root_checks": 2262,
+  "status": "PASS"
+}
