@@ -1,0 +1,1 @@
+{"status":"PASS","graphs":2456,"eligible_graph_signs":410,"roots":3426,"factorial_controls":15255,"H2_survivors":[{"n":8,"H1":145,"root":3,"A":36,"offset":1,"H2":577,"H3":1909,"expected_H3":2305,"runs":[145,216,78,0]},{"n":8,"H1":145,"root":4,"A":36,"offset":1,"H2":577,"H3":1909,"expected_H3":2305,"runs":[145,216,78,0]}],"H3_survivors":0}
