@@ -83,6 +83,13 @@ NUMERICAL (HYP-9469) + OPEN (Chan-Pak).
   extreme arc reversed (`h = 2^k + 1`); exhaustive to order `9` (maximum `64/129`). It sharpens THM-4873 (i) for `h >= 5`
   and, through THM-4862 (a)'s law `H(X + v) = 2h - e_a + sigma`, `sigma >= 0`, raises the sole-exit count by at least
   `(h + 1)/2` (`k >= (h + 1)/4` in the half normalisation of HYP-9469 (1)).
+* **Ordered-path reduction (after the audits; HYP-9469 (6)).** For a cut `(A, B)` with an arc from `A` to `B`, let `q`
+  count the Hamiltonian paths of `X` listing all of `B` before all of `A`. PROVED: `H(X + v) >= 2h - q` (slot counting,
+  injective). NUMERICAL: `q <= (h - 1)/2` on every cut of every tournament of orders `4-8` (`ordered_paths_lemma.out`;
+  1,746,432 cuts at order 8, maximum `32/65` at the sole-exit cut of `R_8`, the bound `2h - q` attained). So the linear
+  increment bound for arbitrary cuts, HYP-9469 (1), and the finiteness (2) with `h <= 4k - 1`, reduce to one lemma whose
+  case `|A| = 1` is THM-4876 (7); the one-sided injection of proof 7 extends to ordered paths whose last vertex has an
+  out-neighbour in `B`, and the remaining case is open.
 * **One-centre family (PROVED).** `H(TT_m + u) = 1 + 2 sum_{a in A, b notin A, a < b} c(b - a)`; `A = {1..i}`,
   `m = i + l` gives `(2^i - 1)(2^l - 1) + 2` (a two-parameter family containing `11, 23, 47, 51, 95, 107, 227, ...`);
   `7` is not a one-centre count; the family realises about half of the odd numbers. A second centre with a monotone cut
@@ -110,7 +117,7 @@ is the "transitive parent" of the digital bank.
 ## 5. Next obligations
 
 1. (Done after the checkpoint: THM-4876 (7).) Extend the linear increment bound from sole-exit cuts to all cuts
-   (HYP-9469 (1)).
+   (HYP-9469 (1)): it reduces to the ordered-path lemma HYP-9469 (6), `q <= (h - 1)/2`, open beyond `|A| = 1`.
 2. Prove HYP-9469 (2) at `k = 2` (increment `4` forces `H(T - v) in {1, 5}`) by classifying two odd cycles through `v`
    with transitive complements.
 3. Characterise the one-centre value set (HYP-9469 (3)).
@@ -128,8 +135,14 @@ Grinberg-Stanley's Theorem 7.1; C6 only the two single-triangle vertices of the 
 C10 the `3k - 1` clause deleted; C11 level sets complete from order 7 of `T`; C12 "every induction" retyped; C13
 `k_min >= 3` is FINITE-EXACT; C14 `h/3.5` replaced by the range. Audit C added: statements 2 and 3 exhaustive through
 order `10`, `k_min(h) >= h/4` for every `h` at order `10` (least `33/129`, the sole-exit cuts of `R_(k+2)`), the levels
-`k = 7..12`, and the end-count bound through order `10` (`128/257`). Audit D (statement 7): pending. Author's
-corrections before audit D
+`k = 7..12`, and the end-count bound through order `10` (`128/257`). Audit D (statement 7;
+`chanpak_endcount_audit_D_20261104.md`, own C census): PASS WITH CORRECTIONS, seven minor items (D1-D7) applied - the
+`h = 3` wording, the convention `h(X[empty]) = 1` in the `[P A_a]` injection, `k >= 1`, committed receipts for the
+order-9 check (the session's claim had none: MISTAKE-715 addendum), the scripts field, the dual's wording, the sharper
+`2 e_a + e_O <= h`; audit D confirmed the bound, its dual, the sole-exit law and the floor `(3h + 1)/2` on every class
+of orders `<= 9` (1,716,944 non-sink pairs at order 9) and observed that the floor is attained only at `h = 3`, that
+the census floor for `h >= 5` is `(3h + 3)/2` (`R_(k+2)`, `sigma = 1`), and that the equality cases with `h >= 3` are
+exactly `TT_j => R_(k+2)`. Author's corrections before audit D
 (both pushed for about ten minutes in 87ac336954, corrected in the next commit): the first text of statement 7's
 consequence asserted `H(X + v) = 2h - e_a` for the sole-exit extension, forgetting the `sigma` term of THM-4862 (a) -
 the same two-paths slip as the near miss of section 0 (`sigma` reaches 105 at order 6, and `sigma = 0` in only 9,454 of

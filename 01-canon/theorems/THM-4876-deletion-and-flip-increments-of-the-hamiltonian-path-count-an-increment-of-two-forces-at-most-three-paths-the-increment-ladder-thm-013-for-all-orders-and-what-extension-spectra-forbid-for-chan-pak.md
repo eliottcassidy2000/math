@@ -1,6 +1,6 @@
 ---
 id: THM-4876
-title: "Deletion and flip increments of the Hamiltonian-path count H. (1) For a tournament T and a vertex v, H(T) - H(T - v) = 2 sum over the odd directed cycles C through v of H(T - V(C)) (Claim A, KNOWN from the odd-cycle formula), and for a tournament X with a new vertex v of cut (A, B), H(X + v) = sum_S e_B(S) s_A(V - S) + s_A(V) + e_B(V) (path pairs). (2) H(T) - H(T - v) = 2 iff v lies on exactly one odd cycle, a triangle (v, a, b), and T - {v, a, b} is transitive; then T - v has at most one odd cycle, H(T - v) in {1, 3} and H(T) in {3, 5}: no deletion lowers a count of at least 5 by exactly 2. (3) H(T) - H(T - v) = 4 iff v lies on exactly two odd cycles, both with transitive complements (and H(T - v) in {1, 5} through order 10). (4) (KNOWN by repository since 2026-03-05: PROP-001 and THM-013/014/017, MISTAKE-008; restated here) The arc-flip increment is the unsigned subset convolution H(T') - H(T) = U(L_j, R_i) - U(L_i, R_j) whose signed companion is THM-017's identity, and THM-013's Delta H = Delta I(Omega, 2) holds for all n as a corollary of the odd-cycle formula H = I(Omega, 2). (5) FINITE-EXACT: the one-vertex extension spectra E(X) of all tournaments of orders 3-9 have no value h + 2 for h >= 5, smallest positive increments k_min(h) = 2, 3, 4, 5, 5, 5, 6, 7, 9, 9, 8, 10, 9, 11, 12, 11 for h = 5, 9, 11, ..., 39 (between h/3.7 and h/2.5; audit C: k_min(h) >= h/4 for every h attained at order 10), and windows of at most 24 consecutive odd values which, for h notin {1, 5}, never cover odd[2h + 1, 3h] at orders <= 8: the induction through [h, 2h - 1] from one realiser is impossible at every order by (2), and the window induction is unavailable through order 8. (6) The one-centre family TT_m + u has H = 1 + 2 sum_{a in A, b notin A, a < b} c(b - a), c(1) = 1, c(d) = 2^(d-2), hence contains 2^k + 1 and (2^i - 1)(2^l - 1) + 2 for all i, l >= 1 and omits 7, 13, 21, 29, ... (7) A vertex that is not a sink ends at most (h - 1)/2 of the h Hamiltonian paths (dually for sources), with equality at the penultimate vertex of TT_(k+2) with its extreme arc reversed (h = 2^k + 1); so for h >= 5 no vertex ends h - 1 or h - 2 paths, and the sole-exit extension at a non-sink raises the count by at least (h + 1)/2 (through THM-4862 (a)'s law 2h - e_a + sigma), i.e. k >= (h + 1)/4 in the normalisation of (5)"
+title: "Deletion and flip increments of the Hamiltonian-path count H. (1) For a tournament T and a vertex v, H(T) - H(T - v) = 2 sum over the odd directed cycles C through v of H(T - V(C)) (Claim A, KNOWN from the odd-cycle formula), and for a tournament X with a new vertex v of cut (A, B), H(X + v) = sum_S e_B(S) s_A(V - S) + s_A(V) + e_B(V) (path pairs). (2) H(T) - H(T - v) = 2 iff v lies on exactly one odd cycle, a triangle (v, a, b), and T - {v, a, b} is transitive; then T - v has at most one odd cycle, H(T - v) in {1, 3} and H(T) in {3, 5}: no deletion lowers a count of at least 5 by exactly 2. (3) H(T) - H(T - v) = 4 iff v lies on exactly two odd cycles, both with transitive complements (and H(T - v) in {1, 5} through order 10). (4) (KNOWN by repository since 2026-03-05: PROP-001 and THM-013/014/017, MISTAKE-008; restated here) The arc-flip increment is the unsigned subset convolution H(T') - H(T) = U(L_j, R_i) - U(L_i, R_j) whose signed companion is THM-017's identity, and THM-013's Delta H = Delta I(Omega, 2) holds for all n as a corollary of the odd-cycle formula H = I(Omega, 2). (5) FINITE-EXACT: the one-vertex extension spectra E(X) of all tournaments of orders 3-9 have no value h + 2 for h >= 5, smallest positive increments k_min(h) = 2, 3, 4, 5, 5, 5, 6, 7, 9, 9, 8, 10, 9, 11, 12, 11 for h = 5, 9, 11, ..., 39 (between h/3.7 and h/2.5; audit C: k_min(h) >= h/4 for every h attained at order 10), and windows of at most 24 consecutive odd values which, for h notin {1, 5}, never cover odd[2h + 1, 3h] at orders <= 8: the induction through [h, 2h - 1] from one realiser is impossible at every order by (2), and the window induction is unavailable through order 8. (6) The one-centre family TT_m + u has H = 1 + 2 sum_{a in A, b notin A, a < b} c(b - a), c(1) = 1, c(d) = 2^(d-2), hence contains 2^k + 1 and (2^i - 1)(2^l - 1) + 2 for all i, l >= 1 and omits 7, 13, 21, 29, ... (7) A vertex that is not a sink ends at most (h - 1)/2 of the h Hamiltonian paths (dually, a non-source starts at most (h - 1)/2), with equality at the penultimate vertex of TT_(k+2) with its extreme arc reversed (k >= 1, h = 2^k + 1); so for h >= 5 no vertex ends h - 1 or h - 2 paths, and the sole-exit extension at a non-sink raises the count by at least (h + 1)/2 (through THM-4862 (a)'s law 2h - e_a + sigma), i.e. k >= (h + 1)/4 in the normalisation of (5)"
 status: >
   PROVED (mac-mini-2026-11-04-chanpak, elementary): statements 2, 3 (the structural halves), 6, 7, and the
   path-pair formula in 1 (statement 7 was added after audit C was launched and is covered by audit D). KNOWN by
@@ -20,14 +20,17 @@ status: >
   CORRECTIONS, all fourteen applied on 2026-11-04 (MISTAKE-715): statement 4 retyped KNOWN, two sentences of
   statement 5 repaired (the h in {1, 5} and h in {1, 3} exceptions), the Lass attribution dropped, the N(A) = 3
   argument completed, the strong 4-tournament realiser corrected; audit C also verified statements 2 and 3
-  exhaustively through order 10 and the k_min table against its order-10 census. Audit D (statement 7): pending. The Chan-Pak conjecture itself (every odd number other than 7 and 21 is a Hamiltonian-path count) remains
+  exhaustively through order 10 and the k_min table against its order-10 census. Audit D (statement 7, independent, 05-knowledge/results/chanpak_endcount_audit_D_20261104.md, own C code): PASS WITH
+  CORRECTIONS, seven minor items applied (D1-D7: the h = 3 wording, the empty-prefix convention, k >= 1, committed
+  receipts for the order-9 check, the scripts field, the dual's wording, the sharper 2 e_a + e_O <= h); audit D verified
+  the bound, its dual, 2 e_a + e_O <= h, the sole-exit law and the floor (3h + 1)/2 on every class of orders <= 9. The Chan-Pak conjecture itself (every odd number other than 7 and 21 is a Hamiltonian-path count) remains
   OPEN; this theorem closes one route (statement 5) and sharpens the local structure of the spectrum.
 session: mac-mini-2026-11-04-chanpak
 source: 05-knowledge/results/chanpak_increments_thm013_thm017_merge_20261104.md
 scripts:
-  - 04-computation/experiments/chanpak_spine_20261104/ext_spectrum_true.py, ext_windows.py, increment_ladder.py (+ _n8.out), increment2_order9.py (+ .out), spine_numeration.py, two_centre_family.py
+  - 04-computation/experiments/chanpak_spine_20261104/ext_spectrum_true.py, ext_windows.py, increment_ladder.py (+ _n8.out), increment2_order9.py (+ .out), spine_numeration.py, two_centre_family.py, endcount_ratio.py (+ _n8.out), verify_stmt7_consequences.py (+ .out), ordered_paths_lemma.py (+ .out)
 related:
-  - 01-canon/theorems/THM-013-arc-flip-delta-I.md (upgraded by statement 4), THM-017-even-odd-split-proof.md, THM-016-claim-b-alternating-sum.md, THM-012b-insertion-decomposition.md, THM-070-claim-a-from-ocf.md
+  - 01-canon/theorems/THM-013-arc-flip-delta-I.md (cross-referenced by statement 4; the all-orders identity is PROP-001-arc-flip-identity.md), THM-017-even-odd-split-proof.md, THM-016-claim-b-alternating-sum.md, THM-012b-insertion-decomposition.md, THM-070-claim-a-from-ocf.md, THM-4862 (one-exit law), THM-4873 (end-count lemma)
   - 01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md, THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md, THM-4862-*, THM-4865-*, THM-4873-*
   - 05-knowledge/hypotheses/HYP-9469-*, HYP-9453-*, HYP-9420-*, HYP-9029-*
   - Chan-Pak, Computational complexity of counting coincidences, Theoret. Comput. Sci. 1015 (2024) 114776, arXiv:2308.10214, Conjecture 6.2; Grinberg-Stanley, The Redei-Berge symmetric function of a directed graph, arXiv:2307.05569
@@ -111,15 +114,23 @@ arXiv:2307.05569, Theorem 1.39) is `H(T) = I(Omega(T), 2) = sum over families F 
 7. **End-count bound (PROVED; added after audit C).** Let `a` be a vertex of a tournament `X` with `h = H(X)` and let
    `e_a` be the number of Hamiltonian paths ending at `a`. If `a` is not a sink, then `e_a <= (h - 1)/2`; dually, if `a`
    is not a source, the number `s_a` of paths starting at `a` is at most `(h - 1)/2`. Equality holds at the penultimate
-   vertex `k + 1` of `TT_(k+2)` with the arc `(1, k + 2)` reversed (`h = 2^k + 1`, `e_(k+1) = 2^(k-1)`; its single
-   out-neighbour is the former sink `k + 2`). Consequences: for `h >= 5` no
-   vertex ends `h - 1` or `h - 2` paths (the cases `h <= 3` of THM-4873 (i) are its `TT_j => C3` configurations), and the
+   vertex `k + 1` of `TT_(k+2)` with the arc `(1, k + 2)` reversed (`k >= 1`, `h = 2^k + 1`, `e_(k+1) = 2^(k-1)`; its
+   single out-neighbour is the former sink `k + 2`). More precisely `2 e_a + e_O <= h`, where `e_O` counts the paths
+   ending in `N+(a)` (audit D, D7). Consequences: for `h >= 5` no vertex ends `h - 1` or `h - 2` paths (the case `h = 3`
+   of THM-4873 (i), `e_a = h - 2 = 1`, occurs only for `TT_j => C3` with `a` in the `C3`), and the
    sole-exit extension `v -> a` (`a` a non-sink; `v -> a` and every other vertex `-> v`) has `H(X + v) = 2h - e_a + sigma`
    with `sigma = [P A_a](X) - h >= 0` (THM-4862 (a); `sigma >= 0` because splitting a Hamiltonian path of `X` at `a` is an
-   injection into the pairs counted by `[P A_a]`), hence `H(X + v) >= (3h + 1)/2`: the count rises by at least
+   injection into the pairs counted by `[P A_a]`, with `h(X[empty]) = 1` - the convention of THM-4862's source packet -
+   so that the paths starting at `a` land in the `S = empty` term), hence `H(X + v) >= (3h + 1)/2`: the count rises by at least
    `(h + 1)/2`, i.e. `k >= (h + 1)/4` in the normalisation of statement 5 (half the raw difference): the sole-exit half
-   of HYP-9469 (1). (Checked exhaustively on all tournaments of orders `<= 9`:
-   no violation; the maximum of `e_a/h` over non-sinks at order `9` is `64/129`.)
+   of HYP-9469 (1); the general cut reduces to the ordered-path lemma HYP-9469 (6), of which this is the case `|A| = 1`.
+   (Checked exhaustively on all tournaments of orders `<= 9` by audits C and D with their own code,
+   `audit_C/del9.out` and `audit_D/classes_n9.out`: no violation of the bound, of its dual or of `2 e_a + e_O <= h`; the
+   maximum of `e_a/h` over non-sinks at order `9` is `64/129`, and `128/257` at order `10` by audit C; the session's own
+   receipt, `endcount_ratio_n8.out`, stops at order `8`. Audit D's census observations, FINITE-EXACT through order `9`:
+   the floor `(3h + 1)/2` is attained only at `h = 3` (`TT_j => C3`); for `h >= 5` the least sole-exit count is
+   `(3h + 3)/2`, on `R_(k+2)` where `sigma = 1`; and the equality cases of the bound with `h >= 3` are exactly
+   `TT_j => R_(k+2)` at the vertex `k + 1`, one class per `(j, k)`.)
 
 ## Proofs
 
@@ -196,7 +207,9 @@ vertex beats `a`; `|F| <= (h - e_a) - e_O` with `e_O` the number of paths ending
 prove. If `e_a >= 1`, `a` lies in the last strong component `X_s` of `X`, which has at least three vertices (`a` is not
 a sink), so `a` has an out-neighbour `z` in `X_s`; every vertex of a strong tournament is the end of a Hamiltonian path
 of it (break a Hamiltonian cycle, Camion), and prefixing Hamiltonian paths of the earlier components gives a Hamiltonian
-path of `X` ending at `z`: `e_O >= 1`. So `2 e_a <= h - 1`. The dual statement is the converse tournament. Equality: in
+path of `X` ending at `z`: `e_O >= 1`. So `2 e_a <= h - 1`. (Rédei's parity alone gives `2 e_a <= h - 1` from `2 e_a <= h - e_O <= h`; the paragraph
+proves the sharper `2 e_a + e_O <= h`, tight on the family below, where `e_O = 1`.) The dual statement is the converse
+tournament. Equality: in
 `TT_(k+2)` with the arc `(1, k + 2)` reversed, every Hamiltonian path other than the transitive one uses the only
 backward arc `k + 2 -> 1`, so it reads (`S` increasing), `k + 2`, `1`, (complement of `S` increasing) for a subset
 `S` of `{2, ..., k + 1}`, and every `S` works: `h = 2^k + 1`. The vertex `k + 1` (single out-neighbour `k + 2`) is last

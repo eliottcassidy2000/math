@@ -1,0 +1,30 @@
+TIGHT(3h+1)/2: n=4 line=bits=2 a=0 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=2 a=1 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=2 a=2 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=9 a=0 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=9 a=1 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=9 a=2 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=23 a=1 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=23 a=2 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=23 a=3 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=28 a=0 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=28 a=2 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=28 a=3 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=36 a=0 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=36 a=1 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=36 a=3 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=47 a=1 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=47 a=2 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=47 a=3 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=49 a=0 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=49 a=1 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=49 a=3 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=58 a=0 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=58 a=2 h=3 H2=5
+TIGHT(3h+1)/2: n=4 line=bits=58 a=3 h=3 H2=5
+MODE=labelled n=4 tournaments=64 nonsink_pairs=224
+  (B) violations of 2e_a<=h-1: 0 ; dual violations: 0 ; violations of 2e_a+e_O<=h: 0
+  (R) max e_a/h over non-sinks = 2/5 (= 0.400000) at a=1, tournament bits=4 ; equality cases (X,a): 120
+      equality cases by h: h=1:72 h=3:24 h=5:24
+  (C) h>=5 with e_a in {h-1,h-2}: 0 ; h=3,e_a=1 not TT_j=>C3-with-a-in-C3: 0
+  (S) sole-exit cases=224 lawfail=0 sigma<0=0 sigma=0:48 maxsigma=9 floorfail(2H<3h+1)=0 tight(2H=3h+1)=24 min rise (H2-h)/h = 2/3 = 0.666667

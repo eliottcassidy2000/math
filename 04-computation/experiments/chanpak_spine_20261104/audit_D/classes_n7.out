@@ -1,0 +1,22 @@
+EQUALITY: n=7 line=111111111111111111111 a=0 h=1 e_a=0 outdeg=6
+EQUALITY: n=7 line=111111111111111111111 a=1 h=1 e_a=0 outdeg=5
+EQUALITY: n=7 line=111111111111111111111 a=2 h=1 e_a=0 outdeg=4
+EQUALITY: n=7 line=111111111111111111111 a=3 h=1 e_a=0 outdeg=3
+EQUALITY: n=7 line=111111111111111111111 a=4 h=1 e_a=0 outdeg=2
+EQUALITY: n=7 line=111111111111111111111 a=5 h=1 e_a=0 outdeg=1
+EQUALITY: n=7 line=111111111111111111101 a=4 h=3 e_a=1 outdeg=1
+EQUALITY: n=7 line=111111111111111111101 a=5 h=3 e_a=1 outdeg=1
+EQUALITY: n=7 line=111111111111111111101 a=6 h=3 e_a=1 outdeg=1
+TIGHT(3h+1)/2: n=7 line=111111111111111111101 a=4 h=3 H2=5
+TIGHT(3h+1)/2: n=7 line=111111111111111111101 a=5 h=3 H2=5
+TIGHT(3h+1)/2: n=7 line=111111111111111111101 a=6 h=3 H2=5
+EQUALITY: n=7 line=111101111111111111110 a=6 h=33 e_a=16 outdeg=1
+EQUALITY: n=7 line=111111111011111111110 a=6 h=17 e_a=8 outdeg=1
+EQUALITY: n=7 line=111111111111101111110 a=6 h=9 e_a=4 outdeg=1
+EQUALITY: n=7 line=111111111111111100111 a=6 h=5 e_a=2 outdeg=1
+MODE=classes n=7 tournaments=456 nonsink_pairs=3136
+  (B) violations of 2e_a<=h-1: 0 ; dual violations: 0 ; violations of 2e_a+e_O<=h: 0
+  (R) max e_a/h over non-sinks = 16/33 (= 0.484848) at a=6, tournament 111101111111111111110 ; equality cases (X,a): 13
+      equality cases by h: h=1:6 h=3:3 h=5:1 h=9:1 h=17:1 h=33:1
+  (C) h>=5 with e_a in {h-1,h-2}: 0 ; h=3,e_a=1 not TT_j=>C3-with-a-in-C3: 0
+  (S) sole-exit cases=3136 lawfail=0 sigma<0=0 sigma=0:68 maxsigma=387 floorfail(2H<3h+1)=0 tight(2H=3h+1)=3 min rise (H2-h)/h = 18/33 = 0.545455

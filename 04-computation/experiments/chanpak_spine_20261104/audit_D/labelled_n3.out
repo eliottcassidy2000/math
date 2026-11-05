@@ -1,0 +1,12 @@
+TIGHT(3h+1)/2: n=3 line=bits=2 a=0 h=3 H2=5
+TIGHT(3h+1)/2: n=3 line=bits=2 a=1 h=3 H2=5
+TIGHT(3h+1)/2: n=3 line=bits=2 a=2 h=3 H2=5
+TIGHT(3h+1)/2: n=3 line=bits=5 a=0 h=3 H2=5
+TIGHT(3h+1)/2: n=3 line=bits=5 a=1 h=3 H2=5
+TIGHT(3h+1)/2: n=3 line=bits=5 a=2 h=3 H2=5
+MODE=labelled n=3 tournaments=8 nonsink_pairs=18
+  (B) violations of 2e_a<=h-1: 0 ; dual violations: 0 ; violations of 2e_a+e_O<=h: 0
+  (R) max e_a/h over non-sinks = 1/3 (= 0.333333) at a=0, tournament bits=2 ; equality cases (X,a): 18
+      equality cases by h: h=1:12 h=3:6
+  (C) h>=5 with e_a in {h-1,h-2}: 0 ; h=3,e_a=1 not TT_j=>C3-with-a-in-C3: 0
+  (S) sole-exit cases=18 lawfail=0 sigma<0=0 sigma=0:6 maxsigma=3 floorfail(2H<3h+1)=0 tight(2H=3h+1)=6 min rise (H2-h)/h = 2/3 = 0.666667
