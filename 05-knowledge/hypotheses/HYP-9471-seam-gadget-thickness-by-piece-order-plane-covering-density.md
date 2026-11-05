@@ -1,14 +1,14 @@
 ---
-id: HYP-9470
+id: HYP-9471
 title: "Seam-gadget semigroup thickness by piece order. On the plane P = {S = 0} of SEAM states (H, S, R) whose exit starts no Hamiltonian path, the S-row-zero gadgets act by 2x2 integer maps [[a, b], [c, d]] on (H, R). The covering density D_k(t) = sum over the distinct nonsingular such maps of order <= k of (a + b t)^(-2) is 0.117, 0.257, 0.486 at t = 2 for k = 4, 5, 6, roughly doubling per order. D_k(t) >= 1 is the necessary density condition for a finite-alphabet self-covering of a 2D cone of states. Pre-registered: D_7(2) lies in [0.75, 1.25], and the order-7 alphabet thickens the realised P-slice"
-status: PRE-REGISTERED (predictions P1-P3 blind at commit time; results section to be filled after the run)
+status: PRE-REGISTERED (predictions P1-P3 committed in a98199e8bb, P4-P5 in 973c1f8312, both under the colliding name HYP-9470; renumbered HYP-9471 because opus-S79 reserved HYP-9470 first, in 395a317b0e; results below)
 session: kind-pasteur-2026-11-04-S11
 date: 2026-11-04
 related: [HYP-9468, HYP-9469, THM-4865, THM-4875, THM-4876]
 script: 04-computation/experiments/seam_gadget_density_20261104/
 ---
 
-# HYP-9470 - when does a finite gadget alphabet fill a plane of seam states?
+# HYP-9471 - when does a finite gadget alphabet fill a plane of seam states?
 
 ## Setting (inherited)
 
