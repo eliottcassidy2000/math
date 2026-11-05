@@ -124,7 +124,7 @@ Every independently chosen local subset is a real subset of U. Thus the EXACT su
 
 For a vertex-transitive block on n_a vertices, s_i=e_i=h_a/n_a and R_i=L_i=(B_a-h_a)/n_a. Therefore fixed cardinality |S|=k_a automatically gives (13). If these blocks are strong, k_1>0 and k_m<n_m ensure every resulting child is strong.
 
-This gives a broad physical setting in which sumset arguments are legitimate. It also identifies exactly what must be retained when vertex transitivity is unavailable: the four boundary sums (13), rather than H alone.
+This gives a broad physical setting in which sumset arguments are legitimate. When vertex transitivity is unavailable, the four boundary sums (13) are a sufficient signature for this construction; their minimality is not asserted.
 
 ## 4. The cofactor lattice is an all-order obstruction to this slice method
 
