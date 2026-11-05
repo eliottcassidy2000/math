@@ -1,0 +1,211 @@
+{
+  "Q_literal_path_checks": 25,
+  "Q_physical_graphs": 64,
+  "Q_seed_marked_isomorphisms": 32,
+  "boundary": {
+    "C": 2,
+    "H": 533,
+    "feedback_pairs": 0,
+    "feedback_triple": [
+      2,
+      5,
+      8
+    ],
+    "rows": [
+      2,
+      4,
+      9,
+      19,
+      39,
+      335,
+      159,
+      319,
+      607,
+      1279,
+      511
+    ]
+  },
+  "closed_raw_vectors": 410,
+  "complete_language_product_states": 47,
+  "controller_classes": 15,
+  "examples": [
+    {
+      "H": 13,
+      "witnesses": [
+        {
+          "family": "N",
+          "u": 2,
+          "v": 2,
+          "word": [
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "family": "P",
+          "u": 1,
+          "v": 1,
+          "word": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "family": "Q",
+          "u": 2,
+          "v": 1,
+          "word": [
+            2,
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "H": 15,
+      "witnesses": [
+        {
+          "family": "regular5",
+          "word": [
+            0,
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "H": 29,
+      "witnesses": [
+        {
+          "family": "M",
+          "u": 2,
+          "v": 2,
+          "word": [
+            1,
+            0,
+            3,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "H": 55,
+      "witnesses": [
+        {
+          "family": "M",
+          "u": 2,
+          "v": 4,
+          "word": [
+            1,
+            0,
+            3,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "H": 231,
+      "witnesses": [
+        {
+          "family": "P",
+          "u": 1,
+          "v": 24,
+          "word": [
+            0,
+            2,
+            3,
+            2,
+            2,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "family": "Q",
+          "u": 2,
+          "v": 24,
+          "word": [
+            2,
+            1,
+            3,
+            2,
+            2,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "family": "Q",
+          "u": 6,
+          "v": 6,
+          "word": [
+            2,
+            3,
+            2,
+            1,
+            3,
+            2,
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "H": 247,
+      "witnesses": [
+        {
+          "family": "P",
+          "u": 3,
+          "v": 8,
+          "word": [
+            2,
+            3,
+            0,
+            2,
+            3,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "family": "Q",
+          "u": 9,
+          "v": 3,
+          "word": [
+            2,
+            3,
+            3,
+            3,
+            1,
+            3,
+            0,
+            2
+          ]
+        }
+      ]
+    }
+  ],
+  "exclusions": {
+    "1861": [],
+    "533": [],
+    "821": []
+  },
+  "full_capped_vector_checks": 85,
+  "inverse_rectangle_bound": 101,
+  "literal_cycle_words": 1365,
+  "physical_words_through_length6": 5461,
+  "regex_nfa_states": 450,
+  "status": "PASS",
+  "terminal_reduction_graphs": 128
+}
