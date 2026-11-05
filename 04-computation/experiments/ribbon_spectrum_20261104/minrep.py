@@ -43,7 +43,7 @@ def vecmat(f, M, d):
             out[i] += m * f[j]
     return out
 
-for w in (1, 2, 3):
+for w in [int(x) for x in (sys.argv[1:] or ['1', '2', '3'])]:
     order, states, mats, final = transfer_system(w)
     d = len(order)
     L = letters(w)
