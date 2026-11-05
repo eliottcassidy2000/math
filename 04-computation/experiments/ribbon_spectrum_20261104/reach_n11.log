@@ -1,0 +1,44 @@
+n=1: 1 states
+n=2: 2 states
+n=3: 8 states
+n=4: 24 states
+n=5: 68 states
+n=6: 194 states
+n=7: 561 states
+n=8: 1709 states
+n=9: 5309 states
+n=10: 16775 states
+n=11: 52741 states
+coordinate 1 == coordinate 2 on all states: True
+(1) difference lattice (from 400 random differences): rank 13; pivot entries [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 8]; index in the saturated lattice = product of pivots = 65536
+(1) parity classes hit at n=11: 1 of 8192 (on the 13-dim hyperplane); H odd always: True
+(2) extreme ratios y_i/H over states with H >= 9:
+    y_1/H in [+1.000, +1.000], mean +1.000
+    y_2/H in [+1.000, +1.000], mean +1.000
+    y_3/H in [+0.000, +4.000], mean +0.934
+    y_4/H in [-4.000, +8.000], mean +0.501
+    y_5/H in [+0.000, +6.000], mean +1.515
+    y_6/H in [+0.000, +14.000], mean +2.293
+    y_7/H in [+0.000, +8.000], mean +1.350
+    y_8/H in [+0.000, +6.000], mean +1.323
+    y_9/H in [-10.000, +0.000], mean -1.407
+    y_10/H in [+0.000, +8.000], mean +0.951
+    y_11/H in [+0.000, +2.000], mean +0.738
+    y_12/H in [+0.000, +2.889], mean +0.620
+    y_13/H in [-0.889, +0.444], mean -0.023
+    y_14/H in [+0.000, +8.000], mean +0.476
+(3) 2D projection (H, y_i): distinct points vs lattice points of the bounding region (same parity as observed):
+    y_3: 27088 points, 786996 lattice points in per-H ranges, density 0.034
+    y_4: 47432 points, 1889964 lattice points in per-H ranges, density 0.025
+    y_5: 27760 points, 1239757 lattice points in per-H ranges, density 0.022
+    y_6: 47157 points, 1829312 lattice points in per-H ranges, density 0.026
+    y_7: 34164 points, 936131 lattice points in per-H ranges, density 0.036
+    y_8: 42382 points, 1215058 lattice points in per-H ranges, density 0.035
+    y_9: 38444 points, 1429338 lattice points in per-H ranges, density 0.027
+    y_10: 27329 points, 1306093 lattice points in per-H ranges, density 0.021
+    y_11: 25107 points, 494131 lattice points in per-H ranges, density 0.051
+    y_12: 28811 points, 952263 lattice points in per-H ranges, density 0.030
+    y_13: 8647 points, 84980 lattice points in per-H ranges, density 0.102
+    y_14: 17320 points, 403781 lattice points in per-H ranges, density 0.043
+(4) post-sink triples: 29854 distinct (H, R-e, 2R); H-slices: 1397; slice sizes min/median/max 1/15/107
+(5) next-level values from level 11: solid [49, 3033], multiplicity on it min/median/max 4/82/382; first misses above: [3035, 3749, 3883, 3969, 4091, 4249, 4367, 4423]

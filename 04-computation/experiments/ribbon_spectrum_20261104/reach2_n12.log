@@ -1,0 +1,39 @@
+levels: [1, 2, 8, 24, 68, 194, 561, 1709, 5309, 16775, 52741, 165816]
+(1) n=3: lattice of differences rank 6, pivots [2, 2, 2, 2, 2, 4], index 128
+(1) n=4: lattice of differences rank 12, pivots [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 8], index 16384
+(1) n=5: lattice of differences rank 13, pivots [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 8], index 65536
+(1) n=6: lattice of differences rank 13, pivots [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 8], index 65536
+(1) n=7: lattice of differences rank 13, pivots [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 8], index 65536
+(1) n=8: lattice of differences rank 13, pivots [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 8], index 65536
+(1) n=9: lattice of differences rank 13, pivots [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 8], index 65536
+(1) n=10: lattice of differences rank 13, pivots [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 8], index 65536
+(1) n=11: lattice of differences rank 13, pivots [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 8], index 65536
+(1) n=12: lattice of differences rank 13, pivots [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 8], index 65536
+(1) letter mask 0: A L subset L: True; A y_ref - y_ref in L: True
+(1) letter mask 1: A L subset L: True; A y_ref - y_ref in L: True
+(1) letter mask 2: A L subset L: True; A y_ref - y_ref in L: True
+(1) letter mask 3: A L subset L: True; A y_ref - y_ref in L: True
+(1) fixed residues per coordinate (mod M -> residue), coordinates 1-based: {1: (2, 1), 2: (2, 1), 3: (2, 0), 4: (2, 0), 5: (2, 0), 6: (2, 0), 7: (2, 0), 8: (2, 0), 9: (2, 0), 10: (2, 0), 11: (2, 0), 12: (2, 0), 13: (4, 0), 14: (4, 0)}
+(2) cumulative multiplicity (words of length <= 12+1) on [49, 3033]: per-letter min / total min, median:
+    letter 1: min 14, zeros 0, median 100
+    letter 2: min 11, zeros 0, median 99
+    letter 3: min 12, zeros 0, median 102
+    total: min 37 (at 127), median 303, max 1156
+    length <= 9: min multiplicity on [49, 639] = 0, median 8
+    length <= 10: min multiplicity on [49, 639] = 3, median 47
+    length <= 11: min multiplicity on [49, 639] = 16, median 134
+    length <= 12: min multiplicity on [49, 639] = 26, median 275
+    length <= 13: min multiplicity on [49, 639] = 37, median 426
+(3) cumulative rooted triples (h, e, R) from ribbons of length <= 12: 92660; distinct h: 3284
+    h=9: 11 (e,R) pairs; e in [0,9] (6 values); R in [9,36] (8 values, 12 same-parity gaps)
+    h=11: 7 (e,R) pairs; e in [0,11] (5 values); R in [11,44] (7 values, 15 same-parity gaps)
+    h=13: 7 (e,R) pairs; e in [0,13] (5 values); R in [13,52] (7 values, 18 same-parity gaps)
+    h=15: 13 (e,R) pairs; e in [0,15] (5 values); R in [15,60] (10 values, 18 same-parity gaps)
+    h=17: 10 (e,R) pairs; e in [0,17] (7 values); R in [17,68] (9 values, 24 same-parity gaps)
+    h=25: 13 (e,R) pairs; e in [0,25] (6 values); R in [25,100] (11 values, 34 same-parity gaps)
+    h=31: 13 (e,R) pairs; e in [0,31] (8 values); R in [31,124] (11 values, 43 same-parity gaps)
+    h=45: 28 (e,R) pairs; e in [0,45] (11 values); R in [45,180] (21 values, 57 same-parity gaps)
+    h=63: 6 (e,R) pairs; e in [0,63] (5 values); R in [63,252] (6 values, 93 same-parity gaps)
+    h=99: 44 (e,R) pairs; e in [0,99] (22 values); R in [99,396] (34 values, 136 same-parity gaps)
+    h=129: 32 (e,R) pairs; e in [0,129] (18 values); R in [129,516] (24 values, 189 same-parity gaps)
+    h=257: 32 (e,R) pairs; e in [0,257] (22 values); R in [257,1028] (29 values, 380 same-parity gaps)

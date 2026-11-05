@@ -1,0 +1,47 @@
+n=1: 1 states, 1 words
+n=2: 2 states, 2 words
+n=3: 8 states, 8 words
+n=4: 24 states, 32 words
+n=5: 68 states, 128 words
+n=6: 194 states, 512 words
+n=7: 561 states, 2048 words
+n=8: 1709 states, 8192 words
+n=9: 5309 states, 32768 words
+n=10: 16775 states, 131072 words
+n=11: 52741 states, 524288 words
+n=12: 165816 states, 2097152 words
+n=13: 518877 states, 8388608 words
+(1) base point y_ref (level 7) = [1, 1, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+(1) echelon basis of L (rows):
+     [2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+     [0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+     [0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+     [0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+     [0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0]
+     [0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0]
+     [0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0]
+     [0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0]
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0]
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0]
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0]
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4]
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8]
+(1) A_m L subset L for all letters: True; A_m y_ref - y_ref in L: True; every state of levels 7..13 lies in y_ref + L: True
+(1) pivot moduli per column: {1: 2, 3: 2, 4: 2, 5: 2, 6: 2, 7: 2, 8: 2, 9: 2, 10: 2, 11: 2, 12: 2, 13: 4, 14: 8}
+(2) n=9: solid window [49, 257], r_n(N): min 4, median 79, max 666; words 32768
+      residues: q=3: max|f-1/k|=0.070; q=5: max|f-1/k|=0.016; q=7: max|f-1/k|=0.026; q=8: max|f-1/k|=0.063; q=9: max|f-1/k|=0.078; q=16: max|f-1/k|=0.055
+(2) n=10: solid window [49, 639], r_n(N): min 4, median 108, max 2226; words 131072
+      residues: q=3: max|f-1/k|=0.118; q=5: max|f-1/k|=0.055; q=7: max|f-1/k|=0.018; q=8: max|f-1/k|=0.052; q=9: max|f-1/k|=0.061; q=16: max|f-1/k|=0.038
+(2) n=11: solid window [49, 1833], r_n(N): min 2, median 100, max 9635; words 524288
+      residues: q=3: max|f-1/k|=0.153; q=5: max|f-1/k|=0.099; q=7: max|f-1/k|=0.021; q=8: max|f-1/k|=0.031; q=9: max|f-1/k|=0.068; q=16: max|f-1/k|=0.026
+(2) n=12: solid window [49, 3033], r_n(N): min 8, median 304, max 40156; words 2097152
+      residues: q=3: max|f-1/k|=0.181; q=5: max|f-1/k|=0.133; q=7: max|f-1/k|=0.021; q=8: max|f-1/k|=0.026; q=9: max|f-1/k|=0.104; q=16: max|f-1/k|=0.021
+(2) n=13: solid window [49, 8609], r_n(N): min 2, median 232, max 158580; words 8388608
+      residues: q=3: max|f-1/k|=0.205; q=5: max|f-1/k|=0.158; q=7: max|f-1/k|=0.020; q=8: max|f-1/k|=0.021; q=9: max|f-1/k|=0.131; q=16: max|f-1/k|=0.020
+(3) dominant eigenvalues (modulus of the two largest):
+    1-: 1.839287, 0.737353
+    -2: 2.288291, 1.255395
+    12: 2.562972, 1.346436
+    1-.-2: 3.000000, 0.000009
+    1-.12: 4.744826, 0.604068
+    -2.12: 5.236276, 1.576016
