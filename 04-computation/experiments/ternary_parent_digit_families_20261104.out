@@ -1,0 +1,21 @@
+# ternary_parent_digit_families_20261104 NLAW=6 TMAX=14 BOUND=30000
+any-mark C2 law, order 2: 4 (tournament, mark) cases, 0 failures
+any-mark C2 law, order 3: 24 (tournament, mark) cases, 0 failures
+any-mark C2 law, order 4: 256 (tournament, mark) cases, 0 failures
+any-mark C2 law, order 5: 5120 (tournament, mark) cases, 0 failures
+any-mark C2 law, order 6: 196608 (tournament, mark) cases, 0 failures
+t= 1 (order 3, digit-1-ready order 4): new values 2; digit check failures 0/2 | odd values <= 30000 not yet attained: 14998 (first 3); largest attained 5
+t= 2 (order 4, digit-1-ready order 5): new values 2; digit check failures 0/4 | odd values <= 30000 not yet attained: 14996 (first 3); largest attained 11
+t= 3 (order 5, digit-1-ready order 6): new values 3; digit check failures 0/8 | odd values <= 30000 not yet attained: 14993 (first 3); largest attained 23
+t= 4 (order 6, digit-1-ready order 7): new values 6; digit check failures 0/16 | odd values <= 30000 not yet attained: 14987 (first 3); largest attained 51
+t= 5 (order 7, digit-1-ready order 8): new values 11; digit check failures 0/32 | odd values <= 30000 not yet attained: 14976 (first 3); largest attained 107
+t= 6 (order 8, digit-1-ready order 9): new values 23; digit check failures 0/64 | odd values <= 30000 not yet attained: 14953 (first 3); largest attained 227
+t= 7 (order 9, digit-1-ready order 10): new values 43; digit check failures 0/128 | odd values <= 30000 not yet attained: 14910 (first 3); largest attained 467
+t= 8 (order 10, digit-1-ready order 11): new values 86; digit check failures 0/256 | odd values <= 30000 not yet attained: 14824 (first 3); largest attained 963
+t= 9 (order 11, digit-1-ready order 12): new values 156; digit check failures 0/512 | odd values <= 30000 not yet attained: 14668 (first 3); largest attained 1955
+t=10 (order 12, digit-1-ready order 13): new values 322; digit check failures 0/0 | odd values <= 30000 not yet attained: 14346 (first 3); largest attained 3971
+t=11 (order 13, digit-1-ready order 14): new values 635; digit check failures 0/0 | odd values <= 30000 not yet attained: 13711 (first 3); largest attained 8003
+t=12 (order 14, digit-1-ready order 15): new values 1276; digit check failures 0/0 | odd values <= 30000 not yet attained: 12435 (first 3); largest attained 16131
+t=13 (order 15, digit-1-ready order 16): new values 2437; digit check failures 0/0 | odd values <= 30000 not yet attained: 9998 (first 3); largest attained 29995
+t=14 (order 16, digit-1-ready order 17): new values 408; digit check failures 0/0 | odd values <= 30000 not yet attained: 9590 (first 3); largest attained 29995
+odd values <= 400 never attained by the family up to t = 14: 3 7 13 15 21 25 27 29 31 35 41 43 49 53 55 57 59 67 71 75 77 83 85 89 91 93 99 101 103 105 109 111 113 119 121 125 131 133 135 137 147 149 153 155 161 163 167 173 175 177 181 183 185 189 193 197 199 203 205 207 209 211 215 217 221 225 231 233 237 239 245 247 251 259 261 263 267 273 277 281 293 295 297 299 301 303 309 313 315 317 323 327 329 335 337 343 347 351 353 355 357 359 363 365 371 373 375 377 379 381 385 389 393 395 397 399

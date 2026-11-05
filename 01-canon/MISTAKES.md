@@ -22844,3 +22844,33 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - Before calling a structural reading new, grep canon for its mechanism words (here "anti-automorphism",
     "palindromic", "involution", "Fix"), not only for the objects it is applied to.
   - Read inequalities and "one more than" statements in both directions before committing them.
+
+## MISTAKE-713 (2026-11-04, opus-2026-11-04-S77, the note `05-knowledge/results/ternary_parent_c2_digit_heredity_20261104.md`, THM-4873 and HYP-9466 at the pre-audit commit 224d8439ec; found by the independent audit `04-computation/experiments/c2_digit_heredity_20261104_audit_S77/AUDIT.md`) -- an inherited no-go recast as new, a sentence inferred from a count, and two over-reaching syntheses
+
+- **What was claimed.**
+  - (1) The C2 heredity no-go was presented as this session's finding, with RESULT.md cited only for the law.
+  - (2) "No old mark of any grandchild ever has digit 1 or 2."
+  - (3) "All three known self-reproducing routes stop at generation two", H-neutral preparation included.
+  - (4) "A ternary parent for full spectrum coverage must come from fresh bases."
+- **Why it was wrong.**
+  - (1) `two_entry_funnels_20261103/READY.md` section 4 (2026-11-03, audited) proves the no-go for strong inputs.
+    RESULT section 4 dualises it, and RESULT eqs. (8), (10) and (12) give the native digits.
+  - (2) In each of the three digit-2 grandchildren the old mark u also has digit 2. The program counted grandchildren
+    without recording which mark carried the digit.
+  - (3) Preparation is an iff criterion whose closure is open, and klein's data show it alive past generation two.
+  - (4) 20 odd N <= 130 have no ternary parent at all, yet 14 of them are realised with digits >= 3. So full coverage
+    cannot come from ternary parents.
+- **Repair.**
+  - Prior art credited, and novelty narrowed to the end-count lemma, non-strong bases and the grandchild level.
+  - The classification completed. The audit proved it at every order with the out-degree bound (READY (7)).
+  - The syntheses retyped, and the M4 obstruction recorded.
+  - 14 minors fixed (lemma wording, tables, outputs, numbering, densities, credits).
+- **How it was caught.** The audit:
+  - reproduced every number, out of sample at |B| = 8;
+  - recorded which mark carries each small digit;
+  - read READY, RESULT and the preparation packet;
+  - decided all predecessors h <= 42 with Busch's bound.
+- **Lesson.**
+  - Before calling a C2 / reset property new, read two_entry_funnels READY.md and RESULT.md in full, not only the law
+    being cited.
+  - Never state "no X has property P" from a count that did not record where P occurred.

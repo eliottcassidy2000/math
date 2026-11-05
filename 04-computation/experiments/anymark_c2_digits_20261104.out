@@ -1,0 +1,13 @@
+# anymark_c2_digits_20261104 NMAX=8 NCHILD=6 LIM=1500
+n<=1: classes this order 1 | realised odd h<=1500: 1; with a digit-1 mark: 0; digit-2: 0; both: 0
+n<=2: classes this order 1 | realised odd h<=1500: 1; with a digit-1 mark: 1; digit-2: 0; both: 0
+n<=3: classes this order 2 | realised odd h<=1500: 2; with a digit-1 mark: 1; digit-2: 0; both: 0
+n<=4: classes this order 4 | realised odd h<=1500: 3; with a digit-1 mark: 2; digit-2: 1; both: 1
+n<=5: classes this order 12 | realised odd h<=1500: 7; with a digit-1 mark: 5; digit-2: 4; both: 4
+n<=6: classes this order 56 | realised odd h<=1500: 19; with a digit-1 mark: 12; digit-2: 10; both: 9
+n<=7: classes this order 456 | realised odd h<=1500: 77; with a digit-1 mark: 25; digit-2: 30; both: 18
+n<=8: classes this order 6880 | realised odd h<=1500: 320; with a digit-1 mark: 65; digit-2: 79; both: 42
+C2 children of all (B, a) with |B| <= 6: 421 cases; child has a digit-1 mark: 15; digit-2 mark: 17; both: 5
+odd v <= 1500 missed by the one-step any-mark sweep 3h + 2 sigma_a (orders <= 8): 1 7 11 13 21 47 67  [total 7]
+odd h <= 400 realised at orders <= 8 but with no digit-1 mark: 3 15 25 27 35 41 43 53 55 57 67 75 83 89 93 99 101 103 105 111 113 121 123 127 129 131 133 135 137 139 141 143 149 151 153 157 159 161 163 165 167 169 177 189 191 195 199 201 203 205 209 211 215 219 221 227 231 235 237 239 241 243 247 249 251 255 257 261 263 265 269 271 273 275 277 281 283 285 287 289 291 293 295 297 299 301 303 305 307 309 311 315 317 319 323 325 327 329 331 333 335 337 339 341 343 345 347 349 351 353 355 357 359 361 363 365 367 369 371 373 375 377 379 381 383 385 387 389 391 393 395 397 399
+odd h <= 400 realised at orders <= 8 but with no digit-2 mark: 1 3 15 17 27 33 35 41 43 45 57 61 63 67 83 85 87 91 101 105 111 117 121 125 131 139 141 143 145 147 149 151 153 157 159 165 171 179 183 189 195 197 199 201 203 205 207 209 217 227 229 235 239 241 247 249 251 255 257 261 263 265 271 273 275 277 279 285 289 291 295 297 301 303 305 311 313 315 317 319 321 325 327 329 331 333 335 337 339 341 343 345 347 349 351 353 355 357 359 361 363 365 367 369 371 373 375 377 379 381 383 385 387 389 391 393 395 397 399

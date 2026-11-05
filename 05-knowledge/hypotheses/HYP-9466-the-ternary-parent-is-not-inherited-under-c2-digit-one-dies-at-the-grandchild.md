@@ -32,7 +32,9 @@ mark u is sigma_u = B_u - H.
 Output: `c2_digit_heredity_20261104.out`.
 - **(P1) holds.** sigma_x = 0 and sigma_y = h - e_a, with 0 failures over 3,192 pairs (B, a).
 - **(P2) holds.** 6 children carry a digit-1 mark and 4 a digit-2 mark.
-- **(P3) holds.** None of the 28,728 grandchildren carries a digit-1 mark; 3 carry a digit-2 mark. The smallest
-  positive digit exceeds 20 in 28,463 grandchildren.
+- **(P3) holds.** None of the 28,728 grandchildren carries a digit-1 mark; 3 carry a digit-2 mark. Each of the three
+  has two digit-2 marks, the native y2 and the old mark u (S77 audit M2). The smallest positive digit exceeds 20 in
+  28,463 grandchildren.
+- **The whole statement is PROVED at every order** (THM-4873 (ii), the S77 audit's proof).
 
 The native-mark part is PROVED by the end-count lemma (THM-4873 (i), (ii)).
