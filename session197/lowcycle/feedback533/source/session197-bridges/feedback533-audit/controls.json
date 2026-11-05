@@ -1,0 +1,255 @@
+{
+  "all_subset_feedback_checks": 12288,
+  "controls": [
+    {
+      "C": 2,
+      "H": 533,
+      "deletion_witness": [
+        2,
+        4,
+        8
+      ],
+      "feedback": 3,
+      "rows": [
+        4,
+        1,
+        26,
+        35,
+        75,
+        23,
+        175,
+        319,
+        639,
+        1279,
+        511
+      ]
+    },
+    {
+      "C": 2,
+      "H": 533,
+      "deletion_witness": [
+        2,
+        5,
+        7
+      ],
+      "feedback": 3,
+      "rows": [
+        4,
+        1,
+        10,
+        19,
+        39,
+        207,
+        287,
+        607,
+        191,
+        1407,
+        511
+      ]
+    },
+    {
+      "C": 2,
+      "H": 533,
+      "deletion_witness": [
+        3,
+        7,
+        10
+      ],
+      "feedback": 3,
+      "rows": [
+        8,
+        9,
+        3,
+        84,
+        7,
+        31,
+        823,
+        127,
+        1215,
+        447,
+        767
+      ]
+    },
+    {
+      "C": 2,
+      "H": 533,
+      "deletion_witness": [
+        1,
+        4,
+        6
+      ],
+      "feedback": 3,
+      "rows": [
+        2,
+        12,
+        9,
+        81,
+        7,
+        31,
+        1335,
+        127,
+        703,
+        255,
+        959
+      ]
+    },
+    {
+      "C": 2,
+      "H": 533,
+      "deletion_witness": [
+        2,
+        5,
+        8
+      ],
+      "feedback": 3,
+      "rows": [
+        4,
+        1,
+        10,
+        35,
+        15,
+        343,
+        159,
+        319,
+        1631,
+        255,
+        767
+      ]
+    },
+    {
+      "C": 2,
+      "H": 533,
+      "deletion_witness": [
+        3,
+        4,
+        9
+      ],
+      "feedback": 3,
+      "rows": [
+        2,
+        24,
+        3,
+        37,
+        141,
+        23,
+        63,
+        367,
+        639,
+        1279,
+        511
+      ]
+    }
+  ],
+  "final_ports": [
+    1,
+    0
+  ],
+  "independent_bank_sha256": "a9df9d85412f37e65a1059db21a70a981ae30f98e553ee58229786bad8e0038c",
+  "pair_triangle_certificates": 330,
+  "physical_word_arcs": 55,
+  "six_complete_isomorphism_matches": [
+    {
+      "isomorphisms": 1,
+      "mapping": [
+        1,
+        0,
+        2,
+        9,
+        3,
+        10,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_index": 2
+    },
+    {
+      "isomorphisms": 1,
+      "mapping": [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        7,
+        9,
+        10
+      ],
+      "source_index": 0
+    },
+    {
+      "isomorphisms": 1,
+      "mapping": [
+        0,
+        10,
+        9,
+        1,
+        8,
+        7,
+        2,
+        6,
+        4,
+        3,
+        5
+      ],
+      "source_index": 4
+    },
+    {
+      "isomorphisms": 1,
+      "mapping": [
+        0,
+        1,
+        10,
+        2,
+        9,
+        8,
+        3,
+        7,
+        5,
+        6,
+        4
+      ],
+      "source_index": 5
+    },
+    {
+      "isomorphisms": 1,
+      "mapping": [
+        1,
+        0,
+        2,
+        3,
+        10,
+        4,
+        8,
+        9,
+        5,
+        7,
+        6
+      ],
+      "source_index": 1
+    },
+    {
+      "isomorphisms": 1,
+      "mapping": [
+        0,
+        1,
+        10,
+        8,
+        2,
+        9,
+        7,
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_index": 3
+    }
+  ],
+  "status": "PASS"
+}

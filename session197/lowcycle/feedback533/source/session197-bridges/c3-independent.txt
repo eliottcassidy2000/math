@@ -1,0 +1,10 @@
+order 4 C1 1 C2 0 C3 0 max_refinement_permutations 1
+order 5 C1 3 C2 2 C3 1 max_refinement_permutations 120
+order 6 C1 8 C2 5 C3 11 max_refinement_permutations 120
+order 7 C1 21 C2 18 C3 38 max_refinement_permutations 120
+order 8 C1 55 C2 60 C3 124 max_refinement_permutations 120
+order 9 C1 144 C2 191 C3 390 max_refinement_permutations 120
+order 10 C1 377 C2 589 C3 1193 max_refinement_permutations 120
+order 11 C1 987 C2 1775 C3 3574 max_refinement_permutations 120
+order 12 C1 2584 C2 5257 C3 10537 max_refinement_permutations 120
+PASS full_graph_set_isomorphism_comparisons 27945 parent_endpoint_matrices 9567 all_unpruned_mixed_masks 15611794 retained_labelled_extensions 212712 maximum_refinement_permutations 120
