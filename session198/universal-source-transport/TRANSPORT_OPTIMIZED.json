@@ -1,0 +1,117 @@
+{
+  "kernel_checks": 3,
+  "physical_spanning_determinant": -4,
+  "physical_witnesses": [
+    {
+      "positive": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "profile": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "root": 0,
+      "rows": [
+        2,
+        0
+      ],
+      "word": ""
+    },
+    {
+      "positive": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "profile": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "root": 0,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "word": "Z"
+    },
+    {
+      "positive": [
+        0,
+        2,
+        0,
+        1
+      ],
+      "profile": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "root": 0,
+      "rows": [
+        6,
+        4,
+        0
+      ],
+      "word": "O"
+    },
+    {
+      "positive": [
+        0,
+        0,
+        2,
+        1
+      ],
+      "profile": [
+        5,
+        2,
+        6,
+        3
+      ],
+      "root": 3,
+      "rows": [
+        2,
+        12,
+        9,
+        1
+      ],
+      "word": "ZJ"
+    },
+    {
+      "positive": [
+        3,
+        0,
+        3,
+        0
+      ],
+      "profile": [
+        9,
+        3,
+        9,
+        3
+      ],
+      "root": 3,
+      "rows": [
+        18,
+        28,
+        25,
+        1,
+        8
+      ],
+      "word": "ZJZ"
+    }
+  ],
+  "scope": "All-word universal-identity obstruction only; target-dependent source fibers and exact coverage remain open.",
+  "status": "PASS",
+  "strict_table_vectors": 24,
+  "surviving_identities": 3
+}
