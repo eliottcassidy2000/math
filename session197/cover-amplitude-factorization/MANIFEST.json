@@ -1,0 +1,13 @@
+{
+  "PROOF.md": "2a0451a8473cd17f38a9140c18788fca50325d6f07d8a2716281252f871fbfd6",
+  "README.md": "29ee4cc8de78844739c090c14679262ccc2c0841771e3dbaffabc24343e498d6",
+  "REVIEW.md": "ecb129e65f5f18fe9b3088dc2e0564bb7b6ba344ea1b5bf839068aff353d0244",
+  "independent/literal.json": "31ab27ebd540a2431b3871c1ad2459f6e714bbb82219ca05b8ac5928692a14d8",
+  "independent/literal.py": "b1bbdb276dfd5cb885ef7b5631ca596d5af3161dd5b8476e3c186b929fb2cc16",
+  "receipt-debug.json": "90b8d34e9d5dbad1769a1882ffa1c9b3f306e2b65948f7aba0158866be038e62",
+  "receipt-normal.json": "90b8d34e9d5dbad1769a1882ffa1c9b3f306e2b65948f7aba0158866be038e62",
+  "verify.cpp": "3abdad3bcfcf2953af4f0a811fb3dac38610e9e2777d8c95db65715aaeb69581",
+  "verify.py": "10e9c13dae637d8d1fbfa59951b09f69aaa0ba67492436af54c7a8c2443a3a08",
+  "wrapper-normal.json": "90b8d34e9d5dbad1769a1882ffa1c9b3f306e2b65948f7aba0158866be038e62",
+  "wrapper-optimized.json": "90b8d34e9d5dbad1769a1882ffa1c9b3f306e2b65948f7aba0158866be038e62"
+}
