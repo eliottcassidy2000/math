@@ -1,0 +1,9 @@
+{
+  "PROOF.md": "817ebe7d1fbf810bdbc211ae3f7b01e64d2aed8bdc6c422393c6a80c0f0253e1",
+  "README.md": "6374fab0ade320afb1712975dacf44384802c7876a7564f5e07c09ca845f9a78",
+  "VALIDATION-normal.json": "6b66dd4658ebd5d29e4fa8e0e501c7db1f14408c470e006a5b68adb4d80e9fed",
+  "VALIDATION-optimized.json": "6b66dd4658ebd5d29e4fa8e0e501c7db1f14408c470e006a5b68adb4d80e9fed",
+  "dependencies/ADJOINT.md": "f9c337b3cfee1cd1134ee02276890238c30ff0e84a14c26fbcd5cd78ab82dc05",
+  "dependencies/CARMICHAEL.md": "40facdf95adc7b97307e53a9058c30538d8ca879be90150797e96f8b4cd85e1e",
+  "verify.py": "6400ffb6de25d1162c7937bc016c06a2f3d7f4fcbc81a7d41beab81bedc9a00a"
+}

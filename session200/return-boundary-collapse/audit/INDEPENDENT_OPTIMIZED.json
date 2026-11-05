@@ -1,0 +1,41 @@
+{
+  "AB_state_counts": {
+    "1": 2,
+    "2": 3,
+    "3": 3,
+    "4": 3,
+    "5": 3,
+    "6": 3,
+    "7": 3,
+    "8": 3,
+    "9": 3,
+    "10": 3,
+    "11": 3,
+    "12": 3
+  },
+  "complete_words": 88572,
+  "global_normalization_checks": 5476,
+  "positive_control": {
+    "C": 1,
+    "H": 139,
+    "method": "exhaustive vertex permutations",
+    "single_return_rank": 2,
+    "source_joint_readout": [
+      25,
+      19
+    ],
+    "vertices": 9,
+    "word": "JZOOZZJ"
+  },
+  "return_matrix_rank_counts": {
+    "1": 5458,
+    "2": 18
+  },
+  "return_words": 5476,
+  "scope": "All-order proof audit plus exact finite matrix and graph controls; prime exclusion only for at least two return blocks; no universal target coverage.",
+  "short_return_menu": 26,
+  "status": "PASS",
+  "three_return_scale_checks": 17576,
+  "two_return_rank_one_checks": 676,
+  "word_length_cap": 10
+}

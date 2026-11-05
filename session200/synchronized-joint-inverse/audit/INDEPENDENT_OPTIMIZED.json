@@ -1,0 +1,61 @@
+{
+  "C1_minimum_J_costs_match": true,
+  "C1_targets": 183,
+  "accepted_presentations": 1799,
+  "auxiliary_bound": "h <= U_v U_q <= 2h; d_q may be zero",
+  "difference_cone_generating_ray_checks": 12,
+  "direct_inventory_cover_cap": 200,
+  "direct_inventory_size": 1055,
+  "full_forward_cover_cap": 400,
+  "full_forward_profiles": 2978,
+  "joint_minimum_J_costs_match": true,
+  "joint_pairs": 674,
+  "m15_h_fiber": [
+    9,
+    11
+  ],
+  "maximum_m": 401,
+  "paired_inventory_size": 76,
+  "physical_Mersenne_basis_checks": 48,
+  "physical_inventory_size": 102,
+  "raw_sidecar_bound_checks": 76,
+  "same_w_different_q": {
+    "q": [
+      [
+        15,
+        5,
+        15,
+        5
+      ],
+      [
+        23,
+        7,
+        23,
+        7
+      ]
+    ],
+    "readouts_with_t": [
+      [
+        45,
+        25
+      ],
+      [
+        45,
+        39
+      ]
+    ],
+    "w": [
+      27,
+      9,
+      27,
+      9
+    ],
+    "words": [
+      "OJOJ",
+      "ZZOJ"
+    ]
+  },
+  "scope": "Exact cone and boundary algebra; finite joint/target inverse and minimum root-cost equality through 401; no all-target claim",
+  "square_root_cap": 40,
+  "status": "PASS"
+}

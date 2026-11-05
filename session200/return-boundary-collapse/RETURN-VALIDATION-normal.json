@@ -1,0 +1,29 @@
+{
+  "AB_state_counts": {
+    "1": 2,
+    "2": 3,
+    "3": 3,
+    "4": 3,
+    "5": 3,
+    "6": 3,
+    "7": 3,
+    "8": 3,
+    "9": 3,
+    "10": 3
+  },
+  "complete_words": 88572,
+  "pair_tests": 676,
+  "return_words": 5476,
+  "scope": "Exact finite controls for reviewed all-order obstruction candidate; no universal target coverage.",
+  "short_return_menu": 26,
+  "single_return_prime": {
+    "C": 1,
+    "H": 139,
+    "vertices": 9,
+    "word": "JZOOZZJ"
+  },
+  "status": "PASS",
+  "triple_tests": 17576,
+  "verifier_sha256": "cf1f58429c578e98e662717ddba25109f6f25905de8e1f397634de4e0b7e8cee",
+  "word_length_cap": 10
+}
