@@ -1,0 +1,18 @@
+{
+  "balanced_profiles": 5677,
+  "candidate_verifier_sha256": "80b713a1259e9de49e9502d4b7f79f004ff6f851a2559b931bd9ba536356bb76",
+  "complete_cover_cap": 2048,
+  "independent_verifier_sha256": "3b79b05c5a70a2300b5827bc04776173a1abf7b0b84fbc49159912e64a970eea",
+  "physical_profiles": 33691,
+  "proof_sha256": "8cdd17627efabbbf8b3d8f2fe6bde4a8e7194854371cd731bd8bae44d127e377",
+  "scope": "Exact nonlinear source language and deterministic nonbalanced inverse PASS; canonical reset does not retain minimum-J cost; no scalar coverage assertion.",
+  "status": "PASS",
+  "triple_box": {
+    "D_max": 101,
+    "U_max": 160,
+    "guarded": 94570,
+    "physical": 596,
+    "triples": 123380
+  },
+  "unique_nonbalanced_predecessors": 28013
+}
