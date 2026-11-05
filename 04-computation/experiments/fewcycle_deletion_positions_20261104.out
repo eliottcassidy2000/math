@@ -1,0 +1,14 @@
+rooted uniquely Hamiltonian prefixes (Q, z) up to isomorphism, orders 3-5, plus the one-vertex prefix: 9
+type 3: (C3, all): k = 3, delta = [1, 1, 1], h0 = 0; tournaments built: 27
+type 3: (W4, {c,d}): k = 3, delta = [1, 1, 2, 1], h0 = 2; tournaments built: 36
+type 4: (W4, {b,c,d}): k = 4, delta = [1, 2, 2, 1], h0 = 1; tournaments built: 36
+type 4: (W4, {a,c,d}): k = 4, delta = [1, 2, 3, 1], h0 = 2; tournaments built: 36
+type 5: (W4, all): k = 5, delta = [1, 3, 3, 1], h0 = 0; tournaments built: 27
+type 5: (AT5, sole exits): k = 5, delta = [1, 1, 3, 3, 1], h0 = 4; tournaments built: 36
+type 5: (W5, A1): k = 5, delta = [1, 1, 2, 3, 3], h0 = 4; tournaments built: 36
+type 5: (W5, A2): k = 5, delta = [1, 1, 2, 3, 2], h0 = 4; tournaments built: 36
+vertex deletions checked: 2661; mismatches or bad tournaments: 0
+
+real	0m1.919s
+user	0m0.078s
+sys	0m0.015s
