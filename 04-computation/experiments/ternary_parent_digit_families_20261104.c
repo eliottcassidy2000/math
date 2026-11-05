@@ -9,7 +9,8 @@
  *   vertices r, w, z_1..z_t;  r -> w;  w -> every z_i;  z_i -> z_j (i < j);  r -> z_i iff b_i = 1.
  * Its converse B = C^op with the sole exit a -> r appended (all other vertices beat a) is digit-1 ready (sigma_a = e_r(B) =
  * s_r(C) = 1) with H = h(C) + F(C, r) - 1 (THM-4862 (a) applied to the converse; F = rooted two-slot count).  Each such H
- * gives the C2 child 3H + 2.  Reports which odd numbers are attained as H, up to a bound, as t grows.
+ * gives the C2 child 3H + 2. This program checks only the digit; the identity for H is confirmed by the S77 audit's
+ * closed form. The bits include non-strong members (b_t = 1), which FUNNELS F1 excludes; they add only H = 1.  Reports which odd numbers are attained as H, up to a bound, as t grows.
  *
  * Usage: ternfam NLAW TMAX BOUND
  */
@@ -95,7 +96,7 @@ int main(int argc, char **argv) {
             for (int u = 0; u < n; u++) for (int v = 0; v < n; v++) if (u != v && !((C[u] >> v) & 1)) B[u] |= 1u << v;
             B[n] = 1u << 0; for (int v = 1; v < n; v++) B[v] |= 1u << n;
             ll H = hpaths(n + 1, B, dp);
-            if (t <= 9) {   /* direct checks: digit of a is 1, and H = h(C) + F(C,r) - 1 */
+            if (t <= 9) {   /* direct check: the digit of a is 1 */
                 ll h, pa; sigma_parts(n + 1, B, n, dp, Hs, Sa, &h, &pa);
                 if (pa - h != 1) bad++;
                 checked++;

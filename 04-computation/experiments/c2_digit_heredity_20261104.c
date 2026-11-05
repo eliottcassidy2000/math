@@ -1,26 +1,16 @@
 /*
  * c2_digit_heredity_20261104.c  (opus-2026-11-04-S77)
  *
- * Generates every strong tournament with at most K Hamiltonian cycles, up to isomorphism, order by order, and tabulates
- *   t_k(n) = number of classes with exactly k Hamiltonian cycles,
- *   u_k(n) = number of those with no vertex of out-degree 1 ("sole-exit-free"; klein's HYP-9459),
- * split by arc-strong connectivity (lambda = 1, or lambda >= 2) and vertex connectivity (2-strong or a cut vertex).
+ * C2 digit heredity. Generates every tournament class of order <= NMAX (canonical forms, one-vertex extensions).
+ * For every class B and every mark a it builds the child T1 = C2(B, a) (x -> a only; y beaten by all of B; y -> x) and
+ *   - checks sigma_x(T1) = 0 and sigma_y(T1) = h(B) - e_a(B);
+ *   - records which marks of T1 carry digit 1 or 2;
+ *   - builds the grandchild T2 = C2(T1, u) for every mark u of T1 and records whether a mark of T2 carries digit 1 or 2,
+ *     and the smallest positive digit of T2.
+ * Digits: sigma_v = [P A_v] - h, [P A_v] = sum_{S subset V - v} h(T[S]) s_v(T[V - S]).
+ * Counts are (class, labelled mark) pairs.
  *
- * Completeness of the generation.
- * - Every strong T of order n >= 4 has a vertex v with T - v strong (Moon 1966).
- * - Every Hamiltonian cycle C' of T - v extends to T at each in->out switch of v along C' (at least one switch, since v
- *   has in- and out-neighbours). Different (C', switch) pairs give different cycles of T (shortcut v to recover C').
- * - Hence hc(T - v) <= hc(T), and every strong T with hc <= K is T' + v for a strong T' with hc <= K.
- * For a parent T' of order m and a new vertex with out-set O and in-set I = complement:
- *     hc(T' + v) = sum over w in O, u in I of P_T'(w -> u)   (Hamiltonian paths of T' from w to u),
- * which a Gray-code walk over all O evaluates in O(m) per subset.
- *
- * For every sole-exit-free class with lambda = 1 the program also records the minimal one-arc-leaving sets D (exactly
- * one arc u -> l leaves D) and checks hc(T) = hc(T/D) * e_u(T[D]), where e_u counts Hamiltonian paths of T[D] ending at u.
- *
- * Usage: fewcycle NMAX K [DUMPN]   (NMAX <= 15, K <= MAXK; classes of order <= DUMPN with no sole exit are printed)
- *   fewcycle 14 5      : the census of HYP-9461 (orders 3-14)
- *   fewcycle 11 40     : built with -DMAXK=60, the minimum number of Hamiltonian cycles of 2-strong tournaments
+ * Usage: her NMAX   (her 7 reproduces c2_digit_heredity_20261104.out)
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -120,66 +110,6 @@ static void decode(int n, u128 code, uint32_t *out) {
     }
 }
 
-/* ---------------- Hamiltonian path / cycle counts ---------------- */
-/* all-pairs Hamiltonian path counts P[s*m + t] of the subtournament on the vertex list vs[0..m-1] */
-static void all_pairs_sub(int m, const int *vs, const uint32_t *out, i64 *P, i64 *buf) {
-    uint32_t loc[MAXN];
-    for (int i = 0; i < m; i++) {
-        loc[i] = 0;
-        for (int j = 0; j < m; j++) if ((out[vs[i]] >> vs[j]) & 1) loc[i] |= 1u << j;
-    }
-    int full = (1 << m) - 1;
-    for (int s = 0; s < m; s++) {
-        i64 *dp = buf;
-        memset(dp, 0, sizeof(i64) * (size_t)(full + 1) * m);
-        dp[(size_t)(1 << s) * m + s] = 1;
-        for (int S = 1; S <= full; S++) {
-            if (!((S >> s) & 1)) continue;
-            for (int v = 0; v < m; v++) {
-                i64 c = dp[(size_t)S * m + v]; if (!c) continue;
-                uint32_t nb = loc[v] & ~(uint32_t)S;
-                while (nb) { int w = __builtin_ctz(nb); nb &= nb - 1; dp[(size_t)(S | (1 << w)) * m + w] += c; }
-            }
-        }
-        for (int t = 0; t < m; t++) P[s * m + t] = dp[(size_t)full * m + t];
-    }
-}
-
-static i64 ham_cycles(int n, const uint32_t *out, i64 *buf) {
-    int full = (1 << n) - 1;
-    i64 *dp = buf;
-    memset(dp, 0, sizeof(i64) * (size_t)(full + 1) * n);
-    dp[(size_t)1 * n + 0] = 1;
-    for (int S = 1; S <= full; S++) {
-        if (!(S & 1)) continue;
-        for (int v = 0; v < n; v++) {
-            i64 c = dp[(size_t)S * n + v]; if (!c) continue;
-            uint32_t nb = out[v] & ~(uint32_t)S;
-            while (nb) { int w = __builtin_ctz(nb); nb &= nb - 1; dp[(size_t)(S | (1 << w)) * n + w] += c; }
-        }
-    }
-    i64 hc = 0;
-    for (int v = 1; v < n; v++) if (out[v] & 1u) hc += dp[(size_t)full * n + v];
-    return hc;
-}
-
-/* ---------------- connectivity ---------------- */
-static int is_strong_mask(int n, const uint32_t *out, uint32_t V) {
-    if (!V) return 1;
-    int s = __builtin_ctz(V);
-    uint32_t seen = 1u << s, fr = seen;
-    while (fr) { int x = __builtin_ctz(fr); fr &= fr - 1; uint32_t nb = out[x] & V & ~seen; seen |= nb; fr |= nb; }
-    if (seen != V) return 0;
-    seen = 1u << s; fr = seen;
-    while (fr) {
-        int x = __builtin_ctz(fr); fr &= fr - 1;
-        uint32_t nb = 0;
-        for (uint32_t r = V & ~seen; r; r &= r - 1) { int y = __builtin_ctz(r); if ((out[y] >> x) & 1) nb |= 1u << y; }
-        seen |= nb; fr |= nb;
-    }
-    return seen == V;
-}
-
 /* ---------------- hash set ---------------- */
 typedef struct { u128 *key; int *hc; char *used; size_t cap, cnt; } HSet;
 static void hs_init(HSet *h, size_t cap) {
@@ -193,9 +123,7 @@ static int hs_insert(HSet *h, u128 k, int hc) {
     h->used[i] = 1; h->key[i] = k; h->hc[i] = hc; h->cnt++; return 1;
 }
 
-typedef struct { u128 code; int hc; } Rec;
 
-static u64 fib(int k) { u64 a = 0, b = 1; if (k < 0) return 0; for (int i = 0; i < k; i++) { u64 t = a + b; a = b; b = t; } return a; }
 
 
 
