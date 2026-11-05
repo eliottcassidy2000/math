@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "labelled_source_graphs": 33867,
+  "rooted_start_one_inputs": 26175,
+  "canonical_source_counts": [1,1,2,5,13,34],
+  "literal_pair_graphs": 686,
+  "literal_swaps": 686,
+  "full_automorphism_checks": 689,
+  "full_anti_isomorphism_checks": 689,
+  "self_converse_counts_orders_5_to_10": [2,1,2,2,5,5],
+  "hostile_H": 3321
+}

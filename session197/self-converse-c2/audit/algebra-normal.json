@@ -1,0 +1,8 @@
+{
+  "GF_coefficients": 101,
+  "complete_diagonal_support_through10000": 194,
+  "exact_inverse_targets": 1000,
+  "independent_source_states": 159,
+  "literal_gadget_constants": 57,
+  "status": "PASS"
+}
