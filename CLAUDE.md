@@ -37,5 +37,6 @@ The closer is safe only when the worktree contains this session's changes.
 There is deliberately no blocking Stop hook: successful close-out is verified
 by Git state, not by global timestamp files or another agent's messages.
 
+
 For setup, messaging, recovery, and worktree details, read
 [`agents/README.md`](agents/README.md).

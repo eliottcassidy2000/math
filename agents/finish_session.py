@@ -276,6 +276,16 @@ def main():
     print(f"  Session closed successfully.")
     print(f"  Letter delivered to: {to}")
     print(f"  Changes pushed to origin.")
+    try:
+        import subprocess as _sp
+        _top = _sp.run(["git", "rev-parse", "--show-toplevel"], capture_output=True, text=True).stdout.strip()
+        _main = _sp.run(["git", "worktree", "list", "--porcelain"], capture_output=True, text=True).stdout.split("\n")[0].split(" ", 1)[1]
+        if _top and _main and os.path.realpath(_top) != os.path.realpath(_main):
+            print(f"  This is a session worktree ({_top}). Every worktree is a full checkout:")
+            print(f"  remove it now, from the main checkout, after leaving it:")
+            print(f"      cd {_main} && python3 agents/worktree_hygiene.py --remove --path {_top}")
+    except Exception:
+        pass
     print(f"{'='*60}\n")
 
 

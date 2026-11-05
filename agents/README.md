@@ -20,6 +20,10 @@ The script fetches `origin`, creates a unique local branch named
 is present. A failed fetch or a non-worktree path collision stops with an error
 instead of silently starting from stale or unrelated state.
 
+It is a sibling of the repository, never under `/tmp` (thirty 3 GB `/tmp`
+worktrees filled the volume on 2026-11-04). **Remove it at close-out**, after
+the push: `python3 agents/worktree_hygiene.py --remove --path <worktree>`.
+
 If a platform already gives the session an isolated clone or worktree, use that
 checkout directly. In a shared checkout, inspect `git status` before staging:
 uncommitted files may belong to another live session.
@@ -100,24 +104,13 @@ git fetch origin
 git rev-list --left-right --count origin/main...HEAD
 ```
 
-Inspect temporary worktrees with a dry run, then remove the exact clean path:
-
-```bash
-bash agents/cleanup_session_worktrees.sh
-bash agents/cleanup_session_worktrees.sh /tmp/math-wt-short-topic
-```
-
-`--all-clean` is deliberately explicit: a newly started session may still own
-a clean worktree.
+Worktrees: `python3 agents/worktree_hygiene.py` reports; `--remove` deletes
+the clean merged ones.
 
 ## Why Stop hooks are absent
 
-The former Codex and Claude Stop hooks invoked
-`python3 agents/check_session_closed.py` through a relative path and failed in
-sandboxed or non-repository working directories. Their shared tracked
-`agents/.session-state.json` also mixed independent sessions, dirtied clean
-trees, and could mistake another agent's message for the current handoff.
-
-Close-out therefore remains mandatory policy, but enforcement is explicit and
-stateless: inspect status, run the checkpoint or finish helper, push, and verify
-the upstream. Runtime session state must remain local and untracked.
+The former Stop hooks ran `check_session_closed.py` by a relative path (failing
+outside the repository) and shared one tracked state file across sessions.
+Close-out stays mandatory but explicit and stateless: inspect status, run the
+checkpoint or finish helper, push, verify the upstream; session state stays
+local and untracked.

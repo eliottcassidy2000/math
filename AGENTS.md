@@ -7,8 +7,9 @@ routes to. Never use a chronological log as the current truth source.
 ## Bounded startup
 
 1. Start from a clean, current worktree. Prefer an isolated worktree made by
-   `bash agents/new_session_worktree.sh <tag>`. If a shared checkout is dirty,
-   identify and preserve every unrelated change before syncing.
+   `bash agents/new_session_worktree.sh <tag>` (never under `/tmp`; remove it
+   at close-out, rule below). If a shared checkout is dirty, identify and
+   preserve every unrelated change before syncing.
 2. Run `python3 agents/start_session.py --topic "<your topic>"`. Then read:
    - `00-navigation/START-HERE.md`;
    - the relevant section of `00-navigation/CURRENT-FRONTIER.md`;
@@ -128,4 +129,5 @@ upstream (or `origin/main` for a session worktree). In every session, fetch and
 verify `HEAD` is not ahead of its push target; a no-change session needs no
 empty commit. Use `agents/finish_session.py` only in an isolated worktree. If a
 required push fails, the session is not complete: leave a local commit and
-report the exact blocker.
+report the exact blocker. Then remove the worktree from outside it:
+`python3 agents/worktree_hygiene.py --remove --path <worktree>`.
