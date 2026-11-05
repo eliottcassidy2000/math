@@ -27,7 +27,7 @@ cut-state automaton of THM-4878 (1). "Attained by G(k, w)" includes ordered join
 - P4. G(1,2): no odd number <= 2000 is missed besides 7 and 21.
 - P5. 13 lies in G(0,2) and G(2,0) but in neither G(1,0) nor G(0,1).
 
-Outcomes (note, section 6): P1 REFUTED (G(0,2) misses nothing below 512 besides 7, 21); P3 CONFIRMED; P5 CONFIRMED;
+Outcomes (note, section 6): P1 REFUTED (G(0,2) misses nothing below 2048 besides 7, 21); P3 CONFIRMED; P5 CONFIRMED;
 P2, P4 pending the G(0,3) and G(1,2) runs at filing.
 
 ## (B) Completeness of G(2,1) (OPEN; implies Chan-Pak)
@@ -42,11 +42,13 @@ must vary its blocks with the target (as the one-apex joins do through the Loren
 ## (C) The apex-free cutwidth-2 grade is onto (OPEN; replaces the pre-registered guess, which the data refuted)
 
 Pre-registered guess (P1, and the structural remark in the pre-registration): no G(0, w) is onto. Outcome: G(0,2)
-attains every odd number <= 511 except 7 and 21 (note, section 6), so the guess is withdrawn and the conjecture is
+attains every odd number <= 2047 except 7 and 21 (note, section 6), so the guess is withdrawn and the conjecture is
 reversed: **every odd number other than 7 and 21 is the Hamiltonian-path count of a spine tournament of cutwidth 2**
-(a transitive order with reversed arcs, no cut crossed by more than two of them); moreover (stronger, from the decoded
-witnesses) one with at most c reversed arcs for a constant c (c <= 7 below 302, first-found witnesses). This is the
-most structured complete candidate in the repository: 83 cut states, Hankel rank 18, THM-4748 as its two-arc layer.
+(a transitive order with reversed arcs, no cut crossed by more than two of them). The number of reversed arcs needed
+must grow (at least like log N / (2 log log N), note section 7), but slowly: at most 5 below 2048 (exact minima below
+512: 1, 8, 75, 133, 36, 1 values with 0, 1, 2, 3, 4, 5 arcs). This is the most structured complete candidate in the
+repository: 83 cut states, Hankel rank 18, THM-4748 as its two-arc layer, and the three-arc layer (15 configuration
+types) as the next closed-form target.
 
 ## (D) Seam ranks (FINITE-EXACT within cutwidth <= 3; universality OPEN)
 

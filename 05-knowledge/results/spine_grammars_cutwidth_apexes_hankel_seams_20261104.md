@@ -254,26 +254,44 @@ or slot) is needed for half of all odd numbers, which is why G(2,0) and G(2,1) c
 
 ## 6. Censuses (pre-registered; all chain lengths <= 64; values <= X; products of connected words added)
 
-**The surprise.** The apex-free cutwidth-2 grammar G(0,2) attains **every odd number <= 511 except 7 and 21** (254 of
-256; 289,792,317 search nodes, 43,254,577 complete connected words, 83 cut states, Hankel rank 18). So does G(1,1)
-(254 of 256; 282,279,675 nodes). Prediction P1 (between 10 and 60 misses below 300) is **REFUTED** in the direction
+**The surprise.** The apex-free cutwidth-2 grammar G(0,2) attains **every odd number <= 2047 except 7 and 21** (1022
+of 1024 with the closer-bound engine, 14,796,241 search nodes; 254 of 256 below 512 with the first engine, 289,792,317
+nodes, 43,254,577 complete connected words; 83 cut states, Hankel rank 18). So does G(1,1) below 512 (254 of 256;
+282,279,675 nodes). Prediction P1 (between 10 and 60 misses below 300) is **REFUTED** in the direction
 nobody in the repository had considered: the sparsest grade, a transitive order with reversed arcs never more than two
 deep, is complete as far as it was computed. The decoded witnesses below 302 use at most 7 reversed arcs (24 values
 with 2 arcs, 41 with 3, 46 with 4, 32 with 5, 4 with 6, 1 with 7; chain length <= 12), e.g. 13 = chain 0..5 with
 3 -> 0, 5 -> 1, 5 -> 4; 35 = 0..6 with 2 -> 0, 6 -> 2, 6 -> 3; 67 = 0..6 with 2 -> 0, 3 -> 1, 4 -> 2, 6 -> 3, 6 -> 4
-(Session 195's two hard numbers 67 and 173 are G(0,2) values). These are first-found, not minimal, witnesses; the
-minimal-arc census (`fa` in the engine, run without deduplication) is reported below when finished.
+(Session 195's two hard numbers 67 and 173 are G(0,2) values).
+
+**Minimal numbers of reversed arcs (exact; the no-deduplication run to 511, 163,451,097 nodes).** Every odd N <= 511
+other than 7 and 21 is the count of a cutwidth-2 spine tournament with at most **five** reversed arcs, and the layers
+are: 1 value with no arc (1); 8 with one arc (3, 5, 9, 17, 33, 65, 129, 257 = 1 + 2^k, THM-284); 75 with two arcs
+(the THM-4748 layer: 11, 13, 15, 19, 23, 25, 27, 29, 37, 39, 41, 45, 47, 49, 51, 53, 59, 61, 69, 73, 77, 79, 81, 85,
+89, 93, 95, 99, 101, 105, 109, 117, 133, 137, 141, 149, 153, 155, 159, 161, 165, 169, 177, 191, 193, 195, 197, 209,
+225, 229, 241, 249, 261, 265, 281, 285, 289, 293, 297, 305, 319, 325, 329, 345, 353, 369, 383, 387, 389, 409, 419, 449,
+453, 465, 489); 133 with three arcs (31, 35, 55, 57, 63, 71, 75, 83, 87, 91, 97, 103, 107, 111, 115, 119, 121, 123,
+125, 131, 135, 143, 145, 147, 151, 157, 163, 167, 171, 175, 179, 181, 183, 185, 187, 199, ... , 509); 36 with four
+arcs (43, 113, 127, 139, 173, 189, 211, 235, 253, 259, 271, 273, 275, 291, 309, 317, 321, 331, 339, 341, 347, 357,
+359, 373, 379, 393, 397, 413, 433, 437, 443, 463, 475, 491, 501, 511); and one with five (67: chain 0..6 with 2 -> 0,
+3 -> 1, 4 -> 2, 6 -> 3, 6 -> 4). The 133 three-arc witnesses fall into 15 pairwise-configuration types (each pair of
+arcs disjoint / touching / crossing / nested / shared head / shared tail); the three most common are two crossings
+plus a touching (26 values, e.g. 4 -> 0, 5 -> 1, 6 -> 4), crossing + shared tail + touching (22, e.g. 3 -> 0, 5 -> 1,
+5 -> 3) and crossing + nested + touching (20, e.g. 4 -> 0, 6 -> 4, 7 -> 3). A closed-form census of the three-arc
+cutwidth-2 layer in the style of THM-4748 is therefore the natural next theorem: with the two-arc layer it covers 217
+of the 256 odd numbers below 512.
 
 | grammar | X | attained (with products) | misses besides 7, 21 | search nodes |
 |---|---|---|---|---|
 | G(0,1) | 2047 | 360 of 1024 | 662 | 49,184 |
 | G(1,0) | 2047 | 763 of 1024 | 259 | 29,841 |
 | G(2,0) | 2047 | 1022 of 1024 | 0 | 20,924,275 |
-| G(0,2) | 511 | 254 of 256 | 0 | 289,792,317 |
-| G(1,1) | 511 | 254 of 256 | 0 | 282,279,675 |
-| G(0,3) | 511 | RUNNING | | |
-| G(1,2) | 511 | RUNNING | | |
-| G(0,2), G(1,1), G(0,3), G(1,2) | 2047 | RUNNING (and G(0,2) at 1023) | | |
+| G(0,2) | 511 | 254 of 256 | 0 | 289,792,317 (first engine); 163,451,097 without deduplication (closer bound) |
+| G(1,1) | 511 | 254 of 256 | 0 | 282,279,675 (first engine) |
+| **G(0,2)** | **2047** | **1022 of 1024** | **0** | 14,796,241 (closer bound; at most 5 reversed arcs per value: 1, 10, 127, 542, 328, 14 values with 0..5 arcs, upper bounds on the minima from the deduplicated run) |
+| G(0,2) | 8191 | RUNNING | | |
+| G(0,3), G(1,2) | 511 | RUNNING | | |
+| G(1,1), G(0,3), G(1,2) | 2047 | RUNNING | | |
 
 Outcomes of the pre-registered predictions: P1 REFUTED (G(0,2) misses nothing below 512; the [2^11, 2^12) clause was
 not reachable with X <= 2047); P3 CONFIRMED (13 attained; no misses below 512); P5 CONFIRMED (13 is in G(0,2) and
@@ -288,9 +306,24 @@ number below 300 other than 7, 21 is attained by G(2,0) and by G(0,2); the value
 Chan-Pak follows from the statement "some G(k, w) is onto the odd numbers other than 7 and 21", and the data make
 G(2,1) (one-apex joins, 2^32), G(2,0) (230,519) and now **G(0,2)** (511 at filing, with a few reversed arcs per value)
 the candidates. G(0,2) is the most structured of the three: no apex, every vertex beaten by at most two later
-vertices, an 83-state automaton of Hankel rank 18, and THM-4748's closed formulas as the two-arc layer; a proof of
-Chan-Pak through it would be a closed-form coverage theorem for words with a bounded number of reversed arcs, in the
-style of THM-4748 extended to three, four and five arcs of cutwidth 2. Each is the range question for one explicit
+vertices, an 83-state automaton of Hankel rank 18, and THM-4748's closed formulas as the two-arc layer.
+
+**No bounded-arc family can be complete (PROVED, counting).** A cutwidth-2 word with c reversed arcs is determined,
+up to padding, by at most 2c integer parameters (the spans and gaps), each at most log_2 H (a single arc of span s
+already gives H >= 1 + 2^(s-1), and the insertion lemma transfers this to every sub-arc), so at most (log_2 X + 1)^(2c)
+values below X have witnesses with c arcs. Hence the number of reversed arcs of any witness family for all odd N must
+grow at least like log N / (2 log log N): a proof of Chan-Pak through G(0,2) is not a finite list of closed formulas
+but a numeration theorem in which the arcs are digits (the decoded witnesses use 2 to 7 arcs below 302, growing
+slowly, as this forces).
+
+**The two-radix heuristic (not a theorem).** In every grade the odd-cycle collections contribute powers of 2 from a
+single run through an interval (THM-4748's 2^p terms, the one-apex 2^(j-i-2)) and powers of 3 exactly when two runs
+can interleave on an interval: two crossing reversed arcs (THM-4748's 3^r), an apex over a reversed arc, or two apexes
+(Session 194's (3^L)^k). The grades with only the binary radix are G(1,0) (half of the odd numbers, section 5) and
+G(0,1) (products of 1 + 2^(p-1): density zero); every grade computed that carries both radices, G(0,2), G(1,1), G(2,0),
+G(2,1), is complete in its computed range. The conjecture behind HYP-9470 (C) is therefore that the two-radix sums
+produced by cutwidth-2 words are a complete numeration system for the odd numbers above 21, in the spirit of the
+classical completeness of sums of distinct numbers 2^a 3^b. Each is the range question for one explicit
 N-rational series: finite alphabet, explicit nonnegative matrices, Hankel rank 17 for G(2,0). Ranges of N-rational
 series over a two-letter alphabet already include all squares (the series (bin w)^2 has dimension 3), so no general
 decision procedure is available and the question has to be attacked with the structure of these particular matrices

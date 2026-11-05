@@ -108,7 +108,7 @@ static void ensureState(int id) {
     for (size_t i = 0; i < L.size(); i++) transCache[id][i] = applyLetter(st, L[i]);
     apexCache[id].resize(K); for (int a = 0; a < K; a++) apexCache[id][a] = applyApex(st, a); }
 typedef vector<u64> Vec;
-static u64 nodes = 0, recorded = 0, deduped = 0, runCut = 0; static vector<unsigned char> att; static vector<string> witness;
+static u64 nodes = 0, recorded = 0, deduped = 0, runCut = 0, closerCut = 0; static vector<unsigned char> att; static vector<string> witness;
 static vector<int> bestFa, bestM; static int curFa = 0;   // witness with the fewest reversed arcs (then shortest chain) per value
 static unordered_map<u64, u64> seen; static vector<int> curWord;
 static u64 hashVec(const Vec& v, u64 seed) { u64 h = seed; for (size_t i = 0; i < v.size(); i++) if (v[i]) { h ^= (v[i] + 0x9E3779B97F4A7C15ULL * (u64)(i + 1)); h *= 0xBF58476D1CE4E5B9ULL; h ^= h >> 31; } return h; }
@@ -131,6 +131,13 @@ static void dfs(int depth, const Vec& v, int sinkRun) {
     if (c == 0 && depth > 0 && sinkRun == 0) record(v);
     if (depth >= MAXM) return;
     if (finishValue(v) > X) return;
+    if (c > 0) {   // closer bound: the completion induces, on the prefix plus the first future tail, the prefix closed by one
+                   // vertex (terminating a nonempty admissible slot set, any apex bits); the least such count bounds H below
+        u64 lb = CAP; vector<Letter> Lc = lettersFor(c);
+        for (size_t li = 0; li < Lc.size(); li++) { if (Lc[li].b != 0 || Lc[li].T == 0) continue;
+            Vec nx = applyLetterVec(v, (int)li); bool any = false; for (u64 x : nx) if (x) { any = true; break; } if (!any) continue;
+            u64 h = finishValue(nx); if (h < lb) lb = h; }
+        if (lb > X) { closerCut++; return; } }
     if (DEDUPE) { u64 ha = hashVec(v, 1), hb = hashVec(v, 2); auto it = seen.find(ha); if (it != seen.end() && it->second == hb) { deduped++; return; } seen[ha] = hb; }
     vector<Letter> L = lettersFor(c); int allA = (1 << K) - 1;
     for (size_t li = 0; li < L.size(); li++) {
@@ -175,7 +182,7 @@ int main(int argc, char** argv) {
         return 0; }
     dfs(0, v0, 0);
     u64 cnt = 0; for (u64 x = 1; x <= X; x += 2) if (att[x]) cnt++;
-    printf("G(k=%d, w=%d), X = %llu, maxm = %d, dedupe = %d: %zu automaton states, %llu DFS nodes, %llu dedup hits, %llu sink-run cuts, %llu words completed; odd values attained directly: %llu of %llu\n", K, W, X, MAXM, (int)DEDUPE, states.size(), nodes, deduped, runCut, recorded, cnt, (X + 1) / 2);
+    printf("G(k=%d, w=%d), X = %llu, maxm = %d, dedupe = %d: %zu automaton states, %llu DFS nodes, %llu dedup hits, %llu sink-run cuts, %llu closer cuts, %llu words completed; odd values attained directly: %llu of %llu\n", K, W, X, MAXM, (int)DEDUPE, states.size(), nodes, deduped, runCut, closerCut, recorded, cnt, (X + 1) / 2);
     vector<unsigned char> cl(att.begin(), att.end()); for (u64 a = 3; a <= X; a += 2) if (cl[a]) for (u64 b = 3; a * b <= X; b += 2) if (att[b]) cl[a * b] = 1;
     u64 cntcl = 0; vector<u64> miss; for (u64 x = 1; x <= X; x += 2) { if (cl[x]) cntcl++; else miss.push_back(x); }
     printf("with ordered-join products: %llu of %llu; %zu misses; first misses:", cntcl, (X + 1) / 2, miss.size()); for (size_t i = 0; i < miss.size() && i < 80; i++) printf(" %llu", miss[i]); printf("%s\n", miss.size() > 80 ? " ..." : "");
