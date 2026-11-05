@@ -1,0 +1,172 @@
+{
+  "closed_profile_checks": 128,
+  "literal_balanced_graphs": [
+    {
+      "C": 1,
+      "H": 95,
+      "b": 5,
+      "balanced_root": 7,
+      "balanced_rows": [
+        486,
+        508,
+        504,
+        497,
+        321,
+        464,
+        384,
+        16,
+        128
+      ],
+      "order": 9,
+      "source_profile": [
+        19,
+        0,
+        38,
+        5
+      ],
+      "source_word": "OZJZO"
+    },
+    {
+      "C": 1,
+      "H": 191,
+      "b": 6,
+      "balanced_root": 8,
+      "balanced_rows": [
+        1014,
+        1020,
+        1016,
+        817,
+        992,
+        960,
+        904,
+        520,
+        128,
+        256
+      ],
+      "order": 10,
+      "source_profile": [
+        63,
+        24,
+        64,
+        25
+      ],
+      "source_word": "OJOOZJ"
+    },
+    {
+      "C": 1,
+      "H": 383,
+      "b": 7,
+      "balanced_root": 9,
+      "balanced_rows": [
+        2038,
+        2044,
+        2040,
+        1617,
+        2016,
+        1992,
+        1920,
+        1800,
+        1032,
+        256,
+        512
+      ],
+      "order": 11,
+      "source_profile": [
+        127,
+        52,
+        128,
+        53
+      ],
+      "source_word": "OJOZOZJ"
+    },
+    {
+      "C": 1,
+      "H": 767,
+      "b": 8,
+      "balanced_root": 10,
+      "balanced_rows": [
+        4078,
+        4092,
+        4088,
+        4080,
+        3169,
+        4032,
+        3968,
+        3856,
+        3600,
+        2064,
+        512,
+        1024
+      ],
+      "order": 12,
+      "source_profile": [
+        255,
+        114,
+        256,
+        115
+      ],
+      "source_word": "OOJOOZZJ"
+    },
+    {
+      "C": 1,
+      "H": 1535,
+      "b": 9,
+      "balanced_root": 11,
+      "balanced_rows": [
+        8174,
+        8188,
+        8184,
+        8176,
+        6305,
+        8128,
+        8080,
+        7936,
+        7696,
+        7184,
+        4112,
+        1024,
+        2048
+      ],
+      "order": 13,
+      "source_profile": [
+        511,
+        234,
+        512,
+        235
+      ],
+      "source_word": "OOJOZOZZJ"
+    },
+    {
+      "C": 1,
+      "H": 3071,
+      "b": 10,
+      "balanced_root": 12,
+      "balanced_rows": [
+        16350,
+        16380,
+        16376,
+        16368,
+        16352,
+        12481,
+        16256,
+        16128,
+        15904,
+        15392,
+        14368,
+        8224,
+        2048,
+        4096
+      ],
+      "order": 14,
+      "source_profile": [
+        1023,
+        486,
+        1024,
+        487
+      ],
+      "source_word": "OOOJOOZZZJ"
+    }
+  ],
+  "status": "PASS",
+  "two_run_polynomial_checks": 200
+}
