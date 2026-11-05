@@ -1,0 +1,75 @@
+{
+  "distinct_signatures": 32549,
+  "integer_membership_controls": 184512,
+  "labelled_start_one_root_controls": 1695,
+  "membership_U_cap": 31,
+  "physical_response_quadruples": 32549,
+  "rank": 3,
+  "sharp_physical_examples": [
+    {
+      "j": 1,
+      "source": [
+        5,
+        2,
+        6,
+        3
+      ],
+      "values": {
+        "M": {
+          "H": 289,
+          "order": 10
+        },
+        "N": {
+          "H": 129,
+          "order": 9
+        }
+      },
+      "x": 3
+    },
+    {
+      "j": 2,
+      "source": [
+        9,
+        4,
+        10,
+        5
+      ],
+      "values": {
+        "M": {
+          "H": 821,
+          "order": 12
+        },
+        "N": {
+          "H": 365,
+          "order": 11
+        }
+      },
+      "x": 5
+    },
+    {
+      "j": 3,
+      "source": [
+        17,
+        8,
+        18,
+        9
+      ],
+      "values": {
+        "M": {
+          "H": 2701,
+          "order": 14
+        },
+        "N": {
+          "H": 1197,
+          "order": 13
+        }
+      },
+      "x": 9
+    }
+  ],
+  "signature_matrix_determinant": -1,
+  "small_source_pair_controls": 10609,
+  "source_U_cap": 2000,
+  "status": "PASS",
+  "unbounded_ambiguity_controls": 1275
+}
