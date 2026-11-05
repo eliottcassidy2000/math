@@ -1,0 +1,96 @@
+{
+  "checks": {
+    "clone_count_checks": 16215,
+    "exact_clone_spans": 855,
+    "induced_clocks": 12570,
+    "rooted_cases": 5405,
+    "tournaments": 1099
+  },
+  "clone_data_sha256": "9ea001a4177259ca91ea180a0ccb80a8ba464eadac0362a2fb6606e8143a56b4",
+  "sharp_clock_cases": [
+    {
+      "H": 3,
+      "m": 1,
+      "minimum_span": 1,
+      "n": 3
+    },
+    {
+      "H": 5,
+      "m": 2,
+      "minimum_span": 1,
+      "n": 4
+    },
+    {
+      "H": 9,
+      "m": 3,
+      "minimum_span": 2,
+      "n": 5
+    },
+    {
+      "H": 17,
+      "m": 4,
+      "minimum_span": 2,
+      "n": 6
+    },
+    {
+      "H": 33,
+      "m": 5,
+      "minimum_span": 2,
+      "n": 7
+    },
+    {
+      "H": 65,
+      "m": 6,
+      "minimum_span": 3,
+      "n": 8
+    }
+  ],
+  "witnesses": [
+    {
+      "H": 513,
+      "clock_minimum_span": 4,
+      "clock_order": 11,
+      "displayed_span": 2,
+      "n": 9,
+      "rows": [
+        508,
+        497,
+        482,
+        454,
+        396,
+        280,
+        304,
+        96,
+        128
+      ],
+      "strong": true,
+      "word": "022333332"
+    },
+    {
+      "H": 65537,
+      "clock_minimum_span": 6,
+      "clock_order": 18,
+      "displayed_span": 2,
+      "n": 15,
+      "rows": [
+        32762,
+        32760,
+        32739,
+        32708,
+        32684,
+        32520,
+        32304,
+        32096,
+        31296,
+        28800,
+        25344,
+        22016,
+        1024,
+        6144,
+        12288
+      ],
+      "strong": true,
+      "word": "003231331133133"
+    }
+  ]
+}
