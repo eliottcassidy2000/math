@@ -1,0 +1,37 @@
+{
+  "exhaustive_orderings": {
+    "3": {
+      "permutations": 6,
+      "minimum_span": 1
+    },
+    "4": {
+      "permutations": 24,
+      "minimum_span": 1
+    },
+    "5": {
+      "permutations": 120,
+      "minimum_span": 2
+    },
+    "6": {
+      "permutations": 720,
+      "minimum_span": 2
+    },
+    "7": {
+      "permutations": 5040,
+      "minimum_span": 2
+    },
+    "8": {
+      "permutations": 40320,
+      "minimum_span": 3
+    }
+  },
+  "held_karp_through_order": 12,
+  "balanced_construction_through_order": 200,
+  "equal_count_contrast": {
+    "clock_order": 11,
+    "clock_minimum_span": 4,
+    "count": 513,
+    "span2_word": "022333332",
+    "span2_order": 9
+  }
+}
