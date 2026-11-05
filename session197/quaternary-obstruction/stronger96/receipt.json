@@ -1,0 +1,62 @@
+{
+  "bank_classes": 8740,
+  "bank_sha256": "fd502c3c82507fe72991f2db9bcd56f3c399fc4d39b005df557cb627562a7a25",
+  "cutoff": {
+    "H_cubed": 47045881,
+    "H_max": 361,
+    "five_to_eleven": 48828125,
+    "maximum_strong_order": 11
+  },
+  "excluded_amplitudes": [
+    6,
+    12,
+    18,
+    24,
+    30,
+    36,
+    42,
+    48,
+    54,
+    60,
+    66,
+    72,
+    78,
+    84,
+    90
+  ],
+  "exterior_gap_counter": "DONE rank3_roots 13456 hits 0",
+  "generation": [
+    "ORDER 3 candidates 0 accepted 0 classes 1",
+    "ORDER 4 candidates 6 accepted 6 classes 1",
+    "ORDER 5 candidates 14 accepted 14 classes 6",
+    "ORDER 6 candidates 180 accepted 180 classes 35",
+    "ORDER 7 candidates 2170 accepted 2170 classes 353",
+    "ORDER 8 candidates 44478 accepted 22712 classes 3343",
+    "ORDER 9 candidates 849122 accepted 20058 classes 3153",
+    "ORDER 10 candidates 1608030 accepted 9222 classes 1517",
+    "ORDER 11 candidates 1550374 accepted 2044 classes 331"
+  ],
+  "literal_clone_counter": "PASS graphs 8740 eligible_graph_signs 1398 roots 12263 m2_survivors 6 m3_survivors 0 m4_survivors 0",
+  "necessary_amplitude": 96,
+  "offsets": [
+    -1,
+    1
+  ],
+  "order_counts": {
+    "3": 1,
+    "4": 1,
+    "5": 6,
+    "6": 35,
+    "7": 353,
+    "8": 3343,
+    "9": 3153,
+    "10": 1517,
+    "11": 331
+  },
+  "source_hashes": {
+    "clone_counts.cpp": "e4b241fd36e9b026191e95c0b533cad924ee2a3a467607f13df7f858adc4be0f",
+    "gap_counts.cpp": "74e4f4a2b190c614a173d4cc1d30fb15bb3ceff846db82a4c74d69fece96a066",
+    "generate.cpp": "716a5494f1ed241cd7b64425490869e5833a3eff6ff68c073b486bbf8b98a4c5"
+  },
+  "status": "PASS"
+}
