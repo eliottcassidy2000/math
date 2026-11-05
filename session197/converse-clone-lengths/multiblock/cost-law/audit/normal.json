@@ -1,0 +1,30 @@
+{
+  "bivariate_coefficient_checks": 6831,
+  "distinct_actual_graphs_checked": 42,
+  "exact_mean_ratios": [
+    {
+      "classes": 6567,
+      "mean_over_order": "144804/1313400",
+      "n": 200,
+      "sum_cost": 144804
+    },
+    {
+      "classes": 166167,
+      "mean_over_order": "18435130/166167000",
+      "n": 1000,
+      "sum_cost": 18435130
+    },
+    {
+      "classes": 16661667,
+      "mean_over_order": "18510184630/166616670000",
+      "n": 10000,
+      "sum_cost": 18510184630
+    }
+  ],
+  "max_order": 200,
+  "ordinary_classes": 437844,
+  "physical_candidate_searches": 62,
+  "physical_initial_graphs": 35,
+  "status": "PASS",
+  "tail_checks": 6633
+}
