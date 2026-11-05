@@ -1,0 +1,523 @@
+{
+  "checks": {
+    "all_even_offsets": 13,
+    "balanced_rebase": 126,
+    "literal_c1_offsets": 4,
+    "literal_one_edge": 4,
+    "matching_threshold_hostile": 1,
+    "parametric_rebase": 126,
+    "sharp_exchange": 12,
+    "signed_switching_triangle": 63496,
+    "single_block_matching": 72,
+    "toggle_identity": 1016,
+    "two_block_matching_observation": 4,
+    "two_block_positive_chain": 1,
+    "unit_prefix": 13,
+    "universal_rebase_identity": 4
+  },
+  "even_offset_controls": [
+    {
+      "B": 16,
+      "U": 5,
+      "counts": [
+        165,
+        153
+      ],
+      "delta": -12,
+      "prefix": "ZZ"
+    },
+    {
+      "B": 16,
+      "U": 7,
+      "counts": [
+        229,
+        219
+      ],
+      "delta": -10,
+      "prefix": "OZ"
+    },
+    {
+      "B": 16,
+      "U": 9,
+      "counts": [
+        297,
+        289
+      ],
+      "delta": -8,
+      "prefix": "ZZZ"
+    },
+    {
+      "B": 8,
+      "U": 3,
+      "counts": [
+        51,
+        45
+      ],
+      "delta": -6,
+      "prefix": "Z"
+    },
+    {
+      "B": 8,
+      "U": 5,
+      "counts": [
+        85,
+        81
+      ],
+      "delta": -4,
+      "prefix": "ZZ"
+    },
+    {
+      "B": 4,
+      "U": 3,
+      "counts": [
+        27,
+        25
+      ],
+      "delta": -2,
+      "prefix": "Z"
+    },
+    {
+      "B": 2,
+      "U": 3,
+      "counts": [
+        15,
+        15
+      ],
+      "delta": 0,
+      "prefix": "Z"
+    },
+    {
+      "B": 2,
+      "U": 5,
+      "counts": [
+        25,
+        27
+      ],
+      "delta": 2,
+      "prefix": "ZZ"
+    },
+    {
+      "B": 2,
+      "U": 7,
+      "counts": [
+        33,
+        37
+      ],
+      "delta": 4,
+      "prefix": "OZ"
+    },
+    {
+      "B": 2,
+      "U": 9,
+      "counts": [
+        45,
+        51
+      ],
+      "delta": 6,
+      "prefix": "ZZZ"
+    },
+    {
+      "B": 2,
+      "U": 11,
+      "counts": [
+        53,
+        61
+      ],
+      "delta": 8,
+      "prefix": "ZOZ"
+    },
+    {
+      "B": 2,
+      "U": 13,
+      "counts": [
+        63,
+        73
+      ],
+      "delta": 10,
+      "prefix": "OZZ"
+    },
+    {
+      "B": 2,
+      "U": 15,
+      "counts": [
+        69,
+        81
+      ],
+      "delta": 12,
+      "prefix": "OOZ"
+    }
+  ],
+  "scope": "Theorem1 all-order proof; two-block probes finite only; no prescribed-parent or all-target result.",
+  "sharp_exchange_minima": [
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      7,
+      14
+    ],
+    [
+      8,
+      18
+    ],
+    [
+      9,
+      26
+    ],
+    [
+      10,
+      34
+    ],
+    [
+      11,
+      50
+    ],
+    [
+      12,
+      66
+    ],
+    [
+      13,
+      98
+    ]
+  ],
+  "single_block_tests": 72,
+  "status": "PASS",
+  "threshold_control": {
+    "counts": [
+      27,
+      25,
+      27
+    ],
+    "words": [
+      "ZOOO",
+      "ZZOO",
+      "ZZZO"
+    ]
+  },
+  "two_block_probes": [
+    {
+      "example_counts": [
+        25,
+        27
+      ],
+      "example_words": [
+        "OJO",
+        "OJZ"
+      ],
+      "lengths": [
+        1,
+        1
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        97,
+        99
+      ],
+      "example_words": [
+        "OOJOZ",
+        "OOJZZ"
+      ],
+      "lengths": [
+        2,
+        2
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        351,
+        353
+      ],
+      "example_words": [
+        "OZOJZOZ",
+        "OZOJZZZ"
+      ],
+      "lengths": [
+        3,
+        3
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        1147,
+        1149
+      ],
+      "example_words": [
+        "ZOOOJZOZZ",
+        "ZOZOJZOZZ"
+      ],
+      "lengths": [
+        4,
+        4
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        6679,
+        6681,
+        6683
+      ],
+      "example_words": [
+        "OOOZOJOZOZZ",
+        "OOZZOJOZOZZ",
+        "OOZZOJOZZZZ"
+      ],
+      "lengths": [
+        5,
+        5
+      ],
+      "max_degree": 2,
+      "max_distinct_values_in_component": 3
+    },
+    {
+      "example_counts": [
+        17919,
+        17921
+      ],
+      "example_words": [
+        "OZOOOOJZOZZZO",
+        "OZOZOOJZOZZZO"
+      ],
+      "lengths": [
+        6,
+        6
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        80825,
+        80827
+      ],
+      "example_words": [
+        "OZOOOOOJZOZOOZZ",
+        "OZOOOOOJZZZOOZZ"
+      ],
+      "lengths": [
+        7,
+        7
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        276895,
+        276897
+      ],
+      "example_words": [
+        "OOZOOOOOJZOZZZZOO",
+        "OOZOZOOOJZOZZZZOO"
+      ],
+      "lengths": [
+        8,
+        8
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        1283705,
+        1283707
+      ],
+      "example_words": [
+        "OZOOOOOOOJZOZOZOOZZ",
+        "OZOOOOOOOJZZZOZOOZZ"
+      ],
+      "lengths": [
+        9,
+        9
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        33345,
+        33347
+      ],
+      "example_words": [
+        "OOOJZZOOOOOOOO",
+        "OOOJZZOZOOOOOO"
+      ],
+      "lengths": [
+        3,
+        10
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        30951,
+        30953
+      ],
+      "example_words": [
+        "ZZOOZOZOZOJZOZ",
+        "ZZOOZOZOZOJZZZ"
+      ],
+      "lengths": [
+        10,
+        3
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        132225,
+        132227
+      ],
+      "example_words": [
+        "OOOOOJZOOOOOOOOO",
+        "OOOOOJZOZOOOOOOO"
+      ],
+      "lengths": [
+        5,
+        10
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        125375,
+        125377
+      ],
+      "example_words": [
+        "OZZZOOOOOOJZOZZO",
+        "OZZZOZOOOOJZOZZO"
+      ],
+      "lengths": [
+        10,
+        5
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        259295,
+        259297
+      ],
+      "example_words": [
+        "OZOOOOJZOZZOZZZOO",
+        "OZOZOOJZOZZOZZZOO"
+      ],
+      "lengths": [
+        6,
+        10
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        181063,
+        181065
+      ],
+      "example_words": [
+        "ZOZZOOOOOOJZOZOOO",
+        "ZOZZOZOOOOJZOZOOO"
+      ],
+      "lengths": [
+        10,
+        6
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        226147,
+        226149
+      ],
+      "example_words": [
+        "ZOOOJZOZOZOZOZZOO",
+        "ZOZOJZOZOZOZOZZOO"
+      ],
+      "lengths": [
+        4,
+        12
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        289215,
+        289217
+      ],
+      "example_words": [
+        "OZZZZOOOOOOOJZOZZ",
+        "OZZZZOZOOOOOJZOZZ"
+      ],
+      "lengths": [
+        12,
+        4
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        1283705,
+        1283707
+      ],
+      "example_words": [
+        "OZOOOOOOJZZOZOZOOZZ",
+        "OZOOOOOOJZZZZOZOOZZ"
+      ],
+      "lengths": [
+        8,
+        10
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    },
+    {
+      "example_counts": [
+        1283705,
+        1283707
+      ],
+      "example_words": [
+        "OZOOOOOOOOJOZOZOOZZ",
+        "OZOOOOOOOOJZZOZOOZZ"
+      ],
+      "lengths": [
+        10,
+        8
+      ],
+      "max_degree": 1,
+      "max_distinct_values_in_component": 2
+    }
+  ]
+}
