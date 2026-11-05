@@ -1,0 +1,15 @@
+{
+  "RETAINED_SEWING_SOURCE_SCOPE.md": "e301d1085e9d66104ecfac6f514f4f2f2c1efeb9df40c5426aa237f82bc874c6",
+  "verify_retained_sewing_source_scope.py": "fe12c3f2f9067f9937b764c9babacc7ca6b5d57dbe4db2df3b5a6c74aa1c8284",
+  "retained_scope_normal.json": "818b4a77ff52e8f0f0e008e06a91c22fd18b70dff52b7d5f521a542daab48bc7",
+  "retained_scope_optimized.json": "818b4a77ff52e8f0f0e008e06a91c22fd18b70dff52b7d5f521a542daab48bc7",
+  "retained-scope-review/SOURCE_SCOPE_REVIEW.md": "af43f1046355da72c148a11a3fdd04db3e8829e1015ec760a2e11079b5bb5404",
+  "retained-scope-review/check_scope.py": "82de56ffdbe311b477d355167f64b5002bc6d55830f94ed2fa4882d733b9fa13",
+  "retained-scope-review/scope-independent-normal.json": "39a17f30afc2fdaee8364252d40c41b9b15ebcff3adfbb85faa3d37296981242",
+  "retained-scope-review/scope-independent-optimized.json": "39a17f30afc2fdaee8364252d40c41b9b15ebcff3adfbb85faa3d37296981242",
+  "retained-scope-review/scope-source-normal.json": "818b4a77ff52e8f0f0e008e06a91c22fd18b70dff52b7d5f521a542daab48bc7",
+  "retained-scope-review/scope-source-optimized.json": "818b4a77ff52e8f0f0e008e06a91c22fd18b70dff52b7d5f521a542daab48bc7",
+  "retained-scope-review/S195_COMBINED_GROWTH.md": "740979ceedc7621232d5b668662f871bfb24a397f3f9c708a764445ab3fbe8f6",
+  "RETAINED_SCOPE_DEPENDENCIES.json": "419c20c92b3df8b2e3bbdeb932e5e69c478ebe49a487c7ba6e46bb93fc193781",
+  "RETAINED_SCOPE_README.md": "70af5dd7bbfa6e60296ecc0a5841cb5f50a6f8f1b939fec56ab3350f087bf888"
+}

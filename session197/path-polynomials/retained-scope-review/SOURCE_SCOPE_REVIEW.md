@@ -1,0 +1,11 @@
+# Independent confirmation: retained-sewing source scope
+
+**PASS. No correction.** This separate confirmation binds RETAINED_SEWING_SOURCE_SCOPE.md e301d1085e9d66104ecfac6f514f4f2f2c1efeb9df40c5426aa237f82bc874c6 and verify_retained_sewing_source_scope.py fe12c3f2f9067f9937b764c9babacc7ca6b5d57dbe4db2df3b5a6c74aa1c8284. It does not alter the prior frozen mathematical review.
+
+I independently fetched and read the exact named S195 combined-growth proof at commit ee07a5aac9cdfd8d3834fa834df4fb357fcaf769. Its sections2-4 explicitly contain moving-root arbitrary gadgets, stationary K/D, a positive four-coordinate state and the determinant -16 continuation matrix. The local exact-byte primary copy is S195_COMBINED_GROWTH.md, SHA256740979ceedc7621232d5b668662f871bfb24a397f3f9c708a764445ab3fbe8f6. The source-scope note correctly credits that precedent and describes the retained-only determinant as an adapted inherited certificate.
+
+The graph identity D^j K D^(m-1-j) is exact: the K vertex is the only new vertex with an outgoing arc to the old graph, and it beats only the old root; all new vertices are in their creation-order transitive orientation. The source and continuation state identifications have the correct operation order. More strongly, scalar(K)=scalar(A), scalar(KK)=scalar(KA), and scalar(DK)=scalar(AA) hold as linear rows on every original four-state, not only the four test inputs. These explain the row-permuted determinant exactly.
+
+The remaining scope distinction is valid. Arbitrary nonsingleton stationary right blocks are not the same permitted operation as arbitrary moving-root blocks plus stationary single-vertex births. The reported finite bank comparison does not assert that the counts67/173 were previously unknown, or prove unbounded coverage.
+
+Copied normal/-O source replays agree with receipt818b4a77ff52e8f0f0e008e06a91c22fd18b70dff52b7d5f521a542daab48bc7. Independent check_scope.py verifies7980 literal labelled transitive-block identities, extending block sizes through7, and the three general continuation-row identities. Its normal/-O receipt is39a17f30afc2fdaee8364252d40c41b9b15ebcff3adfbb85faa3d37296981242; checker SHA25682de56ffdbe311b477d355167f64b5002bc6d55830f94ed2fa4882d733b9fa13. Run python check_scope.py or its -O form from this directory. No author module is imported by that checker.
