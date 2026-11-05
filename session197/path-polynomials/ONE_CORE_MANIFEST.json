@@ -1,0 +1,17 @@
+{
+  "ONE_CORE_BINARY_INVERSE.md": "701d44aeb13e4f8c26ff44c3d25c3166350371232e7e00e3019e70b5aeab0321",
+  "ONE_CORE_DEPENDENCIES.json": "08f85ac8072793112735064ed5bee2c302d0a16556299cb77b36349e67cda44b",
+  "ONE_CORE_README.md": "f088832abe81898efdb3aa5a34f5058dc80414f010903edd9436a36448662599",
+  "one-core-review/REPORT.md": "faa7d40b1005153b665c9975e1e85145ccdacf885f70432421f2005b938de221",
+  "one-core-review/check.cpp": "1f088d7abad1d9b7bf168e76451525581b0de60b58de4f2f90bbf8f87c076a72",
+  "one-core-review/compare.py": "f5f6c8c80fe13b26ed7084028fdfc45b64bf186178631f5df3b3f280688f8d32",
+  "one-core-review/comparison-normal.json": "a06eabcf1cb0909d1ea2e6e6b7a2dde727273f85c24acaa975ff45617c15f380",
+  "one-core-review/comparison-optimized.json": "a06eabcf1cb0909d1ea2e6e6b7a2dde727273f85c24acaa975ff45617c15f380",
+  "one-core-review/independent-debug.json": "f4a40220aa8c1c72eac805947edc9de8bc2450d3cdaf93416d58d99f35f10684",
+  "one-core-review/independent-normal.json": "f4a40220aa8c1c72eac805947edc9de8bc2450d3cdaf93416d58d99f35f10684",
+  "one-core-review/source-normal.json": "8d3883aa53fb454388a2f35c254ba5fd1e457ef3e4e63f22fdd1f812e9b80400",
+  "one-core-review/source-optimized.json": "8d3883aa53fb454388a2f35c254ba5fd1e457ef3e4e63f22fdd1f812e9b80400",
+  "one_core_binary_normal.json": "8d3883aa53fb454388a2f35c254ba5fd1e457ef3e4e63f22fdd1f812e9b80400",
+  "one_core_binary_optimized.json": "8d3883aa53fb454388a2f35c254ba5fd1e457ef3e4e63f22fdd1f812e9b80400",
+  "verify_one_core_binary_inverse.py": "74b92f51e4e4386880e1416af9dce144096d79c292eb4f5f6e9952ab19dc942c"
+}
