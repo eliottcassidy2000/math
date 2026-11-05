@@ -69,9 +69,12 @@ NUMERICAL (HYP-9469) + OPEN (Chan-Pak).
   of consecutive odd values in `E(X)` has length `<= 24` at order `8`; no `E(X)` covers `[2h + 1, 3h]`. So neither
   "every odd in `[h, 2h - 1]`" nor a window `[ch, c'h]` can be reached from one realiser, and the two natural
   one-vertex inductions for Chan-Pak are impossible.
-* **End counts (FINITE-EXACT, orders 4-8).** The maximum of `e_a/h` over non-sink vertices is `(h - 1)/(2h)`, attained
-  by the vertex `k + 1` of the reversed-extreme-arc tournament with `h = 2^k + 1`: HYP-9469 (4) conjectures
-  `e_a <= (h - 1)/2` for every non-sink `a`.
+* **End-count bound (PROVED after the checkpoint, THM-4876 (7)).** A non-sink vertex `a` ends at most `(h - 1)/2`
+  of the `h` Hamiltonian paths: inserting `a` before its first out-neighbour along a path ending at `a` is an injection
+  into the paths not ending at `a` whose last vertex beats `a`, and at least one path ends at an out-neighbour of `a`
+  (every vertex of the last strong component ends a path). Equality at the vertex `k + 1` of the reversed-extreme-arc
+  tournament (`h = 2^k + 1`); exhaustive to order `9` (maximum `64/129`). It sharpens THM-4873 (i) for `h >= 5` and gives
+  the sole-exit increment `>= (h + 1)/4`.
 * **One-centre family (PROVED).** `H(TT_m + u) = 1 + 2 sum_{a in A, b notin A, a < b} c(b - a)`; `A = {1..i}`,
   `m = i + l` gives `(2^i - 1)(2^l - 1) + 2` (a two-parameter family containing `11, 23, 47, 51, 95, 107, 227, ...`);
   `7` is not a one-centre count; the family realises about half of the odd numbers. A second centre with a monotone cut
@@ -98,12 +101,12 @@ is the "transitive parent" of the digital bank.
 
 ## 5. Next obligations
 
-1. Prove HYP-9469 (4), `e_a <= (h - 1)/2` for non-sinks (the natural sequel to THM-4873 (i)); it gives the sole-exit
-   half of the linear increment bound.
+1. (Done after the checkpoint: THM-4876 (7).) Extend the linear increment bound from sole-exit cuts to all cuts
+   (HYP-9469 (1)).
 2. Prove HYP-9469 (2) at `k = 2` (increment `4` forces `H(T - v) in {1, 5}`) by classifying two odd cycles through `v`
    with transitive complements.
 3. Characterise the one-centre value set (HYP-9469 (3)).
-4. The order-10 `k_min` table (running).
+4. (Done: `k_min` through `h = 59` from all tournaments of order `9` with all cuts.)
 
 ## 6. Audit
 

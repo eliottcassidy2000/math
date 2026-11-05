@@ -1,9 +1,9 @@
 ---
 id: THM-4876
-title: "Deletion and flip increments of the Hamiltonian-path count H. (1) For a tournament T and a vertex v, H(T) - H(T - v) = 2 sum over the odd directed cycles C through v of H(T - V(C)) (Claim A, KNOWN from the odd-cycle formula), and for a tournament X with a new vertex v of cut (A, B), H(X + v) = sum_S e_B(S) s_A(V - S) + s_A(V) + e_B(V) (path pairs). (2) H(T) - H(T - v) = 2 iff v lies on exactly one odd cycle, a triangle (v, a, b), and T - {v, a, b} is transitive; then T - v has at most one odd cycle, H(T - v) in {1, 3} and H(T) in {3, 5}: no deletion lowers a count of at least 5 by exactly 2. (3) H(T) - H(T - v) = 4 iff v lies on exactly two odd cycles, both with transitive complements (and H(T - v) in {1, 5} through order 9). (4) The arc-flip increment is the unsigned subset convolution H(T') - H(T) = U(L_j, R_i) - U(L_i, R_j) whose signed companion is THM-017's identity, and THM-013's Delta H = Delta I(Omega, 2) holds for all n as a corollary of the odd-cycle formula H = I(Omega, 2). (5) FINITE-EXACT: the one-vertex extension spectra E(X) of all tournaments of orders 3-9 have no value h + 2 for h >= 5, smallest positive increments k_min(h) = 2, 3, 4, 5, 5, 5, 6, 7, 9, 9, 8, 10, 9, 11, 12, 11 for h = 5, 9, 11, ..., 39 (about h/3.5), and windows of at most 24 consecutive odd values, never covering [2h + 1, 3h]: no induction that extends a fixed realiser by one vertex can prove Chan-Pak. (6) The one-centre family TT_m + u has H = 1 + 2 sum_{a in A, b notin A, a < b} c(b - a), c(1) = 1, c(d) = 2^(d-2), hence contains 2^k + 1 and (2^i - 1)(2^l - 1) + 2 for all i, l >= 1 and omits 7, 13, 21, 29, ..."
+title: "Deletion and flip increments of the Hamiltonian-path count H. (1) For a tournament T and a vertex v, H(T) - H(T - v) = 2 sum over the odd directed cycles C through v of H(T - V(C)) (Claim A, KNOWN from the odd-cycle formula), and for a tournament X with a new vertex v of cut (A, B), H(X + v) = sum_S e_B(S) s_A(V - S) + s_A(V) + e_B(V) (path pairs). (2) H(T) - H(T - v) = 2 iff v lies on exactly one odd cycle, a triangle (v, a, b), and T - {v, a, b} is transitive; then T - v has at most one odd cycle, H(T - v) in {1, 3} and H(T) in {3, 5}: no deletion lowers a count of at least 5 by exactly 2. (3) H(T) - H(T - v) = 4 iff v lies on exactly two odd cycles, both with transitive complements (and H(T - v) in {1, 5} through order 9). (4) The arc-flip increment is the unsigned subset convolution H(T') - H(T) = U(L_j, R_i) - U(L_i, R_j) whose signed companion is THM-017's identity, and THM-013's Delta H = Delta I(Omega, 2) holds for all n as a corollary of the odd-cycle formula H = I(Omega, 2). (5) FINITE-EXACT: the one-vertex extension spectra E(X) of all tournaments of orders 3-9 have no value h + 2 for h >= 5, smallest positive increments k_min(h) = 2, 3, 4, 5, 5, 5, 6, 7, 9, 9, 8, 10, 9, 11, 12, 11 for h = 5, 9, 11, ..., 39 (about h/3.5), and windows of at most 24 consecutive odd values, never covering [2h + 1, 3h]: no induction that extends a fixed realiser by one vertex can prove Chan-Pak. (6) The one-centre family TT_m + u has H = 1 + 2 sum_{a in A, b notin A, a < b} c(b - a), c(1) = 1, c(d) = 2^(d-2), hence contains 2^k + 1 and (2^i - 1)(2^l - 1) + 2 for all i, l >= 1 and omits 7, 13, 21, 29, ... (7) A vertex that is not a sink ends at most (h - 1)/2 of the h Hamiltonian paths (dually for sources), with equality on the reversed-extreme-arc family 2^k + 1; so for h >= 5 no vertex ends h - 1 or h - 2 paths and the sole-exit extension at a non-sink raises the count by at least (h + 1)/4"
 status: >
-  PROVED (mac-mini-2026-11-04-chanpak, elementary): statements 2, 3 (the structural halves), 4, 6, and the path-pair
-  formula in 1. KNOWN/CITED: Claim A and the odd-cycle formula H(T) = I(Omega(T), 2) (Grinberg-Stanley, arXiv:2307.05569;
+  PROVED (mac-mini-2026-11-04-chanpak, elementary): statements 2, 3 (the structural halves), 4, 6, 7, and the
+  path-pair formula in 1 (statement 7 was added after audit C was launched and is covered by audit D). KNOWN/CITED: Claim A and the odd-cycle formula H(T) = I(Omega(T), 2) (Grinberg-Stanley, arXiv:2307.05569;
   Lass; the repository's THM-070 derives Claim A from it), Redei's theorem (H odd), Moon (every vertex of a strong
   tournament lies on a 3-cycle), THM-017 (signed subset convolution, PROVED for all n in March 2026), THM-013 (the
   same identity proved for n <= 7 in March 2026, now a corollary for all n), THM-012b (insertion decomposition),
@@ -73,8 +73,10 @@ Grinberg-Stanley) is `H(T) = I(Omega(T), 2) = sum over families F of pairwise ve
    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
    | k_min | 1 | 1 | 2 | 3 | 4 | 5 | 5 | 5 | 6 | 7 | 9 | 9 | 8 | 10 | 9 | 11 | 12 | 11 |
 
-   (the same table at orders 7 and 8; order 9 extends it, `increment2_order9.out`), i.e. `k_min(h)/h` stays in
-   `[0.27, 0.40]`. Every increment-`2` cut has `h in {1, 3}` (statement 2), every increment-`4` cut `h in {1, 5}`.
+   (the same table at orders 7, 8 and 9 of `X`; the order-9 run, `increment2_order9.out`, all 191,536 tournaments
+   with all 512 cuts, adds `k_min = 14, 15, 14, 13, 13, 15, 14, 18, 18, 17` at `h = 41, 43, 45, 47, 49, 51, 53, 55, 57,
+   59`), i.e. `k_min(h)/h` stays in `[0.26, 0.40]`. Every increment-`2` cut has `h in {1, 3}` (statement 2; confirmed
+   through order `9` of `X`), every increment-`4` cut `h in {1, 5}`.
    The longest run of consecutive odd values inside `E(X)` has length at most `24` at order `8` and is never an
    interval containing `[2h + 1, 3h]`; among the `6880` tournaments of order `8` none has `E(X) >= odd[h, 2h - 1]`.
    Hence the two natural single-realiser inductions for Chan-Pak (reach every odd number in `[h, 2h - 1]`, or a
@@ -86,6 +88,14 @@ Grinberg-Stanley) is `H(T) = I(Omega(T), 2) = sum over families F of pairwise ve
    with THM-1370), and the family realises about half of the odd numbers (`50,006` of the `100,000` below `200,000`;
    missing `7, 13, 21, 29, 35, 41, 43, 49, ...`). A second centre whose cut is monotone in the transitive order is
    again one-centre (its deletion of `u` is transitive), so it adds nothing.
+7. **End-count bound (PROVED; added after audit C).** Let `a` be a vertex of a tournament `X` with `h = H(X)` and let
+   `e_a` be the number of Hamiltonian paths ending at `a`. If `a` is not a sink, then `e_a <= (h - 1)/2`; dually, if `a`
+   is not a source, the number `s_a` of paths starting at `a` is at most `(h - 1)/2`. Equality holds at the vertex
+   `k + 1` of `TT_(k+1)` with the arc `(1, k + 1)` reversed (`h = 2^k + 1`, `e = 2^(k-1)`). Consequences: for `h >= 5` no
+   vertex ends `h - 1` or `h - 2` paths (the cases `h <= 3` of THM-4873 (i) are its `TT_j => C3` configurations), and the
+   sole-exit extension `v -> a` (`a` a non-sink) has `H(X + v) = 2h - e_a >= (3h + 1)/2`, i.e. increment at least
+   `(h + 1)/4`: the sole-exit half of HYP-9469 (1). (Checked exhaustively on all tournaments of orders `<= 9`:
+   no violation; the maximum of `e_a/h` over non-sinks at order `9` is `64/129`.)
 
 ## Proofs
 
@@ -148,6 +158,19 @@ or a pair at distance `3` plus an adjacent pair (then the letters between create
 The coverage counts are `spine_numeration.py` (the same family as the session124 spine with the transitive parent,
 whose transfer `(F, q, t)` is re-derived and brute-force checked there). ∎
 
+**7.** Let `O` be the out-neighbourhood of `a` (nonempty) and `E_a` the set of Hamiltonian paths ending at `a`. For
+`P = (x_1, ..., x_(n-1), a) in E_a` let `i` be the least index with `x_i in O` (it exists since `O != empty` and `a` is last).
+Then `x_(i-1) -> a` if `i >= 2` (as `x_(i-1) notin O`), so `phi(P) = (x_1, ..., x_(i-1), a, x_i, ..., x_(n-1))` is a Hamiltonian
+path; it does not end at `a`, and its last vertex `x_(n-1)` beats `a`. `phi` is injective, since `P` is recovered by
+deleting `a` and appending it. Hence `e_a <= |F|`, where `F` is the set of Hamiltonian paths not ending at `a` whose last
+vertex beats `a`; `|F| <= (h - e_a) - e_O` with `e_O` the number of paths ending in `O`. If `e_a = 0` there is nothing to
+prove. If `e_a >= 1`, `a` lies in the last strong component `X_s` of `X`, which has at least three vertices (`a` is not
+a sink), so `a` has an out-neighbour `z` in `X_s`; every vertex of a strong tournament is the end of a Hamiltonian path
+of it (break a Hamiltonian cycle, Camion), and prefixing Hamiltonian paths of the earlier components gives a Hamiltonian
+path of `X` ending at `z`: `e_O >= 1`. So `2 e_a <= h - 1`. The dual statement is the converse tournament. In the
+reversed-extreme-arc tournament the vertex `k + 1` has the single out-neighbour `1`, and the `2^k` paths other than the
+transitive one split evenly by whether `k + 1` is last. ∎
+
 ## Scope and boundary
 
 * Statement 2 is a theorem about *all* tournaments; statement 3's "`H(T - v) in {1, 5}`" and the whole of statement 5
@@ -158,6 +181,7 @@ whose transfer `(F, q, t)` is re-derived and brute-force checked there). ∎
   of one realiser is too sparse near `h` to carry an induction.
 * The one-centre count in 6 is the session124 "transitive parent" spine family in closed form; its value set is not
   characterised here (HYP-9469 (3)).
+* Statement 7 bounds the sole-exit increment only; the linear bound for arbitrary cuts (HYP-9469 (1)) is open.
 
 ## Reading
 
