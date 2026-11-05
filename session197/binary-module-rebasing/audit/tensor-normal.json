@@ -1,0 +1,32 @@
+{
+  "E_coefficients": [
+    -3,
+    30,
+    0,
+    0
+  ],
+  "H_coefficients": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    30
+  ],
+  "augmented_coefficients": [
+    5,
+    -57,
+    0,
+    114,
+    6,
+    90
+  ],
+  "method": "Exact rational elimination on independently counted physical graphs",
+  "status": "PASS"
+}
