@@ -1,0 +1,99 @@
+{
+  "all_edge_balanced_ratio_reconstructions": 144,
+  "all_edge_tail_reconstructions": 416,
+  "exact_dyadic_profiles": 3126,
+  "independent_graph_pairs": [
+    {
+      "H": 33,
+      "core_H": 1,
+      "k": 1,
+      "order": 7
+    },
+    {
+      "H": 129,
+      "core_H": 1,
+      "k": 2,
+      "order": 9
+    },
+    {
+      "H": 513,
+      "core_H": 1,
+      "k": 3,
+      "order": 11
+    },
+    {
+      "H": 165,
+      "core_H": 5,
+      "k": 1,
+      "order": 10
+    },
+    {
+      "H": 645,
+      "core_H": 5,
+      "k": 2,
+      "order": 12
+    },
+    {
+      "H": 2565,
+      "core_H": 5,
+      "k": 3,
+      "order": 14
+    },
+    {
+      "H": 297,
+      "core_H": 9,
+      "k": 1,
+      "order": 11
+    },
+    {
+      "H": 1161,
+      "core_H": 9,
+      "k": 2,
+      "order": 13
+    },
+    {
+      "H": 4617,
+      "core_H": 9,
+      "k": 3,
+      "order": 15
+    },
+    {
+      "H": 297,
+      "core_H": 9,
+      "k": 1,
+      "order": 11
+    },
+    {
+      "H": 1161,
+      "core_H": 9,
+      "k": 2,
+      "order": 13
+    },
+    {
+      "H": 4617,
+      "core_H": 9,
+      "k": 3,
+      "order": 15
+    },
+    {
+      "H": 297,
+      "core_H": 9,
+      "k": 1,
+      "order": 11
+    },
+    {
+      "H": 1161,
+      "core_H": 9,
+      "k": 2,
+      "order": 13
+    },
+    {
+      "H": 4617,
+      "core_H": 9,
+      "k": 3,
+      "order": 15
+    }
+  ],
+  "raw_source_profiles": 32548,
+  "status": "PASS"
+}
