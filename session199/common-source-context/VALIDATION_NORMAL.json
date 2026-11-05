@@ -1,0 +1,132 @@
+{
+  "basis_cases": 40,
+  "dependency_sha256": {
+    "BILINEAR_C2.md": "5eab9deb2871819d8a1b5684c4987f2f4da807adc55063a30675d531c5ad3813",
+    "POSITIVE_SOURCE_GRAMMAR.md": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537",
+    "SOURCE_SIGNATURE.md": "d5a9b57b62f8ce54c36fca51829efeaa493339512e47395160dc78e5474b35b6"
+  },
+  "finite_exact": {
+    "U_cap": 5000,
+    "k": 17,
+    "max_encoded": 1371306303689575,
+    "profiles": 126910,
+    "single_context_values": 126910,
+    "three_context_values": 126910,
+    "x": 131072
+  },
+  "literal_checks": {
+    "full_selector_C": 2,
+    "full_selector_H": 25217,
+    "full_selector_bound": 2,
+    "full_selector_order": 17,
+    "full_selector_x": 32,
+    "small_C2_graphs": 26,
+    "source_words": 40
+  },
+  "nonphysical_digit_hostile": {
+    "digits": [
+      1,
+      28,
+      36
+    ],
+    "profile": [
+      1,
+      0,
+      3,
+      1
+    ],
+    "reason": "D=1 forces a transitive source and U a power of two"
+  },
+  "three_probe_irredundancy": [
+    {
+      "common_values": [
+        41,
+        73
+      ],
+      "left": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "left_word": "OJ",
+      "probes": [
+        0,
+        1
+      ],
+      "right": [
+        5,
+        2,
+        6,
+        3
+      ],
+      "right_word": "ZJ"
+    },
+    {
+      "common_values": [
+        1041,
+        3375
+      ],
+      "left": [
+        89,
+        9,
+        135,
+        9
+      ],
+      "left_word": "OOJJOOZ",
+      "probes": [
+        0,
+        2
+      ],
+      "right": [
+        93,
+        3,
+        129,
+        3
+      ],
+      "right_word": "ZOJOZOZ"
+    },
+    {
+      "common_values": [
+        277,
+        501
+      ],
+      "left": [
+        15,
+        1,
+        19,
+        1
+      ],
+      "left_word": "OJOZ",
+      "probes": [
+        1,
+        2
+      ],
+      "right": [
+        5,
+        0,
+        24,
+        3
+      ],
+      "right_word": "ZJOO"
+    }
+  ],
+  "undersized_probe_hostile": {
+    "common_H": 931,
+    "left": [
+      11,
+      4,
+      12,
+      5
+    ],
+    "left_word": "OZJ",
+    "right": [
+      9,
+      1,
+      11,
+      1
+    ],
+    "right_word": "ZOZ",
+    "x": 2
+  }
+}
