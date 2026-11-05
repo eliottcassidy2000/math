@@ -1,0 +1,16 @@
+{
+  "canonical_rectangle_points": 69088,
+  "complete_DFA_fixtures": 5898,
+  "complete_live_fixtures": 4318,
+  "direct_rectangle_values": 274176,
+  "distinguishability_controls": 312660,
+  "empty_fixtures": 1209,
+  "empty_suffix_values": 4352,
+  "forced_padding_controls": 274176,
+  "formula_digest": "48a25f03ac526190fb91b337c9a133a3a87ce47b5cb6c47fb8b93b457fda54d8",
+  "leaky_fixtures": 371,
+  "live_escape_controls": 527,
+  "odd_part_bands": 2895,
+  "prime_lower_bound_controls": 300,
+  "status": "PASS"
+}

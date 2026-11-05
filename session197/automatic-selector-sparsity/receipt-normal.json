@@ -1,0 +1,13 @@
+{
+  "complete_component_fixtures": 363,
+  "elementary_prime_bound_checks": 200,
+  "empty_language_fixtures": 147,
+  "escaping_block_controls": 536,
+  "even_suffix_checks": 14260,
+  "leaky_automaton_fixtures": 210,
+  "odd_part_band_controls": 7168,
+  "rectangle_automaton_points": 13068,
+  "rectangle_formula_checks": 182528,
+  "scope": "Polynomial sparsity of regular selected subgraphs for fixed prefixes and finite explicit tags; no unrestricted spectrum omission.",
+  "status": "PASS"
+}
