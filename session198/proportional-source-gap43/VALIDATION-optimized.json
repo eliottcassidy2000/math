@@ -1,0 +1,55 @@
+{
+  "c1_control": {
+    "complete_source_cap": 86,
+    "missing_strong_C1": [
+      7,
+      13,
+      21,
+      41,
+      43
+    ],
+    "target_cap": 43
+  },
+  "coefficient_pair_checks": 16,
+  "commuting_pairs": 561,
+  "cubic_unisolvent_grid": 256,
+  "dependencies": {
+    "BILINEAR_C2.md": "5eab9deb2871819d8a1b5684c4987f2f4da807adc55063a30675d531c5ad3813",
+    "C1_COMPLETE.md": "d38a53b1c475df3578d58e83d9e9f97785d9455084c0a094aaed752577d8b289",
+    "N_WORD_RIGIDITY.md": "151ba439abc4f80181feb4478983ee0b08e79bd4edc158f6a11d1cd5abd37819",
+    "SOURCE_SIGNATURE.md": "d5a9b57b62f8ce54c36fca51829efeaa493339512e47395160dc78e5474b35b6"
+  },
+  "diagonal_small_counts": {
+    "M": [
+      29
+    ],
+    "N": [
+      13,
+      41
+    ]
+  },
+  "literal43": {
+    "C": 2,
+    "H": 43,
+    "first_three_N_shift_defects": [
+      -8,
+      -16,
+      -28
+    ],
+    "order": 7,
+    "rows": [
+      90,
+      124,
+      89,
+      32,
+      8,
+      21,
+      56
+    ]
+  },
+  "nontrivial_sources": 377,
+  "quadratic_unisolvent_grid": 81,
+  "source_cap": 101,
+  "status": "PASS",
+  "unordered_pairs": 71253
+}
