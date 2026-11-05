@@ -1,0 +1,29 @@
+{
+  "files": [
+    {
+      "blob_sha": "c1d0e5efd5a242a156e16a87fd4f7d4645e28e88",
+      "contains_unqualified_example": true,
+      "exact_phrase": "any J-born source over a strong source",
+      "path": "01-canon/theorems/THM-4883-signed-one-apex-responses-exact-2-adic-structure.md",
+      "url": "https://github.com/eliottcassidy2000/math/blob/45766d058d9507f97e87336c09a15cd3ef65796d/01-canon/theorems/THM-4883-signed-one-apex-responses-exact-2-adic-structure.md"
+    },
+    {
+      "blob_sha": "39a3e9c0c226e06b2f61235ee07fcd25124c2349",
+      "contains_unqualified_example": true,
+      "exact_phrase": "every J-born source over a strong source",
+      "path": "05-knowledge/results/signed_response_2adic_structure_20261105/PROOF.md",
+      "url": "https://github.com/eliottcassidy2000/math/blob/45766d058d9507f97e87336c09a15cd3ef65796d/05-knowledge/results/signed_response_2adic_structure_20261105/PROOF.md"
+    }
+  ],
+  "latest_named_file_commit": "c4e9654f72295da4562f1f94bb193f6cb8754989",
+  "main": "45766d058d9507f97e87336c09a15cd3ef65796d",
+  "original_files_modified": false,
+  "referenced_audit_at_pinned_main": "404 not found",
+  "search_scope": "Named theorem and proof file histories, commit search for 4883, exact cited audit path. No exhaustive absence claim.",
+  "surviving_coverage_dependency": {
+    "application": "a=22,b=23; exact odd signed-response coverage, hence exact offset class 3 modulo 6",
+    "blob_sha": "441187432f0b729645289189b0965056b7392795",
+    "path": "session198/rational-response-coverage/PROOF.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/45766d058d9507f97e87336c09a15cd3ef65796d/session198/rational-response-coverage/PROOF.md"
+  }
+}

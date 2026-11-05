@@ -1,0 +1,85 @@
+{
+  "M": {
+    "C": 2,
+    "H": 867,
+    "order": 12,
+    "rows": [
+      4074,
+      4092,
+      4089,
+      4080,
+      4033,
+      1936,
+      3872,
+      1856,
+      3072,
+      256,
+      512,
+      1696
+    ]
+  },
+  "N": {
+    "C": 2,
+    "H": 417,
+    "order": 11,
+    "rows": [
+      2026,
+      2044,
+      2041,
+      2032,
+      1985,
+      1808,
+      1824,
+      608,
+      128,
+      256,
+      896
+    ]
+  },
+  "ZOJ": {
+    "cycles": 1,
+    "profile": [
+      9,
+      3,
+      9,
+      3
+    ],
+    "root": 4,
+    "rows": [
+      10,
+      28,
+      25,
+      16,
+      1
+    ],
+    "start": 1
+  },
+  "ZOJJ": {
+    "cycles": 1,
+    "profile": [
+      15,
+      6,
+      18,
+      9
+    ],
+    "root": 5,
+    "rows": [
+      42,
+      60,
+      57,
+      48,
+      1,
+      16
+    ],
+    "start": 1
+  },
+  "alpha": 69,
+  "beta": 66,
+  "constant": 24,
+  "correct_J_gap_identity": "d(Ju)-E(Ju)=E(u)",
+  "gcd": 3,
+  "offset": 33,
+  "offset_class": "3 modulo 6; offsets +1 and -1 impossible",
+  "scope": "Refutes the unqualified J-born example only. The T4 identity and gcd-qualified class survive.",
+  "status": "PASS"
+}

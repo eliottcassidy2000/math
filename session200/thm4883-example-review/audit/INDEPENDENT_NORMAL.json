@@ -1,0 +1,36 @@
+{
+  "M": {
+    "hamilton_cycles": 2,
+    "hamilton_paths": 867,
+    "order": 12
+  },
+  "N": {
+    "hamilton_cycles": 2,
+    "hamilton_paths": 417,
+    "order": 11
+  },
+  "ZOJ": {
+    "hamilton_cycles": 1,
+    "profile": [
+      9,
+      3,
+      9,
+      3
+    ],
+    "root_start_paths": 1
+  },
+  "ZOJJ": {
+    "hamilton_cycles": 1,
+    "profile": [
+      15,
+      6,
+      18,
+      9
+    ],
+    "root_start_paths": 1
+  },
+  "method": "Permutation source profiles and unmemoized direct path enumeration",
+  "scope": "Literal counts and universal mod-6 obstruction only; no full THM-4883 audit",
+  "status": "PASS",
+  "universal_identity": "69(2k+1)-66U+24 = 6(23k-11U+15)+3, for all integers k,U"
+}
