@@ -1,0 +1,285 @@
+{
+  "multipliers": [
+    {
+      "multiplier": 3,
+      "dfa_states": 288,
+      "short": [
+        {
+          "length": 1,
+          "classes": 8,
+          "first_success_by_prime": [
+            3,
+            4,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 2,
+          "classes": 36,
+          "first_success_by_prime": [
+            16,
+            19,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 3,
+          "classes": 176,
+          "first_success_by_prime": [
+            90,
+            85,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 4,
+          "classes": 1044,
+          "first_success_by_prime": [
+            655,
+            364,
+            24,
+            1,
+            0
+          ]
+        },
+        {
+          "length": 5,
+          "classes": 6560,
+          "first_success_by_prime": [
+            3676,
+            2744,
+            140,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 6,
+          "classes": 43800,
+          "first_success_by_prime": [
+            24686,
+            18298,
+            812,
+            4,
+            0
+          ]
+        }
+      ],
+      "long": [
+        {
+          "length": 7,
+          "low_words": 62976,
+          "active_words": 29952,
+          "filtered_classes": 417,
+          "first_success_by_prime": [
+            276,
+            141,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 8,
+          "low_words": 199616,
+          "active_words": 39872,
+          "filtered_classes": 1091,
+          "first_success_by_prime": [
+            764,
+            327,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 9,
+          "low_words": 604160,
+          "active_words": 29440,
+          "filtered_classes": 921,
+          "first_success_by_prime": [
+            921,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 10,
+          "low_words": 1768448,
+          "active_words": 24576,
+          "filtered_classes": 675,
+          "first_success_by_prime": [
+            675,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 11,
+          "low_words": 5147392,
+          "active_words": 9216,
+          "filtered_classes": 329,
+          "first_success_by_prime": [
+            329,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "unresolved": 0
+    },
+    {
+      "multiplier": 4,
+      "dfa_states": 288,
+      "short": [
+        {
+          "length": 1,
+          "classes": 8,
+          "first_success_by_prime": [
+            3,
+            4,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 2,
+          "classes": 36,
+          "first_success_by_prime": [
+            16,
+            19,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 3,
+          "classes": 176,
+          "first_success_by_prime": [
+            90,
+            84,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 4,
+          "classes": 1044,
+          "first_success_by_prime": [
+            655,
+            376,
+            13,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 5,
+          "classes": 6560,
+          "first_success_by_prime": [
+            3676,
+            2758,
+            124,
+            2,
+            0
+          ]
+        },
+        {
+          "length": 6,
+          "classes": 43800,
+          "first_success_by_prime": [
+            24686,
+            18300,
+            794,
+            20,
+            0
+          ]
+        }
+      ],
+      "long": [
+        {
+          "length": 7,
+          "low_words": 62976,
+          "active_words": 29952,
+          "filtered_classes": 417,
+          "first_success_by_prime": [
+            276,
+            141,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 8,
+          "low_words": 199616,
+          "active_words": 39872,
+          "filtered_classes": 1091,
+          "first_success_by_prime": [
+            764,
+            327,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 9,
+          "low_words": 604160,
+          "active_words": 29440,
+          "filtered_classes": 921,
+          "first_success_by_prime": [
+            921,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 10,
+          "low_words": 1768448,
+          "active_words": 24576,
+          "filtered_classes": 675,
+          "first_success_by_prime": [
+            675,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "length": 11,
+          "low_words": 5147392,
+          "active_words": 9216,
+          "filtered_classes": 329,
+          "first_success_by_prime": [
+            329,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "unresolved": 0
+    }
+  ],
+  "strong_four_vertex_graphs_checked": 24
+}
