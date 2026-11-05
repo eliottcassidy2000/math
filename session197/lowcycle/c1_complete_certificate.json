@@ -1,0 +1,16 @@
+{
+  "all_order_claim": "Every strong C=1 tournament has a strong bridge.",
+  "deletion_lemma_checks": 1128,
+  "exposed_strong_bridges": 774,
+  "forced_arc_surgeries": 744,
+  "labelled_tournaments": 1099,
+  "maximum_labelled_order": 5,
+  "separating_vertex_cycle_products": 1094,
+  "status": "PASS",
+  "surgery_orders": [
+    5,
+    500
+  ],
+  "two_strong_labelled": 24,
+  "uniquely_Hamiltonian_labelled": 386
+}
