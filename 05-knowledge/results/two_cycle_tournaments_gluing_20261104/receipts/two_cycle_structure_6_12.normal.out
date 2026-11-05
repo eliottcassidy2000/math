@@ -1,0 +1,49 @@
+order 6: 5 two-cycle classes
+  swap: sorted run sizes {(1, 2, 3): 4, (2, 2, 2): 1}
+        cut arcs on both cycles: {True: 5}; NC a cyclic interval of (C1, C2): {(True, False): 5}; #cut + #NC - n: {0: 5}
+  glue (vertex junction): (hc of the two pieces) {(1, 1): 4}; roles {('in-degree of s in Y[S2+s] = 1', 'out-degree of s in Y[PR+s] = 1'): 4}; cross arcs {'only S2_3 -> PR_1': 2, 'only S2_2 -> PR_1': 2}
+        classes by (|S2|, |PR|): {(2, 3): 2, (3, 2): 2}; distinct rooted pairs: {(2, 3): 2, (3, 2): 2}; F(2k-3)F(2l-3): {(2, 3): 2, (3, 2): 2}
+  arc junction: (hc of the two pieces) {(1, 1): 1}; roles {'s, s2 consecutive sole entries of Y[S2+s+s2] and consecutive sole exits of Y[PR+s+s2]': 1}; cross arcs {'only S2_2 -> PR_1': 1}
+        classes by (|S2|, |PR|): {(2, 2): 1}; distinct rooted pairs: {(2, 2): 1}; F(2k-3)F(2l-3): {(2, 2): 1}
+order 7: 18 two-cycle classes
+  swap: sorted run sizes {(1, 2, 4): 10, (1, 3, 3): 4, (2, 2, 3): 4}
+        cut arcs on both cycles: {True: 18}; NC a cyclic interval of (C1, C2): {(True, False): 18}; #cut + #NC - n: {0: 18}
+  glue (vertex junction): (hc of the two pieces) {(1, 1): 14}; roles {('in-degree of s in Y[S2+s] = 1', 'out-degree of s in Y[PR+s] = 1'): 14}; cross arcs {'only S2_4 -> PR_1': 5, 'only S2_3 -> PR_1': 4, 'only S2_2 -> PR_1': 5}
+        classes by (|S2|, |PR|): {(2, 4): 5, (3, 3): 4, (4, 2): 5}; distinct rooted pairs: {(2, 4): 5, (3, 3): 4, (4, 2): 5}; F(2k-3)F(2l-3): {(2, 4): 5, (3, 3): 4, (4, 2): 5}
+  arc junction: (hc of the two pieces) {(1, 1): 4}; roles {'s, s2 consecutive sole entries of Y[S2+s+s2] and consecutive sole exits of Y[PR+s+s2]': 4}; cross arcs {'only S2_2 -> PR_1': 2, 'only S2_3 -> PR_1': 2}
+        classes by (|S2|, |PR|): {(2, 3): 2, (3, 2): 2}; distinct rooted pairs: {(2, 3): 2, (3, 2): 2}; F(2k-3)F(2l-3): {(2, 3): 2, (3, 2): 2}
+order 8: 60 two-cycle classes
+  swap: sorted run sizes {(1, 2, 5): 26, (1, 3, 4): 20, (2, 2, 4): 10, (2, 3, 3): 4}
+        cut arcs on both cycles: {True: 60}; NC a cyclic interval of (C1, C2): {(True, False): 60}; #cut + #NC - n: {0: 60}
+  glue (vertex junction): (hc of the two pieces) {(1, 1): 46}; roles {('in-degree of s in Y[S2+s] = 1', 'out-degree of s in Y[PR+s] = 1'): 46}; cross arcs {'only S2_5 -> PR_1': 13, 'only S2_4 -> PR_1': 10, 'only S2_3 -> PR_1': 10, 'only S2_2 -> PR_1': 13}
+        classes by (|S2|, |PR|): {(2, 5): 13, (3, 4): 10, (4, 3): 10, (5, 2): 13}; distinct rooted pairs: {(2, 5): 13, (3, 4): 10, (4, 3): 10, (5, 2): 13}; F(2k-3)F(2l-3): {(2, 5): 13, (3, 4): 10, (4, 3): 10, (5, 2): 13}
+  arc junction: (hc of the two pieces) {(1, 1): 14}; roles {'s, s2 consecutive sole entries of Y[S2+s+s2] and consecutive sole exits of Y[PR+s+s2]': 14}; cross arcs {'only S2_4 -> PR_1': 5, 'only S2_2 -> PR_1': 5, 'only S2_3 -> PR_1': 4}
+        classes by (|S2|, |PR|): {(2, 4): 5, (3, 3): 4, (4, 2): 5}; distinct rooted pairs: {(2, 4): 5, (3, 3): 4, (4, 2): 5}; F(2k-3)F(2l-3): {(2, 4): 5, (3, 3): 4, (4, 2): 5}
+order 9: 191 two-cycle classes
+  swap: sorted run sizes {(1, 2, 6): 68, (1, 3, 5): 52, (1, 4, 4): 25, (2, 2, 5): 26, (2, 3, 4): 20}
+        cut arcs on both cycles: {True: 191}; NC a cyclic interval of (C1, C2): {(True, False): 191}; #cut + #NC - n: {0: 191}
+  glue (vertex junction): (hc of the two pieces) {(1, 1): 145}; roles {('in-degree of s in Y[S2+s] = 1', 'out-degree of s in Y[PR+s] = 1'): 145}; cross arcs {'only S2_6 -> PR_1': 34, 'only S2_5 -> PR_1': 26, 'only S2_4 -> PR_1': 25, 'only S2_3 -> PR_1': 26, 'only S2_2 -> PR_1': 34}
+        classes by (|S2|, |PR|): {(2, 6): 34, (3, 5): 26, (4, 4): 25, (5, 3): 26, (6, 2): 34}; distinct rooted pairs: {(2, 6): 34, (3, 5): 26, (4, 4): 25, (5, 3): 26, (6, 2): 34}; F(2k-3)F(2l-3): {(2, 6): 34, (3, 5): 26, (4, 4): 25, (5, 3): 26, (6, 2): 34}
+  arc junction: (hc of the two pieces) {(1, 1): 46}; roles {'s, s2 consecutive sole entries of Y[S2+s+s2] and consecutive sole exits of Y[PR+s+s2]': 46}; cross arcs {'only S2_5 -> PR_1': 13, 'only S2_4 -> PR_1': 10, 'only S2_2 -> PR_1': 13, 'only S2_3 -> PR_1': 10}
+        classes by (|S2|, |PR|): {(2, 5): 13, (3, 4): 10, (4, 3): 10, (5, 2): 13}; distinct rooted pairs: {(2, 5): 13, (3, 4): 10, (4, 3): 10, (5, 2): 13}; F(2k-3)F(2l-3): {(2, 5): 13, (3, 4): 10, (4, 3): 10, (5, 2): 13}
+order 10: 589 two-cycle classes
+  swap: sorted run sizes {(1, 2, 7): 178, (1, 3, 6): 136, (1, 4, 5): 130, (2, 2, 6): 68, (2, 3, 5): 52, (2, 4, 4): 25}
+        cut arcs on both cycles: {True: 589}; NC a cyclic interval of (C1, C2): {(True, False): 589}; #cut + #NC - n: {0: 589}
+  glue (vertex junction): (hc of the two pieces) {(1, 1): 444}; roles {('in-degree of s in Y[S2+s] = 1', 'out-degree of s in Y[PR+s] = 1'): 444}; cross arcs {'only S2_7 -> PR_1': 89, 'only S2_6 -> PR_1': 68, 'only S2_5 -> PR_1': 65, 'only S2_4 -> PR_1': 65, 'only S2_3 -> PR_1': 68, 'only S2_2 -> PR_1': 89}
+        classes by (|S2|, |PR|): {(2, 7): 89, (3, 6): 68, (4, 5): 65, (5, 4): 65, (6, 3): 68, (7, 2): 89}; distinct rooted pairs: {(2, 7): 89, (3, 6): 68, (4, 5): 65, (5, 4): 65, (6, 3): 68, (7, 2): 89}; F(2k-3)F(2l-3): {(2, 7): 89, (3, 6): 68, (4, 5): 65, (5, 4): 65, (6, 3): 68, (7, 2): 89}
+  arc junction: (hc of the two pieces) {(1, 1): 145}; roles {'s, s2 consecutive sole entries of Y[S2+s+s2] and consecutive sole exits of Y[PR+s+s2]': 145}; cross arcs {'only S2_6 -> PR_1': 34, 'only S2_5 -> PR_1': 26, 'only S2_3 -> PR_1': 26, 'only S2_4 -> PR_1': 25, 'only S2_2 -> PR_1': 34}
+        classes by (|S2|, |PR|): {(2, 6): 34, (3, 5): 26, (4, 4): 25, (5, 3): 26, (6, 2): 34}; distinct rooted pairs: {(2, 6): 34, (3, 5): 26, (4, 4): 25, (5, 3): 26, (6, 2): 34}; F(2k-3)F(2l-3): {(2, 6): 34, (3, 5): 26, (4, 4): 25, (5, 3): 26, (6, 2): 34}
+order 11: 1775 two-cycle classes
+  swap: sorted run sizes {(1, 2, 8): 466, (1, 3, 7): 356, (1, 4, 6): 340, (1, 5, 5): 169, (2, 2, 7): 178, (2, 3, 6): 136, (2, 4, 5): 130}
+        cut arcs on both cycles: {True: 1775}; NC a cyclic interval of (C1, C2): {(True, False): 1775}; #cut + #NC - n: {0: 1775}
+  glue (vertex junction): (hc of the two pieces) {(1, 1): 1331}; roles {('in-degree of s in Y[S2+s] = 1', 'out-degree of s in Y[PR+s] = 1'): 1331}; cross arcs {'only S2_8 -> PR_1': 233, 'only S2_7 -> PR_1': 178, 'only S2_6 -> PR_1': 170, 'only S2_5 -> PR_1': 169, 'only S2_4 -> PR_1': 170, 'only S2_3 -> PR_1': 178, 'only S2_2 -> PR_1': 233}
+        classes by (|S2|, |PR|): {(2, 8): 233, (3, 7): 178, (4, 6): 170, (5, 5): 169, (6, 4): 170, (7, 3): 178, (8, 2): 233}; distinct rooted pairs: {(2, 8): 233, (3, 7): 178, (4, 6): 170, (5, 5): 169, (6, 4): 170, (7, 3): 178, (8, 2): 233}; F(2k-3)F(2l-3): {(2, 8): 233, (3, 7): 178, (4, 6): 170, (5, 5): 169, (6, 4): 170, (7, 3): 178, (8, 2): 233}
+  arc junction: (hc of the two pieces) {(1, 1): 444}; roles {'s, s2 consecutive sole entries of Y[S2+s+s2] and consecutive sole exits of Y[PR+s+s2]': 444}; cross arcs {'only S2_7 -> PR_1': 89, 'only S2_6 -> PR_1': 68, 'only S2_4 -> PR_1': 65, 'only S2_5 -> PR_1': 65, 'only S2_3 -> PR_1': 68, 'only S2_2 -> PR_1': 89}
+        classes by (|S2|, |PR|): {(2, 7): 89, (3, 6): 68, (4, 5): 65, (5, 4): 65, (6, 3): 68, (7, 2): 89}; distinct rooted pairs: {(2, 7): 89, (3, 6): 68, (4, 5): 65, (5, 4): 65, (6, 3): 68, (7, 2): 89}; F(2k-3)F(2l-3): {(2, 7): 89, (3, 6): 68, (4, 5): 65, (5, 4): 65, (6, 3): 68, (7, 2): 89}
+order 12: 5257 two-cycle classes
+  swap: sorted run sizes {(1, 2, 9): 1220, (1, 3, 8): 932, (1, 4, 7): 890, (1, 5, 6): 884, (2, 2, 8): 466, (2, 3, 7): 356, (2, 4, 6): 340, (2, 5, 5): 169}
+        cut arcs on both cycles: {True: 5257}; NC a cyclic interval of (C1, C2): {(True, False): 5257}; #cut + #NC - n: {0: 5257}
+  glue (vertex junction): (hc of the two pieces) {(1, 1): 3926}; roles {('in-degree of s in Y[S2+s] = 1', 'out-degree of s in Y[PR+s] = 1'): 3926}; cross arcs {'only S2_9 -> PR_1': 610, 'only S2_8 -> PR_1': 466, 'only S2_7 -> PR_1': 445, 'only S2_6 -> PR_1': 442, 'only S2_5 -> PR_1': 442, 'only S2_4 -> PR_1': 445, 'only S2_3 -> PR_1': 466, 'only S2_2 -> PR_1': 610}
+        classes by (|S2|, |PR|): {(2, 9): 610, (3, 8): 466, (4, 7): 445, (5, 6): 442, (6, 5): 442, (7, 4): 445, (8, 3): 466, (9, 2): 610}; distinct rooted pairs: {(2, 9): 610, (3, 8): 466, (4, 7): 445, (5, 6): 442, (6, 5): 442, (7, 4): 445, (8, 3): 466, (9, 2): 610}; F(2k-3)F(2l-3): {(2, 9): 610, (3, 8): 466, (4, 7): 445, (5, 6): 442, (6, 5): 442, (7, 4): 445, (8, 3): 466, (9, 2): 610}
+  arc junction: (hc of the two pieces) {(1, 1): 1331}; roles {'s, s2 consecutive sole entries of Y[S2+s+s2] and consecutive sole exits of Y[PR+s+s2]': 1331}; cross arcs {'only S2_8 -> PR_1': 233, 'only S2_7 -> PR_1': 178, 'only S2_5 -> PR_1': 169, 'only S2_6 -> PR_1': 170, 'only S2_4 -> PR_1': 170, 'only S2_3 -> PR_1': 178, 'only S2_2 -> PR_1': 233}
+        classes by (|S2|, |PR|): {(2, 8): 233, (3, 7): 178, (4, 6): 170, (5, 5): 169, (6, 4): 170, (7, 3): 178, (8, 2): 233}; distinct rooted pairs: {(2, 8): 233, (3, 7): 178, (4, 6): 170, (5, 5): 169, (6, 4): 170, (7, 3): 178, (8, 2): 233}; F(2k-3)F(2l-3): {(2, 8): 233, (3, 7): 178, (4, 6): 170, (5, 5): 169, (6, 4): 170, (7, 3): 178, (8, 2): 233}

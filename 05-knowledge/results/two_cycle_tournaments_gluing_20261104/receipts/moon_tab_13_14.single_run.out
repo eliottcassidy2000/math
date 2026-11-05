@@ -1,0 +1,2 @@
+order 13: 15360 two-cycle classes = a_{n-1} + (n-4) b_{n-1} = 987 + 9*1597 = 15360; cut+NC-n: {0: 15360}; (sole exits, sole entries): {(1, 1): 3461, (1, 2): 4003, (2, 1): 4003, (2, 2): 3893}; unique-cycle deletions per class: {1: 8240, 2: 7120}; non-critical count range 3..11
+order 14: 44394 two-cycle classes = a_{n-1} + (n-4) b_{n-1} = 2584 + 10*4181 = 44394; cut+NC-n: {0: 44394}; (sole exits, sole entries): {(1, 1): 9671, (1, 2): 11467, (2, 1): 11467, (2, 2): 11789}; unique-cycle deletions per class: {1: 24598, 2: 19796}; non-critical count range 3..12
