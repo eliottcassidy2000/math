@@ -99,7 +99,7 @@ connectivity: 4, 17, 121 states for `w = 1, 2, 3` (condensation.py; agreement wi
 21,844 and 64,680 words). Strong components of a ribbon word need **not** be intervals: the letters `--.1-.-2.1-` give
 the arcs `2 -> 1, 3 -> 1, 4 -> 3` and the condensation `{2} < {1, 3, 4}`, although every cut between consecutive
 vertices is crossed by a back arc. (The session's pre-registration file first asserted the cut criterion; corrected
-within the hour, before any result depended on it; MISTAKE-717.)
+within the hour, before any result depended on it; MISTAKE-718.)
 
 ## 5. Corollary C (closure; PROVED) and Lemma D (end twins; PROVED)
 
@@ -191,7 +191,7 @@ nested), from alphabets.py/probe47.py for `n <= 12`: solid intervals [49,165], [
 **Pre-registration.** PREDICTIONS.md (committed 32d1356382 before any C run): P1 (strong span-2 words attain every odd
 `<= 10^6` except 7, 21, 47) - confirmed to 50,000 by the level method (and to 5,000 by the independent 27-coordinate DFS; the DFS to 10^5 was still running at this commit),
 not to 10^6; P2 (span 3: every odd `<= 10^5` except 7, 21) - not yet tested beyond 47 at this commit (runs queued, see above); P3 - queued at this commit. The claim in the same
-file that every three-letter word is strong was false (MISTAKE-717) and was corrected before the enumerations ran.
+file that every three-letter word is strong was false (MISTAKE-718) and was corrected before the enumerations ran.
 
 ## 8. Junctions, and two no-go statements (Theorem H, PROVED by exact finite computation)
 
