@@ -1,0 +1,10 @@
+{
+  "PROOF.md": "eaf139d56e65acfbea8e5b7550770b2ea21bddbcbbe0ad88764c7f3a5f7445ea",
+  "REVIEW.md": "901328cf0ae0ee61d84570dfbded202063945b09c153bbdd75af1ebaabf35280",
+  "independent/INDEPENDENT.json": "a431c019893f4a369aa5217ebdd8307824bffa43a0c451d63d0cc7f878a88e46",
+  "independent/INDEPENDENT_DEBUG.json": "a431c019893f4a369aa5217ebdd8307824bffa43a0c451d63d0cc7f878a88e46",
+  "independent/independent.cpp": "262ce28eee876b5211a17f8baddebf614e73a3f40063aab1b555442e3c9b93f3",
+  "receipt-debug.json": "7840de4d9cf3a6c424e67a16d1b8087da7e616380cd340a5df24668ec43c2697",
+  "receipt-normal.json": "7840de4d9cf3a6c424e67a16d1b8087da7e616380cd340a5df24668ec43c2697",
+  "verify.cpp": "6553609584b1472552a48b2811122e4817f1c7527ed72e428e7f9fe94a1f7dc7"
+}

@@ -1,0 +1,10 @@
+{
+  "PROOF.md": "3027ec2684d7be7d1a497b1602b701c5f96c5f19ce7e550673c568fcdca415a3",
+  "REVIEW.md": "2ca972e81988475fe796e32616d00ad5d478adc52840620397bfee4f1653f610",
+  "independent/INDEPENDENT.json": "5dd18295bac4219cb23d9b38f720d5ae53eab20b70f96bdf90d17e676f1aaab0",
+  "independent/INDEPENDENT_DEBUG.json": "5dd18295bac4219cb23d9b38f720d5ae53eab20b70f96bdf90d17e676f1aaab0",
+  "independent/independent.cpp": "c45caa362ecd116676b1b3ea1f9e25aedef175692f5f1923db0d5072d8b20222",
+  "receipt-debug.json": "82faea8249aa01f8465767dd2dfff4f22da354567be4158c3ccfc720993dc3b5",
+  "receipt-normal.json": "82faea8249aa01f8465767dd2dfff4f22da354567be4158c3ccfc720993dc3b5",
+  "verify.cpp": "9097be97e0fb8391c7c3b0291c7f0870084c259eacb54753ff95dd2225e4d6d4"
+}
