@@ -1,0 +1,15 @@
+order  6: hc=1: min    15 (   15) max    23 distinct    4 | hc=2: min    23 (   23) max    29 distinct    3
+order  7: hc=1: min    25 (   25) max    51 distinct   11 | hc=2: min    41 (   41) max    55 distinct    6
+order  8: hc=1: min    45 (   45) max   107 distinct   18 | hc=2: min    69 (   69) max   113 distinct   18
+order  9: hc=1: min    75 (   75) max   227 distinct   48 | hc=2: min   115 (  115) max   239 distinct   44
+order 10: hc=1: min   125 (  125) max   467 distinct   91 | hc=2: min   205 (  205) max   503 distinct  113
+order 11: hc=1: min   225 (  225) max   963 distinct  201 | hc=2: min   345 (  345) max  1043 distinct  248
+order 12: hc=1: min   375 (  375) max  1955 distinct  432 | hc=2: min   575 (  575) max  2147 distinct  562
+order 13: hc=1: min   625 (  625) max  3971 distinct  933 | hc=2: min  1025 ( 1025) max  4379 distinct 1238
+order 14: hc=1: min  1125 ( 1125) max  8003 distinct 1952 | hc=2: min  1725 ( 1725) max  8993 distinct 2651
+order 15: hc=1: min  1875 ( 1875) max 16131 distinct 4147 | hc=2: min  2875 ( 2875) max 18889 distinct 5635
+order 16: hc=1: min  3125 ( 3125) max 32387 distinct 8675 | hc=2: no data
+cumulative orders 6-16: distinct h-values hc=1: 11232, hc=2: 7467, union: 11275
+  hc = 1   first value 15; odd numbers in [15, 5000) not attained: 27: [21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 583, 637, 821, 1067, 1339, 1861, 2647]
+  hc = 2   first value 23; odd numbers in [23, 5000) not attained: 38: [27, 31, 33, 35, 37, 39, 47, 51, 57, 59, 61, 63, 65, 67, 71, 75, 99, 101, 109, 117, 119, 121, 127, 185, 195, 197, 199, 201, 209, 213, 227, 263, 303, 381, 389, 407, 653, 691]
+  hc <= 2  first value 15; odd numbers in [15, 5000) not attained: 2: [21, 67]
