@@ -31,8 +31,7 @@ static uint64_t hash_state(const state_t *s) {
 }
 static void hs_init(hset *H, size_t cap) { H->cap = cap; H->n = 0; H->tab = malloc(cap * sizeof(state_t)); H->used = calloc(cap, 1); if (!H->tab || !H->used) { fprintf(stderr, "alloc fail\n"); exit(3); } }
 static void hs_free(hset *H) { free(H->tab); free(H->used); }
-static int hs_insert(hset *H, const state_t *s) {
-    if (H->n * 10 >= H->cap * 9) { fprintf(stderr, "hash set full (cap %zu)\n", H->cap); exit(4); }
+static int hs_insert_raw(hset *H, const state_t *s) {
     uint64_t h = hash_state(s) % H->cap;
     while (H->used[h]) {
         if (H->tab[h].c == s->c && memcmp(H->tab[h].y, s->y, sizeof(int32_t) * r) == 0) return 0;
@@ -40,6 +39,15 @@ static int hs_insert(hset *H, const state_t *s) {
     }
     H->used[h] = 1; H->tab[h] = *s; H->n++;
     return 1;
+}
+static void hs_grow(hset *H) {
+    hset G; hs_init(&G, H->cap * 2);
+    for (size_t i = 0; i < H->cap; i++) if (H->used[i]) hs_insert_raw(&G, &H->tab[i]);
+    hs_free(H); *H = G;
+}
+static int hs_insert(hset *H, const state_t *s) {
+    if (H->n * 10 >= H->cap * 7) hs_grow(H);
+    return hs_insert_raw(H, s);
 }
 int main(int argc, char **argv) {
     if (argc < 7) { fprintf(stderr, "usage: %s intrepfile automatonfile w N maxlen outprefix [maxstates]\n", argv[0]); return 1; }
@@ -71,7 +79,7 @@ int main(int argc, char **argv) {
     hs_insert(&cur, &s0);
     clock_t t0 = clock();
     for (int n = 1; n <= maxlen; n++) {
-        size_t cap = (size_t)(cur.n * 3.6 * 2.2) + 4096; if (cap > maxstates * 2) cap = maxstates * 2;
+        size_t cap = cur.n * 2 + 4096;
         hs_init(&nxt, cap);
         memset(level, 0, nodd / 8 + 1);
         uint64_t vmin = ~0ull, vmax = 0, nstrong_vals = 0;
