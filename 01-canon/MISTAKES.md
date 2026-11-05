@@ -22874,3 +22874,40 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - Before calling a C2 / reset property new, read two_entry_funnels READY.md and RESULT.md in full, not only the law
     being cited.
   - Never state "no X has property P" from a count that did not record where P occurred.
+
+## MISTAKE-714 (2026-11-04, kind-pasteur-2026-11-04-S10, THM-4874, HYP-9467 and their companion edits at the pre-audit commit 460c918f9a; found by the independent audit `04-computation/experiments/uh_deletion_law_20261104_audit_S10/AUDIT.md`) -- a title sentence that dropped its prefix hypothesis, an undefined small case, and ranges and credits stated too broadly
+
+- **What was claimed.**
+  - (1) THM-4874's title: "Every core block (AT_m, {m-1, m}) gives exactly three deletions, at 1, m-1, m".
+  - (2) (5): "hc(T - j) = H(AT_(m-2)) = 2^(m-4) + 1" for every m >= 4.
+  - (3) The title: "the block also fixes #{v : hc(T - v) = 2}", with no range.
+  - (4) "All 18 predicted rows exact", with no statement of which parts of the order-10-14 test were blind.
+  - (5) The census was said to "agree with (2) and (3) at orders 6-14" for all three cycle counts.
+  - (6) Credits:
+    - "the AT_m block family (5)" listed as new;
+    - "the few-cycle counts are klein's HYP-9459";
+    - HYP-9464 (B) "PROVED for all n".
+  - (7) The fermat note's header still said "No new canon theorem", and `05-knowledge/results/INDEX.md` had no
+    entry for the note.
+- **Why it was wrong.**
+  - (1) The deletion data in (5) need a uniquely Hamiltonian (or one-vertex) prefix. With an hc-2 prefix the join
+    has hc = 2(2^(m-3) + 1) and no uniquely Hamiltonian deletion.
+  - (2) AT_2 is undefined at m = 4, and a 2-vertex tournament has H = 1.
+  - (3) At n = 6 the l-deletion adds a 2 for the W4-block class.
+  - (4) The table pre-registers 48 counts in 18 lines. The k1 and |Aut| marginals at orders 10-14 were the HYP-9464
+    audit's data, so the test there is blind only for k2 and the joint correlation.
+  - (5) At order 6, hc = 4 and 5 are outside the theorem's range: 2-strong classes occur, and h0 = 1 for
+    (W4, {b, c, d}).
+  - (6) Credits:
+    - the block property and type of the AT_m blocks were the session's own note, section 5 (a), audited earlier;
+    - klein conjectured u_3 and u_4, and S75 proved them with u_5;
+    - the law holds in its range (n >= 6 for hc = 3, n >= 7 for hc = 4 and 5).
+  - (7) The companion files were not updated with the canon theorem.
+- **Repair.** All points were corrected in THM-4874, HYP-9467, HYP-9464, the note and the results INDEX. The
+  mathematics was unaffected: 0 major findings, table (1) verified on 9,536 deletions, and the joint counts reproduced
+  by independent code.
+- **How it was caught.** The independent audit built counterexamples to each over-broad sentence (an hc-2 prefix; the
+  m = 4 case; the n = 6 census row), re-counted the pre-registered table, and read the credited files.
+- **Lesson.**
+  - When a title compresses a theorem, carry every hypothesis of the compressed statement into the sentence.
+  - State a pre-registered test's blind range explicitly, separating new marginals from previously seen ones.
