@@ -1,0 +1,78 @@
+{
+  "candidate_verifier_sha256": "066e6ca4f3d2e518d045afb7852cba4699b7ae98afa68bedcd39212e94ab1cad",
+  "formal_toggle_checks": 2040,
+  "independent_verifier_sha256": "ae6235b50c385d76598c1d615aef9595400e779034ed7054a858411af16a7a8a",
+  "literal_permutation_graphs": 17,
+  "minimum_marginal_separation": 6,
+  "physical_rebases": 126,
+  "proof_sha256": "bdcada6cebd621f57cd0f4a7e5323b21da2343e86eb095e870174618f72fa7c9",
+  "scope": "Matching, exact freely-chosen-parent offsets, physical rebases and cube-switching obstruction PASS; no exact prescribed-parent coverage.",
+  "sharp_exchange_minima": [
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      7,
+      14
+    ],
+    [
+      8,
+      18
+    ],
+    [
+      9,
+      26
+    ],
+    [
+      10,
+      34
+    ],
+    [
+      11,
+      50
+    ],
+    [
+      12,
+      66
+    ]
+  ],
+  "status": "PASS",
+  "stronger_class_word_checks": 103680,
+  "triangle_sign_checks": 186376,
+  "two_block_controls": [
+    {
+      "k": 5,
+      "largest_distinct_image": [
+        6679,
+        6681,
+        6683
+      ],
+      "maxdegree": 2
+    },
+    {
+      "k": 6,
+      "largest_distinct_image": [
+        17919,
+        17921
+      ],
+      "maxdegree": 1
+    }
+  ]
+}
