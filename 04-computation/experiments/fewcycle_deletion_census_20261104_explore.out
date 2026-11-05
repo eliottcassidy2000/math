@@ -1,0 +1,73 @@
+# fewcycle_deletion_census_20261104 smoke test to order 9 (kind-pasteur-2026-11-04-S10), run BEFORE the HYP-9467 pre-registration commit; exploratory
+aud_fewcycle (independent audit code): strong classes with 1 <= hc <= 5, orders 3..9
+
+order 3: 1 strong classes with hc <= 5  [0.0 s]
+  t_k (k=1..5): 1 0 0 0 0
+  u_k (k=1..5, no out-degree-1 vertex): 0 0 0 0 0
+  uniquely Hamiltonian classes by number of sole exits: 1: 0, 2: 0, 3: 1
+  sole-exit-free classes by |Aut| (hc = 3, 4, 5): |Aut|=1: 0 0 0; |Aut|=3: 0 0 0; other: 0 0 0
+
+order 4: 1 strong classes with hc <= 5  [0.0 s]
+  t_k (k=1..5): 1 0 0 0 0
+  u_k (k=1..5, no out-degree-1 vertex): 0 0 0 0 0
+  uniquely Hamiltonian classes by number of sole exits: 1: 0, 2: 1, 3: 0
+  sole-exit-free classes by |Aut| (hc = 3, 4, 5): |Aut|=1: 0 0 0; |Aut|=3: 0 0 0; other: 0 0 0
+
+order 5: 6 strong classes with hc <= 5  [0.0 s]
+  t_k (k=1..5): 3 2 1 0 0
+  u_k (k=1..5, no out-degree-1 vertex): 0 1 0 0 0
+  uniquely Hamiltonian classes by number of sole exits: 1: 1, 2: 2, 3: 0
+  sole-exit-free classes by |Aut| (hc = 3, 4, 5): |Aut|=1: 0 0 0; |Aut|=3: 0 0 0; other: 0 0 0
+  DEL n=5 hc=2 classes=1  #(v: hc(T-v)=1) -> 5:1
+
+order 6: 35 strong classes with hc <= 5  [0.0 s]
+  t_k (k=1..5): 8 5 11 6 5
+  u_k (k=1..5, no out-degree-1 vertex): 0 0 2 3 4
+  uniquely Hamiltonian classes by number of sole exits: 1: 3, 2: 5, 3: 0
+  sole-exit-free classes by |Aut| (hc = 3, 4, 5): |Aut|=1: 1 3 2; |Aut|=3: 1 0 2; other: 0 0 0
+  DEL n=6 hc=3 classes=2  #(v: hc(T-v)=1) -> 3:2
+  DEL n=6 hc=4 classes=3  #(v: hc(T-v)=1) -> 2:1 3:1 4:1
+  DEL n=6 hc=5 classes=4  #(v: hc(T-v)=1) -> 0:1 2:2 6:1
+  JOINT n=6 hc=3 (k1 = #hc(T-v)=1, k2 = #hc(T-v)=2, |Aut|): (3,0,3):1 (3,2,1):1
+  JOINT n=6 hc=4 (k1 = #hc(T-v)=1, k2 = #hc(T-v)=2, |Aut|): (2,2,1):1 (3,2,1):1 (4,2,1):1
+  JOINT n=6 hc=5 (k1 = #hc(T-v)=1, k2 = #hc(T-v)=2, |Aut|): (0,6,3):1 (2,3,1):2 (6,0,3):1
+  hc=3 profiles of the three UH deletions ((sole exits, sole entries) x3): ((1,1),(2,2),(2,2)):1 ((1,1),(1,1),(1,1)):1
+
+order 7: 140 strong classes with hc <= 5  [0.0 s]
+  t_k (k=1..5): 21 18 38 25 38
+  u_k (k=1..5, no out-degree-1 vertex): 0 0 5 4 4
+  uniquely Hamiltonian classes by number of sole exits: 1: 8, 2: 13, 3: 0
+  sole-exit-free classes by |Aut| (hc = 3, 4, 5): |Aut|=1: 2 4 4; |Aut|=3: 3 0 0; other: 0 0 0
+  DEL n=7 hc=3 classes=5  #(v: hc(T-v)=1) -> 3:5
+  DEL n=7 hc=4 classes=4  #(v: hc(T-v)=1) -> 2:4
+  DEL n=7 hc=5 classes=4  #(v: hc(T-v)=1) -> 2:3 3:1
+  JOINT n=7 hc=3 (k1 = #hc(T-v)=1, k2 = #hc(T-v)=2, |Aut|): (3,0,3):3 (3,1,1):2
+  JOINT n=7 hc=4 (k1 = #hc(T-v)=1, k2 = #hc(T-v)=2, |Aut|): (2,1,1):2 (2,2,1):2
+  JOINT n=7 hc=5 (k1 = #hc(T-v)=1, k2 = #hc(T-v)=2, |Aut|): (2,0,1):1 (2,1,1):1 (2,2,1):1 (3,0,1):1
+  hc=3 profiles of the three UH deletions ((sole exits, sole entries) x3): ((1,2),(2,2),(2,2)):1 ((1,1),(2,2),(2,2)):1 ((1,1),(1,1),(1,1)):2 ((1,2),(1,2),(1,2)):1
+
+order 8: 468 strong classes with hc <= 5  [0.0 s]
+  t_k (k=1..5): 55 60 124 91 138
+  u_k (k=1..5, no out-degree-1 vertex): 0 0 13 10 9
+  uniquely Hamiltonian classes by number of sole exits: 1: 21, 2: 34, 3: 0
+  sole-exit-free classes by |Aut| (hc = 3, 4, 5): |Aut|=1: 5 10 9; |Aut|=3: 8 0 0; other: 0 0 0
+  DEL n=8 hc=3 classes=13  #(v: hc(T-v)=1) -> 3:13
+  DEL n=8 hc=4 classes=10  #(v: hc(T-v)=1) -> 2:10
+  DEL n=8 hc=5 classes=9  #(v: hc(T-v)=1) -> 2:7 3:2
+  JOINT n=8 hc=3 (k1 = #hc(T-v)=1, k2 = #hc(T-v)=2, |Aut|): (3,0,3):8 (3,1,1):5
+  JOINT n=8 hc=4 (k1 = #hc(T-v)=1, k2 = #hc(T-v)=2, |Aut|): (2,1,1):5 (2,2,1):5
+  JOINT n=8 hc=5 (k1 = #hc(T-v)=1, k2 = #hc(T-v)=2, |Aut|): (2,0,1):3 (2,1,1):2 (2,2,1):2 (3,0,1):2
+  hc=3 profiles of the three UH deletions ((sole exits, sole entries) x3): ((1,2),(2,2),(2,2)):3 ((1,1),(2,1),(2,1)):1 ((1,1),(2,2),(2,2)):1 ((1,1),(1,1),(1,1)):4 ((1,2),(1,2),(1,2)):4
+
+order 9: 1506 strong classes with hc <= 5  [0.0 s]
+  t_k (k=1..5): 144 191 390 315 466
+  u_k (k=1..5, no out-degree-1 vertex): 0 0 34 26 23
+  uniquely Hamiltonian classes by number of sole exits: 1: 55, 2: 89, 3: 0
+  sole-exit-free classes by |Aut| (hc = 3, 4, 5): |Aut|=1: 13 26 23; |Aut|=3: 21 0 0; other: 0 0 0
+  DEL n=9 hc=3 classes=34  #(v: hc(T-v)=1) -> 3:34
+  DEL n=9 hc=4 classes=26  #(v: hc(T-v)=1) -> 2:26
+  DEL n=9 hc=5 classes=23  #(v: hc(T-v)=1) -> 2:18 3:5
+  JOINT n=9 hc=3 (k1 = #hc(T-v)=1, k2 = #hc(T-v)=2, |Aut|): (3,0,3):21 (3,1,1):13
+  JOINT n=9 hc=4 (k1 = #hc(T-v)=1, k2 = #hc(T-v)=2, |Aut|): (2,1,1):13 (2,2,1):13
+  JOINT n=9 hc=5 (k1 = #hc(T-v)=1, k2 = #hc(T-v)=2, |Aut|): (2,0,1):8 (2,1,1):5 (2,2,1):5 (3,0,1):5
+  hc=3 profiles of the three UH deletions ((sole exits, sole entries) x3): ((1,2),(2,2),(2,2)):8 ((1,1),(2,1),(2,1)):4 ((1,1),(2,2),(2,2)):1 ((1,1),(1,1),(1,1)):9 ((1,2),(1,2),(1,2)):12
