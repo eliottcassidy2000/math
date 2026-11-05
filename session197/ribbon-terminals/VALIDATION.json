@@ -1,0 +1,76 @@
+{
+  "distinct_terminal_checks": 23780,
+  "first_counts": [
+    5,
+    73,
+    1277,
+    22609,
+    400565,
+    7097113,
+    125745197
+  ],
+  "graph_data_sha256": "c3a40aaa5953c6195382ce3c47028aa00f9d3c2675ba2079f70dfe42ded0f10b",
+  "matrix": [
+    [
+      5,
+      -1,
+      7
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      7,
+      -1,
+      14
+    ]
+  ],
+  "physical_clock_checks": [
+    {
+      "k": 1,
+      "order": 4,
+      "profile": [
+        5,
+        1,
+        7
+      ],
+      "span": 3
+    },
+    {
+      "k": 2,
+      "order": 8,
+      "profile": [
+        73,
+        12,
+        132
+      ],
+      "span": 3
+    },
+    {
+      "k": 3,
+      "order": 12,
+      "profile": [
+        1277,
+        205,
+        2347
+      ],
+      "span": 3
+    },
+    {
+      "k": 4,
+      "order": 16,
+      "profile": [
+        22609,
+        3624,
+        41592
+      ],
+      "span": 3
+    }
+  ],
+  "same_terminal_checks": 8265,
+  "source_root_pairs": 29,
+  "thirtieth_count": 6500032027012190837961045957084911353,
+  "transfer_checks": 32045
+}
