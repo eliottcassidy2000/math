@@ -1,0 +1,6 @@
+order 3: X with odd[2h+1,3h] subset of E(X): 1 (by h: {1: 1}); with h >= 5: 0; X with odd[h,2h-1] subset of E(X): by h {1: 1, 3: 1}
+order 4: X with odd[2h+1,3h] subset of E(X): 2 (by h: {1: 1, 5: 1}); with h >= 5: 1; X with odd[h,2h-1] subset of E(X): by h {1: 1, 3: 2}
+order 5: X with odd[2h+1,3h] subset of E(X): 3 (by h: {1: 1, 5: 2}); with h >= 5: 2; X with odd[h,2h-1] subset of E(X): by h {1: 1, 3: 3}
+order 6: X with odd[2h+1,3h] subset of E(X): 4 (by h: {1: 1, 5: 3}); with h >= 5: 3; X with odd[h,2h-1] subset of E(X): by h {1: 1, 3: 4}
+order 7: X with odd[2h+1,3h] subset of E(X): 5 (by h: {1: 1, 5: 4}); with h >= 5: 4; X with odd[h,2h-1] subset of E(X): by h {1: 1, 3: 5}
+order 8: X with odd[2h+1,3h] subset of E(X): 6 (by h: {1: 1, 5: 5}); with h >= 5: 5; X with odd[h,2h-1] subset of E(X): by h {1: 1, 3: 6}

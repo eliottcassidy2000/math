@@ -1,0 +1,33 @@
+order 3: increment-2 pairs 3 (H(T-v) values [1]), increment-4 pairs 0 (H(T-v) values [])
+   increment-2 profiles (H(T-v), H(T), #cycles through v, complement counts, #odd cycles of T-v) -> count: {(1, 3, 1, (1,), 0): 3}
+   increment-4 profiles (H(T-v), H(T), #cycles, complement counts, cycle lengths) -> count: {}
+   violations: none
+order 4: increment-2 pairs 8 (H(T-v) values [1, 3]), increment-4 pairs 2 (H(T-v) values [1])
+   increment-2 profiles (H(T-v), H(T), #cycles through v, complement counts, #odd cycles of T-v) -> count: {(1, 3, 1, (1,), 0): 6, (3, 5, 1, (1,), 1): 2}
+   increment-4 profiles (H(T-v), H(T), #cycles, complement counts, cycle lengths) -> count: {(1, 5, 2, (1, 1), (3, 3)): 2}
+   violations: none
+order 5: increment-2 pairs 13 (H(T-v) values [1, 3]), increment-4 pairs 9 (H(T-v) values [1, 5])
+   increment-2 profiles (H(T-v), H(T), #cycles through v, complement counts, #odd cycles of T-v) -> count: {(1, 3, 1, (1,), 0): 9, (3, 5, 1, (1,), 1): 4}
+   increment-4 profiles (H(T-v), H(T), #cycles, complement counts, cycle lengths) -> count: {(1, 5, 2, (1, 1), (3, 3)): 4, (5, 9, 2, (1, 1), (3, 5)): 5}
+   violations: none
+order 6: increment-2 pairs 18 (H(T-v) values [1, 3]), increment-4 pairs 16 (H(T-v) values [1, 5])
+   increment-2 profiles (H(T-v), H(T), #cycles through v, complement counts, #odd cycles of T-v) -> count: {(1, 3, 1, (1,), 0): 12, (3, 5, 1, (1,), 1): 6}
+   increment-4 profiles (H(T-v), H(T), #cycles, complement counts, cycle lengths) -> count: {(5, 9, 2, (1, 1), (3, 5)): 10, (1, 5, 2, (1, 1), (3, 3)): 6}
+   violations: none
+order 7: increment-2 pairs 23 (H(T-v) values [1, 3]), increment-4 pairs 23 (H(T-v) values [1, 5])
+   increment-2 profiles (H(T-v), H(T), #cycles through v, complement counts, #odd cycles of T-v) -> count: {(1, 3, 1, (1,), 0): 15, (3, 5, 1, (1,), 1): 8}
+   increment-4 profiles (H(T-v), H(T), #cycles, complement counts, cycle lengths) -> count: {(5, 9, 2, (1, 1), (3, 5)): 15, (1, 5, 2, (1, 1), (3, 3)): 8}
+   violations: none
+order 8: increment-2 pairs 28 (H(T-v) values [1, 3]), increment-4 pairs 30 (H(T-v) values [1, 5])
+   increment-2 profiles (H(T-v), H(T), #cycles through v, complement counts, #odd cycles of T-v) -> count: {(1, 3, 1, (1,), 0): 18, (3, 5, 1, (1,), 1): 10}
+   increment-4 profiles (H(T-v), H(T), #cycles, complement counts, cycle lengths) -> count: {(5, 9, 2, (1, 1), (3, 5)): 20, (1, 5, 2, (1, 1), (3, 3)): 10}
+   violations: none
+order 9: increment-2 pairs 33 (H(T-v) values [1, 3]), increment-4 pairs 37 (H(T-v) values [1, 5])
+   increment-2 profiles (H(T-v), H(T), #cycles through v, complement counts, #odd cycles of T-v) -> count: {(1, 3, 1, (1,), 0): 21, (3, 5, 1, (1,), 1): 12}
+   increment-4 profiles (H(T-v), H(T), #cycles, complement counts, cycle lengths) -> count: {(5, 9, 2, (1, 1), (3, 5)): 25, (1, 5, 2, (1, 1), (3, 3)): 12}
+   violations: none
+order 10: increment-2 pairs 38 (H(T-v) values [1, 3]), increment-4 pairs 44 (H(T-v) values [1, 5])
+   increment-2 profiles (H(T-v), H(T), #cycles through v, complement counts, #odd cycles of T-v) -> count: {(1, 3, 1, (1,), 0): 24, (3, 5, 1, (1,), 1): 14}
+   increment-4 profiles (H(T-v), H(T), #cycles, complement counts, cycle lengths) -> count: {(5, 9, 2, (1, 1), (3, 5)): 30, (1, 5, 2, (1, 1), (3, 3)): 14}
+   violations: none
+TOTAL violations over orders 3..10: none

@@ -1,0 +1,23 @@
+order 3 (X): 2 tournaments; increment-2 cases by h: {1: 1, 3: 1}; k_min(h): {1: 1, 3: 1}
+   longest window of consecutive odd values: length 3, [1, 5] at h=1; X with a window covering [2h+1,3h]: 1; X with E(X) >= odd[h,2h-1]: 2; h with SOME realiser X having E(X) >= odd[h,2h-1]: [1, 3]; X with E(X) an odd interval: 2; min (q-p)/h = 0.667; min max(E)/h = 1.667
+   k_min from the deletion census at order 4 agrees: True
+order 4 (X): 4 tournaments; increment-2 cases by h: {1: 1, 3: 2}; k_min(h): {1: 1, 3: 1, 5: 2}
+   longest window of consecutive odd values: length 4, [9, 15] at h=5; X with a window covering [2h+1,3h]: 2; X with E(X) >= odd[h,2h-1]: 3; h with SOME realiser X having E(X) >= odd[h,2h-1]: [1, 3]; X with E(X) an odd interval: 0; min (q-p)/h = 0.667; min max(E)/h = 3.000
+   k_min(h)/h for h >= 5: min 0.4000 max 0.4000; all k_min(h) >= h/4: True
+   k_min from the deletion census at order 5 agrees: True
+order 5 (X): 12 tournaments; increment-2 cases by h: {1: 1, 3: 3}; k_min(h): {1: 1, 3: 1, 5: 2, 9: 3, 11: 4, 13: 5, 15: 6}
+   longest window of consecutive odd values: length 6, [9, 19] at h=5; X with a window covering [2h+1,3h]: 3; X with E(X) >= odd[h,2h-1]: 4; h with SOME realiser X having E(X) >= odd[h,2h-1]: [1, 3]; X with E(X) an odd interval: 0; min (q-p)/h = 0.133; min max(E)/h = 2.867
+   k_min(h)/h for h >= 5: min 0.3333 max 0.4000; all k_min(h) >= h/4: True
+   k_min from the deletion census at order 6 agrees: True
+order 6 (X): 56 tournaments; increment-2 cases by h: {1: 1, 3: 4}; k_min(h): {1: 1, 3: 1, 5: 2, 9: 3, 11: 4, 13: 5, 15: 5, 17: 5, 19: 6, 23: 7, 25: 9, 27: 9, 29: 10, 31: 11, 33: 12, 37: 14, 41: 21, 43: 23, 45: 24}
+   longest window of consecutive odd values: length 10, [65, 83] at h=29; X with a window covering [2h+1,3h]: 4; X with E(X) >= odd[h,2h-1]: 5; h with SOME realiser X having E(X) >= odd[h,2h-1]: [1, 3]; X with E(X) an odd interval: 0; min (q-p)/h = 0.000; min max(E)/h = 3.800
+   k_min(h)/h for h >= 5: min 0.2941 max 0.5349; all k_min(h) >= h/4: True
+   k_min from the deletion census at order 7 agrees: True
+order 7 (X): 456 tournaments; increment-2 cases by h: {1: 1, 3: 5}; k_min(h): {1: 1, 3: 1, 5: 2, 9: 3, 11: 4, 13: 5, 15: 5, 17: 5, 19: 6, 23: 7, 25: 9, 27: 9, 29: 8, 31: 10, 33: 9, 35: 11, 37: 12, 39: 11, 41: 14, 43: 15, 45: 14, 47: 13, 49: 15, 51: 15, 53: 18, 55: 18, 57: 21, 59: 18}
+   longest window of consecutive odd values: length 15, [399, 427] at h=115; X with a window covering [2h+1,3h]: 1; X with E(X) >= odd[h,2h-1]: 6; h with SOME realiser X having E(X) >= odd[h,2h-1]: [1, 3]; X with E(X) an odd interval: 0; min (q-p)/h = 0.000; min max(E)/h = 3.476
+   k_min(h)/h for h >= 5: min 0.2727 max 0.6784; all k_min(h) >= h/4: True
+   k_min from the deletion census at order 8 agrees: True
+order 8 (X): 6880 tournaments; increment-2 cases by h: {1: 1, 3: 6}; k_min(h): {1: 1, 3: 1, 5: 2, 9: 3, 11: 4, 13: 5, 15: 5, 17: 5, 19: 6, 23: 7, 25: 9, 27: 9, 29: 8, 31: 10, 33: 9, 35: 11, 37: 12, 39: 11, 41: 14, 43: 15, 45: 14, 47: 13, 49: 13, 51: 15, 53: 14, 55: 18, 57: 18, 59: 17}
+   longest window of consecutive odd values: length 24, [2763, 2809] at h=657; X with a window covering [2h+1,3h]: 0; X with E(X) >= odd[h,2h-1]: 7; h with SOME realiser X having E(X) >= odd[h,2h-1]: [1, 3]; X with E(X) an odd interval: 0; min (q-p)/h = 0.000; min max(E)/h = 4.939
+   k_min(h)/h for h >= 5: min 0.2615 max 0.6216; all k_min(h) >= h/4: True
+   k_min from the deletion census at order 9 agrees: True

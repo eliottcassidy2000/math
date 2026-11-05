@@ -1,0 +1,14 @@
+strong 4-tournament vertex 0: out-degree 2, in-degree 1, H(T-v) = 3, increment 1, triangles through v: 1
+strong 4-tournament vertex 1: out-degree 1, in-degree 2, H(T-v) = 1, increment 2, triangles through v: 2
+strong 4-tournament vertex 2: out-degree 2, in-degree 1, H(T-v) = 1, increment 2, triangles through v: 2
+strong 4-tournament vertex 3: out-degree 1, in-degree 2, H(T-v) = 3, increment 1, triangles through v: 1
+discarded insertion-slot quantity vs true H(X+v), orders 2..5 all cuts: 355 of 468 (X, cut) pairs differ (true - slots = #orphan paths >= 0, max gap 27)
+h/k_min over the table h=5..39: min 2.50, max 3.67, mean 3.11 (k_min/h in [0.2727, 0.4000])
+R_n = TT_n with the arc 0 -> n-1 reversed; a = penultimate vertex n-2; sole-exit cut v -> a only (THM-4862 (a): increment (h + sigma - e_a)/2):
+  n=4: h=5=2^2+1, e_a=2, B_a=6, sigma=1, increment of the sole-exit cut = 2 = (h+sigma-e_a)/2 -> ratio 0.4000
+  n=5: h=9=2^3+1, e_a=4, B_a=10, sigma=1, increment of the sole-exit cut = 3 = (h+sigma-e_a)/2 -> ratio 0.3333
+  n=6: h=17=2^4+1, e_a=8, B_a=18, sigma=1, increment of the sole-exit cut = 5 = (h+sigma-e_a)/2 -> ratio 0.2941
+  n=7: h=33=2^5+1, e_a=16, B_a=34, sigma=1, increment of the sole-exit cut = 9 = (h+sigma-e_a)/2 -> ratio 0.2727
+  n=8: h=65=2^6+1, e_a=32, B_a=66, sigma=1, increment of the sole-exit cut = 17 = (h+sigma-e_a)/2 -> ratio 0.2615
+  n=9: h=129=2^7+1, e_a=64, B_a=130, sigma=1, increment of the sole-exit cut = 33 = (h+sigma-e_a)/2 -> ratio 0.2558
+  n=10: h=257=2^8+1, e_a=128, B_a=258, sigma=1, increment of the sole-exit cut = 65 = (h+sigma-e_a)/2 -> ratio 0.2529

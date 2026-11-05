@@ -1,0 +1,7 @@
+formula check: 468 (X, cut) pairs, orders <= 5: mismatches 0
+n=3: 2 tournaments, 2 distinct h; h with SOME realiser X having E(X) ⊇ odd[h, 2h-1]: 2 of 2; failing h: []; strong X satisfying it individually: 1 of 1; min over X of L/h = 1.667, min of max/h = 1.667
+n=4: 4 tournaments, 3 distinct h; h with SOME realiser X having E(X) ⊇ odd[h, 2h-1]: 2 of 3; failing h: [5]; strong X satisfying it individually: 0 of 1; min over X of L/h = 1.000, min of max/h = 3.000
+n=5: 12 tournaments, 7 distinct h; h with SOME realiser X having E(X) ⊇ odd[h, 2h-1]: 2 of 7; failing h: [5, 9, 11, 13, 15]; strong X satisfying it individually: 0 of 6; min over X of L/h = 1.000, min of max/h = 2.867
+n=6: 56 tournaments, 19 distinct h; h with SOME realiser X having E(X) ⊇ odd[h, 2h-1]: 2 of 19; failing h: [5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31]...; strong X satisfying it individually: 0 of 35; min over X of L/h = 1.000, min of max/h = 3.800
+n=7: 456 tournaments, 77 distinct h; h with SOME realiser X having E(X) ⊇ odd[h, 2h-1]: 2 of 77; failing h: [5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31]...; strong X satisfying it individually: 0 of 353; min over X of L/h = 1.000, min of max/h = 3.476
+n=8: 6880 tournaments, 320 distinct h; h with SOME realiser X having E(X) ⊇ odd[h, 2h-1]: 2 of 320; failing h: [5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31]...; strong X satisfying it individually: 0 of 6008; min over X of L/h = 1.000, min of max/h = 4.939

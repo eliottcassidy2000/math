@@ -1,0 +1,38 @@
+== (a) path-pair formula, Claim A, odd-cycle formula ==
+path-pair formula vs brute force: 4052 (X, cut) pairs over gentourng classes of orders 2..6: mismatches 0
+path-pair formula vs brute force: 1098 labeled (X, cut) pairs of orders 1..4: mismatches 0
+Claim A (H(T) - H(T-v) = 2 sum_C H(T - V(C))) at order 3: 6 (T, v) pairs, mismatches 0
+Claim A (H(T) - H(T-v) = 2 sum_C H(T - V(C))) at order 4: 16 (T, v) pairs, mismatches 0
+Claim A (H(T) - H(T-v) = 2 sum_C H(T - V(C))) at order 5: 60 (T, v) pairs, mismatches 0
+Claim A (H(T) - H(T-v) = 2 sum_C H(T - V(C))) at order 6: 336 (T, v) pairs, mismatches 0
+Claim A (H(T) - H(T-v) = 2 sum_C H(T - V(C))) at order 7: 3192 (T, v) pairs, mismatches 0
+Claim A (H(T) - H(T-v) = 2 sum_C H(T - V(C))) at order 8: 55040 (T, v) pairs, mismatches 0
+odd-cycle formula H = I(Omega, 2) at order 3: 2 tournaments, mismatches 0
+odd-cycle formula H = I(Omega, 2) at order 4: 4 tournaments, mismatches 0
+odd-cycle formula H = I(Omega, 2) at order 5: 12 tournaments, mismatches 0
+odd-cycle formula H = I(Omega, 2) at order 6: 56 tournaments, mismatches 0
+odd-cycle formula H = I(Omega, 2) at order 7: 456 tournaments, mismatches 0
+lemma (vertex on an odd cycle lies on a triangle) at order 5: 47 (T, v) with an odd cycle, failures 0
+lemma (vertex on an odd cycle lies on a triangle) at order 6: 300 (T, v) with an odd cycle, failures 0
+lemma (vertex on an odd cycle lies on a triangle) at order 7: 3044 (T, v) with an odd cycle, failures 0
+lemma (vertex on an odd cycle lies on a triangle) at order 8: 53976 (T, v) with an odd cycle, failures 0
+== (d) flip formula ==
+gentourng classes orders 3..6: 990 arcs; flip formula mismatches 0; U(L_j,R_i) differs between T and T': 0; U(L_i,R_j) != #paths with i->j consecutive: 0; THM-017 B(L_i,R_j) != B(L_j,R_i): 0
+labeled tournaments orders 3..5: 10648 arcs; flip formula mismatches 0; U(L_j,R_i) differs between T and T': 0; U(L_i,R_j) != #paths with i->j consecutive: 0; THM-017 B(L_i,R_j) != B(L_j,R_i): 0
+== (f) one-centre family ==
+H(TT_m + u) = 1 + 2 N(A): 254 (m, A) pairs, m <= 7: mismatches 0
+closed form (2^i-1)(2^l-1)+2 for A = {1..i}, m = i+l, i,l <= 8: mismatches 0
+algebra: 1 + 2 N simplifies to (2^i-1)(2^l-1)+2: True
+A={1}, m=2 (order 3): H = 3 (2^(m-1)+1 = 3); end counts by vertex (1..m, u): [1, 1, 1]; max over non-sinks 1 = (h-1)/2? True at vertex ['1', '2', 'u']
+A={1}, m=3 (order 4): H = 5 (2^(m-1)+1 = 5); end counts by vertex (1..m, u): [1, 1, 2, 1]; max over non-sinks 2 = (h-1)/2? True at vertex ['3']
+A={1}, m=4 (order 5): H = 9 (2^(m-1)+1 = 9); end counts by vertex (1..m, u): [1, 1, 2, 4, 1]; max over non-sinks 4 = (h-1)/2? True at vertex ['4']
+A={1}, m=5 (order 6): H = 17 (2^(m-1)+1 = 17); end counts by vertex (1..m, u): [1, 1, 2, 4, 8, 1]; max over non-sinks 8 = (h-1)/2? True at vertex ['5']
+A={1}, m=6 (order 7): H = 33 (2^(m-1)+1 = 33); end counts by vertex (1..m, u): [1, 1, 2, 4, 8, 16, 1]; max over non-sinks 16 = (h-1)/2? True at vertex ['6']
+A={1}, m=7 (order 8): H = 65 (2^(m-1)+1 = 65); end counts by vertex (1..m, u): [1, 1, 2, 4, 8, 16, 32, 1]; max over non-sinks 32 = (h-1)/2? True at vertex ['7']
+A={1}, m=8 (order 9): H = 129 (2^(m-1)+1 = 129); end counts by vertex (1..m, u): [1, 1, 2, 4, 8, 16, 32, 64, 1]; max over non-sinks 64 = (h-1)/2? True at vertex ['8']
+N values attained by all words of length <= 16 below 12: [0, 1, 2, 4, 5, 7, 8, 9, 11]  3 attained: False
+one-centre values below 200000: 50006 of 100000 odd numbers attained (words enumerated: 138631); missed (first 30): [7, 13, 21, 29, 35, 41, 43, 49, 55, 57, 59, 67, 71, 75, 77, 83, 89, 93, 101, 105, 109, 111, 113, 119, 125, 131, 133, 135, 137, 147]
+   7 attained: False ; 13 attained: False ; (2^i-1)(2^l-1)+2 samples 11,23,47,51,95,107,227 attained: True
+sole-exit cut (v -> a only), orders 2..6, 420 (T, a): increment equals (h - e_a)/2 in 53 cases; equals (h + sigma - e_a)/2 (THM-4862 (a), sigma = B_a - h >= 0) in 420 cases
+strong 4-tournament, sole-exit cut at the out-degree-1 vertex a=1: h=5, e_a=1, B_a=5 (sigma=0), H(T+v)=9, increment 2; (h-e_a)/2 = 2.0
+strong 4-tournament, sole-exit cut at the out-degree-1 vertex a=3: h=5, e_a=2, B_a=6 (sigma=1), H(T+v)=9, increment 2; (h-e_a)/2 = 1.5

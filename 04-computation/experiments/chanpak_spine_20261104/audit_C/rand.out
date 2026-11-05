@@ -1,0 +1,12 @@
+SUMMARY rand n=10 r=1 samples=300000 seed=11: increment-2 pairs=253580 increment-4 pairs=214343 structural violations=0 endcount violations=0 max e/H=128/257
+SUMMARY rand n=10 r=2 samples=300000 seed=12: increment-2 pairs=108968 increment-4 pairs=117499 structural violations=0 endcount violations=0 max e/H=128/257
+SUMMARY rand n=10 r=3 samples=300000 seed=13: increment-2 pairs=37446 increment-4 pairs=48022 structural violations=0 endcount violations=0 max e/H=128/257
+SUMMARY rand n=10 r=4 samples=300000 seed=14: increment-2 pairs=12340 increment-4 pairs=17971 structural violations=0 endcount violations=0 max e/H=128/257
+SUMMARY rand n=10 r=6 samples=300000 seed=15: increment-2 pairs=1521 increment-4 pairs=2494 structural violations=0 endcount violations=0 max e/H=128/257
+SUMMARY rand n=10 r=0 samples=300000 seed=16: increment-2 pairs=0 increment-4 pairs=2 structural violations=0 endcount violations=0 max e/H=190/383
+SUMMARY rand n=11 r=2 samples=100000 seed=21: increment-2 pairs=30452 increment-4 pairs=33017 structural violations=0 endcount violations=0 max e/H=256/513
+SUMMARY rand n=11 r=3 samples=100000 seed=22: increment-2 pairs=9524 increment-4 pairs=12110 structural violations=0 endcount violations=0 max e/H=256/513
+SUMMARY rand n=11 r=0 samples=100000 seed=23: increment-2 pairs=0 increment-4 pairs=0 structural violations=0 endcount violations=0 max e/H=1601/3315
+SUMMARY rand n=12 r=2 samples=30000 seed=31: increment-2 pairs=7716 increment-4 pairs=8435 structural violations=0 endcount violations=0 max e/H=512/1025
+SUMMARY rand n=12 r=4 samples=30000 seed=32: increment-2 pairs=608 increment-4 pairs=784 structural violations=0 endcount violations=0 max e/H=512/1025
+SUMMARY rand n=12 r=0 samples=30000 seed=33: increment-2 pairs=0 increment-4 pairs=0 structural violations=0 endcount violations=0 max e/H=13512/29223

@@ -1,0 +1,19 @@
+P 101 0 3 1
+P 101 1 3 1
+P 101 2 3 1
+SUMMARY del n=3 tournaments=2 transitive=1 strong=1 pairs_with_positive_increment=3
+SUMMARY violations: inc2_not_{1,3}or_H_not_{3,5}=0 inc4_not_{1,5}=0 endcount(e_a>(H-1)/2, non-sink)=0 (non-sink checks 3)
+SUMMARY endcount max e_a/H over non-sinks (H>=3): 1/3
+KMIN 1:1
+LEVEL k=1 (increment 2) pairs=3 h-set: 1
+LEVEL k=2 (increment 4) pairs=0 h-set:
+LEVEL k=3 (increment 6) pairs=0 h-set:
+LEVEL k=4 (increment 8) pairs=0 h-set:
+LEVEL k=5 (increment 10) pairs=0 h-set:
+LEVEL k=6 (increment 12) pairs=0 h-set:
+LEVEL k=7 (increment 14) pairs=0 h-set:
+LEVEL k=8 (increment 16) pairs=0 h-set:
+LEVEL k=9 (increment 18) pairs=0 h-set:
+LEVEL k=10 (increment 20) pairs=0 h-set:
+LEVEL k=11 (increment 22) pairs=0 h-set:
+LEVEL k=12 (increment 24) pairs=0 h-set:
