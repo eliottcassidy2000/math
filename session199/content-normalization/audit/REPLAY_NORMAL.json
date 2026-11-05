@@ -1,0 +1,323 @@
+{
+  "complete_cover_cap": 39,
+  "dependency_sha256": {
+    "BALANCED_SOURCE_NORMAL_FORM.md": "00ddcec08dd88e6c91917ff2915bc52662c4e23fe4ba2e1d948bad5d1461a6b3",
+    "GAUSSIAN_CONTENT.md": "b9f8d421b4347dc58aed70604c47d4c310f0aecc5620f01ec2729ad980ba5f84",
+    "POSITIVE_SOURCE_GRAMMAR.md": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537"
+  },
+  "family_formula_checks": 100,
+  "literal_witness": {
+    "profile": [
+      39,
+      9,
+      39,
+      9
+    ],
+    "root": 6,
+    "rows": [
+      46,
+      124,
+      120,
+      112,
+      97,
+      64,
+      1
+    ],
+    "starts": 1
+  },
+  "nonprimitive_count": 17,
+  "profile_count": 97,
+  "quotient_tests": [
+    {
+      "content": 3,
+      "physical": true,
+      "profile": [
+        9,
+        3,
+        9,
+        3
+      ],
+      "quotient": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "word": "ZOJ"
+    },
+    {
+      "content": 5,
+      "physical": true,
+      "profile": [
+        15,
+        5,
+        15,
+        5
+      ],
+      "quotient": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "word": "OJOJ"
+    },
+    {
+      "content": 3,
+      "physical": true,
+      "profile": [
+        15,
+        3,
+        15,
+        3
+      ],
+      "quotient": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "word": "ZOOJ"
+    },
+    {
+      "content": 3,
+      "physical": true,
+      "profile": [
+        9,
+        0,
+        18,
+        3
+      ],
+      "quotient": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "word": "ZOJO"
+    },
+    {
+      "content": 3,
+      "physical": true,
+      "profile": [
+        15,
+        6,
+        18,
+        9
+      ],
+      "quotient": [
+        5,
+        2,
+        6,
+        3
+      ],
+      "word": "ZOJJ"
+    },
+    {
+      "content": 3,
+      "physical": false,
+      "profile": [
+        39,
+        9,
+        39,
+        9
+      ],
+      "quotient": [
+        13,
+        3,
+        13,
+        3
+      ],
+      "word": "OOZOJ"
+    },
+    {
+      "content": 9,
+      "physical": true,
+      "profile": [
+        27,
+        9,
+        27,
+        9
+      ],
+      "quotient": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "word": "OOJOJ"
+    },
+    {
+      "content": 5,
+      "physical": true,
+      "profile": [
+        25,
+        5,
+        25,
+        5
+      ],
+      "quotient": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "word": "OJOOJ"
+    },
+    {
+      "content": 5,
+      "physical": true,
+      "profile": [
+        15,
+        0,
+        30,
+        5
+      ],
+      "quotient": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "word": "OJOJO"
+    },
+    {
+      "content": 5,
+      "physical": true,
+      "profile": [
+        25,
+        10,
+        30,
+        15
+      ],
+      "quotient": [
+        5,
+        2,
+        6,
+        3
+      ],
+      "word": "OJOJJ"
+    },
+    {
+      "content": 3,
+      "physical": true,
+      "profile": [
+        27,
+        3,
+        27,
+        3
+      ],
+      "quotient": [
+        9,
+        1,
+        9,
+        1
+      ],
+      "word": "ZOOOJ"
+    },
+    {
+      "content": 3,
+      "physical": true,
+      "profile": [
+        15,
+        0,
+        30,
+        3
+      ],
+      "quotient": [
+        5,
+        0,
+        10,
+        1
+      ],
+      "word": "ZOOJO"
+    },
+    {
+      "content": 3,
+      "physical": true,
+      "profile": [
+        27,
+        12,
+        30,
+        15
+      ],
+      "quotient": [
+        9,
+        4,
+        10,
+        5
+      ],
+      "word": "ZOOJJ"
+    },
+    {
+      "content": 3,
+      "physical": true,
+      "profile": [
+        9,
+        0,
+        36,
+        3
+      ],
+      "quotient": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "word": "ZOJOO"
+    },
+    {
+      "content": 3,
+      "physical": true,
+      "profile": [
+        27,
+        3,
+        33,
+        3
+      ],
+      "quotient": [
+        9,
+        1,
+        11,
+        1
+      ],
+      "word": "ZOJOZ"
+    },
+    {
+      "content": 3,
+      "physical": true,
+      "profile": [
+        15,
+        0,
+        36,
+        9
+      ],
+      "quotient": [
+        5,
+        0,
+        12,
+        3
+      ],
+      "word": "ZOJJO"
+    },
+    {
+      "content": 3,
+      "physical": true,
+      "profile": [
+        27,
+        9,
+        33,
+        15
+      ],
+      "quotient": [
+        9,
+        3,
+        11,
+        5
+      ],
+      "word": "ZOJJJ"
+    }
+  ],
+  "scope": "Primitive response division is not physical; no scalar noncoverage claim.",
+  "status": "PASS"
+}

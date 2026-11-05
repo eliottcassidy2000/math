@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "proof_sha256": "991fcb4cb2a76731256877d1ffb34aaf269e78635192a6ce440bf4616b27e709",
+  "complete_bank_U_cap": 39,
+  "source_profiles": 97,
+  "nonprimitive_profiles": 17,
+  "only_failure": [
+    [
+      [
+        39,
+        9,
+        39,
+        9
+      ],
+      3,
+      [
+        13,
+        3,
+        13,
+        3
+      ]
+    ]
+  ],
+  "independent_literal_permutation_graph_order": 7,
+  "manual_all_order_audit": "Balanced inverse forces the absent D3,U5 source. Dyadic weak-tail uniqueness propagates nonphysicality to every padded quotient. Complete U-height minimality is valid. Quotients cannot be the omitted singleton because D-E>=d is homogeneous.",
+  "scope": "No unrestricted scalar gap or graph-order minimality claimed."
+}
