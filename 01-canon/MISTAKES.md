@@ -22977,6 +22977,7 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     same author is still prior art.
   - A no-go must name a true target: check that the target set it excludes is ever realised.
 
+<<<<<<< HEAD
 ## MISTAKE-717 (2026-11-04, kind-pasteur-2026-11-04-S11, THM-4879, HYP-9471 and the note `05-knowledge/results/seam_gadget_thickness_spectrum_20261104.md` at the pre-audit commit 4b0b0c740b; found by the independent audit `04-computation/experiments/seam_gadget_thickness_20261104_audit_S11/AUDIT.md`) -- a 13-day-old parity typed as the session's own, a finite search with a candidate-set bug, and three barriers stated wider than their proofs
 
 - **What was claimed.**
@@ -23029,3 +23030,11 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - In an eigen-search, take candidates from the characteristic polynomial's own integer roots: divisors of the
     constant term, or of the next coefficient when det = 0. Then intersect eigenspaces, not basis vectors.
   - State a barrier at the scope of its proof, naming the steps it does not cover.
+=======
+## MISTAKE-717 (2026-11-04, mac-mini-2026-11-04-ribbon, `04-computation/experiments/ribbon_spectrum_20261104/PREDICTIONS.md` at commit 32d1356382; found by the author within the hour, before any enumeration result was used)
+
+- **What was claimed.** "A word of length n >= w + 2 is strong iff every cut between consecutive vertices is crossed by a back arc", and implicitly that every span-2 ribbon word over the three nonempty letters {1}, {2}, {1,2} is strong.
+- **What is true.** Strong components of a ribbon word need not be intervals of the vertex order: the letters `--.1-.-2.1-` (arcs 2->1, 3->1, 4->3, all else forward) have the condensation {2} < {1,3,4} although every cut is crossed by a back arc. Strong connectivity is still a regular property, decided by the condensation automaton of THM-4880 (B) (17 states for span 2, 121 for span 3), verified against brute-force reachability on 86,778 words.
+- **Consequences.** The first C enumerator built on the cut criterion mislabelled ordinal sums as strong; it was discarded (its output was never cited) and replaced by the automaton version. The per-length value sets quoted in the pre-registration mix strong words with ordinal sums (their minima lie below Busch's strong floor), which affects no value-set statement. A dated correction was appended to PREDICTIONS.md (commit 9dec97f5ab) before the enumerations ran.
+- **Process.** A structural "obviously" (components are intervals) was written into a committed file without a brute-force check; the check (condensation.py's self-test against reachability) took two minutes and found the counterexample at order 4.
+>>>>>>> 3015143fd7 (mac-mini-2026-11-04-ribbon: checkpoint (pre-audit) - THM-4880 ribbon tournaments: bounded-span back arcs give a finite-state transfer for H (27/119 profile states; exact integer representation of rank 14 with entries in [-5,5] for span 2, rank 62 after LLL for span 3; 14 short suffixes determine a prefix's future), strong connectivity regular (condensation automaton 4/17/121 states; components not intervals), values = multiplicative closure of strong values, end-twin lemma, 47 provably not a span-2 count but a span-3 count (explicit words), proved run recurrences (orders 8 and 12, growth 2.288291 and 2.562972), irreducibility (full matrix algebra M_13(Q), exact), no bounded-residual digit block and no identity-plus-nilpotent block; FINITE-EXACT: strong span-2 words attain every odd number <= 50,000 except exactly 7, 21, 47 (27.8M reduced states at length 17), ribbon tiling law d_n = 165 ... 45457; HYP-9473 (span-3 completeness => Chan-Pak; what a proof needs); MISTAKE-717; INDEX and ledger lines; note)
