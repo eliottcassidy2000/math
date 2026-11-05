@@ -1,0 +1,10 @@
+{"order":4,"C1":1,"C2":0,"C3":0,"no_degree_one_C3":0,"extension_candidates":0,"insertion_filter_survivors":0,"retained_labelled_extensions":0}
+{"order":5,"C1":3,"C2":2,"C3":1,"no_degree_one_C3":0,"extension_candidates":14,"insertion_filter_survivors":14,"retained_labelled_extensions":14}
+{"order":6,"C1":8,"C2":5,"C3":11,"no_degree_one_C3":0,"extension_candidates":180,"insertion_filter_survivors":158,"retained_labelled_extensions":102}
+{"order":7,"C1":21,"C2":18,"C3":38,"no_degree_one_C3":0,"extension_candidates":1488,"insertion_filter_survivors":884,"retained_labelled_extensions":346}
+{"order":8,"C1":55,"C2":60,"C3":124,"no_degree_one_C3":0,"extension_candidates":9702,"insertion_filter_survivors":4594,"retained_labelled_extensions":1234}
+{"order":9,"C1":144,"C2":191,"C3":390,"no_degree_one_C3":0,"extension_candidates":60706,"insertion_filter_survivors":22560,"retained_labelled_extensions":4246}
+{"order":10,"C1":377,"C2":589,"C3":1193,"no_degree_one_C3":0,"extension_candidates":369750,"insertion_filter_survivors":106738,"retained_labelled_extensions":14160}
+{"order":11,"C1":987,"C2":1775,"C3":3574,"no_degree_one_C3":0,"extension_candidates":2206498,"insertion_filter_survivors":490098,"retained_labelled_extensions":46034}
+{"order":12,"C1":2584,"C2":5257,"C3":10537,"no_degree_one_C3":0,"extension_candidates":12963456,"insertion_filter_survivors":2189744,"retained_labelled_extensions":146576}
+{"order":13,"C1":6765,"C2":15360,"C3":30676,"no_degree_one_C3":0,"extension_candidates":75239532,"insertion_filter_survivors":9527668,"retained_labelled_extensions":458744}
