@@ -1,0 +1,40 @@
+{
+  "F443": [
+    [
+      191,
+      1,
+      253,
+      1
+    ],
+    [
+      219,
+      1,
+      225,
+      1
+    ]
+  ],
+  "all_k_compiler_equals_F": true,
+  "nonbalanced_targets": [
+    11,
+    23,
+    47,
+    149,
+    317,
+    391,
+    433,
+    443,
+    519,
+    617,
+    911,
+    1903,
+    3187
+  ],
+  "one_step_exceptions": [
+    443,
+    617
+  ],
+  "parent_pruning_profiles_checked": 126910,
+  "physical_profiles": 126910,
+  "status": "PASS",
+  "target_cap": 5001
+}

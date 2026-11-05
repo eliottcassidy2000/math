@@ -1,0 +1,598 @@
+{
+  "H5_profiles_close_to_isomorphic_graphs": true,
+  "all_k_compiler_matches_complete_C1": true,
+  "balanced_targets": 24958,
+  "complete_U_cap": 50000,
+  "formal_basis_checks": 72,
+  "literal_graphs": [
+    {
+      "C": 1,
+      "H": 5,
+      "word": "OJ"
+    },
+    {
+      "C": 1,
+      "H": 11,
+      "word": "OZJ"
+    },
+    {
+      "C": 1,
+      "H": 5,
+      "word": "JJ"
+    },
+    {
+      "C": 1,
+      "H": 9,
+      "word": "JZJ"
+    },
+    {
+      "C": 1,
+      "H": 9,
+      "word": "OOJ"
+    },
+    {
+      "C": 1,
+      "H": 23,
+      "word": "OOZJ"
+    },
+    {
+      "C": 1,
+      "H": 9,
+      "word": "OJJ"
+    },
+    {
+      "C": 1,
+      "H": 17,
+      "word": "OJZJ"
+    },
+    {
+      "C": 1,
+      "H": 9,
+      "word": "ZOJ"
+    },
+    {
+      "C": 1,
+      "H": 19,
+      "word": "ZOZJ"
+    },
+    {
+      "C": 1,
+      "H": 9,
+      "word": "ZJJ"
+    },
+    {
+      "C": 1,
+      "H": 15,
+      "word": "ZJZJ"
+    },
+    {
+      "C": 1,
+      "H": 9,
+      "word": "JOJ"
+    },
+    {
+      "C": 1,
+      "H": 19,
+      "word": "JOZJ"
+    },
+    {
+      "C": 1,
+      "H": 9,
+      "word": "JJJ"
+    },
+    {
+      "C": 1,
+      "H": 15,
+      "word": "JJZJ"
+    },
+    {
+      "C": 1,
+      "H": 19,
+      "word": "OZOJ"
+    },
+    {
+      "C": 1,
+      "H": 45,
+      "word": "OZOZJ"
+    },
+    {
+      "C": 1,
+      "H": 19,
+      "word": "OZJJ"
+    },
+    {
+      "C": 1,
+      "H": 33,
+      "word": "OZJZJ"
+    }
+  ],
+  "nonbalanced": [
+    {
+      "descents": [
+        {
+          "h": 3,
+          "k": 1,
+          "m": 5,
+          "parent_word": "",
+          "profile": [
+            5,
+            1,
+            7,
+            1
+          ],
+          "word": "OZ"
+        }
+      ],
+      "minimum_k": 1,
+      "target": 11
+    },
+    {
+      "descents": [
+        {
+          "h": 7,
+          "k": 1,
+          "m": 9,
+          "parent_word": "O",
+          "profile": [
+            9,
+            1,
+            15,
+            1
+          ],
+          "word": "OOZ"
+        },
+        {
+          "h": 3,
+          "k": 2,
+          "m": 5,
+          "parent_word": "",
+          "profile": [
+            11,
+            1,
+            13,
+            1
+          ],
+          "word": "OZZ"
+        }
+      ],
+      "minimum_k": 1,
+      "target": 23
+    },
+    {
+      "descents": [
+        {
+          "h": 15,
+          "k": 1,
+          "m": 17,
+          "parent_word": "OO",
+          "profile": [
+            17,
+            1,
+            31,
+            1
+          ],
+          "word": "OOOZ"
+        },
+        {
+          "h": 3,
+          "k": 3,
+          "m": 5,
+          "parent_word": "",
+          "profile": [
+            23,
+            1,
+            25,
+            1
+          ],
+          "word": "OZZZ"
+        }
+      ],
+      "minimum_k": 1,
+      "target": 47
+    },
+    {
+      "descents": [
+        {
+          "h": 39,
+          "k": 1,
+          "m": 71,
+          "parent_word": "OOZJ",
+          "profile": [
+            71,
+            9,
+            87,
+            9
+          ],
+          "word": "OOZJOZ"
+        },
+        {
+          "h": 19,
+          "k": 2,
+          "m": 35,
+          "parent_word": "OZJ",
+          "profile": [
+            73,
+            5,
+            81,
+            5
+          ],
+          "word": "OZJOZZ"
+        }
+      ],
+      "minimum_k": 1,
+      "target": 149
+    },
+    {
+      "descents": [
+        {
+          "h": 81,
+          "k": 1,
+          "m": 155,
+          "parent_word": "OOZZJ",
+          "profile": [
+            155,
+            23,
+            185,
+            23
+          ],
+          "word": "OOZZJOZ"
+        },
+        {
+          "h": 43,
+          "k": 2,
+          "m": 59,
+          "parent_word": "OZJO",
+          "profile": [
+            145,
+            5,
+            177,
+            5
+          ],
+          "word": "OZJOOZZ"
+        }
+      ],
+      "minimum_k": 1,
+      "target": 317
+    },
+    {
+      "descents": [
+        {
+          "h": 117,
+          "k": 1,
+          "m": 157,
+          "parent_word": "OOZOZ",
+          "profile": [
+            157,
+            1,
+            235,
+            1
+          ],
+          "word": "OOZOZOZ"
+        },
+        {
+          "h": 113,
+          "k": 1,
+          "m": 165,
+          "parent_word": "OOZZZ",
+          "profile": [
+            165,
+            1,
+            227,
+            1
+          ],
+          "word": "OOZZZOZ"
+        },
+        {
+          "h": 55,
+          "k": 2,
+          "m": 61,
+          "parent_word": "OZOO",
+          "profile": [
+            171,
+            1,
+            221,
+            1
+          ],
+          "word": "OZOOOZZ"
+        },
+        {
+          "h": 53,
+          "k": 2,
+          "m": 73,
+          "parent_word": "OZOZ",
+          "profile": [
+            179,
+            1,
+            213,
+            1
+          ],
+          "word": "OZOZOZZ"
+        },
+        {
+          "h": 99,
+          "k": 1,
+          "m": 193,
+          "parent_word": "OZOOJJ",
+          "profile": [
+            193,
+            33,
+            231,
+            33
+          ],
+          "word": "OZOOJJOZ"
+        },
+        {
+          "h": 107,
+          "k": 1,
+          "m": 177,
+          "parent_word": "OZJOOJ",
+          "profile": [
+            177,
+            11,
+            225,
+            11
+          ],
+          "word": "OZJOOJOZ"
+        }
+      ],
+      "minimum_k": 1,
+      "target": 391
+    },
+    {
+      "descents": [
+        {
+          "h": 111,
+          "k": 1,
+          "m": 211,
+          "parent_word": "OZZOJJ",
+          "profile": [
+            211,
+            37,
+            259,
+            37
+          ],
+          "word": "OZZOJJOZ"
+        },
+        {
+          "h": 129,
+          "k": 1,
+          "m": 175,
+          "parent_word": "OZJOJO",
+          "profile": [
+            175,
+            11,
+            269,
+            11
+          ],
+          "word": "OZJOJOOZ"
+        }
+      ],
+      "minimum_k": 1,
+      "target": 433
+    },
+    {
+      "descents": [
+        {
+          "h": 63,
+          "k": 2,
+          "m": 65,
+          "parent_word": "OOOO",
+          "profile": [
+            191,
+            1,
+            253,
+            1
+          ],
+          "word": "OOOOOZZ"
+        },
+        {
+          "h": 7,
+          "k": 5,
+          "m": 9,
+          "parent_word": "O",
+          "profile": [
+            219,
+            1,
+            225,
+            1
+          ],
+          "word": "OOZZZZZ"
+        }
+      ],
+      "minimum_k": 2,
+      "target": 443
+    },
+    {
+      "descents": [
+        {
+          "h": 141,
+          "k": 1,
+          "m": 237,
+          "parent_word": "OOOZOJ",
+          "profile": [
+            237,
+            17,
+            299,
+            17
+          ],
+          "word": "OOOZOJOZ"
+        },
+        {
+          "h": 33,
+          "k": 3,
+          "m": 57,
+          "parent_word": "OZOJ",
+          "profile": [
+            255,
+            5,
+            269,
+            5
+          ],
+          "word": "OZOJOZZZ"
+        }
+      ],
+      "minimum_k": 1,
+      "target": 519
+    },
+    {
+      "descents": [
+        {
+          "h": 79,
+          "k": 2,
+          "m": 143,
+          "parent_word": "OOOZJ",
+          "profile": [
+            301,
+            17,
+            333,
+            17
+          ],
+          "word": "OOOZJOZZ"
+        },
+        {
+          "h": 39,
+          "k": 3,
+          "m": 71,
+          "parent_word": "OOZJ",
+          "profile": [
+            305,
+            9,
+            321,
+            9
+          ],
+          "word": "OOZJOZZZ"
+        }
+      ],
+      "minimum_k": 2,
+      "target": 617
+    },
+    {
+      "descents": [
+        {
+          "h": 273,
+          "k": 1,
+          "m": 365,
+          "parent_word": "OZOZOJO",
+          "profile": [
+            365,
+            19,
+            565,
+            19
+          ],
+          "word": "OZOZOJOOZ"
+        },
+        {
+          "h": 263,
+          "k": 1,
+          "m": 385,
+          "parent_word": "OZZOJOZ",
+          "profile": [
+            385,
+            11,
+            537,
+            11
+          ],
+          "word": "OZZOJOZOZ"
+        }
+      ],
+      "minimum_k": 1,
+      "target": 911
+    },
+    {
+      "descents": [
+        {
+          "h": 561,
+          "k": 1,
+          "m": 781,
+          "parent_word": "OOZJOZJO",
+          "profile": [
+            781,
+            71,
+            1193,
+            71
+          ],
+          "word": "OOZJOZJOOZ"
+        },
+        {
+          "h": 241,
+          "k": 2,
+          "m": 457,
+          "parent_word": "OZZJOZJ",
+          "profile": [
+            939,
+            71,
+            1035,
+            71
+          ],
+          "word": "OZZJOZJOZZ"
+        }
+      ],
+      "minimum_k": 1,
+      "target": 1903
+    },
+    {
+      "descents": [
+        {
+          "h": 1019,
+          "k": 1,
+          "m": 1149,
+          "parent_word": "OOOOOOZO",
+          "profile": [
+            1149,
+            1,
+            2039,
+            1
+          ],
+          "word": "OOOOOOZOOZ"
+        },
+        {
+          "h": 25,
+          "k": 6,
+          "m": 37,
+          "parent_word": "OZZ",
+          "profile": [
+            1587,
+            1,
+            1601,
+            1
+          ],
+          "word": "OZZOZZZZZZ"
+        }
+      ],
+      "minimum_k": 1,
+      "target": 3187
+    }
+  ],
+  "one_step_exceptions": [
+    443,
+    617
+  ],
+  "physical_profiles": 3816297,
+  "represented_targets": 24971,
+  "scope": "Exact stated finite universe; all-order twins/splitting/descent proved in PROOF.md. No universal coverage or singleton theorem.",
+  "singleton_fibers": {
+    "3": {
+      "profile": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "word": ""
+    },
+    "11": {
+      "profile": [
+        5,
+        1,
+        7,
+        1
+      ],
+      "word": "OZ"
+    }
+  },
+  "source_sha256": "2c2e0200a580c8f92283772d7602a9cc8fc57bd7380618abdf18afdedd939948",
+  "source_word_checks": 1093,
+  "status": "PASS",
+  "target_cap": 50001,
+  "two_run_checks": 225
+}
