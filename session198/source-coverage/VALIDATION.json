@@ -1,0 +1,63 @@
+{
+  "C123_missing": [
+    7,
+    21
+  ],
+  "C12_missing": [
+    7,
+    21,
+    67
+  ],
+  "C1_missing": [
+    7,
+    13,
+    21,
+    41,
+    43,
+    55,
+    67,
+    77,
+    83,
+    163,
+    173,
+    231,
+    233,
+    247,
+    251,
+    277,
+    299,
+    421,
+    449,
+    503,
+    533,
+    569,
+    583,
+    637,
+    821,
+    1067,
+    1339,
+    1861,
+    2647
+  ],
+  "C1_values": 2471,
+  "C2_pair_tests": 56429,
+  "C2_values": 2454,
+  "C3_values": 2466,
+  "bound": 5001,
+  "matrix_entries": 80,
+  "max_selected_graph_order": 14,
+  "new_C3_pair_tests": 94591,
+  "new_C3_source_bank": 6339,
+  "new_C3_tests_by_form": {
+    "A": 10557,
+    "B": 21064,
+    "C": 9556,
+    "J0": 33654,
+    "J1": 19760
+  },
+  "old_C3_pair_tests": 758909,
+  "old_C3_source_bank": 24975,
+  "selected_physical_witnesses": 18,
+  "source_recurrence_checks": 126946,
+  "status": "PASS"
+}
