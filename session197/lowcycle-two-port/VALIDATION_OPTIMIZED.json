@@ -1,0 +1,151 @@
+{
+  "H67": {
+    "C": 4,
+    "H": 67,
+    "protocol": [
+      {
+        "drop": null,
+        "mask": 0,
+        "ports": [
+          0
+        ],
+        "vertex": 0
+      },
+      {
+        "drop": null,
+        "mask": 0,
+        "ports": [
+          0,
+          1
+        ],
+        "vertex": 1
+      },
+      {
+        "drop": 0,
+        "mask": 1,
+        "ports": [
+          1,
+          2
+        ],
+        "vertex": 2
+      },
+      {
+        "drop": 0,
+        "mask": 1,
+        "ports": [
+          2,
+          3
+        ],
+        "vertex": 3
+      },
+      {
+        "drop": 0,
+        "mask": 1,
+        "ports": [
+          3,
+          4
+        ],
+        "vertex": 4
+      },
+      {
+        "drop": 0,
+        "mask": 3,
+        "ports": [
+          4,
+          5
+        ],
+        "vertex": 5
+      },
+      {
+        "drop": 0,
+        "mask": 2,
+        "ports": [
+          5,
+          6
+        ],
+        "vertex": 6
+      }
+    ],
+    "rows": [
+      122,
+      116,
+      105,
+      82,
+      68,
+      24,
+      32
+    ]
+  },
+  "complete_labelled_tournaments": 33867,
+  "physical_protocol_sha256": "cf9d2b1897a8b2115f8613e608ba94ac3a351c11838227d3fa5ef1751cf00f3d",
+  "regular_five_labelled_compilations": 24,
+  "regular_five_protocol": {
+    "birth_order": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "ports": [
+      0,
+      1
+    ],
+    "rows": [
+      6,
+      12,
+      24,
+      17,
+      3
+    ],
+    "steps": [
+      {
+        "drop": null,
+        "mask": 0,
+        "ports": [
+          0
+        ],
+        "vertex": 0
+      },
+      {
+        "drop": null,
+        "mask": 0,
+        "ports": [
+          0,
+          1
+        ],
+        "vertex": 1
+      },
+      {
+        "drop": 2,
+        "mask": 0,
+        "ports": [
+          0,
+          1
+        ],
+        "vertex": 2
+      },
+      {
+        "drop": 2,
+        "mask": 1,
+        "ports": [
+          0,
+          1
+        ],
+        "vertex": 3
+      },
+      {
+        "drop": 2,
+        "mask": 3,
+        "ports": [
+          0,
+          1
+        ],
+        "vertex": 4
+      }
+    ]
+  },
+  "start_one_requested_set_compilations": 30036,
+  "start_two_root_compilations": 13584,
+  "status": "PASS"
+}
