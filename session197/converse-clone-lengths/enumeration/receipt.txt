@@ -1,0 +1,13 @@
+ORDER 3 unrooted 1 rooted 1 converse 1 rootfixed 1 mass_times3 1 normalized_fibres 1
+ORDER 4 unrooted 1 rooted 2 converse 1 rootfixed 0 mass_times3 3 normalized_fibres 3
+ORDER 5 unrooted 2 rooted 4 converse 3 rootfixed 2 mass_times3 4 normalized_fibres 2
+ORDER 6 unrooted 2 rooted 6 converse 3 rootfixed 0 mass_times3 6 normalized_fibres 8
+ORDER 7 unrooted 3 rooted 9 converse 6 rootfixed 3 mass_times3 7 normalized_fibres 3
+ORDER 8 unrooted 3 rooted 12 converse 6 rootfixed 0 mass_times3 9 normalized_fibres 17
+ORDER 9 unrooted 4 rooted 16 converse 10 rootfixed 4 mass_times3 10 normalized_fibres 4
+ORDER 10 unrooted 4 rooted 20 converse 10 rootfixed 0 mass_times3 12 normalized_fibres 34
+ORDER 11 unrooted 5 rooted 25 converse 15 rootfixed 5 mass_times3 13 normalized_fibres 5
+ORDER 12 unrooted 5 rooted 30 converse 15 rootfixed 0 mass_times3 15 normalized_fibres 67
+ORDER 13 unrooted 6 rooted 36 converse 21 rootfixed 6 mass_times3 16 normalized_fibres 6
+ORDER 14 unrooted 6 rooted 42 converse 21 rootfixed 0 mass_times3 18 normalized_fibres 132
+PASS graphs 42 literal_Hamilton_words 10950 fixed_words 282
