@@ -1,0 +1,11 @@
+# Independent review: one-port words and first exit
+
+**PASS.** Frozen `../session197-orbit-wildcard/capped-ports/WORD_COUNTS.md`, SHA-256 `bd03c487526cec8867bdc6fa17f16717c89902bc8bece395ae0fa1d9d7ab768f`; `verify_word_counts.py`, SHA-256 `4617f584b1427e785f52a6cd5493d2b3c595d6f15a5dbf976b912a57afac326a`; receipt `9c2e46b9d6a2dd16c1036fbd6340c316e58f61f4439df2981ce5bdaa6aa07c66`. Copied normal and optimized runs reproduce that receipt exactly.
+
+The boundary/interior transition multiplicities are correct, including the singleton exception and duplicated letters that create the same graph. The weighted matrix gives the stated Fibonacci sequences, generating functions and uniform-letter first-exit expectations. The almost-sure exit argument is valid, with a rejection chance at least one quarter after leaving the singleton state. These are word counts and word-process probabilities, not uniform random-tournament statements.
+
+At the first nontransitive right birth, exactly the port and its entire following interval join the newborn's strong component. The earlier vertices remain singleton components. The left case is the converse. The component is precisely the cyclic composition of a d-vertex transitive block and two singletons, with H=2^d+1. The odd-subset cycle count has the correct parity and includes d=1. The explicit safe prefix makes every d>=1 available from every nonempty transitive seed, without an earlier exit. The modulo-seven exclusion and the necessary power-of-two condition on d for prime output are correctly restricted to this first exit.
+
+`word-counts-audit/independent.py` independently operates on transitive vertex orders rather than adjacency SCCs or Hamilton DP. It checks all 3,720 one-step letters at old orders through30, and counts accepted paths in the full compressed one-port state machine for all three initial categories through word length200: 603 exact counts agree with the formulas. It verifies the expectations directly from the two first-step linear equations. A separate literal Hamilton-word DFS checks all90 first-exit graphs at old orders2 through10, including both orientations and every port position. All pass.
+
+No correction is required. The neighboring capped-language theorem is used only for operation conventions; the small category proof itself gives the all-order enumeration.
