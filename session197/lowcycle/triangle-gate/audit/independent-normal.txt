@@ -1,0 +1,4 @@
+EXAMPLE 4 2 H 67 ROWS 18 76 121 113 98 67 1
+EXAMPLE 8 7 H 533 ROWS 162 924 1017 1009 993 962 899 768 513 1
+EXAMPLE 6 31 H 1861 ROWS 162 3988 4089 4083 4065 4034 3971 3840 3585 3073 2049 1
+PASS incidences 1390 start_laws 1388 size_two_boundaries 2 strong_cycle_laws 814 seam_controls 10808 family_graphs 380 module_partitions 7 3 4 2 physical_gadget_values 714 inverse_pairs 4094 image_size 1581

@@ -1,0 +1,105 @@
+{
+  "821_in_family": false,
+  "complete_inverse_candidate_pairs": 4094,
+  "distinct_family_values": 1581,
+  "examples": [
+    {
+      "C": 3,
+      "H": 67,
+      "order": 7,
+      "rows": [
+        18,
+        76,
+        121,
+        113,
+        98,
+        67,
+        1
+      ],
+      "u": 4,
+      "v": 2,
+      "word": [
+        1,
+        1,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "C": 3,
+      "H": 533,
+      "order": 10,
+      "rows": [
+        162,
+        924,
+        1017,
+        1009,
+        993,
+        962,
+        899,
+        768,
+        513,
+        1
+      ],
+      "u": 8,
+      "v": 7,
+      "word": [
+        1,
+        1,
+        1,
+        2,
+        3,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "C": 3,
+      "H": 1861,
+      "order": 12,
+      "rows": [
+        162,
+        3988,
+        4089,
+        4083,
+        4065,
+        4034,
+        3971,
+        3840,
+        3585,
+        3073,
+        2049,
+        1
+      ],
+      "u": 6,
+      "v": 31,
+      "word": [
+        1,
+        3,
+        1,
+        2,
+        3,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "general_labelled_outdegree_one_cases": 1390,
+  "general_start_cases": 1388,
+  "image_ceiling": 5001,
+  "image_sha256": "6bc127e15eadfa9ed998a20c79d522dcd18d6a530e5d2caeb4881085bb7412c8",
+  "module_partition_counts": [
+    7,
+    3,
+    4,
+    2
+  ],
+  "physical_family_graphs": 272,
+  "scope": "constructive C3 feedback-at-most-two family, not full class",
+  "status": "PASS"
+}
