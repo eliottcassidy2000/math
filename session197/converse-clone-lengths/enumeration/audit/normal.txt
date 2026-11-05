@@ -1,0 +1,13 @@
+ORDER 3 classes 1 roots 1 normalized 1
+ORDER 4 classes 1 roots 2 normalized 3
+ORDER 5 classes 2 roots 4 normalized 2
+ORDER 6 classes 2 roots 6 normalized 8
+ORDER 7 classes 3 roots 9 normalized 3
+ORDER 8 classes 3 roots 12 normalized 17
+ORDER 9 classes 4 roots 16 normalized 4
+ORDER 10 classes 4 roots 20 normalized 34
+ORDER 11 classes 5 roots 25 normalized 5
+ORDER 12 classes 5 roots 30 normalized 67
+ORDER 13 classes 6 roots 36 normalized 6
+ORDER 14 classes 6 roots 42 normalized 132
+PASS graphs 42 independent_H_sum 10950 fixed_halfwords 282 halfpath_candidates 1926
