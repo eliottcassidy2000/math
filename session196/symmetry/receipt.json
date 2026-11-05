@@ -1,0 +1,252 @@
+{
+  "census": [
+    {
+      "H_aut_histogram": {
+        "1,1": 1
+      },
+      "n": 1,
+      "path_rooted_count": 1,
+      "spectrum": [
+        1
+      ],
+      "unlabeled_count": 1
+    },
+    {
+      "H_aut_histogram": {
+        "1,1": 1
+      },
+      "n": 2,
+      "path_rooted_count": 1,
+      "spectrum": [
+        1
+      ],
+      "unlabeled_count": 1
+    },
+    {
+      "H_aut_histogram": {
+        "1,1": 1,
+        "3,3": 1
+      },
+      "n": 3,
+      "path_rooted_count": 2,
+      "spectrum": [
+        1,
+        3
+      ],
+      "unlabeled_count": 2
+    },
+    {
+      "H_aut_histogram": {
+        "1,1": 1,
+        "3,3": 2,
+        "5,1": 1
+      },
+      "n": 4,
+      "path_rooted_count": 8,
+      "spectrum": [
+        1,
+        3,
+        5
+      ],
+      "unlabeled_count": 4
+    },
+    {
+      "H_aut_histogram": {
+        "1,1": 1,
+        "11,1": 1,
+        "13,1": 1,
+        "15,3": 1,
+        "15,5": 1,
+        "3,3": 3,
+        "5,1": 2,
+        "9,1": 2
+      },
+      "n": 5,
+      "path_rooted_count": 64,
+      "spectrum": [
+        1,
+        3,
+        5,
+        9,
+        11,
+        13,
+        15
+      ],
+      "unlabeled_count": 12
+    },
+    {
+      "H_aut_histogram": {
+        "1,1": 1,
+        "11,1": 2,
+        "13,1": 2,
+        "15,1": 2,
+        "15,3": 2,
+        "15,5": 2,
+        "17,1": 2,
+        "19,1": 2,
+        "23,1": 4,
+        "25,1": 2,
+        "27,3": 2,
+        "29,1": 4,
+        "3,3": 4,
+        "31,1": 2,
+        "33,1": 3,
+        "33,3": 2,
+        "37,1": 5,
+        "41,1": 1,
+        "43,1": 2,
+        "45,3": 2,
+        "5,1": 3,
+        "9,1": 4,
+        "9,9": 1
+      },
+      "n": 6,
+      "path_rooted_count": 1024,
+      "spectrum": [
+        1,
+        3,
+        5,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        37,
+        41,
+        43,
+        45
+      ],
+      "unlabeled_count": 56
+    }
+  ],
+  "circulants": [
+    {
+      "H_histogram": {
+        "3": 2
+      },
+      "labeled_connection_sets": 2,
+      "minimum_H": 3,
+      "minimum_rows": [
+        4,
+        1,
+        2
+      ],
+      "p": 3
+    },
+    {
+      "H_histogram": {
+        "15": 4
+      },
+      "labeled_connection_sets": 4,
+      "minimum_H": 15,
+      "minimum_rows": [
+        24,
+        17,
+        3,
+        6,
+        12
+      ],
+      "p": 5
+    },
+    {
+      "H_histogram": {
+        "175": 6,
+        "189": 2
+      },
+      "labeled_connection_sets": 8,
+      "minimum_H": 175,
+      "minimum_rows": [
+        112,
+        97,
+        67,
+        7,
+        14,
+        28,
+        56
+      ],
+      "p": 7
+    },
+    {
+      "H_histogram": {
+        "92411": 10,
+        "93027": 10,
+        "93467": 10,
+        "95095": 2
+      },
+      "labeled_connection_sets": 32,
+      "minimum_H": 92411,
+      "minimum_rows": [
+        962,
+        1924,
+        1801,
+        1555,
+        1063,
+        79,
+        158,
+        316,
+        632,
+        1264,
+        481
+      ],
+      "p": 11
+    },
+    {
+      "H_histogram": {
+        "3669497": 12,
+        "3683797": 12,
+        "3703011": 4,
+        "3704857": 12,
+        "3707483": 12,
+        "3711175": 12
+      },
+      "labeled_connection_sets": 64,
+      "minimum_H": 3669497,
+      "minimum_rows": [
+        3970,
+        7940,
+        7689,
+        7187,
+        6183,
+        4175,
+        159,
+        318,
+        636,
+        1272,
+        2544,
+        5088,
+        1985
+      ],
+      "p": 13
+    }
+  ],
+  "status": "PASS",
+  "strong4_profiles": {
+    "(5, 2, 0, 0)": 48,
+    "(5, 3, 0, 0)": 48
+  },
+  "witness": {
+    "H": 4151,
+    "automorphism_order": 7,
+    "degree_permutation_candidates": 10080,
+    "prime_factor": 593,
+    "rows": [
+      240,
+      225,
+      195,
+      135,
+      142,
+      156,
+      184,
+      512,
+      255,
+      383
+    ]
+  }
+}
