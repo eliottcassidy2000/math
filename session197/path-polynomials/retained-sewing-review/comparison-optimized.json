@@ -1,0 +1,11 @@
+{
+  "complete_state_hashes": {
+    "five": "ac84c8a13f6505432cd89c52cb36718178d38c99f790d322bceddafb8980fd9d",
+    "four": "869d18e3ef524da6e204e2abc10834067d808fe98a58fd61ccf21662359a74e0"
+  },
+  "determinant": 16,
+  "signature_set_size": 65,
+  "status": "PASS",
+  "witnesses": 11,
+  "word_arcs": 476
+}

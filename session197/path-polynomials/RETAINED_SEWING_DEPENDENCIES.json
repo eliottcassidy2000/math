@@ -1,0 +1,7 @@
+{
+  "inherited_scalar_and_moving_root_source": "https://github.com/eliottcassidy2000/math/blob/ee07a5aac9cdfd8d3834fa834df4fb357fcaf769/session195/rooted-interfaces/PROOF.md",
+  "separate_star_synthesis_source": "https://github.com/eliottcassidy2000/math/blob/cf3b44b9a442c3cff0f28cab924e73c4c00bb00c/session196/spectral-moves/PROOF.md",
+  "local": {
+    "verify.py": "10c2a35ce3f506aefb031645e81cffc1a2fb4d73bf9bbb38a163ccbf8e35dfcb"
+  }
+}

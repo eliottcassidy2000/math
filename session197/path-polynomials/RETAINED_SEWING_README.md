@@ -1,0 +1,11 @@
+# Retained-root sewing: a positive four-state inverse
+
+The physical operation joins A->B, reverses the single edge a->b, and keeps the old root a. Its complete continuation state is (h,R-d,d-e,d), with an exact nonnegative four-by-four transfer for every actual rooted right block. A literal continuation determinant16 proves that four is the minimum rational linear dimension for this grammar.
+
+The target-bounded inverse is complete at arbitrary word depth. It records terminal outputs before pruning, and merges only identical complete states. Only initial singleton letters are removed, using an exact state-transport lemma. A target N, if present in a finite bank, has a count-equivalent witness with at most1+floor(log2 N) letters and an explicit graph-order bound.
+
+The complete bank of rooted right blocks of order at most5 has65 signatures. Its exact spectrum through5000 contains all2498 odd values other than7 and21. The order-at-most4 bank has19 signatures and misses173 as well through2000. The receipts include all signatures and eleven physically recounted witnesses, including the eight-vertex173 graph. These are bounded coverage results, not an all-order spectrum theorem or an every-parent digit operation. The retained root differs from the moving-root S195 interface; the scalar law and stationary singleton special case are explicitly attributed.
+
+Run `python3 verify_retained_root_sewing.py` and its `-O` form from this directory. The only imported helper is the already published `verify.py`. The independent review is in `retained-sewing-review/`. To reproduce it, change into that directory, compile `check.cpp` as C++17 and run it with argument `.`. It reads `witnesses.txt` and regenerates its own bank and both state CSVs. Then run `python3 compare.py` (also with `-O`), which compares the complete regenerated state sets against the bundled frozen source receipt. The large CSVs are reproducible outputs, not required inputs or omitted source data. The review report gives the debug/sanitizer commands and hashes.
+
+`RETAINED_SEWING_DEPENDENCIES.json` identifies the inherited sources and helper. `RETAINED_SEWING_MANIFEST.json` binds every new file. Frozen proof, source, audit and receipts are unchanged. Later exploratory bounds are not part of this checkpoint.

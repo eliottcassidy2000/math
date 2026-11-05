@@ -1,0 +1,20 @@
+{
+  "RETAINED_ROOT_SEWING.md": "c5a7a18611363985b49d4ab455ad42160150ab012157c7d4c01aa6f838332655",
+  "verify_retained_root_sewing.py": "62d824eb95905c6c408b38079eb7f56a3c7e8226539f9bc7588f3d1c3855beed",
+  "retained_sewing_normal.json": "2b1b3ae04c03b8ff8a3985e0a6bb4227acbb1ec0e544083bb60013fa819111eb",
+  "retained_sewing_optimized.json": "2b1b3ae04c03b8ff8a3985e0a6bb4227acbb1ec0e544083bb60013fa819111eb",
+  "retained-sewing-review/REPORT.md": "8d8bcf8dd2e5ed2f4c174d4dcfb1b5f7e36f951cc08fcac84e1b107522806e9f",
+  "retained-sewing-review/check.cpp": "52f34043daf0eac4933bfd8234da400d4e6c6d081d8831aa45e485501539b517",
+  "retained-sewing-review/compare.py": "767d46033e4b8116825a46c7ee7fd0ebaa03440cc0fceb1243bbe39110d7379e",
+  "retained-sewing-review/witnesses.txt": "fb645d107a2a10eef03e4b14d029c92d0878bce1932b35fc217f4f9d3f78b440",
+  "retained-sewing-review/independent-bank.csv": "1726317a5b4ccaf0a1193a712d5881ef9f7085e70c23054d5e3279b3a7ad5260",
+  "retained-sewing-review/independent-normal.json": "66b9eeb9137eddb093480b3bbeecaa64be064d4b692ac35cdbee4c10473b0f88",
+  "retained-sewing-review/independent-debug.json": "66b9eeb9137eddb093480b3bbeecaa64be064d4b692ac35cdbee4c10473b0f88",
+  "retained-sewing-review/comparison-normal.json": "27f7f74c0866aad3d0b92cb5bdd7845116607f412ba83376edd973918dcc0f1f",
+  "retained-sewing-review/comparison-optimized.json": "27f7f74c0866aad3d0b92cb5bdd7845116607f412ba83376edd973918dcc0f1f",
+  "retained-sewing-review/source-normal.json": "2b1b3ae04c03b8ff8a3985e0a6bb4227acbb1ec0e544083bb60013fa819111eb",
+  "retained-sewing-review/source-optimized.json": "2b1b3ae04c03b8ff8a3985e0a6bb4227acbb1ec0e544083bb60013fa819111eb",
+  "retained-sewing-review/source/retained_sewing_normal.json": "2b1b3ae04c03b8ff8a3985e0a6bb4227acbb1ec0e544083bb60013fa819111eb",
+  "RETAINED_SEWING_DEPENDENCIES.json": "2a6eeb74c48dda1c550bcd703639a3857418f35bd417f9532e2208a5dc92bcba",
+  "RETAINED_SEWING_README.md": "76941f08de44b06e50eacda4bbb492720e05f2fe7c7ded1f21600a4ff9f8da7b"
+}
