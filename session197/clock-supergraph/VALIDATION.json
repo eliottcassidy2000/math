@@ -1,0 +1,110 @@
+{
+  "census": {
+    "bank_sha256": "831fcb45250bafcde7cafe7f62cbe54b66cab931138157c66f95bab18b28303c",
+    "generation": [
+      {
+        "accepted_before_isomorphism": 33,
+        "candidates": 256,
+        "n": 9,
+        "seed_fixed_classes": 33
+      },
+      {
+        "accepted_before_isomorphism": 136,
+        "candidates": 16896,
+        "n": 10,
+        "seed_fixed_classes": 68
+      },
+      {
+        "accepted_before_isomorphism": 311,
+        "candidates": 69632,
+        "n": 11,
+        "seed_fixed_classes": 105
+      },
+      {
+        "accepted_before_isomorphism": 564,
+        "candidates": 215040,
+        "n": 12,
+        "seed_fixed_classes": 144
+      }
+    ],
+    "independent_bank_checks": 351,
+    "target_hits": 0
+  },
+  "maximum_strong_order": 12,
+  "rebase_witnesses": [
+    {
+      "H": 179,
+      "rows": [
+        2,
+        64,
+        11,
+        51,
+        39,
+        135,
+        61,
+        95
+      ],
+      "strong": true
+    },
+    {
+      "H": 539,
+      "rows": [
+        2,
+        64,
+        267,
+        51,
+        39,
+        135,
+        61,
+        95,
+        251
+      ],
+      "strong": true
+    },
+    {
+      "H": 541,
+      "rows": [
+        2,
+        64,
+        267,
+        307,
+        295,
+        135,
+        317,
+        351,
+        35
+      ],
+      "strong": true
+    }
+  ],
+  "rebase_words": [
+    [
+      "L",
+      4,
+      4
+    ],
+    [
+      "R",
+      11,
+      4
+    ]
+  ],
+  "rebased_ports": [
+    0,
+    1,
+    2,
+    5
+  ],
+  "seed": [
+    2,
+    12,
+    145,
+    149,
+    99,
+    143,
+    175,
+    19
+  ],
+  "status": "PASS",
+  "target": 541
+}
