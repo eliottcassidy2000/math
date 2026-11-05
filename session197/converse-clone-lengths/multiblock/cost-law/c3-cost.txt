@@ -1,0 +1,7 @@
+ORDER 25 classes 92 cost_sum 236 zero_cost 12
+ORDER 50 classes 392 cost_sum 2104 zero_cost 24
+ORDER 75 classes 901 cost_sum 7356 zero_cost 37
+ORDER 100 classes 1617 cost_sum 17680 zero_cost 49
+ORDER 125 classes 2542 cost_sum 34860 zero_cost 62
+ORDER 150 classes 3676 cost_sum 60650 zero_cost 74
+PASS order_limit 150 ordinary_classes 183800 physical_optima 76 literal_anti_tests 258
