@@ -430,7 +430,7 @@ Sources and inherited inputs:
   formulas and minimum within the chain family.
 - [Session 191 rooted growth](../../session191_tournament_growth_20261104/deletion_growth/PROOF.md): exact count-neutral deletion
   criterion and rooted-increment growth scope.
-- [Session 189 guide](../../../00-navigation/S189.md): inherited sole-exit three-state law
+- [Session 189 guide](https://github.com/eliottcassidy2000/math/blob/dcbe43e7fc9caf175baba4fef7b402fd9e3c51d9/00-navigation/S189.md): inherited sole-exit three-state law
   and near-join response. Our exact map (10) identifies, rather than renames,
   that pre-existing mechanism.
 - [Session 190 square-sum ports](../../session190_constructive_links_20261104/squareports/session190-squareports/PROOF.md): undirected component-pair transfer,
