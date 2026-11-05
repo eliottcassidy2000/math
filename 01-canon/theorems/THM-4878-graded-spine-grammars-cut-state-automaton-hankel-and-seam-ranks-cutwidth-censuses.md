@@ -1,6 +1,6 @@
 ---
 id: THM-4878
-title: "Graded spine grammars G(k, w) (a transitive chain with reversed arcs of cutwidth <= w and k <= 2 apexes): the Hamiltonian-path count is an N-rational series over an explicit finite cut-state automaton (PROVED, with the state bound (c+k+2)!(c+k+3)^(c+k)); the dictionary G(1,0) = one-apex, G(2,0) = two-apex, connected G(0,1) = upset tournaments with the all-parts-1 chain = the tribonacci tower of THM-4865, fa <= 2 in G(0,2), one-apex one-arc joins in G(2,1) (PROVED); exact Hankel ranks 4, 5, 17, 17, 18, 80, 78, 78 for G(1,0), G(0,1), G(2,0), G(1,1), G(0,2), G(0,3), G(1,2), G(2,1) (the 17 of G(2,0) reproduces Session 191) and seam ranks 3 (one reversed arc: the Lorentzian law), 13 (two arcs), 62 (three arcs) (FINITE-EXACT); the sink-run bound H >= 2^r + 1 (PROVED); the one-apex class attains 521,915 of the 1,048,576 odd numbers below 2^21 (FINITE-EXACT); pre-registered cutwidth censuses (FINITE-EXACT, section 6 of the note)"
+title: "Graded spine grammars G(k, w) (a transitive chain with reversed arcs of cutwidth <= w and k <= 2 apexes): the Hamiltonian-path count is an N-rational series over an explicit finite cut-state automaton (PROVED, with the state bound (c+k+2)!(c+k+3)^(c+k)); the dictionary G(1,0) = one-apex, G(2,0) = two-apex, connected G(0,1) = upset tournaments with the all-parts-1 chain = the tribonacci tower of THM-4865, fa <= 2 in G(0,2), one-apex one-arc joins in G(2,1) (PROVED); exact Hankel ranks 4, 5, 17, 17, 18, 80, 78, 78 for G(1,0), G(0,1), G(2,0), G(1,1), G(0,2), G(0,3), G(1,2), G(2,1) (the 17 of G(2,0) reproduces Session 191) and seam ranks 3 (one reversed arc: the Lorentzian law), 13 (two arcs), 62 (three arcs) (FINITE-EXACT); the sink-run bound H >= 2^r + 1 (PROVED); the one-apex class attains 521,915 of the 1,048,576 odd numbers below 2^21 (FINITE-EXACT); pre-registered cutwidth censuses (FINITE-EXACT): the apex-free cutwidth-2 grammar G(0,2) attains every odd number <= 8191 except 7 and 21 with at most five reversed arcs per value (against the pre-registered prediction), and no family with a bounded number of reversed arcs can be complete (PROVED, counting)"
 status: >
   PROVED: (1) the cut-state transfer theorem and the state bound; (2) the dictionary of grades; (4) the sink-run lower
   bound, the padding lemma and the saturation soundness. KNOWN: the monotonicity of H under induced subtournaments
@@ -77,7 +77,17 @@ Full definitions, proofs, programs and tables: the source note.
 5. **One-apex density (FINITE-EXACT).** 521,915 of the 1,048,576 odd numbers below 2^21 are one-apex counts; the
    miss fraction per dyadic scale tends to 1/2 with no bias modulo 16, 3, 5, 7.
 
-6. **Censuses (FINITE-EXACT, pre-registered).** PENDING (note, section 6).
+6. **Censuses (FINITE-EXACT, pre-registered; all chain words of length <= 64, values <= X, ordered joins added).**
+   The apex-free cutwidth-2 grammar G(0,2) attains every odd number <= 8191 except 7 and 21 (4094 of 4096), with at
+   most five reversed arcs per value; the exact minimal-arc layers below 512 are 1, 8, 75, 133, 36, 1 values with
+   0, 1, 2, 3, 4, 5 arcs (the one-arc layer is 1 + 2^k, the two-arc layer is THM-4748; the three-arc layer has 15
+   pairwise-configuration types). G(1,1) and G(0,3) attain every odd number <= 511 except 7 and 21; G(2,0) every odd
+   number <= 2047 except 7 and 21 (reproducing the two-apex witnesses); G(1,0) attains 560 of the 1024 odd numbers
+   below 2048 directly and 763 with ordered joins; G(0,1) 181 of 500 below 1000. The pre-registered prediction P1
+   (that G(0,2) would miss between 10 and 60 odd numbers below 300) is REFUTED; P3 and P5 CONFIRMED; the rest in
+   HYP-9470. **Counting lemma (PROVED):** at most (log_2 X + 1)^(2c) values below X have cutwidth-2 witnesses with c
+   reversed arcs, so no family with a bounded number of reversed arcs is complete and the arc count of any complete
+   witness family grows at least like log N / (2 log log N).
 
 ## Validation
 

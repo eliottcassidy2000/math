@@ -36,11 +36,16 @@ rational series of modest rank. The repository's main spectrum families are the 
 | G(2,1) | two apexes over an interval chain; contains the one-apex one-arc joins of THM-4875 (every odd <= 2^32 except 7, 21) | 2544 | 78 | new |
 
 The **seam ranks** (the number of bilinear terms needed to compose two spine tournaments across a cut crossed by c
-reversed arcs) are 3 for c = 1 (the Lorentzian one-arc join law h h' + R R' - e e', KNOWN), **13 for c = 2** and
-**62 for c = 3**, the same in every ambient grammar computed. New PROVED items: the transfer theorem with its state
-bound, the containment dictionary, and the sink-run lower bound H >= 2^r + 1. FINITE-EXACT: the ranks, the validations
-and the censuses (section 6). What the session does **not** do: prove that any G(k, w) is onto the odd numbers other
-than 7 and 21; that statement, for G(2,1), is HYP-9470 and would imply Chan-Pak.
+reversed arcs) are 3 for c = 1 (the Lorentzian one-arc join law h h' + R R' - e e', KNOWN), **13 for c = 2**,
+**62 for c = 3** and **310 for c = 4**, the same in every ambient grammar computed. **The main finding** (section 6,
+against the pre-registered prediction): the apex-free cutwidth-2 grammar G(0,2), a transitive order with reversed
+arcs never more than two deep, attains **every odd number up to 8191 except 7 and 21**, with at most five reversed
+arcs per value (and at most three for 217 of the 256 odd numbers below 512); its two-arc layer is THM-4748. New
+PROVED items: the transfer theorem with its state bound, the containment dictionary, the sink-run lower bound
+H >= 2^r + 1, and the counting lemma that no family with a bounded number of reversed arcs can be complete.
+FINITE-EXACT: the ranks, the validations and the censuses. What the session does **not** do: prove that any G(k, w) is
+onto the odd numbers other than 7 and 21; that statement, for G(0,2) and for G(2,1), is HYP-9470 and would imply
+Chan-Pak.
 
 ## 1. Prior art read before the work (and what was reproduced)
 
@@ -254,10 +259,10 @@ or slot) is needed for half of all odd numbers, which is why G(2,0) and G(2,1) c
 
 ## 6. Censuses (pre-registered; all chain lengths <= 64; values <= X; products of connected words added)
 
-**The surprise.** The apex-free cutwidth-2 grammar G(0,2) attains **every odd number <= 2047 except 7 and 21** (1022
-of 1024 with the closer-bound engine, 14,796,241 search nodes; 254 of 256 below 512 with the first engine, 289,792,317
-nodes, 43,254,577 complete connected words; 83 cut states, Hankel rank 18). So does G(1,1) below 512 (254 of 256;
-282,279,675 nodes). Prediction P1 (between 10 and 60 misses below 300) is **REFUTED** in the direction
+**The surprise.** The apex-free cutwidth-2 grammar G(0,2) attains **every odd number <= 8191 except 7 and 21** (4094
+of 4096 with the closer-bound engine, 197,660,299 search nodes, at most five reversed arcs per value; 1022 of 1024
+below 2048; 254 of 256 below 512 with the first engine, 289,792,317 nodes, 43,254,577 complete connected words; 83 cut
+states, Hankel rank 18). So do G(1,1) and G(0,3) below 512 (254 of 256 each). Prediction P1 (between 10 and 60 misses below 300) is **REFUTED** in the direction
 nobody in the repository had considered: the sparsest grade, a transitive order with reversed arcs never more than two
 deep, is complete as far as it was computed. The decoded witnesses below 302 use at most 7 reversed arcs (24 values
 with 2 arcs, 41 with 3, 46 with 4, 32 with 5, 4 with 6, 1 with 7; chain length <= 12), e.g. 13 = chain 0..5 with
@@ -289,13 +294,16 @@ of the 256 odd numbers below 512.
 | G(0,2) | 511 | 254 of 256 | 0 | 289,792,317 (first engine); 163,451,097 without deduplication (closer bound) |
 | G(1,1) | 511 | 254 of 256 | 0 | 282,279,675 (first engine) |
 | **G(0,2)** | **2047** | **1022 of 1024** | **0** | 14,796,241 (closer bound; at most 5 reversed arcs per value: 1, 10, 127, 542, 328, 14 values with 0..5 arcs, upper bounds on the minima from the deduplicated run) |
-| G(0,2) | 8191 | RUNNING | | |
-| G(0,3), G(1,2) | 511 | RUNNING | | |
+| **G(0,2)** | **8191** | **4094 of 4096** | **0** | 197,660,299 (at most 5 reversed arcs per value: 1, 12, 208, 1522, 2209, 142 values with 0..5 arcs) |
+| G(0,3) | 511 | 254 of 256 | 0 | 101,209,735 (521 cut states; at most 4 reversed arcs per value: 1, 8, 48, 174, 23) |
+| G(1,2) | 511 | RUNNING | | |
 | G(1,1), G(0,3), G(1,2) | 2047 | RUNNING | | |
+| G(0,2) | 32767 | RUNNING | | |
 
-Outcomes of the pre-registered predictions: P1 REFUTED (G(0,2) misses nothing below 512; the [2^11, 2^12) clause was
-not reachable with X <= 2047); P3 CONFIRMED (13 attained; no misses below 512); P5 CONFIRMED (13 is in G(0,2) and
-G(2,0), not in G(1,0) or G(0,1)); P2 and P4 PENDING the G(0,3) and G(1,2) runs. The minimal-grade atlas
+Outcomes of the pre-registered predictions: P1 REFUTED in both clauses (G(0,2) misses nothing below 8192, so the
+miss fraction in [2^11, 2^12) is 0, not >= 3 percent); P2 first clause CONFIRMED (G(0,3) misses nothing below 512),
+second clause (a miss below 2000) PENDING the 2047 run and expected to fail; P3 CONFIRMED (13 attained; no misses
+below 512); P5 CONFIRMED (13 is in G(0,2) and G(2,0), not in G(1,0) or G(0,1)); P4 PENDING the G(1,2) runs. The minimal-grade atlas
 (`spine_grammar_atlas_20261104.py`) over G(1,0), G(0,1), G(2,0) at 2047: G(0,1) misses 86 odd numbers below 300
 besides 7, 21 (first 11, 13, 19, 23, 35), G(1,0) misses 45 (first 13, 29, 35, 41, 43, 49, 59, 67, 71, 77); every odd
 number below 300 other than 7, 21 is attained by G(2,0) and by G(0,2); the values attained by G(2,0) only among
