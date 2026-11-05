@@ -1,0 +1,11 @@
+{
+  "complete_raw_product_edges": 1700,
+  "complete_raw_product_states": 425,
+  "glob_patterns": 24,
+  "independent_nfa_states": 110,
+  "raw_edges": 1644,
+  "raw_states_with_reject": 411,
+  "source_control_sha256": "789d4a346b70aee2ead2c5db495271e146c0ae00b978984c66cc6cf31079ed9d",
+  "source_controller_classes": 15,
+  "status": "PASS"
+}
