@@ -61,10 +61,15 @@ def main():
     a125 = birth(a69, 31)
     b131 = birth(B, 10)
     b133 = birth(B, 29)
+    skip29 = birth(D, 29)
+    skip75 = birth(skip29, 7)
+    skip127 = birth(skip75, 1)
     controls = [('D', D, 13, True), ('source', pre, 13, False),
                 ('A', A, 41, True), ('B', B, 43, True),
                 ('A69', a69, 69, True), ('A125', a125, 125, True),
-                ('B131', b131, 131, True), ('B133', b133, 133, True)]
+                ('B131', b131, 131, True), ('B133', b133, 133, True),
+                ('bypass29', skip29, 29, True), ('bypass75', skip75, 75, True),
+                ('bypass127', skip127, 127, True)]
     for name, rows, h, is_strong in controls:
         need(literal(rows) == h, 'literal control ' + name)
         need(strong(rows) == is_strong, 'strongness ' + name)
