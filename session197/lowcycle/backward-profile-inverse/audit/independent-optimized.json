@@ -1,0 +1,30 @@
+{
+  "generic_inverse_does_not_use_last_step_partition": true,
+  "large_profile_replays": [
+    [
+      5099741,
+      799,
+      9281553
+    ],
+    [
+      5477461,
+      689,
+      5524209
+    ],
+    [
+      8231473,
+      903,
+      13847505
+    ],
+    [
+      9551177,
+      853,
+      16249891
+    ]
+  ],
+  "last_step_and_deletion_checks": 324,
+  "physical_distinct_profiles": 324,
+  "recipes_sha256": "66bdc6ab9cde4dd07d58735d5a6e7744d083ed361d4b097f3845347d6f5a771f",
+  "status": "PASS",
+  "tested_triples": 358904
+}

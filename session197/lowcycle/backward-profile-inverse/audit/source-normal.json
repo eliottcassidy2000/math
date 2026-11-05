@@ -1,0 +1,145 @@
+{
+  "bound": 61,
+  "dependencies": {
+    "ARITHMETIC_INVERSE.md": "4ac1727eb27c85f8a39f5598eb9f0e1b020bc4020cbca0a94e6288cb0676c3b7",
+    "C1_COMPLETE.md": "d38a53b1c475df3578d58e83d9e9f97785d9455084c0a094aaed752577d8b289",
+    "ROOTED.md": "ba7e632518219eeb8d86b6db7da386a88e98317ea417c9b22e649278c132b32e"
+  },
+  "forward_profiles": 159,
+  "large_full_profile_controls": [
+    {
+      "inverse_recipe": [
+        1,
+        2,
+        17,
+        1,
+        1,
+        4500
+      ],
+      "original_recipe": [
+        4,
+        17,
+        1,
+        1,
+        4500
+      ],
+      "profile": [
+        5099741,
+        799,
+        9281553
+      ]
+    },
+    {
+      "inverse_recipe": [
+        1,
+        48,
+        3,
+        4061
+      ],
+      "original_recipe": [
+        96,
+        3,
+        4061
+      ],
+      "profile": [
+        5477461,
+        689,
+        5524209
+      ]
+    },
+    {
+      "inverse_recipe": [
+        21,
+        2,
+        1,
+        2,
+        4869
+      ],
+      "original_recipe": [
+        21,
+        2,
+        1,
+        2,
+        4869
+      ],
+      "profile": [
+        8231473,
+        903,
+        13847505
+      ]
+    },
+    {
+      "inverse_recipe": [
+        3,
+        1,
+        18,
+        1,
+        9628
+      ],
+      "original_recipe": [
+        3,
+        1,
+        18,
+        1,
+        9628
+      ],
+      "profile": [
+        9551177,
+        853,
+        16249891
+      ]
+    }
+  ],
+  "physical_deletion_readouts": 159,
+  "physical_recipe_checks": 159,
+  "recursive_states": 86136,
+  "status": "PASS",
+  "strong_H_support": [
+    3,
+    5,
+    9,
+    11,
+    15,
+    17,
+    19,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    37,
+    39,
+    45,
+    47,
+    49,
+    51,
+    53,
+    57,
+    59,
+    61
+  ],
+  "tested_triples": 81344,
+  "wrong_root_hostile": {
+    "actual_deletion_count": 3,
+    "profile": [
+      5,
+      1,
+      9
+    ],
+    "root": 2,
+    "rows": [
+      8,
+      1,
+      3,
+      6
+    ],
+    "singleton_output": [
+      13,
+      4,
+      14
+    ],
+    "start": 2
+  }
+}
