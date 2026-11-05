@@ -1,0 +1,17 @@
+{
+  "CYCLIC_GRAM_FORESTS.md": "2fe61a1fcbd4133fbd9bddcdd8a337dfe521d10ca41514f69ecb25f358327c83",
+  "verify_cyclic_gram_forests.py": "f56c9feed4d93b757a35bf7e847fc03a38d623d25214bae59fc9fefa5c34f6f0",
+  "cyclic_gram_normal.stdout": "226c04befca6252e61eda03b2534a079c346dd61603ccac47e723e46fd69921c",
+  "cyclic_gram_optimized.stdout": "226c04befca6252e61eda03b2534a079c346dd61603ccac47e723e46fd69921c",
+  "gram-forest-review/REPORT.md": "9f35853926b70f6a6df1f1f976c9b89c10e662e8eb2c6e94569a4f64d1c42887",
+  "gram-forest-review/check.cpp": "0d7f8ce55c3df29d5b1e998139028009354be7f7c1aac87f904f7c759933dda4",
+  "gram-forest-review/check_forests.py": "1aadf627a4b742b53ec05b7854acf299129511d017e1acdaf045eab160dbd8b9",
+  "gram-forest-review/independent-forests.json": "e357a4dad43b1d88d152002fd8ba21897549cc6b88401ffebf35f48235602012",
+  "gram-forest-review/independent-forests-optimized.json": "e357a4dad43b1d88d152002fd8ba21897549cc6b88401ffebf35f48235602012",
+  "gram-forest-review/independent-physical.txt": "7454968bc2583609e41efec41fa7130fc7f42fa12695c6b8b9816fbb58e01062",
+  "gram-forest-review/independent-physical-debug.txt": "7454968bc2583609e41efec41fa7130fc7f42fa12695c6b8b9816fbb58e01062",
+  "gram-forest-review/source-normal.json": "226c04befca6252e61eda03b2534a079c346dd61603ccac47e723e46fd69921c",
+  "gram-forest-review/source-optimized.json": "226c04befca6252e61eda03b2534a079c346dd61603ccac47e723e46fd69921c",
+  "GRAM_FOREST_DEPENDENCIES.json": "13c05300dae948e4a450d532e4d320e3a101c879b6becf8ef74692422d801a26",
+  "GRAM_FOREST_README.md": "a825506f2278085e3d4d1d4b30072f2667e1d2c9c4b91f1442ff87accf2449dd"
+}

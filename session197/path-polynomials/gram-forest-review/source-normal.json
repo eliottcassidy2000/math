@@ -1,0 +1,73 @@
+{
+  "actual_triple_graphs": 1331,
+  "determinants": [
+    2,
+    32,
+    8,
+    4608
+  ],
+  "exact_TN_minors": 21544,
+  "first_Jacobi_kernels": [
+    [
+      [
+        3,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        5,
+        3,
+        0
+      ],
+      [
+        3,
+        7,
+        2
+      ],
+      [
+        0,
+        2,
+        2
+      ]
+    ]
+  ],
+  "first_unordered_kernels": [
+    [
+      [
+        3,
+        2
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    [
+      [
+        5,
+        6,
+        0
+      ],
+      [
+        6,
+        28,
+        24
+      ],
+      [
+        0,
+        24,
+        72
+      ]
+    ]
+  ],
+  "literal_color_kernels": 48,
+  "norm_controls": 5050,
+  "physical_Gram_inequalities": 1331,
+  "positive_weight_forest_controls": 48,
+  "status": "PASS"
+}

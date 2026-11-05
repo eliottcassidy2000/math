@@ -1,0 +1,1 @@
+PASS literal_physical_triples 1331 full_transitive_Gram_entries 150 extra_order4_5_third_blocks 64

@@ -1,0 +1,71 @@
+{
+  "all_finite_TN_minors": 18792,
+  "complete_norm_residue_pairs": 49,
+  "first_kernels": [
+    {
+      "J": [
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "K": [
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "detJ": 2,
+      "detK": 8
+    },
+    {
+      "J": [
+        [
+          5,
+          3,
+          0
+        ],
+        [
+          3,
+          7,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ]
+      ],
+      "K": [
+        [
+          5,
+          6,
+          0
+        ],
+        [
+          6,
+          28,
+          24
+        ],
+        [
+          0,
+          24,
+          72
+        ]
+      ],
+      "detJ": 32,
+      "detK": 4608
+    }
+  ],
+  "incidence_square_minor_selections": 4312,
+  "positive_coefficient_kernels": 24,
+  "status": "PASS"
+}
