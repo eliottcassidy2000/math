@@ -1,0 +1,7 @@
+PASS fixed_word_side_controls 5425
+FAMILY 1 n 6 H 17 fixed 5 Aut 1 anti 1 orbits 11
+FAMILY 2 n 8 H 49 fixed 9 Aut 1 anti 1 orbits 29
+FAMILY 3 n 10 H 161 fixed 17 Aut 1 anti 1 orbits 89
+FAMILY 4 n 12 H 577 fixed 33 Aut 1 anti 1 orbits 305
+FAMILY 5 n 14 H 2177 fixed 65 Aut 1 anti 1 orbits 1121
+FAMILY 6 n 16 H 8449 fixed 129 Aut 1 anti 1 orbits 4289
