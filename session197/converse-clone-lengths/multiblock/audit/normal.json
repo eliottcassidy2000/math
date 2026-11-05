@@ -1,0 +1,10 @@
+{
+  "status":"PASS",
+  "quotients":11,
+  "physical_blowups":2140,
+  "exact_map_comparisons":4280,
+  "maximal_block_controls":520,
+  "orbit_order_controls":82,
+  "reverse_BFS_completion_controls":368286,
+  "centralizer_conjugacy_controls":25
+}
