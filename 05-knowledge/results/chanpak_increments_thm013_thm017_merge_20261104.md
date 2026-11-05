@@ -29,8 +29,9 @@ NUMERICAL (HYP-9469) + OPEN (Chan-Pak).
   commits. My lane-claim message states the exact statements of THM-4876 and defers to S78 for any C2-grammar
   version of the increment bound pushed first.
 * **Closest proved mechanism:** Claim A (THM-070 from OCF; now unconditional by Grinberg-Stanley): `H(T) - H(T - v) =
-  2 sum_{C ni v} H(T - V(C))`. **Hostile example:** the strong 4-tournament, whose two vertices of out-/in-degree one
-  give increment `2` from `3` to `5`, the last time an increment of `2` ever happens. **Corrected near miss:** my first
+  2 sum_{C ni v} H(T - V(C))`. **Hostile example:** the strong 4-tournament, whose two vertices lying on only one of its two triangles
+  (one of out-degree one, one of in-degree one; the other two lie on both triangles and give `5 - 1`) give increment
+  `2` from `3` to `5`, the last time an increment of `2` ever happens. **Corrected near miss:** my first
   "extension spectrum" computed `sum_P (insertion slots of v into P)` over the Hamiltonian paths `P` of `X`, which is
   not `H(X + v)` (removing `v` from a path of `X + v` leaves two paths of `X`, not one); the correct quantity is the
   path-pair sum, THM-4876 (1), and the wrong one was discarded before anything was claimed. **Least-used sidecar:**
@@ -41,11 +42,16 @@ NUMERICAL (HYP-9469) + OPEN (Chan-Pak).
 * **THM-013 (March 2026)** states `H(T) - H(T') = sum_k 2^k Delta(alpha_k)` for an arc flip `T -> T'`, with `alpha_k`
   the number of `k`-sets of pairwise vertex-disjoint odd cycles, and proved it for `n <= 7` (verified to `9`). Its
   "Significance" section hoped to derive OCF (`H = I(Omega, 2)`) from this identity. The order is now reversed: OCF is
-  a theorem (Grinberg-Stanley arXiv:2307.05569; Lass; Irving-Omar arXiv:2412.10572 for the mod-4 refinement, per
-  CORE-PAPERS), so THM-013 holds for all `n` (THM-4876 (4)); its file carries a dated upgrade section.
-* **THM-017 (March 2026)** proves `B(L_i, R_j) = B(L_j, R_i)` for the signed subset convolutions at an arc. THM-4876 (4)
-  shows the unsigned convolutions give the flip increment, `H(T') - H(T) = U(L_j, R_i) - U(L_i, R_j)`: the two
-  theorems are the signed and unsigned faces of the same decomposition of Hamiltonian paths at the flipped arc.
+  a theorem (Grinberg-Stanley arXiv:2307.05569, Theorem 1.39, with the mod-4 refinement their Theorem 7.1; Irving-Omar
+  arXiv:2412.10572 is the matrix-algebra consolidation, Corollary 20), so THM-013 holds for all `n`. Audit C (C1):
+  this closure is not new - PROP-001 and THM-002/CONJ-001 (kind-pasteur S12, 2026-03-05) already record
+  `Delta H = Delta I(Omega, 2)` for all `n` as a corollary of Grinberg-Stanley; THM-013's status line was merely stale,
+  and its file now carries a dated cross-reference section saying so.
+* **THM-017 (March 2026)** proves `B(L_i, R_j) = B(L_j, R_i)` for the signed subset convolutions at an arc. The unsigned
+  convolutions give the flip increment, `H(T') - H(T) = U(L_j, R_i) - U(L_i, R_j)`: the two theorems are the signed and
+  unsigned faces of the same decomposition of Hamiltonian paths at the flipped arc. Audit C (C1): the unsigned face is
+  also March-2026 canon (THM-013 "Significance", THM-014's `h_end x h_start` convolutions, THM-017/MISTAKE-008's
+  `Delta(S, R) = L_j(S) R_i(R) - L_i(S) R_j(R)`), so THM-4876 (4) is a restatement typed KNOWN, not a new result.
 * **The numerals.** `13` is the only count besides `3, 5, 11` with a unique strong realiser through order `9`
   (HYP-9453 (3)); it is not a one-centre count (THM-4876 (6): `N(A) = 6` is missed). `17 = 2^4 + 1` is the one-centre
   count of `A = {1}`, `m = 5`, attained at least order `6` (THM-4861), and the vertex `5` of that tournament ends exactly
@@ -66,15 +72,17 @@ NUMERICAL (HYP-9469) + OPEN (Chan-Pak).
   for `h = 5, 9, ..., 39`; the `h`-sets of the increment levels `2k`, `k = 1..6`: `{1,3}`, `{1,5}`, `{3,5,9}`,
   `{1,5,9,11}`, `{1,3,5,9,13,15,17}`, `{3,5,11,13,15,17,19}`.
 * **Extension spectra (FINITE-EXACT, orders 3-8 for `X`).** No `X` with `h >= 5` has `h + 2 in E(X)`; the longest run
-  of consecutive odd values in `E(X)` has length `<= 24` at order `8`; no `E(X)` covers `[2h + 1, 3h]`. So neither
-  "every odd in `[h, 2h - 1]`" nor a window `[ch, c'h]` can be reached from one realiser, and the two natural
-  one-vertex inductions for Chan-Pak are impossible.
+  of consecutive odd values in `E(X)` has length `<= 24` at order `8`; for `h notin {1, 5}` no `E(X)` of order `<= 8`
+  covers `odd[2h + 1, 3h]` (audit C, direct containment; the strong 4-tournament `E = {5, 9, 11, 13, 15}` and its
+  paddings do). So "every odd in `[h, 2h - 1]`" cannot be reached from one realiser at any order (PROVED, THM-4876
+  (2)), and the window induction is unavailable through order `8` (FINITE-EXACT).
 * **End-count bound (PROVED after the checkpoint, THM-4876 (7)).** A non-sink vertex `a` ends at most `(h - 1)/2`
   of the `h` Hamiltonian paths: inserting `a` before its first out-neighbour along a path ending at `a` is an injection
   into the paths not ending at `a` whose last vertex beats `a`, and at least one path ends at an out-neighbour of `a`
-  (every vertex of the last strong component ends a path). Equality at the vertex `k + 1` of the reversed-extreme-arc
-  tournament (`h = 2^k + 1`); exhaustive to order `9` (maximum `64/129`). It sharpens THM-4873 (i) for `h >= 5` and gives
-  the sole-exit increment `>= (h + 1)/4`.
+  (every vertex of the last strong component ends a path). Equality at the penultimate vertex of `TT_(k+2)` with its
+  extreme arc reversed (`h = 2^k + 1`); exhaustive to order `9` (maximum `64/129`). It sharpens THM-4873 (i) for `h >= 5`
+  and, through THM-4862 (a)'s law `H(X + v) = 2h - e_a + sigma`, `sigma >= 0`, raises the sole-exit count by at least
+  `(h + 1)/2` (`k >= (h + 1)/4` in the half normalisation of HYP-9469 (1)).
 * **One-centre family (PROVED).** `H(TT_m + u) = 1 + 2 sum_{a in A, b notin A, a < b} c(b - a)`; `A = {1..i}`,
   `m = i + l` gives `(2^i - 1)(2^l - 1) + 2` (a two-parameter family containing `11, 23, 47, 51, 95, 107, 227, ...`);
   `7` is not a one-centre count; the family realises about half of the odd numbers. A second centre with a monotone cut
@@ -110,4 +118,22 @@ is the "transitive parent" of the digital bank.
 
 ## 6. Audit
 
-Pending at this checkpoint.
+Audit C (statements 1-6; `chanpak_increments_audit_C_20261104.md`, independent C census through order 10): PASS WITH
+CORRECTIONS, fourteen items, all applied (MISTAKE-715): C1 statement 4 is March-2026 canon (PROP-001, THM-013/014/017,
+MISTAKE-008), retyped KNOWN and the THM-013/017 sections redated; C2 the `[2h + 1, 3h]` sentence was false for the
+realisers of `h = 5` (and `h = 1`), repaired to `h notin {1, 5}` with a direct containment test; C3 `odd[h, 2h - 1]`
+is covered by the seven order-8 tournaments with `h in {1, 3}`; C4/C5 Lass dropped, the mod-4 refinement is
+Grinberg-Stanley's Theorem 7.1; C6 only the two single-triangle vertices of the strong 4-tournament give `5 - 3`; C7 the
+`N(A) = 3` argument completed; C8 the sole-exit increment is `(h + sigma - e_a)/2`; C9 the equality family relabelled;
+C10 the `3k - 1` clause deleted; C11 level sets complete from order 7 of `T`; C12 "every induction" retyped; C13
+`k_min >= 3` is FINITE-EXACT; C14 `h/3.5` replaced by the range. Audit C added: statements 2 and 3 exhaustive through
+order `10`, `k_min(h) >= h/4` for every `h` at order `10` (least `33/129`, the sole-exit cuts of `R_(k+2)`), the levels
+`k = 7..12`, and the end-count bound through order `10` (`128/257`). Audit D (statement 7): pending. Author's
+corrections before audit D
+(both pushed for about ten minutes in 87ac336954, corrected in the next commit): the first text of statement 7's
+consequence asserted `H(X + v) = 2h - e_a` for the sole-exit extension, forgetting the `sigma` term of THM-4862 (a) -
+the same two-paths slip as the near miss of section 0 (`sigma` reaches 105 at order 6, and `sigma = 0` in only 9,454 of
+195,506 non-sink cases) - and the equality family was labelled `TT_(k+1)` with the arc `(1, k + 1)` reversed at vertex
+`k + 1`, which is the order-`(k+1)` member with `h = 2^(k-1) + 1`; the member with `h = 2^k + 1` is `TT_(k+2)` with the
+arc `(1, k + 2)` reversed, and the bound is attained at its penultimate vertex (`verify_stmt7_consequences.py`). The
+bound and its proof were not affected.

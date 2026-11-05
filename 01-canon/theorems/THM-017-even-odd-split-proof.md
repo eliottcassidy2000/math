@@ -114,6 +114,8 @@ equivalent to it. Proving OCF for all n requires additionally proving delta_H = 
 
 `B(L_i, R_j)` and `B(L_j, R_i)` are the signed subset convolutions of the arc flip `i -> j`; their unsigned
 companions `U(L_i, R_j)` and `U(L_j, R_i)` count the Hamiltonian paths of `T` with `i` immediately before `j` and of
-`T'` with `j` immediately before `i`, and `H(T') - H(T) = U(L_j, R_i) - U(L_i, R_j)`. With the odd-cycle formula now
-a theorem (Grinberg--Stanley), THM-013's `DeltaH = DeltaI(Omega, 2)` holds for all `n`, and the "still open" item 6 of the
-list above (OCF for all n) is closed by citation, not by this identity.
+`T'` with `j` immediately before `i`, and `H(T') - H(T) = U(L_j, R_i) - U(L_i, R_j)`. With the odd-cycle formula a
+theorem (Grinberg--Stanley, arXiv:2307.05569, Theorem 1.39), THM-013's `DeltaH = DeltaI(Omega, 2)` holds for all `n`, and
+the "still open" item 6 of the list above (OCF for all n) was closed by citation in THM-002/CONJ-001 and PROP-001
+(2026-03-05), not by this identity; the unsigned form of the difference is already MISTAKE-008's `Delta(S, R)` (audit C
+of THM-4876, 2026-11-04).

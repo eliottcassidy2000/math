@@ -1,9 +1,12 @@
 ---
 id: HYP-9469
-title: "After THM-4876: (1) the minimal deletion increment k_min(h) = min {(H(T) - H(T - v))/2 > 0 : H(T - v) = h} grows linearly, k_min(h) >= h/4 for h >= 5 (census: k_min(h)/h in [0.27, 0.40] for 5 <= h <= 39, orders of T up to 9); equivalently a vertex lying on an odd cycle of T raises the count of T - v by at least a fixed fraction; (2) for every k the set of h with an increment of exactly 2k is finite: increment 4 forces h in {1, 5}, 6 forces {3, 5, 9}, 8 forces {1, 5, 9, 11}, and in general h <= 3k - 1 (?); (3) the one-centre value set {1 + 2N(A)} has density exactly 1/2 among the odd numbers and its complement 7, 13, 21, 29, 35, 41, 43, 49, 55, 57, 59, 67, ... (not in OEIS) has a recognisable structure; (4) the end-count bound e_a <= (h - 1)/2 for non-sinks, now PROVED as THM-4876 (7) (equality on 2^k + 1; census maxima 2/5, 4/9, 8/17, 16/33, 32/65, 64/129 at orders 4-9), which proves the sole-exit half of (1); (5) what remains for Chan-Pak: completeness needs unions over realisers (the digital banks) or products; the two prime lanes p and 7p of THM-4094 stand"
+title: "After THM-4876: (1) the minimal deletion increment k_min(h) = min {(H(T) - H(T - v))/2 > 0 : H(T - v) = h} grows linearly, k_min(h) >= h/4 for h >= 5 (census: k_min(h)/h in [0.26, 0.40] for 5 <= h <= 59, orders of T up to 10; audit C: holds for every h attained at order 10, least ratio 33/129); equivalently a vertex lying on an odd cycle of T raises the count of T - v by at least a fixed fraction; (2) for every k the set of h with an increment of exactly 2k is finite: increment 4 forces h in {1, 5}, 6 forces {3, 5, 9}, 8 forces {1, 5, 9, 11}, and in general h <= 4k (levels k = 7..12 have h_max = 23, 29, 33, 33, 39, 37 at orders <= 10, audit C); (3) the one-centre value set {1 + 2N(A)} has density exactly 1/2 among the odd numbers and its complement 7, 13, 21, 29, 35, 41, 43, 49, 55, 57, 59, 67, ... (not in OEIS) has a recognisable structure; (4) the end-count bound e_a <= (h - 1)/2 for non-sinks, now PROVED as THM-4876 (7) (equality on 2^k + 1; census maxima 2/5, 4/9, 8/17, 16/33, 32/65, 64/129 at orders 4-9), which proves the sole-exit half of (1); (5) what remains for Chan-Pak: completeness needs unions over realisers (the digital banks) or products; the two prime lanes p and 7p of THM-4094 stand"
 status: >
-  (1) NUMERICAL (orders of T up to 9, h <= 39, plus the order-10 run for h <= 60 when complete); the only proved
-  cases are k_min(h) >= 2 for h >= 5 (THM-4876 (2)) and k_min(h) >= 3 for h notin {1, 5} (THM-4876 (3), census).
+  (1) NUMERICAL (orders of T up to 10: h <= 59 by the session's order-9 run, every h attained at order 10 by audit C's
+  census, least ratio 33/129); the only proved cases are k_min(h) >= 2 for h >= 5 (THM-4876 (2)) and the sole-exit
+  cuts, k >= (h + 1)/4 (THM-4876 (7)); k_min(h) >= 3 for h notin {1, 5} is FINITE-EXACT (orders of T up to 10), not
+  proved. Audit C (2026-11-04, chanpak_increments_audit_C_20261104.md) PASS WITH CORRECTIONS, applied (C8-C13,
+  MISTAKE-715).
   (2) PROVED for 2k = 2 (THM-4876 (2)), NUMERICAL for 2k = 4, 6, 8. (3) NUMERICAL (200,000). (4) PROVED (THM-4876 (7),
   written after this hypothesis was filed; the order-9 check found no violation, maximum 64/129).
   (5) a reading of THM-4876 (5) and the inheritance, no claim. Pre-registered tests below.
@@ -25,11 +28,12 @@ related:
    (orders of `T` up to `10`; least ratio `13/49 = 0.265`). The sole-exit cuts satisfy it by THM-4876 (7). By Claim
    A the increment is `sum_C H(T - V(C))` over the odd cycles through `v`; the conjecture says that a vertex on an odd
    cycle cannot have all those complements small while `T - v` has many paths. The sole-exit cut gives the increment
-   `(h - e_a)/2`, so (1) would follow from (4) for those cuts, but the minimum is not always a sole-exit cut.
+   `(h + sigma - e_a)/2` with `sigma >= 0` (THM-4862 (a); `sigma = 0` in only 53 of the 420 `(T, a)` of orders `2-6`,
+   audit C), so (1) follows from (4) for those cuts (THM-4876 (7)), but the minimum is not always a sole-exit cut.
 2. **Finiteness of each increment level.** For each `k >= 1` the set `{H(T - v) : H(T) - H(T - v) = 2k}` is finite,
    with largest element at most `4k` (the restatement of (1)). Proved for `k = 1` (`{1, 3}`); census (orders of `T`
    up to `9`, `endcount_ratio.py`): `k = 2`: `{1, 5}`; `k = 3`: `{3, 5, 9}`; `k = 4`: `{1, 5, 9, 11}`; `k = 5`:
-   `{1, 3, 5, 9, 13, 15, 17}`; `k = 6`: `{3, 5, 11, 13, 15, 17, 19}` (stable from order `6` on). A proof would classify
+   `{1, 3, 5, 9, 13, 15, 17}`; `k = 6`: `{3, 5, 11, 13, 15, 17, 19}` (complete from order `7` of `T`, i.e. order `6` of `X`, on; unchanged at order `10`, audit C; `endcount_ratio_n8.out`). A proof would classify
    the configurations of `k` odd cycles through `v` whose complement counts sum to `k`, as THM-4876 (2) does for one
    triangle.
 3. **One-centre density.** The set `{1 + 2 N(A)}` of THM-4876 (6) contains exactly half of the odd numbers in the
@@ -38,11 +42,14 @@ related:
    Neither the attained nor the missing set is in OEIS (2026-11-04).
 4. **End-count bound (now THM-4876 (7), PROVED).** If `a` is not a sink of `X` and `H(X) = h`, then `e_a(X) <= (h - 1)/2`, where `e_a` counts the
    Hamiltonian paths ending at `a`; equality holds in the reversed-extreme-arc family (`h = 2^k + 1`, `e_a = 2^(k-1)`
-   at the vertex `k + 1` of `TT_(k+1)` with the arc `(1, k+1)` reversed). Census (`endcount_ratio.py`): the maximum of
-   `e_a/h` over non-sinks is `2/5, 4/9, 8/17, 16/33, 32/65` at orders `4, 5, 6, 7, 8`, always `(h - 1)/(2h)`.
+   at the penultimate vertex `k + 1` of `TT_(k+2)` with the arc `(1, k + 2)` reversed). Census (`endcount_ratio.py`): the maximum of
+   `e_a/h` over non-sinks is `2/5, 4/9, 8/17, 16/33, 32/65, 64/129, 128/257` at orders `4, ..., 10` (`9` by the session,
+   `10` by audit C), always `(h - 1)/(2h)` at `h = 2^(n-2) + 1`.
    THM-4873 (i) gives the first two steps (`e_a != h - 1`; `e_a = h - 2` only at `h = 3`). For the sole-exit cut the
-   increment is `(h - e_a)/2`, so this bound gives `k_min(h) >= (h + 1)/4` on sole-exit cuts.
-5. **What remains for Chan-Pak.** THM-4876 (5) rules out every induction that extends one realiser by one vertex. The
+   increment is `(h + sigma - e_a)/2 >= (h - e_a)/2` (THM-4862 (a)), so this bound gives `k >= (h + 1)/4` on sole-exit
+   cuts (THM-4876 (7)).
+5. **What remains for Chan-Pak.** THM-4876 (2) rules out the induction through `[h, 2h - 1]` from one realiser at every order, and THM-4876 (5)
+   leaves no window induction through order `8` (FINITE-EXACT; the realisers of `h = 5` are the exception). The
    open statement is unchanged: strong realisation of the two lanes `p` (odd prime `p != 7`) and `7p` (THM-4094), or
    the tiling law HYP-9029, or the density of `B`-sets HYP-9453 (2); the digital bank proves it to `10^8`.
 
