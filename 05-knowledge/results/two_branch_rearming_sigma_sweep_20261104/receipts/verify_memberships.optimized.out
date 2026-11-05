@@ -15,4 +15,12 @@
 38629 in R2(13): order 13, H = 38629, strong = True, sole exit 0 -> 11, digit e_r(T - 0) = 2 OK
 12871 in R1(15): order 15, H = 12871, strong = True, sole exit 0 -> 8, digit e_r(T - 0) = 1 OK
 38635 in R1(15): order 15, H = 38635, strong = True, sole exit 0 -> 11, digit e_r(T - 0) = 1 OK
+38633 in R2(14): order 14, H = 38633, strong = True, sole exit 0 -> 12, digit e_r(T - 0) = 2 OK
+12871 in R2(14): order 14, H = 12871, strong = True, sole exit 0 -> 7, digit e_r(T - 0) = 2 OK
+12875 in R2(14): order 14, H = 12875, strong = True, sole exit 0 -> 8, digit e_r(T - 0) = 2 OK
+12877 in R2(14): order 14, H = 12877, strong = True, sole exit 0 -> 10, digit e_r(T - 0) = 2 OK
+38611 in R2(14): order 14, H = 38611, strong = True, sole exit 0 -> 10, digit e_r(T - 0) = 2 OK
+38617 in R2(14): order 14, H = 38617, strong = True, sole exit 0 -> 11, digit e_r(T - 0) = 2 OK
+38629 in R2(14): order 14, H = 38629, strong = True, sole exit 0 -> 10, digit e_r(T - 0) = 2 OK
+38635 in R2(14): order 14, H = 38635, strong = True, sole exit 0 -> 11, digit e_r(T - 0) = 2 OK
 ALL OK
