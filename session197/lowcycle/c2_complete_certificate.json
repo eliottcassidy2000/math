@@ -1,0 +1,70 @@
+{
+  "R5_automorphism_order": 5,
+  "R5_root_start_counts": [
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "all_order_classification": "Every strong C2 tournament is regular5 or has a strong bridge.",
+  "complete_max_order": 6,
+  "degree_cover_bounds": [
+    3,
+    5,
+    6,
+    6,
+    5
+  ],
+  "labelled_C2_counts_by_order": [
+    0,
+    0,
+    0,
+    0,
+    144,
+    3600
+  ],
+  "labelled_tournaments": 33867,
+  "literal_cycle_insertion_checks": 15960,
+  "matched_triangle_cases": 2,
+  "physical_degree_cover_cases": 504,
+  "regular_five_insertion_cases": 20,
+  "status": "PASS",
+  "two_strong_inventory": [
+    {
+      "cycle_histogram": {},
+      "order": 1,
+      "two_strong_labelled": 0
+    },
+    {
+      "cycle_histogram": {},
+      "order": 2,
+      "two_strong_labelled": 0
+    },
+    {
+      "cycle_histogram": {},
+      "order": 3,
+      "two_strong_labelled": 0
+    },
+    {
+      "cycle_histogram": {},
+      "order": 4,
+      "two_strong_labelled": 0
+    },
+    {
+      "cycle_histogram": {
+        "2": 24
+      },
+      "order": 5,
+      "two_strong_labelled": 24
+    },
+    {
+      "cycle_histogram": {
+        "4": 720,
+        "5": 1920
+      },
+      "order": 6,
+      "two_strong_labelled": 2640
+    }
+  ]
+}
