@@ -1,0 +1,8 @@
+PASS rooted_sides 5597 literal_edge_flip_partitions 5597 positive_clone_controls 570 maximum_square_deficit 169
+FAMILY 1 17 C 1
+FAMILY 2 49 C 1
+FAMILY 3 161 C 1
+FAMILY 4 577 C 1
+FAMILY 5 2177 C 1 rows 190 124 120 112 96 64 1 8318 255 511 1023 2047 4095 8063
+FAMILY 6 8449 C 1
+C3_boundary_rows 10 4 1 38 15 23 H 17
