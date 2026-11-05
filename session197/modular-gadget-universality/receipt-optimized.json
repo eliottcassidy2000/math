@@ -1,0 +1,84 @@
+{
+  "arbitrary_loop_state_checks": 240,
+  "dyadic_joint_residue_checks": 1331,
+  "examples": [
+    {
+      "H": 9,
+      "L": 5,
+      "g": 5,
+      "k": 1,
+      "target_residue": 1,
+      "word_bits": 3
+    },
+    {
+      "H": 33,
+      "L": 17,
+      "g": 17,
+      "k": 2,
+      "target_residue": 1,
+      "word_bits": 5
+    },
+    {
+      "H": 595,
+      "L": 305,
+      "g": 291,
+      "k": 2,
+      "target_residue": 3,
+      "word_bits": 9
+    },
+    {
+      "H": 129,
+      "L": 65,
+      "g": 65,
+      "k": 3,
+      "target_residue": 1,
+      "word_bits": 7
+    },
+    {
+      "H": 4572371,
+      "L": 2300097,
+      "g": 2272275,
+      "k": 3,
+      "target_residue": 3,
+      "word_bits": 22
+    },
+    {
+      "H": 4455,
+      "L": 2241,
+      "g": 2215,
+      "k": 3,
+      "target_residue": 7,
+      "word_bits": 12
+    },
+    {
+      "H": 513,
+      "L": 257,
+      "g": 257,
+      "k": 4,
+      "target_residue": 1,
+      "word_bits": 9
+    },
+    {
+      "H": 1150151079427,
+      "L": 575934677761,
+      "g": 574216401667,
+      "k": 4,
+      "target_residue": 3,
+      "word_bits": 40
+    },
+    {
+      "H": 280829735,
+      "L": 140624641,
+      "g": 140205095,
+      "k": 4,
+      "target_residue": 7,
+      "word_bits": 28
+    }
+  ],
+  "fixed_prefix_residue_checks": 252,
+  "general_constructed_pair_sha256": "515bc8ff9689e264e3b1f70df57e4800075f19c3dff70c4c91ea0d686dadbe3b",
+  "general_joint_residue_checks": 5740,
+  "literal_graph_pairs": 67,
+  "scope": "Residue universality only; no exact-target, cofinite or infinite-primality assertion.",
+  "status": "PASS"
+}

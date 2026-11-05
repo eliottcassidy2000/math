@@ -1,0 +1,12 @@
+{
+  "dyadic_joint_pairs": 10938,
+  "fixed_prefix_pairs": 43688,
+  "general_joint_pairs": 22880,
+  "general_word_digest": "b274fe3ca5c8ae50c42036f5526be0e35038f93d9b332ee575b6619f73fb3e53",
+  "literal_graph_pairs": 131,
+  "loop_state_controls": 2640,
+  "neutral_padding_controls": 10922,
+  "scope": "Constructive congruence coverage only; no exact target or primality implication.",
+  "status": "PASS",
+  "suffix_translation_controls": 3168
+}
