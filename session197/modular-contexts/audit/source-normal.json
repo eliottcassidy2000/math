@@ -1,0 +1,276 @@
+{
+  "Newton_modular_closure_controls": 10875,
+  "actual_context_profiles": 2175,
+  "arbitrary_rooted_contexts": 29,
+  "central_wrapper_controls": 1200,
+  "cutoff_controls": 274,
+  "finite_quotients": [
+    {
+      "M": 5,
+      "global_classes": 49,
+      "joint_added_order_bound": 10,
+      "joint_length_bound": 4,
+      "matrices": {
+        "evenD": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "evenE": [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "oddD": [
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "oddE": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "maximum_shortest_word": 7,
+      "nonempty_return_word": "DDDDDEE",
+      "nonzero_return_states": 48,
+      "observed_max_min_length": 4,
+      "observed_max_min_order": 10,
+      "positive_steering_targets": 240,
+      "state_word_sha256": "966a6a02012b64cc70d8e25dc79c294ea205a196f87d4ce22b4a8aea2732d0de",
+      "tagged_orbit": 48,
+      "worst_order_example": [
+        [
+          false,
+          [
+            1,
+            4
+          ]
+        ],
+        2,
+        [
+          4,
+          10,
+          "DDEE"
+        ]
+      ]
+    },
+    {
+      "M": 7,
+      "global_classes": 685,
+      "joint_added_order_bound": 13,
+      "joint_length_bound": 5,
+      "matrices": {
+        "evenD": [
+          [
+            5,
+            1,
+            0
+          ],
+          [
+            5,
+            5,
+            1
+          ],
+          [
+            0,
+            4,
+            0
+          ]
+        ],
+        "evenE": [
+          [
+            4,
+            3,
+            0
+          ],
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            2,
+            6,
+            2
+          ]
+        ],
+        "oddD": [
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            6,
+            3,
+            1
+          ],
+          [
+            0,
+            5,
+            5
+          ]
+        ],
+        "oddE": [
+          [
+            5,
+            3,
+            0
+          ],
+          [
+            5,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ]
+      },
+      "maximum_shortest_word": 14,
+      "nonempty_return_word": "DEDDDDDDEEE",
+      "nonzero_return_states": 684,
+      "observed_max_min_length": 5,
+      "observed_max_min_order": 13,
+      "positive_steering_targets": 4788,
+      "state_word_sha256": "b3dee87ee5d7b2bd5e0c8a8f292f1b9c2c7e11a467a0f170fa327db20862d143",
+      "tagged_orbit": 686,
+      "worst_order_example": [
+        [
+          false,
+          [
+            1,
+            4,
+            5
+          ]
+        ],
+        3,
+        [
+          5,
+          13,
+          "EDEED"
+        ]
+      ]
+    }
+  ],
+  "status": "PASS",
+  "uniform_recurrences": [
+    {
+      "first16_mod7": [
+        1,
+        5,
+        2,
+        4,
+        6,
+        5,
+        0,
+        3,
+        0,
+        1,
+        6,
+        2,
+        2,
+        1,
+        1,
+        3
+      ],
+      "matrix": [
+        [
+          5,
+          1,
+          0
+        ],
+        [
+          12,
+          12,
+          1
+        ],
+        [
+          0,
+          60,
+          21
+        ]
+      ],
+      "odd": false
+    },
+    {
+      "first16_mod7": [
+        1,
+        3,
+        1,
+        4,
+        2,
+        1,
+        4,
+        2,
+        1,
+        4,
+        2,
+        1,
+        4,
+        2,
+        1,
+        4
+      ],
+      "matrix": [
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          6,
+          10,
+          1
+        ],
+        [
+          0,
+          40,
+          19
+        ]
+      ],
+      "odd": true
+    }
+  ],
+  "zero_class_C5": {
+    "profile": [
+      0,
+      4,
+      0,
+      10,
+      0,
+      1
+    ],
+    "rows": [
+      6,
+      12,
+      24,
+      17,
+      3
+    ]
+  }
+}
