@@ -1,0 +1,47 @@
+(1) one-apex triple (g(v), [v even], 1+v) vs direct counts: 8191 words of length 0..12, 0 failures
+(2) bank of order <= 6 with explicit witnesses: 254 triples
+  N=22193: F1 v=1911 u=10, order 17: direct H = 22193 OK (0.0s)
+  N=17817: F1 v=4281 u=2, order 17: direct H = 17817 OK (0.0s)
+  N=1456103: F2 v=16277 y=(43,7,75) order(S)=6, order 21: direct H = 1456103 OK (0.1s)
+  N=4493: F1 v=2894 u=0, order 14: direct H = 4493 OK (0.0s)
+  N=1693863: F2 v=124702 y=(3,0,12) order(S)=4, order 22: direct H = 1693863 OK (0.2s)
+  N=765843: F1 v=572821 u=0, order 22: direct H = 765843 OK (0.2s)
+  N=49781: F1 v=25424 u=0, order 17: direct H = 49781 OK (0.0s)
+  N=9151: F1 v=212 u=26, order 15: direct H = 9151 OK (0.0s)
+  N=2965979: no witness of order <= 22 in F1 or F2(order<=6 bank) [skipped]
+  N=513731: F1 v=95052 u=2, order 21: direct H = 513731 OK (0.1s)
+  N=8049661: no witness of order <= 22 in F1 or F2(order<=6 bank) [skipped]
+  N=7120937: no witness of order <= 22 in F1 or F2(order<=6 bank) [skipped]
+  N=816079: F1 v=428824 u=0, order 21: direct H = 816079 OK (0.1s)
+  N=18809: F1 v=10754 u=0, order 16: direct H = 18809 OK (0.0s)
+  N=1614823: F2 v=25390 y=(25,2,50) order(S)=6, order 22: direct H = 1614823 OK (0.2s)
+  N=10167: F1 v=699 u=12, order 16: direct H = 10167 OK (0.0s)
+  N=10885: F1 v=952 u=6, order 15: direct H = 10885 OK (0.0s)
+  N=91221: F1 v=74019 u=0, order 19: direct H = 91221 OK (0.0s)
+  N=3625611: no witness of order <= 22 in F1 or F2(order<=6 bank) [skipped]
+  N=462291: F1 v=52837 u=6, order 21: direct H = 462291 OK (0.1s)
+  N=694151: F1 v=59400 u=6, order 21: direct H = 694151 OK (0.1s)
+  N=5882831: no witness of order <= 22 in F1 or F2(order<=6 bank) [skipped]
+  N=393743: F1 v=82150 u=2, order 21: direct H = 393743 OK (0.1s)
+  N=214001: F1 v=11968 u=8, order 20: direct H = 214001 OK (0.0s)
+  N=7341: F1 v=4394 u=0, order 15: direct H = 7341 OK (0.0s)
+  N=1785907: F2 v=32507 y=(31,3,51) order(S)=6, order 22: direct H = 1785907 OK (0.2s)
+  N=23047: F1 v=12292 u=0, order 16: direct H = 23047 OK (0.0s)
+  N=244437: F1 v=133940 u=0, order 20: direct H = 244437 OK (0.0s)
+  N=6977: F1 v=4526 u=0, order 15: direct H = 6977 OK (0.0s)
+  N=142429: F1 v=18491 u=6, order 20: direct H = 142429 OK (0.0s)
+  N=166667: F1 v=84000 u=0, order 19: direct H = 166667 OK (0.0s)
+  N=1264405: F1 v=1820 u=428, order 22: direct H = 1264405 OK (0.2s)
+  N=57235: F1 v=34122 u=0, order 18: direct H = 57235 OK (0.0s)
+  N=359363: F1 v=47783 u=6, order 21: direct H = 359363 OK (0.1s)
+  N=438151: F2 v=13342 y=(11,1,27) order(S)=5, order 20: direct H = 438151 OK (0.0s)
+  N=40527: F1 v=9861 u=2, order 18: direct H = 40527 OK (0.0s)
+  N=5246965: no witness of order <= 22 in F1 or F2(order<=6 bank) [skipped]
+  N=32207: F1 v=16808 u=0, order 17: direct H = 32207 OK (0.0s)
+  N=7531: F1 v=4172 u=0, order 15: direct H = 7531 OK (0.0s)
+  N=441273: F1 v=272134 u=0, order 21: direct H = 441273 OK (0.1s)
+(2) witnesses checked 34 (F1 29, F2 5): 34 OK, 0 mismatches
+
+real	0m38.287s
+user	0m0.016s
+sys	0m0.015s

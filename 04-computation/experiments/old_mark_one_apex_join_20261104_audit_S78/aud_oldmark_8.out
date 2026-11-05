@@ -1,0 +1,13 @@
+# aud_oldmark NMAX=8
+order 1: classes 1 (A000568: 1) OK | (B,a) 1 | failures: D 0, D+ 0, native 0, sink formula 0 (of 0), min4 0, digit-4 iff (TT,penult,sink) 0, non-sink>=9 0, RESULT(12) 0, mark-sink 0, mark d=1 0 | min old -1, min non-sink old -1 (count of 9s 0; 9 iff (TT, a sink, w penultimate) failures 0), digit-4 cases 0, min mark d=1 -1
+order 2: classes 1 (A000568: 1) OK | (B,a) 2 | failures: D 0, D+ 0, native 0, sink formula 0 (of 1), min4 0, digit-4 iff (TT,penult,sink) 0, non-sink>=9 0, RESULT(12) 0, mark-sink 0, mark d=1 0 | min old 4, min non-sink old 9 (count of 9s 1; 9 iff (TT, a sink, w penultimate) failures 0), digit-4 cases 1, min mark d=1 2
+order 3: classes 2 (A000568: 2) OK | (B,a) 6 | failures: D 0, D+ 0, native 0, sink formula 0 (of 2), min4 0, digit-4 iff (TT,penult,sink) 0, non-sink>=9 0, RESULT(12) 0, mark-sink 0, mark d=1 0 | min old 4, min non-sink old 9 (count of 9s 1; 9 iff (TT, a sink, w penultimate) failures 0), digit-4 cases 1, min mark d=1 2
+order 4: classes 4 (A000568: 4) OK | (B,a) 16 | failures: D 0, D+ 0, native 0, sink formula 0 (of 6), min4 0, digit-4 iff (TT,penult,sink) 0, non-sink>=9 0, RESULT(12) 0, mark-sink 0, mark d=1 0 | min old 4, min non-sink old 9 (count of 9s 1; 9 iff (TT, a sink, w penultimate) failures 0), digit-4 cases 1, min mark d=1 2
+order 5: classes 12 (A000568: 12) OK | (B,a) 60 | failures: D 0, D+ 0, native 0, sink formula 0 (of 16), min4 0, digit-4 iff (TT,penult,sink) 0, non-sink>=9 0, RESULT(12) 0, mark-sink 0, mark d=1 0 | min old 4, min non-sink old 9 (count of 9s 1; 9 iff (TT, a sink, w penultimate) failures 0), digit-4 cases 1, min mark d=1 2
+order 6: classes 56 (A000568: 56) OK | (B,a) 336 | failures: D 0, D+ 0, native 0, sink formula 0 (of 60), min4 0, digit-4 iff (TT,penult,sink) 0, non-sink>=9 0, RESULT(12) 0, mark-sink 0, mark d=1 0 | min old 4, min non-sink old 9 (count of 9s 1; 9 iff (TT, a sink, w penultimate) failures 0), digit-4 cases 1, min mark d=1 2
+order 7: classes 456 (A000568: 456) OK | (B,a) 3192 | failures: D 0, D+ 0, native 0, sink formula 0 (of 336), min4 0, digit-4 iff (TT,penult,sink) 0, non-sink>=9 0, RESULT(12) 0, mark-sink 0, mark d=1 0 | min old 4, min non-sink old 9 (count of 9s 1; 9 iff (TT, a sink, w penultimate) failures 0), digit-4 cases 1, min mark d=1 2
+order 8: classes 6880 (A000568: 6880) OK | (B,a) 55040 | failures: D 0, D+ 0, native 0, sink formula 0 (of 3192), min4 0, digit-4 iff (TT,penult,sink) 0, non-sink>=9 0, RESULT(12) 0, mark-sink 0, mark d=1 0 | min old 4, min non-sink old 9 (count of 9s 1; 9 iff (TT, a sink, w penultimate) failures 0), digit-4 cases 1, min mark d=1 2
+
+real	0m2.469s
+user	0m0.015s
+sys	0m0.015s

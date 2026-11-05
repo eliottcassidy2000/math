@@ -1,0 +1,13 @@
+# aud_gadget MFIT=5; probe triples (1,1,1) (1,0,2) (3,1,3)
+probe determinant 2
+test bases: 75 of order <= 4 (all labelled, root 0) + 14 of order 5-6
+order 1: (G,u,z) 1 | fitted | fitted-nonintegral 0 | linearity checks 89 failures 0 | fitted vs closed formula mismatches 0 | adjoint failures 0 (fitted matrices) | det: -1:0 0:0 1:1 other:0
+order 2: (G,u,z) 8 | fitted | fitted-nonintegral 0 | linearity checks 712 failures 0 | fitted vs closed formula mismatches 0 | adjoint failures 0 (fitted matrices) | det: -1:0 0:6 1:2 other:0
+order 3: (G,u,z) 72 | fitted | fitted-nonintegral 0 | linearity checks 6408 failures 0 | fitted vs closed formula mismatches 0 | adjoint failures 0 (fitted matrices) | det: -1:0 0:54 1:12 other:6
+order 4: (G,u,z) 1024 | fitted | fitted-nonintegral 0 | linearity checks 91136 failures 0 | fitted vs closed formula mismatches 0 | adjoint failures 0 (fitted matrices) | det: -1:0 0:640 1:96 other:288
+order 5: (G,u,z) 25600 | fitted | fitted-nonintegral 0 | linearity checks 358400 failures 0 | fitted vs closed formula mismatches 0 | adjoint failures 0 (fitted matrices) | det: -1:120 0:12240 1:1080 other:12160
+order 6: (G,u,z) 1179648 | closed only | fitted-nonintegral 0 | linearity checks 0 failures 0 | fitted vs closed formula mismatches 0 | adjoint failures 0 (closed formula) | det: -1:2880 0:384768 1:17280 other:774720
+
+real	0m27.402s
+user	0m0.000s
+sys	0m0.031s

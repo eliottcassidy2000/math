@@ -1,7 +1,7 @@
 ---
 id: HYP-9468
 title: "Pre-registered out-of-sample checks. (P1) Every odd N <= 2^32 other than 7 and 21 is the Hamiltonian path count of a one-arc join of a one-apex tournament with a one-apex tournament or with a tournament of order <= 7. (P2) The one-apex x one-apex joins alone miss a vanishing proportion of odd numbers (growth ratio and density windows below). (P3) In C2 children of all order-8 bases, every old vertex other than the mark and the sink of B has digit >= 9, and the old-mark checks of THM-4875 (A) all pass"
-status: CONFIRMED (P1, P2 and P3 all hold out of sample, run after the pre-registration commit 19562af223); recorded as THM-4875 (D) and (A3)
+status: CONFIRMED (P1, P2 and P3 all hold out of sample, run after the pre-registration commit 19562af223; the independent audit reproduced P1 and P2 to 2^32 and P3 at order 8); P3's all-order conjecture PROVED by the audit (THM-4875 (A3)); recorded as THM-4875 (D) and (A3)
 session: opus-2026-11-04-S78
 date: 2026-11-04
 related: [THM-4875, THM-4873, THM-4866, THM-4865, HYP-9454]
@@ -81,3 +81,26 @@ checked by brute force on all 961 pairs of words of length <= 4.
 - 0 failures in every check.
 - Exactly one digit-4 old vertex.
 - The minimum non-sink old digit is 9, and the minimum mark digit at out-degree 1 is 2.
+
+## After the independent audit (PASS WITH CORRECTIONS; MISTAKE-716)
+
+Audit report: `04-computation/experiments/old_mark_one_apex_join_20261104_audit_S78/AUDIT.md`.
+
+- **Reproduction.** With its own g, bank and sieve, the audit's 2^32 run misses exactly {7, 21}, and its 22 F1-only
+  block counts equal the ones above. Its own class generation reproduces P3 at order 8. File times show both
+  pre-registered outputs postdate 19562af223.
+- **P2 indexing.** Read literally, P2 asked for m_(k+1)/m_k with k = 22..31, which needs m_32 (outside the run). The
+  ratios listed above are m_k/m_(k-1) for k = 22..31. All nine ratios inside the literal window (k = 22..30) lie in
+  [1.45, 1.75], as does m_22/m_21.
+- **P3's all-order conjecture is PROVED** (audit U1; THM-4875 (A3)). Every non-sink old vertex w != a of C2(B, a) has
+  digit >= 9, with equality iff B is transitive, a is its sink and w its penultimate vertex. The author-side labelled
+  check `nonsink_digit_nine_check_20261104.py` (orders 2-6, 972,230 cases) finds exactly n! digit-9 cases per order.
+- **F0 is redundant** (audit U3). g(2t) = F1(0, t) and g(2t + 1) = g(t), as also in Session 193 one_arc_joins/PROOF.md
+  section 3. F1 + F2 alone miss only 7 and 21 up to 2^28 (and so up to 2^32).
+- **Credits.**
+  - The one-apex triple is proved in session179 spectrum/REPORT.md (1).
+  - g is session124's f.
+  - THM-4876 (6) is the same family.
+  - F1 lies inside the two-feedback-vertex family, whose completeness is the OPEN conjecture of
+    square_sum_spectrum_overnight_20261030/README.md. Session191 two_apex covers that family to 230,519.
+  - P2's density statement is about a subfamily of it.

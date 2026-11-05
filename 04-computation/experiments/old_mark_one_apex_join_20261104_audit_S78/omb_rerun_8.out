@@ -1,0 +1,13 @@
+# old_mark_digit_bound_20261104 NMAX=8 (orders of B)
+|B|=1: classes 1, (B,a) pairs 1 | failures: (D) 0, native 0, sink formula 0 (of 0), non-sink old (d+2)(d+1) 0, old min>=4 0, digit-4 equality case 0 (digit-4 old marks 0), mark d=0 0, mark d=1 formula 0 (of 0), mark d>=2 0 | min old digit -1, min non-sink old digit -1, min mark digit at d=1 -1
+|B|=2: classes 1, (B,a) pairs 2 | failures: (D) 0, native 0, sink formula 0 (of 1), non-sink old (d+2)(d+1) 0, old min>=4 0, digit-4 equality case 0 (digit-4 old marks 1), mark d=0 0, mark d=1 formula 0 (of 1), mark d>=2 0 | min old digit 4, min non-sink old digit 9, min mark digit at d=1 2
+|B|=3: classes 2, (B,a) pairs 6 | failures: (D) 0, native 0, sink formula 0 (of 2), non-sink old (d+2)(d+1) 0, old min>=4 0, digit-4 equality case 0 (digit-4 old marks 1), mark d=0 0, mark d=1 formula 0 (of 4), mark d>=2 0 | min old digit 4, min non-sink old digit 9, min mark digit at d=1 2
+|B|=4: classes 4, (B,a) pairs 16 | failures: (D) 0, native 0, sink formula 0 (of 6), non-sink old (d+2)(d+1) 0, old min>=4 0, digit-4 equality case 0 (digit-4 old marks 1), mark d=0 0, mark d=1 formula 0 (of 6), mark d>=2 0 | min old digit 4, min non-sink old digit 9, min mark digit at d=1 2
+|B|=5: classes 12, (B,a) pairs 60 | failures: (D) 0, native 0, sink formula 0 (of 16), non-sink old (d+2)(d+1) 0, old min>=4 0, digit-4 equality case 0 (digit-4 old marks 1), mark d=0 0, mark d=1 formula 0 (of 14), mark d>=2 0 | min old digit 4, min non-sink old digit 9, min mark digit at d=1 2
+|B|=6: classes 56, (B,a) pairs 336 | failures: (D) 0, native 0, sink formula 0 (of 60), non-sink old (d+2)(d+1) 0, old min>=4 0, digit-4 equality case 0 (digit-4 old marks 1), mark d=0 0, mark d=1 formula 0 (of 52), mark d>=2 0 | min old digit 4, min non-sink old digit 9, min mark digit at d=1 2
+|B|=7: classes 456, (B,a) pairs 3192 | failures: (D) 0, native 0, sink formula 0 (of 336), non-sink old (d+2)(d+1) 0, old min>=4 0, digit-4 equality case 0 (digit-4 old marks 1), mark d=0 0, mark d=1 formula 0 (of 304), mark d>=2 0 | min old digit 4, min non-sink old digit 9, min mark digit at d=1 2
+|B|=8: classes 6880, (B,a) pairs 55040 | failures: (D) 0, native 0, sink formula 0 (of 3192), non-sink old (d+2)(d+1) 0, old min>=4 0, digit-4 equality case 0 (digit-4 old marks 1), mark d=0 0, mark d=1 formula 0 (of 3064), mark d>=2 0 | min old digit 4, min non-sink old digit 9, min mark digit at d=1 2
+
+real	0m0.754s
+user	0m0.015s
+sys	0m0.031s

@@ -1,0 +1,11 @@
+# aud_descent MMAX=5 bank=aud_bank7.txt (2732 triples)
+order 1: gadgets (G,u,z) 1 | h' >= R >= h violations 0 (of 2732 pairs) | h' = h cases 19, mismatches with [base port a sink, G transitive, u its source] 0 | det: unimodular 1, singular 0, |det|>=2 0
+   det histogram (-20..20, nonzero entries): 1:1
+order 2: gadgets (G,u,z) 8 | h' >= R >= h violations 0 (of 21856 pairs) | h' = h cases 76, mismatches with [base port a sink, G transitive, u its source] 0 | det: unimodular 2, singular 6, |det|>=2 0
+   det histogram (-20..20, nonzero entries): 0:6 1:2
+order 3: gadgets (G,u,z) 72 | h' >= R >= h violations 0 (of 196704 pairs) | h' = h cases 342, mismatches with [base port a sink, G transitive, u its source] 0 | det: unimodular 12, singular 54, |det|>=2 6
+   det histogram (-20..20, nonzero entries): 0:54 1:12 4:6
+order 4: gadgets (G,u,z) 1024 | h' >= R >= h violations 0 (of 2797568 pairs) | h' = h cases 1824, mismatches with [base port a sink, G transitive, u its source] 0 | det: unimodular 96, singular 640, |det|>=2 288
+   det histogram (-20..20, nonzero entries): -2:48 0:640 1:96 4:48 5:24 8:48 9:48
+order 5: gadgets (G,u,z) 25600 | h' >= R >= h violations 0 (of 69939200 pairs) | h' = h cases 11400, mismatches with [base port a sink, G transitive, u its source] 0 | det: unimodular 1200, singular 12240, |det|>=2 12160
+   det histogram (-20..20, nonzero entries): -15:240 -14:120 -11:120 -9:120 -8:480 -7:240 -6:240 -4:240 -2:480 -1:120 0:12240 1:1080 2:360 4:480 5:360 6:240 7:240 8:480 9:720 13:240 15:120 16:480

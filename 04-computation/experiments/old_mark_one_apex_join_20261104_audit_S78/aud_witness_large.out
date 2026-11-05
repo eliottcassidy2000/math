@@ -1,0 +1,15 @@
+(1) one-apex triple (g(v), [v even], 1+v) vs direct counts: 1 words of length 0..0, 0 failures
+(2) bank of order <= 6 with explicit witnesses: 254 triples
+  N=20464929: F1 v=243073 u=60, order 26: direct H = 20464929 OK (6.6s)
+  N=40376785: F2 v=382032 y=(33,4,74) order(S)=6, order 26: direct H = 40376785 OK (6.5s)
+  N=32320537: F2 v=864176 y=(11,1,27) order(S)=5, order 26: direct H = 32320537 OK (5.8s)
+  N=64378337: no witness of order <= 26 in F1 or F2(order<=6 bank) [skipped]
+  N=14971593: F1 v=3442481 u=2, order 26: direct H = 14971593 OK (6.0s)
+  N=36055421: F2 v=469922 y=(23,2,60) order(S)=6, order 26: direct H = 36055421 OK (27.2s)
+  N=13032091: F1 v=6891480 u=0, order 25: direct H = 13032091 OK (2.9s)
+  N=35933517: F2 v=419865 y=(31,3,73) order(S)=6, order 26: direct H = 35933517 OK (5.9s)
+(2) witnesses checked 7 (F1 3, F2 4): 7 OK, 0 mismatches
+
+real	3m24.348s
+user	0m0.015s
+sys	0m0.000s

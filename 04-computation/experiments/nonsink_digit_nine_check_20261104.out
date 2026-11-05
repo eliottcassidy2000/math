@@ -1,0 +1,6 @@
+order 2 : labelled (B, a, w) with w != a non-sink: 2 | min digit 9 | digit-9 cases 2 | mismatches with the equality characterisation 0
+order 3 : labelled (B, a, w) with w != a non-sink: 36 | min digit 9 | digit-9 cases 6 | mismatches with the equality characterisation 0
+order 4 : labelled (B, a, w) with w != a non-sink: 672 | min digit 9 | digit-9 cases 24 | mismatches with the equality characterisation 0
+order 5 : labelled (B, a, w) with w != a non-sink: 19200 | min digit 9 | digit-9 cases 120 | mismatches with the equality characterisation 0
+order 6 : labelled (B, a, w) with w != a non-sink: 952320 | min digit 9 | digit-9 cases 720 | mismatches with the equality characterisation 0
+U4 residual formula: cases (m <= 8) 28 failures 0
