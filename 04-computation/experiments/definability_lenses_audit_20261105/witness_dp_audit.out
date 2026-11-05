@@ -1,0 +1,14 @@
+claimed 43: m=7 arcs=[(2, 0), (4, 2), (6, 2), (6, 4)] -> H=43 OK; shared heads [2], shared tails [6]; cutwidth 2; double event present: True
+claimed 47: m=7 arcs=[(6, 0), (6, 1)] -> H=47 OK; shared heads [], shared tails [6]; cutwidth 2; double event present: True
+claimed 63: m=8 arcs=[(3, 0), (6, 3), (7, 3)] -> H=63 OK; shared heads [3], shared tails []; cutwidth 2; double event present: True
+claimed 79: m=8 arcs=[(7, 0), (7, 2)] -> H=79 OK; shared heads [], shared tails [7]; cutwidth 2; double event present: True
+claimed 103: m=9 arcs=[(3, 0), (6, 3), (8, 3)] -> H=103 OK; shared heads [3], shared tails []; cutwidth 2; double event present: True
+claimed 113: m=9 arcs=[(2, 0), (6, 2), (6, 3), (8, 6)] -> H=113 OK; shared heads [], shared tails [6]; cutwidth 2; double event present: True
+claimed 235: m=10 arcs=[(6, 0), (6, 4), (8, 6), (9, 6)] -> H=235 OK; shared heads [6], shared tails [6]; cutwidth 2; double event present: True
+S79 file: 43: m=7 arcs=[(2, 0), (4, 2), (6, 2), (6, 4)]  matches note: True
+S79 file: 47: m=7 arcs=[(6, 0), (6, 1)]  matches note: True
+S79 file: 63: m=8 arcs=[(3, 0), (6, 3), (7, 3)]  matches note: True
+S79 file: 79: m=8 arcs=[(7, 0), (7, 2)]  matches note: True
+S79 file: 103: m=9 arcs=[(3, 0), (6, 3), (8, 3)]  matches note: True
+S79 file: 113: m=9 arcs=[(2, 0), (6, 2), (6, 3), (8, 6)]  matches note: True
+S79 file: 235: m=10 arcs=[(6, 0), (6, 4), (8, 6), (9, 6)]  matches note: True

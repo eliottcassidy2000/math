@@ -1,0 +1,257 @@
+n = 3: 8 labelled tournaments; spectrum polynomial P_3(x) coefficients (h : count):
+  1 : 6
+  3 : 2
+prime p = 3 (rotation by 1): fixed tournaments 2; coefficients mod 3 of P vs fixed polynomial F:
+  h=1: P=6 (0 mod 3), F=0 (0 mod 3)
+  h=3: P=2 (2 mod 3), F=2 (2 mod 3)
+  congruence P_3 = F_{3,3} (mod 3): holds
+
+n = 4: 64 labelled tournaments; spectrum polynomial P_4(x) coefficients (h : count):
+  1 : 24
+  3 : 16
+  5 : 24
+prime p = 2 (rotation by 2): fixed tournaments 0; coefficients mod 2 of P vs fixed polynomial F:
+  h=1: P=24 (0 mod 2), F=0 (0 mod 2)
+  h=3: P=16 (0 mod 2), F=0 (0 mod 2)
+  h=5: P=24 (0 mod 2), F=0 (0 mod 2)
+  congruence P_4 = F_{4,2} (mod 2): holds
+
+n = 5: 1024 labelled tournaments; spectrum polynomial P_5(x) coefficients (h : count):
+  1 : 120
+  3 : 120
+  5 : 240
+  9 : 240
+  11 : 120
+  13 : 120
+  15 : 64
+prime p = 5 (rotation by 1): fixed tournaments 4; coefficients mod 5 of P vs fixed polynomial F:
+  h=1: P=120 (0 mod 5), F=0 (0 mod 5)
+  h=3: P=120 (0 mod 5), F=0 (0 mod 5)
+  h=5: P=240 (0 mod 5), F=0 (0 mod 5)
+  h=9: P=240 (0 mod 5), F=0 (0 mod 5)
+  h=11: P=120 (0 mod 5), F=0 (0 mod 5)
+  h=13: P=120 (0 mod 5), F=0 (0 mod 5)
+  h=15: P=64 (4 mod 5), F=4 (4 mod 5)
+  congruence P_5 = F_{5,5} (mod 5): holds
+
+n = 6: 32768 labelled tournaments; spectrum polynomial P_6(x) coefficients (h : count):
+  1 : 720
+  3 : 960
+  5 : 2160
+  9 : 2960
+  11 : 1440
+  13 : 1440
+  15 : 2208
+  17 : 1440
+  19 : 1440
+  23 : 2880
+  25 : 1440
+  27 : 480
+  29 : 2880
+  31 : 1440
+  33 : 2640
+  37 : 3600
+  41 : 720
+  43 : 1440
+  45 : 480
+prime p = 2 (rotation by 3): fixed tournaments 0; coefficients mod 2 of P vs fixed polynomial F:
+  h=1: P=720 (0 mod 2), F=0 (0 mod 2)
+  h=3: P=960 (0 mod 2), F=0 (0 mod 2)
+  h=5: P=2160 (0 mod 2), F=0 (0 mod 2)
+  h=9: P=2960 (0 mod 2), F=0 (0 mod 2)
+  h=11: P=1440 (0 mod 2), F=0 (0 mod 2)
+  h=13: P=1440 (0 mod 2), F=0 (0 mod 2)
+  h=15: P=2208 (0 mod 2), F=0 (0 mod 2)
+  h=17: P=1440 (0 mod 2), F=0 (0 mod 2)
+  h=19: P=1440 (0 mod 2), F=0 (0 mod 2)
+  h=23: P=2880 (0 mod 2), F=0 (0 mod 2)
+  h=25: P=1440 (0 mod 2), F=0 (0 mod 2)
+  h=27: P=480 (0 mod 2), F=0 (0 mod 2)
+  h=29: P=2880 (0 mod 2), F=0 (0 mod 2)
+  h=31: P=1440 (0 mod 2), F=0 (0 mod 2)
+  h=33: P=2640 (0 mod 2), F=0 (0 mod 2)
+  h=37: P=3600 (0 mod 2), F=0 (0 mod 2)
+  h=41: P=720 (0 mod 2), F=0 (0 mod 2)
+  h=43: P=1440 (0 mod 2), F=0 (0 mod 2)
+  h=45: P=480 (0 mod 2), F=0 (0 mod 2)
+  congruence P_6 = F_{6,2} (mod 2): holds
+prime p = 3 (rotation by 2): fixed tournaments 32; coefficients mod 3 of P vs fixed polynomial F:
+  h=1: P=720 (0 mod 3), F=0 (0 mod 3)
+  h=3: P=960 (0 mod 3), F=0 (0 mod 3)
+  h=5: P=2160 (0 mod 3), F=0 (0 mod 3)
+  h=9: P=2960 (2 mod 3), F=8 (2 mod 3)
+  h=11: P=1440 (0 mod 3), F=0 (0 mod 3)
+  h=13: P=1440 (0 mod 3), F=0 (0 mod 3)
+  h=15: P=2208 (0 mod 3), F=0 (0 mod 3)
+  h=17: P=1440 (0 mod 3), F=0 (0 mod 3)
+  h=19: P=1440 (0 mod 3), F=0 (0 mod 3)
+  h=23: P=2880 (0 mod 3), F=0 (0 mod 3)
+  h=25: P=1440 (0 mod 3), F=0 (0 mod 3)
+  h=27: P=480 (0 mod 3), F=0 (0 mod 3)
+  h=29: P=2880 (0 mod 3), F=0 (0 mod 3)
+  h=31: P=1440 (0 mod 3), F=0 (0 mod 3)
+  h=33: P=2640 (0 mod 3), F=0 (0 mod 3)
+  h=37: P=3600 (0 mod 3), F=0 (0 mod 3)
+  h=41: P=720 (0 mod 3), F=0 (0 mod 3)
+  h=43: P=1440 (0 mod 3), F=0 (0 mod 3)
+  h=45: P=480 (0 mod 3), F=24 (0 mod 3)
+  congruence P_6 = F_{6,3} (mod 3): holds
+
+n = 7: 2097152 labelled tournaments; spectrum polynomial P_7(x) coefficients (h : count):
+  1 : 5040
+  3 : 8400
+  5 : 20160
+  9 : 31920
+  11 : 15120
+  13 : 15120
+  15 : 31584
+  17 : 20160
+  19 : 20160
+  23 : 40320
+  25 : 25200
+  27 : 21840
+  29 : 50400
+  31 : 30240
+  33 : 52080
+  35 : 10080
+  37 : 60480
+  39 : 10080
+  41 : 35280
+  43 : 30240
+  45 : 25200
+  47 : 10080
+  49 : 35280
+  51 : 30240
+  53 : 20160
+  55 : 20160
+  57 : 13440
+  59 : 40320
+  61 : 5040
+  65 : 55440
+  67 : 30240
+  69 : 40320
+  71 : 35280
+  73 : 40320
+  75 : 28560
+  77 : 50400
+  79 : 25200
+  81 : 55440
+  83 : 35280
+  85 : 5040
+  87 : 5040
+  89 : 70560
+  91 : 75600
+  93 : 35280
+  95 : 25200
+  97 : 30240
+  99 : 12320
+  101 : 50400
+  103 : 50400
+  105 : 20160
+  109 : 70560
+  111 : 47040
+  113 : 20160
+  115 : 35280
+  117 : 35280
+  121 : 20160
+  123 : 40320
+  125 : 5040
+  127 : 5040
+  129 : 31920
+  131 : 40320
+  133 : 30240
+  135 : 29568
+  137 : 30240
+  139 : 30240
+  141 : 15120
+  143 : 15120
+  145 : 10080
+  147 : 5040
+  151 : 25200
+  153 : 15120
+  155 : 5040
+  157 : 5040
+  159 : 16800
+  171 : 1680
+  175 : 720
+  189 : 240
+prime p = 7 (rotation by 1): fixed tournaments 8; coefficients mod 7 of P vs fixed polynomial F:
+  h=1: P=5040 (0 mod 7), F=0 (0 mod 7)
+  h=3: P=8400 (0 mod 7), F=0 (0 mod 7)
+  h=5: P=20160 (0 mod 7), F=0 (0 mod 7)
+  h=9: P=31920 (0 mod 7), F=0 (0 mod 7)
+  h=11: P=15120 (0 mod 7), F=0 (0 mod 7)
+  h=13: P=15120 (0 mod 7), F=0 (0 mod 7)
+  h=15: P=31584 (0 mod 7), F=0 (0 mod 7)
+  h=17: P=20160 (0 mod 7), F=0 (0 mod 7)
+  h=19: P=20160 (0 mod 7), F=0 (0 mod 7)
+  h=23: P=40320 (0 mod 7), F=0 (0 mod 7)
+  h=25: P=25200 (0 mod 7), F=0 (0 mod 7)
+  h=27: P=21840 (0 mod 7), F=0 (0 mod 7)
+  h=29: P=50400 (0 mod 7), F=0 (0 mod 7)
+  h=31: P=30240 (0 mod 7), F=0 (0 mod 7)
+  h=33: P=52080 (0 mod 7), F=0 (0 mod 7)
+  h=35: P=10080 (0 mod 7), F=0 (0 mod 7)
+  h=37: P=60480 (0 mod 7), F=0 (0 mod 7)
+  h=39: P=10080 (0 mod 7), F=0 (0 mod 7)
+  h=41: P=35280 (0 mod 7), F=0 (0 mod 7)
+  h=43: P=30240 (0 mod 7), F=0 (0 mod 7)
+  h=45: P=25200 (0 mod 7), F=0 (0 mod 7)
+  h=47: P=10080 (0 mod 7), F=0 (0 mod 7)
+  h=49: P=35280 (0 mod 7), F=0 (0 mod 7)
+  h=51: P=30240 (0 mod 7), F=0 (0 mod 7)
+  h=53: P=20160 (0 mod 7), F=0 (0 mod 7)
+  h=55: P=20160 (0 mod 7), F=0 (0 mod 7)
+  h=57: P=13440 (0 mod 7), F=0 (0 mod 7)
+  h=59: P=40320 (0 mod 7), F=0 (0 mod 7)
+  h=61: P=5040 (0 mod 7), F=0 (0 mod 7)
+  h=65: P=55440 (0 mod 7), F=0 (0 mod 7)
+  h=67: P=30240 (0 mod 7), F=0 (0 mod 7)
+  h=69: P=40320 (0 mod 7), F=0 (0 mod 7)
+  h=71: P=35280 (0 mod 7), F=0 (0 mod 7)
+  h=73: P=40320 (0 mod 7), F=0 (0 mod 7)
+  h=75: P=28560 (0 mod 7), F=0 (0 mod 7)
+  h=77: P=50400 (0 mod 7), F=0 (0 mod 7)
+  h=79: P=25200 (0 mod 7), F=0 (0 mod 7)
+  h=81: P=55440 (0 mod 7), F=0 (0 mod 7)
+  h=83: P=35280 (0 mod 7), F=0 (0 mod 7)
+  h=85: P=5040 (0 mod 7), F=0 (0 mod 7)
+  h=87: P=5040 (0 mod 7), F=0 (0 mod 7)
+  h=89: P=70560 (0 mod 7), F=0 (0 mod 7)
+  h=91: P=75600 (0 mod 7), F=0 (0 mod 7)
+  h=93: P=35280 (0 mod 7), F=0 (0 mod 7)
+  h=95: P=25200 (0 mod 7), F=0 (0 mod 7)
+  h=97: P=30240 (0 mod 7), F=0 (0 mod 7)
+  h=99: P=12320 (0 mod 7), F=0 (0 mod 7)
+  h=101: P=50400 (0 mod 7), F=0 (0 mod 7)
+  h=103: P=50400 (0 mod 7), F=0 (0 mod 7)
+  h=105: P=20160 (0 mod 7), F=0 (0 mod 7)
+  h=109: P=70560 (0 mod 7), F=0 (0 mod 7)
+  h=111: P=47040 (0 mod 7), F=0 (0 mod 7)
+  h=113: P=20160 (0 mod 7), F=0 (0 mod 7)
+  h=115: P=35280 (0 mod 7), F=0 (0 mod 7)
+  h=117: P=35280 (0 mod 7), F=0 (0 mod 7)
+  h=121: P=20160 (0 mod 7), F=0 (0 mod 7)
+  h=123: P=40320 (0 mod 7), F=0 (0 mod 7)
+  h=125: P=5040 (0 mod 7), F=0 (0 mod 7)
+  h=127: P=5040 (0 mod 7), F=0 (0 mod 7)
+  h=129: P=31920 (0 mod 7), F=0 (0 mod 7)
+  h=131: P=40320 (0 mod 7), F=0 (0 mod 7)
+  h=133: P=30240 (0 mod 7), F=0 (0 mod 7)
+  h=135: P=29568 (0 mod 7), F=0 (0 mod 7)
+  h=137: P=30240 (0 mod 7), F=0 (0 mod 7)
+  h=139: P=30240 (0 mod 7), F=0 (0 mod 7)
+  h=141: P=15120 (0 mod 7), F=0 (0 mod 7)
+  h=143: P=15120 (0 mod 7), F=0 (0 mod 7)
+  h=145: P=10080 (0 mod 7), F=0 (0 mod 7)
+  h=147: P=5040 (0 mod 7), F=0 (0 mod 7)
+  h=151: P=25200 (0 mod 7), F=0 (0 mod 7)
+  h=153: P=15120 (0 mod 7), F=0 (0 mod 7)
+  h=155: P=5040 (0 mod 7), F=0 (0 mod 7)
+  h=157: P=5040 (0 mod 7), F=0 (0 mod 7)
+  h=159: P=16800 (0 mod 7), F=0 (0 mod 7)
+  h=171: P=1680 (0 mod 7), F=0 (0 mod 7)
+  h=175: P=720 (6 mod 7), F=6 (6 mod 7)
+  h=189: P=240 (2 mod 7), F=2 (2 mod 7)
+  congruence P_7 = F_{7,7} (mod 7): holds
+

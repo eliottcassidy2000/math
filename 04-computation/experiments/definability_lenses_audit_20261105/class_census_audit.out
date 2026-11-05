@@ -1,0 +1,139 @@
+order 1: 1 classes (expected 1)
+   strong class order 1: H=1 self-converse=1 |Aut|=1 adj=0
+   strong classes: 1 (expected 1)
+order 2: 1 classes (expected 1)
+   strong classes: 0 (expected 0)
+order 3: 2 classes (expected 2)
+   strong class order 3: H=3 self-converse=1 |Aut|=3 adj=241
+   strong classes: 1 (expected 1)
+order 4: 4 classes (expected 4)
+   strong class order 4: H=5 self-converse=1 |Aut|=1 adj=2835
+   strong classes: 1 (expected 1)
+order 5: 12 classes (expected 12)
+   strong class order 5: H=15 self-converse=1 |Aut|=5 adj=6c18113
+   strong class order 5: H=11 self-converse=1 |Aut|=1 adj=859127
+   strong class order 5: H=13 self-converse=1 |Aut|=1 adj=85116b
+   strong class order 5: H=9 self-converse=1 |Aut|=1 adj=24117b
+   strong class order 5: H=9 self-converse=1 |Aut|=1 adj=21037d
+   strong class order 5: H=15 self-converse=1 |Aut|=3 adj=10593e
+   strong classes: 6 (expected 6)
+order 6: 56 classes (expected 56)
+   strong class order 6: H=25 self-converse=0 |Aut|=1 adj=45181323f
+   strong class order 6: H=19 self-converse=0 |Aut|=1 adj=210b1325f
+   strong class order 6: H=25 self-converse=0 |Aut|=1 adj=41112729f
+   strong class order 6: H=23 self-converse=0 |Aut|=1 adj=1051172af
+   strong class order 6: H=23 self-converse=0 |Aut|=1 adj=210b23d17
+   strong class order 6: H=19 self-converse=0 |Aut|=1 adj=85922f17
+   strong class order 6: H=17 self-converse=1 |Aut|=1 adj=24923f17
+   strong class order 6: H=15 self-converse=0 |Aut|=1 adj=28325f17
+   strong class order 6: H=23 self-converse=0 |Aut|=1 adj=45307b1b
+   strong class order 6: H=23 self-converse=0 |Aut|=1 adj=85216f1b
+   strong class order 6: H=15 self-converse=0 |Aut|=1 adj=24217f1b
+   strong class order 6: H=17 self-converse=1 |Aut|=1 adj=22037f1d
+   strong classes: 35 (expected 35)
+order 7: 456 classes (expected 456)
+   strong class order 7: H=25 self-converse=1 |Aut|=1 adj=28345f1f37
+   strong classes: 353 (expected 353)
+order 8: 6880 classes (expected 6880)
+   strong classes: 6008 (expected 6008)
+
+m(h) over strong classes of orders <= 8 (exact for h < f(9)):
+  h=1 m=1 orders=1, selfconverse=1
+  h=3 m=1 orders=3, selfconverse=1
+  h=5 m=1 orders=4, selfconverse=1
+  h=9 m=2 orders=5,5, selfconverse=2
+  h=11 m=1 orders=5, selfconverse=1
+  h=13 m=1 orders=5, selfconverse=1
+  h=15 m=4 orders=5,5,6,6, selfconverse=2
+  h=17 m=2 orders=6,6, selfconverse=2
+  h=19 m=2 orders=6,6, selfconverse=0
+  h=23 m=4 orders=6,6,6,6, selfconverse=0
+  h=25 m=3 orders=6,6,7, selfconverse=1
+  h=27 m=5 orders=6,6,7,7,7, selfconverse=1
+  h=29 m=6 orders=6,6,6,6,7,7, selfconverse=2
+  h=31 m=4 orders=6,6,7,7, selfconverse=2
+  h=33 m=8 orders=6,6,6,6,6,7,7,7, selfconverse=2
+  h=35 m=2 orders=7,7, selfconverse=0
+  h=37 m=7 orders=6,6,6,6,6,7,7, selfconverse=1
+  h=39 m=2 orders=7,7, selfconverse=0
+  h=41 m=6 orders=6,7,7,7,7,7, selfconverse=2
+  h=43 m=4 orders=6,6,7,7, selfconverse=0
+  h=45 m=12 orders=6,6,7,7,7,7,7,8,8,8,8,8, selfconverse=4
+  h=47 m=2 orders=7,7, selfconverse=0
+  h=49 m=8 orders=7,7,7,7,7,7,7,8, selfconverse=2
+  h=51 m=12 orders=7,7,7,7,7,7,7,7,8,8,8,8, selfconverse=2
+  h=53 m=10 orders=7,7,7,7,8,8,8,8,8,8, selfconverse=0
+  h=55 m=4 orders=7,7,7,7, selfconverse=0
+  h=57 m=7 orders=7,7,7,7,8,8,8, selfconverse=1
+  h=59 m=12 orders=7,7,7,7,7,7,7,7,8,8,8,8, selfconverse=0
+  h=61 m=5 orders=7,8,8,8,8, selfconverse=1
+  h=63 m=2 orders=8,8, selfconverse=0
+  h=65 m=14 orders=7,7,7,7,7,7,7,7,7,7,7,8,8,8, selfconverse=4
+  h=67 m=6 orders=7,7,7,7,7,7, selfconverse=2
+  h=69 m=18 orders=7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8, selfconverse=2
+  h=71 m=11 orders=7,7,7,7,7,7,7,8,8,8,8, selfconverse=1
+  h=73 m=19 orders=7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=75 m=9 orders=7,7,7,7,7,7,7,8,8, selfconverse=1
+  h=77 m=16 orders=7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8, selfconverse=2
+  h=79 m=11 orders=7,7,7,7,7,8,8,8,8,8,8, selfconverse=1
+  h=81 m=21 orders=7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=83 m=11 orders=7,7,7,7,7,7,7,8,8,8,8, selfconverse=1
+  h=85 m=6 orders=7,8,8,8,8,8, selfconverse=2
+  h=87 m=7 orders=7,8,8,8,8,8,8, selfconverse=1
+  h=89 m=21 orders=7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8, selfconverse=1
+  h=91 m=27 orders=7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=93 m=11 orders=7,7,7,7,7,7,7,8,8,8,8, selfconverse=3
+  h=95 m=15 orders=7,7,7,7,7,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=97 m=16 orders=7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8, selfconverse=0
+  h=99 m=18 orders=7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=2
+  h=101 m=14 orders=7,7,7,7,7,7,7,7,7,7,8,8,8,8, selfconverse=0
+  h=103 m=14 orders=7,7,7,7,7,7,7,7,7,7,8,8,8,8, selfconverse=0
+  h=105 m=15 orders=7,7,7,7,8,8,8,8,8,8,8,8,8,8,8, selfconverse=5
+  h=107 m=10 orders=8,8,8,8,8,8,8,8,8,8, selfconverse=0
+  h=109 m=22 orders=7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8, selfconverse=0
+  h=111 m=22 orders=7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=2
+  h=113 m=12 orders=7,7,7,7,8,8,8,8,8,8,8,8, selfconverse=0
+  h=115 m=21 orders=7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=117 m=22 orders=7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=4
+  h=119 m=12 orders=8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=0
+  h=121 m=8 orders=7,7,7,7,8,8,8,8, selfconverse=0
+  h=123 m=24 orders=7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=2
+  h=125 m=11 orders=7,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=127 m=9 orders=7,8,8,8,8,8,8,8,8, selfconverse=1
+  h=129 m=33 orders=7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=3
+  h=131 m=16 orders=7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8, selfconverse=0
+  h=133 m=23 orders=7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=3
+  h=135 m=22 orders=7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=4
+  h=137 m=20 orders=7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=2
+  h=139 m=24 orders=7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=2
+  h=141 m=21 orders=7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=3
+  h=143 m=17 orders=7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=145 m=10 orders=7,7,8,8,8,8,8,8,8,8, selfconverse=2
+  h=147 m=11 orders=7,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=149 m=14 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=4
+  h=151 m=11 orders=7,7,7,7,7,8,8,8,8,8,8, selfconverse=3
+  h=153 m=24 orders=7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=2
+  h=155 m=27 orders=7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=157 m=15 orders=7,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=3
+  h=159 m=24 orders=7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=4
+  h=161 m=12 orders=8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=2
+  h=163 m=20 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=0
+  h=165 m=17 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=167 m=8 orders=8,8,8,8,8,8,8,8, selfconverse=0
+  h=169 m=19 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=171 m=23 orders=7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=173 m=30 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=2
+  h=175 m=17 orders=7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=177 m=35 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=179 m=26 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=0
+  h=181 m=18 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=0
+  h=183 m=14 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=0
+  h=185 m=18 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=0
+  h=187 m=24 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=0
+  h=189 m=21 orders=7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=3
+  h=191 m=22 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=0
+  h=193 m=21 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=1
+  h=195 m=14 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=0
+  h=197 m=40 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=2
+  h=199 m=24 orders=8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8, selfconverse=0
+odd h < 75 with m(h) = 0: 7 21

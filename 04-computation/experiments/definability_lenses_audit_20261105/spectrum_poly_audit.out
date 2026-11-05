@@ -1,0 +1,30 @@
+n = 2: 2 labelled tournaments. P_2 coefficients h:count 1:2
+p = 2 (rotation by 1): 0 invariant tournaments; F coefficients h:count
+  residues mod 2 where P != 0 mod 2:
+  congruence P_2 == F_{2,2} mod 2: HOLDS
+n = 3: 8 labelled tournaments. P_3 coefficients h:count 1:6 3:2
+p = 3 (rotation by 1): 2 invariant tournaments; F coefficients h:count 3:2
+  residues mod 3 where P != 0 mod 3: h=3:P=2(2 mod 3),F=2
+  congruence P_3 == F_{3,3} mod 3: HOLDS
+circulants on Z_3 (S = out-neighbours of 0):  S={2}:H=3 S={1}:H=3
+n = 4: 64 labelled tournaments. P_4 coefficients h:count 1:24 3:16 5:24
+p = 2 (rotation by 2): 0 invariant tournaments; F coefficients h:count
+  residues mod 2 where P != 0 mod 2:
+  congruence P_4 == F_{4,2} mod 2: HOLDS
+n = 5: 1024 labelled tournaments. P_5 coefficients h:count 1:120 3:120 5:240 9:240 11:120 13:120 15:64
+p = 5 (rotation by 1): 4 invariant tournaments; F coefficients h:count 15:4
+  residues mod 5 where P != 0 mod 5: h=15:P=64(4 mod 5),F=4
+  congruence P_5 == F_{5,5} mod 5: HOLDS
+circulants on Z_5 (S = out-neighbours of 0):  S={34}:H=15 S={24}:H=15 S={13}:H=15 S={12}:H=15
+n = 6: 32768 labelled tournaments. P_6 coefficients h:count 1:720 3:960 5:2160 9:2960 11:1440 13:1440 15:2208 17:1440 19:1440 23:2880 25:1440 27:480 29:2880 31:1440 33:2640 37:3600 41:720 43:1440 45:480
+p = 2 (rotation by 3): 0 invariant tournaments; F coefficients h:count
+  residues mod 2 where P != 0 mod 2:
+  congruence P_6 == F_{6,2} mod 2: HOLDS
+p = 3 (rotation by 2): 32 invariant tournaments; F coefficients h:count 9:8 45:24
+  residues mod 3 where P != 0 mod 3: h=9:P=2960(2 mod 3),F=8
+  congruence P_6 == F_{6,3} mod 3: HOLDS
+n = 7: 2097152 labelled tournaments. P_7 coefficients h:count 1:5040 3:8400 5:20160 9:31920 11:15120 13:15120 15:31584 17:20160 19:20160 23:40320 25:25200 27:21840 29:50400 31:30240 33:52080 35:10080 37:60480 39:10080 41:35280 43:30240 45:25200 47:10080 49:35280 51:30240 53:20160 55:20160 57:13440 59:40320 61:5040 65:55440 67:30240 69:40320 71:35280 73:40320 75:28560 77:50400 79:25200 81:55440 83:35280 85:5040 87:5040 89:70560 91:75600 93:35280 95:25200 97:30240 99:12320 101:50400 103:50400 105:20160 109:70560 111:47040 113:20160 115:35280 117:35280 121:20160 123:40320 125:5040 127:5040 129:31920 131:40320 133:30240 135:29568 137:30240 139:30240 141:15120 143:15120 145:10080 147:5040 151:25200 153:15120 155:5040 157:5040 159:16800 171:1680 175:720 189:240
+p = 7 (rotation by 1): 8 invariant tournaments; F coefficients h:count 175:6 189:2
+  residues mod 7 where P != 0 mod 7: h=175:P=720(6 mod 7),F=6 h=189:P=240(2 mod 7),F=2
+  congruence P_7 == F_{7,7} mod 7: HOLDS
+circulants on Z_7 (S = out-neighbours of 0):  S={456}:H=175 S={356}:H=189 S={246}:H=175 S={236}:H=175 S={145}:H=175 S={135}:H=175 S={124}:H=189 S={123}:H=175

@@ -1,0 +1,20 @@
+== ranks mode 0 (--empty1)
+states 83, K = 0; reachable dim 39, observable dim 25, Hankel rank = 17 (two primes agree: True)
+  seam with c = 0 pending slots: 3 cut states, reachable dim 2, seam rank = 1
+  seam with c = 1 pending slots: 11 cut states, reachable dim 6, seam rank = 3
+  seam with c = 2 pending slots: 69 cut states, reachable dim 31, seam rank = 13
+== ranks mode 1 (--empty1)
+states 64, K = 0; reachable dim 33, observable dim 21, Hankel rank = 14 (two primes agree: True)
+  seam with c = 0 pending slots: 3 cut states, reachable dim 2, seam rank = 1
+  seam with c = 1 pending slots: 11 cut states, reachable dim 6, seam rank = 3
+  seam with c = 2 pending slots: 50 cut states, reachable dim 25, seam rank = 10
+== ranks mode 2 (--empty1)
+states 64, K = 0; reachable dim 33, observable dim 21, Hankel rank = 14 (two primes agree: True)
+  seam with c = 0 pending slots: 3 cut states, reachable dim 2, seam rank = 1
+  seam with c = 1 pending slots: 11 cut states, reachable dim 6, seam rank = 3
+  seam with c = 2 pending slots: 50 cut states, reachable dim 25, seam rank = 10
+== ranks mode 3 (--empty1)
+states 58, K = 0; reachable dim 28, observable dim 16, Hankel rank = 10 (two primes agree: True)
+  seam with c = 0 pending slots: 3 cut states, reachable dim 2, seam rank = 1
+  seam with c = 1 pending slots: 11 cut states, reachable dim 6, seam rank = 3
+  seam with c = 2 pending slots: 44 cut states, reachable dim 20, seam rank = 6

@@ -1,0 +1,9 @@
+mode 1: 110 prefixes (len <= 4), 781 suffix letter-strings (len <= 4, alphabet 5)
+nonzero entries 37812; block rank mod 2^31-1 = 13, mod 2^31-19 = 13 (lower bound on the Hankel rank; words with pending slots included, empty word = 1)
+rank of the block restricted to words ending with c = 0: 13
+mode 2: 89 prefixes (len <= 4), 341 suffix letter-strings (len <= 4, alphabet 4)
+nonzero entries 13958; block rank mod 2^31-1 = 13, mod 2^31-19 = 13 (lower bound on the Hankel rank; words with pending slots included, empty word = 1)
+rank of the block restricted to words ending with c = 0: 13
+mode 3: 89 prefixes (len <= 4), 341 suffix letter-strings (len <= 4, alphabet 4)
+nonzero entries 13958; block rank mod 2^31-1 = 9, mod 2^31-19 = 9 (lower bound on the Hankel rank; words with pending slots included, empty word = 1)
+rank of the block restricted to words ending with c = 0: 9
