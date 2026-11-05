@@ -1,0 +1,110 @@
+{
+  "attaining_actual_clone_counts": [
+    217,
+    649,
+    1945,
+    5833,
+    17497
+  ],
+  "attaining_root": 4,
+  "attaining_rows": [
+    414,
+    260,
+    8,
+    50,
+    294,
+    327,
+    415,
+    318,
+    12
+  ],
+  "attaining_run_coefficients": [
+    217,
+    216,
+    72
+  ],
+  "claim": "72 is the globally least positive amplitude for a transitive-root-clone family A*3^m+1, even if the identity is required only eventually.",
+  "first_clone_equation_survivors": 30,
+  "generation": [
+    {
+      "accepted_before_isomorphism": 6,
+      "classes": 1,
+      "extension_candidates": 6,
+      "order": 4
+    },
+    {
+      "accepted_before_isomorphism": 14,
+      "classes": 6,
+      "extension_candidates": 14,
+      "order": 5
+    },
+    {
+      "accepted_before_isomorphism": 180,
+      "classes": 35,
+      "extension_candidates": 180,
+      "order": 6
+    },
+    {
+      "accepted_before_isomorphism": 2170,
+      "classes": 353,
+      "extension_candidates": 2170,
+      "order": 7
+    },
+    {
+      "accepted_before_isomorphism": 6450,
+      "classes": 1074,
+      "extension_candidates": 44478,
+      "order": 8
+    },
+    {
+      "accepted_before_isomorphism": 3612,
+      "classes": 644,
+      "extension_candidates": 272796,
+      "order": 9
+    },
+    {
+      "accepted_before_isomorphism": 974,
+      "classes": 174,
+      "extension_candidates": 328440,
+      "order": 10
+    }
+  ],
+  "independent_candidate_root_checks": 2642,
+  "independent_labelled_controls": [
+    {
+      "classes": 1,
+      "labelled_strong_graphs": 2,
+      "order": 3
+    },
+    {
+      "classes": 1,
+      "labelled_strong_graphs": 24,
+      "order": 4
+    },
+    {
+      "classes": 6,
+      "labelled_strong_graphs": 544,
+      "order": 5
+    },
+    {
+      "classes": 35,
+      "labelled_strong_graphs": 22320,
+      "order": 6
+    }
+  ],
+  "independent_retained_graph_checks": 2288,
+  "retained_bank_sha256": "15fb4316f3555451e003a7666f75849a4a6d08cd83b11d32ff9027a537cb0b25",
+  "retained_classes_by_order": {
+    "3": 1,
+    "4": 1,
+    "5": 6,
+    "6": 35,
+    "7": 353,
+    "8": 1074,
+    "9": 644,
+    "10": 174
+  },
+  "scope": "Transitive cloning of one fixed root, not every possible graph-changing compiler.",
+  "status": "PASS",
+  "strong_H_cap": 211
+}
