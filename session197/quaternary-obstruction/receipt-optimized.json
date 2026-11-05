@@ -1,0 +1,35 @@
+{
+  "bank_sha256": "3d4ddbe02807c7c6bf962147c582e0c6707eb4d221134a715cdd8a84bf730951",
+  "excluded_offsets": [
+    -1,
+    1
+  ],
+  "excluded_positive_amplitudes": [
+    6,
+    12,
+    18,
+    24,
+    30,
+    36,
+    42,
+    48,
+    54
+  ],
+  "methods": {
+    "clone_counts": "PASS graphs 2456 eligible_graph_signs 410 roots 3426 m2_survivors 2 m3_survivors 0 m4_survivors 0",
+    "gap_counts": "DONE rank3_roots 2410 hits 0"
+  },
+  "necessary_amplitude_lower_bound": 60,
+  "order_inventory": {
+    "3": 1,
+    "4": 1,
+    "5": 6,
+    "6": 35,
+    "7": 353,
+    "8": 1144,
+    "9": 726,
+    "10": 190
+  },
+  "status": "PASS",
+  "strong_classes": 2456
+}
