@@ -1,0 +1,6 @@
+{
+  "compression_width1_order7": 64,
+  "compression_width2_order7": 2048,
+  "compression_width3_order6": 4096,
+  "merge_split_checks": 336
+}
