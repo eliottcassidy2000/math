@@ -1,0 +1,13 @@
+== order <= 6 (seam_bfs 5000 allmats6.txt; fill.py)
+X=5000 mats=1941 states=1301611
+missing odd: 7 21
+count missing=2
+fill[801,999]x[2,2.75]=0.2640 (n=33800)  fill[1601,1799]x[2,2.75]=0.2389 (n=63800)  ratio=0.9051
+== order <= 7 (seam_bfs 5000 allmats7.txt; fill.py)
+real	1m8.354s
+X=5000 mats=22441 states=2485464
+missing odd: 7 21
+count missing=2
+fill[801,999]x[2,2.75]=0.4573 (n=33800)  fill[1601,1799]x[2,2.75]=0.4119 (n=63800)  ratio=0.9008
+
+[exited with code 0]

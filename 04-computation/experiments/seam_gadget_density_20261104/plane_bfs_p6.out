@@ -1,0 +1,11 @@
+== allmats6.txt
+X=5000 maps=191 states=20149 fill[801,999]=0.0256 fill[1601,1799]=0.0222 ratio=0.8691
+real	0m0.136s
+== allmats7.txt
+X=5000 maps=1632 states=46521 fill[801,999]=0.0615 fill[1601,1799]=0.0442 ratio=0.7175
+real	0m0.163s
+== allmats8.txt
+X=5000 maps=21023 states=124006 fill[801,999]=0.1506 fill[1601,1799]=0.1081 ratio=0.7174
+real	0m2.791s
+
+[exited with code 0]

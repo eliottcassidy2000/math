@@ -27,13 +27,14 @@ def closed(k, u, z):
     c = 2 ** (k - 1 - u + z) if z <= u else 2 ** (k - z + u) * 3 ** (z - u - 1)
     return [H, S, [2 ** z, -mu, c]]
 
-def TT(k): return [[1 if i < j else 0 for j in range(k)] for i in range(k)]
-kmax = int(sys.argv[1]) if len(sys.argv) > 1 else 7
-checks = bad = 0
-for k in range(1, kmax + 1):
-    for u in range(k):
-        for z in range(k):
-            checks += 1
-            if matrix(TT(k), u, z) != closed(k, u, z):
-                bad += 1; print('MISMATCH', k, u, z, matrix(TT(k), u, z), closed(k, u, z))
-print(f'two-port transitive transfers: {checks} (k, u, z) cases for k <= {kmax}, mismatches {bad}')
+if __name__ == '__main__':
+    def TT(k): return [[1 if i < j else 0 for j in range(k)] for i in range(k)]
+    kmax = int(sys.argv[1]) if len(sys.argv) > 1 else 7
+    checks = bad = 0
+    for k in range(1, kmax + 1):
+        for u in range(k):
+            for z in range(k):
+                checks += 1
+                if matrix(TT(k), u, z) != closed(k, u, z):
+                    bad += 1; print('MISMATCH', k, u, z, matrix(TT(k), u, z), closed(k, u, z))
+    print(f'two-port transitive transfers: {checks} (k, u, z) cases for k <= {kmax}, mismatches {bad}')

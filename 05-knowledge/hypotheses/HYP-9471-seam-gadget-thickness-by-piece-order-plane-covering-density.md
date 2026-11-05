@@ -1,7 +1,7 @@
 ---
 id: HYP-9471
 title: "Seam-gadget semigroup thickness by piece order. On the plane P = {S = 0} of SEAM states (H, S, R) whose exit starts no Hamiltonian path, the S-row-zero gadgets act by 2x2 integer maps [[a, b], [c, d]] on (H, R). The covering density D_k(t) = sum over the distinct nonsingular such maps of order <= k of (a + b t)^(-2) is 0.117, 0.257, 0.486 at t = 2 for k = 4, 5, 6, roughly doubling per order. D_k(t) >= 1 is the necessary density condition for a finite-alphabet self-covering of a 2D cone of states. Pre-registered: D_7(2) lies in [0.75, 1.25], and the order-7 alphabet thickens the realised P-slice"
-status: PRE-REGISTERED (predictions P1-P3 committed in a98199e8bb, P4-P5 in 973c1f8312, both under the colliding name HYP-9470; renumbered HYP-9471 because opus-S79 reserved HYP-9470 first, in 395a317b0e; results below)
+status: "PARTLY CONFIRMED: P1, P2, P4, P5 CONFIRMED; P3, P6 REFUTED. Pre-registered in a98199e8bb (P1-P3) and 973c1f8312 (P4-P5), both under the colliding name HYP-9470, and in 7297af7bf9 (P6). Renumbered HYP-9471 because opus-S79 reserved HYP-9470 first, in 395a317b0e. The 2D covering density crosses 1 at order 8 at slope 2, but the realised plane orbit still thins with scale at order 8: the density averaged over its slopes is 0.88"
 session: kind-pasteur-2026-11-04-S11
 date: 2026-11-04
 related: [HYP-9468, HYP-9469, THM-4865, THM-4875, THM-4876]
@@ -118,4 +118,52 @@ Every outcome will be reported. P2 and P3 are measured with the same program, se
 
 ## Results
 
-(to be filled after the run)
+| prediction | outcome | data |
+|---|---|---|
+| P1: D_7(2) in [0.75, 1.25], D_7(3) in [0.38, 0.65] | CONFIRMED | D_7(2) = 0.8479, D_7(3) = 0.4374 |
+| P2: order-7 slice fill >= 0.396 | CONFIRMED | 0.4573 (order 6: 0.2640) |
+| P3: order-7 decay ratio > 0.9051 | REFUTED | 0.9008 |
+| P4: D_8(2) in [1.1, 1.8], D_8(3) in [0.55, 0.95] | CONFIRMED | D_8(2) = 1.4288, D_8(3) = 0.7395, D_8(2.5) = 0.9999 |
+| P5: no odd 2x2 determinant to order 8 | CONFIRMED | 0 of 22,522 distinct S-row-zero matrices; M_(z,u)(G) even in all 20,787 order-8 ones |
+| P6 (a): pure-plane ratio, order 8 > order 7 | REFUTED | 0.7174 vs 0.7175 |
+| P6 (b): order-7 ratio < 0.95 <= order-8 ratio | REFUTED | (b) fails at order 8 |
+
+Order 8 has 6,880 classes and 427,412 distinct transfer matrices. The cumulative distinct counts by order are
+1, 5, 16, 56, 264, 1,884, 22,243, 448,915. The S-row-zero ones are 0, 1, 5, 16, 57, 267, 1,919, 22,522, of which
+0, 0, 1, 5, 29, 191, 1,632, 21,023 restrict to nonsingular 2x2 maps.
+
+| k | D_k(2) | D_k(2.5) | D_k(3) | D_k(4) |
+|---|---|---|---|---|
+| 4 | 0.1170 | 0.0812 | 0.0596 | 0.0361 |
+| 5 | 0.2571 | 0.1787 | 0.1315 | 0.0798 |
+| 6 | 0.4861 | 0.3388 | 0.2498 | 0.1521 |
+| 7 | 0.8479 | 0.5923 | 0.4374 | 0.2668 |
+| 8 | 1.4288 | 0.9999 | 0.7395 | 0.4519 |
+
+The growth ratio per order at t = 2 is 2.20, 1.89, 1.74, 1.69.
+
+**Pure plane dynamics (P6)** (`plane_bfs.c`, X = 5,000, twelve S = 0 seeds):
+
+| alphabet | maps | states | fill[801, 999] | fill[1601, 1799] | ratio |
+|---|---|---|---|---|---|
+| order <= 6 | 191 | 20,149 | 0.0256 | 0.0222 | 0.8691 |
+| order <= 7 | 1,632 | 46,521 | 0.0615 | 0.0442 | 0.7175 |
+| order <= 8 | 21,023 | 124,006 | 0.1506 | 0.1081 | 0.7174 |
+
+The fill rises 2.4-fold per order, but the decay with scale does not soften.
+
+**Why the heuristic failed (exploratory, after the fact).**
+- The order-8 plane states with H in [801, 1799] number 54,994.
+- Their slopes have median 2.64 and 90th percentile 4.15, with histogram 2: 36,235, 3: 12,363, 4: 5,221,
+  5: 1,150, 6: 25.
+- D_8 averaged over those realised slopes is 0.8825 < 1. The threshold is crossed only at the dense end
+  (t <= 2.5), and the maps push states toward larger slopes, where the density is lower. So the realised plane orbit
+  is still subcritical at order 8.
+- Continuing the per-order ratio (about 1.6-1.7) would put the slope-averaged density above 1 at order 9.
+  Order 9 (191,536 classes, 81 port pairs) was not computed.
+
+**Verdict.** The thickness of the seam-gadget semigroup grows steadily with piece order. Measured by D_k it
+roughly doubles per order, and it crosses the 2D covering threshold at the dense end of the cone at order 8. No
+alphabet of order <= 8 yet makes the realised plane orbit stop thinning. A finite self-covering certificate for the
+{7, 21} spectrum on this plane is therefore not available at order 8. Even above the threshold, exact coset alignment
+would still be needed: every plane map has even determinant (THM-4879 (E), P5).

@@ -18,3 +18,19 @@ Programs for the thickness of the seam-gadget semigroup (SEAM.md three-coordinat
   - Writes the states with S = 0 to `pstates.txt`.
   - Build: `gcc -O2 -o seam_bfs seam_bfs.c`. Run: `./seam_bfs X allmats.txt` (the matrices of all orders concatenated).
 - `fill.py`: fill fractions of the two pre-registered bands from `pstates.txt`.
+- `plane_bfs.c`: the pure plane dynamics of HYP-9471 P6.
+  - BFS of (H, R) under the nonsingular 2x2 restrictions of the S-row-zero matrices in the input list.
+  - Seeds: the twelve realisable S = 0 states of order <= 5.
+  - Output `plane_bfs_p6.out` (orders <= 6, 7, 8).
+- `transitive_two_port.py`: THM-4879 (B) closed forms against SEAM's `matrix()` for k <= 8 (204 cases).
+- `parity_check.py`: THM-4879 (D), R = S (mod 2), on all labelled rooted tournaments of order <= 6 plus 300 random
+  ones of orders 7-10.
+- `transitive_words_bfs.py`: H-values of seam words of transitive gadgets only (THM-4879 (B) maps); 261 odd values
+  <= 2,000 are missed.
+- `small_gadget_structure.py`: shared rational eigen-directions (order <= 5) and the |det| = 1 short-word search
+  (order <= 4, length <= 3).
+- `mats1.txt` ... `mats6.txt`: the distinct matrices of orders 1-6. Orders 7 and 8 (20,500 and 427,412 lines) are
+  not committed; `gadget_matrices 7` takes about 8 s and `gadget_matrices 8` about 7 min.
+- Outputs: `census_orders_1_to_8.out`, `density_orders_1_to_8.out`, `seam_bfs_coverage_order6.out`,
+  `seam_bfs_p2_p3.out`, `plane_bfs_p6.out`, `transitive_two_port.out`, `parity_check.out`,
+  `transitive_words_bfs.out`, `small_gadget_structure.out`.

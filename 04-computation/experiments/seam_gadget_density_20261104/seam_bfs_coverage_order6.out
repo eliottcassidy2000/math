@@ -1,0 +1,7 @@
+X=2000 mats=1941 states=240925
+count missing=2
+X=10000 mats=1941 states=4743006
+count missing=2
+X=20000 mats=1941 states=17081577
+count missing=2
+(the two missed odd values are 7 and 21, which no tournament attains; the list printed by seam_bfs at X = 5,000 and in the exploratory X = 20,000 run was exactly '7 21')
