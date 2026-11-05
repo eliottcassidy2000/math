@@ -1,0 +1,136 @@
+{
+  "C2_scalar_residue_tests": 528,
+  "C2_support_through_67": [
+    13,
+    15,
+    23,
+    25,
+    29,
+    41,
+    43,
+    45,
+    49,
+    53,
+    55
+  ],
+  "all_order_cutoff_comparisons": 392,
+  "dependency_sha256": {
+    "BILINEAR_C2.md": "5eab9deb2871819d8a1b5684c4987f2f4da807adc55063a30675d531c5ad3813",
+    "COLLATZ_CLOSURE.md": "f70603f8e45baa0fb39eab01998caac46924367215b8db4308ad2c0a67e16cba",
+    "JOINT_MODULAR_GADGET.md": "74df1989d75ff743177937c108ac36dce133412e48701e4d412297d8c47b7d63",
+    "MAHLER_TWO_METRICS.md": "cbca4a253523ff92dcc422374801731fb345c39b91bec516ee9a239ee8f804a8",
+    "POSITIVE_SOURCE_GRAMMAR.md": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537",
+    "STRONG_SOURCE_INTERFACE.md": "10d7839eb16aab86397b05d19ffa36ad05040d9555ae01b56c5303b39fd76e95"
+  },
+  "ghost_controls": [
+    {
+      "count_bits": 10,
+      "modulus": 1,
+      "recipe_hash": "ab9828ca390581b72629069049793ba3c99bb8e5e9e7b97a55c71957e04df9a3",
+      "source_bits": 6
+    },
+    {
+      "count_bits": 20,
+      "modulus": 2,
+      "recipe_hash": "a9e3968c4d31e262e39344a330572c9d445d055cc4d79e44c9e7cf6f6c814f51",
+      "source_bits": 16
+    },
+    {
+      "count_bits": 21,
+      "modulus": 3,
+      "recipe_hash": "76ad4190c309ab9f77b7fd1151df8f0bdaab51567a7b2da6a1bd2c1c16bde123",
+      "source_bits": 17
+    },
+    {
+      "count_bits": 34,
+      "modulus": 4,
+      "recipe_hash": "9d52b604ff8c9973e6417334ed6422e80c29a28e8a8961dd257b94569299580e",
+      "source_bits": 30
+    },
+    {
+      "count_bits": 38,
+      "modulus": 6,
+      "recipe_hash": "39a0c0ac87dac856fb32915c406ce5d5a5f1246eea3f8c9449a7457bbe5d23c5",
+      "source_bits": 34
+    },
+    {
+      "count_bits": 64,
+      "modulus": 8,
+      "recipe_hash": "ed258e4c221f2360ace56811ae6aa1febc1202534b624895b2fcbf409378bf80",
+      "source_bits": 60
+    },
+    {
+      "count_bits": 76,
+      "modulus": 12,
+      "recipe_hash": "77f598813e20edeb2b05826ca5f625593922edb0885a83ccfe7c7e52b815415b",
+      "source_bits": 72
+    },
+    {
+      "count_bits": 130,
+      "modulus": 16,
+      "recipe_hash": "b1765c7f0b3456d56e43d09cdc9d5f0ede5d8a5628c2a6af78457288d68a0df7",
+      "source_bits": 126
+    },
+    {
+      "count_bits": 162,
+      "modulus": 24,
+      "recipe_hash": "7a0f63f2b99409e342078715725b225187f44240d945e8489ae2cb142cfef024",
+      "source_bits": 158
+    },
+    {
+      "count_bits": 276,
+      "modulus": 32,
+      "recipe_hash": "d0da22ed739d5f5781f9384e9df150a049a60cdc230650e75c810c703bfdc8df",
+      "source_bits": 272
+    },
+    {
+      "count_bits": 356,
+      "modulus": 48,
+      "recipe_hash": "1df90352d491d957fca3b45e149dcd6992fb76e8cb22cf054db2281bbb31d5c3",
+      "source_bits": 352
+    },
+    {
+      "count_bits": 598,
+      "modulus": 64,
+      "recipe_hash": "9a1f9add17a94c90a8fdd2a854c806bb28d56bd5041c0fd2dcb3681aa5c48ff3",
+      "source_bits": 594
+    },
+    {
+      "count_bits": 790,
+      "modulus": 96,
+      "recipe_hash": "a0dc8edca35b94dfb27bd65fbbc7e943f79cbbf00dd9a91fb2d2c87e2037f8f6",
+      "source_bits": 786
+    }
+  ],
+  "interface_residue_tests": 204,
+  "literal_controls": [
+    {
+      "C": 2,
+      "H": 383,
+      "graph_order": 10,
+      "profile": [
+        23,
+        1,
+        25,
+        1
+      ],
+      "rows": [
+        994,
+        1020,
+        1017,
+        993,
+        905,
+        16,
+        48,
+        96,
+        224,
+        480
+      ],
+      "word": "OZZZ"
+    }
+  ],
+  "scope": "All-moduli physical congruence density and nonphysical profinite limit; no universal odd coverage.",
+  "source_cap": 11,
+  "source_profiles": 14,
+  "status": "PASS"
+}

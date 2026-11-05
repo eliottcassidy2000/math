@@ -1,0 +1,57 @@
+{
+  "balanced_signed_readout_k4": 21,
+  "bilinear_grid_checked": [
+    20,
+    20
+  ],
+  "direct_graphs_checked": 364,
+  "formula_recurrences_checked_through": 200,
+  "literal_word_layers_checked_through": 8,
+  "nonphysical_Z_aggregate_k2": [
+    1,
+    0,
+    6,
+    1
+  ],
+  "opposite_sign_rooted_isomorphism": {
+    "map": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "profile": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "word1": "OJ",
+    "word2": "JZ"
+  },
+  "status": "PASS: indexed-word identities; no support or coverage inference"
+}
+{
+  "status": "PASS",
+  "proof_sha256": "abcde17f087b53117ca4754d49984dfaaf920de621809363c040d0f5277a97bb",
+  "independent_modular_BFS_moduli": "every even M from2 through100",
+  "unit_interface_pairs": 42925,
+  "phantom_profiles_reconstructed": 50,
+  "all_14_cap11_sources_direct_graph_checked": true,
+  "C2_ordered_pair_comparisons": 392,
+  "C2_support_through67": [
+    13,
+    15,
+    23,
+    25,
+    29,
+    41,
+    43,
+    45,
+    49,
+    53,
+    55
+  ],
+  "manual_all_order_audit": "Compiler, all-moduli sequence, real-height escape, sparse-family construction, and bounded-height equivalence all valid. No correction required.",
+  "scope": "No positive-image coverage inference."
+}
