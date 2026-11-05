@@ -1,0 +1,13 @@
+# Independent root-weighted height audit
+
+Status: PASS after boundary and universe clarifications. Final proof SHA256 `6aecaac6ab45cb8946f35fbf6fad71d2f5c90f61e3af6da1b876cfa1eb6917b3`; probe SHA256 `7cf76a21cd9e646c9d9a892e237cc55bda3a51e06213b84cdc9ae3a490d4ffbc`.
+
+The ledger W=U-d transforms exactly as O:(2W+d,d), Z:(2W,d), J:(W+d,D), retaining all other source coordinates. Thus W>=2^k for k retained-root letters regardless of J interleaving. Balanced readout n>=2W+3 gives the stated exact digit and graph-order bounds. The Z^k equality profile requires k>=1; this was repaired, and the empty seed/count5 case is now treated separately. There is no hidden height reset at J.
+
+The restricted one-hot word system has O(log n) variables and length L=floor(log2(n-3))+2. Every field point selects a literal word; its integer lift has G<=3*2^(L+1)<=24(n-3). For n>=5, p>24(n-3) also gives p>L and p>n. The root-count quartic therefore means an ordinary count in {0,1,2,3}, and terminal congruence forces exact equality. This is an exact finite-system reformulation and a sufficient constructor specification, not a proved all-target constructor. Its existence claim remains explicitly open.
+
+Independent `check_root_weighted.py` uses a different census organization: source profiles are processed in increasing U, with an integer bitmask retaining every (J count, retained-letter count) cost. It completely reproduces the cap 50,001 universe: 461,641 profiles, 641,253 profile/cost triples, 23,502 targets in the two-length restriction, and 1,498 missing odd targets in the precisely stated interval 3<=n<=50001. The largest restricted miss is 49,937. All ten cost triples at 49,937 have retained length 11 or 12, never 13 or 14; the displayed 12-retained/2-J word has the correct actual profile and G=49937. The full at-most-three-J class covers every odd target above 27,781 through 50,001 in this independent census.
+
+The independent checker also verifies the ledger on a signed basis, all 641,253 charged-height inequalities, the sharp families and empty boundary, 3,280 short-word upper bounds, and the prime-threshold arithmetic through n=1000. Prefix pruning is complete because U and G strictly increase. Merging only by profile would be unsound for the length predicate; the independent bitmasks and author triples both retain the full costs.
+
+Normal and optimized independent receipts are identical. Author normal and optimized replay receipts are identical with SHA256 `143a8d253949bfe425a7f271fc6e5377aa068279fe63701cdc0be040be84ca51`. No unresolved correctness issue found. The finite hostile does not imply infinitely many restricted failures or disprove the full four-block coverage conjecture.

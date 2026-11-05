@@ -1,0 +1,57 @@
+{
+  "status": "AUDITED; root-weighted height theorem and linear-prime restricted constructor specification; all-target construction OPEN",
+  "files": [
+    {
+      "path": "PROBE.json",
+      "sha256": "143a8d253949bfe425a7f271fc6e5377aa068279fe63701cdc0be040be84ca51"
+    },
+    {
+      "path": "PROBE_OPTIMIZED.json",
+      "sha256": "143a8d253949bfe425a7f271fc6e5377aa068279fe63701cdc0be040be84ca51"
+    },
+    {
+      "path": "PROOF.md",
+      "sha256": "6aecaac6ab45cb8946f35fbf6fad71d2f5c90f61e3af6da1b876cfa1eb6917b3"
+    },
+    {
+      "path": "README.md",
+      "sha256": "1656166bad946db25ee4a2d280bd99615a46a304a165f9a32a2d4d8042f3d2ce"
+    },
+    {
+      "path": "audit/INDEPENDENT_NORMAL.json",
+      "sha256": "5b19e12ad8fd912bba6516277234b9d80bbf96139fc9deec1ebb900fb65f3feb"
+    },
+    {
+      "path": "audit/INDEPENDENT_OPTIMIZED.json",
+      "sha256": "5b19e12ad8fd912bba6516277234b9d80bbf96139fc9deec1ebb900fb65f3feb"
+    },
+    {
+      "path": "audit/REPLAY_NORMAL.json",
+      "sha256": "143a8d253949bfe425a7f271fc6e5377aa068279fe63701cdc0be040be84ca51"
+    },
+    {
+      "path": "audit/REPLAY_OPTIMIZED.json",
+      "sha256": "143a8d253949bfe425a7f271fc6e5377aa068279fe63701cdc0be040be84ca51"
+    },
+    {
+      "path": "audit/REPORT.md",
+      "sha256": "1fbcb46d5f099a2a518d05b254a32d5c27136d69a95a846233bac25de4c4d18e"
+    },
+    {
+      "path": "audit/independent.py",
+      "sha256": "8f7bf1d713a2ffcfaf27219272ce70cedff2aee25c40f839dd5487187365b027"
+    },
+    {
+      "path": "dependencies/FOUR_BLOCKS.md",
+      "sha256": "c7500f3a9bda14aa4a5142d55518e9091b1b0bb56a6aa61e37435cf857b90ac5"
+    },
+    {
+      "path": "dependencies/PHYSICAL_ADJOINT.md",
+      "sha256": "f9c337b3cfee1cd1134ee02276890238c30ff0e84a14c26fbcd5cd78ab82dc05"
+    },
+    {
+      "path": "probe.py",
+      "sha256": "7cf76a21cd9e646c9d9a892e237cc55bda3a51e06213b84cdc9ae3a490d4ffbc"
+    }
+  ]
+}
