@@ -33,7 +33,7 @@ rational series of modest rank. The repository's main spectrum families are the 
 | G(0,2) | cutwidth 2, contains every fa <= 2 tournament of THM-4748 | 83 | 18 | new |
 | G(0,3) | cutwidth 3 | 521 | 80 | new |
 | G(1,2) | one apex over cutwidth 2 | 994 | 78 | new |
-| G(2,1) | two apexes over an interval chain; contains the one-apex one-arc joins of THM-4875 (every odd <= 2^32 except 7, 21) | 2544 | PENDING | new |
+| G(2,1) | two apexes over an interval chain; contains the one-apex one-arc joins of THM-4875 (every odd <= 2^32 except 7, 21) | 2544 | 78 | new |
 
 The **seam ranks** (the number of bilinear terms needed to compose two spine tournaments across a cut crossed by c
 reversed arcs) are 3 for c = 1 (the Lorentzian one-arc join law h h' + R R' - e e', KNOWN), **13 for c = 2** and
@@ -179,9 +179,11 @@ dimension of the smallest linear representation of the series (Fliess, Schuetzen
 | G(0,2) | 83 | 39 | 25 | 18 |
 | G(0,3) | 521 | 211 | 120 | 80 |
 | G(1,2) | 994 | 505 | 116 | 78 |
-| G(2,1) | 2544 | PENDING | PENDING | PENDING |
+| G(2,1) | 2544 | 1549 | 116 | 78 (modular, two primes) |
 
-G(2,0)'s rank 17 equals the Hankel rank of the two-feedback series found by Session 191 by a different method (the
+Unexplained coincidences to be tested on larger grades: rank G(1,1) = rank G(2,0) = 17 and rank G(1,2) = rank G(2,1)
+= 78 (an apex and a slot contribute alike once one apex is present), while G(0,1) = 5, G(0,2) = 18, G(0,3) = 80 exceed
+G(1,0) = 4, G(1,1) = 17, G(1,2) = 78 by 1, 1, 2. G(2,0)'s rank 17 equals the Hankel rank of the two-feedback series found by Session 191 by a different method (the
 "rational dimension 28" there is the reachable space of its 36-state representation). G(1,0)'s rank 4 is Session 16's
 four coordinates.
 
@@ -197,6 +199,7 @@ rank of the pairing restricted to prefixes ending at a c-slot cut.
 | G(1,0) | 4 | | | |
 | G(1,1) | 4 | 13 | | |
 | G(1,2) | 4 | 13 | 61 | |
+| G(2,1) | 17 | 61 | | |
 
 For k = 0 the c = 0 rank 2 is the ordered-join product plus the degenerate empty-suffix direction. The c = 1 rank 3 is
 the Lorentzian law (h, e, R) x (h', s', L') of session29/THM-4866 (B): KNOWN, reproduced here as the minimal rank. The

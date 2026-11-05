@@ -1,6 +1,6 @@
 ---
 id: THM-4878
-title: "Graded spine grammars G(k, w) (a transitive chain with reversed arcs of cutwidth <= w and k <= 2 apexes): the Hamiltonian-path count is an N-rational series over an explicit finite cut-state automaton (PROVED, with the state bound (c+k+2)!(c+k+3)^(c+k)); the dictionary G(1,0) = one-apex, G(2,0) = two-apex, connected G(0,1) = upset tournaments with the all-parts-1 chain = the tribonacci tower of THM-4865, fa <= 2 in G(0,2), one-apex one-arc joins in G(2,1) (PROVED); exact Hankel ranks 4, 5, 17, 17, 18, 80, 78 for G(1,0), G(0,1), G(2,0), G(1,1), G(0,2), G(0,3), G(1,2) (the 17 of G(2,0) reproduces Session 191) and seam ranks 3 (one reversed arc: the Lorentzian law), 13 (two arcs), 62 (three arcs) (FINITE-EXACT); the sink-run bound H >= 2^r + 1 (PROVED); the one-apex class attains 521,915 of the 1,048,576 odd numbers below 2^21 (FINITE-EXACT); pre-registered cutwidth censuses (FINITE-EXACT, section 6 of the note)"
+title: "Graded spine grammars G(k, w) (a transitive chain with reversed arcs of cutwidth <= w and k <= 2 apexes): the Hamiltonian-path count is an N-rational series over an explicit finite cut-state automaton (PROVED, with the state bound (c+k+2)!(c+k+3)^(c+k)); the dictionary G(1,0) = one-apex, G(2,0) = two-apex, connected G(0,1) = upset tournaments with the all-parts-1 chain = the tribonacci tower of THM-4865, fa <= 2 in G(0,2), one-apex one-arc joins in G(2,1) (PROVED); exact Hankel ranks 4, 5, 17, 17, 18, 80, 78, 78 for G(1,0), G(0,1), G(2,0), G(1,1), G(0,2), G(0,3), G(1,2), G(2,1) (the 17 of G(2,0) reproduces Session 191) and seam ranks 3 (one reversed arc: the Lorentzian law), 13 (two arcs), 62 (three arcs) (FINITE-EXACT); the sink-run bound H >= 2^r + 1 (PROVED); the one-apex class attains 521,915 of the 1,048,576 odd numbers below 2^21 (FINITE-EXACT); pre-registered cutwidth censuses (FINITE-EXACT, section 6 of the note)"
 status: >
   PROVED: (1) the cut-state transfer theorem and the state bound; (2) the dictionary of grades; (4) the sink-run lower
   bound, the padding lemma and the saturation soundness. KNOWN: the monotonicity of H under induced subtournaments
@@ -63,10 +63,11 @@ Full definitions, proofs, programs and tables: the source note.
    but in neither G(1,0) nor G(0,1).
 
 3. **Ranks (FINITE-EXACT).** Hankel ranks (dimension of the smallest linear representation of H on the grammar):
-   G(1,0) 4, G(0,1) 5, G(2,0) 17, G(1,1) 17, G(0,2) 18, G(0,3) 80, G(1,2) 78. Seam ranks (minimal number of bilinear
-   terms composing a prefix and a suffix across a cut with c pending reversed arcs): c = 1: 3 in every grammar
-   without apexes (the Lorentzian law), c = 2: 13 (in G(0,2) and G(0,3)), c = 3: 62 (G(0,3)); with one apex 13 at
-   c = 1 (G(1,1), G(1,2)) and 61 at c = 2 (G(1,2)).
+   G(1,0) 4, G(0,1) 5, G(2,0) 17, G(1,1) 17, G(0,2) 18, G(0,3) 80, G(1,2) 78, G(2,1) 78 (the last modulo two
+   primes). Seam ranks (minimal number of bilinear terms composing a prefix and a suffix across a cut with c pending
+   reversed arcs): c = 1: 3 in every grammar without apexes (the Lorentzian law), c = 2: 13 (in G(0,2) and G(0,3)),
+   c = 3: 62 (G(0,3)); with one apex 13 at c = 1 (G(1,1), G(1,2)) and 61 at c = 2 (G(1,2)); with two apexes 17 at
+   c = 0 and 61 at c = 1 (G(2,1)). Unexplained: rank G(1,1) = rank G(2,0) and rank G(1,2) = rank G(2,1).
 
 4. **Sink-run bound (PROVED).** r consecutive slot-free chain vertices beaten by every apex, followed by a chain
    vertex that beats some apex (or, for k = 0, lying inside a pending slot), force 2^(r-1) odd cycles through that
