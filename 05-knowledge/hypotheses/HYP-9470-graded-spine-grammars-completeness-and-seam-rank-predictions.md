@@ -1,7 +1,7 @@
 ---
 id: HYP-9470
 title: "Graded spine grammars G(k, w). (A) Pre-registered census predictions P1-P5 (commit 756414ff80): G(0,2) misses between 10 and 60 odd numbers <= 300 besides 7, 21; G(0,3) misses at most 5 below 300 and at least one below 2000; G(1,1) contains 13 and misses at most 10 percent below 2000; G(1,2) misses nothing below 2000 besides 7, 21; 13 has minimal grades (0,2) and (2,0). (B) Conjecture: G(2,1) (two apexes over an interval chain, which contains the one-apex one-arc joins) attains every odd number except 7 and 21; equivalently the explicit N-rational series of THM-4878 on G(2,1) has range the odd numbers minus {7, 21}; this would prove Chan-Pak 6.2. (C) Conjecture: no grade G(0, w) without apexes is onto. (D) The two-reversed-arc seam rank 13 and the three-arc seam rank 62 are universal over all pairs of tournaments joined across two (three) reversed arcs."
-status: PENDING (census outcomes recorded in the source note, section 6; (B) and (C) OPEN; (D) FINITE-EXACT within cutwidth <= 3 ambients, universality OPEN)
+status: (A) PARTLY TESTED - P1 REFUTED (both clauses), P2 first clause CONFIRMED, P3 CONFIRMED, P5 CONFIRMED, P2 second clause and P4 not tested at close-out (runs still going); (B), (C), (E) OPEN (C reversed from the pre-registered guess; FINITE-EXACT to 8191, 2047); (D) FINITE-EXACT within cutwidth <= 4 ambients, universality OPEN. Audit of the whole packet PASS WITH CORRECTIONS (MISTAKE-720)
 session: opus-2026-11-04-S79
 date: 2026-11-04
 related: [THM-4878, THM-4875, THM-4748, THM-4744, THM-4865, THM-4876, THM-1370, HYP-9468]
@@ -28,8 +28,9 @@ cut-state automaton of THM-4878 (1). "Attained by G(k, w)" includes ordered join
 - P5. 13 lies in G(0,2) and G(2,0) but in neither G(1,0) nor G(0,1).
 
 Outcomes (note, section 6): P1 REFUTED in both clauses (G(0,2) misses nothing below 8192 besides 7, 21); P2 first
-clause CONFIRMED (G(0,3) misses nothing below 512), second clause pending the 2047 run; P3 CONFIRMED; P5 CONFIRMED;
-P4 pending the G(1,2) runs at filing.
+clause CONFIRMED (G(0,3) misses nothing below 512), second clause not tested at close-out (the 2047 run was still
+going); P3 CONFIRMED (the 10-percent clause by the G(1,1) 2047 run); P5 CONFIRMED; P4 not tested at close-out (the
+G(1,2) runs were still going).
 
 ## (B) Completeness of G(2,1) (OPEN; implies Chan-Pak)
 

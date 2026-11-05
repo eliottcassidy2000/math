@@ -83,7 +83,7 @@ Full definitions, proofs, programs and tables: the source note.
 3. **Ranks (FINITE-EXACT; conventions: letter alphabet = the letter indices of the current slot count, the (T, b, A)
    alphabet gives the same ranks; the empty tournament counts one path, so the empty cut is accepting).** Hankel
    ranks (dimension of the smallest linear representation of H on the grammar): G(1,0) 4, G(0,1) 4, G(2,0) 17,
-   G(1,1) 17, G(0,2) 17, G(0,3) 79, G(1,2) 78, G(2,1) 78 (the last modulo two primes), G(0,4) 389 expected (audit).
+   G(1,1) 17, G(0,2) 17, G(0,3) 79, G(1,2) 78, G(2,1) 78, G(0,4) 389 (the last two modulo two primes).
    With the engine's convention (empty word = 0) the apex-free grades gain one dimension: 5, 18, 80, 390 (audit M3).
    Seam ranks (minimal number of bilinear terms composing a prefix and a suffix across a cut with c pending reversed
    arcs): c = 0: 1 (the ordered-join product; 2 with the engine convention); c = 1: 3 in every grammar without apexes

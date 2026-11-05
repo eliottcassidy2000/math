@@ -208,7 +208,7 @@ dimension of the smallest linear representation of the series (Fliess, Schuetzen
 | G(0,3) | 521 | 211 | 120 | 79 | 80 |
 | G(1,2) | 994 | 505 | 116 | 78 | 78 |
 | G(2,1) | 2544 | 1549 | 116 | 78 (modular, two primes) | 78 |
-| G(0,4) | 3384 | 1207 | 611 | 389 expected (audit; recomputation running at filing) | 390 (modular) |
+| G(0,4) | 3384 | 1207 | 611 | 389 (modular, two primes) | 390 (modular) |
 
 Convention (audit M3): the series is read on the letter alphabet (indices into the letter list of the current slot
 count; the audit checked that the (T, b, A)-alphabet gives the same ranks), and the empty tournament counts one
@@ -360,16 +360,21 @@ proof. G(1,1) itself attains every odd number <= 2047 except 7 and 21 (1022 of 1
 | **G(0,2)** | **8191** | **4094 of 4096** | **0** | 197,660,299 (at most 5 reversed arcs per value: 1, 12, 208, 1522, 2209, 142 values with 0..5 arcs) |
 | G(0,3) | 511 | 254 of 256 | 0 | 101,209,735 (521 cut states; at most 4 reversed arcs per value: 1, 8, 48, 174, 23) |
 | **G(1,1)** | **2047** | **1022 of 1024** | **0** | 498,938,267 (every value with the apex and **at most one** reversed chain arc: 560 one-apex values plus 462 with one arc) |
-| G(1,2) | 511 | RUNNING | | |
-| G(0,3), G(1,2) | 2047 | RUNNING | | |
-| G(0,2) | 32767 | RUNNING | | |
+| G(1,2) | 511 | still running at close-out | | |
+| G(0,3), G(1,2) | 2047 | still running at close-out | | |
+| G(0,2) | 32767 | still running at close-out | | |
+
+(The four unfinished runs write `census_k<k>_w<w>_X<X>.txt` in the session's temporary directory
+`C:/Users/Eliott/AppData/Local/Temp/s79/`; each prints its summary and an `ATTAINED_DIRECT:` line on completion and
+is reproduced by `grammar k w X 64 0 301` with the committed engine.)
 
 Outcomes of the pre-registered predictions (in time order): P1 first clause REFUTED by the 511 run (21:33), second
 clause REFUTED by the 8191 run (G(0,2) misses nothing below 8192, so the miss fraction in [2^11, 2^12) is 0, not
->= 3 percent); P2 first clause CONFIRMED by the G(0,3) 511 run, second clause (a miss below 2000) PENDING the 2047
-run and expected to fail; P3: the 13 clause CONFIRMED at 511, the 10-percent clause CONFIRMED by the G(1,1) 2047 run
-(22:57; the first draft said CONFIRMED before that run existed, audit minor 4); P5 CONFIRMED (13 is in G(0,2) and
-G(2,0), not in G(1,0) or G(0,1)); P4 PENDING the G(1,2) runs. The minimal-grade atlas
+>= 3 percent); P2 first clause CONFIRMED by the G(0,3) 511 run, second clause (a miss below 2000) NOT TESTED at
+close-out (the G(0,3) 2047 run was still going; given G(0,2) it is expected to fail); P3: the 13 clause CONFIRMED at
+511, the 10-percent clause CONFIRMED by the G(1,1) 2047 run (22:57; the first draft said CONFIRMED before that run
+existed, audit minor 4); P5 CONFIRMED (13 is in G(0,2) and G(2,0), not in G(1,0) or G(0,1)); P4 NOT TESTED at
+close-out (both G(1,2) runs still going). The minimal-grade atlas
 (`spine_grammar_atlas_20261104.py`) over G(1,0), G(0,1), G(2,0) at 2047: G(0,1) misses 86 odd numbers below 300
 besides 7, 21 (first 11, 13, 19, 23, 35), G(1,0) misses 45 (first 13, 29, 35, 41, 43, 49, 59, 67, 71, 77); every odd
 number below 300 other than 7, 21 is attained by G(2,0) and by G(0,2); the values attained by G(2,0) only among
