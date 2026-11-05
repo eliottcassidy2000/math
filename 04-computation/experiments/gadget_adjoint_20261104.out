@@ -1,0 +1,7 @@
+# gadget_adjoint_20261104 MMAX=6 MCHK=5; probe triples: (1,1,1) (1,0,2) (3,1,3) (1,0,2) (5,2,6)
+order 1: (G,u,z) cases 1 | adjoint failures 0 | formula-vs-direct checks 5, failures 0
+order 2: (G,u,z) cases 8 | adjoint failures 0 | formula-vs-direct checks 40, failures 0
+order 3: (G,u,z) cases 72 | adjoint failures 0 | formula-vs-direct checks 360, failures 0
+order 4: (G,u,z) cases 1024 | adjoint failures 0 | formula-vs-direct checks 5120, failures 0
+order 5: (G,u,z) cases 25600 | adjoint failures 0 | formula-vs-direct checks 128000, failures 0
+order 6: (G,u,z) cases 1179648 | adjoint failures 0 | formula-vs-direct checks 0, failures 0
