@@ -1,0 +1,33 @@
+{
+  "actual_profiles": 2764,
+  "formal": [
+    {
+      "ports": 0,
+      "shapes": 1,
+      "transition_entries": 1
+    },
+    {
+      "ports": 1,
+      "shapes": 6,
+      "transition_entries": 19
+    },
+    {
+      "ports": 2,
+      "shapes": 27,
+      "transition_entries": 240
+    },
+    {
+      "ports": 3,
+      "shapes": 122,
+      "transition_entries": 2964
+    },
+    {
+      "ports": 4,
+      "shapes": 581,
+      "transition_entries": 37504
+    }
+  ],
+  "formal_transition_entries": 40728,
+  "physical_birth_checks": 16597,
+  "status": "PASS"
+}
