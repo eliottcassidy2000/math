@@ -1,0 +1,67 @@
+{
+  "A_seed_profiles": 41,
+  "B_bridge_predecessors_confirmed": 4,
+  "B_seed_profiles": 4,
+  "indexed_source_profiles": 126910,
+  "literal_parent_child_pairs": [
+    [
+      "ray",
+      [
+        43,
+        2
+      ],
+      [
+        87,
+        3
+      ]
+    ],
+    [
+      "A",
+      [
+        2503,
+        2
+      ],
+      [
+        5007,
+        3
+      ]
+    ],
+    [
+      "B",
+      [
+        973,
+        2
+      ],
+      [
+        1947,
+        3
+      ]
+    ],
+    [
+      "pump_choice",
+      [
+        3823,
+        2
+      ],
+      [
+        7647,
+        3
+      ]
+    ],
+    [
+      "pump_choice",
+      [
+        6253,
+        2
+      ],
+      [
+        12507,
+        3
+      ]
+    ]
+  ],
+  "method": "indexed M_L inventory and independent graph assembly/counting",
+  "status": "PASS",
+  "strong_profiles": 81548,
+  "upper_response_one_profiles": 27
+}

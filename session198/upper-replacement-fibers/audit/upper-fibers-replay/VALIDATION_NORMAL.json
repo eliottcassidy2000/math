@@ -1,0 +1,405 @@
+{
+  "A_seed_profiles": 41,
+  "B_seed_profiles": 4,
+  "bridge_parameter_tests": 100,
+  "dependency_hashes": {
+    "dependencies/BILINEAR_C2.md": "5eab9deb2871819d8a1b5684c4987f2f4da807adc55063a30675d531c5ad3813",
+    "dependencies/C3_TWO_SOURCE.md": "103a0c347881c7641f17d53bb8796187ac80f057a90af0a3acf8e6f89032c64d",
+    "dependencies/POSITIVE_SOURCE_GRAMMAR.md": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537",
+    "dependencies/bilinear.py": "33cfe6cea487b17da44e083d7e81bd860dfeddcab3096deb6d135191e5537ac0",
+    "dependencies/c3.py": "564034e130625d8bfd06ac04f7f365c14c93cd22e9ef8f33da3f5330a0825bb9",
+    "dependencies/core.py": "dc32dc1ef3647b694015cb4ff1ef99415c162bfbaf58d3b545175b09f0378042",
+    "dependencies/source_oracle.py": "33cfe6cea487b17da44e083d7e81bd860dfeddcab3096deb6d135191e5537ac0"
+  },
+  "exact_arithmetic_target_tests": 204,
+  "literal_graph_checks": [
+    {
+      "branch": "ray",
+      "child_order": 8,
+      "counts": [
+        43,
+        2,
+        87,
+        3
+      ],
+      "parent_order": 7,
+      "source_profile": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "source_word": "J"
+    },
+    {
+      "branch": "A",
+      "child_order": 15,
+      "counts": [
+        2503,
+        2,
+        5007,
+        3
+      ],
+      "parent_order": 14,
+      "source_profile": [
+        167,
+        76,
+        182,
+        91
+      ],
+      "source_word": "OJOZOOJJ"
+    },
+    {
+      "branch": "B",
+      "child_order": 13,
+      "counts": [
+        973,
+        2,
+        1947,
+        3
+      ],
+      "parent_order": 12,
+      "source_profile": [
+        65,
+        26,
+        70,
+        31
+      ],
+      "source_word": "ZJJOZJ"
+    }
+  ],
+  "maximum_pump_source_order": 210,
+  "residual_block_basis_tests": 144,
+  "scope": "Complete physical upper-response-one fiber and exact construction branches, not cofinite scalar coverage.",
+  "source_cap": 5000,
+  "source_profiles": 126910,
+  "status": "PASS",
+  "strong_profiles": 81548,
+  "symbolic_basis_rows": 4,
+  "upper_response_one": [
+    {
+      "branch": "ray",
+      "child": 87,
+      "parent": 43,
+      "profile": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "word": "Z"
+    },
+    {
+      "branch": "ray",
+      "child": 147,
+      "parent": 73,
+      "profile": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "word": "OJ"
+    },
+    {
+      "branch": "ray",
+      "child": 267,
+      "parent": 133,
+      "profile": [
+        9,
+        1,
+        9,
+        1
+      ],
+      "word": "OOJ"
+    },
+    {
+      "branch": "ray",
+      "child": 507,
+      "parent": 253,
+      "profile": [
+        17,
+        1,
+        17,
+        1
+      ],
+      "word": "OOOJ"
+    },
+    {
+      "branch": "ray",
+      "child": 987,
+      "parent": 493,
+      "profile": [
+        33,
+        1,
+        33,
+        1
+      ],
+      "word": "OOOOJ"
+    },
+    {
+      "branch": "ray",
+      "child": 1947,
+      "parent": 973,
+      "profile": [
+        65,
+        1,
+        65,
+        1
+      ],
+      "word": "OOOOOJ"
+    },
+    {
+      "branch": "B",
+      "child": 1947,
+      "parent": 973,
+      "profile": [
+        65,
+        26,
+        70,
+        31
+      ],
+      "word": "ZJJOZJ"
+    },
+    {
+      "branch": "ray",
+      "child": 3867,
+      "parent": 1933,
+      "profile": [
+        129,
+        1,
+        129,
+        1
+      ],
+      "word": "OOOOOOJ"
+    },
+    {
+      "branch": "A",
+      "child": 5007,
+      "parent": 2503,
+      "profile": [
+        167,
+        76,
+        182,
+        91
+      ],
+      "word": "OJOZOOJJ"
+    },
+    {
+      "branch": "ray",
+      "child": 7707,
+      "parent": 3853,
+      "profile": [
+        257,
+        1,
+        257,
+        1
+      ],
+      "word": "OOOOOOOJ"
+    },
+    {
+      "branch": "A",
+      "child": 7647,
+      "parent": 3823,
+      "profile": [
+        255,
+        116,
+        278,
+        139
+      ],
+      "word": "OOZZOOJJ"
+    },
+    {
+      "branch": "A",
+      "child": 10287,
+      "parent": 5143,
+      "profile": [
+        343,
+        156,
+        374,
+        187
+      ],
+      "word": "ZOZJJOOJJ"
+    },
+    {
+      "branch": "B",
+      "child": 12507,
+      "parent": 6253,
+      "profile": [
+        417,
+        166,
+        450,
+        199
+      ],
+      "word": "OZOJJJOZJ"
+    },
+    {
+      "branch": "ray",
+      "child": 15387,
+      "parent": 7693,
+      "profile": [
+        513,
+        1,
+        513,
+        1
+      ],
+      "word": "OOOOOOOOJ"
+    },
+    {
+      "branch": "ray",
+      "child": 30747,
+      "parent": 15373,
+      "profile": [
+        1025,
+        1,
+        1025,
+        1
+      ],
+      "word": "OOOOOOOOOJ"
+    },
+    {
+      "branch": "A",
+      "child": 28767,
+      "parent": 14383,
+      "profile": [
+        959,
+        436,
+        1046,
+        523
+      ],
+      "word": "OZOOZZOOJJ"
+    },
+    {
+      "branch": "A",
+      "child": 39327,
+      "parent": 19663,
+      "profile": [
+        1311,
+        596,
+        1430,
+        715
+      ],
+      "word": "OZJJJOZOOJJ"
+    },
+    {
+      "branch": "ray",
+      "child": 61467,
+      "parent": 30733,
+      "profile": [
+        2049,
+        1,
+        2049,
+        1
+      ],
+      "word": "OOOOOOOOOOJ"
+    },
+    {
+      "branch": "A",
+      "child": 60447,
+      "parent": 30223,
+      "profile": [
+        2015,
+        916,
+        2198,
+        1099
+      ],
+      "word": "ZOOZOJOZOOJJ"
+    },
+    {
+      "branch": "A",
+      "child": 65727,
+      "parent": 32863,
+      "profile": [
+        2191,
+        996,
+        2390,
+        1195
+      ],
+      "word": "ZOZJJJOZOOJJ"
+    },
+    {
+      "branch": "A",
+      "child": 78927,
+      "parent": 39463,
+      "profile": [
+        2631,
+        1196,
+        2870,
+        1435
+      ],
+      "word": "OZZJJJOZOOJJ"
+    },
+    {
+      "branch": "A",
+      "child": 84207,
+      "parent": 42103,
+      "profile": [
+        2807,
+        1276,
+        3062,
+        1531
+      ],
+      "word": "OZOZJJOZOOJJ"
+    },
+    {
+      "branch": "A",
+      "child": 94767,
+      "parent": 47383,
+      "profile": [
+        3159,
+        1436,
+        3446,
+        1723
+      ],
+      "word": "OZOZOZJJOOJJ"
+    },
+    {
+      "branch": "ray",
+      "child": 122907,
+      "parent": 61453,
+      "profile": [
+        4097,
+        1,
+        4097,
+        1
+      ],
+      "word": "OOOOOOOOOOOJ"
+    },
+    {
+      "branch": "A",
+      "child": 113247,
+      "parent": 56623,
+      "profile": [
+        3775,
+        1716,
+        4118,
+        2059
+      ],
+      "word": "OJOZJOZJJOOJJ"
+    },
+    {
+      "branch": "A",
+      "child": 123807,
+      "parent": 61903,
+      "profile": [
+        4127,
+        1876,
+        4502,
+        2251
+      ],
+      "word": "ZJOZJJJOZOOJJ"
+    },
+    {
+      "branch": "A",
+      "child": 131727,
+      "parent": 65863,
+      "profile": [
+        4391,
+        1996,
+        4790,
+        2395
+      ],
+      "word": "ZOZZJJJOZOOJJ"
+    }
+  ]
+}

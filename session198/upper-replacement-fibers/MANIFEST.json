@@ -1,0 +1,20 @@
+{
+  "PROOF.md": "f59809ed90313d3c1805b29bcfef29091ae73d100d2fc0bc652970cb87d53675",
+  "VALIDATION.json": "70596820b39240e36e08342093de5e21746067c1a7fb350ada4b0621c2d509e6",
+  "VALIDATION_NORMAL.json": "70596820b39240e36e08342093de5e21746067c1a7fb350ada4b0621c2d509e6",
+  "VALIDATION_OPTIMIZED.json": "70596820b39240e36e08342093de5e21746067c1a7fb350ada4b0621c2d509e6",
+  "audit/UPPER_FIBERS_INDEPENDENT.json": "5211a3fa62d3ab9770b7dd6aa2b59189e99b673ac00bbb31bd8213cd8d8094de",
+  "audit/upper-fibers-independent.py": "5aac39c1f20b63b0d8d60b647d91fe58e5aea87cd68e4b7fd671bbf8e8958fe2",
+  "audit/upper-fibers-replay/AUDIT.md": "32f6de8ba0e0046401dd6082e4f30a5e50a3d4c8de1c40e4ae8079ed8b1bdf8f",
+  "audit/upper-fibers-replay/VALIDATION_NORMAL.json": "70596820b39240e36e08342093de5e21746067c1a7fb350ada4b0621c2d509e6",
+  "audit/upper-fibers-replay/VALIDATION_OPTIMIZED.json": "70596820b39240e36e08342093de5e21746067c1a7fb350ada4b0621c2d509e6",
+  "dependencies/BILINEAR_C2.md": "5eab9deb2871819d8a1b5684c4987f2f4da807adc55063a30675d531c5ad3813",
+  "dependencies/C3_TWO_SOURCE.md": "103a0c347881c7641f17d53bb8796187ac80f057a90af0a3acf8e6f89032c64d",
+  "dependencies/POSITIVE_SOURCE_GRAMMAR.md": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537",
+  "dependencies/bilinear.py": "33cfe6cea487b17da44e083d7e81bd860dfeddcab3096deb6d135191e5537ac0",
+  "dependencies/c3.py": "564034e130625d8bfd06ac04f7f365c14c93cd22e9ef8f33da3f5330a0825bb9",
+  "dependencies/core.py": "dc32dc1ef3647b694015cb4ff1ef99415c162bfbaf58d3b545175b09f0378042",
+  "dependencies/source_oracle.py": "33cfe6cea487b17da44e083d7e81bd860dfeddcab3096deb6d135191e5537ac0",
+  "positive_model.py": "f7790919712d11692a3ba1f463f272b2193603af61f879148b4f54b3b503c146",
+  "verify.py": "08b47557366763df5d61253944a375a98e9af476b62a885b5368ec29baf00952"
+}
