@@ -1,7 +1,7 @@
 ---
 id: HYP-9468
 title: "Pre-registered out-of-sample checks. (P1) Every odd N <= 2^32 other than 7 and 21 is the Hamiltonian path count of a one-arc join of a one-apex tournament with a one-apex tournament or with a tournament of order <= 7. (P2) The one-apex x one-apex joins alone miss a vanishing proportion of odd numbers (growth ratio and density windows below). (P3) In C2 children of all order-8 bases, every old vertex other than the mark and the sink of B has digit >= 9, and the old-mark checks of THM-4875 (A) all pass"
-status: PRE-REGISTERED (opus-2026-11-04-S78; results to be appended below, never edited above this line)
+status: CONFIRMED (P1, P2 and P3 all hold out of sample, run after the pre-registration commit 19562af223); recorded as THM-4875 (D) and (A3)
 session: opus-2026-11-04-S78
 date: 2026-11-04
 related: [THM-4875, THM-4873, THM-4866, THM-4865, HYP-9454]
@@ -65,4 +65,19 @@ checked by brute force on all 961 pairs of words of length <= 4.
 
 ## Results
 
-(Appended after the out-of-sample runs.)
+**(P1) CONFIRMED.** `chanpak_one_apex_join_cover_20261104.out` (LOGX = 32): the odd misses of F0 + F1 + F2 in
+[1, 2^32] are exactly 7 and 21.
+- The suffix law for g was checked on 2,000,000 random v (0 failures).
+- The run used the order-<=7 bank for F0 as well, so the confirmed statement is slightly stronger than the "order
+  <= 8" written above.
+
+**(P2) CONFIRMED.**
+- F1-only misses m_k for k = 22..31: 15,827, 25,815, 40,446, 63,546, 99,877, 154,867, 241,881, 378,695, 593,645 and
+  934,107.
+- Ratios: 1.575, 1.631, 1.567, 1.571, 1.572, 1.551, 1.562, 1.566, 1.568, 1.574 (all in [1.45, 1.75]).
+- Density in [2^31, 2^32): 0.000870 (in [0.0005, 0.003]).
+
+**(P3) CONFIRMED.** `old_mark_digit_bound_20261104.out`, |B| = 8: 6,880 classes and 55,040 marks.
+- 0 failures in every check.
+- Exactly one digit-4 old vertex.
+- The minimum non-sink old digit is 9, and the minimum mark digit at out-degree 1 is 2.

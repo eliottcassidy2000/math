@@ -188,7 +188,8 @@ unimodular gadget preimages from a finite base". Such a proof needs one of three
 ## 4. (D) One-apex joins realise every odd N <= 2^32 except 7 and 21 (FINITE-EXACT)
 
 **Families** (HYP-9468).
-- F0: the plain counts, namely every count of order <= 8 and every g(v).
+- F0: the plain counts, namely every count of order <= 7 and every g(v). HYP-9468 wrote "order <= 8"; the program
+  uses the order-<=7 bank for F0 as well, so the confirmed statement is the slightly stronger one.
 - F1: joins of two one-apex tournaments, T(w1) => T(w2)^op with x2 -> x1 reversed:
   H = (1 + u)(1 + v) + g(u) g(v) - e(u) e(v).
 - F2: joins of a one-apex tournament with a rooted tournament (S, s) of order <= 7, T(w) => S^op with s -> x reversed:
@@ -196,12 +197,15 @@ unimodular gadget preimages from a finite base". Such a proof needs one of three
 - The bank has 2,732 distinct triples, matching THM-4866 (D)'s count.
 
 **Result** (`chanpak_one_apex_join_cover_20261104`, out of sample from 2^22).
-- F0 + F1 + F2 attain every odd N in [1, 2^32] except 7 and 21. (RESULT LINE TO BE FILLED.)
+- F0 + F1 + F2 attain every odd N in [1, 2^32] = [1, 4,294,967,296] except 7 and 21. This is HYP-9468 P1, CONFIRMED;
+  the run took about 30 minutes on 12 threads.
 - The previous FINITE-EXACT range was 99,999,999 (square_sum_spectrum_overnight_20261031d-i, seven-parent banks).
   klein's numerations reached 8,079,323 (THM-4865, HYP-9454).
 
-**The bilinear family alone** (F1). Its miss density decreases in every dyadic block, from 0.127 at 2^10 to
-(TO BE FILLED) at 2^31.
+**The bilinear family alone** (F1). Its miss count per dyadic block grows by a ratio between 1.46 and 1.70 for
+k = 10..31, and between 1.55 and 1.63 for k = 22..31. The density falls in every block, from 0.127 in [2^10, 2^11) to
+0.00087 in [2^31, 2^32) (HYP-9468 P2, CONFIRMED). So F1 misses about X^0.65 of the odd numbers up to X. Conjecture:
+almost every odd number is the count of a join of two one-apex tournaments.
 
 **Checks.**
 - The suffix law used to evaluate g beyond the table, g(k 2^8 + r) = g(k) + k C(r) + (k mod 2) eps(r) + K(r), is
