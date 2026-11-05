@@ -2,6 +2,8 @@
 
 **Session:** klein-2026-11-04 (late evening), branch `codex/session-spectrum-20261104`. Continues the two-cycle work of §8 of [`two_branch_rearming_sigma_sweep_20261104`](../two_branch_rearming_sigma_sweep_20261104/README.md) (THM-4862 (g), HYP-9459) and inherits kind-pasteur's THM-4868 (non-critical run of a uniquely Hamiltonian tournament) and opus-S74's [`uniquely_hamiltonian_one_arc_cut_shelor_20261104.md`](../uniquely_hamiltonian_one_arc_cut_shelor_20261104.md) §2 (the extension lemma).
 
+**Addendum 2026-11-05.** The converse of the gluing theorem is proved in [`PROOF_CONVERSE.md`](PROOF_CONVERSE.md): the classification and the count law hold for every `n ≥ 6` (THM-4877 (4)).
+
 Notation. `hc(T)` = number of directed Hamiltonian cycles of a tournament `T`; `UH(n)` = the uniquely Hamiltonian tournaments of order `n` (Garey: `|UH(n)| = F(2n − 6)`); `D(n)` = the tournaments of order `n` with exactly two Hamiltonian cycles, `D_n = |D(n)|`; a *sole exit* is a vertex of out-degree 1, a *sole entry* one of in-degree 1; a vertex `v` of a strong `T` is *non-critical* if `T − v` is strong (`NC(T)` = their set); a *cut arc* is an arc whose removal (not reversal) destroys strong connectivity. All counts are of isomorphism classes.
 
 ## 0. Status
@@ -17,7 +19,8 @@ Notation. `hc(T)` = number of directed Hamiltonian cycles of a tournament `T`; `
   - **The classification is exact through order 16:** since the gluings are two-cycle and pairwise non-isomorphic (Theorem 2, Proposition 3), `D_n` equals the lower bound exactly when every two-cycle tournament of order `n` is a gluing; the census gives equality for every `n ≤ 16`. Through order 12 the structure script verifies the decomposition directly on every class (§3).
   - Every two-cycle tournament of order 6–16 has a sole exit and a sole entry (HYP-9459 (1), previously exhaustive through order 10); of order 6–14 it has exactly one or two of each, exactly one or two vertices whose deletion leaves a uniquely Hamiltonian tournament, between 3 and `n − 2` non-critical vertices, and satisfies **`#cut arcs + |NC| = n`** (the uniquely Hamiltonian identity of THM-4868 is `n + 1`); through order 12 its cut arcs lie on both cycles and `NC` is a cyclic interval of exactly one of the two cycles. For `hc = 3` (orders 6–13) `#cut + |NC| − n ∈ {0, 1}`, with the split 9/2, 27/11, 82/42, 246/144, 727/466, 2121/1453, 6123/4414, 17523/13153.
 - **FINITE-EXACT, pre-registered and confirmed.** HYP-9459 (2) `u_3(n) = F(2n − 9)` at orders 11, 12, 13 (233, 610, 1597) and (3) `u_4(n) = 2F(2n − 11)` at orders 11, 12 (178, 466), from the `hc ≤ 3` and `hc ≤ 4` censuses (§1).
-- **OPEN.** The converse of Theorem 2 for all `n` (every tournament with exactly two Hamiltonian cycles is a vertex or arc gluing), which is equivalent to the count law for all `n` and implies HYP-9459 (1); a proof of the identity `#cut + |NC| = n` for `hc = 2`; the meaning of the `hc = 3` split.
+- **PROVED (klein-2026-11-05, [`PROOF_CONVERSE.md`](PROOF_CONVERSE.md)).** The converse of Theorem 2 for every `n ≥ 6`: every tournament with exactly two Hamiltonian cycles is a vertex or arc gluing. Ingredients: the cut-vertex product law `hc(Y) = S · M · E` (Lemma A, verified on every strong tournament with a cut vertex of orders 5–8), the existence of a cut vertex (census for orders 6–16; Thomassen 1980 / Busch 2006 beyond), THM-4868 (C), (G) for the two in-neighbours of a cut vertex in its last component, and a descent lemma. Hence the classification and the count law hold for all `n ≥ 6`, and HYP-9459 (1) holds for `k = 2`. The proof is executed as an algorithm on every class of orders 6–12 ([`scripts/descent_certificate.py`](scripts/descent_certificate.py)).
+- **OPEN.** A proof of the identity `#cut + |NC| = n` for `hc = 2`; the meaning of the `hc = 3` split.
 - **KNOWN, not claimed:** Moon 1966 (a strong tournament of order `≥ 4` has a non-critical vertex); the extension lemma (opus-S74 §2; its interval part is the block lemma of the sweep packet, PROOFS §6); Shelor 1977 / THM-4867; THM-4868 (A)–(H) (kind-pasteur-S10): local roundness, at most two sole exits, the `F(2n − 7)` / `F(2n − 8)` split, `F(2n − 5)` rooted pairs, `#cut + |NC| = n + 1`; Garey 1972; Florez 2024 (A377857); THM-4862 (b), (g); HYP-9459.
 
 ## 1. The complete generator (Lemma 1)
@@ -89,7 +92,7 @@ Both candidates are Hamiltonian cycles of `Y`, so `hc(Y) = 2`. For the arc junct
 
 ## 4. What remains
 
-1. **The converse of Theorem 2** (every tournament with exactly two Hamiltonian cycles of order `≥ 6` is a vertex or arc gluing). Equivalent to the count law for all `n`; exhaustive through order 16. A proof would presumably run by Lemma 1 on a uniquely Hamiltonian parent with THM-4868's local roundness, showing that a two-interval or one-interval extension with `hc = 2` is a gluing.
+1. **The converse of Theorem 2** — PROVED on 2026-11-05 ([`PROOF_CONVERSE.md`](PROOF_CONVERSE.md)), through cut vertices rather than Lemma 1: the product law `hc = S · M · E` at a cut vertex, Thomassen–Busch for the cut vertex, THM-4868 (G) for the pattern of the in-neighbours, and a descent.
 2. The identity `#cut arcs + |NC| = n` for `hc = 2` (and `n + 1 − ε`, `ε ∈ {0, 1}`, for `hc = 3`): for gluings it should follow from THM-4868's `n + 1` for the two pieces.
 3. The `hc = 3` and `hc = 4` censuses can be pushed (order 14 for `hc ≤ 3` takes minutes; `hc ≤ 2` at order 17 about ten hours); the two `hc = 3` sequences by excess are new.
 
@@ -103,6 +106,8 @@ python3 seedK.py 4 && python3 tcgen_driver2.py 6 12 4                      # hc 
 grep '^2 ' cls_12.txt | ./moonstat2 > ../data/moon2_12.txt                  # deletion statistics (any order)
 cd .. && python3 scripts/moon_tab.py 6 12 && python3 scripts/identity_tab.py 6 11
 python3 scripts/two_cycle_structure.py 6 12 && python3 scripts/gf_identity.py && python3 scripts/perparent.py 7 11
+python3 scripts/cut_vertex_law.py all 5 8 && python3 scripts/cut_vertex_law.py two 6 12       # Lemma A of PROOF_CONVERSE.md
+python3 scripts/descent_certificate.py 6 12                                                  # the converse, executed on every class
 shasum -a 256 -c SHA256SUMS
 ```
 

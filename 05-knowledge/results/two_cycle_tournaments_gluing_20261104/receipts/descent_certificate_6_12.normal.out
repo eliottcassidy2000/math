@@ -1,0 +1,7 @@
+order 6: 5 two-cycle classes certified; {'converse used': 5, 'vertex': 4, 'arc': 1}; descent steps {0: 4, 1: 1}
+order 7: 18 two-cycle classes certified; {'converse used': 18, 'vertex': 14, 'arc': 4}; descent steps {0: 12, 1: 5, 2: 1}
+order 8: 60 two-cycle classes certified; {'converse used': 60, 'vertex': 46, 'arc': 14}; descent steps {0: 35, 1: 18, 2: 6, 3: 1}
+order 9: 191 two-cycle classes certified; {'converse used': 191, 'vertex': 145, 'arc': 46}; descent steps {0: 99, 1: 59, 2: 25, 3: 7, 4: 1}
+order 10: 589 two-cycle classes certified; {'converse used': 589, 'vertex': 444, 'arc': 145}; descent steps {0: 274, 1: 182, 2: 91, 3: 33, 4: 8, 5: 1}
+order 11: 1775 two-cycle classes certified; {'converse used': 1775, 'vertex': 1331, 'arc': 444}; descent steps {0: 747, 1: 539, 2: 305, 3: 132, 4: 42, 5: 9, 6: 1}
+order 12: 5257 two-cycle classes certified; {'converse used': 5257, 'vertex': 3926, 'arc': 1331}; descent steps {0: 2015, 1: 1551, 2: 967, 3: 478, 4: 183, 5: 52, 6: 10, 7: 1}

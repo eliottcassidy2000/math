@@ -1,0 +1,4 @@
+order 5: strong classes with a cut vertex 5; (class, cut vertex) pairs tested 10; failures of hc = S*M*E: 0
+order 6: strong classes with a cut vertex 30; (class, cut vertex) pairs tested 54; failures of hc = S*M*E: 0
+order 7: strong classes with a cut vertex 267; (class, cut vertex) pairs tested 433; failures of hc = S*M*E: 0
+order 8: strong classes with a cut vertex 3633; (class, cut vertex) pairs tested 5174; failures of hc = S*M*E: 0
