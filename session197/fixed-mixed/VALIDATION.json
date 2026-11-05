@@ -1,0 +1,85 @@
+{
+  "actual_profiles": 2764,
+  "commuting_mask_pairs": 85,
+  "formal": [
+    {
+      "coordinates": 1,
+      "ports": 0,
+      "transition_entries": 2
+    },
+    {
+      "coordinates": 8,
+      "ports": 1,
+      "transition_entries": 58
+    },
+    {
+      "coordinates": 45,
+      "ports": 2,
+      "transition_entries": 944
+    },
+    {
+      "coordinates": 253,
+      "ports": 3,
+      "transition_entries": 14648
+    },
+    {
+      "coordinates": 1487,
+      "ports": 4,
+      "transition_entries": 227904
+    }
+  ],
+  "literal_birth_checks": 33194,
+  "mixed_plus2": [
+    {
+      "H": 179,
+      "order": 8,
+      "periods": 0,
+      "ports": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "H": 539,
+      "order": 10,
+      "periods": 1,
+      "ports": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "H": 1619,
+      "order": 12,
+      "periods": 2,
+      "ports": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "H": 4859,
+      "order": 14,
+      "periods": 3,
+      "ports": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "H": 14579,
+      "order": 16,
+      "periods": 4,
+      "ports": [
+        0,
+        1,
+        4
+      ]
+    }
+  ],
+  "status": "PASS"
+}
