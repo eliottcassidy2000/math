@@ -1,0 +1,184 @@
+{
+  "canonical_dyadic_graph_controls_through_order5": 416,
+  "canonical_ratio_graph_controls_through_order5": 144,
+  "dyadic_source_profiles": 3126,
+  "files_sha256": {
+    "PROOF.md": "c627cc79107440d50133c63593c16bcf5e9a70cb48f389a5b9f6f0f833e713a5",
+    "core.py": "dc32dc1ef3647b694015cb4ff1ef99415c162bfbaf58d3b545175b09f0378042",
+    "verify.py": "d9c35f84bfb10673cb5f2d558cda2d4d89d1106465533ae552c1b6078af1796d"
+  },
+  "literal_graph_pairs": [
+    {
+      "H": 33,
+      "core_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "k": 1,
+      "order": 7
+    },
+    {
+      "H": 129,
+      "core_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "k": 2,
+      "order": 9
+    },
+    {
+      "H": 513,
+      "core_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "k": 3,
+      "order": 11
+    },
+    {
+      "H": 165,
+      "core_profile": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "k": 1,
+      "order": 10
+    },
+    {
+      "H": 645,
+      "core_profile": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "k": 2,
+      "order": 12
+    },
+    {
+      "H": 2565,
+      "core_profile": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "k": 3,
+      "order": 14
+    },
+    {
+      "H": 297,
+      "core_profile": [
+        9,
+        1,
+        9,
+        1
+      ],
+      "k": 1,
+      "order": 11
+    },
+    {
+      "H": 1161,
+      "core_profile": [
+        9,
+        1,
+        9,
+        1
+      ],
+      "k": 2,
+      "order": 13
+    },
+    {
+      "H": 4617,
+      "core_profile": [
+        9,
+        1,
+        9,
+        1
+      ],
+      "k": 3,
+      "order": 15
+    },
+    {
+      "H": 297,
+      "core_profile": [
+        9,
+        3,
+        9,
+        3
+      ],
+      "k": 1,
+      "order": 11
+    },
+    {
+      "H": 1161,
+      "core_profile": [
+        9,
+        3,
+        9,
+        3
+      ],
+      "k": 2,
+      "order": 13
+    },
+    {
+      "H": 4617,
+      "core_profile": [
+        9,
+        3,
+        9,
+        3
+      ],
+      "k": 3,
+      "order": 15
+    },
+    {
+      "H": 297,
+      "core_profile": [
+        9,
+        3,
+        9,
+        3
+      ],
+      "k": 1,
+      "order": 11
+    },
+    {
+      "H": 1161,
+      "core_profile": [
+        9,
+        3,
+        9,
+        3
+      ],
+      "k": 2,
+      "order": 13
+    },
+    {
+      "H": 4617,
+      "core_profile": [
+        9,
+        3,
+        9,
+        3
+      ],
+      "k": 3,
+      "order": 15
+    }
+  ],
+  "nontrivial_source_profiles": 32548,
+  "source_U_cap": 2000,
+  "status": "PASS",
+  "symbolic_k_range": [
+    1,
+    40
+  ]
+}
