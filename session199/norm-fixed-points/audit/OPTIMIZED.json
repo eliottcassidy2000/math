@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "proof_sha256": "1ba6c03a9b0f579acf5fa9499cc20f95fc84e1f9f67cd7a3251ea2f3997ad7b4",
+  "script_sha256": "ce16e7139cf7d0521118345b38450c5e6436bdda955d89454346614fb1a5169c",
+  "complete_U_cap": 2000,
+  "physical_profiles": 32548,
+  "fixed_profiles": 300,
+  "balanced_predecessor_and_image_checked": true,
+  "nonfixed601_control": true,
+  "manual_proof_audit": "All last-letter cases are exhaustive and valid. The graph identity ZJ=JO preserves the marked root. Singleton and edge cases are handled. This is the y/z-swap fixed locus, not the Zagier-involution fixed locus. The only fixed-locus prime values are13 and41.",
+  "scope": "No conclusion about arbitrary diagonal or independent-source spectrum."
+}
