@@ -101,6 +101,21 @@ Every outcome will be reported. P2 and P3 are measured with the same program, se
 - **It would not prove** the {7, 21} spectrum. Positive density is not exact filling; a proof would need an exact
   coset-aligned covering of a cone, or an analytic local-global argument.
 
+**Addendum 2 (committed after P1-P5 were read, before any pure-plane run).**
+- **P2, P3 and P5 results.**
+  - P2: the order-7 fill is 0.4573 (CONFIRMED).
+  - P3: the order-7 ratio is 0.9008 against 0.9051 (REFUTED).
+  - P5: no odd determinant among the 22,522 distinct S-row-zero matrices of order <= 8 (CONFIRMED).
+- **P4 result.** D_8(2) = 1.4288 and D_8(3) = 0.7395 (CONFIRMED). D_8(2.5) = 0.9999.
+- **Why P3 failed.** In the run used for P2 and P3, the plane is fed by the whole 3D orbit through rank-2 maps. Its
+  decay with scale then tracks the 3D orbit's exponent: a ratio of 0.90 corresponds to delta of about 1.83, close to
+  the measured 1.85. It does not track the 2D density D_k. The test of the 2D heuristic is the pure plane dynamics.
+- **P6 (blind).** `plane_bfs.c` runs the BFS of (H, R) under the 2x2 restrictions alone, with the twelve realisable
+  S = 0 seeds of order <= 5, X = 5,000, and the same two bands. Predictions:
+  - (a) the order-<=8 ratio fill[1601, 1799] / fill[801, 999] exceeds the order-<=7 ratio;
+  - (b) the order-<=7 ratio is below 0.95 and the order-<=8 ratio is at least 0.95.
+  - Both are read off one run per alphabet (orders <= 6, <= 7 and <= 8).
+
 ## Results
 
 (to be filled after the run)
