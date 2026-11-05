@@ -1,0 +1,230 @@
+{
+  "C3_generating_function": "z^5(1+5z-17z^2+11z^3-z^4)/(1-3z+z^2)^2",
+  "C3_physical_class_inventory": [
+    {
+      "has_outdegree_one": 1,
+      "marked_outdegree_one": 1,
+      "order": 5,
+      "outdegree_one_but_no_indegree_one": 0,
+      "total_C3": 1
+    },
+    {
+      "has_outdegree_one": 9,
+      "marked_outdegree_one": 10,
+      "order": 6,
+      "outdegree_one_but_no_indegree_one": 2,
+      "total_C3": 11
+    },
+    {
+      "has_outdegree_one": 33,
+      "marked_outdegree_one": 43,
+      "order": 7,
+      "outdegree_one_but_no_indegree_one": 5,
+      "total_C3": 38
+    },
+    {
+      "has_outdegree_one": 111,
+      "marked_outdegree_one": 154,
+      "order": 8,
+      "outdegree_one_but_no_indegree_one": 13,
+      "total_C3": 124
+    },
+    {
+      "has_outdegree_one": 356,
+      "marked_outdegree_one": 510,
+      "order": 9,
+      "outdegree_one_but_no_indegree_one": 34,
+      "total_C3": 390
+    },
+    {
+      "has_outdegree_one": 1104,
+      "marked_outdegree_one": 1614,
+      "order": 10,
+      "outdegree_one_but_no_indegree_one": 89,
+      "total_C3": 1193
+    }
+  ],
+  "complete_labelled_inventory": [
+    {
+      "classes": 0,
+      "order": 1
+    },
+    {
+      "classes": 0,
+      "order": 2
+    },
+    {
+      "classes": 0,
+      "order": 3
+    },
+    {
+      "classes": 0,
+      "order": 4
+    },
+    {
+      "classes": 8,
+      "order": 5
+    },
+    {
+      "classes": 31,
+      "order": 6
+    }
+  ],
+  "complete_labelled_tournaments": 33867,
+  "exceptional_start_three_counts": [
+    0,
+    0,
+    0,
+    0,
+    2,
+    5,
+    13,
+    34,
+    89,
+    233
+  ],
+  "generating_function": "z^5(8-17z+8z^2)/(1-3z+z^2)^2",
+  "physical_branch_counts": [
+    3702,
+    1108
+  ],
+  "recurrence_checked_through_order": 100,
+  "refined_C1_controls": [
+    {
+      "consecutive_pair_clone_outputs": 1,
+      "mixed_pairs": 0,
+      "order": 3,
+      "start_two_by_start_one_size": {
+        "2": 0,
+        "3": 0
+      }
+    },
+    {
+      "consecutive_pair_clone_outputs": 2,
+      "mixed_pairs": 3,
+      "order": 4,
+      "start_two_by_start_one_size": {
+        "2": 0,
+        "3": 1
+      }
+    },
+    {
+      "consecutive_pair_clone_outputs": 5,
+      "mixed_pairs": 5,
+      "order": 5,
+      "start_two_by_start_one_size": {
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "consecutive_pair_clone_outputs": 13,
+      "mixed_pairs": 12,
+      "order": 6,
+      "start_two_by_start_one_size": {
+        "2": 3,
+        "3": 2
+      }
+    },
+    {
+      "consecutive_pair_clone_outputs": 34,
+      "mixed_pairs": 31,
+      "order": 7,
+      "start_two_by_start_one_size": {
+        "2": 8,
+        "3": 5
+      }
+    },
+    {
+      "consecutive_pair_clone_outputs": 89,
+      "mixed_pairs": 81,
+      "order": 8,
+      "start_two_by_start_one_size": {
+        "2": 21,
+        "3": 13
+      }
+    },
+    {
+      "consecutive_pair_clone_outputs": 233,
+      "mixed_pairs": 212,
+      "order": 9,
+      "start_two_by_start_one_size": {
+        "2": 55,
+        "3": 34
+      }
+    }
+  ],
+  "rooted_start_three_inventory": [
+    {
+      "adjacency_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "cycle_histogram": {
+        "1": 0,
+        "2": 0,
+        "3": 0
+      },
+      "order": 4,
+      "rooted_start_three": 0
+    },
+    {
+      "adjacency_sha256": "fd648aa98c032e0e875cc83133bf0f916165f2adbe081377520ce87321db4e80",
+      "cycle_histogram": {
+        "1": 3,
+        "2": 2,
+        "3": 3
+      },
+      "order": 5,
+      "rooted_start_three": 8
+    },
+    {
+      "adjacency_sha256": "469f4369c7d6335bdbc0bfa65d9c4e13d1c3f6788814e158397df6e1a3442ac0",
+      "cycle_histogram": {
+        "1": 6,
+        "2": 2,
+        "3": 23
+      },
+      "order": 6,
+      "rooted_start_three": 31
+    },
+    {
+      "adjacency_sha256": "3ab7316407bf5a603a55d2bb3bb1d9759b83b81f8b40c9b20ae2741c618d3d5a",
+      "cycle_histogram": {
+        "1": 15,
+        "2": 5,
+        "3": 86
+      },
+      "order": 7,
+      "rooted_start_three": 106
+    },
+    {
+      "adjacency_sha256": "9c79c4903591e4e08d3db003e7be311945b5750b78c62cd769107b44c24a294c",
+      "cycle_histogram": {
+        "1": 39,
+        "2": 13,
+        "3": 291
+      },
+      "order": 8,
+      "rooted_start_three": 343
+    },
+    {
+      "adjacency_sha256": "2cc1d38bdfcb7e0306be6c56c83439a92785fd4d200b81b7951453d6f1526409",
+      "cycle_histogram": {
+        "1": 102,
+        "2": 34,
+        "3": 934
+      },
+      "order": 9,
+      "rooted_start_three": 1070
+    },
+    {
+      "adjacency_sha256": "1d3ab2c1f981cb48f1f250ed3b49c7b855d9c958d6fd3ca6b69cb391aa68a396",
+      "cycle_histogram": {
+        "1": 267,
+        "2": 89,
+        "3": 2896
+      },
+      "order": 10,
+      "rooted_start_three": 3252
+    }
+  ],
+  "status": "PASS"
+}
