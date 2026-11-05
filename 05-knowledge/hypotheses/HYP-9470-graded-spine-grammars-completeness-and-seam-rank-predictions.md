@@ -27,7 +27,8 @@ cut-state automaton of THM-4878 (1). "Attained by G(k, w)" includes ordered join
 - P4. G(1,2): no odd number <= 2000 is missed besides 7 and 21.
 - P5. 13 lies in G(0,2) and G(2,0) but in neither G(1,0) nor G(0,1).
 
-Outcomes: PENDING (note, section 6).
+Outcomes (note, section 6): P1 REFUTED (G(0,2) misses nothing below 512 besides 7, 21); P3 CONFIRMED; P5 CONFIRMED;
+P2, P4 pending the G(0,3) and G(1,2) runs at filing.
 
 ## (B) Completeness of G(2,1) (OPEN; implies Chan-Pak)
 
@@ -38,15 +39,18 @@ in the note). A proof needs an all-N construction inside the grammar; Session 19
 that fixed repeated blocks of length <= 6 in G(2,0) cannot be programmed to an arbitrary target, so the construction
 must vary its blocks with the target (as the one-apex joins do through the Lorentzian law).
 
-## (C) No apex-free grade is onto (OPEN)
+## (C) The apex-free cutwidth-2 grade is onto (OPEN; replaces the pre-registered guess, which the data refuted)
 
-For every fixed w, G(0, w) misses infinitely many odd numbers. Evidence: the censuses of G(0,1), G(0,2), G(0,3)
-(note, section 6). A counting argument does not decide this (reduced words with H <= X number X^(O(1)) for every w),
-so the obstruction, if real, is arithmetic.
+Pre-registered guess (P1, and the structural remark in the pre-registration): no G(0, w) is onto. Outcome: G(0,2)
+attains every odd number <= 511 except 7 and 21 (note, section 6), so the guess is withdrawn and the conjecture is
+reversed: **every odd number other than 7 and 21 is the Hamiltonian-path count of a spine tournament of cutwidth 2**
+(a transitive order with reversed arcs, no cut crossed by more than two of them); moreover (stronger, from the decoded
+witnesses) one with at most c reversed arcs for a constant c (c <= 7 below 302, first-found witnesses). This is the
+most structured complete candidate in the repository: 83 cut states, Hankel rank 18, THM-4748 as its two-arc layer.
 
 ## (D) Seam ranks (FINITE-EXACT within cutwidth <= 3; universality OPEN)
 
-The composition law across a cut crossed by c reversed arcs has minimal rank 3, 13, 62 for c = 1, 2, 3 (apex-free
-sides of cutwidth <= 3). Prediction: these ranks do not depend on the ambient cutwidth (as 3 and 13 did not between
-G(0,2) and G(0,3)), i.e. 13 is the rank of the two-reversed-arc composition law over all tournament pairs, and the
-G(0,4) computation gives the c = 4 term of the sequence 3, 13, 62, ... (result in the note if it finished).
+The composition law across a cut crossed by c reversed arcs has minimal rank 3, 13, 62, 310 for c = 1, 2, 3, 4
+(apex-free sides of cutwidth <= 4; the ranks 3, 13, 62 are the same in every ambient G(0,2), G(0,3), G(0,4) computed).
+Prediction: these ranks do not depend on the ambient cutwidth, i.e. 13 is the rank of the two-reversed-arc
+composition law over all tournament pairs, 62 of the three-arc law, 310 of the four-arc law.

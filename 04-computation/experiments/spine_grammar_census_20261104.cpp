@@ -109,6 +109,7 @@ static void ensureState(int id) {
     apexCache[id].resize(K); for (int a = 0; a < K; a++) apexCache[id][a] = applyApex(st, a); }
 typedef vector<u64> Vec;
 static u64 nodes = 0, recorded = 0, deduped = 0, runCut = 0; static vector<unsigned char> att; static vector<string> witness;
+static vector<int> bestFa, bestM; static int curFa = 0;   // witness with the fewest reversed arcs (then shortest chain) per value
 static unordered_map<u64, u64> seen; static vector<int> curWord;
 static u64 hashVec(const Vec& v, u64 seed) { u64 h = seed; for (size_t i = 0; i < v.size(); i++) if (v[i]) { h ^= (v[i] + 0x9E3779B97F4A7C15ULL * (u64)(i + 1)); h *= 0xBF58476D1CE4E5B9ULL; h ^= h >> 31; } return h; }
 static string describeWord() { string s; for (int x : curWord) s += to_string(x) + ","; return s; }
@@ -118,7 +119,8 @@ static Vec applyApexes(const Vec& v) {
         cur.swap(nxt); }
     return cur; }
 static u64 finishValue(const Vec& v) { Vec cur = applyApexes(v); u64 h = 0; for (size_t s = 0; s < cur.size(); s++) if (cur[s] && isComplete(states[s])) h = satAdd(h, cur[s]); return h; }
-static void record(const Vec& v) { u64 h = finishValue(v); recorded++; if (h >= 1 && h <= X && !att[h]) { att[h] = 1; witness[h] = describeWord(); } }
+static void record(const Vec& v) { u64 h = finishValue(v); recorded++; if (h >= 1 && h <= X) { int m = (int)curWord.size();
+    if (!att[h] || curFa < bestFa[h] || (curFa == bestFa[h] && m < bestM[h])) { att[h] = 1; bestFa[h] = curFa; bestM[h] = m; witness[h] = describeWord(); } } }
 static Vec applyLetterVec(const Vec& v, int li) {
     Vec nxt(states.size(), 0);
     for (size_t s = 0; s < v.size(); s++) if (v[s]) { ensureState((int)s); for (auto& pr : transCache[s][li]) { if (pr.first >= (int)nxt.size()) nxt.resize(states.size(), 0); nxt[pr.first] = satAdd(nxt[pr.first], satMul(v[s], pr.second)); } }
@@ -141,14 +143,14 @@ static void dfs(int depth, const Vec& v, int sinkRun) {
         if (isSink && (nextRun >= 62 || (1ULL << nextRun) + 1 > X)) { runCut++; continue; }
         Vec nxt = applyLetterVec(v, (int)li);
         bool any = false; for (u64 x : nxt) if (x) { any = true; break; } if (!any) continue;
-        curWord.push_back((int)li);
+        curWord.push_back((int)li); curFa += __builtin_popcount(Lt.T);
         if (K == 0 && cNext == 0) record(nxt);
         else dfs(depth + 1, nxt, nextRun);
-        curWord.pop_back(); } }
+        curWord.pop_back(); curFa -= __builtin_popcount(Lt.T); } }
 int main(int argc, char** argv) {
     if (argc < 4) { fprintf(stderr, "usage: grammar k w X [maxm] [nodedupe-flag] [witness-limit] [word]\n"); return 1; }
     K = atoi(argv[1]); W = atoi(argv[2]); X = strtoull(argv[3], 0, 10); MAXM = argc > 4 ? atoi(argv[4]) : 64; if (argc > 5 && atoi(argv[5])) DEDUPE = false;
-    att.assign(X + 1, 0); witness.assign(X + 1, ""); att[1] = 1; witness[1] = "transitive";
+    att.assign(X + 1, 0); witness.assign(X + 1, ""); att[1] = 1; witness[1] = "transitive"; bestFa.assign(X + 1, 1 << 30); bestM.assign(X + 1, 1 << 30); bestFa[1] = 0; bestM[1] = 0;
     CutState empty; empty.c = 0; int e0 = getId(empty); ensureState(e0);
     Vec v0(1, 0); v0[e0] = 1;
     if (argc > 7) {
@@ -179,5 +181,6 @@ int main(int argc, char** argv) {
     printf("with ordered-join products: %llu of %llu; %zu misses; first misses:", cntcl, (X + 1) / 2, miss.size()); for (size_t i = 0; i < miss.size() && i < 80; i++) printf(" %llu", miss[i]); printf("%s\n", miss.size() > 80 ? " ..." : "");
     printf("misses per dyadic scale (with products):"); for (int k = 2; (1ULL << k) <= X; k++) { u64 lo = 1ULL << k, hi = min(X, (1ULL << (k + 1)) - 1), cc = 0, tot = 0; for (u64 x = lo | 1; x <= hi; x += 2) { tot++; if (!cl[x]) cc++; } printf(" [2^%d:%llu/%llu]", k, cc, tot); } printf("\n");
     printf("ATTAINED_DIRECT:"); for (u64 x = 1; x <= X; x += 2) if (att[x]) printf(" %llu", x); printf("\n");
-    if (argc > 6) { u64 lim = strtoull(argv[6], 0, 10); if (lim) { printf("direct witnesses (letter index per chain vertex; letters enumerated as (T,b,A) for the current slot count) for odd values <= %llu:\n", lim); for (u64 x = 1; x <= lim && x <= X; x += 2) if (att[x]) printf("  %llu = %s\n", x, witness[x].c_str()); } }
+    { map<int, u64> byFa; for (u64 x = 1; x <= X; x += 2) if (att[x]) byFa[bestFa[x]]++; printf("values by minimal number of reversed arcs (over the words explored; exact minima only without dedupe):"); for (auto& kv : byFa) printf(" fa%d:%llu", kv.first, kv.second); printf("\n"); }
+    if (argc > 6) { u64 lim = strtoull(argv[6], 0, 10); if (lim) { printf("direct witnesses (letter index per chain vertex; letters enumerated as (T,b,A) for the current slot count) for odd values <= %llu:\n", lim); for (u64 x = 1; x <= lim && x <= X; x += 2) if (att[x]) printf("  %llu = %s | fa=%d m=%d\n", x, witness[x].c_str(), bestFa[x], bestM[x]); } }
     return 0; }

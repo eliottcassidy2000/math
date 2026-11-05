@@ -196,6 +196,7 @@ rank of the pairing restricted to prefixes ending at a c-slot cut.
 | G(0,1) | 2 | 3 | | |
 | G(0,2) | 2 | 3 | 13 | |
 | G(0,3) | 2 | 3 | 13 | 62 |
+| G(0,4) (3,384 states, Hankel rank 390, modular) | 2 | 3 | 13 | 62, and c = 4: 310 |
 | G(1,0) | 4 | | | |
 | G(1,1) | 4 | 13 | | |
 | G(1,2) | 4 | 13 | 61 | |
@@ -230,8 +231,8 @@ named basis of the 13 statistics is not derived here (open task).
 ## 4. Validation of the engine
 
 - Exhaustive: the global-identity transfer agrees with the subset dynamic programme on all 2^(C(n,2)) spine
-  tournaments for n <= 6 (8 + 64 + 1,024 + 32,768 tournaments; cutwidth up to 9); random orders 9, 11, 13: 300 + 73 +
-  23 tournaments, no mismatch (the n = 7 exhaustive run, 2,097,152 tournaments, is still in progress at filing).
+  tournaments for n <= 7 (8 + 64 + 1,024 + 32,768 + 2,097,152 tournaments; cutwidth up to 12); random orders 9, 11,
+  13: 295 + 73 + 23 tournaments, no mismatch.
 - The grammar engine reproduces three known spectra exactly: G(0,1) attains 181 of 500 below 1000 with first misses
   7, 11, 13, 19, 21, 23 (per-word engine and automaton engine agree); G(1,0) attains 560 of 1024 below 2048 with first
   misses 7, 13, 21, 29, 35, 41, 43 (one-apex automaton, 12.7 million nodes to 2^21, agrees); G(2,0) misses exactly 7
@@ -253,14 +254,43 @@ or slot) is needed for half of all odd numbers, which is why G(2,0) and G(2,1) c
 
 ## 6. Censuses (pre-registered; all chain lengths <= 64; values <= X; products of connected words added)
 
-PENDING: G(0,2), G(0,3), G(1,1), G(1,2) at X = 2047 (and the quick X = 511 runs); predictions P1-P5 and their
-outcomes; the minimal-grade atlas; the hard numbers 13, 67, 173 (two-apex witnesses 1,2,0 / 1,2,3,0,1 /
-1,0,1,2,1,0,1 at orders 5, 7, 9).
+**The surprise.** The apex-free cutwidth-2 grammar G(0,2) attains **every odd number <= 511 except 7 and 21** (254 of
+256; 289,792,317 search nodes, 43,254,577 complete connected words, 83 cut states, Hankel rank 18). So does G(1,1)
+(254 of 256; 282,279,675 nodes). Prediction P1 (between 10 and 60 misses below 300) is **REFUTED** in the direction
+nobody in the repository had considered: the sparsest grade, a transitive order with reversed arcs never more than two
+deep, is complete as far as it was computed. The decoded witnesses below 302 use at most 7 reversed arcs (24 values
+with 2 arcs, 41 with 3, 46 with 4, 32 with 5, 4 with 6, 1 with 7; chain length <= 12), e.g. 13 = chain 0..5 with
+3 -> 0, 5 -> 1, 5 -> 4; 35 = 0..6 with 2 -> 0, 6 -> 2, 6 -> 3; 67 = 0..6 with 2 -> 0, 3 -> 1, 4 -> 2, 6 -> 3, 6 -> 4
+(Session 195's two hard numbers 67 and 173 are G(0,2) values). These are first-found, not minimal, witnesses; the
+minimal-arc census (`fa` in the engine, run without deduplication) is reported below when finished.
+
+| grammar | X | attained (with products) | misses besides 7, 21 | search nodes |
+|---|---|---|---|---|
+| G(0,1) | 2047 | 360 of 1024 | 662 | 49,184 |
+| G(1,0) | 2047 | 763 of 1024 | 259 | 29,841 |
+| G(2,0) | 2047 | 1022 of 1024 | 0 | 20,924,275 |
+| G(0,2) | 511 | 254 of 256 | 0 | 289,792,317 |
+| G(1,1) | 511 | 254 of 256 | 0 | 282,279,675 |
+| G(0,3) | 511 | RUNNING | | |
+| G(1,2) | 511 | RUNNING | | |
+| G(0,2), G(1,1), G(0,3), G(1,2) | 2047 | RUNNING (and G(0,2) at 1023) | | |
+
+Outcomes of the pre-registered predictions: P1 REFUTED (G(0,2) misses nothing below 512; the [2^11, 2^12) clause was
+not reachable with X <= 2047); P3 CONFIRMED (13 attained; no misses below 512); P5 CONFIRMED (13 is in G(0,2) and
+G(2,0), not in G(1,0) or G(0,1)); P2 and P4 PENDING the G(0,3) and G(1,2) runs. The minimal-grade atlas
+(`spine_grammar_atlas_20261104.py`) over G(1,0), G(0,1), G(2,0) at 2047: G(0,1) misses 86 odd numbers below 300
+besides 7, 21 (first 11, 13, 19, 23, 35), G(1,0) misses 45 (first 13, 29, 35, 41, 43, 49, 59, 67, 71, 77); every odd
+number below 300 other than 7, 21 is attained by G(2,0) and by G(0,2); the values attained by G(2,0) only among
+{G(1,0), G(0,1), G(2,0)} below 120 are 13, 35, 41, 43, 59, 67, 71, 77, 83, 109, 113.
 
 ## 7. What this gives for Chan-Pak
 
 Chan-Pak follows from the statement "some G(k, w) is onto the odd numbers other than 7 and 21", and the data make
-G(2,1) (one-apex joins, 2^32) and G(2,0) (230,519) the candidates. Each is the range question for one explicit
+G(2,1) (one-apex joins, 2^32), G(2,0) (230,519) and now **G(0,2)** (511 at filing, with a few reversed arcs per value)
+the candidates. G(0,2) is the most structured of the three: no apex, every vertex beaten by at most two later
+vertices, an 83-state automaton of Hankel rank 18, and THM-4748's closed formulas as the two-arc layer; a proof of
+Chan-Pak through it would be a closed-form coverage theorem for words with a bounded number of reversed arcs, in the
+style of THM-4748 extended to three, four and five arcs of cutwidth 2. Each is the range question for one explicit
 N-rational series: finite alphabet, explicit nonnegative matrices, Hankel rank 17 for G(2,0). Ranges of N-rational
 series over a two-letter alphabet already include all squares (the series (bin w)^2 has dimension 3), so no general
 decision procedure is available and the question has to be attacked with the structure of these particular matrices
