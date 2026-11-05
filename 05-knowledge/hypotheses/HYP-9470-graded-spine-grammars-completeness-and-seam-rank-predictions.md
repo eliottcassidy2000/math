@@ -33,12 +33,14 @@ P4 pending the G(1,2) runs at filing.
 
 ## (B) Completeness of G(2,1) (OPEN; implies Chan-Pak)
 
-Every odd number other than 7 and 21 is H of a tournament in G(2,1). Evidence: the one-apex one-arc joins are G(2,1)
-words (THM-4878 (2)) and attain every odd number <= 2^32 except 7 and 21 (THM-4875 (D)); G(2,0) alone reaches 230,519
-(Session 191). The statement is the range question for one explicit N-rational series (2,544 cut states; Hankel rank
-in the note). A proof needs an all-N construction inside the grammar; Session 194's periodic-counter theorem shows
-that fixed repeated blocks of length <= 6 in G(2,0) cannot be programmed to an arbitrary target, so the construction
-must vary its blocks with the target (as the one-apex joins do through the Lorentzian law).
+Every odd number other than 7 and 21 is H of a tournament in G(2,1), and already in G(2,0). Evidence: G(2,0) reaches
+230,519 (Session 191) and reproduces every odd <= 2047 here; THM-4875's family F1 (one-apex x one-apex joins with the
+reversed arc between the apexes) lies in G(2,0) and has positive miss density alone (the first draft inferred 2^32
+coverage for G(2,1) from THM-4875 (D); the audit corrected this: F2's order-<= 7 side is not a spine word). The
+statement is the range question for one explicit N-rational series (200 cut states and Hankel rank 17 for G(2,0)). A
+proof needs an all-N construction inside the grammar; Session 194's periodic-counter theorem shows that fixed
+repeated blocks of length <= 6 in G(2,0) cannot be programmed to an arbitrary target, so the construction must vary
+its blocks with the target.
 
 ## (C) The apex-free cutwidth-2 grade is onto (OPEN; replaces the pre-registered guess, which the data refuted)
 
@@ -47,8 +49,11 @@ attains every odd number <= 8191 except 7 and 21 (note, section 6), so the guess
 reversed: **every odd number other than 7 and 21 is the Hamiltonian-path count of a spine tournament of cutwidth 2**
 (a transitive order with reversed arcs, no cut crossed by more than two of them). The number of reversed arcs needed
 must grow (at least like log N / (2 log log N), note section 7), but slowly: at most 5 below 8192 (exact minima below
-512: 1, 8, 75, 133, 36, 1 values with 0, 1, 2, 3, 4, 5 arcs). This is the most structured complete candidate in the
-repository: 83 cut states, Hankel rank 18, THM-4748 as its two-arc layer, and the three-arc layer (15 configuration
+512: 1, 8, 75, 133, 36, 1 values with 0, 1, 2, 3, 4, 5 arcs). Together with mac-mini's concurrent ribbon lane
+(THM-4880, HYP-9473: strong span-2 words attain every odd <= 100,000 except 7, 21, 47, and span-3 words every odd
+<= 5,000 except 7, 21; span <= s implies cutwidth <= 2s - 1, so the span-2 family lies in G(0,3) and the span-1
+family in G(0,1)), this makes apex-free bounded-structure families the most structured complete candidates in the
+repository: 83 cut states, Hankel rank 17, THM-4748 as the two-arc layer, and the three-arc layer (15 configuration
 types) as the next closed-form target.
 
 ## (E) One apex plus one reversed arc (OPEN; FINITE-EXACT to 2047)
@@ -62,6 +67,9 @@ proof of Chan-Pak.
 ## (D) Seam ranks (FINITE-EXACT within cutwidth <= 4; universality OPEN)
 
 The composition law across a cut crossed by c reversed arcs has minimal rank 3, 13, 62, 310 for c = 1, 2, 3, 4
-(apex-free sides of cutwidth <= 4; the ranks 3, 13, 62 are the same in every ambient G(0,2), G(0,3), G(0,4) computed).
-Prediction: these ranks do not depend on the ambient cutwidth, i.e. 13 is the rank of the two-reversed-arc
-composition law over all tournament pairs, 62 of the three-arc law, 310 of the four-arc law.
+(apex-free sides of cutwidth <= 4; the ranks 3, 13, 62 are the same in every ambient G(0,2), G(0,3), G(0,4) computed;
+13 confirmed from below by the audit's brute-force Hankel block). Prediction: these ranks do not depend on the
+ambient cutwidth, i.e. 13 is the rank of the two-reversed-arc composition law over all tournament pairs, 62 of the
+three-arc law, 310 of the four-arc law. The data to compare with are THM-4880's junction coupling ranks (1, 2, 3, 4,
+8, 9, 10, 12 for span-2 blocks of length <= 4; rank 3 = the one-arc join, 2 = the near-join): a block's coupling rank
+is at most the seam rank of the cut it crosses.

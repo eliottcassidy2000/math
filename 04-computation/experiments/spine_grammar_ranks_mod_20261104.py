@@ -73,6 +73,7 @@ def main():
         f = np.zeros(n, dtype=np.int64)
         for s, (c, cp) in states.items():
             if cp: f[s] = 1
+        if '--empty1' in sys.argv: f[0] = 1    # H(empty word) = 1 (the empty tournament has one path): the empty cut is accepting
         for a in reversed(range(K)):
             g = np.zeros(n, dtype=np.int64)
             for s in states:

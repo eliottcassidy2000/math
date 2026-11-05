@@ -26,14 +26,17 @@ rational series of modest rank. The repository's main spectrum families are the 
 
 | grade | family (repository name) | automaton states | Hankel rank | where |
 |---|---|---|---|---|
-| G(1,0) | one-apex words (feedback vertex number 1) | 15 | 4 | Session 16, Session 191, HYP-9468 (binary affine state) |
-| G(0,1) | upset tournaments / Moon's interval chains | 14 | 5 | THM-4744; the all-parts-1 chain is THM-4865's tribonacci tower |
-| G(2,0) | two-apex (two-feedback) words | 200 | 17 | Sessions 191-194; rank 17 reproduces Session 191's two-apex transfer rank |
+| G(1,0) | one-apex words (feedback vertex number 1) | 15 | 4 | Session 16, Session 191, HYP-9468 (binary affine state); THM-4876 (6) |
+| G(0,1) | upset tournaments / Moon's interval chains | 14 | 4 | THM-4744; the all-spans-1 chain is THM-4865's tribonacci tower (also THM-4731 (6), THM-4880 note section 3) |
+| G(2,0) | two-apex (two-feedback) words | 200 | 17 | Sessions 191-194; rank 17 reproduces Session 191's two-apex transfer rank; contains THM-4875's family F1 |
 | G(1,1) | one apex over an interval chain | 114 | 17 | new |
-| G(0,2) | cutwidth 2, contains every fa <= 2 tournament of THM-4748 | 83 | 18 | new |
-| G(0,3) | cutwidth 3 | 521 | 80 | new |
+| G(0,2) | cutwidth 2, contains every fa <= 2 tournament of THM-4748 | 83 | 17 | new (the bounded-span analogue is mac-mini's THM-4880, same evening) |
+| G(0,3) | cutwidth 3 | 521 | 79 | new |
 | G(1,2) | one apex over cutwidth 2 | 994 | 78 | new |
-| G(2,1) | two apexes over an interval chain; contains the one-apex one-arc joins of THM-4875 (every odd <= 2^32 except 7, 21) | 2544 | 78 | new |
+| G(2,1) | two apexes over an interval chain | 2544 | 78 | new |
+
+(Hankel ranks with the standard convention H(empty) = 1, i.e. the empty cut accepting; the engine's own convention
+H(empty word) = 0 adds one dimension to the apex-free grades: 5, 18, 80, audit M3. Both are exact.)
 
 The **seam ranks** (the number of bilinear terms needed to compose two spine tournaments across a cut crossed by c
 reversed arcs) are 3 for c = 1 (the Lorentzian one-arc join law h h' + R R' - e e', KNOWN), **13 for c = 2**,
@@ -41,11 +44,13 @@ reversed arcs) are 3 for c = 1 (the Lorentzian one-arc join law h h' + R R' - e 
 against the pre-registered prediction): the apex-free cutwidth-2 grammar G(0,2), a transitive order with reversed
 arcs never more than two deep, attains **every odd number up to 8191 except 7 and 21**, with at most five reversed
 arcs per value (and at most three for 217 of the 256 odd numbers below 512); its two-arc layer is THM-4748. New
-PROVED items: the transfer theorem with its state bound, the containment dictionary, the sink-run lower bound
-H >= 2^r + 1, and the counting lemma that no family with a bounded number of reversed arcs can be complete.
-FINITE-EXACT: the ranks, the validations and the censuses. What the session does **not** do: prove that any G(k, w) is
-onto the odd numbers other than 7 and 21; that statement, for G(0,2) and for G(2,1), is HYP-9470 and would imply
-Chan-Pak.
+PROVED items: the transfer theorem with its state bound (the method itself is KNOWN: frontier dynamic programming, DEFECT_TRANSFER D1-D2, THM-4880 (A)), the
+containment dictionary, the sink-run lower bound H >= 2^r + 1, and the counting lemma that no family with a bounded
+number of reversed arcs can be complete. FINITE-EXACT: the ranks, the validations and the censuses. The concurrent
+bounded-**span** lane of mac-mini (THM-4880, HYP-9473, same evening, missed at first filing: section 1) reached
+100,000 (span 2, misses exactly 7, 21, 47) and 5,000 (span 3, misses 7, 21) with the same kind of transfer. What the
+session does **not** do: prove that any G(k, w) is onto the odd numbers other than 7 and 21; that statement, for
+G(0,2) and for G(2,0), is HYP-9470 and would imply Chan-Pak.
 
 ## 1. Prior art read before the work (and what was reproduced)
 
@@ -71,10 +76,23 @@ Chan-Pak.
   the four-coordinate interface (h, e, R, d) closed under gadget joins across one reversed arc, sole-exit vertices and
   universal sinks (misses exactly 7, 21, 67, 173 through 20,000 with gadgets of order <= 5; two six-vertex gadgets close
   67 and 173), its endpoint-one classification and path-cover algebra; Session 192's cut sumsets, weighted-cut geometry
-  and symplectic compiler; klein's digit spectra (THM-4862/4865); mac-mini's THM-4876; kind-pasteur S9/S10. None of
-  them grades tournaments by chain cutwidth, and none computes cut-state automata, Hankel ranks or seam ranks; the
-  one-arc seam rank 3 is their Lorentzian law, and the (h, e, R, d) interface is the c = 0 cut of G(1, *) seen from a
-  root (section 3.4).
+  and symplectic compiler; klein's digit spectra (THM-4862/4865); mac-mini's THM-4876; kind-pasteur S9/S10. The
+  (h, e, R, d) interface is the c = 0 cut of G(1, *) seen from a root (section 3.4).
+- **Missed at first filing, found by the audit (M1; MISTAKE-720).** (i) **mac-mini-2026-11-04-ribbon** (THM-4880,
+  HYP-9473, note `ribbon_tournaments_bounded_span_transfer_20261104.md`, committed 21:40-21:48, before this session's
+  first checkpoint): ribbon tournaments = a transitive order with back arcs of **span** <= w; the same profile
+  (frontier) transfer with 7/27/119 states; Hankel ranks 4 (span 1) and 14 (span 2) by the same reachable/co-reachable
+  pairing, an integer representation of rank 62 for span 3; "junction coupling ranks" of (u, v) -> H(u J v) with rank
+  3 = the one-arc join and 2 = the near-join (the concept called a seam rank here); {1}^n = the sole-exit tower;
+  strong span-2 words attain every odd <= 100,000 except 7, 21, 47 and strong span-3 words every odd <= 5,000 except
+  7, 21; HYP-9473 (span-3 completeness would prove Chan-Pak). Span and cutwidth are incomparable gradings (span <= s
+  implies cutwidth <= 2s - 1, cutwidth bounds no span), so the G(0,2) result is not subsumed, but an apex-free
+  bounded-structure family complete to a large bound was already on the branch, with a larger range. (ii)
+  `overnight_rank_return_20261029/DEFECT_TRANSFER.md` D1-D2 (Codex, 2026-10-29): the backward-arc cutwidth of a
+  supplied order and the component-pairing transfer with a 2^O((k+c) log(k+c)) state bound (also
+  `golden_hamilton_transfer_20261103/HANDOFF.md`, `fibonacci_parity_precision_20261103/COMPLEMENTS.md`). (iii) THM-4876
+  (6) / HYP-9469 (3): the one-apex closed formula and its density one half. (iv) THM-4731 (6): the transitive
+  tournament with its Hamiltonian path reversed has H = A000213(n) (the tribonacci tower).
 
 ## 2. Definitions
 
@@ -148,17 +166,22 @@ is an earlier implementation with global arc identities (no apexes) used as an i
   a path from v_m down to v_1. With all parts >= 2 they are Moon's interval chains and H is the product of 1 + 2^(p-1)
   (THM-4744 (1)). The all-parts-1 chain (letters 1, 2^(r-1), 1 in the engine's indexing: open; close-and-open; close)
   is the sole-exit tower of THM-4865: v_m beats only v_(m-1), and H = 1, 3, 5, 9, 17, 31, 57, 105, 193, 355, 653, 1201,
-  2209, 4063, 7473, 13745 for r = 1..16 is the tribonacci law h_r = h_(r-1) + h_(r-2) + h_(r-3) (new identification of
-  the tower as a cutwidth-1 word; the law itself is klein's).
+  2209, 4063, 7473, 13745 for r = 1..16 is the tribonacci law h_r = h_(r-1) + h_(r-2) + h_(r-3) (klein's THM-4865 (c);
+  the identification of the tower with the reversed-path tournament is THM-4731 (6), H = A000213(n), and with the
+  span-1 ribbon run {1}^n the ribbon note's section 3; not new, audit M1). THM-4744's parts p_i are spans (the
+  interval has p_i + 1 vertices), so "all parts 1" means all spans 1.
 - **fa <= 2 tournaments** (THM-4748) are the G(0,2) words with at most two slots; THM-4748's five configurations are the
   cases: disjoint (two connected words in ordered join), touching (same vertex is a tail and a head), crossing (two
   pending slots with distinct heads and distinct tails), nested, shared endpoint (one head group of size 2, or one
   letter terminating two slots).
-- **One-apex one-arc joins** (THM-4875 (D)) lie in G(2,1): for one-apex words b on the chain C and b' on C', the join
-  C => C' with one arc v' -> v reversed is the word with letters (b_i, 0) on C and (1, b'_j) on C' and a single slot
-  from v to v' (x_1 = the apex of the left word beats all of C'; the apex x_2 of the right word is beaten by all of C).
-  Hence G(2,1) attains every odd number <= 2^32 except 7 and 21 (THM-4875 (D), HYP-9468 CONFIRMED), which is the
-  strongest finite evidence for any single grade.
+- **One-apex joins.** THM-4875's family F1 joins two one-apex tournaments across a reversed arc between the two
+  apexes; after relabelling the apexes it is a two-apex word, so F1 lies in G(2,0) (as the S78 note says), and F1
+  alone has positive miss density (65 of the 512 odd numbers in [2^10, 2^11), density 0.00087 at 2^31; S78 note,
+  "the bilinear family alone"). The join across a reversed arc between **chain** vertices v' -> v is a G(2,1) word
+  (letters (b_i, 0) on C and (1, b'_j) on C' with one slot from v to v'), a family whose coverage has not been
+  computed. The first draft inferred "G(2,1) attains every odd <= 2^32 except 7, 21" from THM-4875 (D); that is
+  false (audit M2): THM-4875 (D)'s second family F2 (one-apex x arbitrary rooted tournament of order <= 7) is not a
+  spine word.
 - **Session 195's rooted interface** (h, e, R, d) is the cut vector of a one-apex-rooted word at an empty chain cut,
   read in the basis (paths; paths ending at the root; two-path covers starting at the root; paths of the root-deleted
   tournament); its gadget joins across one reversed arc are c = 1 seams. The c = 1 seam rank 3 below is the Lorentzian
@@ -175,20 +198,25 @@ For each grammar the reachable space R = span{ e_0 M_u } (over all words u) and 
 largest automata, cross-checked on the small ones). The **Hankel rank** (the rank of the pairing R x O) is the
 dimension of the smallest linear representation of the series (Fliess, Schuetzenberger).
 
-| grammar | states | reachable dim | observable dim | Hankel rank |
-|---|---|---|---|---|
-| G(1,0) | 15 | 9 | 6 | 4 |
-| G(0,1) | 14 | 8 | 6 | 5 |
-| G(2,0) | 200 | 125 | 25 | 17 |
-| G(1,1) | 114 | 65 | 25 | 17 |
-| G(0,2) | 83 | 39 | 25 | 18 |
-| G(0,3) | 521 | 211 | 120 | 80 |
-| G(1,2) | 994 | 505 | 116 | 78 |
-| G(2,1) | 2544 | 1549 | 116 | 78 (modular, two primes) |
+| grammar | states | reachable dim | observable dim | Hankel rank, H(empty) = 1 | engine convention H(empty word) = 0 |
+|---|---|---|---|---|---|
+| G(1,0) | 15 | 9 | 6 | 4 | 4 |
+| G(0,1) | 14 | 8 | 6 | 4 | 5 |
+| G(2,0) | 200 | 125 | 25 | 17 | 17 |
+| G(1,1) | 114 | 65 | 25 | 17 | 17 |
+| G(0,2) | 83 | 39 | 25 | 17 | 18 |
+| G(0,3) | 521 | 211 | 120 | 79 | 80 |
+| G(1,2) | 994 | 505 | 116 | 78 | 78 |
+| G(2,1) | 2544 | 1549 | 116 | 78 (modular, two primes) | 78 |
+| G(0,4) | 3384 | 1207 | 611 | 389 expected (audit; recomputation running at filing) | 390 (modular) |
 
-Unexplained coincidences to be tested on larger grades: rank G(1,1) = rank G(2,0) = 17 and rank G(1,2) = rank G(2,1)
-= 78 (an apex and a slot contribute alike once one apex is present), while G(0,1) = 5, G(0,2) = 18, G(0,3) = 80 exceed
-G(1,0) = 4, G(1,1) = 17, G(1,2) = 78 by 1, 1, 2. G(2,0)'s rank 17 equals the Hankel rank of the two-feedback series found by Session 191 by a different method (the
+Convention (audit M3): the series is read on the letter alphabet (indices into the letter list of the current slot
+count; the audit checked that the (T, b, A)-alphabet gives the same ranks), and the empty tournament counts one
+Hamiltonian path (the empty cut is accepting), which makes the c = 0 seam the pure ordered-join product (rank 1). The
+engine's own convention gives the empty word the value 0 and adds one dimension to the apex-free grades. With the
+standard convention the three two-radix grades **G(0,2), G(1,1), G(2,0) all have Hankel rank 17**, and the
+three-radix grades G(0,3), G(1,2), G(2,1) have 79, 78, 78 (the first draft's "+1, +1, +2" pattern was the
+convention artifact). G(2,0)'s rank 17 equals the Hankel rank of the two-feedback series found by Session 191 by a different method (the
 "rational dimension 28" there is the reachable space of its 36-state representation). G(1,0)'s rank 4 is Session 16's
 four coordinates.
 
@@ -198,20 +226,25 @@ rank of the pairing restricted to prefixes ending at a c-slot cut.
 
 | ambient grammar | c = 0 | c = 1 | c = 2 | c = 3 |
 |---|---|---|---|---|
-| G(0,1) | 2 | 3 | | |
-| G(0,2) | 2 | 3 | 13 | |
-| G(0,3) | 2 | 3 | 13 | 62 |
-| G(0,4) (3,384 states, Hankel rank 390, modular) | 2 | 3 | 13 | 62, and c = 4: 310 |
+| G(0,1) | 1 (2 with the engine convention) | 3 | | |
+| G(0,2) | 1 (2) | 3 | 13 | |
+| G(0,3) | 1 (2) | 3 | 13 | 62 |
+| G(0,4) (3,384 states, modular) | 1 (2) | 3 | 13 | 62, and c = 4: 310 |
 | G(1,0) | 4 | | | |
 | G(1,1) | 4 | 13 | | |
 | G(1,2) | 4 | 13 | 61 | |
 | G(2,1) | 17 | 61 | | |
 
-For k = 0 the c = 0 rank 2 is the ordered-join product plus the degenerate empty-suffix direction. The c = 1 rank 3 is
-the Lorentzian law (h, e, R) x (h', s', L') of session29/THM-4866 (B): KNOWN, reproduced here as the minimal rank. The
-**two-arc seam rank 13** and the **three-arc seam rank 62** are new; 13 is the same inside G(0,2) and G(0,3), so it is
-the rank of the two-reversed-arc composition law over all pairs of spine tournaments of cutwidth <= 3 on the two sides
-(covering the crossing, nested, shared-head and shared-tail configurations jointly). With one apex the seam ranks rise
+For k = 0 the c = 0 rank is the ordered-join product (1; 2 with the engine convention, the extra direction being the
+empty suffix). The c = 1 rank 3 is the Lorentzian law (h, e, R) x (h', s', L') of session29/THM-4866 (B): KNOWN,
+reproduced here as the minimal rank, and the same number as THM-4880's junction coupling rank 3 of the one-arc join
+(the ribbon note's section 8 defines coupling ranks of blocks, with values 1, 2, 3, 4, 8, 9, 10, 12 for span-2 blocks
+of length <= 4: the seam rank of a cut is the supremum of the coupling ranks over the junctions crossing it). The
+**two-arc seam rank 13**, the **three-arc seam rank 62** and the four-arc rank 310 are new as cut invariants; 13 is
+the same inside G(0,2), G(0,3) and G(0,4), so it is the rank of the two-reversed-arc composition law over all pairs
+of spine tournaments of cutwidth <= 4 on the two sides (covering the crossing, nested, shared-head and shared-tail
+configurations jointly); the audit confirmed 13 from below by a brute-force Hankel block (1,242 x 1,465 counts). The
+number 62 also appears as the rank of THM-4880's span-3 integer representation; the coincidence is unexplained. With one apex the seam ranks rise
 to 13 for c = 1 (G(1,1) and G(1,2) agree) and 61 for c = 2 (G(1,2)): the apex is a third kind of crossing. An explicit
 named basis of the 13 statistics is not derived here (open task).
 
@@ -219,15 +252,32 @@ named basis of the 13 statistics is not derived here (open task).
 
 - **Monotonicity (KNOWN).** H(T) >= H(T - v): every Hamiltonian path of T - v extends to one of T by inserting v
   (Redei's insertion). Hence the prefix tournament (apexes placed) bounds every completion from below.
-- **Padding.** A chain vertex beaten by every apex and followed by no chain vertex is a sink; a first chain vertex that
-  beats every apex is a source. Neither changes H.
+- **Padding.** A slot-free chain vertex beaten by every apex and followed by no chain vertex is a sink; a slot-free
+  first chain vertex that beats every apex is a source. Neither changes H. (A run of slot-free vertices beaten by
+  every apex that is followed by no vertex beating an apex consists of ordinal-sum cuts and is padding as well, which
+  is why the engine may cut such runs; with one apex the letter A = 1 of G(2,0), beaten by x_1 and beating x_2, is also
+  an ordinal-sum cut that the engine does not recognise, so some first-found two-apex witnesses are padded to the
+  length cap - correct values, long words; the minimal-arc runs avoid this.)
 - **Sink-run bound.** Let u_1 < ... < u_r be consecutive slot-free chain vertices beaten by every apex (letters
   (0, 0, all)), followed by a chain vertex u that beats some apex x (k >= 1), or, for k = 0, lying inside the span of a
   pending slot whose tail u comes later. Then for every odd subset S of {u_1..u_r} the cycle x -> S (increasing) -> u ->
   x (respectively u -> head -> S -> u) is an odd cycle, so T has at least 2^(r-1) odd cycles and, by the odd-cycle
   collection formula (THM-4876 (4): the empty collection and the singletons), H >= 1 + 2 * 2^(r-1) = 2^r + 1. A run
-  with 2^r + 1 > X therefore cannot be continued within the target range, and a word ending in the run has the count
-  of the word without it (padding).
+  with 2^r + 1 > X therefore cannot be continued within the target range, and a word ending in the run, or continued
+  only by vertices beaten by every apex, has the count of the word without it (padding).
+- **Deduplication.** Two prefixes with the same count vector have the same set of future values, and the vector
+  determines the pending slot structure, so visiting a vector once loses nothing; the run length is not part of the
+  key because a run cut either exceeds X or is padding with the count of an explored shorter word. A false
+  deduplication (a 128-bit hash collision) could only lose values, never create them, so attainment claims are
+  unaffected and the miss claims for G(1,0) and G(0,1) were reproduced by other methods (section 5, audit).
+- **Closer bound.** The first future vertex u that terminates a pending slot induces, with the prefix and the
+  apexes, the prefix extended by one letter (T_u, 0, A_u) with T_u nonempty and admissible; the minimum of the
+  resulting counts over all such letters is therefore a lower bound for every completion (insertion lemma), and it is
+  what makes the search finite without deduplication: interior patterns inside a pending span (adjacent
+  transpositions, transitive modules) leave the prefix count unchanged but not the closed count.
+- **Length cap.** Exact minimal-arc claims use the cap of 64 chain letters: a word with at most 4 reversed arcs and
+  H <= 511 has at most 9 interior gaps r_i with 1 + 2 sum 2^(r_i - 1) <= 511 (odd-cycle collections), hence chain
+  length at most 58 (audit).
 - **Saturation.** With counts capped at 2^62, an entry of a state that contributes to the final count is bounded by
   that count (every configuration it counts extends to a Hamiltonian path under the same suffix), so a recorded value
   <= X is exact and a saturated final sum is correctly rejected (needed: a 64-letter word of G(2,0) overflowed in an
@@ -253,9 +303,14 @@ named basis of the 13 statistics is not derived here (open task).
 Enumerating the one-apex automaton (H, A, B) over all words of length <= 24 (every one-apex value <= 2^21 is attained
 by a word of length <= 24, since a zero at position j contributes at least 2^(j-3)): 521,915 of the 1,048,576 odd
 numbers below 2^21 are one-apex values; the misses per dyadic scale [2^j, 2^(j+1)) are 1, 2, 7, 14, 29, 57, 117, 236,
-495, 998, 2035, 4077, 8180, 16382, 32923, 65646, 131959, 263502 for j = 3..20, i.e. the miss fraction tends to 1/2,
-with no bias modulo 16, 3, 5 or 7. The class is not sparse-missing (as 13 alone might suggest): a second radix (apex
-or slot) is needed for half of all odd numbers, which is why G(2,0) and G(2,1) carry the conjecture.
+495, 998, 2035, 4077, 8180, 16382, 32923, 65646, 131959, 263502 for j = 3..20, i.e. the miss fraction tends to 1/2.
+The closed formula and "about half of the odd numbers" (50,006 of the 100,000 odd numbers below 200,000, first misses
+7, 13, 21, 29, 35, 41, 43, 49) are THM-4876 (6) and HYP-9469 (3) (mac-mini, the same afternoon; missed at first
+filing, audit M1); the extension to 2^21 and the residue profile are the additions here: flat modulo 16 and 5
+(0.501-0.504), biased modulo 7 (0.455, 0.488, 0.551, 0.581, 0.533, 0.466, 0.443 for the residues 0..6, standard
+error 0.0013) and mildly modulo 3 (0.501, 0.490, 0.516) (the audit corrected the first draft's "no bias"). The class
+is not sparse-missing (as 13 alone might suggest): a second radix (apex or slot) is needed for half of all odd
+numbers, which is why the two-radix grades carry the conjecture.
 
 ## 6. Censuses (pre-registered; all chain lengths <= 64; values <= X; products of connected words added)
 
@@ -296,7 +351,7 @@ proof. G(1,1) itself attains every odd number <= 2047 except 7 and 21 (1022 of 1
 
 | grammar | X | attained (with products) | misses besides 7, 21 | search nodes |
 |---|---|---|---|---|
-| G(0,1) | 2047 | 360 of 1024 | 662 | 49,184 |
+| G(0,1) | 2047 | 358 of 1024 | 664 | 49,184 |
 | G(1,0) | 2047 | 763 of 1024 | 259 | 29,841 |
 | G(2,0) | 2047 | 1022 of 1024 | 0 | 20,924,275 |
 | G(0,2) | 511 | 254 of 256 | 0 | 289,792,317 (first engine); 163,451,097 without deduplication (closer bound) |
@@ -309,10 +364,12 @@ proof. G(1,1) itself attains every odd number <= 2047 except 7 and 21 (1022 of 1
 | G(0,3), G(1,2) | 2047 | RUNNING | | |
 | G(0,2) | 32767 | RUNNING | | |
 
-Outcomes of the pre-registered predictions: P1 REFUTED in both clauses (G(0,2) misses nothing below 8192, so the
-miss fraction in [2^11, 2^12) is 0, not >= 3 percent); P2 first clause CONFIRMED (G(0,3) misses nothing below 512),
-second clause (a miss below 2000) PENDING the 2047 run and expected to fail; P3 CONFIRMED (13 attained; no misses
-below 512); P5 CONFIRMED (13 is in G(0,2) and G(2,0), not in G(1,0) or G(0,1)); P4 PENDING the G(1,2) runs. The minimal-grade atlas
+Outcomes of the pre-registered predictions (in time order): P1 first clause REFUTED by the 511 run (21:33), second
+clause REFUTED by the 8191 run (G(0,2) misses nothing below 8192, so the miss fraction in [2^11, 2^12) is 0, not
+>= 3 percent); P2 first clause CONFIRMED by the G(0,3) 511 run, second clause (a miss below 2000) PENDING the 2047
+run and expected to fail; P3: the 13 clause CONFIRMED at 511, the 10-percent clause CONFIRMED by the G(1,1) 2047 run
+(22:57; the first draft said CONFIRMED before that run existed, audit minor 4); P5 CONFIRMED (13 is in G(0,2) and
+G(2,0), not in G(1,0) or G(0,1)); P4 PENDING the G(1,2) runs. The minimal-grade atlas
 (`spine_grammar_atlas_20261104.py`) over G(1,0), G(0,1), G(2,0) at 2047: G(0,1) misses 86 odd numbers below 300
 besides 7, 21 (first 11, 13, 19, 23, 35), G(1,0) misses 45 (first 13, 29, 35, 41, 43, 49, 59, 67, 71, 77); every odd
 number below 300 other than 7, 21 is attained by G(2,0) and by G(0,2); the values attained by G(2,0) only among
@@ -325,13 +382,16 @@ G(2,1) (one-apex joins, 2^32), G(2,0) (230,519) and now **G(0,2)** (511 at filin
 the candidates. G(0,2) is the most structured of the three: no apex, every vertex beaten by at most two later
 vertices, an 83-state automaton of Hankel rank 18, and THM-4748's closed formulas as the two-arc layer.
 
-**No bounded-arc family can be complete (PROVED, counting).** A cutwidth-2 word with c reversed arcs is determined,
-up to padding, by at most 2c integer parameters (the spans and gaps), each at most log_2 H (a single arc of span s
-already gives H >= 1 + 2^(s-1), and the insertion lemma transfers this to every sub-arc), so at most (log_2 X + 1)^(2c)
-values below X have witnesses with c arcs. Hence the number of reversed arcs of any witness family for all odd N must
-grow at least like log N / (2 log log N): a proof of Chan-Pak through G(0,2) is not a finite list of closed formulas
-but a numeration theorem in which the arcs are digits (the decoded witnesses use 2 to 7 arcs below 302, growing
-slowly, as this forces).
+**No bounded-arc family can be complete (PROVED, counting; proof corrected by the audit, which found the first
+draft's "a single arc of span s gives H >= 1 + 2^(s-1) and the insertion lemma transfers this to every sub-arc" false:
+the word with arcs 3 -> 0 and 3 -> 2 on the chain 0..3 has H = 3).** In a connected cutwidth-2 word with c reversed
+arcs the vertices between consecutive slot events are slot-free and lie inside a pending span, so by the sink-run
+bound each of the at most 2c + 1 interior gaps has length at most log_2(X - 1) once H <= X; the at most 2c event
+vertices are arranged in one of C(c) ways, so at most C(c) (log_2 X + 2)^(2c + 1) values below X have witnesses with c
+arcs. Hence the number of reversed arcs of any witness family for all odd N must grow at least like
+(1 - o(1)) log_2 N / (2 log_2 log_2 N): a proof of Chan-Pak through G(0,2) is not a finite list of closed formulas but
+a numeration theorem in which the arcs are digits (the minimal witnesses use 1 to 5 arcs below 8192, growing slowly,
+as this forces).
 
 **The two-radix heuristic (not a theorem).** In every grade the odd-cycle collections contribute powers of 2 from a
 single run through an interval (THM-4748's 2^p terms, the one-apex 2^(j-i-2)) and powers of 3 exactly when two runs
@@ -357,4 +417,22 @@ check through a wrapper that keeps `Path.resolve` on the drive letter. New theor
 
 ## 9. Audit
 
-PENDING.
+Independent adversarial audit (general-purpose agent, own code throughout; report
+`scratchpad/s79_audit/AUDIT.md` of the session, copied to
+`04-computation/experiments/spine_grammar_audit_20261104/AUDIT.md`): **PASS WITH CORRECTIONS**, 4 majors, 18 minors,
+5 upgrades, all applied (MISTAKE-720). Majors: (M1) prior art missed although the day's log had been read at the
+start: mac-mini's ribbon lane (THM-4880, HYP-9473; committed 21:40-21:48, before the first checkpoint), Codex's
+DEFECT_TRANSFER cutwidth transfer (2026-10-29), THM-4876 (6) and THM-4731 (6); the two novelty sentences were
+removed and Theorem A retyped KNOWN as a method. (M2) the inference "G(2,1) attains every odd <= 2^32" from THM-4875
+(D) was false (F1 lies in G(2,0) and has positive miss density alone; F2 is not a spine word); deleted everywhere.
+(M3) the apex-free Hankel ranks depended on the empty-word convention; with the standard H(empty) = 1 they are 4,
+17, 79 and the c = 0 seam is 1; the "+1, +1, +2 coincidence" was an artifact; tables now show both. (M4) the
+counting lemma's proof had a false step (a single-arc bound does not transfer to sub-arcs: arcs 3 -> 0, 3 -> 2 on
+0..3 give H = 3); rewritten through the sink-run bound on interior gaps with the arrangement constant. Minors applied:
+the state bound restated (fails only at c = k = 0; the audit's exact count); G(0,1) row 358/664; the modulo-7 bias of
+the one-apex misses; P3's time order; the sink-run and padding wordings; the length-cap argument for exact minima;
+the validation range (order <= 7); the alphabet and dedupe remarks; the ordinal-sum cuts behind the length-64
+two-apex witnesses; THM-4880's junction ranks cited in HYP-9470 (D). Upgrades: the audit reproduced, with its own
+subset-DP searches, the censuses to 511 (all grades) and to 2047 (G(0,2), G(2,0)), the one-apex and interval-chain
+spectra, the 2^21 count, all listed witnesses (0 mismatches), the ranks from the dumps, and the seam ranks 3 and 13
+from brute-force Hankel blocks (lower bounds meeting the automaton's upper bounds).
