@@ -1,0 +1,3753 @@
+{
+  "eligible_entries": 134,
+  "number_of_entries": 135,
+  "records": [
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 152,
+      "odd_part_B": 319,
+      "offset": -115,
+      "profile": {
+        "B": 5104,
+        "F": 1829,
+        "L": 1558,
+        "R": 2048,
+        "b": -115,
+        "e": 104,
+        "h": 325,
+        "s": 144
+      },
+      "return_period": 140,
+      "rows": [
+        10,
+        36,
+        17,
+        38,
+        75,
+        213,
+        143,
+        31
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": false,
+      "mask": 224,
+      "odd_part_B": 1,
+      "offset": -113,
+      "profile": {
+        "B": 4096,
+        "F": 1897,
+        "L": 811,
+        "R": 2048,
+        "b": -113,
+        "e": 38,
+        "h": 223,
+        "s": 125
+      },
+      "return_period": null,
+      "rows": [
+        2,
+        36,
+        49,
+        7,
+        75,
+        217,
+        143,
+        31
+      ],
+      "two_adic_B": 12
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 30,
+      "odd_part_B": 277,
+      "offset": -111,
+      "profile": {
+        "B": 1108,
+        "F": 369,
+        "L": 518,
+        "R": 512,
+        "b": -111,
+        "e": 32,
+        "h": 77,
+        "s": 38
+      },
+      "return_period": 92,
+      "rows": [
+        2,
+        68,
+        41,
+        19,
+        7,
+        27,
+        61
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 56,
+      "odd_part_B": 173,
+      "offset": -109,
+      "profile": {
+        "B": 5536,
+        "F": 1837,
+        "L": 1654,
+        "R": 2048,
+        "b": -109,
+        "e": 102,
+        "h": 355,
+        "s": 146
+      },
+      "return_period": 172,
+      "rows": [
+        2,
+        52,
+        73,
+        131,
+        45,
+        77,
+        155,
+        55
+      ],
+      "two_adic_B": 5
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 84,
+      "odd_part_B": 339,
+      "offset": -107,
+      "profile": {
+        "B": 5424,
+        "F": 1849,
+        "L": 1522,
+        "R": 2048,
+        "b": -107,
+        "e": 92,
+        "h": 339,
+        "s": 136
+      },
+      "return_period": 28,
+      "rows": [
+        2,
+        28,
+        25,
+        97,
+        169,
+        71,
+        151,
+        47
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 37,
+      "odd_part_B": 121,
+      "offset": -105,
+      "profile": {
+        "B": 3872,
+        "F": 807,
+        "L": 1715,
+        "R": 1024,
+        "b": -105,
+        "e": 112,
+        "h": 215,
+        "s": 57
+      },
+      "return_period": 110,
+      "rows": [
+        16,
+        5,
+        25,
+        35,
+        106,
+        135,
+        47,
+        95
+      ],
+      "two_adic_B": 5
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 100,
+      "odd_part_B": 737,
+      "offset": -103,
+      "profile": {
+        "B": 5896,
+        "F": 1799,
+        "L": 1924,
+        "R": 2048,
+        "b": -103,
+        "e": 146,
+        "h": 409,
+        "s": 156
+      },
+      "return_period": 330,
+      "rows": [
+        6,
+        132,
+        56,
+        67,
+        43,
+        75,
+        23,
+        125
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 22,
+      "odd_part_B": 283,
+      "offset": -101,
+      "profile": {
+        "B": 2264,
+        "F": 371,
+        "L": 979,
+        "R": 512,
+        "b": -101,
+        "e": 40,
+        "h": 89,
+        "s": 15
+      },
+      "return_period": 94,
+      "rows": [
+        2,
+        4,
+        41,
+        35,
+        15,
+        211,
+        31,
+        95
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 97,
+      "odd_part_B": 155,
+      "offset": -99,
+      "profile": {
+        "B": 1240,
+        "F": 361,
+        "L": 587,
+        "R": 512,
+        "b": -99,
+        "e": 52,
+        "h": 89,
+        "s": 39
+      },
+      "return_period": 20,
+      "rows": [
+        2,
+        48,
+        11,
+        67,
+        45,
+        77,
+        23
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 146,
+      "odd_part_B": 659,
+      "offset": -97,
+      "profile": {
+        "B": 5272,
+        "F": 1873,
+        "L": 1390,
+        "R": 2048,
+        "b": -97,
+        "e": 78,
+        "h": 319,
+        "s": 136
+      },
+      "return_period": 658,
+      "rows": [
+        2,
+        84,
+        73,
+        35,
+        141,
+        23,
+        185,
+        47
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 168,
+      "odd_part_B": 299,
+      "offset": -95,
+      "profile": {
+        "B": 4784,
+        "F": 1897,
+        "L": 1111,
+        "R": 2048,
+        "b": -95,
+        "e": 56,
+        "h": 281,
+        "s": 133
+      },
+      "return_period": 132,
+      "rows": [
+        6,
+        12,
+        24,
+        97,
+        139,
+        87,
+        151,
+        47
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 196,
+      "odd_part_B": 155,
+      "offset": -93,
+      "profile": {
+        "B": 4960,
+        "F": 1885,
+        "L": 1261,
+        "R": 2048,
+        "b": -93,
+        "e": 70,
+        "h": 301,
+        "s": 135
+      },
+      "return_period": 20,
+      "rows": [
+        2,
+        68,
+        25,
+        51,
+        163,
+        135,
+        61,
+        79
+      ],
+      "two_adic_B": 5
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 88,
+      "odd_part_B": 341,
+      "offset": -91,
+      "profile": {
+        "B": 5456,
+        "F": 1859,
+        "L": 1522,
+        "R": 2048,
+        "b": -91,
+        "e": 98,
+        "h": 347,
+        "s": 138
+      },
+      "return_period": 10,
+      "rows": [
+        4,
+        9,
+        178,
+        85,
+        195,
+        27,
+        39,
+        107
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 26,
+      "odd_part_B": 213,
+      "offset": -89,
+      "profile": {
+        "B": 6816,
+        "F": 1771,
+        "L": 2512,
+        "R": 2048,
+        "b": -89,
+        "e": 188,
+        "h": 471,
+        "s": 150
+      },
+      "return_period": 70,
+      "rows": [
+        6,
+        76,
+        152,
+        49,
+        67,
+        23,
+        173,
+        59
+      ],
+      "two_adic_B": 5
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 13,
+      "odd_part_B": 549,
+      "offset": -87,
+      "profile": {
+        "B": 4392,
+        "F": 815,
+        "L": 1961,
+        "R": 1024,
+        "b": -87,
+        "e": 122,
+        "h": 255,
+        "s": 55
+      },
+      "return_period": 60,
+      "rows": [
+        6,
+        20,
+        40,
+        67,
+        77,
+        27,
+        167,
+        63
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 50,
+      "odd_part_B": 799,
+      "offset": -85,
+      "profile": {
+        "B": 6392,
+        "F": 1807,
+        "L": 2146,
+        "R": 2048,
+        "b": -85,
+        "e": 156,
+        "h": 437,
+        "s": 150
+      },
+      "return_period": 184,
+      "rows": [
+        18,
+        96,
+        11,
+        131,
+        78,
+        29,
+        173,
+        55
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 104,
+      "odd_part_B": 327,
+      "offset": -83,
+      "profile": {
+        "B": 2616,
+        "F": 919,
+        "L": 587,
+        "R": 1024,
+        "b": -83,
+        "e": 22,
+        "h": 123,
+        "s": 45
+      },
+      "return_period": 36,
+      "rows": [
+        2,
+        12,
+        17,
+        69,
+        43,
+        15,
+        183,
+        63
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 14,
+      "odd_part_B": 451,
+      "offset": -81,
+      "profile": {
+        "B": 7216,
+        "F": 1763,
+        "L": 2728,
+        "R": 2048,
+        "b": -81,
+        "e": 204,
+        "h": 499,
+        "s": 144
+      },
+      "return_period": 20,
+      "rows": [
+        6,
+        28,
+        112,
+        37,
+        169,
+        195,
+        27,
+        79
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 152,
+      "odd_part_B": 157,
+      "offset": -79,
+      "profile": {
+        "B": 5024,
+        "F": 1883,
+        "L": 1312,
+        "R": 2048,
+        "b": -79,
+        "e": 86,
+        "h": 317,
+        "s": 142
+      },
+      "return_period": 52,
+      "rows": [
+        8,
+        65,
+        19,
+        198,
+        43,
+        15,
+        181,
+        55
+      ],
+      "two_adic_B": 5
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 21,
+      "odd_part_B": 365,
+      "offset": -77,
+      "profile": {
+        "B": 1460,
+        "F": 379,
+        "L": 635,
+        "R": 512,
+        "b": -77,
+        "e": 56,
+        "h": 115,
+        "s": 41
+      },
+      "return_period": 36,
+      "rows": [
+        10,
+        12,
+        17,
+        100,
+        43,
+        71,
+        23
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 7,
+      "odd_part_B": 877,
+      "offset": -75,
+      "profile": {
+        "B": 7016,
+        "F": 1773,
+        "L": 2713,
+        "R": 2048,
+        "b": -75,
+        "e": 200,
+        "h": 497,
+        "s": 157
+      },
+      "return_period": 876,
+      "rows": [
+        66,
+        140,
+        25,
+        49,
+        35,
+        71,
+        158,
+        61
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 73,
+      "odd_part_B": 309,
+      "offset": -73,
+      "profile": {
+        "B": 1236,
+        "F": 387,
+        "L": 563,
+        "R": 512,
+        "b": -73,
+        "e": 52,
+        "h": 99,
+        "s": 43
+      },
+      "return_period": 102,
+      "rows": [
+        4,
+        65,
+        26,
+        19,
+        35,
+        15,
+        61
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 134,
+      "odd_part_B": 749,
+      "offset": -71,
+      "profile": {
+        "B": 5992,
+        "F": 1867,
+        "L": 1753,
+        "R": 2048,
+        "b": -71,
+        "e": 110,
+        "h": 385,
+        "s": 137
+      },
+      "return_period": 318,
+      "rows": [
+        2,
+        28,
+        161,
+        85,
+        101,
+        75,
+        135,
+        59
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 42,
+      "odd_part_B": 411,
+      "offset": -69,
+      "profile": {
+        "B": 6576,
+        "F": 1799,
+        "L": 2398,
+        "R": 2048,
+        "b": -69,
+        "e": 180,
+        "h": 465,
+        "s": 156
+      },
+      "return_period": 68,
+      "rows": [
+        18,
+        68,
+        41,
+        131,
+        46,
+        75,
+        157,
+        55
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 148,
+      "odd_part_B": 691,
+      "offset": -67,
+      "profile": {
+        "B": 5528,
+        "F": 1845,
+        "L": 1795,
+        "R": 2048,
+        "b": -67,
+        "e": 136,
+        "h": 383,
+        "s": 145
+      },
+      "return_period": 230,
+      "rows": [
+        36,
+        129,
+        74,
+        19,
+        7,
+        30,
+        59,
+        125
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 112,
+      "odd_part_B": 103,
+      "offset": -65,
+      "profile": {
+        "B": 824,
+        "F": 435,
+        "L": 224,
+        "R": 512,
+        "b": -65,
+        "e": 12,
+        "h": 49,
+        "s": 36
+      },
+      "return_period": 51,
+      "rows": [
+        2,
+        12,
+        17,
+        37,
+        11,
+        87,
+        31
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 21,
+      "odd_part_B": 365,
+      "offset": -63,
+      "profile": {
+        "B": 1460,
+        "F": 385,
+        "L": 704,
+        "R": 512,
+        "b": -63,
+        "e": 64,
+        "h": 115,
+        "s": 44
+      },
+      "return_period": 36,
+      "rows": [
+        2,
+        28,
+        41,
+        49,
+        69,
+        83,
+        15
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 42,
+      "odd_part_B": 87,
+      "offset": -61,
+      "profile": {
+        "B": 1392,
+        "F": 399,
+        "L": 551,
+        "R": 512,
+        "b": -61,
+        "e": 52,
+        "h": 117,
+        "s": 45
+      },
+      "return_period": 28,
+      "rows": [
+        10,
+        36,
+        65,
+        22,
+        7,
+        29,
+        59
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 67,
+      "odd_part_B": 87,
+      "offset": -59,
+      "profile": {
+        "B": 1392,
+        "F": 393,
+        "L": 656,
+        "R": 512,
+        "b": -59,
+        "e": 60,
+        "h": 117,
+        "s": 50
+      },
+      "return_period": 28,
+      "rows": [
+        16,
+        33,
+        11,
+        67,
+        46,
+        77,
+        23
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 162,
+      "odd_part_B": 681,
+      "offset": -57,
+      "profile": {
+        "B": 5448,
+        "F": 1889,
+        "L": 1597,
+        "R": 2048,
+        "b": -57,
+        "e": 102,
+        "h": 339,
+        "s": 137
+      },
+      "return_period": 226,
+      "rows": [
+        2,
+        28,
+        41,
+        193,
+        45,
+        75,
+        151,
+        55
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 76,
+      "odd_part_B": 143,
+      "offset": -55,
+      "profile": {
+        "B": 1144,
+        "F": 427,
+        "L": 422,
+        "R": 512,
+        "b": -55,
+        "e": 30,
+        "h": 83,
+        "s": 44
+      },
+      "return_period": 60,
+      "rows": [
+        6,
+        12,
+        24,
+        33,
+        43,
+        71,
+        31
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 38,
+      "odd_part_B": 413,
+      "offset": -53,
+      "profile": {
+        "B": 6608,
+        "F": 1837,
+        "L": 2230,
+        "R": 2048,
+        "b": -53,
+        "e": 158,
+        "h": 449,
+        "s": 144
+      },
+      "return_period": 174,
+      "rows": [
+        6,
+        28,
+        104,
+        97,
+        13,
+        147,
+        179,
+        31
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 98,
+      "odd_part_B": 171,
+      "offset": -51,
+      "profile": {
+        "B": 2736,
+        "F": 953,
+        "L": 671,
+        "R": 1024,
+        "b": -51,
+        "e": 20,
+        "h": 117,
+        "s": 43
+      },
+      "return_period": 18,
+      "rows": [
+        2,
+        24,
+        3,
+        37,
+        45,
+        199,
+        31,
+        95
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 70,
+      "odd_part_B": 51,
+      "offset": -49,
+      "profile": {
+        "B": 6528,
+        "F": 1829,
+        "L": 2254,
+        "R": 2048,
+        "b": -49,
+        "e": 170,
+        "h": 459,
+        "s": 154
+      },
+      "return_period": 8,
+      "rows": [
+        66,
+        132,
+        73,
+        19,
+        39,
+        15,
+        186,
+        61
+      ],
+      "two_adic_B": 7
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 44,
+      "odd_part_B": 779,
+      "offset": -47,
+      "profile": {
+        "B": 6232,
+        "F": 1861,
+        "L": 2029,
+        "R": 2048,
+        "b": -47,
+        "e": 140,
+        "h": 421,
+        "s": 151
+      },
+      "return_period": 180,
+      "rows": [
+        6,
+        24,
+        98,
+        133,
+        141,
+        27,
+        59,
+        103
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 152,
+      "odd_part_B": 683,
+      "offset": -45,
+      "profile": {
+        "B": 5464,
+        "F": 1901,
+        "L": 1543,
+        "R": 2048,
+        "b": -45,
+        "e": 102,
+        "h": 349,
+        "s": 141
+      },
+      "return_period": 22,
+      "rows": [
+        16,
+        13,
+        41,
+        81,
+        166,
+        75,
+        151,
+        47
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 38,
+      "odd_part_B": 847,
+      "offset": -43,
+      "profile": {
+        "B": 6776,
+        "F": 1839,
+        "L": 2284,
+        "R": 2048,
+        "b": -43,
+        "e": 166,
+        "h": 467,
+        "s": 144
+      },
+      "return_period": 330,
+      "rows": [
+        6,
+        44,
+        88,
+        81,
+        35,
+        141,
+        179,
+        31
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 76,
+      "odd_part_B": 145,
+      "offset": -41,
+      "profile": {
+        "B": 580,
+        "F": 205,
+        "L": 199,
+        "R": 256,
+        "b": -41,
+        "e": 10,
+        "h": 29,
+        "s": 13
+      },
+      "return_period": 28,
+      "rows": [
+        2,
+        8,
+        3,
+        21,
+        39,
+        79,
+        31
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 22,
+      "odd_part_B": 53,
+      "offset": -39,
+      "profile": {
+        "B": 6784,
+        "F": 1837,
+        "L": 2410,
+        "R": 2048,
+        "b": -39,
+        "e": 172,
+        "h": 469,
+        "s": 152
+      },
+      "return_period": 52,
+      "rows": [
+        6,
+        132,
+        56,
+        51,
+        99,
+        195,
+        15,
+        93
+      ],
+      "two_adic_B": 7
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 76,
+      "odd_part_B": 49,
+      "offset": -37,
+      "profile": {
+        "B": 6272,
+        "F": 1855,
+        "L": 2107,
+        "R": 2048,
+        "b": -37,
+        "e": 156,
+        "h": 425,
+        "s": 141
+      },
+      "return_period": 21,
+      "rows": [
+        12,
+        65,
+        26,
+        50,
+        195,
+        23,
+        173,
+        47
+      ],
+      "two_adic_B": 7
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 82,
+      "odd_part_B": 159,
+      "offset": -35,
+      "profile": {
+        "B": 1272,
+        "F": 449,
+        "L": 407,
+        "R": 512,
+        "b": -35,
+        "e": 28,
+        "h": 93,
+        "s": 39
+      },
+      "return_period": 52,
+      "rows": [
+        2,
+        20,
+        41,
+        67,
+        77,
+        27,
+        39
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 28,
+      "odd_part_B": 55,
+      "offset": -33,
+      "profile": {
+        "B": 3520,
+        "F": 923,
+        "L": 1169,
+        "R": 1024,
+        "b": -33,
+        "e": 68,
+        "h": 193,
+        "s": 51
+      },
+      "return_period": 20,
+      "rows": [
+        8,
+        5,
+        65,
+        54,
+        39,
+        71,
+        155,
+        63
+      ],
+      "two_adic_B": 6
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 164,
+      "odd_part_B": 315,
+      "offset": -31,
+      "profile": {
+        "B": 5040,
+        "F": 1933,
+        "L": 1306,
+        "R": 2048,
+        "b": -31,
+        "e": 84,
+        "h": 321,
+        "s": 132
+      },
+      "return_period": 12,
+      "rows": [
+        6,
+        132,
+        104,
+        19,
+        7,
+        27,
+        59,
+        125
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 7,
+      "odd_part_B": 887,
+      "offset": -29,
+      "profile": {
+        "B": 7096,
+        "F": 1811,
+        "L": 2734,
+        "R": 2048,
+        "b": -29,
+        "e": 208,
+        "h": 511,
+        "s": 162
+      },
+      "return_period": 443,
+      "rows": [
+        66,
+        140,
+        49,
+        133,
+        11,
+        27,
+        62,
+        117
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 22,
+      "odd_part_B": 125,
+      "offset": -27,
+      "profile": {
+        "B": 4000,
+        "F": 905,
+        "L": 1517,
+        "R": 1024,
+        "b": -27,
+        "e": 92,
+        "h": 229,
+        "s": 51
+      },
+      "return_period": 100,
+      "rows": [
+        16,
+        33,
+        11,
+        67,
+        78,
+        29,
+        167,
+        63
+      ],
+      "two_adic_B": 5
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 268,
+      "odd_part_B": 2359,
+      "offset": -25,
+      "profile": {
+        "B": 9436,
+        "F": 1931,
+        "L": 2759,
+        "R": 2048,
+        "b": -25,
+        "e": 92,
+        "h": 359,
+        "s": 71
+      },
+      "return_period": 21,
+      "rows": [
+        2,
+        260,
+        33,
+        7,
+        15,
+        347,
+        287,
+        127,
+        157
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 13,
+      "odd_part_B": 567,
+      "offset": -23,
+      "profile": {
+        "B": 4536,
+        "F": 879,
+        "L": 1886,
+        "R": 1024,
+        "b": -23,
+        "e": 122,
+        "h": 273,
+        "s": 56
+      },
+      "return_period": 54,
+      "rows": [
+        6,
+        12,
+        144,
+        37,
+        75,
+        23,
+        47,
+        123
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 52,
+      "odd_part_B": 89,
+      "offset": -21,
+      "profile": {
+        "B": 1424,
+        "F": 449,
+        "L": 524,
+        "R": 512,
+        "b": -21,
+        "e": 42,
+        "h": 109,
+        "s": 40
+      },
+      "return_period": 11,
+      "rows": [
+        6,
+        24,
+        26,
+        49,
+        97,
+        7,
+        47
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 224,
+      "odd_part_B": 301,
+      "offset": -19,
+      "profile": {
+        "B": 4816,
+        "F": 1959,
+        "L": 1057,
+        "R": 2048,
+        "b": -19,
+        "e": 70,
+        "h": 313,
+        "s": 137
+      },
+      "return_period": 42,
+      "rows": [
+        32,
+        65,
+        11,
+        67,
+        15,
+        158,
+        181,
+        31
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 129,
+      "odd_part_B": 505,
+      "offset": -17,
+      "profile": {
+        "B": 4040,
+        "F": 905,
+        "L": 1412,
+        "R": 1024,
+        "b": -17,
+        "e": 102,
+        "h": 233,
+        "s": 64
+      },
+      "return_period": 100,
+      "rows": [
+        2,
+        12,
+        33,
+        85,
+        71,
+        155,
+        167,
+        31
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 56,
+      "odd_part_B": 3,
+      "offset": -15,
+      "profile": {
+        "B": 6144,
+        "F": 1911,
+        "L": 1798,
+        "R": 2048,
+        "b": -15,
+        "e": 122,
+        "h": 411,
+        "s": 144
+      },
+      "return_period": 2,
+      "rows": [
+        6,
+        24,
+        42,
+        81,
+        165,
+        139,
+        55,
+        79
+      ],
+      "two_adic_B": 11
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 5,
+      "odd_part_B": 133,
+      "offset": -13,
+      "profile": {
+        "B": 2128,
+        "F": 189,
+        "L": 1034,
+        "R": 256,
+        "b": -13,
+        "e": 54,
+        "h": 85,
+        "s": 6
+      },
+      "return_period": 18,
+      "rows": [
+        2,
+        8,
+        3,
+        53,
+        71,
+        151,
+        47,
+        95
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 152,
+      "odd_part_B": 83,
+      "offset": -11,
+      "profile": {
+        "B": 5312,
+        "F": 1965,
+        "L": 1285,
+        "R": 2048,
+        "b": -11,
+        "e": 72,
+        "h": 323,
+        "s": 135
+      },
+      "return_period": 82,
+      "rows": [
+        10,
+        12,
+        17,
+        116,
+        195,
+        23,
+        167,
+        47
+      ],
+      "two_adic_B": 6
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 82,
+      "odd_part_B": 333,
+      "offset": -9,
+      "profile": {
+        "B": 1332,
+        "F": 449,
+        "L": 521,
+        "R": 512,
+        "b": -9,
+        "e": 54,
+        "h": 117,
+        "s": 45
+      },
+      "return_period": 36,
+      "rows": [
+        64,
+        5,
+        25,
+        19,
+        35,
+        15,
+        62
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 14,
+      "odd_part_B": 187,
+      "offset": -7,
+      "profile": {
+        "B": 1496,
+        "F": 461,
+        "L": 551,
+        "R": 512,
+        "b": -7,
+        "e": 44,
+        "h": 121,
+        "s": 45
+      },
+      "return_period": 40,
+      "rows": [
+        6,
+        72,
+        26,
+        49,
+        35,
+        7,
+        61
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 84,
+      "odd_part_B": 741,
+      "offset": -5,
+      "profile": {
+        "B": 5928,
+        "F": 1953,
+        "L": 1549,
+        "R": 2048,
+        "b": -5,
+        "e": 90,
+        "h": 375,
+        "s": 133
+      },
+      "return_period": 36,
+      "rows": [
+        18,
+        20,
+        97,
+        7,
+        172,
+        75,
+        155,
+        47
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 9,
+      "odd_part_B": 161,
+      "offset": -3,
+      "profile": {
+        "B": 644,
+        "F": 111,
+        "L": 254,
+        "R": 128,
+        "b": -3,
+        "e": 14,
+        "h": 31,
+        "s": 6
+      },
+      "return_period": 33,
+      "rows": [
+        2,
+        4,
+        41,
+        19,
+        7,
+        91,
+        31
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 26,
+      "odd_part_B": 485,
+      "offset": -1,
+      "profile": {
+        "B": 3880,
+        "F": 959,
+        "L": 1211,
+        "R": 1024,
+        "b": -1,
+        "e": 64,
+        "h": 217,
+        "s": 59
+      },
+      "return_period": 48,
+      "rows": [
+        2,
+        20,
+        25,
+        131,
+        105,
+        15,
+        47,
+        119
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 112,
+      "odd_part_B": 663,
+      "offset": 1,
+      "profile": {
+        "B": 5304,
+        "F": 1951,
+        "L": 1354,
+        "R": 2048,
+        "b": 1,
+        "e": 98,
+        "h": 351,
+        "s": 134
+      },
+      "return_period": 24,
+      "rows": [
+        18,
+        36,
+        65,
+        7,
+        46,
+        205,
+        155,
+        31
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 136,
+      "odd_part_B": 47,
+      "offset": 3,
+      "profile": {
+        "B": 1504,
+        "F": 509,
+        "L": 211,
+        "R": 512,
+        "b": 3,
+        "e": 6,
+        "h": 49,
+        "s": 21
+      },
+      "return_period": 23,
+      "rows": [
+        2,
+        8,
+        3,
+        21,
+        71,
+        31,
+        175,
+        63
+      ],
+      "two_adic_B": 5
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 84,
+      "odd_part_B": 327,
+      "offset": 5,
+      "profile": {
+        "B": 1308,
+        "F": 473,
+        "L": 449,
+        "R": 512,
+        "b": 5,
+        "e": 44,
+        "h": 111,
+        "s": 41
+      },
+      "return_period": 36,
+      "rows": [
+        64,
+        5,
+        41,
+        19,
+        7,
+        27,
+        62
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 40,
+      "odd_part_B": 19,
+      "offset": 7,
+      "profile": {
+        "B": 304,
+        "F": 131,
+        "L": 55,
+        "R": 128,
+        "b": 7,
+        "e": 4,
+        "h": 25,
+        "s": 13
+      },
+      "return_period": 18,
+      "rows": [
+        2,
+        12,
+        9,
+        49,
+        7,
+        23
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 40,
+      "odd_part_B": 5,
+      "offset": 9,
+      "profile": {
+        "B": 320,
+        "F": 131,
+        "L": 64,
+        "R": 128,
+        "b": 9,
+        "e": 6,
+        "h": 29,
+        "s": 14
+      },
+      "return_period": 4,
+      "rows": [
+        8,
+        5,
+        17,
+        38,
+        11,
+        23
+      ],
+      "two_adic_B": 6
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 9,
+      "odd_part_B": 247,
+      "offset": 11,
+      "profile": {
+        "B": 1976,
+        "F": 229,
+        "L": 812,
+        "R": 256,
+        "b": 11,
+        "e": 38,
+        "h": 71,
+        "s": 8
+      },
+      "return_period": 36,
+      "rows": [
+        2,
+        40,
+        3,
+        21,
+        7,
+        93,
+        159,
+        63
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 49,
+      "odd_part_B": 831,
+      "offset": 13,
+      "profile": {
+        "B": 6648,
+        "F": 1901,
+        "L": 2266,
+        "R": 2048,
+        "b": 13,
+        "e": 160,
+        "h": 447,
+        "s": 140
+      },
+      "return_period": 92,
+      "rows": [
+        10,
+        48,
+        19,
+        54,
+        225,
+        197,
+        15,
+        79
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 36,
+      "odd_part_B": 41,
+      "offset": 15,
+      "profile": {
+        "B": 328,
+        "F": 135,
+        "L": 88,
+        "R": 128,
+        "b": 15,
+        "e": 8,
+        "h": 31,
+        "s": 16
+      },
+      "return_period": 20,
+      "rows": [
+        8,
+        5,
+        17,
+        22,
+        35,
+        15
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 80,
+      "odd_part_B": 155,
+      "offset": 17,
+      "profile": {
+        "B": 1240,
+        "F": 509,
+        "L": 266,
+        "R": 512,
+        "b": 17,
+        "e": 20,
+        "h": 89,
+        "s": 46
+      },
+      "return_period": 20,
+      "rows": [
+        6,
+        12,
+        48,
+        37,
+        11,
+        83,
+        31
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 130,
+      "odd_part_B": 419,
+      "offset": 19,
+      "profile": {
+        "B": 3352,
+        "F": 999,
+        "L": 785,
+        "R": 1024,
+        "b": 19,
+        "e": 44,
+        "h": 175,
+        "s": 61
+      },
+      "return_period": 418,
+      "rows": [
+        4,
+        9,
+        146,
+        37,
+        11,
+        87,
+        31,
+        123
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 9,
+      "odd_part_B": 155,
+      "offset": 21,
+      "profile": {
+        "B": 1240,
+        "F": 231,
+        "L": 508,
+        "R": 256,
+        "b": 21,
+        "e": 46,
+        "h": 89,
+        "s": 18
+      },
+      "return_period": 20,
+      "rows": [
+        2,
+        48,
+        11,
+        67,
+        45,
+        77,
+        23
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 36,
+      "odd_part_B": 53,
+      "offset": 23,
+      "profile": {
+        "B": 424,
+        "F": 137,
+        "L": 121,
+        "R": 128,
+        "b": 23,
+        "e": 14,
+        "h": 43,
+        "s": 15
+      },
+      "return_period": 52,
+      "rows": [
+        6,
+        12,
+        48,
+        21,
+        35,
+        11
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 66,
+      "odd_part_B": 483,
+      "offset": 25,
+      "profile": {
+        "B": 3864,
+        "F": 993,
+        "L": 1019,
+        "R": 1024,
+        "b": 25,
+        "e": 56,
+        "h": 189,
+        "s": 57
+      },
+      "return_period": 66,
+      "rows": [
+        6,
+        20,
+        24,
+        35,
+        201,
+        23,
+        47,
+        111
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 130,
+      "odd_part_B": 519,
+      "offset": 27,
+      "profile": {
+        "B": 16608,
+        "F": 3897,
+        "L": 4258,
+        "R": 4096,
+        "b": 27,
+        "e": 226,
+        "h": 711,
+        "s": 194
+      },
+      "return_period": 172,
+      "rows": [
+        256,
+        257,
+        11,
+        51,
+        295,
+        455,
+        31,
+        95,
+        204
+      ],
+      "two_adic_B": 5
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 18,
+      "odd_part_B": 53,
+      "offset": 29,
+      "profile": {
+        "B": 424,
+        "F": 143,
+        "L": 127,
+        "R": 128,
+        "b": 29,
+        "e": 14,
+        "h": 43,
+        "s": 15
+      },
+      "return_period": 52,
+      "rows": [
+        6,
+        12,
+        48,
+        21,
+        35,
+        11
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 140,
+      "odd_part_B": 733,
+      "offset": 31,
+      "profile": {
+        "B": 5864,
+        "F": 1961,
+        "L": 1573,
+        "R": 2048,
+        "b": 31,
+        "e": 118,
+        "h": 401,
+        "s": 135
+      },
+      "return_period": 244,
+      "rows": [
+        128,
+        5,
+        153,
+        51,
+        99,
+        71,
+        15,
+        122
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 136,
+      "odd_part_B": 333,
+      "offset": 33,
+      "profile": {
+        "B": 2664,
+        "F": 1041,
+        "L": 398,
+        "R": 1024,
+        "b": 33,
+        "e": 16,
+        "h": 129,
+        "s": 66
+      },
+      "return_period": 36,
+      "rows": [
+        2,
+        32,
+        11,
+        67,
+        15,
+        157,
+        55,
+        95
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 66,
+      "odd_part_B": 365,
+      "offset": 35,
+      "profile": {
+        "B": 1460,
+        "F": 515,
+        "L": 365,
+        "R": 512,
+        "b": 35,
+        "e": 32,
+        "h": 115,
+        "s": 49
+      },
+      "return_period": 36,
+      "rows": [
+        6,
+        24,
+        42,
+        49,
+        37,
+        67,
+        31
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 24,
+      "odd_part_B": 63,
+      "offset": 37,
+      "profile": {
+        "B": 1008,
+        "F": 279,
+        "L": 211,
+        "R": 256,
+        "b": 37,
+        "e": 14,
+        "h": 69,
+        "s": 17
+      },
+      "return_period": 6,
+      "rows": [
+        2,
+        12,
+        17,
+        37,
+        43,
+        71,
+        31
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 20,
+      "odd_part_B": 157,
+      "offset": 39,
+      "profile": {
+        "B": 1256,
+        "F": 267,
+        "L": 361,
+        "R": 256,
+        "b": 39,
+        "e": 28,
+        "h": 91,
+        "s": 17
+      },
+      "return_period": 52,
+      "rows": [
+        10,
+        12,
+        17,
+        52,
+        35,
+        71,
+        31
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 24,
+      "odd_part_B": 257,
+      "offset": 41,
+      "profile": {
+        "B": 1028,
+        "F": 277,
+        "L": 244,
+        "R": 256,
+        "b": 41,
+        "e": 20,
+        "h": 73,
+        "s": 16
+      },
+      "return_period": 16,
+      "rows": [
+        16,
+        5,
+        33,
+        7,
+        46,
+        75,
+        31
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 9,
+      "odd_part_B": 319,
+      "offset": 43,
+      "profile": {
+        "B": 1276,
+        "F": 257,
+        "L": 478,
+        "R": 256,
+        "b": 43,
+        "e": 42,
+        "h": 95,
+        "s": 18
+      },
+      "return_period": 140,
+      "rows": [
+        2,
+        28,
+        25,
+        49,
+        97,
+        7,
+        47
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 10,
+      "odd_part_B": 41,
+      "offset": 45,
+      "profile": {
+        "B": 1312,
+        "F": 267,
+        "L": 394,
+        "R": 256,
+        "b": 45,
+        "e": 34,
+        "h": 101,
+        "s": 18
+      },
+      "return_period": 20,
+      "rows": [
+        6,
+        12,
+        80,
+        37,
+        11,
+        23,
+        59
+      ],
+      "two_adic_B": 5
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 192,
+      "odd_part_B": 159,
+      "offset": 47,
+      "profile": {
+        "B": 2544,
+        "F": 1059,
+        "L": 287,
+        "R": 1024,
+        "b": 47,
+        "e": 12,
+        "h": 117,
+        "s": 53
+      },
+      "return_period": 52,
+      "rows": [
+        2,
+        4,
+        137,
+        35,
+        15,
+        87,
+        31,
+        123
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 80,
+      "odd_part_B": 191,
+      "offset": 49,
+      "profile": {
+        "B": 3056,
+        "F": 1053,
+        "L": 449,
+        "R": 1024,
+        "b": 49,
+        "e": 20,
+        "h": 155,
+        "s": 63
+      },
+      "return_period": 95,
+      "rows": [
+        2,
+        8,
+        131,
+        85,
+        39,
+        15,
+        55,
+        123
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 132,
+      "odd_part_B": 663,
+      "offset": 51,
+      "profile": {
+        "B": 5304,
+        "F": 2035,
+        "L": 1066,
+        "R": 2048,
+        "b": 51,
+        "e": 64,
+        "h": 321,
+        "s": 160
+      },
+      "return_period": 24,
+      "rows": [
+        66,
+        28,
+        25,
+        49,
+        97,
+        7,
+        174,
+        63
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 65,
+      "odd_part_B": 563,
+      "offset": 53,
+      "profile": {
+        "B": 4504,
+        "F": 967,
+        "L": 1496,
+        "R": 1024,
+        "b": 53,
+        "e": 110,
+        "h": 271,
+        "s": 68
+      },
+      "return_period": 562,
+      "rows": [
+        4,
+        17,
+        42,
+        67,
+        45,
+        203,
+        151,
+        31
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 66,
+      "odd_part_B": 499,
+      "offset": 55,
+      "profile": {
+        "B": 3992,
+        "F": 1009,
+        "L": 1088,
+        "R": 1024,
+        "b": 55,
+        "e": 70,
+        "h": 233,
+        "s": 68
+      },
+      "return_period": 166,
+      "rows": [
+        6,
+        12,
+        136,
+        49,
+        7,
+        87,
+        31,
+        123
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 20,
+      "odd_part_B": 291,
+      "offset": 57,
+      "profile": {
+        "B": 1164,
+        "F": 293,
+        "L": 256,
+        "R": 256,
+        "b": 57,
+        "e": 20,
+        "h": 87,
+        "s": 20
+      },
+      "return_period": 48,
+      "rows": [
+        4,
+        9,
+        26,
+        49,
+        67,
+        23,
+        47
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 17,
+      "odd_part_B": 615,
+      "offset": 59,
+      "profile": {
+        "B": 4920,
+        "F": 951,
+        "L": 1784,
+        "R": 1024,
+        "b": 59,
+        "e": 132,
+        "h": 303,
+        "s": 70
+      },
+      "return_period": 20,
+      "rows": [
+        4,
+        65,
+        74,
+        51,
+        39,
+        135,
+        185,
+        31
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 3,
+      "odd_part_B": 223,
+      "offset": 61,
+      "profile": {
+        "B": 3568,
+        "F": 479,
+        "L": 1369,
+        "R": 512,
+        "b": 61,
+        "e": 94,
+        "h": 199,
+        "s": 27
+      },
+      "return_period": 37,
+      "rows": [
+        6,
+        12,
+        40,
+        17,
+        135,
+        91,
+        31,
+        111
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 6,
+      "odd_part_B": 89,
+      "offset": 63,
+      "profile": {
+        "B": 1424,
+        "F": 283,
+        "L": 442,
+        "R": 256,
+        "b": 63,
+        "e": 36,
+        "h": 109,
+        "s": 18
+      },
+      "return_period": 11,
+      "rows": [
+        6,
+        12,
+        48,
+        21,
+        99,
+        75,
+        15
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 65,
+      "odd_part_B": 527,
+      "offset": 65,
+      "profile": {
+        "B": 4216,
+        "F": 1027,
+        "L": 1067,
+        "R": 1024,
+        "b": 65,
+        "e": 62,
+        "h": 235,
+        "s": 57
+      },
+      "return_period": 40,
+      "rows": [
+        10,
+        20,
+        17,
+        38,
+        169,
+        71,
+        31,
+        111
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 72,
+      "odd_part_B": 475,
+      "offset": 67,
+      "profile": {
+        "B": 3800,
+        "F": 1051,
+        "L": 758,
+        "R": 1024,
+        "b": 67,
+        "e": 40,
+        "h": 203,
+        "s": 58
+      },
+      "return_period": 180,
+      "rows": [
+        2,
+        20,
+        73,
+        35,
+        141,
+        23,
+        59,
+        111
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 33,
+      "odd_part_B": 629,
+      "offset": 69,
+      "profile": {
+        "B": 5032,
+        "F": 959,
+        "L": 1832,
+        "R": 1024,
+        "b": 69,
+        "e": 134,
+        "h": 289,
+        "s": 64
+      },
+      "return_period": 72,
+      "rows": [
+        2,
+        112,
+        11,
+        19,
+        165,
+        141,
+        61,
+        79
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 72,
+      "odd_part_B": 3,
+      "offset": 71,
+      "profile": {
+        "B": 1536,
+        "F": 551,
+        "L": 335,
+        "R": 512,
+        "b": 71,
+        "e": 32,
+        "h": 129,
+        "s": 47
+      },
+      "return_period": 2,
+      "rows": [
+        12,
+        65,
+        26,
+        50,
+        35,
+        7,
+        61
+      ],
+      "two_adic_B": 9
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 132,
+      "odd_part_B": 175,
+      "offset": 73,
+      "profile": {
+        "B": 2800,
+        "F": 1089,
+        "L": 338,
+        "R": 1024,
+        "b": 73,
+        "e": 8,
+        "h": 127,
+        "s": 58
+      },
+      "return_period": 60,
+      "rows": [
+        2,
+        36,
+        73,
+        19,
+        7,
+        29,
+        187,
+        63
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 48,
+      "odd_part_B": 239,
+      "offset": 75,
+      "profile": {
+        "B": 3824,
+        "F": 1079,
+        "L": 614,
+        "R": 1024,
+        "b": 75,
+        "e": 20,
+        "h": 185,
+        "s": 52
+      },
+      "return_period": 119,
+      "rows": [
+        8,
+        9,
+        19,
+        180,
+        99,
+        71,
+        15,
+        119
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 20,
+      "odd_part_B": 351,
+      "offset": 77,
+      "profile": {
+        "B": 2808,
+        "F": 569,
+        "L": 481,
+        "R": 512,
+        "b": 77,
+        "e": 20,
+        "h": 129,
+        "s": 21
+      },
+      "return_period": 36,
+      "rows": [
+        2,
+        4,
+        25,
+        51,
+        99,
+        71,
+        143,
+        63
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 5,
+      "odd_part_B": 1259,
+      "offset": 79,
+      "profile": {
+        "B": 10072,
+        "F": 897,
+        "L": 4279,
+        "R": 1024,
+        "b": 79,
+        "e": 206,
+        "h": 371,
+        "s": 29
+      },
+      "return_period": 1258,
+      "rows": [
+        2,
+        40,
+        259,
+        21,
+        263,
+        285,
+        319,
+        127,
+        139
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 192,
+      "odd_part_B": 299,
+      "offset": 81,
+      "profile": {
+        "B": 4784,
+        "F": 2099,
+        "L": 613,
+        "R": 2048,
+        "b": 81,
+        "e": 30,
+        "h": 281,
+        "s": 149
+      },
+      "return_period": 132,
+      "rows": [
+        6,
+        24,
+        74,
+        49,
+        37,
+        71,
+        155,
+        63
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 9,
+      "odd_part_B": 463,
+      "offset": 83,
+      "profile": {
+        "B": 3704,
+        "F": 507,
+        "L": 1405,
+        "R": 512,
+        "b": 83,
+        "e": 88,
+        "h": 191,
+        "s": 21
+      },
+      "return_period": 231,
+      "rows": [
+        2,
+        12,
+        49,
+        69,
+        43,
+        75,
+        151,
+        63
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 18,
+      "odd_part_B": 207,
+      "offset": 85,
+      "profile": {
+        "B": 3312,
+        "F": 543,
+        "L": 1003,
+        "R": 512,
+        "b": 85,
+        "e": 54,
+        "h": 165,
+        "s": 21
+      },
+      "return_period": 66,
+      "rows": [
+        2,
+        12,
+        41,
+        81,
+        7,
+        155,
+        55,
+        95
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 20,
+      "odd_part_B": 273,
+      "offset": 87,
+      "profile": {
+        "B": 4368,
+        "F": 1061,
+        "L": 980,
+        "R": 1024,
+        "b": 87,
+        "e": 50,
+        "h": 231,
+        "s": 56
+      },
+      "return_period": 12,
+      "rows": [
+        2,
+        176,
+        11,
+        67,
+        45,
+        77,
+        23,
+        125
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 96,
+      "odd_part_B": 451,
+      "offset": 89,
+      "profile": {
+        "B": 3608,
+        "F": 1093,
+        "L": 494,
+        "R": 1024,
+        "b": 89,
+        "e": 20,
+        "h": 185,
+        "s": 56
+      },
+      "return_period": 20,
+      "rows": [
+        2,
+        20,
+        49,
+        7,
+        105,
+        75,
+        143,
+        63
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 32,
+      "odd_part_B": 317,
+      "offset": 91,
+      "profile": {
+        "B": 1268,
+        "F": 337,
+        "L": 133,
+        "R": 256,
+        "b": 91,
+        "e": 10,
+        "h": 91,
+        "s": 27
+      },
+      "return_period": 316,
+      "rows": [
+        6,
+        12,
+        96,
+        21,
+        7,
+        27,
+        59
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 130,
+      "odd_part_B": 505,
+      "offset": 93,
+      "profile": {
+        "B": 4040,
+        "F": 1065,
+        "L": 914,
+        "R": 1024,
+        "b": 93,
+        "e": 52,
+        "h": 233,
+        "s": 64
+      },
+      "return_period": 100,
+      "rows": [
+        2,
+        12,
+        33,
+        85,
+        71,
+        155,
+        167,
+        31
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 33,
+      "odd_part_B": 79,
+      "offset": 95,
+      "profile": {
+        "B": 5056,
+        "F": 995,
+        "L": 1712,
+        "R": 1024,
+        "b": 95,
+        "e": 124,
+        "h": 313,
+        "s": 68
+      },
+      "return_period": 39,
+      "rows": [
+        8,
+        65,
+        67,
+        150,
+        39,
+        15,
+        185,
+        55
+      ],
+      "two_adic_B": 6
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 192,
+      "odd_part_B": 155,
+      "offset": 97,
+      "profile": {
+        "B": 4960,
+        "F": 2111,
+        "L": 652,
+        "R": 2048,
+        "b": 97,
+        "e": 34,
+        "h": 301,
+        "s": 154
+      },
+      "return_period": 20,
+      "rows": [
+        12,
+        65,
+        26,
+        50,
+        35,
+        71,
+        157,
+        63
+      ],
+      "two_adic_B": 5
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 8,
+      "odd_part_B": 1101,
+      "offset": 99,
+      "profile": {
+        "B": 4404,
+        "F": 341,
+        "L": 601,
+        "R": 256,
+        "b": 99,
+        "e": 14,
+        "h": 99,
+        "s": 3
+      },
+      "return_period": 366,
+      "rows": [
+        2,
+        4,
+        257,
+        7,
+        15,
+        287,
+        63,
+        127,
+        219
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 36,
+      "odd_part_B": 289,
+      "offset": 101,
+      "profile": {
+        "B": 4624,
+        "F": 1071,
+        "L": 992,
+        "R": 1024,
+        "b": 101,
+        "e": 54,
+        "h": 259,
+        "s": 58
+      },
+      "return_period": 136,
+      "rows": [
+        2,
+        24,
+        35,
+        53,
+        197,
+        83,
+        143,
+        47
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 4,
+      "odd_part_B": 329,
+      "offset": 103,
+      "profile": {
+        "B": 1316,
+        "F": 215,
+        "L": 197,
+        "R": 128,
+        "b": 103,
+        "e": 16,
+        "h": 103,
+        "s": 11
+      },
+      "return_period": 69,
+      "rows": [
+        6,
+        24,
+        34,
+        21,
+        69,
+        27,
+        47
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 136,
+      "odd_part_B": 769,
+      "offset": 105,
+      "profile": {
+        "B": 6152,
+        "F": 2099,
+        "L": 955,
+        "R": 2048,
+        "b": 105,
+        "e": 54,
+        "h": 407,
+        "s": 161
+      },
+      "return_period": 384,
+      "rows": [
+        6,
+        44,
+        56,
+        145,
+        67,
+        89,
+        15,
+        119
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 36,
+      "odd_part_B": 37,
+      "offset": 107,
+      "profile": {
+        "B": 4736,
+        "F": 1073,
+        "L": 1040,
+        "R": 1024,
+        "b": 107,
+        "e": 58,
+        "h": 269,
+        "s": 56
+      },
+      "return_period": 36,
+      "rows": [
+        12,
+        65,
+        50,
+        70,
+        11,
+        27,
+        181,
+        63
+      ],
+      "two_adic_B": 7
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 72,
+      "odd_part_B": 67,
+      "offset": 109,
+      "profile": {
+        "B": 4288,
+        "F": 1099,
+        "L": 701,
+        "R": 1024,
+        "b": 109,
+        "e": 34,
+        "h": 241,
+        "s": 57
+      },
+      "return_period": 66,
+      "rows": [
+        32,
+        13,
+        25,
+        81,
+        35,
+        78,
+        151,
+        63
+      ],
+      "two_adic_B": 6
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 144,
+      "odd_part_B": 377,
+      "offset": 111,
+      "profile": {
+        "B": 6032,
+        "F": 2111,
+        "L": 895,
+        "R": 2048,
+        "b": 111,
+        "e": 48,
+        "h": 389,
+        "s": 161
+      },
+      "return_period": 84,
+      "rows": [
+        6,
+        28,
+        56,
+        49,
+        193,
+        83,
+        15,
+        111
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 72,
+      "odd_part_B": 445,
+      "offset": 113,
+      "profile": {
+        "B": 3560,
+        "F": 1111,
+        "L": 527,
+        "R": 1024,
+        "b": 113,
+        "e": 26,
+        "h": 197,
+        "s": 65
+      },
+      "return_period": 44,
+      "rows": [
+        2,
+        32,
+        11,
+        83,
+        71,
+        157,
+        167,
+        31
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 130,
+      "odd_part_B": 499,
+      "offset": 115,
+      "profile": {
+        "B": 3992,
+        "F": 1099,
+        "L": 797,
+        "R": 1024,
+        "b": 115,
+        "e": 40,
+        "h": 227,
+        "s": 65
+      },
+      "return_period": 166,
+      "rows": [
+        2,
+        36,
+        9,
+        83,
+        71,
+        157,
+        167,
+        31
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 8,
+      "odd_part_B": 159,
+      "offset": 117,
+      "profile": {
+        "B": 2544,
+        "F": 361,
+        "L": 287,
+        "R": 256,
+        "b": 117,
+        "e": 12,
+        "h": 117,
+        "s": 13
+      },
+      "return_period": 52,
+      "rows": [
+        2,
+        4,
+        41,
+        19,
+        135,
+        91,
+        31,
+        111
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 144,
+      "odd_part_B": 365,
+      "offset": 119,
+      "profile": {
+        "B": 5840,
+        "F": 2083,
+        "L": 1237,
+        "R": 2048,
+        "b": 119,
+        "e": 84,
+        "h": 365,
+        "s": 157
+      },
+      "return_period": 36,
+      "rows": [
+        6,
+        44,
+        200,
+        49,
+        7,
+        85,
+        27,
+        123
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 96,
+      "odd_part_B": 245,
+      "offset": 121,
+      "profile": {
+        "B": 3920,
+        "F": 1123,
+        "L": 608,
+        "R": 1024,
+        "b": 121,
+        "e": 22,
+        "h": 197,
+        "s": 56
+      },
+      "return_period": 84,
+      "rows": [
+        4,
+        5,
+        56,
+        51,
+        99,
+        195,
+        15,
+        95
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 36,
+      "odd_part_B": 523,
+      "offset": 123,
+      "profile": {
+        "B": 4184,
+        "F": 1111,
+        "L": 740,
+        "R": 1024,
+        "b": 123,
+        "e": 36,
+        "h": 227,
+        "s": 60
+      },
+      "return_period": 522,
+      "rows": [
+        2,
+        36,
+        25,
+        19,
+        99,
+        205,
+        143,
+        31
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 192,
+      "odd_part_B": 673,
+      "offset": 125,
+      "profile": {
+        "B": 5384,
+        "F": 2115,
+        "L": 943,
+        "R": 2048,
+        "b": 125,
+        "e": 58,
+        "h": 329,
+        "s": 153
+      },
+      "return_period": 48,
+      "rows": [
+        6,
+        24,
+        26,
+        161,
+        105,
+        71,
+        15,
+        119
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 17,
+      "odd_part_B": 619,
+      "offset": 127,
+      "profile": {
+        "B": 4952,
+        "F": 1051,
+        "L": 1445,
+        "R": 1024,
+        "b": 127,
+        "e": 100,
+        "h": 305,
+        "s": 65
+      },
+      "return_period": 618,
+      "rows": [
+        6,
+        12,
+        48,
+        69,
+        43,
+        203,
+        151,
+        31
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 96,
+      "odd_part_B": 233,
+      "offset": 129,
+      "profile": {
+        "B": 3728,
+        "F": 1135,
+        "L": 503,
+        "R": 1024,
+        "b": 129,
+        "e": 18,
+        "h": 191,
+        "s": 55
+      },
+      "return_period": 29,
+      "rows": [
+        4,
+        5,
+        56,
+        67,
+        43,
+        139,
+        55,
+        95
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 32,
+      "odd_part_B": 403,
+      "offset": 131,
+      "profile": {
+        "B": 1612,
+        "F": 373,
+        "L": 157,
+        "R": 256,
+        "b": 131,
+        "e": 14,
+        "h": 131,
+        "s": 23
+      },
+      "return_period": 60,
+      "rows": [
+        6,
+        40,
+        26,
+        97,
+        11,
+        85,
+        23
+      ],
+      "two_adic_B": 2
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 68,
+      "odd_part_B": 281,
+      "offset": 133,
+      "profile": {
+        "B": 4496,
+        "F": 1109,
+        "L": 953,
+        "R": 1024,
+        "b": 133,
+        "e": 48,
+        "h": 245,
+        "s": 59
+      },
+      "return_period": 70,
+      "rows": [
+        2,
+        52,
+        49,
+        7,
+        105,
+        201,
+        15,
+        95
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 5,
+      "odd_part_B": 737,
+      "offset": 135,
+      "profile": {
+        "B": 5896,
+        "F": 1019,
+        "L": 1910,
+        "R": 1024,
+        "b": 135,
+        "e": 140,
+        "h": 373,
+        "s": 62
+      },
+      "return_period": 330,
+      "rows": [
+        6,
+        24,
+        26,
+        97,
+        201,
+        23,
+        167,
+        47
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 40,
+      "odd_part_B": 151,
+      "offset": 137,
+      "profile": {
+        "B": 4832,
+        "F": 1095,
+        "L": 1043,
+        "R": 1024,
+        "b": 137,
+        "e": 66,
+        "h": 293,
+        "s": 61
+      },
+      "return_period": 15,
+      "rows": [
+        2,
+        28,
+        25,
+        97,
+        105,
+        71,
+        135,
+        63
+      ],
+      "two_adic_B": 5
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 36,
+      "odd_part_B": 315,
+      "offset": 139,
+      "profile": {
+        "B": 5040,
+        "F": 1081,
+        "L": 1340,
+        "R": 1024,
+        "b": 139,
+        "e": 82,
+        "h": 291,
+        "s": 62
+      },
+      "return_period": 12,
+      "rows": [
+        6,
+        12,
+        24,
+        209,
+        99,
+        15,
+        167,
+        55
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 68,
+      "odd_part_B": 33,
+      "offset": 141,
+      "profile": {
+        "B": 4224,
+        "F": 1123,
+        "L": 788,
+        "R": 1024,
+        "b": 141,
+        "e": 42,
+        "h": 237,
+        "s": 56
+      },
+      "return_period": 10,
+      "rows": [
+        2,
+        44,
+        25,
+        49,
+        67,
+        85,
+        143,
+        63
+      ],
+      "two_adic_B": 7
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 4,
+      "odd_part_B": 367,
+      "offset": 143,
+      "profile": {
+        "B": 2936,
+        "F": 381,
+        "L": 362,
+        "R": 256,
+        "b": 143,
+        "e": 18,
+        "h": 143,
+        "s": 12
+      },
+      "return_period": 183,
+      "rows": [
+        2,
+        36,
+        25,
+        19,
+        67,
+        29,
+        175,
+        63
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 192,
+      "odd_part_B": 345,
+      "offset": 145,
+      "profile": {
+        "B": 5520,
+        "F": 2129,
+        "L": 982,
+        "R": 2048,
+        "b": 145,
+        "e": 64,
+        "h": 351,
+        "s": 152
+      },
+      "return_period": 44,
+      "rows": [
+        12,
+        17,
+        42,
+        162,
+        77,
+        83,
+        15,
+        119
+      ],
+      "two_adic_B": 4
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 130,
+      "odd_part_B": 183,
+      "offset": 147,
+      "profile": {
+        "B": 5856,
+        "F": 2119,
+        "L": 1138,
+        "R": 2048,
+        "b": 147,
+        "e": 76,
+        "h": 369,
+        "s": 160
+      },
+      "return_period": 60,
+      "rows": [
+        34,
+        100,
+        73,
+        19,
+        7,
+        92,
+        153,
+        63
+      ],
+      "two_adic_B": 5
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 24,
+      "odd_part_B": 511,
+      "offset": 149,
+      "profile": {
+        "B": 4088,
+        "F": 1137,
+        "L": 680,
+        "R": 1024,
+        "b": 149,
+        "e": 36,
+        "h": 239,
+        "s": 62
+      },
+      "return_period": 9,
+      "rows": [
+        2,
+        12,
+        33,
+        85,
+        135,
+        155,
+        55,
+        79
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 34,
+      "odd_part_B": 589,
+      "offset": 151,
+      "profile": {
+        "B": 4712,
+        "F": 1115,
+        "L": 1118,
+        "R": 1024,
+        "b": 151,
+        "e": 60,
+        "h": 275,
+        "s": 62
+      },
+      "return_period": 90,
+      "rows": [
+        8,
+        17,
+        11,
+        226,
+        45,
+        71,
+        151,
+        55
+      ],
+      "two_adic_B": 3
+    },
+    {
+      "infinitely_many_source_returns": true,
+      "mask": 192,
+      "odd_part_B": 681,
+      "offset": 153,
+      "profile": {
+        "B": 5448,
+        "F": 2141,
+        "L": 928,
+        "R": 2048,
+        "b": 153,
+        "e": 60,
+        "h": 345,
+        "s": 158
+      },
+      "return_period": 226,
+      "rows": [
+        6,
+        48,
+        74,
+        67,
+        45,
+        141,
+        51,
+        95
+      ],
+      "two_adic_B": 3
+    }
+  ],
+  "source_file": "session193-cut-digits/seeds135.json",
+  "source_sha256": "0f24d5e6ec01c11b077ac6a0058c5e961127923ef823188b8df615d5b7540526",
+  "status": "FINITE-EXACT inherited seed inventory, not an all-core census"
+}
