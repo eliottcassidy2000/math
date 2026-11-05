@@ -1,0 +1,33 @@
+{
+  "local_dependencies": [
+    {
+      "path": "RETAINED_ROOT_SEWING.md",
+      "sha256": "c5a7a18611363985b49d4ab455ad42160150ab012157c7d4c01aa6f838332655"
+    },
+    {
+      "path": "RETAINED_SEWING_SOURCE_SCOPE.md",
+      "sha256": "e301d1085e9d66104ecfac6f514f4f2f2c1efeb9df40c5426aa237f82bc874c6"
+    },
+    {
+      "path": "verify_retained_root_sewing.py",
+      "sha256": "62d824eb95905c6c408b38079eb7f56a3c7e8226539f9bc7588f3d1c3855beed"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "10c2a35ce3f506aefb031645e81cffc1a2fb4d73bf9bbb38a163ccbf8e35dfcb"
+    },
+    {
+      "path": "ONE_CORE_BINARY_INVERSE.md",
+      "sha256": "701d44aeb13e4f8c26ff44c3d25c3166350371232e7e00e3019e70b5aeab0321"
+    },
+    {
+      "path": "one-core-review/REPORT.md",
+      "sha256": "faa7d40b1005153b665c9975e1e85145ccdacf885f70432421f2005b938de221"
+    }
+  ],
+  "pinned_sources": [
+    "https://github.com/eliottcassidy2000/math/blob/ee07a5aac9cdfd8d3834fa834df4fb357fcaf769/session195/combined-growth/PROOF.md",
+    "https://github.com/eliottcassidy2000/math/blob/48e10c6a4773de23f9ca19ef120b17012a0d7812/session197/modular-gadget-universality/PROOF.md",
+    "https://github.com/eliottcassidy2000/math/blob/6ed2d7a0f1e1bfb26b9cc865ddc9f35dd0ad4567/session197/lowcycle/root-amalgamation/ROOT_AMALGAMATION.md"
+  ]
+}
