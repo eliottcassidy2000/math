@@ -1,0 +1,182 @@
+{
+  "cases": [
+    {
+      "A": 260,
+      "H": 779,
+      "automorphisms": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "beta": -1,
+      "degree_preserving_permutations": 8,
+      "j": 0,
+      "m": 1,
+      "nontrivial_modules": [],
+      "rows": [
+        46,
+        320,
+        2,
+        1014,
+        999,
+        966,
+        901,
+        775,
+        517,
+        7
+      ],
+      "run": [
+        259,
+        779,
+        780,
+        260,
+        0
+      ],
+      "strong": true
+    },
+    {
+      "A": 520,
+      "H": 1561,
+      "automorphisms": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "beta": 1,
+      "degree_preserving_permutations": 16,
+      "j": 1,
+      "m": 1,
+      "nontrivial_modules": [],
+      "rows": [
+        46,
+        640,
+        2,
+        2038,
+        2023,
+        1990,
+        1927,
+        1797,
+        1543,
+        1029,
+        7
+      ],
+      "run": [
+        521,
+        1561,
+        1560,
+        520,
+        0
+      ],
+      "seven_times_prime": {
+        "tested_divisors": 13,
+        "trial_divisor_max": 14,
+        "value": 223
+      },
+      "strong": true
+    },
+    {
+      "A": 260,
+      "H": 2339,
+      "beta": -1,
+      "j": 0,
+      "m": 2,
+      "prime": {
+        "tested_divisors": 47,
+        "trial_divisor_max": 48,
+        "value": 2339
+      },
+      "rows": [
+        46,
+        320,
+        2,
+        2038,
+        2023,
+        1990,
+        1925,
+        1799,
+        1541,
+        1031,
+        7
+      ],
+      "strong": true
+    },
+    {
+      "A": 260,
+      "H": 7019,
+      "beta": -1,
+      "j": 0,
+      "m": 3,
+      "prime": {
+        "tested_divisors": 82,
+        "trial_divisor_max": 83,
+        "value": 7019
+      },
+      "rows": [
+        46,
+        320,
+        2,
+        4086,
+        4071,
+        4038,
+        3973,
+        3847,
+        3589,
+        3079,
+        2055,
+        7
+      ],
+      "strong": true
+    },
+    {
+      "A": 260,
+      "H": 189539,
+      "beta": -1,
+      "j": 0,
+      "m": 6,
+      "rows": [
+        46,
+        320,
+        2,
+        32758,
+        32743,
+        32710,
+        32645,
+        32519,
+        32261,
+        31751,
+        30727,
+        28679,
+        24583,
+        16391,
+        7
+      ],
+      "seven_times_prime": {
+        "tested_divisors": 163,
+        "trial_divisor_max": 164,
+        "value": 27077
+      },
+      "strong": true
+    }
+  ],
+  "scope": "Two explicit primitive rigid unit-clock sources and finite prime/7p witnesses; no unbounded primality claim.",
+  "status": "PASS"
+}
