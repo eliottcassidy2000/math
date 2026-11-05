@@ -1,0 +1,97 @@
+[
+  {
+    "path": "DEPENDENCIES.json",
+    "sha256": "bbde29c910debd5b737ebc9fe96a21d575ac22b6d80ea0db761647e05f388918",
+    "bytes": 1498
+  },
+  {
+    "path": "DEPENDENCIES.md",
+    "sha256": "6aa063827d101a05f569e60974504241921ab6dc253e9ff805fdd9fdd23053a8",
+    "bytes": 958
+  },
+  {
+    "path": "NORMAL.json",
+    "sha256": "1860f3a8dfd484bd217ebc1abe5969311796ec9562063d93afb3ae3e9036ff6d",
+    "bytes": 4716
+  },
+  {
+    "path": "OPTIMIZED.json",
+    "sha256": "1860f3a8dfd484bd217ebc1abe5969311796ec9562063d93afb3ae3e9036ff6d",
+    "bytes": 4716
+  },
+  {
+    "path": "PAPER_CONNECTIONS.md",
+    "sha256": "adc72beed338133710f19cee074e807d0cbf9341607947b7bbf9cf63db770b3b",
+    "bytes": 8926
+  },
+  {
+    "path": "PROOF.md",
+    "sha256": "6fe7ce5a86b2e819e9bba72038e8d6335556869d8c1b0166a532686f9f521bd9",
+    "bytes": 13179
+  },
+  {
+    "path": "README.md",
+    "sha256": "467e3ab5738d18bacc42fc77ad4ce8ade844db84093c28e84102c6c59a7edadf",
+    "bytes": 842
+  },
+  {
+    "path": "audit/INDEPENDENT_NORMAL.json",
+    "sha256": "865dd1f8b415e39f826b3ba27c85dec5879a75a8e24895506317f041b8bd2dd8",
+    "bytes": 15038
+  },
+  {
+    "path": "audit/INDEPENDENT_OPTIMIZED.json",
+    "sha256": "865dd1f8b415e39f826b3ba27c85dec5879a75a8e24895506317f041b8bd2dd8",
+    "bytes": 15038
+  },
+  {
+    "path": "audit/REVIEW.md",
+    "sha256": "57efaa22075cda917c33f3354af9d67504cdaca871bce991cd6dd71f273e05ee",
+    "bytes": 1938
+  },
+  {
+    "path": "audit/check_dyadic.py",
+    "sha256": "3d8d68b4d543e60d633371c3d1e905df34936a0339a4019f83850a17d7a357a6",
+    "bytes": 2287
+  },
+  {
+    "path": "dependencies/BALANCED_SOURCE_NORMAL_FORM.md",
+    "sha256": "00ddcec08dd88e6c91917ff2915bc52662c4e23fe4ba2e1d948bad5d1461a6b3",
+    "bytes": 15886
+  },
+  {
+    "path": "dependencies/C1_COMPLETE.md",
+    "sha256": "d38a53b1c475df3578d58e83d9e9f97785d9455084c0a094aaed752577d8b289",
+    "bytes": 6957
+  },
+  {
+    "path": "dependencies/C1_SOURCE_READOUT.md",
+    "sha256": "6fbdadfe70609af384a6277f02262822f5bb00225d24c2abb2b60a044f71973c",
+    "bytes": 4634
+  },
+  {
+    "path": "dependencies/DIGIT_BLOCK.md",
+    "sha256": "aec3252026cf755687fe20767830cfebc2a888cddd292b21f8c3a236d8d99fc4",
+    "bytes": 4757
+  },
+  {
+    "path": "dependencies/FOUR_BLOCK_LANGUAGE.md",
+    "sha256": "c7500f3a9bda14aa4a5142d55518e9091b1b0bb56a6aa61e37435cf857b90ac5",
+    "bytes": 13166
+  },
+  {
+    "path": "dependencies/PHYSICAL_ADJOINT.md",
+    "sha256": "f9c337b3cfee1cd1134ee02276890238c30ff0e84a14c26fbcd5cd78ab82dc05",
+    "bytes": 11082
+  },
+  {
+    "path": "dependencies/POSITIVE_SOURCE_GRAMMAR.md",
+    "sha256": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537",
+    "bytes": 14366
+  },
+  {
+    "path": "verify.py",
+    "sha256": "c7d3ff81d5eea7190eb857109c4535a9df19e4c73750bdef69d0d1bd94eadce5",
+    "bytes": 6804
+  }
+]

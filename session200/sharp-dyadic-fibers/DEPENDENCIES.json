@@ -1,0 +1,37 @@
+[
+  {
+    "file": "dependencies/PHYSICAL_ADJOINT.md",
+    "source": "session199/physical-adjoint/PROOF.md",
+    "sha256": "f9c337b3cfee1cd1134ee02276890238c30ff0e84a14c26fbcd5cd78ab82dc05"
+  },
+  {
+    "file": "dependencies/POSITIVE_SOURCE_GRAMMAR.md",
+    "source": "session198/bilinear-descent/PROOF.md",
+    "sha256": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537"
+  },
+  {
+    "file": "dependencies/BALANCED_SOURCE_NORMAL_FORM.md",
+    "source": "session198/balanced-source-normal-form/PROOF.md",
+    "sha256": "00ddcec08dd88e6c91917ff2915bc52662c4e23fe4ba2e1d948bad5d1461a6b3"
+  },
+  {
+    "file": "dependencies/C1_COMPLETE.md",
+    "source": "Frozen C1 classification copied from session199/physical-adjoint dependencies",
+    "sha256": "d38a53b1c475df3578d58e83d9e9f97785d9455084c0a094aaed752577d8b289"
+  },
+  {
+    "file": "dependencies/C1_SOURCE_READOUT.md",
+    "source": "Frozen C1 source readout copied from session199/physical-adjoint dependencies",
+    "sha256": "6fbdadfe70609af384a6277f02262822f5bb00225d24c2abb2b60a044f71973c"
+  },
+  {
+    "file": "dependencies/FOUR_BLOCK_LANGUAGE.md",
+    "source": "Frozen four-block language copied from session199/physical-adjoint dependencies",
+    "sha256": "c7500f3a9bda14aa4a5142d55518e9091b1b0bb56a6aa61e37435cf857b90ac5"
+  },
+  {
+    "file": "dependencies/DIGIT_BLOCK.md",
+    "source": "session198/source-digit-blocks/PROOF.md",
+    "sha256": "aec3252026cf755687fe20767830cfebc2a888cddd292b21f8c3a236d8d99fc4"
+  }
+]
