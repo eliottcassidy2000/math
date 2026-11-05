@@ -1,0 +1,48 @@
+{
+  "binary_filter_checks": 15876,
+  "distinguishing_suffix_controls": 3782,
+  "examples": [
+    {
+      "a": 3,
+      "b": 3,
+      "input": "111000",
+      "output": "110011"
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "input": "1110000",
+      "output": "1101011"
+    },
+    {
+      "a": 4,
+      "b": 3,
+      "input": "1111000",
+      "output": "1101011"
+    },
+    {
+      "a": 4,
+      "b": 4,
+      "input": "11110000",
+      "output": "11100011"
+    },
+    {
+      "a": 7,
+      "b": 11,
+      "input": "111111100000000000",
+      "output": "111111011110000011"
+    }
+  ],
+  "fixed_prefix_recoveries": 16384,
+  "forced_padding_hostile": {
+    "L": 1,
+    "auxiliary_y": 29,
+    "forced_zero_columns": 4,
+    "g": 1
+  },
+  "padding_controls": 256,
+  "recurrence_checks": 131072,
+  "scope": "Nonregular complete synchronous function graphs; no conclusion about regular or cofinite target ranges.",
+  "status": "PASS",
+  "two_run_formulas": 16384
+}

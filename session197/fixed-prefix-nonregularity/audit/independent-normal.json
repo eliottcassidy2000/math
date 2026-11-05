@@ -1,0 +1,10 @@
+{
+  "addition_controls": 8192,
+  "balanced_filter_hits": 255,
+  "big_integer_bit_forms": 65025,
+  "fixed_coefficient_carry_controls": 129024,
+  "literal_physical_g_values": 2048,
+  "projection_cases_requiring_zero_trim": 13543,
+  "scope": "All-order nonregularity is the balanced-language proof; these are separate physical, arithmetic and normalization controls.",
+  "status": "PASS"
+}
