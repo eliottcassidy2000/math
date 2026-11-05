@@ -1,0 +1,54 @@
+{
+  "files": {
+    "NORMAL.json": {
+      "bytes": 8280,
+      "sha256": "952938c9231229558529183e130a4fa2e89dce5c0fee04efc11d8163b85a73c3"
+    },
+    "OPTIMIZED.json": {
+      "bytes": 8280,
+      "sha256": "952938c9231229558529183e130a4fa2e89dce5c0fee04efc11d8163b85a73c3"
+    },
+    "PROOF.md": {
+      "bytes": 10006,
+      "sha256": "bdcada6cebd621f57cd0f4a7e5323b21da2343e86eb095e870174618f72fa7c9"
+    },
+    "README.md": {
+      "bytes": 1167,
+      "sha256": "e9001b878b6a26b1775b97f878c57859fa22fa76afca3da22dc211128781faf2"
+    },
+    "RESULT.json": {
+      "bytes": 8280,
+      "sha256": "952938c9231229558529183e130a4fa2e89dce5c0fee04efc11d8163b85a73c3"
+    },
+    "audit/INDEPENDENT.json": {
+      "bytes": 1320,
+      "sha256": "69021ef587be6121b93c35fb88edeb7effd8c37b84207c0296bfe955f365d60b"
+    },
+    "audit/independent.py": {
+      "bytes": 5163,
+      "sha256": "ae6235b50c385d76598c1d615aef9595400e779034ed7054a858411af16a7a8a"
+    },
+    "dependencies/SOURCE_CUT.md": {
+      "bytes": 15105,
+      "sha256": "3eafe70ee94e3ea7f0a25912df7f1488eda95d041c8d7400cdb3f78799797cd0"
+    },
+    "dependencies/source_cut_verifier.py": {
+      "bytes": 9879,
+      "sha256": "b62b529c3ffe8b13f347caaf7742077d76682748ae92cec675db9a6c1e079568"
+    },
+    "verify.py": {
+      "bytes": 5097,
+      "sha256": "066e6ca4f3d2e518d045afb7852cba4699b7ae98afa68bedcd39212e94ab1cad"
+    }
+  },
+  "inherited": {
+    "commit": "7812db73cdac9526ba5e9aa7849a4d2d5a78cb5d",
+    "local_copies": {
+      "dependencies/SOURCE_CUT.md": "PROOF.md",
+      "dependencies/source_cut_verifier.py": "verify.py"
+    },
+    "path": "session199/source-cut-rearrangement/",
+    "repository": "eliottcassidy2000/math"
+  },
+  "scope": "Frozen independently reviewed interpolation packet; no exact prescribed-parent or all-target coverage claim."
+}
