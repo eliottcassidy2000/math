@@ -1,0 +1,7 @@
+  words of length <= 1: module rank 8, generators 9
+  words of length <= 2: module rank 51, generators 520
+  words of length <= 3: module rank 62, generators 3315
+  words of length <= 4: module rank 62, generators 4030
+span 3: profile states 119, observable integer quotient of rank 62
+  reduced integer representation verified on 500 random words (n <= 11)
+  written span3_intrep.txt; largest |entry| 2935715084447722984832054077426990389231673420289360432; y0 = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; hcoef = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
