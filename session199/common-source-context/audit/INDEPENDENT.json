@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "proof_sha256": "1effbed7407d3bc59d2b743f24b94294ee976d23e066dd6103b05ebc64e21482",
+  "script_sha256": "10ee8601507aa6a428b28acac9dfce7d71c2d8e37b2da04ecec605f58ebbb6d7",
+  "complete_bank_U_cap": 512,
+  "source_profiles": 4353,
+  "single_context_radix": 8192,
+  "basis_identity_k1_to19": true,
+  "literal_graph_controls": [
+    {
+      "left": "",
+      "right": "OOOOOJJOOOOO",
+      "order": 17,
+      "H": 25217,
+      "C": 2
+    },
+    {
+      "left": "OZJ",
+      "right": "OJJO",
+      "order": 12,
+      "H": 931,
+      "C": 2
+    },
+    {
+      "left": "ZOZ",
+      "right": "OJJO",
+      "order": 12,
+      "H": 931,
+      "C": 2
+    },
+    {
+      "left": "OJ",
+      "right": "",
+      "order": 7,
+      "H": 41,
+      "C": 2
+    },
+    {
+      "left": "ZJ",
+      "right": "",
+      "order": 7,
+      "H": 41,
+      "C": 2
+    },
+    {
+      "left": "OJ",
+      "right": "J",
+      "order": 8,
+      "H": 73,
+      "C": 2
+    },
+    {
+      "left": "ZJ",
+      "right": "J",
+      "order": 8,
+      "H": 73,
+      "C": 2
+    },
+    {
+      "left": "OOJJOOZ",
+      "right": "",
+      "order": 12,
+      "H": 1041,
+      "C": 2
+    },
+    {
+      "left": "ZOJOZOZ",
+      "right": "",
+      "order": 12,
+      "H": 1041,
+      "C": 2
+    },
+    {
+      "left": "OOJJOOZ",
+      "right": "JJ",
+      "order": 14,
+      "H": 3375,
+      "C": 2
+    },
+    {
+      "left": "ZOJOZOZ",
+      "right": "JJ",
+      "order": 14,
+      "H": 3375,
+      "C": 2
+    },
+    {
+      "left": "OJOZ",
+      "right": "J",
+      "order": 10,
+      "H": 277,
+      "C": 2
+    },
+    {
+      "left": "ZJOO",
+      "right": "J",
+      "order": 10,
+      "H": 277,
+      "C": 2
+    },
+    {
+      "left": "OJOZ",
+      "right": "JJ",
+      "order": 11,
+      "H": 501,
+      "C": 2
+    },
+    {
+      "left": "ZJOO",
+      "right": "JJ",
+      "order": 11,
+      "H": 501,
+      "C": 2
+    }
+  ],
+  "manual_audit": "All-order probe law, no-carry bounds, exact signature inverse, graph order, cubic size bound and natural-bank irredundancy are valid. The actual-source assumption is essential and correctly retained.",
+  "scope": "Response distinguishability, not graph isomorphism or target coverage."
+}
