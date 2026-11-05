@@ -1,0 +1,9 @@
+{
+  "all_root_initial_boundary_checks": 5405,
+  "exact_clone_graph_maps": 3210,
+  "literal_module_constructions": 319,
+  "method": "Literal permutations/cuts, subset-defined sink SCC and exact adjacency; no source DP imports",
+  "physical_e_equals_d_controls": 1598,
+  "status": "PASS",
+  "unit_controls": 1070
+}
