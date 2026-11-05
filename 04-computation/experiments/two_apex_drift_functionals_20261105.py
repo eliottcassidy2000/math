@@ -67,7 +67,7 @@ def main():
                     if r != col and A[r][col] != 0:
                         fac = A[r][col]; A[r] = [x - fac * y for x, y in zip(A[r], A[col])]
             return [A[r][m] for r in range(m)]
-        Jvals = defaultdict(list); Kset = set(); bad = 0; count = 0
+        Jvals = defaultdict(list); Avals = defaultdict(list); Kset = set(); bad = 0; count = 0
         # enumerate prefixes u of length 0..PMAX via row vectors
         frontier = [(e0, '')]
         for length in range(0, PMAX + 1):
@@ -80,7 +80,7 @@ def main():
                     pred = sum(ci * bi for ci, bi in zip(c, basis(k)))
                     if pred != h[k]: bad += 1
                 count += 1
-                Kset.add(c[2]); Jvals[c[1]].append(w)
+                Kset.add(c[2]); Jvals[c[1]].append(w); Avals[c[1]].append(c[0])
                 if length < PMAX:
                     for li in range(4): nxt.append((v.dot(M[li]), w + str(li)))
             frontier = nxt
@@ -97,5 +97,15 @@ def main():
         print(f"   missing numerators in [-60, 60] with the attained residues: {[x for x in range(-60, 61) if x % 4 in residues and x not in window]}")
         for x in [x for x in (-8, -4, -2, 0, 2, 4, 8, 1, 3, -1, -3) if Fraction(x, den) in Jvals]:
             print(f"   J = {x}/{den}: shortest prefix {min(Jvals[Fraction(x, den)], key=len)!r} ({len(Jvals[Fraction(x, den)])} prefixes)")
+        # residue coverage of the constant term A modulo the drift J, per J (the modular-seed question)
+        common = sorted(Jvals, key=lambda j: -len(Jvals[j]))[:6]
+        for j in common:
+            if j == 0: continue
+            A = Avals[j]; aden = 1
+            for av in A: aden = lcm(aden, av.denominator)
+            modulus = int(abs(j) * aden) if (abs(j) * aden).denominator == 1 else None
+            if modulus is None or modulus == 0: continue
+            res = sorted(set(int(av * aden) % modulus for av in A))
+            print(f"   J = {j} ({len(A)} prefixes): A has denominator {aden}; residues of {aden}A modulo {aden}|J| = {modulus}: {len(res)} of {modulus} classes ({res if modulus <= 40 else str(res[:20]) + ' ...'})")
 
 main()

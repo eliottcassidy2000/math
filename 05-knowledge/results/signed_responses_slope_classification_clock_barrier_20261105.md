@@ -198,8 +198,12 @@ quadratic term vanishes for every prefix and the drift is J(u) = (6t + 4)/9 with
 progression being attained in [-56/9, 58/9] (192 distinct drifts for |u| <= 7); for 120 and 0312 the drifts are
 sparse rationals with denominators 4459 and 375 and the quadratic terms are 13/49 and 8/15. Appending the block
 leaves J unchanged and shifts the constant term A by J, so the pair (A(u), J(u)) is the two-apex analogue of
-(aU - bD, K): the constant term is the response and the drift its seed-dependent clock constant. HYP-9475 (B)
-records the revised conjecture (the lattice (6t + 4)/9 for block 12 and full progressions of constant terms) and
+(aU - bD, K): the constant term is the response and the drift its seed-dependent clock constant. For block 12 and
+all 87,381 prefixes of length <= 8, every constant term has denominator 54 with 54A = 1 (mod 6), and for each of the
+six most common drifts the constant terms occupy every residue class congruent to 1 modulo 6 modulo 54|J| (e.g. all
+4 classes modulo 24 for J = 4/9, all 22 classes modulo 132 for J = 22/9): the modular-seed freedom of Session 198's
+recipe is present in the data for this block. HYP-9475 (B) records the revised conjecture (the lattice (6t + 4)/9
+for block 12 and full progressions of constant terms) and
 (C) the question whether mixing two clocks with coprime drops shortens Session 198's witnesses from h = O(|r|)
 periods to O(log |r|).
 

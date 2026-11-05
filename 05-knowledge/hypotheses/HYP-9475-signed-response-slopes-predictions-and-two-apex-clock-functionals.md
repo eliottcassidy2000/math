@@ -34,7 +34,11 @@ response is the pair (A(u), J(u)): the constant term is the programmable respons
 constant, which here depends on the seed. Revised conjecture: for d = 12, {J(u)} = {(6t + 4)/9 : t in an interval
 growing linearly with |u|} and the constant terms A(u) over prefixes with a fixed J form a full arithmetic
 progression of difference J; a modular seed theorem for two-apex profiles would then give exact coverage of a signed
-response of G(2,0) with the ternary radix present. Untested beyond the data above.
+response of G(2,0) with the ternary radix present. Supporting data (prefixes of length <= 8, 87,381 words, block 12):
+every constant term has denominator 54 with 54A = 1 (mod 6), and for each of the six most common drifts J = (6t+4)/9
+(t = 0, 3, 2, 4, -1, -2; 1,263-1,403 prefixes each) the residues of 54A modulo 54|J| are exactly all the classes
+congruent to 1 modulo 6 (4 of 24, 22 of 132, 16 of 96, 28 of 168, 2 of 12, 8 of 48): the modular-seed freedom needed
+for exact coverage of the constant term is present in the data. Not proved.
 
 ## (C) Witness size (OPEN)
 
