@@ -1,0 +1,7 @@
+PASS independent_full_word_sides 325
+FAMILY 1 H 17 fixed 5 orbits 11 normalized 5 exponent 6
+FAMILY 2 H 49 fixed 9 orbits 29 normalized 9 exponent 12
+FAMILY 3 H 161 fixed 17 orbits 89 normalized 17 exponent 20
+FAMILY 4 H 577 fixed 33 orbits 305 normalized 33 exponent 30
+FAMILY 5 H 2177 fixed 65 orbits 1121 normalized 65 exponent 42
+FAMILY 6 H 8449 fixed 129 orbits 4289 normalized 129 exponent 56
