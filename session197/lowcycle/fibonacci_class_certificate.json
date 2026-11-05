@@ -1,0 +1,108 @@
+{
+  "class_inventory": [
+    {
+      "n": 1,
+      "outdegree_one_rooted": 0,
+      "rooted": 1,
+      "two_outdegree_one": 0,
+      "unrooted": 1
+    },
+    {
+      "n": 2,
+      "outdegree_one_rooted": 0,
+      "rooted": 0,
+      "two_outdegree_one": 0,
+      "unrooted": 0
+    },
+    {
+      "n": 3,
+      "outdegree_one_rooted": 1,
+      "rooted": 1,
+      "two_outdegree_one": 0,
+      "unrooted": 1
+    },
+    {
+      "n": 4,
+      "outdegree_one_rooted": 2,
+      "rooted": 3,
+      "two_outdegree_one": 1,
+      "unrooted": 1
+    },
+    {
+      "n": 5,
+      "outdegree_one_rooted": 5,
+      "rooted": 8,
+      "two_outdegree_one": 2,
+      "unrooted": 3
+    },
+    {
+      "n": 6,
+      "outdegree_one_rooted": 13,
+      "rooted": 21,
+      "two_outdegree_one": 5,
+      "unrooted": 8
+    },
+    {
+      "n": 7,
+      "outdegree_one_rooted": 34,
+      "rooted": 55,
+      "two_outdegree_one": 13,
+      "unrooted": 21
+    },
+    {
+      "n": 8,
+      "outdegree_one_rooted": 89,
+      "rooted": 144,
+      "two_outdegree_one": 34,
+      "unrooted": 55
+    },
+    {
+      "n": 9,
+      "outdegree_one_rooted": 233,
+      "rooted": 377,
+      "two_outdegree_one": 89,
+      "unrooted": 144
+    }
+  ],
+  "independent_complete_inventory": [
+    {
+      "all_tournament_classes": 1,
+      "n": 1,
+      "rooted_start_one": 1
+    },
+    {
+      "all_tournament_classes": 1,
+      "n": 2,
+      "rooted_start_one": 0
+    },
+    {
+      "all_tournament_classes": 2,
+      "n": 3,
+      "rooted_start_one": 1
+    },
+    {
+      "all_tournament_classes": 4,
+      "n": 4,
+      "rooted_start_one": 3
+    },
+    {
+      "all_tournament_classes": 12,
+      "n": 5,
+      "rooted_start_one": 8
+    },
+    {
+      "all_tournament_classes": 56,
+      "n": 6,
+      "rooted_start_one": 21
+    },
+    {
+      "all_tournament_classes": 456,
+      "n": 7,
+      "rooted_start_one": 55
+    }
+  ],
+  "physical_rooted_graphs": 610,
+  "recurrence_max_order": 100,
+  "status": "PASS",
+  "two_vertex_inverse_checks": 144
+}
