@@ -1,0 +1,22 @@
+{
+  "all_frozen_seed_recipes_checked_via_original_g": 550,
+  "clock_identity_inputs_per_slope": 18,
+  "full_exact_arithmetic_n_witnesses_materialized": 60,
+  "hostile_three_quarters_inputs": 9999,
+  "independent_clock_slopes_denominator_through101": 528,
+  "independent_literal_C2_offset_pairs": [
+    [
+      157,
+      313,
+      -1
+    ],
+    [
+      187,
+      375,
+      1
+    ]
+  ],
+  "literal_strong_unit_sources": 17,
+  "methods": "K via digit-complement g identity; direct g(B^h n-R sum B^j); graph recovered from cover integer",
+  "status": "PASS"
+}
