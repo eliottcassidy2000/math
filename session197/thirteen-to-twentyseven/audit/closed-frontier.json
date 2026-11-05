@@ -1,0 +1,227 @@
+{
+  "H15_H29_hostile": {
+    "source": [
+      2,
+      4,
+      41,
+      51,
+      39,
+      3
+    ],
+    "subset": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6
+    ],
+    "target": [
+      2,
+      4,
+      73,
+      83,
+      103,
+      79,
+      3
+    ]
+  },
+  "H27_cores": [
+    {
+      "five_subset_H": [
+        3,
+        3,
+        9,
+        9,
+        9,
+        15
+      ],
+      "n": 6,
+      "rows": [
+        2,
+        4,
+        57,
+        19,
+        35,
+        11
+      ]
+    },
+    {
+      "five_subset_H": [
+        3,
+        3,
+        9,
+        9,
+        9,
+        15
+      ],
+      "n": 6,
+      "rows": [
+        2,
+        60,
+        57,
+        17,
+        33,
+        9
+      ]
+    },
+    {
+      "five_subset_H": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        5,
+        5,
+        5,
+        5,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "n": 7,
+      "rows": [
+        2,
+        4,
+        9,
+        83,
+        103,
+        79,
+        7
+      ]
+    },
+    {
+      "five_subset_H": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        5,
+        5,
+        5,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "n": 7,
+      "rows": [
+        2,
+        4,
+        9,
+        115,
+        103,
+        71,
+        7
+      ]
+    },
+    {
+      "five_subset_H": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        5,
+        5,
+        5,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "n": 7,
+      "rows": [
+        2,
+        4,
+        105,
+        115,
+        103,
+        67,
+        3
+      ]
+    }
+  ],
+  "closed_empty_frontier_order": 8,
+  "extension_candidates": 1572,
+  "levels": [
+    {
+      "accepted": 6,
+      "candidates": 6,
+      "classes": 1,
+      "order": 4
+    },
+    {
+      "accepted": 14,
+      "candidates": 14,
+      "classes": 6,
+      "order": 5
+    },
+    {
+      "accepted": 48,
+      "candidates": 180,
+      "classes": 14,
+      "order": 6
+    },
+    {
+      "accepted": 15,
+      "candidates": 868,
+      "classes": 4,
+      "order": 7
+    },
+    {
+      "accepted": 0,
+      "candidates": 504,
+      "classes": 0,
+      "order": 8
+    }
+  ],
+  "literal_five_subset_counts": 75,
+  "method": "Literal full Hamilton words and Hamilton-cycle canonicalization, without subset DP or degree canonicalization",
+  "positive_induced_branch": [
+    13,
+    25
+  ],
+  "status": "PASS",
+  "unique_H13": [
+    {
+      "n": 5,
+      "rows": [
+        2,
+        12,
+        9,
+        17,
+        7
+      ]
+    }
+  ]
+}
