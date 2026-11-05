@@ -1,0 +1,32 @@
+{
+  "balanced_source": {
+    "frozen_copy": "dependencies/BALANCED_SOURCE.md",
+    "local_source": "session198/balanced-source-normal-form/PROOF.md",
+    "sha256": "00ddcec08dd88e6c91917ff2915bc52662c4e23fe4ba2e1d948bad5d1461a6b3"
+  },
+  "c3_complete": {
+    "frozen_copy": "dependencies/C3_TWO_SOURCE.md",
+    "local_source": "session197-hybrid-constructions/c3-two-source/PROOF.md",
+    "sha256": "103a0c347881c7641f17d53bb8796187ac80f057a90af0a3acf8e6f89032c64d"
+  },
+  "digit_block": {
+    "frozen_copy": "dependencies/DIGIT_BLOCK.md",
+    "local_source": "session198-source-pair-construction/arithmetic-coverage/DIGIT_BLOCK.md",
+    "sha256": "aec3252026cf755687fe20767830cfebc2a888cddd292b21f8c3a236d8d99fc4"
+  },
+  "factorial_extension_cancellation": {
+    "frozen_copy": "dependencies/FACTORIAL_EXTENSION.md",
+    "local_source": "math/01-canon/theorems/THM-3191-factorial-block-exterior-clifford-law-and-global-carry-smith-profile.md",
+    "sha256": "3e27f5d3be3e1d19235b55c08fe3d4fefddaf3adf5a3e38ae2cda02408c93ff5"
+  },
+  "source_grammar": {
+    "frozen_copy": "dependencies/POSITIVE_SOURCE.md",
+    "local_source": "session198/bilinear-descent/PROOF.md",
+    "sha256": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537"
+  },
+  "weighted_contact_kernel": {
+    "frozen_copy": "dependencies/WEIGHTED_CONTACT_KERNEL.md",
+    "local_source": "math/01-canon/theorems/THM-4465-weighted-tournament-shear-production-and-contact-kernel.md",
+    "sha256": "96d52842e014ab9349e7c05374362cb54a676e364cbb0dd6c0f62ffd52c8b202"
+  }
+}
