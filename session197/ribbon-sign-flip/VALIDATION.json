@@ -1,0 +1,166 @@
+{
+  "decoded_words": 2047,
+  "first_D_state": [
+    15,
+    3,
+    29
+  ],
+  "physical_graph_checks": [
+    {
+      "cells": "",
+      "order": 3,
+      "profile": [
+        3,
+        1,
+        3
+      ],
+      "word": "022"
+    },
+    {
+      "cells": "A",
+      "order": 7,
+      "profile": [
+        35,
+        6,
+        62
+      ],
+      "word": "0222213"
+    },
+    {
+      "cells": "D",
+      "order": 6,
+      "profile": [
+        15,
+        3,
+        29
+      ],
+      "word": "022013"
+    },
+    {
+      "cells": "AA",
+      "order": 11,
+      "profile": [
+        603,
+        97,
+        1107
+      ],
+      "word": "02222132213"
+    },
+    {
+      "cells": "AD",
+      "order": 10,
+      "profile": [
+        283,
+        62,
+        506
+      ],
+      "word": "0222213013"
+    },
+    {
+      "cells": "DA",
+      "order": 10,
+      "profile": [
+        275,
+        44,
+        508
+      ],
+      "word": "0220132213"
+    },
+    {
+      "cells": "DD",
+      "order": 9,
+      "profile": [
+        131,
+        29,
+        231
+      ],
+      "word": "022013013"
+    },
+    {
+      "cells": "AAA",
+      "order": 15,
+      "profile": [
+        10667,
+        1710,
+        19622
+      ],
+      "word": "022221322132213"
+    },
+    {
+      "cells": "AAD",
+      "order": 14,
+      "profile": [
+        5031,
+        1107,
+        8957
+      ],
+      "word": "02222132213013"
+    },
+    {
+      "cells": "ADA",
+      "order": 14,
+      "profile": [
+        4895,
+        789,
+        9003
+      ],
+      "word": "02222130132213"
+    },
+    {
+      "cells": "ADD",
+      "order": 13,
+      "profile": [
+        2307,
+        506,
+        4106
+      ],
+      "word": "0222213013013"
+    },
+    {
+      "cells": "DAA",
+      "order": 14,
+      "profile": [
+        4887,
+        783,
+        8993
+      ],
+      "word": "02201322132213"
+    },
+    {
+      "cells": "DAD",
+      "order": 13,
+      "profile": [
+        2307,
+        508,
+        4104
+      ],
+      "word": "0220132213013"
+    },
+    {
+      "cells": "DDA",
+      "order": 13,
+      "profile": [
+        2243,
+        362,
+        4122
+      ],
+      "word": "0220130132213"
+    },
+    {
+      "cells": "DDD",
+      "order": 12,
+      "profile": [
+        1055,
+        231,
+        1881
+      ],
+      "word": "022013013013"
+    }
+  ],
+  "second_D_state": [
+    131,
+    29,
+    231
+  ],
+  "state_data_sha256": "a7669c8b15e4021750653fbbc5f6f08a9e85c361b08f1786d9fce4ade5b987d4"
+}
