@@ -1,0 +1,241 @@
+{
+  "false_ratio": [
+    [
+      "1",
+      "5/4",
+      "-1/4"
+    ],
+    [
+      "0",
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "2",
+      "1"
+    ]
+  ],
+  "literal_controls": [
+    {
+      "C": 2,
+      "H": 345,
+      "order": 10,
+      "recipe": [],
+      "source_C": 1,
+      "source_H": 3
+    },
+    {
+      "C": 2,
+      "H": 637,
+      "order": 11,
+      "recipe": [
+        1
+      ],
+      "source_C": 1,
+      "source_H": 5
+    },
+    {
+      "C": 2,
+      "H": 4363,
+      "order": 14,
+      "recipe": [
+        5
+      ],
+      "source_C": 1,
+      "source_H": 29
+    },
+    {
+      "C": 2,
+      "H": 4303,
+      "order": 14,
+      "recipe": [
+        7
+      ],
+      "source_C": 1,
+      "source_H": 35
+    },
+    {
+      "C": 2,
+      "H": 8659,
+      "order": 15,
+      "recipe": [
+        9
+      ],
+      "source_C": 1,
+      "source_H": 53
+    },
+    {
+      "C": 2,
+      "H": 8221,
+      "order": 15,
+      "recipe": [
+        11
+      ],
+      "source_C": 1,
+      "source_H": 59
+    },
+    {
+      "C": 2,
+      "H": 9235,
+      "order": 15,
+      "recipe": [
+        13
+      ],
+      "source_C": 1,
+      "source_H": 71
+    }
+  ],
+  "modular_orbit_controls": [
+    {
+      "C1_residues": 1,
+      "C2_residues": 1,
+      "max_word": 0,
+      "modulus": 1,
+      "states_discovered": 1
+    },
+    {
+      "C1_residues": 3,
+      "C2_residues": 3,
+      "max_word": 2,
+      "modulus": 3,
+      "states_discovered": 16
+    },
+    {
+      "C1_residues": 5,
+      "C2_residues": 5,
+      "max_word": 2,
+      "modulus": 5,
+      "states_discovered": 37
+    },
+    {
+      "C1_residues": 7,
+      "C2_residues": 7,
+      "max_word": 2,
+      "modulus": 7,
+      "states_discovered": 118
+    },
+    {
+      "C1_residues": 9,
+      "C2_residues": 9,
+      "max_word": 3,
+      "modulus": 9,
+      "states_discovered": 106
+    },
+    {
+      "C1_residues": 11,
+      "C2_residues": 11,
+      "max_word": 3,
+      "modulus": 11,
+      "states_discovered": 189
+    },
+    {
+      "C1_residues": 13,
+      "C2_residues": 13,
+      "max_word": 3,
+      "modulus": 13,
+      "states_discovered": 136
+    },
+    {
+      "C1_residues": 15,
+      "C2_residues": 15,
+      "max_word": 3,
+      "modulus": 15,
+      "states_discovered": 156
+    },
+    {
+      "C1_residues": 17,
+      "C2_residues": 17,
+      "max_word": 3,
+      "modulus": 17,
+      "states_discovered": 298
+    },
+    {
+      "C1_residues": 19,
+      "C2_residues": 19,
+      "max_word": 3,
+      "modulus": 19,
+      "states_discovered": 177
+    },
+    {
+      "C1_residues": 21,
+      "C2_residues": 21,
+      "max_word": 3,
+      "modulus": 21,
+      "states_discovered": 420
+    },
+    {
+      "C1_residues": 23,
+      "C2_residues": 23,
+      "max_word": 3,
+      "modulus": 23,
+      "states_discovered": 355
+    },
+    {
+      "C1_residues": 25,
+      "C2_residues": 25,
+      "max_word": 3,
+      "modulus": 25,
+      "states_discovered": 325
+    },
+    {
+      "C1_residues": 27,
+      "C2_residues": 27,
+      "max_word": 4,
+      "modulus": 27,
+      "states_discovered": 522
+    },
+    {
+      "C1_residues": 29,
+      "C2_residues": 29,
+      "max_word": 4,
+      "modulus": 29,
+      "states_discovered": 470
+    },
+    {
+      "C1_residues": 31,
+      "C2_residues": 31,
+      "max_word": 3,
+      "modulus": 31,
+      "states_discovered": 316
+    },
+    {
+      "C1_residues": 33,
+      "C2_residues": 33,
+      "max_word": 4,
+      "modulus": 33,
+      "states_discovered": 854
+    },
+    {
+      "C1_residues": 35,
+      "C2_residues": 35,
+      "max_word": 4,
+      "modulus": 35,
+      "states_discovered": 500
+    },
+    {
+      "C1_residues": 37,
+      "C2_residues": 37,
+      "max_word": 4,
+      "modulus": 37,
+      "states_discovered": 583
+    },
+    {
+      "C1_residues": 39,
+      "C2_residues": 39,
+      "max_word": 4,
+      "modulus": 39,
+      "states_discovered": 956
+    },
+    {
+      "C1_residues": 41,
+      "C2_residues": 41,
+      "max_word": 4,
+      "modulus": 41,
+      "states_discovered": 766
+    }
+  ],
+  "relative_modulus_checks": 46,
+  "status": "PASS",
+  "three_adic_seed_controls": 728
+}
