@@ -1,0 +1,14 @@
+{
+  "central_columns": 34,
+  "exact_Newton_entries": 629,
+  "signed_monomial_polynomials": 2200,
+  "status": "PASS",
+  "strict_G": 27,
+  "strict_central_coordinates": [
+    459,
+    405,
+    48,
+    1
+  ],
+  "strict_g": 9
+}

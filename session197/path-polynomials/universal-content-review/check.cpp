@@ -1,0 +1,22 @@
+#include <algorithm>
+#include <cstdint>
+#include <iostream>
+#include <numeric>
+#include <stdexcept>
+#include <vector>
+using namespace std;using ll=long long;using I=__int128_t;using G=vector<int>;
+void need(bool b,const char*s){if(!b)throw runtime_error(s);}
+ll fact(int n){ll x=1;for(int i=2;i<=n;i++)x*=i;return x;}
+ll choose(int n,int k){if(k<0||k>n)return 0;ll x=1;for(int i=1;i<=k;i++)x=x*(n-i+1)/i;return x;}
+G tour(int n,int code){G a(n);int b=0;for(int i=0;i<n;i++)for(int j=i+1;j<n;j++,b++)if(code>>b&1)a[i]|=1<<j;else a[j]|=1<<i;return a;}
+vector<ll> covers(const G&a){int n=a.size();vector<int>p(n);iota(p.begin(),p.end(),0);vector<ll>f(n+1);do{int bad=0;for(int i=1;i<n;i++)bad+=!(a[p[i-1]]>>p[i]&1);for(int r=bad+1;r<=n;r++)f[r]+=choose(n-1-bad,r-1-bad);}while(next_permutation(p.begin(),p.end()));for(int r=1;r<=n;r++)need(f[r]%fact(r)==0,"ordered cover factorial");return f;}
+vector<ll> runs(const G&a,int root){int n=a.size(),N=n-1;vector<int>p;for(int v=0;v<n;v++)if(v!=root)p.push_back(v);vector<ll>c(N/2+2);do{for(int cut=1;cut<(1<<(N+1));cut++){int r=__builtin_popcount((unsigned)cut);if(r>=(int)c.size())continue;bool ok=true;for(int i=0;i<=N;i++)if(cut>>i&1){if(i&&!(a[p[i-1]]>>root&1))ok=false;if(i<N&&!(a[root]>>p[i]&1))ok=false;}for(int i=1;i<N;i++)if(!(cut>>i&1)&&!(a[p[i-1]]>>p[i]&1))ok=false;if(ok)c[r]++;}}while(next_permutation(p.begin(),p.end()));return c;}
+ll walk(const G&a){int n=a.size();I total=0;for(int S=1;S<(1<<n);S++){vector<I>d(n);for(int v=0;v<n;v++)d[v]=(S>>v)&1;for(int step=1;step<n;step++){vector<I>e(n);for(int v=0;v<n;v++)if(S>>v&1){int out=a[v]&S;while(out){int w=__builtin_ctz((unsigned)out);out&=out-1;e[w]+=d[v];}}d.swap(e);}I z=0;for(I x:d)z+=x;if((n-__builtin_popcount((unsigned)S))%2)total-=z;else total+=z;}need(total>=0&&total<((I)1<<62),"walk range");return (ll)total;}
+G tr(int n){G a(n);for(int i=0;i<n;i++)for(int j=i+1;j<n;j++)a[i]|=1<<j;return a;}
+G subst(const G&q,int root,const G&t){int m=t.size(),n=q.size();G a(m+n-1);for(int i=0;i<m;i++)a[i]=t[i];vector<int>map(n,-1);int b=m;for(int v=0;v<n;v++)if(v!=root)map[v]=b++;for(int u=0;u<n;u++)if(u!=root){for(int v=0;v<n;v++)if(v!=root&&(q[u]>>v&1))a[map[u]]|=1<<map[v];for(int v=0;v<m;v++)if(q[root]>>u&1)a[v]|=1<<map[u];else a[map[u]]|=1<<v;}return a;}
+G bank(int r){int k=r-1;G a(2*k+1);for(int i=0;i<k;i++){a[0]|=1<<(i+1);a[k+1+i]|=1;for(int j=i+1;j<k;j++){a[i+1]|=1<<(j+1);a[k+1+i]|=1<<(k+1+j);}for(int j=0;j<k;j++)if(i==j)a[i+1]|=1<<(k+1+j);else a[k+1+j]|=1<<(i+1);}return a;}
+int main(){long long rooted=0,coeff=0,clone=0,input=0,physical=0;vector<vector<ll>>A(5);for(int r=1;r<=4;r++){A[r]=runs(bank(r),0);need(A[r][r]==fact(r-1),"bank diagonal");for(int j=1;j<(int)A[r].size();j++)need(A[r][j]%fact(j-1)==0,"bank free action");}
+for(int n=1;n<=5;n++)for(int code=0;code<(1<<(n*(n-1)/2));code++){G q=tour(n,code);auto f=covers(q);ll g=0,Gcd=0,shortG=0,bankG=0;int d=(n+1)/2;for(int r=1;r<=n;r++){g=gcd(g,f[r]);Gcd=gcd(Gcd,f[r]*fact(r-1));if(r<=d)shortG=gcd(shortG,f[r]*fact(r-1));}need(shortG==Gcd&&Gcd%g==0,"short content identity");for(int r=1;r<=d;r++){ll h=0;for(int j=1;j<=r;j++)h+=A[r][j]*f[j];bankG=gcd(bankG,h);if(n<=4){need(walk(subst(bank(r),0,q))==h,"physical bank count");physical++;}}need(bankG==Gcd,"physical bank gcd");input++;
+for(int root=0;root<n;root++){auto c=runs(q,root);rooted++;for(int r=1;r<(int)c.size();r++){need(c[r]%fact(r-1)==0,"literal exterior free action");coeff++;}if(n<=4)for(int m=1;m<=3;m++){auto fc=covers(tr(m));ll h=0;for(int r=1;r<(int)c.size()&&r<=m;r++)h+=c[r]*fc[r];need(walk(subst(q,root,tr(m)))==h,"clone exterior identity");clone++;}}}
+G t={30,28,136,192,172,15,55,99};auto f=covers(t);vector<ll>want={0,459,5778,31860,99000,187200,216000,141120,40320};need(f==want,"strict profile independent permutation cuts");ll g=0,Gcd=0;for(int r=1;r<=8;r++){g=gcd(g,f[r]);Gcd=gcd(Gcd,f[r]*fact(r-1));}need(g==9&&Gcd==27,"strict gcd");vector<ll>hv;ll bg=0;for(int r=1;r<=4;r++){ll pred=0;for(int j=1;j<=r;j++)pred+=A[r][j]*f[j];ll h=walk(subst(bank(r),0,t));need(h==pred,"strict literal bank");bg=gcd(bg,h);hv.push_back(h);}need(bg==27&&hv[1]==7155,"strict bank content");
+cout<<"{\n  \"status\":\"PASS\",\n  \"rooted_contexts\":"<<rooted<<",\n  \"literal_run_coefficients\":"<<coeff<<",\n  \"walk_clone_counts\":"<<clone<<",\n  \"literal_cover_inputs\":"<<input<<",\n  \"walk_bank_counts\":"<<physical<<",\n  \"strict_bank_counts\":[";for(int j=0;j<4;j++){if(j)cout<<",";cout<<hv[j];}cout<<"],\n  \"strict_ordered_covers\":[";for(int j=1;j<=8;j++){if(j>1)cout<<",";cout<<f[j];}cout<<"]\n}\n";}

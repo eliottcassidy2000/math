@@ -1,0 +1,102 @@
+{
+  "actual_bank_counts": 285,
+  "actual_clone_counts": 16215,
+  "central_newton_columns": 26,
+  "factorial_controls": 15925,
+  "input_gcd_controls": 1099,
+  "matching_bank": [
+    [
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      13,
+      10,
+      1
+    ],
+    [
+      91,
+      101,
+      22,
+      1
+    ],
+    [
+      877,
+      1250,
+      411,
+      40,
+      1
+    ],
+    [
+      10883,
+      18885,
+      8192,
+      1222,
+      65,
+      1
+    ]
+  ],
+  "rooted_contexts": 5405,
+  "signed_formal_controls": 720,
+  "status": "PASS",
+  "strict_example": {
+    "bin_content": 9,
+    "bin_profile": [
+      0,
+      0,
+      210,
+      0,
+      214,
+      0,
+      34,
+      0,
+      1
+    ],
+    "identity_count": 459,
+    "ordered_covers": [
+      459,
+      5778,
+      31860,
+      99000,
+      187200,
+      216000,
+      141120,
+      40320
+    ],
+    "rows": [
+      30,
+      28,
+      136,
+      192,
+      172,
+      15,
+      55,
+      99
+    ],
+    "triangle_count": 7155,
+    "universal_content": 27,
+    "unordered_covers": [
+      459,
+      2889,
+      5310,
+      4125,
+      1560,
+      300,
+      28,
+      1
+    ],
+    "weighted_covers": [
+      459,
+      5778,
+      63720,
+      594000,
+      4492800,
+      25920000,
+      101606400,
+      203212800
+    ]
+  }
+}

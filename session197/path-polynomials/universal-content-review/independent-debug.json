@@ -1,0 +1,10 @@
+{
+  "status":"PASS",
+  "rooted_contexts":5405,
+  "literal_run_coefficients":15925,
+  "walk_clone_counts":855,
+  "literal_cover_inputs":1099,
+  "walk_bank_counts":147,
+  "strict_bank_counts":[459,7155,127467,2621187],
+  "strict_ordered_covers":[459,5778,31860,99000,187200,216000,141120,40320]
+}
