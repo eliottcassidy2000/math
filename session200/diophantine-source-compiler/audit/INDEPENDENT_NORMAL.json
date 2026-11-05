@@ -1,0 +1,12 @@
+{
+  "largest_graph_order": 10,
+  "result": "PASS",
+  "selector_primes": [
+    2,
+    3,
+    5,
+    7
+  ],
+  "source_pair_checks_each_C1_N_M": 169,
+  "source_words": 13
+}
