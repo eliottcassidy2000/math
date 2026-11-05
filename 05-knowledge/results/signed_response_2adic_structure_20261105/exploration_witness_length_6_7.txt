@@ -1,0 +1,15 @@
+slope 6/7 clock OZZ depth 33 R 8192
+window 2 targets 2 missing 0 maxlen 6 at r=-1
+window 4 targets 4 missing 0 maxlen 6 at r=-1
+window 8 targets 8 missing 0 maxlen 7 at r=5
+window 16 targets 16 missing 0 maxlen 12 at r=15
+window 32 targets 32 missing 0 maxlen 17 at r=31
+window 64 targets 64 missing 0 maxlen 19 at r=49
+window 128 targets 128 missing 0 maxlen 22 at r=-113
+window 256 targets 256 missing 0 maxlen 26 at r=217
+window 512 targets 512 missing 0 maxlen 26 at r=217
+window 1024 targets 1024 missing 1 maxlen 33 at r=-989
+window 2048 targets 2048 missing 10 maxlen 33 at r=-1971
+window 4096 targets 4096 missing 23 maxlen 33 at r=-3791
+window 8192 targets 8192 missing 65 maxlen 33 at r=-6119
+trailing-clock histogram over |r| <= 8192: t0=3031 t1=2340 t2=1310 t3=708 t4=390 t5=207 t6=98 t7=39 t8=4

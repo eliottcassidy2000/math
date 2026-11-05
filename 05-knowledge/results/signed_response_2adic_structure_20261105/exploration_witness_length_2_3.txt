@@ -1,0 +1,16 @@
+slope 2/3 clock OZ depth 34 R 16384
+window 2 targets 2 missing 0 maxlen 4 at r=1
+window 4 targets 4 missing 0 maxlen 4 at r=1
+window 8 targets 8 missing 0 maxlen 8 at r=5
+window 16 targets 16 missing 0 maxlen 8 at r=5
+window 32 targets 32 missing 0 maxlen 10 at r=19
+window 64 targets 64 missing 0 maxlen 10 at r=-53
+window 128 targets 128 missing 0 maxlen 12 at r=-109
+window 256 targets 256 missing 0 maxlen 15 at r=-195
+window 512 targets 512 missing 0 maxlen 18 at r=-377
+window 1024 targets 1024 missing 0 maxlen 20 at r=-975
+window 2048 targets 2048 missing 0 maxlen 24 at r=1289
+window 4096 targets 4096 missing 0 maxlen 24 at r=-3705
+window 8192 targets 8192 missing 0 maxlen 27 at r=7217
+window 16384 targets 16384 missing 0 maxlen 30 at r=-11395
+trailing-clock histogram over |r| <= 16384: t0=4816 t1=6962 t2=2855 t3=1103 t4=420 t5=159 t6=53 t7=13 t8=3

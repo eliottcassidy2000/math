@@ -1,0 +1,12 @@
+slope 3/5 clock ZOOZ depth 34 R 1024
+window 2 targets 3 missing 0 maxlen 8 at r=2
+window 4 targets 5 missing 0 maxlen 9 at r=4
+window 8 targets 9 missing 0 maxlen 9 at r=4
+window 16 targets 17 missing 0 maxlen 9 at r=4
+window 32 targets 33 missing 0 maxlen 17 at r=18
+window 64 targets 65 missing 0 maxlen 22 at r=62
+window 128 targets 129 missing 0 maxlen 22 at r=62
+window 256 targets 257 missing 0 maxlen 32 at r=254
+window 512 targets 513 missing 0 maxlen 32 at r=254
+window 1024 targets 1025 missing 0 maxlen 33 at r=-950
+trailing-clock histogram over |r| <= 1024: t0=503 t1=338 t2=125 t3=42 t4=12 t5=3 t6=2
