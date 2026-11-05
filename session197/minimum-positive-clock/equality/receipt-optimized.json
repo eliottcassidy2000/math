@@ -1,0 +1,234 @@
+{
+  "attaining_actual_clone_counts": [
+    217,
+    649,
+    1945,
+    5833,
+    17497
+  ],
+  "attaining_root": 4,
+  "attaining_rows": [
+    414,
+    260,
+    8,
+    50,
+    294,
+    327,
+    415,
+    318,
+    12
+  ],
+  "attaining_run_coefficients": [
+    217,
+    216,
+    72
+  ],
+  "claim": "The unrestricted amplitude72 equality class has exactly one rooted strong core, with arbitrary transitive prefix and suffix.",
+  "clock_roots": [
+    4
+  ],
+  "core_automorphisms": 1,
+  "core_isomorphism": [
+    6,
+    1,
+    0,
+    3,
+    4,
+    5,
+    8,
+    7,
+    2
+  ],
+  "equality_hits": [
+    {
+      "H": 217,
+      "root": 4,
+      "rows": [
+        8,
+        5,
+        9,
+        50,
+        39,
+        327,
+        159,
+        63,
+        223
+      ]
+    }
+  ],
+  "first_clone_equation_survivors": 31,
+  "generation": [
+    {
+      "accepted_before_isomorphism": 6,
+      "classes": 1,
+      "extension_candidates": 6,
+      "order": 4
+    },
+    {
+      "accepted_before_isomorphism": 14,
+      "classes": 6,
+      "extension_candidates": 14,
+      "order": 5
+    },
+    {
+      "accepted_before_isomorphism": 180,
+      "classes": 35,
+      "extension_candidates": 180,
+      "order": 6
+    },
+    {
+      "accepted_before_isomorphism": 2170,
+      "classes": 353,
+      "extension_candidates": 2170,
+      "order": 7
+    },
+    {
+      "accepted_before_isomorphism": 6902,
+      "classes": 1144,
+      "extension_candidates": 44478,
+      "order": 8
+    },
+    {
+      "accepted_before_isomorphism": 4097,
+      "classes": 726,
+      "extension_candidates": 290576,
+      "order": 9
+    },
+    {
+      "accepted_before_isomorphism": 1074,
+      "classes": 190,
+      "extension_candidates": 370260,
+      "order": 10
+    }
+  ],
+  "independent_candidate_root_checks": 2817,
+  "independent_labelled_controls": [
+    {
+      "classes": 1,
+      "labelled_strong_graphs": 2,
+      "order": 3
+    },
+    {
+      "classes": 1,
+      "labelled_strong_graphs": 24,
+      "order": 4
+    },
+    {
+      "classes": 6,
+      "labelled_strong_graphs": 544,
+      "order": 5
+    },
+    {
+      "classes": 35,
+      "labelled_strong_graphs": 22320,
+      "order": 6
+    }
+  ],
+  "independent_retained_graph_checks": 2456,
+  "padding_controls": [
+    {
+      "counts": [
+        217,
+        649,
+        1945
+      ],
+      "left": 0,
+      "right": 0
+    },
+    {
+      "counts": [
+        217,
+        649,
+        1945
+      ],
+      "left": 0,
+      "right": 1
+    },
+    {
+      "counts": [
+        217,
+        649,
+        1945
+      ],
+      "left": 0,
+      "right": 2
+    },
+    {
+      "counts": [
+        217,
+        649,
+        1945
+      ],
+      "left": 0,
+      "right": 3
+    },
+    {
+      "counts": [
+        217,
+        649,
+        1945
+      ],
+      "left": 1,
+      "right": 0
+    },
+    {
+      "counts": [
+        217,
+        649,
+        1945
+      ],
+      "left": 1,
+      "right": 1
+    },
+    {
+      "counts": [
+        217,
+        649,
+        1945
+      ],
+      "left": 1,
+      "right": 2
+    },
+    {
+      "counts": [
+        217,
+        649,
+        1945
+      ],
+      "left": 2,
+      "right": 0
+    },
+    {
+      "counts": [
+        217,
+        649,
+        1945
+      ],
+      "left": 2,
+      "right": 1
+    },
+    {
+      "counts": [
+        217,
+        649,
+        1945
+      ],
+      "left": 3,
+      "right": 0
+    }
+  ],
+  "retained_bank_sha256": "3d4ddbe02807c7c6bf962147c582e0c6707eb4d221134a715cdd8a84bf730951",
+  "retained_classes_by_order": {
+    "3": 1,
+    "4": 1,
+    "5": 6,
+    "6": 35,
+    "7": 353,
+    "8": 1144,
+    "9": 726,
+    "10": 190
+  },
+  "scope": "Transitive cloning of one fixed root, not every possible graph-changing compiler.",
+  "status": "PASS",
+  "strong_H_cap": 217
+}

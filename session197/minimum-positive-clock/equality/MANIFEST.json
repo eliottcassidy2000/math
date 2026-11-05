@@ -1,0 +1,58 @@
+{
+  "files": {
+    "PROOF.md": {
+      "bytes": 6078,
+      "sha256": "02363cc76958663bae028df5bfc0d15f03c138866cd5881d3cbebb2d9b590934"
+    },
+    "README.md": {
+      "bytes": 2444,
+      "sha256": "de2986ff29da3cf2dc9f018c3c40a4e03472929de00b190659d0eb2aa54d90b5"
+    },
+    "REVIEW.md": {
+      "bytes": 3869,
+      "sha256": "6daff2578b8926effb4c6890b7a1003fa51dbaf2c89a39c2aaff80b14d36b161"
+    },
+    "audits/positive-equality/catalog-check.json": {
+      "bytes": 255,
+      "sha256": "5cf528c8b120827289d6d6d4c12222a0f88e558db5659b44a3d3c8fffa7c1532"
+    },
+    "audits/positive-equality/check_catalog.py": {
+      "bytes": 1237,
+      "sha256": "3080003c389ad39370c34d76a99715f00c570fbf1fb9b5932c18cd9a0e6ea8d1"
+    },
+    "audits/positive-equality/gap.json": {
+      "bytes": 67,
+      "sha256": "e95cc93ec2ad6c9e46d229025ca34e2fd7df53ca6e2f1108775b4bd5160190e4"
+    },
+    "audits/positive-equality/gap_check.cpp": {
+      "bytes": 1842,
+      "sha256": "3aaa357e7b435fcb6b6de6cad4b202e347deb4ec467e5b2503a3465d8a8f43d4"
+    },
+    "receipt-normal.json": {
+      "bytes": 3755,
+      "sha256": "107eaca0607f7d4fa41bfa7396f74d2306fe4278a23943b124cfce741c08d877"
+    },
+    "receipt-optimized.json": {
+      "bytes": 3755,
+      "sha256": "107eaca0607f7d4fa41bfa7396f74d2306fe4278a23943b124cfce741c08d877"
+    },
+    "strong-bank.jsonl": {
+      "bytes": 122061,
+      "sha256": "3d4ddbe02807c7c6bf962147c582e0c6707eb4d221134a715cdd8a84bf730951"
+    },
+    "unit-clocks-through-nine/catalog.json": {
+      "bytes": 5255,
+      "sha256": "87ffadc1351902637e10daf79ed68d4f9a316e925f73ec123914f9644f695cb4"
+    },
+    "verify.cpp": {
+      "bytes": 3845,
+      "sha256": "8c2bc8a9cabd6194106f53d79b5063b124d4d53e72254272a3aeead7355fac30"
+    },
+    "verify.py": {
+      "bytes": 7432,
+      "sha256": "0a7068f130c5db9c3b889086d8fac7c752ae00021df20d491ef8506ede2b0082"
+    }
+  },
+  "scope": "Unrestricted equality sources for a fixed-root transitive-clone family at amplitude72.",
+  "status": "PROVED / independently VERIFIED"
+}
