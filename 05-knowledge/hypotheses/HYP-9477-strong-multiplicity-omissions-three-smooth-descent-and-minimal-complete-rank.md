@@ -1,7 +1,7 @@
 ---
 id: HYP-9477
 title: "Definability lenses, conjectural part. (A) The multiplicity function m(h) of strong counts never takes the values 9, 13, 21, 22, 34, 37, and {3, 5, 11, 13} is the complete set of counts with a unique strong class (Carmichael exceptional set). (B) Every count h > 63 is attained by at least two non-isomorphic strong tournaments that are not converses of each other. (C) The counts of crossing chains (the first-in-first-out sub-language of G(0,2), rank 14) are exactly the values of an explicit sum of 3-smooth terms indexed by the gaps, and their value set is described by a greedy 3-smooth descent in the style of Blecksmith-McCallum-Selfridge and THM-4719's ladder windows. (D) The minimal Hankel rank of a tournament grammar whose range is cofinite in the odd numbers is at least 10 and at most 17."
-status: (A) FINITE-EXACT below 625 (THM-4884 (2)), OPEN beyond; (B) FINITE-EXACT below 625 (m(h) >= 4 for 63 < h < 625, and converse pairing), OPEN beyond; (C) OPEN, the closed form not yet derived; (D) OPEN (upper bound 17 is HYP-9470 (C); lower bound 10 is the failure of the rank-10 nested chains, not a theorem)
+status: (A) FINITE-EXACT below 625 (THM-4884 (2)), OPEN beyond; (B) FINITE-EXACT below 625 (m(h) >= 6 for 63 < h < 625, and converse pairing), OPEN beyond; (C) OPEN, the closed form not yet derived; (D) OPEN (upper bound 17 is HYP-9470 (C); lower bound 10 is the failure of the rank-10 nested chains, not a theorem)
 session: opus-2026-11-05-S81
 date: 2026-11-05
 related: [THM-4884, THM-4878, THM-4882, THM-4744, THM-4719, THM-4748, HYP-9470, HYP-9475]
@@ -20,7 +20,7 @@ m(h) of order 10^2 at h near 600), so the six values are never multiplicities, a
 ## (B) Two realisations above 63
 
 Conjecture: every odd h > 63 other than those excluded by Chan-Pak is the count of at least two non-isomorphic strong
-tournaments which are not converses of each other (a strengthening of Chan-Pak with multiplicity). Evidence: m(h) >= 4
+tournaments which are not converses of each other (a strengthening of Chan-Pak with multiplicity). Evidence: m(h) >= 6
 for every attained h in (63, 625). A proof mechanism: any complete family with an involution-free pairing of words
 (e.g. interval chains with a non-palindromic composition and its reversal give converse pairs; two different
 compositions with the same multiset of parts give the same product and non-isomorphic, non-converse chains when the

@@ -41,12 +41,13 @@ note works the other lenses and cites that lane where it meets them.
 - **Carmichael-multiplicity lens (THM-4884 (2), FINITE-EXACT from THM-4744's inventories).** Let m(h) be the number
   of strong classes, over all orders, with exactly h Hamiltonian paths. Below 625, m(h) = 0 exactly for h = 7, 21,
   m(h) = 1 exactly for h = 3, 5, 11, 13 (each realised by a single self-converse class, as the converse pairing
-  P_d = SC_d mod 2 of THM-4744 forces), m(h) = 2 exactly for h = 9, 17, 19, 35, 39, 47, 63, and m(h) >= 4 for every
-  attained h > 63. The multiplicity function omits the values 9, 13, 21, 22, 34, 37 below 625 while taking every
-  other value up to 38: the analogue of Ford's theorem (every multiplicity >= 2 occurs for Euler's function) fails
-  for the strong spectrum, and the analogue of Carmichael's conjecture (no multiplicity 1) fails exactly at the four
-  smallest primes other than 7. Pre-registered Q1: contained in [3, 100], at most 12 elements, contains 3, 5, 11, 13:
-  CONFIRMED; "contains 41": REFUTED (m(41) = 3); "every multiplicity 1..10 occurs": REFUTED (9 is omitted).
+  P_d = SC_d mod 2 of THM-4744 forces), m(h) = 2 exactly for h = 9, 17, 19, 35, 39, 47, 63, m(h) = 3 only for h = 25,
+  and m(h) >= 6 for every attained h in (63, 625) (the minimum 6 at h = 67; m(h) >= 73 on [375, 623]). The
+  multiplicity function omits the values 9, 13, 21, 22, 34, 37 below 625 while taking every other value up to 38:
+  the analogue of Ford's theorem (every multiplicity >= 2 occurs for Euler's function) fails for the strong
+  spectrum, and the analogue of Carmichael's conjecture (no multiplicity 1) fails exactly at the four smallest primes
+  other than 7. Pre-registered Q1: contained in [3, 100], at most 12 elements, contains 3, 5, 11, 13: CONFIRMED;
+  "contains 41": REFUTED (m(41) = 6); "every multiplicity 1..10 occurs": REFUTED (9 is omitted).
 - **Diophantine complexity lens (THM-4884 (3), FINITE-EXACT).** The paper measures a definition by its number of
   variables; the natural measure here is the Hankel rank of the N-rational series whose range is to be cofinite in
   the odd numbers. Sub-languages of the cutwidth-2 grammar G(0,2) (THM-4878, rank 17): forbidding simultaneous double
@@ -143,17 +144,23 @@ d < 625) give, read off here:
 | 0 | 7, 21 |
 | 1 | 3, 5, 11, 13 |
 | 2 | 9, 17, 19, 35, 39, 47, 63 |
-| 3 | 15 and 41 are not: m(15) = 4, m(41) = 3; m(h) = 3 for h in {25, 41, ...} (see the file) |
-| >= 4 | every other attained h; m(h) >= 73 for all odd h in [375, 623] |
+| 3 | 25 |
+| 4, 5 | 15, 23, 31, 43, 55 (4); 27, 61 (5) |
+| >= 6 | every other attained h < 625; the minimum above 63 is m(67) = 6; m(h) >= 73 for all odd h in [375, 623] |
+
+The full table for odd h <= 101 (h:m): 3:1 5:1 7:0 9:2 11:1 13:1 15:4 17:2 19:2 21:0 23:4 25:3 27:5 29:6 31:4 33:8
+35:2 37:7 39:2 41:6 43:4 45:12 47:2 49:8 51:12 53:10 55:4 57:7 59:12 61:5 63:2 65:14 67:6 69:18 71:11 73:19 75:12 77:16
+79:11 81:26 83:11 85:10 87:11 89:23 91:29 93:15 95:17 97:23 99:24 101:18.
 
 Observations. (a) The unique-class values are the four smallest primes other than 7; each is realised by a
 self-converse class (C_3, the strong 4-tournament, and the order-5 realisations of 11 and 13), as THM-4744's converse
 pairing P_d = SC_d (mod 2) forces for any odd multiplicity. (b) The multiplicities 9, 13, 21, 22, 34, 37 do not occur
 below 625 although every value up to 38 other than these does; since m(h) >= 73 on [375, 623] and the counts grow
 with h, these six values are plausibly never multiplicities of strong counts (HYP-9477 (A)). (c) The largest h with
-m(h) <= 3 is 63; the "Carmichael exceptional set" {3, 5, 11, 13} is complete below 625 and, by (b), presumably in
-total. Pre-registered Q1: CONFIRMED in its containment, size and membership clauses; REFUTED in the clause "contains
-41" (m(41) = 3) and in the clause "every multiplicity 1..10 occurs".
+m(h) <= 3 is 63, the largest with m(h) <= 5 is 63 as well (m(63) = 2, m(61) = 5), and m(h) >= 6 beyond; the
+"Carmichael exceptional set" {3, 5, 11, 13} is complete below 625 and, by (b), presumably in total. Pre-registered
+Q1: CONFIRMED in its containment, size and membership clauses; REFUTED in the clause "contains 41" (m(41) = 6) and
+in the clause "every multiplicity 1..10 occurs".
 
 The Korselt theme of THM-4746 and the HHKK Carmichael-counting method (subset products in (Z/L)^* with character
 control) are counting methods for congruence-defined composites; their direct spectrum analogue is the enumeration
@@ -220,7 +227,7 @@ atoms, 7p, 49, 63, 343), (iii) H: height (floors and the counting lemma; KNOWN),
   three-smooth representation route of section 6 is the candidate mechanism.
 The Korselt and Carmichael lenses supply invariants that (v) must respect: the congruence of section 3 constrains
 how many labelled realizations a value has at prime orders, and the multiplicity census of section 4 says that above
-63 every strong value has at least four strong realizations, so a numeration step may be chosen among several
+63 every strong value below 625 has at least six strong realizations, so a numeration step may be chosen among several
 realizations of its input - a freedom that Session 194's module barrier shows is necessary.
 
 ## 8. Computations and their status

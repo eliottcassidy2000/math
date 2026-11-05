@@ -1,6 +1,6 @@
 ---
 id: THM-4884
-title: "Definability lenses on the Hamiltonian-path spectrum. (1) Korselt congruence (PROVED): the spectrum polynomial P_n(x) = sum over labelled tournaments of x^H satisfies P_n = F_{n,p} (mod p) for every prime p | n, F_{n,p} the sum over tournaments invariant under the rotation by n/p; for prime p the invariant tournaments are the circulants and their counts are multiples of p, so the number of labelled p-tournaments with a count not divisible by p is divisible by p (checked exactly for n <= 7: at n = 7 only h = 175 and 189 escape). (2) Carmichael multiplicity (FINITE-EXACT from THM-4744's inventories): m(h) = number of strong classes with H = h satisfies m = 0 only at 7, 21, m = 1 only at 3, 5, 11, 13, m = 2 only at 9, 17, 19, 35, 39, 47, 63, m >= 4 for every attained h in (63, 625), and the multiplicities 9, 13, 21, 22, 34, 37 do not occur below 625. (3) Minimal rank (FINITE-EXACT): the sub-languages of G(0,2) without double events (rank 14), with first-in-first-out closing (rank 14) and with last-in-first-out closing (rank 10) are not complete to 2047 (misses 43, 47, 63, 79, 103, 113, 235, 709; 24 values; 582 values), so shared-endpoint configurations are indispensable and the smallest complete candidate found keeps rank 17"
+title: "Definability lenses on the Hamiltonian-path spectrum. (1) Korselt congruence (PROVED): the spectrum polynomial P_n(x) = sum over labelled tournaments of x^H satisfies P_n = F_{n,p} (mod p) for every prime p | n, F_{n,p} the sum over tournaments invariant under the rotation by n/p; for prime p the invariant tournaments are the circulants and their counts are multiples of p, so the number of labelled p-tournaments with a count not divisible by p is divisible by p (checked exactly for n <= 7: at n = 7 only h = 175 and 189 escape). (2) Carmichael multiplicity (FINITE-EXACT from THM-4744's inventories): m(h) = number of strong classes with H = h satisfies m = 0 only at 7, 21, m = 1 only at 3, 5, 11, 13, m = 2 only at 9, 17, 19, 35, 39, 47, 63, m = 3 only at 25, m >= 6 for every attained h in (63, 625), and the multiplicities 9, 13, 21, 22, 34, 37 do not occur below 625. (3) Minimal rank (FINITE-EXACT): the sub-languages of G(0,2) without double events (rank 14), with first-in-first-out closing (rank 14) and with last-in-first-out closing (rank 10) are not complete to 2047 (misses 43, 47, 63, 79, 103, 113, 235, 709; 24 values; 582 values), so shared-endpoint configurations are indispensable and the smallest complete candidate found keeps rank 17"
 status: >
   PROVED: (1) (orbit counting; the free action on Hamiltonian paths). FINITE-EXACT: (2) read off THM-4744's complete
   inventories (strong_ears_375.out, strong_ears_625.out); (3) the automata, ranks (modular, two primes; empty
@@ -46,8 +46,9 @@ related:
 2. **Carmichael multiplicity (FINITE-EXACT).** With m(h) the number of strong tournament classes of all orders
    having H = h (finite by Moon's floor), THM-4744's inventories give for odd h < 625: m(h) = 0 iff h in {7, 21};
    m(h) = 1 iff h in {3, 5, 11, 13}, each realised by one self-converse class (forced by converse pairing for an odd
-   multiplicity); m(h) = 2 iff h in {9, 17, 19, 35, 39, 47, 63}; m(h) >= 4 for every attained h with 63 < h < 625;
-   m(h) >= 73 for odd h in [375, 623]. The values 9, 13, 21, 22, 34, 37 are not multiplicities below 625, while every
+   multiplicity); m(h) = 2 iff h in {9, 17, 19, 35, 39, 47, 63}; m(h) = 3 iff h = 25; m(h) >= 6 for every attained h
+   with 63 < h < 625 (minimum 6 at h = 67); m(h) >= 73 for odd h in [375, 623]. The values 9, 13, 21, 22, 34, 37 are
+   not multiplicities below 625, while every
    other value up to 38 is. So the analogue of Carmichael's conjecture fails exactly at the four smallest primes other
    than 7, and the analogue of Ford's theorem (every multiplicity >= 2 occurs) fails.
 
