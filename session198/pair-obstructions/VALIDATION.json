@@ -1,0 +1,93 @@
+{
+  "actual67": {
+    "C": 3,
+    "H": 67,
+    "rows": [
+      70,
+      124,
+      120,
+      97,
+      73,
+      17,
+      32
+    ]
+  },
+  "c2_pair_tests": 210,
+  "c2_source_states": 15,
+  "c2_support_through67": [
+    13,
+    15,
+    23,
+    25,
+    29,
+    41,
+    43,
+    45,
+    49,
+    53,
+    55
+  ],
+  "complete_c2_cutoff": 11,
+  "content_trap": {
+    "H": 69,
+    "excluded_children": [
+      209,
+      211
+    ],
+    "left": [
+      9,
+      3,
+      9,
+      3
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ]
+  },
+  "deletion_collision": {
+    "a": [
+      9,
+      0,
+      18,
+      1
+    ],
+    "b": [
+      9,
+      0,
+      18,
+      3
+    ],
+    "outputs": [
+      133,
+      129
+    ]
+  },
+  "formal67": {
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "right": [
+      1,
+      0,
+      6,
+      1
+    ],
+    "value": 67
+  },
+  "source_cap": 22,
+  "source_divisibility_controls": 1353,
+  "source_files": {
+    "c3.py": "564034e130625d8bfd06ac04f7f365c14c93cd22e9ef8f33da3f5330a0825bb9",
+    "core.py": "dc32dc1ef3647b694015cb4ff1ef99415c162bfbaf58d3b545175b09f0378042",
+    "source_oracle.py": "33cfe6cea487b17da44e083d7e81bd860dfeddcab3096deb6d135191e5537ac0",
+    "verify.py": "ca7dea71b5efc2d2ba2e0c09efba5254f518359626c63944d2dec7aedc8d3b50"
+  },
+  "source_states": 41,
+  "status": "PASS"
+}

@@ -1,0 +1,1 @@
+{"C2_values_through67": [13, 15, 23, 25, 29, 41, 43, 45, 49, 53, 55], "actual_C": 3, "actual_C3_rows": [70, 124, 120, 97, 73, 17, 32], "actual_H": 67, "formal_C2_target": 67, "independence": "No imported packet functions; direct permutation counters.", "source_cap": 11, "source_states": 15, "status": "PASS", "transitive_source_orders": [2, 3, 4, 5, 6, 7, 8]}
