@@ -1,0 +1,115 @@
+{
+  "bound_controls": {
+    "cases": 200,
+    "data_sha256": "a0ab46aac29557033115be27af17256c7dfb0c3bc7141087381031b61dd7ee77"
+  },
+  "census": {
+    "accepted_word_prefixes": [
+      1,
+      36,
+      440,
+      5716,
+      79768
+    ],
+    "bank_sha256": "fd39d994a42ca63e8b8bf67e9069f3745fcfc8cf5eaf79d3c65148ce4fd921e7",
+    "histograms": [
+      {
+        "179": 1
+      },
+      {
+        "179": 8,
+        "305": 4,
+        "357": 8,
+        "375": 4,
+        "509": 4,
+        "533": 4,
+        "539": 4
+      },
+      {
+        "179": 88,
+        "305": 52,
+        "357": 96,
+        "375": 52,
+        "509": 52,
+        "529": 20,
+        "533": 44,
+        "539": 36
+      },
+      {
+        "179": 1136,
+        "305": 676,
+        "357": 1184,
+        "375": 676,
+        "509": 676,
+        "529": 328,
+        "533": 508,
+        "537": 144,
+        "539": 388
+      },
+      {
+        "179": 15808,
+        "305": 9172,
+        "357": 15672,
+        "375": 9172,
+        "509": 9172,
+        "529": 4684,
+        "533": 6500,
+        "537": 4656,
+        "539": 4932
+      }
+    ],
+    "independent_count_comparisons": 99088
+  },
+  "independent_python_census2": [
+    1,
+    36,
+    440
+  ],
+  "maximum_kept_births": 4,
+  "maximum_strong_order": 12,
+  "ports": [
+    0,
+    1,
+    4
+  ],
+  "prime": true,
+  "pruning": {
+    "data_sha256": "4d3eeecd034d259b0a347bc2bbfe569c2d8421defa6f6651e8bca9fc9cb8f861",
+    "exhaustive": [
+      {
+        "depth": 5,
+        "induced_subsequence_tests": 1024,
+        "ports": 0
+      },
+      {
+        "depth": 4,
+        "induced_subsequence_tests": 65536,
+        "ports": 1
+      },
+      {
+        "depth": 3,
+        "induced_subsequence_tests": 110592,
+        "ports": 2
+      },
+      {
+        "depth": 2,
+        "induced_subsequence_tests": 16384,
+        "ports": 3
+      }
+    ],
+    "exhaustive_total": 193536,
+    "long_controls": 3000
+  },
+  "seed": [
+    2,
+    12,
+    145,
+    149,
+    99,
+    143,
+    175,
+    19
+  ],
+  "status": "PASS",
+  "target": 541
+}
