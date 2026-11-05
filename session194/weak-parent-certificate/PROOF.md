@@ -15,7 +15,7 @@ The significance for the prime-atom lane is that 127 is prime and 203=7*29 is a 
 
 ## 2. All-order reduction to bounded rooted cores
 
-Use the frozen Session 194 exact weak-parent form theorem in `STRONGER_RATIO.md`, section5. For h>=3, a strong child of a weak parent with H(T)=3h+2 or3h+4 has exactly two parent SCCs. Apart from the exceptional C3/H13 and C3+C3/H31 presentations, one SCC is a singleton and the other is a strong core C with H(C)=h. The relevant core-root response must satisfy
+Use the frozen Session 194 exact weak-parent form theorem in [the sharp weak-deletion ratio proof](../weak-deletion/STRONGER_RATIO.md), section 5. For h>=3, a strong child of a weak parent with H(T)=3h+2 or3h+4 has exactly two parent SCCs. Apart from the exceptional C3/H13 and C3+C3/H31 presentations, one SCC is a singleton and the other is a strong core C with H(C)=h. The relevant core-root response must satisfy
 
     R_a(C)-H(C) in {1,2}, or L_a(C)-H(C) in {1,2},
 
