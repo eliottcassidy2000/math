@@ -1,0 +1,51 @@
+{
+  "all_cover_centers": 4975,
+  "hostiles": [
+    {
+      "boundary": -1,
+      "root": 1,
+      "rows": [
+        16,
+        5,
+        9,
+        3,
+        14
+      ],
+      "runs": [
+        5,
+        15,
+        11,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "boundary": 3,
+      "root": 1,
+      "rows": [
+        2,
+        20,
+        9,
+        3,
+        13
+      ],
+      "runs": [
+        1,
+        11,
+        17,
+        4,
+        0,
+        0
+      ]
+    }
+  ],
+  "literal_rooted_graphs": 5505,
+  "rank_counts": {
+    "0": 1222,
+    "1": 3408,
+    "2": 871,
+    "3": 4
+  },
+  "status": "PASS"
+}
