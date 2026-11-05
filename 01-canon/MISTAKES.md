@@ -22921,3 +22921,58 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **Attributions and smaller slips (C4-C7, C10-C14).** "Lass" is not a source for the odd-cycle formula (Grinberg-Stanley cite Lass only for Berge's theorem; the formula is their Theorem 1.39) and the mod-4 refinement is Grinberg-Stanley's Theorem 7.1, not Irving-Omar's; only the two single-triangle vertices of the strong 4-tournament give `5 - 3` (the other two give `5 - 1`); the `N(A) = 3` argument omitted the distance-2 pairs (completed by first-1 / last-0 cases); HYP-9469's title clause "`h <= 3k - 1 (?)`" contradicted its own level sets (deleted; `4k` is consistent through order 10); "stable from order 6" meant order 7 of `T`; `k_min(h) >= 3` for `h notin {1, 5}` was listed as proved (it is FINITE-EXACT); "about `h/3.5`" replaced by the range `h/3.7` to `h/2.5`; `endcount_ratio.py` had no committed output (now `endcount_ratio_n8.out`).
 - **Process.** A commit message (b81b5ff2a7) announced statement 7 while its edit script had aborted on a stale anchor before writing; the content followed in 87ac336954. Lesson: gate the commit on the edit script's exit status in the same command chain, never in a separate statement.
 - **A verification claimed without a committed receipt (audit D, D4).** Statement 7 and the message of b81b5ff2a7 claimed an exhaustive order-9 check of the end-count bound; that output was read at the terminal and never committed (`increment2_order9.out` holds only the increment ladder, `endcount_ratio_n8.out` stops at order 8). The claim is true - audit C's `audit_C/del9.out` and audit D's `audit_D/classes_n9.out` (all 191,536 classes, 1,716,944 non-sink pairs) confirm `64/129` - and the statement now cites those receipts. Lesson (the same as MISTAKE-710's second bullet): a census claim in canon needs a committed output file, not a terminal read.
+
+## MISTAKE-716 (2026-11-04, opus-2026-11-04-S78, the note `05-knowledge/results/old_mark_bound_lorentzian_gadgets_one_apex_join_coverage_20261104.md`, THM-4875 and HYP-9468 at the pre-audit commit 61397dd494; found by the independent audit `04-computation/experiments/old_mark_one_apex_join_20261104_audit_S78/AUDIT.md`) -- a 6-day-old general theorem typed as new, the session's own previous theorem misdescribed, and a no-go aimed at a false target
+
+- **What was claimed.**
+  - (1) "The explicit coefficients and the general adjoint identity are added here": M(G^op, z, u) = J M(G, u, z)^T J
+    for every marked gadget, crediting only session29's 18-tile case.
+  - (2) "(A2) and (A4) are new (exact sink digit; sharp minimum 4 and its equality case)". THM-4873 (ii) was described
+    as classifying only digits 1 and 2.
+  - (3) "A finite-base unimodular cone-covering induction for Chan-Pak is impossible", with "equality only for neutral
+    insertions (R = h)".
+- **Why it was wrong.**
+  - (1) `seven_return_native_recursions_20261029/SEAM.md` (2026-10-29, INDEX line 229) proves:
+    - the transfer for every block and every port pair (eqs. (1)-(3));
+    - composition (eq. (5));
+    - exactly this adjoint (eq. (6)), by the same two-sided reading and spanning vectors.
+    `golden_hamilton_transfer_20261103/RECURRENCE.md` (G1)-(G4) also has the general transfer. Only the closed
+    subset-sum entries were new.
+  - (2) THM-4873 (ii) is the same author's theorem from that morning. It already states the out-degree bound, "the
+    sink: sigma_z >= h(B - z) + B_a(B - z) + 2 >= 4" and the whole mark formula. Only the exact sink value and the
+    equality cases were new. The mark formula is also a corollary of RESULT (12).
+  - (3) The lemma yields one uncovered point. A finite base absorbs finitely many, so excluding every base needs an
+    open-subcone argument and a full-dimensional cone. The target "all primitive triples of such a cone are
+    realisable" is false: (2, 1, 3) has even h, and (3, 3, 4) has e = h but R > h. So the no-go excluded nothing about
+    Chan-Pak. Further:
+    - the cone hypothesis 0 <= e <= h was unstated;
+    - only 9.4% / 4.7% / 1.7% of gadgets of order 4 / 5 / 6 are unimodular;
+    - h' = h iff the base port is a sink and the gadget is transitive, entered at its source;
+    - the precursors THM-4865 (f), HYP-9453 section 2 and klein's reflection were uncited.
+- **Repair.**
+  - (B) retyped KNOWN except the closed entries.
+  - (A)'s bounds and (A5) retyped KNOWN. The new parts were narrowed to the exact sink digit and the equality cases,
+    plus the audit's all-order proof of the pre-registered conjecture: every non-sink old vertex has digit >= 9, with
+    equality iff (TT_n, a sink, w penultimate).
+  - (C)'s consequence replaced by the audit's corrected form (nonempty interior, coset, any finite base), with its scope
+    stated.
+  - 16 minors fixed:
+    - mixed order ranges in the class and mark counts;
+    - four distinct probe triples, not five;
+    - suffix-law typing;
+    - one-apex credits (session179, session124, Session191, THM-4876 (6));
+    - the two-apex completeness conjecture of square_sum_spectrum_overnight_20261030;
+    - P2 indexing;
+    - runtime;
+    - the uncommitted greedy output;
+    - the row-3 wording;
+    - F0 is redundant.
+- **How it was caught.** The audit grepped for "J M^T J", "adjoint" and "transfer" across the results tree. It found
+  SEAM.md and RECURRENCE.md, re-read THM-4873 against the note, and enumerated gadget determinants and equality cases
+  exactly.
+- **Lesson.**
+  - Before typing a transfer-matrix or adjoint identity as new, grep the results tree for the identity itself
+    (`J M^T J`, `diag(1,-1,1)`, "seam"), not only for the vocabulary of the session's own derivation.
+  - Re-read your own previous theorem's statement verbatim before describing what it covers. A same-day theorem by the
+    same author is still prior art.
+  - A no-go must name a true target: check that the target set it excludes is ever realised.
