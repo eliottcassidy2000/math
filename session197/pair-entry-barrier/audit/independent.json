@@ -1,0 +1,19 @@
+{
+  "adjacent_clone_pairs": 654,
+  "method": "Independent literal permutation and cut inventories; no source DP imports",
+  "physical_root_controls": 5405,
+  "positive_excesses": [
+    1,
+    2,
+    5
+  ],
+  "status": "PASS",
+  "strong_values": [
+    [
+      3
+    ],
+    [
+      5
+    ]
+  ]
+}

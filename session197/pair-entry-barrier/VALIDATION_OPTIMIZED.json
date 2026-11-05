@@ -1,0 +1,39 @@
+{
+  "impossible_singleton_inverse": [
+    7,
+    5,
+    11
+  ],
+  "inside_cone_profile": [
+    13,
+    2,
+    18
+  ],
+  "physical_first_last_clone_pairs": 23,
+  "positive_excesses": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    8,
+    9
+  ],
+  "small_strong_checks": [
+    {
+      "H_values": [
+        3
+      ],
+      "labelled_strong": 2,
+      "order": 3
+    },
+    {
+      "H_values": [
+        5
+      ],
+      "labelled_strong": 24,
+      "order": 4
+    }
+  ],
+  "status": "PASS"
+}
