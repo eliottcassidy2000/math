@@ -1,0 +1,60 @@
+{
+  "H": 37050461,
+  "H_source": "direct vertex-subset Hamilton DP and independent exact fragment kernel",
+  "anti_involution": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    15,
+    14
+  ],
+  "input_cover_vector": [
+    23,
+    273,
+    611
+  ],
+  "input_rows": [
+    78,
+    124,
+    120,
+    112,
+    97,
+    65,
+    0
+  ],
+  "number_of_nonzero_remainders": 2299,
+  "order": 16,
+  "prime_quotient": 5292923,
+  "remainder_sha256": "b21fcd515870ed978f00d21caf4d3a7ef00071d987d7753a489f2595c3d41305",
+  "rows": [
+    16334,
+    16380,
+    16376,
+    16368,
+    16353,
+    16321,
+    16256,
+    55296,
+    49280,
+    49536,
+    50048,
+    50944,
+    52992,
+    57216,
+    32895,
+    127
+  ],
+  "strong": true,
+  "trial_division_max": 2300
+}
