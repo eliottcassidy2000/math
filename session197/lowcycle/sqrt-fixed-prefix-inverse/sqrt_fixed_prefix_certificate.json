@@ -1,0 +1,93 @@
+{
+  "block_identities": 32640,
+  "dependencies": {
+    "ARITHMETIC_INVERSE.md": "4ac1727eb27c85f8a39f5598eb9f0e1b020bc4020cbca0a94e6288cb0676c3b7",
+    "ROOTED.md": "ba7e632518219eeb8d86b6db7da386a88e98317ea417c9b22e649278c132b32e"
+  },
+  "inverse_controls": 67770,
+  "large": [
+    {
+      "evaluations": 235084,
+      "prefix": [
+        3,
+        1,
+        3
+      ],
+      "solutions": [
+        100000007
+      ],
+      "target": 486878921
+    },
+    {
+      "evaluations": 239937,
+      "prefix": [
+        5,
+        1,
+        7
+      ],
+      "solutions": [
+        123456789
+      ],
+      "target": 1383336817
+    },
+    {
+      "evaluations": 1029539,
+      "prefix": [
+        13,
+        2,
+        18
+      ],
+      "solutions": [
+        987654321
+      ],
+      "target": 29960873285
+    }
+  ],
+  "physical_graph_controls": 176,
+  "prefix_graphs": [
+    {
+      "profile": [
+        3,
+        1,
+        3
+      ],
+      "root": 0,
+      "rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "profile": [
+        5,
+        1,
+        7
+      ],
+      "root": 1,
+      "rows": [
+        12,
+        5,
+        8,
+        2
+      ]
+    },
+    {
+      "profile": [
+        13,
+        2,
+        18
+      ],
+      "root": 0,
+      "rows": [
+        18,
+        20,
+        25,
+        3,
+        8
+      ]
+    }
+  ],
+  "status": "PASS",
+  "strict_branch_comparisons": 68922
+}
