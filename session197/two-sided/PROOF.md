@@ -161,6 +161,8 @@ This boundary explains why merely adding the converse of a missing birth operati
 
 ## 7. Certificates and reproduction
 
+First run `python3 build_rightward.py` in this directory to regenerate the large state-set and seed files; see `REPRODUCE.md`.
+
 The packet is self-contained. `rightward.py` and the 27-state serialized matrices are unchanged copies of the independently audited one-sided construction, with their provenance stated above. `core.py` implements the new wrapper and exact polynomial operator.
 
     g++ -O3 -std=c++17 census.cpp -o /tmp/s197_twosided_cap
