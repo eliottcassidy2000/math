@@ -1,0 +1,33 @@
+{
+  "balanced_signed_readout_k4": 21,
+  "bilinear_grid_checked": [
+    20,
+    20
+  ],
+  "direct_graphs_checked": 364,
+  "formula_recurrences_checked_through": 200,
+  "literal_word_layers_checked_through": 8,
+  "nonphysical_Z_aggregate_k2": [
+    1,
+    0,
+    6,
+    1
+  ],
+  "opposite_sign_rooted_isomorphism": {
+    "map": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "profile": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "word1": "OJ",
+    "word2": "JZ"
+  },
+  "status": "PASS: indexed-word identities; no support or coverage inference"
+}

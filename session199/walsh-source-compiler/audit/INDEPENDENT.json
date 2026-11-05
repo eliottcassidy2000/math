@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "checks": 20411,
+  "proof_sha256": "2628feda5482151e25ec26a15f741a03a2de1bd9911564b14780319245a1ea12",
+  "scope": "Independent signed branch word enumeration through depth 8, C2 identities r,s through 100; all-order formulas and physicality proof manually reviewed."
+}
