@@ -1,0 +1,1 @@
+PASS roots 5405 clones 32110 exact_map_fibers 64220 block_stability 5405 persistent 1853 finite 3552 histogram 0:1664 1:1600 2:288 padded_binary_counts 189 rooted_classes 63 optional_converse_orbits 36
