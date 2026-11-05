@@ -1,0 +1,6786 @@
+{
+  "15": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "27": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "29": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "31": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "33": {
+    "kind": "C",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "45": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      5,
+      2,
+      6,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "49": {
+    "kind": "J1",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "51": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "53": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "55": {
+    "kind": "B",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "57": {
+    "kind": "C",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "59": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "65": {
+    "kind": "C",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "67": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "69": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ]
+    ]
+  },
+  "75": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      9,
+      4,
+      10,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "81": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      9,
+      3,
+      9,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "83": {
+    "kind": "J1",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "85": {
+    "kind": "J1",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ]
+    ]
+  },
+  "87": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      9,
+      3,
+      11,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "89": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "91": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ]
+    ]
+  },
+  "93": {
+    "kind": "J1",
+    "left": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        4
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "95": {
+    "kind": "B",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "97": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "99": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "101": {
+    "kind": "B",
+    "left": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        4
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "103": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "105": {
+    "kind": "B",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "107": {
+    "kind": "C",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "109": {
+    "kind": "J1",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "111": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      3,
+      0,
+      12,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "113": {
+    "kind": "B",
+    "left": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "115": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "117": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "119": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "121": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ]
+    ]
+  },
+  "127": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "129": {
+    "kind": "C",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "131": {
+    "kind": "C",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ]
+    ]
+  },
+  "135": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      5,
+      0,
+      14,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "137": {
+    "kind": "B",
+    "left": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        3
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "139": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "141": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      11,
+      1,
+      13,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        7
+      ]
+    ]
+  },
+  "143": {
+    "kind": "J1",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ]
+    ]
+  },
+  "147": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      15,
+      5,
+      19,
+      9
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "149": {
+    "kind": "J1",
+    "left": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        4
+      ]
+    ],
+    "right": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "153": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      3,
+      9,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "157": {
+    "kind": "J1",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      1,
+      9,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        8
+      ]
+    ]
+  },
+  "159": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ]
+    ]
+  },
+  "161": {
+    "kind": "J1",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      0,
+      10,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "163": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      0,
+      10,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "165": {
+    "kind": "B",
+    "left": [
+      9,
+      3,
+      9,
+      3
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "167": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      1,
+      9,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        8
+      ]
+    ]
+  },
+  "169": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      0,
+      10,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "171": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      1,
+      9,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        8
+      ]
+    ]
+  },
+  "173": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "175": {
+    "kind": "B",
+    "left": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        4
+      ]
+    ],
+    "right": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "177": {
+    "kind": "B",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      5,
+      2,
+      6,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "179": {
+    "kind": "J1",
+    "left": [
+      5,
+      2,
+      6,
+      3
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "181": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      12,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "183": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ]
+    ]
+  },
+  "185": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      2,
+      6,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "187": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      0,
+      12,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "189": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      12,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "191": {
+    "kind": "B",
+    "left": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        4
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "193": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      11,
+      4,
+      12,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "195": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      1,
+      11,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        6
+      ]
+    ]
+  },
+  "197": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "199": {
+    "kind": "J1",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      2,
+      6,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "201": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      1,
+      11,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        6
+      ]
+    ]
+  },
+  "203": {
+    "kind": "C",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      3,
+      0,
+      12,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "205": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      11,
+      4,
+      12,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "207": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "209": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "211": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ]
+    ]
+  },
+  "213": {
+    "kind": "B",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ]
+    ]
+  },
+  "215": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      2,
+      6,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "217": {
+    "kind": "C",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "219": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      0,
+      14,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "221": {
+    "kind": "B",
+    "left": [
+      3,
+      0,
+      12,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "223": {
+    "kind": "J1",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      11,
+      1,
+      13,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        7
+      ]
+    ]
+  },
+  "225": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      25,
+      10,
+      30,
+      15
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "227": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      16,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "229": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      0,
+      14,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "233": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "237": {
+    "kind": "B",
+    "left": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        3
+      ]
+    ],
+    "right": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "239": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      16,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "241": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      11,
+      1,
+      13,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        7
+      ]
+    ]
+  },
+  "243": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      15,
+      1,
+      23,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        10
+      ]
+    ]
+  },
+  "245": {
+    "kind": "C",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      5,
+      0,
+      14,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "247": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "249": {
+    "kind": "J1",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      9,
+      3,
+      9,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "251": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      1,
+      15,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        5
+      ]
+    ]
+  },
+  "253": {
+    "kind": "C",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "255": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      15,
+      5,
+      15,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "257": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ]
+    ]
+  },
+  "259": {
+    "kind": "B",
+    "left": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        3
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "261": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      1,
+      15,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        5
+      ]
+    ]
+  },
+  "263": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "265": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      15,
+      5,
+      15,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "267": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      9,
+      3,
+      9,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "269": {
+    "kind": "J1",
+    "left": [
+      17,
+      8,
+      18,
+      9
+    ],
+    "left_recipe": [
+      [
+        "M",
+        8
+      ],
+      [
+        "M",
+        1
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "271": {
+    "kind": "J1",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ]
+    ]
+  },
+  "273": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      15,
+      3,
+      15,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        4
+      ]
+    ]
+  },
+  "275": {
+    "kind": "B",
+    "left": [
+      11,
+      1,
+      13,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        7
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "277": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      17,
+      8,
+      18,
+      9
+    ],
+    "right_recipe": [
+      [
+        "M",
+        8
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "279": {
+    "kind": "C",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      9,
+      1,
+      15,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        5
+      ]
+    ]
+  },
+  "281": {
+    "kind": "B",
+    "left": [
+      5,
+      2,
+      6,
+      3
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ]
+    ]
+  },
+  "283": {
+    "kind": "A",
+    "left": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        4
+      ]
+    ],
+    "right": [
+      5,
+      2,
+      6,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "285": {
+    "kind": "A",
+    "left": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        4
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ]
+    ]
+  },
+  "287": {
+    "kind": "B",
+    "left": [
+      17,
+      8,
+      18,
+      9
+    ],
+    "left_recipe": [
+      [
+        "M",
+        8
+      ],
+      [
+        "M",
+        1
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "289": {
+    "kind": "J1",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      15,
+      5,
+      19,
+      9
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "291": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      15,
+      5,
+      19,
+      9
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "293": {
+    "kind": "J1",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      0,
+      18,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        8
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "295": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      17,
+      5,
+      17,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "297": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      0,
+      18,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "299": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      9,
+      1,
+      9,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        8
+      ]
+    ]
+  },
+  "301": {
+    "kind": "B",
+    "left": [
+      5,
+      2,
+      6,
+      3
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "303": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      17,
+      5,
+      17,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "307": {
+    "kind": "B",
+    "left": [
+      9,
+      4,
+      10,
+      5
+    ],
+    "left_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        1
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "309": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      0,
+      18,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        8
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "311": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      4,
+      10,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "313": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      17,
+      6,
+      20,
+      9
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "315": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      0,
+      20,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "317": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      19,
+      8,
+      20,
+      9
+    ],
+    "right_recipe": [
+      [
+        "M",
+        6
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "319": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      0,
+      20,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "321": {
+    "kind": "B",
+    "left": [
+      17,
+      5,
+      17,
+      5
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "323": {
+    "kind": "B",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      12,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "325": {
+    "kind": "C",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ]
+    ]
+  },
+  "327": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      5,
+      0,
+      12,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "329": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      12,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "331": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      17,
+      1,
+      17,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        16
+      ]
+    ]
+  },
+  "333": {
+    "kind": "A",
+    "left": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "335": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      19,
+      5,
+      19,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "337": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      11,
+      4,
+      12,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "339": {
+    "kind": "B",
+    "left": [
+      9,
+      0,
+      18,
+      3
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "341": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      19,
+      5,
+      19,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "343": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      1,
+      9,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        8
+      ]
+    ]
+  },
+  "345": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      0,
+      22,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "347": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      3,
+      11,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "349": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      24,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "351": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      15,
+      1,
+      19,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        12
+      ]
+    ]
+  },
+  "353": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      19,
+      7,
+      23,
+      11
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "355": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      0,
+      24,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "357": {
+    "kind": "C",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      17,
+      6,
+      20,
+      9
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "359": {
+    "kind": "B",
+    "left": [
+      5,
+      2,
+      6,
+      3
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "361": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      1,
+      9,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        8
+      ]
+    ]
+  },
+  "363": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      4,
+      10,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "365": {
+    "kind": "B",
+    "left": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      2,
+      6,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "367": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      0,
+      24,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "369": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      0,
+      22,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        6
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "371": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      12,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "373": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      17,
+      3,
+      21,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        3
+      ]
+    ]
+  },
+  "375": {
+    "kind": "B",
+    "left": [
+      5,
+      0,
+      20,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "377": {
+    "kind": "A",
+    "left": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        4
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ]
+    ]
+  },
+  "379": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      23,
+      10,
+      24,
+      11
+    ],
+    "right_recipe": [
+      [
+        "M",
+        7
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "381": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      19,
+      7,
+      23,
+      11
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "385": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      11,
+      0,
+      24,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "387": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      33,
+      1,
+      33,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        32
+      ]
+    ]
+  },
+  "389": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      12,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "391": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      11,
+      4,
+      12,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "393": {
+    "kind": "A",
+    "left": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "395": {
+    "kind": "C",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      3,
+      0,
+      24,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "397": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      23,
+      8,
+      24,
+      9
+    ],
+    "right_recipe": [
+      [
+        "M",
+        5
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "399": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      5,
+      0,
+      14,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "401": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      19,
+      1,
+      21,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        14
+      ]
+    ]
+  },
+  "403": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      0,
+      12,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "405": {
+    "kind": "B",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      16,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "407": {
+    "kind": "A",
+    "left": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ]
+    ]
+  },
+  "409": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      23,
+      10,
+      24,
+      11
+    ],
+    "right_recipe": [
+      [
+        "M",
+        7
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "411": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      15,
+      1,
+      23,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        10
+      ]
+    ]
+  },
+  "413": {
+    "kind": "B",
+    "left": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "415": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      16,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "417": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      23,
+      8,
+      24,
+      9
+    ],
+    "right_recipe": [
+      [
+        "M",
+        5
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "419": {
+    "kind": "C",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      11,
+      0,
+      24,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "421": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      11,
+      1,
+      13,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        7
+      ]
+    ]
+  },
+  "423": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      33,
+      1,
+      37,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        28
+      ]
+    ]
+  },
+  "425": {
+    "kind": "B",
+    "left": [
+      23,
+      8,
+      24,
+      9
+    ],
+    "left_recipe": [
+      [
+        "M",
+        5
+      ],
+      [
+        "M",
+        1
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "427": {
+    "kind": "B",
+    "left": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        3
+      ]
+    ],
+    "right": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "429": {
+    "kind": "C",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ]
+    ]
+  },
+  "431": {
+    "kind": "B",
+    "left": [
+      9,
+      1,
+      11,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        6
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "433": {
+    "kind": "B",
+    "left": [
+      3,
+      0,
+      6,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ]
+    ]
+  },
+  "435": {
+    "kind": "C",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      23,
+      10,
+      24,
+      11
+    ],
+    "right_recipe": [
+      [
+        "M",
+        7
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "437": {
+    "kind": "B",
+    "left": [
+      3,
+      0,
+      24,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "439": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      11,
+      0,
+      26,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        7
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "441": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      45,
+      15,
+      57,
+      27
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "443": {
+    "kind": "B",
+    "left": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        3
+      ]
+    ],
+    "right": [
+      5,
+      2,
+      6,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "445": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      15,
+      5,
+      15,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "447": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      2,
+      6,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "449": {
+    "kind": "B",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      9,
+      1,
+      15,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        5
+      ]
+    ]
+  },
+  "451": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      0,
+      14,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "453": {
+    "kind": "T",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      15,
+      0,
+      46,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        10
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "455": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      25,
+      5,
+      25,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        4
+      ]
+    ]
+  },
+  "457": {
+    "kind": "J1",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      19,
+      1,
+      27,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        11
+      ]
+    ]
+  },
+  "459": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      27,
+      9,
+      27,
+      9
+    ],
+    "right_recipe": [
+      [
+        "M",
+        8
+      ],
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "461": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      8,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "463": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      0,
+      30,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        5
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "465": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      16,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "467": {
+    "kind": "C",
+    "left": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "left_recipe": [],
+    "right": [
+      11,
+      0,
+      26,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        7
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "469": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      19,
+      1,
+      27,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        11
+      ]
+    ]
+  },
+  "471": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      5,
+      0,
+      14,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "473": {
+    "kind": "J1",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      0,
+      30,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        5
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "475": {
+    "kind": "A",
+    "left": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        4
+      ]
+    ],
+    "right": [
+      9,
+      4,
+      10,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "477": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      15,
+      3,
+      15,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        4
+      ]
+    ]
+  },
+  "479": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      32,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "481": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      23,
+      1,
+      25,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        15
+      ]
+    ]
+  },
+  "483": {
+    "kind": "A",
+    "left": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        2
+      ]
+    ],
+    "right": [
+      17,
+      8,
+      18,
+      9
+    ],
+    "right_recipe": [
+      [
+        "M",
+        8
+      ],
+      [
+        "M",
+        1
+      ]
+    ]
+  },
+  "485": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      15,
+      0,
+      30,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "487": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      4,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      1,
+      0,
+      16,
+      1
+    ],
+    "right_recipe": [
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "489": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      9,
+      0,
+      30,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        5
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "491": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      19,
+      1,
+      27,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        11
+      ]
+    ]
+  },
+  "493": {
+    "kind": "B",
+    "left": [
+      17,
+      8,
+      18,
+      9
+    ],
+    "left_recipe": [
+      [
+        "M",
+        8
+      ],
+      [
+        "M",
+        1
+      ]
+    ],
+    "right": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "495": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      15,
+      0,
+      30,
+      5
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        2
+      ],
+      [
+        "O",
+        null
+      ]
+    ]
+  },
+  "497": {
+    "kind": "A",
+    "left": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "left_recipe": [
+      [
+        "M",
+        3
+      ]
+    ],
+    "right": [
+      5,
+      1,
+      7,
+      1
+    ],
+    "right_recipe": [
+      [
+        "M",
+        3
+      ]
+    ]
+  },
+  "499": {
+    "kind": "A",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      29,
+      9,
+      29,
+      9
+    ],
+    "right_recipe": [
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        1
+      ],
+      [
+        "M",
+        2
+      ]
+    ]
+  },
+  "501": {
+    "kind": "B",
+    "left": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "left_recipe": [
+      [
+        "O",
+        null
+      ]
+    ],
+    "right": [
+      27,
+      3,
+      27,
+      3
+    ],
+    "right_recipe": [
+      [
+        "M",
+        2
+      ],
+      [
+        "M",
+        8
+      ]
+    ]
+  }
+}

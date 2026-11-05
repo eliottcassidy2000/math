@@ -1,0 +1,14 @@
+{
+"status":"PASS",
+"universal_response_controls":21620,
+"arbitrary_grafts":29667,
+"physical_source_cone_controls":1694,
+"source_classes_through7":[1,1,2,5,13,34,89],
+"literal_templates_through10":2022,
+"C3_classes_through10":[1,11,38,124,390,1193],
+"labelled_C3_graphs_through6":6040,
+"independent_source_states":811,
+"unpruned_pair_tests":5252040,
+"bounded_witnesses":217,
+"max_independent_witness_order":11
+}
