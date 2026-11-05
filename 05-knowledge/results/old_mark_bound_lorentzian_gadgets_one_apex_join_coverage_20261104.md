@@ -207,6 +207,15 @@ k = 10..31, and between 1.55 and 1.63 for k = 22..31. The density falls in every
 0.00087 in [2^31, 2^32) (HYP-9468 P2, CONFIRMED). So F1 misses about X^0.65 of the odd numbers up to X. Conjecture:
 almost every odd number is the count of a join of two one-apex tournaments.
 
+**Residue profile of the F1 misses** (exploratory; `chanpak_exploratory_20261104/f1_miss_residues.c`, on
+(2^22, 2^24]):
+- **Powers of 2.** The misses are uniform modulo 4, 8, 16 and 32, each class at 0.0066 ± 0.0004.
+- **Modulo 3.** N = 1 mod 3 is missed at rate 0.0124, against 0.0036 and 0.0039 for the classes 0 and 2. Modulo 9, the
+  classes 1, 4, 7 carry rates near 0.0124.
+- **Interpretation.** The one-apex joins are 2-adically balanced; this matches Session 192's dyadic residue
+  programming. Their deficit is 3-adic. The order-<=7 bank closes every gap (F2), but which triples do so, and
+  whether they act 3-adically, was not analysed.
+
 **Checks.**
 - The suffix law used to evaluate g beyond the table, g(k 2^8 + r) = g(k) + k C(r) + (k mod 2) eps(r) + K(r), is
   checked against the plain recursion on 2,000,000 random v.
