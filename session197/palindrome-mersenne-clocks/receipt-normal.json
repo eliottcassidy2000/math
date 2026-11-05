@@ -1,0 +1,16 @@
+{
+  "exact_Mersenne_exponents": 257,
+  "finite_offset_inverse_controls": 51,
+  "fixed_port_directed_incidences": 126480,
+  "fixed_port_returns": 576,
+  "formula_digest": "e7d34f9f574fa3f4f23dc7aefe320e69daf98b1c211bf93fc1123f8310a4e246",
+  "gadget_order_bound_controls": 16383,
+  "literal_small_H_C_pairs": 64,
+  "named_literal_Mersenne_graphs": 5,
+  "prime_certificates": 4,
+  "scope": "All-order proof with literal three-port construction; minimum order only among strong feedback-one tournaments.",
+  "seven_prime_member": 511,
+  "status": "PASS",
+  "two_block_formula_controls": 7168,
+  "witness_sha256": "438380fc1fd21ab6d517cc344ade97db4bb4342ea0fce30bd3d4229b8eb867f7"
+}

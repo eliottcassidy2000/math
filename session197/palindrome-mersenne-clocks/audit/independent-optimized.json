@@ -1,0 +1,14 @@
+{
+  "counts": {
+    "formulas": 106496,
+    "mersennes": 1025,
+    "minimality": 8,
+    "offsets": 500,
+    "physical": 1028,
+    "port_returns": 2560,
+    "prime_divisors": 110
+  },
+  "digest": "01853577150e3a1edbfc970fcf41d40a50cfbc8db71836e6e3eaa45e5f8caa03",
+  "scope": "Independent exact binary evaluation, literal slot counts and literal fixed-port arcs; no source implementation imported.",
+  "status": "PASS"
+}
