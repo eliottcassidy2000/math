@@ -1,0 +1,260 @@
+{
+  "all_proper_subset_checks": 16122,
+  "family": [
+    {
+      "C": 4,
+      "H": 105,
+      "feedback_vertex_lower_bound": 2,
+      "k": 0,
+      "maximum_proper_induced_C": 2,
+      "minimum_backward_span": 2,
+      "order": 8,
+      "proper_C_histogram": {
+        "0": 215,
+        "1": 30,
+        "2": 10
+      },
+      "root": 6,
+      "rows": [
+        242,
+        248,
+        179,
+        245,
+        192,
+        80,
+        132,
+        32
+      ],
+      "span_two_order": [
+        3,
+        0,
+        1,
+        2,
+        6,
+        5,
+        4,
+        7
+      ]
+    },
+    {
+      "C": 4,
+      "H": 187,
+      "feedback_vertex_lower_bound": 2,
+      "k": 1,
+      "maximum_proper_induced_C": 2,
+      "minimum_backward_span": 2,
+      "order": 9,
+      "proper_C_histogram": {
+        "0": 460,
+        "1": 39,
+        "2": 12
+      },
+      "root": 7,
+      "rows": [
+        498,
+        504,
+        483,
+        501,
+        356,
+        384,
+        160,
+        272,
+        64
+      ],
+      "span_two_order": [
+        3,
+        0,
+        1,
+        2,
+        4,
+        7,
+        6,
+        5,
+        8
+      ]
+    },
+    {
+      "C": 4,
+      "H": 349,
+      "feedback_vertex_lower_bound": 2,
+      "k": 2,
+      "maximum_proper_induced_C": 2,
+      "minimum_backward_span": 2,
+      "order": 10,
+      "proper_C_histogram": {
+        "0": 960,
+        "1": 49,
+        "2": 14
+      },
+      "root": 8,
+      "rows": [
+        1010,
+        1016,
+        995,
+        1013,
+        964,
+        720,
+        768,
+        320,
+        544,
+        128
+      ],
+      "span_two_order": [
+        3,
+        0,
+        1,
+        2,
+        4,
+        5,
+        8,
+        7,
+        6,
+        9
+      ]
+    },
+    {
+      "C": 4,
+      "H": 641,
+      "feedback_vertex_lower_bound": 3,
+      "k": 3,
+      "maximum_proper_induced_C": 2,
+      "minimum_backward_span": 2,
+      "order": 11,
+      "proper_C_histogram": {
+        "0": 1971,
+        "1": 60,
+        "2": 16
+      },
+      "root": 9,
+      "rows": [
+        2034,
+        2040,
+        2019,
+        2037,
+        1988,
+        1936,
+        1440,
+        1536,
+        640,
+        1088,
+        256
+      ],
+      "span_two_order": [
+        3,
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        9,
+        8,
+        7,
+        10
+      ]
+    },
+    {
+      "C": 4,
+      "H": 1177,
+      "feedback_vertex_lower_bound": 3,
+      "k": 4,
+      "maximum_proper_induced_C": 2,
+      "minimum_backward_span": 2,
+      "order": 12,
+      "proper_C_histogram": {
+        "0": 4005,
+        "1": 72,
+        "2": 18
+      },
+      "root": 10,
+      "rows": [
+        4082,
+        4088,
+        4067,
+        4085,
+        4036,
+        3984,
+        3872,
+        2880,
+        3072,
+        1280,
+        2176,
+        512
+      ],
+      "span_two_order": [
+        3,
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        10,
+        9,
+        8,
+        11
+      ]
+    },
+    {
+      "C": 4,
+      "H": 2167,
+      "feedback_vertex_lower_bound": 3,
+      "k": 5,
+      "maximum_proper_induced_C": 2,
+      "minimum_backward_span": 2,
+      "order": 13,
+      "proper_C_histogram": {
+        "0": 8086,
+        "1": 85,
+        "2": 20
+      },
+      "root": 11,
+      "rows": [
+        8178,
+        8184,
+        8163,
+        8181,
+        8132,
+        8080,
+        7968,
+        7744,
+        5760,
+        6144,
+        2560,
+        4352,
+        1024
+      ],
+      "span_two_order": [
+        3,
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        10,
+        9,
+        12
+      ]
+    }
+  ],
+  "left_root": 2,
+  "left_rows": [
+    2,
+    8,
+    3,
+    5
+  ],
+  "path_recurrence": "h[k+3]=h[k+2]+h[k+1]+h[k]",
+  "right_root": 2,
+  "right_rows": [
+    12,
+    5,
+    8,
+    2
+  ]
+}
