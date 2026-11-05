@@ -1,0 +1,22 @@
+[
+  {
+    "dependency": "dependencies/PHYSICAL_ADJOINT.md",
+    "source": "session199-dynamics/physical-adjoint/PROOF.md",
+    "sha256": "f9c337b3cfee1cd1134ee02276890238c30ff0e84a14c26fbcd5cd78ab82dc05"
+  },
+  {
+    "dependency": "dependencies/SOURCE_NORM_CAPACITY.md",
+    "source": "session199-number-theory/source-norm-capacity/PROOF.md",
+    "sha256": "2a75ad55f56377cd430d16a05e4ca3be3dceb20c0bd70f0a17b14c892fe90508"
+  },
+  {
+    "dependency": "dependencies/BILINEAR_C2.md",
+    "source": "session197-hybrid-constructions/bilinear-c2-inverse/PROOF.md",
+    "sha256": "5eab9deb2871819d8a1b5684c4987f2f4da807adc55063a30675d531c5ad3813"
+  },
+  {
+    "dependency": "dependencies/PROFINITE_ESCAPE.md",
+    "source": "session199-dynamics/profinite-source-escape/PROOF.md",
+    "sha256": "abcde17f087b53117ca4754d49984dfaaf920de621809363c040d0f5277a97bb"
+  }
+]
