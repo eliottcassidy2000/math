@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "targets": [
+    27783,
+    879001,
+    999999,
+    1000001
+  ],
+  "check": "exact physical recipe replay and graph construction; not independent subset DP",
+  "examples_sha256": "33b38c669ccd113e11975be5c599a9c9d2b14046adb80648ee938459c7bd5241"
+}

@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "proof_sha256": "c7500f3a9bda14aa4a5142d55518e9091b1b0bb56a6aa61e37435cf857b90ac5",
+  "script_sha256": "37c983b425b3ee0b91c86dd6a0ff314b23cfff1af96d929327ffff481abcd026",
+  "gaps_sha256": "d19431b86df640072690b92eacfa89e86b684bcaa47765fc4f323b7a44b71ef8",
+  "independent_cpp_sha256": "c7111f47b36e72b5361e3f229e00786fd28740f1f84e369cc411e49358afb330",
+  "algorithm": "Positive-coordinate face packing; exact cost-layered O/Z closure, independent C++ implementation. No raw-profile candidate code is imported.",
+  "cap": 1000001,
+  "source_count": 19852699,
+  "source_minimum_J_histogram": [
+    405475,
+    2301377,
+    6253860,
+    10891987
+  ],
+  "scalar_minimum_J_histogram": [
+    213873,
+    266697,
+    19137,
+    220
+  ],
+  "three_J_gap_count": 73,
+  "three_J_largest_gap": 27781,
+  "two_J_gap_count": 293,
+  "two_J_largest_gap": 879001,
+  "cap50001_source_count": 461641,
+  "full_gap_list_matches_frozen_file": true,
+  "O3_and_O2_NDEBUG_full_outputs_identical": true,
+  "manual_all_order_audit": "Exact binary block matrix, parity and bit reversal, ordered caterpillar construction, entire d=1 graph rebase, positive-density upper bound, and sufficient four-block lemma are valid. The large interval is explicitly finite-exact and not a cofinite proof.",
+  "scope": "Four-block all-order coverage remains OPEN."
+}

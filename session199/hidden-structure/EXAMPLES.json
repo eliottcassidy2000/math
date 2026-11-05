@@ -1,0 +1,78 @@
+[
+  {
+    "target": 27783,
+    "source_profile": [
+      7553,
+      97,
+      10115,
+      97
+    ],
+    "source_word_from_transitive_edge": "OZOZZZJOZZZOZ",
+    "root_changes": 1,
+    "balanced_word_from_transitive_edge": "OZOZZZJOZZZOZOJ",
+    "balanced_profile": [
+      27783,
+      7553,
+      27783,
+      7553
+    ],
+    "balanced_graph_order": 17
+  },
+  {
+    "target": 879001,
+    "source_profile": [
+      291853,
+      124834,
+      293574,
+      126555
+    ],
+    "source_word_from_transitive_edge": "ZJOZOZZOZOZJZZZZOZJ",
+    "root_changes": 3,
+    "balanced_word_from_transitive_edge": "ZJOZOZZOZOZJZZZZOZJOJ",
+    "balanced_profile": [
+      879001,
+      291853,
+      879001,
+      291853
+    ],
+    "balanced_graph_order": 23
+  },
+  {
+    "target": 999999,
+    "source_profile": [
+      156627,
+      0,
+      421686,
+      9
+    ],
+    "source_word_from_transitive_edge": "ZZZJZOOZOOOZZZZZOZO",
+    "root_changes": 1,
+    "balanced_word_from_transitive_edge": "ZZZJZOOZOOOZZZZZOZOOJ",
+    "balanced_profile": [
+      999999,
+      156627,
+      999999,
+      156627
+    ],
+    "balanced_graph_order": 23
+  },
+  {
+    "target": 1000001,
+    "source_profile": [
+      262223,
+      3,
+      368889,
+      3
+    ],
+    "source_word_from_transitive_edge": "ZJOOOZZZZZZOZOZZOZ",
+    "root_changes": 1,
+    "balanced_word_from_transitive_edge": "ZJOOOZZZZZZOZOZZOZOJ",
+    "balanced_profile": [
+      1000001,
+      262223,
+      1000001,
+      262223
+    ],
+    "balanced_graph_order": 22
+  }
+]
