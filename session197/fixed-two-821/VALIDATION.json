@@ -1,0 +1,213 @@
+{
+  "closure": {
+    "admissible_edges": 441723,
+    "bound": 821,
+    "complete": true,
+    "cycle_limit": 3,
+    "cycle_rejected_edges": 213747,
+    "max_shortest_word": 23,
+    "missing_odds": [
+      7,
+      21,
+      821
+    ],
+    "processed": 374692,
+    "states": 374692
+  },
+  "family_direct_subset_controls": [
+    {
+      "C": 4,
+      "H": 81,
+      "k": 0,
+      "rows": [
+        14,
+        108,
+        120,
+        112,
+        99,
+        65,
+        1
+      ]
+    },
+    {
+      "C": 4,
+      "H": 135,
+      "k": 1,
+      "rows": [
+        78,
+        236,
+        248,
+        240,
+        227,
+        193,
+        128,
+        1
+      ]
+    },
+    {
+      "C": 4,
+      "H": 233,
+      "k": 2,
+      "rows": [
+        206,
+        492,
+        504,
+        496,
+        483,
+        449,
+        384,
+        256,
+        1
+      ]
+    },
+    {
+      "C": 4,
+      "H": 429,
+      "k": 3,
+      "rows": [
+        462,
+        1004,
+        1016,
+        1008,
+        995,
+        961,
+        896,
+        768,
+        512,
+        1
+      ]
+    },
+    {
+      "C": 4,
+      "H": 821,
+      "k": 4,
+      "rows": [
+        974,
+        2028,
+        2040,
+        2032,
+        2019,
+        1985,
+        1920,
+        1792,
+        1536,
+        1024,
+        1
+      ]
+    },
+    {
+      "C": 4,
+      "H": 1605,
+      "k": 5,
+      "rows": [
+        1998,
+        4076,
+        4088,
+        4080,
+        4067,
+        4033,
+        3968,
+        3840,
+        3584,
+        3072,
+        2048,
+        1
+      ]
+    },
+    {
+      "C": 4,
+      "H": 3173,
+      "k": 6,
+      "rows": [
+        4046,
+        8172,
+        8184,
+        8176,
+        8163,
+        8129,
+        8064,
+        7936,
+        7680,
+        7168,
+        6144,
+        4096,
+        1
+      ]
+    }
+  ],
+  "family_uncapped_controls": 31,
+  "literal_seed_profile": [
+    37,
+    5,
+    49,
+    4,
+    5
+  ],
+  "maximum_stored_witness_order": 12,
+  "python_small_closures": [
+    {
+      "admissible_edges": 1638,
+      "cycle_limit": 1,
+      "cycle_rejected_edges": 714,
+      "states": 1254,
+      "support": [
+        3,
+        5,
+        9,
+        11,
+        15,
+        17,
+        19
+      ]
+    },
+    {
+      "admissible_edges": 1673,
+      "cycle_limit": 2,
+      "cycle_rejected_edges": 607,
+      "states": 1282,
+      "support": [
+        3,
+        5,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19
+      ]
+    },
+    {
+      "admissible_edges": 1683,
+      "cycle_limit": 3,
+      "cycle_rejected_edges": 394,
+      "states": 1290,
+      "support": [
+        3,
+        5,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19
+      ]
+    }
+  ],
+  "status": "PASS",
+  "target_C": 4,
+  "target_H": 821,
+  "target_rows": [
+    974,
+    2028,
+    2040,
+    2032,
+    2019,
+    1985,
+    1920,
+    1792,
+    1536,
+    1024,
+    1
+  ],
+  "uncapped_witness_replays": 407
+}
