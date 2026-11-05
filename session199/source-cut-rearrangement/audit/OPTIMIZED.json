@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "proof_sha256": "3eafe70ee94e3ea7f0a25912df7f1488eda95d041c8d7400cdb3f78799797cd0",
+  "script_sha256": "b62b529c3ffe8b13f347caaf7742077d76682748ae92cec675db9a6c1e079568",
+  "independent_fixed_partner_readout_rows": 83,
+  "physical_initial_profiles": 21,
+  "strict_exchange_checks": 69720,
+  "arbitrary_OZJ_suffix_cone_checks": 19078,
+  "block_and_cut_exhaustion_through": 12,
+  "minmax": {
+    "1": [
+      5,
+      5
+    ],
+    "2": [
+      9,
+      11
+    ],
+    "3": [
+      15,
+      23
+    ],
+    "4": [
+      25,
+      51
+    ],
+    "5": [
+      45,
+      107
+    ],
+    "6": [
+      81,
+      227
+    ],
+    "7": [
+      153,
+      467
+    ],
+    "8": [
+      289,
+      963
+    ],
+    "9": [
+      561,
+      1955
+    ],
+    "10": [
+      1089,
+      3971
+    ],
+    "11": [
+      2145,
+      8003
+    ],
+    "12": [
+      4225,
+      16131
+    ]
+  },
+  "cutmin": {
+    "1": null,
+    "2": 2,
+    "3": 4,
+    "4": 6,
+    "5": 8,
+    "6": 12,
+    "7": 16,
+    "8": 24,
+    "9": 32,
+    "10": 48,
+    "11": 64,
+    "12": 96
+  },
+  "manual_audit": "Cut minimum proof, equality boundary, signed versus positive interaction, arbitrary O/Z/J suffix exchange, sorted extrema, and both plus/Mersenne product envelopes checked. No mathematical correction required.",
+  "scope": "Extrema are not exact-level coverage."
+}
