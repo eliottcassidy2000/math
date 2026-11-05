@@ -1,0 +1,70 @@
+{
+  "candidate_graphs": 3215360,
+  "cases": [
+    [
+      2,
+      6,
+      42,
+      2752512,
+      0
+    ],
+    [
+      3,
+      5,
+      38,
+      311296,
+      40
+    ],
+    [
+      4,
+      4,
+      37,
+      151552,
+      72
+    ]
+  ],
+  "catalog_sha256": "87ffadc1351902637e10daf79ed68d4f9a316e925f73ec123914f9644f695cb4",
+  "census_output_sha256": "eac81171a37a41100f55d1ca11f1a933fe4b4bdf333793aedc89472308d27ffe",
+  "literal_run_controls": 16,
+  "pattern_input_sha256": "b57ec4268ee91e353ee329500bc6d13416b34f9adee6a30453d9775697a6ce97",
+  "profiles": [
+    {
+      "A": 60,
+      "beta": -1,
+      "classes": 4
+    },
+    {
+      "A": 72,
+      "beta": 1,
+      "classes": 1
+    },
+    {
+      "A": 100,
+      "beta": -1,
+      "classes": 2
+    },
+    {
+      "A": 120,
+      "beta": 1,
+      "classes": 2
+    },
+    {
+      "A": 156,
+      "beta": -1,
+      "classes": 2
+    },
+    {
+      "A": 180,
+      "beta": -1,
+      "classes": 4
+    },
+    {
+      "A": 200,
+      "beta": 1,
+      "classes": 1
+    }
+  ],
+  "rooted_classes": 16,
+  "status": "PASS",
+  "strong_rooted_classes": 12
+}
