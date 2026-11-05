@@ -1,7 +1,7 @@
 ---
 id: HYP-9467
 title: "Pre-registered test of THM-4874 at orders 10-15. For every sole-exit-free tournament T with hc(T) = k in {3, 4, 5}, let k1 = #{v : hc(T - v) = 1} and k2 = #{v : hc(T - v) = 2}. THM-4874 predicts the joint counts of (k1, k2, |Aut|) exactly from the block of T's terminal core: hc = 3 gives (3, 0, 3) for F(2n - 10) classes (C3 block) and (3, 1, 1) for F(2n - 11) (W4 block); hc = 4 gives (2, 1, 1) and (2, 2, 1) for F(2n - 11) each; hc = 5 gives (2, 0, 1) for F(2n - 12) ((W4, all)), and (3, 0, 1), (2, 1, 1), (2, 2, 1) for F(2n - 13) each (the three 5-blocks, the first being (AT_5, its two sole exits)); nothing else occurs"
-status: CONFIRMED (pre-registered in 671f7fb87e; all predictions at orders 10-15 held exactly, no other combination occurred); recorded in THM-4874
+status: CONFIRMED (pre-registered in 671f7fb87e; all 48 predicted counts at orders 10-15 held exactly, no other combination occurred; blind at order 15, and for k2 and the joint correlation at 10-14); recorded in THM-4874 (audited PASS WITH CORRECTIONS, MISTAKE-714)
 session: kind-pasteur-2026-11-04-S10
 date: 2026-11-04
 related: [THM-4874, HYP-9464, THM-4869, THM-4872, THM-4868]
@@ -73,7 +73,10 @@ reported, with the class if a prediction fails.
 - The run was `fewcycle_deletion_census_20261104 15`, made after the pre-registration commit 671f7fb87e. It took
   16 min wall time, 826 s of it at order 15.
 - The record is `fewcycle_deletion_census_20261104.out`. Its `JOINT` lines were compared mechanically with the table
-  above (18 rows, all MATCH).
+  above: all 48 predicted counts in the 18 JOINT lines MATCH.
+- The test is blind at order 15. At orders 10-14 it is blind for k2 and the joint correlation; the k1 and |Aut|
+  marginals there were the HYP-9464 audit's data.
+- The independent audit of THM-4874 reproduced the joint counts at orders 7-11 with its own census.
 
 Order 15 has 1,090,032 strong classes with hc <= 5:
 - u_3, u_4, u_5 = 10,946, 8,362, 7,375;

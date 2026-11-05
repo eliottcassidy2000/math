@@ -1,0 +1,86 @@
+read 922 sole-exit-free classes with hc in {3,4,5} from aud_uhdel_census_ext11.out
+block data recomputed here (#delta=1, #delta=2, h0, |W|, A=W, k):
+  k3 (C3, all): (3, 0, 0, 3, True, 3)
+  k3 (W4, {c,d}): (3, 1, 2, 4, False, 3)
+  k4 (W4, {b,c,d}): (2, 2, 1, 4, False, 4)
+  k4 (W4, {a,c,d}): (2, 1, 2, 4, False, 4)
+  k5 (W4, all): (2, 0, 0, 4, True, 5)
+  k5 (AT5, {4,5}): (3, 0, 4, 5, False, 5)
+  k5 (W5, A1={0,1}): (2, 1, 4, 5, False, 5)
+  k5 (W5, A2={1,4}): (2, 2, 4, 5, False, 5)
+no unique minimal one-arc-leaving set (0 minimal; arc-strong connectivity >= 2 if 0): n=6 hc=5 |Aut|=3 k1=6 k2=0 rows=[10, 20, 33, 22, 37, 11] (outside the theorem range)
+no unique minimal one-arc-leaving set (0 minimal; arc-strong connectivity >= 2 if 0): n=6 hc=5 |Aut|=3 k1=0 k2=6 rows=[10, 20, 33, 38, 13, 19] (outside the theorem range)
+no unique minimal one-arc-leaving set (0 minimal; arc-strong connectivity >= 2 if 0): n=6 hc=5 |Aut|=1 k1=2 k2=3 rows=[18, 12, 9, 49, 38, 7] (outside the theorem range)
+no unique minimal one-arc-leaving set (0 minimal; arc-strong connectivity >= 2 if 0): n=6 hc=4 |Aut|=1 k1=4 k2=2 rows=[24, 9, 3, 52, 38, 7] (outside the theorem range)
+no unique minimal one-arc-leaving set (0 minimal; arc-strong connectivity >= 2 if 0): n=6 hc=5 |Aut|=1 k1=2 k2=3 rows=[24, 33, 3, 38, 14, 21] (outside the theorem range)
+
+vertex deletions compared with table (1): 9536; mismatches: 0
+coverage of the cases of (1): {'W': 3601, 'u': 917, 'l, R={l}, p=0': 6, 'chain': 1975, 'l, R={l}, p>=1': 232, 'l, |R|>=2': 679, 'prefix v != l': 2126}
+hc(T) and hc(T - v) values recomputed in Python (orders <= 10): 3672 (mismatches are counted above)
+Setting-claim violations: none
+(4) hc = 3: |Aut| > 1 iff k2 = 0 -- violations: 0
+
+per order and hc: (block, k1, k2, |Aut|): count   [HYP-9467 prediction for n >= 7]
+ n=6 hc=3:
+   ('k3 (C3, all)', 3, 0, 3): 1
+   ('k3 (W4, {c,d})', 3, 2, 1): 1
+ n=6 hc=4:
+   ('k4 (W4, {a,c,d})', 2, 2, 1): 1
+   ('k4 (W4, {b,c,d})', 3, 2, 1): 1
+ n=7 hc=3:
+   ('k3 (C3, all)', 3, 0, 3): 3  predicted (3,0,3) x 3  OK
+   ('k3 (W4, {c,d})', 3, 1, 1): 2  predicted (3,1,1) x 2  OK
+ n=7 hc=4:
+   ('k4 (W4, {a,c,d})', 2, 1, 1): 2  predicted (2,1,1) x 2  OK
+   ('k4 (W4, {b,c,d})', 2, 2, 1): 2  predicted (2,2,1) x 2  OK
+ n=7 hc=5:
+   ('k5 (AT5, {4,5})', 3, 0, 1): 1  predicted (3,0,1) x 1  OK
+   ('k5 (W4, all)', 2, 0, 1): 1  predicted (2,0,1) x 1  OK
+   ('k5 (W5, A1={0,1})', 2, 1, 1): 1  predicted (2,1,1) x 1  OK
+   ('k5 (W5, A2={1,4})', 2, 2, 1): 1  predicted (2,2,1) x 1  OK
+ n=8 hc=3:
+   ('k3 (C3, all)', 3, 0, 3): 8  predicted (3,0,3) x 8  OK
+   ('k3 (W4, {c,d})', 3, 1, 1): 5  predicted (3,1,1) x 5  OK
+ n=8 hc=4:
+   ('k4 (W4, {a,c,d})', 2, 1, 1): 5  predicted (2,1,1) x 5  OK
+   ('k4 (W4, {b,c,d})', 2, 2, 1): 5  predicted (2,2,1) x 5  OK
+ n=8 hc=5:
+   ('k5 (AT5, {4,5})', 3, 0, 1): 2  predicted (3,0,1) x 2  OK
+   ('k5 (W4, all)', 2, 0, 1): 3  predicted (2,0,1) x 3  OK
+   ('k5 (W5, A1={0,1})', 2, 1, 1): 2  predicted (2,1,1) x 2  OK
+   ('k5 (W5, A2={1,4})', 2, 2, 1): 2  predicted (2,2,1) x 2  OK
+ n=9 hc=3:
+   ('k3 (C3, all)', 3, 0, 3): 21  predicted (3,0,3) x 21  OK
+   ('k3 (W4, {c,d})', 3, 1, 1): 13  predicted (3,1,1) x 13  OK
+ n=9 hc=4:
+   ('k4 (W4, {a,c,d})', 2, 1, 1): 13  predicted (2,1,1) x 13  OK
+   ('k4 (W4, {b,c,d})', 2, 2, 1): 13  predicted (2,2,1) x 13  OK
+ n=9 hc=5:
+   ('k5 (AT5, {4,5})', 3, 0, 1): 5  predicted (3,0,1) x 5  OK
+   ('k5 (W4, all)', 2, 0, 1): 8  predicted (2,0,1) x 8  OK
+   ('k5 (W5, A1={0,1})', 2, 1, 1): 5  predicted (2,1,1) x 5  OK
+   ('k5 (W5, A2={1,4})', 2, 2, 1): 5  predicted (2,2,1) x 5  OK
+ n=10 hc=3:
+   ('k3 (C3, all)', 3, 0, 3): 55  predicted (3,0,3) x 55  OK
+   ('k3 (W4, {c,d})', 3, 1, 1): 34  predicted (3,1,1) x 34  OK
+ n=10 hc=4:
+   ('k4 (W4, {a,c,d})', 2, 1, 1): 34  predicted (2,1,1) x 34  OK
+   ('k4 (W4, {b,c,d})', 2, 2, 1): 34  predicted (2,2,1) x 34  OK
+ n=10 hc=5:
+   ('k5 (AT5, {4,5})', 3, 0, 1): 13  predicted (3,0,1) x 13  OK
+   ('k5 (W4, all)', 2, 0, 1): 21  predicted (2,0,1) x 21  OK
+   ('k5 (W5, A1={0,1})', 2, 1, 1): 13  predicted (2,1,1) x 13  OK
+   ('k5 (W5, A2={1,4})', 2, 2, 1): 13  predicted (2,2,1) x 13  OK
+ n=11 hc=3:
+   ('k3 (C3, all)', 3, 0, 3): 144  predicted (3,0,3) x 144  OK
+   ('k3 (W4, {c,d})', 3, 1, 1): 89  predicted (3,1,1) x 89  OK
+ n=11 hc=4:
+   ('k4 (W4, {a,c,d})', 2, 1, 1): 89  predicted (2,1,1) x 89  OK
+   ('k4 (W4, {b,c,d})', 2, 2, 1): 89  predicted (2,2,1) x 89  OK
+ n=11 hc=5:
+   ('k5 (AT5, {4,5})', 3, 0, 1): 34  predicted (3,0,1) x 34  OK
+   ('k5 (W4, all)', 2, 0, 1): 55  predicted (2,0,1) x 55  OK
+   ('k5 (W5, A1={0,1})', 2, 1, 1): 34  predicted (2,1,1) x 34  OK
+   ('k5 (W5, A2={1,4})', 2, 2, 1): 34  predicted (2,2,1) x 34  OK
+
+all HYP-9467 joint predictions at the orders >= 7 present here hold: True

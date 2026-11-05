@@ -1,16 +1,22 @@
 ---
 id: THM-4874
-title: "The uniquely Hamiltonian deletion law. Let T have no vertex of out-degree 1 and exactly k Hamiltonian cycles, with k = 3 and n >= 6, or k = 4, 5 and n >= 7, and let (W, A) be the block of its terminal core (THM-4869). Then hc(T - v) is fixed by where v sits: a multiple of k in the prefix, 0 at the tail u, 0 at the head l (unless the prefix is the single vertex l), k on the chain, and delta(v) = sum over x in A - v of end_x(W - v) in the block. Hence T - v is uniquely Hamiltonian iff v is a block vertex with delta(v) = 1. There are exactly 3 such v for k = 3 and exactly 2 for k = 4. For k = 5 there are 3 if the block is (AT_5, its two sole exits) and 2 otherwise, so F(2n - 13) of the u_5(n) classes have three and L(2n - 12) have two. The block also fixes #{v : hc(T - v) = 2}; with THM-4872 (B), a three-cycle sole-exit-free tournament has a nontrivial automorphism iff no deletion leaves exactly two cycles. Every core block (AT_m, {m-1, m}) gives exactly three deletions, at 1, m-1, m"
+title: "The uniquely Hamiltonian deletion law. Let T have no vertex of out-degree 1 and exactly k Hamiltonian cycles, with k = 3 and n >= 6, or k = 4, 5 and n >= 7, and let (W, A) be the block of its terminal core (THM-4869). Then hc(T - v) is fixed by where v sits: a multiple of k in the prefix, 0 at the tail u, 0 at the head l (unless the prefix is the single vertex l), k on the chain, and delta(v) = sum over x in A - v of end_x(W - v) in the block. Hence T - v is uniquely Hamiltonian iff v is a block vertex with delta(v) = 1. There are exactly 3 such v for k = 3 and exactly 2 for k = 4. For k = 5 there are 3 if the block is (AT_5, its two sole exits) and 2 otherwise, so F(2n - 13) of the u_5(n) classes have three and L(2n - 12) have two. For n >= 7 the block also fixes #{v : hc(T - v) = 2}; with THM-4872 (B), a three-cycle sole-exit-free tournament has a nontrivial automorphism iff no deletion leaves exactly two cycles. Every one-arc join on the core block (AT_m, {m-1, m}), m >= 4, with a uniquely Hamiltonian or one-vertex prefix has exactly three uniquely Hamiltonian deletions, the block vertices 1, m-1, m"
 status: >
   PROVED (kind-pasteur-2026-11-04-S10), given THM-4869 (C2), Lemmas B1-B5 and (C4) (opus-S75; its (C1) base, orders
-  6-12, is FINITE-EXACT). The proof is the one-arc product law applied to T - v, plus a finite table for the eight
+  6-12, is FINITE-EXACT), with THM-4868 (F) for R(m) = F(2m - 5) in (3). (4) also uses THM-4872 (B) (opus-S76), which
+  uses THM-4868 (E). The proof is the one-arc product law applied to T - v, plus a finite table for the eight
   blocks of type <= 5 (computed, and by hand for C3, W4 and AT_5). Statement (5) holds for every m >= 4 and needs no
   census.
   PRE-REGISTERED (HYP-9467, commit 671f7fb87e, before the run): the joint counts of (#{hc(T - v) = 1},
-  #{hc(T - v) = 2}, |Aut|) at orders 10-15, run on the HYP-9464 auditor's independent census. RESULT: CONFIRMED, all
-  18 predicted rows exact and no other combination (order 15: 1,090,032 strong classes with hc <= 5).
+  #{hc(T - v) = 2}, |Aut|) at orders 10-15, run on the HYP-9464 auditor's independent census. RESULT: CONFIRMED.
+  All 48 predicted counts (18 JOINT lines, orders 10-15) are exact, with no other combination. The test is blind at
+  order 15. At orders 10-14 it is blind for k2 and the joint correlation; the k1 and |Aut| marginals there were the
+  HYP-9464 audit's data. Order 15 has 1,090,032 strong classes with hc <= 5.
   Proves HYP-9464 (B), which was FINITE-EXACT at orders 6-14, and the HYP-9464 audit's hc = 5 observation.
-  AUDIT: pending.
+  AUDIT: independent adversarial audit PASS WITH CORRECTIONS (0 major, 11 minor, all applied; MISTAKE-714);
+  04-computation/experiments/uh_deletion_law_20261104_audit_S10/AUDIT.md. The audit's own code re-derived the eight
+  blocks over all labelled tournaments to order 7. It also checked every Setting claim and the whole table (1) on all
+  917 in-range classes at orders 6-11 (9,536 deletions, 0 mismatches), and the joint counts at orders 7-11.
 session: kind-pasteur-2026-11-04-S10
 source: 05-knowledge/results/fermat_self_duality_fewcycle_coincidences_20261104.md
 scripts:
@@ -72,8 +78,16 @@ Notation for the statements:
 | 5 | (W_5, A_1) | 1, 1, 2, 3, 3 | 2 | 1 | 4 |
 | 5 | (W_5, A_2) | 1, 1, 2, 3, 2 | 2 | 2 | 4 |
 
-Here W4 = AT_4 is a -> b -> c -> d -> a with a -> c, b -> d. W_5 is the uniquely Hamiltonian 5-tournament with scores
-1, 2, 2, 2, 3 and one sole exit (`fewcycle_block_deletions_20261104.out` gives its rows and the two sets A_1, A_2).
+Here W4 = AT_4 is a -> b -> c -> d -> a with a -> c, b -> d.
+
+W_5 is the uniquely Hamiltonian 5-tournament with scores 1, 2, 2, 2, 3. It is the only one of the three uniquely
+Hamiltonian 5-tournaments with these scores, and it has one sole exit.
+- Its unique Hamiltonian cycle is x -> y -> t -> s -> r -> x, with chords y -> s, t -> x, t -> r, s -> x and r -> y.
+  Here x is the sole exit and t the vertex of score 3.
+- A_1 = {x, y}, with delta x 1, y 1, r 2, s 3, t 3.
+- A_2 = {x, t}, with delta x 1, y 1, r 2, s 3, t 2.
+
+The audit checked these labels against `fewcycle_block_deletions_20261104.out`.
 
 So T has exactly:
 - 3 uniquely Hamiltonian deletions if k = 3;
@@ -106,7 +120,11 @@ note's section 5 (a), checked for m = 4..12 by `at_block_fermat_cycles_20261104.
 Let T be any one-arc join with this block, any chain, and a uniquely Hamiltonian or one-vertex prefix. Then:
 - T has 2^(m-3) + 1 Hamiltonian cycles;
 - T has exactly three uniquely Hamiltonian deletions, the block vertices 1, m - 1 and m;
-- each other block vertex j gives hc(T - j) = H(AT_(m-2)) = 2^(m-4) + 1, and h0 = 2^(m-3).
+- each other block vertex j gives hc(T - j) = 2^(m-4) + 1, which is H(AT_(m-2)) for m >= 5;
+- h0 = 2^(m-3).
+
+The prefix hypothesis is needed. With a rooted prefix of hc 2, the join has hc = 2(2^(m-3) + 1) and no uniquely
+Hamiltonian deletion (audit, m = 4, 5, 6).
 
 The type-3 W4 block (m = 4) and the 3-deletion type-5 block (m = 5) are the first two cases.
 
@@ -177,8 +195,8 @@ minimal case gives h0 ∈ {4} or is absent. For k = 3 at n = 6 it gives the W4 b
 
 **(5).** Label AT_m as 1 < ... < m with m -> 1.
 - **It is a block.** This was shown in the note's section 5 (a), together with the type 2^(m-3) + 1.
-- **The cycle count.** The lemma and the cases of (1) apply unchanged (they used only the one-arc structure, the
-  condensation of D - u and s_l(R) = 1). So hc(T) = e_u(D) = 2^(m-3) + 1.
+- **The cycle count.** By B2, hc(T) = s_l(R) e_u(D) = 2^(m-3) + 1. The cases of (1) apply unchanged, since they used
+  only the one-arc structure, the condensation of D - u and s_l(R) = 1.
 - **The block values.**
   - W - 1 and W - m are transitive, with ends m ∈ A and m - 1 ∈ A: delta = 1.
   - W - (m - 1) is AT_(m-1) and A - (m - 1) = {m}. Only its transitive path ends at m: delta = 1.
@@ -199,7 +217,9 @@ minimal case gives h0 ∈ {4} or is absent. For k = 3 at n = 6 it gives the W4 b
   Hamiltonian prefix of order <= 5 up to isomorphism, plus the one-vertex prefix.
 - `at_block_fermat_cycles_20261104.py`: the AT_m block conditions and hc for m = 4..12.
 - **Census.** The HYP-9464 audit's independent census (`aud_fewcycle.c`, every strong class with hc <= 5) gives the
-  distributions of #{v : hc(T - v) = 1}, and they agree with (2) and (3) at orders 6-14. That census plus the joint
+  distributions of #{v : hc(T - v) = 1}. They agree with (2) and (3) at orders 6-14 for hc = 3, and at orders 7-14
+  for hc = 4, 5. Order 6 lies outside the range for hc = 4, 5: 2-strong classes occur there, and (W4, {b, c, d}) with
+  p = 0 gives hc(T - l) = h0 = 1. That census plus the joint
   statistic is the pre-registered test HYP-9467 at orders 10-15, CONFIRMED (`fewcycle_deletion_census_20261104.out`).
   At order 15 the joint counts were:
   - hc 3: (3,0,3) 6,765 and (3,1,1) 4,181;
@@ -210,13 +230,34 @@ minimal case gives h0 ∈ {4} or is absent. For k = 3 at n = 6 it gives the W4 b
 
 - The structure theory (cores, blocks, prefixes, counts) is opus-S75's THM-4869.
 - The Z_3 / asymmetric split is opus-S76's THM-4872 (B).
-- The few-cycle counts are klein's HYP-9459.
+- klein conjectured u_3 and u_4 (HYP-9459). They, and the new u_5 law, are proved in THM-4869 (C4).
+- A related hc = 2 phenomenon is klein's: deleting either swapped segment of a two-cycle tournament leaves a
+  unique-cycle tournament. Those are segments, not single vertices
+  (`05-knowledge/results/two_branch_rearming_sigma_sweep_20261104/README.md`).
 - The census program and the hc = 5 observation (L(2n - 12) / F(2n - 13)) are the HYP-9464 auditor's.
 - New here:
   - the deletion table (1) and the law (2)-(4);
   - the identification of the 3-deletion type-5 block as (AT_5, {4, 5});
-  - the AT_m block family (5).
+  - the deletion data of the AT_m blocks (5). Their block property and type come from the note's section 5 (a).
 
 ## Audit
 
-Pending.
+Independent adversarial audit, PASS WITH CORRECTIONS: 0 major and 11 minor findings, all applied (MISTAKE-714). The
+report is `04-computation/experiments/uh_deletion_law_20261104_audit_S10/AUDIT.md`.
+
+The auditor's own code, which shares nothing with the session or the HYP-9464 auditor, checked:
+- the block list over all labelled tournaments of orders 3-7;
+- the joint counts at orders 7-11, by a labelled brute force and an independent vertex-extension census;
+- every Setting claim and table (1) on all 917 in-range classes at orders 6-11 (9,536 deletions, 0 mismatches,
+  every case exercised);
+- statement (5) on 216 joins for m = 4..9;
+- the generating functions to n = 40.
+
+The corrections were:
+- the prefix hypothesis in (5)'s title sentence;
+- m >= 5 for H(AT_(m-2));
+- n >= 7 for the value-2 statement;
+- dependency and credit details;
+- the count of predictions (48 counts in 18 lines) and the blind range;
+- an intrinsic description of W_5;
+- the companion files.
