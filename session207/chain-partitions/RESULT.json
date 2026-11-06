@@ -1,0 +1,301 @@
+{
+  "status": "PASS",
+  "physical_chain_compositions_through_order11": 89,
+  "primitive_controls": [
+    {
+      "m": 1,
+      "q": 3,
+      "primitive_primes": [
+        3
+      ]
+    },
+    {
+      "m": 2,
+      "q": 5,
+      "primitive_primes": [
+        5
+      ]
+    },
+    {
+      "m": 3,
+      "q": 9,
+      "primitive_primes": []
+    },
+    {
+      "m": 4,
+      "q": 17,
+      "primitive_primes": [
+        17
+      ]
+    },
+    {
+      "m": 5,
+      "q": 33,
+      "primitive_primes": [
+        11
+      ]
+    },
+    {
+      "m": 6,
+      "q": 65,
+      "primitive_primes": [
+        13
+      ]
+    },
+    {
+      "m": 7,
+      "q": 129,
+      "primitive_primes": [
+        43
+      ]
+    },
+    {
+      "m": 8,
+      "q": 257,
+      "primitive_primes": [
+        257
+      ]
+    },
+    {
+      "m": 9,
+      "q": 513,
+      "primitive_primes": [
+        19
+      ]
+    },
+    {
+      "m": 10,
+      "q": 1025,
+      "primitive_primes": [
+        41
+      ]
+    },
+    {
+      "m": 11,
+      "q": 2049,
+      "primitive_primes": [
+        683
+      ]
+    },
+    {
+      "m": 12,
+      "q": 4097,
+      "primitive_primes": [
+        241
+      ]
+    },
+    {
+      "m": 13,
+      "q": 8193,
+      "primitive_primes": [
+        2731
+      ]
+    },
+    {
+      "m": 14,
+      "q": 16385,
+      "primitive_primes": [
+        29,
+        113
+      ]
+    },
+    {
+      "m": 15,
+      "q": 32769,
+      "primitive_primes": [
+        331
+      ]
+    },
+    {
+      "m": 16,
+      "q": 65537,
+      "primitive_primes": [
+        65537
+      ]
+    },
+    {
+      "m": 17,
+      "q": 131073,
+      "primitive_primes": [
+        43691
+      ]
+    },
+    {
+      "m": 18,
+      "q": 262145,
+      "primitive_primes": [
+        37,
+        109
+      ]
+    },
+    {
+      "m": 19,
+      "q": 524289,
+      "primitive_primes": [
+        174763
+      ]
+    },
+    {
+      "m": 20,
+      "q": 1048577,
+      "primitive_primes": [
+        61681
+      ]
+    }
+  ],
+  "distinct_canonical_products_through_weight24": 948,
+  "greedy_inputs_checked": 20000,
+  "greedy_members_found": 179,
+  "partition_rows": [
+    {
+      "n": 1,
+      "chain_count": 1,
+      "padded_count": 1
+    },
+    {
+      "n": 2,
+      "chain_count": 0,
+      "padded_count": 1
+    },
+    {
+      "n": 3,
+      "chain_count": 1,
+      "padded_count": 2
+    },
+    {
+      "n": 4,
+      "chain_count": 1,
+      "padded_count": 3
+    },
+    {
+      "n": 5,
+      "chain_count": 1,
+      "padded_count": 4
+    },
+    {
+      "n": 6,
+      "chain_count": 2,
+      "padded_count": 6
+    },
+    {
+      "n": 7,
+      "chain_count": 3,
+      "padded_count": 9
+    },
+    {
+      "n": 8,
+      "chain_count": 3,
+      "padded_count": 12
+    },
+    {
+      "n": 9,
+      "chain_count": 5,
+      "padded_count": 17
+    },
+    {
+      "n": 10,
+      "chain_count": 6,
+      "padded_count": 23
+    },
+    {
+      "n": 11,
+      "chain_count": 8,
+      "padded_count": 31
+    },
+    {
+      "n": 12,
+      "chain_count": 10,
+      "padded_count": 41
+    },
+    {
+      "n": 13,
+      "chain_count": 14,
+      "padded_count": 55
+    },
+    {
+      "n": 14,
+      "chain_count": 16,
+      "padded_count": 71
+    },
+    {
+      "n": 15,
+      "chain_count": 22,
+      "padded_count": 93
+    },
+    {
+      "n": 16,
+      "chain_count": 27,
+      "padded_count": 120
+    },
+    {
+      "n": 17,
+      "chain_count": 34,
+      "padded_count": 154
+    },
+    {
+      "n": 18,
+      "chain_count": 42,
+      "padded_count": 196
+    },
+    {
+      "n": 19,
+      "chain_count": 54,
+      "padded_count": 250
+    },
+    {
+      "n": 20,
+      "chain_count": 64,
+      "padded_count": 314
+    },
+    {
+      "n": 21,
+      "chain_count": 82,
+      "padded_count": 396
+    },
+    {
+      "n": 22,
+      "chain_count": 99,
+      "padded_count": 495
+    },
+    {
+      "n": 23,
+      "chain_count": 122,
+      "padded_count": 617
+    },
+    {
+      "n": 24,
+      "chain_count": 148,
+      "padded_count": 765
+    },
+    {
+      "n": 25,
+      "chain_count": 183,
+      "padded_count": 948
+    },
+    {
+      "n": 26,
+      "chain_count": 218,
+      "padded_count": 1166
+    },
+    {
+      "n": 27,
+      "chain_count": 268,
+      "padded_count": 1434
+    },
+    {
+      "n": 28,
+      "chain_count": 321,
+      "padded_count": 1755
+    },
+    {
+      "n": 29,
+      "chain_count": 388,
+      "padded_count": 2143
+    },
+    {
+      "n": 30,
+      "chain_count": 464,
+      "padded_count": 2607
+    }
+  ]
+}
