@@ -1,0 +1,8 @@
+1 classes=1 candidates=1 all=1 strong=1 max=1 gaps=
+2 classes=1 candidates=2 all=1 strong=0 max=1 gaps=
+3 classes=2 candidates=4 all=2 strong=1 max=3 gaps=
+4 classes=4 candidates=16 all=3 strong=1 max=5 gaps=
+5 classes=12 candidates=64 all=7 strong=4 max=15 gaps=7,
+6 classes=56 candidates=384 all=19 strong=13 max=45 gaps=7,21,35,39,
+7 classes=456 candidates=3584 all=77 strong=67 max=189 gaps=7,21,63,107,119,149,161,163,165,167,169,173,177,179,181,183,185,187,
+8 classes=0 candidates=58368 all=320 strong=297 max=661 gaps=7,21,611,615,617,619,623,625,635,647,655,
