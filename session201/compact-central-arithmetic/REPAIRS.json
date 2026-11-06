@@ -1,0 +1,575 @@
+{
+  "gaps5": [
+    7,
+    13,
+    21,
+    41,
+    43,
+    55,
+    67,
+    77,
+    83,
+    163,
+    173,
+    231,
+    233,
+    247,
+    251,
+    277,
+    299,
+    313,
+    421,
+    449,
+    503,
+    533,
+    569,
+    583,
+    637,
+    667,
+    821,
+    847,
+    1067,
+    1339,
+    1753,
+    1811,
+    1861,
+    1877,
+    1897,
+    2377,
+    2647,
+    3523,
+    4411,
+    4519,
+    4547,
+    5503,
+    6151,
+    6721,
+    7129,
+    14521,
+    14737,
+    14893,
+    16661,
+    17383,
+    27427,
+    28669,
+    28687,
+    45767,
+    48793,
+    84493,
+    137831,
+    160453,
+    167653,
+    170737,
+    246991,
+    586303,
+    628413,
+    770827,
+    2134117
+  ],
+  "repairs": [
+    {
+      "target": 313,
+      "center": "JOOOJJ",
+      "left_index": 3,
+      "right_index": 3,
+      "graph_word": "ZJOOOJJOJ",
+      "vertices": 11,
+      "source_profile": [
+        101,
+        0,
+        212,
+        53
+      ]
+    },
+    {
+      "target": 667,
+      "center": "JOJJJJ",
+      "left_index": 3,
+      "right_index": 7,
+      "graph_word": "OZJOJJJJOJ",
+      "vertices": 12,
+      "source_profile": [
+        199,
+        0,
+        468,
+        105
+      ]
+    },
+    {
+      "target": 847,
+      "center": "JJOZZJ",
+      "left_index": 3,
+      "right_index": 7,
+      "graph_word": "OZJJOZZJOJ",
+      "vertices": 12,
+      "source_profile": [
+        275,
+        0,
+        572,
+        135
+      ]
+    },
+    {
+      "target": 1753,
+      "center": "JOOOZJ",
+      "left_index": 3,
+      "right_index": 13,
+      "graph_word": "OZZJOOOZJOJ",
+      "vertices": 13,
+      "source_profile": [
+        577,
+        0,
+        1176,
+        215
+      ]
+    },
+    {
+      "target": 1811,
+      "center": "JOZJOJJ",
+      "left_index": 5,
+      "right_index": 5,
+      "graph_word": "ZZJOZJOJJOOJ",
+      "vertices": 14,
+      "source_profile": [
+        315,
+        0,
+        1496,
+        187
+      ]
+    },
+    {
+      "target": 1877,
+      "center": "JJJJJOJJ",
+      "left_index": 3,
+      "right_index": 5,
+      "graph_word": "ZZJJJJJOJJOJ",
+      "vertices": 14,
+      "source_profile": [
+        561,
+        0,
+        1316,
+        329
+      ]
+    },
+    {
+      "target": 1897,
+      "center": "JJJJJJJ",
+      "left_index": 5,
+      "right_index": 5,
+      "graph_word": "ZZJJJJJJJOOJ",
+      "vertices": 14,
+      "source_profile": [
+        329,
+        0,
+        1568,
+        179
+      ]
+    },
+    {
+      "target": 2377,
+      "center": "JOZOZJ",
+      "left_index": 3,
+      "right_index": 17,
+      "graph_word": "ZZZZJOZOZJOJ",
+      "vertices": 14,
+      "source_profile": [
+        781,
+        0,
+        1596,
+        339
+      ]
+    },
+    {
+      "target": 3523,
+      "center": "JJJOJJ",
+      "left_index": 9,
+      "right_index": 11,
+      "graph_word": "ZOZJJJOJJOOOJ",
+      "vertices": 15,
+      "source_profile": [
+        339,
+        0,
+        3184,
+        199
+      ]
+    },
+    {
+      "target": 4411,
+      "center": "JJJOZJ",
+      "left_index": 7,
+      "right_index": 22,
+      "graph_word": "ZOZOJJJOZJOZJ",
+      "vertices": 15,
+      "source_profile": [
+        2137,
+        323,
+        2597,
+        323
+      ]
+    },
+    {
+      "target": 4519,
+      "center": "JJJOZJ",
+      "left_index": 11,
+      "right_index": 14,
+      "graph_word": "OZOJJJOZJOZOJ",
+      "vertices": 15,
+      "source_profile": [
+        1317,
+        0,
+        3202,
+        199
+      ]
+    },
+    {
+      "target": 4547,
+      "center": "JJOOJJ",
+      "left_index": 3,
+      "right_index": 45,
+      "graph_word": "ZOOZZJJOOJJOJ",
+      "vertices": 15,
+      "source_profile": [
+        1431,
+        0,
+        3116,
+        779
+      ]
+    },
+    {
+      "target": 5503,
+      "center": "JJJOZJ",
+      "left_index": 11,
+      "right_index": 15,
+      "graph_word": "OOZJJJOZJOZOJ",
+      "vertices": 15,
+      "source_profile": [
+        1605,
+        0,
+        3898,
+        243
+      ]
+    },
+    {
+      "target": 6151,
+      "center": "JOOOZZJ",
+      "left_index": 3,
+      "right_index": 26,
+      "graph_word": "OZZOJOOOZZJOJ",
+      "vertices": 15,
+      "source_profile": [
+        2043,
+        0,
+        4108,
+        903
+      ]
+    },
+    {
+      "target": 6721,
+      "center": "JOOZZZJ",
+      "left_index": 5,
+      "right_index": 15,
+      "graph_word": "OOZJOOZZZJOOJ",
+      "vertices": 15,
+      "source_profile": [
+        1337,
+        0,
+        5384,
+        641
+      ]
+    },
+    {
+      "target": 7129,
+      "center": "JOZJJJ",
+      "left_index": 5,
+      "right_index": 39,
+      "graph_word": "ZZOOZJOZJJJOOJ",
+      "vertices": 16,
+      "source_profile": [
+        1241,
+        0,
+        5888,
+        653
+      ]
+    },
+    {
+      "target": 14521,
+      "center": "JOZZJJ",
+      "left_index": 5,
+      "right_index": 92,
+      "graph_word": "ZOOZOOJOZZJJOOJ",
+      "vertices": 17,
+      "source_profile": [
+        2341,
+        0,
+        12180,
+        1515
+      ]
+    },
+    {
+      "target": 14737,
+      "center": "JJOZZJ",
+      "left_index": 14,
+      "right_index": 56,
+      "graph_word": "OZOOOJJOZZJZOZJ",
+      "vertices": 17,
+      "source_profile": [
+        6939,
+        727,
+        8525,
+        727
+      ]
+    },
+    {
+      "target": 14893,
+      "center": "JJOOZJ",
+      "left_index": 7,
+      "right_index": 88,
+      "graph_word": "ZOZOOOJJOOZJOZJ",
+      "vertices": 17,
+      "source_profile": [
+        7151,
+        961,
+        8703,
+        961
+      ]
+    },
+    {
+      "target": 16661,
+      "center": "JJOJJJ",
+      "left_index": 14,
+      "right_index": 62,
+      "graph_word": "OOOZOJJOJJJZOZJ",
+      "vertices": 17,
+      "source_profile": [
+        7803,
+        773,
+        9631,
+        773
+      ]
+    },
+    {
+      "target": 17383,
+      "center": "JJOJJJJJ",
+      "left_index": 3,
+      "right_index": 55,
+      "graph_word": "OZOOZJJOJJJJJOJ",
+      "vertices": 17,
+      "source_profile": [
+        5137,
+        0,
+        12246,
+        2815
+      ]
+    },
+    {
+      "target": 27427,
+      "center": "JOOZJJ",
+      "left_index": 13,
+      "right_index": 76,
+      "graph_word": "ZZOZOOJOOZJJOOZJ",
+      "vertices": 18,
+      "source_profile": [
+        11165,
+        1153,
+        17415,
+        1153
+      ]
+    },
+    {
+      "target": 28669,
+      "center": "JOZOZJ",
+      "left_index": 13,
+      "right_index": 63,
+      "graph_word": "OOOOZJOZOZJOOZJ",
+      "vertices": 17,
+      "source_profile": [
+        11767,
+        989,
+        17891,
+        989
+      ]
+    },
+    {
+      "target": 28687,
+      "center": "JJOOZJ",
+      "left_index": 13,
+      "right_index": 63,
+      "graph_word": "OOOOZJJOOZJOOZJ",
+      "vertices": 17,
+      "source_profile": [
+        11685,
+        923,
+        17925,
+        923
+      ]
+    },
+    {
+      "target": 45767,
+      "center": "JOZZZJ",
+      "left_index": 26,
+      "right_index": 53,
+      "graph_word": "OZOZZJOZZZJZOOZJ",
+      "vertices": 18,
+      "source_profile": [
+        18525,
+        1199,
+        28441,
+        1199
+      ]
+    },
+    {
+      "target": 48793,
+      "center": "JOOZJJ",
+      "left_index": 14,
+      "right_index": 184,
+      "graph_word": "ZOOZOOOJOOZJJZOZJ",
+      "vertices": 19,
+      "source_profile": [
+        23103,
+        2557,
+        28247,
+        2557
+      ]
+    },
+    {
+      "target": 84493,
+      "center": "JOOJJJ",
+      "left_index": 11,
+      "right_index": 267,
+      "graph_word": "ZZZZOZOZJOOJJJOZOJ",
+      "vertices": 20,
+      "source_profile": [
+        23947,
+        0,
+        60546,
+        4067
+      ]
+    },
+    {
+      "target": 137831,
+      "center": "JOZZJJ",
+      "left_index": 7,
+      "right_index": 610,
+      "graph_word": "ZZOOZZZZOJOZZJJOZJ",
+      "vertices": 20,
+      "source_profile": [
+        66053,
+        11769,
+        83547,
+        11769
+      ]
+    },
+    {
+      "target": 160453,
+      "center": "JOOZZJ",
+      "left_index": 25,
+      "right_index": 133,
+      "graph_word": "ZZZZOZZJOOZZJOOOZJ",
+      "vertices": 20,
+      "source_profile": [
+        59859,
+        3015,
+        103609,
+        3015
+      ]
+    },
+    {
+      "target": 167653,
+      "center": "JJOOJJ",
+      "left_index": 39,
+      "right_index": 206,
+      "graph_word": "OZZOOZOJJOOJJOZZOOJ",
+      "vertices": 21,
+      "source_profile": [
+        31049,
+        0,
+        136604,
+        2627
+      ]
+    },
+    {
+      "target": 170737,
+      "center": "JOOZJJ",
+      "left_index": 31,
+      "right_index": 171,
+      "graph_word": "ZOZOZOZJOOZJJOZZZJ",
+      "vertices": 20,
+      "source_profile": [
+        84649,
+        3509,
+        89597,
+        3509
+      ]
+    },
+    {
+      "target": 246991,
+      "center": "JJOOJJ",
+      "left_index": 11,
+      "right_index": 681,
+      "graph_word": "ZOZOZOZZZJJOOJJOZOJ",
+      "vertices": 21,
+      "source_profile": [
+        72705,
+        0,
+        174286,
+        12449
+      ]
+    },
+    {
+      "target": 586303,
+      "center": "JOOJJJ",
+      "left_index": 77,
+      "right_index": 287,
+      "graph_word": "ZZZOOOOZJOOJJJOOZZOOJ",
+      "vertices": 23,
+      "source_profile": [
+        98963,
+        0,
+        487340,
+        3959
+      ]
+    },
+    {
+      "target": 628413,
+      "center": "JOOOZJ",
+      "left_index": 150,
+      "right_index": 208,
+      "graph_word": "OZZOOOOJOOOZJZOZOZOOJ",
+      "vertices": 23,
+      "source_profile": [
+        94585,
+        0,
+        533828,
+        1971
+      ]
+    },
+    {
+      "target": 770827,
+      "center": "JOOOJJ",
+      "left_index": 3,
+      "right_index": 7593,
+      "graph_word": "OOZOOZOZOZZZJOOOJJOJ",
+      "vertices": 22,
+      "source_profile": [
+        247247,
+        0,
+        523580,
+        130895
+      ]
+    },
+    {
+      "target": 2134117,
+      "center": "JOOZZJ",
+      "left_index": 5,
+      "right_index": 14256,
+      "graph_word": "OZOOOOZOZOOOOJOOZZJOOJ",
+      "vertices": 24,
+      "source_profile": [
+        426373,
+        0,
+        1707744,
+        191521
+      ]
+    }
+  ]
+}

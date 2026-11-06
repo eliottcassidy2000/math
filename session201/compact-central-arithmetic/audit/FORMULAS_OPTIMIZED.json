@@ -1,0 +1,20 @@
+{
+  "formal_polynomial_coefficients_checked": 12,
+  "formula_sha256": "204dd5926f26aaf466f893edcc3f3793924f1a8d58b80e2b768dc13bb1d502e7",
+  "status": "PASS",
+  "verifier_sha256": "b8f599c57ce1297e3f2b228fe32ca8d75d806c28b2d4cce517085090b371ff6e",
+  "words": [
+    "empty",
+    "J",
+    "JJ",
+    "JJJ",
+    "JOZJ",
+    "JJZJ",
+    "JJJJ",
+    "JOOZJ",
+    "JJZZJ",
+    "JOZJJ",
+    "JJZJJ",
+    "JJJJJ"
+  ]
+}

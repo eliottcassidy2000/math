@@ -1,0 +1,176 @@
+{
+  "inherited_graphs": [
+    {
+      "cycles": 2,
+      "partial_paths": 67,
+      "target": 13,
+      "vertices": 5
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 403,
+      "target": 41,
+      "vertices": 7
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 443,
+      "target": 43,
+      "vertices": 7
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 507,
+      "target": 55,
+      "vertices": 7
+    },
+    {
+      "cycles": 3,
+      "partial_paths": 573,
+      "target": 67,
+      "vertices": 7
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 1027,
+      "target": 77,
+      "vertices": 8
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 1203,
+      "target": 83,
+      "vertices": 8
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 3299,
+      "target": 163,
+      "vertices": 9
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 3315,
+      "target": 173,
+      "vertices": 9
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 6443,
+      "target": 231,
+      "vertices": 10
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 4387,
+      "target": 233,
+      "vertices": 9
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 5995,
+      "target": 247,
+      "vertices": 10
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 5571,
+      "target": 251,
+      "vertices": 10
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 7251,
+      "target": 277,
+      "vertices": 10
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 7215,
+      "target": 299,
+      "vertices": 10
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 12055,
+      "target": 421,
+      "vertices": 10
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 11899,
+      "target": 449,
+      "vertices": 10
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 13515,
+      "target": 503,
+      "vertices": 10
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 20139,
+      "target": 533,
+      "vertices": 11
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 24595,
+      "target": 569,
+      "vertices": 11
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 26483,
+      "target": 583,
+      "vertices": 11
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 19579,
+      "target": 637,
+      "vertices": 11
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 33035,
+      "target": 821,
+      "vertices": 12
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 56531,
+      "target": 1067,
+      "vertices": 12
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 61707,
+      "target": 1339,
+      "vertices": 12
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 131499,
+      "target": 1861,
+      "vertices": 13
+    },
+    {
+      "cycles": 2,
+      "partial_paths": 246819,
+      "target": 2647,
+      "vertices": 14
+    }
+  ],
+  "length_six_additional_gaps": [
+    1811,
+    1877,
+    1897,
+    6151,
+    6721,
+    17383
+  ],
+  "status": "PASS",
+  "verifier_sha256": "69e5bcc2f3f70024392ea03017065efa88536cec8a892e6a9919a90a29a87a30"
+}

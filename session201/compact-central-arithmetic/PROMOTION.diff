@@ -1,0 +1,20 @@
+--- originals/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # Twelve explicit arithmetic templates suffice, conditionally
+ 
+-Status: **RESERVED / UNREVIEWED PROOF CANDIDATE** for the finite-menu reduction
++Status: **PROVED, independently audited in the stated scope** for the finite-menu reduction
+ and conditional consequences. Every uniform occupancy statement below is
+ **OPEN**. This companion does not change the separately reviewed central
+ arithmetic proof. Session 201.
+--- originals/README.md
++++ README.md
+@@ -1,6 +1,6 @@
+ # Compact arithmetic companion
+ 
+-Unreviewed finite-menu quotient and conditional implication. The twelve-,
++Independently audited finite-menu quotient and conditional implication. The twelve-,
+ 26-, and137-template all-target occupancy assertions remain OPEN.
+ 
+ `MENUS.json` gives every integer matrix; `REPAIRS.json` gives36 actual C1

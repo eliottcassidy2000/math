@@ -1,0 +1,21 @@
+{
+  "C1_repair_certificates": 36,
+  "dagger_index_checks": 875,
+  "extra_literal_C1_checks": [
+    313,
+    667,
+    847,
+    1753,
+    1811,
+    1877
+  ],
+  "inherited_repair_order_checks": 27,
+  "length_five_finite_gaps": 65,
+  "menus": {
+    "5": 12,
+    "6": 26,
+    "8": 137
+  },
+  "status": "PASS",
+  "universal_occupancy": "OPEN"
+}

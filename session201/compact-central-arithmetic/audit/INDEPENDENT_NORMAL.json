@@ -1,0 +1,429 @@
+{
+  "daggers_checked": 1430,
+  "explicit_twelve": [
+    "",
+    "J",
+    "JJ",
+    "JJJ",
+    "JOZJ",
+    "JJZJ",
+    "JJJJ",
+    "JOOZJ",
+    "JJZZJ",
+    "JOZJJ",
+    "JJZJJ",
+    "JJJJJ"
+  ],
+  "generated_repair_profiles": [
+    {
+      "profile": [
+        101,
+        0,
+        212,
+        53
+      ],
+      "target": 313,
+      "vertices": 11,
+      "word": "ZJOOOJJOJ"
+    },
+    {
+      "profile": [
+        199,
+        0,
+        468,
+        105
+      ],
+      "target": 667,
+      "vertices": 12,
+      "word": "OZJOJJJJOJ"
+    },
+    {
+      "profile": [
+        275,
+        0,
+        572,
+        135
+      ],
+      "target": 847,
+      "vertices": 12,
+      "word": "OZJJOZZJOJ"
+    },
+    {
+      "profile": [
+        577,
+        0,
+        1176,
+        215
+      ],
+      "target": 1753,
+      "vertices": 13,
+      "word": "OZZJOOOZJOJ"
+    },
+    {
+      "profile": [
+        315,
+        0,
+        1496,
+        187
+      ],
+      "target": 1811,
+      "vertices": 14,
+      "word": "ZZJOZJOJJOOJ"
+    },
+    {
+      "profile": [
+        561,
+        0,
+        1316,
+        329
+      ],
+      "target": 1877,
+      "vertices": 14,
+      "word": "ZZJJJJJOJJOJ"
+    },
+    {
+      "profile": [
+        329,
+        0,
+        1568,
+        179
+      ],
+      "target": 1897,
+      "vertices": 14,
+      "word": "ZZJJJJJJJOOJ"
+    },
+    {
+      "profile": [
+        781,
+        0,
+        1596,
+        339
+      ],
+      "target": 2377,
+      "vertices": 14,
+      "word": "ZZZZJOZOZJOJ"
+    },
+    {
+      "profile": [
+        339,
+        0,
+        3184,
+        199
+      ],
+      "target": 3523,
+      "vertices": 15,
+      "word": "ZOZJJJOJJOOOJ"
+    },
+    {
+      "profile": [
+        2137,
+        323,
+        2597,
+        323
+      ],
+      "target": 4411,
+      "vertices": 15,
+      "word": "ZOZOJJJOZJOZJ"
+    },
+    {
+      "profile": [
+        1317,
+        0,
+        3202,
+        199
+      ],
+      "target": 4519,
+      "vertices": 15,
+      "word": "OZOJJJOZJOZOJ"
+    },
+    {
+      "profile": [
+        1431,
+        0,
+        3116,
+        779
+      ],
+      "target": 4547,
+      "vertices": 15,
+      "word": "ZOOZZJJOOJJOJ"
+    },
+    {
+      "profile": [
+        1605,
+        0,
+        3898,
+        243
+      ],
+      "target": 5503,
+      "vertices": 15,
+      "word": "OOZJJJOZJOZOJ"
+    },
+    {
+      "profile": [
+        2043,
+        0,
+        4108,
+        903
+      ],
+      "target": 6151,
+      "vertices": 15,
+      "word": "OZZOJOOOZZJOJ"
+    },
+    {
+      "profile": [
+        1337,
+        0,
+        5384,
+        641
+      ],
+      "target": 6721,
+      "vertices": 15,
+      "word": "OOZJOOZZZJOOJ"
+    },
+    {
+      "profile": [
+        1241,
+        0,
+        5888,
+        653
+      ],
+      "target": 7129,
+      "vertices": 16,
+      "word": "ZZOOZJOZJJJOOJ"
+    },
+    {
+      "profile": [
+        2341,
+        0,
+        12180,
+        1515
+      ],
+      "target": 14521,
+      "vertices": 17,
+      "word": "ZOOZOOJOZZJJOOJ"
+    },
+    {
+      "profile": [
+        6939,
+        727,
+        8525,
+        727
+      ],
+      "target": 14737,
+      "vertices": 17,
+      "word": "OZOOOJJOZZJZOZJ"
+    },
+    {
+      "profile": [
+        7151,
+        961,
+        8703,
+        961
+      ],
+      "target": 14893,
+      "vertices": 17,
+      "word": "ZOZOOOJJOOZJOZJ"
+    },
+    {
+      "profile": [
+        7803,
+        773,
+        9631,
+        773
+      ],
+      "target": 16661,
+      "vertices": 17,
+      "word": "OOOZOJJOJJJZOZJ"
+    },
+    {
+      "profile": [
+        5137,
+        0,
+        12246,
+        2815
+      ],
+      "target": 17383,
+      "vertices": 17,
+      "word": "OZOOZJJOJJJJJOJ"
+    },
+    {
+      "profile": [
+        11165,
+        1153,
+        17415,
+        1153
+      ],
+      "target": 27427,
+      "vertices": 18,
+      "word": "ZZOZOOJOOZJJOOZJ"
+    },
+    {
+      "profile": [
+        11767,
+        989,
+        17891,
+        989
+      ],
+      "target": 28669,
+      "vertices": 17,
+      "word": "OOOOZJOZOZJOOZJ"
+    },
+    {
+      "profile": [
+        11685,
+        923,
+        17925,
+        923
+      ],
+      "target": 28687,
+      "vertices": 17,
+      "word": "OOOOZJJOOZJOOZJ"
+    },
+    {
+      "profile": [
+        18525,
+        1199,
+        28441,
+        1199
+      ],
+      "target": 45767,
+      "vertices": 18,
+      "word": "OZOZZJOZZZJZOOZJ"
+    },
+    {
+      "profile": [
+        23103,
+        2557,
+        28247,
+        2557
+      ],
+      "target": 48793,
+      "vertices": 19,
+      "word": "ZOOZOOOJOOZJJZOZJ"
+    },
+    {
+      "profile": [
+        23947,
+        0,
+        60546,
+        4067
+      ],
+      "target": 84493,
+      "vertices": 20,
+      "word": "ZZZZOZOZJOOJJJOZOJ"
+    },
+    {
+      "profile": [
+        66053,
+        11769,
+        83547,
+        11769
+      ],
+      "target": 137831,
+      "vertices": 20,
+      "word": "ZZOOZZZZOJOZZJJOZJ"
+    },
+    {
+      "profile": [
+        59859,
+        3015,
+        103609,
+        3015
+      ],
+      "target": 160453,
+      "vertices": 20,
+      "word": "ZZZZOZZJOOZZJOOOZJ"
+    },
+    {
+      "profile": [
+        31049,
+        0,
+        136604,
+        2627
+      ],
+      "target": 167653,
+      "vertices": 21,
+      "word": "OZZOOZOJJOOJJOZZOOJ"
+    },
+    {
+      "profile": [
+        84649,
+        3509,
+        89597,
+        3509
+      ],
+      "target": 170737,
+      "vertices": 20,
+      "word": "ZOZOZOZJOOZJJOZZZJ"
+    },
+    {
+      "profile": [
+        72705,
+        0,
+        174286,
+        12449
+      ],
+      "target": 246991,
+      "vertices": 21,
+      "word": "ZOZOZOZZZJJOOJJOZOJ"
+    },
+    {
+      "profile": [
+        98963,
+        0,
+        487340,
+        3959
+      ],
+      "target": 586303,
+      "vertices": 23,
+      "word": "ZZZOOOOZJOOJJJOOZZOOJ"
+    },
+    {
+      "profile": [
+        94585,
+        0,
+        533828,
+        1971
+      ],
+      "target": 628413,
+      "vertices": 23,
+      "word": "OZZOOOOJOOOZJZOZOZOOJ"
+    },
+    {
+      "profile": [
+        247247,
+        0,
+        523580,
+        130895
+      ],
+      "target": 770827,
+      "vertices": 22,
+      "word": "OOZOOZOZOZZZJOOOJJOJ"
+    },
+    {
+      "profile": [
+        426373,
+        0,
+        1707744,
+        191521
+      ],
+      "target": 2134117,
+      "vertices": 24,
+      "word": "OZOOOOZOZOOOOJOOZZJOOJ"
+    }
+  ],
+  "inherited_order_checks": 27,
+  "quotient_sizes": {
+    "5": 12,
+    "6": 26,
+    "8": 137
+  },
+  "retained_sizes": {
+    "5": 15,
+    "6": 36,
+    "8": 235
+  },
+  "status": "PASS",
+  "strict_scope": "All-index dagger quotient and physical certificates verified; raw finite census is separately replayed; every uniform occupancy lemma remains OPEN.",
+  "verifier_sha256": "eb9eb9244179bbbde7313a5b0074c14afcc4bc8a37b37514f670beac8e78fa2a"
+}
