@@ -1,0 +1,70 @@
+{
+  "verified_commit": "665a6a98e6154f31b3ab6a99c3b011742e34ef2e",
+  "links": [
+    {
+      "link": "../05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md",
+      "path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md",
+      "blob_sha": "56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f"
+    },
+    {
+      "link": "size-spectrum/PROOF.md",
+      "path": "session207/size-spectrum/PROOF.md",
+      "blob_sha": "a16a26e8f182e794fdaf156b98dc84d6a41d529e"
+    },
+    {
+      "link": "../01-canon/theorems/THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension.md",
+      "path": "01-canon/theorems/THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension.md",
+      "blob_sha": "7a5c2349f4b74110d743dd443ae8f595e34c3599"
+    },
+    {
+      "link": "inverse-size-spectrum/README.md",
+      "path": "session207/inverse-size-spectrum/README.md",
+      "blob_sha": "9d5c19e4d1749d70018a2508bf23725e6dfcd256"
+    },
+    {
+      "link": "inverse-prefix661/PROOF.md",
+      "path": "session207/inverse-prefix661/PROOF.md",
+      "blob_sha": "6b5b29c2ec16a5e8dbd15c38dc6c75da07ee9918"
+    },
+    {
+      "link": "inverse-prefix661/minimum_orders.json",
+      "path": "session207/inverse-prefix661/minimum_orders.json",
+      "blob_sha": "a9147acdc6cc60be7cbb5cff3862687f660808ae"
+    },
+    {
+      "link": "base11-compression/PROOF.md",
+      "path": "session207/base11-compression/PROOF.md",
+      "blob_sha": "a514684427c3d2629408d379bbc22bcc7411f09a"
+    },
+    {
+      "link": "chain-partitions/PROOF.md",
+      "path": "session207/chain-partitions/PROOF.md",
+      "blob_sha": "a02250b04435f410c1283e7224d5612d39e8e31c"
+    },
+    {
+      "link": "../05-knowledge/results/session207_degree_three_metagraph_20261106/PROOF.md",
+      "path": "05-knowledge/results/session207_degree_three_metagraph_20261106/PROOF.md",
+      "blob_sha": "56fdb089c23c80efe746ed286113b05a5519c0cd"
+    },
+    {
+      "link": "../05-knowledge/results/session207_universal_metagraph_transfer_20261106/PROOF.md",
+      "path": "05-knowledge/results/session207_universal_metagraph_transfer_20261106/PROOF.md",
+      "blob_sha": "312d60aac5d25f209ae65979d2a46d21f278632c"
+    },
+    {
+      "link": "../05-knowledge/results/session207_metagraph_fibre_amplification_20261106/RESULT.md",
+      "path": "05-knowledge/results/session207_metagraph_fibre_amplification_20261106/RESULT.md",
+      "blob_sha": "fe941b4ce6626a2f9d207f059d6ec2b5c3f96a95"
+    },
+    {
+      "link": "mixed-prime-multiplicities/PROOF.md",
+      "path": "session207/mixed-prime-multiplicities/PROOF.md",
+      "blob_sha": "16681c241da60f789cfbca4ccb1f353cac765f15"
+    },
+    {
+      "link": "coefficient-defect/PROOF.md",
+      "path": "session207/coefficient-defect/PROOF.md",
+      "blob_sha": "7d653306530b43fb2f6f7d33db39b08bba8fe55c"
+    }
+  ]
+}
