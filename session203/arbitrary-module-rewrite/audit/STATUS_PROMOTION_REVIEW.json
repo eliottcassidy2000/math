@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "PROOF.md",
+      "original_sha256": "7edd5fb876daf5692581b0d35593c1998402c2b6cd5bea1275b08014086ab81a",
+      "promoted_sha256": "5f71882cef120d775b4ee36ea6e8a9f2637bc3c82562be70570de08a4dce969a",
+      "changes": [
+        {
+          "line": 3,
+          "old": "**PROOF CANDIDATE, pending independent audit.** This is an all-order physical identity for arbitrary tournament modules. It is not a spectrum occupancy theorem, and no eventual threshold is claimed.",
+          "new": "**PROVED, independently audited in the stated scope.** This is an all-order physical identity for arbitrary tournament modules. It is not a spectrum occupancy theorem, and no eventual threshold is claimed."
+        }
+      ]
+    },
+    {
+      "path": "README.md",
+      "original_sha256": "e1c4e773f5a53cc156a8b8b288dca856cfdeecfd1e342cfda8818221f04ea94c",
+      "promoted_sha256": "b7f326afd7eb99ba2970db3b2d48410365d3dae22c3860df27546d3d01db603b",
+      "changes": [
+        {
+          "line": 3,
+          "old": "Proof candidate pending independent review. No eventual-spectrum threshold is claimed.",
+          "new": "Independently audited in the stated scope. No eventual-spectrum threshold is claimed."
+        }
+      ]
+    }
+  ],
+  "scope": "Only status lines changed; all reviewed mathematics and scope limitations are unchanged."
+}

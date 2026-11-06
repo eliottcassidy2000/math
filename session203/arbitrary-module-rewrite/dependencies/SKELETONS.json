@@ -1,0 +1,186 @@
+[
+  {
+    "pair_index": 5,
+    "P": [
+      2,
+      24,
+      3,
+      37,
+      13,
+      23
+    ],
+    "T": [
+      2,
+      8,
+      67,
+      101,
+      15,
+      87,
+      19
+    ],
+    "flip": [
+      1,
+      4
+    ],
+    "module_mask": 15,
+    "module_beats_child_extra": 1,
+    "parent_skeleton_coefficients": [
+      25,
+      59,
+      41,
+      8,
+      0,
+      0,
+      0,
+      0
+    ],
+    "child_skeleton_coefficients": [
+      51,
+      119,
+      82,
+      16,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "difference": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "pair_index": 19,
+    "P": [
+      32,
+      5,
+      1,
+      39,
+      47,
+      70,
+      31
+    ],
+    "T": [
+      0,
+      5,
+      129,
+      39,
+      47,
+      199,
+      159,
+      27
+    ],
+    "flip": [
+      0,
+      5
+    ],
+    "module_mask": 5,
+    "module_beats_child_extra": 0,
+    "parent_skeleton_coefficients": [
+      25,
+      45,
+      20,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "child_skeleton_coefficients": [
+      51,
+      91,
+      40,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "difference": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "pair_index": 29,
+    "P": [
+      2,
+      4,
+      41,
+      3,
+      15,
+      91,
+      31
+    ],
+    "T": [
+      0,
+      5,
+      41,
+      131,
+      15,
+      219,
+      159,
+      23
+    ],
+    "flip": [
+      0,
+      1
+    ],
+    "module_mask": 27,
+    "module_beats_child_extra": 1,
+    "parent_skeleton_coefficients": [
+      25,
+      53,
+      27,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "child_skeleton_coefficients": [
+      51,
+      107,
+      54,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "difference": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+]

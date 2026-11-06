@@ -1,0 +1,7 @@
+{
+  "scope": "Only the proof status line changed; mathematical content is unchanged.",
+  "reviewed_sha256": "7edd5fb876daf5692581b0d35593c1998402c2b6cd5bea1275b08014086ab81a",
+  "promoted_sha256": "5f71882cef120d775b4ee36ea6e8a9f2637bc3c82562be70570de08a4dce969a",
+  "old_status": "**PROOF CANDIDATE, pending independent audit.** This is an all-order physical identity for arbitrary tournament modules. It is not a spectrum occupancy theorem, and no eventual threshold is claimed.",
+  "new_status": "**PROVED, independently audited in the stated scope.** This is an all-order physical identity for arbitrary tournament modules. It is not a spectrum occupancy theorem, and no eventual threshold is claimed."
+}

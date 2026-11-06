@@ -1,0 +1,16 @@
+{
+  "status":"PASS",
+  "module_universe":"Every labelled tournament of orders 0 through 4",
+  "modules":76,
+  "graphs":684,
+  "rewrite_pairs":228,
+  "largest_path_count":2975,
+  "samples":[
+    {"family":"A","module_order":0,"module_code":0,"h":1,"B2":1,"B3":1,"parent_H":25,"child_H":51,"parent_C":2,"child_C":3},
+    {"family":"B","module_order":0,"module_code":0,"h":1,"B2":1,"B3":1,"parent_H":25,"child_H":51,"parent_C":1,"child_C":3},
+    {"family":"C","module_order":0,"module_code":0,"h":1,"B2":1,"B3":1,"parent_H":25,"child_H":51,"parent_C":1,"child_C":3},
+    {"family":"A","module_order":3,"module_code":2,"h":3,"B2":12,"B3":33,"parent_H":471,"child_H":945,"parent_C":15,"child_C":27},
+    {"family":"B","module_order":3,"module_code":2,"h":3,"B2":12,"B3":33,"parent_H":255,"child_H":513,"parent_C":3,"child_C":9},
+    {"family":"C","module_order":3,"module_code":2,"h":3,"B2":12,"B3":33,"parent_H":321,"child_H":645,"parent_C":3,"child_C":9}
+  ]
+}

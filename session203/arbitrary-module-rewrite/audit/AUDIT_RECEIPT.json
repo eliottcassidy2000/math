@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "reviewed_proof_sha256": "7edd5fb876daf5692581b0d35593c1998402c2b6cd5bea1275b08014086ab81a",
+  "review_sha256": "2447c1cf338df97cfc7e9c6826e4a11147b4b81c529728b344896e196ee83443",
+  "normal_and_optimized_sha256": "481335405acc8eed3d2993261a0fc22d8eb7389c549a1ffaff4c92ad35f14219",
+  "modules": 76,
+  "literal_graphs": 684,
+  "rewrite_pairs": 228,
+  "literal_DFS_calls": 24225202,
+  "empty_rebase_hostile": {
+    "child_empty_H": 51,
+    "parent_singleton_H": 53
+  },
+  "equal_H_unequal_profile_hostile": {
+    "rebased_parent_b": [
+      0,
+      107,
+      4804,
+      73041
+    ],
+    "replacement_b": [
+      0,
+      107,
+      2600,
+      26235
+    ]
+  },
+  "scope": "All-order physical shared-module correction H(child)=2H(parent)+H(U), cycle formulas, and returning C count ray for nonempty U. No occupancy or threshold theorem."
+}

@@ -1,0 +1,14 @@
+{
+  "TRANSITIVE_REPAIR.md": {
+    "sha256": "55db518c68502746f63b3cdea4671d609425151a47963d7b55f262aeaec258d3",
+    "source": "session203-transitive-repair/PROOF.md"
+  },
+  "TRANSITIVE_REPAIR_AUDIT.md": {
+    "sha256": "1b7af2329657e9aa26a0d6eae629aea875a7a6ed1f0e273e6f49e550455776d3",
+    "source": "session203-transitive-repair-audit/REVIEW.md"
+  },
+  "SKELETONS.json": {
+    "sha256": "dfefac66d4a742d632ca856b2e459fd5debb57e7d5bf7064c951cf1f2f4b9a5a",
+    "source": "session203-transitive-repair/SKELETONS.json"
+  }
+}

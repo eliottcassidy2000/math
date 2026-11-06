@@ -1,0 +1,195 @@
+{
+  "empty_rebase_hostile": {
+    "child_empty_H": 51,
+    "parent_singleton_H": 53
+  },
+  "equal_H_unequal_profile_hostile": {
+    "rebased_parent_b": [
+      0,
+      107,
+      4804,
+      73041
+    ],
+    "replacement_b": [
+      0,
+      107,
+      2600,
+      26235
+    ]
+  },
+  "literal_DFS_calls": 24225202,
+  "literal_graphs": 684,
+  "method": "literal permutation/cut path covers and nonmemoized directed-path DFS",
+  "module_order_counts": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64
+  },
+  "modules": 76,
+  "profile_histogram": {
+    "(0, 1, 16, 81)": 24,
+    "(0, 1, 2, 3)": 1,
+    "(0, 1, 4, 9)": 2,
+    "(0, 1, 8, 27)": 6,
+    "(0, 3, 12, 33)": 2,
+    "(0, 3, 24, 99)": 16,
+    "(0, 5, 32, 117)": 24,
+    "(1, 1, 1, 1)": 1
+  },
+  "rewrite_pairs": 228,
+  "samples": [
+    {
+      "b": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "module_code": 0,
+      "module_order": 0,
+      "module_rows": [],
+      "rewrites": [
+        {
+          "child_C": 3,
+          "child_H": 51,
+          "family": "A",
+          "parent_C": 2,
+          "parent_H": 25
+        },
+        {
+          "child_C": 3,
+          "child_H": 51,
+          "family": "B",
+          "parent_C": 1,
+          "parent_H": 25
+        },
+        {
+          "child_C": 3,
+          "child_H": 51,
+          "family": "C",
+          "parent_C": 1,
+          "parent_H": 25
+        }
+      ]
+    },
+    {
+      "b": [
+        0,
+        3,
+        12,
+        33
+      ],
+      "module_code": 2,
+      "module_order": 3,
+      "module_rows": [
+        4,
+        1,
+        2
+      ],
+      "rewrites": [
+        {
+          "child_C": 27,
+          "child_H": 945,
+          "family": "A",
+          "parent_C": 15,
+          "parent_H": 471
+        },
+        {
+          "child_C": 9,
+          "child_H": 513,
+          "family": "B",
+          "parent_C": 3,
+          "parent_H": 255
+        },
+        {
+          "child_C": 9,
+          "child_H": 645,
+          "family": "C",
+          "parent_C": 3,
+          "parent_H": 321
+        }
+      ]
+    },
+    {
+      "b": [
+        0,
+        3,
+        24,
+        99
+      ],
+      "module_code": 2,
+      "module_order": 4,
+      "module_rows": [
+        4,
+        1,
+        2,
+        7
+      ],
+      "rewrites": [
+        {
+          "child_C": 51,
+          "child_H": 2409,
+          "family": "A",
+          "parent_C": 27,
+          "parent_H": 1203
+        },
+        {
+          "child_C": 9,
+          "child_H": 993,
+          "family": "B",
+          "parent_C": 3,
+          "parent_H": 495
+        },
+        {
+          "child_C": 9,
+          "child_H": 1293,
+          "family": "C",
+          "parent_C": 3,
+          "parent_H": 645
+        }
+      ]
+    },
+    {
+      "b": [
+        0,
+        5,
+        32,
+        117
+      ],
+      "module_code": 4,
+      "module_order": 4,
+      "module_rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "rewrites": [
+        {
+          "child_C": 69,
+          "child_H": 2975,
+          "family": "A",
+          "parent_C": 37,
+          "parent_H": 1485
+        },
+        {
+          "child_C": 15,
+          "child_H": 1335,
+          "family": "B",
+          "parent_C": 5,
+          "parent_H": 665
+        },
+        {
+          "child_C": 15,
+          "child_H": 1723,
+          "family": "C",
+          "parent_C": 5,
+          "parent_H": 859
+        }
+      ]
+    }
+  ],
+  "status": "PASS"
+}
