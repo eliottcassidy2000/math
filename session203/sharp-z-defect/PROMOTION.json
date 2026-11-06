@@ -1,0 +1,8 @@
+{
+  "status": "MATHEMATICAL_AND_PACKAGING_AUDIT_PASS",
+  "delta": "Status line only, relative to the approved boundary-corrected proof.",
+  "reviewed_proof_sha256": "582687a3d966a928efb7355cca6d9f1181d76d09d4065da17a0815d1343f457d",
+  "promoted_proof_sha256": "d2f85b8ff8a98abd985e5f52c77c1545cd9748b10d4be750ad8cc2e06d0e74db",
+  "audit_review_sha256": "e9deca8db72895f5067d6f3172f7deebcd899fd7ffdbeaee66c2353e80c1473e",
+  "scope": "Exact equality values and individual cover test only. The later complete graph normal form and sparsity theorems are not included. F(8,137) and threshold 23 remain OPEN."
+}

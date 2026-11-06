@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "both union injections and exact intersections",
+    "exact f complement",
+    "L deletion/complement bijection",
+    "unique-outneighbor f=0"
+  ],
+  "literal_cover_visits": 8787,
+  "marked_inputs": 285,
+  "status": "PASS"
+}

@@ -1,0 +1,10 @@
+--- reviewed/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # Exact equality at the physical Z-defect floor
+ 
+-Status: RESERVED / proof candidate awaiting independent audit.
++Status: PROVED / independently audited, with the explicit singleton-boundary correction.
+ 
+ ## 1. Scope and definitions
+ 

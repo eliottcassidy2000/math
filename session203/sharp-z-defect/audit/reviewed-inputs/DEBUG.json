@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "labeled_tournaments_through_6": 33867,
+  "rooted_inputs": 202013,
+  "nontrivial_positive_start_inputs": 164030,
+  "equality_inputs": 3670,
+  "physical_Z_children_through_5": 3806,
+  "cyclic_sources": 33867,
+  "equality_by_order": {"3": 6, "4": 24, "5": 280, "6": 3360},
+  "equality_start_values": [1, 3, 5]
+}

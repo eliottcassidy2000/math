@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "scope": "Exact equality-spectrum theorem D=s and individual cover test for nontrivial positive-start sources; no free B prescription, complete graph normal form, density, F8, or threshold conclusion.",
+  "promoted_proof_sha256": "d2f85b8ff8a98abd985e5f52c77c1545cd9748b10d4be750ad8cc2e06d0e74db",
+  "corrected_reviewed_proof_sha256": "582687a3d966a928efb7355cca6d9f1181d76d09d4065da17a0815d1343f457d",
+  "precorrection_proof_sha256": "97273c71f0fbfc71fff9acf62a0689bfdb3ebb8524ecebbfb2eaa99ce32a4830",
+  "promotion_delta": "Only the status line changed from the approved corrected proof.",
+  "boundary_lineage": "Both proof versions and the exact singleton-boundary correction are retained unchanged.",
+  "readme_sha256": "db960d24f6948dbe94c223ea34ca7eea0114a017d2f923aa0d1ce2671d56d642",
+  "audit_entries_preserved": 20,
+  "audit_manifest_unchanged": true,
+  "relocated_replay": {
+    "literal_paths": "09e58e19f89809156d2bd5c663e5e5360bb8a9ed4510b0887a62bb871a9032d5",
+    "literal_bijections": "2db8ec2d9a1aee0b175dad3beaab7f70a2c8a37e643044ed30dcb6bfa1b4de96"
+  },
+  "replay_result": "Both relocated independent outputs exactly match the frozen receipts.",
+  "dependency_provenance": "Previously reviewed immutable dependencies and provenance preserved.",
+  "metadata_permission": "Author may update PROMOTION.json packaging status to PASS, add this receipt and refresh manifest without changing source/proof/audit bytes.",
+  "publication": "Ready after the parent grants the branch lane; no branch writes performed by this review."
+}
