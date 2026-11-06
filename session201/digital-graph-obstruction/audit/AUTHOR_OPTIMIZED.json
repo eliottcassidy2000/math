@@ -1,0 +1,42 @@
+{
+  "distinguishing_prefix_suffix_pairs": 4096,
+  "g_description": "2-regular; binary graph not regular (all-order proof in PROOF.md)",
+  "gap_factorizations": {
+    "2647": [
+      2647
+    ],
+    "7939": [
+      17,
+      467
+    ],
+    "13231": [
+      101,
+      131
+    ],
+    "2134117": [
+      643,
+      3319
+    ],
+    "6402349": [
+      23,
+      278363
+    ],
+    "10670581": [
+      10670581
+    ]
+  },
+  "gap_source_sum_fibers": {
+    "6": [
+      3
+    ],
+    "8": [],
+    "156": [],
+    "643": [],
+    "664": []
+  },
+  "regular_shape_positive_and_hostile_controls": 4352,
+  "sparse_bit_formula_pairs": 4032,
+  "state_transition_and_digit_controls_through": 4096,
+  "status": "PASS",
+  "uniform_twelve_template_occupancy": "OPEN"
+}

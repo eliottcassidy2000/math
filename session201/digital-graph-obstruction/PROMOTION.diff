@@ -1,0 +1,62 @@
+--- originals/PROOF.md
++++ PROOF.md
+@@ -1,8 +1,7 @@
+ # The source sequence is regular but its binary graph is not
+ 
+-Status: **RESERVED / UNREVIEWED PROOF CANDIDATE**. All-order arguments are
+-provided below, with exact finite controls. No independent audit has yet been
+-performed. The twelve-template occupancy assertion remains **OPEN**.
++Status: **PROVED, independently audited in the stated scope**. All-order
++arguments are provided below, with exact finite controls. The twelve-template occupancy assertion remains **OPEN**.
+ 
+ ## 0. Target, inheritance, and literature boundary
+ 
+@@ -14,9 +13,9 @@
+ 
+ The source constructor and complete arithmetic inverse are inherited from the
+ audited Session 201 central arithmetic packet. The factorization follow-up
+-was published at commit 15354a4b464d558b80eb5ea063c30ea622663cf4. The new
+-`../session201-digital-inverse/PROOF.md` is a candidate under review, not a
+-dependency of the proofs here.
++was published at commit 15354a4b464d558b80eb5ea063c30ea622663cf4. The separately reviewed
++`../digital-inverse/PROOF.md` was published at commit
++e27c74ddab6f0c83b29da6f2eafa2f9148a13ed1 and is not a dependency of the proofs here.
+ 
+ A literature search did not identify this exact g sequence or a theorem
+ covering its J value range. This is a limited search outcome, not a novelty
+@@ -219,10 +218,10 @@
+ 
+ ## 5. Reproduction and status
+ 
+-Run:
+-
+-    python3 session201-digital-graph-obstruction/verify.py
+-    python3 -O session201-digital-graph-obstruction/verify.py
++Run from this packet directory:
++
++    python3 verify.py
++    python3 -O verify.py
+ 
+ Both runs check the matrix transitions, digit formula, sparse-bit identity,
+ and positive/negative distinguishing words using exact integer arithmetic.
+--- originals/README.md
++++ README.md
+@@ -1,6 +1,6 @@
+ # A digital graph obstruction
+ 
+-Unreviewed proof candidate: g is 2-regular, but not 2-synchronized. Every
++Independently audited: g is 2-regular, but not 2-synchronized. Every
+ fixed physical scalar readout and each individual central-template witness
+ relation inherits the nonregular graph obstruction. Value-support occupancy
+ remains OPEN.
+--- originals/GAP-CONTROLS.md
++++ GAP-CONTROLS.md
+@@ -2,7 +2,7 @@
+ 
+ These are exact checks of existing targets, not a new occupancy census.
+ They use the previously audited c=3/c=5 factorization from
+-`../session201-twelve-factorization/PROOF.md`.
++`../twelve-factorization/PROOF.md`.
+ 
+ - 2647 is prime, but 3n-2=7939=17*467 and 5n-4=13231=101*131.
+   Since n is prime, only the odd/odd factorization can apply. For c=3,

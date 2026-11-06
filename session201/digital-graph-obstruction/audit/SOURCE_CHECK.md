@@ -1,0 +1,11 @@
+# Primary-source scope check
+
+The following records were independently read through the web connector. They support definitions and standard context only. The sparse-bit formula, separating words, and readout obstruction are local mathematical arguments, not theorems attributed to these references.
+
+1. Allouche and Shallit, *The ring of k-regular sequences*, Theoretical Computer Science 98(2) (1992), 163--197, DOI https://doi.org/10.1016/0304-3975(92)90001-V . The publisher's indexed record at https://www.sciencedirect.com/science/article/pii/030439759290001V confirms the metadata and the extension from finite-valued automatic sequences to ring-valued regular sequences. The direct DOI open returned HTTP 403; the publisher's indexed abstract was available. The bibliographic entry also appears in the Carpi--Maggi archival reference list. No theorem about the present source sequence is claimed from this record.
+
+2. Carpi and Maggi, *On synchronized sequences and their separators*, RAIRO Theoretical Informatics and Applications 35(6) (2001), 513--524, https://www.numdam.org/item/ITA_2001__35_6_513_0/ . The archival abstract explicitly identifies graph recognition in base k as the synchronized-sequence notion and states its relation to automatic and regular sequences. This confirms the packet's vocabulary and distinction, not its new classification of g.
+
+3. Shallit, *Synchronized Sequences*, WORDS 2021, https://cs.uwaterloo.ca/~shallit/Talks/words21.pdf . The accessible author-hosted PDF has 50 pages. Slide 3 gives kernel/linear-representation definitions; slides 5--6 give most-significant-first padded pair encodings and synchronized graph recognition with common leading zero pairs. Slide 12 describes first-order constructions using arithmetic comparisons, addition, and quantifiers. The packet correctly labels this as a talk. The audit supplies a direct signed-carry argument rather than relying on the talk for a new theorem about g.
+
+The reported bounded OEIS search failure is a historical author search report, not an independently certified exhaustive literature negative. This audit makes no novelty claim and does not require any negative literature-search premise.

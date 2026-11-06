@@ -1,0 +1,13 @@
+{
+  "dependencies/CORE_PROOF.md": "49ad1123e80fbf751eac3e72ed0f5ad2ec39e7705f9ee89c77d4826ef5e1066c",
+  "dependencies/FACTOR_PROOF.md": "1ce07353bdee7c29f30221e5aff0c72b4925f0d4c8d74d53fed0651b7a96c317",
+  "dependencies/MENUS.json": "f4c2fab8569aa682063f904a78b74026535f3a181a3e01bcc7ac23dc5a591275",
+  "source/GAP-CONTROLS.md": "b9b5e35d5832bfbb0b01fe63e8ca160ea4af1210823a74cb89896eae0e7e754c",
+  "source/MANIFEST.sha256": "bcbae886352cd3b77526b0669dedeae84f57210a237f6038e32ee042ece1c6e6",
+  "source/PROOF.md": "3a841e66c8a58c8b7a14b52f809f289eba35c6c22f1a6d1e0794765a771f77f8",
+  "source/README.md": "81546e118cb7c639cf5940574673ec82a26002116acffa4a8a5f7070a68cbbd7",
+  "source/SOURCES.md": "d960575c4de70eb6df14849eb11f431663658519332b2514be71a966fa79fb45",
+  "source/VALIDATION-normal.json": "e4ec6b50d6f38ba9ea6a2e98466d7dcd813f0f1a3c0837987ad325a99ec94e49",
+  "source/VALIDATION-optimized.json": "e4ec6b50d6f38ba9ea6a2e98466d7dcd813f0f1a3c0837987ad325a99ec94e49",
+  "source/verify.py": "5674a81b8c7d65f60278c9cbd6759aec9eed29f9ce375284f471a9edb6fe9044"
+}

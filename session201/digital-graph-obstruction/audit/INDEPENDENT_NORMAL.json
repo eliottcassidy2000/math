@@ -1,0 +1,153 @@
+{
+  "all_residue_compatible_gap_gates": {
+    "2134117:3": [
+      [
+        "oo",
+        8,
+        92788
+      ],
+      [
+        "oo",
+        92788,
+        8
+      ]
+    ],
+    "2134117:5": [
+      [
+        "eo",
+        643,
+        664
+      ]
+    ],
+    "2647:3": [
+      [
+        "oo",
+        6,
+        156
+      ],
+      [
+        "oo",
+        156,
+        6
+      ]
+    ],
+    "2647:5": []
+  },
+  "alpha_coefficients_on_g_p_u_1": {
+    "": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "J": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "JJ": [
+      1,
+      -1,
+      1,
+      0
+    ],
+    "JJJ": [
+      1,
+      0,
+      2,
+      0
+    ],
+    "JJJJ": [
+      3,
+      -1,
+      3,
+      0
+    ],
+    "JJJJJ": [
+      5,
+      -2,
+      6,
+      0
+    ],
+    "JJZJ": [
+      3,
+      -1,
+      3,
+      0
+    ],
+    "JJZJJ": [
+      5,
+      -2,
+      6,
+      0
+    ],
+    "JJZZJ": [
+      5,
+      -1,
+      5,
+      0
+    ],
+    "JOOZJ": [
+      5,
+      -1,
+      7,
+      0
+    ],
+    "JOZJ": [
+      3,
+      -1,
+      3,
+      0
+    ],
+    "JOZJJ": [
+      5,
+      -2,
+      6,
+      0
+    ]
+  },
+  "distinguishing_pairs": 9216,
+  "finite_height_state_lower_bound": "at least K states through length 2K+3",
+  "gap_factorizations": {
+    "2647": {
+      "2647": 1
+    },
+    "7939": {
+      "17": 1,
+      "467": 1
+    },
+    "13231": {
+      "101": 1,
+      "131": 1
+    },
+    "2134117": {
+      "643": 1,
+      "3319": 1
+    },
+    "6402349": {
+      "23": 1,
+      "278363": 1
+    },
+    "10670581": {
+      "10670581": 1
+    }
+  },
+  "gap_source_sum_fibers": {
+    "6": [
+      3
+    ],
+    "8": [],
+    "156": [],
+    "643": [],
+    "664": []
+  },
+  "kernel_row_controls": 2555,
+  "physical_g_and_state_controls_through": 16384,
+  "regular_intersection_controls": 14400,
+  "scope": "Graph nonregularity only; value support and universal occupancy remain unproved.",
+  "signed_carry_controls": 57344,
+  "sparse_bit_pairs": 6320,
+  "status": "PASS",
+  "verifier_sha256": "ff9e486c0860cb80b0ad69ffcbddb1762e9afc5a3b9520de0b97cd5067cfe66a"
+}
