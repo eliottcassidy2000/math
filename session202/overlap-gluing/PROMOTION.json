@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "audit": "audit/REPORT.md",
+  "promotions": [
+    {
+      "file": "PROOF.md",
+      "original_sha256": "528959a2f978a62511b46e1a276f8375fab099b02b6151c4a518878bb1af657c",
+      "promoted_sha256": "2949183b4cf7f25f74f46dfe50debccfd34ab39b8e11bae4e7862c5284d6b7d8",
+      "allowed_change": "Replace pending-independent-audit status only; mathematical text unchanged."
+    }
+  ]
+}

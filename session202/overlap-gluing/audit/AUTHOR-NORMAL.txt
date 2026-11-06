@@ -1,0 +1,30 @@
+completed order 1
+completed order 2
+completed order 3
+completed order 4
+completed order 5
+{
+  "compatible_pair_checks": 515524,
+  "majority_hostile_forward": 7,
+  "majority_hostile_reverse": 8,
+  "majority_hostile_rows": [
+    54,
+    8,
+    2,
+    5,
+    14,
+    30
+  ],
+  "overlap_cases": 187620,
+  "sharp_H": 9,
+  "sharp_rows": [
+    10,
+    28,
+    25,
+    16,
+    1
+  ],
+  "status": "PASS",
+  "tournaments": 1099,
+  "universe": "all labeled tournaments through order five; all ordered covering pairs with both private parts nonempty; every compatible Hamilton-path pair"
+}

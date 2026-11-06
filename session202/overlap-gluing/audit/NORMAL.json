@@ -1,0 +1,69 @@
+{
+  "all_ordered_covering_pairs": 254254,
+  "arc_forward1_structure_checks": 1364,
+  "arc_forward2_structure_checks": 414,
+  "author_compatible_path_pairs": 515524,
+  "author_private_nonempty_cases": 187620,
+  "compatible_path_pairs": 877822,
+  "hostile_forward_reverse": [
+    7,
+    8
+  ],
+  "rigid_family": [
+    {
+      "forward": 2,
+      "m": 1,
+      "reverse": 1
+    },
+    {
+      "forward": 4,
+      "m": 2,
+      "reverse": 1
+    },
+    {
+      "forward": 8,
+      "m": 3,
+      "reverse": 1
+    },
+    {
+      "forward": 16,
+      "m": 4,
+      "reverse": 1
+    },
+    {
+      "forward": 32,
+      "m": 5,
+      "reverse": 1
+    },
+    {
+      "forward": 64,
+      "m": 6,
+      "reverse": 1
+    },
+    {
+      "forward": 128,
+      "m": 7,
+      "reverse": 1
+    },
+    {
+      "forward": 256,
+      "m": 8,
+      "reverse": 1
+    },
+    {
+      "forward": 512,
+      "m": 9,
+      "reverse": 1
+    },
+    {
+      "forward": 1024,
+      "m": 10,
+      "reverse": 1
+    }
+  ],
+  "scope": "finite controls support separately audited all-order proof",
+  "sharp_H": 9,
+  "sharp_strong": true,
+  "status": "PASS",
+  "tournaments_including_empty": 1100
+}
