@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "square_tables": [
+    {
+      "length_A": 1,
+      "length_B": 1,
+      "A_detour": 5,
+      "square_distance_sums": [
+        20,
+        16,
+        12,
+        6
+      ],
+      "subsets_tested": 90
+    },
+    {
+      "length_A": 4,
+      "length_B": 5,
+      "A_detour": 22,
+      "square_distance_sums": [
+        84,
+        68,
+        52,
+        30
+      ],
+      "subsets_tested": 90
+    }
+  ],
+  "upper_bounds": {
+    "stretch": "211/66",
+    "capacity": "269/84"
+  },
+  "lower_bounds": {
+    "stretch": "109/40",
+    "capacity": "11/4"
+  },
+  "image_trees_checked": 192
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "square_cases": 180,
+  "A_detours": 96,
+  "image_trees": 192,
+  "stretch_interval": [
+    "109/40",
+    "211/66"
+  ],
+  "congestion_interval": [
+    "11/4",
+    "269/84"
+  ]
+}
