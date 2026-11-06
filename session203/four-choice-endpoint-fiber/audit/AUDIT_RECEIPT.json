@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "reviewed_proof_sha256": "2c6030f3f1dc2b990f99b38f40c473e1f147bf35c555a9450a35323267345315",
+  "review_sha256": "10f737ecdfe68754332ee051ebb7608823de6178e1ba862b9e32dd86180440de",
+  "core_orders": 5760,
+  "core_partition_cuts": 15120,
+  "monomial_basis_size": 70,
+  "transitive_operator_checks": 2100,
+  "arbitrary_colored_operator_checks": 10500,
+  "literal_graphs": 16,
+  "maximum_literal_order": 18,
+  "scope": "Four distinct endpoints at one actual row for every k>=0, with offsets {0,8,14,22}*2^k. The number of choices remains four. Full colored tensors, optional empty covers, all diagonal components and lambda=0 boundary checked. No growing menu, independent base, iteration, F(8,137) or threshold claim.",
+  "publication": "Not performed by this audit; parent coordinates."
+}

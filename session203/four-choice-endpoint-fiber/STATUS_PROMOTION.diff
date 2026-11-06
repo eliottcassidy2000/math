@@ -1,0 +1,10 @@
+--- REVIEWED_PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # An infinite four-choice endpoint fiber from selective bundle reversals
+ 
+-Status: **PROOF CANDIDATE, pending independent audit.** This constructs four distinct selectable endpoints at one physical padding row, for every scale k. It does not make the number of choices grow with k and does not prove interval coverage or an eventual odd-spectrum threshold.
++Status: **PROVED, independently audited in the stated scope.** This constructs four distinct selectable endpoints at one physical padding row, for every scale k. It does not make the number of choices grow with k and does not prove interval coverage or an eventual odd-spectrum threshold.
+ 
+ ## 1. Actual tournaments
+ 

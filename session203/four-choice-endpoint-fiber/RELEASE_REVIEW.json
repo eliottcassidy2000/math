@@ -1,0 +1,32 @@
+{
+  "status": "PASS_RELEASE_REVIEW",
+  "reviewed_proof_sha256": "2c6030f3f1dc2b990f99b38f40c473e1f147bf35c555a9450a35323267345315",
+  "promoted_proof_sha256": "21418f15b1367c8e3f14b5ff2aeceb760b8cd513b7fb8f467fe27e2c6034a01c",
+  "changed_proof_lines": [
+    3
+  ],
+  "README_sha256": "da12187c236a7b18e9ac05b3b573830689a45f55b1069e982ba10cb4e3a42bc2",
+  "dependency_provenance_sha256": "2f854be19481c350c9848d90cbab7e43828c4e23f686422c91997bd9062b3161",
+  "preserved_audit_entries": [
+    "REVIEW.md",
+    "REVIEWED_PROOF.md",
+    "REVIEWED_INPUT_MANIFEST.sha256",
+    "PRODUCER_TENSORS.json",
+    "PRODUCER_DERIVE.py",
+    "PRODUCER_VERIFIER.cpp",
+    "check_algebra.py",
+    "check_graphs.cpp",
+    "ALGEBRA_NORMAL.json",
+    "ALGEBRA_OPTIMIZED.json",
+    "GRAPHS_NORMAL.json",
+    "GRAPHS_DEBUG.json",
+    "PRODUCER_ALGEBRA_NORMAL.json",
+    "PRODUCER_ALGEBRA_OPTIMIZED.json",
+    "PRODUCER_NORMAL.txt",
+    "PRODUCER_DEBUG.txt",
+    "AUDIT_RECEIPT.json"
+  ],
+  "scope": "Four choices at every scale, with offsets {0,8,14,22}*2^k and the correct k=0 zero-eigenvalue boundary. Outputs retain a global sink. No growing width, free base, adjacent-target, F(8,137), interval-coverage or eventual-threshold claim.",
+  "checks": "Proof differs only by the approved status phrase. All 17 frozen audit entries and nested manifest, original producer inputs, and reviewed proof are preserved. README correctly scopes the self-contained main theorem and readout corollary. Published readout dependency matches SHA256 and Git blob provenance.",
+  "publication": "Parent grants the branch slot separately; no branch writes by this auditor."
+}
