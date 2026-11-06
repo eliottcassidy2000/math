@@ -1,0 +1,29 @@
+{
+  "status": "PASS_RELEASE_REVIEW",
+  "reviewed_proof_sha256": "9af8664c047d96410dd2395fa3ffb230185da4a0ae3da06e40525835fe201fa1",
+  "promoted_proof_sha256": "69cd4addc7eb2ab4c18086dbf8acdb695e45dd07d167fbe39944907759079ee1",
+  "changed_proof_lines": [
+    3
+  ],
+  "README_sha256": "b186c50e7b9dadea7c8d478019fff602ad93d260b2db4de96e937f38d6d68dc8",
+  "frozen_audit_entries_preserved": [
+    "REVIEW.md",
+    "REVIEWED_PROOF.md",
+    "REVIEWED_INPUTS.json",
+    "PRODUCER_TENSORS.json",
+    "PRODUCER_ORDERED_TENSORS.txt",
+    "PRODUCER_VERIFIER.py",
+    "check_tensors.py",
+    "check_bodies.py",
+    "TENSORS_NORMAL.json",
+    "TENSORS_OPTIMIZED.json",
+    "BODIES_NORMAL.json",
+    "BODIES_OPTIMIZED.json",
+    "PRODUCER_REPLAY_NORMAL.json",
+    "PRODUCER_REPLAY_OPTIMIZED.json",
+    "AUDIT_RECEIPT.json"
+  ],
+  "scope": "All-order identity and exact equality boundary for the two specified colored repair cores only. Full B child retained. No general two-root obstruction, strong-output claim or eventual threshold.",
+  "checks": "Proof differs only by approved status phrase. All original producer bytes, 15 frozen audit entries and nested manifest match. README correctly distinguishes finite core exhaustion from body controls and explains empty-set-unit convention via the proof. No new mathematics introduced.",
+  "publication": "Parent coordinates; no branch writes by this audit."
+}

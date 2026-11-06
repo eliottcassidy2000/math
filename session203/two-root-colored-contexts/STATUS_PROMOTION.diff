@@ -1,0 +1,10 @@
+--- REVIEWED_PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # Two sensitive roots retain the repair exactly on ordered color blocks
+ 
+-Status: **PROOF CANDIDATE, pending independent audit.** The statement is an all-order identity and equality classification for two explicit physical operations. It is not an obstruction to all two-root contexts, and it proves no eventual odd-spectrum threshold.
++Status: **PROVED, independently audited in the stated scope.** The statement is an all-order identity and equality classification for two explicit physical operations. It is not an obstruction to all two-root contexts, and it proves no eventual odd-spectrum threshold.
+ 
+ ## 1. Two physical promotions of the audited repairs
+ 

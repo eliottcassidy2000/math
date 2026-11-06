@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "Exact all-order identities and equality classification for the two specified colored contexts only. No general two-root obstruction or threshold claim.",
+  "reviewed_proof_sha256": "9af8664c047d96410dd2395fa3ffb230185da4a0ae3da06e40525835fe201fa1",
+  "reviewed_verifier_sha256": "1260bfd79686bd0c9c2e813d43b190c9331d10c951e6c59f2ec9775f1af9c96a",
+  "core_orders": 51120,
+  "colored_cut_inputs_through4": 1099,
+  "literal_context_pairs": 204,
+  "strict_pairs": 152,
+  "literal_DFS_visits": 15477646,
+  "publication": "Not performed by this audit; parent coordinates."
+}

@@ -1,0 +1,9 @@
+{
+  "PROOF.md": "9af8664c047d96410dd2395fa3ffb230185da4a0ae3da06e40525835fe201fa1",
+  "verify_colored_identity.py": "1260bfd79686bd0c9c2e813d43b190c9331d10c951e6c59f2ec9775f1af9c96a",
+  "NORMAL.json": "edad07808e20c8e3a3ec3fdc3cdd4ff9882f59c19dced6e3429055a175f9b92f",
+  "OPTIMIZED.json": "edad07808e20c8e3a3ec3fdc3cdd4ff9882f59c19dced6e3429055a175f9b92f",
+  "colored_tensor.cpp": "228f5ae70ab702704568d306f83d7024374dcb7f39ba4a1cc226fd56f2a38013",
+  "COLORED_TENSOR.txt": "5ae699299afe5389c70c4af3b100694142d9f125e3d6b3e6d29432ab1db0d2ba",
+  "PROMOTED_TWO_ROOTS.json": "b9428dc8342f25f20a1fc2662f12c7f1423863aacb3fb114bda82458cda984db"
+}

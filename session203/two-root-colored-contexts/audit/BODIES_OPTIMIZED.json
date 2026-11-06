@@ -1,0 +1,150 @@
+{
+  "additional_nontransitive_block_order6_cases": 2,
+  "additional_seeded_order5_cases": 12,
+  "all_labelled_colored_cut_cases_through4": 1099,
+  "capacity_pairs_checked": 410,
+  "complete_representative_colorings_through4": 87,
+  "context_pairs": 204,
+  "explicit_unsorted_spine_case": 1,
+  "hostiles": [
+    {
+      "body_H": 1,
+      "child_H": 279,
+      "child_rows": [
+        2,
+        8,
+        67,
+        101,
+        143,
+        215,
+        19,
+        335,
+        127
+      ],
+      "excess": 12,
+      "family": "A",
+      "parent_H": 133,
+      "parent_rows": [
+        2,
+        24,
+        3,
+        37,
+        77,
+        87,
+        143,
+        63
+      ]
+    },
+    {
+      "body_H": 1,
+      "child_H": 295,
+      "child_rows": [
+        256,
+        773,
+        385,
+        807,
+        815,
+        967,
+        927,
+        795,
+        512,
+        5
+      ],
+      "excess": 64,
+      "family": "B",
+      "parent_H": 115,
+      "parent_rows": [
+        160,
+        389,
+        129,
+        423,
+        431,
+        454,
+        415,
+        256,
+        5
+      ]
+    }
+  ],
+  "literal_DFS_visits": 15477646,
+  "minimum_positive_excess_observed": {
+    "A": 12,
+    "B": 64
+  },
+  "nontransitive_block_controls": [
+    {
+      "body_H": 9,
+      "child_H": 2835,
+      "colors": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cut_defect": 0,
+      "excess": 0,
+      "family": "A",
+      "parent_H": 1413
+    },
+    {
+      "body_H": 9,
+      "child_H": 1539,
+      "colors": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cut_defect": 0,
+      "excess": 0,
+      "family": "B",
+      "parent_H": 765
+    },
+    {
+      "body_H": 9,
+      "child_H": 36783,
+      "colors": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "cut_defect": 90,
+      "excess": 864,
+      "family": "A",
+      "parent_H": 17955
+    },
+    {
+      "body_H": 9,
+      "child_H": 40671,
+      "colors": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "cut_defect": 90,
+      "excess": 15192,
+      "family": "B",
+      "parent_H": 12735
+    }
+  ],
+  "scope": "Only the two specified physical repair pairs; empty body and arbitrary internal body orientations included.",
+  "status": "PASS",
+  "strict_cases": 152,
+  "uncolored_class_counts": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "4": 4
+  }
+}
