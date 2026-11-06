@@ -1,0 +1,18 @@
+[
+  {
+    "local_file": "BUSCH_CORE_BOUND.md",
+    "published_commit": "17c3b0bb5cfd820737fc39449cda2fd3df14df53",
+    "published_path": "session197/unrestricted-target/PROOF.md",
+    "git_blob_sha": "07164f0d33dc5ec2d9edb2d9d7c7ef21d2eb6bcb",
+    "sha256": "5bea17dabd28f39878de94bd59bff984473bed6e93f2d36beafc4f41929defaa",
+    "url": "https://github.com/eliottcassidy2000/math/blob/17c3b0bb5cfd820737fc39449cda2fd3df14df53/session197/unrestricted-target/PROOF.md"
+  },
+  {
+    "local_file": "ELEMENTARY_PROFILE_BOUND.md",
+    "published_commit": "61f06512d0eafdb1c177181d4556dda2e12f2fcb",
+    "published_path": "session203/rooted-profile-order-bound/PROOF.md",
+    "git_blob_sha": "3e776ff0a4dbb12e31ca897a3bbc1179a599c9d9",
+    "sha256": "839e6b74ba3344a93fa32240b939f57bd1dcfb1fd0114bf578568085a7e6aa7b",
+    "url": "https://github.com/eliottcassidy2000/math/blob/61f06512d0eafdb1c177181d4556dda2e12f2fcb/session203/rooted-profile-order-bound/PROOF.md"
+  }
+]

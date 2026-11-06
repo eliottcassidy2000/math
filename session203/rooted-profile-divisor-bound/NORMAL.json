@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "labeled_root_zero_tournaments": 33867,
+  "positive_start_inputs": 27476,
+  "B_equals_s_inputs": 1100,
+  "positive_start_counts_by_order_1_to_6": [1, 1, 4, 38, 728, 26704],
+  "base137_cap_rows": [[9,9,9,9,9,9,9,8,8],[9,10,9,9,9,9,10,8,8]],
+  "cap_arithmetic_targets_checked": 10000,
+  "F_8_137": "OPEN"
+}

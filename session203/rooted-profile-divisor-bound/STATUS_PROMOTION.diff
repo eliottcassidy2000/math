@@ -1,0 +1,10 @@
+--- reviewed-originals/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # A sharper rooted-profile order cap from the published strong minimum
+ 
+-**PROOF CANDIDATE, pending independent audit.** This is an elementary corollary of an already cited theorem, applied to the physical rooted profile. No novelty or priority claim is made for the inherited strong-order bounds. It does not prove F(8,137) or an eventual spectrum threshold.
++**PROVED as a cited corollary, independently audited in the stated scope.** This is an elementary corollary of an already cited theorem, applied to the physical rooted profile. No novelty or priority claim is made for the inherited strong-order bounds. It does not prove F(8,137) or an eventual spectrum threshold.
+ 
+ ## 1. Published input and exact integer functions
+ 

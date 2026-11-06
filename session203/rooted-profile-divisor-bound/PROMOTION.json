@@ -1,0 +1,8 @@
+{
+  "status": "MATHEMATICAL_AUDIT_PASS_RELEASE_REVIEW_PENDING",
+  "delta": "Status line only",
+  "reviewed_proof_sha256": "41d8a8bde4d31b480a6324b4f924857f8fec60832e944317ca790d669c3a4b02",
+  "promoted_proof_sha256": "7e3bbbb0b85670a44666fb3d3c01c846db7a89b070039bbe47681b05608a2545",
+  "audit_review_sha256": "1cf1fe38510d53c2fcaa93c2fe4d791ef48e919a179626faeba3f0e3d9d95e4f",
+  "scope": "Cited-corollary order bound only; F(8,137) and threshold23 remain OPEN."
+}
