@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "scope": "Exact all-order bounded-profile membership, with nonnegative saturated forest states and guarded finite controls. No F(8,137), numerical tail coverage, or polynomial binary-input running-time conclusion.",
+  "reviewed_release_file_count": 34,
+  "reviewed_root_manifest_sha256": "cb17ed6fc60062926f331d4bb046430ab7e9bc2d4fd3a7c263a7bb6cf8607c9d",
+  "promoted_proof_sha256": "f644162e428444d6dccb9f52b7a0c95484960b1bd6635db0a4d00067241a9519",
+  "original_candidate_proof_sha256": "82a43f3d6464dc05c3912842311ee1080aab28ae0e95dfd1714c2a2ad471eeba",
+  "readme_sha256": "8c308f7883ceafc73aaaec9a75fecb3540c17e04d5a4de0667e0969029dda47e",
+  "promotion_diff_sha256": "1a8efff2c676f11bb65b46c1fa592ad75259be87ae956643f75e8a48aa6a7937",
+  "proof_delta": "Only status/dependency wording and the approved explicit-guard/abnormal-interruption and core-search/expanded-witness-cost clarifications.",
+  "readme_review": "PASS. Reproduction instructions, complete and incomplete controls, fixed-K numerical complexity, witness validation costs, and remaining F8/tail limits are accurate.",
+  "dependency_provenance": "PASS. Exact published finite-interface theorem proof and historical unit-start inventory hashes/commit paths are preserved; the inventory is explicitly control-only, not a theorem premise.",
+  "manifest_checks": {
+    "root_complete_entries": 33,
+    "audit_complete_entries": 19,
+    "frozen_producer_verified_entries": 10,
+    "unlisted_release_files": 0,
+    "unlisted_audit_files": 0
+  },
+  "curated_audit": {
+    "files_preserved_byte_for_byte": 20,
+    "manifest_sha256": "5eb9a603265ffcc7ff7f469bd1f9ffe40f7da4d97dbba61974d4ccc99d41c890",
+    "checkout_snapshots_exploratory_probes_and_draft_readme_absent": true
+  },
+  "production_and_dependency_files_unchanged": [
+    "check_membership.py",
+    "forest_runtime.py",
+    "NORMAL137.json",
+    "OPTIMIZED137.json",
+    "GUARD_K2.json",
+    "GUARD_EMPTY.json",
+    "dependencies/FINITE_INTERFACE_PROOF.md",
+    "dependencies/PROVENANCE.json",
+    "dependencies/UNIT_START_INVENTORY997.json"
+  ],
+  "fresh_replays": {
+    "producer_normal137": "Byte-identical to NORMAL137.json.",
+    "producer_optimized137": "Byte-identical to OPTIMIZED137.json.",
+    "producer_state_limit_K2": "Byte-identical to GUARD_K2.json; INCOMPLETE.",
+    "producer_empty_guard": "Byte-identical to GUARD_EMPTY.json; INCOMPLETE.",
+    "packaged_independent_normal": "PASS; matches frozen result except elapsed_seconds.",
+    "packaged_independent_optimized": "PASS; matches frozen result except elapsed_seconds.",
+    "independent_audit_elapsed_seconds": [
+      15.104,
+      16.284
+    ]
+  },
+  "finite_controls": {
+    "complete_K1_X137_states": 26760,
+    "complete_K1_X137_transitions": 62470,
+    "complete_K1_X137_profiles": 41,
+    "literal_tournaments": 1099,
+    "literal_forest_vectors": 5405,
+    "literal_saved_witness_instances": 88
+  },
+  "release_bytes_unchanged_during_review": true,
+  "permitted_final_metadata_changes": [
+    "Update only the status field of PROMOTION.json to PASS or an equivalent successful source-audit and packaging-review status.",
+    "Add this unchanged receipt at the release root as PACKAGING_REVIEW.json.",
+    "Regenerate only the root SHA256SUMS so it covers every other final release file, including the new receipt and updated PROMOTION.json."
+  ],
+  "immutable_after_review": "All other release files, including the promoted proof, README, code, production receipts, dependencies, and every audit/ file and its manifest, must remain byte-identical to the reviewed snapshot.",
+  "publication": "Ready after the listed metadata-only changes and final root-manifest verification. No publication or release modification was performed by this review."
+}

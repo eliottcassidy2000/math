@@ -1,0 +1,240 @@
+{
+  "status": "INCOMPLETE",
+  "K": 2,
+  "X": 13,
+  "W": 3,
+  "cutoff": 14,
+  "states": 1000,
+  "transitions": 2015,
+  "pairs": [
+    [
+      1,
+      1
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      9,
+      1
+    ],
+    [
+      9,
+      2
+    ],
+    [
+      11,
+      1
+    ],
+    [
+      13,
+      1
+    ]
+  ],
+  "literal_witnesses_checked": 6,
+  "witnesses": [
+    {
+      "B": 1,
+      "s": 1,
+      "root": 0,
+      "rows": [
+        0
+      ],
+      "word": [
+        [
+          "introduce",
+          0,
+          []
+        ]
+      ]
+    },
+    {
+      "B": 5,
+      "s": 1,
+      "root": 0,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "word": [
+        [
+          "introduce",
+          0,
+          []
+        ],
+        [
+          "introduce",
+          1,
+          []
+        ],
+        [
+          "introduce",
+          2,
+          [
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "B": 9,
+      "s": 1,
+      "root": 0,
+      "rows": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "word": [
+        [
+          "introduce",
+          0,
+          []
+        ],
+        [
+          "introduce",
+          1,
+          []
+        ],
+        [
+          "forget",
+          1
+        ],
+        [
+          "introduce",
+          1,
+          []
+        ],
+        [
+          "introduce",
+          2,
+          [
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "B": 9,
+      "s": 2,
+      "root": 2,
+      "rows": [
+        2,
+        12,
+        9,
+        1
+      ],
+      "word": [
+        [
+          "introduce",
+          0,
+          []
+        ],
+        [
+          "introduce",
+          1,
+          []
+        ],
+        [
+          "forget",
+          1
+        ],
+        [
+          "introduce",
+          1,
+          [
+            0
+          ]
+        ],
+        [
+          "introduce",
+          2,
+          [
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "B": 11,
+      "s": 1,
+      "root": 3,
+      "rows": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "word": [
+        [
+          "introduce",
+          0,
+          []
+        ],
+        [
+          "introduce",
+          1,
+          []
+        ],
+        [
+          "forget",
+          1
+        ],
+        [
+          "introduce",
+          1,
+          []
+        ],
+        [
+          "introduce",
+          2,
+          [
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "B": 13,
+      "s": 1,
+      "root": 2,
+      "rows": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "word": [
+        [
+          "introduce",
+          0,
+          []
+        ],
+        [
+          "introduce",
+          1,
+          []
+        ],
+        [
+          "forget",
+          1
+        ],
+        [
+          "introduce",
+          1,
+          []
+        ],
+        [
+          "introduce",
+          2,
+          [
+            0
+          ]
+        ]
+      ]
+    }
+  ]
+}

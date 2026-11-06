@@ -1,0 +1,12 @@
+{
+  "status": "INCOMPLETE",
+  "K": 1,
+  "X": 1,
+  "W": 2,
+  "cutoff": 2,
+  "states": 1,
+  "transitions": 1,
+  "pairs": [],
+  "literal_witnesses_checked": 0,
+  "witnesses": []
+}

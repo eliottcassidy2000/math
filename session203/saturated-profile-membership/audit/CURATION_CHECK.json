@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "original_audit_unchanged": true,
+  "independent_checker_unchanged": true,
+  "original_review_unchanged": true,
+  "original_receipt_comparisons": {
+    "RESULT.json": "Only input_hashes and elapsed_seconds changed.",
+    "RESULT_OPTIMIZED.json": "Only input_hashes and elapsed_seconds changed."
+  },
+  "normal_optimized_agree_except_elapsed_time": true,
+  "curated_INPUT_SHA256_matches_result": true,
+  "frozen_producer_manifest_entries_verified": 10,
+  "real_dependencies_included": true,
+  "historical_inventory_control_agreement": true,
+  "omitted_material": [
+    "CHECKOUT_STATUS_BEFORE.txt",
+    "CHECKOUT_STATUS_AFTER.txt",
+    "frozen_source/PROBE1.json",
+    "frozen_source/PROBE5.json",
+    "frozen_source/PROBE137.json",
+    "frozen_source/PROBE_K2_13.json",
+    "frozen_source/README_DRAFT.md"
+  ],
+  "audit_run_seconds": [
+    15.658,
+    15.265
+  ],
+  "scope": "Packaging only. Mathematical proof, audit code, production code, controls, and all original substantive results unchanged."
+}

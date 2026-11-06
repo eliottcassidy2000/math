@@ -1,0 +1,18 @@
+[
+  {
+    "file": "FINITE_INTERFACE_PROOF.md",
+    "commit": "bf716a495ec2d49dbeb46e22798e37d43e4b0c26",
+    "source_path": "session203/finite-profile-interface/PROOF.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/bf716a495ec2d49dbeb46e22798e37d43e4b0c26/session203/finite-profile-interface/PROOF.md",
+    "sha256": "cb2de007a4de0a2446764e3b162024fa9f3cd5ea749c54342acab322ed1c6534",
+    "scope": "Theorem dependency."
+  },
+  {
+    "file": "UNIT_START_INVENTORY997.json",
+    "commit": "5067f5a9e43237ab3013399b3636dff92096d886",
+    "source_path": "session203/rooted-cover-closure/INVENTORY997.json",
+    "url": "https://github.com/eliottcassidy2000/math/blob/5067f5a9e43237ab3013399b3636dff92096d886/session203/rooted-cover-closure/INVENTORY997.json",
+    "sha256": "58c87031086fa5e22523417525e6f40f831ec849af3c62771db9810bac6d9faa",
+    "scope": "Independent historical control only; not a premise of algorithm correctness."
+  }
+]

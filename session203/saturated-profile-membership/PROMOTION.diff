@@ -1,0 +1,43 @@
+--- frozen/PROOF.md
++++ release/PROOF.md
+@@ -1,7 +1,7 @@
+ # Exact bounded-profile membership by saturated forest states
+ 
+-**PROOF CANDIDATE, not independently audited.** This is a corollary of the
+-independently audited finite-profile-interface theorem. It proves a
++**PROVED, independently audited.** This is a corollary of the published
++finite-profile-interface theorem, frozen under dependencies/. It proves a
+ terminating exact algorithm, with an explicit but enormous finite state
+ bound. It does not prove F(8,137), numerical tail coverage, or polynomial
+ running time in the binary length of a requested count.
+@@ -77,10 +77,13 @@
+ literal witness. Every finite word has a representative reachable state,
+ so interface completeness proves that no actual bounded profile is missed.
+ 
+-An implementation stopped by a time, memory, or state-count limit must
+-return INCOMPLETE for unrecorded pairs. It may return recorded witnesses
+-as VERIFIED. It may return ABSENT only after the queue has been exhausted.
+-An early successful query may stop with its witness.
++An explicit time, memory, or state-count guard must return INCOMPLETE when
++it stops an unfinished search. The supplied implementation has an explicit
++state-count guard and can return its already verified witnesses. An
++unexpected exception, killed process, or uncontrolled memory exhaustion may
++produce no result at all and supplies no absence certificate. Only a
++normally exhausted search reporting COMPLETE certifies unrecorded pairs
++absent. An early successful query may stop with its physical witness.
+ 
+ ## 4. Explicit size and complexity bounds
+ 
+@@ -111,6 +114,12 @@
+ only on K. Conservative dense-matrix evaluation gives the same fixed-K
+ conclusion with D^2 in place of D.
+ 
++These bounds concern compact membership/rectangle answers and the shared
++predecessor DAG. Expanding every instruction word or graph adjacency list
++has additional output-dependent cost. The demonstrator also performs extra
++literal subset-counting verification of its small control witnesses; that
++validation work is not included in the core search bound.
++
+ This is polynomial in the NUMERICAL target bound X when K is fixed, with
+ an enormous exponent D. It is generally exponential in the binary length
+ of X, and the constants and degree grow very rapidly with K. For K=26,

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "candidate_proof_sha256": "82a43f3d6464dc05c3912842311ee1080aab28ae0e95dfd1714c2a2ad471eeba",
+  "core_theorem": "Exact all-order membership in every fixed positive bounded profile rectangle",
+  "required_release_clarifications": [
+    "Core BFS/shared predecessor-DAG complexity excludes expanded witness output and extra literal recount.",
+    "Only explicit state guard promises INCOMPLETE; abnormal process termination supplies no absence certificate."
+  ],
+  "independent_K1_X137": {
+    "states": 26760,
+    "transitions": 62470,
+    "status": "COMPLETE"
+  },
+  "distinct_K1_X137_pairs": 41,
+  "literal_tournaments": 1099,
+  "literal_vectors": 5405,
+  "literal_witness_instances": 88,
+  "normal_optimized_audit_agreement": true,
+  "original_production_inputs_unchanged": true,
+  "checkout_status_unchanged": true,
+  "historical_inventory_control_agreement": true,
+  "audit_run_seconds": [
+    15.658,
+    15.265
+  ],
+  "no_publication_performed": true,
+  "curated_portable_replay": "PASS; see CURATION_CHECK.json"
+}
