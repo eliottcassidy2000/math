@@ -1,0 +1,46 @@
+--- originals/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # A complete digit-and-gcd inverse for positive unit readouts
+ 
+-Status: **RESERVED / UNREVIEWED PROOF CANDIDATE**. This is an exact arithmetic
++Status: **PROVED, independently audited in the stated domain**. This is an exact arithmetic
+ inverse and a complexity bound, not a proof of universal occupancy. The
+ twelve-template all-target lemma remains **OPEN**. Session 201.
+ 
+--- originals/README.md
++++ README.md
+@@ -1,6 +1,7 @@
+ # Digital gcd inverse
+ 
+-Unreviewed all-order inverse and search-node bound. Universal occupancy is OPEN.
++Independently audited all-order inverse and search-node bound for original
++indices v>=2. Universal occupancy is OPEN.
+ 
+     python verify.py
+     python -O verify.py
+--- originals/TARGETS.md
++++ TARGETS.md
+@@ -1,6 +1,7 @@
+ # Targeted arithmetic hostiles, not a new census
+ 
+-Status: author-verified exact certificates; pending independent review.
++Status: independently verified exact certificates. Long first-witness search
++statistics remain author-only.
+ 
+ The separate divisor-gate theorem shows that a prime target n cannot use
+ JJZJ if3n-2 is also prime, or JJZZJ if5n-4 is also prime. We therefore chose
+--- originals/verify.py
++++ verify.py
+@@ -23,9 +23,11 @@
+ def fixed_inverse(row,n,vmin=2,vmax=None,first=False):
+     """Returns all indices in the requested interval, or stops at first=True.
+ 
++    The original-index lower bound vmin must be at least two.
+     Row order is (alpha,beta,gamma,delta), deliberately different from the
+     core matrix row (alpha,gamma,beta,delta).
+     """
++    core.need(vmin>=2,'original index lower bound must be at least two')
+     core.need(valid(row),'positive physical row domain')
+     alpha,beta0,gamma0,delta0=row;d=gcd(alpha,beta0);m=alpha//d
+     if n<alpha:return [],{'nodes':0,'leaves':0,'g_evaluations':0,'node_budget':1,'gcd':d}

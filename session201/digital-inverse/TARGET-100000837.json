@@ -1,0 +1,16 @@
+{
+  "complete_search": false,
+  "statistics": {
+    "g_evaluations": 44376,
+    "nodes": 80725,
+    "rows": 55
+  },
+  "target": 100000837,
+  "witnesses": [
+    [
+      "JOZJJ",
+      3,
+      1890994
+    ]
+  ]
+}

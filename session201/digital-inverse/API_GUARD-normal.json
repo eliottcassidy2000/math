@@ -1,0 +1,14 @@
+{
+  "statistics": {
+    "g_evaluations": 1,
+    "gcd": 1,
+    "leaves": 1,
+    "node_budget": 3,
+    "nodes": 3
+  },
+  "status": "PASS",
+  "valid_v_2": [
+    2
+  ],
+  "vmin_1": "rejected"
+}

@@ -1,0 +1,39 @@
+{
+  "Lucas_certified_primes": 26,
+  "literal_large_path_enumeration": false,
+  "modular_checks": 117,
+  "status": "PASS",
+  "target_certificates": [
+    {
+      "indices": [
+        3,
+        1890994
+      ],
+      "target": 100000837,
+      "template": "JOZJJ",
+      "two_rank_one_templates": "excluded at all heights by the prime triple",
+      "vertices": 29
+    },
+    {
+      "indices": [
+        2,
+        7840792990
+      ],
+      "target": 10000001533,
+      "template": "",
+      "two_rank_one_templates": "excluded at all heights by the prime triple",
+      "vertices": 35
+    },
+    {
+      "indices": [
+        8,
+        22798770134
+      ],
+      "target": 1000000001911,
+      "template": "JOZJ",
+      "two_rank_one_templates": "excluded at all heights by the prime triple",
+      "vertices": 43
+    }
+  ],
+  "universal_occupancy": "OPEN"
+}

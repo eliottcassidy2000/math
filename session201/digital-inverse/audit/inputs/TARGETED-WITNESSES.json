@@ -1,0 +1,106 @@
+[
+  {
+    "g_left": 3,
+    "g_right": 846841,
+    "graph_word": "OOZZOOZOOZOZOZOOZZZOJOZJJOJ",
+    "left_index": 3,
+    "normalization_trace": [
+      [
+        "JOZJJ",
+        3,
+        1890994
+      ]
+    ],
+    "prime_triple": [
+      100000837,
+      300002509,
+      500004181
+    ],
+    "right_index": 1890994,
+    "source_profile": [
+      28422503,
+      0,
+      71578334,
+      17471163
+    ],
+    "statistics": {
+      "g_evaluations": 44376,
+      "nodes": 80725,
+      "rows": 55
+    },
+    "target": 100000837,
+    "vertices": 29,
+    "word": "JOZJJ"
+  },
+  {
+    "g_left": 1,
+    "g_right": 2159208543,
+    "graph_word": "OOZOZZOOZOZOOZZOZZZZZZZOOZZOOOZOJ",
+    "left_index": 2,
+    "normalization_trace": [
+      [
+        "",
+        2,
+        7840792990
+      ]
+    ],
+    "prime_triple": [
+      10000001533,
+      30000004597,
+      50000007661
+    ],
+    "right_index": 7840792990,
+    "source_profile": [
+      2159208543,
+      0,
+      7840792990,
+      1
+    ],
+    "statistics": {
+      "g_evaluations": 52567,
+      "nodes": 72196,
+      "rows": 1
+    },
+    "target": 10000001533,
+    "vertices": 35,
+    "word": ""
+  },
+  {
+    "g_left": 1,
+    "g_right": 7483075823,
+    "graph_word": "ZOZOZZOOOZOOOZOZZOOZZOOOOOOOZOZOZOJOZJZZJ",
+    "left_index": 8,
+    "normalization_trace": [
+      [
+        "JOZOJ",
+        4,
+        22798770134
+      ],
+      [
+        "JOZJ",
+        8,
+        22798770134
+      ]
+    ],
+    "prime_triple": [
+      1000000001911,
+      3000000005731,
+      5000000009551
+    ],
+    "right_index": 22798770134,
+    "source_profile": [
+      545422769891,
+      90845537871,
+      545422769891,
+      90845537871
+    ],
+    "statistics": {
+      "g_evaluations": 5763608,
+      "nodes": 10685259,
+      "rows": 88
+    },
+    "target": 1000000001911,
+    "vertices": 43,
+    "word": "JOZJ"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "complete_and_window_controls": 58725,
+  "first_mode_controls": 13500,
+  "numerical_rows": 225,
+  "out_of_domain_boundary": "vmin>=2 API precondition enforced",
+  "scalar_singleton_original_index": 2,
+  "scope": "The physical theorem requires original v>=2; internal h=1 is permitted.",
+  "status": "PASS",
+  "verifier_sha256": "5c68433b3374b218bb6718f2b01dcd0fd31c41735c8859f074f208c87e9e79f8"
+}

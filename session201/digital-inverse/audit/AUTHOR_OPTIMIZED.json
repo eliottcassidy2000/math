@@ -1,0 +1,94 @@
+{
+  "fixed_row_target_controls": 20904,
+  "fixed_rows": 104,
+  "maximum_node_budget_fraction": 1.0,
+  "status": "PASS",
+  "target_controls": [
+    {
+      "g_evaluations": 6,
+      "nodes": 10,
+      "representations": 0,
+      "rows": 4,
+      "target": 7
+    },
+    {
+      "g_evaluations": 10,
+      "nodes": 21,
+      "representations": 0,
+      "rows": 12,
+      "target": 13
+    },
+    {
+      "g_evaluations": 30,
+      "nodes": 56,
+      "representations": 8,
+      "rows": 37,
+      "target": 31
+    },
+    {
+      "g_evaluations": 35,
+      "nodes": 91,
+      "representations": 0,
+      "rows": 64,
+      "target": 43
+    },
+    {
+      "g_evaluations": 49,
+      "nodes": 125,
+      "representations": 0,
+      "rows": 89,
+      "target": 67
+    },
+    {
+      "g_evaluations": 99,
+      "nodes": 271,
+      "representations": 0,
+      "rows": 172,
+      "target": 163
+    },
+    {
+      "g_evaluations": 134,
+      "nodes": 361,
+      "representations": 0,
+      "rows": 232,
+      "target": 277
+    },
+    {
+      "g_evaluations": 161,
+      "nodes": 401,
+      "representations": 0,
+      "rows": 257,
+      "target": 313
+    },
+    {
+      "g_evaluations": 560,
+      "nodes": 1474,
+      "representations": 0,
+      "rows": 704,
+      "target": 1877
+    },
+    {
+      "g_evaluations": 658,
+      "nodes": 1772,
+      "representations": 0,
+      "rows": 849,
+      "target": 2647
+    },
+    {
+      "g_evaluations": 1267,
+      "nodes": 3191,
+      "representations": 39,
+      "rows": 1186,
+      "target": 5001
+    },
+    {
+      "g_evaluations": 2145,
+      "nodes": 5600,
+      "representations": 0,
+      "rows": 2238,
+      "target": 17383
+    }
+  ],
+  "total_fixed_nodes": 69744,
+  "universal_occupancy": "OPEN"
+}
