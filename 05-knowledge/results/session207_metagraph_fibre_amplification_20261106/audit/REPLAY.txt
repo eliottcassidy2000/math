@@ -1,0 +1,1 @@
+PASS all36 rows by independent memoized endpoint recurrence; spanning cycles and both growth inequalities
