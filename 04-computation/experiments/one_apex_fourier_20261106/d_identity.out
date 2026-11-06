@@ -1,0 +1,2 @@
+(*) violations in 200000 random cases: 0
+C_m bijective for m<=12; g(v)<=v+1 for v<2^18

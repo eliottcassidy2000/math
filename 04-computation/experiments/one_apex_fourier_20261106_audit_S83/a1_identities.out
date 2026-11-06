@@ -1,0 +1,6 @@
+(i) chain orientation i->j iff i<j is True: mismatches H_tournament vs g(A) over all 1023 words of length 0..9: 0
+(i) chain orientation i->j iff i<j is False: mismatches H_tournament vs g(A) over all 1023 words of length 0..9: 930
+(ii) exhaustive |u|,|w| in 0..4, |v| in 1..4: law (1) failures 0; law (2) failures 0 of 28830 triples
+(ii) random long triples (lengths up to 40): law (2) failures 0 of 3000
+(iii) A(u) progression (diff 2, length 2^(a-2)): True; C(w) progression (diff 2, length 2^(l-1)): True; A, C bijections onto [0,2^L) with C(v) = 2^L-1-A(reverse v): True; pair counts 2^L-|d|: True
+(iv) x = x'1^t with x' strong and H(x) = H(x') for all x in X_n, n <= 14: True; H odd: True; g(v) <= v+1 for v < 2^18: True

@@ -1,0 +1,3 @@
+(L1) 660485 exact blocks (q <= 120, all r, delta in {0, +-1/(2q^2), +-1/q^2}): max_j (j - 2 q t_j) = 1.9915 at (q, r, k, d0) = (117, 2, 2, -58)  [lemma: <= 3]
+(L1) 4000 random blocks (q <= 3000, |delta| <= 1/q^2): max_j (j - 2 q t_j) = 1.9258  [lemma: <= 3]
+(L2) 3000 random blocks: max of sum_block min(K, 1/(2||beta d||)) / (3K + q(1 + ln q)) = 0.7943  [<= 1 required]

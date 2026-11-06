@@ -23134,3 +23134,43 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - Before calling a family unclassified, grep for its name (`git grep -n -i intercyclic`).
   - A circle-method sketch must state what it yields. Power-saving minor-arc bounds give almost-all results, not
     pointwise lower bounds.
+
+## MISTAKE-726 (2026-11-06, opus-2026-11-06-S83, THM-4886, HYP-9479 and the note `05-knowledge/results/one_apex_exponential_sums_bilinear_weyl_bound_20261106.md` at the pre-audit commit 8acbc16ebc; found by the independent audit `04-computation/experiments/one_apex_fourier_20261106_audit_S83/AUDIT.md`) -- a canon title that dropped a range limit, corollary recipes checked on one residue class, uncredited classical method and same-day scope correction, and a missed simpler split
+
+- **What was claimed.**
+  - (1) The THM-4886 title stated "12 · 2^(n-1) (q/2^n)^(1/4) for q <= 2^(n-6)".
+  - (2) The written recipes for the corollaries (6.5 q^(-1/2) and 12 (q/2^n)^(1/4)) were said to prove those constants,
+    with an "analytic constant about 8.5".
+  - (3) The bilinear bound was presented as the session's own method. The note said "the repository had no proved
+    exponential-sum bound" and restated, without credit, that minor-arc bounds plus a growing bank do not cover.
+  - (4) The three-block split v-in-the-middle was presented as the natural route.
+- **Why it was wrong.**
+  - (1) The body had the lower limit q >= 2^((n-6)/3), and it is necessary. At theta = 1/7 (q = 7) the exact sum
+    exceeds the title's bound for every n >= 37 (3.517e-2 against 3.206e-2).
+  - (2) The (A1) split did not exist at the top of its range. The (A2) recipe L = floor(log2 q) reaches 12.70 at
+    n = 104, a corner with n = 2 mod 3. The constants scan sampled only n = 0 mod 3, and its own output printed
+    11.3, not 8.5.
+  - (3) The argument is the classical Weyl-Vinogradov Type II estimate (Vaughan ch. 2; Davenport ch. 25). Session 193
+    Theorem 3 already proves decay at each fixed rational theta. The insufficiency of individual minor-arc bounds was
+    the S82 audit's M3 and Session 205's `S82_SCOPE_CORRECTION.md` (commit 500713e22b, an ancestor of the checkpoint).
+  - (4) Session 193's two-block law (1) gives the textbook Type II bound directly. It is smaller in 1,099 of 1,186 exact
+    instances and doubles the minor-arc exponent (audit U1).
+- **Repair.**
+  - The title was corrected. U1 is now Theorem A; the three-block version is kept as (A') with the audit's repaired
+    recipes (5.37, 11.30).
+  - Credits were added: the classical method, the S82 audit's M3, Session 205, S82 section 7, Session 193 Theorem 3 and
+    Session 16's involution.
+  - The energy floor E_n >= 2 |X_n| - 2^(n/2) - 1 (U4) and the Parseval calibration (U5) were recorded.
+  - Eleven minors were fixed.
+- **How it was caught.**
+  - The audit evaluated the title's clause at a fixed major-arc q for large n by exact transfer.
+  - It scanned the recipes over every n <= 200 on a fine grid.
+  - It read the same-day commits that are ancestors of the checkpoint.
+- **Lesson.**
+  - A canon title must carry every hypothesis of the clause it quotes. Check the title against the body clause by clause.
+  - Scan a constants claim over every residue class of n (mod 3 here) and the whole parameter range, not a lattice of
+    convenient points.
+  - When an exponential-sum argument is Cauchy-Schwarz plus geometric sums, name the classical method. Try the simplest
+    split (two blocks) before a three-block one.
+  - Run `git log --since` on the same day and read every scope review of the previous session before restating its
+    limits.

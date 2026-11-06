@@ -1,10 +1,10 @@
 ---
 id: HYP-9479
 title: "Pre-registered tests for the Fourier side of the one-apex counts: (P1) square-root cancellation |S_n(theta)| ~ 2^(n/2) at five irrational theta for n = 26, 28; (P2) bounded energy E_n / |X_n| in [3.1, 3.5] for n = 26, 28; (P3) diagonal dominance of the bilinear second moment at unseen splits"
-status: "P1, P2, P3 CONFIRMED out of sample (runs after the pre-registration commit 185c2b3efa); recorded in THM-4886 (D)"
+status: "P1, P2, P3 CONFIRMED out of sample (runs after the pre-registration commit 185c2b3efa); recorded in THM-4886 status and the note section 4 (D); audit PASS WITH CORRECTIONS (results reproduced digit for digit; pre-registration timing valid; m6, m7 applied)"
 session: opus-2026-11-06-S83
 date: 2026-11-06
-related: [THM-4886, THM-4885, HYP-9478, HYP-9474]
+related: [THM-4886, THM-4887, THM-4885, HYP-9478, HYP-9474]
 script: 04-computation/experiments/one_apex_fourier_20261106/
 ---
 
@@ -61,3 +61,21 @@ Source: `04-computation/experiments/one_apex_fourier_20261106/outsample.out`, pr
 - **(P2) CONFIRMED.** 3.2526 and 3.2473 both lie in [3.1, 3.5].
 - **(P3) CONFIRMED.** Q / diagonal lies in [0.9971, 1.0686] in all 48 cases; none falls outside [0.85, 1.2].
 - The vectorised block generator of g agrees with the recursion in 4,600 random checks.
+
+## Audit (2026-11-06)
+
+Report: `04-computation/experiments/one_apex_fourier_20261106_audit_S83/AUDIT.md`. Verdict PASS WITH CORRECTIONS.
+- **Reproduced.** The n = 26 and n = 28 rows match an independent engine digit for digit. It uses fixed-point phases and
+  an automaton for g. The 48 P3 cases give [0.9971, 1.0686].
+- **Pre-registration valid.** outsample.out was born at 12:20:55, after the commit at 12:20:01, and the predictions are
+  unedited.
+- **m6.**
+  - The in-sample range [0.166, 2.457] is for even n = 14, 16, ..., 24. The odd n = 23 gives 2.814 at phi.
+  - P1's window [0.05, 20] cannot separate 2^(n/2) from 2^(0.55 n) at n = 28. So the results are consistent with
+    square-root cancellation; they do not prove it.
+  - P2's window is +-0.2 around an in-sample plateau, which has been 3.24-3.26 since n = 18. E_n / |X_n| has been
+    decreasing slowly since n = 22: 3.2607, 3.2580, 3.2574, 3.2555, 3.2526, 3.2502 and 3.2473 for n = 22..28.
+- **m7.** The "4,600 random checks" line above has no receipt in the folder. The audit's independent reproduction
+  supersedes it.
+- **The forced floor (audit U4).** The converse involution preserves H, so E_n >= 2 |X_n| - 2^(n/2) - 1. P2 therefore
+  measures an excess of about 1.25 over a floor of 2. THM-4887 proves E_n <= (1.39 n + 19) 2^(4n/3).

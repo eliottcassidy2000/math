@@ -1,0 +1,14 @@
+(A1) note's recipe L = floor(log2 q), a, l >= log2 q + 2: infeasible in 6273 of 925317 grid points of the range; where feasible, max bound*sqrt(q) = 5.3409
+(A1) L = floor(log2 q), balanced a: max bound*sqrt(q) = 5.3409   [audit analytic sup 5.369]
+(A2) note's recipe L = floor(log2 q), balanced a: max bound/(q/2^n)^(1/4) = 12.7008 at (n, log2 q) = (104, np.float64(32.6667))   [claimed 12]
+(A2) L = floor(log2 q) + 1, balanced a: max = 10.7343 at (104, np.float64(32.6667))   [audit analytic sup 11.30]
+analytic: (A1) sup_f phi1(f) = 5.3696; (A2) with L = floor+1: 11.3019; with L = floor: 13.6104
+U1 vectorised vs loop: max diff 0.00e+00
+U1: max over n in [7,300], 2 <= q <= 2^((n-3)/3) of U1*sqrt(q) = 3.3712   [THM-4886 (A1): 6.5 claimed, 4.22 optimal]
+U1: max over n in [7,300], 2^(n/2) <= q <= 2^(n-3) of U1/sqrt(q n/2^n) = 2.9926
+U1: best saving: max over n in [20,300] of (min_q U1) * 2^(n/4)/sqrt(n) = 1.9618  (so min_q U1 <= 1.96 sqrt(n) 2^(-n/4))
+U1 minor arcs: max over n in [7,300], 2^(eps n) < q <= 2^((1-eps) n) of U1 * 2^(eps n/2)/sqrt(n): eps=0.050: 2.6356, eps=0.100: 2.6178, eps=0.200: 2.5916, eps=0.333: 2.6436   [audit analytic: <= 4 for n >= 7]
+
+real	2m40.082s
+user	0m0.031s
+sys	0m0.046s

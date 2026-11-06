@@ -1,0 +1,15 @@
+reduction check (300 random (n, q)): max |fast - brute force| = 0.00e+00
+(A1) sup over n in [6,200], 2 <= q <= 2^((n-3)/3) of bound*sqrt(q) = 4.2231 at (n, q) = (103, 10822639409.680946)   [claimed 6.5; session scan 4.213]
+(A2) sup over n in [6,200], 2^((n-6)/3) <= q <= 2^(n-6) of bound/(q/2^n)^(1/4) = 9.5428 at (n, q, log2 q) = (199, 2.324144116049009e+19, 64.33333333333333)   [claimed 12; session scan 9.539]
+      n = 0 mod 3: max (A1) ratio 4.2131; max (A2) ratio 9.5394
+      n = 1 mod 3: max (A1) ratio 4.2231; max (A2) ratio 9.5428
+      n = 2 mod 3: max (A1) ratio 4.2009; max (A2) ratio 9.4631
+      (A2) per-n maxima, n = 6..40: 7:7.76 8:8.49 9:9.54 10:9.54 11:9.46 12:9.54 13:9.54 14:9.46 15:9.54 16:9.54 17:9.46 18:9.54 19:9.54 20:9.46 21:9.54 22:9.54 23:9.46 24:9.54 25:9.54 26:9.46 27:9.54 28:9.54 29:9.46 30:9.54 31:9.54 32:9.46 33:9.54 34:9.54 35:9.46 36:9.54 37:9.54 38:9.46 39:9.54 40:9.54
+      brute-force bound at the worst (A2) point: 9.5428
+(A3) eps = 0.050: sup_n<= 200 of min(bound,1)*2^(eps n/4) = 4.7925 at (n, log2 q, bound) = (190, 180.5, 0.9239); over eps*n >= 6 of bound*2^(eps n/4) = 4.7925 at (170, 161.5)   [claimed 12; session 4.564]
+(A3) eps = 0.100: sup_n<= 200 of min(bound,1)*2^(eps n/4) = 4.7925 at (n, log2 q, bound) = (125, 112.5, 0.5493); over eps*n >= 6 of bound*2^(eps n/4) = 4.7925 at (85, 76.5)   [claimed 12; session 4.564]
+(A3) eps = 0.150: sup_n<= 200 of min(bound,1)*2^(eps n/4) = 4.7925 at (n, log2 q, bound) = (110, 93.5, 0.2747); over eps*n >= 6 of bound*2^(eps n/4) = 4.7925 at (50, 42.5)   [claimed 12; session 4.564]
+(A3) eps = 0.200: sup_n<= 200 of min(bound,1)*2^(eps n/4) = 4.7797 at (n, log2 q, bound) = (47, 37.6, 0.9375); over eps*n >= 6 of bound*2^(eps n/4) = 4.7797 at (32, 25.6)   [claimed 12; session 4.564]
+(A3) eps = 0.250: sup_n<= 200 of min(bound,1)*2^(eps n/4) = 4.7925 at (n, log2 q, bound) = (38, 28.5, 0.9239); over eps*n >= 6 of bound*2^(eps n/4) = 4.7925 at (26, 19.5)   [claimed 12; session 4.564]
+(A3) eps = 0.300: sup_n<= 200 of min(bound,1)*2^(eps n/4) = 4.7925 at (n, log2 q, bound) = (35, 24.5, 0.7769); over eps*n >= 6 of bound*2^(eps n/4) = 4.7926 at (25, 17.5)   [claimed 12; session 4.564]
+(A3) eps = 0.333: sup_n<= 200 of min(bound,1)*2^(eps n/4) = 4.7728 at (n, log2 q, bound) = (28, 18.667, 0.947); over eps*n >= 6 of bound*2^(eps n/4) = 4.7745 at (19, 12.667)   [claimed 12; session 4.564]
