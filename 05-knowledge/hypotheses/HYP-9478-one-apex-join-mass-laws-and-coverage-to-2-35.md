@@ -1,7 +1,7 @@
 ---
 id: HYP-9478
 title: "Pre-registered out-of-sample tests for the representation mass of one-arc join families: (P1) the one-apex x bank family F2 has mean multiplicity exactly M_2 = sum_y (2/y_h) ln(1 + y_h/y_R) = 48.1976 in the dyadic blocks k = 28, 29; (P2) the one-apex x one-apex family F1 gains (pi^2/12) ln 2 = 0.5701 per doubling at k = 28, 29; (P3) F2 alone, with the fixed order-<=7 bank, attains every odd N <= 2^30 except 7 and 21; (P4) its lower tail keeps thinning; (P5) F1 u F2 attains every odd N <= 2^35 except 7 and 21; (P6) F2 alone attains every odd N <= 2^35 except 7 and 21; (P7) F1-only miss ratios stay in [1.50, 1.65] for k = 32..34"
-status: "P1-P4 CONFIRMED out of sample (run after the pre-registration commit 09b7a56a98); P5-P7 pending the 2^35 run"
+status: "P1-P4 CONFIRMED out of sample (run after the pre-registration commit 09b7a56a98; reproduced independently by the audit); P5-P7 UNDECIDED at close-out, the bucketed 2^35 run still in progress (dated addendum to follow)"
 session: opus-2026-11-06-S82
 date: 2026-11-06
 related: [THM-4885, THM-4875, HYP-9468]

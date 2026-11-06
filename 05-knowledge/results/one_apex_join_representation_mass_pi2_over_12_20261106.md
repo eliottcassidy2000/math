@@ -228,6 +228,15 @@ line by the audit's independent sieve):
   - over N coprime to 3·5·7·11·13·17 the mean r2 is 0.813 of the overall mean, and over prime N it is 0.796 (k = 26,
     audit U3). The deficit on nonzero classes falls roughly like 1/p^2, consistent with a convergent singular series.
   - These extend S73's 3-adic singular series (HYP-9457 P6; THM-4866 (D)) and S78's F1 residue profile.
+  - **The 3-adic factor of F2, predicted** (after the audit; `local_factor_mod3_prediction.py`).
+    - Assume g(v) mod 3 is asymptotically uniform and independent of v mod 3, of the parity of v and of rho (Session 193
+      modular_sync Theorems 3-4).
+    - Then a triple spreads its mass evenly over the three classes unless 3 | y_h and 3 | y_R. In that case
+      Phi = -y_e e(v) (mod 3): the odd v (rho < 1/2) land in class 0 and the even v (rho >= 1/2) in class -y_e.
+    - The predicted class means are (60.443, 41.411, 42.738). The observed means oscillate around these with decaying
+      amplitude: class 0 is 70.8, 64.3, 59.4, 58.2, 59.3, 60.8, 61.3, 60.9, 60.3, 60.0 at k = 10, 12, ..., 28.
+    - So the 3-adic local factor of F2 comes entirely from the triples with 3 | y_h and 3 | y_R, split by the parity
+      of v.
 - **Far from Poisson.**
   - F1 misses 0.0074 of the class N ≡ 1 mod 3 at k = 25, where a Poisson count with mean 12.5 would miss 4e-6.
   - Overall, F1's miss density falls like N^-0.35 (ratio 1.57 per doubling, THM-4875 (D)), against N^-(pi^2/12) =
@@ -251,7 +260,7 @@ The pre-registered program `chanpak_f1f2_cover34_20261106.c` makes one random wr
 in 82376badc0 before its run. At 2^28 and 2^30 it reproduces the pre-registered program's and the audit's outputs
 exactly.
 
-(Result of the 2^35 run: filled below when it finishes.)
+**Status at close-out (2026-11-06 11:50): PENDING.** The bucketed run started at 11:25 and is expected to finish around 12:45-13:25. Following the pre-registration, P5-P7 are UNDECIDED at close. The result will be added here and in HYP-9478 as a dated addendum. Until then the certified range stays 2^32 (THM-4875 (D), recertified by Session 203), plus F2 alone to 2^30 (P3).
 
 ## 7. What a proof through these families would need (HEURISTIC)
 

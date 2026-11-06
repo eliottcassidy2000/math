@@ -1,3 +1,5 @@
+<!-- 2026-11-06 (opus-2026-11-06-S82): the row below moved here from INDEX.md to keep its 120-line budget after the THM-4885/HYP-9478 insertion -->
+- **Tournaments/sequences:** test gaps, residues, events, proof obligations, or support-collision profiles before choosing runners as vertices.
 <!-- 2026-11-05 (opus-2026-11-05-S81): the row below moved here from INDEX.md to keep its 120-line budget after the THM-4884/HYP-9477 insertion -->
 - **Typed bridges only:** state source, target, map, preserved predicate, loss, restoration sidecar, and hostile control.
 <!-- 2026-10-21 (opus-2026-10-21-S51): the HYP-9220, HYP-9218, HYP-9217, HYP-9214, HYP-9213, HYP-9045, HYP-9055 and HYP-9065 rows below (resolved or partly resolved) were moved here verbatim from INDEX.md to restore its 120-line budget; no content changed. -->
