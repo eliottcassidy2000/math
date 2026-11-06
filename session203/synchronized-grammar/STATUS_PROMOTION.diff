@@ -1,0 +1,10 @@
+--- audit/reviewed-inputs/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # Eight short tests characterize paired synchronization under all O/Z/J words
+ 
+-Status: proof candidate. This is an exact reduction for a possible constructive bridge, not a claim that the required physical seed pair exists or that its orbit has a tail.
++Status: **PROVED, independently audited in the stated scope.** This is an exact reduction for a possible constructive bridge, not a claim that the required physical seed pair exists or that its orbit has a tail.
+ 
+ Use the physical nine-coordinate states and transfers in the independently reviewed `dependencies/ROOTED_COVER_CLOSURE.md`, in coordinate order `(h,s,e,L,R,d,C,b,T)`. Inputs are nontrivial rooted tournaments with positive start count, so the singleton Z exception is excluded. Each operation preserves s. Define `G=h+L`, so the staggered adjusted base for residue r is
+ 

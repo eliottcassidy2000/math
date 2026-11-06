@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "Eight-test all-word synchronization equivalence for initially synchronized nontrivial positive-start physical sources, fixed residues and admissible shifts. Seed-pair existence and orbit occupancy remain open.",
+  "proof_sha256": "56d093d7b0112b40546eddd9da7ef369d7f282d71dc8c2576195cf2a2a3413eb",
+  "reviewed_original_sha256": "589addeec077c4793176221992d98732d8a00a164b9d6c2c8ac5ea1b52175248",
+  "proof_delta": "Status-only promotion on line 3.",
+  "readme_sha256": "ab100186e89fcbe8be1c67e0630ba0b3d09d75af5f7c18c153b8c2d235ee81f7",
+  "preserved_audit_entries": 18,
+  "audit_manifest_preserved": true,
+  "dependencies": "Exact published transfer proof/provenance and audited four-core readout retained. README links the immutable readout source.",
+  "relocated_replays": {
+    "independent_symbolic": "43c0fcce599b0f53919e46bb94f943257d09416475196dbefbbe12de6caac35c",
+    "producer": "e2bf8bced2a2dad4aafba35b35e39f7f0ae638c16ba0f78924816fa9b479529c",
+    "independent_physical": "ef364e9cdea4223b7e2c5adf7a024a725d232d33e46c31dd274db9d55c949e0a"
+  },
+  "replay_result": "All three relocated outputs exactly match their frozen receipts.",
+  "discovery_scope": "Unreviewed finite search excluded from release.",
+  "publication": "Approved after the parent grants the branch lane; no branch writes performed by this review."
+}

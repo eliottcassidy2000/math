@@ -1,0 +1,9 @@
+{
+  "scope": "Eight-test equivalence for all-word physical synchronization only; seed existence and occupancy remain open.",
+  "reviewed_proof_sha256": "589addeec077c4793176221992d98732d8a00a164b9d6c2c8ac5ea1b52175248",
+  "promoted_proof_sha256": "56d093d7b0112b40546eddd9da7ef369d7f282d71dc8c2576195cf2a2a3413eb",
+  "review_sha256": "0f6e608844b4d3af68598fef6358a793c5840d91fc3af14e7514b9a37a581849",
+  "change": "Status-only promotion; original proof and exact diff preserved.",
+  "preserved_audit_manifest_entries": 18,
+  "four_core_readout": "Frozen in audit/READOUT_DEPENDENCY.md; immutable published URL in README and audit review."
+}
