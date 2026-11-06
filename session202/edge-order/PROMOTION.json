@@ -1,0 +1,18 @@
+{
+  "changes": [
+    "Status line and final provenance paragraph updated after independent audit PASS.",
+    "Final paragraph explicitly distinguishes x-before-y order from consecutive use of x->y, as already specified by the audited definitions.",
+    "Author verifier points to PROOF.md instead of EDGE_ORDER.md.",
+    "Portable independent verifier points to frozen originals through a relative path; the original auditor script is preserved."
+  ],
+  "independent_audit_sha256": "f7a87e47a00b007f09dcf8cb6d7fbeb61d6be55739adf626c14aceecf17fd0a9",
+  "limits": [
+    "No eventual spectrum threshold.",
+    "No additive constructor or uniform gluing inequality.",
+    "Unique Hamilton cycle only for transitive modules p,q>=1.",
+    "General nonempty modules retain the exact total product."
+  ],
+  "original_proof_sha256": "29db7536acfa23c4bcd0648bf425c54052ccb4644d0908b8b97fbe4666ae7979",
+  "promoted_proof_sha256": "22217dd46e33ccea40bd87729d2c6ef63a384df08ee4395d263b0b5c93ea5939",
+  "status": "PROVED in stated scope after independent audit PASS"
+}

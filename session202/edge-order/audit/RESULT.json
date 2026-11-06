@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "method": "Independent edge predicates and literal permutations, not subset DP",
+  "arbitrary_pairs": 121,
+  "transitive": [
+    {
+      "p": 1,
+      "q": 1,
+      "f": 5,
+      "r": 4,
+      "H": 9,
+      "cycles": 1
+    },
+    {
+      "p": 1,
+      "q": 2,
+      "f": 7,
+      "r": 8,
+      "H": 15,
+      "cycles": 1
+    },
+    {
+      "p": 1,
+      "q": 3,
+      "f": 11,
+      "r": 16,
+      "H": 27,
+      "cycles": 1
+    },
+    {
+      "p": 2,
+      "q": 1,
+      "f": 7,
+      "r": 8,
+      "H": 15,
+      "cycles": 1
+    },
+    {
+      "p": 2,
+      "q": 2,
+      "f": 9,
+      "r": 16,
+      "H": 25,
+      "cycles": 1
+    },
+    {
+      "p": 2,
+      "q": 3,
+      "f": 13,
+      "r": 32,
+      "H": 45,
+      "cycles": 1
+    },
+    {
+      "p": 3,
+      "q": 1,
+      "f": 11,
+      "r": 16,
+      "H": 27,
+      "cycles": 1
+    },
+    {
+      "p": 3,
+      "q": 2,
+      "f": 13,
+      "r": 32,
+      "H": 45,
+      "cycles": 1
+    },
+    {
+      "p": 3,
+      "q": 3,
+      "f": 17,
+      "r": 64,
+      "H": 81,
+      "cycles": 1
+    }
+  ],
+  "hashes": {
+    "EDGE_ORDER.md": "29db7536acfa23c4bcd0648bf425c54052ccb4644d0908b8b97fbe4666ae7979",
+    "verify_edge_order.py": "658d6c62acfd143609a5a6f28f5a1b846349fc1b30b28572ff29f156f2c5b7cc",
+    "EDGE_NORMAL.json": "cb59e77684866b92fc5b7f4973f6f76c7d5c11a52362f394fe0888e8d1fba990",
+    "EDGE_OPTIMIZED.json": "cb59e77684866b92fc5b7f4973f6f76c7d5c11a52362f394fe0888e8d1fba990"
+  }
+}
