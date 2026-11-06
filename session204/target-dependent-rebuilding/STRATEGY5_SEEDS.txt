@@ -1,0 +1,12 @@
+seed 23 0301
+seed 25 1211
+seed 27 0201
+seed 29 1031
+seed 31 1021
+seed 33 0211
+seed 35 11301
+seed 37 0021
+seed 39 20101
+seed 41 0013
+seed 43 0213
+seed 45 11201
