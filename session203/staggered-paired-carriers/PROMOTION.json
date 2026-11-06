@@ -1,0 +1,8 @@
+{
+  "status": "STATUS_ONLY_PROMOTION_PENDING_FINAL_RELEASE_REVIEW",
+  "reviewed_proof_sha256": "777fec9e14b9219855268c157b3579b1bc5b76ba8ae1f194a8e569dc8d1f57a2",
+  "promoted_proof_sha256": "e54792c206d6945a11dda2c4e6ca1e8d20140bbf3aaec91081987753c4a16f38",
+  "audit_review_sha256": "e60328628e1a0f2de686c92d31fcb4b653e9cb270151ff4e4be07e85fcb4e5a7",
+  "scope": "Exact stated all-order theorem only; F(8,137) remains OPEN.",
+  "delta_scope": "Status line only"
+}

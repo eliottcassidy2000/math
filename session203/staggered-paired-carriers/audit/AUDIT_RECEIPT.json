@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "reviewed_proof_sha256": "777fec9e14b9219855268c157b3579b1bc5b76ba8ae1f194a8e569dc8d1f57a2",
+  "review_sha256": "e60328628e1a0f2de686c92d31fcb4b653e9cb270151ff4e4be07e85fcb4e5a7",
+  "checker_sha256": "e154345c7d42fa14283a31e43f15e288d30b919ed31991133d6c82ea6e633c8a",
+  "normal_and_debug_sha256": "68b6eb814a2dbb4d15e3cc290c208f21869d64b4c1a2659d2ab8f9e81c82f78a",
+  "carrier_word_graphs": 504,
+  "literal_readouts": 120,
+  "marked_small_inputs": 285,
+  "literal_move_children": 855,
+  "direct_f_cover_checks": 1140,
+  "W_family_n_range": [
+    4,
+    14
+  ],
+  "scope": "Four physical paired O/Z orbits certify both staggered residues at their reached bases. Infinite start-two full states lie outside every nonempty O/Z/J word. No all-source classification or pair (B,s) incompleteness, F refutation, or threshold proof.",
+  "publication": "Parent coordinates; no branch writes by auditor."
+}

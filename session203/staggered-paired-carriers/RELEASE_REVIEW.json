@@ -1,0 +1,26 @@
+{
+  "status": "PASS_RELEASE_REVIEW",
+  "package": "staggered-paired-carriers",
+  "reviewed_proof_sha256": "777fec9e14b9219855268c157b3579b1bc5b76ba8ae1f194a8e569dc8d1f57a2",
+  "promoted_proof_sha256": "e54792c206d6945a11dda2c4e6ca1e8d20140bbf3aaec91081987753c4a16f38",
+  "README_sha256": "653e16ee6b21dee6bc0dd58235378d92eef38684b002ca4ec455c3d248c8e7a8",
+  "proof_delta": "Status-only promotion",
+  "preserved_audit_entries": [
+    "REVIEW.md",
+    "REVIEWED_PROOF.md",
+    "PRODUCER_VERIFIER.cpp",
+    "check.cpp",
+    "NORMAL.json",
+    "DEBUG.json",
+    "PRODUCER_NORMAL.json",
+    "PRODUCER_DEBUG.json",
+    "AUDIT_RECEIPT.json",
+    "dependencies/POSITIVE_CONTEXT_READOUT.md",
+    "dependencies/PROVENANCE.json",
+    "dependencies/ROOTED_COVER_CLOSURE.md",
+    "dependencies/STAGGERED_PROFILE_CRITERION.md"
+  ],
+  "scope": "Paired O/Z carrier instances and full-state grammar obstruction only; no pair (B,s) incompleteness or F/threshold claim.",
+  "checks": "All audit manifest entries and original snapshots preserved. README scope and executable commands checked. Relative package links resolve within the staged release. No mathematical proof change.",
+  "publication": "Parent grants branch slot separately; auditor made no branch writes."
+}

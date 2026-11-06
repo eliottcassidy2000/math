@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "reviewed_proof_sha256": "b0ebc37202e641c3eb0f55245b54dda8c61624489a7ac5a58dfeb402215732d1",
+  "review_sha256": "c92327a10e3d6267aba5fa833a0afb84d9a1a7eec2518de5f8bb9f144b0fbaaf",
+  "carrier_dependency_sha256": "777fec9e14b9219855268c157b3579b1bc5b76ba8ae1f194a8e569dc8d1f57a2",
+  "normal_and_optimized_sha256": "d989590249378e84bf35fa9d8972e4716026f3dd113dfcd5a722ac6999f8da79",
+  "normalized_words_checked": 262140,
+  "maximum_length": 16,
+  "upper_odd_relative_density": "693609731/46994283721",
+  "scope": "Only the four specified paired O/Z orbits have upper odd-relative density below 1.5 percent and cannot contain an odd tail. No statement for other banks, J continuations, arbitrary sources or F.",
+  "publication": "Separate scoped addendum; parent coordinates."
+}

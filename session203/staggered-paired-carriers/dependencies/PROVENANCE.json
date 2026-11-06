@@ -1,0 +1,29 @@
+[
+  {
+    "local_file": "ROOTED_COVER_CLOSURE.md",
+    "published_commit": "5067f5a9e43237ab3013399b3636dff92096d886",
+    "published_path": "session203/rooted-cover-closure/PROOF.md",
+    "git_blob_sha": "4360809d176a820160e2d201c464bcba920d103f",
+    "sha256": "8e78951f9dd15decff0d23cfb3ebe64f358b3c9d4561b269b527a1e9aa902168",
+    "url": "https://github.com/eliottcassidy2000/math/blob/5067f5a9e43237ab3013399b3636dff92096d886/session203/rooted-cover-closure/PROOF.md",
+    "readback_basis": "Existing exact-blob publication receipt; local bytes independently hashed to the published blob."
+  },
+  {
+    "local_file": "STAGGERED_PROFILE_CRITERION.md",
+    "published_commit": "e5570ebddf67175234d0504af71da481747380ec",
+    "published_path": "session203/staggered-profile-criterion/PROOF.md",
+    "git_blob_sha": "76b2450daf4dde6870dc6328a69199bb4f08613c",
+    "sha256": "cf97dd951c7b641f236f3e931b9b3e2bce23125fe31f746769ec1c4034cfd196",
+    "url": "https://github.com/eliottcassidy2000/math/blob/e5570ebddf67175234d0504af71da481747380ec/session203/staggered-profile-criterion/PROOF.md",
+    "readback_basis": "Existing exact-blob publication receipt; local bytes independently hashed to the published blob."
+  },
+  {
+    "local_file": "POSITIVE_CONTEXT_READOUT.md",
+    "published_commit": "e5570ebddf67175234d0504af71da481747380ec",
+    "published_path": "session203/staggered-profile-criterion/dependencies/FREE_ADDITIVE_PROOF.md",
+    "git_blob_sha": "8165b505470d34fcd2552df4ac7dcf865238fd62",
+    "sha256": "211623af96e90d516fbce7598450642878f81fc2892446dee5173b55fb41b099",
+    "url": "https://github.com/eliottcassidy2000/math/blob/e5570ebddf67175234d0504af71da481747380ec/session203/staggered-profile-criterion/dependencies/FREE_ADDITIVE_PROOF.md",
+    "readback_basis": "Existing exact-blob publication receipt; local bytes independently hashed to the published blob."
+  }
+]

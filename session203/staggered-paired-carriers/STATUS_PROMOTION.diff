@@ -1,0 +1,10 @@
+--- reviewed-originals/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # Two exact advances toward the staggered-profile criterion
+ 
+-**PROOF CANDIDATE, pending independent audit.** The two results below are all-order statements about actual rooted tournaments. Neither proves nor disproves F(8,137), and no eventual odd-spectrum threshold is claimed.
++**PROVED, independently audited in the stated scope.** The two results below are all-order statements about actual rooted tournaments. Neither proves nor disproves F(8,137), and no eventual odd-spectrum threshold is claimed.
+ 
+ ## 1. Definitions and inheritance
+ 

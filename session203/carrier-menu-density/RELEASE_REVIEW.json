@@ -1,0 +1,24 @@
+{
+  "status": "PASS_RELEASE_REVIEW",
+  "package": "carrier-menu-density",
+  "reviewed_proof_sha256": "b0ebc37202e641c3eb0f55245b54dda8c61624489a7ac5a58dfeb402215732d1",
+  "promoted_proof_sha256": "67211023e689b04bf429e345aac1576a5c45fee847105c990ae8ad055e3cc974",
+  "README_sha256": "60ca69349f647b254e90cf76b5ab2d3f7b1528b675f2f2de57bd455cc25b2fd8",
+  "proof_delta": "Status promotion and two relative citations corrected to sibling carrier proof",
+  "preserved_audit_entries": [
+    "REVIEW.md",
+    "REVIEWED_PROOF.md",
+    "PRODUCER_CHECK.py",
+    "check.py",
+    "NORMAL.json",
+    "OPTIMIZED.json",
+    "PRODUCER_NORMAL.json",
+    "PRODUCER_OPTIMIZED.json",
+    "DEPENDENCY_CARRIER_PROOF.md",
+    "DEPENDENCY_CARRIER_REVIEW.md",
+    "AUDIT_RECEIPT.json"
+  ],
+  "scope": "Density below 1.5 percent among odds only for the four specified O/Z orbits; no general source/grammar density claim.",
+  "checks": "All audit manifest entries and original snapshots preserved. README scope and executable commands checked. Relative package links resolve within the staged release. No mathematical proof change.",
+  "publication": "Parent grants branch slot separately; auditor made no branch writes."
+}

@@ -1,0 +1,8 @@
+{
+  "status": "STATUS_ONLY_PROMOTION_PENDING_FINAL_RELEASE_REVIEW",
+  "reviewed_proof_sha256": "b0ebc37202e641c3eb0f55245b54dda8c61624489a7ac5a58dfeb402215732d1",
+  "promoted_proof_sha256": "67211023e689b04bf429e345aac1576a5c45fee847105c990ae8ad055e3cc974",
+  "audit_review_sha256": "c92327a10e3d6267aba5fa833a0afb84d9a1a7eec2518de5f8bb9f144b0fbaaf",
+  "scope": "Exact stated all-order theorem only; F(8,137) remains OPEN.",
+  "delta_scope": "Status line and two relative carrier-proof citations after relocation"
+}
