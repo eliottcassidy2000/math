@@ -1,0 +1,9 @@
+{
+  "edges": 96,
+  "tree_edges": 63,
+  "graph_energy": 31,
+  "tree_energy": 23,
+  "graph_TV": 23,
+  "tree_TV": 23,
+  "status": "independent exact check passed"
+}
