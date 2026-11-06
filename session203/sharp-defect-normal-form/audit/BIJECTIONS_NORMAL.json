@@ -1,0 +1,10 @@
+{
+  "bad_cover_bijections": 31322,
+  "gained_Hamilton_paths": 156,
+  "gained_two_covers": 1512,
+  "lost_Hamilton_paths": 156,
+  "lost_two_covers": 312,
+  "marked_inputs": 5405,
+  "physical_flip_cases": 54,
+  "status": "PASS"
+}

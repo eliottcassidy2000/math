@@ -1,0 +1,1 @@
+{"status":"PASS","literal_graphs":33867,"rooted_inputs":202013,"terminal_pairs":502170,"strong_terminal_alternatives":340390,"cover_equalities":15959,"defect_equalities":3670,"baseline_sources":33867,"flipped_sources":10694,"exact_two_parameter_checks":10694,"marked_singleton_cases":6254,"empty_core_cases":10694}

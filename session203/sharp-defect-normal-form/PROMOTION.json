@@ -1,0 +1,16 @@
+{
+  "status": "MATHEMATICAL_AND_PACKAGING_AUDIT_PASS",
+  "delta": "Status line only in each of PROOF.md and DENSITY.md.",
+  "proofs": {
+    "PROOF.md": {
+      "reviewed_sha256": "680ee2d8e97f700d33b008e2a42f9e61a9287da03d25668e4b7d430e8db72ea7",
+      "promoted_sha256": "76d5e3a67ee7d0af77c49901ab858375bac22dfa3c8a2b4930b667a3c7550999"
+    },
+    "DENSITY.md": {
+      "reviewed_sha256": "39fc861102006e76265f703640c9ecfc0b54d2d9ad29e8d67532b7603bf22f45",
+      "promoted_sha256": "60a04a6061750fa07a54f325ca65f6ea33446d2f8fa5f1af8dd8ecfddcbcf215"
+    }
+  },
+  "audit_review_sha256": "c2422bf6fb9731d91199b664930a1f752d9ae820fa8a9a86f464b0ca0a76fa62",
+  "scope": "Exact endpoint-cover equality, complete sharp-defect graph normal form, and fixed-start equality-face density only. General bounded-defect sparsity is excluded. F(8,137) remains OPEN."
+}

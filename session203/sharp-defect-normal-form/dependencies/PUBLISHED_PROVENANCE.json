@@ -1,0 +1,34 @@
+[
+  {
+    "local_file": "SHARP_DEFECT_PROOF.md",
+    "published_commit": "20d185c937163242289918282869826d0e1ddb75",
+    "published_path": "session203/sharp-z-defect/reviewed/PROOF.md",
+    "git_blob_sha": "5b108da2e94d08535938ec7a3fc6ac1296b341a9",
+    "sha256": "582687a3d966a928efb7355cca6d9f1181d76d09d4065da17a0815d1343f457d",
+    "url": "https://github.com/eliottcassidy2000/math/blob/20d185c937163242289918282869826d0e1ddb75/session203/sharp-z-defect/reviewed/PROOF.md"
+  },
+  {
+    "local_file": "SHARP_DEFECT_PROOF_BEFORE_BOUNDARY_FIX.md",
+    "published_commit": "20d185c937163242289918282869826d0e1ddb75",
+    "published_path": "session203/sharp-z-defect/reviewed-before-boundary-fix/PROOF.md",
+    "git_blob_sha": "9fc1661cbb661249c28cf83e3a0feff7b725171a",
+    "sha256": "97273c71f0fbfc71fff9acf62a0689bfdb3ebb8524ecebbfb2eaa99ce32a4830",
+    "url": "https://github.com/eliottcassidy2000/math/blob/20d185c937163242289918282869826d0e1ddb75/session203/sharp-z-defect/reviewed-before-boundary-fix/PROOF.md"
+  },
+  {
+    "local_file": "SHARP_DEFECT_BOUNDARY_CORRECTION.diff",
+    "published_commit": "20d185c937163242289918282869826d0e1ddb75",
+    "published_path": "session203/sharp-z-defect/BOUNDARY_CORRECTION.diff",
+    "git_blob_sha": "a3b1cfa3a2a24e8bd8e01b59e75027929be2a09d",
+    "sha256": "5f9f5f5dc81cdfb5e012e9348def7a6509e2e404aab67f85025de823849eb3f1",
+    "url": "https://github.com/eliottcassidy2000/math/blob/20d185c937163242289918282869826d0e1ddb75/session203/sharp-z-defect/BOUNDARY_CORRECTION.diff"
+  },
+  {
+    "local_file": "sharp_defect_verify.cpp",
+    "published_commit": "20d185c937163242289918282869826d0e1ddb75",
+    "published_path": "session203/sharp-z-defect/verify.cpp",
+    "git_blob_sha": "21071b85ba79a9367f402b22b92e58bf5723820a",
+    "sha256": "f72ffb793c9d0cc32b75116b5dafd84777347f4fcfd199d4417039f1935618dc",
+    "url": "https://github.com/eliottcassidy2000/math/blob/20d185c937163242289918282869826d0e1ddb75/session203/sharp-z-defect/verify.cpp"
+  }
+]

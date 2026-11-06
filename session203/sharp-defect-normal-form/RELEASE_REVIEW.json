@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "scope": "Release packaging only; exact endpoint-cover equality, complete D=s graph normal form, and fixed-start equality-face sparsity. The bounded-defect extension is excluded.",
+  "staged_directory": "session203-sharp-normal-form-release/session203/sharp-defect-normal-form",
+  "proof_sha256": "76d5e3a67ee7d0af77c49901ab858375bac22dfa3c8a2b4930b667a3c7550999",
+  "density_sha256": "60a04a6061750fa07a54f325ca65f6ea33446d2f8fa5f1af8dd8ecfddcbcf215",
+  "readme_sha256": "9c86d8f4a617bb65e6bf95c0562071d91df286806f1a9b1f7c4d1a68771937b5",
+  "audit_review_sha256": "c2422bf6fb9731d91199b664930a1f752d9ae820fa8a9a86f464b0ca0a76fa62",
+  "preserved_audit_manifest_entries": 24,
+  "checks": [
+    "Both proof changes are exactly the approved status-line substitutions; original bytes preserved.",
+    "All 24 audit entries and original audit manifest match frozen originals.",
+    "Producer code, saved receipts, and inherited dependencies are unchanged.",
+    "Root manifest passes. Published dependency metadata agrees with Git blob hashes and the exact-readback publication receipt.",
+    "Relocated producer and independent set-bijection replays reproduce exact saved outputs.",
+    "README accurately states the nontrivial positive-start, equality-face, and fixed-start restrictions."
+  ],
+  "permitted_final_metadata_changes": [
+    "Set PROMOTION.json release-review status to PASS.",
+    "Include this receipt and regenerate the top-level manifest."
+  ],
+  "publication": "No branch write performed by this review. Parent coordinates the slot."
+}

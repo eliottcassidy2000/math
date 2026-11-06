@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "labeled_tournaments": 33867,
+  "rooted_inputs": 202013,
+  "terminal_pairs": 502170,
+  "cover_equalities": 15959,
+  "sharp_equalities": 3670,
+  "basic_sources": 33867,
+  "flipped_sources": 10694
+}

@@ -1,0 +1,11 @@
+{
+  "standard_cited_facts": [
+    "Strong tournament components are linearly ordered.",
+    "Every nontrivial strong tournament has a directed Hamilton cycle (Camion); opening it gives an arbitrary requested starting or ending vertex."
+  ],
+  "sharp_defect_proof_scope": "Used only for the consequence in Section 3; not a premise of the main theorem.",
+  "frozen_sharp_defect_proof_sha256": "582687a3d966a928efb7355cca6d9f1181d76d09d4065da17a0815d1343f457d",
+  "frozen_counting_source_sha256": "f72ffb793c9d0cc32b75116b5dafd84777347f4fcfd199d4417039f1935618dc",
+  "counting_header_derivation": "Exact source prefix preceding int main(, without changes.",
+  "sharp_defect_boundary_lineage": "The reviewed original and exact singleton-boundary qualification diff are retained beside the corrected dependency."
+}

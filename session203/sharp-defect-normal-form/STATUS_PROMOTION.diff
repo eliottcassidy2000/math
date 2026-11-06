@@ -1,0 +1,20 @@
+--- reviewed/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # Exact structure of a rooted endpoint-cover equality
+ 
+-Status: RESERVED / proof candidate awaiting independent audit.
++Status: PROVED / independently audited in the stated scope.
+ 
+ ## Scope
+ 
+--- reviewed/DENSITY.md
++++ DENSITY.md
+@@ -1,6 +1,6 @@
+ # The sharp-defect boundary has zero bounded-start density
+ 
+-Status: RESERVED / proof candidate awaiting independent audit.
++Status: PROVED / independently audited in the stated scope.
+ 
+ This addendum depends on the complete physical normal form in PROOF.md. It concerns **all** positive-start physical sources with D=s at a fixed start value, not just a selected seed orbit. It does not exclude general sources with D>s and does not disprove F(8,137).
+ 

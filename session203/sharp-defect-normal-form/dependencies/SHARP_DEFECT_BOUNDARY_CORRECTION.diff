@@ -1,0 +1,11 @@
+--- reviewed-before-boundary-fix/PROOF.md
++++ PROOF.md
+@@ -8,7 +8,7 @@
+ 
+     B=h+L-s,   D=R+b-e-B.
+ 
+-The physical move Z adds z with z->v and every vertex of U-v beating z, retaining root v. Its exact inherited count identity is B(ZU)=B(U)+R+b-e, so D=B(ZU)-2B(U). The relevant all-input transfer is published in `session203/rooted-cover-closure/PROOF.md`. The argument below reproves all inequalities it uses and does not assume that a numerical state is physically realizable.
++The physical move Z adds z with z->v and every vertex of U-v beating z, retaining root v. For nontrivial U its exact inherited count identity is B(ZU)=B(U)+R+b-e, so D=B(ZU)-2B(U). For the singleton U, the formula-defined D is zero whereas B(ZU)-2B(U)=1; the identification with the physical difference is not asserted at that boundary. The relevant all-input transfer is published in `session203/rooted-cover-closure/PROOF.md`. The argument below reproves all inequalities it uses and does not assume that a numerical state is physically realizable.
+ 
+ **Main theorem.** For every positive integer t, the following are equivalent:
+ 
