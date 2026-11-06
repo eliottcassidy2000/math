@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "contexts": 29,
+  "anchor_mark_contexts": 11,
+  "literal_input_context_checks": 2175,
+  "span_determinant": "-1152",
+  "scope": "Every labeled context through m3 and each mark; all labeled old inputs through n4; literal eight-state span; binary-register words through length8"
+}

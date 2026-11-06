@@ -1,0 +1,38 @@
+[
+  {
+    "local": "dependencies/START_TWO_GATES.md",
+    "source_path": "session203/start-two-gates/PROOF.md",
+    "source_commit": "46af9e96b8681662ae41dd316df7f91cee6ef0e9",
+    "sha256": "7b5a9dc9826d28502281535ef0aacacd7b57010e96eaa66cdba21f08d50386e6"
+  },
+  {
+    "local": "dependencies/ROOTED_COVER_CLOSURE.md",
+    "source_path": "session203/start-two-gates/dependencies/ROOTED_COVER_CLOSURE.md",
+    "source_commit": "46af9e96b8681662ae41dd316df7f91cee6ef0e9",
+    "sha256": "8e78951f9dd15decff0d23cfb3ebe64f358b3c9d4561b269b527a1e9aa902168"
+  },
+  {
+    "local": "dependencies/PHYSICAL_SOURCE_GRAMMAR.md",
+    "source_path": "session203/start-two-gates/dependencies/PHYSICAL_SOURCE_GRAMMAR.md",
+    "source_commit": "46af9e96b8681662ae41dd316df7f91cee6ef0e9",
+    "sha256": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537"
+  },
+  {
+    "local": "dependencies/START_TWO.md",
+    "source_path": "session203/start-two-gates/dependencies/START_TWO.md",
+    "source_commit": "46af9e96b8681662ae41dd316df7f91cee6ef0e9",
+    "sha256": "a746d2e33b0fb78a98252afa602dc8985c25f718225c2f9ce37923fd20b0ada3"
+  },
+  {
+    "local": "compiler.py",
+    "source_path": "session203/positive-profile-defects/compiler.py",
+    "source_commit": "a67c5f829aba19285bd10a1dbf665171b9c21e14",
+    "sha256": "89058eb976db85ea0589fae39db25fe54b0fb6d5b6697166645f9310abc07e4f"
+  },
+  {
+    "local": "counting.py",
+    "source_path": "session203/positive-profile-defects/counting.py",
+    "source_commit": "a67c5f829aba19285bd10a1dbf665171b9c21e14",
+    "sha256": "7eeb1059836f62c6e1739b2cf49da020a1949fd71805224b831ab9eddcccfadd"
+  }
+]

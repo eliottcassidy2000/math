@@ -1,0 +1,5 @@
+PROOF.md: OK
+verify.py: OK
+compiler.py: OK
+counting.py: OK
+SPAN_WITNESS.json: OK

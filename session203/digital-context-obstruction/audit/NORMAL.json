@@ -1,0 +1,94 @@
+{
+  "context_order_limit": 4,
+  "marked_contexts": 285,
+  "register_intervals": [
+    {
+      "length": 0,
+      "maximum_R": 2,
+      "minimum_R": 2,
+      "states": 1
+    },
+    {
+      "length": 1,
+      "maximum_R": 4,
+      "minimum_R": 3,
+      "states": 2
+    },
+    {
+      "length": 2,
+      "maximum_R": 8,
+      "minimum_R": 5,
+      "states": 4
+    },
+    {
+      "length": 3,
+      "maximum_R": 16,
+      "minimum_R": 9,
+      "states": 8
+    },
+    {
+      "length": 4,
+      "maximum_R": 32,
+      "minimum_R": 17,
+      "states": 16
+    },
+    {
+      "length": 5,
+      "maximum_R": 64,
+      "minimum_R": 33,
+      "states": 32
+    },
+    {
+      "length": 6,
+      "maximum_R": 128,
+      "minimum_R": 65,
+      "states": 64
+    },
+    {
+      "length": 7,
+      "maximum_R": 256,
+      "minimum_R": 129,
+      "states": 128
+    },
+    {
+      "length": 8,
+      "maximum_R": 512,
+      "minimum_R": 257,
+      "states": 256
+    }
+  ],
+  "scope": "Finite exact controls for universal one-port readout obstruction; not F coverage or counterexample.",
+  "span_determinant": "-1152",
+  "span_words": [
+    [],
+    [
+      "O"
+    ],
+    [
+      "Z"
+    ],
+    [
+      "O",
+      "O"
+    ],
+    [
+      "O",
+      "Z"
+    ],
+    [
+      "Z",
+      "O"
+    ],
+    [
+      "Z",
+      "Z"
+    ],
+    [
+      "O",
+      "O",
+      "Z"
+    ]
+  ],
+  "status": "PASS",
+  "unmarked_contexts": 75
+}

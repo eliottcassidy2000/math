@@ -1,0 +1,9 @@
+{
+  "status": "STATUS_ONLY_PROOF_PROMOTION",
+  "old": "Status: PROOF CANDIDATE, not independently audited. This is a limited obstruction, not a disproof of F(8,137).",
+  "new": "Status: PROVED, independently audited; see audit/REVIEW.md. This is a limited obstruction, not a disproof of F(8,137).",
+  "original_proof": "audit/SOURCE_PROOF.md",
+  "original_script": "audit/ORIGINAL_independent.py",
+  "import_and_data_path_only_rehoming": "audit/independent.py",
+  "data_path_change": "Read SPAN_WITNESS.json from release packet root instead of old scratch sibling."
+}
