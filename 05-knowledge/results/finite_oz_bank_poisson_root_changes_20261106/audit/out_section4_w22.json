@@ -1,0 +1,90 @@
+{
+ "bankA_all": {
+  "3": {
+   "seeds": 85,
+   "union_miss": 0.02187,
+   "product_of_member_miss": 0.00355,
+   "union_miss_by_class": [
+    0.0059,
+    0.0404,
+    0.0193
+   ]
+  },
+  "945": {
+   "seeds": 85,
+   "union_miss": 0.02187,
+   "product_of_member_miss": 0.00446
+  },
+  "12288": {
+   "seeds": 85,
+   "union_miss": 0.02187,
+   "product_of_member_miss": 0.00357
+  }
+ },
+ "bankA_nobal": {
+  "3": {
+   "seeds": 50,
+   "union_miss": 0.02187,
+   "product_of_member_miss": 0.01573,
+   "union_miss_by_class": [
+    0.0059,
+    0.0404,
+    0.0193
+   ]
+  },
+  "945": {
+   "seeds": 50,
+   "union_miss": 0.02187,
+   "product_of_member_miss": 0.01692
+  },
+  "12288": {
+   "seeds": 50,
+   "union_miss": 0.02187,
+   "product_of_member_miss": 0.01574
+  }
+ },
+ "bankA_generic34": {
+  "3": {
+   "seeds": 34,
+   "union_miss": 0.09086,
+   "product_of_member_miss": 0.0729,
+   "union_miss_by_class": [
+    0.0529,
+    0.1188,
+    0.1009
+   ]
+  },
+  "945": {
+   "seeds": 34,
+   "union_miss": 0.09086,
+   "product_of_member_miss": 0.07316
+  },
+  "12288": {
+   "seeds": 34,
+   "union_miss": 0.09086,
+   "product_of_member_miss": 0.07295
+  }
+ },
+ "bankA_r2d16": {
+  "3": {
+   "seeds": 16,
+   "union_miss": 0.20915,
+   "product_of_member_miss": 0.18688,
+   "union_miss_by_class": [
+    0.1097,
+    0.3281,
+    0.1897
+   ]
+  },
+  "945": {
+   "seeds": 16,
+   "union_miss": 0.20915,
+   "product_of_member_miss": 0.1968
+  },
+  "12288": {
+   "seeds": 16,
+   "union_miss": 0.20915,
+   "product_of_member_miss": 0.1869
+  }
+ }
+}

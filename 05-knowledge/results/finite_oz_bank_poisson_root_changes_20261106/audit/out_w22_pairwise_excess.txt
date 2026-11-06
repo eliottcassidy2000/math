@@ -1,0 +1,18 @@
+window [2^22,2^23), 50 non-balanced bank-A seeds, 1225 pairs; independent baseline resolved mod 315
+excess    127257  inter  159842  indep     32585  (17, 20, 6, 9) (19, 20, 8, 9)  shared odd half (D)2
+excess     81370  inter   93171  indep     11801  (29, 34, 10, 15) (33, 34, 14, 15)  shared odd half (D)2
+excess     64471  inter   71328  indep      6857  (37, 47, 13, 23) (39, 47, 15, 23)  shared odd half (D)2
+excess     56508  inter   98846  indep     42338  (15, 18, 6, 9) (17, 18, 8, 9)  shared odd half (D)2, both R=2d (D)3
+excess     48296  inter   52752  indep      4456  (29, 34, 12, 17) (33, 34, 16, 17)  shared odd half (D)2, both R=2d (D)3
+excess     47750  inter   51410  indep      3660  (51, 63, 17, 29) (53, 63, 19, 29)  shared odd half (D)2
+excess     47014  inter   50676  indep      3662  (53, 62, 18, 27) (61, 62, 26, 27)  shared odd half (D)2
+excess     42385  inter   53311  indep     10926  (51, 60, 18, 27) (57, 60, 24, 27)  shared odd half (D)2
+excess     34110  inter   60807  indep     26697  (25, 30, 10, 15) (27, 30, 12, 15)  shared odd half (D)2, both R=2d (D)3
+excess     30004  inter   31612  indep      1608  (49, 58, 20, 29) (53, 58, 24, 29)  shared odd half (D)2, both R=2d (D)3
+excess     24996  inter   34253  indep      9257  (45, 54, 18, 27) (51, 54, 24, 27)  shared odd half (D)2, both R=2d (D)3
+excess       532  inter   56678  indep     56146  (9, 11, 3, 5) (17, 20, 6, 9)  -
+excess       430  inter   43741  indep     43311  (1, 2, 0, 1) (51, 63, 17, 29)  -
+excess       388  inter   18870  indep     18482  (5, 6, 2, 3) (45, 50, 20, 25)  both R=2d (D)3
+excess       372  inter   26753  indep     26381  (5, 6, 2, 3) (45, 54, 18, 27)  both R=2d (D)3
+of the top 11 pairs, (D)2 shared-half pairs: 11 ; (D)3 R=2d pairs: 5
+all 11 (D)2 pairs ranks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]

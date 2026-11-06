@@ -1,15 +1,18 @@
 # Finite O/Z tail banks: a residue-resolved Poisson law, redundancy, and the root-change trichotomy
 
 kind-pasteur-2026-11-06-S13.
-- **PROVED, THM-4888:** (A) a closed mod-3 law for Q; (B) the converse-involution symmetry of a tail image occurs only
-  for the rooted edge; (D)2-(D)3 two exact redundancy identities for banks.
-- **KNOWN, found independently in this session:** THM-4888 (C), residue confinement and parity-split capacity when
-  p | gcd(d, R), is contained in Session 206's weighted-parameter-capacity theorem (pushed during this session);
-  (D)1, J Z = O J, is Session 205's audit identity.
+- **PROVED, THM-4888:** (A) a closed mod-3 law for Q; (B) only the rooted edge has a tail map invariant under
+  Session 206's converse involution; (D)2-(D)3 two exact redundancy identities for banks.
+- **KNOWN:** THM-4888 (C), residue confinement and parity-split capacity when p | gcd(d, R). The congruence is the
+  necessity half of Session 206's exact modular image. The parity split and the exact weights are Session 206's
+  weighted-parameter-capacity theorem, pushed during this session; the parity split was found independently here.
+  (D)1, J Z = O J, is Session 205's (ARITHMETIC_REDUCTION.md and its audit). (D)3 generalises Session 206's identity
+  for (5, 6, 2, 3).
 - **CONJECTURE with pre-registered FINITE-EXACT evidence, HYP-9480:**
-  - (A) the residue-resolved Poisson law: per residue class, a seed's miss rate is exp(-kappa lambda_c);
-  - (B)-(C) bank members are positively correlated, and every finite bank misses a positive proportion of odd
-    integers;
+  - (A) the residue-resolved Poisson law: per residue class, the miss rate of the root (kappa = 1/2) or of a generic
+    seed (kappa = 1) is exp(-kappa lambda_c);
+  - (B) bank members are correlated exactly through the identities of THM-4888 (D) (exploratory);
+  - (C) every finite bank misses a positive proportion of odd integers;
   - (D) the root-change trichotomy and the two-root-change conjecture.
 - **Scope:** no all-finite-bank impossibility theorem and no coverage theorem is proved; Chan-Pak stays OPEN.
 
@@ -18,25 +21,29 @@ kind-pasteur-2026-11-06-S13.
 Owner's question: can a finite bank of unit-start tournaments cover all sufficiently large odd counts through its
 O/Z extensions?
 
-**Answer:** almost certainly not, for a quantitative reason, and banks do even worse than independence would suggest.
+**Answer:** conjecturally no (HYP-9480 (C)), for a quantitative reason; and banks do worse than independent members
+would.
 
 1. *Bounded multiplicity.* One free O/Z block gives each target a bounded mean number of representations: by Session
    206's capacity theorem, the bank's mean multiplicity is Lambda_B = 2 sum_s c_s per odd target.
 2. *A Poisson law, class by class.* For a single seed, the number of representations of N behaves like a Poisson
    variable whose mean is set by the residue class of N and the scale (section 3). The law predicts the miss rate of
-   every residue class modulo 63 for 102 unseen seeds within 0.00084. It also accounts, class by class, for the mod-7
-   bias of the one-apex image recorded without explanation in THM-4878 (5): the root's parameter intensity is uneven
-   mod 7, and the law converts it into the observed miss rates. Deriving those intensities is open.
+   every residue class modulo 63 for 102 generic P1 seeds within 0.00084. At these intensities, a model with no
+   collisions at all is within 0.004 for 99.7% of the classes. The decisive out-of-sample tests of the Poisson form
+   are the root's (P2, P6a). The law also accounts, class by class, for the mod-7 bias of the one-apex image recorded
+   without explanation in THM-4878 (5): at the tested scales the root's parameter intensity is uneven mod 7, and the
+   law converts it into the observed miss rates. Deriving those intensities is open.
 3. *Banks are redundant and positively correlated.* A bank's members are not independent (section 4):
    - J Z = O J as moves, so balanced seeds are nested in earlier ones;
    - seeds with equal (h - e, R, d) share half of their images;
    - seeds with R = 2d are dilated copies of the root image.
    In [2^22, 2^23), bank A misses 0.0219 of the odd integers, six times the product of its members' miss rates.
+   Once the identical pieces of (D)1-(D)2 are merged, all remaining correlation sits among the dilated roots (audit).
    Correlation only adds misses. That every finite bank misses a positive proportion is the conjecture HYP-9480 (C);
    bank A misses 0.0219 and 0.0217 in the pre-registered windows 2^26 and 2^27.
-4. *Scale.* The predicted miss proportion is of order exp(-Lambda_eff), so a large bank can look complete in every
-   feasible census. S82's order-<=7 bank family (one free block, mean multiplicity 48.2) covers every odd N <= 2^35
-   except 7 and 21. Censuses cannot settle the question; structure has to (section 4).
+4. *Scale.* A positive miss proportion can be far too small for any census. S82's order-<=7 bank family (one free
+   block, mean multiplicity 48.2) covers every odd N <= 2^35 except 7 and 21, and its lower tail is far from Poisson.
+   Censuses cannot settle the question; structure has to (section 4).
 
 **Proved cases** (Sessions 205 and 206): banks of total capacity below 1/2; banks whose seeds all have d = 1; banks
 whose non-root members omit a common residue class; and, by Session 206's weighted-parameter-capacity test, banks
@@ -50,7 +57,8 @@ Toward Chan-Pak, the missing ingredient is growth of the multiplicity, and root 
 | 1 | about (pi^2/6) ln N |
 | 2 | about ln^2 N |
 
-The constant for one root change is the one opus-S82 proved for its one-apex joins. The two-root-change family
+The one-root-change constant pi^2/12 is THM-4885 (B)'s. It is numerical here, and F_1 has twice the mass of S82's
+unordered one-apex pairs. The two-root-change family
 generated by the single rooted edge misses only 140 odd numbers up to 10^8, and none above 3,780,967 (section 5,
 pre-registered P4).
 
@@ -70,13 +78,14 @@ KNOWN results, all audited:
   - the root's converse involution T, with Q(T(m)) - Q(m) = 2(T(m) - m);
   - root noncofiniteness and the d = 1 collapse;
   - residue-class capacity of the root;
-  - the modular images, including the example (5, 6, 2, 3), which omits 1 (mod 3).
+  - the exact modular images: their necessity half is the congruence of THM-4888 (C). They include the example
+    (5, 6, 2, 3), which omits 1 (mod 3) and satisfies H = 3 H_t + 2 - 2 (m mod 2) (ROOT_RESIDUE_CAPACITY section 4).
 - Session 206 weighted-parameter-capacity (pushed at 13:38 during this session, de303ea26d): for odd p and
   g = gcd(R, d, p), parity b contributes (g/p) c_b X + o(X) parameters to each residue a = h - e b (mod g) and none
   elsewhere, with c_0 = ln(R/(R - d/2))/d and c_1 = ln((R - d/2)/(R - d))/d. Its weighted finite-bank test excludes
   the root + JJ + OZJ bank.
-- Session 205 audit (`finite-oz-tail-bank/audit/REVIEW.md`): J Z = O J as a response identity (Session 199:
-  Z J = J O in operator order).
+- Session 205 (`finite-oz-tail-bank/ARITHMETIC_REDUCTION.md` and its audit): J Z = O J as a response identity.
+  Session 199 writes it Z J = J O, in operator order.
 - Session 198 bilinear-descent: the complete O/Z/J source grammar and its exact inverse in the positive coordinates
   (a, f, e, p) = (D - E - d, U - D + E - d, E, d - E). Moves:
   - O(D, E, U, d) = (D, 0, 2U, d);
@@ -100,8 +109,8 @@ where r(m) is the number of maximal runs of 1-bits in the binary expansion of m.
 
     Q = sum_(j<i) b_j b_i (-1)^(i-j-1) + sum_j b_j b_(j+1)  (mod 3).
 
-Put eps_j = (-1)^j b_j. Because (-1)^(i-j-1) = -(-1)^(i+j), we have b_j b_i (-1)^(i-j-1) = -eps_i eps_j. So the first sum
-is -(S^2 - sum_j eps_j^2)/2, where S = sum_j eps_j = m (mod 3) and sum_j eps_j^2 = s_2(m), the binary digit sum.
+Put eps_j = (-1)^j b_j. Because (-1)^(i-j-1) = -(-1)^(i+j), we have b_j b_i (-1)^(i-j-1) = -eps_i eps_j. So the first
+sum is -(S^2 - sum_j eps_j^2)/2, where S = sum_j eps_j = m (mod 3) and sum_j eps_j^2 = s_2(m), the binary digit sum.
 Modulo 3, -1/2 = 1. Hence Q = m^2 - s_2(m) + a(m), where a(m) = sum_j b_j b_(j+1) counts the adjacent 11 pairs.
 A maximal run of L ones contributes L to s_2 and L - 1 to a, so s_2 - a = r. QED
 
@@ -113,8 +122,9 @@ a function of m mod 6 and of the run count r(m) mod 3.
     H_s(T(m)) - H_s(m) = (R - 2d)(T(m) - m) - e((T(m) mod 2) - (m mod 2)).
 
 H_s(T(m)) = H_s(m) holds for all m >= 1 exactly when R = 2d and e = 0. Among physical seeds this happens only for the
-rooted edge t. Session 206's involution is therefore a property of the root image alone; every other seed's image
-lacks it, and d = 1 seeds inherit the root's halving only because their images lie inside the root image.
+rooted edge t. Session 206's involution is therefore a property of the root alone: no other seed's tail map is
+T-invariant. d = 1 seeds inherit the root's collisions only because their images lie inside the root image. R = 2d
+seeds keep a partial involution: T preserves H_s when m and T(m) have the same parity.
 
 *Proof.* The identity is the tail formula combined with Q(T(m)) - Q(m) = 2(T(m) - m). Two pairs of parameters give
 the "iff":
@@ -131,8 +141,9 @@ possible predecessor:
 So y has no physical predecessor. The only physical source without one is the seed t, with y(t) = (0, 0, 0, 1).
 Hence s = t. QED
 
-**(C) Residue confinement and parity-split capacity (KNOWN: Session 206 weighted-parameter-capacity; found
-independently here).** Let an odd prime p divide both d and R. Then
+**(C) Residue confinement and parity-split capacity (KNOWN).** The congruence is the necessity half of Session 206's
+exact modular image. The parity split is Session 206's weighted-parameter-capacity theorem, found independently
+here. Let an odd prime p divide both d and R. Then
 
     H_s(m) = h - e (m mod 2)  (mod p),
 
@@ -150,24 +161,27 @@ lowest bit b_0, which is the leading binary digit of u_L(m). So the even classes
 the odd ones those with j >= K/2. Restricting that proof's Riemann sum to these two halves gives the two integrals
 of du/(R - du), over [0, 1/2) and over [1/2, 1). QED
 
-Session 206's theorem, pushed while this packet was in preparation, contains both statements. It also gives the
-exact weights: (g/p) c_b on the coset h - e b mod g, from the primitive digit chain.
+Session 206's weighted-parameter-capacity theorem, pushed while this packet was in preparation, contains both
+statements. It also gives the exact weights: (g/p) c_b on the coset h - e b mod g, from the primitive digit chain.
 
 **Consequences.**
 1. The JJ seed (5, 6, 2, 3) is the case p = 3 of (C).
 2. Every J-born state J(x) = (D - E + U, D - E, D + U, D) whose predecessor x has 3 | gcd(D, U) has its whole tail
    image in the classes 0 and -E (mod 3). The image therefore avoids 1 (mod 3) unless E = 2 (mod 3).
-3. This is the mechanism behind the hard class 1 (mod 3) of the root-change families (section 5) and of S82's join
-   families.
+3. Heuristic remark, not part of the theorem. This confinement carries most of the class-1 (mod 3) deficit of F_2:
+   about 80% of the deficit of representation mass in [X/2, X] at X = 4 x 10^6 (audit). S82 found the analogous local
+   factor (3 | y_h and 3 | y_R) for its F2.
 
 **(D) Redundancy identities.**
-1. *Nesting (KNOWN: Session 205's audit; Session 199).* J Z = O J as moves: both send (D, E, U, d) to (D + 2U, D, D + 2U, D). So for every word W, the tail
-   image of W O J lies inside the tail image of W J. These seeds are balanced (D = U and E = d).
+1. *Nesting (KNOWN: Session 205, ARITHMETIC_REDUCTION.md and its audit; Session 199).* J Z = O J as moves: both send
+   (D, E, U, d) to (D + 2U, D, D + 2U, D). So for every word W, the tail image of W O J lies inside the tail image of
+   W J. These seeds are balanced (D = U and E = d).
 2. *Shared halves.* The values H_s(m) at odd m depend only on (h - e, R, d) = (D - E, U, d); those at even m depend
    only on (h, R, d) = (D, U, d). Two seeds that agree in (D - E, U, d) have the same Z-child and identical odd-m
    images. Two seeds that agree in (D, U, d) have the same O-child and identical even-m images.
 3. *Dilated roots.* If R = 2d, then H_s(m) = (h - d) + d H_t(m) - e (m mod 2). The image is therefore made of two
-   dilated pieces of the root image: (h - d) + d Im_even(t) and (h - d - e) + d Im_odd(t).
+   dilated pieces of the root image: (h - d) + d Im_even(t) and (h - d - e) + d Im_odd(t). This generalises Session
+   206's identity H = 3 H_t + 2 - 2 (m mod 2) for (5, 6, 2, 3).
 
 *Proof.*
 1. Both compositions give D' = D + 2U, E' = D, U' = D + 2U, d' = D (substitute the moves above). Hence
@@ -187,7 +201,9 @@ Then the fraction of the class that the image misses is
 
     miss_c = exp(-kappa lambda_c),
 
-where kappa = 1/2 for the root, whose involution pairs the parameters, and kappa = 1 for every other seed.
+where kappa = 1/2 for the root, whose involution pairs the parameters, and kappa = 1 for generic seeds. A generic seed
+is a J-born seed with d > 1 and R != 2d that is not a balanced seed W O J whose parent W J has d = 1 or R = 2d. All
+P1 and P6b seeds are generic.
 
 **Special cases.**
 - With M = 1 this is the single-seed law 1 - exp(-2 c_s). Its intensity 2c_s per odd integer is Session 206's capacity.
@@ -198,7 +214,8 @@ where kappa = 1/2 for the root, whose involution pairs the parameters, and kappa
 - For the root the law gives 1 - exp(-ln 2) = 1/2 overall: the half density of the one-apex image (S79; Session 205:
   0.498 to 10^8).
 
-**The mod-7 bias of the one-apex image.** The parameter intensity of the root is not uniform mod 7. The law turns
+**The mod-7 bias of the one-apex image.** At the tested scales the root's parameter intensity is not uniform mod 7.
+The law turns
 this non-uniformity into the per-class miss rates, with no free constant. Observed miss rates of the classes 0..6 mod 7:
 
 | window | observed miss rates | max deviation from exp(-lambda_c/2) |
@@ -206,32 +223,45 @@ this non-uniformity into the per-class miss rates, with no free constant. Observ
 | [2^25, 2^26) (P6a) | 0.4648, 0.4669, 0.4843, 0.5245, 0.5550, 0.5329, 0.4854 | 0.0010 |
 | [2^26, 2^27) (P6a) | 0.4666, 0.4648, 0.4843, 0.5179, 0.5451, 0.5359, 0.4962 | 0.0008 |
 
-Exploration at 2^20, 2^22 and 2^24 found spans of 0.13, 0.11 and 0.09 with the same agreement. All classes sit about
-0.001 above the law, which is the root's slow approach to density 1/2.
+Exploration at 2^20, 2^22 and 2^24 found spans of 0.13, 0.11 and 0.09, with the same agreement mod 7. Every class
+mod 7 and mod 9 sits 0.0005 to 0.002 above the law: the root's slow approach to density 1/2.
 
-**The bias decays.** By Session 206's weighted capacity, the root's intensity becomes uniform mod 7 as X grows, so by
-the law every class's miss rate tends to 1/2. The mod-7 bias is a finite-size effect, and it does shrink slowly:
+**The bias decays.** By Session 206's root-residue-capacity theorem (for the root; weighted-parameter-capacity
+extends it to all seeds), the root's intensity becomes uniform mod 7 as X grows. By the law, every class's miss rate
+then tends to 1/2. The mod-7 bias is a finite-size effect, and it does shrink slowly:
 - spans 0.133, 0.105 and 0.091 at 2^20, 2^22 and 2^24;
-- spans 0.090 and 0.080 at 2^25 and 2^26.
+- spans 0.090, 0.080 and 0.074 at 2^25, 2^26 and 2^27 (the last from the audit).
 The law adds the exact conversion of the finite-scale intensities into coverage. Predicting those intensities and their
 decay rate (presumably the second eigenvalue of the mod-7 digit chain) is open.
 
-**The exceptions are exactly the extra symmetries.** Each comes from THM-4888 (B) and (D):
-- the root (kappa = 1/2);
-- d = 1 seeds, which lie inside the root image;
-- R = 2d seeds, which are dilated roots with a partial involution;
-- balanced seeds, which are nested.
+**Known exceptions to kappa = 1.** Each comes from THM-4888 (B) or (D), and the list is not shown to be complete. At
+[2^22, 2^23) mod 63 these seeds miss more than exp(-lambda_c), by 0.02 to 0.14 per class on average (audit; rechecked
+here):
+- d = 1 seeds, which lie inside the root image: (3, 3, 1, 1), +0.12;
+- R = 2d seeds, dilated roots with a partial involution: (9, 10, 4, 5), +0.09;
+- O/Z descendants of R = 2d seeds: (5, 12, 0, 3) = O(JJ), +0.07; (17, 21, 3, 3), +0.03;
+- balanced seeds W O J whose parent W J is exceptional, which inherit its collisions: (9, 9, 3, 3), +0.11.
+
+A balanced seed nested in a generic seed follows kappa = 1: (53, 53, 17, 17), nested in (27, 35, 9, 17), +0.0001.
 
 **Evidence.**
-- P1: 109 unseen seeds, overall density.
-- P2: the root at [2^27, 2^28).
-- P6a: the root, per class mod 7, 9, 21 and 63.
-- P6b: 102 unseen generic seeds, 5908 classes mod 63. The mean absolute error is 4.2 x 10^-5, against 0.0025 for the
-  class-blind prediction.
+- P2 and P6a (the root) are decisive. A no-collision model, miss_c = 1 - kappa lambda_c, is off by more than 0.2.
+- P1: 109 unseen generic seeds, overall density. This tests the intensities and the confinement. It does not separate
+  the Poisson law from a no-collision model, which also passes (109 of 109 within 0.004, maximum 0.0031).
+- P6b: 102 generic P1 seeds, 5908 classes mod 63. They were not used in the P6 exploration, but their overall
+  densities in this window were known from P1. The registered criterion is met with mean absolute error
+  4.2 x 10^-5; the no-collision model gives 4.3 x 10^-4 and the class-blind prediction 0.0025 (reported, not
+  registered). The no-collision model fails the registered criterion only on 16 high-intensity classes.
+- Why generic seeds cannot give a sharper test. Among the 18,080 generic J-born seeds with U <= 4096, the largest
+  limiting per-class intensity mod 63 is 0.2425. It is reached at (9, 11, 3, 5) and its multiples by 3, 9 and 63,
+  including (81, 99, 27, 45). At lambda = 0.24 the Poisson and no-collision predictions differ by only 0.029, and
+  the most intense generic classes, those of (81, 99, 27, 45), are already in P6b. Denser seeds such as
+  (5, 12, 0, 3), with lambda 0.58, are descendants of R = 2d seeds and are exceptional.
 
 ## 4. Finite banks: redundancy, correlation, positive miss proportion (HYP-9480 (B)-(C))
 
-**Independence fails, and in the direction of more misses.** Window [2^22, 2^23) (exploration, not pre-registered):
+**Seed-level independence fails, in the direction of more misses, and the identities of (D) account for all of it.**
+Window [2^22, 2^23) (exploration, not pre-registered):
 
 | bank | union miss | product of the members' miss rates |
 |---|---|---|
@@ -241,23 +271,32 @@ decay rate (presumably the second eigenvalue of the mod-7 digit chain) is open.
 | the 16 R = 2d seeds of bank A, root included (mod 945) | 0.2092 | 0.1968 |
 
 How the gap is accounted for:
-- *Nesting.* Each of the 35 balanced seeds (D = U, E = d) of bank A equals J(O(y)) = J(y) Z for a physical y (checked),
-  so it is nested in J(y). J(y) is itself in bank A, or has d = 1 and lies inside the root image. Removing the 35
-  seeds leaves the union unchanged and raises the product from 0.0036 to 0.0157.
+- *Nesting.* Each of the 35 balanced seeds (D = U, E = d) of bank A equals J(O(y)) = J(y) Z for a physical y
+  (checked), so it is nested in J(y). J(y) has the same d > 1 and a smaller U, so it is in bank A; if it is
+  balanced, repeat. All 35 chains end at non-balanced bank-A seeds: 12 at R = 2d seeds and 23 at generic seeds
+  (audit). Removing the 35 seeds leaves the union unchanged and raises the product from 0.0036 to 0.0157.
 - *Shared halves.* The largest remaining pairwise excesses are the pairs of (D)2. For example, (25, 30, 10, 15) and
-  (27, 30, 12, 15) share h - e = 15, R = 30 and d = 15. They meet in 60,807 values, against 9,714 expected for
-  independent sets: they share their odd-m halves.
-- *Dilated roots.* The R = 2d pairs of (D)3 also overlap more than chance.
-- *Not explained.* Splitting into first-generation children, residue classes (odd moduli up to 945, powers of 2 up
-  to 4096) or 16 position bands in the window leaves the product between 0.0151 and 0.0169. The 34 generic seeds
-  (no nesting, no dilation, though some shared halves remain) still miss 24% more than their product.
+  (27, 30, 12, 15) share h - e = 15, R = 30 and d = 15. They meet in exactly their common odd-m half, 60,807 values.
+  Independent sets with the same mod-15 confinement would meet in about 26,400.
+- *Dilated roots.* The R = 2d seeds of (D)3 are translates and dilates of the two root halves. As a block they miss
+  0.2092, against 0.1530 for independent halves. This is the only correlation left after (D)1 and (D)2.
+- *Nothing left over (audit).* The 34 generic seeds behave as independent half-images. The product of the miss rates
+  of their 62 distinct half-images, per class mod 945, is 0.0908, against their union miss of 0.0909. Their 24%
+  excess over the seed product is therefore the six shared-half pairs of (D)2.
+- *The two blocks.* The generic and dilated-root blocks are independent of each other class by class: the product of
+  the two block unions is 0.02189, against the bank's 0.02187.
+
+Residue or position resolution cannot close the seed-level gap: first-generation children, odd moduli up to 945,
+powers of 2 up to 4096 and 16 position bands all leave products between 0.0151 and 0.0169. The gap comes from the
+identities (D)1-(D)3.
 
 **Conjecture (C).** Every finite physical bank misses a positive proportion of the odd integers. The heuristic lower
-bound is the product of the members' residue-resolved miss rates. Correlations only add to it.
+bound is the product of the members' residue-resolved miss rates, and the identities of (D) only add to it.
 
 **Evidence (P3).** Bank A's miss fraction is 0.021894 at [2^26, 2^27) and 0.021721 at [2^27, 2^28). Exploration gave
 0.022 in every dyadic window from 2^10. The miss rates by class mod 3 are 0.0062, 0.0402 and 0.0193 at 2^26, and
-0.0061, 0.0396 and 0.0194 at 2^27. The class-1 deficit is THM-4888 (C). The miss rate drifts down slowly (0.00017
+0.0061, 0.0396 and 0.0194 at 2^27. The class-1 deficit comes mostly from the confinement of THM-4888 (C)
+(heuristic). The miss rate drifts down slowly (0.00017
 per doubling), comparable to the root's slow approach to 1/2. Whether it converges to a positive limit is part of the
 conjecture.
 
@@ -265,19 +304,26 @@ conjecture.
 5.15 without its 35 nested seeds, while -ln(miss) is only 3.82. Redundancy and correlation cost more than half of
 the nominal intensity.
 
-**Scale: why finite censuses cannot decide the question.** A bank with effective intensity Lambda should miss a
-proportion of order exp(-Lambda). So a large bank can cover every odd N up to an astronomically large bound and still
-miss a positive proportion. S82's one-apex x order-<=7 bank family F2 is the analogous construction with joins: one
-free block, mean multiplicity 48.2 (THM-4885 (C)), smallest class mean mod 3 equal to 41.4. It covers every odd
-N <= 2^35 except 7 and 21 (HYP-9478 P5-P6, addendum c940db05a4). This is what (C) predicts: even with bank A's loss
-of half the intensity, its first misses would be expected only beyond about 10^15. Coverage censuses therefore cannot
-settle the owner's question either way.
+**Scale: why finite censuses cannot decide the question.** Under a Poisson heuristic, a bank with effective intensity
+Lambda misses a proportion of order exp(-Lambda). So a large bank can cover every odd N up to an astronomically large
+bound and still miss a positive proportion. S82's one-apex x order-<=7 bank family F2 is the analogous construction
+with joins: one free block, mean multiplicity 48.2 (THM-4885 (C)), smallest class mean mod 3 equal to 41.4. It
+covers every odd N <= 2^35 except 7 and 21 (HYP-9478 P5-P6, addendum c940db05a4).
+- Under a Poisson model with no loss, the first misses of F2 in its hardest class (mean 41.4) would be expected only
+  near 6 x 10^18.
+- With bank A's loss of half the intensity, they would be expected near 6 x 10^9. That is inside the census, which
+  found none.
+- S82 also found F2's lower tail about 10^5 times heavier than Poisson (P(r2 <= 10) = 4.6 x 10^-6).
+
+So the census neither confirms nor refutes (C). It shows only that a positive miss proportion can lie beyond any
+feasible census.
 
 **What a proof needs.** The capacity bound cannot settle large banks, because their total capacity exceeds 1/2.
 Session 206's modularly weighted test cannot either: for bank A, in every class modulo every odd p <= 105, the
-weighted capacity is at least 4.7 times the size of the class.
-Forced collisions cannot either: by (B) the involution that halves the root's image exists for no other seed, and
-the identities of (D) only remove whole seeds or halves. One route is an anti-concentration or local-limit theorem
+weighted capacity is at least 4.7 times the size of the class (3.39 without the 35 nested seeds). Collision
+arguments are limited too. (B) excludes the full root involution for every other seed. But R = 2d seeds keep a
+partial involution, d = 1 seeds lie inside the root image, and other collision structures are not excluded. One
+route is an anti-concentration or local-limit theorem
 for the sums Q(m) = m u(m) + O(log m) along the parameter tree. Compare HYP-9474's local limit and THM-4886's
 exponential sums.
 
@@ -286,25 +332,32 @@ exponential sums.
 Let F_k be the H-values of t . w_1 (J w_2) ... (J w_(k+1)) with at most k root changes from the single rooted edge.
 These are actual sources: each J is the physical move "append a vertex beating only the root and make it the root".
 
-| k | mass N_k(X) = #(words with H <= X), final block trailing O deleted | evidence |
+N_k(X) counts the words with exactly k root changes and H <= X. Trailing O letters of the final block are deleted;
+intermediate blocks keep all their letters.
+
+| k | mass N_k(X) | evidence |
 |---|---|---|
 | 0 | (ln 2) X + O(sqrt X) | Session 206, PROVED |
-| 1 | (pi^2/12) X ln X - 1.17 X + o(X) | numerical, X = 10^5..10^7; the pi^2/12 matches S82's THM-4885 (B) |
-| 2 | about 0.50 X ln^2 X - 2.0 X ln X + 4.2 X | numerical, three-point fit at X = 10^5, 10^6, 10^7 |
+| 1 | (pi^2/12) X ln X - 1.17 X + o(X) | numerical, X = 10^5 to 10^8 (audit: -1.1709 at 10^7 and 10^8) |
+| 2 | about 0.500 X ln^2 X - 2.03 X ln X + 4.13 X | numerical, three-point fit at X = 10^5, 10^6, 10^7; within 0.12% at 10^8 (audit) |
+
+The constant pi^2/12 = integral_0^1 ln(1 + t)/t dt is THM-4885 (B)'s. There, the unordered pairs u <= v have mass
+(pi^2/24) X ln X, so F_1 has twice that mass. For "at most one" root change, the second constant is -0.48.
 
 The mean multiplicities per odd target are therefore:
 - for k = 0, bounded: 2 ln 2 = 1.39 raw parameters per odd target for the root, or ln 2 = 0.69 per odd target after
   the involution;
 - for k = 1, about (pi^2/6) ln N;
-- for k = 2, about ln^2 N, roughly 230 at N = 4 x 10^6.
+- for k = 2, about ln^2 N: about 204 at N = 4 x 10^6 (231 from the leading term ln^2 N alone).
 
 **Misses.**
 - k = 0: a positive density (one half for the root).
 - k = 1: misses grow by a factor of about 1.58 per dyadic window (1,049 in [2^16, 2^17), 63,546 in [2^25, 2^26);
   224,380 up to 10^8). The miss density is therefore about N^(-1/3). This matches S82's F1, the one-apex x one-apex
-  joins with the same mass constant pi^2/12: its ratios are 1.5876-1.5879 at 2^32-2^34, against
+  joins, whose ordered pairs have the same mass constant pi^2/12: its ratios are 1.5876-1.5879 at 2^32-2^34, against
   2^(2/3) = 1.5874.
-- k = 2: misses are sporadic and almost all lie in the class 1 (mod 3) explained by (C). Exploration to 4 x 10^6 found
+- k = 2: misses are sporadic and almost all lie in the class 1 (mod 3), where the confinement of (C) removes mass
+  (heuristic). Exploration to 4 x 10^6 found
   140 misses, the largest 3,780,967, with 14 of the 15 above 10^5 in the class 1 (mod 3). P4 extends this to 10^8:
   there is no further miss, so all 140 misses up to 10^8 lie below 3,780,968. The exception to the class 1 (mod 3) is
   136,607.
@@ -316,9 +369,12 @@ The mean multiplicities per odd target are therefore:
 2. Two root changes leave finitely many. Every odd N > N_0 is then the Hamiltonian-path count of a unit-start
    tournament t . w_1 J w_2 J w_3.
 
-Together with a finite check, (D)(2) would prove Chan-Pak. Session 199 found a similar census for the balanced
-readout with at most three root changes. The trichotomy says why one free block is never enough: its multiplicity
-cannot grow.
+An effective form of (D)(2), with an explicit N_0, plus a finite check below N_0 would prove Chan-Pak.
+
+Session 199 found the balanced readout H(s O J) complete from 27,783 to 10^6 for source words s with at most three J
+letters. With two J letters it still misses 293 values there, the largest 879,001.
+
+Conjecturally (HYP-9480 (C)), one free block never suffices: its mean multiplicity is bounded (Session 206).
 
 ## 6. Outcomes of the pre-registered predictions
 
@@ -335,11 +391,17 @@ Receipts: `VALIDATION_NORMAL.json` and `VALIDATION_OPTIMIZED.json`.
 | P6a, root per class mod 7, 9, 21 and 63 at 2^25 and 2^26 | every class within 0.006; mod-7 span at least 0.05 | **CONFIRMED**: maximum 0.0022; spans 0.090 and 0.080 |
 | P6b, 102 generic seeds per class mod 63 at 2^24 | at least 95% within 0.004, all within 0.010 | **CONFIRMED**: all 5908 within 0.00084; 95th percentile 0.00012 |
 
+**What the outcomes test.** P1 and P6b confirm the intensities and the confinement, and P6b mildly favours the
+Poisson form. The decisive tests of the Poisson form are P2 and P6a (section 3).
+
+**Pre-registration gap.** The registered P1 model leaves the piece intensities implicit; `verify.py` uses the
+parity-split capacities (THM-4888 (C), Session 206).
+
 **Line endings.** The pre-registered sha256 of `p6_seeds.txt` is of its Windows CRLF bytes; the committed LF file
 (same 102 lines) hashes to 2ef82297a0ea99f1... (README).
 
 **P1, post-hoc note.** The largest P1 deviation is at (81, 99, 27, 45), where 9 divides gcd(d, R). The pre-registered
-model used primes only. After the fact, confining to one class mod 9 predicts 0.02393, and 0.02388 is observed. P6b,
+model used primes only. After the fact, confining to one class mod 9 predicts 0.02392, and 0.02388 is observed. P6b,
 registered later, includes this refinement automatically: classes mod 63.
 
 ## 7. Dependencies, scope, renumbering
@@ -347,15 +409,27 @@ registered later, includes this refinement automatically: classes mod 63.
 - Session 205 `session205/finite-oz-tail-bank/ARITHMETIC_REDUCTION.md`: the tail formula. KNOWN, audited.
 - Session 206: `session206/parameter-capacity/PARAMETER_CAPACITY.md` (the capacity theorem and its residue-class
   proof); `session206/root-oz-noncofiniteness/ROOT_OBSTRUCTION.md` (the involution T and the d = 1 collapse);
-  `session206/root-residue-capacity/ROOT_RESIDUE_CAPACITY.md`; `session206/exact-modular-image/`. KNOWN, audited
-  there.
+  `session206/root-residue-capacity/ROOT_RESIDUE_CAPACITY.md` (the uniform limit for the root; the (5, 6, 2, 3)
+  identity generalised by (D)3); `session206/exact-modular-image/` (its necessity half is the congruence of (C)).
+  KNOWN, audited there.
 - Session 206 `session206/weighted-parameter-capacity/WEIGHTED_CAPACITY.md` (de303ea26d): contains THM-4888 (C) and
   gives the limiting per-class intensities. KNOWN, audited there.
-- Session 205 `session205/finite-oz-tail-bank/audit/REVIEW.md` and Session 199
+- Session 205 `session205/finite-oz-tail-bank/ARITHMETIC_REDUCTION.md` (and its audit) and Session 199
   `session199/hidden-structure/dependencies/BALANCED_SOURCES.md`: J Z = O J. KNOWN.
+- Session 199 `session199/hidden-structure/PROOF.md`: the balanced-readout census quoted in section 5.
+- opus-S82 note `05-knowledge/results/one_apex_join_representation_mass_pi2_over_12_20261106.md`: F2's non-Poisson
+  lower tail and its mod-3 local factor.
 - Session 198 `session198/bilinear-descent/PROOF.md`: the complete source grammar and its exact inverse. KNOWN.
 - opus-S79 THM-4878 (5): the one-apex density and its residue biases (data explained in section 3).
 - opus-S82 THM-4885: masses of one-apex joins (credit for the constant pi^2/12).
+
+**Provenance of the raw outputs.**
+- `p1_density.txt`, `p2_root.txt` and both P3 files were written by `density.c` before a header-comment edit
+  (THM-4887 -> THM-4888). After the audit, the final `density.c` was rerun on all four, and they are reproduced byte
+  for byte after LF normalisation.
+- `root_changes_1e8.txt` was written by the exploratory `kj.c`. `root_changes.c` is the same code with a header. The
+  audit reproduced the whole file with an independent move-only enumerator.
+- The `p6_*` files were written by the frozen `residue_law.c`.
 
 **Renumbering.** `PREREGISTRATION.md` names the theorem THM-4887. opus-2026-11-06-S83 reserved the same number 34
 seconds later (f5154129b8), which broke check_docs' uniqueness of theorem IDs. This session released the number
@@ -363,3 +437,18 @@ seconds later (f5154129b8), which broke check_docs' uniqueness of theorem IDs. T
 
 Not claimed: an impossibility theorem for every finite bank, an image-density limit, coverage by any family, or the
 Chan-Pak conjecture.
+
+## 8. Audit
+
+An independent adversarial audit used its own code (`audit/AUDIT.md`, `audit/REPRODUCE.md`). Verdict: **PASS WITH
+CORRECTIONS.**
+- It found the proofs of THM-4888 sound and every raw number reproduced exactly. That includes a move-only
+  enumerator for P4 to 10^8 and literal tournaments: 29,524 words and 7,744 tails, counted by Hamiltonian-path DP.
+- Four MAJOR issues, all about what HYP-9480 claims, are applied above:
+  1. kappa = 1 restricted to generic seeds;
+  2. P1 does not separate the Poisson law from a no-collision model;
+  3. the "Scale" arithmetic was wrong by about five orders of magnitude;
+  4. the "unexplained" bank correlation is fully explained by (D)2 and (D)3.
+- The twelve MINOR issues (attribution, heuristics inside the theorem, the S82 constant, the mass convention, fit
+  coefficients, wording, provenance) are applied as well.
+- The mistakes are logged as MISTAKE-727.

@@ -1,0 +1,6 @@
+(D)3 dilated-root identity on 16 R=2d bank-A seeds, m<2^20: failures 0
+(D)2: bank-A pairs sharing (D-E,U,d): 11  sharing (D,U,d): 0  identical halves: True
+   odd-sharing pairs: [((15, 18, 6, 9), (17, 18, 8, 9)), ((17, 20, 6, 9), (19, 20, 8, 9)), ((25, 30, 10, 15), (27, 30, 12, 15)), ((29, 34, 10, 15), (33, 34, 14, 15)), ((29, 34, 12, 17), (33, 34, 16, 17)), ((37, 47, 13, 23), (39, 47, 15, 23)), ((45, 54, 18, 27), (51, 54, 24, 27)), ((49, 58, 20, 29), (53, 58, 24, 29)), ((51, 63, 17, 29), (53, 63, 19, 29)), ((51, 60, 18, 27), (57, 60, 24, 27)), ((53, 62, 18, 27), (61, 62, 26, 27))]
+   same Z-child: True  same O-child (even pairs): True
+(81,99,27,45) one class mod 3 prediction 0.02588
+(81,99,27,45) one class mod 9 prediction 0.02392

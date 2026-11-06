@@ -1,0 +1,10 @@
+T(9) = 11, T(4) = 7, T(11) = 9, T(7) = 4
+NB=28 checked m < 268435456
+digit identity failures: 0
+mod-3 law failures: 0
+Q odd: 0
+Q > m-1: 0
+T not an involution of the dyadic block: 0
+Q(T m) - Q(m) != 2(T m - m): 0
+fixed points of T (1 <= m < 2^NB): 16383
+control (wrong law Q = m^2 + r mod 3) failures below 4096: 2366 (must be > 0)

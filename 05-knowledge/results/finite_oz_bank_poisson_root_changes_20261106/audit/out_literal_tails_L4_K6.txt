@@ -1,0 +1,1 @@
+mode T L=4 K=6: tail tournaments 7744, formula mismatches 0, not unit-start 0

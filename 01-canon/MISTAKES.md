@@ -23174,3 +23174,53 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     split (two blocks) before a three-block one.
   - Run `git log --since` on the same day and read every scope review of the previous session before restating its
     limits.
+
+## MISTAKE-727 (2026-11-06, kind-pasteur-2026-11-06-S13, THM-4888, HYP-9480 and the packet `05-knowledge/results/finite_oz_bank_poisson_root_changes_20261106/` at the pre-audit commit bf97753f19; found by the independent audit `05-knowledge/results/finite_oz_bank_poisson_root_changes_20261106/audit/AUDIT.md`) -- a law stated for "every other seed" that fails for seeds the packet itself listed, a confirmatory test that cannot separate the law from its null model, an extrapolation off by five orders of magnitude, and a correlation called unexplained that the packet's own identities explain
+
+- **What was claimed.**
+  - (1) HYP-9480 (A): miss_c = exp(-kappa lambda_c) with kappa = 1 "for every other seed" than the root, and the
+    exceptions are "exactly the extra symmetries".
+  - (2) HYP-9480 status and the packet's section 0: P1 and P6b "CONFIRMED" the Poisson law for generic seeds.
+  - (3) Section 4 "Scale" and HYP-9480 (C): even with bank A's halving of the intensity, S82's F2 would first miss
+    "only beyond about 10^15", so its complete census to 2^35 was "what (C) predicts".
+  - (4) Section 4 and HYP-9480 (B): the bank correlation was "not explained"; the 34 generic seeds "still miss 24% more
+    than their product".
+  - Minor: incomplete attribution of THM-4888 (C) and (D)1; a heuristic ("the mechanism behind class 1 mod 3") inside
+    the theorem; "the same mass constant" as S82 for a family with twice S82's mass; masses for "at most k" root changes
+    that count exactly k; P6b seeds called "unseen"; "almost certainly not".
+- **Why it was wrong.**
+  - (1) Seeds with d = 1, seeds with R = 2d, their O/Z descendants and balanced seeds nested in them miss more than
+    exp(-lambda_c) by 0.02 to 0.14 per class at [2^22, 2^23) mod 63: (3, 3, 1, 1) +0.12, (9, 10, 4, 5) +0.09,
+    (5, 12, 0, 3) = O(JJ) +0.07, (9, 9, 3, 3) +0.11. The exception list was never tested. Nesting alone is not the
+    cause: (53, 53, 17, 17), nested in a generic seed, follows kappa = 1.
+  - (2) P1 seeds have lambda <= 0.04, where the Poisson and no-collision (miss = 1 - lambda) models differ by at most
+    lambda^2/2 = 0.0008. The no-collision model passes P1 (109/109, maximum 0.0031) and fails P6b only on 16 of 5,908
+    classes. Generic J-born seeds never exceed per-class intensity 0.2425 (mod 63), so no generic test can be sharp.
+    Only the root's tests (P2, P6a) are decisive.
+  - (3) In S82's hardest class (mean 41.411), half the intensity gives lambda = 20.7 and (2^35/6) e^(-20.7) = 5.8
+    expected misses below 2^35, inside a census that found none. With no loss the first miss is near 6 x 10^18. S82
+    records F2's lower tail as 10^5 times heavier than Poisson, so the extrapolation is unsupported either way.
+  - (4) Once the six shared-half pairs of (D)2 are merged, the product over the 62 distinct half-images is 0.0908,
+    against the union 0.0909. The generic and dilated-root blocks are independent class by class (0.02189 against
+    0.02187). The remaining correlation sits inside the dilated-root block (D)3.
+- **Repair.**
+  - kappa = 1 is restricted to generic seeds: J-born, d > 1, R != 2d, not nested in a d = 1 or R = 2d seed. The known
+    exceptions are listed as not exhaustive. O/Z descendants of R = 2d seeds were added after a recheck.
+  - The evidence is retyped: decisive for the root, weak for generic seeds, with the structural ceiling 0.2425.
+  - The Scale paragraph is replaced by the audit's computation.
+  - (B) is restated as "no correlation beyond the identities of THM-4888 (D)".
+  - All twelve minors were applied. density.c was rerun, and its outputs are byte-identical. The provenance of
+    root_changes_1e8.txt (the exploratory kj.c) is stated.
+- **How it was caught.** The audit:
+  - measured every named exception class per residue instead of trusting the list;
+  - fitted the null model (no collisions) to the registered data;
+  - recomputed the expected number of misses inside the quoted census;
+  - decomposed the bank into half-images.
+- **Lesson.**
+  - When a law has exceptions, state its domain positively ("for generic seeds: ...") and test each named exception
+    class before calling the list exact.
+  - Before registering a confirmatory test, fit the obvious null model to the exploration data. If the null passes
+    too, the test confirms only what both models share.
+  - Before writing "the first misses would lie beyond 10^N", compute the expected number of misses inside the census
+    range under the stated assumption.
+  - Before calling a residual "not explained", decompose it by the identities the same packet proves.

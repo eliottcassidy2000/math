@@ -1,0 +1,4 @@
+|A| 111676 |B| 111676 |A&B| 60807
+odd-m halves identical: True  size 60807 ; even halves intersect: 0 ; even-half residues mod 15: {10} {12} odd-half residues mod 15: {0}
+independent baseline resolved mod 3 : 9714.2
+independent baseline resolved mod 15 : 26446.5

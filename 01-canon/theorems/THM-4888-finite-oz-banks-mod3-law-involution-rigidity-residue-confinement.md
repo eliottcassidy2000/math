@@ -1,16 +1,18 @@
 ---
 id: THM-4888
-title: "Finite O/Z tail banks: (A) Q(m) = m^2 - r(m) (mod 3), r the number of runs of 1-bits, so H_s(m) = h + Rm - d m^2 + d r(m) - e(m mod 2) (mod 3) for every seed; (B) H_s(T(m)) - H_s(m) = (R - 2d)(T(m) - m) - e(par T(m) - par m) for Session 206's converse involution T, and the tail image of a physical seed is T-symmetric iff R = 2d and e = 0 iff the seed is the rooted edge; (C) KNOWN (Session 206 weighted-parameter-capacity): confinement to the classes h, h - e mod p | gcd(d, R) and the parity-split capacity, with the corollary that a J-born state over x with 3 | gcd(D, U) avoids 1 (mod 3) unless E = 2 (mod 3); (D) redundancy: JZ = OJ (KNOWN, Session 205 audit) nests W O J in W J; seeds agreeing in (D - E, U, d), resp. (D, U, d), share their odd-m, resp. even-m, images; R = 2d seeds are dilated root images (h - d) + d H_t(m) - e(m mod 2)"
+title: "Finite O/Z tail banks: (A) Q(m) = m^2 - r(m) (mod 3), r the number of runs of 1-bits, so H_s(m) = h + Rm - d m^2 + d r(m) - e(m mod 2) (mod 3) for every seed; (B) H_s(T(m)) - H_s(m) = (R - 2d)(T(m) - m) - e(par T(m) - par m) for Session 206's converse involution T, and the tail map H_s of a physical seed is T-invariant iff R = 2d and e = 0 iff the seed is the rooted edge; (C) KNOWN (Session 206): confinement to the classes h, h - e mod p | gcd(d, R) and the parity-split capacity; (D) redundancy: JZ = OJ (KNOWN, Session 205) nests W O J in W J; seeds agreeing in (D - E, U, d), resp. (D, U, d), share their odd-m, resp. even-m, images; R = 2d seeds are dilated root images (h - d) + d H_t(m) - e(m mod 2)"
 status: >
-  PROVED (new): (A), (B), (D)2, (D)3 (proofs in the packet PROOF.md, section 2). KNOWN / CITED, found independently
-  in this session: (C) is contained in Session 206's audited weighted-parameter-capacity theorem (de303ea26d, pushed
-  during this session; it gives the exact weights (g/p) c_b, g = gcd(R, d, p)); (D)1 JZ = OJ is Session 205's
-  finite-oz-tail-bank audit identity (Session 199: ZJ = JO). Also KNOWN: the tail formula (Session 205), the capacity
-  theorem, the root involution T with Q(T(m)) - Q(m) = 2(T(m) - m), the d = 1 collapse, root residue capacity and the
-  example (5,6,2,3) (Session 206), and the complete source grammar and exact inverse (Session 198 bilinear-descent).
-  Pre-registered as THM-4887 (d36f57c903), claims (A) and (B) only; renumbered after a reservation race
-  (48ba576e1f). NOT CLAIMED: impossibility for every finite bank, an image-density limit, coverage; the quantitative
-  laws are HYP-9480. Chan-Pak OPEN. AUDIT: PENDING.
+  PROVED (new): (A), (B), (D)2, (D)3 (proofs in the packet PROOF.md, section 2); (D)3 generalises Session 206's
+  identity H = 3 H_t + 2 - 2(m mod 2) for (5, 6, 2, 3) (ROOT_RESIDUE_CAPACITY section 4). KNOWN / CITED: (C) - the
+  congruence is the necessity half of Session 206's exact modular image (DYADIC_SURJECTIVITY.md); the parity split and
+  the exact weights (g/p) c_b are Session 206's weighted-parameter-capacity (de303ea26d, pushed during this session),
+  the parity split found independently here. (D)1 JZ = OJ is Session 205's (ARITHMETIC_REDUCTION.md and its audit;
+  Session 199 writes ZJ = JO in operator order). Also KNOWN: the tail formula (Session 205), the capacity theorem, the
+  root involution T with Q(T(m)) - Q(m) = 2(T(m) - m), the d = 1 collapse, root residue capacity (Session 206), and the
+  complete source grammar and exact inverse (Session 198 bilinear-descent). Pre-registered as THM-4887 (d36f57c903),
+  claims (A) and (B) only; renumbered after a reservation race (48ba576e1f). NOT CLAIMED: impossibility for every
+  finite bank, an image-density limit, coverage; the quantitative laws are HYP-9480. Chan-Pak OPEN. AUDIT: independent,
+  PASS WITH CORRECTIONS (proofs sound; attribution and wording corrected; MISTAKE-727).
 session: kind-pasteur-2026-11-06-S13
 source: 05-knowledge/results/finite_oz_bank_poisson_root_changes_20261106/PROOF.md
 related:
@@ -38,31 +40,40 @@ rooted edge is t = (h, R, e, d) = (1, 2, 0, 1).
 
 **(A) Mod-3 law (PROVED).** Q(m) = m^2 - r(m) (mod 3), where r(m) is the number of maximal runs of ones in the
 binary expansion of m. Proof: with 2 = -1 (mod 3) the digit identity Q = sum b_j floor(m/2^(j+1)) + sum b_j b_(j+1)
-becomes -(S^2 - s_2)/2 + a with S = sum (-1)^j b_j = m, s_2 the digit sum and a the number of adjacent 11 pairs;
--1/2 = 1 (mod 3) and s_2 - a = r.
+becomes -(S^2 - s_2)/2 + a, with S = sum (-1)^j b_j = m (mod 3), s_2 the digit sum and a the number of adjacent 11
+pairs; -1/2 = 1 (mod 3) and s_2 - a = r.
 
 **(B) Involution rigidity (PROVED).** H_s(T(m)) - H_s(m) = (R - 2d)(T(m) - m) - e((T(m) mod 2) - (m mod 2)). The
-pairs 9 <-> 11 (same parity) and 4 <-> 7 (different parity) force R = 2d and e = 0 for a T-symmetric image.
+pairs 9 <-> 11 (same parity) and 4 <-> 7 (different parity) force R = 2d and e = 0 for a T-invariant tail map.
 Physically U = 2d and E = 0 give the positive coordinates (0, 0, 0, d). Under the exact inverse these have no
-predecessor, and the only physical source without a predecessor is t itself (d = 1). So Session 206's halving, which
-comes from the converse tournament, is unique to the root image (and its d = 1 subsets).
+predecessor, and the only physical source without a predecessor is t itself (d = 1). So no seed other than the root
+has a T-invariant tail map. Session 206's halving comes from the converse tournament; d = 1 seeds share it only
+because their images lie inside the root image. R = 2d seeds keep a partial involution: T preserves H_s when m and
+T(m) have the same parity.
 
-**(C) Residue confinement and parity-split capacity (KNOWN: Session 206 weighted-parameter-capacity).** If an odd
-prime p divides d and R, then H_s(m) = h - e(m mod 2) (mod p). Even and odd parameters carry (X/d) ln(R/(R - d/2)) and
-(X/d) ln((R - d/2)/(R - d)) (+ O_s(sqrt X)) respectively. Session 206 proves more: the exact weights (g/p) c_b on the
-coset h - e b mod g, g = gcd(R, d, p). This session found the special case independently. Corollary (immediate): a
-J-born state over x with 3 | gcd(D, U) has its whole tail image in the classes 0 and -E (mod 3), which is the
-mechanism behind the hard class 1 (mod 3) of root-change and join families.
+**(C) Residue confinement and parity-split capacity (KNOWN: Session 206).** If an odd prime p divides d and R, then
+H_s(m) = h - e(m mod 2) (mod p); this is the necessity half of Session 206's exact modular image. Even and odd
+parameters carry (X/d) ln(R/(R - d/2)) and (X/d) ln((R - d/2)/(R - d)) (+ O_s(sqrt X)) respectively. Session 206's
+weighted-parameter-capacity proves this with the exact weights (g/p) c_b on the coset h - e b mod g,
+g = gcd(R, d, p); this session found the parity split independently. Corollary (immediate): a J-born state over x
+with 3 | gcd(D, U) has its whole tail image in the classes 0 and -E (mod 3).
+
+Heuristic remark, not part of the theorem: this confinement carries most of the class-1 (mod 3) deficit of the
+two-root-change family F_2 (about 80% of the deficit of representation mass in [X/2, X] at X = 4 x 10^6, audit). S82
+found the analogous local factor (3 | y_h and 3 | y_R) for its join family F2.
 
 **(D) Redundancy.**
-1. (KNOWN: Session 205 audit.) JZ = OJ, both giving (D + 2U, D, D + 2U, D), so the image of every seed W O J lies in
-   the image of W J.
+1. (KNOWN: Session 205.) JZ = OJ, both giving (D + 2U, D, D + 2U, D), so the image of every seed W O J lies in the
+   image of W J.
 2. (PROVED.) The odd-m values (h - e) + Rm - dQ(m) depend only on (D - E, U, d), which also fixes the Z-child. The
    even-m values depend only on (D, U, d), which also fixes the O-child.
-3. (PROVED.) If R = 2d, then H_s(m) = (h - d) + d H_t(m) - e(m mod 2): two dilated pieces of the root image.
+3. (PROVED; generalises Session 206's (5, 6, 2, 3) identity.) If R = 2d, then H_s(m) = (h - d) + d H_t(m) - e(m mod 2):
+   two dilated pieces of the root image.
 
-These identities explain why finite banks are positively correlated (HYP-9480 (B)). In bank A, the 35 balanced seeds
-are redundant, and the union misses six times the product of the members' miss rates.
+Exploration (HYP-9480 (B)): after the 35 nested balanced seeds of bank A are removed, the union misses 1.39 times the
+product of the members' miss rates. That excess is accounted for by (D)2 and (D)3.
 
 Verification: packet `verify.py` (P5) checks (A) for all m < 2^26 and (B) on all 194 physical seeds with U <= 64 and
-m < 2^16. Among all 94,010 physical states with U <= 4096, only the rooted edge has U = 2d and E = 0.
+m < 2^16. Among all 94,010 physical states with U <= 4096, only the rooted edge has U = 2d and E = 0. The independent
+audit checked (A) to 2^28, re-derived the exact inverse by brute force, and confirmed the moves, JZ = OJ and the tail
+formula on literal tournaments (29,524 words, 7,744 tails) by Hamiltonian-path DP.

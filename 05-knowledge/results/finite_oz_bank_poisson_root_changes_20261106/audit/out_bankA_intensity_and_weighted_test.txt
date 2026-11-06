@@ -1,0 +1,11 @@
+bank A nominal intensity 2 sum c_s = 8.288
+with the root counted once per involution pair (subtract ln 2): 7.595
+without the 35 balanced seeds (root halved): 5.153 ; (root not halved): 5.846
+-ln(0.0219) = 3.823
+min over odd p<=105 and classes a of (weighted capacity)/(class size) = 4.699 at (p,a)=(75, 1)
+same without the 35 nested balanced seeds: min over odd p<=105 and classes a of (weighted capacity)/(class size) = 3.393 at (p,a)=(15, 1)
+lambda_eff = 41.411 (S82 smallest class mean, no loss)     41.41 -> expected first miss near N ~ 5.8e+18 ; expected misses below 2^35: 5.93e-09
+lambda_eff = 41.411/2 ("loss of half")                     20.71 -> expected first miss near N ~ 5.9e+09 ; expected misses below 2^35: 5.83
+lambda_eff = 41.411*3.82/8.29 (bank A nominal->observed)   19.08 -> expected first miss near N ~ 1.2e+09 ; expected misses below 2^35: 29.6
+lambda_eff = 41.411*3.82/5.15 (bank A after nesting)       30.72 -> expected first miss near N ~ 1.3e+14 ; expected misses below 2^35: 0.000262
+lambda_eff = 48.2*3.82/5.15 (overall mean, all odd N)      35.75 -> expected first miss near N ~ 6.7e+15 ; expected misses below 2^35: 5.11e-06

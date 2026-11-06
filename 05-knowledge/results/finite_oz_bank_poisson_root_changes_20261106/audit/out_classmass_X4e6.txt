@@ -1,0 +1,3 @@
+exactly 0 root changes, words with H in [X/2, X], X=4000000: share by H mod 3 = 0.3218 0.3483 0.3299 (total 1386316); share from 3-confined final blocks = 0.0000, their mass by class = 0 0 0
+exactly 1 root changes, words with H in [X/2, X], X=4000000: share by H mod 3 = 0.4067 0.2774 0.3159 (total 23804692); share from 3-confined final blocks = 0.1432, their mass by class = 2720802 0 688528
+exactly 2 root changes, words with H in [X/2, X], X=4000000: share by H mod 3 = 0.4941 0.2450 0.2609 (total 195460197); share from 3-confined final blocks = 0.2424, their mass by class = 42864281 1960076 2549540

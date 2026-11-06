@@ -1,0 +1,1 @@
+mode W L=9: words checked 29524, response mismatches 0, not unit-start 0; JZ vs OJ pairs 3280, mismatches 0

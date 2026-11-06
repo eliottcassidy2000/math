@@ -1,0 +1,8 @@
+method: union miss of the seeds; product over seeds; product over distinct half-images; window [2^22,2^23)
+bank A without balanced (50)   mod    3: union miss 0.02187 | product over seeds 0.01573 | product over 89 distinct half-images 0.01506
+bank A without balanced (50)   mod  945: union miss 0.02187 | product over seeds 0.01692 | product over 89 distinct half-images 0.01594
+34 generic                     mod    3: union miss 0.09086 | product over seeds 0.07290 | product over 62 distinct half-images 0.09039
+34 generic                     mod  945: union miss 0.09086 | product over seeds 0.07316 | product over 62 distinct half-images 0.09077
+16 R=2d (root incl.)           mod    3: union miss 0.20915 | product over seeds 0.18688 | product over 27 distinct half-images 0.14989
+16 R=2d (root incl.)           mod  945: union miss 0.20915 | product over seeds 0.19680 | product over 27 distinct half-images 0.15301
+exact union(generic) x exact union(R=2d) as two independent blocks, mod 945: 0.02189  vs union of all 50: 0.02187
