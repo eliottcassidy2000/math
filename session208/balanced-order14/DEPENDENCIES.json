@@ -1,0 +1,14 @@
+{
+  "oracle_source": {
+    "repository": "eliottcassidy2000/math",
+    "commit": "386fa872bd9b0baab3c3c55d86c818d7acaf8342",
+    "proof_path": "session208/balanced-atom-oracle/PROOF.md",
+    "proof_git_blob": "525c45823056c03a290c967ea00621726f0ee4b1",
+    "source_path": "session208/balanced-atom-oracle/target_search.cpp",
+    "source_git_blob": "494811265e37f5920f8a40832e08f3976ae2a0e6",
+    "bundled_source_sha256": "8b5f3238c541133660f82fd34d8aad7a914769fe4a99ac463f64457e1dcbb5e4",
+    "used": "Exact single-arc endpoint-convolution oracle and discovery procedure. The previous proof also states SCC multiplication and subadditivity limit."
+  },
+  "verification": "Python3 standard library, assertions enabled, all numerical inputs embedded; optional C++17 discovery requires unsigned128-bit integer support.",
+  "scope": "Explicit witness only; search nonexhaustive, global upper bound7/3, no exact minimum-order claim."
+}
