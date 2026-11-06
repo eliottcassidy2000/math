@@ -1,0 +1,10 @@
+u=9 n=6 H=17 rows=2,4,57,51,35,3, total_extensions=8192 distinct_values=261 minimum=17 maximum=653
+OBSTRUCTION u=9 target=55 strong_cutoff=8 pow5=390625 target_cube=166375 extension_multiplicity=0
+u=17 n=7 H=33 rows=2,4,121,115,99,67,3, total_extensions=32768 distinct_values=971 minimum=33 maximum=2635
+OBSTRUCTION u=17 target=103 strong_cutoff=9 pow5=1953125 target_cube=1092727 extension_multiplicity=0
+u=19 n=7 H=33 rows=2,36,121,115,99,65,3, total_extensions=32768 distinct_values=1121 minimum=33 maximum=2783
+OBSTRUCTION u=19 target=113 strong_cutoff=9 pow5=1953125 target_cube=1442897 extension_multiplicity=0
+u=35 n=8 H=61 rows=2,68,249,243,227,195,129,3, total_extensions=131072 distinct_values=4095 minimum=61 maximum=11219
+OBSTRUCTION u=35 target=209 strong_cutoff=10 pow5=9765625 target_cube=9129329 extension_multiplicity=0
+OBSTRUCTION u=35 target=211 strong_cutoff=10 pow5=9765625 target_cube=9393931 extension_multiplicity=0
+PASS: all extension counts agree entrywise between independent literal-word and subset-DP cover algorithms.

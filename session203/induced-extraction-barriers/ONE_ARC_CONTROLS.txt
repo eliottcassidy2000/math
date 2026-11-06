@@ -1,0 +1,40 @@
+{
+  "all_five_recorded_graphs_nonstrong": true,
+  "extra_repair": {
+    "first_new_mask": 0,
+    "reversed_old_arc": [
+      1,
+      2
+    ],
+    "rows": [
+      514,
+      1536,
+      2043,
+      1011,
+      995,
+      963,
+      1923,
+      1795,
+      1539,
+      1024,
+      57
+    ],
+    "second_new_mask": 57,
+    "target": 391,
+    "u": 65
+  },
+  "nearby_same_rule_hostile": {
+    "actual": 783,
+    "desired": 775,
+    "u": 129
+  },
+  "one_arc_repair_targets": [
+    55,
+    103,
+    113,
+    209,
+    211
+  ],
+  "scope": "Exact finite repair graphs; no all-u extraction or eventual threshold proved.",
+  "status": "PASS"
+}

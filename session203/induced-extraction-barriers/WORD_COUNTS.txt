@@ -1,0 +1,4 @@
+literal_permutations=40320 consistent_words=2898
+literal_permutations=362880 consistent_words=10326
+literal_permutations=362880 consistent_words=11190
+literal_permutations=3628800 consistent_words=39258
