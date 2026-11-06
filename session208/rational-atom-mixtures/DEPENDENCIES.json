@@ -1,0 +1,20 @@
+{
+  "census": {
+    "source_repository": "eliottcassidy2000/math",
+    "source_commit": "d3b91e52c6b756d32ab90fe7f1a406f23633f60d",
+    "source_path": "session207/size-spectrum/census.json",
+    "source_git_blob": "fddf736f4f4c3c7a5c3598429ec322ad069ad533",
+    "bundled_path": "census_session207.json",
+    "sha256": "26af822770aa4ac36d7cd627f25726f14cff91c4f2d4e86741eece82f3be1d22",
+    "role": "Complete strong spectra through order8 and witnesses; exhaustive status inherited from audited Session207."
+  },
+  "paper": {
+    "title": "Logarithmic Embeddings into Probabilistic Spanning Trees for Distances and Capacities",
+    "author": "Mohammad Hajiaghayi",
+    "version": "arXiv:2611.05189v1",
+    "url": "https://arxiv.org/abs/2611.05189",
+    "supplied_pdf_sha256": "1f530fc9ead97fbdef28c6a6ca5e2616992ac1f0a3b24b27d9b7c2b239102dca",
+    "used_section": "Corollary8.2, rational support elimination; conceptual inspiration only, no central theorem assumed."
+  },
+  "runtime": "Python3 standard library; assertions must remain enabled."
+}
