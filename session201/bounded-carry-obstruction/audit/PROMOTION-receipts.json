@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checks": {
+    "final hash PROOF.md": true,
+    "final hash README.md": true,
+    "final hash PROMOTION.diff": true,
+    "PROMOTION-author-normal.json exact historical match": true,
+    "PROMOTION-author-optimized.json exact historical match": true,
+    "PROMOTION-independent-normal.json exact historical match": true,
+    "PROMOTION-independent-optimized.json exact historical match": true,
+    "frozen inputs/session201-bounded-carry-obstruction/verify.py": true,
+    "frozen inputs/session201-bounded-carry-obstruction/VALIDATION-normal.json": true,
+    "frozen inputs/session201-bounded-carry-obstruction/PROOF.md": true,
+    "frozen inputs/session201-bounded-carry-obstruction/VALIDATION-optimized.json": true,
+    "frozen inputs/session201-bounded-carry-obstruction/MANIFEST.sha256": true,
+    "frozen inputs/session201-bounded-carry-obstruction/README.md": true,
+    "frozen inputs/session201-hammersley-source-approximation/PROOF.md": true,
+    "frozen inputs/session201-central-arithmetic-release/session201/central-arithmetic/PROOF.md": true,
+    "frozen inputs/session201-compact-central-release/session201/compact-central-arithmetic/dependencies/CORE_PROOF.md": true,
+    "frozen inputs/session201-compact-central-release/session201/compact-central-arithmetic/PROOF.md": true
+  },
+  "rerun_working_directory": "session201/bounded-carry-obstruction",
+  "commands": [
+    "python3 verify.py",
+    "python3 -O verify.py",
+    "python3 audit/independent_check.py",
+    "python3 -O audit/independent_check.py"
+  ]
+}

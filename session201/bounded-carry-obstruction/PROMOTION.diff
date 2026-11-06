@@ -1,0 +1,43 @@
+--- originals/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # Bounded source approximation error cannot cover a tail
+ 
+-Status: **RESERVED / UNREVIEWED PROOF CANDIDATE**. This is a separate,
++Status: **PROVED / INDEPENDENTLY AUDITED**. This is a separate,
+ all-order obstruction to bounding BOTH source approximation errors in a
+ finite-template construction. The twelve-template occupancy lemma remains
+ **OPEN**. No exact target counterexample is asserted.
+@@ -165,8 +165,8 @@
+ 
+ ## 6. Portable exact controls and dependencies
+ 
+-    python3 session201-bounded-carry-obstruction/verify.py
+-    python3 -O session201-bounded-carry-obstruction/verify.py
++    python3 verify.py
++    python3 -O verify.py
+ 
+ The verifier is standalone, using only standard-library integer and rational
+ arithmetic. It checks the lower bounds for every word through length14,
+@@ -175,9 +175,9 @@
+ m=80. These are word-level controls, not a target-coverage census.
+ 
+ The dyadic index bijection and upper approximation bounds are proved in the
+-separate `../session201-hammersley-source-approximation/PROOF.md`. The
++separate `../hammersley-source-approximation/PROOF.md`. The
+ product-bound dependency is the released
+-`../session201-compact-central-release/session201/compact-central-arithmetic/dependencies/CORE_PROOF.md`,
++`dependencies/CORE_PROOF.md`,
+ Section4. No code import or external runtime dependency is required.
+ 
+ Uniform twelve-template occupancy remains OPEN.
+--- originals/README.md
++++ README.md
+@@ -1,6 +1,6 @@
+ # Bounded Hammersley-error obstruction
+ 
+-Unreviewed all-order proof candidate. A word of length k with R Z-runs has
++Independently audited all-order proof. A word of length k with R>=1 Z-runs has
+ source error e>=R*2^(-k/(2R)). A fixed bound on e therefore forces R=o(k),
+ and only N^{o(1)} actual source indices through N have bounded error.
+ 

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checks": {
+    "AUTHOR-normal.json == AUTHOR-optimized.json": true,
+    "AUTHOR-normal.json == inputs/session201-bounded-carry-obstruction/VALIDATION-normal.json": true,
+    "AUTHOR-normal.json == inputs/session201-bounded-carry-obstruction/VALIDATION-optimized.json": true,
+    "INDEPENDENT-normal.json == INDEPENDENT-optimized.json": true,
+    "unchanged session201-bounded-carry-obstruction/verify.py": true,
+    "unchanged session201-bounded-carry-obstruction/VALIDATION-normal.json": true,
+    "unchanged session201-bounded-carry-obstruction/PROOF.md": true,
+    "unchanged session201-bounded-carry-obstruction/VALIDATION-optimized.json": true,
+    "unchanged session201-bounded-carry-obstruction/MANIFEST.sha256": true,
+    "unchanged session201-bounded-carry-obstruction/README.md": true,
+    "unchanged session201-hammersley-source-approximation/PROOF.md": true,
+    "unchanged session201-central-arithmetic-release/session201/central-arithmetic/PROOF.md": true,
+    "unchanged session201-compact-central-release/session201/compact-central-arithmetic/dependencies/CORE_PROOF.md": true,
+    "unchanged session201-compact-central-release/session201/compact-central-arithmetic/PROOF.md": true,
+    "math checkout status unchanged": true
+  },
+  "scope": "All-order source sparsity and both-errors-only obstruction; unrestricted occupancy OPEN"
+}

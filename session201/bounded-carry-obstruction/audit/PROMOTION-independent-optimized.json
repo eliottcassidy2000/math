@@ -1,0 +1,457 @@
+{
+  "actual_indices": 32767,
+  "all_order_claim": "Established by written audit, not finite controls",
+  "alternating_family_m": 100,
+  "cone_matrices": {
+    "J": [
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "O": [
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "Z": [
+      [
+        2,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "exact_bounded_error_counts": [
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 0,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 1,
+      "k": 0,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1",
+      "actual_words": 1,
+      "k": 0,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "2",
+      "actual_words": 1,
+      "k": 0,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 1,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 1,
+      "k": 1,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1",
+      "actual_words": 2,
+      "k": 1,
+      "necessary_run_bound": 2
+    },
+    {
+      "E": "2",
+      "actual_words": 2,
+      "k": 1,
+      "necessary_run_bound": 2
+    },
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 2,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 1,
+      "k": 2,
+      "necessary_run_bound": 4
+    },
+    {
+      "E": "1",
+      "actual_words": 4,
+      "k": 2,
+      "necessary_run_bound": 4
+    },
+    {
+      "E": "2",
+      "actual_words": 4,
+      "k": 2,
+      "necessary_run_bound": 4
+    },
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 3,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 2,
+      "k": 3,
+      "necessary_run_bound": 7
+    },
+    {
+      "E": "1",
+      "actual_words": 7,
+      "k": 3,
+      "necessary_run_bound": 7
+    },
+    {
+      "E": "2",
+      "actual_words": 8,
+      "k": 3,
+      "necessary_run_bound": 8
+    },
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 4,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 4,
+      "k": 4,
+      "necessary_run_bound": 11
+    },
+    {
+      "E": "1",
+      "actual_words": 11,
+      "k": 4,
+      "necessary_run_bound": 16
+    },
+    {
+      "E": "2",
+      "actual_words": 16,
+      "k": 4,
+      "necessary_run_bound": 16
+    },
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 5,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 7,
+      "k": 5,
+      "necessary_run_bound": 16
+    },
+    {
+      "E": "1",
+      "actual_words": 16,
+      "k": 5,
+      "necessary_run_bound": 31
+    },
+    {
+      "E": "2",
+      "actual_words": 31,
+      "k": 5,
+      "necessary_run_bound": 32
+    },
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 6,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 11,
+      "k": 6,
+      "necessary_run_bound": 22
+    },
+    {
+      "E": "1",
+      "actual_words": 24,
+      "k": 6,
+      "necessary_run_bound": 57
+    },
+    {
+      "E": "2",
+      "actual_words": 61,
+      "k": 6,
+      "necessary_run_bound": 64
+    },
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 7,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 16,
+      "k": 7,
+      "necessary_run_bound": 29
+    },
+    {
+      "E": "1",
+      "actual_words": 51,
+      "k": 7,
+      "necessary_run_bound": 99
+    },
+    {
+      "E": "2",
+      "actual_words": 124,
+      "k": 7,
+      "necessary_run_bound": 127
+    },
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 8,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 22,
+      "k": 8,
+      "necessary_run_bound": 163
+    },
+    {
+      "E": "1",
+      "actual_words": 97,
+      "k": 8,
+      "necessary_run_bound": 163
+    },
+    {
+      "E": "2",
+      "actual_words": 244,
+      "k": 8,
+      "necessary_run_bound": 256
+    },
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 9,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 29,
+      "k": 9,
+      "necessary_run_bound": 256
+    },
+    {
+      "E": "1",
+      "actual_words": 169,
+      "k": 9,
+      "necessary_run_bound": 256
+    },
+    {
+      "E": "2",
+      "actual_words": 463,
+      "k": 9,
+      "necessary_run_bound": 511
+    },
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 10,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 37,
+      "k": 10,
+      "necessary_run_bound": 386
+    },
+    {
+      "E": "1",
+      "actual_words": 275,
+      "k": 10,
+      "necessary_run_bound": 848
+    },
+    {
+      "E": "2",
+      "actual_words": 845,
+      "k": 10,
+      "necessary_run_bound": 1013
+    },
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 11,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 49,
+      "k": 11,
+      "necessary_run_bound": 562
+    },
+    {
+      "E": "1",
+      "actual_words": 424,
+      "k": 11,
+      "necessary_run_bound": 1486
+    },
+    {
+      "E": "2",
+      "actual_words": 1483,
+      "k": 11,
+      "necessary_run_bound": 1981
+    },
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 12,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 85,
+      "k": 12,
+      "necessary_run_bound": 794
+    },
+    {
+      "E": "1",
+      "actual_words": 626,
+      "k": 12,
+      "necessary_run_bound": 2510
+    },
+    {
+      "E": "2",
+      "actual_words": 2507,
+      "k": 12,
+      "necessary_run_bound": 3797
+    },
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 13,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 149,
+      "k": 13,
+      "necessary_run_bound": 1093
+    },
+    {
+      "E": "1",
+      "actual_words": 892,
+      "k": 13,
+      "necessary_run_bound": 4096
+    },
+    {
+      "E": "2",
+      "actual_words": 4173,
+      "k": 13,
+      "necessary_run_bound": 7099
+    },
+    {
+      "E": "0",
+      "actual_words": 1,
+      "k": 14,
+      "necessary_run_bound": 1
+    },
+    {
+      "E": "1/2",
+      "actual_words": 251,
+      "k": 14,
+      "necessary_run_bound": 1471
+    },
+    {
+      "E": "1",
+      "actual_words": 1256,
+      "k": 14,
+      "necessary_run_bound": 6476
+    },
+    {
+      "E": "2",
+      "actual_words": 7401,
+      "k": 14,
+      "necessary_run_bound": 15914
+    }
+  ],
+  "max_word_length": 14,
+  "status": "PASS",
+  "thresholds": [
+    "0",
+    "1/2",
+    "1",
+    "2"
+  ],
+  "twelve_templates_product_bound": "PASS",
+  "zero_error_cumulative_N": 4096
+}

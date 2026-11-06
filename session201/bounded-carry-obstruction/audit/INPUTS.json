@@ -1,0 +1,52 @@
+[
+  {
+    "source": "session201-bounded-carry-obstruction/verify.py",
+    "frozen": "inputs/session201-bounded-carry-obstruction/verify.py",
+    "sha256": "f0a8348822b3d1a471c8ceb2f084262ae0b4f39c90c9580ed04f0ea75d8cc0bb"
+  },
+  {
+    "source": "session201-bounded-carry-obstruction/VALIDATION-normal.json",
+    "frozen": "inputs/session201-bounded-carry-obstruction/VALIDATION-normal.json",
+    "sha256": "430ec8b14edfe38f82fbab610c1f034227953772c46f06d2efd2adde9b5d1ada"
+  },
+  {
+    "source": "session201-bounded-carry-obstruction/PROOF.md",
+    "frozen": "inputs/session201-bounded-carry-obstruction/PROOF.md",
+    "sha256": "6b88ac774aa9b4bc320eb4d8ccf93c857b87b5931d010e5446bf8e6c2f00b4f9"
+  },
+  {
+    "source": "session201-bounded-carry-obstruction/VALIDATION-optimized.json",
+    "frozen": "inputs/session201-bounded-carry-obstruction/VALIDATION-optimized.json",
+    "sha256": "430ec8b14edfe38f82fbab610c1f034227953772c46f06d2efd2adde9b5d1ada"
+  },
+  {
+    "source": "session201-bounded-carry-obstruction/MANIFEST.sha256",
+    "frozen": "inputs/session201-bounded-carry-obstruction/MANIFEST.sha256",
+    "sha256": "5959646a77e11985a59a1611a088a20157a22501c5b0da38d0916e39aa3098f7"
+  },
+  {
+    "source": "session201-bounded-carry-obstruction/README.md",
+    "frozen": "inputs/session201-bounded-carry-obstruction/README.md",
+    "sha256": "9d3749458eafc3de81cf4cc1484bc76141d1ae02644537c694357d9df7b87f4d"
+  },
+  {
+    "source": "session201-hammersley-source-approximation/PROOF.md",
+    "frozen": "inputs/session201-hammersley-source-approximation/PROOF.md",
+    "sha256": "e8e169f3a3af83ba87b4cc24387710e668353f287ff5d1876457daaff1c63454"
+  },
+  {
+    "source": "session201-central-arithmetic-release/session201/central-arithmetic/PROOF.md",
+    "frozen": "inputs/session201-central-arithmetic-release/session201/central-arithmetic/PROOF.md",
+    "sha256": "49ad1123e80fbf751eac3e72ed0f5ad2ec39e7705f9ee89c77d4826ef5e1066c"
+  },
+  {
+    "source": "session201-compact-central-release/session201/compact-central-arithmetic/dependencies/CORE_PROOF.md",
+    "frozen": "inputs/session201-compact-central-release/session201/compact-central-arithmetic/dependencies/CORE_PROOF.md",
+    "sha256": "49ad1123e80fbf751eac3e72ed0f5ad2ec39e7705f9ee89c77d4826ef5e1066c"
+  },
+  {
+    "source": "session201-compact-central-release/session201/compact-central-arithmetic/PROOF.md",
+    "frozen": "inputs/session201-compact-central-release/session201/compact-central-arithmetic/PROOF.md",
+    "sha256": "679ada6e3c80ad18655822ba474ca7275e5f2b2361b8e697ab8535e628c72257"
+  }
+]
