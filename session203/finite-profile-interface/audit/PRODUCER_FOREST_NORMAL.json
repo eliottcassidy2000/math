@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "all_labeled_graphs_through5": 1099,
+  "random_width_2_3_4_order9_words": 90,
+  "largest_reached_pattern_dictionary": 1239,
+  "readouts": [
+    "h",
+    "s",
+    "L",
+    "B",
+    "C2",
+    "T_root_start_2ordinary"
+  ],
+  "scope": "Finite controls; general bounded-width proof separate."
+}

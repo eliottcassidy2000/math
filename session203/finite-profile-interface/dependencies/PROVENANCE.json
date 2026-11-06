@@ -1,0 +1,18 @@
+[
+  {
+    "file": "BOUNDED_ENTRY_PROOF.md",
+    "commit": "f51bbf5905807957a44057a68ecb7eba3bbd8f9d",
+    "source_path": "session203/bounded-entry-grammar/PROOF.md",
+    "verified_url": "https://github.com/eliottcassidy2000/math/blob/f51bbf5905807957a44057a68ecb7eba3bbd8f9d/session203/bounded-entry-grammar/PROOF.md",
+    "sha256": "651a45b8d3a4b3bb307b1366d2a9b8199925788e99f42d5375abec4f265c3b76",
+    "status": "independently audited and published; exact package blob readback verified by author"
+  },
+  {
+    "file": "PROFILE_ORDER_BOUND_PROOF.md",
+    "commit": "61f06512d0eafdb1c177181d4556dda2e12f2fcb",
+    "source_path": "session203/rooted-profile-order-bound/PROOF.md",
+    "verified_url": "https://github.com/eliottcassidy2000/math/blob/61f06512d0eafdb1c177181d4556dda2e12f2fcb/session203/rooted-profile-order-bound/PROOF.md",
+    "sha256": "839e6b74ba3344a93fa32240b939f57bd1dcfb1fd0114bf578568085a7e6aa7b",
+    "status": "independently audited and published; exact package blob readback verified by author"
+  }
+]

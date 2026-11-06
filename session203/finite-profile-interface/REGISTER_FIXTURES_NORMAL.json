@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "literal_sources": 281,
+  "largest_source_order": 13,
+  "largest_start_budget": 26,
+  "largest_observed_register_use": 8,
+  "recursive_scc_steps": 885,
+  "introductions": 2628,
+  "forget_operations": 2347,
+  "scope": "Each supplied source independently start-counted, SCC-decomposed, register-compiled, and compared literally; bank completeness not used."
+}

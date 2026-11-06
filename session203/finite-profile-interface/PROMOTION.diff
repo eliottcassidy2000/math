@@ -1,0 +1,56 @@
+--- frozen/PROOF.md
++++ release/PROOF.md
+@@ -1,12 +1,12 @@
+ # A finite weighted presentation of bounded-start profiles
+ 
+-**RESEARCH PROOF CANDIDATE, not independently audited.** This depends on the
+-separate candidate endpoint theorem in session203-bounded-entry-grammar and
+-the published rooted-profile order-bound packet. It is not part of either
+-frozen release. The endpoint candidate is undergoing independent audit.
+-
+-The proposed conclusion is an effective finite weighted presentation of all
+-actual pairs (B,s) with1<=s<=K, for each fixed K. This is not a finite set of
++**PROVED, independently audited.** The endpoint theorem and weak-tail
++profile preservation are independently audited published dependencies,
++frozen under dependencies/ with exact provenance. The independent review,
++original candidate, and reproducible controls are preserved under audit/.
++
++The conclusion is an effective finite weighted presentation of all
++actual pairs (B,s) with1<=s<=K, for each fixed positive integer K. This is not a finite set of
+ integer profile states, an automatic recognition of the binary digits of B,
+ a scalar inverse rule, or a proof that prescribed B-values occur.
+ 
+@@ -33,7 +33,10 @@
+ label, leaving the underlying vertex and all its edges intact. A forgotten
+ vertex can never be selected again. Thus it beats all subsequently
+ introduced vertices. Labels may be reused for newly introduced vertices.
+-A root marker always refers to a currently active vertex.
++The initial empty control has no root marker. A marker may be placed only
++on an active vertex. The currently marked vertex cannot be forgotten until
++the marker has moved to another active vertex. Final acceptance requires a
++marked active root.
+ 
+ Put m(0)=0 and m(t)=floor(sqrt(4t-1)) for positive integer t. The endpoint
+ theorem says that any marked set whose TOTAL start count is at most t has
+@@ -128,8 +131,10 @@
+ form a cycle, not a path. Multiplicities from indistinguishable endpoint
+ patterns count the distinct choices of actual old components. They depend
+ only on the finite pattern, not on hidden vertex identities. Every child
+-cover has a unique inverse after deleting u and, if necessary, splitting
+-its former path at u. Thus this is an exact nonnegative integer linear
++cover has a unique inverse after deleting u and its incident path edges.
++When u was internal, always split its former path into the two old
++components, even if its old predecessor happens to beat its old successor.
++No old predecessor-successor edge is added in this inverse. Thus this is an exact nonnegative integer linear
+ transfer on pattern counts.
+ 
+ On forgetting port u, replace its endpoint occurrences by *. If the number
+
+--- frozen/check_register.cpp
++++ release/check_register.cpp
+@@ -18,4 +18,4 @@
+  void build(const vector<int>&v,const set<int>&keep){auto st=starts(sub(a,v));I budget=0;for(int i=0;i<(int)v.size();i++)if(keep.count(v[i]))budget+=st[i];need(budget<=K&&!keep.empty(),"marked budget");int root=*keep.begin();need(keep.size()*keep.size()<4*budget,"marked arity");if(v.size()==1){add(root);return;}vector<int>rest;for(int x:v)if(x!=root)rest.push_back(x);auto cs=scc(a,rest);auto C=cs[0];set<int>marks;for(int x:C)if(keep.count(x)||(a[root]>>x&1))marks.insert(x);need(!marks.empty(),"empty entry");build(C,marks);add(root);vector<int>drop;for(int x:active)if(!keep.count(x))drop.push_back(x);for(int x:drop)forget(x);for(int i=1;i<(int)cs.size();i++){need(cs[i].size()<=K,"large tail block");for(int x:cs[i])add(x);for(int x:cs[i])if(!keep.count(x))forget(x);}need(active==keep,"wrong final retained set");steps++;}
+  void check(){vector<int>v(a.size());iota(v.begin(),v.end(),0);build(v,set<int>{0});need(done.size()==a.size(),"missing vertex");need(built==sub(a,order),"literal word mismatch");}
+ };
+-int main(int argc,char**argv){int limit=argc>2?stoi(argv[2]):1000000;ifstream f(argc>1?argv[1]:"session203-rooted-target-descent/run2001/ROOTED_BANK.tsv");need(bool(f),"bank not found");int n,s;I B,count=0,steps=0,adds=0,forgets=0;int maxlive=0,maxn=0,maxK=0;while(count<limit&&f>>n>>B>>s){Rows a(n);for(int&x:a)f>>x;auto actual=starts(a);need(actual[0]==s&&s<=26,"source start mismatch");vector<int>v(n);iota(v.begin(),v.end(),0);need(scc(a,v).size()==1,"source not strong");Word w(a,s);w.check();maxlive=max(maxlive,w.maxlive);maxn=max(maxn,n);maxK=max(maxK,s);steps+=w.steps;adds+=w.adds;forgets+=w.forgets;count++;}cout<<"{\n  \"status\": \"PASS\",\n  \"literal_sources\": "<<count<<",\n  \"largest_source_order\": "<<maxn<<",\n  \"largest_start_budget\": "<<maxK<<",\n  \"largest_observed_register_use\": "<<maxlive<<",\n  \"recursive_scc_steps\": "<<steps<<",\n  \"introductions\": "<<adds<<",\n  \"forget_operations\": "<<forgets<<",\n  \"scope\": \"Each supplied source independently start-counted, SCC-decomposed, register-compiled, and compared literally; bank completeness not used.\"\n}\n";}
++int main(int argc,char**argv){int limit=argc>2?stoi(argv[2]):1000000;ifstream f(argc>1?argv[1]:"session203-rooted-target-descent/run2001/ROOTED_BANK.tsv");need(bool(f),"bank not found");int n,s;I B,count=0,steps=0,adds=0,forgets=0;int maxlive=0,maxn=0,maxK=0;while(count<limit&&f>>n>>B>>s){Rows a(n);for(int&x:a)f>>x;auto actual=starts(a);need(actual[0]==s&&s<=26,"source start mismatch");vector<int>v(n);iota(v.begin(),v.end(),0);need(scc(a,v).size()==1,"source not strong");Word w(a,s);w.check();maxlive=max(maxlive,w.maxlive);maxn=max(maxn,n);maxK=max(maxK,s);steps+=w.steps;adds+=w.adds;forgets+=w.forgets;count++;}cout<<"{\n  \"status\": \"PASS\",\n  \"literal_sources\": "<<count<<",\n  \"largest_source_order\": "<<maxn<<",\n  \"largest_start_budget\": "<<maxK<<",\n  \"largest_observed_register_use\": "<<maxlive<<",\n  \"recursive_scc_steps\": "<<steps<<",\n  \"introductions\": "<<adds<<",\n  \"forget_operations\": "<<forgets<<",\n  \"scope\": \"Each supplied source independently start-counted, SCC-decomposed, register-compiled, and compared literally; bank completeness not used.\"\n}\n";return 0;}

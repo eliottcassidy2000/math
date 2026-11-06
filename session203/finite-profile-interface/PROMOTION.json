@@ -1,0 +1,19 @@
+{
+  "status": "PASS: independently audited theorem and final packaging",
+  "original_proof_sha256": "774e5b4fc3b4a263871e3559af2b7145a7db0e888137c391c5bf795f95ca892e",
+  "promoted_proof_sha256": "cb2de007a4de0a2446764e3b162024fa9f3cd5ea749c54342acab322ed1c6534",
+  "originals": "audit/reviewed-inputs/",
+  "audit_review_sha256": "21cf23a73bf01e401025cf72be853aeaca075275953d607e3698940108c58e4a",
+  "changes": [
+    "Promoted status and updated published dependency wording.",
+    "Explicitly restricted K to positive integers.",
+    "Made empty-control/root-marker/forgetting conventions explicit.",
+    "Clarified that removal of an internal newborn always splits into two old components, regardless of any old predecessor-successor arc.",
+    "Added explicit return0 at the end of the register checker main; no other code changes."
+  ],
+  "excluded": [
+    "Unpublished larger source-bank replay.",
+    "Any assertion that numerical support is automatic, semilinear, cofinite or F(8,137)."
+  ],
+  "packaging_review": "PACKAGING_REVIEW.json"
+}

@@ -1,0 +1,34 @@
+#include <algorithm>
+#include <cstdint>
+#include <fstream>
+#include <functional>
+#include <iostream>
+#include <map>
+#include <numeric>
+#include <set>
+#include <stdexcept>
+#include <vector>
+using I=std::uint64_t;using G=std::vector<unsigned>;
+void need(bool b,const char*s){if(!b)throw std::runtime_error(s);}
+int m(int t){int i=0;while((i+1)*(i+1)<4*t)++i;return i;}
+int W(int K){int w=0;for(int a=0;a<=K;++a)w=std::max(w,1+m(a)+m(K-a));return w;}
+struct Data{G a;int n;unsigned full;std::vector<I>start,end,H;
+ Data(G aa):a(aa),n(a.size()),full((1u<<n)-1),start((full+1)*n),end((full+1)*n),H(full+1){need(n>0&&n<=15,"safe order");for(int i=0;i<n;++i){need(!(a[i]>>i&1)&&a[i]<=full,"row validity");for(int j=0;j<i;++j)need((a[i]>>j&1)+(a[j]>>i&1)==1,"tournament pair");start[(1u<<i)*n+i]=end[(1u<<i)*n+i]=1;}H[0]=1;for(unsigned S=1;S<=full;++S)for(int v=0;v<n;++v)if(S>>v&1){unsigned rem=S^(1u<<v);for(int u=0;u<n;++u)if(rem>>u&1){if(a[v]>>u&1)start[S*n+v]+=start[rem*n+u];else end[S*n+v]+=end[rem*n+u];}H[S]+=start[S*n+v];}}
+ I sum(unsigned S,unsigned marks)const{I x=0;for(int v=0;v<n;++v)if(marks>>v&1)x+=start[S*n+v];return x;}
+ std::pair<I,I>profile(unsigned S,int root)const{I L=0;for(unsigned A=S;;A=(A-1)&S){L+=end[A*n+root]*H[S^A];if(!A)break;}I s=start[S*n+root];return{H[S]+L-s,s};}
+ std::vector<unsigned>components(unsigned S)const{std::vector<int>index(n,-1),low(n),stack;unsigned on=0;int next=0;std::vector<unsigned>parts;std::function<void(int)>dfs=[&](int v){index[v]=low[v]=next++;stack.push_back(v);on|=1u<<v;for(int u=0;u<n;++u)if((S>>u&1)&&(a[v]>>u&1)){if(index[u]<0){dfs(u);low[v]=std::min(low[v],low[u]);}else if(on>>u&1)low[v]=std::min(low[v],index[u]);}if(low[v]==index[v]){unsigned p=0;while(true){int u=stack.back();stack.pop_back();on^=1u<<u;p|=1u<<u;if(u==v)break;}parts.push_back(p);}};for(int v=0;v<n;++v)if((S>>v&1)&&index[v]<0)dfs(v);std::vector<unsigned>ordered;while(!parts.empty()){int at=-1;for(int i=0;i<(int)parts.size();++i){int v=__builtin_ctz(parts[i]);bool first=true;for(int j=0;j<(int)parts.size();++j)if(i!=j&&!(a[v]>>__builtin_ctz(parts[j])&1))first=false;if(first){at=i;break;}}need(at>=0,"ordered SCC existence");ordered.push_back(parts[at]);parts.erase(parts.begin()+at);}return ordered;}
+};
+I events=0,budget_checks=0;int max_live=0;
+struct Compiler{const Data&D;int K,width,peak=0,marker=-1;unsigned introduced=0;std::map<int,int>active;std::vector<int>order;G built;
+ Compiler(const Data&d,int k):D(d),K(k),width(W(k)){need(k>=1&&k<=26,"budget range");}
+ void add(int v){need(!(introduced>>v&1),"repeat introduction");std::set<int>used;for(auto[x,label]:active)used.insert(label);int label=0;while(used.count(label))++label;need(label<width,"free register");unsigned row=0;for(int i=0;i<(int)order.size();++i){int old=order[i];if(D.a[v]>>old&1){need(active.count(old),"edge back to forgotten vertex");row|=1u<<i;}else built[i]|=1u<<order.size();}built.push_back(row);order.push_back(v);introduced|=1u<<v;active[v]=label;if(marker<0)marker=v;peak=std::max(peak,int(active.size()));need(peak<=width,"width bound");++events;}
+ void mark(int v){need(active.count(v),"active root mark");marker=v;++events;}
+ void forget(int v){need(v!=marker&&active.erase(v)==1,"legal forget");++events;}
+ void trim(unsigned keep){std::vector<int>drop;for(auto[v,label]:active)if(!(keep>>v&1))drop.push_back(v);for(int v:drop)forget(v);}
+ void block(unsigned S){for(int v=D.n-1;v>=0;--v)if(S>>v&1)add(v);}
+ void build(unsigned S,unsigned marks){need(marks&&(marks&S)==marks&&D.components(S).size()==1,"strong marked input");I budget=D.sum(S,marks);need(budget<=I(K)&&__builtin_popcount(marks)<=m(budget),"marked budget/size");++budget_checks;int r=31-__builtin_clz(marks);if(__builtin_popcount(S)==1){add(r);mark(r);return;}auto parts=D.components(S^(1u<<r));unsigned C=parts[0],A=D.a[r]&C;need(A,"nonempty root entry");I q=1;for(int i=1;i<(int)parts.size();++i)q*=D.H[parts[i]];need(D.start[S*D.n+r]==q*D.sum(C,A),"SCC start formula");unsigned child=(marks&C)|A;need(D.sum(C,child)<=budget,"total retained budget contraction");for(int v=0;v<D.n;++v)if(C>>v&1)need(D.start[S*D.n+v]>=D.start[C*D.n+v],"strong induced start monotonicity");build(C,child);add(r);mark(r);trim(marks);int rootstart=D.start[S*D.n+r];need(__builtin_popcount(marks^(1u<<r))<=m(K-rootstart),"other retained marks");for(int i=1;i<(int)parts.size();++i){need(D.H[parts[i]]<=I(rootstart)&&__builtin_popcount(parts[i])<=m(rootstart),"tail temporary size");block(parts[i]);trim(marks);}unsigned actual=0;for(auto[v,label]:active)actual|=1u<<v;need(actual==marks,"exact retained marks");}
+ void finish(unsigned vertices,unsigned keep){need(introduced==vertices,"complete vertex set");unsigned live=0;for(auto[v,label]:active)live|=1u<<v;need(live==keep,"final active set");for(int i=0;i<(int)order.size();++i)for(int j=0;j<(int)order.size();++j)need(bool(built[i]>>j&1)==bool(D.a[order[i]]>>order[j]&1),"literal reconstructed incidence");max_live=std::max(max_live,peak);}
+};
+G graph(int n,unsigned bits){G a(n);int b=0;for(int i=0;i<n;++i)for(int j=i+1;j<n;++j,++b)if(bits>>b&1)a[i]|=1u<<j;else a[j]|=1u<<i;return a;}
+int main(){need(W(26)==15&&W(1)==2,"width endpoints");int marked=0,strong=0,weak=0,fixtures=0,max_fixture_order=0;for(int n=1;n<=5;++n)for(unsigned bits=0;bits<(1u<<(n*(n-1)/2));++bits){Data D(graph(n,bits));auto parts=D.components(D.full);if(parts.size()==1){++strong;for(unsigned S=1;S<=D.full;++S){I budget=D.sum(D.full,S);if(budget>26)continue;Compiler c(D,budget);c.build(D.full,S);c.finish(D.full,S);++marked;}}for(int r=0;r<n;++r){auto original=D.profile(D.full,r);if(!original.second||original.second>26)continue;need(parts[0]>>r&1,"positive root initial");unsigned reduced=parts[0];for(int i=1;i<(int)parts.size();++i)if(__builtin_popcount(parts[i])>1)reduced|=parts[i];need(D.profile(reduced,r)==original,"same B/s after singleton-tail removal");Compiler c(D,original.second);c.build(parts[0],1u<<r);for(int i=1;i<(int)parts.size();++i)if(__builtin_popcount(parts[i])>1){c.block(parts[i]);c.trim(1u<<r);}c.finish(reduced,1u<<r);++weak;}}
+std::ifstream file("reviewed-inputs/REGISTER_FIXTURES.tsv");need(bool(file),"fixture file");int n,B,s;while(file>>n>>B>>s){G a(n);for(auto&x:a)file>>x;need(bool(file),"fixture rows");Data D(a);need(D.profile(D.full,0)==std::make_pair(I(B),I(s)),"literal fixture full profile");Compiler c(D,s);c.build(D.full,1);c.finish(D.full,1);++fixtures;max_fixture_order=std::max(max_fixture_order,n);}need(fixtures==281,"fixture total");std::cout<<"{\"status\":\"PASS\",\"strong_labeled_inputs_through5\":"<<strong<<",\"marked_sets_with_total_budget_at_most26\":"<<marked<<",\"positive_rooted_normalizations_through5\":"<<weak<<",\"literal_fixture_graphs\":"<<fixtures<<",\"maximum_fixture_order\":"<<max_fixture_order<<",\"maximum_observed_registers\":"<<max_live<<",\"budget_contraction_checks\":"<<budget_checks<<",\"literal_register_events\":"<<events<<",\"W26\":15,\"W1\":2}\n";}

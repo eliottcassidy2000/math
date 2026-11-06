@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "scope": "Finite nonnegative weighted presentation of exactly all bounded-start physical profiles, with W(26)=15. No automatic, semilinear, cofinite numerical output support or F8 coverage claim.",
+  "proof_sha256": "cb2de007a4de0a2446764e3b162024fa9f3cd5ea749c54342acab322ed1c6534",
+  "reviewed_original_proof_sha256": "774e5b4fc3b4a263871e3559af2b7145a7db0e888137c391c5bf795f95ca892e",
+  "readme_sha256": "d14a3193b7199e97ecc76982826c68b0ead951a8167d70a064032d942f31b122",
+  "preserved_audit_entries": 28,
+  "audit_manifest_unchanged": true,
+  "proof_changes": [
+    "Status and published dependency wording.",
+    "Explicit positive-integer K.",
+    "Empty-control and active-root marker conventions.",
+    "Internal-newborn deletion always splits the path, irrespective of the old predecessor-successor arc."
+  ],
+  "code_change": "Only an explicit return 0 at the end of check_register.cpp main; original preserved.",
+  "release_code_sha256": "20148ad5f3e471ed6410115c428c8bb07c73f8fa7dae0c59804548416193a4ff",
+  "replayed_cleaned_code": {
+    "register_optimized_and_debug": "0c445e5349c99d2dd4cde7620316f8809d1847d7199a25496c525de7fcb570ac",
+    "marked_optimized_and_debug": "9a26ba055402b2a23784bc282643d902d9cc742c71f671c899e528360732b463"
+  },
+  "replay_result": "All four cleaned-code outputs exactly match frozen receipts; no missing-return warning.",
+  "fixture_scope": "Self-contained 281-graph fixture, no source-bank completeness premise. Research-only 65,125-source receipt excluded.",
+  "provenance": "Frozen published endpoint and weak-tail dependencies preserved.",
+  "metadata_permission": "Author may update PROMOTION.json packaging status to PASS, add this receipt, and rebuild the package manifest without changing mathematical/source/audit bytes.",
+  "publication": "Approved after the parent grants the branch lane. No branch writes performed by this review."
+}

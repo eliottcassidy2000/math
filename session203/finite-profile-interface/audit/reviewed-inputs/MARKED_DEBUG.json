@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "strong_labeled_inputs_through5": 571,
+  "nonempty_marked_sets_with_total_start_at_most26": 17239,
+  "largest_observed_register_use": 5,
+  "scope": "Every eligible marked subset, not only singleton roots, is physically reconstructed."
+}

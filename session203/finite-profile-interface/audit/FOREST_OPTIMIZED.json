@@ -1,0 +1,11 @@
+{
+  "cap_commutation_checks": 96391,
+  "exact_prefix_pattern_checks": 44074,
+  "labeled_graphs": 1099,
+  "literal_forest_graphs_cached": 1167,
+  "maximum_reuse_order": 6,
+  "reuse_operations": 869,
+  "reused_label_words": 90,
+  "root_readouts_with_literal_edge_H": 5616,
+  "status": "PASS"
+}
