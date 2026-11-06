@@ -1,0 +1,10 @@
+--- original/PROOF.md
++++ release/PROOF.md
+@@ -1,6 +1,6 @@
+ # Synchronized source pencils: prime exclusion and four physical probes
+ 
+-Session 201. **PROOF CANDIDATE; independent review pending.** Every rank-one
++Session 201. **PROVED, independently audited in the stated scope.** Every rank-one
+ synchronized source boundary forces a composite target, without any return-word
+ hypothesis. Every rank-two boundary is separated by a fixed bank of four
+ physical sources of cover height at most six. This gives a complete

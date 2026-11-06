@@ -1,0 +1,111 @@
+{
+  "complete_forward_U_cap": 5000,
+  "complete_pair_tests": 136144,
+  "dependencies": {
+    "ADJOINT.md": "f9c337b3cfee1cd1134ee02276890238c30ff0e84a14c26fbcd5cd78ab82dc05",
+    "JOINT.md": "6a73c37b3aaa99f1d3019a8b52f4d798a8c3a64b06c1afbf2e2cd8bc2d5d97a3",
+    "RETURNS.md": "a0b0050ad34df29af3eae76901e32f51000f941317c778a3b5c807193a61742a"
+  },
+  "direct_sources": 126910,
+  "literal_controls": [
+    {
+      "C": 1,
+      "H": 171,
+      "alpha": "",
+      "beta": "OJOOJ",
+      "graph_word": "JZZJZOZJ",
+      "h": 45,
+      "k": 1,
+      "m": 81,
+      "rank": 1,
+      "target": 171,
+      "vertices": 10
+    },
+    {
+      "C": 1,
+      "H": 139,
+      "alpha": "",
+      "beta": "ZOJ",
+      "graph_word": "JZOOZZJ",
+      "h": 19,
+      "k": 2,
+      "m": 25,
+      "rank": 2,
+      "target": 139,
+      "vertices": 9
+    },
+    {
+      "C": 1,
+      "H": 51,
+      "alpha": "O",
+      "beta": "",
+      "graph_word": "OOZZJ",
+      "h": 7,
+      "k": 2,
+      "m": 9,
+      "rank": 2,
+      "target": 51,
+      "vertices": 7
+    }
+  ],
+  "paired_height_cap": 141,
+  "paired_sources": 641,
+  "prime_C1_targets": 649,
+  "prime_balanced_targets": 639,
+  "prime_minimum_J_costs_preserved": true,
+  "pruned_pair_tests": 126785,
+  "rank_one_examples": [
+    {
+      "a": 5,
+      "g": 9,
+      "primitive": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "word": "JZJZ"
+    },
+    {
+      "a": 5,
+      "g": 9,
+      "primitive": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "word": "JZJZO"
+    },
+    {
+      "a": 5,
+      "g": 9,
+      "primitive": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "word": "JZJZZ"
+    },
+    {
+      "a": 5,
+      "g": 9,
+      "primitive": [
+        5,
+        2,
+        6,
+        3
+      ],
+      "word": "JZJZJ"
+    }
+  ],
+  "rank_one_states": 42,
+  "removed_rank_one_pairs": 9359,
+  "retained_states": 457,
+  "scope": "Finite complete height-bounded validation; all-order theorems require the written proof; no universal prime coverage.",
+  "status": "PASS",
+  "synchronized_states": 499,
+  "target_cap": 5001,
+  "verifier_sha256": "5959d4dc5ab8cf0be857c8102fc128501ef871e44969545a20b83785a8c050b9"
+}

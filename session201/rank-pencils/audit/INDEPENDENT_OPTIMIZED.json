@@ -1,0 +1,79 @@
+{
+  "forward_height_cap": 5000,
+  "forward_profiles": 126910,
+  "full_pair_tests": 136144,
+  "literal_controls": [
+    {
+      "cycles": 1,
+      "h": 45,
+      "k": 1,
+      "m": 81,
+      "partial_directed_paths": 5675,
+      "paths": 171,
+      "rank": 1,
+      "vertices": 10,
+      "word": "JZZJZOZJ"
+    },
+    {
+      "cycles": 1,
+      "h": 19,
+      "k": 2,
+      "m": 25,
+      "partial_directed_paths": 3241,
+      "paths": 139,
+      "rank": 2,
+      "vertices": 9,
+      "word": "JZOOZZJ"
+    },
+    {
+      "cycles": 1,
+      "h": 7,
+      "k": 2,
+      "m": 9,
+      "partial_directed_paths": 537,
+      "paths": 51,
+      "rank": 2,
+      "vertices": 7,
+      "word": "OOZZJ"
+    },
+    {
+      "cycles": 1,
+      "h": 3,
+      "k": 1,
+      "m": 5,
+      "partial_directed_paths": 65,
+      "paths": 11,
+      "rank": 2,
+      "vertices": 5,
+      "word": "OZJ"
+    },
+    {
+      "cycles": 1,
+      "h": 25,
+      "k": 0,
+      "m": 45,
+      "partial_directed_paths": 815,
+      "paths": 45,
+      "rank": 1,
+      "vertices": 8,
+      "word": "JZJZOJ"
+    }
+  ],
+  "measurement_determinant": 4,
+  "minimum_J_costs_preserved": true,
+  "paired_height_cap": 141,
+  "physical_probe_determinant": -4,
+  "physical_profiles": 641,
+  "physical_recipe_checks": 1996,
+  "prime_C1_targets": 649,
+  "prime_balanced_targets": 639,
+  "primitive_factor_checks": 26922,
+  "pruned_pair_tests": 126785,
+  "pruned_states": 457,
+  "rank_one_states": 42,
+  "scope": "Complete finite height-bounded comparison and literal controls; all-order assertions rely on reviewed proofs; no prime coverage theorem.",
+  "status": "PASS",
+  "synchronized_states": 499,
+  "target_cap": 5001,
+  "verifier_sha256": "6ad3a9bc8efe53ad1798019c48011748b8bbc5e70d46d6c30a652b58423cfd0d"
+}

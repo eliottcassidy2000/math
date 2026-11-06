@@ -1,0 +1,10 @@
+{
+  "OPTIMIZED.json": "0de68d3f40247f9da6be50f8a7a2ba6cf6fffe4fb7b20c12f7908d7fe7f7b90c",
+  "PROOF.md": "549ec35531687e38c9f63758eb36ba5603c79fbd6e5036ca300ab4f9f3998986",
+  "SOURCE-CONTEXT.md": "ccff9229453bf2366e168e35e6f250d7a8c87011e1a701c11690a9167d753786",
+  "VERIFIED.json": "0de68d3f40247f9da6be50f8a7a2ba6cf6fffe4fb7b20c12f7908d7fe7f7b90c",
+  "dependencies/ADJOINT.md": "f9c337b3cfee1cd1134ee02276890238c30ff0e84a14c26fbcd5cd78ab82dc05",
+  "dependencies/JOINT.md": "6a73c37b3aaa99f1d3019a8b52f4d798a8c3a64b06c1afbf2e2cd8bc2d5d97a3",
+  "dependencies/RETURNS.md": "a0b0050ad34df29af3eae76901e32f51000f941317c778a3b5c807193a61742a",
+  "verify.py": "5959d4dc5ab8cf0be857c8102fc128501ef871e44969545a20b83785a8c050b9"
+}
