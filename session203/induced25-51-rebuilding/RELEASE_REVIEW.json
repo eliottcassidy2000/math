@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "release_root": "session203-induced-rebuilding-release/session203/induced25-51-rebuilding",
+  "reviewed_exposition_sha256": {
+    "README.md": "53c93e79458a53d1ddd21725d3a15657b0e55f853ea2d85d71fbca75d965553c",
+    "DEPENDENCIES.md": "e55763d40c2b6becf0bf89e5ef8aba90774161569c44e4428c3ec7bec7790578"
+  },
+  "preserved_original_audit_files": [
+    "GROWTH_REPLAY.json",
+    "NORMAL.json",
+    "OPTIMIZED.json",
+    "POSITIVE_REPAIR.json",
+    "POSITIVE_REPAIR_OPTIMIZED.json",
+    "REVIEW.md",
+    "SHA256SUMS",
+    "check.py",
+    "check_repair.py"
+  ],
+  "correction": "Fixed README reproduction filename: inherited_tournaments_through8.txt, with no space.",
+  "scope": "All-order induced H25-in-H51 exclusion and a sharp one-reversal one-birth repair for the displayed parent; no threshold, eventual coverage, or general rebuilding claim.",
+  "dependencies": "Busch citation matches frozen provenance; inherited full-adjacency growth completeness review agrees with retained source and bank hashes.",
+  "relocation_scope": "Read supplied six successful relocation replay receipts; original audit files independently compared byte-for-byte. No third repetition of all relocated checks claimed."
+}

@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "ending DP and literal path DFS, Python normal",
+      "expected": "session203-induced51-audit/NORMAL.json",
+      "sha256": "212509a24aa0e332f5b05cbdb370fe3e41ac3dd4a900f43ab1b73cfe2e150e9a",
+      "exact_match": true
+    },
+    {
+      "check": "ending DP and literal path DFS, Python optimized",
+      "expected": "session203-induced51-audit/OPTIMIZED.json",
+      "sha256": "212509a24aa0e332f5b05cbdb370fe3e41ac3dd4a900f43ab1b73cfe2e150e9a",
+      "exact_match": true
+    },
+    {
+      "check": "repair literal permutations, Python normal",
+      "expected": "session203-induced51-audit/POSITIVE_REPAIR.json",
+      "sha256": "e9c32e50e43df90705f744391185b8af67200700f07af4a21bb31564dcae0e74",
+      "exact_match": true
+    },
+    {
+      "check": "repair literal permutations, Python optimized",
+      "expected": "session203-induced51-audit/POSITIVE_REPAIR_OPTIMIZED.json",
+      "sha256": "e9c32e50e43df90705f744391185b8af67200700f07af4a21bb31564dcae0e74",
+      "exact_match": true
+    },
+    {
+      "check": "full-adjacency growth, C++ O2",
+      "expected": "session203-induced51-audit/GROWTH_REPLAY.json",
+      "sha256": "0d9aae6a21db13b9fe96e3619aa5f3fb3d2a3caa59126d43ac284563f6bc312e",
+      "exact_match": true
+    },
+    {
+      "check": "full-adjacency growth, C++ O0",
+      "expected": "session203-induced51-audit/GROWTH_REPLAY.json",
+      "sha256": "0d9aae6a21db13b9fe96e3619aa5f3fb3d2a3caa59126d43ac284563f6bc312e",
+      "exact_match": true
+    }
+  ]
+}
