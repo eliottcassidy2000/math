@@ -1,0 +1,13 @@
+{
+ "p1_seeds": 109,
+ "bankA_seeds": 85,
+ "states_U_le_4096": 94010,
+ "states_with_U_eq_2d_and_E_eq_0": [
+  [
+   1,
+   0,
+   2,
+   1
+  ]
+ ]
+}

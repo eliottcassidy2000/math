@@ -1,0 +1,2 @@
+# Keep this packet byte-identical on every platform: the receipts hash LF bytes.
+* text eol=lf
