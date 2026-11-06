@@ -1,0 +1,2 @@
+gfast(2^32-1)=1 expected=1
+gfast(2^32)=4294967297 expected=4294967297

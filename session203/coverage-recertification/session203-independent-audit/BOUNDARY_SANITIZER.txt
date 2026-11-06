@@ -1,0 +1,48 @@
+session203-independent-audit/boundary_probe.c:48:18: runtime error: index 65536 out of bounds for type 'uint32_t [65536]'
+session203-independent-audit/boundary_probe.c:48:18: runtime error: load of address 0x5601d54962a0 with insufficient space for an object of type 'uint32_t'
+0x5601d54962a0: note: pointer points here
+ 01 00 00 00  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  00 00 00 00
+              ^ 
+=================================================================
+==11==ERROR: AddressSanitizer: global-buffer-overflow on address 0x5601d54962a0 at pc 0x5601d53b4f28 bp 0x7ffeac170000 sp 0x7ffeac16fff8
+READ of size 4 at 0x5601d54962a0 thread T0
+    #0 0x5601d53b4f27 in gfast session203-independent-audit/boundary_probe.c:48
+    #1 0x5601d53b4f27 in main session203-independent-audit/boundary_probe.c:177
+    #2 0x7ff464489ca7  (/lib/x86_64-linux-gnu/libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)
+    #3 0x7ff464489d64 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x29d64) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)
+    #4 0x5601d53af320 in _start (/tmp/s203-boundary-probe+0xd320) (BuildId: 3901b9e9c9cf4b85c5c69c9d4662def58b2284a5)
+
+0x5601d54962a0 is located 0 bytes after global variable 'GK' defined in 'session203-independent-audit/boundary_probe.c:44:17' (0x5601d54562a0) of size 262144
+SUMMARY: AddressSanitizer: global-buffer-overflow session203-independent-audit/boundary_probe.c:48 in gfast
+Shadow bytes around the buggy address:
+  0x5601d5496000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5601d5496080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5601d5496100: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5601d5496180: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5601d5496200: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x5601d5496280: 00 00 00 00[f9]f9 f9 f9 00 00 00 00 00 00 00 00
+  0x5601d5496300: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5601d5496380: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5601d5496400: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5601d5496480: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x5601d5496500: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==11==ABORTING

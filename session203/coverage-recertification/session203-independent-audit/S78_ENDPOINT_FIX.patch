@@ -1,0 +1,24 @@
+--- a/04-computation/experiments/old_mark_one_apex_join_20261104_audit_S78/aud_cover.c
++++ b/04-computation/experiments/old_mark_one_apex_join_20261104_audit_S78/aud_cover.c
+@@ -45,6 +45,8 @@
+ static inline ll gfast(ull v) {
+     ull k = v >> 16, r = v & 0xFFFF;
+     if (k == 0) return GK[r];
++    /* S203 correction: the inclusive v=2^32 endpoint has k=65536. */
++    if (k >= (1ULL << 16)) return g_direct(v);
+     return (ll)GK[k] + (ll)k * ZT[r] + QT[r] - ((k & 1) == 0 ? B15Z[r] : 0);
+ }
+ 
+@@ -70,6 +72,12 @@
+         for (int i = 0; i < 16; i++) if (!((r >> i) & 1)) { Z += 1LL << (15 - i); S += (ll)(r >> (i + 1)); }
+         for (int i = 0; i < 15; i++) if (!((r >> (i + 1)) & 1) && ((r >> i) & 1)) c01++;
+         Q += c01 + S; ZT[r] = (uint32_t)Z; QT[r] = (uint32_t)Q; B15Z[r] = !((r >> 15) & 1);
++    }
++    /* S203 deterministic endpoint controls, including the former table overrun. */
++    for (ull v = (1ULL << 32)-2; v <= (1ULL << 32); ++v) {
++        ll a=gfast(v), b=g_direct(v), c=g_rec_def(v);
++        if (a != b || b != c) { fprintf(stderr,"endpoint mismatch at %llu\n",v); return 3; }
++        printf("endpoint v=%llu fast=%lld direct=%lld recursive=%lld\n",v,a,b,c);
+     }
+     /* self-checks: direct formula vs recursion (exhaustive to 2^22, plus random), fast vs direct (exhaustive to 2^24, random to X) */
+     {

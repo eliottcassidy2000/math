@@ -1,0 +1,33 @@
+# aud_cover LOGX=32 bank=session203-independent-audit/aud_bank7_inherited.txt triples=2732 threads=4
+endpoint v=4294967294 fast=2147483649 direct=2147483649 recursive=2147483649
+endpoint v=4294967295 fast=1 direct=1 recursive=1
+endpoint v=4294967296 fast=4294967297 direct=4294967297 recursive=4294967297
+self-check: direct vs recursion v<2^22: 0/4194304 bad; fast vs direct v<2^24: 0/16777216 bad; random v<=X: fast-direct 0 bad, direct-recursion 0 bad (1e6 samples)
+F0 SKIPPED (NOF0 build)
+F1 done 120.8s (72787 work items, 47964383242 pairs)
+F2 done 460.7s (33303 work items, 134010742236 evaluations)
+odd N in [1, 2^32] covered by none of F0, F1, F2: 7 21  [total 2]
+F1-only misses per dyadic block (2^k, 2^(k+1)): k count ratio density
+  k=10 65 0.0000 0.126953
+  k=11 103 1.5846 0.100586
+  k=12 168 1.6311 0.082031
+  k=13 246 1.4643 0.060059
+  k=14 418 1.6992 0.051025
+  k=15 676 1.6172 0.041260
+  k=16 1049 1.5518 0.032013
+  k=17 1634 1.5577 0.024933
+  k=18 2553 1.5624 0.019478
+  k=19 3906 1.5300 0.014900
+  k=20 6209 1.5896 0.011843
+  k=21 10051 1.6188 0.009585
+  k=22 15827 1.5747 0.007547
+  k=23 25815 1.6311 0.006155
+  k=24 40446 1.5668 0.004822
+  k=25 63546 1.5711 0.003788
+  k=26 99877 1.5717 0.002977
+  k=27 154867 1.5506 0.002308
+  k=28 241881 1.5619 0.001802
+  k=29 378695 1.5656 0.001411
+  k=30 593645 1.5676 0.001106
+  k=31 934107 1.5735 0.000870
+total F1-only odd misses in [1, X]: 2575861; elapsed 465.1s

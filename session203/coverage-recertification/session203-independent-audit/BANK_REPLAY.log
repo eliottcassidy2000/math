@@ -1,0 +1,7 @@
+after order 1: 1 distinct triples (labelled tournaments 1)
+after order 2: 2 distinct triples (labelled tournaments 2)
+after order 3: 4 distinct triples (labelled tournaments 8)
+after order 4: 12 distinct triples (labelled tournaments 64)
+after order 5: 42 distinct triples (labelled tournaments 1024)
+after order 6: 254 distinct triples (labelled tournaments 32768)
+after order 7: 2732 distinct triples (labelled tournaments 2097152)

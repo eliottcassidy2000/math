@@ -1,0 +1,26 @@
+{
+  "F0_used": false,
+  "F1_dyadic_blocks_equal_to_archived_run": 22,
+  "F1_pairs": 47964383242,
+  "F2_evaluations": 134010742236,
+  "all_odd_misses": [
+    7,
+    21
+  ],
+  "bank_size": 2732,
+  "elapsed_seconds": 465.1,
+  "endpoint_fast_direct_recursive_agree": [
+    4294967294,
+    4294967295,
+    4294967296
+  ],
+  "families_used": [
+    "F1",
+    "F2"
+  ],
+  "last_odd_target": 4294967295,
+  "regenerated_bank_matches": true,
+  "scope": "corrected full replay of independent S78 implementation; finite prefix only; no eventual theorem",
+  "status": "PASS",
+  "target_cap": 4294967296
+}

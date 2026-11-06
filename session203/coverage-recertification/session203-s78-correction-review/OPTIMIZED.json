@@ -1,0 +1,24 @@
+{
+  "F1_pairs_full": 47964383242,
+  "F1_work_items_full": 72787,
+  "F2_evaluations_full": 134010742236,
+  "F2_work_items_full": 33303,
+  "bank_max_coordinates": [
+    189,
+    45,
+    432
+  ],
+  "bank_triples": 2732,
+  "endpoint_and_split_controls": 63,
+  "frozen_manifest_files": 20,
+  "full_pass_independently_rerun_by_this_reviewer": false,
+  "independent_prefix_cap": 65536,
+  "independent_prefix_misses": [
+    7,
+    21
+  ],
+  "literal_join_graphs": 256,
+  "matching_dyadic_blocks": 22,
+  "scope": "review of corrected S78 implementation and supplied full-run receipts, with independent smaller checks; not a third independently authored full-range sieve",
+  "status": "PASS"
+}
