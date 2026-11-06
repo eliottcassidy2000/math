@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "rho_approximation_checked": 4095,
+  "uniformity_counterexample_controls": [
+    {
+      "a": 1,
+      "c": 1,
+      "X": 1,
+      "b": 4,
+      "count": 1,
+      "guaranteed_even_subfamily": 0
+    },
+    {
+      "a": 1,
+      "c": 1,
+      "X": 1,
+      "b": 16,
+      "count": 4,
+      "guaranteed_even_subfamily": 3
+    },
+    {
+      "a": 1,
+      "c": 1,
+      "X": 1,
+      "b": 64,
+      "count": 18,
+      "guaranteed_even_subfamily": 15
+    },
+    {
+      "a": 1,
+      "c": 1,
+      "X": 1,
+      "b": 256,
+      "count": 73,
+      "guaranteed_even_subfamily": 63
+    },
+    {
+      "a": 1,
+      "c": 1,
+      "X": 1,
+      "b": 1024,
+      "count": 294,
+      "guaranteed_even_subfamily": 255
+    }
+  ],
+  "exact_fourier_no_alias_controls": 100
+}
