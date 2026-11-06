@@ -135,3 +135,7 @@ Here g(0) = 1, g(2v + 1) = g(v), g(2v) = g(v) + v + (v mod 2), and e(v) = [v = 0
 - The bilinear family alone has miss density 0.00087 in [2^31, 2^32).
 - It lies inside the two-apex family, whose completeness is the OPEN conjecture of
   square_sum_spectrum_overnight_20261030.
+
+**Addendum (2026-11-06, after close-out; recorded by opus-2026-11-06-S83).** HYP-9478 P5-P6 extend (D) to 2^35. Every odd N <= 2^35 except 7 and 21
+is covered, already by the second family alone (rooted tournaments of order <= 7). Source:
+`chanpak_f1f2_cover35_bucketed_20261106.out`. This is one run, not independently recomputed at 2^35.

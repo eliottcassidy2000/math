@@ -1,7 +1,7 @@
 ---
 id: HYP-9478
 title: "Pre-registered out-of-sample tests for the representation mass of one-arc join families: (P1) the one-apex x bank family F2 has mean multiplicity exactly M_2 = sum_y (2/y_h) ln(1 + y_h/y_R) = 48.1976 in the dyadic blocks k = 28, 29; (P2) the one-apex x one-apex family F1 gains (pi^2/12) ln 2 = 0.5701 per doubling at k = 28, 29; (P3) F2 alone, with the fixed order-<=7 bank, attains every odd N <= 2^30 except 7 and 21; (P4) its lower tail keeps thinning; (P5) F1 u F2 attains every odd N <= 2^35 except 7 and 21; (P6) F2 alone attains every odd N <= 2^35 except 7 and 21; (P7) F1-only miss ratios stay in [1.50, 1.65] for k = 32..34"
-status: "P1-P4 CONFIRMED out of sample (run after the pre-registration commit 09b7a56a98; reproduced independently by the audit); P5-P7 UNDECIDED at close-out, the bucketed 2^35 run still in progress (dated addendum to follow)"
+status: "P1-P7 CONFIRMED: P1-P4 out of sample to 2^30 (run after the pre-registration commit 09b7a56a98; reproduced independently by the audit); P5-P7 by the bucketed 2^35 run (undecided at close-out; dated addendum 2026-11-06, after close-out; recorded by opus-2026-11-06-S83)"
 session: opus-2026-11-06-S82
 date: 2026-11-06
 related: [THM-4885, THM-4875, HYP-9468]
@@ -81,7 +81,7 @@ Source: `chanpak_join_multiplicity_20261106.out`, LOGX = 30. The run was made af
 - **(P2) CONFIRMED.** Both increments are 0.5701. (pi^2/12) ln 2 = 0.570091.
 - **(P3) CONFIRMED.** The odd N <= 2^30 with r2 = 0 are exactly 7 and 21. The block minima are 5 and 4, both >= 4.
 - **(P4) CONFIRMED.** 2.566e-5 < 2.85e-5, and 3.334e-3 < 3.42e-3.
-- **(P5)-(P7)** are pending the LOGX = 35 coverage run.
+- **(P5)-(P7)** were pending the LOGX = 35 coverage run at close-out. They are decided in the addendum below.
 
 ## After the independent audit (PASS WITH CORRECTIONS; MISTAKE-725)
 
@@ -105,3 +105,28 @@ Audit report: `04-computation/experiments/one_apex_join_mass_20261106_audit_S82/
   - P5-P7 are being decided by `chanpak_f1f2_cover35_bucketed_20261106.c`, committed in 82376badc0 before its run. It
     computes the same families and output with bucketed writes, and is identical to the frozen program and to the audit
     at 2^28 and 2^30.
+
+## Addendum (2026-11-06, after close-out; recorded by opus-2026-11-06-S83): P5-P7
+
+Source: `04-computation/experiments/chanpak_f1f2_cover35_bucketed_20261106.out`.
+- The program was `chanpak_f1f2_cover35_bucketed_20261106.c`, committed in 82376badc0 before its run. It started at
+  11:25:31 and ran 9,554 s on 12 threads.
+- Its built-in check of the g table and suffix law: 0 failures.
+- F2 made 1,072,085,946,860 evaluations; F1 made 419,439,429,428 pairs.
+
+| k | F1-only misses m_k in (2^k, 2^(k+1)) | m_k / m_(k-1) | density |
+|---|---|---|---|
+| 31 | 934,107 | 1.5735 | 0.000870 |
+| 32 | 1,483,240 | 1.5879 | 0.000691 |
+| 33 | 2,355,153 | 1.5878 | 0.000548 |
+| 34 | 3,739,019 | 1.5876 | 0.000435 |
+
+- **(P5) CONFIRMED.** The odd misses of F1 u F2 in [1, 2^35] are exactly 7 and 21.
+- **(P6) CONFIRMED.** The odd misses of F2 alone (the fixed order-<=7 bank) in [1, 2^35] are exactly 7 and 21.
+- **(P7) CONFIRMED.** The ratios 1.5879, 1.5878 and 1.5876 lie in [1.50, 1.65]. m_31 = 934,107 matches THM-4875 (D).
+- **Consequence.** Every odd number up to 2^35 = 34,359,738,368 except 7 and 21 is a Hamiltonian path count. A one-arc
+  join of a one-apex tournament with a rooted tournament of order <= 7 already suffices. This extends THM-4875 (D) from
+  2^32 to 2^35.
+- **Caveat.** This is one run of the bucketed program. It is identical to the frozen program and to the audit's
+  independent sieve at 2^28 and 2^30, but it has not been recomputed independently at 2^35. The F1-only miss ratio has
+  settled at 1.588, so the miss density falls by a factor of about 0.794 per doubling, i.e. like N^(-0.333).

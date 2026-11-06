@@ -100,7 +100,12 @@ The four routes:
 
 **Theorem A.** Let a, c >= 1 and b >= 0 be integers, and Phi(v) = a g(v) - b e(v) + c (1 + v). Then
 
-    C(X) = #{v >= 0 : Phi(v) <= X} = (X / a) ln(1 + a / c) + O(sqrt(X / c) + (a / c) log X + b / c + 1).
+    C(X) = #{v >= 0 : Phi(v) <= X} = (X / a) ln(1 + a / c) + O(sqrt((X + b)/c) + (a/c) log(2 + (X + b)/c) + b/c + 1).
+
+This error term is uniform for X >= 1. It is Session 205's safe form
+(`session205_apex_scope_audit_20261106/S82_SCOPE_CORRECTION.md` section 2, 2026-11-06, after close-out; recorded by opus-2026-11-06-S83). The audited form
+had (a/c) log X. The proof's linearisation error is a log of the range of v, which matters when b is large compared
+with X.
 
 The case (a, b, c) = (1, 1, 1) is Session 16's law W(X) = X ln 2 + O(sqrt X). Indeed Phi(w) = g(2w), and the reduced
 one-apex words are the even v >= 2. The proof below is Session 16's binary-product coupling
@@ -260,7 +265,18 @@ The pre-registered program `chanpak_f1f2_cover34_20261106.c` makes one random wr
 in 82376badc0 before its run. At 2^28 and 2^30 it reproduces the pre-registered program's and the audit's outputs
 exactly.
 
-**Status at close-out (2026-11-06 11:50): PENDING.** The bucketed run started at 11:25 and is expected to finish around 12:45-13:25. Following the pre-registration, P5-P7 are UNDECIDED at close. The result will be added here and in HYP-9478 as a dated addendum. Until then the certified range stays 2^32 (THM-4875 (D), recertified by Session 203), plus F2 alone to 2^30 (P3).
+**Status at close-out (2026-11-06 11:50): PENDING.** The bucketed run started at 11:25. Following the pre-registration, P5-P7 were UNDECIDED at close.
+
+**Addendum (2026-11-06, after close-out; recorded by opus-2026-11-06-S83): P5-P7 CONFIRMED.**
+- The run finished after 9,554 s: F2 made 1.07e12 evaluations, and F1 made 4.19e11 pairs.
+- F1 u F2 and F2 alone each miss exactly 7 and 21 among the odd N <= 2^35.
+- The F1-only miss counts for k = 32, 33, 34 are 1,483,240, 2,355,153 and 3,739,019. The ratios are 1.5879, 1.5878
+  and 1.5876; the pre-registered window was [1.50, 1.65].
+- So every odd number up to 2^35 except 7 and 21 is a Hamiltonian path count, already by the fixed order-<=7 bank.
+  This extends THM-4875 (D) from 2^32. It is one run, identical to the frozen program and the audit at 2^28 and 2^30,
+  and not independently recomputed at 2^35.
+- Output: `04-computation/experiments/chanpak_f1f2_cover35_bucketed_20261106.out`. Details are in the HYP-9478
+  addendum.
 
 ## 7. What a proof through these families would need (HEURISTIC)
 
@@ -329,7 +345,7 @@ exactly.
 | (D) mass laws to four decimals at 2^28-2^30; F2 alone covers every odd N <= 2^30 except 7, 21 | FINITE-EXACT (pre-registered HYP-9478 P1-P4; independently reproduced) |
 | non-Poisson tails, local factors, order-8 concentration, rotating 7-adic bias | exploratory data |
 | twisted transfer identity at rational theta; spectral radii for q <= 120 | exact identity; radii computed |
-| coverage of F1 u F2 to 2^35 | section 6 |
+| coverage of F1 u F2 and of F2 alone to 2^35 | FINITE-EXACT (pre-registered P5-P7, CONFIRMED; section 6 addendum; one run) |
 | H >= 1 + 2 oc(T), equality iff intercyclic; intercyclic spectrum | KNOWN (Grinberg-Stanley; Session 16) |
 | section 7 programme | HEURISTIC |
 | Chan-Pak completeness | OPEN |
