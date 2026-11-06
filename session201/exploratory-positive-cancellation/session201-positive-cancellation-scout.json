@@ -1,0 +1,20 @@
+{
+  "nonempty_Q_squared_coefficients": {
+    "J": 1,
+    "JJ": 1,
+    "JJJ": 1,
+    "JJJJ": 3,
+    "JJJJJ": 5,
+    "JJZJ": 3,
+    "JJZJJ": 5,
+    "JJZZJ": 5,
+    "JOOZJ": 5,
+    "JOZJ": 3,
+    "JOZJJ": 5
+  },
+  "row_identity_controls": 6096,
+  "source_words": 2047,
+  "status": "PASS",
+  "stopping_point": "No interval or congruence-class constructor; periodic family not advanced to a packet",
+  "universal_occupancy": "OPEN"
+}
