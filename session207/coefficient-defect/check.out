@@ -1,0 +1,3 @@
+PASS exact Newton versus direct subset coefficient controls: 720
+PASS real-inventory pure-three Q2 controls b=2..30 and constant-boundary examples.
+PASS coefficient-domain and infeasible-consumption zero-factor controls.

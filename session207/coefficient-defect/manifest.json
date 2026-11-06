@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "scope": "Audited finite-defect polynomial universality",
+  "files": {
+    "PACKAGING_REVIEW.md": "846e5496d09c3291006cbc264a126c077410183201863c0f07c22a14ec7b2cae",
+    "PROOF.md": "34311cd2a67bda7055b4dbf819d41ea1a0f1472ac97c86e17ed0f6ee56b08669",
+    "README.md": "2313c99c6070f145a6f36dabf442b31f52bce6896a948d9b470f102c28d78e5b",
+    "REVIEW.md": "30e4b163f28e4ef3317af5dce46235345c66cf0e8f5da82d62c1a04caec2df13",
+    "check.out": "08688b8115d8dd8464f593c3ec7891353c1a08a2ad4be76d1351fb0ccb9a2e7f",
+    "check.py": "541874e787cf07a97a1897bac11d044caa9552e3a66da8b765a5ec3c06be2e62",
+    "independent_symbolic_audit.out": "33fb509747f1ae0d2142f327dc057b9a10c217481bac98601611a998a0fef401",
+    "independent_symbolic_audit.py": "2b57eeab0cca6fc6e67a3301f95263cf16b64f03b5348d7136e20c507673d8b0"
+  }
+}
