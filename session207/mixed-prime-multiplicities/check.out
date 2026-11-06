@@ -1,0 +1,8 @@
+PASS exact Fraction coefficient/defect identities for 440 positive exponent pairs b,c<=20.
+PASS inherited full core-word control H=3 top coefficients 1 -2
+PASS inherited full core-word control H=5 top coefficients 1 -3
+PASS inherited full core-word control H=9 top coefficients 1/2 -5/2
+PASS inherited full core-word control H=15 top coefficients 1 -7
+PASS inherited full core-word control H=25 top coefficients 1/2 -7/2
+PASS inherited full core-word control H=27 top coefficients 1/6 -3/2
+PASS inherited complete strong inventory input checks.

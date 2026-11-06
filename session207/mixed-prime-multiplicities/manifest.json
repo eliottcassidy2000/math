@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "scope": "Audited mixed-prime two-coefficient and typical paired-black-degree theorem",
+  "files": {
+    "PACKAGING_REVIEW.md": "ef878c541692bbccc332dcea085ba70c931b006dd57f61eb8df180df0523d130",
+    "PROOF.md": "b8d93ba7c1bee86f471ca79a7f4ae0f519ebfed1f00c6b2fe45f193bf5373597",
+    "README.md": "445a3aa29d94d9a5174d2b61e2c8749be3bf5406f387d52ff507dc003b28e52a",
+    "REVIEW.md": "85186d8f2768c181155b1faab0965a24ba6b915699f9ea44aad27533fafe338d",
+    "check.out": "8e103fd2c8e2c686f723a3029e677e899c08212a2520a8b9e027cad63bf3c140",
+    "check.py": "c33f352748f705eb1c5785a213752f8e0c55b351c3f72ed8dbcc91bfc8616bd9",
+    "independent_inventory.cpp": "facaa8e216ea1f8a5032adc1c425bc78beef20b05291298e3cab65d46232f8e8",
+    "independent_inventory.out": "c833c0514f652805f72a93e6cc4c54998fe6abc52da9bcbff245542833722c96",
+    "inherited_controls.json": "a734e5ebabeb295f0585c2ce5478f26183ed77da3d1381410f9b5b407f1628ad"
+  }
+}
