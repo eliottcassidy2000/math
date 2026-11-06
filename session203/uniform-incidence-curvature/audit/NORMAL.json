@@ -1,0 +1,3025 @@
+{
+  "DFS_checked_graphs": 768,
+  "consecutive_block_checks": 324,
+  "contexts": 88,
+  "contexts_detail": [
+    {
+      "blocks": [],
+      "core": [],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [],
+      "core": [],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [],
+      "core": [],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [],
+      "core": [],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [],
+      "core": [],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [],
+      "core": [],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [],
+      "core": [
+        0
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [],
+      "core": [
+        0
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [],
+      "core": [
+        0
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [],
+      "core": [
+        0
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [],
+      "core": [
+        0
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [],
+      "core": [
+        0
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [],
+      "core": [
+        0,
+        1
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [],
+      "core": [
+        0,
+        1
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [],
+      "core": [
+        2,
+        0
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [],
+      "core": [
+        0,
+        1
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 3
+    },
+    {
+      "blocks": [],
+      "core": [
+        2,
+        0
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [],
+      "core": [
+        2,
+        0
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [],
+      "core": [
+        0,
+        5,
+        1
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 5
+    },
+    {
+      "blocks": [],
+      "core": [
+        4,
+        1,
+        2
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 5
+    },
+    {
+      "blocks": [],
+      "core": [
+        4,
+        1,
+        2
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 4
+    },
+    {
+      "blocks": [],
+      "core": [
+        4,
+        5,
+        0
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [],
+      "core": [
+        0,
+        1,
+        3
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 5
+    },
+    {
+      "blocks": [],
+      "core": [
+        0,
+        1,
+        3
+      ],
+      "degree": 0,
+      "graphs": 8,
+      "k": 0,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 5
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        0
+      ],
+      "degree": 2,
+      "graphs": 4,
+      "k": 1,
+      "m": 2,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        0
+      ],
+      "degree": 2,
+      "graphs": 4,
+      "k": 1,
+      "m": 2,
+      "polarity": 1,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -2,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        0
+      ],
+      "degree": 2,
+      "graphs": 8,
+      "k": 1,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -2,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        0
+      ],
+      "degree": 2,
+      "graphs": 8,
+      "k": 1,
+      "m": 3,
+      "polarity": 1,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 2,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        0
+      ],
+      "degree": 2,
+      "graphs": 16,
+      "k": 1,
+      "m": 4,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 2,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        0
+      ],
+      "degree": 2,
+      "graphs": 16,
+      "k": 1,
+      "m": 4,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        0,
+        1
+      ],
+      "degree": 2,
+      "graphs": 4,
+      "k": 1,
+      "m": 2,
+      "polarity": 1,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        0,
+        1
+      ],
+      "degree": 2,
+      "graphs": 4,
+      "k": 1,
+      "m": 2,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -2,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        2,
+        0
+      ],
+      "degree": 2,
+      "graphs": 8,
+      "k": 1,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -2,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        0,
+        1
+      ],
+      "degree": 2,
+      "graphs": 8,
+      "k": 1,
+      "m": 3,
+      "polarity": 1,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 2,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        0,
+        1
+      ],
+      "degree": 2,
+      "graphs": 16,
+      "k": 1,
+      "m": 4,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 2,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        0,
+        1
+      ],
+      "degree": 2,
+      "graphs": 16,
+      "k": 1,
+      "m": 4,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        4,
+        1,
+        2
+      ],
+      "degree": 2,
+      "graphs": 4,
+      "k": 1,
+      "m": 2,
+      "polarity": 1,
+      "uniform": 2
+    },
+    {
+      "blocks": [
+        {
+          "Q": 3,
+          "block_start": 0,
+          "coefficient": -6,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            3,
+            1,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        4,
+        5,
+        0
+      ],
+      "degree": 2,
+      "graphs": 4,
+      "k": 1,
+      "m": 2,
+      "polarity": 1,
+      "uniform": 2
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -2,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        6,
+        4,
+        0
+      ],
+      "degree": 2,
+      "graphs": 8,
+      "k": 1,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -2,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        2,
+        4,
+        1
+      ],
+      "degree": 2,
+      "graphs": 8,
+      "k": 1,
+      "m": 3,
+      "polarity": 1,
+      "uniform": 3
+    },
+    {
+      "blocks": [
+        {
+          "Q": 9,
+          "block_start": 0,
+          "coefficient": -18,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            5,
+            9,
+            4,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 9,
+          "block_start": 1,
+          "coefficient": -18,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            5,
+            9,
+            4,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 9,
+          "block_start": 2,
+          "coefficient": -18,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            5,
+            9,
+            4,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        2,
+        0,
+        3
+      ],
+      "degree": 2,
+      "graphs": 16,
+      "k": 1,
+      "m": 4,
+      "polarity": 1,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 9,
+          "block_start": 0,
+          "coefficient": -18,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            5,
+            9,
+            4,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 9,
+          "block_start": 1,
+          "coefficient": -18,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            5,
+            9,
+            4,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 9,
+          "block_start": 2,
+          "coefficient": -18,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            5,
+            9,
+            4,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        0,
+        5,
+        1
+      ],
+      "degree": 2,
+      "graphs": 16,
+      "k": 1,
+      "m": 4,
+      "polarity": 1,
+      "uniform": 2
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        4,
+        9,
+        10,
+        1
+      ],
+      "degree": 2,
+      "graphs": 4,
+      "k": 1,
+      "m": 2,
+      "polarity": 1,
+      "uniform": 7
+    },
+    {
+      "blocks": [
+        {
+          "Q": 5,
+          "block_start": 0,
+          "coefficient": -10,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            5,
+            3,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        12,
+        5,
+        0,
+        6
+      ],
+      "degree": 2,
+      "graphs": 4,
+      "k": 1,
+      "m": 2,
+      "polarity": 0,
+      "uniform": 3
+    },
+    {
+      "blocks": [
+        {
+          "Q": 11,
+          "block_start": 0,
+          "coefficient": -22,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            5,
+            11,
+            6,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 11,
+          "block_start": 1,
+          "coefficient": -22,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            5,
+            11,
+            6,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        6,
+        0,
+        2,
+        7
+      ],
+      "degree": 2,
+      "graphs": 8,
+      "k": 1,
+      "m": 3,
+      "polarity": 1,
+      "uniform": 3
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -2,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        8,
+        13,
+        1,
+        4
+      ],
+      "degree": 2,
+      "graphs": 8,
+      "k": 1,
+      "m": 3,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 1,
+          "block_start": 2,
+          "coefficient": -2,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        10,
+        0,
+        3,
+        6
+      ],
+      "degree": 2,
+      "graphs": 16,
+      "k": 1,
+      "m": 4,
+      "polarity": 1,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 3,
+          "block_start": 0,
+          "coefficient": -6,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 3,
+          "block_start": 1,
+          "coefficient": -6,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        },
+        {
+          "Q": 3,
+          "block_start": 2,
+          "coefficient": -6,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 1
+        }
+      ],
+      "core": [
+        6,
+        4,
+        8,
+        3
+      ],
+      "degree": 2,
+      "graphs": 16,
+      "k": 1,
+      "m": 4,
+      "polarity": 0,
+      "uniform": 7
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        0
+      ],
+      "degree": 4,
+      "graphs": 16,
+      "k": 2,
+      "m": 4,
+      "polarity": 2,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        0
+      ],
+      "degree": 4,
+      "graphs": 16,
+      "k": 2,
+      "m": 4,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 24,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        0
+      ],
+      "degree": 4,
+      "graphs": 32,
+      "k": 2,
+      "m": 5,
+      "polarity": 1,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 24,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        0,
+        1
+      ],
+      "degree": 4,
+      "graphs": 32,
+      "k": 2,
+      "m": 5,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 2,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        0,
+        1
+      ],
+      "degree": 4,
+      "graphs": 64,
+      "k": 2,
+      "m": 6,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 2,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        0
+      ],
+      "degree": 4,
+      "graphs": 64,
+      "k": 2,
+      "m": 6,
+      "polarity": 1,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        0,
+        3
+      ],
+      "degree": 4,
+      "graphs": 16,
+      "k": 2,
+      "m": 4,
+      "polarity": 1,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        6,
+        0,
+        2
+      ],
+      "degree": 4,
+      "graphs": 16,
+      "k": 2,
+      "m": 4,
+      "polarity": 1,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 24,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        0,
+        3
+      ],
+      "degree": 4,
+      "graphs": 32,
+      "k": 2,
+      "m": 5,
+      "polarity": 3,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 24,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        0,
+        5,
+        1
+      ],
+      "degree": 4,
+      "graphs": 32,
+      "k": 2,
+      "m": 5,
+      "polarity": 1,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 2,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        0,
+        3
+      ],
+      "degree": 4,
+      "graphs": 64,
+      "k": 2,
+      "m": 6,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 2,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        4,
+        1
+      ],
+      "degree": 4,
+      "graphs": 64,
+      "k": 2,
+      "m": 6,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        12,
+        13,
+        0,
+        4
+      ],
+      "degree": 4,
+      "graphs": 16,
+      "k": 2,
+      "m": 4,
+      "polarity": 0,
+      "uniform": 2
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        14,
+        0,
+        2,
+        6
+      ],
+      "degree": 4,
+      "graphs": 16,
+      "k": 2,
+      "m": 4,
+      "polarity": 0,
+      "uniform": 2
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 24,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        12,
+        5,
+        0,
+        6
+      ],
+      "degree": 4,
+      "graphs": 32,
+      "k": 2,
+      "m": 5,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 24,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        4,
+        5,
+        8,
+        3
+      ],
+      "degree": 4,
+      "graphs": 32,
+      "k": 2,
+      "m": 5,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 2,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        6,
+        12,
+        0,
+        5
+      ],
+      "degree": 4,
+      "graphs": 64,
+      "k": 2,
+      "m": 6,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 2,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        10,
+        4,
+        9,
+        2
+      ],
+      "degree": 4,
+      "graphs": 64,
+      "k": 2,
+      "m": 6,
+      "polarity": 1,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 9,
+          "block_start": 0,
+          "coefficient": 216,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            3,
+            5,
+            2,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        0,
+        13,
+        9,
+        17,
+        7
+      ],
+      "degree": 4,
+      "graphs": 16,
+      "k": 2,
+      "m": 4,
+      "polarity": 1,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        8,
+        21,
+        25,
+        2,
+        9
+      ],
+      "degree": 4,
+      "graphs": 16,
+      "k": 2,
+      "m": 4,
+      "polarity": 0,
+      "uniform": 7
+    },
+    {
+      "blocks": [
+        {
+          "Q": 17,
+          "block_start": 0,
+          "coefficient": 408,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            5,
+            9,
+            4,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 17,
+          "block_start": 1,
+          "coefficient": 408,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            5,
+            9,
+            4,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        30,
+        20,
+        8,
+        18,
+        4
+      ],
+      "degree": 4,
+      "graphs": 32,
+      "k": 2,
+      "m": 5,
+      "polarity": 2,
+      "uniform": 2
+    },
+    {
+      "blocks": [
+        {
+          "Q": 17,
+          "block_start": 0,
+          "coefficient": 408,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            5,
+            9,
+            4,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 17,
+          "block_start": 1,
+          "coefficient": 408,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            5,
+            9,
+            4,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        24,
+        9,
+        19,
+        4,
+        10
+      ],
+      "degree": 4,
+      "graphs": 32,
+      "k": 2,
+      "m": 5,
+      "polarity": 3,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 33,
+          "block_start": 0,
+          "coefficient": 792,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            9,
+            17,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 33,
+          "block_start": 1,
+          "coefficient": 792,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            9,
+            17,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 33,
+          "block_start": 2,
+          "coefficient": 792,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            9,
+            17,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        24,
+        21,
+        17,
+        6,
+        8
+      ],
+      "degree": 4,
+      "graphs": 64,
+      "k": 2,
+      "m": 6,
+      "polarity": 1,
+      "uniform": 6
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 2,
+          "coefficient": 24,
+          "exterior_assignments": 4,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        12,
+        17,
+        18,
+        22,
+        1
+      ],
+      "degree": 4,
+      "graphs": 64,
+      "k": 2,
+      "m": 6,
+      "polarity": 2,
+      "uniform": 3
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -1080,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        4,
+        5,
+        0
+      ],
+      "degree": 6,
+      "graphs": 64,
+      "k": 3,
+      "m": 6,
+      "polarity": 3,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        4,
+        1,
+        2
+      ],
+      "degree": 6,
+      "graphs": 128,
+      "k": 3,
+      "m": 7,
+      "polarity": 6,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -1080,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        4,
+        9,
+        10,
+        1
+      ],
+      "degree": 6,
+      "graphs": 64,
+      "k": 3,
+      "m": 6,
+      "polarity": 0,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        0,
+        5,
+        9,
+        3
+      ],
+      "degree": 6,
+      "graphs": 128,
+      "k": 3,
+      "m": 7,
+      "polarity": 2,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 120960,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1
+          ],
+          "valuation": 7
+        }
+      ],
+      "core": [
+        2,
+        0,
+        3,
+        7
+      ],
+      "degree": 8,
+      "graphs": 256,
+      "k": 4,
+      "m": 8,
+      "polarity": 7,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 120960,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 7
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 120960,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 7
+        }
+      ],
+      "core": [
+        2,
+        12,
+        1,
+        5
+      ],
+      "degree": 8,
+      "graphs": 512,
+      "k": 4,
+      "m": 9,
+      "polarity": 8,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 120960,
+          "exterior_assignments": 1,
+          "gap_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "valuation": 7
+        }
+      ],
+      "core": [
+        24,
+        5,
+        1,
+        22,
+        6
+      ],
+      "degree": 8,
+      "graphs": 256,
+      "k": 4,
+      "m": 8,
+      "polarity": 6,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": 120960,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 7
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": 120960,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 7
+        }
+      ],
+      "core": [
+        20,
+        25,
+        18,
+        5,
+        8
+      ],
+      "degree": 8,
+      "graphs": 512,
+      "k": 4,
+      "m": 9,
+      "polarity": 5,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        4,
+        1,
+        7
+      ],
+      "degree": 6,
+      "graphs": 128,
+      "k": 3,
+      "m": 7,
+      "polarity": 0,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        4,
+        1,
+        7
+      ],
+      "degree": 6,
+      "graphs": 128,
+      "k": 3,
+      "m": 7,
+      "polarity": 1,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        4,
+        1,
+        7
+      ],
+      "degree": 6,
+      "graphs": 128,
+      "k": 3,
+      "m": 7,
+      "polarity": 2,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        4,
+        1,
+        7
+      ],
+      "degree": 6,
+      "graphs": 128,
+      "k": 3,
+      "m": 7,
+      "polarity": 3,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        4,
+        1,
+        7
+      ],
+      "degree": 6,
+      "graphs": 128,
+      "k": 3,
+      "m": 7,
+      "polarity": 4,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        4,
+        1,
+        7
+      ],
+      "degree": 6,
+      "graphs": 128,
+      "k": 3,
+      "m": 7,
+      "polarity": 5,
+      "uniform": 1
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        4,
+        1,
+        7
+      ],
+      "degree": 6,
+      "graphs": 128,
+      "k": 3,
+      "m": 7,
+      "polarity": 6,
+      "uniform": 0
+    },
+    {
+      "blocks": [
+        {
+          "Q": 1,
+          "block_start": 0,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        },
+        {
+          "Q": 1,
+          "block_start": 1,
+          "coefficient": -1080,
+          "exterior_assignments": 2,
+          "gap_coefficients": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "valuation": 3
+        }
+      ],
+      "core": [
+        2,
+        4,
+        1,
+        7
+      ],
+      "degree": 6,
+      "graphs": 128,
+      "k": 3,
+      "m": 7,
+      "polarity": 7,
+      "uniform": 1
+    }
+  ],
+  "literal_graphs": 4256,
+  "nonconsecutive_hostile": {
+    "coefficient": -4,
+    "free_positions": [
+      0,
+      3
+    ],
+    "k": 1,
+    "middle_bits": [
+      0,
+      0
+    ],
+    "valuation": 2
+  },
+  "nonuniform_hostile": {
+    "H_values": [
+      17,
+      9,
+      37,
+      29,
+      23,
+      17,
+      25,
+      19,
+      9,
+      5,
+      13,
+      9,
+      5,
+      3,
+      3,
+      1
+    ],
+    "changed_incidence": "sensitive vertex1 complements only spine position0",
+    "core": [
+      2,
+      0
+    ],
+    "degree": 3,
+    "k": 2,
+    "m": 4,
+    "top_coefficient": 0
+  },
+  "odd_multiplier_positive_control": [
+    {
+      "bits": 0,
+      "child_H": 3,
+      "parent_H": 1
+    },
+    {
+      "bits": 1,
+      "child_H": 9,
+      "parent_H": 3
+    },
+    {
+      "bits": 2,
+      "child_H": 3,
+      "parent_H": 1
+    },
+    {
+      "bits": 3,
+      "child_H": 3,
+      "parent_H": 1
+    }
+  ],
+  "status": "PASS"
+}

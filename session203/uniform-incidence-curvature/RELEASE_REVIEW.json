@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "promoted_proof_sha256": "3b3d520a6a44eee260a898d8528ffa27a018304e72bbecf8d7bc40da43ada7ce",
+  "reviewed_proof_sha256": "5b7fc292400fbf3193fb1bf520288206dff3733cfdc05239bc36f062c030a5bd",
+  "README_sha256": "67f21f0f8974975f1a21c16c1798e152396a24071b8dc71c573b8c5bc3d2d6a5",
+  "only_status_line_changed": true,
+  "frozen_audit_files_preserved": 11,
+  "producer_check_and_receipt_unchanged": true,
+  "scope_correction": "README explicitly restricts the valuation claim to k>=1, matching the proof.",
+  "scope": "Uniform copy/complement incidence, consecutive block, m>=2k; no general nonuniform obstruction, threshold, or odd-multiplier exclusion.",
+  "relocation_review": "Copied scripts are portable with no sibling dependencies. Original receipts and manifest verified byte-for-byte; no new full rerun claimed during this packaging-only check."
+}

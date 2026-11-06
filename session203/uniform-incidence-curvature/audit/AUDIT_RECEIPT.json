@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "reviewed_sources": {
+    "PROOF.md": "5b7fc292400fbf3193fb1bf520288206dff3733cfdc05239bc36f062c030a5bd",
+    "check.cpp": "8267c6877873d1347e1d6f9f73ecdbca100e05bb1d1d002975b5b6e5016e7fc0",
+    "NORMAL.txt": "b2d4c0248197a362eedf8a5779f8101f72fb2ee2228efcbd78dd17d79477f3e5"
+  },
+  "scope": "Exact degree2k, consecutive-block coefficient and valuation, and even-multiplier obstruction within the stated uniform-incidence class. No general nonuniform obstruction.",
+  "independent_contexts": 88,
+  "independent_literal_graphs": 4256,
+  "DFS_crosschecked_graphs": 768,
+  "consecutive_block_checks": 324,
+  "normal_sha256": "487de113883c0923ac4f89b5099fd0c55fda9ca0eed78ffb8fcbf89fc18f70fd",
+  "optimized_debug_sha256": "487de113883c0923ac4f89b5099fd0c55fda9ca0eed78ffb8fcbf89fc18f70fd",
+  "producer_replay_exact": true,
+  "promotion_permission": "Status-only promotion approved; preserve reviewed bytes and send promoted hash/delta for verification."
+}

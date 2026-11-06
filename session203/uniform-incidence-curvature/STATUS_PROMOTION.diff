@@ -1,0 +1,10 @@
+--- REVIEWED_PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # Highest curvature of uniformly copied binary incidences
+ 
+-Status: **PROOF CANDIDATE, pending independent audit.** This is an all-order obstruction for a specified uniform-incidence class, not an odd-spectrum obstruction.
++Status: **PROVED, independently audited in the stated scope.** This is an all-order obstruction for a specified uniform-incidence class, not an odd-spectrum obstruction.
+ 
+ ## Context class
+ 
