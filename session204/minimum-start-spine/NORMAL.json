@@ -1,0 +1,36 @@
+{
+  "controls": {
+    "exceptional": {
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "stages": 1,
+      "start_budget": 2
+    },
+    "tail": {
+      "rows": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "start_budget": 3,
+      "tail_blocks": 1
+    }
+  },
+  "scope": "All labelled tournaments of orders 1 through 6, all roots of strong tournaments, full selected minimum-start spines",
+  "stats": {
+    "exceptional_steps": 152504,
+    "max_exceptional_stages": 2,
+    "rooted_spines": 136743,
+    "steps": 340900,
+    "strong_tournaments": 22891,
+    "tail_bearing_steps": 20320,
+    "tournaments": 33867
+  },
+  "status": "PASS"
+}
