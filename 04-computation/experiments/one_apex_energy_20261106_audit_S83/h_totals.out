@@ -1,0 +1,4 @@
+(n,m)=(10,2): W=C: actual-shift total 2822, lemma total 120050;  W=2C: actual-shift total 5198, lemma total 156626
+(n,m)=(11,2): W=C: actual-shift total 5976, lemma total 414749;  W=2C: actual-shift total 10708, lemma total 553469
+(n,m)=(12,3): W=C: actual-shift total 21560, lemma total 643000;  W=2C: actual-shift total 40836, lemma total 806200
+(n,m)=(13,3): W=C: actual-shift total 44838, lemma total 2027274;  W=2C: actual-shift total 83322, lemma total 2615946

@@ -1,3 +1,5 @@
+<!-- 2026-11-06 (opus-2026-11-06-S83): the row below moved here from INDEX.md to keep its 120-line budget after the THM-4886/THM-4887/HYP-9479 insertion -->
+- **Cross-domain incidence lesson:** HYP-2448's full barycentric root packet is invertible, whereas HYP-2430's design-incidence map has enormous nullity. Transfer must carry the rank defect and the lost-coordinate sidecar.
 <!-- 2026-11-06 (opus-2026-11-06-S82): the row below moved here from INDEX.md to keep its 120-line budget after the THM-4885/HYP-9478 insertion -->
 - **Tournaments/sequences:** test gaps, residues, events, proof obligations, or support-collision profiles before choosing runners as vertices.
 <!-- 2026-11-05 (opus-2026-11-05-S81): the row below moved here from INDEX.md to keep its 120-line budget after the THM-4884/HYP-9477 insertion -->

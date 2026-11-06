@@ -78,4 +78,4 @@ Report: `04-computation/experiments/one_apex_fourier_20261106_audit_S83/AUDIT.md
 - **m7.** The "4,600 random checks" line above has no receipt in the folder. The audit's independent reproduction
   supersedes it.
 - **The forced floor (audit U4).** The converse involution preserves H, so E_n >= 2 |X_n| - 2^(n/2) - 1. P2 therefore
-  measures an excess of about 1.25 over a floor of 2. THM-4887 proves E_n <= (1.39 n + 19) 2^(4n/3).
+  measures an excess of about 1.25 over a floor of 2. THM-4887 proves E_n <= (1.39 n + 16) 2^(4n/3).

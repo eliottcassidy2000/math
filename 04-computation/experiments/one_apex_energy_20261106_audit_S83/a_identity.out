@@ -1,0 +1,12 @@
+(i) g(v) = H(one-apex tournament of the L-letter word of v), all words of length <= 10 (incl. leading zeros): 2047 words, 0 mismatches
+(ii) exhaustive m <= 8, 0 <= h < 2^9, all l: 261120 cases, 0 violations; min gamma = 0, max (gamma - 2^m) = -1
+(ii) random big-int cases (m <= 64, h < 2^200): 100000 cases, 0 violations
+(iii) 1 <= g(v) <= v + 1 for all v < 2^20; equality g(v) = v+1 for v < 2^12 at 12 values, first [0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048]
+     m=1: max gamma (h odd) = 1, (h even) = 0, 2^m - 1 = 1
+     m=2: max gamma (h odd) = 2, (h even) = 2, 2^m - 1 = 3
+     m=3: max gamma (h odd) = 4, (h even) = 4, 2^m - 1 = 7
+     m=4: max gamma (h odd) = 10, (h even) = 10, 2^m - 1 = 15
+     m=5: max gamma (h odd) = 22, (h even) = 22, 2^m - 1 = 31
+     m=6: max gamma (h odd) = 50, (h even) = 50, 2^m - 1 = 63
+     m=15: max gamma (h odd) = 32386, (h even) = 32386, 2^m - 1 = 32767
+(iv) Session 193 eq. (1) H(uv) = H(u)+H(v)-1+A(u)C(v)+p(u)eps(v), brute force, |u|,|v| <= 5: 1922 cases, 0 violations; C(v) = C_m(l) on all of them

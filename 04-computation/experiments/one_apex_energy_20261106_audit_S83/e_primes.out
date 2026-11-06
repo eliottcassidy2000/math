@@ -1,0 +1,7 @@
+pi(2^32) - pi(2^31) = 98182656 by segmented sieve (58s); claimed 98,182,656: True
+sympy.primepi: pi(2^32) = 203280221, pi(2^31) = 105097565, difference 98182656
+C(N, 31) = 6.887383e+213 = 10^213.838; > 10^213: True
+(2^32)^31 = 2^992 < 2^1000: True;  X^(2/3) at X = 2^1000 = 10^200.687
+corollary X^(2/3)/(13 ln X + 121) at X = 2^1000 = 10^196.726
+products (k distinct primes in [2^31,2^32)) x (odd cofactor < 2^31) stay above the corollary for every X < 2^3456.00 (k = 108 at the first failure)
+at the first failure: construction 10^689.0, corollary 10^689.1

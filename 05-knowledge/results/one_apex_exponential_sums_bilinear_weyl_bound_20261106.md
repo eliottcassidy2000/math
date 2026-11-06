@@ -1,4 +1,4 @@
-# One-apex exponential sums: a Type II bound, Fourier uniformity, the energy at scale 2^(n/3), and the target for positive density
+# One-apex exponential sums: a Type II bound, Fourier uniformity, smoothed energy at scales 2^(n/3) to 2^(n/2), and the target for positive density
 
 **Session:** opus-2026-11-06-S83. Worktree `C:/tmp/wt-s83`. Canon: THM-4886, THM-4887. Pre-registration: HYP-9479
 (commit 185c2b3efa). Audits: section 8.
@@ -32,12 +32,14 @@ showed that individual minor-arc bounds, even with a growing bank, do not give t
   - *Positive density.* Linear energy E_n = O(2^n) is sufficient. The converse involution forces E_n >= 2 |X_n| - 2^(n/2) - 1.
     By Parseval, the minor-arc bounds give only E_n << n 2^(5n/3).
   - *Density one.* A route needs pair correlations of the bank families.
-- **(F) The energy down to the scale 2^(n/3) (THM-4887).**
-  - A two-block identity g(h 2^m + l) = g(h) + h C_m(l) + O(2^m) and a lattice-point count give
-    #{(v, v') : |g(v) - g(v')| <= Delta} <= (1.39 n + 19) 2^(4n/3) for Delta <= 2^(n/3). This is sharp up to O(n).
-  - Hence E_n = O(n 2^(4n/3)), and the number of Hamiltonian path counts up to X is at least X^(2/3)/(13 ln X + 121).
+- **(F) Smoothed energy at scales 2^(n/3) to 2^(n/2) (THM-4887).**
+  - Session 193's law, written as g(h 2^m + l) = g(h) + h C_m(l) + O(2^m), and a thin-strip lattice-point count give
+    #{(v, v') : |g(v) - g(v')| <= Delta} <= (1.39 n + 19) 2^(4n/3) for Delta <= 2^floor(n/3). This is sharp up to O(n)
+    at Delta = 2^floor(n/3).
+  - Every dyadic scale up to 2^(n/2)/4 is also linear, up to O(n - 2m), with an absolute constant at the top.
+  - Hence E_n = O(n 2^(4n/3)), and the number of Hamiltonian path counts up to X is at least X^(2/3)/(13 ln X + 102).
     The previous all-X exponent was 1/2.
-  - Positive density now needs equidistribution of g only below the scale 2^(n/3).
+  - Positive density by this route needs the inequality at Delta = 0 (linear energy), which stays OPEN.
 
 ## 0. Objects and inherited facts
 
@@ -258,7 +260,8 @@ The table gives |S_n|/2^((n-1)/2) at five irrational theta, then E_n/|X_n| and d
   - By Parseval, E_n is the integral of |S_n|^2, so it is square-root cancellation in mean square.
   - Pointwise minor-arc bounds do not reach it: with (A3) at eps = 1/3, Parseval gives only E_n <= (16 n + 2) 2^(5n/3 - 2),
     i.e. 2^(n/3)/(16 n + 2) distinct values (audit U5). That is weaker than Session 150's sqrt(X)/4.
-  - THM-4887 (section 6) bounds the energy directly in physical space, and gets 2^(4n/3) up to O(n).
+  - THM-4887 (section 6) bounds the energy directly in physical space: O(n 2^(4n/3)), with linear smoothed energy at
+    scales 2^(n/3) to 2^(n/2)/4.
 
 **Density one** (S82's programme).
 - A route to density one needs a growing bank and the pair correlations of the bank families. The second moment of r_Y
@@ -274,29 +277,40 @@ The table gives |S_n|/2^((n-1)/2) at five irrational theta, then E_n/|X_n| and d
 - To go further one must use the phases e(theta (H(y) - H(y'))) of the inner block. Each H(y) again obeys (1), so a
   van der Corput-type iteration on the inner block is the natural next step.
 
-## 6. (F) The energy at the scale 2^(n/3) and an X^(2/3) counting bound (PROVED, THM-4887)
+## 6. (F) Smoothed energy at scales 2^(n/3) to 2^(n/2) and an X^(2/3) counting bound (PROVED, THM-4887)
 
 (A) controls S_n pointwise, but the quantity positive density needs is a mean square. A physical-space argument bounds
-the energy and its smoothed versions down to the scale 2^(n/3), and is sharp there.
+the smoothed energy at every dyadic scale from 2^(n/3) to 2^(n/2)/4, and is sharp up to O(n) at 2^(n/3).
 
-**Two-block identity** ((1) with the low block written as an integer). For h >= 1, m >= 1 and 0 <= l < 2^m:
+**Two-block identity** (Session 193's (1); same-shape identities appear in Session 206's tail function Q and in Session
+16's one-block binary-product identity). For h >= 1, m >= 1 and 0 <= l < 2^m, with l = sum l_i 2^i:
 
-    g(h 2^m + l) = g(h) + h C_m(l) + gamma_h(l),
+    g(h 2^m + l) = g(h) + h C_m(l) + gamma_h(l).
 
 - C_m(l) = sum_(i<m) (1 - l_i) 2^(m-1-i) is the complement of l reversed, a bijection of [0, 2^m).
-- gamma_h(l) = g(l) - 1 + (h mod 2)[l < 2^(m-1)] lies in [0, 2^m].
+- gamma_h(l) = g(l) - 1 + (h mod 2)[l < 2^(m-1)] lies in [0, 2^m - 1].
 
-So a length-n count is a product h·c of the top block h and the reversed complement c of the low block, shifted by
-g(h) and by a perturbation of size at most C = 2^m.
+So a length-n count is a product h·c of the top block h and the reversed complement c of the low block, shifted by g(h)
+and by a perturbation of size below C = 2^m.
 
 **Theorem F (THM-4887).** Let E_n(Delta) = #{(v, v') in X_n^2 : |g(v) - g(v')| <= Delta}.
-- **Smoothed energy.** For n >= 12 and 0 <= Delta <= 2^floor(n/3), E_n(Delta) <= (1.39 n + 19) 2^(4n/3).
-  - This is sharp up to O(n): any 2^(n-1) values in [1, 2^n] have E_n(Delta) >= 2^(2n-2)(Delta+1)/(2^n+Delta+1).
-- **Energy.** E_n <= (1.39 n + 19) 2^(4n/3). The counts on X_n take at least 2^(2n/3)/(5.56 n + 76) values.
-- **Counting.** The number A(X) of Hamiltonian path counts up to X satisfies A(X) >= X^(2/3)/(13 ln X + 121) for
-  X >= 4096.
-- **Fourier form.** The integral of |S_n|^2 over |theta| <= 2^(-floor(n/3)-2) is at most 3.92 (1.39 n + 19) 2^n. That is
-  square-root cancellation in mean square on that window, up to O(n). (A) cannot see this.
+- **Scale 2^(n/3).** For n >= 12 and 0 <= Delta <= 2^floor(n/3), E_n(Delta) <= (1.39 n + 19) 2^(4n/3).
+  - At Delta = 2^floor(n/3) this is sharp up to O(n): any 2^(n-1) values in [1, 2^n] have
+    E_n(Delta) >= 2^(2n-2)(Delta+1)/(2^n+Delta+1).
+  - It is not sharp for Delta = o(2^(n/3)). At Delta = 0 it exceeds the observed E_n by about
+    0.6 (1.39 n + 19) 2^(n/3).
+- **All scales from 2^(n/3) to 2^(n/2)/4** (the audit's U1). For (n-1)/3 <= m <= (n-4)/2 and 2^(m-1) < Delta <= 2^m,
+  E_n(Delta) <= 17 (n - 2m)(Delta + 1) 2^n. At the top scale m = floor((n-4)/2) the constant is absolute: the
+  bracket is at most 39.9.
+- **Energy and counting.**
+  - E_n <= (1.39 n + 16) 2^(4n/3).
+  - The counts on X_n take at least 2^(2n/3)/(5.56 n + 64) values.
+  - A(X) >= X^(2/3)/(13 ln X + 102) for X >= 4096.
+- **Fourier form.** The integral of |S_n|^2 over |theta| <= 2^(-floor(n/3)-2) is at most 3.92 (1.39 n + 19) 2^n. So
+  this window adds only O(n 2^n) to Parseval's integral E_n.
+  - The central peak |theta| <= 2^(-n-3) alone contributes at least 2^(n-5).
+  - So the window carries no L^2 mass beyond the peak, up to O(n).
+  - This is not square-root size in mean square over the window, whose RMS is at least about 2^(2n/3).
 
 *Proof sketch* (full proof in THM-4887).
 - **Same top block.** Within one top block h in [P, 2P) (P = 2^(n-m-1) >= 8C), the C values are separated by at least
@@ -304,32 +318,39 @@ g(h) and by a perturbation of size at most C = 2^m.
 - **Different top blocks.** For h != h', a near-collision forces |h c - h' c' - D| <= 2C with D = g(h') - g(h).
   - For each c there is at most one c'.
   - Let beta be the reduced Dirichlet denominator of h/h' with parameter P/C.
-  - The counting lemma over blocks of beta consecutive c bounds the strip count by 4C^2/P + 3C/beta + 7, for every
-    shift D.
-- **Small denominators are rare.** At most P(beta + 1)(4C/beta + 1) pairs have reduced denominator beta.
-- **Sum.** E_n(Delta) <= PC + 10 P^2 + P C^2 (35.74 + 12 ln(P/C)) + 3 P C (1 + ln(P/C)). Take m = floor(n/3).
+  - The classical spacing lemma (Weyl's inequality; THM-4886's counting lemma), applied over blocks of beta
+    consecutive c, bounds the strip count by 4C^2/P + 3C/beta + 7 for every shift D.
+- **Small denominators are rare.** At most P(beta + 1)(4C/beta + 1) pairs have reduced denominator beta, so the lattice
+  term is O(ln(P/C)) on average.
+- **Sum.** E_n(Delta) <= PC + 10 P^2 + P C^2 (35.74 + 12 ln(P/C)) + 3 P C (1 + ln(P/C)), at every split with P >= 8C.
 
-**Checks** (`d_identity.py`, `d_lemma.py`, `d_energy.py`).
-- **Identity:** 200,000 random cases.
-- **Strip lemma:** checked with the worst-case shift on all ordered pairs, for four (n, m) and both windows (C and 2C):
-  0 violations, max ratio 0.635.
-- **Small-denominator counts and harmonic sum:** within their bounds.
-- **Energies:** E_n(2^floor(n/3)) / 2^(4n/3) lies in [0.39, 0.67] for n = 12..26, against the proved 36 to 55.
+**Checks.**
+- Session scripts (`d_identity.py`, `d_lemma.py`, `d_energy.py`):
+  - the identity on 200,000 random cases;
+  - the strip lemma with the worst-case shift on all ordered pairs, for four (n, m): 0 violations, max ratio 0.565
+    (W = C) and 0.635 (W = 2C);
+  - E_n(2^floor(n/3))/2^(4n/3) in [0.39, 0.67] for n = 12..26, against the proved 36 to 55.
+- The audit re-derived the identity by induction from the recursion. It also tested:
+  - the strip lemma at the (D2) splits, including the boundary B = 8, with the strongest Dirichlet choice;
+  - (D4) exactly;
+  - U1 against the exact E_n(2^m), whose ratio to 2^(n+m) is 0.61-0.63.
 
 **What it means.**
-- **The exponent.** The previous all-X exponent was 1/2 (Session 150's injective family, A(X) > sqrt(X)/4).
-  - For any X one can write down, the certified range [1, 2^32] (THM-4875 (D)) and order-join multiplicativity
-    (THM-1862) give far more: more than 10^213 counts below 2^1000, against X^(2/3) = 10^200.7.
-  - Asymptotically, though, finitely many certified values generate only polylogarithmically many products, so the
-    exponent 2/3 is the content.
-- **Why 2/3.**
+- **The exponent.** The previous all-X exponent was 1/2 (Session 150's injective family, A(X) > sqrt(X)/4). No power
+  bound beyond it is in the repository, and none was found in the literature (Chan-Pak record only the conjecture and
+  Royle's check to 80,557).
+  - The certified range [1, 2^32] (THM-4875 (D)), order-join multiplicativity (THM-1862) and unique factorisation give
+    more for every X < 2^14,751 (the audit's rigorous certified-prime construction).
+  - Asymptotically, finitely many certified values generate only polylogarithmically many products, so the exponent
+    2/3 is the content.
+- **Where the method stops.**
   - The proof knows only that gamma lies in [0, C], so a perturbation of size C forces the window up to C.
-  - The strip count then carries an area term C^2/P and a lattice term O(1) per pair. Balancing P^2 against P C^2
-    places C at 2^(n/3).
-  - Below that scale one needs arithmetic information on g: where D = g(h') - g(h) falls relative to the lattice
-    {h c - h' c'}. That is the same input linear energy needs.
-- **Positive density** is now reduced to the scales between 1 and 2^(n/3). Linear energy is E_n(Delta) << (Delta + 1) 2^n
-  at Delta = 0; Theorem F proves that inequality at Delta = 2^(n/3), up to O(n).
+  - The strip count then has an area term 4C^2/P and a lattice term 3C/beta + 7 per pair, which is O(log) on average.
+  - Balancing P^2 against P C^2 puts the smallest reachable scale at C = 2^(n/3).
+- **What it does not give.** Linear energy E_n = O(2^n) is the statement at Delta = 0. Larger-scale bounds do not imply
+  it, since E_n(0) <= E_n(Delta) runs the wrong way. Positive density by this route needs that inequality, which is
+  OPEN. Heuristically, it needs arithmetic information on g below the scale 2^(n/3): where D = g(h') - g(h) falls
+  relative to the lattice {h c - h' c'}.
 
 ## 7. Typing
 
@@ -342,7 +363,7 @@ g(h) and by a perturbation of size at most C = 2^m.
 | (D) square-root cancellation, energy 3.25 \|X_n\|, diagonal dominance | FINITE-EXACT / numerical (pre-registered HYP-9479, confirmed) |
 | E_n >= 2 \|X_n\| - 2^(n/2) - 1 | PROVED (the audit's U4, from Session 16's involution) |
 | linear energy implies positive density (at most 1/4) | elementary (conditional) |
-| (F) energy at scale 2^(n/3), A(X) >= X^(2/3)/(13 ln X + 121) | PROVED (new; THM-4887) |
+| (F) smoothed energy at scales 2^(n/3) to 2^(n/2)/4; E_n = O(n 2^(4n/3)); A(X) >= X^(2/3)/(13 ln X + 102) | PROVED (new; THM-4887; the identity is Session 193's (1)) |
 | linear energy; pair correlations; density one; Chan-Pak | OPEN |
 
 ## 8. Audits
@@ -387,7 +408,31 @@ CORRECTIONS: 3 major, 11 minor, 5 upgrades, all applied (MISTAKE-726).
   - U4: the energy floor.
   - U5: Parseval calibration.
 
-**THM-4887:** `04-computation/experiments/one_apex_energy_20261106_audit_S83/AUDIT.md` (pending at this revision).
+**THM-4887:** `04-computation/experiments/one_apex_energy_20261106_audit_S83/AUDIT.md`. Verdict PASS WITH CORRECTIONS:
+3 majors on scope and wording, 10 minors, 4 upgrades, all applied. The mathematics of (D1)-(D4) is correct, with
+0 violations in independent code.
+- **M1.** "Sharp up to O(n)" holds only at Delta of order 2^(n/3), not for all Delta <= 2^(n/3). Restricted.
+- **M2.** (D4) is not square-root size in mean square over the window. The correct reading is "no L^2 mass beyond the
+  central peak, up to O(n)". Fixed.
+- **M3.** "Positive density needs / is reduced to the scales below 2^(n/3)" was unproved: larger-scale bounds do not
+  imply linear energy at Delta = 0. Reworded.
+- **Minors.**
+  - Two (D2) rows rounded down; they are now printed rounded up.
+  - The identity is typed INHERITED (Session 193's (1)).
+  - The comparison now reads "every X < 2^14,751".
+  - The checks give both windows' maxima.
+  - E_n/|X_n| peaks at n = 22.
+  - The lattice term is O(log) on average.
+  - The bit indexing is fixed.
+  - The note's range is 2^floor(n/3).
+  - Citations added: the spacing lemma, Session 16/26's upper bounds, THM-4886's energy floor, the literature.
+- **Upgrades adopted.**
+  - U1: linear smoothed energy at every scale up to 2^(n/2)/4.
+  - U2: gamma <= 2^m - 1.
+  - U3: E_n <= (1.39 n + 16) 2^(4n/3) and A(X) >= X^(2/3)/(13 ln X + 102).
+  - U4: the novelty statement.
+- **Process.** The ID THM-4887 was first reserved by kind-pasteur-S13 13 s earlier. They released it (48ba576e1f) and
+  moved to THM-4888.
 
 ## 9. Reproduction
 

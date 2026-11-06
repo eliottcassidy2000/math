@@ -1,0 +1,36 @@
+(n,m)=(10,2) P=128 C=4 B=32 [ALL pairs, 0s]
+   strip lemma, beta = largest admissible reduced denominator: W=C viol 0 (max Z*/bound 0.533); W=2C viol 0 (max Z*/bound 0.508); with min-b beta: viol 0, 0
+   step 4: N_beta <= P(beta+1)(4C/beta+1) violations: min-b rule 0, max-beta rule 0 (max ratio 0.305); sum 1/beta = 2892.2 (min-b), 2713.6 (max-beta) <= 17182.4
+   same-h min gap 126 (> Delta_max = C = 4; P - C = 124)
+   E_n(0) = 1424 = PC + sum actual = 1424 ; <= PC + sum Z*(W=C) = 21022 <= (D1, Delta=0) 292717;  actual > Z* in 0 pairs
+   E_n(C) = 3440 = PC + sum actual = 3440 ; <= PC + sum Z*(W=2C) = 25376 <= (D1, Delta=C) 329581;  actual > Z* in 0 pairs
+(n,m)=(12,4) P=128 C=16 B=8 [ALL pairs, 1s]
+   strip lemma, beta = largest admissible reduced denominator: W=C viol 0 (max Z*/bound 0.400); W=2C viol 0 (max Z*/bound 0.476); with min-b beta: viol 0, 0
+   step 4: N_beta <= P(beta+1)(4C/beta+1) violations: min-b rule 0, max-beta rule 0 (max ratio 0.290); sum 1/beta = 8221.6 (min-b), 7317.7 (max-beta) <= 40120.8
+   same-h min gap 120 (> Delta_max = C = 16; P - C = 112)
+   E_n(0) = 6000 = PC + sum actual = 6000 ; <= PC + sum Z*(W=C) = 76120 <= (D1, Delta=0) 2075302;  actual > Z* in 0 pairs
+   E_n(C) = 43718 = PC + sum actual = 43718 ; <= PC + sum Z*(W=2C) = 120796 <= (D1, Delta=C) 2173606;  actual > Z* in 0 pairs
+(n,m)=(13,4) P=256 C=16 B=16 [ALL pairs, 12s]
+   strip lemma, beta = largest admissible reduced denominator: W=C viol 0 (max Z*/bound 0.392); W=2C viol 0 (max Z*/bound 0.423); with min-b beta: viol 0, 0
+   step 4: N_beta <= P(beta+1)(4C/beta+1) violations: min-b rule 0, max-beta rule 0 (max ratio 0.324); sum 1/beta = 20267.3 (min-b), 18781.6 (max-beta) <= 93823.6
+   same-h min gap 248 (> Delta_max = C = 16; P - C = 240)
+   E_n(0) = 12392 = PC + sum actual = 12392 ; <= PC + sum Z*(W=C) = 199962 <= (D1, Delta=0) 4966379;  actual > Z* in 0 pairs
+   E_n(C) = 89166 = PC + sum actual = 89166 ; <= PC + sum Z*(W=2C) = 302584 <= (D1, Delta=C) 5228523;  actual > Z* in 0 pairs
+(n,m)=(14,4) P=512 C=16 B=32 [ALL pairs, 53s]
+   strip lemma, beta = largest admissible reduced denominator: W=C viol 0 (max Z*/bound 0.400); W=2C viol 0 (max Z*/bound 0.476); with min-b beta: viol 0, 0
+   step 4: N_beta <= P(beta+1)(4C/beta+1) violations: min-b rule 0, max-beta rule 0 (max ratio 0.342); sum 1/beta = 47861.2 (min-b), 44975.7 (max-beta) <= 218907.1
+   same-h min gap 504 (> Delta_max = C = 16; P - C = 496)
+   E_n(0) = 25044 = PC + sum actual = 25044 ; <= PC + sum Z*(W=C) = 576200 <= (D1, Delta=0) 12088594;  actual > Z* in 0 pairs
+   E_n(C) = 178322 = PC + sum actual = 178322 ; <= PC + sum Z*(W=2C) = 795760 <= (D1, Delta=C) 12875026;  actual > Z* in 0 pairs
+(n,m)=(13,3) P=512 C=8 B=64 [ALL pairs, 21s]
+   strip lemma, beta = largest admissible reduced denominator: W=C viol 0 (max Z*/bound 0.533); W=2C viol 0 (max Z*/bound 0.635); with min-b beta: viol 0, 0
+   step 4: N_beta <= P(beta+1)(4C/beta+1) violations: min-b rule 0, max-beta rule 0 (max ratio 0.339); sum 1/beta = 27237.8 (min-b), 25954.1 (max-beta) <= 146884.2
+   same-h min gap 508 (> Delta_max = C = 8; P - C = 504)
+   E_n(0) = 12392 = PC + sum actual = 12392 ; <= PC + sum Z*(W=C) = 340618 <= (D1, Delta=0) 4905572;  actual > Z* in 0 pairs
+   E_n(C) = 50782 = PC + sum actual = 50782 ; <= PC + sum Z*(W=2C) = 414986 <= (D1, Delta=C) 5495396;  actual > Z* in 0 pairs
+(n,m)=(15,5) P=512 C=32 B=16 [ALL pairs, 241s]
+   strip lemma, beta = largest admissible reduced denominator: W=C viol 0 (max Z*/bound 0.430); W=2C viol 0 (max Z*/bound 0.561); with min-b beta: viol 0, 0
+   step 4: N_beta <= P(beta+1)(4C/beta+1) violations: min-b rule 0, max-beta rule 0 (max ratio 0.330); sum 1/beta = 81634.0 (min-b), 75633.7 (max-beta) <= 365170.7
+   same-h min gap 496 (> Delta_max = C = 32; P - C = 480)
+   E_n(0) = 51484 = PC + sum actual = 51484 ; <= PC + sum Z*(W=C) = 1224374 <= (D1, Delta=0) 37432063;  actual > Z* in 0 pairs
+   E_n(C) = 676588 = PC + sum actual = 676588 ; <= PC + sum Z*(W=2C) = 1966688 <= (D1, Delta=C) 39004927;  actual > Z* in 0 pairs

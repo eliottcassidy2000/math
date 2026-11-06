@@ -1,0 +1,36 @@
+== (D2) rows: exact (D1)/2^(4n/3) at the (D2) split vs the stated rows and vs 1.39 n + 19 ==
+ r=0: main part = 16.211117 + 1.3862944 n; remaining terms <= 0.319948 (max at n = 12); stated row 16.53 + 1.386 n; max over n<=3000 of (exact - row) = 0.5642 (row UNDERSTATES the bound); max (exact - (1.39n+19)) = -2.5134
+ r=1: main part = 17.051628 + 1.1003026 n; remaining terms <= 0.305519 (max at n = 13); stated row 17.36 + 1.101 n; max over n<=3000 of (exact - row) = -0.011919 (ROW IS AN UPPER BOUND); max (exact - (1.39n+19)) = -5.40892
+ r=2: main part = 18.430311 + 0.87331072 n; remaining terms <= 0.283427 (max at n = 14); stated row 18.71 + 0.873 n; max over n<=3000 of (exact - row) = 0.65217 (row UNDERSTATES the bound); max (exact - (1.39n+19)) = -7.51991
+ remaining terms at n = 12: 0.31994764 (claimed <= 0.32); at n=13: 0.3055193; n=14: 0.28342727
+ Delta = 0 form at n=12..14: ['31.6666', '30.0737', '29.0502']
+
+== step 4: harmonic sum  sum_{beta<=B} (beta+1)(4C/beta+1)/beta <= 4C ln B + 10.58 C + B + 1 + ln B ==
+ max (lhs - rhs) over B = 2^0..2^40, C in {1,..,2^20}: -2.1142 (<= 0 means valid); 4(1 + pi^2/6) = 10.579736
+
+== sharpness lower bound 2^(2n-2)(D+1)/(2^n+D+1) at D = 2^floor(n/3), divided by 2^(4n/3) ==
+ min over n = 12..399: 0.157490 (claimed >= 1/8 = 0.125); limit 2^(-8/3) = 0.157490
+ ratio upper/lower at n = 12..14: [134.9, 176.2, 230.1]; at n=300: 1744.0
+
+== (D3) constants ==
+ 4 (1.39 n + 19) = 5.56 n + 76: 139/25 n + 76
+ (X/2)^(2/3)/(5.56 log2 X + 76) = X^(2/3)/(12.733154 ln X + 120.64248)  (claimed <= 13 ln X + 121)
+ min over X in [4096, 2^400) of (2^(2n/3)/(5.56n+76)) / (X^(2/3)/(13 ln X + 121)) = 1.022835 (>= 1 means valid)
+ X^(2/3)/(13 ln X + 121) first exceeds Session 150's sqrt(X)/4 at X = 2^41.8
+ 2^(2n/3)/(5.56n+76) at n = 12: 1.794; first n with 2^(2n/3)/(5.56n+76) > 2^(n/2)/4: 37
+
+== (D4) constants ==
+ (pi^2/4) 2^(2/3) = 3.916755102 (claimed <= 3.92)
+ window: 1/(2(2^t+1)) >= 2^(-t-2) for all t >= 1: True
+ 2^(4n/3)/2^floor(n/3) <= 2^(n+2/3): max exponent excess = 2/3 (<= 2/3)
+ Fejer kernel lower bound: min over 0<|theta|<=1/(2(D+1)) of K(theta)/(4(D+1)/pi^2) for D=1..64 = 1.0001947
+
+== upgrade: Delta = 0 constants (8 P^2, 33.74) at the (D2) split ==
+ max over n = 12..3000 of (D1, Delta=0)/2^(4n/3) - (1.39 n + 16) = -1.0134 (<= 0: E_n <= (1.39 n + 16) 2^(4n/3))
+ general m (Delta = 2^m, n/3 <= m <= (n-4)/2): (D1)/2^(n+m) = 17.87 + 6 ln2 (n-2m-1) + 2.5*2^(n-3m) + 2^(-m-1)(4 + 3 ln B)
+   n=30 m=10: (D1)/2^(n+m) = 57.811
+   n=30 m=13: (D1)/2^(n+m) = 30.3522
+   n=60 m=20: (D1)/2^(n+m) = 99.3888
+   n=60 m=28: (D1)/2^(n+m) = 30.3466
+   n=120 m=40: (D1)/2^(n+m) = 182.566
+   n=120 m=58: (D1)/2^(n+m) = 30.3466
