@@ -1,0 +1,9 @@
+# Independent parity audit
+
+PASS, 2026-11-06. The local weighted-degree excess identity follows by exact path incidence. Under explicitly unit capacities and odd original degrees, every fundamental-cut parity equals its shore cardinality parity. The selected odd-load edges therefore form the unique V-join of a spanning tree. Minimum-cardinality V-joins are acyclic by cycle deletion, extend to spanning trees in connected graphs, and then coincide with their trees' odd-load sets. All directions, including equality with the minimum V-join and the perfect-matching boundary, are valid. Loopless assumptions are explicit; no arbitrary real-capacity parity claim is made. Parallel physical edges would require multiplicity-aware representation, while the finite native graph is simple.
+
+Independently generated the native64-vertex graph by fixed Hamilton words and free nonpath orientations. Confirmed96 edges and degree strata24/16/24. The40 low-degree vertices form an independent set. Checked the supplied63-edge tree and40-edge forest are graph subgraphs. Independently computed all fundamental loads by routing every original edge through the tree, rather than the author's cut enumeration. Exactly40 loads are odd, with selected set equal to the supplied forest; the entire load histogram matches. Verified the exact local excess identity at every vertex using independently counted transit paths. Tree connectivity is checked directly, not assumed. Thus the lower and upper certificates meet at40.
+
+The optional maximum matching24 corollary is also correct: the24 high-degree vertices cover every edge, and24 distinct leaf edges form a matching. Its deficiency is16.
+
+Independent checker/output: independent_check.py and independent.out. The bundled checker uses a relative input path. No global logarithmic preprint theorem is needed.

@@ -1,0 +1,9 @@
+{
+  "vertices": 64,
+  "edges": 96,
+  "independent_set": 40,
+  "tree_edges": 63,
+  "odd_load_edges": 40,
+  "path_incidence_local_identity": "PASS",
+  "status": "PASS"
+}
