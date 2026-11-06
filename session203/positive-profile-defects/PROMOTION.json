@@ -1,0 +1,13 @@
+{
+  "status": "STATUS_ONLY_PROOF_PROMOTION",
+  "proof_replacements": {
+    "Status: RESERVED / proof candidate under final independent audit.": "Status: PROVED. Independently audited; see `audit/REVIEW.md`.",
+    "(PROOF CANDIDATE)": "(PROVED)"
+  },
+  "audit_source": "audit/SOURCE_PROOF.md",
+  "independent_rehoming": {
+    "original": "audit/ORIGINAL_INDEPENDENT.py",
+    "changed": "audit/independent.py",
+    "change": "Only import root changed from scratch sibling directory to release packet root."
+  }
+}

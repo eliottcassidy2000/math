@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "method": "Independent enumeration of all directed vertex permutations, then literal bin convolution",
+  "scope": "All labeled rooted inputs through n4 and all five literal children, including singleton exceptions",
+  "profiles": 450,
+  "singleton_exceptions": [
+    [
+      "Z",
+      1,
+      0
+    ],
+    [
+      "K1",
+      2,
+      1
+    ]
+  ]
+}

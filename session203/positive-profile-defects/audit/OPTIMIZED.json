@@ -1,0 +1,42 @@
+{
+  "cap_comparisons": [
+    {
+      "bound": 139,
+      "new_order_cap": 9,
+      "new_states": 378,
+      "old_order_cap": 10,
+      "old_states": 478,
+      "support": 29
+    },
+    {
+      "bound": 997,
+      "new_order_cap": 11,
+      "new_states": 3806,
+      "old_order_cap": 12,
+      "old_states": 4918,
+      "support": 302
+    },
+    {
+      "bound": 9999,
+      "new_order_cap": 15,
+      "new_states": 76870,
+      "old_order_cap": 16,
+      "old_states": 93462,
+      "support": 4009
+    }
+  ],
+  "compiler_controls": {
+    "negative": "ABSENT_START_TWO_PROFILE",
+    "positive": "PHYSICAL_START_TWO_WITNESS",
+    "resource": "INCOMPLETE"
+  },
+  "scope": "Finite independent controls of all-order proofs; not staggered occupancy.",
+  "status": "PASS",
+  "totals": {
+    "cancellation_images": 192,
+    "forests": 18803,
+    "literal_children": 5490,
+    "negative_forests": 192,
+    "rooted_inputs": 1099
+  }
+}
