@@ -1,0 +1,13 @@
+{
+  "status": "STATUS_ONLY_PROOF_PROMOTION",
+  "old": "Status: exact finite-certificate proof candidate; independently auditable.",
+  "new": "Status: PROVED by exact finite certificate; independently audited.",
+  "source_proof": "audit/SOURCE_PROOF.md",
+  "preserved_source_readme": "audit/SOURCE_README.md",
+  "path_only_rehoming": [
+    "independent.py",
+    "literal_permutations.py",
+    "closure_rows.py"
+  ],
+  "original_audit_scripts": "audit/ORIGINAL_*.py"
+}

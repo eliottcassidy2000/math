@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "method": "Independent vertex permutations, all cut sets, unordered actual path forests; direct Hamilton/two-bin closing readouts",
+  "inputs": 74,
+  "literal_transitions": 1776,
+  "literal_closures": 444,
+  "scope": "All labeled n2..4 seeds, all updates/closures, including empty bulk"
+}

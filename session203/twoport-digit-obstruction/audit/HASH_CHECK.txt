@@ -1,0 +1,7 @@
+PROOF.md: OK
+README.md: OK
+verify.py: OK
+literal_forest.py: OK
+CERTIFICATE.json: OK
+NORMAL.json: OK
+OPTIMIZED.json: OK
