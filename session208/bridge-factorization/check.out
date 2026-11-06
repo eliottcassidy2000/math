@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "vertices": 2,
+      "edges": 1,
+      "bridges": 1,
+      "trees": 1
+    },
+    {
+      "vertices": 4,
+      "edges": 3,
+      "bridges": 3,
+      "trees": 1
+    },
+    {
+      "vertices": 5,
+      "edges": 5,
+      "bridges": 2,
+      "trees": 3
+    },
+    {
+      "vertices": 7,
+      "edges": 8,
+      "bridges": 2,
+      "trees": 9
+    },
+    {
+      "vertices": 4,
+      "edges": 5,
+      "bridges": 1,
+      "trees": 4
+    }
+  ],
+  "rational_coupling_atoms": 5
+}
