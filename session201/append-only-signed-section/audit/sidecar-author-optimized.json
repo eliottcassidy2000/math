@@ -1,0 +1,18 @@
+{
+  "formal_boundary_states": 62764,
+  "formal_boundary_word_length": 11,
+  "formal_lattice_controls": 2401,
+  "growth_tail_lengths": [
+    0,
+    6
+  ],
+  "hostile_family_r": [
+    0,
+    30
+  ],
+  "physical_cap": 3000,
+  "physical_profiles": 59723,
+  "scope": "Exact first-growth and formal parity statements; no coverage claim.",
+  "status": "PASS",
+  "verifier_sha256": "20db30b03dbfc3fe4bfbb6a988882cc4505338a32a5b4a70ff82c3b2f0825752"
+}

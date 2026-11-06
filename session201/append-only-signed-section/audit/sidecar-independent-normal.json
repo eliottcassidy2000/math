@@ -1,0 +1,83 @@
+{
+  "all_order_parity": {
+    "conclusion": "All integer descendants have odd d, so cannot enter the O=Z kernel.",
+    "invariant_residue_states": [
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "transitions_checked": 6
+  },
+  "exact_collision_nullspaces": {
+    "O=J": {
+      "difference_rank": 3,
+      "kernel_basis": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    "O=Z": {
+      "difference_rank": 2,
+      "kernel_basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ]
+      ]
+    },
+    "Z=J": {
+      "difference_rank": 3,
+      "kernel_basis": [
+        [
+          1,
+          0,
+          2,
+          1
+        ]
+      ]
+    }
+  },
+  "first_growth": {
+    "D_tail_bank_height": "8 U_s",
+    "first_growth_O_lengths": [
+      0,
+      10
+    ],
+    "positive_f_first_two_section_checks": 307,
+    "source_height_cap": 128,
+    "sources": 555
+  },
+  "hostile_family": {
+    "complete_target_obstruction_search_r": [
+      0,
+      2
+    ],
+    "scaled_formula_r": [
+      0,
+      50
+    ]
+  },
+  "scope": "Separate first-growth and formal parity sidecars only; no target coverage.",
+  "status": "PASS"
+}

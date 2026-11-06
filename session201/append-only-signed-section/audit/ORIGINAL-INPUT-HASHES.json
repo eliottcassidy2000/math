@@ -1,0 +1,12 @@
+{
+  "PROOF.md": "13d883e54eb1b902b7bede93e8536f233637608b2147c2804d3fcd5e306df4cb",
+  "README.md": "9693edccc0d408465c7601544df1ba8134d8b37f67b3a75cffa82ae9f95208c1",
+  "SIDECARS-normal.json": "29e0418c6230ea64c8b6ad5de8d555b4c9ba376a8ddb2b53c6cf9ccf32505a96",
+  "SIDECARS-optimized.json": "29e0418c6230ea64c8b6ad5de8d555b4c9ba376a8ddb2b53c6cf9ccf32505a96",
+  "SIDECARS.md": "1fd38bf4651fbf35bf7e7cce033680e22d8e955ed4fb83c62dbbba2d0237254e",
+  "VALIDATION-normal.json": "6a5ceebbd7f66e2d58a21039c566d87efe1a55f140abe90ba4a54b84a326befa",
+  "VALIDATION-optimized.json": "6a5ceebbd7f66e2d58a21039c566d87efe1a55f140abe90ba4a54b84a326befa",
+  "dependencies/SIGNED-SECTION.md": "92b300d272d529bb21a504a914226b1245a631249d30d22d0e9362625a698182",
+  "verify.py": "d2b22358abcfd374064e6b533ec4384ca22ad8620f2042526fa75825ddd160a7",
+  "verify_sidecars.py": "20db30b03dbfc3fe4bfbb6a988882cc4505338a32a5b4a70ff82c3b2f0825752"
+}

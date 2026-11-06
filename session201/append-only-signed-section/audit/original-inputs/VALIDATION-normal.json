@@ -1,0 +1,295 @@
+{
+  "basis_checks": 36,
+  "complete_bank_cap": 3000,
+  "complete_bank_profiles": 59723,
+  "complete_target_comparisons": [
+    {
+      "complete_cover_cap": 5092,
+      "descendants": 130388,
+      "minimum": 1,
+      "seed": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "seed_word": "",
+      "short_completions": [
+        [
+          2,
+          1
+        ]
+      ],
+      "tail_inventory": 1938,
+      "target_cap": 151,
+      "targets": 67,
+      "targets_sha256": "19da48bc6139e339504b1349a41aa0e4566809d5583d7487d680ced072ccf347"
+    },
+    {
+      "complete_cover_cap": 5092,
+      "descendants": 83908,
+      "minimum": 1,
+      "seed": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "seed_word": "O",
+      "short_completions": [],
+      "tail_inventory": 1209,
+      "target_cap": 151,
+      "targets": 63,
+      "targets_sha256": "740c7ebcb565fa40c85bfea7c1e0f54645a3cc57a0217e32ea84a0d5eba9c008"
+    },
+    {
+      "complete_cover_cap": 5092,
+      "descendants": 92131,
+      "minimum": 1,
+      "seed": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "seed_word": "Z",
+      "short_completions": [
+        [
+          1,
+          1
+        ]
+      ],
+      "tail_inventory": 1347,
+      "target_cap": 151,
+      "targets": 63,
+      "targets_sha256": "b970f9e1bc509c04662c5e8dcea72c133125018a4132f9487cc129fa64d1066b"
+    },
+    {
+      "complete_cover_cap": 5092,
+      "descendants": 14840,
+      "minimum": 9,
+      "seed": [
+        9,
+        1,
+        11,
+        1
+      ],
+      "seed_word": "ZOZ",
+      "short_completions": [],
+      "tail_inventory": 189,
+      "target_cap": 151,
+      "targets": 19,
+      "targets_sha256": "896b8227ea78a096038a05a1902dc08dc3503c682aa703970882ed5b8669b75c"
+    },
+    {
+      "complete_cover_cap": 5092,
+      "descendants": 11447,
+      "minimum": 11,
+      "seed": [
+        11,
+        1,
+        13,
+        1
+      ],
+      "seed_word": "OZZ",
+      "short_completions": [],
+      "tail_inventory": 149,
+      "target_cap": 151,
+      "targets": 17,
+      "targets_sha256": "9e1d8299649312f4ff9471f8dea846f80f38eda9b5f312ce3d9d11488e0f3892"
+    },
+    {
+      "complete_cover_cap": 5092,
+      "descendants": 5958,
+      "minimum": 11,
+      "seed": [
+        19,
+        7,
+        23,
+        11
+      ],
+      "seed_word": "OZJJ",
+      "short_completions": [],
+      "tail_inventory": 79,
+      "target_cap": 151,
+      "targets": 10,
+      "targets_sha256": "6e2e17a53ed1d340ebe2d1d2e697063ed384f0b3a838e2dbe9419e1ad6047129"
+    },
+    {
+      "complete_cover_cap": 5092,
+      "descendants": 3183,
+      "minimum": 1,
+      "seed": [
+        29,
+        10,
+        34,
+        15
+      ],
+      "seed_word": "OJJJJ",
+      "short_completions": [
+        [
+          0,
+          1
+        ]
+      ],
+      "tail_inventory": 36,
+      "target_cap": 151,
+      "targets": 6,
+      "targets_sha256": "d9a398e67a1efd70b83d806b69379b06800a7374e9f2c0cf68a2d674766b7743"
+    },
+    {
+      "complete_cover_cap": 5092,
+      "descendants": 38966,
+      "minimum": 3,
+      "seed": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "seed_word": "ZO",
+      "short_completions": [
+        [
+          2,
+          3
+        ]
+      ],
+      "tail_inventory": 538,
+      "target_cap": 151,
+      "targets": 38,
+      "targets_sha256": "024fe3f45615e0eb036a9ab49e2298595cae552e2cf60a2c288d3ae5a223d7aa"
+    },
+    {
+      "complete_cover_cap": 5092,
+      "descendants": 17431,
+      "minimum": 1,
+      "seed": [
+        9,
+        3,
+        11,
+        5
+      ],
+      "seed_word": "ZJJ",
+      "short_completions": [
+        [
+          1,
+          1
+        ]
+      ],
+      "tail_inventory": 230,
+      "target_cap": 151,
+      "targets": 21,
+      "targets_sha256": "a0ac6674fa331f2a0bfec615fc01089b6972b08f479abee3b7b19439bd54f852"
+    },
+    {
+      "complete_cover_cap": 5092,
+      "descendants": 8075,
+      "minimum": 3,
+      "seed": [
+        15,
+        6,
+        18,
+        9
+      ],
+      "seed_word": "JOJJ",
+      "short_completions": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "tail_inventory": 107,
+      "target_cap": 151,
+      "targets": 11,
+      "targets_sha256": "cdc282a58541ab76043c92dc9c10b82a9a998900ed5392c4cfed70cf0a1a8e09"
+    }
+  ],
+  "dependency_sha256": "92b300d272d529bb21a504a914226b1245a631249d30d22d0e9362625a698182",
+  "face_counts": [
+    843,
+    1917,
+    3648
+  ],
+  "hostile_family_checked_r": [
+    0,
+    30
+  ],
+  "hostile_samples": [
+    {
+      "minimum_extension_target": 9,
+      "r": 0,
+      "replacement_witness": [
+        51,
+        18,
+        60,
+        27
+      ],
+      "signed_target": 3,
+      "source": [
+        9,
+        1,
+        11,
+        1
+      ]
+    },
+    {
+      "minimum_extension_target": 27,
+      "r": 1,
+      "replacement_witness": [
+        153,
+        54,
+        180,
+        81
+      ],
+      "signed_target": 9,
+      "source": [
+        27,
+        3,
+        33,
+        3
+      ]
+    },
+    {
+      "minimum_extension_target": 81,
+      "r": 2,
+      "replacement_witness": [
+        459,
+        162,
+        540,
+        243
+      ],
+      "signed_target": 27,
+      "source": [
+        81,
+        9,
+        99,
+        9
+      ]
+    },
+    {
+      "minimum_extension_target": 243,
+      "r": 3,
+      "replacement_witness": [
+        1377,
+        486,
+        1620,
+        729
+      ],
+      "signed_target": 81,
+      "source": [
+        243,
+        27,
+        297,
+        27
+      ]
+    }
+  ],
+  "minimum_formula_checks": 59723,
+  "scope": "Exact append-only orbit theorem and complete declared finite windows; all-target occupancy remains open.",
+  "status": "PASS",
+  "verifier_sha256": "d2b22358abcfd374064e6b533ec4384ca22ad8620f2042526fa75825ddd160a7"
+}

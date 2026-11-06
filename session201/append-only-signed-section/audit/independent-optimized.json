@@ -1,0 +1,92 @@
+{
+  "classification": {
+    "doubled_bound_sources": 12,
+    "largest_balanced_height_cap": 319,
+    "largest_forward_height_cap": 4004,
+    "necessary_component_controls": {
+      "optional_deletion": {
+        "prefix_after_t": "OJ",
+        "raw_source": [
+          5,
+          1,
+          5,
+          1
+        ],
+        "targets": [
+          1
+        ]
+      },
+      "short_completions": {
+        "prefix_after_t": "ZJ",
+        "raw_source": [
+          5,
+          2,
+          6,
+          3
+        ],
+        "targets": [
+          1
+        ]
+      }
+    },
+    "positive_f_sources": 307,
+    "seed_count": 555,
+    "seed_height_cap": 128,
+    "source_target_decisions": 34965,
+    "sum_core_bank_sizes": 4481,
+    "sum_forward_bank_sizes": 368961,
+    "target_window": [
+      1,
+      63
+    ]
+  },
+  "formal": {
+    "f_zero_basis_vectors": 3,
+    "raw_basis_vectors": 4
+  },
+  "geometry": {
+    "edge_checks": 101073,
+    "f_positive": 19497,
+    "f_zero": 14194,
+    "height_cap": 2048,
+    "profiles": 33691,
+    "section": 488,
+    "short_hits_by_j": [
+      488,
+      1109,
+      2044
+    ]
+  },
+  "hostile": {
+    "complete_bounded_obstruction_checks": [
+      {
+        "descendants": 86,
+        "height_cap": 172,
+        "r": 0,
+        "section_target": 3,
+        "source_D": 9
+      },
+      {
+        "descendants": 86,
+        "height_cap": 516,
+        "r": 1,
+        "section_target": 9,
+        "source_D": 27
+      },
+      {
+        "descendants": 86,
+        "height_cap": 1548,
+        "r": 2,
+        "section_target": 27,
+        "source_D": 81
+      }
+    ],
+    "formula_range_r": [
+      0,
+      40
+    ]
+  },
+  "representation": "independently derived (a,f,e,p)",
+  "scope": "Append-only classification for a supplied actual source. No all-target coverage claim.",
+  "status": "PASS"
+}
