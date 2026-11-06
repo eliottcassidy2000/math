@@ -1,0 +1,13 @@
+# order 4: 4 tournaments read, 1 strong, max h = 5
+# max hc = 1
+T 1 0 0 1
+T 3 1 0 2
+T 5 2 1 1
+W 1 111111
+W 3 111101
+W 5 100111
+S 5 100111
+C 1 0 1
+C 3 0 2
+C 5 1 1
+# distinct h = 3, distinct strong h = 1

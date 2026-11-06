@@ -1,0 +1,10 @@
+# order 3: 2 tournaments read, 1 strong, max h = 3
+# max hc = 1
+T 1 0 0 1
+T 3 1 1 1
+W 1 111
+W 3 101
+S 3 101
+C 1 0 1
+C 3 1 1
+# distinct h = 2, distinct strong h = 1
