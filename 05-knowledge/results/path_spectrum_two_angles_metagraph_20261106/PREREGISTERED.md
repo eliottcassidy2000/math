@@ -22,3 +22,10 @@ for even `m`); `φ_n(k)` = least `h` at level `k` of order `n`; `f(n)` = Busch's
 | P9 | for odd `h < 375` the strong window `W(h) = {n : h ∈ Ss(n)}` is an interval `[n(h), e(h)]` with `e(h) ∈ {B(h) − 1, B(h)}`, and `n_s(h) = n(h)` for every `h ∈ S(11)` | true for `h < 225` from orders ≤ 10 (90 windows end at `B(h)`, 19 one short) |
 | P10 | the number of distinct values at order 11 lies in `[40,000, 48,000]`; the solid prefix `s(11)` (every odd `≤ s` except 7, 21 attained) is at least `0.85 · 95,095` | the sampled `h_spectrum_n11.out` saw 39,951 distinct values in 10⁶ samples; `s/max` = 0.92, 0.86, 0.93 at orders 8–10 |
 | P11 | strong classes first appear at level `9 = 11 − 2` (Moon's bound), and the level widths (classes per level) sum to 903,753,248 | Moon; orders 3–10 |
+
+**Addendum (14:32, census still running).** Two further laws read off orders 6–10 after the first commit:
+
+| # | prediction | source of the expectation |
+|---|---|---|
+| P12 | top-level separation: `φ_11(55) > ψ_11(54)`, i.e. every regular 11-tournament (level 55) has more Hamiltonian paths than every non-regular 11-tournament; equivalently the values of the top level occur at no lower level | true at orders 6–10: `(ψ(Λ−1), φ(Λ))` = (37, 41), (159, 171), (613, 621), (3109, 3159), (14733, 14877); the margin at order 9 is only 1.6 %, and the 1,223 regular 11-tournaments are more varied than the 15 regular 9-tournaments, so this test is genuinely uncertain |
+| P13 | the vertical gradient `h(T) / max_v h(T − v)` over all 11-tournaments stays below 11 (trivial, since `h(T) ≤ Σ_v h(T − v)`) and above 1 (insertion lemma), with maximum at least 5.35 (the order-9 maximum); the least ratio among classes whose value is new at order 11 lies in `[1.6, 1.8]` | 1.727, 1.690, 1.646, 1.681 at orders 6–9 — not tested at order 11 by this session's census (it records no deletions); recorded for a later session |
