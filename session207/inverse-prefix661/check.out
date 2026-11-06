@@ -1,0 +1,11 @@
+PASS strong n9 witness 611 45937614978 by all 9! permutations
+PASS strong n9 witness 635 45652394176 by all 9! permutations
+PASS strong n9 witness 619 45115523264 by all 9! permutations
+PASS strong n9 witness 655 45685956800 by all 9! permutations
+PASS strong n9 witness 615 45685416128 by all 9! permutations
+PASS strong n9 witness 625 45650829504 by all 9! permutations
+PASS strong n9 witness 617 45669179456 by all 9! permutations
+PASS strong n9 witness 647 45635608768 by all 9! permutations
+PASS strong n9 witness 623 43805851840 by all 9! permutations
+PASS complete exact inverse table for all 329 attainable values in [1,661].
+PASS cyclic-fan identity controls k=1..5.
