@@ -1,0 +1,10 @@
+--- reviewed/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # All bounded physical Z defects have sparse profile support
+ 
+-Status: RESERVED / proof candidate awaiting independent audit.
++Status: PROVED / independently audited in the stated scope.
+ 
+ ## 1. Statement and exact scope
+ 

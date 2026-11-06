@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "positive_rooted_inputs": 164030,
+  "one_outneighbor_nonedge_inputs": 22654,
+  "multiple_outneighbor_inputs": 141374,
+  "chain_templates": 124,
+  "literal_expansions": 904,
+  "long_run_normalizations": 63
+}

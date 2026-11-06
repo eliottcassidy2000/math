@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "scope": "Release packaging only. The all-source sparsity bound is for each fixed positive absolute-defect cap K and nontrivial positive-start rooted tournaments. F8 and the eventual Hamilton-spectrum threshold remain open.",
+  "staged_directory": "session203-bounded-defect-release/session203/bounded-defect-sparsity",
+  "proof_sha256": "f3f038e579c1816bf486d168dc78e78b2dec1000c3194691f02d5a592b873fd2",
+  "readme_sha256": "42053feac449a635f996b5f488ea7dbc2ddd714f7c69c720de4431e9d0b46943",
+  "audit_review_sha256": "a84c616299d3d7e4efca47ac5fab950a39bf33fdc8f3f501abf10ddd57f360a7",
+  "preserved_audit_manifest_entries": 19,
+  "checks": [
+    "Proof changes exactly its status line; reviewed original and exact diff preserved.",
+    "Dependency metadata changes exactly two reviewed fields; reviewed original and exact diff preserved.",
+    "All 19 independent audit entries plus original manifest are byte-identical.",
+    "Producer source, receipts and all mathematical dependency bytes are unchanged.",
+    "All four dependency Git blobs and SHA256 hashes agree with their exact-readback publication receipts.",
+    "Relocated producer and independent skeleton replays match frozen outputs byte-for-byte.",
+    "README now explicitly limits the unbounded-defect consequence to bounded-start staggered constructions covering every sufficiently large odd base.",
+    "README correctly states fixed K, count-only normalization, singleton and rooted-edge boundaries, and lack of an F8 conclusion.",
+    "Refreshed package manifest passes."
+  ],
+  "permitted_final_metadata_changes": [
+    "Set PROMOTION.json release-review status to PASS.",
+    "Include this receipt and regenerate the package manifest."
+  ],
+  "publication": "No GitHub or shared-index writes performed. Parent coordinates the publication lane."
+}

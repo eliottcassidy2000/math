@@ -1,0 +1,35 @@
+[
+  {
+    "local_file": "COVER_EQUALITY_PROOF.md",
+    "published_commit": "809cc83ca9d0264d572eb4f81cc954c8672afed8",
+    "published_path": "session203/sharp-defect-normal-form/reviewed/PROOF.md",
+    "git_blob_sha": "c0a78547950afe7c84e9a44481374ed41fbb3f36",
+    "sha256": "680ee2d8e97f700d33b008e2a42f9e61a9287da03d25668e4b7d430e8db72ea7",
+    "url": "https://github.com/eliottcassidy2000/math/blob/809cc83ca9d0264d572eb4f81cc954c8672afed8/session203/sharp-defect-normal-form/reviewed/PROOF.md"
+  },
+  {
+    "local_file": "SHARP_DEFECT_PROOF.md",
+    "published_commit": "20d185c937163242289918282869826d0e1ddb75",
+    "published_path": "session203/sharp-z-defect/reviewed/PROOF.md",
+    "git_blob_sha": "5b108da2e94d08535938ec7a3fc6ac1296b341a9",
+    "sha256": "582687a3d966a928efb7355cca6d9f1181d76d09d4065da17a0815d1343f457d",
+    "url": "https://github.com/eliottcassidy2000/math/blob/20d185c937163242289918282869826d0e1ddb75/session203/sharp-z-defect/reviewed/PROOF.md"
+  },
+  {
+    "local_file": "counting.hpp",
+    "published_commit": "809cc83ca9d0264d572eb4f81cc954c8672afed8",
+    "published_path": "session203/sharp-defect-normal-form/dependencies/counting.hpp",
+    "git_blob_sha": "8e137c05b89db1d14ee8b3776e2f0362e02b52cb",
+    "sha256": "c8565a4e72c84fe381eedd006555bc257c89385c4bfbe0c2e1431895ad5853d1",
+    "url": "https://github.com/eliottcassidy2000/math/blob/809cc83ca9d0264d572eb4f81cc954c8672afed8/session203/sharp-defect-normal-form/dependencies/counting.hpp"
+  },
+  {
+    "local_file": "ROOTED_COVER_CLOSURE.md",
+    "published_commit": "5067f5a9e43237ab3013399b3636dff92096d886",
+    "published_path": "session203/rooted-cover-closure/PROOF.md",
+    "git_blob_sha": "4360809d176a820160e2d201c464bcba920d103f",
+    "sha256": "8e78951f9dd15decff0d23cfb3ebe64f358b3c9d4561b269b527a1e9aa902168",
+    "url": "https://github.com/eliottcassidy2000/math/blob/5067f5a9e43237ab3013399b3636dff92096d886/session203/rooted-cover-closure/PROOF.md",
+    "readback_basis": "Existing exact-blob publication receipt; local bytes independently hashed to the published blob."
+  }
+]

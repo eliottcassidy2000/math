@@ -1,0 +1,25 @@
+{
+  "scope": "Exact defect decomposition and physical B edge readout are inherited; the lower bound for two-terminal covers is the separately frozen new cover-equality theorem. No newer density theorem is assumed.",
+  "files": [
+    {
+      "path": "dependencies/COVER_EQUALITY_PROOF.md",
+      "sha256": "680ee2d8e97f700d33b008e2a42f9e61a9287da03d25668e4b7d430e8db72ea7"
+    },
+    {
+      "path": "dependencies/ROOTED_COVER_CLOSURE.md",
+      "sha256": "8e78951f9dd15decff0d23cfb3ebe64f358b3c9d4561b269b527a1e9aa902168"
+    },
+    {
+      "path": "dependencies/SHARP_DEFECT_PROOF.md",
+      "sha256": "582687a3d966a928efb7355cca6d9f1181d76d09d4065da17a0815d1343f457d"
+    },
+    {
+      "path": "dependencies/counting.hpp",
+      "sha256": "c8565a4e72c84fe381eedd006555bc257c89385c4bfbe0c2e1431895ad5853d1"
+    }
+  ],
+  "rooted_cover_closure_commit": "5067f5a9e43237ab3013399b3636dff92096d886",
+  "rooted_cover_closure_path": "session203/rooted-cover-closure/PROOF.md",
+  "sharp_defect_review": "https://github.com/eliottcassidy2000/math/blob/20d185c937163242289918282869826d0e1ddb75/session203/sharp-z-defect/audit/REVIEW.md",
+  "cover_equality_status": "PROVED, independently audited and published at 809cc83ca9d0264d572eb4f81cc954c8672afed8"
+}

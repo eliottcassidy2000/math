@@ -1,0 +1,11 @@
+--- reviewed/DEPENDENCIES.json
++++ DEPENDENCIES.json
+@@ -20,6 +20,6 @@
+   ],
+   "rooted_cover_closure_commit": "5067f5a9e43237ab3013399b3636dff92096d886",
+   "rooted_cover_closure_path": "session203/rooted-cover-closure/PROOF.md",
+-  "sharp_defect_review": "../session203-sharp-z-defect-audit/REVIEW.md",
+-  "cover_equality_status": "RESERVED, queued for independent audit"
++  "sharp_defect_review": "https://github.com/eliottcassidy2000/math/blob/20d185c937163242289918282869826d0e1ddb75/session203/sharp-z-defect/audit/REVIEW.md",
++  "cover_equality_status": "PROVED, independently audited and published at 809cc83ca9d0264d572eb4f81cc954c8672afed8"
+ }

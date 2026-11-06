@@ -1,0 +1,1 @@
+{"status":"PASS","positive_marked_graphs":164030,"multiple_successor":141374,"unique_successor_nonedge":22654,"rooted_edges":2,"extracted_patterns":164028,"homogeneous_runs":43222,"pattern_counts_by_cap":{"1":2430,"2":2430,"3":5254,"4":5254,"5":9958,"8":13804,"16":26876,"26":40204}}
