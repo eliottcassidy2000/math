@@ -1,0 +1,1 @@
+{"status":"PASS","padding_words":31,"right_graphs":75,"right_root_choices":285,"right_literal_pairs":570,"generic_small_padding_cases":568,"profile_calls":1523,"literal_full_count_calls":634,"directed_prefix_visits":54389277,"seed_profiles_h_s_e_L_R_d_beta":[45,6,9,72,57,13,104,43,7,9,75,57,13,104],"base999_targets":[2999,3001],"unconditional_coverage_claim":false}

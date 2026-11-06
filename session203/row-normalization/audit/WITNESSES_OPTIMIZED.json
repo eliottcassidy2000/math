@@ -1,0 +1,16 @@
+{
+  "child_orders": [
+    12,
+    13
+  ],
+  "scope": "Exact row construction and archived arithmetic; independent counts are checked by check.cpp.",
+  "source_orders": [
+    9,
+    10
+  ],
+  "status": "PASS",
+  "targets": [
+    2999,
+    3001
+  ]
+}

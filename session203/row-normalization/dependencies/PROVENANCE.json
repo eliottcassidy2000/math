@@ -1,0 +1,23 @@
+{
+  "ROOTED_ORDERED_AMALGAMATION.md": {
+    "repository": "eliottcassidy2000/math",
+    "commit": "1250ca1a59264cf3c8a3da8c98cd02d0cab80bbe",
+    "path": "session197/path-polynomials/ROOTED_ORDERED_AMALGAMATION.md",
+    "git_blob": "a89666a6f1ba8fd4a12999362186181f25af80af",
+    "sha256": "0166889f66a6363506d336dcf7ae3d34a768f4ae79be5d387cfb426d78fe2883"
+  },
+  "ROOTED_AMALGAMATION_README.md": {
+    "repository": "eliottcassidy2000/math",
+    "commit": "1250ca1a59264cf3c8a3da8c98cd02d0cab80bbe",
+    "path": "session197/path-polynomials/ROOTED_AMALGAMATION_README.md",
+    "git_blob": "cd1f6891332c43d91c5ace036038e2dd394c12e7",
+    "sha256": "492b57f5792a96eba8e16e2b89c2a22aa56732b89163d41405fc5fe80116bdff"
+  },
+  "ROOTED_AMALGAMATION_AUDIT.md": {
+    "repository": "eliottcassidy2000/math",
+    "commit": "1250ca1a59264cf3c8a3da8c98cd02d0cab80bbe",
+    "path": "session197/path-polynomials/rooted-amalgamation-review/REPORT.md",
+    "git_blob": "8b8b185656c2be0844e190b719f8df90a85b408a",
+    "sha256": "b70782bf64705d3633757fd0c866bdcdeea7b1f6561e73591fa075d9d78b6c7b"
+  }
+}

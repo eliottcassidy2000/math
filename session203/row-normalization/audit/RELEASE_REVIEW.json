@@ -1,0 +1,34 @@
+{
+  "status": "PASS_RELEASE_REVIEW",
+  "reviewed_proof_sha256": "6424bba04da878d83705191df27434f3110a0be36fb4ea0f9fa8c4b68663f8fc",
+  "promoted_proof_sha256": "0b89119d943d217273edf4fe8c6e0064b2e3a17bcc5bcb3d13d444b1a4e7233a",
+  "changed_proof_lines": [
+    3
+  ],
+  "README_sha256": "d2dcff3fe4099ac1767710dad325ddee43e3bcbefa12bf3762a038df393a5b6a",
+  "preserved_audit_entries": [
+    "REVIEW.md",
+    "REVIEWED_PROOF.md",
+    "REVIEWED_INPUTS.json",
+    "REVIEWED_BASE999_WITNESSES.json",
+    "PRODUCER_VERIFIER.cpp",
+    "check.cpp",
+    "check_witness_rows.py",
+    "NORMAL.json",
+    "DEBUG.json",
+    "WITNESSES_NORMAL.json",
+    "WITNESSES_OPTIMIZED.json",
+    "PRODUCER_NORMAL.json",
+    "PRODUCER_DEBUG.json",
+    "AUDIT_RECEIPT.json",
+    "dependencies/FREE_ADDITIVE_AUDIT.md",
+    "dependencies/FREE_ADDITIVE_DIFFERENCE.md",
+    "dependencies/PROVENANCE.json",
+    "dependencies/ROOTED_AMALGAMATION_AUDIT.md",
+    "dependencies/ROOTED_AMALGAMATION_README.md",
+    "dependencies/ROOTED_ORDERED_AMALGAMATION.md"
+  ],
+  "scope": "Two actual common-profile sources, common O/Z padding, arbitrary common right amalgamation with scaled endpoints, and two finite base-999 witnesses. No arbitrary-base or F(8,137) or eventual-threshold theorem. The arbitrary-module extension is excluded.",
+  "checks": "Every frozen audit entry and nested manifest is preserved. All author input hashes match, with proof hash mapped to the reviewed original after status-only promotion. README correctly states the modulo-3 limitation and unchanged conditional compiler. No new mathematics introduced.",
+  "publication": "Parent coordinates; no branch writes by this auditor."
+}

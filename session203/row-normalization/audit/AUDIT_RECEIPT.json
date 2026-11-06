@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "reviewed_proof_sha256": "6424bba04da878d83705191df27434f3110a0be36fb4ea0f9fa8c4b68663f8fc",
+  "review_sha256": "eedacd9e2be3bf5b8b21ce29029ee8ffc8dfcce1e623318a15fcfdbb4de4f25d",
+  "independent_checker_sha256": "b517739ca1e4108aedebf127cd43a9811f4bae3735cf7997a0838e85cb786f61",
+  "normal_and_debug_sha256": "362e1c007129a04da6cebf9caaef57a3ab3fca176b4cf3f416ad1bccfad22856",
+  "right_root_choices": 285,
+  "right_literal_pairs": 570,
+  "padding_words": 31,
+  "scope": "Physical common row for two specified sources, arbitrary common O/Z words and rooted right inputs, with starts scaling as 6d_W and 7d_W. Two exact base-999 witnesses. No F(8,137), arbitrary-base or eventual-threshold claim.",
+  "publication": "Not performed by this audit; parent coordinates."
+}
