@@ -1,7 +1,7 @@
 ---
 id: HYP-9478
 title: "Pre-registered out-of-sample tests for the representation mass of one-arc join families: (P1) the one-apex x bank family F2 has mean multiplicity exactly M_2 = sum_y (2/y_h) ln(1 + y_h/y_R) = 48.1976 in the dyadic blocks k = 28, 29; (P2) the one-apex x one-apex family F1 gains (pi^2/12) ln 2 = 0.5701 per doubling at k = 28, 29; (P3) F2 alone, with the fixed order-<=7 bank, attains every odd N <= 2^30 except 7 and 21; (P4) its lower tail keeps thinning; (P5) F1 u F2 attains every odd N <= 2^35 except 7 and 21; (P6) F2 alone attains every odd N <= 2^35 except 7 and 21; (P7) F1-only miss ratios stay in [1.50, 1.65] for k = 32..34"
-status: PRE-REGISTERED (committed before any run beyond 2^28)
+status: "P1-P4 CONFIRMED out of sample (run after the pre-registration commit 09b7a56a98); P5-P7 pending the 2^35 run"
 session: opus-2026-11-06-S82
 date: 2026-11-06
 related: [THM-4885, THM-4875, HYP-9468]
@@ -69,4 +69,16 @@ not as confirmed.
 
 ## Results
 
-(To be filled after the runs.)
+Source: `chanpak_join_multiplicity_20261106.out`, LOGX = 30. The run was made after this file's pre-registration commit
+09b7a56a98.
+
+| k | mean r2 | min r2 | r2 <= 12 | r2 <= 20 | mean r1 | increment |
+|---|---|---|---|---|---|---|
+| 28 | 48.1976 | 5 | 2.637e-5 | 3.348e-3 | 16.6250 | +0.5701 |
+| 29 | 48.1976 | 4 | 2.566e-5 | 3.334e-3 | 17.1951 | +0.5701 |
+
+- **(P1) CONFIRMED.** Both block means are 48.1976. M_2 = 48.197612.
+- **(P2) CONFIRMED.** Both increments are 0.5701. (pi^2/12) ln 2 = 0.570091.
+- **(P3) CONFIRMED.** The odd N <= 2^30 with r2 = 0 are exactly 7 and 21. The block minima are 5 and 4, both >= 4.
+- **(P4) CONFIRMED.** 2.566e-5 < 2.85e-5, and 3.334e-3 < 3.42e-3.
+- **(P5)-(P7)** are pending the LOGX = 35 coverage run.
