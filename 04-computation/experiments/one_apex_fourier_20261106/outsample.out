@@ -1,0 +1,3 @@
+n=26: sqrt-ratios phi=1.723 sqrt2-1=0.612 pi-3=0.413 e-2=0.730 sqrt3-1=1.700 | E/|X| = 3.2526, distinct/|X| = 0.3734
+n=28: sqrt-ratios phi=1.979 sqrt2-1=1.782 pi-3=1.547 e-2=0.821 sqrt3-1=1.443 | E/|X| = 3.2473, distinct/|X| = 0.3737
+P3: 48 cases; Q/diag min 0.9971 max 1.0686; outside [0.85, 1.2]: 0

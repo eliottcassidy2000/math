@@ -1,0 +1,5 @@
+max over tested (n, q) of bound * sqrt(q) for 2 <= q <= 2^((n-3)/3): 4.213  (claimed 6.5)
+max of bound / (q/2^n)^(1/4) for 2^((n-6)/3) <= q <= 2^(n-6): 9.539  (claimed 11.3)
+eps=0.100: max of bound * 2^(eps n/4) over n in [30,120], 2^(eps n) < q <= 2^((1-eps) n): 4.564
+eps=0.200: max of bound * 2^(eps n/4) over n in [30,120], 2^(eps n) < q <= 2^((1-eps) n): 4.564
+eps=0.333: max of bound * 2^(eps n/4) over n in [30,120], 2^(eps n) < q <= 2^((1-eps) n): 4.564

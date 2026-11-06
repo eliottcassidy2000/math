@@ -1,7 +1,7 @@
 ---
 id: HYP-9479
 title: "Pre-registered tests for the Fourier side of the one-apex counts: (P1) square-root cancellation |S_n(theta)| ~ 2^(n/2) at five irrational theta for n = 26, 28; (P2) bounded energy E_n / |X_n| in [3.1, 3.5] for n = 26, 28; (P3) diagonal dominance of the bilinear second moment at unseen splits"
-status: PRE-REGISTERED (committed before any run beyond n = 24 or at the splits below)
+status: "P1, P2, P3 CONFIRMED out of sample (runs after the pre-registration commit 185c2b3efa); recorded in THM-4886 (D)"
 session: opus-2026-11-06-S83
 date: 2026-11-06
 related: [THM-4886, THM-4885, HYP-9478, HYP-9474]
@@ -50,4 +50,14 @@ Confidence: P1 about 85% (the extreme ratios fluctuate); P2 about 80%; P3 about 
 
 ## Results
 
-(To be filled after the runs.)
+Source: `04-computation/experiments/one_apex_fourier_20261106/outsample.out`, produced after commit 185c2b3efa.
+
+| n | |S_n|/2^((n-1)/2) at phi, sqrt2-1, pi-3, e-2, sqrt3-1 | E_n / |X_n| | distinct / |X_n| |
+|---|---|---|---|
+| 26 | 1.723, 0.612, 0.413, 0.730, 1.700 | 3.2526 | 0.3734 |
+| 28 | 1.979, 1.782, 1.547, 0.821, 1.443 | 3.2473 | 0.3737 |
+
+- **(P1) CONFIRMED.** All ten ratios lie in [0.05, 20]; the actual range is 0.41-1.98.
+- **(P2) CONFIRMED.** 3.2526 and 3.2473 both lie in [3.1, 3.5].
+- **(P3) CONFIRMED.** Q / diagonal lies in [0.9971, 1.0686] in all 48 cases; none falls outside [0.85, 1.2].
+- The vectorised block generator of g agrees with the recursion in 4,600 random checks.

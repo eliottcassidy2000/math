@@ -1,0 +1,27 @@
+lemma (1): violations 0 of 3000; max lhs/rhs = 0.815
+a=5 L=4 l=5 q=   7: sum|F|^2 / diag = 1.685  <= 1+R = 29.19
+a=5 L=4 l=5 q=  37: sum|F|^2 / diag = 1.063  <= 1+R = 28.69
+a=5 L=4 l=5 q= 101: sum|F|^2 / diag = 0.980  <= 1+R = 49.68
+a=5 L=4 l=5 q=  72: sum|F|^2 / diag = 0.998  <= 1+R = 39.80
+a=5 L=4 l=5 q= 257: sum|F|^2 / diag = 0.988  <= 1+R = 104.26
+a=6 L=5 l=6 q=   7: sum|F|^2 / diag = 2.766  <= 1+R = 41.67
+a=6 L=5 l=6 q=  37: sum|F|^2 / diag = 0.963  <= 1+R = 24.74
+a=6 L=5 l=6 q= 101: sum|F|^2 / diag = 1.145  <= 1+R = 32.77
+a=6 L=5 l=6 q= 233: sum|F|^2 / diag = 1.019  <= 1+R = 55.03
+a=6 L=5 l=6 q= 257: sum|F|^2 / diag = 1.016  <= 1+R = 59.20
+a=7 L=4 l=7 q=   7: sum|F|^2 / diag = 1.726  <= 1+R = 22.86
+a=7 L=4 l=7 q=  37: sum|F|^2 / diag = 1.001  <= 1+R = 14.46
+a=7 L=4 l=7 q= 101: sum|F|^2 / diag = 1.008  <= 1+R = 18.54
+a=7 L=4 l=7 q= 305: sum|F|^2 / diag = 1.002  <= 1+R = 36.00
+a=7 L=4 l=7 q= 257: sum|F|^2 / diag = 0.998  <= 1+R = 31.81
+a=6 L=6 l=6 q=   7: sum|F|^2 / diag = 4.373  <= 1+R = 75.04
+a=6 L=6 l=6 q=  37: sum|F|^2 / diag = 1.013  <= 1+R = 35.75
+a=6 L=6 l=6 q= 101: sum|F|^2 / diag = 1.036  <= 1+R = 40.41
+a=6 L=6 l=6 q= 305: sum|F|^2 / diag = 0.980  <= 1+R = 73.88
+a=6 L=6 l=6 q= 257: sum|F|^2 / diag = 0.915  <= 1+R = 65.64
+a=8 L=3 l=8 q=   7: sum|F|^2 / diag = 1.250  <= 1+R = 14.56
+a=8 L=3 l=8 q=  37: sum|F|^2 / diag = 1.000  <= 1+R = 10.38
+a=8 L=3 l=8 q= 101: sum|F|^2 / diag = 1.000  <= 1+R = 12.46
+a=8 L=3 l=8 q= 305: sum|F|^2 / diag = 1.000  <= 1+R = 21.25
+a=8 L=3 l=8 q= 257: sum|F|^2 / diag = 1.000  <= 1+R = 19.14
+core (2): violations 0 of 100

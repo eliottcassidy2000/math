@@ -1,0 +1,15 @@
+square-root ratios |S_n(theta)| / 2^((n-1)/2):
+  n=14: phi=0.437 sqrt2-1=0.349 pi-3=0.339 e-2=1.627 sqrt3-1=0.640
+  n=16: phi=1.115 sqrt2-1=1.441 pi-3=1.056 e-2=1.446 sqrt3-1=0.166
+  n=18: phi=0.926 sqrt2-1=0.837 pi-3=2.457 e-2=2.051 sqrt3-1=0.818
+  n=20: phi=1.075 sqrt2-1=2.017 pi-3=1.246 e-2=0.583 sqrt3-1=0.707
+  n=22: phi=1.172 sqrt2-1=0.769 pi-3=0.225 e-2=0.518 sqrt3-1=1.316
+  n=24: phi=1.473 sqrt2-1=1.424 pi-3=0.869 e-2=0.591 sqrt3-1=1.150
+energy ratio E_n / |X_n| (pairs of words of length n, leading 1, with equal count):
+  n=12: E/|X| = 2.9297  distinct values / |X| = 0.4028
+  n=14: E/|X| = 3.0571  distinct values / |X| = 0.3888
+  n=16: E/|X| = 3.1880  distinct values / |X| = 0.3787
+  n=18: E/|X| = 3.2258  distinct values / |X| = 0.3753
+  n=20: E/|X| = 3.2424  distinct values / |X| = 0.3743
+  n=22: E/|X| = 3.2607  distinct values / |X| = 0.3729
+  n=24: E/|X| = 3.2574  distinct values / |X| = 0.3730
