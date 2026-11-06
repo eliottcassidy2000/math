@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "explicit_symmetry_images_checked": 144,
+  "all72_expected_stretches": "157/48",
+  "all72_expected_loads": "13/4",
+  "all_detours": "A=5; B=3",
+  "lower_bounds": "19/8;79/36"
+}

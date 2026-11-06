@@ -1,0 +1,9 @@
+# Independent core geometry audit
+
+PASS, 2026-11-06. Reviewed all mathematical statements and checker assertions. The two subdivided-cube identification is valid: each suppressed connected graph is simple cubic bipartite on4+4 vertices, hence K4,4 minus a perfect matching. Six square components, doubled octahedral face triples and opposite-pair partition are exhaustively certified. The bridge-deleted core and carrier distinctions are correct; the square contraction is not claimed distance preserving.
+
+Independently regenerated native adjacency by tournament-first enumeration (rather than the author's fixed-path/free-bit generation). Checked core sizes40/72 and48/24 edge strata. Recomputed all72 edge-deletion detour distances:5 on A and3 on B. The lower bounds follow correctly from39 core tree edges and b>=1. The weighted demand certificate gives228/96=19/8, and total path incidence gives158/72=79/36. Neither lower bound is claimed attained.
+
+Independently constructed all48 relabelling/converse maps using inverse label coordinates and validated graph automorphisms. Explicitly transformed each of the three saved trees and recounted every edge path and load for all144 image trees, avoiding reliance solely on aggregate orbit formulas. Exact rational averages give157/48 on every one of72 core edges for the stated29/32,3/32 distance mixture, and13/4 on every edge for the root51 capacity distribution. Leaves are bridges and contribute exactly1. The distributions and their support bounds are valid. No floating arithmetic or new logarithmic embedding theorem is needed.
+
+Replayed check.py; output byte-matches RESULT.json. Independent checker/output are session208-independent-audit/check_core.py and core-independent.out; bundle sibling-relative input for standalone release. No blocker.
