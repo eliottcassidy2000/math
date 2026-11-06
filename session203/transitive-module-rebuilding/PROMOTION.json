@@ -1,0 +1,7 @@
+{
+  "reviewed_sha256": "c668cd4f50188050cdf53affd139c4001294c9176532ac273c85c9c6bf6e8596",
+  "promoted_sha256": "55db518c68502746f63b3cdea4671d609425151a47963d7b55f262aeaec258d3",
+  "only_line3_changed": true,
+  "reviewed_status": "**RESERVED / proof and finite coefficient certificate under independent audit.**",
+  "promoted_status": "**PROVED, independently audited in the stated scope.**"
+}

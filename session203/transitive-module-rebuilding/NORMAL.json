@@ -1,0 +1,290 @@
+{
+  "families": [
+    {
+      "P": [
+        2,
+        24,
+        3,
+        37,
+        13,
+        23
+      ],
+      "T": [
+        2,
+        8,
+        67,
+        101,
+        15,
+        87,
+        19
+      ],
+      "cycP": [
+        2,
+        3,
+        1
+      ],
+      "cycT": [
+        3,
+        5,
+        2
+      ],
+      "extra": 1,
+      "flip": [
+        1,
+        4
+      ],
+      "hpP": [
+        25,
+        59,
+        41,
+        8
+      ],
+      "hpT": [
+        51,
+        119,
+        82,
+        16
+      ],
+      "mask": 15,
+      "name": "A",
+      "samples": [
+        {
+          "child_C": 3,
+          "child_H": 51,
+          "k": 0,
+          "parent_C": 2,
+          "parent_H": 25
+        },
+        {
+          "child_C": 5,
+          "child_H": 119,
+          "k": 1,
+          "parent_C": 3,
+          "parent_H": 59
+        },
+        {
+          "child_C": 9,
+          "child_H": 283,
+          "k": 2,
+          "parent_C": 5,
+          "parent_H": 141
+        },
+        {
+          "child_C": 17,
+          "child_H": 707,
+          "k": 3,
+          "parent_C": 9,
+          "parent_H": 353
+        },
+        {
+          "child_C": 33,
+          "child_H": 1843,
+          "k": 4,
+          "parent_C": 17,
+          "parent_H": 921
+        }
+      ]
+    },
+    {
+      "P": [
+        32,
+        5,
+        1,
+        39,
+        47,
+        70,
+        31
+      ],
+      "T": [
+        0,
+        5,
+        129,
+        39,
+        47,
+        199,
+        159,
+        27
+      ],
+      "cycP": [
+        1,
+        1
+      ],
+      "cycReduced": [
+        3,
+        3
+      ],
+      "cycT": [
+        0
+      ],
+      "extra": 0,
+      "flip": [
+        0,
+        5
+      ],
+      "hpP": [
+        25,
+        45,
+        20
+      ],
+      "hpT": [
+        51,
+        91,
+        40
+      ],
+      "mask": 5,
+      "name": "B",
+      "samples": [
+        {
+          "child_C": 0,
+          "child_H": 51,
+          "k": 0,
+          "parent_C": 1,
+          "parent_H": 25,
+          "replacement_C": 3,
+          "replacement_H": 51
+        },
+        {
+          "child_C": 0,
+          "child_H": 91,
+          "k": 1,
+          "parent_C": 1,
+          "parent_H": 45,
+          "replacement_C": 3,
+          "replacement_H": 91
+        },
+        {
+          "child_C": 0,
+          "child_H": 171,
+          "k": 2,
+          "parent_C": 1,
+          "parent_H": 85,
+          "replacement_C": 3,
+          "replacement_H": 171
+        },
+        {
+          "child_C": 0,
+          "child_H": 331,
+          "k": 3,
+          "parent_C": 1,
+          "parent_H": 165,
+          "replacement_C": 3,
+          "replacement_H": 331
+        },
+        {
+          "child_C": 0,
+          "child_H": 651,
+          "k": 4,
+          "parent_C": 1,
+          "parent_H": 325,
+          "replacement_C": 3,
+          "replacement_H": 651
+        }
+      ]
+    },
+    {
+      "P": [
+        2,
+        4,
+        41,
+        3,
+        15,
+        91,
+        31
+      ],
+      "T": [
+        0,
+        5,
+        41,
+        131,
+        15,
+        219,
+        159,
+        23
+      ],
+      "cycP": [
+        1,
+        1
+      ],
+      "cycReduced": [
+        3,
+        3
+      ],
+      "cycT": [
+        0
+      ],
+      "extra": 1,
+      "flip": [
+        0,
+        1
+      ],
+      "hpP": [
+        25,
+        53,
+        27
+      ],
+      "hpT": [
+        51,
+        107,
+        54
+      ],
+      "mask": 27,
+      "name": "C",
+      "samples": [
+        {
+          "child_C": 0,
+          "child_H": 51,
+          "k": 0,
+          "parent_C": 1,
+          "parent_H": 25,
+          "replacement_C": 3,
+          "replacement_H": 51
+        },
+        {
+          "child_C": 0,
+          "child_H": 107,
+          "k": 1,
+          "parent_C": 1,
+          "parent_H": 53,
+          "replacement_C": 3,
+          "replacement_H": 107
+        },
+        {
+          "child_C": 0,
+          "child_H": 215,
+          "k": 2,
+          "parent_C": 1,
+          "parent_H": 107,
+          "replacement_C": 3,
+          "replacement_H": 215
+        },
+        {
+          "child_C": 0,
+          "child_H": 431,
+          "k": 3,
+          "parent_C": 1,
+          "parent_H": 215,
+          "replacement_C": 3,
+          "replacement_H": 431
+        },
+        {
+          "child_C": 0,
+          "child_H": 863,
+          "k": 4,
+          "parent_C": 1,
+          "parent_H": 431,
+          "replacement_C": 3,
+          "replacement_H": 863
+        }
+      ]
+    }
+  ],
+  "literal_graphs": 40,
+  "module_sizes_checked": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,512 @@
+{
+  "families": [
+    {
+      "child_core": [
+        2,
+        8,
+        67,
+        101,
+        15,
+        87,
+        19
+      ],
+      "child_mask": 79,
+      "cycle_child": {
+        "allowed_mandatory_histogram": {
+          "(1, 0)": 1,
+          "(2, 0)": 2
+        },
+        "coefficients": [
+          3,
+          5,
+          2
+        ],
+        "orders_examined": 720,
+        "power_coefficients": [
+          0,
+          1,
+          2
+        ]
+      },
+      "cycle_parent": {
+        "allowed_mandatory_histogram": {
+          "(1, 0)": 1,
+          "(2, 0)": 1
+        },
+        "coefficients": [
+          2,
+          3,
+          1
+        ],
+        "orders_examined": 120,
+        "power_coefficients": [
+          0,
+          1,
+          1
+        ]
+      },
+      "flip": [
+        1,
+        4
+      ],
+      "literal_samples": [
+        {
+          "child_C": 3,
+          "child_H": 51,
+          "k": 0,
+          "parent_C": 2,
+          "parent_H": 25
+        },
+        {
+          "child_C": 5,
+          "child_H": 119,
+          "k": 1,
+          "parent_C": 3,
+          "parent_H": 59
+        },
+        {
+          "child_C": 9,
+          "child_H": 283,
+          "k": 2,
+          "parent_C": 5,
+          "parent_H": 141
+        },
+        {
+          "child_C": 17,
+          "child_H": 707,
+          "k": 3,
+          "parent_C": 9,
+          "parent_H": 353
+        },
+        {
+          "child_C": 33,
+          "child_H": 1843,
+          "k": 4,
+          "parent_C": 17,
+          "parent_H": 921
+        },
+        {
+          "child_C": 65,
+          "child_H": 4979,
+          "k": 5,
+          "parent_C": 33,
+          "parent_H": 2489
+        }
+      ],
+      "name": "A",
+      "parent_core": [
+        2,
+        24,
+        3,
+        37,
+        13,
+        23
+      ],
+      "parent_mask": 15,
+      "path_child": {
+        "allowed_mandatory_histogram": {
+          "(1, 0)": 7,
+          "(1, 1)": 2,
+          "(2, 0)": 28,
+          "(2, 1)": 6,
+          "(3, 0)": 16
+        },
+        "coefficients": [
+          51,
+          119,
+          82,
+          16
+        ],
+        "orders_examined": 5040,
+        "power_coefficients": [
+          -2,
+          3,
+          34,
+          16
+        ]
+      },
+      "path_parent": {
+        "allowed_mandatory_histogram": {
+          "(1, 0)": 4,
+          "(1, 1)": 1,
+          "(2, 0)": 13,
+          "(2, 1)": 4,
+          "(3, 0)": 8
+        },
+        "coefficients": [
+          25,
+          59,
+          41,
+          8
+        ],
+        "orders_examined": 720,
+        "power_coefficients": [
+          -1,
+          1,
+          17,
+          8
+        ]
+      },
+      "reduced_stats": null
+    },
+    {
+      "child_core": [
+        0,
+        5,
+        129,
+        39,
+        47,
+        199,
+        159,
+        27
+      ],
+      "child_mask": 5,
+      "cycle_child": {
+        "allowed_mandatory_histogram": {},
+        "coefficients": [
+          0
+        ],
+        "orders_examined": 5040,
+        "power_coefficients": [
+          0
+        ]
+      },
+      "cycle_parent": {
+        "allowed_mandatory_histogram": {
+          "(1, 0)": 1
+        },
+        "coefficients": [
+          1,
+          1
+        ],
+        "orders_examined": 720,
+        "power_coefficients": [
+          0,
+          1
+        ]
+      },
+      "flip": [
+        0,
+        5
+      ],
+      "literal_samples": [
+        {
+          "child_C": 0,
+          "child_H": 51,
+          "k": 0,
+          "parent_C": 1,
+          "parent_H": 25,
+          "replacement_C": 3,
+          "replacement_H": 51
+        },
+        {
+          "child_C": 0,
+          "child_H": 91,
+          "k": 1,
+          "parent_C": 1,
+          "parent_H": 45,
+          "replacement_C": 3,
+          "replacement_H": 91
+        },
+        {
+          "child_C": 0,
+          "child_H": 171,
+          "k": 2,
+          "parent_C": 1,
+          "parent_H": 85,
+          "replacement_C": 3,
+          "replacement_H": 171
+        },
+        {
+          "child_C": 0,
+          "child_H": 331,
+          "k": 3,
+          "parent_C": 1,
+          "parent_H": 165,
+          "replacement_C": 3,
+          "replacement_H": 331
+        },
+        {
+          "child_C": 0,
+          "child_H": 651,
+          "k": 4,
+          "parent_C": 1,
+          "parent_H": 325,
+          "replacement_C": 3,
+          "replacement_H": 651
+        },
+        {
+          "child_C": 0,
+          "child_H": 1291,
+          "k": 5,
+          "parent_C": 1,
+          "parent_H": 645,
+          "replacement_C": 3,
+          "replacement_H": 1291
+        }
+      ],
+      "name": "B",
+      "parent_core": [
+        32,
+        5,
+        1,
+        39,
+        47,
+        70,
+        31
+      ],
+      "parent_mask": 5,
+      "path_child": {
+        "allowed_mandatory_histogram": {
+          "(1, 0)": 11,
+          "(2, 0)": 40
+        },
+        "coefficients": [
+          51,
+          91,
+          40
+        ],
+        "orders_examined": 40320,
+        "power_coefficients": [
+          0,
+          11,
+          40
+        ]
+      },
+      "path_parent": {
+        "allowed_mandatory_histogram": {
+          "(1, 0)": 5,
+          "(2, 0)": 20
+        },
+        "coefficients": [
+          25,
+          45,
+          20
+        ],
+        "orders_examined": 5040,
+        "power_coefficients": [
+          0,
+          5,
+          20
+        ]
+      },
+      "reduced_stats": [
+        {
+          "allowed_mandatory_histogram": {
+            "(1, 0)": 11,
+            "(2, 0)": 40
+          },
+          "coefficients": [
+            51,
+            91,
+            40
+          ],
+          "orders_examined": 5040,
+          "power_coefficients": [
+            0,
+            11,
+            40
+          ]
+        },
+        {
+          "allowed_mandatory_histogram": {
+            "(1, 0)": 3
+          },
+          "coefficients": [
+            3,
+            3
+          ],
+          "orders_examined": 720,
+          "power_coefficients": [
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "child_core": [
+        0,
+        5,
+        41,
+        131,
+        15,
+        219,
+        159,
+        23
+      ],
+      "child_mask": 155,
+      "cycle_child": {
+        "allowed_mandatory_histogram": {},
+        "coefficients": [
+          0
+        ],
+        "orders_examined": 5040,
+        "power_coefficients": [
+          0
+        ]
+      },
+      "cycle_parent": {
+        "allowed_mandatory_histogram": {
+          "(1, 0)": 1
+        },
+        "coefficients": [
+          1,
+          1
+        ],
+        "orders_examined": 720,
+        "power_coefficients": [
+          0,
+          1
+        ]
+      },
+      "flip": [
+        0,
+        1
+      ],
+      "literal_samples": [
+        {
+          "child_C": 0,
+          "child_H": 51,
+          "k": 0,
+          "parent_C": 1,
+          "parent_H": 25,
+          "replacement_C": 3,
+          "replacement_H": 51
+        },
+        {
+          "child_C": 0,
+          "child_H": 107,
+          "k": 1,
+          "parent_C": 1,
+          "parent_H": 53,
+          "replacement_C": 3,
+          "replacement_H": 107
+        },
+        {
+          "child_C": 0,
+          "child_H": 215,
+          "k": 2,
+          "parent_C": 1,
+          "parent_H": 107,
+          "replacement_C": 3,
+          "replacement_H": 215
+        },
+        {
+          "child_C": 0,
+          "child_H": 431,
+          "k": 3,
+          "parent_C": 1,
+          "parent_H": 215,
+          "replacement_C": 3,
+          "replacement_H": 431
+        },
+        {
+          "child_C": 0,
+          "child_H": 863,
+          "k": 4,
+          "parent_C": 1,
+          "parent_H": 431,
+          "replacement_C": 3,
+          "replacement_H": 863
+        },
+        {
+          "child_C": 0,
+          "child_H": 1727,
+          "k": 5,
+          "parent_C": 1,
+          "parent_H": 863,
+          "replacement_C": 3,
+          "replacement_H": 1727
+        }
+      ],
+      "name": "C",
+      "parent_core": [
+        2,
+        4,
+        41,
+        3,
+        15,
+        91,
+        31
+      ],
+      "parent_mask": 27,
+      "path_child": {
+        "allowed_mandatory_histogram": {
+          "(1, 0)": 7,
+          "(1, 1)": 2,
+          "(2, 0)": 44,
+          "(2, 1)": 10
+        },
+        "coefficients": [
+          51,
+          107,
+          54
+        ],
+        "orders_examined": 40320,
+        "power_coefficients": [
+          -2,
+          -1,
+          54
+        ]
+      },
+      "path_parent": {
+        "allowed_mandatory_histogram": {
+          "(1, 0)": 2,
+          "(1, 1)": 1,
+          "(2, 0)": 23,
+          "(2, 1)": 4
+        },
+        "coefficients": [
+          25,
+          53,
+          27
+        ],
+        "orders_examined": 5040,
+        "power_coefficients": [
+          -1,
+          -1,
+          27
+        ]
+      },
+      "reduced_stats": [
+        {
+          "allowed_mandatory_histogram": {
+            "(1, 0)": 7,
+            "(1, 1)": 2,
+            "(2, 0)": 44,
+            "(2, 1)": 10
+          },
+          "coefficients": [
+            51,
+            107,
+            54
+          ],
+          "orders_examined": 5040,
+          "power_coefficients": [
+            -2,
+            -1,
+            54
+          ]
+        },
+        {
+          "allowed_mandatory_histogram": {
+            "(1, 0)": 3
+          },
+          "coefficients": [
+            3,
+            3
+          ],
+          "orders_examined": 720,
+          "power_coefficients": [
+            0,
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "literal_DFS_calls": 1126340,
+  "literal_graphs": 48,
+  "status": "PASS"
+}

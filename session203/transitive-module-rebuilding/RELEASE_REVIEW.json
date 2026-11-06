@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "release_root": "session203-transitive-repair-release/session203/transitive-module-rebuilding",
+  "README_sha256": "8299f4e8492d532e659cd808188300de12db75af1f83e6c4de0308c6fd5730b5",
+  "reviewed_proof_sha256": "c668cd4f50188050cdf53affd139c4001294c9176532ac273c85c9c6bf6e8596",
+  "promoted_proof_sha256": "55db518c68502746f63b3cdea4671d609425151a47963d7b55f262aeaec258d3",
+  "promotion_changed_lines": [
+    3
+  ],
+  "preserved_audit_files": [
+    "AUDIT_RECEIPT.json",
+    "NORMAL.json",
+    "OPTIMIZED.json",
+    "REVIEW.md",
+    "REVIEWED_PROOF.md",
+    "SHA256SUMS",
+    "check.py"
+  ],
+  "scope": "Three sparse unbounded physical H-to-2H+1 families; two same-order C1-to-C3 replacements, one one-reversal/birth family. No threshold, arbitrary target induction, closed iteration, or minimal edit count with deletion.",
+  "dependencies": "README correctly describes self-contained module expansion; no dependence on Busch or the tournament census. The earlier induced obstruction is motivation only.",
+  "relocation_scope": "Read four exact matching relocation receipts and independently verified original audit/proof byte preservation; no additional full relocation replay claimed."
+}

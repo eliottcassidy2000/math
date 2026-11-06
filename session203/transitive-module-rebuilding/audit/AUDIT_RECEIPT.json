@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "reviewed_proof_sha256": "c668cd4f50188050cdf53affd139c4001294c9176532ac273c85c9c6bf6e8596",
+  "review_sha256": "1b7af2329657e9aa26a0d6eae629aea875a7a6ed1f0e273e6f49e550455776d3",
+  "normal_sha256": "d1326d7485b1c31b06c276c288eb92a2638d362c51b9685ecd0681050977a6c2",
+  "optimized_sha256": "d1326d7485b1c31b06c276c288eb92a2638d362c51b9685ecd0681050977a6c2",
+  "scope": "Three explicit unbounded physical H-to-2H+1 rewrite families, two with same-order C1-to-C3 vertex replacement. No all-target induction or threshold."
+}

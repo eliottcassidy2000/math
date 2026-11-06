@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "replays": [
+    {
+      "target": "NORMAL.json",
+      "sha256": "03f688899ebe0ce51ada3877d6bd21f01e678b050a76abccb8a27121567b946f",
+      "exact_match": true
+    },
+    {
+      "target": "OPTIMIZED.json",
+      "sha256": "03f688899ebe0ce51ada3877d6bd21f01e678b050a76abccb8a27121567b946f",
+      "exact_match": true
+    },
+    {
+      "target": "audit/NORMAL.json",
+      "sha256": "d1326d7485b1c31b06c276c288eb92a2638d362c51b9685ecd0681050977a6c2",
+      "exact_match": true
+    },
+    {
+      "target": "audit/OPTIMIZED.json",
+      "sha256": "d1326d7485b1c31b06c276c288eb92a2638d362c51b9685ecd0681050977a6c2",
+      "exact_match": true
+    }
+  ]
+}
