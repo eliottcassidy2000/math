@@ -1,0 +1,5 @@
+PROOF.md: OK
+verify.py: OK
+compiler.py: OK
+counting.py: OK
+dependencies/POSITIVE_DEFECTS.md: OK

@@ -1,0 +1,11 @@
+{
+  "status": "STATUS_ONLY_PROOF_PROMOTION",
+  "old": "Status: PROOF CANDIDATE, awaiting independent audit.",
+  "new": "Status: PROVED, independently audited. See audit/REVIEW.md.",
+  "original_proof": "audit/SOURCE_PROOF.md",
+  "path_only_rehoming": [
+    "independent.py",
+    "weak_factorization.py"
+  ],
+  "original_audit_scripts": "audit/ORIGINAL_*.py"
+}

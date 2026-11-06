@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "scope": "All positive-start root-zero labeled tournaments through n5",
+  "positive_roots": 772,
+  "weak_roots": 201,
+  "checks": "SCC h/s/L/B factorization; root-component order; factorial inequality; weak e=0"
+}

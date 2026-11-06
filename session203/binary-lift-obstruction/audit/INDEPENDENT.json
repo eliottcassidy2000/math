@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "states": 2640,
+  "scope": "All distinct transfer states from words of length<=5; c=1..4; all candidate lift words of length<=3; first-lift-normalized Z rays",
+  "candidate_words": 1628172,
+  "bounded_lifts": 171,
+  "bounded_nonZ_defects": 4
+}

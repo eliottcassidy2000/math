@@ -1,0 +1,50 @@
+[
+  {
+    "local": "dependencies/START_TWO_GATES.md",
+    "source_path": "session203/positive-profile-defects/dependencies/START_TWO_GATES.md",
+    "source_commit": "a67c5f829aba19285bd10a1dbf665171b9c21e14",
+    "sha256": "7b5a9dc9826d28502281535ef0aacacd7b57010e96eaa66cdba21f08d50386e6"
+  },
+  {
+    "local": "dependencies/START_TWO.md",
+    "source_path": "session203/positive-profile-defects/dependencies/START_TWO.md",
+    "source_commit": "a67c5f829aba19285bd10a1dbf665171b9c21e14",
+    "sha256": "a746d2e33b0fb78a98252afa602dc8985c25f718225c2f9ce37923fd20b0ada3"
+  },
+  {
+    "local": "dependencies/PHYSICAL_SOURCE_GRAMMAR.md",
+    "source_path": "session203/positive-profile-defects/dependencies/PHYSICAL_SOURCE_GRAMMAR.md",
+    "source_commit": "a67c5f829aba19285bd10a1dbf665171b9c21e14",
+    "sha256": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537"
+  },
+  {
+    "local": "dependencies/ROOTED_COVER_CLOSURE.md",
+    "source_path": "session203/positive-profile-defects/dependencies/ROOTED_COVER_CLOSURE.md",
+    "source_commit": "a67c5f829aba19285bd10a1dbf665171b9c21e14",
+    "sha256": "8e78951f9dd15decff0d23cfb3ebe64f358b3c9d4561b269b527a1e9aa902168"
+  },
+  {
+    "local": "dependencies/POSITIVE_DEFECTS.md",
+    "source_path": "session203/positive-profile-defects/PROOF.md",
+    "source_commit": "a67c5f829aba19285bd10a1dbf665171b9c21e14",
+    "sha256": "5569bbe7d4eca53ca53935e019d54452b8a072df103d5585d10064c911c0d717"
+  },
+  {
+    "local": "compiler.py",
+    "source_path": "session203/positive-profile-defects/compiler.py",
+    "source_commit": "a67c5f829aba19285bd10a1dbf665171b9c21e14",
+    "sha256": "89058eb976db85ea0589fae39db25fe54b0fb6d5b6697166645f9310abc07e4f"
+  },
+  {
+    "local": "counting.py",
+    "source_path": "session203/positive-profile-defects/counting.py",
+    "source_commit": "a67c5f829aba19285bd10a1dbf665171b9c21e14",
+    "sha256": "7eeb1059836f62c6e1739b2cf49da020a1949fd71805224b831ab9eddcccfadd"
+  },
+  {
+    "local": "dependencies/ROOTED_ORDER_BOUND.md",
+    "source_path": "session203/rooted-profile-order-bound/PROOF.md",
+    "source_commit": "61f06512d0eafdb1c177181d4556dda2e12f2fcb",
+    "sha256": "839e6b74ba3344a93fa32240b939f57bd1dcfb1fd0114bf578568085a7e6aa7b"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "dead_terminal_controls": 108,
+    "factorial_checks": 2248,
+    "gate_checks": 1542,
+    "inputs": 1099,
+    "large_lifts": 162,
+    "positive_inputs": 772,
+    "word_tests": 67392
+  },
+  "physical_states": 432,
+  "scope": "Finite controls of bounded-offset binary-lift obstruction only; no F counterexample or coverage theorem.",
+  "status": "PASS",
+  "word_length_limit": 3
+}
