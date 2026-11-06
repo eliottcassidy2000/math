@@ -1,0 +1,17 @@
+{
+  "EDGE_SECTOR.md": {
+    "source_path": "session202/positive-overlap/EDGE_SECTOR.md",
+    "source_commit": "17118071ac78041920fc33423bcd6b3ac21bcb22",
+    "sha256": "a5664506f40421d6a2b8261d23282093746f2431d0ee56d81e6036a25fb3ef6d"
+  },
+  "SYNCHRONIZED_SOURCE.md": {
+    "source_path": "session200/synchronized-joint-inverse/PROOF.md",
+    "source_commit": "17118071ac78041920fc33423bcd6b3ac21bcb22",
+    "sha256": "6a73c37b3aaa99f1d3019a8b52f4d798a8c3a64b06c1afbf2e2cd8bc2d5d97a3"
+  },
+  "APPEND_BINARY.md": {
+    "source_path": "session202/append-binary/PROOF.md",
+    "source_commit": "17118071ac78041920fc33423bcd6b3ac21bcb22",
+    "sha256": "3930719a2c9d5cfadb71456fc8210b16802c0c6f91d9beda0136312199a74ee8"
+  }
+}

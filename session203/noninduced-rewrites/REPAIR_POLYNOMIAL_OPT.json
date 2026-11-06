@@ -1,0 +1,30 @@
+{
+  "core_rows": [
+    2,
+    0,
+    507,
+    371,
+    227,
+    451,
+    131,
+    267,
+    83
+  ],
+  "tail_outgoing_mask": 387,
+  "exact_exponential_coefficients": [
+    0,
+    -7,
+    10,
+    26,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "permutations_checked": 362880,
+  "identity": "H(k)=26*3^(k-4)+10*2^(k-4)-7 for every k>=4",
+  "target_hit": "H(k)=6*(2^k+1)+1 iff k=7"
+}

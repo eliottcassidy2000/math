@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "session203-noninduced-rewrites/FINITE_REPAIR.md",
+      "changed_lines": [
+        3
+      ],
+      "old_status": "Status: VERIFIED finite witness and exact family identity, awaiting independent review. No eventual threshold or all-u extraction is claimed. No novelty claim is made for the inherited transitive-clone expansion.",
+      "new_status": "Status: VERIFIED finite witness and PROVED exact family identity, independently audited. No eventual threshold or all-u extraction is claimed. No novelty claim is made for the inherited transitive-clone expansion.",
+      "old_sha256": "5df4039e2a48564582c3adc03953d7e3b42ab37c451c2033154a049b7e216f23",
+      "new_sha256": "ef891e2b4803f56db17ccbb7d1fa74d0d5f560d7cc53e55832cf9f0db191dcee"
+    },
+    {
+      "path": "session203-noninduced-rewrites/SOURCE_RAY_BOUND.md",
+      "changed_lines": [
+        3
+      ],
+      "old_status": "Status: PROOF CANDIDATE with exact verification. This concerns append-only O/Z/J source words, not arbitrary tournament rewrites, multistate encodings, nonlinear source profiles, or the unrestricted spectrum.",
+      "new_status": "Status: PROVED, independently audited with exact verification. This concerns append-only O/Z/J source words, not arbitrary tournament rewrites, multistate encodings, nonlinear source profiles, or the unrestricted spectrum.",
+      "old_sha256": "32bd5056e12821373bd688254b658eddbfb105e6aeaa792ac33b2309b21658a5",
+      "new_sha256": "252ef7d741ced85dcda0d80d59f83452b460568143dd64162cea1c0298db1609"
+    }
+  ]
+}

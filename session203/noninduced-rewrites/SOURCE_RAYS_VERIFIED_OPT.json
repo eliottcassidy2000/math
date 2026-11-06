@@ -1,0 +1,272 @@
+{
+  "3": {
+    "length_bound": 2,
+    "words_checked": 12,
+    "max_distinct_matrices_per_ray": 1,
+    "rays": [
+      {
+        "ray": [
+          0,
+          0,
+          2,
+          1
+        ],
+        "matrix_word_classes": [
+          [
+            "ZJ"
+          ]
+        ]
+      },
+      {
+        "ray": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "matrix_word_classes": [
+          [
+            "OJ",
+            "JZ"
+          ]
+        ]
+      },
+      {
+        "ray": [
+          2,
+          2,
+          0,
+          1
+        ],
+        "matrix_word_classes": [
+          [
+            "JO"
+          ]
+        ]
+      }
+    ]
+  },
+  "5": {
+    "length_bound": 3,
+    "words_checked": 39,
+    "max_distinct_matrices_per_ray": 1,
+    "rays": [
+      {
+        "ray": [
+          0,
+          0,
+          4,
+          1
+        ],
+        "matrix_word_classes": [
+          [
+            "ZZJ"
+          ]
+        ]
+      },
+      {
+        "ray": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "matrix_word_classes": [
+          [
+            "ZOJ",
+            "ZJZ"
+          ]
+        ]
+      },
+      {
+        "ray": [
+          3,
+          0,
+          1,
+          0
+        ],
+        "matrix_word_classes": [
+          [
+            "OOJ",
+            "OJZ",
+            "JZZ"
+          ]
+        ]
+      },
+      {
+        "ray": [
+          4,
+          14,
+          0,
+          1
+        ],
+        "matrix_word_classes": [
+          [
+            "JOO"
+          ]
+        ]
+      },
+      {
+        "ray": [
+          4,
+          4,
+          0,
+          1
+        ],
+        "matrix_word_classes": [
+          [
+            "OJO",
+            "JZO"
+          ]
+        ]
+      }
+    ]
+  },
+  "7": {
+    "length_bound": 4,
+    "words_checked": 120,
+    "max_distinct_matrices_per_ray": 0,
+    "rays": []
+  },
+  "9": {
+    "length_bound": 5,
+    "words_checked": 363,
+    "max_distinct_matrices_per_ray": 2,
+    "rays": [
+      {
+        "ray": [
+          0,
+          0,
+          2,
+          1
+        ],
+        "matrix_word_classes": [
+          [
+            "ZOJJ",
+            "ZJZJ"
+          ]
+        ]
+      },
+      {
+        "ray": [
+          0,
+          0,
+          8,
+          1
+        ],
+        "matrix_word_classes": [
+          [
+            "ZZZJ"
+          ]
+        ]
+      },
+      {
+        "ray": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "matrix_word_classes": [
+          [
+            "OJOJ",
+            "OJJZ",
+            "JZOJ",
+            "JZJZ"
+          ],
+          [
+            "ZZOJ",
+            "ZZJZ"
+          ]
+        ]
+      },
+      {
+        "ray": [
+          2,
+          2,
+          0,
+          1
+        ],
+        "matrix_word_classes": [
+          [
+            "JOJO",
+            "JJZO"
+          ]
+        ]
+      },
+      {
+        "ray": [
+          3,
+          0,
+          1,
+          0
+        ],
+        "matrix_word_classes": [
+          [
+            "ZOOJ",
+            "ZOJZ",
+            "ZJZZ"
+          ]
+        ]
+      },
+      {
+        "ray": [
+          7,
+          0,
+          1,
+          0
+        ],
+        "matrix_word_classes": [
+          [
+            "OOOJ",
+            "OOJZ",
+            "OJZZ",
+            "JZZZ"
+          ]
+        ]
+      },
+      {
+        "ray": [
+          8,
+          26,
+          0,
+          1
+        ],
+        "matrix_word_classes": [
+          [
+            "OJOO",
+            "JZOO"
+          ]
+        ]
+      },
+      {
+        "ray": [
+          8,
+          62,
+          0,
+          1
+        ],
+        "matrix_word_classes": [
+          [
+            "JOOO"
+          ]
+        ]
+      },
+      {
+        "ray": [
+          8,
+          8,
+          0,
+          1
+        ],
+        "matrix_word_classes": [
+          [
+            "OOJO",
+            "OJZO",
+            "JZZO"
+          ]
+        ]
+      }
+    ]
+  }
+}

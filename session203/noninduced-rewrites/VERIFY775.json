@@ -1,0 +1,59 @@
+{
+  "status": "VERIFIED FINITE WITNESS ONLY",
+  "u": 129,
+  "target": 775,
+  "flip": [
+    1,
+    2
+  ],
+  "birth_masks": [
+    11,
+    83
+  ],
+  "rows": [
+    2,
+    0,
+    4091,
+    3059,
+    2019,
+    4035,
+    1923,
+    3843,
+    3587,
+    3075,
+    2059,
+    83
+  ],
+  "controls": [
+    {
+      "k": 4,
+      "count": 29,
+      "target": 103
+    },
+    {
+      "k": 5,
+      "count": 91,
+      "target": 199
+    },
+    {
+      "k": 6,
+      "count": 267,
+      "target": 391
+    },
+    {
+      "k": 7,
+      "count": 775,
+      "target": 775
+    },
+    {
+      "k": 8,
+      "count": 2259,
+      "target": 1543
+    },
+    {
+      "k": 9,
+      "count": 6631,
+      "target": 3079
+    }
+  ]
+}
