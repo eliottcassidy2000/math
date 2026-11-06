@@ -1,0 +1,28 @@
+{
+  "algorithm": "sha256",
+  "scope": "All release packet files excluding this hash manifest itself",
+  "files": {
+    "MERSENNE-normal.json": "e5373ba3a97c3ac0bce643026d8f1ea942402b3447b143f384d864d360bb110b",
+    "MERSENNE-optimized.json": "e5373ba3a97c3ac0bce643026d8f1ea942402b3447b143f384d864d360bb110b",
+    "MERSENNE.md": "89d908b958e780ac390876932cb4f91771bf360e77ac775e6b9c783da095e58e",
+    "PROMOTION.diff": "5210077bea5bb5b1bbdfd4cbf7d5953d876dc1548ade37dcdbb6ecf2aae5982a",
+    "README.md": "fc698e123c4d30d23b6968e791f80bb02b9fefc9afbb1c050e09336acad584cd",
+    "audit/AUDIT.md": "1d665d64e32a55f20ca3cb70ab1163dada75c52028a40620de064e2e9b31d49c",
+    "audit/AUDITED-HASHES.json": "f881e7839a0efe4fdfeda2534a089a5c2dddd34c7948831450810d5588d04680",
+    "audit/MERSENNE-before-promotion.md": "ab0fa3867fc605488c853f5bf6fa4c8e556d6616b0876db60a618e01804adfd4",
+    "audit/PROMOTION-author-normal.json": "e5373ba3a97c3ac0bce643026d8f1ea942402b3447b143f384d864d360bb110b",
+    "audit/PROMOTION-author-optimized.json": "e5373ba3a97c3ac0bce643026d8f1ea942402b3447b143f384d864d360bb110b",
+    "audit/PROMOTION-independent-normal.json": "43c84554cdde317bc9e5c2fc5b6eba82eb9cab31df75dc7397c66e6ea55258b9",
+    "audit/PROMOTION-independent-optimized.json": "43c84554cdde317bc9e5c2fc5b6eba82eb9cab31df75dc7397c66e6ea55258b9",
+    "audit/PROMOTION.md": "ad16bab0d6d027623ee4decd89a66f953cb99dd24a8b55a6821104863136851d",
+    "audit/RESULT.json": "43c84554cdde317bc9e5c2fc5b6eba82eb9cab31df75dc7397c66e6ea55258b9",
+    "audit/author-replay.json": "e5373ba3a97c3ac0bce643026d8f1ea942402b3447b143f384d864d360bb110b",
+    "audit/check.py": "7fb3927350b73cf0df01adaf754132bd40f46dc592b0a77a726760fe35b51de9",
+    "dependencies/CORE_PROOF.md": "49ad1123e80fbf751eac3e72ed0f5ad2ec39e7705f9ee89c77d4826ef5e1066c",
+    "dependencies/MENUS.json": "f4c2fab8569aa682063f904a78b74026535f3a181a3e01bcc7ac23dc5a591275",
+    "dependencies/PROVENANCE.json": "9daa0c5675013e2a4cf7fd33f022935e2e8c7bbd94d9da0d2651c539e4be8c11",
+    "dependencies/RELEASE-SOURCES.json": "4369cdc616efb4df7e37d39e6dd311c6cef91bbc2634fbc29ba0df123039a242",
+    "dependencies/TWELVE.json": "250b128541d47ece34b92bc5b89ed37f865e49d9423d27d33d4b177c270d5c8a",
+    "verify_mersenne.py": "bcd1856402eb5c33711522cfb659dcc9b18d60545a862433e9ce9ea01a719aba"
+  }
+}

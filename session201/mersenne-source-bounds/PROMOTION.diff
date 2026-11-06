@@ -1,0 +1,13 @@
+--- MERSENNE-before-promotion.md
++++ MERSENNE.md
+@@ -1,7 +1,8 @@
+ # A sparse-family bounded-source obstruction
+ 
+-Status: RESERVED / UNREVIEWED proof candidate. The twelve-template occupancy
+-lemma remains OPEN. This is not an occupancy proof or a counterexample to it.
++Status: PROVED, independently audited in the stated bounded-source scope.
++The twelve-template occupancy lemma remains OPEN. This is not an occupancy
++proof or a counterexample to it.
+ 
+ ## Statement
+ 

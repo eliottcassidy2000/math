@@ -1,0 +1,20 @@
+{
+  "reviewed_commit": "9523fd5c33b6850f8c3656157ae0a988bba6d9dc",
+  "reviewed_path": "session201/compact-central-arithmetic",
+  "files": [
+    {
+      "path": "MENUS.json",
+      "sha256": "f4c2fab8569aa682063f904a78b74026535f3a181a3e01bcc7ac23dc5a591275"
+    },
+    {
+      "path": "CORE_PROOF.md",
+      "sha256": "49ad1123e80fbf751eac3e72ed0f5ad2ec39e7705f9ee89c77d4826ef5e1066c"
+    },
+    {
+      "path": "TWELVE.json",
+      "sha256": "250b128541d47ece34b92bc5b89ed37f865e49d9423d27d33d4b177c270d5c8a"
+    }
+  ],
+  "TWELVE_extraction": "MENUS.json key 5",
+  "dependency_scope": "Only the source recurrence, physical source realization, explicit matrices, and uv/2 product bound are used. Uniform occupancy is not a premise."
+}

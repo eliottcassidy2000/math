@@ -1,0 +1,463 @@
+{
+  "status": "PASS",
+  "matrix_sha256": "f4c2fab8569aa682063f904a78b74026535f3a181a3e01bcc7ac23dc5a591275",
+  "sources": 751,
+  "pair_forms": 13536024,
+  "zero_constant_nonmersenne_controls": {
+    "even_even": 820,
+    "even_odd": 3168
+  },
+  "sample_mersenne_hits": [
+    [
+      "",
+      false,
+      2,
+      2,
+      3
+    ],
+    [
+      "",
+      false,
+      2,
+      10,
+      15
+    ],
+    [
+      "",
+      false,
+      2,
+      22,
+      31
+    ],
+    [
+      "",
+      false,
+      2,
+      39,
+      63
+    ],
+    [
+      "",
+      false,
+      2,
+      75,
+      127
+    ],
+    [
+      "",
+      false,
+      2,
+      90,
+      127
+    ],
+    [
+      "",
+      false,
+      2,
+      141,
+      255
+    ],
+    [
+      "",
+      false,
+      2,
+      277,
+      511
+    ],
+    [
+      "",
+      true,
+      2,
+      2,
+      3
+    ],
+    [
+      "",
+      true,
+      2,
+      10,
+      15
+    ],
+    [
+      "",
+      true,
+      2,
+      22,
+      31
+    ],
+    [
+      "",
+      true,
+      2,
+      39,
+      63
+    ],
+    [
+      "",
+      true,
+      2,
+      75,
+      127
+    ],
+    [
+      "",
+      true,
+      2,
+      90,
+      127
+    ],
+    [
+      "",
+      true,
+      2,
+      141,
+      255
+    ],
+    [
+      "",
+      true,
+      2,
+      277,
+      511
+    ],
+    [
+      "J",
+      false,
+      2,
+      5,
+      15
+    ],
+    [
+      "J",
+      false,
+      2,
+      6,
+      15
+    ],
+    [
+      "J",
+      false,
+      2,
+      11,
+      31
+    ],
+    [
+      "J",
+      false,
+      2,
+      26,
+      63
+    ]
+  ],
+  "coefficients": [
+    {
+      "word": "J",
+      "transpose": false,
+      "lambda_": 1,
+      "c": 0,
+      "d": 0,
+      "b": 1,
+      "e": 0,
+      "f": 0,
+      "h": 0,
+      "i": 0,
+      "j": -1,
+      "odd_coefficient_lower_bound": 1
+    },
+    {
+      "word": "J",
+      "transpose": true,
+      "lambda_": 1,
+      "c": 0,
+      "d": 0,
+      "b": 1,
+      "e": 0,
+      "f": 0,
+      "h": 0,
+      "i": 0,
+      "j": -1,
+      "odd_coefficient_lower_bound": 1
+    },
+    {
+      "word": "JJ",
+      "transpose": false,
+      "lambda_": 1,
+      "c": 1,
+      "d": 1,
+      "b": 1,
+      "e": 1,
+      "f": 1,
+      "h": 0,
+      "i": 0,
+      "j": 1,
+      "odd_coefficient_lower_bound": 3
+    },
+    {
+      "word": "JJ",
+      "transpose": true,
+      "lambda_": 1,
+      "c": 1,
+      "d": 1,
+      "b": 1,
+      "e": 1,
+      "f": 1,
+      "h": 0,
+      "i": 0,
+      "j": 1,
+      "odd_coefficient_lower_bound": 3
+    },
+    {
+      "word": "JJJ",
+      "transpose": false,
+      "lambda_": 1,
+      "c": 2,
+      "d": 2,
+      "b": 2,
+      "e": 0,
+      "f": 0,
+      "h": 1,
+      "i": 1,
+      "j": 0,
+      "odd_coefficient_lower_bound": 7
+    },
+    {
+      "word": "JJJ",
+      "transpose": true,
+      "lambda_": 1,
+      "c": 2,
+      "d": 2,
+      "b": 2,
+      "e": 0,
+      "f": 0,
+      "h": 1,
+      "i": 1,
+      "j": 0,
+      "odd_coefficient_lower_bound": 7
+    },
+    {
+      "word": "JOZJ",
+      "transpose": false,
+      "lambda_": 3,
+      "c": 3,
+      "d": 3,
+      "b": 4,
+      "e": 1,
+      "f": 1,
+      "h": 0,
+      "i": 0,
+      "j": 0,
+      "odd_coefficient_lower_bound": 11
+    },
+    {
+      "word": "JOZJ",
+      "transpose": true,
+      "lambda_": 3,
+      "c": 3,
+      "d": 3,
+      "b": 4,
+      "e": 1,
+      "f": 1,
+      "h": 0,
+      "i": 0,
+      "j": 0,
+      "odd_coefficient_lower_bound": 11
+    },
+    {
+      "word": "JJZJ",
+      "transpose": false,
+      "lambda_": 3,
+      "c": 3,
+      "d": 3,
+      "b": 3,
+      "e": 1,
+      "f": 1,
+      "h": 1,
+      "i": 1,
+      "j": 1,
+      "odd_coefficient_lower_bound": 11
+    },
+    {
+      "word": "JJZJ",
+      "transpose": true,
+      "lambda_": 3,
+      "c": 3,
+      "d": 3,
+      "b": 3,
+      "e": 1,
+      "f": 1,
+      "h": 1,
+      "i": 1,
+      "j": 1,
+      "odd_coefficient_lower_bound": 11
+    },
+    {
+      "word": "JJJJ",
+      "transpose": false,
+      "lambda_": 3,
+      "c": 3,
+      "d": 3,
+      "b": 4,
+      "e": 1,
+      "f": 1,
+      "h": 1,
+      "i": 1,
+      "j": 0,
+      "odd_coefficient_lower_bound": 11
+    },
+    {
+      "word": "JJJJ",
+      "transpose": true,
+      "lambda_": 3,
+      "c": 3,
+      "d": 3,
+      "b": 4,
+      "e": 1,
+      "f": 1,
+      "h": 1,
+      "i": 1,
+      "j": 0,
+      "odd_coefficient_lower_bound": 11
+    },
+    {
+      "word": "JOOZJ",
+      "transpose": false,
+      "lambda_": 5,
+      "c": 5,
+      "d": 7,
+      "b": 8,
+      "e": 1,
+      "f": 1,
+      "h": 0,
+      "i": 0,
+      "j": 0,
+      "odd_coefficient_lower_bound": 19
+    },
+    {
+      "word": "JOOZJ",
+      "transpose": true,
+      "lambda_": 5,
+      "c": 7,
+      "d": 5,
+      "b": 8,
+      "e": 1,
+      "f": 1,
+      "h": 0,
+      "i": 0,
+      "j": 0,
+      "odd_coefficient_lower_bound": 25
+    },
+    {
+      "word": "JJZZJ",
+      "transpose": false,
+      "lambda_": 5,
+      "c": 5,
+      "d": 5,
+      "b": 5,
+      "e": 1,
+      "f": 1,
+      "h": 1,
+      "i": 1,
+      "j": 1,
+      "odd_coefficient_lower_bound": 19
+    },
+    {
+      "word": "JJZZJ",
+      "transpose": true,
+      "lambda_": 5,
+      "c": 5,
+      "d": 5,
+      "b": 5,
+      "e": 1,
+      "f": 1,
+      "h": 1,
+      "i": 1,
+      "j": 1,
+      "odd_coefficient_lower_bound": 19
+    },
+    {
+      "word": "JOZJJ",
+      "transpose": false,
+      "lambda_": 5,
+      "c": 7,
+      "d": 6,
+      "b": 7,
+      "e": 1,
+      "f": 2,
+      "h": 3,
+      "i": 1,
+      "j": 1,
+      "odd_coefficient_lower_bound": 25
+    },
+    {
+      "word": "JOZJJ",
+      "transpose": true,
+      "lambda_": 5,
+      "c": 6,
+      "d": 7,
+      "b": 7,
+      "e": 2,
+      "f": 1,
+      "h": 1,
+      "i": 3,
+      "j": 1,
+      "odd_coefficient_lower_bound": 21
+    },
+    {
+      "word": "JJZJJ",
+      "transpose": false,
+      "lambda_": 5,
+      "c": 5,
+      "d": 6,
+      "b": 6,
+      "e": 1,
+      "f": 2,
+      "h": 2,
+      "i": 2,
+      "j": 0,
+      "odd_coefficient_lower_bound": 19
+    },
+    {
+      "word": "JJZJJ",
+      "transpose": true,
+      "lambda_": 5,
+      "c": 6,
+      "d": 5,
+      "b": 6,
+      "e": 2,
+      "f": 1,
+      "h": 2,
+      "i": 2,
+      "j": 0,
+      "odd_coefficient_lower_bound": 21
+    },
+    {
+      "word": "JJJJJ",
+      "transpose": false,
+      "lambda_": 5,
+      "c": 6,
+      "d": 6,
+      "b": 7,
+      "e": 2,
+      "f": 2,
+      "h": 2,
+      "i": 2,
+      "j": 1,
+      "odd_coefficient_lower_bound": 21
+    },
+    {
+      "word": "JJJJJ",
+      "transpose": true,
+      "lambda_": 5,
+      "c": 6,
+      "d": 6,
+      "b": 7,
+      "e": 2,
+      "f": 2,
+      "h": 2,
+      "i": 2,
+      "j": 1,
+      "odd_coefficient_lower_bound": 21
+    }
+  ],
+  "scope": "Finite-exact controls; general theorem audited separately in AUDIT.md. Both orientations included, not a coverage proof."
+}

@@ -1,0 +1,128 @@
+{
+  "claim_scope": "Only Mersenne targets represented with both source g coordinates <= G",
+  "controls": [
+    {
+      "G": 1,
+      "Mersenne_values": [
+        3,
+        15,
+        31,
+        255
+      ],
+      "largest_Mersenne_witness": [
+        "JJZZJ",
+        16,
+        2,
+        1,
+        1
+      ],
+      "matrix_pair_checks": 315,
+      "maximum_height_tested": 6,
+      "odd_cores": [
+        1
+      ],
+      "source_indices": 6
+    },
+    {
+      "G": 3,
+      "Mersenne_values": [
+        3,
+        15,
+        31,
+        127,
+        255,
+        1023,
+        65535
+      ],
+      "largest_Mersenne_witness": [
+        "JJZZJ",
+        256,
+        48,
+        1,
+        3
+      ],
+      "matrix_pair_checks": 5055,
+      "maximum_height_tested": 12,
+      "odd_cores": [
+        1,
+        3
+      ],
+      "source_indices": 25
+    },
+    {
+      "G": 5,
+      "Mersenne_values": [
+        3,
+        15,
+        31,
+        63,
+        127,
+        255,
+        1023,
+        4095,
+        65535
+      ],
+      "largest_Mersenne_witness": [
+        "JJZZJ",
+        256,
+        48,
+        1,
+        3
+      ],
+      "matrix_pair_checks": 31635,
+      "maximum_height_tested": 15,
+      "odd_cores": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "source_indices": 63
+    },
+    {
+      "G": 9,
+      "Mersenne_values": [
+        3,
+        15,
+        31,
+        63,
+        127,
+        255,
+        511,
+        1023,
+        4095,
+        65535
+      ],
+      "largest_Mersenne_witness": [
+        "JJZZJ",
+        256,
+        48,
+        1,
+        3
+      ],
+      "matrix_pair_checks": 152160,
+      "maximum_height_tested": 19,
+      "odd_cores": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        15
+      ],
+      "source_indices": 139
+    }
+  ],
+  "empty_zero_constant_non_Mersenne_control": {
+    "n": 5,
+    "u": 2,
+    "v": 4
+  },
+  "finite_g_controls_through": 8192,
+  "formal_transpose_matrices": 15,
+  "matrix_pair_checks": 189165,
+  "source_menu_sha256": "250b128541d47ece34b92bc5b89ed37f865e49d9423d27d33d4b177c270d5c8a",
+  "status": "PASS",
+  "uniform_occupancy": "OPEN"
+}

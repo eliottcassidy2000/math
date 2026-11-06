@@ -1,0 +1,8 @@
+{
+  "MERSENNE.md": "ab0fa3867fc605488c853f5bf6fa4c8e556d6616b0876db60a618e01804adfd4",
+  "verify_mersenne.py": "bcd1856402eb5c33711522cfb659dcc9b18d60545a862433e9ce9ea01a719aba",
+  "dependencies/TWELVE.json": "250b128541d47ece34b92bc5b89ed37f865e49d9423d27d33d4b177c270d5c8a",
+  "dependencies/PROVENANCE.json": "9daa0c5675013e2a4cf7fd33f022935e2e8c7bbd94d9da0d2651c539e4be8c11",
+  "MERSENNE-normal.json": "e5373ba3a97c3ac0bce643026d8f1ea942402b3447b143f384d864d360bb110b",
+  "MERSENNE-optimized.json": "e5373ba3a97c3ac0bce643026d8f1ea942402b3447b143f384d864d360bb110b"
+}
