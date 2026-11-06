@@ -1,0 +1,274 @@
+{
+  "J_crossings": 1960,
+  "J_pairing_matrix": [
+    [
+      2,
+      1,
+      4,
+      3
+    ],
+    [
+      1,
+      1,
+      2,
+      2
+    ],
+    [
+      4,
+      2,
+      7,
+      6
+    ],
+    [
+      3,
+      2,
+      6,
+      5
+    ]
+  ],
+  "J_residual": [
+    [
+      4,
+      2,
+      8,
+      6
+    ],
+    [
+      2,
+      9,
+      4,
+      11
+    ],
+    [
+      8,
+      4,
+      0,
+      12
+    ],
+    [
+      6,
+      11,
+      12,
+      17
+    ]
+  ],
+  "complete_word_length_cap": 7,
+  "literal_graph_controls": [
+    {
+      "cycles": 1,
+      "partial_directed_paths": 815,
+      "paths": 57,
+      "vertices": 8,
+      "word": "ZJJJOJ"
+    },
+    {
+      "cycles": 1,
+      "partial_directed_paths": 4755,
+      "paths": 165,
+      "vertices": 10,
+      "word": "ZZJJJOOJ"
+    }
+  ],
+  "noninteger_rectangle_checks": 119088,
+  "real_valid_but_floor_product_small": 119088,
+  "rectangle_checks": 136692,
+  "scope": "Exact finite controls for independently reviewed all-order rectangle and conditional J-crossing results; no universal occupancy or globally optimal target-representation claim.",
+  "sharp_family": [
+    {
+      "best_height": 11,
+      "coefficient": "121/57",
+      "k": 1,
+      "target": 57
+    },
+    {
+      "best_height": 19,
+      "coefficient": "361/165",
+      "k": 2,
+      "target": 165
+    },
+    {
+      "best_height": 35,
+      "coefficient": "1225/549",
+      "k": 3,
+      "target": 549
+    },
+    {
+      "best_height": 67,
+      "coefficient": "4489/1989",
+      "k": 4,
+      "target": 1989
+    },
+    {
+      "best_height": 131,
+      "coefficient": "17161/7557",
+      "k": 5,
+      "target": 7557
+    },
+    {
+      "best_height": 259,
+      "coefficient": "67081/29445",
+      "k": 6,
+      "target": 29445
+    },
+    {
+      "best_height": 515,
+      "coefficient": "265225/116229",
+      "k": 7,
+      "target": 116229
+    },
+    {
+      "best_height": 1027,
+      "coefficient": "1054729/461829",
+      "k": 8,
+      "target": 461829
+    },
+    {
+      "best_height": 2051,
+      "coefficient": "4206601/1841157",
+      "k": 9,
+      "target": 1841157
+    },
+    {
+      "best_height": 4099,
+      "coefficient": "16801801/7352325",
+      "k": 10,
+      "target": 7352325
+    },
+    {
+      "best_height": 8195,
+      "coefficient": "67158025/29384709",
+      "k": 11,
+      "target": 29384709
+    },
+    {
+      "best_height": 16387,
+      "coefficient": "268533769/117489669",
+      "k": 12,
+      "target": 117489669
+    },
+    {
+      "best_height": 32771,
+      "coefficient": "1073938441/469860357",
+      "k": 13,
+      "target": 469860357
+    },
+    {
+      "best_height": 65539,
+      "coefficient": "4295360521/1879244805",
+      "k": 14,
+      "target": 1879244805
+    },
+    {
+      "best_height": 131075,
+      "coefficient": "17180655625/7516585989",
+      "k": 15,
+      "target": 7516585989
+    },
+    {
+      "best_height": 262147,
+      "coefficient": "68721049609/30065557509",
+      "k": 16,
+      "target": 30065557509
+    },
+    {
+      "best_height": 524291,
+      "coefficient": "274881052681/120260657157",
+      "k": 17,
+      "target": 120260657157
+    },
+    {
+      "best_height": 1048579,
+      "coefficient": "1099517919241/481039482885",
+      "k": 18,
+      "target": 481039482885
+    },
+    {
+      "best_height": 2097155,
+      "coefficient": "4398059094025/1924151640069",
+      "k": 19,
+      "target": 1924151640069
+    },
+    {
+      "best_height": 4194307,
+      "coefficient": "17592211210249/7696593977349",
+      "k": 20,
+      "target": 7696593977349
+    },
+    {
+      "best_height": 8388611,
+      "coefficient": "70368794509321/30786350743557",
+      "k": 21,
+      "target": 30786350743557
+    },
+    {
+      "best_height": 16777219,
+      "coefficient": "281475077373961/123145352642565",
+      "k": 22,
+      "target": 123145352642565
+    },
+    {
+      "best_height": 33554435,
+      "coefficient": "1125900108169225/492581309906949",
+      "k": 23,
+      "target": 492581309906949
+    },
+    {
+      "best_height": 67108867,
+      "coefficient": "4503600030023689/1970325038301189",
+      "k": 24,
+      "target": 1970325038301189
+    },
+    {
+      "best_height": 134217731,
+      "coefficient": "18014399314788361/7881299750551557",
+      "k": 25,
+      "target": 7881299750551557
+    },
+    {
+      "best_height": 268435459,
+      "coefficient": "72057595648540681/31525198196899845",
+      "k": 26,
+      "target": 31525198196899845
+    },
+    {
+      "best_height": 536870915,
+      "coefficient": "288230379372937225/126100791176986629",
+      "k": 27,
+      "target": 126100791176986629
+    },
+    {
+      "best_height": 1073741827,
+      "coefficient": "1152921511049297929/504403161486721029",
+      "k": 28,
+      "target": 504403161486721029
+    },
+    {
+      "best_height": 2147483651,
+      "coefficient": "4611686031312289801/2017612639504433157",
+      "k": 29,
+      "target": 2017612639504433157
+    },
+    {
+      "best_height": 4294967299,
+      "coefficient": "18446744099479355401/8070450545132830725",
+      "k": 30,
+      "target": 8070450545132830725
+    },
+    {
+      "best_height": 8589934595,
+      "coefficient": "73786976346377814025/32281802154761519109",
+      "k": 31,
+      "target": 32281802154761519109
+    },
+    {
+      "best_height": 17179869187,
+      "coefficient": "295147905282432040969/129127208567506468869",
+      "k": 32,
+      "target": 129127208567506468869
+    }
+  ],
+  "status": "PASS",
+  "synchronized_rectangle_checks": 68346,
+  "verifier_sha256": "bc5c0e2bfe2ea33a3c6e001d89b6fff759199448aa0fc56e24acfc76374ee205",
+  "words": 6560
+}

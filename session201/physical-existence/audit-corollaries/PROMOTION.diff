@@ -1,0 +1,10 @@
+--- COROLLARIES-before-promotion.md
++++ COROLLARIES.md
+@@ -1,6 +1,6 @@
+ # Asymmetric budgets and a sharper J crossing
+ 
+-Session 201. **PROVED, pending independent audit.** This companion uses the physical cone, adjoint and exact letter matrices in PROOF.md. It does not change the frozen main proof. No universal coverage or globally optimal pair-height constant is claimed.
++Session 201. **PROVED, independently audited in the stated scope.** This companion uses the physical cone, adjoint and exact letter matrices in PROOF.md. It does not change the frozen main proof. No universal coverage or globally optimal pair-height constant is claimed.
+ 
+ ## 1. Exact asymmetric physical inventories
+ 

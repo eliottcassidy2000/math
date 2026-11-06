@@ -1,0 +1,144 @@
+{
+  "J_crossings": 660,
+  "J_matrix": [
+    [
+      2,
+      1,
+      4,
+      3
+    ],
+    [
+      1,
+      1,
+      2,
+      2
+    ],
+    [
+      4,
+      2,
+      7,
+      6
+    ],
+    [
+      3,
+      2,
+      6,
+      5
+    ]
+  ],
+  "J_sharp_family": [
+    {
+      "best_cut_height": 11,
+      "k": 1,
+      "target": 57
+    },
+    {
+      "best_cut_height": 19,
+      "k": 2,
+      "target": 165
+    },
+    {
+      "best_cut_height": 35,
+      "k": 3,
+      "target": 549
+    },
+    {
+      "best_cut_height": 67,
+      "k": 4,
+      "target": 1989
+    },
+    {
+      "best_cut_height": 131,
+      "k": 5,
+      "target": 7557
+    },
+    {
+      "best_cut_height": 259,
+      "k": 6,
+      "target": 29445
+    },
+    {
+      "best_cut_height": 515,
+      "k": 7,
+      "target": 116229
+    },
+    {
+      "best_cut_height": 1027,
+      "k": 8,
+      "target": 461829
+    },
+    {
+      "best_cut_height": 2051,
+      "k": 9,
+      "target": 1841157
+    },
+    {
+      "best_cut_height": 4099,
+      "k": 10,
+      "target": 7352325
+    },
+    {
+      "best_cut_height": 8195,
+      "k": 11,
+      "target": 29384709
+    },
+    {
+      "best_cut_height": 16387,
+      "k": 12,
+      "target": 117489669
+    },
+    {
+      "best_cut_height": 32771,
+      "k": 13,
+      "target": 469860357
+    },
+    {
+      "best_cut_height": 65539,
+      "k": 14,
+      "target": 1879244805
+    },
+    {
+      "best_cut_height": 131075,
+      "k": 15,
+      "target": 7516585989
+    },
+    {
+      "best_cut_height": 262147,
+      "k": 16,
+      "target": 30065557509
+    },
+    {
+      "best_cut_height": 524291,
+      "k": 17,
+      "target": 120260657157
+    },
+    {
+      "best_cut_height": 1048579,
+      "k": 18,
+      "target": 481039482885
+    },
+    {
+      "best_cut_height": 2097155,
+      "k": 19,
+      "target": 1924151640069
+    },
+    {
+      "best_cut_height": 4194307,
+      "k": 20,
+      "target": 7696593977349
+    }
+  ],
+  "complete_word_length_cap": 6,
+  "literal_graph": {
+    "C": 1,
+    "H": 57,
+    "vertices": 8,
+    "word": "ZJJJOJ"
+  },
+  "noninteger_rectangle_checks": 103455,
+  "rectangle_checks": 137718,
+  "scope": "Exact finite checks support the all-order proved corollaries; no universal coverage or global optimality claim.",
+  "source_sha256": "55dd20f9bdbe5ee613f18c0ead47bad1f95b9ec8fd6eae1b2822362ff1786670",
+  "status": "PASS",
+  "words": 2186
+}

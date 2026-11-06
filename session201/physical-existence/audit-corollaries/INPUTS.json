@@ -1,0 +1,8 @@
+{
+  "COROLLARIES.md": "e84a9f070844a830825e485de786a9eb1ae56270d6b197aefbcad0bb9539bf2d",
+  "COROLLARIES_NORMAL.json": "154fb484b2aafafe03dc228e551880e8d2ea6f12e842ecc63fcf0c9bd1e18880",
+  "COROLLARIES_OPTIMIZED.json": "154fb484b2aafafe03dc228e551880e8d2ea6f12e842ecc63fcf0c9bd1e18880",
+  "PROOF.md": "741bbb44bfc26315bc0aedc4356bab99c3fe5328444e06265cf129d6988c2ea0",
+  "verify.py": "61e9c7254cfac277b737a05f98155c1b95a29dbfd70091862d0cdaba33badf52",
+  "verify_corollaries.py": "55dd20f9bdbe5ee613f18c0ead47bad1f95b9ec8fd6eae1b2822362ff1786670"
+}
