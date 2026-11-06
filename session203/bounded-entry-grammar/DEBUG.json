@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "labeled_graphs": 33867,
+  "strong_graphs": 22891,
+  "strong_by_order": [1, 0, 2, 24, 544, 22320],
+  "mixed_marked_size_checks": 99648,
+  "growth_mixed_steps": 67088,
+  "growth_pair_steps": 492,
+  "scope": "All labeled tournaments through order6; all mixed extensions of strong inputs through order5. All-order proof is separate."
+}

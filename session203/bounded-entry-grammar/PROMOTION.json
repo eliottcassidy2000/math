@@ -1,0 +1,12 @@
+{
+  "status": "PASS: independently audited source and exact promotion",
+  "original_proof_sha256": "6b5ec1079b2126f9992c8dd517541fe43959f32a7aaedbd046c445fb9744fad7",
+  "promoted_proof_sha256": "651a45b8d3a4b3bb307b1366d2a9b8199925788e99f42d5375abec4f265c3b76",
+  "changes": [
+    "Opening status promoted after independent audit.",
+    "Added the independently reviewed direct actual-entry corollary |A|^2<4k/q, hence |A|<=10 for k<=26."
+  ],
+  "unchanged": "All earlier mathematical text, author verifier and receipts, and independent audit artifacts.",
+  "excluded": "Separate finite-interface construction and F(8,137) occupancy.",
+  "promotion_review": "audit/PROMOTION_REVIEW.md"
+}

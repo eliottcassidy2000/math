@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "method": "Independent permutation enumeration, literal subsets and SCCs",
+  "scope": "All strong labeled inputs through n5; mixed and pair additions through n4",
+  "counts": {
+    "strong": 571,
+    "subsets": 17239,
+    "mixed_subsets": 5472,
+    "pairs": 26,
+    "scc_roots": 2822
+  }
+}
