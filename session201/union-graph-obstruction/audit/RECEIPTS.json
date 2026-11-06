@@ -1,0 +1,15 @@
+{
+  "INDEPENDENT": {
+    "normal_status": "PASS",
+    "optimized_status": "PASS",
+    "byte_identical": true
+  },
+  "AUTHOR": {
+    "normal_status": "PASS",
+    "optimized_status": "PASS",
+    "byte_identical": true
+  },
+  "author_matches_frozen_receipts": true,
+  "snapshot_matches_original": true,
+  "overall": "PASS"
+}

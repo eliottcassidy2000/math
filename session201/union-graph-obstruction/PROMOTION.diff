@@ -1,0 +1,31 @@
+--- originals/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # The twelve-template union witness relation is not binary-automatic
+ 
+-Status: **RESERVED / UNREVIEWED PROOF CANDIDATE**. This is a separate corollary
++Status: **PROVED / INDEPENDENTLY AUDITED**. This is a separate corollary
+ packet and does not alter the frozen digital-graph proof. It concerns the
+ three-variable witness relation, not its one-variable target support.
+ The twelve-template all-target occupancy assertion remains **OPEN**.
+@@ -167,8 +167,8 @@
+ 
+ ## 5. Portable replay
+ 
+-    python3 session201-union-graph-obstruction/verify.py
+-    python3 -O session201-union-graph-obstruction/verify.py
++    python3 verify.py
++    python3 -O verify.py
+ 
+ The verifier contains all scalar and matrix definitions locally. Its only
+ input file is the copied twelve-entry `INPUT-MENU.json`, whose hash is
+--- originals/README.md
++++ README.md
+@@ -1,6 +1,6 @@
+ # Union witness graph obstruction
+ 
+-Separate unreviewed corollary packet. Every nonempty central word strictly
++Separate independently audited corollary packet. Every nonempty central word strictly
+ increases the pairing, so empty is the minimum output at fixed indices.
+ If the union witness relation were binary-automatic, selecting its minimum
+ would contradict the nonregular empty-template row at u=2.
