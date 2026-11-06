@@ -1,0 +1,100 @@
+{
+  "both": [
+    5,
+    9,
+    17
+  ],
+  "complete_parent_count_cap": 3333,
+  "literal_graphs": [
+    {
+      "child_counts": [
+        9,
+        1
+      ],
+      "child_word": "ZZJ",
+      "parent": 5,
+      "parent_counts": [
+        5,
+        1
+      ],
+      "parent_word": "ZZ",
+      "sign": -1
+    },
+    {
+      "child_counts": [
+        11,
+        1
+      ],
+      "child_word": "OZJ",
+      "parent": 5,
+      "parent_counts": [
+        5,
+        1
+      ],
+      "parent_word": "OZ",
+      "sign": 1
+    },
+    {
+      "child_counts": [
+        17,
+        1
+      ],
+      "child_word": "ZZZJ",
+      "parent": 9,
+      "parent_counts": [
+        9,
+        1
+      ],
+      "parent_word": "ZZZ",
+      "sign": -1
+    },
+    {
+      "child_counts": [
+        19,
+        1
+      ],
+      "child_word": "ZOZJ",
+      "parent": 9,
+      "parent_counts": [
+        9,
+        1
+      ],
+      "parent_word": "ZOZ",
+      "sign": 1
+    },
+    {
+      "child_counts": [
+        33,
+        1
+      ],
+      "child_word": "ZZZZJ",
+      "parent": 17,
+      "parent_counts": [
+        17,
+        1
+      ],
+      "parent_word": "ZZZZ",
+      "sign": -1
+    },
+    {
+      "child_counts": [
+        35,
+        1
+      ],
+      "child_word": "ZJOZJ",
+      "parent": 17,
+      "parent_counts": [
+        17,
+        1
+      ],
+      "parent_word": "ZJOZ",
+      "sign": 1
+    }
+  ],
+  "minus_count": 20,
+  "physical_cover_cap": 5000,
+  "plus_count": 61,
+  "profiles": 126910,
+  "source_sha256": "ebfb109a9cd88073f407c912fb9a7776458b950e1a34fa8b9b48c451c3004992",
+  "status": "PASS"
+}

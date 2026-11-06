@@ -1,0 +1,12 @@
+{
+  "sha256": {
+    "PROOF.md": "b21204b9de7160c9b94aad791ae78cf1f4d587b4d2704d8233d239737e85f54a",
+    "VALIDATION_NORMAL.json": "18ebf31e678daa489041f9ce6f40b60c9d88823059bd45422456d12abbe69487",
+    "VALIDATION_OPTIMIZED.json": "18ebf31e678daa489041f9ce6f40b60c9d88823059bd45422456d12abbe69487",
+    "dependencies/BALANCED_SOURCE.md": "00ddcec08dd88e6c91917ff2915bc52662c4e23fe4ba2e1d948bad5d1461a6b3",
+    "dependencies/COMPLETE_SOURCES.md": "5eab9deb2871819d8a1b5684c4987f2f4da807adc55063a30675d531c5ad3813",
+    "dependencies/PHYSICAL_GRAMMAR.md": "49ad1123e80fbf751eac3e72ed0f5ad2ec39e7705f9ee89c77d4826ef5e1066c",
+    "verify.py": "a9aabb98e8bc3cfb02df9e5f07efeca78c24863cef14fa4f4afec2ebf27fcfb9"
+  },
+  "source_directory": "session202-construct-descent/append-binary"
+}

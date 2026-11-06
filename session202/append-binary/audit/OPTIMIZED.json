@@ -1,0 +1,100 @@
+{
+  "O_J_minus_slice_profiles": 24,
+  "all_physical_profiles": 126910,
+  "arithmetic_intersection_cap": 100000000,
+  "both_child_parents": [
+    5,
+    9,
+    17
+  ],
+  "hostile25_one_letter_children": [
+    45,
+    63
+  ],
+  "hostile25_profiles": [
+    [
+      5,
+      0,
+      20,
+      1
+    ],
+    [
+      15,
+      5,
+      15,
+      5
+    ]
+  ],
+  "literal_controls": [
+    {
+      "count": 5,
+      "cycles": 1,
+      "source_word": "Z",
+      "vertices": 4
+    },
+    {
+      "count": 5,
+      "cycles": 1,
+      "source_word": "O",
+      "vertices": 4
+    },
+    {
+      "count": 9,
+      "cycles": 1,
+      "source_word": "ZZ",
+      "vertices": 5
+    },
+    {
+      "count": 9,
+      "cycles": 1,
+      "source_word": "ZO",
+      "vertices": 5
+    },
+    {
+      "count": 17,
+      "cycles": 1,
+      "source_word": "ZZZ",
+      "vertices": 6
+    },
+    {
+      "count": 17,
+      "cycles": 1,
+      "source_word": "ZJO",
+      "vertices": 6
+    },
+    {
+      "count": 25,
+      "cycles": 1,
+      "source_word": "OJOO",
+      "vertices": 7
+    },
+    {
+      "count": 49,
+      "cycles": 1,
+      "source_word": "OJJOO",
+      "vertices": 8
+    },
+    {
+      "count": 49,
+      "cycles": 1,
+      "source_word": "JZJJZ",
+      "vertices": 8
+    },
+    {
+      "count": 51,
+      "cycles": 1,
+      "source_word": "OOZZ",
+      "vertices": 7
+    }
+  ],
+  "negative_slice_profiles": 13,
+  "parent3_one_letter_children": [
+    5
+  ],
+  "positive_slice_profiles": 76,
+  "scope": "finite exact controls; all-order proof audited separately",
+  "singleton": "Outside nontrivial source orbit; balanced inverse allows singleton only as a predecessor.",
+  "source_cover_cap": 5000,
+  "status": "PASS",
+  "two_letter_stress_checks": 1926
+}

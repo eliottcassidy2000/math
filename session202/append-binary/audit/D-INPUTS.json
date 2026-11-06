@@ -1,0 +1,8 @@
+{
+  "sha256": {
+    "D_INTERFACE.md": "4d74882efe34ccaa95970a31ce50d942693f36d01b9bd5d142bf568be530b5b2",
+    "D_NORMAL.json": "b4b67763fee0b2646d00aa74b2a02c9451b4abc22e34b8ae59976dcbe32e2ae8",
+    "D_OPTIMIZED.json": "b4b67763fee0b2646d00aa74b2a02c9451b4abc22e34b8ae59976dcbe32e2ae8",
+    "verify_d_interface.py": "ebfb109a9cd88073f407c912fb9a7776458b950e1a34fa8b9b48c451c3004992"
+  }
+}

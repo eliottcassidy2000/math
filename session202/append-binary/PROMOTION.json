@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "audits": [
+    "audit/REPORT.md",
+    "audit/D-REPORT.md"
+  ],
+  "promotions": [
+    {
+      "file": "PROOF.md",
+      "original_sha256": "b21204b9de7160c9b94aad791ae78cf1f4d587b4d2704d8233d239737e85f54a",
+      "promoted_sha256": "3930719a2c9d5cfadb71456fc8210b16802c0c6f91d9beda0136312199a74ee8",
+      "allowed_change": "Replace pending-independent-audit status only; mathematical text unchanged."
+    },
+    {
+      "file": "D_INTERFACE.md",
+      "original_sha256": "4d74882efe34ccaa95970a31ce50d942693f36d01b9bd5d142bf568be530b5b2",
+      "promoted_sha256": "b4f3ffc053e8f32ee9182781af807e8d9bc6e69a4f3a96c97a0ec9d5ecfce57a",
+      "allowed_change": "Replace pending-independent-audit status only; mathematical text unchanged."
+    }
+  ]
+}

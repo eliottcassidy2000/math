@@ -1,0 +1,190 @@
+{
+  "formula_checks": 4920,
+  "intersection": [
+    5,
+    9,
+    17
+  ],
+  "intersection_check_bound": 10000001,
+  "literal_graphs": [
+    {
+      "C": 1,
+      "H": 9,
+      "parent": 5,
+      "rows": [
+        2,
+        28,
+        25,
+        17,
+        1
+      ],
+      "sign": -1,
+      "vertices": 5,
+      "word": "ZZJ"
+    },
+    {
+      "C": 1,
+      "H": 11,
+      "parent": 5,
+      "rows": [
+        6,
+        28,
+        24,
+        17,
+        1
+      ],
+      "sign": 1,
+      "vertices": 5,
+      "word": "OZJ"
+    },
+    {
+      "C": 1,
+      "H": 17,
+      "parent": 9,
+      "rows": [
+        2,
+        60,
+        57,
+        49,
+        33,
+        1
+      ],
+      "sign": -1,
+      "vertices": 6,
+      "word": "ZZZJ"
+    },
+    {
+      "C": 1,
+      "H": 19,
+      "parent": 9,
+      "rows": [
+        10,
+        60,
+        57,
+        48,
+        33,
+        1
+      ],
+      "sign": 1,
+      "vertices": 6,
+      "word": "ZOZJ"
+    },
+    {
+      "C": 1,
+      "H": 33,
+      "parent": 17,
+      "rows": [
+        2,
+        124,
+        121,
+        113,
+        97,
+        65,
+        1
+      ],
+      "sign": -1,
+      "vertices": 7,
+      "word": "ZZZZJ"
+    },
+    {
+      "C": 1,
+      "H": 35,
+      "parent": 17,
+      "rows": [
+        114,
+        124,
+        121,
+        17,
+        96,
+        72,
+        8
+      ],
+      "sign": 1,
+      "vertices": 7,
+      "word": "ZJOZJ"
+    },
+    {
+      "C": 1,
+      "H": 25,
+      "rows": [
+        118,
+        124,
+        120,
+        49,
+        96,
+        64,
+        8
+      ],
+      "target": 25,
+      "vertices": 7,
+      "word": "OJOOJ"
+    },
+    {
+      "C": 1,
+      "H": 49,
+      "rows": [
+        250,
+        252,
+        225,
+        244,
+        196,
+        16,
+        160,
+        32
+      ],
+      "target": 49,
+      "vertices": 8,
+      "word": "JZJJZJ"
+    },
+    {
+      "C": 1,
+      "H": 51,
+      "rows": [
+        14,
+        124,
+        120,
+        112,
+        97,
+        65,
+        1
+      ],
+      "target": 51,
+      "vertices": 7,
+      "word": "OOZZJ"
+    }
+  ],
+  "parent25_one_letter_outputs": [
+    45,
+    63
+  ],
+  "parent25_profiles": [
+    {
+      "profile": [
+        5,
+        0,
+        20,
+        1
+      ],
+      "word": "OJOO"
+    },
+    {
+      "profile": [
+        15,
+        5,
+        15,
+        5
+      ],
+      "word": "OJOJ"
+    }
+  ],
+  "physical_cover_cap": 5000,
+  "physical_profiles": 126910,
+  "scope": "Exact finite controls support the all-order physical append-only classification. No eventual coverage assertion.",
+  "slice_profile_counts": {
+    "endpoint": 24,
+    "h_minus": 13,
+    "h_plus": 76
+  },
+  "source_sha256": "a9aabb98e8bc3cfb02df9e5f07efeca78c24863cef14fa4f4afec2ebf27fcfb9",
+  "status": "PASS"
+}
