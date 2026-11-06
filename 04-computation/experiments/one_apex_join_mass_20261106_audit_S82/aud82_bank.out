@@ -1,0 +1,23 @@
+LABELLED order<=1: 1 labelled tournaments at order 1 rooted at 0; distinct triples of order <= 1: 1; M = 1.386294361
+LABELLED order<=2: 2 labelled tournaments at order 2 rooted at 0; distinct triples of order <= 2: 2; M = 2.197224577
+LABELLED order<=3: 8 labelled tournaments at order 3 rooted at 0; distinct triples of order <= 3: 4; M = 3.105609800
+LABELLED order<=4: 64 labelled tournaments at order 4 rooted at 0; distinct triples of order <= 4: 12; M = 5.134391326
+LABELLED order<=5: 1024 labelled tournaments at order 5 rooted at 0; distinct triples of order <= 5: 42; M = 8.379469122
+LABELLED order<=6: 32768 labelled tournaments at order 6 rooted at 0; distinct triples of order <= 6: 254; M = 16.954223268
+LABELLED order<=7: 2097152 labelled tournaments at order 7 rooted at 0; distinct triples of order <= 7: 2732; M = 48.197612382
+CLASSES order 1: 1 class; distinct triples of order <= 1: 1; M = 1.386294361
+CLASSES order 2: 1 isomorphism classes; distinct triples of order <= 2: 2; M = 2.197224577
+  max h 1, max R 2, #(e > h or h even) 0, sum 1/R = 1.5000
+CLASSES order 3: 2 isomorphism classes; distinct triples of order <= 3: 4; M = 3.105609800
+  max h 3, max R 4, #(e > h or h even) 0, sum 1/R = 2.0833
+CLASSES order 4: 4 isomorphism classes; distinct triples of order <= 4: 12; M = 5.134391326
+  max h 5, max R 12, #(e > h or h even) 0, sum 1/R = 3.4123
+CLASSES order 5: 12 isomorphism classes; distinct triples of order <= 5: 42; M = 8.379469122
+  max h 15, max R 32, #(e > h or h even) 0, sum 1/R = 5.5275
+CLASSES order 6: 56 isomorphism classes; distinct triples of order <= 6: 254; M = 16.954223268
+  max h 45, max R 120, #(e > h or h even) 0, sum 1/R = 11.0726
+CLASSES order 7: 456 isomorphism classes; distinct triples of order <= 7: 2732; M = 48.197612382
+  labelled-mode set (order <= 7) == class-mode set: YES
+  max h 189, max R 432, #(e > h or h even) 0, sum 1/R = 31.2018
+CLASSES order 8: (classes not enumerated; 58368 rooted candidates) distinct triples of order <= 8: 51268; M = 211.236115928
+  max h 661, max R 2016, #(e > h or h even) 0, sum 1/R = 135.9270

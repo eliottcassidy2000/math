@@ -1,0 +1,6 @@
+mod 3: min class mean 12.535 (r=1, F1-miss frac 0.00741), max class mean 18.106
+   class means: 0:18.106/0.00176 1:12.535/0.00741 2:14.103/0.00220
+mod 9: min class mean 12.467 (r=4, F1-miss frac 0.00746), max class mean 19.909
+   class means: 0:19.909/0.00111 1:12.620/0.00736 2:13.905/0.00266 3:17.045/0.00216 4:12.467/0.00746 5:13.879/0.00253 6:17.365/0.00200 7:12.519/0.00741 8:14.524/0.00141
+mod 27: min class mean 12.451 (r=4, F1-miss frac 0.00736), max class mean 19.929
+mod 81: min class mean 12.446 (r=4, F1-miss frac 0.00730), max class mean 19.984

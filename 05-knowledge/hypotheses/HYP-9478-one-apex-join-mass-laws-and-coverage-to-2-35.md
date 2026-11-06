@@ -82,3 +82,26 @@ Source: `chanpak_join_multiplicity_20261106.out`, LOGX = 30. The run was made af
 - **(P3) CONFIRMED.** The odd N <= 2^30 with r2 = 0 are exactly 7 and 21. The block minima are 5 and 4, both >= 4.
 - **(P4) CONFIRMED.** 2.566e-5 < 2.85e-5, and 3.334e-3 < 3.42e-3.
 - **(P5)-(P7)** are pending the LOGX = 35 coverage run.
+
+## After the independent audit (PASS WITH CORRECTIONS; MISTAKE-725)
+
+Audit report: `04-computation/experiments/one_apex_join_mass_20261106_audit_S82/AUDIT.md`.
+
+- **Reproduction.** The audit's independent sieve reproduces every line k = 10..29 of the LOGX = 30 output: means,
+  increments, minima, tails, and the mod-3 means.
+- **Timing.** The output postdates 09b7a56a98 by 4.5 minutes, and the predictions are textually unchanged.
+- **Caveats.**
+  - The producing program `chanpak_join_multiplicity_20261106.c` was committed at the checkpoint 5bde18fade, not with
+    the predictions.
+  - P1 and P2 follow from THM-4885 (A)-(C), which were derived before the commit. So they test the implementation,
+    not the mass laws. P3 and P4 are the genuine out-of-sample tests.
+- **Correction to the in-sample section** (left unedited above, since it is part of the pre-registration). The block
+  minimum of r2 for k = 18..27 is 5 to 10, not "5 to 8": k = 19 has 10.
+- **Credits.** The mass law extends Session 16's audited W(X) = X ln 2 + O(sqrt X)
+  (`feedback_word_hamilton_spectrum_20261020/BINARY_PRODUCT_DENSITY.md` (1)).
+- **The 2^35 run.**
+  - The pre-registered program (frozen in 09b7a56a98) is memory-bound at 2^35 and was stopped after 67 minutes with no
+    output.
+  - P5-P7 are being decided by `chanpak_f1f2_cover35_bucketed_20261106.c`, committed in 82376badc0 before its run. It
+    computes the same families and output with bucketed writes, and is identical to the frozen program and to the audit
+    at 2^28 and 2^30.

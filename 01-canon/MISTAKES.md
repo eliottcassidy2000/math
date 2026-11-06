@@ -23099,3 +23099,38 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **What is true.** (a) J(D, E, U, d) = (D - E + U, D - E, D + U, D) gives d' - E' = E of the parent, which is 1 only when the parent has E = 1; t . JJZ = (9, 3, 9, 3) is strong and its J-child (15, 6, 18, 9) has gamma = gcd(69, 3) = 3, every offset 3 (mod 6) (literal C2 graphs: offsets 33 and 39). The theorem itself (one class modulo 2 gcd(alpha, d_v - E_v)) is correct. (b) The proof's condition is b A_w = a(2^k - 1), which forces 0 <= a/b <= 1; outside (1/2, 1) there are source-independent words that are not clocks (1/3: ZO with change +1; 2/5: OZZO; 1/5: ZZOO; 3/7: ZZO) and above 1 there are none (4/3, 6/5). The clock statement holds exactly for 1/2 < a/b < 1 (audit: 5,013,198 words). (c) No branch is interior in the dyadic case a = b/2 + 1; the dyadic case has no full class; c_+ = F(2^s - 1) for s >= 2; the audit's depth-35 search shows -427, -425, -405, 277 need at least 36 letters, so P6 (b) does fail at j = 9; heads are found by direct search, A0's branch heads exceed 40,000 letters for 51 of 974 test targets with K >= 50.
 - **Consequences.** T4 now lists t, O t, O-born sources over d = 1 and J-born sources over E = 1, with the counterexample recorded, and states the class U_v - D_v + E_v + 2d_v (audit upgrade 1); T5 is stated with the general condition and the interior clock statement; all minors repaired in PROOF.md, README, THM-4883, HYP-9476 and the index rows; upgrades adopted (decided P5 classes, exterior density evidence, the corollary on two-sided progressions, the dyadic 3/4 example, the exhaustive dictionary check). T1-T3 and the receipts are unchanged; the main theorems were not affected.
 - **Process.** Both majors are examples and quantifier ranges written from memory of one case: (a) generalised "J-born over a strong unit source" to "over a strong source" without recomputing d' - E' = E; (b) the proof of T5 computes lambda_w = 0 correctly, but the statement imported Lemma 6's interior hypothesis implicitly. Check every illustrative example against the formula it illustrates, and restate a theorem's slope range whenever its proof uses a lemma with a range.
+
+## MISTAKE-725 (2026-11-06, opus-2026-11-06-S82, the note `05-knowledge/results/one_apex_join_representation_mass_pi2_over_12_20261106.md`, THM-4885 and HYP-9478 at the pre-audit commit 5bde18fade; found by the independent audit `04-computation/experiments/one_apex_join_mass_20261106_audit_S82/AUDIT.md`) -- a 17-day-old audited density law typed as new, a classified family called unclassified, and a sufficiency claim the method cannot give
+
+- **What was claimed.**
+  - (1) Theorem A (#{v : a g(v) - b e(v) + c(1 + v) <= X} = (X/a) ln(1 + a/c) + O(sqrt X)) was typed "PROVED (new)",
+    together with the one-apex mass 2 ln 2.
+  - (2) Route 3: "intercyclic tournaments without a common vertex were not classified".
+  - (3) A power-saving exponential-sum bound for g plus a growing bank would give "r_Y(N) > 0 for all large N". The data
+    were said to "show" a local factor that is "2-adically trivial and 3-adically bounded".
+- **Why it was wrong.**
+  - (1) Session 16 `feedback_word_hamilton_spectrum_20261020/BINARY_PRODUCT_DENSITY.md` (2026-10-20, audited ACCEPT)
+    proves W(X) = X ln 2 + O(sqrt X) for the one-apex words. That is the case (a, b, c) = (1, 1, 1), by the same
+    binary-product coupling and the same integral. Session 26 proves it again. Only the (a, b, c) generalisation, the
+    pi^2/24 law and the bank masses were new.
+  - (2) Session 16 `intercyclic_rays.md` (audited ACCEPT) classifies the intercyclic spectrum:
+    S_1 ∪ {3·2^t + 1} ∪ {9·2^t - 3}, via Bang-Jensen-Bessy.
+  - (3) Sup bounds on the minor arcs give at best almost-all (density-one) statements, as kind-pasteur S11 had already
+    recorded. The local factor has comparable 5- and 7-adic parts (x1.17 and x1.09 against x1.26 at 3), present in the
+    session's own exploratory output. The Goldbach / circle-method / Zaremba framing was S73's, mac-mini's and
+    kind-pasteur S11's.
+- **Repair.**
+  - (A) retyped as an extension of Session 16/26; route 3 retyped KNOWN and closed.
+  - Section 7 retyped HEURISTIC, with the density-one limitation and credits.
+  - Local factors at every small odd prime recorded (audit U3).
+  - 16 minors fixed, among them the b/c term of the uniform error, the gaps in Theorem B, the pre-registration
+    caveats and HYP-9478's in-sample "5 to 8" (k = 19 has 10).
+  - The audit's upgrades adopted: kappa = -0.2388732, M_m >= 2 (ln 2)^2 (m - 1), and 1 <= g(v) - v rho(v) <= 1 + #10(v).
+- **How it was caught.** The audit grepped the whole tree for the law itself ("X log 2", "W(X)") and for "intercyclic",
+  not for the session's own words ("mass", "multiplicity", "pi^2/12"). It then read Session 16's audited packets in full.
+- **Lesson.**
+  - Before typing a density or counting law as new, grep for its simplest special case written the way an earlier lane
+    would write it (`git grep -n "X log 2"`, `git grep -n -i "W(X)"`), not only for the new constants.
+  - Before calling a family unclassified, grep for its name (`git grep -n -i intercyclic`).
+  - A circle-method sketch must state what it yields. Power-saving minor-arc bounds give almost-all results, not
+    pointwise lower bounds.

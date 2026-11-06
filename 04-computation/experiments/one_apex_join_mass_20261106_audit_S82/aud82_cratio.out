@@ -1,0 +1,6 @@
+order 1: 1 distinct C/H ratios; non-power-of-2 ratios (C/H, H, C, strong?): []
+order 2: 1 distinct C/H ratios; non-power-of-2 ratios (C/H, H, C, strong?): []
+order 3: 2 distinct C/H ratios; non-power-of-2 ratios (C/H, H, C, strong?): []
+order 4: 3 distinct C/H ratios; non-power-of-2 ratios (C/H, H, C, strong?): [('32/5', 5, 32, [True])]
+order 5: 7 distinct C/H ratios; non-power-of-2 ratios (C/H, H, C, strong?): [('36/5', 15, 108, [True]), ('100/11', 11, 100, [True]), ('28/3', 9, 84, [True]), ('64/5', 5, 64, [False])]
+order 6: 22 distinct C/H ratios; non-power-of-2 ratios (C/H, H, C, strong?): [('352/37', 37, 352, [True]), ('48/5', 45, 432, [True]), ('424/43', 43, 424, [True]), ('416/41', 41, 416, [True]), ('376/37', 37, 376, [True]), ('112/11', 33, 336, [True]), ('328/31', 31, 328, [True]), ('32/3', 27, 288, [True]), ('120/11', 33, 360, [True]), ('320/29', 29, 320, [True]), ('272/23', 23, 272, [True]), ('304/25', 25, 304, [True]), ('296/23', 23, 296, [True]), ('224/17', 17, 224, [True]), ('256/19', 19, 256, [True]), ('72/5', 15, 216, [False, True]), ('200/11', 11, 200, [False]), ('56/3', 9, 168, [False]), ('128/5', 5, 128, [False])]

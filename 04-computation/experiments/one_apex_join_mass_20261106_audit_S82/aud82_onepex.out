@@ -1,0 +1,17 @@
+(0) closed form vs recursion, v <= 2^24: 0 failures
+    1 <= g(v) <= v + 1 for v <= 2^24: 0 failures
+(1) one-apex triple (h, e_x, R_x) = (g(v), [v=0 or even], 1+v) for all L <= 12, v < 2^L (R checked for L <= 8): 8191 cases, 0 failures
+(2) delta(v) = g(v) - v rho(v) per top bit n: [min, max]   (note's bound |delta| <= 2n + 1)
+    n= 1: [1.0000, 2.0000]   bound 3
+    n= 2: [1.0000, 2.0000]   bound 5
+    n= 3: [1.0000, 2.7500]   bound 7
+    n= 4: [1.0000, 2.7500]   bound 9
+    n= 5: [1.0000, 3.4375]   bound 11
+    n= 6: [1.0000, 3.4375]   bound 13
+    n= 8: [1.0000, 4.1094]   bound 17
+    n=12: [1.0000, 5.4443]   bound 25
+    n=16: [1.0000, 6.7778]   bound 33
+    n=20: [1.0000, 8.1111]   bound 41
+    n=23: [1.0000, 9.4444]   bound 47
+(3a) one-arc join law, one-apex x random rooted tournament of order <= 7: 2000 random cases, 0 failures, 2000 odd
+(3b) F1 law, T(u) joined with T(v)^op at the apexes: 2000 random cases, 0 failures

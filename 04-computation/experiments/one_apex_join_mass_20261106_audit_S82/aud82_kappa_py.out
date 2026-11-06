@@ -1,0 +1,6 @@
+c' = 0.486362073159531   (2-D quadrature: 0.486362073193245 )
+kappa1 = 0.2474888569   kappa = kappa1 - c' = -0.23887321626   2 kappa = -0.477746432519
+predicted block mean of r1 at k=20: 12.06424908
+predicted block mean of r1 at k=25: 14.91470261
+predicted block mean of r1 at k=28: 16.62497473
+predicted block mean of r1 at k=29: 17.19506543
