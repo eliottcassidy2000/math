@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "dimension": 28,
+  "matrices": [
+    {
+      "letter": 0,
+      "rank": 18,
+      "rank_squared": 18,
+      "characteristic_polynomial": "lambda**10*(lambda - 3)*(lambda - 2)**5*(lambda - 1)**12"
+    },
+    {
+      "letter": 1,
+      "rank": 18,
+      "rank_squared": 18,
+      "characteristic_polynomial": "lambda**10*(lambda - 3)*(lambda - 2)**5*(lambda - 1)**12"
+    },
+    {
+      "letter": 2,
+      "rank": 18,
+      "rank_squared": 18,
+      "characteristic_polynomial": "lambda**10*(lambda - 3)*(lambda - 2)**5*(lambda - 1)**12"
+    },
+    {
+      "letter": 3,
+      "rank": 18,
+      "rank_squared": 18,
+      "characteristic_polynomial": "lambda**10*(lambda - 3)*(lambda - 2)**5*(lambda - 1)**12"
+    }
+  ],
+  "literal_checks": 341,
+  "common_triangular_order": [
+    0,
+    21,
+    23,
+    7,
+    14,
+    17,
+    20,
+    4,
+    16,
+    22,
+    6,
+    5,
+    13,
+    19,
+    3,
+    24,
+    8,
+    18,
+    2,
+    26,
+    10,
+    12,
+    27,
+    11,
+    15,
+    25,
+    9,
+    1
+  ],
+  "product_spectrum": "0,1,2^k,3^k for every image word length k>=1",
+  "unary_formula": "H(1^n)=2^n+1 for n>=1"
+}
