@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "audit": "audit/AUDIT.md",
+  "initial_proof_sha256": "10c0c69b58ca42ff650047bd8dea16c894f6fd3a0a63e4bfd5bc63108f4cca24",
+  "scope_clarification": "audit/SCOPE_CLARIFICATION.diff",
+  "promotions": [
+    {
+      "file": "EDGE_SECTOR.md",
+      "reviewed_original_sha256": "56fd5b839160090a6bb0dd19117c9735872655fba7c5549636a1c165193068b3",
+      "promoted_sha256": "a5664506f40421d6a2b8261d23282093746f2431d0ee56d81e6036a25fb3ef6d",
+      "allowed_change": "Replace pending-independent-audit status only; retain extraction as OPEN; mathematical text unchanged."
+    }
+  ]
+}

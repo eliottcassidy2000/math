@@ -1,0 +1,27 @@
+--- initial/EDGE_SECTOR.md
++++ revised/EDGE_SECTOR.md
+@@ -54,7 +54,7 @@
+ 
+     H(output)/(H(input)*3)=u/(2u-1) -> 1/2.
+ 
+-This is a positive nonproduct composition with arbitrarily large inputs. It does not establish a universal half-product lower bound for arbitrary two-overlap gluings.
++This is a positive nonproduct composition with arbitrarily large E(u) inputs; the other input is the fixed triangle. It does not establish a universal half-product lower bound for arbitrary two-overlap gluings.
+ 
+ ## 3. Why the free sector is not yet a free Hamilton count
+ 
+@@ -72,13 +72,13 @@
+ 
+     6u-1 and 6u+1, for every u>=2.                   (5)
+ 
+-This is OPEN; no operation producing (5) has been constructed here. If such two graph constructors are found, the entire positive spectrum apart from7,21 follows from a short exact arithmetic argument:
++This is OPEN; no operation producing (5) has been constructed here. If such two graph constructors are found, positive existence for every positive odd count other than7 and21 follows from a short exact arithmetic argument:
+ 
+ - (5) covers all positive odd integers coprime to3 other than1,5,7. Counts1 and5 have the edge and E(3) as witnesses.
+ - An ordered join multiplies Hamilton-path counts. Thus multiplying a covered odd count by any power of3 is realized by adjoining the corresponding number of triangle factors.
+ - The only remaining odd numbers are7*3^a. The cases a=0,1 are7,21. For a>=2, E(39) has count63, and an ordered join with a-2 triangles gives7*3^a.
+ 
+-This is an implication from the explicitly stated extraction problem, not a proof of that problem or an assertion that a bounded graft can solve it. The extraction would need to remove or control the correlated g contribution without silently replacing the input by an unrealizable formal sector vector.
++The global exclusions of7 and21 are separate inherited results and are not proved here. This is an implication from the explicitly stated extraction problem, not a proof of that problem or an assertion that a bounded graft can solve it. The extraction would need to remove or control the correlated g contribution without silently replacing the input by an unrealizable formal sector vector.
+ 
+ ## 5. Verification and scope
+ 

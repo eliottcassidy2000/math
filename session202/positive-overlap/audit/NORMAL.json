@@ -1,0 +1,32 @@
+{
+  "E39_H": 63,
+  "H13_hostile_table": [
+    1,
+    3,
+    5,
+    5,
+    9,
+    9,
+    11,
+    9,
+    17,
+    15,
+    19,
+    15,
+    23
+  ],
+  "conditional_factorization_cap": 100001,
+  "conditional_factorization_cases": 49999,
+  "excluded_from_conditional_claim": [
+    7,
+    21
+  ],
+  "indices_checked": 129,
+  "largest_graph_order": 11,
+  "literal_extensions_checked": 256,
+  "nonproduct_arithmetic_k_max": 100,
+  "scope": "Literal finite controls and conditional arithmetic only; extraction and eventual coverage OPEN",
+  "status": "PASS",
+  "unrestricted_H13": 13,
+  "unrestricted_H13_cycles": 2
+}

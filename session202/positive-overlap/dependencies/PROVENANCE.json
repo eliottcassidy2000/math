@@ -1,0 +1,16 @@
+[
+  {
+    "source_commit": "765d7717feef25bea6c2a76454d82888616799c1",
+    "source_path": "session201/central-arithmetic/PROOF.md",
+    "local_path": "dependencies/CENTRAL_ARITHMETIC.md",
+    "sha256": "49ad1123e80fbf751eac3e72ed0f5ad2ec39e7705f9ee89c77d4826ef5e1066c",
+    "role": "Inheritance or comparison only; the present path decomposition is self-contained."
+  },
+  {
+    "source_commit": "765d7717feef25bea6c2a76454d82888616799c1",
+    "source_path": "session202/overlap-gluing/PROOF.md",
+    "local_path": "dependencies/OVERLAP_GLUING.md",
+    "sha256": "2949183b4cf7f25f74f46dfe50debccfd34ab39b8e11bae4e7862c5284d6b7d8",
+    "role": "Inheritance or comparison only; the present path decomposition is self-contained."
+  }
+]

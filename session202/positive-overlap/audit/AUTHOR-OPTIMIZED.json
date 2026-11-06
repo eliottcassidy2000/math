@@ -1,0 +1,47 @@
+{
+  "E39_H": 63,
+  "E39_rows": [
+    2,
+    100,
+    249,
+    243,
+    227,
+    193,
+    129,
+    3
+  ],
+  "H13_H": 13,
+  "H13_rows": [
+    18,
+    8,
+    3,
+    5,
+    14
+  ],
+  "arc_forward_sector_surjective_on_tested_indices": true,
+  "extension_graphs_count": 256,
+  "hostile_table": [
+    1,
+    3,
+    5,
+    5,
+    9,
+    9,
+    11,
+    9,
+    17,
+    15,
+    19,
+    15,
+    23
+  ],
+  "indices": {
+    "count": 129,
+    "maximum": 129,
+    "minimum": 1
+  },
+  "largest_literal_graph_order": 11,
+  "scope": "literal graph and sector controls support separately proved all-order formulas; no scalar-extraction or eventual-coverage claim",
+  "sharp_approach_controls_k_max": 19,
+  "status": "PASS"
+}
