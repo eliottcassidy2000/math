@@ -1,0 +1,192 @@
+{
+  "status": "PASS_LITERAL_GRAPH_CONTROLS",
+  "rooted_inputs": 23,
+  "graph_pairs": 138,
+  "profiles": [
+    {
+      "factor": 1,
+      "rows": [
+        2,
+        0
+      ],
+      "profile": {
+        "h": 1,
+        "e": 0,
+        "s": 1,
+        "R": 2,
+        "L": 1,
+        "d": 1
+      }
+    },
+    {
+      "factor": 3,
+      "rows": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "profile": {
+        "h": 5,
+        "e": 2,
+        "s": 1,
+        "R": 6,
+        "L": 9,
+        "d": 3
+      }
+    },
+    {
+      "factor": 5,
+      "rows": [
+        2,
+        4,
+        25,
+        19,
+        3
+      ],
+      "profile": {
+        "h": 9,
+        "e": 4,
+        "s": 1,
+        "R": 10,
+        "L": 25,
+        "d": 5
+      }
+    },
+    {
+      "factor": 9,
+      "rows": [
+        2,
+        4,
+        57,
+        51,
+        35,
+        3
+      ],
+      "profile": {
+        "h": 17,
+        "e": 8,
+        "s": 1,
+        "R": 18,
+        "L": 69,
+        "d": 9
+      }
+    },
+    {
+      "factor": 17,
+      "rows": [
+        2,
+        4,
+        121,
+        115,
+        99,
+        67,
+        3
+      ],
+      "profile": {
+        "h": 33,
+        "e": 16,
+        "s": 1,
+        "R": 34,
+        "L": 193,
+        "d": 17
+      }
+    },
+    {
+      "factor": 33,
+      "rows": [
+        2,
+        4,
+        249,
+        243,
+        227,
+        195,
+        131,
+        3
+      ],
+      "profile": {
+        "h": 65,
+        "e": 32,
+        "s": 1,
+        "R": 66,
+        "L": 549,
+        "d": 33
+      }
+    }
+  ],
+  "examples": [
+    {
+      "factor": 3,
+      "input": [
+        4,
+        1,
+        2
+      ],
+      "input_profile": {
+        "h": 3,
+        "e": 1,
+        "s": 1,
+        "R": 3,
+        "L": 3,
+        "d": 1
+      },
+      "base": 5,
+      "output": 17
+    },
+    {
+      "factor": 3,
+      "input": [
+        2,
+        4,
+        1
+      ],
+      "input_profile": {
+        "h": 3,
+        "e": 1,
+        "s": 1,
+        "R": 3,
+        "L": 3,
+        "d": 1
+      },
+      "base": 5,
+      "output": 17
+    },
+    {
+      "factor": 9,
+      "input": [
+        4,
+        1,
+        2
+      ],
+      "input_profile": {
+        "h": 3,
+        "e": 1,
+        "s": 1,
+        "R": 3,
+        "L": 3,
+        "d": 1
+      },
+      "base": 5,
+      "output": 53
+    },
+    {
+      "factor": 9,
+      "input": [
+        2,
+        4,
+        1
+      ],
+      "input_profile": {
+        "h": 3,
+        "e": 1,
+        "s": 1,
+        "R": 3,
+        "L": 3,
+        "d": 1
+      },
+      "base": 5,
+      "output": 53
+    }
+  ],
+  "scope": "Finite controls for the all-order context formula and inherited zero-slack classification; no coverage theorem"
+}

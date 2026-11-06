@@ -1,0 +1,10 @@
+{
+  "status": "STATUS_ONLY_PROMOTION",
+  "reviewed_sha256": "0c25cb6bbe906cd41e465b46e7a033aeed5d17b9f14dc76a578e2d1ed75c334c",
+  "promoted_sha256": "a2753b4e610b6c64300f6c06e9aabb31ae7e57892aec9e234f050c18f314d775",
+  "only_change": {
+    "before": "Status: **PROOF CANDIDATE, sent for independent review.**",
+    "after": "Status: **PROVED, independently audited in the stated one-sided context class.**"
+  },
+  "audit_report": "audit/REVIEW.md"
+}

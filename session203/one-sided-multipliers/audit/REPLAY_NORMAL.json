@@ -1,0 +1,142 @@
+{
+  "basis": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      0,
+      1
+    ],
+    [
+      1,
+      4,
+      0,
+      1
+    ],
+    [
+      3,
+      3,
+      1,
+      1
+    ]
+  ],
+  "basis_determinant": -4,
+  "core_profiles": [
+    {
+      "a": 1,
+      "profile_h_e_R_d": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "a": 3,
+      "profile_h_e_R_d": [
+        5,
+        2,
+        6,
+        3
+      ],
+      "rows": [
+        2,
+        4,
+        9,
+        3
+      ]
+    },
+    {
+      "a": 5,
+      "profile_h_e_R_d": [
+        9,
+        4,
+        10,
+        5
+      ],
+      "rows": [
+        2,
+        4,
+        25,
+        19,
+        3
+      ]
+    },
+    {
+      "a": 9,
+      "profile_h_e_R_d": [
+        17,
+        8,
+        18,
+        9
+      ],
+      "rows": [
+        2,
+        4,
+        57,
+        51,
+        35,
+        3
+      ]
+    },
+    {
+      "a": 17,
+      "profile_h_e_R_d": [
+        33,
+        16,
+        34,
+        17
+      ],
+      "rows": [
+        2,
+        4,
+        121,
+        115,
+        99,
+        67,
+        3
+      ]
+    },
+    {
+      "a": 33,
+      "profile_h_e_R_d": [
+        65,
+        32,
+        66,
+        33
+      ],
+      "rows": [
+        2,
+        4,
+        249,
+        243,
+        227,
+        195,
+        131,
+        3
+      ]
+    }
+  ],
+  "factors": [
+    1,
+    3,
+    5,
+    9,
+    17,
+    33
+  ],
+  "independent_zero_slack_controls": 1099,
+  "literal_product_checks": 450,
+  "rooted_inputs_per_factor": 75,
+  "scope": "One-sided rooted cores only; all-order classification relies on the reviewed proof and inherited universal zero-slack theorem",
+  "status": "PASS"
+}

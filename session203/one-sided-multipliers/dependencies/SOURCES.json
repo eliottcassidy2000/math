@@ -1,0 +1,15 @@
+{
+  "commit": "1250ca1a59264cf3c8a3da8c98cd02d0cab80bbe",
+  "sources": [
+    {
+      "file": "ZERO_SLACK.md",
+      "repository_path": "session195/zero-slack/PROOF.md",
+      "git_blob_sha": "8c977f75bdde0a97a75a04b25217103da048a561"
+    },
+    {
+      "file": "ROOT_AMALGAMATION.md",
+      "repository_path": "session197/path-polynomials/ROOTED_ORDERED_AMALGAMATION.md",
+      "git_blob_sha": "a89666a6f1ba8fd4a12999362186181f25af80af"
+    }
+  ]
+}
