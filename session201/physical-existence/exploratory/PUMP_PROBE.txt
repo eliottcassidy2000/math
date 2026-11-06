@@ -1,0 +1,2 @@
+words 6 ['JOZZOZ', 'JOZOOZ', 'ZOZZOZ', 'ZOZOOZ', 'OZJJOZ', 'OOZJJO']
+tests 3855 matches []

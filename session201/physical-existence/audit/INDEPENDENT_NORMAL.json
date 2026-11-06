@@ -1,0 +1,494 @@
+{
+  "C1_targets": 2471,
+  "balanced_targets": 2458,
+  "boundaries": {
+    "balanced_no_crossing": 1,
+    "full_initial_equal": 1
+  },
+  "distinct_joint_values": 29322,
+  "even_diagonal_profiles_checked": 80,
+  "first_diagonal_profiles": {
+    "2": [
+      [
+        23,
+        1,
+        29,
+        1
+      ],
+      [
+        17,
+        0,
+        34,
+        1
+      ],
+      [
+        33,
+        16,
+        34,
+        17
+      ],
+      [
+        3,
+        0,
+        48,
+        1
+      ]
+    ],
+    "4": [
+      [
+        467,
+        1,
+        497,
+        1
+      ],
+      [
+        191,
+        0,
+        772,
+        1
+      ],
+      [
+        577,
+        191,
+        577,
+        191
+      ],
+      [
+        325,
+        1,
+        639,
+        1
+      ]
+    ]
+  },
+  "forward_height_cap": 5000,
+  "forward_profiles": 126910,
+  "height_rows": {
+    "J": {
+      "A": [
+        2,
+        1,
+        4,
+        3
+      ],
+      "B": [
+        2,
+        1,
+        4,
+        3
+      ]
+    },
+    "O": {
+      "A": [
+        2,
+        2,
+        4,
+        4
+      ],
+      "B": [
+        2,
+        2,
+        3,
+        3
+      ]
+    },
+    "Z": {
+      "A": [
+        2,
+        2,
+        3,
+        3
+      ],
+      "B": [
+        2,
+        2,
+        4,
+        4
+      ]
+    }
+  },
+  "joint_word_cut_checks": 9841,
+  "literal_graph_controls": [
+    {
+      "a": 2,
+      "cycles": 1,
+      "partial_directed_paths": 537,
+      "paths": 51,
+      "recipe": 1,
+      "vertices": 7,
+      "word": "OOZZJ"
+    },
+    {
+      "a": 2,
+      "cycles": 1,
+      "partial_directed_paths": 883,
+      "paths": 51,
+      "recipe": 2,
+      "vertices": 8,
+      "word": "ZZZZOJ"
+    },
+    {
+      "a": 2,
+      "cycles": 1,
+      "partial_directed_paths": 883,
+      "paths": 51,
+      "recipe": 3,
+      "vertices": 8,
+      "word": "ZZZZJJ"
+    },
+    {
+      "a": 2,
+      "cycles": 1,
+      "partial_directed_paths": 883,
+      "paths": 51,
+      "recipe": 4,
+      "vertices": 8,
+      "word": "ZOOOOJ"
+    },
+    {
+      "a": 2,
+      "cycles": 1,
+      "partial_directed_paths": 883,
+      "paths": 51,
+      "recipe": "balanced",
+      "vertices": 8,
+      "word": "ZZZZOJ"
+    },
+    {
+      "a": 4,
+      "cycles": 1,
+      "partial_directed_paths": 47529,
+      "paths": 963,
+      "recipe": 1,
+      "vertices": 11,
+      "word": "OOOOZZZZJ"
+    },
+    {
+      "a": 4,
+      "cycles": 1,
+      "partial_directed_paths": 67063,
+      "paths": 963,
+      "recipe": 2,
+      "vertices": 12,
+      "word": "OZZZZZZOOJ"
+    },
+    {
+      "a": 4,
+      "cycles": 1,
+      "partial_directed_paths": 67063,
+      "paths": 963,
+      "recipe": 3,
+      "vertices": 12,
+      "word": "OZZZZZZOJJ"
+    },
+    {
+      "a": 4,
+      "cycles": 1,
+      "partial_directed_paths": 67063,
+      "paths": 963,
+      "recipe": 4,
+      "vertices": 12,
+      "word": "ZZOOOOOOZJ"
+    },
+    {
+      "a": 4,
+      "cycles": 1,
+      "partial_directed_paths": 67063,
+      "paths": 963,
+      "recipe": "balanced",
+      "vertices": 12,
+      "word": "OZZZZZZOOJ"
+    }
+  ],
+  "minimum_J_costs_preserved": true,
+  "pair_tests": 66644,
+  "palindromic_family_checks": 169,
+  "residual_matrices": {
+    "J": [
+      [
+        2,
+        1,
+        4,
+        3
+      ],
+      [
+        1,
+        2,
+        2,
+        3
+      ],
+      [
+        4,
+        2,
+        2,
+        3
+      ],
+      [
+        3,
+        3,
+        3,
+        3
+      ]
+    ],
+    "O": [
+      [
+        2,
+        2,
+        3,
+        3
+      ],
+      [
+        2,
+        2,
+        0,
+        0
+      ],
+      [
+        4,
+        1,
+        3,
+        3
+      ],
+      [
+        4,
+        1,
+        0,
+        0
+      ]
+    ],
+    "Z": [
+      [
+        2,
+        2,
+        4,
+        4
+      ],
+      [
+        2,
+        2,
+        1,
+        1
+      ],
+      [
+        3,
+        0,
+        3,
+        0
+      ],
+      [
+        3,
+        0,
+        3,
+        0
+      ]
+    ]
+  },
+  "scope": "Exact finite comparison and examples; all-order inequalities and family proofs reviewed separately; coefficient3 sharp only for specified-word cuts, not globally.",
+  "sharp_family": [
+    {
+      "best": 6,
+      "coefficient": "18/13",
+      "k": 0,
+      "n": 27
+    },
+    {
+      "best": 12,
+      "coefficient": "72/37",
+      "k": 1,
+      "n": 75
+    },
+    {
+      "best": 24,
+      "coefficient": "288/121",
+      "k": 2,
+      "n": 243
+    },
+    {
+      "best": 48,
+      "coefficient": "1152/433",
+      "k": 3,
+      "n": 867
+    },
+    {
+      "best": 96,
+      "coefficient": "4608/1633",
+      "k": 4,
+      "n": 3267
+    },
+    {
+      "best": 192,
+      "coefficient": "18432/6337",
+      "k": 5,
+      "n": 12675
+    },
+    {
+      "best": 384,
+      "coefficient": "73728/24961",
+      "k": 6,
+      "n": 49923
+    },
+    {
+      "best": 768,
+      "coefficient": "294912/99073",
+      "k": 7,
+      "n": 198147
+    },
+    {
+      "best": 1536,
+      "coefficient": "1179648/394753",
+      "k": 8,
+      "n": 789507
+    },
+    {
+      "best": 3072,
+      "coefficient": "4718592/1575937",
+      "k": 9,
+      "n": 3151875
+    },
+    {
+      "best": 6144,
+      "coefficient": "18874368/6297601",
+      "k": 10,
+      "n": 12595203
+    },
+    {
+      "best": 12288,
+      "coefficient": "75497472/25178113",
+      "k": 11,
+      "n": 50356227
+    },
+    {
+      "best": 24576,
+      "coefficient": "301989888/100687873",
+      "k": 12,
+      "n": 201375747
+    },
+    {
+      "best": 49152,
+      "coefficient": "1207959552/402702337",
+      "k": 13,
+      "n": 805404675
+    },
+    {
+      "best": 98304,
+      "coefficient": "4831838208/1610711041",
+      "k": 14,
+      "n": 3221422083
+    },
+    {
+      "best": 196608,
+      "coefficient": "19327352832/6442647553",
+      "k": 15,
+      "n": 12885295107
+    },
+    {
+      "best": 393216,
+      "coefficient": "77309411328/25770196993",
+      "k": 16,
+      "n": 51540393987
+    },
+    {
+      "best": 786432,
+      "coefficient": "309237645312/103080001537",
+      "k": 17,
+      "n": 206160003075
+    },
+    {
+      "best": 1572864,
+      "coefficient": "1236950581248/412318433281",
+      "k": 18,
+      "n": 824636866563
+    },
+    {
+      "best": 3145728,
+      "coefficient": "4947802324992/1649270587393",
+      "k": 19,
+      "n": 3298541174787
+    },
+    {
+      "best": 6291456,
+      "coefficient": "19791209299968/6597076058113",
+      "k": 20,
+      "n": 13194152116227
+    },
+    {
+      "best": 12582912,
+      "coefficient": "79164837199872/26388291649537",
+      "k": 21,
+      "n": 52776583299075
+    },
+    {
+      "best": 25165824,
+      "coefficient": "316659348799488/105553141432321",
+      "k": 22,
+      "n": 211106282864643
+    },
+    {
+      "best": 50331648,
+      "coefficient": "1266637395197952/422212515397633",
+      "k": 23,
+      "n": 844425030795267
+    },
+    {
+      "best": 100663296,
+      "coefficient": "5066549580791808/1688849960927233",
+      "k": 24,
+      "n": 3377699921854467
+    },
+    {
+      "best": 201326592,
+      "coefficient": "20266198323167232/6755399642382337",
+      "k": 25,
+      "n": 13510799284764675
+    },
+    {
+      "best": 402653184,
+      "coefficient": "81064793292668928/27021598166876161",
+      "k": 26,
+      "n": 54043196333752323
+    },
+    {
+      "best": 805306368,
+      "coefficient": "324259173170675712/108086391862198273",
+      "k": 27,
+      "n": 216172783724396547
+    },
+    {
+      "best": 1610612736,
+      "coefficient": "1297036692682702848/432345565838180353",
+      "k": 28,
+      "n": 864691131676360707
+    },
+    {
+      "best": 3221225472,
+      "coefficient": "5188146770730811392/1729382260131495937",
+      "k": 29,
+      "n": 3458764520262991875
+    },
+    {
+      "best": 6442450944,
+      "coefficient": "20752587082923245568/6917529034083532801",
+      "k": 30,
+      "n": 13835058068167065603
+    },
+    {
+      "best": 12884901888,
+      "coefficient": "83010348331692982272/27670116123449229313",
+      "k": 31,
+      "n": 55340232246898458627
+    },
+    {
+      "best": 25769803776,
+      "coefficient": "332041393326771929088/110680464468027113473",
+      "k": 32,
+      "n": 221360928936054226947
+    }
+  ],
+  "smaller_height_cap": 122,
+  "smaller_source_profiles": 514,
+  "status": "PASS",
+  "synchronized_states": 398,
+  "target_cap": 5001,
+  "verifier_sha256": "ae283ff52d2f43c83014c1d3dbe667956a13b1bd566e4fcffdf39c92c773382e",
+  "word_cut_checks": 19682
+}

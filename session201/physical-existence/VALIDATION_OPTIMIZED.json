@@ -1,0 +1,529 @@
+{
+  "C1_minimum_J_costs_match": true,
+  "accepted_pair_tests": 66644,
+  "balanced_targets": 2458,
+  "budget_counts": {
+    "0": 1321,
+    "1": 2216,
+    "2": 2435,
+    "3": 2461
+  },
+  "common_word_checks": 3280,
+  "complete_forward_U_cap": 5000,
+  "complete_source_profiles": 126910,
+  "dependencies": {
+    "CARMICHAEL_FIBERS.md": "40facdf95adc7b97307e53a9058c30538d8ca879be90150797e96f8b4cd85e1e",
+    "PHYSICAL_ADJOINT.md": "f9c337b3cfee1cd1134ee02276890238c30ff0e84a14c26fbcd5cd78ab82dc05",
+    "SYNCHRONIZED_INVERSE.md": "6a73c37b3aaa99f1d3019a8b52f4d798a8c3a64b06c1afbf2e2cd8bc2d5d97a3"
+  },
+  "distinct_joint_values": 29322,
+  "formal_basis_checks": 92,
+  "hostiles": {
+    "different_q": [
+      [
+        15,
+        5,
+        15,
+        5
+      ],
+      [
+        23,
+        7,
+        23,
+        7
+      ]
+    ],
+    "m15_actual_h": [
+      9,
+      11
+    ],
+    "no_k1": [
+      443,
+      617
+    ],
+    "same_w": [
+      27,
+      9,
+      27,
+      9
+    ],
+    "unsynchronized": [
+      15,
+      13
+    ]
+  },
+  "joint_minimum_J_costs_match": true,
+  "literal_graph_checks": [
+    {
+      "C": 1,
+      "H": 11,
+      "target": 11,
+      "vertices": 5,
+      "word": "OZJ"
+    },
+    {
+      "C": 1,
+      "H": 23,
+      "target": 23,
+      "vertices": 6,
+      "word": "OZZJ"
+    },
+    {
+      "C": 1,
+      "H": 45,
+      "target": 45,
+      "vertices": 7,
+      "word": "OZOZJ"
+    },
+    {
+      "C": 1,
+      "H": 51,
+      "target": 51,
+      "vertices": 7,
+      "word": "OOZZJ"
+    },
+    {
+      "C": 1,
+      "H": 227,
+      "target": 227,
+      "vertices": 9,
+      "word": "OOOZZZJ"
+    },
+    {
+      "C": 1,
+      "H": 443,
+      "target": 443,
+      "vertices": 10,
+      "word": "OOZZZZZJ"
+    },
+    {
+      "C": 1,
+      "H": 617,
+      "target": 617,
+      "vertices": 11,
+      "word": "OOZJOZZZJ"
+    }
+  ],
+  "new_checks": {
+    "boundary_counts": {
+      "balanced": 1,
+      "full": 1
+    },
+    "diagonal_even_indices_checked": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30
+    ],
+    "diagonal_literal_graphs": [
+      {
+        "a": 2,
+        "graph_word": "ZZZZOJ",
+        "profiles": [
+          [
+            23,
+            1,
+            29,
+            1
+          ],
+          [
+            17,
+            0,
+            34,
+            1
+          ],
+          [
+            33,
+            16,
+            34,
+            17
+          ],
+          [
+            3,
+            0,
+            48,
+            1
+          ]
+        ],
+        "target": 51,
+        "vertices": 8
+      },
+      {
+        "a": 4,
+        "graph_word": "OZZZZZZOOJ",
+        "profiles": [
+          [
+            467,
+            1,
+            497,
+            1
+          ],
+          [
+            191,
+            0,
+            772,
+            1
+          ],
+          [
+            577,
+            191,
+            577,
+            191
+          ],
+          [
+            325,
+            1,
+            639,
+            1
+          ]
+        ],
+        "target": 963,
+        "vertices": 12
+      }
+    ],
+    "palindromic_family_checks": 121,
+    "raw_matrix_checks": 48,
+    "sharp_family": [
+      {
+        "best_cut_height": 6,
+        "k": 0,
+        "target": 27,
+        "word": "ZOJO"
+      },
+      {
+        "best_cut_height": 12,
+        "k": 1,
+        "target": 75,
+        "word": "ZOOJOO"
+      },
+      {
+        "best_cut_height": 24,
+        "k": 2,
+        "target": 243,
+        "word": "ZOOOJOOO"
+      },
+      {
+        "best_cut_height": 48,
+        "k": 3,
+        "target": 867,
+        "word": "ZOOOOJOOOO"
+      },
+      {
+        "best_cut_height": 96,
+        "k": 4,
+        "target": 3267,
+        "word": "ZOOOOOJOOOOO"
+      },
+      {
+        "best_cut_height": 192,
+        "k": 5,
+        "target": 12675,
+        "word": "ZOOOOOOJOOOOOO"
+      },
+      {
+        "best_cut_height": 384,
+        "k": 6,
+        "target": 49923,
+        "word": "ZOOOOOOOJOOOOOOO"
+      },
+      {
+        "best_cut_height": 768,
+        "k": 7,
+        "target": 198147,
+        "word": "ZOOOOOOOOJOOOOOOOO"
+      },
+      {
+        "best_cut_height": 1536,
+        "k": 8,
+        "target": 789507,
+        "word": "ZOOOOOOOOOJOOOOOOOOO"
+      },
+      {
+        "best_cut_height": 3072,
+        "k": 9,
+        "target": 3151875,
+        "word": "ZOOOOOOOOOOJOOOOOOOOOO"
+      },
+      {
+        "best_cut_height": 6144,
+        "k": 10,
+        "target": 12595203,
+        "word": "ZOOOOOOOOOOOJOOOOOOOOOOO"
+      },
+      {
+        "best_cut_height": 12288,
+        "k": 11,
+        "target": 50356227,
+        "word": "ZOOOOOOOOOOOOJOOOOOOOOOOOO"
+      },
+      {
+        "best_cut_height": 24576,
+        "k": 12,
+        "target": 201375747,
+        "word": "ZOOOOOOOOOOOOOJOOOOOOOOOOOOO"
+      },
+      {
+        "best_cut_height": 49152,
+        "k": 13,
+        "target": 805404675,
+        "word": "ZOOOOOOOOOOOOOOJOOOOOOOOOOOOOO"
+      },
+      {
+        "best_cut_height": 98304,
+        "k": 14,
+        "target": 3221422083,
+        "word": "ZOOOOOOOOOOOOOOOJOOOOOOOOOOOOOOO"
+      },
+      {
+        "best_cut_height": 196608,
+        "k": 15,
+        "target": 12885295107,
+        "word": "ZOOOOOOOOOOOOOOOOJOOOOOOOOOOOOOOOO"
+      },
+      {
+        "best_cut_height": 393216,
+        "k": 16,
+        "target": 51540393987,
+        "word": "ZOOOOOOOOOOOOOOOOOJOOOOOOOOOOOOOOOOO"
+      },
+      {
+        "best_cut_height": 786432,
+        "k": 17,
+        "target": 206160003075,
+        "word": "ZOOOOOOOOOOOOOOOOOOJOOOOOOOOOOOOOOOOOO"
+      },
+      {
+        "best_cut_height": 1572864,
+        "k": 18,
+        "target": 824636866563,
+        "word": "ZOOOOOOOOOOOOOOOOOOOJOOOOOOOOOOOOOOOOOOO"
+      },
+      {
+        "best_cut_height": 3145728,
+        "k": 19,
+        "target": 3298541174787,
+        "word": "ZOOOOOOOOOOOOOOOOOOOOJOOOOOOOOOOOOOOOOOOOO"
+      },
+      {
+        "best_cut_height": 6291456,
+        "k": 20,
+        "target": 13194152116227,
+        "word": "ZOOOOOOOOOOOOOOOOOOOOOJOOOOOOOOOOOOOOOOOOOOO"
+      }
+    ],
+    "status": "PASS",
+    "word_cut_checks": 19682,
+    "word_length_cap": 8
+  },
+  "paired_U_cap": 122,
+  "physical_small_profiles": 514,
+  "represented_C1_targets": 2471,
+  "sample_compiled_witnesses": {
+    "11": {
+      "J_cost": 0,
+      "alpha": "",
+      "beta": "",
+      "h": 3,
+      "k": 1,
+      "m": 5,
+      "q": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "source_word": "OZ",
+      "v": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "w": [
+        3,
+        1,
+        3,
+        1
+      ]
+    },
+    "23": {
+      "J_cost": 0,
+      "alpha": "",
+      "beta": "",
+      "h": 3,
+      "k": 2,
+      "m": 5,
+      "q": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "source_word": "OZZ",
+      "v": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "w": [
+        3,
+        1,
+        3,
+        1
+      ]
+    },
+    "45": {
+      "J_cost": 0,
+      "alpha": "O",
+      "beta": "O",
+      "h": 13,
+      "k": 1,
+      "m": 19,
+      "q": [
+        1,
+        0,
+        4,
+        0
+      ],
+      "source_word": "OZOZ",
+      "v": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "w": [
+        3,
+        0,
+        6,
+        1
+      ]
+    },
+    "51": {
+      "J_cost": 0,
+      "alpha": "O",
+      "beta": "",
+      "h": 7,
+      "k": 2,
+      "m": 9,
+      "q": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "source_word": "OOZZ",
+      "v": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "w": [
+        3,
+        1,
+        3,
+        1
+      ]
+    },
+    "227": {
+      "J_cost": 0,
+      "alpha": "O",
+      "beta": "Z",
+      "h": 15,
+      "k": 3,
+      "m": 17,
+      "q": [
+        3,
+        0,
+        4,
+        0
+      ],
+      "source_word": "OOOZZZ",
+      "v": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "w": [
+        5,
+        1,
+        5,
+        1
+      ]
+    },
+    "443": {
+      "J_cost": 0,
+      "alpha": "O",
+      "beta": "",
+      "h": 7,
+      "k": 5,
+      "m": 9,
+      "q": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "source_word": "OOZZZZZ",
+      "v": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "w": [
+        3,
+        1,
+        3,
+        1
+      ]
+    },
+    "617": {
+      "J_cost": 1,
+      "alpha": "OO",
+      "beta": "JO",
+      "h": 39,
+      "k": 3,
+      "m": 71,
+      "q": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "source_word": "OOZJOZZZ",
+      "v": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "w": [
+        5,
+        0,
+        12,
+        3
+      ]
+    }
+  },
+  "scope": "New adjacent-cut cutoff and even diagonal repair, pending independent audit; exact finite checks; no universal coverage or globally optimal cutoff claim.",
+  "status": "PASS",
+  "synchronized_distinct_physical_boundaries": 358,
+  "synchronized_states": 398,
+  "target_cap": 5001,
+  "verifier_sha256": "61e9c7254cfac277b737a05f98155c1b95a29dbfd70091862d0cdaba33badf52"
+}

@@ -1,0 +1,35 @@
+--- PROOF-before-promotion.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # Adjacent-cut height control and an infinite diagonal repair
+ 
+-Session 201. **PROVED, pending independent audit:** every full C1 target n has an exact physical pair inverse with both cover heights at most floor(sqrt(3(n-1))). The same sharper bound holds for balanced targets and for the synchronized joint image, without increasing a supplied J budget. The coefficient 3 is sharp for the adjacent-cut inequality and for re-cutting a specified word, not claimed optimal among all representations of a target.
++Session 201. **PROVED, independently audited in the stated scope:** every full C1 target n has an exact physical pair inverse with both cover heights at most floor(sqrt(3(n-1))). The same sharper bound holds for balanced targets and for the synchronized joint image, without increasing a supplied J budget. The coefficient 3 is sharp for the adjacent-cut inequality and for re-cutting a specified word, not claimed optimal among all representations of a target.
+ 
+ **PROVED:** all even-index diagonal Mersenne targets have explicit balanced witnesses and at least four distinct numerical source profiles. **OPEN:** odd-index diagonal repair, universal nonempty fibers, and the global {7,21} spectrum conjecture.
+ 
+--- README-before-promotion.md
++++ README.md
+@@ -1,12 +1,12 @@
+ # Physical adjacent-cut inverse and diagonal Mersenne repair
+ 
+-Session 201. Proof and verifier are frozen for independent audit. Universal {7,21} coverage remains open.
++Session 201. The main proof and verifier passed independent audit without correction. Universal {7,21} coverage remains open.
+ 
+ ## Results
+ 
+-* **PROVED, pending independent audit:** the exact physical pair inverse for full C1, balanced, and synchronized joint membership needs cover heights only through floor(sqrt(3(n-1))), improving the previous floor(2 sqrt(n-1)). Every minimum J-budget statement and physical graph reconstruction is retained.
+-* **PROVED, pending independent audit:** coefficient 3 is sharp for the adjacent-letter inequality and for cutting a specified word. Global optimality among all presentations is not claimed.
+-* **PROVED, pending independent audit:** for every even a>=2, (2^(a+1)-1)^2+2 has a zero-J balanced precursor and at least four distinct numerical source profiles. The balanced graph uses one more vertex than the original diagonal recipe. No graph-isomorphism multiplicity conclusion is made.
++* **PROVED, independently audited in the stated scope:** the exact physical pair inverse for full C1, balanced, and synchronized joint membership needs cover heights only through floor(sqrt(3(n-1))), improving the previous floor(2 sqrt(n-1)). Every minimum J-budget statement and physical graph reconstruction is retained.
++* **PROVED, independently audited in the stated scope:** coefficient 3 is sharp for the adjacent-letter inequality and for cutting a specified word. Global optimality among all presentations is not claimed.
++* **PROVED, independently audited in the stated scope:** for every even a>=2, (2^(a+1)-1)^2+2 has a zero-J balanced precursor and at least four distinct numerical source profiles. The balanced graph uses one more vertex than the original diagonal recipe. No graph-isomorphism multiplicity conclusion is made.
+ 
+ The mechanism is an exact nonnegative 4-by-4 residual matrix for each physical letter. At the crossing of the two physical source heights, choose the better of the two adjacent cuts. Transport both boundaries together in the joint problem.
+ 
+@@ -28,3 +28,5 @@
+ * exploratory/ records bounded probes that prompted the final theorem. They are not proof dependencies. The affine probe uses NumPy, unlike the verification entry point.
+ 
+ The odd-index diagonal chamber remains open. Neither the improved inverse nor the explicit even-index family proves that every other odd target has a nonempty physical fiber.
++
++The author verifier and its receipts preserve their frozen pre-audit status string; audit/REPORT.md provides the subsequent independent PASS. Companion corollaries are not part of this checkpoint.
