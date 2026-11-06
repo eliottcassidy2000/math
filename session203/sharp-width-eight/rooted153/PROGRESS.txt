@@ -1,0 +1,7 @@
+n=3 trials=0 accepted=0 classes=1
+n=4 trials=6 accepted=6 classes=4
+n=5 trials=56 accepted=56 classes=24
+n=6 trials=720 accepted=720 classes=194
+n=7 trials=12028 accepted=1589 classes=393
+n=8 trials=49518 accepted=679 classes=167
+n=9 trials=42418 accepted=44 classes=9

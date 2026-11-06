@@ -1,0 +1,10 @@
+--- reviewed-originals/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # Width eight is necessary at the staggered base153
+ 
+-**FINITE-EXACT PROOF CANDIDATE, pending independent audit.** The complete bounded enumeration below proves that F(7,137) is false. It does not prove or disprove F(8,137), and it does not prove an eventual Hamilton-path spectrum threshold.
++**FINITE-EXACT, independently audited; the eight exclusions hold at all source orders.** The complete bounded enumeration below proves that F(7,137) is false. It does not prove or disprove F(8,137), and it does not prove an eventual Hamilton-path spectrum threshold.
+ 
+ ## 1. Exact statement
+ 

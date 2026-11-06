@@ -1,0 +1,103 @@
+{
+  "F_8_137": "OPEN",
+  "complete_strong_profile_count": 535,
+  "counterexample": {
+    "absent_requests": [
+      {
+        "B": 153,
+        "gcd": 1,
+        "j": 0,
+        "s": 1,
+        "status": "ABSENT_AT_ALL_SOURCE_ORDERS"
+      },
+      {
+        "B": 151,
+        "gcd": 1,
+        "j": 1,
+        "s": 4,
+        "status": "ABSENT_AT_ALL_SOURCE_ORDERS"
+      },
+      {
+        "B": 149,
+        "gcd": 1,
+        "j": 2,
+        "s": 7,
+        "status": "ABSENT_AT_ALL_SOURCE_ORDERS"
+      },
+      {
+        "B": 147,
+        "gcd": 1,
+        "j": 3,
+        "s": 10,
+        "status": "ABSENT_AT_ALL_SOURCE_ORDERS"
+      },
+      {
+        "B": 145,
+        "gcd": 1,
+        "j": 4,
+        "s": 13,
+        "status": "ABSENT_AT_ALL_SOURCE_ORDERS"
+      },
+      {
+        "B": 143,
+        "gcd": 1,
+        "j": 5,
+        "s": 16,
+        "status": "ABSENT_AT_ALL_SOURCE_ORDERS"
+      },
+      {
+        "B": 141,
+        "gcd": 1,
+        "j": 6,
+        "s": 19,
+        "status": "ABSENT_AT_ALL_SOURCE_ORDERS"
+      },
+      {
+        "B": 139,
+        "gcd": 1,
+        "j": 7,
+        "s": 22,
+        "status": "ABSENT_AT_ALL_SOURCE_ORDERS"
+      }
+    ],
+    "base_X": 153,
+    "condition": "F(7,137)",
+    "residue_r": 1
+  },
+  "repair": {
+    "B": 137,
+    "child_H": 461,
+    "child_rows": [
+      1778,
+      2040,
+      2035,
+      2037,
+      1024,
+      16,
+      48,
+      112,
+      241,
+      496,
+      992
+    ],
+    "h_s_L": [
+      77,
+      25,
+      85
+    ],
+    "j": 8,
+    "root": 0,
+    "rows": [
+      222,
+      128,
+      2,
+      6,
+      14,
+      31,
+      62,
+      124
+    ],
+    "s": 25
+  },
+  "status": "PASS"
+}

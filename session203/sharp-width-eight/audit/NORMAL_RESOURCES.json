@@ -1,0 +1,9 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 1.3497083390248008,
+  "child_user_seconds": 1.34494,
+  "child_system_seconds": 0.003959,
+  "max_rss_KiB": 8832,
+  "machine": "x86_64",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+}

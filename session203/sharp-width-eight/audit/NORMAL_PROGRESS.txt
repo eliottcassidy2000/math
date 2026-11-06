@@ -1,0 +1,7 @@
+closure n=4 trials=6 accepted=6
+closure n=5 trials=14 accepted=14
+closure n=6 trials=180 accepted=180
+closure n=7 trials=2170 accepted=2117
+closure n=8 trials=43344 accepted=2558
+closure n=9 trials=119634 accepted=1183
+closure n=10 trials=116280 accepted=146

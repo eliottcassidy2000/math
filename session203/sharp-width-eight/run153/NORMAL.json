@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE_WITH_CITED_BUSCH_BOUND",
+  "B_bound": 153,
+  "s_cap": 26,
+  "strong_extension_order_cap": 10,
+  "strong_classes_by_order": {"3": 1, "4": 1, "5": 6, "6": 35, "7": 344, "8": 471, "9": 228, "10": 27},
+  "strong_profile_count": 535,
+  "all_profile_count": 564,
+  "rooted_edge_source_occurrences": 792,
+  "tail_counts": [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25],
+  "base137_successful_shifts": [[1, 2, 3, 5], [0, 3, 4, 7, 8]],
+  "unit_start_B137": false,
+  "F_8_137_all_base_scope": "OPEN"
+}

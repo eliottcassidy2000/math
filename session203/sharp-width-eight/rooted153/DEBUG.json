@@ -1,0 +1,10 @@
+{
+ "status": "COMPLETE_ROOTED_STRONG_GENERATION",
+ "B_bound": 153,
+ "s_cap": 26,
+ "source_order_cap": 9,
+ "classes_by_order": {"3": 1, "4": 4, "5": 24, "6": 194, "7": 393, "8": 167, "9": 9},
+ "strong_profile_count": 535,
+ "literal_recounts": 0,
+ "all_base_F": "OPEN"
+}

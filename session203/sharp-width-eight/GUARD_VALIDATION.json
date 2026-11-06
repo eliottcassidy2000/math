@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "rejected_inputs": [
+    {
+      "bound": 375,
+      "s_cap": 26,
+      "exit_code": -6,
+      "required_message": "canonical uint64 code requires strong order at most 11",
+      "refused_before_output_files": true
+    },
+    {
+      "bound": 153,
+      "s_cap": 0,
+      "exit_code": -6,
+      "required_message": "s cap must be positive and at most the B bound",
+      "refused_before_output_files": true
+    },
+    {
+      "bound": 153,
+      "s_cap": 154,
+      "exit_code": -6,
+      "required_message": "s cap must be positive and at most the B bound",
+      "refused_before_output_files": true
+    }
+  ],
+  "declared_normal_replays": [
+    {
+      "bound": 137,
+      "file": "NORMAL.json",
+      "sha256": "9f3291cdb5b9c418a4f421ab77ef67d304c39348a4ea55e14a99dcd32bf382e4",
+      "exact_match": true
+    },
+    {
+      "bound": 137,
+      "file": "BANK.tsv",
+      "sha256": "a40fd656a88a8d996da9b441907ce8bf815f5b7609059e1de8535295c840a81d",
+      "exact_match": true
+    },
+    {
+      "bound": 137,
+      "file": "STRONG_PROFILES.tsv",
+      "sha256": "0af2e1ef30e7465573401aa59756bfb6b8914f0b876a615cf533be8792efb0be",
+      "exact_match": true
+    },
+    {
+      "bound": 137,
+      "file": "ALL_PROFILES.tsv",
+      "sha256": "cee6694e5b5cd8e907d1033751f1ca465bdb756d5e8b4044ce39eee0313477e8",
+      "exact_match": true
+    },
+    {
+      "bound": 153,
+      "file": "NORMAL.json",
+      "sha256": "f007eff09f3971024a25976a5586a7ae277bf82423aa7f4fdc0911a4e30880c7",
+      "exact_match": true
+    },
+    {
+      "bound": 153,
+      "file": "BANK.tsv",
+      "sha256": "69ddc7c0794fecbbce93c927526449305469d6ec7d5bc65a455676c9dfbfcb8a",
+      "exact_match": true
+    },
+    {
+      "bound": 153,
+      "file": "STRONG_PROFILES.tsv",
+      "sha256": "d9f2ab3bd5cfccbcdff6756d864ea885488e0cd812b0d0f6367ca12ee9cb7679",
+      "exact_match": true
+    },
+    {
+      "bound": 153,
+      "file": "ALL_PROFILES.tsv",
+      "sha256": "de988b4c54f33258c2ce537f22005e1c9c681e12a734bd88e6d05267e64f06a4",
+      "exact_match": true
+    }
+  ],
+  "debug_153_exact_match": true,
+  "debug_153_sha256": "f007eff09f3971024a25976a5586a7ae277bf82423aa7f4fdc0911a4e30880c7"
+}

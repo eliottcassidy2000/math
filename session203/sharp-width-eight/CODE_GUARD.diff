@@ -1,0 +1,12 @@
+--- reviewed-originals/enumerate.cpp
++++ enumerate.cpp
+@@ -15,6 +15,9 @@
+ G decode(U code,int n){G a(n);int b=0;for(int i=0;i<n;i++)for(int j=i+1;j<n;j++,b++)if(code>>b&1)a[i]|=1<<j;else a[j]|=1<<i;return a;}
+ G delroot(G a,int skip,int root){vector<int>ord{root};for(int i=0;i<(int)a.size();i++)if(i!=root&&i!=skip)ord.push_back(i);G out(ord.size());for(int i=0;i<(int)ord.size();i++)for(int j=0;j<(int)ord.size();j++)if(a[ord[i]]>>ord[j]&1)out[i]|=1<<j;return out;}
+ int main(int argc,char**argv){I bound=argc>1?stoll(argv[1]):137;int scap=argc>2?stoi(argv[2]):26;need(bound>=3&&bound<=100000,"bound range");int ncap=3;for(int n=3;;n++){I val;if(n%3==0){val=3;for(int k=0;k<(n-3)/3;k++)val*=5;}else if(n%3==1){val=1;for(int k=0;k<(n-1)/3;k++)val*=5;}else{val=9;for(int k=0;k<(n-5)/3;k++)val*=5;}if(val>bound)break;ncap=n;}
++ // A uint64_t upper-triangle code supports at most 11 vertices (55 bits).
++ need(ncap<=11,"canonical uint64 code requires strong order at most 11");
++ need(scap>=1&&scap<=bound,"s cap must be positive and at most the B bound");
+  vector<map<U,I>>banks(ncap+1);G tri{2,4,1};banks[3][canonical(tri)]=3;vector<I>trials(ncap+1),accepted(ncap+1);ofstream bank("BANK.tsv");set<pair<I,I>> strong_profiles;map<pair<I,I>,G>witness;set<I>factorcounts;int edgesources=0;
+  for(int n=3;n<=ncap;n++){if(n>3){for(auto[code,h]:banks[n-1]){G a=decode(code,n-1);for(int mask=1;mask<(1<<(n-1))-1;mask++){trials[n]++;G b=a;for(int i=0;i<n-1;i++)if(mask>>i&1)b[i]|=1<<(n-1);b.push_back(((1<<(n-1))-1)^mask);I hh=capped_h(b,bound);if(hh>bound)continue;accepted[n]++;U key=canonical(b);auto[it,ok]=banks[n].emplace(key,hh);need(ok||it->second==hh,"canonical collision count");}}}
+  cerr<<"n="<<n<<" trials="<<trials[n]<<" accepted_extensions="<<accepted[n]<<" classes="<<banks[n].size()<<'\n';

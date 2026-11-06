@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "scope": "Focused F(7,137) failure and physical j=8 repair; F(8,137) remains open. Complete finite B<=137 profile box retained as an audited supplementary result.",
+  "proof_sha256": "33bdf35520b31026ab0e925c7aa4bf1ceea4c6981d8ca1d4ffc62d572da4d0f6",
+  "original_proof_sha256": "979737422f9d388a985d03089c7cb826293842d1558fc03383f69fafaa8be834",
+  "proof_delta": "Only line 3 status promotion.",
+  "readme_sha256": "000e194e7d544a7e539378b03f4db14db843d17342a806fd2fdee80ff0be5acc",
+  "audit_entries_preserved": 62,
+  "audit_manifest_preserved": true,
+  "guarded_source_sha256": "584b44e4369e12acb684aab05f2f10558ef1aaba3c9e6ef7bc4881580d0bb144",
+  "code_delta": "Exactly three inserted lines: explanatory comment, ncap<=11, and 1<=scap<=bound. No other code change.",
+  "guard_review": [
+    {
+      "B": 375,
+      "s": 26,
+      "exit_code": -6,
+      "expected_message": "canonical uint64 code requires strong order at most 11",
+      "files_written": 0
+    },
+    {
+      "B": 153,
+      "s": 0,
+      "exit_code": -6,
+      "expected_message": "s cap must be positive and at most the B bound",
+      "files_written": 0
+    },
+    {
+      "B": 153,
+      "s": 154,
+      "exit_code": -6,
+      "expected_message": "s cap must be positive and at most the B bound",
+      "files_written": 0
+    }
+  ],
+  "declared_runs": "The inserted predicates hold for 137/26 and 153/26. The supplied guard-validation receipts match the archived outputs; the full primary producer runs were not redundantly repeated in this release review.",
+  "relocated_independent_replay": "Compiled from release audit source; exact JSON equality with frozen independent receipt.",
+  "independent_receipt_sha256": "09ca2f5de895a984fb17fec6a271ee17cedcff1677bad0961166942a485ac77c",
+  "dependency_provenance": "Published dependency files and provenance match the already reviewed original packet.",
+  "publication": "Ready after parent grants the branch slot; no branch writes performed by this review."
+}
