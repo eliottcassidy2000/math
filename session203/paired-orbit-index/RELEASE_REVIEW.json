@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scope": "Exact integer parameterization and complete inverse for four specified O/Z orbits, with odd-base upper density below 0.75 percent. No unrestricted occupancy or threshold claim.",
+  "proof_sha256": "c77e04796f01ec640f1250ac3e00af673d2c5f0fb2ac495aa5a8371d9e2d246f",
+  "original_proof_sha256": "7e1ebb8fe9229bd4604f915c9ac23c8b1eacca6ffeb977b14957f4cdb9fe555b",
+  "proof_delta": "Only the status line changed.",
+  "readme_sha256": "1774e55d3160d251c0b1b2f4c8e533100a237b4bee04b1db4d386e84adef9480",
+  "audit_entries_preserved": 18,
+  "audit_manifest_preserved": true,
+  "dependency_provenance": "Exact published carrier and central-arithmetic bytes and immutable URLs preserved.",
+  "reproduction_review": "Relative dependencies, independent header include and commands remain valid in the staged layout. Original normal/optimized and physical debug receipts are unchanged.",
+  "publication": "Ready after parent grants the branch slot; no branch writes made by this review."
+}

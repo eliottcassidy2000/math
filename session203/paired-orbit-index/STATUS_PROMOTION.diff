@@ -1,0 +1,10 @@
+--- audit/reviewed-inputs/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # A single integer index for every paired O/Z carrier
+ 
+-Status: proof candidate; independent review pending. This is an exact all-order arithmetic description of the four physical paired carrier orbits from `dependencies/CARRIERS.md`, not universal tournament coverage. The all-target staggered-profile criterion remains open.
++Status: **PROVED, independently audited in the stated scope.** This is an exact all-order arithmetic description of the four physical paired carrier orbits from `dependencies/CARRIERS.md`, not universal tournament coverage. The all-target staggered-profile criterion remains open.
+ 
+ ## 1. Exact parametrization
+ 

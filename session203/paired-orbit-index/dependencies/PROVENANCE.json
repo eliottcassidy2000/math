@@ -1,0 +1,18 @@
+[
+  {
+    "file": "CARRIERS.md",
+    "source": "session203-staggered-advances-release/session203/staggered-paired-carriers/PROOF.md",
+    "commit": "9ca780a3fe19d11846e7afa54c4f974f4567344d",
+    "published_path": "session203/staggered-paired-carriers/PROOF.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/9ca780a3fe19d11846e7afa54c4f974f4567344d/session203/staggered-paired-carriers/PROOF.md",
+    "sha256": "e54792c206d6945a11dda2c4e6ca1e8d20140bbf3aaec91081987753c4a16f38"
+  },
+  {
+    "file": "CENTRAL.md",
+    "source": "session201-central-arithmetic-release/session201/central-arithmetic/PROOF.md",
+    "commit": "c8411ae1cc3748391d8ad2c4142cc68201b75f84",
+    "published_path": "session201/central-arithmetic/PROOF.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/c8411ae1cc3748391d8ad2c4142cc68201b75f84/session201/central-arithmetic/PROOF.md",
+    "sha256": "49ad1123e80fbf751eac3e72ed0f5ad2ec39e7705f9ee89c77d4826ef5e1066c"
+  }
+]

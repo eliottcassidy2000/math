@@ -1,0 +1,12 @@
+{
+  "binary_pair_identities": 65536,
+  "complete_inverse_targets": 80016,
+  "long_direct_cases": 880,
+  "maximum_long_length": 256,
+  "maximum_symbolic_length": 16,
+  "odd_base_formula_checks": 262144,
+  "odd_relative_upper_density": "693609731/93988567442",
+  "scope": "Four O/Z carrier orbits only; no global occupancy.",
+  "status": "PASS",
+  "symbolic_words": 131071
+}

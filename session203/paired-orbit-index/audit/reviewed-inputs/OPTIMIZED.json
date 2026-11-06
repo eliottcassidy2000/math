@@ -1,0 +1,8 @@
+{
+  "identity_indices": 65536,
+  "maximum_word_length": 14,
+  "odd_relative_upper_density": "693609731/93988567442",
+  "scope": "Exact four paired O/Z orbits only; all-target and prime-track coverage remain open.",
+  "status": "PASS",
+  "word_checks": 196602
+}

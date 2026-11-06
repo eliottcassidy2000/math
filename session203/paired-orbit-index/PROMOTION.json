@@ -1,0 +1,8 @@
+{
+  "scope": "Exact four paired O/Z spectra, complete finite inverse, and upper odd-base density only. No universal coverage claim.",
+  "reviewed_proof_sha256": "7e1ebb8fe9229bd4604f915c9ac23c8b1eacca6ffeb977b14957f4cdb9fe555b",
+  "promoted_proof_sha256": "c77e04796f01ec640f1250ac3e00af673d2c5f0fb2ac495aa5a8371d9e2d246f",
+  "review_sha256": "f9184082753d4bc4bb90a26b1db9dff458c46ad52900e19afacefe6662ca4768",
+  "change": "Status-only promotion; original proof and exact diff preserved.",
+  "preserved_audit_manifest_entries": 18
+}
