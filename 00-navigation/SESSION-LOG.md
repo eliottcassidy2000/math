@@ -88,7 +88,7 @@ and the [recovered unbounded 2026-07-22--23 ledger](SESSION-LOG-HISTORICAL-2026-
   the local/global small-root bridge. Its abstract orbit-product core survives.
 
 ## Other active inspiration
-
+- **Session 203 ACTIVE:** [Verified overnight ledger](S203.md): 32-bit prefix recertified; F(7,137) refuted but F(8,137) OPEN; finite weighted presentation, exact membership, construction obstructions and corrected boundaries. No eventual threshold is proved.
 - THM-2118 closes cubic source fibres. THM-2158 makes quartic regularity one
   translation-invariant pole divisor, and THM-2180 proves `V|beta` in the
   reduced twice-odd Keller branch, leaving only

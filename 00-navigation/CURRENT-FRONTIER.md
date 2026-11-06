@@ -228,7 +228,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
   THM-3392 gives the sharp bipartite-lift law `Q<=B<=2Q`; disjoint ternary supports are the lost sidecar, and strict sign loss starts at `n=6`. None licenses tournamentizing matching or handoff fibres.
 
 ### Live work and limits
-
+- [S203](S203.md) ACTIVE: F(8,137) OPEN.
 - [THM-1950](../01-canon/theorems/THM-1950-h-ge-disc-reduced-to-strongly-connected.md)
   **PROVED, Session137:** `H>=det(I+A)+abs(det A)+C_nonHamilton>=max(1,s)*disc`.
   Its addendum gives equality and weighted extensions. THM-3729 retains

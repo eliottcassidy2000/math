@@ -4,6 +4,27 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-06: Session 203 certificate and singleton boundaries
+
+- **Corrected finite certificate:** an endpoint overrun in the inherited S78
+  coverage checker was undefined behavior even though the intended endpoint
+  contributed no count. The [repair and exact patch](../session203/coverage-recertification/session203-independent-audit/ENDPOINT_REPAIR.md)
+  were followed by a complete corrected 32-bit replay using F1+F2 with F0 disabled.
+  The [reviewed certificate](../session203/coverage-recertification/README.md)
+  again leaves exactly 7 and 21 missing through 4,294,967,295. This recertifies
+  the known finite range; it is not a new range or an eventual-threshold proof.
+- **Corrected before publication:** the sharp-Z draft identified
+  D=R+b-e-B with B(ZU)-2B for every nonempty U. At the singleton, B(U)=1 and
+  B(ZU)=3, so the physical difference is 1 while the formula-defined D is 0.
+  The [exact correction](../session203/sharp-z-defect/BOUNDARY_CORRECTION.diff)
+  restricts that identification to nontrivial U and retains both boundary values.
+  The positive-start floor and equality theorem were already nontrivial in scope;
+  their proofs and producer code were unchanged. The
+  [independent audit](../session203/sharp-z-defect/audit/REVIEW.md) directly tests the boundary.
+- **Mechanism to retain:** an intended zero does not excuse an out-of-range
+  access, and an all-input cover transfer does not preserve the root-start
+  coordinate at a singleton. Check both before exporting a scalar readout.
+
 ## 2026-11-03 — a deleted triangle's position does not exclude apex entry
 
 **Refuted draft implication, repaired before publication.** In the q3
