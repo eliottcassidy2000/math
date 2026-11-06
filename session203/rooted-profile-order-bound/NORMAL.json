@@ -1,0 +1,181 @@
+{
+  "labeled_universe_by_order": {
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 1024
+  },
+  "scope": "All labeled root-zero tournaments through order5 plus four explicit larger weak-tail graphs; exact controls, not an occupancy proof.",
+  "small_boundaries": [
+    {
+      "normalized_rows": [
+        0
+      ],
+      "profile_h_s_L_B": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "rows": [
+        0
+      ]
+    },
+    {
+      "normalized_rows": [
+        0
+      ],
+      "profile_h_s_L_B": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "rows": [
+        2,
+        0
+      ]
+    }
+  ],
+  "statistics": {
+    "deleted_singleton_components": 302,
+    "graphs": 1099,
+    "literal_injected_covers": 2952,
+    "positive_roots": 776,
+    "split_deletion_injections": 222,
+    "strong_deletion_injections": 348,
+    "strong_positive": 571,
+    "weak_positive": 205
+  },
+  "status": "PASS",
+  "weak_tail_examples": [
+    {
+      "normalized_rows": [
+        0
+      ],
+      "order": 12,
+      "order_cap": 2,
+      "profile_h_s_L_B": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "rows": [
+        4094,
+        4092,
+        4088,
+        4080,
+        4064,
+        4032,
+        3968,
+        3840,
+        3584,
+        3072,
+        2048,
+        0
+      ]
+    },
+    {
+      "normalized_rows": [
+        506,
+        508,
+        505,
+        464,
+        480,
+        456,
+        128,
+        256,
+        64
+      ],
+      "order": 11,
+      "order_cap": 15,
+      "profile_h_s_L_B": [
+        27,
+        9,
+        27,
+        45
+      ],
+      "rows": [
+        2042,
+        2044,
+        2041,
+        2032,
+        1952,
+        1984,
+        1936,
+        1792,
+        512,
+        1024,
+        256
+      ]
+    },
+    {
+      "normalized_rows": [
+        1022,
+        1012,
+        1016,
+        1010,
+        928,
+        960,
+        912,
+        256,
+        512,
+        128
+      ],
+      "order": 12,
+      "order_cap": 32,
+      "profile_h_s_L_B": [
+        27,
+        27,
+        27,
+        27
+      ],
+      "rows": [
+        4094,
+        4084,
+        4088,
+        4082,
+        4064,
+        3904,
+        3968,
+        3872,
+        3584,
+        1024,
+        2048,
+        512
+      ]
+    },
+    {
+      "normalized_rows": [
+        126,
+        116,
+        120,
+        114,
+        32,
+        64,
+        16
+      ],
+      "order": 9,
+      "order_cap": 13,
+      "profile_h_s_L_B": [
+        9,
+        9,
+        9,
+        9
+      ],
+      "rows": [
+        510,
+        508,
+        488,
+        496,
+        484,
+        448,
+        128,
+        256,
+        64
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "method": "Full permutation enumeration; split after root counts literal covers; DFS mutual reachability SCCs; all roots per graph",
+  "graphs_by_order": {
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 1024,
+    "6": 128,
+    "7": 128
+  },
+  "rooted_graph_checks": 7069,
+  "positive_roots": 5230,
+  "strong_roots": 4083,
+  "seed": 203137,
+  "scope": "All labeled tournaments orders 1\u20135, 128 distinct seeded samples each of orders 6 and 7. Not an all-order or occupancy proof."
+}
