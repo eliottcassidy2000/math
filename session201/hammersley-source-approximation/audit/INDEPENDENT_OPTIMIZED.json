@@ -1,0 +1,186 @@
+{
+  "J_pair_controls": 16129,
+  "Z_runs": 114688,
+  "constructor_checks": 98316,
+  "dyadic_block_real_cutoff_checks": 130807,
+  "fixed_real_hostile": {
+    "discrepancy": "175/256",
+    "false_bound": "1/2",
+    "k": 1,
+    "x": "9/16",
+    "y": "9/16"
+  },
+  "joint_details": [
+    {
+      "both_aligned": "0/1",
+      "first_aligned": "1/1",
+      "k": 0,
+      "real": "1/1"
+    },
+    {
+      "both_aligned": "1/4",
+      "first_aligned": "1/2",
+      "k": 1,
+      "real": "3/4"
+    },
+    {
+      "both_aligned": "3/16",
+      "first_aligned": "3/8",
+      "k": 2,
+      "real": "1/2"
+    },
+    {
+      "both_aligned": "9/64",
+      "first_aligned": "7/32",
+      "k": 3,
+      "real": "5/16"
+    },
+    {
+      "both_aligned": "23/256",
+      "first_aligned": "17/128",
+      "k": 4,
+      "real": "11/64"
+    },
+    {
+      "both_aligned": "57/1024",
+      "first_aligned": "39/512",
+      "k": 5,
+      "real": "25/256"
+    },
+    {
+      "both_aligned": "135/4096",
+      "first_aligned": "89/2048",
+      "k": 6,
+      "real": "55/1024"
+    },
+    {
+      "both_aligned": "313/16384",
+      "first_aligned": "199/8192",
+      "k": 7,
+      "real": "121/4096"
+    },
+    {
+      "both_aligned": "711/65536",
+      "first_aligned": "441/32768",
+      "k": 8,
+      "real": "263/16384"
+    },
+    {
+      "both_aligned": "1593/262144",
+      "first_aligned": "967/131072",
+      "k": 9,
+      "real": "569/65536"
+    }
+  ],
+  "physical_words": 32767,
+  "scope": "Actual approximate slopes and exact residual bounds only; no exact target occupancy.",
+  "slope_details": [
+    {
+      "k": 0,
+      "max_error": "0/1",
+      "negative_CDF_error": "1/2",
+      "positive_CDF_error": "1/2",
+      "source_count": 1
+    },
+    {
+      "k": 1,
+      "max_error": "3/4",
+      "negative_CDF_error": "1/2",
+      "positive_CDF_error": "1/4",
+      "source_count": 2
+    },
+    {
+      "k": 2,
+      "max_error": "3/4",
+      "negative_CDF_error": "1/4",
+      "positive_CDF_error": "1/8",
+      "source_count": 4
+    },
+    {
+      "k": 3,
+      "max_error": "23/16",
+      "negative_CDF_error": "17/88",
+      "positive_CDF_error": "1/16",
+      "source_count": 8
+    },
+    {
+      "k": 4,
+      "max_error": "23/16",
+      "negative_CDF_error": "31/304",
+      "positive_CDF_error": "1/32",
+      "source_count": 16
+    },
+    {
+      "k": 5,
+      "max_error": "135/64",
+      "negative_CDF_error": "89/1376",
+      "positive_CDF_error": "1/64",
+      "source_count": 32
+    },
+    {
+      "k": 6,
+      "max_error": "135/64",
+      "negative_CDF_error": "239/7360",
+      "positive_CDF_error": "1/128",
+      "source_count": 64
+    },
+    {
+      "k": 7,
+      "max_error": "711/256",
+      "negative_CDF_error": "49/2432",
+      "positive_CDF_error": "1/256",
+      "source_count": 128
+    },
+    {
+      "k": 8,
+      "max_error": "711/256",
+      "negative_CDF_error": "49/4864",
+      "positive_CDF_error": "1/512",
+      "source_count": 256
+    },
+    {
+      "k": 9,
+      "max_error": "3527/1024",
+      "negative_CDF_error": "2489/415232",
+      "positive_CDF_error": "1/1024",
+      "source_count": 512
+    },
+    {
+      "k": 10,
+      "max_error": "3527/1024",
+      "negative_CDF_error": "4849/1616896",
+      "positive_CDF_error": "1/2048",
+      "source_count": 1024
+    },
+    {
+      "k": 11,
+      "max_error": "16839/4096",
+      "negative_CDF_error": "11321/6641664",
+      "positive_CDF_error": "1/4096",
+      "source_count": 2048
+    },
+    {
+      "k": 12,
+      "max_error": "16839/4096",
+      "negative_CDF_error": "22129/25866240",
+      "positive_CDF_error": "1/8192",
+      "source_count": 4096
+    },
+    {
+      "k": 13,
+      "max_error": "78279/16384",
+      "negative_CDF_error": "2985/6250496",
+      "positive_CDF_error": "1/16384",
+      "source_count": 8192
+    },
+    {
+      "k": 14,
+      "max_error": "78279/16384",
+      "negative_CDF_error": "3429/14270464",
+      "positive_CDF_error": "1/32768",
+      "source_count": 16384
+    }
+  ],
+  "status": "PASS",
+  "verifier_sha256": "cb54dc630fb47b093c0875325cba0a8d75f510f907d3c7029f7082cdffc21002"
+}

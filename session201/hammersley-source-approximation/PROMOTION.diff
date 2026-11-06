@@ -1,0 +1,40 @@
+--- originals/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # Actual source slopes approximate a bit-reversal grid
+ 
+-Status: **RESERVED / UNREVIEWED PROOF CANDIDATE**. This is a constructive,
++Status: **PROVED / INDEPENDENTLY AUDITED**. This is a constructive,
+ quantitative approximation theorem for actual source indices, with exact
+ rational controls. It does not prove exact target occupancy.
+ 
+@@ -19,7 +19,7 @@
+ The run-error derivation below gives a positive quantitative construction.
+ The optional joint discrepancy estimate includes an explicit rounding
+ correction. This packet is separate from
+-`../session201-digital-graph-obstruction/`.
++`../digital-graph-obstruction/`.
+ 
+ The main object is an actual source, represented both by its chronological
+ O/Z word and by its ordinary index. The preserved information is the exact
+@@ -234,8 +234,8 @@
+ 
+ Run the standalone verifier:
+ 
+-    python3 session201-hammersley-source-approximation/verify.py
+-    python3 -O session201-hammersley-source-approximation/verify.py
++    python3 verify.py
++    python3 -O verify.py
+ 
+ It uses only Python's standard library and exact integer/Fraction arithmetic.
+ It checks every word through k=12, the run identities, all boundary cases,
+--- originals/README.md
++++ README.md
+@@ -1,6 +1,6 @@
+ # Positive approximate construction of actual source slopes
+ 
+-Unreviewed proof candidate. Exact target occupancy remains OPEN.
++Independently audited proof. Exact target occupancy remains OPEN.
+ 
+ - `PROOF.md`: actual-index bit reversal, positive Z-run errors, explicit slope
+   approximation and discrepancy, elementary joint-grid bounds with rounding,

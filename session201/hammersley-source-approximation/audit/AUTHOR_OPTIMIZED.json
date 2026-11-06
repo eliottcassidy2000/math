@@ -1,0 +1,159 @@
+{
+  "AP_cutoff_checks": 21837,
+  "Z_runs_checked": 24576,
+  "approximate_slope_constructor_checks": 16395,
+  "bilinear_approximation_controls": 961,
+  "exact_target_occupancy": "OPEN; this packet constructs approximate source slopes only",
+  "joint_details": [
+    {
+      "both_grid_aligned": "0/1",
+      "first_grid_aligned": "1/1",
+      "k": 0,
+      "real_star": "1/1"
+    },
+    {
+      "both_grid_aligned": "1/4",
+      "first_grid_aligned": "1/2",
+      "k": 1,
+      "real_star": "3/4"
+    },
+    {
+      "both_grid_aligned": "3/16",
+      "first_grid_aligned": "3/8",
+      "k": 2,
+      "real_star": "1/2"
+    },
+    {
+      "both_grid_aligned": "9/64",
+      "first_grid_aligned": "7/32",
+      "k": 3,
+      "real_star": "5/16"
+    },
+    {
+      "both_grid_aligned": "23/256",
+      "first_grid_aligned": "17/128",
+      "k": 4,
+      "real_star": "11/64"
+    },
+    {
+      "both_grid_aligned": "57/1024",
+      "first_grid_aligned": "39/512",
+      "k": 5,
+      "real_star": "25/256"
+    },
+    {
+      "both_grid_aligned": "135/4096",
+      "first_grid_aligned": "89/2048",
+      "k": 6,
+      "real_star": "55/1024"
+    },
+    {
+      "both_grid_aligned": "313/16384",
+      "first_grid_aligned": "199/8192",
+      "k": 7,
+      "real_star": "121/4096"
+    },
+    {
+      "both_grid_aligned": "711/65536",
+      "first_grid_aligned": "441/32768",
+      "k": 8,
+      "real_star": "263/16384"
+    }
+  ],
+  "real_joint_bound_correction": "k/B requires grid-aligned first cutoff; use (k+1)/B for real cutoffs, k=0 separately",
+  "slope_details": [
+    {
+      "B": 1,
+      "k": 0,
+      "max_error": "0/1",
+      "max_slope_error": "0/1",
+      "star_discrepancy": "1/2"
+    },
+    {
+      "B": 2,
+      "k": 1,
+      "max_error": "3/4",
+      "max_slope_error": "1/4",
+      "star_discrepancy": "1/2"
+    },
+    {
+      "B": 4,
+      "k": 2,
+      "max_error": "3/4",
+      "max_slope_error": "1/8",
+      "star_discrepancy": "1/4"
+    },
+    {
+      "B": 8,
+      "k": 3,
+      "max_error": "23/16",
+      "max_slope_error": "23/176",
+      "star_discrepancy": "17/88"
+    },
+    {
+      "B": 16,
+      "k": 4,
+      "max_error": "23/16",
+      "max_slope_error": "43/608",
+      "star_discrepancy": "31/304"
+    },
+    {
+      "B": 32,
+      "k": 5,
+      "max_error": "135/64",
+      "max_slope_error": "135/2752",
+      "star_discrepancy": "89/1376"
+    },
+    {
+      "B": 64,
+      "k": 6,
+      "max_error": "135/64",
+      "max_slope_error": "259/9600",
+      "star_discrepancy": "239/7360"
+    },
+    {
+      "B": 128,
+      "k": 7,
+      "max_error": "711/256",
+      "max_slope_error": "79/4864",
+      "star_discrepancy": "49/2432"
+    },
+    {
+      "B": 256,
+      "k": 8,
+      "max_error": "711/256",
+      "max_slope_error": "1379/153088",
+      "star_discrepancy": "49/4864"
+    },
+    {
+      "B": 512,
+      "k": 9,
+      "max_error": "3527/1024",
+      "max_slope_error": "3527/699392",
+      "star_discrepancy": "2489/415232"
+    },
+    {
+      "B": 1024,
+      "k": 10,
+      "max_error": "3527/1024",
+      "max_slope_error": "6883/2447360",
+      "star_discrepancy": "4849/1616896"
+    },
+    {
+      "B": 2048,
+      "k": 11,
+      "max_error": "16839/4096",
+      "max_slope_error": "16839/11186176",
+      "star_discrepancy": "11321/6641664"
+    },
+    {
+      "B": 4096,
+      "k": 12,
+      "max_error": "16839/4096",
+      "max_slope_error": "32995/39149568",
+      "star_discrepancy": "22129/25866240"
+    }
+  ],
+  "source_words_checked": 8191,
+  "status": "PASS"
+}
