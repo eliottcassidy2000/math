@@ -1,0 +1,11 @@
+{
+  "bound": 139,
+  "complete": true,
+  "order_cap": 10,
+  "processed": 478,
+  "scope": "Complete all-order absence only of start 2 at this B. No tournament-count exclusion and no conclusion about shifted F profiles.",
+  "start_two_base_count": 29,
+  "states": 478,
+  "status": "ABSENT_START_TWO_PROFILE",
+  "target_B": 139
+}

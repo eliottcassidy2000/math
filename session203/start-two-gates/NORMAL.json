@@ -1,0 +1,174 @@
+{
+  "basis_matrices": {
+    "K1_level1": [
+      [
+        1,
+        -1,
+        3,
+        -2
+      ],
+      [
+        0,
+        0,
+        1,
+        -1
+      ],
+      [
+        2,
+        -1,
+        4,
+        -1
+      ],
+      [
+        1,
+        -1,
+        1,
+        0
+      ]
+    ],
+    "K1_level2": [
+      [
+        4,
+        -6,
+        10,
+        -4
+      ],
+      [
+        1,
+        -2,
+        2,
+        -1
+      ],
+      [
+        3,
+        -2,
+        6,
+        -1
+      ],
+      [
+        2,
+        -2,
+        2,
+        0
+      ]
+    ],
+    "K2_level1": [
+      [
+        3,
+        -2,
+        6,
+        -2
+      ],
+      [
+        1,
+        0,
+        1,
+        -1
+      ],
+      [
+        3,
+        -1,
+        8,
+        -1
+      ],
+      [
+        1,
+        0,
+        2,
+        0
+      ]
+    ],
+    "K2_level2": [
+      [
+        12,
+        -12,
+        28,
+        -8
+      ],
+      [
+        3,
+        -2,
+        4,
+        -2
+      ],
+      [
+        7,
+        -4,
+        18,
+        -2
+      ],
+      [
+        4,
+        -2,
+        6,
+        0
+      ]
+    ]
+  },
+  "canonical_inventory": [
+    {
+      "canonical_strong_start_two": 0,
+      "gate_strong_start_two": 0,
+      "gate_weak_or_strong_start_two": 0,
+      "order": 2
+    },
+    {
+      "canonical_strong_start_two": 0,
+      "gate_strong_start_two": 0,
+      "gate_weak_or_strong_start_two": 0,
+      "order": 3
+    },
+    {
+      "canonical_strong_start_two": 1,
+      "gate_strong_start_two": 1,
+      "gate_weak_or_strong_start_two": 1,
+      "order": 4
+    },
+    {
+      "canonical_strong_start_two": 5,
+      "gate_strong_start_two": 5,
+      "gate_weak_or_strong_start_two": 6,
+      "order": 5
+    },
+    {
+      "canonical_strong_start_two": 18,
+      "gate_strong_start_two": 18,
+      "gate_weak_or_strong_start_two": 24,
+      "order": 6
+    },
+    {
+      "canonical_strong_start_two": 60,
+      "gate_strong_start_two": 60,
+      "gate_weak_or_strong_start_two": 84,
+      "order": 7
+    },
+    {
+      "canonical_strong_start_two": 191,
+      "gate_strong_start_two": 191,
+      "gate_weak_or_strong_start_two": 275,
+      "order": 8
+    }
+  ],
+  "complete_labelled_max_order": 5,
+  "complete_start_two_bases_through31": [
+    9,
+    23,
+    29
+  ],
+  "dependencies": {
+    "PHYSICAL_SOURCE_GRAMMAR.md": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537",
+    "ROOTED_COVER_CLOSURE.md": "8e78951f9dd15decff0d23cfb3ebe64f358b3c9d4561b269b527a1e9aa902168",
+    "START_TWO.md": "a746d2e33b0fb78a98252afa602dc8985c25f718225c2f9ce37923fd20b0ada3",
+    "verify_start_two.py": "ca788fa6489cbca7bed8f9f9a84a553ff9f5de7502833544f9b51b9f059142ae"
+  },
+  "literal_children_counted": 5595,
+  "negative_B139_states": 478,
+  "positive_B137_order": 7,
+  "random_extra_orders": [
+    6,
+    7
+  ],
+  "resource_limit_status": "INCOMPLETE",
+  "rooted_inputs": 1119,
+  "status": "PASS"
+}

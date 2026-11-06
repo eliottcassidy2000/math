@@ -1,0 +1,30 @@
+[
+  {
+    "local": "dependencies/START_TWO.md",
+    "sha256": "a746d2e33b0fb78a98252afa602dc8985c25f718225c2f9ce37923fd20b0ada3",
+    "source_path": "session197/lowcycle/START_TWO.md",
+    "source_commit": "5067f5a9e43237ab3013399b3636dff92096d886",
+    "exact_match_cached_remote": true
+  },
+  {
+    "local": "dependencies/verify_start_two.py",
+    "sha256": "ca788fa6489cbca7bed8f9f9a84a553ff9f5de7502833544f9b51b9f059142ae",
+    "source_path": "session197/lowcycle/verify_start_two.py",
+    "source_commit": "5067f5a9e43237ab3013399b3636dff92096d886",
+    "exact_match_cached_remote": true
+  },
+  {
+    "local": "dependencies/PHYSICAL_SOURCE_GRAMMAR.md",
+    "sha256": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537",
+    "source_path": "session203/rooted-cover-closure/dependencies/PHYSICAL_SOURCE_GRAMMAR.md",
+    "source_commit": "5067f5a9e43237ab3013399b3636dff92096d886",
+    "exact_match_cached_remote": true
+  },
+  {
+    "local": "dependencies/ROOTED_COVER_CLOSURE.md",
+    "sha256": "8e78951f9dd15decff0d23cfb3ebe64f358b3c9d4561b269b527a1e9aa902168",
+    "source_path": "session203/rooted-cover-closure/PROOF.md",
+    "source_commit": "5067f5a9e43237ab3013399b3636dff92096d886",
+    "exact_match_cached_remote": true
+  }
+]

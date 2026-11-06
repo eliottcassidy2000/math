@@ -1,0 +1,11 @@
+{
+  "status": "INDEPENDENT_MATHEMATICAL_AUDIT_PASS",
+  "changes": [
+    "PROOF.md first status line only",
+    "README.md status and removal of pending-audit qualification",
+    "audit/audit.py relative import root only",
+    "audit/AUDIT.md reproduction command only"
+  ],
+  "originals": "reviewed-originals/",
+  "scope": "Physical gates, complete start-two profile grammar, logarithmic target cap and exact bounded compiler. F(8,137) and unconditional eventual threshold remain open."
+}

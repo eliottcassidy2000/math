@@ -1,0 +1,38 @@
+{
+  "bound": 137,
+  "complete": false,
+  "order": 7,
+  "order_cap": 10,
+  "processed": 117,
+  "profile": [
+    49,
+    2,
+    3,
+    90,
+    51,
+    3,
+    872,
+    96,
+    474
+  ],
+  "reason": "TARGET_WITNESS_FOUND",
+  "root": 0,
+  "rows": [
+    10,
+    116,
+    121,
+    114,
+    97,
+    65,
+    1
+  ],
+  "source_word": [
+    "K1",
+    "Z",
+    "Z",
+    "Z"
+  ],
+  "states": 208,
+  "status": "PHYSICAL_START_TWO_WITNESS",
+  "target_B": 137
+}
