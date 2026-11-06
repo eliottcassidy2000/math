@@ -1,0 +1,366 @@
+{
+  "capacity_pairs": 410,
+  "cuts": 1098,
+  "m13_average_floor": 94783,
+  "m13_bin_count": 1516528,
+  "method": "literal permutations, independent of author subset DP",
+  "minus_target_average": 73730,
+  "parents": 75,
+  "plus_target_average": 73732,
+  "status": "PASS",
+  "two_apex_controls": [
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 0,
+      "m": 2,
+      "polarities": [
+        0,
+        0
+      ],
+      "sum_H": 8,
+      "words": 4
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 0,
+      "m": 2,
+      "polarities": [
+        0,
+        0
+      ],
+      "sum_H": 8,
+      "words": 4
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 0,
+      "m": 2,
+      "polarities": [
+        0,
+        1
+      ],
+      "sum_H": 16,
+      "words": 4
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 0,
+      "m": 2,
+      "polarities": [
+        0,
+        1
+      ],
+      "sum_H": 16,
+      "words": 4
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 0,
+      "m": 2,
+      "polarities": [
+        1,
+        0
+      ],
+      "sum_H": 16,
+      "words": 4
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 0,
+      "m": 2,
+      "polarities": [
+        1,
+        0
+      ],
+      "sum_H": 16,
+      "words": 4
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 0,
+      "m": 2,
+      "polarities": [
+        1,
+        1
+      ],
+      "sum_H": 8,
+      "words": 4
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 0,
+      "m": 2,
+      "polarities": [
+        1,
+        1
+      ],
+      "sum_H": 8,
+      "words": 4
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 0,
+      "m": 3,
+      "polarities": [
+        0,
+        0
+      ],
+      "sum_H": 36,
+      "words": 8
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 0,
+      "m": 3,
+      "polarities": [
+        0,
+        0
+      ],
+      "sum_H": 36,
+      "words": 8
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 0,
+      "m": 3,
+      "polarities": [
+        0,
+        1
+      ],
+      "sum_H": 72,
+      "words": 8
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 0,
+      "m": 3,
+      "polarities": [
+        0,
+        1
+      ],
+      "sum_H": 72,
+      "words": 8
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 0,
+      "m": 3,
+      "polarities": [
+        1,
+        0
+      ],
+      "sum_H": 72,
+      "words": 8
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 0,
+      "m": 3,
+      "polarities": [
+        1,
+        0
+      ],
+      "sum_H": 72,
+      "words": 8
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 0,
+      "m": 3,
+      "polarities": [
+        1,
+        1
+      ],
+      "sum_H": 36,
+      "words": 8
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 0,
+      "m": 3,
+      "polarities": [
+        1,
+        1
+      ],
+      "sum_H": 36,
+      "words": 8
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 12,
+      "m": 4,
+      "polarities": [
+        0,
+        0
+      ],
+      "sum_H": 184,
+      "words": 16
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 12,
+      "m": 4,
+      "polarities": [
+        0,
+        0
+      ],
+      "sum_H": 184,
+      "words": 16
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 12,
+      "m": 4,
+      "polarities": [
+        0,
+        1
+      ],
+      "sum_H": 344,
+      "words": 16
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 12,
+      "m": 4,
+      "polarities": [
+        0,
+        1
+      ],
+      "sum_H": 344,
+      "words": 16
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 12,
+      "m": 4,
+      "polarities": [
+        1,
+        0
+      ],
+      "sum_H": 344,
+      "words": 16
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 12,
+      "m": 4,
+      "polarities": [
+        1,
+        0
+      ],
+      "sum_H": 344,
+      "words": 16
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 12,
+      "m": 4,
+      "polarities": [
+        1,
+        1
+      ],
+      "sum_H": 184,
+      "words": 16
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 12,
+      "m": 4,
+      "polarities": [
+        1,
+        1
+      ],
+      "sum_H": 184,
+      "words": 16
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 80,
+      "m": 5,
+      "polarities": [
+        0,
+        0
+      ],
+      "sum_H": 1008,
+      "words": 32
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 80,
+      "m": 5,
+      "polarities": [
+        0,
+        0
+      ],
+      "sum_H": 1008,
+      "words": 32
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 80,
+      "m": 5,
+      "polarities": [
+        0,
+        1
+      ],
+      "sum_H": 1728,
+      "words": 32
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 80,
+      "m": 5,
+      "polarities": [
+        0,
+        1
+      ],
+      "sum_H": 1728,
+      "words": 32
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 80,
+      "m": 5,
+      "polarities": [
+        1,
+        0
+      ],
+      "sum_H": 1728,
+      "words": 32
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 80,
+      "m": 5,
+      "polarities": [
+        1,
+        0
+      ],
+      "sum_H": 1728,
+      "words": 32
+    },
+    {
+      "arc_a_to_c": 0,
+      "bin_count": 80,
+      "m": 5,
+      "polarities": [
+        1,
+        1
+      ],
+      "sum_H": 1008,
+      "words": 32
+    },
+    {
+      "arc_a_to_c": 1,
+      "bin_count": 80,
+      "m": 5,
+      "polarities": [
+        1,
+        1
+      ],
+      "sum_H": 1008,
+      "words": 32
+    }
+  ],
+  "two_apex_graphs": 480
+}

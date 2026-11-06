@@ -1,0 +1,77 @@
+{
+  "color_histograms": 291305,
+  "column_controls": [
+    {
+      "free_coordinates": 2,
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "histograms": 1,
+      "minimum_equal_color_pairs": 1,
+      "q": 1
+    },
+    {
+      "free_coordinates": 9,
+      "grid_columns": 7,
+      "grid_rows": 4,
+      "histograms": 5,
+      "minimum_equal_color_pairs": 2,
+      "q": 2
+    },
+    {
+      "free_coordinates": 20,
+      "grid_columns": 16,
+      "grid_rows": 6,
+      "histograms": 28,
+      "minimum_equal_color_pairs": 3,
+      "q": 3
+    },
+    {
+      "free_coordinates": 35,
+      "grid_columns": 29,
+      "grid_rows": 8,
+      "histograms": 165,
+      "minimum_equal_color_pairs": 4,
+      "q": 4
+    },
+    {
+      "free_coordinates": 54,
+      "grid_columns": 46,
+      "grid_rows": 10,
+      "histograms": 1001,
+      "minimum_equal_color_pairs": 5,
+      "q": 5
+    },
+    {
+      "free_coordinates": 77,
+      "grid_columns": 67,
+      "grid_rows": 12,
+      "histograms": 6188,
+      "minimum_equal_color_pairs": 6,
+      "q": 6
+    },
+    {
+      "free_coordinates": 104,
+      "grid_columns": 92,
+      "grid_rows": 14,
+      "histograms": 38760,
+      "minimum_equal_color_pairs": 7,
+      "q": 7
+    },
+    {
+      "free_coordinates": 135,
+      "grid_columns": 121,
+      "grid_rows": 16,
+      "histograms": 245157,
+      "minimum_equal_color_pairs": 8,
+      "q": 8
+    }
+  ],
+  "explicit_distinct_path_injections": 12440,
+  "free_middle_bits_max": 4,
+  "literal_graphs": 248,
+  "m28_path_floor": 3486784401,
+  "m28_plus_target_upper_bound": 3221225473,
+  "random_colored_grids": 1000,
+  "scope": "independent finite controls; all-order claims rest on the explicit injection and pigeonhole argument",
+  "status": "PASS"
+}

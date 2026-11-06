@@ -1,0 +1,12 @@
+{
+  "all_compositions_checked_q_at_most_5": 1200,
+  "deterministic_random_rectangle_controls": 800,
+  "explicit_distinct_pinned_paths": 74648,
+  "independent_subset_DP_cases": 120,
+  "m28_larger_target_upper_bound": 3221225473,
+  "m28_lower_bound": 3486784401,
+  "menu_bound_at_m28": 3,
+  "pinned_word_polarity_arc_cases": 504,
+  "scope": "pinned lower bound and quadratic finite-menu rectangle mechanism",
+  "status": "PASS"
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "changed_lines": [
+      3
+    ],
+    "name": "uniform_incidence",
+    "original_path": "session203-complement-gadget/audited-original/PROOF.md",
+    "original_sha256": "f2d1a2b8c9463ac37df5c3242aca79edc5e0670a849d66577580a424724bd57c",
+    "promoted_path": "session203-complement-gadget/PROOF.md",
+    "promoted_sha256": "b14c0ac849c1cd0084a51953133b593b7eb952490007018d21c5763a3e7803c9",
+    "status": "PASS: only initial status line changed"
+  },
+  {
+    "changed_lines": [
+      3
+    ],
+    "name": "fixed_graft",
+    "original_path": "session203-structural-induction/originals/PROOF.md",
+    "original_sha256": "06a16ce5044b629bb162b99ea5d46c70a7b6ffe73c8a37d2afc1f9fc1df25fd7",
+    "promoted_path": "session203-structural-induction/PROOF.md",
+    "promoted_sha256": "c15705ecbca0efcfe7266bf9263fc0f242da1125bf308f9beb5fc52bd5bc6bca",
+    "status": "PASS: only initial status line changed"
+  },
+  {
+    "changed_lines": [
+      3
+    ],
+    "name": "finite_menu",
+    "original_path": "session203-structural-induction/originals/FINITE_MENU.md",
+    "original_sha256": "7d56566c7649fb047abda3de716b8f581904ffbe5c796d6815e44d250738e7e1",
+    "promoted_path": "session203-structural-induction/FINITE_MENU.md",
+    "promoted_sha256": "cf60a6831510cbed8d58dc2a8711a002b4e5590fde8dd33158435fc3e5fc381d",
+    "status": "PASS: only initial status line changed"
+  }
+]

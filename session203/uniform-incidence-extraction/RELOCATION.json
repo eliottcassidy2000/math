@@ -1,0 +1,82 @@
+{
+  "note": "All seven standalone scripts replayed in normal and optimized Python from their released subdirectories; no author imports in audit scripts.",
+  "proof_bytes_match_approved_promotions": {
+    "structural/FINITE_MENU.md": "cf60a6831510cbed8d58dc2a8711a002b4e5590fde8dd33158435fc3e5fc381d",
+    "structural/PROOF.md": "c15705ecbca0efcfe7266bf9263fc0f242da1125bf308f9beb5fc52bd5bc6bca",
+    "uniform/PROOF.md": "b14c0ac849c1cd0084a51953133b593b7eb952490007018d21c5763a3e7803c9"
+  },
+  "replays": [
+    {
+      "match": true,
+      "receipt": "uniform/VALIDATION_NORMAL.json",
+      "sha256": "cc826ece95a43dccc6d7d4b5f57a0e8fd239e70d2b8a14b98927084d85451128"
+    },
+    {
+      "match": true,
+      "receipt": "uniform/VALIDATION_OPTIMIZED.json",
+      "sha256": "cc826ece95a43dccc6d7d4b5f57a0e8fd239e70d2b8a14b98927084d85451128"
+    },
+    {
+      "match": true,
+      "receipt": "uniform/ANCHORS_NORMAL.json",
+      "sha256": "635a88771ca17f1e8df5a29abd8a1fdc6e099c5f4251c86fd7b8de684ce0b34a"
+    },
+    {
+      "match": true,
+      "receipt": "uniform/ANCHORS_OPTIMIZED.json",
+      "sha256": "635a88771ca17f1e8df5a29abd8a1fdc6e099c5f4251c86fd7b8de684ce0b34a"
+    },
+    {
+      "match": true,
+      "receipt": "structural/VALIDATION-normal.json",
+      "sha256": "e46402e118a7d320029566bb3be425a1ef0a1112bd1f5b0296d07f6f06c67a95"
+    },
+    {
+      "match": true,
+      "receipt": "structural/VALIDATION-optimized.json",
+      "sha256": "e46402e118a7d320029566bb3be425a1ef0a1112bd1f5b0296d07f6f06c67a95"
+    },
+    {
+      "match": true,
+      "receipt": "structural/MENU-normal.json",
+      "sha256": "929765b7a479cd8e99cf546f20b1c427e66eb3f856a5c7705199b33b7d27e823"
+    },
+    {
+      "match": true,
+      "receipt": "structural/MENU-optimized.json",
+      "sha256": "929765b7a479cd8e99cf546f20b1c427e66eb3f856a5c7705199b33b7d27e823"
+    },
+    {
+      "match": true,
+      "receipt": "audit/UNIFORM_GADGET_NORMAL.json",
+      "sha256": "4de176747665b8cb6cc164cdd5d1e53435e225dd5d03a13d6411fc230df1dbda"
+    },
+    {
+      "match": true,
+      "receipt": "audit/UNIFORM_GADGET_OPTIMIZED.json",
+      "sha256": "4de176747665b8cb6cc164cdd5d1e53435e225dd5d03a13d6411fc230df1dbda"
+    },
+    {
+      "match": true,
+      "receipt": "audit/FIXED_GRAFT_NORMAL.json",
+      "sha256": "7a6b98dcebf7382d88cb33b7d321654f6fd9270ab1cdab9fc3c0d966b41947c1"
+    },
+    {
+      "match": true,
+      "receipt": "audit/FIXED_GRAFT_OPTIMIZED.json",
+      "sha256": "7a6b98dcebf7382d88cb33b7d321654f6fd9270ab1cdab9fc3c0d966b41947c1"
+    },
+    {
+      "match": true,
+      "receipt": "audit/MENU_ANCHORS_NORMAL.json",
+      "sha256": "7f1608a2ca019bdfe6551b7296422802f59940e202975777f2f1aec452906618"
+    },
+    {
+      "match": true,
+      "receipt": "audit/MENU_ANCHORS_OPTIMIZED.json",
+      "sha256": "7f1608a2ca019bdfe6551b7296422802f59940e202975777f2f1aec452906618"
+    }
+  ],
+  "script_replays": 14,
+  "status": "PASS"
+}

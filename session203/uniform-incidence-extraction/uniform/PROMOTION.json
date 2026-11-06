@@ -1,0 +1,8 @@
+{
+  "change": "Status-only promotion after independent PASS; no mathematical or verifier changes.",
+  "audit": "session203-independent-audit/CONSTRUCTOR_AUDIT.md",
+  "before_sha256": "f2d1a2b8c9463ac37df5c3242aca79edc5e0670a849d66577580a424724bd57c",
+  "after_sha256": "b14c0ac849c1cd0084a51953133b593b7eb952490007018d21c5763a3e7803c9",
+  "old_status": "Status: **PROOF CANDIDATE, pending independent audit.** This is an all-order",
+  "new_status": "Status: **PROVED, independently audited in the stated scope.** This is an all-order"
+}

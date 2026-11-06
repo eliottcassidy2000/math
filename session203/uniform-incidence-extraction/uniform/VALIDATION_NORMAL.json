@@ -1,0 +1,718 @@
+{
+  "bin_inventories": [
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      12
+    ],
+    [
+      5,
+      80
+    ],
+    [
+      6,
+      360
+    ],
+    [
+      7,
+      1372
+    ]
+  ],
+  "capacity_pairs": 410,
+  "cuts": 1098,
+  "edge_constraint_checks": 7296,
+  "m13": {
+    "N": 1516528,
+    "affine_plus_mean": 73732,
+    "lower_mean": 94783,
+    "target_interval": [
+      8193,
+      16384
+    ]
+  },
+  "mean_checks": [
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 2,
+      "mean_denominator": 4,
+      "mean_numerator": 8,
+      "polarities": [
+        0,
+        0
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 2,
+      "mean_denominator": 4,
+      "mean_numerator": 16,
+      "polarities": [
+        0,
+        1
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 2,
+      "mean_denominator": 4,
+      "mean_numerator": 16,
+      "polarities": [
+        1,
+        0
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 2,
+      "mean_denominator": 4,
+      "mean_numerator": 8,
+      "polarities": [
+        1,
+        1
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 2,
+      "mean_denominator": 4,
+      "mean_numerator": 8,
+      "polarities": [
+        0,
+        0
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 2,
+      "mean_denominator": 4,
+      "mean_numerator": 16,
+      "polarities": [
+        0,
+        1
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 2,
+      "mean_denominator": 4,
+      "mean_numerator": 16,
+      "polarities": [
+        1,
+        0
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 2,
+      "mean_denominator": 4,
+      "mean_numerator": 8,
+      "polarities": [
+        1,
+        1
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 3,
+      "mean_denominator": 8,
+      "mean_numerator": 36,
+      "polarities": [
+        0,
+        0
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 3,
+      "mean_denominator": 8,
+      "mean_numerator": 72,
+      "polarities": [
+        0,
+        1
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 3,
+      "mean_denominator": 8,
+      "mean_numerator": 72,
+      "polarities": [
+        1,
+        0
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 3,
+      "mean_denominator": 8,
+      "mean_numerator": 36,
+      "polarities": [
+        1,
+        1
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 3,
+      "mean_denominator": 8,
+      "mean_numerator": 36,
+      "polarities": [
+        0,
+        0
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 3,
+      "mean_denominator": 8,
+      "mean_numerator": 72,
+      "polarities": [
+        0,
+        1
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 3,
+      "mean_denominator": 8,
+      "mean_numerator": 72,
+      "polarities": [
+        1,
+        0
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 0,
+      "m": 3,
+      "mean_denominator": 8,
+      "mean_numerator": 36,
+      "polarities": [
+        1,
+        1
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 12,
+      "m": 4,
+      "mean_denominator": 16,
+      "mean_numerator": 184,
+      "polarities": [
+        0,
+        0
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 12,
+      "m": 4,
+      "mean_denominator": 16,
+      "mean_numerator": 344,
+      "polarities": [
+        0,
+        1
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 12,
+      "m": 4,
+      "mean_denominator": 16,
+      "mean_numerator": 344,
+      "polarities": [
+        1,
+        0
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 12,
+      "m": 4,
+      "mean_denominator": 16,
+      "mean_numerator": 184,
+      "polarities": [
+        1,
+        1
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 12,
+      "m": 4,
+      "mean_denominator": 16,
+      "mean_numerator": 184,
+      "polarities": [
+        0,
+        0
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 12,
+      "m": 4,
+      "mean_denominator": 16,
+      "mean_numerator": 344,
+      "polarities": [
+        0,
+        1
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 12,
+      "m": 4,
+      "mean_denominator": 16,
+      "mean_numerator": 344,
+      "polarities": [
+        1,
+        0
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 12,
+      "m": 4,
+      "mean_denominator": 16,
+      "mean_numerator": 184,
+      "polarities": [
+        1,
+        1
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 80,
+      "m": 5,
+      "mean_denominator": 32,
+      "mean_numerator": 1008,
+      "polarities": [
+        0,
+        0
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 80,
+      "m": 5,
+      "mean_denominator": 32,
+      "mean_numerator": 1728,
+      "polarities": [
+        0,
+        1
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 80,
+      "m": 5,
+      "mean_denominator": 32,
+      "mean_numerator": 1728,
+      "polarities": [
+        1,
+        0
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 80,
+      "m": 5,
+      "mean_denominator": 32,
+      "mean_numerator": 1008,
+      "polarities": [
+        1,
+        1
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 80,
+      "m": 5,
+      "mean_denominator": 32,
+      "mean_numerator": 1008,
+      "polarities": [
+        0,
+        0
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 80,
+      "m": 5,
+      "mean_denominator": 32,
+      "mean_numerator": 1728,
+      "polarities": [
+        0,
+        1
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 80,
+      "m": 5,
+      "mean_denominator": 32,
+      "mean_numerator": 1728,
+      "polarities": [
+        1,
+        0
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 80,
+      "m": 5,
+      "mean_denominator": 32,
+      "mean_numerator": 1008,
+      "polarities": [
+        1,
+        1
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 360,
+      "m": 6,
+      "mean_denominator": 64,
+      "mean_numerator": 5760,
+      "polarities": [
+        0,
+        0
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 360,
+      "m": 6,
+      "mean_denominator": 64,
+      "mean_numerator": 9024,
+      "polarities": [
+        0,
+        1
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 360,
+      "m": 6,
+      "mean_denominator": 64,
+      "mean_numerator": 9024,
+      "polarities": [
+        1,
+        0
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 360,
+      "m": 6,
+      "mean_denominator": 64,
+      "mean_numerator": 5760,
+      "polarities": [
+        1,
+        1
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 360,
+      "m": 6,
+      "mean_denominator": 64,
+      "mean_numerator": 5760,
+      "polarities": [
+        0,
+        0
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 360,
+      "m": 6,
+      "mean_denominator": 64,
+      "mean_numerator": 9024,
+      "polarities": [
+        0,
+        1
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 360,
+      "m": 6,
+      "mean_denominator": 64,
+      "mean_numerator": 9024,
+      "polarities": [
+        1,
+        0
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 360,
+      "m": 6,
+      "mean_denominator": 64,
+      "mean_numerator": 5760,
+      "polarities": [
+        1,
+        1
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 1372,
+      "m": 7,
+      "mean_denominator": 128,
+      "mean_numerator": 33792,
+      "polarities": [
+        0,
+        0
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 1372,
+      "m": 7,
+      "mean_denominator": 128,
+      "mean_numerator": 48576,
+      "polarities": [
+        0,
+        1
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 1372,
+      "m": 7,
+      "mean_denominator": 128,
+      "mean_numerator": 48576,
+      "polarities": [
+        1,
+        0
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 1372,
+      "m": 7,
+      "mean_denominator": 128,
+      "mean_numerator": 33792,
+      "polarities": [
+        1,
+        1
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 1372,
+      "m": 7,
+      "mean_denominator": 128,
+      "mean_numerator": 33792,
+      "polarities": [
+        0,
+        0
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 1372,
+      "m": 7,
+      "mean_denominator": 128,
+      "mean_numerator": 48576,
+      "polarities": [
+        0,
+        1
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 1372,
+      "m": 7,
+      "mean_denominator": 128,
+      "mean_numerator": 48576,
+      "polarities": [
+        1,
+        0
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 1372,
+      "m": 7,
+      "mean_denominator": 128,
+      "mean_numerator": 33792,
+      "polarities": [
+        1,
+        1
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 4788,
+      "m": 8,
+      "mean_denominator": 256,
+      "mean_numerator": 201344,
+      "polarities": [
+        0,
+        0
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 4788,
+      "m": 8,
+      "mean_denominator": 256,
+      "mean_numerator": 267904,
+      "polarities": [
+        0,
+        1
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 4788,
+      "m": 8,
+      "mean_denominator": 256,
+      "mean_numerator": 267904,
+      "polarities": [
+        1,
+        0
+      ]
+    },
+    {
+      "arc": 0,
+      "bound_denominator": 16,
+      "bound_numerator": 4788,
+      "m": 8,
+      "mean_denominator": 256,
+      "mean_numerator": 201344,
+      "polarities": [
+        1,
+        1
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 4788,
+      "m": 8,
+      "mean_denominator": 256,
+      "mean_numerator": 201344,
+      "polarities": [
+        0,
+        0
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 4788,
+      "m": 8,
+      "mean_denominator": 256,
+      "mean_numerator": 267904,
+      "polarities": [
+        0,
+        1
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 4788,
+      "m": 8,
+      "mean_denominator": 256,
+      "mean_numerator": 267904,
+      "polarities": [
+        1,
+        0
+      ]
+    },
+    {
+      "arc": 1,
+      "bound_denominator": 16,
+      "bound_numerator": 4788,
+      "m": 8,
+      "mean_denominator": 256,
+      "mean_numerator": 201344,
+      "polarities": [
+        1,
+        1
+      ]
+    }
+  ],
+  "parents": 75,
+  "scope": "Finite literal controls; all-order proof in PROOF.md",
+  "status": "PASS",
+  "two_apex_graphs": 4064
+}

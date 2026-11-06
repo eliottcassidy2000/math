@@ -1,0 +1,25 @@
+{
+  "grafts_by_added_order": {
+    "0": {
+      "uniform ordered survivor": 1
+    },
+    "1": {
+      "nonuniform copied": 4,
+      "nonuniform opposite": 4,
+      "uniform forbidden cross": 2,
+      "uniform ordered survivor": 6
+    },
+    "2": {
+      "nonuniform copied": 192,
+      "nonuniform opposite": 192,
+      "uniform forbidden cross": 72,
+      "uniform ordered survivor": 56
+    }
+  },
+  "labelled_grafts_checked": 529,
+  "normalization": "r=0,c=1,private vertices in binary order",
+  "quadrilaterals_per_survivor": 4,
+  "source_bitwords_checked": 127,
+  "status": "PASS",
+  "theorem_scope": "fixed finite letter-local extensions retaining E(u), arbitrary eventual affine slope"
+}

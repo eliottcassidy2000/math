@@ -1,0 +1,11 @@
+{
+  "FINITE_MENU.md": {
+    "after_sha256": "cf60a6831510cbed8d58dc2a8711a002b4e5590fde8dd33158435fc3e5fc381d",
+    "before_sha256": "7d56566c7649fb047abda3de716b8f581904ffbe5c796d6815e44d250738e7e1"
+  },
+  "PROOF.md": {
+    "after_sha256": "c15705ecbca0efcfe7266bf9263fc0f242da1125bf308f9beb5fc52bd5bc6bca",
+    "before_sha256": "06a16ce5044b629bb162b99ea5d46c70a7b6ffe73c8a37d2afc1f9fc1df25fd7"
+  },
+  "change": "Status-only promotion, independently verified in audit/PROMOTION_AUDIT.json."
+}
