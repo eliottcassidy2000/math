@@ -1,0 +1,106 @@
+{
+  "literal_injection_paths": 6034,
+  "literal_prime_atom_seeds": [
+    {
+      "H": 49,
+      "vertices": 8,
+      "word": "OJJOOJ"
+    },
+    {
+      "H": 63,
+      "vertices": 8,
+      "word": "OZZOOJ"
+    },
+    {
+      "H": 343,
+      "vertices": 11,
+      "word": "OOJOZJJOJ"
+    }
+  ],
+  "presentations": 896,
+  "scope": "Finite controls only; all-order proof audited separately",
+  "singleton_beta": 2,
+  "status": "PASS",
+  "universes": [
+    {
+      "block": "C3",
+      "blocks": 0,
+      "literal_injected_paths": 0,
+      "maximum_H": 1,
+      "minimum_strong_H": 1,
+      "presentations": 1,
+      "scope": "complete",
+      "strong": 1
+    },
+    {
+      "block": "C3",
+      "blocks": 1,
+      "literal_injected_paths": 0,
+      "maximum_H": 5,
+      "minimum_strong_H": 5,
+      "presentations": 8,
+      "scope": "complete",
+      "strong": 6
+    },
+    {
+      "block": "C3",
+      "blocks": 2,
+      "literal_injected_paths": 49,
+      "maximum_H": 99,
+      "minimum_strong_H": 31,
+      "presentations": 64,
+      "scope": "complete",
+      "strong": 49
+    },
+    {
+      "block": "C3",
+      "blocks": 3,
+      "literal_injected_paths": 4704,
+      "maximum_H": 1287,
+      "minimum_strong_H": 261,
+      "presentations": 512,
+      "scope": "complete",
+      "strong": 392
+    },
+    {
+      "block": "D4",
+      "blocks": 0,
+      "literal_injected_paths": 0,
+      "maximum_H": 1,
+      "minimum_strong_H": 1,
+      "presentations": 1,
+      "scope": "complete",
+      "strong": 1
+    },
+    {
+      "block": "D4",
+      "blocks": 1,
+      "literal_injected_paths": 0,
+      "maximum_H": 15,
+      "minimum_strong_H": 9,
+      "presentations": 16,
+      "scope": "complete",
+      "strong": 14
+    },
+    {
+      "block": "D4",
+      "blocks": 2,
+      "literal_injected_paths": 225,
+      "maximum_H": 779,
+      "minimum_strong_H": 91,
+      "presentations": 256,
+      "scope": "complete",
+      "strong": 225
+    },
+    {
+      "block": "D4",
+      "blocks": 3,
+      "literal_injected_paths": 1056,
+      "maximum_H": 27583,
+      "minimum_strong_H": 3373,
+      "presentations": 38,
+      "scope": "declared deterministic sample",
+      "strong": 33
+    }
+  ]
+}
