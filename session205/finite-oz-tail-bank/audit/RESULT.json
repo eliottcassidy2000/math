@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "physical_seed_states": 142,
+  "tail_cases": 72704,
+  "max_encoded_tail": 511,
+  "JZ_OJ_identity": true
+}
