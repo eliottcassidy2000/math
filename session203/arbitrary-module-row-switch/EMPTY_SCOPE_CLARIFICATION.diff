@@ -1,0 +1,11 @@
+--- MODULE_PROOF.md
++++ MODULE_PROOF_CORRECTED.md
+@@ -66,7 +66,7 @@
+ 
+ ## What this does and does not provide
+ 
+-The pair preserves the actual padding state while allowing two different marked endpoint values, with no restriction on the internal structure of X. Common O/Z suffixes therefore preserve the collision. The standard physical additive context H=3B+2s gives two counts differing by 4(p_1+p_2), but no iteration or interval coverage is inferred.
++The pair preserves the actual padding state for every X and allows two different marked endpoint values when X is nonempty, with no restriction on its internal structure. Common O/Z suffixes therefore preserve the collision. The standard physical additive context H=3B+2s gives two counts differing by 4(p_1+p_2), but no iteration or interval coverage is inferred.
+ 
+ The row depends only on the first four path-cover moments of X. A substitution preserving all four of those moments also preserves both endpoint values in (3), and therefore does not automatically add a new independent choice. Nesting the pair itself changes the unrooted path-cover moments, so equal-row status is not by itself a closure theorem.
+ 

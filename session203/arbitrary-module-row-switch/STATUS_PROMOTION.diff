@@ -1,0 +1,10 @@
+--- REVIEWED_PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # An arbitrary-module pair with the same padding row
+ 
+-Status: **PROOF CANDIDATE, pending independent audit.** This is a positive all-order equal-profile construction. It does not yet widen a fiber beyond two choices or prove eventual odd-count coverage.
++Status: **PROVED, independently audited in the stated scope.** This is a positive all-order equal-profile construction. It does not yet widen a fiber beyond two choices or prove eventual odd-count coverage.
+ 
+ ## Physical construction and statement
+ 

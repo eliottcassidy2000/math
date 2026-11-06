@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "reviewed_proof_sha256": "60f72f178d670ae86a82069a0ab67dca5981131b61e83e5941bbf015abbeb2a5",
+  "original_proof_sha256": "38a459ef458aeaca337d70303840fc6da571780069f2140c30c2cdb51fd3aff9",
+  "review_sha256": "c27283210d18020eed09fee32b0f1ab862c8826fcbfd9a1f79f8208589947122",
+  "clarification": "One prose sentence qualifies distinct endpoints by nonempty X; all formulas and theorem text unchanged.",
+  "tensor_core_orders": 11520,
+  "tensor_root_and_separator_cuts": 30240,
+  "literal_context_graphs": 176,
+  "literal_padding_profiles": 56,
+  "literal_readout_graphs": 24,
+  "scope": "Two specified arbitrary-module physical contexts share the full padding row, with endpoint and Hamilton gap 2(p1+p2). Empty gap is zero. Exact moment kernel is necessary arithmetic only. No iterability, free base, F(8,137), or eventual threshold.",
+  "additional_verified_observation": "Relabeling C by [0,1,2,5,4,3,7,6] leaves only edge5->3 reversed, so the inflation is a full module/core-3 bundle reversal. No selective-subset identity asserted.",
+  "publication": "Not performed by this audit; parent coordinates."
+}
