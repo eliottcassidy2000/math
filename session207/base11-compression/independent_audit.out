@@ -1,0 +1,3 @@
+PASS all13 physical witnesses by full vertex permutations
+PASS large-order induction and all finite normalization thresholds
+PASS all12 residual inequalities, physical join765, and exact slope comparison

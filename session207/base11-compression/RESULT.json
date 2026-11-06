@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "direct_permutation_witnesses": 13,
+  "integer_checks": [
+    {
+      "label": "Busch base 9",
+      "lhs": 2373046875,
+      "rhs": 2357947691
+    },
+    {
+      "label": "Busch base 10",
+      "lhs": 30517578125,
+      "rhs": 25937424601
+    },
+    {
+      "label": "Busch base 11",
+      "lhs": 576650390625,
+      "rhs": 285311670611
+    },
+    {
+      "label": "Busch step",
+      "lhs": 3125,
+      "rhs": 1331
+    },
+    {
+      "label": "small good threshold 5",
+      "lhs": 161051,
+      "rhs": 161051
+    },
+    {
+      "label": "small good threshold 6",
+      "lhs": 2476099,
+      "rhs": 1771561
+    },
+    {
+      "label": "small good threshold 7",
+      "lhs": 20511149,
+      "rhs": 19487171
+    },
+    {
+      "label": "small good threshold 8",
+      "lhs": 229345007,
+      "rhs": 214358881
+    },
+    {
+      "label": "replacement 15",
+      "lhs": 759375,
+      "rhs": 161051
+    },
+    {
+      "label": "replacement 25",
+      "lhs": 9765625,
+      "rhs": 1771561
+    },
+    {
+      "label": "replacement 27",
+      "lhs": 14348907,
+      "rhs": 1771561
+    },
+    {
+      "label": "replacement 45",
+      "lhs": 184528125,
+      "rhs": 1771561
+    },
+    {
+      "label": "replacement 289",
+      "lhs": 2015993900449,
+      "rhs": 214358881
+    },
+    {
+      "label": "residual 1",
+      "lhs": 1331,
+      "rhs": 243
+    },
+    {
+      "label": "residual 3",
+      "lhs": 323433,
+      "rhs": 323433
+    },
+    {
+      "label": "residual 5",
+      "lhs": 4159375,
+      "rhs": 3557763
+    },
+    {
+      "label": "residual 9",
+      "lhs": 78594219,
+      "rhs": 39135393
+    },
+    {
+      "label": "residual 15",
+      "lhs": 1010728125,
+      "rhs": 39135393
+    },
+    {
+      "label": "residual 17",
+      "lhs": 1889829667,
+      "rhs": 430489323
+    },
+    {
+      "label": "residual 45",
+      "lhs": 245606934375,
+      "rhs": 430489323
+    },
+    {
+      "label": "residual 51",
+      "lhs": 459228609081,
+      "rhs": 4735382553
+    },
+    {
+      "label": "residual 85",
+      "lhs": 5905717709375,
+      "rhs": 4735382553
+    },
+    {
+      "label": "residual 153",
+      "lhs": 111592552006683,
+      "rhs": 4735382553
+    },
+    {
+      "label": "residual 255",
+      "lhs": 1435089403378125,
+      "rhs": 52089208083
+    },
+    {
+      "label": "residual 765",
+      "lhs": 348726725020884375,
+      "rhs": 69330735958473
+    }
+  ],
+  "residual_costs": {
+    "1": 0,
+    "3": 3,
+    "5": 4,
+    "9": 5,
+    "15": 5,
+    "17": 6,
+    "45": 6,
+    "51": 7,
+    "85": 7,
+    "153": 7,
+    "255": 8,
+    "765": 11
+  }
+}
