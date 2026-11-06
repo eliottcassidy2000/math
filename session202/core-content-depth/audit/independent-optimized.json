@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "physical_full_state_pair_checks": 814,
+  "core_profiles": [
+    [
+      3,
+      12,
+      9,
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      3,
+      12,
+      6,
+      3,
+      2,
+      1,
+      2
+    ],
+    [
+      3,
+      12,
+      3,
+      6,
+      1,
+      2,
+      2
+    ],
+    [
+      3,
+      12,
+      0,
+      9,
+      0,
+      3,
+      0
+    ]
+  ],
+  "general_grade_steps_c_2_through_12": 44000,
+  "independent_saturated_states": 229,
+  "coprime_three_odd_gaps": [
+    7,
+    55,
+    67
+  ],
+  "coprime_three_odd_values": [
+    1,
+    5,
+    11,
+    13,
+    17,
+    19,
+    23,
+    25,
+    29,
+    31,
+    35,
+    37,
+    41,
+    43,
+    47,
+    49,
+    53,
+    59,
+    61,
+    65
+  ]
+}

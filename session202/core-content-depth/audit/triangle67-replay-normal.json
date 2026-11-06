@@ -1,0 +1,63 @@
+{
+  "coprime_three_odd_gaps": [
+    7,
+    55,
+    67
+  ],
+  "expanded_states": 91,
+  "positive_literal_controls": [
+    {
+      "rows": [
+        6,
+        28,
+        8,
+        17,
+        5
+      ],
+      "target": 13,
+      "word": "O1"
+    },
+    {
+      "rows": [
+        18,
+        116,
+        121,
+        115,
+        32,
+        65,
+        17
+      ],
+      "target": 41,
+      "word": "11"
+    },
+    {
+      "rows": [
+        22,
+        124,
+        120,
+        113,
+        32,
+        65,
+        17
+      ],
+      "target": 53,
+      "word": "OOZ1"
+    },
+    {
+      "rows": [
+        14,
+        124,
+        120,
+        80,
+        97,
+        73,
+        1
+      ],
+      "target": 65,
+      "word": "OO1Z"
+    }
+  ],
+  "state_sha256": "89d601020d904bd18793130b6615bc54e11a1d53fe9a55a4b009fa5c203407a7",
+  "status": "PASS complete target-bounded inverse in specified grammar",
+  "target_bound": 67
+}
