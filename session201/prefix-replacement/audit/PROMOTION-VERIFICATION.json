@@ -1,0 +1,127 @@
+{
+  "README_demos": [
+    {
+      "C1_word": "JZOZJ",
+      "compiler_route": "descendant D",
+      "extension": "ZOZJOJJJJ",
+      "original_word": "ZOOZ",
+      "queries": 3,
+      "removed_letters": 3,
+      "repaired_profile": [
+        573,
+        202,
+        674,
+        303
+      ],
+      "repaired_word": "ZZOZJOJJJJ",
+      "retained_prefix": "Z",
+      "retained_prefix_length": 1,
+      "status": "REPAIRED",
+      "target": 33,
+      "target_table_profiles": 128,
+      "unsigned_source_word": "JZOZJ"
+    },
+    {
+      "C1_word": "JJ",
+      "compiler_route": "deletion",
+      "extension": "ZJJJ",
+      "original_word": "OZJJ",
+      "queries": 4,
+      "removed_letters": 1,
+      "repaired_profile": [
+        109,
+        38,
+        128,
+        57
+      ],
+      "repaired_word": "OZJZJJJ",
+      "retained_prefix": "OZJ",
+      "retained_prefix_length": 3,
+      "status": "REPAIRED",
+      "target": 5,
+      "target_table_profiles": 7,
+      "unsigned_source_word": "JJ"
+    }
+  ],
+  "approved_deltas_only": true,
+  "final_input_hashes": {
+    "DIGIT-ANSATZ.md": "cd7b3fcd2a11e9542e2312d02faade85c508c35f503452fd9c85c780d67d33c7",
+    "DIGIT-normal.json": "caeda63b8c707e6d8b4fcbe15fac125f8cca1df5e9acb2bf200938348a46ee1c",
+    "DIGIT-optimized.json": "caeda63b8c707e6d8b4fcbe15fac125f8cca1df5e9acb2bf200938348a46ee1c",
+    "DYADIC-SPAN.md": "9f37c511c6dcd1cda8fb292826470d9218e55fd9b02bb0e93232c872e1c4d859",
+    "DYADIC-normal.json": "dd30a0decff4e51eef6c13f74a31b4c984c8475ceca47e990f1797babd172149",
+    "DYADIC-optimized.json": "dd30a0decff4e51eef6c13f74a31b4c984c8475ceca47e990f1797babd172149",
+    "PROOF.md": "fac1169ad772839fd80be856c67d05d01d01f703404456f24a139b8d738c54e0",
+    "README.md": "06c316a94534acd652e5e28255f915b91822659bde05ed417e2d8bf969b562fd",
+    "VALIDATION-normal.json": "bb10aecd4f968a2868737cd88525d0c5b374ff1119e7e0e21e3fe4197dec7da1",
+    "VALIDATION-optimized.json": "bb10aecd4f968a2868737cd88525d0c5b374ff1119e7e0e21e3fe4197dec7da1",
+    "check_digit_ansatz.py": "c4bf47af37fd6839309d9d4def09b7ec7dee01e147c64bdd6e0979a864db56b8",
+    "check_dyadic_span.py": "a121e03109243afe3218a1ac56fd2cb87a2b9b90c951b8a36d2179042533108d",
+    "verify.py": "2868922f90f5ba2cc8d6122408d87df692bfd64d1afa5747b814ca4f070af8dc"
+  },
+  "portable_normal_and_optimized_replays": [
+    {
+      "optimized": false,
+      "script": "audit/check_independent.py",
+      "status": "MATCH"
+    },
+    {
+      "optimized": true,
+      "script": "audit/check_independent.py",
+      "status": "MATCH"
+    },
+    {
+      "optimized": false,
+      "script": "audit/check_digit_independent.py",
+      "status": "MATCH"
+    },
+    {
+      "optimized": true,
+      "script": "audit/check_digit_independent.py",
+      "status": "MATCH"
+    },
+    {
+      "optimized": false,
+      "script": "audit/check_dyadic_independent.py",
+      "status": "MATCH"
+    },
+    {
+      "optimized": true,
+      "script": "audit/check_dyadic_independent.py",
+      "status": "MATCH"
+    },
+    {
+      "optimized": false,
+      "script": "verify.py",
+      "status": "MATCH"
+    },
+    {
+      "optimized": true,
+      "script": "verify.py",
+      "status": "MATCH"
+    },
+    {
+      "optimized": false,
+      "script": "check_digit_ansatz.py",
+      "status": "MATCH"
+    },
+    {
+      "optimized": true,
+      "script": "check_digit_ansatz.py",
+      "status": "MATCH"
+    },
+    {
+      "optimized": false,
+      "script": "check_dyadic_span.py",
+      "status": "MATCH"
+    },
+    {
+      "optimized": true,
+      "script": "check_dyadic_span.py",
+      "status": "MATCH"
+    }
+  ],
+  "scope": "Final promotion and portable packaging verification; all three previously audited mathematical scopes remain unchanged.",
+  "status": "PASS",
+  "verifier_sha256": "490add8ce048e67c04268b818fb83eaa635d230862eacd97c617e7b2c42d87d3"
+}

@@ -1,0 +1,10 @@
+{
+  "affine_composition_length_bound": 3,
+  "central_word_length_bound": 8,
+  "central_words": 1094,
+  "exact_affine_controls": 11947,
+  "index_upper_bound": 300,
+  "scope": "Coefficient-wise separate-index doubling ansatz only; no functional or occupancy exclusion.",
+  "status": "PASS",
+  "verifier_sha256": "c4bf47af37fd6839309d9d4def09b7ec7dee01e147c64bdd6e0979a864db56b8"
+}

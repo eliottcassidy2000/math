@@ -1,0 +1,13 @@
+{
+  "affine_profile_controls": 29638,
+  "binary_blocks": 511,
+  "exact_span_determinants": 3577,
+  "max_block_length": 8,
+  "power_parameter_range": [
+    1,
+    7
+  ],
+  "scope": "Every dyadic class has actual affine span3; excludes only independent-class even-scaling identities.",
+  "status": "PASS",
+  "verifier_sha256": "10f9902931ad1568df127c3313c019fb028bd6484dba7719d0f04591bb4fd9e0"
+}

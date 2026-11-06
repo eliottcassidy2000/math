@@ -1,0 +1,13 @@
+{
+  "affine_profile_controls": 29638,
+  "binary_blocks": 511,
+  "exact_span_determinants": 3577,
+  "max_block_length": 8,
+  "power_parameter_range": [
+    1,
+    7
+  ],
+  "scope": "Every dyadic class has actual homogenized linear span3; excludes only independent-class even-scaling identities.",
+  "status": "PASS",
+  "verifier_sha256": "a121e03109243afe3218a1ac56fd2cb87a2b9b90c951b8a36d2179042533108d"
+}

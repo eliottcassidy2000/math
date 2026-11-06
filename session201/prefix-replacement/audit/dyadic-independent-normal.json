@@ -1,0 +1,21 @@
+{
+  "binary_block_length_bound": 10,
+  "binary_blocks": 2047,
+  "determinant_formula": "-2^(k+m)*(2^(m+1)+b)",
+  "exact_9_by_9_product_determinants": 225,
+  "exact_span_determinants": 40940,
+  "power_parameter_range": [
+    1,
+    20
+  ],
+  "product_residue_class_bases": 15,
+  "profile_controls": 202653,
+  "profile_seed_range": [
+    2,
+    100
+  ],
+  "proof_sha256": "efb7ad8eefe15b68bd3eb7862ec585b03ef88f71a11a36822c2d83bc5bf4fbc7",
+  "scope": "Rank 3 of homogenized actual g-index vectors in every dyadic tail; product independence forces bilinear coefficient equality. No coupled-subset or occupancy exclusion.",
+  "status": "PASS",
+  "verifier_sha256": "85893963e59a3d53215f026e3aa5d15d76d506ed74c8b11fe8c21cdc863aad8c"
+}

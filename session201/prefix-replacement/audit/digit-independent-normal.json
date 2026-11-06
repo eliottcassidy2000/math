@@ -1,0 +1,286 @@
+{
+  "AB_coefficient_range": [
+    1,
+    227
+  ],
+  "affine_composition_length_bound": 5,
+  "affine_samples": [
+    {
+      "residue_forms": [
+        [
+          "1",
+          "-1",
+          "1/2",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "-1/2",
+          "1/2"
+        ],
+        [
+          "1",
+          "-1",
+          "1/2",
+          "-1"
+        ],
+        [
+          "1",
+          "1",
+          "-1/2",
+          "-1/2"
+        ]
+      ],
+      "word": "S"
+    },
+    {
+      "residue_forms": [
+        [
+          "2",
+          "-1",
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "-1",
+          "1",
+          "-1"
+        ],
+        [
+          "2",
+          "-1",
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "-1",
+          "1",
+          "-1"
+        ]
+      ],
+      "word": "OS"
+    },
+    {
+      "residue_forms": [
+        [
+          "2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "2",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "word": "ZS"
+    },
+    {
+      "residue_forms": [
+        [
+          "2",
+          "-2",
+          "1/2",
+          "0"
+        ],
+        [
+          "2",
+          "2",
+          "-1/2",
+          "1/2"
+        ],
+        [
+          "2",
+          "-2",
+          "1/2",
+          "-1"
+        ],
+        [
+          "2",
+          "2",
+          "-1/2",
+          "-1/2"
+        ]
+      ],
+      "word": "SO"
+    },
+    {
+      "residue_forms": [
+        [
+          "2",
+          "-3",
+          "3/2",
+          "-2"
+        ],
+        [
+          "2",
+          "1",
+          "1/2",
+          "3/2"
+        ],
+        [
+          "2",
+          "-3",
+          "3/2",
+          "-3"
+        ],
+        [
+          "2",
+          "1",
+          "1/2",
+          "1/2"
+        ]
+      ],
+      "word": "SZ"
+    },
+    {
+      "residue_forms": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "word": "SS"
+    }
+  ],
+  "central_max_word_length": 10,
+  "central_words": 9842,
+  "empty_pairing_checks": 15625,
+  "full_parity_residue_closure": [
+    {
+      "letter": "O",
+      "output": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "state": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "letter": "Z",
+      "output": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "state": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "letter": "J",
+      "output": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "state": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "letter": "O",
+      "output": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "state": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "letter": "Z",
+      "output": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "state": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "letter": "J",
+      "output": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "state": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "independent_affine_checks": 181515,
+  "index_upper_bound": 500,
+  "matched_author_affine_universe": 11947,
+  "proof_sha256": "f9a7b0537003b23b6db15423da25f8fd576461ebb58b39c210e90b037fe6fe59",
+  "scope": "Only coefficient-wise formal identities under separate index changes; no obstruction to special-index functional identities or occupancy.",
+  "status": "PASS",
+  "substituted_matrix_controls": 18928,
+  "verifier_sha256": "523c5b5773026bc45394647d64c6154aab49536cab495cfbe50ac7bf5ccd6297"
+}

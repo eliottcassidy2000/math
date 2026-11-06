@@ -1,0 +1,1016 @@
+{
+  "Dtail_checks": 17536,
+  "Dtail_query_sources": 548,
+  "Dtail_successes": 681,
+  "Dtail_target_cap": 63,
+  "algorithm_sample": {
+    "C1_word": "JZOZJ",
+    "compiler_route": "descendant D",
+    "extension": "ZOZJOJJJJ",
+    "original_word": "ZOOZ",
+    "queries": 3,
+    "removed_letters": 3,
+    "repaired_profile": [
+      573,
+      202,
+      674,
+      303
+    ],
+    "repaired_word": "ZZOZJOJJJJ",
+    "retained_prefix": "Z",
+    "retained_prefix_length": 1,
+    "status": "REPAIRED",
+    "target": 33,
+    "target_table_profiles": 128,
+    "unsigned_source_word": "JZOZJ"
+  },
+  "author_sha256": "2868922f90f5ba2cc8d6122408d87df692bfd64d1afa5747b814ca4f070af8dc",
+  "checked_prefixes": 9025,
+  "dependencies": {
+    "APPEND-CLASSIFICATION.md": "e8f6ecb95718870e334854cdd0284e4f5e0b089bbab3753610047f3b084ece3a",
+    "SIGNED-SECTION.md": "92b300d272d529bb21a504a914226b1245a631249d30d22d0e9362625a698182"
+  },
+  "exhaustive_original_word_length": 7,
+  "exhaustive_target_cap": 301,
+  "explicit_target_cases": [
+    {
+      "cut": 0,
+      "status": "REPAIRED",
+      "target": 1,
+      "word": ""
+    },
+    {
+      "cut": 0,
+      "status": "REPAIRED",
+      "target": 3,
+      "word": ""
+    },
+    {
+      "cut": null,
+      "status": "NO_C1_SECTION",
+      "target": 7,
+      "word": ""
+    },
+    {
+      "cut": 0,
+      "status": "REPAIRED",
+      "target": 9,
+      "word": ""
+    },
+    {
+      "cut": null,
+      "status": "NO_C1_SECTION",
+      "target": 21,
+      "word": ""
+    },
+    {
+      "cut": 0,
+      "status": "REPAIRED",
+      "target": 33,
+      "word": ""
+    },
+    {
+      "cut": 0,
+      "status": "REPAIRED",
+      "target": 63,
+      "word": ""
+    },
+    {
+      "cut": 1,
+      "status": "REPAIRED",
+      "target": 1,
+      "word": "OZ"
+    },
+    {
+      "cut": 0,
+      "status": "REPAIRED",
+      "target": 3,
+      "word": "OZ"
+    },
+    {
+      "cut": null,
+      "status": "NO_C1_SECTION",
+      "target": 7,
+      "word": "OZ"
+    },
+    {
+      "cut": 1,
+      "status": "REPAIRED",
+      "target": 9,
+      "word": "OZ"
+    },
+    {
+      "cut": null,
+      "status": "NO_C1_SECTION",
+      "target": 21,
+      "word": "OZ"
+    },
+    {
+      "cut": 2,
+      "status": "REPAIRED",
+      "target": 33,
+      "word": "OZ"
+    },
+    {
+      "cut": 2,
+      "status": "REPAIRED",
+      "target": 63,
+      "word": "OZ"
+    },
+    {
+      "cut": 1,
+      "status": "REPAIRED",
+      "target": 1,
+      "word": "ZOZ"
+    },
+    {
+      "cut": 2,
+      "status": "REPAIRED",
+      "target": 3,
+      "word": "ZOZ"
+    },
+    {
+      "cut": null,
+      "status": "NO_C1_SECTION",
+      "target": 7,
+      "word": "ZOZ"
+    },
+    {
+      "cut": 3,
+      "status": "REPAIRED",
+      "target": 9,
+      "word": "ZOZ"
+    },
+    {
+      "cut": null,
+      "status": "NO_C1_SECTION",
+      "target": 21,
+      "word": "ZOZ"
+    },
+    {
+      "cut": 1,
+      "status": "REPAIRED",
+      "target": 33,
+      "word": "ZOZ"
+    },
+    {
+      "cut": 1,
+      "status": "REPAIRED",
+      "target": 63,
+      "word": "ZOZ"
+    },
+    {
+      "cut": 1,
+      "status": "REPAIRED",
+      "target": 1,
+      "word": "ZOOZ"
+    },
+    {
+      "cut": 3,
+      "status": "REPAIRED",
+      "target": 3,
+      "word": "ZOOZ"
+    },
+    {
+      "cut": null,
+      "status": "NO_C1_SECTION",
+      "target": 7,
+      "word": "ZOOZ"
+    },
+    {
+      "cut": 2,
+      "status": "REPAIRED",
+      "target": 9,
+      "word": "ZOOZ"
+    },
+    {
+      "cut": null,
+      "status": "NO_C1_SECTION",
+      "target": 21,
+      "word": "ZOOZ"
+    },
+    {
+      "cut": 1,
+      "status": "REPAIRED",
+      "target": 33,
+      "word": "ZOOZ"
+    },
+    {
+      "cut": 1,
+      "status": "REPAIRED",
+      "target": 63,
+      "word": "ZOOZ"
+    },
+    {
+      "cut": 1,
+      "status": "REPAIRED",
+      "target": 1,
+      "word": "ZOJJ"
+    },
+    {
+      "cut": 4,
+      "status": "REPAIRED",
+      "target": 3,
+      "word": "ZOJJ"
+    },
+    {
+      "cut": null,
+      "status": "NO_C1_SECTION",
+      "target": 7,
+      "word": "ZOJJ"
+    },
+    {
+      "cut": 4,
+      "status": "REPAIRED",
+      "target": 9,
+      "word": "ZOJJ"
+    },
+    {
+      "cut": null,
+      "status": "NO_C1_SECTION",
+      "target": 21,
+      "word": "ZOJJ"
+    },
+    {
+      "cut": 1,
+      "status": "REPAIRED",
+      "target": 33,
+      "word": "ZOJJ"
+    },
+    {
+      "cut": 1,
+      "status": "REPAIRED",
+      "target": 63,
+      "word": "ZOJJ"
+    },
+    {
+      "cut": 5,
+      "status": "REPAIRED",
+      "target": 1,
+      "word": "ZZZZZOJJ"
+    },
+    {
+      "cut": 1,
+      "status": "REPAIRED",
+      "target": 3,
+      "word": "ZZZZZOJJ"
+    },
+    {
+      "cut": null,
+      "status": "NO_C1_SECTION",
+      "target": 7,
+      "word": "ZZZZZOJJ"
+    },
+    {
+      "cut": 3,
+      "status": "REPAIRED",
+      "target": 9,
+      "word": "ZZZZZOJJ"
+    },
+    {
+      "cut": null,
+      "status": "NO_C1_SECTION",
+      "target": 21,
+      "word": "ZZZZZOJJ"
+    },
+    {
+      "cut": 8,
+      "status": "REPAIRED",
+      "target": 33,
+      "word": "ZZZZZOJJ"
+    },
+    {
+      "cut": 2,
+      "status": "REPAIRED",
+      "target": 63,
+      "word": "ZZZZZOJJ"
+    },
+    {
+      "cut": 10,
+      "status": "REPAIRED",
+      "target": 1,
+      "word": "OOOOOOOOOO"
+    },
+    {
+      "cut": 0,
+      "status": "REPAIRED",
+      "target": 3,
+      "word": "OOOOOOOOOO"
+    },
+    {
+      "cut": null,
+      "status": "NO_C1_SECTION",
+      "target": 7,
+      "word": "OOOOOOOOOO"
+    },
+    {
+      "cut": 2,
+      "status": "REPAIRED",
+      "target": 9,
+      "word": "OOOOOOOOOO"
+    },
+    {
+      "cut": null,
+      "status": "NO_C1_SECTION",
+      "target": 21,
+      "word": "OOOOOOOOOO"
+    },
+    {
+      "cut": 4,
+      "status": "REPAIRED",
+      "target": 33,
+      "word": "OOOOOOOOOO"
+    },
+    {
+      "cut": 1,
+      "status": "REPAIRED",
+      "target": 63,
+      "word": "OOOOOOOOOO"
+    }
+  ],
+  "forward_section_profile_visits": 81460,
+  "forward_section_queries": 1024,
+  "forward_section_sources": 64,
+  "forward_section_target_cap": 31,
+  "infinite_identity_checked_r": [
+    0,
+    100
+  ],
+  "inventory": [
+    {
+      "raw": [
+        3,
+        0,
+        6,
+        1
+      ],
+      "suffix_from_bO": ""
+    },
+    {
+      "raw": [
+        3,
+        0,
+        12,
+        1
+      ],
+      "suffix_from_bO": "O"
+    },
+    {
+      "raw": [
+        3,
+        0,
+        24,
+        1
+      ],
+      "suffix_from_bO": "OO"
+    },
+    {
+      "raw": [
+        3,
+        0,
+        48,
+        1
+      ],
+      "suffix_from_bO": "OOO"
+    },
+    {
+      "raw": [
+        9,
+        0,
+        18,
+        3
+      ],
+      "suffix_from_bO": "JO"
+    },
+    {
+      "raw": [
+        9,
+        0,
+        22,
+        1
+      ],
+      "suffix_from_bO": "ZO"
+    },
+    {
+      "raw": [
+        9,
+        0,
+        36,
+        3
+      ],
+      "suffix_from_bO": "JOO"
+    },
+    {
+      "raw": [
+        9,
+        0,
+        44,
+        1
+      ],
+      "suffix_from_bO": "ZOO"
+    },
+    {
+      "raw": [
+        9,
+        1,
+        11,
+        1
+      ],
+      "suffix_from_bO": "Z"
+    },
+    {
+      "raw": [
+        9,
+        3,
+        9,
+        3
+      ],
+      "suffix_from_bO": "J"
+    },
+    {
+      "raw": [
+        15,
+        0,
+        30,
+        3
+      ],
+      "suffix_from_bO": "JZO"
+    },
+    {
+      "raw": [
+        15,
+        0,
+        36,
+        9
+      ],
+      "suffix_from_bO": "JJO"
+    },
+    {
+      "raw": [
+        15,
+        0,
+        46,
+        1
+      ],
+      "suffix_from_bO": "OZO"
+    },
+    {
+      "raw": [
+        15,
+        0,
+        60,
+        3
+      ],
+      "suffix_from_bO": "JZOO"
+    },
+    {
+      "raw": [
+        15,
+        1,
+        23,
+        1
+      ],
+      "suffix_from_bO": "OZ"
+    },
+    {
+      "raw": [
+        15,
+        3,
+        15,
+        3
+      ],
+      "suffix_from_bO": "JZ"
+    },
+    {
+      "raw": [
+        15,
+        6,
+        18,
+        9
+      ],
+      "suffix_from_bO": "JJ"
+    },
+    {
+      "raw": [
+        19,
+        0,
+        40,
+        9
+      ],
+      "suffix_from_bO": "ZJO"
+    },
+    {
+      "raw": [
+        19,
+        0,
+        42,
+        1
+      ],
+      "suffix_from_bO": "ZZO"
+    },
+    {
+      "raw": [
+        19,
+        1,
+        21,
+        1
+      ],
+      "suffix_from_bO": "ZZ"
+    },
+    {
+      "raw": [
+        19,
+        8,
+        20,
+        9
+      ],
+      "suffix_from_bO": "ZJ"
+    },
+    {
+      "raw": [
+        27,
+        0,
+        54,
+        3
+      ],
+      "suffix_from_bO": "JZZO"
+    },
+    {
+      "raw": [
+        27,
+        0,
+        54,
+        9
+      ],
+      "suffix_from_bO": "JJZO"
+    },
+    {
+      "raw": [
+        27,
+        0,
+        60,
+        15
+      ],
+      "suffix_from_bO": "JZJO"
+    },
+    {
+      "raw": [
+        27,
+        1,
+        47,
+        1
+      ],
+      "suffix_from_bO": "OOZ"
+    },
+    {
+      "raw": [
+        27,
+        3,
+        27,
+        3
+      ],
+      "suffix_from_bO": "JZZ"
+    },
+    {
+      "raw": [
+        27,
+        3,
+        33,
+        3
+      ],
+      "suffix_from_bO": "JOZ"
+    },
+    {
+      "raw": [
+        27,
+        9,
+        27,
+        9
+      ],
+      "suffix_from_bO": "JJZ"
+    },
+    {
+      "raw": [
+        27,
+        9,
+        33,
+        15
+      ],
+      "suffix_from_bO": "JJJ"
+    },
+    {
+      "raw": [
+        27,
+        12,
+        30,
+        15
+      ],
+      "suffix_from_bO": "JZJ"
+    },
+    {
+      "raw": [
+        31,
+        0,
+        62,
+        9
+      ],
+      "suffix_from_bO": "ZJZO"
+    },
+    {
+      "raw": [
+        31,
+        1,
+        43,
+        1
+      ],
+      "suffix_from_bO": "ZOZ"
+    },
+    {
+      "raw": [
+        31,
+        9,
+        31,
+        9
+      ],
+      "suffix_from_bO": "ZJZ"
+    },
+    {
+      "raw": [
+        31,
+        11,
+        39,
+        19
+      ],
+      "suffix_from_bO": "ZJJ"
+    },
+    {
+      "raw": [
+        37,
+        1,
+        45,
+        1
+      ],
+      "suffix_from_bO": "OZZ"
+    },
+    {
+      "raw": [
+        37,
+        14,
+        38,
+        15
+      ],
+      "suffix_from_bO": "OZJ"
+    },
+    {
+      "raw": [
+        39,
+        1,
+        41,
+        1
+      ],
+      "suffix_from_bO": "ZZZ"
+    },
+    {
+      "raw": [
+        39,
+        18,
+        40,
+        19
+      ],
+      "suffix_from_bO": "ZZJ"
+    },
+    {
+      "raw": [
+        45,
+        3,
+        57,
+        3
+      ],
+      "suffix_from_bO": "JZOZ"
+    },
+    {
+      "raw": [
+        45,
+        9,
+        45,
+        9
+      ],
+      "suffix_from_bO": "JJZZ"
+    },
+    {
+      "raw": [
+        45,
+        15,
+        45,
+        15
+      ],
+      "suffix_from_bO": "JZJZ"
+    },
+    {
+      "raw": [
+        45,
+        15,
+        57,
+        27
+      ],
+      "suffix_from_bO": "JZJJ"
+    },
+    {
+      "raw": [
+        45,
+        18,
+        54,
+        27
+      ],
+      "suffix_from_bO": "JJZJ"
+    },
+    {
+      "raw": [
+        51,
+        3,
+        51,
+        3
+      ],
+      "suffix_from_bO": "JZZZ"
+    },
+    {
+      "raw": [
+        51,
+        9,
+        63,
+        9
+      ],
+      "suffix_from_bO": "JJOZ"
+    },
+    {
+      "raw": [
+        51,
+        15,
+        51,
+        15
+      ],
+      "suffix_from_bO": "JJJZ"
+    },
+    {
+      "raw": [
+        51,
+        18,
+        60,
+        27
+      ],
+      "suffix_from_bO": "JJJJ"
+    },
+    {
+      "raw": [
+        51,
+        24,
+        54,
+        27
+      ],
+      "suffix_from_bO": "JZZJ"
+    },
+    {
+      "raw": [
+        53,
+        9,
+        53,
+        9
+      ],
+      "suffix_from_bO": "ZJZZ"
+    },
+    {
+      "raw": [
+        53,
+        22,
+        62,
+        31
+      ],
+      "suffix_from_bO": "ZJZJ"
+    },
+    {
+      "raw": [
+        57,
+        3,
+        63,
+        3
+      ],
+      "suffix_from_bO": "JOZZ"
+    },
+    {
+      "raw": [
+        57,
+        24,
+        60,
+        27
+      ],
+      "suffix_from_bO": "JOZJ"
+    },
+    {
+      "raw": [
+        59,
+        19,
+        59,
+        19
+      ],
+      "suffix_from_bO": "ZJJZ"
+    },
+    {
+      "raw": [
+        61,
+        15,
+        61,
+        15
+      ],
+      "suffix_from_bO": "OZJZ"
+    },
+    {
+      "raw": [
+        61,
+        19,
+        61,
+        19
+      ],
+      "suffix_from_bO": "ZZJZ"
+    }
+  ],
+  "inventory_D_values": [
+    3,
+    9,
+    15,
+    19,
+    27,
+    31
+  ],
+  "inventory_U63_D33_profiles": 34,
+  "inventory_U63_profiles": 55,
+  "literal_graphs": [
+    {
+      "cycles": 1,
+      "order": 5,
+      "profile": [
+        9,
+        1,
+        11,
+        1
+      ],
+      "root_start": 1,
+      "word": "ZOZ"
+    },
+    {
+      "cycles": 1,
+      "order": 6,
+      "profile": [
+        15,
+        1,
+        23,
+        1
+      ],
+      "root_start": 1,
+      "word": "ZOOZ"
+    },
+    {
+      "cycles": 1,
+      "order": 6,
+      "profile": [
+        15,
+        6,
+        18,
+        9
+      ],
+      "root_start": 1,
+      "word": "ZOJJ"
+    },
+    {
+      "cycles": 1,
+      "order": 10,
+      "profile": [
+        165,
+        66,
+        198,
+        99
+      ],
+      "root_start": 1,
+      "word": "ZZZZZOJJ"
+    },
+    {
+      "cycles": 1,
+      "order": 3,
+      "profile": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "root_start": 1,
+      "word": "Z"
+    },
+    {
+      "cycles": 1,
+      "order": 7,
+      "profile": [
+        33,
+        1,
+        33,
+        1
+      ],
+      "root_start": 1,
+      "word": "ZZZZZ"
+    },
+    {
+      "cycles": 1,
+      "order": 3,
+      "profile": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "root_start": 1,
+      "word": "J"
+    },
+    {
+      "cycles": 1,
+      "order": 7,
+      "profile": [
+        33,
+        16,
+        34,
+        17
+      ],
+      "root_start": 1,
+      "word": "ZZZZJ"
+    },
+    {
+      "cycles": 1,
+      "order": 8,
+      "profile": [
+        45,
+        18,
+        54,
+        27
+      ],
+      "root_start": 1,
+      "word": "ZOJOJJ"
+    },
+    {
+      "cycles": 1,
+      "order": 12,
+      "profile": [
+        495,
+        198,
+        594,
+        297
+      ],
+      "root_start": 1,
+      "word": "ZOJZZZZOJJ"
+    },
+    {
+      "cycles": 1,
+      "order": 5,
+      "profile": [
+        9,
+        3,
+        9,
+        3
+      ],
+      "root_start": 1,
+      "word": "ZOJ"
+    },
+    {
+      "cycles": 1,
+      "order": 9,
+      "profile": [
+        99,
+        3,
+        99,
+        3
+      ],
+      "root_start": 1,
+      "word": "ZOJZZZZ"
+    },
+    {
+      "cycles": 1,
+      "order": 7,
+      "profile": [
+        33,
+        14,
+        34,
+        15
+      ],
+      "root_start": 1,
+      "word": "JZOZJ"
+    }
+  ],
+  "minimal_length7_witnesses": [
+    "ZZZZOJJ",
+    "ZZZZJZJ"
+  ],
+  "no_C1_cases": 111,
+  "proof_sha256": "3ac0eefd2815134456101cd6ba7841b756bc13667ab6e149417b529b7c2281d9",
+  "repair_cases": 1237,
+  "scope": "Exact C1-conditional maximal-prefix repair, not universal C1/C2/C3 occupancy; family suffix length is a separate optimization.",
+  "short_words_checked": 1093,
+  "status": "PASS",
+  "successful_repairs": 1126,
+  "verifier_sha256": "4bb69d6bbe915a2a1a6737baddab9ae4dc2f2a719859c17fe35c574158006e27"
+}

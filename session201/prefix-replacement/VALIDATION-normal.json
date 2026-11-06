@@ -1,0 +1,174 @@
+{
+  "complete_global_membership_bank": 11702,
+  "dependencies": {
+    "APPEND-CLASSIFICATION.md": "e8f6ecb95718870e334854cdd0284e4f5e0b089bbab3753610047f3b084ece3a",
+    "SIGNED-SECTION.md": "92b300d272d529bb21a504a914226b1245a631249d30d22d0e9362625a698182"
+  },
+  "distinct_target_tables": 124,
+  "exact_no_C1_controls": 73,
+  "infinite_repair_formula_r": [
+    0,
+    40
+  ],
+  "literal_graphs": [
+    {
+      "cycles": 1,
+      "profile": [
+        15,
+        6,
+        18,
+        9
+      ],
+      "root_start": 1,
+      "vertices": 6,
+      "word": "ZOJJ"
+    },
+    {
+      "cycles": 1,
+      "profile": [
+        165,
+        66,
+        198,
+        99
+      ],
+      "root_start": 1,
+      "vertices": 10,
+      "word": "ZZZZZOJJ"
+    },
+    {
+      "cycles": 1,
+      "profile": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "root_start": 1,
+      "vertices": 3,
+      "word": "Z"
+    },
+    {
+      "cycles": 1,
+      "profile": [
+        33,
+        1,
+        33,
+        1
+      ],
+      "root_start": 1,
+      "vertices": 7,
+      "word": "ZZZZZ"
+    }
+  ],
+  "minimum_length_word_checks": 1093,
+  "prefix33_D_values": [
+    3,
+    9,
+    15,
+    19,
+    27,
+    31
+  ],
+  "prefix33_inventory": 55,
+  "sample_repairs": [
+    {
+      "original_word": "OZ",
+      "queries": 1,
+      "status": "NO_C1_SECTION",
+      "target": 7,
+      "target_table_profiles": 9
+    },
+    {
+      "C1_word": null,
+      "compiler_route": "descendant D",
+      "extension": "OJJJJ",
+      "original_word": "OZZ",
+      "queries": 3,
+      "removed_letters": 2,
+      "repaired_profile": [
+        53,
+        18,
+        62,
+        27
+      ],
+      "repaired_word": "OOJJJJ",
+      "retained_prefix": "O",
+      "retained_prefix_length": 1,
+      "status": "REPAIRED",
+      "target": 1,
+      "target_table_profiles": 0,
+      "unsigned_source_word": ""
+    },
+    {
+      "C1_word": "J",
+      "compiler_route": "short completion",
+      "extension": "JJ",
+      "original_word": "ZOZ",
+      "queries": 3,
+      "removed_letters": 1,
+      "repaired_profile": [
+        15,
+        6,
+        18,
+        9
+      ],
+      "repaired_word": "ZOJJ",
+      "retained_prefix": "ZO",
+      "retained_prefix_length": 2,
+      "status": "REPAIRED",
+      "target": 3,
+      "target_table_profiles": 2,
+      "unsigned_source_word": "J"
+    },
+    {
+      "C1_word": "JJ",
+      "compiler_route": "deletion",
+      "extension": "ZJJJ",
+      "original_word": "OZJJ",
+      "queries": 4,
+      "removed_letters": 1,
+      "repaired_profile": [
+        109,
+        38,
+        128,
+        57
+      ],
+      "repaired_word": "OZJZJJJ",
+      "retained_prefix": "OZJ",
+      "retained_prefix_length": 3,
+      "status": "REPAIRED",
+      "target": 5,
+      "target_table_profiles": 7,
+      "unsigned_source_word": "JJ"
+    },
+    {
+      "C1_word": "JZOZJ",
+      "compiler_route": "descendant D",
+      "extension": "ZOZJOJJJJ",
+      "original_word": "ZOOZ",
+      "queries": 3,
+      "removed_letters": 3,
+      "repaired_profile": [
+        573,
+        202,
+        674,
+        303
+      ],
+      "repaired_word": "ZZOZJOJJJJ",
+      "retained_prefix": "Z",
+      "retained_prefix_length": 1,
+      "status": "REPAIRED",
+      "target": 33,
+      "target_table_profiles": 128,
+      "unsigned_source_word": "JZOZJ"
+    }
+  ],
+  "scope": "Constructive maximal-prefix replacement conditional on exact C1 membership; no universal occupancy claim.",
+  "status": "PASS",
+  "successful_repairs": 547,
+  "target_cap": 501,
+  "tested_signed_words": 620,
+  "total_target_table_profiles": 762536,
+  "verifier_sha256": "2868922f90f5ba2cc8d6122408d87df692bfd64d1afa5747b814ca4f070af8dc",
+  "word_length_bound": 6
+}
