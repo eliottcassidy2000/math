@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "release_proof_sha256": "211623af96e90d516fbce7598450642878f81fc2892446dee5173b55fb41b099",
+  "reviewed_full_note_sha256": "382319cb2e26c2d9a617f120fe09218baec638a275fe53977435f14a6a92a0c1",
+  "README_sha256": "cab253c73eeeccc3f992e3de432c58aecccb121a87dd0fc7c8d8d6bbcd9461ae",
+  "verified_changes": [
+    "Remove the explicitly exploratory Section3 and its unaudited coefficient-control paragraph.",
+    "Renumber former Section4 as Section3.",
+    "Promote the positive extracted result status.",
+    "Make the already-audited weak triangle-join parent explicit.",
+    "State that the negative companion is excluded."
+  ],
+  "preserved_audit_files": [
+    "REVIEW.md",
+    "AUDIT_RECEIPT.json",
+    "REVIEWED_VERIFIER.cpp",
+    "check.py",
+    "NORMAL.json",
+    "OPTIMIZED.json"
+  ],
+  "intentional_omissions": "The original full reviewed note and its full-file manifest are not included, because the parent requested exclusion of its unreviewed negative companion. The original note hash remains in the unchanged audit receipt; README and this receipt explain the extraction. Historical snapshot references in audit/REVIEW.md refer to the original audit workspace, not a bundled full note.",
+  "scope": "Prescribed positive even differences only, with correlated base, weak parent, strong source and child, and stated logarithmic orders. No arbitrary-base operation, interval coverage, full-profile rebase, closed iteration, or threshold.",
+  "checks": "Read exact full-note-to-release diff; all positive mathematics unchanged. Selected audit files and producer verifier are byte-preserved. Dependency provenance hashes match. No independent rerun of all release computations is claimed by this packaging receipt."
+}

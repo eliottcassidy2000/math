@@ -1,0 +1,317 @@
+{
+  "chain_weight_controls": [
+    {
+      "H": 3,
+      "m": 1,
+      "start_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "H": 5,
+      "m": 2,
+      "start_counts": [
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "H": 9,
+      "m": 3,
+      "start_counts": [
+        4,
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "H": 17,
+      "m": 4,
+      "start_counts": [
+        8,
+        4,
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "H": 33,
+      "m": 5,
+      "start_counts": [
+        16,
+        8,
+        4,
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "H": 65,
+      "m": 6,
+      "start_counts": [
+        32,
+        16,
+        8,
+        4,
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "H": 129,
+      "m": 7,
+      "start_counts": [
+        64,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "H": 257,
+      "m": 8,
+      "start_counts": [
+        128,
+        64,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "H": 513,
+      "m": 9,
+      "start_counts": [
+        256,
+        128,
+        64,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "core_profiles": [
+    {
+      "H": 3,
+      "L": 12,
+      "R": 6,
+      "cycles": 0,
+      "deletion_B2": 24,
+      "deletion_H": 3,
+      "end": 0,
+      "start": 0
+    },
+    {
+      "H": 5,
+      "L": 9,
+      "R": 6,
+      "cycles": 1,
+      "deletion_B2": 12,
+      "deletion_H": 3,
+      "end": 2,
+      "start": 1
+    }
+  ],
+  "free_positive_endpoint_targets": 127,
+  "free_source_samples": [
+    {
+      "child_H": 41,
+      "child_order": 7,
+      "child_root_start": 3,
+      "parent_H": 39,
+      "parent_order": 8,
+      "parent_root_start": 0,
+      "s": 1,
+      "source_H": 5,
+      "source_L": 9
+    },
+    {
+      "child_H": 115,
+      "child_order": 8,
+      "child_root_start": 5,
+      "parent_H": 111,
+      "parent_order": 9,
+      "parent_root_start": 0,
+      "s": 2,
+      "source_H": 13,
+      "source_L": 26
+    },
+    {
+      "child_H": 81,
+      "child_order": 8,
+      "child_root_start": 5,
+      "parent_H": 75,
+      "parent_order": 9,
+      "parent_root_start": 0,
+      "s": 3,
+      "source_H": 11,
+      "source_L": 17
+    },
+    {
+      "child_H": 317,
+      "child_order": 9,
+      "child_root_start": 9,
+      "parent_H": 309,
+      "parent_order": 10,
+      "parent_root_start": 0,
+      "s": 4,
+      "source_H": 33,
+      "source_L": 74
+    },
+    {
+      "child_H": 229,
+      "child_order": 9,
+      "child_root_start": 9,
+      "parent_H": 219,
+      "parent_order": 10,
+      "parent_root_start": 0,
+      "s": 5,
+      "source_H": 29,
+      "source_L": 49
+    },
+    {
+      "child_H": 161,
+      "child_order": 9,
+      "child_root_start": 9,
+      "parent_H": 147,
+      "parent_order": 10,
+      "parent_root_start": 0,
+      "s": 7,
+      "source_H": 23,
+      "source_L": 33
+    },
+    {
+      "child_H": 865,
+      "child_order": 10,
+      "child_root_start": 17,
+      "parent_H": 849,
+      "parent_order": 11,
+      "parent_root_start": 0,
+      "s": 8,
+      "source_H": 85,
+      "source_L": 206
+    },
+    {
+      "child_H": 321,
+      "child_order": 10,
+      "child_root_start": 17,
+      "parent_H": 291,
+      "parent_order": 11,
+      "parent_root_start": 0,
+      "s": 15,
+      "source_H": 47,
+      "source_L": 65
+    },
+    {
+      "child_H": 2393,
+      "child_order": 11,
+      "child_root_start": 33,
+      "parent_H": 2361,
+      "parent_order": 12,
+      "parent_root_start": 0,
+      "s": 16,
+      "source_H": 225,
+      "source_L": 578
+    },
+    {
+      "child_H": 641,
+      "child_order": 11,
+      "child_root_start": 33,
+      "parent_H": 579,
+      "parent_order": 12,
+      "parent_root_start": 0,
+      "s": 31,
+      "source_H": 95,
+      "source_L": 129
+    },
+    {
+      "child_H": 6745,
+      "child_order": 12,
+      "child_root_start": 65,
+      "parent_H": 6681,
+      "parent_order": 13,
+      "parent_root_start": 0,
+      "s": 32,
+      "source_H": 613,
+      "source_L": 1646
+    },
+    {
+      "child_H": 1281,
+      "child_order": 12,
+      "child_root_start": 65,
+      "parent_H": 1155,
+      "parent_order": 13,
+      "parent_root_start": 0,
+      "s": 63,
+      "source_H": 191,
+      "source_L": 257
+    },
+    {
+      "child_H": 19337,
+      "child_order": 13,
+      "child_root_start": 129,
+      "parent_H": 19209,
+      "parent_order": 14,
+      "parent_root_start": 0,
+      "s": 64,
+      "source_H": 1713,
+      "source_L": 4754
+    },
+    {
+      "child_H": 10577,
+      "child_order": 13,
+      "child_root_start": 129,
+      "parent_H": 10407,
+      "parent_order": 14,
+      "parent_root_start": 0,
+      "s": 85,
+      "source_H": 1361,
+      "source_L": 2193
+    },
+    {
+      "child_H": 2561,
+      "child_order": 13,
+      "child_root_start": 129,
+      "parent_H": 2307,
+      "parent_order": 14,
+      "parent_root_start": 0,
+      "s": 127,
+      "source_H": 383,
+      "source_L": 513
+    }
+  ],
+  "largest_child_H": 21773,
+  "literal_DFS_visits": 84556997,
+  "literal_graphs": 683,
+  "ordinary_inputs": 75,
+  "scope": "Positive result in sections1-2 only. Exploratory section3 is outside this audit. No freely selectable base count or closed full-profile iteration.",
+  "status": "PASS"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "reviewed_note_sha256": "382319cb2e26c2d9a617f120fe09218baec638a275fe53977435f14a6a92a0c1",
+  "reviewed_cpp_sha256": "c808c5e4845658e399f0ca3204ac4d70f683a9d0307eba57fde94c2f337609d5",
+  "review_sha256": "9eda7d26179bd59db01f04be561a44843587fe2279bf9843dd724dcd39419188",
+  "normal_and_optimized_sha256": "786292877ace0a559dee7091bfec6d3696af5e9cb80e2d83c712ea4cc2e6e8e9",
+  "ordinary_root_zero_inputs": 75,
+  "positive_endpoint_targets": 127,
+  "literal_graphs": 683,
+  "literal_DFS_visits": 84556997,
+  "scope": "Sections 1-2 positive even-difference construction and its controls only. Child strong on strong sources; parent a weak triangle join. No arbitrary base, interval coverage, full-profile rebase, closed iteration, or threshold. Section3 exploratory companion is excluded."
+}
