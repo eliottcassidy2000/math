@@ -1,0 +1,14 @@
+{
+  "status": "PASS_CONDITIONAL_AND_FINITE",
+  "reviewed_proof_sha256": "acff2714fb6fe02a205f09f27add420a893e190a3bdf7fb01386477bfd66f546",
+  "reviewed_compiler_sha256": "84482dd4c2abf3293155ba6d3963b5335118fa152f10a1039a2bc89906cc7997",
+  "review_sha256": "bf3a160fead07d357649562cbfbab981782315b85a50abf8e160130a3ed507d6",
+  "certificate_normal_optimized_sha256": "b39cc9906fe178e2890f4741e21d89864dcda0c5cfaf939fbce976f74798ff12",
+  "compiler_normal_optimized_sha256": "b0935f517f2f2d7205dab1b6cd350c0821c937bacbcff11c9885f3ebc0be6119",
+  "seed_graphs": 194,
+  "profile_certificates": 862,
+  "literal_graphs": 1918,
+  "all_order_profile_hypothesis": "OPEN",
+  "spectrum_consequence": "Conditional on F(8,137), all odd counts at least 23 occur.",
+  "hypothesis_refutation": "No general contradiction established; finite verification does not prove the hypothesis."
+}

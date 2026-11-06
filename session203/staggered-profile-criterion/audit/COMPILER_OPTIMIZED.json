@@ -1,0 +1,138 @@
+{
+  "all_order_profile_hypothesis": "OPEN",
+  "large_join": {
+    "base_literal_H": 413,
+    "count_DP_orders_called": [
+      10
+    ],
+    "count_method": "product bijection after independently checked factor",
+    "order": 34,
+    "target": 2709693,
+    "triangle_factors": 8
+  },
+  "literal_DFS_visits": 173822,
+  "literal_compiled_examples": [
+    {
+      "order": 6,
+      "target": 23,
+      "trace": [
+        {
+          "kind": "literal_seed",
+          "target": 23
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "target": 409,
+      "trace": [
+        {
+          "kind": "literal_seed",
+          "target": 409
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "target": 411,
+      "trace": [
+        {
+          "kind": "literal_seed",
+          "target": 137
+        },
+        {
+          "kind": "ordered_triangle_join",
+          "target": 411
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "target": 413,
+      "trace": [
+        {
+          "B": 137,
+          "j": 1,
+          "kind": "literal_profile_child",
+          "residue": 1,
+          "source_profile": {
+            "L": 94,
+            "h": 45,
+            "s": 4
+          },
+          "target": 413
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "target": 415,
+      "trace": [
+        {
+          "B": 137,
+          "j": 0,
+          "kind": "literal_profile_child",
+          "residue": 2,
+          "source_profile": {
+            "L": 90,
+            "h": 49,
+            "s": 2
+          },
+          "target": 415
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "target": 1239,
+      "trace": [
+        {
+          "B": 137,
+          "j": 1,
+          "kind": "literal_profile_child",
+          "residue": 1,
+          "source_profile": {
+            "L": 94,
+            "h": 45,
+            "s": 4
+          },
+          "target": 413
+        },
+        {
+          "kind": "ordered_triangle_join",
+          "target": 1239
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "target": 2995,
+      "trace": [
+        {
+          "B": 997,
+          "j": 4,
+          "kind": "literal_profile_child",
+          "residue": 2,
+          "source_profile": {
+            "L": 720,
+            "h": 283,
+            "s": 14
+          },
+          "target": 2995
+        }
+      ]
+    }
+  ],
+  "rejection_controls": {
+    "below_floor": "target must be odd and at least23",
+    "even_target": "target must be odd and at least23",
+    "invalid_tournament": "invalid pair",
+    "j_out_of_scope": "profile parameter outside scope",
+    "missing_2999": "MISSING_OPEN_PROFILE_CERTIFICATE: B=999, residue=1; the all-order profile lemma is OPEN",
+    "missing_3001": "MISSING_OPEN_PROFILE_CERTIFICATE: B=999, residue=2; the all-order profile lemma is OPEN",
+    "root_out_of_scope": "profile parameter outside scope",
+    "wrong_profile": "profile equations failed",
+    "wrong_seed_count": "seed path count failed"
+  },
+  "status": "PASS"
+}

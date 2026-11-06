@@ -1,0 +1,7 @@
+{
+  "reviewed_proof_sha256": "acff2714fb6fe02a205f09f27add420a893e190a3bdf7fb01386477bfd66f546",
+  "promoted_proof_sha256": "cf97dd951c7b641f236f3e931b9b3e2bce23125fe31f746769ec1c4034cfd196",
+  "proof_delta": "Only line3 scoped status changed; F(8,137) remains OPEN on the same line.",
+  "readme_scope": "conditional sufficient criterion, actual finite data, explicit missing-certificate behavior; no new mathematics",
+  "provenance_delta": "bind existing byte-identical additive dependency to its published immutable commit"
+}

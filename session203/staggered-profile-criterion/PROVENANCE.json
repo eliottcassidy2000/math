@@ -1,0 +1,19 @@
+{
+  "source_graph_bank": {
+    "path": "session194-structural/inherited_tournaments_through8.txt",
+    "sha256": "5d5a5f625b4a85e04c0744aeb847ed36f59456f6a39996479aa82b9eb950afe3",
+    "role": "provenance only; its completeness is not required"
+  },
+  "dependencies": {
+    "FREE_ADDITIVE_PROOF.md": {
+      "sha256": "211623af96e90d516fbce7598450642878f81fc2892446dee5173b55fb41b099",
+      "repository": "eliottcassidy2000/math",
+      "commit": "150e50fc16d9ec57c596872559b9823b1612f3fe",
+      "path": "session203/free-additive-difference/PROOF.md",
+      "git_blob": "8165b505470d34fcd2552df4ac7dcf865238fd62"
+    },
+    "FREE_ADDITIVE_AUDIT.md": {
+      "sha256": "9eda7d26179bd59db01f04be561a44843587fe2279bf9843dd724dcd39419188"
+    }
+  }
+}

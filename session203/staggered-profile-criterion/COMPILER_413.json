@@ -1,0 +1,32 @@
+{
+  "status": "CERTIFIED_PHYSICAL_WITNESS",
+  "target": 413,
+  "order": 10,
+  "rows": [
+    210,
+    1016,
+    1011,
+    1013,
+    32,
+    129,
+    48,
+    336,
+    625,
+    241
+  ],
+  "trace": [
+    {
+      "kind": "literal_profile_child",
+      "target": 413,
+      "B": 137,
+      "residue": 1,
+      "j": 1,
+      "source_profile": {
+        "h": 45,
+        "s": 4,
+        "L": 94
+      }
+    }
+  ],
+  "all_order_profile_lemma": "OPEN"
+}

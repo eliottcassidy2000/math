@@ -1,0 +1,162 @@
+{
+  "J": 8,
+  "all_order_profile_hypothesis": "OPEN",
+  "both_residues": true,
+  "eventual_threshold": "CONDITIONAL ONLY",
+  "examples": [
+    {
+      "B": 137,
+      "L": 94,
+      "child_H": 413,
+      "child_order": 10,
+      "h": 45,
+      "j": 1,
+      "r": 1,
+      "root": 3,
+      "s": 4,
+      "source_order": 7
+    },
+    {
+      "B": 137,
+      "L": 90,
+      "child_H": 415,
+      "child_order": 10,
+      "h": 49,
+      "j": 0,
+      "r": 2,
+      "root": 1,
+      "s": 2,
+      "source_order": 7
+    },
+    {
+      "B": 139,
+      "L": 87,
+      "child_H": 419,
+      "child_order": 11,
+      "h": 53,
+      "j": 0,
+      "r": 1,
+      "root": 2,
+      "s": 1,
+      "source_order": 8
+    },
+    {
+      "B": 139,
+      "L": 87,
+      "child_H": 421,
+      "child_order": 10,
+      "h": 55,
+      "j": 1,
+      "r": 2,
+      "root": 2,
+      "s": 5,
+      "source_order": 7
+    },
+    {
+      "B": 995,
+      "L": 750,
+      "child_H": 2987,
+      "child_order": 11,
+      "h": 251,
+      "j": 5,
+      "r": 1,
+      "root": 1,
+      "s": 16,
+      "source_order": 8
+    },
+    {
+      "B": 995,
+      "L": 781,
+      "child_H": 2989,
+      "child_order": 11,
+      "h": 219,
+      "j": 3,
+      "r": 2,
+      "root": 1,
+      "s": 11,
+      "source_order": 8
+    },
+    {
+      "B": 997,
+      "L": 891,
+      "child_H": 2993,
+      "child_order": 11,
+      "h": 107,
+      "j": 0,
+      "r": 1,
+      "root": 0,
+      "s": 1,
+      "source_order": 8
+    },
+    {
+      "B": 997,
+      "L": 720,
+      "child_H": 2995,
+      "child_order": 11,
+      "h": 283,
+      "j": 4,
+      "r": 2,
+      "root": 1,
+      "s": 14,
+      "source_order": 8
+    }
+  ],
+  "induction_boundary_controls": [
+    {
+      "n": 409,
+      "route": "seed"
+    },
+    {
+      "factor": 137,
+      "n": 411,
+      "route": "triangle"
+    },
+    {
+      "B": 137,
+      "n": 413,
+      "r": 1,
+      "route": "profile"
+    },
+    {
+      "B": 137,
+      "n": 415,
+      "r": 2,
+      "route": "profile"
+    }
+  ],
+  "j_histogram": {
+    "0": 294,
+    "1": 300,
+    "2": 140,
+    "3": 79,
+    "4": 35,
+    "5": 10,
+    "6": 2,
+    "8": 2
+  },
+  "largest_child_target": 2995,
+  "literal_DFS_visits": 29609972,
+  "literal_graphs": 1918,
+  "profile_base_interval": [
+    137,
+    997
+  ],
+  "profile_certificates": 862,
+  "profile_sha256": "01739a76b67eee5c9e2edfda74479699b5cbc89772cc438f85b649ed45763257",
+  "seed_graphs": 194,
+  "seed_interval": [
+    23,
+    409
+  ],
+  "seed_order_histogram": {
+    "6": 10,
+    "7": 58,
+    "8": 126
+  },
+  "seed_sha256": "9707cbdbb1e8db8eaf585c38face7174e40e190570a01eda9bef069fbe7cceaa",
+  "source_order_histogram": {
+    "7": 159,
+    "8": 703
+  },
+  "status": "PASS"
+}

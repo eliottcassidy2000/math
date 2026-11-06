@@ -1,0 +1,29 @@
+{
+  "status": "PASS_CONDITIONAL_RELEASE",
+  "reviewed_proof_sha256": "acff2714fb6fe02a205f09f27add420a893e190a3bdf7fb01386477bfd66f546",
+  "promoted_proof_sha256": "cf97dd951c7b641f236f3e931b9b3e2bce23125fe31f746769ec1c4034cfd196",
+  "changed_proof_lines": [
+    3
+  ],
+  "README_sha256": "3c5a313862825192c6be663a1f0487e74859942cc9cdc80a521d1de27f175a9e",
+  "preserved_audit_manifest_entries": [
+    "REVIEW.md",
+    "REVIEWED_PROOF.md",
+    "REVIEWED_COMPILER.py",
+    "REVIEWED_VERIFIER.cpp",
+    "REVIEWED_INPUT_MANIFEST.sha256",
+    "data/SEEDS.tsv",
+    "data/PROFILE_CERTIFICATES.tsv",
+    "check_certificates.py",
+    "check_compiler.py",
+    "NORMAL.json",
+    "OPTIMIZED.json",
+    "COMPILER_NORMAL.json",
+    "COMPILER_OPTIMIZED.json",
+    "PROFILE_STRUCTURE.json",
+    "AUDIT_RECEIPT.json"
+  ],
+  "scope": "Conditional implication only; F(8,137) remains OPEN. Exact finite seeds from 23 through 409 and profile bases from 137 through 997 are verified. Criterion is sufficient, not necessary, and missing certificates do not assert nonexistence. No unconditional threshold or new SCC/relative-profile theorem.",
+  "checks": "All frozen audit, source and data bytes match. Provenance only adds immutable published additive-dependency metadata. README explicitly bounds integer j from 0 through 8. No new mathematical claim is introduced. Author will include this receipt in the final release manifest.",
+  "replay_scope": "Original independent audit completed full literal certificates and compiler tests. Packaging review verifies preserved bytes and supplied scope, not another full computational replay."
+}

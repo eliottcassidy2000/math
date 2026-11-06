@@ -1,0 +1,39 @@
+{
+  "status": "CERTIFIED_PHYSICAL_WITNESS",
+  "target": 1239,
+  "order": 13,
+  "rows": [
+    8186,
+    8188,
+    8185,
+    1680,
+    8128,
+    8088,
+    8104,
+    256,
+    1032,
+    384,
+    2688,
+    5000,
+    1928
+  ],
+  "trace": [
+    {
+      "kind": "literal_profile_child",
+      "target": 413,
+      "B": 137,
+      "residue": 1,
+      "j": 1,
+      "source_profile": {
+        "h": 45,
+        "s": 4,
+        "L": 94
+      }
+    },
+    {
+      "kind": "ordered_triangle_join",
+      "target": 1239
+    }
+  ],
+  "all_order_profile_lemma": "OPEN"
+}

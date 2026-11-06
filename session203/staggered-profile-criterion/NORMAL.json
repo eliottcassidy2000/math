@@ -1,0 +1,1 @@
+{"status":"PASS","seed_interval":[23,409],"seed_graphs":194,"profile_base_interval":[137,997],"profile_base_filter":"odd","both_residues_each_base":true,"J":8,"profile_certificates":862,"literal_graph_counts":1918,"largest_compiled_target":2995,"all_order_profile_lemma":"OPEN","eventual_coverage":"CONDITIONAL"}

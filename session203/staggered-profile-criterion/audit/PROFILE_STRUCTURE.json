@@ -1,0 +1,12 @@
+{
+  "gcd_shifted_base_and_start_histogram": {
+    "1": 807,
+    "5": 33,
+    "7": 17,
+    "11": 4,
+    "13": 1
+  },
+  "profile_sha256": "01739a76b67eee5c9e2edfda74479699b5cbc89772cc438f85b649ed45763257",
+  "scope": "Finite source structure only; not an all-order occupancy claim.",
+  "strong_source_count": 862
+}
