@@ -1,0 +1,25 @@
+--- originals/PROOF.md
++++ PROOF.md
+@@ -1,9 +1,9 @@
+ # A bounded central word and an explicit arithmetic coverage lemma
+ 
+-Status: **RESERVED / UNREVIEWED PROOF CANDIDATE** for the physical compiler,
++Status: **PROVED, independently audited in the stated scope** for the physical compiler,
+ finite inverse, normalization, and conditional implication below. The uniform
+ arithmetic occupancy assertion in Section 7 is **OPEN**, not a proved theorem.
+-Session 202. No source-pair existence is inferred from a height bound or from
++Session 201. No source-pair existence is inferred from a height bound or from
+ surjectivity of a signed scalar.
+ 
+ ## 1. Inheritance and the actual remaining question
+--- originals/README.md
++++ README.md
+@@ -1,6 +1,7 @@
+ # Bounded central-word arithmetic
+ 
+-Unreviewed proof candidate and explicitly OPEN all-target lemma.
++Independently audited physical compiler, finite inverse, and normalization.
++The all-target occupancy lemma remains explicitly OPEN.
+ 
+ `PROOF.md` isolates a finite-menu two-index arithmetic statement sufficient
+ for the desired positive odd path-count coverage. Its compiler uses actual

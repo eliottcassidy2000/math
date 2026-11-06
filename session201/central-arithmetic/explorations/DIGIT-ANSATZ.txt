@@ -1,0 +1,6 @@
+left 0 []
+right 0 []
+both 0 []
+parity left 0 []
+parity right 0 []
+parity both 0 []

@@ -1,0 +1,90 @@
+{
+  "arithmetic_pair_tests": 305283,
+  "cap": 5001,
+  "critical_witnesses": {
+    "1877": {
+      "graph_word": "ZZJJJJJOJJOJ",
+      "left_index": 3,
+      "representations": [
+        [
+          "JJJJJOJJ",
+          3,
+          5
+        ]
+      ],
+      "right_index": 5,
+      "vertices": 14,
+      "word": "JJJJJOJJ"
+    },
+    "17383": {
+      "graph_word": "OZOOZJJJJJOJJOJ",
+      "left_index": 3,
+      "representations": [
+        [
+          "JJJJJOJJ",
+          3,
+          55
+        ],
+        [
+          "JJOJJJJJ",
+          3,
+          55
+        ]
+      ],
+      "right_index": 55,
+      "vertices": 17,
+      "word": "JJJJJOJJ"
+    }
+  },
+  "distinct_matrices": 592,
+  "finite_gaps": [
+    7,
+    13,
+    21,
+    41,
+    43,
+    55,
+    67,
+    77,
+    83,
+    163,
+    173,
+    231,
+    233,
+    247,
+    251,
+    277,
+    299,
+    421,
+    449,
+    503,
+    533,
+    569,
+    583,
+    637,
+    821,
+    1067,
+    1339,
+    1861,
+    2647
+  ],
+  "lower4_minima_by_length": [
+    2,
+    4,
+    4,
+    8,
+    12,
+    20,
+    36,
+    60,
+    100
+  ],
+  "normal_menu_dominated_components": 376,
+  "normal_menu_words": 235,
+  "physical_source_count": 126910,
+  "progression_inverse_controls": 180,
+  "raw_words": 1095,
+  "repair_graphs": 27,
+  "status": "PASS",
+  "universal_occupancy": "OPEN"
+}

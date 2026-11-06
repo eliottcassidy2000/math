@@ -1,0 +1,46 @@
+{
+  "scope": "two fixed-target minima only",
+  "status": "AUTHOR CHECK PASS",
+  "targets": [
+    {
+      "matches": [
+        {
+          "form": "A00",
+          "g_left": 39,
+          "g_right": 1523,
+          "left_index": 41,
+          "right_index": 2767,
+          "row": [
+            159,
+            400,
+            -118,
+            -158
+          ]
+        }
+      ],
+      "minimum_smaller_index": 41,
+      "progression_tests": 2694653,
+      "target": 1348681
+    },
+    {
+      "matches": [
+        {
+          "form": "N01",
+          "g_left": 31,
+          "g_right": 8889,
+          "left_index": 86,
+          "right_index": 10709,
+          "row": [
+            287,
+            405,
+            -85,
+            0
+          ]
+        }
+      ],
+      "minimum_smaller_index": 86,
+      "progression_tests": 21059971,
+      "target": 6888203
+    }
+  ]
+}
