@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "t": 1,
+      "prefix_count": 3,
+      "source_counts": [
+        17,
+        15,
+        19,
+        15
+      ]
+    },
+    {
+      "t": 2,
+      "prefix_count": 5,
+      "source_counts": [
+        33,
+        27,
+        33,
+        25
+      ]
+    },
+    {
+      "t": 3,
+      "prefix_count": 9,
+      "source_counts": [
+        65,
+        51,
+        61,
+        45
+      ]
+    },
+    {
+      "t": 4,
+      "prefix_count": 17,
+      "source_counts": [
+        129,
+        99,
+        117,
+        85
+      ]
+    },
+    {
+      "t": 5,
+      "prefix_count": 33,
+      "source_counts": [
+        257,
+        195,
+        229,
+        165
+      ]
+    },
+    {
+      "t": 6,
+      "prefix_count": 65,
+      "source_counts": [
+        513,
+        387,
+        453,
+        325
+      ]
+    }
+  ]
+}

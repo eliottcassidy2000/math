@@ -1,0 +1,22 @@
+{
+  "all_four_sources_strong_and_root_start_one": true,
+  "curvature_checks_including_both_polarities": 1098,
+  "distinct_contracted_path_counts": [
+    1,
+    3,
+    9,
+    17,
+    23
+  ],
+  "four_source_counts_00_01_10_11": [
+    9,
+    9,
+    11,
+    9
+  ],
+  "labelled_contexts_core_orders_1_through_4": 549,
+  "positive_identity_max_output_order": 7,
+  "positive_identity_rooted_inputs_orders_1_through_5": 1099,
+  "scope": "fixed one-copied-root uniform module contexts, arbitrary core size in proof; no unrestricted spectrum exclusion",
+  "status": "PASS"
+}

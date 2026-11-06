@@ -1,0 +1,16 @@
+[
+  {
+    "file": "PROOF.md",
+    "reviewed_sha256": "00acb8e5db1ab86f8547d998f20b936b84b1905180f2be19683551d14160d1bd",
+    "promoted_sha256": "572500f0307c13f114a66a330eb0e17f931018354325eb4dec1d32f3decc609d",
+    "exact_old": "**PROOF CANDIDATE, pending independent audit.**",
+    "exact_new": "**PROVED, independently audited in the stated scope.**"
+  },
+  {
+    "file": "TAIL_ADDENDUM.md",
+    "reviewed_sha256": "ffa6f030bbae46fd85a9b5e29cfe15f9f4ef1c81cccad89db58f42be3691aba4",
+    "promoted_sha256": "9073245878d8d03932d185e0450669e751ff8b8d06dc94e33fc6542d307b4395",
+    "exact_old": "**PROOF CANDIDATE, pending independent audit.**",
+    "exact_new": "**PROVED, independently audited in the stated scope.**"
+  }
+]

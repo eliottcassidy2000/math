@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "release_root": "session203-endpoint-unit-gate-release",
+  "README_sha256": "bfcafe75122f4a6a6c5b471e187cfff9adedd463f2f9627ccf5ed445d12fe265",
+  "promotion_deltas": [
+    {
+      "file": "PROOF.md",
+      "reviewed_sha256": "00acb8e5db1ab86f8547d998f20b936b84b1905180f2be19683551d14160d1bd",
+      "promoted_sha256": "572500f0307c13f114a66a330eb0e17f931018354325eb4dec1d32f3decc609d",
+      "exact_old": "**PROOF CANDIDATE, pending independent audit.**",
+      "exact_new": "**PROVED, independently audited in the stated scope.**"
+    },
+    {
+      "file": "TAIL_ADDENDUM.md",
+      "reviewed_sha256": "ffa6f030bbae46fd85a9b5e29cfe15f9f4ef1c81cccad89db58f42be3691aba4",
+      "promoted_sha256": "9073245878d8d03932d185e0450669e751ff8b8d06dc94e33fc6542d307b4395",
+      "exact_old": "**PROOF CANDIDATE, pending independent audit.**",
+      "exact_new": "**PROVED, independently audited in the stated scope.**"
+    }
+  ],
+  "preserved_audit_files": [
+    "AUDIT_RECEIPT.json",
+    "NORMAL.json",
+    "OPTIMIZED.json",
+    "PRODUCER_VERIFIER.py",
+    "REVIEW.md",
+    "REVIEWED_FAMILY_C_COMPANION.md",
+    "REVIEWED_PROOF-initial.md",
+    "REVIEWED_PROOF.md",
+    "REVIEWED_TAIL_ADDENDUM.md",
+    "SHA256SUMS",
+    "TAIL_COMPANION_NORMAL.json",
+    "TAIL_COMPANION_OPTIMIZED.json",
+    "check.py",
+    "check_tail_companion.py"
+  ],
+  "scope": "Exactly one retained root per uniform context; arbitrary cores; obstruction above every source-count cutoff. Root-discarding contexts, target-dependent choices, multiple copies, and other stated exits remain outside the claim. Positive correction is twice the root-start count minus H.",
+  "checks": "Both release and nested audit manifests pass. All frozen audit bytes and dependency provenance match. Only proof/addendum status lines changed. Packaging defects were corrected without changing mathematical content.",
+  "replay_scope": "Source and package independence reviewed; author reports exact relocated replays. This release review verifies bytes and manifests, not an additional rerun of all computations."
+}
