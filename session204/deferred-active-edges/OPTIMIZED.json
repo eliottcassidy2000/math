@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "dimensions": {
+    "W2_p1": 28,
+    "W2_p2": 46,
+    "W3_p1": 123,
+    "W3_p2": 210
+  },
+  "regenerated_sparse_columns": 65712,
+  "exhaustive_literal_transitions": 1464,
+  "literal_completions": 292,
+  "extra_permuted_transitions": 48
+}
