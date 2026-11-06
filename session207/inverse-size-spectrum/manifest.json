@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "destination": "session207/inverse-size-spectrum/",
+  "status": "independently reviewed; publication pending",
+  "files": {
+    "PACKAGING.md": "83c7dfa255da594b0c6913ace86ad1e71a249f1a6a26008ea5b0611bc2c7fa4c",
+    "README.md": "ba47aa3667fa04be45b1fa1c3fbcbea1c49be5bd016439f8ef386a31c8f044f2",
+    "REVIEW.md": "4430dcd65a36be4225aa00e046a239f1c52c0269f6534061a75b75cbb2ecb8ea",
+    "check.out": "139d81affb5c3f42ec356a6ea84f09fc00d3cae9bc1ff87e1908afe1585877ac",
+    "check.py": "d0fe599b11bc7c97187bbf313425a7700a0f45fa8a43ff6479dc817025879d6c"
+  }
+}
