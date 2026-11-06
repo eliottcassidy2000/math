@@ -1,0 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
+int H(int n,__uint128_t code){int adj[16]={},dp[4096][12]={};int k=0;for(int i=0;i<n;i++)for(int j=i+1;j<n;j++,k++)if(code>>k&1)adj[i]|=1<<j;else adj[j]|=1<<i;for(int i=0;i<n;i++)dp[1<<i][i]=1;for(int s=1;s<(1<<n);s++)for(int j=0;j<n;j++)if(dp[s][j]){int t=adj[j]&~s;while(t){int b=__builtin_ctz(t);t&=t-1;dp[s|1<<b][b]+=dp[s][j];}}int ans=0;for(int j=0;j<n;j++)ans+=dp[(1<<n)-1][j];return ans;}
+string decimal(__uint128_t x){if(!x)return "0";string s;while(x){s+=char('0'+x%10);x/=10;}reverse(s.begin(),s.end());return s;}
+int main(int argc,char**argv){int n=argc>1?atoi(argv[1]):9,iter=argc>2?atoi(argv[2]):100000;if(n<1||n>12||iter<1)return 2;mt19937_64 gen(208);map<int,__uint128_t>found;for(int t=0;t<iter;t++){__uint128_t code=((__uint128_t(gen())<<64)|gen())&((__uint128_t(1)<<(n*(n-1)/2))-1);int h=H(n,code),x=h,a=0,b=0;while(x%3==0)x/=3,a++;while(x%5==0)x/=5,b++;if(x==1&&!found.count(h)){found[h]=code;cout<<n<<" "<<h<<" "<<a<<" "<<b<<" "<<decimal(code)<<" "<<t<<endl;}}}

@@ -1,0 +1,56 @@
+[
+  {
+    "n": 9,
+    "h": 1875,
+    "strong": true,
+    "method": "full permutations and recursive path enumeration"
+  },
+  {
+    "n": 9,
+    "h": 2187,
+    "strong": true,
+    "method": "full permutations and recursive path enumeration"
+  },
+  {
+    "n": 9,
+    "h": 2025,
+    "strong": true,
+    "method": "full permutations and recursive path enumeration"
+  },
+  {
+    "n": 10,
+    "h": 10125,
+    "strong": true,
+    "method": "recursive path enumeration without memoization"
+  },
+  {
+    "n": 10,
+    "h": 9375,
+    "strong": true,
+    "method": "recursive path enumeration without memoization"
+  },
+  {
+    "n": 11,
+    "h": 54675,
+    "strong": true,
+    "method": "recursive path enumeration without memoization"
+  },
+  {
+    "n": 11,
+    "h": 46875,
+    "strong": true,
+    "method": "recursive path enumeration without memoization"
+  },
+  {
+    "n": 12,
+    "h": 151875,
+    "strong": true,
+    "method": "recursive path enumeration without memoization"
+  },
+  {
+    "n": 12,
+    "h": 253125,
+    "strong": true,
+    "method": "recursive path enumeration without memoization"
+  }
+]

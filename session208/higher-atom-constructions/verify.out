@@ -1,0 +1,27 @@
+{
+  "witnesses_checked": 9,
+  "global_upper_rate": "8/3",
+  "block_exponent": 9,
+  "block_order": 24,
+  "blocks": [
+    [
+      14,
+      45
+    ],
+    [
+      17,
+      50
+    ],
+    [
+      8,
+      22
+    ],
+    [
+      9,
+      24
+    ]
+  ],
+  "old_dual_extends_globally": false,
+  "search_exhaustive": false,
+  "checks": "pass"
+}

@@ -1,0 +1,13 @@
+{
+  "inherited_mechanisms": {
+    "repository": "eliottcassidy2000/math",
+    "commit": "58264985c7f8a1590d1b5a934473068d4869888d",
+    "proof_path": "session208/rational-atom-mixtures/PROOF.md",
+    "proof_git_blob": "39c25fbdcb0511d626982465e4b79707a8a36538",
+    "proof_sha256": "cd99ff86ae7b0ca57c83698eacca027428d54ad9f5af1a5d64fa8874bf3ab12b",
+    "used": "Dominance-join count multiplication and additive orders, subadditivity limit, finite atom dictionary vs global scope.",
+    "not_used": "No complete census beyond order8, no global price certificate, no central logarithmic spanning-tree theorem."
+  },
+  "verification": "All required numerical inputs are bundled. Python3 standard library only, with assertions enabled. Independent verifier uses recursive path enumeration without memoization.",
+  "discovery": "Optional bounded C++17 replays, seed208. Sources have explicit supported-order guards; order12 uses unsigned128-bit codes. No exhaustion claim."
+}
