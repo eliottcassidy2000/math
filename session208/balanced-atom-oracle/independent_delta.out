@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "universe": "all labelled tournaments orders2..5, every arc reversal",
+  "arc_checks": 10650,
+  "endpoint_method": "direct permutations of every induced subset"
+}

@@ -1,0 +1,18 @@
+{
+  "prior_mixture_packet": {
+    "repository": "eliottcassidy2000/math",
+    "commit": "58264985c7f8a1590d1b5a934473068d4869888d",
+    "proof_path": "session208/rational-atom-mixtures/PROOF.md",
+    "proof_git_blob": "39c25fbdcb0511d626982465e4b79707a8a36538",
+    "used": "SCC count multiplication, order addition, existence of asymptotic subadditivity limit, rational mixture and denominator-clearing framework."
+  },
+  "preceding_bound": {
+    "commit": "69c7f5685828b8000cd398210a9e512b04691c7d",
+    "proof_path": "session208/higher-atom-constructions/PROOF.md",
+    "proof_git_blob": "cb5404a6d26ef59d5eda61365e85d1e39a1f93b2",
+    "bound": "8/3, a global construction upper bound only."
+  },
+  "standalone_verification": "Python3 standard library, assertions enabled. All witness inputs are embedded. Optional discovery uses a C++17 compiler with unsigned128-bit integer support.",
+  "paper_scope": "The logarithmic spanning-tree theorem is not used. The rational-mixture method is an independently proved conceptual connection.",
+  "excluded": "Order14 search files and outcomes are outside this release."
+}
