@@ -1,0 +1,10 @@
+{
+  "FOUR_CHOICE_PROOF.md": {
+    "repository": "eliottcassidy2000/math",
+    "commit": "be393666d567723fb30675ed0e2952e5c784384c",
+    "path": "session203/four-choice-endpoint-fiber/PROOF.md",
+    "git_blob": "f9b0a3db7db6560fc5caad52f6763c6b5d5c2d67",
+    "sha256": "21418f15b1367c8e3f14b5ff2aeceb760b8cd513b7fb8f467fe27e2c6034a01c",
+    "role": "Construction provenance only; the floor proof specifies its graphs and counts its own kernels."
+  }
+}

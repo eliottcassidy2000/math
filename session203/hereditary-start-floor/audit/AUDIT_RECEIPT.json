@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "reviewed_proof_sha256": "c0cd6133ad4b118249574f1c788f2eb61ded4b0b5f8bbbc179f794be90e58863",
+  "review_sha256": "4a2209242993a854edf7a72f9b7e547f68fafff4380048ccda3cc2ea7e59b9e5",
+  "independent_checker_sha256": "abc714462e87a7f6b63bdb58fc4c5af366d3a6768ca2a142234e46d65cda4c43",
+  "normal_and_optimized_sha256": "ba1a2bdc67b41387373aab8b1fbb760b649b19b10ccdcf1351da42816abde459",
+  "nine_vertex_kernels": 64,
+  "eleven_vertex_kernels": 4,
+  "minimum_interface_start": 27,
+  "minimum_four_word_start": 119,
+  "actual_injection_maps": 115211,
+  "injected_paths": 88886,
+  "outside_root_maps": 55702,
+  "scope": "If a tournament retains an induced member of the specified interface with body order at least 3, every root-start count is 0 or at least 27. Four-word family has sharper floor 119. No exclusion for smaller bodies, altered internal arcs, unrelated constructions, F itself or unrestricted scalar spectrum.",
+  "required_packaging_change": "Replace scratch-only four-choice reference with verified immutable repository citation, preserving original proof; status-only promotion may then be reviewed separately.",
+  "publication": "Not performed by this auditor; parent coordinates."
+}

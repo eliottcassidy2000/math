@@ -1,0 +1,72 @@
+{
+  "colored_labeled_order_three_bodies": 64,
+  "kernel_order": 9,
+  "kernel_sha256": "268800fe870aebe4fabe207bd50d40c871bb9c1262faaffd2b17a58665185545",
+  "kernels_strong": 64,
+  "minimum_positive_start": 27,
+  "permutation_control_paths": 825,
+  "representative_minima": [
+    [
+      "transitive",
+      0,
+      27
+    ],
+    [
+      "transitive",
+      1,
+      35
+    ],
+    [
+      "transitive",
+      2,
+      31
+    ],
+    [
+      "transitive",
+      3,
+      39
+    ],
+    [
+      "transitive",
+      4,
+      29
+    ],
+    [
+      "transitive",
+      5,
+      37
+    ],
+    [
+      "transitive",
+      6,
+      33
+    ],
+    [
+      "transitive",
+      7,
+      41
+    ],
+    [
+      "cycle",
+      0,
+      45
+    ],
+    [
+      "cycle",
+      1,
+      51
+    ],
+    [
+      "cycle",
+      3,
+      57
+    ],
+    [
+      "cycle",
+      7,
+      63
+    ]
+  ],
+  "scope": "Actual finite kernels; hereditary implication uses the separate insertion proof.",
+  "status": "PASS"
+}

@@ -1,0 +1,180 @@
+{
+  "actual_injection_maps": 115211,
+  "directed_prefix_visits": 1382986,
+  "four_word_kernels": [
+    {
+      "H": 7213,
+      "minimum_start": 119,
+      "seed": 10
+    },
+    {
+      "H": 7221,
+      "minimum_start": 127,
+      "seed": 14
+    },
+    {
+      "H": 7227,
+      "minimum_start": 133,
+      "seed": 17
+    },
+    {
+      "H": 7235,
+      "minimum_start": 141,
+      "seed": 21
+    }
+  ],
+  "injected_paths": 88886,
+  "injection_host_graphs_through5": 1099,
+  "literal_primary_kernels": 68,
+  "longest_entry_path": 5,
+  "maps_with_new_vertex_insertion": 106400,
+  "nine_kernel_cases": 64,
+  "outside_root_maps": 55702,
+  "representative_minima": [
+    [
+      27,
+      35,
+      31,
+      39,
+      29,
+      37,
+      33,
+      41
+    ],
+    [
+      45,
+      51,
+      57,
+      63
+    ]
+  ],
+  "retained_middle_embeddings": 104,
+  "scales_checked": [
+    0,
+    25
+  ],
+  "scope": "Only tournaments containing a specified strong kernel/interface; unrelated constructions and F remain open.",
+  "small_body_boundary": [
+    {
+      "code": 0,
+      "color": 0,
+      "minimum_start": 15,
+      "starts": [
+        32,
+        48,
+        46,
+        15,
+        15,
+        26,
+        59,
+        60
+      ]
+    },
+    {
+      "code": 0,
+      "color": 1,
+      "minimum_start": 17,
+      "starts": [
+        23,
+        48,
+        48,
+        17,
+        17,
+        24,
+        63,
+        57
+      ]
+    },
+    {
+      "code": 0,
+      "color": 2,
+      "minimum_start": 19,
+      "starts": [
+        36,
+        39,
+        56,
+        19,
+        19,
+        30,
+        72,
+        66
+      ]
+    },
+    {
+      "code": 0,
+      "color": 3,
+      "minimum_start": 21,
+      "starts": [
+        25,
+        37,
+        52,
+        21,
+        21,
+        24,
+        68,
+        59
+      ]
+    },
+    {
+      "code": 1,
+      "color": 0,
+      "minimum_start": 15,
+      "starts": [
+        48,
+        32,
+        46,
+        15,
+        15,
+        26,
+        59,
+        60
+      ]
+    },
+    {
+      "code": 1,
+      "color": 1,
+      "minimum_start": 19,
+      "starts": [
+        39,
+        36,
+        56,
+        19,
+        19,
+        30,
+        72,
+        66
+      ]
+    },
+    {
+      "code": 1,
+      "color": 2,
+      "minimum_start": 17,
+      "starts": [
+        48,
+        23,
+        48,
+        17,
+        17,
+        24,
+        63,
+        57
+      ]
+    },
+    {
+      "code": 1,
+      "color": 3,
+      "minimum_start": 21,
+      "starts": [
+        37,
+        25,
+        52,
+        21,
+        21,
+        24,
+        68,
+        59
+      ]
+    }
+  ],
+  "status": "PASS"
+}

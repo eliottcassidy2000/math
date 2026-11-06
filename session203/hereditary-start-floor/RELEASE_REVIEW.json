@@ -1,0 +1,28 @@
+{
+  "status": "PASS_RELEASE_REVIEW",
+  "reviewed_proof_sha256": "c0cd6133ad4b118249574f1c788f2eb61ded4b0b5f8bbbc179f794be90e58863",
+  "promoted_proof_sha256": "a1911f0eec6e807f4a7c93eab6e20c58aca0610f2bb4dcc464a0116de09e7962",
+  "proof_delta": "Approved status phrase and scratch-only reference replaced by verified immutable published four-choice citation; no other proof changes.",
+  "README_sha256": "30c55504c33b0abd06afe2753fde3f62278996bfcf3e6c82083e6603087dc947",
+  "dependency_provenance_sha256": "e3b415a607b700b3629c852ea6246f697ed8b126835d8a1e81af56b4ef4fd66d",
+  "preserved_audit_entries": [
+    "REVIEW.md",
+    "REVIEWED_PROOF.md",
+    "REVIEWED_INPUT_MANIFEST.sha256",
+    "PRODUCER_KERNELS.json",
+    "PRODUCER_COLORED_KERNELS.json",
+    "PRODUCER_VERIFY.py",
+    "PRODUCER_COLORED_VERIFY.py",
+    "check.py",
+    "NORMAL.json",
+    "OPTIMIZED.json",
+    "PRODUCER_FOUR_NORMAL.json",
+    "PRODUCER_FOUR_OPTIMIZED.json",
+    "PRODUCER_COLORED_NORMAL.json",
+    "PRODUCER_COLORED_OPTIMIZED.json",
+    "AUDIT_RECEIPT.json"
+  ],
+  "scope": "Specified colored-body interface with body order at least 3 has hereditary positive-start floor 27 under arbitrary induced extensions and rerooting; four special words have floor at least 119. Smaller bodies and unrelated constructions are not excluded. Arc edits do not automatically escape if a certified kernel remains. No F(8,137) refutation or spectrum threshold.",
+  "checks": "All 15 frozen audit entries and nested manifest are preserved, as are all original producer inputs. Published dependency bytes match SHA256 and Git blob provenance. README body-size and hereditary-class boundaries are accurate after correction.",
+  "publication": "Ready for parent-granted branch slot; no branch writes by this auditor."
+}

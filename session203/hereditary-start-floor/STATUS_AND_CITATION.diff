@@ -1,0 +1,19 @@
+--- REVIEWED_PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # The entire four-choice interface has a hereditary positive-start floor
+ 
+-Status: **PROOF CANDIDATE, pending independent audit.** This is an all-order
++Status: **PROVED, independently audited in the stated scope.** This is an all-order
+ obstruction to using one specified graph interface in the endpoint budget of F(8,137).
+ It is not a counterexample to F(8,137), and it proves no spectrum exclusion.
+ 
+@@ -40,7 +40,7 @@
+ ## 2. The four explicit strong kernels
+ 
+ Use the actual four-choice construction from
+-`session203-four-choice-release/PROOF.md`. The old core has outgoing rows
++[the published four-choice proof](https://github.com/eliottcassidy2000/math/blob/be393666d567723fb30675ed0e2952e5c784384c/session203/four-choice-endpoint-fiber/PROOF.md). The old core has outgoing rows
+ 
+     (102,0,10,83,135,30,182,47).
+ 
