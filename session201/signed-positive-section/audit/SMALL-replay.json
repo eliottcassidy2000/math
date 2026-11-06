@@ -1,0 +1,291 @@
+{
+  "branches": {
+    "canonical": 122,
+    "exceptional": 69
+  },
+  "complete_cover_cap": 1000,
+  "core_U11_positive_endpoint_profiles": [
+    [
+      3,
+      1,
+      3,
+      1
+    ],
+    [
+      5,
+      1,
+      5,
+      1
+    ],
+    [
+      5,
+      1,
+      7,
+      1
+    ],
+    [
+      5,
+      2,
+      6,
+      3
+    ],
+    [
+      9,
+      1,
+      9,
+      1
+    ],
+    [
+      9,
+      1,
+      11,
+      1
+    ],
+    [
+      9,
+      3,
+      9,
+      3
+    ],
+    [
+      9,
+      3,
+      11,
+      5
+    ],
+    [
+      9,
+      4,
+      10,
+      5
+    ]
+  ],
+  "core_U11_profiles": 14,
+  "dependency_hashes": {
+    "BALANCED-NORMAL-FORM.md": "00ddcec08dd88e6c91917ff2915bc52662c4e23fe4ba2e1d948bad5d1461a6b3",
+    "PHYSICAL-ADJOINT.md": "f9c337b3cfee1cd1134ee02276890238c30ff0e84a14c26fbcd5cd78ab82dc05"
+  },
+  "distinct_slice_targets": 72,
+  "formal_basis_checks": 20,
+  "literal_graphs": [
+    {
+      "cycles": 1,
+      "profile": [
+        17,
+        6,
+        20,
+        9
+      ],
+      "root_start": 1,
+      "singleton_seed": true,
+      "target": 1,
+      "vertices": 6,
+      "word": "OJJJJ"
+    },
+    {
+      "cycles": 1,
+      "profile": [
+        29,
+        10,
+        34,
+        15
+      ],
+      "root_start": 1,
+      "singleton_seed": false,
+      "target": 1,
+      "vertices": 7,
+      "word": "OJJJJ"
+    },
+    {
+      "cycles": 1,
+      "profile": [
+        51,
+        18,
+        60,
+        27
+      ],
+      "root_start": 1,
+      "singleton_seed": false,
+      "target": 3,
+      "vertices": 8,
+      "word": "ZOJJJJ"
+    },
+    {
+      "cycles": 1,
+      "profile": [
+        109,
+        38,
+        128,
+        57
+      ],
+      "root_start": 1,
+      "singleton_seed": false,
+      "target": 5,
+      "vertices": 9,
+      "word": "OZOJJJJ"
+    },
+    {
+      "cycles": 1,
+      "profile": [
+        97,
+        34,
+        114,
+        51
+      ],
+      "root_start": 1,
+      "singleton_seed": false,
+      "target": 5,
+      "vertices": 9,
+      "word": "ZJOJJJJ"
+    }
+  ],
+  "physical_profiles": 11721,
+  "sample_inverse_witnesses": [
+    {
+      "m": 1,
+      "n": 1,
+      "parent": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "parent_word": "singleton",
+      "q": [
+        5,
+        2,
+        6,
+        3
+      ]
+    },
+    {
+      "m": 3,
+      "n": 3,
+      "parent": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "parent_word": "Z",
+      "q": [
+        15,
+        6,
+        18,
+        9
+      ]
+    },
+    {
+      "m": 3,
+      "n": 1,
+      "parent": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "parent_word": "singleton",
+      "q": [
+        17,
+        6,
+        20,
+        9
+      ]
+    },
+    {
+      "m": 5,
+      "n": 5,
+      "parent": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "parent_word": "OJ",
+      "q": [
+        25,
+        10,
+        30,
+        15
+      ]
+    },
+    {
+      "m": 5,
+      "n": 1,
+      "parent": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "parent_word": "",
+      "q": [
+        29,
+        10,
+        34,
+        15
+      ]
+    },
+    {
+      "m": 9,
+      "n": 9,
+      "parent": [
+        9,
+        1,
+        9,
+        1
+      ],
+      "parent_word": "OOJ",
+      "q": [
+        45,
+        18,
+        54,
+        27
+      ]
+    },
+    {
+      "m": 9,
+      "n": 3,
+      "parent": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "parent_word": "Z",
+      "q": [
+        51,
+        18,
+        60,
+        27
+      ]
+    },
+    {
+      "m": 9,
+      "n": 1,
+      "parent": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "parent_word": "O",
+      "q": [
+        53,
+        18,
+        62,
+        27
+      ]
+    }
+  ],
+  "scope": "All-order physical-section proof candidate; exact declared finite controls; no all-target occupancy claim.",
+  "signed7_hostile": [
+    5,
+    1,
+    7,
+    1
+  ],
+  "slice_profiles": 191,
+  "status": "PASS",
+  "verifier_sha256": "45824c80e200dd2e7aabce1b0915cb37c2b8336b32f64670e95ba324629184c5"
+}

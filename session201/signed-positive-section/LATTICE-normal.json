@@ -1,0 +1,64 @@
+{
+  "J_determinant": 1,
+  "actual_off_face_predecessor": [
+    1,
+    0,
+    4,
+    1
+  ],
+  "characteristic_polynomial": "X^3-X^2-X-1",
+  "formal_signed_boundary": [
+    -1,
+    -7,
+    -1,
+    -7
+  ],
+  "gram": [
+    [
+      1,
+      2,
+      4
+    ],
+    [
+      2,
+      4,
+      7
+    ],
+    [
+      4,
+      7,
+      13
+    ]
+  ],
+  "gram_determinant": -1,
+  "nonphysical_zero_f_inverse": [
+    1,
+    0,
+    4,
+    3
+  ],
+  "physical_after_six_J": [
+    5,
+    1,
+    5,
+    1
+  ],
+  "scope": "Explicit cubic order and lattice identities; not a full ring-of-integers identification or a physical inverse without guards.",
+  "status": "PASS",
+  "theta6": [
+    4,
+    6,
+    7
+  ],
+  "theta7": [
+    7,
+    11,
+    13
+  ],
+  "unit_inverse": [
+    -1,
+    -1,
+    1
+  ],
+  "verifier_sha256": "10ffb58b582f91842eec4092d62ffadb7fcdd774d197451f25c8a9f4001acb77"
+}

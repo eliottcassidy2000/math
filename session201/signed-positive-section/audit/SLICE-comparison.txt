@@ -1,0 +1,1 @@
+PASS: complete intrinsic slice at U<=1000 agrees profile-for-profile between raw-coordinate and independent positive-coordinate implementations.

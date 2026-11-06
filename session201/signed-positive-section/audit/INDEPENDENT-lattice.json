@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "method": "SymPy exact quotient-ring remainders, symbolic polynomial identity, and matrix conjugacy",
+  "sympy_version": "1.14.0",
+  "gram": [
+    [
+      "1",
+      "2",
+      "4"
+    ],
+    [
+      "2",
+      "4",
+      "7"
+    ],
+    [
+      "4",
+      "7",
+      "13"
+    ]
+  ],
+  "lattice_inverse": [
+    "1",
+    "0",
+    "4",
+    "3"
+  ]
+}
