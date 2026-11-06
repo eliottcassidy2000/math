@@ -1,4 +1,5 @@
-exec(open('session202-bridge-eventual/probe.py').read().split("D={'':I}")[0])
+from pathlib import Path
+exec(Path(__file__).with_name('probe.py').read_text().split("D={'':I}")[0])
 D={'':I}; mats={O:'O',Z:'Z',J:'J'};seen={I:''}; groups=[{} for _ in range(4)]
 for k in range(13):
  hits=[]
