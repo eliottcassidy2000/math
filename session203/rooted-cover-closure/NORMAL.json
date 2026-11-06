@@ -1,0 +1,48 @@
+{
+  "coordinate_order": [
+    "h",
+    "s",
+    "e",
+    "L",
+    "R",
+    "d",
+    "C",
+    "b",
+    "T"
+  ],
+  "labeled_root_zero_graphs_by_order": {
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 1024
+  },
+  "literal_child_checks": 3297,
+  "scope": "Exact all-input transfer checks through order5; all-order proof separate.",
+  "singleton_Z_exception": {
+    "after": [
+      1,
+      0,
+      1,
+      2,
+      1,
+      1,
+      4,
+      2,
+      2
+    ],
+    "before": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      1
+    ]
+  },
+  "status": "PASS",
+  "three_bin_permutation_control": 9
+}

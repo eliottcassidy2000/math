@@ -1,0 +1,44 @@
+{
+  "bound": 139,
+  "complete": true,
+  "level_counts": [
+    1,
+    2,
+    5,
+    13,
+    34,
+    57,
+    65,
+    65
+  ],
+  "order_cap": 9,
+  "profile": [
+    63,
+    1,
+    1,
+    77,
+    103,
+    1,
+    1872,
+    128,
+    1583
+  ],
+  "root": 0,
+  "rows": [
+    102,
+    252,
+    248,
+    241,
+    225,
+    192,
+    128,
+    1
+  ],
+  "scope": "Exact all-order unit-start B support through bound, using the inherited complete source grammar. This does not decide other starts or F(8,137).",
+  "source_word": "OZZOOZ",
+  "states": 242,
+  "status": "PHYSICAL_UNIT_START_WITNESS",
+  "target_B": 139,
+  "unit_start_base_count": 42,
+  "word_length_cap": 7
+}

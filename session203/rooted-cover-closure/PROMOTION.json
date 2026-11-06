@@ -1,0 +1,7 @@
+{
+  "audit": "audit/AUDIT.md",
+  "change": "Opening and closing status-only promotion after independent audit PASS; proof mathematics, code, and receipts unchanged.",
+  "new_proof_sha256": "8e78951f9dd15decff0d23cfb3ebe64f358b3c9d4561b269b527a1e9aa902168",
+  "old_proof_sha256": "16d99dbb911488fe037dbd5eb0eb9a9106ec8265ac066622ef35fc1010752548",
+  "scope": "All-input physical transfer; finite complete unit-start B membership; no all-target occupancy."
+}

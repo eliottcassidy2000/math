@@ -1,0 +1,22 @@
+{
+  "bound": 137,
+  "complete": true,
+  "level_counts": [
+    1,
+    2,
+    5,
+    13,
+    34,
+    57,
+    63,
+    63
+  ],
+  "order_cap": 9,
+  "qualification": "This excludes only start1 at this B; it does not exclude a Hamilton count, other starts, or a staggered certificate.",
+  "scope": "Exact all-order unit-start B support through bound, using the inherited complete source grammar. This does not decide other starts or F(8,137).",
+  "states": 238,
+  "status": "ABSENT_UNIT_START_PROFILE",
+  "target_B": 137,
+  "unit_start_base_count": 41,
+  "word_length_cap": 7
+}

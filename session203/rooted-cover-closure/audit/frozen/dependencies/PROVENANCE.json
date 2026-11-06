@@ -1,0 +1,10 @@
+{
+  "PHYSICAL_SOURCE_GRAMMAR.md": {
+    "sha256": "7d77f5bb12096563396242669a3276d93c3a0e66d448c13384399fdca2091537",
+    "source": "Frozen audited Session200 signed-block-transport dependency, POSITIVE_SOURCE_GRAMMAR.md Theorem1 and its explicit graph construction."
+  },
+  "ROOTED.md": {
+    "sha256": "ba7e632518219eeb8d86b6db7da386a88e98317ea417c9b22e649278c132b32e",
+    "source": "Frozen audited Session197 bilinear-C2 dependency snapshot, ROOTED.md Theorem2 (actual rooted graph grammar)."
+  }
+}
