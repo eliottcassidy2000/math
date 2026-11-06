@@ -1,0 +1,34 @@
+{
+  "divisor_inverse_target_checks": 211,
+  "formal_core_determinants": {
+    "J": 1,
+    "JJ": 0,
+    "JJJ": -2,
+    "JJJJ": 3,
+    "JJJJJ": -1,
+    "JJZJ": 0,
+    "JJZJJ": 0,
+    "JJZZJ": 0,
+    "JOOZJ": 5,
+    "JOZJ": 3,
+    "JOZJJ": -7
+  },
+  "full_factorization_templates": [
+    "JJZJ",
+    "JJZZJ"
+  ],
+  "g_and_equality_controls_through": 4096,
+  "hostile_J_witness": [
+    7,
+    191317
+  ],
+  "menu_sha256": "f4c2fab8569aa682063f904a78b74026535f3a181a3e01bcc7ac23dc5a591275",
+  "prime_hostile_triple": [
+    2135743,
+    6407227,
+    10678711
+  ],
+  "status": "PASS",
+  "uniform_twelve_template_occupancy": "OPEN",
+  "x_fibers_through": 1024
+}

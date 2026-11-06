@@ -1,0 +1,10 @@
+{
+  "dependencies/CORE_PROOF.md": "49ad1123e80fbf751eac3e72ed0f5ad2ec39e7705f9ee89c77d4826ef5e1066c",
+  "dependencies/MENUS.json": "f4c2fab8569aa682063f904a78b74026535f3a181a3e01bcc7ac23dc5a591275",
+  "source/MANIFEST.sha256": "fb7479b43c6ff18c60860a0fbe12aec9faf2cc4e92d5ae3dc685f958d35a81b3",
+  "source/PROOF.md": "e2ec1174853955ea959d0871285d0a28a3b548beddfe1c3e64b48ee56d2d8923",
+  "source/README.md": "99801086a47dd1901693b0154238c2d0d1314575da4dc32c1a4a5da1b7161ff1",
+  "source/VALIDATION-normal.json": "4e0ceca43b4755067516f82c08213442e7519a093d3a5a312b800fa9872c4b04",
+  "source/VALIDATION-optimized.json": "4e0ceca43b4755067516f82c08213442e7519a093d3a5a312b800fa9872c4b04",
+  "source/verify.py": "557c217ba9d449702f98ee0deddeddc21893344fcf1a2029e45279a26b502f27"
+}

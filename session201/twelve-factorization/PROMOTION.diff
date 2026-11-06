@@ -1,0 +1,62 @@
+--- originals/PROOF.md
++++ PROOF.md
+@@ -1,17 +1,15 @@
+ # Divisor gates and bounded-fiber barriers for the twelve forms
+ 
+-Status: **RESERVED / UNREVIEWED PROOF CANDIDATE**. This note supplies explicit
+-all-order elementary proofs and exact replay controls, but has not received an
+-independent audit. The twelve-template occupancy assertion remains **OPEN**.
++Status: **PROVED, independently audited in the stated scope**. This note supplies
++all-order elementary proofs and exact replay controls. The twelve-template occupancy assertion remains **OPEN**.
+ This is not a larger coverage census and proves no new universal occupancy.
+ 
+ ## 0. Inheritance and scope
+ 
+-The input is the twelve matrices in `../session201-compact-central/MENUS.json`,
+-identical to the independently audited release at
+-`../session201-compact-central-release/session201/compact-central-arithmetic/MENUS.json`.
+-The physical construction and source-bound dependency is the released
+-`dependencies/CORE_PROOF.md`, Sections 2--4, in that same release.
++The input is the twelve matrices in `dependencies/MENUS.json`, copied unchanged
++from the independently audited compact-central-arithmetic release. The physical
++construction and source-bound dependency is the unchanged reviewed
++`dependencies/CORE_PROOF.md`, Sections 2--4.
+ 
+ The source coordinates are always
+ 
+@@ -208,10 +206,10 @@
+ 
+ ## 6. Reproduction and limits
+ 
+-Run from the scratch workspace:
+-
+-    python3 session201-twelve-factorization/verify.py
+-    python3 -O session201-twelve-factorization/verify.py
++Run from this packet directory:
++
++    python3 verify.py
++    python3 -O verify.py
+ 
+ The verifier proves the factorization and its formal classification by exact
+ coefficient/minor calculations. Finite controls independently compare g,
+--- originals/README.md
++++ README.md
+@@ -1,6 +1,6 @@
+ # Two factorized templates and a bounded-fiber obstruction
+ 
+-Unreviewed proof candidate for narrow all-order lemmas, with exact checks.
++Independently audited narrow all-order lemmas, with exact checks.
+ The universal twelve-template occupancy lemma remains OPEN.
+ 
+ - `PROOF.md`: exact divisor criteria for JJZJ and JJZZJ; formal factorization
+--- originals/verify.py
++++ verify.py
+@@ -6,7 +6,7 @@
+ import json
+ 
+ ROOT=Path(__file__).resolve().parent
+-MENU_PATH=ROOT.parent/'session201-compact-central'/'MENUS.json'
++MENU_PATH=ROOT/'dependencies'/'MENUS.json'
+ MENU=json.loads(MENU_PATH.read_text())['5']
+ MATRICES={entry['word']:entry['matrix'] for entry in MENU}
+ 

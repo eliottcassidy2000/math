@@ -1,0 +1,172 @@
+{
+  "bounded_fiber_controls": [
+    {
+      "G": 1,
+      "J_values": 2,
+      "N": 16,
+      "values": 5
+    },
+    {
+      "G": 3,
+      "J_values": 3,
+      "N": 16,
+      "values": 5
+    },
+    {
+      "G": 5,
+      "J_values": 3,
+      "N": 16,
+      "values": 5
+    },
+    {
+      "G": 9,
+      "J_values": 3,
+      "N": 16,
+      "values": 5
+    },
+    {
+      "G": 1,
+      "J_values": 4,
+      "N": 64,
+      "values": 20
+    },
+    {
+      "G": 3,
+      "J_values": 8,
+      "N": 64,
+      "values": 23
+    },
+    {
+      "G": 5,
+      "J_values": 16,
+      "N": 64,
+      "values": 25
+    },
+    {
+      "G": 9,
+      "J_values": 19,
+      "N": 64,
+      "values": 25
+    },
+    {
+      "G": 1,
+      "J_values": 6,
+      "N": 256,
+      "values": 57
+    },
+    {
+      "G": 3,
+      "J_values": 14,
+      "N": 256,
+      "values": 78
+    },
+    {
+      "G": 5,
+      "J_values": 36,
+      "N": 256,
+      "values": 101
+    },
+    {
+      "G": 9,
+      "J_values": 61,
+      "N": 256,
+      "values": 107
+    },
+    {
+      "G": 1,
+      "J_values": 8,
+      "N": 1024,
+      "values": 123
+    },
+    {
+      "G": 3,
+      "J_values": 20,
+      "N": 1024,
+      "values": 201
+    },
+    {
+      "G": 5,
+      "J_values": 55,
+      "N": 1024,
+      "values": 333
+    },
+    {
+      "G": 9,
+      "J_values": 111,
+      "N": 1024,
+      "values": 409
+    }
+  ],
+  "complete_divisor_controls": {
+    "JJZJ": {
+      "ordered_witnesses": 3611,
+      "represented_targets": 786,
+      "targets": 5000
+    },
+    "JJZZJ": {
+      "ordered_witnesses": 1921,
+      "represented_targets": 474,
+      "targets": 5000
+    }
+  },
+  "dyadic_converse_checks": 3328,
+  "exact_source_sum_fibers": 4096,
+  "formal_core_determinants": {
+    "J": 1,
+    "JJ": 0,
+    "JJJ": -2,
+    "JJJJ": 3,
+    "JJJJJ": -1,
+    "JJZJ": 0,
+    "JJZJJ": 0,
+    "JJZZJ": 0,
+    "JOOZJ": 5,
+    "JOZJ": 3,
+    "JOZJJ": -7
+  },
+  "full_factorization_templates": [
+    "JJZJ",
+    "JJZZJ"
+  ],
+  "hostile_J_indices": [
+    7,
+    191317
+  ],
+  "hostile_graph_word": "ZOOOZOZOOZOZOZOZZJOZJ",
+  "hostile_source_profile": [
+    1051865,
+    159305,
+    1243183,
+    159305
+  ],
+  "matrix_count": 12,
+  "physical_g_controls": 65536,
+  "positive_ray_product_coefficients": {
+    "": "2",
+    "J": "4",
+    "JJ": "4",
+    "JJJ": "8",
+    "JJJJ": "16",
+    "JJJJJ": "28",
+    "JJZJ": "12",
+    "JJZJJ": "24",
+    "JJZZJ": "20",
+    "JOOZJ": "32",
+    "JOZJ": "16",
+    "JOZJJ": "28"
+  },
+  "pq_corrections": {
+    "JJZJ": "2/3",
+    "JJZZJ": "4/5"
+  },
+  "prime_divisor_count": 461,
+  "prime_divisor_sieve_limit": 3267,
+  "prime_triple": [
+    2135743,
+    6407227,
+    10678711
+  ],
+  "scope": "Exact scoped lemmas and finite controls only; uniform twelve-template occupancy remains OPEN.",
+  "status": "PASS",
+  "verifier_sha256": "21d4fa2605d757af0b209ff4f53653fee99b75fe50f4914c45afbb985e5e0cef"
+}
