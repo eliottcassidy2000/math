@@ -1,0 +1,71 @@
+{
+  "JZ_avoidance_lengths_checked": 61,
+  "all_recipe_checks": 9841,
+  "complete_core_bounds_checked": 256,
+  "inventory_cover_bound": 1024,
+  "length_bound_at_1024": 14,
+  "normal_form_union_checks": [
+    {
+      "C": 1,
+      "core_profiles": 3,
+      "proven_bound": 4050,
+      "qualifying_profiles": 66,
+      "rebased_parent_counts": 54
+    },
+    {
+      "C": 2,
+      "core_profiles": 8,
+      "proven_bound": 10800,
+      "qualifying_profiles": 66,
+      "rebased_parent_counts": 53
+    },
+    {
+      "C": 3,
+      "core_profiles": 17,
+      "proven_bound": 22950,
+      "qualifying_profiles": 161,
+      "rebased_parent_counts": 104
+    },
+    {
+      "C": 4,
+      "core_profiles": 23,
+      "proven_bound": 31050,
+      "qualifying_profiles": 161,
+      "rebased_parent_counts": 103
+    },
+    {
+      "C": 5,
+      "core_profiles": 36,
+      "proven_bound": 48600,
+      "qualifying_profiles": 289,
+      "rebased_parent_counts": 168
+    },
+    {
+      "C": 8,
+      "core_profiles": 65,
+      "proven_bound": 87750,
+      "qualifying_profiles": 339,
+      "rebased_parent_counts": 192
+    },
+    {
+      "C": 12,
+      "core_profiles": 128,
+      "proven_bound": 172800,
+      "qualifying_profiles": 587,
+      "rebased_parent_counts": 269
+    },
+    {
+      "C": 20,
+      "core_profiles": 278,
+      "proven_bound": 375300,
+      "qualifying_profiles": 1052,
+      "rebased_parent_counts": 345
+    }
+  ],
+  "parent25_minimum_absolute_offset": 5,
+  "parent25_profiles": 2,
+  "profiles": 12100,
+  "proof_sha256": "ccc0f66fbdfc2ed19b5767b8e12ffbbc02dfc7e81d1c3c7ac0307bf21447bf8e",
+  "scope": "all-order proof audited independently; numerical replay verifies finite controls only",
+  "status": "PASS"
+}

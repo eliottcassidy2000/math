@@ -1,0 +1,407 @@
+{
+  "Fibonacci_controls": [
+    {
+      "cumulative": 1,
+      "length": 0,
+      "words": 1
+    },
+    {
+      "cumulative": 4,
+      "length": 1,
+      "words": 3
+    },
+    {
+      "cumulative": 12,
+      "length": 2,
+      "words": 8
+    },
+    {
+      "cumulative": 33,
+      "length": 3,
+      "words": 21
+    },
+    {
+      "cumulative": 88,
+      "length": 4,
+      "words": 55
+    },
+    {
+      "cumulative": 232,
+      "length": 5,
+      "words": 144
+    },
+    {
+      "cumulative": 609,
+      "length": 6,
+      "words": 377
+    },
+    {
+      "cumulative": 1596,
+      "length": 7,
+      "words": 987
+    },
+    {
+      "cumulative": 4180,
+      "length": 8,
+      "words": 2584
+    },
+    {
+      "cumulative": 10945,
+      "length": 9,
+      "words": 6765
+    },
+    {
+      "cumulative": 28656,
+      "length": 10,
+      "words": 17711
+    },
+    {
+      "cumulative": 75024,
+      "length": 11,
+      "words": 46368
+    },
+    {
+      "cumulative": 196417,
+      "length": 12,
+      "words": 121393
+    },
+    {
+      "cumulative": 514228,
+      "length": 13,
+      "words": 317811
+    },
+    {
+      "cumulative": 1346268,
+      "length": 14,
+      "words": 832040
+    },
+    {
+      "cumulative": 3524577,
+      "length": 15,
+      "words": 2178309
+    },
+    {
+      "cumulative": 9227464,
+      "length": 16,
+      "words": 5702887
+    },
+    {
+      "cumulative": 24157816,
+      "length": 17,
+      "words": 14930352
+    },
+    {
+      "cumulative": 63245985,
+      "length": 18,
+      "words": 39088169
+    },
+    {
+      "cumulative": 165580140,
+      "length": 19,
+      "words": 102334155
+    },
+    {
+      "cumulative": 433494436,
+      "length": 20,
+      "words": 267914296
+    },
+    {
+      "cumulative": 1134903169,
+      "length": 21,
+      "words": 701408733
+    },
+    {
+      "cumulative": 2971215072,
+      "length": 22,
+      "words": 1836311903
+    },
+    {
+      "cumulative": 7778742048,
+      "length": 23,
+      "words": 4807526976
+    },
+    {
+      "cumulative": 20365011073,
+      "length": 24,
+      "words": 12586269025
+    },
+    {
+      "cumulative": 53316291172,
+      "length": 25,
+      "words": 32951280099
+    },
+    {
+      "cumulative": 139583862444,
+      "length": 26,
+      "words": 86267571272
+    },
+    {
+      "cumulative": 365435296161,
+      "length": 27,
+      "words": 225851433717
+    },
+    {
+      "cumulative": 956722026040,
+      "length": 28,
+      "words": 591286729879
+    },
+    {
+      "cumulative": 2504730781960,
+      "length": 29,
+      "words": 1548008755920
+    },
+    {
+      "cumulative": 6557470319841,
+      "length": 30,
+      "words": 4052739537881
+    }
+  ],
+  "cover_inventory_bound": 512,
+  "finite_bound_controls": [
+    {
+      "C": 1,
+      "Fibonacci_core_bound": 12,
+      "bounded_core_profiles": 3,
+      "proven_profile_bound": 1638,
+      "qualifying_parent_counts_through_512": 44
+    },
+    {
+      "C": 2,
+      "Fibonacci_core_bound": 88,
+      "bounded_core_profiles": 8,
+      "proven_profile_bound": 4368,
+      "qualifying_parent_counts_through_512": 44
+    },
+    {
+      "C": 3,
+      "Fibonacci_core_bound": 232,
+      "bounded_core_profiles": 17,
+      "proven_profile_bound": 9282,
+      "qualifying_parent_counts_through_512": 80
+    },
+    {
+      "C": 5,
+      "Fibonacci_core_bound": 609,
+      "bounded_core_profiles": 36,
+      "proven_profile_bound": 19656,
+      "qualifying_parent_counts_through_512": 122
+    },
+    {
+      "C": 8,
+      "Fibonacci_core_bound": 1596,
+      "bounded_core_profiles": 65,
+      "proven_profile_bound": 35490,
+      "qualifying_parent_counts_through_512": 138
+    },
+    {
+      "C": 12,
+      "Fibonacci_core_bound": 4180,
+      "bounded_core_profiles": 128,
+      "proven_profile_bound": 69888,
+      "qualifying_parent_counts_through_512": 185
+    }
+  ],
+  "large_exponent_rewrites": 120,
+  "literal_graph_controls": [
+    {
+      "cycles": 1,
+      "paths": 3,
+      "vertices": 3,
+      "word": "J"
+    },
+    {
+      "cycles": 1,
+      "paths": 9,
+      "vertices": 5,
+      "word": "JOJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 5,
+      "vertices": 4,
+      "word": "OJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 9,
+      "vertices": 5,
+      "word": "OJJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 15,
+      "vertices": 6,
+      "word": "OJJJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 53,
+      "vertices": 8,
+      "word": "OJJJOJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 29,
+      "vertices": 7,
+      "word": "OJJOJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 15,
+      "vertices": 6,
+      "word": "OJOJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 25,
+      "vertices": 7,
+      "word": "OJOOJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 5,
+      "vertices": 4,
+      "word": "ZJ"
+    },
+    {
+      "cycles": 1,
+      "paths": 17,
+      "vertices": 6,
+      "word": "ZJOJ"
+    }
+  ],
+  "normal_form_examples": {
+    "OJ": {
+      "bound": 1,
+      "normal_word": "OJ",
+      "profile": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "sidecar": "h",
+      "source_word": "OJ"
+    },
+    "OJJ": {
+      "bound": 1,
+      "normal_word": "OJJ",
+      "profile": [
+        9,
+        4,
+        10,
+        5
+      ],
+      "sidecar": "ell",
+      "source_word": "OJJ"
+    },
+    "OJJOZ": {
+      "bound": 1,
+      "normal_word": "OJJO",
+      "profile": [
+        9,
+        0,
+        20,
+        5
+      ],
+      "sidecar": "h",
+      "source_word": "OJJO"
+    },
+    "OZ": {
+      "bound": 1,
+      "normal_word": "",
+      "profile": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "sidecar": "ell",
+      "source_word": ""
+    },
+    "ZJ": {
+      "bound": 3,
+      "normal_word": "OJ",
+      "profile": [
+        5,
+        1,
+        5,
+        1
+      ],
+      "sidecar": "ell",
+      "source_word": "OJ"
+    },
+    "ZJOZ": {
+      "bound": 3,
+      "normal_word": "OJO",
+      "profile": [
+        5,
+        0,
+        10,
+        1
+      ],
+      "sidecar": "h",
+      "source_word": "OJO"
+    }
+  },
+  "normal_form_reconstructions": 3950,
+  "normal_form_usage": {
+    "OJ": 460,
+    "OJJ": 394,
+    "OJJOZ": 1012,
+    "OZ": 844,
+    "ZJ": 330,
+    "ZJOZ": 910
+  },
+  "parent_fiber_controls": [
+    {
+      "minimum_absolute_one_letter_offset": 1,
+      "parent": 3,
+      "profile_count": 1
+    },
+    {
+      "minimum_absolute_one_letter_offset": 1,
+      "parent": 5,
+      "profile_count": 2
+    },
+    {
+      "minimum_absolute_one_letter_offset": 1,
+      "parent": 9,
+      "profile_count": 4
+    },
+    {
+      "minimum_absolute_one_letter_offset": 1,
+      "parent": 17,
+      "profile_count": 4
+    },
+    {
+      "minimum_absolute_one_letter_offset": 5,
+      "parent": 25,
+      "profile_count": 2
+    },
+    {
+      "minimum_absolute_one_letter_offset": 1,
+      "parent": 33,
+      "profile_count": 5
+    },
+    {
+      "minimum_absolute_one_letter_offset": 1,
+      "parent": 65,
+      "profile_count": 5
+    },
+    {
+      "minimum_absolute_one_letter_offset": 1,
+      "parent": 129,
+      "profile_count": 5
+    },
+    {
+      "minimum_absolute_one_letter_offset": 1,
+      "parent": 257,
+      "profile_count": 5
+    }
+  ],
+  "proof_sha256": "ccc0f66fbdfc2ed19b5767b8e12ffbbc02dfc7e81d1c3c7ac0307bf21447bf8e",
+  "scope": "physical normal forms and bounded-offset obstruction, not target occupancy",
+  "source_profiles": 4353,
+  "status": "PASS; unreviewed author controls"
+}

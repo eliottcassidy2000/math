@@ -1,0 +1,10 @@
+--- originals/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # Bounded binary offsets permit only quadratically logarithmic parent sets
+ 
+-Status: **RESERVED / UNREVIEWED PROOF CANDIDATE**. This is an all-order
++Status: **PROVED / INDEPENDENTLY AUDITED IN THE STATED SCOPE**. This is an all-order
+ obstruction to a specified constructive strategy, not a spectrum theorem.
+ The twelve-template occupancy lemma and every unconditional eventual odd
+ threshold remain **OPEN**.
