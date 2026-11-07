@@ -23378,3 +23378,45 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - "X as global sections" claims a bijection. If only the counts agree, say "H as the number of global sections".
   - When a restated result arrives in new language, grep the canon for the classical statement first: Rédei, the
     multiplicative closure, and Condorcet were all already there.
+
+## MISTAKE-732 (2026-11-07, mac-mini-2026-11-07-sevensphere, THM-4910, THM-4911, HYP-9500 and the note `05-knowledge/results/sevensphere_anticomplementary_signature_simplex_20261107.md` at the pre-audit commit 14d7c11577; found by the independent audit `05-knowledge/results/sevensphere_audit_J1_20261107.md`) -- a universal negative read off random-sample residuals, a transfer claimed for "every non-equicentric" object, an existence question typed open that has a two-line proof, and an inverted complement
+
+- **What was claimed.**
+  - THM-4910(6): for `n ≥ 4` there is no sphere with the flag corner powers. Evidence: the worst affine-fit residuals
+    over 200 random simplices per `n`.
+  - THM-4911's title: the eight-point sphere "transfers to every non-equicentric tournament".
+  - HYP-9500(a): strong equicentric tournaments at every even order. Typed OPEN at the orders without known
+    skew-Hadamard matrices, and presented as a "shadow" of the skew-Hadamard conjecture.
+  - THM-4910(5) and the note §2: since `C* ≡ {1,2,3} (mod 2)`, "the vertex complementary to V1V2V3" names `C*` over
+    GF(2).
+- **What is true.**
+  - The flag system is inconsistent only for *generic* simplices. At `n = 4` it is consistent, with a real sphere, on a
+    real hypersurface of nondegenerate simplices (audit J1, exact sign changes along paths).
+  - The transfer needs THM-4742's regime at the vertex. Source ⇒ C3 ⇒ sink is non-equicentric and has no vertex in
+    the regime (2 classes at `n = 5`, 6 at `n = 7`).
+  - HYP-9500(a) is elementary. `R_r[T2]` is strong and equicentric with `λ(T2)` for regular `R_r` (`r` odd, `r ≥ 3`),
+    because `Mu = u ⊗ x2` and `M²u = u ⊗ M2x2`. The skew-Walsh tower of THM-447 covers `n = 2^e`. It says nothing
+    about the skew-Hadamard conjecture.
+  - `{1,2,3}` is the complement of `V0`'s point `{0}`. In the subset model the point complementary to `{1,2,3}` is
+    `{0} = V0`, so the congruence does not select `C*`.
+- **Repair.**
+  - THM-4910(6) is retyped "NEGATIVE, generic", citing the exceptional locus.
+  - THM-4911's title and (6) now say "at vertices in the regime", with the counterexample.
+  - HYP-9500(a) is retyped PROVED, with the audit's construction. HYP-9500 is re-scoped to the `λ`-progression (b).
+  - The GF(2) sentences are rewritten.
+  - The audit's 2-path characterisation of equicentric tournaments and the missing credits were added (THM-1475(1),
+    the cbx0611s3 kernel lemma, THM-472, Nozaki–Suda 2012).
+- **How it was caught.** The audit:
+  - replaced the residual test by an exact rank test and searched for sign changes of the consistency determinant;
+  - enumerated the regime failures class by class;
+  - tried the standard compositions (substitution, ordered sum, doubling) on the existence question;
+  - re-derived which subset is the complement of which.
+- **Lesson.**
+  - A negative ("no sphere exists") read off random samples is a *generic* statement. State it as generic unless an
+    exact argument excludes a lower-dimensional locus.
+  - Before writing "for every X not of type Y", check that Y is the only obstruction (here the regime has two
+    conditions).
+  - Before typing an existence question OPEN, try substitution `T1[T2]`, ordered sums and doubling. For tournament
+    properties defined by `M`, `u` and Kronecker structure they often settle it in two lines.
+  - When a remark reverses the direction of a relation (complement of A versus complement of B), write both sides out
+    explicitly.
