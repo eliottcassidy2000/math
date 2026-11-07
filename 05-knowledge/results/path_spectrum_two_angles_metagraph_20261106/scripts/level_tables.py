@@ -13,11 +13,16 @@ Prints, for each order n:
 Also the per-order sequence of the minimum h at each level, and of the maximum h at each level."""
 import sys
 from collections import defaultdict
+import gzip, os
+def open_census(path):
+    """open census_<n>.txt, or its gzip-compressed twin census_<n>.txt.gz, as text"""
+    if os.path.exists(path): return open(path)
+    return gzip.open(path + ".gz", "rt")
 D = sys.argv[1]; NMAX = int(sys.argv[2])
 cnt = {}
 for n in range(3, NMAX + 1):
     T = defaultdict(lambda: defaultdict(lambda: [0, 0]))
-    with open(f"{D}/census_{n}.txt") as fh:
+    with open_census(f"{D}/census_{n}.txt") as fh:
         for line in fh:
             a = line.split()
             if a and a[0] == 'T': T[int(a[1])][int(a[2])][int(a[3])] += int(a[4])

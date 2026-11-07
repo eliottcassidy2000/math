@@ -48,6 +48,9 @@ tie-splits from transitive; x = (n³−n)/3 − 8k.)*
 
 ## 5. H (Hamiltonian paths) and the 2-adic tower
 - H = 1 + 2^d hypotenuse formula; tilings·|Aut| = H (LEM-003); H-spectrum per class: kps atlas.
+- **H by level, exact to n = 11** (THM-4889, [packet](../05-knowledge/results/path_spectrum_two_angles_metagraph_20261106/README.md)): level floors φ_n(k) nondecreasing in k; the global floor φ(k) = 1, 3, 5, 9, 11, 15, 23, 33, 41, 51 (k ≤ 9 exact);
+  zone law φ_n(Λ(n−1)+1) > max H(n−1) (values inherited from n−1 live at levels ≤ Λ(n−1), new values above); top-level separation φ_n(Λ(n)) > ψ_n(Λ(n)−1) at n ≤ 10
+  (CONFIRMED at order 11 (φ_11(55) = 91,395 > ψ_11(54) = 89,357: every regular 11-tournament beats every non-regular one) at n = 11); the unattained top band = inter-level gap + top-level sparsity; flips raising c3 raise H in 98 % of cases (n ≤ 9); H(T)/max_v H(T−v) ∈ [1, 5.35]. OPEN laws: HYP-9481.
 - Digit tower: digit 0 constant (Rédei); digit 1 = c3-governed to n = 6, dies n = 7; the locker
   tournament refutation H(D_11) ≡ 3 (THM-865). "The OCF is the Toda tower" (opus-S316).
 
@@ -61,7 +64,7 @@ tie-splits from transitive; x = (n³−n)/3 − 8k.)*
 ## 7. Named gaps (the unmapped aspects)
 1. Corona onset minimality for ALL n (convexity argument to formalize — THM-869).
 2. n = 24 Niemeier selection (THM-872 §4).
-3. Level-width sequences: OEIS status; palindromy break mechanism at n = 6.
+3. Level-width sequences: OEIS status (the n = 7 row is not in OEIS, checked 2026-11-06); palindromy break mechanism at n = 6. Exact widths for n = 9, 10, 11 (classes, strong classes and distinct H per level) are in THM-4889's packet (`data/least_order_1x.txt` tails).
 4. Exact metagraph antichain width at n ≥ 7 (old formula fails; distinct from level width).
 5. A₅ base-monodromy on a NATURAL class fibration (the THM-848 split (H,K) fibre is the candidate).
 6. K(G) for the other odd-relevant groups (Z_q⋊Z₃ multiplier groups; the 16 sedenion classes as a

@@ -1,0 +1,17 @@
+order 3 h 3 level 1 strong 1: 101  scores 1 1 1
+order 4 h 5 level 2 strong 1: 100111  scores 1 2 2 1
+order 5 h 9 level 3 strong 1: 1101111101  scores 3 3 1 2 1
+order 5 h 11 level 4 strong 1: 1100111111  scores 2 3 2 2 1
+order 5 h 15 level 5 strong 1: 1100110111  scores 2 2 2 2 2
+order 6 h 23 level 6 strong 1: 111001111111111  scores 3 4 3 2 2 1
+order 6 h 33 level 7 strong 1: 110001111111101  scores 2 4 3 2 2 2
+order 6 h 41 level 8 strong 1: 110001100111111  scores 2 2 3 3 3 2
+order 7 h 51 level 9 strong 1: 111000111111111111111  scores 3 5 4 3 3 2 1
+order 7 h 69 level 10 strong 1: 111000111111111111101  scores 3 5 4 3 2 2 2
+order 8 h 97 level 11 strong 1: 1110100111111111111111111111  scores 4 6 5 4 4 2 2 1
+order 8 h 107 level 12 strong 1: 1111000111111111111111111111  scores 4 6 5 4 3 3 2 1
+order 8 h 141 level 13 strong 1: 1111000111111111111111111101  scores 4 6 5 4 3 2 2 2
+order 7 h 171 level 14 strong 1: 110010111001110101111  scores 3 3 3 3 3 3 3
+order 9 h 213 level 15 strong 1: 111010001111111111111111111111111111  scores 4 7 6 5 5 3 3 2 1
+order 9 h 227 level 16 strong 1: 111100001111111111111111111111111111  scores 4 7 6 5 4 4 3 2 1
+order 9 h 321 level 17 strong 1: 111100001111111111111111111111111101  scores 4 7 6 5 4 4 2 2 2

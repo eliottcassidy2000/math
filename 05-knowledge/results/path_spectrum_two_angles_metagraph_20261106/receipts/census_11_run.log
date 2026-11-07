@@ -1,0 +1,9 @@
+order 11 wall seconds: 11011
+# order 11: 127976918 tournaments read, 125555422 strong, max h = 93545
+# order 11: 117426923 tournaments read, 114932628 strong, max h = 95095
+# order 11: 124996392 tournaments read, 122565908 strong, max h = 93525
+# order 11: 98233941 tournaments read, 95876844 strong, max h = 93955
+# order 11: 107118190 tournaments read, 104346437 strong, max h = 93721
+# order 11: 88494139 tournaments read, 86533610 strong, max h = 93305
+# order 11: 109573130 tournaments read, 107405784 strong, max h = 93721
+# order 11: 129933615 tournaments read, 127247957 strong, max h = 93573

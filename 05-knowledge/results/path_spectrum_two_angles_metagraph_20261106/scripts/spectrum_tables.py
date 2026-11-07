@@ -12,6 +12,11 @@ Reads census_<n>.txt (n = 3..nmax; lines "T h c3 strong count", "C h hc count") 
   (5) the recorded multiplicity predictions N(10, h) of THM-4744 and the polynomial laws N(n, h)."""
 import sys, re
 from collections import defaultdict
+import gzip, os
+def open_census(path):
+    """open census_<n>.txt, or its gzip-compressed twin census_<n>.txt.gz, as text"""
+    if os.path.exists(path): return open(path)
+    return gzip.open(path + ".gz", "rt")
 D = sys.argv[1]; NMAX = int(sys.argv[2]); ears = sys.argv[3] if len(sys.argv) > 3 else None
 def busch(n):  # Busch's minimum number of Hamiltonian paths of a strong n-tournament (n >= 3)
     if n == 3: return 3
@@ -21,7 +26,7 @@ def busch(n):  # Busch's minimum number of Hamiltonian paths of a strong n-tourn
 cnt = {}; hc = {}
 for n in range(3, NMAX + 1):
     T = defaultdict(lambda: defaultdict(lambda: [0, 0])); C = defaultdict(lambda: defaultdict(int))
-    with open(f"{D}/census_{n}.txt") as fh:
+    with open_census(f"{D}/census_{n}.txt") as fh:
         for line in fh:
             a = line.split()
             if not a: continue
@@ -146,10 +151,12 @@ for n in range(7, NMAX + 1):
 print("\n(6) Hamiltonian cycles: for each order, the least and greatest path count for each cycle count (hc <= 6), and max hc")
 for n in range(5, NMAX + 1):
     C = hc[n]; byhc = defaultdict(list)
+    if not C: print(f"  n = {n}: no cycle counts recorded"); continue
     for h in C:
         for k in C[h]: byhc[k].append(h)
     print(f"  n = {n}: max hc = {max(byhc)}; " + "; ".join(f"hc={k}: [{min(byhc[k])}, {max(byhc[k])}] {len(byhc[k])} values" for k in range(1, 7) if k in byhc))
 print("  the hc <= 2 values at each order (least-order realisers with at most two cycles):")
 for n in range(6, NMAX + 1):
     C = hc[n]; v12 = sorted(h for h in C if 1 in C[h] or 2 in C[h])
+    if not C: continue
     print(f"    n = {n}: {len(v12)} values, {ranges(v12)[:300]}")

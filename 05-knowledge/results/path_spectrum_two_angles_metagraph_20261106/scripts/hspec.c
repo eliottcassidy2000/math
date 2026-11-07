@@ -68,6 +68,19 @@ static int is_strong(void) {
 int main(int argc, char **argv) {
     if (argc < 2) { fprintf(stderr, "usage: hspec n [hc] < gentourng output\n"); return 1; }
     n = atoi(argv[1]); int want_hc = (argc > 2 && !strcmp(argv[2], "hc"));
+    if (argc > 4 && !strcmp(argv[2], "witness")) {   /* hspec n witness h k : print the first tournament with value h at level k */
+        u64 wh = strtoull(argv[3], 0, 10); int wk = atoi(argv[4]); u64 N = 1ULL << n; f = malloc(sizeof(cell) * N * n);
+        char line[1024]; int L0 = n * (n - 1) / 2;
+        while (fgets(line, sizeof line, stdin)) {
+            int L = strlen(line); while (L && (line[L-1] == '\n' || line[L-1] == '\r')) line[--L] = 0; if (L != L0) continue;
+            memset(adj, 0, sizeof adj); memset(radj, 0, sizeof radj); int idx = 0;
+            for (int i = 0; i < n; i++) for (int j = i + 1; j < n; j++) { if (line[idx++] == '1') { adj[i] |= 1ULL << j; radj[j] |= 1ULL << i; } else { adj[j] |= 1ULL << i; radj[i] |= 1ULL << j; } }
+            int c3 = n * (n - 1) * (n - 2) / 6; for (int v = 0; v < n; v++) { int s = __builtin_popcountll(adj[v]); c3 -= s * (s - 1) / 2; }
+            if (c3 != wk) continue;
+            if (count_paths() == wh) { printf("order %d h %llu level %d strong %d: %s  scores", n, wh, wk, is_strong(), line); for (int v = 0; v < n; v++) printf(" %d", __builtin_popcountll(adj[v])); printf("\n"); return 0; }
+        }
+        printf("order %d h %llu level %d: no tournament\n", n, wh, wk); return 1;
+    }
     if (n < 2 || n > 20) { fprintf(stderr, "n out of range\n"); return 1; }
     u64 N = 1ULL << n; f = malloc(sizeof(cell) * N * n); if (!f) { fprintf(stderr, "alloc failed\n"); return 2; }
     u32 *cnt = calloc((size_t)HMAX * C3MAX * 2, sizeof(u32)); if (!cnt) { fprintf(stderr, "alloc failed\n"); return 2; }

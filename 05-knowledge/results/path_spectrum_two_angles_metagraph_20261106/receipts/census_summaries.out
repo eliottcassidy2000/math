@@ -1,0 +1,24 @@
+# order 3: 2 tournaments read, 1 strong, max h = 3
+# max hc = 1
+# distinct h = 2, distinct strong h = 1
+# order 4: 4 tournaments read, 1 strong, max h = 5
+# max hc = 1
+# distinct h = 3, distinct strong h = 1
+# order 5: 12 tournaments read, 6 strong, max h = 15
+# max hc = 3
+# distinct h = 7, distinct strong h = 4
+# order 6: 56 tournaments read, 35 strong, max h = 45
+# max hc = 5
+# distinct h = 19, distinct strong h = 13
+# order 7: 456 tournaments read, 353 strong, max h = 189
+# max hc = 24
+# distinct h = 77, distinct strong h = 67
+# order 8: 6880 tournaments read, 6008 strong, max h = 661
+# max hc = 54
+# distinct h = 320, distinct strong h = 297
+# order 9: 191536 tournaments read, 178133 strong, max h = 3357
+# max hc = 249
+# distinct h = 1520, distinct strong h = 1482
+# order 10: 9733056 tournaments read, 9355949 strong, max h = 15745
+# max hc = 971
+# distinct h = 7663, distinct strong h = 7590
