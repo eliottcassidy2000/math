@@ -1,0 +1,163 @@
+{
+  "reconstructed_file": "coverage2327673.bin.gz",
+  "bytes": 4002651,
+  "sha256": "b0786da688454f1cad753b13ac1ee055c0210a06c67c700fa699e04679537394",
+  "part_size": 131072,
+  "parts": [
+    {
+      "name": "coverage2327673.bin.gz.part000",
+      "bytes": 131072,
+      "sha256": "6d4379809dd1902f58f2e58a49095ea1c106f56aac286f1f59d4db82029b00c6"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part001",
+      "bytes": 131072,
+      "sha256": "c356529936867dceb4bbfd12fc0f6cae578343cff24d81765bab231a6ea73719"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part002",
+      "bytes": 131072,
+      "sha256": "180bd06616287ca3ab2a18320c4fe56fd7f93c3f186373235e4c62b386104461"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part003",
+      "bytes": 131072,
+      "sha256": "3936b117d8275677f6d26bbac7109e98d7abee2172b329cb872ed36ba91f852a"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part004",
+      "bytes": 131072,
+      "sha256": "88827c892a19f27ed227765161aa995acc8ca9edf522615931bf75a4697d3e47"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part005",
+      "bytes": 131072,
+      "sha256": "75689d12c733dfac3aa95cbcb0a510a50ad73a8c4637e061a1f211a6f4825724"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part006",
+      "bytes": 131072,
+      "sha256": "18283992ef566346d97850b78f7971cc2f0fbf510c496174286f7276753f3282"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part007",
+      "bytes": 131072,
+      "sha256": "090e442d68dd7074ab1589f8f530aaa2dd88e5863adfee27d0b891a1016e6703"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part008",
+      "bytes": 131072,
+      "sha256": "280821d1f8c38e8e2c00c41326bcf8da72614b53b2ad3fb008491bd6b61484d9"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part009",
+      "bytes": 131072,
+      "sha256": "2ff09b61c7b472b76025f5bb81f0aea7cece9b21baf6794162be93d430ce692b"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part010",
+      "bytes": 131072,
+      "sha256": "d89051171ab885d52328bee99fa5fb632d24174e5f65545f72181b9ff6dc2024"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part011",
+      "bytes": 131072,
+      "sha256": "bcaa19d39f09328e8277e6573abf59559c38c5c63cd28868913915b0d9668699"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part012",
+      "bytes": 131072,
+      "sha256": "711db056e3ea1e981f3717046492dc94f9c7ffa49100d56198c66639bc7bb538"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part013",
+      "bytes": 131072,
+      "sha256": "e57a0bf4aaacb7b7a1daffa15e60e35dba943d508523c3b64aae704cab933bd3"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part014",
+      "bytes": 131072,
+      "sha256": "b722d82e2ffe0fd90ae26bf1c30592a9afd803bca6b68ab2bf7e8635e249cf45"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part015",
+      "bytes": 131072,
+      "sha256": "d9f8cf7e48fec1045a494644d8dc2536d7ee4dfd6850d890607adaf86f130799"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part016",
+      "bytes": 131072,
+      "sha256": "0659a247baca8cf7b6f2506279d9879e846c9f5a4fe790e93352876567ba4732"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part017",
+      "bytes": 131072,
+      "sha256": "0e00bc8581d471a6768e9fc71d83d174158195390244831eb8b30ae2f7a940fa"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part018",
+      "bytes": 131072,
+      "sha256": "aaab44ea070247772ccf601ea4a2f7ada4ca03db65b6036232806543069fc25d"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part019",
+      "bytes": 131072,
+      "sha256": "cbf7bd83a6fa0eb1180a571eebde309c79ea84601d0ef107b0ac243bf8a0de2e"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part020",
+      "bytes": 131072,
+      "sha256": "d749087829b699e05d6ec1751bdf44485fbd55fd505fd326440e072c3f88cbf0"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part021",
+      "bytes": 131072,
+      "sha256": "3d398539bc6d538c8f277b1fa3dd582990b9b0256d9cb1fba6350da5fdd62814"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part022",
+      "bytes": 131072,
+      "sha256": "475ec923a6d12d96df4826d5569f991b836db774f0cd4920ec226d0a65c05e22"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part023",
+      "bytes": 131072,
+      "sha256": "ae82c9d4e77b138fe62e04a17c5cd120ed64a3172b9105b22710d7abe598234e"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part024",
+      "bytes": 131072,
+      "sha256": "b93e21affb065f1f50123ed97b057b66329e7601ca2eb21be376b2c833ed3e0a"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part025",
+      "bytes": 131072,
+      "sha256": "c4dcc7a05d942d5fd138dfebed6190f8d416533cdc859e739d7498bae55b9626"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part026",
+      "bytes": 131072,
+      "sha256": "05dd243278a12e402f1b00f2a12f218e47ec279ae10eaeb77c8ab5680f9c4e9c"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part027",
+      "bytes": 131072,
+      "sha256": "fe4cf5397a3b7261628d88e021e382eb5f41d2a82445e9966a1e64fc13aba805"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part028",
+      "bytes": 131072,
+      "sha256": "a754731cebbf5d8ebfc526f22b952c2824eb6194ad577fba1a492eb6a61cc52d"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part029",
+      "bytes": 131072,
+      "sha256": "b5512ecc9fed287153ae600d917943844fc6cd4e88c7d875d2cd5d67d0c79017"
+    },
+    {
+      "name": "coverage2327673.bin.gz.part030",
+      "bytes": 70491,
+      "sha256": "42ae2480e8ac51da7458b9586069a08b5e84a7f4fe38e038e510a015922f7af5"
+    }
+  ]
+}

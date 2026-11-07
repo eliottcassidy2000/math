@@ -1,0 +1,6 @@
+#define main census_main
+#include "census.cpp"
+#undef main
+#include <random>
+uint64_t H(const vector<int>&w){State s={};s[0]=s[27]=1;for(int m:w){State q={};for(int i=0;i<54;i++)if(s[i])for(int j=0;j<degree[m][i];j++)q[dest[m][i][j]]+=s[i];s=q;}uint64_t h=0;for(int i=0;i<54;i++)if(accept[i])h+=s[i];return h;}
+int main(int argc,char**argv){uint64_t target=argc>1?strtoull(argv[1],0,10):2327675;int n=argc>2?atoi(argv[2]):15;init();mt19937 rng(216);uint64_t best=UINT64_MAX,calls=0;for(int restart=0;restart<100000;restart++){vector<int>w(n);for(int &m:w)m=rng()%4;for(int round=0;round<30;round++){uint64_t h=H(w);calls++;uint64_t err=h>target?h-target:target-h;if(err==0){cout<<"target "<<target<<" word ";for(int m:w)cout<<m;cout<<" calls "<<calls<<" restart "<<restart<<"\n";return 0;}if(err<best){best=err;cerr<<"best "<<best<<" at "<<calls<<"\n";}int bi=-1,bm=-1;for(int i=0;i<n;i++){int old=w[i];for(int m=0;m<4;m++){if(m==old)continue;w[i]=m;uint64_t g=H(w);calls++;uint64_t e=g>target?g-target:target-g;if(e<err){err=e;bi=i;bm=m;}}w[i]=old;}if(bi<0){for(int t=0;t<2;t++)w[rng()%n]=rng()%4;}else w[bi]=bm;}}cout<<"INCOMPLETE target "<<target<<" calls "<<calls<<" nearest_error "<<best<<"\n";}

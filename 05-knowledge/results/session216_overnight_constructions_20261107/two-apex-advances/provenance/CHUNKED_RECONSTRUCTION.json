@@ -1,0 +1,8 @@
+{
+  "parts": 31,
+  "bytes": 4002651,
+  "sha256": "b0786da688454f1cad753b13ac1ee055c0210a06c67c700fa699e04679537394",
+  "byte_equal_to_original": true,
+  "decompressed_bytes": 9310696,
+  "certificate_check_receipt_sha256": "d707500ab459d48456dda4da6e475f1fc82ae7e59b9b573a43cf0305e42a87f5"
+}

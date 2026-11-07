@@ -1,0 +1,4 @@
+#define main certificate_main
+#include "check.cpp"
+#undef main
+int main(){init();int nonzero=0,pure=0;for(int n=0;n<=6;n++)for(int x=0;x<(1<<(2*n));x++){vector<int>w;for(int j=0;j<n;j++)w.push_back((x>>(2*j))&3);for(int cut=0;cut<=n;cut++)for(int c=0;c<4;c++){uint64_t f[3];for(int m=1;m<=3;m++){auto z=w;z.insert(z.begin()+cut,m,c);f[m-1]=H(z);}int64_t a=(int64_t(f[2])-3*int64_t(f[1])+2*int64_t(f[0]))/6,b=(4*int64_t(f[1])-int64_t(f[2])-3*int64_t(f[0]))/2;if(a){nonzero++;if(!b)pure++;}}}cout<<"nonzero="<<nonzero<<" pure="<<pure<<"\n";string p[]={"1122","11022","220"},s[]={"1","1","322"};int c[]={0,0,1},a[]={60,120,72},b[]={-1,1,1};int checks=0;for(int i=0;i<3;i++)for(int m=0;m<=4;m++){vector<int>w;for(char j:p[i])w.push_back(j-'0');w.insert(w.end(),m,c[i]);for(char j:s[i])w.push_back(j-'0');uint64_t ex=a[i];for(int j=0;j<m;j++)ex*=3;ex+=b[i];if(subset(w)!=ex||H(w)!=ex)return 2;checks++;}cout<<"independent_formula_subset_checks="<<checks<<"\n";}

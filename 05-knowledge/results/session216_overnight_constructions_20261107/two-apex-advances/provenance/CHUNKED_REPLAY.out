@@ -1,0 +1,11 @@
+Reconstructed 4002651 bytes, SHA256 b0786da688454f1cad753b13ac1ee055c0210a06c67c700fa699e04679537394
+Full census receipt and complete packed certificate match
+records=2327674 checked=1163835 subset=297 boundary_transfer=2327675 boundary_DP=2327675
+nonzero=70538 pure=578
+independent_formula_subset_checks=15
+Independent subset-DP checks passed: 1
+global_map_wrappers.out semantic receipt matches
+two_letter_wrappers.out semantic receipt matches
+ternary_global_wrappers.out semantic receipt matches
+ternary_modes.out semantic receipt matches
+verify_modes.out semantic receipt matches

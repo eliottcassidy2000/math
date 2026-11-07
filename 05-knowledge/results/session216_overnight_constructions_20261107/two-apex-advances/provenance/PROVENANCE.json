@@ -1,0 +1,39 @@
+{
+  "source_directory": "session216-inverse",
+  "baseline_published_checkpoint": "94e3ca9e",
+  "source_manifest_sha256": "de1b23418d6b671b3972077eb35adb8f3d7b4ce59ff318890b76ae9032dec370",
+  "copied_payload": [
+    "ADVANCES.md",
+    "PROOF.md",
+    "probe.py",
+    "census.cpp",
+    "census_depths.cpp",
+    "census12.out",
+    "census14.out",
+    "census14full.out",
+    "coverage2327673.bin.gz",
+    "audit.cpp",
+    "audit_large.py",
+    "audit_large.out",
+    "find_target.cpp",
+    "find_target.out",
+    "find_target.log",
+    "find_target_audit.out",
+    "global_map_wrappers.py",
+    "global_map_wrappers.out",
+    "two_letter_wrappers.py",
+    "two_letter_wrappers.out",
+    "ternary_global_wrappers.py",
+    "ternary_global_wrappers.out",
+    "ternary_modes.py",
+    "ternary_modes.out",
+    "verify_modes.py",
+    "verify_modes.out"
+  ],
+  "payload_changes": [
+    "ADVANCES.md: wording and executable command/byte-order clarification only"
+  ],
+  "baseline_helpers": "All required baseline helpers (probe.py, census.cpp, audit.cpp) already occur in the approved payload manifest. No additional baseline payload is needed.",
+  "independent_audit": "audit/SHA256SUMS",
+  "excluded": "Raw 9,310,696-byte certificate, raw16,000,004-byte full census, compiled binaries, and Python cache files."
+}

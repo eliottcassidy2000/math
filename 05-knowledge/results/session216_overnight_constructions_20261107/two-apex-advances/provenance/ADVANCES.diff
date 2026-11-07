@@ -1,0 +1,40 @@
+--- ADVANCES.original.md
++++ ADVANCES.md
+@@ -31,7 +31,9 @@
+ first100 omissions; missing_count=139132 counts all odd omissions up to4m.
+ It records1,860,868 attained odds in that full range. `coverage2327673.bin.gz`
+ contains the complete initial-range certificate in little-endian32-bit format.
+-There is one record for each h=0,...,2327673. Value0xffffffff means absent.
++There is one record for each h=0,...,2327673. The shipped certificate is
++explicitly little-endian. The census C++ binary writer uses host byte order;
++the supplied binary-comparison replay therefore requires a little-endian host. Value0xffffffff means absent.
+ Otherwise the high four bits store length n; successive low two-bit pairs
+ store the mask letters in increasing chain order. Hence every claimed odd
+ has a literal graph, not merely a numerical coverage bit.
+@@ -53,10 +55,13 @@
+ independently checked. Mathematical exhaustiveness comes from the complete
+ word traversal, not sample extrapolation.
+ 
+-Reproduce from this directory:
++Reproduce the census from this directory on a little-endian host
++(full certificate checks and temporary-file cleanup: run `sh replay.sh`):
+ 
+     g++ -O3 -std=c++17 census_depths.cpp -o /tmp/session216-census-depths
+-    /tmp/session216-census-depths 14 4000000 census14full.bin
++    /tmp/session216-census-depths 14 4000000 /tmp/session216-census14full.bin > /tmp/session216-census14full.out
++    cmp census14full.out /tmp/session216-census14full.out
++    gzip -cd coverage2327673.bin.gz > /tmp/session216-coverage.bin
+     g++ -O3 -std=c++17 audit.cpp -o /tmp/session216-inverse-audit
+     echo '2327675 120021002033010' | /tmp/session216-inverse-audit
+ 
+@@ -84,6 +89,10 @@
+   same context range:18,441 first-value candidates,4 singleton-compatible
+   candidates, none survives length<=3. Code:ternary_global_wrappers.py.
+ 
++The first-value and singleton-compatible counts above count context/wrapper
++choices before enumerating their compatible letter maps, not individual map
++actions. All compatible maps are then tested.
++
+ These are bounded hostile tests. They neither rule out larger contexts nor
+ larger wrappers, context changes, richer control, higher apex count, or a
+ non-regular language. No exact infinite-word equivalence was promoted, since

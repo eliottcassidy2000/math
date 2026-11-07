@@ -1,0 +1,86 @@
+--- unchunked/ADVANCES.md
++++ chunked/ADVANCES.md
+@@ -29,8 +29,8 @@
+ 
+ The raw record is `census14full.out`. Its missing_odds list gives only the
+ first100 omissions; missing_count=139132 counts all odd omissions up to4m.
+-It records1,860,868 attained odds in that full range. `coverage2327673.bin.gz`
+-contains the complete initial-range certificate in little-endian32-bit format.
++It records1,860,868 attained odds in that full range. `coverage2327673.bin.gz` (reconstructed losslessly from the parts in
++`certificate/`, see README.md) contains the complete initial-range certificate in little-endian32-bit format.
+ There is one record for each h=0,...,2327673. The shipped certificate is
+ explicitly little-endian. The census C++ binary writer uses host byte order;
+ the supplied binary-comparison replay therefore requires a little-endian host. Value0xffffffff means absent.
+@@ -61,7 +61,8 @@
+     g++ -O3 -std=c++17 census_depths.cpp -o /tmp/session216-census-depths
+     /tmp/session216-census-depths 14 4000000 /tmp/session216-census14full.bin > /tmp/session216-census14full.out
+     cmp census14full.out /tmp/session216-census14full.out
+-    gzip -cd coverage2327673.bin.gz > /tmp/session216-coverage.bin
++    python3 reconstruct_certificate.py /tmp/session216-coverage2327673.bin.gz
++    gzip -cd /tmp/session216-coverage2327673.bin.gz > /tmp/session216-coverage.bin
+     g++ -O3 -std=c++17 audit.cpp -o /tmp/session216-inverse-audit
+     echo '2327675 120021002033010' | /tmp/session216-inverse-audit
+ 
+--- unchunked/replay.sh
++++ chunked/replay.sh
+@@ -7,7 +7,8 @@
+ g++ -O3 -std=c++17 census_depths.cpp -o "$tmp/census"
+ "$tmp/census" 14 4000000 "$tmp/census.bin" > "$tmp/census.out"
+ cmp census14full.out "$tmp/census.out"
+-gzip -cd coverage2327673.bin.gz > "$tmp/coverage.bin"
++python3 reconstruct_certificate.py "$tmp/coverage2327673.bin.gz"
++gzip -cd "$tmp/coverage2327673.bin.gz" > "$tmp/coverage.bin"
+ python3 - "$tmp" <<'PY'
+ from pathlib import Path
+ import sys
+--- unchunked/RELEASE_REVIEW.md
++++ chunked/RELEASE_REVIEW.md
+@@ -1,35 +1,26 @@
+-# Portable release review
++# Chunked transport release review
+ 
+-Scope: approved Session216 post-freeze inverse advances, independently audited. Mathematical claims and executable research sources are unchanged. No ambient coverage extension, all-odd theorem, or unrestricted minimum-order claim is made.
++Verdict: packaging-only variant of the independently audited Session216 advance release. Mathematical source programs, numerical receipts, independent checker programs, and certificate contents are unchanged. The complete original gzip is represented by31 ordered binary parts; it is intentionally absent as a standalone file.
+ 
+-## Contents and provenance
++Original release manifest SHA256:
++7e0fc606963ebc2f7a7305b5f24d14fa5cc33711b1127243be4715b06095413c
+ 
+-Every payload file named in provenance/ADVANCE_FILES.txt is present. Except ADVANCES.md, each is byte-identical to the source verified by provenance/ADVANCE_SHA256SUMS. The original audited ADVANCES.md is preserved as provenance/ADVANCES.original.md; provenance/ADVANCES.diff records all wording changes. The only changes clarify map-counter units, binary endianness, and executable replay commands. Existing baseline helpers required by the programs are already in the approved list. audit/ contains the independent audit and essential reproducibility sources/receipts. There are no compiled binaries or uncompressed census/certificate files in this release.
++Original gzip SHA256:
++b0786da688454f1cad753b13ac1ee055c0210a06c67c700fa699e04679537394
+ 
+-Exact SHA256 pins:
++Parts000..029 each contain131,072 bytes; part030 contains70,491 bytes. Reconstruction totals4,002,651 bytes. The ordered certificate/MANIFEST.json records hashes for each part and for the original gzip. Its own hash and all other release-file hashes are recorded by the current SHA256SUMS.
+ 
+-- Original ADVANCES.md:54c5ea097e542b55e7738b7c3cbf3932f5fe4966f1d7bc809a24e01d7ce2aac5
+-- Revised ADVANCES.md:5afc94df68ec8e8e4199d29557ba4a3d42a35dc2bc24c002f40ade031b53810a
+-- coverage2327673.bin.gz:b0786da688454f1cad753b13ac1ee055c0210a06c67c700fa699e04679537394
+-- Original ADVANCE_SHA256SUMS:de1b23418d6b671b3972077eb35adb8f3d7b4ce59ff318890b76ae9032dec370
++Verification used independent shell concatenation, SHA256 comparison, and byte comparison against the original unchunked gzip. The reconstruction was decompressed and the independent certificate checker rerun: all1,163,835 saved witnesses agree with the compressed36-coordinate transfer;297 sampled certificate witnesses agree with independent subset DP; the boundary witness agrees with both. The exact checker receipt is provenance/CHUNKED_CERTIFICATE_CHECK.out.
+ 
+-The certificate is4,002,651 compressed bytes and decompresses to9,310,696 bytes. It stores2,327,674 explicitly little-endian uint32 records. Valid records encode length in the top4 bits and increasing-order letters in successive low2-bit pairs;0xffffffff denotes absence. The census C++ writer and independent C++ reader use native-endian words. The replay script explicitly rejects a big-endian host rather than silently misreading the certificate. On such a host explicit byte conversion would be required.
++The updated replay.sh reconstructs only in temporary space, verifies hashes before decompression, compares the complete certificate against the full census, and runs the mode and probe controls. README.md gives both the full replay and certificate-only commands. Native binary C++ readers/writers require little-endian hosts, checked by the full replay script.
+ 
+-## Verification and commands
++Historical unchunked provenance is retained for traceability. Its references to a directly stored gzip do not describe this variant. provenance/PACKAGING.diff records changes to existing text/script files; provenance/PACKAGING_CHANGES.json enumerates added, removed and changed files. The unchunked review is preserved at provenance/UNCHUNKED_RELEASE_REVIEW.md. No general completeness or exhaustive per-witness subset-DP claim has been introduced.
+ 
+-From the release directory run:
++Current integrity commands:
+ 
+     sha256sum -c SHA256SUMS
+     sh replay.sh
+ 
+-Required tools: POSIX shell, g++ with C++17, Python3 standard library, gzip, cmp, mktemp. No network, external package, or user credentials are needed. The replay writes its large intermediate data and compiled programs only into an automatically cleaned temporary directory. It checks the exact full-depth14 census receipt, byte-exact equality of the full initial-range certificate, every saved witness with the independent36-coordinate transfer,297 sampled certificate witnesses by independent subset DP, the boundary repair by independent subset DP, the independent mode census and15 mode subset-DP checks, and all bounded map-probe/mode receipts. Timings are excluded only when comparing receipt fields containing elapsed seconds.
++The release contains no compiled binaries, uncompressed census data, or redundant original gzip. Nothing was edited in the staging repository or published by this packaging task.
+ 
+-The complete certificate has1,163,835 witnesses. All were checked by the independent36-coordinate transfer; only297 sampled certificate witnesses were checked by subset DP. The boundary word and15 formula values were additionally checked by subset DP. No exhaustive per-witness subset-DP claim is intended.
+-
+-The historical audit_large.out remains a receipt for1,200 sampled witnesses from the earlier cap1,000,000 run, not from this certificate. Its raw input is intentionally omitted. To replay that historical sample separately, compile census.cpp, run with arguments14 1000000 and an absolute output path, compile audit.cpp specifically to /tmp/session216-inverse-audit as required by audit_large.py, then pass that absolute census path to audit_large.py. The main replay does not depend on this historical receipt or its hard-coded helper path.
+-
+-The included audit report establishes finite exact coverage through2,327,673 except7,21 and verifies the first extra gap2,327,675 at chain length<=14. The15-letter repair proves minimum chain length15 in this precise two-apex class only. All pure-mode formulas use the inherited homogeneous-spectrum proof, with m=0 checked separately. Map probes are finite restricted-action tests only.
+-
+-SHA256SUMS is the authoritative release manifest. RELEASE_FILES.txt lists all manifested payload, audit, documentation, and provenance files; the SHA256SUMS file itself is excluded to avoid circular hashing. The preserved source manifest is historical and should not be applied directly to the revised release root.
+-
+-Release-local end-to-end replay completed successfully. Its exact transcript is provenance/REPLAY.out. All independent audit source hashes also pass.
++The chunked release full replay completed successfully; see provenance/CHUNKED_REPLAY.out.

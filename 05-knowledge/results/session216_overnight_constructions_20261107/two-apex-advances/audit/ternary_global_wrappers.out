@@ -1,0 +1,14 @@
+{
+  "seed_max_length": 6,
+  "alphabet_size": 4,
+  "insertion_max_length": 2,
+  "test_depth": 3,
+  "counts": [
+    18441,
+    4,
+    0,
+    0
+  ],
+  "survivors": [],
+  "seconds": 3.924842357635498
+}

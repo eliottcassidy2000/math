@@ -1,0 +1,8 @@
+{
+  "file": "census14.bin",
+  "found": 499998,
+  "checked": 1200,
+  "seed": 216,
+  "audit_stdout": "Independent subset-DP checks passed: 1200",
+  "largest_checked": 999999
+}

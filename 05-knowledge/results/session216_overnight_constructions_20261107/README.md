@@ -42,6 +42,18 @@ If A(X) counts distinct tournament Hamiltonian-path counts at most X, then for e
 
 The proof optimizes the splitting parameter in the inherited THM-4887 strip estimate. It improves the previous asymptotic logarithmic loss from power1 to power2/3; the power exponent2/3 is unchanged. The corresponding exact-energy bound is7.3*2^(4n/3)*n^(2/3) for n>=12. This does not prove linear energy, positive density, density one or completeness. An algebraic typo in the bound-only optimality discussion was repaired and preserved with its audit lineage; headline constants are unchanged.
 
+## 5. Complete two-apex census and ternary rays
+
+[Certificate, proof and replay](two-apex-advances/README.md), [independent audit](two-apex-advances/audit/AUDIT.md), [release review](two-apex-advances/RELEASE_REVIEW.md).
+
+Every odd count through2,327,673 other than7 and21 is realized by a literal two-apex tournament on at most16 vertices. The complete mask-word census through14 chain vertices has first additional omission2,327,675; the explicit15-letter word120021002033010 realizes that boundary count. This establishes the minimum chain length for that target within this fixed class, not minimum tournament order globally. It does not improve the earlier unrestricted range.
+
+The retained certificate contains1,163,835 explicit words. All were checked by an independent36-coordinate transfer;297 certificate entries and the boundary repair were independently checked by subset DP. The full357,913,941-node census was independently rerun. Lossless certificate parts reconstruct the original gzip with exact hashes.
+
+Three exact all-length ternary families are60*3^m-1,120*3^m+1 and72*3^m+1 for m>=0. Bounded global-map and wrapper probes do not yield a digit induction. Their scopes are stated explicitly in the proof packet.
+
+Published [checkpoint2](https://github.com/eliottcassidy2000/math/commit/a1ff23f5b22dcacf6bcc5b6d6b71a25683b1b7e2) contains Sections2–4.
+
 ## Continuing obligation
 
 Further work tests source synchronization, richer two-apex constructions and interval-width amplification. The missing step is an all-target physical construction or proved occupancy theorem. Finite certificates, a fixed-width interval family and analytic support bounds are separate kinds of progress and do not supply that step by themselves.

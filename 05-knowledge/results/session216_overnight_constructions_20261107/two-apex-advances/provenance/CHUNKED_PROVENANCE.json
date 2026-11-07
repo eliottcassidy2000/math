@@ -1,0 +1,10 @@
+{
+  "source_release": "session216-advance-release",
+  "source_release_manifest_sha256": "7e0fc606963ebc2f7a7305b5f24d14fa5cc33711b1127243be4715b06095413c",
+  "original_gzip_sha256": "b0786da688454f1cad753b13ac1ee055c0210a06c67c700fa699e04679537394",
+  "original_gzip_bytes": 4002651,
+  "chunk_bytes": 131072,
+  "part_count": 31,
+  "last_part_bytes": 70491,
+  "changes": "Only lossless certificate transport packaging, reconstruction helper, and packaging/replay documentation. Mathematical code and receipts unchanged. Original gzip is not stored in this variant. Historical unchunked provenance is retained and explicitly superseded for packaging only."
+}
