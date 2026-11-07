@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "binary_word_tests": 16383,
+  "alternating_words": 40,
+  "core_padding_tests": 327760,
+  "run_count_tests": 120,
+  "coverage_claim": false
+}

@@ -1,0 +1,13 @@
+CORE_STATES.txt
+PROOF.md
+README.md
+VERIFY.json
+audit/CORE_STATES.txt
+audit/ENTROPY_CHECK.json
+audit/FROZEN_PROOF.md
+audit/ORIGINAL_INPUT_SHA256.txt
+audit/REVIEW.md
+audit/check_entropy.py
+verify.py
+SHA256SUMS
+PUBLICATION_FILES.txt

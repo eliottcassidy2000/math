@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "compiler": "g++ -std=c++17 -O1 -g -fsanitize=undefined -fno-sanitize-recover=all",
+  "complete_support_controls": [
+    1,
+    3000
+  ],
+  "additional_targets": [
+    4295971,
+    9948407,
+    1000000007,
+    1000000000039,
+    392,
+    1568,
+    6272
+  ],
+  "ubsan_findings": 0,
+  "large_witnesses_verified_by": "independent Python arbitrary-precision formula"
+}

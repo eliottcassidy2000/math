@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "binary_words": 8191,
+  "core_product_cases": 76880,
+  "alternating_runs_checked": 100,
+  "max_word_length": 12,
+  "run_count_formula": "exact histogram agreement"
+}

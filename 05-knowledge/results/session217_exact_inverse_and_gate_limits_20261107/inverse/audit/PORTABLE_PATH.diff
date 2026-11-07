@@ -1,0 +1,11 @@
+--- original/check_final_cpp.py
++++ audit/check_final_cpp.py
+@@ -5,7 +5,7 @@
+ a=runpy.run_path(str(D/'audit.py'))
+ base=list(range(1,3001))
+ large=[4295971,9948407,1000000007,1000000000039,392,1568,6272]
+-raw=subprocess.check_output(['/tmp/session217_inverse_audit_ubsan',str(root/'session217-audit/CORE_STATES.txt')]+list(map(str,base+large)),text=True)
++raw=subprocess.check_output(['/tmp/session217_inverse_audit_ubsan',str(D.parent/'CORE_STATES.txt')]+list(map(str,base+large)),text=True)
+ rows=list(map(json.loads,raw.splitlines()))
+ for d in rows:
+  n=d['N']

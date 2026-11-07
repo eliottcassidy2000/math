@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "all_targets_checked": [
+    1,
+    3000
+  ],
+  "independent_exhaustive_parameter_choices": 29952,
+  "represented_targets": 1490,
+  "small_literal_subset_dp_graphs": 60,
+  "large_formula_and_strongness_checks": 9,
+  "omissions47and63": "ABSENT_FROM_GRAMMAR after complete all-length search",
+  "caveat": "Large graph counts use the inherited proved construction formula, not subset DP."
+}

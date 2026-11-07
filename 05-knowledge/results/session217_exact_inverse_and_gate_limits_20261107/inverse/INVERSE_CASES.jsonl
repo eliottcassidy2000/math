@@ -1,0 +1,14 @@
+{"N":1,"status":"ABSENT_FROM_GRAMMAR","branches":0,"tests":0}
+{"N":7,"status":"ABSENT_FROM_GRAMMAR","branches":80,"tests":80}
+{"N":21,"status":"ABSENT_FROM_GRAMMAR","branches":560,"tests":560}
+{"N":23,"status":"FOUND","branches":4,"tests":4,"core":3,"P":0,"R":0,"b":0}
+{"N":47,"status":"ABSENT_FROM_GRAMMAR","branches":568,"tests":560}
+{"N":63,"status":"ABSENT_FROM_GRAMMAR","branches":584,"tests":560}
+{"N":65,"status":"FOUND","branches":26,"tests":26,"core":25,"P":0,"R":0,"b":0}
+{"N":265,"status":"FOUND","branches":993,"tests":1005,"core":52,"P":0,"R":0,"b":3}
+{"N":287,"status":"FOUND","branches":734,"tests":753,"core":19,"P":0,"R":5,"b":3}
+{"N":1237,"status":"FOUND","branches":352,"tests":414,"core":63,"P":6,"R":1,"b":1}
+{"N":4295971,"status":"FOUND","branches":76094,"tests":88372,"core":9,"P":1986,"R":15,"b":6}
+{"N":9948407,"status":"FOUND","branches":165110,"tests":180387,"core":52,"P":1466,"R":61,"b":6}
+{"N":1000000007,"status":"FOUND","branches":149673,"tests":170345,"core":57,"P":7504040,"R":0,"b":0}
+{"N":1000000000039,"status":"FOUND","branches":62690,"tests":67340,"core":0,"P":16231501406,"R":0,"b":0}

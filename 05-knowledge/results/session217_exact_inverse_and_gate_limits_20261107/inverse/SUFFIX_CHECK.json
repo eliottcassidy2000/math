@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "fixed_suffix_inverse_tests": 4400,
+  "b_max": 10,
+  "h": [
+    5,
+    9
+  ],
+  "note": "Synthetic coordinate controls, not graph census."
+}

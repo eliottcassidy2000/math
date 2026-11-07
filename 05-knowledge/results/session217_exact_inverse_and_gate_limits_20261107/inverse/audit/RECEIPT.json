@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "all_targets": [
+    1,
+    1500
+  ],
+  "compared": "entire recipe sets; exact all-length alpha-pruned brute",
+  "core_states": 80,
+  "brute_recipe_total": 8366,
+  "extra_targets": 106,
+  "extra_bound": 10000,
+  "includes_even_targets": true,
+  "omissions_47_63": true
+}
