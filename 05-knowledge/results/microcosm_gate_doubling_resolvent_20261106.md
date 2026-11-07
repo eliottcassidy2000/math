@@ -128,6 +128,12 @@ relativistic sum, F_(A⇒B) = (F_A + F_B)/(1 + F_A F_B), of the responses of the
 
 - Checked on every isomorphism class of orders 4–7 at total order 401, with residuals at most 1.7e-6 against
   ρ ≈ 2e-4, and to total order 1201 for six cores.
+- **The tower is a diffusion** (PROVED, HYP-9490 Lemma A). The gate operator L is adjoint, under
+  ⟨P, Φ⟩ = [P(∂)Φ](0), to the Sturm–Liouville operator M = ∂² + 2 sinh(y)∂ = e^(−2 cosh y)∂e^(2 cosh y)∂. So
+  H(Γ^r T) = [P_T(∂)·M^r e^y](0).
+  - Macrocosm: one diffusion applied r times to e^y.
+  - Microcosm: the core's cover polynomial, read as a differential operator at the origin.
+- The weights are monotone (Lemma B), and part (a) of the conjecture implies the rest (Corollary C).
 - The one-vertex tower's path counts 1, 3, 15, 123, 1479, 23955, 496479, 12725547, 393325815 have c3 = k². They are
   not in OEIS (checked 2026-11-06; the one-defect counts 0, 18, 372, 7686, 185064 are not in OEIS either).
 
@@ -238,14 +244,16 @@ permutohedron).
 | Least orders 7, 8 for HC = 7, 21 | KNOWN (THM-4889, Session212); class counts 24, 228 FINITE-EXACT here |
 | Permutohedral face formula for A_Γ(T) | PROVED + FINITE-EXACT; KNOWN in content (Session210 operator) |
 | HYP-9490: macro forgetting up to cyclic triangles | OPEN; FINITE-EXACT evidence |
+| Diffusion form H(Γ^r T) = [P_T(∂) M^r e^y](0); weight monotonicity; (a) ⇒ (b) | PROVED (HYP-9490 Lemmas A–C) |
 | x+2 / x·2 mod 7 = F21 = Aut(QR7), the cyclic Fano symmetry | STRUCTURAL |
 | Links of F21 to the gaps 7, 21; φ³ = THM-224's eigenvalue; 7-vertex tower φ = 21/5 | NUMEROLOGY / COINCIDENCE |
 
 ## 7. Next obligations
 
 - **HYP-9490.**
-  - Prove ρ_(d,r) → 0 from the walk representation of the value recursion.
-  - Fix the rate: the data suggest (log N)²/N².
+  - Prove ρ_(d,r) → 0 from the walk representation, or from the diffusion M of Lemma A. Everything else then follows.
+  - Fix the rate: the data suggest (log N)²/N², but the normalised value is still drifting (0.90 → 0.86 over
+    N = 243 → 1201).
   - Test the second order (sw_2) at N = 4001 with a C value recursion.
 - **A face formula for D.** The skew-Sylvester double of a word over V has twin letters. Starting from Session211's
   affine reflected section, is there a face-sum description of the full A_(D T)(x)?
@@ -259,7 +267,7 @@ permutohedron).
 
 `04-computation/experiments/microcosm_gate_resolvent_20261106/`:
 - **THM-4900:** `gate_basics.py`, `gate_resolvent_exact.py`, `tower_limits.py`, `tower_spectrum.py`, `tower_ocf.py`.
-- **HYP-9490:** `cover_tower_values.py`, `c3_first_order_law.py`.
+- **HYP-9490:** `cover_tower_values.py`, `c3_first_order_law.py`, `tower_weights_diffusion.py` (Lemmas A–C).
 - **Section 4:** `gate_descent_face_formula.py`.
 - **Data:** `tower_k1_paths.c`, `gated_spectrum.c`, `phi_strong_minimum.py`, `hc_gate_free.c`.
 - **`run_all.sh`** reproduces every output (`.out` files committed).

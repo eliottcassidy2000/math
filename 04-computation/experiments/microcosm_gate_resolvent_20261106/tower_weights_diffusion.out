@@ -1,0 +1,22 @@
+(ii) diffusion form d^e[M^r e^y](0) = U_(e,r) for r <= 30, e <= 12: mismatches = 0
+(iii) violations of U_(e,r) <= U_(e+2,r): 0;  of U_(e,r) >= U_(e+2,r-1): 0  (r <= 120)
+(iv) violations of 1 <= U_(d,r)/U_(d+2,r-1) <= 1 + 2^d rho_(d+2,r-1): 0
+(v) [P_T(d/dy) M^r e^y](0) = H(Gamma^r T) for T in (C3, TT3), r < 25: 50/50 agree
+
+rho_(d,r) for d = 3, 4 (N = d + 2r):
+  d=3 r= 10 N= 23 rho=2.1350e-02  N^2 rho=  11.294  N^2 rho/log(N)^2= 1.149
+  d=4 r= 10 N= 24 rho=2.0751e-02  N^2 rho=  11.952  N^2 rho/log(N)^2= 1.183
+  d=3 r= 20 N= 43 rho=7.8802e-03  N^2 rho=  14.570  N^2 rho/log(N)^2= 1.030
+  d=4 r= 20 N= 44 rho=7.7104e-03  N^2 rho=  14.927  N^2 rho/log(N)^2= 1.042
+  d=3 r= 40 N= 83 rho=2.7271e-03  N^2 rho=  18.787  N^2 rho/log(N)^2= 0.962
+  d=4 r= 40 N= 84 rho=2.6887e-03  N^2 rho=  18.971  N^2 rho/log(N)^2= 0.966
+  d=3 r= 60 N=123 rho=1.4320e-03  N^2 rho=  21.665  N^2 rho/log(N)^2= 0.936
+  d=4 r= 60 N=124 rho=1.4170e-03  N^2 rho=  21.788  N^2 rho/log(N)^2= 0.938
+  d=3 r= 80 N=163 rho=8.9898e-04  N^2 rho=  23.885  N^2 rho/log(N)^2= 0.921
+  d=4 r= 80 N=164 rho=8.9147e-04  N^2 rho=  23.977  N^2 rho/log(N)^2= 0.922
+  d=3 r=100 N=203 rho=6.2381e-04  N^2 rho=  25.707  N^2 rho/log(N)^2= 0.911
+  d=4 r=100 N=204 rho=6.1948e-04  N^2 rho=  25.780  N^2 rho/log(N)^2= 0.912
+  d=3 r=120 N=243 rho=4.6164e-04  N^2 rho=  27.259  N^2 rho/log(N)^2= 0.903
+  d=4 r=120 N=244 rho=4.5889e-04  N^2 rho=  27.320  N^2 rho/log(N)^2= 0.904
+
+all done
