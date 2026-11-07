@@ -1,0 +1,136 @@
+{
+  "budget_grid": [
+    {
+      "X": 2,
+      "exact_nonzero_parameter_budget": 4,
+      "zero_parameter_budget": 4
+    },
+    {
+      "X": 8,
+      "exact_nonzero_parameter_budget": 20,
+      "zero_parameter_budget": 12
+    },
+    {
+      "X": 32,
+      "exact_nonzero_parameter_budget": 60,
+      "zero_parameter_budget": 20
+    },
+    {
+      "X": 128,
+      "exact_nonzero_parameter_budget": 180,
+      "zero_parameter_budget": 28
+    },
+    {
+      "X": 512,
+      "exact_nonzero_parameter_budget": 556,
+      "zero_parameter_budget": 36
+    },
+    {
+      "X": 2048,
+      "exact_nonzero_parameter_budget": 1316,
+      "zero_parameter_budget": 44
+    },
+    {
+      "X": 8192,
+      "exact_nonzero_parameter_budget": 2844,
+      "zero_parameter_budget": 52
+    },
+    {
+      "X": 32768,
+      "exact_nonzero_parameter_budget": 6932,
+      "zero_parameter_budget": 60
+    },
+    {
+      "X": 131072,
+      "exact_nonzero_parameter_budget": 19212,
+      "zero_parameter_budget": 68
+    },
+    {
+      "X": 524288,
+      "exact_nonzero_parameter_budget": 43780,
+      "zero_parameter_budget": 76
+    },
+    {
+      "X": 2097152,
+      "exact_nonzero_parameter_budget": 92924,
+      "zero_parameter_budget": 84
+    }
+  ],
+  "exact_deletion_hostile": {
+    "candidates": [
+      3,
+      5,
+      9,
+      9,
+      15
+    ],
+    "target": 11
+  },
+  "levels": [
+    {
+      "distinct_H": 4,
+      "m": 1,
+      "max_H": 15,
+      "min_H": 3,
+      "order": 5,
+      "parameter_cases": 8
+    },
+    {
+      "distinct_H": 10,
+      "m": 2,
+      "max_H": 37,
+      "min_H": 5,
+      "order": 6,
+      "parameter_cases": 16
+    },
+    {
+      "distinct_H": 22,
+      "m": 3,
+      "max_H": 103,
+      "min_H": 9,
+      "order": 7,
+      "parameter_cases": 32
+    },
+    {
+      "distinct_H": 52,
+      "m": 4,
+      "max_H": 285,
+      "min_H": 17,
+      "order": 8,
+      "parameter_cases": 64
+    },
+    {
+      "distinct_H": 98,
+      "m": 5,
+      "max_H": 815,
+      "min_H": 33,
+      "order": 9,
+      "parameter_cases": 128
+    },
+    {
+      "distinct_H": 226,
+      "m": 6,
+      "max_H": 2407,
+      "min_H": 65,
+      "order": 10,
+      "parameter_cases": 256
+    },
+    {
+      "distinct_H": 469,
+      "m": 7,
+      "max_H": 7187,
+      "min_H": 129,
+      "order": 11,
+      "parameter_cases": 512
+    }
+  ],
+  "status": "FINITE-EXACT controls; all-order density follows from PROOF.md",
+  "totals": {
+    "dp_objects": 1016,
+    "endpoint_deletions": 254,
+    "exact_minus_readouts": 508,
+    "literal_path_objects": 120,
+    "literal_paths": 6896,
+    "permutation_objects": 24
+  }
+}

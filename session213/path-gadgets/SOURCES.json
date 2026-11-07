@@ -1,0 +1,22 @@
+{
+  "source_main_reported_by_parent": "25fde962779e6155a0581c1680062de45d63bb37",
+  "construction_published_commit": "f93c1d6fbf8d281e9b8a084ab01128952d032e0f",
+  "files": [
+    {
+      "path": "session212/cycle-bridge/PROOF.md",
+      "sha256": "6dd8e7dcc10e66856aedb1be7dd45e53797771f5b32b6113a4e68f4073385e6d"
+    },
+    {
+      "path": "session212/cycle-bridge/ENDPOINT_BRIDGE.md",
+      "sha256": "c4427215b5d9843f94215d2278c5401169afc3d5c619055098e14cd7345de0e0"
+    },
+    {
+      "path": "01-canon/theorems/THM-4876-deletion-and-flip-increments-of-the-hamiltonian-path-count-an-increment-of-two-forces-at-most-three-paths-the-increment-ladder-thm-013-for-all-orders-and-what-extension-spectra-forbid-for-chan-pak.md",
+      "sha256": "3efbe4a2bf4d5bf1e846e027ae4f069d47abbb40062cfc47bad64214f785968e"
+    },
+    {
+      "path": "05-knowledge/results/spine_grammars_cutwidth_apexes_hankel_seams_20261104.md",
+      "sha256": "a7b4f4e5c022f0b1ac630b960633ab98e6b5fbd626fbbd1357d047831f156bb4"
+    }
+  ]
+}

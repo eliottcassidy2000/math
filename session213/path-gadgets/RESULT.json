@@ -1,0 +1,150 @@
+{
+  "complete_permutation_cases_orders_5_to_7": 56,
+  "explicit_pair_certificates": 22138,
+  "family_cases": 2040,
+  "nonzero_code_bound_checks": 2008,
+  "odd_cycle_collection_cases_orders_5_to_8": 120,
+  "old_arc_preservation_checks": 4080,
+  "order_data": [
+    {
+      "distinct_total_path_counts": 4,
+      "m": 1,
+      "maximum_H": 15,
+      "minimum_H": 3,
+      "minimum_pair_bound_slack_over_nonzero_q": 6,
+      "order": 5
+    },
+    {
+      "distinct_total_path_counts": 10,
+      "m": 2,
+      "maximum_H": 37,
+      "minimum_H": 5,
+      "minimum_pair_bound_slack_over_nonzero_q": 8,
+      "order": 6
+    },
+    {
+      "distinct_total_path_counts": 22,
+      "m": 3,
+      "maximum_H": 103,
+      "minimum_H": 9,
+      "minimum_pair_bound_slack_over_nonzero_q": 12,
+      "order": 7
+    },
+    {
+      "distinct_total_path_counts": 52,
+      "m": 4,
+      "maximum_H": 285,
+      "minimum_H": 17,
+      "minimum_pair_bound_slack_over_nonzero_q": 20,
+      "order": 8
+    },
+    {
+      "distinct_total_path_counts": 98,
+      "m": 5,
+      "maximum_H": 815,
+      "minimum_H": 33,
+      "minimum_pair_bound_slack_over_nonzero_q": 36,
+      "order": 9
+    },
+    {
+      "distinct_total_path_counts": 226,
+      "m": 6,
+      "maximum_H": 2407,
+      "minimum_H": 65,
+      "minimum_pair_bound_slack_over_nonzero_q": 68,
+      "order": 10
+    },
+    {
+      "distinct_total_path_counts": 469,
+      "m": 7,
+      "maximum_H": 7187,
+      "minimum_H": 129,
+      "minimum_pair_bound_slack_over_nonzero_q": 132,
+      "order": 11
+    },
+    {
+      "distinct_total_path_counts": 961,
+      "m": 8,
+      "maximum_H": 21867,
+      "minimum_H": 257,
+      "minimum_pair_bound_slack_over_nonzero_q": 260,
+      "order": 12
+    }
+  ],
+  "pair_certificate_parameter_cases_j_plus_t_at_most_9": 55,
+  "scalar_growth_collision": [
+    {
+      "H_odd_cycle_formula": 81,
+      "H_subset_dp": 81,
+      "apex_arc": "b->a",
+      "m": 3,
+      "out_rows": [
+        62,
+        28,
+        56,
+        112,
+        96,
+        2,
+        39
+      ],
+      "q": 6,
+      "tau": 0
+    },
+    {
+      "H_odd_cycle_formula": 81,
+      "H_subset_dp": 81,
+      "apex_arc": "b->a",
+      "m": 3,
+      "out_rows": [
+        62,
+        28,
+        120,
+        112,
+        96,
+        2,
+        35
+      ],
+      "q": 7,
+      "tau": 0
+    },
+    {
+      "H_odd_cycle_formula": 225,
+      "H_subset_dp": 225,
+      "apex_arc": "b->a",
+      "m": 4,
+      "out_rows": [
+        126,
+        60,
+        120,
+        112,
+        224,
+        192,
+        2,
+        79
+      ],
+      "q": 12,
+      "tau": 0
+    },
+    {
+      "H_odd_cycle_formula": 245,
+      "H_subset_dp": 245,
+      "apex_arc": "b->a",
+      "m": 4,
+      "out_rows": [
+        126,
+        60,
+        120,
+        240,
+        224,
+        192,
+        2,
+        71
+      ],
+      "q": 14,
+      "tau": 0
+    }
+  ],
+  "scope": "Finite implementation checks only; all-order density-zero theorem is in PROOF.md.",
+  "status": "PASS",
+  "universe": "all B+/B- with m=1..8, every q, both tau values"
+}

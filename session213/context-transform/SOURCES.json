@@ -1,0 +1,36 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "snapshot": "25fde962779e6155a0581c1680062de45d63bb37",
+  "dependencies": [
+    {
+      "path": "session212/cycle-bridge/PROOF.md",
+      "git_blob": "3c445c94f4e9fd60521b89bab6e7df4588573699",
+      "sha256": "6dd8e7dcc10e66856aedb1be7dd45e53797771f5b32b6113a4e68f4073385e6d",
+      "url": "https://github.com/eliottcassidy2000/math/blob/25fde962779e6155a0581c1680062de45d63bb37/session212/cycle-bridge/PROOF.md"
+    },
+    {
+      "path": "session212/cycle-bridge/ENDPOINT_BRIDGE.md",
+      "git_blob": "cf22f9e6c1d1ba0b1d4df728c572307bfcc155a1",
+      "sha256": "c4427215b5d9843f94215d2278c5401169afc3d5c619055098e14cd7345de0e0",
+      "url": "https://github.com/eliottcassidy2000/math/blob/25fde962779e6155a0581c1680062de45d63bb37/session212/cycle-bridge/ENDPOINT_BRIDGE.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+      "url": "https://github.com/eliottcassidy2000/math/blob/25fde962779e6155a0581c1680062de45d63bb37/01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md"
+    },
+    {
+      "path": "05-knowledge/results/spine_grammars_cutwidth_apexes_hankel_seams_20261104.md",
+      "git_blob": "fa96ce5e8222c74624e2cc7893aaaf59ad848fb5",
+      "sha256": "a7b4f4e5c022f0b1ac630b960633ab98e6b5fbd626fbbd1357d047831f156bb4",
+      "url": "https://github.com/eliottcassidy2000/math/blob/25fde962779e6155a0581c1680062de45d63bb37/05-knowledge/results/spine_grammars_cutwidth_apexes_hankel_seams_20261104.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4890-one-apex-collision-balance.md",
+      "git_blob": "1a2cc15c0e7386c57ca42c4b960d36f67a83000b",
+      "sha256": "fb25477931d08c60a2bc30ab0ad0ae9721261b89c7e056289b3519b0418e8852",
+      "url": "https://github.com/eliottcassidy2000/math/blob/25fde962779e6155a0581c1680062de45d63bb37/01-canon/theorems/THM-4890-one-apex-collision-balance.md"
+    }
+  ]
+}

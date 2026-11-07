@@ -1,0 +1,26 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "snapshot": "25fde962779e6155a0581c1680062de45d63bb37",
+  "sources": [
+    {
+      "path": "session212/cycle-bridge/PROOF.md",
+      "git_blob_sha": "3c445c94f4e9fd60521b89bab6e7df4588573699",
+      "url": "https://github.com/eliottcassidy2000/math/blob/25fde962779e6155a0581c1680062de45d63bb37/session212/cycle-bridge/PROOF.md"
+    },
+    {
+      "path": "session212/cycle-spectrum/PROOF.md",
+      "git_blob_sha": "6eeb2c408243b513f9ef6e20684136739270ed34",
+      "url": "https://github.com/eliottcassidy2000/math/blob/25fde962779e6155a0581c1680062de45d63bb37/session212/cycle-spectrum/PROOF.md"
+    },
+    {
+      "path": "session210/structure-atlas/STRUCTURE_ATLAS.md",
+      "git_blob_sha": "8e8648fb8c6ec1711b140bd0ff76f06fcbb4eee9",
+      "url": "https://github.com/eliottcassidy2000/math/blob/25fde962779e6155a0581c1680062de45d63bb37/session210/structure-atlas/STRUCTURE_ATLAS.md"
+    },
+    {
+      "path": "session203/uniform-incidence-extraction/uniform/PROOF.md",
+      "git_blob_sha": "7d45cbd8c66e3c370e94749d12274ea4ba60e5e1",
+      "url": "https://github.com/eliottcassidy2000/math/blob/25fde962779e6155a0581c1680062de45d63bb37/session203/uniform-incidence-extraction/uniform/PROOF.md"
+    }
+  ]
+}

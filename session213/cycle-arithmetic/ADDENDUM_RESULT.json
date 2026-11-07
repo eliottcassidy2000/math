@@ -1,0 +1,62 @@
+{
+  "rows": [
+    {
+      "compiler_cases": 8,
+      "m": 1
+    },
+    {
+      "compiler_cases": 16,
+      "m": 2
+    },
+    {
+      "compiler_cases": 32,
+      "m": 3
+    },
+    {
+      "compiler_cases": 64,
+      "m": 4
+    },
+    {
+      "compiler_cases": 128,
+      "m": 5
+    },
+    {
+      "compiler_cases": 256,
+      "m": 6
+    },
+    {
+      "compiler_cases": 512,
+      "m": 7
+    },
+    {
+      "compiler_cases": 1024,
+      "m": 8
+    }
+  ],
+  "scope": "FINITE-EXACT implementation controls",
+  "status": "PASS",
+  "successful_cycle_counts": {
+    "minus": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "plus": [
+      2,
+      4,
+      7,
+      13,
+      25,
+      49,
+      97,
+      193
+    ]
+  },
+  "total_compiler_cases": 2040
+}
