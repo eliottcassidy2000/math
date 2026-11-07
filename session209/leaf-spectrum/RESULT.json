@@ -1,0 +1,438 @@
+{
+  "actual_censuses": [
+    {
+      "Q_leaf_spectrum": {},
+      "all_class_details": [
+        {
+          "B": 1,
+          "H": 1,
+          "aut": 1,
+          "code": 0,
+          "degree": 0,
+          "self_converse": true
+        }
+      ],
+      "labelled_leaf_spectrum": {},
+      "labelled_universe": 1,
+      "n": 1,
+      "ordinary_classes": 1
+    },
+    {
+      "Q_leaf_spectrum": {},
+      "all_class_details": [
+        {
+          "B": 1,
+          "H": 1,
+          "aut": 1,
+          "code": 0,
+          "degree": 0,
+          "self_converse": true
+        }
+      ],
+      "labelled_leaf_spectrum": {},
+      "labelled_universe": 2,
+      "n": 2,
+      "ordinary_classes": 1
+    },
+    {
+      "Q_leaf_spectrum": {},
+      "all_class_details": [
+        {
+          "B": 1,
+          "H": 1,
+          "aut": 1,
+          "code": 0,
+          "degree": 0,
+          "self_converse": true
+        },
+        {
+          "B": 1,
+          "H": 3,
+          "aut": 3,
+          "code": 2,
+          "degree": 0,
+          "self_converse": true
+        }
+      ],
+      "labelled_leaf_spectrum": {},
+      "labelled_universe": 8,
+      "n": 3,
+      "ordinary_classes": 2
+    },
+    {
+      "Q_leaf_spectrum": {
+        "3": 1,
+        "5": 1
+      },
+      "all_class_details": [
+        {
+          "B": 1,
+          "H": 1,
+          "aut": 1,
+          "code": 0,
+          "degree": 0,
+          "self_converse": true
+        },
+        {
+          "B": 0,
+          "H": 3,
+          "aut": 3,
+          "code": 2,
+          "degree": 1,
+          "self_converse": false
+        },
+        {
+          "B": 3,
+          "H": 5,
+          "aut": 1,
+          "code": 4,
+          "degree": 1,
+          "self_converse": true
+        },
+        {
+          "B": 0,
+          "H": 3,
+          "aut": 3,
+          "code": 5,
+          "degree": 1,
+          "self_converse": false
+        }
+      ],
+      "labelled_leaf_spectrum": {
+        "3": 16,
+        "5": 24
+      },
+      "labelled_universe": 64,
+      "n": 4,
+      "ordinary_classes": 4
+    },
+    {
+      "Q_leaf_spectrum": {
+        "3": 1
+      },
+      "all_class_details": [
+        {
+          "B": 1,
+          "H": 1,
+          "aut": 1,
+          "code": 0,
+          "degree": 0,
+          "self_converse": true
+        },
+        {
+          "B": 0,
+          "H": 3,
+          "aut": 3,
+          "code": 2,
+          "degree": 1,
+          "self_converse": false
+        },
+        {
+          "B": 0,
+          "H": 5,
+          "aut": 1,
+          "code": 4,
+          "degree": 5,
+          "self_converse": false
+        },
+        {
+          "B": 1,
+          "H": 3,
+          "aut": 3,
+          "code": 5,
+          "degree": 0,
+          "self_converse": true
+        },
+        {
+          "B": 1,
+          "H": 9,
+          "aut": 1,
+          "code": 8,
+          "degree": 4,
+          "self_converse": true
+        },
+        {
+          "B": 0,
+          "H": 5,
+          "aut": 1,
+          "code": 9,
+          "degree": 5,
+          "self_converse": false
+        },
+        {
+          "B": 3,
+          "H": 9,
+          "aut": 1,
+          "code": 10,
+          "degree": 3,
+          "self_converse": true
+        },
+        {
+          "B": 0,
+          "H": 3,
+          "aut": 3,
+          "code": 11,
+          "degree": 1,
+          "self_converse": false
+        },
+        {
+          "B": 3,
+          "H": 11,
+          "aut": 1,
+          "code": 12,
+          "degree": 4,
+          "self_converse": true
+        },
+        {
+          "B": 1,
+          "H": 15,
+          "aut": 3,
+          "code": 40,
+          "degree": 2,
+          "self_converse": true
+        },
+        {
+          "B": 3,
+          "H": 13,
+          "aut": 1,
+          "code": 41,
+          "degree": 5,
+          "self_converse": true
+        },
+        {
+          "B": 3,
+          "H": 15,
+          "aut": 5,
+          "code": 76,
+          "degree": 0,
+          "self_converse": true
+        }
+      ],
+      "labelled_leaf_spectrum": {
+        "3": 80
+      },
+      "labelled_universe": 1024,
+      "n": 5,
+      "ordinary_classes": 12
+    }
+  ],
+  "asymptotic_checks": {
+    "uniform_Q_leaves": {
+      "finite_checks": [
+        {
+          "mean_per_n": 0.19155220810400372,
+          "mixed_probability": 9.745598476815519e-06,
+          "n": 60,
+          "variance_per_n": 0.04983500955603417
+        },
+        {
+          "mean_per_n": 0.19290316819417958,
+          "mixed_probability": 1.0200001643521625e-10,
+          "n": 120,
+          "variance_per_n": 0.04969824457089844
+        },
+        {
+          "mean_per_n": 0.1937136696926882,
+          "mixed_probability": 1.1694358554835964e-25,
+          "n": 300,
+          "variance_per_n": 0.049616208352625174
+        },
+        {
+          "mean_per_n": 0.19398383685864096,
+          "mixed_probability": 1.468712117990825e-50,
+          "n": 600,
+          "variance_per_n": 0.049588862946537984
+        }
+      ],
+      "parameters": {
+        "logH_rate": "0.21340983594440312052406457873232489344235660254359638517764770477",
+        "mu": "0.19425400402459374079284149452990248429920255217294944720330477283",
+        "rho": "0.68232780382801932736948373971104825689118858189799857780372860664",
+        "variance": "0.049561517540450801148770901741638462371457137248909134640436169793"
+      }
+    },
+    "uniform_labelled_preimages": {
+      "finite_checks": [
+        {
+          "mean_per_n": 0.13090755731832768,
+          "mixed_probability": 8.031952362794011e-05,
+          "n": 60,
+          "variance_per_n": 0.058273372836287474
+        },
+        {
+          "mean_per_n": 0.13224111447791534,
+          "mixed_probability": 6.609110851094047e-09,
+          "n": 120,
+          "variance_per_n": 0.058469163479476415
+        },
+        {
+          "mean_per_n": 0.13304159649495167,
+          "mixed_probability": 3.6823845596535175e-21,
+          "n": 300,
+          "variance_per_n": 0.058585638966035365
+        },
+        {
+          "mean_per_n": 0.1333084238549635,
+          "mixed_probability": 1.3892251907272148e-41,
+          "n": 600,
+          "variance_per_n": 0.0586244639914077
+        }
+      ],
+      "parameters": {
+        "logH_rate": "0.14674741244670172096442160601331102651405397811446294785684001266",
+        "mu": "0.13357525121497530628124750935579157615245228461424354697674014359",
+        "rho": "0.81773167388682350609408707040935536987104721988547147004197691695",
+        "variance": "0.058663289016780041337336284320311180436060783276025035404949220591"
+      }
+    }
+  },
+  "formula_comparisons": 84,
+  "independent_DP_examples": [
+    {
+      "H": 27,
+      "n": 10,
+      "name": "minimal_H27_leaf",
+      "rows": [
+        1022,
+        1012,
+        1016,
+        1010,
+        928,
+        960,
+        912,
+        256,
+        512,
+        128
+      ]
+    },
+    {
+      "H": 45,
+      "n": 10,
+      "name": "mixed_H45_leaf",
+      "rows": [
+        1018,
+        1020,
+        1017,
+        912,
+        928,
+        968,
+        920,
+        256,
+        512,
+        128
+      ]
+    },
+    {
+      "H": 81,
+      "n": 14,
+      "name": "order14_pure_max",
+      "rows": [
+        16382,
+        16380,
+        16360,
+        16368,
+        16356,
+        16192,
+        16256,
+        16160,
+        14848,
+        15360,
+        14592,
+        4096,
+        8192,
+        2048
+      ]
+    },
+    {
+      "H": 405,
+      "n": 16,
+      "name": "order16_mixed_max",
+      "rows": [
+        65530,
+        65532,
+        65529,
+        65488,
+        65504,
+        65480,
+        64640,
+        64768,
+        65088,
+        64704,
+        59392,
+        61440,
+        58368,
+        16384,
+        32768,
+        8192
+      ]
+    },
+    {
+      "H": 15,
+      "n": 7,
+      "name": "nonleaf_balanced_H15",
+      "rows": [
+        122,
+        124,
+        121,
+        16,
+        32,
+        72,
+        24
+      ]
+    }
+  ],
+  "recurrence_max_order": 60,
+  "spectra": {
+    "4": {
+      "3": 1,
+      "5": 1
+    },
+    "6": {
+      "3": 2,
+      "5": 1
+    },
+    "10": {
+      "3": 4,
+      "5": 1,
+      "9": 6,
+      "27": 2,
+      "45": 1
+    },
+    "14": {
+      "3": 6,
+      "5": 1,
+      "9": 20,
+      "27": 28,
+      "45": 3,
+      "81": 6
+    },
+    "15": {
+      "3": 6,
+      "9": 25,
+      "27": 40,
+      "81": 16
+    },
+    "16": {
+      "3": 7,
+      "5": 1,
+      "9": 30,
+      "27": 60,
+      "45": 4,
+      "81": 32,
+      "243": 3,
+      "405": 1
+    },
+    "27": {
+      "3": 12,
+      "9": 121,
+      "27": 660,
+      "81": 1920,
+      "243": 3080,
+      "729": 2485,
+      "2187": 848,
+      "6561": 80
+    }
+  },
+  "status": "PASS",
+  "word_enumeration_max_order": 22
+}

@@ -1,0 +1,3 @@
+PASS: word, generating-function, min/max, balanced-power exclusion,
+literal path-orbit census through n=5, labelled weights, larger DP, and moment controls.
+RESULT.json sha256=d14fdd4759f6ffa70cd34aa7734d776402ef7c56cf446812ae3098ef0160c446

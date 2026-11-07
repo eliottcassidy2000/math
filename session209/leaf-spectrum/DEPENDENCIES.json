@@ -1,0 +1,41 @@
+{
+  "dependencies": [
+    {
+      "path": "05-knowledge/results/paired_black_leaf_reduction_20261020/BLACK_QUOTIENT_LEAF_CLASSIFICATION.md",
+      "commit": "286f5f4ddbdf25a74ecbfe74e8ef9a735a142393",
+      "bundled_path": "dependencies/session14.md",
+      "sha256": "6f0b7299c2661f1a12b3f8985cc5c2b0f6229ddee6064b7f24d229a6a4c605c0",
+      "url": "https://github.com/eliottcassidy2000/math/blob/286f5f4ddbdf25a74ecbfe74e8ef9a735a142393/05-knowledge/results/paired_black_leaf_reduction_20261020/BLACK_QUOTIENT_LEAF_CLASSIFICATION.md"
+    },
+    {
+      "path": "05-knowledge/results/deficit_two_centers_20261020/README.md",
+      "commit": "286f5f4ddbdf25a74ecbfe74e8ef9a735a142393",
+      "bundled_path": "dependencies/session15.md",
+      "sha256": "467e5d1606328add64950196f0ffd263c4844b1c8360b6f83bf958662d56a034",
+      "url": "https://github.com/eliottcassidy2000/math/blob/286f5f4ddbdf25a74ecbfe74e8ef9a735a142393/05-knowledge/results/deficit_two_centers_20261020/README.md"
+    },
+    {
+      "path": "05-knowledge/results/deficit_two_centers_20261020/session15-deficit-centers/DEFICIT_TWO_COMPLETE_CENSUS.md",
+      "commit": "286f5f4ddbdf25a74ecbfe74e8ef9a735a142393",
+      "bundled_path": "dependencies/session15-proof.md",
+      "sha256": "e55433ade2389b62a62250cef55d448cf225cdea1bb6434c5a81f1298eff3896",
+      "url": "https://github.com/eliottcassidy2000/math/blob/286f5f4ddbdf25a74ecbfe74e8ef9a735a142393/05-knowledge/results/deficit_two_centers_20261020/session15-deficit-centers/DEFICIT_TWO_COMPLETE_CENSUS.md"
+    },
+    {
+      "path": "05-knowledge/results/session27_repunits_lattices_20261022/session27-repunits/REPORT.md",
+      "commit": "286f5f4ddbdf25a74ecbfe74e8ef9a735a142393",
+      "bundled_path": "dependencies/session27.md",
+      "sha256": "4c5d9bc4ad690e6435d260870bb403972c48f46921bc13bf5fe76e72813739ba",
+      "url": "https://github.com/eliottcassidy2000/math/blob/286f5f4ddbdf25a74ecbfe74e8ef9a735a142393/05-knowledge/results/session27_repunits_lattices_20261022/session27-repunits/REPORT.md"
+    },
+    {
+      "path": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/MODULAR_FAITHFULNESS.md",
+      "commit": "286f5f4ddbdf25a74ecbfe74e8ef9a735a142393",
+      "bundled_path": "dependencies/session27-response.md",
+      "sha256": "2ace16955a840be4634770cc57f61ebdeba7432012c16159546128575540eab5",
+      "url": "https://github.com/eliottcassidy2000/math/blob/286f5f4ddbdf25a74ecbfe74e8ef9a735a142393/05-knowledge/results/session27_repunits_lattices_20261022/session27-response/MODULAR_FAITHFULNESS.md"
+    }
+  ],
+  "scope": "All-order leaf classification and weighted SCC input inherited; finite controls are independently recomputed.",
+  "runtime": "Python3 standard library; explicit guards survive optimization."
+}
