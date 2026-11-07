@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "inverse_totient": {
+    "prime_q_range": [
+      5,
+      500
+    ],
+    "x_range": [
+      1,
+      20000
+    ],
+    "tested_q": 93
+  },
+  "simultaneous_prime_q_up_to31": [
+    3,
+    5,
+    7,
+    13,
+    17,
+    19,
+    31
+  ],
+  "smith_prime_range": [
+    5,
+    500
+  ],
+  "prime_repunit_cases": 811,
+  "repunit_base_range": [
+    2,
+    40
+  ],
+  "repunit_length_range": [
+    2,
+    7
+  ],
+  "b_squared_minus_one_bases": [
+    2,
+    1000
+  ]
+}
+Additional checks PASS: 1540 identity k=4..200; dyadic criterion odd prime q<=100, a=1..6.
+Additional checks PASS: raw-convolution carries; grouped-base transport; binary obstruction; finite all-base sieve.

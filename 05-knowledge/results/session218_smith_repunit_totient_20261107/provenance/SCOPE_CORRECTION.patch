@@ -1,0 +1,98 @@
+--- a/01-canon/theorems/THM-4884-definability-lenses-korselt-congruence-of-spectrum-polynomial-strong-multiplicity-census-minimal-rank-sublanguages.md
++++ b/01-canon/theorems/THM-4884-definability-lenses-korselt-congruence-of-spectrum-polynomial-strong-multiplicity-census-minimal-rank-sublanguages.md
+@@ -22,6 +22,8 @@
+   Pre-registered Q1 (confirmed in its containment, size and membership clauses; "41" and "every multiplicity 1..10"
+   refuted), Q2 (completeness of modes 1 and 2 refuted; mode 3 and the rank ordering mode 3 < mode 1 confirmed; the
+   ordering mode 2 < mode 1 refuted), Q3 (a check).
++  SCOPE CORRECTION (2026-11-07, Session 218): the Ford-type omission statement is only finite-exact
++  for 3 <= h < 625. Global omitted multiplicities and completeness of the singleton list remain HYP-9477 (A), OPEN.
+   NOT CLAIMED: Chan-Pak coverage; any statement about the paper's correctness.
+   AUDIT: PASS WITH CORRECTIONS (2026-11-05, independent; `04-computation/experiments/definability_lenses_audit_20261105/AUDIT.md`):
+   every number of (1), (2), (2b), (3) reproduced with the auditor's own code (labelled enumeration to n = 7, class
+@@ -57,6 +59,11 @@
+ 
+ # THM-4884 - definability lenses: Korselt congruence, Carmichael multiplicity, minimal rank
+ 
++**Scope correction (2026-11-07, Session 218).** The census does not refute a global Ford-type
++assertion that every multiplicity >= 2 occurs. It proves omissions only for target counts below 625.
++Actual singleton fibers refute a no-singletons analogue, but their complete all-order list is OPEN
++(HYP-9477 (A)). This correction preserves the numerical repair MISTAKE-723.
++
+ ## Statements
+ 
+ 1. **Korselt congruence (PROVED).** Let P_n(x) = sum over the labelled tournaments on Z_n of x^(H(T)). For every
+@@ -71,13 +78,16 @@
+    coefficientwise form is the addition (audit A10).
+ 
+ 2. **Carmichael multiplicity (FINITE-EXACT).** With m(h) the number of strong tournament classes of all orders
+-   having H = h (finite by Moon's floor), THM-4744's inventories give for odd h < 625: m(h) = 0 iff h in {7, 21};
++   having H = h (finite by Moon's floor), THM-4744's inventories give for odd 3 <= h < 625: m(h) = 0 iff h in {7, 21};
+    m(h) = 1 iff h in {3, 5, 11, 13}, each realised by one self-converse class (forced by converse pairing for an odd
+    multiplicity); m(h) = 2 iff h in {9, 17, 19, 35, 39, 47, 63}; m(h) = 3 iff h = 25; m(h) >= 6 for every attained h
+    with 63 < h < 625 (minimum 6 at h = 67); m(h) >= 73 for odd h in [375, 623]. The values 9, 13, 21, 22, 34, 37 are
+    not multiplicities below 625, while every
+-   other value up to 38 is. So the analogue of Carmichael's conjecture fails exactly at the four smallest primes other
+-   than 7, and the analogue of Ford's theorem (every multiplicity >= 2 occurs) fails. Below 73 every multiplicity here
++   other value up to 38 is. Thus actual singleton fibers refute the no-singletons analogue of Carmichael's
++   conjecture, and the singleton targets in this finite range are exactly {3, 5, 11, 13}. The listed omitted
++   multiplicities do not occur for 3 <= h < 625; a global Ford-type assertion (every multiplicity >= 2
++   occurs somewhere) is not refuted by this census. Global omissions and completeness of the singleton
++   list remain OPEN in HYP-9477 (A). Below 73 every multiplicity here
+    was already in Session 24's inventory (complete for H <= 73), and the unique-class parity argument with the
+    per-order unique lists is the S50 note's (section 3); the omitted multiplicities below 625 up to 80 are 9, 13, 21,
+    22, 34, 37, 41, 44, 50, 51, 55, 57, 60, 62, 64, 67, 79 (maximum 327 at h = 615).
+--- a/05-knowledge/results/definability_lenses_spectrum_diophantine_carmichael_20261105.md
++++ b/05-knowledge/results/definability_lenses_spectrum_diophantine_carmichael_20261105.md
+@@ -23,6 +23,11 @@
+ signed fiber repair, signed block transport and a root-weighted height bound. This note works the lenses on
+ tournament CLASSES and on the labelled spectrum polynomial, cites that lane where it meets them (sections 3, 4 and
+ 7), and merges its profile census with the class census in section 4b.
++
++**Scope correction (2026-11-07, Session 218).** Finite omitted multiplicities below 625
++do not establish global omitted multiplicities. The global Ford-type assertion and completeness of
++the singleton list remain OPEN (HYP-9477 (A)); the observed singleton fibers do refute a universal
++no-singletons assertion. MISTAKE-723 remains the correction authority for the census values.
+ 
+ ## 0. Summary
+ 
+@@ -50,9 +55,10 @@
+   P_d = SC_d mod 2 of THM-4744 forces), m(h) = 2 exactly for h = 9, 17, 19, 35, 39, 47, 63, m(h) = 3 only for h = 25,
+   and m(h) >= 6 for every attained h in (63, 625) (the minimum 6 at h = 67; m(h) >= 73 on [375, 623]). The
+   multiplicity function omits the values 9, 13, 21, 22, 34, 37 below 625 while taking every other value up to 38:
+-  the analogue of Ford's theorem (every multiplicity >= 2 occurs for Euler's function) fails for the strong
+-  spectrum, and the analogue of Carmichael's conjecture (no multiplicity 1) fails exactly at the four smallest primes
+-  other than 7. Pre-registered Q1: contained in [3, 100], at most 12 elements, contains 3, 5, 11, 13: CONFIRMED;
++  these are omissions for target counts 3 <= h < 625, not a refutation of a global Ford-type assertion
++  that every multiplicity >= 2 occurs somewhere. The observed singleton fibers refute the universal
++  no-singletons analogue of Carmichael's conjecture; their target set is exactly {3, 5, 11, 13} in this
++  finite range, with completeness beyond the range OPEN (HYP-9477 (A)). Pre-registered Q1: contained in [3, 100], at most 12 elements, contains 3, 5, 11, 13: CONFIRMED;
+   "contains 41": REFUTED (m(41) = 6); "every multiplicity 1..10 occurs": REFUTED (9 is omitted).
+ - **Diophantine complexity lens (THM-4884 (3), FINITE-EXACT).** The paper measures a definition by its number of
+   variables; the natural measure here is the Hankel rank of the N-rational series whose range is to be cofinite in
+@@ -165,7 +171,7 @@
+ because H >= f(n). THM-4744's complete inventories (`strong_ears_375.out`, `strong_ears_625.out`: P_d(1) for odd
+ d < 625) give, read off here:
+ 
+-| m(h) | odd h < 625 |
++| m(h) | odd 3 <= h < 625 |
+ |---|---|
+ | 0 | 7, 21 |
+ | 1 | 3, 5, 11, 13 |
+--- a/05-knowledge/hypotheses/HYP-9477-strong-multiplicity-omissions-three-smooth-descent-and-minimal-complete-rank.md
++++ b/05-knowledge/hypotheses/HYP-9477-strong-multiplicity-omissions-three-smooth-descent-and-minimal-complete-rank.md
+@@ -14,9 +14,12 @@
+ 
+ THM-4884 (2): below 625 the multiplicity function omits exactly the values 9, 13, 21, 22, 34, 37, 41, 44, 50, 51, 55,
+ 57, 60, 62, 64, 67, 79 among 0..80 (every other value up to 80 occurs; the maximum is 327 at h = 615), and
+-m(h) >= 73 on [375, 623]. Conjecture: m(h) grows without bound along the odd numbers above 623 (the strong
+-inventories at orders 10-12 show m(h) of order 10^2 at h near 600), so the sixteen omitted values below the observed
+-floor 73 are never multiplicities of a strong count, and the unique-class counts are exactly 3, 5, 11, 13. No claim is
++m(h) >= 73 on [375, 623]. Conjectures (separate assertions): m(h) grows without bound along the odd numbers above 623; the
++sixteen omitted values below the observed floor 73 are never multiplicities of a strong count; and
++the unique-class counts for h >= 3 are exactly 3, 5, 11, 13. The strong inventories at orders 10-12
++show m(h) of order 10^2 at h near 600. Growth without bound alone would not prove the omission or
++singleton claims: finitely many larger target counts could still realize any omitted small value.
++This implication is explicitly withdrawn by the Session 218 scope correction (2026-11-07). No claim is
+ made about 79 or any omitted value >= 73, which larger h may still attain. (The first draft singled out the six values
+ up to 38; the audit observed that the same argument covers every omitted value below the floor.) Test: extend THM-4744's ear inventories to H < 1,000 (orders <= 14) and read m(h).
+ Session 200's open source-fiber conjecture (every n in F(S) other than 3 and 11 has at least two physical profiles)

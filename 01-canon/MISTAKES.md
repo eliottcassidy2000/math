@@ -4,6 +4,15 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-07: Session 218 correction of the THM-4884 finite-multiplicity scope
+
+- **Affected sources:** THM-4884, `01-canon/theorems/THM-4884-definability-lenses-korselt-congruence-of-spectrum-polynomial-strong-multiplicity-census-minimal-rank-sublanguages.md`, statement2; `05-knowledge/results/definability_lenses_spectrum_diophantine_carmichael_20261105.md`, summary; and the implication in HYP-9477(A), `05-knowledge/hypotheses/HYP-9477-strong-multiplicity-omissions-three-smooth-descent-and-minimal-complete-rank.md`.
+- **Claim withdrawn:** the finite absence of multiplicities9,13,21,22,34,37 below target625 was described as refuting a global analogue of Ford's theorem that every multiplicity at least2 occurs somewhere. The same prose said the no-singletons analogue fails 'exactly' at3,5,11,13 without repeating the finite scope. HYP-9477(A) suggested growth without bound would imply the listed global omissions.
+- **First failed implication:** absence of witnesses for h<625 does not imply absence for all h. Even growth without bound permits finitely many larger target counts to realize a small multiplicity. No numerical counterexample to the global omission conjecture is asserted; the error is the unsupported implication and status promotion.
+- **Strongest survivor:** for odd3<=h<625 the computed omissions and singleton list remain FINITE-EXACT. Exact singleton fibers such as m(3)=1 genuinely refute the universal no-singletons analogue. Global omissions and completeness of the singleton list remain OPEN under HYP-9477(A). No claim about the h=1 singleton convention is needed.
+- **Preserved lineage:** MISTAKE-723's numerical correction m(41)=6, only m(25)=3, and m(h)>=6 on attained63<h<625 remains unchanged. This entry repairs a separate quantifier error in the surviving prose; it does not re-audit the original inventories.
+- **Missing sidecar:** either a uniform lower bound excluding all small multiplicities above a verified threshold, or a complete global fiber theorem. A finite census, an asymptotic growth conjecture, and the presence of a conjecture label elsewhere do not supply that proof.
+
 ## 2026-11-06: Session 203 certificate and singleton boundaries
 
 - **Corrected finite certificate:** an endpoint overrun in the inherited S78

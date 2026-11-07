@@ -1,0 +1,6 @@
+Complete inverse fibers m=1..200: support enumeration agrees with rigorous-bound sieve
+Prime-index fiber classification checked q=5..97
+Double-prime rows (q,k,Mq,Wq,inverse_phi(k)): [(3, 6, 7, 3, [7, 9, 14, 18]), (5, 10, 31, 11, [11, 22]), (7, 14, 127, 43, []), (13, 26, 8191, 2731, []), (17, 34, 131071, 43691, []), (19, 38, 524287, 174763, []), (31, 62, 2147483647, 715827883, [])]
+Support-aware scaling 5000 exact tests: PASS
+Hostile controls: PASS; no global sequence equivalence asserted
+Dyadic repair criterion q<=97, a=1..6 with exceptional supplier: PASS

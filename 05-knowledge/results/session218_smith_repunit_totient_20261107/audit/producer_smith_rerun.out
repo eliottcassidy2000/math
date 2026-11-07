@@ -1,0 +1,167 @@
+{
+  "status": "PASS",
+  "checks": {
+    "base_sieve": {
+      "composite_n": [
+        4,
+        1000
+      ],
+      "bases": "2 through n+2"
+    },
+    "moving_base_prime_limit": 299,
+    "one_digit_classification": {
+      "bases": [
+        2,
+        30
+      ],
+      "lengths": [
+        2,
+        7
+      ]
+    },
+    "maximal_two_digit_nonsmith": {
+      "bases": [
+        2,
+        500
+      ]
+    },
+    "separated_boundary": {
+      "bases": [
+        2,
+        11
+      ],
+      "t": [
+        1,
+        59
+      ],
+      "k": "m through m+4"
+    },
+    "decimal_seed_digit_identity_lengths": [
+      4,
+      300
+    ],
+    "binary_small_multiplier": {
+      "lengths": [
+        2,
+        11
+      ],
+      "c": "1 through 2^k"
+    },
+    "grouping": {
+      "bases": [
+        2,
+        9
+      ],
+      "h": [
+        2,
+        4
+      ],
+      "n": [
+        2,
+        399
+      ]
+    },
+    "carry_defect": {
+      "bases": [
+        2,
+        20
+      ],
+      "x_y": [
+        1,
+        59
+      ]
+    },
+    "repunit_order": {
+      "bases": [
+        2,
+        14
+      ],
+      "lengths": [
+        2,
+        11
+      ]
+    }
+  },
+  "examples": {
+    "14": {
+      "factors": [
+        2,
+        7
+      ],
+      "smith_bases": [
+        6
+      ]
+    },
+    "26": {
+      "factors": [
+        2,
+        13
+      ],
+      "smith_bases": [
+        12
+      ]
+    },
+    "34": {
+      "factors": [
+        2,
+        17
+      ],
+      "smith_bases": [
+        4,
+        6,
+        16
+      ]
+    },
+    "38": {
+      "factors": [
+        2,
+        19
+      ],
+      "smith_bases": [
+        18
+      ]
+    },
+    "22": {
+      "factors": [
+        2,
+        11
+      ],
+      "smith_bases": [
+        10
+      ]
+    },
+    "63": {
+      "factors": [
+        3,
+        3,
+        7
+      ],
+      "smith_bases": [
+        6,
+        11,
+        26,
+        51
+      ]
+    },
+    "238": {
+      "factors": [
+        2,
+        7,
+        17
+      ],
+      "smith_bases": [
+        2,
+        5,
+        54,
+        107,
+        213
+      ]
+    }
+  },
+  "seed_hostile_k6": {
+    "n": 171110940,
+    "digit_sum": 24,
+    "factor_weight": 44
+  },
+  "scope": "Finite exact controls support, but do not replace, the elementary proofs."
+}

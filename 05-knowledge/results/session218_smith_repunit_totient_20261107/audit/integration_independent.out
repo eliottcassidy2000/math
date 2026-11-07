@@ -1,0 +1,3 @@
+PASS all9 rows, exact earliest positive repairs, digit/factor weights, and least preimages.
+q= 19 excluded suppliers= [(1, [3, 13]), (2, [7, 11]), (3, [3, 3, 17]), (4, [5, 61]), (5, [3, 7, 29])] first prime supplier j= 6 p= 1217
+q= 31 excluded suppliers= [(1, [3, 3, 7]), (2, [5, 5, 5]), (3, [3, 83]), (4, [7, 71]), (5, [3, 331]), (6, [5, 397]), (7, [3, 3, 3, 3, 7, 7])] first prime supplier j= 8 p= 7937

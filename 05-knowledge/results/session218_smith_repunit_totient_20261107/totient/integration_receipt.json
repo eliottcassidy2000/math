@@ -1,0 +1,196 @@
+{
+  "status": "PASS",
+  "universe": "even 2..76",
+  "repair_range": "a=1..8",
+  "rows": [
+    {
+      "n": 14,
+      "factorization": {
+        "2": 1,
+        "7": 1
+      },
+      "F": 9,
+      "base": 6,
+      "digits": [
+        2,
+        2
+      ],
+      "factor_digit_weight": 4,
+      "prime_half": true,
+      "phi_n": 6,
+      "dyadic_repair": {
+        "a": 1,
+        "target": 28,
+        "preimage": 29
+      }
+    },
+    {
+      "n": 26,
+      "factorization": {
+        "2": 1,
+        "13": 1
+      },
+      "F": 15,
+      "base": 12,
+      "digits": [
+        2,
+        2
+      ],
+      "factor_digit_weight": 4,
+      "prime_half": true,
+      "phi_n": 12,
+      "dyadic_repair": {
+        "a": 1,
+        "target": 52,
+        "preimage": 53
+      }
+    },
+    {
+      "n": 34,
+      "factorization": {
+        "2": 1,
+        "17": 1
+      },
+      "F": 19,
+      "base": 16,
+      "digits": [
+        2,
+        2
+      ],
+      "factor_digit_weight": 4,
+      "prime_half": true,
+      "phi_n": 16,
+      "dyadic_repair": {
+        "a": 2,
+        "target": 136,
+        "preimage": 137
+      }
+    },
+    {
+      "n": 38,
+      "factorization": {
+        "2": 1,
+        "19": 1
+      },
+      "F": 21,
+      "base": 18,
+      "digits": [
+        2,
+        2
+      ],
+      "factor_digit_weight": 4,
+      "prime_half": true,
+      "phi_n": 18,
+      "dyadic_repair": {
+        "a": 5,
+        "target": 1216,
+        "preimage": 1217
+      }
+    },
+    {
+      "n": 50,
+      "factorization": {
+        "2": 1,
+        "5": 2
+      },
+      "F": 12,
+      "base": 39,
+      "digits": [
+        1,
+        11
+      ],
+      "factor_digit_weight": 12,
+      "prime_half": false,
+      "phi_n": 20,
+      "dyadic_repair": {
+        "a": 1,
+        "target": 100,
+        "preimage": 101
+      }
+    },
+    {
+      "n": 62,
+      "factorization": {
+        "2": 1,
+        "31": 1
+      },
+      "F": 33,
+      "base": 30,
+      "digits": [
+        2,
+        2
+      ],
+      "factor_digit_weight": 4,
+      "prime_half": true,
+      "phi_n": 30,
+      "dyadic_repair": {
+        "a": 7,
+        "target": 7936,
+        "preimage": 7937
+      }
+    },
+    {
+      "n": 68,
+      "factorization": {
+        "2": 2,
+        "17": 1
+      },
+      "F": 21,
+      "base": 48,
+      "digits": [
+        1,
+        20
+      ],
+      "factor_digit_weight": 21,
+      "prime_half": false,
+      "phi_n": 32,
+      "dyadic_repair": {
+        "a": 1,
+        "target": 136,
+        "preimage": 137
+      }
+    },
+    {
+      "n": 74,
+      "factorization": {
+        "2": 1,
+        "37": 1
+      },
+      "F": 39,
+      "base": 36,
+      "digits": [
+        2,
+        2
+      ],
+      "factor_digit_weight": 4,
+      "prime_half": true,
+      "phi_n": 36,
+      "dyadic_repair": {
+        "a": 1,
+        "target": 148,
+        "preimage": 149
+      }
+    },
+    {
+      "n": 76,
+      "factorization": {
+        "2": 2,
+        "19": 1
+      },
+      "F": 23,
+      "base": 54,
+      "digits": [
+        1,
+        22
+      ],
+      "factor_digit_weight": 23,
+      "prime_half": false,
+      "phi_n": 36,
+      "dyadic_repair": {
+        "a": 4,
+        "target": 1216,
+        "preimage": 1217
+      }
+    }
+  ]
+}

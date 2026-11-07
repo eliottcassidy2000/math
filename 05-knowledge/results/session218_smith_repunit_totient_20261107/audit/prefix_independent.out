@@ -1,0 +1,3 @@
+PASS complete even-nontotient prefix through76 via direct-factorization phi, n<=11552: [14, 26, 34, 38, 50, 62, 68, 74, 76]
+PASS exact-integer strong recurrence: D(123) mod251 =229; 251 divides2^50-1; reduced index123.
+Given the cited quasi-periodicity theorem, nonzero229 excludes exponent50 from the Camion exponent set.

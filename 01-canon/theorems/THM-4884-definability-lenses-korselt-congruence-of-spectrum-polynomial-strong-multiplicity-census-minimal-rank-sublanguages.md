@@ -22,6 +22,8 @@ status: >
   Pre-registered Q1 (confirmed in its containment, size and membership clauses; "41" and "every multiplicity 1..10"
   refuted), Q2 (completeness of modes 1 and 2 refuted; mode 3 and the rank ordering mode 3 < mode 1 confirmed; the
   ordering mode 2 < mode 1 refuted), Q3 (a check).
+  SCOPE CORRECTION (2026-11-07, Session 218): the Ford-type omission statement is only finite-exact
+  for 3 <= h < 625. Global omitted multiplicities and completeness of the singleton list remain HYP-9477 (A), OPEN.
   NOT CLAIMED: Chan-Pak coverage; any statement about the paper's correctness.
   AUDIT: PASS WITH CORRECTIONS (2026-11-05, independent; `04-computation/experiments/definability_lenses_audit_20261105/AUDIT.md`):
   every number of (1), (2), (2b), (3) reproduced with the auditor's own code (labelled enumeration to n = 7, class
@@ -57,6 +59,11 @@ related:
 
 # THM-4884 - definability lenses: Korselt congruence, Carmichael multiplicity, minimal rank
 
+**Scope correction (2026-11-07, Session 218).** The census does not refute a global Ford-type
+assertion that every multiplicity >= 2 occurs. It proves omissions only for target counts below 625.
+Actual singleton fibers refute a no-singletons analogue, but their complete all-order list is OPEN
+(HYP-9477 (A)). This correction preserves the numerical repair MISTAKE-723.
+
 ## Statements
 
 1. **Korselt congruence (PROVED).** Let P_n(x) = sum over the labelled tournaments on Z_n of x^(H(T)). For every
@@ -71,13 +78,16 @@ related:
    coefficientwise form is the addition (audit A10).
 
 2. **Carmichael multiplicity (FINITE-EXACT).** With m(h) the number of strong tournament classes of all orders
-   having H = h (finite by Moon's floor), THM-4744's inventories give for odd h < 625: m(h) = 0 iff h in {7, 21};
+   having H = h (finite by Moon's floor), THM-4744's inventories give for odd 3 <= h < 625: m(h) = 0 iff h in {7, 21};
    m(h) = 1 iff h in {3, 5, 11, 13}, each realised by one self-converse class (forced by converse pairing for an odd
    multiplicity); m(h) = 2 iff h in {9, 17, 19, 35, 39, 47, 63}; m(h) = 3 iff h = 25; m(h) >= 6 for every attained h
    with 63 < h < 625 (minimum 6 at h = 67); m(h) >= 73 for odd h in [375, 623]. The values 9, 13, 21, 22, 34, 37 are
    not multiplicities below 625, while every
-   other value up to 38 is. So the analogue of Carmichael's conjecture fails exactly at the four smallest primes other
-   than 7, and the analogue of Ford's theorem (every multiplicity >= 2 occurs) fails. Below 73 every multiplicity here
+   other value up to 38 is. Thus actual singleton fibers refute the no-singletons analogue of Carmichael's
+   conjecture, and the singleton targets in this finite range are exactly {3, 5, 11, 13}. The listed omitted
+   multiplicities do not occur for 3 <= h < 625; a global Ford-type assertion (every multiplicity >= 2
+   occurs somewhere) is not refuted by this census. Global omissions and completeness of the singleton
+   list remain OPEN in HYP-9477 (A). Below 73 every multiplicity here
    was already in Session 24's inventory (complete for H <= 73), and the unique-class parity argument with the
    per-order unique lists is the S50 note's (section 3); the omitted multiplicities below 625 up to 80 are 9, 13, 21,
    22, 34, 37, 41, 44, 50, 51, 55, 57, 60, 62, 64, 67, 79 (maximum 327 at h = 615).

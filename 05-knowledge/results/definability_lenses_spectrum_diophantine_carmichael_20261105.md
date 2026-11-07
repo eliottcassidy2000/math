@@ -24,6 +24,11 @@ signed fiber repair, signed block transport and a root-weighted height bound. Th
 tournament CLASSES and on the labelled spectrum polynomial, cites that lane where it meets them (sections 3, 4 and
 7), and merges its profile census with the class census in section 4b.
 
+**Scope correction (2026-11-07, Session 218).** Finite omitted multiplicities below 625
+do not establish global omitted multiplicities. The global Ford-type assertion and completeness of
+the singleton list remain OPEN (HYP-9477 (A)); the observed singleton fibers do refute a universal
+no-singletons assertion. MISTAKE-723 remains the correction authority for the census values.
+
 ## 0. Summary
 
 - **Architecture map (reasoning, section 1).** The paper defines Z inside Q with four ingredients: integer indices
@@ -50,9 +55,10 @@ tournament CLASSES and on the labelled spectrum polynomial, cites that lane wher
   P_d = SC_d mod 2 of THM-4744 forces), m(h) = 2 exactly for h = 9, 17, 19, 35, 39, 47, 63, m(h) = 3 only for h = 25,
   and m(h) >= 6 for every attained h in (63, 625) (the minimum 6 at h = 67; m(h) >= 73 on [375, 623]). The
   multiplicity function omits the values 9, 13, 21, 22, 34, 37 below 625 while taking every other value up to 38:
-  the analogue of Ford's theorem (every multiplicity >= 2 occurs for Euler's function) fails for the strong
-  spectrum, and the analogue of Carmichael's conjecture (no multiplicity 1) fails exactly at the four smallest primes
-  other than 7. Pre-registered Q1: contained in [3, 100], at most 12 elements, contains 3, 5, 11, 13: CONFIRMED;
+  these are omissions for target counts 3 <= h < 625, not a refutation of a global Ford-type assertion
+  that every multiplicity >= 2 occurs somewhere. The observed singleton fibers refute the universal
+  no-singletons analogue of Carmichael's conjecture; their target set is exactly {3, 5, 11, 13} in this
+  finite range, with completeness beyond the range OPEN (HYP-9477 (A)). Pre-registered Q1: contained in [3, 100], at most 12 elements, contains 3, 5, 11, 13: CONFIRMED;
   "contains 41": REFUTED (m(41) = 6); "every multiplicity 1..10 occurs": REFUTED (9 is omitted).
 - **Diophantine complexity lens (THM-4884 (3), FINITE-EXACT).** The paper measures a definition by its number of
   variables; the natural measure here is the Hankel rank of the N-rational series whose range is to be cofinite in
@@ -165,7 +171,7 @@ Carmichael's conjecture says Euler's function takes no value exactly once; Ford 
 because H >= f(n). THM-4744's complete inventories (`strong_ears_375.out`, `strong_ears_625.out`: P_d(1) for odd
 d < 625) give, read off here:
 
-| m(h) | odd h < 625 |
+| m(h) | odd 3 <= h < 625 |
 |---|---|
 | 0 | 7, 21 |
 | 1 | 3, 5, 11, 13 |

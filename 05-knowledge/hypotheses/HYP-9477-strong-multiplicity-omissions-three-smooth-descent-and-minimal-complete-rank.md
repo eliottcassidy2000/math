@@ -14,9 +14,12 @@ script: 04-computation/experiments/spine_grammar_sublanguages_20261105.cpp; 04-c
 
 THM-4884 (2): below 625 the multiplicity function omits exactly the values 9, 13, 21, 22, 34, 37, 41, 44, 50, 51, 55,
 57, 60, 62, 64, 67, 79 among 0..80 (every other value up to 80 occurs; the maximum is 327 at h = 615), and
-m(h) >= 73 on [375, 623]. Conjecture: m(h) grows without bound along the odd numbers above 623 (the strong
-inventories at orders 10-12 show m(h) of order 10^2 at h near 600), so the sixteen omitted values below the observed
-floor 73 are never multiplicities of a strong count, and the unique-class counts are exactly 3, 5, 11, 13. No claim is
+m(h) >= 73 on [375, 623]. Conjectures (separate assertions): m(h) grows without bound along the odd numbers above 623; the
+sixteen omitted values below the observed floor 73 are never multiplicities of a strong count; and
+the unique-class counts for h >= 3 are exactly 3, 5, 11, 13. The strong inventories at orders 10-12
+show m(h) of order 10^2 at h near 600. Growth without bound alone would not prove the omission or
+singleton claims: finitely many larger target counts could still realize any omitted small value.
+This implication is explicitly withdrawn by the Session 218 scope correction (2026-11-07). No claim is
 made about 79 or any omitted value >= 73, which larger h may still attain. (The first draft singled out the six values
 up to 38; the audit observed that the same argument covers every omitted value below the floor.) Test: extend THM-4744's ear inventories to H < 1,000 (orders <= 14) and read m(h).
 Session 200's open source-fiber conjecture (every n in F(S) other than 3 and 11 has at least two physical profiles)
