@@ -1,0 +1,20 @@
+{
+  "10": {
+    "classes": 9733056,
+    "source_sha256": "4d5ac84cfc46ebb4684d7531da35590880ceef98616a5d1f26df785db9aa7fd8",
+    "spectrum_size": 963,
+    "strong_classes": 9355949
+  },
+  "8": {
+    "classes": 6880,
+    "source_sha256": "3eb3d2d4fbc35d4c6038b998ba04e5ca6a38cf5f8b466f7173a771e2c3a222c2",
+    "spectrum_size": 55,
+    "strong_classes": 6008
+  },
+  "9": {
+    "classes": 191536,
+    "source_sha256": "569ef8e3cd635c675c1883ba880060ba32ad95ad9341490cef9140fbb2fde850",
+    "spectrum_size": 229,
+    "strong_classes": 178133
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "items": [
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f9de668e6caaec77b829c13e3d87cf1ad8db61a3/01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4889-the-hamiltonian-path-spectrum-by-order-and-by-value-exact-censuses-to-order-11-resolved-by-cyclic-triangles-least-orders-strong-windows-level-floors-and-the-zone-law.md",
+      "sha256": "47bb6d612ae4d2119421a15e0d8e1434543c6708b0a17aed4286c009833a3180",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f9de668e6caaec77b829c13e3d87cf1ad8db61a3/01-canon/theorems/THM-4889-the-hamiltonian-path-spectrum-by-order-and-by-value-exact-censuses-to-order-11-resolved-by-cyclic-triangles-least-orders-strong-windows-level-floors-and-the-zone-law.md"
+    },
+    {
+      "path": "05-knowledge/results/chanpak_increments_audit_C_20261104.md",
+      "sha256": "6a834fe838f3846d0af5e009b8d76e135cd60b595467fb263f5955d0e005accd",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f9de668e6caaec77b829c13e3d87cf1ad8db61a3/05-knowledge/results/chanpak_increments_audit_C_20261104.md"
+    },
+    {
+      "path": "session197/lowcycle/ROOTED.md",
+      "sha256": "ba7e632518219eeb8d86b6db7da386a88e98317ea417c9b22e649278c132b32e",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f9de668e6caaec77b829c13e3d87cf1ad8db61a3/session197/lowcycle/ROOTED.md"
+    },
+    {
+      "path": "session197/lowcycle/verify.py",
+      "sha256": "f2d2060bf9e1651ca5f677146d6a020279619a94f0f8696320c80a2b1726a0b0",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f9de668e6caaec77b829c13e3d87cf1ad8db61a3/session197/lowcycle/verify.py"
+    },
+    {
+      "path": "05-knowledge/results/path_spectrum_two_angles_metagraph_20261106/data/census_8.txt",
+      "sha256": "3eb3d2d4fbc35d4c6038b998ba04e5ca6a38cf5f8b466f7173a771e2c3a222c2",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f9de668e6caaec77b829c13e3d87cf1ad8db61a3/05-knowledge/results/path_spectrum_two_angles_metagraph_20261106/data/census_8.txt"
+    },
+    {
+      "path": "05-knowledge/results/path_spectrum_two_angles_metagraph_20261106/data/census_9.txt",
+      "sha256": "569ef8e3cd635c675c1883ba880060ba32ad95ad9341490cef9140fbb2fde850",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f9de668e6caaec77b829c13e3d87cf1ad8db61a3/05-knowledge/results/path_spectrum_two_angles_metagraph_20261106/data/census_9.txt"
+    },
+    {
+      "path": "05-knowledge/results/path_spectrum_two_angles_metagraph_20261106/data/census_10.txt",
+      "sha256": "4d5ac84cfc46ebb4684d7531da35590880ceef98616a5d1f26df785db9aa7fd8",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f9de668e6caaec77b829c13e3d87cf1ad8db61a3/05-knowledge/results/path_spectrum_two_angles_metagraph_20261106/data/census_10.txt"
+    },
+    {
+      "path": "05-knowledge/results/path_spectrum_two_angles_metagraph_20261106/scripts/hspec.c",
+      "sha256": "371253e3dc34258fc9fc49916930d42ff9729f2b87897d3dc90e45ce62ae713a",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f9de668e6caaec77b829c13e3d87cf1ad8db61a3/05-knowledge/results/path_spectrum_two_angles_metagraph_20261106/scripts/hspec.c"
+    }
+  ],
+  "snapshot": "f9de668e6caaec77b829c13e3d87cf1ad8db61a3",
+  "status": "Inherited references, not newly proved claims"
+}

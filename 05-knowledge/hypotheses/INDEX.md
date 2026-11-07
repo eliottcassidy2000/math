@@ -86,7 +86,6 @@
 - **HYP-9210 (OPEN, mac-mini-2026-10-06-chessboard; with THM-4550):** [latest first lonely time](HYP-9210-latest-first-lonely-time.md): tau*(2) = 4/9 (camel), tau*(3) = 7/16 at (1,3,12) PROVED; {1,3,4,...,N} gives 1/2 - 1/(2N) + O(1/N^2), so tau*(n) -> 1/2; exact values for n >= 4 open.
 # Current Hypothesis and Frontier Routing
 A hypothesis is unresolved unless a proved leaf is named explicitly. Search its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance. [September6 audited advances](../results/open_frontier_sep06_board.md): sharp global root-stability constant SOLVED; nonunit decoder, inert lengths and anchored Laurent advances retain their stated scopes. LRC14 and actual two-rung separation remain OPEN.
-
 ## Optional alternate formalization routes
 - **THM-2101:** strict DvdK has three product-free paper proofs; wrappers remain Lean assembly, while `GMC2Main.gmc2` is unconditional.
 
