@@ -1,0 +1,3 @@
+PASS: complete inverse fibers at 2q for prime q=5..97; all preimages included by n<=2m^2<=80000.
+PASS: simultaneous-prime q<=31: [3, 5, 7, 13, 17, 19, 31]
+PASS: support-aware scaling n=1..100,t=1..50; sharp q=3,5 and scaling hostile controls.

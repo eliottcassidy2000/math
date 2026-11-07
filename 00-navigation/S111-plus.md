@@ -91,3 +91,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session216](S216.md): completed extended tournament spectrum research; audited star and inverse constructions, three-core arithmetic reduction, density refinement, rooted reciprocity and unequal-deletion paired rays. Chan–Pak completeness remains OPEN.
 
 [Session217](S217.md): completed exact fixed-core inverse, sharp Q/Z two-counter growth, adaptive module-gate classification and low-run obstruction. Chan–Pak completeness remains OPEN.
+
+[Session218](S218.md): ACTIVE; audited Mersenne/Wagstaff-to-nontotient theorem, support-aware scaling, and Smith/repunit integration. Carmichael and Chan–Pak remain OPEN.
