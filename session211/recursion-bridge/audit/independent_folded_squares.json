@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "scope": "all labeled tournament cores n1..4, all permutations, all adjacent interchanges",
+  "cores": 75,
+  "words": 1589,
+  "oriented_base_edges_tested": 4708,
+  "method": "direct adjacency construction and all-pairs feedback energy; all four square corners tested"
+}

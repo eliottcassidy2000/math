@@ -1,0 +1,52 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "ref": "214586af6c8803d8b21959951e8f151e64bff36f",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-291-mode-b-multilinear-recursion.md",
+      "sha256": "d649f528923db3c220c6d6e54317b00ea1840d4f385e3563949523a742626b8f",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/01-canon/theorems/THM-291-mode-b-multilinear-recursion.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-447-skew-sylvester-doubling.md",
+      "sha256": "410c34bf25a58dec2205e284247d7b2019b2c153abf8dba0fdbfec37f522ef56",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/01-canon/theorems/THM-447-skew-sylvester-doubling.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-450-doubling-family-trichotomy.md",
+      "sha256": "3696af892c355b7b903d2edbce9680b5a51e506022c183d1d715c0a8d3a054c9",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/01-canon/theorems/THM-450-doubling-family-trichotomy.md"
+    },
+    {
+      "path": "session210/graded-spectrum-gates/PROOF.md",
+      "sha256": "56b365afb07b1af431a7a204c171a705389d28ef3dfaeff366864473776ca715",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/session210/graded-spectrum-gates/PROOF.md"
+    },
+    {
+      "path": "session210/coherent-permutohedron/PROOF.md",
+      "sha256": "471a51a30e91c57282f8bb7b5748b00c871eab3d556c7b5b63158d1419eb452f",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/session210/coherent-permutohedron/PROOF.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/01-canon/theorems/THM-002-ocf.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+    },
+    {
+      "path": "session195/combined-growth/PROOF.md",
+      "sha256": "740979ceedc7621232d5b668662f871bfb24a397f3f9c708a764445ab3fbe8f6",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/session195/combined-growth/PROOF.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4876-deletion-and-flip-increments-of-the-hamiltonian-path-count-an-increment-of-two-forces-at-most-three-paths-the-increment-ladder-thm-013-for-all-orders-and-what-extension-spectra-forbid-for-chan-pak.md",
+      "sha256": "3efbe4a2bf4d5bf1e846e027ae4f069d47abbb40062cfc47bad64214f785968e",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/01-canon/theorems/THM-4876-deletion-and-flip-increments-of-the-hamiltonian-path-count-an-increment-of-two-forces-at-most-three-paths-the-increment-ladder-thm-013-for-all-orders-and-what-extension-spectra-forbid-for-chan-pak.md"
+    }
+  ],
+  "novelty_scope": "No literature-priority claim. Existing padding, gate scalar identities, skew doubling, reflected path injection, and hostile counts are inherited. Packet supplies operation-level synthesis, sharp gate strata, folded energy/square lift, endpoint-sector counts, and noncommutation invariants."
+}
