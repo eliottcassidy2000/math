@@ -1,0 +1,36 @@
+{
+  "pin": "968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-052-circulant-scalar-transfer.md",
+      "git_blob": "2720ec23fd3e2976102713a826cb94ec20a7b744",
+      "sha256": "bac75e7e4598ee544a8ca60bbb3d839a712588f7b91037ca37f67b618410460f",
+      "url": "https://github.com/eliottcassidy2000/math/blob/968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c/01-canon/theorems/THM-052-circulant-scalar-transfer.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-078-uT-size-weighted-independence.md",
+      "git_blob": "0864b53b7145cd12e47a7b0e3cfde933c000ffb9",
+      "sha256": "b320672b29158dfa720a80c3dde0411f964a7bb502dbb065689aa9e56dd9e84f",
+      "url": "https://github.com/eliottcassidy2000/math/blob/968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c/01-canon/theorems/THM-078-uT-size-weighted-independence.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "url": "https://github.com/eliottcassidy2000/math/blob/968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c/01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+    },
+    {
+      "path": "05-knowledge/results/session189_response_frontier_20261104/cutarc_incoming/PROOF.md",
+      "git_blob": "257b994af9fabe49a7e182d2c4a3839a6782d1e9",
+      "sha256": "d64b370e969b8c2c9608bd40d02e6d9eba60519149e4761828d965067d9b7a87",
+      "url": "https://github.com/eliottcassidy2000/math/blob/968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c/05-knowledge/results/session189_response_frontier_20261104/cutarc_incoming/PROOF.md"
+    },
+    {
+      "path": "session207/inverse-size-spectrum/README.md",
+      "git_blob": "9d5c19e4d1749d70018a2508bf23725e6dfcd256",
+      "sha256": "ba47aa3667fa04be45b1fa1c3fbcbea1c49be5bd016439f8ef386a31c8f044f2",
+      "url": "https://github.com/eliottcassidy2000/math/blob/968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c/session207/inverse-size-spectrum/README.md"
+    }
+  ],
+  "scope": "Inheritance and attribution only. All main correspondence/operator/reconstruction proofs are given independently in PROOF.md. Parity and the absence of 7 and21 in the gated cycle spectrum use the proven path-spectrum statements at this pin."
+}

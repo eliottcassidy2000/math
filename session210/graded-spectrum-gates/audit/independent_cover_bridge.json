@@ -1,0 +1,61 @@
+{
+  "orders": [
+    {
+      "n": 1,
+      "labelled_tournaments": 1,
+      "q_values": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "n": 2,
+      "labelled_tournaments": 2,
+      "q_values": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "n": 3,
+      "labelled_tournaments": 8,
+      "q_values": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "n": 4,
+      "labelled_tournaments": 64,
+      "q_values": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "n": 5,
+      "labelled_tournaments": 1024,
+      "q_values": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "status": "PASS",
+  "interpretation": "Bin assignments and permutation ascents give the same cover polynomial; gate operator checked without worker subset convolution."
+}
