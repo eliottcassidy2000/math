@@ -1,0 +1,282 @@
+{
+  "status": "PASS",
+  "scope": "all 11 primitive integer triples 1<=s<t<=60; two prescribed orders each",
+  "note": "Checks inherited construction, not all square-sum paths or a new theorem.",
+  "rows": [
+    {
+      "triple": [
+        3,
+        4,
+        5
+      ],
+      "checks": [
+        {
+          "n": 15,
+          "endpoints": [
+            8,
+            9
+          ],
+          "path_sha256": "54a8050fb9831e54ec71dcfac8766bb68b0007a0386c3d7a6febe71425fddca7"
+        },
+        {
+          "n": 16,
+          "endpoints": [
+            8,
+            16
+          ],
+          "path_sha256": "90b3b0994823dd2cdd383b0f1985e5116713c3a63cb83e2d9591c46ab0ad3f7b"
+        }
+      ]
+    },
+    {
+      "triple": [
+        5,
+        12,
+        13
+      ],
+      "checks": [
+        {
+          "n": 143,
+          "endpoints": [
+            25,
+            72
+          ],
+          "path_sha256": "5cf711da45a960fd39eddf59a96f3f2ee64196289027ac2644cfa2280edd4aef"
+        },
+        {
+          "n": 144,
+          "endpoints": [
+            72,
+            144
+          ],
+          "path_sha256": "6ea55aa7672ced54cc4ffe4a2d98b02a58ee59789240e5de43ed82f757597730"
+        }
+      ]
+    },
+    {
+      "triple": [
+        8,
+        15,
+        17
+      ],
+      "checks": [
+        {
+          "n": 224,
+          "endpoints": [
+            32,
+            64
+          ],
+          "path_sha256": "09a609bfa592057051fe1565af57bac066f02dc56405c5dd462687f934c909d1"
+        },
+        {
+          "n": 225,
+          "endpoints": [
+            32,
+            225
+          ],
+          "path_sha256": "dc0800a515b83fedc3cf5e198df29609002e6bff6760250e81a25da60945ddfb"
+        }
+      ]
+    },
+    {
+      "triple": [
+        20,
+        21,
+        29
+      ],
+      "checks": [
+        {
+          "n": 440,
+          "endpoints": [
+            200,
+            400
+          ],
+          "path_sha256": "eaee2c36630529481efa1948fca26b51950ff49607a51dfeeb3138605a537fdd"
+        },
+        {
+          "n": 441,
+          "endpoints": [
+            200,
+            441
+          ],
+          "path_sha256": "fffa2939af75233f8a934053d0665421f15936b69714523661140537d70d0212"
+        }
+      ]
+    },
+    {
+      "triple": [
+        7,
+        24,
+        25
+      ],
+      "checks": [
+        {
+          "n": 575,
+          "endpoints": [
+            49,
+            288
+          ],
+          "path_sha256": "6d3bc3cb24fc19763c78aa34562a6c8602bd8a4547bbc9f999fe9c926e104d60"
+        },
+        {
+          "n": 576,
+          "endpoints": [
+            288,
+            576
+          ],
+          "path_sha256": "c5c0a48f382cf32fec2e67273a9140fbc563b7eeb21f9084d29783484b9d6c5d"
+        }
+      ]
+    },
+    {
+      "triple": [
+        12,
+        35,
+        37
+      ],
+      "checks": [
+        {
+          "n": 1224,
+          "endpoints": [
+            72,
+            144
+          ],
+          "path_sha256": "e8c33860c0a7856f892491babf63bcd88054dbef0c9883e772bc58b93a7909d4"
+        },
+        {
+          "n": 1225,
+          "endpoints": [
+            72,
+            1225
+          ],
+          "path_sha256": "a28a67a7090aeacc495b4531d1715655f6cdee48eb2543a9bcb4022a342615e8"
+        }
+      ]
+    },
+    {
+      "triple": [
+        9,
+        40,
+        41
+      ],
+      "checks": [
+        {
+          "n": 1599,
+          "endpoints": [
+            81,
+            800
+          ],
+          "path_sha256": "9272777828a8f94584af313bbfdb235fcd8a62de2262852d6e2c344c33b8f32d"
+        },
+        {
+          "n": 1600,
+          "endpoints": [
+            800,
+            1600
+          ],
+          "path_sha256": "3d6e088230ced286ae63d0f6e6b57897401eed157e16780c9ba5ee79b90750b3"
+        }
+      ]
+    },
+    {
+      "triple": [
+        28,
+        45,
+        53
+      ],
+      "checks": [
+        {
+          "n": 2024,
+          "endpoints": [
+            392,
+            784
+          ],
+          "path_sha256": "f94ffe52bc1b8caaaa509deb6fc24e5cf31df72f175e486fce3e44a5658237a4"
+        },
+        {
+          "n": 2025,
+          "endpoints": [
+            392,
+            2025
+          ],
+          "path_sha256": "0845382def3ab719f454bc95b25e7d22e5159a8fd2628da3ce1fea4874009332"
+        }
+      ]
+    },
+    {
+      "triple": [
+        48,
+        55,
+        73
+      ],
+      "checks": [
+        {
+          "n": 3024,
+          "endpoints": [
+            1152,
+            2304
+          ],
+          "path_sha256": "abfd93ac30f1a998188e389a23f423dbf41d88a5822edd01f4c58d33a9ec8992"
+        },
+        {
+          "n": 3025,
+          "endpoints": [
+            1152,
+            3025
+          ],
+          "path_sha256": "2ecac70ff14f62f107fa317f0823dcd87966d94c8bf4a14750799c5fb2f229d8"
+        }
+      ]
+    },
+    {
+      "triple": [
+        33,
+        56,
+        65
+      ],
+      "checks": [
+        {
+          "n": 3135,
+          "endpoints": [
+            1089,
+            1568
+          ],
+          "path_sha256": "a36e1c01625579b749f879cfbd4836d054b624408f66eca16f433d9af6b31d56"
+        },
+        {
+          "n": 3136,
+          "endpoints": [
+            1568,
+            3136
+          ],
+          "path_sha256": "4b8d063e5cba659985be73b1fa33ac7b2050284fafeff9b619a0d6b8cb0e8a3a"
+        }
+      ]
+    },
+    {
+      "triple": [
+        11,
+        60,
+        61
+      ],
+      "checks": [
+        {
+          "n": 3599,
+          "endpoints": [
+            121,
+            1800
+          ],
+          "path_sha256": "dc0461a8dc543ea173d58a753f96c11385efeaf67da0c59cbca1db1dff12e941"
+        },
+        {
+          "n": 3600,
+          "endpoints": [
+            1800,
+            3600
+          ],
+          "path_sha256": "ba93e2c4592221b2d06f54db7eded760b0cee1bf2944672380c65509c6516983"
+        }
+      ]
+    }
+  ]
+}

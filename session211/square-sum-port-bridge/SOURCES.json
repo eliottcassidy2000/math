@@ -1,0 +1,40 @@
+{
+  "reference_commit": "214586af6c8803d8b21959951e8f151e64bff36f",
+  "sources": [
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260922_w6_square_sum_hamiltonicity.md",
+      "blob": "f5fe63ab3276d457f1a4df940cb968dddd6928b3",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/05-knowledge/results/collatz_mod6_20260922_w6_square_sum_hamiltonicity.md",
+      "saved_copy_git_blob": "f5fe63ab3276d457f1a4df940cb968dddd6928b3",
+      "saved_copy_sha256": "e9d91f6ffb53d702b2e242089ca57b46ca65475e6c441c5cab8d4da414c85220"
+    },
+    {
+      "path": "01-canon/theorems/THM-4510-sum-graphs-as-reflection-orbits-pythagorean-zigzags.md",
+      "blob": "2e929b8427775d1fbd3379f070d67487084ddf48",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/01-canon/theorems/THM-4510-sum-graphs-as-reflection-orbits-pythagorean-zigzags.md",
+      "saved_copy_git_blob": "2e929b8427775d1fbd3379f070d67487084ddf48",
+      "saved_copy_sha256": "01f8a8ad6c016fa12db5120721687e4bff24470240f6022d61030660419069d1"
+    },
+    {
+      "path": "05-knowledge/results/monster_levels_square_sum_7_21_20261022.md",
+      "blob": "d4547e987ea2e2c6a57e990fe91f3adc22786da1",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/05-knowledge/results/monster_levels_square_sum_7_21_20261022.md",
+      "saved_copy_git_blob": "d4547e987ea2e2c6a57e990fe91f3adc22786da1",
+      "saved_copy_sha256": "5cfeb3ab340d47ffa4bb9f90cb35f05728a6979d7d2ed357e13863465a263c19"
+    },
+    {
+      "path": "05-knowledge/results/camion_busch_gaps_polyhedra_collatz_20261002.md",
+      "blob": "ba44ce3aeee7b611029c5509c2dd5d935189f72c",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/05-knowledge/results/camion_busch_gaps_polyhedra_collatz_20261002.md",
+      "saved_copy_git_blob": "ba44ce3aeee7b611029c5509c2dd5d935189f72c",
+      "saved_copy_sha256": "7e8c6fc9d430cf2ccf1f412b5f4de1ff109e59c73f737491b37a8890e3761be5"
+    },
+    {
+      "path": "05-knowledge/results/session32_square_monster_20261023/ports/PORT_TRANSFER.md",
+      "blob": "aeec93b86ded0c1245202a2e54a9e97c7d92f5f4",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/05-knowledge/results/session32_square_monster_20261023/ports/PORT_TRANSFER.md",
+      "saved_copy_git_blob": "aeec93b86ded0c1245202a2e54a9e97c7d92f5f4",
+      "saved_copy_sha256": "128d084d32d3680a0d86a3ec881606268b4195ecf93fec00fdee92e092f751c1"
+    }
+  ]
+}
