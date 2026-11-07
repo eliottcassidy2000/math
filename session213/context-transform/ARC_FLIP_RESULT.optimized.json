@@ -1,0 +1,58 @@
+{
+  "counts": {
+    "adjacent_run_cases": 1020,
+    "dp_pairs": 252,
+    "permutation_pairs": 12
+  },
+  "levels": [
+    {
+      "m": 1,
+      "max_delta": 6,
+      "min_delta": 2,
+      "parameter_pairs": 4
+    },
+    {
+      "m": 2,
+      "max_delta": 14,
+      "min_delta": 4,
+      "parameter_pairs": 8
+    },
+    {
+      "m": 3,
+      "max_delta": 30,
+      "min_delta": 8,
+      "parameter_pairs": 16
+    },
+    {
+      "m": 4,
+      "max_delta": 62,
+      "min_delta": 16,
+      "parameter_pairs": 32
+    },
+    {
+      "m": 5,
+      "max_delta": 126,
+      "min_delta": 32,
+      "parameter_pairs": 64
+    },
+    {
+      "m": 6,
+      "max_delta": 254,
+      "min_delta": 64,
+      "parameter_pairs": 128
+    },
+    {
+      "m": 7,
+      "max_delta": 510,
+      "min_delta": 128,
+      "parameter_pairs": 256
+    },
+    {
+      "m": 8,
+      "max_delta": 1022,
+      "min_delta": 256,
+      "parameter_pairs": 512
+    }
+  ],
+  "status": "PASS: exact family arc-flip tax"
+}
