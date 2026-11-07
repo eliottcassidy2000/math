@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "one_port_all_exteriors_through": 3,
+  "one_port_exact_mask_checks": 4392,
+  "local_two_port_counts": [
+    11,
+    13
+  ],
+  "leaf_word_max_order": 10,
+  "flip_cubes": 32,
+  "localized_two_port_queries": 192,
+  "strong_S4_literal_tables": 24,
+  "distinct_S4_literal_tables": 24
+}
