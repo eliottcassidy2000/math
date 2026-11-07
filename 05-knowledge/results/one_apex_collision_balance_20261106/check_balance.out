@@ -1,0 +1,13 @@
+three-block identity violations: 0
+max over x < 2^22 of g(x) - x - 1 = 0
+n=10 collision pairs (incl. converse) 396, balance-lemma violations 0, pairs with |A-S| = 2: 0
+n=11 collision pairs (incl. converse) 912, balance-lemma violations 0, pairs with |A-S| = 2: 0
+n=12 collision pairs (incl. converse) 1744, balance-lemma violations 0, pairs with |A-S| = 2: 0
+n=13 collision pairs (incl. converse) 3640, balance-lemma violations 0, pairs with |A-S| = 2: 0
+n=14 collision pairs (incl. converse) 7320, balance-lemma violations 0, pairs with |A-S| = 2: 0
+n=15 collision pairs (incl. converse) 15472, balance-lemma violations 0, pairs with |A-S| = 2: 0
+n=16 collision pairs (incl. converse) 31128, balance-lemma violations 0, pairs with |A-S| = 2: 0
+n=17 collision pairs (incl. converse) 62216, balance-lemma violations 0, pairs with |A-S| = 2: 0
+n=18 collision pairs (incl. converse) 125436, balance-lemma violations 0, pairs with |A-S| = 2: 0
+n=19 collision pairs (incl. converse) 252176, balance-lemma violations 0, pairs with |A-S| = 2: 0
+n=20 collision pairs (incl. converse) 506372, balance-lemma violations 0, pairs with |A-S| = 2: 0

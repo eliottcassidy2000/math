@@ -23224,3 +23224,25 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - Before writing "the first misses would lie beyond 10^N", compute the expected number of misses inside the census
     range under the stated assumption.
   - Before calling a residual "not explained", decompose it by the identities the same packet proves.
+
+## MISTAKE-728 (2026-11-06, opus-2026-11-06-S84, HYP-9482 pre-registration 21b02648ec; found by the session's own outcome check) -- a pre-registered range that the in-sample data already contradicted at its last index, and an extreme-value bound set by eye instead of from the model's own tail
+
+- **What was claimed.**
+  - P6(b): the halving ratio L_(a+1)/L_a of non-converse collision pairs by prefix length lies in [0.45, 0.60] for
+    3 <= a <= n/2 - 3.
+  - P7: the maximum multiplicity on Y_n is at most 16 for n = 22, 24, 26.
+- **What is true.**
+  - P6(b) fails exactly at a = n/2 - 3 (ratios 0.380, 0.376, 0.370 at n = 22, 24, 26). Windows of width at most 6 are a
+    boundary regime. The in-sample n = 20 data, committed in the same pre-registration, already gave
+    0.00401/0.01077 = 0.372 at a = 7 = n/2 - 3.
+  - P7 fails at n = 26, where one value has multiplicity 18. The Poisson-pair model that the same file registers
+    predicts 0.13 such values, 1.84 of multiplicity 16 and 24 of 14 at |Y| = 2^24. A bound of 16 was therefore a
+    tail event of probability about 0.13 under the model itself, before any over-dispersion; the observed tail is about
+    25 % heavier.
+- **Repair.** HYP-9482 records P6(b) as refuted at the boundary and holding for 3 <= a <= n/2 - 4, and P7 as refuted,
+  with the model's tail numbers. No other prediction changes.
+- **Lesson.**
+  - Before freezing a pre-registered range, evaluate it on the committed in-sample data at every index in the range,
+    including the endpoints.
+  - Extreme-value bounds (maximum multiplicity, first miss, largest gap) must come from the registered model's tail
+    at the target size, never from eyeballing the in-sample maxima.

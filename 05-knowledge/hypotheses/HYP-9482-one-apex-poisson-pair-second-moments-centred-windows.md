@@ -1,7 +1,7 @@
 ---
 id: HYP-9482
 title: "One-apex collisions on reduced words: Poisson-pair second moments (energy 14 - 16 ln 2 up to a small positive excess, multiplicity law, smoothed slope 12 - 16 ln 2, cross-layer energy 4 - 4 ln 2 - (12 - 16 ln 2)), centred collision windows with |a - s| <= 1 + carry depth, and a halving level law"
-status: "PRE-REGISTERED (this commit, before any computation of Y_n for n >= 21)"
+status: "PRE-REGISTERED in 21b02648ec; outcomes at n = 22, 24, 26: P1-P5 and P8 CONFIRMED; P6 split - (a) CONFIRMED, (b) REFUTED at the boundary level a = n/2 - 3 (ratio 0.370-0.380; the n = 20 in-sample data already showed 0.372 there, MISTAKE-728), holds for 3 <= a <= n/2 - 4; P7 REFUTED (maximum multiplicity 18 at n = 26; the model itself expects 0.13 such values, the tail is about 25 percent heavier than Poisson-pair). Energy excess over 14 - 16 ln 2 decreasing: 0.032, 0.025, 0.020"
 session: opus-2026-11-06-S84
 date: 2026-11-06
 related: [THM-4890, THM-4887, THM-4886, HYP-9479, HYP-9480, HYP-2199, THM-4885]
@@ -69,3 +69,48 @@ Confirmation would mean the following:
 - the collisions are centred and balanced at micro/macro scale, as proved in weaker form by THM-4890.
 
 It would not prove linear energy. E_n = O(2^n) remains OPEN (THM-4887 proves O(n 2^(4n/3))).
+
+## Outcomes (run after the pre-registration commit 21b02648ec; `outofsample_21_26.out`)
+
+The program was run once, for n = 21..26. Odd n were not registered; they are reported for context.
+
+| n | E^Y/\|Y\| | nonconv/\|Y\| | values/\|Y\| | q=1 | q=2 | q=3 | q=4 | slope K=8 | slope K=16 | max mult | cross-layer/\|X\| | E/\|X\| |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 22 | 2.94201 | 0.94299 | 0.40126 | 0.31759 | 0.06873 | 0.01199 | 0.00173 | 0.90297 | 0.90266 | 14 | 0.32402 | 3.26072 |
+| 24 | 2.93485 | 0.93534 | 0.40143 | 0.31809 | 0.06918 | 0.01182 | 0.00164 | 0.90749 | 0.90622 | 16 | 0.32264 | 3.25743 |
+| 26 | 2.92960 | 0.92984 | 0.40194 | 0.31930 | 0.06881 | 0.01173 | 0.00165 | 0.90872 | 0.90798 | 18 | 0.32149 | 3.25257 |
+| model | 2.90965 | 0.90965 | 0.40343 | 0.32183 | 0.06855 | 0.01133 | 0.00152 | 0.90965 | 0.90965 | - | 0.31777 | 3.22741 |
+
+- **P1 CONFIRMED.** All three values lie in [2.925, 2.990], and the increments are -0.0072 and -0.0052.
+  - E^Y/|Y| peaked at n = 21-22 (2.9418, 2.9420) and has decreased since: 2.9328, 2.9349, 2.9303, 2.9296 for
+    n = 23..26.
+  - The excess over 14 - 16 ln 2 is 0.032, 0.025, 0.020 at n = 22, 24, 26.
+  - The data are consistent with the excess vanishing, which would make the energy constant exactly the Poisson-pair
+    value. They do not prove it.
+- **P2 CONFIRMED.** All twelve fractions are inside their bands.
+- **P3 CONFIRMED.** values/|Y| = 0.40126, 0.40143, 0.40194, against the model's 0.40343.
+- **P4 CONFIRMED.** Slopes are 0.903-0.909 at K = 8 and K = 16, approaching 12 - 16 ln 2 = 0.90965.
+- **P5 CONFIRMED.** |a - s| <= 1 + max(dX, dXi) had no violations at n = 21..26. The proved form of THM-4890 (C)
+  also had no violations (code check).
+- **P6 split.**
+  - (a) CONFIRMED: the levels 1..6 are within 3.7 % of the n = 20 values at every registered n.
+  - (b) REFUTED at the boundary level a = n/2 - 3. The ratios L_(a+1)/L_a are:
+    - n = 22, a = 3..8: 0.548, 0.524, 0.517, 0.507, 0.452, 0.380;
+    - n = 24, a = 3..9: 0.540, 0.531, 0.518, 0.506, 0.501, 0.465, 0.376;
+    - n = 26, a = 3..10: 0.542, 0.525, 0.515, 0.514, 0.505, 0.497, 0.467, 0.370.
+  - The halving law holds in [0.45, 0.60] for 3 <= a <= n/2 - 4. The last ratio is a boundary effect: windows of width
+    w = n - 2a <= 6.
+  - The registered range was wrong from the start. The n = 20 in-sample ratio at a = n/2 - 3 = 7 was already
+    0.00401/0.01077 = 0.372, so the range should have stopped at n/2 - 4 (MISTAKE-728).
+- **P7 REFUTED.** The maximum multiplicity is 18 at n = 26, from one value, so the bound of 16 fails. The bound was set
+  by eye and not from the model's tail.
+  - The model expects 0.13 values of multiplicity 18, 1.84 of 16, 24.2 of 14 and 282 of 12 at |Y| = 2^24. The observed
+    counts are 1, 3, 30 and 356.
+  - So the upper tail is about 25 % heavier than the Poisson-pair mixture. This is the over-dispersion behind the small
+    energy excess.
+- **P8 CONFIRMED.** The cross-layer energy is 0.32402, 0.32264, 0.32149 per |X|, against 4 - 4 ln 2 - (12 - 16 ln 2) =
+  0.31777.
+
+**Reading.** The one-apex collision statistics are Poisson-pair statistics to within 2 % at n = 26 (HYP-9480 (A) at
+first order; this hypothesis at second order). The upper tail and the energy are slightly over-dispersed, and the
+excess is shrinking. Linear energy remains OPEN.

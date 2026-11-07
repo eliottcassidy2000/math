@@ -1,0 +1,7 @@
+n=3 L0   classes= 3  sink spectrum {count: #orientations} = {1: 6, 3: 2}
+n=3 L2   classes= 3  sink spectrum {count: #orientations} = {1: 6, 3: 2}
+n=3 L1   classes= 6  sink spectrum {count: #orientations} = {0: 2, 1: 30, 2: 30, 3: 2}
+n=3 FREE classes= 6  sink spectrum {count: #orientations} = {0: 2, 1: 30, 2: 30, 3: 2}
+n=4 L0   classes= 6  sink spectrum {count: #orientations} = {1: 24, 3: 16, 5: 24}
+n=4 L2   classes=12  sink spectrum {count: #orientations} = {0: 122, 1: 624, 2: 960, 3: 920, 4: 804, 5: 384, 6: 196, 7: 48, 8: 12, 9: 24, 12: 2}
+n=4 L1   classes=24  sink spectrum {count: #orientations} = {0: 95744, 1: 1121280, 2: 4090368, 3: 6162432, 4: 4090368, 5: 1121280, 6: 95744}

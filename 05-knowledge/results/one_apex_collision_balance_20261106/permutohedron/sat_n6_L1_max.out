@@ -1,0 +1,6 @@
+n=6 L1 any atleast k=90 : True (iterations 1, 7.4s)
+n=6 L1 any atleast k=80 : True (iterations 1, 1.4s)
+n=6 L1 any atleast k=72 : True (iterations 1, 0.7s)
+n=6 L1 any atleast k=64 : True (iterations 1, 0.5s)
+n=6 L1 any atleast k=56 : True (iterations 1, 0.4s)
+n=6 L1 any atleast k=50 : True (iterations 1, 0.4s)
