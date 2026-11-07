@@ -23420,3 +23420,52 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     properties defined by `M`, `u` and Kronecker structure they often settle it in two lines.
   - When a remark reverses the direction of a relation (complement of A versus complement of B), write both sides out
     explicitly.
+
+## MISTAKE-733 (2026-11-07, kind-pasteur-2026-11-07-S14, THM-4904, HYP-9494 and the packet `05-knowledge/results/root_change_carmichael_chamber_20261107/` at the pre-audit commit 58a5a8a3d1; found by the independent audit `05-knowledge/results/root_change_carmichael_chamber_20261107/audit/AUDIT.md`)
+
+- **What was claimed.**
+  - (1) HYP-9494 (C): for every K >= 2 no value N > 1 has exactly one word, "the Carmichael conjecture for words with
+    two root changes" extended to all larger budgets.
+  - (2) PROOF section 4: "Below 2^26 there are 3,983 singletons, about 0.49 sqrt(X)" for K = 0.
+  - (3) THM-4904 (5), typed PROVED: the singleton bound is "sharp for K = 0".
+  - (4) THM-4904, typed "PROVED (new): (1)-(5)", with no credit for the K = 0 case, the J-exclusion step or the height
+    bound.
+  - (5) Pre-registered P2 (window minima of M_2 at least 10) and P4 (the N = 1 (mod 3) minimum strictly smallest in
+    each window). Both failed: minima 10, 8, 8, 14, and the residue minima tie at (34, 10, 10) and invert at
+    (40, 12, 8).
+- **Why it was wrong.**
+  - (1) M_7(1897) = 1. The only counted word is ZZJJJJJJJOOZ, and its prefix A J A^dagger (A = ZZJJJ) is dagger-fixed.
+    The packet's own `depth_K7_1e6.txt` shows the singleton (window [1024, 2048), c1 = 1). The mechanism is
+    THM-4904 (3) itself: at a value of exact depth K, M_K = B_K has no doubled term, so a single dagger-fixed
+    exactly-K prefix is a singleton. Only K = 2 had been tested.
+  - (2) The window list printed in the same PROOF sums to 4,084 including N = 1, so 4,083 above 1. That is 0.498
+    sqrt(X), with 4,083 of the 8,191 chamber words. The text had been typed from a mis-added partial sum.
+  - (3) Only the chamber's Theta(sqrt X) size is provable. That the singletons themselves are of order sqrt(X) is a
+    conjecture, HYP-9494 (A).
+  - (4) The parts that were not new:
+    - the K = 0 case of the parity law, chamber and bound is Session206's converse involution T
+      (ROOT_OBSTRUCTION sections 1-2; THM-4888 (B));
+    - the J-exclusion is Session200 carmichael-fibers Theorem 3's argument;
+    - Session200 root-weighted-height section 1 already proves W = U - d >= 2^(#O/Z), stronger than the packet's
+      Lemma 4 (U >= 2 c0^(#J+1) 2^(#O/Z)).
+
+    Also uncredited: the C1 readout F(S) and the 29-gap list through 50,001 are Session198 c1-monotone, and Session199
+    hidden-structure section 6 has a minimal-J-cost table for the balanced sub-readout.
+  - (5) P2 and P4 registered extremes over hundreds of millions of values of a heavy-tailed multiplicity. A few
+    structural outliers decide such extremes. The bulk law the predictions were meant to test holds: no near-miss is
+    0 (mod 3), and 104 of 130 are 1 (mod 3).
+- **Repair.**
+  - HYP-9494 (C) is restricted to K = 2 (P3 CONFIRMED through 10^9). M_7(1897) = 1 is recorded as the only
+    word-singleton above 1 with K >= 2 below 10^9.
+  - The count is now 4,083 and the constant about 0.50.
+  - "Sharp" is retyped as HYP-9494 (A), and THM-4904 states only the Theta(sqrt X) chamber size.
+  - THM-4904 is "new for K >= 1", credits Session206, Session200 (Theorem 3 and root-weighted-height), Session205
+    (JZ = OJ) and Session198/199, and uses the KNOWN W-bound in Theorem 5.
+  - P2 and P4 stay FAILED in every summary. The audit's twelve minors are applied (packet audit/AUDIT.md).
+- **Lessons.**
+  - Before stating a conjecture for all parameters, read the packet's own outputs at every parameter it produced. The
+    counterexample to (C) was printed in `depth_K7_1e6.txt`.
+  - Compute every FINITE-EXACT total by program from the printed list, never by hand.
+  - Pre-register bulk statistics: class means, counts below a threshold, and the class split of near-misses. Do not
+    register the extreme of a heavy-tailed statistic over a large window.
+  - For a K-parametrised statement, grep the repository for its K = 0 case (Session206's T here) before typing it new.
