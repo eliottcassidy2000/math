@@ -114,3 +114,14 @@ The program was run once, for n = 21..26. Odd n were not registered; they are re
 **Reading.** The one-apex collision statistics are Poisson-pair statistics to within 2 % at n = 26 (HYP-9480 (A) at
 first order; this hypothesis at second order). The upper tail and the energy are slightly over-dispersed, and the
 excess is shrinking. Linear energy remains OPEN.
+
+## Addendum pre-registration P9-P11 (n = 28; committed before the n = 28 run)
+
+These bands come from the committed n = 22..26 trend. The excesses of E^Y/|Y| over 14 - 16 ln 2 were 0.032, 0.025 and
+0.020, with ratio about 0.75 per two levels, so the extrapolation for n = 28 is about 0.016. Following MISTAKE-728,
+the tail bound uses the model's own prediction.
+- **P9.** 2.918 <= E^Y_28/|Y_28| < E^Y_26/|Y_26| = 2.92960 (excess in [0.008, 0.020), and decreasing).
+- **P10.** values/|Y_28| in [0.4005, 0.4040], and the multiplicity fractions for q = 1..4 are within the P2 bands.
+- **P11.** The maximum multiplicity at n = 28 is at most 22. The Poisson-pair model expects 0.54 values of
+  multiplicity >= 18 and 0.034 of multiplicity >= 20 at |Y| = 2^26. Allowing the observed 25 % tail inflation, the
+  chance of exceeding 22 is far below 1 %.
