@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "chain_vertex": 0,
+      "changed_arcs": 1,
+      "child_H": 7477,
+      "n": 12,
+      "parent_H": 3187
+    },
+    {
+      "chain_vertex": 5,
+      "changed_arcs": 1,
+      "child_H": 27371,
+      "n": 13,
+      "parent_H": 24693
+    }
+  ],
+  "count_method": "literal directed Hamiltonian words",
+  "status": "PASS"
+}

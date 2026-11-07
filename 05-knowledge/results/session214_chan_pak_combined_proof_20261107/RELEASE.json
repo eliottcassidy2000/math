@@ -1,0 +1,56 @@
+{
+  "session": 214,
+  "date": "2026-11-07",
+  "repository": "eliottcassidy2000/math",
+  "branch": "main",
+  "scope": "Audited structural proof progress toward the Chan–Pak Hamiltonian-path spectrum; unrestricted all-odd completeness remains OPEN.",
+  "initial_main": "4c63fd58b566f3e006eb87eaedcf48824741cc84",
+  "previous_verified_checkpoints": [
+    {
+      "number": 1,
+      "commit": "b19be709c5ac3b14eb142e4d2a87ca04130f85c2",
+      "files": 12,
+      "url": "https://github.com/eliottcassidy2000/math/commit/b19be709c5ac3b14eb142e4d2a87ca04130f85c2"
+    },
+    {
+      "number": 2,
+      "commit": "4290339bbd503f3cb4ce7d0c2b62610d6fff5fef",
+      "files": 2,
+      "url": "https://github.com/eliottcassidy2000/math/commit/4290339bbd503f3cb4ce7d0c2b62610d6fff5fef"
+    },
+    {
+      "number": 3,
+      "commit": "fc587c57fa999b8d2d545b9e57de31efed6d9ff4",
+      "files": 26,
+      "url": "https://github.com/eliottcassidy2000/math/commit/fc587c57fa999b8d2d545b9e57de31efed6d9ff4"
+    }
+  ],
+  "final_checkpoint_contents": [
+    "Restricted two-apex surgery proof and addendum",
+    "Two positive one-old-arc escape constructions",
+    "Independent surgery and one-flip audits",
+    "Independently reviewed session synthesis",
+    "Complete release checksums"
+  ],
+  "publisher_replays": {
+    "forced_shuffle": "PASS: author normal and -O exact receipts; independent C++ and sharpness exact receipts",
+    "endpoint_stability": "PASS: author normal and -O exact receipts; supplementary inherited class receipt; independent C++ and six literal permutation witnesses",
+    "paired_carriers": "PASS: author normal and -O exact receipts; independent literal graph and integer matrix receipt",
+    "two_apex_surgery": "PASS: initial and addendum author normal and -O exact receipts; independent initial and extended C++ census receipts",
+    "one_flip_controls": "PASS: author normal and -O exact receipts; independent literal directed-word receipt",
+    "repository_docs": "PASS: agents/check_docs.py after earlier checkpoints and required again on final staged bytes"
+  },
+  "truth_boundaries": [
+    "Proofs and finite-exact universes are distinguished in each report.",
+    "The skeleton bound applies to strong sole-exit outputs; arbitrary outputs use SCC factorization.",
+    "The values 7477 and 27371 are excluded only from the stated restricted class, and both have explicit broader realizers.",
+    "One-flip minimality concerns original combs on the same vertex set, not arbitrary edit models.",
+    "No enlarged unrestricted finite coverage bank or external literature priority is claimed."
+  ],
+  "integrity": {
+    "checksum_file": "SHA256SUMS",
+    "checksum_scope": "Every file in this release directory except SHA256SUMS itself. Separate HYP-9469 and hypotheses INDEX metadata hashes appear in INDEX_AUDIT.md.",
+    "publication": "Current-head nonforce updates; all files of previous checkpoints verified by immutable path contents and direct Git blob readback. Final checkpoint remote readback is verified after its containing commit is created.",
+    "concurrency": "Concurrent mainline work preserved. Shared dirty checkout unchanged; publication uses an isolated staging clone."
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "busch_f18": 9375,
+  "levels": [
+    {
+      "chain_length": 1,
+      "covered_through_7477": 2,
+      "first_missing_other_than_7_21": 5
+    },
+    {
+      "chain_length": 2,
+      "covered_through_7477": 3,
+      "first_missing_other_than_7_21": 9
+    },
+    {
+      "chain_length": 3,
+      "covered_through_7477": 7,
+      "first_missing_other_than_7_21": 17
+    },
+    {
+      "chain_length": 4,
+      "covered_through_7477": 17,
+      "first_missing_other_than_7_21": 35
+    },
+    {
+      "chain_length": 5,
+      "covered_through_7477": 48,
+      "first_missing_other_than_7_21": 61
+    },
+    {
+      "chain_length": 6,
+      "covered_through_7477": 125,
+      "first_missing_other_than_7_21": 75
+    },
+    {
+      "chain_length": 7,
+      "covered_through_7477": 313,
+      "first_missing_other_than_7_21": 265
+    },
+    {
+      "chain_length": 8,
+      "covered_through_7477": 811,
+      "first_missing_other_than_7_21": 485
+    },
+    {
+      "chain_length": 9,
+      "covered_through_7477": 1957,
+      "first_missing_other_than_7_21": 907
+    },
+    {
+      "chain_length": 10,
+      "covered_through_7477": 3175,
+      "first_missing_other_than_7_21": 2013
+    },
+    {
+      "chain_length": 11,
+      "covered_through_7477": 3667,
+      "first_missing_other_than_7_21": 3821
+    },
+    {
+      "chain_length": 12,
+      "covered_through_7477": 3736,
+      "first_missing_other_than_7_21": 7477
+    },
+    {
+      "chain_length": 13,
+      "covered_through_7477": 3736,
+      "first_missing_other_than_7_21": 7477
+    },
+    {
+      "chain_length": 14,
+      "covered_through_7477": 3736,
+      "first_missing_other_than_7_21": 7477
+    },
+    {
+      "chain_length": 15,
+      "covered_through_7477": 3736,
+      "first_missing_other_than_7_21": 7477
+    },
+    {
+      "chain_length": 16,
+      "covered_through_7477": 3736,
+      "first_missing_other_than_7_21": 7477
+    },
+    {
+      "chain_length": 17,
+      "covered_through_7477": 3736,
+      "first_missing_other_than_7_21": 7477
+    }
+  ],
+  "omitted_odd_values_through_7477": [
+    7,
+    21,
+    7477
+  ],
+  "permutation_controls": 256,
+  "positive_values": 3736,
+  "positive_witness_replays": 3736,
+  "positive_witness_sha256": "f262d28034ca309e224943748203b0dec32515494e858157f7f0739dbc2da7f6",
+  "prime_target": 7477,
+  "quadratic_controls": 1536,
+  "scope": "FINITE-EXACT census; all-order exclusion additionally uses the written SCC proof and CITED Busch bound",
+  "selected_witnesses": {
+    "13": [
+      3,
+      0,
+      0,
+      3
+    ],
+    "35": [
+      5,
+      2,
+      1,
+      29
+    ],
+    "47": [
+      5,
+      0,
+      0,
+      1
+    ],
+    "7475": [
+      10,
+      2,
+      0,
+      333
+    ]
+  },
+  "status": "PASS",
+  "subset_dp_controls": 1536,
+  "two_exit_control": {
+    "H": 7477,
+    "a_beats_b": true,
+    "a_out_chain": [
+      0,
+      3
+    ],
+    "b_cut": 199,
+    "chain_length": 9,
+    "outgoing_rows": [
+      510,
+      1020,
+      1016,
+      1520,
+      2016,
+      1984,
+      896,
+      768,
+      1536,
+      1033,
+      199
+    ]
+  },
+  "universes": {
+    "apex_arc_orientations": 2,
+    "apex_chain_outdegree": 1,
+    "chain_lengths": [
+      1,
+      17
+    ],
+    "other_apex_cuts": "all",
+    "parameter_cases": 8388612
+  }
+}

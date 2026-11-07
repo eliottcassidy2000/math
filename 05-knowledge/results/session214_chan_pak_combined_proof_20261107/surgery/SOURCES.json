@@ -1,0 +1,31 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "read_ref": "4c63fd58b566f3e006eb87eaedcf48824741cc84",
+  "sources": [
+    {
+      "path": "session213/README.md",
+      "git_blob_sha": "8a2b97e749e21cae0f9fb5dc880c80627455e784",
+      "sha256": "fda02a5d52d31c602e9a82444bbb1a4b773959bf7fc7dcd9faa77e27f67a9003"
+    },
+    {
+      "path": "01-canon/theorems/THM-4744-interval-chains-attain-busch-and-are-the-extremal-strong-tournaments-through-order-twelve.md",
+      "git_blob_sha": "18220e0060a374f25a32761ab1391a28e559e8a6",
+      "sha256": "c5c781024535ca3c82002a55579cf07a699dba7406ba484fc4fb18ced3ee404f"
+    },
+    {
+      "path": "05-knowledge/results/session191_tournament_growth_20261104/two_apex/TWO_APEX.md",
+      "git_blob_sha": "1f9aff3a20cecd1c47167e55a0196e511e651117",
+      "sha256": "e844aac54ee9d53bc30a9e3e7fd2bb2dc3952c8d149319401a8d0a1395ee6602"
+    },
+    {
+      "path": "session213/context-transform/PROOF.md",
+      "git_blob_sha": "cfb70b776448a09a0f3789e9c5215c4803625d57",
+      "sha256": "5c8199a1a9d0365a52e4a4df16d6915f8b9d779dc35c45a1f730a32eab99db5d"
+    },
+    {
+      "path": "session203/endpoint-unit-gate/PROOF.md",
+      "git_blob_sha": "b661910a0c9cfd135ab4ae61e44cc713a76ae5e1",
+      "sha256": "572500f0307c13f114a66a330eb0e17f931018354325eb4dec1d32f3decc609d"
+    }
+  ]
+}

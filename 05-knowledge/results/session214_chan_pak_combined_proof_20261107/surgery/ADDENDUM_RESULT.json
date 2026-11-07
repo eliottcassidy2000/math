@@ -1,0 +1,125 @@
+{
+  "busch_f20": 28125,
+  "component_checks": 1536,
+  "factorization": [
+    101,
+    271
+  ],
+  "levels": [
+    {
+      "L": 1,
+      "covered_through_27371": 2
+    },
+    {
+      "L": 2,
+      "covered_through_27371": 3
+    },
+    {
+      "L": 3,
+      "covered_through_27371": 7
+    },
+    {
+      "L": 4,
+      "covered_through_27371": 17
+    },
+    {
+      "L": 5,
+      "covered_through_27371": 48
+    },
+    {
+      "L": 6,
+      "covered_through_27371": 125
+    },
+    {
+      "L": 7,
+      "covered_through_27371": 313
+    },
+    {
+      "L": 8,
+      "covered_through_27371": 811
+    },
+    {
+      "L": 9,
+      "covered_through_27371": 1989
+    },
+    {
+      "L": 10,
+      "covered_through_27371": 4849
+    },
+    {
+      "L": 11,
+      "covered_through_27371": 9199
+    },
+    {
+      "L": 12,
+      "covered_through_27371": 12402
+    },
+    {
+      "L": 13,
+      "covered_through_27371": 13546
+    },
+    {
+      "L": 14,
+      "covered_through_27371": 13682
+    },
+    {
+      "L": 15,
+      "covered_through_27371": 13682
+    },
+    {
+      "L": 16,
+      "covered_through_27371": 13682
+    },
+    {
+      "L": 17,
+      "covered_through_27371": 13682
+    }
+  ],
+  "omitted_odd_values_through_27371": [
+    7,
+    21,
+    7477,
+    27371
+  ],
+  "one_apex_floor_checks": 2046,
+  "parameter_cases": 8388612,
+  "positive_values": 13682,
+  "positive_witness_sha256": "39b072b14038c35d2c812ba4d05c33c61ecb18cb454a093bc5f789a2c918a436",
+  "power_plus_one_remainders": {
+    "1": 2,
+    "10": 721,
+    "11": 734,
+    "12": 2789,
+    "13": 2792,
+    "14": 10986,
+    "2": 1,
+    "3": 2,
+    "4": 1,
+    "5": 14,
+    "6": 6,
+    "7": 23,
+    "8": 129,
+    "9": 182
+  },
+  "status": "PASS",
+  "target": 27371,
+  "two_component_cases": 22,
+  "two_exit_control": {
+    "H": 27371,
+    "outgoing_rows": [
+      6142,
+      8188,
+      4088,
+      6128,
+      8160,
+      4032,
+      8064,
+      7936,
+      3584,
+      3072,
+      6144,
+      9,
+      2852
+    ]
+  }
+}

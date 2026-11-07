@@ -1,0 +1,80 @@
+{
+  "status": "INDEPENDENT AUDIT PASS",
+  "payload_file_count": 14,
+  "audits": [
+    "../surgery-audit/SURGERY_AUDIT.md",
+    "../surgery-audit/ONE_FLIP_AUDIT.md"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3333,
+      "sha256": "d0c37207ea2ecb29726ee6267b634d82e5d01d826df6443ddb40dc366797b759"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 9969,
+      "sha256": "1675fa2d54dc89aecf4383941215f47dfbb620a4a971a5fa3edbffddf40c89ea"
+    },
+    {
+      "path": "counting.py",
+      "bytes": 2224,
+      "sha256": "825d5beb1f350208a47e0b76e1b299fdaf4b6d9e11d428776bc6ffc8532d0a32"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 3590,
+      "sha256": "4c6eda625d8bbe2428555c0335a97bd3c91ad7731c169bf8d7fa466c8000f4b2"
+    },
+    {
+      "path": "RESULT.json",
+      "bytes": 3258,
+      "sha256": "65244bc13d57a2dcae9c14757aefa84b1d31fd06e940f97e7a8d8658f1d1b232"
+    },
+    {
+      "path": "SOURCES.json",
+      "bytes": 1315,
+      "sha256": "60c982245295afa4fe7d14c6906677f45b28ef2ce3526d7ca3017ba093450831"
+    },
+    {
+      "path": "ADDENDUM.md",
+      "bytes": 7813,
+      "sha256": "b86c0062d1d73a046181a8aa6362af4293006a4f782dc57b3ba8ac1540cece96"
+    },
+    {
+      "path": "addendum_verify.py",
+      "bytes": 3946,
+      "sha256": "ea04a9dd4b99902f2353782cba8465a11c4ce2ca094f32b3dafb9fc5c0d68ebd"
+    },
+    {
+      "path": "ADDENDUM_RESULT.json",
+      "bytes": 1975,
+      "sha256": "39a2a27ace8c3e73852cdb2bfc6036f9d0956e1eaf1414a2f83932e0f517d093"
+    },
+    {
+      "path": "ADDENDUM_SOURCES.json",
+      "bytes": 334,
+      "sha256": "3bd4f5b82c645e837d82684e18babfacfcc5f7a79b8797f57069c96ec025ef1d"
+    },
+    {
+      "path": "ONE_FLIP_CONTROLS.md",
+      "bytes": 2396,
+      "sha256": "59d998fa03f04552ff90408e3059788152b0ca0a2c0ffa0506d4804fd2a2350d"
+    },
+    {
+      "path": "one_flip_verify.py",
+      "bytes": 2226,
+      "sha256": "434b4921524b176809dd48709e0acae3d77bb04f009913389a2fc962ec734967"
+    },
+    {
+      "path": "ONE_FLIP_RESULT.json",
+      "bytes": 1585,
+      "sha256": "30cac455d955772bd88daffc249c649ca489147ceb123234e9a8a70c325c67d5"
+    },
+    {
+      "path": "ONE_FLIP_SOURCES.json",
+      "bytes": 337,
+      "sha256": "812c42f41d59e50ea975dcfcec0b623d0ab579c599321a95b1b3546336dcba66"
+    }
+  ]
+}

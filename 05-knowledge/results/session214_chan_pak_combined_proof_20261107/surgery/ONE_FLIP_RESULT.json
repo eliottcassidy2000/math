@@ -1,0 +1,92 @@
+{
+  "cases": [
+    {
+      "apex_orientation": "-",
+      "child_H": 7477,
+      "child_rows": [
+        1022,
+        1020,
+        2040,
+        4080,
+        4064,
+        4032,
+        1920,
+        1792,
+        1536,
+        1024,
+        3,
+        1991
+      ],
+      "flip_chain_index": 0,
+      "m": 8,
+      "methods": [
+        "subset dynamic programming",
+        "three-run transfer"
+      ],
+      "parent_H": 3187,
+      "parent_extra_control": "inherited closed comb formula",
+      "parent_rows": [
+        2046,
+        1020,
+        2040,
+        4080,
+        4064,
+        4032,
+        1920,
+        1792,
+        1536,
+        1024,
+        2,
+        1991
+      ],
+      "q": 14,
+      "tau": 0
+    },
+    {
+      "apex_orientation": "+",
+      "child_H": 27371,
+      "child_rows": [
+        4094,
+        6140,
+        8184,
+        8176,
+        4064,
+        1984,
+        8064,
+        7936,
+        3584,
+        7168,
+        2048,
+        4130,
+        1329
+      ],
+      "flip_chain_index": 5,
+      "m": 9,
+      "methods": [
+        "subset dynamic programming",
+        "three-run transfer"
+      ],
+      "parent_H": 24693,
+      "parent_extra_control": "inherited closed comb formula",
+      "parent_rows": [
+        4094,
+        6140,
+        8184,
+        8176,
+        4064,
+        4032,
+        8064,
+        7936,
+        3584,
+        7168,
+        2048,
+        4098,
+        1329
+      ],
+      "q": 179,
+      "tau": 1
+    }
+  ],
+  "scope": "Two finite physical one-arc constructions; no all-target recurrence",
+  "status": "PASS"
+}
