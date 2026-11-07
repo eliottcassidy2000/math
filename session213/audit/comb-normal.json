@@ -1,0 +1,44 @@
+{
+  "checks": {
+    "context_DP": 60,
+    "cycle_DP": 504,
+    "density_lower_bounds": 480,
+    "odd_cycle_pair_certificates": 270,
+    "permutation": 56,
+    "quadratic_DP": 504
+  },
+  "scope": "Independent finite controls, not a substitute for the all-order proofs.",
+  "spectra": {
+    "1": {
+      "distinct": 4,
+      "maximum": 15,
+      "minimum": 3
+    },
+    "2": {
+      "distinct": 10,
+      "maximum": 37,
+      "minimum": 5
+    },
+    "3": {
+      "distinct": 22,
+      "maximum": 103,
+      "minimum": 9
+    },
+    "4": {
+      "distinct": 52,
+      "maximum": 285,
+      "minimum": 17
+    },
+    "5": {
+      "distinct": 98,
+      "maximum": 815,
+      "minimum": 33
+    },
+    "6": {
+      "distinct": 226,
+      "maximum": 2407,
+      "minimum": 65
+    }
+  },
+  "status": "PASS"
+}

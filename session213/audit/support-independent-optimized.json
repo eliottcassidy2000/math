@@ -1,0 +1,8 @@
+{
+  "distinct_values": 5072,
+  "limit": 65535,
+  "matching_author_support_sha256": "4b392aa4fa6c4d7ba4518cb713fdb829bf91d6b0d0fb8a4245880d5093cb6770",
+  "method": "Naive O(m^2) quadratic evaluation; no Gray-code updates and no author imports",
+  "presentations": 262136,
+  "status": "PASS"
+}

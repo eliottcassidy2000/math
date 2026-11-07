@@ -1,0 +1,54 @@
+{
+  "author_frozen_verifier_replays": [
+    {
+      "normal_matches_frozen": true,
+      "optimized_matches_frozen": true,
+      "packet": "cycle-arithmetic",
+      "receipt": "RESULT.json",
+      "sha256": "4fd670d2704de50a8d8b6b96a0894abaa17bc21f06aa4b984a4f55e33f1f04db"
+    },
+    {
+      "normal_matches_frozen": true,
+      "optimized_matches_frozen": true,
+      "packet": "cycle-arithmetic",
+      "receipt": "ADDENDUM_RESULT.json",
+      "sha256": "01565c1d9b77b08ac955345763c2e1202ba9062e3b2e9996de0aa76b8282b22a"
+    },
+    {
+      "normal_matches_frozen": true,
+      "optimized_matches_frozen": true,
+      "packet": "cycle-arithmetic",
+      "receipt": "EQUALITY_RESULT.json",
+      "sha256": "5f96711d8e3eae226ece0bdaea72eba49d6bb9e2134c2c8a817e7adf83217b0a"
+    },
+    {
+      "normal_matches_frozen": true,
+      "optimized_matches_frozen": true,
+      "packet": "context-transform",
+      "receipt": "RESULT.json",
+      "sha256": "db15f437dc510b112df39c8a52dfe78ae5d9e433e8e427013e88b9b28d0723d4"
+    },
+    {
+      "normal_matches_frozen": true,
+      "optimized_matches_frozen": true,
+      "packet": "context-transform",
+      "receipt": "ARC_FLIP_RESULT.json",
+      "sha256": "aee6d70a4623554641b52c0edd622cea5aba3298a584fb9b2e4f4881f0be671c"
+    },
+    {
+      "normal_matches_frozen": true,
+      "optimized_matches_frozen": true,
+      "packet": "path-gadgets",
+      "receipt": "RESULT.json",
+      "sha256": "2e390d66b2b4be4a8d03fab1f3fe8098becca364d2b07b4164b333b3cdafcfbb"
+    },
+    {
+      "normal_matches_frozen": true,
+      "optimized_matches_frozen": true,
+      "packet": "cycle-to-path",
+      "receipt": "RESULT.json",
+      "sha256": "b3b99f8a87ab15ad83421358bf5d5541de5bdd309ea71524172cd0744ae8bc76"
+    }
+  ],
+  "status": "PASS"
+}

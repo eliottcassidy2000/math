@@ -1,0 +1,17 @@
+{
+  "class_universe": "Order7/8 representatives inherited from Session212 verified complete class lists; this audit independently checks tournament rows/counts but does not regenerate isomorphism classes.",
+  "source_file_sha256": {
+    "01-canon/theorems/THM-4526-shaved-tournaments-path-plus-chord-and-the-largest-unavoidable-graphs.md": "22d8597058ca26c060553b7becde6673a1f54e3df35d0cbd0556c875d649ac2f",
+    "01-canon/theorems/THM-4729-closed-and-open-tilings-hamiltonian-cycle-bipartition-of-the-metagraph-lines-and-the-forced-arrangement.md": "016fcbf20415d3f0c069a2feea7e9f5e40e3d24d46735034dbd70cf7793acd49",
+    "01-canon/theorems/THM-4875-old-mark-digit-lower-bound-lorentzian-gadget-adjoint-and-one-apex-joins-realise-every-odd-number-to-2-32-except-7-and-21.md": "e089d29927c4ca71d2d8adb6ff78ae318aca3e8356efd4bc6783f8deb6abc8fc",
+    "01-canon/theorems/THM-4876-deletion-and-flip-increments-of-the-hamiltonian-path-count-an-increment-of-two-forces-at-most-three-paths-the-increment-ladder-thm-013-for-all-orders-and-what-extension-spectra-forbid-for-chan-pak.md": "3efbe4a2bf4d5bf1e846e027ae4f069d47abbb40062cfc47bad64214f785968e",
+    "01-canon/theorems/THM-4882-signed-one-apex-responses-slope-and-parity-classification-session198-clock-merged-positive-count-barrier.md": "305950149af944d18d4e8055aa8c93032003e85238477cb9bb9dc46d8225e89d",
+    "05-knowledge/results/chanpak_endcount_audit_D_20261104.md": "3a8a609afc90a2f7638fe400a5127d2d3382e0fc190734ccee2780b7c554e143",
+    "05-knowledge/results/spine_grammars_cutwidth_apexes_hankel_seams_20261104.md": "a7b4f4e5c022f0b1ac630b960633ab98e6b5fbd626fbbd1357d047831f156bb4",
+    "session212/cycle-bridge/ENDPOINT_BRIDGE.md": "c4427215b5d9843f94215d2278c5401169afc3d5c619055098e14cd7345de0e0",
+    "session212/cycle-bridge/PROOF.md": "6dd8e7dcc10e66856aedb1be7dd45e53797771f5b32b6113a4e68f4073385e6d",
+    "session212/cycle-levels/classes7.rows": "b17fb0cc08c3e31c2bd8fe6df856f4c1d125f4c2d7bf6153196be6bcbe1ad416",
+    "session212/cycle-levels/classes8.rows": "86df994d7c4f535d1ea7fc7f452c07177a426f5fe12efa37e2134dbe0f192f5b"
+  },
+  "status": "PASS"
+}

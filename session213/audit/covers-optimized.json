@@ -1,0 +1,24 @@
+{
+  "all_length_comb_support_through_35": [
+    3,
+    5,
+    9,
+    13,
+    15,
+    17,
+    19,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33
+  ],
+  "checks": {
+    "coefficient_cores": 5,
+    "general_attachments": 1098,
+    "general_cores": 75,
+    "ordered_cover_entries": 100
+  },
+  "status": "PASS"
+}

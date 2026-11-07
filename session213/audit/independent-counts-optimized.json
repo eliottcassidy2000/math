@@ -1,0 +1,105 @@
+{
+  "apex_cases_orders_1_to_9": 511,
+  "implementation": "backwards subset DP; dense adjacency; no author imports",
+  "permutation_checks_orders_at_most_7": 157,
+  "sentinel_cases_orders_3_to_9": 127,
+  "sentinel_examples": [
+    {
+      "cycle_target": 1,
+      "defect": 1,
+      "q": 0,
+      "total_paths": 3
+    },
+    {
+      "cycle_target": 2,
+      "defect": 1,
+      "q": 1,
+      "total_paths": 5
+    },
+    {
+      "cycle_target": 3,
+      "defect": 3,
+      "q": 2,
+      "total_paths": 9
+    },
+    {
+      "cycle_target": 4,
+      "defect": 1,
+      "q": 3,
+      "total_paths": 9
+    },
+    {
+      "cycle_target": 5,
+      "defect": 5,
+      "q": 4,
+      "total_paths": 15
+    },
+    {
+      "cycle_target": 6,
+      "defect": 3,
+      "q": 5,
+      "total_paths": 15
+    },
+    {
+      "cycle_target": 7,
+      "defect": 5,
+      "q": 6,
+      "total_paths": 19
+    },
+    {
+      "cycle_target": 8,
+      "defect": 1,
+      "q": 7,
+      "total_paths": 17
+    },
+    {
+      "cycle_target": 9,
+      "defect": 9,
+      "q": 8,
+      "total_paths": 27
+    },
+    {
+      "cycle_target": 10,
+      "defect": 5,
+      "q": 9,
+      "total_paths": 25
+    },
+    {
+      "cycle_target": 11,
+      "defect": 9,
+      "q": 10,
+      "total_paths": 31
+    },
+    {
+      "cycle_target": 12,
+      "defect": 3,
+      "q": 11,
+      "total_paths": 27
+    },
+    {
+      "cycle_target": 13,
+      "defect": 11,
+      "q": 12,
+      "total_paths": 37
+    },
+    {
+      "cycle_target": 14,
+      "defect": 5,
+      "q": 13,
+      "total_paths": 33
+    },
+    {
+      "cycle_target": 15,
+      "defect": 9,
+      "q": 14,
+      "total_paths": 39
+    },
+    {
+      "cycle_target": 16,
+      "defect": 1,
+      "q": 15,
+      "total_paths": 33
+    }
+  ],
+  "status": "PASS"
+}

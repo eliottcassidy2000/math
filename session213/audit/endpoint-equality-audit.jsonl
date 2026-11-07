@@ -1,0 +1,9 @@
+{"universe":"all_labelled","n":1,"tournaments":1,"positive_nonsink_roots":0,"equalities":0,"excluded_H1_e0_equalities":0}
+{"universe":"all_labelled","n":2,"tournaments":2,"positive_nonsink_roots":0,"equalities":0,"excluded_H1_e0_equalities":2}
+{"universe":"all_labelled","n":3,"tournaments":8,"positive_nonsink_roots":6,"equalities":6,"excluded_H1_e0_equalities":12}
+{"universe":"all_labelled","n":4,"tournaments":64,"positive_nonsink_roots":120,"equalities":48,"excluded_H1_e0_equalities":72}
+{"universe":"all_labelled","n":5,"tournaments":1024,"positive_nonsink_roots":3320,"equalities":360,"excluded_H1_e0_equalities":480}
+{"universe":"all_labelled","n":6,"tournaments":32768,"positive_nonsink_roots":154080,"equalities":2880,"excluded_H1_e0_equalities":3600}
+{"universe":"inherited_complete_unlabelled_rows","n":7,"tournaments":456,"positive_nonsink_roots":2731,"equalities":7,"excluded_H1_e0_equalities":6}
+{"universe":"inherited_complete_unlabelled_rows","n":8,"tournaments":6880,"positive_nonsink_roots":50857,"equalities":8,"excluded_H1_e0_equalities":7}
+{"orphan_witnesses":1981,"status":"PASS"}

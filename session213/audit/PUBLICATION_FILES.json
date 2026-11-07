@@ -1,0 +1,108 @@
+{
+  "destination": "session213/audit",
+  "files": [
+    {
+      "name": "APPROVED_PACKETS.json",
+      "sha256": "39504db6f05a3af6e85bdab8eeff3d2723a99071a43dab45e8477b7257251927"
+    },
+    {
+      "name": "AUDIT.md",
+      "sha256": "c37d202ce706eb5697a781b89c91eff15a54c7c72d9310650e89cebb40bcf4c1"
+    },
+    {
+      "name": "README.md",
+      "sha256": "eebd1ffc6d821e70fa5937db7c29688078ce133faad47795f7ff3b84b97f9fda"
+    },
+    {
+      "name": "REPLAY_RECEIPT.json",
+      "sha256": "a1940ebda503c561437901ea499a8741271c469af628755ca0936e1651adf31b"
+    },
+    {
+      "name": "SHA256SUMS",
+      "sha256": "7140a48a5017119a9efcb0a11e6a3258172484afbd7c0ab99398aa4039d64f80"
+    },
+    {
+      "name": "SOURCE_VALIDATION.json",
+      "sha256": "ee002529c6dfc5985d0ddc0c9ae772fc890a0abb6439f5c54388909cc37b45c1"
+    },
+    {
+      "name": "audit_comb.py",
+      "sha256": "da6b64f80de20025ad07e5cc04ee5d3dad18caefe1b691ef0a7014fb17257cd1"
+    },
+    {
+      "name": "audit_covers.py",
+      "sha256": "e993797e9c4aebcf2ea6984143c606410bf64c163a5de3e12b487f7112a2bcfc"
+    },
+    {
+      "name": "audit_deletions.py",
+      "sha256": "8d14eaa0ceca7148481fc5aef3767186f7a6dc7656d28aea371892bc868274e4"
+    },
+    {
+      "name": "audit_endpoint_equality.cpp",
+      "sha256": "b670a21f463e359212bac5ddda0cd30a09e00a586e6edda1b8dcae0ead4f8ec7"
+    },
+    {
+      "name": "audit_support.py",
+      "sha256": "ed4317efbfb9e5bb534a1ae8ba84e7b4a0793363e16d9445429ecf78fe846819"
+    },
+    {
+      "name": "comb-normal.json",
+      "sha256": "b2bdcfa35be8d441187c5ff1bdf7c65dd77a138bac59794f2957d2c3de464fa2"
+    },
+    {
+      "name": "comb-optimized.json",
+      "sha256": "b2bdcfa35be8d441187c5ff1bdf7c65dd77a138bac59794f2957d2c3de464fa2"
+    },
+    {
+      "name": "covers-normal.json",
+      "sha256": "eb1cc3fc15e5d78313bf5e684f438c1918c065e14454af931f5e725615066d00"
+    },
+    {
+      "name": "covers-optimized.json",
+      "sha256": "eb1cc3fc15e5d78313bf5e684f438c1918c065e14454af931f5e725615066d00"
+    },
+    {
+      "name": "deletion-normal.json",
+      "sha256": "1abd3187083d368e8217365b44566f35665e3f9fcde9cfd5d46e20e7ccf5cfed"
+    },
+    {
+      "name": "deletion-optimized.json",
+      "sha256": "1abd3187083d368e8217365b44566f35665e3f9fcde9cfd5d46e20e7ccf5cfed"
+    },
+    {
+      "name": "endpoint-equality-audit-O0.jsonl",
+      "sha256": "c358f3253c2d6c577eefc1d50f78858d597616a8b86a843c459b7294631f9dda"
+    },
+    {
+      "name": "endpoint-equality-audit.jsonl",
+      "sha256": "c358f3253c2d6c577eefc1d50f78858d597616a8b86a843c459b7294631f9dda"
+    },
+    {
+      "name": "independent-counts-optimized.json",
+      "sha256": "89c4a43674da957a9e4435b72230a636d665a413dc149f656130edacb7a33385"
+    },
+    {
+      "name": "independent-counts.json",
+      "sha256": "89c4a43674da957a9e4435b72230a636d665a413dc149f656130edacb7a33385"
+    },
+    {
+      "name": "independent_counts.py",
+      "sha256": "cdcb02bb58778fc44cfce79bddbe69c8e5d7364d510bd412980c2525fa070f50"
+    },
+    {
+      "name": "run_all.sh",
+      "sha256": "51c3c519174ad0d91d2ef8a4f23de35591f9823246321c5203705ea119e57e46"
+    },
+    {
+      "name": "support-independent-optimized.json",
+      "sha256": "527f7a60c72b86a434201dd450d260dd8cc4e46a74720f5f8c73b21c835019a5"
+    },
+    {
+      "name": "support-independent.json",
+      "sha256": "527f7a60c72b86a434201dd450d260dd8cc4e46a74720f5f8c73b21c835019a5"
+    }
+  ],
+  "include_this_inventory_file": true,
+  "status": "FROZEN",
+  "validation": "All independent scripts replay normal/optimized; C++ -O0 and -O2 receipts byte-identical; seven author frozen normal/optimized replays match."
+}
