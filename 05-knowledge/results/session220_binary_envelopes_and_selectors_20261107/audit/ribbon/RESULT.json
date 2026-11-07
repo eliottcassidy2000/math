@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "families": [
+    {
+      "word": "02032333",
+      "literal_counts_k1_k2": [
+        65,
+        16825
+      ],
+      "algebraic_k_checked": 12
+    },
+    {
+      "word": "02133232",
+      "literal_counts_k1_k2": [
+        65,
+        16825
+      ],
+      "algebraic_k_checked": 12
+    }
+  ],
+  "modular_int64_bounds": {
+    "2": {
+      "dimension": 14,
+      "max_letter_entry": 5,
+      "product_abs_bound": 70840,
+      "elimination_abs_bound": 1025156
+    },
+    "3": {
+      "dimension": 62,
+      "max_letter_entry": 4,
+      "product_abs_bound": 250976,
+      "elimination_abs_bound": 1025156
+    }
+  },
+  "full_census_rerun": false,
+  "scope": "Independent exact matrix algebra; literal subset DP at 8 and 16 vertices; sixteen rotations tested for eigenvalues 2 and 1; all recorded modular candidates rechecked; full census code reviewed but not rerun.",
+  "candidate_recheck": [
+    {
+      "span": 2,
+      "first_prime_candidates": 50,
+      "second_prime_survivors": 16
+    },
+    {
+      "span": 3,
+      "first_prime_candidates": 30,
+      "second_prime_survivors": 0
+    }
+  ]
+}

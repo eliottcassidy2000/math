@@ -1,0 +1,5 @@
+2 words 349524 mod1009 candidates 50 exact eigen2 survivors 16
+3 words 37448 mod1009 candidates 30 exact eigen2 survivors 0
+recurrence checked [0, 2, 0, 3, 2, 3, 3, 3]
+recurrence checked [0, 2, 1, 3, 3, 2, 3, 2]
+PASS

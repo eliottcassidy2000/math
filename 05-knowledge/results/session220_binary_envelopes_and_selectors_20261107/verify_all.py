@@ -18,6 +18,8 @@ cases = [
     ('selectors/verify.py', 'selectors/RESULT.json'),
     ('audit/audit.py', 'audit/RESULT.json'),
     ('audit/audit_cylinders.py', 'audit/CYLINDERS.json'),
+    ('audit/ribbon/verify_audit.py', 'audit/ribbon/RESULT.json'),
+    ('exploration/verify_switch.py', 'exploration/RESULT.json'),
 ]
 for script, receipt in cases:
     proc = subprocess.run([sys.executable, str(ROOT / script)], cwd=ROOT,
@@ -27,4 +29,9 @@ for script, receipt in cases:
     if actual != expected:
         raise RuntimeError(f'Receipt mismatch: {script}')
     print(f'PASS {script}', flush=True)
-print('PASS: four normal-mode exact replays; all-target coverage remains OPEN.')
+proc = subprocess.run([sys.executable, str(ROOT / 'ribbon/verify.py')], cwd=ROOT,
+                      capture_output=True, text=True, check=True)
+if proc.stdout != (ROOT / 'ribbon/verify.log').read_text():
+    raise RuntimeError('Receipt mismatch: ribbon/verify.py')
+print('PASS ribbon/verify.py: full finite census replay', flush=True)
+print('PASS: seven normal-mode exact replays; all-target coverage remains OPEN.')

@@ -1,0 +1,13 @@
+{
+  "status": "FINITE-EXACT",
+  "universe": "All labeled input tournaments of orders 1 through 3, every pair of roots",
+  "rooted_inputs": 29,
+  "ordered_pairs": 841,
+  "zero_increments": 81,
+  "coordinates": [
+    "h",
+    "R",
+    "e",
+    "d"
+  ]
+}
