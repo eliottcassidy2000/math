@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "rooted_labeled_checks": 5405,
+  "matching_histogram": {
+    "0": 1215,
+    "1": 3350,
+    "2": 840
+  }
+}

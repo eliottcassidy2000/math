@@ -1,0 +1,20 @@
+--- reviewed/PROOF.md
++++ published/PROOF.md
+@@ -1,6 +1,6 @@
+ # Matching degree and the two-run star normal form
+ 
+-**PROVED by elementary arguments, with finite exact controls; not yet independently audited.** The matching characterization was proposed by the parent Session216 worker and developed here into a complete support theorem and an explicit arithmetic factorization. No literature-priority claim is made.
++**PROVED by elementary arguments, with finite exact controls; independently audited.** The matching characterization was proposed by the parent Session216 worker and developed here into a complete support theorem and an explicit arithmetic factorization. No literature-priority claim is made.
+ 
+ ## 1. Exact support of the module-run polynomial
+ 
+--- reviewed/README.md
++++ published/README.md
+@@ -1,6 +1,6 @@
+ # Classify two-run contexts
+ 
+-PROOF.md proves the module-run support theorem deg(c)=1+ν, with ν the out-to-in bipartite matching number, then classifies two-run contexts by a star cut and factors their coefficients through two explicit path-cover interfaces.
++The independently audited PROOF.md proves the module-run support theorem deg(c)=1+ν, with ν the out-to-in bipartite matching number, then classifies two-run contexts by a star cut and factors their coefficients through two explicit path-cover interfaces.
+ 
+ No eventual spectrum or interval amplification theorem is claimed. The separate interval packet supplies eleven adjacent dyadic values.
+ 

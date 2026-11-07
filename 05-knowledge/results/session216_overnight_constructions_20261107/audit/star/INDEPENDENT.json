@@ -1,0 +1,12 @@
+{
+  "degree_checks": 5405,
+  "matching_histogram": {
+    "0": 1215,
+    "1": 3350,
+    "2": 840
+  },
+  "factor_contexts": 5625,
+  "literal_composites_prepared": 16875,
+  "interval_factor_records": 11,
+  "transitive_formula_controls": 255
+}

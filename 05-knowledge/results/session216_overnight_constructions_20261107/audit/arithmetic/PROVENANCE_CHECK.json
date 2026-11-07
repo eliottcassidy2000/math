@@ -1,0 +1,78 @@
+{
+  "canonical_sources": [
+    {
+      "path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "path": "session203/transitive-module-rebuilding/PROOF.md",
+      "sha256": "55db518c68502746f63b3cdea4671d609425151a47963d7b55f262aeaec258d3"
+    },
+    {
+      "path": "session203/arbitrary-module-rewrite/PROOF.md",
+      "sha256": "5f71882cef120d775b4ee36ea6e8a9f2637bc3c82562be70570de08a4dce969a"
+    },
+    {
+      "path": "session203/induced25-51-rebuilding/session194-weak-parent-certificate/inherited_tournaments_through8.txt",
+      "sha256": "5d5a5f625b4a85e04c0744aeb847ed36f59456f6a39996479aa82b9eb950afe3"
+    }
+  ],
+  "literal_bank_rows": [
+    {
+      "h": 65,
+      "exact_bank_row_present": true,
+      "line": 278
+    },
+    {
+      "h": 67,
+      "exact_bank_row_present": true,
+      "line": 195
+    },
+    {
+      "h": 69,
+      "exact_bank_row_present": true,
+      "line": 270
+    },
+    {
+      "h": 71,
+      "exact_bank_row_present": true,
+      "line": 1029
+    },
+    {
+      "h": 73,
+      "exact_bank_row_present": true,
+      "line": 1137
+    },
+    {
+      "h": 75,
+      "exact_bank_row_present": true,
+      "line": 179
+    },
+    {
+      "h": 77,
+      "exact_bank_row_present": true,
+      "line": 194
+    },
+    {
+      "h": 79,
+      "exact_bank_row_present": true,
+      "line": 1126
+    },
+    {
+      "h": 81,
+      "exact_bank_row_present": true,
+      "line": 1026
+    },
+    {
+      "h": 83,
+      "exact_bank_row_present": true,
+      "line": 1097
+    },
+    {
+      "h": 85,
+      "exact_bank_row_present": true,
+      "line": 1155
+    }
+  ],
+  "bank_completeness_required": false
+}

@@ -1,0 +1,11 @@
+--- reviewed/RESULT.md
++++ corrected/RESULT.md
+@@ -57,7 +57,7 @@
+ 
+     (3 ln2/2) N^(4/3)n^(2/3).
+ 
+-Indeed let C0=(N/n)^(1/3). If C<=C0, the term 8P^2 alone is at least 2Q. If C>=C0, retain 12PC^2 ln(P/C)=6NC ln(N/(2C)). The function C ln(N/(2C)) increases on the admissible interval because its derivative is ln B-1>=ln8-1>0. Its value at C0 is at least C0(n ln2)/4 for n>=12, since ln(N/(2C0))=(n ln2)/3+(2 ln n)/3-ln2 >=(n ln2)/4. Therefore this term alone is at least (3 ln2/2)Q. Hence no further optimization of this same displayed bound removes its (ln X)^(2/3) loss or improves its 2/3 exponent. Actual arithmetic information remains necessary.
++Indeed let C0=(N/n)^(1/3). If C<=C0, the term 8P^2 alone is at least 2Q. If C>=C0, retain 12PC^2 ln(P/C)=6NC ln(N/(2C^2)). The function C ln(N/(2C^2)) increases on the admissible interval because its derivative is ln B-2>=ln8-2>0. Its value at C0 is at least C0(n ln2)/4 for n>=12, since ln(N/(2C0^2))=(n ln2)/3+(2 ln n)/3-ln2 >=(n ln2)/4. Therefore this term alone is at least (3 ln2/2)Q. Hence no further optimization of this same displayed bound removes its (ln X)^(2/3) loss or improves its 2/3 exponent. Actual arithmetic information remains necessary.
+ 
+ ## Provenance and scope audit
+ 

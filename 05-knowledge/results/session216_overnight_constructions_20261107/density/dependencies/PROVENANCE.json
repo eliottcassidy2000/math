@@ -1,0 +1,16 @@
+[
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "0f3dad8c75d02db9e4060746280fb58f4d69633e",
+    "path": "01-canon/theorems/THM-4887-one-apex-energy-at-scale-two-to-the-n-over-three.md",
+    "git_blob": "e3abac772102c8cd95ad01a866b9e8227a30b80e",
+    "sha256": "b36b405f64f08571a3cd3dc620345af70e18c4ed38066a73389d00be26edf350"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "0f3dad8c75d02db9e4060746280fb58f4d69633e",
+    "path": "01-canon/theorems/THM-4890-one-apex-collision-balance.md",
+    "git_blob": "f3373517587116d12a0164adbf20e2eab78910ae",
+    "sha256": "06ecb2111638bf2454d9410b943c12bb7b28fa157cf51e6565199bd283f235f3"
+  }
+]

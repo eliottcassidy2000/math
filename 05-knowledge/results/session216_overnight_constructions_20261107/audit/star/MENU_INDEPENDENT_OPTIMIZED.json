@@ -1,0 +1,8 @@
+{
+  "seed_states": 4,
+  "seed_cycles": 4,
+  "append_states_through_length3": 60,
+  "arbitrary_small_update_checks": 150,
+  "literal_menu_composites": 180,
+  "max_order": 15
+}

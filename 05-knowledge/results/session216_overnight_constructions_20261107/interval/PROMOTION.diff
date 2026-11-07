@@ -1,0 +1,21 @@
+--- reviewed/PROOF.md
++++ published/PROOF.md
+@@ -1,6 +1,6 @@
+ # Eleven adjacent odd counts from common module coefficients
+ 
+-**PROVED by explicit finite certificates and an all-order bijection; independently replayable. Not yet externally audited.** Chan–Pak completeness remains open. This gives a uniform eleven-value interval family, not an enlarged unrestricted coverage range and not a single-edge-flip staircase. No novelty claim for individual scalar counts is made.
++**PROVED by explicit finite certificates and an all-order bijection; independently audited.** Chan–Pak completeness remains open. This gives a uniform eleven-value interval family, not an enlarged unrestricted coverage range and not a single-edge-flip staircase. No novelty claim for individual scalar counts is made.
+ 
+ ## Construction theorem
+ 
+--- reviewed/README.md
++++ published/README.md
+@@ -2,7 +2,7 @@
+ 
+ Explicit strong contexts produce all eleven odd integers from 36*2^k−7 through 36*2^k+13, for every k>=1, on at most k+7 vertices. More generally their counts are 36Q_U(2)+dH(U), for d=-7,-5,...,13 and any nonempty tournament U.
+ 
+-This is a proved fixed-core certificate plus an all-order bijection, not yet externally audited. It does not settle the Chan–Pak conjecture or extend an unrestricted coverage record. It supplies a context-selection family, not an edge-flip staircase.
++This is a proved fixed-core certificate plus an all-order bijection, independently audited. It does not settle the Chan–Pak conjecture or extend an unrestricted coverage record. It supplies a context-selection family, not an edge-flip staircase.
+ 
+ Read PROOF.md. Reproduce:
+ 

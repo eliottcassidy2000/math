@@ -1,0 +1,101 @@
+[
+  {
+    "n": 12,
+    "m": 3,
+    "energy": 6000,
+    "distinct": 825,
+    "block_identity_failures": 0,
+    "optimized_D1": 1787961.0457644502,
+    "uniform_bound": 2507592.4569587638
+  },
+  {
+    "n": 13,
+    "m": 4,
+    "energy": 12392,
+    "distinct": 1605,
+    "block_identity_failures": 0,
+    "optimized_D1": 4966378.704227358,
+    "uniform_bound": 6665074.678896138
+  },
+  {
+    "n": 14,
+    "m": 4,
+    "energy": 25044,
+    "distinct": 3185,
+    "block_identity_failures": 0,
+    "optimized_D1": 12088594.440568397,
+    "uniform_bound": 17645533.885642406
+  },
+  {
+    "n": 15,
+    "m": 4,
+    "energy": 51484,
+    "distinct": 6245,
+    "block_identity_failures": 0,
+    "optimized_D1": 30586014.945364147,
+    "uniform_bound": 46556852.58988572
+  },
+  {
+    "n": 16,
+    "m": 5,
+    "energy": 104464,
+    "distinct": 12408,
+    "block_identity_failures": 0,
+    "optimized_D1": 87848379.82235834,
+    "uniform_bound": 122473676.7999999
+  },
+  {
+    "n": 17,
+    "m": 5,
+    "energy": 210280,
+    "distinct": 24681,
+    "block_identity_failures": 0,
+    "optimized_D1": 210053873.87766,
+    "uniform_bound": 321342900.52576375
+  },
+  {
+    "n": 18,
+    "m": 5,
+    "energy": 422808,
+    "distinct": 49190,
+    "block_identity_failures": 0,
+    "optimized_D1": 522376408.22120667,
+    "uniform_bound": 841184173.0250014
+  },
+  {
+    "n": 19,
+    "m": 5,
+    "energy": 848388,
+    "distinct": 98180,
+    "block_identity_failures": 0,
+    "optimized_D1": 1383507865.3741865,
+    "uniform_bound": 2197447379.8670545
+  },
+  {
+    "n": 20,
+    "m": 6,
+    "energy": 1699928,
+    "distinct": 196215,
+    "block_identity_failures": 0,
+    "optimized_D1": 3632411618.0406237,
+    "uniform_bound": 5729843254.837597
+  },
+  {
+    "n": 21,
+    "m": 6,
+    "energy": 3415652,
+    "distinct": 391287,
+    "block_identity_failures": 0,
+    "optimized_D1": 8898941351.041426,
+    "uniform_bound": 14915652904.5238
+  },
+  {
+    "n": 22,
+    "m": 6,
+    "energy": 6838220,
+    "distinct": 782115,
+    "block_identity_failures": 0,
+    "optimized_D1": 23213602580.00321,
+    "uniform_bound": 38768992956.734665
+  }
+]

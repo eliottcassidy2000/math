@@ -1,0 +1,224 @@
+{
+  "coefficient_certificates": [
+    {
+      "h": 65,
+      "coefficients": [
+        29,
+        65,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "h": 67,
+      "coefficients": [
+        31,
+        67,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "h": 69,
+      "coefficients": [
+        33,
+        69,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "h": 71,
+      "coefficients": [
+        35,
+        71,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "h": 73,
+      "coefficients": [
+        37,
+        73,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "h": 75,
+      "coefficients": [
+        33,
+        75,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "h": 77,
+      "coefficients": [
+        37,
+        77,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "h": 79,
+      "coefficients": [
+        43,
+        79,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "h": 81,
+      "coefficients": [
+        41,
+        81,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "h": 83,
+      "coefficients": [
+        45,
+        83,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "h": 85,
+      "coefficients": [
+        49,
+        85,
+        36,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "literal_graphs_prepared": 891,
+  "max_graph_order": 13,
+  "seed_count": 75,
+  "empty_boundary": [
+    {
+      "d": -7,
+      "actual_empty_output": 29,
+      "invalid_extension": 29,
+      "coincides": true
+    },
+    {
+      "d": -5,
+      "actual_empty_output": 31,
+      "invalid_extension": 31,
+      "coincides": true
+    },
+    {
+      "d": -3,
+      "actual_empty_output": 33,
+      "invalid_extension": 33,
+      "coincides": true
+    },
+    {
+      "d": -1,
+      "actual_empty_output": 35,
+      "invalid_extension": 35,
+      "coincides": true
+    },
+    {
+      "d": 1,
+      "actual_empty_output": 37,
+      "invalid_extension": 37,
+      "coincides": true
+    },
+    {
+      "d": 3,
+      "actual_empty_output": 33,
+      "invalid_extension": 39,
+      "coincides": false
+    },
+    {
+      "d": 5,
+      "actual_empty_output": 37,
+      "invalid_extension": 41,
+      "coincides": false
+    },
+    {
+      "d": 7,
+      "actual_empty_output": 43,
+      "invalid_extension": 43,
+      "coincides": true
+    },
+    {
+      "d": 9,
+      "actual_empty_output": 41,
+      "invalid_extension": 45,
+      "coincides": false
+    },
+    {
+      "d": 11,
+      "actual_empty_output": 45,
+      "invalid_extension": 47,
+      "coincides": false
+    },
+    {
+      "d": 13,
+      "actual_empty_output": 49,
+      "invalid_extension": 49,
+      "coincides": true
+    }
+  ]
+}
