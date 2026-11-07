@@ -211,5 +211,8 @@ N > 2647 is a uniquely Hamiltonian count, and hence Chan-Pak. **No proof is give
 
 ## 4. Census to 2^32 (R1)
 
-Pending at the time of the audit. The result is recorded in [R1_OUTCOME.md](R1_OUTCOME.md) when the run (the S14
-auditor's independent segmented enumerator, segments of 2^28 from 805,306,368) completes.
+**CONFIRMED** ([R1_OUTCOME.md](R1_OUTCOME.md)). The S14 auditor's independent segmented enumerator, run on
+[805,306,368, 2^32], finds no odd miss of F_<=2 in (10^9, 2^32]. Every odd N above 2^30 has M_2 >= 15.
+
+So the odd values missed by two root changes below 2^32 are exactly the 140 below 3,780,967 (FINITE-EXACT). The cutoff
+remains OPEN beyond 2^32.

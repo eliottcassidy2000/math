@@ -1,0 +1,9 @@
+census_audit X=4294967296 K=2 SEGLOG=28 CNTBITS=4 LEVELS=0 threads=12 tasks=187222 time=5681.1s
+union (M_2 = 0): odd misses 0, largest 0
+misses (<=2) from 1000000001:
+multiplicity M_2 per window (counter cap 15; mean255 = mean of min(M,255); max seen 15):
+  [536870912,1073741824): n=134217728 min=14 min_mod3=(15,14,15) satcap=134217727 c0..8=0,0,0,0,0,0,0,0,0
+  [1073741824,2147483648): n=536870912 min=15 min_mod3=(15,15,15) satcap=536870912 c0..8=0,0,0,0,0,0,0,0,0
+  [2147483648,4294967296): n=1073741824 min=15 min_mod3=(15,15,15) satcap=1073741824 c0..8=0,0,0,0,0,0,0,0,0
+odd N > 10^5 with M <= 2:
+odd N > 2^22 with M <= 12 (0 values):

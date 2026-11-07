@@ -1,7 +1,7 @@
 ---
 id: HYP-9506
 title: "Local factors of the two-root-change multiplicity beyond THM-4916: (A) the census (height-weighted) factors tend to THM-4916's letter-count closed forms L_p(0) = 1 + (3p-2)(p-1)/(2p^3); (B) at census scale the Fermat-type primes 3, 5, 17 (then 11) carry the largest boosts, which decay with N; (C) the census is more contrasted than the letter-count automaton at every class; (D) near-misses avoid 3 and are depleted in 5, 7, 11, 17, 19; (E) two root changes cover every odd N > 3,780,967, with no proof route yet"
-status: "(A) OPEN. The letter-count limits are PROVED in THM-4916; the census factor at N = 0 (mod 3) is 1.444 at [2^23, 2^24), against 34/27 = 1.259 in the limit. (B) The ordering is CONFIRMED at one scale (pre-registered R3). The decay rate is untested: rho_5 is 1.667 on [2^19, 2^20) and 1.614 on [2^23, 2^24). The attribution to the multiplier family THM-4916 (1c) is partial: about a quarter of the excess, with root-rectangle words another fifth and seed confinement about half (audit M3). (C) Pre-registered R2 FAILED: the census exceeds the automaton band at p = 5, 11, 13, 17 and is inside at 7, 23, 31. R5 passes only with its 5% widening (9/27 classes inside the raw band). R4 CONFIRMED. (D) FINITE-EXACT observation. (E) OPEN; FINITE-EXACT below 10^9, with R1 (to 2^32) recorded in the packet. AUDIT: independent, PASS WITH CORRECTIONS, MISTAKE-734."
+status: "(A) OPEN. The letter-count limits are PROVED in THM-4916; the census factor at N = 0 (mod 3) is 1.444 at [2^23, 2^24), against 34/27 = 1.259 in the limit. (B) The ordering is CONFIRMED at one scale (pre-registered R3). The decay rate is untested: rho_5 is 1.667 on [2^19, 2^20) and 1.614 on [2^23, 2^24). The attribution to the multiplier family THM-4916 (1c) is partial: about a quarter of the excess, with root-rectangle words another fifth and seed confinement about half (audit M3). (C) Pre-registered R2 FAILED: the census exceeds the automaton band at p = 5, 11, 13, 17 and is inside at 7, 23, 31. R5 passes only with its 5% widening (9/27 classes inside the raw band). R4 CONFIRMED. (D) FINITE-EXACT observation. (E) OPEN; FINITE-EXACT below 2^32 (pre-registered R1 CONFIRMED: no miss in (10^9, 2^32], M_2 >= 15 above 2^30). AUDIT: independent, PASS WITH CORRECTIONS, MISTAKE-734."
 session: kind-pasteur-2026-11-07-S15
 date: 2026-11-07
 related: [THM-4916, THM-4904, HYP-9494, HYP-9480, THM-4888, 05-knowledge/results/session223_root_changes_and_local_factors_20261107/README.md, 04-computation/experiments/chanpak_mass_exploratory_20261106/local_factor_mod3_prediction.py]
@@ -51,7 +51,7 @@ misses above 10^5 are 14 times 1 (mod 3), never 0, five prime, and six have a pr
 
 ## (E) The cutoff (OPEN)
 
-Two root changes cover every odd N > 3,780,967 (FINITE-EXACT to 10^9; R1 is recorded in the packet).
+Two root changes cover every odd N > 3,780,967 (FINITE-EXACT to 2^32; pre-registered R1 CONFIRMED).
 
 A single O/Z seed misses a positive proportion (Session206). For finite O/Z banks this is OPEN (HYP-9480 (C)).
 

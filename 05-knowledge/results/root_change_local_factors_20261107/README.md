@@ -45,7 +45,8 @@ proven cutoff beyond which two root changes always suffice.
      K-form.
    - A single seed misses a positive proportion (Session206); finite banks are OPEN.
    - The routes are a Gerbicz-type state-cone blow-up and a second-moment bound.
-   - The census to 2^32 is R1, recorded in [R1_OUTCOME.md](R1_OUTCOME.md).
+   - The census to 2^32 (R1) is CONFIRMED: the 140 misses below 3,780,967 are all the misses below 2^32
+     ([R1_OUTCOME.md](R1_OUTCOME.md)).
 5. **[ATLAS.md](ATLAS.md): the small-number coincidence atlas.** Chan-Pak {7, 21}, the C = 1 and root-change
    exceptions, the Fermat primes, square-sum paths and cycles, nine cubes, untouchable primes, the three-core holes,
    and the prime square-sum delay. Each is classified as structural, constructive induction (Gerbicz), analytic plus
@@ -64,7 +65,7 @@ proven cutoff beyond which two root changes always suffice.
 | `exact_limit.py`, `exact_limit.out`, `exact_limit_q15.out`, `closed_form_check.out` | n -> infinity limits by the projector Pi J Pi J Pi |
 | `decomp.c`, `decomp_2p24.txt` | split of M_2 by seed confinement level, parity and class |
 | `rc_lf.c`, `lf_2p24.txt`, `eval_s15.py`, `PREREG_OUTCOMES_R2_R5.txt` | registered census and its evaluation |
-| `R1_OUTCOME.md` | census of two root changes to 2^32 (pending if absent) |
+| `R1_OUTCOME.md`, `census_2p32.txt` | R1 CONFIRMED: no miss of two root changes in (10^9, 2^32] |
 | `audit/` | independent audit: AUDIT.md, its own code (`identities_audit.py` reproduces the identity checks of section 1, `cesaro_exact.py` and `cesaro_lazy.c` the closed form, `census_mechanism.c` the M3 split) |
 
 ## Reproduce
