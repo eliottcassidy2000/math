@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "core_states": 80,
+  "rounding_checks": 36879,
+  "fixed_length_maximum_checks": 3573,
+  "minimum_cut_checks": 2219,
+  "fixed_interior_cylinder_checks": 2219,
+  "general_scalar_maximum_checks": 324,
+  "join_bridge_checks": 8192,
+  "large_capacity_400_bit_check": "PASS",
+  "hostile": {
+    "core_index": 0,
+    "a": 4,
+    "b": 0,
+    "support": [
+      517,
+      561,
+      635,
+      669,
+      763,
+      797,
+      871,
+      895
+    ],
+    "first_missing_odd_in_hull": 519
+  },
+  "scope": "Extremal identities only; all-target coverage remains open."
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "independent_fixed_bit_domains": 2268,
+  "large_capacity_checks": 12,
+  "capacity_scale": "10^150",
+  "tested_core_indices": [
+    0,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    63,
+    70,
+    77
+  ]
+}

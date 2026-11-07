@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checks": {
+    "carrier_identity": 16384,
+    "generic_envelopes": 1375,
+    "alternating_formula": 297,
+    "pump_numeric_identity": 640
+  },
+  "negative_S_counterexample": {
+    "m": 3,
+    "K": 1,
+    "h": 10,
+    "S": -100,
+    "unique_maximizer": 1
+  },
+  "scope": "Exact formula checks and independent all-length arguments in AUDIT.md; no all-target coverage conclusion."
+}

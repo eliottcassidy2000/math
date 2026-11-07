@@ -95,3 +95,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session218](S218.md): COMPLETE; explicit all-base Smith classification, repunit constructions and obstructions, nontotient bridge and dyadic repair, corrected sequence provenance and multiplicity scope. Carmichael and Chan–Pak remain OPEN.
 
 [Session219](S219.md): COMPLETE; sharp five-run Fermat-factor escape, exact Mersenne factorization fibers, optimal smooth-target component degrees and totient supplier formulas. Global conjectures remain OPEN.
+
+[Session220](S220.md): exact binary envelope/min-cut theorems and a finite-state witness-selector obstruction; further construction research active, Chan–Pak OPEN.
