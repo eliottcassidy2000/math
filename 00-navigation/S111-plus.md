@@ -99,3 +99,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session220](S220.md): COMPLETE; exact binary envelope/min-cut theorems, sparse finite-state witness selectors and an explicit rank-two ribbon family. Chan–Pak remains OPEN.
 
 [Session221](S221.md): COMPLETE; every even single-arc gap between logarithmic-order strong tournaments, endpoint-preserving fixed-apex inversion, and a reversible sparse seam language. Chan–Pak remains OPEN.
+
+[Session222](S222.md): ACTIVE; exact L/diagonal shell equivalence, Hamiltonian-count hostile, and scoped diagonal-growth experiment.

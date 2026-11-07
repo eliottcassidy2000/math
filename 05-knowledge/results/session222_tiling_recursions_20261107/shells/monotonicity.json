@@ -1,0 +1,24 @@
+{
+  "seed": 2222026,
+  "universes": [
+    {
+      "n": 7,
+      "sampling": "exhaustive",
+      "tested": 32768,
+      "positive": 32767,
+      "equal": 1,
+      "negative": 0,
+      "min_positive_gap": 6
+    },
+    {
+      "n": 8,
+      "sampling": "random with replacement plus zero",
+      "tested": 3001,
+      "positive": 3000,
+      "equal": 1,
+      "negative": 0,
+      "min_positive_gap": 310
+    }
+  ],
+  "elapsed_seconds": 29.726
+}

@@ -1,0 +1,115 @@
+{
+  "scope": "All fixed descending-path tilings n=3..6; all unfiltered labelled tournaments n=1..5; geometric shells m=0..97",
+  "shells": {
+    "orders": 98,
+    "minimum_n": 3,
+    "maximum_n": 100
+  },
+  "padding": [
+    {
+      "n": 3,
+      "total": 2,
+      "diagonal_H_changes": 1,
+      "first_hostile": {
+        "flips_zero_based": [
+          [
+            2,
+            0
+          ]
+        ],
+        "H": [
+          3,
+          3,
+          9
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "total": 8,
+      "diagonal_H_changes": 7,
+      "first_hostile": {
+        "flips_zero_based": [
+          [
+            2,
+            0
+          ]
+        ],
+        "H": [
+          3,
+          3,
+          9
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "total": 64,
+      "diagonal_H_changes": 63,
+      "first_hostile": {
+        "flips_zero_based": [
+          [
+            2,
+            0
+          ]
+        ],
+        "H": [
+          3,
+          3,
+          9
+        ]
+      }
+    },
+    {
+      "n": 6,
+      "total": 1024,
+      "diagonal_H_changes": 1023,
+      "first_hostile": {
+        "flips_zero_based": [
+          [
+            2,
+            0
+          ]
+        ],
+        "H": [
+          3,
+          3,
+          9
+        ]
+      }
+    }
+  ],
+  "parity": [
+    {
+      "n": 1,
+      "labelled_tournaments": 1,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "n": 2,
+      "labelled_tournaments": 2,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "n": 3,
+      "labelled_tournaments": 8,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "n": 4,
+      "labelled_tournaments": 64,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "n": 5,
+      "labelled_tournaments": 1024,
+      "min": 1,
+      "max": 15
+    }
+  ],
+  "status": "PASS"
+}
