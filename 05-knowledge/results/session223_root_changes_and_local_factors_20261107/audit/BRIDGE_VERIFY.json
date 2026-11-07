@@ -1,0 +1,19 @@
+{
+  "closure_not_simple": [
+    1,
+    3,
+    1,
+    3,
+    1
+  ],
+  "dyadic_adjacency_exponents_through": 200,
+  "dyadic_edges": [
+    [
+      1,
+      5
+    ]
+  ],
+  "reachable_state_checks": 3280,
+  "reflection_checks": 16380,
+  "two_run_pairs": 1600
+}
