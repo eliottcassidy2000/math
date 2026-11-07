@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "checks": 560200,
+  "integer_universe": "1..100000",
+  "traversal_universe": "t=0..39999",
+  "complete_square_universe": "r=0..99",
+  "first_25_dyadic_path_labels": [
+    1,
+    2,
+    6,
+    3,
+    5,
+    10,
+    20,
+    12,
+    4,
+    8,
+    24,
+    40,
+    56,
+    28,
+    14,
+    7,
+    9,
+    18,
+    36,
+    72,
+    144,
+    112,
+    80,
+    48,
+    16
+  ],
+  "literal_plus2_times2_odd_cycle": [
+    1,
+    3,
+    6,
+    4,
+    2,
+    1
+  ]
+}

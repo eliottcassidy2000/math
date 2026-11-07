@@ -21,18 +21,28 @@ def main():
     with tempfile.TemporaryDirectory(prefix='session222-') as d:
         dst = Path(d)/'packet'
         shutil.copytree(ROOT, dst)
-        for script in ('shells/verify.py', 'shells/probe_monotonicity.py', 'audit/audit.py'):
+        jobs=(
+            ('shells/verify.py','shells/verification.json',False),
+            ('shells/probe_monotonicity.py','shells/monotonicity.json',False),
+            ('doubling/verify.py','doubling/RESULT.json',True),
+            ('plane/oddplane.py','plane/checks.json',True),
+            ('audit/audit.py','audit/RESULT.json',True),
+            ('audit/doubling_audit.py','audit/DOUBLING_RESULT.json',True),
+            ('audit/selector_audit.py','audit/SELECTOR_RESULT.json',True),
+            ('audit/plane_audit.py','audit/PLANE_RESULT.json',True),
+        )
+        for script,expected,writes_receipt in jobs:
             vals=[]
             for flag in ([], ['-O']):
                 p=subprocess.run([sys.executable,*flag,str(dst/script)],cwd=dst,text=True,capture_output=True,check=True)
-                value=json.loads(p.stdout)
+                value=json.loads((dst/expected).read_text() if writes_receipt else p.stdout)
                 value.pop('elapsed_seconds',None)
                 vals.append(value)
             need(vals[0]==vals[1], script+' differs under optimization')
-            expected='shells/verification.json' if script=='shells/verify.py' else 'shells/monotonicity.json' if script=='shells/probe_monotonicity.py' else 'audit/RESULT.json'
             saved=json.loads((ROOT/expected).read_text());saved.pop('elapsed_seconds',None)
             need(vals[0]==saved, script+' differs from saved receipt')
             print('PASS',script)
+        need((dst/'plane/oddplane.svg').read_bytes()==(ROOT/'plane/oddplane.svg').read_bytes(),'diagram regeneration')
     print('PASS hashes, normal/optimized replay, and saved exact receipts')
 
 if __name__=='__main__':

@@ -1,0 +1,77 @@
+[
+  {
+    "source": "05-knowledge/results/session222_tiling_recursions_20261107/README.md",
+    "link": "shells/REPORT.md",
+    "exists": true
+  },
+  {
+    "source": "05-knowledge/results/session222_tiling_recursions_20261107/README.md",
+    "link": "shells/shells.svg",
+    "exists": true
+  },
+  {
+    "source": "05-knowledge/results/session222_tiling_recursions_20261107/README.md",
+    "link": "audit/SHELL_AUDIT.md",
+    "exists": true
+  },
+  {
+    "source": "05-knowledge/results/session222_tiling_recursions_20261107/README.md",
+    "link": "doubling/REPORT.md",
+    "exists": true
+  },
+  {
+    "source": "05-knowledge/results/session222_tiling_recursions_20261107/README.md",
+    "link": "audit/REPORT.md",
+    "exists": true
+  },
+  {
+    "source": "05-knowledge/results/session222_tiling_recursions_20261107/README.md",
+    "link": "plane/REPORT.md",
+    "exists": true
+  },
+  {
+    "source": "05-knowledge/results/session222_tiling_recursions_20261107/README.md",
+    "link": "plane/oddplane.svg",
+    "exists": true
+  },
+  {
+    "source": "05-knowledge/results/session222_tiling_recursions_20261107/README.md",
+    "link": "plane/REPORT.md#6-positive-continuous-realization-a-half-line-surjects-onto-the-plane",
+    "exists": true,
+    "anchor_exists": true
+  },
+  {
+    "source": "05-knowledge/results/session222_tiling_recursions_20261107/README.md",
+    "link": "audit/REPORT.md#5-subsequent-positive-continuous-extension-audit",
+    "exists": true,
+    "anchor_exists": true
+  },
+  {
+    "source": "05-knowledge/results/session222_tiling_recursions_20261107/README.md",
+    "link": "../../../01-canon/theorems/THM-452-doubling-tiling-coset-law.md",
+    "exists": true
+  },
+  {
+    "source": "05-knowledge/results/session222_tiling_recursions_20261107/README.md",
+    "link": "../../../01-canon/MISTAKES.md#2026-11-07-session222-repairs-the-doubling-tiling-gauge-and-affine-fiber",
+    "exists": true,
+    "anchor_exists": true
+  },
+  {
+    "source": "01-canon/theorems/THM-452-doubling-tiling-coset-law.md",
+    "link": "../../05-knowledge/results/session222_tiling_recursions_20261107/audit/REPORT.md#3-thm-452-correction-and-safe-patch",
+    "exists": true,
+    "anchor_exists": true
+  },
+  {
+    "source": "01-canon/MISTAKES.md",
+    "link": "theorems/THM-452-doubling-tiling-coset-law.md",
+    "exists": true
+  },
+  {
+    "source": "01-canon/MISTAKES.md",
+    "link": "../05-knowledge/results/session222_tiling_recursions_20261107/audit/REPORT.md#3-thm-452-correction-and-safe-patch",
+    "exists": true,
+    "anchor_exists": true
+  }
+]

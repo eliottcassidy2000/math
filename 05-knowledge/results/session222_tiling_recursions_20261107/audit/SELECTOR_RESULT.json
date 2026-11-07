@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "universe": "all apex words lengths3..8 and all marked10 positions i>=1 with R=0",
+  "cases": 354,
+  "strong_cases": 31,
+  "N1_special_counts": [
+    9,
+    11,
+    19,
+    23
+  ]
+}

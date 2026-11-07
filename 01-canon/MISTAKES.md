@@ -4,6 +4,15 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-07: Session222 repairs the doubling tiling gauge and affine fiber
+
+- **Affected source:** [THM-452, doubling tiling coset law](theorems/THM-452-doubling-tiling-coset-law.md), sections1–3 and6. The exact block construction survives.
+- **Errors:** forward-bit1 weights were presented without separating them from the standard backward-bit1 convention; five weights were attached to four orders; the constant syndrome c_n was used as a coset representative; nonblue assertions omitted the singleton boundary.
+- **Mechanism and witness:** c_n is reflection-fixed, hence lies in B=ker(1+sigma); B+c_n=B cannot be the nonzero syndrome fiber. At n=1 there are no free tiles, so the double is blue. At tower order4 the forward weight is2 and backward weight1.
+- **Repair:** the fiber is t0+B for any actual doubled tiling t0. Nonblue/disjoint-image claims have n>=2. Forward weights obey w_f(2n)=2w_f(n)+(n−1)+binom(n,2); backward weights obey w_b(2n)=2w_b(n)+binom(n,2). Orders1,2,4,8,16 give forward0,0,2,13,61 and backward0,0,1,8,44.
+- **Verification and boundary:** [independent audit](../05-knowledge/results/session222_tiling_recursions_20261107/audit/REPORT.md#3-thm-452-correction-and-safe-patch), all1,100 framed inputs through order6, tower through32. This repair does not re-audit THM-452's unrelated anti-automorphism or Walsh claims.
+- **Lesson:** retain orientation gauge, distinguish a linear-map output from an affine-fiber representative, and test the zero-dimensional boundary before using an all-input quantifier.
+
 ## 2026-11-07: Session 218 correction of the THM-4884 finite-multiplicity scope
 
 - **Affected sources:** THM-4884, `01-canon/theorems/THM-4884-definability-lenses-korselt-congruence-of-spectrum-polynomial-strong-multiplicity-census-minimal-rank-sublanguages.md`, statement2; `05-knowledge/results/definability_lenses_spectrum_diophantine_carmichael_20261105.md`, summary; and the implication in HYP-9477(A), `05-knowledge/hypotheses/HYP-9477-strong-multiplicity-omissions-three-smooth-descent-and-minimal-complete-rank.md`.

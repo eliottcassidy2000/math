@@ -1,0 +1,6 @@
+{
+  "RESULT.json": "8ad589c4352cbe519680c7b79a626b2e18ad1d6fc5923c7d24f1c260dec166bd",
+  "active_checks": 4567,
+  "normal_optimized_equal": true,
+  "command": "python3 verify.py; python3 -O verify.py"
+}

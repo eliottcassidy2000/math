@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "complete_shells": 100,
+  "path_vertices_each": 10000,
+  "all_dyadic_edges_not_preserved": {
+    "quadrant_doubling_edge": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "plane_positions": [
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        -1
+      ]
+    ]
+  },
+  "literal_plus2_doubling_odd_cycle": [
+    1,
+    3,
+    6,
+    4,
+    2,
+    1
+  ]
+}
