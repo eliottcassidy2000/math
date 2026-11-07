@@ -1,10 +1,8 @@
-/* order10.c (derived from classgen.c) - kind-pasteur-2026-11-07-S16. Isomorphism classes of tournaments of order 1..NMAX by vertex extension
- * and canonical forms (individualization-refinement with ordered colour refinement), with, for every class:
- *   code (canonical upper-triangle bit code), H (Hamiltonian paths), c3, strong, SC (self-converse), aut (|Aut|),
- *   and the canonical codes and H values of the n vertex-deleted subtournaments.
- * usage: classgen NMAX outprefix      writes outprefix_<n>.txt for n = 1..NMAX
- * line: code H c3 strong SC aut ccode | del_code_1:del_H_1 ... (ccode = canonical code of the converse)
- */
+/* order10.c - kind-pasteur-2026-11-07-S16. All tournament classes of order 10, generated from the order-9 classes
+ * (cls_9.txt from classgen.c) with the same individualization-refinement canonical form. For every class with
+ * H not attained at order 9 (a first creator) it records the self-converse flag and k(T), the number of vertex
+ * deletions whose H is new at order 9, and counts the non-first-creators all of whose deletions are new at
+ * order 9 (the hypo analogue).  usage: order10 cls_8.txt cls_9.txt > order10.out */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

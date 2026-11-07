@@ -1,0 +1,33 @@
+# pre-registration provenance checks (auditor, 2026-11-07)
+$ git log --format='%H %ad %cd %s' --date=iso -3 -- 05-knowledge/results/first_creators_genealogy_20261107/
+9d7c9f47352e2b4ad06e45658531eac8327046d5 | author 2026-11-07 15:40:35 -0700 | commit 2026-11-07 15:40:35 -0700 | kind-pasteur-2026-11-07-S16: checkpoint (pre-audit) - THM-4922 (first creators of odd H
+9e07033ca482a855a15fc58c7639e8ac606d1899 | author 2026-11-07 15:26:07 -0700 | commit 2026-11-07 15:26:15 -0700 | kind-pasteur-2026-11-07-S16: reserve THM-4922 and HYP-9512; pre-register Q1-Q5 (first c
+
+$ git reflog (S16 entries)
+9d7c9f4735 HEAD@{2026-11-07 15:40:35 -0700}: commit: kind-pasteur-2026-11-07-S16: checkpoint (pre-audit) - THM-4922 (first creators of odd Hamiltonian-path coun
+9e07033ca4 HEAD@{2026-11-07 15:26:15 -0700}: rebase (finish): returning to refs/heads/claude/s198-rational-coverage-7f00fe
+9e07033ca4 HEAD@{2026-11-07 15:26:15 -0700}: rebase (pick): kind-pasteur-2026-11-07-S16: reserve THM-4922 and HYP-9512; pre-register Q1-Q5 (first creators of od
+2054513960 HEAD@{2026-11-07 15:26:12 -0700}: rebase (start): checkout origin/main
+abfe525263 HEAD@{2026-11-07 15:26:07 -0700}: commit: kind-pasteur-2026-11-07-S16: reserve THM-4922 and HYP-9512; pre-register Q1-Q5 (first creators of odd Hamil
+
+$ git show --stat 9e07033ca4 (files)
+ .../.gitattributes                                 |   1 +
+ .../PREREGISTRATION.md                             |  44 +++++++
+ .../first_creators_genealogy_20261107/analyze.py   |  56 +++++++++
+ .../first_creators_genealogy_20261107/classgen.c   | 110 +++++++++++++++++
+ .../first_creators_genealogy_20261107/hypo.py      |  26 ++++
+ .../first_creators_genealogy_20261107/order10.c    | 133 +++++++++++++++++++++
+ 6 files changed, 370 insertions(+)
+
+$ git diff --stat 9e07033ca4 HEAD -- order10.c PREREGISTRATION.md classgen.c analyze.py hypo.py   (empty = unchanged)
+(end of diff)
+
+$ git branch -r --contains 9e07033ca4
+  origin/HEAD -> origin/main
+  origin/main
+
+$ git show 9e07033ca4:.../PREREGISTRATION.md | grep -n '2,458'
+26:   smallest counterexample is h = 23, with two converse pairs at order 6. Fiber sizes reach 2,458.
+
+$ grep -c ^ORPHAN order10.out
+0

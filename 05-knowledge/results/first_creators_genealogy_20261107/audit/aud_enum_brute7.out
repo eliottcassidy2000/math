@@ -1,0 +1,7 @@
+brute n=2: extensions 2, distinct canonical codes (mine) 1, distinct brute codes 1, augmentation classes 1 (duplicates 0), |Aut| mismatches 0
+brute n=3: extensions 4, distinct canonical codes (mine) 2, distinct brute codes 2, augmentation classes 2 (duplicates 0), |Aut| mismatches 0
+brute n=4: extensions 16, distinct canonical codes (mine) 4, distinct brute codes 4, augmentation classes 4 (duplicates 0), |Aut| mismatches 0
+brute n=5: extensions 64, distinct canonical codes (mine) 12, distinct brute codes 12, augmentation classes 12 (duplicates 0), |Aut| mismatches 0
+brute n=6: extensions 384, distinct canonical codes (mine) 56, distinct brute codes 56, augmentation classes 56 (duplicates 0), |Aut| mismatches 0
+brute n=7: extensions 3584, distinct canonical codes (mine) 456, distinct brute codes 456, augmentation classes 456 (duplicates 0), |Aut| mismatches 0
+brute self-test PASSED

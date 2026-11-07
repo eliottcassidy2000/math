@@ -1,0 +1,7 @@
+n=3 (all of X, 4 tournaments in X): S odd 4, H=1+2F mod 4 4, Phi flips H mod 4 4, Phi involution 4; labelled H mod 4: {1: 2, 3: 2}
+n=5 (all of X, 64 tournaments in X): S odd 64, H=1+2F mod 4 64, Phi flips H mod 4 64, Phi involution 64; labelled H mod 4: {1: 32, 3: 32}
+n=7 (all of X, 4096 tournaments in X): S odd 4096, H=1+2F mod 4 4096, Phi flips H mod 4 4096, Phi involution 4096; labelled H mod 4: {1: 2048, 3: 2048}
+n=9 (random sample, 200 tournaments in X): S odd 200, H=1+2F mod 4 200, Phi flips H mod 4 200, Phi involution 200; labelled H mod 4: {1: 102, 3: 98}
+n=11 (random sample, 30 tournaments in X): S odd 30, H=1+2F mod 4 30, Phi flips H mod 4 30, Phi involution 30; labelled H mod 4: {1: 16, 3: 14}
+n=5: |X| = 64, |G| = 8, G-orbits on X = 8, isomorphism classes among X = 8, orbits by H mod 4: {1: 4, 3: 4}
+n=7: |X| = 4096, |G| = 48, G-orbits on X = 88, isomorphism classes among X = 88, orbits by H mod 4: {1: 44, 3: 44}

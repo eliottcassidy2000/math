@@ -1,0 +1,103 @@
+== class counts (A000568) and SC counts (A002785)
+classes [1, 1, 2, 4, 12, 56, 456, 6880, 191536, 9733056]
+SC classes [1, 1, 2, 2, 8, 12, 88, 176, 2752, 8784]
+|S(n)| = [1, 1, 2, 3, 7, 19, 77, 320, 1520, 7663]
+|N(n)| = [1, 0, 1, 1, 4, 12, 58, 243, 1200, 6143]
+max H(n) = [1, 1, 3, 5, 15, 45, 189, 661, 3357, 15745]
+== fibers
+values with n(h) <= 9: 1520 (including h = 1: True )
+(s,p)=(1,0): 44 [1, 3, 5, 11, 13, 41, 61, 85, 87, 125, 127, 147, 155, 157, 171, 175, 189, 629, 637, 2891, 2917, 2919, 2931, 2959, 2963, 2979, 3079, 3081, 3083, 3085, 3095, 3101, 3159, 3243, 3249, 3267, 3275, 3279, 3281, 3297, 3299, 3303, 3333, 3357]
+(s,p)=(0,1): 25 [19, 25, 27, 31, 35, 39, 43, 47, 63, 601, 603, 607, 609, 613, 627, 633, 2885, 2903, 2967, 2973, 2993, 3017, 3065, 3069, 3109]
+dichotomy values with n(h) <= 8: 35 of 320
+smallest failures (h, n(h), fiber, s, p): [(9, 5, 2, 2, 0), (15, 5, 2, 2, 0), (17, 6, 2, 2, 0), (23, 6, 4, 0, 2), (29, 6, 4, 2, 1), (33, 6, 5, 1, 2), (37, 6, 5, 1, 2), (45, 6, 2, 2, 0), (49, 7, 7, 1, 3), (51, 7, 8, 2, 3), (53, 7, 4, 0, 2), (55, 7, 4, 0, 2)]
+  h=9: n=5 fiber=2 s=2 p=0
+  h=15: n=5 fiber=2 s=2 p=0
+  h=17: n=6 fiber=2 s=2 p=0
+  h=23: n=6 fiber=4 s=0 p=2
+  h=29: n=6 fiber=4 s=2 p=1
+  h=33: n=6 fiber=5 s=1 p=2
+  h=37: n=6 fiber=5 s=1 p=2
+max fiber n(h)<=9: (257, 1503)  max fiber at n(h)=10: (2458, 7799)
+  max fiber at least order 3: (1, 3)
+  max fiber at least order 4: (1, 5)
+  max fiber at least order 5: (2, 15)
+  max fiber at least order 6: (5, 37)
+  max fiber at least order 7: (15, 91)
+  max fiber at least order 8: (49, 345)
+  max fiber at least order 9: (257, 1503)
+  max fiber at least order 10: (2458, 7799)
+kinds n(h) <= 9: {'SC-only': 57, 'mixed': 1092, 'NS-only': 371}
+order 10 dichotomy values: 55 range (14675, 15745)
+  order-10 dichotomy (1,0): [14937, 14973, 15745]
+  max H(10) fiber: (10, 1, 1, 0)
+== blue/black split (blue: some SC first creator)
+  n(h) <= 9
+    even 1: blue 89 black 43
+    even 3: blue 0 black 124
+    odd 1: blue 521 black 103
+    odd 3: blue 538 black 101
+  n(h) = 10
+    even 1: blue 2538 black 538
+    even 3: blue 0 black 3067
+    odd 1: blue 0 black 0
+    odd 3: blue 0 black 0
+  blue/black with n(h)<=9 incl. h=1: 1149 371
+  order 4: values not forced black 1, blue 1 (1.000)
+  order 5: values not forced black 4, blue 4 (1.000)
+  order 6: values not forced black 7, blue 6 (0.857)
+  order 7: values not forced black 58, blue 42 (0.724)
+  order 8: values not forced black 124, blue 82 (0.661)
+  order 9: values not forced black 1200, blue 1012 (0.843)
+  order 10: values not forced black 3076, blue 2538 (0.825)
+  even n(h)<=8, h=1 mod 4: blue share 0.674
+  odd n(h)<=9: blue share 0.838
+== SC classes by H mod 4
+  n=1: 1 mod 4: 1, 3 mod 4: 0
+  n=2: 1 mod 4: 1, 3 mod 4: 0
+  n=3: 1 mod 4: 1, 3 mod 4: 1
+  n=4: 1 mod 4: 2, 3 mod 4: 0
+  n=5: 1 mod 4: 4, 3 mod 4: 4
+  n=6: 1 mod 4: 12, 3 mod 4: 0
+  n=7: 1 mod 4: 44, 3 mod 4: 44
+  n=8: 1 mod 4: 176, 3 mod 4: 0
+  n=9: 1 mod 4: 1376, 3 mod 4: 1376
+  NS-only: count 371, median h/maxH(n(h)) 0.545
+  SC-only: count 50, median h/maxH(n(h)) 0.918
+  mixed: count 1092, median h/maxH(n(h)) 0.551
+== k(T) = #{v : T - v is a first creator}
+  order 2: first creators 0, k-dist {}, k=n 0 (0.000), orphans [], hypo analogues 1, non-strong first creators 0
+  order 3: first creators 1, k-dist {0: 1}, k=n 0 (0.000), orphans [(3, 1, 3)], hypo analogues 0, non-strong first creators 0
+  order 4: first creators 1, k-dist {2: 1}, k=n 0 (0.000), orphans [], hypo analogues 0, non-strong first creators 0
+  order 5: first creators 6, k-dist {2: 1, 3: 3, 4: 1, 5: 1}, k=n 1 (0.167), orphans [], hypo analogues 0, non-strong first creators 0
+  order 6: first creators 33, k-dist {2: 1, 3: 2, 4: 13, 5: 12, 6: 5}, k=n 5 (0.152), orphans [], hypo analogues 0, non-strong first creators 0
+  order 7: first creators 328, k-dist {3: 17, 4: 28, 5: 90, 6: 115, 7: 78}, k=n 78 (0.238), orphans [], hypo analogues 0, non-strong first creators 0
+  order 8: first creators 5457, k-dist {0: 2, 2: 8, 3: 34, 4: 146, 5: 398, 6: 911, 7: 1840, 8: 2118}, k=n 2118 (0.388), orphans [(63, 0, 1), (63, 0, 1)], hypo analogues 0, non-strong first creators 0
+  order 9: first creators 163676, k-dist {1: 2, 2: 37, 3: 280, 4: 1494, 5: 5020, 6: 11383, 7: 21892, 8: 41015, 9: 82553}, k=n 82553 (0.504), orphans [], hypo analogues 0, non-strong first creators 0
+  first creators at orders 4-9: 169501
+  order-8 classes with H=63: [(0, 1, [1, 11, 25, 25, 33, 33, 37, 37], 1, 8), (0, 1, [1, 11, 25, 25, 33, 33, 37, 37], 1, 8)]
+  least orders of their deletion values: [1, 5, 6]
+== genealogy threshold n*maxH(n-2)
+  n=4: threshold 4; new values 1, above threshold 1
+  n=5: threshold 15; new values 4, above threshold 0
+  n=6: threshold 30; new values 12, above threshold 6
+  n=7: threshold 105; new values 58, above threshold 27
+  n=8: threshold 360; new values 243, above threshold 142
+  n=9: threshold 1701; new values 1200, above threshold 671
+  n=10: threshold 6610; new values 6143, above threshold 4360
+== refinement by least c3 level / least hc at the least order
+  values n(h) <= 10: 7663 ; >2 classes at least order & least c3: 5691 ; >2 classes at least order & least hc: 1901
+== comparison with order10.out
+  packet V lines: 6143  auditor values: 6143  identical tables: True
+  differing h: []
+  order-10 new values by h mod 4 and kind: {(3, 'black'): 3067, (1, 'blue'): 2538, (1, 'black'): 538}
+== comparison with klein's census_<n>.txt (T h c3 strong count)
+  order 3: (h,c3,strong) table identical: True; (h,hc) table identical: True
+  order 4: (h,c3,strong) table identical: True; (h,hc) table identical: True
+  order 5: (h,c3,strong) table identical: True; (h,hc) table identical: True
+  order 6: (h,c3,strong) table identical: True; (h,hc) table identical: True
+  order 7: (h,c3,strong) table identical: True; (h,hc) table identical: True
+  order 8: (h,c3,strong) table identical: True; (h,hc) table identical: True
+  order 9: (h,c3,strong) table identical: True; (h,hc) table identical: True
+  order 10: per-h total, least c3 and count at least c3 agree with klein: True ; least hc and count agree: True
+  klein order 10: non-strong classes with a value new at order 10: 0
+  klein order 11: values new at order 11: 36248; non-strong classes with a new value: 0
