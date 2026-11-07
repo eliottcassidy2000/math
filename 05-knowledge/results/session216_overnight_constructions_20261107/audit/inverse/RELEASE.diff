@@ -1,0 +1,189 @@
+--- original/PROOF.md
++++ release/PROOF.md
+@@ -15,6 +15,10 @@
+ inverse returning literal graphs, and a small-order certificate for the full
+ unrestricted two-apex word class. No generic automata or saturation priority
+ claim is made.
++
++The empty tournament has H(empty)=1 by the unique empty-path convention.
++The theorem is general in k; the executable inverse.py specializes to k=2
++and the fixed apex arc0->1. It is not a general-k implementation.
+ 
+ ## Transfer and finite inverse theorem
+ 
+@@ -102,3 +106,22 @@
+ The inverse theorem decides each target but does not say every target is
+ accepted. The universal all-odd assertion, a uniform induction grammar, and
+ any eventual threshold remain OPEN.
++
++### Adaptive continuation probes
++
++Allowing the prefix/suffix macro (length<=3) to vary at each branch does not
++rescue these seeds: among all seeds length4..6 with H>=23, exactly8 support
++both first branches, and none supports both branches to depth2. Duality is
++quotiented by reverse word with letter map(0,1,2,3)->(3,1,2,0), which reverses
++all tournament arcs and swaps apex names, preserving H and the action set.
++
++`rebuild_digits.py` enlarges the action set to recolor either old chain endpoint
++by any XOR mask and then append/prepend one new vertex of any mask. The64
++specified actions can depend on the current word and desired sign. Among
++seeds length4..6 with H>=23,267 support depth1,2 support depth2, and none
++supports depth3. The depth2 seed1122 has H=23, and its dual is the other seed.
++This realizes the binary tree23->45/47->89/91/93/95 within the restricted
++repair grammar but does not continue to the next complete level. Counts are
++of literal labeled mask words, not isomorphism classes. This stronger hostile
++probe leaves unrestricted interior edits, larger boundary memory, higher
++apex count, and arbitrary rebuilding open.
+--- original/README.md
++++ release/README.md
+@@ -1,24 +1,34 @@
+ # Session216 inverse-mask lane
+ 
+-Read PROOF.md for exact scope, inheritance, proof, and limits.
++PROVED exact finite inverse-membership theorem; FINITE-EXACT positive
++construction certificate. Read PROOF.md for scope, inheritance, and limits.
++The executable inverse specializes to two apexes with arc0->1. No eventual
++spectrum theorem or enlarged ambient finite range is claimed.
+ 
+-Reproduction from the containing workspace directory:
++Run from this packet directory with Python3 and a C++17 compiler:
+ 
+-    python session216-inverse/probe.py
++    python3 probe.py
++    python3 census.py
++    python3 inverse.py
++    python3 budget_probe.py
++    python3 digits.py
++    python3 digits_boundary.py
++    python3 variable_digits.py
++    python3 rebuild_digits.py
++    g++ -O3 -std=c++17 audit.cpp -o /tmp/session216-inverse-audit
++    /tmp/session216-inverse-audit < witnesses.txt
+ 
+-The original breadth-first exploratory driver in probe.py is memory-intensive
+-and should not be used to reproduce the certificate. Instead use:
++probe.py runs341 independent transfer controls. census.py recreates all4998
++witnesses on at most12 vertices. audit.cpp independently verifies every saved
++graph by subset Hamiltonian-path DP. Timing fields naturally vary.
+ 
+-    python session216-inverse/census.py > session216-inverse/census.out
+-    python session216-inverse/inverse.py > session216-inverse/inverse.out
+-    python session216-inverse/budget_probe.py > session216-inverse/budget_probe.out
+-    python session216-inverse/digits.py > session216-inverse/digits.out
+-    python session216-inverse/digits_boundary.py > session216-inverse/digits_boundary.out
+-    g++ -O3 session216-inverse/audit.cpp -o /tmp/session216-inverse-audit
+-    /tmp/session216-inverse-audit < session216-inverse/witnesses.txt
++witnesses.json and witnesses.txt store the same literal mask words: bit i
++means apex i beats that chain vertex. Chain arcs point in increasing word
++order. A dash in witnesses.txt encodes the empty chain. H(empty tournament)=1.
++The positive packet graphs always include both apexes.
+ 
+-probe.py is imported for its transfer implementation and independent Python
+-subset counter. witnesses.json and witnesses.txt store identical literal
+-mask words, with bit i denoting apex i beating that chain vertex. The two
+-apexes have arc0->1; the chain is increasing. No external dependencies.
+-Timing fields vary between runs.
++Digit probes are bounded hostile tests, not all-order obstructions. The
++saturation inverse exhausts reachable states before claiming ABSENT; finite
++resource interruption returns INCOMPLETE. PUBLICATION_FILES.txt lists the
++release payload, and SHA256SUMS pins it. No dependencies beyond standard
++Python and C++ libraries.
+--- original/census.py
++++ release/census.py
+@@ -11,5 +11,5 @@
+ t=time.time();dfs(init,())
+ for h,w in sorted(seen.items()):
+  if h%101==0 or h in (7477,27371,9999):assert hp(w)==h
+-with open('session216-inverse/witnesses.json','w') as f:json.dump({str(h):w for h,w in sorted(seen.items())},f)
++with open('witnesses.json','w') as f:json.dump({str(h):w for h,w in sorted(seen.items())},f)
+ print(json.dumps({'counts':counts,'seconds':time.time()-t,'distinct':len(seen),'missing':[h for h in range(1,10001,2) if h not in seen],'controls':{h:seen.get(h) for h in [7477,9999]}},indent=2))
+--- original/digits_boundary.py
++++ release/digits_boundary.py
+@@ -14,25 +14,26 @@
+ def act(w,a):
+  u,side,d=a;r=u+w if side else w+u
+  return dual(r) if d else r
+-counts=[0]*5;survivors=[];t=time.time()
+-for l in range(4,6):
+- for w in product(range(4),repeat=l):
+-  h=H(w)
+-  if h<23:continue
+-  a=[x for x in actions if H(act(w,x))==2*h-1]
+-  b=[x for x in actions if H(act(w,x))==2*h+1]
+-  for x in a:
+-   for y in b:
+-    counts[0]+=1;front=[w];ok=True
+-    for depth in range(4):
+-     nxt=[]
+-     for q in front:
+-      for action,s in [(x,-1),(y,1)]:
+-       r=act(q,action)
+-       if H(r)!=2*H(q)+s:ok=False;break
+-       nxt.append(r)
++if __name__=='__main__':
++ counts=[0]*5;survivors=[];t=time.time()
++ for l in range(4,6):
++  for w in product(range(4),repeat=l):
++   h=H(w)
++   if h<23:continue
++   a=[x for x in actions if H(act(w,x))==2*h-1]
++   b=[x for x in actions if H(act(w,x))==2*h+1]
++   for x in a:
++    for y in b:
++     counts[0]+=1;front=[w];ok=True
++     for depth in range(4):
++      nxt=[]
++      for q in front:
++       for action,s in [(x,-1),(y,1)]:
++        r=act(q,action)
++        if H(r)!=2*H(q)+s:ok=False;break
++        nxt.append(r)
++       if not ok:break
+       if not ok:break
+-     if not ok:break
+-     counts[depth+1]+=1;front=nxt
+-    if ok:survivors.append((w,x,y))
+-print(json.dumps({'seed_max_length':5,'macro_max_length':2,'counts':counts,'survivors':survivors,'seconds':time.time()-t},indent=2))
++      counts[depth+1]+=1;front=nxt
++     if ok:survivors.append((w,x,y))
++ print(json.dumps({'seed_max_length':5,'macro_max_length':2,'counts':counts,'survivors':survivors,'seconds':time.time()-t},indent=2))
+--- original/probe.py
++++ release/probe.py
+@@ -32,7 +32,9 @@
+  return init,step,val
+ 
+ def hp(word,k=2):
+- n=len(word)+k; dp=[{} for _ in range(1<<n)]
++ n=len(word)+k
++ if n==0:return 1
++ dp=[{} for _ in range(1<<n)]
+  def edge(i,j):
+   if i<k and j<k:return i<j
+   if i<k:return word[j-k]>>i&1
+@@ -46,22 +48,11 @@
+  return sum(dp[-1].values())
+ if __name__=='__main__':
+  init,step,val=make(2,[[0,1],[0,0]])
++ tested=0
+  for n in range(5):
+   for w in itertools.product(range(4),repeat=n):
+    v=init
+    for m in w:v=step(v,m)
+-   assert val(v)==hp(w),(w,val(v),hp(w))
+- print('independent HP controls passed',flush=True)
+- frontier={init:()}; seen={};
+- for n in range(13):
+-  for v,w in frontier.items():seen.setdefault(val(v),w)
+-  missing=[h for h in range(1,1001,2) if h not in seen]
+-  print(n,len(frontier),len(seen),'missing<=1000',missing[:40],flush=True)
+-  if n==12:break
+-  nxt={}
+-  for v,w in frontier.items():
+-   for m in range(4):
+-    u=step(v,m)
+-    if val(u)<=10000:nxt.setdefault(u,w+(m,))
+-  frontier=nxt
+- with open('session216-inverse/probe.json','w') as f:json.dump({str(h):w for h,w in seen.items()},f)
++   if val(v)!=hp(w):raise RuntimeError((w,val(v),hp(w)))
++   tested+=1
++ print('Independent subset-DP controls passed:',tested)

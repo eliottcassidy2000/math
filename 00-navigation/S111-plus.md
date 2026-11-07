@@ -87,3 +87,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session148](S148.md): Independent finite square-sum growth and Hamilton-path audit.
 
 [Session215](S215.md): new persistent paired tournament sources, arbitrary-apex positive block formulas, and exact fixed-cap seed composition. Chan–Pak completeness remains OPEN.
+
+[Session216](S216.md): ACTIVE overnight tournament spectrum research; verified fixed-apex inverse checkpoint, with completeness still OPEN.

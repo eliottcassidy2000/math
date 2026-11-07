@@ -1,0 +1,9 @@
+{
+  "exact_receipts_match_ignoring_seconds": [
+    "census",
+    "budget_probe",
+    "digits",
+    "digits_boundary"
+  ],
+  "witnesses_json_byte_identical": true
+}

@@ -1,0 +1,7 @@
+{"status": "FOUND", "target": 1, "word": [], "expanded": 1, "states": 1, "seconds": 0.0002524852752685547}
+{"status": "FOUND", "target": 3, "word": [2], "expanded": 4, "states": 12, "seconds": 0.00029754638671875}
+{"status": "FOUND", "target": 5, "word": [1, 2], "expanded": 11, "states": 40, "seconds": 0.0006418228149414062}
+{"status": "ABSENT", "target": 7, "expanded": 708, "states": 708, "seconds": 0.01184701919555664}
+{"status": "FOUND", "target": 9, "word": [1, 0, 2], "expanded": 35, "states": 136, "seconds": 0.001491546630859375}
+{"status": "ABSENT", "target": 21, "expanded": 4626, "states": 4626, "seconds": 0.07537674903869629}
+{"status": "FOUND", "target": 23, "word": [1, 0, 2, 0], "expanded": 137, "states": 544, "seconds": 0.005284547805786133}

@@ -1,0 +1,79 @@
+{
+  "permutation_controls": 596,
+  "saturation_caps": [
+    0,
+    1,
+    3,
+    7,
+    21
+  ],
+  "inverse": {
+    "0": {
+      "found": false,
+      "states": 1,
+      "expanded": 1
+    },
+    "1": {
+      "found": true,
+      "states": 1,
+      "expanded": 1
+    },
+    "3": {
+      "found": true,
+      "states": 12,
+      "expanded": 4
+    },
+    "5": {
+      "found": true,
+      "states": 40,
+      "expanded": 11
+    },
+    "7": {
+      "found": false,
+      "states": 708,
+      "expanded": 708
+    },
+    "9": {
+      "found": true,
+      "states": 136,
+      "expanded": 35
+    },
+    "21": {
+      "found": false,
+      "states": 4626,
+      "expanded": 4626
+    },
+    "23": {
+      "found": true,
+      "states": 544,
+      "expanded": 137
+    },
+    "7_unpruned": {
+      "found": false,
+      "states": 13579,
+      "expanded": 13579
+    }
+  },
+  "resource": {
+    "7": {
+      "status": "INCOMPLETE",
+      "target": 7,
+      "expanded": 1,
+      "states": 1
+    },
+    "21": {
+      "status": "INCOMPLETE",
+      "target": 21,
+      "expanded": 1,
+      "states": 1
+    },
+    "23": {
+      "status": "INCOMPLETE",
+      "target": 23,
+      "expanded": 1,
+      "states": 1
+    }
+  },
+  "witnesses": 4998,
+  "max_vertices": 12
+}

@@ -1,0 +1,35 @@
+{
+  "method": "Independent compressed transfer; raw words, no dual quotient",
+  "results": {
+    "boundary": {
+      "counts": [
+        0,
+        8,
+        0
+      ],
+      "depth2_seeds": []
+    },
+    "recolor": {
+      "counts": [
+        0,
+        267,
+        2,
+        0
+      ],
+      "depth2_seeds": [
+        [
+          1,
+          1,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          1,
+          1
+        ]
+      ]
+    }
+  }
+}
