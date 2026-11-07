@@ -1,0 +1,21 @@
+q= 3 J= 0 probability= 1/3,1/3,1/3
+q= 3 J= 0 valuation-local-factors= 1,1
+q= 3 J= 1 probability= 41/108,8/27,35/108
+q= 3 J= 1 valuation-local-factors= 67/72,41/36
+q= 3 J= 2 probability= 34/81,47/162,47/162
+q= 3 J= 2 valuation-local-factors= 47/54,34/27
+PASS q= 3 states= 45 classes= 6 all classes reverse-connected; initial aperiodic
+q= 9 J= 0 probability= 1/9,1/9,1/9,1/9,1/9,1/9,1/9,1/9,1/9
+q= 9 J= 0 valuation-local-factors= 1,1,1
+q= 9 J= 1 probability= 43/324,8/81,26/243,10/81,8/81,26/243,10/81,8/81,107/972
+q= 9 J= 1 valuation-local-factors= 67/72,10/9,43/36
+q= 9 J= 2 probability= 11/72,47/486,47/486,173/1296,47/486,47/486,173/1296,47/486,47/486
+q= 9 J= 2 valuation-local-factors= 47/54,173/144,11/8
+PASS q= 9 states= 1377 classes= 27 all classes reverse-connected; initial aperiodic
+q= 27 J= 0 probability= 1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27,1/27
+q= 27 J= 0 valuation-local-factors= 1,1,1,1
+q= 27 J= 1 probability= 131/2916,8/243,26/729,10/243,8/243,26/729,10/243,8/243,80/2187,32/729,8/243,26/729,10/243,8/243,26/729,10/243,8/243,80/2187,32/729,8/243,26/729,10/243,8/243,26/729,10/243,8/243,323/8748
+q= 27 J= 1 valuation-local-factors= 67/72,10/9,32/27,131/108
+q= 27 J= 2 probability= 461/8748,47/1458,47/1458,173/3888,47/1458,47/1458,173/3888,47/1458,47/1458,1751/34992,47/1458,47/1458,173/3888,47/1458,47/1458,173/3888,47/1458,47/1458,1751/34992,47/1458,47/1458,173/3888,47/1458,47/1458,173/3888,47/1458,47/1458
+q= 27 J= 2 valuation-local-factors= 47/54,173/144,1751/1296,461/324
+PASS q= 27 states= 38637 classes= 108 all classes reverse-connected; initial aperiodic

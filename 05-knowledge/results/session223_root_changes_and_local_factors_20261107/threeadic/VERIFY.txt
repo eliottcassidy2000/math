@@ -1,0 +1,8 @@
+PROVED projector k= 0 probabilities= [Fraction(1, 3), Fraction(1, 3), Fraction(1, 3)] local factors= [Fraction(1, 1), Fraction(1, 1), Fraction(1, 1)]
+PROVED projector k= 1 probabilities= [Fraction(41, 108), Fraction(8, 27), Fraction(35, 108)] local factors= [Fraction(41, 36), Fraction(8, 9), Fraction(35, 36)]
+PROVED projector k= 2 probabilities= [Fraction(34, 81), Fraction(47, 162), Fraction(47, 162)] local factors= [Fraction(34, 27), Fraction(47, 54), Fraction(47, 54)]
+FINITE-EXACT length 20 factors [1.4545799656918175, 0.7488087905080695, 0.7966112438001131]
+FINITE-EXACT length 80 factors [1.3138685721582848, 0.8395632751693067, 0.8465681526724084]
+FINITE-EXACT length 200 factors [1.281363681631006, 0.858043679290371, 0.8605926390786233]
+FINITE-EXACT length 1000 factors [1.2637075961601627, 0.8679045927360964, 0.8683878111037407]
+PASS: stationary invariance, strong connectivity, self-loops, literal-word control through length 9, exact recurrence through length 1000

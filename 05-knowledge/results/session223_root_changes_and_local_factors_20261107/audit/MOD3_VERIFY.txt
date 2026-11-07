@@ -1,0 +1,6 @@
+PASS exact Pi/Q projector and P commutation identities on all81 states
+0 [Fraction(1, 3), Fraction(1, 3), Fraction(1, 3)]
+1 [Fraction(41, 108), Fraction(8, 27), Fraction(35, 108)]
+2 [Fraction(34, 81), Fraction(47, 162), Fraction(47, 162)]
+Closed classes: [(1, [0], [0]), (18, [1], [0, 1, 2]), (18, [2], [0, 1, 2]), (6, [0], [1, 2]), (1, [0], [0]), (1, [0], [0])]
+PASS recurrent classification

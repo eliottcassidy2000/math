@@ -102,4 +102,4 @@ individual session routes preserve scope and remaining open obligations.
 
 [Session222](S222.md): COMPLETE; audited L/diagonal shell equivalence, nested count-gap doubling, odd-chain lattice and continuous plane filling, with corrected doubling canon. Chan–Pak remains OPEN.
 
-[Session223](S223.md): ACTIVE; root-change cancellation, exact Fermat-factor square-sum boundary, residue multiplicities and cutoff investigation. Chan–Pak remains OPEN.
+[Session223](S223.md): COMPLETE; exact fixed-length all-k 3-adic factors, real-state dependence, digital two-root-change membership and scoped selector obstruction. Height-weighted factors and Chan–Pak remain OPEN.

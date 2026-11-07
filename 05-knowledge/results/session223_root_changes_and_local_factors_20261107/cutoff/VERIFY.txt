@@ -1,0 +1,1 @@
+{'mixed_periods': 494, 'exact_second_difference_checks': 19760, 'status': 'PASS'}

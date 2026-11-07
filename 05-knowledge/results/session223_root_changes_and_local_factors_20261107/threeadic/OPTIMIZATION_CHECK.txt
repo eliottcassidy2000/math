@@ -1,0 +1,1 @@
+PASS all normal and optimized receipts identical

@@ -1,0 +1,2 @@
+{'mixed_periods': 494, 'exact_second_difference_checks': 19760, 'status': 'PASS'}
+{'two_J_equations': 28830, 'status': 'PASS'}
