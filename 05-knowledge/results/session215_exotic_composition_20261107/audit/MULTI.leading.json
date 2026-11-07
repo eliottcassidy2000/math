@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "independent_random_leading_clock_cases": 60,
+  "k_range": [
+    1,
+    6
+  ]
+}

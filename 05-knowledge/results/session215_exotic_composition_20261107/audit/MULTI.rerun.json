@@ -1,0 +1,53 @@
+{
+  "EGF_vs_block_checks": 1200,
+  "block_expansion_checks": 384,
+  "closed_formula_checks": 20,
+  "cyclic_apex_rows": [
+    2,
+    4,
+    1
+  ],
+  "exhaustive_subset_dp_cases": 7543,
+  "highest_clock_coefficient_checks": 75,
+  "idempotence_commutation_checks": 43670,
+  "mixed_mask_witness": {
+    "H": 565,
+    "apex_rows": [
+      2,
+      4,
+      1
+    ],
+    "rows": [
+      26,
+      44,
+      73,
+      240,
+      230,
+      197,
+      131,
+      7
+    ],
+    "word": [
+      7,
+      1,
+      2,
+      4,
+      0
+    ]
+  },
+  "status": "PASS",
+  "values_m_0_through_10": [
+    3,
+    69,
+    555,
+    2823,
+    12111,
+    48399,
+    187935,
+    723183,
+    2783391,
+    10757679,
+    41806815
+  ],
+  "word": "7^3 0^m"
+}

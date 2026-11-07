@@ -1,0 +1,46 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "commit": "0f8750677dd20b594a0e032a3b56aa23f58a950c",
+  "sources": [
+    {
+      "path": "05-knowledge/results/session191_tournament_growth_20261104/two_apex/TWO_APEX.md",
+      "git_blob": "1f9aff3a20cecd1c47167e55a0196e511e651117",
+      "sha256": "e844aac54ee9d53bc30a9e3e7fd2bb2dc3952c8d149319401a8d0a1395ee6602"
+    },
+    {
+      "path": "05-knowledge/results/session214_chan_pak_combined_proof_20261107/surgery/PROOF.md",
+      "git_blob": "d5c80f4f03973e0cadba6463099584d3c460cbd4",
+      "sha256": "1675fa2d54dc89aecf4383941215f47dfbb620a4a971a5fa3edbffddf40c89ea"
+    },
+    {
+      "path": "05-knowledge/results/session214_chan_pak_combined_proof_20261107/surgery/ADDENDUM.md",
+      "git_blob": "d9c0508f7255d51660f3aa3fc7200cd9fe4ebb81",
+      "sha256": "b86c0062d1d73a046181a8aa6362af4293006a4f782dc57b3ba8ac1540cece96"
+    },
+    {
+      "path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "git_blob": "21c54c68fac2c18efcacd26331006824fe891cda",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "path": "01-canon/theorems/THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform.md",
+      "git_blob": "a13e73db48e7c89ec1943c9b55565363d2a848ec",
+      "sha256": "532266c35af01e36dc64e0e9cad34f733917c10bd5440625fd05f65f01b55044"
+    },
+    {
+      "path": "01-canon/theorems/THM-4878-graded-spine-grammars-cut-state-automaton-hankel-and-seam-ranks-cutwidth-censuses.md",
+      "git_blob": "9b915fad87f84149db4731713f5974eeb9e51950",
+      "sha256": "1d0c5cc189df6e81d52eaca63891e5a2af104939e437e072cafb796dc7f6c8f8"
+    },
+    {
+      "path": "01-canon/theorems/THM-4880-ribbon-tournaments-bounded-span-back-arcs-give-a-finite-state-transfer-for-hamiltonian-paths-strong-connectivity-is-regular-the-span-2-series-has-a-rank-14-integer-representation-irreducible-on-nonempty-words-47-needs-span-3.md",
+      "git_blob": "7b931024475c189d33fddd4ee29d71393fec8b02",
+      "sha256": "ad4fc80693a1fef4b47ca21d00e27ab1a5fe2f6b23d72414634f9c5f653ea57f"
+    },
+    {
+      "path": "01-canon/theorems/THM-062-forward-edge-distribution.md",
+      "git_blob": "a1ff82a5f674a0641a8a3e4151511465f56c0779",
+      "sha256": "0627573950a6958856d72064c9acae0a69a8360e7bbeb0a502629bf0224fa492"
+    }
+  ]
+}
