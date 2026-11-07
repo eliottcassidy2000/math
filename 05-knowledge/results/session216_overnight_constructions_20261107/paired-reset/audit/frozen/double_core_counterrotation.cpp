@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;using I=long long;using P=array<I,7>;using Key=array<I,3>;
+P mv(P p,char c){auto[h,s,e,L,R,d,b]=p;if(c=='O')return{h,s,0,L,2*R,d,2*b};if(c=='Z')return{h+R-e,s,d,L+b,2*R-d,d,2*b};if(c=='P')return{h,0,e,2*L,R,d,2*b};return{h+L-s,d,e,2*L-d,R+b,d,2*b};}
+P star(P p,P q){auto[h,s,e,L,R,d,b]=p;auto[H,S,E,LL,RR,D,B]=q;return{d*H+(R-d)*LL+(e-d)*S+(h-e-R+d)*D,s*D,d*E,b*LL+D*(L-b),B*R+d*(RR-B),d*D,b*B};}
+struct Rec{int c1,c2,l,m;string word;P p;};struct Hash{size_t operator()(Key k)const{uint64_t h=1469598103934665603ULL;for(auto x:k){h^=x;h*=1099511628211ULL;}return h;}};
+int main(int argc,char**argv){int cap=argc>1?atoi(argv[1]):8;ifstream in("H5_CORE_STATES.txt");int mask;P p;vector<pair<int,P>>cores;while(in>>mask){for(auto&v:p)in>>v;cores.push_back({mask,p});}long long states=0,partial=0,hits=0;
+for(int N=0;N<=cap;N++){unordered_map<Key,Rec,Hash>bank;set<pair<I,I>>ar;
+auto insert=[&](P p,Rec rec,bool side){states++;auto[h,s,e,L,R,d,b]=p;if(s!=d||e!=d)return;I a=L-d,r=R-d,j=(d-d%3)/3;Key key{a,r,h+2*j};if(!side){bank.try_emplace(key,rec);ar.insert({a,r});}else{if(ar.count({a,r}))partial++;auto it=bank.find(key);if(it!=bank.end()){hits++;cout<<"MATCH padding "<<N<<"\n";for(auto z:{it->second,rec}){cout<<z.c1<<" "<<z.c2<<" "<<z.l<<" "<<z.m<<" "<<z.word;for(auto v:z.p)cout<<" "<<v;cout<<"\n";}cout<<flush;}}};
+for(int l=0;l<=N;l++)for(int m=0;m<=N-l;m++){int r=N-l-m;for(auto [c1,p]:cores){function<void(P,int,string)>middle=[&](P p,int rem,string word){if(rem){middle(mv(p,'O'),rem-1,word+'O');middle(mv(p,'Z'),rem-1,word+'Z');return;}for(auto[c2,q]:cores){P pp=star(p,q);function<void(P,int,string)>right=[&](P p,int rem,string w){if(rem){if(rem>1)right(mv(p,'O'),rem-1,w+'O');right(mv(p,'Z'),rem-1,w+'Z');return;}insert(p,Rec{c1,c2,l,m,w,p},false);};function<void(P,int,string)>left=[&](P p,int rem,string w){if(rem){if(rem>1)left(mv(p,'P'),rem-1,w+'P');left(mv(p,'Q'),rem-1,w+'Q');return;}right(p,r,w);};left(pp,l,word);}};middle(p,m,"");}}
+int pad=N+5;for(int l=0;l<=pad;l++)for(auto[c,p]:cores){int r=pad-l;function<void(P,int,string)>right=[&](P p,int rem,string w){if(rem){if(rem>1)right(mv(p,'O'),rem-1,w+'O');right(mv(p,'Z'),rem-1,w+'Z');return;}insert(p,Rec{c,-1,l,0,w,p},true);};function<void(P,int,string)>left=[&](P p,int rem,string w){if(rem){if(rem>1)left(mv(p,'P'),rem-1,w+'P');left(mv(p,'Q'),rem-1,w+'Q');return;}right(p,r,w);};left(p,l,"");}
+cerr<<"padding "<<N<<" states "<<states<<" keys "<<bank.size()<<" partial "<<partial<<" hits "<<hits<<"\n";if(hits)break;}
+}

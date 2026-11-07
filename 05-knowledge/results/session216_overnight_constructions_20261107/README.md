@@ -1,6 +1,6 @@
 # Session216: overnight tournament spectrum constructions
 
-**Research ACTIVE.** The Chan–Pak target, every odd Hamiltonian-path count at least23, remains **OPEN**. This index records independently verified checkpoints while the remaining construction work continues. No unrestricted finite-range extension, positive-density theorem or eventual threshold is claimed.
+**Extended session complete; the Chan–Pak conjecture remains OPEN.** The target is every odd Hamiltonian-path count at least 23. This index separates all-order theorems, exact finite certificates, restricted obstructions and the remaining proof obligation. No unrestricted finite-range extension, positive-density theorem or eventual threshold is claimed.
 
 ## 1. Exact inverse for arbitrary apex-mask words
 
@@ -76,6 +76,46 @@ For the three-core formula, deterministic alpha stripping removes the free suffi
 
 Published [checkpoint3](https://github.com/eliottcassidy2000/math/commit/656b8a9248b1534d3a868026356edcdb6d4eb4a1) contains Section5.
 
-## Continuing obligation
+## 8. Rooted reciprocity narrows the universal paired-source route
 
-Further work tests source synchronization, richer two-apex constructions and interval-width amplification. The missing step is an all-target physical construction or proved occupancy theorem. Finite certificates, a fixed-width interval family and analytic support bounds are separate kinds of progress and do not supply that step by themselves.
+[Carrier theorem and rooted reciprocity](carriers/README.md), [reconstruction instructions](carriers/START_HERE.md), [complete order-ten audit](order10/README.md), [order-ten reconstruction](order10/START_HERE.md).
+
+The rooted cover-polynomial identity F(1-k)=(-1)^(n-1)G(k) is proved in a squarefree ring. Its integer coefficients rule out every SAME-order-parity universal O/Z/J pair whose start counts differ by 2. A universal width-eight pair must instead have opposite order parity, even starts in one of (4,2), (10,8), (16,14), (22,20), and all eight shared nonstart coordinates divisible by 3. The later two-adic refinement gives C and b divisible by 24 and L,T congruent to 6 modulo 12.
+
+These are necessary conditions for this particular universal source criterion, not restrictions on arbitrary tournament counts. They do not prove that every universal pair is impossible. The complete independently audited census proves only that no such width-eight pair has BOTH orders at most 10. Canonical augmentation verifies all 191,536 order-nine deletion classes; all 1,412 surviving order-ten profiles were independently recounted. The independent root compiler omits the producer's minimum-start pruning and still recovers exactly the same inventory.
+
+Separate finite asynchronous-word and right-amalgamation probes have their own declared banks and depth limits. They are not all-order exclusions. The common right-factor theorem explains why a nontrivial common deletion factor cannot repair an already synchronized pair; it does not exclude asymmetric substitutions or the left-reset mechanism below.
+
+## 9. Unequal-deletion reset pairs and a conserved defect
+
+[Positive left-reset mechanism and structural controls](paired-reset/README.md), [reconstruction and local dependencies](paired-reset/START_HERE.md).
+
+Adding z with root->z->all old nonroot vertices gives a physical reset operation Q. Explicit sources with unequal deletion counts 1 and 5 retain paired adjusted bases under every common repetition of Q. Their compiled counts are
+
+    216*2^k-7 and 216*2^k-5,     k>=0.
+
+This is a new composable source mechanism, not a claim that the displayed values were previously unattained. A five-coordinate interface gives a broader sufficient criterion for synchronization under every binary Q/Z word. No physical fully binary seed satisfying that criterion was found.
+
+For nontrivial rooted sources in the stable state s=e=d, the nonnegative integer
+
+    kappa=(h-a-rho+b-3d)/2
+
+is conserved by Q and Z. Different deletion counts can in principle be compensated by different defects. The singleton is explicitly excluded: its value is -1/2. This boundary correction is preserved with the independent audit and original manuscript.
+
+The sharper two-adic congruences form a closed class, so they do not force an infinite divisibility contradiction. Explicit tournaments of orders 17 and 18 share H=2025 and B(2)=5,971,968, disproving a tempting global-moment parity obstruction. Bounded macro and structured counter-rotation searches remain finite negative evidence only.
+
+## 10. Final proof frontier and checkpoints
+
+The strongest compact positive target now is the three-core formula in Section6: prove it represents every odd N>=65. Its 80 fixed cut states, explicit binary formula and exact all-length inverse make this a concrete sufficient arithmetic conjecture. Proving membership separately for many targets, even with certified bounds, does not prove universal occupancy.
+
+The other open route is a physical binary paired-source family with adequate interval coverage. The all-order reciprocity restrictions eliminate same-parity universal seeds, while the Q/Z interface allows a different deletion/defect balance. A thin dyadic ray, a fixed-width adjacent menu, or normalized width with growing physical spacing does not supply that coverage.
+
+Published checkpoints:
+
+1. [Fixed-apex inverse and literal baseline](https://github.com/eliottcassidy2000/math/commit/94e3ca9e045266b3f71351b799415f820a9bf268).
+2. [Star constructions and logarithmic density refinement](https://github.com/eliottcassidy2000/math/commit/a1ff23f5b22dcacf6bcc5b6d6b71a25683b1b7e2).
+3. [Complete two-apex census and ternary rays](https://github.com/eliottcassidy2000/math/commit/656b8a9248b1534d3a868026356edcdb6d4eb4a1).
+4. [Three-core arithmetic, registers and exact inverses](https://github.com/eliottcassidy2000/math/commit/79c2e3666ba1c78aecb2f0868933824a46ecadd2).
+5. The current final packet adds the carrier/reciprocity, complete order-ten and left-reset results, together with this synthesis.
+
+All promoted result packets carry independent audits, exact input freezes, replay instructions and checksums. Large retained certificates are losslessly split; reconstruct them as directed before replay. Historical frozen copies may retain their original pending-audit labels; the current release reviews govern promoted claims. No full Chan–Pak proof, eventual threshold, positive-density theorem or unrestricted finite-range record is claimed.

@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "labeled_rooted_polynomials": 1099,
+  "same_parity_collisions": 1034,
+  "max_order": 5
+}

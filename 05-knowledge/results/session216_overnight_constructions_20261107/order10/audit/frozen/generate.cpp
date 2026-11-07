@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;using U=uint64_t;using G=vector<int>;using Partition=vector<vector<int>>;
+U encode(const G&a,const vector<int>&p){U z=0;int k=0;for(int i=0;i<(int)p.size();i++)for(int j=i+1;j<(int)p.size();j++,k++)if(a[p[i]]>>p[j]&1)z|=U(1)<<k;return z;}
+G decode(U code,int n){G a(n);int k=0;for(int i=0;i<n;i++)for(int j=i+1;j<n;j++,k++)if(code>>k&1)a[i]|=1<<j;else a[j]|=1<<i;return a;}
+Partition refine(const G&a,Partition p){while(true){Partition q;bool changed=false;vector<int>masks;for(auto&c:p){int m=0;for(int v:c)m|=1<<v;masks.push_back(m);}for(auto&c:p){map<vector<int>,vector<int>>groups;for(int v:c){vector<int>key;for(int m:masks)key.push_back(__builtin_popcount((unsigned)(a[v]&m)));groups[key].push_back(v);}if(groups.size()>1)changed=true;for(auto&[k,v]:groups)q.push_back(v);}p=move(q);if(!changed)return p;}}
+U canonical(const G&a){U best=~U(0);Partition init(1);for(int i=0;i<(int)a.size();i++)init[0].push_back(i);function<void(Partition)>rec=[&](Partition p){p=refine(a,move(p));int ix=-1;for(int i=0;i<(int)p.size();i++)if(p[i].size()>1&&(ix<0||p[i].size()<p[ix].size()))ix=i;if(ix<0){vector<int>order;for(auto&c:p)order.push_back(c[0]);best=min(best,encode(a,order));return;}auto cell=p[ix];for(int v:cell){Partition q=p;vector<int>rest;for(int w:cell)if(w!=v)rest.push_back(w);q[ix]={v};q.insert(q.begin()+ix+1,rest);rec(move(q));}};rec(move(init));return best;}
+int main(int argc,char**argv){int maxn=argc>1?atoi(argv[1]):9;vector<U>bank{0};ofstream receipt("GENERATION.tsv");receipt<<"order\tclasses\textensions\tseconds\n1\t1\t0\t0\n";
+for(int n=2;n<=maxn;n++){auto start=chrono::steady_clock::now();unordered_set<U>next;next.reserve(bank.size()*(n>=8?35:8));long long checked=0;for(U c:bank){G a=decode(c,n-1);for(int mask=0;mask<(1<<(n-1));mask++){G b=a;for(int i=0;i<n-1;i++)if(mask>>i&1)b[i]|=1<<(n-1);b.push_back(((1<<(n-1))-1)^mask);next.insert(canonical(b));checked++;}if(n==9&&checked%256000==0)cerr<<"progress "<<checked<<" classes "<<next.size()<<"\n";}
+bank.assign(next.begin(),next.end());sort(bank.begin(),bank.end());double seconds=chrono::duration<double>(chrono::steady_clock::now()-start).count();receipt<<n<<'\t'<<bank.size()<<'\t'<<checked<<'\t'<<seconds<<'\n'<<flush;cerr<<"order "<<n<<" classes "<<bank.size()<<" extensions "<<checked<<" seconds "<<seconds<<"\n";
+ofstream out("BANK"+to_string(n)+".txt");out<<bank.size()<<"\n";for(U c:bank){G a=decode(c,n);out<<n;for(int x:a)out<<" "<<x;out<<"\n";}}
+return 0;
+}

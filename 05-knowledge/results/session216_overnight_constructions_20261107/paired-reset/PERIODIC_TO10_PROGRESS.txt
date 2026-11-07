@@ -1,0 +1,16 @@
+bases 500 cases 14500398 hits 0
+bases 1000 cases 29849490 hits 0
+bases 1500 cases 43199541 hits 0
+bases 2000 cases 53585334 hits 0
+bases 2500 cases 62003304 hits 0
+bases 3000 cases 68108964 hits 0
+bases 3500 cases 72541920 hits 0
+bases 4000 cases 76274649 hits 0
+bases 4500 cases 79347444 hits 0
+bases 5000 cases 82133469 hits 0
+bases 5500 cases 84688989 hits 0
+bases 6000 cases 87044496 hits 0
+bases 6500 cases 88867845 hits 0
+bases 7000 cases 90154680 hits 0
+bases 7500 cases 91042941 hits 0
+FINAL bases 7822 macros 363 cases 91406667 three_step_keys 0 full_tests 0 hits 0

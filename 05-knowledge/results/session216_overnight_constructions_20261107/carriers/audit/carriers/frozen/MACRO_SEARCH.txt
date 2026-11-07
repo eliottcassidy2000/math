@@ -1,0 +1,6 @@
+base 677 collisions 151 persistent 0
+base 759 collisions 331 persistent 0
+base 1547 collisions 389 persistent 0
+base 821 collisions 416 persistent 0
+base 4225 collisions 424 persistent 0
+base 4357 collisions 448 persistent 0

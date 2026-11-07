@@ -1,0 +1,13 @@
+{
+  "fresh_banks_2_through9": "byte identical",
+  "gzip": "exact plaintext match",
+  "generation_search_combine_receipts": "match ignoring search time",
+  "new_candidates": "byte identical",
+  "deep_literal_source_count": 1874,
+  "deep_groups": {
+    "dependencies/BANK_THROUGH8.txt": 593,
+    "BANK9.txt": 1281
+  },
+  "target_superset_count": 381,
+  "unpairable_start26_targets": 80
+}

@@ -1,0 +1,8 @@
+sources 0 keys 30 hits 0
+sources 10000 keys 259759 hits 0
+sources 20000 keys 503348 hits 0
+sources 30000 keys 743213 hits 0
+sources 40000 keys 998819 hits 0
+sources 50000 keys 1278934 hits 0
+sources 60000 keys 1567597 hits 0
+FINAL sources 63546 macros 39 cases 2478294 keys 1668585 hits 0

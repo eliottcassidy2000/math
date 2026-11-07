@@ -1,0 +1,16 @@
+{
+  "status": "candidate; audit requested",
+  "external_inputs": {
+    "../session216-carriers/BANK.txt": "5d5a5f625b4a85e04c0744aeb847ed36f59456f6a39996479aa82b9eb950afe3",
+    "../session216-carriers-order9/BANK6.txt": "c68bc8590e4cfbd1d3b6d61dec8b907c680c05879fc658e7bb153d81a48ee271",
+    "../session216-carriers-order9/BANK9.txt": "83860fb80da06ba49dd01ded31fe308d8c954c1cdbb51336983818bf2892111e"
+  },
+  "excluded_large_regenerable_data": [
+    "ALL_ROOT_SOURCES.txt",
+    "ALL_SOURCES10.txt",
+    "ALL_SOURCES_TO10.txt",
+    "RESET_SOURCES.txt",
+    "GLOBAL_COUNTS.tsv"
+  ],
+  "scope": "See README.md and theorem-specific documents; no universal pair or eventual coverage claim."
+}

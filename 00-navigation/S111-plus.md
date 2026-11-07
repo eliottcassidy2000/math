@@ -88,4 +88,4 @@ individual session routes preserve scope and remaining open obligations.
 
 [Session215](S215.md): new persistent paired tournament sources, arbitrary-apex positive block formulas, and exact fixed-cap seed composition. Chan–Pak completeness remains OPEN.
 
-[Session216](S216.md): ACTIVE overnight tournament spectrum research; verified fixed-apex inverse checkpoint, with completeness still OPEN.
+[Session216](S216.md): completed extended tournament spectrum research; audited star and inverse constructions, three-core arithmetic reduction, density refinement, rooted reciprocity and unequal-deletion paired rays. Chan–Pak completeness remains OPEN.

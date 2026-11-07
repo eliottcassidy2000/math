@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "retained_profiles": 301,
+  "excluded_unpairable_start26": 80,
+  "comparison": "Exact multiset equality after admissible start-pair filter, across independent canonicalization and root compiler implementations"
+}

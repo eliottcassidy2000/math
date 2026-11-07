@@ -1,0 +1,38 @@
+--- reviewed/PROOF.md
++++ published/PROOF.md
+@@ -1,6 +1,6 @@
+ # Complete universal-source search through order ten
+ 
+-Status: FINITE-EXACT candidate, conditional on the separately audited rooted-reciprocity theorem. The unrestricted Hamiltonian-path spectrum and F(8,137) remain OPEN. This does not extend scalar spectrum coverage.
++Status: FINITE-EXACT, independently audited using the approved rooted-reciprocity theorem. The unrestricted Hamiltonian-path spectrum and F(8,137) remain OPEN. This does not extend scalar spectrum coverage.
+ 
+ ## Result and decisive scope
+ 
+@@ -8,7 +8,7 @@
+ 
+ The complete filtered counts by source order are: zero through order7,41 at order8,301 at order9, and1412 at order10. There are1549 distinct full-eight-plus-label keys and no key containing both residues. These are rooted-cut presentations over canonical unrooted deletion cores, not a claimed enumeration of rooted isomorphism classes.
+ 
+-The reciprocity dependency shows every possible pair must have opposite order parity; starts must belong to (4,2),(10,8),(16,14),(22,20); all eight shared coordinates must be divisible by3; L must equal6 modulo12; C,b must equal0 modulo12; T must equal0 modulo6. This justifies every congruence filter below. The copied theorem in dependencies remains labeled candidate until its separate audit is complete.
++The reciprocity dependency shows every possible pair must have opposite order parity; starts must belong to (4,2),(10,8),(16,14),(22,20); all eight shared coordinates must be divisible by3; L must equal6 modulo12; C,b must equal0 modulo12; T must equal0 modulo6. This justifies every congruence filter below. The copied theorem in dependencies retains its original candidate label as a frozen input; its separate independent audit has discharged that dependency.
+ 
+ ## Complete canonical augmentation, without an external generator
+ 
+@@ -61,7 +61,7 @@
+ 
+ ## Reproduction and files
+ 
+-The compressed BANK9.txt.gz is the exact fresh191536-class bank; decompress it to BANK9.txt before using the supplied search and check programs. Alternatively compile generate.cpp and run it with argument9; this regenerates every bank deterministically. Timing fields in receipts are descriptive and may differ on replay.
++The compressed BANK9.txt.gz is the exact fresh191536-class bank; decompress it to BANK9.txt before using the supplied search and check programs. Alternatively compile generate.cpp and run it with argument9; this regenerates BANK2 through BANK9 deterministically; BANK1 is the supplied trivial singleton. Timing fields in receipts are descriptive and may differ on replay.
+ 
+ Compile with a C++17 compiler:
+ - generate.cpp and run argument9;
+--- reviewed/README.md
++++ published/README.md
+@@ -1,6 +1,6 @@
+ # Extend the universal-source hunt through order ten
+ 
+-FINITE-EXACT candidate, conditional on the separately audited reciprocity theorem.
++FINITE-EXACT, independently audited using the approved reciprocity theorem.
+ 
+ - Fresh exact canonical augmentation:191,536 deletion tournaments of order9.
+ - Complete root-source search: no universal width8 O/Z/J pair with both orders<=10.

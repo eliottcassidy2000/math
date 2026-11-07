@@ -1,0 +1,6 @@
+{
+  "rooted_polynomial_controls": 5405,
+  "squarefree_root_identity_controls": 168146,
+  "same_parity_collisions": 5340,
+  "method": "Unordered vertex-set partitions and direct path enumeration; integer falling-factorial basis; no SymPy"
+}

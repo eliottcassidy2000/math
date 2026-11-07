@@ -1,0 +1,17 @@
+{
+  "candidate_counts_by_order": {
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 41,
+    "9": 301,
+    "10": 1412
+  },
+  "distinct_eight_coordinate_profiles": 1549,
+  "distinct_label_keys": 1549,
+  "admissible_start_gap_two_pairs": 0,
+  "method": "Group exact eight coordinates, compare actual allowed start values directly"
+}

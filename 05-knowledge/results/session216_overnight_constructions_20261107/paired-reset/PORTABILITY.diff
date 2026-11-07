@@ -1,0 +1,78 @@
+--- frozen/verify_twoadic.py
++++ release/verify_twoadic.py
+@@ -1,6 +1,6 @@
+ from inherited import profile,need
+ import json
+-x=list(map(int,open('../session216-carriers/BANK.txt').read().split()));bank=[];i=1
++x=list(map(int,open('dependencies/BANK.txt').read().split()));bank=[];i=1
+ for _ in range(x[0]):n=x[i];bank.append(x[i+1:i+1+n]);i+=n+1
+ g=bank[125];mask=16;rows=[mask<<1]+[(g[j]<<1)|(not(mask>>j&1)) for j in range(len(g))]
+ p=profile(rows);need(p==(123,4,33,630,123,33,2760,672,1422),'congruence witness')
+--- frozen/verify_global_product.cpp
++++ release/verify_global_product.cpp
+@@ -1,6 +1,6 @@
+ #include<bits/stdc++.h>
+ using namespace std;using I=long long;using G=vector<int>;
+-G load(int n,int ix){ifstream in("../session216-carriers-order9/BANK"+to_string(n)+".txt");int total;in>>total;for(int i=0;i<total;i++){int k;in>>k;G a(k);for(auto&v:a)in>>v;if(i==ix)return a;}throw runtime_error("missing graph");}
++G load(int n,int ix){ifstream in("dependencies/BANK"+to_string(n)+".txt");int total;in>>total;for(int i=0;i<total;i++){int k;in>>k;G a(k);for(auto&v:a)in>>v;if(i==ix)return a;}throw runtime_error("missing graph");}
+ G join(G a,const G&b){int n=a.size(),m=b.size();int all=((1<<m)-1)<<n;for(auto&v:a)v|=all;for(int v:b)a.push_back(v<<n);return a;}
+ pair<I,I>count(const G&a){int n=a.size(),N=1<<n,F=N-1;vector<I>dp(N*n),H(N);H[0]=1;for(int i=0;i<n;i++)dp[(1<<i)*n+i]=1;for(int S=1;S<N;S++)for(int v=0;v<n;v++)if(S>>v&1){int A=S^(1<<v);int rem=A;while(rem){int w=__builtin_ctz((unsigned)rem);rem&=rem-1;if(a[w]>>v&1)dp[S*n+v]+=dp[A*n+w];}H[S]+=dp[S*n+v];}I C=0;for(int S=0;S<N;S++)C+=H[S]*H[F^S];return{H[F],C};}
+ int main(){G a=load(6,31),b=load(9,46801),c=load(9,139559);G A=join(a,a);for(int i=0;i<5;i++)A=join(A,G{0});G B=join(b,c);auto x=count(A),y=count(B);if(x!=make_pair(I(2025),I(5971968))||x!=y)throw runtime_error("product mismatch");cout<<"{\"status\":\"PASS\",\"H\":"<<x.first<<",\"C\":"<<x.second<<",\"graphs\":[";bool first=true;for(auto g:{A,B}){if(!first)cout<<",";first=false;cout<<"{\"n\":"<<g.size()<<",\"rows\":[";for(int i=0;i<(int)g.size();i++){if(i)cout<<",";cout<<g[i];}cout<<"]}";}cout<<"]}\n";}
+--- frozen/verify_left_reset.py
++++ release/verify_left_reset.py
+@@ -34,7 +34,7 @@
+    need(seven(profile(child))==mv(p,c),'literal transfer');controls+=1
+   q=mv(p,'Q');v=reduced(q)
+   for c in 'QZ':need(reduced(mv(q,c))==redmove(v,c),'reduced transfer');controls+=1
+-x=list(map(int,open('../session216-carriers/BANK.txt').read().split()));i=1;bank=[]
++x=list(map(int,open('dependencies/BANK.txt').read().split()));i=1;bank=[]
+ for _ in range(x[0]):n=x[i];bank.append(x[i+1:i+1+n]);i+=n+1
+ pair=json.load(open('RESET_PAIRED_RAYS.json'))[0];records=[]
+ for side in ['A','B']:
+--- frozen/global_pairs.cpp
++++ release/global_pairs.cpp
+@@ -1,5 +1,5 @@
+ #include<bits/stdc++.h>
+ using namespace std;using I=long long;struct Rec{int n,ix;vector<int>a;};
+ int main(){map<pair<I,I>,array<Rec,2>>seen;long long graphs=0,hits=0;ofstream all("GLOBAL_COUNTS.tsv");
+-for(int n=1;n<=9;n++){ifstream in("../session216-carriers-order9/BANK"+to_string(n)+".txt");int total;in>>total;for(int ix=0;ix<total;ix++){int nn;in>>nn;vector<int>a(n);for(auto&x:a)in>>x;int N=1<<n,F=N-1;vector<I>dp(N*n),H(N);H[0]=1;for(int v=0;v<n;v++)dp[(1<<v)*n+v]=1;for(int S=1;S<N;S++)for(int v=0;v<n;v++)if(S>>v&1){int A=S^(1<<v);for(int w=0;w<n;w++)if((A>>w&1)&&(a[w]>>v&1))dp[S*n+v]+=dp[A*n+w];H[S]+=dp[S*n+v];}I C=0;for(int A=0;A<N;A++)C+=H[A]*H[F^A];all<<n<<' '<<ix<<' '<<H[F]<<' '<<C<<'\n';graphs++;auto k=make_pair(H[F],C);auto&z=seen[k];z[n%2]={n,ix,a};if(z[0].n&&z[1].n){hits++;if(hits<=20){cout<<"MATCH "<<H[F]<<" "<<C<<"\n";for(auto&r:z){cout<<r.n<<" "<<r.ix;for(auto v:r.a)cout<<" "<<v;cout<<"\n";}}}}cerr<<"order "<<n<<" graphs "<<graphs<<" hits "<<hits<<"\n";}
++for(int n=1;n<=9;n++){ifstream in("dependencies/BANK"+to_string(n)+".txt");int total;in>>total;for(int ix=0;ix<total;ix++){int nn;in>>nn;vector<int>a(n);for(auto&x:a)in>>x;int N=1<<n,F=N-1;vector<I>dp(N*n),H(N);H[0]=1;for(int v=0;v<n;v++)dp[(1<<v)*n+v]=1;for(int S=1;S<N;S++)for(int v=0;v<n;v++)if(S>>v&1){int A=S^(1<<v);for(int w=0;w<n;w++)if((A>>w&1)&&(a[w]>>v&1))dp[S*n+v]+=dp[A*n+w];H[S]+=dp[S*n+v];}I C=0;for(int A=0;A<N;A++)C+=H[A]*H[F^A];all<<n<<' '<<ix<<' '<<H[F]<<' '<<C<<'\n';graphs++;auto k=make_pair(H[F],C);auto&z=seen[k];z[n%2]={n,ix,a};if(z[0].n&&z[1].n){hits++;if(hits<=20){cout<<"MATCH "<<H[F]<<" "<<C<<"\n";for(auto&r:z){cout<<r.n<<" "<<r.ix;for(auto v:r.a)cout<<" "<<v;cout<<"\n";}}}}cerr<<"order "<<n<<" graphs "<<graphs<<" hits "<<hits<<"\n";}
+ }
+--- frozen/README.md
++++ release/README.md
+@@ -1,6 +1,6 @@
+ # Session216 structural paired-source extension
+ 
+-New work, separate from the frozen carriers and complete order9 packets. Independent audit requested.
++New work, separate from the frozen carriers and complete order9 packets. Independently audited; see audit/REVIEW.md.
+ 
+ - LEFT_RESET.md: positive physical Q-reset paired ray; broader five-state binary criterion; nonnegative conserved defect.
+ - TWO_ADIC_AND_PARITY.md: stronger necessary universal-pair congruences and an exact opposite-parity global-moment counterexample.
+@@ -8,7 +8,7 @@
+ 
+ No eventual spectrum theorem, F(8,137) certificate, universal paired seed, or full binary Q/Z paired seed is claimed.
+ 
+-Reproduction: Python3 standard library; C++17 compiler. Run from this directory. The frozen sibling packets provide the audited BANK.txt and BANK9.txt data. The provenance receipt records hashes of external inputs and local deliverables. Avoid interpreting raw search output files as proof beyond the documented finite scopes.
++Reproduction: Python3 standard library; C++17 compiler. Run from this directory. The local dependencies directory provides the exact audited BANK.txt, BANK6.txt and BANK9.txt data. The provenance receipt records hashes of external inputs and local deliverables. Avoid interpreting raw search output files as proof beyond the documented finite scopes.
+ 
+ Core controls:
+ 
+@@ -18,4 +18,6 @@
+ g++ -O3 -std=c++17 verify_global_product.cpp -o /tmp/verify_global_product
+ /tmp/verify_global_product
+ 
+-The last program's input bank paths are relative sibling dependencies; its direct graph-count certificate is already retained. All discovery code is retained for reproducibility, but large regenerated intermediate source lists need not be published.
++The last program uses the local dependencies directory; its direct graph-count certificate is already retained. All discovery code is retained for reproducibility, but large regenerated intermediate source lists need not be published.
++
++Read START_HERE.md first for lossless reconstruction of size-bounded transport parts. Original audit input and its manifest remain under audit/frozen; that historical manuscript is superseded by the corrected release manuscript. No numerical results were changed.
+--- frozen/LEFT_RESET.md
++++ release/LEFT_RESET.md
+@@ -61,7 +61,7 @@
+ 
+ kappa=(h-a-rho+b-3d)/2
+ 
+-is invariant under both moves. Moreover kappa is a nonnegative integer for every physical source with s=e=d.
++is invariant under both moves. Moreover kappa is a nonnegative integer for every nontrivial physical source with s=e=d (equivalently, with nonempty deletion).
+ 
+ Proof of nonnegativity: in the squarefree variables of the deletion tournament, let f be the path series including the empty path, E the series of paths that can precede the root (including empty), and S the series of paths that can follow it (including empty). The full-support coefficients of ES, Ef, Sf, f^2 are h,L,R,b. Hence K=h-L-R+b is the coefficient of (f-E)(f-S). It counts ordered two-path covers whose first path ends in a root-outneighbor and whose second begins in a root-inneighbor. Since s=e=d, every Hamilton path of the deletion starts in the outneighbor set and ends in the inneighbor set. Split each such path at its first consecutive outneighbor-to-inneighbor transition. This injects the d paths into the covers counted by K, giving K>=d. Rooted polynomial integrality/reciprocity gives L congruent s and R congruent e modulo2. Since h,d are odd and b even, K-d is even. Therefore kappa=(K-d)/2 is a nonnegative integer. Direct substitution proves invariance.
+ 

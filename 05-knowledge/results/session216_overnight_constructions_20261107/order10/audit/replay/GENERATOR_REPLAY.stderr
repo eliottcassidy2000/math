@@ -1,0 +1,14 @@
+order 2 classes 1 extensions 2 seconds 1.4091e-05
+order 3 classes 2 extensions 4 seconds 1.2429e-05
+order 4 classes 4 extensions 16 seconds 4.3155e-05
+order 5 classes 12 extensions 64 seconds 0.000232495
+order 6 classes 56 extensions 384 seconds 0.00191771
+order 7 classes 456 extensions 3584 seconds 0.0172074
+order 8 classes 6880 extensions 58368 seconds 0.272522
+progress 256000 classes 119227
+progress 512000 classes 169152
+progress 768000 classes 188608
+progress 1024000 classes 191391
+progress 1280000 classes 191515
+progress 1536000 classes 191531
+order 9 classes 191536 extensions 1761280 seconds 9.51763

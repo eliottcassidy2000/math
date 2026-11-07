@@ -1,0 +1,12 @@
+[
+  {
+    "canonical": "session203/synchronized-grammar/PROOF.md",
+    "local": "dependencies/SYNCHRONIZED_GRAMMAR.md",
+    "sha256": "56d093d7b0112b40546eddd9da7ef369d7f282d71dc8c2576195cf2a2a3413eb"
+  },
+  {
+    "canonical": "session203/rooted-cover-closure/PROOF.md",
+    "local": "dependencies/ROOTED_COVER_CLOSURE.md",
+    "sha256": "8e78951f9dd15decff0d23cfb3ebe64f358b3c9d4561b269b527a1e9aa902168"
+  }
+]

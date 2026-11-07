@@ -1,0 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;using I=long long;using G=vector<int>;
+G load(int n,int ix){ifstream in("../session216-carriers-order9/BANK"+to_string(n)+".txt");int total;in>>total;for(int i=0;i<total;i++){int k;in>>k;G a(k);for(auto&v:a)in>>v;if(i==ix)return a;}throw runtime_error("missing graph");}
+G join(G a,const G&b){int n=a.size(),m=b.size();int all=((1<<m)-1)<<n;for(auto&v:a)v|=all;for(int v:b)a.push_back(v<<n);return a;}
+pair<I,I>count(const G&a){int n=a.size(),N=1<<n,F=N-1;vector<I>dp(N*n),H(N);H[0]=1;for(int i=0;i<n;i++)dp[(1<<i)*n+i]=1;for(int S=1;S<N;S++)for(int v=0;v<n;v++)if(S>>v&1){int A=S^(1<<v);int rem=A;while(rem){int w=__builtin_ctz((unsigned)rem);rem&=rem-1;if(a[w]>>v&1)dp[S*n+v]+=dp[A*n+w];}H[S]+=dp[S*n+v];}I C=0;for(int S=0;S<N;S++)C+=H[S]*H[F^S];return{H[F],C};}
+int main(){G a=load(6,31),b=load(9,46801),c=load(9,139559);G A=join(a,a);for(int i=0;i<5;i++)A=join(A,G{0});G B=join(b,c);auto x=count(A),y=count(B);if(x!=make_pair(I(2025),I(5971968))||x!=y)throw runtime_error("product mismatch");cout<<"{\"status\":\"PASS\",\"H\":"<<x.first<<",\"C\":"<<x.second<<",\"graphs\":[";bool first=true;for(auto g:{A,B}){if(!first)cout<<",";first=false;cout<<"{\"n\":"<<g.size()<<",\"rows\":[";for(int i=0;i<(int)g.size();i++){if(i)cout<<",";cout<<g[i];}cout<<"]}";}cout<<"]}\n";}

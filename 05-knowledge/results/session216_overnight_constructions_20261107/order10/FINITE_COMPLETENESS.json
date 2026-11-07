@@ -1,0 +1,17 @@
+{
+  "status": "COMPLETE_CONDITIONAL_ON_RECIPROCITY_THEOREM",
+  "max_order": 10,
+  "candidate_counts_by_order": {
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 41,
+    "9": 301,
+    "10": 1412
+  },
+  "keys": 1549,
+  "universal_pair_matches": []
+}

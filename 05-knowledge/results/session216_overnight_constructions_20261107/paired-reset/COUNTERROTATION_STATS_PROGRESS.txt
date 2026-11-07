@@ -1,0 +1,11 @@
+padding 0 states 16 bitmatches 0 hits 0
+padding 1 states 80 bitmatches 0 hits 0
+padding 2 states 272 bitmatches 0 hits 0
+padding 3 states 784 bitmatches 0 hits 0
+padding 4 states 2064 bitmatches 8 hits 0
+padding 5 states 5136 bitmatches 24 hits 0
+padding 6 states 12304 bitmatches 48 hits 0
+padding 7 states 28688 bitmatches 80 hits 0
+padding 8 states 65552 bitmatches 120 hits 0
+padding 9 states 147472 bitmatches 168 hits 0
+padding 10 states 327696 bitmatches 224 hits 0

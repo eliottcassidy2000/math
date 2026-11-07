@@ -1,0 +1,26 @@
+{
+  "repository_commit": "0f3dad8c",
+  "dependencies": [
+    {
+      "local": "BANK.txt",
+      "origin": "../session215-carriers/BANK.txt",
+      "sha256": "5d5a5f625b4a85e04c0744aeb847ed36f59456f6a39996479aa82b9eb950afe3"
+    },
+    {
+      "local": "inherited.py",
+      "origin": "../session215-carriers/inherited.py",
+      "sha256": "6f957916e0cb7af137741a8a9d1602635dcce1fad8cc98cd4736ac1765fd5c1f"
+    },
+    {
+      "local": "dependencies/ROW_NORMALIZATION.md",
+      "origin": "../session216-stage/session203/row-normalization/ROW_NORMALIZATION.md",
+      "sha256": "0b89119d943d217273edf4fe8c6e0064b2e3a17bcc5bcb3d13d444b1a4e7233a"
+    },
+    {
+      "local": "dependencies/SESSION215_CARRIERS.md",
+      "origin": "../session215-carriers/PROOF.md",
+      "sha256": "f847da4bf6a82f795ab6adaf0b1ad39624b9c2d209b85c3d8d20b7acf239af55"
+    }
+  ],
+  "scope": "Inherited source bank is supplied, not claimed exhaustive."
+}

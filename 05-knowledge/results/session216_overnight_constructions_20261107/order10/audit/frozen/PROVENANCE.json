@@ -1,0 +1,22 @@
+{
+  "status": "new search; prior audited packet unchanged",
+  "dependencies": [
+    {
+      "file": "dependencies/BANK_THROUGH8.txt",
+      "source": "../session216-carriers/BANK.txt",
+      "sha256": "5d5a5f625b4a85e04c0744aeb847ed36f59456f6a39996479aa82b9eb950afe3"
+    },
+    {
+      "file": "dependencies/UNIVERSAL_PAIR_RECIPROCITY.md",
+      "source": "../session216-carriers/UNIVERSAL_PAIR_RECIPROCITY.md",
+      "sha256": "e28e20baefba6e1b22ff4ba3a9a16d3162b061226747effe73825fa4cf77ed9c"
+    },
+    {
+      "file": "dependencies/SUFFIX_RIGIDITY.md",
+      "source": "../session216-carriers/SUFFIX_RIGIDITY.md",
+      "sha256": "bab976e9280a6da98ee19095b074e8263f2690548f0c5f0c0d23837278f00723"
+    }
+  ],
+  "fresh_order9_bank_sha256": "83860fb80da06ba49dd01ded31fe308d8c954c1cdbb51336983818bf2892111e",
+  "fresh_order9_classes": 191536
+}

@@ -1,0 +1,20 @@
+--- previous-release/LEFT_RESET.md
++++ audited-release/LEFT_RESET.md
+@@ -1,6 +1,6 @@
+ # A left-reset paired-source mechanism
+ 
+-Status: proved candidate, independent audit requested. This gives persistent paired rays and a broader binary synchronization criterion. It does not establish eventual coverage or F(8,137).
++Status: independently audited. This gives persistent paired rays and a broader binary synchronization criterion. It does not establish eventual coverage or F(8,137).
+ 
+ Use the inherited rooted profile (h,s,e,L,R,d,C,b,T). Delete C,T to obtain the closed seven-state vector (h,s,e,L,R,d,b). Here h,d are whole/deletion Hamilton-path counts; s,e are root-start/root-end counts; L,R are two-bin covers with a distinguished root-end/root-start path; b is the deletion two-bin cover count. Empty ordinary bins are allowed.
+ 
+--- previous-release/TWO_ADIC_AND_PARITY.md
++++ audited-release/TWO_ADIC_AND_PARITY.md
+@@ -1,6 +1,6 @@
+ # Additional parity structure, without an impossibility claim
+ 
+-Status: proved candidate and literal counterexample, independent audit requested. The baseline universal-pair reciprocity theorem is in the separate frozen carriers packet.
++Status: independently audited theorem and literal counterexample. The baseline universal-pair reciprocity theorem is in the separate frozen carriers packet.
+ 
+ ## Two-adic refinement
+ 

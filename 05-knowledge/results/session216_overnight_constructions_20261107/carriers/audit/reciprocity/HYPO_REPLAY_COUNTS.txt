@@ -1,0 +1,8 @@
+k 1 graphs 12 first 3 second 0 hits 0
+k 2 graphs 36 first 3 second 0 hits 0
+k 3 graphs 84 first 3 second 0 hits 0
+k 4 graphs 180 first 3 second 0 hits 0
+k 5 graphs 372 first 3 second 0 hits 0
+k 6 graphs 756 first 3 second 0 hits 0
+k 7 graphs 1524 first 3 second 0 hits 0
+k 8 graphs 3060 first 3 second 0 hits 0

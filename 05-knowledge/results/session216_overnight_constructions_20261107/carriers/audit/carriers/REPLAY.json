@@ -1,0 +1,31 @@
+{
+  "all_three_search_receipts": "byte identical",
+  "producer_controls": "normal and optimized byte identical",
+  "symbolic_matches_regeneration": "byte identical",
+  "provenance": [
+    {
+      "local": "BANK.txt",
+      "hash": "5d5a5f625b4a85e04c0744aeb847ed36f59456f6a39996479aa82b9eb950afe3",
+      "canonical_bytes_equal": true,
+      "canonical_path": "05-knowledge/results/session215_exotic_composition_20261107/carriers/BANK.txt"
+    },
+    {
+      "local": "inherited.py",
+      "hash": "6f957916e0cb7af137741a8a9d1602635dcce1fad8cc98cd4736ac1765fd5c1f",
+      "canonical_bytes_equal": true,
+      "canonical_path": "05-knowledge/results/session215_exotic_composition_20261107/carriers/inherited.py"
+    },
+    {
+      "local": "dependencies/ROW_NORMALIZATION.md",
+      "hash": "0b89119d943d217273edf4fe8c6e0064b2e3a17bcc5bcb3d13d444b1a4e7233a",
+      "canonical_bytes_equal": true,
+      "canonical_path": "session203/row-normalization/ROW_NORMALIZATION.md"
+    },
+    {
+      "local": "dependencies/SESSION215_CARRIERS.md",
+      "hash": "f847da4bf6a82f795ab6adaf0b1ad39624b9c2d209b85c3d8d20b7acf239af55",
+      "canonical_bytes_equal": true,
+      "canonical_path": "05-knowledge/results/session215_exotic_composition_20261107/carriers/PROOF.md"
+    }
+  ]
+}

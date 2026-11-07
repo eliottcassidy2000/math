@@ -1,0 +1,9 @@
+{
+"graphs":4,
+"cores_after_filters":2,
+"linear_cut_checks":32,
+"quadratic_cut_checks":6,
+"candidates":0,
+"hits":0,
+"seconds":0.000173107
+}

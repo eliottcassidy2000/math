@@ -1,0 +1,82 @@
+{
+  "format": "ordered-base64-parts-v1",
+  "raw_part_bytes": 90000,
+  "files": [
+    {
+      "path": "audit/carriers/frozen/BANK.txt",
+      "bytes": 197556,
+      "sha256": "5d5a5f625b4a85e04c0744aeb847ed36f59456f6a39996479aa82b9eb950afe3",
+      "parts": [
+        {
+          "file": "payload_parts/00017.00000.b64",
+          "sha256": "ae94ccfbe883ad05180e8cf9dacc8f87751e48f424ac544d1fffcdc980aa62bb"
+        },
+        {
+          "file": "payload_parts/00017.00001.b64",
+          "sha256": "7a59c87f9f088dcd8fc87776cf0629311aa080f7717f5c2ecc91e9205faa5b21"
+        },
+        {
+          "file": "payload_parts/00017.00002.b64",
+          "sha256": "c8a428523f98a533b31fe58ef023031cc63d0c0b065889fc438da5afd771789c"
+        }
+      ]
+    },
+    {
+      "path": "audit/reciprocity/frozen/BANK.txt",
+      "bytes": 197556,
+      "sha256": "5d5a5f625b4a85e04c0744aeb847ed36f59456f6a39996479aa82b9eb950afe3",
+      "parts": [
+        {
+          "file": "payload_parts/00060.00000.b64",
+          "sha256": "ae94ccfbe883ad05180e8cf9dacc8f87751e48f424ac544d1fffcdc980aa62bb"
+        },
+        {
+          "file": "payload_parts/00060.00001.b64",
+          "sha256": "7a59c87f9f088dcd8fc87776cf0629311aa080f7717f5c2ecc91e9205faa5b21"
+        },
+        {
+          "file": "payload_parts/00060.00002.b64",
+          "sha256": "c8a428523f98a533b31fe58ef023031cc63d0c0b065889fc438da5afd771789c"
+        }
+      ]
+    },
+    {
+      "path": "baseline/BANK.txt",
+      "bytes": 197556,
+      "sha256": "5d5a5f625b4a85e04c0744aeb847ed36f59456f6a39996479aa82b9eb950afe3",
+      "parts": [
+        {
+          "file": "payload_parts/00087.00000.b64",
+          "sha256": "ae94ccfbe883ad05180e8cf9dacc8f87751e48f424ac544d1fffcdc980aa62bb"
+        },
+        {
+          "file": "payload_parts/00087.00001.b64",
+          "sha256": "7a59c87f9f088dcd8fc87776cf0629311aa080f7717f5c2ecc91e9205faa5b21"
+        },
+        {
+          "file": "payload_parts/00087.00002.b64",
+          "sha256": "c8a428523f98a533b31fe58ef023031cc63d0c0b065889fc438da5afd771789c"
+        }
+      ]
+    },
+    {
+      "path": "reciprocity/BANK.txt",
+      "bytes": 197556,
+      "sha256": "5d5a5f625b4a85e04c0744aeb847ed36f59456f6a39996479aa82b9eb950afe3",
+      "parts": [
+        {
+          "file": "payload_parts/00102.00000.b64",
+          "sha256": "ae94ccfbe883ad05180e8cf9dacc8f87751e48f424ac544d1fffcdc980aa62bb"
+        },
+        {
+          "file": "payload_parts/00102.00001.b64",
+          "sha256": "7a59c87f9f088dcd8fc87776cf0629311aa080f7717f5c2ecc91e9205faa5b21"
+        },
+        {
+          "file": "payload_parts/00102.00002.b64",
+          "sha256": "c8a428523f98a533b31fe58ef023031cc63d0c0b065889fc438da5afd771789c"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+depth 0 states 1 1 hits 0
+depth 1 states 4 4 hits 0
+depth 2 states 12 12 hits 0
+depth 3 states 31 32 hits 0
+depth 4 states 76 80 hits 0
+depth 5 states 180 192 hits 0
+depth 6 states 416 448 hits 0
+depth 7 states 942 1024 hits 0
+depth 8 states 2100 2304 hits 0
+depth 9 states 4625 5120 hits 0
+depth 10 states 10088 11264 hits 0

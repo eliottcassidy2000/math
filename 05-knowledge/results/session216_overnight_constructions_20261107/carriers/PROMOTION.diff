@@ -1,0 +1,30 @@
+--- reviewed/baseline/PROOF.md
++++ published/baseline/PROOF.md
+@@ -1,6 +1,6 @@
+ # Common right-amalgamation maximality and marked-module certificates
+ 
+-Status: PROVED candidate, awaiting independent audit. Finite search results are labeled separately. The unrestricted Hamiltonian-path spectrum and F(8,137) remain OPEN. No improved coverage interval or eventual threshold is claimed.
++Status: PROVED, independently audited. Finite search results are labeled separately. The unrestricted Hamiltonian-path spectrum and F(8,137) remain OPEN. No improved coverage interval or eventual threshold is claimed.
+ 
+ ## 1. Inheritance and live concepts
+ 
+--- reviewed/baseline/README.md
++++ published/baseline/README.md
+@@ -1,6 +1,6 @@
+ # Paired-source coverage investigation
+ 
+-Candidate proof and exact controls, pending independent audit. F(8,137) and eventual odd-spectrum completeness remain open.
++Independently audited proof and exact controls. F(8,137) and eventual odd-spectrum completeness remain open.
+ 
+ - `PROOF.md`: arbitrary common right factors preserve the synchronized two-residue adjusted base exactly when their root deletion has H=1; these factors are precisely O/Z words. This is a scoped maximality result, not a global construction obstruction.
+ - `probe.py`, `matches.json`: complete symbolic single-nonroot-module test on the six inherited pairs. Its four successful position pairs give exactly old O/Z families.
+--- reviewed/reciprocity/UNIVERSAL_PAIR_RECIPROCITY.md
++++ published/reciprocity/UNIVERSAL_PAIR_RECIPROCITY.md
+@@ -1,6 +1,6 @@
+ # Rooted reciprocity obstructs universal paired sources
+ 
+-Status: PROVED candidate, independent audit requested. This restricts the universal all-O/Z/J paired-source route; it does not obstruct arbitrary paired families or settle the Hamiltonian-path spectrum.
++Status: PROVED, independently audited. This restricts the universal all-O/Z/J paired-source route; it does not obstruct arbitrary paired families or settle the Hamiltonian-path spectrum.
+ 
+ ## Theorem
+ 

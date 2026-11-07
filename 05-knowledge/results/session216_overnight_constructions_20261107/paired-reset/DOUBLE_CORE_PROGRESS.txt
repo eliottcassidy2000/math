@@ -1,0 +1,9 @@
+padding 0 states 1280 keys 1 partial 0 hits 0
+padding 1 states 4608 keys 32 partial 0 hits 0
+padding 2 states 13056 keys 349 partial 0 hits 0
+padding 3 states 34048 keys 1718 partial 30 hits 0
+padding 4 states 85248 keys 6371 partial 110 hits 0
+padding 5 states 208128 keys 20410 partial 258 hits 0
+padding 6 states 498944 keys 59632 partial 488 hits 0
+padding 7 states 1178880 keys 163844 partial 818 hits 0
+padding 8 states 2751744 keys 430768 partial 1268 hits 0

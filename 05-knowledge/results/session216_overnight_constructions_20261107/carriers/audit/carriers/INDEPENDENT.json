@@ -1,0 +1,28 @@
+{
+  "symbolic_positions": 92,
+  "matches": [
+    [
+      759,
+      1,
+      1
+    ],
+    [
+      821,
+      1,
+      1
+    ],
+    [
+      4225,
+      9,
+      9
+    ],
+    [
+      4357,
+      9,
+      9
+    ]
+  ],
+  "independent_literal_profiles": 32,
+  "right_product_literal_checks": 160,
+  "singleton_identity_checks": 25
+}

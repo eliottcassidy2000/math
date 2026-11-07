@@ -1,0 +1,71 @@
+{
+  "physical_seven_transfers": 4392,
+  "reduced_and_stable_invariance_checks": 2196,
+  "physical_stable_sources": 126,
+  "singleton_twice_kappa": -1,
+  "odd_cycle_polynomial_evaluations": 5655,
+  "even_div8_controls": 96,
+  "literal_compiler_graphs_prepared": 10,
+  "ray": [
+    {
+      "side": 0,
+      "k": 0,
+      "X": 69,
+      "target": 209
+    },
+    {
+      "side": 0,
+      "k": 1,
+      "X": 141,
+      "target": 425
+    },
+    {
+      "side": 0,
+      "k": 2,
+      "X": 285,
+      "target": 857
+    },
+    {
+      "side": 0,
+      "k": 3,
+      "X": 573,
+      "target": 1721
+    },
+    {
+      "side": 0,
+      "k": 4,
+      "X": 1149,
+      "target": 3449
+    },
+    {
+      "side": 1,
+      "k": 0,
+      "X": 69,
+      "target": 211
+    },
+    {
+      "side": 1,
+      "k": 1,
+      "X": 141,
+      "target": 427
+    },
+    {
+      "side": 1,
+      "k": 2,
+      "X": 285,
+      "target": 859
+    },
+    {
+      "side": 1,
+      "k": 3,
+      "X": 573,
+      "target": 1723
+    },
+    {
+      "side": 1,
+      "k": 4,
+      "X": 1149,
+      "target": 3451
+    }
+  ]
+}

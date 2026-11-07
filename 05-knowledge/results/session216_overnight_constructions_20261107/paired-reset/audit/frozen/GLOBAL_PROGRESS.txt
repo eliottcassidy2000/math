@@ -1,0 +1,9 @@
+order 1 graphs 1 hits 0
+order 2 graphs 2 hits 0
+order 3 graphs 4 hits 0
+order 4 graphs 8 hits 0
+order 5 graphs 20 hits 0
+order 6 graphs 76 hits 0
+order 7 graphs 532 hits 0
+order 8 graphs 7412 hits 0
+order 9 graphs 198948 hits 0

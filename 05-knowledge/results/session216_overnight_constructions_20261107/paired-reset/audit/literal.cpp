@@ -1,0 +1,2 @@
+#include <bits/stdc++.h>
+using namespace std;int main(){unsigned long long expected;int n;while(cin>>expected>>n){vector<unsigned>a(n);for(auto&x:a)cin>>x;size_t N=1u<<n;vector<unsigned long long>d(N*n),h(N);h[0]=1;for(int i=0;i<n;i++)d[(1u<<i)*n+i]=1;for(unsigned s=1;s<N;s++)for(int i=0;i<n;i++)if(auto v=d[s*n+i]){h[s]+=v;unsigned t=a[i]&~s;while(t){int j=__builtin_ctz(t);t&=t-1;d[(s|(1u<<j))*n+j]+=v;}}unsigned long long c=0;for(unsigned s=0;s<N;s++)c+=h[s]*h[N-1-s];if(h.back()!=expected)return 1;cout<<n<<" "<<h.back()<<" "<<c<<"\n";}}
