@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "marked_growth_checks": 504,
+  "strong_minimal_width_cores": 256,
+  "fixed_start_end_checks": 256,
+  "source_sha256": "8dda6d6835e12abf8e330518809881a1ecd40b61a780851e13fd0134c91547cd"
+}

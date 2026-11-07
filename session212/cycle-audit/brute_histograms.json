@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "independent_permutation_histograms": [
+    {
+      "order": 3,
+      "classes": 2,
+      "distinct_cycle_counts": 2
+    },
+    {
+      "order": 4,
+      "classes": 4,
+      "distinct_cycle_counts": 2
+    },
+    {
+      "order": 5,
+      "classes": 12,
+      "distinct_cycle_counts": 4
+    },
+    {
+      "order": 6,
+      "classes": 56,
+      "distinct_cycle_counts": 6
+    },
+    {
+      "order": 7,
+      "classes": 456,
+      "distinct_cycle_counts": 18
+    },
+    {
+      "order": 8,
+      "classes": 6880,
+      "distinct_cycle_counts": 55
+    }
+  ],
+  "total_classes": 7410
+}

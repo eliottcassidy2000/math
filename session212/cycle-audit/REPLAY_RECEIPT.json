@@ -1,0 +1,257 @@
+{
+  "authored_code_replays": {
+    "bridge_both_verifiers_normal_and_optimized": {
+      "comb_result_sha256": "caba92d25cbc7a63fb7998b13840570f3777e0da4a585ec9813021dc94723ad8",
+      "endpoint_result_sha256": "070bf9b31e0dfc9087315094aecaa27f84100e2193c75b91282acbf0cb1592ad",
+      "note": "Comb verifier writes its full result artifact and prints only a summary; full artifact hashes were checked.",
+      "status": "PASS"
+    },
+    "levels_cut_formula": {
+      "output_sha256": "958a2baafbd9ec979968323745890cf267e8381bc9aefffa1ce26eb4a84d8ebe",
+      "status": "PASS"
+    },
+    "levels_generator_and_full_n9_census": {
+      "all_rows_and_tsv_outputs_byte_equal": true,
+      "census_output_sha256": "41ad35a467b0a23e54bfaca70bb13309ff53948614dbb06abb35f40c504e31e6",
+      "final_census_source_sha256": "3503cbffdb32716b7590db3496f986dbfdfbb7831f6ffc73a99d42a39384f824",
+      "input_receipt_sha256": "38d523dfc0dec90553c52982fe67dd042b38a9adfe7981e67e3c383bcba8cc62",
+      "status": "PASS"
+    },
+    "levels_labeled_census_n7": {
+      "output_sha256": "14199cbc54a62af20ced4879e0c54f60319e7ddf15dad439c8919d9d1611e951",
+      "status": "PASS"
+    },
+    "levels_normal_and_optimized": {
+      "output_sha256": "926f714ae802673d371917076b762b33d91609b1621e0db0c3ecf02802f415d5",
+      "same_as_optimized": true,
+      "status": "PASS"
+    },
+    "spectrum_normal_and_optimized": {
+      "output_sha256": "609c22f0454de85f786b0ab23f573c11e336b9c6bd8fca8eaf7cd79ebce767ab",
+      "same_as_optimized": true,
+      "status": "PASS"
+    },
+    "spectrum_pinned_inherited_extraction": {
+      "receipt_sha256": "a90bc479ef49a9258df1a791161b896c4234d84bcbe33d9e98c5bf1323731d2e",
+      "scope": "Re-extraction with original committed source hashes, not a fresh full order-ten enumeration.",
+      "status": "PASS"
+    }
+  },
+  "independent_implementations": {
+    "binary": {
+      "checks": {
+        "all_anchors_selected_targets": 101,
+        "all_digits_m_0_through_8": 511,
+        "invalid_inputs_rejected": 5,
+        "permutation_oracle_m_0_through_5": 63,
+        "transitive_zero_controls_n_3_through_9": 7,
+        "zero_digit_padding_m_0_through_13": 14
+      },
+      "cycle_convention": "directed Hamiltonian cycles modulo rotation, never reversal",
+      "source_sha256": "d1160349f649c5caca8eba501bfe65f2dcf9b870c5685b8a69b7f45325316e08",
+      "status": "PASS",
+      "witnesses": [
+        {
+          "h": 1,
+          "n": 4,
+          "outmasks": [
+            10,
+            4,
+            9,
+            2
+          ]
+        },
+        {
+          "h": 2,
+          "n": 5,
+          "outmasks": [
+            22,
+            12,
+            24,
+            17,
+            2
+          ]
+        },
+        {
+          "h": 3,
+          "n": 6,
+          "outmasks": [
+            46,
+            28,
+            40,
+            48,
+            37,
+            2
+          ]
+        },
+        {
+          "h": 7,
+          "n": 7,
+          "outmasks": [
+            94,
+            60,
+            88,
+            112,
+            96,
+            69,
+            2
+          ]
+        },
+        {
+          "h": 21,
+          "n": 9,
+          "outmasks": [
+            382,
+            252,
+            376,
+            368,
+            480,
+            320,
+            384,
+            301,
+            2
+          ]
+        },
+        {
+          "h": 255,
+          "n": 12,
+          "outmasks": [
+            3070,
+            2044,
+            3064,
+            4080,
+            4064,
+            4032,
+            3968,
+            3840,
+            3584,
+            3072,
+            2053,
+            2
+          ]
+        },
+        {
+          "h": 256,
+          "n": 12,
+          "outmasks": [
+            3070,
+            2044,
+            4088,
+            4080,
+            4064,
+            4032,
+            3968,
+            3840,
+            3584,
+            3072,
+            2049,
+            2
+          ]
+        }
+      ]
+    },
+    "complete_class_permutation_histograms": {
+      "independent_permutation_histograms": [
+        {
+          "classes": 2,
+          "distinct_cycle_counts": 2,
+          "order": 3
+        },
+        {
+          "classes": 4,
+          "distinct_cycle_counts": 2,
+          "order": 4
+        },
+        {
+          "classes": 12,
+          "distinct_cycle_counts": 4,
+          "order": 5
+        },
+        {
+          "classes": 56,
+          "distinct_cycle_counts": 6,
+          "order": 6
+        },
+        {
+          "classes": 456,
+          "distinct_cycle_counts": 18,
+          "order": 7
+        },
+        {
+          "classes": 6880,
+          "distinct_cycle_counts": 55,
+          "order": 8
+        }
+      ],
+      "status": "PASS",
+      "total_classes": 7410
+    },
+    "families_and_witnesses": {
+      "checks": {
+        "comb_both_directions_m_1_to_8": 2040,
+        "comb_m0_boundary": 4,
+        "comb_permutation_oracle_m_1_to_4": 120,
+        "cycle_support_in_same_order_endpoint_support_n_3_to_9": true,
+        "endpoint_gate_all_subsets_m_3_to_8": 504,
+        "endpoint_n9_prefix_inclusive": 593,
+        "indegree_one_closure_and_length3_padding": 847,
+        "n9_gaps": [
+          215,
+          219,
+          223,
+          226,
+          229,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          244,
+          245,
+          246,
+          247,
+          248
+        ],
+        "saved_cycle_and_endpoint_witnesses": 1166,
+        "two_independent_author_enumerators_agree_n_3_to_9": true
+      },
+      "input_sha256": {
+        "cycle-levels/build_inputs.py": "a3656c2f34300b35b3c23e4e8294c400e7084d03de69ea19f8f74b3951f4659d",
+        "cycle-levels/census.cpp": "3503cbffdb32716b7590db3496f986dbfdfbb7831f6ffc73a99d42a39384f824",
+        "cycle-spectrum/census.cpp": "0910a1dc0e2dfd8a1f98baa86f9751cf4e893462563bf2055c7ffbf47e434fef"
+      },
+      "inverse_counts": {
+        "10": 365,
+        "3": 1,
+        "4": 0,
+        "5": 2,
+        "6": 2,
+        "7": 12,
+        "8": 37,
+        "9": 174
+      },
+      "source_sha256": "fda459d154b3bbd2a7f65cfcf422af8bb956098b8397ec3f660132636ea7b811",
+      "status": "PASS"
+    },
+    "refinements": {
+      "fixed_start_end_checks": 256,
+      "marked_growth_checks": 504,
+      "source_sha256": "8dda6d6835e12abf8e330518809881a1ecd40b61a780851e13fd0134c91547cd",
+      "status": "PASS",
+      "strong_minimal_width_cores": 256
+    }
+  },
+  "source_pin_review": {
+    "bridge_sources": 4,
+    "session_index_targets": 6,
+    "spectrum_sources": 9,
+    "status": "all exact hashes verified"
+  },
+  "status": "PASS"
+}

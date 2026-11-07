@@ -1,0 +1,19 @@
+{
+  "APPROVED_PACKETS.json": "626d90b544f3638f472077351f3d069844a77dac81bb9299f26edceec2368b71",
+  "AUDIT.md": "1989161f7e1c7371a235ffd57c89e6293b34e53304782257b4ea904cde041264",
+  "README.md": "0677dfc250dc88170cacf9b6d8b885eba436a1a3166f8a51c61e30d11dd37b92",
+  "REPLAY_RECEIPT.json": "955d8cf7dbb4cb3b8539dcc5365f7d22d7d15447493759ae470987135c25478a",
+  "audit_binary_cycles.py": "d1160349f649c5caca8eba501bfe65f2dcf9b870c5685b8a69b7f45325316e08",
+  "audit_packet.py": "fda459d154b3bbd2a7f65cfcf422af8bb956098b8397ec3f660132636ea7b811",
+  "audit_refinements.py": "8dda6d6835e12abf8e330518809881a1ecd40b61a780851e13fd0134c91547cd",
+  "binary-optimized.json": "88581d802a17aaab8d9054f0a12c64bf52b3feebe703483171f83f8f839e048f",
+  "binary_audit.json": "88581d802a17aaab8d9054f0a12c64bf52b3feebe703483171f83f8f839e048f",
+  "brute_census.cpp": "5b8890f58061c70e9cf2b09c12b82e3e51dae19ce04444fe60cab678aad32091",
+  "brute_census.out": "20228c081b77cbbaeb5b396c24be0ce517c51ee589660e8c7bea8794e59df85d",
+  "brute_histograms.json": "3cef257383f7d73f9e076f93f189a4ff4cfedb2878454ac5580dda1078cba2ad",
+  "packet-optimized.json": "5c8037911557f60b85e36c368820214c1efc83737faf3e8f502f02effb1ac62d",
+  "packet_audit.json": "5c8037911557f60b85e36c368820214c1efc83737faf3e8f502f02effb1ac62d",
+  "refinements-normal.json": "1655f9d2ac03cf31f8c5ebab63687a79c0df5a53714c34ed4bb55f681265bfe4",
+  "refinements-optimized.json": "1655f9d2ac03cf31f8c5ebab63687a79c0df5a53714c34ed4bb55f681265bfe4",
+  "verify_brute_histograms.py": "68eb89b4e4c1ad21e9e62f7e2de920022c8ccd321338dca8516b8a2eb0e72401"
+}

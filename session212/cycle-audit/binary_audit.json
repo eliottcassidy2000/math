@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "cycle_convention": "directed Hamiltonian cycles modulo rotation, never reversal",
+  "checks": {
+    "all_digits_m_0_through_8": 511,
+    "permutation_oracle_m_0_through_5": 63,
+    "all_anchors_selected_targets": 101,
+    "zero_digit_padding_m_0_through_13": 14,
+    "transitive_zero_controls_n_3_through_9": 7,
+    "invalid_inputs_rejected": 5
+  },
+  "witnesses": [
+    {
+      "h": 1,
+      "n": 4,
+      "outmasks": [
+        10,
+        4,
+        9,
+        2
+      ]
+    },
+    {
+      "h": 2,
+      "n": 5,
+      "outmasks": [
+        22,
+        12,
+        24,
+        17,
+        2
+      ]
+    },
+    {
+      "h": 3,
+      "n": 6,
+      "outmasks": [
+        46,
+        28,
+        40,
+        48,
+        37,
+        2
+      ]
+    },
+    {
+      "h": 7,
+      "n": 7,
+      "outmasks": [
+        94,
+        60,
+        88,
+        112,
+        96,
+        69,
+        2
+      ]
+    },
+    {
+      "h": 21,
+      "n": 9,
+      "outmasks": [
+        382,
+        252,
+        376,
+        368,
+        480,
+        320,
+        384,
+        301,
+        2
+      ]
+    },
+    {
+      "h": 255,
+      "n": 12,
+      "outmasks": [
+        3070,
+        2044,
+        3064,
+        4080,
+        4064,
+        4032,
+        3968,
+        3840,
+        3584,
+        3072,
+        2053,
+        2
+      ]
+    },
+    {
+      "h": 256,
+      "n": 12,
+      "outmasks": [
+        3070,
+        2044,
+        4088,
+        4080,
+        4064,
+        4032,
+        3968,
+        3840,
+        3584,
+        3072,
+        2049,
+        2
+      ]
+    }
+  ],
+  "source_sha256": "d1160349f649c5caca8eba501bfe65f2dcf9b870c5685b8a69b7f45325316e08"
+}

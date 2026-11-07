@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "checks": {
+    "comb_both_directions_m_1_to_8": 2040,
+    "comb_permutation_oracle_m_1_to_4": 120,
+    "comb_m0_boundary": 4,
+    "endpoint_gate_all_subsets_m_3_to_8": 504,
+    "saved_cycle_and_endpoint_witnesses": 1166,
+    "indegree_one_closure_and_length3_padding": 847,
+    "cycle_support_in_same_order_endpoint_support_n_3_to_9": true,
+    "endpoint_n9_prefix_inclusive": 593,
+    "two_independent_author_enumerators_agree_n_3_to_9": true,
+    "n9_gaps": [
+      215,
+      219,
+      223,
+      226,
+      229,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      244,
+      245,
+      246,
+      247,
+      248
+    ]
+  },
+  "inverse_counts": {
+    "3": 1,
+    "4": 0,
+    "5": 2,
+    "6": 2,
+    "7": 12,
+    "8": 37,
+    "9": 174,
+    "10": 365
+  },
+  "input_sha256": {
+    "cycle-levels/build_inputs.py": "a3656c2f34300b35b3c23e4e8294c400e7084d03de69ea19f8f74b3951f4659d",
+    "cycle-levels/census.cpp": "3503cbffdb32716b7590db3496f986dbfdfbb7831f6ffc73a99d42a39384f824",
+    "cycle-spectrum/census.cpp": "0910a1dc0e2dfd8a1f98baa86f9751cf4e893462563bf2055c7ffbf47e434fef"
+  },
+  "source_sha256": "fda459d154b3bbd2a7f65cfcf422af8bb956098b8397ec3f660132636ea7b811"
+}
