@@ -152,3 +152,11 @@ Conjecture (D):
 
 An effective form of (D)(2), with an explicit N_0, plus a finite check below N_0 would prove Chan-Pak. Conjecturally
 (C), one free block never suffices: its mean multiplicity is bounded (Session 206).
+
+**Update (kind-pasteur-2026-11-07-S14, HYP-9494 (D)).**
+- Pre-registered P1 is CONFIRMED to 10^9: the 140 misses below 10^8 are all the misses below 10^9.
+- The 1 (mod 3) bias of the misses is consistent with a 3-adic local factor of the two-root-change multiplicity
+  (HYP-9494 (E), exploratory).
+- Root-change depth below 10^9 is at most 7, and the strong C = 1 spectrum misses exactly Session197's 29 values
+  below 10^9.
+- See THM-4904 and `05-knowledge/results/root_change_carmichael_chamber_20261107/`.

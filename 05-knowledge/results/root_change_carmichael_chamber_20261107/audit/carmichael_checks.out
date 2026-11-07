@@ -1,0 +1,7 @@
+inv_phi self-test against brute force (m <= 2000): OK
+even nontotients <= 300 (A005277 start): [14, 26, 34, 38, 50, 62, 68, 74, 76, 86, 90, 94, 98, 114, 118, 122, 124, 134, 142, 146, 152, 154, 158, 170, 174, 182, 186, 188, 194, 202, 206, 214, 218, 230, 234, 236, 242, 244, 246, 248, 254, 258, 266, 274, 278, 284, 286, 290, 298]
+even numbers in [14,166]: 77, nontotients 23 (29.9%)
+doubles of the first nine F_<=2 misses, nontotient? [(14, True), (26, True), (42, False), (82, False), (86, True), (110, False), (134, True), (154, True), (166, False)]
+2*7^k nontotient for k = 1..9: True ; k = 0 (m = 2) totient: True
+for primes 3 < p < 20000: 2p nontotient iff 2p+1 composite; exceptions: []
+A_sigma(3) = #{n : sigma(n) = 3} = 1

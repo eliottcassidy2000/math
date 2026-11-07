@@ -1,0 +1,62 @@
+MATCH     2^20: all 60 window histograms (n, min, c0..8) for K = 0, 1, 2
+MATCH     2^20: K=0 singleton count above 1
+MATCH     2^20: K=0 first 40 singleton values and words
+MATCH     2^20: K=0 chamber words
+MATCH     2^20: K=1 singleton count above 1
+MATCH     2^20: K=1 first 20 singleton values and words
+MATCH     2^20: K=1 chamber words
+MATCH     2^20: K=2 singleton count above 1
+MATCH     2^20: K=2 first 0 singleton values and words
+MATCH     2^20: K=2 chamber words
+MATCH     2^20: prefixes with #J <= 2 and F <= 2^20
+MATCH     2^20: odd M_2 count (N >= 3) and above 2^15
+MATCH     2^24: odd M_2 count (N >= 3) and above 2^15
+MATCH     2^26: K=0 all 26 window rows (n, mean of min(M,255), c0..8)
+MATCH     2^26: K=0 singletons above 1 (auditor count vs sum of the packet windows)
+MATCH     2^26: K=1 all 26 window rows (n, mean of min(M,255), c0..8)
+MATCH     2^26: K=1 singletons above 1 (auditor count vs sum of the packet windows)
+MISMATCH  2^26: K=0 singletons above 1, auditor count vs PROOF section 4 text "3,983"
+    auditor: 4083
+    packet:  3983
+MATCH     1e8: per-level misses and largest, k = 0, 1, 2 (vs S13 root_changes_1e8.txt)
+MATCH     1e8: per-window k-misses (vs S13)
+MATCH     1e8: 26 multiplicity windows below 2^26 (n, min, min_mod3, mean255, sat255, c0..8) vs rc_1e9.txt
+MATCH     1e8: odd N > 1e5 with M_2 <= 2
+MATCH     F_<=2 misses above 1e5 (auditor to 1e8; packet to 1e9)
+MATCH     (2^26,1e9]: odd N with M_2 = 0
+MATCH     (2^26,1e9]: 4 windows (n, min, min_mod3 capped at 15, c0..8) vs rc_1e9.txt
+MATCH     (2^22,2^28): values with M_2 <= 12 (packet explore/rc_low_2p28.txt)
+INFO      values with M_2 <= 12 in [2^28, 1e9] (beyond the packet): ['277438727:8', '301189927:12']
+MATCH     1e6: <=3 root changes misses/largest
+MATCH     1e6: <=4 root changes misses/largest
+MATCH     1e6: <=5 root changes misses/largest
+MATCH     1e6: <=6 root changes misses/largest
+MATCH     1e6: <=7 root changes misses/largest
+MATCH     1e6: <=7 miss list
+MATCH     1e6: windows above [1,2) containing an N with M_7(N) = 1 (HYP-9494 (C) says none for K >= 2)
+INFO      that window holds N = 1897, M_7(1897) = 1 (k_singletons_2048.out): HYP-9494 (C) is false for K = 7
+MATCH     4e6: per-level misses k = 0..3
+MATCH     4e6: <=3 miss list
+MATCH     literal witness 1877 = ZJJZJJJJJOO (depth, #J, F, vertices, H, C)
+MATCH     literal witness 1897 = ZZJJJJJJJOO (depth, #J, F, vertices, H, C)
+MATCH     literal witness 667 = ZJJJJZJOZ (depth, #J, F, vertices, H, C)
+MATCH     literal witness 3523 = ZJJJJZZZJOZO (depth, #J, F, vertices, H, C)
+MATCH     literal witness 373 = ZZJJJJOZ (depth, #J, F, vertices, H, C)
+MATCH     literal witness 1811 = ZZJJZJOZJOO (depth, #J, F, vertices, H, C)
+MATCH     literal witness 2149 = ZJJOZJZJOZO (depth, #J, F, vertices, H, C)
+MATCH     literal witness 2999 = ZZZJJJJOOZZ (depth, #J, F, vertices, H, C)
+MATCH     literal witness 4411 = ZJOZZJJJOZOO (depth, #J, F, vertices, H, C)
+MATCH     literal witness 4547 = ZJJZZJJOOZZO (depth, #J, F, vertices, H, C)
+MATCH     literal witness 7129 = ZJJZJOZOZJOOO (depth, #J, F, vertices, H, C)
+MATCH     literal witness 17383 = OZJJJZZOOZJOOZ (depth, #J, F, vertices, H, C)
+MATCH     literal witness 19951 = ZJJJJZZOZOZZOZ (depth, #J, F, vertices, H, C)
+MATCH     literal witness 22091 = ZJOZZOZJJJOZOZ (depth, #J, F, vertices, H, C)
+MATCH     literal witness 27781 = ZJOZZJZZJOZZZJO (depth, #J, F, vertices, H, C)
+MATCH     literal witness 205 = ZJJOZJO (depth, #J, F, vertices, H, C)
+MATCH     literal witness 281 = ZZJJZJOO (depth, #J, F, vertices, H, C)
+MATCH     literal witness 313 = ZJJZZZJO (depth, #J, F, vertices, H, C)
+MATCH     odd N <= 30001 with no word at all (any number of J) = Session197 list
+MATCH     2^24: mean M_2 by v3(N) (exact 32-bit) vs explore/v3_means_2p24.txt
+MATCH     2^24: mean M_2 by N mod 3 and mod 9 (windows >= 2^20)
+INFO      max M_2 below 2^24: 3792
+SUMMARY: 55 MATCH, 1 MISMATCH

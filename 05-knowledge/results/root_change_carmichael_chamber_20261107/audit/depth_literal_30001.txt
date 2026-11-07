@@ -1,0 +1,25 @@
+Part 1: all words (any number of J) with F(t.w) <= 30001: 28479768 prefixes visited; F-increase failures 0
+odd N <= 30001 with no word at all: 7 13 21 41 43 55 67 77 83 163 173 231 233 247 251 277 299 421 449 503 533 569 583 637 821 1067 1339 1861 2647
+  count 29
+depth histogram (number of odd N <= 30001 with exact minimal #J = k, N = 1 counted at k = 0): k=0:7610 k=1:6382 k=2:905 k=3:60 k=4:11 k=5:2 k=7:2
+values of depth >= 4: 373(d4) 667(d5) 1811(d4) 1877(d7) 1897(d7) 2149(d4) 2999(d4) 3523(d5) 4411(d4) 4547(d4) 7129(d4) 17383(d4) 19951(d4) 22091(d4) 27781(d4)
+Part 2a: literal builder vs state machine on all 29524 words of length 0..9: H(w) = D, H(w - root) = d, H(wJ) = F, C(wJ) = 1; failures 0
+Part 2b: target, exact minimal #J (no cap), my witness w (closed by J), vertices, literal (H, C); then the packet's witness
+1877 depth 7 my witness ZZJJJJJOJJO (14 vertices) literal (H, C) = (1877, 1) | packet witness ZJJZJJJJJOO: #J 7, F 1877, 14 vertices, literal (H, C) = (1877, 1)
+1897 depth 7 my witness ZZJJJJJJJOO (14 vertices) literal (H, C) = (1897, 1) | packet witness ZZJJJJJJJOO: #J 7, F 1897, 14 vertices, literal (H, C) = (1897, 1)
+667 depth 5 my witness OZJOJJJJO (12 vertices) literal (H, C) = (667, 1) | packet witness ZJJJJZJOZ: #J 5, F 667, 12 vertices, literal (H, C) = (667, 1)
+3523 depth 5 my witness OZJOJJOJJOOO (15 vertices) literal (H, C) = (3523, 1) | packet witness ZJJJJZZZJOZO: #J 5, F 3523, 15 vertices, literal (H, C) = (3523, 1)
+373 depth 4 my witness OZJJJJOO (11 vertices) literal (H, C) = (373, 1) | packet witness ZZJJJJOZ: #J 4, F 373, 11 vertices, literal (H, C) = (373, 1)
+1811 depth 4 my witness ZZJOZJOJJOO (14 vertices) literal (H, C) = (1811, 1) | packet witness ZZJJZJOZJOO: #J 4, F 1811, 14 vertices, literal (H, C) = (1811, 1)
+2149 depth 4 my witness ZOZJOJOZJJO (14 vertices) literal (H, C) = (2149, 1) | packet witness ZJJOZJZJOZO: #J 4, F 2149, 14 vertices, literal (H, C) = (2149, 1)
+2999 depth 4 my witness OOZZJJJJOOO (14 vertices) literal (H, C) = (2999, 1) | packet witness ZZZJJJJOOZZ: #J 4, F 2999, 14 vertices, literal (H, C) = (2999, 1)
+4411 depth 4 my witness OZJOZJJOJOZO (15 vertices) literal (H, C) = (4411, 1) | packet witness ZJOZZJJJOZOO: #J 4, F 4411, 15 vertices, literal (H, C) = (4411, 1)
+4547 depth 4 my witness OZJOOJJOZJOZ (15 vertices) literal (H, C) = (4547, 1) | packet witness ZJJZZJJOOZZO: #J 4, F 4547, 15 vertices, literal (H, C) = (4547, 1)
+7129 depth 4 my witness ZZOOZJOZJJJOO (16 vertices) literal (H, C) = (7129, 1) | packet witness ZJJZJOZOZJOOO: #J 4, F 7129, 16 vertices, literal (H, C) = (7129, 1)
+17383 depth 4 my witness OZZJOZZOOJJJOZ (17 vertices) literal (H, C) = (17383, 1) | packet witness OZJJJZZOOZJOOZ: #J 4, F 17383, 17 vertices, literal (H, C) = (17383, 1)
+19951 depth 4 my witness OOOZZJJOJOZJOO (17 vertices) literal (H, C) = (19951, 1) | packet witness ZJJJJZZOZOZZOZ: #J 4, F 19951, 17 vertices, literal (H, C) = (19951, 1)
+22091 depth 4 my witness OOOZJOJOZJJOZZ (17 vertices) literal (H, C) = (22091, 1) | packet witness ZJOZZOZJJJOZOZ: #J 4, F 22091, 17 vertices, literal (H, C) = (22091, 1)
+27781 depth 4 my witness OOZJOZOJJOZJOOO (18 vertices) literal (H, C) = (27781, 1) | packet witness ZJOZZJZZJOZZZJO: #J 4, F 27781, 18 vertices, literal (H, C) = (27781, 1)
+205 depth 3 my witness ZJOZJJO (10 vertices) literal (H, C) = (205, 1) | packet witness ZJJOZJO: #J 3, F 205, 10 vertices, literal (H, C) = (205, 1)
+281 depth 3 my witness ZZJOJJOO (11 vertices) literal (H, C) = (281, 1) | packet witness ZZJJZJOO: #J 3, F 281, 11 vertices, literal (H, C) = (281, 1)
+313 depth 3 my witness ZJOOOJJO (11 vertices) literal (H, C) = (313, 1) | packet witness ZJJZZZJO: #J 3, F 313, 11 vertices, literal (H, C) = (313, 1)

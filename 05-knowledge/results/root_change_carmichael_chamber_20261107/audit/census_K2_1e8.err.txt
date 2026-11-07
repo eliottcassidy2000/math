@@ -1,0 +1,6 @@
+segment [0,16777215] done, tasks 13373, 6.4s
+segment [16777216,33554431] done, tasks 13373, 14.8s
+segment [33554432,50331647] done, tasks 13373, 24.9s
+segment [50331648,67108863] done, tasks 13373, 36.5s
+segment [67108864,83886079] done, tasks 13373, 50.2s
+segment [83886080,100000000] done, tasks 13373, 65.1s

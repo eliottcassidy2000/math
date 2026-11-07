@@ -85,7 +85,7 @@ int main(int argc, char **argv){
     ll nch=0; for (ll N=1;N<=X;N+=2) nch += FX[K][N];
     printf("K=%d: (C) parity failures %lld; singletons N>1: %lld; (D) chamber failures %lld; chamber words (dagger-fixed, exactly K J, value <= X): %lld = %.4f sqrt(X)\n",K,parity_fail,ns,chamber_fail,nch,nch/sqrt((double)X));
     if (parity_fail||chamber_fail) bad=1;
-    printf("K=%d singleton values (first 40) with word w (value of wZ): ",K); int shown=0;
+    printf("K=%d singleton values (first 40) with the counted word wZ: ",K); int shown=0;
     for (ll N=3;N<=X && shown<40;N+=2) if (M[K][N]==1){ printf(" %lld:%s",N,witness[K][N]); shown++; }
     printf("\n");
     for (ll lo=1; lo<X; lo*=2){ ll hi = lo*2>X? X+1 : lo*2; ll c[9]={0}; int mn=1<<30; ll n=0;

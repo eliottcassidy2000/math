@@ -20,7 +20,8 @@ Write A(m) = #{x : phi(x) = m} and V(x) = #{m <= x : A(m) > 0}. Let V_k(x) count
 multiplicity exactly k.
 
 - **Carmichael's conjecture (OPEN).** A(m) is never 1. Carmichael announced a proof in 1907 (Bull. AMS 13, 241-243).
-  The proof was flawed. He later showed that no m < 10^37 has multiplicity 1, and posed the statement as a conjecture.
+  The proof was flawed. In 1922 (Bull. AMS 28, 109-110) he showed that no m < 10^37 has multiplicity 1, and posed the
+  statement as a conjecture.
 - **Sierpinski's conjecture (THEOREM).** Every k >= 2 is a multiplicity.
   - Schinzel deduced it from Hypothesis H (1961).
   - Ford deduced it from the prime k-tuples conjecture.
@@ -30,13 +31,15 @@ multiplicity exactly k.
 
   | Bound | Source |
   | --- | --- |
-  | 10^37 | Carmichael |
+  | 10^37 | Carmichael (1922) |
   | 10^400 | Klee (1947) |
   | 10^10,000 | Masai and Valette (1982) |
   | 10^10,000,000 | Schlafly and Wagon (Math. Comp. 1994) |
   | 10^(10^10) | Ford (1998), Theorem 6 |
 
-  Ford's source is "The distribution of totients", Ramanujan J. 2 (1998), 67-151, arXiv:1104.3264.
+  Ford's source is "The distribution of totients", Ramanujan J. 2 (1998), 67-151. It was read here in its arXiv v2
+  revision of 2013 (arXiv:1104.3264), which also mentions later work: Ford-Konyagin 1999, Ford 1999 and
+  Baker-Harman-Pintz 2001.
 - **Ford's dichotomy (Ford 1998, Theorems 2 and 5).** If A(d) = k, then V_k(x) >> d^(-1-eps) V(x). Also
   limsup V_1(x)/V(x) < 1, and Carmichael's conjecture is equivalent to liminf V_1(x)/V(x) = 0. In Ford's words, the
   set of counterexamples "cannot be a 'thin' subset": either there are none, or a positive fraction of totients are
@@ -57,8 +60,9 @@ multiplicity exactly k.
   3^2 || x, which also forces 13^2, against 3^3 | x. Every computational bound iterates the lemma to build an ever
   larger set of primes whose squares divide x. The elementary first step is the doubling twin: phi(x) = phi(2x) for
   odd x, so a unique preimage has 4 | x.
-- **Pomerance's criterion (Proc. AMS 43, 1974).** If every prime p with (p - 1) | phi(n) satisfies p^2 | n, then n is
-  a counterexample. Pomerance also showed such n are very improbable.
+- **Pomerance's criterion (Proc. AMS 43 (1974), 297-298).** If every prime p with (p - 1) | phi(n) satisfies
+  p^2 | n, then phi(x) = phi(n) has the unique solution x = n, so phi(n) is a counterexample. This is cited directly;
+  it is not in Ford's paper.
 - **Erdos's propagation.** If A(m) = k, then A(m(p - 1)) = k for most primes p. This is the mechanism behind
   "positive proportion".
 - **Other functions.** For sigma, A_sigma(3) = 1, so there is no Carmichael conjecture for sigma (Ford, section 8).
@@ -67,7 +71,8 @@ multiplicity exactly k.
   bound or counterexample appears through 2026-11-07.
 - **Nontotients.** The empty fibers are 14, 26, 34, 38, 50, ... (A005277).
   - Every odd number above 1 is a nontotient.
-  - 2p is a nontotient exactly when 2p + 1 is composite (p > 3 prime).
+  - 2p is a nontotient exactly when 2p + 1 is composite (p > 3 prime). Session218 gives this as the inverse-totient
+    fiber of 2q.
   - An elementary infinite family: 2 * 7^k is a nontotient for every k >= 1. A prime p with p - 1 | 2 * 7^k is 2, 3,
     or 2 * 7^j + 1, and the last is divisible by 3. A power of 7 in x would put a factor 3 into phi(x).
 
@@ -80,7 +85,7 @@ multiplicity exactly k.
 | --- | --- | --- | --- |
 | HYP-9477 (A) / THM-4884 (opus-S81; scope repaired by Session218) | strong tournament classes with H = h | {3, 5, 11, 13} | FINITE-EXACT below 625 |
 | Session200 `carmichael-fibers` | numerical source profiles s with F(s) = n (unbounded J) | {3, 11} | FINITE-EXACT to 50,001; all-order OPEN |
-| this session, THM-4904 | root-change words with at most K letters J | K = 0: about 0.5 sqrt(X) values up to X; K = 1: sporadic; K = 2: none above 1 | PROVED structure, FINITE-EXACT counts |
+| this session, THM-4904 | root-change words with at most K letters J | K = 0: 4,083 values below 2^26, about 0.50 sqrt(X) (the K = 0 case is Session206's converse involution); K = 1: sporadic; K = 2: none above 1 through 10^9; K = 7: exactly 1897 | PROVED structure, FINITE-EXACT counts |
 | Session218 | phi itself: dyadic repair, Mersenne-Wagstaff empty fibers, Smith and repunit bridges | (empty fibers) | PROVED |
 
 Session200 introduced the transfer: its O/J twin F(O(s)) = F(J(s)) = G(s) plays the role of phi(x) = phi(2x), and its
@@ -96,11 +101,11 @@ criteria, a different question.
 | --- | --- |
 | doubling twin phi(x) = phi(2x), x odd | final-letter twin: wZ and wJ have the same value F(t.w) |
 | a unique preimage has 4 \| x | a singleton word has exactly K letters J and its value lies outside F_<=K-1 |
-| Carmichael-Klee: P^2 \| x forced for many primes | Session199's adjoint w -> w^dagger pairs the remaining words; a singleton word is dagger-fixed, of the form A c A^dagger, and (Session200's O/J twin) neither begins nor ends with J |
+| Carmichael-Klee: P^2 \| x forced for many primes | Session199's adjoint w -> w^dagger pairs the remaining words; a singleton word is dagger-fixed, of the form A c A^dagger; by Session200's Theorem 3 argument it neither begins nor ends with J; by JZ = OJ it has no factor JZ or OJ |
 | Ford: unique preimage divisible by 6; Theorem 8 classes | singleton values lie in F_<=K minus F_<=K-1 (all their words have exactly K letters J) |
-| Ford: no counterexample, or a positive proportion | singleton values number O_K(sqrt(X) (log X)^floor(K/2)): always density zero. Sharp for K = 0 (about 0.49 sqrt(X) observed) |
+| Ford: no counterexample, or a positive proportion | singleton values number O_K(sqrt(X) (log X)^floor(K/2)): always density zero. The K = 0 chamber has Theta(sqrt X) words; about 0.50 sqrt(X) singletons are observed (HYP-9494 (A)) |
 | Sierpinski: every k >= 2 occurs | M_K(N) = [N = 1] + Fix_K(N) (mod 2): odd multiplicities need an odd number of chamber words, a density-zero event |
-| sigma has singletons; phi conjecturally none | K = 0 and K = 1 grammars have singletons; K = 2 has none through 10^9 (pre-registered P3) |
+| sigma has singletons; phi conjecturally none | K = 0 and K = 1 grammars have singletons; K = 2 has none through 10^9 (pre-registered P3); K = 7 has the singleton 1897, at a value of exact depth 7 |
 
 The dictionary transfers the shape of the argument, not numbers. As Session218 records, no map takes totient gaps to
 Hamiltonian-path gaps: halving 14 and 26 gives 7 and 13, but 7 is excluded from the full spectrum while 13 is attained.
