@@ -1,0 +1,341 @@
+{
+  "enumeration": [
+    {
+      "H_with_multiple_gradings": [],
+      "distinct_H": 1,
+      "distinct_packing_polynomials": 1,
+      "labelled_tournaments": 1,
+      "n": 0
+    },
+    {
+      "H_with_multiple_gradings": [],
+      "distinct_H": 1,
+      "distinct_packing_polynomials": 1,
+      "labelled_tournaments": 1,
+      "n": 1
+    },
+    {
+      "H_with_multiple_gradings": [],
+      "distinct_H": 1,
+      "distinct_packing_polynomials": 1,
+      "labelled_tournaments": 2,
+      "n": 2
+    },
+    {
+      "H_with_multiple_gradings": [],
+      "distinct_H": 2,
+      "distinct_packing_polynomials": 2,
+      "labelled_tournaments": 8,
+      "n": 3
+    },
+    {
+      "H_with_multiple_gradings": [],
+      "distinct_H": 3,
+      "distinct_packing_polynomials": 3,
+      "labelled_tournaments": 64,
+      "n": 4
+    },
+    {
+      "H_with_multiple_gradings": [],
+      "distinct_H": 7,
+      "distinct_packing_polynomials": 7,
+      "labelled_tournaments": 1024,
+      "n": 5
+    },
+    {
+      "H_with_multiple_gradings": [
+        9,
+        17,
+        23,
+        29,
+        33,
+        37,
+        45
+      ],
+      "distinct_H": 19,
+      "distinct_packing_polynomials": 27,
+      "labelled_tournaments": 32768,
+      "n": 6
+    }
+  ],
+  "exhaustive_rows_sha256": "687debed7d17eab5836ab97183ce0363b19a1246a913b00d532daa384d8afee4",
+  "grammar_controls": [
+    {
+      "F2_betti": [
+        1
+      ],
+      "S4_centers": 0,
+      "cell_counts": [
+        1
+      ],
+      "cell_total": 1,
+      "triangle_SCCs": 1
+    },
+    {
+      "F2_betti": [
+        1,
+        1
+      ],
+      "S4_centers": 0,
+      "cell_counts": [
+        2,
+        2
+      ],
+      "cell_total": 4,
+      "triangle_SCCs": 2
+    },
+    {
+      "F2_betti": [
+        1,
+        1,
+        1
+      ],
+      "S4_centers": 0,
+      "cell_counts": [
+        3,
+        6,
+        4
+      ],
+      "cell_total": 13,
+      "triangle_SCCs": 3
+    },
+    {
+      "F2_betti": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "S4_centers": 0,
+      "cell_counts": [
+        4,
+        12,
+        16,
+        8
+      ],
+      "cell_total": 40,
+      "triangle_SCCs": 4
+    },
+    {
+      "F2_betti": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "S4_centers": 0,
+      "cell_counts": [
+        5,
+        20,
+        40,
+        40,
+        16
+      ],
+      "cell_total": 121,
+      "triangle_SCCs": 5
+    },
+    {
+      "F2_betti": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "S4_centers": 0,
+      "cell_counts": [
+        6,
+        30,
+        80,
+        120,
+        96,
+        32
+      ],
+      "cell_total": 364,
+      "triangle_SCCs": 6
+    },
+    {
+      "F2_betti": [
+        2
+      ],
+      "S4_centers": 1,
+      "cell_counts": [
+        2
+      ],
+      "cell_total": 2,
+      "triangle_SCCs": 0
+    },
+    {
+      "F2_betti": [
+        1,
+        2
+      ],
+      "S4_centers": 1,
+      "cell_counts": [
+        3,
+        4
+      ],
+      "cell_total": 7,
+      "triangle_SCCs": 1
+    },
+    {
+      "F2_betti": [
+        1,
+        1,
+        2
+      ],
+      "S4_centers": 1,
+      "cell_counts": [
+        4,
+        10,
+        8
+      ],
+      "cell_total": 22,
+      "triangle_SCCs": 2
+    },
+    {
+      "F2_betti": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "S4_centers": 1,
+      "cell_counts": [
+        5,
+        18,
+        28,
+        16
+      ],
+      "cell_total": 67,
+      "triangle_SCCs": 3
+    },
+    {
+      "F2_betti": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "S4_centers": 1,
+      "cell_counts": [
+        6,
+        28,
+        64,
+        72,
+        32
+      ],
+      "cell_total": 202,
+      "triangle_SCCs": 4
+    },
+    {
+      "F2_betti": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "S4_centers": 1,
+      "cell_counts": [
+        7,
+        40,
+        120,
+        200,
+        176,
+        64
+      ],
+      "cell_total": 607,
+      "triangle_SCCs": 5
+    }
+  ],
+  "same_order_same_H_different_topology": [
+    {
+      "H": 9,
+      "betti_Q_and_F2": [
+        4,
+        0
+      ],
+      "cell_counts": [
+        4
+      ],
+      "cycles": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "mask": 8,
+      "n": 6,
+      "name": "strong5_with_sink",
+      "packing_coefficients": [
+        1,
+        4
+      ]
+    },
+    {
+      "H": 9,
+      "betti_Q_and_F2": [
+        1,
+        1
+      ],
+      "cell_counts": [
+        2,
+        2
+      ],
+      "cycles": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "mask": 8194,
+      "n": 6,
+      "name": "two_triangle_SCCs",
+      "packing_coefficients": [
+        1,
+        2,
+        1
+      ]
+    }
+  ],
+  "scope": "all labelled tournaments through n=6; separate exact SCC controls",
+  "unrestricted_complex_controls": [
+    {
+      "cell_total": 3,
+      "vertices": 3
+    },
+    {
+      "cell_total": 10,
+      "vertices": 10
+    }
+  ]
+}

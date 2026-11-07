@@ -1,0 +1,33 @@
+{
+  "dependencies": [
+    {
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "commit": "1147c928fa6907732bf485badcbd8960a65eceb4",
+      "bundled_path": "dependencies/odd-cycle-formula.md",
+      "sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1",
+      "url": "https://github.com/eliottcassidy2000/math/blob/1147c928fa6907732bf485badcbd8960a65eceb4/01-canon/theorems/THM-002-ocf.md",
+      "scope": "Inherited all-order equality H(T)=I_T(2)."
+    },
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "commit": "1147c928fa6907732bf485badcbd8960a65eceb4",
+      "bundled_path": "dependencies/exclusions-7-21.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "url": "https://github.com/eliottcassidy2000/math/blob/1147c928fa6907732bf485badcbd8960a65eceb4/01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "scope": "Inherited all-order exclusions; no completeness conjecture promoted."
+    },
+    {
+      "path": "session209/leaf-spectrum/PROOF.md",
+      "commit": "968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c",
+      "bundled_path": "dependencies/leaf-spectrum.md",
+      "sha256": "d7f466d8347c0ef94f381254531aa313c264caafe7198f3007460da6191fec7c",
+      "url": "https://github.com/eliottcassidy2000/math/blob/968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c/session209/leaf-spectrum/PROOF.md",
+      "scope": "Inherited leaf grammar; local bytes match Session209 final verified publication receipt."
+    }
+  ],
+  "standard_topology": {
+    "reference": "Allen Hatcher, Algebraic Topology, Section 3.2, Theorem 3.19",
+    "url": "https://pi.math.cornell.edu/~hatcher/AT/ATch3.pdf",
+    "used_fact": "H^*(RP^d;F2)=F2[a]/(a^(d+1)), and naturality under coordinate inclusion."
+  }
+}
