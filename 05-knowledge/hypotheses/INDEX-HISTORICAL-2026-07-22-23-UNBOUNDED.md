@@ -1,3 +1,5 @@
+<!-- 2026-11-07 (opus-2026-11-07-S85): the row below moved here from INDEX.md to keep its 120-line budget after the THM-4892 insertion -->
+- **THM-2117/2121 (PROVED):** clocks, the maximum Hunter tree, and all scalar minors can miss an open safe cell; every strict safe cell has a full Toeplitz/Fejer certificate of order at most `14nV^2+1`. Boundary-only points are outside that statement.
 <!-- 2026-11-06 (opus-2026-11-06-S84): the row below moved here from INDEX.md to keep its 120-line budget after the THM-4890/THM-4891/HYP-9482 insertion -->
 - **HYP-8945 (OPEN UNIT-DISTANCE ROUTE):** the sign-changing Bessel kernel identifies cancellation, not a new asymptotic bound.
 <!-- 2026-11-06 (klein-2026-11-06): the row below moved here from INDEX.md to keep its 120-line budget after the THM-4889/HYP-9481 insertion (a concurrent session had used the slot freed earlier) -->

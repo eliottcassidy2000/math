@@ -1,0 +1,5 @@
+(1) J2: (n, |L^+(V)|, 2^C(n,2), |image of L|, n!) = [(1, 1, 1, 1, 1), (2, 2, 2, 2, 2), (3, 8, 8, 6, 6), (4, 64, 64, 24, 24), (5, 1024, 1024, 120, 120)]
+(2) Jss pullback-stability violations (300 random cases): 0
+(4) constant presheaf, two plus steps: {'A+ ok': 1072, 'A++ ok': 1072, 'two steps needed (|A+| != |A++|)': 688}
+(3)+(5) packings / carrier: {'GS: sum 2^k alpha_k = H': 1559, 'H multiplicative': 1559, '|Q| = (H+1)/2': 1559, 'fibres are 2^(m-1) torsors': 1559, 'Q not separated (|Q| > |Q^+|)': 2}
+    packings by number m of components carrying cycles: {1: 9809, 2: 2}

@@ -1,0 +1,1 @@
+H(Gamma T) = H(T) + 2 sum_{|S| odd} H(T[S]) H(T[V-S]): 1399 ok, 0 bad
