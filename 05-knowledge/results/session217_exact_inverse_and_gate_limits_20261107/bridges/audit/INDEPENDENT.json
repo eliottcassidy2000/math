@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "independent_permutation_controls": 136,
+  "universe": "Every labeled order3 quotient; holes 0,1; singleton/TT2/C3 inputs; padding m=0,1; total order <=8"
+}

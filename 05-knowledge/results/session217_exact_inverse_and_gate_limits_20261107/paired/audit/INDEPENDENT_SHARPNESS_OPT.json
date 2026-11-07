@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "literal_permutation_compiler_base_checks": 10,
+  "exponent_pairs": 3160,
+  "integer_N_threshold_checks": 79,
+  "exact_layer_count": "ceil(n/2)",
+  "exact_cumulative_count": "floor((K+1)^2/4)-1",
+  "max_layer": 80
+}

@@ -1,0 +1,13 @@
+# Independent audit of adaptive uniform-module gates
+
+Verdict: APPROVED within the stated scope. No positive spectrum or occupancy theorem is established.
+
+The infinite-menu quantifier is valid: simultaneous ordinal padding preserves the scalar input tuple, and every unsafe template has a positive integer coefficient for the skeleton visiting one unsafe hole twice and every other hole once. Thus the lower bound (2^(m+1)-2) times the product of input Hamilton counts is uniform over all templates, independent of their orders and of the selected unsafe hole. Taking one common sufficiently large m excludes every unsafe template at once. A fixed-template proof alone would not have sufficed, but the manuscript supplies the stronger common bound.
+
+The safe iff singleton-SCC characterization is sound. If no root-outneighbor points to a root-inneighbor, the quotient splits as in-neighbors => root => out-neighbors, and the root is a singleton SCC. Any forbidden crossing arc supplies a triangle through the root and a two-run skeleton. The inherited insertion proof establishes positive two-run support. With all holes safe, SCC factorization gives exactly H(quotient) times the product of input counts. The multivariate run coefficient includes the other holes once, so there is neither double use nor a missing multiplicity factor. Empty inputs, repeated/omitted modules, and nonuniform incidences are explicitly excluded.
+
+The affine consequences use attainable unbounded inputs 3^t and are correct for the stated positive-output premises. The example 19 only exhibits an attainable target inaccessible by this universal gate; the text correctly avoids inferring an unrestricted spectrum gap. Real affine coefficients are handled by convergence of integer ratios in one variable and quadratic domination in two variables.
+
+Executable review: producer verify.py replayed normally and under -O with identical 5,405 rooted-context, 16,215 literal-blowup, and 300 padding controls; verify_multi.py replayed with 976 controls (544 safe, 432 unsafe). Additionally independent.py uses direct permutation enumeration, not the producer subset DP, on 136 literal two-hole substitutions: every order-three quotient, singleton/TT2/C3 input pairs, simultaneous padding 0 or 1, and total order at most eight. The uniform lower bound including the disjoint one-run baseline passes every case.
+
+INPUT_SHA256SUMS freezes the reviewed producer proof and code. The independently written oracle is self-contained and can be run as `python3 independent.py`. Publication path/status-only updates are permitted; no mathematical changes are implicitly approved. Retained replay outputs are audit evidence rather than new general theorems.

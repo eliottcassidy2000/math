@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "universe": "all labeled tournaments of orders 1..5; every marked vertex; TT blowups of sizes 1..3",
+  "rooted_contexts": 5405,
+  "nontrivial_scc_roots": 4190,
+  "literal_composites": 16215,
+  "max_c2": 17,
+  "arbitrary_input_padding_checks": 300,
+  "independent_checks": [
+    "vertex-subset Hamilton-path DP",
+    "permutation-and-gap kernel",
+    "transitive-closure SCC criterion"
+  ]
+}

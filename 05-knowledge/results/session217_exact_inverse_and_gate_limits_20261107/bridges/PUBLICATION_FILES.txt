@@ -1,0 +1,17 @@
+README.md
+RESULT.md
+VERIFY.json
+VERIFY_MULTI.json
+VERIFY_MULTI_OPT.json
+VERIFY_OPT.json
+audit/INDEPENDENT.json
+audit/INPUT_SHA256SUMS
+audit/MULTI_REPLAY.json
+audit/REVIEW.md
+audit/VERIFY_OPT_REPLAY.json
+audit/VERIFY_REPLAY.json
+audit/independent.py
+verify.py
+verify_multi.py
+SHA256SUMS
+PUBLICATION_FILES.txt

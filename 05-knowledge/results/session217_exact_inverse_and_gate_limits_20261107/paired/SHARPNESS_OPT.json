@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "layers": 159,
+  "exponent_pairs": 12720,
+  "max_layer": 160,
+  "arithmetic": "arbitrary-precision integers",
+  "scope": "finite controls, not a replacement for the uniqueness-of-binary-powers proof"
+}

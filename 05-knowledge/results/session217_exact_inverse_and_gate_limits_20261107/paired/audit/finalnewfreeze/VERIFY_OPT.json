@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "literal_graph_isomorphism_controls": 4800,
+  "graph_universe": "All labeled rooted tournaments orders 1..4, every length-six word",
+  "algebra_controls": 3552,
+  "literal_DP_controls": 592,
+  "source_universe": "All labeled rooted tournaments of orders 2..4, root 0",
+  "scope": "Finite checks of all-length formulas proved in COMMUTING.md"
+}

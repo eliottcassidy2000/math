@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "algebra_controls": 3552,
+  "literal_DP_controls": 592,
+  "source_universe": "All labeled rooted tournaments of orders 2..4, root 0",
+  "scope": "Finite checks of all-length formulas proved in COMMUTING.md"
+}

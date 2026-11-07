@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "literal_composites": 976,
+  "safe": 544,
+  "unsafe": 432,
+  "universe": "all order2..3 quotients and order4 masks 0,4,..60; all two-hole choices; singleton/C3 input pairs; simultaneous ordinal padding m=0,1",
+  "checks": [
+    "independent literal substitution followed by subset DP",
+    "safe output H(Q) product h",
+    "unsafe uniform lower bound including one-run baseline"
+  ]
+}

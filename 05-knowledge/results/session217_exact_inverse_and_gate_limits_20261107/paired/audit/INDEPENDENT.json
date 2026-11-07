@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "canonical_graph_checks": 9525,
+  "literal_permutation_profile_checks": 80,
+  "stable_exponent_pairs": 250,
+  "axis_checks": 120,
+  "degenerate_Q_sources": 3,
+  "singleton_transfer_hostile": "fails as expected; graph commutation still holds"
+}
