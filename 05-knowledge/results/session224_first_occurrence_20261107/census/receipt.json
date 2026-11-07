@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "checks": 29424,
+  "scope": "All tournaments of orders 1 through 8; no assertion of global realizability outside observed values",
+  "by_order": {
+    "1": {
+      "classes": 1,
+      "SC": 1,
+      "new_H": 1
+    },
+    "2": {
+      "classes": 1,
+      "SC": 1,
+      "new_H": 0
+    },
+    "3": {
+      "classes": 2,
+      "SC": 2,
+      "new_H": 1
+    },
+    "4": {
+      "classes": 4,
+      "SC": 2,
+      "new_H": 1
+    },
+    "5": {
+      "classes": 12,
+      "SC": 8,
+      "new_H": 4
+    },
+    "6": {
+      "classes": 56,
+      "SC": 12,
+      "new_H": 12
+    },
+    "7": {
+      "classes": 456,
+      "SC": 88,
+      "new_H": 58
+    },
+    "8": {
+      "classes": 6880,
+      "SC": 176,
+      "new_H": 243
+    }
+  },
+  "birth_values": 320,
+  "multi_orbit_birth_values": 285,
+  "source_sha256": {
+    "census.json": "06650ed6d8e77d4b54f8e45cff0744e16b541390258fdd45e1bae490e48d99f8",
+    "n8_classes.csv": "5226fb6d6cb71e2c99dc50536744f044c31af55e173e3be9f5f722a39edf3bc2",
+    "n7_representatives.txt": "3989273b1634117975f2a88e3f11c36e5ae263812e5f071f26d549fb25b7edc1"
+  }
+}
