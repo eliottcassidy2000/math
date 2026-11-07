@@ -91,7 +91,6 @@
 A hypothesis is unresolved unless a proved leaf is named explicitly. Search its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance. [September6 audited advances](../results/open_frontier_sep06_board.md): sharp global root-stability constant SOLVED; nonunit decoder, inert lengths and anchored Laurent advances retain their stated scopes. LRC14 and actual two-rung separation remain OPEN.
 ## Optional alternate formalization routes
 - **THM-2101:** strict DvdK has three product-free paper proofs; wrappers remain Lean assembly, while `GMC2Main.gmc2` is unconditional.
-
 ## Results that change the live graph
 - **THM-2081--2087 (PROVED):** relative Hunter, residue blindness, the height-57 cut, and modular/lacunary closures reduce rank-seven containment; a three-coordinate relation may have zero guard coefficient.
 - **THM-2088--2090 and THM-2092/2093 (PROVED):** flat persistence, the global splice, height transfer, and dyadic cocircuit flags make every no-pair cut branch finite. The banks are not enumerated.

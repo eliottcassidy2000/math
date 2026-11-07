@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "independent_DP_checks": 728,
+  "source_word_lengths": [
+    0,
+    5
+  ],
+  "max_graph_order": 8,
+  "full_witnesses": "all edges reconstructed independently; strong connectivity checked; recurrence H matched, not full DP at36/72"
+}

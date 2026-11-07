@@ -1,0 +1,1 @@
+{"status":"PASS","method":"repeated single-letter recurrence modulo 641*6700417; lengths 1..64","rows":[{"runs":1,"tested":128,"q_zero":2,"p_zero":2,"q_only":0},{"runs":2,"tested":8192,"q_zero":129,"p_zero":135,"q_only":0},{"runs":3,"tested":524288,"q_zero":644,"p_zero":1360,"q_only":0},{"runs":4,"tested":33554432,"q_zero":888,"p_zero":53200,"q_only":0}]}

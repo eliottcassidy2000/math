@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "normal_form_universe": {
+    "indices": [
+      2,
+      20
+    ],
+    "factor_counts": [
+      0,
+      6
+    ],
+    "products_checked": 177100,
+    "repeated_values": 1540
+  },
+  "powers63_exponents": [
+    0,
+    12
+  ],
+  "factorization_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "star_diagonal_matching_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "unit_hostile": "M6*M1*M1 = M2*M2*M3 = 63, three factors on both sides"
+}

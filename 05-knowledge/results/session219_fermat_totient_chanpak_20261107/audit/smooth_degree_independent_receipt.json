@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "a_b_range": [
+    0,
+    20
+  ],
+  "attained_cases": 439,
+  "excluded_cases": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "lower_dictionary": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      0,
+      3
+    ]
+  ],
+  "upper_relaxation": "all exponent pairs other than unit,7,21; may include nonexistent strong values",
+  "scope": "finite dynamic programming independent of all-parameter written proof"
+}

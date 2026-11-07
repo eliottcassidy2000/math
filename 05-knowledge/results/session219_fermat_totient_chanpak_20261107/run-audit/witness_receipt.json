@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "five_run": {
+    "word_runs": [
+      [
+        "O",
+        31
+      ],
+      [
+        "Z",
+        15
+      ],
+      [
+        "O",
+        9
+      ],
+      [
+        "Z",
+        5
+      ],
+      [
+        "O",
+        9
+      ]
+    ],
+    "state": [
+      2233926147849043429,
+      0,
+      1180591620442541769216,
+      1
+    ],
+    "H": 1182825546590390812645,
+    "order": 72,
+    "q_quotient": 176530139331685,
+    "mod641": 275,
+    "family_formula": {
+      "alpha": 275398033407,
+      "beta": -275389644827,
+      "exponent": "32+64t",
+      "order": "72+64t"
+    }
+  },
+  "root_change": {
+    "prefix": "OOZJOZJJOJJOZ",
+    "state": [
+      4909,
+      859,
+      6013,
+      859
+    ],
+    "H0": 6305092397,
+    "order0": 36,
+    "mod641": 380
+  },
+  "scope": "exact arithmetic and inherited physical grammar; no independent enumeration of all paths in order36 or72 graphs"
+}

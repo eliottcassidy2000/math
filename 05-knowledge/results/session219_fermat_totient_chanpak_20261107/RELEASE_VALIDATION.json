@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "reproduction": "python3 verify_all.py",
+  "replay_processes": 25,
+  "checkpoint1": "fbaf4ba893a11ba0953a8690a571ea514b07d22f",
+  "independent_reviews": [
+    "audit/DYADIC_REVIEW.md",
+    "audit/CONSTRUCTION_REVIEW.md",
+    "run-audit/REVIEW.md"
+  ],
+  "scope": "No global Chan-Pak or Carmichael claim. Full36-vertex count independently weighted-DP certified; full72 uses inherited physical recurrence."
+}

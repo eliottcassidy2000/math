@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "method": "solve y=1\u22122/(x\u22121) in each prime field, then inverse lookup in order64 subgroup",
+  "zero_phases": {
+    "641": [
+      [
+        1,
+        32
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        11,
+        5
+      ],
+      [
+        25,
+        63
+      ],
+      [
+        32,
+        1
+      ],
+      [
+        44,
+        49
+      ],
+      [
+        49,
+        44
+      ],
+      [
+        63,
+        25
+      ]
+    ],
+    "6700417": [
+      [
+        1,
+        32
+      ],
+      [
+        32,
+        1
+      ]
+    ]
+  },
+  "escape_state": [
+    4909,
+    859,
+    6013,
+    859
+  ],
+  "initial_h": 6305092397,
+  "initial_mod641": 380,
+  "scope": "physical realization imports Session200 O/Z/J model; no independent literal graph enumeration"
+}
