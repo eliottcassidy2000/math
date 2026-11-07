@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "independent_exact_path_set_injections": 321,
+  "maximum_chain_length": 7,
+  "checks": [
+    "legal injective image",
+    "exact two unmatched block languages",
+    "separate block cardinality formulas"
+  ]
+}

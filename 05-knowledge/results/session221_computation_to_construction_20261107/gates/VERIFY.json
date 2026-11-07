@@ -1,0 +1,127 @@
+{
+  "status": "all assertions passed",
+  "rooted_presentations": 285,
+  "literal_gate_checks": 1140,
+  "m_zero_corrected_controls": 285,
+  "literal_program_checks": 110,
+  "max_program_vertices": 16,
+  "program_census_cap": 1000000,
+  "program_words_including_empty": 4047,
+  "distinct_scalar_values": 2737,
+  "by_depth": {
+    "0": 1,
+    "1": 18,
+    "2": 136,
+    "3": 559,
+    "4": 1268,
+    "5": 1305,
+    "6": 656,
+    "7": 103,
+    "8": 1
+  },
+  "scalar_collision_controls": [
+    {
+      "h": 89,
+      "first": [
+        2,
+        2
+      ],
+      "first_previous": 9,
+      "second": [
+        3,
+        1
+      ],
+      "second_previous": 17,
+      "q4_first_continuation": 481,
+      "q4_second_continuation": 513
+    },
+    {
+      "h": 169,
+      "first": [
+        2,
+        3
+      ],
+      "first_previous": 9,
+      "second": [
+        4,
+        1
+      ],
+      "second_previous": 33,
+      "q4_first_continuation": 881,
+      "q4_second_continuation": 977
+    },
+    {
+      "h": 305,
+      "first": [
+        3,
+        3
+      ],
+      "first_previous": 17,
+      "second": [
+        4,
+        2
+      ],
+      "second_previous": 33,
+      "q4_first_continuation": 1593,
+      "q4_second_continuation": 1657
+    },
+    {
+      "h": 329,
+      "first": [
+        2,
+        4
+      ],
+      "first_previous": 9,
+      "second": [
+        5,
+        1
+      ],
+      "second_previous": 65,
+      "q4_first_continuation": 1681,
+      "q4_second_continuation": 1905
+    },
+    {
+      "h": 513,
+      "first": [
+        2,
+        1,
+        2
+      ],
+      "first_previous": 49,
+      "second": [
+        3,
+        1,
+        1
+      ],
+      "second_previous": 89,
+      "q4_first_continuation": 2761,
+      "q4_second_continuation": 2921
+    }
+  ],
+  "constant_m1_counts": [
+    1,
+    5,
+    29,
+    165,
+    941,
+    5365,
+    30589,
+    174405,
+    994381
+  ],
+  "m0_false_reset_control": {
+    "input": "singleton",
+    "actual_h_R": [
+      3,
+      3
+    ],
+    "false_h_R": [
+      3,
+      4
+    ]
+  },
+  "noncommutation_control": {
+    "m_word_1_2": 53,
+    "m_word_2_1": 49
+  }
+}

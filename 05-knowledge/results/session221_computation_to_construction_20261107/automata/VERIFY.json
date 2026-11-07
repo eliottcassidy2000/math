@@ -1,0 +1,576 @@
+{
+  "boundary_cases": {
+    "caps": {
+      "1": 0,
+      "1000000": 25,
+      "15": 5,
+      "21": 5,
+      "25": 6,
+      "3": 2,
+      "5": 3,
+      "63": 7,
+      "7": 3,
+      "9": 4
+    },
+    "continuation_hostile": {
+      "normalized_H": 1,
+      "original_H": 5,
+      "suffix": [
+        0
+      ],
+      "word": [
+        3
+      ]
+    },
+    "product_2": {
+      "H": 3,
+      "cap": 2,
+      "chain": 2,
+      "word": [
+        1,
+        0
+      ]
+    },
+    "product_2,2,3": {
+      "H": 45,
+      "cap": 7,
+      "chain": 7,
+      "word": [
+        1,
+        0,
+        3,
+        1,
+        7,
+        3,
+        3
+      ]
+    },
+    "product_2,3": {
+      "H": 15,
+      "cap": 5,
+      "chain": 5,
+      "word": [
+        1,
+        0,
+        3,
+        1,
+        1
+      ]
+    },
+    "product_3": {
+      "H": 5,
+      "cap": 3,
+      "chain": 3,
+      "word": [
+        1,
+        0,
+        0
+      ]
+    },
+    "product_3,3": {
+      "H": 25,
+      "cap": 6,
+      "chain": 6,
+      "word": [
+        1,
+        0,
+        0,
+        3,
+        1,
+        1
+      ]
+    }
+  },
+  "endpoint_compiler": [
+    {
+      "endpoint_constraints": {
+        "end": [
+          0,
+          1
+        ],
+        "joint": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "start": [
+          1,
+          0
+        ]
+      },
+      "outgoing": [
+        2,
+        0
+      ],
+      "pruned": 0,
+      "status": "FOUND",
+      "tape_cap": 2,
+      "target": 1,
+      "visited": 1,
+      "word": []
+    },
+    {
+      "endpoint_constraints": {
+        "end": [
+          0,
+          1
+        ],
+        "joint": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "start": [
+          0,
+          0
+        ]
+      },
+      "outgoing": [
+        2,
+        0,
+        3
+      ],
+      "pruned": 0,
+      "status": "FOUND",
+      "tape_cap": 2,
+      "target": 1,
+      "visited": 2,
+      "word": [
+        0
+      ]
+    },
+    {
+      "endpoint_constraints": {
+        "end": [
+          0,
+          0
+        ],
+        "joint": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "start": [
+          1,
+          0
+        ]
+      },
+      "outgoing": [
+        14,
+        8,
+        10,
+        0
+      ],
+      "pruned": 3,
+      "status": "FOUND",
+      "tape_cap": 2,
+      "target": 1,
+      "visited": 11,
+      "word": [
+        1,
+        3
+      ]
+    },
+    {
+      "endpoint_constraints": {
+        "end": [
+          0,
+          0
+        ],
+        "joint": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "start": [
+          0,
+          0
+        ]
+      },
+      "outgoing": [
+        10,
+        8,
+        11,
+        0
+      ],
+      "pruned": 1,
+      "status": "FOUND",
+      "tape_cap": 2,
+      "target": 1,
+      "visited": 6,
+      "word": [
+        0,
+        3
+      ]
+    },
+    {
+      "endpoint_constraints": {
+        "end": [
+          1,
+          2
+        ],
+        "joint": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "start": [
+          2,
+          1
+        ]
+      },
+      "outgoing": [
+        6,
+        4,
+        8,
+        3
+      ],
+      "pruned": 212,
+      "status": "FOUND",
+      "tape_cap": 5,
+      "target": 5,
+      "visited": 402,
+      "word": [
+        3,
+        0
+      ]
+    },
+    {
+      "endpoint_constraints": {
+        "end": [
+          1,
+          2
+        ],
+        "joint": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "start": [
+          1,
+          3
+        ]
+      },
+      "outgoing": [
+        6,
+        24,
+        26,
+        17,
+        1
+      ],
+      "pruned": 518,
+      "status": "FOUND",
+      "tape_cap": 6,
+      "target": 11,
+      "visited": 997,
+      "word": [
+        1,
+        2,
+        2
+      ]
+    }
+  ],
+  "endpoint_input_controls": 8,
+  "literal_cases": 7670,
+  "random_cases": 90,
+  "status": "PASS",
+  "target_compiler": [
+    {
+      "outgoing": [
+        2,
+        0
+      ],
+      "pruned": 0,
+      "status": "FOUND",
+      "tape_cap": 0,
+      "target": 1,
+      "visited": 1,
+      "word": []
+    },
+    {
+      "pruned": 29,
+      "status": "ABSENT",
+      "tape_cap": 3,
+      "target": 7,
+      "visited": 85
+    },
+    {
+      "pruned": 457,
+      "status": "ABSENT",
+      "tape_cap": 5,
+      "target": 21,
+      "visited": 1017
+    },
+    {
+      "outgoing": [
+        10,
+        32,
+        123,
+        114,
+        99,
+        65,
+        3
+      ],
+      "pruned": 0,
+      "status": "FOUND",
+      "tape_cap": 5,
+      "target": 23,
+      "visited": 101,
+      "word": [
+        0,
+        1,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "outgoing": [
+        74,
+        384,
+        507,
+        498,
+        483,
+        451,
+        386,
+        257,
+        1
+      ],
+      "pruned": 281,
+      "status": "FOUND",
+      "tape_cap": 7,
+      "target": 63,
+      "visited": 1406,
+      "word": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        2,
+        2
+      ]
+    }
+  ],
+  "two_apex_census": {
+    "missing_odd": [
+      7,
+      21
+    ],
+    "pruned": 5336,
+    "tape_cap": 7,
+    "upper": 63,
+    "visited": 10201,
+    "witnesses": {
+      "1": [],
+      "11": [
+        1,
+        2,
+        2
+      ],
+      "13": [
+        1,
+        2,
+        0
+      ],
+      "15": [
+        2,
+        1,
+        0
+      ],
+      "17": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "19": [
+        1,
+        0,
+        2,
+        2
+      ],
+      "23": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "25": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "27": [
+        1,
+        3,
+        1,
+        2
+      ],
+      "29": [
+        1,
+        2,
+        0,
+        2
+      ],
+      "3": [
+        2
+      ],
+      "31": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "33": [
+        1,
+        2,
+        0,
+        0
+      ],
+      "35": [
+        1,
+        0,
+        3,
+        3,
+        0
+      ],
+      "37": [
+        1,
+        2,
+        2,
+        0
+      ],
+      "39": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "41": [
+        3,
+        2,
+        0,
+        0
+      ],
+      "43": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "45": [
+        3,
+        3,
+        0,
+        0
+      ],
+      "47": [
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "49": [
+        1,
+        0,
+        2,
+        1,
+        2
+      ],
+      "5": [
+        1,
+        2
+      ],
+      "51": [
+        1,
+        0,
+        2,
+        0,
+        2
+      ],
+      "53": [
+        1,
+        0,
+        2,
+        1,
+        0
+      ],
+      "55": [
+        1,
+        1,
+        2,
+        3,
+        0
+      ],
+      "57": [
+        1,
+        0,
+        3,
+        2,
+        0
+      ],
+      "59": [
+        1,
+        0,
+        2,
+        0,
+        0
+      ],
+      "61": [
+        1,
+        0,
+        0,
+        0,
+        2,
+        2
+      ],
+      "63": [
+        1,
+        0,
+        0,
+        1,
+        2,
+        2
+      ],
+      "9": [
+        1,
+        0,
+        2
+      ]
+    }
+  }
+}

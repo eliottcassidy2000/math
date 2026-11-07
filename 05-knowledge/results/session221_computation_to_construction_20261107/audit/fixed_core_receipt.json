@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "fixed_core_literal_cases": 778,
+  "endpoint_preserving_normal_forms": 778,
+  "constrained_compiler_profiles": 54,
+  "range_rejection_controls": 2,
+  "scalar_absence_controls": [
+    7,
+    21
+  ],
+  "source_model": "Producer automata.py, tested against independently written backwards endpoint DP",
+  "dependency": "Discrete Busch floor as cited in THM4744 Setting; no independent external paper reproof."
+}

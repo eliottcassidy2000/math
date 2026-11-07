@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "independent_literal_macro_checks": 1140,
+  "independent_literal_programs": 30,
+  "complete_program_count_below_1000000": 4047,
+  "distinct_outputs": 2737,
+  "least_collision": 89,
+  "pair_collisions": 0,
+  "physical_collision_controls": [
+    {
+      "program": [
+        2,
+        2
+      ],
+      "h": 89,
+      "R": 98,
+      "next_h": 481
+    },
+    {
+      "program": [
+        3,
+        1
+      ],
+      "h": 89,
+      "R": 106,
+      "next_h": 513
+    }
+  ],
+  "scope": "Inherited O^m J^2 macro; audit supports exact reduced-language recurrence, pair uniqueness and scoped sparsity, not all-target acceptance."
+}

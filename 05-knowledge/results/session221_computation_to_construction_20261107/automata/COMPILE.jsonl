@@ -1,0 +1,4 @@
+{"pruned": 29, "status": "ABSENT", "tape_cap": 3, "target": 7, "visited": 85}
+{"pruned": 457, "status": "ABSENT", "tape_cap": 5, "target": 21, "visited": 1017}
+{"outgoing": [10, 32, 123, 114, 99, 65, 3], "pruned": 0, "status": "FOUND", "tape_cap": 5, "target": 23, "visited": 101, "word": [0, 1, 0, 2, 0]}
+{"outgoing": [74, 384, 507, 498, 483, 451, 386, 257, 1], "pruned": 281, "status": "FOUND", "tape_cap": 7, "target": 63, "visited": 1406, "word": [0, 1, 0, 0, 1, 2, 2]}

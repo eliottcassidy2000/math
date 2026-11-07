@@ -37,6 +37,12 @@ The audit imports no producer code for these checks. Its graph labels put the ap
 
 The two scripts are independent reconstructions from the mathematical statement. Finite checks supplement the all-N proof rather than supply the infinite quantifier.
 
+## Late strengthening: direct injection
+
+The later direct path injection was separately audited after the initial main-theorem PASS. Paths avoiding the flipped edge remain unchanged. Paths using the old adjacent pair are mapped by swapping that pair; the apex cannot neighbor that old pair in a legal path. The two image types are disjoint. Unmatched new paths are exactly those with blocks `a,v_(i+1),v_i` or `v_(i+1),v_i,a`, and both displayed separate cardinality formulas are correct.
+
+`audit_injection.py` independently enumerated full path sets for every legal site on tapes through length 7: 321 exact injections, their complete unmatched-set classifications, and both separate block counts passed. This late strengthening does not change the main theorem or its scope.
+
 ## Inheritance and originality boundary
 
 Read from commit `38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817`, the October20 `feedback_word_hamilton_spectrum_20261020/proofs.md`, sections 2–4, already proves the weighted inversion formula, exact adjacent response, strict rearrangement, strong interior increment-two exclusion, and fixed-content extrema. These are explicitly marked inherited in the candidate proof.
@@ -52,11 +58,14 @@ Release these audit files together:
 - `audit_strong.py`
 - `physical_receipt.json`
 - `strong_receipt.json`
+- `audit_injection.py`
+- `injection_receipt.json`
 - `PHYSICAL_SHA256SUMS`
 
 From their directory run:
 
     python3 -B audit_physical.py
     python3 -B audit_strong.py
+    python3 -B audit_injection.py
 
 There are no external dependencies and no dependency on the separate fixed-apex compiler packet. No unresolved correctness blocker remains in the audited physical construction.
