@@ -1,0 +1,2 @@
+odd N in [3,X] with odd M_K: 2024 (of which above 2^15: 1752)
+odd N in [3,X] with odd M_K: 10055 (of which above 2^15: 9783)
