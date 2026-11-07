@@ -1,0 +1,8 @@
+z = 0.5: F after 12 gates on random cores: ['8.1231056250', '8.1231056249', '8.1231056254']  limit (2+sqrt(z^2+4))/z = 8.1231056256
+z = 1.0: F after 12 gates on random cores: ['4.2360679764', '4.2360679764', '4.2360679764']  limit (2+sqrt(z^2+4))/z = 4.2360679775
+z = 2.0: F after 12 gates on random cores: ['2.4142134449', '2.4142135003', '2.4142135003']  limit (2+sqrt(z^2+4))/z = 2.4142135624
+z = 3.0: F after 12 gates on random cores: ['1.8685155203', '1.8685147841', '1.8685158138']  limit (2+sqrt(z^2+4))/z = 1.8685170918
+z = 0.5: F(D^6 T) = 0.502956 vs z*phi(T) = 0.500000 ; F(E^10 T) = 1.000000
+z = 2.0: F(D^6 T) = 1.954711 vs z*phi(T) = 2.000000 ; F(E^10 T) = 1.000000
+phi(D Gamma T) = 3.0000000000, phi(Gamma D T) = 3.0000000000, phi(Gamma Gamma D T) = 4.0000000000
+D(Gamma(T)) has a gate in 0 of 50 random cases

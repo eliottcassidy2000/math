@@ -1,0 +1,4 @@
+order n = 4 (4 classes), N = 402: kappa = c3 - 2 ; dev/kappa ranges [3.9452e-04, 3.9452e-04] ; max |dev - kappa*eps| = 1.08e-19 (eps = 3.9452e-04)
+order n = 5 (12 classes), N = 401: kappa = c3 - 4 ; dev/kappa ranges [3.9595e-04, 3.9619e-04] ; max |dev - kappa*eps| = 1.65e-07 (eps = 3.9612e-04)
+order n = 6 (56 classes), N = 402: kappa = c3 - 6 ; dev/kappa ranges [3.9397e-04, 3.9499e-04] ; max |dev - kappa*eps| = 5.57e-07 (eps = 3.9443e-04)
+order n = 7 (456 classes), N = 401: kappa = c3 - 9 ; dev/kappa ranges [3.9429e-04, 3.9754e-04] ; max |dev - kappa*eps| = 1.74e-06 (eps = 3.9595e-04)

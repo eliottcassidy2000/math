@@ -1,0 +1,2 @@
+sw_1 = coefficient of q^(n-2) = 2 c3(T) for 40 random cores of orders 2..7: True
+tower OCF  H(Gamma^r T) = sum_j sw_j(T) H(Gamma^r TT_(n-2j))  for r = 0..4: True

@@ -1,0 +1,8 @@
+Gamma marked resolvent, p_Gamma = p_E, phi(D T) = phi(T), phi(E T) = 1, phi(Gamma T) = (5 phi + 1)/(phi + 1): True
+k = 0 gates: phi = 1 ; Fib(2k+2)/Fib(2k-1) = 1/1 : True
+k = 1 gates: phi = 3 ; Fib(2k+2)/Fib(2k-1) = 3/1 : True
+k = 2 gates: phi = 4 ; Fib(2k+2)/Fib(2k-1) = 8/2 : True
+k = 3 gates: phi = 21/5 ; Fib(2k+2)/Fib(2k-1) = 21/5 : True
+k = 4 gates: phi = 55/13 ; Fib(2k+2)/Fib(2k-1) = 55/13 : True
+k = 5 gates: phi = 72/17 ; Fib(2k+2)/Fib(2k-1) = 144/34 : True
+phi^3 = 2 + sqrt5 = 4.23606797749979
