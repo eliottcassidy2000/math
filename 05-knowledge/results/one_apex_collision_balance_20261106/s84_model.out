@@ -1,0 +1,12 @@
+energy Y: 14-16ln2 = 2.909645   nonconverse per |Y| = 12-16ln2 = 0.909645
+energy X (independent layers): 6-4ln2 = 3.227411
+q=1 (multiplicity  2): fraction of |Y| = 0.321826
+q=2 (multiplicity  4): fraction of |Y| = 0.068552
+q=3 (multiplicity  6): fraction of |Y| = 0.011333
+q=4 (multiplicity  8): fraction of |Y| = 0.001524
+q=5 (multiplicity 10): fraction of |Y| = 0.000172
+q=6 (multiplicity 12): fraction of |Y| = 0.000017
+q=7 (multiplicity 14): fraction of |Y| = 0.000001
+q=8 (multiplicity 16): fraction of |Y| = 0.000000
+energy from histogram (check) = 2.909642
+values attained per |Y| (model) = 0.403426
