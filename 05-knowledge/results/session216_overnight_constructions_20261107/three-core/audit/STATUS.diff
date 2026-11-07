@@ -1,0 +1,18 @@
+--- frozen/PROOF.md
++++ PROOF.md
+@@ -1,6 +1,6 @@
+ # Three fixed cores and a binary inverse problem
+ 
+-**Status:** PROVED construction formula; FINITE-EXACT retained coverage certificate; PROVED elementary all-length inverse bounds and two permanent template omissions; OPEN all-length inverse conjecture. Independent review is pending when this packet is frozen. No unrestricted coverage-record or literature-priority claim is made.
++**Status:** PROVED construction formula; FINITE-EXACT retained coverage certificate; PROVED elementary all-length inverse bounds and two permanent template omissions; OPEN all-length inverse conjecture. Independently audited: PASS; see audit/REVIEW.md and audit/INPUT_FREEZE.md. No unrestricted coverage-record or literature-priority claim is made.
+ 
+ ## 1. A small physical construction language
+ 
+--- frozen/README.md
++++ README.md
+@@ -4,4 +4,4 @@
+ 
+ The all-length statement that this family covers every odd N>=65 remains OPEN. This is a smaller explicit inverse-numeration target, not a Chan–Pak proof or an unrestricted coverage-record claim.
+ 
+-Read PROOF.md for the construction, formula, recipe encoding, scope, and reproduction commands. RECIPES.bin is4,000,008 bytes of specified little-endian uint64 recipes. No inherited graph bank is required for replay.
++Read [PROOF.md](PROOF.md) for the construction, formula, recipe encoding, and scope. The4,000,008-byte RECIPES.bin is not included as a large file: it is stored losslessly as ordered parts. Use [REPLAY.md](REPLAY.md) to reconstruct and verify it before following the original reproduction commands, or run the complete portable replay. No inherited graph bank is required. The [independent review](audit/REVIEW.md) records the audit.

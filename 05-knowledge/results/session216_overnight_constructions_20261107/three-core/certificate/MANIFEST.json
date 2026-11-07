@@ -1,0 +1,104 @@
+{
+  "format": "ordered-base64-of-gzip",
+  "original_name": "RECIPES.bin",
+  "original_bytes": 4000008,
+  "original_sha256": "dde3e79de8165ccf6c31c88a8ea0a131360f1c17b3f5575a74a4e66fb17a75fc",
+  "compressed_sha256": "0c54994df1d069b206ad5a20c8ac0912480e3eba1b39d9ad970810ae106e2c6e",
+  "parts": [
+    {
+      "path": "certificate/recipes-000.b64",
+      "bytes": 120000,
+      "sha256": "ecdc47ebfb89c21d79d78573ec7c4a3932227ee3167b896dcdfb6a3299eaedb6"
+    },
+    {
+      "path": "certificate/recipes-001.b64",
+      "bytes": 120000,
+      "sha256": "af6fd818f6a47975ff81174758c0dae72eabc1adfe4c4780ce0ce498dca3535b"
+    },
+    {
+      "path": "certificate/recipes-002.b64",
+      "bytes": 120000,
+      "sha256": "1a65d2d05cdb832dfd8803f315b858903feb30d7450567d6e57174325acf25d2"
+    },
+    {
+      "path": "certificate/recipes-003.b64",
+      "bytes": 120000,
+      "sha256": "523875fa039d519656bd41f62fce1d8a698befef3f953ac21b6fde87bc306c45"
+    },
+    {
+      "path": "certificate/recipes-004.b64",
+      "bytes": 120000,
+      "sha256": "3841ef0d12ea84f675681b2ba8f483dc9046eabeca8bfbde1c62fd2c9f4a97d7"
+    },
+    {
+      "path": "certificate/recipes-005.b64",
+      "bytes": 120000,
+      "sha256": "fc1e5a1f6cbccd1f41bc3f3530a56771c132bc73f527e829635a849a3c9d19ea"
+    },
+    {
+      "path": "certificate/recipes-006.b64",
+      "bytes": 120000,
+      "sha256": "fabf655b78438f881b45fc93a1ca53ec26dc7c86cc8ecb3fffe4d574bff1600e"
+    },
+    {
+      "path": "certificate/recipes-007.b64",
+      "bytes": 120000,
+      "sha256": "0663c7aa6d9a94acefc54d17368a4ff5383f71824f82327fd51b6571acdd3635"
+    },
+    {
+      "path": "certificate/recipes-008.b64",
+      "bytes": 120000,
+      "sha256": "18901b5690bd1eb1d7e26d6bf5f6ef870c6241d00c56b30eca1c749293beb1e8"
+    },
+    {
+      "path": "certificate/recipes-009.b64",
+      "bytes": 120000,
+      "sha256": "7751132e3b3bf28232eb26af7301c987c01e63f21304d692dafd09670b848889"
+    },
+    {
+      "path": "certificate/recipes-010.b64",
+      "bytes": 120000,
+      "sha256": "36c8d0012a178bb9c3bf071b16908d4e8f07665ddb2256fe51c48bb5ba9fba1e"
+    },
+    {
+      "path": "certificate/recipes-011.b64",
+      "bytes": 120000,
+      "sha256": "9aa4bdd6d244b2c006b543f499a3649f77c108684b59099876da2b99816607d0"
+    },
+    {
+      "path": "certificate/recipes-012.b64",
+      "bytes": 120000,
+      "sha256": "216244752a07482cd38d0874529b29261bfc06d73a8950081fd3f7c008b3ddff"
+    },
+    {
+      "path": "certificate/recipes-013.b64",
+      "bytes": 120000,
+      "sha256": "50ab249bee6e938b5e23053123416f253aa80ba45b53bb9e5bc5d13d16ba63c8"
+    },
+    {
+      "path": "certificate/recipes-014.b64",
+      "bytes": 120000,
+      "sha256": "0f09ef61c481ed5c880dbfe7fddb8f0305e418de97bbee4c01afca78877d1757"
+    },
+    {
+      "path": "certificate/recipes-015.b64",
+      "bytes": 120000,
+      "sha256": "4290f198ae645ec79aaeb1b1fff4db7afbf6e38a80595555135eed60c838449a"
+    },
+    {
+      "path": "certificate/recipes-016.b64",
+      "bytes": 120000,
+      "sha256": "541e154238460647565951a5c9a7451c8ec18efbfd034065553b690b546cea0e"
+    },
+    {
+      "path": "certificate/recipes-017.b64",
+      "bytes": 120000,
+      "sha256": "fec2ebb34436b90bb74c835fff71c2456e75948a87b1aaf0622e0572c14138c3"
+    },
+    {
+      "path": "certificate/recipes-018.b64",
+      "bytes": 62944,
+      "sha256": "5cbbf248dd84cde7ff138a3034ab9abfacd90e26aaa23f9dce7f69c0464e6ae2"
+    }
+  ]
+}

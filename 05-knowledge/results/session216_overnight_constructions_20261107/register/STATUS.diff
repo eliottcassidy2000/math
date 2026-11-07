@@ -1,0 +1,10 @@
+--- FROZEN_REGISTER.md
++++ REGISTER.md
+@@ -1,6 +1,6 @@
+ # Fixed-H5 register completeness and a reset-created adjacent pair
+ 
+-**PROVED elementary construction; separate from the frozen three-core packet.** No Hamilton-count completeness or source-menu width amplification is claimed.
++**PROVED elementary construction; independently audited PASS; separate from the frozen three-core packet.** No Hamilton-count completeness or source-menu width amplification is claimed.
+ 
+ Use the strong core C=(8,1,3,6), with H(C)=5, and a nonempty cut. Let α count ordered spanning covers(P,Q) with Q starting in the cut and P optional, τ require additionally P nonempty ending in the cut, and e count Hamilton paths ending in the cut. A selected/unselected new sink ε gives
+ 

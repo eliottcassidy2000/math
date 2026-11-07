@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "certificate_reconstructed_and_hash_verified": true,
+  "producer_receipt_matches": true,
+  "independent_receipt_matches": true,
+  "exception_receipt_matches": true
+}

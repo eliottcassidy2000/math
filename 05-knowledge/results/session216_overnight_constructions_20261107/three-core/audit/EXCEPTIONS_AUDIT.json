@@ -1,0 +1,14 @@
+[
+  {
+    "value": 47,
+    "order": 7,
+    "permutation_count": 47,
+    "cycle_valid": true
+  },
+  {
+    "value": 63,
+    "order": 8,
+    "permutation_count": 63,
+    "cycle_valid": true
+  }
+]

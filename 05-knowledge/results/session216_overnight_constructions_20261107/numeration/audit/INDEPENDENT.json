@@ -1,0 +1,7 @@
+{
+  "all_passed": true,
+  "inverse_targets": 1000,
+  "direct_candidates": 8119,
+  "large_graphs": 7,
+  "f_controls": 99999
+}

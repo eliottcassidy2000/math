@@ -54,6 +54,28 @@ Three exact all-length ternary families are60*3^m-1,120*3^m+1 and72*3^m+1 for m>
 
 Published [checkpoint2](https://github.com/eliottcassidy2000/math/commit/a1ff23f5b22dcacf6bcc5b6d6b71a25683b1b7e2) contains Sections2–4.
 
+## 6. Three fixed cores give a concrete arithmetic coverage target
+
+[Construction and binary formula](three-core/README.md), [portable certificate replay](three-core/REPLAY.md), [independent audit](three-core/audit/REVIEW.md).
+
+Three fixed strong cores, one with H=5 and two with H=9, provide only 80 core-cut states. Arbitrary cut-labeled transitive prefix and suffix padding followed by a fixed star closure realizes every odd count from 23 through 1,000,000 except 47 and 63, with at most 16 padding vertices. All 499,987 retained recipes and the complete 88,735,747-choice scan were independently checked, together with 3,920 small literal constructions. The largest retained tournament has 22 vertices. Separate explicit strong tournaments supply 47 and 63.
+
+A positive-cover inequality proves that those two exceptions are absent at EVERY padding length within this particular grammar. The same bound gives a finite exact all-length membership algorithm for any specified target. These class-relative exceptions are not missing tournament counts.
+
+The sufficient arithmetic conjecture that these three templates realize every odd N>=65 remains OPEN. Proving it, together with the already verified small cases, would settle the Chan–Pak target. Finite coverage and exact membership algorithms do not prove this infinite occupancy statement. This packet is a compact constructive grammar, not a new unrestricted coverage record.
+
+## 7. Exact registers, persistent adjacent pairs and inverse numeration
+
+[Register theorem and audit](register/README.md), [numeration proof, inverse and audit](numeration/README.md).
+
+With the H=5 core fixed and a nonempty initial cut, selected/unselected sink appends realize exactly the register values alpha>=5 except 8. The joint endpoint-count support is also classified. The Hamilton count after closure still depends on a second coordinate, tau; register completeness is not count completeness.
+
+Two small physical sources close to counts 49 and 51 and preserve their difference after every common append word. A stronger same-order pair closes to 4633 and 4635 and preserves adjacency under arbitrary common cut-labeled transitive padding on BOTH sides. These are returning interfaces, not scalar operations on arbitrary realized counts, and they preserve width rather than prove unbounded unit-gap amplification.
+
+For the three-core formula, deterministic alpha stripping removes the free suffix search. A balanced-prefix lemma says that q^2*4^b>hN leaves at most one positive prefix candidate for a fixed suffix. Exact recipes repair the short-side scout omissions 4,295,971 and 9,948,407. Narrow balanced bands still have finite gaps, so no digit induction follows. Large retained graphs are certified by the exact independently evaluated construction formula and explicit Hamilton cycles; only the stated smaller controls use whole-graph subset DP. The optimized C++ band search requires its documented resource ceiling and signed64-safe intermediates.
+
+Published [checkpoint3](https://github.com/eliottcassidy2000/math/commit/656b8a9248b1534d3a868026356edcdb6d4eb4a1) contains Section5.
+
 ## Continuing obligation
 
 Further work tests source synchronization, richer two-apex constructions and interval-width amplification. The missing step is an all-target physical construction or proved occupancy theorem. Finite certificates, a fixed-width interval family and analytic support bounds are separate kinds of progress and do not supply that step by themselves.

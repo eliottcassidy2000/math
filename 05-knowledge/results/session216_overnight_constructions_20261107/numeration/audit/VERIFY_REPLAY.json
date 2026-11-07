@@ -1,0 +1,7 @@
+{
+  "large_literal_graphs": 7,
+  "physical_subset_counts": 320,
+  "interval_controls": 20000,
+  "unique_interval_controls": 5004,
+  "all_passed": true
+}

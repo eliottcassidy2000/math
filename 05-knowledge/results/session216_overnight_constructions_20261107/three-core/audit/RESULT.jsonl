@@ -1,0 +1,2 @@
+{"independent_scan_count":88735747,"scan_agrees_with_all_recipes":true}
+{"state_controls":3920,"literal_closure_controls":3920,"omitted_tau_failures":3690,"verified_recipes":499987,"max_order":22,"missing":[47,63],"core_counts":[823,290666,208498]}

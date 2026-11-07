@@ -1,0 +1,7 @@
+{"status": "FOUND", "N": 23, "core": 4, "P": 0, "R": 0, "a": 0, "b": 0, "alpha": 9, "tau": 0, "tested": 1}
+{"status": "ABSENT_FROM_GRAMMAR", "N": 47, "tested": 74}
+{"status": "ABSENT_FROM_GRAMMAR", "N": 63, "tested": 129}
+{"status": "FOUND", "N": 65, "core": 12, "P": 0, "R": 0, "a": 0, "b": 1, "alpha": 32, "tau": 4, "tested": 5}
+{"status": "FOUND", "N": 265, "core": 1, "P": 0, "R": 5, "a": 0, "b": 5, "alpha": 185, "tau": 110, "tested": 170}
+{"status": "FOUND", "N": 287, "core": 2, "P": 0, "R": 12, "a": 0, "b": 4, "alpha": 156, "tau": 30, "tested": 49}
+{"status": "FOUND", "N": 1237, "core": 49, "P": 2, "R": 2, "a": 2, "b": 2, "alpha": 730, "tau": 232, "tested": 3050}

@@ -1,0 +1,16 @@
+CORE_STATES.txt
+LARGE_GRAPHS.json
+PROOF.md
+PUBLICATION_FILES.txt
+README.md
+VERIFY.json
+balanced.cpp
+balanced0.out
+balanced1.out
+balanced2.out
+inverse_alpha.out
+inverse_alpha.py
+large.out
+large_repair.out
+short_side_repairs.out
+verify.py

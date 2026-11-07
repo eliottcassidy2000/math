@@ -1,0 +1,108 @@
+--- original/PROOF.md
++++ PROOF.md
+@@ -1,14 +1,18 @@
+ # Three-core numeration: unique balanced candidates and the remaining inverse gap
+ 
+-Status: PROVED exact inverse reductions and scoped obstruction; FINITE-EXACT
+-hostile controls. Coverage of all odd integers at least 65 remains OPEN.
++Status: INDEPENDENTLY AUDITED exact inverse reductions and scoped obstruction;
++FINITE-EXACT hostile controls. Coverage of all odd integers at least 65 remains
++OPEN. See audit/AUDIT.md for the scope and independent checks.
+ 
+ Dependencies are the audited Session216 arithmetic three-core packet:
+-`session216-arithmetic/three-core-release/PROOF.md`, especially its formulas
++`dependencies/THREE_CORE_PROOF.md` (the frozen historical proof), especially its formulas
+ (2),(4),(5), its exact 80 core-cut states, and its strongness condition. The
+ curvature mechanism below is inherited from
+ `session203/uniform-incidence-curvature/PROOF.md`; no new general curvature,
+-transfer, or saturation theorem is claimed.
++transfer, or saturation theorem is claimed. Dependency provenance and the
++final independent three-core PASS verdict are recorded in dependencies/README.md;
++the frozen proof's pending-review wording is historical. The supplied sibling
++three-core-portable package carries its complete certificate and audit.
+ 
+ ## 1. Exact prefix reduction
+ 
+@@ -54,6 +58,11 @@
+ steps. This is an inverse algorithm for that band, NOT an all-target result.
+ The executable has an explicit suffix-length resource ceiling b<27; absence
+ there means only no retained recipe in the tested/resource-limited band.
++The C++ evaluator additionally requires every signed-64-bit intermediate to
++fit: its threshold test uses __int128, but its formula arithmetic uses signed
++long long. Thus b<27 alone does not certify unrestricted numeric inputs.
++All retained target computations meet this arithmetic-domain requirement.
++The abstract interval argument is separate from that implementation limit.
+ 
+ ### Prefix parity recursion
+ 
+@@ -152,7 +161,11 @@
+ tournament recipes under the inherited construction law, not a new global
+ finite-coverage range. Independent verification uses the selected-position
+ pair sum for f rather than the producer recurrence, and retains literal
+-outgoing masks in LARGE_GRAPHS.json.
++outgoing masks in LARGE_GRAPHS.json. The independent audit also checks these
++large counts with the returning coordinate compiler and checks every recorded
++edge and Hamilton cycle. Large counts are certified through the audited
++construction formula, not whole-graph subset DP. The separate 320 literal
++subset-DP tests apply to small control graphs only.
+ 
+ The unresolved obligation is still a uniform selection theorem guaranteeing
+ some compatible alpha trajectory or padding band for each requested odd N.
+--- original/README.md
++++ README.md
+@@ -1,6 +1,7 @@
+ # Three-core numeration lane
+ 
+-Read PROOF.md. The all-odd-at-least-65 inverse conjecture remains open.
++Read PROOF.md and audit/AUDIT.md. This portable packet has been independently
++audited. The all-odd-at-least-65 inverse conjecture remains open.
+ This packet proves a unique balanced-prefix candidate lemma, implements exact
+ all-length membership via deterministic alpha stripping, and records a
+ restricted curvature obstruction and explicit hostile tests.
+@@ -29,3 +30,36 @@
+ and explicit Hamilton cycles proving their strongness. Their large counts
+ are certified by the independently evaluated inherited construction formula,
+ not by infeasible whole-graph subset enumeration.
++
++## Arithmetic domain and audit reproduction
++
++The C++ evaluator requires all signed-64-bit intermediate values to fit. Its
++__int128 threshold check does not widen its formula arithmetic. The b<27
++resource ceiling alone therefore does not establish correctness for arbitrary
++numeric inputs. All retained receipts are within the safe arithmetic domain.
++The Python all-length membership decision uses arbitrary-precision integers;
++its completeness is not an all-target occupancy theorem.
++
++From this directory, additionally run:
++
++    PYTHONDONTWRITEBYTECODE=1 python3 audit/check_independent.py
++    sha256sum -c SHA256SUMS
++
++The independent check compares the alpha-stripping membership procedure with
++a separate bounded direct enumeration and returning coordinate compiler.
++Large graph counts use the audited formula/compiler, not whole-graph subset
++DP; the 320 subset-DP controls are small graphs.
++
++original/ preserves the exact pre-release inputs and original independent
++checker. RELEASE.diff gives all changes to proof, README and checker. The
++checker change only relocates its input directory for this portable layout.
++The historical audit and input manifest are preserved unchanged in audit/.
++PUBLICATION_FILES.txt lists the portable files; SHA256SUMS hashes every listed
++file other than itself. No cache files are part of this release.
++
++The audited three-core proof dependency and its final independent verdict
++are included under dependencies/, with original proof and manifest hashes.
++Its historical pending-review wording is preserved unchanged. The supplied
++sibling session216-three-core-portable/ contains the complete certificate.
++The Session203 curvature citation records inheritance; this packet claims
++only its explicitly restricted fixed-block curvature result.
+--- original/check_independent.py
++++ audit/check_independent.py
+@@ -1,6 +1,6 @@
+ from pathlib import Path
+ import json, importlib.util, itertools
+-D=Path(__file__).parent; F=D/'frozen'
++D=Path(__file__).parent; F=D.parent
+ C=[tuple(map(int,s.split())) for s in (F/'CORE_STATES.txt').read_text().splitlines()]
+ spec=importlib.util.spec_from_file_location('inverse',F/'inverse_alpha.py'); inv=importlib.util.module_from_spec(spec);spec.loader.exec_module(inv)
+ def compile(c,p,r,b):
