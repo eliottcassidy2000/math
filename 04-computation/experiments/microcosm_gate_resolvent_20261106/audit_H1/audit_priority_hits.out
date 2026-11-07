@@ -1,0 +1,52 @@
+== phi(T) = F_T(1) is THM-1950's total inverse-response s(T) = 1^T(I+K)^(-1)1, K = A - A^T (u^T X u = u^T X^T u, so (I+M)^(-1) and (I-M)^(-1) give the same scalar)
+--- THM-1950 (klein-2026-07-21-S400)
+49:## The engine: the total inverse-response s
+52:`s = xᵀ(I+K)x = xᵀx = ‖x‖² ≥ 0`, and Cauchy–Schwarz gives `s ≤ n`; the singular values of `I+K`
+53:are `√(1+σ²)≥1`, so `‖(I+K)⁻¹‖≤1`. A singleton has `s=1`.
+68:2. **Velocity-addition law for s.** Solving the block system gives
+83:## `s` is a regularity coordinate: `s(T)=n ⟺ T regular`
+--- klein S400 reflection: strong minima of s for n = 3..8
+57:My first attempt used `s ≥ 1 for strong`, true `n ≤ 6` (min s = 3,3,2,**1**) — and **false at
+58:`n ≥ 7`** (min strong `s` = 0.667, 0.556, …). The naive kernel `∏sᵢ ≥ Φ` dies with it. The repair is
+61:`min s = 1` at `n=6` was a marginal-threshold artifact — the same trap as the H-spectrum `{7,21,35,39}
+--- THM-4051: order-7 strong range of the inverse response
+94:Across all strong order-seven classes the inverse response ranges from `2/3`
+--- THM-3729: det(I+K) u^T(I+K)^(-1)u = odd rooted-Pfaffian square sum
+7:  det(I+K)u^T(I+K)^(-1)u.  For tournaments this identifies THM-1950's formerly open
+== gate operator, all-n size-weighted cycle expansion (sw_1 = 2 c3, sw_2 = 2 c5 + 4 pairs), one-vertex tower values
+--- Session150 transfer (2026-11-02)
+11:## Explicit two-vertex wrapper
+13:Let F(T) replace one vertex of a directed triangle by T; write cross orientations T -> x -> y -> T. The only admissible words with one T-run are Txy, xyT, yTx, and with two T-runs is TxyT. There are no more. Therefore
+--- Session159 cycle_profiles (2026-11-03)
+16:    F_T(r) = sum_K 2^c r^(u+c)
+19:Every exponent has the same parity as n, so F_T(−r)=(−1)^n F_T(r). All coefficients in the power basis are nonnegative integers. In particular, the r^(n−2) coefficient is twice the number of directed triangles; the r^(n−4) coefficient is twice the n
+55:    F_{G(T)}(r) = r^2 F_T(r) + r[F_T(r+1)−F_T(r−1)].       (2)
+57:Indeed distinct slots give r(r−1)F_T(r). Identical slots give r[F_T(r)+F_T(r+1)−F_T(r−1)]: the last term corrects the case where that slot contains neither T-vertex. These hold at all nonnegative integers r, with F_T(0)=0 for nonempty T, and hence as 
+--- Session159 profile_operator (2026-11-03)
+11:    F_r(G(X)) = r F_(r+1)(X) + r^2 F_r(X) - r F_(r-1)(X),  r>=1.   (1)
+25:    P_G = (z+z²)P_X'' + (3z+2z²)P_X' + (z+z²)P_X.   (2)
+36:where out-of-range terms are zero. At k=0 the negative-looking coefficient multiplies p_(-1)=0. This transfer is entrywise nonnegative. It encodes singleton insertion and collision as a finite-band positive operator on the carrier's path-cover profile. Diff
+56:    h(X_m)         1  3  15  123  1479  23955  496479.
+== HC = 7 / HC = 21 class counts at the least orders
+--- Session212 cycle-levels n7_hist.tsv (cycles, classes)
+9:7	24
+--- Session212 cycle-levels n8_hist.tsv (cycles, classes)
+9:7	118
+23:21	228
+== F_21 = doubling plus translation mod 7; Paley primes; doubling tower keeps F_21
+--- THM-4556 remark
+92:  * ANALOGY: `F_21 = {x ↦ 2^i x + b mod 7}` is doubling plus translation modulo `M_3`. Nothing in the theorem uses it.
+--- mersenne_switch_parity_f21 note (2026-10-06)
+21:  * Proposition 3 (*new*): the two append maps generate `F_21 = Aut(P_7)`, and only at 7. That `F_21` is doubling plus translation is THM-4556's remark.
+50:   * Modulo 7, `A_1` and `R` generate exactly `F_21 = Aut(P_7)`.
+149:1. Modulo 7, `A_1` (multiplier 2) and `R` (multiplier 4) lie in `F_21 = {x -> ax + b : a ∈ QR_7} = Aut(P_7)` and generate it.
+--- seven_twentyone note (2026-10-06)
+42:   * `F_21 = {x ↦ 2^i x + b mod 7}`, and 7 is the only Mersenne prime with `⟨2⟩ = QR_p`.
+110:* `F_21 = {x -> 2^i x + b (mod 7)}`: doubling and translation modulo `M_3`. Its analogue on `Z/M_a` has order `a(2^a − 1)`; doubling mod `M_a` is the cyclic rotation of `a`-bit words.
+--- THM-4644 part 3 (Paley primes)
+35:3. **Paley primes.** If `ord_p(2) = (p − 1)/2` and `p ≡ 3 (mod 4)` (so `d = d'`), the doubling-invariant circulant tournaments on `Z_p` are exactly the Paley tournament and its reverse. Examples:
+--- THM-4557 / HYP-9162
+3:title: "Doubling a doubly regular tournament keeps its automorphism group: for every doubly regular tournament T on n = 4t+3 >= 7 vertices, the skew-Hadamard doubling D(T) = T + {0'} + T' has Aut(D(T)) = Aut(T) (diagonal extensions); in particular the Sierpi
+== Session35 all-depth padding law (E-tower)
+--- Session35 section 6
+121:Thus repeated endpoint extension has an explicit all-depth law C_{E^k(M)}=((z+1)/(z−1))^(2k) C_M. This is an exact scattering-coordinate linearization, not an identity between the underlying E and D operations. For a transitive n-tournament,

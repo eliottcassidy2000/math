@@ -1,0 +1,23 @@
+cover polynomials (low -> high): {'C3': [0, 2, 0, 1], 'TT3': [0, 0, 0, 1], 'R5': [0, 4, 0, 10, 0, 1], 'TT5': [0, 0, 0, 0, 0, 1], 'QR7': [0, 48, 0, 112, 0, 28, 0, 1], 'TT7': [0, 0, 0, 0, 0, 0, 0, 1]}
+kappa = c3 - c3(K1 tower of same order): {'C3': 0, 'TT3': -1, 'R5': 1, 'TT5': -4, 'QR7': 5, 'TT7': -9}
+N =  101: C3 +0.000e+00 [N^2 dev +0.0] | TT3 -3.943e-03 [N^2 dev -40.2] | R5 +3.919e-03 [N^2 dev +40.0] | TT5 -1.573e-02 [N^2 dev -160.5] | QR7 +1.955e-02 [N^2 dev +199.4] | TT7 -3.521e-02 [N^2 dev -359.1]
+N =  201: C3 +0.000e+00 [N^2 dev +0.0] | TT3 -1.267e-03 [N^2 dev -51.2] | R5 +1.264e-03 [N^2 dev +51.1] | TT5 -5.063e-03 [N^2 dev -204.6] | QR7 +6.317e-03 [N^2 dev +255.2] | TT7 -1.137e-02 [N^2 dev -459.5]
+N =  401: C3 +0.000e+00 [N^2 dev +0.0] | TT3 -3.962e-04 [N^2 dev -63.7] | R5 +3.960e-04 [N^2 dev +63.7] | TT5 -1.584e-03 [N^2 dev -254.8] | QR7 +1.979e-03 [N^2 dev +318.3] | TT7 -3.563e-03 [N^2 dev -572.9]
+N =  801: C3 +0.000e+00 [N^2 dev +0.0] | TT3 -1.213e-04 [N^2 dev -77.8] | R5 +1.213e-04 [N^2 dev +77.8] | TT5 -4.852e-04 [N^2 dev -311.3] | QR7 +6.064e-04 [N^2 dev +389.1] | TT7 -1.091e-03 [N^2 dev -700.3]
+N = 1201: C3 +0.000e+00 [N^2 dev +0.0] | TT3 -6.021e-05 [N^2 dev -86.8] | R5 +6.020e-05 [N^2 dev +86.8] | TT5 -2.408e-04 [N^2 dev -347.3] | QR7 +3.010e-04 [N^2 dev +434.1] | TT7 -5.418e-04 [N^2 dev -781.5]
+rate: rho_(3,r) = U_(1,r)/U_(3,r), N = 3 + 2r
+  N =   23: rho = 2.1350e-02, N^2 rho/log^2 N = 1.149, |dev|/2 = 2.0476e-02, 2 N^2 rho = 22.6
+  N =   43: rho = 7.8802e-03, N^2 rho/log^2 N = 1.030, |dev|/2 = 7.7579e-03, 2 N^2 rho = 29.1
+  N =   83: rho = 2.7271e-03, N^2 rho/log^2 N = 0.962, |dev|/2 = 2.7123e-03, 2 N^2 rho = 37.6
+  N =  123: rho = 1.4320e-03, N^2 rho/log^2 N = 0.936, |dev|/2 = 1.4279e-03, 2 N^2 rho = 43.3
+  N =  163: rho = 8.9898e-04, N^2 rho/log^2 N = 0.921, |dev|/2 = 8.9736e-04, 2 N^2 rho = 47.8
+  N =  203: rho = 6.2381e-04, N^2 rho/log^2 N = 0.911, |dev|/2 = 6.2303e-04, 2 N^2 rho = 51.4
+  N =  243: rho = 4.6164e-04, N^2 rho/log^2 N = 0.903, |dev|/2 = 4.6121e-04, 2 N^2 rho = 54.5
+  N =  401: rho = 1.9817e-04, N^2 rho/log^2 N = 0.887, |dev|/2 = 1.9810e-04, 2 N^2 rho = 63.7
+  N =  801: rho = 6.0660e-05, N^2 rho/log^2 N = 0.871, |dev|/2 = 6.0653e-05, 2 N^2 rho = 77.8
+  N = 1201: rho = 3.0105e-05, N^2 rho/log^2 N = 0.864, |dev|/2 = 3.0103e-05, 2 N^2 rho = 86.8
+c3 first-order law over all classes (reference: TT2 tower for even n, K1 tower for odd n)
+  n = 4 (4 classes), N = 402: c3_ref = 2; dev/kappa in [3.9452e-04, 3.9452e-04], eps = 3.9452e-04, max |dev - kappa eps| = 1.08e-19; kappa = 0 classes: 1, of which 0 have dev != 0 (max |dev| = 0.00e+00)
+  n = 5 (12 classes), N = 401: c3_ref = 4; dev/kappa in [3.9595e-04, 3.9619e-04], eps = 3.9612e-04, max |dev - kappa eps| = 1.65e-07; kappa = 0 classes: 3, of which 2 have dev != 0 (max |dev| = 1.58e-07)
+  n = 6 (56 classes), N = 402: c3_ref = 6; dev/kappa in [3.9397e-04, 3.9499e-04], eps = 3.9443e-04, max |dev - kappa eps| = 5.57e-07; kappa = 0 classes: 12, of which 11 have dev != 0 (max |dev| = 5.49e-07)
+  n = 7 (456 classes), N = 401: c3_ref = 9; dev/kappa in [3.9429e-04, 3.9754e-04], eps = 3.9595e-04, max |dev - kappa eps| = 1.74e-06; kappa = 0 classes: 61, of which 60 have dev != 0 (max |dev| = 1.74e-06)

@@ -1,0 +1,6 @@
+order-5 classes with c3 = 4: cover polynomials (low -> high) = [[0, 2, 0, 8, 0, 1], [0, 4, 0, 8, 0, 1], [0, 6, 0, 8, 0, 1]]
+r =  0: H ratio - 1 = -2.667e-01  (rho_(5,r) = 1.000e+00; (ratio-1)/rho = -2.667e-01; predicted second-order term (sw2 - sw2')U_(1,r)/U_(5,r) = -4.000e+00)
+r =  1: H ratio - 1 = -9.756e-02  (rho_(5,r) = 2.727e-01; (ratio-1)/rho = -3.577e-01; predicted second-order term (sw2 - sw2')U_(1,r)/U_(5,r) = -3.636e-01)
+r =  5: H ratio - 1 = -7.530e-03  (rho_(5,r) = 4.988e-02; (ratio-1)/rho = -1.510e-01; predicted second-order term (sw2 - sw2')U_(1,r)/U_(5,r) = -1.065e-02)
+r = 20: H ratio - 1 = -2.241e-04  (rho_(5,r) = 7.541e-03; (ratio-1)/rho = -2.972e-02; predicted second-order term (sw2 - sw2')U_(1,r)/U_(5,r) = -2.377e-04)
+r = 60: H ratio - 1 = -7.943e-06  (rho_(5,r) = 1.402e-03; (ratio-1)/rho = -5.665e-03; predicted second-order term (sw2 - sw2')U_(1,r)/U_(5,r) = -8.032e-06)

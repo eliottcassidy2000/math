@@ -14,5 +14,6 @@ cc -O2 -o hc_gate_free hc_gate_free.c && for n in 5 6 7 8; do "${GENTOURNG:-/opt
 python3 c3_first_order_law.py > c3_first_order_law.out 2>&1
 python3 cover_tower_values.py > cover_tower_values.out 2>&1
 python3 tower_weights_diffusion.py > tower_weights_diffusion.out 2>&1
+python3 tower_forgetting_bound.py > tower_forgetting_bound.out 2>&1
 for n in 5 6 7 8 9; do python3 phi_strong_minimum.py $n; done > phi_strong_minimum.out 2>&1
 echo "all done"

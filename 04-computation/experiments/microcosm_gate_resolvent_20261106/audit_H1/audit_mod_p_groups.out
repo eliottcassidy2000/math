@@ -1,0 +1,7 @@
+|<x+2, 2x> mod 7| = 21 ; multipliers = [1, 2, 4] ; QR7 = [1, 2, 4]
+|Aut(QR7)| by brute force = 21 ; equals <x+2,2x>: True
+x + {1,2,4} pairwise meet in one point (Fano plane): True
+primes p < 200 with ord_p(2) = (p-1)/2: [7, 17, 23, 41, 47, 71, 79, 97, 103, 137, 167, 191, 193, 199]
+   of these p = 3 mod 4 (QR_p a tournament): [7, 23, 47, 71, 79, 103, 167, 191, 199]
+   of these p = 1 mod 4 (QR_p a graph, not a tournament): [17, 41, 97, 137, 193]
+p = 23: affine automorphisms of QR23: 253 = 23*11 = 253

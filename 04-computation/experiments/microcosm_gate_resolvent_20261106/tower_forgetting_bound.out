@@ -1,0 +1,9 @@
+(b)2 U_(e,r) >= (r+1) U_(e-2,r) for r <= 120 and 2 <= e <= 260 - 2r: violations = 0
+     slack S >= U_(e-2,r): violations = 0
+     min over e of U_(e,r)/((r+1)U_(e-2,r)) at r = 0, 1, 2, 5, 10, 20, 40, 80, 120: 1.000, 1.500, 2.067, 3.094, 4.156, 5.917, 8.818, 13.618, 17.796
+order 4: 4 classes; all sw_j >= 0: True
+order 5: 12 classes; all sw_j >= 0: True
+order 6: 56 classes; all sw_j >= 0: True
+(c) explicit error bound on 134584 (T, T', r) triples (orders 4-6, r <= 60): violations = 0; max |E|/bound = 0.3922
+audit-H1 example: P = q^5+8q^3+2q vs q^5+8q^3+6q (c3 = 4 both): H ratio - 1 at r = 20 = -2.241e-04
+all done

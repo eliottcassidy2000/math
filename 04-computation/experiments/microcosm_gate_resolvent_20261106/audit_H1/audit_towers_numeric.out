@@ -1,0 +1,20 @@
+k= 2 (order 5): |eig| = [0.0, 1.7321, 2.6458]  max err vs cot^2 formula 1.3e-15
+k= 3 (order 7): |eig| = [0.0, 1.7321, 2.1279, 3.6704]  max err vs cot^2 formula 4.4e-16
+k= 6 (order 13): |eig| = [0.0, 1.7321, 2.0214, 2.1007, 2.3091, 2.9656, 7.237]  max err vs cot^2 formula 4.4e-15
+k=14 (order 29): |eig| = [0.0, 1.7321, 2.0034, 2.014, 2.0328, 2.0621, 2.1054, 2.1689, 2.2635, 2.4092, 2.6458, 3.0618, 3.8932, 6.0136, 17.2854]  max err vs cot^2 formula 1.1e-14
+(2) spectrum of Gamma^k(K1) = {0, +-i sqrt3} u {+-i sqrt(4 + cot^2((2j+1)pi/(2(2k-1)))), j < k-1}: k = 1..14
+(2) gate towers: F_(Gamma^k T)(z) - (2+s)/z, exact rational F, cores of orders 1..6
+   z = 0.5: limit 8.1231056256; predicted contraction ((s-1)/(s+1))^2 = 0.120226; max relative deviation of observed contraction (k = 8..10) = 3.05e-07
+   z = 1.0: limit 4.2360679775; predicted contraction ((s-1)/(s+1))^2 = 0.145898; max relative deviation of observed contraction (k = 8..10) = 4.60e-07
+   z = 2.0: limit 2.4142135624; predicted contraction ((s-1)/(s+1))^2 = 0.228094; max relative deviation of observed contraction (k = 8..10) = 7.52e-06
+   z = 3.0: limit 1.8685170918; predicted contraction ((s-1)/(s+1))^2 = 0.320063; max relative deviation of observed contraction (k = 8..10) = 1.32e-04
+   z = 4.0: limit 1.6180339887; predicted contraction ((s-1)/(s+1))^2 = 0.402605; max relative deviation of observed contraction (k = 8..10) = 4.35e-04
+(2) F_T(z) > 0 at 300 random (T, z > 0): violations 0
+(3) D-tower: F_(D^k T)(z) vs (z/w_k) F_T(w_k), w_k^2 - 1 = (z^2-1)/2^k, and limit z phi(T)
+   z = 0.5: F(D^4 T) = 1.561026, (z/w_4)F_T(w_4) = 1.561026, z*phi(T) = 1.500000
+   z = 2.0: F(D^4 T) = 1.910448, (z/w_4)F_T(w_4) = 1.910448, z*phi(T) = 2.000000
+   z = 3.0: F(D^4 T) = 2.448980, (z/w_4)F_T(w_4) = 2.448980, z*phi(T) = 3.000000
+(3) E-tower z = 0.5: F(E^12 T) = 1.00000000
+(3) E-tower z = 2.0: F(E^12 T) = 1.00000000
+(3) E-tower z = 3.0: F(E^12 T) = 1.00000002
+FAILURES: 0

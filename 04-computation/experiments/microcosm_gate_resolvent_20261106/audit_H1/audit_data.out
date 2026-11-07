@@ -1,0 +1,24 @@
+(a) min / max of phi over strong classes
+  n = 5: 6 strong classes; min phi = 2 attained by 1 class(es), scores [[1, 1, 2, 3, 3]]; max phi = 5.000000
+  n = 6: 35 strong classes; min phi = 1 attained by 1 class(es), scores [[1, 1, 2, 3, 4, 4]]; max phi = 5.000000
+  n = 7: 353 strong classes; min phi = 2/3 attained by 1 class(es), scores [[1, 1, 2, 3, 4, 5, 5]]; max phi = 7.000000
+  n = 8: 6008 strong classes; min phi = 5/9 attained by 1 class(es), scores [[1, 1, 2, 3, 4, 5, 6, 6]]; max phi = 7.000000
+  n = 9: 178133 strong classes; min phi = 1/2 attained by 2 class(es), scores [[2, 2, 2, 2, 3, 5, 6, 7, 7], [1, 1, 2, 3, 5, 6, 6, 6, 6]]; max phi = 9.000000
+(b) Hamiltonian-cycle counts 7 and 21 among strong classes
+  n = 3: 1 strong classes; HC = 7: 0 classes (0 gated); HC = 21: 0 classes (0 gated); gated strong classes: 1
+  n = 4: 1 strong classes; HC = 7: 0 classes (0 gated); HC = 21: 0 classes (0 gated); gated strong classes: 1
+  n = 5: 6 strong classes; HC = 7: 0 classes (0 gated); HC = 21: 0 classes (0 gated); gated strong classes: 2
+  n = 6: 35 strong classes; HC = 7: 0 classes (0 gated); HC = 21: 0 classes (0 gated); gated strong classes: 4
+  n = 7: 353 strong classes; HC = 7: 24 classes (0 gated); HC = 21: 0 classes (0 gated); gated strong classes: 12
+  n = 8: 6008 strong classes; HC = 7: 118 classes (0 gated); HC = 21: 228 classes (0 gated); gated strong classes: 56
+(c) gated spectra H(Gamma T) over all core classes
+  n = 1: 1 distinct; first values [3]; 2^n+1 = 3; 3+3*2^(n-1) = 6
+  n = 2: 1 distinct; first values [5]; 2^n+1 = 5; 3+3*2^(n-1) = 9
+  n = 3: 2 distinct; first values [9, 15]; 2^n+1 = 9; 3+3*2^(n-1) = 15
+  n = 4: 3 distinct; first values [17, 27, 37]; 2^n+1 = 17; 3+3*2^(n-1) = 27
+  n = 5: 8 distinct; first values [33, 51, 69, 93, 111, 117]; 2^n+1 = 33; 3+3*2^(n-1) = 51
+  n = 6: 24 distinct; first values [65, 99, 133, 153, 177, 211]; 2^n+1 = 65; 3+3*2^(n-1) = 99
+  n = 7: 139 distinct; first values [129, 195, 261, 297, 345, 399]; 2^n+1 = 129; 3+3*2^(n-1) = 195
+  gated values <= 40 over core orders 1..7: [3, 5, 9, 15, 17, 27, 33, 37]
+(d) face formula A_Gamma(T)(x) = sum_(A,B,C) A_T[A]A_T[B]A_T[C](x^([A]+[B=0]+[C]) + x^(2[B])) vs brute force, H(Gamma T) = (n+2)a_0 + a_1, and A_Gamma(T) recovered from L P_T by the binomial transform: 17 random cores n = 1..6
+FAILURES: 0
