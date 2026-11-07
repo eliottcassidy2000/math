@@ -1,0 +1,50 @@
+{
+  "census": [
+    {
+      "labeled_tournaments": 1,
+      "n": 1,
+      "nonsink_roots_in_both_orientations": 0,
+      "positive_equalities_both_orientations": 0,
+      "zero_equalities_both_orientations": 0
+    },
+    {
+      "labeled_tournaments": 2,
+      "n": 2,
+      "nonsink_roots_in_both_orientations": 4,
+      "positive_equalities_both_orientations": 0,
+      "zero_equalities_both_orientations": 4
+    },
+    {
+      "labeled_tournaments": 8,
+      "n": 3,
+      "nonsink_roots_in_both_orientations": 36,
+      "positive_equalities_both_orientations": 12,
+      "zero_equalities_both_orientations": 24
+    },
+    {
+      "labeled_tournaments": 64,
+      "n": 4,
+      "nonsink_roots_in_both_orientations": 448,
+      "positive_equalities_both_orientations": 96,
+      "zero_equalities_both_orientations": 144
+    },
+    {
+      "labeled_tournaments": 1024,
+      "n": 5,
+      "nonsink_roots_in_both_orientations": 9600,
+      "positive_equalities_both_orientations": 720,
+      "zero_equalities_both_orientations": 960
+    },
+    {
+      "labeled_tournaments": 32768,
+      "n": 6,
+      "nonsink_roots_in_both_orientations": 380928,
+      "positive_equalities_both_orientations": 5760,
+      "zero_equalities_both_orientations": 7200
+    }
+  ],
+  "near_transitive_family_cases": 24,
+  "orphan_word_cases": 466,
+  "scope": "FINITE-EXACT controls; all-order proof in EQUALITY.md",
+  "status": "PASS"
+}
