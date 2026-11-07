@@ -23246,3 +23246,47 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     including the endpoints.
   - Extreme-value bounds (maximum multiplicity, first miss, largest gap) must come from the registered model's tail
     at the target size, never from eyeballing the in-sample maxima.
+
+## MISTAKE-729 (2026-11-06, mac-mini-2026-11-06-microcosm, THM-4900, HYP-9490 and the note `05-knowledge/results/microcosm_gate_doubling_resolvent_20261106.md` at the pre-audit commits 5387e02f97 and ee4f5cfe49; found by the independent audit `05-knowledge/results/microcosm_audit_H1_20261106.md`) -- an asymptotic error term of the wrong shape, a prime condition missing p = 3 (mod 4), and three priority misses (a "new invariant" that was THM-1950's s, an all-order coefficient and operator already in Session159, class counts already in Session212)
+
+- **What was claimed.**
+  - HYP-9490 Consequence (also its title, note §2 and the INDEX line): for cores of the same order,
+    H(Γ^r T)/H(Γ^r T′) = 1 + 2Δc3·ρ_(n,r)·(1 + o(1)).
+  - Note §3: "the same happens for every prime p where 2 generates exactly the quadratic residues".
+  - Note §3: "the first two square-sum path counts after the onsets 23 and 25 are 3 and 10", and "q = (H − 1)/2
+    linearises the join".
+  - HYP-9490: "d = 4 agrees to within 1%".
+  - As new: φ(T) = F_T(1) = uᵀ(I + MᵀM)⁻¹u with 0 < φ ≤ n (= n iff regular), velocity addition at z = 1 and the strong
+    minima table; sw_1 = 2c3 "for every n" (THM-078 cited only for odd n); the gate's cover operator in differential
+    form and the one-vertex tower values; the HC = 7/21 class counts 24 and 228.
+- **What is true.**
+  - The error term is o(ρ), not 2Δc3·ρ·o(1). The latter fails whenever Δc3 = 0 but a higher sw_j differs. Example:
+    the order-5 classes with P = q⁵ + 8q³ + 2q and q⁵ + 8q³ + 6q both have c3 = 4, but their towers differ by
+    −2.24·10⁻⁴ at r = 20. The corrected law is now PROVED with an explicit O(ρ/r) error (THM-4900(7)).
+  - The Paley statement needs p ≡ 3 (mod 4). For 17, 41, 97, … QR_p is a graph, not a tournament (THM-4644(3)).
+  - p(Q23) = 3 and p(Q25) = 10 are the counts at the onsets. q + q′ + 2qq′ is not linear; 1 + 2q is multiplicative.
+  - d = 4 agrees with d = 3 to within 3.0% at N = 24, 1.2% at N = 44 and 0.5% from N = 84 on.
+  - φ is THM-1950's total inverse response s(T) (klein-2026-07-21-S400), with its bounds, the velocity-addition law
+    and the strong minima for n ≤ 8 (also THM-4051).
+  - Session159 `cycle_profiles` (1) has the size-weighted odd-cycle form of P_T at every order (sw_1 = 2c3,
+    sw_2 = 2c5 + 4·pairs). Session150/159 have the gate operator, its positive differential form, the one-vertex values
+    3, 15, 123, …, 12725547, and the exponential coefficients c_(r,q) behind the operator form.
+  - Session212 `cycle-levels` histograms already have the counts 24 and 228.
+- **Repair.**
+  - The Consequence was replaced by THM-4900(7)(c), proved via the new bound ρ_(d,r) ≤ 1/(r+1). HYP-9490 is re-scoped
+    to the sharp rate only.
+  - The invariant was renamed s(T) as in THM-1950, and all items were re-typed KNOWN with citations.
+  - Note §3 was corrected. The Fano/F21 reading was re-typed KNOWN (classical; THM-4556 remark) and ANALOGY.
+- **How it was caught.** The audit:
+  - tested the Consequence on pairs with Δc3 = 0, not only on pairs with Δc3 ≠ 0;
+  - grepped the canon for the invariant's matrix form ((I + K)⁻¹) instead of its new name;
+  - grepped `05-knowledge/results/session1*` notes, not only INDEX and the top-level session folders.
+- **Lesson.**
+  - Before writing an asymptotic "A = B·(1 + o(1))", check the case B = 0. If the main term can vanish, the error
+    belongs outside the product: A = B + o(scale).
+  - Before naming a "new" matrix invariant, grep the canon for its formula in every equivalent form (here (I − M)⁻¹,
+    (I + K)⁻¹, (I + MᵀM)⁻¹).
+  - Codex session notes live in three places: INDEX, top-level `sessionNNN/` folders, and
+    `05-knowledge/results/sessionNNN_*`. A priority grep must cover all three.
+  - A condition like "2 generates the quadratic residues" does not by itself make QR_p a tournament. State p ≡ 3
+    (mod 4) whenever a Paley tournament is meant.
