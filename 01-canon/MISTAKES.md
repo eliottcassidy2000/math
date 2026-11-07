@@ -23478,3 +23478,63 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - Pre-register bulk statistics: class means, counts below a threshold, and the class split of near-misses. Do not
     register the extreme of a heavy-tailed statistic over a large window.
   - For a K-parametrised statement, grep the repository for its K = 0 case (Session206's T here) before typing it new.
+
+## MISTAKE-734 (2026-11-07, kind-pasteur-2026-11-07-S15, THM-4916, HYP-9506, ATLAS.md and the packet `05-knowledge/results/root_change_local_factors_20261107/` at the pre-audit commit 05b4c174db; found by the independent audit `05-knowledge/results/root_change_local_factors_20261107/audit/AUDIT.md`)
+
+- **What was claimed.**
+  - (1) THM-4916 was typed "PROVED (new as stated): (1a)-(1e)". Session223's 3-adic work was called "under
+    investigation", and the mod-3 limits 34/27 and 47/54 were called conjectures.
+  - (2) PROOF section 3, under "what is proved": coverage "by one seed, by any finite bank, or by any fixed linear form
+    in one free state is impossible", so "every proof needs the joint freedom of two states".
+  - (3) ATLAS section 3, README and HYP-9506 (B): the Fermat primes are "exactly" the primes for which a cheap tail
+    makes every balanced readout a multiple of p, and "this is why 3, 5 and 17 dominate the local factors (R3
+    CONFIRMED)".
+  - Minor:
+    - "(L(0) - 1) p tends to about 1.5", read off finite n = 1000 values;
+    - the 1.87 class ratio at 2^18 credited to tail confinement;
+    - "M_2 mean about 0.5 ln^2 N", and "mu = 180 at the last miss" (an 8-bit saturated lower bound);
+    - "every large miss is rough";
+    - the 21 step of Chan-Pak's exclusion;
+    - Session211's port bridge stated backwards;
+    - wrong displayed fractions for p >= 19 in `exact_limit.out`;
+    - F_<=2 = {K(v,w)} without the value 1.
+- **Why it was wrong.**
+  - (1) Priority:
+    - (1a) is Session206 weighted-parameter-capacity, restated as THM-4888 (C).
+    - (1b) is Session223 cutoff/REPORT.md eq. (2), pushed 32 s before the checkpoint.
+    - (1c) and (1e) follow in one line from JZ = OJ, Session199's balanced-pair product K = hh', and Session223's
+      rectangle mechanism.
+    - (1d)'s a is Session199's -f.
+    - Session223's checkpoint 2 had already PROVED 34/27, 47/54 and the 3-adic law at every precision, by the same
+      Cesaro projector. The packet fetched before its pre-registration but did not read Session223's later
+      checkpoint before typing "under investigation".
+  - (2) Only the single-seed case is proved, and by Session206, not by the cited HYP-9480. Finite banks are OPEN;
+    Session217's O((log N)^2) bound concerns the commuting Q/Z construction. "Any fixed linear form in one free state"
+    is false: F itself is one, since K(t,s) = F(s).
+  - (3) Every prime with even ord_p(2) divides a multiplier (11 | 33, 13 | 65, 19 | 513), so "exactly" fails. The
+    audit's decomposition at [2^23, 2^24) shows how little the multiplier words carry:
+
+    | Source of the excess at 3, 5, 17 | Share |
+    | --- | --- |
+    | (1c) multiplier words | about 23% |
+    | root-rectangle words Z^a O^b J, divisible by 2^a + 1 | about 20% |
+    | seed confinement at the last root change | about half |
+
+    R3's ordering survives removing both Fermat-type families, so R3 did not test the mechanism.
+- **Repair.**
+  - THM-4916 is re-centred on what is new: the closed forms for every odd prime, two J and one J. The proof is the
+    confinement cascade, with lemma (M) proved by the audit and the reduction from Session223 section 5. Every
+    identity is credited, and Session223's checkpoint 2 is described correctly.
+  - The cutoff paragraph is replaced by the barrier lemma with per-item status.
+  - The mechanism paragraph is replaced by the measured split.
+  - All fourteen minors are applied.
+  - The failed pre-registered R2, and R5's dependence on its widening, are stated in every summary.
+- **Lessons.**
+  - Right before every checkpoint push, re-fetch and read the latest checkpoint of each concurrent same-prompt
+    session. Never describe its state ("under investigation") from an earlier fetch.
+  - An item under "what is proved" needs a proof or a precise citation, item by item. Negative statements
+    ("impossible") are the most likely to be partly false.
+  - A mechanism claim needs an attribution measurement (decompose the excess). Confirming an ordering does not
+    establish a mechanism.
+  - Asymptotic constants must come from a limit (closed form or extrapolation), never from one finite n.
+  - A saturating counter gives lower bounds, so never quote its window mean as the mean.
