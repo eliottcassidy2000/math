@@ -2,6 +2,13 @@
 id: HYP-9469
 title: "After THM-4876: (1) the minimal deletion increment k_min(h) = min {(H(T) - H(T - v))/2 > 0 : H(T - v) = h} grows linearly, k_min(h) >= h/4 for h >= 5 (census: k_min(h)/h in [0.26, 0.40] for 5 <= h <= 59, orders of T up to 10; audit C: holds for every h attained at order 10, least ratio 33/129); equivalently a vertex lying on an odd cycle of T raises the count of T - v by at least a fixed fraction; (2) for every k the set of h with an increment of exactly 2k is finite: increment 4 forces h in {1, 5}, 6 forces {3, 5, 9}, 8 forces {1, 5, 9, 11}, and in general h <= 4k (levels k = 7..12 have h_max = 23, 29, 33, 33, 39, 37 at orders <= 10, audit C); (3) the one-centre value set {1 + 2N(A)} has density exactly 1/2 among the odd numbers and its complement 7, 13, 21, 29, 35, 41, 43, 49, 55, 57, 59, 67, ... (not in OEIS) has a recognisable structure; (4) the end-count bound e_a <= (h - 1)/2 for non-sinks, now PROVED as THM-4876 (7) (equality on 2^k + 1; census maxima 2/5, 4/9, 8/17, 16/33, 32/65, 64/129 at orders 4-9), which proves the sole-exit half of (1); (5) what remains for Chan-Pak: completeness needs unions over realisers (the digital banks) or products; the two prime lanes p and 7p of THM-4094 stand; (6) the ordered-path lemma: for every cut (A, B) with an arc from A to B, the number q of Hamiltonian paths of X listing all of B before all of A is at most (h - 1)/2 (every cut of every tournament of orders <= 8, 1.7 million cuts at order 8, maximum at the sole-exit cuts of R_n) - since H(X + v) >= 2h - q is PROVED (slot counting), the lemma gives (1) sharply and (2) with h <= 4k - 1, and THM-4876 (7) is its case |A| = 1"
 status: >
+  CURRENT as of Session214 (2026-11-07): (1) and (6) PROVED in all orders by the independently audited forced-shuffle
+  injection. For a positive one-vertex increment 2k from parent count h, k >= ceil((h+1)/4), hence h <= 4k-1.
+  (2) PROVED: every fixed positive increment has finitely many possible parent counts; the exact all-order parent
+  sets for increments 2,4,6,8 are {1,3}, {1,5}, {3,5,9}, {1,5,9,11}. Larger explicit census lists below retain their
+  original finite scope. (3) remains NUMERICAL. (4) remains PROVED by THM-4876(7). (5) is unchanged: unrestricted
+  Chan-Pak completeness remains OPEN. See the Current resolution section and linked proof/audit.
+historical_status_before_session214: >
   (1) NUMERICAL (orders of T up to 10: h <= 59 by the session's order-9 run, every h attained at order 10 by audit C's
   census, least ratio 33/129); the only proved cases are k_min(h) >= 2 for h >= 5 (THM-4876 (2)) and the sole-exit
   cuts, k >= (h + 1)/4 (THM-4876 (7)); k_min(h) >= 3 for h notin {1, 5} is FINITE-EXACT (orders of T up to 10), not
@@ -21,7 +28,38 @@ related:
 
 # HYP-9469 — the local structure of the Hamiltonian-path spectrum
 
-## Statements
+## Current resolution: statements (1), (2), and (6)
+
+**PROVED, independently audited, 2026-11-07.**
+[Session214 forced-shuffle proof](../results/session214_chan_pak_combined_proof_20261107/forced-shuffle/PROOF.md)
+and [independent audit](../results/session214_chan_pak_combined_proof_20261107/forced-shuffle-audit/FORCED_SHUFFLE_AUDIT.md).
+
+1. **Linear positive increment, all orders.** Every positive one-vertex extension from `h` paths has increment
+   `2k` with `k >= ceil((h+1)/4)`. Equivalently, its count is at least `(3h+1)/2`. The multiplicative constant
+   `3/2` is asymptotically optimal. Every induced extension, of any size, either preserves `h` or satisfies
+   that same lower bound.
+2. **Finite increment levels, all orders.** A positive increment `2k` forces `h <= 4k-1` and child count
+   at most `6k-1`. SCC factorization and the cited strong-order floor reduce increments `2,4,6,8` to strong
+   marked cores of order at most six. Their exact parent sets are respectively `{1,3}`, `{1,5}`,
+   `{3,5,9}`, and `{1,5,9,11}`. The first level was already proved; the other three are now exhausted
+   in all orders. The larger numerical lists below are not promoted to complete classifications.
+6. **Ordered-path half-bound, all orders.** For a nonempty cut `(A,B)` containing an `A->B` arc, put
+   `p=H(X[A])H(X[B])` and let `q` count Hamilton words listing all `B` before all `A`. A forced shuffle
+   injects all `p` monochromatic path pairs into nonordered words, proving `h >= p+q` and
+   `q <= (h-1)/2`. Combining this with the inherited slot count proves (1). Without an `A->B` arc,
+   the extension preserves `h`; this hypothesis is essential.
+
+Statements (3), (4), and (5) keep their original scope. In particular, this does not settle the one-centre
+value-set density conjecture or unrestricted Chan–Pak completeness. Generic directed-word merging and
+restriction recovery are inherited from Busch via THM-4745; the new step forces a nonordered image.
+No external literature-priority claim is made.
+
+## Historical statements and original census
+
+The following records preserve the original November 4 filing, audits, computations, and proposed tests.
+Their numerical-only descriptions and open proof language for (1), (2), and (6) are superseded by the
+current resolution above. Other statements retain their stated status.
+
 
 1. **Linear minimal increment.** Let `k_min(h)` be the least positive value of `(H(T) - H(T - v))/2` over all tournaments
    `T` and vertices `v` with `H(T - v) = h`. Then `k_min(h) >= h/4` for `h >= 5`. Census (THM-4876 (5)): `k_min = 2, 3, 4, 5,
