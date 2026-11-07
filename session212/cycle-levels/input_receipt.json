@@ -1,0 +1,42 @@
+[
+  {
+    "n": 1,
+    "classes": 1,
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  {
+    "n": 2,
+    "classes": 1,
+    "sha256": "a79122992d53d358e6bbbbb98883d64fa0c15df3bcb08ff7b65a0580870af424"
+  },
+  {
+    "n": 3,
+    "classes": 2,
+    "sha256": "ee7d2e7a145f7d4868774ac11cc3419ebd7482f8d33ff130aeceeaa154350021"
+  },
+  {
+    "n": 4,
+    "classes": 4,
+    "sha256": "27ce29969a92ced9bc89eb87ba549a8b62431a89a5877e3802a7965cb152b816"
+  },
+  {
+    "n": 5,
+    "classes": 12,
+    "sha256": "6709377efe92a70cf59a986710ce0e63034e86f6bb78ef0e308aaea4853162f9"
+  },
+  {
+    "n": 6,
+    "classes": 56,
+    "sha256": "f077d247ce951d3ba1111ed99f56958e62adfe945b87d9da3feec5f0608ac1e7"
+  },
+  {
+    "n": 7,
+    "classes": 456,
+    "sha256": "b17fb0cc08c3e31c2bd8fe6df856f4c1d125f4c2d7bf6153196be6bcbe1ad416"
+  },
+  {
+    "n": 8,
+    "classes": 6880,
+    "sha256": "86df994d7c4f535d1ea7fc7f452c07177a426f5fe12efa37e2134dbe0f192f5b"
+  }
+]

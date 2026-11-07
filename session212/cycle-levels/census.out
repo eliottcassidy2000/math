@@ -1,0 +1,9 @@
+n=1 rows=1 cycle_values=1 cycle_max=0 endpoint_values=1 endpoint_max=1
+n=2 rows=1 cycle_values=1 cycle_max=0 endpoint_values=2 endpoint_max=1
+n=3 rows=2 cycle_values=2 cycle_max=1 endpoint_values=2 endpoint_max=1
+n=4 rows=4 cycle_values=2 cycle_max=1 endpoint_values=4 endpoint_max=3
+n=5 rows=12 cycle_values=4 cycle_max=3 endpoint_values=6 endpoint_max=5
+n=6 rows=56 cycle_values=6 cycle_max=5 endpoint_values=15 endpoint_max=15
+n=7 rows=456 cycle_values=18 cycle_max=24 endpoint_values=43 endpoint_max=45
+n=8 rows=6880 cycle_values=55 cycle_max=54 endpoint_values=156 endpoint_max=189
+n=9 rows=1761280 cycle_values=229 cycle_max=249 endpoint_values=619 endpoint_max=661
