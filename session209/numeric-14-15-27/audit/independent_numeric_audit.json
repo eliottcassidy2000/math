@@ -1,0 +1,29 @@
+{
+  "atom_count": 13,
+  "canonicalization": "all vertex permutations, no degree pruning",
+  "induced_matrices_examined": 1346,
+  "n14": {
+    "15": {
+      "degrees": {
+        "3": 5,
+        "5": 41,
+        "15": 9
+      },
+      "merged": 55,
+      "ordinary": 110,
+      "self_converse": 0
+    },
+    "27": {
+      "degrees": {
+        "1": 28,
+        "9": 65,
+        "27": 12
+      },
+      "merged": 105,
+      "ordinary": 210,
+      "self_converse": 0
+    }
+  },
+  "order14_H": 11390625,
+  "status": "PASS"
+}

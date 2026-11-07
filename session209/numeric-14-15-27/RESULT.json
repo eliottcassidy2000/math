@@ -1,0 +1,172 @@
+{
+  "H15_n14_prime_stack_merged_nodes": 36,
+  "H27_n14_leaf_fraction": "4/15",
+  "active_checks": 326,
+  "atom_inventory": [
+    {
+      "H": 3,
+      "aut": 3,
+      "code": "2",
+      "n": 3,
+      "self_converse": true
+    },
+    {
+      "H": 5,
+      "aut": 1,
+      "code": "4",
+      "n": 4,
+      "self_converse": true
+    },
+    {
+      "H": 9,
+      "aut": 1,
+      "code": "8",
+      "n": 5,
+      "self_converse": true
+    },
+    {
+      "H": 15,
+      "aut": 3,
+      "code": "40",
+      "n": 5,
+      "self_converse": true
+    },
+    {
+      "H": 9,
+      "aut": 1,
+      "code": "258",
+      "n": 5,
+      "self_converse": true
+    },
+    {
+      "H": 15,
+      "aut": 5,
+      "code": "76",
+      "n": 5,
+      "self_converse": true
+    },
+    {
+      "H": 27,
+      "aut": 3,
+      "code": "80",
+      "n": 6,
+      "self_converse": false
+    },
+    {
+      "H": 27,
+      "aut": 3,
+      "code": "1040",
+      "n": 6,
+      "self_converse": false
+    },
+    {
+      "H": 15,
+      "aut": 1,
+      "code": "8196",
+      "n": 6,
+      "self_converse": false
+    },
+    {
+      "H": 15,
+      "aut": 1,
+      "code": "2050",
+      "n": 6,
+      "self_converse": false
+    },
+    {
+      "H": 27,
+      "aut": 1,
+      "code": "16386",
+      "n": 7,
+      "self_converse": false
+    },
+    {
+      "H": 27,
+      "aut": 1,
+      "code": "524296",
+      "n": 7,
+      "self_converse": false
+    },
+    {
+      "H": 27,
+      "aut": 1,
+      "code": "528386",
+      "n": 7,
+      "self_converse": true
+    }
+  ],
+  "minimum_orders": {
+    "15": 5,
+    "27": 6
+  },
+  "n14": {
+    "15": {
+      "merged": 55,
+      "ordered_core_terms": [
+        {
+          "components": 1,
+          "multiplicity": 2,
+          "order": 5
+        },
+        {
+          "components": 1,
+          "multiplicity": 2,
+          "order": 6
+        },
+        {
+          "components": 2,
+          "multiplicity": 2,
+          "order": 7
+        }
+      ],
+      "ordinary": 110,
+      "paired_black_degree_histogram": {
+        "15": 9,
+        "3": 5,
+        "5": 41
+      },
+      "self_converse": 0
+    },
+    "27": {
+      "merged": 105,
+      "ordered_core_terms": [
+        {
+          "components": 1,
+          "multiplicity": 2,
+          "order": 6
+        },
+        {
+          "components": 1,
+          "multiplicity": 3,
+          "order": 7
+        },
+        {
+          "components": 2,
+          "multiplicity": 4,
+          "order": 8
+        },
+        {
+          "components": 3,
+          "multiplicity": 1,
+          "order": 9
+        }
+      ],
+      "ordinary": 210,
+      "paired_black_degree_histogram": {
+        "1": 28,
+        "27": 12,
+        "9": 65
+      },
+      "self_converse": 0
+    }
+  },
+  "order14_atom": {
+    "H": 11390625,
+    "code": "292187853813044375413825338",
+    "power_of_15": 6,
+    "rate_upper_bound": "7/3",
+    "strong": true
+  },
+  "scope": "Complete classes inherited via n7 source; exact subset and isomorphism recalculation through n7, cited Busch cutoff, SCC count proofs and current explicit order14 witness. Not an n14 class census or a spectrum-completeness proof.",
+  "status": "PASS"
+}

@@ -1,0 +1,47 @@
+{
+  "inherited_complete_atlas": "The 456 n7 representatives and their exhaustive provenance are inherited, not freshly enumerated over all labelled tournaments. Induced subsets recover all smaller classes.",
+  "sources": [
+    {
+      "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/n7_representatives.txt",
+      "commit": "286f5f4ddbdf25a74ecbfe74e8ef9a735a142393",
+      "sha256": "3989273b1634117975f2a88e3f11c36e5ae263812e5f071f26d549fb25b7edc1",
+      "local_copy": "n7_representatives.txt"
+    },
+    {
+      "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/low_H_formulas.json",
+      "commit": "286f5f4ddbdf25a74ecbfe74e8ef9a735a142393",
+      "sha256": "c5958e559ac76e7820525a8bc3ed6baff60f43f47fb6713b48e48843898c8386",
+      "local_copy": "inherited_low_H_formulas.json"
+    },
+    {
+      "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md",
+      "commit": "286f5f4ddbdf25a74ecbfe74e8ef9a735a142393",
+      "sha256": "40d8b722dc71233a2e6ab31f224cb5de20db56463be568148c865b438f16cdfe",
+      "url": "https://github.com/eliottcassidy2000/math/blob/286f5f4ddbdf25a74ecbfe74e8ef9a735a142393/05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md"
+    },
+    {
+      "path": "05-knowledge/results/paired_black_leaf_reduction_20261020/BLACK_QUOTIENT_LEAF_CLASSIFICATION.md",
+      "commit": "286f5f4ddbdf25a74ecbfe74e8ef9a735a142393",
+      "sha256": "6f0b7299c2661f1a12b3f8985cc5c2b0f6229ddee6064b7f24d229a6a4c605c0",
+      "url": "https://github.com/eliottcassidy2000/math/blob/286f5f4ddbdf25a74ecbfe74e8ef9a735a142393/05-knowledge/results/paired_black_leaf_reduction_20261020/BLACK_QUOTIENT_LEAF_CLASSIFICATION.md"
+    },
+    {
+      "path": "05-knowledge/results/deficit_two_centers_20261020/README.md",
+      "commit": "286f5f4ddbdf25a74ecbfe74e8ef9a735a142393",
+      "sha256": "467e5d1606328add64950196f0ffd263c4844b1c8360b6f83bf958662d56a034",
+      "url": "https://github.com/eliottcassidy2000/math/blob/286f5f4ddbdf25a74ecbfe74e8ef9a735a142393/05-knowledge/results/deficit_two_centers_20261020/README.md"
+    },
+    {
+      "path": "session207/mixed-prime-multiplicities/PROOF.md",
+      "commit": "286f5f4ddbdf25a74ecbfe74e8ef9a735a142393",
+      "sha256": "b8d93ba7c1bee86f471ca79a7f4ae0f519ebfed1f00c6b2fe45f193bf5373597",
+      "url": "https://github.com/eliottcassidy2000/math/blob/286f5f4ddbdf25a74ecbfe74e8ef9a735a142393/session207/mixed-prime-multiplicities/PROOF.md"
+    },
+    {
+      "path": "session208/balanced-order14/PROOF.md",
+      "commit": "286f5f4ddbdf25a74ecbfe74e8ef9a735a142393",
+      "sha256": "47c6f749475e0d3f1146369188f6fa9cf5125540fd028436f2bb94c7b5ae2f96",
+      "url": "https://github.com/eliottcassidy2000/math/blob/286f5f4ddbdf25a74ecbfe74e8ef9a735a142393/session208/balanced-order14/PROOF.md"
+    }
+  ]
+}

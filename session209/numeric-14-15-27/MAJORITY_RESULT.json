@@ -1,0 +1,178 @@
+{
+  "active_checks": 558,
+  "all_initial_rows": [
+    {
+      "fraction": "0",
+      "leaves": 0,
+      "majority_sign": -12,
+      "merged_nodes": 1,
+      "n": 6
+    },
+    {
+      "fraction": "0",
+      "leaves": 0,
+      "majority_sign": -48,
+      "merged_nodes": 4,
+      "n": 7
+    },
+    {
+      "fraction": "0",
+      "leaves": 0,
+      "majority_sign": -96,
+      "merged_nodes": 8,
+      "n": 8
+    },
+    {
+      "fraction": "0",
+      "leaves": 0,
+      "majority_sign": -192,
+      "merged_nodes": 16,
+      "n": 9
+    },
+    {
+      "fraction": "2/25",
+      "leaves": 2,
+      "majority_sign": -252,
+      "merged_nodes": 25,
+      "n": 10
+    },
+    {
+      "fraction": "1/10",
+      "leaves": 4,
+      "majority_sign": -384,
+      "merged_nodes": 40,
+      "n": 11
+    },
+    {
+      "fraction": "5/28",
+      "leaves": 10,
+      "majority_sign": -432,
+      "merged_nodes": 56,
+      "n": 12
+    },
+    {
+      "fraction": "1/5",
+      "leaves": 16,
+      "majority_sign": -576,
+      "merged_nodes": 80,
+      "n": 13
+    },
+    {
+      "fraction": "4/15",
+      "leaves": 28,
+      "majority_sign": -588,
+      "merged_nodes": 105,
+      "n": 14
+    },
+    {
+      "fraction": "2/7",
+      "leaves": 40,
+      "majority_sign": -720,
+      "merged_nodes": 140,
+      "n": 15
+    },
+    {
+      "fraction": "15/44",
+      "leaves": 60,
+      "majority_sign": -672,
+      "merged_nodes": 176,
+      "n": 16
+    },
+    {
+      "fraction": "5/14",
+      "leaves": 80,
+      "majority_sign": -768,
+      "merged_nodes": 224,
+      "n": 17
+    },
+    {
+      "fraction": "110/273",
+      "leaves": 110,
+      "majority_sign": -636,
+      "merged_nodes": 273,
+      "n": 18
+    },
+    {
+      "fraction": "5/12",
+      "leaves": 140,
+      "majority_sign": -672,
+      "merged_nodes": 336,
+      "n": 19
+    },
+    {
+      "fraction": "91/200",
+      "leaves": 182,
+      "majority_sign": -432,
+      "merged_nodes": 400,
+      "n": 20
+    },
+    {
+      "fraction": "7/15",
+      "leaves": 224,
+      "majority_sign": -384,
+      "merged_nodes": 480,
+      "n": 21
+    },
+    {
+      "fraction": "280/561",
+      "leaves": 280,
+      "majority_sign": -12,
+      "merged_nodes": 561,
+      "n": 22
+    },
+    {
+      "fraction": "28/55",
+      "leaves": 336,
+      "majority_sign": 144,
+      "merged_nodes": 660,
+      "n": 23
+    },
+    {
+      "fraction": "51/95",
+      "leaves": 408,
+      "majority_sign": 672,
+      "merged_nodes": 760,
+      "n": 24
+    }
+  ],
+  "scope": "Majority leaves in the fixed H27 fundamental paired-black stratum, not a global spectrum threshold. Counts inherit the complete low-H SCC inventory.",
+  "selected_rows": [
+    {
+      "fraction": "4/15",
+      "leaves": 28,
+      "majority_sign": -588,
+      "merged_nodes": 105,
+      "n": 14
+    },
+    {
+      "fraction": "7/15",
+      "leaves": 224,
+      "majority_sign": -384,
+      "merged_nodes": 480,
+      "n": 21
+    },
+    {
+      "fraction": "280/561",
+      "leaves": 280,
+      "majority_sign": -12,
+      "merged_nodes": 561,
+      "n": 22
+    },
+    {
+      "fraction": "28/55",
+      "leaves": 336,
+      "majority_sign": 144,
+      "merged_nodes": 660,
+      "n": 23
+    },
+    {
+      "fraction": "51/95",
+      "leaves": 408,
+      "majority_sign": 672,
+      "merged_nodes": 760,
+      "n": 24
+    }
+  ],
+  "status": "PASS",
+  "threshold": 23
+}

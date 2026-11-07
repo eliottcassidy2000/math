@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "gap_vectors_examined": 341055,
+  "literal_max_order": 60,
+  "first_majority": 23,
+  "selected": [
+    {
+      "n": 14,
+      "leaves": 28,
+      "merged": 105,
+      "fraction": "4/15",
+      "sign": -588
+    },
+    {
+      "n": 21,
+      "leaves": 224,
+      "merged": 480,
+      "fraction": "7/15",
+      "sign": -384
+    },
+    {
+      "n": 22,
+      "leaves": 280,
+      "merged": 561,
+      "fraction": "280/561",
+      "sign": -12
+    },
+    {
+      "n": 23,
+      "leaves": 336,
+      "merged": 660,
+      "fraction": "28/55",
+      "sign": 144
+    },
+    {
+      "n": 24,
+      "leaves": 408,
+      "merged": 760,
+      "fraction": "51/95",
+      "sign": 672
+    }
+  ]
+}
