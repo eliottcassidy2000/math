@@ -1,0 +1,196 @@
+{
+  "status": "PASS",
+  "scope": "Two specified order-six tournaments only; original frozen projective packet untouched",
+  "rows": [
+    {
+      "name": "A",
+      "outgoing_row_bitmasks": [
+        58,
+        4,
+        1,
+        6,
+        14,
+        30
+      ],
+      "mask": 32706,
+      "forward_histogram": [
+        17,
+        105,
+        238,
+        238,
+        105,
+        17
+      ],
+      "P_coefficients_low_to_high": [
+        0,
+        0,
+        8,
+        0,
+        8,
+        0,
+        1
+      ],
+      "direct_bin_values_q0_to4": [
+        0,
+        17,
+        224,
+        1449,
+        6272
+      ],
+      "packing_coefficients": [
+        1,
+        8
+      ],
+      "quotient_betti_Q_and_F2": [
+        8,
+        0
+      ],
+      "nu": 1,
+      "nested_H_r0_to2": [
+        17,
+        241,
+        4001
+      ],
+      "odd_cycles": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          0,
+          4,
+          3,
+          1,
+          2
+        ],
+        [
+          0,
+          5,
+          3,
+          1,
+          2
+        ],
+        [
+          0,
+          5,
+          4,
+          1,
+          2
+        ],
+        [
+          0,
+          5,
+          4,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "B",
+      "outgoing_row_bitmasks": [
+        38,
+        8,
+        2,
+        5,
+        15,
+        30
+      ],
+      "mask": 32684,
+      "forward_histogram": [
+        17,
+        105,
+        238,
+        238,
+        105,
+        17
+      ],
+      "P_coefficients_low_to_high": [
+        0,
+        0,
+        8,
+        0,
+        8,
+        0,
+        1
+      ],
+      "direct_bin_values_q0_to4": [
+        0,
+        17,
+        224,
+        1449,
+        6272
+      ],
+      "packing_coefficients": [
+        1,
+        6,
+        1
+      ],
+      "quotient_betti_Q_and_F2": [
+        5,
+        1
+      ],
+      "nu": 2,
+      "nested_H_r0_to2": [
+        17,
+        241,
+        4001
+      ],
+      "odd_cycles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          0,
+          5,
+          4
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          0,
+          5,
+          2,
+          1,
+          3
+        ],
+        [
+          0,
+          5,
+          4,
+          1,
+          3
+        ]
+      ]
+    }
+  ],
+  "all_nested_equality": "Follows from exact equal P and inherited gate operator; only r=0,1,2 were also counted directly.",
+  "minimality": "Below order6 no two nontrivial odd cycles can be disjoint, so I(z)=1+((P(1)-1)/2)z and the projective carrier is that many isolated points."
+}
+

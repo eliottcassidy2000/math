@@ -1,0 +1,42 @@
+{
+  "reviewed_readme_sha256": "20204b3593c803e39c1fe5da69a9b160c07ec60857b528752ffca05057e82e8d",
+  "verified_link_count": 9,
+  "links": [
+    {
+      "destination": "structure-atlas/STRUCTURE_ATLAS.md",
+      "sha256": "d2b47f25ad7b3f8d07792dd48688b4c4a5a21450f5bb892ead2ec025eb44f091"
+    },
+    {
+      "destination": "projective-cycle-carrier/PROOF.md",
+      "sha256": "cfc55e829e4e2acfd09a58650d7e27f69f64ca65d6bcc67b2c9ec1785983fb7a"
+    },
+    {
+      "destination": "graded-spectrum-gates/PROOF.md",
+      "sha256": "56b365afb07b1af431a7a204c171a705389d28ef3dfaeff366864473776ca715"
+    },
+    {
+      "destination": "coherent-permutohedron/PROOF.md",
+      "sha256": "471a51a30e91c57282f8bb7b5748b00c871eab3d556c7b5b63158d1419eb452f"
+    },
+    {
+      "destination": "cross-carrier-boundary/PROOF.md",
+      "sha256": "8cbf174f3b4b9be3036cc5ea7d460c0b4d00ff858207793c8a0acad650bcaa71"
+    },
+    {
+      "destination": "structure-atlas/audit/ATLAS_REVIEW.md",
+      "sha256": "ccd4ccc245c155a49f71c8a514ed33e26013aec239fe05f908bb22060fd27412"
+    },
+    {
+      "destination": "projective-cycle-carrier/audit/REVIEW.md",
+      "sha256": "880ba2d580cad4d41dc06a15fd467a8d96e9e36c71181699088faa3d0662281d"
+    },
+    {
+      "destination": "graded-spectrum-gates/audit/REVIEW.md",
+      "sha256": "c05e83c406b1c14f6f7ed381e4bd3f6a23607d3668aa8d13795edb881790fbf7"
+    },
+    {
+      "destination": "coherent-permutohedron/audit/REVIEW.md",
+      "sha256": "cb2cbee405e45e7dcec9932e2063f928cfc464c7cf2bc6ae1605ab66d707c545"
+    }
+  ]
+}
