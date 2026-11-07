@@ -1,0 +1,48 @@
+{
+  "main_commit": "968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c",
+  "verified_by": "GitHub read at fixed commit; six canon/hypothesis blobs also matched local Git blob SHA-1",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "url": "https://github.com/eliottcassidy2000/math/blob/968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c/01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "error": false
+    },
+    {
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "url": "https://github.com/eliottcassidy2000/math/blob/968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c/01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "error": false
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-2198-single-core-signature-gap-complete.md",
+      "sha": "1fc2c99787f672039eba25c85da1450236001209",
+      "url": "https://github.com/eliottcassidy2000/math/blob/968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c/05-knowledge/hypotheses/HYP-2198-single-core-signature-gap-complete.md",
+      "error": false
+    },
+    {
+      "path": "01-canon/theorems/THM-4875-old-mark-digit-lower-bound-lorentzian-gadget-adjoint-and-one-apex-joins-realise-every-odd-number-to-2-32-except-7-and-21.md",
+      "sha": "c4ccdd38efb2ffad8bcf2edc4e9e361fc6e2139f",
+      "url": "https://github.com/eliottcassidy2000/math/blob/968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c/01-canon/theorems/THM-4875-old-mark-digit-lower-bound-lorentzian-gadget-adjoint-and-one-apex-joins-realise-every-odd-number-to-2-32-except-7-and-21.md",
+      "error": false
+    },
+    {
+      "path": "01-canon/theorems/THM-4885-one-apex-join-representation-mass-pi2-over-12.md",
+      "sha": "88d8a0851e8194e5a18ab224cc6ae5b1115c2d72",
+      "url": "https://github.com/eliottcassidy2000/math/blob/968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c/01-canon/theorems/THM-4885-one-apex-join-representation-mass-pi2-over-12.md",
+      "error": false
+    },
+    {
+      "path": "01-canon/theorems/THM-4887-one-apex-energy-at-scale-two-to-the-n-over-three.md",
+      "sha": "e3abac772102c8cd95ad01a866b9e8227a30b80e",
+      "url": "https://github.com/eliottcassidy2000/math/blob/968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c/01-canon/theorems/THM-4887-one-apex-energy-at-scale-two-to-the-n-over-three.md",
+      "error": false
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9478-one-apex-join-mass-laws-and-coverage-to-2-35.md",
+      "sha": "aa742337952a674089e91553549febf1f94e0649",
+      "url": "https://github.com/eliottcassidy2000/math/blob/968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c/05-knowledge/hypotheses/HYP-9478-one-apex-join-mass-laws-and-coverage-to-2-35.md",
+      "error": false
+    }
+  ]
+}
