@@ -1,0 +1,76 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "29fb11fa30c9c35bd375ab48d1a42f00f023b6a3a83f496bc325aaa55c1396b1",
+      "bytes": 3568
+    },
+    {
+      "path": "PROOF.md",
+      "sha256": "6dd8e7dcc10e66856aedb1be7dd45e53797771f5b32b6113a4e68f4073385e6d",
+      "bytes": 13594
+    },
+    {
+      "path": "ENDPOINT_BRIDGE.md",
+      "sha256": "c4427215b5d9843f94215d2278c5401169afc3d5c619055098e14cd7345de0e0",
+      "bytes": 8046
+    },
+    {
+      "path": "verify_binary_comb.py",
+      "sha256": "6e8847a62453df05507ad50cf030a0c02b225cdbfd1230c25f7d7e20e200cab6",
+      "bytes": 6902
+    },
+    {
+      "path": "RESULT.json",
+      "sha256": "caba92d25cbc7a63fb7998b13840570f3777e0da4a585ec9813021dc94723ad8",
+      "bytes": 6565
+    },
+    {
+      "path": "RESULT.normal.json",
+      "sha256": "caba92d25cbc7a63fb7998b13840570f3777e0da4a585ec9813021dc94723ad8",
+      "bytes": 6565
+    },
+    {
+      "path": "verify_endpoint.py",
+      "sha256": "75e7dfdc1095273fddee46bf39dd2f14f2a283d3fe8e0edb87ae43d57ddb7681",
+      "bytes": 7213
+    },
+    {
+      "path": "ENDPOINT_RESULT.json",
+      "sha256": "070bf9b31e0dfc9087315094aecaa27f84100e2193c75b91282acbf0cb1592ad",
+      "bytes": 1844
+    },
+    {
+      "path": "ENDPOINT_RESULT.optimized.json",
+      "sha256": "070bf9b31e0dfc9087315094aecaa27f84100e2193c75b91282acbf0cb1592ad",
+      "bytes": 1844
+    },
+    {
+      "path": "SOURCES.json",
+      "sha256": "74d9780a84787226695cd75e26874af66b580bf3081bd1bcd07a126459da0f13",
+      "bytes": 1736
+    },
+    {
+      "path": "sources/source1.md",
+      "sha256": "56b365afb07b1af431a7a204c171a705389d28ef3dfaeff366864473776ca715",
+      "bytes": 19144
+    },
+    {
+      "path": "sources/source2.md",
+      "sha256": "583c1d2d112141c6e998e58369b077dde00952e6ab3c5c9458069734b98c9fc5",
+      "bytes": 20064
+    },
+    {
+      "path": "sources/source3.md",
+      "sha256": "0b387749204c621486d67d05c24d218a273d45e2f005d51df3c26ef151efdd98",
+      "bytes": 14061
+    },
+    {
+      "path": "sources/source4.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "bytes": 5667
+    }
+  ],
+  "tests": "Both verifiers passed normal and optimized; scope detailed in README.md",
+  "source_revision": "c137c698e632cb76e232a79b48133987755e080a"
+}

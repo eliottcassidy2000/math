@@ -1,0 +1,116 @@
+{
+  "all_case_sha256": "35c7d59e711b7e5c43f9c9ce7d9479c36379c65246043ac9e40378a15cfe663b",
+  "binary_widths": [
+    0,
+    8
+  ],
+  "boundaries": {
+    "fixed_endpoints": "start1 to x counts h",
+    "forward_gate_iff": "h=2^m for m>=1",
+    "m=0_forward_increment": 0,
+    "m>=1_forward_increment": 1,
+    "n=1_endpoint_closure": "must be excluded",
+    "nongated_base": "all m>=1",
+    "strong_core_iff": "m=0 or h>2^(m-1)"
+  },
+  "cycle_objects": 1022,
+  "endpoint_objects": 511,
+  "finite_universe": "Every binary word of every width 0..8; both outer-arc directions",
+  "full_permutation_cycle_objects": 62,
+  "large_controls": [
+    {
+      "HC": 511,
+      "h": 511,
+      "order": 13
+    },
+    {
+      "HC": 512,
+      "h": 512,
+      "order": 13
+    },
+    {
+      "HC": 513,
+      "h": 513,
+      "order": 14
+    },
+    {
+      "HC": 1023,
+      "h": 1023,
+      "order": 14
+    },
+    {
+      "HC": 1024,
+      "h": 1024,
+      "order": 14
+    }
+  ],
+  "status": "PASS",
+  "witnesses": [
+    {
+      "H": 5,
+      "HC": 1,
+      "gate_arcs": [
+        [
+          1,
+          2
+        ]
+      ],
+      "h": 1,
+      "order": 4,
+      "rows": [
+        10,
+        4,
+        9,
+        2
+      ]
+    },
+    {
+      "H": 13,
+      "HC": 2,
+      "gate_arcs": [],
+      "h": 2,
+      "order": 5,
+      "rows": [
+        22,
+        12,
+        24,
+        17,
+        2
+      ]
+    },
+    {
+      "H": 91,
+      "HC": 7,
+      "gate_arcs": [],
+      "h": 7,
+      "order": 7,
+      "rows": [
+        94,
+        60,
+        88,
+        112,
+        96,
+        69,
+        2
+      ]
+    },
+    {
+      "H": 587,
+      "HC": 21,
+      "gate_arcs": [],
+      "h": 21,
+      "order": 9,
+      "rows": [
+        382,
+        252,
+        376,
+        368,
+        480,
+        320,
+        384,
+        301,
+        2
+      ]
+    }
+  ]
+}

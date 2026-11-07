@@ -1,0 +1,424 @@
+{
+  "status": "FINITE-EXACT verification of the all-order proof, not its replacement",
+  "convention": "Hamiltonian directed cycles modulo cyclic rotation; fixed starting vertex 0; n>=3",
+  "family_tests": [
+    {
+      "m": 1,
+      "order": 5,
+      "parameter_cases": 8,
+      "unreversed_support": [
+        1,
+        3
+      ],
+      "permutation_exhaustive": true
+    },
+    {
+      "m": 2,
+      "order": 6,
+      "parameter_cases": 16,
+      "unreversed_support": [
+        1,
+        5
+      ],
+      "permutation_exhaustive": true
+    },
+    {
+      "m": 3,
+      "order": 7,
+      "parameter_cases": 32,
+      "unreversed_support": [
+        1,
+        9
+      ],
+      "permutation_exhaustive": true
+    },
+    {
+      "m": 4,
+      "order": 8,
+      "parameter_cases": 64,
+      "unreversed_support": [
+        1,
+        17
+      ],
+      "permutation_exhaustive": false
+    },
+    {
+      "m": 5,
+      "order": 9,
+      "parameter_cases": 128,
+      "unreversed_support": [
+        1,
+        33
+      ],
+      "permutation_exhaustive": false
+    },
+    {
+      "m": 6,
+      "order": 10,
+      "parameter_cases": 256,
+      "unreversed_support": [
+        1,
+        65
+      ],
+      "permutation_exhaustive": false
+    },
+    {
+      "m": 7,
+      "order": 11,
+      "parameter_cases": 512,
+      "unreversed_support": [
+        1,
+        129
+      ],
+      "permutation_exhaustive": false
+    },
+    {
+      "m": 8,
+      "order": 12,
+      "parameter_cases": 1024,
+      "unreversed_support": [
+        1,
+        257
+      ],
+      "permutation_exhaustive": false
+    }
+  ],
+  "witnesses": {
+    "1": {
+      "order": 5,
+      "outrows": [
+        14,
+        4,
+        8,
+        18,
+        7
+      ],
+      "cycles": 1,
+      "paths": 9,
+      "strong": true,
+      "gate_arcs": []
+    },
+    "2": {
+      "order": 5,
+      "outrows": [
+        14,
+        20,
+        8,
+        18,
+        5
+      ],
+      "cycles": 2,
+      "paths": 13,
+      "strong": true,
+      "gate_arcs": []
+    },
+    "3": {
+      "order": 5,
+      "outrows": [
+        14,
+        20,
+        24,
+        18,
+        1
+      ],
+      "cycles": 3,
+      "paths": 15,
+      "strong": true,
+      "gate_arcs": [
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "7": {
+      "order": 7,
+      "outrows": [
+        62,
+        92,
+        120,
+        48,
+        96,
+        66,
+        9
+      ],
+      "cycles": 7,
+      "paths": 89,
+      "strong": true,
+      "gate_arcs": []
+    },
+    "21": {
+      "order": 9,
+      "outrows": [
+        254,
+        380,
+        504,
+        496,
+        224,
+        192,
+        384,
+        258,
+        49
+      ],
+      "cycles": 21,
+      "paths": 521,
+      "strong": true,
+      "gate_arcs": []
+    },
+    "64": {
+      "order": 10,
+      "outrows": [
+        510,
+        764,
+        504,
+        1008,
+        992,
+        960,
+        896,
+        768,
+        514,
+        5
+      ],
+      "cycles": 64,
+      "paths": 2227,
+      "strong": true,
+      "gate_arcs": []
+    },
+    "65": {
+      "order": 10,
+      "outrows": [
+        510,
+        764,
+        1016,
+        1008,
+        992,
+        960,
+        896,
+        768,
+        514,
+        1
+      ],
+      "cycles": 65,
+      "paths": 1777,
+      "strong": true,
+      "gate_arcs": [
+        [
+          9,
+          0
+        ]
+      ]
+    },
+    "127": {
+      "order": 11,
+      "outrows": [
+        1022,
+        1532,
+        2040,
+        1008,
+        2016,
+        1984,
+        1920,
+        1792,
+        1536,
+        1026,
+        9
+      ],
+      "cycles": 127,
+      "paths": 5819,
+      "strong": true,
+      "gate_arcs": []
+    },
+    "128": {
+      "order": 11,
+      "outrows": [
+        1022,
+        1532,
+        1016,
+        2032,
+        2016,
+        1984,
+        1920,
+        1792,
+        1536,
+        1026,
+        5
+      ],
+      "cycles": 128,
+      "paths": 6403,
+      "strong": true,
+      "gate_arcs": []
+    },
+    "129": {
+      "order": 11,
+      "outrows": [
+        1022,
+        1532,
+        2040,
+        2032,
+        2016,
+        1984,
+        1920,
+        1792,
+        1536,
+        1026,
+        1
+      ],
+      "cycles": 129,
+      "paths": 5013,
+      "strong": true,
+      "gate_arcs": [
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    "255": {
+      "order": 12,
+      "outrows": [
+        2046,
+        3068,
+        4088,
+        2032,
+        4064,
+        4032,
+        3968,
+        3840,
+        3584,
+        3072,
+        2050,
+        9
+      ],
+      "cycles": 255,
+      "paths": 16991,
+      "strong": true,
+      "gate_arcs": []
+    },
+    "256": {
+      "order": 12,
+      "outrows": [
+        2046,
+        3068,
+        2040,
+        4080,
+        4064,
+        4032,
+        3968,
+        3840,
+        3584,
+        3072,
+        2050,
+        5
+      ],
+      "cycles": 256,
+      "paths": 18643,
+      "strong": true,
+      "gate_arcs": []
+    },
+    "257": {
+      "order": 12,
+      "outrows": [
+        2046,
+        3068,
+        4088,
+        4080,
+        4064,
+        4032,
+        3968,
+        3840,
+        3584,
+        3072,
+        2050,
+        1
+      ],
+      "cycles": 257,
+      "paths": 14401,
+      "strong": true,
+      "gate_arcs": [
+        [
+          11,
+          0
+        ]
+      ]
+    },
+    "1024": {
+      "order": 14,
+      "outrows": [
+        8190,
+        12284,
+        8184,
+        16368,
+        16352,
+        16320,
+        16256,
+        16128,
+        15872,
+        15360,
+        14336,
+        12288,
+        8194,
+        5
+      ],
+      "cycles": 1024,
+      "paths": 162067,
+      "strong": true,
+      "gate_arcs": []
+    },
+    "1025": {
+      "order": 14,
+      "outrows": [
+        8190,
+        12284,
+        16376,
+        16368,
+        16352,
+        16320,
+        16256,
+        16128,
+        15872,
+        15360,
+        14336,
+        12288,
+        8194,
+        1
+      ],
+      "cycles": 1025,
+      "paths": 123217,
+      "strong": true,
+      "gate_arcs": [
+        [
+          13,
+          0
+        ]
+      ]
+    }
+  },
+  "growth_cases": 248,
+  "inherited_gate_controls": [
+    {
+      "core_order": 1,
+      "labeled_tournaments": 1
+    },
+    {
+      "core_order": 2,
+      "labeled_tournaments": 2
+    },
+    {
+      "core_order": 3,
+      "labeled_tournaments": 8
+    },
+    {
+      "core_order": 4,
+      "labeled_tournaments": 64
+    }
+  ],
+  "zero_control": {
+    "outrows": [
+      6,
+      4,
+      0
+    ],
+    "cycles": 0,
+    "strong": false
+  }
+}

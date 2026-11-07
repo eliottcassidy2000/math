@@ -1,0 +1,35 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "snapshot": "c137c698e632cb76e232a79b48133987755e080a",
+  "status": "Inherited interfaces, not new priority claims",
+  "sources": [
+    {
+      "repository_path": "session210/graded-spectrum-gates/PROOF.md",
+      "pinned_commit": "c137c698e632cb76e232a79b48133987755e080a",
+      "git_blob": "c7b0ed35d826e52c706b5f78aef4285ce2ac816e",
+      "sha256": "56b365afb07b1af431a7a204c171a705389d28ef3dfaeff366864473776ca715",
+      "local_file": "sources/source1.md"
+    },
+    {
+      "repository_path": "session211/score-permutohedron/PROOF.md",
+      "pinned_commit": "c137c698e632cb76e232a79b48133987755e080a",
+      "git_blob": "65726ad12712f329aba141f145cd6d9bdda023ac",
+      "sha256": "583c1d2d112141c6e998e58369b077dde00952e6ab3c5c9458069734b98c9fc5",
+      "local_file": "sources/source2.md"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-4862-one-exit-extension-law-the-readiness-digit-is-the-cycle-count-of-the-entry-attachment-fibonacci-bijection-ready-floors-through-order-10-and-the-full-digit-c2-sweep-realises-every-odd-number-in-307-26551.md",
+      "pinned_commit": "c137c698e632cb76e232a79b48133987755e080a",
+      "git_blob": "d8745c2dbcdca1a52ceea4fa811529e64cbc129e",
+      "sha256": "0b387749204c621486d67d05c24d218a273d45e2f005d51df3c26ef151efdd98",
+      "local_file": "sources/source3.md"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "pinned_commit": "c137c698e632cb76e232a79b48133987755e080a",
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "local_file": "sources/source4.md"
+    }
+  ]
+}
