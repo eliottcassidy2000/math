@@ -1,0 +1,12 @@
+n=3: equicentric 1 (non-strong 0, almost-regular 0); even-n lambdas []; equilateral c-values [-1]  [0s]
+n=4: equicentric 2 (non-strong 2, almost-regular 0); even-n lambdas [3]; equilateral c-values [0, 0]  [0s]
+n=5: equicentric 1 (non-strong 0, almost-regular 0); even-n lambdas []; equilateral c-values []  [0s]
+n=6: equicentric 5 (non-strong 3, almost-regular 2); even-n lambdas [1, 5, 9]; equilateral c-values []  [0s]
+n=7: equicentric 3 (non-strong 0, almost-regular 0); even-n lambdas []; equilateral c-values [-1]  [0s]
+n=8: equicentric 14 (non-strong 8, almost-regular 0); even-n lambdas [3, 7, 11, 15]; equilateral c-values [0, 0, 0, 0]  [1s]
+n=9: equicentric 15 (non-strong 0, almost-regular 0); even-n lambdas []; equilateral c-values n/a  [3s]
+n=10: equicentric 165 (non-strong 37, almost-regular 88); even-n lambdas [1, 5, 9, 13, 17, 21, 25]; equilateral c-values n/a  [113s]
+violations: {'(1)': 0, '(2)': 0, '(3a)': 0, '(3b)': 0, '(3c)': 0, '(3d)': 0, '(4)': 0}
+(5) QR7 signature vectors are -1 exactly on the Fano lines i+{1,2,4}: True; pairwise Hamming distances {4}
+(6) eight-point sphere of the signature simplex (exact): 24/24 tournaments (n = 5..8) with all 8 labels on S2, Pow(O_T) = n r^2 = n(n - 1/s), Pow(p_v) = 4(n - 1 + Delta_v)
+all done

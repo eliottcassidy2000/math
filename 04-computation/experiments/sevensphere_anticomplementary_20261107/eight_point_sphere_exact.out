@@ -1,0 +1,11 @@
+(P1) Q_S2(C*) = 0
+(P1) Q_S2(X)  = 0
+(P1) Pow_S2(O) - c*(R^2-|OP|^2) = 0
+(P1) Pow_S2(G) - c*(R^2-|OP|^2) = 0
+(P1) Pow_S2(G') - c*(R^2-|OP|^2) = 0
+(P1) Pow_S2(O') - c*(R^2-|OP|^2) = 0
+(P2) n=3: 150 exact rational simplices: all 8 labels on S2: 150/150; corner powers c=(n+1,n,n-1,n): 150/150; Pow(V0)=V0A*V0C*=sum|V0Vi|^2: 150/150; 8 distinct: 150/150
+(P3) n=4: 40 exact rational simplices: all 8 labels on S2: 40/40; corner powers c=(n+1,n,n-1,n): 40/40; Pow(V0)=V0A*V0C*=sum|V0Vi|^2: 40/40; 8 distinct: 40/40
+(P3) n=5: 20 exact rational simplices: all 8 labels on S2: 20/20; corner powers c=(n+1,n,n-1,n): 20/20; Pow(V0)=V0A*V0C*=sum|V0Vi|^2: 20/20; 8 distinct: 20/20
+(P3) n=6: 10 exact rational simplices: all 8 labels on S2: 10/10; corner powers c=(n+1,n,n-1,n): 10/10; Pow(V0)=V0A*V0C*=sum|V0Vi|^2: 10/10; 8 distinct: 10/10
+all done

@@ -1,0 +1,5 @@
+q=7 (n=8): QR_q+source skew-Hadamard True, strong False; switched at a QR_q vertex: skew-Hadamard True, strong True, equicentric True, lambda 7
+q=11 (n=12): QR_q+source skew-Hadamard True, strong False; switched at a QR_q vertex: skew-Hadamard True, strong True, equicentric True, lambda 11
+q=19 (n=20): QR_q+source skew-Hadamard True, strong False; switched at a QR_q vertex: skew-Hadamard True, strong True, equicentric True, lambda 19
+q=23 (n=24): QR_q+source skew-Hadamard True, strong False; switched at a QR_q vertex: skew-Hadamard True, strong True, equicentric True, lambda 23
+q=31 (n=32): QR_q+source skew-Hadamard True, strong False; switched at a QR_q vertex: skew-Hadamard True, strong True, equicentric True, lambda 31

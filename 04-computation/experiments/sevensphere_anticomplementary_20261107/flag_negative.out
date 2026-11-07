@@ -1,0 +1,4 @@
+n=3: 4 flag corners; worst relative residual of an affine fit over 200 simplices: 7.73e-14  (n = 3: four corners always fit; this is THM-4910(1))
+n=4: 6 flag corners; worst relative residual of an affine fit over 200 simplices: 1.63e-01  (no common sphere)
+n=5: 8 flag corners; worst relative residual of an affine fit over 200 simplices: 1.91e-01  (no common sphere)
+n=6: 10 flag corners; worst relative residual of an affine fit over 200 simplices: 1.19e-01  (no common sphere)
