@@ -1,0 +1,42 @@
+{
+  "cases": [
+    {
+      "H": 23,
+      "defect": 3,
+      "endpoint": 10,
+      "n": 6
+    },
+    {
+      "H": 47,
+      "defect": 3,
+      "endpoint": 22,
+      "n": 7
+    },
+    {
+      "H": 95,
+      "defect": 3,
+      "endpoint": 46,
+      "n": 8
+    },
+    {
+      "H": 19,
+      "defect": 3,
+      "endpoint": 8,
+      "n": 6
+    },
+    {
+      "H": 39,
+      "defect": 3,
+      "endpoint": 18,
+      "n": 7
+    },
+    {
+      "H": 79,
+      "defect": 3,
+      "endpoint": 38,
+      "n": 8
+    }
+  ],
+  "method": "literal permutations",
+  "status": "PASS"
+}

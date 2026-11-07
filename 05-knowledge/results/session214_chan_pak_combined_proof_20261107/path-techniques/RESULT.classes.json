@@ -1,0 +1,131 @@
+{
+  "additional_class_inputs": [
+    {
+      "compression_cases": 236,
+      "defect3_marks": 20,
+      "filename": "classes7.rows",
+      "order": 7,
+      "removed_singletons": 44,
+      "sha256": "b17fb0cc08c3e31c2bd8fe6df856f4c1d125f4c2d7bf6153196be6bcbe1ad416",
+      "sole_exit_marks": 304,
+      "tournaments": 456
+    },
+    {
+      "compression_cases": 2681,
+      "defect3_marks": 31,
+      "filename": "classes8.rows",
+      "order": 8,
+      "removed_singletons": 284,
+      "sha256": "86df994d7c4f535d1ea7fc7f452c07177a426f5fe12efa37e2134dbe0f192f5b",
+      "sole_exit_marks": 3064,
+      "tournaments": 6880
+    }
+  ],
+  "claim": "FINITE-EXACT controls; all-order proof is in PROOF.md",
+  "controls": {
+    "chain_pair_weights": 165,
+    "chain_ray_constructions": 17,
+    "compression_cases": 292,
+    "defect3_marks": 97,
+    "random_attachment_tournaments": 210,
+    "removed_singletons": 192,
+    "sole_exit_marks": 379,
+    "triangle_ray_constructions": 25
+  },
+  "defect3_first_30_endpoint_values": [
+    1,
+    3,
+    4,
+    6,
+    8,
+    10,
+    12,
+    18,
+    22,
+    24,
+    38,
+    46,
+    48,
+    78,
+    94,
+    96,
+    158,
+    190,
+    192,
+    318,
+    382,
+    384,
+    638,
+    766,
+    768,
+    1278,
+    1534,
+    1536,
+    2558,
+    3070
+  ],
+  "labeled": [
+    {
+      "literal_cover_checks": 2,
+      "order": 1,
+      "tournaments": 1
+    },
+    {
+      "literal_cover_checks": 8,
+      "order": 2,
+      "sole_exit_marks": 2,
+      "tournaments": 2
+    },
+    {
+      "compression_cases": 6,
+      "literal_cover_checks": 64,
+      "order": 3,
+      "removed_singletons": 0,
+      "sole_exit_marks": 12,
+      "tournaments": 8
+    },
+    {
+      "compression_cases": 48,
+      "defect3_marks": 24,
+      "literal_cover_checks": 1024,
+      "order": 4,
+      "removed_singletons": 24,
+      "sole_exit_marks": 96,
+      "tournaments": 64
+    },
+    {
+      "compression_cases": 760,
+      "defect3_marks": 480,
+      "order": 5,
+      "removed_singletons": 360,
+      "sole_exit_marks": 1280,
+      "tournaments": 1024
+    },
+    {
+      "compression_cases": 21840,
+      "defect3_marks": 5520,
+      "order": 6,
+      "removed_singletons": 6720,
+      "sole_exit_marks": 30720,
+      "tournaments": 32768
+    }
+  ],
+  "status": "PASS",
+  "unmarked_H13_hostile": {
+    "H": 13,
+    "endpoints": [
+      2,
+      2,
+      4,
+      3,
+      2
+    ],
+    "rows": [
+      6,
+      28,
+      8,
+      17,
+      5
+    ]
+  }
+}

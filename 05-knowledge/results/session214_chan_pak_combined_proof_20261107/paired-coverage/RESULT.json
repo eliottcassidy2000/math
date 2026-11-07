@@ -1,0 +1,179 @@
+{
+  "pair_controls": [
+    {
+      "all_words": 88573,
+      "base": 677,
+      "difference": [
+        -10,
+        -1,
+        0,
+        9,
+        -12,
+        0,
+        -88,
+        12,
+        -57
+      ],
+      "literal_graph_profiles": 26,
+      "profiles": [
+        [
+          165,
+          10,
+          27,
+          516,
+          237,
+          49,
+          3312,
+          824,
+          2256
+        ],
+        [
+          175,
+          11,
+          27,
+          507,
+          249,
+          49,
+          3400,
+          812,
+          2313
+        ]
+      ],
+      "separated": 86526,
+      "synchronized": 2047,
+      "word_length_cap": 10
+    },
+    {
+      "all_words": 88573,
+      "base": 759,
+      "difference": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        -168,
+        0,
+        -84
+      ],
+      "literal_graph_profiles": 26,
+      "profiles": [
+        [
+          253,
+          13,
+          29,
+          511,
+          287,
+          29,
+          4384,
+          640,
+          2713
+        ],
+        [
+          253,
+          11,
+          29,
+          511,
+          287,
+          29,
+          4552,
+          640,
+          2797
+        ]
+      ],
+      "separated": 86526,
+      "synchronized": 2047,
+      "word_length_cap": 10
+    },
+    {
+      "all_words": 88573,
+      "base": 1547,
+      "difference": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        -24,
+        0,
+        -12
+      ],
+      "literal_graph_profiles": 26,
+      "profiles": [
+        [
+          259,
+          13,
+          101,
+          1293,
+          267,
+          109,
+          4600,
+          1424,
+          2431
+        ],
+        [
+          259,
+          11,
+          101,
+          1293,
+          267,
+          109,
+          4624,
+          1424,
+          2443
+        ]
+      ],
+      "separated": 86526,
+      "synchronized": 2047,
+      "word_length_cap": 10
+    },
+    {
+      "all_words": 88573,
+      "base": 821,
+      "difference": [
+        2,
+        -1,
+        0,
+        -3,
+        0,
+        0,
+        8,
+        0,
+        3
+      ],
+      "literal_graph_profiles": 26,
+      "profiles": [
+        [
+          295,
+          16,
+          33,
+          532,
+          359,
+          33,
+          4888,
+          720,
+          3204
+        ],
+        [
+          293,
+          17,
+          33,
+          535,
+          359,
+          33,
+          4880,
+          720,
+          3201
+        ]
+      ],
+      "separated": 86526,
+      "synchronized": 2047,
+      "word_length_cap": 10
+    }
+  ],
+  "scope": "All-order claim rests on PROOF.md; finite controls only.",
+  "status": "PASS",
+  "symbolic_basis_checks": 54
+}

@@ -1,0 +1,22 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "read_ref": "4c63fd58b566f3e006eb87eaedcf48824741cc84",
+  "files": [
+    {
+      "local": "PAIRED_CARRIERS.md",
+      "source": "session203/staggered-paired-carriers/PROOF.md",
+      "git_blob_sha1": "ec6f992a72efd909f0af5e05cbabaf26e6aa2563"
+    },
+    {
+      "local": "ROOTED_CLOSURE.md",
+      "source": "session203/rooted-cover-closure/PROOF.md",
+      "git_blob_sha1": "4360809d176a820160e2d201c464bcba920d103f"
+    },
+    {
+      "local": "SYNCHRONIZATION.md",
+      "source": "session203/synchronized-grammar/PROOF.md",
+      "git_blob_sha1": "c58460858506b9d80b235b0ef19bb76e939d4db0"
+    }
+  ],
+  "verification": "Fetched each exact path at read_ref using GitHub connector; git hash-object on each local frozen copy matches returned blob SHA."
+}

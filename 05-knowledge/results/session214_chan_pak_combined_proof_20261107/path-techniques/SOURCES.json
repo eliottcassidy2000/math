@@ -1,0 +1,83 @@
+{
+  "snapshot": "4c63fd58b566f3e006eb87eaedcf48824741cc84",
+  "scope": "Source identities re-fetched at pinned main snapshot. No literature priority claimed.",
+  "files": [
+    {
+      "path": "session213/cycle-arithmetic/EQUALITY.md",
+      "ref": "4c63fd58b566f3e006eb87eaedcf48824741cc84",
+      "sha": "f736cdbaf7b93396c7c26b959f7fdcacf31ce4ce",
+      "url": "https://github.com/eliottcassidy2000/math/blob/4c63fd58b566f3e006eb87eaedcf48824741cc84/session213/cycle-arithmetic/EQUALITY.md",
+      "remote_git_blob_verified": true,
+      "sha256": "22232d2e138e5ee414a688e1b30bc622cf5d1e38b878519c73ebf313db129db3",
+      "local_stage_byte_identity": true
+    },
+    {
+      "path": "session203/uniform-incidence-extraction/uniform/PROOF.md",
+      "ref": "4c63fd58b566f3e006eb87eaedcf48824741cc84",
+      "sha": "7d45cbd8c66e3c370e94749d12274ea4ba60e5e1",
+      "url": "https://github.com/eliottcassidy2000/math/blob/4c63fd58b566f3e006eb87eaedcf48824741cc84/session203/uniform-incidence-extraction/uniform/PROOF.md",
+      "remote_git_blob_verified": true,
+      "sha256": "b14c0ac849c1cd0084a51953133b593b7eb952490007018d21c5763a3e7803c9",
+      "local_stage_byte_identity": true
+    },
+    {
+      "path": "session210/structure-atlas/STRUCTURE_ATLAS.md",
+      "ref": "4c63fd58b566f3e006eb87eaedcf48824741cc84",
+      "sha": "8e8648fb8c6ec1711b140bd0ff76f06fcbb4eee9",
+      "url": "https://github.com/eliottcassidy2000/math/blob/4c63fd58b566f3e006eb87eaedcf48824741cc84/session210/structure-atlas/STRUCTURE_ATLAS.md",
+      "remote_git_blob_verified": true,
+      "sha256": "d2b47f25ad7b3f8d07792dd48688b4c4a5a21450f5bb892ead2ec025eb44f091",
+      "local_stage_byte_identity": true
+    },
+    {
+      "path": "01-canon/theorems/THM-4876-deletion-and-flip-increments-of-the-hamiltonian-path-count-an-increment-of-two-forces-at-most-three-paths-the-increment-ladder-thm-013-for-all-orders-and-what-extension-spectra-forbid-for-chan-pak.md",
+      "ref": "4c63fd58b566f3e006eb87eaedcf48824741cc84",
+      "sha": "24c3b6fcf517c532c8bcf2c2049c62a9d1612a53",
+      "url": "https://github.com/eliottcassidy2000/math/blob/4c63fd58b566f3e006eb87eaedcf48824741cc84/01-canon/theorems/THM-4876-deletion-and-flip-increments-of-the-hamiltonian-path-count-an-increment-of-two-forces-at-most-three-paths-the-increment-ladder-thm-013-for-all-orders-and-what-extension-spectra-forbid-for-chan-pak.md",
+      "remote_git_blob_verified": true,
+      "sha256": "3efbe4a2bf4d5bf1e846e027ae4f069d47abbb40062cfc47bad64214f785968e",
+      "local_stage_byte_identity": true
+    },
+    {
+      "path": "01-canon/theorems/THM-4900-gate-and-doubling-in-the-marked-resolvent-golden-towers-and-tower-ocf.md",
+      "ref": "4c63fd58b566f3e006eb87eaedcf48824741cc84",
+      "sha": "6021035ddbb158b51af95d0969baa226b8a36c6a",
+      "url": "https://github.com/eliottcassidy2000/math/blob/4c63fd58b566f3e006eb87eaedcf48824741cc84/01-canon/theorems/THM-4900-gate-and-doubling-in-the-marked-resolvent-golden-towers-and-tower-ocf.md",
+      "remote_git_blob_verified": true,
+      "sha256": "38c7c118f2e06660114eb26e592a2796a09949077ea2f5f9ba8a537c220870ca",
+      "local_stage_byte_identity": false
+    },
+    {
+      "path": "session212/cycle-levels/classes7.rows",
+      "ref": "4c63fd58b566f3e006eb87eaedcf48824741cc84",
+      "sha": "5302896b46fa988aa0d35d02da0966d21c11caf5",
+      "url": "https://github.com/eliottcassidy2000/math/blob/4c63fd58b566f3e006eb87eaedcf48824741cc84/session212/cycle-levels/classes7.rows",
+      "local_git_blob_matches_remote": true,
+      "sha256": "b17fb0cc08c3e31c2bd8fe6df856f4c1d125f4c2d7bf6153196be6bcbe1ad416"
+    },
+    {
+      "path": "session212/cycle-levels/classes8.rows",
+      "ref": "4c63fd58b566f3e006eb87eaedcf48824741cc84",
+      "sha": "47a66fa06cda23188d1d8b931f8069dfd770d903",
+      "url": "https://github.com/eliottcassidy2000/math/blob/4c63fd58b566f3e006eb87eaedcf48824741cc84/session212/cycle-levels/classes8.rows",
+      "local_git_blob_matches_remote": true,
+      "sha256": "86df994d7c4f535d1ea7fc7f452c07177a426f5fe12efa37e2134dbe0f192f5b"
+    },
+    {
+      "path": "session213/context-transform/PROOF.md",
+      "ref": "4c63fd58b566f3e006eb87eaedcf48824741cc84",
+      "sha": "cfb70b776448a09a0f3789e9c5215c4803625d57",
+      "url": "https://github.com/eliottcassidy2000/math/blob/4c63fd58b566f3e006eb87eaedcf48824741cc84/session213/context-transform/PROOF.md",
+      "local_git_blob_matches_remote": true,
+      "sha256": "5c8199a1a9d0365a52e4a4df16d6915f8b9d779dc35c45a1f730a32eab99db5d"
+    },
+    {
+      "path": "session213/context-transform/MULTIPLICATIVE_CLOSURE.md",
+      "ref": "4c63fd58b566f3e006eb87eaedcf48824741cc84",
+      "sha": "d25f1334fbfc60906ae72b4f32aede5406d1d75b",
+      "url": "https://github.com/eliottcassidy2000/math/blob/4c63fd58b566f3e006eb87eaedcf48824741cc84/session213/context-transform/MULTIPLICATIVE_CLOSURE.md",
+      "local_git_blob_matches_remote": true,
+      "sha256": "ceaea602e8c85842dfe07de080f3624a65b10b9802b37a412eceba3f1559278e"
+    }
+  ]
+}
