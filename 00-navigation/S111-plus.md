@@ -97,3 +97,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session219](S219.md): COMPLETE; sharp five-run Fermat-factor escape, exact Mersenne factorization fibers, optimal smooth-target component degrees and totient supplier formulas. Global conjectures remain OPEN.
 
 [Session220](S220.md): COMPLETE; exact binary envelope/min-cut theorems, sparse finite-state witness selectors and an explicit rank-two ribbon family. Chan–Pak remains OPEN.
+
+[Session221](S221.md): ACTIVE; every even gap by a single arc flip between logarithmic-order strong tournaments, with an exact positive ribbon compiler. Chan–Pak remains OPEN.

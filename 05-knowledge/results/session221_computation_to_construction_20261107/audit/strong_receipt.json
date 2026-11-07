@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "counts": {
+    "strong_physical_moves": 321,
+    "single_arc_permutation_checks": 321,
+    "strong_site_ranges": 21,
+    "strong_selectors": 63
+  },
+  "scope": "Independent literal strong single-arc conjugacies, fixed-site ranges and explicit selectors."
+}

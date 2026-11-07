@@ -1,0 +1,182 @@
+{
+  "commit": "38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817",
+  "sources": [
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-cryptids/REPORT.md",
+      "sha256": "5895328ca829b7937983947d08caffd57d3b85f0ef102cf18b49a7843915a08d",
+      "lines": 254,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-cryptids/REPORT.md",
+      "shipped": false
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-k-write/REPORT.md",
+      "sha256": "9b46b4be06e4ed25a4f86864f328d3a5b54a08825d30e8f82399810ebd666383",
+      "lines": 170,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-k-write/REPORT.md",
+      "shipped": false
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-palindrome-guard/REPORT.md",
+      "sha256": "b45234294bfa1049f5c15266171eefe4b6160167b955ad613c2856e7af6f6a5e",
+      "lines": 235,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-palindrome-guard/REPORT.md",
+      "shipped": false
+    },
+    {
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/path_counter/THEORY.md",
+      "sha256": "c8c1acab8a3a8b80c4d067a09f2b23b20a0da61133aad9838492dc923ce3a087",
+      "lines": 500,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/05-knowledge/results/session133_fractran_spectrum_refinement_20261101/path_counter/THEORY.md",
+      "shipped": false
+    },
+    {
+      "path": "05-knowledge/results/session135_fractran_tm_structure_20261101/machine_translation/PROOF.md",
+      "sha256": "ac480826c0f4605d79844c02873f0e3a4c8e844d201d07404a9e8fcdafda6e6c",
+      "lines": 171,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/05-knowledge/results/session135_fractran_tm_structure_20261101/machine_translation/PROOF.md",
+      "shipped": false
+    },
+    {
+      "path": "05-knowledge/results/session135_fractran_tm_structure_20261101/acceleration/THEORY.md",
+      "sha256": "4281365e6a58ca40d6776cee16e10d2f295455db25253650b3c05333436a8f74",
+      "lines": 256,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/05-knowledge/results/session135_fractran_tm_structure_20261101/acceleration/THEORY.md",
+      "shipped": false
+    },
+    {
+      "path": "05-knowledge/results/lenses_tm_ca_fractran_tournaments_20261101.md",
+      "sha256": "05a76f5255329b45109806fce7599efe0e2e5826654a5e530a0411e810a0159d",
+      "lines": 195,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/05-knowledge/results/lenses_tm_ca_fractran_tournaments_20261101.md",
+      "shipped": false
+    },
+    {
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md",
+      "sha256": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5",
+      "lines": 326,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md",
+      "shipped": false
+    },
+    {
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/spectrum/OBSTRUCTION_PROOF.md",
+      "sha256": "e56a78deede068c1dbcfaf9743359994509ed8b16c64fc97405fa7a8ab0ef53c",
+      "lines": 239,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/05-knowledge/results/session133_fractran_spectrum_refinement_20261101/spectrum/OBSTRUCTION_PROOF.md",
+      "shipped": false
+    },
+    {
+      "path": "01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md",
+      "sha256": "69a57000e8a4f40707f36713e244d8ea8a4746461b9b59e31ca6965f086e25c7",
+      "lines": 395,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md",
+      "shipped": false
+    },
+    {
+      "path": "01-canon/theorems/THM-3463-rule30-mealy-section-suffix-parity-current-and-complexity-boundary.md",
+      "sha256": "547cce052e73985efa68853a80bd1757adef48729d26c5051f3a28ca277200da",
+      "lines": 589,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/01-canon/theorems/THM-3463-rule30-mealy-section-suffix-parity-current-and-complexity-boundary.md",
+      "shipped": false
+    },
+    {
+      "path": "01-canon/theorems/THM-3511-rule30-orbit-signalizer-gap-renormalization-and-shallow-portrait-hostile.md",
+      "sha256": "bb3d95c50cd8d51f9bf1c8955ecb9c8e4a5b378d65516e5a18d4cb143ff9d570",
+      "lines": 614,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/01-canon/theorems/THM-3511-rule30-orbit-signalizer-gap-renormalization-and-shallow-portrait-hostile.md",
+      "shipped": false
+    },
+    {
+      "path": "01-canon/theorems/THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary.md",
+      "sha256": "82c177c9db3c112f0d9bd7e493d8cfd6db53926ba46151b0d9d2d2ef61199d81",
+      "lines": 534,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/01-canon/theorems/THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary.md",
+      "shipped": false
+    },
+    {
+      "path": "01-canon/theorems/THM-4013-rule30-depth-fifteen-history-failure-and-adaptive-routed-repair.md",
+      "sha256": "8d7d3fe64b12a9373975963e2224f1d95ee62adf76716d7e4fcee007b5aa2de6",
+      "lines": 213,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/01-canon/theorems/THM-4013-rule30-depth-fifteen-history-failure-and-adaptive-routed-repair.md",
+      "shipped": false
+    },
+    {
+      "path": "01-canon/theorems/THM-4204-rule30-debruijn-reset-and-dyadic-prefix-saturation.md",
+      "sha256": "9fe21c826a3b053282e7323d82513012a94d85e93969a1d97199edbfbde39608",
+      "lines": 648,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/01-canon/theorems/THM-4204-rule30-debruijn-reset-and-dyadic-prefix-saturation.md",
+      "shipped": false
+    },
+    {
+      "path": "01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md",
+      "sha256": "c568a93f3f016dc8348f6825b1625263dbbf81cbcb16d2b6f216d76e6d44de39",
+      "lines": 725,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md",
+      "shipped": false
+    },
+    {
+      "path": "01-canon/theorems/THM-4857-the-gf2-automaton-of-a-tournament-classifies-the-merged-metagraph-exactly-through-order-five-circulants-are-additive-cellular-automata-and-paley-tournaments-give-quadratic-residue-codes.md",
+      "sha256": "cf0ad43ede8ab39d20f430ad1ef2db90538219c2d1d08bb3a438e6293cd7a558",
+      "lines": 143,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/01-canon/theorems/THM-4857-the-gf2-automaton-of-a-tournament-classifies-the-merged-metagraph-exactly-through-order-five-circulants-are-additive-cellular-automata-and-paley-tournaments-give-quadratic-residue-codes.md",
+      "shipped": false
+    },
+    {
+      "path": "01-canon/theorems/THM-4858-exact-translations-of-the-goldbach-machines-a-53-symbol-radius-one-cellular-automaton-and-a-568-fraction-fractran-program-from-lengs-25-state-turing-machine.md",
+      "sha256": "ab765e042832f449e557a4195c7c3bacc16d579eab5e50c98d6c812a5f5bb16e",
+      "lines": 115,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/01-canon/theorems/THM-4858-exact-translations-of-the-goldbach-machines-a-53-symbol-radius-one-cellular-automaton-and-a-568-fraction-fractran-program-from-lengs-25-state-turing-machine.md",
+      "shipped": false
+    },
+    {
+      "path": "01-canon/theorems/THM-4878-graded-spine-grammars-cut-state-automaton-hankel-and-seam-ranks-cutwidth-censuses.md",
+      "sha256": "1d0c5cc189df6e81d52eaca63891e5a2af104939e437e072cafb796dc7f6c8f8",
+      "lines": 143,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/01-canon/theorems/THM-4878-graded-spine-grammars-cut-state-automaton-hankel-and-seam-ranks-cutwidth-censuses.md",
+      "shipped": false
+    },
+    {
+      "path": "01-canon/theorems/THM-4880-ribbon-tournaments-bounded-span-back-arcs-give-a-finite-state-transfer-for-hamiltonian-paths-strong-connectivity-is-regular-the-span-2-series-has-a-rank-14-integer-representation-irreducible-on-nonempty-words-47-needs-span-3.md",
+      "sha256": "ad4fc80693a1fef4b47ca21d00e27ab1a5fe2f6b23d72414634f9c5f653ea57f",
+      "lines": 130,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/01-canon/theorems/THM-4880-ribbon-tournaments-bounded-span-back-arcs-give-a-finite-state-transfer-for-hamiltonian-paths-strong-connectivity-is-regular-the-span-2-series-has-a-rank-14-integer-representation-irreducible-on-nonempty-words-47-needs-span-3.md",
+      "shipped": false
+    },
+    {
+      "path": "01-canon/theorems/THM-4881-reachable-states-of-the-span-2-ribbon-transfer-congruence-coset-of-index-2-16-exact-tripling-block-sparse-response-sets-and-residue-bias.md",
+      "sha256": "3c408fdf0543b0f06b917c7f3edb6f0c03dfd3050953949b6911b99bf80a267c",
+      "lines": 108,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/01-canon/theorems/THM-4881-reachable-states-of-the-span-2-ribbon-transfer-congruence-coset-of-index-2-16-exact-tripling-block-sparse-response-sets-and-residue-bias.md",
+      "shipped": false
+    },
+    {
+      "path": "04-computation/experiments/ribbon_spectrum_20261104/ribbon.py",
+      "sha256": "c0c4bfe1708b2aac1b7a2d186c77e92873e5af7f459eaf0b33d2d25aa633886f",
+      "lines": 222,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/04-computation/experiments/ribbon_spectrum_20261104/ribbon.py",
+      "shipped": true,
+      "local_path": "sources/ribbon.py"
+    },
+    {
+      "path": "session203/saturated-profile-membership/PROOF.md",
+      "sha256": "f644162e428444d6dccb9f52b7a0c95484960b1bd6635db0a4d00067241a9519",
+      "lines": 133,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/session203/saturated-profile-membership/PROOF.md",
+      "shipped": false
+    },
+    {
+      "path": "05-knowledge/results/session216_overnight_constructions_20261107/inverse/PROOF.md",
+      "sha256": "775dbae124041777c970fe090585699e1e68b7f4cead50d324c2c9e446092058",
+      "lines": 127,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/05-knowledge/results/session216_overnight_constructions_20261107/inverse/PROOF.md",
+      "shipped": false
+    },
+    {
+      "path": "05-knowledge/results/feedback_word_hamilton_spectrum_20261020/proofs.md",
+      "sha256": "c24aca5ffd092e216985eb794512d584c08db2610dd84982aabb6a5d24a69b6c",
+      "lines": 217,
+      "url": "https://github.com/eliottcassidy2000/math/blob/38fdf9f234159aaedb2d0ba1e0f7bcdefb49e817/05-knowledge/results/feedback_word_hamilton_spectrum_20261020/proofs.md",
+      "shipped": false
+    }
+  ],
+  "verification": "Exact bytes read using git show from the named local commit. No fresh remote-head claim is made by this worker."
+}
