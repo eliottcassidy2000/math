@@ -1,0 +1,38 @@
+{
+  "readme_sha256": "412594969d3a2a437e25658e96d7558f0a201e599ccb66d278d8e7139fdcd36c",
+  "verified_link_count": 8,
+  "links": [
+    {
+      "destination": "square-sum-port-bridge/PROOF.md",
+      "sha256": "c9d7c4586d2ce61c3813aa74ee4b182d94ff072ed0e31a98133973f74c583199"
+    },
+    {
+      "destination": "recursion-bridge/PROOF.md",
+      "sha256": "987706d4116dc6df55a7332fe65d3c4621ad483d42c40edf41da03cadf69116b"
+    },
+    {
+      "destination": "arithmetic-cover-bridge/PROOF.md",
+      "sha256": "d87ac9b71303f3114b9ddd9c15b27cbbf59d24984d4cd9a1583bc6c12c6601f8"
+    },
+    {
+      "destination": "score-permutohedron/PROOF.md",
+      "sha256": "583c1d2d112141c6e998e58369b077dde00952e6ab3c5c9458069734b98c9fc5"
+    },
+    {
+      "destination": "square-sum-port-bridge/audit/REVIEW.md",
+      "sha256": "830904b54085f22c27f0a5aa6dcf0820b72845c90c852a4e5963b247a0e791ef"
+    },
+    {
+      "destination": "recursion-bridge/audit/REVIEW.md",
+      "sha256": "b7281e14b14df8a55da8ceb63d7c16e6531ec8124bccba41b8eca083897d989c"
+    },
+    {
+      "destination": "arithmetic-cover-bridge/audit/REVIEW.md",
+      "sha256": "901e56324296aa7d28bfe38a18b3f8e6dac6b10f972ce2ff5575cedf93498e1c"
+    },
+    {
+      "destination": "score-permutohedron/audit/REVIEW.md",
+      "sha256": "0356228ac118cc39b488a8dba16b8461584a98fdb9d9162cd3d47217552e4823"
+    }
+  ]
+}
