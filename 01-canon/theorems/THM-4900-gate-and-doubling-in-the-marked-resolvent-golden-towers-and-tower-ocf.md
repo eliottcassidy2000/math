@@ -37,9 +37,9 @@ status: >
   - statement 7: the operator form of the tower weights (KNOWN in content, see 7(a)), their monotonicity, the
     forgetting bound rho <= 1/(r+1), and the first-order law with an explicit error.
   AUDIT: statements 1-6 audited by audit H1 (05-knowledge/results/microcosm_audit_H1_20261106.md): PASS WITH
-  CORRECTIONS, all applied (credits to THM-1950 and Session159; MISTAKE-729). Statement 7 was added after audit H1,
-  which had only checked its parts (a) and (b)1 as Lemmas A-B of HYP-9490; see the follow-up audit section of that
-  report.
+  CORRECTIONS, all applied (credits to THM-1950 and Session159; MISTAKE-729). Statement 7 was added after audit H1
+  and checked by its follow-up (report section 7): PASS, no mathematical errors, three cosmetic fixes applied; no
+  earlier occurrence of rho <= 1/(r+1), the first-order law or the sandwiches was found in the repository.
 source: mac-mini-2026-11-06-microcosm (owner directive 2026-11-06: micro/macrocosm; the duality of x+2 and x*2 recursion on tournaments; an n-vertex tournament as a strong (n+2)-tournament with a recognizable gate)
 depends_on: [THM-447, THM-291, THM-078, THM-1950, THM-3322, THM-1370, session35 recursions RESULT.md, session210 graded-spectrum-gates PROOF.md, session211 recursion-bridge PROOF.md, session159 cycle_profiles + profile_operator + lagrange NOTE.md]
 verification:
@@ -194,7 +194,8 @@ be Session210's gate operator, so that U_(d,r) = (L^r q^d)(1). Put
   - The macro part of a tower is one Sturm–Liouville (diffusion-generator) operator applied r times to e^y. The core
     enters only as the constant-coefficient operator P_T(∂), read at the origin.
   - On exponentials, M e^(ky) = k e^((k+1)y) + k² e^(ky) − k e^((k−1)y). So M^r e^y = Σ_q c_(r,q) e^(qy) with
-    Session159's coefficients (lagrange/NOTE.md (7)), and U_(d,r) = Σ_q c_(r,q) q^d is its formula (7).
+    Session159's coefficients (lagrange/NOTE.md (7)), and U_(d,r) = Σ_q c_(r,q) q^d is its formula (7) for d ≥ 1 (for d = 0 keep the q = 0
+    coefficient, which Session159 discards, with 0^0 = 1).
   - Session159 profile_operator/NOTE.md (2) wrote the gate on the profile side as a second-order operator in z. The
     operator M is the transposed form, on the evaluation side.
 - **(b) Monotonicity and the forgetting bound.** For all e ≥ 2 and r ≥ 0:
@@ -337,7 +338,7 @@ The bound in (b) is ρ ≤ 1/(r+1) ≈ 2/N. The data suggest the true rate is ab
 
   Divide, writing U_(n−2,r) = ρ_(n,r)·U_(n,r). The error is E = (δ/U_(n,r) − 2Δc3·ρ_(n,r)·ε′)/(1 + ε′), which gives the
   bound.
-- **(d)** Σ_k 2C(d,2k+1) = 2^d, and by (b) every U_(d−2k,r−1) ≤ U_(d,r−1) ≤ U_(d+2,r−1)/r. Substituting in (R) gives
+- **(d)** Σ_k 2C(d,2k+1) = 2^d for d ≥ 1 (it is 0 for d = 0, where the ratio is exactly 1), and by (b) every U_(d−2k,r−1) ≤ U_(d,r−1) ≤ U_(d+2,r−1)/r. Substituting in (R) gives
   the first sandwich. For the second, write
 
       ρ_(d,r)/ρ_(d+2,r−1) = [U_(d−2,r)/U_(d,r−1)]·[U_(d+2,r−1)/U_(d,r)],

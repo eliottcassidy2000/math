@@ -433,3 +433,116 @@ Genuine mathematical errors (candidates for a MISTAKE entry):
 
 The priority misses would also merit a MISTAKE line: φ = THM-1950's s, Session159's all-order sw_1 = 2c3 and gate
 operator, and Session212's class counts. They do not affect any proof.
+
+## 7. Follow-up audit (THM-4900 statement 7, after corrections)
+
+Audited at `cdf1fc1464` (origin/main). Scope: THM-4900 statement 7 and its proof; the re-scoped HYP-9490 (title,
+status, statement); the INDEX line "THM-4900, HYP-9490".
+
+Independent check: `audit_H1/followup_statement7_check.py`, output `followup_statement7_check.out`, about 11 s. Its
+weights come from the exponential walk c_(r,q) (Session159 lagrange (7), with the q = 0 term kept), not from the
+recursion (R). The two derivations agree for r ≤ 100, e ≤ 200. The packet's `tower_forgetting_bound.py` was rerun in a
+scratch copy and reproduces its committed `.out` byte-identically.
+
+**Verdict: PASS.** Statement 7 is correct as stated and proved. Only cosmetic precisions remain (F1–F3). HYP-9490 and
+the INDEX line no longer claim anything false.
+
+### (b)2: U_(e,r) ≥ (r+1)·U_(e−2,r) — PASS
+
+Re-derived line by line.
+- **Pascal split.** C(e,j) = C(e−2,j) + 2C(e−2,j−1) + C(e−2,j−2), with C(·, negative) = 0.
+- **Index ranges.** The decomposition U_(e,r) = [U_(e+2,r−1) + Σ_k 2C(e−2,2k+1)U_(e−2k,r−1)] + S is exact.
+  - A height e − 2k = 1 (odd e) enters S only through 2C(e−2,e−2) = 2.
+  - A height e − 2k = 0 never appears.
+- **Where the hypothesis is used.** At h = e + 2 ≥ 4, and at h = e − 2k with C(e−2,2k+1) ≠ 0, i.e. h ≥ 3. So it is
+  used only at heights ≥ 2, as claimed (in fact ≥ 3).
+- **Bracket.** Summing the hypotheses with nonnegative coefficients gives a bracket ≥ λ·U_(e−2,r), by (R) at e − 2
+  (including e − 2 = 0, where (R) reads U_(0,r) = U_(2,r−1)).
+- **Slack.** The term-by-term domination S ≥ U_(e−2,r) is right. The k = 0 term is 4U_(e,r−1) ≥ U_(e,r−1); the k ≥ 1
+  terms contain 2C(e−2,2k−1)U_(e−2k,r−1).
+- **Edge cases, worked by hand.**
+  - e = 2: U_(2,r) = U_(4,r−1) + 4U_(2,r−1). The hypothesis is used only at h = 4, and S = 4U_(2,r−1) ≥ U_(0,r).
+  - e = 3: S = 4U_(3,r−1) + 2U_(1,r−1) ≥ U_(1,r). The hypothesis is used at h = 5 and h = 3.
+- **Base.** r = 0 holds, with equality.
+
+Exact checks for 2 ≤ e ≤ 200 and 0 ≤ r ≤ 100:
+- (b)2 and (b)1: 0 violations.
+- The split is exact. The bracket ≥ r·U_(e−2,r) and S ≥ U_(e−2,r) hold at every step.
+- Equality in (b)2 occurs only at r = 0. For r ≥ 1 the bound has room: min_e U_(e,r)/((r+1)U_(e−2,r)) is 1.50, 2.07,
+  2.51, 4.16, 5.92, 10.11 and 15.76 at r = 1, 2, 3, 10, 20, 50, 100.
+
+### (c): explicit first-order error — PASS
+
+The derivation is correct.
+- R_X uses only j ≥ 2. U_(n−2j,r) ≤ U_(n−4,r) ≤ U_(n−2,r)/(r+1) by repeated (b)2 at heights ≥ 2, which needs n ≥ 4.
+  R_X = 0 for n ≤ 3.
+- |ε′| ≤ σ(T′)ρ_(n,r) ≤ σ(T′)/(r+1).
+- E = (δ/U_(n,r) − 2Δc3·ρ·ε′)/(1 + ε′), and 1 + ε′ ≥ (r + 1 − σ(T′))/(r+1) > 0. This gives the stated bound exactly.
+
+The absolute values are handled correctly: no sign of sw_j is used. For tournaments every sw_j ≥ 0 anyway
+(Session159 (1)), so σ(X) = H(X) − 1 (confirmed on the test pool).
+
+Checks:
+- 5807 (T, T′, r) triples: random, transitive and rotational cores of orders 4–8, r from the threshold r + 1 > σ(T′)
+  up to 400. 0 violations. The largest |E|/bound is 0.92, so the bound is valid and not vacuous near the threshold.
+- 1600 triples with signed random coefficient vectors (|sw_j| ≤ 12, c3 := sw_1/2). 0 violations, which confirms
+  that the proof does not use sw_j ≥ 0.
+
+Optional upgrade, not a correction: since σ(X) = H(X) − 1, the hypothesis reads r ≥ H(T′) − 1. δ also only needs
+Σ_(j≥2) sw_j = H − 1 − 2c3.
+
+### (d): the two sandwiches — PASS
+
+Exact for 1 ≤ r ≤ 100, with 0 ≤ d ≤ 60 for the first and 2 ≤ d ≤ 60 for the second: 0 violations. The proof is
+correct. Its first sentence needs d ≥ 1 (F2); at d = 0 the ratio is exactly 1.
+
+### (a): the operator form, "KNOWN in content" — PASS
+
+Session159 `lagrange/NOTE.md` (7) (2026-11-03) gives h(G^m(T_n)) = Σ_q c_(m,q) q^n with
+c_(m+1,q) = (q−1)c_(m,q−1) + q²c_(m,q) − (q+1)c_(m,q+1), for n ≥ 1. That is exactly M acting on exponentials. So
+"KNOWN in content (Session159 lagrange (7)); new as an operator" is accurate. The pairing, the adjoint M and the
+general-core formula [P_T(∂)M^r e^y](0) are the new packaging. One precision (F1): Session159 discards the q = 0
+coefficient, which matters only for d = 0 (U_(0,1) = 1, whereas Σ_(q≥1) c_(1,q) = 2).
+
+### HYP-9490 (re-scoped) and the INDEX line — PASS
+
+- **HYP-9490.** The title and status now claim only what THM-4900(7) proves, and conjecture only the sharp rate
+  Θ((log N)²/N²), typed OPEN. The weaker forms are correctly listed as open. The von Mises remark checks:
+  y = iθ gives M = −∂_θ² + 2 sin θ·∂_θ.
+- **INDEX line.** Accurate: the NEW (7) summary, the credits (THM-1950, Session159, Session212, THM-4556), and the
+  rate typed conjectural.
+- **No new overlap.** No earlier in-repo appearance was found of ρ ≤ 1/(r+1), the first-order law, or the (d)
+  sandwiches. That includes Session210–213 and the Session150–164 cover-operator notes.
+
+### Corrections (all cosmetic)
+
+**F1.** THM-4900, 7(a). Old:
+```
+and U_(d,r) = Σ_q c_(r,q) q^d is its formula (7).
+```
+New:
+```
+and U_(d,r) = Σ_q c_(r,q) q^d is its formula (7) for d ≥ 1 (for d = 0 keep the q = 0 coefficient, which Session159 discards, with 0^0 = 1).
+```
+
+**F2.** THM-4900, proof of 7(d). Old:
+```
+- **(d)** Σ_k 2C(d,2k+1) = 2^d,
+```
+New:
+```
+- **(d)** Σ_k 2C(d,2k+1) = 2^d for d ≥ 1 (it is 0 for d = 0, where the ratio is exactly 1),
+```
+
+**F3.** HYP-9490, evidence section. Old:
+```
+Here κ = c3(T) − c3(reference) and ε = 2ρ.
+```
+New:
+```
+Here κ = c3(T) − c3(reference), and ε is the fitted slope (the mean of dev/κ over κ ≠ 0). It agrees with 2ρ_(n,r) to within 0.3%, and is exactly 2ρ/(1 + 4ρ) at order 4, which is why that row's residual is 10⁻¹⁹.
+```
+Fitted slopes against 2ρ_(n,r) at N ≈ 401: 3.9452e-4 vs 3.9483e-4, 3.9612e-4 vs 3.9666e-4, 3.9443e-4 vs 3.9514e-4,
+and 3.9595e-4 vs 3.9697e-4.
+
+No mathematical errors were found in statement 7, so nothing here needs a MISTAKE entry.

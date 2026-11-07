@@ -88,7 +88,8 @@ recursion (R) of THM-4900(7).
 | 6 | 56 | TT2 tower, c3 = 6 | [3.9397e-4, 3.9499e-4] | 5.57e-7 |
 | 7 | 456 | K1 tower, c3 = 9 | [3.9429e-4, 3.9754e-4] | 1.74e-6 |
 
-Here κ = c3(T) − c3(reference) and ε = 2ρ. At order 4 the law is exact, since P_T = q⁴ + 2c3·q².
+Here κ = c3(T) − c3(reference), and ε is the fitted slope (the mean of dev/κ over κ ≠ 0). It agrees with 2ρ_(n,r)
+to within 0.3%, and is exactly 2ρ/(1 + 4ρ) at order 4 (P_T = q⁴ + 2c3·q²), which is why that row's residual is 10⁻¹⁹.
 
 **Large N against the one-vertex tower** (`cover_tower_values.out`). Relative deviations, with N²·dev in brackets:
 

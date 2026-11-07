@@ -7,10 +7,11 @@ tournaments and how An n-vertex tournament corresponds to a strong tournament on
 
 Canon:
 - [THM-4900](../../01-canon/theorems/THM-4900-gate-and-doubling-in-the-marked-resolvent-golden-towers-and-tower-ocf.md)
-  (PROVED; statements 1–6 audited by audit H1, statement 7 added afterwards with a follow-up check);
+  (PROVED; statements 1–6 audited by audit H1, statement 7 added afterwards and passed the follow-up audit);
 - [HYP-9490](../hypotheses/HYP-9490-gate-towers-forget-the-core-up-to-cyclic-triangles.md) (OPEN: only the sharp
   forgetting rate);
-- [audit H1](microcosm_audit_H1_20261106.md): PASS WITH CORRECTIONS, all applied (MISTAKE-729).
+- [audit H1](microcosm_audit_H1_20261106.md): PASS WITH CORRECTIONS, all applied (MISTAKE-729). Its follow-up
+  (§7) passed statement 7, with three cosmetic fixes applied.
 
 Claims are typed as PROVED, KNOWN, CITED, FINITE-EXACT, STRUCTURAL, ANALOGY, COINCIDENCE, NUMEROLOGY, CONDITIONAL or
 HEURISTIC. Notation: φ = (1+√5)/2 is the golden ratio; the tournament invariant F_T(1) is called s(T), as in THM-1950.

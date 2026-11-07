@@ -1,0 +1,14 @@
+U_(e,r) from the exponential walk agrees with (R) for 1 <= r <= 100, 0 <= e <= 200: mismatches 0
+(b)1 U_(e,r) >= U_(e+2,r-1) and (b)2 U_(e,r) >= (r+1) U_(e-2,r), 2 <= e <= 200, 0 <= r <= 100: violations 0, 0
+     min_e U_(e,r)/((r+1)U_(e-2,r)) [attained at e]: r=0: 1.000 [e=2]; r=1: 1.500 [e=3]; r=2: 2.067 [e=3]; r=3: 2.506 [e=3]; r=5: 3.094 [e=2]; r=10: 4.156 [e=2]; r=20: 5.917 [e=2]; r=50: 10.107 [e=2]; r=100: 15.761 [e=2]
+     equality U_(e,r) = (r+1)U_(e-2,r) only at: [(2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0)] ... (199 cases)
+proof steps for 1 <= r <= 100, 2 <= e <= 198: Pascal split exact (bad 0); A1 >= r U_(e-2,r) (bad 0); S >= U_(e-2,r) (bad 0); hypothesis only used at heights >= 3 or e+2
+(d) 1 <= U_(d,r)/U_(d+2,r-1) <= 1 + 2^d/r (0 <= d <= 60) and 1/(1+2^d/r) <= rho_(d,r)/rho_(d+2,r-1) <= 1 + 2^(d-2)/r (2 <= d <= 60), 1 <= r <= 100: violations 0, 0
+(c) |E| <= rho[sigma(T)+sigma(T')+2|dc3|sigma(T')]/(r+1-sigma(T')) on 5807 (T, T', r) triples (random/transitive/rotational cores of orders 4-8, r from the threshold r+1 > sigma(T') to 400): violations 0, max |E|/bound = 0.9217
+    sigma(X) = H(X) - 1 and all sw_j >= 0 on the pool: True
+(c) same bound with signed random sw_j (|sw_j| <= 12, c3 := sw_1/2) on 1600 triples: violations 0, max |E|/bound = 0.1367
+n = 4, N = 402: 2 rho_(n,r) = 3.9483e-04 vs the fitted eps = 3.9452e-04 (relative difference 7.9e-04)
+n = 5, N = 401: 2 rho_(n,r) = 3.9666e-04 vs the fitted eps = 3.9612e-04 (relative difference 1.4e-03)
+n = 6, N = 402: 2 rho_(n,r) = 3.9514e-04 vs the fitted eps = 3.9443e-04 (relative difference 1.8e-03)
+n = 7, N = 401: 2 rho_(n,r) = 3.9697e-04 vs the fitted eps = 3.9595e-04 (relative difference 2.6e-03)
+FAILURES: 0
