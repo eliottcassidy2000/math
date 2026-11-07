@@ -13,7 +13,8 @@ Canon:
   (PROVED): the signature simplex of a tournament; equicentric and equilateral tournaments; skew-Hadamard; the Fano
   line code.
 - [HYP-9500](../hypotheses/HYP-9500-strong-equicentric-tournaments-exist-at-every-even-order-a-weak-skew-hadamard-shadow.md)
-  (OPEN, large parts proved): strong equicentric tournaments at every even order.
+  (OPEN): the λ-spectrum of equicentric tournaments. Its existence part (a) is PROVED (audit J1).
+- [Audit J1](sevensphere_audit_J1_20261107.md): PASS WITH CORRECTIONS, all applied (MISTAKE-732).
 
 Claims are typed PROVED, KNOWN, CITED, FINITE-EXACT, STRUCTURAL, ANALOGY, NUMEROLOGY, HEURISTIC or NEGATIVE.
 
@@ -37,7 +38,12 @@ The same directive reached three lanes on 2026-10-21, and all three were read be
 - **Older.**
   - THM-1950 (klein; the inverse response `s(T)`, its bounds and the velocity law).
   - THM-211 (Paley design); THM-447 (skew-Sylvester double); THM-4557; THM-3729 (rooted Pfaffians).
+  - THM-1475(1) (even-order tournament Pfaffians are odd) and the 2026-06-11 reflection `cbx0611s3` (the kernel vector
+    of an odd-order tournament's skew matrix has all-odd entries): the ingredients of THM-4911(3a).
+  - THM-472 (the equality cases `SSᵀ = nI − J` and `SSᵀ = (n−1)I`).
   - Reid–Brown (doubly regular tournaments and skew-Hadamard matrices; classical).
+  - Nozaki–Suda, arXiv:1202.5374 (main angles; equicentric means at most two main eigenvalues; their Theorem 2.7 is
+    the closest prior result to THM-4911(3c)). Found by audit J1.
 
 This session works only on what the October lanes left open:
 - the reading of (C);
@@ -82,10 +88,11 @@ facet circumcentre).
 In every exact case the eight labels are distinct and lie on `S2`, the corner powers are as stated, and the defect
 matches.
 
-**What does not extend** (NEGATIVE, `flag_negative.out`). The corner-power rule does not continue down a flag of
-faces for `n ≥ 4` (residuals 0.12–0.19). The eight-point sphere is a one-facet phenomenon.
-- S49's question 2 (the `2(n+1)` spheres through `D, E`): a numerical scan of ten candidate coincidences found none
-  beyond the shared points `D, E` and the coplanar centres (all in the bisector plane of `DE`). It stays open.
+**What does not extend** (NEGATIVE, generic; `flag_negative.out`, audit J1). For a generic simplex, `n ≥ 4`, the
+corner-power rule does not continue down a flag of faces (exact rank test). The system is consistent on a real
+hypersurface at `n = 4` (audit J1), so this is not a universal negative.
+- S49's question 2 (the `2(n+1)` spheres through `D, E`) stays open. No scan is recorded; all these spheres pass
+  through `D, E` and their centres lie in the bisector plane of `DE`.
 
 ## 2. The Fano plane: complementary against anticomplementary, and the Fano tournament
 
@@ -98,17 +105,19 @@ faces for `n ≥ 4` (residuals 0.12–0.19). The eight-point sphere is a one-fac
 - **Mod 2 the two readings agree** (STRUCTURAL, THM-4910(5)).
   - In barycentric coordinates `C* = −2V0 + V1 + V2 + V3 ≡ V1 + V2 + V3 (mod 2)`. That is the PG(3,2) point `{1,2,3}`,
     the complement of `{0}` in the subset model of PG(3,2).
-  - So the pasted phrase "complementary to V1V2V3" names the right point over GF(2), the field where Fano's seventh
-    line is straight. Over `R` it must be read as anticomplementary.
-  - That this explains the owner's wording is an interpretation, not a claim.
+  - In the same subset model, the point complementary to `{1,2,3}` is `{0} = V0`. So the GF(2) reduction does *not*
+    select `C*` as "the vertex complementary to V1V2V3". Reading (C) as the anticomplementary vertex is an
+    interpretation, supported by the theorem and not by this congruence (corrected by audit J1).
 - **The Fano plane is a signature simplex** (PROVED, THM-4911(5)).
   - For the Paley tournament QR7, the signature vector `p_i = (I+M)e_i` of each vertex is `−1` exactly on the Fano
     line `i + {1,2,4}`.
   - The seven signature vectors are the incidence vectors of the seven Fano lines, pairwise at Hamming distance 4,
     forming a regular 6-simplex in the 7-cube.
-- **The irony** (STRUCTURAL). The seven-point sphere needs separated centres (`O ≠ G`, non-coplanar). QR7's simplex
-  is equilateral, so all its centres coincide. The Fano tournament is therefore exactly where the seven-point sphere
-  does not exist. More generally the sphere sees precisely a tournament's deviation from regularity.
+- **The irony** (STRUCTURAL). The seven-point sphere needs separated centres. QR7's simplex is equilateral, so
+  `O_T = G_T` and `O'_v = G'_v`, and the seven-point sphere does not exist for QR7.
+  - The same holds for every equicentric tournament: all regular ones, every `R_a ⇒ R_b`, every skew-Hadamard one.
+  - It also holds for some non-equicentric ones, such as source ⇒ C3 ⇒ sink.
+  - The sphere needs `G_T ≠ O_T` plus THM-4742's non-coplanarity, not irregularity as such.
 
 ## 3. Tournament structure and an open problem (THM-4911, HYP-9500)
 
@@ -130,15 +139,16 @@ in-neighbours, `−1` on its out-neighbours. All `p_i` lie on the sphere of radi
     - `λ ≡ n − 1 (mod 4)`.
   - Equilateral is exactly doubly regular (`c = −1`) or skew-Hadamard (`c = 0`). The proof is a two-line eigenvalue
     argument.
-- **The open problem.** By Reid–Brown, the skew-Hadamard conjecture (OPEN) says that every `n ≡ 0 (mod 4)` carries a
-  tournament with pairwise orthogonal signature vectors.
-- **HYP-9500**, a weak shadow. Every even order `n ≥ 6` should carry a *strong equicentric* tournament (orthogonality
-  replaced by the single eigenvector condition), and the `λ`-values should fill a whole progression. Proved so far:
-  - `n ≡ 2 (mod 4)`;
-  - every `n ≡ 0 (mod 4)` with a skew-Hadamard matrix (switch a bordered doubly regular tournament at one vertex).
-
-  Open at the remaining orders.
-- **The seven-point sphere of a tournament** (THM-4911(6)). For every non-equicentric tournament and vertex `v` in the
+- **The open problem.** By definition, the skew-Hadamard conjecture (OPEN) says that every `n ≡ 0 (mod 4)` carries a
+  tournament with pairwise orthogonal signature vectors. Reid–Brown gives the doubly regular form at order `n − 1`.
+- **HYP-9500.**
+  - (a) A strong equicentric tournament exists at every even order `n ≥ 6`. This is PROVED (audit J1): substitute an
+    equicentric tournament into a regular one, and use skew-Walsh towers at powers of 2. The first version posed it as a
+    "shadow" of the skew-Hadamard conjecture, which it is not (MISTAKE-732).
+  - (b) The `λ`-values fill a whole progression. This is the open conjecture.
+- **Equicentric = equal 2-path counts** (audit J1). `T` is equicentric iff every vertex is an endpoint of the same
+  number of directed 2-paths.
+- **The seven-point sphere of a tournament** (THM-4911(6)). For every tournament and vertex `v` in the
   regime, the eight-point sphere of the signature simplex has `Pow(O_T) = n(n − 1/s(T))` and `Pow(p_v) = 4(n − 1 + Δ_v)`.
   Here `Δ_v` counts the directed 2-paths ending or starting at `v`.
 
@@ -146,12 +156,12 @@ in-neighbours, `−1` on its out-neighbours. All `p_i` lie on the sphere of radi
 
 | idea | status | what transfers |
 |---|---|---|
-| Seventh incidences. Fano's line needs char 2. The sphere's literal `V0` needs `Σ = 0` (impossible over `R`); its anticomplementary `C*` holds identically. Positive Collatz cycles stay open. | ANALOGY (S49's ledger, updated) | Find the right point before calling an incidence obstructed. In two of the three cases the obstruction was a misreading or a characteristic. |
-| Corner weights `c = n+1−α−β` on the Boolean square (centroid?, facet?) | STRUCTURAL | A third axis (anticomplement: `h_(G,−n)` maps `O, G, G', O'` to `D, G, V0, O'_W`) gives a cube of centres. The two squares do not share one sphere (`D ∈ S2` while `Pow_(S2^W)(D) = (n+1)n²R² ≠ 0`). |
-| Signature simplex and THM-1950's `s` | PROVED | THM-1950's velocity addition under `⇒` becomes a rule for composing distances: with `d² = 1/s`, `d²(A ⇒ B) = (d_A²d_B² + 1)/(d_A² + d_B²)`, the coth-addition law. |
-| Equicentric ⊂ equilateral ⊂ skew-Hadamard (as conditions on `I + MᵀM`) | PROVED + OPEN | HYP-9500 is a tournament-only step towards the skew-Hadamard conjecture. |
+| Seventh incidences. Fano's line needs char 2. The sphere's literal `V0` needs `Σ = 0` (impossible over `R`); its anticomplementary `C*` holds identically. Positive Collatz cycles stay open. | ANALOGY (S49's ledger, updated) | Find the right point before calling an incidence obstructed. In two of the three cases the obstruction disappears under another reading (`C*`) or another characteristic. |
+| Corner weights `c = n+1−α−β` on the Boolean square (centroid?, facet?) | STRUCTURAL | The anticomplementary homothety `h_(G,−n)` maps `O, G, G', O'` to `D, G, V0, O'_W`. Since `h` fixes `G`, this gives a second skew quadrilateral sharing the corner `G`. The two do not share one sphere (`D ∈ S2` while `Pow_(S2^W)(D) = (n+1)n²R² ≠ 0`). |
+| Signature simplex and THM-1950's `s` | KNOWN (THM-1950), restated | THM-1950's velocity addition under `⇒` becomes a rule for composing distances: with `d² = 1/s`, `d²(A ⇒ B) = (d_A²d_B² + 1)/(d_A² + d_B²)`. As with THM-1950's own tanh form, there is a real rapidity only when `s < 1`. |
+| skew-Hadamard ⟹ equilateral ⟹ equicentric (equilateral = doubly regular or skew-Hadamard) | PROVED | HYP-9500(b) is the open part; (a) is elementary. |
 | QR7 = Fano line code; the regular simplex | PROVED | Doubly regular tournaments are the designs whose signature simplex is regular (classical). |
-| `Pow(p_v) = 4(n − 1 + Δ_v)` with 2-path counts | PROVED | A new tournament invariant attached to each vertex by the sphere. Its relation to `H(T)` is untested (HEURISTIC). |
+| `Pow(p_v) = 4(n − 1 + Δ_v)` with 2-path counts | PROVED | A classical quantity: `Δ_v = 2SB(v) + (n−1)d⁻(v) + d⁺(v) − C(n,2)`, with `SB` the Sonneborn–Berger score. Equicentric iff `Δ_v` is constant. Any relation to `H(T)` is untested (HEURISTIC). |
 | The 7/8 counts (seven labels plus `X`; Fano's 7 points and PG(1,7)'s 8, both acted on by the group of order 168) | NUMEROLOGY | No mechanism; recorded so it is not re-derived as structure. |
 
 ## 5. Ledger
@@ -162,22 +172,21 @@ in-neighbours, `−1` on its out-neighbours. All `p_i` lie on the sphere of radi
 | Eighth point `X`; corner powers `c·(R² − OP²)`; side-pair structure; defect `= V0A·V0C*` | PROVED (new) |
 | `S2` through `A, B, D, E, F, H'`; the `ι`-invariance; `Σ`; all `n`; the literal reading false | KNOWN (THM-4742, session23b) |
 | Mod-2 reduction of `C*` to `{1,2,3}` | STRUCTURAL |
-| No flag extension (`n = 4, 5, 6`) | NEGATIVE (numerical) |
+| No flag extension (`n = 4, 5, 6`) | NEGATIVE, generic (exceptions on a real hypersurface at `n = 4`, audit J1) |
 | Signature simplex: cube, sphere, `δ`-edges, `s = 1/dist²`, `r² = n − 1/s` | PROVED (new in this form) |
-| Equicentric: odd `n` ⟺ regular; non-strong ⟺ `R_a ⇒ R_b`; almost regular ⟺ `n ≡ 2 (mod 4)`; `λ ≡ n−1 (mod 4)` | PROVED (new) |
-| Equilateral ⟺ `c ∈ {−1, 0}` (doubly regular or skew-Hadamard) | PROVED; KNOWN in substance (Reid–Brown) |
+| Equicentric: odd `n` ⟺ regular; non-strong ⟺ `R_a ⇒ R_b`; almost regular ⟺ `n ≡ 2 (mod 4)`; `λ ≡ n−1 (mod 4)`; equal 2-path counts | PROVED (new as stated; ingredients THM-1475(1) and the cbx0611s3 kernel lemma; framework Nozaki–Suda; 2-path form from audit J1) |
+| Equilateral ⟺ `c ∈ {−1, 0}` (doubly regular or skew-Hadamard) | PROVED; KNOWN in substance (Reid–Brown, THM-472) |
 | QR7's signature vectors are the Fano lines | PROVED; KNOWN in substance (THM-211) |
-| Eight-point sphere of the signature simplex; `Pow(p_v) = 4(n−1+Δ_v)`; `Pow(O_T) = n(n − 1/s)` | PROVED |
-| HYP-9500 | OPEN (proved for `n ≡ 2 mod 4` and for skew-Hadamard orders) |
+| Eight-point sphere of the signature simplex (at vertices in the regime); `Pow(p_v) = 4(n−1+Δ_v)`; `Pow(O_T) = n(n − 1/s)` | PROVED |
+| HYP-9500 | (a) PROVED at every even `n ≥ 6` (audit J1); (b) OPEN |
 | Equicentric counts 1, 2, 1, 5, 3, 14, 15, 165 (`n = 3..10`) | FINITE-EXACT |
 
 ## 6. Next obligations
 
-- **HYP-9500.**
-  - A direct construction of strong equicentric tournaments at `n ≡ 0 (mod 4)` (blocks with `x ∈ {±1, ±3}`).
-  - Local search at `n = 12, 16, 20` for the full `λ`-progression.
-- **The sphere as an invariant.** Does `Pow(p_v)`, or the radius of `S2(T, v)`, separate tournaments that `s(T)`
-  does not? Does it correlate with `H(T)`?
+- **HYP-9500(b).** Local search at `n = 12, 16, 20` for the full `λ`-progression, and constructions for its middle
+  values (blocks with `x ∈ {±1, ±3}`).
+- **The sphere as an invariant.** `Pow(p_v)` is a classical second-order score (`Δ_v`). Does the radius of
+  `S2(T, v)` separate tournaments that `s(T)` and the score data do not? Does it correlate with `H(T)`?
 - **S49's question 2 for signature simplices.** The `n` vertex choices of one tournament give `n` eight-point spheres
   through the common `D_T, E_T`. Is their configuration a tournament invariant?
 - **The two homotheties.** Is there a single statement covering both the complementary circle (Fano's seventh line,
@@ -190,3 +199,4 @@ in-neighbours, `−1` on its out-neighbours. All `p_i` lie on the sphere of radi
 - `flag_negative.py`: THM-4910(6).
 - `signature_simplex.py`: THM-4911(1)–(6); census through `n = 10`, about 2 minutes; needs nauty `gentourng`.
 - `switching_paley.py`: HYP-9500's switching construction.
+- `audit_J1/`: the independent audit's scripts (see the report).

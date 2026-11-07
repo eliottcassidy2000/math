@@ -1,0 +1,8 @@
+n=3: labeled equicentric 2 vs sum n!/|Aut| over the 1 classes 2: True; strong: 2 vs 2: True
+n=4: labeled equicentric 16 vs sum n!/|Aut| over the 2 classes 16: True; strong: 0 vs 0: True
+n=5: labeled equicentric 24 vs sum n!/|Aut| over the 1 classes 24: True; strong: 24 vs 24: True
+n=6: labeled equicentric 848 vs sum n!/|Aut| over the 5 classes 848: True; strong: 480 vs 480: True
+n=7: labeled equicentric 2640 vs sum n!/|Aut| over the 3 classes 2640: True; strong: 2640 vs 2640: True
+        2.63 real         1.26 user         0.85 sys
+           403537920  maximum resident set size
+                 142  voluntary context switches

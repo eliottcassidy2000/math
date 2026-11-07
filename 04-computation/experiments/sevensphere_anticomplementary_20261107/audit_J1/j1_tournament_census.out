@@ -1,0 +1,18 @@
+n | classes | equicentric | non-strong | almost-reg | strong | lambda (all) | lambda (strong) | equilateral c=-1, c=0
+3 | 2 | 1 | 0 | 0 | 1 | [] | [] | 1, 0   [0s]
+   exact (2) on all 2 classes: OK
+4 | 4 | 2 | 2 | 0 | 0 | [3] | [] | 0, 2   [0s]
+   exact (2) on all 4 classes: OK
+5 | 12 | 1 | 0 | 0 | 1 | [] | [] | 0, 0   [0s]
+   exact (2) on all 12 classes: OK
+6 | 56 | 5 | 3 | 2 | 2 | [1, 5, 9] | [1] | 0, 0   [0s]
+   exact (2) on all 56 classes: OK
+7 | 456 | 3 | 0 | 0 | 3 | [] | [] | 1, 0   [0s]
+   exact (2) on all 456 classes: OK
+8 | 6880 | 14 | 8 | 0 | 6 | [3, 7, 11, 15] | [3, 7, 11] | 0, 4   [1s]
+   gentourng -c 8: strong equicentric classes = 6 (Landau/components count above: 6)  [1s]
+9 | 191536 | 15 | 0 | 0 | 15 | [] | [] | 0, 0   [4s]
+   gentourng -c 9: strong equicentric classes = 15 (Landau/components count above: 15)  [4s]
+10 | 9733056 | 165 | 37 | 88 | 128 | [1, 5, 9, 13, 17, 21, 25] | [1, 5, 9, 13, 17] | 0, 0   [18s]
+   gentourng -c 10: strong equicentric classes = 128 (Landau/components count above: 128)  [28s]
+violations: {'1': 0, '2': 0, '3a': 0, '3b': 0, '3c': 0, '3d': 0, 'lam=|x|^2/n': 0, '4': 0, 'bounds': 0, 'strong-cross': 0}

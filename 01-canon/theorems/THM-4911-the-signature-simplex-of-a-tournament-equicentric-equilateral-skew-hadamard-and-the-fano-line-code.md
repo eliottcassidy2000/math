@@ -1,10 +1,11 @@
 ---
 id: THM-4911
-title: "The signature simplex of a tournament. The columns p_i = (I+M)e_i of a tournament's signed matrix are n vertices of the cube {+-1}^n on the sphere of radius sqrt(n), with |p_i - p_j|^2 = 4(1 + delta_ij), where delta_ij counts the vertices beating exactly one of i, j. THM-1950's inverse response s(T) = u^T(I+M^TM)^(-1)u is 1/dist(0, aff{p_i})^2, so the circumradius is r_T^2 = n - 1/s(T). Centroid = circumcentre (equicentric) iff M^2 u is parallel to u: for odd n iff T is regular (Pfaffian kernel argument); a non-strong T is equicentric iff T = R_a => R_b with both parts regular; an almost-regular T (scores n/2-1, n/2) is equicentric iff its two score classes are regular halves joined biregularly, which exists iff n = 2 (mod 4); and for even n, -M^2 u = lambda u forces lambda = n-1 (mod 4). The simplex is equilateral iff T is doubly regular (c = -1) or I+M is skew-Hadamard (c = 0), so the skew-Hadamard conjecture says exactly that every n = 0 (mod 4) carries a tournament whose n signature vectors are pairwise orthogonal. For the Paley tournament QR7 the signature vectors are the +-1 incidence vectors of the seven Fano lines. THM-4910's eight-point sphere transfers to every non-equicentric tournament, with Pow(O_T) = n(n - 1/s(T)) and Pow(p_v) = 4(n - 1 + #2-paths through v at an end)"
+title: "The signature simplex of a tournament. The columns p_i = (I+M)e_i of a tournament's signed matrix are n vertices of the cube {+-1}^n on the sphere of radius sqrt(n), with |p_i - p_j|^2 = 4(1 + delta_ij), where delta_ij counts the vertices beating exactly one of i, j. THM-1950's inverse response s(T) = u^T(I+M^TM)^(-1)u is 1/dist(0, aff{p_i})^2, so the circumradius is r_T^2 = n - 1/s(T). Centroid = circumcentre (equicentric) iff M^2 u is parallel to u: for odd n iff T is regular (Pfaffian kernel argument); a non-strong T is equicentric iff T = R_a => R_b with both parts regular; an almost-regular T (scores n/2-1, n/2) is equicentric iff its two score classes are regular halves joined biregularly, which exists iff n = 2 (mod 4); and for even n, -M^2 u = lambda u forces lambda = n-1 (mod 4). The simplex is equilateral iff T is doubly regular (c = -1) or I+M is skew-Hadamard (c = 0), so the skew-Hadamard conjecture says exactly that every n = 0 (mod 4) carries a tournament whose n signature vectors are pairwise orthogonal. Equivalently, T is equicentric iff every vertex is an endpoint of the same number of directed 2-paths. For the Paley tournament QR7 the signature vectors are the +-1 incidence vectors of the seven Fano lines. THM-4910's eight-point sphere transfers to every tournament and vertex v in THM-4742's regime (never for an equicentric T, and not for some non-equicentric T such as source => C3 => sink), with Pow(O_T) = n(n - 1/s(T)) and Pow(p_v) = 4(n - 1 + #2-paths with an end at v)"
 status: >
   PROVED: statements 1-6.
   FINITE-EXACT, all isomorphism classes (nauty gentourng):
-  - (1), (2), (4) for n <= 8;
+  - (1), (4) for n <= 8;
+  - (2) in floating point for n <= 8 (audit J1: exact for n <= 7, floating point for n <= 9);
   - (3a) for n <= 9;
   - (3b)-(3d) for n <= 10, with equicentric counts 1, 2, 1, 5, 3, 14, 15, 165 for n = 3..10;
   - (5) exact;
@@ -16,13 +17,26 @@ status: >
   - Paley QR7's out-neighbourhoods are the Fano lines (THM-211; session23b fano packet; the arithmetic_braids Fano
     code note);
   - the skew-Sylvester double D (THM-447), which is the skew-Hadamard doubling;
-  - sub-Pfaffians of +-1 skew matrices are odd (the rooted-Pfaffian technique of THM-3729).
+  - even-order tournament Pfaffians are odd (THM-1475(1), klein-2026-07-20-S339; the same count in THM-3729), and the
+    kernel vector of an odd-order tournament's skew matrix has all-odd entries
+    (07-reflections/border-remembers-doubling-forgets-the-gleason-ring-from-two-paley-tournaments-cbx0611s3.md,
+    2026-06-11). These are the ingredients of (3a);
+  - the cases c = -1 (SS^T = nI - J) and c = 0 (SS^T = (n-1)I, skew conference, equivalently skew-Hadamard) are
+    THM-472's equality cases;
+  - the main-angle framework is Nozaki-Suda, "A characterization of skew Hadamard matrices and doubly regular
+    tournaments" (arXiv:1202.5374, 2012). In their language, equicentric means at most two main eigenvalues +-sqrt(lambda)
+    of sqrt(-1) M. Their Theorem 2.7 (order 4k+2, main eigenvalues +-1, i.e. lambda = 1, plus a spectral condition;
+    equivalent to DRT(4k+3)) is the closest prior result to (3c). A brief search found no classification of (3a)-(3d)
+    and no statement of the c in {-1, 0} dichotomy, which is likely folklore;
+  - the 2-path characterisation in (3) and the Sonneborn-Berger form were supplied by audit J1.
   New here:
   - the signature simplex as a geometric home for s(T);
   - the equicentric classification (3a)-(3d);
   - the c in {-1, 0} dichotomy for equilateral simplices and the skew-Hadamard reformulation;
   - the transfer (6) of the eight-point sphere.
-  Self-audited only (PRE-AUDIT).
+  AUDIT: audit J1 (05-knowledge/results/sevensphere_audit_J1_20261107.md), PASS WITH CORRECTIONS, all applied
+  (MISTAKE-732). Every proof was re-checked, with an independent census of all classes n <= 10 and an exact check of
+  (6) on 160 vertex choices.
 session: mac-mini-2026-11-07-sevensphere (owner directive 2026-11-07: tournament structure vs open questions; Fano vs the seven-point sphere)
 source: 05-knowledge/results/sevensphere_anticomplementary_signature_simplex_20261107.md
 depends_on: [THM-4910, THM-4742, THM-1950, THM-447, THM-211]
@@ -59,6 +73,13 @@ verification:
 
      with equality on the left iff `T` is equicentric. The right bound is THM-1950's, with equality iff `T` is regular.
 3. **Equicentric tournaments.** `T` is equicentric iff `M²u = −λu` for some `λ`, and then `λ = |x|²/n`.
+   - **The 2-path form** (audit J1). `(M²u)_v = 2Δ_v − (n−1)²`, where `Δ_v` is the number of directed 2-paths with an
+     end at `v`, as in 6.
+   - So `T` is equicentric iff every vertex is an endpoint of the same number `Δ` of directed 2-paths, and then
+     `λ = (n−1)² − 2Δ`.
+   - Equivalently, `2SB(v) − (n−2)d⁺(v)` is constant, where `SB(v)` is the Sonneborn–Berger score (the sum of the
+     scores of the vertices `v` beats).
+   - By 6 this also says that all vertex powers `Pow(p_v)` are equal.
    - **(a) Odd n.** Equicentric iff regular.
    - **(b) Non-strong.** `T` is equicentric iff it has exactly two strong components and both are regular,
      `T = R_a ⇒ R_b`. Then `a, b` are odd, `n` is even and `λ = ab`.
@@ -67,7 +88,8 @@ verification:
      - both induce regular tournaments, so `n/2` is odd;
      - every vertex of `S` beats `(n/2 + 1)/2` vertices of `S̄`, and every vertex of `S̄` beats `(n/2 − 1)/2` of `S`.
 
-     Such tournaments exist exactly when `n ≡ 2 (mod 4)`, `n ≥ 6`, and they have `λ = 1`.
+     Such tournaments exist exactly when `n ≡ 2 (mod 4)`: the single arc for `n = 2`, and strong ones for every
+     `n ≥ 6`. They have `λ = 1`.
    - **(d) Even n.** `λ ≡ n − 1 (mod 4)`.
    - **Counts** (FINITE-EXACT, isomorphism classes).
 
@@ -82,7 +104,8 @@ verification:
    - `c = 0` iff `I + M` is a skew-Hadamard matrix (`n ≡ 0 mod 4`, with `δ_ij = (n−2)/2`). Then `T` is equicentric
      but not regular, and the signature vectors are pairwise orthogonal.
 
-   Consequently (KNOWN in substance, Reid–Brown) the **skew-Hadamard conjecture** (OPEN) is equivalent to either of:
+   Consequently the **skew-Hadamard conjecture** (OPEN) is equivalent to either of the following. The first form is the
+   definition of a skew-Hadamard matrix; the second is Reid–Brown.
    - for every `n ≡ 0 (mod 4)` some tournament on `n` vertices has pairwise orthogonal signature vectors;
    - for every `n ≡ 3 (mod 4)` some tournament on `n` vertices has a regular signature simplex.
 5. **The Fano line code.** For the Paley tournament QR7 (`i → j` iff `j − i ∈ {1, 2, 4}` mod 7), `p_i` is `−1`
@@ -92,15 +115,17 @@ verification:
    - The signature simplex of QR7 is a regular 6-simplex in the 7-cube. This is case `c = −1` of 4.
    - More generally, the signature simplex of a doubly regular tournament is the incidence code of its out-neighbourhood
      design, a symmetric 2-`(n, (n−1)/2, (n−3)/4)` design (classical).
-6. **The eight-point sphere transfers.** Let `n ≥ 4` and `v` be a vertex such that the signature simplex is in
-   THM-4742's regime at `v` (`O_T, p_v, G_T, O'_v` not coplanar, where `O'_v` is the circumcentre of the facet
-   opposite `p_v`). Then THM-4910 gives an eight-point sphere `S2(T, v)` with
+6. **The eight-point sphere transfers at vertices in the regime.** Let `n ≥ 4` and `v` be a vertex such that the
+   signature simplex is in THM-4742's regime at `v` (`O_T, p_v, G_T, O'_v` not coplanar, where `O'_v` is the
+   circumcentre of the facet opposite `p_v`). Then THM-4910 gives an eight-point sphere `S2(T, v)` with
    - `Pow(O_T) = n·r_T² = n(n − 1/s(T))`;
    - `Pow(p_v) = Σ_(j≠v)|p_v − p_j|² = 4(n − 1 + Δ_v)`, where `Δ_v = Σ_j δ_vj` is the number of directed 2-paths
      `j → k → v` plus the number of 2-paths `v → k → j`.
 
-   The regime fails whenever `T` is equicentric. In particular every regular tournament, every doubly regular one,
-   and so the Fano tournament QR7, has no seven-point sphere.
+   The regime fails whenever `T` is equicentric. So every regular tournament (including the Fano tournament QR7), every
+   `R_a ⇒ R_b` and every skew-Hadamard tournament has no seven-point sphere.
+   - It also fails at every vertex of some non-equicentric tournaments, for example source ⇒ C3 ⇒ sink: 2 classes at
+     `n = 5` and 6 at `n = 7` (audit J1, `j1_regime_failures.py`).
 
 ## Proofs
 
@@ -119,6 +144,14 @@ verification:
   is `G_T`, i.e. `λ = u/n`, i.e. `(I + MᵀM)u ∝ u`.
 
 **3.** `MᵀM = −M²`, so `G_T = O_T` iff `M²u ∝ u`. Apply `uᵀ` to get `λn = −uᵀM²u = |x|²`.
+- **The 2-path form.** Write `(M²u)_v = Σ_(v→k) x_k − Σ_(k→v) x_k` with `x_k = 2d⁺_k − (n−1)` and `d⁺_k = n − 1 − d⁻_k`.
+  This gives
+
+      (M²u)_v = 2Σ_(v→k) d⁺_k + 2Σ_(k→v) d⁻_k − (n−1)(d⁺_v + d⁻_v) = 2Δ_v − (n−1)².
+
+- **Sonneborn–Berger.** With `SB(v) = Σ_(v→k) d⁺_k` and `Σ_k d⁺_k = C(n,2)`,
+
+      Δ_v = 2SB(v) − (n−2)d⁺_v + (n−1)² − C(n,2).
 - **(a)** Let `n` be odd.
   - `M` is skew of odd order, so `Mz = 0` for the vector of signed principal sub-Pfaffians,
     `z_i = (−1)^(i+1) Pf(M_(îî))`. This holds because `adj M = zzᵀ` and `M·adj M = 0`.
@@ -185,13 +218,17 @@ verification:
   - The signature simplex turns tournament regularity into exactly these centre conditions:
     - regular (odd `n`) means the centres coincide;
     - doubly regular or skew-Hadamard means the simplex is equilateral.
-  - So the classical tournament hierarchy (regular, doubly regular, skew-Hadamard) is the hierarchy of simplex
-    symmetry (equicentric, equilateral). The seven-point sphere measures how far a tournament is from it, through
-    `s(T)`, the 2-path counts `Δ_v`, and the power `n(n − 1/s)`.
+  - Precisely:
+    - for odd `n`, regular is the same as equicentric;
+    - for all `n`, equilateral is the same as doubly regular or skew-Hadamard;
+    - for even `n`, equicentric is a much larger class with no classical name.
+  - Where the seven-point sphere exists, its data (`s(T)`, the 2-path counts `Δ_v`, the power `n(n − 1/s)`) are
+    classical second-order score quantities.
 - **The Fano plane sits where the sphere degenerates** (STRUCTURAL).
   - QR7's signature simplex is the Fano line code. It is equilateral, so it is equicentric, so the seven-point sphere
     does not exist for it.
-  - In the October language (THM-4742), the Fano tournament is the one where all of the sphere's incidences collapse
-    into symmetry.
-- **The open question.** By 4, the skew-Hadamard conjecture is a question about which orders carry a "cube-orthogonal"
-  tournament. HYP-9500 asks for a weaker, purely tournament-theoretic object at the same orders.
+  - The Fano tournament is one of many tournaments for which the sphere's construction collapses (`G_T = O_T`). The
+    others include every equicentric tournament, for example every regular one.
+- **The open question.** By 4, the skew-Hadamard conjecture asks which orders carry a tournament with pairwise
+  orthogonal signature vectors. The weaker HYP-9500(a), a strong equicentric tournament at every even order, turned out
+  to be elementary (audit J1). Its part (b) is the open content.

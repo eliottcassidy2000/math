@@ -1,0 +1,10 @@
+n=3: all 2 classes: z in ker M 2, z_i all odd & sum z odd 2, adj M = z z^T 2
+n=5: all 12 classes: z in ker M 12, z_i all odd & sum z odd 12, adj M = z z^T 12
+n=7: all 456 classes: z in ker M 456, z_i all odd & sum z odd 456, adj M = z z^T 456
+n=9: 400 random classes of 191536: z in ker M 400, z_i all odd & sum z odd 400
+n=11: 60 random tournaments: kernel + parity OK in 60/60
+n=3: rank M = n-1 for all classes: True; u not in range(M) for all classes: True
+n=5: rank M = n-1 for all classes: True; u not in range(M) for all classes: True
+n=7: rank M = n-1 for all classes: True; u not in range(M) for all classes: True
+n=9: rank M = n-1 for all classes: True; u not in range(M) for all classes: True
+(n-2)!! perfect matchings of K_(n-1) is odd for odd n:  True

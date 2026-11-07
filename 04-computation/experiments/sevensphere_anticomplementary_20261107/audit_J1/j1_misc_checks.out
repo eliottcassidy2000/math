@@ -1,0 +1,7 @@
+THM-1950 velocity law s(A=>B) = (sA+sB)/(1+sA sB): 40/40; d^2 law d^2(A=>B) = (dA^2 dB^2 + 1)/(dA^2 + dB^2): 40/40
+  pairs with some s > 1 (d^2 < 1, so d^2 = coth(theta) needs complex theta): 18/40
+  coth addition identity coth(a+b) = (coth a coth b + 1)/(coth a + coth b): True
+s(DT) = s(T) (THM-4900(3), skew-Sylvester double of THM-447): 10/10
+n = 2 single arc: almost regular (scores 1, 0 = n/2, n/2-1), equicentric: True , lambda = 1 (so (3c)'s 'exist exactly when n = 2 mod 4, n >= 6' omits n = 2)
+identity (M^2 u)_v = 2 Delta_v - (n-1)^2 on 2000 random tournaments: violations 0 (so equicentric <=> Delta_v constant, lambda = (n-1)^2 - 2 Delta)
+identity (M^2 u)_v = 4 SB(v) - 2(n-2) d+_v - (n-1) (SB = Sonneborn-Berger / second out-score) on 2000 random tournaments: violations 0

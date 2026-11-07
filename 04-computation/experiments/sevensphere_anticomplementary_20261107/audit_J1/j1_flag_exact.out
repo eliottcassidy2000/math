@@ -1,0 +1,7 @@
+n=3: 10 exact rational simplices; flag system (2(n-1) = 4 equations, 4 unknowns) inconsistent in 0/10
+n=4: 10 exact rational simplices; flag system (2(n-1) = 6 equations, 5 unknowns) inconsistent in 10/10
+n=5: 10 exact rational simplices; flag system (2(n-1) = 8 equations, 6 unknowns) inconsistent in 10/10
+n=6: 10 exact rational simplices; flag system (2(n-1) = 10 equations, 7 unknowns) inconsistent in 10/10
+n=4: 500 random simplices: relative affine-fit residual min 8.82e-11, median 1.69e-02, max 2.29e-01
+n=5: 500 random simplices: relative affine-fit residual min 1.98e-06, median 2.16e-02, max 2.14e-01
+n=6: 500 random simplices: relative affine-fit residual min 3.85e-12, median 1.66e-02, max 1.94e-01

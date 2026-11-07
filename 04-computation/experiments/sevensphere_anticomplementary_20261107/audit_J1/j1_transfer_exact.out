@@ -1,0 +1,5 @@
+n=4: 2 non-equicentric classes; in-regime (T,v) pairs 6; non-equicentric classes with NO vertex in the regime: 0
+n=5: 11 non-equicentric classes; in-regime (T,v) pairs 28; non-equicentric classes with NO vertex in the regime: 2 e.g. score sequences [(0, 2, 2, 2, 4), (1, 2, 2, 2, 3)]
+n=6: 51 non-equicentric classes; in-regime (T,v) pairs 234; non-equicentric classes with NO vertex in the regime: 0
+n=7: 453 non-equicentric classes; in-regime (T,v) pairs 2607; non-equicentric classes with NO vertex in the regime: 6 e.g. score sequences [(2, 2, 2, 3, 3, 3, 6), (0, 3, 3, 3, 3, 3, 6), (0, 3, 3, 3, 4, 4, 4), (1, 2, 3, 3, 3, 4, 5), (1, 2, 2, 3, 4, 4, 5), (2, 2, 2, 3, 4, 4, 4)]
+(6) exact transfer: 160/160 in-regime (T, v) pairs with all 8 labels on S2, Pow(O_T) = n r^2 = n(n - 1/s), Pow(p_v) = 4(n - 1 + Delta_v) = sum |p_v - p_j|^2

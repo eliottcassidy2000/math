@@ -1,0 +1,4 @@
+path 0: det[X|y] changes sign on [0.7250,0.7500] (|det| 4.09e+01 -> 6.17e+03); min face Gram det on the bracket 7.34e+03; at the bisected root t*=0.725160872125: max|residual|/R^2 2.7e-16, cond(X^T X) 3.7e+03, flag-sphere radius^2/R^2 87.052
+path 1: det[X|y] changes sign on [0.4500,0.4750] (|det| 3.43e+02 -> 1.29e+02); min face Gram det on the bracket 1.46e+02; at the bisected root t*=0.460509410850: max|residual|/R^2 8.5e-14, cond(X^T X) 2.6e+02, flag-sphere radius^2/R^2 148.555
+path 2: det[X|y] changes sign on [0.5500,0.5750] (|det| 1.39e+03 -> 6.61e+02); min face Gram det on the bracket 1.87e+01; at the bisected root t*=0.566920602514: max|residual|/R^2 2.2e-14, cond(X^T X) 1.5e+04, flag-sphere radius^2/R^2 226.628
+=> on these nondegenerate 4-simplices a REAL sphere has all six flag-corner powers; statement 6 holds only generically

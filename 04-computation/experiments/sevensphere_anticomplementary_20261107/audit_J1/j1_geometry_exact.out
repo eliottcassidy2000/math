@@ -1,0 +1,13 @@
+n=3: 200 random exact rational simplices in the regime: {'flat': 200, 'on_S2': 200, 'real_radius': 200, 'sides_vieta': 200, 'beyond_far_corner': 200, 'corners_outside': 200, 'defect': 200, 'distinct8': 200, 'mod2': 200}
+n=4: 60 random exact rational simplices in the regime: {'flat': 60, 'on_S2': 60, 'real_radius': 60, 'sides_vieta': 60, 'beyond_far_corner': 60, 'corners_outside': 60, 'defect': 60, 'distinct8': 60, 'mod2': 60}
+n=5: 30 random exact rational simplices in the regime: {'flat': 30, 'on_S2': 30, 'real_radius': 30, 'sides_vieta': 30, 'beyond_far_corner': 30, 'corners_outside': 30, 'defect': 30, 'distinct8': 30, 'mod2': 30}
+n=6: 15 random exact rational simplices in the regime: {'flat': 15, 'on_S2': 15, 'real_radius': 15, 'sides_vieta': 15, 'beyond_far_corner': 15, 'corners_outside': 15, 'defect': 15, 'distinct8': 15, 'mod2': 15}
+n=7: 8 random exact rational simplices in the regime: {'flat': 8, 'on_S2': 8, 'real_radius': 8, 'sides_vieta': 8, 'beyond_far_corner': 8, 'corners_outside': 8, 'defect': 8, 'distinct8': 8, 'mod2': 8}
+
+Coincidences inside the regime (labels on one side may coincide; the side is then tangent to S2):
+  session23b example: det[v s w] = -sqrt(3)/4 (nonzero => in THM-4910's regime)
+  D == E: True ; B == F: True
+  C*=A example V0=(2,2/3,4/3), facet (0,0,0),(4,0,0),(0,2,0): {'flat': True, 'on_S2': True, 'real_radius': True, 'sides_vieta': True, 'beyond_far_corner': True, 'corners_outside': True, 'defect': True, 'distinct': 7, 'mod2': True}  C*==A: True
+  H'=X facet search (unit circle, |sum|^2 = 3): None
+  (no rational example with an axis-aligned facet can exist: 3 r'^2 = |sum of facet vertices - 3 O'|^2 is never a sum of two rational squares)
+  algebraic H'=X example: det[v s w] = 17*sqrt(3)/1125 ; H' == X: True ; G != O: True

@@ -1,63 +1,43 @@
 ---
 id: HYP-9500
-title: "Strong equicentric tournaments exist at every even order n >= 6 (centroid = circumcentre of the signature simplex, i.e. M^2 u parallel to u). Their lambda-values (-M^2 u = lambda u) fill the whole residue class n-1 mod 4 between 3 or 1 and the largest product ab, a + b = n with a, b odd. This is proved for n = 2 (mod 4) and for every n = 0 (mod 4) that carries a skew-Hadamard matrix. Strong equicentric is much weaker than skew-Hadamard, so a construction at the remaining orders should not need the skew-Hadamard conjecture"
+title: "The lambda-spectrum of equicentric tournaments. For even n, the values lambda with -M^2 u = lambda u over equicentric tournaments of order n (centroid = circumcentre of the signature simplex, THM-4911) fill the whole progression {lambda = n - 1 (mod 4): lambda_0(n) <= lambda <= lambda_1(n)}, with lambda_0 = 1 or 3 and lambda_1 = max ab (a + b = n, a, b odd). The companion existence statement, a strong equicentric tournament at every even n >= 6, was posed as part (a) and is PROVED (audit J1: substitution into a regular tournament, and skew-Walsh towers at powers of 2)"
 status: >
-  OPEN (CONJECTURE), with large proved parts.
+  OPEN (CONJECTURE (b)).
   PROVED:
-  - (a) for n = 2 (mod 4), by THM-4911(3c): almost-regular equicentric tournaments with lambda = 1, which are strong;
-  - (a) for n = 0 (mod 4) whenever a doubly regular tournament of order n - 1 exists, equivalently (Reid-Brown) a
-    skew-Hadamard matrix of order n. Border it with a source, then switch one vertex of the doubly regular part. The
-    result is skew-Hadamard, hence equicentric (THM-4911(4)), and strong (proof below). Checked by computation for
-    Paley q = 7, 11, 19, 23, 31.
-  OPEN: (a) at the orders n = 0 (mod 4) where skew-Hadamard matrices are not known; (b) in general.
-  FINITE-EXACT: all isomorphism classes n <= 10 (THM-4911 table), with 2, 6, 128 strong equicentric classes at
-  n = 6, 8, 10.
+  - (a) at every even n >= 6 (audit J1, construction below). The first version mis-typed (a) as open and as a "shadow"
+    of the skew-Hadamard conjecture (MISTAKE-732). It is elementary and carries no information about that conjecture.
+  FINITE-EXACT: (b) for n = 4, 6, 8, 10, over all isomorphism classes (THM-4911 table).
 session: mac-mini-2026-11-07-sevensphere
 source: 05-knowledge/results/sevensphere_anticomplementary_signature_simplex_20261107.md
 scripts:
   - 04-computation/experiments/sevensphere_anticomplementary_20261107/signature_simplex.py (+ .out)
   - 04-computation/experiments/sevensphere_anticomplementary_20261107/switching_paley.py (+ .out)
-related: [THM-4911, THM-1950, THM-447 (skew-Sylvester doubling = skew-Hadamard doubling), THM-4557, THM-211]
+  - 04-computation/experiments/sevensphere_anticomplementary_20261107/audit_J1/j1_hyp9500.py (+ .out): the substitution lemma and the construction at every even n <= 96
+related: [THM-4911, THM-1950, THM-447 (skew-Sylvester doubling and the skew-Walsh tower), THM-472, Nozaki-Suda arXiv:1202.5374]
 ---
 
-# HYP-9500 — strong equicentric tournaments at every even order
+# HYP-9500 — the λ-spectrum of equicentric tournaments
 
-## Statement
+## Setting
 
-Call a tournament *equicentric* if its signature simplex (THM-4911) has centroid equal to circumcentre, i.e.
-`M²u = −λu`. By THM-4911(3):
-- for odd `n` these are exactly the regular tournaments;
-- the non-strong ones are exactly `R_a ⇒ R_b` (both parts regular, `λ = ab`);
-- `λ ≡ n − 1 (mod 4)` for even `n`.
+A tournament is *equicentric* if its signature simplex (THM-4911) has centroid equal to circumcentre, i.e.
+`M²u = −λu`. Equivalently, every vertex is an endpoint of the same number `Δ` of directed 2-paths, with
+`λ = (n−1)² − 2Δ`. By THM-4911(3):
+- for odd `n`, equicentric means regular (`λ = 0`);
+- the non-strong ones are exactly `R_a ⇒ R_b`, with `λ = ab`;
+- for even `n`, `λ ≡ n − 1 (mod 4)`.
 
-**Conjecture.**
-- **(a)** For every even `n ≥ 6` there is a strong equicentric tournament on `n` vertices.
-- **(b)** For even `n`, the set of values `λ` over equicentric tournaments of order `n` is the full progression
+## Conjecture (b)
 
-      Λ(n) = {λ ≡ n − 1 (mod 4) : λ_0(n) ≤ λ ≤ λ_1(n)},
+For even `n`, the set of `λ` over equicentric tournaments of order `n` is the full progression
 
-  where:
-  - `λ_0(n) = 1` if `n ≡ 2 (mod 4)` and `3` if `n ≡ 0 (mod 4)`;
-  - `λ_1(n) = max_(a+b=n, a,b odd) ab`, which is `(n/2)²` or `(n/2)² − 1`. It is attained by `R_a ⇒ R_b`.
+    Λ(n) = {λ ≡ n − 1 (mod 4) : λ_0(n) ≤ λ ≤ λ_1(n)},
 
-## What is proved
+where:
+- `λ_0(n) = 1` if `n ≡ 2 (mod 4)` and `3` if `n ≡ 0 (mod 4)`;
+- `λ_1(n) = max_(a+b=n, a,b odd) ab`, which is `(n/2)²` or `(n/2)² − 1`, attained by `R_a ⇒ R_b`.
 
-- **`n ≡ 2 (mod 4)`.** THM-4911(3c) constructs strong almost-regular equicentric tournaments (`λ = 1`): two regular
-  halves of odd order `n/2` with a circulant cross pattern.
-- **`n ≡ 0 (mod 4)` with a skew-Hadamard matrix of order `n`.**
-  - Let `R` be doubly regular of order `m = n − 1` (Reid–Brown), and `T = R ⊕ s` with `s` a source.
-  - `I + M_T` is skew-Hadamard. Switching at `w ∈ R` (reversing every arc at `w`) replaces `M` by `DMD`, with `D`
-    diagonal and `D_ww = −1`, and keeps `(I + DMD)ᵀ(I + DMD) = nI`. So the new tournament `T'` is equilateral, hence
-    equicentric.
-  - **`T'` is strong.**
-    - `s` beats every vertex of `R` except `w`, and `w → s`.
-    - A vertex `y` that `w` used to beat now beats `w`.
-    - A vertex `y` that used to beat `w` shares `(m−3)/4 ≥ 1` common out-neighbours `z` with `w` in `R`, and
-      `y → z → w` survives the switch.
-    - So every vertex reaches `w`, and `w → s → (R − w)`.
-  - Computational check: Paley `q = 7, 11, 19, 23, 31` (`switching_paley.out`).
-
-## Evidence for (b) (FINITE-EXACT, all isomorphism classes)
+**Evidence** (FINITE-EXACT, all isomorphism classes).
 
 | `n` | equicentric classes | strong | `λ` values | predicted `Λ(n)` |
 |---|---|---|---|---|
@@ -66,25 +46,45 @@ Call a tournament *equicentric* if its signature simplex (THM-4911) has centroid
 | 8 | 14 | 6 | 3, 7, 11, 15 | {3, 7, 11, 15} |
 | 10 | 165 | 128 | 1, 5, 9, 13, 17, 21, 25 | {1, 5, …, 25} |
 
-The strong classes realise:
-- `{1}` at `n = 6`;
-- `{3, 7, 11}` at `n = 8`;
-- `{1, 5, 9, 13, 17}` at `n = 10`.
+**Composition rules** (audit J1). For a regular `R` of odd order `r`:
+- `λ(R[T2]) = λ(T2)`;
+- `λ(T1[R]) = r²·λ(T1)`.
 
-The non-strong `R_a ⇒ R_b` supply the top values `ab`.
+Together with `λ(R_a ⇒ R_b) = ab`, these give part of `Λ(n)` at every even `n`. The middle of the progression
+(e.g. `λ = 5, 13, 17` at `n = 10`) comes from strong classes found by enumeration only.
 
-## Why this matters (STRUCTURAL)
+## Part (a), proved (audit J1)
 
-- Equicentric is the "first moment" shadow of skew-Hadamard. Skew-Hadamard asks for `I + MᵀM = nI`, i.e. all
-  pairwise inner products of the signature vectors vanish. Equicentric asks only that the all-ones vector be an
-  eigenvector of `I + MᵀM`.
-- (a) at all `n ≡ 0 (mod 4)` is therefore implied by the skew-Hadamard conjecture, and is far weaker.
-- A direct construction would be a small, honest step in the direction of that open problem: it would produce, at
-  every such order, a strong tournament whose signature simplex has the symmetry `O_T = G_T`.
+**Substitution lemma.** Let `R` be regular of odd order `r ≥ 3`, and `T2` equicentric of order `m` with `−M2²u = λ2 u`.
+Then `R[T2]` (each vertex of `R` replaced by a copy of `T2`) is strong and equicentric, with `λ = λ2`.
+- Write `M = M_R ⊗ J + I ⊗ M2`. Since `M_R u = 0`, `Mu = u ⊗ x2`.
+- Then `M²u = (M_R u) ⊗ (uᵀx2)u + u ⊗ M2 x2 = −λ2 u`.
+- `R[T2]` is strong because `R` is.
+
+**Construction at every even `n ≥ 6`.**
+- **`n = 2^e·r` with `r` odd, `r ≥ 3`, `e ≥ 1`.** Take `R_r[R_1 ⇒ R_(2^e − 1)]`, with `λ = 2^e − 1`. For `e = 1` this
+  is `R_r[single arc]`, with `λ = 1`.
+- **`n = 2^e`, `e ≥ 3`.** THM-447(2)'s skew-Walsh tower gives a skew-Hadamard matrix of order `2^e`, hence a doubly
+  regular `R` of order `2^e − 1`. Border `R` with a source, then switch one vertex of `R`.
+  - The result stays skew-Hadamard, hence equicentric (THM-4911(4)).
+  - It is strong. A vertex `y` with `y → w` shares `(m−3)/4 ≥ 1` common out-neighbours `z` with the switched vertex
+    `w`, and `y → z → w` survives the switch.
+  - Checked for Paley `q = 7, 11, 19, 23, 31` (`switching_paley.out`; audit J1 adds 43, 47 and the order-15 core of
+    the skew-Walsh matrix of order 16).
+- Verified for every even `n` from 6 to 96 (audit J1).
+
+## Remarks
+
+- **The skew-Hadamard conjecture.** The orders at which skew-Hadamard matrices are unknown all have an odd factor
+  (e.g. 276 = 4·69), so (a) is no evidence for that conjecture. What is left of the original motivation is (b): which
+  `λ` occur, and whether the strong part of the spectrum is an interval.
+- **Prior work.** Nozaki–Suda (arXiv:1202.5374) study tournaments by the main angles of `√−1·M`. In their language,
+  equicentric means at most two main eigenvalues `±√λ`. Their Theorem 2.7 treats `λ = 1` at order `4k+2` under an
+  extra spectral condition, and shows those tournaments are equivalent to DRT(`4k+3`).
 
 ## Tests
 
-- **Search.** Random search or hill-climbing for strong equicentric tournaments at `n = 12, 16, 20` with prescribed
-  `λ`, to test (b). The orders are small enough for local search, though not for enumeration.
-- **Construction.** Generalise THM-4911(3c) from two blocks with `x = ±1` to blocks with `x ∈ {±1, ±3}`. The strong
-  `n = 8`, `λ = 3` class has `x = (−3, −1, −1, −1, 1, 1, 1, 3)`.
+- Local search for strong equicentric tournaments at `n = 12, 16, 20` with each prescribed `λ` in the conjectured
+  progression.
+- Find constructions for the middle values: blocks with `x ∈ {±1, ±3}`. The strong `n = 8`, `λ = 3` class has
+  `x = (−3, −1, −1, −1, 1, 1, 1, 3)`.

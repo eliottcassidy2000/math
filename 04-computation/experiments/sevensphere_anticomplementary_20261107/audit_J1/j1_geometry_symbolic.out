@@ -1,0 +1,20 @@
+S2 from corner powers: 2u.v = -R2*n + 2*R2 + 2*vs ; 2u.s = 2*R2*n + ss ; 2u.w = R2 + k*n + k ; kappa = R2*(n + 1)
+equals THM-4742's S2 coefficients: True
+|A|^2 - R^2 = 0
+Pow_S2(A) = 0
+Pow_S2(B) = 0
+Pow_S2(C*) = 0
+Pow_S2(D) = 0
+Pow_S2(E) = 0
+Pow_S2(F) = 0
+Pow_S2(H') = 0
+Pow_S2(X) = 0
+Pow_S2(V0) - Sigma = 0 (Sigma = 2nR^2 - 2 v.s)
+V0A*V0C* (signed) - Sigma = 0
+Pow_S2(O) - c(R^2-|OP|^2) = 0
+Pow_S2(G) - c(R^2-|OP|^2) = 0
+Pow_S2(G') - c(R^2-|OP|^2) = 0
+Pow_S2(O') - c(R^2-|OP|^2) = 0
+det(top {D,F,C*,H'}) in basis coords = n*(n - 1)
+det(bottom {E,B,A,X}) identically zero? False
+bottom det at a sample point (n=3): -41080/3213
