@@ -1,0 +1,264 @@
+{
+  "exhaustive_controls": {
+    "explicit_injection_pairs": 1070,
+    "increment_levels": {
+      "1": {
+        "all_order_parent_H": [
+          1,
+          3
+        ],
+        "increment": 2,
+        "witnesses": [
+          {
+            "child_H": 3,
+            "deleted_vertex": 0,
+            "external_product": 1,
+            "parent_H": 1,
+            "rows": [
+              4,
+              1,
+              2
+            ],
+            "strong_core_order": 3
+          },
+          {
+            "child_H": 5,
+            "deleted_vertex": 1,
+            "external_product": 1,
+            "parent_H": 3,
+            "rows": [
+              8,
+              1,
+              3,
+              6
+            ],
+            "strong_core_order": 4
+          }
+        ]
+      },
+      "2": {
+        "all_order_parent_H": [
+          1,
+          5
+        ],
+        "increment": 4,
+        "witnesses": [
+          {
+            "child_H": 5,
+            "deleted_vertex": 0,
+            "external_product": 1,
+            "parent_H": 1,
+            "rows": [
+              8,
+              1,
+              3,
+              6
+            ],
+            "strong_core_order": 4
+          },
+          {
+            "child_H": 9,
+            "deleted_vertex": 1,
+            "external_product": 1,
+            "parent_H": 5,
+            "rows": [
+              16,
+              1,
+              3,
+              7,
+              14
+            ],
+            "strong_core_order": 5
+          }
+        ]
+      },
+      "3": {
+        "all_order_parent_H": [
+          3,
+          5,
+          9
+        ],
+        "increment": 6,
+        "witnesses": [
+          {
+            "child_H": 9,
+            "deleted_vertex": 0,
+            "external_product": 3,
+            "parent_H": 3,
+            "rows": [
+              60,
+              57,
+              58,
+              16,
+              32,
+              8
+            ],
+            "strong_core_order": 3
+          },
+          {
+            "child_H": 11,
+            "deleted_vertex": 1,
+            "external_product": 1,
+            "parent_H": 5,
+            "rows": [
+              24,
+              1,
+              3,
+              6,
+              14
+            ],
+            "strong_core_order": 5
+          },
+          {
+            "child_H": 15,
+            "deleted_vertex": 1,
+            "external_product": 3,
+            "parent_H": 9,
+            "rows": [
+              120,
+              113,
+              115,
+              118,
+              32,
+              64,
+              16
+            ],
+            "strong_core_order": 4
+          }
+        ]
+      },
+      "4": {
+        "all_order_parent_H": [
+          1,
+          5,
+          9,
+          11
+        ],
+        "increment": 8,
+        "witnesses": [
+          {
+            "child_H": 9,
+            "deleted_vertex": 0,
+            "external_product": 1,
+            "parent_H": 1,
+            "rows": [
+              16,
+              1,
+              3,
+              7,
+              14
+            ],
+            "strong_core_order": 5
+          },
+          {
+            "child_H": 13,
+            "deleted_vertex": 1,
+            "external_product": 1,
+            "parent_H": 5,
+            "rows": [
+              18,
+              8,
+              3,
+              5,
+              14
+            ],
+            "strong_core_order": 5
+          },
+          {
+            "child_H": 17,
+            "deleted_vertex": 1,
+            "external_product": 1,
+            "parent_H": 9,
+            "rows": [
+              32,
+              1,
+              3,
+              7,
+              15,
+              30
+            ],
+            "strong_core_order": 6
+          },
+          {
+            "child_H": 19,
+            "deleted_vertex": 4,
+            "external_product": 1,
+            "parent_H": 11,
+            "rows": [
+              40,
+              1,
+              3,
+              6,
+              15,
+              30
+            ],
+            "strong_core_order": 6
+          }
+        ]
+      }
+    },
+    "universe": [
+      {
+        "active_cuts": 0,
+        "all_cuts": 2,
+        "direct_extension_counts": 2,
+        "inactive_cuts": 2,
+        "labelled_tournaments": 1,
+        "literal_H_words": 1,
+        "n": 1
+      },
+      {
+        "active_cuts": 2,
+        "all_cuts": 8,
+        "direct_extension_counts": 8,
+        "inactive_cuts": 6,
+        "labelled_tournaments": 2,
+        "literal_H_words": 2,
+        "n": 2
+      },
+      {
+        "active_cuts": 36,
+        "all_cuts": 64,
+        "direct_extension_counts": 64,
+        "inactive_cuts": 28,
+        "labelled_tournaments": 8,
+        "literal_H_words": 12,
+        "n": 3
+      },
+      {
+        "active_cuts": 808,
+        "all_cuts": 1024,
+        "direct_extension_counts": 1024,
+        "inactive_cuts": 216,
+        "labelled_tournaments": 64,
+        "literal_H_words": 192,
+        "n": 4
+      },
+      {
+        "active_cuts": 29760,
+        "all_cuts": 32768,
+        "direct_extension_counts": 32768,
+        "inactive_cuts": 3008,
+        "labelled_tournaments": 1024,
+        "literal_H_words": 7680,
+        "n": 5
+      },
+      {
+        "active_cuts": 2014208,
+        "all_cuts": 2097152,
+        "direct_extension_counts": 0,
+        "inactive_cuts": 82944,
+        "labelled_tournaments": 32768,
+        "literal_H_words": 0,
+        "n": 6
+      }
+    ]
+  },
+  "matrix_controls": {
+    "cross_matrix_dimensions": "1<=|A|,|B|<=4",
+    "nonzero_matrices": 74938,
+    "output_sha256": "7a8780c5fbf02e13a3b15a817c8e5e4c83c0655c227aff23b1fe98bec8ad7349"
+  },
+  "scope": "Finite controls; all-order proof is in PROOF.md.",
+  "status": "PASS"
+}

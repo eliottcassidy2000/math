@@ -1,0 +1,77 @@
+{
+  "sharpness_family": [
+    {
+      "child": 5,
+      "n": 3,
+      "parent": 3,
+      "penultimate_end_count": 1
+    },
+    {
+      "child": 9,
+      "n": 4,
+      "parent": 5,
+      "penultimate_end_count": 2
+    },
+    {
+      "child": 15,
+      "n": 5,
+      "parent": 9,
+      "penultimate_end_count": 4
+    },
+    {
+      "child": 27,
+      "n": 6,
+      "parent": 17,
+      "penultimate_end_count": 8
+    },
+    {
+      "child": 51,
+      "n": 7,
+      "parent": 33,
+      "penultimate_end_count": 16
+    },
+    {
+      "child": 99,
+      "n": 8,
+      "parent": 65,
+      "penultimate_end_count": 32
+    },
+    {
+      "child": 195,
+      "n": 9,
+      "parent": 129,
+      "penultimate_end_count": 64
+    },
+    {
+      "child": 387,
+      "n": 10,
+      "parent": 257,
+      "penultimate_end_count": 128
+    },
+    {
+      "child": 771,
+      "n": 11,
+      "parent": 513,
+      "penultimate_end_count": 256
+    },
+    {
+      "child": 1539,
+      "n": 12,
+      "parent": 1025,
+      "penultimate_end_count": 512
+    },
+    {
+      "child": 3075,
+      "n": 13,
+      "parent": 2049,
+      "penultimate_end_count": 1024
+    },
+    {
+      "child": 6147,
+      "n": 14,
+      "parent": 4097,
+      "penultimate_end_count": 2048
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,32 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "commit": "4c63fd58b566f3e006eb87eaedcf48824741cc84",
+  "verification": "GitHub fetch_file blob SHAs independently match locally inspected source bytes at the pinned commit.",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-4745-exact-gluings-of-interval-chains-and-the-reduction-of-busch-equality-to-a-one-way-lemma.md",
+      "sha256": "83cabba17a1e17c9f76d02d460be53241347c43c41c67a9791ab1e71a75e8b27",
+      "git_blob": "9236c40246428b65aaaa17cbfa0947f25ba75066"
+    },
+    {
+      "path": "01-canon/theorems/THM-4876-deletion-and-flip-increments-of-the-hamiltonian-path-count-an-increment-of-two-forces-at-most-three-paths-the-increment-ladder-thm-013-for-all-orders-and-what-extension-spectra-forbid-for-chan-pak.md",
+      "sha256": "3efbe4a2bf4d5bf1e846e027ae4f069d47abbb40062cfc47bad64214f785968e",
+      "git_blob": "24c3b6fcf517c532c8bcf2c2049c62a9d1612a53"
+    },
+    {
+      "path": "session197/unrestricted-target/PROOF.md",
+      "sha256": "5bea17dabd28f39878de94bd59bff984473bed6e93f2d36beafc4f41929defaa",
+      "git_blob": "07164f0d33dc5ec2d9edb2d9d7c7ef21d2eb6bcb"
+    },
+    {
+      "path": "session213/cycle-arithmetic/EQUALITY.md",
+      "sha256": "22232d2e138e5ee414a688e1b30bc622cf5d1e38b878519c73ebf313db129db3",
+      "git_blob": "f736cdbaf7b93396c7c26b959f7fdcacf31ce4ce"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9469-minimal-deletion-increment-grows-linearly-small-increment-structures-one-centre-value-set-and-what-remains-for-chan-pak.md",
+      "sha256": "f27582cefe90681b8f049ee63f05164f76c21e4ae8c15b8873a69b785a624893",
+      "git_blob": "c33ebbc40621a6873dbdc21ae95153b614cc1410"
+    }
+  ]
+}
