@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "method": "direct adjacency matrices, independent subset-DP path/cycle counts, BFS strongness, explicit gate search",
+  "core_universe": "all labeled tournaments on 1..5 vertices",
+  "cores": 1099,
+  "pointed_reversals": 5405,
+  "minimum_strong_ungated_order_at_least_3": 5,
+  "witness": {
+    "core": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "vertex": 0,
+    "gate": [
+      [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "reversed": [
+      [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "scores": [
+      2,
+      2,
+      2,
+      1,
+      3
+    ],
+    "gate_HC": 3,
+    "reversed_HC": 1,
+    "gates_before": [
+      [
+        3,
+        4
+      ]
+    ],
+    "gates_after": []
+  }
+}

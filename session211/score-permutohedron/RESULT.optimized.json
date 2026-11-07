@@ -1,0 +1,639 @@
+{
+  "complete_labelled_score_fiber": {
+    "HC_support": [
+      1,
+      2,
+      3
+    ],
+    "H_support": [
+      11,
+      13,
+      15
+    ],
+    "realizers": [
+      {
+        "H": 13,
+        "HC": 2,
+        "gates": [],
+        "mask": 44,
+        "rows": [
+          24,
+          9,
+          3,
+          4,
+          14
+        ]
+      },
+      {
+        "H": 13,
+        "HC": 2,
+        "gates": [],
+        "mask": 101,
+        "rows": [
+          10,
+          24,
+          3,
+          4,
+          13
+        ]
+      },
+      {
+        "H": 13,
+        "HC": 2,
+        "gates": [],
+        "mask": 156,
+        "rows": [
+          24,
+          5,
+          9,
+          2,
+          14
+        ]
+      },
+      {
+        "H": 11,
+        "HC": 1,
+        "gates": [],
+        "mask": 170,
+        "rows": [
+          20,
+          9,
+          10,
+          1,
+          14
+        ]
+      },
+      {
+        "H": 11,
+        "HC": 1,
+        "gates": [],
+        "mask": 185,
+        "rows": [
+          18,
+          12,
+          9,
+          1,
+          14
+        ]
+      },
+      {
+        "H": 11,
+        "HC": 1,
+        "gates": [],
+        "mask": 198,
+        "rows": [
+          12,
+          17,
+          10,
+          2,
+          13
+        ]
+      },
+      {
+        "H": 11,
+        "HC": 1,
+        "gates": [],
+        "mask": 213,
+        "rows": [
+          10,
+          20,
+          9,
+          2,
+          13
+        ]
+      },
+      {
+        "H": 13,
+        "HC": 2,
+        "gates": [],
+        "mask": 227,
+        "rows": [
+          6,
+          24,
+          10,
+          1,
+          13
+        ]
+      },
+      {
+        "H": 11,
+        "HC": 1,
+        "gates": [],
+        "mask": 294,
+        "rows": [
+          12,
+          9,
+          18,
+          4,
+          11
+        ]
+      },
+      {
+        "H": 11,
+        "HC": 1,
+        "gates": [],
+        "mask": 309,
+        "rows": [
+          10,
+          12,
+          17,
+          4,
+          11
+        ]
+      },
+      {
+        "H": 13,
+        "HC": 2,
+        "gates": [],
+        "mask": 406,
+        "rows": [
+          12,
+          5,
+          24,
+          2,
+          11
+        ]
+      },
+      {
+        "H": 13,
+        "HC": 2,
+        "gates": [],
+        "mask": 435,
+        "rows": [
+          6,
+          12,
+          24,
+          1,
+          11
+        ]
+      },
+      {
+        "H": 15,
+        "HC": 3,
+        "gates": [
+          [
+            3,
+            4
+          ]
+        ],
+        "mask": 678,
+        "rows": [
+          12,
+          9,
+          10,
+          16,
+          7
+        ]
+      },
+      {
+        "H": 15,
+        "HC": 3,
+        "gates": [
+          [
+            3,
+            4
+          ]
+        ],
+        "mask": 693,
+        "rows": [
+          10,
+          12,
+          9,
+          16,
+          7
+        ]
+      }
+    ],
+    "scores": [
+      2,
+      2,
+      2,
+      1,
+      3
+    ]
+  },
+  "exhaustive": [
+    {
+      "chosen_vertex_switches": 1,
+      "labelled_cores": 1,
+      "n": 1,
+      "nongated_switches": 0,
+      "score_fibers_mixing_H": 0,
+      "score_fibers_mixing_gate_status": 0,
+      "score_vectors": 1
+    },
+    {
+      "chosen_vertex_switches": 4,
+      "labelled_cores": 2,
+      "n": 2,
+      "nongated_switches": 0,
+      "score_fibers_mixing_H": 0,
+      "score_fibers_mixing_gate_status": 0,
+      "score_vectors": 2
+    },
+    {
+      "chosen_vertex_switches": 24,
+      "labelled_cores": 8,
+      "n": 3,
+      "nongated_switches": 12,
+      "score_fibers_mixing_H": 0,
+      "score_fibers_mixing_gate_status": 0,
+      "score_vectors": 7
+    },
+    {
+      "chosen_vertex_switches": 256,
+      "labelled_cores": 64,
+      "n": 4,
+      "nongated_switches": 192,
+      "score_fibers_mixing_H": 0,
+      "score_fibers_mixing_gate_status": 0,
+      "score_vectors": 38
+    },
+    {
+      "chosen_vertex_switches": 5120,
+      "labelled_cores": 1024,
+      "n": 5,
+      "nongated_switches": 4480,
+      "score_fibers_mixing_H": 20,
+      "score_fibers_mixing_gate_status": 50,
+      "score_vectors": 291
+    }
+  ],
+  "four_switch_exhaustive": [
+    {
+      "HC_support": [
+        1
+      ],
+      "core_order": 2,
+      "four_cycle_switches": 2
+    },
+    {
+      "HC_support": [
+        1,
+        2
+      ],
+      "core_order": 3,
+      "four_cycle_switches": 24
+    },
+    {
+      "HC_support": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "core_order": 4,
+      "four_cycle_switches": 384
+    },
+    {
+      "HC_support": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12
+      ],
+      "core_order": 5,
+      "four_cycle_switches": 10240
+    }
+  ],
+  "full_slice_extreme_controls": [
+    {
+      "ambient_min_slack": 0,
+      "core_min_slack": -1,
+      "n": 2,
+      "vertex_vector": [
+        -1,
+        2
+      ],
+      "vertices_checked": 2
+    },
+    {
+      "ambient_min_slack": 0,
+      "core_min_slack": -1,
+      "n": 3,
+      "vertex_vector": [
+        -1,
+        1,
+        3
+      ],
+      "vertices_checked": 6
+    },
+    {
+      "ambient_min_slack": 0,
+      "core_min_slack": -1,
+      "n": 4,
+      "vertex_vector": [
+        -1,
+        1,
+        2,
+        4
+      ],
+      "vertices_checked": 24
+    },
+    {
+      "ambient_min_slack": 0,
+      "core_min_slack": -1,
+      "n": 5,
+      "vertex_vector": [
+        -1,
+        1,
+        2,
+        3,
+        5
+      ],
+      "vertices_checked": 120
+    },
+    {
+      "ambient_min_slack": 0,
+      "core_min_slack": -1,
+      "n": 6,
+      "vertex_vector": [
+        -1,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "vertices_checked": 720
+    }
+  ],
+  "independent_direct_cycle_scans": 305,
+  "order_doubling_hostile": {
+    "H": 9,
+    "SCCs": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "face_dimension": 4,
+    "odd_index": 4,
+    "order": 6,
+    "rows": [
+      58,
+      60,
+      57,
+      16,
+      32,
+      8
+    ]
+  },
+  "scope": "All labelled cores orders 1..5 and triangle choices; all cores orders 2..5 and directed four-cycle choices; two explicit HC=7,21 score-fiber pairs; exact degree-slice vertices through n=6.",
+  "seven_and_twenty_one_same_score_pairs": [
+    {
+      "core": [
+        24,
+        1,
+        3,
+        6,
+        14
+      ],
+      "gated": {
+        "H": 111,
+        "HC": 11,
+        "gates": [
+          [
+            5,
+            6
+          ]
+        ],
+        "rows": [
+          56,
+          33,
+          35,
+          38,
+          46,
+          64,
+          31
+        ]
+      },
+      "scores": [
+        3,
+        2,
+        3,
+        3,
+        4,
+        1,
+        5
+      ],
+      "two_path_terms": [
+        {
+          "complement_paths": 1,
+          "endpoint_paths": 1,
+          "mask": 3
+        },
+        {
+          "complement_paths": 1,
+          "endpoint_paths": 1,
+          "mask": 11
+        },
+        {
+          "complement_paths": 1,
+          "endpoint_paths": 1,
+          "mask": 15
+        },
+        {
+          "complement_paths": 1,
+          "endpoint_paths": 1,
+          "mask": 19
+        },
+        {
+          "complement_paths": 1,
+          "endpoint_paths": 1,
+          "mask": 23
+        },
+        {
+          "complement_paths": 1,
+          "endpoint_paths": 1,
+          "mask": 27
+        },
+        {
+          "complement_paths": 1,
+          "endpoint_paths": 1,
+          "mask": 31
+        }
+      ],
+      "u": 0,
+      "ungated": {
+        "H": 91,
+        "HC": 7,
+        "gates": [],
+        "rows": [
+          26,
+          96,
+          35,
+          38,
+          46,
+          1,
+          61
+        ]
+      },
+      "v": 1
+    },
+    {
+      "core": [
+        30,
+        44,
+        56,
+        48,
+        34,
+        1
+      ],
+      "gated": {
+        "H": 389,
+        "HC": 37,
+        "gates": [
+          [
+            6,
+            7
+          ]
+        ],
+        "rows": [
+          94,
+          108,
+          120,
+          112,
+          98,
+          65,
+          128,
+          63
+        ]
+      },
+      "scores": [
+        5,
+        4,
+        4,
+        3,
+        3,
+        2,
+        1,
+        6
+      ],
+      "two_path_terms": [
+        {
+          "complement_paths": 5,
+          "endpoint_paths": 1,
+          "mask": 18
+        },
+        {
+          "complement_paths": 3,
+          "endpoint_paths": 1,
+          "mask": 22
+        },
+        {
+          "complement_paths": 3,
+          "endpoint_paths": 1,
+          "mask": 26
+        },
+        {
+          "complement_paths": 1,
+          "endpoint_paths": 1,
+          "mask": 30
+        },
+        {
+          "complement_paths": 1,
+          "endpoint_paths": 1,
+          "mask": 51
+        },
+        {
+          "complement_paths": 1,
+          "endpoint_paths": 2,
+          "mask": 55
+        },
+        {
+          "complement_paths": 1,
+          "endpoint_paths": 2,
+          "mask": 59
+        },
+        {
+          "complement_paths": 1,
+          "endpoint_paths": 4,
+          "mask": 63
+        }
+      ],
+      "u": 1,
+      "ungated": {
+        "H": 293,
+        "HC": 21,
+        "gates": [],
+        "rows": [
+          94,
+          60,
+          120,
+          112,
+          224,
+          65,
+          2,
+          111
+        ]
+      },
+      "v": 4
+    }
+  ],
+  "smallest_hostile": {
+    "G": {
+      "H": 15,
+      "HC": 3,
+      "gates": [
+        [
+          3,
+          4
+        ]
+      ],
+      "rows": [
+        10,
+        12,
+        9,
+        16,
+        7
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        3
+      ]
+    },
+    "U": {
+      "H": 11,
+      "HC": 1,
+      "gates": [],
+      "rows": [
+        18,
+        12,
+        9,
+        1,
+        14
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        3
+      ]
+    },
+    "chosen_vertex": 0,
+    "core": [
+      2,
+      4,
+      1
+    ]
+  },
+  "status": "PASS",
+  "switch_digest_sha256": "a5e10a1da8659fa69cd03efd2cfde5c5353de78d2ad62879724620dbee62b6da"
+}

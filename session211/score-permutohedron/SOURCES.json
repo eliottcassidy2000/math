@@ -1,0 +1,67 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "checked_main_commit": "214586af6c8803d8b21959951e8f151e64bff36f",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-207-permutohedron-transitive.md",
+      "blob_sha": "f91c66b16b5285cdf4f77ca14d9cf09f4c723e35",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/01-canon/theorems/THM-207-permutohedron-transitive.md",
+      "role": "Inherited transitive flip graph; not a quotient recovering all tournaments."
+    },
+    {
+      "path": "05-knowledge/results/permutohedron_s202.out",
+      "blob_sha": "8c6fd8163a0ef9209ce9c80e911ddb82325b0736",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/05-knowledge/results/permutohedron_s202.out",
+      "role": "March score-zonotope construction and historical informal identifications audited in section6."
+    },
+    {
+      "path": "05-knowledge/results/permutohedron_deep_s20bf.out",
+      "blob_sha": "5825742b6d12040bde90a16df3bc03d9bc12a606",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/05-knowledge/results/permutohedron_deep_s20bf.out",
+      "role": "March historical score/fiber/sink analogies; not a theorem source."
+    },
+    {
+      "path": "07-reflections/the-cut-side-is-classical-clebsch-and-the-permutohedron.md",
+      "blob_sha": "0bae06c1cc0f9f137c53a07b04a560595ff7a183",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/07-reflections/the-cut-side-is-classical-clebsch-and-the-permutohedron.md",
+      "role": "June conceptual provenance; no pure-cut or LRC consequence is imported."
+    },
+    {
+      "path": "01-canon/theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md",
+      "blob_sha": "4bce85216d801937a007f9de903b4f5ca014205b",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/01-canon/theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md",
+      "role": "Corrected inherited non-score-determination, order-five threshold, and H=11 core for the HC=7 pair."
+    },
+    {
+      "path": "01-canon/theorems/THM-1945-the-invariant-monoid-orbit-dictionary.md",
+      "blob_sha": "29b8f45f87dc0c34aa3f2237e51840cb17d93a34",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/01-canon/theorems/THM-1945-the-invariant-monoid-orbit-dictionary.md",
+      "role": "Only section1 classical directed-triangle score invariance/Ryser provenance; no other dictionary or complexity assertions used."
+    },
+    {
+      "path": "01-canon/theorems/THM-1825-q-redei-census-landau-moment-map-hole-shadows.md",
+      "blob_sha": "a1080170b71765adcc2510e9d494f4b6da0ad175",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/01-canon/theorems/THM-1825-q-redei-census-landau-moment-map-hole-shadows.md",
+      "role": "July score/moment-map and q-refinement provenance; no q-root claim used."
+    },
+    {
+      "path": "session210/coherent-permutohedron/PROOF.md",
+      "blob_sha": "4792af005c9d6c7456f6dd6080e10aa20ee14913",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/session210/coherent-permutohedron/PROOF.md",
+      "role": "Audited parallel-coherent sink carrier and face product."
+    },
+    {
+      "path": "session210/graded-spectrum-gates/PROOF.md",
+      "blob_sha": "c7b0ed35d826e52c706b5f78aef4285ce2ac816e",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/session210/graded-spectrum-gates/PROOF.md",
+      "role": "Audited canonical gate, exact HC=H correspondence, cover response."
+    },
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "blob_sha": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "role": "Inherited all-order exclusions and explicit completeness-open boundary."
+    }
+  ],
+  "literature_scope": "No external literature-priority claim. Standard geometric and cycle-invariance facts are derived explicitly; inherited gap claims are cited separately."
+}
