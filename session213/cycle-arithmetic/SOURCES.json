@@ -1,0 +1,56 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "snapshot": "f93c1d6fbf8d281e9b8a084ab01128952d032e0f",
+  "note": "Each local dependency was checked against the GitHub blob SHA at this immutable commit. Newer main changes require parent publisher reconciliation.",
+  "files": [
+    {
+      "path": "session212/cycle-bridge/PROOF.md",
+      "sha256": "6dd8e7dcc10e66856aedb1be7dd45e53797771f5b32b6113a4e68f4073385e6d",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f93c1d6fbf8d281e9b8a084ab01128952d032e0f/session212/cycle-bridge/PROOF.md",
+      "git_blob": "3c445c94f4e9fd60521b89bab6e7df4588573699",
+      "remote_snapshot_byte_identity": "VERIFIED"
+    },
+    {
+      "path": "session212/cycle-bridge/ENDPOINT_BRIDGE.md",
+      "sha256": "c4427215b5d9843f94215d2278c5401169afc3d5c619055098e14cd7345de0e0",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f93c1d6fbf8d281e9b8a084ab01128952d032e0f/session212/cycle-bridge/ENDPOINT_BRIDGE.md",
+      "git_blob": "cf22f9e6c1d1ba0b1d4df728c572307bfcc155a1",
+      "remote_snapshot_byte_identity": "VERIFIED"
+    },
+    {
+      "path": "01-canon/theorems/THM-4876-deletion-and-flip-increments-of-the-hamiltonian-path-count-an-increment-of-two-forces-at-most-three-paths-the-increment-ladder-thm-013-for-all-orders-and-what-extension-spectra-forbid-for-chan-pak.md",
+      "sha256": "3efbe4a2bf4d5bf1e846e027ae4f069d47abbb40062cfc47bad64214f785968e",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f93c1d6fbf8d281e9b8a084ab01128952d032e0f/01-canon/theorems/THM-4876-deletion-and-flip-increments-of-the-hamiltonian-path-count-an-increment-of-two-forces-at-most-three-paths-the-increment-ladder-thm-013-for-all-orders-and-what-extension-spectra-forbid-for-chan-pak.md",
+      "git_blob": "24c3b6fcf517c532c8bcf2c2049c62a9d1612a53",
+      "remote_snapshot_byte_identity": "VERIFIED"
+    },
+    {
+      "path": "01-canon/theorems/THM-4875-old-mark-digit-lower-bound-lorentzian-gadget-adjoint-and-one-apex-joins-realise-every-odd-number-to-2-32-except-7-and-21.md",
+      "sha256": "e089d29927c4ca71d2d8adb6ff78ae318aca3e8356efd4bc6783f8deb6abc8fc",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f93c1d6fbf8d281e9b8a084ab01128952d032e0f/01-canon/theorems/THM-4875-old-mark-digit-lower-bound-lorentzian-gadget-adjoint-and-one-apex-joins-realise-every-odd-number-to-2-32-except-7-and-21.md",
+      "git_blob": "c4ccdd38efb2ffad8bcf2edc4e9e361fc6e2139f",
+      "remote_snapshot_byte_identity": "VERIFIED"
+    },
+    {
+      "path": "01-canon/theorems/THM-4882-signed-one-apex-responses-slope-and-parity-classification-session198-clock-merged-positive-count-barrier.md",
+      "sha256": "305950149af944d18d4e8055aa8c93032003e85238477cb9bb9dc46d8225e89d",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f93c1d6fbf8d281e9b8a084ab01128952d032e0f/01-canon/theorems/THM-4882-signed-one-apex-responses-slope-and-parity-classification-session198-clock-merged-positive-count-barrier.md",
+      "git_blob": "a54b3dfc5b0501a353b30e2b600c7cf22de62c0e",
+      "remote_snapshot_byte_identity": "VERIFIED"
+    },
+    {
+      "path": "01-canon/theorems/THM-4729-closed-and-open-tilings-hamiltonian-cycle-bipartition-of-the-metagraph-lines-and-the-forced-arrangement.md",
+      "sha256": "016fcbf20415d3f0c069a2feea7e9f5e40e3d24d46735034dbd70cf7793acd49",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f93c1d6fbf8d281e9b8a084ab01128952d032e0f/01-canon/theorems/THM-4729-closed-and-open-tilings-hamiltonian-cycle-bipartition-of-the-metagraph-lines-and-the-forced-arrangement.md",
+      "git_blob": "c96757e145ceed772a1be400030374be27bd344b",
+      "remote_snapshot_byte_identity": "VERIFIED"
+    },
+    {
+      "path": "01-canon/theorems/THM-4526-shaved-tournaments-path-plus-chord-and-the-largest-unavoidable-graphs.md",
+      "sha256": "22d8597058ca26c060553b7becde6673a1f54e3df35d0cbd0556c875d649ac2f",
+      "url": "https://github.com/eliottcassidy2000/math/blob/f93c1d6fbf8d281e9b8a084ab01128952d032e0f/01-canon/theorems/THM-4526-shaved-tournaments-path-plus-chord-and-the-largest-unavoidable-graphs.md",
+      "git_blob": "b79f6c1e10b507f8390c2f045db7508c0519898f",
+      "remote_snapshot_byte_identity": "VERIFIED"
+    }
+  ]
+}
