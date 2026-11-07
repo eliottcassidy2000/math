@@ -1,0 +1,4 @@
+#points(Gamma T) = #points(T) + 2^n + 1: True: 195
+#points(Sigma T) = #points(T) + 2: True: 195
+Gamma T top object irreducible: True: 195
+examples (n, #points T, #points Sigma T, #points Gamma T): [(3, 3, 5, 12), (3, 3, 5, 12), (3, 4, 6, 13), (3, 3, 5, 12)]

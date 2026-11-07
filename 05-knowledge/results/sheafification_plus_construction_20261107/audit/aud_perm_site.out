@@ -1,0 +1,57 @@
+====================================================================================================
+1-4. Axioms, the order between the four topologies, O, and the colimit plus construction
+n=3: faces 13; axiom violations: none
+      order of topologies (counts of faces where the inclusion holds / total): {'J{sq,hex} <= J{sq}': 13, 'J{sq,hex} <= J{hex}': 13, 'J{sq} <= J{}': 13, 'J{hex} <= J{}': 13, 'faces': 13, 'strict somewhere: J{sq,hex} < J{}': 1, 'strict somewhere: J{hex} < J{}': 1, 'strict somewhere: J{sq,hex} < J{sq}': 1}
+      {'Lemma 0 (colimit = R_min families): True': 52}
+      {hex}: O(F) -> O^+(F) bijective on edge: True: 6
+      {hex}: O(F) -> O^+(F) bijective on hex: True: 1
+      {hex}: O(F) -> O^+(F) bijective on vertex: True: 6
+      {sq,hex}: O(F) -> O^+(F) bijective on edge: True: 6
+      {sq,hex}: O(F) -> O^+(F) bijective on hex: True: 1
+      {sq,hex}: O(F) -> O^+(F) bijective on vertex: True: 6
+      {sq}: O(F) -> O^+(F) bijective on edge: True: 6
+      {sq}: O(F) -> O^+(F) bijective on hex: False: 1
+      {sq}: O(F) -> O^+(F) bijective on vertex: True: 6
+      {}: O(F) -> O^+(F) bijective on edge: True: 6
+      {}: O(F) -> O^+(F) bijective on hex: False: 1
+      {}: O(F) -> O^+(F) bijective on vertex: True: 6
+n=4: faces 75; axiom violations: none
+      order of topologies (counts of faces where the inclusion holds / total): {'J{sq,hex} <= J{sq}': 75, 'J{sq,hex} <= J{hex}': 75, 'J{sq} <= J{}': 75, 'J{hex} <= J{}': 75, 'faces': 75, 'strict somewhere: J{sq,hex} < J{}': 1, 'strict somewhere: J{hex} < J{}': 1, 'strict somewhere: J{sq,hex} < J{sq}': 1, 'strict somewhere: J{sq} < J{}': 1, 'strict somewhere: J{sq,hex} < J{hex}': 1}
+      {'Lemma 0 (colimit = R_min families): True': 296}
+      {hex}: O(F) -> O^+(F) bijective on edge: True: 36
+      {hex}: O(F) -> O^+(F) bijective on hex: True: 8
+      {hex}: O(F) -> O^+(F) bijective on sq: False: 6
+      {hex}: O(F) -> O^+(F) bijective on vertex: True: 24
+      {sq,hex}: O(F) -> O^+(F) bijective on edge: True: 36
+      {sq,hex}: O(F) -> O^+(F) bijective on hex: True: 8
+      {sq,hex}: O(F) -> O^+(F) bijective on sq: True: 6
+      {sq,hex}: O(F) -> O^+(F) bijective on vertex: True: 24
+      {sq}: O(F) -> O^+(F) bijective on edge: True: 36
+      {sq}: O(F) -> O^+(F) bijective on hex: False: 8
+      {sq}: O(F) -> O^+(F) bijective on sq: True: 6
+      {sq}: O(F) -> O^+(F) bijective on vertex: True: 24
+      {}: O(F) -> O^+(F) bijective on edge: True: 36
+      {}: O(F) -> O^+(F) bijective on hex: False: 8
+      {}: O(F) -> O^+(F) bijective on sq: False: 6
+      {}: O(F) -> O^+(F) bijective on vertex: True: 24
+====================================================================================================
+3/5. O separated for every X; O a sheaf exactly for X = {sq,hex}; global sections of a(O) = O^+
+n=3: O separated (sections determined by edges): True: 13; {hex}: |O^+(F)| = 2^#classes = |O(F)|: True: 13; {sq,hex}: |O^+(F)| = 2^#classes = |O(F)|: True: 13; {sq}: |O^+(F)| = 2^#classes = |O(F)|: False: 1; {sq}: |O^+(F)| = 2^#classes = |O(F)|: True: 12; {}: |O^+(F)| = 2^#classes = |O(F)|: False: 1; {}: |O^+(F)| = 2^#classes = |O(F)|: True: 12
+      top face: number of free edge classes (global sections = 2^classes): {'{sq,hex}': 3, '{sq}': 6, '{hex}': 3, '{}': 6}
+n=4: O separated (sections determined by edges): True: 75; {hex}: |O^+(F)| = 2^#classes = |O(F)|: False: 7; {hex}: |O^+(F)| = 2^#classes = |O(F)|: True: 68; {sq,hex}: |O^+(F)| = 2^#classes = |O(F)|: True: 75; {sq}: |O^+(F)| = 2^#classes = |O(F)|: False: 9; {sq}: |O^+(F)| = 2^#classes = |O(F)|: True: 66; {}: |O^+(F)| = 2^#classes = |O(F)|: False: 15; {}: |O^+(F)| = 2^#classes = |O(F)|: True: 60
+      top face: number of free edge classes (global sections = 2^classes): {'{sq,hex}': 6, '{sq}': 24, '{hex}': 12, '{}': 36}
+n=5: O separated (sections determined by edges): True: 541; {hex}: |O^+(F)| = 2^#classes = |O(F)|: False: 121; {hex}: |O^+(F)| = 2^#classes = |O(F)|: True: 420; {sq,hex}: |O^+(F)| = 2^#classes = |O(F)|: True: 541; {sq}: |O^+(F)| = 2^#classes = |O(F)|: False: 91; {sq}: |O^+(F)| = 2^#classes = |O(F)|: True: 450; {}: |O^+(F)| = 2^#classes = |O(F)|: False: 181; {}: |O^+(F)| = 2^#classes = |O(F)|: True: 360
+      top face: number of free edge classes (global sections = 2^classes): {'{sq,hex}': 10, '{sq}': 80, '{hex}': 60, '{}': 240}
+====================================================================================================
+6. Sink spectra at n = 4 (orientations coherent on the X-faces = global sections of a(O))
+   X = {hex}: 12 classes, 4096 orientations; sink spectrum [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12]; orientations with 7 sinks: 48
+   X = {sq}: 24 classes, 16777216 orientations; sink spectrum [0, 1, 2, 3, 4, 5, 6]; orientations with 7 sinks: 0
+   X = {sq,hex}: 6 classes, 64 orientations; sink spectrum [1, 3, 5]; orientations with 7 sinks: 0
+====================================================================================================
+7. THM-4891's n = 5 witness tables re-counted (sinks under the stated relaxation)
+   n4_L2_7   (hexagon/relative-order table, 12 classes): 7 sinks
+   n5_L1_7   (square/set-context table, 80 classes): 7 sinks
+   n5_L1_21  (square/set-context table, 80 classes): 21 sinks
+   n5_L2_7   (hexagon/relative-order table, 60 classes): 7 sinks
+   n5_L2_21  (hexagon/relative-order table, 60 classes): 21 sinks
+total time 152.6s

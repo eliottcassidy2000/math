@@ -1,0 +1,46 @@
+====================================================================================================
+(b)/(C): OCF, the Pk2 sheaf condition, Redei swap, spectrum
+   spectra by order (exhaustive): {1: [1], 2: [1], 3: [1, 3], 4: [1, 3, 5], 5: [1, 3, 5, 9, 11, 13, 15]}
+   strong spectra by order:       {1: [1], 2: [], 3: [3], 4: [5], 5: [9, 11, 13, 15]}
+(c)/(D): Q = Pk2 / swap
+   (D4) probe, A = C3 => C3 (not strong), B = C3: H(A)=9, qA=4, qB=1; |Q(A=>B)|-1 = 13 (qA+qB+2qAqB = 13); |Q^+(A=>B)|-1 = 7 versus the stated qA+qB+qAqB = 9
+(d)/(F): gate and padding
+(B5): componentwise converses
+   (B5) componentwise converse keeps components and H: True: 1468
+   (C1) OCF |Pk2(V)| = H(T): True: 1544
+   (C1) Pk2(S) -> prod Pk2(C_i) bijective: True: 34311
+   (C2) swap has exactly one fixed point, the empty packing: True: 1544
+   (C3) H = prod over strong components: True: 1544
+   (C3) spectrum(n) = products of strong values, n=1: True: 1
+   (C3) spectrum(n) = products of strong values, n=2: True: 1
+   (C3) spectrum(n) = products of strong values, n=3: True: 1
+   (C3) spectrum(n) = products of strong values, n=4: True: 1
+   (C3) spectrum(n) = products of strong values, n=5: True: 1
+   (D) |Q(S)| = (H(T[S]) + 1)/2: True: 39302
+   (D1) Q separated at S <=> at most one component of size >= 3: True: 39302
+   (D2) Q^+ -> Q^++ bijective (a(Q) = Q^+): True: 6208
+   (D2) |Q^+(S)| = prod (H(C_i)+1)/2: True: 6208
+   (D3) (Z/2)^M acts on the fibre, transitively, stabiliser = diagonal: True: 55613
+   (D3) Q(S) -> prod Q(C_i) surjective: True: 39302
+   (D3) fibre size 2^(m-1): True: 55613
+   (D4) presheaf law |Q|-1 = qA+qB+2qAqB (A,B strong): True: 45
+   (D4) sheaf law fails for non-strong A (probe): True: 1
+   (D4) sheaf law |Q^+|-1 = qA+qB+qAqB (A,B strong): True: 45
+   (F1) H(Sigma T) = H(T): True: 1339
+   (F1) padding: components = {b}, comps(T), {a}: True: 1339
+   (F2) Gamma(T) strong: True: 1339
+   (F2) Gamma(empty) = transitive pair, not strong: True: 1
+   (F3) H(Gamma T) = H(T) + 2 sum_{|S| odd} H(T[S])H(T[V-S]): True: 1339
+   (F3) OCF on Gamma(T): True: 1179
+   (F3) Session 210 (5): H(Gamma T) = H(T) + P_T(2): True: 1339
+   (F3) alternating sum vanishes (Lemma 3 coefficient): True: 1339
+   (F3) gate odd cycles = (odd S, Ham path of T[S]) via a->b->P->a: True: 1179
+   Q -> Q^+ injective <=> at most one big component: True: 6208
+   Q -> Q^+ surjective: True: 6208
+   fibres by m: m=0: 39302
+   fibres by m: m=1: 16144
+   fibres by m: m=2: 143
+   fibres by m: m=3: 24
+   order joins tested: 60
+FAILED CHECKS: none (all reported conditions True)
+total time 30.2s

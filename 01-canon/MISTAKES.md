@@ -23334,3 +23334,47 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - "A does not suffice and B does not suffice, A and B together suffice" does not imply "A and B are necessary".
     State necessity only when every intermediate condition has been tested or excluded.
 
+
+## MISTAKE-731 (2026-11-07, opus-2026-11-07-S85, THM-4892, the note `05-knowledge/results/sheafification_plus_construction_20261107/README.md` and both INDEX rows at the pre-audit checkpoint 4d3b0f90f4; also HYP-1479 and HYP-1511 (opus-S71q, opus-S71u, 2026-03); found by the independent audit `05-knowledge/results/sheafification_plus_construction_20261107/audit/AUDIT.md`) -- finer and coarser topologies inverted, a sheafified count stated for all order joins that holds only for strong factors, "Hamiltonian paths as global sections" for a count-only equality, known parts typed new, and two metaphors still marked CONFIRMED
+
+- **What was claimed.**
+  - (E): THM-4891's relaxations are sheafifications for *coarser* topologies on the permutohedron's face poset, and the
+    topology requiring all 2-faces is the *finest*.
+  - (D)4: for every order join A => B, the sheafified swap quotient has |Q^+| - 1 = q_A + q_B + q_A q_B.
+  - (C)'s heading: "Hamiltonian paths as global sections".
+  - The status line typed (A)-(F) as new, apart from the inherited formulas.
+  - HYP-1479 ("H = number of global sections of HP sheaf") and HYP-1511 ("H as sheaf global section") were marked
+    CONFIRMED in `05-knowledge/hypotheses/INDEX-HISTORICAL-THROUGH-2026-07-21.md`.
+- **What is true.**
+  - A topology is finer when it has more covering sieves (SGA4 II; nLab). Requiring more 2-faces gives fewer covering
+    sieves, so the all-2-faces topology is the coarsest of the four, and the relaxations are sheafifications for
+    *finer* topologies.
+  - |Q^+(A => B)| is the product of (H(C) + 1)/2 over all strong components C of A and B. The stated count holds when
+    A and B are strong, or more generally when each has at most one strong component carrying an odd cycle.
+    Counterexample: A = C3 => C3, B = C3 give 7, not 9.
+  - The global sections are 2-coloured odd-cycle packings. OCF makes their number H(T), but no bijection with
+    Hamiltonian paths is given. Session 210 lists such a bijection as open.
+  - These parts were already known:
+    - Rédei's theorem via the colour swap (Grinberg-Stanley's parity consequence of OCF);
+    - the spectrum as the multiplicative closure of the strong values (THM-1862, THM-1370 (1));
+    - the gate-cycle bijection (Session 210 Theorem 2);
+    - the two-component relative-colour torsor (Session 210);
+    - the Condorcet reading of cyclic triangles (THM-512).
+  - **The historical rows.** The "HP presheaf" of HYP-1479 has no restriction maps: an HP of T restricted to S is a
+    linear order, usually not an HP of T[S]. The "sheaf" of HYP-1511 lives on three labels {Comb, Alg, Anal} with no
+    coverage. Both are metaphors.
+- **Repair.**
+  - THM-4892 is rewritten with the audit's typing, the comparison lemma (irreducible objects = strong subsets), the
+    exact criterion for the second plus step, the general (D) law with the counterexample, and the gate site's
+    2^n + 1 new points.
+  - The note, both INDEX rows and the verification list are aligned, with the audit's structural scripts added. The
+    session's own torsor and count checks are now described as cardinality checks: they were identities.
+  - HYP-1479 and HYP-1511 are annotated in the historical index as retyped to metaphor.
+- **Lesson.**
+  - Before using an order-theoretic word for topologies (finer, coarser), check the convention against one example
+    whose sheaves are known. A finer topology has more covering sieves and fewer sheaves.
+  - A product law proved for two strong factors does not extend to arbitrary order joins. Test the statement on a join
+    whose factors are not strong.
+  - "X as global sections" claims a bijection. If only the counts agree, say "H as the number of global sections".
+  - When a restated result arrives in new language, grep the canon for the classical statement first: Rédei, the
+    multiplicative closure, and Condorcet were all already there.

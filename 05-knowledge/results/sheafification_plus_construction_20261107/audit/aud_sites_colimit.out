@@ -1,0 +1,103 @@
+====================================================================================================
+PART A: pair site J2 - axioms and the plus construction from the colimit definition
+n=0: axiom violations none; covering sieves on V: 1; irreducible objects = subsets of size <= 2: True; objects covered by the empty sieve: 0
+   L: Lemma 0 (colimit over all covering sieves = R_min families): True; |L^+(S)| = 2^C(|S|,2) for all S: True; L separated: True; L sheaf exactly at |S| <= 2: True; L^+ is a sheaf: True; image of L = transitive tournaments (counts {0: 1}): True; transitivity local on triples: True
+   Tour                            : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   const |A|=2                     : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   const |A|=3                     : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   partitions                      : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   L x Z2                          : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   L x Z2 (Z2 forgotten on |S|<3)  : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   pt x Z3 (forgotten on |S|<3)    : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #0              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #1              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #2              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #3              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #4              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #5              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+n=1: axiom violations none; covering sieves on V: 1; irreducible objects = subsets of size <= 2: True; objects covered by the empty sieve: 0
+   L: Lemma 0 (colimit over all covering sieves = R_min families): True; |L^+(S)| = 2^C(|S|,2) for all S: True; L separated: True; L sheaf exactly at |S| <= 2: True; L^+ is a sheaf: True; image of L = transitive tournaments (counts {0: 1, 1: 1}): True; transitivity local on triples: True
+   Tour                            : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   const |A|=2                     : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   const |A|=3                     : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   partitions                      : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   L x Z2                          : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   L x Z2 (Z2 forgotten on |S|<3)  : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   pt x Z3 (forgotten on |S|<3)    : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #0              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #1              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #2              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #3              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #4              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #5              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+n=2: axiom violations none; covering sieves on V: 1; irreducible objects = subsets of size <= 2: True; objects covered by the empty sieve: 0
+   L: Lemma 0 (colimit over all covering sieves = R_min families): True; |L^+(S)| = 2^C(|S|,2) for all S: True; L separated: True; L sheaf exactly at |S| <= 2: True; L^+ is a sheaf: True; image of L = transitive tournaments (counts {0: 1, 1: 1, 2: 2}): True; transitivity local on triples: True
+   Tour                            : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   const |A|=2                     : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   const |A|=3                     : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   partitions                      : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   L x Z2                          : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   L x Z2 (Z2 forgotten on |S|<3)  : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   pt x Z3 (forgotten on |S|<3)    : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #0              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #1              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #2              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #3              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #4              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #5              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+n=3: axiom violations none; covering sieves on V: 2; irreducible objects = subsets of size <= 2: True; objects covered by the empty sieve: 0
+   L: Lemma 0 (colimit over all covering sieves = R_min families): True; |L^+(S)| = 2^C(|S|,2) for all S: True; L separated: True; L sheaf exactly at |S| <= 2: True; L^+ is a sheaf: True; image of L = transitive tournaments (counts {0: 1, 1: 1, 2: 2, 3: 6}): True; transitivity local on triples: True
+   Tour                            : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   const |A|=2                     : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   const |A|=3                     : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   partitions                      : Lemma 0 True; F separated True; F sheaf False; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   L x Z2                          : Lemma 0 True; F separated True; F sheaf False; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   L x Z2 (Z2 forgotten on |S|<3)  : Lemma 0 True; F separated False; F sheaf False; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True  [non-separated input]
+   pt x Z3 (forgotten on |S|<3)    : Lemma 0 True; F separated False; F sheaf False; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True  [non-separated input]
+   random quotient #0              : Lemma 0 True; F separated True; F sheaf False; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #1              : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #2              : Lemma 0 True; F separated True; F sheaf False; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #3              : Lemma 0 True; F separated True; F sheaf False; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #4              : Lemma 0 True; F separated True; F sheaf False; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   random quotient #5              : Lemma 0 True; F separated True; F sheaf False; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+n=4: axiom violations none; covering sieves on V: 17; irreducible objects = subsets of size <= 2: True; objects covered by the empty sieve: 0
+   L: Lemma 0 (colimit over all covering sieves = R_min families): True; |L^+(S)| = 2^C(|S|,2) for all S: True; L separated: True; L sheaf exactly at |S| <= 2: True; L^+ is a sheaf: True; image of L = transitive tournaments (counts {0: 1, 1: 1, 2: 2, 3: 6, 4: 24}): True; transitivity local on triples: True
+   Tour                            : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   const |A|=2                     : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   const |A|=3                     : Lemma 0 True; F separated True; F sheaf True; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   partitions                      : Lemma 0 True; F separated True; F sheaf False; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   L x Z2                          : Lemma 0 True; F separated True; F sheaf False; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True
+   L x Z2 (Z2 forgotten on |S|<3)  : Lemma 0 True; F separated False; F sheaf False; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True  [non-separated input]
+   pt x Z3 (forgotten on |S|<3)    : Lemma 0 True; F separated False; F sheaf False; F^+ separated True; F^+ sheaf (A1) True; restriction maps well defined True  [non-separated input]
+====================================================================================================
+PART B: strong-component site Jss - axioms and the plus construction from the colimit definition
+   (B2) |F^+(S)| = fibre product: True: 8410
+   (B3) sheaf <=> F(empty)=pt and multiplicative: True: 565
+   (B4) F(empty)=pt => F^+ sheaf: True: 329
+   (B4) constant presheaf A^+ = A, A^++ = A^c (const |A|=2): True: 78
+   (B4) constant presheaf A^+ = A, A^++ = A^c (const |A|=3): True: 78
+   (B4) second step acts exactly per criterion: True: 8410
+   (C1) Pk2 is a Jss-sheaf: True: 78
+   (C1) |Pk2(V)| = H(T): True: 78
+   (D2) Q^+ = a(Q) (one step): True: 78
+   F^+ separated (Grothendieck): True: 565
+   F^{++} computed; F^+ sheaf when F separated: True: 565
+   Lemma 0 holds: True: 565
+   R_min = down-closure of the components: True: 1194
+   a(F)(S)=F^{++}(S) has size prod |F(C_i)|: True: 8410
+   axiom violations: 0
+   empty covered by empty sieve only at S=0: True: 1194
+   input presheaf separated: False: 402
+   input presheaf separated: True: 163
+   irreducible <=> nonempty strong: True: 1194
+   restriction of F^+ well defined: True: 565
+   tournaments: 78
+   [78 labelled tournaments: all with n <= 4, plus 3 random n = 5; 136.4s]
+====================================================================================================
+PART B': constant presheaf A (|A| = 2, 3; A(empty) = A), one and two plus steps on all subsets
+      ... and A^+(S) != A^++(S): True: 2158
+   A^+(S) = A (S nonempty), pt (S empty): True: 3216
+   A^++(S) = A^c(T[S]): True: 3216
+   subset-checks: 3216
+   subsets with c >= 2 (both steps needed): 2158
+total time 142.7s
