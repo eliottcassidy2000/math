@@ -1,0 +1,8 @@
+p= 3 automaton limit L(0) = 1.2592592593   closed form 1 + (3p-2)(p-1)/(2p^3) = 34/27 = 1.2592592593   diff 4.1e-11
+p= 5 automaton limit L(0) = 1.2080000000   closed form 1 + (3p-2)(p-1)/(2p^3) = 151/125 = 1.2080000000   diff 0.0e+00
+p= 7 automaton limit L(0) = 1.1661807580   closed form 1 + (3p-2)(p-1)/(2p^3) = 400/343 = 1.1661807580   diff 1.7e-11
+p=11 automaton limit L(0) = 1.1164537941   closed form 1 + (3p-2)(p-1)/(2p^3) = 1486/1331 = 1.1164537941   diff 4.0e-11
+p=13 automaton limit L(0) = 1.1010468821   closed form 1 + (3p-2)(p-1)/(2p^3) = 2419/2197 = 1.1010468821   diff 1.2e-11
+p=17 automaton limit L(0) = 1.0797883167   closed form 1 + (3p-2)(p-1)/(2p^3) = 5305/4913 = 1.0797883167   diff 1.1e-11
+p=19 automaton limit L(0) = 1.0721679545   closed form 1 + (3p-2)(p-1)/(2p^3) = 7354/6859 = 1.0721679545   diff 1.2e-11
+p=23 automaton limit L(0) = 1.0605736829   closed form 1 + (3p-2)(p-1)/(2p^3) = 12904/12167 = 1.0605736829   diff 1.3e-11

@@ -1,0 +1,18 @@
+q=3: 42 SCCs, 6 closed classes (sizes {1: 3, 6: 1, 18: 2}), transient SCCs all singletons without self-loop: True
+  two-J limit L(r), r = 0..2: 34/27 47/54 47/54
+  one-J limit L(r), r = 0..2: 41/36 8/9 35/36
+  closed form two-J: 34/27  -> EXACT MATCH: True
+  closed form one-J: 41/36, L(-1) = 35/36 -> EXACT MATCH: True
+  (M1) exact: True   (M2) exact: True   (M3) exact: True
+q=5: 410 SCCs, 10 closed classes (sizes {1: 5, 20: 1, 50: 4}), transient SCCs all singletons without self-loop: True
+  two-J limit L(r), r = 0..4: 151/125 237/250 237/250 237/250 237/250
+  one-J limit L(r), r = 0..4: 111/100 24/25 24/25 24/25 101/100
+  closed form two-J: 151/125  -> EXACT MATCH: True
+  closed form one-J: 111/100, L(-1) = 101/100 -> EXACT MATCH: True
+  (M1) exact: True   (M2) exact: True   (M3) exact: True
+q=7: 1779 SCCs, 15 closed classes (sizes {1: 7, 21: 2, 98: 6}), transient SCCs all singletons without self-loop: True
+  two-J limit L(r), r = 0..6: 400/343 667/686 667/686 667/686 667/686 667/686 667/686
+  one-J limit L(r), r = 0..6: 213/196 48/49 48/49 48/49 48/49 48/49 199/196
+  closed form two-J: 400/343  -> EXACT MATCH: True
+  closed form one-J: 213/196, L(-1) = 199/196 -> EXACT MATCH: True
+  (M1) exact: True   (M2) exact: True   (M3) exact: True

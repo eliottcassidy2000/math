@@ -1,0 +1,47 @@
+registered R2 bands parsed from PREREGISTRATION.md: {5: (1.4375, 1.5674), 7: (1.1093, 1.2409), 11: (1.2604, 1.3569), 13: (1.1001, 1.1707), 17: (1.3379, 1.4857), 23: (1.065, 1.1486), 31: (1.0514, 1.1227)}
+class means mod 27,5,7,11,13,17,23,31: auditor vs packet lf_2p24.txt, max |diff| = 5.00e-05 (packet prints 4 decimals); overall 264.618519 vs 264.6185
+R2 p= 5 rho=1.61397 registered band [1.4375, 1.5674] OUTSIDE | auditor DP band [1.43758, 1.56731] OUTSIDE | margin to registered band -0.04657
+R2 p= 7 rho=1.23951 registered band [1.1093, 1.2409] inside  | auditor DP band [1.10923, 1.24093] inside | margin to registered band +0.00139
+R2 p=11 rho=1.37393 registered band [1.2604, 1.3569] OUTSIDE | auditor DP band [1.26045, 1.35694] OUTSIDE | margin to registered band -0.01703
+R2 p=13 rho=1.17096 registered band [1.1001, 1.1707] OUTSIDE | auditor DP band [1.10006, 1.17074] OUTSIDE | margin to registered band -0.00026
+R2 p=17 rho=1.53378 registered band [1.3379, 1.4857] OUTSIDE | auditor DP band [1.33792, 1.48569] OUTSIDE | margin to registered band -0.04808
+R2 p=23 rho=1.12400 registered band [1.0650, 1.1486] inside  | auditor DP band [1.06491, 1.14856] inside | margin to registered band +0.02460
+R2 p=31 rho=1.10195 registered band [1.0514, 1.1227] inside  | auditor DP band [1.05142, 1.12270] inside | margin to registered band +0.02075
+R2 FAILED
+R3 CONFIRMED: 1.61397 > 1.53378 > 1.37393 > 1.23951
+R4 p= 5 nonzero max/min 1.03144
+R4 p= 7 nonzero max/min 1.04518
+R4 p=11 nonzero max/min 1.02572
+R4 p=13 nonzero max/min 1.00849
+R4 p=17 nonzero max/min 1.03744
+R4 p=23 nonzero max/min 1.00641
+R4 p=31 nonzero max/min 1.01807
+R4 CONFIRMED
+R5 class  0 census 2.01276 DP band [1.82007, 1.95337] widened [1.72906, 2.05104] inside (outside the unwidened band)
+R5 class  1 census 0.75942 DP band [0.75176, 0.77651] widened [0.71417, 0.81533] inside
+R5 class  2 census 0.78557 DP band [0.80938, 0.82301] widened [0.76891, 0.86416] inside (outside the unwidened band)
+R5 class  3 census 1.23408 DP band [1.21536, 1.23783] widened [1.15459, 1.29972] inside
+R5 class  4 census 0.75679 DP band [0.77366, 0.78260] widened [0.73498, 0.82172] inside (outside the unwidened band)
+R5 class  5 census 0.79212 DP band [0.79806, 0.83072] widened [0.75816, 0.87226] inside (outside the unwidened band)
+R5 class  6 census 1.26546 DP band [1.22471, 1.27158] widened [1.16347, 1.33516] inside
+R5 class  7 census 0.75151 DP band [0.76041, 0.77473] widened [0.72239, 0.81347] inside (outside the unwidened band)
+R5 class  8 census 0.82214 DP band [0.85156, 0.87049] widened [0.80898, 0.91401] inside (outside the unwidened band)
+R5 class  9 census 1.71933 DP band [1.60126, 1.64944] widened [1.52120, 1.73191] inside (outside the unwidened band)
+R5 class 10 census 0.75935 DP band [0.75810, 0.77789] widened [0.72019, 0.81678] inside
+R5 class 11 census 0.78717 DP band [0.80900, 0.82113] widened [0.76855, 0.86219] inside (outside the unwidened band)
+R5 class 12 census 1.23196 DP band [1.20942, 1.23442] widened [1.14894, 1.29614] inside
+R5 class 13 census 0.75772 DP band [0.77079, 0.77871] widened [0.73225, 0.81765] inside (outside the unwidened band)
+R5 class 14 census 0.79300 DP band [0.80251, 0.82924] widened [0.76239, 0.87071] inside (outside the unwidened band)
+R5 class 15 census 1.26816 DP band [1.24666, 1.27414] widened [1.18433, 1.33785] inside
+R5 class 16 census 0.75232 DP band [0.75096, 0.77172] widened [0.71342, 0.81031] inside
+R5 class 17 census 0.82071 DP band [0.84352, 0.86331] widened [0.80134, 0.90647] inside (outside the unwidened band)
+R5 class 18 census 1.73717 DP band [1.62486, 1.65462] widened [1.54362, 1.73735] inside (outside the unwidened band)
+R5 class 19 census 0.75653 DP band [0.75438, 0.77510] widened [0.71666, 0.81385] inside
+R5 class 20 census 0.78829 DP band [0.81247, 0.82550] widened [0.77184, 0.86677] inside (outside the unwidened band)
+R5 class 21 census 1.23959 DP band [1.21298, 1.23436] widened [1.15233, 1.29608] inside (outside the unwidened band)
+R5 class 22 census 0.75673 DP band [0.77101, 0.77860] widened [0.73246, 0.81753] inside (outside the unwidened band)
+R5 class 23 census 0.79405 DP band [0.80474, 0.83177] widened [0.76450, 0.87336] inside (outside the unwidened band)
+R5 class 24 census 1.28933 DP band [1.27090, 1.30206] widened [1.20735, 1.36716] inside
+R5 class 25 census 0.75052 DP band [0.75585, 0.77053] widened [0.71805, 0.80906] inside (outside the unwidened band)
+R5 class 26 census 0.81822 DP band [0.85391, 0.86721] widened [0.81122, 0.91057] inside (outside the unwidened band)
+R5 27 of 27 inside the 5%-widened band -> CONFIRMED; 9 of 27 inside the unwidened DP band

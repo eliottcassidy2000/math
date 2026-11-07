@@ -1,0 +1,21 @@
+reachable states (<= 2 J, length <= 9): 4463 distinct; random integer tuples: 400
+Q(m + 2^L) = Q(m) + b_{L-1} + rev_L(m) for 1 <= m < 2^14                       OK (16383 cases)
+Q(2^j + 1) = 2^(j-1) for 2 <= j < 40 (and Q(3) = 2, so j = 1 is excluded)      OK (38 cases)
+Q(2^j - 1) = 2^j - 2 (so the m = 2^j - 1 tail gives D + 2^j U)                 OK (39 cases)
+tail formula value(s . tail m) = h + Rm - dQ(m) - e(m mod 2), (h,R,e,d)=(D,U,E,d) OK (1740800 cases)
+(1a) H_s(m) = h - e (m mod 2) mod gcd(R,d)                                     OK (870400 cases)
+(1a) for s = J(p): gcd(R,d) = gcd(D_p, U_p)                                    OK (3400 cases)
+(1a) odd tails of J(p) are divisible by gcd(D_p,U_p) (U = 0 mod gcd)           OK (384000 cases)
+(1b) value(p J tail m) = (m-Q)D + (m+1)U (m odd), (m+1-Q)D + (m+1)U - E (m even) OK (1740800 cases)
+(1b) gcd(Q(m)+1, m+1) = gcd(m-Q(m), m+1) divides every odd-tail value          OK (1740800 cases)
+(1c) value(p J Z O^(j-1) Z) = (2^(j-1)+1)(D+2U), j = 2..14, every state        OK (63219 cases)
+     (j = 1, i.e. p J Z Z, differs from 2(D+2U) for 4859 of 4863 states: the j >= 2 hypothesis is needed)
+(1c) realizing word has <= 2 J when the prefix word of p has <= 1 J            OK (9472 cases)
+(1d) a = D-E-U+d: Z fixes a, J resets a to 0, O sends a to a + E - U           OK (4863 cases)
+(1d) K(v,w) = U_vU_w + E_vE_w - d_vd_w + a_v d_w + a_w d_v                     OK (32000 cases)
+(1d) Session199: K(t.alpha, t.beta) = F(t.(beta alpha^dagger)) (all alpha <= 6 letters) OK (43720 cases)
+     smallest K value on these pairs: 3 (K >= 3 always: K >= U_vU_w/2 + d_vd_w >= 3), so 1 in F_<=2 is not a K-value
+(1e) value(beta alpha^dagger Z) = (x+2^p y)(x'+2^q y'), alpha = w J Z^p, beta = w' J Z^q OK (3000 cases)
+(1e) the realizing word has exactly two J                                      OK (3000 cases)
+     (p = 0: the product formula fails for 252 of 500 random pairs, so p, q >= 1 is needed)
+ALL CHECKS PASSED

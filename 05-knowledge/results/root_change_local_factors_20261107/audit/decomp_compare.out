@@ -1,0 +1,5 @@
+j3/b decomposition lines identical (packet decomp_2p24.txt vs auditor): 14 of 14
+TOTAL by v3 line: True [6.0, 205.846, 332.034, 457.328, 510.722, 556.753, 614.189]
+unconfined 729-class line packet: unconfined (j3=0) mean per class mod 729: min 189.7225 max 243.9341 ratio 1.28574 | auditor: unconfined (j3=0, root included) mean per class mod 729: min 189.7225 (r=130) max 243.9341 (r=612) ratio 1.28574
+p=5 line identical numbers: True
+p=7 line identical numbers: True
