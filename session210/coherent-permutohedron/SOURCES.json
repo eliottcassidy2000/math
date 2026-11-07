@@ -1,0 +1,28 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "checked_main_commit": "968dbe3af678bcfdb6c2a94fa5b8d5ce394f992c",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-207-permutohedron-transitive.md",
+      "blob_sha": "f91c66b16b5285cdf4f77ca14d9cf09f4c723e35",
+      "role": "Inherited transitive-tournament flip graph is the permutohedron; not the same as the new orientation carrier."
+    },
+    {
+      "path": "01-canon/theorems/THM-062-forward-edge-distribution.md",
+      "role": "Known forward-adjacency polynomial and reversal symmetry; face incidence adds a geometric interpretation.",
+      "blob_sha": "a1ff82a5f674a0641a8a3e4151511465f56c0779"
+    },
+    {
+      "path": "01-canon/theorems/THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md",
+      "blob_sha": "406f66a4174239ff7b4b5f57df1d010e60b68d59",
+      "role": "Classical single-reversed-arc formula, attributed there to Moon 1972; no novelty claim for the scalar formula."
+    },
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "blob_sha": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "role": "Inherited all-order gaps 7 and 21, explicit earlier-literature priority correction, and completeness remains open."
+    }
+  ],
+  "literature_scope": "No external priority claim. All new statements used in the packet are proved explicitly; classical scalar formula and permanent gaps are attributed to pinned repository source audits.",
+  "search_scope": "Historical local theorem/result search and current GitHub code search for permutohedron, Schubert+Hamilton, and Galois+Hamilton. No general novelty inference is drawn from unsuccessful searches."
+}
