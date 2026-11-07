@@ -1,0 +1,68 @@
+n=25 |Y|=8388608 E/|Y|=2.930341 conv/|Y|=1.000000 nonconv/|Y|=0.930341 values/|Y|=0.401823
+   max multiplicity 16; multiplicity histogram: 2:2678868 4:578007 6:98161 8:13800 10:1686 12:184 14:27 16:2
+   values with exactly 2q preimages per |Y| (q=1..5): 0.319346 0.068904 0.011702 0.001645 0.000201
+   slope K=2: (E(K)-E(0))/(K|Y|) = 0.906054
+   slope K=4: (E(K)-E(0))/(K|Y|) = 0.902028
+   slope K=8: (E(K)-E(0))/(K|Y|) = 0.909666
+   slope K=16: (E(K)-E(0))/(K|Y|) = 0.908478
+   level law L_a (non-converse, per |Y|): 1:0.346753 2:0.259964 3:0.152830 4:0.083057 5:0.043325 6:0.022516 7:0.011483 8:0.005749 9:0.002798 10:0.001249 11:0.000131 12:0.000488
+   level counts: 1:2908772 2:2180736 3:1282028 4:696730 5:363436 6:188876 7:96324 8:48226 9:23468 10:10476 11:1100 12:4092
+   ratios L_(a+1)/L_a: a=1:0.7497 a=2:0.5879 a=3:0.5435 a=4:0.5216 a=5:0.5197 a=6:0.5100 a=7:0.5007 a=8:0.4866 a=9:0.4464 a=10:0.1050 a=11:3.7200
+   checks: misc(a,s>=1, X,Xi odd, bounds, |hXi+tauX|<=2^w+1) violations 0; same-sign pairs 0 (with max(A,S)>2: 0)
+   (C) violations 0; sharp (|A-S|<=1 or max<=3) violations 0; P5 (non-conv) violations 0; session code-test violations 0; (C') violations 0
+   |A-S| = 2: 0 pairs; |A-S| >= 3: 0 pairs (with max(A,S) <= 3: 0; largest max(A,S) among them -99)
+   joint distribution (A-S : max(A,S) -> count), |A-S| >= 2 only:
+   distribution of A-S over all pairs: -1:972248 0:14248376 1:972248
+   X_n: E_n/|X_n| = 3.255471; same-layer sum_j E^Y_j / |X_n| = 2.932568; cross-layer (E_n - sum - 1)/|X_n| = 0.322902;
+        (E) E_n <= 1 + 2 sum: yes (ratio E_n/(1+2 sum) = 0.5551); max #layers per value = 2; layer-range violations 0
+n=26 |Y|=16777216 E/|Y|=2.929600 conv/|Y|=0.999756 nonconv/|Y|=0.929844 values/|Y|=0.401942
+   max multiplicity 18; multiplicity histogram: 1:2978 2:5356962 3:870 4:1154380 5:216 6:196751 7:27 8:27669 9:3 10:3225 11:2 12:356 14:30 16:3 18:1
+   values with exactly 2q preimages per |Y| (q=1..5): 0.319300 0.068806 0.011727 0.001649 0.000192
+   slope K=2: (E(K)-E(0))/(K|Y|) = 0.906919
+   slope K=4: (E(K)-E(0))/(K|Y|) = 0.902849
+   slope K=8: (E(K)-E(0))/(K|Y|) = 0.908719
+   slope K=16: (E(K)-E(0))/(K|Y|) = 0.907978
+   level law L_a (non-converse, per |Y|): 1:0.346796 2:0.259498 3:0.152825 4:0.082825 5:0.043446 6:0.022390 7:0.011504 8:0.005810 9:0.002894 10:0.001352 11:0.000505 12:0.000000 13:0.000000
+   level counts: 1:5818268 2:4353654 3:2563984 4:1389570 5:728900 6:375642 7:192998 8:97476 9:48552 10:22682 11:8466 12:2 13:2
+   ratios L_(a+1)/L_a: a=1:0.7483 a=2:0.5889 a=3:0.5420 a=4:0.5246 a=5:0.5154 a=6:0.5138 a=7:0.5051 a=8:0.4981 a=9:0.4672 a=10:0.3732 a=11:0.0002 a=12:1.0000
+   checks: misc(a,s>=1, X,Xi odd, bounds, |hXi+tauX|<=2^w+1) violations 0; same-sign pairs 0 (with max(A,S)>2: 0)
+   (C) violations 0; sharp (|A-S|<=1 or max<=3) violations 0; P5 (non-conv) violations 0; session code-test violations 0; (C') violations 0
+   |A-S| = 2: 0 pairs; |A-S| >= 3: 0 pairs (with max(A,S) <= 3: 0; largest max(A,S) among them -99)
+   joint distribution (A-S : max(A,S) -> count), |A-S| >= 2 only:
+   distribution of A-S over all pairs: -1:1938444 0:28496428 1:1938444
+   X_n: E_n/|X_n| = 3.252571; same-layer sum_j E^Y_j / |X_n| = 2.931084; cross-layer (E_n - sum - 1)/|X_n| = 0.321487;
+        (E) E_n <= 1 + 2 sum: yes (ratio E_n/(1+2 sum) = 0.5548); max #layers per value = 2; layer-range violations 0
+n=27 |Y|=33554432 E/|Y|=2.926717 conv/|Y|=1.000000 nonconv/|Y|=0.926717 values/|Y|=0.402092
+   max multiplicity 16; multiplicity histogram: 2:10729371 4:2310035 6:390464 8:54827 10:6548 12:654 14:53 16:5
+   values with exactly 2q preimages per |Y| (q=1..5): 0.319760 0.068844 0.011637 0.001634 0.000195
+   slope K=2: (E(K)-E(0))/(K|Y|) = 0.907391
+   slope K=4: (E(K)-E(0))/(K|Y|) = 0.904058
+   slope K=8: (E(K)-E(0))/(K|Y|) = 0.909504
+   slope K=16: (E(K)-E(0))/(K|Y|) = 0.908854
+   level law L_a (non-converse, per |Y|): 1:0.345621 2:0.258450 3:0.152288 4:0.082554 5:0.043116 6:0.022277 7:0.011372 8:0.005828 9:0.002886 10:0.001393 11:0.000624 12:0.000065 13:0.000244
+   level counts: 1:11597112 2:8672142 3:5109930 4:2770042 5:1446728 6:747476 7:381566 8:195552 9:96832 10:46752 11:20946 12:2190 13:8188
+   ratios L_(a+1)/L_a: a=1:0.7478 a=2:0.5892 a=3:0.5421 a=4:0.5223 a=5:0.5167 a=6:0.5105 a=7:0.5125 a=8:0.4952 a=9:0.4828 a=10:0.4480 a=11:0.1046 a=12:3.7388
+   checks: misc(a,s>=1, X,Xi odd, bounds, |hXi+tauX|<=2^w+1) violations 0; same-sign pairs 0 (with max(A,S)>2: 0)
+   (C) violations 0; sharp (|A-S|<=1 or max<=3) violations 0; P5 (non-conv) violations 0; session code-test violations 0; (C') violations 0
+   |A-S| = 2: 0 pairs; |A-S| >= 3: 0 pairs (with max(A,S) <= 3: 0; largest max(A,S) among them -99)
+   joint distribution (A-S : max(A,S) -> count), |A-S| >= 2 only:
+   distribution of A-S over all pairs: -1:3867230 0:56915428 1:3867230
+   X_n: E_n/|X_n| = 3.250187; same-layer sum_j E^Y_j / |X_n| = 2.928901; cross-layer (E_n - sum - 1)/|X_n| = 0.321286;
+        (E) E_n <= 1 + 2 sum: yes (ratio E_n/(1+2 sum) = 0.5548); max #layers per value = 2; layer-range violations 0
+n=28 |Y|=67108864 E/|Y|=2.924796 conv/|Y|=0.999878 nonconv/|Y|=0.924918 values/|Y|=0.402267
+   max multiplicity 16; multiplicity histogram: 1:5954 2:21468697 3:1751 4:4615690 5:412 6:780759 7:61 8:108283 9:14 10:12642 12:1306 14:130 16:10
+   values with exactly 2q preimages per |Y| (q=1..5): 0.319909 0.068779 0.011634 0.001614 0.000188
+   slope K=2: (E(K)-E(0))/(K|Y|) = 0.907896
+   slope K=4: (E(K)-E(0))/(K|Y|) = 0.904751
+   slope K=8: (E(K)-E(0))/(K|Y|) = 0.909357
+   slope K=16: (E(K)-E(0))/(K|Y|) = 0.908753
+   level law L_a (non-converse, per |Y|): 1:0.344989 2:0.258021 3:0.152056 4:0.082287 5:0.042950 6:0.022129 7:0.011380 8:0.005806 9:0.002927 10:0.001445 11:0.000674 12:0.000252 13:0.000000 14:0.000000
+   level counts: 1:23151852 2:17315520 3:10204290 4:5522184 5:2882354 6:1485038 7:763698 8:389652 9:196446 10:96960 11:45236 12:16934 13:2 14:2
+   ratios L_(a+1)/L_a: a=1:0.7479 a=2:0.5893 a=3:0.5412 a=4:0.5220 a=5:0.5152 a=6:0.5143 a=7:0.5102 a=8:0.5042 a=9:0.4936 a=10:0.4665 a=11:0.3743 a=12:0.0001 a=13:1.0000
+   checks: misc(a,s>=1, X,Xi odd, bounds, |hXi+tauX|<=2^w+1) violations 0; same-sign pairs 0 (with max(A,S)>2: 0)
+   (C) violations 0; sharp (|A-S|<=1 or max<=3) violations 0; P5 (non-conv) violations 0; session code-test violations 0; (C') violations 0
+   |A-S| = 2: 0 pairs; |A-S| >= 3: 0 pairs (with max(A,S) <= 3: 0; largest max(A,S) among them -99)
+   joint distribution (A-S : max(A,S) -> count), |A-S| >= 2 only:
+   distribution of A-S over all pairs: -1:7716910 0:113737020 1:7716910
+   X_n: E_n/|X_n| = 3.247338; same-layer sum_j E^Y_j / |X_n| = 2.926848; cross-layer (E_n - sum - 1)/|X_n| = 0.320490;
+        (E) E_n <= 1 + 2 sum: yes (ratio E_n/(1+2 sum) = 0.5547); max #layers per value = 2; layer-range violations 0

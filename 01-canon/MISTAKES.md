@@ -23232,9 +23232,10 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     3 <= a <= n/2 - 3.
   - P7: the maximum multiplicity on Y_n is at most 16 for n = 22, 24, 26.
 - **What is true.**
-  - P6(b) fails exactly at a = n/2 - 3 (ratios 0.380, 0.376, 0.370 at n = 22, 24, 26). Windows of width at most 6 are a
+  - P6(b) fails exactly at a = n/2 - 3 (ratios 0.380, 0.375, 0.373 at n = 22, 24, 26, from exact counts). Windows of width at most 6 are a
     boundary regime. The in-sample n = 20 data, committed in the same pre-registration, already gave
-    0.00401/0.01077 = 0.372 at a = 7 = n/2 - 3.
+    1052/2822 = 0.373 at a = 7 = n/2 - 3, and the in-sample boundary ratio was below 0.45 at every even n:
+    0.370, 0.383 and 0.373 at n = 16, 18 and 20 (audit MINOR-5).
   - P7 fails at n = 26, where one value has multiplicity 18. The Poisson-pair model that the same file registers
     predicts 0.13 such values, 1.84 of multiplicity 16 and 24 of 14 at |Y| = 2^24. A bound of 16 was therefore a
     tail event of probability about 0.13 under the model itself, before any over-dispersion; the observed tail is about
@@ -23290,3 +23291,37 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     `05-knowledge/results/sessionNNN_*`. A priority grep must cover all three.
   - A condition like "2 generates the quadratic residues" does not by itself make QR_p a tournament. State p ≡ 3
     (mod 4) whenever a Paley tournament is meant.
+
+## MISTAKE-730 (2026-11-06, opus-2026-11-06-S84, THM-4890 (D), THM-4891 and the S84 note and index lines at the pre-audit checkpoint 4a4d5cbfad; found by the independent audit `05-knowledge/results/one_apex_collision_balance_20261106/audit/AUDIT.md`) -- a random-model bound read as a decorrelation statement that the session's own data refuted, and "neither face type alone" stated as "zone-wide coherence is needed"
+
+- **What was claimed.**
+  - (1) THM-4890 (D), the README, section 9 and both INDEX lines said:
+    - "the macro lattice ... creates no excess collisions";
+    - "linear energy ... is one decorrelation criterion";
+    - the micro self-energies "do not correlate with the macro strips".
+  - (2) THM-4891's title, README section 0 (3), both INDEX lines and the checkpoint commit message said that the
+    exclusion of 7 and 21 "needs zone-wide coherence".
+  - Minor: THM-4890 kept "the sharper form is not proved" while the audit was proving it; the XY limit law (Session 16)
+    and the n!/2^floor(n/2) bound (Session 188) were not credited; the name "context tournament" was already taken.
+- **What is true.**
+  - (1) (D) is correct for independent uniform micro values only. Exact computation shows the following.
+    - The true (DC) count is 3.3-3.7 times the random model at n = 12..22, and 1.6-1.8 times a model with the empirical
+      law of g(l). The latter ratio is still rising slowly.
+    - About |X_n| of it is forced by the converse involution. That is more than the model's whole expectation.
+    - The session's own `dc_ratio.py` (R_n = 1.64-1.84), run before the audit returned, already showed this.
+    - Linear energy needs bounded correlation, not decorrelation.
+  - (2) Only "neither face type alone excludes 7 or 21" is proved. Intermediate relaxations, such as all hexagons plus
+    some squares, were never tested.
+- **Repair.**
+  - THM-4890's title, (D) and the remarks now state (DC) as a bounded-correlation criterion, with the measured ratios.
+  - THM-4891's title and (v) state exactly what is proved and mark intermediate relaxations OPEN.
+  - The README and the index lines are aligned with these.
+  - The sharp balance lemma (audit U1) is adopted with its proof.
+  - Session 16 and Session 188 are credited, and the rename to "set-context tournament" is made.
+- **Lesson.**
+  - A bound proved for a random surrogate is not a statement about the deterministic object. Before describing the
+    obstruction as "decorrelation", compute the deterministic count against the surrogate's expectation. The session
+    had written the program that does this.
+  - "A does not suffice and B does not suffice, A and B together suffice" does not imply "A and B are necessary".
+    State necessity only when every intermediate condition has been tested or excluded.
+

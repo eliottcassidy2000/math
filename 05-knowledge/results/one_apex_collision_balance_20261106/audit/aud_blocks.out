@@ -1,0 +1,8 @@
+(0) state machine vs recursion, v < 2^16: mismatches 0
+(0) x < 2^20: min violations of g >= 1: 0; max g(x)-x-1 = 0; equality set == {0} u {2^k : k >= 1}: True
+(1) w <= 14, all x < 2^w: C_w involution failures 0; g(C_w x) != g(x) failures 0
+(1) v -> v* maps Y_n onto Y_n for n = 2..18: failures 0
+(A) exhaustive m <= 8, 1 <= h < 2^9: 260610 cases, violations 0
+(A) random big-integer (m, bitlen h <= 150): 20000 cases, violations 0
+(B) exhaustive, all words of length 2..13 and all splits (a>=1, w>=1, s>=0): 548862 cases, violations 0
+(B) random big-integer (a, w, s <= 100): 20000 cases, violations 0

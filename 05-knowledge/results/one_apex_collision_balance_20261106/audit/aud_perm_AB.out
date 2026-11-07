@@ -1,0 +1,17 @@
+n=3: edges 6; classes squares 6 (expected C(n,2)2^(n-2) = 6), hexagons 3 (expected C(n,2)(n-2)! = 3), both 3 (expected C(n,2) = 3); contradictions [0, 0, 0]; non-parallel opposite pairs [0, 0, 0]; class = (pair, set before) / (pair, order of others) / pair: [True, True, True]
+n=4: edges 36; classes squares 24 (expected C(n,2)2^(n-2) = 24), hexagons 12 (expected C(n,2)(n-2)! = 12), both 6 (expected C(n,2) = 6); contradictions [0, 0, 0]; non-parallel opposite pairs [0, 0, 0]; class = (pair, set before) / (pair, order of others) / pair: [True, True, True]
+n=5: edges 240; classes squares 80 (expected C(n,2)2^(n-2) = 80), hexagons 60 (expected C(n,2)(n-2)! = 60), both 10 (expected C(n,2) = 10); contradictions [0, 0, 0]; non-parallel opposite pairs [0, 0, 0]; class = (pair, set before) / (pair, order of others) / pair: [True, True, True]
+n=6: edges 1800; classes squares 240 (expected C(n,2)2^(n-2) = 240), hexagons 360 (expected C(n,2)(n-2)! = 360), both 15 (expected C(n,2) = 15); contradictions [0, 0, 0]; non-parallel opposite pairs [0, 0, 0]; class = (pair, set before) / (pair, order of others) / pair: [True, True, True]
+n=7: edges 15120; classes squares 672 (expected C(n,2)2^(n-2) = 672), hexagons 2520 (expected C(n,2)(n-2)! = 2520), both 21 (expected C(n,2) = 21); contradictions [0, 0, 0]; non-parallel opposite pairs [0, 0, 0]; class = (pair, set before) / (pair, order of others) / pair: [True, True, True]
+n=3 tournaments (both)   classes= 3  all 8: 1:6 3:2
+                                    acyclic 8: 1:6 3:2
+n=3 hexagon-coherent     classes= 3  all 8: 1:6 3:2
+                                    acyclic 8: 1:6 3:2
+n=3 square-coherent      classes= 6  all 64: 0:2 1:30 2:30 3:2
+                                    acyclic 62: 1:30 2:30 3:2
+n=4 tournaments (both)   classes= 6  all 64: 1:24 3:16 5:24
+                                    acyclic 64: 1:24 3:16 5:24
+n=4 hexagon-coherent     classes=12  all 4096: 0:122 1:624 2:960 3:920 4:804 5:384 6:196 7:48 8:12 9:24 12:2
+                                    acyclic 2744: 1:432 2:360 3:632 4:666 5:384 6:184 7:48 8:12 9:24 12:2
+n=4 square-coherent      classes=24  all 16777216: 0:95744 1:1121280 2:4090368 3:6162432 4:4090368 5:1121280 6:95744
+                                    acyclic 12992480: 1:428520 2:2661528 3:5018664 4:3719208 5:1071120 6:93440

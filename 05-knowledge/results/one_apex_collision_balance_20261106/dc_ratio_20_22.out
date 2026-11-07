@@ -1,0 +1,2 @@
+n=20 m=8 C=256 P=2048: E_n/|X| = 3.2424 ; check |X|+T3+T4 = 1699928 vs E_n = 1699928 ; T3/|X| = 0.0668 ; T4/|X| = 2.1755 (converse pairs 0.4961) ; T4_model/|X| = 1.1873 ; R_n = T4/T4_model = 1.8323 ; R*_n = (T4 - converse)/T4_model = 1.4145  [9.9s]
+n=22 m=9 C=512 P=4096: E_n/|X| = 3.2607 ; check |X|+T3+T4 = 6838220 vs E_n = 6838220 ; T3/|X| = 0.0383 ; T4/|X| = 2.2224 (converse pairs 0.4980) ; T4_model/|X| = 1.2049 ; R_n = T4/T4_model = 1.8444 ; R*_n = (T4 - converse)/T4_model = 1.4311  [72.1s]

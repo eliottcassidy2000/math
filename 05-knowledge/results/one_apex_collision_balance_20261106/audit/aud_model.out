@@ -1,0 +1,34 @@
+(1) max |convolution - closed form| on a grid of [1/4,1): 0.0
+(1) int f = 1.0 ; int f^2 = 1.8192902220817500986 ; 24 - 32 ln 2 = 1.8192902220817500986
+(2) E^Y/|Y| = 2 + 8 int mu^2 = 2.90964511104088 ; 14 - 16 ln 2 = 2.90964511104088 ; non-converse 8 int mu^2 = 0.909645111040875 ; 12 - 16 ln 2 = 0.909645111040875
+(2) smoothed slope: each nonzero even offset d contributes 2|Y| * int 4 mu(t)^2 dt per |Y| (offsets +-2..+-K: K of them) -> 8 int mu^2 = 0.909645111040875
+(3) values/|Y| = 0.403426409720027 ; 3/4 - ln2/2 = 0.403426409720027
+(4) q= 1 (mult  2): closed 0.32182645834  direct 0.32182645834
+(4) q= 2 (mult  4): closed 0.0685520300226  direct 0.0685520300226
+(4) q= 3 (mult  6): closed 0.0113330252327  direct 0.0113330252327
+(4) q= 4 (mult  8): closed 0.00152412596987  direct 0.00152412596987
+(4) q= 5 (mult 10): closed 0.00017240272958  direct 0.00017240272958
+(4) q= 6 (mult 12): closed 1.68100797252e-5  direct 1.68100797252e-5
+(4) q= 7 (mult 14): closed 1.4394473001e-6  direct 1.4394473001e-6
+(4) q= 8 (mult 16): closed 1.09839740589e-7  direct 1.09839740589e-7
+(4) q= 9 (mult 18): closed 7.55689605862e-9  direct 7.55689605862e-9
+(4) q=10 (mult 20): closed 4.73269132501e-10  direct 4.73269132501e-10
+(4) q=11 (mult 22): closed 2.71968706539e-11  direct 2.71968706539e-11
+(4) q=12 (mult 24): closed 1.44379177292e-12  direct 1.44379177292e-12
+(4) energy from the histogram sum_q (2q)^2 frac_q = 2.90964511099 (should be 14 - 16 ln 2 = 2.90964511104)
+(5) cross-layer per |X_n| = 4 * int_{1/4}^{1/2} 4 mu(t) mu(2t) dt = 0.317766166719344 ; 12 ln 2 - 8 = 0.317766166719344
+(5) E/|X| = (14 - 16 ln 2) + (12 ln 2 - 8) = 3.22741127776022 ; 6 - 4 ln 2 = 3.22741127776022
+(5) note: 4 - 4 ln 2 - (12 - 16 ln 2) = 0.317766166719344
+(6) |Y| = 2^24: expected number of values with multiplicity 12 = 282.026
+(6) |Y| = 2^24: expected number of values with multiplicity 14 = 24.1499
+(6) |Y| = 2^24: expected number of values with multiplicity 16 = 1.84281
+(6) |Y| = 2^24: expected number of values with multiplicity 18 = 0.126784
+(6) |Y| = 2^24: expected number of values with multiplicity 20 = 0.00794014
+(6) expected number with multiplicity >= 18 = 0.135204 ; P(max >= 18) = 1 - exp(-that) = 0.126463
+(6) expected number with multiplicity >= 16 = 1.97801 ; P(max >= 16) = 0.861656
+(6) n=22 (|Y| = 2^20): P(max multiplicity >= 18) = 0.008415
+(6) n=24 (|Y| = 2^22): P(max multiplicity >= 18) = 0.03324
+(6) observed at n = 26: 356, 30, 3, 1 values of multiplicity 12, 14, 16, 18; ratios to model: 1.26, 1.24, 1.63, 7.89
+(6) |Y| = 2^26 (n = 28): model counts at multiplicity 12, 14, 16, 18 = 1128.1, 96.6, 7.3712, 0.50713; >= 18: 0.5408; >= 20: 0.03368
+(6) observed at n = 28 (audit run): 1306, 130, 10, 0 values of multiplicity 12, 14, 16, 18; ratios to model: 1.16, 1.35, 1.36, 0.00
+(7) model Monte Carlo n = 26, 100 replicates: P(max >= 18) = 0.120, P(max >= 20) = 0.000; mean counts at 12,14,16,18 = 281.46, 24.87, 1.80, 0.12

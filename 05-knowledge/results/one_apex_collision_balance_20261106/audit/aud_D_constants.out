@@ -1,0 +1,10 @@
+n=12 m=4 C=16 P=128 B=8 bracket=63.2707 total=80.2707
+n=13 m=4 C=16 P=256 B=16 bracket=75.7184 total=108.7184
+n=14 m=5 C=32 P=256 B=8 bracket=60.9820 total=77.9820
+n=15 m=5 C=32 P=512 B=16 bracket=71.3647 total=104.3647
+n=16 m=6 C=64 P=512 B=8 bracket=59.8376 total=76.8376
+n=17 m=6 C=64 P=1024 B=16 bracket=69.1879 total=102.1879
+n=18 m=7 C=128 P=1024 B=8 bracket=59.2655 total=76.2655
+n=19 m=7 C=128 P=2048 B=16 bracket=68.0995 total=101.0995
+max bracket over n = 12..80: 75.7184 at n = 13 (claimed <= 76); max total 108.7184 (claimed <= 109)
+per-pair strip bound (C/beta+1)(2 beta C/h'+3) <= 2C^2/P + 3C/beta + 5 for beta <= B, h' >= P: True

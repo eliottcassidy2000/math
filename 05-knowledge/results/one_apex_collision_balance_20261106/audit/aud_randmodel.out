@@ -1,0 +1,113 @@
+n=12 m=4 C=16 P=128 B=8 |X_n|=PC=2048
+  identity g = g(h)+hc+(g(l)-1)+[h odd][l<2^(m-1)] violations 0; 0<=g(l)-1<=C-1 violations 0
+  type 2 minimum separation P-C (must be >0): 112
+  type 3 (h!=h', l=l') count 988 = 0.4824 PC   (bound 2P^2 = 16.0 PC)
+  type 4 expectation (random F) 896.0 = 0.4375 PC   (bound 76 PC)
+  strip total sum Z(h,h') (W = C) 40834; /C = 1.2462 PC
+  empirical-law model (F i.i.d. with the law of g(l)-1 on [0,C)): type 4 expectation = 0.8828 PC; DC / uniform-model = 3.308; DC / empirical-model = 1.639
+  random-model expected energy E_F = PC + type3 + type4 = 1.9199 |X_n|   (claimed bound 109 |X_n|)
+  deterministic: DC count 2964 = 1.4473 PC; PC + type3 + DC = 2.9297 |X_n|; sorted energy E_n = 2.9297 |X_n| (match yes)
+  Monte Carlo seed 1: energy of g_F = 1.7783 |X_n|
+  Monte Carlo seed 2: energy of g_F = 1.9658 |X_n|
+  Monte Carlo seed 3: energy of g_F = 1.8975 |X_n|
+n=13 m=4 C=16 P=256 B=16 |X_n|=PC=4096
+  identity g = g(h)+hc+(g(l)-1)+[h odd][l<2^(m-1)] violations 0; 0<=g(l)-1<=C-1 violations 0
+  type 2 minimum separation P-C (must be >0): 240
+  type 3 (h!=h', l=l') count 2240 = 0.5469 PC   (bound 2P^2 = 32.0 PC)
+  type 4 expectation (random F) 1815.9 = 0.4433 PC   (bound 76 PC)
+  strip total sum Z(h,h') (W = C) 83126; /C = 1.2684 PC
+  empirical-law model (F i.i.d. with the law of g(l)-1 on [0,C)): type 4 expectation = 0.8967 PC; DC / uniform-model = 3.335; DC / empirical-model = 1.649
+  random-model expected energy E_F = PC + type3 + type4 = 1.9902 |X_n|   (claimed bound 109 |X_n|)
+  deterministic: DC count 6056 = 1.4785 PC; PC + type3 + DC = 3.0254 |X_n|; sorted energy E_n = 3.0254 |X_n| (match yes)
+  Monte Carlo seed 1: energy of g_F = 1.9590 |X_n|
+  Monte Carlo seed 2: energy of g_F = 2.0034 |X_n|
+  Monte Carlo seed 3: energy of g_F = 1.9775 |X_n|
+n=14 m=5 C=32 P=256 B=8 |X_n|=PC=8192
+  identity g = g(h)+hc+(g(l)-1)+[h odd][l<2^(m-1)] violations 0; 0<=g(l)-1<=C-1 violations 0
+  type 2 minimum separation P-C (must be >0): 224
+  type 3 (h!=h', l=l') count 2578 = 0.3147 PC   (bound 2P^2 = 16.0 PC)
+  type 4 expectation (random F) 4141.0 = 0.5055 PC   (bound 76 PC)
+  strip total sum Z(h,h') (W = C) 323470; /C = 1.2339 PC
+  empirical-law model (F i.i.d. with the law of g(l)-1 on [0,C)): type 4 expectation = 1.0187 PC; DC / uniform-model = 3.447; DC / empirical-model = 1.710
+  random-model expected energy E_F = PC + type3 + type4 = 1.8202 |X_n|   (claimed bound 109 |X_n|)
+  deterministic: DC count 14274 = 1.7424 PC; PC + type3 + DC = 3.0571 |X_n|; sorted energy E_n = 3.0571 |X_n| (match yes)
+  Monte Carlo seed 1: energy of g_F = 1.8833 |X_n|
+  Monte Carlo seed 2: energy of g_F = 1.8579 |X_n|
+  Monte Carlo seed 3: energy of g_F = 1.8616 |X_n|
+n=15 m=5 C=32 P=512 B=16 |X_n|=PC=16384
+  identity g = g(h)+hc+(g(l)-1)+[h odd][l<2^(m-1)] violations 0; 0<=g(l)-1<=C-1 violations 0
+  type 2 minimum separation P-C (must be >0): 480
+  type 3 (h!=h', l=l') count 5678 = 0.3466 PC   (bound 2P^2 = 32.0 PC)
+  type 4 expectation (random F) 8325.5 = 0.5081 PC   (bound 76 PC)
+  strip total sum Z(h,h') (W = C) 653542; /C = 1.2465 PC
+  empirical-law model (F i.i.d. with the law of g(l)-1 on [0,C)): type 4 expectation = 1.0275 PC; DC / uniform-model = 3.534; DC / empirical-model = 1.748
+  random-model expected energy E_F = PC + type3 + type4 = 1.8547 |X_n|   (claimed bound 109 |X_n|)
+  deterministic: DC count 29422 = 1.7958 PC; PC + type3 + DC = 3.1423 |X_n|; sorted energy E_n = 3.1423 |X_n| (match yes)
+  Monte Carlo seed 1: energy of g_F = 1.8290 |X_n|
+  Monte Carlo seed 2: energy of g_F = 1.8411 |X_n|
+  Monte Carlo seed 3: energy of g_F = 1.8683 |X_n|
+n=16 m=6 C=64 P=512 B=8 |X_n|=PC=32768
+  identity g = g(h)+hc+(g(l)-1)+[h odd][l<2^(m-1)] violations 0; 0<=g(l)-1<=C-1 violations 0
+  type 2 minimum separation P-C (must be >0): 448
+  type 3 (h!=h', l=l') count 6336 = 0.1934 PC   (bound 2P^2 = 16.0 PC)
+  type 4 expectation (random F) 17999.9 = 0.5493 PC   (bound 76 PC)
+  strip total sum Z(h,h') (W = C) 2581794; /C = 1.2311 PC
+  empirical-law model (F i.i.d. with the law of g(l)-1 on [0,C)): type 4 expectation = 1.1052 PC; DC / uniform-model = 3.631; DC / empirical-model = 1.805
+  random-model expected energy E_F = PC + type3 + type4 = 1.7427 |X_n|   (claimed bound 109 |X_n|)
+  deterministic: DC count 65360 = 1.9946 PC; PC + type3 + DC = 3.1880 |X_n|; sorted energy E_n = 3.1880 |X_n| (match yes)
+  Monte Carlo seed 1: energy of g_F = 1.7339 |X_n|
+  Monte Carlo seed 2: energy of g_F = 1.7390 |X_n|
+  Monte Carlo seed 3: energy of g_F = 1.7333 |X_n|
+n=17 m=6 C=64 P=1024 B=16 |X_n|=PC=65536
+  identity g = g(h)+hc+(g(l)-1)+[h odd][l<2^(m-1)] violations 0; 0<=g(l)-1<=C-1 violations 0
+  type 2 minimum separation P-C (must be >0): 960
+  type 3 (h!=h', l=l') count 13738 = 0.2096 PC   (bound 2P^2 = 32.0 PC)
+  type 4 expectation (random F) 36094.6 = 0.5508 PC   (bound 76 PC)
+  strip total sum Z(h,h') (W = C) 5190970; /C = 1.2376 PC
+  empirical-law model (F i.i.d. with the law of g(l)-1 on [0,C)): type 4 expectation = 1.1090 PC; DC / uniform-model = 3.630; DC / empirical-model = 1.802
+  random-model expected energy E_F = PC + type3 + type4 = 1.7604 |X_n|   (claimed bound 109 |X_n|)
+  deterministic: DC count 131006 = 1.9990 PC; PC + type3 + DC = 3.2086 |X_n|; sorted energy E_n = 3.2086 |X_n| (match yes)
+  Monte Carlo seed 1: energy of g_F = 1.7439 |X_n|
+  Monte Carlo seed 2: energy of g_F = 1.7450 |X_n|
+  Monte Carlo seed 3: energy of g_F = 1.7831 |X_n|
+n=18 m=7 C=128 P=1024 B=8 |X_n|=PC=131072
+  identity g = g(h)+hc+(g(l)-1)+[h odd][l<2^(m-1)] violations 0; 0<=g(l)-1<=C-1 violations 0
+  type 2 minimum separation P-C (must be >0): 896
+  type 3 (h!=h', l=l') count 15038 = 0.1147 PC   (bound 2P^2 = 16.0 PC)
+  type 4 expectation (random F) 75532.6 = 0.5763 PC   (bound 76 PC)
+  strip total sum Z(h,h') (W = C) 20623260; /C = 1.2292 PC
+  empirical-law model (F i.i.d. with the law of g(l)-1 on [0,C)): type 4 expectation = 1.1568 PC; DC / uniform-model = 3.663; DC / empirical-model = 1.825
+  random-model expected energy E_F = PC + type3 + type4 = 1.6910 |X_n|   (claimed bound 109 |X_n|)
+  deterministic: DC count 276698 = 2.1110 PC; PC + type3 + DC = 3.2258 |X_n|; sorted energy E_n = 3.2258 |X_n| (match yes)
+  Monte Carlo seed 1: energy of g_F = 1.6760 |X_n|
+  Monte Carlo seed 2: energy of g_F = 1.6772 |X_n|
+  Monte Carlo seed 3: energy of g_F = 1.6838 |X_n|
+n=19 m=7 C=128 P=2048 B=16 |X_n|=PC=262144
+  identity g = g(h)+hc+(g(l)-1)+[h odd][l<2^(m-1)] violations 0; 0<=g(l)-1<=C-1 violations 0
+  type 2 minimum separation P-C (must be >0): 1920
+  type 3 (h!=h', l=l') count 32446 = 0.1238 PC   (bound 2P^2 = 32.0 PC)
+  type 4 expectation (random F) 151226.8 = 0.5769 PC   (bound 76 PC)
+  strip total sum Z(h,h') (W = C) 41348760; /C = 1.2323 PC
+  empirical-law model (F i.i.d. with the law of g(l)-1 on [0,C)): type 4 expectation = 1.1587 PC; DC / uniform-model = 3.662; DC / empirical-model = 1.823
+  random-model expected energy E_F = PC + type3 + type4 = 1.7007 |X_n|   (claimed bound 109 |X_n|)
+  deterministic: DC count 553798 = 2.1126 PC; PC + type3 + DC = 3.2363 |X_n|; sorted energy E_n = 3.2363 |X_n| (match yes)
+  Monte Carlo seed 1: energy of g_F = 1.7107 |X_n|
+n=20 m=8 C=256 P=2048 B=8 |X_n|=PC=524288
+  identity g = g(h)+hc+(g(l)-1)+[h odd][l<2^(m-1)] violations 0; 0<=g(l)-1<=C-1 violations 0
+  type 2 minimum separation P-C (must be >0): 1792
+  type 3 (h!=h', l=l') count 35038 = 0.0668 PC   (bound 2P^2 = 16.0 PC)
+  type 4 expectation (random F) 310531.7 = 0.5923 PC   (bound 76 PC)
+  strip total sum Z(h,h') (W = C) 164853632; /C = 1.2283 PC
+  empirical-law model (F i.i.d. with the law of g(l)-1 on [0,C)): type 4 expectation = 1.1873 PC; DC / uniform-model = 3.673; DC / empirical-model = 1.832
+  random-model expected energy E_F = PC + type3 + type4 = 1.6591 |X_n|   (claimed bound 109 |X_n|)
+  deterministic: DC count 1140602 = 2.1755 PC; PC + type3 + DC = 3.2424 |X_n|; sorted energy E_n = 3.2424 |X_n| (match yes)
+  Monte Carlo seed 1: energy of g_F = 1.6603 |X_n|
+n=22 m=9 C=512 P=4096 B=8 |X_n|=PC=2097152
+  identity g = g(h)+hc+(g(l)-1)+[h odd][l<2^(m-1)] violations 0; 0<=g(l)-1<=C-1 violations 0
+  type 2 minimum separation P-C (must be >0): 3584
+  type 3 (h!=h', l=l') count 80352 = 0.0383 PC   (bound 2P^2 = 16.0 PC)
+  type 4 expectation (random F) 1261759.5 = 0.6017 PC   (bound 76 PC)
+  strip total sum Z(h,h') (W = C) 1318413100; /C = 1.2279 PC
+  empirical-law model (F i.i.d. with the law of g(l)-1 on [0,C)): type 4 expectation = 1.2049 PC; DC / uniform-model = 3.694; DC / empirical-model = 1.844
+  random-model expected energy E_F = PC + type3 + type4 = 1.6400 |X_n|   (claimed bound 109 |X_n|)
+  deterministic: DC count 4660716 = 2.2224 PC; PC + type3 + DC = 3.2607 |X_n|; sorted energy E_n = 3.2607 |X_n| (match yes)

@@ -102,11 +102,13 @@ def main():
         tab = table_from_bits(5, 'L2', bits)
         ns, ac, sq, hx, sinks = check(5, 'L2', tab)
         res['n5_L2_%d' % k] = {'sinks': ns, 'acyclic': ac, 'square_coherent': sq, 'hexagon_coherent': hx,
-                               'sink_list': [''.join(map(str, s)) for s in sinks]}
+                               'sink_list': [''.join(map(str, s)) for s in sinks],
+                               'table': {'%d%d|%s' % (a, b, ''.join(map(str, ctx))): f for (a, b, ctx), f in sorted(tab.items())}}
     for name, r in res.items():
         print(name, {k: v for k, v in r.items() if k not in ('table', 'sink_list')}, 'sinks:', ' '.join(r['sink_list']))
-    print('table n4_L2_7 (pair|order of others -> first element):', json.dumps(res['n4_L2_7']['table']))
-    print('table n5_L1_7 (pair|{set before} -> first element):', json.dumps(res['n5_L1_7']['table']))
+    for name in ('n4_L2_7', 'n5_L1_7', 'n5_L1_21', 'n5_L2_7', 'n5_L2_21'):
+        kind = 'pair|order of others' if '_L2_' in name else 'pair|{set before}'
+        print('table %s (%s -> first element):' % (name, kind), json.dumps(res[name]['table']))
 
 
 if __name__ == '__main__':

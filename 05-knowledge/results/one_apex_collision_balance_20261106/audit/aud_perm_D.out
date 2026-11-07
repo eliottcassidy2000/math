@@ -1,0 +1,2 @@
+n=6 square-coherent, >= 90 sinks (Glucose4, seqcounter): SAT [33.6s]; independent check: sinks 90, square-coherent True, hexagon-coherent False, acyclic True
+n=6 square-coherent, >= 90 sinks and acyclic: SAT after 1 CEGAR rounds [35.6s]; check: sinks 90, acyclic True, square-coherent True

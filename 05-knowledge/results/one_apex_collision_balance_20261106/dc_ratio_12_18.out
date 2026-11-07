@@ -1,0 +1,4 @@
+n=12 m=4 C=16 P=128: E_n/|X| = 2.9297 ; check |X|+T3+T4 = 6000 vs E_n = 6000 ; T3/|X| = 0.4824 ; T4/|X| = 1.4473 (converse pairs 0.4375) ; T4_model/|X| = 0.8828 ; R_n = T4/T4_model = 1.6394 ; R*_n = (T4 - converse)/T4_model = 1.1438  [0.0s]
+n=14 m=5 C=32 P=256: E_n/|X| = 3.0571 ; check |X|+T3+T4 = 25044 vs E_n = 25044 ; T3/|X| = 0.3147 ; T4/|X| = 1.7424 (converse pairs 0.4688) ; T4_model/|X| = 1.0187 ; R_n = T4/T4_model = 1.7104 ; R*_n = (T4 - converse)/T4_model = 1.2503  [0.0s]
+n=16 m=6 C=64 P=512: E_n/|X| = 3.1880 ; check |X|+T3+T4 = 104464 vs E_n = 104464 ; T3/|X| = 0.1934 ; T4/|X| = 1.9946 (converse pairs 0.4844) ; T4_model/|X| = 1.1052 ; R_n = T4/T4_model = 1.8047 ; R*_n = (T4 - converse)/T4_model = 1.3665  [0.2s]
+n=18 m=7 C=128 P=1024: E_n/|X| = 3.2258 ; check |X|+T3+T4 = 422808 vs E_n = 422808 ; T3/|X| = 0.1147 ; T4/|X| = 2.1110 (converse pairs 0.4922) ; T4_model/|X| = 1.1568 ; R_n = T4/T4_model = 1.8250 ; R*_n = (T4 - converse)/T4_model = 1.3995  [1.4s]

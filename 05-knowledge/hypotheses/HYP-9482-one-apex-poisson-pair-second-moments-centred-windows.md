@@ -1,7 +1,7 @@
 ---
 id: HYP-9482
 title: "One-apex collisions on reduced words: Poisson-pair second moments (energy 14 - 16 ln 2 up to a small positive excess, multiplicity law, smoothed slope 12 - 16 ln 2, cross-layer energy 4 - 4 ln 2 - (12 - 16 ln 2)), centred collision windows with |a - s| <= 1 + carry depth, and a halving level law"
-status: "PRE-REGISTERED in 21b02648ec; outcomes at n = 22, 24, 26: P1-P5 and P8 CONFIRMED; P6 split - (a) CONFIRMED, (b) REFUTED at the boundary level a = n/2 - 3 (ratio 0.370-0.380; the n = 20 in-sample data already showed 0.372 there, MISTAKE-728), holds for 3 <= a <= n/2 - 4; P7 REFUTED (maximum multiplicity 18 at n = 26; the model itself expects 0.13 such values, the tail is about 25 percent heavier than Poisson-pair). Energy excess over 14 - 16 ln 2 decreasing: 0.032, 0.025, 0.020"
+status: "PRE-REGISTERED in 21b02648ec (P1-P8) and 25fde96277 (P9-P11). Outcomes: P1-P5, P6(a), P8 and P9-P11 CONFIRMED; P6(b) REFUTED at the boundary level a = n/2 - 3 (ratios 0.373-0.380; the committed in-sample data already showed 0.37-0.38 there, MISTAKE-728), holds for 3 <= a <= n/2 - 4; P7 REFUTED (maximum multiplicity 18 at n = 26, model expectation 0.13 such values; upper tail 15-35 percent heavier than Poisson-pair). P5 is now a theorem (THM-4890 (C), the audit's U1). E/|X| (P1, P8) is not independent of HYP-9479's earlier published values. Energy excess over 14 - 16 ln 2: 0.032, 0.025, 0.020, 0.015 at n = 22..28. Audit PASS WITH CORRECTIONS"
 session: opus-2026-11-06-S84
 date: 2026-11-06
 related: [THM-4890, THM-4887, THM-4886, HYP-9479, HYP-9480, HYP-2199, THM-4885]
@@ -31,7 +31,9 @@ HYP-9480 (A) (kind-pasteur-2026-11-06-S13) records the Poisson law for the one-a
 are a Poisson process, kappa = 1/2. This gives density 1/2 of the image among odd integers; HYP-2199 observed that
 density earlier.
 
-This hypothesis applies the same model to second moments. The limit law of g(v)/2^n on Y_n is XY, with X and Y
+This hypothesis applies the same model to second moments. The limit law of g(v)/2^n on Y_n is XY (PROVED: Session 16,
+`feedback_word_hamilton_spectrum_20261020/BINARY_PRODUCT_DENSITY.md` section 3; only the Poisson clustering of converse
+classes at the unit scale is heuristic), with X and Y
 independent and uniform on [1/2, 1). Converse classes form a Poisson process of mean mu(t) = f_Y(t)/4 per odd value,
 where f_Y(t) = 4 ln(4t) on [1/4, 1/2] and 4 ln(1/t) on [1/2, 1]. The model predicts:
 - E^Y_n/|Y_n| -> 14 - 16 ln 2 = 2.90965; the non-converse part is 12 - 16 ln 2 = 0.90965;
@@ -46,6 +48,8 @@ The energy runs above it: E^Y_20/|Y_20| = 2.93166, an excess of 0.022 that was s
 ## Pre-registered predictions for n = 22, 24, 26 (none of these Y_n computed before this commit)
 
 - **P1 (energy band).** 2.925 <= E^Y_n/|Y_n| <= 2.990, and |E^Y_(n+2) - E^Y_n|/|Y| <= 0.02 for n = 22, 24.
+  - Audit note: the increment condition is evaluated as |E^Y_(n+2)/|Y_(n+2)| - E^Y_n/|Y_n||, since the two |Y| differ
+    by a factor of 4.
 - **P2 (multiplicity law).** Values with exactly 2q preimages, per |Y_n|, lie in:
   - q = 1: [0.312, 0.326];
   - q = 2: [0.0655, 0.0715];
@@ -82,7 +86,8 @@ The program was run once, for n = 21..26. Odd n were not registered; they are re
 | model | 2.90965 | 0.90965 | 0.40343 | 0.32183 | 0.06855 | 0.01133 | 0.00152 | 0.90965 | 0.90965 | - | 0.31777 | 3.22741 |
 
 - **P1 CONFIRMED.** All three values lie in [2.925, 2.990], and the increments are -0.0072 and -0.0052.
-  - E^Y/|Y| peaked at n = 21-22 (2.9418, 2.9420) and has decreased since: 2.9328, 2.9349, 2.9303, 2.9296 for
+  - E^Y/|Y| peaked at n = 21-22 (2.9418, 2.9420) and has decreased since, with an odd/even oscillation: 2.9328, 2.9349,
+    2.9303, 2.9296 for
     n = 23..26.
   - The excess over 14 - 16 ln 2 is 0.032, 0.025, 0.020 at n = 22, 24, 26.
   - The data are consistent with the excess vanishing, which would make the energy constant exactly the Poisson-pair
@@ -90,18 +95,23 @@ The program was run once, for n = 21..26. Odd n were not registered; they are re
 - **P2 CONFIRMED.** All twelve fractions are inside their bands.
 - **P3 CONFIRMED.** values/|Y| = 0.40126, 0.40143, 0.40194, against the model's 0.40343.
 - **P4 CONFIRMED.** Slopes are 0.903-0.909 at K = 8 and K = 16, approaching 12 - 16 ln 2 = 0.90965.
-- **P5 CONFIRMED.** |a - s| <= 1 + max(dX, dXi) had no violations at n = 21..26. The proved form of THM-4890 (C)
-  also had no violations (code check).
+- **P5 CONFIRMED, and PROVED for all n.**
+  - No violations at n = 21..26.
+  - The audit's sharp lemma (THM-4890 (C), U1) gives |a - s| <= 1 + |dX - dXi| for every collision pair.
+  - The weaker form tested by `s84_energy.py` (a <= 4 + dXi, s <= 4 + dX) differs from the session's first version of
+    THM-4890 (C) (3 + dXi, 3 + dX). Both are now superseded.
 - **P6 split.**
   - (a) CONFIRMED: the levels 1..6 are within 3.7 % of the n = 20 values at every registered n.
   - (b) REFUTED at the boundary level a = n/2 - 3. The ratios L_(a+1)/L_a are:
     - n = 22, a = 3..8: 0.548, 0.524, 0.517, 0.507, 0.452, 0.380;
-    - n = 24, a = 3..9: 0.540, 0.531, 0.518, 0.506, 0.501, 0.465, 0.376;
-    - n = 26, a = 3..10: 0.542, 0.525, 0.515, 0.514, 0.505, 0.497, 0.467, 0.370.
+    - n = 24, a = 3..9: 0.540, 0.531, 0.518, 0.506, 0.501, 0.464, 0.375;
+    - n = 26, a = 3..10: 0.542, 0.525, 0.515, 0.514, 0.505, 0.498, 0.467, 0.373.
+    - These ratios are from exact counts, per the audit's MINOR-5; earlier text used rounded levels.
   - The halving law holds in [0.45, 0.60] for 3 <= a <= n/2 - 4. The last ratio is a boundary effect: windows of width
     w = n - 2a <= 6.
   - The registered range was wrong from the start. The n = 20 in-sample ratio at a = n/2 - 3 = 7 was already
-    0.00401/0.01077 = 0.372, so the range should have stopped at n/2 - 4 (MISTAKE-728).
+    1052/2822 = 0.373 (0.370, 0.383, 0.373 at n = 16, 18, 20), so the range should have stopped at n/2 - 4
+    (MISTAKE-728).
 - **P7 REFUTED.** The maximum multiplicity is 18 at n = 26, from one value, so the bound of 16 fails. The bound was set
   by eye and not from the model's tail.
   - The model expects 0.13 values of multiplicity 18, 1.84 of 16, 24.2 of 14 and 282 of 12 at |Y| = 2^24. The observed
@@ -111,9 +121,16 @@ The program was run once, for n = 21..26. Odd n were not registered; they are re
 - **P8 CONFIRMED.** The cross-layer energy is 0.32402, 0.32264, 0.32149 per |X|, against 4 - 4 ln 2 - (12 - 16 ln 2) =
   0.31777.
 
-**Reading.** The one-apex collision statistics are Poisson-pair statistics to within 2 % at n = 26 (HYP-9480 (A) at
-first order; this hypothesis at second order). The upper tail and the energy are slightly over-dispersed, and the
-excess is shrinking. Linear energy remains OPEN.
+**Reading.** The one-apex collision statistics match the Poisson-pair model (heuristic) to about 2 % at second order:
+HYP-9480 (A) gives the first order, and this hypothesis the second. The upper tail is 15-35 % heavier at
+multiplicities 12-16, and the energy has a small, shrinking excess. Linear energy remains OPEN.
+
+**Audit.** `05-knowledge/results/one_apex_collision_balance_20261106/audit/AUDIT.md`: PASS WITH CORRECTIONS.
+- Every registered quantity for n = 22..28 was recomputed independently in C and matches.
+- The model constants were verified with mpmath.
+- The pre-registration order was checked against git.
+- Corrections applied: credit to Session 16 for the XY law; disclosure that E/|X| reproduces HYP-9479; exact ratios;
+  P1 and P5 wording; the "Reading" wording.
 
 ## Addendum pre-registration P9-P11 (n = 28; committed before the n = 28 run)
 
@@ -125,3 +142,17 @@ the tail bound uses the model's own prediction.
 - **P11.** The maximum multiplicity at n = 28 is at most 22. The Poisson-pair model expects 0.54 values of
   multiplicity >= 18 and 0.034 of multiplicity >= 20 at |Y| = 2^26. Allowing the observed 25 % tail inflation, the
   chance of exceeding 22 is far below 1 %.
+
+### Outcomes P9-P11 (n = 28, run after the addendum commit 25fde96277; `outofsample_28.out`)
+
+- **P9 CONFIRMED.** E^Y_28/|Y_28| = 2.92480. The excess over 14 - 16 ln 2 is 0.01515, inside [0.008, 0.020) and below
+  the n = 26 value. The excess sequence 0.0324, 0.0252, 0.0200, 0.0152 (n = 22..28) shrinks by a factor of about 0.78
+  per two levels. This is consistent with E^Y/|Y| -> 14 - 16 ln 2 exactly (conjecture, OPEN).
+- **P10 CONFIRMED.** values/|Y| = 0.40227. The q = 1..4 fractions are 0.319909, 0.068779, 0.011634 and 0.001614, all
+  inside the P2 bands.
+- **P11 CONFIRMED.** The maximum multiplicity is 16. The model expects 0.54 values of multiplicity >= 18; none occurred.
+- **Also reported, not registered.**
+  - Sharp centred-window form: 0 violations.
+  - Smoothed slopes: 0.90936 (K = 8) and 0.90875 (K = 16), against 0.90965.
+  - E_28/|X_28| = 3.24734. Its excess over 6 - 4 ln 2 runs 0.033, 0.030, 0.025, 0.020 for n = 22..28.
+  - Cross layers: 0.32049.

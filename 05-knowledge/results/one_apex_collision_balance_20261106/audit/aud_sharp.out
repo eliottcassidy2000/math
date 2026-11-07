@@ -1,0 +1,7 @@
+(L0) exact local formula, all w-bit strings, w <= 16: 131070 strings, violations 0
+(L0) fast vs direct double-sum R, w <= 12: mismatches 0
+(L0) bounds 0 <= L(x) <= #10(x) for x = 1..1 and -1 < L(x') <= #10(x') for x' = 0..0, w <= 14: violations 0
+(L1) max g(odd x' < 2^(w-1)) <= 2^(w-2) and min g(even x >= 2^(w-1)) >= 1 + 2^(w-2), w = 2..22: violations 0
+(L2) random configurations x = 1..1, x' = 0..0 (w >= 2): 300000 tested (A >= S+2: 125989, S >= A+2: 126121); identity violations 0; bound violations 0; sign-rule violations 0
+(L3) w = 1: collision <=> ceil(h/2) = ceil(tau/2), and then |a - s| <= 1: 200000 random cases, violations 0
+(all pairs) every collision pair of Y_n, n = 4..20 (converse included): 1007162 pairs, failures of any step 0; distribution of A - S: {-1: 98614, 0: 856593, 1: 51955}

@@ -1,0 +1,13 @@
+n=5 square-coherent (Glucose4, seqcounter, edge variables): achievable {0..25}; not achievable {26..60} [1.8s]
+n=5 hexagon-coherent (Glucose4, seqcounter, edge variables): achievable {0..54, 56, 60}; not achievable {55, 57..59} [1.1s]
+n=5 square-coherent (Minisat22, kmtotalizer) decisive cases: {7: True, 21: True, 25: True, 26: False}
+n=5 hexagon-coherent (Minisat22, kmtotalizer) decisive cases: {7: True, 21: True, 54: True, 55: False, 56: True, 57: False, 58: False, 59: False, 60: True}
+n=5 square-coherent acyclic witness k=7: SAT=True after 1 CEGAR rounds [0.0s]; independent check: sinks 7, acyclic True, square-coherent True, hexagon-coherent False; sinks 30241 30412 31024 31240 42310 43012 43120
+n=5 square-coherent acyclic witness k=21: SAT=True after 1 CEGAR rounds [0.0s]; independent check: sinks 21, acyclic True, square-coherent True, hexagon-coherent False; sinks 01243 01324 01432 12043 12304 12430 13024 20143 20431 23041 23104 23410 30124 30241 34021 34210 40321 41032 41320 42031 42310
+n=5 hexagon-coherent acyclic witness k=7: SAT=True after 2 CEGAR rounds [0.0s]; independent check: sinks 7, acyclic True, square-coherent False, hexagon-coherent True; sinks 01423 02134 03142 04231 43012 43120 43201
+n=5 hexagon-coherent acyclic witness k=21: SAT=True after 7 CEGAR rounds [0.0s]; independent check: sinks 21, acyclic True, square-coherent False, hexagon-coherent True; sinks 01432 02413 03142 03214 03421 04312 10342 12043 13204 14203 21403 24310 32041 32104 41023 41230 42031 42103 43012 43120 43201
+session table n=4 (hex): sinks 7 [0123 0231 0312 1032 1203 3102 3210], acyclic True, square-coherent False, hexagon-coherent True
+session table n=5 (sq): sinks 7 [02413 03214 21430 31420 32014 32140 32401], acyclic True, square-coherent True, hexagon-coherent False
+session sink set n5_L2_7 (7 words): realisable exactly by an acyclic hex orientation: True (check: sinks 7 equal to the set True, acyclic True, coherent True)
+session sink set n5_L1_21 (21 words): realisable exactly by an acyclic sq orientation: True (check: sinks 21 equal to the set True, acyclic True, coherent True)
+session sink set n5_L2_21 (21 words): realisable exactly by an acyclic hex orientation: True (check: sinks 21 equal to the set True, acyclic True, coherent True)
