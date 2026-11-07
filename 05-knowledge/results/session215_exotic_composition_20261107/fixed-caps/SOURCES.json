@@ -1,0 +1,53 @@
+{
+  "pinned_main": "0f8750677dd20b594a0e032a3b56aa23f58a950c",
+  "sources": [
+    {
+      "bytes": 8468,
+      "git_blob": "c23bcd153c2ce1fcb38368fc886ac1beaff6dbea",
+      "repository_path": "01-canon/theorems/THM-1975-the-path-cover-polynomial-is-the-refined-compositional-invariant.md",
+      "sha256": "bbdb66405e8be8e7e34559282c80cf32071b50d7d8533f324f4f78f250c34109"
+    },
+    {
+      "bytes": 9804,
+      "git_blob": "21c54c68fac2c18efcacd26331006824fe891cda",
+      "repository_path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "bytes": 11162,
+      "git_blob": "a13e73db48e7c89ec1943c9b55565363d2a848ec",
+      "repository_path": "01-canon/theorems/THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform.md",
+      "sha256": "532266c35af01e36dc64e0e9cad34f733917c10bd5440625fd05f65f01b55044"
+    },
+    {
+      "bytes": 13786,
+      "git_blob": "39d7d2e857bb6a158fe7717c0c14bf6360dfcbdb",
+      "repository_path": "01-canon/theorems/THM-3166-falling-factorial-order-join-path-colour-transform.md",
+      "sha256": "01abd5e2a0bb1fc617d3f2649534acfb7b05f00cc4fe7573deb18302997c9198"
+    },
+    {
+      "bytes": 14235,
+      "git_blob": "caf5a0022a407f7ea32175e7fbba5b439783fce0",
+      "repository_path": "01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md",
+      "sha256": "485f34b2186f3d7827c6c9ffc8305015b8f0fff66b0bd2ca76dceab08cdb3318"
+    },
+    {
+      "bytes": 12260,
+      "git_blob": "4ca49142608ab303da4ddb1b6c9905c9291ba594",
+      "repository_path": "01-canon/theorems/THM-3202-c3-repeated-join-moving-jet-formula-and-cfinite-obstruction.md",
+      "sha256": "448a2faad2424c84da0cb51b746d56c337f3f6fa15720165e6bc5a1a1fdfd4bc"
+    },
+    {
+      "bytes": 10583,
+      "git_blob": "c75703ad490f02fce596fe888f02ddee0b89c573",
+      "repository_path": "05-knowledge/results/session176_tournament_information_20261104/information/PROOF.md",
+      "sha256": "d7789a47f83831cff7a96baf1e045a4a5154231262e57ea53fa5a3144027b687"
+    },
+    {
+      "bytes": 8393,
+      "git_blob": "62c47c7f152031c013060a5165ac425080a2e030",
+      "repository_path": "05-knowledge/results/proof_principles_20261103/profiles/PROOF.md",
+      "sha256": "ffd05f8983bbf1227c94b07fa856c71f092c3452c5e5644d400014106c25441b"
+    }
+  ]
+}

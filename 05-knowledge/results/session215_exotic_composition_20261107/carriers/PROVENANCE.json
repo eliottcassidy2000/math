@@ -1,0 +1,25 @@
+{
+  "commit": "0f8750677dd20b594a0e032a3b56aa23f58a950c",
+  "sources": {
+    "inherited.py": {
+      "path": "05-knowledge/results/session214_chan_pak_combined_proof_20261107/paired-coverage/verify.py",
+      "git_blob": "eb07e3aa5cbe4f08d96e5e4f55ce75503800f1c6",
+      "sha256": "6f957916e0cb7af137741a8a9d1602635dcce1fad8cc98cd4736ac1765fd5c1f"
+    },
+    "ROOTED_CLOSURE.md": {
+      "path": "05-knowledge/results/session214_chan_pak_combined_proof_20261107/paired-coverage/dependencies/ROOTED_CLOSURE.md",
+      "git_blob": "4360809d176a820160e2d201c464bcba920d103f",
+      "sha256": "8e78951f9dd15decff0d23cfb3ebe64f358b3c9d4561b269b527a1e9aa902168"
+    },
+    "PAIRED_CARRIERS.md": {
+      "path": "05-knowledge/results/session214_chan_pak_combined_proof_20261107/paired-coverage/dependencies/PAIRED_CARRIERS.md",
+      "git_blob": "ec6f992a72efd909f0af5e05cbabaf26e6aa2563",
+      "sha256": "e54792c206d6945a11dda2c4e6ca1e8d20140bbf3aaec91081987753c4a16f38"
+    },
+    "BANK.txt": {
+      "path": "session194/weak-parent-certificate/inherited_tournaments_through8.txt",
+      "git_blob": "fef13d8bcde966521bd08eae65ecaafe6cf67a99",
+      "sha256": "5d5a5f625b4a85e04c0744aeb847ed36f59456f6a39996479aa82b9eb950afe3"
+    }
+  }
+}

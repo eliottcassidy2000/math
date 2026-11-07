@@ -1,0 +1,111 @@
+{
+  "checks": {
+    "all_labelled_orders": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "large_seed_cases": "mask12 order5, two copies order10, cap order up to4",
+    "permutation_vs_subset_profiles": 76,
+    "physical_H_compositions": 160,
+    "profile_recovery": 76,
+    "status": "PASS"
+  },
+  "hostiles": {
+    "TT1_and_TT2_same_H": 1,
+    "TT2_TT1_cap_beta": [
+      0,
+      -1,
+      3
+    ],
+    "no_empty_block": "All blocks nonempty; r >= 1. Recurrence may algebraically extend to r=0 but no empty C3 block is asserted.",
+    "singleton_cap_values": [
+      3,
+      5
+    ]
+  },
+  "inherited_same_order_hostile": {
+    "F": [
+      [
+        0,
+        15,
+        78,
+        198,
+        240,
+        120
+      ],
+      [
+        0,
+        15,
+        90,
+        210,
+        240,
+        120
+      ]
+    ],
+    "capped_H": [
+      123,
+      135
+    ],
+    "credit": "Session176 information PROOF.md section 5, relabelled witnesses",
+    "masks": [
+      69,
+      76
+    ]
+  },
+  "multi_exit_bridge_beta": [
+    0,
+    87,
+    -189,
+    72,
+    36
+  ],
+  "pump": {
+    "formula": "100^r + 11^r",
+    "order_formula": "5r+2",
+    "physical_r": [
+      1,
+      2
+    ],
+    "recurrence": "u_(r+2)=111*u_(r+1)-1100*u_r",
+    "values_r1_to8": [
+      111,
+      10121,
+      1001331,
+      100014641,
+      10000161051,
+      1000001771561,
+      100000019487171,
+      10000000214358881
+    ]
+  },
+  "seed": {
+    "F": [
+      0,
+      11,
+      78,
+      198,
+      240,
+      120
+    ],
+    "Q2": 100,
+    "adjacency_rows": [
+      "00011",
+      "10000",
+      "11000",
+      "01100",
+      "01110"
+    ],
+    "order": 5,
+    "physical_cap_observations": [
+      11,
+      111,
+      2239,
+      69831,
+      2904343
+    ],
+    "upper_triangle_mask": 12
+  },
+  "short_recovery_checks": 79
+}
