@@ -1,0 +1,45 @@
+R2 p=5 rho=1.6140 band [1.4375, 1.5674] OUTSIDE
+R2 p=7 rho=1.2395 band [1.1093, 1.2409] inside
+R2 p=11 rho=1.3739 band [1.2604, 1.3569] OUTSIDE
+R2 p=13 rho=1.1710 band [1.1001, 1.1707] OUTSIDE
+R2 p=17 rho=1.5338 band [1.3379, 1.4857] OUTSIDE
+R2 p=23 rho=1.1240 band [1.0650, 1.1486] inside
+R2 p=31 rho=1.1020 band [1.0514, 1.1227] inside
+R2 FAILED
+R3 order rho_5 > rho_17 > rho_11 > max(rho_7, rho_13, rho_23, rho_31): CONFIRMED (1.6140, 1.5338, 1.3739; others max 1.2395)
+R4 p=5 nonzero-class max/min 1.0314
+R4 p=7 nonzero-class max/min 1.0452
+R4 p=11 nonzero-class max/min 1.0257
+R4 p=13 nonzero-class max/min 1.0085
+R4 p=17 nonzero-class max/min 1.0374
+R4 p=23 nonzero-class max/min 1.0064
+R4 p=31 nonzero-class max/min 1.0181
+R4 CONFIRMED
+R5 class  0 census 2.0128 DP band [1.8201, 1.9534] 
+R5 class  1 census 0.7594 DP band [0.7518, 0.7765] 
+R5 class  2 census 0.7856 DP band [0.8094, 0.8230] 
+R5 class  3 census 1.2341 DP band [1.2154, 1.2378] 
+R5 class  4 census 0.7568 DP band [0.7737, 0.7826] 
+R5 class  5 census 0.7921 DP band [0.7981, 0.8307] 
+R5 class  6 census 1.2655 DP band [1.2247, 1.2716] 
+R5 class  7 census 0.7515 DP band [0.7604, 0.7747] 
+R5 class  8 census 0.8221 DP band [0.8516, 0.8705] 
+R5 class  9 census 1.7193 DP band [1.6013, 1.6494] 
+R5 class 10 census 0.7594 DP band [0.7581, 0.7779] 
+R5 class 11 census 0.7872 DP band [0.8090, 0.8211] 
+R5 class 12 census 1.2320 DP band [1.2094, 1.2344] 
+R5 class 13 census 0.7577 DP band [0.7708, 0.7787] 
+R5 class 14 census 0.7930 DP band [0.8025, 0.8292] 
+R5 class 15 census 1.2682 DP band [1.2467, 1.2741] 
+R5 class 16 census 0.7523 DP band [0.7510, 0.7717] 
+R5 class 17 census 0.8207 DP band [0.8435, 0.8633] 
+R5 class 18 census 1.7372 DP band [1.6249, 1.6546] 
+R5 class 19 census 0.7565 DP band [0.7544, 0.7751] 
+R5 class 20 census 0.7883 DP band [0.8125, 0.8255] 
+R5 class 21 census 1.2396 DP band [1.2130, 1.2344] 
+R5 class 22 census 0.7567 DP band [0.7710, 0.7786] 
+R5 class 23 census 0.7941 DP band [0.8047, 0.8318] 
+R5 class 24 census 1.2893 DP band [1.2709, 1.3021] 
+R5 class 25 census 0.7505 DP band [0.7558, 0.7705] 
+R5 class 26 census 0.8182 DP band [0.8539, 0.8672] 
+R5 27 of 27 classes inside -> CONFIRMED (needs >= 25)
