@@ -23538,3 +23538,48 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     establish a mechanism.
   - Asymptotic constants must come from a limit (closed form or extrapolation), never from one finite n.
   - A saturating counter gives lower bounds, so never quote its window mean as the mean.
+
+## MISTAKE-735 (2026-11-07, kind-pasteur-2026-11-07-S16, THM-4922, HYP-9512 and the packet `05-knowledge/results/first_creators_genealogy_20261107/` at the pre-audit commit 9d7c9f4735; found by the independent audit `05-knowledge/results/first_creators_genealogy_20261107/audit/AUDIT.md`)
+
+- **What was claimed.**
+  - (1) The smallest counterexample to the owner's dichotomy was "h = 23 (two converse pairs at order 6)".
+  - (2) "Every first creator is strong" was PROVED.
+  - (3) The endpoint inequality, the refutation and the fiber sizes were presented as this session's work.
+  - (4) Q4 was registered as a blind prediction.
+  - (5) "63 is the only orphan" and "no hypo analogue" were stated without scope.
+  - Minor:
+    - "Fiber sizes reach 2,458" was given as order <= 9 data;
+    - "now an exact statement";
+    - the non-critical terminology was inverted relative to THM-4870;
+    - blue shares were rounded to "about 83%";
+    - PROVED was applied to a computation;
+    - a stale code header.
+- **Why it was wrong.**
+  - (1) h = 9 already has two self-converse classes at order 5, (s, p) = (2, 0). So do 15 and 17. The packet's own lists
+    excluded them, and Session224 had proved h = 9 first.
+  - (2) The argument only removes a one-vertex component. An ordinal sum of strong first creators is excluded only by
+    HYP-9481 (b), which is OPEN. The claim is finite-exact through order 11.
+  - (3) H(T) <= sum over v of H(T - v) is THM-4889 (and klein's packet, section 4). Session224 (same owner prompt,
+    2054513960) has the refutation at h = 9, the (s, p) birth ledger through order 8 and the strong-component
+    structure. The reservation was rebased onto it, so it sat in the local branch 14 minutes before this
+    checkpoint. klein's least_order_10.txt has the fiber sizes, and Session29's converse congruences have the
+    class-level parity behind the even-order black cell.
+  - (4) The registration quoted klein's order-10 maximum fiber (2,458). Those sizes already bound the dichotomy count
+    by 57, so Q4 was decided before registration. Q1-Q3 and Q5 remain blind.
+  - (5) The 3-cycle is also an orphan, since its deletions have H = 1. The order-2 tournament is a trivial hypo
+    analogue.
+- **Repair.**
+  - The smallest counterexamples are now 9, 15 and 17 (two SC classes), then 23. Session224 is credited.
+  - "Strong" is retyped FINITE-EXACT through order 11, with only the no-one-vertex-component part PROVED.
+  - THM-4889, klein, Session29, THM-4748/THM-344 and Session24 are credited.
+  - Q4 is marked "not blind".
+  - The orphan and no-hypo statements are scoped to h >= 5 and orders 3-10.
+  - All fifteen minors are applied.
+  - The audit's proof of the odd-order self-converse balance is adopted as THM-4922 (4).
+- **Lessons.**
+  - When stating "the smallest counterexample", scan the candidate list from the bottom, checking every alternative
+    failure mode. Here the failure was two SC classes, not only "more than two classes".
+  - Do not quote any statistic from a data source that already decides a prediction before registering that
+    prediction.
+  - Concurrent same-prompt sessions can land minutes before a checkpoint. Read every new packet on the topic after the
+    last rebase, before typing priority or counterexample claims (cf. MISTAKE-734).
