@@ -1,0 +1,42 @@
+{
+  "session": 215,
+  "date": "2026-11-07",
+  "repository": "eliottcassidy2000/math",
+  "branch": "main",
+  "source_main": "0f8750677dd20b594a0e032a3b56aa23f58a950c",
+  "scope": "Audited positive tournament constructions and composition laws; Chan–Pak all-odd completeness remains OPEN.",
+  "verified_checkpoints": [
+    {
+      "number": 1,
+      "commit": "e2317c3fda795f5e40a7a16ba1460d663ec85878",
+      "files": 14,
+      "verification": "All exact UTF-8 contents and Git blobs read back at immutable commit."
+    },
+    {
+      "number": 2,
+      "commit": "db02aa94dbe7f11c34b2b80a48b0d180a54d4c07",
+      "files": 51,
+      "verification": "All Git blobs verified at immutable paths; exact UTF-8 contents checked for 50 newly serialized files; inherited BANK.txt matched its pinned existing blob and ASCII byte length."
+    }
+  ],
+  "audit": {
+    "multi_exit": "PASS: all-k proofs, exact normal/-O replay, independent permutation and leading-mode controls.",
+    "fixed_caps": "PASS WITH PRIORITY CORRECTION APPLIED: inherited physical tomography credited; specific symmetric-cap specialization and fixed-cap constructions retained.",
+    "carriers": "PASS: complete literal nine-coordinate and compiled-H counts, all-word continuation argument, discovery replay and exact old-orbit cutoff.",
+    "synthesis": "PASS: scoped statements, actual composition bridge, open obligations and provenance checked."
+  },
+  "checksums": {
+    "file": "SHA256SUMS",
+    "scope": "Every release file except SHA256SUMS itself; no caches or binaries.",
+    "release_files": 68,
+    "entries": 67
+  },
+  "boundaries": [
+    "No unrestricted finite coverage extension or eventual threshold is claimed.",
+    "New paired-state orbits do not imply that every descendant scalar count is new.",
+    "Integer mode separation concerns parameterized homogeneous-block sequences, not minimum apex count for individual values.",
+    "Fixed caps and growing three-block cyclic constructions have different jet requirements.",
+    "Physical-context profile tomography and compressed known-order recovery have earlier repository proofs."
+  ],
+  "publication": "Two earlier checkpoints verified; final synthesis and checksum publication is verified after its containing commit exists. Shared dirty checkout is preserved; only explicit session paths are staged."
+}
