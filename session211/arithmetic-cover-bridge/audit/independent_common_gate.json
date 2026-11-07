@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "method": "direct permutation word enumeration and rooted cycle enumeration; no imported producer functions",
+  "digraphs_checked": 69,
+  "universes": "all labeled loopless digraphs on 1..3 vertices, allowing opposite arcs and missing arcs",
+  "identities": [
+    "word polynomial complement reciprocity",
+    "general nonempty digraph gate polynomial",
+    "HC(gate D)=H(D)"
+  ],
+  "empty_core_gate_operator_valid": {
+    "1": [
+      1,
+      1
+    ],
+    "2": [
+      4,
+      4
+    ],
+    "3": [
+      9,
+      9
+    ]
+  },
+  "empty_core_cycle_bijection_excluded": {
+    "HC_gate_empty": 0,
+    "P_empty_at_1": 1
+  }
+}

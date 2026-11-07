@@ -1,0 +1,34 @@
+{
+  "pin": "214586af6c8803d8b21959951e8f151e64bff36f",
+  "source_scope": "Inheritance only; all universal statements have self-contained proofs and standalone checks. The two-gap exclusions are inherited, and square-sum path counts are checked in the companion Session211 packet.",
+  "sources": [
+    {
+      "path": "session210/graded-spectrum-gates/PROOF.md",
+      "git_blob": "c7b0ed35d826e52c706b5f78aef4285ce2ac816e",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/session210/graded-spectrum-gates/PROOF.md",
+      "sha256": "56b365afb07b1af431a7a204c171a705389d28ef3dfaeff366864473776ca715",
+      "local_copy_matches_fetched_blob": true
+    },
+    {
+      "path": "05-knowledge/results/seam_threshold_20260925.md",
+      "git_blob": "4cb889a320b21759daabacd5acd16d1880159b41",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/05-knowledge/results/seam_threshold_20260925.md",
+      "sha256": "001615cb4b39165a3b22f1749f513c639a63a3d69e55bef4a82aec0c555cfa4b",
+      "local_copy_matches_fetched_blob": true
+    },
+    {
+      "path": "07-reflections/lrc-add-mult-gauge-stack-s513.md",
+      "git_blob": "7ad19c6bea7f93d8eefa7f6eb020d1c7a5897a8c",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/07-reflections/lrc-add-mult-gauge-stack-s513.md",
+      "sha256": "ba31beba6eab4524954550878a0141737149cde758170f0ea2e22cc8921fc7c7",
+      "local_copy_matches_fetched_blob": true
+    },
+    {
+      "path": "session210/structure-atlas/STRUCTURE_ATLAS.md",
+      "git_blob": "8e8648fb8c6ec1711b140bd0ff76f06fcbb4eee9",
+      "url": "https://github.com/eliottcassidy2000/math/blob/214586af6c8803d8b21959951e8f151e64bff36f/session210/structure-atlas/STRUCTURE_ATLAS.md",
+      "sha256": "d2b47f25ad7b3f8d07792dd48688b4c4a5a21450f5bb892ead2ec025eb44f091",
+      "local_copy_matches_fetched_blob": true
+    }
+  ]
+}
