@@ -1,0 +1,65 @@
+{
+  "nontrivial_small_bounds": 0,
+  "root0_labelled_orders1_to6": 33867,
+  "sha256": {
+    "GENERAL_DIVISIBILITY.md": "066967523b08b5bb52583f35dbe0d4e3b1c0766c78d3927f5e43280940d95ee6",
+    "inherited.py": "0af3e1fe5bffeb0a423ec5684d84c306086e76d46ad31133700f9eac2d1ae3d2",
+    "verify_general_divisibility.py": "15d8958cfd14f104dc1a03f3f41a2fdcaf0dd3921eeded306c8f8f29dadf1b8f"
+  },
+  "status": "PASS",
+  "synthetic_gcd_lists": 3906,
+  "triangle_specializations": [
+    {
+      "K": 1,
+      "t": 2
+    },
+    {
+      "K": 3,
+      "t": 3
+    },
+    {
+      "K": 9,
+      "t": 4
+    },
+    {
+      "K": 27,
+      "t": 5
+    },
+    {
+      "K": 81,
+      "t": 6
+    },
+    {
+      "K": 243,
+      "t": 7
+    },
+    {
+      "K": 729,
+      "t": 8
+    },
+    {
+      "K": 2187,
+      "t": 9
+    },
+    {
+      "K": 6561,
+      "t": 10
+    },
+    {
+      "K": 19683,
+      "t": 11
+    },
+    {
+      "K": 59049,
+      "t": 12
+    },
+    {
+      "K": 177147,
+      "t": 13
+    },
+    {
+      "K": 531441,
+      "t": 14
+    }
+  ]
+}

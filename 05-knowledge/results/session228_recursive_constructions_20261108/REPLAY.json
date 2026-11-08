@@ -129,8 +129,48 @@
       "optimized": true,
       "receipt_sha256": "b9eef0fae0b2281444e57524b85bd40da8ca94ddc236339d8161242a57597c85",
       "script": "physical_state_audit/audit.py"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "f21e4d919cdbc0707b813fbf64aa836289680f42c8734f9ec5fc1aa8523d21c6",
+      "script": "mobile_triangle/verify_divisibility.py"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "f21e4d919cdbc0707b813fbf64aa836289680f42c8734f9ec5fc1aa8523d21c6",
+      "script": "mobile_triangle/verify_divisibility.py"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "6b4b1858d03579a01aabfdf4cca7275dff006b2b376d7be784bd8b13db13c911",
+      "script": "mobile_triangle/verify_general_divisibility.py"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "6b4b1858d03579a01aabfdf4cca7275dff006b2b376d7be784bd8b13db13c911",
+      "script": "mobile_triangle/verify_general_divisibility.py"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "512393936b4680ade2111618bb2d10ecb2cad30f84aedf53067f570f52774c0b",
+      "script": "mobile_audit/divisibility/check.py"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "512393936b4680ade2111618bb2d10ecb2cad30f84aedf53067f570f52774c0b",
+      "script": "mobile_audit/divisibility/check.py"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "ffca4c3d8113b6b81246fb7fbcb91c7b58024355bfc58d1b2146115a34f3779f",
+      "script": "coprime_audit/verify.py"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "ffca4c3d8113b6b81246fb7fbcb91c7b58024355bfc58d1b2146115a34f3779f",
+      "script": "coprime_audit/verify.py"
     }
   ],
-  "runs": 26,
+  "runs": 34,
   "status": "PASS"
 }

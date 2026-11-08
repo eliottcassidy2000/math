@@ -1,0 +1,35 @@
+{
+  "block_sequences_lengths1_to5": 9330,
+  "literal_profiles_lengths1_to3": 258,
+  "separated_formula_controls": 210,
+  "sha256": {
+    "DIVISIBILITY.md": "5f838f3852b4b5ef07c1308a1ee3531f4dcf17ae2df76141c7c084f6a8411e63",
+    "inherited.py": "0af3e1fe5bffeb0a423ec5684d84c306086e76d46ad31133700f9eac2d1ae3d2",
+    "transfer.py": "b5bedced5f7e2d33a3563b9f23927e421e6ad0402f237f5e9da97ebffbbe9b8a",
+    "verify_divisibility.py": "17ef2f5ae4fd6b8e11cace7b4b505feeaa15b906ce2819ed52ec5596a330b78d"
+  },
+  "sharp_examples": [
+    {
+      "D": 41,
+      "t": 2
+    },
+    {
+      "D": 123,
+      "t": 3
+    },
+    {
+      "D": 369,
+      "t": 4
+    },
+    {
+      "D": 1107,
+      "t": 5
+    },
+    {
+      "D": 3321,
+      "t": 6
+    }
+  ],
+  "sharp_family_t2_to40": 39,
+  "status": "PASS"
+}

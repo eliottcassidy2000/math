@@ -21,6 +21,10 @@ CASES = [
     ('physical_state/verify.py', 'physical_state/receipt.json'),
     ('physical_state/verify_oracle.py', 'physical_state/oracle-receipt.json'),
     ('physical_state_audit/audit.py', 'physical_state_audit/normal.json'),
+    ('mobile_triangle/verify_divisibility.py', 'mobile_triangle/DIVISIBILITY_CHECK.json'),
+    ('mobile_triangle/verify_general_divisibility.py', 'mobile_triangle/GENERAL_DIVISIBILITY_CHECK.json'),
+    ('mobile_audit/divisibility/check.py', 'mobile_audit/divisibility/normal.json'),
+    ('coprime_audit/verify.py', 'coprime_audit/CHECK.json'),
 ]
 
 def main():

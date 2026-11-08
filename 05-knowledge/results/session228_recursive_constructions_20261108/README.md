@@ -19,7 +19,7 @@ The concept board is literal graphs, recursive polynomial grammars, positive two
 2. **Niche:** use path-cover bilinear and variable-interface constructions outside finite source/gadget menus.
 3. **Wildcard:** find many-to-one physical sidecar returns through graph operations beyond a shared rooted-graft continuation.
 
-Every candidate will receive a self-contained proof or explicitly bounded experiment, a portable exact checker with a deterministic receipt, and an independent audit before status promotion. Initialization is persisted early to protect work across executor resets. No scarce theorem ID is reserved.
+Promoted results have a self-contained proof or explicitly bounded experiment, portable exact verification with deterministic receipts, and an independent audit. Multiple verified checkpoints preserve this longer research session. No scarce theorem ID is reserved.
 
 ## Audited results
 
@@ -51,9 +51,21 @@ Arbitrary ordered joins and binary cyclic nodes from any finite physical seed ba
 
 Depths zero through k require exactly k+1 rational linear response coordinates. Two literal order-nine graphs share (H,Q2)=(99,4320) yet give 150831 versus 155151 after two collars. The general path-cover transform is inherited and explicitly credited; its low-moment quotient is not recursively sufficient.
 
+### A coprime mobile module and universal separated-defect law
+
+An explicit order-five module with (H,Q2)=(13,104) matches the binary word 010 in its normalized sidecar. Moving it through (01)^r gives r−1 distinct counts at deletion 13; for every r≥3 their gcd is 1, since the first two are odd and differ by 8. A trimmed subfamily is strong, including the audited gcd-one four-point fiber at r=7. These are sparse fibers, not interval or prime coverage. [Construction](coprime_module/RESULT.md), [independent audit](coprime_audit/REPORT.md).
+
+The separation identity extends to every binary-compatible physical module, through an explicit four-parameter transfer-defect family and a common two-dimensional invariant space. Its exact additive formula also forces the divisor (product H_i)/lcm(H_i). Thus repeating a fixed finite bank of these modules retains an arithmetic obstruction. [All-order law](coprime_module/UNIVERSAL.md). The complete labeled census through order six is finite evidence only; the independent canonical verifier does not rely on the exploratory producer scripts.
+
+### Universal SCC divisibility and a sharp triangle boundary
+
+For any rooted tournament, let its deletion SCCs have g_i=gcd(H_i,Q_i(2)). Then H(A) is divisible by (product g_i)/lcm{product of g_i over at most two distinct indices}. At each prime, the forced valuation is the sum of the g_i valuations after removing the two largest. The endpoint-block proof applies to every ordered tournament-block decomposition, not just the construction families. [Proof](mobile_triangle/GENERAL_DIVISIBILITY.md), [independent audit](mobile_audit/divisibility/AUDIT.md).
+
+For t triangle deletion blocks this gives 3^max(t−2,0), sharp for every t≥2 via an explicit 41-based family. The separated exponential family obeys the stronger divisor 3^(t−1). For prime target counts the universal theorem severely restricts repeated saturated deletion components, while blocks with gcd(H,Q2)=1 evade this particular obstruction. Passing it is not a physical-existence theorem.
+
 ## Reproduction
 
-The portable [aggregate verifier](verify_all.py) replays every included canonical producer and independent checker in normal and optimized Python, requiring byte-for-byte equality with their receipts. The current [replay](REPLAY.json) contains 26 passing runs. All-order claims follow from written proofs; finite experiments remain explicitly scoped. The final verification and session synthesis are still being completed.
+The portable [aggregate verifier](verify_all.py) replays every included canonical producer and independent checker in normal and optimized Python, requiring byte-for-byte equality with their receipts. The current [replay](REPLAY.json) contains 34 passing runs. All-order claims follow from written proofs; finite experiments remain explicitly scoped. Producer proofs remain at their audit freeze, so historical “audit requested” labels are superseded by the linked independent PASS reports. The final verification and a further unsaturated-module construction are still being completed.
 
 ## Current boundary
 
