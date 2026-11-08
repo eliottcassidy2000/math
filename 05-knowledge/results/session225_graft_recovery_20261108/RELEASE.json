@@ -1,0 +1,53 @@
+{
+  "session": 225,
+  "date": "2026-11-08",
+  "repository": "eliottcassidy2000/math",
+  "branch": "main",
+  "status": "COMPLETE for this scoped graft reconstruction only; other Session225 work is not incorporated.",
+  "provenance": "Original Session225 draft and audit files were unavailable. This proof, code and receipts were reconstructed or generated afresh from retained exact mathematical data; no original artifact restoration is claimed.",
+  "scope": [
+    "General four-coordinate rooted-graft closure with singleton boundary.",
+    "Explicit determinant -8 gadget and physical spanning-state certificate.",
+    "Infinite strong family and exact fourth-order recurrence.",
+    "Separation from one fixed universal O/Z/J state word."
+  ],
+  "verified_checkpoints": [
+    {
+      "number": 1,
+      "commit": "7150ad277d4ece0e89ded346a1d2d5dc9e6d8659",
+      "files": 8,
+      "verification": "Non-forced expected-head update; main read back; exact contents and Git blob hashes of all eight files verified at immutable commit."
+    }
+  ],
+  "fresh_checks": {
+    "general_source_gadget_pairs": 5625,
+    "sources": 75,
+    "gadgets": 75,
+    "universe": "All labeled tournaments of orders 1..4 with root fixed at label 0.",
+    "generator_controls": 225,
+    "strongness_controls": 1161,
+    "permutation_profile_controls": 76,
+    "permutation_stat_controls": 75,
+    "literal_iterate_orders": [
+      6,
+      10,
+      14
+    ],
+    "normal_optimized_receipts": "identical",
+    "independent_replay": "Separate permutation/bin-assignment enumeration, Leibniz determinants and integer matrix identity."
+  },
+  "boundaries": [
+    "No literature-priority or smallest-gadget claim.",
+    "No claim that individual scalar values cannot arise from older constructions.",
+    "No state-dependent-word obstruction.",
+    "No inverse refinement or physical-realizability sufficiency claim.",
+    "No unrestricted coverage extension, eventual threshold or Chan-Pak completeness proof."
+  ],
+  "checksums": {
+    "file": "SHA256SUMS",
+    "scope": "All nine other files in this packet; not navigation files.",
+    "packet_files": 10,
+    "entries": 9
+  },
+  "publication": "The containing release checkpoint and all final files are verified after its commit exists; its SHA is available in repository history."
+}

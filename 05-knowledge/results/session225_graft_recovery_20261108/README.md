@@ -49,3 +49,10 @@ Independent small enumeration:
 
     python3 independent.py > independent.replay.txt
     cmp independent.replay.txt INDEPENDENT.txt
+
+## Release integrity
+
+[Release record](RELEASE.json) describes the recovered scope and first verified checkpoint.
+[SHA256SUMS](SHA256SUMS) covers every packet file except the checksum file itself.
+
+    sha256sum -c SHA256SUMS

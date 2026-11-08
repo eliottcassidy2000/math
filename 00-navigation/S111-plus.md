@@ -103,3 +103,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session222](S222.md): COMPLETE; audited L/diagonal shell equivalence, nested count-gap doubling, odd-chain lattice and continuous plane filling, with corrected doubling canon. Chan–Pak remains OPEN.
 
 [Session223](S223.md): COMPLETE; exact fixed-length all-k 3-adic factors, real-state dependence, digital two-root-change membership and scoped selector obstruction. Height-weighted factors and Chan–Pak remain OPEN.
+
+[Session225](S225.md): recovered audited full-rank rooted graft, exact strong-family recurrence and fixed O/Z/J-word state separation. Original packet unavailable; fresh proof and checks supplied. Other Session225 lanes and Chan-Pak completeness remain OPEN.
