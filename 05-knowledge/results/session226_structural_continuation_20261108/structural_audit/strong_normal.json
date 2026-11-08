@@ -1,0 +1,26 @@
+{
+  "H9_graft_counts": {
+    "A": [
+      423,
+      605,
+      357,
+      185,
+      261
+    ],
+    "B": [
+      315,
+      541,
+      551,
+      217,
+      207
+    ]
+  },
+  "status": "PASS",
+  "universe": {
+    "nonreaching_sources": 2325,
+    "pairs": 5625,
+    "singleton_sources": 75,
+    "strong_grafts": 3225,
+    "strong_with_nonstrong_gadget": 2064
+  }
+}

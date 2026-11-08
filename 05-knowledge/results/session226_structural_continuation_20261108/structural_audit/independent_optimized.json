@@ -1,0 +1,23 @@
+{
+  "H9_permutation_counts": {
+    "A": [
+      423,
+      605,
+      357,
+      185,
+      261
+    ],
+    "B": [
+      315,
+      541,
+      551,
+      217,
+      207
+    ]
+  },
+  "exact_envelope_state_cap_checks": 812,
+  "hostile_candidate_checks": 500,
+  "status": "PASS",
+  "subset_bin_literal_operation_checks": 855,
+  "warshall_pairs_all_source_roots": 2175
+}

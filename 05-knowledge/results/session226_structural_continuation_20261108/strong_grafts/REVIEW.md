@@ -13,5 +13,5 @@ No condition on internal gadget arcs is required.
 The producer's 5,625-pair literal graph controls and ten nine-vertex H=9 counts
 pass normally and under Python optimization with byte-identical receipts.
 This first review is an independent proof review, not a claim that this worker
-independently implemented the enumeration. A separate adversarial audit and
-replay are underway and will be published in a later checkpoint.
+independently implemented the enumeration. The later [independent audit](../structural_audit/AUDIT.md) now includes
+separate permutation counts, Warshall reachability checks, and replay.

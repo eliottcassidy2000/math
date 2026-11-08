@@ -1,6 +1,6 @@
 # Session226: graft structure and finite-line boundaries
 
-**First verified checkpoint. Chan–Pak completeness remains OPEN.**
+**Audited structural extensions. Chan–Pak completeness remains OPEN.**
 
 - [Exact graft strongness criterion](strong_grafts/PROOF.md): a graft is strong
   exactly when the old source has at least two vertices and its old root reaches
@@ -11,6 +11,14 @@
 - [Portable checks](strong_grafts/verify.py), [normal receipt](strong_grafts/CHECK.json),
   [optimized receipt](strong_grafts/CHECK.optimized.json),
   [independent proof review](strong_grafts/REVIEW.md).
+
+- [Arbitrary physical seed banks and finite-line obstructions](root_descent/PROOF.md):
+  all fixed bounded boundary intercepts contribute only O(log X) distinct
+  counts. An exact even-g residue test extends the obstruction to nonunit
+  and zero intercepts when a common odd residue gap exists. A five-line
+  hostile shows why arbitrary finite nonunit line banks remain outside scope.
+- [Independent structural audit](structural_audit/AUDIT.md) and
+  [separate verification](structural_audit/independent.py).
 
 ## Research posture
 
