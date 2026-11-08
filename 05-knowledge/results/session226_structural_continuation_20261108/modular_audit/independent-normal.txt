@@ -1,0 +1,5 @@
+Independent finite-U sums: positivity, normalization, MLR and endpoint algebra: 385 steps
+Independent integer enumeration matches branchwise CRT at every residue modulo 15
+Independent strict MTP2: 324 pairs; strict conditional threshold covariances: 20
+Published interval independently certified: 0.771866451842 < Csharp < 0.771867951843
+PASS (all checks explicit, including under -O)

@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "optimized": false,
+      "source": "strong_grafts/verify.py",
+      "stdout_sha256": "5859ffa1b5e72764a181bc06c1f6bcc33bcc5c01f376652c1b3da3a9040ee0c8"
+    },
+    {
+      "optimized": true,
+      "source": "strong_grafts/verify.py",
+      "stdout_sha256": "5859ffa1b5e72764a181bc06c1f6bcc33bcc5c01f376652c1b3da3a9040ee0c8"
+    },
+    {
+      "optimized": false,
+      "source": "root_descent/verify.py",
+      "stdout_sha256": "971ed132f7148c71deb1b5d497e4e8b6df45639c8a72dc928710f5ac3dc19c1f"
+    },
+    {
+      "optimized": true,
+      "source": "root_descent/verify.py",
+      "stdout_sha256": "971ed132f7148c71deb1b5d497e4e8b6df45639c8a72dc928710f5ac3dc19c1f"
+    },
+    {
+      "optimized": false,
+      "source": "graft/verify.py",
+      "stdout_sha256": "9567e42ba36092834efedbc165c2ca420bb65f6f98e61bc7e6a534ab2470ece0"
+    },
+    {
+      "optimized": true,
+      "source": "graft/verify.py",
+      "stdout_sha256": "9567e42ba36092834efedbc165c2ca420bb65f6f98e61bc7e6a534ab2470ece0"
+    },
+    {
+      "optimized": false,
+      "source": "graft/inherited_verify.py",
+      "stdout_sha256": "e1b386efae669303635a9bc8cba73d236f374342bd156acd93c5341586062ca8"
+    },
+    {
+      "optimized": true,
+      "source": "graft/inherited_verify.py",
+      "stdout_sha256": "e1b386efae669303635a9bc8cba73d236f374342bd156acd93c5341586062ca8"
+    },
+    {
+      "optimized": false,
+      "source": "modular/check.py",
+      "stdout_sha256": "75a0b10c36c8546bf46ba9bea1e9b3cae7b54be9ea13695b155c6dce67b658a4"
+    },
+    {
+      "optimized": true,
+      "source": "modular/check.py",
+      "stdout_sha256": "75a0b10c36c8546bf46ba9bea1e9b3cae7b54be9ea13695b155c6dce67b658a4"
+    },
+    {
+      "optimized": false,
+      "source": "structural_audit/independent.py",
+      "stdout_sha256": "da01fb8f7c67747110cfbbca30b4dcd8812e0b94e714b0f02906cc76ef525db8"
+    },
+    {
+      "optimized": true,
+      "source": "structural_audit/independent.py",
+      "stdout_sha256": "da01fb8f7c67747110cfbbca30b4dcd8812e0b94e714b0f02906cc76ef525db8"
+    },
+    {
+      "optimized": false,
+      "source": "graft_audit/independent_check.py",
+      "stdout_sha256": "3b86f004a230a1f1d5de3270e27f7993672d26dafeddca39848f351cc260d1d4"
+    },
+    {
+      "optimized": true,
+      "source": "graft_audit/independent_check.py",
+      "stdout_sha256": "3b86f004a230a1f1d5de3270e27f7993672d26dafeddca39848f351cc260d1d4"
+    },
+    {
+      "optimized": false,
+      "source": "modular_audit/independent.py",
+      "stdout_sha256": "f6f03e23487c69f80c3bf7f5ba54bac8999b45727cde030ebd5552ea923e27c9"
+    },
+    {
+      "optimized": true,
+      "source": "modular_audit/independent.py",
+      "stdout_sha256": "f6f03e23487c69f80c3bf7f5ba54bac8999b45727cde030ebd5552ea923e27c9"
+    }
+  ],
+  "runs": 16,
+  "status": "PASS"
+}

@@ -1,0 +1,135 @@
+{
+  "H9_graft_outputs": [
+    [
+      423,
+      605,
+      357,
+      185,
+      261
+    ],
+    [
+      315,
+      541,
+      551,
+      217,
+      207
+    ]
+  ],
+  "census": {
+    "1": {},
+    "2": {
+      "strong=False,rank=3,sign=1": 2
+    },
+    "3": {
+      "strong=False,rank=3,sign=1": 6,
+      "strong=True,rank=3,sign=0": 2
+    },
+    "4": {
+      "strong=False,rank=3,sign=0": 12,
+      "strong=False,rank=3,sign=1": 28,
+      "strong=True,rank=4,sign=-1": 12,
+      "strong=True,rank=4,sign=1": 12
+    },
+    "5": {
+      "strong=False,rank=3,sign=-1": 96,
+      "strong=False,rank=3,sign=0": 72,
+      "strong=False,rank=3,sign=1": 312,
+      "strong=True,rank=3,sign=0": 48,
+      "strong=True,rank=4,sign=-1": 112,
+      "strong=True,rank=4,sign=1": 384
+    }
+  },
+  "examples": {
+    "negative": {
+      "det": -8,
+      "rank": 4,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "stats": {
+        "H": 5,
+        "Q": 32,
+        "T": 17,
+        "alpha": 5,
+        "b": 8,
+        "delta": 7,
+        "e": 1,
+        "q": 1,
+        "s": 1
+      }
+    },
+    "positive": {
+      "det": 72,
+      "rank": 4,
+      "rows": [
+        2,
+        8,
+        3,
+        5
+      ],
+      "stats": {
+        "H": 5,
+        "Q": 32,
+        "T": 19,
+        "alpha": 6,
+        "b": 12,
+        "delta": 9,
+        "e": 2,
+        "q": 3,
+        "s": 1
+      }
+    },
+    "singular5": {
+      "det": 0,
+      "rank": 3,
+      "rows": [
+        18,
+        8,
+        3,
+        5,
+        14
+      ],
+      "stats": {
+        "H": 13,
+        "Q": 104,
+        "T": 71,
+        "alpha": 18,
+        "b": 24,
+        "delta": 15,
+        "e": 2,
+        "q": 3,
+        "s": 3
+      }
+    },
+    "triangle": {
+      "det": 0,
+      "rank": 3,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "stats": {
+        "H": 3,
+        "Q": 12,
+        "T": 7,
+        "alpha": 3,
+        "b": 4,
+        "delta": 3,
+        "e": 1,
+        "q": 1,
+        "s": 1
+      }
+    }
+  },
+  "inverse_checks": 2080,
+  "literal_context_checks": 1099,
+  "literal_graft_checks": 4392,
+  "observer_determinant": 4,
+  "stats_permutation_checks": 1099,
+  "status": "FINITE-EXACT controls for proved statements",
+  "universe": "all labeled tournaments of orders 1..5, root 0; no filters"
+}

@@ -1,0 +1,52 @@
+{
+  "all_root_sign_census": {
+    "n=2,strong=False,delta_sign=1": 4,
+    "n=3,strong=False,delta_sign=1": 18,
+    "n=3,strong=True,delta_sign=0": 6,
+    "n=4,strong=False,delta_sign=0": 48,
+    "n=4,strong=False,delta_sign=1": 112,
+    "n=4,strong=True,delta_sign=-1": 48,
+    "n=4,strong=True,delta_sign=1": 48,
+    "n=5,strong=False,delta_sign=-1": 480,
+    "n=5,strong=False,delta_sign=0": 360,
+    "n=5,strong=False,delta_sign=1": 1560,
+    "n=5,strong=True,delta_sign=-1": 560,
+    "n=5,strong=True,delta_sign=0": 240,
+    "n=5,strong=True,delta_sign=1": 1920
+  },
+  "counts": {
+    "inverse_basis_vectors": 10304,
+    "literal_grafts_all_roots": 1140,
+    "rooted_graphs": 5405
+  },
+  "minimum_full_rank_order": 4,
+  "observer_determinant": 4,
+  "physical_basis": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      2,
+      1
+    ],
+    [
+      3,
+      1,
+      3,
+      1
+    ],
+    [
+      1,
+      0,
+      4,
+      1
+    ]
+  ],
+  "physical_determinant": -4,
+  "status": "PASS"
+}

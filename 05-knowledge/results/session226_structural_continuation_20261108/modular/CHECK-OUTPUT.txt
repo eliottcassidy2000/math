@@ -1,0 +1,15 @@
+Exact prime-power likelihood-ratio adjacent checks: 273
+Independent direct branch enumeration passed: 3
+Independent direct branch enumeration passed: 9
+Independent direct branch enumeration passed: 27
+Independent direct branch enumeration passed: 5
+Independent direct branch enumeration passed: 25
+Independent direct branch enumeration passed: 7
+Exact strict MTP2 and valuation monotonicity: [(3, 1), (5, 1)] 16 pairs
+Exact strict MTP2 and valuation monotonicity: [(3, 2), (5, 1)] 36 pairs
+Exact strict MTP2 and valuation monotonicity: [(3, 2), (5, 2), (7, 1)] 324 pairs
+Hostile product-of-mixtures gap at q=15: 1/75
+Descriptive sharp-floor partial product: 0.771867951842
+Analytic truncation error bound: 3/2000000 (floating rounding separate)
+Certified outward interval: 0.771866451842 0.771867951843
+PASS

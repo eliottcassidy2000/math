@@ -104,4 +104,8 @@ individual session routes preserve scope and remaining open obligations.
 
 [Session223](S223.md): COMPLETE; exact fixed-length all-k 3-adic factors, real-state dependence, digital two-root-change membership and scoped selector obstruction. Height-weighted factors and Chan–Pak remain OPEN.
 
-[Session225](S225.md): recovered audited full-rank rooted graft, exact strong-family recurrence and fixed O/Z/J-word state separation. Original packet unavailable; fresh proof and checks supplied. Other Session225 lanes and Chan-Pak completeness remain OPEN.
+[Session224](S224.md): audited H=9 first-birth collision, complete birth ledger through order eight, and recovered H=33 genealogy. Completeness remains OPEN.
+
+[Session225](S225.md): three scoped recoveries COMPLETE: full-rank rooted graft, all-odd-modulus joint law, and affine root descent. Fresh proofs and checks replace unavailable originals; excluded refinements and Chan–Pak completeness remain OPEN.
+
+[Session226](S226.md): COMPLETE; exact graft rank/inverse and depth-two observation, arbitrary-seed bounded-intercept descent, strict modular valuation dependence and sharp density floor. Chan–Pak remains OPEN.
