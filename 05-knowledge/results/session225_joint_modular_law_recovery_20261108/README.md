@@ -14,14 +14,14 @@ Example: L_15(0)=5179/3375 while L_3(0)L_5(0)=5134/3375. Their difference is 1/7
 
 ## Scope firewall
 
-This is a law for uniformly sampled words of fixed length with exactly two Js. It is not a height-conditioned law, an independence assertion for real history, a finite-bank completeness result, a scalar coverage theorem, or a resolution of the Chan-Pak cutoff. No guardrail, maintained warning, navigation index, or existing result is changed.
+This is a law for uniformly sampled words of fixed length with exactly two Js. It is not a height-conditioned law, an independence assertion for real history, a finite-bank completeness result, a scalar coverage theorem, or a resolution of the Chan-Pak cutoff. No guardrail, maintained warning, or existing result is changed. Session225 navigation adds a separate, scoped link to this recovery.
 
 ## Provenance and dependency boundary
 
 The reconstruction uses retained model definitions and the Session223 all-3-adic / THM-4916 odd-prime cascade as motivation. The current proof is self-contained. Original Session225 finite outputs are historical context only; fresh runs are distinguished in VERIFICATION.md. No theorem identifier is reserved or reused.
 
-The packet is published additively on a fresh main base, preserving the separate graft recovery at 6872236362fbb7077314e25f3a66a7d0070c5402 and all concurrent work. Publication uses small content blobs, SHA-only tree entries, immutable exact-content readbacks, and non-forced expected-head ref updates.
+The packet is published additively on a fresh main base, preserving the separate graft recovery at 6872236362fbb7077314e25f3a66a7d0070c5402 and all concurrent work. Each checkpoint receives exact immutable file verification before publication.
 
-## Repository workflow limitations
+## Verification limits
 
-Repository operating instructions, navigation, research protocol, and active guardrails were read through the connector. No local checkout/worktree or repository startup/check_docs/checkpoint scripts were available for this recovery path; these were not run. The portable mathematical checker was run from stdin without repository writes. Full repository CI is not substituted by these focused checks.
+The mathematical checks listed in VERIFICATION.md were run. Repository-wide checks and full CI were not run; the focused checks are not a substitute for them.
