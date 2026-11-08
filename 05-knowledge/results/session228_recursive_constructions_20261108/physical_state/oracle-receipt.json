@@ -1,0 +1,77 @@
+{
+  "status": "FINITE-EXACT PASS",
+  "cases": [
+    {
+      "state": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "expected_physical": true,
+      "witness": {
+        "n": 1,
+        "code": 0,
+        "root": 0
+      }
+    },
+    {
+      "state": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "expected_physical": true,
+      "witness": {
+        "n": 2,
+        "code": 1,
+        "root": 0
+      }
+    },
+    {
+      "state": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "expected_physical": false,
+      "witness": null
+    },
+    {
+      "state": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "expected_physical": false,
+      "witness": null
+    },
+    {
+      "state": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "expected_physical": true,
+      "witness": {
+        "n": 3,
+        "code": 2,
+        "root": 0
+      }
+    },
+    {
+      "state": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "expected_physical": false,
+      "witness": null
+    }
+  ]
+}

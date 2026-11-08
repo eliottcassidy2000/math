@@ -23,6 +23,12 @@ Every candidate will receive a self-contained proof or explicitly bounded experi
 
 ## Audited results
 
+### Finite physical-state membership at every deletion level
+
+Every actual rooted four-state (D,E,U,d) has a bounded-order representative preserving all four coordinates. When d>1 and U>d, the elementary bound is d+floor(log2(U−d))+2; sink and d=1 boundaries have smaller explicit bounds. The proof removes only inactive singleton source components and uses the first root-path activation to bound the remaining suffix. Consequently physical four-state membership is decidable by a finite exhaustive search, and every specified invertible rational physical graft has a terminating numerical-state inverse test. This is an existence algorithm, not an efficient or size-decreasing induction, and not graph recognition. [Proof](physical_state/PROOF.md), [independent audit](physical_state_audit/AUDIT.md).
+
+The earlier scalar-core decidability theorem and the special start-one source oracle are explicitly credited. The new extension preserves an arbitrary root's full state simultaneously. The optional logarithmic d refinement uses the cited Busch minimum theorem; the elementary result and verifier do not depend on it.
+
 For each r>=2, an explicit mobile-triangle construction gives 2r−2 distinct Hamilton-path counts with exactly the same rooted sidecar (E,U,d)=(0,4^r+2,3), on 2r+2 vertices. The counts are B_r at the initial position and B_r+(-2)^p−2 for 1<=p<=2r−3, where B_r=(4^r+6r−1)/3. This proves unbounded fiber cardinalities already at deletion count three. It does not claim that one fixed numerical fiber is infinite, nor that the displayed counts fill an interval.
 
 [All-order proof and exact source checks](mobile_triangle/PROOF.md), [independent audit](mobile_audit/AUDIT.md). The proof is preserved at its audit freeze; its final status is **PROVED, independently audited PASS**. The independent checker rebuilds literal graphs and the local transfer rather than importing the producer. Both normal and optimized receipts have been replayed after packaging.
@@ -47,7 +53,7 @@ Depths zero through k require exactly k+1 rational linear response coordinates. 
 
 ## Reproduction
 
-The portable [aggregate verifier](verify_all.py) replays every included producer and independent checker in normal and optimized Python, requiring byte-for-byte equality with their receipts. The current [replay](REPLAY.json) contains 20 passing runs. All-order claims follow from written proofs; finite experiments remain explicitly scoped. The final verification and session synthesis are still being completed.
+The portable [aggregate verifier](verify_all.py) replays every included canonical producer and independent checker in normal and optimized Python, requiring byte-for-byte equality with their receipts. The current [replay](REPLAY.json) contains 26 passing runs. All-order claims follow from written proofs; finite experiments remain explicitly scoped. The final verification and session synthesis are still being completed.
 
 ## Current boundary
 

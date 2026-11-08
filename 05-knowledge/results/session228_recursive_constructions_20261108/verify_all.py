@@ -18,6 +18,9 @@ CASES = [
     ('cyclic_audit/check.py', 'cyclic_audit/normal.out'),
     ('recursive/verify.py', 'recursive/CHECK.json'),
     ('recursive_audit/audit.py', 'recursive_audit/AUDIT.json'),
+    ('physical_state/verify.py', 'physical_state/receipt.json'),
+    ('physical_state/verify_oracle.py', 'physical_state/oracle-receipt.json'),
+    ('physical_state_audit/audit.py', 'physical_state_audit/normal.json'),
 ]
 
 def main():

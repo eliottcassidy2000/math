@@ -1,0 +1,71 @@
+{
+  "status": "FINITE-EXACT PASS; theorem pending independent audit",
+  "coverage": "All labeled tournaments with root fixed at 0, hence every rooted isomorphism type through max_n",
+  "checks": [
+    "literal path/covers through n=5",
+    "SCC recurrence",
+    "alpha positivity",
+    "Q floors and suffix vertex bound",
+    "four-coordinate compression",
+    "Camion nontrivial budget",
+    "representative order bound",
+    "sink diagonal"
+  ],
+  "rows": [
+    {
+      "n": 1,
+      "labeled_root0_cases": 1,
+      "literal_cases": 1,
+      "distinct_states": 1,
+      "compressed_cases": 0,
+      "active_cases": 0,
+      "max_compressed_order": 1
+    },
+    {
+      "n": 2,
+      "labeled_root0_cases": 2,
+      "literal_cases": 2,
+      "distinct_states": 2,
+      "compressed_cases": 1,
+      "active_cases": 1,
+      "max_compressed_order": 2
+    },
+    {
+      "n": 3,
+      "labeled_root0_cases": 8,
+      "literal_cases": 8,
+      "distinct_states": 4,
+      "compressed_cases": 4,
+      "active_cases": 6,
+      "max_compressed_order": 3
+    },
+    {
+      "n": 4,
+      "labeled_root0_cases": 64,
+      "literal_cases": 64,
+      "distinct_states": 12,
+      "compressed_cases": 24,
+      "active_cases": 56,
+      "max_compressed_order": 4
+    },
+    {
+      "n": 5,
+      "labeled_root0_cases": 1024,
+      "literal_cases": 1024,
+      "distinct_states": 46,
+      "compressed_cases": 264,
+      "active_cases": 960,
+      "max_compressed_order": 5
+    },
+    {
+      "n": 6,
+      "labeled_root0_cases": 32768,
+      "literal_cases": 0,
+      "distinct_states": 273,
+      "compressed_cases": 5320,
+      "active_cases": 31744,
+      "max_compressed_order": 6
+    }
+  ],
+  "sha256": "cd8f4d784d0ee472f09dffffe76193920c1115e7eebcb85084ecd20554a67d9d"
+}

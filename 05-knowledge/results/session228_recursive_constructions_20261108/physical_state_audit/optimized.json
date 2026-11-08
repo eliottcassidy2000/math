@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "method": "literal enumeration of every directed path; independently computed prefix states",
+  "all_root0_labeled_through_n": 5,
+  "cases_by_order": {
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 1024,
+    "6": 130,
+    "7": 130
+  },
+  "long_prefix_order": 12,
+  "digest_sha256": "4173dc35932ebadccd04a6a997fe51295f13537e2517200a4af6f61770586128"
+}

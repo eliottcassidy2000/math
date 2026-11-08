@@ -99,8 +99,38 @@
       "optimized": true,
       "receipt_sha256": "2cd286556938e465cbf6cc3e99719e7f3659b5ef1d38525af91024cc95a565bd",
       "script": "recursive_audit/audit.py"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "029e2c7fcb62e52cd1597190068b8cc9d0f5474be42f813be5088becd80983cd",
+      "script": "physical_state/verify.py"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "029e2c7fcb62e52cd1597190068b8cc9d0f5474be42f813be5088becd80983cd",
+      "script": "physical_state/verify.py"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "dd4df043b35407dc72a952289288e87bdfd0b984cae043e8d60058ae426bd832",
+      "script": "physical_state/verify_oracle.py"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "dd4df043b35407dc72a952289288e87bdfd0b984cae043e8d60058ae426bd832",
+      "script": "physical_state/verify_oracle.py"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "b9eef0fae0b2281444e57524b85bd40da8ca94ddc236339d8161242a57597c85",
+      "script": "physical_state_audit/audit.py"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "b9eef0fae0b2281444e57524b85bd40da8ca94ddc236339d8161242a57597c85",
+      "script": "physical_state_audit/audit.py"
     }
   ],
-  "runs": 20,
+  "runs": 26,
   "status": "PASS"
 }
