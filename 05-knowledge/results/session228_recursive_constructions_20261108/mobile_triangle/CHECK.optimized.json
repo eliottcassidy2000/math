@@ -1,0 +1,75 @@
+{
+  "alternating_literal_controls": [
+    {
+      "r": 2,
+      "scalars": [
+        9,
+        5
+      ],
+      "sidecar": [
+        0,
+        18,
+        3
+      ]
+    },
+    {
+      "r": 3,
+      "scalars": [
+        27,
+        23,
+        29,
+        17
+      ],
+      "sidecar": [
+        0,
+        66,
+        3
+      ]
+    },
+    {
+      "r": 4,
+      "scalars": [
+        93,
+        89,
+        95,
+        83,
+        107,
+        59
+      ],
+      "sidecar": [
+        0,
+        258,
+        3
+      ]
+    },
+    {
+      "r": 5,
+      "scalars": [
+        351,
+        347,
+        353,
+        341,
+        365,
+        317,
+        413,
+        221
+      ],
+      "sidecar": [
+        0,
+        1026,
+        3
+      ]
+    }
+  ],
+  "long_transfer_controls": 2450,
+  "scope": "All-order proof uses matrix identity and recurrence; finite literal checks do not establish universal quantifiers.",
+  "source_sha256": {
+    "PROOF.md": "6f3f2d038053bf50327d22b1775555000effab2cee28b3cdc88fdf25c495f28c",
+    "blocks.py": "4c88e2418d78bcee3a7f6adcf2bb881e8a05243688ce76a11955e36b770db5ba",
+    "inherited.py": "0af3e1fe5bffeb0a423ec5684d84c306086e76d46ad31133700f9eac2d1ae3d2",
+    "transfer.py": "b5bedced5f7e2d33a3563b9f23927e421e6ad0402f237f5e9da97ebffbbe9b8a",
+    "verify.py": "d2e0dd64d366b6bf697c72392be12764a4a2ddd9c3afedf149b04bbad1903e34"
+  },
+  "status": "PASS",
+  "universal_word_literal_checks": 1284
+}
