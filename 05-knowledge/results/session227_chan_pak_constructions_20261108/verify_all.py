@@ -14,6 +14,10 @@ CASES=[
  ('construction_audit/independent_multiroot_audit.py','construction_audit/normal.json'),
  ('boundary_escape/verify.py','boundary_escape/CHECK.json'),
  ('escape_audit/independent_check.py','escape_audit/INDEPENDENT.json'),
+ ('menu_boundary/verify.py','menu_boundary/CHECK.json'),
+ ('menu_audit/independent_check.py','menu_audit/independent.json'),
+ ('adaptive_arithmetic/verify.py','adaptive_arithmetic/CHECK.json'),
+ ('arithmetic_audit/independent_check.py','arithmetic_audit/INDEPENDENT.json'),
 ]
 
 def main():

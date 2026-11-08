@@ -109,3 +109,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session225](S225.md): three scoped recoveries COMPLETE: full-rank rooted graft, all-odd-modulus joint law, and affine root descent. Fresh proofs and checks replace unavailable originals; excluded refinements and Chan–Pak completeness remain OPEN.
 
 [Session226](S226.md): COMPLETE; exact graft rank/inverse and depth-two observation, arbitrary-seed bounded-intercept descent, strict modular valuation dependence and sharp density floor. Chan–Pak remains OPEN.
+
+[Session227](S227.md): COMPLETE; independently audited minimal graft escape, exact physical hulls and graph images, multi-root calculus and collision families, scalar switches, and fixed-menu line boundaries. Chan–Pak remains OPEN.

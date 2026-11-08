@@ -1,0 +1,58 @@
+{
+  "d_only_switch_pairs": 0,
+  "distinct_terminal_O_transfers_prefix_length_at_most7": 76543,
+  "general_gadget_first_columns_checked": 75,
+  "literal_diamond_checks": 124,
+  "literal_one_move_checks": 375,
+  "mixed_switch_depth": 6,
+  "mixed_switch_distinct_outputs": 5460,
+  "mixed_switch_maximum_scalar_fiber": 2,
+  "new_restricted_transfers_by_minimum_prefix_length": [
+    1,
+    5,
+    24,
+    115,
+    551,
+    2639,
+    12643,
+    60566
+  ],
+  "open": "No universal radix synthesis, recursive interval coverage, or Chan-Pak proof.",
+  "physical_basis_weights": [
+    "-1/2",
+    "1/2",
+    "1/2",
+    "-1/2"
+  ],
+  "rank_three_switch_branches": 0,
+  "sample_seed_outputs": {
+    "JJLO": [
+      15,
+      0,
+      58,
+      9
+    ],
+    "JJLOZ": [
+      73,
+      9,
+      107,
+      9
+    ],
+    "JOLO": [
+      19,
+      0,
+      58,
+      9
+    ],
+    "JOLOZ": [
+      77,
+      9,
+      107,
+      9
+    ]
+  },
+  "sensitivity_words_through_length5": 3906,
+  "sidecar_buckets_with_multiple_scalar_rows": 353,
+  "status": "PASS; scoped identities and finite controls only",
+  "unordered_distinct_scalar_switch_pairs": 355
+}

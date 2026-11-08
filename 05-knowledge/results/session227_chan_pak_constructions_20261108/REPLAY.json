@@ -83,9 +83,65 @@
       "script": "escape_audit/independent_check.py",
       "sha256": "bddd8c7971617e4a4c217b0c1957cd37aeb66dd65eccdb20c3e13112b319a229",
       "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "receipt": "menu_boundary/CHECK.json",
+      "script": "menu_boundary/verify.py",
+      "sha256": "2f0b6f5d659a8b49c9e959715639d511909647945830e4b994854ac7af5a8d51",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "receipt": "menu_boundary/CHECK.json",
+      "script": "menu_boundary/verify.py",
+      "sha256": "2f0b6f5d659a8b49c9e959715639d511909647945830e4b994854ac7af5a8d51",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "receipt": "menu_audit/independent.json",
+      "script": "menu_audit/independent_check.py",
+      "sha256": "19c903d192be1baaedc3b2c44082d5f4ebbb700bbebca7b90790ec4eb098ed8a",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "receipt": "menu_audit/independent.json",
+      "script": "menu_audit/independent_check.py",
+      "sha256": "19c903d192be1baaedc3b2c44082d5f4ebbb700bbebca7b90790ec4eb098ed8a",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "receipt": "adaptive_arithmetic/CHECK.json",
+      "script": "adaptive_arithmetic/verify.py",
+      "sha256": "93606c401176eaa15e9ac791e9dbc3f4c2269dabbce0f57947677bfc579d740f",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "receipt": "adaptive_arithmetic/CHECK.json",
+      "script": "adaptive_arithmetic/verify.py",
+      "sha256": "93606c401176eaa15e9ac791e9dbc3f4c2269dabbce0f57947677bfc579d740f",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "receipt": "arithmetic_audit/INDEPENDENT.json",
+      "script": "arithmetic_audit/independent_check.py",
+      "sha256": "1454ba9d79b4892aff8ae2c462e203df17bd0af7f0a82d7f9b132016a982d5a0",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "receipt": "arithmetic_audit/INDEPENDENT.json",
+      "script": "arithmetic_audit/independent_check.py",
+      "sha256": "1454ba9d79b4892aff8ae2c462e203df17bd0af7f0a82d7f9b132016a982d5a0",
+      "status": "PASS"
     }
   ],
-  "runs": 12,
+  "runs": 20,
   "scope": "Exact replay of stated finite universes; all-order claims rest on the accompanying audited proofs.",
   "status": "PASS"
 }

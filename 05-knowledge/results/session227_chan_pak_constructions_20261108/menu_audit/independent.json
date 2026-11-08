@@ -1,0 +1,76 @@
+{
+  "all_O_large_U_seed_controls": 6,
+  "all_word_presentations": 224694,
+  "boundary_cap": 25,
+  "bounded_intercept_word_presentations": 2883,
+  "discarded_line_positive_candidate_checks": 372,
+  "distinct_bounded_counts_in_word_universe": 182,
+  "distinct_source_profiles_through_order_5": 46,
+  "envelope_pair_bound": 2506,
+  "even_g_line_congruence_checks": 260145,
+  "exact_limiting_ratio_checks": 3420,
+  "exact_ray_and_source_ratio_checks": 13110,
+  "finite_core_U_cap": 100,
+  "five_line_no_common_gap_odd_count_controls": 1000,
+  "implementation": "standalone independent permutation/bin counts and deletion recursion; no imports from producer",
+  "largest_exact_O_tail_exponent": 1000,
+  "literal_O_Z_and_OJJ_checks": 87,
+  "literal_extreme_ray_family_checks": 14,
+  "literal_graft_pairs_all_roots_source_through_3_gadget_through_4": 8265,
+  "mixed_menu_alphabet_size": 8,
+  "mixed_menu_bound": "4",
+  "mixed_menu_operation_bounds": {
+    "G0": "2",
+    "G1": "4",
+    "G2": "2",
+    "G3": "2",
+    "G4": "2",
+    "G5": "12/5",
+    "Z": "2"
+  },
+  "physical_seed_states": [
+    [
+      1,
+      0,
+      2,
+      1
+    ],
+    [
+      1,
+      0,
+      4,
+      1
+    ],
+    [
+      1,
+      0,
+      256,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      3,
+      1,
+      3,
+      1
+    ],
+    [
+      3,
+      3,
+      3,
+      3
+    ]
+  ],
+  "rooted_gadgets_through_order_4": 285,
+  "rooted_profile_presentations_through_order_5": 5405,
+  "scope": "Finite controls only. The proof, not enumeration, establishes arbitrary gadget orders and finite word lengths. No unrestricted finite-line or scalar-coverage conclusion.",
+  "sink_root_presentations": 361,
+  "stationary_Z_steps": 10000,
+  "status": "PASS",
+  "word_depth": 5
+}

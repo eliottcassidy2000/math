@@ -1,0 +1,26 @@
+{
+  "aggregate_replay": {
+    "command": "python3 -I -B verify_all.py",
+    "normal_and_optimized_runs": 20,
+    "receipt_sha256": "7ada75bc60a8efbbd6503c1b65466266c211c9746979caf180a4cb1155f995d4",
+    "status": "PASS"
+  },
+  "documentation": {
+    "command": "python3 -B agents/check_docs.py",
+    "output": "Agent-facing documentation check PASSED: bounded startup surface, frontmatter-derived frontier status, correction sentinels, and router smoke.",
+    "sparse_checkout_note": "Five unmodified prerequisite documentation files were materialized from verified HEAD.",
+    "status": "PASS"
+  },
+  "explicit_audit_hash_bindings": 27,
+  "local_markdown_targets_checked": 18,
+  "parsed_json_files_before_this_record": 32,
+  "python_ast_files": 12,
+  "scope": "Packet files and declared finite universes; all-order proofs independently audited. No unrelated repository test suite or external CI claim. Root SHA256SUMS binds this record and every packet file.",
+  "status": "PASS",
+  "subpacket_manifest_entries": 55,
+  "verified_utc": "2026-11-08T16:02:12.673900+00:00",
+  "whitespace": {
+    "command": "git diff --cached --check",
+    "status": "PASS"
+  }
+}

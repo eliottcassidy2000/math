@@ -1,56 +1,29 @@
 # Session227: physical constructions toward Chan–Pak
 
-**ACTIVE research checkpoint. Chan–Pak completeness remains OPEN.**
+**COMPLETE within stated scopes; independently audited. Chan–Pak completeness remains OPEN.**
 
-This packet continues the audited [Session226 structural packet](../session226_structural_continuation_20261108/README.md), [Session225 graft calculus](../session225_graft_recovery_20261108/PROOF.md), [Session225 chamber descent](../session225_root_descent_recovery_20261108/PROOF.md), and [Session224 birth atlas](../session224_first_occurrence_20261107/README.md).
+The target is actual tournament realization of every positive odd Hamilton-path count except 7 and 21. This session obtains the following scoped all-order results. It does not prove the target or claim a new unrestricted finite coverage cutoff.
 
-The target is actual tournament realization of every positive odd Hamilton-path count except 7 and 21. A scalar recurrence, feasible rational state, modular support, or a finite census is not a proof of that target.
+## Results
 
-## Live portfolio
+1. **The smallest escape from O/Z/J state histories.** A rooted graft with at least two gadget vertices leaves all three terminal faces exactly when both input roots are nonsinks. A source-rooted edge already suffices, despite rank three. Its image plane has an integer inverse, and iteration gives explicit strong cubic-recurrence families and root-start multiplication. This separates full states, not scalar spectra. [Proof](boundary_escape/PROOF.md), [audit](escape_audit/AUDIT.md).
 
-- **Anchor:** physical inverse descent and constructive arithmetic coverage.
-- **Niche:** variable, asymmetric block gadgets and retained path-cover coordinates.
-- **Wildcard:** graph-level graft recognition, deletion-ratio signs, and bounded-defect language structure.
+2. **Exact physical-state hulls, with a strict realization gap.** The closed cone has four facets; the affine integer lattice has index eight. Their intersection still contains the nonphysical point (1,0,6,1). Invertible grafts transport these exact hulls, and every order at least four has strong full-rank gadgets of both deletion-ratio signs. The exact scalar affine lattice is H+gcd(2H,Q)Z. Graph-image recognition needs a marked module: two explicit strong six-vertex graphs share state (37,7,43,9) and a physical numerical inverse, but only one is a graft image. [Proof](graft_images/PROOF.md), [audit](image_audit/AUDIT.md).
 
-Concept board: literal tournaments; four-state profiles; strong-component products; positive cone coordinates; physical inverse images; height-sensitive coverage.
+3. **Multi-root constructive calculus and sharp limits.** A root subset gives an exact positive path-cover expansion of sharp degree min(|R|,|A−R|)+1, an SCC strongness criterion, and the sharp bound H≥2^|B|+1. Interface size r needs exactly r+1 rational linear gadget coordinates. Fixed k-type block menus give only O((log X)^k) values; even arbitrary outer ordered sums give exp(O((log X)^(k/(k+1)))) values. Recursive adaptive grafting is outside that bound. Explicit strong families include −5·3^m+4·12^m+2·33^m, and binomial(2m,m) nonisomorphic graphs of order 7m+5 with the same entire rooted state and count 3·15^m+12·384^m. [Proof](multiroot/PROOF.md), [audit](construction_audit/AUDIT.md).
 
-The closest proved mechanisms are the four-state graft closure and its inverse, O/Z/J chamber returns, and exact ordered strong-component multiplication. Hostiles include the two H=9 birth classes, strong singular gadgets, and finite affine-line banks without a common modular gap. The corrected near miss is confusing the full rational image of an invertible operator with physical realizability. The least-used sidecars here are graph modules and positive defect coordinates.
+4. **Physical scalar switches and their propagation law.** Two literal word pairs change D while keeping E,U,d fixed. Even arbitrary mixtures of all four words have at most two scalar values in any final sidecar fiber, at every positive iteration depth. The D-column of any common graft-containing context is itself a physical rooted state. Consequently an existing pure-D gap is multiplied by an odd positive Hamilton count, preserving its exact 2-adic valuation; its U and d differences cannot vanish after the graft. This limits one proposed digit-building mechanism, not all adaptive constructions. [Proof](adaptive_arithmetic/PROOF.md), [audit](arithmetic_audit/AUDIT.md).
 
-## Verification contract
+5. **The bounded-intercept obstruction survives finite graft menus.** An exact optimal ratio κ_B controls U_after/D_after for every nonempty rooted gadget. Splitting off the final O-run extends the logarithmic bounded-intercept theorem and the inherited residue-gap line obstruction to any fixed finite gadget menu and arbitrary finite physical seed bank. The common missing odd residue remains essential; no unrestricted finite-line obstruction is claimed. [Proof](menu_boundary/PROOF.md), [audit](menu_audit/AUDIT.md).
 
-All new all-order statements require a written proof and independent adversarial audit. Finite controls will specify their exact universe and save portable code with matching normal/optimized receipts. No theorem IDs are reserved at this checkpoint. Publication will use small nonforce fast-forward checkpoints and verify each remote head. The stale shared checkout is left untouched.
+The exact cone does not characterize physical integer states. The graph collision does not rule out state-based existence proofs. Fixed-menu sparsity does not bound recursive adaptive source construction. The scalar-switch theorem concerns a common continuation, not branch-dependent choices. These distinctions are load-bearing.
 
-## Checkpoint 2: exact physical hulls and graph-image certificates
+## Verification and inheritance
 
-[Proof](graft_images/PROOF.md), [source comparison](graft_images/INHERITANCE.md), [independent audit](image_audit/AUDIT.md).
+[Verification scope](VERIFICATION.md) separates written proofs from finite controls. The portable [aggregate checker](verify_all.py) replays each producer and independent checker in both normal and optimized Python, comparing exact committed receipts. [REPLAY.json](REPLAY.json) records the run count and source bindings; `sha256sum -c SHA256SUMS` verifies final packet bytes. No external data or packages are required.
 
-- The closed conic hull of all rooted tournament four-states has exactly four facets. Their affine integer lattice has index eight. The integer point (1,0,6,1) satisfies both exact hull tests but is not physically realizable.
-- Every order at least four admits strong full-rank graft gadgets of both deletion-ratio signs. Exact hulls and lattice indexes transport through any prescribed invertible graft chain.
-- The scalar projection has the exact affine lattice H+gcd(2H,Q)Z. Full rank alone does not remove scalar congruence obstructions.
-- A graph is a graft image exactly when it contains the appropriate marked module. Two explicit strong six-vertex tournaments have the same state (37,7,43,9), with the same physical numerical inverse, but only one is a graph image.
+The work continues [Session224's birth atlas](../session224_first_occurrence_20261107/README.md), [Session225's graft law](../session225_graft_recovery_20261108/PROOF.md), and [Session226's inverse, cone bounds, and line obstruction](../session226_structural_continuation_20261108/README.md). Individual endpoint inequalities, the O/Z/J source grammar, and general path-cover substitution are explicitly credited rather than reclaimed. No literature-priority assertion is made.
 
-These are all-order proofs with separate finite controls. They do not characterize all physical integer states or establish scalar completeness. The minimal boundary-escape and adaptive arithmetic lanes remain active.
+Anchor: physical predecessor constructions. Niche: multi-root interfaces and retained cover coordinates. Wildcard: exact graph-image and scalar-sensitivity failures. The concept board was literal tournaments, four-state profiles, graph modules, positive cones, root-start complexity, and height-sensitive scalar existence.
 
-
-## Checkpoint 3: multi-root constructions and their exact limits
-
-[Proof](multiroot/PROOF.md), [independent audit](construction_audit/AUDIT.md).
-
-- Attaching a gadget through a root subset has an exact positive path-cover formula of sharp degree min(|R|,|A−R|)+1. Its strongness criterion depends only on the first and last strong components of the source.
-- Every strong such graft satisfies the sharp bound H≥2^|B|+1. Thus a recognized gadget in a count-N construction has at most floor(log2(N−1)) vertices.
-- Interfaces of size at most r need exactly r+1 rational linear gadget coordinates. This concerns linear summaries, not arbitrary encodings.
-- For a fixed finite source bank and k fixed gadget types, varying block multiplicities gives only O((log X)^k) distinct values. Even arbitrary outer ordered sums give at most exp(O((log X)^(k/(k+1)))) values. Recursive adaptive grafting is outside this obstruction.
-- Explicit strong families include −5·3^m+4·12^m+2·33^m. Another construction gives binomial(2m,m) nonisomorphic strong tournaments of order 7m+5, all sharing a complete rooted state and Hamilton count 3·15^m+12·384^m.
-
-The collision family shows that even all future common rooted-graft scalar observations lose exponentially many graph types. The finite-menu bound does not imply a general obstruction to Chan–Pak.
-
-
-## Checkpoint 4: the smallest graft escape
-
-[Proof](boundary_escape/PROOF.md), [independent audit](escape_audit/AUDIT.md).
-
-For every gadget with at least two vertices, the new rooted state lies outside all three terminal faces of every nonempty O/Z/J history exactly when both input roots are nonsinks. This permits arbitrary physical predecessor seeds and input-dependent words.
-
-A source-rooted directed edge already escapes. Its matrix has rank three, not four, and an integer inverse on its image plane D=2E+d. Repeated edge grafts give explicit strong tournaments, double the root-start count each time, and obey a cubic recurrence; one extra J closes the counts 3,13,61,289,1371,... . These are physical construction statements, not a new scalar coverage range. In particular the escaping state (5,1,9,3) and an old-language state (5,1,5,1) have the same Hamilton count.
-
-The [portable aggregate checker](verify_all.py) currently reproduces six producer/independent checkers in normal and optimized modes, with twelve exact receipt matches in [REPLAY.json](REPLAY.json). Adaptive arithmetic and extension of the line obstruction to finite graft menus are still under investigation.
+[Remaining proof obligations and tested stopping reasons](NEXT_STEPS.md) identify what an actual all-odd existence proof still needs. The session's short transfer search is FINITE-EXACT evidence for its stated universe, not a proof against longer radix constructions.
