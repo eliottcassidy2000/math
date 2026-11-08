@@ -1,6 +1,6 @@
 # Session228: recursive physical constructions toward Chan–Pak
 
-**Status: ACTIVE RESEARCH; the results listed below are independently audited. Chan–Pak completeness remains OPEN.**
+**Status: COMPLETE research session; the results below are independently audited. Chan–Pak completeness remains OPEN.**
 
 The target is an actual tournament for each positive odd Hamilton-path count other than 7 and 21. This session continues the audited Session224–227 packets, with a deliberately recursive construction portfolio rather than another fixed-menu scalar ansatz.
 
@@ -23,6 +23,16 @@ Promoted results have a self-contained proof or explicitly bounded experiment, p
 
 ## Audited results
 
+### Exponential strong fibers with gcd one
+
+For every t≥1, an explicit physical sidecar
+
+    E=d=19^t,   U=(700·512^t−207·19^t)/493
+
+has 2^t distinct Hamilton-path counts, all realized by strong tournaments on 7t+2 vertices, and the gcd of those displayed counts is 1. An order-six block with (H,Q2)=(19,256) admits two equal-alpha root masks. Exact superincreasing defect weights prove distinctness, while two selected differences and parity prove gcd one at every t. This removes the forced-common-factor weakness of the earlier exponential triangle family. [All-order construction](unsaturated_module/PROOF.md), [independent audit](unsaturated_audit/AUDIT.md).
+
+The accompanying separator lemma is stronger than the binary-compatible version below: arbitrary block transfers preserve a three-dimensional defect-image space, and a singleton anywhere between defects sends it into their common two-dimensional kernel. Thus multi-defect terms vanish even across nonbinary baselines. The displayed fibers are still sparse; gcd one does not imply a prime, an interval, or arbitrary-target coverage.
+
 ### Finite physical-state membership at every deletion level
 
 Every actual rooted four-state (D,E,U,d) has a bounded-order representative preserving all four coordinates. When d>1 and U>d, the elementary bound is d+floor(log2(U−d))+2; sink and d=1 boundaries have smaller explicit bounds. The proof removes only inactive singleton source components and uses the first root-path activation to bound the remaining suffix. Consequently physical four-state membership is decidable by a finite exhaustive search, and every specified invertible rational physical graft has a terminating numerical-state inverse test. This is an existence algorithm, not an efficient or size-decreasing induction, and not graph recognition. [Proof](physical_state/PROOF.md), [independent audit](physical_state_audit/AUDIT.md).
@@ -33,7 +43,7 @@ For each r>=2, an explicit mobile-triangle construction gives 2r−2 distinct Ha
 
 [All-order proof and exact source checks](mobile_triangle/PROOF.md), [independent audit](mobile_audit/AUDIT.md). The proof is preserved at its audit freeze; its final status is **PROVED, independently audited PASS**. The independent checker rebuilds literal graphs and the local transfer rather than importing the producer. Both normal and optimized receipts have been replayed after packaging.
 
-This is a branch-dependent graph operation outside Session227's four-word menu and common-context scope, not a contradiction of either inherited theorem. Further inverse and recursive work remains active.
+This is a branch-dependent graph operation outside Session227's four-word menu and common-context scope, not a contradiction of either inherited theorem. The inverse and recursive results below retain their stated finite and all-order scopes.
 
 ### Exact low-deletion membership and strong exponential fibers
 
@@ -65,8 +75,8 @@ For t triangle deletion blocks this gives 3^max(t−2,0), sharp for every t≥2 
 
 ## Reproduction
 
-The portable [aggregate verifier](verify_all.py) replays every included canonical producer and independent checker in normal and optimized Python, requiring byte-for-byte equality with their receipts. The current [replay](REPLAY.json) contains 34 passing runs. All-order claims follow from written proofs; finite experiments remain explicitly scoped. Producer proofs remain at their audit freeze, so historical “audit requested” labels are superseded by the linked independent PASS reports. The final verification and a further unsaturated-module construction are still being completed.
+The portable [aggregate verifier](verify_all.py) replays every included canonical producer and independent checker in normal and optimized Python, requiring byte-for-byte equality with their receipts. The current [replay](REPLAY.json) contains 38 passing runs. All-order claims follow from written proofs; finite experiments remain explicitly scoped. Producer proofs remain at their audit freeze, so historical “audit requested” labels are superseded by the linked independent PASS reports. See the [verification record](VERIFICATION.md), [session synthesis and next questions](SYNTHESIS.md), and [checkpoint record](PUBLICATION.md).
 
 ## Current boundary
 
-No all-odd realization theorem, new unrestricted finite cutoff, or classification of physical integer states is claimed. The session is not complete until the final verification and publication record says so.
+No all-odd realization theorem, new unrestricted finite cutoff, efficient arbitrary-state classifier, or all-target inverse/descent theorem is claimed. Exact finite physical-state membership is proved, but turning that decision procedure and these constructions into a uniform existence theorem remains open. Session228 has ended after final verification and publication.

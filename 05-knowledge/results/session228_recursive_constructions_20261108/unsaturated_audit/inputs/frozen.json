@@ -1,0 +1,1 @@
+{"adjacency":[40,1,3,6,15,30],"root_out_masks":[17,40],"negative_adjacency":[8,1,3,6],"construction":"root plus ordered blocks singleton1, B_bit0, singleton1, B_bit1, ..., B_bit(t-1), singleton0; earlier blocks dominate later; mask bits mark root out-neighbors"}

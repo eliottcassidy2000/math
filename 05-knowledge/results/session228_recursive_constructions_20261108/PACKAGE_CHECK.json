@@ -1,0 +1,53 @@
+{
+  "authored_local_markdown_destinations": 32,
+  "frozen_input_markdown_excluded_from_link_check": 14,
+  "manifests": [
+    {
+      "entries": 137,
+      "path": "SHA256SUMS"
+    },
+    {
+      "entries": 4,
+      "path": "coprime_audit/SHA256SUMS"
+    },
+    {
+      "entries": 9,
+      "path": "cyclic_audit/SHA256SUMS"
+    },
+    {
+      "entries": 5,
+      "path": "cyclic_inverse/SHA256SUMS"
+    },
+    {
+      "entries": 12,
+      "path": "mobile_audit/SHA256SUMS"
+    },
+    {
+      "entries": 7,
+      "path": "mobile_audit/divisibility/SHA256SUMS"
+    },
+    {
+      "entries": 7,
+      "path": "mobile_audit/extensions/SHA256SUMS"
+    },
+    {
+      "entries": 5,
+      "path": "physical_state/SHA256SUMS"
+    },
+    {
+      "entries": 11,
+      "path": "physical_state_audit/SHA256SUMS"
+    },
+    {
+      "entries": 12,
+      "path": "recursive_audit/SHA256SUMS"
+    },
+    {
+      "entries": 6,
+      "path": "unsaturated_audit/SHA256SUMS"
+    }
+  ],
+  "python_syntax_files": 31,
+  "root_manifest_sha256": "b2268bae14b5f1afcb46990e151bf765b38fd89a0bd683560caae9f40035ae6a",
+  "status": "PASS"
+}

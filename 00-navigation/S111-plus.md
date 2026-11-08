@@ -112,4 +112,4 @@ individual session routes preserve scope and remaining open obligations.
 
 [Session227](S227.md): COMPLETE; independently audited minimal graft escape, exact physical hulls and graph images, multi-root calculus and collision families, scalar switches, and fixed-menu line boundaries. Chan–Pak remains OPEN.
 
-[Session228](S228.md): ACTIVE; independently audited physical-state membership bounds, strong exponential and coprime fibers, universal SCC divisibility, physical cyclic inverses, and a complete recursive target compiler. Chan–Pak remains OPEN.
+[Session228](S228.md): COMPLETE; exponential strong gcd-one fibers, arbitrary-state finite membership bounds, universal SCC divisibility, physical cyclic inverses, and an exact recursive target compiler. Chan–Pak remains OPEN.

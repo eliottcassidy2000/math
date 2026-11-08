@@ -25,6 +25,8 @@ CASES = [
     ('mobile_triangle/verify_general_divisibility.py', 'mobile_triangle/GENERAL_DIVISIBILITY_CHECK.json'),
     ('mobile_audit/divisibility/check.py', 'mobile_audit/divisibility/normal.json'),
     ('coprime_audit/verify.py', 'coprime_audit/CHECK.json'),
+    ('unsaturated_module/verify.py', 'unsaturated_module/CHECK.json'),
+    ('unsaturated_audit/verify.py', 'unsaturated_audit/normal.json'),
 ]
 
 def main():
