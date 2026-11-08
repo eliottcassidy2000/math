@@ -1,0 +1,185 @@
+{
+  "arbitrary_integer_generator_controls": 1875,
+  "family": [
+    {
+      "closed_h": 3,
+      "h": 1,
+      "literal_vertices": 2,
+      "m": 0
+    },
+    {
+      "closed_h": 13,
+      "h": 5,
+      "literal_vertices": 4,
+      "m": 1
+    },
+    {
+      "closed_h": 61,
+      "h": 25,
+      "literal_vertices": 6,
+      "m": 2
+    },
+    {
+      "closed_h": 289,
+      "h": 119,
+      "literal_vertices": 8,
+      "m": 3
+    },
+    {
+      "closed_h": 1371,
+      "h": 565,
+      "m": 4
+    },
+    {
+      "closed_h": 6505,
+      "h": 2681,
+      "m": 5
+    },
+    {
+      "closed_h": 30865,
+      "h": 12721,
+      "m": 6
+    }
+  ],
+  "graft_controls": {
+    "escaping_pairs": 3969,
+    "gadget_count": 75,
+    "nonsingleton_gadget_pairs": 5550,
+    "old_and_gadget_nonsink_cases": {
+      "False,False": 132,
+      "False,True": 756,
+      "True,False": 693,
+      "True,True": 3969
+    },
+    "pairs": 5625,
+    "root_start_product_checks_including_singleton_exception": 5625,
+    "singleton_gadget_pairs": 75,
+    "source_count": 75,
+    "universe": "All labelled A and B of orders 1..4, each root fixed at label 0"
+  },
+  "literal_generator_controls": 225,
+  "minimal_escape": {
+    "J_output_rows": [
+      18,
+      28,
+      9,
+      17,
+      4
+    ],
+    "J_state": [
+      13,
+      4,
+      14,
+      5
+    ],
+    "f": 2,
+    "gadget_root": 0,
+    "gadget_rows": [
+      2,
+      0
+    ],
+    "output_root": 2,
+    "output_rows": [
+      2,
+      12,
+      9,
+      1
+    ],
+    "source": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "state": [
+      5,
+      1,
+      9,
+      3
+    ]
+  },
+  "restricted_inverse": [
+    [
+      -3,
+      2,
+      -5
+    ],
+    [
+      2,
+      -1,
+      3
+    ],
+    [
+      1,
+      -1,
+      3
+    ]
+  ],
+  "restricted_matrix": [
+    [
+      0,
+      1,
+      -1
+    ],
+    [
+      3,
+      4,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "restricted_plane_integer_controls": 125,
+  "scalar_hostile_JJt": [
+    5,
+    2,
+    6,
+    3
+  ],
+  "scope": "Exact finite controls, not an all-order proof or scalar-completeness claim; inherited universal bound is separately credited.",
+  "status": "PASS",
+  "two_vertex_matrix": [
+    [
+      1,
+      -1,
+      3,
+      -2
+    ],
+    [
+      0,
+      0,
+      1,
+      -1
+    ],
+    [
+      2,
+      -1,
+      4,
+      -1
+    ],
+    [
+      1,
+      -1,
+      1,
+      0
+    ]
+  ],
+  "two_vertex_matrix_controls": 75,
+  "universal_bound_controls": {
+    "binary_telescoping_cases_through_length7": 21845,
+    "outneighbor_pair_bounds": 7878,
+    "permutation_profile_and_start_crosschecks": 5405,
+    "root_outdegree_histogram": {
+      "0": 361,
+      "1": 1390,
+      "2": 2022,
+      "3": 1312,
+      "4": 320
+    },
+    "rooted_instances": 5405,
+    "universe": "All labelled tournaments of orders 1..5, every root"
+  }
+}

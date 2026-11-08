@@ -43,3 +43,14 @@ These are all-order proofs with separate finite controls. They do not characteri
 - Explicit strong families include −5·3^m+4·12^m+2·33^m. Another construction gives binomial(2m,m) nonisomorphic strong tournaments of order 7m+5, all sharing a complete rooted state and Hamilton count 3·15^m+12·384^m.
 
 The collision family shows that even all future common rooted-graft scalar observations lose exponentially many graph types. The finite-menu bound does not imply a general obstruction to Chan–Pak.
+
+
+## Checkpoint 4: the smallest graft escape
+
+[Proof](boundary_escape/PROOF.md), [independent audit](escape_audit/AUDIT.md).
+
+For every gadget with at least two vertices, the new rooted state lies outside all three terminal faces of every nonempty O/Z/J history exactly when both input roots are nonsinks. This permits arbitrary physical predecessor seeds and input-dependent words.
+
+A source-rooted directed edge already escapes. Its matrix has rank three, not four, and an integer inverse on its image plane D=2E+d. Repeated edge grafts give explicit strong tournaments, double the root-start count each time, and obey a cubic recurrence; one extra J closes the counts 3,13,61,289,1371,... . These are physical construction statements, not a new scalar coverage range. In particular the escaping state (5,1,9,3) and an old-language state (5,1,5,1) have the same Hamilton count.
+
+The [portable aggregate checker](verify_all.py) currently reproduces six producer/independent checkers in normal and optimized modes, with twelve exact receipt matches in [REPLAY.json](REPLAY.json). Adaptive arithmetic and extension of the line obstruction to finite graft menus are still under investigation.

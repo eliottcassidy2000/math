@@ -1,0 +1,11 @@
+{
+  "audit_scope": "Final PROOF.md including two-Z rerooting and minimal physical order four; source checker replayed in both normal and optimized modes.",
+  "producer_packet": "session227-descent",
+  "sha256": {
+    "CHECK.json": "ba43c61d99de1e77e9e3694d20ff87d0769c13748e74dabb56ac43a5cceeaf51",
+    "CHECK.optimized.json": "ba43c61d99de1e77e9e3694d20ff87d0769c13748e74dabb56ac43a5cceeaf51",
+    "PROOF.md": "721d3f867755d21542e7382c07bfe2c415a8bf7132b768e34537b168882a947c",
+    "verify.py": "2c3f737190fca818a6fcd015cd3f08ecc7ab60b92672cfae77a9a52620890e11"
+  },
+  "status": "PASS"
+}

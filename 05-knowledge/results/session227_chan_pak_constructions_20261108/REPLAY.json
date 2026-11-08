@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "optimized": false,
+      "receipt": "graft_images/CHECK.json",
+      "script": "graft_images/verify.py",
+      "sha256": "f1261e359f966e9f6fa0de406f7edbdc2869aa5acc3bad3e46437203d2a832d3",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "receipt": "graft_images/CHECK.json",
+      "script": "graft_images/verify.py",
+      "sha256": "f1261e359f966e9f6fa0de406f7edbdc2869aa5acc3bad3e46437203d2a832d3",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "receipt": "image_audit/independent.json",
+      "script": "image_audit/independent_check.py",
+      "sha256": "546d4b0d67202ba28bfb27b1e710aba8c89be25f3c447b92bf81b991fc3077b1",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "receipt": "image_audit/independent.json",
+      "script": "image_audit/independent_check.py",
+      "sha256": "546d4b0d67202ba28bfb27b1e710aba8c89be25f3c447b92bf81b991fc3077b1",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "receipt": "multiroot/CHECK.json",
+      "script": "multiroot/verify.py",
+      "sha256": "fdae4b708949c956cf0e27c509f8b4c28f9e077d62715f93658f6523988cf981",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "receipt": "multiroot/CHECK.json",
+      "script": "multiroot/verify.py",
+      "sha256": "fdae4b708949c956cf0e27c509f8b4c28f9e077d62715f93658f6523988cf981",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "receipt": "construction_audit/normal.json",
+      "script": "construction_audit/independent_multiroot_audit.py",
+      "sha256": "931818bee93e8198838c6861eea026c2793a1c3fbaed9723aed5999c9f072626",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "receipt": "construction_audit/normal.json",
+      "script": "construction_audit/independent_multiroot_audit.py",
+      "sha256": "931818bee93e8198838c6861eea026c2793a1c3fbaed9723aed5999c9f072626",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "receipt": "boundary_escape/CHECK.json",
+      "script": "boundary_escape/verify.py",
+      "sha256": "ba43c61d99de1e77e9e3694d20ff87d0769c13748e74dabb56ac43a5cceeaf51",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "receipt": "boundary_escape/CHECK.json",
+      "script": "boundary_escape/verify.py",
+      "sha256": "ba43c61d99de1e77e9e3694d20ff87d0769c13748e74dabb56ac43a5cceeaf51",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "receipt": "escape_audit/INDEPENDENT.json",
+      "script": "escape_audit/independent_check.py",
+      "sha256": "bddd8c7971617e4a4c217b0c1957cd37aeb66dd65eccdb20c3e13112b319a229",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "receipt": "escape_audit/INDEPENDENT.json",
+      "script": "escape_audit/independent_check.py",
+      "sha256": "bddd8c7971617e4a4c217b0c1957cd37aeb66dd65eccdb20c3e13112b319a229",
+      "status": "PASS"
+    }
+  ],
+  "runs": 12,
+  "scope": "Exact replay of stated finite universes; all-order claims rest on the accompanying audited proofs.",
+  "status": "PASS"
+}
