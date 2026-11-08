@@ -1,0 +1,233 @@
+{
+  "B4_affine_image_index": 64,
+  "B4_integer_image_index": 8,
+  "affine_lattice_generators": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      2,
+      1
+    ],
+    [
+      1,
+      0,
+      4,
+      1
+    ],
+    [
+      3,
+      1,
+      3,
+      1
+    ],
+    [
+      5,
+      1,
+      9,
+      3
+    ]
+  ],
+  "affine_lattice_index": 8,
+  "cone_lattice_nonphysical_source": [
+    1,
+    0,
+    6,
+    1
+  ],
+  "cone_rays": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      2,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "controls": {
+    "family_permutation_statistics": 18,
+    "family_rooted_stats": 75,
+    "integer_image_grid": 6561,
+    "literal_graft_pairs": 5625,
+    "literal_two_step_chains": 75,
+    "rooted_profiles": 5405,
+    "scalar_affine_lattice_gadgets": 75,
+    "transitive_limit_controls": 11
+  },
+  "family": [
+    {
+      "H": 3,
+      "Q": 12,
+      "block_delta": 0,
+      "m": 1,
+      "order": 3,
+      "singleton_delta": 0
+    },
+    {
+      "H": 5,
+      "Q": 32,
+      "block_delta": 36,
+      "m": 2,
+      "order": 4,
+      "singleton_delta": -8
+    },
+    {
+      "H": 9,
+      "Q": 84,
+      "block_delta": 132,
+      "m": 3,
+      "order": 5,
+      "singleton_delta": -60
+    },
+    {
+      "H": 17,
+      "Q": 224,
+      "block_delta": 588,
+      "m": 4,
+      "order": 6,
+      "singleton_delta": -320
+    },
+    {
+      "H": 33,
+      "Q": 612,
+      "block_delta": 3012,
+      "m": 5,
+      "order": 7,
+      "singleton_delta": -1500
+    },
+    {
+      "H": 65,
+      "Q": 1712,
+      "block_delta": 16716,
+      "m": 6,
+      "order": 8,
+      "singleton_delta": -6608
+    },
+    {
+      "H": 129,
+      "Q": 4884,
+      "block_delta": 96612,
+      "m": 7,
+      "order": 9,
+      "singleton_delta": -28140
+    },
+    {
+      "H": 257,
+      "Q": 14144,
+      "block_delta": 569388,
+      "m": 8,
+      "order": 10,
+      "singleton_delta": -117440
+    },
+    {
+      "H": 513,
+      "Q": 41412,
+      "block_delta": 3387012,
+      "m": 9,
+      "order": 11,
+      "singleton_delta": -483900
+    },
+    {
+      "H": 1025,
+      "Q": 122192,
+      "block_delta": 20237196,
+      "m": 10,
+      "order": 12,
+      "singleton_delta": -1977008
+    }
+  ],
+  "filtering": "None in the stated tournament universes; no strongness or image prefilter",
+  "graph_image_census": {
+    "5": {
+      "all_labelled_root0_tournaments": 1024,
+      "rooted_B4_images": 24
+    },
+    "6": {
+      "all_labelled_root0_tournaments": 32768,
+      "rooted_B4_images": 240
+    }
+  },
+  "no_all_odd_coverage_claim": true,
+  "physical_state_collision": {
+    "bad": [
+      18,
+      40,
+      3,
+      5,
+      14,
+      29
+    ],
+    "bad_root_containing_four_modules": [],
+    "common_inverse": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "good": [
+      18,
+      32,
+      3,
+      7,
+      14,
+      29
+    ],
+    "good_witness": [
+      [
+        0,
+        2,
+        3,
+        4
+      ],
+      1
+    ],
+    "root": 0,
+    "state": [
+      37,
+      7,
+      43,
+      9
+    ]
+  },
+  "rooted_profile_universe": {
+    "1": 1,
+    "2": 4,
+    "3": 24,
+    "4": 256,
+    "5": 5120
+  },
+  "scope": "Finite exact controls; all-order claims require PROOF.md",
+  "small_gadget_scalar_affine_moduli": {
+    "2": 57,
+    "6": 18
+  },
+  "status": "PASS",
+  "transported_nonphysical_source": [
+    145,
+    31,
+    159,
+    37
+  ]
+}

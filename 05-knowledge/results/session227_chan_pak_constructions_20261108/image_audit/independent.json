@@ -1,0 +1,298 @@
+{
+  "B4_input_output_grid": 625,
+  "bad_graph_module_obstructions": [
+    {
+      "module_candidate": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "obstruction": {
+        "beats": [
+          1,
+          2,
+          3
+        ],
+        "exterior": 4,
+        "loses_to": [
+          0
+        ]
+      }
+    },
+    {
+      "module_candidate": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "obstruction": {
+        "beats": [
+          0,
+          2
+        ],
+        "exterior": 3,
+        "loses_to": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "module_candidate": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "obstruction": {
+        "beats": [
+          0,
+          2
+        ],
+        "exterior": 3,
+        "loses_to": [
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "module_candidate": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "obstruction": {
+        "beats": [
+          0,
+          1
+        ],
+        "exterior": 2,
+        "loses_to": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "module_candidate": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "obstruction": {
+        "beats": [
+          0,
+          1
+        ],
+        "exterior": 2,
+        "loses_to": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "module_candidate": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "obstruction": {
+        "beats": [
+          0,
+          1
+        ],
+        "exterior": 2,
+        "loses_to": [
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "module_candidate": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "obstruction": {
+        "beats": [
+          3
+        ],
+        "exterior": 1,
+        "loses_to": [
+          0,
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "module_candidate": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "obstruction": {
+        "beats": [
+          3,
+          5
+        ],
+        "exterior": 1,
+        "loses_to": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "module_candidate": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "obstruction": {
+        "beats": [
+          5
+        ],
+        "exterior": 1,
+        "loses_to": [
+          0,
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "module_candidate": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "obstruction": {
+        "beats": [
+          3,
+          5
+        ],
+        "exterior": 1,
+        "loses_to": [
+          0,
+          4
+        ]
+      }
+    }
+  ],
+  "checks": 32425,
+  "cyclic_family_range": "m=1..9, every root",
+  "family": [
+    {
+      "H": 3,
+      "Q": 12,
+      "block_delta": 0,
+      "m": 1,
+      "singleton_delta": 0
+    },
+    {
+      "H": 5,
+      "Q": 32,
+      "block_delta": 36,
+      "m": 2,
+      "singleton_delta": -8
+    },
+    {
+      "H": 9,
+      "Q": 84,
+      "block_delta": 132,
+      "m": 3,
+      "singleton_delta": -60
+    },
+    {
+      "H": 17,
+      "Q": 224,
+      "block_delta": 588,
+      "m": 4,
+      "singleton_delta": -320
+    },
+    {
+      "H": 33,
+      "Q": 612,
+      "block_delta": 3012,
+      "m": 5,
+      "singleton_delta": -1500
+    },
+    {
+      "H": 65,
+      "Q": 1712,
+      "block_delta": 16716,
+      "m": 6,
+      "singleton_delta": -6608
+    },
+    {
+      "H": 129,
+      "Q": 4884,
+      "block_delta": 96612,
+      "m": 7,
+      "singleton_delta": -28140
+    },
+    {
+      "H": 257,
+      "Q": 14144,
+      "block_delta": 569388,
+      "m": 8,
+      "singleton_delta": -117440
+    },
+    {
+      "H": 513,
+      "Q": 41412,
+      "block_delta": 3387012,
+      "m": 9,
+      "singleton_delta": -483900
+    }
+  ],
+  "independent_method": "Recursive enumeration of all simple directed paths; ordered subset partitions; Leibniz determinants; no producer imports",
+  "lattice_witnesses": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      2,
+      1
+    ],
+    [
+      1,
+      0,
+      4,
+      1
+    ],
+    [
+      3,
+      1,
+      3,
+      1
+    ],
+    [
+      5,
+      1,
+      9,
+      3
+    ]
+  ],
+  "literal_graft_checks": 1140,
+  "status": "PASS",
+  "universe": "All 5405 labeled rooted tournaments at orders 1..5; no filters"
+}
