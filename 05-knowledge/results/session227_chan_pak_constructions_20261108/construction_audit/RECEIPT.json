@@ -1,0 +1,18 @@
+{
+  "commands": [
+    "python3 -I -B independent_multiroot_audit.py > normal.json",
+    "python3 -I -B -O independent_multiroot_audit.py > optimized.json",
+    "cmp normal.json optimized.json"
+  ],
+  "finite_check_total": 170515,
+  "hashes_sha256": {
+    "AUDIT.md": "8a35299796bb90d93dca17d936359e5c0c644daf86c5947e3070538858d49557",
+    "independent_multiroot_audit.py": "e8fcef992f937252be92f89e4321bdc59378df144f571c97594abc45754863fa",
+    "normal.json": "931818bee93e8198838c6861eea026c2793a1c3fbaed9723aed5999c9f072626",
+    "optimized.json": "931818bee93e8198838c6861eea026c2793a1c3fbaed9723aed5999c9f072626"
+  },
+  "independent": true,
+  "normal_optimized_byte_identical": true,
+  "scope": "Literal graph, rooted-state and coefficient verification in the declared finite universes. All-order claims are justified in AUDIT.md, not inferred from the census.",
+  "status": "PASS"
+}

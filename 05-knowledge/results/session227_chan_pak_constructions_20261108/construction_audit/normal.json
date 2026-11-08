@@ -1,0 +1,193 @@
+{
+  "checks": {
+    "balanced_shell_top_coefficient": 3,
+    "collision_F4_Q2_control": 1,
+    "collision_F4_control": 1,
+    "collision_nonisomorphism_certificate_count": 7,
+    "collision_recovered_SCC_word": 10,
+    "collision_unique_indegree_one": 10,
+    "collision_unique_outdegree_one": 10,
+    "constant_is_HA": 33866,
+    "degree_sharpness": 25,
+    "degree_sharpness_no_overflow": 25,
+    "hostile_degree_root_count_only": 1,
+    "hostile_empty_bins_in_positive_expansion": 1,
+    "hostile_nonempty_proper_roots_not_enough": 1,
+    "hostile_same_H_B_endpoint": 1,
+    "hostile_scalar_H_B_insufficient": 1,
+    "hostile_unordered_profile_without_factorial": 1,
+    "independent_skeleton_coefficients": 1098,
+    "literal_four_state_collision": 10,
+    "literal_four_state_collision_strong": 10,
+    "literal_graph_expansion": 12078,
+    "literal_linear_observer_response": 25,
+    "literal_menu_order_blindness": 27,
+    "literal_sharp_strong_growth_floor": 6270,
+    "literal_three_mode_family": 3,
+    "literal_three_mode_strong": 3,
+    "literal_variable_menu_transform": 27,
+    "minimal_linear_gadget_summary_rank": 4,
+    "newton_reconstruction": 12078,
+    "profile_H_endpoint": 1099,
+    "sharp_growth_equality_family": 10,
+    "sharp_growth_equality_strong": 10,
+    "source_sink_iff_arbitrary_B": 12078,
+    "source_sink_iff_singleton": 33866,
+    "strong_compatible_c2_positive": 22890,
+    "three_mode_shell_coefficients": 1,
+    "two_sided_degree_bound": 33866,
+    "universal_two_path_floor": 1098
+  },
+  "hostile_controls": {
+    "H_B_alone_insufficient": {
+      "H_B": 3,
+      "graft_H": [
+        99,
+        279
+      ]
+    },
+    "allow_empty_bins": {
+      "correct": 99,
+      "wrong": 213
+    },
+    "degree_r_not_r_plus_one": {
+      "c3": 2,
+      "r": 2
+    },
+    "nonempty_proper_R_without_SCC_condition": {
+      "A": [
+        6,
+        4,
+        0
+      ],
+      "R_mask": 2
+    },
+    "omit_ordering_factorial": {
+      "correct": 99,
+      "wrong": 59
+    }
+  },
+  "literal_count_digest_sha256": "96543283581319acd9c6e63725a16b8df5dffc929ed19dc98c46962165f272c3",
+  "menu_words": 27,
+  "minimal_linear_gadget_observer": [
+    {
+      "dimension": 2,
+      "literal_response_rank": 2,
+      "r": 1
+    },
+    {
+      "dimension": 3,
+      "literal_response_rank": 3,
+      "r": 2
+    },
+    {
+      "dimension": 4,
+      "literal_response_rank": 4,
+      "r": 3
+    },
+    {
+      "dimension": 5,
+      "literal_response_rank": 5,
+      "r": 4
+    }
+  ],
+  "optimization_safe": "All checks use explicit exceptions; no assert statements or producer imports.",
+  "physical_four_state_collision_families": [
+    {
+      "distinct_SCC_words": 1,
+      "ell": 0,
+      "k": 0,
+      "state": [
+        15,
+        3,
+        19,
+        5
+      ]
+    },
+    {
+      "distinct_SCC_words": 1,
+      "ell": 0,
+      "k": 1,
+      "state": [
+        153,
+        36,
+        186,
+        51
+      ]
+    },
+    {
+      "distinct_SCC_words": 1,
+      "ell": 1,
+      "k": 0,
+      "state": [
+        399,
+        96,
+        478,
+        133
+      ]
+    },
+    {
+      "distinct_SCC_words": 1,
+      "ell": 0,
+      "k": 2,
+      "state": [
+        1755,
+        432,
+        2070,
+        585
+      ]
+    },
+    {
+      "distinct_SCC_words": 2,
+      "ell": 1,
+      "k": 1,
+      "state": [
+        4653,
+        1152,
+        5466,
+        1551
+      ]
+    },
+    {
+      "distinct_SCC_words": 1,
+      "ell": 2,
+      "k": 0,
+      "state": [
+        12363,
+        3072,
+        14486,
+        4121
+      ]
+    },
+    {
+      "distinct_SCC_words": 3,
+      "ell": 1,
+      "k": 2,
+      "state": [
+        55431,
+        13824,
+        64782,
+        18477
+      ]
+    }
+  ],
+  "scope": "Finite-exact literal graph and independent coefficient audit; asymptotic density claim requires written proof, not this computation.",
+  "status": "PASS",
+  "three_mode_family": [
+    {
+      "H": 99,
+      "m": 1,
+      "vertices": 7
+    },
+    {
+      "H": 2709,
+      "m": 2,
+      "vertices": 10
+    },
+    {
+      "H": 78651,
+      "m": 3,
+      "vertices": 13
+    }
+  ]
+}
