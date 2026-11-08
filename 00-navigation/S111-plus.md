@@ -111,3 +111,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session226](S226.md): COMPLETE; exact graft rank/inverse and depth-two observation, arbitrary-seed bounded-intercept descent, strict modular valuation dependence and sharp density floor. Chan–Pak remains OPEN.
 
 [Session227](S227.md): COMPLETE; independently audited minimal graft escape, exact physical hulls and graph images, multi-root calculus and collision families, scalar switches, and fixed-menu line boundaries. Chan–Pak remains OPEN.
+
+[Session228](S228.md): ACTIVE; recursive physical polynomial constructions, two-input arithmetic, and graph-level sidecar fibers. No new theorem claimed at initialization; Chan–Pak remains OPEN.
