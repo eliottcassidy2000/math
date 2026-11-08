@@ -1,0 +1,43 @@
+{
+  "canonical_candidates_M1_to128": 905,
+  "labelled_tournaments_root0_orders1_to6": 33867,
+  "membership_controls": {
+    "1": 4283,
+    "3": 4112
+  },
+  "sha256": {
+    "MEMBERSHIP.md": "e12ac5ac75f418b841acf301444f64f9436d6be3edb624095d8e6310cce2c879",
+    "STRONG.md": "3695b28f289a3a5c1ec02eaa69deac9b3228c8f1d4c37b2fb60acf743c77a671",
+    "verify_membership.py": "bbdcfdeb096c674e80efbaa2f7cbb57f6de1363bc1a81a0450291be63c06d041"
+  },
+  "status": "PASS",
+  "strong_controls": [
+    {
+      "r": 3,
+      "scalars": [
+        23,
+        29
+      ]
+    },
+    {
+      "r": 4,
+      "scalars": [
+        89,
+        95,
+        83,
+        107
+      ]
+    },
+    {
+      "r": 5,
+      "scalars": [
+        347,
+        353,
+        341,
+        365,
+        317,
+        413
+      ]
+    }
+  ]
+}

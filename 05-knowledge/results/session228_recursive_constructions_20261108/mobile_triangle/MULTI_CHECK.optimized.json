@@ -1,0 +1,119 @@
+{
+  "adjacent_hostile": {
+    "actual": 41,
+    "false_additive_prediction": 39
+  },
+  "base_controls": 50,
+  "literal_profiles": 16,
+  "selected_fibers": [
+    {
+      "cardinality": 2,
+      "maximum_D": 1439,
+      "minimum_D": 1379,
+      "r": 6,
+      "t": 1
+    },
+    {
+      "cardinality": 1,
+      "maximum_D": 4323,
+      "minimum_D": 4323,
+      "r": 6,
+      "t": 2
+    },
+    {
+      "cardinality": 4,
+      "maximum_D": 365927,
+      "minimum_D": 349547,
+      "r": 10,
+      "t": 1
+    },
+    {
+      "cardinality": 6,
+      "maximum_D": 1100847,
+      "minimum_D": 1048827,
+      "r": 10,
+      "t": 2
+    },
+    {
+      "cardinality": 4,
+      "maximum_D": 3303099,
+      "minimum_D": 3155679,
+      "r": 10,
+      "t": 3
+    },
+    {
+      "cardinality": 1,
+      "maximum_D": 9909351,
+      "minimum_D": 9909351,
+      "r": 10,
+      "t": 4
+    },
+    {
+      "cardinality": 8,
+      "maximum_D": 23980234103,
+      "minimum_D": 22906492283,
+      "r": 18,
+      "t": 1
+    },
+    {
+      "cardinality": 28,
+      "maximum_D": 72142028895,
+      "minimum_D": 68719477035,
+      "r": 18,
+      "t": 2
+    },
+    {
+      "cardinality": 56,
+      "maximum_D": 216463835403,
+      "minimum_D": 206158440303,
+      "r": 18,
+      "t": 3
+    },
+    {
+      "cardinality": 70,
+      "maximum_D": 649398584043,
+      "minimum_D": 618475763223,
+      "r": 18,
+      "t": 4
+    },
+    {
+      "cardinality": 56,
+      "maximum_D": 1948197079071,
+      "minimum_D": 1855448523171,
+      "r": 18,
+      "t": 5
+    },
+    {
+      "cardinality": 28,
+      "maximum_D": 5844591485559,
+      "minimum_D": 5567364784899,
+      "r": 18,
+      "t": 6
+    },
+    {
+      "cardinality": 8,
+      "maximum_D": 17533774501875,
+      "minimum_D": 16751016715095,
+      "r": 18,
+      "t": 7
+    },
+    {
+      "cardinality": 1,
+      "maximum_D": 52601323509999,
+      "minimum_D": 52601323509999,
+      "r": 18,
+      "t": 8
+    }
+  ],
+  "separated_transfer_controls": 1004,
+  "sha256": {
+    "MEMBERSHIP.md": "e12ac5ac75f418b841acf301444f64f9436d6be3edb624095d8e6310cce2c879",
+    "MULTI.md": "f296325560128406c31a9d11aad20ec39ff9ece6ebbd7992ab488e8e637acf7a",
+    "PROOF.md": "6f3f2d038053bf50327d22b1775555000effab2cee28b3cdc88fdf25c495f28c",
+    "STRONG.md": "3695b28f289a3a5c1ec02eaa69deac9b3228c8f1d4c37b2fb60acf743c77a671",
+    "inherited.py": "0af3e1fe5bffeb0a423ec5684d84c306086e76d46ad31133700f9eac2d1ae3d2",
+    "transfer.py": "b5bedced5f7e2d33a3563b9f23927e421e6ad0402f237f5e9da97ebffbbe9b8a",
+    "verify_multi.py": "03311dacd954c1bbbb5f4641d1c62e4df7dbbcdc24f0bb08cfc16611655271f5"
+  },
+  "status": "PASS"
+}

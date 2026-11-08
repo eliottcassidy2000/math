@@ -1,0 +1,20 @@
+{
+  "F_A_h_F_zero_h0_to4": [
+    false,
+    true,
+    true,
+    true,
+    true
+  ],
+  "adjacent_01_triangle_actual_and_naive": [
+    41,
+    39
+  ],
+  "maximum_fixed_t_fiber_checked": 252,
+  "multi_literal_and_strong_pairs": 8,
+  "multi_transfer_cases": 3068,
+  "r_max": 21,
+  "scope": "Separated mobile modules only; no interval or Chan-Pak completeness.",
+  "status": "PASS",
+  "strong_single_literal_profiles": 20
+}

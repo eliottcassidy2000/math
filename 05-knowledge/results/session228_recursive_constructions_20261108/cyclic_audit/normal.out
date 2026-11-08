@@ -1,0 +1,97 @@
+{
+  "U_convention": "empty first component allowed; second nonempty and root-start",
+  "complete_scalar_image_le_64": [
+    3,
+    5,
+    9,
+    11,
+    15,
+    17,
+    23,
+    27,
+    33,
+    37,
+    47,
+    51
+  ],
+  "distinct_tested_states": 25,
+  "hostile_formal_state": [
+    7,
+    1,
+    7,
+    1
+  ],
+  "inverse_pair_combinations": 225,
+  "literal_cyclic_pairs": 505,
+  "literal_factor_tournaments": 1099,
+  "physical_hostile_state": [
+    9,
+    3,
+    9,
+    3
+  ],
+  "physical_hostile_strong": true,
+  "physical_pair_bank": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      14
+    ],
+    [
+      1,
+      30
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      18
+    ],
+    [
+      3,
+      42
+    ],
+    [
+      5,
+      22
+    ],
+    [
+      5,
+      54
+    ],
+    [
+      9,
+      66
+    ],
+    [
+      11,
+      78
+    ],
+    [
+      13,
+      78
+    ],
+    [
+      15,
+      78
+    ],
+    [
+      15,
+      90
+    ]
+  ],
+  "status": "PASS"
+}

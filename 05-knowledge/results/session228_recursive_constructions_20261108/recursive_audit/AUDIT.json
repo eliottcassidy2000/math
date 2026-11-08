@@ -1,0 +1,104 @@
+{
+  "collar_chain": [
+    1,
+    17,
+    241,
+    4001
+  ],
+  "collision_two_collar_counts": [
+    150831,
+    155151
+  ],
+  "depth_histogram": {
+    "0": 79,
+    "1": 390,
+    "2": 107,
+    "3": 1
+  },
+  "independent_method": "canonical set partitions + endpoint recursion; Newton finite differences; both operand orders; forward multiplicative closure",
+  "input_sha256": {
+    "CHECK.json": "841ea0aaba291091a9fc1a3c66319016e998eddde00fa298d4af73e01b395dd1",
+    "CHECK.optimized.json": "841ea0aaba291091a9fc1a3c66319016e998eddde00fa298d4af73e01b395dd1",
+    "PROOF.md": "394a6876042ddc7d0e5725c2aadd831198d3e46aaf415dae923b958180bec208",
+    "README.md": "30a784b7ada07acf979b64241f55338a30da6528889ef0ef20c3c3f090b78480",
+    "verify.py": "b7d8480595d577c0a7f32fdf50428d8e743f28a031a5e585c47b3f6a059461a4"
+  },
+  "labelled_seeds": 1099,
+  "large_seed_depth_control": "PASS",
+  "literal_binary_join_and_cycle_checks": 242,
+  "outer_padding": [
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      8,
+      3
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      10,
+      3
+    ],
+    [
+      11,
+      3
+    ],
+    [
+      12,
+      3
+    ],
+    [
+      13,
+      3
+    ],
+    [
+      14,
+      3
+    ]
+  ],
+  "profiles_by_order": [
+    1,
+    1,
+    2,
+    3,
+    8,
+    14,
+    29,
+    63,
+    139,
+    304,
+    489,
+    709,
+    1032
+  ],
+  "scalar_count": 577,
+  "scalar_depth_sha256": "7c895b5f3a40b78ab702a2d63b0cd43daccc6fe39f4d353006f98c331b44fa50",
+  "seed_profiles": 15,
+  "smallest_by_depth": {
+    "0": 1,
+    "1": 17,
+    "2": 241,
+    "3": 4001
+  },
+  "status": "PASS"
+}

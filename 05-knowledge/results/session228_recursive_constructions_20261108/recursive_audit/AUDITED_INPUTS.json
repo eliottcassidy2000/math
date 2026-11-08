@@ -1,0 +1,23 @@
+{
+  "inherited_sources": [
+    {
+      "repository_path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform.md",
+      "sha256": "532266c35af01e36dc64e0e9cad34f733917c10bd5440625fd05f65f01b55044"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-3166-falling-factorial-order-join-path-colour-transform.md",
+      "sha256": "01abd5e2a0bb1fc617d3f2649534acfb7b05f00cc4fe7573deb18302997c9198"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-3202-c3-repeated-join-moving-jet-formula-and-cfinite-obstruction.md",
+      "sha256": "448a2faad2424c84da0cb51b746d56c337f3f6fa15720165e6bc5a1a1fdfd4bc"
+    }
+  ],
+  "note": "Inherited theorem sources inspected during audit; not runtime dependencies. Source hashes identify audited bytes. Frozen producer inputs are bundled under inputs/ and hashed in AUDIT.json and SHA256SUMS.",
+  "observed_repository_commit": "9f9bac37c83c839cb5fd3fe2220991232a87b2b2",
+  "repository": "eliottcassidy2000/math"
+}

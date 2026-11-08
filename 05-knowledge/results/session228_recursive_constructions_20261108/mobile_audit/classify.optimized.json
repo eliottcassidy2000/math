@@ -1,0 +1,31 @@
+{
+  "d1_profiles": 443,
+  "d3_M0": [
+    [
+      3,
+      3
+    ]
+  ],
+  "d3_M1": [
+    [
+      3,
+      0
+    ],
+    [
+      5,
+      2
+    ]
+  ],
+  "d3_profiles": 272,
+  "labelled_root_zero_tournaments_orders_1_to_5": 1099,
+  "leading_zero_M_range": [
+    0,
+    127
+  ],
+  "leading_zero_counts": [
+    2,
+    7
+  ],
+  "padded_placements": 7308,
+  "status": "PASS"
+}

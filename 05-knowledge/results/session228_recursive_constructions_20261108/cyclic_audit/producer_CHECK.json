@@ -1,0 +1,111 @@
+{
+  "complete_binary_cyclic_counts_le_128": [
+    3,
+    5,
+    9,
+    11,
+    15,
+    17,
+    23,
+    27,
+    33,
+    37,
+    47,
+    51,
+    65,
+    69,
+    91,
+    93,
+    95,
+    99,
+    107,
+    111,
+    117,
+    123
+  ],
+  "distinct_pairs_through_6": 39,
+  "example_11": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "example_33": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      30
+    ]
+  ],
+  "first_missing_odd_other_than_1_7_21": 13,
+  "inverse_hostile_vectors": 94380,
+  "literal_binary_substitutions_through_factor_order_3": 121,
+  "missing_odds_le_127": [
+    1,
+    7,
+    13,
+    19,
+    21,
+    25,
+    29,
+    31,
+    35,
+    39,
+    41,
+    43,
+    45,
+    49,
+    53,
+    55,
+    57,
+    59,
+    61,
+    63,
+    67,
+    71,
+    73,
+    75,
+    77,
+    79,
+    81,
+    83,
+    85,
+    87,
+    89,
+    97,
+    101,
+    103,
+    105,
+    109,
+    113,
+    115,
+    119,
+    121,
+    125,
+    127
+  ],
+  "physical_state_outside_binary_image": [
+    9,
+    3,
+    9,
+    3
+  ],
+  "polynomial_evaluations_per_literal": 3,
+  "rooted_inverse_states_H_le_128": 47,
+  "status": "PASS",
+  "tournament_counts_by_order": [
+    1,
+    2,
+    8,
+    64,
+    1024,
+    32768
+  ]
+}
