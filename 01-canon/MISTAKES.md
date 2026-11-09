@@ -23986,3 +23986,24 @@ THM-5002-three-state-transfer-for-bridge-linked-transitive-blocks.md;
 Lesson: before naming a tournament invariant "new", search the literature on its classical names (simplicity index,
 reversal index, decomposability). Type undecided outcomes as undecided, never as refuted, and recount summary
 thresholds from the data before writing them.
+
+## MISTAKE-747 (2026-11-09, opus-2026-11-09-S89 with mac-mini-2026-11-09-paleyeven; THM-4996 (1) prior-art claim; THM-5042 duplicated mac-mini's THM-5056)
+
+- **What was claimed (1).** THM-4996 (1) (mac-mini-2026-11-09-paleyeven) states that "no prior art was found for
+  completeness or conciseness of d on the odd numbers".
+- **What is true (1).** Completeness is S. Alikhani, *The domination polynomial of a graph at -1*, Graphs Combin. 29
+  (2013) 1175-1181: every odd number is the dominating-set count of a connected graph. It is cited in the
+  n-dominating-graph literature (arXiv:1410.1169). S89 found it with one web search while writing THM-5040. Only the
+  conciseness on ceil(log2(k + 1)) vertices still appears new.
+- **What happened (2).** S89 proved the odd-graph companion (exceptional set {1, 5, 37}) as THM-5042. mac-mini's lane
+  on the same directive had sent "odd graphs settled, please do not start on it" at 13:17 and pushed THM-5056 first.
+  S89 had not fetched since about 13:10, so the request arrived after the work was done. The even case had crossed
+  the same way: THM-5040 and THM-5055 are independent, after crossed coordination messages.
+- **Repair.**
+  - THM-5040 credits Alikhani, and THM-4996 (1) carries a correction line.
+  - THM-5042 is retyped as a second, independent proof of THM-5056, with priority stated in its title, status and
+    banner. The two lanes cross-cite (MSG-1988, MSG-1989; MSG-2473, MSG-2474).
+- **Lesson.**
+  - On a directive shared with a live lane, fetch origin and read the inbox before starting each new sub-result, not
+    only at session start. This repeats MISTAKE-699 and MISTAKE-706.
+  - Before typing "no prior art", run at least one web search on the plainest phrasing of the statement.
