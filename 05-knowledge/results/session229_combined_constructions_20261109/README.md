@@ -19,3 +19,9 @@ Closest inherited mechanisms: equal-alpha separator calculus, exact graft transf
 Construction lanes and independent audits will have separate scripts and reports. All-order claims require written proofs; exact censuses retain their universe. Checkpoints preserve only this session's explicit files, leaving unrelated changes untouched. Source and output hashes bind the final packet; normal and optimized replays are required. The session will explicitly report its final status, including any remaining proof gap.
 
 Prior packets: [Session226](../session226_structural_continuation_20261108/README.md), [Session227](../session227_chan_pak_constructions_20261108/README.md), [Session228](../session228_recursive_constructions_20261108/README.md).
+
+## Audited checkpoint 2
+
+[Three-block escape and general template compiler](recursive/PROOF.md), with [independent audit](recursive_audit/REPORT.md): allowing all three cyclic blocks to vary preserves the sharp strong-node bound `n <= 2 + floor(log2(X-1))`. The old arbitrary-depth singleton-cyclic grammar misses 137, while the literal construction C3[TT2,TT2,TT3] attains it. Seventeen exact primitive escapes below4096 are independently checked against the complete old577-value language. A separate general finite cycle-certified template theorem bounds strong substitution nodes and gives a complete target/minimum-depth compiler. These are grammar advances, not previously unknown tournament counts or unrestricted spectrum coverage.
+
+Producer and independent checker were replayed from the assembled packet; normal and optimized matching receipts are included. Research continues on full recursive closure, interacting module defects, and unrestricted physical graft descent. Frozen first-checkpoint proof status wording is superseded only by its explicit independent PASS audit.
