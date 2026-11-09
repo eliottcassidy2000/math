@@ -1,44 +1,29 @@
-# Session229: combining constructions toward Chan–Pak
+# Session229: combined constructions toward Chan–Pak
 
-**ACTIVE research session. Chan–Pak completeness remains OPEN.**
+**COMPLETE research session; independently audited. Chan–Pak completeness remains OPEN.**
 
-Target: actual tournament realization of every positive odd Hamilton-path count other than 7 and 21. No new theorem, unrestricted coverage interval, or completion claim is made by this initial checkpoint.
+Target: actual tournament realization of every positive odd Hamilton-path count except 7 and 21. This session combines older binary core constructors with newer sidecar fibers, graft inverses, and recursive path-cover compilation. It proves scoped constructive results and precise barriers, not the all-odd theorem or a new unrestricted coverage cutoff.
 
-## Inheritance and live concept board
+## Strongest constructive results
 
-- **Anchor: physical inverse coverage.** Combine the strong graft laws of Sessions225–227 with Session228's terminating physical four-state membership test. The missing claim is an all-target physically admissible predecessor with a decreasing measure, not numeric cone feasibility.
-- **Niche: selectable sidecar fibers.** Start from Session228's exponential strong gcd-one H19/Q256 fibers. Their superincreasing scalar gaps do not cover intervals. Test interacting/multichoice modules and mixed-block realizations against that precise boundary.
-- **Wildcard: a larger recursive language.** Recover older path-cover and source mechanisms, extend the exact recursive compiler only where a new literal construction justifies it, and distinguish grammar membership from unrestricted spectrum membership.
+1. **Universal adjacent-count repairs.** Preserving the complete endpoint interface and changing only its T coordinate yields consecutive odd outputs under every common legal binary prefix/suffix. A five-vertex core supplies a pair; two six-vertex core topologies supply a triple. In particular, for every b≥0 there are literal strong tournaments with counts 258·2^b+21,258·2^b+23,258·2^b+25. The maximal fixed-interface run lengths through core orders 4, 5, 6 are exactly 1, 2, 3 in the complete labeled census. [Proof](dynamic/PROOF.md), [audit](dynamic_audit/AUDIT.md).
 
-The six concepts are literal rooted graphs, full path-cover profiles, SCC arithmetic, root-sidecar fibers, inverse target selection, and recursive grammar depth. Every claimed bridge must retain its graph witness and state exactly which coordinate is lost.
+2. **Unsaturated cores with unit switches.** The H95/Q1276 and H389/Q5600 cores have gcd one and full-interface gap-two switches. The first supplies strong adjacent-count pairs at every order≥9. Unsaturation belongs to the core and need not survive star closure: the H681 output has gcd(H,Q)=3. A rigid H29/Q320 block separately gives four equal-alpha transfers and 4^k distinct full transfers at a common one-sided coordinate. Transfer distinctness is not automatically scalar distinctness. [Proof](rich/PROOF.md), [audit](rich_audit/REVIEW.md).
 
-Closest inherited mechanisms: equal-alpha separator calculus, exact graft transfer, physical-state compression, and recursive cyclic substitution. Canonical hostiles: cone/lattice point (1,0,6,1), finite-menu gaps, same-low-moment/different-deep-response graphs, and saturated deletion-component divisibility. Corrected near miss: gcd one and exponentially many witnesses do not imply consecutive values or primes. Least-used sidecars: deeper cover moments and the full local endpoint-transfer defect.
+3. **Larger exact recursive language.** Arbitrary three-block C3 synthesis retains the sharp node bound H≥2^(n−2)+1. Its complete grammar through 4095 has 620 counts, compared with 577 previously; adding the inherited H19 seed gives 660. The explicit operation C3[TT2,TT2,A] escapes the old grammar at 137. A structural argument leaves 29 absent at every recursive depth in the enlarged language. A general finite cycle-certified template compiler is also proved. [Proof](recursive_complete/PROOF.md), [independent complete compiler](ternary_audit/REPORT.md).
 
-## Verification and publication plan
+## Exact calculus and remaining barriers
 
-Construction lanes and independent audits will have separate scripts and reports. All-order claims require written proofs; exact censuses retain their universe. Checkpoints preserve only this session's explicit files, leaving unrelated changes untouched. Source and output hashes bind the final packet; normal and optimized replays are required. The session will explicitly report its final status, including any remaining proof gap.
+- **Nearest-neighbor defects and bounded carries.** Every nonempty intervening block kills long-range equal-alpha interactions; only adjacent quadratic terms remain. Equal-U words have an exact finite carry alphabet, with alpha-word rigidity when gcd(H,Q)=1. Literal strong H9/Q84 carry witnesses have counts 13149 and 16719 at the same sidecar. All masks of the fixed H19 strong-flank template still give only O(X^(3/4)) values≤X; mixing the named H19/H9 blocks remains O(X^(15/16)). [Proof](overlap/PROOF.md), [audit](overlap_audit/REPORT.md).
+- **Finite all-gadget physical descent.** Every proper graft has explicit target bounds and strictly smaller source and gadget Hamilton counts. The inherited physical-state oracle yields a terminating scalar inverse over all gadgets, including singular ones. Prime targets normalize to reachable-root sources. This proves a finite decreasing search, not that every admissible target has a successful branch. [Proof](inverse/PROOF.md), [audit](inverse_audit/REPORT.md).
+- **Why simple amplification stops.** Repeating central unit switches scales their spacing by outside Hamilton counts. Two exact one-vertex extension censuses retain their gcd-one filters and show that the named seeds do not yield an unsaturated universal triple that way. The negative statements apply only to those explicit universes. [Extension proof](rich/EXTENSION_PROOF.md), [independent audit](extension_audit/REPORT.md).
 
-Prior packets: [Session226](../session226_structural_continuation_20261108/README.md), [Session227](../session227_chan_pak_constructions_20261108/README.md), [Session228](../session228_recursive_constructions_20261108/README.md).
+[Final synthesis](SYNTHESIS.md) explains the connections and remaining existence obligation. The next needed theorem is an overlap/coverage argument for the repair windows, a growing T interval that avoids product spacing, or an all-target physically admissible inverse selection. None is inferred from gcd one, large fibers, finite reachability, or scalar descent.
 
-## Audited checkpoint 2
+## Verification and final status
 
-[Three-block escape and general template compiler](recursive/PROOF.md), with [independent audit](recursive_audit/REPORT.md): allowing all three cyclic blocks to vary preserves the sharp strong-node bound `n <= 2 + floor(log2(X-1))`. The old arbitrary-depth singleton-cyclic grammar misses 137, while the literal construction C3[TT2,TT2,TT3] attains it. Seventeen exact primitive escapes below4096 are independently checked against the complete old577-value language. A separate general finite cycle-certified template theorem bounds strong substitution nodes and gives a complete target/minimum-depth compiler. These are grammar advances, not previously unknown tournament counts or unrestricted spectrum coverage.
+`python3 -I -B verify_all.py` replays 36 canonical checks: isolated normal/optimized Python and both C++ census implementations at -O0/-O3. All receipts match. `sha256sum -c SHA256SUMS` binds the final packet. [Verification scope](VERIFICATION.md), [replay receipt](REPLAY.json), [final scope review](FINAL_REVIEW.md), and [publication record](PUBLICATION.md) are included.
 
-Producer and independent checker were replayed from the assembled packet; normal and optimized matching receipts are included. Research continues on full recursive closure, interacting module defects, and unrestricted physical graft descent. Frozen first-checkpoint proof status wording is superseded only by its explicit independent PASS audit.
+The historical candidate/pending headings in inverse/PROOF.md and recursive_complete/PROOF.md are superseded by their linked independent PASS audits. The first-stage recursive packet remains frozen separately. MISTAKE-736 records the saturation and convention repairs. The concurrent first-realizer reservation was preserved, and a blank-line-only navigation adjustment restored the repository documentation budget without changing its mathematics.
 
-## Audited checkpoint 3
-
-- [Complete recursive comparison](recursive_complete/PROOF.md), [independent audit](ternary_audit/REPORT.md): full ternary closure gives620 values through4095, versus577 in the previous grammar. Adding the inherited H19 block gives660. The exact minimum-depth distributions and full-profile counts match independent implementations. A structural argument proves29 remains missing from this enlarged grammar at every depth.
-- [Physical carry and interaction laws](overlap/PROOF.md), [independent audit](overlap_audit/REPORT.md): every nonempty intervening block kills long-range equal-alpha defect interactions; all remaining scalar interactions are exactly nearest-neighbor quadratic terms. Equal-U words have a finite carry alphabet, with complete alpha rigidity when gcd(H,Q)=1. Actual strong H9/Q84 carry witnesses have counts13149 and16719 at the same sidecar. The entire all-mask H19 fixed-template family has only O(X^(3/4)) values≤X. Even arbitrary mixtures of H19 and H9 with the fixed strong flanks have O(X^(15/16)) values, by the audit's exact integer certificate.
-- [Uniform proper-graft descent](inverse/PROOF.md), [independent audit](inverse_audit/REPORT.md): every proper graft admits a finite all-gadget physical inverse search, with both input Hamilton counts strictly smaller than the target. The gadget order and source coordinates have explicit bounds; prime targets normalize to reachable-root sources. This supplies a finite decreasing inverse, not the missing theorem that every target has a successful branch.
-
-`python3 -I -B verify_all.py` replays both execution modes against committed receipts. The first-stage recursive files remain frozen; `recursive_complete` is the strengthened version. Chan–Pak remains OPEN. A second construction phase is exploring context-stable unit switches and richer unsaturated modules rather than stopping at these barriers.
-
-## Audited checkpoint 4: context-stable repairs
-
-The second phase supplies constructive repairs, not just larger finite searches:
-
-- [Universal pairs and triples](dynamic/PROOF.md), [audit](dynamic_audit/AUDIT.md): a five-vertex core produces two consecutive odd outputs under every legal binary prefix/suffix; two six-vertex core topologies produce three consecutive odd outputs in every common context. Complete labeled core/cut enumeration through six vertices gives maximum run lengths1,2,3 through orders4,5,6 respectively.
-- [Unsaturated unit switches and four choices](rich/PROOF.md), [audit](rich_audit/REVIEW.md): H95/Q1276 and H389/Q5600 cores have gcd one and preserve the complete endpoint interface while changing only the scalar correction by two. The first supplies strong adjacent-count pairs at every order≥9. The H29/Q320 module has four distinct equal-alpha transfers and an all-order4^k transfer amplification. Transfer distinctness is not automatically scalar distinctness.
-
-These constructions isolate the endpoint coordinate T that the old equal-alpha switches failed to control. Repetition scales the gaps by outside Hamilton counts, so fixed-width repairs do not become unbounded consecutive intervals for free. The exact inverse still needs an all-target physical branch-selection theorem. Late one-vertex extension tests are separately typed finite experiments and are not used to prove the positive constructions.
+The session has ended. Unrestricted Chan–Pak completeness remains OPEN.
