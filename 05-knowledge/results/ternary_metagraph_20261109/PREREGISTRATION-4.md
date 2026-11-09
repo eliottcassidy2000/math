@@ -29,3 +29,24 @@ Notation as in THM-4951 (5): n = 2c + 1. The blue lines are classified by the pa
 - **U3 (n = 15).** The estimated (1,3)-share exceeds 1/2 by more than 5 standard errors.
 
 Outcome: to be appended below without editing the predictions.
+
+## Outcome (appended after the runs; the predictions above are unedited)
+
+`mirror_sample.c` reproduces the exact values exhaustively: D is empty at n = 5, 7, 9; at n = 11, |D| = 94,208,
+|D_1| = 69,632 and |D_0| = 24,576. A 100,000-sample calibration run at n = 13 was made before the full runs. The full
+runs had 12 slices with fixed seeds (mirror_sample.out).
+
+- **U1 REFUTED.** At n = 13 (24,000,000 samples) the (1,3)-share is 1/2 - 0.000906, with standard error 0.000017
+  (z = -53.6). The excess changes sign: (1,3) lines are slightly FEWER than half.
+- **U2 CONFIRMED.** At n = 13 the estimated density |D| / 2^30 is 0.02744.
+- **U3 CONFIRMED.** At n = 15 (12,000,000 samples) the (1,3)-share is 1/2 + 0.001689, with standard error 0.000022
+  (z = +75.8).
+
+## Addendum (written and pushed after the outcome above, before any n = 17 run)
+
+The signs so far are + at n = 11, - at n = 13 and + at n = 15. This suggests sign = (-1)^(c+1) with n = 2c + 1.
+
+- **U4 (n = 17, c = 8).** The (1,3)-share is below 1/2 by more than 5 standard errors. Test: at least 2,400,000
+  uniform samples.
+
+Outcome: to be appended below without editing U4.
