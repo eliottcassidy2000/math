@@ -1,0 +1,9 @@
+{"span": 2, "alphabet": [1, 2, 3], "length": 1, "tested": 3, "modular_singular_candidates": []}
+{"span": 2, "alphabet": [1, 2, 3], "length": 2, "tested": 12, "modular_singular_candidates": []}
+{"span": 2, "alphabet": [1, 2, 3], "length": 3, "tested": 39, "modular_singular_candidates": []}
+{"span": 2, "alphabet": [1, 2, 3], "length": 4, "tested": 120, "modular_singular_candidates": []}
+{"span": 2, "alphabet": [1, 2, 3], "length": 5, "tested": 363, "modular_singular_candidates": []}
+{"span": 2, "alphabet": [1, 2, 3], "length": 6, "tested": 1092, "modular_singular_candidates": []}
+{"span": 2, "alphabet": [1, 2, 3], "length": 7, "tested": 3279, "modular_singular_candidates": []}
+{"span": 2, "alphabet": [1, 2, 3], "length": 8, "tested": 9840, "modular_singular_candidates": []}
+{"span": 2, "alphabet": [1, 2, 3], "length": 9, "tested": 29523, "modular_singular_candidates": []}

@@ -1,0 +1,24 @@
+{"input": "04-computation/experiments/ribbon_spectrum_20261104/span2_intrep.txt", "sha256": "9bd8ba8d80d975ea37aaa14de8b93120c120e6ab23208bb89e602a38907132fe", "dimension": 14, "mask_order": [0, 1, 2, 3]}
+{"input": "04-computation/experiments/ribbon_spectrum_20261104/span3_intrep.txt", "sha256": "0e1e72c81d24f7117f3d0763830e38c20181fafaedd18d5087ba3c7762a9cdea", "dimension": 62, "mask_order": [0, 1, 2, 4, 3, 5, 6, 7]}
+{"quotient": 2, "profile_dimension": 27, "quotient_dimension": 14, "identities": "PASS"}
+{"quotient": 3, "profile_dimension": 119, "quotient_dimension": 62, "identities": "PASS"}
+{"span": 2, "alphabet": [0, 1, 2, 3], "length": 1, "level_words": 4, "cumulative": 4, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 5, "certified_dot_product_bound": 70}
+{"span": 2, "alphabet": [0, 1, 2, 3], "length": 2, "level_words": 16, "cumulative": 20, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 15, "certified_dot_product_bound": 350}
+{"span": 2, "alphabet": [0, 1, 2, 3], "length": 3, "level_words": 64, "cumulative": 84, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 29, "certified_dot_product_bound": 1050}
+{"span": 2, "alphabet": [0, 1, 2, 3], "length": 4, "level_words": 256, "cumulative": 340, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 67, "certified_dot_product_bound": 2030}
+{"span": 2, "alphabet": [0, 1, 2, 3], "length": 5, "level_words": 1024, "cumulative": 1364, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 177, "certified_dot_product_bound": 4690}
+{"span": 2, "alphabet": [0, 1, 2, 3], "length": 6, "level_words": 4096, "cumulative": 5460, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 474, "certified_dot_product_bound": 12390}
+{"span": 3, "alphabet": [0, 1, 2, 3, 4, 5, 6, 7], "length": 1, "level_words": 8, "cumulative": 8, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 4, "certified_dot_product_bound": 248}
+{"span": 3, "alphabet": [0, 1, 2, 3, 4, 5, 6, 7], "length": 2, "level_words": 64, "cumulative": 72, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 11, "certified_dot_product_bound": 992}
+{"span": 3, "alphabet": [0, 1, 2, 3, 4, 5, 6, 7], "length": 3, "level_words": 512, "cumulative": 584, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 38, "certified_dot_product_bound": 2728}
+{"span": 2, "alphabet": [1, 2, 3], "length": 1, "level_words": 3, "cumulative": 3, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 5, "certified_dot_product_bound": 70}
+{"span": 2, "alphabet": [1, 2, 3], "length": 2, "level_words": 9, "cumulative": 12, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 15, "certified_dot_product_bound": 350}
+{"span": 2, "alphabet": [1, 2, 3], "length": 3, "level_words": 27, "cumulative": 39, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 29, "certified_dot_product_bound": 1050}
+{"span": 2, "alphabet": [1, 2, 3], "length": 4, "level_words": 81, "cumulative": 120, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 67, "certified_dot_product_bound": 2030}
+{"span": 2, "alphabet": [1, 2, 3], "length": 5, "level_words": 243, "cumulative": 363, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 177, "certified_dot_product_bound": 4690}
+{"span": 2, "alphabet": [1, 2, 3], "length": 6, "level_words": 729, "cumulative": 1092, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 474, "certified_dot_product_bound": 12390}
+{"span": 2, "alphabet": [1, 2, 3], "length": 7, "level_words": 2187, "cumulative": 3279, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 1232, "certified_dot_product_bound": 33180}
+{"span": 2, "alphabet": [1, 2, 3], "length": 8, "level_words": 6561, "cumulative": 9840, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 3144, "certified_dot_product_bound": 86240}
+{"span": 2, "alphabet": [1, 2, 3], "length": 9, "level_words": 19683, "cumulative": 29523, "modular_singular": {"2": 0, "4": 0, "8": 0}, "max_entry": 8015, "certified_dot_product_bound": 220080}
+{"hostile_word": [3, 1, 2, 3, 3, 3, 1, 2, 1], "charpoly": "x**14 - 971*x**13 - 1302*x**12 + 96*x**11", "stable_rank_Q": 3, "stable_rank_F2": 1, "status": "PASS"}
+{"positive_control": "tripling eigenvalue 3 detected", "status": "PASS"}

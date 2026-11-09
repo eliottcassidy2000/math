@@ -1,0 +1,96 @@
+{
+  "improved_floor_equalities": [
+    [
+      5,
+      1,
+      5,
+      9
+    ],
+    [
+      5,
+      2,
+      6,
+      9
+    ],
+    [
+      9,
+      3,
+      9,
+      15
+    ],
+    [
+      9,
+      4,
+      10,
+      15
+    ],
+    [
+      17,
+      8,
+      18,
+      27
+    ]
+  ],
+  "improved_floor_topology_checks": 748,
+  "labelled_rooted_graphs": 33867,
+  "literal_family_parameters": [
+    [
+      5,
+      2,
+      6,
+      9
+    ],
+    [
+      9,
+      4,
+      10,
+      15
+    ],
+    [
+      17,
+      8,
+      18,
+      27
+    ],
+    [
+      33,
+      16,
+      34,
+      51
+    ],
+    [
+      65,
+      32,
+      66,
+      99
+    ],
+    [
+      129,
+      64,
+      130,
+      195
+    ],
+    [
+      257,
+      128,
+      258,
+      387
+    ],
+    [
+      513,
+      256,
+      514,
+      771
+    ]
+  ],
+  "old_floor_topology_checks": 152,
+  "permutation_crosschecks": 1099,
+  "physical_triples": 254,
+  "scope": "independent finite exact controls; all-order classification audited separately",
+  "sharpened_transfer_pairs": 60198,
+  "sole_exit_cases": 5405,
+  "status": "PASS",
+  "transferred_equality_pairs": 35,
+  "two_input_transfer_pairs": 64516,
+  "zero_defect_nonsinks": 1598
+}

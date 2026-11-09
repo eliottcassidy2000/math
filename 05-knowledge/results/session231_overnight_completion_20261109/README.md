@@ -70,3 +70,40 @@ oracle is proved mathematically, not computationally exhausted.
 The frozen audit input manifest describes the submitted candidate header.
 Only its status and audit link were changed for publication, after PASS.
 Subsequent construction rounds and independent audits remain active.
+
+## Audited checkpoint 3: growing consecutive-odd intervals
+
+**PROVED.** For every k >= 0, a single physical interface supports the k+1
+consecutive odd counts D_k, D_k-2, ..., D_k-2k, where
+
+    D_k = (245051264 * 4096^k + 1602510*k + 1118023) / 24843.
+
+All witnesses are strong tournaments on 12k+13 vertices. The construction
+moves one eight-vertex core through two fixed twelve-bit singleton words;
+it does not repeat nontrivial cores. The common deletion core is saturated
+(h=45 and gcd(h,q)=45), which is explicitly allowed here. The exact local
+word identity and context law prove every k. Independent literal graph,
+seven-coordinate and six-state path-cover checks agree. The first baselines
+are 9909 and 40403039.
+
+[Compact theorem](fibers/SHORT_INTERVALS.md) ·
+[Standalone independent checker](fiber_audit/short12_audit.py).
+
+This supplies unbounded consecutive repair width, the mechanism missing
+from the earlier fixed-width fiber experiments. It does **not** select a
+baseline over every target: these displayed intervals are separated by
+exponential gaps. Universal Chan–Pak completeness remains OPEN.
+
+Also audited in this checkpoint:
+
+- [Sharper physical descent](descent/ROUND2.md): sole-exit zero-defect
+  classification, equality cases and an improved two-sided descent bound.
+  The independent census checks every labelled tournament through order six.
+- [Sparse-budget and ribbon results](ribbon/REPORT.md): an explicit
+  cutwidth-uniform sparse-back-arc kernel, all-order spectator obstruction,
+  and a precisely finite repeat-block spectral exclusion. The qualitative
+  bounded-budget sparsity mechanism is inherited, not new.
+
+Further arithmetic and target-placement rounds continue. Earlier proof
+candidates retained below their audited replacements are provenance, not
+claims of a complete proof.

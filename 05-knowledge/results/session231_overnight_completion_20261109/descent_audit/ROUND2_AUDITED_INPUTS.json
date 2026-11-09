@@ -1,0 +1,23 @@
+{
+  "session231-descent-audit/AUDIT.md": "7650d11c6b8d402eacfcfe60b1da48125992ac0ef9230a842f6264a9d9329a31",
+  "session231-descent-audit/AUDITED_INPUTS.json": "7b40b23498713b07315e6057561997f4aeb4404104a833d498b0ee8699f64207",
+  "session231-descent-audit/CHECK.json": "e5c9c0413903c830da52753af0017eec6cb2a470ecad0abc981e3c55138d2f59",
+  "session231-descent-audit/CHECK.optimized.json": "e5c9c0413903c830da52753af0017eec6cb2a470ecad0abc981e3c55138d2f59",
+  "session231-descent-audit/ROUND2_AUDIT.md": "e3a694e59cfbd1e5e781b074be27f39775287f524d6c62e58da483595fd54732",
+  "session231-descent-audit/ROUND2_CHECK.json": "e2403da4e2b83bb526dd79579adfceda1c306adc437ec521e707a94b12990e52",
+  "session231-descent-audit/ROUND2_CHECK.optimized.json": "e2403da4e2b83bb526dd79579adfceda1c306adc437ec521e707a94b12990e52",
+  "session231-descent-audit/check.py": "5234ae5002f62fb27f786f11d8391e1a8311b4729ccc8b619b3ab5c21fcdb974",
+  "session231-descent-audit/round2_check.py": "bfbf344f2d3933ae19830551a615b677cd50f5a4948660e88a946844bc9f4229",
+  "session231-physical-descent/CHECK.json": "33c187f25ded80a71cb2ff979b619d53e06904bfeaf82e0d405c46c32ccb0b8e",
+  "session231-physical-descent/CHECK.optimized.json": "33c187f25ded80a71cb2ff979b619d53e06904bfeaf82e0d405c46c32ccb0b8e",
+  "session231-physical-descent/PROOF.md": "82417db3d13a72e2d58958b17af833e4f0fd433300234a1e7cebd29ac4323baa",
+  "session231-physical-descent/README.md": "5dccb83eb04fb2476a1b6f147a4595d85d853c673a11bf3ebeca830c01d5fbc2",
+  "session231-physical-descent/ROUND2.md": "a4bea1c9eb2b0db24a422e5cae3bd0bad7720365c4dc21b3d988e33eb7c52590",
+  "session231-physical-descent/ROUND2_CHECK.json": "fd436724ef0c650b5b2e712de8d34af350fc600c3a98b9d9faa817c710b6381e",
+  "session231-physical-descent/ROUND2_CHECK.optimized.json": "fd436724ef0c650b5b2e712de8d34af350fc600c3a98b9d9faa817c710b6381e",
+  "session231-physical-descent/ROUND2_SHA256SUMS": "6836a6d233ccc361d8072f7b172caf59d9f7f67ee23dfbb23b259730c257a34d",
+  "session231-physical-descent/SHA256SUMS": "e7d67567f84e21c91baaa2f3163ebf726fb9af0bc5c7f6939bb312bda979fa31",
+  "session231-physical-descent/inherited.py": "9e834801a3dcaeb74a22a9fd7787d2bdf8c6c1b49e594f7177f0031bdfe088d5",
+  "session231-physical-descent/round2_verify.py": "aee8cec4b4ac5da5c490e0dd43a4b2b4438dcd0bd901266e8497121d03ce5631",
+  "session231-physical-descent/verify.py": "d6ecb84dded0b7bc18333f6885f74fbba42885e491a2f29901603b4268196ffd"
+}

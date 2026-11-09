@@ -1,0 +1,6 @@
+{
+  "tournaments_tested": 2366,
+  "orders": "2..7",
+  "back_arcs": "0..3",
+  "checks": "deletion monotonicity, neutral compression, single-arc induced control"
+}

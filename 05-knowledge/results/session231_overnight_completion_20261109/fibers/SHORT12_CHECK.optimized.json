@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "count": 1,
+      "first_bitlength": 14,
+      "first_mod_10000": 9909,
+      "k": 0,
+      "last_mod_10000": 9909,
+      "vertices": 13
+    },
+    {
+      "count": 2,
+      "first_bitlength": 26,
+      "first_mod_10000": 3039,
+      "k": 1,
+      "last_mod_10000": 3037,
+      "vertices": 25
+    },
+    {
+      "count": 3,
+      "first_bitlength": 38,
+      "first_mod_10000": 9369,
+      "k": 2,
+      "last_mod_10000": 9365,
+      "vertices": 37
+    },
+    {
+      "count": 4,
+      "first_bitlength": 50,
+      "first_mod_10000": 2899,
+      "k": 3,
+      "last_mod_10000": 2893,
+      "vertices": 49
+    },
+    {
+      "count": 5,
+      "first_bitlength": 62,
+      "first_mod_10000": 7629,
+      "k": 4,
+      "last_mod_10000": 7621,
+      "vertices": 61
+    },
+    {
+      "count": 6,
+      "first_bitlength": 74,
+      "first_mod_10000": 7559,
+      "k": 5,
+      "last_mod_10000": 7549,
+      "vertices": 73
+    },
+    {
+      "count": 7,
+      "first_bitlength": 86,
+      "first_mod_10000": 6689,
+      "k": 6,
+      "last_mod_10000": 6677,
+      "vertices": 85
+    },
+    {
+      "count": 8,
+      "first_bitlength": 98,
+      "first_mod_10000": 9019,
+      "k": 7,
+      "last_mod_10000": 9005,
+      "vertices": 97
+    },
+    {
+      "count": 9,
+      "first_bitlength": 110,
+      "first_mod_10000": 8549,
+      "k": 8,
+      "last_mod_10000": 8533,
+      "vertices": 109
+    }
+  ],
+  "core": [
+    45,
+    1440,
+    878,
+    577,
+    332,
+    25,
+    14
+  ],
+  "cycle_gain": -2,
+  "first_y": 1,
+  "last_x": 0,
+  "length": 12,
+  "status": "PASS",
+  "step": 2
+}
