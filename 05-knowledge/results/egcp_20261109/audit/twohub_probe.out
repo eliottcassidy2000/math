@@ -1,0 +1,6 @@
+variant 1 matches formula on all tests: False
+variant 2 matches formula on all tests: False
+variant 3 matches formula on all tests: False
+variant 4 matches formula on all tests: False
+variant 5 matches formula on all tests: False
+variant 6 matches formula on all tests: True

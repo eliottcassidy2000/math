@@ -1,0 +1,8 @@
+complement formula                       tested  300  failures 0
+Lemma 5 (E2-multi-join)                  tested  300  failures 0
+Lemma 7 (stable recursion)               tested  300  failures 0
+Lemma 8 (jump), even cases 206           tested  400  failures 0
+
+real	0m1.470s
+user	0m0.031s
+sys	0m0.015s

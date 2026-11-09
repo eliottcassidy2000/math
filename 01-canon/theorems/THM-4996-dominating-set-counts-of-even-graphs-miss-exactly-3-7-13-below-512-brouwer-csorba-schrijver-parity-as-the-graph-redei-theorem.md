@@ -7,9 +7,10 @@ status: >
   applied (MISTAKE-746): citations (Brouwer-Csorba-Schrijver; von Brömssen; Alikhani-Peng) and wording.
   - (1) PROVED, elementary: the cone recursion d(K_1 v G) = 2^|G| + d(G). It is the x = 1 case of the
     domination-polynomial join theorem of Alikhani-Peng. No prior art was found for completeness or conciseness of d
-    on the odd numbers. Correction (MISTAKE-747, opus-2026-11-09-S89): completeness is S. Alikhani, The domination
-    polynomial of a graph at -1, Graphs Combin. 29 (2013) 1175-1181 (every odd number is d of a connected graph);
-    the conciseness ceil(log2(k + 1)) remains new.
+    on the odd numbers. Correction (MISTAKE-747, opus-2026-11-09-S89, after its audit): both completeness and the
+    conciseness ceil(log2(k + 1)) are A. E. Brouwer, P. Csorba, A. Schrijver, The number of dominating sets of a
+    finite graph is odd, preprint 2009, Proposition 1.2 (same pad/cone induction as Lemma B1); restated as
+    Alikhani-Fatehi-Klavzar arXiv:1512.07514, Prop. 2.1(iii). (Alikhani, Graphs Combin. 29 (2013) concerns D(G, -1).)
   - (2) PROVED: PROOF.md Part B, Lemma B2; checked by audit P1 by brute force, including all 436 trees up to 11
     vertices.
   - (3) FINITE-EXACT: dom_even.c.

@@ -10,7 +10,7 @@ pure Python 3 with no dependencies. Run them from this directory.
 | `lemma_check.py` | Random tests of the complement formula and Lemmas 5, 7 and 8, including the evenness criterion of Lemma 8 in both directions. | `lemma_check.out` |
 | `proof_check.py N` | Walks every x through the case analysis of THM-5040 Section 4 for 10 <= n <= N and asserts each side condition. | `proof_check_24.out` |
 | `construct.py N S` | Builds explicit witnesses with the proof's own recursion and brute-forces d, evenness and order. It covers all delicate values plus S random values at each order 10..N, and all top-band graphs. | `construct_12.out` |
-| `cover.py N` | Independent closure under padding, cones, E_2/K_1/E_3 multi-joins, two-hub graphs, the top band and the leaf recursion. Compares E(n) with O(n), and E0(n) with the conjectured exact no-universal-vertex set. | `cover_25.out` |
+| `cover.py N` | Corroborating closure under padding, cones, E_2/K_1/E_3 multi-joins, two-hub graphs TH(G, t) (two non-adjacent hubs joined to G, t leaves at one hub; even iff G even except P_4), the top band and the leaf recursion. With `--notop` it still closes for n <= 25. Compares E(n) with O(n), and E0(n) with the conjectured exact no-universal-vertex set. | `cover_25.out` |
 | `odd_companion.py [dom511.out]` | THM-5042: re-verifies the six odd seeds (orders 8 and 9; an odd automorphism fixing a leaf), recomputes the exact odd-graph value sets for n <= 9 from the census, and brute-forces 65 odd witnesses at n = 10, 11. | `odd_companion.out` |
 | `tile_additivity.py` | THM-5041 (2a)-(2b): tile-wise additivity H(->) + H(<-) = H(<->) + H(missing), transpose invariance and loop invariance on 300 random matrices. | `tile_additivity.out` |
 | `e0search.c` | HYP-9610 (A): random search for even graphs without a universal vertex realising the values that cover.py's closure misses (`./e0search ITERS n SEED targets...`). All 18 misses at n = 10 and all 20 at n = 11 are realised. | `e0search_n10.out`, `e0search_n11.out`, `e0_closure_misses.txt` |
@@ -27,3 +27,10 @@ python base_extract.py even511.txt
 
 The census reproduces THM-4996 (3): connected graphs with d <= 511 number 1, 1, 2, 6, 21, 112, 853, 11,117, 261,080,
 199,053 and 1,855 on 1 to 11 vertices.
+
+**Independent audit** (`05-knowledge/results/egcp_20261109/audit/`). The audit shares no code with `egcp_lib.py`.
+- `indep_check.py` re-implements Section 4 and verifies all 7,934 values that need exactly n vertices for 10 <= n <= 14.
+- `indep_census.py` is an exhaustive census of all labelled graphs on <= 7 vertices.
+- `exhaustive_small.py` checks Lemma 7 for all 16,824 cases and Lemma 8 for all 5,405 cases.
+- `cor4_unions.py` checks the union realisers of top-band values.
+- `twohub_*.py` derive the two-hub family.

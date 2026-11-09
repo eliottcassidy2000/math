@@ -1,0 +1,46 @@
+A. machinery validation
+  410 graphs: generator evenness == brute-force evenness, subset-DP d == inclusion-exclusion d
+  known parities: K_2 odd True, K_3 odd True, K_4-e odd True, P_3 even True, K_33 odd True, K_22 even True
+  d(K_2), d(K_3), d(K_4 - e) = 3 7 13
+B. Lemma 0
+  complement formula 300, union 200, C_4-free formula 2243 random C_4-free graphs: failures 0
+C. Lemma 5' multi-join sign rule
+  330 random multi-joins (with repeated blocks, blocks in arbitrary positions): mismatches 0
+D. Lemma 5 (E_2-multi-join)
+  400 even G (131 with a universal vertex or a join), t in {1,2}: failures 0
+E. Lemma 7 (SR)
+  501 (G, q) pairs (369 with isolated vertices in G, 0 with q in a K_2 component): failures 0
+F. Lemma 8 (jump family)
+  2500 (H, z): value/leaf/no-universal failures 0; criterion (iii) on 2500 cases with a unique hub (1325 with universal vertices of H other than z, 877 with k = 1; 1684 even): failures 0
+G. Lemma 9 frontier families
+  F-a rho=3 m= 6 |J|= 6 D(H)=  3 (pred   3) d=    29 (pred     29) h=1 |stab gens|=0 even=True leaf=True univ=False
+  F-a rho=4 m= 8 |J|= 8 D(H)=  5 (pred   5) d=   123 (pred    123) h=1 |stab gens|=0 even=True leaf=True univ=False
+  F-c rho=4 m= 7 |J|= 7 D(H)=  5 (pred   5) d=    59 (pred     59) h=2 |stab gens|=1 even=False leaf=True univ=False
+  F-a rho=5 m=10 |J|=10 D(H)=  7 (pred   7) d=   505 (pred    505) h=1 |stab gens|=0 even=True leaf=True univ=False
+  F-b rho=5 m=10 |J|=10 D(H)= 11 (pred  11) d=   501 (pred    501) h=1 |stab gens|=0 even=True leaf=True univ=False
+  F-c rho=5 m= 9 |J|= 9 D(H)=  7 (pred   7) d=   249 (pred    249) h=2 |stab gens|=0 even=True leaf=True univ=False
+  F-a rho=6 m=12 |J|=12 D(H)=  9 (pred   9) d=  2039 (pred   2039) h=1 |stab gens|=0 even=True leaf=True univ=False
+  F-b rho=6 m=12 |J|=12 D(H)= 13 (pred  13) d=  2035 (pred   2035) h=1 |stab gens|=0 even=True leaf=True univ=False
+  F-c rho=6 m=11 |J|=11 D(H)=  9 (pred   9) d=  1015 (pred   1015) h=2 |stab gens|=0 even=True leaf=True univ=False
+  F-a rho=7 m=14 |J|=14 D(H)= 11 (pred  11) d=  8181 (pred   8181) h=1 |stab gens|=0 even=True leaf=True univ=False
+  F-b rho=7 m=14 |J|=14 D(H)= 15 (pred  15) d=  8177 (pred   8177) h=1 |stab gens|=0 even=True leaf=True univ=False
+  F-c rho=7 m=13 |J|=13 D(H)= 11 (pred  11) d=  4085 (pred   4085) h=2 |stab gens|=0 even=True leaf=True univ=False
+  F-a rho=8 m=16 |J|=16 D(H)= 13 (pred  13) d= 32755 (pred  32755) h=1 |stab gens|=0 even=True leaf=True univ=False
+  F-b rho=8 m=16 |J|=16 D(H)= 17 (pred  17) d= 32751 (pred  32751) h=1 |stab gens|=0 even=True leaf=True univ=False
+  F-c rho=8 m=15 |J|=15 D(H)= 13 (pred  13) d= 16371 (pred  16371) h=2 |stab gens|=0 even=True leaf=True univ=False
+  F-c rho=9 m=17 |J|=17 D(H)= 15 (pred  15) d= 65521 (pred  65521) h=2 |stab gens|=0 even=True leaf=True univ=False
+H. SR chains from the census L graphs
+  base: 248 W witnesses (set == O(9): True; order == least order of O: bad 0), 20 L graphs (bad 0), L covers T(8), T(9), offsets: True
+  72 top-band and offset L-graphs on 10..15 vertices verified (d, even, leaf, no universal vertex)
+  time so far 3.6s
+I. end-to-end builder (Section 4 re-implemented) for 10 <= n <= 14
+  n=10: all 256 values of O(n) - O(n-1) built and verified: failures 0  (3.9s)
+  n=11: all 511 values of O(n) - O(n-1) built and verified: failures 0  (4.6s)
+  n=12: all 1024 values of O(n) - O(n-1) built and verified: failures 0  (6.4s)
+  n=13: all 2047 values of O(n) - O(n-1) built and verified: failures 0  (11.8s)
+  n=14: all 4096 values of O(n) - O(n-1) built and verified: failures 0  (28.2s)
+TOTAL FAILURES: 0
+
+real	0m28.406s
+user	0m0.000s
+sys	0m0.000s

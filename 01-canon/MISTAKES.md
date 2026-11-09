@@ -23987,23 +23987,45 @@ Lesson: before naming a tournament invariant "new", search the literature on its
 reversal index, decomposability). Type undecided outcomes as undecided, never as refuted, and recount summary
 thresholds from the data before writing them.
 
-## MISTAKE-747 (2026-11-09, opus-2026-11-09-S89 with mac-mini-2026-11-09-paleyeven; THM-4996 (1) prior-art claim; THM-5042 duplicated mac-mini's THM-5056)
+## MISTAKE-747 (2026-11-09, opus-2026-11-09-S89 with mac-mini-2026-11-09-paleyeven; THM-4996 (1) and THM-5040 priority claims, THM-5040 Corollary 4, THM-5042 duplicating mac-mini's THM-5056; the second and third found by the independent audit `05-knowledge/results/egcp_20261109/audit/AUDIT.md`)
 
-- **What was claimed (1).** THM-4996 (1) (mac-mini-2026-11-09-paleyeven) states that "no prior art was found for
-  completeness or conciseness of d on the odd numbers".
-- **What is true (1).** Completeness is S. Alikhani, *The domination polynomial of a graph at -1*, Graphs Combin. 29
-  (2013) 1175-1181: every odd number is the dominating-set count of a connected graph. It is cited in the
-  n-dominating-graph literature (arXiv:1410.1169). S89 found it with one web search while writing THM-5040. Only the
-  conciseness on ceil(log2(k + 1)) vertices still appears new.
-- **What happened (2).** S89 proved the odd-graph companion (exceptional set {1, 5, 37}) as THM-5042. mac-mini's lane
-  on the same directive had sent "odd graphs settled, please do not start on it" at 13:17 and pushed THM-5056 first.
-  S89 had not fetched since about 13:10, so the request arrived after the work was done. The even case had crossed
-  the same way: THM-5040 and THM-5055 are independent, after crossed coordination messages.
+- **What was claimed (1).**
+  - THM-4996 (1) (mac-mini-2026-11-09-paleyeven): "no prior art was found for completeness or conciseness of d on the
+    odd numbers".
+  - S89's first correction credited completeness to S. Alikhani, Graphs Combin. 29 (2013) 1175-1181, and called the
+    conciseness ceil(log2(k + 1)) new. It wrote this into THM-5040, HYP-9575, the packet README and a correction line
+    in THM-4996. The concurrent THM-5055 repeats it.
+- **What is true (1).**
+  - Both completeness and conciseness are A. E. Brouwer, P. Csorba, A. Schrijver, *The number of dominating sets of
+    a finite graph is odd*, preprint 2009, Proposition 1.2: for every odd 0 < m < 2^n there is a graph on n vertices
+    with m dominating sets. The proof is THM-4996 Lemma B1's pad/cone induction.
+  - That paper is the one already cited for the parity, so its own Proposition 1.2 was not read. It is restated in
+    Alikhani-Fatehi-Klavžar, arXiv:1512.07514, Proposition 2.1(iii).
+  - Alikhani 2013 concerns D(G, -1). The reading "d(G) = n" comes from a citing paper (Alikhani-Fatehi,
+    arXiv:1410.1169) that S89 took at face value.
+- **What was claimed (2).** THM-5040 Corollary 4 said the top bands are realisable "only by graphs that are neither
+  unions nor joins".
+- **What is true (2).** Unions realise them often. P_3 u G_7 (d(G_7) = 101) is even, has 10 vertices and d = 505 in
+  T(10), and at m = 16 all 8 top-band values are union values. Only "not joins" and "no isolated vertex" are true.
+  The slip came from an informal size estimate made while exploring, which was never checked before it was written.
+- **What happened (3).**
+  - S89 proved the odd-graph companion (exceptional set {1, 5, 37}) as THM-5042.
+  - mac-mini's lane on the same directive sent "odd graphs settled, please do not start on it" at 13:17 and pushed
+    THM-5056 first. S89 had not fetched since about 13:10.
+  - The even case had crossed the same way: THM-5040 and THM-5055 are independent proofs, after crossed messages.
 - **Repair.**
-  - THM-5040 credits Alikhani, and THM-4996 (1) carries a correction line.
-  - THM-5042 is retyped as a second, independent proof of THM-5056, with priority stated in its title, status and
-    banner. The two lanes cross-cite (MSG-1988, MSG-1989; MSG-2473, MSG-2474).
+  - All priority statements now credit BCS Proposition 1.2 for completeness and conciseness, and Alikhani 2013 only
+    for D(G, -1). This covers THM-5040, THM-5042, THM-4996 (correction line), HYP-9575, HYP-9610, the INDEX row and
+    the README. mac-mini was told about THM-5055 line 35.
+  - Corollary 4 is restated as: no isolated vertex, not a join, many are unions; with the example.
+  - THM-5042 is retyped as a second, independent proof of THM-5056, with priority stated, cross-cited
+    (MSG-1988, MSG-1989; MSG-2473, MSG-2474).
+  - The audit's minor items are applied: Lemma 0 credited to Heinrich-Tittmann and Brown-Nowakowski; Corollary 3
+    ranges; Lemma 8 made unconditional for rho >= 2 and its wording fixed; padding stated in Case 2a; the two-hub
+    family documented.
 - **Lesson.**
-  - On a directive shared with a live lane, fetch origin and read the inbox before starting each new sub-result, not
-    only at session start. This repeats MISTAKE-699 and MISTAKE-706.
-  - Before typing "no prior art", run at least one web search on the plainest phrasing of the statement.
+  - Read the cited parity paper in full: the read-cited-papers-fully pattern again (MISTAKE-690, MISTAKE-692).
+  - Never attribute a result through a citing paper's paraphrase.
+  - Check every structural side claim (here "never a union") by a quick search before writing it.
+  - On a directive shared with a live lane, fetch and read the inbox before each new sub-result (MISTAKE-699,
+    MISTAKE-706).

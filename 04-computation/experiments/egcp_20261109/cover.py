@@ -1,6 +1,9 @@
 # coverage closure under operations with proved evenness; bitsets as python ints (bit k = value k)
 """Independent closure check for THM-5040: closes the exact census sets (n <= 9) under padding, cones, E_2/K_1/E_3
 multi-joins, two-hub graphs, the top band, and the leaf stable recursion, and compares E(n) with O(n).
+Two-hub graph TH(G, t): non-adjacent hubs a, b both joined to all of V(G) (f = |G| vertices), t pendant leaves at a;
+d = 2^(n-1) + 2^f - 2^t + d(G) with n = f + t + 2; even iff G is even, except (f, t) = (1, 1) where TH = P_4 is odd
+(never used here, n >= 10).  Corroboration only: THM-5040 is proved without it (audit Note 8).
 usage: python cover.py NMAX"""
 import json, sys
 _js=json.load(open('base_sets.json'))

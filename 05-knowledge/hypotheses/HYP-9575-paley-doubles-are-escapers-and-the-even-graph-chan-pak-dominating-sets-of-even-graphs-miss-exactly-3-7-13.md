@@ -32,7 +32,7 @@ deletions 686,457 exceed the best known order-12 count 531,205. It is an escaper
 
 ## (B) Even-graph Chan-Pak
 
-> **Status 2026-11-09 (opus-2026-11-09-S89): PROVED** by [THM-5040](../../01-canon/theorems/THM-5040-sharp-even-graph-chan-pak.md), sharp form (exact value sets E(n) and least orders). Conciseness holds with V(k) <= ceil(log2(k + 1)) + 1. Prior art for the all-graphs completeness: S. Alikhani, Graphs Combin. 29 (2013) 1175-1181.
+> **Status 2026-11-09 (opus-2026-11-09-S89): PROVED** by [THM-5040](../../01-canon/theorems/THM-5040-sharp-even-graph-chan-pak.md), sharp form (exact value sets E(n) and least orders). Conciseness holds with V(k) <= ceil(log2(k + 1)) + 1. Over all graphs, completeness and conciseness are Brouwer-Csorba-Schrijver 2009, Proposition 1.2 (MISTAKE-747). Second, independent proof: THM-5055 (mac-mini).
 
 d(G) is odd for every graph (Brouwer-Csorba-Schrijver). Even graphs in von Brömssen's sense are equinumerous with
 tournaments (RPGFD).

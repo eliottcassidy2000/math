@@ -52,7 +52,7 @@ d <= 2^n - n - 1.
 | Base-3 odd-cycle packings I(Omega, 3) | | = 1 (mod 3) | {10, 31}: the same alpha-sums 3, 10 as 7 = 1 + 2*3 and 21 = 1 + 2*10 | THM-4950, THM-5070 |
 | Even graphs (equinumerous with tournaments, RPGFD) | A334335 | d odd (BCS) | {3, 7, 13}; one extra vertex on the top bands | THM-5040 |
 | Odd graphs | | d odd | {1, 5, 37}; no extra vertex | THM-5056 (first), THM-5042 |
-| All graphs | | d odd | none | Alikhani 2013; THM-4996 (1) |
+| All graphs | | d odd | none, on ceil(log2(k + 1)) vertices | Brouwer-Csorba-Schrijver 2009, Prop. 1.2; THM-4996 (1) |
 
 **Reading.**
 - Each binary object has a small exceptional set, and enlarging its alphabet removes it:

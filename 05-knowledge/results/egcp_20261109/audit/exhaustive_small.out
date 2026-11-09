@@ -1,0 +1,19 @@
+Lemma 8, all labelled H on rho <= 5 and all z (5405 cases): value/leaf/no-universal failures 0; hub not the unique vertex of degree m-2 with rho >= 2: 0; criterion (iii) failures 0 (3538 even)
+  rho = 1: J = K_1 u K_2, degrees [0, 1, 1] (hub ties with its leaf; irrelevant to the theorem)
+Lemma 7, all labelled even L-graphs on 3..6 vertices, all leaves (16824 cases): failures 0
+  n=3 pairs=1 shape=('P3',): 3 labelled, co-even 0
+  n=4 pairs=2 shape=('C4',): 3 labelled, co-even 0
+  n=4 pairs=2 shape=('P4',): 12 labelled, co-even 0
+  n=5 pairs=1 shape=('P2', 'P3'): 30 labelled, co-even 0
+  n=6 pairs=2 shape=('C4', 'P2'): 45 labelled, co-even 0
+  n=6 pairs=2 shape=('P2', 'P4'): 180 labelled, co-even 0
+  n=6 pairs=2 shape=('P3', 'P3'): 90 labelled, co-even 0
+  n=7 pairs=1 shape=('P2', 'P2', 'P3'): 315 labelled, co-even 0
+  n=8 pairs=2 shape=('C4', 'P2', 'P2'): 630 labelled, co-even 0
+  n=8 pairs=2 shape=('P2', 'P2', 'P4'): 2520 labelled, co-even 0
+  n=8 pairs=2 shape=('P2', 'P3', 'P3'): 2520 labelled, co-even 0
+  n=9 pairs=1 shape=('P2', 'P2', 'P2', 'P3'): 3780 labelled, co-even 0
+
+real	0m18.963s
+user	0m0.000s
+sys	0m0.031s

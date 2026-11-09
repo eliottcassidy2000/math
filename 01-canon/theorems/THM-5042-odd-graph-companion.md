@@ -30,8 +30,8 @@ extends.
 
 **Consequences.**
 - {d(G) : G odd} is the set of odd numbers other than 1, 5, 37.
-- The least order of an odd graph with d = k is ceil(log2(k + 1)), the same as over all graphs (THM-4996 (1); S.
-  Alikhani, Graphs Combin. 29 (2013) 1175-1181, for completeness). Even graphs need one extra vertex on the top bands
+- The least order of an odd graph with d = k is ceil(log2(k + 1)), the same as over all graphs (Brouwer-Csorba-Schrijver 2009,
+  Proposition 1.2; THM-4996 (1)). Even graphs need one extra vertex on the top bands
   and at X(n) (THM-5040).
 
 ## Proof
@@ -89,7 +89,8 @@ So E_odd(n) contains every odd k <= 2^n - 1 outside {1, 5, 37}; the exclusions g
 
 ## Remarks
 
-- **The even/odd split.** Over all graphs, d takes every odd value (Alikhani 2013) on ceil(log2(k + 1)) vertices.
+- **The even/odd split.** Over all graphs, d takes every odd value on ceil(log2(k + 1)) vertices (Brouwer-Csorba-Schrijver 2009,
+  Prop. 1.2).
   - Splitting by von Brömssen parity, the odd side keeps the minimal orders and loses only {1, 5, 37}.
   - The even side loses {3, 7, 13} and pays one extra vertex on the top bands (M(n - 1), 2^(n - 1)) and at X(n - 1).
   - The extra cost sits on the even side because two universal vertices, or a K_2 or K_3 component, force oddness.

@@ -54,10 +54,13 @@ Scripts and outputs: `04-computation/experiments/egcp_20261109/` ([README](../..
 ## What this changes
 
 - **HYP-9575 (B):** OPEN becomes PROVED, together with the exact minimal order V(k).
-- **THM-4996 Proposition B5.** The unreached values near 2^m - 2^k are explained by two mechanisms: top bands (which
-  need graphs that are neither unions nor joins), and cone/join inputs falling on 3, 7 or 13.
-- **Prior art.** Completeness over all graphs is S. Alikhani, Graphs Combin. 29 (2013) 1175-1181. THM-4996 (1)
-  reported no prior art; only its conciseness part remains new.
+- **THM-4996 Proposition B5.** The unreached values near 2^m - 2^k are explained by two mechanisms:
+  - top bands, which need graphs with no isolated vertex that are not joins; many are disjoint unions, e.g.
+    P_3 u G_7 gives 505;
+  - cone/join inputs falling on 3, 7 or 13.
+- **Prior art.** Completeness and conciseness over all graphs are Brouwer-Csorba-Schrijver 2009, Proposition 1.2,
+  in the parity paper itself. The first version of this packet credited Alikhani 2013, whose result concerns
+  D(G, -1); the audit corrected this (MISTAKE-747). New here: the even-graph statement and the +1 cost.
 
 ## Open
 

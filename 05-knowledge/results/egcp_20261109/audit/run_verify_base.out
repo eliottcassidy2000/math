@@ -1,0 +1,16 @@
+E(1) == O(1): True
+E(2) == O(2): True
+E(3) == O(3): True
+E(4) == O(4): True
+E(5) == O(5): True
+E(6) == O(6): True
+E(7) == O(7): True
+E(8) == O(8): True
+E(9) == O(9): True
+L(8) witnesses cover T(8) and the offsets: True
+L(9) witnesses cover T(9) and the offsets: True
+W witnesses checked: 248 | all base facts: PASS
+
+real	0m0.684s
+user	0m0.000s
+sys	0m0.015s
