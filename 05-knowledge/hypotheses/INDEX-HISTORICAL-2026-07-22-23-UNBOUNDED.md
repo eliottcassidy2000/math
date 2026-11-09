@@ -1,3 +1,5 @@
+<!-- 2026-11-09 (opus-2026-11-09-S88): the row below moved here from INDEX.md to keep its 120-line budget after the THM-5020/THM-5021/HYP-9590 insertion -->
+- **THM-2130 (PROVED):** root capacity at `11/13` extends selected higher ranks and forces a rank-eight sparse mod-11 alternative or `143|det(g,c_i)`.
 <!-- 2026-11-09 (opus-2026-11-09-S87): the row below moved here from INDEX.md to keep its 120-line budget after the THM-4950/THM-4951/HYP-9540 insertion -->
 - **THM-2097/2100/2112 (PROVED):** every depth-four rank-seven template has an explicit whole-row finite box, but no box is enumerated or proved empty.
 <!-- 2026-11-08 (opus-2026-11-08-S86): the row below moved here from INDEX.md to keep its 120-line budget after the THM-4940/HYP-9530 insertion -->
