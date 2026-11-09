@@ -45,3 +45,23 @@ triple_reentry_interfaces_20261103 (readiness of near-join digits).
 A failure of P2/P3 says nothing about HYP-9530 (A): it measures the span-w family only.
 
 Outcome: to be appended below without editing the predictions.
+
+## Outcome (appended after the runs; the predictions above are unedited)
+
+- **P1 CONFIRMED.** Reachable packing states 4, 20, 112 (predicted at most 10, 60, 600); 360 random words agree with
+  the brute force and, at x = 2, with THM-4880's path automaton.
+- **P2 CONFIRMED to 10^4 (all lengths, fixed point) and PENDING-S2-1E5 to 10^5.** The span-2 misses are exactly 10 and
+  31: no further value at all (the predicted "finite set below 2,000" is empty).
+- **P3 PENDING-S3** (run to 5,000, not 10^4, for memory: 70 reduced coordinates).
+- **P4 REFUTED at one value.** Strong span-2 words attain every attained value except 64, which no strong tournament
+  of any order attains (THM-4952 (E)); otherwise strong = all.
+- **P5 CONFIRMED at n = 5, 6, 7, 8** (formula = census, cut set by cut set, all and blue lines); n = 9: PENDING-N9.
+- **P6 CONFIRMED by theorem and by census to n = 8**: strong-strong shares 0.5625, 0.7637, 0.8782, 0.9383, and the
+  exact formula gives 1 - 2^(4-n)(1 + O(2^-n)), above 0.9 from n = 8 on; n = 9 census: PENDING-N9.
+- **P7 CONFIRMED at n = 6, 7, 8** (black-black lines 20, 702, 35,888; blue-blue shares 0.617, 0.632, 0.672);
+  n = 9: PENDING-N9.
+- **P8 half CONFIRMED, half REFUTED.** The multiplicity bound min(H/|Aut|) holds on every pair; the maximum is attained
+  by a self-converse pair at n = 5 and 7 but by an SC-NS pair at n = 6 (41, 43) and by a converse pair (both
+  non-self-converse, H = 445) at n = 8.
+- **P9 REFUTED.** Near-join readiness fails for 47 of the 97 attainable odd h <= 199 at digit 2 and for 42 at digit 4
+  (orders <= 8), including many h >= 9 (15, 25, 27, 35, 41, 43, ...); the expected failures at h <= 5 are a small part.

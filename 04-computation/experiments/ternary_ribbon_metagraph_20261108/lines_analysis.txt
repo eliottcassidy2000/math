@@ -1,0 +1,46 @@
+
+=== n = 5: 12 nodes (8 self-converse), 32 lines (8 blue); fibre sizes = H/|Aut|: True; THM-643 parities: True
+  S (self-converse):  {(('SC', 'SC'), 'blue'): 8, (('SC', 'SC'), 'black'): 12, (('NS', 'SC'), 'black'): 12} | black SC-NS lines 12 vs #NS nodes 4: parity law True
+  K (components of closed, open end): [((1, 1, 'black'), 12), ((1, 1, 'blue'), 6), ((1, 2, 'black'), 10), ((1, 3, 'black'), 2), ((1, 3, 'blue'), 1), ((1, 5, 'blue'), 1)]
+  V (eternal colour of H): nodes {'blue': 12} | lines {(('blue', 'blue'), 'blue'): 8, (('blue', 'blue'), 'black'): 24}
+  F (first creators): 6 first-creator nodes creating 4 values | lines {(('FC', 'FC'), 'blue'): 6, (('FC', 'FC'), 'black'): 12, (('FC', 'old'), 'black'): 12, (('FC', 'old'), 'blue'): 2}
+  multiplicity: max lines between two distinct nodes 2 at pairs [(9, 9, True, True), (11, 13, True, True), (9, 13, True, True), (15, 9, True, True)]; self-lines (both ends one node) 4 (blue 0)
+  multiplicity <= min fibre size on every pair: True; nodes whose distinct neighbours = fibre size: 7 of 12
+  H: same-value lines 7; closed end smaller 1, larger 24; open end transitive (H=1) 1
+
+=== n = 6: 56 nodes (12 self-converse), 512 lines (32 blue); fibre sizes = H/|Aut|: True; THM-643 parities: True
+  S (self-converse):  {(('SC', 'SC'), 'blue'): 32, (('NS', 'NS'), 'black'): 314, (('NS', 'SC'), 'black'): 156, (('SC', 'SC'), 'black'): 10} | black SC-NS lines 156 vs #NS nodes 44: parity law True
+  K (components of closed, open end): [((1, 1, 'black'), 364), ((1, 1, 'blue'), 27), ((1, 2, 'black'), 100), ((1, 2, 'blue'), 1), ((1, 3, 'black'), 12), ((1, 3, 'blue'), 3), ((1, 4, 'black'), 4), ((1, 6, 'blue'), 1)]
+  V (eternal colour of H): nodes {'blue': 48, 'black': 8} | lines {(('blue', 'blue'), 'blue'): 32, (('black', 'blue'), 'black'): 176, (('blue', 'blue'), 'black'): 284, (('black', 'black'), 'black'): 20}
+  F (first creators): 33 first-creator nodes creating 12 values | lines {(('FC', 'FC'), 'blue'): 27, (('FC', 'old'), 'black'): 126, (('FC', 'FC'), 'black'): 344, (('old', 'old'), 'black'): 10, (('FC', 'old'), 'blue'): 5}
+  multiplicity: max lines between two distinct nodes 6 at pairs [(41, 43, True, False), (43, 41, False, True)]; self-lines (both ends one node) 8 (blue 2)
+  multiplicity <= min fibre size on every pair: True; nodes whose distinct neighbours = fibre size: 17 of 56
+  H: same-value lines 53; closed end smaller 86, larger 373; open end transitive (H=1) 1
+
+=== n = 7: 456 nodes (88 self-converse), 16384 lines (256 blue); fibre sizes = H/|Aut|: True; THM-643 parities: True
+  S (self-converse):  {(('SC', 'SC'), 'blue'): 256, (('NS', 'NS'), 'black'): 10208, (('NS', 'SC'), 'black'): 5044, (('SC', 'SC'), 'black'): 876} | black SC-NS lines 5044 vs #NS nodes 368: parity law True
+  K (components of closed, open end): [((1, 1, 'black'), 14150), ((1, 1, 'blue'), 239), ((1, 2, 'black'), 1816), ((1, 3, 'black'), 138), ((1, 3, 'blue'), 15), ((1, 4, 'black'), 20), ((1, 5, 'black'), 4), ((1, 5, 'blue'), 1), ((1, 7, 'blue'), 1)]
+  V (eternal colour of H): nodes {'blue': 370, 'black': 86} | lines {(('blue', 'blue'), 'blue'): 256, (('blue', 'blue'), 'black'): 10100, (('black', 'blue'), 'black'): 5326, (('black', 'black'), 'black'): 702}
+  F (first creators): 328 first-creator nodes creating 58 values | lines {(('FC', 'old'), 'blue'): 34, (('FC', 'old'), 'black'): 2438, (('FC', 'FC'), 'black'): 13508, (('old', 'old'), 'black'): 182, (('FC', 'FC'), 'blue'): 215, (('old', 'old'), 'blue'): 7}
+  multiplicity: max lines between two distinct nodes 8 at pairs [(155, 151, True, True), (159, 171, True, True), (147, 159, True, True), (133, 145, True, True)]; self-lines (both ends one node) 44 (blue 0)
+  multiplicity <= min fibre size on every pair: True; nodes whose distinct neighbours = fibre size: 52 of 456
+  H: same-value lines 470; closed end smaller 4076, larger 11838; open end transitive (H=1) 1
+
+=== n = 8: 6880 nodes (176 self-converse), 1048576 lines (2048 blue); fibre sizes = H/|Aut|: True; THM-643 parities: True
+  S (self-converse):  {(('SC', 'SC'), 'blue'): 2048, (('NS', 'NS'), 'black'): 992684, (('NS', 'SC'), 'black'): 53072, (('SC', 'SC'), 'black'): 772} | black SC-NS lines 53072 vs #NS nodes 6704: parity law True
+  K (components of closed, open end): [((1, 1, 'black'), 981950), ((1, 1, 'blue'), 1978), ((1, 2, 'black'), 61666), ((1, 2, 'blue'), 5), ((1, 3, 'black'), 2680), ((1, 3, 'blue'), 59), ((1, 4, 'black'), 204), ((1, 4, 'blue'), 2), ((1, 5, 'black'), 22), ((1, 5, 'blue'), 3), ((1, 6, 'black'), 6), ((1, 8, 'blue'), 1)]
+  V (eternal colour of H): nodes {'blue': 5556, 'black': 1324} | lines {(('blue', 'blue'), 'blue'): 2048, (('blue', 'blue'), 'black'): 702560, (('black', 'blue'), 'black'): 308080, (('black', 'black'), 'black'): 35888}
+  F (first creators): 5457 first-creator nodes creating 243 values | lines {(('FC', 'old'), 'blue'): 201, (('old', 'old'), 'black'): 12390, (('FC', 'old'), 'black'): 103898, (('FC', 'FC'), 'black'): 930240, (('FC', 'FC'), 'blue'): 1807, (('old', 'old'), 'blue'): 40}
+  multiplicity: max lines between two distinct nodes 12 at pairs [(445, 445, False, False)]; self-lines (both ends one node) 206 (blue 4)
+  multiplicity <= min fibre size on every pair: True; nodes whose distinct neighbours = fibre size: 213 of 6880
+  H: same-value lines 8179; closed end smaller 302624, larger 737773; open end transitive (H=1) 1
+
+==== merged nodes (converse pairs identified) ====
+n=5: 10 merged nodes (8 self-converse, 2 converse pairs); max lines between two distinct merged nodes 2 at [(9, 9), (5, 9), (11, 13)]; max blue lines between distinct nodes 1 at [(11, 9), (15, 15), (11, 15)]; self-lines 4 (blue 0); fibre of a merged pair node = 2 tc: True
+      largest neighbourhoods (distinct neighbours, fibre size): [(7, 13), (6, 11), (6, 9)]
+n=6: 34 merged nodes (12 self-converse, 22 converse pairs); max lines between two distinct merged nodes 14 at [(37, 43)]; max blue lines between distinct nodes 2 at [(45, 41), (29, 45), (29, 41)]; self-lines 26 (blue 2); fibre of a merged pair node = 2 tc: True
+      largest neighbourhoods (distinct neighbours, fibre size): [(20, 62), (19, 74), (18, 74)]
+n=7: 272 merged nodes (88 self-converse, 184 converse pairs); max lines between two distinct merged nodes 16 at [(151, 153), (135, 153)]; max blue lines between distinct nodes 2 at [(141, 159), (159, 171), (159, 175)]; self-lines 114 (blue 0); fibre of a merged pair node = 2 tc: True
+      largest neighbourhoods (distinct neighbours, fibre size): [(94, 218), (88, 278), (86, 278)]
+n=8: 3528 merged nodes (176 self-converse, 3352 converse pairs); max lines between two distinct merged nodes 26 at [(659, 653)]; max blue lines between distinct nodes 4 at [(657, 661), (657, 629)]; self-lines 622 (blue 4); fibre of a merged pair node = 2 tc: True
+      largest neighbourhoods (distinct neighbours, fibre size): [(461, 1022), (456, 1078), (455, 1102)]
