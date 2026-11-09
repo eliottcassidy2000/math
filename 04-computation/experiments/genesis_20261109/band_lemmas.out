@@ -1,0 +1,7 @@
+(W) two-step walk failures (a,b<=25, a+b<=n<=80, gcd=1): 0
+s=1: lambda==s for n in [3,30]: yes; prime exactly for n>=2s+3: NO [3] (n=2s+2 prime? False); D_r strong for n in [3,30]: True
+s=2: lambda==s for n in [5,30]: yes; prime exactly for n>=2s+3: NO [5] (n=2s+2 prime? False); D_r strong for n in [7,30]: True
+s=3: lambda==s for n in [7,30]: yes; prime exactly for n>=2s+3: NO [7] (n=2s+2 prime? False); D_r strong for n in [13,30]: True
+s=4: lambda==s for n in [9,30]: yes; prime exactly for n>=2s+3: NO [9] (n=2s+2 prime? False); D_r strong for n in [21,30]: True
+s=5: lambda==s for n in [11,30]: yes; prime exactly for n>=2s+3: NO [11] (n=2s+2 prime? False); D_r strong for n in [31,31]: True
+s=6: lambda==s for n in [13,30]: yes; prime exactly for n>=2s+3: NO [13] (n=2s+2 prime? False); D_r strong for n in [43,43]: True

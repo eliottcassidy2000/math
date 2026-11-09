@@ -1,0 +1,9 @@
+n= 3 classes=         2 (expected          2) first-creator classes=         1 share=0.5000  new values=1
+n= 4 classes=         4 (expected          4) first-creator classes=         1 share=0.2500  new values=1
+n= 5 classes=        12 (expected         12) first-creator classes=         6 share=0.5000  new values=4
+n= 6 classes=        56 (expected         56) first-creator classes=        33 share=0.5893  new values=12
+n= 7 classes=       456 (expected        456) first-creator classes=       328 share=0.7193  new values=58
+n= 8 classes=      6880 (expected       6880) first-creator classes=      5457 share=0.7932  new values=243
+n= 9 classes=    191536 (expected     191536) first-creator classes=    163676 share=0.8545  new values=1200
+n=10 classes=   9733056 (expected    9733056) first-creator classes=   8647232 share=0.8884  new values=6143
+n=11 classes= 903753248 (expected  903753248) first-creator classes= 831487872 share=0.9200  new values=36248

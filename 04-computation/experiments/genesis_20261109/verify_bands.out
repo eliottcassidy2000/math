@@ -1,0 +1,9 @@
+band_3(13): H=237817 in S(12): True [witness order 12 (H recomputed 237817)]
+   deletions: [20485, 23079, 28417, 40907, 56531, 70015, 72073]
+   all deletions in S(11): True  [['census']]
+   lambda=3 prime=True twin=1  ESCAPER=True
+band_4(16): H=64053917 in S(15): True [witness order 15 (H recomputed 64053917)]
+   deletions: [4330581, 5063659, 6296673, 8712389, 11494061, 14200431, 15927743, 15978923]
+   all deletions in S(14): True  [['witness order 14 (H recomputed 11494061)', 'witness order 14 (H recomputed 14200431)', 'witness order 14 (H recomputed 15927743)', 'witness order 14 (H recomputed 15978923)', 'witness order 14 (H recomputed 4330581)', 'witness order 14 (H recomputed 5063659)', 'witness order 14 (H recomputed 6296673)', 'witness order 14 (H recomputed 8712389)']]
+   lambda=4 prime=True twin=1  ESCAPER=True
+# all band escapers verified: True

@@ -1,0 +1,15 @@
+escaper records 259 classes 193 self-converse 17 classes whose converse is also found 99
+all re-classified as escapers: True
+H range 32897 58017  distinct H 150  classes per H: Counter({1: 107, 2: 43})
+(lambda, module defect, twin) -> classes: {(3, 1, 1): 190, (3, 2, 2): 1, (3, 3, 3): 2}
+label sets of the 12 deletions (order 11):
+   118 ('FCV,SUB,SUM2', 'FCV,SUM2', 'SUB,SUM2', 'SUM2')
+   32 ('FCV,SUM2', 'SUB,SUM2', 'SUM2')
+   16 ('FCV,SUB,SUM2', 'FCV,SUM2', 'SUM2')
+   9 ('FCV,SUB,SUM2', 'FCV,SUM2', 'SUB,SUM2')
+   8 ('FCV,SUB', 'FCV,SUB,SUM2', 'FCV,SUM2', 'SUB,SUM2', 'SUM2')
+   3 ('FCV,SUM2', 'SUM2')
+   2 ('FCV,SUB', 'FCV,SUB,SUM2', 'FCV,SUM2', 'SUM2')
+   2 ('FCV,SUB', 'FCV,SUB,SUM2', 'FCV,SUM2', 'SUB,SUM2')
+   2 ('FCV,SUM2', 'SUB,SUM2')
+   1 ('SUB,SUM2', 'SUM2')
