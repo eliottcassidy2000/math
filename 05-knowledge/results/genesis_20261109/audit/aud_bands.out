@@ -1,0 +1,20 @@
+witness wit_band3_13_H.out: order 12 claimed 237817 recomputed 237817 -> OK
+witness wit_band4_16_dels.out: order 14 claimed 14200431 recomputed 14200431 -> OK
+witness wit_band4_16_dels.out: order 14 claimed 15978923 recomputed 15978923 -> OK
+witness wit_band4_16_dels.out: order 14 claimed 11494061 recomputed 11494061 -> OK
+witness wit_band4_16_dels.out: order 14 claimed 15927743 recomputed 15927743 -> OK
+witness wit_band4_16_dels.out: order 14 claimed 8712389 recomputed 8712389 -> OK
+witness wit_band4_16_dels.out: order 14 claimed 4330581 recomputed 4330581 -> OK
+witness wit_band4_16_dels.out: order 14 claimed 6296673 recomputed 6296673 -> OK
+witness wit_band4_16_dels.out: order 14 claimed 5063659 recomputed 5063659 -> OK
+witness wit_band4_16_H.out: order 15 claimed 64053917 recomputed 64053917 -> OK
+band_3(13): H=237817 lambda=3 prime=1 moddef=1 twin=1 scores=[3, 3, 3, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9]
+   deletions: [72073, 70015, 56531, 40907, 28417, 23079, 20485, 23079, 28417, 40907, 56531, 70015, 72073]
+   distinct deletion values: [20485, 23079, 28417, 40907, 56531, 70015, 72073] 7
+   H in S(12): witness orders [12] -> True
+   deletions in S(11) (census): True  max deletion 72073
+band_4(16): H=64053917 lambda=4 prime=1 moddef=1 twin=1 scores=[4, 4, 4, 4, 4, 5, 6, 7, 8, 9, 10, 11, 11, 11, 11, 11]
+   deletions: [15927743, 15978923, 14200431, 11494061, 8712389, 6296673, 5063659, 4330581, 4330581, 5063659, 6296673, 8712389, 11494061, 14200431, 15978923, 15927743]
+   distinct deletion values: [4330581, 5063659, 6296673, 8712389, 11494061, 14200431, 15927743, 15978923] 8
+   H in S(15): witness orders [15] -> True
+   deletion certificates (witness orders <= 14): {6296673: [14], 8712389: [14], 15978923: [14], 5063659: [14], 11494061: [14], 14200431: [14], 4330581: [14], 15927743: [14]}  all certified: True

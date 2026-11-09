@@ -4,6 +4,8 @@
                min over M of sum_{x not in M} min(|N+(x) & M|, |N-(x) & M|)  (reversals inside M or outside never help).
   twin(T)    = defsub restricted to |M| = 2 (fewest distinguishers of a pair).
   dec(T)     = min(lam, defsub) = fewest reversals reaching a decomposable (non-strong or non-prime) tournament.
+               For n >= 3, defsub <= lam always: a non-strong tournament is non-prime, because the side of
+               size >= 2 of a dominating cut is a module. So dec = defsub (audit G1, m1).
 """
 import sys
 from verify_escapers import adj_from, lam

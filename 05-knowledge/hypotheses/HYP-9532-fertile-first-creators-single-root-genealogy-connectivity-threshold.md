@@ -1,7 +1,7 @@
 ---
 id: HYP-9532
 title: "First creators beyond order 11: (A) every first creator has an extension that is a first creator, and at least half of its 2^n extension patterns are fertile except for the two creators of 63; (B) every first creator other than the two creators of 63 contains a chain of first creators, one at each order, starting from the 3-cycle; (C) the share of new values reached only from first-creator parents tends to 1; (D) the generation threshold k*(n) = max arc-strong connectivity of a non-first-creator of order n is unbounded; (E) no odd value above 63 is born at its Busch bound; (F) whether every tournament is a first creator, a first creator plus a vertex, an ordinal sum, a substitution, or an ordinal sum re-connected by at most two arcs"
-status: "(A) FINITE-EXACT at orders 3-10 (pre-registered R3 and R4 CONFIRMED at order 10). (B) FINITE-EXACT through order 11 (order 11 by the independent audit's exhaustive class-level test). (C) EXPLORATORY: 0.350, 0.425, 0.470, 0.515 at orders 8-11. (D) k*(n) = 0 for n <= 5, 1 for n = 6, 7, 8, 2 for n = 9, 10, and at least 3 at n = 11 (pre-registered R11 CONFIRMED); OPEN beyond. (E) FINITE-EXACT on all of S(11), so through 80,451; conditional on HYP-9481 (a) for the 3,635 values of [80,453, 95,093] outside S(11) and for all h > 95,095. (F) FINITE-EXACT through order 11; OPEN question beyond. AUDIT: independent, PASS WITH CORRECTIONS (MISTAKE-737)."
+status: "(A) FINITE-EXACT at orders 3-10 (pre-registered R3 and R4 CONFIRMED at order 10). (B) FINITE-EXACT through order 11 (order 11 by the independent audit's exhaustive class-level test). (C) EXPLORATORY: 0.350, 0.425, 0.470, 0.515 at orders 8-11. (D) k*(n) = 0 for n <= 5, 1 for n = 6, 7, 8, 2 for n = 9, 10, and at least 3 at n = 11 (pre-registered R11 CONFIRMED); later (mac-mini-2026-11-09-genesis, THM-4985): k*(12) >= 3, k*(13) >= 3, k*(15) >= 4, k*(16) >= 4 (certified), and k*(n) -> infinity conditional on a superexponential solid prefix (THM-4985 (5)); unconditionally OPEN. (E) FINITE-EXACT on all of S(11), so through 80,451; conditional on HYP-9481 (a) for the 3,635 values of [80,453, 95,093] outside S(11) and for all h > 95,095. (F) FINITE-EXACT through order 11; ANSWERED NO at order 12 by THM-4985 (mac-mini-2026-11-09-genesis): 193 escaper classes found (prime, lambda = 3, non-creators with no first-creator deletion); band_4(16) needs 4 re-connecting arcs; the number needed is unbounded under a superexponential solid prefix. AUDIT: independent, PASS WITH CORRECTIONS (MISTAKE-737)."
 session: kind-pasteur-2026-11-08-S17
 date: 2026-11-08
 related: [THM-4942, THM-4922, HYP-9512, HYP-9481, THM-1370, THM-1900, THM-4744]
@@ -67,7 +67,9 @@ Conjecture: there are no others.
 
 For every h > 95,095, m(h) <= B(h) - 2:
 - B(h) >= 22 there, because f(22) = 78,125.
-- f grows exponentially, while max H, and hence m, outruns it. For example, B(h) >= 25 once h > 545,835 = max H(12).
+- f grows exponentially, while max H, and hence m, outruns it. For example, B(h) >= 25 once h >= f(25) = 390,625, in
+  particular once h > max H(12) (>= 531,205; THM-329). [Corrected 2026-11-09 by audit G1 of mac-mini-2026-11-09-genesis:
+  the earlier value "545,835 = max H(12)" had no source; OEIS A038375 lists a(1..11) only.]
 
 So n(h) = B(h) would give n(h) >= m(h) + 2, and HYP-9481 (a) (n(h) <= m(h) + 1) excludes it. The conjecture
 therefore follows from HYP-9481 (a).

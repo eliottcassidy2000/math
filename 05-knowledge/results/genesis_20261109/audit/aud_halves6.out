@@ -1,0 +1,4 @@
+scores (2, 2, 2, 2, 2, 5) H values (labelled counts): [(15, 144)]
+scores (2, 2, 2, 2, 3, 4) H values (labelled counts): [(33, 960), (37, 1440)]
+scores (2, 2, 2, 3, 3, 3) H values (labelled counts): [(41, 720), (43, 1440), (45, 480)]
+FC-FC 3-cut and scores 3^6 8^6: 106  scores only: 0  FC-FC cut only: 0

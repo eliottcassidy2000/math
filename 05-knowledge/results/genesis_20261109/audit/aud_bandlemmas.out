@@ -1,0 +1,17 @@
+s=1: n=3(rot: lam 1 prime 1) checked n=3..24
+s=2: n=5(rot: lam 2 prime 1) checked n=5..24
+s=3: n=7(rot: lam 3 prime 1) checked n=7..24
+s=4: n=9(rot: lam 4 prime 1) checked n=9..24
+s=5: n=11(rot: lam 5 prime 1) checked n=11..24
+s=6: n=13(rot: lam 6 prime 1) checked n=13..24
+Lemma W: 22075 instances, 0 failures
+Lemma W threshold: at n = a+b-1, 398 of 398 coprime pairs are not strongly connected
+D-construction s=1 sigma=2 n=3..40: 0 failures
+D-construction s=2 sigma=4,3 n=6..40: 0 failures
+D-construction s=3 sigma=6,5,4 n=9..40: 0 failures
+D-construction s=4 sigma=6,5,8,7 n=12..40: 0 failures
+D-construction s=5 sigma=6,7,10,9,8 n=15..40: 0 failures
+D-construction s=6 sigma=8,7,10,9,12,11 n=18..40: 0 failures
+D-construction s=7 sigma=8,9,10,11,14,13,12 n=21..40: 0 failures
+D-construction s=8 sigma=10,9,14,11,12,13,16,15 n=24..40: 0 failures
+TOTAL FAILURES 0

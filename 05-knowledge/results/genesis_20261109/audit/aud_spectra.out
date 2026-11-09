@@ -1,0 +1,23 @@
+order  3: # order 3: 2 tournaments read, 1 strong, max h = 3
+order  4: # order 4: 4 tournaments read, 1 strong, max h = 5
+order  5: # order 5: 12 tournaments read, 6 strong, max h = 15
+order  6: # order 6: 56 tournaments read, 35 strong, max h = 45
+order  7: # order 7: 456 tournaments read, 353 strong, max h = 189
+order  8: # order 8: 6880 tournaments read, 6008 strong, max h = 661
+order  9: # order 9: 191536 tournaments read, 178133 strong, max h = 3357
+order 10: # order 10: 9733056 tournaments read, 9355949 strong, max h = 15745
+order 11: # order 11: 903753248 tournaments read, 884464590 strong, max h = 95095
+
+n  classes  FC-classes  share  |S(n)|  maxH  new-values  S(n-1)<=S(n)
+ 3          2          1 0.5000      2      3      1 True
+ 4          4          1 0.2500      3      5      1 True
+ 5         12          6 0.5000      7     15      4 True
+ 6         56         33 0.5893     19     45     12 True
+ 7        456        328 0.7193     77    189     58 True
+ 8       6880       5457 0.7932    320    661    243 True
+ 9     191536     163676 0.8545   1520   3357   1200 True
+10    9733056    8647232 0.8884   7663  15745   6143 True
+11  903753248  831487872 0.9200  43911  95095  36248 True
+n=9: every odd h <= 2881 except 7,21 in S(n); 157 odd non-values below max (least 2883); evens in S: 0
+n=10: every odd h <= 14683 except 7,21 in S(n); 208 odd non-values below max (least 14685); evens in S: 0
+n=11: every odd h <= 80451 except 7,21 in S(n); 3635 odd non-values below max (least 80453); evens in S: 0

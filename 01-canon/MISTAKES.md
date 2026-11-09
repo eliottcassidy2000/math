@@ -23839,3 +23839,44 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     status, body, README and INDEX.
   - On a same-day concurrent lane, credit the method, not only the result.
   - Start the background prior-art survey before deriving a mechanism, not after (MISTAKE-690, MISTAKE-739).
+
+## MISTAKE-743 (2026-11-09, mac-mini-2026-11-09-genesis, THM-4985, THM-4986, HYP-9565 and the note `05-knowledge/results/genesis_20261109/` at the pre-audit checkpoints 47716c39e5 and 561b0319b6; found by the independent audit `05-knowledge/results/genesis_20261109/AUDIT_G1.md`) -- an unsourced maximum used as exact input, and a family and a question taken from sibling sessions without credit
+
+- **What was claimed.**
+  - "max H(12) = 545,835 (OEIS A038375)" was used to type R_H(13) = 0.359 as FINITE-EXACT in THM-4986 (5), in PROOF §5,
+    in the README, in HYP-9565 (C) and in the appended pre-registration outcomes. OEIS A038375 lists only a(1..11). The
+    value had entered the repo unsourced in HYP-9532 (E).
+  - The circulant count 3,711,175 was called "conjectured to be max H(13)". THM-329 already has a 13-tournament with
+    3,719,831 paths.
+  - "Band tournaments" were introduced as a new family. They are THM-4880's ribbon tournaments with the constant letter
+    {1..s}; THM-4880 §F already lists their H-series for s = 2, 3, and Lemma B3's proof is THM-4880 Theorem A's window
+    argument.
+  - HYP-9565 (A)'s bounded-defect question did not credit Session230 (primes/REPORT.md §5, SYNTHESIS §6), which posed
+    it the day before.
+  - Minor items:
+    - the min in dec = min(lambda, module defect) is redundant;
+    - a doubled-vertex count of 0 was presented as a finding, though the definition of an escaper forces it;
+    - the 3^6 8^6 census was given without noting that the scores nearly force it;
+    - f_4(12) <= 229,725 was attributed to annealing;
+    - the crevasse lemma carried unneeded hypotheses;
+    - "strong bands leave crevasses" is wrong for 21;
+    - the fixed points of alpha were credited to Azarija-Škrekovski instead of Nebeský (1973);
+    - the coprime case is Daykin-Baines (1963);
+    - the 7/21 conjecture is bof-Royle's.
+- **Caught by the session before any commit.**
+  - Band twin distance 2. It is 1, because of the boundary pair {0, 1}; `verify_bands.py` caught it.
+  - The dictionary row "tau(G - e) <= tau(G), equality iff e is a bridge". Deleting a bridge gives 0.
+  - "R_H is decreasing". It is not monotone.
+- **Repair.** All 3 MAJOR and 23 MINOR fixes are applied:
+  - R_H(13) now rests on THM-329 and the proved bound max H(m) <= m·max H(m - 1), giving 0.349 <= R_H(13) <= 0.751.
+  - THM-4880, Session230, THM-329, THM-4805, Nebeský, Daykin-Baines and bof-Royle are credited.
+  - HYP-9532 (E)'s line is corrected, with attribution.
+  - A dated erratum is appended to PREREGISTRATION.md; the protocol is not edited.
+  - Two navigation lines claiming max H = Theta(n!/2^(n - 1)) are corrected.
+- **Lessons.**
+  - Trace every number used as exact input to a source before typing it FINITE-EXACT, especially a value copied from a
+    sibling hypothesis. Grep for the quantity, not the value: THM-329 had better data.
+  - A priority search must cover families under other names. Grep the defining rule ("back arcs of span <= s"), not the
+    name you are about to give the family.
+  - Open questions are priors too (extending MISTAKE-738). Before posing a conjecture, read the OPEN sections of the
+    sibling sessions that worked the same directive.

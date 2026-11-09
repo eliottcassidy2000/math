@@ -564,7 +564,7 @@ promoting another scalar, automaton, analytic estimate, or external analogy.
 | **Irving & Omar (2024)** | Walk generating function; det/per formula | arXiv:2412.10572 |
 | **Rajkumar et al.** | Flip classes; R-cones; sign rank | arXiv:2110.05188 |
 | **Hetyei (2017)** | Alternation acyclic tournaments; Genocchi numbers | arXiv:1704.07245 |
-| **Alon (1990)** | max H(T) = Θ(n!/2^{n−1}) via random regular | Upper bound theory |
+| **Alon (1990)** | max H(T) <= c·n^{3/2}·n!/2^{n−1} (upper); Adler-Alon-Ross (2001): >= (e−o(1))·n!/2^{n−1} via random regular. Θ(n!/2^{n−1}) is NOT known (corrected 2026-11-09, audit G1 of mac-mini-2026-11-09-genesis) | Upper bound theory |
 | **Szele** | max H(T) ≥ n!/2^{n−1} | Lower bound on max H |
 | **Guo, Gutin et al. (2026)** | Forward arc maximization in tournament generalizations | NEW: arXiv:2602.10713 |
 | **Bencs & Buys (2025)** | Zero-free regions for hypergraph I.P. | Random Struct. Algorithms |

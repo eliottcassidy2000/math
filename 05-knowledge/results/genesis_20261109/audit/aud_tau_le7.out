@@ -1,0 +1,16 @@
+m=2 connected=1 |S_tau|=1 max=1 new_values=0 labelled_new=0 share=0.0000 two_in_S=0
+m=3 connected=4 |S_tau|=2 max=3 new_values=1 labelled_new=1 share=0.2500 two_in_S=0
+m=4 connected=38 |S_tau|=5 max=16 new_values=3 labelled_new=10 share=0.2632 two_in_S=0
+m=5 connected=728 |S_tau|=16 max=125 new_values=11 labelled_new=253 share=0.3475 two_in_S=0
+m=6 connected=26704 |S_tau|=65 max=1296 new_values=49 labelled_new=11188 share=0.4190 two_in_S=0
+m=7 connected=1866256 |S_tau|=386 max=16807 new_values=321 labelled_new=961198 share=0.5150 two_in_S=0
+brute-force tau checks: 104, mismatches 0
+Lemma T1: 1026505 2-connected labelled graphs (m=3..7), failures 0
+vertex insertion: 138381 (G, non-cut v) pairs (m<=6), failures 0
+alpha(N) for N<=60 (0 = not attained up to m=7):
+1:0 2:0 3:3 4:4 5:5 6:6 7:7 8:4 9:5 10:0 11:5 12:5 13:0 14:6 15:6
+16:4 17:7 18:0 19:7 20:5 21:5 22:0 23:0 24:5 25:0 26:0 27:7 28:6 29:6 30:6
+31:0 32:6 33:7 34:0 35:6 36:6 37:7 38:0 39:7 40:5 41:7 42:0 43:7 44:7 45:5
+46:7 47:0 48:6 49:7 50:7 51:7 52:6 53:0 54:6 55:6 56:6 57:0 58:0 59:0 60:6
+fixed points alpha(N)=N with N<=7: 3 4 5 6 7
+not attained up to m=7 among {9,10,13,18,21,22}: 9:attained 10:NO 13:NO 18:NO 21:attained 22:NO

@@ -1,0 +1,15 @@
+(re-connected sum of two FCs via a 3-back-arc cut, FC-substitution plus a vertex) -> classes:
+   (False, False) 53
+   (False, True) 34
+   (True, False) 93
+   (True, True) 13
+classes with an FC-FC 3-cut: 106
+classes with an FC-substitution deletion: 47
+side sizes of FC-FC 3-cuts: {(6, 6): 106}
+FC-FC cut H pairs (A earlier, B later) -> classes: [((43, 43), 15), ((41, 43), 11), ((43, 37), 9), ((37, 43), 8), ((43, 41), 7), ((43, 45), 6), ((45, 45), 5), ((45, 43), 4), ((45, 41), 4), ((45, 37), 4), ((41, 45), 4), ((41, 41), 3), ((37, 41), 3), ((41, 37), 3), ((41, 33), 3), ((43, 33), 3), ((33, 41), 2), ((33, 43), 2), ((37, 37), 2), ((33, 45), 2), ((37, 45), 2), ((33, 37), 1), ((45, 33), 1), ((33, 33), 1), ((37, 33), 1)]
+distinct FC-FC cuts per class: {0: 87, 1: 106}
+  H=33021 FC-FC cuts (|A|,|B|,fcA,fcB,H(A),H(B),back arcs a matching): [(6, 6, True, True, 33, 33, False)]
+  H=48537 FC-FC cuts (|A|,|B|,fcA,fcB,H(A),H(B),back arcs a matching): [(6, 6, True, True, 45, 45, True)]
+  H=48849 FC-FC cuts (|A|,|B|,fcA,fcB,H(A),H(B),back arcs a matching): [(6, 6, True, True, 45, 45, True)]
+  H=57643 FC-FC cuts (|A|,|B|,fcA,fcB,H(A),H(B),back arcs a matching): []
+classes where the doubled-vertex-plus-one-reversal quotient is an order-11 FC: 0

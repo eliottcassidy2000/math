@@ -1,0 +1,19 @@
+R_H(n) = max H(n-1)/E[H(n)] (exact maxima from census, n <= 12):
+   5: 0.6667, 6: 0.6667, 7: 0.5714, 8: 0.6000, 9: 0.4663, 10: 0.4737, 11: 0.4039, 12: 0.4066
+   monotone decreasing? False
+R_H(13): with 545,835 (session) 0.3590; with THM-329 lower bound 531,205: >= 0.3494; elementary upper bound 12*95095=1141140: <= 0.7506
+R_H(14): circulant 3,711,175 -> 0.34873; THM-329 3,719,831 -> 0.34955; elementary upper bound 13*12*95095=14834820 -> 1.3940
+R_tau(m) = 2^(m-1)(m-1)^(m-3)/m^(m-2) vs 2^(m-1)/(e m):
+   m=3 R_tau=1.3333 lower bound 0.4905
+   m=4 R_tau=1.5000 lower bound 0.7358
+   m=5 R_tau=2.0480 lower bound 1.1772
+   m=6 R_tau=3.0864 lower bound 1.9620
+   m=7 R_tau=4.9351 lower bound 3.3635
+   m=8 R_tau=8.2065 lower bound 5.8861
+   m=9 R_tau=14.0308 lower bound 10.4641
+   bound holds m=3..59: True
+W(n), n=1..8: [1, 2, 8, 32, 158, 928, 6350, 49752] (THM-589: 1,2,8,32,158,928,6350,49752)
+   n=3: E H = 3/2 (= n!/2^(n-1): True), CV^2 = 1/3, W(n)/n! - 1 = 1/3
+   n=4: E H = 3 (= n!/2^(n-1): True), CV^2 = 1/3, W(n)/n! - 1 = 1/3
+   n=5: E H = 15/2 (= n!/2^(n-1): True), CV^2 = 19/60, W(n)/n! - 1 = 19/60
+n*CV^2 = n(W(n)/n! - 1) for n = 10, 20, 40, 80, 160: [1.9265, 1.9855, 1.9968, 1.9992, 1.9998]

@@ -1,0 +1,7 @@
+THM-329 13-vertex: (3719831, ['lam=6', 'prime=1', 'moddef=5', 'twin=5'])
+circulant Z13 {1..6}: (3711175, ['lam=6', 'prime=1', 'moddef=1', 'twin=1'])
+band_4(14): (4013709, ['lam=4', 'prime=1', 'moddef=1', 'twin=1'])
+band_4(15): (15927743, ['lam=4', 'prime=1', 'moddef=1', 'twin=1'])
+C3[R5,R5,TT2] n=12 H=229725 ['lam=4', 'prime=0', 'moddef=0', 'twin=0'] scores [4, 4, 4, 4, 4, 5, 6, 7, 7, 7, 7, 7]
+C3[R5,R5,1] n=11 H=11475 ['lam=3', 'prime=0', 'moddef=0', 'twin=1'] scores [3, 3, 3, 3, 3, 5, 7, 7, 7, 7, 7]
+C3[R5,TT2,R5] n=12 H=229725 ['lam=4', 'prime=0', 'moddef=0', 'twin=0'] scores [4, 4, 4, 4, 4, 5, 6, 7, 7, 7, 7, 7]
