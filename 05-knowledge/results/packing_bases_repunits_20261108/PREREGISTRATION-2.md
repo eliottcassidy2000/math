@@ -43,7 +43,18 @@ the exact gap tables in every base 2-8, which checks the pipeline.
 - **Why.** Mid-range values need single strong pieces that have disjoint cycles and more than 80 odd cycles. Neither
   the alpha_1 <= 80 inventory nor the intercyclic families supply them, and products of small pieces grow too fast.
 - **The analogue that should have been run first.** Pieces with alpha_1 <= 20 (plus the intercyclic families) leave
-  14 alpha-sums in (20, 80] uncovered, in both bases 2 and 3. Pieces with alpha_1 <= 40 leave one (m = 80). That
+  14 alpha-sums in (20, 80] uncovered, in both bases 2 and 3. Pieces with alpha_1 <= 40 leave one, m = 80, in each
+  of bases 2 and 3. That
   would have predicted the failure. The prediction's basis ("the number of products grows quickly") was not checked
   against it. This is recorded with the session's MISTAKE entry.
 - **Status of the ternary law.** HYP-9530 (A) rests on the exact tables to alpha-sum 80 (P1) and nothing more.
+
+**Addendum (after 1d57e6b23c; not part of the pre-registered outcome).**
+- An exploratory, non-pre-registered constructive check, `ternary_attainment.py`, attains every value = 1 (mod 3) up
+  to 5398 except 10 and 31. It does so already with tournaments of order <= 9, and the audit reproduced it
+  independently.
+- With THM-4940 (3) and (4) this makes Spec_3 ∩ [1, 5398] exact (THM-4940 (9)).
+- Beyond 5398, HYP-9530 (A) remains OPEN, and P6 stands REFUTED as registered.
+- The audit follow-up found a truncation bug in the first version of `ternary_attainment.py`: inventory vectors were
+  cut to alpha_1..alpha_4. It created 23 fake piece values, all above the reported ranges. After the fix, the base-3
+  uncovered count to m = 10,000 is 1701, not 1698; the thresholds and witnesses are unchanged.

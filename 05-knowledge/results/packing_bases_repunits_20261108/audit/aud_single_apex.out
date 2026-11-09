@@ -1,0 +1,17 @@
+brute force vs chain-path DP on all words of length <= 9: 0 disagreements
+reduced length m =  2 (order  3): 1 words, min alpha_1 = 1, 2^(m-3) = 0.5
+reduced length m =  3 (order  4): 2 words, min alpha_1 = 2, 2^(m-3) = 1
+reduced length m =  4 (order  5): 4 words, min alpha_1 = 4, 2^(m-3) = 2
+reduced length m =  5 (order  6): 8 words, min alpha_1 = 7, 2^(m-3) = 4
+reduced length m =  6 (order  7): 16 words, min alpha_1 = 12, 2^(m-3) = 8
+reduced length m =  7 (order  8): 32 words, min alpha_1 = 22, 2^(m-3) = 16
+reduced length m =  8 (order  9): 64 words, min alpha_1 = 40, 2^(m-3) = 32
+reduced length m =  9 (order 10): 128 words, min alpha_1 = 76, 2^(m-3) = 64
+reduced length m = 10 (order 11): 256 words, min alpha_1 = 144, 2^(m-3) = 128
+reduced length m = 11 (order 12): 512 words, min alpha_1 = 280, 2^(m-3) = 256
+reduced length m = 12 (order 13): 1024 words, min alpha_1 = 544, 2^(m-3) = 512
+reduced length m = 13 (order 14): 2048 words, min alpha_1 = 1072, 2^(m-3) = 1024
+reduced length m = 14 (order 15): 4096 words, min alpha_1 = 2112, 2^(m-3) = 2048
+reduced length m = 15 (order 16): 8192 words, min alpha_1 = 4192, 2^(m-3) = 4096
+reduced length m = 16 (order 17): 16384 words, min alpha_1 = 8320, 2^(m-3) = 8192
+alpha_1 values in [0, 8192) not attained by one-apex tournaments: 3992; first: [3, 6, 10, 14, 17, 20, 21, 24, 27, 28, 29, 33, 35, 37, 38, 41, 44, 46, 50, 52]

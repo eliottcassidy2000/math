@@ -23703,3 +23703,57 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   validation record (`sc_odd13_validation.out`, with SHA-256 digests and run logs) are committed.
   Lesson: a claim about per-run statistics needs the per-run output committed; describe another lane's run in that
   lane's own words.
+
+## MISTAKE-739 (2026-11-08, opus-2026-11-08-S86, THM-4940, HYP-9530 and the note `05-knowledge/results/packing_bases_repunits_20261108/README.md` at the pre-audit checkpoint 725d3bb4cf, plus the pre-registration PREREGISTRATION-2.md (ebe3096762); found by the independent audit `05-knowledge/results/packing_bases_repunits_20261108/audit/AUDIT.md`, its follow-up section, and the session's own outcome check) -- a statement stated beyond its proof, a refuted claim typed PROVED in a dictionary row, open conjectures stated as facts, a stale merge of a concurrent lane, and a coverage prediction whose in-sample analogue was never run
+
+- **What was claimed.**
+  - THM-4940 (8), title and status: "in base 2 carries leave only [the carry-free singletons] with a <= 7". The proof
+    covered only a < 312, through THM-4884's census below H = 625.
+  - README section 5 typed "alpha_1 = 3 is impossible" as PROVED.
+  - README section 2: "the only repunits with at least three digits that are not H-values are 7 and 21".
+  - README sections 0, 1, 3, 4 and HYP-9530 stated Chan-Pak and HYP-9477 (A) as facts ("carries keep only the gaps
+    7, 21", "keep only the singletons 3, 5, 11, 13", "the binary exceptions of both problems live in a <= 10").
+  - The decomposition lists for the alpha-sum 10 were presented as complete.
+  - "Sylvester's sequence appears only in the LRC/Heegner lane."
+  - "Session218 and Session219 prove that no gap-preserving map exists."
+  - kind-pasteur S17 was described as "live, R1-R11 pre-registered", although its THM-4942 checkpoints had landed
+    before this session's pre-registration.
+  - PREREGISTRATION-2's P6-P8 predicted that products of the alpha_1 <= 80 inventory and the intercyclic families
+    would cover every alpha-sum in (80, 10^5] in bases 2-8.
+  - The first `ternary_attainment.py` reported 1698 uncovered base-3 alpha-sums to 10^4.
+- **What is true.**
+  - (8)'s claim holds below 1024, and below 8192. But the twins for 323 <= a <= 933 were supplied only by the audit's
+    explicit order-9 witnesses, and those for [1024, 8192) by its randomised search.
+  - alpha_1 = 3 occurs: C3 => (strong 4-tournament) has alpha = (3, 2). THM-343 excludes alpha = (3, 0). THM-029 was
+    corrected for exactly this in March 2026.
+  - Even repunits, such as 1111_3 = 40, are never H-values. The statement holds for odd repunits only.
+  - Chan-Pak and HYP-9477 (A) are OPEN.
+  - Three base-2 vectors, (2, 4), (6, 0, 1) and (4, 1, 1), and (2, 2) at b = 4, satisfy the chain constraint but fail
+    alpha_2 <= C(alpha_1, 2) or the alpha_3 rule. The lists omitted them silently.
+  - Sylvester's sequence appears in at least 20 places, including the chain 2, 3, 7, 43 in
+    `sigma_phi_uniqueness_s116n.py`.
+  - Session218 and Session219 record the absence of a map; they do not prove an impossibility theorem.
+  - P6-P8 were REFUTED, with 18-31% of alpha-sums uncovered. That includes the binary control, whose values are all
+    known H-values. The construction universe was too small.
+  - The in-sample analogue would have predicted the failure: pieces with alpha_1 <= 20 leave 14 alpha-sums of (20, 80]
+    uncovered.
+  - `ternary_attainment.py` truncated the inventory vectors to alpha_1..alpha_4. That made 23 fake piece values, all
+    above the reported ranges. The true uncovered count is 1701, and (9) is unaffected (follow-up audit).
+- **Repair.**
+  - THM-4940 (8) now carries the audit's witnesses (order 9 below 1024, randomised search to 8192), with the scope
+    stated.
+  - The dictionary row now reads "alpha = (3, 0) is impossible; alpha_1 = 3 occurs".
+  - The repunit statement is restricted to odd repunits.
+  - Every Chan-Pak or HYP-9477 consequence is typed OPEN.
+  - The decomposition lists state their filter.
+  - The Sylvester and Session218/219 sentences are corrected.
+  - Section 4 merges THM-4942 (audited) and Session230 (complete).
+  - The PREREGISTRATION-2 outcome is appended without editing the predictions.
+  - The constructive ternary range (THM-4940 (9)) was found only after P6-P8 failed, and is typed as a construction,
+    not a test.
+- **Lesson.**
+  - Before pre-registering a coverage claim for a construction universe, run the in-sample analogue: restrict the
+    pieces and test the next range, where the truth is known. MISTAKE-728 is the same lesson for a different object.
+  - When a title compresses a scoped body sentence, keep the scope in the title.
+  - Re-run `git log origin/main --since` on every concurrent lane immediately before writing a merge section
+    (MISTAKE-677).

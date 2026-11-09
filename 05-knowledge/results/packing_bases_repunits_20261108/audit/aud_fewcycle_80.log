@@ -1,0 +1,33 @@
+order 3: 1 classes written (total 1)
+order 4: candidates after t3 6, after cycle cap 6, classes 1
+order 4: 1 classes written (total 2)
+order 5: candidates after t3 14, after cycle cap 14, classes 6
+order 5: 6 classes written (total 8)
+order 6: candidates after t3 180, after cycle cap 180, classes 35
+order 6: 35 classes written (total 43)
+order 7: candidates after t3 2170, after cycle cap 2170, classes 353
+order 7: 353 classes written (total 396)
+order 8: candidates after t3 44352, after cycle cap 9166, classes 1480
+order 8: 1480 classes written (total 1876)
+order 9: candidates after t3 293716, after cycle cap 6291, classes 1115
+order 9: 1115 classes written (total 2991)
+order 10: candidates after t3 393678, after cycle cap 4416, classes 838
+order 10: 838 classes written (total 3829)
+order 11: candidates after t3 529336, after cycle cap 3131, classes 625
+order 11: 625 classes written (total 4454)
+order 12: candidates after t3 618500, after cycle cap 1872, classes 401
+order 12: 401 classes written (total 4855)
+order 13: candidates after t3 631799, after cycle cap 1094, classes 245
+order 13: 245 classes written (total 5100)
+order 14: candidates after t3 502450, after cycle cap 532, classes 131
+order 14: 131 classes written (total 5231)
+order 15: candidates after t3 317574, after cycle cap 219, classes 57
+order 15: 57 classes written (total 5288)
+order 16: candidates after t3 142116, after cycle cap 84, classes 25
+order 16: 25 classes written (total 5313)
+order 17: candidates after t3 43525, after cycle cap 24, classes 8
+order 17: 8 classes written (total 5321)
+order 18: candidates after t3 8112, after cycle cap 8, classes 3
+order 18: 3 classes written (total 5324)
+order 19: candidates after t3 673, after cycle cap 0, classes 0
+order 19 EMPTY: generation complete (deletion lemma)

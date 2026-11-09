@@ -24,12 +24,14 @@ spec.loader.exec_module(cp)
 
 
 def strong_census(d, maxn=9):
+    """packing vectors (alpha_1..alpha_6) of the strong classes of order <= maxn; alpha_census.c reports alpha_1..alpha_4,
+    and at order <= 9 at most three odd cycles are pairwise disjoint, so the vectors are padded with zeros"""
     vecs = set()
     for n in range(3, maxn + 1):
         for line in open(os.path.join(d, f"alpha_{n}.txt")):
             f = line.split()
             if f[2] == '1':
-                vecs.add(tuple(int(x) for x in f[4:8]))
+                vecs.add(tuple(int(x) for x in f[4:8]) + (0, 0))
     return vecs
 
 
@@ -55,7 +57,11 @@ def closure_with_witness(atom_values, V):
 
 def main():
     d, inv_path = sys.argv[1], sys.argv[2]
-    vecs = strong_census(d) | {v[:4] for v in cp.load_inventory(inv_path)}
+    # full 6-entry vectors on both sides (an earlier version truncated the inventory vectors to alpha_1..alpha_4,
+    # which dropped alpha_5, alpha_6 for 39 classes of orders 15-18 and created 23 fake piece values above the
+    # reported ranges; found by the audit follow-up)
+    vecs = strong_census(d) | {tuple(v) for v in cp.load_inventory(inv_path)}
+    assert all(len(v) == 6 for v in vecs)
     apex = cp.one_apex_values(19, 70000)
     rays = {3 * 2 ** s for s in range(1, 20)} | {9 * 2 ** s - 2 for s in range(0, 20)}
     inter = {a for a in apex | rays if 1 <= a <= 70000}

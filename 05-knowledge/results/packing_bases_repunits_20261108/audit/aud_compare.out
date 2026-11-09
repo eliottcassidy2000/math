@@ -1,0 +1,72 @@
+1. Census (kind-pasteur classgen class lists, every quantity recomputed by aud_fewcycle census mode;
+   OCF H = sum alpha_k 2^k agreed with classgen's DP path count on every class, strong and self-converse flags agreed)
+   order 1: classes 1 (A000568 1), distinct own canonical codes 1, strong 1 (A051337 1), strong intercyclic 1
+   order 2: classes 1 (A000568 1), distinct own canonical codes 1, strong 0 (A051337 0), strong intercyclic 0
+   order 3: classes 2 (A000568 2), distinct own canonical codes 2, strong 1 (A051337 1), strong intercyclic 1
+   order 4: classes 4 (A000568 4), distinct own canonical codes 4, strong 1 (A051337 1), strong intercyclic 1
+   order 5: classes 12 (A000568 12), distinct own canonical codes 12, strong 6 (A051337 6), strong intercyclic 6
+   order 6: classes 56 (A000568 56), distinct own canonical codes 56, strong 35 (A051337 35), strong intercyclic 11
+   order 7: classes 456 (A000568 456), distinct own canonical codes 456, strong 353 (A051337 353), strong intercyclic 20
+   order 8: classes 6880 (A000568 6880), distinct own canonical codes 6880, strong 6008 (A051337 6008), strong intercyclic 37
+   order 9: classes 191536 (A000568 191536), distinct own canonical codes 191536, strong 178133 (A051337 178133), strong intercyclic 70
+   Moon's sharp count: min number of l-cycles over strong classes, and min alpha_1 vs m(n):
+     n = 3: min c3 = 1 (n-l+1 = 1); min alpha_1 = 1 (m(n) = 1)
+     n = 4: min c3 = 2 (n-l+1 = 2); min alpha_1 = 2 (m(n) = 2)
+     n = 5: min c3 = 3 (n-l+1 = 3), min c5 = 1 (n-l+1 = 1); min alpha_1 = 4 (m(n) = 4)
+     n = 6: min c3 = 4 (n-l+1 = 4), min c5 = 2 (n-l+1 = 2); min alpha_1 = 6 (m(n) = 6)
+     n = 7: min c3 = 5 (n-l+1 = 5), min c5 = 3 (n-l+1 = 3), min c7 = 1 (n-l+1 = 1); min alpha_1 = 9 (m(n) = 9)
+     n = 8: min c3 = 6 (n-l+1 = 6), min c5 = 4 (n-l+1 = 4), min c7 = 2 (n-l+1 = 2); min alpha_1 = 12 (m(n) = 12)
+     n = 9: min c3 = 7 (n-l+1 = 7), min c5 = 5 (n-l+1 = 5), min c7 = 3 (n-l+1 = 3), min c9 = 1 (n-l+1 = 1); min alpha_1 = 16 (m(n) = 16)
+
+2. Own few-cycle inventory (strong, alpha_1 <= 80; level 19 EMPTY): 5324 classes; per order [(3, 1), (4, 1), (5, 6), (6, 35), (7, 353), (8, 1480), (9, 1115), (10, 838), (11, 625), (12, 401), (13, 245), (14, 131), (15, 57), (16, 25), (17, 8), (18, 3)]
+   order 3: census strong alpha_1 <= 80: 1; enumerator: 1; identical code sets: True
+   order 4: census strong alpha_1 <= 80: 1; enumerator: 1; identical code sets: True
+   order 5: census strong alpha_1 <= 80: 6; enumerator: 6; identical code sets: True
+   order 6: census strong alpha_1 <= 80: 35; enumerator: 35; identical code sets: True
+   order 7: census strong alpha_1 <= 80: 353; enumerator: 353; identical code sets: True
+   order 8: census strong alpha_1 <= 80: 1480; enumerator: 1480; identical code sets: True
+   order 9: census strong alpha_1 <= 80: 1115; enumerator: 1115; identical code sets: True
+   session few_cycle_strong_44.txt: 901 classes; multiset of (order, packing vector, H) equal to own alpha_1 <= 44 part: True
+   session few_cycle_strong_80.txt: 5324 classes; multiset of (order, packing vector, H) equal to own alpha_1 <= 80 part: True
+   classes with alpha_6 > 0: [(18, (72, 588, 1176, 660, 86, 1), 25281)]
+
+3. Own intercyclic inventory (strong, alpha_1 <= 1023; level 14 EMPTY): 1461 classes; per order [(3, 1), (4, 1), (5, 6), (6, 11), (7, 20), (8, 37), (9, 70), (10, 135), (11, 264), (12, 519), (13, 397)]
+   equal to the session's intercyclic_strong_le13.txt restricted to alpha_1 < 1024 as a multiset of (order, alpha_1, self-converse): True
+
+4. Carried twins in base 2 for the carry-free singletons a >= 8 below 1024 (strong NON-intercyclic classes
+   with H = 1 + 2a, found in the census of orders 6-9):
+   a =    8, H =    17: twins by order [(6, 1), (7, 0), (8, 0), (9, 0)]; least-order example alpha = (6, 1, 0, 0)
+   a =   15, H =    31: twins by order [(6, 2), (7, 1), (8, 0), (9, 0)]; least-order example alpha = (13, 1, 0, 0)
+   a =   32, H =    65: twins by order [(6, 0), (7, 11), (8, 2), (9, 0)]; least-order example alpha = (24, 4, 0, 0)
+   a =   45, H =    91: twins by order [(6, 0), (7, 15), (8, 12), (9, 1)]; least-order example alpha = (37, 4, 0, 0)
+   a =   89, H =   179: twins by order [(6, 0), (7, 0), (8, 26), (9, 8)]; least-order example alpha = (71, 9, 0, 0)
+   a =  106, H =   213: twins by order [(6, 0), (7, 0), (8, 28), (9, 36)]; least-order example alpha = (80, 13, 0, 0)
+   a =  176, H =   353: twins by order [(6, 0), (7, 0), (8, 33), (9, 43)]; least-order example alpha = (112, 32, 0, 0)
+   a =  185, H =   371: twins by order [(6, 0), (7, 0), (8, 32), (9, 54)]; least-order example alpha = (121, 32, 0, 0)
+   a =  229, H =   459: twins by order [(6, 0), (7, 0), (8, 30), (9, 73)]; least-order example alpha = (139, 45, 0, 0)
+   a =  310, H =   621: twins by order [(6, 0), (7, 0), (8, 2), (9, 119)]; least-order example alpha = (200, 55, 0, 0)
+   a =  323, H =   647: twins by order [(6, 0), (7, 0), (8, 0), (9, 129)]; least-order example alpha = (215, 54, 0, 0)
+   a =  369, H =   739: twins by order [(6, 0), (7, 0), (8, 0), (9, 119)]; least-order example alpha = (237, 66, 0, 0)
+   a =  414, H =   829: twins by order [(6, 0), (7, 0), (8, 0), (9, 138)]; least-order example alpha = (258, 78, 0, 0)
+   a =  429, H =   859: twins by order [(6, 0), (7, 0), (8, 0), (9, 175)]; least-order example alpha = (281, 74, 0, 0)
+   a =  544, H =  1089: twins by order [(6, 0), (7, 0), (8, 0), (9, 175)]; least-order example alpha = (344, 100, 0, 0)
+   a =  604, H =  1209: twins by order [(6, 0), (7, 0), (8, 0), (9, 206)]; least-order example alpha = (382, 111, 0, 0)
+   a =  680, H =  1361: twins by order [(6, 0), (7, 0), (8, 0), (9, 199)]; least-order example alpha = (384, 140, 4, 0)
+   a =  699, H =  1399: twins by order [(6, 0), (7, 0), (8, 0), (9, 208)]; least-order example alpha = (397, 151, 0, 0)
+   a =  746, H =  1493: twins by order [(6, 0), (7, 0), (8, 0), (9, 220)]; least-order example alpha = (408, 157, 6, 0)
+   a =  838, H =  1677: twins by order [(6, 0), (7, 0), (8, 0), (9, 175)]; least-order example alpha = (468, 173, 6, 0)
+   a =  859, H =  1719: twins by order [(6, 0), (7, 0), (8, 0), (9, 236)]; least-order example alpha = (487, 182, 2, 0)
+   a =  933, H =  1867: twins by order [(6, 0), (7, 0), (8, 0), (9, 175)]; least-order example alpha = (525, 192, 6, 0)
+   every carry-free singleton with 8 <= a < 1024 has a strong non-intercyclic twin: True
+
+5. Extended intercyclic run (alpha_1 <= 8191; level 17 EMPTY): 11433 classes
+   carry-free singletons below 8192: 64 (26 below 1024); those in [1024, 8192): [1311, 1423, 1490, 1618, 1647, 1749, 1877, 1954, 1985, 2407, 2494, 2790, 2989, 3125, 3463, 3600, 3643, 3952, 3997, 4110, 4155, 4304, 4874, 4923, 5086, 5137, 5264, 5504, 5557, 5690, 5743, 6110, 6635, 6883, 7306, 7520, 7581, 7845]
+   orders of all singletons: [(3, 1), (4, 1), (5, 2), (6, 1), (7, 1), (8, 1), (9, 3), (11, 8), (13, 17), (15, 29)] ; all self-converse: True
+
+6. Birth fibers h(s,p) for n(h) <= 7 recomputed from the census vs Session224 birth_fibers.csv:
+   77 values; identical: True
+   order 4: 5(1,0)
+   order 5: 9(2,0) 11(1,0) 13(1,0) 15(2,0)
+   order 6: 17(2,0) 19(0,1) 23(0,2) 25(0,1) 27(0,1) 29(2,1) 31(0,1) 33(1,2) 37(1,2) 41(1,0) 43(0,1) 45(2,0)
+   order 7: 58 values
+   order-6 classes with H = 11 (strong, self-converse): [(0, 0), (0, 0)]

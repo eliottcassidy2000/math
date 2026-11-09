@@ -3,10 +3,13 @@ id: HYP-9530
 title: "Packing counts in every base: (A) ternary Chan-Pak - the base-3 packing counts I(Omega(T), 3) take every value congruent to 1 mod 3 except 10 and 31, the same alpha-sums 3 and 10 that give 7 and 21 in base 2; (B) every base has finitely many gaps; (C) the carry-free layer has infinitely many singletons, while binary carries leave only 3, 5, 11, 13"
 status: >
   OPEN.
-  (A): pre-registered P1 CONFIRMED. It is FINITE-EXACT and complete at all orders for alpha-sums <= 80, i.e. values
-  <= 241.
+  (A): FINITE-EXACT and complete for alpha-sums <= 1799 (values <= 5398): the gaps there are exactly 10 and 31
+  (THM-4940 (3), (4), (9)). It is OPEN beyond. Pre-registered P1 (exact tables to alpha-sum 80) is CONFIRMED; the
+  extension to 1799 is constructive and was not pre-registered.
   (B): consistent with the exact tables to alpha-sum 80 for b <= 90.
-  (C): FINITE-EXACT below 1024 (26 carry-free singletons); the binary half is HYP-9477 (A).
+  (C): FINITE-EXACT below 8192: 64 carry-free singletons, all self-converse, and every one with a >= 8 has a strong
+  non-intercyclic binary twin (session to 1024, audit to 8192). The binary half beyond that is HYP-9477 (A).
+  Audited with THM-4940 (PASS WITH CORRECTIONS; MISTAKE-739).
 session: opus-2026-11-08-S86
 source: 05-knowledge/results/packing_bases_repunits_20261108/README.md
 related:
@@ -31,10 +34,16 @@ odd-cycle packings of some tournament.
 **What is proved.**
 - 10 and 31 are permanent gaps. 10 is THM-4940 (3), at all orders. 31 is THM-4940 (4) with b = 3: its candidate
   vectors (10, 0), (7, 1) and (4, 2) are excluded at all orders by the complete inventory.
-- Below 242 these are the only gaps (THM-4940 (6), pre-registered P1, CONFIRMED).
+- Below 242 these are the only gaps: THM-4940 (6), pre-registered P1, CONFIRMED.
+- Below 5399 they are still the only gaps: THM-4940 (9), constructive, with every other value attained by a tournament
+  of order <= 9.
 
 **Comparison with base 2.**
-- Base 2 (Chan-Pak) and base 3 have the same gap alpha-sums {3, 10}.
+- Base 2 and base 3 have the same known gap alpha-sums {3, 10}: base 2 up to alpha-sum 2^34 (all-odd coverage),
+  base 3 up to alpha-sum 1799 (THM-4940 (9)). Chan-Pak and (A) assert this at every alpha-sum.
+- The ternary pair 10, 31 was first observed at n <= 6 by `04-computation/ip_hierarchy.py` (opus-S71e, March 2026),
+  which asked whether they are "gaps analogous to H = 7 and H = 21". (A) is that question with an all-order proof of
+  both gaps and exact data to alpha-sum 80.
 - By THM-4940 (7) they are the only bases that can share them.
 - In both, every hole of A other than 3 and 10 is rescued by carries, at least up to alpha-sum 80.
 
@@ -43,8 +52,8 @@ odd-cycle packings of some tournament.
 - The first gap is 7 = 111_2 in base 2.
 - MISTAKE-559 applies: no mechanism is claimed.
 
-**Falsifier.** A value 1 + 3m (m not 3 or 10) that is not a 3-coloured packing count of any tournament. Every m <= 80
-is already settled.
+**Falsifier.** A value 1 + 3m (m not 3 or 10) that is not a 3-coloured packing count of any tournament. Every
+m <= 1799 is already settled.
 
 ## (B) Finite gap sets
 
@@ -63,16 +72,25 @@ is already settled.
 ## (C) Carry-free singletons are infinite; binary carries kill all but four
 
 **Statement.**
-- Infinitely many a in A have exactly one strong intercyclic realiser. Below 1024 there are 26, all self-converse,
-  the largest being 933.
+- Infinitely many a in A have exactly one strong intercyclic realiser:
+  - 26 below 1024 (largest 933);
+  - 64 below 8192 (audit), all self-converse.
+  - Above order 9 they occur only at odd orders.
 - Every such a >= 8 has another strong realiser of H = 1 + 2a in base 2, coming from carries.
 
 **What is known.**
-- The second half is HYP-9477 (A) restricted to H = 1 + 2a with a in A. It is FINITE-EXACT below 625 (THM-4884), where
-  the binary strong singletons are exactly 3, 5, 11, 13, i.e. a = 1, 2, 5, 6.
+- The second half is HYP-9477 (A) restricted to H = 1 + 2a with a in A.
+- It is FINITE-EXACT below 625 (THM-4884), where the binary strong singletons are exactly 3, 5, 11, 13, i.e.
+  a = 1, 2, 5, 6.
+- For the carry-free singletons it is FINITE-EXACT below 8192: each of the 60 with a >= 8 has an explicit strong
+  twin with two disjoint cyclic triangles. These come from THM-4940 (8) and the audit's `aud_twins_hi.out`.
 
-**Reading.** In base 2, carries both fill holes (Chan-Pak keeps only 3, 10) and destroy uniqueness (Carmichael-type
-singletons keep only a <= 7). Both families of binary exceptions lie in the carry-free range a <= 10.
+**Reading.** In base 2, carries both fill holes and destroy uniqueness:
+- holes: Chan-Pak, OPEN, says only 3 and 10 survive;
+- uniqueness: HYP-9477 (A), OPEN, says only a <= 7 survive. This is verified below 625, and for the carry-free
+  singletons below 8192 by the audit.
+
+The known binary exceptions of both kinds lie in the carry-free range a <= 10.
 
 **Falsifier.** For the first half: a finite list, i.e. no carry-free singletons above some bound. For the second half:
 a carry-free singleton a >= 8 whose binary value has a single strong class.

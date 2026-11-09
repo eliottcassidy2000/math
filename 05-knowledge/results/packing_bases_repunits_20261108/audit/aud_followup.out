@@ -1,0 +1,70 @@
+1. Pieces (audit's own explicit strong tournaments):
+   CEN strong classes of orders 3-9: 184537 classes; 65161 distinct (order, packing vector) pairs, 64196 distinct vectors
+   FC  strong classes with alpha_1 <= 80: 5324 classes; 2349 distinct (order, vector) pairs, 2072 distinct vectors
+   IC  strong intercyclic classes with alpha_1 <= 8191: 11433 classes; 4720 distinct (order, vector) pairs, 4206 distinct alpha_1
+
+2. Attainment by products of CEN u FC u IC (independent construction, divisor-pair closure):
+   base 2: uncovered alpha-sums m <= 1800: first [3, 10, 1463, 1476, 1478, 1484, 1559, 1568, 1583, 1608, 1610, 1614]; first uncovered m other than 3, 10: 1463 (value 2927); every value 1 + 2m with m < 1463, m not 3 or 10, is attained
+   base 3: uncovered alpha-sums m <= 2200: first [3, 10, 1800, 1814, 1826, 1827, 1828, 1838, 1839, 1840, 1844, 1848]; first uncovered m other than 3, 10: 1800 (value 5401); every value 1 + 3m with m < 1800, m not 3 or 10, is attained
+   check with CEN alone (strong classes of order <= 9), base 2: uncovered alpha-sums m <= 501: [3, 10]
+   check with CEN alone (strong classes of order <= 9), base 3: uncovered alpha-sums m <= 334: [3, 10]
+   direct H_2 values of all classes of order <= 9 (no products): every value = 1 (mod 2) up to 2881 except (7, 21) is attained; first further misses [2883, 2887, 2889, 2893, 2895]; max 3357
+   direct H_3 values of all classes of order <= 9 (no products): every value = 1 (mod 3) up to 5398 except (10, 31) is attained; first further misses [5401, 5425, 5437, 5443, 5452]; max 6292
+
+3. The session's universe (a) strong order <= 9, (b) alpha_1 <= 80, (c) one-apex length <= 19 + rays,
+   with CORRECT full vectors, counts to m = 10000 (ternary_attainment.out reports 1183 and 1698):
+   intercyclic values (one-apex length <= 19 and rays, <= 70000): 35140; agree with the exhaustive IC below 8192: True
+   distinct vectors: correct 65299; with the session's v[:4] truncation 65299 (23 truncated vectors that are not packing vectors of their classes)
+   base 2: smallest truncated (unrealised) piece value 3385
+   base 3: smallest truncated (unrealised) piece value 10537
+   correct  : base 2: 1183 uncovered m <= 10000, first beyond 3, 10: 1463; base 3: 1701 uncovered m <= 10000, first beyond 3, 10: 1800
+   truncated: base 2: 1183 uncovered m <= 10000, first beyond 3, 10: 1463; base 3: 1698 uncovered m <= 10000, first beyond 3, 10: 1800
+   base 2: alpha-sums <= 10000 'covered' only through truncated (unrealised) piece values: [3335, 3350, 5966] [[6671], [6701], [11933]]
+   base 2: alpha-sums <= 10000 covered by the genuine alpha_5 > 0 pieces but lost under truncation: [3174, 6300, 9523] [[6349], [12601], [3, 6349]]
+   base 3: alpha-sums <= 10000 'covered' only through truncated (unrealised) piece values: [4016, 7885, 8030, 8876] [[12049], [23656], [24091], [26629]]
+   base 3: alpha-sums <= 10000 covered by the genuine alpha_5 > 0 pieces but lost under truncation: [7966] [[23899]]
+
+4. Witness factorisations printed in ternary_attainment.out, each factor matched to an explicit piece:
+   base 2, m = 11: product 23 = 23
+      23 = H_2 of a strong CEN class of order 6, alpha = (9, 1, 0, 0)
+   base 2, m = 100: product 201 = 201
+      67 = H_2 of a strong CEN class of order 7, alpha = (23, 5, 0, 0)
+      3 = H_2 of a strong CEN class of order 3, alpha = (1, 0, 0, 0)
+   base 2, m = 1000: product 2001 = 2001
+      29 = H_2 of a strong CEN class of order 6, alpha = (10, 2, 0, 0)
+      23 = H_2 of a strong CEN class of order 6, alpha = (9, 1, 0, 0)
+      3 = H_2 of a strong CEN class of order 3, alpha = (1, 0, 0, 0)
+   base 2, m = 1462: product 2925 = 2925
+      13 = H_2 of a strong CEN class of order 5, alpha = (6, 0, 0, 0)
+      5 = H_2 of a strong CEN class of order 4, alpha = (2, 0, 0, 0)
+      5 = H_2 of a strong CEN class of order 4, alpha = (2, 0, 0, 0)
+      3 = H_2 of a strong CEN class of order 3, alpha = (1, 0, 0, 0)
+      3 = H_2 of a strong CEN class of order 3, alpha = (1, 0, 0, 0)
+   base 3, m = 11: product 34 = 34
+      34 = H_3 of a strong CEN class of order 6, alpha = (11, 0, 0, 0)
+   base 3, m = 100: product 301 = 301
+      43 = H_3 of a strong CEN class of order 6, alpha = (11, 1, 0, 0)
+      7 = H_3 of a strong CEN class of order 4, alpha = (2, 0, 0, 0)
+   base 3, m = 1000: product 3001 = 3001
+      3001 = H_3 of a strong CEN class of order 9, alpha = (403, 181, 6, 0)
+   base 3, m = 1799: product 5398 = 5398
+      5398 = H_3 of a strong CEN class of order 9, alpha = (734, 313, 14, 0)
+   pure-Python re-derivation of an order-9 piece with H_3 = 3001: alpha = (454, 164, 6) (C census: (454, 164, 6), agree), H_3 = 3001, H = 1613, out-masks [136, 13, 25, 448, 43, 143, 55, 342, 119]
+   pure-Python re-derivation of an order-9 piece with H_3 = 5398: alpha = (755, 309, 13) (C census: (755, 309, 13), agree), H_3 = 5398, H = 2851, out-masks [88, 385, 99, 102, 46, 323, 402, 61, 157]
+   lines of ternary_attainment.out that assert a gap / non-attainment: none
+
+5. PREREGISTRATION-2 universe: (i) alpha_1 <= 80 strong pieces (full vectors), (ii) one-apex reduced length
+   <= 21 (script) / <= 23 (pre-registration text), (iii) the rays; uncovered alpha-sums by base:
+   one-apex values <= 100000 from reduced length <= 21 and <= 23 coincide: True
+   b = 2: m <= 80 uncovered [3, 10]; uncovered in (80, 100000]: 18038, first [179, 209, 249]
+   b = 3: m <= 80 uncovered [3, 10]; uncovered in (80, 100000]: 24059, first [340, 346, 350]
+   b = 4: m <= 80 uncovered [3, 14, 27]; uncovered in (80, 20000]: 5182, first [273, 274, 315]
+   b = 5: m <= 80 uncovered [3, 10, 27]; uncovered in (80, 20000]: 5613, first [318, 320, 329]
+   b = 6: m <= 80 uncovered [3, 10, 14, 21, 46]; uncovered in (80, 20000]: 5827, first [333, 342, 349]
+   b = 7: m <= 80 uncovered [3, 10, 14, 29]; uncovered in (80, 20000]: 6561, first [296, 308, 320]
+   b = 8: m <= 80 uncovered [3, 35, 52]; uncovered in (80, 20000]: 6470, first [351, 357, 371]
+   the unrun in-sample analogue (strong pieces with alpha_1 <= K plus the intercyclic families):
+     K = 20, b = 2: uncovered alpha-sums in (20, 80]: 14 [29, 33, 35, 41, 44, 50, 54, 56, 59, 65, 66, 68, 74, 80]
+     K = 20, b = 3: uncovered alpha-sums in (20, 80]: 14 [35, 38, 41, 46, 50, 52, 54, 55, 62, 66, 67, 68, 74, 80]
+     K = 40, b = 2: uncovered alpha-sums in (40, 80]: 1 [80]
+     K = 40, b = 3: uncovered alpha-sums in (40, 80]: 1 [80]

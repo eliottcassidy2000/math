@@ -1,0 +1,10 @@
+fibre moves, orders 1..8: 7412 classes, H-preserving deletion edges 1272, flip edges 6791
+  order 1: 0 of 1 classes in no component with a first creator of their value
+  order 2: 0 of 1 classes in no component with a first creator of their value
+  order 3: 0 of 2 classes in no component with a first creator of their value
+  order 4: 0 of 4 classes in no component with a first creator of their value
+  order 5: 0 of 12 classes in no component with a first creator of their value
+  order 6: 3 of 56 classes in no component with a first creator of their value
+  order 7: 34 of 456 classes in no component with a first creator of their value
+  order 8: 632 of 6880 classes in no component with a first creator of their value
+  H = 9 fibre: 2 components; sizes per order: [ n5:2 n6:4 n7:6 n8:8 ] [ n6:1 n7:3 n8:6 ]

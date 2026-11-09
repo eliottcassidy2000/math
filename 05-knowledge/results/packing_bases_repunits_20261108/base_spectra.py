@@ -6,7 +6,7 @@ Completeness argument (all steps elementary):
     polynomial of any tournament is the product of those of its strong components.
   * If 1 + b*m = H_b(T) then alpha_1(T) <= m (all alpha_k >= 0 and alpha_1 is the coefficient of b^0 in m).
   * Moon's sharp cycle count (a strong k-tournament has at least k - l + 1 cycles of each length l, 3 <= l <= k;
-    MISTAKE-560 / THM-115) gives alpha_1 >= m(k) = sum over odd l in [3, k] of (k - l + 1): m(9) = 16, m(10) = 20.
+    Moon, Canad. Math. Bull. 9 (1966) 297-301, Cor. 2.1, as cited in THM-343; MISTAKE-560) gives alpha_1 >= m(k) = sum over odd l in [3, k] of (k - l + 1): m(9) = 16, m(10) = 20.
     So with MBUDGET <= 19 every strong component of a realisation has order <= 9, and the census to order 9 is
     complete for this question.
 Input (either):
