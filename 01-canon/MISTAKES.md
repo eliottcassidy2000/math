@@ -23921,3 +23921,23 @@ Sources: THM-5000-coprime-interface-composition-consecutive-odd-windows.md;
 THM-5001-every-positive-endpoint-quotient-has-a-small-strong-realizer.md;
 THM-5002-three-state-transfer-for-bridge-linked-transitive-blocks.md;
 05-knowledge/results/session233_composition_20261109/.
+
+## MISTAKE-745 (2026-11-09, opus-2026-11-09-S88, PREREGISTRATION.md of 05-knowledge/results/word_law_markov_20261109 (commit 654969dcc5))
+
+- **What was claimed.** Q1-Q3 predicted that the run-window lines of admissible words realise every nu-pair allowed
+  by HYP-9540 (B), black and blue, at n = 13..40. They were pushed before the same census had been run at n <= 12,
+  where line censuses exist.
+- **What is true.** The in-sample run (pairs_check_insample.out), done minutes later, already shows the family
+  missing (k, k) at n = 6, 9, 12 and the blue both-odd pairs. Both gaps are structural:
+  - (k, k) at n = 3k is impossible for any word (unique maximum packing);
+  - both-odd pairs are impossible for even palindromes (THM-5020 (5)).
+
+  So Q1 and Q2 were bound to fail. The run-window family is too small for these pairs. HYP-9540 (B) is not refuted.
+- **Repair.**
+  - The outcome is appended as REFUTED, without editing the predictions.
+  - The structural reasons are proved (THM-5020 (5), (6)).
+  - The gap law and the residual existence question are recorded as HYP-9590.
+  - THM-5020 states (B) only for the realised pairs.
+- **Lesson.** This repeats MISTAKE-739 and MISTAKE-728. Before pre-registering a coverage claim for a construction
+  family, run the same census on the in-sample range where the truth is known. Do it in the same sitting, before
+  the push.
