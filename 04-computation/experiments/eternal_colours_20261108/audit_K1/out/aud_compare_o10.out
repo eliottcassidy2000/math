@@ -1,0 +1,8 @@
+(a) auditor: 3114 SC values, 3039 with a strong SC realisation
+(b) packet : 3114 SC values, 3039 strong
+(c) class census: 3114 SC values; all values at order 10: 7663
+(a) == (b) including strong flags: True
+set(a) == (c): True
+all order-10 SC values = 1 mod 4 (THM-791 at n = 10): True
+least strong SC value at order 10: 125 (Busch f(10) = 125)
+non-strong SC values below 625: [1, 5, 9, 17, 25, 29, 33, 37, 41, 45, 49, 57, 65, 73, 81, 85, 89, 105, 117, 121, 133, 149, 157, 173, 177, 189, 197, 217, 225, 233, 237, 241, 245, 261, 265, 269, 277, 293, 325, 329, 337, 341, 345, 357, 361, 369, 373, 381, 389, 393, 397, 405, 413, 433, 445, 453, 457, 465, 469, 481, 485, 493, 513, 529, 533, 541, 549, 553, 557, 561, 565, 573]

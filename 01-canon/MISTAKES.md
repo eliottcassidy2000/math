@@ -23653,3 +23653,40 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     - one-vertex extensions: "ear", "insertion cut", "exposed slot", "cut field", "slot matrix";
     - connectivity: "delta^0", "semi-degree", "arc-strong".
     Grep the target statement in each vocabulary before typing PROVED or new (cf. MISTAKE-734, MISTAKE-735).
+
+
+## MISTAKE-738 (2026-11-08, mac-mini-2026-11-08-firstrealizers, THM-4930, HYP-9520 and the note `05-knowledge/results/eternal_colours_self_converse_values_20261108.md` at the pre-audit commit 6abb620db7; found by the independent audit `05-knowledge/results/eternal_colours_audit_K1_20261108.md`) -- method priors missed in a "new here" list, and an open conjecture stated as fact in a title
+
+- **What was wrong.** No mathematical error; credit and typing only.
+  - THM-4930's "New here" list claimed three things the repository already had:
+    - the membership test with Busch decidability. Session24's PROOF §1 bounds strong components by Busch
+      (`|C| <= 1 + 3 log_5 q`), and its "Completeness in H" paragraph declares the inventories complete for H <= 73;
+    - the enumeration of all self-converse tournaments through one fixed anti-involution: THM-4743 (6) and its audit
+      S49, all 2^30 labellings at n = 11 (automorphism data, not H). Session29's half-path and converse-congruences
+      reports prove existence and conjugacy of anti-involutions;
+    - the order-10 self-converse value set (THM-4922's audit, `aud_o10_byH.txt`).
+  - HYP-9520's title asserted conjecture (a), density zero, as a fact.
+  - Statement 2 applied THM-791(a), which needs a fixed-point-free involutive anti-automorphism, without the
+    anti-involution step; that step appeared only in the proof of statements 3-4.
+  - Minor:
+    - "Session29 section 4" named no report;
+    - the `-DCHECK` scope was overstated ("every extension of the first 2^17 codes" for the extensions of the 7,469
+      parents with H < 625 among them);
+    - 36/688 was rounded to 5.2% (it is 5.23%);
+    - one witness line (H = 1089) printed a non-strong tournament under the strong flag;
+    - a program header said "order 9" for an order-11 test.
+- **Why it happened.** The priority check searched for the question (eternal colours; Session24's zero list; the
+  same-prompt lanes THM-4922 and Session224) but not for the methods the packet relied on. The method priors sat in a
+  theorem on another topic (THM-4743, seven-point spheres) and in Session24's proof text rather than its tables.
+- **Repair.** All nineteen corrections are applied.
+  - THM-4930's KNOWN list now credits Session24 §1, THM-4743 (6) / S49, Session29's reports and THM-4922's audit.
+  - "New here" keeps four items: the eternal colour (J_h != 0 in Session24's notation), the lists above 73, the
+    birth-against-eternal comparison, and the order-10 strong flags with the order-11 values below 625.
+  - The anti-involution step is now in statement 2 and in Proof 2.
+  - HYP-9520's title says "conjecturally".
+  - The programs are fixed: the witness flag, the header, and a LIM guard.
+  - The audit's supplementary order-12 enumeration settled 377 as eternally black. An independent pair-extension run
+    of this session (H <= 377) confirms it. The audit's complete order 11 made 1551 and 1627 blue.
+- **Lesson.** A priority check must cover the methods as well as the statements. Grep for the enumeration technique
+  ("anti-involution", "anti-invariant", "fixed-point-free") and for the bound that makes a computation exact ("Busch",
+  "complete in H"), not only for the claim. Type every conjecture in a title with "conjecturally".

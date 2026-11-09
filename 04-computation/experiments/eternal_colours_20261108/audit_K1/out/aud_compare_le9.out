@@ -1,0 +1,19 @@
+order 1 full: census SC values 1 (strong 1); anti-invariant 1 (strong 1); identical incl. strong flags: True
+order 1 red : census SC values 1 (strong 1); anti-invariant 1 (strong 1); identical incl. strong flags: True
+order 2 full: census SC values 1 (strong 0); anti-invariant 1 (strong 0); identical incl. strong flags: True
+order 2 red : census SC values 1 (strong 0); anti-invariant 1 (strong 0); identical incl. strong flags: True
+order 3 full: census SC values 2 (strong 1); anti-invariant 2 (strong 1); identical incl. strong flags: True
+order 3 red : census SC values 2 (strong 1); anti-invariant 2 (strong 1); identical incl. strong flags: True
+order 4 full: census SC values 2 (strong 1); anti-invariant 2 (strong 1); identical incl. strong flags: True
+order 4 red : census SC values 2 (strong 1); anti-invariant 2 (strong 1); identical incl. strong flags: True
+order 5 full: census SC values 6 (strong 4); anti-invariant 6 (strong 4); identical incl. strong flags: True
+order 5 red : census SC values 6 (strong 4); anti-invariant 6 (strong 4); identical incl. strong flags: True
+order 6 full: census SC values 9 (strong 6); anti-invariant 9 (strong 6); identical incl. strong flags: True
+order 6 red : census SC values 9 (strong 6); anti-invariant 9 (strong 6); identical incl. strong flags: True
+order 7 full: census SC values 54 (strong 48); anti-invariant 54 (strong 48); identical incl. strong flags: True
+order 7 red : census SC values 54 (strong 48); anti-invariant 54 (strong 48); identical incl. strong flags: True
+order 8 full: census SC values 104 (strong 95); anti-invariant 104 (strong 95); identical incl. strong flags: True
+order 8 red : census SC values 104 (strong 95); anti-invariant 104 (strong 95); identical incl. strong flags: True
+order 9 full: census SC values 1215 (strong 1173); anti-invariant 1215 (strong 1173); identical incl. strong flags: True
+order 9 red : census SC values 1215 (strong 1173); anti-invariant 1215 (strong 1173); identical incl. strong flags: True
+ALL ORDERS <= 9 AGREE

@@ -1,5 +1,5 @@
 /* sc_odd11.c - mac-mini-2026-11-08-firstrealizers. (Extensions are evaluated by splitting paths at v0, using forward and
- * backward subset tables of T'; verified against direct DP at order 9 via the -DCHECK self-test below.) All self-converse tournaments of order 11 with H < LIM (default 625).
+ * backward subset tables of T'; verified against direct DP at order 11 via the -DCHECK self-test below.) All self-converse tournaments of order 11 with H < LIM (default 625).
  * A self-converse tournament of odd order has an anti-involution sigma fixing exactly one vertex v0, and all of these
  * are conjugate, so WLOG sigma = (0 5)(1 6)(2 7)(3 8)(4 9) with v0 = 10. Then T - v0 is anti-invariant under the
  * fixed-point-free involution on {0..9} (enumerated as in sc_even10.c, 2^25 tournaments), and H(T - v0) <= H(T)
@@ -32,6 +32,7 @@ static int strongq(const uint16_t *adj, int n){
 }
 int main(int argc, char **argv){
   int LIM = argc > 1 ? atoi(argv[1]) : LIMDEF;
+  if (LIM < 1 || LIM > 65536) { fprintf(stderr, "LIM must lie in [1, 65536] (the arrays seen11, strong11 have 2^16 entries)\n"); return 2; }
   u64 C0 = argc > 2 ? strtoull(argv[2], NULL, 10) : 0, C1 = argc > 3 ? strtoull(argv[3], NULL, 10) : (1ULL << 25);   /* code range [C0, C1) */
   static unsigned char seen11[1 << 16], strong11[1 << 16];
   int pairs[10][2], np = 0; for (int i = 0; i < 5; i++) for (int j = i + 1; j < 5; j++) { pairs[np][0] = i; pairs[np][1] = j; np++; }

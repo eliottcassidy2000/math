@@ -1,0 +1,3 @@
+H(B5) = 5  H(C11) = 11  C11 self-converse: True
+order 13 : H(B5 => C11 => B5^op) = 275  self-converse: True
+order 10 : H(B11 => B11^op) = 121  self-converse: True

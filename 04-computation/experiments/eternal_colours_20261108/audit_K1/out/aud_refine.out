@@ -1,0 +1,8 @@
+values with birth order <= 9 (h >= 3): 1519
+none                    : dichotomy holds for 68
+max |Aut|               : dichotomy holds for 208
+min |Aut|               : dichotomy holds for 74
+min c3                  : dichotomy holds for 476
+max c3                  : dichotomy holds for 282
+max |Aut| then max c3   : dichotomy holds for 475
+max |Aut| then min c3   : dichotomy holds for 616

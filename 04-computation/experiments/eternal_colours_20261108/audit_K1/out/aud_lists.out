@@ -1,0 +1,50 @@
+order-12 data (H < 625) used: False
+Busch f(m), m = 3..15: [3, 5, 9, 15, 25, 45, 75, 125, 225, 375, 625, 1125, 1875]
+  order 3: least strong self-converse H = 3, f(3) = 3, consistent: True
+  order 4: least strong self-converse H = 5, f(4) = 5, consistent: True
+  order 5: least strong self-converse H = 9, f(5) = 9, consistent: True
+  order 6: least strong self-converse H = 17, f(6) = 15, consistent: True
+  order 7: least strong self-converse H = 25, f(7) = 25, consistent: True
+  order 8: least strong self-converse H = 45, f(8) = 45, consistent: True
+  order 9: least strong self-converse H = 75, f(9) = 75, consistent: True
+  order 10: least strong self-converse H = 125, f(10) = 125, consistent: True
+  order 11: least strong self-converse H = 225, f(11) = 225, consistent: True
+
+eternally black odd h < 625: 61
+   [7, 19, 21, 23, 35, 39, 43, 47, 53, 55, 59, 63, 101, 103, 107, 109, 113, 119, 131, 163, 167, 181, 183, 185, 203, 205, 207, 209, 215, 231, 235, 239, 251, 267, 271, 291, 299, 301, 303, 311, 317, 321, 327, 331, 335, 347, 359, 415, 427, 431, 439, 451, 463, 483, 487, 503, 515, 519, 523, 527, 563]
+  below 225: 29 [7, 19, 21, 23, 35, 39, 43, 47, 53, 55, 59, 63, 101, 103, 107, 109, 113, 119, 131, 163, 167, 181, 183, 185, 203, 205, 207, 209, 215]
+  in [225, 625): 32 [231, 235, 239, 251, 267, 271, 291, 299, 301, 303, 311, 317, 321, 327, 331, 335, 347, 359, 415, 427, 431, 439, 451, 463, 483, 487, 503, 515, 519, 523, 527, 563]
+  mod 4: {3: 49, 1: 12}
+  birth orders: {0: 2, 6: 3, 7: 11, 8: 45}
+open: [377]
+undecided without any order-12 data: [377]
+  all = 1 mod 4 and >= 375: True
+
+attainable odd 3 <= h < 225: 109; blue at birth 65; black at birth 44 = eternally black 27 + later blue 17 + open 0
+  parity-forced black at birth (even birth order, h = 3 mod 4): 22; eternally black 12, later blue 10
+    parity-forced, eternally black: [19, 23, 43, 63, 107, 119, 163, 167, 183, 203, 207, 215]
+    parity-forced, later blue: [(27, 7), (31, 7), (179, 9), (187, 9), (191, 9), (195, 9), (199, 9), (211, 9), (219, 9), (223, 9)]
+    not forced, eternally black: [35, 39, 47, 53, 55, 59, 101, 103, 109, 113, 131, 181, 185, 205, 209]
+    not forced, later blue: [(25, 7), (57, 8), (73, 8), (89, 8), (97, 9), (121, 10), (213, 9)]
+    later blue (h, birth, first SC order): [(25, 6, 7), (27, 6, 7), (31, 6, 7), (57, 7, 8), (73, 7, 8), (89, 7, 8), (97, 7, 9), (121, 7, 10), (179, 8, 9), (187, 8, 9), (191, 8, 9), (195, 8, 9), (199, 8, 9), (211, 8, 9), (213, 8, 9), (219, 8, 9), (223, 8, 9)]
+  delays (first SC order - birth order) over eternally blue values: {0: 65, 1: 15, 2: 1, 3: 1}
+  eternally blue values with no SC realisation at enumerated orders: []
+
+attainable odd 3 <= h < 625: 309; blue at birth 135; black at birth 174 = eternally black 59 + later blue 114 + open 1
+  parity-forced black at birth (even birth order, h = 3 mod 4): 118; eternally black 41, later blue 77
+  delays (first SC order - birth order) over eternally blue values: {0: 135, 1: 95, 2: 5, 3: 13, None: 1}
+  eternally blue values with no SC realisation at enumerated orders: [275]
+
+composite-only blue candidates below 625 (blue, no strong SC found at enumerated orders): [(121, 'decided'), (275, 'decided')]
+
+275: decompositions d^2 e: [(1, 275), (5, 11)]
+  275 SC at orders: [] ; 11 strong SC at orders: [5] ; 5 strong at order 4: True
+
+order 9: max H = 3357; odd values 1..3357: 1679; self-converse values at order 9: 1215
+[625, 2001): odd values 688; blue by data 654; unresolved 34
+  unresolved: [671, 683, 707, 719, 723, 755, 785, 795, 815, 851, 869, 887, 907, 931, 949, 983, 1003, 1009, 1067, 1087, 1115, 1131, 1145, 1231, 1245, 1263, 1391, 1459, 1475, 1535, 1567, 1583, 1699, 1891]
+  unresolved mod 4: {3: 28, 1: 6}
+  of the packet's 36 unresolved, now blue: [1551, 1627] [(1551, [11]), (1627, [11])]
+  unresolved not in packet's list: []
+
+order 11 below 625: auditor 212 values (48 strong); packet 212 (48 strong); identical incl. strong flags: True

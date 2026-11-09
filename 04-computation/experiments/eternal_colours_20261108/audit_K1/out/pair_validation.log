@@ -1,0 +1,5 @@
+codes [0,4096): parents with H < 200000: 4096; order-11 intermediates kept: 1048576; split checks: 301
+codes [0,4096): parents with H < 625: 3800; order-11 intermediates kept: 149200; split checks: 280
+codes [0,1): parents with H < 200000: 1; order-11 intermediates kept: 4; split checks: 1
+codes [0,4): parents with H < 200000: 4; order-11 intermediates kept: 64; split checks: 1
+codes [0,64): parents with H < 200000: 64; order-11 intermediates kept: 4096; split checks: 2

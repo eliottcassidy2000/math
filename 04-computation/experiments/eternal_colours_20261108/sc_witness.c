@@ -54,9 +54,10 @@ int main(int argc, char **argv){
           if (!(mi == i && mj == j)) { adj[mi] &= ~(1u << mj); adj[mj] |= 1u << mi; } }
         u64 h = hpaths(); cnt++;
         if (h <= (u64)HMAX && (best_n[h] == 0 || (best_n[h] == n && !best_s[h] && strongq()))) {
-          if (best_n[h] == 0) { best_n[h] = n; best_s[h] = strongq(); int p = 0; p += snprintf(wit[h] + p, 160 - p, "rev");
-            for (int t = 0; t < k && p < 150; t++) p += snprintf(wit[h] + p, 160 - p, " %d%c%d", oi[sel[t]], '-', oj[sel[t]]); }
-          else { best_s[h] = 1; }
+          /* first witness of the least order, or a strong one replacing a non-strong one of the same order: the printed
+             arcs always describe a tournament whose strongness is the printed flag (audit K1 correction 18) */
+          best_n[h] = n; best_s[h] = strongq(); int p = 0; p += snprintf(wit[h] + p, 160 - p, "rev");
+          for (int t = 0; t < k && p < 150; t++) p += snprintf(wit[h] + p, 160 - p, " %d%c%d", oi[sel[t]], '-', oj[sel[t]]);
         }
         if (k == 0) break;
         int t = k - 1; while (t >= 0 && sel[t] == no - k + t) t--;

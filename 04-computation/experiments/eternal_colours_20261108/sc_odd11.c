@@ -28,6 +28,7 @@ static int strongq(const uint16_t *adj, int n){
 }
 int main(int argc, char **argv){
   int LIM = argc > 1 ? atoi(argv[1]) : LIMDEF;
+  if (LIM < 1 || LIM > 65536) { fprintf(stderr, "LIM must lie in [1, 65536] (the arrays seen11, strong11 have 2^16 entries)\n"); return 2; }
   static unsigned char seen11[1 << 16], strong11[1 << 16];
   int pairs[10][2], np = 0; for (int i = 0; i < 5; i++) for (int j = i + 1; j < 5; j++) { pairs[np][0] = i; pairs[np][1] = j; np++; }
   long small10 = 0;

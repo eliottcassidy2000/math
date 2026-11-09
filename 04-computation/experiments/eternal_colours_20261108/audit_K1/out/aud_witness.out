@@ -1,0 +1,2 @@
+BAD (err 0, H 1089, strong 0): W 1089 12 1 rev 0-4 1-5
+witness lines checked: 857; failures: 1; independent backtracking self-converse confirmations: 694

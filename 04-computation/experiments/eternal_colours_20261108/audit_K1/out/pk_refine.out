@@ -1,0 +1,9 @@
+values with birth order <= 9: 1519
+no refinement                             : dichotomy holds for 68/1519 values
+max |Aut|                                 : dichotomy holds for 208/1519 values
+min |Aut|                                 : dichotomy holds for 74/1519 values
+min c3                                    : dichotomy holds for 476/1519 values
+max c3                                    : dichotomy holds for 282/1519 values
+max |Aut| then max c3                     : dichotomy holds for 475/1519 values
+max |Aut| then min c3                     : dichotomy holds for 616/1519 values
+max|Aut| refined (s,p) distribution (top 10): [((0, 1), 124), ((1, 0), 84), ((0, 2), 84), ((0, 3), 43), ((0, 4), 40), ((0, 5), 32), ((1, 1), 25), ((0, 7), 22), ((1, 2), 16), ((1, 3), 15)]
