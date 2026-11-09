@@ -1,0 +1,51 @@
+{
+  "C3": {
+    "H": 3,
+    "aut_or_subgroup": 3,
+    "coarse_packing_orbits": 3,
+    "n": 3,
+    "path_orbits": 1,
+    "stabilizer_histogram": {
+      "3": 3
+    }
+  },
+  "labelled_tournaments": 1099,
+  "no_all_order_coverage_claim": true,
+  "status": "PASS",
+  "tower": [
+    {
+      "H": 15,
+      "aut_or_subgroup": 5,
+      "coarse_packing_orbits": 7,
+      "n": 5,
+      "path_orbits": 3,
+      "stabilizer_histogram": {
+        "1": 2,
+        "5": 5
+      }
+    },
+    {
+      "H": 45,
+      "aut_or_subgroup": 15,
+      "coarse_packing_orbits": 21,
+      "n": 8,
+      "path_orbits": 3,
+      "stabilizer_histogram": {
+        "3": 6,
+        "15": 15
+      }
+    },
+    {
+      "H": 135,
+      "aut_or_subgroup": 45,
+      "coarse_packing_orbits": 63,
+      "n": 11,
+      "path_orbits": 3,
+      "stabilizer_histogram": {
+        "9": 18,
+        "45": 45
+      }
+    }
+  ],
+  "universe": "all labelled tournaments n=1..5; explicit tower k=0,1,2; Cartesian restriction controls k=1..5"
+}

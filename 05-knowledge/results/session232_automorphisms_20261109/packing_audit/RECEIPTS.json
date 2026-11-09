@@ -1,0 +1,50 @@
+{
+  "artifact_sha256": {
+    "RESTRICTIONS.json": "c1f0efda42d2bc6754ef52231ddae3c7bda0eb00743ffb028ee1b72254e974af",
+    "WITNESSES.json": "3e66e8c1a6e2218461fa313404a6482217da81b935322224fdf0800c994aa313"
+  },
+  "inputs": {
+    "/tmp/math-wt-session232-automorphisms/05-knowledge/results/session232_automorphisms_20261109/packing_audit/independent_check.py": "88a02852dc5e58084727b7e2919868379f3e5580d4207c6955a5d568125462dd",
+    "/tmp/math-wt-session232-automorphisms/05-knowledge/results/session232_automorphisms_20261109/packing_mass/PROOF.md": "13ef71bafa1c035c18776082817fe9633020562f0a9479f44bfdb8a6146b19ec",
+    "/tmp/math-wt-session232-automorphisms/05-knowledge/results/session232_automorphisms_20261109/packing_mass/check.py": "a672b00a9895872ef1f7b7fa5da9d3fd065f788e4a2ea1a7b73957166cbb46a4"
+  },
+  "normal_optimized_stdout_and_witness_agreement": true,
+  "producer_independent_scalar_and_histogram_agreement": true,
+  "runs": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/tmp/math-wt-session232-automorphisms/05-knowledge/results/session232_automorphisms_20261109/packing_mass/check.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "caaced2f6b678b7690ba4178ec1df804128efefe8e07107580b2e565cdb501b6"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/tmp/math-wt-session232-automorphisms/05-knowledge/results/session232_automorphisms_20261109/packing_mass/check.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "caaced2f6b678b7690ba4178ec1df804128efefe8e07107580b2e565cdb501b6"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/tmp/math-wt-session232-automorphisms/05-knowledge/results/session232_automorphisms_20261109/packing_audit/independent_check.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e9266276c2274eece6c2cca09ee9cfc00852f16551bd67861bee17f46c6a6444"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/tmp/math-wt-session232-automorphisms/05-knowledge/results/session232_automorphisms_20261109/packing_audit/independent_check.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e9266276c2274eece6c2cca09ee9cfc00852f16551bd67861bee17f46c6a6444"
+    }
+  ],
+  "status": "PASS"
+}

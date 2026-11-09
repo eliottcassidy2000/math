@@ -72,3 +72,11 @@ inspiration only unless an explicit finite theorem is proved here.
 The new conjectural completeness step remains unproved. The results concern
 which quotients retain the gaps, not universal realization of every other odd
 integer. Independent audit findings and final reproducibility will follow.
+
+## Checkpoint 3: first independent audit
+
+The [packing quotient audit](packing_audit/AUDIT.md) passes. It uses an
+independent permutation-cycle-cover enumerator and verifies actual restriction
+fibres, not just cardinality formulas. The other audits remain in progress.
+Theorem namespaces THM-4987 through THM-4990 are reserved as explicitly
+unproved empty stubs, not available proof dependencies.
