@@ -1,6 +1,6 @@
 # All-word tower-ray rigidity for the complete 57-matrix alphabet
 
-**Status:** proof candidate, independently audited before final promotion.
+**Status:** PROVED; independently audited by direct physical reconstruction and exact linear-algebra certificates.
 **Scope:** the exact ternary alphabet of all marked tournament blocks of orders1 through4, not arbitrary blocks and not orbit cofiniteness.
 
 Let G be the57 distinct nonnegative integer matrices in `matrices_base3_order4.txt`, ordered lexicographically. They are exactly the THM-5070 matrices N_3(B,w,u') for all1105 marked labelled tournament blocks of orders1 through4. The file also records one block representative per matrix in `.reps`. Define

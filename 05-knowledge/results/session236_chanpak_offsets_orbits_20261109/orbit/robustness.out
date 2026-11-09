@@ -1,0 +1,11 @@
+normal positive: exit 0
+normal mutation: exit 1
+optimized positive: exit 0
+optimized mutation: exit 1
+Positive stdout/stderr identical across normal and -O.
+Mutation stdout/stderr identical across normal and -O.
+Both mutation modes reject with RuntimeError: Verification failed: low==(-1,-3,6).
+AST check: zero assert statements.
+Recovered files were reconstructed from retained tool-call history; proof/code formatting is not asserted byte-identical to lost originals.
+Fresh verification stdout SHA256: 684b98cfdfd106a11ee8fc78deeca2da43b53c7e3d928e95474082c6af816ef2
+PASS.

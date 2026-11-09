@@ -1,0 +1,24 @@
+EXACT ALL-ORDER CERTIFICATES (matrix numbering 1..15)
+1 inverse v = ('3/2', '1/2', '1') cone matrix ((0, 1, 3), (1, 0, 0), (0, 1, 1)) 8h-E coefficients (8, 7, 23)
+2 left null separator (0, 1, -1) cone matrix ((1, 1, 3), (0, 0, 0), (1, 2, 2)) 8h-E coefficients (7, 6, 22)
+3 left null separator (0, 1, -1) cone matrix ((1, 1, 3), (0, 0, 0), (2, 4, 4)) 8h-E coefficients (6, 4, 20)
+4 left null separator (0, 1, -1) cone matrix ((1, 1, 3), (0, 0, 0), (4, 8, 8)) 8h-E coefficients (4, 0, 16)
+5 left null separator (1, -2, -1) cone matrix ((0, 3, 6), (1, 1, 0), (0, 1, 2)) 8h-E coefficients (8, 31, 46)
+6 left null separator (1, -2, -1) cone matrix ((0, 6, 12), (1, 1, 0), (0, 2, 4)) 8h-E coefficients (8, 54, 92)
+7 inverse v = ('0', '0', '1/2') cone matrix ((1, 5, 9), (0, 2, 3), (2, 4, 6)) 8h-E coefficients (6, 52, 90)
+8 inverse v = ('1', '-1/3', '1/3') cone matrix ((3, 6, 9), (1, 1, 0), (1, 3, 4)) 8h-E coefficients (31, 53, 68)
+9 inverse v = ('-33/10', '5/2', '-7/10') cone matrix ((3, 11, 15), (1, 2, 3), (6, 12, 16)) 8h-E coefficients (26, 92, 128)
+10 inverse v = ('57/104', '7/104', '-5/13') cone matrix ((3, 4, 12), (1, 0, 0), (6, 13, 13)) 8h-E coefficients (26, 19, 83)
+11 inverse v = ('1', '-1/3', '-1/6') cone matrix ((6, 12, 15), (1, 1, 0), (3, 7, 8)) 8h-E coefficients (53, 97, 112)
+12 inverse v = ('0', '1', '-1') cone matrix ((6, 14, 18), (1, 2, 3), (3, 11, 17)) 8h-E coefficients (53, 117, 151)
+13 inverse v = ('0', '0', '1/3') cone matrix ((5, 11, 15), (2, 5, 6), (4, 7, 9)) 8h-E coefficients (52, 121, 159)
+14 inverse v = ('51/131', '10/131', '-19/131') cone matrix ((5, 12, 21), (2, 1, 0), (4, 11, 13)) 8h-E coefficients (52, 93, 155)
+15 inverse v = ('3/71', '14/71', '-5/71') cone matrix ((5, 16, 24), (2, 3, 6), (4, 9, 11)) 8h-E coefficients (52, 143, 229)
+T^3 = I + v ell^T: ((4, 6, 3), (1, 3, 1), (2, 4, 3)) ; sharp E/h=8 witness M4(seed)=(1,8,8)
+MINIMAL CONE full attained rays [(1, 0, 1), (97, 32, 33), (25, 17, 17), (1, 8, 8)] facets [(-1, 2, 1), (-17, -824, 849), (0, -1, 1), (8, 7, -8)]
+Invariance certificates: 240 exact inequalities PASS
+MINIMAL CONE nonempty attained rays [(193, 33, 129), (292, 65, 162), (97, 32, 33), (25, 17, 17), (1, 8, 8)] facets [(-3039, 6402, 2909), (-1, 2, 1), (-17, -824, 849), (0, -1, 1), (768, 1415, -1511)]
+Invariance certificates: 375 exact inequalities PASS
+SHARP nonempty E/h >=33/193 and next h / current h >=292/193
+FINITE-EXACT control: bound 3000 states 53732 misses [10, 31, 61, 106, 217, 274, 337, 346, 607, 865]
+PASS. Cofiniteness of HYP-9640(A) remains OPEN.

@@ -182,3 +182,7 @@ floor(LIM/x) + 1.
     appending a sink after each block, both leave gaps that keep growing.
 - **Base 2 and base 3 together.** The same order-<= 5 blocks (387 classes) realise both Chan-Pak spectra to the
   stated bounds. The matrices depend on the base: 264 distinct at x = 2, 271 at x = 3. The only misses are the permanent gaps: alpha-sums 3 and 10 in both bases (THM-4940 (3), (4); THM-1370).
+
+## Session236 all-word upgrade
+
+[THM-5080](THM-5080-port-orbit-polyhedral-cones-sharp-growth-and-all-word-tower-ray-rigidity.md) upgrades the finite tower-direction test in (5) to arbitrary word length in the same57-matrix alphabet, by last-letter certificates and an invariant cone. It also proves exact conical hulls and sharp292/193 growth for the15-generator subalphabet. The earlier finite experiment is retained as provenance; no orbit cofiniteness follows.

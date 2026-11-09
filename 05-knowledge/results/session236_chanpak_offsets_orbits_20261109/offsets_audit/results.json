@@ -1,0 +1,26 @@
+{
+  "status": "PASS mathematical claims; citation corrections documented in AUDIT.md",
+  "padding_checks": 116,
+  "bridge_checks": 1682,
+  "independent_apex_counts": 511,
+  "periodic_words": 131070,
+  "max_period_length": 16,
+  "cyclic_rotation_checks": 2046,
+  "minimal_mixed_drifts": {
+    "2": "2/3",
+    "3": "4/7",
+    "4": "2/5",
+    "5": "10/31",
+    "6": "2/9",
+    "7": "22/127",
+    "8": "2/17",
+    "9": "46/511",
+    "10": "2/33",
+    "11": "94/2047",
+    "12": "2/65",
+    "13": "190/8191",
+    "14": "2/129",
+    "15": "382/32767",
+    "16": "2/257"
+  }
+}

@@ -1,7 +1,7 @@
 # Session236: tournament offsets and matrix-orbit proof
 
 **Scope:** the user's requested tournament Chan–Pak continuation, 2026-11-09.
-**Status:** active research. No completeness theorem is claimed.
+**Status:** completed, recovered and freshly independently reverified. No completeness theorem is claimed.
 **Concurrent territory:** Session235's reciprocal/oriented arc-pair packet is separate and preserved.
 
 ## Inheritance and typing

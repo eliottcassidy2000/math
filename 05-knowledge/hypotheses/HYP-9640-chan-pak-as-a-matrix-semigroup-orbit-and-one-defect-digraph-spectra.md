@@ -89,3 +89,7 @@ This sharpens HYP-9530 (B) for these bases.
 **Evidence.** Checked below 130 at orders <= 7.
 
 **Falsifier.** A missing value.
+
+## Session236 structural update (PROVED, not coverage)
+
+[THM-5080](../../01-canon/theorems/THM-5080-port-orbit-polyhedral-cones-sharp-growth-and-all-word-tower-ray-rigidity.md) proves exact full/nonempty conical hulls for the fifteen-generator orbit, sharp growth292/193 after the first step, and all-word tower-ray rigidity for all57 ternary matrices. Only tower powers preserve the tower direction at any word length, strengthening the earlier finite test. Cone membership is not integer reachability: (10,4,5) satisfies all cone facets but is unreachable. Both (A) and (B) remain OPEN. The singleton final-bridge offset restriction does not apply to S19 multi-bridge tails.

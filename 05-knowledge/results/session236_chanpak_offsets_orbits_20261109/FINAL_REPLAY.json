@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "recovery": "Fresh replay of reconstructed final artifacts and original published checkpoint inputs.",
+  "tests": [
+    {
+      "name": "last_letter",
+      "command": "python3 05-knowledge/results/session236_chanpak_offsets_orbits_20261109/last_letter/verify.py --rebuild",
+      "exit": 0,
+      "sha256": "c1158538da58075deb6f757b21f2d392934bd1211bbbea134ac5027be8ab6c08"
+    },
+    {
+      "name": "last_letter_opt",
+      "command": "python3 -O 05-knowledge/results/session236_chanpak_offsets_orbits_20261109/last_letter/verify.py --rebuild",
+      "exit": 0,
+      "sha256": "c1158538da58075deb6f757b21f2d392934bd1211bbbea134ac5027be8ab6c08"
+    },
+    {
+      "name": "orbit",
+      "command": "python3 05-knowledge/results/session236_chanpak_offsets_orbits_20261109/orbit/verify_orbit.py",
+      "exit": 0,
+      "sha256": "684b98cfdfd106a11ee8fc78deeca2da43b53c7e3d928e95474082c6af816ef2"
+    },
+    {
+      "name": "orbit_opt",
+      "command": "python3 -O 05-knowledge/results/session236_chanpak_offsets_orbits_20261109/orbit/verify_orbit.py",
+      "exit": 0,
+      "sha256": "684b98cfdfd106a11ee8fc78deeca2da43b53c7e3d928e95474082c6af816ef2"
+    },
+    {
+      "name": "offsets",
+      "command": "python3 05-knowledge/results/session236_chanpak_offsets_orbits_20261109/offsets/replay.py",
+      "exit": 0,
+      "sha256": "e1b0427cef120540b0cb83718ddbc900a7d9d6cd90d07b894f203db46e60e5ae"
+    },
+    {
+      "name": "orbit_audit",
+      "command": "python3 -O 05-knowledge/results/session236_chanpak_offsets_orbits_20261109/orbit_audit/independent.py",
+      "exit": 0,
+      "sha256": "dd7ecffda21df83ea81031b3e56a0e6d67962cc17750a70e5eaa59810d8716c1"
+    },
+    {
+      "name": "offsets_audit",
+      "command": "python3 05-knowledge/results/session236_chanpak_offsets_orbits_20261109/offsets_audit/independent_check.py",
+      "exit": 0,
+      "sha256": "4d3eeb80727b99a4c822e16e0127b8ebde4a834eafdd80c3e201b498bce8a927"
+    },
+    {
+      "name": "last_letter_mutation",
+      "command": "python3 05-knowledge/results/session236_chanpak_offsets_orbits_20261109/last_letter/verify.py --mutate",
+      "exit": 1,
+      "expected_nonzero": true
+    },
+    {
+      "name": "last_letter_mutation_opt",
+      "command": "python3 -O 05-knowledge/results/session236_chanpak_offsets_orbits_20261109/last_letter/verify.py --mutate",
+      "exit": 1,
+      "expected_nonzero": true
+    },
+    {
+      "name": "orbit_mutation",
+      "command": "python3 05-knowledge/results/session236_chanpak_offsets_orbits_20261109/orbit/verify_orbit.py --mutate",
+      "exit": 1,
+      "expected_nonzero": true
+    },
+    {
+      "name": "orbit_mutation_opt",
+      "command": "python3 -O 05-knowledge/results/session236_chanpak_offsets_orbits_20261109/orbit/verify_orbit.py --mutate",
+      "exit": 1,
+      "expected_nonzero": true
+    }
+  ]
+}
