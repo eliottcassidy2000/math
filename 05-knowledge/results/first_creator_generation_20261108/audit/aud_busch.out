@@ -1,0 +1,27 @@
+f(3..26): [3, 5, 9, 15, 25, 45, 75, 125, 225, 375, 625, 1125, 1875, 3125, 5625, 9375, 15625, 28125, 46875, 78125, 140625, 234375, 390625, 703125]
+table rows: 47548  odd values <= 95095: 47548  numeric n(h): 43911  '>11': 3637
+n(h) = B(h) among h with n(h) <= 11: [3, 5, 9, 11, 13, 17, 19, 23, 35, 39, 63]
+unattained at order 11 (besides 7, 21): 3635  min 80453  max 95093  B(h) range: [22]
+largest h with every odd value in [1, h] \ {7, 21} attained at order <= 11: 80451
+S(1): klein 1 values (max 1); auditor IDENTICAL
+S(2): klein 1 values (max 1); auditor IDENTICAL
+S(3): klein 2 values (max 3); auditor IDENTICAL
+S(4): klein 3 values (max 5); auditor IDENTICAL
+S(5): klein 7 values (max 15); auditor IDENTICAL
+S(6): klein 19 values (max 45); auditor IDENTICAL
+S(7): klein 77 values (max 189); auditor IDENTICAL
+S(8): klein 320 values (max 661); auditor IDENTICAL
+S(9): klein 1520 values (max 3357); auditor IDENTICAL
+S(10): klein 7663 values (max 15745); auditor IDENTICAL
+S(11): klein 43911 values (max 95095)
+  h=11475: n(h)=10 B(h)=18
+  h=14787: n(h)=11 B(h)=18
+  h=15213: n(h)=10 B(h)=18
+  h=15273: n(h)=10 B(h)=18
+  h=15561: n(h)=10 B(h)=18
+  h=15637: n(h)=11 B(h)=19
+  h=15703: n(h)=11 B(h)=19
+  h=385: n(h)=8 B(h)=12
+  h=2901: n(h)=10 B(h)=15
+  h=63: n(h)=8 B(h)=8
+  h=225: n(h)=8 B(h)=11

@@ -1,0 +1,3 @@
+values: packet 7661, auditor 7661; abbreviated lines compared by head/tail/count: 7465; disagreements: 0
+orphan values (no first creator has a first-creator deletion): [63]
+values whose first creators are not all grown from first creators: [63]

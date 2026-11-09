@@ -1,0 +1,216 @@
+ORDER 1: classes 1 (strong 0), sum n!/|Aut| = 1 vs 2^0 = 1 OK; max H 1
+  FC 0; non-FC 1 = EXT 0 + SUM 1 + SUB 0 + REST 0 (sum 1)
+  shares of non-FC: EXT 0.0000%, REST 0.0000%
+  REST: pendant 0, non-pendant lambda=1 0, non-pendant lambda>=2 0; with a non-strong deletion 0, without 0; non-pendant with a non-strong deletion 0
+  REST lambda histogram:
+  REST without non-strong deletion, lambda histogram:
+  lambda=0: classes 1, FC 0, non-FC 1; H in [1, 1] (min attained by 1 classes, e.g. code 0); non-FC H in [1, 1]
+  f_k(1) = min H over lambda >= k:
+  mindeg=0: classes 1, FC 0, non-FC 1
+  (lambda>=3) != (mindeg>=3): 0 classes
+  lambda x mindeg (classes / non-FC): (0,0):1/1
+  FC by number k of first-creator deletions:
+  non-FC with every deletion a first creator (hypo analogue): 0; non-strong FC: 0
+  VALUES order 1: |S(1)| = 1 (max 1), new values 0, new values with no first creator having a first-creator deletion 0, new values all of whose first creators have ONLY first-creator deletions 0 (0.0000)
+  [order 1: 0s]
+ORDER 2: classes 1 (strong 0), sum n!/|Aut| = 2 vs 2^1 = 2 OK; max H 1
+  FC 0; non-FC 1 = EXT 0 + SUM 1 + SUB 0 + REST 0 (sum 1)
+  shares of non-FC: EXT 0.0000%, REST 0.0000%
+  REST: pendant 0, non-pendant lambda=1 0, non-pendant lambda>=2 0; with a non-strong deletion 0, without 0; non-pendant with a non-strong deletion 0
+  REST lambda histogram:
+  REST without non-strong deletion, lambda histogram:
+  lambda=0: classes 1, FC 0, non-FC 1; H in [1, 1] (min attained by 1 classes, e.g. code 0); non-FC H in [1, 1]
+  f_k(2) = min H over lambda >= k:
+  mindeg=0: classes 1, FC 0, non-FC 1
+  (lambda>=3) != (mindeg>=3): 0 classes
+  lambda x mindeg (classes / non-FC): (0,0):1/1
+  FC by number k of first-creator deletions:
+  non-FC with every deletion a first creator (hypo analogue): 0; non-strong FC: 0
+  VALUES order 2: |S(2)| = 1 (max 1), new values 0, new values with no first creator having a first-creator deletion 0, new values all of whose first creators have ONLY first-creator deletions 0 (0.0000)
+  [order 2: 0s]
+ORDER 3: classes 2 (strong 1), sum n!/|Aut| = 8 vs 2^3 = 8 OK; max H 3
+  FC 1; non-FC 1 = EXT 0 + SUM 1 + SUB 0 + REST 0 (sum 1)
+  shares of non-FC: EXT 0.0000%, REST 0.0000%
+  REST: pendant 0, non-pendant lambda=1 0, non-pendant lambda>=2 0; with a non-strong deletion 0, without 0; non-pendant with a non-strong deletion 0
+  REST lambda histogram:
+  REST without non-strong deletion, lambda histogram:
+  lambda=0: classes 1, FC 0, non-FC 1; H in [1, 1] (min attained by 1 classes, e.g. code 0); non-FC H in [1, 1]
+  lambda=1: classes 1, FC 1, non-FC 0; H in [3, 3] (min attained by 1 classes, e.g. code 2); non-FC H in [-1, -1]
+  f_k(3) = min H over lambda >= k: f_1=3
+  mindeg=0: classes 1, FC 0, non-FC 1
+  mindeg=1: classes 1, FC 1, non-FC 0
+  (lambda>=3) != (mindeg>=3): 0 classes
+  lambda x mindeg (classes / non-FC): (0,0):1/1 (1,1):1/0
+  FC by number k of first-creator deletions: 0:1
+  non-FC with every deletion a first creator (hypo analogue): 0; non-strong FC: 0
+  VALUES order 3: |S(3)| = 2 (max 3), new values 1, new values with no first creator having a first-creator deletion 1 [ 3 ], new values all of whose first creators have ONLY first-creator deletions 0 (0.0000)
+  [order 3: 0s]
+ORDER 4: classes 4 (strong 1), sum n!/|Aut| = 64 vs 2^6 = 64 OK; max H 5
+  FC 1; non-FC 3 = EXT 2 + SUM 1 + SUB 0 + REST 0 (sum 3)
+  shares of non-FC: EXT 66.6667%, REST 0.0000%
+  REST: pendant 0, non-pendant lambda=1 0, non-pendant lambda>=2 0; with a non-strong deletion 0, without 0; non-pendant with a non-strong deletion 0
+  REST lambda histogram:
+  REST without non-strong deletion, lambda histogram:
+  lambda=0: classes 3, FC 0, non-FC 3; H in [1, 3] (min attained by 1 classes, e.g. code 0); non-FC H in [1, 3]
+  lambda=1: classes 1, FC 1, non-FC 0; H in [5, 5] (min attained by 1 classes, e.g. code 34); non-FC H in [-1, -1]
+  f_k(4) = min H over lambda >= k: f_1=5
+  mindeg=0: classes 3, FC 0, non-FC 3
+  mindeg=1: classes 1, FC 1, non-FC 0
+  (lambda>=3) != (mindeg>=3): 0 classes
+  lambda x mindeg (classes / non-FC): (0,0):3/3 (1,1):1/0
+  FC by number k of first-creator deletions: 2:1
+  non-FC with every deletion a first creator (hypo analogue): 0; non-strong FC: 0
+  VALUES order 4: |S(4)| = 3 (max 5), new values 1, new values with no first creator having a first-creator deletion 0, new values all of whose first creators have ONLY first-creator deletions 0 (0.0000)
+  [order 4: 0s]
+ORDER 5: classes 12 (strong 6), sum n!/|Aut| = 1024 vs 2^10 = 1024 OK; max H 15
+  FC 6; non-FC 6 = EXT 2 + SUM 4 + SUB 0 + REST 0 (sum 6)
+  shares of non-FC: EXT 33.3333%, REST 0.0000%
+  REST: pendant 0, non-pendant lambda=1 0, non-pendant lambda>=2 0; with a non-strong deletion 0, without 0; non-pendant with a non-strong deletion 0
+  REST lambda histogram:
+  REST without non-strong deletion, lambda histogram:
+  lambda=0: classes 6, FC 0, non-FC 6; H in [1, 5] (min attained by 1 classes, e.g. code 0); non-FC H in [1, 5]
+  lambda=1: classes 5, FC 5, non-FC 0; H in [9, 15] (min attained by 2 classes, e.g. code 520); non-FC H in [-1, -1]
+  lambda=2: classes 1, FC 1, non-FC 0; H in [15, 15] (min attained by 1 classes, e.g. code 226); non-FC H in [-1, -1]
+  f_k(5) = min H over lambda >= k: f_1=9 f_2=15
+  mindeg=0: classes 6, FC 0, non-FC 6
+  mindeg=1: classes 5, FC 5, non-FC 0
+  mindeg=2: classes 1, FC 1, non-FC 0
+  (lambda>=3) != (mindeg>=3): 0 classes
+  lambda x mindeg (classes / non-FC): (0,0):6/6 (1,1):5/0 (2,2):1/0
+  FC by number k of first-creator deletions: 2:1 3:3 4:1 5:1
+  non-FC with every deletion a first creator (hypo analogue): 0; non-strong FC: 0
+  VALUES order 5: |S(5)| = 7 (max 15), new values 4, new values with no first creator having a first-creator deletion 0, new values all of whose first creators have ONLY first-creator deletions 0 (0.0000)
+  [order 5: 0s]
+ORDER 6: classes 56 (strong 35), sum n!/|Aut| = 32768 vs 2^15 = 32768 OK; max H 45
+  FC 33; non-FC 23 = EXT 14 + SUM 9 + SUB 0 + REST 0 (sum 23)
+  shares of non-FC: EXT 60.8696%, REST 0.0000%
+  REST: pendant 0, non-pendant lambda=1 0, non-pendant lambda>=2 0; with a non-strong deletion 0, without 0; non-pendant with a non-strong deletion 0
+  REST lambda histogram:
+  REST without non-strong deletion, lambda histogram:
+  lambda=0: classes 21, FC 0, non-FC 21; H in [1, 15] (min attained by 1 classes, e.g. code 0); non-FC H in [1, 15]
+  lambda=1: classes 30, FC 28, non-FC 2; H in [15, 37] (min attained by 2 classes, e.g. code 16642); non-FC H in [15, 15]
+  lambda=2: classes 5, FC 5, non-FC 0; H in [41, 45] (min attained by 1 classes, e.g. code 25176); non-FC H in [-1, -1]
+  f_k(6) = min H over lambda >= k: f_1=15 f_2=41
+  mindeg=0: classes 20, FC 0, non-FC 20
+  mindeg=1: classes 31, FC 28, non-FC 3
+  mindeg=2: classes 5, FC 5, non-FC 0
+  (lambda>=3) != (mindeg>=3): 0 classes
+  lambda x mindeg (classes / non-FC): (0,0):20/20 (0,1):1/1 (1,1):30/2 (2,2):5/0
+  FC by number k of first-creator deletions: 2:1 3:2 4:13 5:12 6:5
+  non-FC with every deletion a first creator (hypo analogue): 0; non-strong FC: 0
+  VALUES order 6: |S(6)| = 19 (max 45), new values 12, new values with no first creator having a first-creator deletion 0, new values all of whose first creators have ONLY first-creator deletions 3 (0.2500)
+  [order 6: 0s]
+ORDER 7: classes 456 (strong 353), sum n!/|Aut| = 2097152 vs 2^21 = 2097152 OK; max H 189
+  FC 328; non-FC 128 = EXT 90 + SUM 37 + SUB 1 + REST 0 (sum 128)
+  shares of non-FC: EXT 70.3125%, REST 0.0000%
+  REST: pendant 0, non-pendant lambda=1 0, non-pendant lambda>=2 0; with a non-strong deletion 0, without 0; non-pendant with a non-strong deletion 0
+  REST lambda histogram:
+  REST without non-strong deletion, lambda histogram:
+  lambda=0: classes 103, FC 0, non-FC 103; H in [1, 45] (min attained by 1 classes, e.g. code 0); non-FC H in [1, 45]
+  lambda=1: classes 266, FC 241, non-FC 25; H in [25, 135] (min attained by 1 classes, e.g. code 1056776); non-FC H in [25, 45]
+  lambda=2: classes 84, FC 84, non-FC 0; H in [99, 159] (min attained by 1 classes, e.g. code 795194); non-FC H in [-1, -1]
+  lambda=3: classes 3, FC 3, non-FC 0; H in [171, 189] (min attained by 1 classes, e.g. code 254581); non-FC H in [-1, -1]
+  f_k(7) = min H over lambda >= k: f_1=25 f_2=99 f_3=171
+  mindeg=0: classes 100, FC 0, non-FC 100
+  mindeg=1: classes 269, FC 241, non-FC 28
+  mindeg=2: classes 84, FC 84, non-FC 0
+  mindeg=3: classes 3, FC 3, non-FC 0
+  (lambda>=3) != (mindeg>=3): 0 classes
+  lambda x mindeg (classes / non-FC): (0,0):100/100 (0,1):3/3 (1,1):266/25 (2,2):84/0 (3,3):3/0
+  FC by number k of first-creator deletions: 3:17 4:28 5:90 6:115 7:78
+  non-FC with every deletion a first creator (hypo analogue): 0; non-strong FC: 0
+  VALUES order 7: |S(7)| = 77 (max 189), new values 58, new values with no first creator having a first-creator deletion 0, new values all of whose first creators have ONLY first-creator deletions 18 (0.3103)
+  [order 7: 0s]
+ORDER 8: classes 6880 (strong 6008), sum n!/|Aut| = 268435456 vs 2^28 = 268435456 OK; max H 661
+  FC 5457; non-FC 1423 = EXT 1162 + SUM 216 + SUB 33 + REST 12 (sum 1423)
+  shares of non-FC: EXT 81.6585%, REST 0.8433%
+  REST: pendant 12, non-pendant lambda=1 0, non-pendant lambda>=2 0; with a non-strong deletion 12, without 0; non-pendant with a non-strong deletion 0
+  REST pendant share 100.0000%
+  REST lambda histogram: 1:12
+  REST without non-strong deletion, lambda histogram:
+  lambda=0: classes 872, FC 0, non-FC 872; H in [1, 189] (min attained by 1 classes, e.g. code 0); non-FC H in [1, 189]
+  lambda=1: classes 3623, FC 3072, non-FC 551; H in [45, 477] (min attained by 5 classes, e.g. code 134479880); non-FC H in [45, 189]
+  lambda=2: classes 2300, FC 2300, non-FC 0; H in [195, 613] (min attained by 2 classes, e.g. code 101204194); non-FC H in [-1, -1]
+  lambda=3: classes 85, FC 85, non-FC 0; H in [621, 661] (min attained by 2 classes, e.g. code 103335824); non-FC H in [-1, -1]
+  f_k(8) = min H over lambda >= k: f_1=45 f_2=195 f_3=621
+  mindeg=0: classes 856, FC 0, non-FC 856
+  mindeg=1: classes 3639, FC 3072, non-FC 567
+  mindeg=2: classes 2300, FC 2300, non-FC 0
+  mindeg=3: classes 85, FC 85, non-FC 0
+  (lambda>=3) != (mindeg>=3): 0 classes
+  lambda x mindeg (classes / non-FC): (0,0):856/856 (0,1):16/16 (1,1):3623/551 (2,2):2300/0 (3,3):85/0
+  FC by number k of first-creator deletions: 0:2 2:8 3:34 4:146 5:398 6:911 7:1840 8:2118
+  non-FC with every deletion a first creator (hypo analogue): 0; non-strong FC: 0
+  VALUES order 8: |S(8)| = 320 (max 661), new values 243, new values with no first creator having a first-creator deletion 1 [ 63 ], new values all of whose first creators have ONLY first-creator deletions 85 (0.3498)
+  [order 8: 0s]
+ORDER 9: classes 191536 (strong 178133), sum n!/|Aut| = 68719476736 vs 2^36 = 68719476736 OK; max H 3357
+  FC 163676; non-FC 27860 = EXT 23855 + SUM 2489 + SUB 1010 + REST 506 (sum 27860)
+  shares of non-FC: EXT 85.6246%, REST 1.8162%
+  REST: pendant 505, non-pendant lambda=1 0, non-pendant lambda>=2 1; with a non-strong deletion 506, without 0; non-pendant with a non-strong deletion 1
+  REST pendant share 99.8024%
+  REST lambda histogram: 1:505 2:1
+  REST without non-strong deletion, lambda histogram:
+  lambda=0: classes 13403, FC 0, non-FC 13403; H in [1, 661] (min attained by 1 classes, e.g. code 0); non-FC H in [1, 661]
+  lambda=1: classes 78515, FC 64182, non-FC 14333; H in [75, 2205] (min attained by 3 classes, e.g. code 34426851330); non-FC H in [75, 661]
+  lambda=2: classes 89366, FC 89242, non-FC 124; H in [385, 2711] (min attained by 1 classes, e.g. code 43151540450); non-FC H in [385, 661]
+  lambda=3: classes 10237, FC 10237, non-FC 0; H in [2055, 3109] (min attained by 2 classes, e.g. code 30167027682); non-FC H in [-1, -1]
+  lambda=4: classes 15, FC 15, non-FC 0; H in [3159, 3357] (min attained by 1 classes, e.g. code 4129867664); non-FC H in [-1, -1]
+  f_k(9) = min H over lambda >= k: f_1=75 f_2=385 f_3=2055 f_4=3159
+  mindeg=0: classes 13304, FC 0, non-FC 13304
+  mindeg=1: classes 78614, FC 64182, non-FC 14432
+  mindeg=2: classes 89366, FC 89242, non-FC 124
+  mindeg=3: classes 10237, FC 10237, non-FC 0
+  mindeg=4: classes 15, FC 15, non-FC 0
+  (lambda>=3) != (mindeg>=3): 0 classes
+  lambda x mindeg (classes / non-FC): (0,0):13304/13304 (0,1):99/99 (1,1):78515/14333 (2,2):89366/124 (3,3):10237/0 (4,4):15/0
+  FC by number k of first-creator deletions: 1:2 2:37 3:280 4:1494 5:5020 6:11383 7:21892 8:41015 9:82553
+  non-FC with every deletion a first creator (hypo analogue): 0; non-strong FC: 0
+  VALUES order 9: |S(9)| = 1520 (max 3357), new values 1200, new values with no first creator having a first-creator deletion 0, new values all of whose first creators have ONLY first-creator deletions 510 (0.4250)
+  [order 9: 7s]
+ORDER 10: classes 9733056 (strong 9355949), sum n!/|Aut| = 35184372088832 vs 2^45 = 35184372088832 OK; max H 15745
+  FC 8647232; non-FC 1085824 = EXT 962686 + SUM 49755 + SUB 42514 + REST 30869 (sum 1085824)
+  shares of non-FC: EXT 88.6595%, REST 2.8429%
+  REST: pendant 30525, non-pendant lambda=1 4, non-pendant lambda>=2 340; with a non-strong deletion 30649, without 220; non-pendant with a non-strong deletion 124
+  REST pendant share 98.8856%
+  REST lambda histogram: 1:30529 2:340
+  REST without non-strong deletion, lambda histogram: 2:220
+  lambda=0: classes 377107, FC 0, non-FC 377107; H in [1, 3357] (min attained by 1 classes, e.g. code 0); non-FC H in [1, 3357]
+  lambda=1: classes 2817450, FC 2149134, non-FC 668316; H in [125, 9595] (min attained by 1 classes, e.g. code 17609366175752); non-FC H in [125, 3357]
+  lambda=2: classes 5124698, FC 5084297, non-FC 40401; H in [727, 12701] (min attained by 2 classes, e.g. code 22041840323618); non-FC H in [727, 3357]
+  lambda=3: classes 1400468, FC 1400468, non-FC 0; H in [5753, 14733] (min attained by 1 classes, e.g. code 24249455648272); non-FC H in [-1, -1]
+  lambda=4: classes 13333, FC 13333, non-FC 0; H in [14877, 15745] (min attained by 3 classes, e.g. code 33011998520576); non-FC H in [-1, -1]
+  f_k(10) = min H over lambda >= k: f_1=125 f_2=727 f_3=5753 f_4=14877
+  mindeg=0: classes 376192, FC 0, non-FC 376192
+  mindeg=1: classes 2818348, FC 2149134, non-FC 669214
+  mindeg=2: classes 5124715, FC 5084297, non-FC 40418
+  mindeg=3: classes 1400468, FC 1400468, non-FC 0
+  mindeg=4: classes 13333, FC 13333, non-FC 0
+  (lambda>=3) != (mindeg>=3): 0 classes
+  lambda x mindeg (classes / non-FC): (0,0):376192/376192 (0,1):914/914 (0,2):1/1 (1,1):2817434/668300 (1,2):16/16 (2,2):5124698/40401 (3,3):1400468/0 (4,4):13333/0
+  FC by number k of first-creator deletions: 2:41 3:1144 4:13686 5:70358 6:206331 7:425418 8:836147 9:1660476 10:5433631
+  non-FC with every deletion a first creator (hypo analogue): 0; non-strong FC: 0
+  VALUES order 10: |S(10)| = 7663 (max 15745), new values 6143, new values with no first creator having a first-creator deletion 0, new values all of whose first creators have ONLY first-creator deletions 2886 (0.4698)
+  [order 10: 113s, 12 threads]
+EXTENSION order 3 -> 4:
+  values of all extensions 3 (missing from S(4): 0, extra: 0); new values at 4: 1; not reached from an FC: 0; reached ONLY from FC parents: 0 (0.0000)
+  FC 1: sterile 0, below half 0, min fertile 6 of 8 (code 2, H 3)
+EXTENSION order 4 -> 5:
+  values of all extensions 7 (missing from S(5): 0, extra: 0); new values at 5: 4; not reached from an FC: 0; reached ONLY from FC parents: 0 (0.0000)
+  FC 1: sterile 0, below half 0, min fertile 14 of 16 (code 34, H 5)
+EXTENSION order 5 -> 6:
+  values of all extensions 19 (missing from S(6): 0, extra: 0); new values at 6: 12; not reached from an FC: 0; reached ONLY from FC parents: 3 (0.2500)
+  FC 6: sterile 0, below half 0, min fertile 26 of 32 (code 546, H 9)
+EXTENSION order 6 -> 7:
+  values of all extensions 77 (missing from S(7): 0, extra: 0); new values at 7: 58; not reached from an FC: 0; reached ONLY from FC parents: 18 (0.3103)
+  FC 33: sterile 0, below half 0, min fertile 51 of 64 (code 16448, H 17)
+EXTENSION order 7 -> 8:
+  values of all extensions 320 (missing from S(8): 0, extra: 0); new values at 8: 243; not reached from an FC: 1 [ 63 ]; reached ONLY from FC parents: 85 (0.3498)
+  FC 328: sterile 0, below half 0, min fertile 75 of 128 (code 279074, H 35)
+EXTENSION order 8 -> 9:
+  FC below half: code 17833992 H 63 fertile 77 of 256
+  FC below half: code 134480408 H 63 fertile 77 of 256
+  values of all extensions 1520 (missing from S(9): 0, extra: 0); new values at 9: 1200; not reached from an FC: 0; reached ONLY from FC parents: 510 (0.4250)
+  FC 5457: sterile 0, below half 2, min fertile 77 of 256 (code 17833992, H 63)
+EXTENSION order 9 -> 10:
+  values of all extensions 7663 (missing from S(10): 0, extra: 0); new values at 10: 6143; not reached from an FC: 0; reached ONLY from FC parents: 2886 (0.4698)
+  FC 163676: sterile 0, below half 0, min fertile 299 of 512 (code 34362376576, H 615)

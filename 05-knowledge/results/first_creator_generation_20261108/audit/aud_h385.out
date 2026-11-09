@@ -1,0 +1,2 @@
+H = 385  scores: [2, 2, 2, 2, 4, 6, 6, 6, 6]
+delete v=4: T-v = P=>Q, P=(5, 6, 7, 8) (strong True, H 5), Q=[0, 1, 2, 3] (strong True, H 5); v beats 2 of P and 2 of Q; H(T-v)=25

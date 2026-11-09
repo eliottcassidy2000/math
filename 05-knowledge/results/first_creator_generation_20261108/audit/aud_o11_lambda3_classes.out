@@ -1,0 +1,16 @@
+lam3 file 0 (packet): pairs 97, direct-check failures (H, lambda >= 3, status) 0
+lam3 file 1 (auditor's own search): pairs 97, direct-check failures (H, lambda >= 3, status) 0
+canonical classes: 11; isomorphism certificates failed: 0
+  class: H status |Aut| SC lambda mindeg module(mask) EXT(#first-creator deletions) deletionH | pairs(packet, auditor)
+  31540616526609573: H 15213 inS10(non-FC) |Aut| 3 SC 0 lambda 3 mindeg 3 module 14 (size 3) EXT 8 dels 1629 3971 3971 3971 4911 4623 1959 3663 3663 3933 729 | 9, 9
+  15773619784301733: H 15637 new(FC) |Aut| 1 SC 1 lambda 3 mindeg 3 module 0 (size 0) EXT 8 dels 1911 3775 4031 3747 4747 4747 1911 3775 3747 4031 849 | 11, 11
+  15769238917659813: H 15703 new(FC) |Aut| 1 SC 0 lambda 3 mindeg 3 module 0 (size 0) EXT 8 dels 1973 3609 4137 3979 4525 4765 1933 3783 3763 4041 843 | 11, 11
+  15773619784301730: H 15703 new(FC) |Aut| 1 SC 0 lambda 3 mindeg 3 module 0 (size 0) EXT 8 dels 1933 3783 4041 3763 4765 4525 1973 3609 3979 4137 843 | 11, 11
+  15773619784301648: H 15213 inS10(non-FC) |Aut| 3 SC 0 lambda 3 mindeg 3 module 896 (size 3) EXT 8 dels 1959 3663 3933 3663 4623 729 4911 3971 3971 3971 1629 | 9, 9
+  31540616526625459: H 15561 inS10(non-FC) |Aut| 3 SC 0 lambda 3 mindeg 3 module 14 (size 3) EXT 8 dels 1791 4047 4047 4047 5061 2331 3825 3657 4239 4089 657 | 9, 9
+  31540616526609570: H 15273 inS10(non-FC) |Aut| 3 SC 0 lambda 3 mindeg 3 module 14 (size 3) EXT 8 dels 1653 3983 3983 3983 4923 4413 2019 3531 3897 4035 735 | 9, 9
+  31540616526609488: H 14787 new(FC) |Aut| 9 SC 1 lambda 3 mindeg 3 module 28 (size 3) EXT 8 dels 1683 4761 3885 3885 3885 657 4761 3885 3885 3885 1683 | 7, 7
+  15769238917659728: H 15273 inS10(non-FC) |Aut| 3 SC 0 lambda 3 mindeg 3 module 896 (size 3) EXT 8 dels 2019 4035 3531 3897 4413 735 4923 3983 3983 3983 1653 | 9, 9
+  7901116395191522: H 11475 inS10(non-FC) |Aut| 25 SC 1 lambda 3 mindeg 3 module 31 (size 5) EXT 0 dels 2985 2985 2985 2985 2985 2985 2985 2985 2985 2985 225 | 3, 3
+  23672511317195856: H 15561 inS10(non-FC) |Aut| 3 SC 0 lambda 3 mindeg 3 module 896 (size 3) EXT 8 dels 2331 4239 4089 3825 3657 657 5061 4047 4047 4047 1791 | 9, 9
+C3[R5,R5,1]: H 11475, lambda 3, mindeg 3, |Aut| 25, SC 1, canonical code 7901116395191522, equals class #9 (isomorphism certified)

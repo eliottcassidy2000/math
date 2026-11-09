@@ -1,0 +1,4 @@
+n=14, R7 => R7: mindeg 3, lambda 0
+n=14, R7 => R7 with 1 back arc(s): mindeg 3, lambda 1
+n=14, R7 => R7 with 2 back arc(s): mindeg 3, lambda 2
+random tournaments n=5..13 with n <= 4*delta0+1: tested 137, lambda != delta0: 0

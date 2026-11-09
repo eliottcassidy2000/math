@@ -1,0 +1,2 @@
+witness check: klein new values at 11 (n(h) = 11): 36248 (agree with S(11) minus the auditor's S(10): yes)
+  lines 36248; parent not a first creator (H in S(9)): 0; H(T + v_x) != h by direct DP: 0; h not new at 11: 0; duplicate h: 0; new values without a line: 0

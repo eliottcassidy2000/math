@@ -1,0 +1,12 @@
+auditor's order 10 -> 11 run: classes 9733056 (first creators 8647232), extensions 9966649344, 12 threads, 439s
+S(11) from the extensions: 43911 values; klein's S(11): 43911; missing 0, extra 0
+R1: new values at 11: 36248; with no first-creator parent: 0
+R5: new values all of whose (class, pattern) realizations have a first-creator parent: 18661 (0.5148)
+first-creator realizations per new value: min 1, median 251103 (lower) / 251107 (upper), max 445304
+new values with at most 9 first-creator realizations (h: F, A): 86007:9,9 86127:9,9 86643:5,5 88695:7,7 89049:5,5 89157:5,5 91395:7,7 91443:9,9 91623:9,9 92411:1,1 92415:7,7 93275:3,3 93295:6,6 93467:1,1 93955:3,3 95095:1,1
+R2: hypo pairs 0
+R3: sterile first creators 0
+R4: first creators with fewer than 512 fertile patterns 0; minimum fertile 564 (H 2901), attained by: 69811060992 17592606656512
+fertile-count distribution (lowest values): 564:2 568:2 582:2 585:2 588:2 594:2 597:2 598:2 600:2 603:2 604:2 605:2
+lambda>=3 search: parents with min degree >= 2: 6538516; degree-valid patterns 2834126741; min H over all of them 11475 (parent 19817047293154, x 995)
+sample (every 2500-th class): classes 3894 (first creators 3447), direct-DP pattern checks 3987456, mismatches 0, fertile-count mismatches 0, brute-force hypo pairs 0
