@@ -1,6 +1,6 @@
 ---
 id: THM-5070
-title: "Port chains: a nonnegative 3-dimensional transfer for odd-cycle packing counts in every base. (1) Gluing a block (B, w, u') after a ported tournament (T, u) - every old vertex beats every block vertex except w -> u, new port u' - maps the state (I(Omega(T), x), E, O) by a nonnegative integer 3 x 3 matrix N_x(B, w, u'), where E, O sum I(Omega(T - V(P)), x) over paths P from the port of even and odd order. (2) Apex bridges: if the odd cycles of each side all pass through its glued vertex, I = I_1 I_2 + x c; for one-apex sides I = (1 + x a(W))(1 + x a(W')) + x[ceil(W/2)(1 + floor(W'/2)) + (1 + floor(W/2)) ceil(W'/2)]. (3) The one-vertex block is the tower, characteristic polynomial t^3 - t^2 - t - (x - 1), = (t - 2)(t^2 + t + 1) at x = 3. (4) Port chains with blocks of order <= 5 attain every v = 1 (mod 3), v <= 10^6, except 10 and 31, and every odd v <= 2*10^5 except 7 and 21; with blocks of order <= 4 the base-3 misses below 10^6 are exactly 10, 31, 61, 106, 217, 274, 337, 346, 607, 865 (already for 15 explicit generators) and the base-2 misses below 2*10^5 are exactly 7, 21, 47, 67, 127, 173, 491. (5) Among all products of <= 3 order-<= 4 base-3 blocks, the only matrices preserving the tower's dominant direction are the tower powers."
+title: "Port chains: a nonnegative 3-dimensional transfer for odd-cycle packing counts in every base. (1) Gluing a block (B, w, u') after a ported tournament (T, u) - every old vertex beats every block vertex except w -> u, new port u' - maps the state (I(Omega(T), x), E, O) by a nonnegative integer 3 x 3 matrix N_x(B, w, u'), where E, O sum I(Omega(T - V(P)), x) over paths P from the port of even and odd order. (2) Apex bridges: if the odd cycles of each side all pass through its glued vertex, I = I_1 I_2 + x c; for one-apex sides I = (1 + x a(W))(1 + x a(W')) + x[ceil(W/2)(1 + floor(W'/2)) + (1 + floor(W/2)) ceil(W'/2)]. (3) The one-vertex block is the tower, characteristic polynomial t^3 - t^2 - t - (x - 1), = (t - 2)(t^2 + t + 1) at x = 3. (4) Port chains with blocks of order <= 5 attain every v = 1 (mod 3), v <= 10^6, except 10 and 31, and every odd v <= 2*10^5 except 7 and 21; with blocks of order <= 4 the base-3 misses below 10^6 are exactly 10, 31, 61, 106, 217, 274, 337, 346, 607, 865 (already for 15 explicit generators) and the base-2 misses below 2*10^5 are exactly 7, 21, 47, 67, 127, 173, 491. (5) Among all products of <= 3 order-<= 4 base-3 blocks, the only matrices preserving the tower's dominant direction are the tower powers. (6) In bases 4-8 the alpha-sum gaps below 30,000 are exactly the known gaps below 81: {3,14,27}, {3,10,27}, {3,10,14,21,46}, {3,10,14,29}, {3,35,52}."
 status: >
   PROVED: (1), (2) and (3).
   - (1) is the base-x packing form of the seam transfer (KNOWN at x = 2 through OCF: SEAM.md,
@@ -8,7 +8,9 @@ status: >
   - (2) specialises the one-arc join law (THM-4866 (B)). Its one-apex statistics use the inherited one-apex recurrence
     (session25, Session191 one_apex/PROOF.md (1)).
   - The recurrence in (3) is KNOWN (THM-4952 (C), THM-4865 (c)); the matrix form is new.
-  FINITE-EXACT: (4) and (5).
+  FINITE-EXACT: (4), (5) and (6).
+  - (6): the gap sets of bases 4-8 to alpha-sum 30,000, from three sources: THM-4940 (6), port chains with order
+    joins, and 61 independently verified witnesses of orders 8-11.
   - (4) by saturated breadth-first closure; saturation is exact for nonnegative matrices.
   - Pre-registered P1-P3 all CONFIRMED (PREREGISTRATION.md).
   - The transfer is checked against an independent brute-force packing count on 600 random chains of orders <= 14
@@ -33,6 +35,9 @@ verification:
   - 05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/chain_check.py
   - 05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/packing_count.c
   - 05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/tower_direction.py
+  - 05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/bases_gaps.py
+  - 05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/hunt.c
+  - 05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/verify_witnesses.py
   - 05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/out/
 ---
 
@@ -93,6 +98,25 @@ dominant eigenvector (3, 1, 2).
 - The base-3 range was 10^5 (span-2 ribbon words, THM-4952 (D)) and 29,035 (order joins of strong tournaments of
   order <= 10, THM-4950 (3)).
 - The base-2 rows are a control: THM-4875 (D) reaches 2^32 with one-arc joins of one-apex pieces.
+
+**(6) Gap sets in bases 4-8 to alpha-sum 30,000 (FINITE-EXACT).** For b = 4, 5, 6, 7, 8 the set of gaps
+Gap_b = {m : 1 + b m is not I(Omega(T), b) for any tournament T} satisfies Gap_b ∩ [0, 30000] = Gap_b ∩ [0, 80], namely:
+
+| b | 4 | 5 | 6 | 7 | 8 |
+|---|---|---|---|---|---|
+| gaps below 30,000 | 3, 14, 27 | 3, 10, 27 | 3, 10, 14, 21, 46 | 3, 10, 14, 29 | 3, 35, 52 |
+
+Proof sketch:
+- **m <= 80.** THM-4940 (6) gives the exact gap sets here.
+- **80 < m <= 30,000.** The values are covered in three ways:
+  - the order-<= 5 port chains in base b;
+  - their closure under order joins;
+  - 61 explicit tournaments of orders 8-11 for the alpha-sums that were still open: 1 in base 4, 7 in base 5, 6 in
+    base 6, 7 in base 7, 40 in base 8.
+- **Witness check.** The 61 witnesses were found by hill-climbing and verified from scratch: cycle DP, packing DP and
+  OCF (`out/bases_4to8_witnesses_verify.out`).
+
+This is evidence for HYP-9530 (B) (finite gaps in every base); see HYP-9640 (E).
 
 **(5) Tower directions (FINITE-EXACT).**
 - Take all products of length <= 3 of the 57 base-3 blocks of order <= 4. The distinct ones that map (3, 1, 2) to a

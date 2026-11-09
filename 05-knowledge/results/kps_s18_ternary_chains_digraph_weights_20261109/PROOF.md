@@ -136,6 +136,21 @@ Suppose every odd cycle of T passes through u, and every odd cycle of B passes t
 - It keeps the distinct matrices N with N v parallel to v.
 - Exactly M_T^1, ..., M_T^12 occur (`out/tower_direction.out`).
 
+**(6) Bases 4-8.**
+- **m <= 80.** THM-4940 (6) gives the exact gap sets.
+- **80 < m <= 30000.** `bases_gaps.py` runs the order-<= 5 chains in base b, adds the attained alpha-sums <= 80, and
+  closes the set under (m, m') -> m + m' + b m m' (order joins multiply I(Omega, b), THM-4940 (1)). The alpha-sums
+  left open are:
+  - base 4: 149;
+  - base 5: 96, 129, 143, 234, 335, 542, 614;
+  - base 6: 122, 130, 142, 146, 219, 285;
+  - base 7: 131, 146, 150, 200, 278, 404, 466;
+  - base 8: 40 values, the largest 8789.
+- **Witnesses.** Each open value has an explicit tournament of order 8-11 (`out/bases_4to8_witnesses.txt`, found by
+  `hunt.c`). Every witness was rechecked by `verify_witnesses.py` from scratch: tournament check, Hamiltonian-cycle
+  DP per odd vertex set, set-partition DP, and OCF against a direct Hamiltonian path count. There were 0 mismatches
+  in 61.
+
 ---
 
 ## THM-5071: the weighted cycle formula for digraphs

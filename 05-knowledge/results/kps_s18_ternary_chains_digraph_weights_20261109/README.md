@@ -80,6 +80,21 @@ characteristic polynomial t^3 - t^2 - t - (x - 1). In base 3 this is (t - 2)(t^2
 - One explicit family realises both Chan-Pak spectra, and its only misses are the permanent gaps.
 - The binary row is a control: THM-4875 (D) already reaches 2^32 with one-arc joins.
 
+**(6) Beyond base 3: the gap sets of bases 4-8, FINITE-EXACT, not pre-registered.** For each base b = 4..8 the
+following three sources together settle every alpha-sum m in (80, 30000]:
+- port chains with blocks of order <= 5;
+- their order-join closure, together with THM-4940 (6)'s exact table below 81;
+- 61 hill-climbed tournaments of orders 8-11 for the values still open (`hunt.c`), each verified from scratch
+  (`verify_witnesses.py`).
+
+So Gap_b below 30,000 is exactly the known small gap set:
+
+| b | 4 | 5 | 6 | 7 | 8 |
+|---|---|---|---|---|---|
+| gaps (alpha-sums) | 3, 14, 27 | 3, 10, 27 | 3, 10, 14, 21, 46 | 3, 10, 14, 29 | 3, 35, 52 |
+
+This is strong evidence for HYP-9530 (B) and its sharpening HYP-9640 (E).
+
 **(5) Why there is no easy digit proof, FINITE-EXACT.** A digit (numeration) proof would need block products that
 preserve the tower direction (3, 1, 2), the eigenvalue-2 eigenvector. Among the products of length <= 3 of all 57
 order-<= 4 blocks, only the tower powers M_T^1, ..., M_T^12 do so. This is also the reason the 2-dimensional
@@ -192,6 +207,8 @@ weight 3 on every odd cycle. No such construction is claimed.
 | `digraph_weights.c` | check of the weighted formula; one-defect censuses |
 | `core_weights.py` | weighted decompositions of the 7/21 cores |
 | `one_defect_witness.py` | explicit one-defect witnesses; check of the sink construction |
+| `bases_gaps.py` | chain coverage in bases 4-8 and the open alpha-sums after order joins |
+| `hunt.c`, `verify_witnesses.py` | hill-climb for the open alpha-sums; independent from-scratch check of the 61 witnesses |
 | `out/` | every output quoted above, plus the 15 and 13 generator lists with block representatives |
 
 **Reproduce:**

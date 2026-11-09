@@ -1,12 +1,13 @@
 ---
 id: HYP-9640
-title: "Chan-Pak in both bases as cofiniteness of an explicit matrix-semigroup orbit, and one-defect digraph spectra. (A) The 15 explicit base-3 port-chain generators (nonnegative 3 x 3 integer matrices) carry (1,0,1) to states with every first coordinate v = 1 (mod 3), v >= 866; with the finite censuses this implies ternary Chan-Pak. (B) The 56 base-2 port-chain matrices of blocks of order <= 4 reach every odd v >= 493; this implies binary Chan-Pak. (C) With exactly one reciprocal pair and no missing pair, the digraph path totals are exactly the integers >= 2 other than 4 and 7. (D) With exactly one missing pair and no reciprocal pair, every nonnegative integer is a total."
+title: "Chan-Pak in both bases as cofiniteness of an explicit matrix-semigroup orbit, and one-defect digraph spectra. (A) The 15 explicit base-3 port-chain generators (nonnegative 3 x 3 integer matrices) carry (1,0,1) to states with every first coordinate v = 1 (mod 3), v >= 866; with the finite censuses this implies ternary Chan-Pak. (B) The 56 base-2 port-chain matrices of blocks of order <= 4 reach every odd v >= 493; this implies binary Chan-Pak. (C) With exactly one reciprocal pair and no missing pair, the digraph path totals are exactly the integers >= 2 other than 4 and 7. (D) With exactly one missing pair and no reciprocal pair, every nonnegative integer is a total. (E) For bases 4-8 the gap set is exactly its part below 81 (verified below alpha-sum 30,000)."
 status: >
   OPEN.
   (A): FINITE-EXACT to 10^6 (THM-5070 (4)).
   (B): FINITE-EXACT to 2*10^5.
   (C): the exclusions are PROVED at every order (THM-5071 (4b)); attainment FINITE-EXACT below 198 (orders <= 7).
   (D): FINITE-EXACT below 130 (orders <= 7).
+  (E): FINITE-EXACT below alpha-sum 30,000 (THM-5070 (6)).
 session: kind-pasteur-2026-11-09-S18
 source: 05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/README.md
 related:
@@ -58,6 +59,21 @@ together with every integer >= 8.
 **Status.** Exclusion of 1, 4 and 7 is PROVED at all orders (THM-5071 (4b)). Attainment is checked below 198.
 
 **Falsifier.** An integer >= 8 never attained.
+
+## (E) The small gap sets are all the gaps (bases 4-8)
+
+**Statement.** For b = 4, 5, 6, 7, 8, Gap_b is exactly the set of its elements below 81:
+- b = 4: {3, 14, 27};
+- b = 5: {3, 10, 27};
+- b = 6: {3, 10, 14, 21, 46};
+- b = 7: {3, 10, 14, 29};
+- b = 8: {3, 35, 52}.
+
+This sharpens HYP-9530 (B) for these bases.
+
+**Evidence.** It holds below alpha-sum 30,000 (THM-5070 (6)).
+
+**Falsifier.** Any alpha-sum m > 30,000 with 1 + b m attained by no tournament.
 
 ## (D) One missing pair
 
