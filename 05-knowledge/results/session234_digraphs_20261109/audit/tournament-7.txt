@@ -1,0 +1,2 @@
+base=2 n=7 graphs=2097152 total_path_incidences=165150720 H7=0 H21=0
+strong_count=1677488 strong_floor=25

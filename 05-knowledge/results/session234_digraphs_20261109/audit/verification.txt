@@ -1,0 +1,17 @@
+PASS base=3 n=1: graph total, path-incidence total, complete scanner histogram equality
+PASS base=3 n=2: graph total, path-incidence total, complete scanner histogram equality
+PASS base=3 n=3: graph total, path-incidence total, complete scanner histogram equality
+PASS base=3 n=4: graph total, path-incidence total, complete scanner histogram equality
+PASS base=3 n=5: graph total, path-incidence total, complete scanner histogram equality
+PASS base=3 n=6: graph total, path-incidence total, complete scanner histogram equality
+PASS base=2 n=3: graph total, path-incidence total
+PASS base=2 n=4: graph total, path-incidence total
+PASS base=2 n=5: graph total, path-incidence total
+PASS base=2 n=6: graph total, path-incidence total
+PASS base=2 n=7: graph total, path-incidence total
+PASS all n6 target canonical representatives, strongness and reciprocal counts
+PASS diagonal-decorated strong cores n=3 H=3: 12; (automorphism order, loop orbits)=[(3, 4), (1, 8)]
+PASS diagonal-decorated strong cores n=4 H=7: 48; (automorphism order, loop orbits)=[(1, 16), (1, 16), (1, 16)]
+PASS diagonal-decorated strong cores n=5 H=21: 480; (automorphism order, loop orbits)=[(1, 32), (1, 32), (1, 32), (1, 32), (3, 16), (1, 32), (1, 32), (1, 32), (1, 32), (1, 32), (1, 32), (3, 16), (1, 32), (1, 32), (1, 32), (1, 32)]
+PASS diagonal-decorated strong cores n=6 H=21: 1024; (automorphism order, loop orbits)=[(1, 64), (1, 64), (1, 64), (1, 64), (1, 64), (1, 64), (1, 64), (1, 64), (1, 64), (1, 64), (1, 64), (1, 64), (1, 64), (1, 64), (1, 64), (1, 64)]
+ALL CHECKS PASS

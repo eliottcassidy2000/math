@@ -1,8 +1,9 @@
 # Session234: Hamiltonian-path counts 7 and 21 beyond tournaments
 
-**Status: REFUTED (the proposed matrix condition); FINITE-EXACT (complete
-loopless semicomplete census through order six); structural classification
-under independent audit at this checkpoint.** Date: 2026-11-09.
+**Status: REFUTED (the proposed matrix condition); PROVED (complete all-order
+semicomplete classification and fixed-count finite grammar); FINITE-EXACT
+(semicomplete census through six, unrestricted digraphs through five);
+independently audited.** Date: 2026-11-09.
 
 The conjecture is false. A binary adjacency matrix can have exactly seven
 or twenty-one directed Hamiltonian paths while its diagonal is entirely
@@ -64,23 +65,90 @@ are saved, not merely aggregate counts.
 - [Order 1–5 catalogue](census/results.json)
 - [Order-six catalogue](census/classes6.json)
 - [The two strong three-path cores](census/strong_h3.json)
-- [Structural proof draft](STRUCTURE_DRAFT.md), independently being checked
+- [Complete proofs and counting formulas](PROOFS.md)
+- [General fixed-count grammar theorem](GENERAL_GRAMMAR.md)
+- [Independent adversarial audit](audit/AUDIT.md)
+- [Standalone matrix generator](census/generator.py)
+- [Validation and full replay instructions](VALIDATION.md)
 
 **Important hostile control:** a directed triangle with one reverse arc
 added still has three Hamiltonian paths. The added arc is unused. Thus
 strong connectivity does not make arc addition strictly count-increasing.
 Both three-path cores must be retained in a twenty-one-path product.
 
-## Scope and next checkpoint
+## Exact all-order generation
 
-The structural reduction is through strongly connected components, whose
-counts multiply. Every strong semicomplete digraph of order at least three
-contains a spanning strong tournament. The inherited strong-tournament
-floors therefore restrict a seven-path core to order four and a
-twenty-one-path core to orders five or six. The next checkpoint will finish
-the independent proof/census audit, all-order generation and exact counting
-formulas. No completeness theorem for the remaining tournament spectrum is
-claimed: the Chan–Pak conjecture remains open.
+For seven paths, choose one of the three strong four-vertex cores and put
+any number of singleton vertices before and after it in a total component
+order. For twenty-one paths, either choose one of the 32 strong cores and
+pad it in the same way, or choose one seven-path core and either of the two
+three-path cores, put them in either order, and place singleton chains
+before, between and after them. Every cross-component arc points forward.
+
+**These rules generate every loopless semicomplete example, at every
+order, exactly once up to isomorphism.** Relabel for labelled matrices.
+Choose diagonal bits freely for loop-allowed versions. The classification
+is complete because strong semicomplete graphs contain spanning strong
+tournaments, whose proved lower bounds restrict the core orders.
+
+For order `n>=4`, seven has exactly `3(n-3)` loopless isomorphism classes
+and `3(n-3)n!` labelled matrices. The twenty-one class counts are 16 at
+order five, 48 at six, 92 at seven and 148 at eight, with an explicit
+quadratic formula thereafter. [All formulas, including loops](PROOFS.md#5-exact-counts-and-loop-symmetry).
+
+Run, from `census/`:
+
+```bash
+python3 generator.py --target 21 --n 8 --limit 3
+python3 generator.py --target 7 --n 5 --with-loops --limit 3
+python3 generator.py --validate
+```
+
+## What survives of the conjecture
+
+The complete classification gives these sharp loop-independent necessary
+conditions, writing `b` for the number of reciprocal pairs:
+
+- Seven paths force an absent pair **or exactly two reciprocal pairs**.
+- Twenty-one paths force an absent pair **or `1<=b<=3`**.
+
+Exactly one reciprocal pair suffices for 21 at order six. Its two
+tournament resolutions have 17 and 19 paths; their union has 21.
+Tournament resolution preserves a *weighted* path count, not the original
+count, explaining why the tournament omissions do not transfer.
+
+## General theorem and unrestricted matrices
+
+For **every fixed positive path total**, semicomplete graphs have a finite
+strong-core grammar. A strong core has at least as many Hamiltonian paths
+as vertices, so a core contributing to total `h` has at most `h` vertices.
+Singleton gaps then give rational generating functions: loopless
+isomorphism counts are eventually polynomial in the order; labelled counts
+are `n!` times a polynomial. Allowing loops gives `2^n` times the respective
+quantities, except that isomorphism coefficients must first use the actual
+loop-decoration orbits. Exact degree is the maximum realizable number of
+nontrivial components, at most the number of prime factors of `h` counted
+with multiplicity. This is not a universal-spectrum claim.
+
+For **arbitrary digraphs with missing pairs**, the complete scan through
+order five gives 120 seven-path graphs at order four, and 49,440
+seven-path / 7,760 twenty-one-path graphs at order five. An exact
+path-support/hypergraph construction is given in [DG8](PROOFS.md#7-arbitrary-matrices-and-a-complete-if-expensive-generator).
+The smaller strong-core catalogue is not claimed for this unrestricted
+sector.
+
+## Verification and boundaries
+
+The semicomplete scan is independently checked by a different algorithm
+that scatters each permutation into every compatible matrix. Every
+histogram entry through order six agrees; all 2,097,152 order-seven
+tournaments independently verify the required floor. Unrestricted target
+strata agree through order five. Loop decorations and every generated
+loopless representative through order eight are verified separately.
+
+No completeness theorem for the remaining tournament spectrum is claimed:
+the Chan–Pak conjecture remains **OPEN**. Classical floor, parity and
+Hamiltonicity mechanisms are credited, not claimed as new.
 
 Inherited reference:
 [THM-1370 / h-spectrum-omits-7-21-all-n](../../../01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md).

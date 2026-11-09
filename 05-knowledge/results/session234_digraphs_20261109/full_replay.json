@@ -1,0 +1,491 @@
+{
+  "status": "PASS",
+  "mode": "full",
+  "commands": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scan.py"
+      ],
+      "directory": "census",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "analyze.py"
+      ],
+      "directory": "census",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "classify3.py"
+      ],
+      "directory": "census",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "scan6.cpp",
+        "-o",
+        "scan6"
+      ],
+      "directory": "census",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./scan6"
+      ],
+      "directory": "census",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "enrich6.py"
+      ],
+      "directory": "census",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "general_scan.cpp",
+        "-o",
+        "general_scan"
+      ],
+      "directory": "census",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./general_scan"
+      ],
+      "directory": "census",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "audit.cpp",
+        "-o",
+        "audit"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit",
+        "3",
+        "1"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit",
+        "3",
+        "2"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit",
+        "3",
+        "3"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit",
+        "3",
+        "4"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit",
+        "3",
+        "5"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit",
+        "3",
+        "6"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit",
+        "2",
+        "3"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit",
+        "2",
+        "4"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit",
+        "2",
+        "5"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit",
+        "2",
+        "6"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit",
+        "2",
+        "7"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "audit_all.cpp",
+        "-o",
+        "audit_all"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit_all",
+        "4",
+        "1"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit_all",
+        "4",
+        "2"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit_all",
+        "4",
+        "3"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit_all",
+        "4",
+        "4"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "./audit_all",
+        "4",
+        "5"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "generator.py",
+        "--validate"
+      ],
+      "directory": "census",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "verify.py"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "verify_all.py"
+      ],
+      "directory": "audit",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "check.py"
+      ],
+      "directory": "final_review",
+      "status": "PASS"
+    }
+  ],
+  "comparisons": [
+    {
+      "path": "audit/hist-base2-n3.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base2-n4.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base2-n5.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base2-n6.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base2-n7.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base3-n1.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base3-n2.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base3-n3.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base3-n4.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base3-n5.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base3-n6.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base4-n1.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base4-n2.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base4-n3.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base4-n4.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/hist-base4-n5.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/semicomplete-1.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/semicomplete-2.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/semicomplete-3.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/semicomplete-4.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/semicomplete-5.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/semicomplete-6.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/tournament-3.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/tournament-4.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/tournament-5.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/tournament-6.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/tournament-7.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/unrestricted-1.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/unrestricted-2.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/unrestricted-3.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/unrestricted-4.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "audit/unrestricted-5.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "census/classes6.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "census/classes6.json",
+      "comparison": "JSON content",
+      "status": "PASS"
+    },
+    {
+      "path": "census/general_census.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "census/general_verification.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "census/generator_validation.json",
+      "comparison": "JSON content",
+      "status": "PASS"
+    },
+    {
+      "path": "census/results.json",
+      "comparison": "JSON content",
+      "status": "PASS"
+    },
+    {
+      "path": "census/results6.csv",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "census/strong_h3.json",
+      "comparison": "JSON content",
+      "status": "PASS"
+    },
+    {
+      "path": "final_review/check-output.txt",
+      "comparison": "exact bytes",
+      "status": "PASS"
+    },
+    {
+      "path": "final_review/validation.json",
+      "comparison": "JSON content",
+      "status": "PASS"
+    }
+  ],
+  "explicit_seed_and_diagonal_checks": 8,
+  "wrong_target_negative_control": "rejected"
+}

@@ -1,0 +1,11 @@
+base=3 n=4 graphs=729 total_path_incidences=5184 H7=72 H21=0
+class H=3 bits=2506 strong=0 reciprocal=0
+class H=3 bits=2510 strong=0 reciprocal=1
+class H=3 bits=6356 strong=0 reciprocal=0
+class H=3 bits=6364 strong=0 reciprocal=1
+class H=7 bits=6606 strong=1 reciprocal=2
+class H=7 bits=6614 strong=1 reciprocal=2
+class H=7 bits=6876 strong=1 reciprocal=2
+summary H=3 strong=0 reciprocal=0 classes=2
+summary H=3 strong=0 reciprocal=1 classes=2
+summary H=7 strong=1 reciprocal=2 classes=3

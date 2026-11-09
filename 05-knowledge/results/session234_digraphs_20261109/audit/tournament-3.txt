@@ -1,0 +1,2 @@
+base=2 n=3 graphs=8 total_path_incidences=12 H7=0 H21=0
+strong_count=2 strong_floor=3

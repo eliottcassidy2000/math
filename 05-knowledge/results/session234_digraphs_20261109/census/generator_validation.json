@@ -1,0 +1,959 @@
+{
+  "decorated_core_census": [
+    {
+      "target": 3,
+      "n": 3,
+      "unlooped_cores": 2,
+      "decorated_cores": 12,
+      "details": [
+        {
+          "id": "3:3:0",
+          "automorphism_order": 3,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1)": 1,
+            "(3,)": 2
+          },
+          "loop_orbit_count": 4,
+          "orbit_sizes": {
+            "1": 2,
+            "3": 2
+          }
+        },
+        {
+          "id": "3:3:1",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1)": 1
+          },
+          "loop_orbit_count": 8,
+          "orbit_sizes": {
+            "1": 8
+          }
+        }
+      ]
+    },
+    {
+      "target": 7,
+      "n": 4,
+      "unlooped_cores": 3,
+      "decorated_cores": 48,
+      "details": [
+        {
+          "id": "7:4:0",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 16,
+          "orbit_sizes": {
+            "1": 16
+          }
+        },
+        {
+          "id": "7:4:1",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 16,
+          "orbit_sizes": {
+            "1": 16
+          }
+        },
+        {
+          "id": "7:4:2",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 16,
+          "orbit_sizes": {
+            "1": 16
+          }
+        }
+      ]
+    },
+    {
+      "target": 21,
+      "n": 5,
+      "unlooped_cores": 16,
+      "decorated_cores": 480,
+      "details": [
+        {
+          "id": "21:5:0",
+          "automorphism_order": 3,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              0,
+              2,
+              3,
+              1,
+              4
+            ],
+            [
+              0,
+              3,
+              1,
+              2,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1,
+            "(1, 1, 3)": 2
+          },
+          "loop_orbit_count": 16,
+          "orbit_sizes": {
+            "1": 8,
+            "3": 8
+          }
+        },
+        {
+          "id": "21:5:1",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 32,
+          "orbit_sizes": {
+            "1": 32
+          }
+        },
+        {
+          "id": "21:5:2",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 32,
+          "orbit_sizes": {
+            "1": 32
+          }
+        },
+        {
+          "id": "21:5:3",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 32,
+          "orbit_sizes": {
+            "1": 32
+          }
+        },
+        {
+          "id": "21:5:4",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 32,
+          "orbit_sizes": {
+            "1": 32
+          }
+        },
+        {
+          "id": "21:5:5",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 32,
+          "orbit_sizes": {
+            "1": 32
+          }
+        },
+        {
+          "id": "21:5:6",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 32,
+          "orbit_sizes": {
+            "1": 32
+          }
+        },
+        {
+          "id": "21:5:7",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 32,
+          "orbit_sizes": {
+            "1": 32
+          }
+        },
+        {
+          "id": "21:5:8",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 32,
+          "orbit_sizes": {
+            "1": 32
+          }
+        },
+        {
+          "id": "21:5:9",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 32,
+          "orbit_sizes": {
+            "1": 32
+          }
+        },
+        {
+          "id": "21:5:10",
+          "automorphism_order": 3,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              0,
+              3,
+              2,
+              4,
+              1
+            ],
+            [
+              0,
+              4,
+              2,
+              1,
+              3
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1,
+            "(1, 1, 3)": 2
+          },
+          "loop_orbit_count": 16,
+          "orbit_sizes": {
+            "1": 8,
+            "3": 8
+          }
+        },
+        {
+          "id": "21:5:11",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 32,
+          "orbit_sizes": {
+            "1": 32
+          }
+        },
+        {
+          "id": "21:5:12",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 32,
+          "orbit_sizes": {
+            "1": 32
+          }
+        },
+        {
+          "id": "21:5:13",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 32,
+          "orbit_sizes": {
+            "1": 32
+          }
+        },
+        {
+          "id": "21:5:14",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 32,
+          "orbit_sizes": {
+            "1": 32
+          }
+        },
+        {
+          "id": "21:5:15",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 32,
+          "orbit_sizes": {
+            "1": 32
+          }
+        }
+      ]
+    },
+    {
+      "target": 21,
+      "n": 6,
+      "unlooped_cores": 16,
+      "decorated_cores": 1024,
+      "details": [
+        {
+          "id": "21:6:16",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:17",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:18",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:19",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:20",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:21",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:22",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:23",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:24",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:25",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:26",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:27",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:28",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:29",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:30",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        },
+        {
+          "id": "21:6:31",
+          "automorphism_order": 1,
+          "automorphisms": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "automorphism_cycle_types": {
+            "(1, 1, 1, 1, 1, 1)": 1
+          },
+          "loop_orbit_count": 64,
+          "orbit_sizes": {
+            "1": 64
+          }
+        }
+      ]
+    }
+  ],
+  "loopless_family_checks": [
+    {
+      "target": 7,
+      "n": 1,
+      "isomorphism_classes": 0,
+      "labelled_count": 0,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 7,
+      "n": 2,
+      "isomorphism_classes": 0,
+      "labelled_count": 0,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 7,
+      "n": 3,
+      "isomorphism_classes": 0,
+      "labelled_count": 0,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 7,
+      "n": 4,
+      "isomorphism_classes": 3,
+      "labelled_count": 72,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 7,
+      "n": 5,
+      "isomorphism_classes": 6,
+      "labelled_count": 720,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 7,
+      "n": 6,
+      "isomorphism_classes": 9,
+      "labelled_count": 6480,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 7,
+      "n": 7,
+      "isomorphism_classes": 12,
+      "labelled_count": 60480,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 7,
+      "n": 8,
+      "isomorphism_classes": 15,
+      "labelled_count": 604800,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 21,
+      "n": 1,
+      "isomorphism_classes": 0,
+      "labelled_count": 0,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 21,
+      "n": 2,
+      "isomorphism_classes": 0,
+      "labelled_count": 0,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 21,
+      "n": 3,
+      "isomorphism_classes": 0,
+      "labelled_count": 0,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 21,
+      "n": 4,
+      "isomorphism_classes": 0,
+      "labelled_count": 0,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 21,
+      "n": 5,
+      "isomorphism_classes": 16,
+      "labelled_count": 1760,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 21,
+      "n": 6,
+      "isomorphism_classes": 48,
+      "labelled_count": 32640,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 21,
+      "n": 7,
+      "isomorphism_classes": 92,
+      "labelled_count": 423360,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    },
+    {
+      "target": 21,
+      "n": 8,
+      "isomorphism_classes": 148,
+      "labelled_count": 5268480,
+      "every_matrix_hp_verified": true,
+      "distinct_ordered_scc_signatures": true
+    }
+  ]
+}

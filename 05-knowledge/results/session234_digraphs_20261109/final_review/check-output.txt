@@ -1,0 +1,16 @@
+37 cores: direct permutations, strongness, unique types pass; loopless validator through n8 passes
+decorated 7 1 0 0
+decorated 7 2 0 0
+decorated 7 3 0 0
+decorated 7 4 48 1152
+decorated 7 5 192 23040
+decorated 7 6 576 414720
+decorated 7 7 1536 7741440
+decorated 21 1 0 0
+decorated 21 2 0 0
+decorated 21 3 0 0
+decorated 21 4 0 0
+decorated 21 5 480 56320
+decorated 21 6 2944 2088960
+decorated 21 7 11008 54190080
+All local markdown file targets pass (anchor spelling manually reviewed)

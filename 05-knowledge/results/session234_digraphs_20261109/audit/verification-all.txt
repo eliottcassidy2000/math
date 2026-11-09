@@ -1,0 +1,6 @@
+PASS unrestricted n=1: full graph and path-incidence totals; H7=0, H21=0
+PASS unrestricted n=2: full graph and path-incidence totals; H7=0, H21=0
+PASS unrestricted n=3: full graph and path-incidence totals; H7=0, H21=0
+PASS unrestricted n=4: full graph and path-incidence totals; H7=120, H21=0
+PASS unrestricted n=5: full graph and path-incidence totals; H7=49440, H21=7760
+PASS every scanner unrestricted target stratum (order,count,absent pairs,reciprocal pairs,strongness,frequency)

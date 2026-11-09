@@ -1,0 +1,6 @@
+n,enumerated_graphs,target_graphs,direct_target_checks,support_hypergraph_checks
+1,1,0,0,0
+2,4,0,0,0
+3,64,0,0,0
+4,4096,120,120,120
+5,1048576,57200,57200,0

@@ -1,0 +1,1 @@
+base=3 n=2 graphs=3 total_path_incidences=4 H7=0 H21=0
