@@ -1,0 +1,13 @@
+seed 5 order 4 d 13 offset 5 -> PH(3,2): order 7 d 69 odd True twins kept 1
+   step 0 order 9 d 261 offset 5 twins kept 1
+   step 1 order 12 d 2053 offset 5 twins kept 1
+seed 37a order 7 d 101 offset 37 -> PH(3,2): order 10 d 549 odd True twins kept 1
+   step 0 order 12 d 2085 offset 37 twins kept 1
+   step 1 order 15 d 16421 offset 37 twins kept 1
+seed 37b order 8 d 165 offset 37 -> PH(3,2): order 11 d 1061 odd True twins kept 1
+   step 0 order 13 d 4133 offset 37 twins kept 1
+   step 1 order 16 d 32805 offset 37 twins kept 1
+seed 1 order 6 d 33 offset 1 -> PH(3,2): order 9 d 257 odd True twins kept 1
+   step 0 order 11 d 1025 offset 1 twins kept 1
+   step 1 order 14 d 8193 offset 1 twins kept 1
+seeds and chains OK

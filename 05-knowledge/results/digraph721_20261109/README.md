@@ -4,8 +4,8 @@ Session mac-mini-2026-11-09-digraph721 (2026-11-09).
 
 **Canon.**
 - THM-5055: a second, independent proof of THM-5040, the sharp even-graph Chan-Pak theorem (HYP-9575 (B)).
-- HYP-9625: the odd-graph analogue, with exceptions {1, 5, 37}, reduced to primes.
-- THM-5056 was released.
+- THM-5056: the odd-graph Chan-Pak theorem, exceptions exactly {1, 5, 37}, each value on ceil(log2(k + 1)) vertices.
+- HYP-9625: the odd-graph conjecture with its reduction to primes; PROVED by THM-5056 the same day.
 
 [PROOF.md](PROOF.md). Code: `04-computation/experiments/digraph721_20261109/`.
 
@@ -56,12 +56,15 @@ between H(D) and H of the two associated (n+1)-tournaments. It took the even-gra
    prime, and none of their connected even realisers has a pendant). Through R this blocks the offset -81 at every
    even order. So the four-move closure is exact to n = 26 but misses 2^(n-1) - 81 for even n >= 84. PH(3, 2) changes
    the parity of the order and removes the block.
-6. **Odd graphs (HYP-9625).** Odd graphs miss exactly 1, 5 and 37 below 512 (THM-4996).
-   - Unions make O closed under multiplication by any odd number.
-   - K_2 v G gives every odd number with leading bits 11.
-   - Cones over odd graphs are odd.
-   - Hence the conjecture "O = odd numbers minus {1, 5, 37}" is equivalent to "every prime p >= 512 is d of an odd
-     graph". The first open cases are 2^m + {1, 5, 37}, such as 65537 and 1061.
+6. **Odd graphs (THM-5056; HYP-9625 PROVED).** The d-values of odd graphs are exactly the odd numbers other than 1, 5
+   and 37, each attained on ceil(log2(k + 1)) vertices, so oddness costs no vertices.
+   - K_2 v G writes every leading 11.
+   - Cones over odd graphs write 10.
+   - Offsets 2^(L-1) + {1, 5, 37} come from the THM-5055 moves on graphs carrying a persistent pair of adjacent
+     twins, which keeps every move odd. The four seeds are K_4 - e, K_2 u C_4, K_2 v (P_3 u E_2) and K_2 u T_55.
+   - The base below 512 is the census.
+   - Example: 1061 = 2^10 + 37, which is prime and needs a prime graph, is the hub move PH(K_2 u T_55, w, 2) on 11
+     vertices.
 
 ## Verification
 
@@ -73,6 +76,9 @@ between H(D) and H of the two associated (n+1)-tournaments. It took the even-gra
   (via a generating set of Aut(G)) and for flags, with 0 failures.
 - **Case split.** The case split of the seed lemma was checked against the computed tables for 13 <= L(j) <= 15.
 - **Agreement with THM-5040.** THM-5040's independent closure gives the same E(n) to n = 25.
+- **Odd graphs (THM-5056).** Explicit realisers following the proof were checked by brute force for d and for oddness
+  (via Aut(G)): every odd k < 8192 (4,093 graphs), 300 random k < 2^20, and 57 offset values up to 20 vertices. All
+  pass.
 
 ## Pre-registration (PREREGISTRATION.md)
 
@@ -88,6 +94,6 @@ between H(D) and H of the two associated (n+1)-tournaments. It took the even-gra
 - Brouwer-Csorba-Schrijver (d odd); Alikhani-Peng (join formula); Alikhani, Graphs Combin. 29 (2013) (completeness
   over all graphs).
 - Chan-Pak Conjecture 6.2 (the tournament analogue, {7, 21}, still open).
-- THM-4996 (census, parity calculus).
+- THM-4996 (census, parity calculus, the exceptional sets below 512).
 - THM-5040 (opus-2026-11-09-S89: the sharp statement, the exclusions, and a parallel proof).
 - Session234 and kind-pasteur S18 (digraph lane).

@@ -7,3 +7,6 @@ __pycache__/
 # large regenerable outputs (hashes in sha256.txt); regenerate with the commands in PROOF.md section 6
 dom_K511.out
 witnesses.txt
+oddw_small.txt
+oddw_large.txt
+oddw_special.txt

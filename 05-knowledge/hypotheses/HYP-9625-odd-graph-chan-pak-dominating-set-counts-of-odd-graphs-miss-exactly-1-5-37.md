@@ -2,11 +2,13 @@
 id: HYP-9625
 title: "Odd-graph Chan-Pak: the numbers of dominating sets of odd graphs (some automorphism reverses an odd number of edges) are exactly the odd numbers other than 1, 5 and 37. Equivalent to: every prime p >= 512 is d of an odd graph. The companion of THM-5055 (even graphs: exactly the odd numbers other than 3, 7, 13)"
 status: >
-  OPEN. EVIDENCE: exhaustive below 512 (THM-4996). PROVED: the reduction to primes, and the inclusion of every odd
-  number whose binary expansion starts with 11. The proof route is the THM-5055 machinery.
+  PROVED by THM-5056 (same session, mac-mini-2026-11-09-digraph721), in sharp form: every odd k other than 1, 5, 37
+  is d of an odd graph on exactly ceil(log2(k + 1)) vertices. The route described below (THM-5055 offset moves with
+  a persistent pair of adjacent twins) is the one that worked. The text is kept as written when the question was
+  open; its list of open cases is superseded.
 session: mac-mini-2026-11-09-digraph721
 date: 2026-11-09
-related: [THM-5055, THM-4996, HYP-9575]
+related: [THM-5056, THM-5055, THM-4996, HYP-9575]
 note: 05-knowledge/results/digraph721_20261109/README.md
 ---
 
@@ -42,8 +44,9 @@ order.
        d = 115, so the padded graph has d = 345. Cone over it: 2^10 + 345 = 1369.
 5. **(What remains)** By items 2 and 3, a prime p fails to be in O through these routes only if every stage of the
    cone recursion p -> p - 2^(L(p) - 1) has a leading 10 and the chain avoids O. In particular this happens if the
-   chain passes through 1, 5 or 37. The first open cases are of the forms 2^m + 1 (Fermat primes, such as 65537),
-   2^m + 5 and 2^m + 37 (such as 1061 = 2^10 + 37, which is prime).
+   chain passes through 1, 5 or 37. When the question was open, its first open cases were of the forms 2^m + 1
+   (Fermat primes, such as 65537), 2^m + 5 and 2^m + 37 (such as 1061 = 2^10 + 37, which is prime). THM-5056
+   realises all of them. For example, 1061 is PH(K_2 u T_55, w, 2) on 11 vertices.
 
 ## Route
 

@@ -1,6 +1,7 @@
 /* wcheck.c - independent brute-force check of explicit witness graphs (THM-5055 base data).
    Input lines: "tag set n k | u-v u-v ...".  For each graph: d(G) by subset enumeration must equal k;
    von Bromssen parity via full stabiliser-chain transversals (generators of Aut(G)) must be EVEN;
+   (set "O": the graph must instead be ODD, THM-5056);
    the flags required by the set must hold:
      W: no universal vertex; P: a pendant vertex; S: a pendant whose neighbour is non-universal;
      S2: >= 2 such pendants; S3: a vertex of degree 2; G: S2 and S3. */
@@ -83,7 +84,8 @@ int main(void){
     else if(!strcmp(set,"S2")) fl=pnu>=2;
     else if(!strcmp(set,"S3")) fl=r3;
     else if(!strcmp(set,"G")) fl=(pnu>=2)&&r3;
-    if(d==k && !odd && fl) ok++; else { bad++; if(bad<20) printf("BAD %s %s n=%d k=%llu d=%llu odd=%d flags=%d\n",tag,set,n,k,(unsigned long long)d,odd,fl); }
+    int parity_ok = (!strcmp(set,"O")) ? odd : !odd;   /* set O: the graph must be ODD */
+    if(d==k && parity_ok && fl) ok++; else { bad++; if(bad<20) printf("BAD %s %s n=%d k=%llu d=%llu odd=%d flags=%d\n",tag,set,n,k,(unsigned long long)d,odd,fl); }
   }
   printf("witnesses ok=%ld bad=%ld\n",ok,bad);
   return bad?1:0;

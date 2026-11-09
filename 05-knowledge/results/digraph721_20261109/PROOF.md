@@ -1,6 +1,7 @@
 # THM-5055: proof
 
-Session mac-mini-2026-11-09-digraph721. Canon: THM-5055, HYP-9625.
+Session mac-mini-2026-11-09-digraph721. Canon: THM-5055 (Part I, sections 0-7), THM-5056 (Part II), HYP-9625 (proved
+by THM-5056).
 
 ## 0. Statement
 
@@ -309,3 +310,80 @@ Negative controls reject K_2, P_4 and a wrong value. SHA-256 hashes are in `sha2
    - On even graphs the exceptional set {3, 7, 13} is now a theorem with sharp orders.
    - On tournaments the conjectured set {7, 21} (Chan-Pak Conjecture 6.2) remains open.
    - The shared 7 is an analogy only: no bijection carries d to H.
+
+# Part II. Odd graphs (THM-5056; HYP-9625 PROVED)
+
+**Statement.** Let O be the set of d-values of odd graphs. For every odd k other than 1, 5 and 37 there is an odd
+graph on exactly L(k) vertices with d = k. Since 1, 5, 37 are not in O (THM-4996), O is exactly the odd numbers other
+than 1, 5, 37, and {d(G) : G odd on n vertices} = {odd k <= 2^n - 1} minus {1, 5, 37}.
+
+**Lemma O1 (oddness).**
+- (a) G u H is odd if G is odd (B2.2).
+- (b) K_1 v H is odd if H is odd: by B2.3 if H has at least 2 vertices and no universal vertex, and otherwise because
+  the apex and a universal vertex of H are adjacent twins (K_1 v K_1 = K_2).
+- (c) K_2 v G is odd for every G, since the two K_2 vertices are adjacent twins.
+- (d) Suppose x and y are adjacent twins of G and u is not in {x, y}. Then x and y are adjacent twins of
+  PH(G, u, l), since both gain the hub. So PH(G, u, l) is odd.
+- (e) Padding keeps adjacent twins.
+
+**Lemma O2 (odd offset moves).** Call G **odd-good** if it has:
+- adjacent twins x, y;
+- two pendants p1, p2 outside {x, y} whose neighbours are not universal;
+- a vertex w outside {x, y} with |N[w]| = 3.
+
+Then R(G) = PH(G, p1, 1) and PH(G, w, 2) are odd-good, with d increased by 3 * 2^(n-1) and 7 * 2^(n-1) respectively.
+
+*Proof.* The values come from Lemma 4.1, and the twins from O1(d). The pendant and degree-2 bookkeeping is word for
+word that of Corollary 5, which never uses evenness:
+- R(G) has the pendants p1 and the new leaf, and the degree-2 vertex p2;
+- PH(G, w, 2) has the two new leaves, and w.
+All of these lie outside {x, y}. QED
+
+**Seeds** (each a graph with adjacent twins {x, y} and a vertex w outside {x, y} with |N[w]| = 3). PH(G, w, 2) makes
+each one odd-good: its two leaves are pendants whose neighbour, the hub, misses w; w keeps |N[w]| = 3; and x, y stay
+twins.
+
+| seed | n | d | offset c = d - 2^(n-1) | after PH(w, 2) |
+|---|---|---|---|---|
+| K_4 - e (x, y the degree-3 vertices) | 4 | 13 | 5 | 69 = 2^6 + 5, n = 7 |
+| K_2 u C_4 (x, y the K_2) | 6 | 33 | 1 | 257 = 2^8 + 1, n = 9 |
+| K_2 v (P_3 u E_2) (x, y the K_2; w in E_2) | 7 | 101 | 37 | 549 = 2^9 + 37, n = 10 |
+| K_2 u T_55 (T_55 the threshold graph of 55 = 110111_2) | 8 | 165 | 37 | 1061 = 2^10 + 37, n = 11 |
+
+- T_55 has a degree-2 vertex: the one added as an isolated vertex at bit 3, later joined by the cone vertices of bits
+  4 and 5.
+- By Lemma O2 and +2/+3 shifts:
+  - Gamma_odd(5) contains {7} u [9, infinity);
+  - Gamma_odd(1) contains {9} u [11, infinity);
+  - Gamma_odd(37) contains [10, infinity), using both 37-seeds.
+  Here Gamma_odd(c) is the set of orders n at which 2^(n-1) + c has an odd-good realiser.
+
+**Base (FINITE-EXACT).** From the exhaustive census of connected graphs with d <= 511 (all orders), every odd k < 512
+other than 1, 5, 37 has an odd realiser on exactly L(k) vertices (`oddbase.py`). The realiser is an odd connected graph,
+possibly united with a threshold graph.
+
+**Induction (k >= 512, L = L(k) >= 10).**
+1. **k >= 3 * 2^(L-2).** K_2 v T, with T a threshold realiser of k - 3 * 2^(L-2) (odd, at least 1, below 2^(L-2))
+   padded to L - 2 vertices. It is odd by O1(c), has value 3 * 2^(L-2) + d(T) = k, and has order L.
+2. **k = 2^(L-1) + x with x < 2^(L-2) and x not in {1, 5, 37}.** By induction x has an odd realiser on L(x) <= L - 2
+   vertices. Pad it to L - 1 vertices and take the cone, which is odd by O1(b). The order is L.
+3. **x in {1, 5, 37}.** For L >= 10, L lies in Gamma_odd(x), except for (x, L) = (1, 10). That case is
+   k = 513 = 3 * 171 = d(K_2 u T_171), on 2 + 8 = 10 vertices.
+
+QED
+
+**Checks.** No third-party code was used.
+- `oddproof.py` checks the four seeds and two further moves of each by brute force.
+- `oddbuild.py` builds realisers exactly as above, and `wcheck` (set O) checks d by enumeration and oddness through a
+  generating set of Aut(G):
+  - every odd k < 8192 (4,093 graphs);
+  - 300 random k < 2^20;
+  - `oddspecial.py`: the 57 values 2^(L-1) + c and 2^(L-1) + 2^(L-3) + c, for c in {1, 5, 37} and 10 <= L <= 20.
+  All pass.
+
+**Reading.** The split of the odd numbers by automorphism parity is asymmetric:
+- even graphs miss 3, 7, 13 and may need one extra vertex (the top bands and X(n));
+- odd graphs miss 1, 5, 37 and never need extra vertices.
+
+The reason is that a single adjacent-twin pair makes a graph odd, and it survives every move used here. Evenness, by
+contrast, must be protected at every step, by the unique-maximum-degree hub and the co-component rules.
