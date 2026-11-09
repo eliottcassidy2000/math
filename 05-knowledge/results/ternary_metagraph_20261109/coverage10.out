@@ -1,0 +1,18 @@
+order-10 bitmaps: 12 slices, 10070 distinct strong H_3 values, max 31549
+pieces: 1995 values from orders <= 9 and alpha_1 <= 80, 20127 intercyclic, 10070 from order 10; 25103 distinct; values outside M3: []
+order-10 values not given by the S86 pieces: 4063
+uncovered alpha-sums m <= 40000: 5407; m* = 9679 (value 29038)
+  first uncovered alpha-sums beyond 10: [9679, 9699, 9730, 9750, 9751, 9755, 9762, 9766, 9768, 9778, 9784, 9796, 9811, 9814, 9820, 9824, 9828, 9836, 9840, 9850, 9864, 10240, 10252, 10255, 10256]
+Q1 (m* >= 5000): CONFIRMED
+Q2 (m* <= 20000): CONFIRMED
+  witness m = 11: 34 = product of piece values [34]
+  witness m = 1800: 5401 = product of piece values [5401]
+  witness m = 5000: 15001 = product of piece values [2143, 7]
+  witness m = 9678: 29035 = product of piece values [29035]
+Q3: irreducibles of M3 below 29038: 4031; not a piece value: 0 -> CONFIRMED
+irreducibles of M3 below 120001: 14904; not attained by any piece: 5397
+  lane 10P: 251 missing; first [31210, 31810, 31870, 32290, 32530, 33190, 33310, 33430, 33730, 34330, 34690, 35290]
+  lane 31P: 105 missing; first [30721, 31279, 31651, 32209, 32581, 32953, 33139, 33883, 34627, 34999, 35743, 37231]
+  lane 31Q: 111 missing; first [31093, 34441, 36115, 36394, 37045, 37789, 38254, 38533, 38905, 39835, 40114, 40486]
+  lane P: 2019 missing; first [29191, 29251, 29287, 29389, 29443, 29473, 30757, 30781, 30817, 31033, 31039, 31069]
+  lane Q: 2911 missing; first [29038, 29098, 29254, 29266, 29299, 29305, 29335, 29353, 29434, 29461, 29485, 29509]

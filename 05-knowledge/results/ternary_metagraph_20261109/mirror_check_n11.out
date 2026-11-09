@@ -1,0 +1,29 @@
+# mirror_check.c n = 11, 12 slices (run with SAMPLES = 0; the decomposition was sampled in the earlier run mc11_*: see the second block)
+n=11 slice 0/12: y checked 87382 (of 1048576); (P2) failures 0; (P3) failures 7814; decomposition sampled 0, mismatches 0; joint tilings (f,f') 00 669344 01 728768 10 728768 11 669344
+n=11 slice 1/12: y checked 87382 (of 1048576); (P2) failures 0; (P3) failures 7920; decomposition sampled 0, mismatches 0; joint tilings (f,f') 00 668400 01 729712 10 729712 11 668400
+n=11 slice 10/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7808; decomposition sampled 0, mismatches 0; joint tilings (f,f') 00 669384 01 728712 10 728712 11 669384
+n=11 slice 11/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7880; decomposition sampled 0, mismatches 0; joint tilings (f,f') 00 668872 01 729224 10 729224 11 668872
+n=11 slice 2/12: y checked 87382 (of 1048576); (P2) failures 0; (P3) failures 7920; decomposition sampled 0, mismatches 0; joint tilings (f,f') 00 668400 01 729712 10 729712 11 668400
+n=11 slice 3/12: y checked 87382 (of 1048576); (P2) failures 0; (P3) failures 7814; decomposition sampled 0, mismatches 0; joint tilings (f,f') 00 669344 01 728768 10 728768 11 669344
+n=11 slice 4/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7880; decomposition sampled 0, mismatches 0; joint tilings (f,f') 00 668872 01 729224 10 729224 11 668872
+n=11 slice 5/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7808; decomposition sampled 0, mismatches 0; joint tilings (f,f') 00 669384 01 728712 10 728712 11 669384
+n=11 slice 6/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7824; decomposition sampled 0, mismatches 0; joint tilings (f,f') 00 669256 01 728840 10 728840 11 669256
+n=11 slice 7/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7858; decomposition sampled 0, mismatches 0; joint tilings (f,f') 00 668824 01 729272 10 729272 11 668824
+n=11 slice 8/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7858; decomposition sampled 0, mismatches 0; joint tilings (f,f') 00 668824 01 729272 10 729272 11 668824
+n=11 slice 9/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7824; decomposition sampled 0, mismatches 0; joint tilings (f,f') 00 669256 01 728840 10 728840 11 669256
+# earlier run with SAMPLES > 0 (decomposition against Hamiltonian-path DP)
+n=11 slice 0/12: y checked 87382 (of 1048576); (P2) failures 0; (P3) failures 7814; decomposition sampled 1667, mismatches 0
+n=11 slice 1/12: y checked 87382 (of 1048576); (P2) failures 0; (P3) failures 7920; decomposition sampled 1667, mismatches 0
+n=11 slice 10/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7808; decomposition sampled 1667, mismatches 0
+n=11 slice 11/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7880; decomposition sampled 1667, mismatches 0
+n=11 slice 2/12: y checked 87382 (of 1048576); (P2) failures 0; (P3) failures 7920; decomposition sampled 1667, mismatches 0
+n=11 slice 3/12: y checked 87382 (of 1048576); (P2) failures 0; (P3) failures 7814; decomposition sampled 1667, mismatches 0
+n=11 slice 4/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7880; decomposition sampled 1667, mismatches 0
+n=11 slice 5/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7808; decomposition sampled 1667, mismatches 0
+n=11 slice 6/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7824; decomposition sampled 1667, mismatches 0
+n=11 slice 7/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7858; decomposition sampled 1667, mismatches 0
+n=11 slice 8/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7858; decomposition sampled 1667, mismatches 0
+n=11 slice 9/12: y checked 87381 (of 1048576); (P2) failures 0; (P3) failures 7824; decomposition sampled 1667, mismatches 0
+TOTAL y checked 1048576; (P2) failures 0; (P3) failures 94208; joint over (y, x) of (f(t), f(t+1)): 00 8028160 01 8749056 10 8749056 11 8028160
+blue lines by (H mod 4, H mod 4): (1,1) 4014080, (1,3) 8749056, (3,3) 4014080; total 16777216
+TOTAL decomposition sampled 20004, mismatches 0

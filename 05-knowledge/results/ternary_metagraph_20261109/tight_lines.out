@@ -1,0 +1,144 @@
+# tight_lines.c: tight lines (nu(t) + nu(t+1) = floor(n/3)) by unordered nu-pair and colour, and the histogram of triple words x_a = [tile (a, a+2) reversed] of the representative (x_0 = 1)
+== n = 3
+pair 0 1 blue 1
+word 1 blue 1
+== n = 4
+pair 0 1 blue 1
+word 11 blue 1
+== n = 5
+pair 0 1 blue 1
+word 111 blue 1
+== n = 6
+pair 0 2 blue 1
+pair 1 1 black 56
+word 1000 black 17
+word 1100 black 14
+word 1010 black 8
+word 1110 black 17
+word 1111 blue 1
+== n = 7
+pair 0 2 blue 1
+pair 1 1 black 30
+word 11000 black 15
+word 11100 black 15
+word 11111 blue 1
+== n = 8
+pair 0 2 blue 1
+pair 1 1 black 12
+word 111000 black 12
+word 111111 blue 1
+== n = 9
+pair 0 3 blue 1
+pair 1 2 black 3634
+pair 1 2 blue 38
+word 1000000 black 111
+word 1100000 black 197
+word 1010000 black 48
+word 1110000 black 200
+word 1111000 black 200
+word 1111100 black 197
+word 1111010 black 48
+word 1111110 black 111
+word 1110001 black 389
+word 1110101 black 53
+word 1100011 black 440
+word 1100011 blue 23
+word 1110011 black 491
+word 1000111 black 389
+word 1100111 black 491
+word 1010111 black 53
+word 1110111 black 216
+word 1110111 blue 15
+word 1111111 blue 1
+== n = 10
+pair 0 3 blue 1
+pair 1 2 black 1792
+pair 1 2 blue 9
+word 11000000 black 130
+word 11100000 black 123
+word 11111000 black 123
+word 11111100 black 130
+word 11100011 black 419
+word 11000111 black 419
+word 11100111 black 448
+word 11100111 blue 9
+word 11111111 blue 1
+== n = 11
+pair 0 3 blue 1
+pair 1 2 black 522
+pair 1 2 blue 18
+word 111000000 black 68
+word 111111000 black 68
+word 111000111 black 386
+word 111000111 blue 18
+word 111111111 blue 1
+== n = 12 (12 slices, split at vertex 8; per-slice logs, then aggregated pairs and words)
+n=12 slice 0/12: tight lines 43170 (blue 37), search nodes 303516
+n=12 slice 1/12: tight lines 23329 (blue 7), search nodes 273304
+n=12 slice 10/12: tight lines 4379 (blue 13), search nodes 172209
+n=12 slice 11/12: tight lines 106098 (blue 37), search nodes 539806
+n=12 slice 2/12: tight lines 4787 (blue 14), search nodes 173046
+n=12 slice 3/12: tight lines 116943 (blue 40), search nodes 560101
+n=12 slice 4/12: tight lines 51318 (blue 41), search nodes 304457
+n=12 slice 5/12: tight lines 21495 (blue 6), search nodes 270422
+n=12 slice 6/12: tight lines 4512 (blue 14), search nodes 172339
+n=12 slice 7/12: tight lines 103309 (blue 34), search nodes 535994
+n=12 slice 8/12: tight lines 58839 (blue 43), search nodes 311542
+n=12 slice 9/12: tight lines 25430 (blue 11), search nodes 274063
+pair 0 4 blue 1
+pair 1 3 black 96254
+pair 2 2 black 467058
+pair 2 2 blue 296
+word 1000000000 black 768
+word 1000000111 black 8114
+word 1000111000 black 27698
+word 1000111111 black 2928
+word 1010000000 black 215
+word 1010000111 black 1668
+word 1010111000 black 2254
+word 1010111111 black 161
+word 1100000000 black 1777
+word 1100000011 black 18372
+word 1100000011 blue 156
+word 1100000111 black 24403
+word 1100011000 black 42516
+word 1100011100 black 51396
+word 1100011111 black 7946
+word 1100111000 black 39145
+word 1100111111 black 6377
+word 1110000000 black 1692
+word 1110000001 black 8114
+word 1110000011 black 24403
+word 1110000101 black 1668
+word 1110000111 black 22452
+word 1110000111 blue 140
+word 1110001000 black 14829
+word 1110001010 black 2254
+word 1110001100 black 39145
+word 1110001110 black 27698
+word 1110001111 black 12155
+word 1110011000 black 32334
+word 1110011100 black 42516
+word 1110011111 black 10852
+word 1110101000 black 1656
+word 1110101111 black 572
+word 1110111000 black 14829
+word 1110111111 black 2684
+word 1111000000 black 5293
+word 1111000111 black 12155
+word 1111010000 black 692
+word 1111010111 black 572
+word 1111100000 black 8316
+word 1111100011 black 7946
+word 1111100111 black 10852
+word 1111110000 black 5293
+word 1111110001 black 2928
+word 1111110011 black 6377
+word 1111110101 black 161
+word 1111110111 black 2684
+word 1111111000 black 1692
+word 1111111010 black 215
+word 1111111100 black 1777
+word 1111111110 black 768
+word 1111111111 blue 1
+== n = 12 consistency check: an unsliced run (tight_lines 12, 31 min) gave the same totals (563,609 tight lines, 297 blue; pairs (0,4) 1 blue, (1,3) 96,254 black, (2,2) 467,058 black + 296 blue) and an identical word histogram

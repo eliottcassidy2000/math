@@ -3,8 +3,11 @@ id: HYP-9530
 title: "Packing counts in every base: (A) ternary Chan-Pak - the base-3 packing counts I(Omega(T), 3) take every value congruent to 1 mod 3 except 10 and 31, the same alpha-sums 3 and 10 that give 7 and 21 in base 2; (B) every base has finitely many gaps; (C) the carry-free layer has infinitely many singletons, while binary carries leave only 3, 5, 11, 13"
 status: >
   OPEN.
-  (A): FINITE-EXACT and complete for alpha-sums <= 1799 (values <= 5398): the gaps there are exactly 10 and 31
-  (THM-4940 (3), (4), (9)). It is OPEN beyond. Pre-registered P1 (exact tables to alpha-sum 80) is CONFIRMED; the
+  (A): FINITE-EXACT and complete for alpha-sums <= 9678 (values <= 29,035): the gaps there are exactly 10 and 31.
+  THM-4940 (3), (4), (9) gave this to alpha-sum 1799 (values <= 5398). THM-4950 (opus-2026-11-09-S87) extends it with
+  the complete strong order-10 census; its pre-registered Q1-Q3 are CONFIRMED. THM-4950 also reduces (A) to the
+  strong realisation of the irreducibles of M3 = {v = 1 (mod 3)} minus {10, 31}: the lanes P, Q, 10P, 31P, 31Q and
+  five sporadic values. It is OPEN beyond. Pre-registered P1 (exact tables to alpha-sum 80) is CONFIRMED; the
   extension to 1799 is constructive and was not pre-registered.
   (B): consistent with the exact tables to alpha-sum 80 for b <= 90.
   (C): FINITE-EXACT below 8192: 64 carry-free singletons, all self-converse, and every one with a >= 8 has a strong
@@ -14,6 +17,7 @@ session: opus-2026-11-08-S86
 source: 05-knowledge/results/packing_bases_repunits_20261108/README.md
 related:
   - THM-4940
+  - THM-4950
   - HYP-9477
   - THM-1370 (h-spectrum-omits-7-21-all-n)
   - THM-4884
@@ -37,10 +41,19 @@ odd-cycle packings of some tournament.
 - Below 242 these are the only gaps: THM-4940 (6), pre-registered P1, CONFIRMED.
 - Below 5399 they are still the only gaps: THM-4940 (9), constructive, with every other value attained by a tournament
   of order <= 9.
+- Below 29,036 they are still the only gaps (THM-4950 (3), opus-2026-11-09-S87). This is constructive, from the
+  complete strong order-10 census (10,070 values, independently re-checked) and the S86 pieces.
+- **Reduction (THM-4950 (1), (2)).** (A) is equivalent to: every irreducible of the monoid
+  M3 = {v = 1 (mod 3)} minus {10, 31} is H_3 of a strong tournament. The irreducibles are:
+  - the primes = 1 (mod 3) other than 31;
+  - the products of two primes = 2 (mod 3) other than 10;
+  - 10p, 31p and 31pq;
+  - 40, 250, 310, 9610, 29791.
+  The first irreducible not reached by the current pieces is 29,038 = 2 * 14,519.
 
 **Comparison with base 2.**
 - Base 2 and base 3 have the same known gap alpha-sums {3, 10}: base 2 up to alpha-sum 2^34 (all-odd coverage),
-  base 3 up to alpha-sum 1799 (THM-4940 (9)). Chan-Pak and (A) assert this at every alpha-sum.
+  base 3 up to alpha-sum 9678 (THM-4950; 1799 in THM-4940 (9)). Chan-Pak and (A) assert this at every alpha-sum.
 - The ternary pair 10, 31 was first observed at n <= 6 by `04-computation/ip_hierarchy.py` (opus-S71e, March 2026),
   which asked whether they are "gaps analogous to H = 7 and H = 21". (A) is that question with an all-order proof of
   both gaps and exact data to alpha-sum 80.
@@ -53,7 +66,7 @@ odd-cycle packings of some tournament.
 - MISTAKE-559 applies: no mechanism is claimed.
 
 **Falsifier.** A value 1 + 3m (m not 3 or 10) that is not a 3-coloured packing count of any tournament. Every
-m <= 1799 is already settled.
+m <= 9678 is already settled (THM-4950).
 
 ## (B) Finite gap sets
 

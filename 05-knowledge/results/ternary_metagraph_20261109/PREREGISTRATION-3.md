@@ -44,3 +44,22 @@ read. The n = 13 and n = 14 realizability searches have not been written yet.
   colouring, with the triple word fixed.
 
 Outcome: to be appended below without editing the predictions.
+
+## Outcome (appended after the runs; the predictions above are unedited)
+
+The n = 12 count used `tight_lines.c` in 12 slices split at vertex 8. The first-hit searches at n = 13, 14 used
+`tight_lines.c` in first-hit mode. The data are in tight_lines.out and t5_first_hits.out.
+
+- **T1 CONFIRMED.** The tight lines at n = 12 have exactly 50 distinct triple words, and they are the 50 tight
+  colourings of [0, 9].
+- **T2 CONFIRMED.** The nu-pairs at n = 12 are (0, 4): 1 (blue, transitive line), (1, 3): 96,254 (all black) and
+  (2, 2): 467,058 black + 296 blue.
+- **T3 CONFIRMED.** The count is 563,609 tight lines, inside [10^5, 10^6]. The point estimate 2.3 * 10^5 was low by a
+  factor 2.4: the n = 0 (mod 3) class grows by 153x from n = 9 to n = 12.
+- **T4 CONFIRMED.** There are 297 blue tight lines: the transitive line and 296 of pair (2, 2). There are no blue
+  (1, 3) tight lines at n = 12.
+- **T5 CONFIRMED.** Every tight colouring is realised: 20 of 20 at n = 13 and 8 of 8 at n = 14. At n = 14 the
+  palindromic word 111000000111 was first hit by a blue line.
+
+During the runs, the n = 3k + 2 half of the word law was proved for every k (THM-4951 (3); multi-staircase). The
+n = 14 part of T5 is therefore also a theorem. The n = 12 and n = 13 parts remain finite checks.
