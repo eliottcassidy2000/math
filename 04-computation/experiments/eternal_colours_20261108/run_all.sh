@@ -21,6 +21,7 @@ awk '$2<=2001' "$WORK/v13_m4.out" > sc_full1011_le2001.out
 cc -O3 -DCHECK -DM=5 -o "$WORK/sc13" sc_odd13.c
 "$WORK/sc13" 1124 0 524288 > "$WORK/s13_0.out" & "$WORK/sc13" 1124 524288 1048576 > "$WORK/s13_1.out" & wait   # ~10 min
 cat "$WORK"/s13_[01].out | awk '{k=$1" "$2; s[k]=(s[k]||$3)} END {for (k in s) print k, s[k]}' | sort -k1,1 -k2,2n > sc_odd13_1124.out
+python3 validate_sc_odd13.py "$WORK" > sc_odd13_validation.out                                # full comparisons
 cc -O2 -o "$WORK/sc_witness" sc_witness.c; "$WORK/sc_witness" 3 13 4 2001 > sc_witness.out
 for f in sc_even10.out sc_odd11.out sc_full1011_le2001.out sc_odd13_1124.out sc_witness.out; do cp $f "$WORK/"; done
 [ -f sc_walk.out ] && cp sc_walk.out "$WORK/"
@@ -35,13 +36,15 @@ if [ "${OPTIONAL:-0}" = 1 ]; then
   cc -O3 -DM=5 -o "$WORK/sc_pair12" sc_even_pair.c; T=33554432; P=$((T/3))
   "$WORK/sc_pair12" 377 0 $P > "$WORK/p12_0.out" & "$WORK/sc_pair12" 377 $P $((2*P)) > "$WORK/p12_1.out" & "$WORK/sc_pair12" 377 $((2*P)) $T > "$WORK/p12_2.out" & wait
   cat "$WORK"/p12_*.out | awk '{s[$2]=(s[$2]||$3)} END {for (h in s) print "P", h, s[h]}' | sort -k2 -n > sc_even12_377.out
-  # random-walk witnesses at orders 12-15 (heuristic; only the witnesses count)
+  # random-walk witnesses at orders 9 (validation) and 12-15 (heuristic; only the witnesses count)
   cc -O3 -o "$WORK/sc_walk" sc_walk.c
-  { "$WORK/sc_walk" 13 625 720 600000 11; "$WORK/sc_walk" 13 625 900 800000 12; "$WORK/sc_walk" 13 625 1200 1000000 13;
-    "$WORK/sc_walk" 13 625 2001 1500000 14; "$WORK/sc_walk" 12 375 1300 1500000 21; "$WORK/sc_walk" 14 1125 1300 600000 22;
-    "$WORK/sc_walk" 15 1875 2001 500000 23; } > "$WORK/walk_all.out"
-  sort -k2,2n -k3,3n "$WORK/walk_all.out" | awk '!seen[$2]++' > sc_walk.out
-  python3 check_witness_rev.py . sc_walk.out > check_walk.out
+  : > sc_walk_runs.out
+  for a in "9 1 3357 200000 1" "13 625 720 600000 11" "13 625 900 800000 12" "13 625 1200 1000000 13" "13 625 2001 1500000 14" \
+           "12 375 1300 1500000 21" "14 1125 1300 600000 22" "15 1875 2001 500000 23"; do
+    echo "# run: $a" >> sc_walk_runs.out; "$WORK/sc_walk" $a >> sc_walk_runs.out; done
+  grep '^W ' sc_walk_runs.out | awk '$3 >= 12' | sort -k2,2n -k3,3n | awk '!seen[$2]++' > sc_walk.out
+  python3 check_witness_rev.py . sc_walk_runs.out > check_walk.out
+  python3 walk_summary.py "$WORK" > walk_summary.out
   cp sc_even12_377.out sc_walk.out "$WORK/"; python3 sc_holes.py "$WORK" > sc_holes.out   # with the optional data
 fi
 echo "all done"

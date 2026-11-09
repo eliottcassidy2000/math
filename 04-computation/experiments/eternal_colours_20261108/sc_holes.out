@@ -1,6 +1,7 @@
 CONSISTENCY of overlapping inventories (value sets and strong flags on the common complete range):
    order 10, sc_even10 vs sc_odd13 -DM=4 (H <= 2001): 356 / 356 values, identical: True
    order 11, sc_odd11_fast vs sc_odd13 -DM=4 (H < 625): 212 / 212 values, identical: True
+   order 12, sc_even_pair vs sc_odd13 (H <= 377): 66 / 66 values, identical: True
    order 11, audit K1 vs sc_full1011_le2001.out (H <= 2001): 844 / 844 values, identical: True
    order 12, audit K1 vs sc_odd13_1124.out (H <= 624): 117 / 117 values, identical: True
 

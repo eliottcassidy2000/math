@@ -1,0 +1,13 @@
+-DM=2, order 6: 9 values; census 9 self-converse values; identical with strong flags: True
+-DM=2, order 7: 54 values; census 54 self-converse values; identical with strong flags: True
+-DM=3, order 8: 104 values; census 104 self-converse values; identical with strong flags: True
+-DM=3, order 9: 1215 values; census 1215 self-converse values; identical with strong flags: True
+-DM=4, order 10: 3114 values; sc_even10.out 3114; identical with strong flags: True
+-DM=4, order 11: 41912 values; audit K1 complete order 11 41912; identical with strong flags: True; sha256[:16] 9fc0bfd2fd7a88f1 vs 9fc0bfd2fd7a88f1
+-DM=5, order 12 below 625: 117 values; audit K1 117; identical with strong flags: True
+# run logs (stderr 'done' lines of the runs; -DCHECK builds: direct-DP and anti-invariance checks)
+v13_m2: done [0,4) TMAX 4000: bases 4; order 5 kept 64; order 6 kept 64; order 7 found 512; checks 80, failures 0
+v13_m3: done [0,64) TMAX 4000: bases 64; order 7 kept 4096; order 8 kept 4096; order 9 found 65536; checks 9000, failures 0
+v13_m4: done [0,4096) TMAX 95095: bases 4096; order 9 kept 1048576; order 10 kept 1048576; order 11 found 33554432; checks 9000, failures 0
+s13_0: done [0,524288) TMAX 1124: bases 11436; order 11 kept 560464; order 12 kept 51184; order 13 found 84448; checks 9000, failures 0
+s13_1: done [524288,1048576) TMAX 1124: bases 31268; order 11 kept 2597448; order 12 kept 266544; order 13 found 661104; checks 9000, failures 0

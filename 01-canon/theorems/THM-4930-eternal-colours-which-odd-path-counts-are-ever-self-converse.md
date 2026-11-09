@@ -10,9 +10,10 @@ status: >
     aud_sc12.c (section 1.6) enumerates every self-converse 12-tournament with H < 625 (117 values, 377 not among
     them), and this session's independent sc_even_pair.c, run with H <= 377, finds exactly the audit's values up to
     377.
-  - statement 5 (added after audit K1; PRE-AUDIT, audit K2 pending): exact for every odd h < 1131, from complete
-    self-converse inventories of orders 12 and 13 with H <= 1124 (sc_odd13.c, validated against every complete
-    inventory of orders 6-11) and the complete order 11 (sc_odd13.c -DM=4, identical to audit K1's).
+  - statement 5 (added after audit K1; audit K2: PASS WITH CORRECTIONS, confirmed by an independent enumeration of
+    orders 12 and 13 below 1125): exact for every odd h < 1131, from complete self-converse inventories of orders 12
+    and 13 with H <= 1124 (sc_odd13.c, validated against every complete inventory of orders 6-11) and the complete
+    order 11 (sc_odd13.c -DM=4, identical to audit K1's).
   FINITE: witnesses for values above the exact range.
   KNOWN, credited:
   - the palindromic condensation (THM-4866(E); THM-4743 (1b));
@@ -40,9 +41,12 @@ status: >
   - statement 5 and the order-12 and order-13 self-converse inventories below 1125.
   Audit K1 (2026-11-08): PASS WITH CORRECTIONS, no mathematical error. Its credit and typing corrections are applied
   (process lesson: MISTAKE-738). Its supplementary order-12 enumeration settled 377.
+  Audit K2 (2026-11-08, statement 5 and the other post-K1 additions): PASS WITH CORRECTIONS, no mathematical error;
+  its own enumeration of orders 12 and 13 below 1125 reproduces sc_odd13_1124.out exactly. Corrections applied
+  (typing, credit, records; addendum to MISTAKE-738).
 session: mac-mini-2026-11-08-firstrealizers (owner directive 2026-11-08: first creators of odd values, one class or a converse pair, two kinds, the splitting pattern; prior work on 33)
 source: 05-knowledge/results/eternal_colours_self_converse_values_20261108.md
-depends_on: [THM-4866, THM-4743, THM-791, THM-1370, THM-4744, THM-4875, THM-4922]
+depends_on: [THM-4866, THM-4743, THM-791, THM-1370, THM-4744, THM-4745, THM-4875, THM-4922]
 verification:
   - 04-computation/experiments/eternal_colours_20261108/sc_holes.py (+ .out)
   - 04-computation/experiments/eternal_colours_20261108/sc_even10.c (+ sc_even10.out; -DN=6, 8 validation builds)
@@ -51,7 +55,7 @@ verification:
   - 04-computation/experiments/eternal_colours_20261108/sc_odd13.c (+ sc_odd13_1124.out, sc_full1011_le2001.out; -DM=2, 3, 4 validation builds; -DCHECK)
   - 04-computation/experiments/eternal_colours_20261108/sc_witness.c (+ .out), sc_walk.c (+ sc_walk.out)
   - 04-computation/experiments/eternal_colours_20261108/audit_K1/ (independent audit K1: complete orders 10, 11; order 12 below 625)
-audit: 05-knowledge/results/eternal_colours_audit_K1_20261108.md (PASS WITH CORRECTIONS)
+audit: 05-knowledge/results/eternal_colours_audit_K1_20261108.md (K1, PASS WITH CORRECTIONS); 05-knowledge/results/eternal_colours_audit_K2_20261108.md (K2, statement 5 and post-K1 additions, PASS WITH CORRECTIONS)
 ---
 
 # THM-4930 — eternal colours: which odd path counts are ever self-converse
@@ -63,7 +67,8 @@ audit: 05-knowledge/results/eternal_colours_audit_K1_20261108.md (PASS WITH CORR
 - `Σ` is the set of path counts. It contains every odd number up to `2^32` except 7 and 21 (THM-4875). `Σ_sc` is the
   set of path counts of self-converse tournaments, and `Σ_sc^str` that of strong self-converse tournaments.
 - **Busch's minimum** (THM-4744, CITED): a strong `m`-tournament has `H ≥ f(m)`, with `f(3q) = 3·5^(q−1)`,
-  `f(3q+1) = 5^q`, `f(3q+2) = 9·5^(q−1)`; so `f = 3, 5, 9, 15, 25, 45, 75, 125, 225, 375, 625` at `m = 3, …, 13`.
+  `f(3q+1) = 5^q`, `f(3q+2) = 9·5^(q−1)`; so `f = 3, 5, 9, 15, 25, 45, 75, 125, 225, 375, 625, 1125, 1875` at
+  `m = 3, …, 15`.
   Put `B(e) = max{m : f(m) ≤ e}`.
 - **Colours.** THM-4922's *birth colour* of `h` is blue if some first creator (a class of least order `n(h)` with
   `H = h`) is self-converse, black otherwise. The *eternal colour* is blue if `h ∈ Σ_sc`, black otherwise.
@@ -116,7 +121,7 @@ audit: 05-knowledge/results/eternal_colours_audit_K1_20261108.md (PASS WITH CORR
        `B₅ ⇒ C₁₁ ⇒ B₅^op` at order 13.
    - **Composite-only blue.** 121 and 275 are the only eternally blue values below 625 that are not the path count of
      any strong self-converse tournament (exact, since `B(121) = 9` and `B(275) = 11`).
-5. **From 625 to 1131** (FINITE-EXACT + PROVED; added after audit K1, PRE-AUDIT). The eternally black values in
+5. **From 625 to 1131** (FINITE-EXACT + PROVED; added after audit K1, confirmed by audit K2). The eternally black values in
    `[625, 1131)` are exactly
 
        671, 683, 707, 719, 723, 755, 785, 795, 815, 851, 869, 887, 907, 931, 949, 983, 1003, 1009, 1067, 1087, 1115.
@@ -131,8 +136,8 @@ audit: 05-knowledge/results/eternal_colours_audit_K1_20261108.md (PASS WITH CORR
      1035, 1049, 1053, 1083, 1089, 1111, 1123.
    - **Birth against eternal colour.** All 253 values in `[625, 1131)` are born by order 9. 189 are blue at birth and
      64 black. The 64 split into 21 eternally black and 43 later blue, with delays 1 (27 values), 2 (13) and 4 (3).
-     The three delay-4 values are 711, 855 and 1011, all first self-converse at order 13. 1011 is a strong atom born
-     at order 9.
+     The three delay-4 values are 711, 855 and 1011, all first self-converse at order 13. `1011 = 3·337` (squarefree)
+     is born at order 9 and is first self-converse at order 13, as a strong atom.
    - **Composite-only blue.** Below 1131 exactly four eternally blue values are not the path count of any strong
      self-converse tournament: 121, 275, `711 = 3²·79` and `855 = 3²·95`. The last two are first self-converse at
      order 13, as `C₃ ⇒ Z ⇒ C₃^op` around the order-7 strong self-converse atoms `Z` with `H = 79` and `H = 95`.
@@ -181,18 +186,20 @@ audit: 05-knowledge/results/eternal_colours_audit_K1_20261108.md (PASS WITH CORR
     the code range. The merged output passes `check_order11.py`: every self-converse value of orders 3, 5, 7 and 9
     below 625 recurs at order 11, as padding by a source and a sink requires. (The direct-DP program `sc_odd11.c` is
     kept as the reference implementation.)
-  - Audit K1 enumerated all `2^30` anti-invariant labellings at order 11 with no pruning (`audit_K1/aud_sc.c`); its
-    values below 625 agree.
+  - Audit K1 enumerated all `2^25` reduced anti-invariant codes at order 11 (within-pair arcs fixed by conjugation,
+    so every class occurs), with no H bound and no pruning (`audit_K1/aud_sc.c`); its values below 625 agree, and
+    audit K2 reproduced its complete order 11 count for count.
 - **Order 12, `H < 625`** (only 377 needs it). Remove a `σ`-pair `{a, b}`: `T − {a, b}` is anti-invariant of order
   10, and `H(T − {a, b}) ≤ H(T − b) ≤ H(T)` by insertion monotonicity twice. So every self-converse 12-tournament with
   `H < 625` extends an order-10 anti-invariant tournament with `H < 625` by `a` (`2^10` choices, pruned at `H < 625`),
   then by `b = σ(a)` with its forced arcs and the arc `ab`. Two independent implementations agree:
   - audit K1's `aud_sc12.c` (another labelling of `σ`, split evaluation at `a`, direct DP for the order-12 value;
     validated with no bound at orders 4-10);
-  - this session's `sc_even_pair.c` (validated at order 8 with `-DM=3` against the census; 2,000 order-12 values
-    checked by direct DP).
+  - this session's `sc_even_pair.c`, which uses no reduction: all `2^25` labelled order-10 bases (validated at order 8
+    with `-DM=3` against the census; 6,000 order-12 values checked by direct DP, 2,000 in each of three workers).
   Audit K1 finds 117 self-converse values below 625, all `≡ 1 (mod 4)`, and 377 is not among them.
-  `sc_even_pair.c`, run with `H ≤ 377`, finds exactly the audit's values up to 377.
+  `sc_even_pair.c`, run with `H ≤ 377`, finds exactly the audit's 66 values up to 377, and so does `sc_odd13.c`
+  below.
 - **Orders 12 and 13, `H < 1125`** (statement 5; `sc_odd13.c`). Take `σ` with pairs `(a_p, b_p)`, `p = 0, …, 5`, and
   fixed vertex `v0`. The transpositions `(a_p b_p)` commute with `σ`, so conjugating by them every within-pair arc may
   be taken as `a_p → b_p` (the reduction of audit K1). Then `T − v0` (order 12) and `T − v0 − {a_5, b_5}` (order 10)
@@ -201,9 +208,13 @@ audit: 05-knowledge/results/eternal_colours_audit_K1_20261108.md (PASS WITH CORR
   arcs), then by `v0` (`2^6` arc sets, Gray code, split evaluation), pruning at `H ≤ 1124` at every level.
   - **Validation.** The same program with 2, 3 and 4 base pairs and no pruning reproduces, value for value and with
     strong flags, the census's self-converse values at orders 6, 7, 8 and 9, `sc_even10.out` at order 10, and audit
-    K1's complete unpruned order 11 (41,912 values). Below 625 its order-12 values are audit K1's 117.
+    K1's complete unpruned order 11 (41,912 values, equal SHA-256 digests). Below 625 its order-12 values are audit
+    K1's 117. All comparisons are recorded in `sc_odd13_validation.out` (`validate_sc_odd13.py`).
   - **Checks.** 18,000 sampled order-11, 12 and 13 values were recomputed by direct DP, and their tournaments checked
-    anti-invariant, with no failure.
+    anti-invariant, with no failure (run logs in `sc_odd13_validation.out`).
+  - **Audit K2** enumerated orders 12 and 13 below 1125 with its own program (`audit_K2/aud_sc13.c`: another
+    labelling, a full DP at order 12, Landau's strongness test) and found the same 210 and 433 values with the same
+    strong flags.
 - **The decision.** `sc_holes.py` applies 1 and 2 with the inventories' completeness bounds:
   - for `e < 375`, `B(e) ≤ 11`;
   - for `e ≡ 3 (mod 4)` below 625, order 12 is even (excluded by THM-791) and order 13 needs `e ≥ f(13) = 625`;
@@ -220,10 +231,12 @@ audit: 05-knowledge/results/eternal_colours_audit_K1_20261108.md (PASS WITH CORR
   (statement 1). The delay from birth to a self-converse realisation is not bounded by 3. It is 5 for 275, whose only
   self-converse realisations are sandwiches around the order-5 self-converse atom with `H = 11`, and 4 for 711, 855
   and 1011. A delay can come from a sandwich (275, 711, 855) or from a strong atom that first appears late (1011).
-- **The least strong self-converse value per order** (KNOWN in substance). By the Moon–Yang theorem (THM-4745 (6))
-  the strong `m`-tournaments with `H = f(m)` are the optimal interval chains, and a chain is self-converse iff its
-  composition is a palindrome (THM-4744 (4) tabulates the self-converse ones). A palindromic optimal composition exists
-  iff `m ≢ 0 (mod 6)`: at `m = 3q` the single part 2 must sit in the middle, which needs `q` odd. Hence `f_sc(m) = f(m)`
+- **The least strong self-converse value per order** (KNOWN in substance). By the Moon–Yang theorem (THM-4745 (6);
+  HYP-9356, KNOWN) the strong `m`-tournaments with `H = f(m)` are the optimal interval chains, and a chain is
+  self-converse iff its composition is a palindrome (HYP-9356: "the self-converse ones are the palindromes"; THM-4744 (4)
+  tabulates them). A palindromic optimal composition exists iff `m ≢ 0 (mod 6)`. At `m = 3q` the optimal multiset is
+  `{2, 3^(q−1)}`, and the single 2 must sit in the middle, which needs `q` odd. At `m = 3q+1` the composition
+  `(3, …, 3)`, and at `m = 3q+2` the composition `(2, 3, …, 3, 2)`, are palindromes. Hence `f_sc(m) = f(m)`
   iff `m ≢ 0 (mod 6)`, consistent with THM-791 since `f(6k) ≡ 3 (mod 4)`. The inventories give `f_sc(6) = 17` and
   `f_sc(12) = 405` (FINITE-EXACT).
 - **THM-791's parity, proved.** At even order the anti-involution has no fixed vertex, so `C ↦ reverse(σ C)` pairs up

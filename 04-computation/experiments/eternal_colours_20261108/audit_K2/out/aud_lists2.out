@@ -1,0 +1,51 @@
+inventories complete to: {1: inf, 2: inf, 3: inf, 4: inf, 5: inf, 6: inf, 7: inf, 8: inf, 9: inf, 10: inf, 11: inf, 12: 1124, 13: 1124}
+order 12, H <= 1124: auditor 210 values (41 strong); packet 210 (41 strong); identical incl. strong flags: True
+order 13, H <= 1124: auditor 433 values (26 strong); packet 433 (26 strong); identical incl. strong flags: True
+THM-791 at order 12 (all values = 1 mod 4): True
+order 12 strong SC values <= 1124: 41 least 405
+order 13 strong SC values <= 1124: 26 [625, 675, 729, 775, 819, 825, 841, 867, 873, 881, 937, 945, 947, 961, 999, 1011, 1017, 1025, 1031, 1035, 1049, 1053, 1083, 1089, 1111, 1123]
+least strong SC value per order m = 3..13 (f_sc) vs Busch f:
+   m =  3: f_sc = 3, f = 3, equal: True, m = 0 mod 6: False
+   m =  4: f_sc = 5, f = 5, equal: True, m = 0 mod 6: False
+   m =  5: f_sc = 9, f = 9, equal: True, m = 0 mod 6: False
+   m =  6: f_sc = 17, f = 15, equal: False, m = 0 mod 6: True
+   m =  7: f_sc = 25, f = 25, equal: True, m = 0 mod 6: False
+   m =  8: f_sc = 45, f = 45, equal: True, m = 0 mod 6: False
+   m =  9: f_sc = 75, f = 75, equal: True, m = 0 mod 6: False
+   m = 10: f_sc = 125, f = 125, equal: True, m = 0 mod 6: False
+   m = 11: f_sc = 225, f = 225, equal: True, m = 0 mod 6: False
+   m = 12: f_sc = 405, f = 375, equal: False, m = 0 mod 6: True
+   m = 13: f_sc = 625, f = 625, equal: True, m = 0 mod 6: False
+
+EXACT RANGE: every odd h < 1131 is decided
+eternally black below 1131: 83
+   in [625, 1131): 21: [671, 683, 707, 719, 723, 755, 785, 795, 815, 851, 869, 887, 907, 931, 949, 983, 1003, 1009, 1067, 1087, 1115]
+   mod 4: {1: 4, 3: 17} ; birth orders: {9: 21}
+   all black below 625 equal K1's 62: True
+   mod 4 of all 83 : {1: 17, 3: 66}
+
+[3, 625): attainable 309; blue at birth 135; black at birth 174 = eternally black 60 + later blue 114
+   delays: {0: 135, 1: 95, 2: 5, 3: 13, 5: 1}
+   delay >= 4: [(275, 8, 13)]
+
+[625, 1131): attainable 253; blue at birth 189; black at birth 64 = eternally black 21 + later blue 43
+   delays: {0: 189, 1: 27, 2: 13, 4: 3}
+   delay >= 4: [(711, 9, 13), (855, 9, 13), (1011, 9, 13)]
+
+composite-only blue below 1131: [121, 275, 711, 855]
+   121: decompositions (d, e, orders with e strong SC) [(1, 121, []), (11, 1, [1])]; first SC order 10; e = h decided: True
+   275: decompositions (d, e, orders with e strong SC) [(1, 275, []), (5, 11, [5])]; first SC order 13; e = h decided: True
+   711: decompositions (d, e, orders with e strong SC) [(1, 711, []), (3, 79, [7])]; first SC order 13; e = h decided: True
+   855: decompositions (d, e, orders with e strong SC) [(1, 855, []), (3, 95, [7])]; first SC order 13; e = h decided: True
+
+79 and 95 strong SC at orders: [7] [7] ; 1011: [13] strong at [13]
+1125, 1127, 1129 strong SC at order 9: [True, True, True]
+
+[1131, 2001): odd 435; blue 422; unresolved 13: [1131, 1145, 1231, 1245, 1263, 1391, 1459, 1475, 1535, 1567, 1583, 1699, 1891]
+   unresolved mod 4: {1: 2, 3: 11} ; witness files added: {'sc_witness.out': 3}
+walk vs exact strong inventory, order 12, H <= 1124: walk 41, exact 41, missing [], extra []
+walk vs exact strong inventory, order 13, H <= 1124: walk 22, exact 26, missing [841, 945, 1025, 1089], extra []
+walk strong values by order: {12: 56, 13: 113} ; above 1124 at order 13: 91 ; order 14 values <= 1300: []
+walk hits among the unresolved: []
+
+shares: [625,1131) 21/253 = 0.0830; [1131,2001) 13/435 = 0.0299

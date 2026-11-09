@@ -1,0 +1,13 @@
+run n=9 H in [1,3357] steps=200000 seed=1: 1173 strong self-converse values
+run n=13 H in [625,720] steps=600000 seed=11: 2 strong self-converse values
+run n=13 H in [625,900] steps=800000 seed=12: 10 strong self-converse values
+run n=13 H in [625,1200] steps=1000000 seed=13: 33 strong self-converse values
+run n=13 H in [625,2001] steps=1500000 seed=14: 121 strong self-converse values
+run n=12 H in [375,1300] steps=1500000 seed=21: 56 strong self-converse values
+run n=14 H in [1125,1300] steps=600000 seed=22: 2 strong self-converse values
+run n=15 H in [1875,2001] steps=500000 seed=23: 1 strong self-converse values
+order 9, all runs: 1173 values; at H <= 3357: 1173 vs exact 1173, identical: True; above 3357: 0; the 13 unresolved values found: []
+order 12, all runs: 56 values; at H <= 1124: 41 vs exact 41, identical: True; above 1124: 15; the 13 unresolved values found: []
+order 13, all runs: 121 values; at H <= 1124: 26 vs exact 26, identical: True; above 1124: 95; the 13 unresolved values found: []
+order 14, all runs: 2 values; the 13 unresolved values found: []
+order 15, all runs: 1 values; the 13 unresolved values found: []

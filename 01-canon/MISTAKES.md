@@ -23690,3 +23690,16 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **Lesson.** A priority check must cover the methods as well as the statements. Grep for the enumeration technique
   ("anti-involution", "anti-invariant", "fixed-point-free") and for the bound that makes a computation exact ("Busch",
   "complete in H"), not only for the claim. Type every conjecture in a title with "conjecturally".
+- **Addendum (audit K2, `05-knowledge/results/eternal_colours_audit_K2_20261108.md`).** The post-K1 additions
+  (statement 5: exact eternal colours below 1131) had no mathematical error. An independent enumeration of orders 12
+  and 13 below 1125 agrees value for value. Typing, credit and record defects:
+  - audit K1's order-11 run was described as "all 2^30 labellings"; it was the 2^25 reduced codes (2^30 is S49's);
+  - the f_sc remark proved only the case m = 3q, and did not credit HYP-9356 ("the self-converse ones are the
+    palindromes");
+  - HYP-9520's per-order walk statistics could not be read off the committed merged file, which keeps one witness
+    per value;
+  - two validation counts (41,912 values; 18,000 checks) had no committed record.
+  Repair: the corrections are applied; the per-run walk file (`sc_walk_runs.out`, with `walk_summary.out`) and a
+  validation record (`sc_odd13_validation.out`, with SHA-256 digests and run logs) are committed.
+  Lesson: a claim about per-run statistics needs the per-run output committed; describe another lane's run in that
+  lane's own words.

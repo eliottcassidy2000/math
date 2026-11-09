@@ -10,10 +10,12 @@ the splitting pattern studied".
 Canon:
 - [THM-4930](../../01-canon/theorems/THM-4930-eternal-colours-which-odd-path-counts-are-ever-self-converse.md):
   the eternal colours; the exact lists below 1131 (377 settled at order 12; `[625, 1131)` by complete orders 12 and
-  13 below 1125, added after audit K1, PRE-AUDIT).
+  13 below 1125, added after audit K1 and confirmed by audit K2).
 - [HYP-9520](../hypotheses/HYP-9520-the-eternally-black-values.md): the eternally black set.
-- Audit: [K1](eternal_colours_audit_K1_20261108.md), PASS WITH CORRECTIONS (credit and typing; no mathematical
-  error). Its corrections are applied below.
+- Audits: [K1](eternal_colours_audit_K1_20261108.md), PASS WITH CORRECTIONS (credit and typing; no mathematical
+  error); [K2](eternal_colours_audit_K2_20261108.md) of the post-K1 additions, PASS WITH CORRECTIONS (no mathematical
+  error; an independent enumeration of orders 12 and 13 below 1125 confirms §4b). Both sets of corrections are applied
+  below.
 
 Claims are typed PROVED, KNOWN, CITED, FINITE-EXACT, FINITE, HEURISTIC or NEGATIVE.
 
@@ -92,14 +94,16 @@ finite computation.
   codes and split evaluation, pruning at `H ≤ 1124` at every level. Run with 2, 3 and 4 base pairs and no pruning, it
   reproduces the census's self-converse values and strong flags at orders 6-9, `sc_even10.out`, and audit K1's
   complete order 11. Its complete order-10/11 output up to 2001 is kept as `sc_full1011_le2001.out`.
-- **Audit K1** independently enumerated all self-converse tournaments of orders 10 and 11 (all `2^30` labellings, no
-  pruning) and of order 12 below 625 (`audit_K1/`). Every value used here agrees.
+- **Audit K1** independently enumerated all self-converse tournaments of orders 10 and 11 (all `2^20` and `2^25`
+  reduced codes, every class, no pruning) and of order 12 below 625 (`audit_K1/`). **Audit K2** did the same for
+  orders 12 and 13 below 1125 (`audit_K2/`). Every value used here agrees.
 - **Above the exact range:** near-transitive self-converse witnesses. The transitive tournament is self-converse under
   the mirror `v ↦ n−1−v`, and so is every tournament obtained by reversing whole mirror orbits of arcs.
   - `sc_witness.c` tries every set of at most four reversed orbits at orders ≤ 13.
   - `sc_walk.c` runs random walks over the reversed-orbit sets at orders 12–15, accepting a move iff `H` stays below a
     cap, and records every strong value met. At order 9 it recovers all 1,173 strong self-converse values of the
-    census, and nothing else.
+    census, and nothing else. Every run is kept in `sc_walk_runs.out` (`walk_summary.out` compares each order with the
+    exact inventories; `check_walk.out` re-verifies all 1,398 lines).
 
 ## 3. Results below 225 (exact)
 
@@ -155,7 +159,7 @@ padding by a source and a sink requires.
   order 12 (`≡ 3 mod 4`), so it is first blue at order 13, as `B₅ ⇒ C₁₁ ⇒ B₅^op`, five orders after birth.
 - **Composite-only blue.** 121 and 275 are the only blue values below 625 without a strong self-converse realisation.
 
-## 4b. Results from 625 to 1131 (exact; added after audit K1, PRE-AUDIT)
+## 4b. Results from 625 to 1131 (exact; added after audit K1, confirmed by audit K2)
 
 For `625 ≤ e < 1125`, `B(e) = 13`. Orders ≤ 11 are complete up to 2001 and orders 12 and 13 below 1125, so every
 value below 1125 is decided; 1125, 1127 and 1129 are strong self-converse values at order 9.
@@ -217,8 +221,13 @@ No natural refinement restores it. The eternal colour of §1 is the form of the 
 - `sc_odd13.c`: orders 12 and 13 with `H ≤ 1124` (`sc_odd13_1124.out`), and with `-DM=4` the complete orders 10
   and 11 (`sc_full1011_le2001.out`, lines with `H ≤ 2001`); `-DM=2, 3, 4` validation builds and `-DCHECK`;
 - `sc_witness.c`: near-transitive witnesses (exhaustive up to four reversed orbits);
-- `sc_walk.c`: random walks over reversed-orbit sets at orders 12–15;
+- `sc_walk.c`: random walks over reversed-orbit sets (order 9 for validation, orders 12–15); `sc_walk_runs.out` (every
+  run), `sc_walk.out` (one witness per value, orders 12–15), `walk_summary.py` (+ `.out`), `check_witness_rev.py` and
+  `check_witness_codes.py` (independent re-check of witnesses; `check_walk.out`);
+- `validate_sc_odd13.py` (+ `sc_odd13_validation.out`): the full comparisons of `sc_odd13.c` with the complete
+  inventories, and its run logs;
 - `refine_dichotomy.py`: §5;
+- `audit_K2/`: audit K2's independent programs and outputs (orders 12 and 13 below 1125);
 - `audit_K1/`: audit K1's independent programs and outputs (orders 1-9 re-verified, orders 10 and 11 complete,
   order 12 below 625).
 

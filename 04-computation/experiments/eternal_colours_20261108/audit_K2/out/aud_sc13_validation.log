@@ -1,0 +1,5 @@
+NO=11 LIM=200000 codes [0,4096): parents 4096, order-9 intermediates 1048576, order-10 tournaments 1048576, checks 702/159040
+NO=11 LIM=1125 codes [0,4096): parents 4096, order-9 intermediates 334056, order-10 tournaments 42704, checks 702/6496
+NO=5 LIM=200000 codes [0,1): parents 1, order-3 intermediates 4, order-4 tournaments 4, checks 1/4
+NO=7 LIM=200000 codes [0,4): parents 4, order-5 intermediates 64, order-6 tournaments 64, checks 1/8
+NO=9 LIM=200000 codes [0,64): parents 64, order-7 intermediates 4096, order-8 tournaments 4096, checks 6/320

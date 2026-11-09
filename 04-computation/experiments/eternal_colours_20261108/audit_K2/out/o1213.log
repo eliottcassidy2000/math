@@ -1,0 +1,4 @@
+NO=13 LIM=1125 codes [0,262144): parents 5718, order-11 intermediates 280232, order-12 tournaments 25592, checks 3888/7808
+NO=13 LIM=1125 codes [262144,524288): parents 5718, order-11 intermediates 280232, order-12 tournaments 25592, checks 3888/7808
+NO=13 LIM=1125 codes [524288,786432): parents 15634, order-11 intermediates 1298724, order-12 tournaments 133272, checks 10620/40448
+NO=13 LIM=1125 codes [786432,1048576): parents 15634, order-11 intermediates 1298724, order-12 tournaments 133272, checks 10620/40448

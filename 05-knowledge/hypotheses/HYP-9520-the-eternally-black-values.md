@@ -4,17 +4,18 @@ title: "The eternally black values thin out. The odd values that are never the H
 status: >
   OPEN (CONJECTURE (a): density zero). EXPLORATORY (b): finiteness.
   FINITE-EXACT: the eternally black values below 1131 (THM-4930 statements 3-5; 377 by complete order-12
-  enumerations below 625; [625, 1131) by complete order-12 and order-13 enumerations below 1125, statement 5
-  PRE-AUDIT, audit K2 pending).
+  enumerations below 625; [625, 1131) by complete order-12 and order-13 enumerations below 1125, statement 5,
+  confirmed by audit K2's independent enumeration).
   FINITE: explicit self-converse realisations for 422 of the 435 odd values in [1131, 2001).
   HEURISTIC: Busch windows lengthen.
   Audit K1 (2026-11-08): PASS WITH CORRECTIONS (title typing; cosmetic); MISTAKE-738.
+  Audit K2 (2026-11-08): PASS WITH CORRECTIONS (the walk evidence now cites the per-run file); addendum to MISTAKE-738.
 session: mac-mini-2026-11-08-firstrealizers
 source: 05-knowledge/results/eternal_colours_self_converse_values_20261108.md
 scripts:
   - 04-computation/experiments/eternal_colours_20261108/sc_holes.py (+ .out)
   - 04-computation/experiments/eternal_colours_20261108/sc_odd13.c (+ sc_odd13_1124.out, sc_full1011_le2001.out)
-  - 04-computation/experiments/eternal_colours_20261108/sc_witness.c (+ .out), sc_walk.c (+ sc_walk.out)
+  - 04-computation/experiments/eternal_colours_20261108/sc_witness.c (+ .out), sc_walk.c (+ sc_walk_runs.out, sc_walk.out, walk_summary.py + .out, check_walk.out)
 related: [THM-4930, THM-4922, HYP-9512, THM-4744 (Busch), THM-791, THM-4875, THM-1370, Chan-Pak Conjecture 6.2]
 ---
 
@@ -52,6 +53,12 @@ path counts, a weak form of Chan–Pak's Conjecture 6.2, which predicts that the
 - **Without a realisation in `[1131, 2001)`:** 1131, 1145, 1231, 1245, 1263, 1391, 1459, 1475, 1535, 1567, 1583,
   1699, 1891 (11 of them `≡ 3 mod 4`). All are born by order 9. Deciding them needs orders 13-15: a strong centre
   `e ∈ [1125, 1875)` can have order 14, and `e ≥ 1875` order 15.
+- **Evidence from the walks** (HEURISTIC; every run is kept in `sc_walk_runs.out`, compared order by order with the
+  exact inventories in `walk_summary.out`). The order-13 random walks (`sc_walk.c`, caps 720 to 2001) recover the exact
+  order-13 strong self-converse inventory below 1125 completely: 26 values, none missing and none extra. Above 1125
+  they find 95 further strong self-converse values of order 13, none of them among the 13. The order-12 walk likewise
+  recovers all 41 strong values of order 12 below 1125 (and 15 more up to 1300). The order-14 walk up to 1300 finds
+  only 1125 and 1225, and the order-15 walk from 1875 to 2001 only `1875 = f(15)`.
 
 ## Heuristic (HEURISTIC)
 
