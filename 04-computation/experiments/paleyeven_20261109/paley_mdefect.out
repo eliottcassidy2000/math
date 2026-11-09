@@ -1,0 +1,15 @@
+double_p3_identity n=6 md=0 twin=0 lambda=2 minsemideg=2 nmin=3 bysize=0,2,2,2 argmin=0xc
+double_p7_identity n=14 md=4 twin=4 lambda=4 minsemideg=4 nmin=35 bysize=4,6,8,9,9,7,9,10,10,9,6,4 argmin=0x88
+double_p11_identity n=22 md=6 twin=7 lambda=6 minsemideg=6 nmin=22 bysize=7,9,12,15,17,17,18,17,15,11,15,18,20,21,21,20,18,15,10,6 argmin=0x1fffff
+double_p7_affine_u1_t0 n=14 md=4 twin=4 lambda=4 minsemideg=4 nmin=35 bysize=4,6,8,9,9,7,9,10,10,9,6,4 argmin=0x88
+double_p7_affine_u1_t1 n=14 md=4 twin=4 lambda=4 minsemideg=4 nmin=35 bysize=4,6,8,9,9,7,9,10,10,9,6,4 argmin=0x81
+double_p7_affine_u2_t0 n=14 md=4 twin=4 lambda=4 minsemideg=4 nmin=35 bysize=4,6,8,9,9,7,9,10,10,9,6,4 argmin=0x88
+double_p7_affine_u2_t1 n=14 md=4 twin=4 lambda=4 minsemideg=4 nmin=35 bysize=4,6,8,9,9,7,9,10,10,9,6,4 argmin=0x81
+double_p7_affine_u3_t0 n=14 md=4 twin=5 lambda=4 minsemideg=4 nmin=14 bysize=5,6,8,9,9,7,9,10,10,9,6,4 argmin=0x1fff
+double_p7_affine_u3_t1 n=14 md=4 twin=5 lambda=4 minsemideg=4 nmin=14 bysize=5,6,8,9,9,7,9,10,10,9,6,4 argmin=0x1fff
+double_p7_affine_u6_t0 n=14 md=4 twin=5 lambda=4 minsemideg=4 nmin=14 bysize=5,6,8,9,9,7,9,10,10,9,6,4 argmin=0x1fff
+double_p7_affine_u6_t1 n=14 md=4 twin=5 lambda=4 minsemideg=4 nmin=14 bysize=5,6,8,9,9,7,9,10,10,9,6,4 argmin=0x1fff
+double_p7_2reg_d1 n=14 md=2 twin=2 lambda=5 minsemideg=5 nmin=7 bysize=2,5,8,11,12,14,14,13,12,10,8,5 argmin=0xc0
+double_p7_2reg_d3 n=14 md=2 twin=2 lambda=5 minsemideg=5 nmin=7 bysize=2,5,8,11,12,14,14,13,12,10,8,5 argmin=0xc0
+double_p7_fano n=14 md=0 twin=0 lambda=6 minsemideg=6 nmin=7 bysize=0,6,10,12,12,14,15,15,15,13,10,6 argmin=0xc0
+chain_p7_r3 n=21 md=4 twin=5 lambda=4 minsemideg=4 nmin=14 bysize=5,6,8,9,9,7,10,12,13,13,12,10,7,9,10,10,9,7,4 argmin=0xfffff

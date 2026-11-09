@@ -1,0 +1,5 @@
+double_C9S1235_D0 n=18 md=5 twin=5 lambda=5 minsemideg=5 nmin=54 bysize=5,7,10,11,13,13,12,9,12,14,15,15,14,12,8,5 argmin=0x3
+double_C9S1235_D04 n=18 md=4 twin=4 lambda=6 minsemideg=6 nmin=9 bysize=4,8,12,15,18,20,20,18,20,21,20,18,16,13,10,6 argmin=0x300
+double_C9S1235_D03 n=18 md=4 twin=4 lambda=6 minsemideg=6 nmin=9 bysize=4,8,10,15,18,20,20,18,20,21,18,18,16,13,10,6 argmin=0x280
+double_C9S1246_D0 n=18 md=5 twin=5 lambda=5 minsemideg=5 nmin=54 bysize=5,7,10,11,13,13,12,9,12,14,15,15,14,12,8,5 argmin=0x5
+double_C9S1765_D0 n=18 md=5 twin=5 lambda=5 minsemideg=5 nmin=54 bysize=5,7,10,11,13,13,12,9,12,14,15,15,14,12,8,5 argmin=0x3

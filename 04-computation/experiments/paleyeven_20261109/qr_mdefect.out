@@ -1,0 +1,4 @@
+QR7 n=7 md=3 twin=3 lambda=3 minsemideg=3 nmin=42 bysize=3,3,4,4,3 argmin=0x3
+QR11 n=11 md=5 twin=5 lambda=5 minsemideg=5 nmin=66 bysize=5,6,8,10,11,10,10,8,5 argmin=0x3
+QR19 n=19 md=9 twin=9 lambda=9 minsemideg=9 nmin=190 bysize=9,12,18,22,25,28,32,32,33,33,32,30,29,26,22,16,9 argmin=0x3
+QR23 n=23 md=11 twin=11 lambda=11 minsemideg=11 nmin=276 bysize=11,15,22,28,33,38,42,45,47,49,50,50,49,48,46,42,39,34,28,20,11 argmin=0x3

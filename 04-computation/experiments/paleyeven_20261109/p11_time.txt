@@ -1,0 +1,1 @@
+./tprop < p11_in.txt > p11_tprop.out  7.13s user 3.45s system 73% cpu 14.445 total

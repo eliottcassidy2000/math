@@ -1,0 +1,14 @@
+chain_R5_r3_D02 n=15 md=4 twin=4 lambda=4 minsemideg=4 nmin=20 bysize=4,6,9,10,12,12,13,12,10,10,9,7,4 argmin=0x21
+chain_R5_r3_D01 n=15 md=2 twin=2 lambda=4 minsemideg=4 nmin=10 bysize=2,4,7,8,11,12,13,12,10,10,9,7,4 argmin=0x30
+chain_R5_r3_D013 n=15 md=5 twin=5 lambda=5 minsemideg=5 nmin=50 bysize=5,6,10,10,13,14,16,15,15,13,12,9,5 argmin=0x3
+chain_R5_r4_D02 n=20 md=4 twin=4 lambda=4 minsemideg=4 nmin=20 bysize=4,6,9,10,12,12,13,12,10,12,13,13,12,10,10,9,7,4 argmin=0x21
+chain_C3_r5_D01 n=15 md=2 twin=2 lambda=3 minsemideg=3 nmin=6 bysize=2,3,5,6,6,7,7,6,7,7,6,5,3 argmin=0x9
+chain_C3_r6_D01 n=18 md=2 twin=2 lambda=3 minsemideg=3 nmin=6 bysize=2,3,5,6,6,7,7,6,7,7,6,7,7,6,5,3 argmin=0x9
+double_P7 n=14 md=4 twin=4 lambda=4 minsemideg=4 nmin=35 bysize=4,6,8,9,9,7,9,10,10,9,6,4 argmin=0x88
+chain_P7_r3_D0 n=21 md=4 twin=5 lambda=4 minsemideg=4 nmin=14 bysize=5,6,8,9,9,7,10,12,13,13,12,10,7,9,10,10,9,7,4 argmin=0xfffff
+double_P7_D01 n=14 md=2 twin=2 lambda=5 minsemideg=5 nmin=7 bysize=2,5,8,11,12,14,14,13,12,10,8,5 argmin=0xc0
+double_R7_D0 n=14 md=3 twin=3 lambda=4 minsemideg=4 nmin=14 bysize=3,5,6,9,9,7,9,10,10,9,6,4 argmin=0x3
+chain_R7_r3_D0 n=21 md=3 twin=3 lambda=4 minsemideg=4 nmin=14 bysize=3,5,8,9,9,7,10,12,13,13,12,10,7,9,10,10,9,7,4 argmin=0x3
+double_R9_D0 n=18 md=3 twin=3 lambda=5 minsemideg=5 nmin=18 bysize=3,5,8,11,13,13,12,9,12,14,15,15,14,12,8,5 argmin=0x3
+double_R5_D02 n=10 md=2 twin=2 lambda=4 minsemideg=4 nmin=5 bysize=2,4,6,7,8,7,6,4 argmin=0x21
+double_R5_D013 n=10 md=2 twin=2 lambda=4 minsemideg=4 nmin=5 bysize=2,4,6,7,8,7,6,4 argmin=0x30
