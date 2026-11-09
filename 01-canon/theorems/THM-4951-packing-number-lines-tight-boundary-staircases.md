@@ -5,7 +5,8 @@ status: >
   PROVED:
   - (1): the first, second and fourth bullets;
   - (2);
-  - (3a)-(3f), including the counts at n = 3k + 2 and n = 3k + 1;
+  - (3a)-(3f), including the counts at n = 3k + 2 and n = 3k + 1. The n = 3k data quoted inside (3f) are
+    FINITE-EXACT, not proved;
   - (5)(b)'s line corollary and (5d).
   KNOWN:
   - (1), third bullet: Session26's corollary, transferred to nu.
@@ -14,7 +15,9 @@ status: >
   FINITE-EXACT:
   - the count (k^2 + 9k - 2) 2^(k-4) at n = 3k (DP for k <= 13; the audit's brute force for k <= 7; the closed form is
     fitted, not proved);
-  - (4) and (5)(c).
+  - (4) and (5)(c);
+  - the n = 3k run-window failure set (an isolated 0 between two 1-runs of length >= 2), for n <= 18 (follow-up
+    audit).
   SAMPLED: (5)(e), the (1,3)-shares at n = 13, 15, 17 (PREREGISTRATION-4).
   Pre-registered and tested:
   - PREREGISTRATION-2: R1 CONFIRMED (and KNOWN, see below); R2, R3 REFUTED at n = 11.
@@ -47,8 +50,9 @@ status: >
     and the tight lines for n <= 12.
   - The corrections are applied: credits m6, m7, m11; proof gaps m8 (2b), m9 (3b); notation m10; wording m14.
   - The n = 3k + 1 count was upgraded to PROVED, on the audit's suggestion m12.
-  - (3e) and (3f) (the run-window theorem) were added after the audit. Their follow-up audit is PENDING
-    (audit/FOLLOWUP.md).
+  - (3e) and (3f) (the run-window theorem) were added after the audit. The follow-up audit (audit/FOLLOWUP.md) is
+    PASS WITH CORRECTIONS: (3e) and (3f) are correct. They were re-verified for all 150,048 colourings with runs
+    >= 2 at n <= 26 and by samples to n = 32. Its F1 is fixed: the n = 3k failure description was wrong.
   - MISTAKE-742.
 session: opus-2026-11-09-S87
 source: 05-knowledge/results/ternary_metagraph_20261109/README.md
@@ -162,7 +166,11 @@ related:
   n != 0 (mod 3).
   - At n = 3k the tight colourings may have runs of length 1. The run-window tiling still realises 5 of 5 at n = 6,
     16 of 17 at n = 9 and 47 of 50 at n = 12.
-  - It fails exactly when an isolated 0 separates two 1-runs (`run_window_check.out`).
+  - FINITE-EXACT for every n = 3k <= 18 (the follow-up audit, audit/runwindow_n3k_runs.out): it fails exactly when
+    an isolated 0 lies between two 1-runs that both have length >= 2. That gives 0, 1, 3, 8, 20 failures at
+    n = 6, 9, 12, 15, 18, and every failing word contains 1110111.
+  - An isolated 0 next to a 1-run of length 1 is harmless. Examples: 1010 at n = 6; 1010000, 1111010, 1110101 and
+    1010111 at n = 9.
   - All of them are realised by some tight line for n <= 12 (by (4)).
 
 **(4) Census (FINITE-EXACT).** All lines by unordered nu-pair, black + blue (`nu_lines.c`; totals 2^(m-1) lines and
@@ -375,7 +383,7 @@ Tight lines (`tight_lines.c`; it reproduces the census rows for n <= 9):
   as well.
 - **What the tight boundary looks like.** Every tight line found so far is close to a union of staircases.
   - At n != 0 (mod 3) the boundary words are exactly the block words, and the run-window tilings realise each.
-  - At n = 3k the words allow runs of length 1, such as 1010 at n = 6. The words where an isolated 0 joins two 1-runs
-    need other constructions.
+  - At n = 3k the words allow runs of length 1, such as 1010 at n = 6. The words where an isolated 0 lies between two
+    1-runs of length >= 2 (containing 1110111) need other constructions; this is FINITE-EXACT for n <= 18.
 - **A natural lens, not a new invariant of the classes.** nu is an isomorphism and converse invariant, so the line
   counts between nu-classes descend to the merged metagraph, exactly as Session26's tau did.

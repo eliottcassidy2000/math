@@ -1,6 +1,6 @@
 ---
 id: THM-4950
-title: "Ternary Chan-Pak: lane reduction and the order-10 strong census. Let M3 be the multiplicative monoid of the integers v = 1 (mod 3), with 10 and 31 removed, and let H_3(T) = I(Omega(T), 3). (1) Base-3 Chan-Pak (HYP-9530 (A): every element of M3 is a value H_3(T)) holds iff every irreducible of M3 is H_3 of a strong tournament. (2) The irreducibles of M3 are exactly: the primes p = 1 (mod 3) other than 31 (lane P); the products pq of two primes = 2 (mod 3), other than 10 (lane Q); 10p (p = 1 mod 3 prime, p != 31); 31p (p = 1 mod 3 prime, including 961); 31pq (pq as in lane Q); and five sporadic values 40, 250, 310, 9610, 29791. (3) Every v = 1 (mod 3) with v <= 29,035, other than 10 and 31, is a value H_3(T), already as an order join of strong tournaments of order <= 10 (previous range 5,398); the 10,070 strong order-10 values each have a witness re-checked by independent code. (5) Strong spectrum: below 28,981 the values v = 1 (mod 3) that are H_3 of no strong tournament are exactly 10, 31 and 64 (exact below 337 by H_3 - 1 >= (3/2)(H - 1) and Busch's floor; constructive above), confirming the strong-spectrum sentence of HYP-9541 (4) on that range."
+title: "Ternary Chan-Pak: lane reduction and the order-10 strong census. Let M3 be the multiplicative monoid of the integers v = 1 (mod 3), with 10 and 31 removed, and let H_3(T) = I(Omega(T), 3). (1) Base-3 Chan-Pak (HYP-9530 (A): every element of M3 is a value H_3(T)) holds iff every irreducible of M3 is H_3 of a strong tournament. (2) The irreducibles of M3 are exactly: the primes p = 1 (mod 3) other than 31 (lane P); the products pq of two primes = 2 (mod 3), other than 10 (lane Q); 10p (p = 1 mod 3 prime, p != 31); 31p (p = 1 mod 3 prime, including 961); 31pq (pq as in lane Q); and five sporadic values 40, 250, 310, 9610, 29791. (3) Every v = 1 (mod 3) with v <= 29,035, other than 10 and 31, is a value H_3(T), already as an order join of strong tournaments of order <= 10 (previous range 5,398); the 10,070 strong order-10 values each have a witness re-checked by independent code. (5) Strong spectrum: below 28,981 the values 1 < v = 1 (mod 3) that are H_3 of no strong tournament are exactly 10, 31 and 64 (exact below 337 by H_3 - 1 >= (3/2)(H - 1) and Busch's floor; constructive above), confirming the strong-spectrum sentence of HYP-9541 (4) on that range."
 status: >
   PROVED: (1) and (2), elementary, for all v.
   FINITE-EXACT:
@@ -23,8 +23,9 @@ status: >
   - Concurrent lane mac-mini-2026-11-08-ternary, THM-4952 (E) (commit 844706ab1c, 14 minutes before (5) was added
     here). It introduced the method of (5): H = I(Omega, 2) <= I(Omega, 3) = H_3, so Busch's floor bounds the order of
     a strong realiser. With it, it proved that 64 has no strong realiser (orders <= 8 suffice). HYP-9541 (4)
-    conjectures that 64 is the only value 1 (mod 3) attained but never by a strong tournament of order >= 3. (5)
-    checks that sentence; it does not address the ribbon-completeness sentence of HYP-9541 (4).
+    conjectures that the values 1 (mod 3) attained but never by a strong tournament of order >= 3 are exactly 1 and
+    64. Equivalently, 64 is the only such value v > 1. (5) checks that sentence; it does not address the
+    ribbon-completeness sentence of HYP-9541 (4).
   NOT CLAIMED: ternary Chan-Pak itself, which stays OPEN as HYP-9530 (A). The reduction does not make it easier than
   binary Chan-Pak: lanes P and Q are infinite.
   AUDIT: independent audit PASS WITH CORRECTIONS

@@ -49,9 +49,12 @@ related:
 
 **The open case n = 3k.**
 - The tight colourings may have runs of length 1. There are (k^2 + 9k - 2) 2^(k-4) of them up to complement (fitted).
-- The run-window tiling realises 5 of 5, 16 of 17 and 47 of 50 at n = 6, 9, 12. It fails exactly when an isolated 0
-  separates two 1-runs, so the windows overlap.
-- The failing words are still realised by other tight lines at n = 9 and 12.
+- The run-window tiling realises 5 of 5, 16 of 17, 47 of 50, 128 of 136 and 332 of 352 at n = 6, 9, 12, 15, 18.
+- For n = 3k <= 18 it fails exactly when an isolated 0 lies between two 1-runs of length >= 2: every failing word
+  contains 1110111. This is the follow-up audit's FINITE-EXACT characterisation. The first statement here ("an
+  isolated 0 between two 1-runs") was wrong: 1010 at n = 6 is realised (MISTAKE-742).
+- The failing words are still realised by other tight lines at n = 9 and 12. So a proof at n = 3k needs a
+  construction for the 1110111 pattern.
 
 **Falsifier.** A tight colouring at some n = 3k that no tight line realises.
 

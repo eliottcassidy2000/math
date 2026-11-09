@@ -6,8 +6,9 @@ every tight colouring, whether the tiling has triple word w and is tight (nu(t) 
 
 Expected:
 - It works for every tight colouring at n = 3k + 1, k <= 5, and at n = 6.
-- It fails at n = 9 and 12 exactly on words where an isolated 0 separates two 1-runs, so the windows overlap. Those
-  words are still realised by other tight lines (THM-4951 (4)).
+- It fails at n = 9 and 12 on 1 and 3 words, each containing 1110111: an isolated 0 between two 1-runs of length >= 2.
+  The follow-up audit showed this is exactly the failure set for every n = 3k <= 18. An isolated 0 next to a 1-run
+  of length 1, as in 1010, is harmless. The failing words are still realised by other tight lines (THM-4951 (4)).
 usage: python run_window_check.py
 """
 import os

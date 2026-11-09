@@ -1,0 +1,2 @@
+isolated 0, min neighbouring 1-run length 1             realised=1: 129
+isolated 0, min neighbouring 1-run length >= 3          realised=0: 32

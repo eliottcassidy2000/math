@@ -23813,6 +23813,10 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - THM-4950: the binary lane list in the comparison omitted p != 3 in 7p and the carry atoms 49, 63, 343.
   - PREREGISTRATION-2's outcome said "R1 is now proved at every odd n" via a quotient tournament and Redei, with no
     source. That argument is step 5 of the THM-4922 (4) audit proof (2026-11-07).
+  - After the audit, THM-4951 (3f), its Remarks, HYP-9540 (A) and `run_window_check.py` said the run-window tiling at
+    n = 3k "fails exactly when an isolated 0 separates two 1-runs". That was read off a listing of the failures only.
+    The session's own "5 of 5 at n = 6" includes 1010, which has such a 0 and is realised. The follow-up audit found
+    this (FOLLOWUP.md, F1).
 - **What is true.**
   - Blue boundary lines have palindromic triple words. So the blue tight pairs are the P-pairs of palindromic tight
     colourings, for n <= 26 exactly {j, k - j} with j even or k odd.
@@ -23821,6 +23825,8 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - The session had itself proved this at n = 14 (THM-4951 (3d)) and checked it at n = 12 (T4) before writing the
     clause.
   - The (1,3) excess changes sign: -0.000906 at n = 13 (z = -54), +0.001689 at n = 15, -0.000111 at n = 17.
+  - For every n = 3k <= 18 the run-window tiling fails exactly when an isolated 0 lies between two 1-runs of length
+    >= 2. That gives 0, 1, 3, 8, 20 failures at n = 6..18, and every failing word contains 1110111.
   - The mod-4 balance mechanism, the line bound and the window certificates are KNOWN: THM-4922 (4) audit and
     Session26. The background survey found them before canon, and THM-4951 credits them.
 - **Repair.**
@@ -23839,6 +23845,8 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     status, body, README and INDEX.
   - On a same-day concurrent lane, credit the method, not only the result.
   - Start the background prior-art survey before deriving a mechanism, not after (MISTAKE-690, MISTAKE-739).
+  - Never type "fails exactly when" from a listing of the failures alone. Tabulate the property over the successes
+    too.
 
 ## MISTAKE-743 (2026-11-09, mac-mini-2026-11-09-genesis, THM-4985, THM-4986, HYP-9565 and the note `05-knowledge/results/genesis_20261109/` at the pre-audit checkpoints 47716c39e5 and 561b0319b6; found by the independent audit `05-knowledge/results/genesis_20261109/AUDIT_G1.md`) -- an unsourced maximum used as exact input, and a family and a question taken from sibling sessions without credit
 

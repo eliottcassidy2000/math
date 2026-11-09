@@ -4,7 +4,8 @@ opus-2026-11-09-S87. Canon: [THM-4950](../../../01-canon/theorems/THM-4950-terna
 [THM-4951](../../../01-canon/theorems/THM-4951-packing-number-lines-tight-boundary-staircases.md),
 [HYP-9540](../../hypotheses/HYP-9540-packing-number-line-laws-tight-words-allowed-pairs.md); updates
 [HYP-9530](../../hypotheses/HYP-9530-ternary-chan-pak-and-finite-gaps-in-every-base.md) (A). Independent audit:
-[audit/AUDIT.md](audit/AUDIT.md), PASS WITH CORRECTIONS, all applied (MISTAKE-742).
+[audit/AUDIT.md](audit/AUDIT.md), PASS WITH CORRECTIONS, all applied; follow-up on the post-audit clauses
+[audit/FOLLOWUP.md](audit/FOLLOWUP.md), PASS WITH CORRECTIONS, all applied (MISTAKE-742).
 
 **Owner directive (2026-11-08).** "Start another session proving ternary Chan-Pak and other conjectures as you
 propose. Think about the metagraph and black and blue lines and conjecture about the number of blue or black lines
@@ -90,6 +91,8 @@ equals the maximum number of disjoint 3-cycles.
   was found: the audit proof of THM-4922 (4). It is credited, not claimed. The packing bound was likewise Session26's.
 - The first blue clause of HYP-9540 (B) contradicted THM-4951 (3d) and T4, both proved or checked in this session.
 - The first (D) stayed in the canon text after U1 refuted it.
+- The n = 3k run-window failures were first described as "an isolated 0 between two 1-runs", read off a listing of the
+  failures only. The follow-up audit (F1) corrected it to "between two 1-runs of length >= 2": 1010 is realised.
 
 ## Prior art and concurrent work
 
