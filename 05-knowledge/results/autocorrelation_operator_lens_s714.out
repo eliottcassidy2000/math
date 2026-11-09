@@ -1,0 +1,32 @@
+====================================================================================
+S714 — the autocorrelation operator MM* across the cluster (operator + adjoint)
+====================================================================================
+(A) TOURNAMENT autocorrelation operator  C = S S* = -S^2 ;  |Pf(S)| = sqrt(det C)
+  n=6: 32768 tournaments | e3==|Pf|^2 (autocorrelation det = Pfaffian^2): 32768/32768
+  distinct autocorrelation spectra (HOMOMETRY classes): 6  (THM-120 => 5)
+  spectrum (e1,e2,e3)           |Pf|  #tourns   H-distribution
+  (15, 15, 1)                      1     3840   {1: 720, 17: 720, 23: 1440, 41: 720, 45: 240}
+  (15, 47, 1)                      1    11520   {5: 2160, 11: 1440, 15: 1440, 25: 1440, 29: 2160, 33: 720, 37: 720, 43: 1440}
+  (15, 39, 9)                      3     7680   {3: 960, 9: 1440, 19: 1440, 27: 480, 33: 1920, 37: 1440}
+  (15, 55, 25)                     5     4608   {9: 1440, 15: 288, 23: 1440, 37: 1440}
+  (15, 63, 49)                     7     3840   {13: 1440, 17: 720, 31: 1440, 45: 240}
+  (15, 63, 81)                     9     1280   {9: 80, 15: 480, 29: 720}
+  => the tournament autocorrelation operator has only 5 spectra at n=6: massive homometry;
+     |Pf| = sqrt(det of autocorrelation) is the S713 Pfaffian, here as a spectral invariant.
+
+(B) UNIT-DISTANCE Patterson autocorrelation; product => convolution
+  e(K3)=3, e(W7)=12; |K3|=3, |W7|=7
+  unit distances in K3 [] W7: direct=57, convolution-formula |A|e_B+|B|e_A=57  (=u(21)=57)
+  Patterson convolution (A_K3 * A_W7) peak at radius 1 (ordered): 114  -> unordered 57
+  => the autocorrelation FACTORIZES: A_(P(+)Q) = A_P * A_Q; u(product) is a convolution peak.
+  n=22=2*11: product Patterson = A_K2 * A_(11) caps the radius-1 peak at u(2)*11+2*u(11)=57<60.
+
+(C) PALEY flat autocorrelation (the 'perfect operator'): QR difference set, |Gauss|^2=p
+  p= 7: |Q|=3, autocorr c(s) for s!=0 = [1] ; flat at lambda=(p-3)/4=1? True  (Paley difference set => |Gauss|^2=7)
+  p=11: |Q|=5, autocorr c(s) for s!=0 = [2] ; flat at lambda=(p-3)/4=2? True  (Paley difference set => |Gauss|^2=11)
+  p=19: |Q|=9, autocorr c(s) for s!=0 = [4] ; flat at lambda=(p-3)/4=4? True  (Paley difference set => |Gauss|^2=19)
+  p=23: |Q|=11, autocorr c(s) for s!=0 = [5] ; flat at lambda=(p-3)/4=5? True  (Paley difference set => |Gauss|^2=23)
+  => flat autocorrelation = MM* proportional to I (off the DC term) = quasirandom RIGIDITY:
+     the homometric/Paley core (THM-415) and the LRC transversal core (S642/THM-420) — the HARD
+     cases — are exactly the flat-autocorrelation configs; peaked/convolutional = extremal/easy.
+====================================================================================
