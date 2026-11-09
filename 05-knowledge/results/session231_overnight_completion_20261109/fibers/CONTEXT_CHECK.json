@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "contexts": 496,
+  "scalar_values": 7440,
+  "k_max": 4,
+  "prefix_length_max": 4,
+  "suffix_length_max": 4,
+  "recurrence": [
+    4097,
+    -4096,
+    -264150
+  ]
+}

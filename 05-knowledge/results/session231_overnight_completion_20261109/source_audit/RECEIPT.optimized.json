@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "repository_head": "9c48b9ac1e2a9c22b0814686c76e3358ad56051d",
+  "bank_sha256": "19f29d80b09f513d5ad36cc9537fb62a0037edd28bc304165955527dc8b5fd70",
+  "bank_size": 2732,
+  "per_label_target_checks": 262272,
+  "wide_suffix_checks": 4000,
+  "executable_targets": 4098,
+  "small_odd_misses": [
+    7,
+    21
+  ],
+  "max_domain_envelopes": {
+    "M": 67108864,
+    "L": 2919235425,
+    "Q": 2919235425,
+    "V": 1000000067108864,
+    "terms": 2000002264924335
+  },
+  "scope": "Finite checks and symbolic inverse proof only; no all-target occupancy theorem."
+}

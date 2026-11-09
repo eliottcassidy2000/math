@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "literal_binary_contexts": 12,
+  "rooted_invariant_sources": 119,
+  "literal_grafts": 357,
+  "exact_depth_bounds": 101,
+  "caveat": "Unit-gap necessity only nondegenerate k>=1; O(N log N) counts candidates, not bit operations."
+}

@@ -1,0 +1,7 @@
+order 1 classes 1 mass 1 degree_compatible_labellings 1
+order 2 classes 1 mass 2 degree_compatible_labellings 1
+order 3 classes 2 mass 8 degree_compatible_labellings 7
+order 4 classes 4 mass 64 degree_compatible_labellings 17
+order 5 classes 12 mass 1024 degree_compatible_labellings 173
+order 6 classes 56 mass 32768 degree_compatible_labellings 873
+order 7 classes 456 mass 2097152 degree_compatible_labellings 25367

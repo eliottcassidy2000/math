@@ -1,0 +1,143 @@
+{
+  "status": "PASS",
+  "core": [
+    37,
+    740,
+    269,
+    422,
+    132,
+    12,
+    21
+  ],
+  "class_code": 1147012,
+  "mask": 30,
+  "length": 1188,
+  "root": [
+    269,
+    422,
+    1
+  ],
+  "rooted_segment_lengths": [
+    108,
+    108,
+    108,
+    108,
+    108,
+    108,
+    108,
+    108,
+    108,
+    108,
+    108
+  ],
+  "rooted_segment_gains": [
+    34,
+    34,
+    34,
+    34,
+    34,
+    34,
+    34,
+    34,
+    -90,
+    -90,
+    -90
+  ],
+  "total_gain": 2,
+  "global_flanked_gap": 2,
+  "saturation_gcd": 37,
+  "first_x": 0,
+  "last_x": 0,
+  "first_y": 0,
+  "last_y": 1,
+  "checks": [
+    {
+      "k": 0,
+      "star_order": 12,
+      "size": 1,
+      "baseline_bitlength": 13,
+      "baseline_mod10000": 6057,
+      "last_mod10000": 6057
+    },
+    {
+      "k": 1,
+      "star_order": 1200,
+      "size": 2,
+      "baseline_bitlength": 1201,
+      "baseline_mod10000": 5309,
+      "last_mod10000": 5311
+    },
+    {
+      "k": 2,
+      "star_order": 2388,
+      "size": 3,
+      "baseline_bitlength": 2389,
+      "baseline_mod10000": 5521,
+      "last_mod10000": 5525
+    },
+    {
+      "k": 3,
+      "star_order": 3576,
+      "size": 4,
+      "baseline_bitlength": 3577,
+      "baseline_mod10000": 9493,
+      "last_mod10000": 9499
+    },
+    {
+      "k": 4,
+      "star_order": 4764,
+      "size": 5,
+      "baseline_bitlength": 4765,
+      "baseline_mod10000": 4025,
+      "last_mod10000": 4033
+    },
+    {
+      "k": 5,
+      "star_order": 5952,
+      "size": 6,
+      "baseline_bitlength": 5953,
+      "baseline_mod10000": 9917,
+      "last_mod10000": 9927
+    },
+    {
+      "k": 6,
+      "star_order": 7140,
+      "size": 7,
+      "baseline_bitlength": 7141,
+      "baseline_mod10000": 1969,
+      "last_mod10000": 1981
+    },
+    {
+      "k": 7,
+      "star_order": 8328,
+      "size": 8,
+      "baseline_bitlength": 8329,
+      "baseline_mod10000": 8981,
+      "last_mod10000": 8995
+    },
+    {
+      "k": 8,
+      "star_order": 9516,
+      "size": 9,
+      "baseline_bitlength": 9517,
+      "baseline_mod10000": 3753,
+      "last_mod10000": 3769
+    }
+  ],
+  "base_star_adjacency": [
+    2046,
+    4092,
+    3616,
+    1572,
+    1548,
+    1744,
+    1564,
+    3932,
+    3708,
+    3072,
+    2048,
+    121
+  ],
+  "base_direct_H": 6057,
+  "trace_sha256": "e70b9899e679fcb0e02c7ba98272798873ce9ccb3823fb9d8c2a718529eb6dfa"
+}

@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "AG_seeds": 5452,
+  "augmented_seeds": 10904,
+  "compatible_partial_walks": 108050,
+  "both_p_partial_walks": 216100,
+  "groups": [
+    {
+      "h": 33,
+      "q": 660,
+      "order2": 10,
+      "physical_AG_seeds": 176,
+      "compatible_p_partial_walks": 2318,
+      "opposite_p_partial_walks": 2318,
+      "closed_walks": [
+        0,
+        0
+      ]
+    },
+    {
+      "h": 33,
+      "q": 1320,
+      "order2": 10,
+      "physical_AG_seeds": 704,
+      "compatible_p_partial_walks": 13068,
+      "opposite_p_partial_walks": 13068,
+      "closed_walks": [
+        0,
+        0
+      ]
+    },
+    {
+      "h": 33,
+      "q": 2640,
+      "order2": 10,
+      "physical_AG_seeds": 2112,
+      "compatible_p_partial_walks": 56852,
+      "opposite_p_partial_walks": 56852,
+      "closed_walks": [
+        0,
+        0
+      ]
+    },
+    {
+      "h": 341,
+      "q": 5456,
+      "order2": 10,
+      "physical_AG_seeds": 492,
+      "compatible_p_partial_walks": 5266,
+      "opposite_p_partial_walks": 5266,
+      "closed_walks": [
+        0,
+        0
+      ]
+    },
+    {
+      "h": 341,
+      "q": 10912,
+      "order2": 10,
+      "physical_AG_seeds": 1968,
+      "compatible_p_partial_walks": 30546,
+      "opposite_p_partial_walks": 30546,
+      "closed_walks": [
+        0,
+        0
+      ]
+    }
+  ]
+}

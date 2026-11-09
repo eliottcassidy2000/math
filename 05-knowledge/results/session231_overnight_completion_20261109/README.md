@@ -107,3 +107,51 @@ Also audited in this checkpoint:
 Further arithmetic and target-placement rounds continue. Earlier proof
 candidates retained below their audited replacements are provenance, not
 claims of a complete proof.
+
+## Audited arithmetic and near-dyadic companions
+
+- [Near-dyadic twins](dyadic/PROOF.md): for every t >= 0, set m=17+84t,
+  P=(2^m-3672)/5096 and c=3672P+323f(P)+2539. Strong tournaments realize
+  2^k-c and 2^k-c-2 for every k >= m+1, on k-3 vertices. Their source
+  slope 2^m is optimal within the inherited positive-zero-tail dyadic route.
+  At t=0 the deficits are 98861 and 98863. The independent audit proves
+  the exact period, entry cost and limiting deficit ratio. Width remains two.
+- [Source inverse](source/PROOF.md): a rigorous one-candidate-per-cylinder
+  inverse for the inherited 2,732-label physical bank. Numerical running time
+  is O(sqrt(N) log N) for the fixed bank, not polynomial in the bit length.
+  This sharpens an inherited selection method but does not prove occupancy.
+- [Two-clock rigidity](source/ROUND2/PROOF.md): an all-context obstruction for
+  the specified equal-rate repeated-bit source model, with boundary and shift
+  cases included. The positive centered-palindrome family is inherited;
+  exact halfword coordinates and its square-root decoder are refinements.
+
+Independent reports: [dyadic](dyadic_audit/AUDIT.md),
+[source inverse](source_audit/REVIEW.md), and
+[two-clock analysis](source_audit/ROUND2_REVIEW.md).
+
+## Audited exact placement selector and graft boundary
+
+[Placement proof](placement/PROOF.md) and [independent audit](placement_audit/AUDIT.md)
+give a complete finite selector for this interval family with arbitrary
+singleton prefix/suffix contexts. Any successful target N satisfies
+5760*4096^k*2^m <= N-45, where m is the extra padding length. The search
+returns actual graphs, but has not been shown to accept every target.
+
+At the closing root, the interval is a pure-D four-state fiber. Iterating
+arbitrary grafts there produces spacing 2H_*, where H_* is the product of
+gadget Hamilton counts. For a nontrivial window, unit spacing forces every
+gadget to be transitive and yields only existing zero-suffix placements.
+The k=0 singleton boundary is explicitly excluded from that necessity claim.
+Rerooting and other non-ordinal changes remain possible escape routes.
+
+The main growing-width theorem is now routed as
+[THM-4960](../../../01-canon/theorems/THM-4960-twelve-bit-moving-core-consecutive-odd-intervals.md).
+Refinements to minimal loop length, quantitative diameter and alternative
+root choices are still being audited; their local files keep their status.
+
+The later [minimality and diameter audit](fiber_audit/MINIMALITY_PLACEMENT_AUDIT.md)
+now passes. Twelve is the minimum unit-loop length for this specific moving
+mechanism with physical cores of order at most nine. This is not a globally
+shortest interval-constructor claim. For any fixed-(h,q) one-core bank with m
+singleton positions, its equal-interface scalar diameter is at most
+m(q+2h-2)+q+2h. The common baseline-selection problem remains open.

@@ -1,0 +1,33 @@
+{
+  "all_parameter_checks": "t=0..8; analytic proof in AUDIT.md",
+  "arbitrary_context_checks": 12,
+  "block": 13937757016090795383111705,
+  "block_energy": 8276249774333076071621348,
+  "limit_c_over_2m": "57269513676081110771901207/75533314657546670029764568",
+  "limit_decimal": 0.758202045491184,
+  "literal_graphs": [
+    {
+      "core": 0,
+      "count": 163283,
+      "vertices": 15
+    },
+    {
+      "core": 0,
+      "count": 425427,
+      "vertices": 16
+    },
+    {
+      "core": 1,
+      "count": 163281,
+      "vertices": 15
+    },
+    {
+      "core": 1,
+      "count": 425425,
+      "vertices": 16
+    }
+  ],
+  "order_637": 84,
+  "reverse_block": 11485775830610390975213085,
+  "status": "PASS"
+}

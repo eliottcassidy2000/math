@@ -1,0 +1,23 @@
+duplicate 0 H 95 Q 5104
+duplicate 127 H 95 Q 5104
+duplicate 3175 H 1487 Q 26896
+duplicate 5080 H 2347 Q 37808
+duplicate 11363 H 1715 Q 30412
+duplicate 11811 H 2347 Q 37808
+duplicate 12700 H 2347 Q 37808
+duplicate 13521 H 895 Q 19604
+duplicate 13642 H 2623 Q 41348
+duplicate 14537 H 895 Q 19604
+duplicate 16383 H 95 Q 5104
+duplicate 16384 H 95 Q 5104
+duplicate 20067 H 2347 Q 37808
+duplicate 20956 H 2347 Q 37808
+duplicate 25841 H 895 Q 19604
+duplicate 25962 H 2623 Q 41348
+duplicate 26857 H 895 Q 19604
+duplicate 27687 H 2347 Q 37808
+duplicate 29144 H 1715 Q 30412
+duplicate 29592 H 1487 Q 26896
+duplicate 32640 H 95 Q 5104
+duplicate 32767 H 95 Q 5104
+checked 32768 unsaturated 19586 with_duplicate_interface 22 best 2

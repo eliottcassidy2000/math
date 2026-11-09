@@ -1,0 +1,11 @@
+{
+  "coefficient_row_checks": 921600,
+  "half_word_identity_checks": 9207,
+  "literal_graph_DP_checks": 45,
+  "scalar_decoder_targets": 20000,
+  "scope": "all-order bank rigidity proof; palindrome rays inherited; no completeness claim",
+  "sqrt_membership_targets": 10002,
+  "status": "PASS",
+  "transitive_support_checks": 6000,
+  "two_clock_templates": 7200
+}

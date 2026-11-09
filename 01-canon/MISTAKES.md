@@ -23764,3 +23764,35 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **What is true.** The entries of a letter matrix are linear in x, but the rows of the functional matrix are products of up to four letter matrices, with entries of degree 2 (depth 4) and 3 (depth 5), so a 15 x 15 minor has degree up to 30 (45) and eighteen points prove nothing about its vanishing. The statement is true: the audit found rank 14 at 65 integer points for the depth-4 matrix and 61 for the depth-5 matrix, which forces every 15 x 15 minor to vanish identically and makes the depth-4 span letter-invariant, hence the whole functional space; rankdrop.py now computes the entry degree (2) and tests 36 points against the bound 30. The determinant -x^13 (x - 2)(x + 2) of a nonsingular minor and the ranks 1, 13, 13 at x = 0, +-2 were correct.
 - **Consequences.** THM-4952 (B) and the note carry the corrected certificate; the receipt now matches the text. Minor corrections applied at the same time: the fixed point of the base-3 state sets was inferred from equal cardinalities (the audit verified set equality); the "first composite attained value without a strong realiser in any base" needed the audit's bases-6-7 census and the block-lemma argument for b >= 8; a transcription error (FC-FC 24 for 18 at n = 5); THM-4729 (3)-(4) cited for the strong-strong count.
 - **Process.** A degree bound was transferred from the generators (letters) to their products (functional rows) without recomputing it; the fix is one line (compute the maximal entry degree before counting points). Also: numbers quoted from a scratch run that differs from the committed script are not receipts.
+
+## MISTAKE-741 (2026-11-09, Session231 overnight research) -- empty-context typing, diagnostic mutation, inactive optimized checks, and width-versus-placement
+
+- **Demonstrated prepublication errors.** An exploratory ordinal calculation
+  treated a nonempty seven-coordinate law as if it had a naive empty-block
+  identity. A census diagnostic used map indexing for an absent target,
+  inserting an empty fiber and overstating the order-7/8 group totals by one.
+  A ribbon script used `assert` as a correctness gate, so optimized Python
+  could remove those checks. A draft's unit-window necessity statement omitted
+  the nontrivial-window condition k>=1.
+- **Repairs.** Empty contexts are omitted explicitly. The diagnostic uses
+  lookup without insertion; corrected counts are 104432 and 3385144, with
+  unchanged extrema. Independent sorted-record replay confirms those totals
+  and the order-9 result. Publication copies use explicit exception gates,
+  with normal/optimized replay and deliberate-failure controls. The graft
+  necessity statement now excludes the k=0 singleton boundary.
+- **Refuted exploratory conjecture.** A common erased interface need not miss
+  an even residue modulo eight. The order-eight h=477, q=6192 witness has
+  erased T values 1794,1818,1824,1854,1860: all four even residues occur, but
+  the gaps are 24,6,30,6. Residue support does not supply an interval.
+- **Strongest survivor.** THM-4960, `THM-4960-twelve-bit-moving-core-consecutive-odd-intervals.md`,
+  gives genuine unbounded consecutive-odd width. It uses a saturated h=45
+  core, not an unsaturated one, and moves one core instead of multiplying
+  many core counts. Its baselines are exponential; width alone does not prove
+  arbitrary target occupancy. The earlier h=95 family has fixed step 190,
+  even though its baselines are coprime to that step.
+- **Sources and lesson.** The complete packet is
+  `05-knowledge/results/session231_overnight_completion_20261109/`; independent
+  fiber, ribbon and placement audits are retained there. Test empty objects,
+  mutation-free diagnostics and optimized checker semantics before promotion.
+  Preserve endpoint bits, saturation and the actual interval center, not only
+  a scalar gap, gcd or residue set.

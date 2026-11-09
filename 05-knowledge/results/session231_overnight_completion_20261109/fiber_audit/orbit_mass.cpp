@@ -1,0 +1,7 @@
+#include <bits/stdc++.h>
+using namespace std;using U=uint64_t;
+int main(int argc,char**argv){int n=stoi(argv[1]);ifstream f(argv[2]);string line;set<U> canon;U mass=0,rows=0,leaves=0;U factorial=1;for(int i=2;i<=n;i++)factorial*=i;
+while(getline(f,line)){if(line.empty()||line[0]=='#')continue;istringstream ss(line);U code,H,c3,strong,sc,aut;ss>>code>>H>>c3>>strong>>sc>>aut;if(!ss)throw runtime_error("bad row");vector<int>a(n),d(n);int z=0;for(int i=0;i<n;i++)for(int j=i+1;j<n;j++,z++){if(code>>z&1)a[i]|=1<<j;else a[j]|=1<<i;}for(int i=0;i<n;i++)d[i]=__builtin_popcount((unsigned)a[i]);vector<vector<int>>groups(n);for(int i=0;i<n;i++)groups[d[i]].push_back(i);vector<int>p;U best=~U(0),count=0;
+function<void(int,U)>rec=[&](int k,U bits){if(k==n){leaves++;if(bits<best){best=bits;count=1;}else if(bits==best)count++;return;}int degree=0,pos=k;for(;degree<n;degree++){if(pos<(int)groups[degree].size())break;pos-=groups[degree].size();}for(int v:groups[degree]){if(find(p.begin(),p.end(),v)!=p.end())continue;U b=bits;for(int u:p)b=(b<<1)|((a[u]>>v)&1);p.push_back(v);rec(k+1,b);p.pop_back();}};rec(0,0);
+if(count!=aut||factorial%count)throw runtime_error("aut mismatch");if(!canon.insert(best).second)throw runtime_error("duplicate");mass+=factorial/count;rows++;if(rows%10000==0)cerr<<rows<<" "<<leaves<<endl;
+}if(mass!=(U(1)<<(n*(n-1)/2)))throw runtime_error("incomplete mass");cout<<"order "<<n<<" classes "<<rows<<" mass "<<mass<<" degree_compatible_labellings "<<leaves<<endl;}

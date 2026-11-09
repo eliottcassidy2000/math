@@ -1,0 +1,1 @@
+order 8 classes 6880 mass 268435456 degree_compatible_labellings 403193

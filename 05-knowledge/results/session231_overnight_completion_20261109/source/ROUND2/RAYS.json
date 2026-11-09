@@ -1,0 +1,2046 @@
+[
+  {
+    "bank": [
+      1,
+      1,
+      1
+    ],
+    "template": [
+      "",
+      "1",
+      "0000",
+      "1",
+      ""
+    ],
+    "coefficient_power": 4,
+    "constant": -13,
+    "v_poly": [
+      -1,
+      -15,
+      16
+    ],
+    "g_poly": [
+      -13,
+      15,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 6
+  },
+  {
+    "bank": [
+      1,
+      1,
+      1
+    ],
+    "template": [
+      "",
+      "1",
+      "0110",
+      "1",
+      ""
+    ],
+    "coefficient_power": 4,
+    "constant": -3,
+    "v_poly": [
+      -1,
+      -9,
+      16
+    ],
+    "g_poly": [
+      -3,
+      9,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 6
+  },
+  {
+    "bank": [
+      1,
+      1,
+      1
+    ],
+    "template": [
+      "",
+      "1",
+      "00",
+      "1",
+      ""
+    ],
+    "coefficient_power": 2,
+    "constant": -1,
+    "v_poly": [
+      -1,
+      -3,
+      4
+    ],
+    "g_poly": [
+      -1,
+      3,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 4
+  },
+  {
+    "bank": [
+      1,
+      1,
+      1
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 0,
+    "constant": 1,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 2
+  },
+  {
+    "bank": [
+      5,
+      0,
+      32
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 6,
+    "constant": 5,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 8
+  },
+  {
+    "bank": [
+      9,
+      2,
+      16
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 4,
+    "constant": 9,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 6
+  },
+  {
+    "bank": [
+      19,
+      0,
+      256
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 8,
+    "constant": 19,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      9,
+      1,
+      23
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 6,
+    "constant": 31,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 8
+  },
+  {
+    "bank": [
+      33,
+      4,
+      64
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 6,
+    "constant": 33,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 8
+  },
+  {
+    "bank": [
+      37,
+      6,
+      64
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 6,
+    "constant": 37,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 8
+  },
+  {
+    "bank": [
+      41,
+      2,
+      128
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 8,
+    "constant": 41,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      43,
+      6,
+      64
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 6,
+    "constant": 43,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 8
+  },
+  {
+    "bank": [
+      49,
+      4,
+      128
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 8,
+    "constant": 49,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      29,
+      5,
+      35
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 6,
+    "constant": 59,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 8
+  },
+  {
+    "bank": [
+      25,
+      1,
+      39
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 6,
+    "constant": 63,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 8
+  },
+  {
+    "bank": [
+      73,
+      4,
+      128
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 8,
+    "constant": 73,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      87,
+      10,
+      128
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 8,
+    "constant": 87,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      89,
+      12,
+      128
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 8,
+    "constant": 89,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      91,
+      18,
+      128
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 8,
+    "constant": 91,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      101,
+      10,
+      256
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 8,
+    "constant": 101,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      103,
+      16,
+      128
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 8,
+    "constant": 103,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      61,
+      19,
+      67
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 8,
+    "constant": 109,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      57,
+      13,
+      71
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 8,
+    "constant": 115,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      59,
+      11,
+      69
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 8,
+    "constant": 117,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      45,
+      7,
+      83
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 8,
+    "constant": 121,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      39,
+      5,
+      89
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 8,
+    "constant": 123,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      131,
+      14,
+      256
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 8,
+    "constant": 131,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      139,
+      16,
+      256
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 8,
+    "constant": 139,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      109,
+      25,
+      147
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 8,
+    "constant": 231,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      111,
+      23,
+      145
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 8,
+    "constant": 233,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      117,
+      19,
+      139
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 8,
+    "constant": 237,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      103,
+      17,
+      153
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 8,
+    "constant": 239,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      115,
+      15,
+      141
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 8,
+    "constant": 241,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      89,
+      13,
+      167
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 8,
+    "constant": 243,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      103,
+      9,
+      153
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 8,
+    "constant": 247,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      81,
+      7,
+      175
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 8,
+    "constant": 249,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      65,
+      5,
+      191
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 8,
+    "constant": 251,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 10
+  },
+  {
+    "bank": [
+      1,
+      1,
+      1
+    ],
+    "template": [
+      "",
+      "1",
+      "000",
+      "1",
+      ""
+    ],
+    "coefficient_power": 3,
+    "constant": -5,
+    "v_poly": [
+      -1,
+      -7,
+      8
+    ],
+    "g_poly": [
+      -5,
+      7,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 5
+  },
+  {
+    "bank": [
+      1,
+      1,
+      1
+    ],
+    "template": [
+      "",
+      "1",
+      "010",
+      "1",
+      ""
+    ],
+    "coefficient_power": 3,
+    "constant": -1,
+    "v_poly": [
+      -1,
+      -5,
+      8
+    ],
+    "g_poly": [
+      -1,
+      5,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 5
+  },
+  {
+    "bank": [
+      1,
+      1,
+      1
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 1,
+    "constant": 1,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 3
+  },
+  {
+    "bank": [
+      5,
+      0,
+      32
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 5,
+    "constant": 5,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 7
+  },
+  {
+    "bank": [
+      9,
+      2,
+      16
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 5,
+    "constant": 9,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 7
+  },
+  {
+    "bank": [
+      19,
+      0,
+      256
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 9,
+    "constant": 19,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 11
+  },
+  {
+    "bank": [
+      9,
+      1,
+      23
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 5,
+    "constant": 31,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 7
+  },
+  {
+    "bank": [
+      33,
+      4,
+      64
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 7,
+    "constant": 33,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      37,
+      6,
+      64
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 7,
+    "constant": 37,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      41,
+      2,
+      128
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 7,
+    "constant": 41,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      43,
+      6,
+      64
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 7,
+    "constant": 43,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      49,
+      4,
+      128
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 7,
+    "constant": 49,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      29,
+      5,
+      35
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 7,
+    "constant": 59,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      25,
+      1,
+      39
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 7,
+    "constant": 63,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      73,
+      4,
+      128
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 7,
+    "constant": 73,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      87,
+      10,
+      128
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 7,
+    "constant": 87,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      89,
+      12,
+      128
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 7,
+    "constant": 89,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      91,
+      18,
+      128
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 7,
+    "constant": 91,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      101,
+      10,
+      256
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 9,
+    "constant": 101,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 11
+  },
+  {
+    "bank": [
+      103,
+      16,
+      128
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      ""
+    ],
+    "coefficient_power": 7,
+    "constant": 103,
+    "v_poly": [
+      -1,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      61,
+      19,
+      67
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 7,
+    "constant": 109,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      57,
+      13,
+      71
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 7,
+    "constant": 115,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      59,
+      11,
+      69
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 7,
+    "constant": 117,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      45,
+      7,
+      83
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 7,
+    "constant": 121,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      39,
+      5,
+      89
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      ""
+    ],
+    "coefficient_power": 7,
+    "constant": 123,
+    "v_poly": [
+      0,
+      0,
+      1
+    ],
+    "g_poly": [
+      1,
+      0,
+      1
+    ],
+    "parity": 0,
+    "minimum_exponent": 9
+  },
+  {
+    "bank": [
+      131,
+      14,
+      256
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 9,
+    "constant": 131,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 11
+  },
+  {
+    "bank": [
+      139,
+      16,
+      256
+    ],
+    "template": [
+      "",
+      "1",
+      "",
+      "1",
+      "1"
+    ],
+    "coefficient_power": 9,
+    "constant": 139,
+    "v_poly": [
+      -1,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      0
+    ],
+    "parity": 1,
+    "minimum_exponent": 11
+  },
+  {
+    "bank": [
+      109,
+      25,
+      147
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 9,
+    "constant": 231,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 11
+  },
+  {
+    "bank": [
+      111,
+      23,
+      145
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 9,
+    "constant": 233,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 11
+  },
+  {
+    "bank": [
+      117,
+      19,
+      139
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 9,
+    "constant": 237,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 11
+  },
+  {
+    "bank": [
+      103,
+      17,
+      153
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 9,
+    "constant": 239,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 11
+  },
+  {
+    "bank": [
+      115,
+      15,
+      141
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 9,
+    "constant": 241,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 11
+  },
+  {
+    "bank": [
+      89,
+      13,
+      167
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 9,
+    "constant": 243,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 11
+  },
+  {
+    "bank": [
+      103,
+      9,
+      153
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 9,
+    "constant": 247,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 11
+  },
+  {
+    "bank": [
+      81,
+      7,
+      175
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 9,
+    "constant": 249,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 11
+  },
+  {
+    "bank": [
+      65,
+      5,
+      191
+    ],
+    "template": [
+      "1",
+      "0",
+      "",
+      "0",
+      "0"
+    ],
+    "coefficient_power": 9,
+    "constant": 251,
+    "v_poly": [
+      0,
+      0,
+      2
+    ],
+    "g_poly": [
+      1,
+      0,
+      2
+    ],
+    "parity": 0,
+    "minimum_exponent": 11
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "contexts": 496,
+  "scalar_values": 13888,
+  "k_max": 6,
+  "h95_residues": [
+    149,
+    169,
+    119,
+    149,
+    169,
+    119,
+    149
+  ],
+  "h95_five_coordinate_period3": true
+}

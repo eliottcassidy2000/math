@@ -1,0 +1,17 @@
+bucket 0 classes 478 groups 237988 records 244736 mixed_parity 0 maxrun 2 unsatmax 2
+bucket 1 classes 388 groups 186980 records 198656 mixed_parity 0 maxrun 2 unsatmax 2
+bucket 2 classes 464 groups 229108 records 237568 mixed_parity 0 maxrun 2 unsatmax 2
+bucket 3 classes 408 groups 199280 records 208896 mixed_parity 0 maxrun 2 unsatmax 2
+bucket 4 classes 439 groups 216000 records 224768 mixed_parity 0 maxrun 3 unsatmax 2
+bucket 5 classes 386 groups 191896 records 197632 mixed_parity 0 maxrun 2 unsatmax 2
+bucket 6 classes 453 groups 218008 records 231936 mixed_parity 0 maxrun 3 unsatmax 2
+bucket 7 classes 446 groups 216480 records 228352 mixed_parity 0 maxrun 2 unsatmax 2
+bucket 8 classes 467 groups 228360 records 239104 mixed_parity 0 maxrun 2 unsatmax 2
+bucket 9 classes 452 groups 222460 records 231424 mixed_parity 0 maxrun 2 unsatmax 2
+bucket 10 classes 393 groups 195860 records 201216 mixed_parity 0 maxrun 2 unsatmax 2
+bucket 11 classes 370 groups 184148 records 189440 mixed_parity 0 maxrun 2 unsatmax 2
+bucket 12 classes 440 groups 217996 records 225280 mixed_parity 0 maxrun 2 unsatmax 2
+bucket 13 classes 466 groups 228488 records 238592 mixed_parity 0 maxrun 2 unsatmax 2
+bucket 14 classes 438 groups 218224 records 224256 mixed_parity 0 maxrun 2 unsatmax 2
+bucket 15 classes 392 groups 193868 records 200704 mixed_parity 0 maxrun 2 unsatmax 2
+TOTAL classes 6880 groups 3385144 records 3522560 mixed_parity 0 maxrun 3 unsatmax 2

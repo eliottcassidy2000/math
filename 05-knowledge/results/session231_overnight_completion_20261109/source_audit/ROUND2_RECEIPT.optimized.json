@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "coefficient_row_cases": 43800,
+  "pure_dyadic_controls": 622,
+  "reversal_lemma_controls": 32576,
+  "halfword_checks": 4599,
+  "literal_graph_checks": 21,
+  "clock_retaining_decoder_queries": 34068,
+  "scope": "Two-clock rigidity under odd a only; inherited centered fans with refined decoder; no coverage conclusion."
+}

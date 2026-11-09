@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "context_checks": 560,
+  "scope": "k=0..3,total padding<=4,j=0 or k",
+  "positive_targets": [
+    9909,
+    25031,
+    55275
+  ],
+  "negative_target": 9907
+}

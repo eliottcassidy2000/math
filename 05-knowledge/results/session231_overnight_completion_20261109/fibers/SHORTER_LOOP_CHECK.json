@@ -1,0 +1,68 @@
+{
+  "status": "PASS no unit loop shorter than12 in complete core-order<=9 bank",
+  "saturated_signature_rows": 302644,
+  "content_one_rows": 230568,
+  "partial_walks": 108050,
+  "groups": [
+    {
+      "h": 33,
+      "q": 660,
+      "order2": 10,
+      "physical_AG_seeds": 176,
+      "lengths": [
+        10
+      ],
+      "partial_walks": 2318,
+      "closed_walks": 0,
+      "gains": []
+    },
+    {
+      "h": 33,
+      "q": 1320,
+      "order2": 10,
+      "physical_AG_seeds": 704,
+      "lengths": [
+        10
+      ],
+      "partial_walks": 13068,
+      "closed_walks": 0,
+      "gains": []
+    },
+    {
+      "h": 33,
+      "q": 2640,
+      "order2": 10,
+      "physical_AG_seeds": 2112,
+      "lengths": [
+        10
+      ],
+      "partial_walks": 56852,
+      "closed_walks": 0,
+      "gains": []
+    },
+    {
+      "h": 341,
+      "q": 5456,
+      "order2": 10,
+      "physical_AG_seeds": 492,
+      "lengths": [
+        10
+      ],
+      "partial_walks": 5266,
+      "closed_walks": 0,
+      "gains": []
+    },
+    {
+      "h": 341,
+      "q": 10912,
+      "order2": 10,
+      "physical_AG_seeds": 1968,
+      "lengths": [
+        10
+      ],
+      "partial_walks": 30546,
+      "closed_walks": 0,
+      "gains": []
+    }
+  ]
+}
