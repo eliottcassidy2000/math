@@ -148,7 +148,8 @@ Every class of order n is put in the first category that fits, in this order:
 **Lesson from R7 and R8.** "Pendant" is one instance of the general mechanism, small arc-strong connectivity. The
 right invariant is lambda, in section 3.3.
 
-**Answer to the owner's question, through order 10.** Every tournament is one of the following:
+**Answer to the owner's question, through order 11.** Through order 10 this follows from the census and lambda <= 2.
+At order 11 it follows from the exhaustive lambda >= 3 list in section 3.3. Every tournament is one of the following:
 - a first creator;
 - a first creator plus one vertex;
 - an ordinal sum;
@@ -161,8 +162,15 @@ Each operation has an explicit H-calculus:
 - the path-cover profile of the module;
 - the two-path-cover transfer of the graft calculus (Sessions 225-229).
 
-So every tournament through order 10 is generated from the first creators, which make up 88.8% of all classes at
+So every tournament through order 11 is generated from the first creators, which make up 88.8% of all classes at
 order 10.
+
+At order 11 the argument runs as follows:
+- A non-first-creator with lambda <= 2 falls in the last category.
+- A non-first-creator with lambda >= 3 is one of the seven classes of section 3.3, all substitutions.
+- A first creator is a first creator.
+
+No class-level census of order 11 is needed.
 
 ### 3.2 Connectivity and degrees (PROVED)
 
@@ -215,8 +223,18 @@ Through order 10:
 - Four of them, 11,475, 15,213, 15,273 and 15,561, already lie in S(10). Those tournaments are not first creators,
   although every score lies in [3, 7].
 - So the threshold k*(n), the largest lambda of a non-first-creator of order n, is 1 through order 8, 2 at orders 9
-  and 10, and at least 3 at order 11. The generation description of section 3.1 needs one more arc at order 11
-  (HYP-9532 (D)).
+  and 10, and at least 3 at order 11 (HYP-9532 (D)).
+
+**But the generation grammar survives at order 11.**
+- `lam11_all.c` lists all 97 (class, pattern) pairs. Canonicalised (`canon11.c`), they give 11 classes:
+  - 4 first creators: 14,787 (1 class), 15,637 (1) and 15,703 (2);
+  - 7 non-first-creators: 11,475 (1 class), 15,213 (2), 15,273 (2) and 15,561 (2).
+- Every one of the seven non-first-creators has a nontrivial module, so it is a substitution. Six of them also have a
+  first-creator deletion.
+- The floor class (H = 11,475, |Aut| = 25) is C3[R5, R5, 1]. A 3-cycle has two regular 5-tournaments (H = 15, the
+  first creators of 15) and one vertex substituted for its vertices. So it is built literally from first creators.
+- Since this list is complete for lambda >= 3, the five-operation description of section 3.1 holds exactly at order
+  11 too ([lambda3_witnesses_order11.txt](lambda3_witnesses_order11.txt)).
 
 **Growth of f_3.** The ratios f_3(n + 1)/f_3(n) are 3.63, 3.31, 2.80 and 1.99 (n = 7..10). The ratios
 max H(n)/max H(n - 1) are 4.2, 3.5, 5.1, 4.7 and 6.0 (n = 7..11). So the 3-arc-strong floor falls behind the

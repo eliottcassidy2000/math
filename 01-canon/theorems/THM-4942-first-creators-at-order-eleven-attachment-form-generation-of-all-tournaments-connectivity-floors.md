@@ -1,6 +1,6 @@
 ---
 id: THM-4942
-title: "First creators at order 11 and the generation of every tournament from them: H(T + v) is an explicit quadratic form in the attachment pattern (split-path coefficients); every value new at order 11 is created by a one-vertex extension of an order-10 first creator, there is no hypo analogue at order 11, and every first creator of order <= 10 is fertile; through order 10 every tournament is a first creator, a first creator plus a vertex, an ordinal sum, a substitution, or an ordinal sum re-connected by at most two arcs, because the connectivity floor f_3(n) exceeds max H(n - 1) (for n <= 13, lambda >= 3 iff all scores lie in [3, n - 4]); this fails at order 11 (3-arc-strong 11-tournaments with H = 15,213 in S(10)); strong fibers are finite antichains; exactly eleven odd values up to 95,095 are born at their Busch bound, 63 the largest"
+title: "First creators at order 11 and the generation of every tournament from them: H(T + v) is an explicit quadratic form in the attachment pattern (split-path coefficients); every value new at order 11 is created by a one-vertex extension of an order-10 first creator, there is no hypo analogue at order 11, and every first creator of order <= 10 is fertile; through order 11 every tournament is a first creator, a first creator plus a vertex, an ordinal sum, a substitution, or an ordinal sum re-connected by at most two arcs. Through order 10 this is because the connectivity floor f_3(n) exceeds max H(n - 1) (for n <= 13, lambda >= 3 iff all scores lie in [3, n - 4]). At order 11, f_3(11) = 11,475 < max H(10), but the seven 3-arc-strong non-first-creator classes are all substitutions, the floor being C3[R5, R5, 1]; strong fibers are finite antichains; exactly eleven odd values up to 95,095 are born at their Busch bound, 63 the largest"
 status: >
   PROVED (elementary):
   - the attachment form (section 1 of PROOF.md), with W, L, M given by split Hamiltonian paths;
@@ -16,7 +16,8 @@ status: >
   - fertility at orders 3-10 (all first creators fertile; at least half the patterns fertile except the two creators
     of 63);
   - the generation census at orders 3-10, where pre-registered R6 and R9 were CONFIRMED and R7 and R8 FAILED: the
-    pendant refinement misses 344 order-10 classes, all with lambda <= 2;
+    pendant refinement misses 344 order-10 classes, all with lambda <= 2. The five-operation description holds
+    through order 11: at order 11 the 7 non-first-creator classes with lambda >= 3 are all substitutions;
   - the connectivity floors f_k(n) for n <= 10, and lambda >= 3 implies first creator at orders <= 10;
   - order 11 (pre-registered, c201ec7b34): R10 and R11 CONFIRMED. f_3(11) = 11,475. The seven 3-arc-strong values
     below 15,745 include four in S(10): 11,475, 15,213, 15,273 and 15,561.
@@ -71,7 +72,7 @@ reversals that make T non-strong. f_k(n) is the least H over n-tournaments with 
    - Every value new at order 11 is created by a one-vertex extension of an order-10 first creator.
    - There is no hypo analogue.
    - Every order-10 first creator is fertile, with at least half its patterns fertile.
-3. **(FINITE-EXACT) Generation, orders 3-10.** Every tournament is one of the following:
+3. **(FINITE-EXACT) Generation, orders 3-11.** Every tournament is one of the following:
    - a first creator;
    - a first creator plus a vertex;
    - an ordinal sum;
@@ -81,8 +82,9 @@ reversals that make T non-strong. f_k(n) is the least H over n-tournaments with 
    - For n <= 13, lambda >= 3 is equivalent to all scores lying in [3, n - 4].
    - For n <= 10, f_3(n) > max H(n - 1): the values are 171 > 45, 621 > 189, 2,055 > 661 and 5,753 > 3,357. So every
      such tournament is a first creator.
-   - At order 11, f_3(11) = 11,475 < 15,745 = max H(10). There are 3-arc-strong 11-tournaments that are not first
-     creators.
+   - At order 11, f_3(11) = 11,475 < 15,745 = max H(10). Exactly 7 classes of 3-arc-strong 11-tournaments are not
+     first creators. All 7 are substitutions, and 6 also extend a first creator. The floor is C3[R5, R5, 1],
+     built from first creators, so item 3 still holds at order 11.
 5. **(PROVED) Strong fibers** of every value are finite antichains under induced embedding, of order at most B(h).
 6. **(FINITE-EXACT) Values born at their Busch bound** through 95,095: exactly 3, 5, 9, 11, 13, 17, 19, 23, 35, 39 and
    63.

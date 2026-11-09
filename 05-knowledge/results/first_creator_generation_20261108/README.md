@@ -23,7 +23,7 @@ concepts and constructions.
    - No hypo analogue exists at order 11.
    - Every order-10 first creator is fertile, with at least 564 of its 1,024 extensions first creators.
    - At orders 3-10 the only first creators with fewer than half their extensions fertile are the two creators of 63.
-3. **Generating every tournament (orders 3-10).** Every class is one of the following:
+3. **Generating every tournament (orders 3-11).** Every class is one of the following:
    - a first creator: 88.8% of all classes at order 10;
    - a first creator plus one vertex;
    - an ordinal sum;
@@ -39,7 +39,10 @@ concepts and constructions.
      creator. (For n <= 13, lambda >= 3 is equivalent to min degree >= 3, which is proved.)
    - At order 11 this fails (R10, R11 CONFIRMED, by exhaustive search): f_3(11) = 11,475 < 15,745 = max H(10).
      Four of the seven 3-arc-strong values below 15,745 already occur at order 10: 11,475, 15,213, 15,273 and
-     15,561. So the generation grammar needs one more arc at order 11.
+     15,561.
+   - Yet the five-operation grammar survives at order 11. All 7 such non-first-creator classes are substitutions.
+     The floor is C3[R5, R5, 1]: a 3-cycle with two regular 5-tournaments and a vertex substituted, all first
+     creators.
 5. **Fibers.**
    - Strong realizations of a value form a finite antichain (proved).
    - The odd values born at their Busch bound, through 95,095, are exactly 3, 5, 9, 11, 13, 17, 19, 23, 35, 39 and 63.
@@ -63,7 +66,8 @@ concepts and constructions.
 | `analyze11.py`, `order11_summary.txt` | evaluation of R1-R5, with the per-slice logs |
 | `gen.c`, `census_3_10.txt` | the generation census at orders 3-10. Lambda, pendant and cut-vertex diagnostics were added after the R7/R8 evaluation |
 | `lam.c`, `floors_4_10.txt`; `mindeg.py`, `mindeg10.c`, `mindeg_4_10.txt` | connectivity floors and degree tables |
-| `lam11.c`, `lam11_summary.txt` | the exhaustive order-11 search of 3-arc-strong tournaments with H <= 15,745 (R10, R11) |
+| `lam11.c`, `lam11_summary.txt`; `lam11_all.c`, `lambda3_witnesses_order11.txt` | the exhaustive order-11 search of 3-arc-strong tournaments with H <= 15,745 (R10, R11), and all 97 witnesses (11 classes) |
+| `witnesses_order11.txt` | one witness per value new at order 11: an order-10 first creator and a pattern (R1) |
 | `merge.py` | slice merging for the validation runs |
 | `audit/` | the independent audit |
 

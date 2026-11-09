@@ -1,0 +1,15 @@
+# canonical classes of the 3-arc-strong 11-tournaments with H <= 15745 (canon11.c over lambda3_witnesses_order11.txt): canonical code, H, status, |Aut|
+12788420013728824 15213 inS10 3
+12788420013732913 15637 new 1
+12788420014255153 15703 new 1
+26034236593546296 15561 inS10 3
+26035353419266067 11475 inS10 25
+26299218895840312 15273 inS10 3
+26299218895844401 15703 new 1
+34602730708804664 14787 new 9
+34602730708808753 15213 inS10 3
+34602730709330993 15273 inS10 3
+34602748022896675 15561 inS10 3
+# lam3_all.py: EXT (first-creator deletion) / SUB (nontrivial module) for the 57 pairs with H in S(10)
+pairs with H in S(10): 57; EXT 54, SUB 57, both 54, neither 0
+{15213: {'EXTSUB'}, 15561: {'EXTSUB'}, 15273: {'EXTSUB'}, 11475: {'SUB'}}
