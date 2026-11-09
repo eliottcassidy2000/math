@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-09: First-creator generation scope, orientation and recovered priority
+
+- **Initial source:** THM-4942 / `first_creator_generation_20261108` at f870c2abf. x_a=[a->v] was confused with its complementary beaten set; existential parent-per-value evidence was promoted to every class; finite strong-first-birth evidence was written globally. The old edge a->b with x={a} is a neutral prefix, not a suffix.
+- **Current repair:** concurrent S17 audit commit eea6f39cc supplies the formerly missing audit, fixes those scopes, and additionally proves the finite class-level genealogy through order11 by a new exhaustive deletion-count test. That result must not be erased by the earlier untested-status review.
+- **Mechanism:** the birth library is order-minimal, not an irredundant basis: H5=C3[TT2,1,1]. The degree/cut threshold is already THM-4811(B); Session230's initial generalization independently recovered it, and now credits the prior result. The attachment form is already THM-4097/4114. The Busch-bound list is exact on S(11), including every attained odd h<=80,451, not every odd h<=95,095.
+- **Evidence and survivor:** [Session230 baseline review with current update](../05-knowledge/results/session230_creator_grammar_20261109/audit/REVIEW.md) and [S17 full independent audit](../05-knowledge/results/first_creator_generation_20261108/audit/AUDIT.md). The finite five-operation grammar survives through11; neither audit proves its all-order extension or Chan–Pak completeness.
+
 ## 2026-11-07: Session222 repairs the doubling tiling gauge and affine fiber
 
 - **Affected source:** [THM-452, doubling tiling coset law](theorems/THM-452-doubling-tiling-coset-law.md), sections1–3 and6. The exact block construction survives.

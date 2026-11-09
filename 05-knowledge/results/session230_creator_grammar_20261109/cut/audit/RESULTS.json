@@ -1,0 +1,64 @@
+{
+  "attachments": 33866,
+  "bases": 1099,
+  "connectivity_tournaments": 33866,
+  "curvature_faces": 83506,
+  "mincut_birth_certificates": 330,
+  "mixed_differences": 220387,
+  "residual_word_count": 31,
+  "residual_words": {
+    "2": [
+      1
+    ],
+    "3": [
+      2
+    ],
+    "4": [
+      4,
+      5
+    ],
+    "5": [
+      7,
+      8,
+      9,
+      11
+    ],
+    "6": [
+      12,
+      13,
+      15,
+      16,
+      18,
+      19,
+      22,
+      23,
+      25
+    ]
+  },
+  "sharp_examples": [
+    {
+      "backward_cut": 0,
+      "k": 1,
+      "n": 6,
+      "semidegree": 1
+    },
+    {
+      "backward_cut": 1,
+      "k": 2,
+      "n": 10,
+      "semidegree": 2
+    },
+    {
+      "backward_cut": 1,
+      "k": 3,
+      "n": 14,
+      "semidegree": 3
+    },
+    {
+      "backward_cut": 1,
+      "k": 4,
+      "n": 18,
+      "semidegree": 4
+    }
+  ]
+}

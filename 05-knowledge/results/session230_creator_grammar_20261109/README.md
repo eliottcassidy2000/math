@@ -1,65 +1,66 @@
-# Session 230: creator fibers and structural generation
+# Session 230: first creators, prime kernels and positive cut growth
 
-**Status: ACTIVE RESEARCH CHECKPOINT. No new global completeness claim.**
+**Status:** independently audited proofs and exact finite certificates;
+publication and final integrity verification in progress. Chan–Pak
+completeness and the all-order five-operation grammar remain OPEN.
 
-The task is to follow the first structures realizing an odd Hamiltonian-path
-count, and ask which controlled operations generate all tournament classes.
-Chan–Pak completeness remains OPEN. First appearances are defined only for
-attained counts; 7 and 21 are globally excluded by the cited prior proofs.
+[Read the synthesis](SYNTHESIS.md).
 
-## Inheritance and distinct questions
+## Results
 
-The baseline is main commit `f870c2abf10f08ac8648923e313ca417e5e797f3`.
+- **63 is an operation-relative orphan.** Its two first creators are W5
+  substitutions with three transitive-pair modules. They need no new prime
+  seed. The entire previously known Mersenne fan family has two prime
+  kernels: W5 for even exponents, W7 for odd exponents.
+- **Birth minima are not structural primitives.** The complete birth library
+  is redundant under substitution (already at H=5), yet insufficient under
+  substitution alone: prime W7 has the old count31. An independently
+  certified census first finds eight prime noncreators at order seven and
+  214 at order eight.
+- **Controlled prime growth has an exact law.** The critical alternating-hub
+  family satisfies H(W_(n+2))=4H(W_n)-n. The cited Schmerl–Trotter
+  classification gives an all-order creator-rooted grammar with proper
+  substitution, prime-preserving one-vertex growth, and only three explicit
+  critical-family two-vertex lifts. This is not a minimal basis or a proof
+  that every odd count occurs.
+- **The omission proof object computes generation.** An explicit positive
+  odd-cycle/even-path kernel gives every attachment as H+2 times a directed
+  cut, with a minimum-cut birth certificate. A 31-word certificate excludes
+  7 and21 for all apex-transitive tournaments without using their global
+  exclusion. Prior directed-cut calculus is explicitly credited.
+- **Recovered sharp connectivity boundary (THM-4811).** Minimum semidegree>=k implies
+  connectivity>=k exactly up to the universal order threshold4k+1, sharp at
+  4k+2. The floor-based near-ordinal-sum consequence itself holds at every
+  order when its H-floor hypothesis holds.
 
-- Session224 proves that a birth fiber need not be one converse orbit: H=9
-  has two self-converse classes at order five. Retain the entire fiber.
-- THM-4922 / `first_creators_genealogy_20261107` supplies the two H=63 orphan
-  creators and the class-level creator-deletion census through order ten.
-- THM-4942 / `first_creator_generation_20261108` supplies a five-operation
-  grammar through order eleven. Its numerical census and its proof status
-  are being audited here, not silently promoted to an all-order theorem.
-- THM-4169 supplies the cited Schmerl–Trotter prime-deletion route.
-- THM-4114 and THM-4118 already supply directed-cut/submodular attachment
-  responses and show that a gcd-two response lattice need not be a solid
-  interval. Reusing these mechanisms is not a novelty claim.
+## Proofs and audits
 
-A birth library is minimal in **vertex order for a prescribed count**. It is
-not automatically an irredundant algebraic generating set. An all-class
-construction is also strictly stronger than realizing each scalar count.
+- [Prime kernels, fan decomposition and grammar](primes/REPORT.md) ·
+  [independent orbit-mass and proof audit](primes/audit/REPORT.md).
+- [Positive cut kernel and subclass omissions](cut/PROOF.md) ·
+  [independent audit](cut/audit/AUDIT.md).
+- [Review of inherited order-eleven grammar and sharp connectivity proof](audit/REVIEW.md).
 
-## Portfolio and decisive probes
+The incoming S17 full independent audit applied its orientation and scope repairs and settled class-level creator genealogy through order eleven. We preserve that stronger result and its source. Session230 did **not** rerun the huge census; it independently checked all97 exceptional witnesses and the complete order-eight class certificate. The earlier missing-audit finding is retained only as baseline history in our scoped review.
 
-1. **Anchor: structural grammar.** Audit the finite grammar, investigate
-   substitution-prime obstructions, and decompose the H=63 orphan pair.
-2. **Niche: sharp connectivity threshold.** Generalize the degree/cut argument
-   and test the sharp boundary rather than extrapolating order eleven.
-3. **Wildcard: proof objects as operations.** Refine the odd-cycle packing to
-   an explicit attachment-cut kernel, crediting prior cut calculus, then
-   determine what it can certify about missing values and minimum growth.
+## Reproduce
 
-The concept board is birth fibers, modular primes, SCC words, cut capacity,
-and odd-cycle packings. A result must retain the lost coordinate (class,
-attachment, or cycle incidence), not replace it by scalar H.
+From repository root, with Python3 and gcc:
 
-## Preliminary verified distinctions
+    python3 05-knowledge/results/session230_creator_grammar_20261109/verify.py
+    python3 05-knowledge/results/session230_creator_grammar_20261109/verify.py --optimized
 
-The two-vertex transitive tournament TT2 and a directed triangle C3 generate
-C3[TT2,1,1], the unique strong four-vertex class with H=5. Thus even this first
-creator is redundant once ordinal sum and substitution are allowed. This
-small example disproves the claim that the complete first-creator library
-is a minimal basis for that grammar. It does not disprove generation.
+The runner builds the inherited candidate-class generator in a temporary
+copy, then executes eight checks against frozen receipts. The independent
+canonical-form/orbit-mass certificate proves completeness through order
+eight, with class totals1,1,2,4,12,56,456,6880. All Python checks remain active
+under optimization. No existing research files are overwritten by replay.
 
-A fresh independent check of the 97 supplied order-eleven witnesses confirms
-their path counts and connectivity and identifies eleven isomorphism classes,
-including seven non-first-creator candidates with nontrivial modules. This
-is witness soundness, not a fresh replay of the full large census or of all
-membership labels in S(10). The detailed receipt will follow in a checked
-checkpoint.
+## Scope
 
-## Remaining obligations
-
-Finish independent review of the new structural and kernel statements;
-publish self-contained witnesses, optimization-safe checks and receipts;
-separate recovered results, proved reductions, finite evidence and OPEN
-claims; then verify every checkpoint on remote main. No arbitrary vertex
-insertion or arc rewriting is presented as a solution to the research goal.
+No single representative per count is treated as the whole birth fiber.
+No arbitrary insertion or unrestricted same-size arc rewriting is passed
+off as a structural theorem. Count existence, class generation and minimal
+basis are separate problems. First-birth strongness and creator ancestry
+outside their verified ranges remain open; the all-order grammar has a
+cited classification dependency, not a new independent classification.

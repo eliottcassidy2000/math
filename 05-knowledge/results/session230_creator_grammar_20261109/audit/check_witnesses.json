@@ -1,0 +1,215 @@
+{
+  "pairs": 97,
+  "classes": [
+    {
+      "h": 15213,
+      "status": "inS10",
+      "a": [
+        1104,
+        1029,
+        1033,
+        1027,
+        14,
+        1183,
+        830,
+        351,
+        575,
+        191,
+        976
+      ],
+      "multiplicity": 9,
+      "has_module": true
+    },
+    {
+      "h": 15637,
+      "status": "new",
+      "a": [
+        1090,
+        1044,
+        1033,
+        1027,
+        13,
+        1183,
+        830,
+        351,
+        575,
+        191,
+        976
+      ],
+      "multiplicity": 11,
+      "has_module": false
+    },
+    {
+      "h": 15703,
+      "status": "new",
+      "a": [
+        1092,
+        1041,
+        1034,
+        1027,
+        13,
+        1183,
+        830,
+        351,
+        575,
+        191,
+        976
+      ],
+      "multiplicity": 11,
+      "has_module": false
+    },
+    {
+      "h": 15703,
+      "status": "new",
+      "a": [
+        1090,
+        1044,
+        1033,
+        1027,
+        13,
+        1183,
+        446,
+        799,
+        575,
+        127,
+        976
+      ],
+      "multiplicity": 11,
+      "has_module": false
+    },
+    {
+      "h": 15213,
+      "status": "inS10",
+      "a": [
+        1058,
+        52,
+        41,
+        35,
+        13,
+        1936,
+        1087,
+        351,
+        607,
+        223,
+        926
+      ],
+      "multiplicity": 9,
+      "has_module": true
+    },
+    {
+      "h": 15561,
+      "status": "inS10",
+      "a": [
+        1072,
+        1029,
+        1033,
+        1027,
+        14,
+        1246,
+        799,
+        351,
+        575,
+        191,
+        976
+      ],
+      "multiplicity": 9,
+      "has_module": true
+    },
+    {
+      "h": 15273,
+      "status": "inS10",
+      "a": [
+        1104,
+        1029,
+        1033,
+        1027,
+        14,
+        1183,
+        446,
+        799,
+        575,
+        127,
+        976
+      ],
+      "multiplicity": 9,
+      "has_module": true
+    },
+    {
+      "h": 14787,
+      "status": "new",
+      "a": [
+        1058,
+        28,
+        41,
+        49,
+        37,
+        1922,
+        1087,
+        351,
+        607,
+        223,
+        926
+      ],
+      "multiplicity": 7,
+      "has_module": true
+    },
+    {
+      "h": 15273,
+      "status": "inS10",
+      "a": [
+        1058,
+        44,
+        49,
+        37,
+        11,
+        1936,
+        1087,
+        351,
+        607,
+        223,
+        926
+      ],
+      "multiplicity": 9,
+      "has_module": true
+    },
+    {
+      "h": 11475,
+      "status": "inS10",
+      "a": [
+        1030,
+        1048,
+        1034,
+        1041,
+        1029,
+        223,
+        799,
+        351,
+        575,
+        191,
+        992
+      ],
+      "multiplicity": 3,
+      "has_module": true
+    },
+    {
+      "h": 15561,
+      "status": "inS10",
+      "a": [
+        1030,
+        56,
+        42,
+        49,
+        37,
+        1921,
+        1087,
+        351,
+        607,
+        223,
+        926
+      ],
+      "multiplicity": 9,
+      "has_module": true
+    }
+  ],
+  "scope": "Direct independent checks of supplied witnesses only, not exhaustive completeness of order-11 input universe or membership in S10."
+}

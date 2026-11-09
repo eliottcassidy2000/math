@@ -1,0 +1,64 @@
+{
+  "universe": "every labelled tournament of orders 1 through 5, every attachment; all disjoint support/base marked sets",
+  "checks": [
+    {
+      "n": 1,
+      "bases": 1,
+      "attachments": 2,
+      "mixed_support_derivatives": 1
+    },
+    {
+      "n": 2,
+      "bases": 2,
+      "attachments": 8,
+      "mixed_support_derivatives": 10
+    },
+    {
+      "n": 3,
+      "bases": 8,
+      "attachments": 64,
+      "mixed_support_derivatives": 152
+    },
+    {
+      "n": 4,
+      "bases": 64,
+      "attachments": 1024,
+      "mixed_support_derivatives": 4160
+    },
+    {
+      "n": 5,
+      "bases": 1024,
+      "attachments": 32768,
+      "mixed_support_derivatives": 216064
+    }
+  ],
+  "hostile_witnesses": {
+    "scalar_loss": {
+      "n": 5,
+      "h": 3,
+      "bits_A": 2,
+      "bits_B": 5,
+      "extension_values_A": [
+        3,
+        5,
+        9,
+        13,
+        15,
+        17,
+        23,
+        25,
+        27,
+        33
+      ],
+      "extension_values_B": [
+        3,
+        5,
+        9,
+        13,
+        15,
+        27,
+        29
+      ]
+    }
+  }
+}

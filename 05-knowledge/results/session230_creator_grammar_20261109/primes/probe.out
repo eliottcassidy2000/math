@@ -1,0 +1,153 @@
+ORPHANS [{"code": 135528708, "modules": [3, 20, 160], "deletion_H": [25, 25, 33, 1, 33, 37, 11, 37]}, {"code": 36175876, "modules": [6, 80, 160], "deletion_H": [11, 37, 37, 1, 33, 25, 33, 25]}]
+STATS [
+  {
+    "n": 1,
+    "classes": 1,
+    "primes": 0,
+    "noncreator_primes": 0,
+    "critical_noncreator_primes": 0
+  },
+  {
+    "n": 2,
+    "classes": 1,
+    "primes": 0,
+    "noncreator_primes": 0,
+    "critical_noncreator_primes": 0
+  },
+  {
+    "n": 3,
+    "classes": 2,
+    "primes": 1,
+    "noncreator_primes": 0,
+    "critical_noncreator_primes": 0
+  },
+  {
+    "n": 4,
+    "classes": 4,
+    "primes": 0,
+    "noncreator_primes": 0,
+    "critical_noncreator_primes": 0
+  },
+  {
+    "n": 5,
+    "classes": 12,
+    "primes": 3,
+    "noncreator_primes": 0,
+    "critical_noncreator_primes": 0
+  },
+  {
+    "n": 6,
+    "classes": 56,
+    "primes": 15,
+    "noncreator_primes": 0,
+    "critical_noncreator_primes": 0
+  },
+  {
+    "n": 7,
+    "classes": 456,
+    "primes": 197,
+    "noncreator_primes": 8,
+    "critical_noncreator_primes": 1
+  },
+  {
+    "n": 8,
+    "classes": 6880,
+    "primes": 4008,
+    "noncreator_primes": 214,
+    "critical_noncreator_primes": 0
+  }
+]
+WITNESSES [
+  {
+    "n": 7,
+    "code": 1091586,
+    "H": 31,
+    "prime_deletions": []
+  },
+  {
+    "n": 7,
+    "code": 1149121,
+    "H": 43,
+    "prime_deletions": [
+      4
+    ]
+  },
+  {
+    "n": 7,
+    "code": 1314818,
+    "H": 27,
+    "prime_deletions": [
+      3
+    ]
+  },
+  {
+    "n": 7,
+    "code": 1120258,
+    "H": 41,
+    "prime_deletions": [
+      1,
+      4,
+      6
+    ]
+  },
+  {
+    "n": 7,
+    "code": 1345538,
+    "H": 31,
+    "prime_deletions": [
+      1,
+      6
+    ]
+  },
+  {
+    "n": 7,
+    "code": 1315009,
+    "H": 41,
+    "prime_deletions": [
+      3,
+      6
+    ]
+  },
+  {
+    "n": 7,
+    "code": 624642,
+    "H": 41,
+    "prime_deletions": [
+      1,
+      5
+    ]
+  },
+  {
+    "n": 7,
+    "code": 536578,
+    "H": 43,
+    "prime_deletions": [
+      3
+    ]
+  }
+]
+W 3 3 prime True prime_deletions 0
+W 5 9 prime True prime_deletions 0
+W 7 31 prime True prime_deletions 0
+W 9 117 prime True prime_deletions 0
+W 11 459 prime True prime_deletions 0
+W 13 1825 prime True prime_deletions 0
+ORPHAN_FACTOR 135528708 W5-blocks [[6], [5, 7], [2, 4], [0, 1], [3]] size_vector [1, 2, 2, 2, 1]
+ORPHAN_FACTOR 36175876 W5-blocks [[5, 7], [4, 6], [1, 2], [0], [3]] size_vector [2, 2, 2, 1, 1]
+H31_SMALLER_WITNESS 6241 [2, 12, 33, 21, 7, 27]
+FAN 4 kernel 5 sizes [1, 2, 1, 1, 1] H 15
+FAN 5 kernel 7 sizes [1, 1, 1, 1, 1, 1, 1] H 31
+FAN 6 kernel 5 sizes [2, 2, 2, 1, 1] H 63
+FAN 7 kernel 7 sizes [2, 1, 1, 1, 2, 1, 1] H 127
+FAN 8 kernel 5 sizes [3, 2, 3, 1, 1] H 255
+FAN 9 kernel 7 sizes [3, 1, 1, 1, 3, 1, 1] H 511
+FAN 10 kernel 5 sizes [4, 2, 4, 1, 1] H 1023
+FAN 11 kernel 7 sizes [4, 1, 1, 1, 4, 1, 1] H 2047
+FAN 12 kernel 5 sizes [5, 2, 5, 1, 1] H 4095
+CRITICAL_PAIR_DELETIONS 5 T,U,W verified
+CRITICAL_PAIR_DELETIONS 7 T,U,W verified
+CRITICAL_PAIR_DELETIONS 9 T,U,W verified
+CRITICAL_PAIR_DELETIONS 11 T,U,W verified
+CRITICAL_PAIR_DELETIONS 13 T,U,W verified
+CRITICAL_PAIR_DELETIONS 15 T,U,W verified
+CRITICAL_PAIR_DELETIONS 17 T,U,W verified
