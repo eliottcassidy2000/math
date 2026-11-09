@@ -1,0 +1,6 @@
+n=1 N=1 H7=0 H21=0 classes7=0 classes21=0 equal=1 max_difference=0 max_code=0
+n=2 N=3 H7=0 H21=0 classes7=0 classes21=0 equal=2 max_difference=2 max_code=2
+n=3 N=27 H7=0 H21=0 classes7=0 classes21=0 equal=8 max_difference=6 max_code=26
+n=4 N=729 H7=0 H21=0 classes7=0 classes21=0 equal=64 max_difference=24 max_code=728
+n=5 N=59049 H7=1440 H21=0 classes7=12 classes21=0 equal=1024 max_difference=120 max_code=59048
+n=6 N=14348907 H7=255600 H21=29520 classes7=355 classes21=41 equal=32768 max_difference=720 max_code=14348906

@@ -1,0 +1,6 @@
+PASS n=1 all_oriented=1 direct_path_contributions=1 H7=0 H21=0
+PASS n=2 all_oriented=3 direct_path_contributions=2 H7=0 H21=0
+PASS n=3 all_oriented=27 direct_path_contributions=18 H7=0 H21=0
+PASS n=4 all_oriented=729 direct_path_contributions=648 H7=0 H21=0
+PASS n=5 all_oriented=59049 direct_path_contributions=87480 H7=1440 H21=0
+PASS n=6 all_oriented=14348907 direct_path_contributions=42515280 H7=255600 H21=29520

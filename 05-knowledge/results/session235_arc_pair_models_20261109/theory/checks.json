@@ -1,0 +1,152 @@
+{
+  "status": "FINITE-EXACT",
+  "parity": [
+    {
+      "order": 1,
+      "digraphs": 1
+    },
+    {
+      "order": 2,
+      "digraphs": 4
+    },
+    {
+      "order": 3,
+      "digraphs": 64
+    },
+    {
+      "order": 4,
+      "digraphs": 4096
+    }
+  ],
+  "oriented_bridges": [
+    {
+      "order": 1,
+      "graphs": 1
+    },
+    {
+      "order": 2,
+      "graphs": 3
+    },
+    {
+      "order": 3,
+      "graphs": 27
+    },
+    {
+      "order": 4,
+      "graphs": 729
+    }
+  ],
+  "strong_fixed_count": [
+    {
+      "h": 2,
+      "cycle_length": 3,
+      "order": 5,
+      "actual": 2
+    },
+    {
+      "h": 2,
+      "cycle_length": 4,
+      "order": 6,
+      "actual": 2
+    },
+    {
+      "h": 2,
+      "cycle_length": 8,
+      "order": 10,
+      "actual": 2
+    },
+    {
+      "h": 3,
+      "cycle_length": 3,
+      "order": 6,
+      "actual": 3
+    },
+    {
+      "h": 3,
+      "cycle_length": 4,
+      "order": 7,
+      "actual": 3
+    },
+    {
+      "h": 3,
+      "cycle_length": 8,
+      "order": 11,
+      "actual": 3
+    },
+    {
+      "h": 4,
+      "cycle_length": 3,
+      "order": 7,
+      "actual": 4
+    },
+    {
+      "h": 4,
+      "cycle_length": 4,
+      "order": 8,
+      "actual": 4
+    },
+    {
+      "h": 4,
+      "cycle_length": 8,
+      "order": 12,
+      "actual": 4
+    },
+    {
+      "h": 7,
+      "cycle_length": 3,
+      "order": 10,
+      "actual": 7
+    },
+    {
+      "h": 7,
+      "cycle_length": 4,
+      "order": 11,
+      "actual": 7
+    },
+    {
+      "h": 7,
+      "cycle_length": 8,
+      "order": 15,
+      "actual": 7
+    },
+    {
+      "h": 21,
+      "cycle_length": 3,
+      "order": 24,
+      "actual": 21
+    },
+    {
+      "h": 21,
+      "cycle_length": 4,
+      "order": 25,
+      "actual": 21
+    },
+    {
+      "h": 21,
+      "cycle_length": 8,
+      "order": 29,
+      "actual": 21
+    }
+  ],
+  "case2_parity_counterexample": {
+    "raw": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "raw_h": 1,
+    "decoded_h": 0
+  }
+}

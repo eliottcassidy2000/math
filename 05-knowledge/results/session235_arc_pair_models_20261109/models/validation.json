@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "all_four_state_checks": [
+    {
+      "n": 1,
+      "universe": 1,
+      "cancellation_image_size": 1
+    },
+    {
+      "n": 2,
+      "universe": 4,
+      "cancellation_image_size": 3
+    },
+    {
+      "n": 3,
+      "universe": 64,
+      "cancellation_image_size": 27
+    },
+    {
+      "n": 4,
+      "universe": 4096,
+      "cancellation_image_size": 729
+    }
+  ],
+  "ternary_checks": [
+    {
+      "n": 1,
+      "universe": 1,
+      "ordinary_sum": 1,
+      "decoded_sum": 1
+    },
+    {
+      "n": 2,
+      "universe": 3,
+      "ordinary_sum": 4,
+      "decoded_sum": 2
+    },
+    {
+      "n": 3,
+      "universe": 27,
+      "ordinary_sum": 72,
+      "decoded_sum": 18
+    },
+    {
+      "n": 4,
+      "universe": 729,
+      "ordinary_sum": 5184,
+      "decoded_sum": 648
+    }
+  ],
+  "cancellation_parity_hostile": {
+    "ordinary_rows": [
+      "0100",
+      "1001",
+      "1000",
+      "0000"
+    ],
+    "ordinary_H": 1,
+    "cancellation_H": 0,
+    "full_swap_H": 5
+  }
+}

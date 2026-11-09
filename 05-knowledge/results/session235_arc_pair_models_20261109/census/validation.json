@@ -1,0 +1,44 @@
+[
+  {
+    "n": 1,
+    "labelled_universe": 1,
+    "independent_DP_checked": 1,
+    "all_target_classes_path_enumerated": 0,
+    "inherited_semicomplete_histogram_matches": false
+  },
+  {
+    "n": 2,
+    "labelled_universe": 3,
+    "independent_DP_checked": 3,
+    "all_target_classes_path_enumerated": 0,
+    "inherited_semicomplete_histogram_matches": false
+  },
+  {
+    "n": 3,
+    "labelled_universe": 27,
+    "independent_DP_checked": 27,
+    "all_target_classes_path_enumerated": 0,
+    "inherited_semicomplete_histogram_matches": false
+  },
+  {
+    "n": 4,
+    "labelled_universe": 729,
+    "independent_DP_checked": 729,
+    "all_target_classes_path_enumerated": 0,
+    "inherited_semicomplete_histogram_matches": false
+  },
+  {
+    "n": 5,
+    "labelled_universe": 59049,
+    "independent_DP_checked": 59049,
+    "all_target_classes_path_enumerated": 12,
+    "inherited_semicomplete_histogram_matches": false
+  },
+  {
+    "n": 6,
+    "labelled_universe": 14348907,
+    "independent_DP_checked": 3398,
+    "all_target_classes_path_enumerated": 396,
+    "inherited_semicomplete_histogram_matches": true
+  }
+]

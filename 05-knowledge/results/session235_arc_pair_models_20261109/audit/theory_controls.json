@@ -1,0 +1,15 @@
+{
+  "cycle_hub_pendant_cases": 2460,
+  "h_range": [
+    3,
+    8
+  ],
+  "pendant_cycle_length_range": [
+    3,
+    7
+  ],
+  "all_nontrivial_partitions": true,
+  "two_cycle_bouquets": 36,
+  "parity_all_digraphs_through_order4": 4165,
+  "status": "PASS"
+}
