@@ -1,0 +1,335 @@
+{
+  "P7": {
+    "H": 189,
+    "aut": 21,
+    "boundary": [
+      [
+        0,
+        3,
+        27,
+        9
+      ]
+    ],
+    "endpoint": [
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27
+    ],
+    "graph_all_signs_even": true,
+    "graph_aut": 21,
+    "graph_order": 112,
+    "graph_restriction_kernel": 1,
+    "n": 7
+  },
+  "R7": {
+    "H": 175,
+    "aut": 7,
+    "boundary": [
+      [
+        0,
+        1,
+        25,
+        25
+      ]
+    ],
+    "endpoint": [
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25
+    ],
+    "graph_all_signs_even": true,
+    "graph_aut": 7,
+    "graph_order": 112,
+    "graph_restriction_kernel": 1,
+    "n": 7
+  },
+  "action21": {
+    "endpoint": {
+      "3": 21
+    },
+    "whole": {
+      "3": 55
+    }
+  },
+  "action7": {
+    "endpoint": {
+      "3": 7
+    },
+    "whole": {
+      "3": 19
+    }
+  },
+  "complete_small_graph_checks": 72,
+  "exhaustive_brute_maxima": [
+    1,
+    1,
+    3,
+    5,
+    15
+  ],
+  "producer_sha256": {
+    "PROOF.md": "5cc45fc818759076f10adbd304996fb63e7dbdb10dfbc3ef7e86c27813c6b4c5",
+    "results.json": "59138d23c2b2307fcf1d5380dad724d623e09828a05a21e3156abe70b3446558",
+    "verify.py": "f857e5faee9d0447fddca8a2b16f1c7479031b47252bbc9ea20176177c638e89"
+  },
+  "tower21": {
+    "H": 165,
+    "aut": 3,
+    "boundary": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        3,
+        3,
+        9,
+        3
+      ],
+      [
+        4,
+        3,
+        27,
+        9
+      ],
+      [
+        5,
+        3,
+        63,
+        21
+      ],
+      [
+        6,
+        3,
+        27,
+        9
+      ],
+      [
+        7,
+        3,
+        21,
+        7
+      ],
+      [
+        8,
+        3,
+        9,
+        3
+      ],
+      [
+        9,
+        3,
+        9,
+        3
+      ]
+    ],
+    "endpoint": [
+      0,
+      0,
+      0,
+      9,
+      27,
+      63,
+      27,
+      21,
+      9,
+      9
+    ],
+    "graph_all_signs_even": true,
+    "graph_aut": 3,
+    "graph_order": 235,
+    "graph_restriction_kernel": 1,
+    "n": 10
+  },
+  "tower7": {
+    "H": 57,
+    "aut": 3,
+    "boundary": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        3,
+        3,
+        3,
+        1
+      ],
+      [
+        4,
+        3,
+        15,
+        5
+      ],
+      [
+        5,
+        3,
+        21,
+        7
+      ],
+      [
+        6,
+        3,
+        9,
+        3
+      ],
+      [
+        7,
+        3,
+        6,
+        2
+      ],
+      [
+        8,
+        3,
+        3,
+        1
+      ]
+    ],
+    "endpoint": [
+      0,
+      0,
+      0,
+      3,
+      15,
+      21,
+      9,
+      6,
+      3
+    ],
+    "graph_all_signs_even": true,
+    "graph_aut": 3,
+    "graph_order": 189,
+    "graph_restriction_kernel": 1,
+    "n": 9
+  },
+  "witness21": {
+    "H": 55,
+    "aut": 1,
+    "boundary": [
+      [
+        0,
+        1,
+        3,
+        3
+      ],
+      [
+        1,
+        1,
+        9,
+        9
+      ],
+      [
+        2,
+        1,
+        21,
+        21
+      ],
+      [
+        3,
+        1,
+        9,
+        9
+      ],
+      [
+        4,
+        1,
+        7,
+        7
+      ],
+      [
+        5,
+        1,
+        3,
+        3
+      ],
+      [
+        6,
+        1,
+        3,
+        3
+      ]
+    ],
+    "endpoint": [
+      3,
+      9,
+      21,
+      9,
+      7,
+      3,
+      3
+    ],
+    "graph_all_signs_even": true,
+    "graph_aut": 1,
+    "graph_order": 112,
+    "graph_restriction_kernel": 1,
+    "n": 7
+  },
+  "witness7": {
+    "H": 19,
+    "aut": 1,
+    "boundary": [
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        5,
+        5
+      ],
+      [
+        2,
+        1,
+        7,
+        7
+      ],
+      [
+        3,
+        1,
+        3,
+        3
+      ],
+      [
+        4,
+        1,
+        2,
+        2
+      ],
+      [
+        5,
+        1,
+        1,
+        1
+      ]
+    ],
+    "endpoint": [
+      1,
+      5,
+      7,
+      3,
+      2,
+      1
+    ],
+    "graph_all_signs_even": true,
+    "graph_aut": 1,
+    "graph_order": 81,
+    "graph_restriction_kernel": 1,
+    "n": 6
+  }
+}

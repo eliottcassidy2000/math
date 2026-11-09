@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "script": "independent.py",
+      "optimized": false,
+      "returncode": 1,
+      "error": "RuntimeError: deliberate failure sentinel",
+      "source_sha256": "e45064383493f1b7f93f9f446d6e6807c46b3f26589eee92149179432d31b9b2"
+    },
+    {
+      "script": "independent.py",
+      "optimized": true,
+      "returncode": 1,
+      "error": "RuntimeError: deliberate failure sentinel",
+      "source_sha256": "e45064383493f1b7f93f9f446d6e6807c46b3f26589eee92149179432d31b9b2"
+    },
+    {
+      "script": "producer_subgroup_replay.py",
+      "optimized": false,
+      "returncode": 1,
+      "error": "RuntimeError: deliberate failure sentinel",
+      "source_sha256": "0fef6dff3e4e96a8eeb4ccffc6e315c5ff01bb16ab910184e3d1c435069b08bb"
+    },
+    {
+      "script": "producer_subgroup_replay.py",
+      "optimized": true,
+      "returncode": 1,
+      "error": "RuntimeError: deliberate failure sentinel",
+      "source_sha256": "0fef6dff3e4e96a8eeb4ccffc6e315c5ff01bb16ab910184e3d1c435069b08bb"
+    },
+    {
+      "script": "producer_transfer_replay.py",
+      "optimized": false,
+      "returncode": 1,
+      "error": "RuntimeError: deliberate failure sentinel",
+      "source_sha256": "17e1f02408e86c0cb6d58fbfc37a4d061b1494880286e67e96ae929e648a92a1"
+    },
+    {
+      "script": "producer_transfer_replay.py",
+      "optimized": true,
+      "returncode": 1,
+      "error": "RuntimeError: deliberate failure sentinel",
+      "source_sha256": "17e1f02408e86c0cb6d58fbfc37a4d061b1494880286e67e96ae929e648a92a1"
+    },
+    {
+      "script": "strata_replay/verify_strata.py",
+      "optimized": false,
+      "returncode": 1,
+      "error": "RuntimeError: deliberate failure sentinel",
+      "source_sha256": "337b4fb550f2380582c88f3ecf7df6d65c5913b540ded3e00d060a3ba7c37089"
+    },
+    {
+      "script": "strata_replay/verify_strata.py",
+      "optimized": true,
+      "returncode": 1,
+      "error": "RuntimeError: deliberate failure sentinel",
+      "source_sha256": "337b4fb550f2380582c88f3ecf7df6d65c5913b540ded3e00d060a3ba7c37089"
+    }
+  ]
+}

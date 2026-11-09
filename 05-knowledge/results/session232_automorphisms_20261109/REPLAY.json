@@ -1,0 +1,72 @@
+{
+  "isolated_directory_copies": true,
+  "jobs": [
+    {
+      "normal_optimized_equal": true,
+      "receipt": "subgroups/normal.out",
+      "script": "subgroups/verify.py",
+      "source_sha256": "0fef6dff3e4e96a8eeb4ccffc6e315c5ff01bb16ab910184e3d1c435069b08bb",
+      "stdout_sha256": "74cc51c8073b6897b64f1819f246c55ddf3b130ba464d8dbf22b15065d443aa0",
+      "stored_receipt_equal": true
+    },
+    {
+      "normal_optimized_equal": true,
+      "receipt": "subgroups/strata_normal.out",
+      "script": "subgroups/verify_strata.py",
+      "source_sha256": "337b4fb550f2380582c88f3ecf7df6d65c5913b540ded3e00d060a3ba7c37089",
+      "stdout_sha256": "ce523df106b36cd407f49123ffea983dd7dc6149172886719fe311a475eb9923",
+      "stored_receipt_equal": true
+    },
+    {
+      "normal_optimized_equal": true,
+      "receipt": "orbit_transfer/CHECK.json",
+      "script": "orbit_transfer/verify.py",
+      "source_sha256": "17e1f02408e86c0cb6d58fbfc37a4d061b1494880286e67e96ae929e648a92a1",
+      "stdout_sha256": "a8026be79b7a63fc90756b1f9d0212c7097f1e54e55f6cbff1df28c8159a2e44",
+      "stored_receipt_equal": true
+    },
+    {
+      "normal_optimized_equal": true,
+      "receipt": "packing_mass/RESULTS.json",
+      "script": "packing_mass/check.py",
+      "source_sha256": "a672b00a9895872ef1f7b7fa5da9d3fd065f788e4a2ea1a7b73957166cbb46a4",
+      "stdout_sha256": "caaced2f6b678b7690ba4178ec1df804128efefe8e07107580b2e565cdb501b6",
+      "stored_receipt_equal": true
+    },
+    {
+      "normal_optimized_equal": true,
+      "receipt": "boundary_graphs/results.json",
+      "script": "boundary_graphs/verify.py",
+      "source_sha256": "f857e5faee9d0447fddca8a2b16f1c7479031b47252bbc9ea20176177c638e89",
+      "stdout_sha256": "59138d23c2b2307fcf1d5380dad724d623e09828a05a21e3156abe70b3446558",
+      "stored_receipt_equal": true
+    },
+    {
+      "normal_optimized_equal": true,
+      "receipt": "packing_audit/INDEPENDENT.json",
+      "script": "packing_audit/independent_check.py",
+      "source_sha256": "88a02852dc5e58084727b7e2919868379f3e5580d4207c6955a5d568125462dd",
+      "stdout_sha256": "e9266276c2274eece6c2cca09ee9cfc00852f16551bd67861bee17f46c6a6444",
+      "stored_receipt_equal": true
+    },
+    {
+      "normal_optimized_equal": true,
+      "receipt": "graph_audit/independent.json",
+      "script": "graph_audit/audit.py",
+      "source_sha256": "095cb61b6601b601db11304b71229edf59267577d278567503b3ec648ef0fafb",
+      "stdout_sha256": "08eb17356f4a0acdeafd3215b2cf2bd2470fa06f5e94c45410abff56b16a62e9",
+      "stored_receipt_equal": true
+    },
+    {
+      "normal_optimized_equal": true,
+      "receipt": "subgroup_transfer_audit/independent.normal.json",
+      "script": "subgroup_transfer_audit/independent.py",
+      "source_sha256": "e45064383493f1b7f93f9f446d6e6807c46b3f26589eee92149179432d31b9b2",
+      "stdout_sha256": "f7e96fe3907fe61c2f28c7eab76a846e1ede1a44898457f12e8eb608059ac5f5",
+      "stored_receipt_equal": true
+    }
+  ],
+  "runs": 16,
+  "scope": "Replays session232 controls, not inherited THM-4812 historical certificates.",
+  "status": "PASS"
+}

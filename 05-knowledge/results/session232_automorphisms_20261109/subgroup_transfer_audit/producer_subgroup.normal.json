@@ -1,0 +1,354 @@
+{
+  "checks": [
+    {
+      "automorphism_order_histogram": {
+        "1": 1
+      },
+      "classes": 1,
+      "equality_cases": 1,
+      "literal_subgroups_over_classes": 1,
+      "n": 1,
+      "pointed_mass": 1,
+      "prime_cost_tests": 1,
+      "q_less_than_9_classes": 1,
+      "subgroup_orbit_values": [
+        1
+      ]
+    },
+    {
+      "automorphism_order_histogram": {
+        "1": 1
+      },
+      "classes": 1,
+      "equality_cases": 1,
+      "literal_subgroups_over_classes": 1,
+      "n": 2,
+      "pointed_mass": 1,
+      "prime_cost_tests": 1,
+      "q_less_than_9_classes": 1,
+      "subgroup_orbit_values": [
+        1
+      ]
+    },
+    {
+      "automorphism_order_histogram": {
+        "1": 1,
+        "3": 1
+      },
+      "classes": 2,
+      "equality_cases": 2,
+      "literal_subgroups_over_classes": 3,
+      "n": 3,
+      "pointed_mass": 2,
+      "prime_cost_tests": 3,
+      "q_less_than_9_classes": 2,
+      "subgroup_orbit_values": [
+        1,
+        3
+      ]
+    },
+    {
+      "automorphism_order_histogram": {
+        "1": 2,
+        "3": 2
+      },
+      "classes": 4,
+      "equality_cases": 3,
+      "literal_subgroups_over_classes": 6,
+      "n": 4,
+      "pointed_mass": 8,
+      "prime_cost_tests": 6,
+      "q_less_than_9_classes": 4,
+      "subgroup_orbit_values": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "automorphism_order_histogram": {
+        "1": 7,
+        "3": 4,
+        "5": 1
+      },
+      "classes": 12,
+      "equality_cases": 5,
+      "literal_subgroups_over_classes": 17,
+      "n": 5,
+      "pointed_mass": 64,
+      "prime_cost_tests": 17,
+      "q_less_than_9_classes": 8,
+      "subgroup_orbit_values": [
+        1,
+        3,
+        5,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "automorphism_order_histogram": {
+        "1": 41,
+        "3": 12,
+        "5": 2,
+        "9": 1
+      },
+      "classes": 56,
+      "equality_cases": 8,
+      "literal_subgroups_over_classes": 75,
+      "n": 6,
+      "pointed_mass": 1024,
+      "prime_cost_tests": 46,
+      "q_less_than_9_classes": 13,
+      "subgroup_orbit_values": [
+        1,
+        3,
+        5,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        37,
+        41,
+        43,
+        45
+      ]
+    },
+    {
+      "automorphism_order_histogram": {
+        "1": 399,
+        "3": 47,
+        "5": 4,
+        "7": 1,
+        "9": 4,
+        "21": 1
+      },
+      "classes": 456,
+      "equality_cases": 13,
+      "literal_subgroups_over_classes": 537,
+      "n": 7,
+      "pointed_mass": 32768,
+      "prime_cost_tests": 94,
+      "q_less_than_9_classes": 21,
+      "subgroup_orbit_values": [
+        1,
+        3,
+        5,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        61,
+        63,
+        65,
+        67,
+        69,
+        71,
+        73,
+        75,
+        77,
+        79,
+        81,
+        83,
+        85,
+        87,
+        89,
+        91,
+        93,
+        95,
+        97,
+        99,
+        101,
+        103,
+        105,
+        109,
+        111,
+        113,
+        115,
+        117,
+        121,
+        123,
+        125,
+        127,
+        129,
+        131,
+        133,
+        135,
+        137,
+        139,
+        141,
+        143,
+        145,
+        147,
+        151,
+        153,
+        155,
+        157,
+        159,
+        171,
+        175,
+        189
+      ]
+    }
+  ],
+  "explicit_graph_controls": [
+    {
+      "H": 175,
+      "aut_order": 7,
+      "graph": {
+        "admissible_paths": 175,
+        "aut_order": 7,
+        "edge_reversal_sign_counts": {
+          "0": 7
+        },
+        "edges": 126,
+        "leaves": 42,
+        "ordinary_graph_hamilton_paths": 0,
+        "vertices": 112
+      },
+      "name": "carousel7",
+      "orbit_counts": [
+        25,
+        175
+      ],
+      "q": 25,
+      "rows": [
+        14,
+        28,
+        56,
+        112,
+        97,
+        67,
+        7
+      ],
+      "subgroup_order_counts": {
+        "1": 1,
+        "7": 1
+      }
+    },
+    {
+      "H": 189,
+      "aut_order": 21,
+      "graph": {
+        "admissible_paths": 189,
+        "aut_order": 21,
+        "edge_reversal_sign_counts": {
+          "0": 21
+        },
+        "edges": 126,
+        "leaves": 42,
+        "ordinary_graph_hamilton_paths": 0,
+        "vertices": 112
+      },
+      "name": "paley7",
+      "orbit_counts": [
+        9,
+        27,
+        63,
+        189
+      ],
+      "q": 9,
+      "rows": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ],
+      "subgroup_order_counts": {
+        "1": 1,
+        "3": 7,
+        "7": 1,
+        "21": 1
+      }
+    }
+  ],
+  "external_software": "none; Python standard library only",
+  "sharp_controls": [
+    {
+      "H": 15,
+      "aut_order": 5,
+      "name": "R5",
+      "q": 3,
+      "rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "H": 225,
+      "aut_order": 25,
+      "name": "R5 then R5",
+      "q": 9,
+      "rows": [
+        998,
+        1004,
+        1016,
+        1009,
+        995,
+        192,
+        384,
+        768,
+        544,
+        96
+      ]
+    },
+    {
+      "H": 567,
+      "aut_order": 63,
+      "name": "P7 then C3",
+      "q": 9,
+      "rows": [
+        918,
+        940,
+        984,
+        945,
+        994,
+        965,
+        907,
+        256,
+        512,
+        128
+      ]
+    }
+  ],
+  "source_sha256": "0fef6dff3e4e96a8eeb4ccffc6e315c5ff01bb16ab910184e3d1c435069b08bb",
+  "status": "FINITE-EXACT",
+  "universe": "All ordinary tournament isomorphism classes, n=1..7; every literal automorphism subgroup of each representative"
+}

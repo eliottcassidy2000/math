@@ -1,0 +1,22 @@
+{
+  "01-canon/theorems/THM-4987-subgroup-path-orbit-gaps-and-small-symmetry-cost.md": "a6ee9dffdbf42b3c467cbf21bd5a129534341556a38d7f789ca28e013ce4e9f7",
+  "01-canon/theorems/THM-4988-endpoint-721-boundaries-and-faithful-automorphism-graphs.md": "4e3bf5a495e91f85a0c238e0488effdea052b197effbf9b9018c3f5cfcea38a9",
+  "01-canon/theorems/THM-4989-colored-cycle-packing-coarse-orbits-and-stabilizer-mass.md": "514fa6058c239b511c0635e090215d46cb5e527a32e0544490f0cb2f6c03906f",
+  "01-canon/theorems/THM-4990-stabilizer-corrected-hamilton-prefix-orbit-transfer.md": "fdb960c69e2c3c4c83b1ec5c5e155b30682d0c75a670ed39b4e3b850a53e43c2",
+  "01-canon/theorems/THM-4812-presentation-fibres-7-and-21-are-absent-at-every-order-orbit-product-lemma-vertex-transitive-lemma-closed-window.md": "7c40f6586d9f39dbdddfc9899b4dde9cd8b00e4cea0cb7e987042d52adf466f9",
+  "01-canon/theorems/LEM-003-aut-acts-freely-on-ham-paths.md": "09289c2ad4c12bcadf5d29a54a198e56b0ef8223853ac3f83a9caa931c65b9b8",
+  "05-knowledge/results/session232_automorphisms_20261109/README.md": "e5520c3d5ff6c10d3563fc5493134164130f84da6eb48984ec3506d659a197a3",
+  "05-knowledge/results/session232_automorphisms_20261109/SYNTHESIS.md": "76d4936b05473227d2adf861cc540ae9a53575fc0b08a94785decd04617f8dd1",
+  "05-knowledge/results/session232_automorphisms_20261109/REPRODUCE.md": "806ebdc03f61c01c240256b67d2468ffe100fca7691a25412c43fa7c2e53811f",
+  "05-knowledge/results/session232_automorphisms_20261109/subgroups/PROOF.md": "204d1d2060ade9e9f957f11f975a4035bc06731994c354077c12db4e69d8593f",
+  "05-knowledge/results/session232_automorphisms_20261109/subgroups/SHARP_STRATA.md": "49ddbac6b8f1ca82f68777ab9c6f47ab77c976abb1d99f6939cb58aaa891556a",
+  "05-knowledge/results/session232_automorphisms_20261109/boundary_graphs/PROOF.md": "5cc45fc818759076f10adbd304996fb63e7dbdb10dfbc3ef7e86c27813c6b4c5",
+  "05-knowledge/results/session232_automorphisms_20261109/packing_mass/PROOF.md": "8b2688665bc645d178d67592a573c752e165668a2ac74034b484138f6e1a2fef",
+  "05-knowledge/results/session232_automorphisms_20261109/packing_mass/PROMOTION.json": "9895f9b37caa43bd958ebc99688f97fbd0d90eb506cc30375f6c5de8e07b702c",
+  "05-knowledge/results/session232_automorphisms_20261109/orbit_transfer/PROOF.md": "22ac3eef230caceecf3bf635bee19e82528db9756ee89e7826b8586075eb4955",
+  "05-knowledge/results/session232_automorphisms_20261109/orbit_transfer/SOURCE_NOTES.md": "5bc9aa428c01497eb9f828c816b9a65189e596a173c56d0fc08d8656cffe3f70",
+  "05-knowledge/results/session232_automorphisms_20261109/subgroup_transfer_audit/AUDIT.md": "abb722a109c087af630acd6ad16e04b209505394691cb7ef6d36820f41d8a789",
+  "05-knowledge/results/session232_automorphisms_20261109/graph_audit/REPORT.md": "e2d40c7d37f4be6257644dedabfabd4be922e0b2d4a304752462dfff4af2f29b",
+  "05-knowledge/results/session232_automorphisms_20261109/packing_audit/AUDIT.md": "3f72353530837b51fe2e4bee9175f9dce8b03e98ad984e87f8c421fa0b9f8765",
+  "05-knowledge/results/session232_automorphisms_20261109/REPLAY.json": "fc72bb0aba9d2eb9c8a4e5d73b985bab087182b601313face42bd8abdfac26ee"
+}

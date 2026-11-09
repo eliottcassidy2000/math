@@ -1,6 +1,6 @@
 # The stabilizer sidecar: identical scalar counts, different quotient gaps
 
-**Status: PROOF CANDIDATE, awaiting independent audit.** All-order statements
+**Status: PROVED; independent audit PASS.** All-order statements
 below are elementary consequences of the cited OCF identity and action laws.
 No completeness theorem for Chan–Pak is claimed.
 

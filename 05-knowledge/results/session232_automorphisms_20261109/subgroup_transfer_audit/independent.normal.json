@@ -1,0 +1,134 @@
+{
+  "arithmetic_cases": 52,
+  "corrected_edges": 328,
+  "endpoint_state_orbits": 74521,
+  "equality_pairs": 315,
+  "no_cross_triangle_partitions": 1099,
+  "selected": {
+    "C3_sink": {
+      "H": 3,
+      "corrections": 0,
+      "equality_pairs": 1,
+      "group": 3,
+      "n": 4,
+      "naive": 1,
+      "orbits": 1,
+      "state_vs_path_stabilizer_differences": 1,
+      "states": 12,
+      "subgroups": 2,
+      "wrong_state_stabilizer_result": "3"
+    },
+    "P7": {
+      "F2_nonempty_ordered": 1638,
+      "H": 189,
+      "corrections": 1,
+      "equality_pairs": 1,
+      "group": 21,
+      "n": 7,
+      "naive": 27,
+      "orbits": 9,
+      "state_vs_path_stabilizer_differences": 3,
+      "states": 24,
+      "subgroups": 10,
+      "wrong_state_stabilizer_result": "27"
+    },
+    "P7_C3": {
+      "H": 567,
+      "equality_pairs": 1,
+      "group": 63,
+      "orbits": 9,
+      "subgroups": 36
+    },
+    "R5": {
+      "F2_nonempty_ordered": 90,
+      "H": 15,
+      "corrections": 0,
+      "equality_pairs": 1,
+      "group": 5,
+      "n": 5,
+      "naive": 3,
+      "orbits": 3,
+      "state_vs_path_stabilizer_differences": 0,
+      "states": 16,
+      "subgroups": 2,
+      "wrong_state_stabilizer_result": "3"
+    },
+    "carousel7": {
+      "H": 175,
+      "corrections": 0,
+      "equality_pairs": 0,
+      "group": 7,
+      "n": 7,
+      "naive": 25,
+      "orbits": 25,
+      "state_vs_path_stabilizer_differences": 0,
+      "states": 64,
+      "subgroups": 2,
+      "wrong_state_stabilizer_result": "25"
+    },
+    "cyclic_P7_singletons": {
+      "H": 2205,
+      "group": 21,
+      "orbits": 105
+    },
+    "cyclic_R5_singletons": {
+      "H": 135,
+      "group": 5,
+      "orbits": 27
+    },
+    "diagonal_C3": {
+      "H": 9,
+      "corrections": 0,
+      "group": 3,
+      "n": 6,
+      "naive": 3,
+      "orbits": 3,
+      "state_vs_path_stabilizer_differences": 0,
+      "states": 64,
+      "wrong_state_stabilizer_result": "3"
+    },
+    "source_C3": {
+      "H": 3,
+      "corrections": 1,
+      "equality_pairs": 1,
+      "group": 3,
+      "n": 4,
+      "naive": 3,
+      "orbits": 1,
+      "state_vs_path_stabilizer_differences": 1,
+      "states": 12,
+      "subgroups": 2,
+      "wrong_state_stabilizer_result": "1"
+    },
+    "two_C3": {
+      "H": 9,
+      "corrections": 4,
+      "equality_pairs": 1,
+      "group": 9,
+      "n": 6,
+      "naive": 3,
+      "orbits": 1,
+      "state_vs_path_stabilizer_differences": 8,
+      "states": 32,
+      "subgroups": 6,
+      "wrong_state_stabilizer_result": "3"
+    },
+    "two_R5": {
+      "H": 225,
+      "equality_pairs": 1,
+      "group": 25,
+      "orbits": 9,
+      "subgroups": 8
+    }
+  },
+  "source_sha256": "e45064383493f1b7f93f9f446d6e6807c46b3f26589eee92149179432d31b9b2",
+  "status": "PASS",
+  "subgroup_pairs": 1301,
+  "universe": {
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 1024
+  }
+}

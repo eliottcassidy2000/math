@@ -1,0 +1,5 @@
+{
+  "audited_candidate_sha256": "13ef71bafa1c035c18776082817fe9633020562f0a9479f44bfdb8a6146b19ec",
+  "promoted_sha256": "8b2688665bc645d178d67592a573c752e165668a2ac74034b484138f6e1a2fef",
+  "only_change": "Status line promoted after independent PASS; mathematical text unchanged."
+}

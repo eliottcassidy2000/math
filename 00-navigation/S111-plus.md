@@ -117,3 +117,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session229](S229.md): COMPLETE; universal padded odd pairs/triples, unsaturated unit-switch cores, four-choice transfers, exact carry barriers, all-gadget physical descent, and complete recursive grammar growth577→620→660. Chan–Pak remains OPEN.
 
 [Session230](S230.md): COMPLETE; W5/W7 fan kernels, creator versus prime obstruction, cited all-order structural grammar, positive OCF cut growth and independent order-eight orbit certificate. Chan–Pak remains OPEN.
+
+[Session232: automorphism quotients and 7/21](../05-knowledge/results/session232_automorphisms_20261109/README.md): THM-4987--4990, independently audited all-subgroup gaps and sharp low-symmetry strata, minimum-order endpoint boundaries, faithful graph carriers, coarse packing versus mass, and stabilizer-corrected transfer. Chan–Pak completeness and arbitrary target placement remain OPEN.

@@ -1,0 +1,114 @@
+{
+  "complete_subgroup_tests": [
+    {
+      "instances": {
+        "threefold_separation": 1
+      },
+      "n": 1
+    },
+    {
+      "instances": {
+        "threefold_separation": 1
+      },
+      "n": 2
+    },
+    {
+      "instances": {
+        "threefold_separation": 3
+      },
+      "n": 3
+    },
+    {
+      "instances": {
+        "threefold_separation": 6
+      },
+      "n": 4
+    },
+    {
+      "instances": {
+        "five": 1,
+        "threefold_separation": 17
+      },
+      "n": 5
+    },
+    {
+      "instances": {
+        "five": 2,
+        "threefold_separation": 46
+      },
+      "n": 6
+    },
+    {
+      "instances": {
+        "five": 3,
+        "seven": 1,
+        "threefold_separation": 94
+      },
+      "n": 7
+    }
+  ],
+  "controls": [
+    {
+      "F2_nonempty_ordered": 90,
+      "H": 15,
+      "extension_H": 135,
+      "extension_aut_order": 5,
+      "extension_q": 27,
+      "extension_rows": [
+        38,
+        44,
+        56,
+        49,
+        35,
+        64,
+        31
+      ],
+      "name": "R5",
+      "q": 3,
+      "rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "F2_nonempty_ordered": 1638,
+      "H": 189,
+      "extension_H": 2205,
+      "extension_aut_order": 21,
+      "extension_q": 105,
+      "extension_rows": [
+        150,
+        172,
+        216,
+        177,
+        226,
+        197,
+        139,
+        256,
+        127
+      ],
+      "name": "P7",
+      "q": 9,
+      "rows": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ]
+    }
+  ],
+  "shared_verifier_sha256": "0fef6dff3e4e96a8eeb4ccffc6e315c5ff01bb16ab910184e3d1c435069b08bb",
+  "status": "FINITE-EXACT",
+  "twenty_five_control": {
+    "H": 225,
+    "aut_order": 25,
+    "q": 9
+  },
+  "verifier_sha256": "337b4fb550f2380582c88f3ecf7df6d65c5913b540ded3e00d060a3ba7c37089"
+}

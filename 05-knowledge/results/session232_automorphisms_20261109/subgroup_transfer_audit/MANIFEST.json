@@ -1,0 +1,31 @@
+{
+  "artifacts": {
+    "AUDIT.md": "abb722a109c087af630acd6ad16e04b209505394691cb7ef6d36820f41d8a789",
+    "failure_sentinels.json": "808b2dbe57df5bbee40412ed66e4c456f884e70844259584e0c6eaee42cbc3fe",
+    "independent.normal.json": "f7e96fe3907fe61c2f28c7eab76a846e1ede1a44898457f12e8eb608059ac5f5",
+    "independent.optimized.json": "f7e96fe3907fe61c2f28c7eab76a846e1ede1a44898457f12e8eb608059ac5f5",
+    "independent.py": "e45064383493f1b7f93f9f446d6e6807c46b3f26589eee92149179432d31b9b2",
+    "producer_strata.normal.json": "ce523df106b36cd407f49123ffea983dd7dc6149172886719fe311a475eb9923",
+    "producer_strata.optimized.json": "ce523df106b36cd407f49123ffea983dd7dc6149172886719fe311a475eb9923",
+    "producer_subgroup.normal.json": "74cc51c8073b6897b64f1819f246c55ddf3b130ba464d8dbf22b15065d443aa0",
+    "producer_subgroup.optimized.json": "74cc51c8073b6897b64f1819f246c55ddf3b130ba464d8dbf22b15065d443aa0",
+    "producer_transfer.normal.json": "a8026be79b7a63fc90756b1f9d0212c7097f1e54e55f6cbff1df28c8159a2e44",
+    "producer_transfer.optimized.json": "a8026be79b7a63fc90756b1f9d0212c7097f1e54e55f6cbff1df28c8159a2e44",
+    "receipt.json": "74cc51c8073b6897b64f1819f246c55ddf3b130ba464d8dbf22b15065d443aa0"
+  },
+  "failure_sentinels": 8,
+  "normal_optimized_byte_identical": true,
+  "publication_documentary_fix": {
+    "AUDIT.md_original_sha256": "7400adada0ff84f709a52fef26e1dd6c8cc713bedda7adfdbb13a2748b5dd8c1",
+    "change": "Corrected shell command typo python=3 to python3; audit mathematics and all code unchanged."
+  },
+  "reviewed_inputs": {
+    "session232-aut-spectrum/PROOF.md": "204d1d2060ade9e9f957f11f975a4035bc06731994c354077c12db4e69d8593f",
+    "session232-aut-spectrum/SHARP_STRATA.md": "49ddbac6b8f1ca82f68777ab9c6f47ab77c976abb1d99f6939cb58aaa891556a",
+    "session232-aut-spectrum/verify.py": "0fef6dff3e4e96a8eeb4ccffc6e315c5ff01bb16ab910184e3d1c435069b08bb",
+    "session232-aut-spectrum/verify_strata.py": "337b4fb550f2380582c88f3ecf7df6d65c5913b540ded3e00d060a3ba7c37089",
+    "session232-paper-bridge/PROOF.md": "22ac3eef230caceecf3bf635bee19e82528db9756ee89e7826b8586075eb4955",
+    "session232-paper-bridge/verify.py": "17e1f02408e86c0cb6d58fbfc37a4d061b1494880286e67e96ae929e648a92a1"
+  },
+  "status": "PASS"
+}
