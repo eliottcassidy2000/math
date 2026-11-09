@@ -115,3 +115,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session228](S228.md): COMPLETE; exponential strong gcd-one fibers, arbitrary-state finite membership bounds, universal SCC divisibility, physical cyclic inverses, and an exact recursive target compiler. Chan–Pak remains OPEN.
 
 [Session229](S229.md): COMPLETE; universal padded odd pairs/triples, unsaturated unit-switch cores, four-choice transfers, exact carry barriers, all-gadget physical descent, and complete recursive grammar growth577→620→660. Chan–Pak remains OPEN.
+
+[Session230](S230.md): COMPLETE; W5/W7 fan kernels, creator versus prime obstruction, cited all-order structural grammar, positive OCF cut growth and independent order-eight orbit certificate. Chan–Pak remains OPEN.

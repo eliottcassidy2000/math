@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "receipt_sha256": "4a2dfca3411a5fd83ed6437bba6869af152937f3541625fa514f7b2a0d1c47fb",
+      "script": "audit/check.py",
+      "status": "PASS"
+    },
+    {
+      "receipt_sha256": "ec36f69a1666f626897a60113c62c4b9aa064170f47245f69b2865ea807421c2",
+      "script": "audit/check_witnesses.py",
+      "status": "PASS"
+    },
+    {
+      "receipt_sha256": "87826b5a049c0569587009503a9a68cd29161c16c72d11c5ad7928112377a8b2",
+      "script": "cut/check.py",
+      "status": "PASS"
+    },
+    {
+      "receipt_sha256": "4f72bc752575206cb981b4353799daf3189132c51a6b0e25e68a78aa988549dc",
+      "script": "cut/check_transitive.py",
+      "status": "PASS"
+    },
+    {
+      "receipt_sha256": "7efc3ad1d50fcdfebaab0a5b2f8c80c3271cda026fde20332d022e142692a0fd",
+      "script": "cut/audit/check.py",
+      "status": "PASS"
+    },
+    {
+      "receipt_sha256": "65b5417a90e21987ab56b477657b8745be80ca9df42829d000368f0906ded19c",
+      "script": "primes/probe.py",
+      "status": "PASS"
+    },
+    {
+      "receipt_sha256": "1f81645c753b31183bf23d4a19703df6d95becf69e9a72d8c3818f5bad5ba829",
+      "script": "primes/audit/check.py",
+      "status": "PASS"
+    },
+    {
+      "receipt_sha256": "a86e701aac4ee51a68a26e44ebbde0a57b9983e211add8a3ff3e85fd3266efbd",
+      "script": "primes/audit/check_factors.py",
+      "status": "PASS"
+    },
+    {
+      "receipt_sha256": "13bd10d5528fc3b2f593f1c4a9fcbcaeb677cfd8c0cdfac6e7880a167f81cc34",
+      "script": "primes/audit/check_pair_deletions.py",
+      "status": "PASS"
+    }
+  ],
+  "class_generator_sha256": "cb78b6418a7754d656f628eede3cb3628a5100ad93af14d947b25e48223f562e",
+  "generated_class_counts": [
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456,
+    6880
+  ],
+  "scope": "All new proof controls and independent order-eight orbit certificate; order-eleven witness soundness only, not full large-census replay.",
+  "status": "PASS"
+}

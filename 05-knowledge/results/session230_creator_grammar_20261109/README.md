@@ -1,7 +1,6 @@
 # Session 230: first creators, prime kernels and positive cut growth
 
-**Status:** independently audited proofs and exact finite certificates;
-publication and final integrity verification in progress. Chan–Pak
+**Status: COMPLETE.** Independently audited proofs and exact finite certificates; normal and optimized replays agree. Chan–Pak
 completeness and the all-order five-operation grammar remain OPEN.
 
 [Read the synthesis](SYNTHESIS.md).
@@ -41,7 +40,7 @@ completeness and the all-order five-operation grammar remain OPEN.
   [independent audit](cut/audit/AUDIT.md).
 - [Review of inherited order-eleven grammar and sharp connectivity proof](audit/REVIEW.md).
 
-The incoming S17 full independent audit applied its orientation and scope repairs and settled class-level creator genealogy through order eleven. We preserve that stronger result and its source. Session230 did **not** rerun the huge census; it independently checked all97 exceptional witnesses and the complete order-eight class certificate. The earlier missing-audit finding is retained only as baseline history in our scoped review.
+The incoming S17 full independent audit applied its orientation and scope repairs and settled class-level creator genealogy through order eleven. We preserve that stronger result and its source. Session230 did **not** rerun the huge census; it independently checked all 97 exceptional witnesses and the complete order-eight class certificate. The earlier missing-audit finding is retained only as baseline history in our scoped review.
 
 ## Reproduce
 
@@ -50,10 +49,10 @@ From repository root, with Python3 and gcc:
     python3 05-knowledge/results/session230_creator_grammar_20261109/verify.py
     python3 05-knowledge/results/session230_creator_grammar_20261109/verify.py --optimized
 
-The runner builds the inherited candidate-class generator in a temporary
-copy, then executes eight checks against frozen receipts. The independent
+The frozen [verification receipt](VERIFICATION.json) records all nine passing checks. The runner builds the inherited candidate-class generator in a temporary
+copy, then executes nine checks against frozen receipts. The independent
 canonical-form/orbit-mass certificate proves completeness through order
-eight, with class totals1,1,2,4,12,56,456,6880. All Python checks remain active
+eight, with class totals 1,1,2,4,12,56,456,6880. All Python checks remain active
 under optimization. No existing research files are overwritten by replay.
 
 ## Scope

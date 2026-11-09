@@ -2,7 +2,7 @@
 """Rebuild all finite checks in an isolated temporary packet. Standard library only."""
 import argparse, hashlib, json, pathlib, shutil, subprocess, sys, tempfile
 P=pathlib.Path(__file__).resolve().parent
-CASES=[('audit/check.py','audit/check.json'),('audit/check_witnesses.py','audit/check_witnesses.json'),('cut/check.py','cut/RESULTS.json'),('cut/check_transitive.py','cut/TRANSITIVE.json'),('cut/audit/check.py','cut/audit/RESULTS.json'),('primes/probe.py','primes/probe.out'),('primes/audit/check.py','primes/audit/check.out'),('primes/audit/check_factors.py','primes/audit/check_factors.out')]
+CASES=[('audit/check.py','audit/check.json'),('audit/check_witnesses.py','audit/check_witnesses.json'),('cut/check.py','cut/RESULTS.json'),('cut/check_transitive.py','cut/TRANSITIVE.json'),('cut/audit/check.py','cut/audit/RESULTS.json'),('primes/probe.py','primes/probe.out'),('primes/audit/check.py','primes/audit/check.out'),('primes/audit/check_factors.py','primes/audit/check_factors.out'),('primes/audit/check_pair_deletions.py','primes/audit/check_pair_deletions.out')]
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--optimized',action='store_true');args=ap.parse_args()
  with tempfile.TemporaryDirectory(prefix='session230-replay-') as td:
