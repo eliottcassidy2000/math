@@ -1,0 +1,6 @@
+order-3 self-converse values < 625: 2; missing at order 11: []
+order-5 self-converse values < 625: 6; missing at order 11: []
+order-7 self-converse values < 625: 54; missing at order 11: []
+order-9 self-converse values < 625: 195; missing at order 11: []
+order-11 values: 212; strong ones: 48; even or >= 625: []; strong below f(11) = 225: []
+CHECK PASSED
