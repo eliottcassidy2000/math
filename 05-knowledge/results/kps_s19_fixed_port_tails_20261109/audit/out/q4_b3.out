@@ -1,0 +1,6 @@
+x=3 targets in [1000,200000]: 66334; core states 2901; targets covered by no core: 0
+minimum number of covering cores of a target: 19 (attained by 4 targets)
+S19 greedy list: 86 core states, 0 not among the independently generated states; targets left uncovered: 0
+independent greedy cover: 85 core states (uncovered left 0)
+disjoint-covering-set lower bound: 20 targets (pairwise intersections found: 0): 5401(19) 45763(19) 59011(19) 109810(19) 100930(21) 177574(22) 179281(22) 89638(23) 126073(23) 83854(25) 93892(25) 74770(26) 84754(26) 116761(26) 25639(28) 59710(28) 122404(28) 147409(35) 26242(37) 125716(38)
+wrote 63881 targets with at most 80 covering cores to the sparse file

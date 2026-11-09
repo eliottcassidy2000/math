@@ -1,0 +1,18 @@
+instances: 21321 (19811 exhaustive: all labelled cores of order 1..4, all ports, all words of length <= 6/5; 10 examples; 1500 random cores of order 5..7 with words to total order 14)
+max order 14; bases x = (2, 3, 4)
+step-recursion mismatches (h,R,Delta): 0
+closed-form h mismatches: 0
+closed-form final (R,Delta) mismatches: 0
+hu invariance failures: 0
+OCF failures (H != I(Omega,2)): 0
+THM-5085 (3) example (x = 2):
+  core {u}, S^0 B B: H = 1;  3*2^s - 1 = 2;  3*2^(s+1) - 1 = 5
+  core {u}, S^1 B B: H = 5;  3*2^s - 1 = 5;  3*2^(s+1) - 1 = 11
+  core {u}, S^2 B B: H = 11;  3*2^s - 1 = 11;  3*2^(s+1) - 1 = 23
+  core {u}, S^3 B B: H = 23;  3*2^s - 1 = 23;  3*2^(s+1) - 1 = 47
+  core {u}, S^4 B B: H = 47;  3*2^s - 1 = 47;  3*2^(s+1) - 1 = 95
+  core {u}, S^5 B B: H = 95;  3*2^s - 1 = 95;  3*2^(s+1) - 1 = 191
+  core {u}, S^6 B B: H = 191;  3*2^s - 1 = 191;  3*2^(s+1) - 1 = 383
+  core {u}, S^7 B B: H = 383;  3*2^s - 1 = 383;  3*2^(s+1) - 1 = 767
+  core {u}, S^8 B B: H = 767;  3*2^s - 1 = 767;  3*2^(s+1) - 1 = 1535
+  core {u}, S^9 B B: H = 1535;  3*2^s - 1 = 1535;  3*2^(s+1) - 1 = 3071

@@ -1,0 +1,6 @@
+misses listed: 169 (permanent gaps included)
+  [1, 100000): 4 misses, 8.00e-05 per odd integer
+  [100000, 1000000): 16 misses, 3.56e-05 per odd integer
+  [1000000, 2000000): 16 misses, 3.20e-05 per odd integer
+  [2000000, 5000000): 50 misses, 3.33e-05 per odd integer
+  [5000000, 10000000): 83 misses, 3.32e-05 per odd integer

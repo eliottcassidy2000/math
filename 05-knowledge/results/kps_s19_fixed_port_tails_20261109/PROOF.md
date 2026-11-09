@@ -1,6 +1,16 @@
-# THM-5085: multi-bridge fixed-port tails (proofs)
+# THM-5085: fixed-port (O/Z) tails in every base (proofs)
 
 kind-pasteur-2026-11-09-S19.
+
+**Priority (audit M1).** At x = 2, Lemma 1 and Theorem 2 below are KNOWN:
+- session195/combined-growth section 2 (the K/D laws);
+- Session197 ONE_CORE_BINARY_INVERSE (1), (6) and ROOTED_ORDERED_AMALGAMATION (7)-(8);
+- Session198 DIGIT_BLOCK (1), whose pair sum C(A) is Q(I);
+- Session205 finite-oz-tail-bank ARITHMETIC_REDUCTION;
+- THM-4888.
+
+The dictionary is e = -Delta, d = h_u. The proofs below are those proofs with remainders counted by I(Omega(.), x)
+instead of H(.). Only the base-x statement is new.
 
 **Notation.**
 - I(Omega(T), x) is the base-x odd-cycle packing count (THM-4940). At x = 2 it is H(T), by OCF.
@@ -84,17 +94,25 @@ Summing over i in I, the term -h_u 2^(i-1-j) for j = i - 1 combines with Delta_{
 
   The offset o(I) is invariant along the dyadic ray, as in Lemma 6 of THM-5055. It can be negative, and it can be 7
   or 21.
-  - Example: T0 = ({u}) with I = {1, 2} gives o = -1, so h_s = 3 * 2^(s+1) - 1.
-  - Session236's barrier (offsets are positive H-values) concerns rays whose leading coefficient A is a single
-    product R(q_e + q_o). Here the leading coefficient (x/2) R0 N(I) has N(I) with at least two bits whenever
-    Q(I) > 0.
+  - Example: T0 = ({u}) with I = {1, 2} gives o = -1 and N = 3, so h_s = 3 * 2^s - 1. The pre-audit text said
+    3 * 2^(s+1) - 1, which was wrong (audit M3).
+  - Session236 already exhibits the same values as one-apex negative offsets (offsets/PROOF.md (3)).
+- **(d) Bridge rays (the audit's formula).** From a state (h, R, -h_u), the word B^k gives
+  [h - (x/2)(R - h_u)] + 2^k (x/2)(R - h_u). Each further bridge doubles R - h_u.
 
-## 3. Pure-dyadic rays keep Session236's barrier
+## 3. Pure dyadic rays: sink rays versus bridge rays (corrected after audit M4)
 
-If the leading coefficient (x/2) R0 N(I) is a power of 2, then N(I) is a power of 2. So |I| = 1 and Q(I) = 0, and the
-offset is h0, an H-value of T0 (at x = 2). The family therefore realises 2^K + c along a pure dyadic ray only for
-offsets c that are themselves values. Values just below powers of 2 need non-dyadic leading parts. This agrees with
-Session236's barrier and extends it to multi-bridge tails.
+- **Sink rays.** For even x, if the leading coefficient 2^s (x/2) R0 N(I) is a power of 2, then N(I) is one. So
+  |I| = 1, Q(I) = 0, and the offset is h0, the value of T0. For odd x the leading coefficient is never a power of 2.
+- **Bridge rays.** These differ.
+  - **Example.** The order-7 core with rows [94, 84, 32, 6, 12, 27, 60] and port 0 has base-2 state (71, 287, -5, 31).
+    After one B the state is (353, 543, -31), and R - h_u = 512 = 2^9.
+  - **The ray.** The word B^(k+1) has value exactly 2^(k+8) - 159. This was brute-forced for k = 2..8 at orders 9-15
+    (audit `out/dyadic_ray_bridges_bruteforce.out`).
+  - **Consequence.** Pure-dyadic rays inside the fixed-port family can carry negative offsets.
+- **Withdrawn.** The pre-audit sentences "extends the barrier to multi-bridge tails" and "values just below powers of 2
+  need non-dyadic leading parts" were wrong and are withdrawn.
+- **Session236's barrier** is scoped to its single-final-bridge mechanism and remains correct there.
 
 ## 4. Coverage (finite computations)
 

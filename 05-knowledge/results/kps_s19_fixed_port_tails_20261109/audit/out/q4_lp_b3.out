@@ -1,0 +1,6 @@
+targets with <= 45 covering cores: 10704; core states involved: 2901; nonzeros: 429958
+LP status: 0 (Optimization terminated successfully. (HiGHS Status 7: Optimal)); LP optimum 49.658952
+dual certificate: sum y = 49.658952, max core column sum = 0.999999999, rescaled certified bound = 49.658952 -> every cover needs at least 50 core states
+targets with <= 80 covering cores: 63881; core states involved: 2901; nonzeros: 3619582
+LP status: 0 (Optimization terminated successfully. (HiGHS Status 7: Optimal)); LP optimum 49.697379
+dual certificate: sum y = 49.697378, max core column sum = 0.999999998, rescaled certified bound = 49.697378 -> every cover needs at least 50 core states

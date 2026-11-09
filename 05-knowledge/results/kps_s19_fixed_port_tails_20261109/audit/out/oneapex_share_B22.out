@@ -1,0 +1,14 @@
+W < 2^22: values complete below 2^21 = 2097152 (proof in the docstring)
+k= 6: 18/32 = 0.5625
+k= 8: 71/128 = 0.5547
+k=10: 276/512 = 0.5391
+k=12: 1050/2048 = 0.5127
+k=14: 4115/8192 = 0.5023
+k=16: 16386/32768 = 0.5001
+k=17: 32613/65536 = 0.4976
+k=18: 65426/131072 = 0.4992
+k=19: 130185/262144 = 0.4966
+[1001, 200000]: 49728/99500
+k=20: 260786/524288 = 0.4974 (HYP-9480 records 0.4974 for the root image)
+one-apex (root) odd values <= 999,999: 249077 (Session205 finite-oz-tail-bank and Session197 ONE_CORE no-core part: 249,077)
+core-{u} closed-form value set equals the one-apex set below the completeness bound: True

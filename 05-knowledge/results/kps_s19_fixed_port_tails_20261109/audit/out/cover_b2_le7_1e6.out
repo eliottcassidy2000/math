@@ -1,0 +1,3 @@
+x=2 LIM=1000000 cores=2831 states=57330333 misses: 7 21
+count 2
+hits outside residue class 1 mod x: 0

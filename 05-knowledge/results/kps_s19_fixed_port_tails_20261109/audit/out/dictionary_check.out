@@ -1,0 +1,1 @@
+N < 2^17: THM-5085 pair sum vs Session205 recursion mismatches 0; Q(N) = N + 1 - F(N) - [N odd] (Session197 form) mismatches 0; Session198 C(A) vs Q mismatches 0

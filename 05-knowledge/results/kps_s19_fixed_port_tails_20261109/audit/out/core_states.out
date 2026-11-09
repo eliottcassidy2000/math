@@ -1,0 +1,20 @@
+base 2, cores of order <= 1: 1 distinct states (h0, R0, Delta0, hu)
+base 2, cores of order <= 2: 2 distinct states (h0, R0, Delta0, hu)
+base 2, cores of order <= 3: 4 distinct states (h0, R0, Delta0, hu)
+base 2, cores of order <= 4: 12 distinct states (h0, R0, Delta0, hu)
+base 2, cores of order <= 5: 46 distinct states (h0, R0, Delta0, hu)
+base 2, cores of order <= 6: 273 distinct states (h0, R0, Delta0, hu)
+base 2, cores of order <= 7: 2831 distinct states (h0, R0, Delta0, hu)
+base 3, cores of order <= 1: 1 distinct states (h0, R0, Delta0, hu)
+base 3, cores of order <= 2: 2 distinct states (h0, R0, Delta0, hu)
+base 3, cores of order <= 3: 4 distinct states (h0, R0, Delta0, hu)
+base 3, cores of order <= 4: 12 distinct states (h0, R0, Delta0, hu)
+base 3, cores of order <= 5: 46 distinct states (h0, R0, Delta0, hu)
+base 3, cores of order <= 6: 278 distinct states (h0, R0, Delta0, hu)
+base 3, cores of order <= 7: 2901 distinct states (h0, R0, Delta0, hu)
+order 5, base 2: labelled distinct 46, class-based distinct 46, equal: True
+order 5, base 3: labelled distinct 46, class-based distinct 46, equal: True
+order 6, base 2: labelled distinct 273, class-based distinct 273, equal: True
+order 6, base 3: labelled distinct 278, class-based distinct 278, equal: True
+order 7, base 2: labelled distinct 2831, class-based distinct 2831, equal: True
+order 7, base 3: labelled distinct 2901, class-based distinct 2901, equal: True

@@ -9,6 +9,9 @@ status: >
     (A) to the cofiniteness of an explicit 15-matrix orbit.
   - (B) is FINITE-EXACT to alpha-sum 30,000 for b = 4..8: the gaps there are exactly those below 81 (THM-5070 (6),
     HYP-9640 (E)).
+  - (A) is FINITE-EXACT to values < 10^7 (kind-pasteur-2026-11-09-S19, THM-5085 (4)): the base-3 fixed-port bank of
+    all cores of order <= 7 attains every v = 1 (mod 3) below 10^7 except 10 and 31. HYP-9655 (A) conjectures that no
+    finite bank of this kind is cofinite.
   Earlier status, kept for the record:
   (A): FINITE-EXACT and complete for alpha-sums <= 9678 (values <= 29,035): the gaps there are exactly 10 and 31.
   THM-4940 (3), (4), (9) gave this to alpha-sum 1799 (values <= 5398). THM-4950 (opus-2026-11-09-S87) extends it with

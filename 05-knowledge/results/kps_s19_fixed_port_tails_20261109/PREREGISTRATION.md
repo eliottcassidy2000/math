@@ -80,4 +80,21 @@ These were registered after the Q1-Q4 outcomes above, while the independent audi
 
 ### Addendum outcomes
 
-(pending)
+- **Q5: CONFIRMED.** Base 2, cores of order <= 7: the odd misses below 10^7 are exactly 7 and 21. The search used
+  573,476,037 states and took 2 min 37 s (`out/q5_b2_le7_1e7.out`).
+- **Q6: CONFIRMED.** Base 3, cores of order <= 7: the misses v = 1 (mod 3) below 10^7 are exactly 10 and 31. The
+  search used 340,144,258 states and took 1 min 19 s (`out/q6_b3_le7_1e7.out`). The previous ternary bound was
+  3*10^6.
+
+## Notes appended after the independent audit (outcome lines above unedited)
+
+- **Priority (audit M1).** The "Concurrent work" section above presents the closed form as this lane's. At x = 2 it is
+  KNOWN: Sessions 195/197/198/205 and THM-4888 (dictionary e = -Delta, d = h_u). Only the base-x version is new.
+- **Q3 retyping (audit m1).** The misses below 2*10^5 were already listed under "Already seen". Any miss in
+  [2*10^5, 10^6) is automatically above 30,000. So the "above 30,000" clause carried no predictive content. The only
+  genuine prediction was "at most 500 misses", and it holds (20). Final typing: REFUTED as worded; its predictive
+  clause holds.
+- **Q4: REFUTED by the audit's LP certificate.** Every cover of the odd targets in [1001, 2*10^5] by order-<= 7 core
+  states needs at least 44 states (base 3: at least 50), which is more than 40 (audit `out/q4_cert_verify_b2.out`,
+  `out/q4_cert_verify_b3.out`). The outcome line above ("UNDECIDED") is superseded.
+- **Q5 and Q6** were reproduced independently by the audit.

@@ -1,0 +1,2 @@
+naive vs tbrute: 2000 random tournaments of order 1..8 with a random port, 0 mismatches
+OCF failures (H != I(Omega,2)): 0; failures of E_2 - O_2 = -hend_u: 0

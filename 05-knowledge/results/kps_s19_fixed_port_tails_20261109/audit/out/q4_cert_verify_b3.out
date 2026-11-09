@@ -1,0 +1,2 @@
+certificate targets 520, sum y = 49658951797/1e9; cores 2901; max core column sum = 999999999/1e9 (core #2266)
+dual feasible: every cover needs at least 50 core states

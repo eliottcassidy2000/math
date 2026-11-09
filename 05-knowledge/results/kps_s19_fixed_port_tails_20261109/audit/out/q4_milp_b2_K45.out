@@ -1,0 +1,4 @@
+targets with <= 45 covering cores: 7159; core states involved: 2831; nonzeros: 293492
+LP status: 0 (Optimization terminated successfully. (HiGHS Status 7: Optimal)); LP optimum 43.370731
+dual certificate: sum y = 43.370730, max core column sum = 0.999999999, rescaled certified bound = 43.370730 -> every cover needs at least 44 core states
+MILP (time limit 120.0s): status 1 (Time limit reached. (HiGHS Status 13: Time limit reached)); best cover found 480.0; dual bound 44.0

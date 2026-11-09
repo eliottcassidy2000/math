@@ -1,0 +1,9 @@
+Example: order-7 core rows [94, 84, 32, 6, 12, 27, 60], port 0: I(Omega,2) = 71, E = 141, O = 146, hu = 31; state (h0, R0, D0, hu) = (71, 287, -5, 31)
+  core + B^1 (order 8): H = 353
+  core + B^2 (order 9): H = 865;  2^10 - 159 = 865
+  core + B^3 (order 10): H = 1889;  2^11 - 159 = 1889
+  core + B^4 (order 11): H = 3937;  2^12 - 159 = 3937
+  core + B^5 (order 12): H = 8033;  2^13 - 159 = 8033
+  core + B^6 (order 13): H = 16225;  2^14 - 159 = 16225
+  core + B^7 (order 14): H = 32609;  2^15 - 159 = 32609
+  core + B^8 (order 15): H = 65377;  2^16 - 159 = 65377

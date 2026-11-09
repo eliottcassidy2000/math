@@ -24091,3 +24091,49 @@ Lesson: run every coverage engine against the permanent gaps first. One that att
 base 2) is wrong. Never archive an index row without grepping check_docs' required-token list. When a concurrent
 same-prompt packet has already been read, credit each of its lemmas used, by number, before typing a statement
 PROVED-new. State a finite check at its checked range everywhere it is quoted.
+
+## MISTAKE-749 (2026-11-09, kind-pasteur-2026-11-09-S19, THM-5085, HYP-9655 and `05-knowledge/results/kps_s19_fixed_port_tails_20261109/` at the pre-audit checkpoint c322f6b577; found by the independent audit `05-knowledge/results/kps_s19_fixed_port_tails_20261109/audit/AUDIT.md`) -- a known tail law typed as new, a hypothesis contradicting this machine's own audited conjecture, a wrong exponent, an over-claimed dyadic gloss
+
+- **MAJOR (priority; audit M1).** THM-5085 (1)-(2) were typed PROVED. They are the fixed-port transfer and its closed
+  form h = h0 + (x/2)(R0 N + Delta0[1 in I] - h_u Q(I)).
+  - At x = 2 they are the O/Z tail law: session195/combined-growth, Session197 ONE_CORE (1), (6) and
+    ROOTED_ORDERED_AMALGAMATION (7)-(8), Session198 DIGIT_BLOCK (1) (its C(A) is Q(I) verbatim), and Session205
+    finite-oz-tail-bank.
+  - They are restated in THM-4888, a canon theorem from this same machine (S13), and they are the subject of a memory
+    note of this machine.
+  - No grep for the formula's signature (`2R - d`, `universal sink`, `O/Z`, `retain`, `tail bank`) was run, although
+    MISTAKE-737 and MISTAKE-722 record the same failure.
+  - Repaired: x = 2 retyped KNOWN with the citations; only the base-x versions are new.
+- **MAJOR (conflict; audit M2).** HYP-9655 (A) conjectured that the finite order-7 bank is cofinite. That is the
+  opposite of this machine's audited HYP-9480 (C): every finite bank misses a positive proportion, of Poisson order
+  exp(-capacity). HYP-9655 did not cite it.
+  - Its (C) repeated HYP-9480 (A)'s root case as if it were a new open question.
+  - Repaired: (A) withdrawn and replaced by the base-3 counterpart of HYP-9480 (C); the base-2 data recorded as
+    evidence for HYP-9480 (C); (C) replaced by the citation.
+- **MAJOR (wrong number; audit M3).** The sink-ray example was printed as 3 * 2^(s+1) - 1. The theorem's own formula
+  gives 3 * 2^s - 1. The likely source is Session236's ray 6 * 2^m - 1, which has the same values from a different
+  word family. Repaired in THM-5085, README and PROOF.md.
+- **MAJOR (over-claim; audit M4).** The glosses "pure dyadic rays force one bridge and a positive H-valued offset",
+  "extends the barrier to multi-bridge tails" and "values just below powers of 2 need non-dyadic leading parts" were
+  false beyond sink-prepending rays. Bridge rays B^k give pure-dyadic leading parts with negative offsets: 2^K - 159
+  for every K >= 10, from an order-7 core. Repaired by restricting the claims to sink rays and adding the bridge-ray
+  formula.
+- **Pre-registration (audit U1, m1).**
+  - Q4 (at most 40 core states) was typed UNDECIDED. The audit's LP certificate (at least 44) REFUTES it.
+  - Q3's "above 30,000" clause carried no predictive content, since those misses were already seen. The intended
+    exclusion of 7 and 21 was also missing from its wording. Typed "REFUTED as worded; predictive clause holds".
+- **Near miss (caught before any claim).** The brute-force checker keyed core statistics by class code alone.
+  classgen codes are per order, so one false mismatch appeared (1 in 400). Repaired by keying by (order, code, port).
+- **Minor (audit m3-m10).**
+  - The HYP-9655 title number.
+  - The citations THM-1370 and THM-4940 (3), (4) in the Chan-Pak implication.
+  - Understated records: binary 2^35 (HYP-9478 bank) and ternary 3*10^6.
+  - The Session236 credit for negative offsets.
+  - Base-dependent wording.
+  - The unproved "no tournament cone", softened to "no port move of this type is a cone".
+  - The INDEX rows.
+
+Lesson: before typing any transfer law, tail formula or bank conjecture new, grep this machine's own canon and memory
+(THM-48xx, HYP-94xx) and the session19x-20x trees for the formula's signature. A new bank conjecture must be checked
+against the existing bank conjectures before it is written. A displayed example must be recomputed from the theorem's
+own formula, not recalled from a neighbouring paper.
