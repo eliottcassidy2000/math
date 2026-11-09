@@ -30,6 +30,9 @@ that can be between new classifications of the nodes you can describe."
 - With S86's pieces, every v = 1 (mod 3) up to 29,035 except 10 and 31 is a base-3 packing count. The previous range
   was 5,398.
 - The construction threshold is m* = 9679, at the value 29,038 = 2 * 14,519, a lane-Q irreducible.
+- **Strong spectrum (THM-4950 (5)).** Below 28,981 the values v = 1 (mod 3) with no strong realiser are exactly 10,
+  31 and 64. This is exact below 225, by H <= H_3 and Busch's floor f(11) = 225, and constructive above. It confirms
+  the concurrent lane's HYP-9541 (4) on that range; mac-mini's THM-4952 (E) proved the 64.
 - Ternary Chan-Pak stays OPEN. Its infinite lanes P and Q are as hard as the binary lanes.
 
 ## Part II - lines between packing-number classes
@@ -100,6 +103,7 @@ equals the maximum number of disjoint 3-cycles.
 | `verify_witness10.py`, `verify_witness10.out`, `witnesses_order10.txt` | independent re-check of the 10,070 order-10 witnesses (value, canonical code) |
 | `ternary_coverage10.py`, `coverage10.out` | multiplicative closure, m*, Q1-Q3, missing irreducibles by lane |
 | `ternary_lanes.py`, `ternary_lanes.out` | irreducibles of M3 and the shape theorem below 200,000 |
+| `strong_spectrum10.py`, `strong_spectrum10.out` | THM-4950 (5): the strong base-3 spectrum below 28,981 |
 | `nu_lines.c`, `nu_pairs.out` | every line by nu-pair and colour, n <= 9 |
 | `tight_lines.c`, `tight_lines.out`, `t5_first_hits.out` | tight lines n <= 12 (pairs, colours, triple-word histogram); first-hit realizations at n = 13, 14 |
 | `staircase_check.py`, `staircase_check.out` | the staircase constructions of THM-4951 (2), (3) and the tight-colouring DP |

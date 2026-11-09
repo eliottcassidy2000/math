@@ -1,0 +1,3 @@
+strong H_3 values: orders <= 9: 1909, order 10: 10070
+EXACT (Busch floor f(11) = 225): values v = 1 (mod 3), v < 225, with no strong realiser: [10, 31, 64]
+first value >= 225 with no strong realiser of order <= 10: 28981; every v = 1 (mod 3) in [225, 28978] has one

@@ -1,6 +1,6 @@
 ---
 id: THM-4950
-title: "Ternary Chan-Pak: lane reduction and the order-10 strong census. Let M3 be the multiplicative monoid of the integers v = 1 (mod 3), with 10 and 31 removed, and let H_3(T) = I(Omega(T), 3). (1) Base-3 Chan-Pak (HYP-9530 (A): every element of M3 is a value H_3(T)) holds iff every irreducible of M3 is H_3 of a strong tournament. (2) The irreducibles of M3 are exactly: the primes p = 1 (mod 3) other than 31 (lane P); the products pq of two primes = 2 (mod 3), other than 10 (lane Q); 10p (p = 1 mod 3 prime, p != 31); 31p (p = 1 mod 3 prime, including 961); 31pq (pq as in lane Q); and five sporadic values 40, 250, 310, 9610, 29791. (3) Every v = 1 (mod 3) with v <= 29,035, other than 10 and 31, is a value H_3(T) (previous range 5,398); the witnesses are explicit products of strong pieces, among them 10,070 strong order-10 values, each re-checked by independent code."
+title: "Ternary Chan-Pak: lane reduction and the order-10 strong census. Let M3 be the multiplicative monoid of the integers v = 1 (mod 3), with 10 and 31 removed, and let H_3(T) = I(Omega(T), 3). (1) Base-3 Chan-Pak (HYP-9530 (A): every element of M3 is a value H_3(T)) holds iff every irreducible of M3 is H_3 of a strong tournament. (2) The irreducibles of M3 are exactly: the primes p = 1 (mod 3) other than 31 (lane P); the products pq of two primes = 2 (mod 3), other than 10 (lane Q); 10p (p = 1 mod 3 prime, p != 31); 31p (p = 1 mod 3 prime, including 961); 31pq (pq as in lane Q); and five sporadic values 40, 250, 310, 9610, 29791. (3) Every v = 1 (mod 3) with v <= 29,035, other than 10 and 31, is a value H_3(T) (previous range 5,398); the witnesses are explicit products of strong pieces, among them 10,070 strong order-10 values, each re-checked by independent code. (5) Strong spectrum: below 28,981 the values v = 1 (mod 3) that are H_3 of no strong tournament are exactly 10, 31 and 64 (exact below 225 by Busch's floor; constructive above), confirming mac-mini's HYP-9541 (4) on that range."
 status: >
   PROVED:
   - (1) and (2), elementary, for all v;
@@ -8,6 +8,7 @@ status: >
     value was re-derived by independent code from a stored witness tournament (10,070 of 10,070).
   FINITE-EXACT:
   - the H_3 spectrum of the strong tournaments of order 10 (complete one-vertex extension of every order-9 class);
+  - (5): exact below 225, constructive on [225, 28,980];
   - the shape theorem (2) was also checked by direct factorisation below 200,000.
   Pre-registered Q1-Q3 (PREREGISTRATION.md) all CONFIRMED:
   - m* = 9679 lies in the predicted [5000, 20000];
@@ -18,6 +19,11 @@ status: >
   - THM-4094: the binary lane reduction, which this mirrors in base 3.
   - kind-pasteur's classgen.c (order-9 classes) and canonical form.
   - S86's pieces: the alpha_1 <= 80 inventory, one-apex words, and Session 16's intercyclic rays.
+  - Busch 2006: a strong tournament of order 11 has H >= f(11) = 225 (as cited in THM-4870). THM-1370 (3): the strong
+    floor f(n) is nondecreasing (Moon).
+  - Concurrent lane mac-mini-2026-11-08-ternary: THM-4952 (E) proved that 64 has no strong realiser (orders <= 8
+    suffice). HYP-9541 (4) conjectures that 64 is the only value 1 (mod 3) attained but never strongly. (5) is a check
+    of that conjecture, not a new conjecture.
   NOT CLAIMED: ternary Chan-Pak itself, which stays OPEN as HYP-9530 (A). The reduction does not make it easier than
   binary Chan-Pak: lanes P and Q are infinite.
 session: opus-2026-11-09-S87
@@ -80,6 +86,12 @@ The witness for each value is an order join of strong pieces:
 
   All five sporadic irreducibles are attained, 29,791 = 31^3 at order 10.
 
+**(5) Strong spectrum.** Let v = 1 (mod 3) with v < 28,981. Then v is H_3 of no strong tournament iff
+v in {10, 31, 64}. (Order 1 counts as strong, with H_3 = 1.)
+- Every other such v is H_3 of a strong tournament of order <= 10.
+- The first value with no strong realiser of order <= 10 is 28,981.
+- This confirms HYP-9541 (4) on [1, 28,980].
+
 **Calibration of the threshold.**
 
 | strong pieces up to order | m* | value 1 + 3m* |
@@ -138,6 +150,15 @@ M-factorisation into two nonempty parts, neither part equal to 10 or 31.
   checks all 10,070 witnesses: decode, strong, H_3 recomputed from scratch, OCF. There were 0 failures.
 - `ternary_coverage10.py` forms the multiplicative closure of all piece values, using S86's closure routine. Every
   product of piece values is realised by the order join of the pieces.
+
+**(5).**
+- For every tournament, H = sum alpha_k 2^k <= sum alpha_k 3^k = H_3.
+- A strong T with H_3(T) <= 224 therefore has H(T) <= 224 < 225 = f(11) <= f(n) for every n >= 11, so its order is
+  at most 10.
+- The strong classes of order <= 10 are complete: S86's census for orders <= 9 and (4) for order 10. Among their
+  H_3 values below 225, exactly 10, 31 and 64 are missing.
+- Above 224, every v = 1 (mod 3) up to 28,978 occurs among them.
+- The check is `strong_spectrum10.py` (output `strong_spectrum10.out`).
 
 ## Remarks
 
