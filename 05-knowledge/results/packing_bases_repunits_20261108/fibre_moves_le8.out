@@ -1,0 +1,43 @@
+nodes 7412, H-preserving deletion edges 1272, H-preserving flip edges 6791
+classes NOT connected to a first creator of their value: 669
+  order 1: 0 of 1
+  order 2: 0 of 1
+  order 3: 0 of 2
+  order 4: 0 of 4
+  order 5: 0 of 12
+  order 6: 3 of 56
+  order 7: 34 of 456
+  order 8: 632 of 6880
+values with more than one H-preserving component among orders <= 8 (value: components): 9:2 15:5 17:2 19:2 23:3 25:3 27:5 29:4 31:4 33:8 35:2 37:3 39:4 41:4 43:3 45:12 47:2 49:6 51:9 53:10 55:4 57:7 59:8 61:4 63:2 65:12 67:6 69:12 71:7 73:11 75:9 77:9 79:9 81:15 83:8 85:6 87:6 89:13 91:19 93:10 95:15 97:11 99:14 101:6 103:12 105:14 107:9 109:14 111:18 113:12 115:21 117:15 119:10 121:8 123:18 125:11 127:7 129:27 131:14 133:17
+  (311 values)
+classes with H = 9 (order, canonical code, component representative):
+  5 516 comp 5785
+  5 642 comp 5785
+  6 4100 comp 5785
+  6 4610 comp 5785
+  6 16512 comp 5785
+  6 20513 comp 64
+  6 20544 comp 5785
+  7 32772 comp 5785
+  7 34818 comp 5785
+  7 262400 comp 5785
+  7 294977 comp 64
+  7 295040 comp 5785
+  7 1056768 comp 5785
+  7 1310785 comp 64
+  7 1312832 comp 64
+  7 1314816 comp 5785
+  8 262148 comp 5785
+  8 270338 comp 5785
+  8 4194816 comp 5785
+  8 4456577 comp 64
+  8 4456704 comp 5785
+  8 33587200 comp 5785
+  8 37748865 comp 64
+  8 37757056 comp 64
+  8 37765120 comp 5785
+  8 135266304 comp 5785
+  8 167772289 comp 64
+  8 167780480 comp 64
+  8 168042496 comp 64
+  8 168296448 comp 5785

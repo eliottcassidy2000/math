@@ -45,3 +45,26 @@ The interval is (44, 80], of length 36.
   it. Consistency check only.
 
 Outcome: to be appended below after the run, without editing the predictions above.
+
+## Outcome (appended after the run; the predictions above are unedited)
+
+- **The run.** `few_cycle_strong.c 80` finished: 5,324 strong classes of orders 3-18, reproducing the census at orders
+  <= 9.
+  - An earlier attempt failed loudly at order 17 ("alpha_1 mismatch"): the 128-bit canonical code overflowed. Codes
+    were widened to 192 bits and the budget-44 inventory was reproduced before the rerun.
+- **Tables:** `base_spectra_80.out`.
+- **P1 CONFIRMED.** Gap_3(80) = {3, 10}.
+- **P2 CONFIRMED** (consistency). Gap_2(80) = {3, 10}.
+- **P3 CONFIRMED.** New gaps on (44, 80] per base, each at most 2:
+
+  | b | new gaps |
+  |---|---|
+  | 4 | none |
+  | 5 | none |
+  | 6 | one (46) |
+  | 7 | none |
+  | 8 | one (52) |
+
+- **P4 CONFIRMED** (consistency). m = 3 is a gap in every base b <= 90.
+- **P5 CONFIRMED** (consistency). m = 10 is a gap exactly for b not in {4, 8}, for b <= 90.
+- **Extra check.** For b = 81, 85 and 90 the gap set on [0, 80] equals the hole set of A, as the block lemma requires.

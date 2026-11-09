@@ -1,0 +1,18 @@
+cross-check: alpha_1 formula = brute-force odd-cycle count and H = 1 + 2 alpha_1 on all 1023 words of length <= 9
+m =  2: 1 reduced words, min alpha_1 = 1
+m =  3: 2 reduced words, min alpha_1 = 2
+m =  4: 4 reduced words, min alpha_1 = 4
+m =  5: 8 reduced words, min alpha_1 = 7
+m =  6: 16 reduced words, min alpha_1 = 12
+m =  7: 32 reduced words, min alpha_1 = 22
+m =  8: 64 reduced words, min alpha_1 = 40
+m =  9: 128 reduced words, min alpha_1 = 76
+m = 10: 256 reduced words, min alpha_1 = 144
+m = 11: 512 reduced words, min alpha_1 = 280
+m = 12: 1024 reduced words, min alpha_1 = 544
+m = 13: 2048 reduced words, min alpha_1 = 1072
+m = 14: 4096 reduced words, min alpha_1 = 2112
+m = 15: 8192 reduced words, min alpha_1 = 4192
+m = 16: 16384 reduced words, min alpha_1 = 8320
+alpha_1 values in [0, 8192) NOT attained by single-apex tournaments: [3, 6, 10, 14, 17, 20, 21, 24, 27, 28, 29, 33, 35, 37, 38, 41, 44, 46, 50, 52, 54, 55, 56, 59, 62, 65, 66, 67, 68, 73, 74, 77, 80, 81, 86, 87, 88, 91, 94, 96, 98, 102, 103, 104, 105, 110, 112, 115, 116, 118, 119, 122, 123, 125, 130, 131, 133, 136, 138, 140] ... (count 3992)
+so H = 1 + 2 alpha_1: odd H in [1, 16384) not attained: [7, 13, 21, 29, 35, 41, 43, 49, 55, 57, 59, 67, 71, 75, 77, 83, 89, 93, 101, 105, 109, 111, 113, 119, 125, 131, 133, 135, 137, 147, 149, 155, 161, 163, 173, 175, 177, 183, 189, 193, 197, 205, 207, 209, 211, 221, 225, 231, 233, 237, 239, 245, 247, 251, 261, 263, 267, 273, 277, 281]

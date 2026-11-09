@@ -1,0 +1,100 @@
+strong atoms (distinct packing vectors) with alpha_1 <= 19: 43
+A = alpha_1 of intercyclic tournaments (alpha_2 = 0), within budget: [0, 1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 15, 16, 18, 19]
+holes of A in [0, 19]: [3, 10, 14, 17]
+
+decompositions of the two universal alpha-sums (vectors shown as (alpha_1, alpha_2, alpha_3)):
+realisable packing vectors with alpha_1 <= 10: 108
+  alpha-sum m = 3:
+    b =  2: (3, 0, 0) impossible
+    b =  3: (3, 0, 0) impossible
+    b =  4: (3, 0, 0) impossible
+  alpha-sum m = 10:
+    b =  2: (2, 4, 0) impossible; (4, 1, 1) impossible; (4, 3, 0) impossible; (6, 0, 1) impossible; (6, 2, 0) impossible; (8, 1, 0) impossible; (10, 0, 0) impossible
+    b =  3: (4, 2, 0) impossible; (7, 1, 0) impossible; (10, 0, 0) impossible
+    b =  4: (2, 2, 0) impossible; (6, 1, 0) REALISED; (10, 0, 0) impossible
+    b =  5: (5, 1, 0) impossible; (10, 0, 0) impossible
+    b =  6: (4, 1, 0) impossible; (10, 0, 0) impossible
+    b =  7: (3, 1, 0) impossible; (10, 0, 0) impossible
+    b =  8: (2, 1, 0) REALISED; (10, 0, 0) impossible
+    b =  9: (10, 0, 0) impossible
+    b = 10: (10, 0, 0) impossible
+    b = 11: (10, 0, 0) impossible
+
+gap table: for each base b, the m <= 19 with 1 + b m NOT a b-coloured packing count
+  b =  2: missing m = [3, 10]   (values 1 + b m = [7, 21])
+  b =  3: missing m = [3, 10]   (values 1 + b m = [10, 31])
+  b =  4: missing m = [3, 14]   (values 1 + b m = [13, 57])
+  b =  5: missing m = [3, 10]   (values 1 + b m = [16, 51])
+  b =  6: missing m = [3, 10, 14]   (values 1 + b m = [19, 61, 85])
+  b =  7: missing m = [3, 10, 14]   (values 1 + b m = [22, 71, 99])
+  b =  8: missing m = [3]   (values 1 + b m = [25])
+  b =  9: missing m = [3, 10, 14, 17]   (values 1 + b m = [28, 91, 127, 154])
+  b = 10: missing m = [3, 10, 14, 17]   (values 1 + b m = [31, 101, 141, 171])
+  b = 11: missing m = [3, 10, 14]   (values 1 + b m = [34, 111, 155])
+  b = 12: missing m = [3, 10, 17]   (values 1 + b m = [37, 121, 205])
+  b = 13: missing m = [3, 10, 14, 17]   (values 1 + b m = [40, 131, 183, 222])
+  b = 14: missing m = [3, 10, 14, 17]   (values 1 + b m = [43, 141, 197, 239])
+  b = 15: missing m = [3, 10, 14]   (values 1 + b m = [46, 151, 211])
+  b = 16: missing m = [3, 10, 14, 17]   (values 1 + b m = [49, 161, 225, 273])
+  b = 17: missing m = [3, 10, 14, 17]   (values 1 + b m = [52, 171, 239, 290])
+  b = 18: missing m = [3, 10, 14, 17]   (values 1 + b m = [55, 181, 253, 307])
+  b = 19: missing m = [3, 10, 14, 17]   (values 1 + b m = [58, 191, 267, 324])
+  b = 20: missing m = [3, 10, 14, 17]   (values 1 + b m = [61, 201, 281, 341])
+  b = 21: missing m = [3, 10, 14, 17]   (values 1 + b m = [64, 211, 295, 358])
+  b = 22: missing m = [3, 10, 14, 17]   (values 1 + b m = [67, 221, 309, 375])
+  b = 23: missing m = [3, 10, 14, 17]   (values 1 + b m = [70, 231, 323, 392])
+  b = 24: missing m = [3, 10, 14, 17]   (values 1 + b m = [73, 241, 337, 409])
+  b = 25: missing m = [3, 10, 14, 17]   (values 1 + b m = [76, 251, 351, 426])
+  b = 26: missing m = [3, 10, 14, 17]   (values 1 + b m = [79, 261, 365, 443])
+  b = 27: missing m = [3, 10, 14, 17]   (values 1 + b m = [82, 271, 379, 460])
+  b = 28: missing m = [3, 10, 14, 17]   (values 1 + b m = [85, 281, 393, 477])
+  b = 29: missing m = [3, 10, 14, 17]   (values 1 + b m = [88, 291, 407, 494])
+  b = 30: missing m = [3, 10, 14, 17]   (values 1 + b m = [91, 301, 421, 511])
+  b = 31: missing m = [3, 10, 14, 17]   (values 1 + b m = [94, 311, 435, 528])
+  b = 32: missing m = [3, 10, 14, 17]   (values 1 + b m = [97, 321, 449, 545])
+  b = 33: missing m = [3, 10, 14, 17]   (values 1 + b m = [100, 331, 463, 562])
+  b = 34: missing m = [3, 10, 14, 17]   (values 1 + b m = [103, 341, 477, 579])
+  b = 35: missing m = [3, 10, 14, 17]   (values 1 + b m = [106, 351, 491, 596])
+  b = 36: missing m = [3, 10, 14, 17]   (values 1 + b m = [109, 361, 505, 613])
+  b = 37: missing m = [3, 10, 14, 17]   (values 1 + b m = [112, 371, 519, 630])
+  b = 38: missing m = [3, 10, 14, 17]   (values 1 + b m = [115, 381, 533, 647])
+  b = 39: missing m = [3, 10, 14, 17]   (values 1 + b m = [118, 391, 547, 664])
+  b = 40: missing m = [3, 10, 14, 17]   (values 1 + b m = [121, 401, 561, 681])
+
+rescue sets R(a) = {b <= BMAX : 1 + a b in Spec_b} for the holes a of A (for b > a only (a, 0) counts):
+  a =  3 (H =   7): rescued in bases []
+  a = 10 (H =  21): rescued in bases [4, 8]
+      b = 4: product of strong packing vectors ((6, 1, 0, 0),)
+      b = 8: product of strong packing vectors ((1, 0, 0, 0), (1, 0, 0, 0))
+  a = 14 (H =  29): rescued in bases [2, 3, 5, 8, 12]
+      b = 2: product of strong packing vectors ((10, 2, 0, 0),)
+      b = 3: product of strong packing vectors ((11, 1, 0, 0),)
+      b = 5: product of strong packing vectors ((9, 1, 0, 0),)
+      b = 8: product of strong packing vectors ((6, 1, 0, 0),)
+      b = 12: product of strong packing vectors ((1, 0, 0, 0), (1, 0, 0, 0))
+  a = 17 (H =  35): rescued in bases [2, 3, 4, 5, 6, 7, 8, 11, 15]
+      b = 2: product of strong packing vectors ((13, 2, 0, 0),)
+      b = 3: product of strong packing vectors ((1, 0, 0, 0), (4, 0, 0, 0))
+      b = 4: product of strong packing vectors ((13, 1, 0, 0),)
+      b = 5: product of strong packing vectors ((12, 1, 0, 0),)
+      b = 6: product of strong packing vectors ((11, 1, 0, 0),)
+      b = 7: product of strong packing vectors ((1, 0, 0, 0), (2, 0, 0, 0))
+
+three-digit repunits 111_b = b^2 + b + 1 as b-coloured packing counts (b + 1 <= budget):
+  b =  2: 111_b =     7  NOT attained  (b + 1 in A: False)
+  b =  3: 111_b =    13  attained  (b + 1 in A: True)
+  b =  4: 111_b =    21  attained  (b + 1 in A: True)
+  b =  5: 111_b =    31  attained  (b + 1 in A: True)
+  b =  6: 111_b =    43  attained  (b + 1 in A: True)
+  b =  7: 111_b =    57  attained  (b + 1 in A: True)
+  b =  8: 111_b =    73  attained  (b + 1 in A: True)
+  b =  9: 111_b =    91  NOT attained  (b + 1 in A: False)
+  b = 10: 111_b =   111  attained  (b + 1 in A: True)
+  b = 11: 111_b =   133  attained  (b + 1 in A: True)
+  b = 12: 111_b =   157  attained  (b + 1 in A: True)
+  b = 13: 111_b =   183  NOT attained  (b + 1 in A: False)
+  b = 14: 111_b =   211  attained  (b + 1 in A: True)
+  b = 15: 111_b =   241  attained  (b + 1 in A: True)
+  b = 16: 111_b =   273  NOT attained  (b + 1 in A: False)
+  b = 17: 111_b =   307  attained  (b + 1 in A: True)
+  b = 18: 111_b =   343  attained  (b + 1 in A: True)

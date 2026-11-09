@@ -1,0 +1,13 @@
+A below 1024 from the exhaustive generator equals Session 16's formula: 565 values
+holes of A below 1024: 459 (density 0.448); first: [3, 10, 14, 17, 20, 21, 27, 28, 29, 33, 35, 37, 38, 41, 44, 46, 50, 52, 54, 55, 56, 59, 62, 65, 66, 67, 68, 73, 74, 77, 80, 81, 86, 87, 88, 91, 94, 98, 102, 103]
+carry-free singletons (exactly one strong intercyclic class): 26
+  a = [1, 2, 5, 6, 8, 15, 32, 45, 89, 106, 176, 185, 229, 310, 323, 369, 414, 429, 544, 604, 680, 699, 746, 838, 859, 933]
+  H = 1 + 2a = [3, 5, 11, 13, 17, 31, 65, 91, 179, 213, 353, 371, 459, 621, 647, 739, 829, 859, 1089, 1209, 1361, 1399, 1493, 1677, 1719, 1867]
+  all self-converse: True
+multiplicity histogram (multiplicity: number of values below 1024): [(1, 26), (2, 380), (3, 19), (4, 110), (5, 7), (6, 17), (8, 4), (9, 1)]
+binary comparison: a strong tournament with two disjoint cycles has order >= 6, so alpha_1 >= 6 (Moon) and
+  alpha_2 >= 1, and its binary alpha-sum alpha_1 + 2 alpha_2 + ... is >= 8; hence for a <= 7 every strong
+  tournament with H = 1 + 2a is intercyclic (carry-free), and the binary strong singletons with H <= 15 are
+  exactly the carry-free singletons with a <= 7.  Below 625 the binary strong singletons are H = 3, 5, 11, 13
+  (THM-4884 / THM-4810), i.e. a = 1, 2, 5, 6; every carry-free singleton with 8 <= a < 312 acquires a carried twin.
+  the carry-free singletons with a <= 7 are [1, 2, 5, 6]

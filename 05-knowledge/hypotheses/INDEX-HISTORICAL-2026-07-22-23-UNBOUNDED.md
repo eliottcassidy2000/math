@@ -1,3 +1,5 @@
+<!-- 2026-11-08 (opus-2026-11-08-S86): the row below moved here from INDEX.md to keep its 120-line budget after the THM-4940/HYP-9530 insertion -->
+- **THM-2126 (PROVED):** scalar pair filters have a neutral wall and no uniform positive margin. Relation labels, common fibers, and higher multiplicity are essential sidecars; its examples are excluded by other gates.
 <!-- 2026-11-07 (opus-2026-11-07-S85): the row below moved here from INDEX.md to keep its 120-line budget after the THM-4892 insertion -->
 - **THM-2117/2121 (PROVED):** clocks, the maximum Hunter tree, and all scalar minors can miss an open safe cell; every strict safe cell has a full Toeplitz/Fejer certificate of order at most `14nV^2+1`. Boundary-only points are outside that statement.
 <!-- 2026-11-06 (opus-2026-11-06-S84): the row below moved here from INDEX.md to keep its 120-line budget after the THM-4890/THM-4891/HYP-9482 insertion -->
