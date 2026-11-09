@@ -1,0 +1,902 @@
+{
+  "status": "PASS",
+  "universe": "all 1105 marked labelled tournament blocks of orders 1..4, deduplicated to 57 ternary matrices",
+  "counts": {
+    "tower": 4,
+    "separator": 52,
+    "exceptional_preimage": 1
+  },
+  "alphabet_sha256": "4098bc41a53d39df409628dae9ec608d162601617ead1429d970e74600d628dd",
+  "rebuild": true,
+  "all_word_conclusion": "Only products consisting entirely of tower-power generators preserve the ray (3,1,2).",
+  "scope": "all word lengths; finite exact certificate plus mathematical induction, not orbit cofiniteness",
+  "hostile_control": "The exceptional matrix maps (45,1,5) to 131*(3,1,2); the invariant cone is essential.",
+  "records": [
+    {
+      "index": 0,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        6,
+        0
+      ],
+      "p": 0,
+      "q": 1,
+      "positive_form": [
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "kind": "tower",
+      "exponent": 1,
+      "cone_form": [
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        0,
+        3
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        3,
+        1,
+        4
+      ]
+    },
+    {
+      "index": 3,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        6,
+        0
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        3,
+        9,
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        3,
+        6
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        7,
+        5,
+        8
+      ]
+    },
+    {
+      "index": 5,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        15,
+        0
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        7,
+        21,
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "kind": "separator",
+      "cone_form": [
+        11,
+        9,
+        12
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        15,
+        13,
+        16
+      ]
+    },
+    {
+      "index": 7,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        6,
+        6
+      ],
+      "p": 0,
+      "q": 1,
+      "positive_form": [
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "index": 8,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        0,
+        0
+      ],
+      "p": 1,
+      "q": 0,
+      "positive_form": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 9,
+      "kind": "tower",
+      "exponent": 2,
+      "cone_form": [
+        2,
+        6,
+        0
+      ]
+    },
+    {
+      "index": 10,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        3,
+        3
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        3,
+        5,
+        5
+      ]
+    },
+    {
+      "index": 11,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        6,
+        6
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        3,
+        9,
+        9
+      ]
+    },
+    {
+      "index": 12,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        9,
+        0
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        7,
+        13,
+        1
+      ]
+    },
+    {
+      "index": 13,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        9,
+        9
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        7,
+        13,
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "kind": "separator",
+      "cone_form": [
+        11,
+        21,
+        3
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        15,
+        29,
+        5
+      ]
+    },
+    {
+      "index": 15,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        12,
+        12
+      ],
+      "p": 0,
+      "q": 1,
+      "positive_form": [
+        1,
+        6,
+        6
+      ]
+    },
+    {
+      "index": 16,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        0,
+        0
+      ],
+      "p": 1,
+      "q": 0,
+      "positive_form": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 17,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        6,
+        6
+      ],
+      "p": -2,
+      "q": 3,
+      "positive_form": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 18,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        6,
+        6
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        3,
+        10,
+        10
+      ]
+    },
+    {
+      "index": 19,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        9,
+        6
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        7,
+        9,
+        0
+      ]
+    },
+    {
+      "index": 20,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        9,
+        9
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        7,
+        14,
+        14
+      ]
+    },
+    {
+      "index": 21,
+      "kind": "separator",
+      "cone_form": [
+        11,
+        21,
+        12
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        15,
+        30,
+        18
+      ]
+    },
+    {
+      "index": 22,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        0,
+        0
+      ],
+      "p": 1,
+      "q": 0,
+      "positive_form": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 23,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        12,
+        12
+      ],
+      "p": -2,
+      "q": 3,
+      "positive_form": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 24,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        15,
+        15
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        7,
+        9,
+        9
+      ]
+    },
+    {
+      "index": 25,
+      "kind": "separator",
+      "cone_form": [
+        11,
+        27,
+        21
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        15,
+        30,
+        27
+      ]
+    },
+    {
+      "index": 26,
+      "kind": "separator",
+      "cone_form": [
+        8,
+        12,
+        6
+      ],
+      "p": 0,
+      "q": 1,
+      "positive_form": [
+        4,
+        6,
+        3
+      ]
+    },
+    {
+      "index": 27,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        6,
+        0
+      ],
+      "p": 1,
+      "q": -1,
+      "positive_form": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 28,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        0,
+        3
+      ],
+      "p": 1,
+      "q": -2,
+      "positive_form": [
+        1,
+        4,
+        1
+      ]
+    },
+    {
+      "index": 29,
+      "kind": "tower",
+      "exponent": 3,
+      "cone_form": [
+        2,
+        6,
+        6
+      ]
+    },
+    {
+      "index": 30,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        6,
+        9
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        8,
+        10,
+        13
+      ]
+    },
+    {
+      "index": 31,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        9,
+        3
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        8,
+        14,
+        5
+      ]
+    },
+    {
+      "index": 32,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        15,
+        9
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        8,
+        22,
+        13
+      ]
+    },
+    {
+      "index": 33,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        6,
+        6
+      ],
+      "p": 1,
+      "q": -1,
+      "positive_form": [
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "index": 34,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        3,
+        3
+      ],
+      "p": 1,
+      "q": -1,
+      "positive_form": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 35,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        12,
+        12
+      ],
+      "p": 1,
+      "q": -3,
+      "positive_form": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 36,
+      "kind": "separator",
+      "cone_form": [
+        17,
+        27,
+        12
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        19,
+        29,
+        14
+      ]
+    },
+    {
+      "index": 37,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        6,
+        0
+      ],
+      "p": 1,
+      "q": -1,
+      "positive_form": [
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "index": 38,
+      "kind": "separator",
+      "cone_form": [
+        17,
+        9,
+        18
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        19,
+        11,
+        29
+      ]
+    },
+    {
+      "index": 39,
+      "kind": "separator",
+      "cone_form": [
+        8,
+        0,
+        0
+      ],
+      "p": 2,
+      "q": -1,
+      "positive_form": [
+        4,
+        11,
+        2
+      ]
+    },
+    {
+      "index": 40,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        15,
+        12
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        8,
+        2,
+        2
+      ]
+    },
+    {
+      "index": 41,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        6,
+        0
+      ],
+      "p": 1,
+      "q": -1,
+      "positive_form": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "index": 42,
+      "kind": "separator",
+      "cone_form": [
+        8,
+        12,
+        6
+      ],
+      "p": -1,
+      "q": 2,
+      "positive_form": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 43,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        3,
+        6
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        4,
+        7,
+        10
+      ]
+    },
+    {
+      "index": 44,
+      "kind": "separator",
+      "cone_form": [
+        11,
+        21,
+        9
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        7,
+        21,
+        9
+      ]
+    },
+    {
+      "index": 45,
+      "kind": "separator",
+      "cone_form": [
+        8,
+        12,
+        6
+      ],
+      "p": 0,
+      "q": 1,
+      "positive_form": [
+        1,
+        4,
+        1
+      ]
+    },
+    {
+      "index": 46,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        0,
+        3
+      ],
+      "p": 0,
+      "q": -1,
+      "positive_form": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "index": 47,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        21,
+        18
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        4,
+        22,
+        22
+      ]
+    },
+    {
+      "index": 48,
+      "kind": "separator",
+      "cone_form": [
+        11,
+        15,
+        9
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        7,
+        9,
+        0
+      ]
+    },
+    {
+      "index": 49,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        6,
+        6
+      ],
+      "p": 1,
+      "q": -1,
+      "positive_form": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "index": 50,
+      "kind": "tower",
+      "exponent": 4,
+      "cone_form": [
+        8,
+        12,
+        6
+      ]
+    },
+    {
+      "index": 51,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        9,
+        0
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        4,
+        2,
+        2
+      ]
+    },
+    {
+      "index": 52,
+      "kind": "separator",
+      "cone_form": [
+        11,
+        6,
+        12
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        7,
+        8,
+        23
+      ]
+    },
+    {
+      "index": 53,
+      "kind": "separator",
+      "cone_form": [
+        2,
+        12,
+        12
+      ],
+      "p": 0,
+      "q": -1,
+      "positive_form": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 54,
+      "kind": "exceptional_preimage",
+      "preimage": [
+        45,
+        1,
+        5
+      ],
+      "cone_form": [
+        8,
+        3,
+        6
+      ]
+    },
+    {
+      "index": 55,
+      "kind": "separator",
+      "cone_form": [
+        5,
+        9,
+        6
+      ],
+      "p": 0,
+      "q": -1,
+      "positive_form": [
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "index": 56,
+      "kind": "separator",
+      "cone_form": [
+        11,
+        15,
+        6
+      ],
+      "p": -1,
+      "q": -1,
+      "positive_form": [
+        7,
+        1,
+        7
+      ]
+    }
+  ]
+}
