@@ -38,3 +38,22 @@ There are 2^20 values of y and 2^24 blue lines.
     directly by Hamiltonian-path DP equals A(y) + x.B(y).
 
 Outcome: to be appended below without editing the predictions.
+
+## Outcome (appended after the run; the predictions above are unedited)
+
+`mirror_check.c` at n = 11: all 2^20 values of y, in 12 slices, about 10 s. The decomposition was also checked
+against Hamiltonian-path DP on 20,004 random blue tilings, with 0 mismatches.
+
+- **R1 CONFIRMED.** (P2) sum_i B_i(y) = 1 (mod 2) for every y.
+- **R2 REFUTED.** (P3) fails for 94,208 of the 1,048,576 values of y: B(y) = B(y + 1) there.
+- **R3 REFUTED.** The exact blue-line split at n = 11, computed from the proved decomposition over all 2^25 blue
+  tilings, is
+
+      (1,1) : (1,3) : (3,3) = 4,014,080 : 8,749,056 : 4,014,080,
+
+  not 4,194,304 : 8,388,608 : 4,194,304.
+  - What survives is exactly what R1 implies. H mod 4 is balanced on blue tilings (2^24 of each class), so
+    (1,1) = (3,3).
+  - The 1 : 2 : 1 law holds at n = 5, 7, 9 only.
+- **R1 is now proved at every odd n.** Mod 2, the mirror-free path count equals the total path count of a quotient
+  tournament on the mirror pairs, which is odd by Redei (see the note).
