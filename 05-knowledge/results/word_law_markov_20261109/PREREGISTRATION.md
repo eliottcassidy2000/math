@@ -34,3 +34,32 @@ before `pairs_check.py` was written.
 A failure of Q1 or Q2 would show only that the run-window family is too small. It would not refute (B).
 
 Outcome: to be appended below without editing the predictions.
+
+## Outcome (appended after the run; the predictions above are unedited)
+
+`pairs_check.py` ran at n = 13..40 (pairs_check.out). An in-sample calibration at n = 6..12 was run alongside
+(pairs_check_insample.out), regrettably after the predictions were pushed (MISTAKE-744).
+
+- **Q1 REFUTED, in exactly one family.** For every n in [13, 40], every black pair 1 <= i <= j <= k with i + j >= k
+  is realised by a non-palindromic admissible word, except (k, k) at n = 3k (n = 15, 18, ..., 39).
+  - (k, k) is impossible for any word at n = 3k. P(A) = k forces A to contain the unique maximum packing
+    {0, 3, ..., 3k - 3} of the positions [0, 3k - 3], so P(B) <= k - 1.
+  - Such lines exist nevertheless: at n = 9 there are 121,953,098 black (3, 3) lines. The run-window family is too
+    small there; it is not an obstruction.
+- **Q2 REFUTED, with a parity pattern.**
+  - At even n (L = n - 2 even), no palindromic word, admissible or not, has P(A) and P(B) both odd. This is a theorem
+    (THM-5020 (5), the central-pair lemma); it was checked for every palindrome of even length <= 24. So the
+    non-tight both-odd pairs are missed: (3, 3) at n = 14; (1, 5), (3, 3), (3, 5), (5, 5) at n = 16; ...
+  - (k, k) is missed at every n = 0, 1 (mod 3).
+  - Blue lines with these pairs do exist at small n (blue (3, 3) at n = 12: 22,586 lines in the audit's complete
+    census), so again the family is too small.
+  - All other non-tight blue pairs are realised for n <= 40.
+- **Q3:** not established by this family.
+
+Consequences:
+- HYP-9540 (B) is now PROVED for 13 <= n <= 40 on every pair except:
+  - black (k, k) at n = 3k;
+  - blue (k, k) at n = 0, 1 (mod 3);
+  - blue non-tight pairs with i and j both odd at even n.
+- Each such line exists by THM-5020 (L1), (L2) applied to a word found by an exact census.
+- The excepted pairs remain conjectural for n >= 13.

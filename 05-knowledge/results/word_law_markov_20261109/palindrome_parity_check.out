@@ -1,0 +1,12 @@
+L = 2: palindromes 2; odd P(X) without both central positions in X: 0; P(A), P(B) both odd: 0
+L = 4: palindromes 4; odd P(X) without both central positions in X: 0; P(A), P(B) both odd: 0
+L = 6: palindromes 8; odd P(X) without both central positions in X: 0; P(A), P(B) both odd: 0
+L = 8: palindromes 16; odd P(X) without both central positions in X: 0; P(A), P(B) both odd: 0
+L = 10: palindromes 32; odd P(X) without both central positions in X: 0; P(A), P(B) both odd: 0
+L = 12: palindromes 64; odd P(X) without both central positions in X: 0; P(A), P(B) both odd: 0
+L = 14: palindromes 128; odd P(X) without both central positions in X: 0; P(A), P(B) both odd: 0
+L = 16: palindromes 256; odd P(X) without both central positions in X: 0; P(A), P(B) both odd: 0
+L = 18: palindromes 512; odd P(X) without both central positions in X: 0; P(A), P(B) both odd: 0
+L = 20: palindromes 1024; odd P(X) without both central positions in X: 0; P(A), P(B) both odd: 0
+L = 22: palindromes 2048; odd P(X) without both central positions in X: 0; P(A), P(B) both odd: 0
+L = 24: palindromes 4096; odd P(X) without both central positions in X: 0; P(A), P(B) both odd: 0

@@ -1,0 +1,9 @@
+n = 6, k = 2: admissible words 16, palindromic 4; black pairs missing [(2, 2)]; blue (non-tight) pairs missing [(2, 2)]
+n = 7, k = 2: admissible words 32, palindromic 8; black pairs missing []; blue (non-tight) pairs missing [(2, 2)]
+n = 8, k = 2: admissible words 64, palindromic 8; black pairs missing []; blue (non-tight) pairs missing []
+n = 9, k = 3: admissible words 128, palindromic 16; black pairs missing [(3, 3)]; blue (non-tight) pairs missing [(3, 3)]
+n = 10, k = 3: admissible words 256, palindromic 16; black pairs missing []; blue (non-tight) pairs missing [(1, 3), (3, 3)]
+n = 11, k = 3: admissible words 512, palindromic 32; black pairs missing []; blue (non-tight) pairs missing []
+n = 12, k = 4: admissible words 1022, palindromic 32; black pairs missing [(4, 4)]; blue (non-tight) pairs missing [(3, 3), (4, 4)]
+Q1 (black, all allowed pairs realised): REFUTED
+Q2 (blue, all non-tight allowed pairs realised): REFUTED

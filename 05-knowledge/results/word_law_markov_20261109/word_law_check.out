@@ -1,0 +1,10 @@
+all words, n = 4..15: 16380 words; failures {'L2': 0, 'L1': 0, 'J': 0, 'W': 0}
+n = 16: tight colourings 96 (palindromic 8); word-law construction failures 0
+n = 17: tight colourings 32 (palindromic 8); word-law construction failures 0
+n = 18: tight colourings 704 (palindromic 16); word-law construction failures 0
+n = 19: tight colourings 224 (palindromic 8); word-law construction failures 0
+n = 20: tight colourings 64 (palindromic 8); word-law construction failures 0
+n = 21: tight colourings 1760 (palindromic 40); word-law construction failures 0
+n = 22: tight colourings 512 (palindromic 16); word-law construction failures 0
+n = 23: tight colourings 128 (palindromic 16); word-law construction failures 0
+n = 24: tight colourings 4288 (palindromic 40); word-law construction failures 0
