@@ -1,0 +1,33 @@
+order 4 (lambda: classes, first creators, H range, H range of non-first-creators)
+  lambda=0: 3 classes, 0 first creators (0.0000), H in [1,3], non-FC H in [-1,3]
+  lambda=1: 1 classes, 1 first creators (1.0000), H in [5,5], non-FC H in [-1,-1]
+order 5 (lambda: classes, first creators, H range, H range of non-first-creators)
+  lambda=0: 6 classes, 0 first creators (0.0000), H in [1,5], non-FC H in [-1,5]
+  lambda=1: 5 classes, 5 first creators (1.0000), H in [9,15], non-FC H in [-1,-1]
+  lambda=2: 1 classes, 1 first creators (1.0000), H in [15,15], non-FC H in [-1,-1]
+order 6 (lambda: classes, first creators, H range, H range of non-first-creators)
+  lambda=0: 21 classes, 0 first creators (0.0000), H in [1,15], non-FC H in [-1,15]
+  lambda=1: 30 classes, 28 first creators (0.9333), H in [15,37], non-FC H in [-1,15]
+  lambda=2: 5 classes, 5 first creators (1.0000), H in [41,45], non-FC H in [-1,-1]
+order 7 (lambda: classes, first creators, H range, H range of non-first-creators)
+  lambda=0: 103 classes, 0 first creators (0.0000), H in [1,45], non-FC H in [-1,45]
+  lambda=1: 266 classes, 241 first creators (0.9060), H in [25,135], non-FC H in [-1,45]
+  lambda=2: 84 classes, 84 first creators (1.0000), H in [99,159], non-FC H in [-1,-1]
+  lambda=3: 3 classes, 3 first creators (1.0000), H in [171,189], non-FC H in [-1,-1]
+order 8 (lambda: classes, first creators, H range, H range of non-first-creators)
+  lambda=0: 872 classes, 0 first creators (0.0000), H in [1,189], non-FC H in [-1,189]
+  lambda=1: 3623 classes, 3072 first creators (0.8479), H in [45,477], non-FC H in [-1,189]
+  lambda=2: 2300 classes, 2300 first creators (1.0000), H in [195,613], non-FC H in [-1,-1]
+  lambda=3: 85 classes, 85 first creators (1.0000), H in [621,661], non-FC H in [-1,-1]
+order 9 (lambda: classes, first creators, H range, H range of non-first-creators)
+  lambda=0: 13403 classes, 0 first creators (0.0000), H in [1,661], non-FC H in [-1,661]
+  lambda=1: 78515 classes, 64182 first creators (0.8174), H in [75,2205], non-FC H in [-1,661]
+  lambda=2: 89366 classes, 89242 first creators (0.9986), H in [385,2711], non-FC H in [-1,661]
+  lambda=3: 10237 classes, 10237 first creators (1.0000), H in [2055,3109], non-FC H in [-1,-1]
+  lambda=4: 15 classes, 15 first creators (1.0000), H in [3159,3357], non-FC H in [-1,-1]
+order 10 (lambda: classes, first creators, H range, H range of non-first-creators)
+  lambda=0: 377107 classes, 0 first creators (0.0000), H in [1,3357], non-FC H in [-1,3357]
+  lambda=1: 2817450 classes, 2149134 first creators (0.7628), H in [125,9595], non-FC H in [-1,3357]
+  lambda=2: 5124698 classes, 5084297 first creators (0.9921), H in [727,12701], non-FC H in [-1,3357]
+  lambda=3: 1400468 classes, 1400468 first creators (1.0000), H in [5753,14733], non-FC H in [-1,-1]
+  lambda=4: 13333 classes, 13333 first creators (1.0000), H in [14877,15745], non-FC H in [-1,-1]

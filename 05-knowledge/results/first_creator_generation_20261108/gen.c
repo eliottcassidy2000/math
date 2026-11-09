@@ -59,7 +59,7 @@ int main(int argc, char **argv){
   long tot=0, cFC=0, cEXT=0, cSUM=0, cSUB=0, cREST=0, nprime=0, nprimeFC=0, nstrong=0;
   long nonFC=0, nonFCstrong=0, nonFCstrongEXT=0, nonFCprime=0, nonFCprimeEXT=0;
   long strongNoFCdel=0, strongNoFCdelPrime=0;
-  static long restH[HCAP]; char line[8192]; long lamHist[12]={0}, graftFF[4]={0}, restPend=0, restGraft=0, restOther=0;
+  static long restH[HCAP]; char line[8192]; long lamHist[12]={0}, graftFF[4]={0}, restPend=0, restGraft=0, restOther=0, restCut=0, restNoCut=0;
   for (int k=1;k<=n-1 && k<=12;k++){ char fn[64]; snprintf(fn,sizeof fn,"S%d.txt",k); loadset(fn, inS[k]); }
   for (;;){
     u64 code; uint32_t H; u64 dh[MAXN]; int strong;
@@ -81,6 +81,11 @@ int main(int argc, char **argv){
       if (k) cEXT++; else if (!strong) cSUM++; else if (!pr) cSUB++;
       else { cREST++; restH[H]++;
         unsigned X=0; int lam = lambdaq(adj,n,&X); if (lam < 12) lamHist[lam]++;
+        { int cut=0; for (int v=0;v<n && !cut;v++){ uint16_t a2[MAXN]; int k2=0; int map[MAXN];
+            for (int u=0;u<n;u++) if (u!=v) map[u]=k2++;
+            for (int u=0;u<n;u++) if (u!=v){ a2[map[u]]=0; for (int w=0;w<n;w++) if (w!=v && (adj[u]>>w&1)) a2[map[u]] |= 1u<<map[w]; }
+            if (!strongq(a2,n-1)) cut=1; }
+          if (cut) restCut++; else { restNoCut++; if (restNoCut<=10) printf("RESTNOCUT code=%llu H=%u lambda=%d\n", code, H, lam); } }
         { int pend=0; for (int v=0;v<n;v++){ int od=__builtin_popcount(adj[v]); if (od==1 || od==n-2) pend=1; }
           if (pend) restPend++; else if (lam==1) restGraft++; else { restOther++; if (restOther<=10) printf("RESTOTHER code=%llu H=%u lambda=%d\n", code, H, lam); } }
         if (lam == 1){ unsigned Y=((1u<<n)-1)&~X; int fa=fcsub(adj,n,X), fb=fcsub(adj,n,Y); graftFF[fa*2+fb]++;
@@ -95,6 +100,7 @@ int main(int argc, char **argv){
   printf("  REST values:"); for (int h=0;h<HCAP;h++) if (restH[h]) printf(" %d[%ld]", h, restH[h]); printf("\n");
   printf("  REST arc-strong connectivity histogram:"); for (int l=0;l<12;l++) if (lamHist[l]) printf(" lambda=%d:%ld", l, lamHist[l]); printf("\n");
   printf("  REST: pendant (a vertex of in- or out-degree 1) %ld, other single-back-arc graft %ld, neither %ld\n", restPend, restGraft, restOther);
+  printf("  REST with a vertex whose deletion is not strong (an ordinal sum plus one vertex): %ld; without: %ld\n", restCut, restNoCut);
   printf("  REST single-back-arc grafts A=>B: (old,old) %ld (old,FC) %ld (FC,old) %ld (FC,FC) %ld\n", graftFF[0], graftFF[1], graftFF[2], graftFF[3]);
   return 0;
 }

@@ -1,0 +1,93 @@
+order 3: classes 2 (strong 1, prime 1, prime first creators 1)
+  first creators 1; non-first-creators 1 = EXT 0 + SUM 1 + SUB 0 + REST 0
+  strong non-first-creators 0 (with a first-creator deletion 0; without 0, of which prime 0)
+  prime non-first-creators 0 (with a first-creator deletion 0)
+  REST values:
+  REST arc-strong connectivity histogram:
+  REST: pendant (a vertex of in- or out-degree 1) 0, other single-back-arc graft 0, neither 0
+  REST with a vertex whose deletion is not strong (an ordinal sum plus one vertex): 0; without: 0
+  REST single-back-arc grafts A=>B: (old,old) 0 (old,FC) 0 (FC,old) 0 (FC,FC) 0
+order 4: classes 4 (strong 1, prime 0, prime first creators 0)
+  first creators 1; non-first-creators 3 = EXT 2 + SUM 1 + SUB 0 + REST 0
+  strong non-first-creators 0 (with a first-creator deletion 0; without 0, of which prime 0)
+  prime non-first-creators 0 (with a first-creator deletion 0)
+  REST values:
+  REST arc-strong connectivity histogram:
+  REST: pendant (a vertex of in- or out-degree 1) 0, other single-back-arc graft 0, neither 0
+  REST with a vertex whose deletion is not strong (an ordinal sum plus one vertex): 0; without: 0
+  REST single-back-arc grafts A=>B: (old,old) 0 (old,FC) 0 (FC,old) 0 (FC,FC) 0
+order 5: classes 12 (strong 6, prime 3, prime first creators 3)
+  first creators 6; non-first-creators 6 = EXT 2 + SUM 4 + SUB 0 + REST 0
+  strong non-first-creators 0 (with a first-creator deletion 0; without 0, of which prime 0)
+  prime non-first-creators 0 (with a first-creator deletion 0)
+  REST values:
+  REST arc-strong connectivity histogram:
+  REST: pendant (a vertex of in- or out-degree 1) 0, other single-back-arc graft 0, neither 0
+  REST with a vertex whose deletion is not strong (an ordinal sum plus one vertex): 0; without: 0
+  REST single-back-arc grafts A=>B: (old,old) 0 (old,FC) 0 (FC,old) 0 (FC,FC) 0
+order 6: classes 56 (strong 35, prime 15, prime first creators 15)
+  first creators 33; non-first-creators 23 = EXT 14 + SUM 9 + SUB 0 + REST 0
+  strong non-first-creators 2 (with a first-creator deletion 2; without 0, of which prime 0)
+  prime non-first-creators 0 (with a first-creator deletion 0)
+  REST values:
+  REST arc-strong connectivity histogram:
+  REST: pendant (a vertex of in- or out-degree 1) 0, other single-back-arc graft 0, neither 0
+  REST with a vertex whose deletion is not strong (an ordinal sum plus one vertex): 0; without: 0
+  REST single-back-arc grafts A=>B: (old,old) 0 (old,FC) 0 (FC,old) 0 (FC,FC) 0
+order 7: classes 456 (strong 353, prime 197, prime first creators 189)
+  first creators 328; non-first-creators 128 = EXT 90 + SUM 37 + SUB 1 + REST 0
+  strong non-first-creators 25 (with a first-creator deletion 24; without 1, of which prime 0)
+  prime non-first-creators 8 (with a first-creator deletion 8)
+  REST values:
+  REST arc-strong connectivity histogram:
+  REST: pendant (a vertex of in- or out-degree 1) 0, other single-back-arc graft 0, neither 0
+  REST with a vertex whose deletion is not strong (an ordinal sum plus one vertex): 0; without: 0
+  REST single-back-arc grafts A=>B: (old,old) 0 (old,FC) 0 (FC,old) 0 (FC,FC) 0
+order 8: classes 6880 (strong 6008, prime 4008, prime first creators 3794)
+  first creators 5457; non-first-creators 1423 = EXT 1162 + SUM 216 + SUB 33 + REST 12
+  strong non-first-creators 551 (with a first-creator deletion 506; without 45, of which prime 12)
+  prime non-first-creators 214 (with a first-creator deletion 202)
+  REST values: 51[2] 57[1] 69[2] 73[2] 77[4] 105[1]
+  REST arc-strong connectivity histogram: lambda=1:12
+  REST: pendant (a vertex of in- or out-degree 1) 12, other single-back-arc graft 0, neither 0
+  REST with a vertex whose deletion is not strong (an ordinal sum plus one vertex): 12; without: 0
+  REST single-back-arc grafts A=>B: (old,old) 0 (old,FC) 0 (FC,old) 12 (FC,FC) 0
+RESTOTHER code=49593484298 H=385 lambda=2
+order 9: classes 191536 (strong 178133, prime 136655, prime first creators 129260)
+  first creators 163676; non-first-creators 27860 = EXT 23855 + SUM 2489 + SUB 1010 + REST 506
+  strong non-first-creators 14457 (with a first-creator deletion 12941; without 1516, of which prime 506)
+  prime non-first-creators 7395 (with a first-creator deletion 6889)
+  REST values: 81[1] 93[4] 97[1] 105[1] 109[2] 111[1] 117[1] 123[4] 129[3] 133[2] 137[2] 139[2] 141[3] 143[2] 145[2] 147[4] 149[4] 153[2] 155[2] 157[6] 159[4] 163[2] 165[6] 169[6] 171[2] 173[2] 175[2] 177[2] 181[2] 183[6] 187[9] 189[1] 191[2] 195[9] 197[4] 199[1] 203[2] 205[8] 209[4] 211[15] 213[6] 215[8] 217[6] 219[4] 221[6] 223[3] 225[8] 227[9] 229[7] 233[16] 235[2] 237[6] 239[6] 241[8] 243[8] 245[10] 247[4] 249[6] 251[10] 253[2] 255[13] 257[2] 259[2] 261[8] 263[8] 265[11] 267[2] 269[6] 271[8] 273[7] 275[4] 277[9] 283[9] 285[8] 287[8] 289[4] 291[4] 293[2] 295[7] 297[4] 299[2] 301[6] 303[4] 305[4] 309[4] 313[2] 315[2] 317[4] 319[8] 321[2] 323[2] 325[5] 327[4] 329[2] 331[2] 333[2] 335[2] 337[5] 345[4] 347[2] 351[1] 353[4] 357[2] 361[3] 365[2] 367[1] 369[2] 377[2] 379[2] 381[2] 383[2] 385[3] 391[2] 393[2] 399[2] 411[2] 417[2] 429[1] 455[2]
+  REST arc-strong connectivity histogram: lambda=1:505 lambda=2:1
+  REST: pendant (a vertex of in- or out-degree 1) 505, other single-back-arc graft 0, neither 1
+  REST with a vertex whose deletion is not strong (an ordinal sum plus one vertex): 506; without: 0
+  REST single-back-arc grafts A=>B: (old,old) 0 (old,FC) 3 (FC,old) 483 (FC,FC) 19
+RESTNOCUT code=25293062539809 H=1345 lambda=2
+RESTOTHER code=25293062539809 H=1345 lambda=2
+RESTNOCUT code=25293062539298 H=1281 lambda=2
+RESTOTHER code=25293062539298 H=1281 lambda=2
+RESTNOCUT code=25288918566433 H=1475 lambda=2
+RESTOTHER code=25288918566433 H=1475 lambda=2
+RESTOTHER code=25288968766476 H=877 lambda=2
+RESTOTHER code=25295210022922 H=727 lambda=2
+RESTNOCUT code=25293146424841 H=1389 lambda=2
+RESTOTHER code=25293146424841 H=1389 lambda=2
+RESTNOCUT code=25293146293260 H=1301 lambda=2
+RESTOTHER code=25293146293260 H=1301 lambda=2
+RESTNOCUT code=32439972005385 H=1393 lambda=2
+RESTOTHER code=32439972005385 H=1393 lambda=2
+RESTNOCUT code=32439971873804 H=1307 lambda=2
+RESTOTHER code=32439971873804 H=1307 lambda=2
+RESTNOCUT code=32442035603490 H=1353 lambda=2
+RESTOTHER code=32442035603490 H=1353 lambda=2
+RESTNOCUT code=32439888119842 H=1243 lambda=2
+RESTNOCUT code=32442035604001 H=1369 lambda=2
+order 10: classes 9733056 (strong 9355949, prime 7906161, prime first creators 7439188)
+  first creators 8647232; non-first-creators 1085824 = EXT 962686 + SUM 49755 + SUB 42514 + REST 30869
+  strong non-first-creators 708717 (with a first-creator deletion 635334; without 73383, of which prime 30869)
+  prime non-first-creators 466973 (with a first-creator deletion 436104)
+  REST values: 153[3] 171[2] 177[8] 193[1] 199[2] 201[1] 205[2] 207[2] 219[4] 221[2] 231[6] 233[2] 237[2] 243[8] 245[2] 249[4] 251[2] 255[4] 259[4] 261[2] 267[10] 271[2] 273[8] 279[4] 281[6] 283[2] 285[9] 287[4] 289[3] 291[8] 295[2] 297[8] 301[2] 303[4] 307[2] 309[6] 311[4] 313[4] 315[4] 317[4] 321[10] 325[2] 327[8] 329[2] 331[2] 333[17] 335[4] 337[2] 339[4] 341[4] 343[6] 345[8] 347[2] 349[9] 351[16] 353[8] 357[8] 361[10] 363[8] 365[8] 367[4] 369[8] 371[2] 373[4] 375[4] 377[6] 379[4] 381[14] 383[8] 385[5] 387[16] 389[8] 391[8] 393[16] 397[8] 399[10] 401[10] 403[14] 405[18] 407[4] 409[6] 411[8] 413[10] 415[8] 417[14] 419[12] 421[12] 423[18] 425[11] 427[2] 429[15] 431[8] 433[10] 435[10] 437[12] 439[4] 441[20] 443[4] 445[2] 447[14] 449[16] 451[14] 453[12] 455[12] 457[12] 459[14] 461[6] 463[8] 465[10] 467[8] 469[8] 471[22] 473[14] 475[6] 477[30] 479[10] 481[2] 483[16] 485[10] 487[22] 489[16] 491[10] 493[18] 495[22] 497[16] 499[6] 501[16] 503[8] 505[10] 507[18] 509[13] 511[8] 513[16] 515[16] 517[14] 519[22] 521[21] 523[12] 525[15] 527[24] 529[22] 531[34] 533[28] 535[14] 537[34] 539[32] 541[20] 543[4] 545[23] 547[16] 549[24] 551[20] 553[22] 555[16] 557[16] 559[18] 561[26] 563[36] 565[20] 567[32] 569[26] 571[22] 573[30] 575[18] 577[15] 579[28] 581[24] 583[26] 585[26] 587[16] 589[16] 591[42] 593[22] 595[24] 597[29] 599[44] 601[30] 603[30] 605[26] 607[24] 609[37] 611[24] 613[27] 615[32] 617[22] 619[14] 621[28] 623[28] 625[28] 627[42] 629[30] 631[18] 633[34] 635[30] 637[39] 639[42] 641[26] 643[16] 645[50] 647[36] 649[18] 651[24] 653[24] 655[26] 657[33] 659[26] 661[34] 663[22] 665[35] 667[24] 669[38] 671[38] 673[34] 675[32] 677[29] 679[44] 681[42] 683[52] 685[26] 687[38] 689[32] 691[42] 693[32] 695[26] 697[32] 699[26] 701[38] 703[32] 705[40] 707[46] 709[31] 711[28] 713[43] 715[30] 717[60] 719[28] 721[34] 723[34] 725[40] 727[40] 729[38] 731[54] 733[55] 735[40] 737[36] 739[40] 741[60] 743[34] 745[37] 747[50] 749[36] 751[46] 753[64] 755[44] 757[32] 759[44] 761[40] 763[44] 765[56] 767[60] 769[44] 771[60] 773[64] 775[38] 777[47] 779[50] 781[44] 783[64] 785[68] 787[50] 789[46] 791[74] 793[65] 795[46] 797[54] 799[52] 801[44] 803[50] 805[46] 807[44] 809[61] 811[50] 813[58] 815[48] 817[44] 819[80] 821[56] 823[46] 825[69] 827[60] 829[57] 831[48] 833[76] 835[52] 837[59] 839[44] 841[62] 843[68] 845[82] 847[54] 849[62] 851[60] 853[66] 855[64] 857[59] 859[62] 861[53] 863[46] 865[67] 867[76] 869[50] 871[80] 873[64] 875[60] 877[76] 879[74] 881[40] 883[86] 885[64] 887[58] 889[76] 891[68] 893[50] 895[64] 897[88] 899[74] 901[86] 903[72] 905[70] 907[58] 909[96] 911[62] 913[72] 915[76] 917[50] 919[66] 921[98] 923[100] 925[66] 927[86] 929[78] 931[72] 933[80] 935[60] 937[77] 939[72] 941[75] 943[66] 945[71] 947[58] 949[72] 951[98] 953[108] 955[90] 957[57] 959[92] 961[81] 963[86] 965[69] 967[94] 969[85] 971[90] 973[79] 975[80] 977[76] 979[86] 981[108] 983[64] 985[68] 987[104] 989[82] 991[86] 993[116] 995[92] 997[108] 999[88] 1001[76] 1003[88] 1005[84] 1007[102] 1009[84] 1011[86] 1013[74] 1015[72] 1017[90] 1019[80] 1021[101] 1023[78] 1025[92] 1027[70] 1029[74] 1031[82] 1033[71] 1035[72] 1037[64] 1039[70] 1041[53] 1043[72] 1045[83] 1047[84] 1049[72] 1051[62] 1053[84] 1055[116] 1057[76] 1059[80] 1061[85] 1063[80] 1065[97] 1067[90] 1069[79] 1071[90] 1073[84] 1075[76] 1077[96] 1079[82] 1081[87] 1083[108] 1085[92] 1087[84] 1089[114] 1091[72] 1093[92] 1095[74] 1097[88] 1099[72] 1101[98] 1103[88] 1105[73] 1107[118] 1109[71] 1111[92] 1113[71] 1115[80] 1117[86] 1119[100] 1121[82] 1123[60] 1125[77] 1127[72] 1129[92] 1131[80] 1133[68] 1135[66] 1137[60] 1139[90] 1141[79] 1143[66] 1145[88] 1147[96] 1149[94] 1151[70] 1153[54] 1155[54] 1157[54] 1159[50] 1161[63] 1163[48] 1165[69] 1167[82] 1169[51] 1171[56] 1173[72] 1175[46] 1177[46] 1179[84] 1181[58] 1183[60] 1185[62] 1187[58] 1189[48] 1191[84] 1193[77] 1195[44] 1197[64] 1199[50] 1201[53] 1203[80] 1205[44] 1207[52] 1209[73] 1211[62] 1213[60] 1215[70] 1217[69] 1219[60] 1221[80] 1223[58] 1225[59] 1227[88] 1229[54] 1231[58] 1233[53] 1235[68] 1237[52] 1239[62] 1241[52] 1243[66] 1245[78] 1247[62] 1249[68] 1251[64] 1253[58] 1255[66] 1257[61] 1259[46] 1261[52] 1263[70] 1265[40] 1267[58] 1269[72] 1271[66] 1273[56] 1275[58] 1277[65] 1279[64] 1281[94] 1283[98] 1285[46] 1287[60] 1289[64] 1291[60] 1293[82] 1295[96] 1297[76] 1299[76] 1301[94] 1303[74] 1305[74] 1307[78] 1309[57] 1311[58] 1313[58] 1315[60] 1317[58] 1319[56] 1321[46] 1323[48] 1325[69] 1327[62] 1329[59] 1331[46] 1333[38] 1335[60] 1337[32] 1339[58] 1341[78] 1343[58] 1345[49] 1347[52] 1349[51] 1351[72] 1353[49] 1355[60] 1357[42] 1359[72] 1361[60] 1363[42] 1365[55] 1367[48] 1369[48] 1371[68] 1373[50] 1375[58] 1377[50] 1379[46] 1381[52] 1383[54] 1385[52] 1387[46] 1389[50] 1391[60] 1393[35] 1395[38] 1397[59] 1399[34] 1401[59] 1403[46] 1405[58] 1407[38] 1409[44] 1411[54] 1413[56] 1415[40] 1417[68] 1419[56] 1421[36] 1423[38] 1425[46] 1427[34] 1429[43] 1431[56] 1433[40] 1435[42] 1437[38] 1439[38] 1441[34] 1443[44] 1445[30] 1447[24] 1449[26] 1451[46] 1453[49] 1455[56] 1457[36] 1459[54] 1461[45] 1463[32] 1465[28] 1467[36] 1469[46] 1471[40] 1473[50] 1475[40] 1477[50] 1479[52] 1481[30] 1483[30] 1485[38] 1487[40] 1489[43] 1491[44] 1493[39] 1495[34] 1497[32] 1499[40] 1501[34] 1503[28] 1505[36] 1507[42] 1509[42] 1511[44] 1513[36] 1515[36] 1517[27] 1519[34] 1521[36] 1523[30] 1525[28] 1527[30] 1529[27] 1531[38] 1533[30] 1535[28] 1537[40] 1539[30] 1541[28] 1543[18] 1545[30] 1547[22] 1549[24] 1551[18] 1553[31] 1555[22] 1557[12] 1559[28] 1561[22] 1563[24] 1565[18] 1567[32] 1569[18] 1571[10] 1573[16] 1575[16] 1577[18] 1579[10] 1581[14] 1583[14] 1585[24] 1587[10] 1589[28] 1591[22] 1593[10] 1595[16] 1597[10] 1599[10] 1601[25] 1603[26] 1605[12] 1607[14] 1609[9] 1611[4] 1613[18] 1615[14] 1617[16] 1619[8] 1621[10] 1623[18] 1625[16] 1627[2] 1629[14] 1631[12] 1633[9] 1635[12] 1637[3] 1639[22] 1641[6] 1643[2] 1645[14] 1647[8] 1649[20] 1651[12] 1653[12] 1655[10] 1657[8] 1659[4] 1661[4] 1663[12] 1665[10] 1667[8] 1669[8] 1671[12] 1673[10] 1675[6] 1677[10] 1679[6] 1681[4] 1683[10] 1685[6] 1687[10] 1689[3] 1691[8] 1693[6] 1695[8] 1697[4] 1701[6] 1703[8] 1705[9] 1707[2] 1709[8] 1711[4] 1713[6] 1715[10] 1717[10] 1719[4] 1721[6] 1723[4] 1725[14] 1727[6] 1729[4] 1731[8] 1733[6] 1735[4] 1737[4] 1739[2] 1741[2] 1743[4] 1745[4] 1747[4] 1749[5] 1751[2] 1753[3] 1755[2] 1757[4] 1759[2] 1761[4] 1763[6] 1767[4] 1771[4] 1775[2] 1779[2] 1785[2] 1787[2] 1793[2] 1795[2] 1797[2] 1799[2] 1801[2] 1805[2] 1807[2] 1809[1] 1813[1] 1815[2] 1817[3] 1819[6] 1821[2] 1823[2] 1827[2] 1829[4] 1831[2] 1835[6] 1837[6] 1839[2] 1841[2] 1843[2] 1845[1] 1847[2] 1849[5] 1851[4] 1853[5] 1857[3] 1861[4] 1871[4] 1873[6] 1881[6] 1883[2] 1897[2] 1901[2] 1913[2] 1917[1] 1923[2] 1933[2] 1939[2] 1949[1] 1953[2] 1959[2] 1971[2] 1983[2] 2011[2] 2039[2] 2077[1]
+  REST arc-strong connectivity histogram: lambda=1:30529 lambda=2:340
+  REST: pendant (a vertex of in- or out-degree 1) 30525, other single-back-arc graft 4, neither 340
+  REST with a vertex whose deletion is not strong (an ordinal sum plus one vertex): 30649; without: 220
+  REST single-back-arc grafts A=>B: (old,old) 92 (old,FC) 2389 (FC,old) 27326 (FC,FC) 722

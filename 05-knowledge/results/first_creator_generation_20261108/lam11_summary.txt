@@ -1,0 +1,40 @@
+# lam11.c over all order-10 classes with min in/out-degree >= 2 (exhaustive for 3-arc-strong 11-tournaments with H <= 15745)
+slice [0,884823): parents used 158549, extensions tested 18, lambda>=3 with H<=15745: 18; min H 15213 (parent 25357487047208, pattern 47)
+slice [884823,1769646): parents used 383921, extensions tested 46, lambda>=3 with H<=15745: 46; min H 11475 (parent 25391863565315, pattern 31)
+slice [8848232,9733056): parents used 862743, extensions tested 0, lambda>=3 with H<=15745: 0; min H -1 (parent 0, pattern 0)
+slice [1769646,2654469): parents used 474134, extensions tested 29, lambda>=3 with H<=15745: 29; min H 11475 (parent 25425149822986, pattern 995)
+slice [2654469,3539293): parents used 495394, extensions tested 4, lambda>=3 with H<=15745: 4; min H 14787 (parent 33791746116120, pattern 1009)
+slice [3539293,4424116): parents used 470438, extensions tested 0, lambda>=3 with H<=15745: 0; min H -1 (parent 0, pattern 0)
+slice [4424116,5308939): parents used 658057, extensions tested 0, lambda>=3 with H<=15745: 0; min H -1 (parent 0, pattern 0)
+slice [5308939,6193762): parents used 670957, extensions tested 0, lambda>=3 with H<=15745: 0; min H -1 (parent 0, pattern 0)
+slice [6193762,7078586): parents used 744791, extensions tested 0, lambda>=3 with H<=15745: 0; min H -1 (parent 0, pattern 0)
+slice [7078586,7963409): parents used 779607, extensions tested 0, lambda>=3 with H<=15745: 0; min H -1 (parent 0, pattern 0)
+slice [7963409,8848232): parents used 839925, extensions tested 0, lambda>=3 with H<=15745: 0; min H -1 (parent 0, pattern 0)
+# witnesses with H in S(10) (parent code, pattern x with x_a = [a -> v], H):
+W 25357487047208 47 15213
+W 18588652671640 224 15213
+W 6381247924745 487 15213
+W 22471303109137 97 15213
+W 25872883124769 47 15213
+W 12488708719626 995 15213
+W 33791729207320 995 15213
+W 25391846785560 47 15561
+W 19172768223800 224 15561
+W 31577724292625 97 15213
+W 5463232617233 448 15213
+W 5463232747281 448 15273
+W 5464323136771 448 15561
+W 23836011923466 499 15561
+W 23836011661322 487 15273
+W 25424076081688 1009 15561
+W 25682847861272 1009 15273
+W 33791746114072 995 15273
+# H values of 3-arc-strong 11-tournaments with H <= 15745 (value: (class, pattern) pairs, in S(10)?):
+11475 3 in S(10)
+14787 7 new at 11
+15213 18 in S(10)
+15273 18 in S(10)
+15561 18 in S(10)
+15637 11 new at 11
+15703 22 new at 11
+f_3(11) = 11475

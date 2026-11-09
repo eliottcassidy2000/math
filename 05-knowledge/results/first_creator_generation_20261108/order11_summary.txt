@@ -1,0 +1,47 @@
+# order 10 -> 11 extension run (ext.c over classes10.bin; 11 slices); analyze11.py output
+S(11) from extensions: 43911 values, max 95095; equals klein S(11): True (missing 0, extra 0)
+new values at order 11: 36248
+R1: new values not reached from an order-10 first creator: 0 []
+R5: new values reached only from first-creator parents: 18661 = 0.5148
+classes 9733056, first creators 8647232; brute-force checked classes 22, failures 0
+R2: hypo pairs 0
+R3: sterile first creators 0
+R4: first creators with fewer than 512 fertile patterns: 0; minimum fertile (564, 35572154624, 2901)
+fertile histogram (bucket b: [2^(b-1), 2^b)): [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8647232, 0]
+first-creator (class, pattern) realizations per new value: min 1, median 251107, max 445304
+new values with the fewest first-creator realizations: [(92411, 1, 1), (93467, 1, 1), (95095, 1, 1), (93275, 3, 3), (93955, 3, 3), (86643, 5, 5), (89049, 5, 5), (89157, 5, 5), (93295, 6, 6), (88695, 7, 7), (91395, 7, 7), (92415, 7, 7), (86007, 9, 9), (86127, 9, 9), (91443, 9, 9)]
+
+# per-slice logs
+slice [0,884823): classes 884823, first creators 329230, sterile first creators 0, hypo pairs 0, checked classes 2, check failures 0
+fertile-pattern histogram (bucket b: 2^(b-1) <= #fertile < 2^b): 0 0 0 0 0 0 0 0 0 0 329230 0
+first creators with fewer than half of the patterns fertile: 0; minimum fertile 588 (code 18248242567296, H 2889)
+slice [884823,1769646): classes 884823, first creators 655941, sterile first creators 0, hypo pairs 0, checked classes 2, check failures 0
+fertile-pattern histogram (bucket b: 2^(b-1) <= #fertile < 2^b): 0 0 0 0 0 0 0 0 0 0 655941 0
+first creators with fewer than half of the patterns fertile: 0; minimum fertile 564 (code 18176436867200, H 2901)
+slice [8848232,9733056): classes 884824, first creators 884132, sterile first creators 0, hypo pairs 0, checked classes 2, check failures 0
+fertile-pattern histogram (bucket b: 2^(b-1) <= #fertile < 2^b): 0 0 0 0 0 0 0 0 0 0 884132 0
+first creators with fewer than half of the patterns fertile: 0; minimum fertile 717 (code 22425519390722, H 3123)
+slice [1769646,2654469): classes 884823, first creators 765016, sterile first creators 0, hypo pairs 0, checked classes 2, check failures 0
+fertile-pattern histogram (bucket b: 2^(b-1) <= #fertile < 2^b): 0 0 0 0 0 0 0 0 0 0 765016 0
+first creators with fewer than half of the patterns fertile: 0; minimum fertile 564 (code 35572154624, H 2901)
+slice [2654469,3539293): classes 884824, first creators 811120, sterile first creators 0, hypo pairs 0, checked classes 2, check failures 0
+fertile-pattern histogram (bucket b: 2^(b-1) <= #fertile < 2^b): 0 0 0 0 0 0 0 0 0 0 811120 0
+first creators with fewer than half of the patterns fertile: 0; minimum fertile 616 (code 81622728960, H 2957)
+slice [3539293,4424116): classes 884823, first creators 823205, sterile first creators 0, hypo pairs 0, checked classes 2, check failures 0
+fertile-pattern histogram (bucket b: 2^(b-1) <= #fertile < 2^b): 0 0 0 0 0 0 0 0 0 0 823205 0
+first creators with fewer than half of the patterns fertile: 0; minimum fertile 568 (code 4956527526144, H 2901)
+slice [4424116,5308939): classes 884823, first creators 867334, sterile first creators 0, hypo pairs 0, checked classes 2, check failures 0
+fertile-pattern histogram (bucket b: 2^(b-1) <= #fertile < 2^b): 0 0 0 0 0 0 0 0 0 0 867334 0
+first creators with fewer than half of the patterns fertile: 0; minimum fertile 638 (code 8832067715585, H 2943)
+slice [5308939,6193762): classes 884823, first creators 866685, sterile first creators 0, hypo pairs 0, checked classes 2, check failures 0
+fertile-pattern histogram (bucket b: 2^(b-1) <= #fertile < 2^b): 0 0 0 0 0 0 0 0 0 0 866685 0
+first creators with fewer than half of the patterns fertile: 0; minimum fertile 669 (code 6671444214016, H 2921)
+slice [6193762,7078586): classes 884824, first creators 876712, sterile first creators 0, hypo pairs 0, checked classes 2, check failures 0
+fertile-pattern histogram (bucket b: 2^(b-1) <= #fertile < 2^b): 0 0 0 0 0 0 0 0 0 0 876712 0
+first creators with fewer than half of the patterns fertile: 0; minimum fertile 702 (code 33752069963792, H 2893)
+slice [7078586,7963409): classes 884823, first creators 883071, sterile first creators 0, hypo pairs 0, checked classes 2, check failures 0
+fertile-pattern histogram (bucket b: 2^(b-1) <= #fertile < 2^b): 0 0 0 0 0 0 0 0 0 0 883071 0
+first creators with fewer than half of the patterns fertile: 0; minimum fertile 717 (code 18802511975949, H 3123)
+slice [7963409,8848232): classes 884823, first creators 884786, sterile first creators 0, hypo pairs 0, checked classes 2, check failures 0
+fertile-pattern histogram (bucket b: 2^(b-1) <= #fertile < 2^b): 0 0 0 0 0 0 0 0 0 0 884786 0
+first creators with fewer than half of the patterns fertile: 0; minimum fertile 720 (code 32010829430786, H 3123)
