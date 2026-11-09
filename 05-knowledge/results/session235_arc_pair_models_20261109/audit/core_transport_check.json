@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "source_cores": 37,
+  "all_core_paths_and_automorphisms_recomputed": true,
+  "source_word_GF_checks_through_order": 12,
+  "checks": 24,
+  "grouped_cores": [
+    {
+      "source_H": 3,
+      "n": 3,
+      "decoded_H": 1,
+      "automorphisms": 1,
+      "classes": 1
+    },
+    {
+      "source_H": 3,
+      "n": 3,
+      "decoded_H": 3,
+      "automorphisms": 3,
+      "classes": 1
+    },
+    {
+      "source_H": 7,
+      "n": 4,
+      "decoded_H": 1,
+      "automorphisms": 1,
+      "classes": 3
+    },
+    {
+      "source_H": 21,
+      "n": 5,
+      "decoded_H": 1,
+      "automorphisms": 1,
+      "classes": 8
+    },
+    {
+      "source_H": 21,
+      "n": 5,
+      "decoded_H": 3,
+      "automorphisms": 1,
+      "classes": 4
+    },
+    {
+      "source_H": 21,
+      "n": 5,
+      "decoded_H": 3,
+      "automorphisms": 3,
+      "classes": 2
+    },
+    {
+      "source_H": 21,
+      "n": 5,
+      "decoded_H": 5,
+      "automorphisms": 1,
+      "classes": 1
+    },
+    {
+      "source_H": 21,
+      "n": 5,
+      "decoded_H": 7,
+      "automorphisms": 1,
+      "classes": 1
+    },
+    {
+      "source_H": 21,
+      "n": 6,
+      "decoded_H": 1,
+      "automorphisms": 1,
+      "classes": 8
+    },
+    {
+      "source_H": 21,
+      "n": 6,
+      "decoded_H": 3,
+      "automorphisms": 1,
+      "classes": 6
+    },
+    {
+      "source_H": 21,
+      "n": 6,
+      "decoded_H": 15,
+      "automorphisms": 1,
+      "classes": 2
+    }
+  ]
+}

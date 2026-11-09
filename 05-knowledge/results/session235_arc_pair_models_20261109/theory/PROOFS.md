@@ -158,9 +158,13 @@ Consequences:
 - No order inequality is asserted between A and τ(A) in the unrestricted
   case, since τ both adds and removes arcs.
 
-The parity assertion is in the classical Rédei–Berge complement-parity
-circle; the displayed proof is sufficient for its use here. Source priority
-is not claimed or inferred from this independent derivation.
+The congruence is **Berge's complement-parity theorem**, followed by the
+path-reversal bijection. The two displayed proofs are sufficient for its use
+here; no source priority is claimed. Current canon
+[THM-5071, statement and proof (3)](../../../../01-canon/theorems/THM-5071-weighted-cycle-formula-for-digraph-path-totals-and-one-reciprocal-pair-exclusions.md)
+records a weighted-cycle refinement derived from the cited Grinberg-Stanley
+formula. That refinement and the present linear-forest proof retain different
+sidecars; neither should be presented as a new parity theorem.
 
 ## PB5. Every nonnegative integer occurs for oriented graphs
 

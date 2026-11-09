@@ -1,7 +1,8 @@
 # Session235 independent arc-pair audit
 
 Status: PROVED (encoding implications, one-hole constructions and padding);
-FINITE-EXACT (independent small scans). Producer census and theory PB1–PB7 reviewed: PASS. This report does not claim a complete oriented-core grammar.
+FINITE-EXACT (full oriented census through six and independent controls).
+Producer census, theory PB1–PB7, core transport and portable replay: PASS. This report does not claim a complete oriented-core grammar.
 
 ## Inheritance and scope
 
@@ -219,6 +220,67 @@ classification. That transport is valid even when deleting reciprocal arcs
 splits an original strong core: ordered-sum multiplicativity only requires
 all cross arcs to point forward, not that each prescribed block remain strong.
 Accordingly, checking the finite complete source core list suffices for an
-all-order image statement. A proposed exact generating function should retain
-the source core's automorphism/orbit weight, not replace it by the decoded
-core's potentially larger automorphism group.
+all-order image statement. Here the map is the relabel-equivariant involution τ, so source and decoded
+automorphism groups are identical. This justifies using the same orbit weights
+on both sides; no arbitrary division by a presumed group order occurs.
+
+
+## 7. Core transport and generating functions: PASS
+
+Independently recomputed all Hamiltonian path counts and full automorphism
+groups of the 37 inherited source cores (two H3, three H7, thirty-two H21)
+from the frozen matrices in `census/core_transport.json`, without importing
+producer counting code. Checked each decoded matrix equals the explicit τ
+transform. The group counts and all target image values match.
+
+Combined with the inherited ALL-ORDER complete source grammar, this proves:
+
+- Every semicomplete H7 source decodes to H1.
+- Semicomplete H21 sources decode precisely to {1,3,5,7,15} over all orders.
+- All five H21 image values already occur at order six and every larger order
+  by singleton padding. At order five the image is {1,3,5,7}.
+
+Mixed core words have decoded product 1*1 or 1*3; this creates no extra value.
+The new exact joint generating functions retain source isomorphism classes;
+τ being an equivariant bijection also identifies them with decoded image
+classes. `core_transport_check.py` independently enumerates singleton gap
+placements for source words and verifies every displayed GF coefficient at
+orders 1..12. This is a finite control of the exact word argument, not a
+finite-to-infinite extrapolation. All 24 checks pass.
+
+The pair-model verifier was rerun independently and reproduces its validation
+JSON byte-for-byte. All requested producer components now pass this audit.
+
+
+## 8. Portable full replay
+
+`python3 audit/replay_all.py` can be run from any working directory using the
+appropriate path to the script. It uses a temporary sibling layout, copying
+only source programs and the inherited Session234 generator/marginal inputs.
+All census binaries and intermediate outputs stay outside the source packet.
+It regenerates and verifies all persistent census CSVs, the full independent
+oriented scatter, the models and theory checks, conditional histograms, core
+transport, and every independent audit control. Successful replay compares
+36 persistent artifacts and verifies the reference files were not changed.
+
+Optional `--receipt PATH` writes only the requested JSON receipt; inside the
+packet it permits only `audit/replay_all.json`. Without the option it writes
+no packet files. The frozen receipt is `replay_all.json`. It contains stable
+artifact hashes and scope statements, but no times, machine names, temporary
+paths, or other nondeterministic fields. Compiler and scratch products are
+removed on exit. Requirements are Python 3 and a C++17 compiler (`CXX`, default
+`g++`). The inherited source classification is an input, not independently
+re-proved by the replay runner.
+
+
+## 9. Recovery verification against current main
+
+The earlier finite checkpoint and completed final audit files were recovered
+before publication. A fresh full replay reproduced the frozen deterministic
+receipt exactly: all 36 artifact comparisons passed. An additional read-only
+proof review checked PB1-PB7 and the complete joint generating functions,
+and independently rechecked the 37 cores and 24 coefficient controls through
+order twelve. No mathematical correction was needed. The provenance sentence
+in PB4 now explicitly credits Berge's complement-parity theorem and links the
+concurrent THM-5071 weighted-cycle refinement. No novelty or tournament
+completeness claim is added.

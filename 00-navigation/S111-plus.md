@@ -121,3 +121,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session232: automorphism quotients and 7/21](../05-knowledge/results/session232_automorphisms_20261109/README.md): THM-4987--4990, independently audited all-subgroup gaps and sharp low-symmetry strata, minimum-order endpoint boundaries, faithful graph carriers, coarse packing versus mass, and stabilizer-corrected transfer. Chan–Pak completeness and arbitrary target placement remain OPEN.
 
 [Session233](S233.md): audited short nonunit-loop CRT composition, with377L−126687 consecutive odd counts on12L+962 strong vertices; complete logarithmic-order endpoint quotient spectrum; exact bridge-block transfer and canonical run-window obstruction. Chan–Pak completeness and arbitrary target placement remain OPEN.
+
+[Session235](S235.md): COMPLETE; audited reciprocal/empty decoders, full oriented census through six, exact all-order joint fibres and strong-core boundary. Chan-Pak tournament completeness remains OPEN.
