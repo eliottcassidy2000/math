@@ -69,3 +69,15 @@ Appended 2026-11-09 after the runs. The text above is unchanged.
   - **Lower bound.** Every cover needs at least 17 (base 2) and 20 (base 3): the program finds that many targets whose
     covering-core sets are pairwise disjoint.
   - So "at most 40" is neither confirmed nor refuted (`out/q4_greedy_b2.out`, `out/q4_greedy_b3.out`).
+
+## Addendum (pushed before the runs it names)
+
+These were registered after the Q1-Q4 outcomes above, while the independent audit was running.
+
+- **Q5.** Base 2, cores of order <= 7, letters S, I_0, I_1, I_2: the odd misses below 10^7 are exactly 7 and 21.
+- **Q6.** Base 3, the same family: the misses v = 1 (mod 3) below 10^7 are exactly 10 and 31. The previous ternary
+  bound was 3*10^6, the S18 audit's extension of the 15 port-chain generators.
+
+### Addendum outcomes
+
+(pending)
