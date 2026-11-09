@@ -52,3 +52,23 @@ The supplied HTML papers were accessible on 2026-11-09:
 
 They concern rigid/p-adic geometry, not tournament spectra. Their methods are
 inspiration only unless an explicit finite theorem is proved here.
+
+## Checkpoint 2: proof candidates and exact controls
+
+**Independent audits are in progress. These proof packets are not yet canonized.**
+
+- [Subgroup gaps and prime costs](subgroups/PROOF.md): candidate all-subgroup
+  extension and equality classification below 23, inheriting THM-4812.
+- [Endpoint boundaries and graph carriers](boundary_graphs/PROOF.md): explicit
+  7/21 boundary witnesses and a graph map preserving the specified action.
+- [Integral orbit transfer](orbit_transfer/PROOF.md): stabilizer-corrected
+  prefix recurrence and sharp terminal freeness, with finite exhaustive checks.
+- [Coarse orbits versus weighted mass](packing_mass/PROOF.md): 7 and 21 occur
+  in ordinary packing-orbit counts although weighted mass remains 3; an
+  all-order tower separates image stabilization from eventual constancy.
+- [Source scope](orbit_transfer/SOURCE_NOTES.md): inspected primary theorem/proof
+  pins; the finite results do not import either paper's geometric theorems.
+
+The new conjectural completeness step remains unproved. The results concern
+which quotients retain the gaps, not universal realization of every other odd
+integer. Independent audit findings and final reproducibility will follow.

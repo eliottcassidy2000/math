@@ -1,0 +1,337 @@
+{
+  "exhaustive_H_maxima_n1_to5": [
+    1,
+    1,
+    3,
+    5,
+    15
+  ],
+  "endpoint7_minimal": {
+    "n": 6,
+    "H": 19,
+    "aut": 1,
+    "tc": 19,
+    "terminal": [
+      1,
+      5,
+      7,
+      3,
+      2,
+      1
+    ],
+    "boundary_orbits": [
+      {
+        "representative": 0,
+        "stabilizer": 1,
+        "raw_terminal": 1,
+        "quotient_fibre": 1
+      },
+      {
+        "representative": 1,
+        "stabilizer": 1,
+        "raw_terminal": 5,
+        "quotient_fibre": 5
+      },
+      {
+        "representative": 2,
+        "stabilizer": 1,
+        "raw_terminal": 7,
+        "quotient_fibre": 7
+      },
+      {
+        "representative": 3,
+        "stabilizer": 1,
+        "raw_terminal": 3,
+        "quotient_fibre": 3
+      },
+      {
+        "representative": 4,
+        "stabilizer": 1,
+        "raw_terminal": 2,
+        "quotient_fibre": 2
+      },
+      {
+        "representative": 5,
+        "stabilizer": 1,
+        "raw_terminal": 1,
+        "quotient_fibre": 1
+      }
+    ],
+    "graph_vertices": 81,
+    "graph_edges": 90,
+    "graph_aut": 1,
+    "graph_leaves": 30
+  },
+  "endpoint21_minimal": {
+    "n": 7,
+    "H": 55,
+    "aut": 1,
+    "tc": 55,
+    "terminal": [
+      3,
+      9,
+      21,
+      9,
+      7,
+      3,
+      3
+    ],
+    "boundary_orbits": [
+      {
+        "representative": 0,
+        "stabilizer": 1,
+        "raw_terminal": 3,
+        "quotient_fibre": 3
+      },
+      {
+        "representative": 1,
+        "stabilizer": 1,
+        "raw_terminal": 9,
+        "quotient_fibre": 9
+      },
+      {
+        "representative": 2,
+        "stabilizer": 1,
+        "raw_terminal": 21,
+        "quotient_fibre": 21
+      },
+      {
+        "representative": 3,
+        "stabilizer": 1,
+        "raw_terminal": 9,
+        "quotient_fibre": 9
+      },
+      {
+        "representative": 4,
+        "stabilizer": 1,
+        "raw_terminal": 7,
+        "quotient_fibre": 7
+      },
+      {
+        "representative": 5,
+        "stabilizer": 1,
+        "raw_terminal": 3,
+        "quotient_fibre": 3
+      },
+      {
+        "representative": 6,
+        "stabilizer": 1,
+        "raw_terminal": 3,
+        "quotient_fibre": 3
+      }
+    ],
+    "graph_vertices": 112,
+    "graph_edges": 126,
+    "graph_aut": 1,
+    "graph_leaves": 42
+  },
+  "nontrivial_action_endpoint7": {
+    "n": 9,
+    "H": 57,
+    "aut": 3,
+    "tc": 19,
+    "terminal": [
+      0,
+      0,
+      0,
+      3,
+      15,
+      21,
+      9,
+      6,
+      3
+    ],
+    "boundary_orbits": [
+      {
+        "representative": 0,
+        "stabilizer": 1,
+        "raw_terminal": 0,
+        "quotient_fibre": 0
+      },
+      {
+        "representative": 3,
+        "stabilizer": 3,
+        "raw_terminal": 3,
+        "quotient_fibre": 1
+      },
+      {
+        "representative": 4,
+        "stabilizer": 3,
+        "raw_terminal": 15,
+        "quotient_fibre": 5
+      },
+      {
+        "representative": 5,
+        "stabilizer": 3,
+        "raw_terminal": 21,
+        "quotient_fibre": 7
+      },
+      {
+        "representative": 6,
+        "stabilizer": 3,
+        "raw_terminal": 9,
+        "quotient_fibre": 3
+      },
+      {
+        "representative": 7,
+        "stabilizer": 3,
+        "raw_terminal": 6,
+        "quotient_fibre": 2
+      },
+      {
+        "representative": 8,
+        "stabilizer": 3,
+        "raw_terminal": 3,
+        "quotient_fibre": 1
+      }
+    ],
+    "graph_vertices": 189,
+    "graph_edges": 216,
+    "graph_aut": 3,
+    "graph_leaves": 72
+  },
+  "nontrivial_action_endpoint21": {
+    "n": 10,
+    "H": 165,
+    "aut": 3,
+    "tc": 55,
+    "terminal": [
+      0,
+      0,
+      0,
+      9,
+      27,
+      63,
+      27,
+      21,
+      9,
+      9
+    ],
+    "boundary_orbits": [
+      {
+        "representative": 0,
+        "stabilizer": 1,
+        "raw_terminal": 0,
+        "quotient_fibre": 0
+      },
+      {
+        "representative": 3,
+        "stabilizer": 3,
+        "raw_terminal": 9,
+        "quotient_fibre": 3
+      },
+      {
+        "representative": 4,
+        "stabilizer": 3,
+        "raw_terminal": 27,
+        "quotient_fibre": 9
+      },
+      {
+        "representative": 5,
+        "stabilizer": 3,
+        "raw_terminal": 63,
+        "quotient_fibre": 21
+      },
+      {
+        "representative": 6,
+        "stabilizer": 3,
+        "raw_terminal": 27,
+        "quotient_fibre": 9
+      },
+      {
+        "representative": 7,
+        "stabilizer": 3,
+        "raw_terminal": 21,
+        "quotient_fibre": 7
+      },
+      {
+        "representative": 8,
+        "stabilizer": 3,
+        "raw_terminal": 9,
+        "quotient_fibre": 3
+      },
+      {
+        "representative": 9,
+        "stabilizer": 3,
+        "raw_terminal": 9,
+        "quotient_fibre": 3
+      }
+    ],
+    "graph_vertices": 235,
+    "graph_edges": 270,
+    "graph_aut": 3,
+    "graph_leaves": 90
+  },
+  "endpoint7_action_graph": {
+    "whole": {
+      "3": 19
+    },
+    "terminal5": {
+      "3": 7
+    }
+  },
+  "endpoint21_action_graph": {
+    "whole": {
+      "3": 55
+    },
+    "terminal5": {
+      "3": 21
+    }
+  },
+  "circulant7": {
+    "n": 7,
+    "H": 175,
+    "aut": 7,
+    "tc": 25,
+    "terminal": [
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25
+    ],
+    "boundary_orbits": [
+      {
+        "representative": 0,
+        "stabilizer": 1,
+        "raw_terminal": 25,
+        "quotient_fibre": 25
+      }
+    ],
+    "graph_vertices": 112,
+    "graph_edges": 126,
+    "graph_aut": 7,
+    "graph_leaves": 42
+  },
+  "paley7": {
+    "n": 7,
+    "H": 189,
+    "aut": 21,
+    "tc": 9,
+    "terminal": [
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27
+    ],
+    "boundary_orbits": [
+      {
+        "representative": 0,
+        "stabilizer": 3,
+        "raw_terminal": 27,
+        "quotient_fibre": 9
+      }
+    ],
+    "graph_vertices": 112,
+    "graph_edges": 126,
+    "graph_aut": 21,
+    "graph_leaves": 42
+  },
+  "paley_naive_division": "9/7",
+  "exhaustive_graph_checks_orders3_4": 72
+}

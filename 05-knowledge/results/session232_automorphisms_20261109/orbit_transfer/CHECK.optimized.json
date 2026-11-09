@@ -1,0 +1,124 @@
+{
+  "corrected_transfer_edges": 328,
+  "cut_state_cases": 1098,
+  "hostile_edges": [
+    {
+      "N": 3,
+      "W": 1,
+      "k_source": 3,
+      "k_target": 1,
+      "source": [
+        1,
+        0
+      ],
+      "target": [
+        3,
+        1
+      ]
+    }
+  ],
+  "hostile_source_triangle": {
+    "H": 3,
+    "adj": [
+      14,
+      4,
+      8,
+      2
+    ],
+    "aut": 3,
+    "corrected_transfers": 1,
+    "endpoint_state_orbits": 12,
+    "n": 4,
+    "naive_transfer": 3,
+    "path_orbits": 1,
+    "stabilization_states": 10
+  },
+  "labelled_tournament_counts": {
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 1024
+  },
+  "prefix_state_orbits_checked": 74521,
+  "proper_subgroup_control": {
+    "H": 9,
+    "adj": [
+      58,
+      60,
+      57,
+      16,
+      32,
+      8
+    ],
+    "aut": 3,
+    "corrected_transfers": 0,
+    "endpoint_state_orbits": 64,
+    "n": 6,
+    "naive_transfer": 3,
+    "path_orbits": 3,
+    "stabilization_states": 32
+  },
+  "rigid_cut_nonrigid_core": {
+    "adj": [
+      2,
+      4,
+      1
+    ],
+    "aut": 3,
+    "cut": 1,
+    "cut_stabilizer": 1,
+    "state": [
+      3,
+      12,
+      3,
+      3,
+      0,
+      1,
+      1
+    ]
+  },
+  "session231_short12": {
+    "adj": [
+      4,
+      1,
+      18,
+      7,
+      75,
+      31,
+      175,
+      63
+    ],
+    "aut": 1,
+    "content": 1,
+    "cut": 124,
+    "state": [
+      45,
+      1440,
+      878,
+      577,
+      332,
+      25,
+      14
+    ]
+  },
+  "status": "PASS",
+  "suffix_triangle_control": {
+    "H": 3,
+    "adj": [
+      26,
+      28,
+      25,
+      16,
+      0
+    ],
+    "aut": 3,
+    "corrected_transfers": 0,
+    "endpoint_state_orbits": 32,
+    "n": 5,
+    "naive_transfer": 1,
+    "path_orbits": 1,
+    "stabilization_states": 21
+  },
+  "total_tournaments": 1099
+}
