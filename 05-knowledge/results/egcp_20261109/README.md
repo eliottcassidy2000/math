@@ -32,6 +32,25 @@ Scripts and outputs: `04-computation/experiments/egcp_20261109/` ([README](../..
      an L-graph;
    - otherwise: a cone over a padded graph, an L-graph or a top-band graph.
 
+## Companion results
+
+- **[THM-5042](../../../01-canon/theorems/THM-5042-odd-graph-companion.md)** is a second, independent proof of mac-mini's THM-5056, which was first in canon. Odd graphs on <= n vertices give
+  exactly the odd numbers up to 2^n - 1 except 1, 5 and 37, so oddness costs no vertex. The proof:
+  - a cone over a cone is odd (two adjacent universal vertices);
+  - padded cones over odd graphs are odd;
+  - six census seeds (2^(m-1) + {1, 5, 37} at m = 8, 9, each with an odd automorphism fixing a leaf) carried upward by
+    SR.
+- **[THM-5041](../../../01-canon/theorems/THM-5041-matrix-tiling-pair-dictionary.md).** The owner's matrix picture
+  made exact:
+  - an n x n matrix is a diagonal plus an ordered pair (U, L) of (n+1)-tilings;
+  - tournaments are lines, semicomplete digraphs are covering pairs, undirected graphs are equal pairs;
+  - H ignores loops and is tile-wise additive, so a defect tile carries the same total as the arc-flip pair through it;
+  - the 7/21 conjecture is restated in these coordinates (refuted by Session234; corrected form DG2).
+- **[HYP-9610](../../hypotheses/HYP-9610-even-graph-domination-no-universal-and-dictionary.md).**
+  - The no-universal-vertex sets E0(n). The bound is proved; the sets are exact for n <= 9, and every closure miss at
+    n = 10, 11 is realised.
+  - The binary/ternary dictionary of exceptional sets, typed ANALOGY.
+
 ## What this changes
 
 - **HYP-9575 (B):** OPEN becomes PROVED, together with the exact minimal order V(k).
@@ -42,6 +61,5 @@ Scripts and outputs: `04-computation/experiments/egcp_20261109/` ([README](../..
 
 ## Open
 
-- Whether the odd graphs miss exactly {1, 5, 37}.
 - The exact no-universal-vertex value sets beyond order 9. They are exact for n <= 9, and cover.py's closure misses
   about 2n values per order, which the theorem never needs.

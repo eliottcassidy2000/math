@@ -267,8 +267,10 @@ Lemma 6 realises M(n). Hence O(n) is contained in E(n), and together with Sectio
   - 7 is shared. Each exceptional value is the count of the smallest odd structure forced by an adjacent-twin
     obstruction.
   - This is a typed ANALOGY. No map carries H to d (THM-4996 (4); THM-4531).
-- **Odd graphs.** The census shows the odd graphs miss exactly {1, 5, 37} below 512 (THM-4996 (3)). Whether {1, 5, 37}
-  is the complete exceptional set for odd graphs is OPEN here, and the tools above are evenness-specific.
+- **Odd graphs.** Odd graphs miss exactly {1, 5, 37}, on the minimal ceil(log2(k + 1)) vertices. This is THM-5056
+  (mac-mini, first) and THM-5042 (independent second proof), which answer the question left open in the first version
+  of this remark.
+- **Second proof.** THM-5055 (mac-mini) is a second, independent proof of this theorem.
 - **No universal vertex.** For 5 <= n <= 9, the values without a universal vertex are exactly the odd numbers up to
   M0(n) minus {3, 7, 13, M0(n) - 2}, where M0(n) = 2^n - n - 1 (n even) and 2^n - n - 4 (n odd). This is
   FINITE-EXACT; its all-n form is not needed for the theorem.

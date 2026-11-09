@@ -1,0 +1,4 @@
+n=10: 138 witnesses for the 256 values needing n vertices, plus T(10); failures 0
+n=11: 204 witnesses for the 511 values needing n vertices, plus T(11); failures 0
+n=12: 348 witnesses for the 1024 values needing n vertices, plus T(12); failures 0
+TOTAL 706 BAD 0

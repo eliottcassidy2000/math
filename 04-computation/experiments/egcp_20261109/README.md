@@ -11,6 +11,9 @@ pure Python 3 with no dependencies. Run them from this directory.
 | `proof_check.py N` | Walks every x through the case analysis of THM-5040 Section 4 for 10 <= n <= N and asserts each side condition. | `proof_check_24.out` |
 | `construct.py N S` | Builds explicit witnesses with the proof's own recursion and brute-forces d, evenness and order. It covers all delicate values plus S random values at each order 10..N, and all top-band graphs. | `construct_12.out` |
 | `cover.py N` | Independent closure under padding, cones, E_2/K_1/E_3 multi-joins, two-hub graphs, the top band and the leaf recursion. Compares E(n) with O(n), and E0(n) with the conjectured exact no-universal-vertex set. | `cover_25.out` |
+| `odd_companion.py [dom511.out]` | THM-5042: re-verifies the six odd seeds (orders 8 and 9; an odd automorphism fixing a leaf), recomputes the exact odd-graph value sets for n <= 9 from the census, and brute-forces 65 odd witnesses at n = 10, 11. | `odd_companion.out` |
+| `tile_additivity.py` | THM-5041 (2a)-(2b): tile-wise additivity H(->) + H(<-) = H(<->) + H(missing), transpose invariance and loop invariance on 300 random matrices. | `tile_additivity.out` |
+| `e0search.c` | HYP-9610 (A): random search for even graphs without a universal vertex realising the values that cover.py's closure misses (`./e0search ITERS n SEED targets...`). All 18 misses at n = 10 and all 20 at n = 11 are realised. | `e0search_n10.out`, `e0search_n11.out`, `e0_closure_misses.txt` |
 | `egcp_lib.py` | Shared helpers: exact automorphism enumeration and the operations cone, E2join, SR, jump, cocktail and frontier. | |
 
 **Regenerating the census base** (optional; the extracted files are committed):

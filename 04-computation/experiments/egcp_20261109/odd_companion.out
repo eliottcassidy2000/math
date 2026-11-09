@@ -1,0 +1,17 @@
+seed n=8 d=129 leaf=3: OK
+seed n=8 d=133 leaf=3: OK
+seed n=8 d=165 leaf=5: OK
+seed n=9 d=257 leaf=4: OK
+seed n=9 d=261 leaf=6: OK
+seed n=9 d=293 leaf=6: OK
+odd-graph values on <= 2 vertices == odd <= 2^n - 1 minus {1,5,37}: True
+odd-graph values on <= 3 vertices == odd <= 2^n - 1 minus {1,5,37}: True
+odd-graph values on <= 4 vertices == odd <= 2^n - 1 minus {1,5,37}: True
+odd-graph values on <= 5 vertices == odd <= 2^n - 1 minus {1,5,37}: True
+odd-graph values on <= 6 vertices == odd <= 2^n - 1 minus {1,5,37}: True
+odd-graph values on <= 7 vertices == odd <= 2^n - 1 minus {1,5,37}: True
+odd-graph values on <= 8 vertices == odd <= 2^n - 1 minus {1,5,37}: True
+odd-graph values on <= 9 vertices == odd <= 2^n - 1 minus {1,5,37}: True
+n=10: 32 odd witnesses checked
+n=11: 33 odd witnesses checked
+ALL: PASS
