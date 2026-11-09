@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/07d5532f2fce/session233-endpoint-audit/audit.py", line 14, in <module>
+    require(False, 'deliberate failure sentinel')
+  File "/workspace/scratch/07d5532f2fce/session233-endpoint-audit/audit.py", line 11, in require
+    raise RuntimeError('AUDIT FAILURE: '+label)
+RuntimeError: AUDIT FAILURE: deliberate failure sentinel

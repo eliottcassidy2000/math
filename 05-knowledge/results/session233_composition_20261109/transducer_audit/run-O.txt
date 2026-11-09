@@ -1,0 +1,47 @@
+coefficient and full-state checks 255
+{
+  "verdict": "PASS",
+  "all_three_polynomial_states_checked_through_order": 8,
+  "compositions_checked": 255,
+  "unpruned_compositions_through_18": 262143,
+  "values_at_most_10000": 1374,
+  "first_gaps": [
+    7,
+    11,
+    19,
+    21,
+    35,
+    37,
+    39,
+    43,
+    47,
+    55,
+    61,
+    63,
+    67,
+    71,
+    75,
+    79,
+    83,
+    87,
+    93,
+    95,
+    103,
+    107,
+    111,
+    113,
+    115,
+    117,
+    119,
+    121,
+    127,
+    133
+  ],
+  "head_extension_example_polynomial": [
+    1,
+    6
+  ],
+  "producer_receipt_levels_1_to_18": "MATCH",
+  "values_sha256": "ee8beb158707c75aad18b6e0480f2dc2a2e85d44a70cbf43774f4e16b5963bd7"
+}
+additional checks 511 176

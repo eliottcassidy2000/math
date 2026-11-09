@@ -1,0 +1,41 @@
+{
+  "counts": {
+    "arbitrary_extension_response": 1098,
+    "base_literal": 4,
+    "selector_literal": 25,
+    "selector_recursive": 246
+  },
+  "status": "PASS",
+  "witnesses": [
+    {
+      "H": 9,
+      "N": 1,
+      "order": 5
+    },
+    {
+      "H": 23,
+      "N": 7,
+      "order": 6
+    },
+    {
+      "H": 187,
+      "N": 21,
+      "order": 8
+    },
+    {
+      "H": 461,
+      "N": 37,
+      "order": 9
+    },
+    {
+      "H": 1573,
+      "N": 101,
+      "order": 10
+    },
+    {
+      "H": 9899,
+      "N": 257,
+      "order": 12
+    }
+  ]
+}

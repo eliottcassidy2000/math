@@ -1,0 +1,9 @@
+{
+  "RESULT.md": "049ab135cd1efb552e601e9056597f4c4b080f98caf939aab4077145c8fbdb98",
+  "bridge_blocks.py": "76d659d7a96a55252b5f7ceb31f221a37dad0876651966c55fe7ab00cf41f0ba",
+  "check_polynomial.py": "d9f0bc12fe5ae611366314786979505fd42ad5d5bf066f197db2b1da215c2105",
+  "receipt.json": "ff0e6e90466708739a4a59c7cd23425f85c754e5f2374b1d7f2994ad24b25803",
+  "receipt.optimized.json": "ff0e6e90466708739a4a59c7cd23425f85c754e5f2374b1d7f2994ad24b25803",
+  "polynomial_receipt.json": "959a61df301711c4f8cff2f8abeb71c9eb5445673786685cf2294be141bebb8b",
+  "polynomial_receipt.optimized.json": "959a61df301711c4f8cff2f8abeb71c9eb5445673786685cf2294be141bebb8b"
+}

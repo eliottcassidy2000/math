@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/07d5532f2fce/session233-transducer-audit/audit.py", line 8, in <module>
+    if '--failure-sentinel' in sys.argv: check(False,'deliberate failure sentinel')
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/07d5532f2fce/session233-transducer-audit/audit.py", line 7, in check
+    if not ok: raise RuntimeError('AUDIT FAILURE: '+str(detail))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: AUDIT FAILURE: deliberate failure sentinel
+exit_code=1

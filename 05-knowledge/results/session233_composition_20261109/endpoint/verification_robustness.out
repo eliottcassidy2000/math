@@ -1,0 +1,6 @@
+verify_endpoint normal PASS; sentinel exit 1
+verify_endpoint optimized PASS; sentinel exit 1
+verify_endpoint normal/optimized output byte-identical
+response normal PASS; sentinel exit 1
+response optimized PASS; sentinel exit 1
+response normal/optimized output byte-identical

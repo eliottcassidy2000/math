@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/07d5532f2fce/session233-graft-audit/audit.py", line 10, in <module>
+    if args.sentinel: need(False,'intentional audit failure sentinel')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/07d5532f2fce/session233-graft-audit/audit.py", line 9, in need
+    if not x: raise RuntimeError(m)
+              ^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: intentional audit failure sentinel
+sentinel exit=1

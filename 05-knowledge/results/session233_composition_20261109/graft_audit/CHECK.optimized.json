@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "permutation_cores": [
+    37,
+    45
+  ],
+  "literal_ordinal_cases": 32,
+  "literal_core_closures": 2,
+  "coin_rectangles": 714,
+  "records": [
+    {
+      "K": 36,
+      "L": 44,
+      "lower_sha256": "f673b26dbccdb141bb655fce6fbf58a62c15d18cdbcf1e681c7c64a67f386d6d",
+      "width": 81,
+      "vertices": 43319
+    },
+    {
+      "K": 36,
+      "L": 50,
+      "lower_sha256": "de6911c6db33f210b041863f88a96d88f2fcde14c7d502f827dc0ee039f3b85e",
+      "width": 303,
+      "vertices": 43391
+    },
+    {
+      "K": 36,
+      "L": 100,
+      "lower_sha256": "06e4e4415e01fffb6322c8c2b59c2b48bc1fab7b55865570ed10b03fc895b82e",
+      "width": 2153,
+      "vertices": 43991
+    },
+    {
+      "K": 37,
+      "L": 44,
+      "lower_sha256": "2e467c73d7d3c5a6cd6c7ffed4b6c16351098fcaa3fb630781af51a0917ee251",
+      "width": 126,
+      "vertices": 44507
+    },
+    {
+      "K": 40,
+      "L": 50,
+      "lower_sha256": "925493c7c4e3a74664600de81b16184285fb275641534e946eabee0f84d55908",
+      "width": 483,
+      "vertices": 48143
+    }
+  ]
+}

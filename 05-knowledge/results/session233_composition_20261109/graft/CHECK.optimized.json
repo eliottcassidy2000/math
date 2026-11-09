@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "literal_cores": [
+    37,
+    45
+  ],
+  "coin_cases": 474,
+  "records": [
+    {
+      "K": 36,
+      "L": 44,
+      "vertices": 43319,
+      "consecutive_odd_values": 81,
+      "lower_bit_length": 43322,
+      "upper_bit_length": 43322,
+      "lower_sha256": "f673b26dbccdb141bb655fce6fbf58a62c15d18cdbcf1e681c7c64a67f386d6d"
+    },
+    {
+      "K": 36,
+      "L": 50,
+      "vertices": 43391,
+      "consecutive_odd_values": 303,
+      "lower_bit_length": 43394,
+      "upper_bit_length": 43394,
+      "lower_sha256": "de6911c6db33f210b041863f88a96d88f2fcde14c7d502f827dc0ee039f3b85e"
+    },
+    {
+      "K": 36,
+      "L": 100,
+      "vertices": 43991,
+      "consecutive_odd_values": 2153,
+      "lower_bit_length": 43994,
+      "upper_bit_length": 43994,
+      "lower_sha256": "06e4e4415e01fffb6322c8c2b59c2b48bc1fab7b55865570ed10b03fc895b82e"
+    },
+    {
+      "K": 37,
+      "L": 44,
+      "vertices": 44507,
+      "consecutive_odd_values": 126,
+      "lower_bit_length": 44510,
+      "upper_bit_length": 44510,
+      "lower_sha256": "2e467c73d7d3c5a6cd6c7ffed4b6c16351098fcaa3fb630781af51a0917ee251"
+    },
+    {
+      "K": 40,
+      "L": 50,
+      "vertices": 48143,
+      "consecutive_odd_values": 483,
+      "lower_bit_length": 48146,
+      "upper_bit_length": 48146,
+      "lower_sha256": "925493c7c4e3a74664600de81b16184285fb275641534e946eabee0f84d55908"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+base 4 h 5 B [7, 9, 6, 5]
+base 5 h 9 B [15, 25, 16, 10, 9]
+base 6 h 17 B [31, 69, 44, 28, 18, 17]
+selector 1 27 155
+selector 2 41 180
+selector 3 33 111
+selector 4 59 196
+selector 5 51 127
+selector 6 65 152
+selector 7 39 83
+selector 8 85 206
+selector 9 71 137
+selector 10 91 162
+selector 11 59 93
+selector 12 109 178
+selector 13 77 109
+selector 14 97 134
+selector 15 47 65
+base 7 h 33 B [63, 193, 124, 80, 52, 34, 33]
+base 8 h 65 B [127, 549, 356, 232, 152, 100, 66, 65]
+base 9 h 129 B [255, 1585, 1036, 680, 448, 296, 196, 130, 129]

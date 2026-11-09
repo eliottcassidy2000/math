@@ -1,0 +1,69 @@
+{
+  "runs": [
+    {
+      "folder": "graft",
+      "script": "verify.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_equal": true,
+      "sentinel": null
+    },
+    {
+      "folder": "graft_audit",
+      "script": "audit.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_equal": true,
+      "sentinel": "--sentinel"
+    },
+    {
+      "folder": "endpoint",
+      "script": "verify_endpoint.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_equal": true,
+      "sentinel": "--fail"
+    },
+    {
+      "folder": "endpoint",
+      "script": "response.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_equal": true,
+      "sentinel": "--fail"
+    },
+    {
+      "folder": "endpoint_audit",
+      "script": "audit.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_equal": true,
+      "sentinel": "--fail"
+    },
+    {
+      "folder": "transducer",
+      "script": "bridge_blocks.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_equal": true,
+      "sentinel": "--fail"
+    },
+    {
+      "folder": "transducer",
+      "script": "check_polynomial.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_equal": true,
+      "sentinel": "--fail"
+    },
+    {
+      "folder": "transducer_audit",
+      "script": "audit.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_equal": true,
+      "sentinel": "--failure-sentinel"
+    }
+  ],
+  "scope": "Assembled-copy replays; wrong initial transducer sentinel flag corrected and rerun."
+}
