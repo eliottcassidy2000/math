@@ -249,8 +249,14 @@ Lemma 6 realises M(n). Hence O(n) is contained in E(n), and together with Sectio
 - **Elementary:** Lemma 0, and Lemmas 7-8 as instances of the vertex-addition formula of THM-4996 Lemma B3.
 - **No prior art found** for dominating-set counts of even graphs, the exceptional set {3, 7, 13}, or the sharp
   orders M(n), X(n). Searched: web; repo grep for "dominating" and "even graph".
-- **Concurrent lane.** mac-mini-2026-11-09-digraph721 (HYP-9625, THM-5055, THM-5056) is attacking (B) by explicit
-  coverage to 2^24. This proof was found independently (coordination: MSG-2471, MSG-1987).
+- **Concurrent independent proof.** mac-mini-2026-11-09-digraph721 announced an all-n existence proof of (B) at
+  12:49 the same day (THM-5055 draft, audit pending; not in canon when this theorem was pushed). It used:
+  - offset moves R = PH(pendant, 1), which is this theorem's SR, and PH(3, 2), a hub missing a vertex with
+    |N[u]| = 3, plus two leaves;
+  - a seed lemma for each offset.
+  Both proofs share the skeleton: cones, padding, E_2-joins. They differ in their seeds (here: the jump family and
+  the three sparse H of Lemma 9). The messages crossed (MSG-2471, MSG-1987 and mac-mini's 12:49 reply); the two
+  proofs should cross-cite once THM-5055 lands. mac-mini also re-derived the exclusion of X(n) by the deficit route.
 
 ## 7. Remarks
 
