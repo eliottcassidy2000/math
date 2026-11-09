@@ -38,7 +38,7 @@ Outcome: to be appended below without editing the predictions.
 ## Outcome (appended after the run; the predictions above are unedited)
 
 `pairs_check.py` ran at n = 13..40 (pairs_check.out). An in-sample calibration at n = 6..12 was run alongside
-(pairs_check_insample.out), regrettably after the predictions were pushed (MISTAKE-744).
+(pairs_check_insample.out), regrettably after the predictions were pushed (MISTAKE-745).
 
 - **Q1 REFUTED, in exactly one family.** For every n in [13, 40], every black pair 1 <= i <= j <= k with i + j >= k
   is realised by a non-palindromic admissible word, except (k, k) at n = 3k (n = 15, 18, ..., 39).

@@ -1,0 +1,11 @@
+automaton states (with last four letters and junction flags): 317
+tight colourings at n = 3k with 0-junction: generating function x**3/(2*x - 1)**2; k = 1..12: [0, 0, 1, 4, 12, 32, 80, 192, 448, 1024, 2304, 5120]
+tight colourings at n = 3k with 1-junction: generating function x**3/(2*x - 1)**2; k = 1..12: [0, 0, 1, 4, 12, 32, 80, 192, 448, 1024, 2304, 5120]
+tight colourings at n = 3k with any junction: generating function 2*x**3/(2*x - 1)**2; k = 1..12: [0, 0, 2, 8, 24, 64, 160, 384, 896, 2048, 4608, 10240]
+tight colourings at n = 3k with both kinds: generating function 0; k = 1..12: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+brute force k = 1: with 0-junction 0, with 1-junction 0
+brute force k = 2: with 0-junction 0, with 1-junction 0
+brute force k = 3: with 0-junction 1, with 1-junction 1
+brute force k = 4: with 0-junction 4, with 1-junction 4
+brute force k = 5: with 0-junction 12, with 1-junction 12
+brute force k = 6: with 0-junction 32, with 1-junction 32

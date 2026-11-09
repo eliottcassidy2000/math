@@ -1,12 +1,17 @@
 ---
 id: HYP-9540
-title: "Packing-number line laws of the tiling metagraph: (A) at every order the triple words of tight lines (nu(t) + nu(t+1) = floor(n/3)) are exactly the tight colourings - proved for n != 0 (mod 3), open at n = 3k; (B) black lines join nu-classes i <= j iff i >= 1 and i + j >= floor(n/3); blue lines join them iff i >= 1 and i + j > floor(n/3), or the pair is that of a palindromic tight colouring (including the transitive line (0, floor(n/3))); (C) the triple words of BLUE tight lines are exactly the palindromic tight colourings - proved for n != 0 (mod 3); (D) the blue-line (1,3) excess of THM-4951 (5) is nonzero at every odd n = 2c + 1 >= 11 with sign (-1)^(c+1) (the earlier clause 'the excess persists' is REFUTED at n = 13)."
+title: "Packing-number line laws of the tiling metagraph: (A) at every order the triple words of tight lines (nu(t) + nu(t+1) = floor(n/3)) are exactly the tight colourings - PROVED at every n (THM-4951, THM-5020); (B) black lines join nu-classes i <= j iff i >= 1 and i + j >= floor(n/3); blue lines join them iff i >= 1 and i + j > floor(n/3), or the pair is that of a palindromic tight colouring (including the transitive line (0, floor(n/3))); (C) the triple words of BLUE tight lines are exactly the palindromic tight colourings - PROVED at every n; (D) the blue-line (1,3) excess of THM-4951 (5) is nonzero at every odd n = 2c + 1 >= 11 with sign (-1)^(c+1) (the earlier clause 'the excess persists' is REFUTED at n = 13)."
 status: >
   OPEN.
-  (A): PROVED for n != 0 (mod 3) (THM-4951 (3a), (3e), (3f): block laws and the run-window theorem). At n = 3k it is
-  FINITE-EXACT for n <= 12 (50 of 50 words at n = 12, pre-registered T1).
+  (A): PROVED at every n.
+  - n != 0 (mod 3): THM-4951 (3a), (3e), (3f), the block laws and the run-window theorem.
+  - n = 3k: THM-5020 (opus-2026-11-09-S88), the junction lemma and the run-window lines of w or of its complement.
+  - It was FINITE-EXACT for n <= 12 before.
   (B): FINITE-EXACT for n <= 9 (complete census of all lines). The blue clause is also FINITE-EXACT for n <= 12 (the
   audit's census of all blue lines).
+  - THM-5020 (6) (S88) proves (B) for 13 <= n <= 40 on every pair, by run-window lines of admissible words, except
+    three families: black (k, k) at n = 3k; blue (k, k) at n = 0, 1 (mod 3); blue non-tight both-odd pairs at even n.
+  - Those families are the open residue, HYP-9590 (B).
   - The boundary i + j = k is realised in black at every n (THM-4951 (2a)). In blue exactly the pairs of palindromic
     tight colourings are possible (THM-4951 (3d)). Through (C), at n != 0 (mod 3) exactly those occur.
   - (0, k) and (1, k) occur at every n >= 4: the transitive line, and the single reversed tile (0, 3), which is black
@@ -14,7 +19,7 @@ status: >
   - The first version of the blue clause ("the same pairs as black, except (1, 1) from n = 6 on") is REFUTED. At
     n = 12 no blue line has nu-pair (1, 3): such a line would be tight, with a palindromic tight word, and the three
     palindromic tight colourings of [0, 9] have P-pairs (2, 2), (2, 2) and (4, 0). The audit found this (MISTAKE-742).
-  (C): PROVED for n != 0 (mod 3) (THM-4951 (3d), (3f)); FINITE-EXACT for n <= 12.
+  (C): PROVED at every n (THM-4951 (3d), (3f) for n != 0 (mod 3); THM-5020 (4) at n = 3k).
   (D): the original clause (the (1,3) excess persists at every odd n >= 11) is REFUTED at n = 13: pre-registered U1,
   and the audit's independent sampler. The sign law replacing it was stated after U1-U3 and passed the pre-registered
   U4 at n = 17. Its data are n = 11 exact and n = 13, 15, 17 sampled. OPEN.
@@ -23,6 +28,8 @@ session: opus-2026-11-09-S87
 source: 05-knowledge/results/ternary_metagraph_20261109/README.md
 related:
   - THM-4951
+  - THM-5020
+  - HYP-9590
   - THM-643
   - THM-4922
   - THM-791
@@ -45,18 +52,16 @@ related:
   - the tight colourings there are block words;
   - all their runs have length >= 2;
   - so the run-window tilings realise them.
-- At n = 3k the converse is FINITE-EXACT for n <= 12.
+- At n = 3k the converse was FINITE-EXACT for n <= 12. It is now PROVED at every n (THM-5020, 2026-11-09).
+  - A tight colouring has at most one junction (an isolated letter between two runs of length >= 2), by the
+    junction lemma.
+  - If it has no 0-junction, the run-window line of w realises it.
+  - Otherwise the run-window line of its complement does.
+  - The S87 follow-up audit found the run-window failures at n = 3k <= 18 to be exactly the 0-junction words (e.g.
+    1110111). THM-5020 (3) proves that words without a 0-junction never fail. That every 0-junction word fails is
+    FINITE-EXACT only, for n <= 18. There are (k - 2) 2^(k-3) such words (THM-5021 (3)).
 
-**The open case n = 3k.**
-- The tight colourings may have runs of length 1. There are (k^2 + 9k - 2) 2^(k-4) of them up to complement (fitted).
-- The run-window tiling realises 5 of 5, 16 of 17, 47 of 50, 128 of 136 and 332 of 352 at n = 6, 9, 12, 15, 18.
-- For n = 3k <= 18 it fails exactly when an isolated 0 lies between two 1-runs of length >= 2: every failing word
-  contains 1110111. This is the follow-up audit's FINITE-EXACT characterisation. The first statement here ("an
-  isolated 0 between two 1-runs") was wrong: 1010 at n = 6 is realised (MISTAKE-742).
-- The failing words are still realised by other tight lines at n = 9 and 12. So a proof at n = 3k needs a
-  construction for the 1110111 pattern.
-
-**Falsifier.** A tight colouring at some n = 3k that no tight line realises.
+**Status.** PROVED; no falsifier remains.
 
 ## (B) Allowed pairs
 
@@ -98,7 +103,7 @@ colouring.
 - FINITE-EXACT for n <= 12: there are 1, 1, 1, 1, 1, 1, 3, 2, 2, 3 palindromic tight colourings for n = 3..12, each
   realised by a blue tight line. At n = 12 the only blue pair besides (0, 4) is (2, 2) (296 lines).
 
-**Falsifier.** A palindromic tight colouring at some n = 3k with no blue tight line.
+**Status.** PROVED at every n (THM-5020 (4)): the run-window line of a palindrome, or of its complement, is blue.
 
 ## (D) Sign law of the (1,3) excess
 
