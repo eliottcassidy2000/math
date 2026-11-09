@@ -1,0 +1,17 @@
+rows (341, 20) max entry degree 2 rank at x = 7/3: 14
+rank at the 36 integer points 3..38: [14] -> generic rank 14 certified: True
+  rank at x = -3: 14
+  rank at x = -2: 13
+  rank at x = -1: 14
+  rank at x = 0: 1
+  rank at x = 1/2: 14
+  rank at x = 1: 14
+  rank at x = 3/2: 14
+  rank at x = 2: 13
+  rank at x = 5/2: 14
+a nonsingular 14x14 minor has determinant -x**13*(x - 2)*(x + 2)
+its roots: {-2: 1, 2: 1, 0: 13}
+  exact rank at root x = -2: 13
+  exact rank at root x = 2: 13
+  exact rank at root x = 0: 1
+relations among the 14 generic basis functionals at x = 2: 1

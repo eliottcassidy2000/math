@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math-wt-ternary-metagraph-20261108/04-computation/experiments/ternary_ribbon_metagraph_20261108/merge_parts.py", line 31, in <module>
+    print(f"n={n}: parts {len(glob.glob(f'lines_n{n}_p*.txt'))}, lines {meta['lines']}, blue {meta['blue']}, both ends strong {meta['both-ends-strong']} ({meta['both-ends-strong']/meta['lines']:.4f})")
+ZeroDivisionError: division by zero

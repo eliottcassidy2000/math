@@ -50,16 +50,20 @@ Outcome: to be appended below without editing the predictions.
 
 - **P1 CONFIRMED.** Reachable packing states 4, 20, 112 (predicted at most 10, 60, 600); 360 random words agree with
   the brute force and, at x = 2, with THM-4880's path automaton.
-- **P2 CONFIRMED to 10^4 (all lengths, fixed point) and PENDING-S2-1E5 to 10^5.** The span-2 misses are exactly 10 and
-  31: no further value at all (the predicted "finite set below 2,000" is empty).
-- **P3 PENDING-S3** (run to 5,000, not 10^4, for memory: 70 reduced coordinates).
+- **P2 CONFIRMED to 10^5.** The span-2 misses are exactly 10 and 31 (complete for all lengths to 10^4 by the fixed
+  point; to 10^5 by length 15, state sets capped beyond): no further value at all (the predicted "finite set below
+  2,000" is empty).
+- **P3 CONFIRMED to 5,000** (not 10^4: 70 reduced coordinates, the run was capped at 5,000,000 states at length
+  11): the span-3 misses are exactly 10 and 31, attained by length 10.
 - **P4 REFUTED at one value.** Strong span-2 words attain every attained value except 64, which no strong tournament
   of any order attains (THM-4952 (E)); otherwise strong = all.
-- **P5 CONFIRMED at n = 5, 6, 7, 8** (formula = census, cut set by cut set, all and blue lines); n = 9: PENDING-N9.
+- **P5 CONFIRMED at n = 5, 6, 7, 8, 9** (formula = census, cut set by cut set, all and blue lines; at n = 9 over
+  134,217,728 lines).
 - **P6 CONFIRMED by theorem and by census to n = 8**: strong-strong shares 0.5625, 0.7637, 0.8782, 0.9383, and the
-  exact formula gives 1 - 2^(4-n)(1 + O(2^-n)), above 0.9 from n = 8 on; n = 9 census: PENDING-N9.
-- **P7 CONFIRMED at n = 6, 7, 8** (black-black lines 20, 702, 35,888; blue-blue shares 0.617, 0.632, 0.672);
-  n = 9: PENDING-N9.
+  exact formula gives 1 - 2^(4-n)(1 + O(2^-n)), above 0.9 from n = 8 on; n = 9 census: 0.9690.
+- **P7 CONFIRMED at n = 6, 7, 8, half-decidable at n = 9.** Black-black lines 20, 702, 35,888, 115,704; blue-blue
+  shares 0.617, 0.632, 0.672 at n = 6..8; at n = 9 the blue-blue share is 0.814 among the 9% of lines whose two
+  values are below 1131 and undecidable overall (THM-4930's exact colours stop at 1131).
 - **P8 half CONFIRMED, half REFUTED.** The multiplicity bound min(H/|Aut|) holds on every pair; the maximum is attained
   by a self-converse pair at n = 5 and 7 but by an SC-NS pair at n = 6 (41, 43) and by a converse pair (both
   non-self-converse, H = 445) at n = 8.

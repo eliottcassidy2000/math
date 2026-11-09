@@ -4,8 +4,7 @@ title: "Lines of the order-n tiling metagraph between node classes (THM-643/4729
 status: >
   PROVED (mac-mini-2026-11-08-ternary, elementary): (A), (B) by the interval lemma for tournaments with a Hamiltonian
   path, the crossing description of cuts, and Moebius inversion on the Boolean lattice of cut sets; the formulas were
-  checked against the exhaustive line census (lines_census.c, every closed tiling) at n = 5, 6, 7, 8, cut set by cut
-  set, all lines and blue lines (n = 9: PENDING-N9). (C) from the definitions and THM-4729 (both ends of a blue line
+  checked against the exhaustive line census (lines_census.c, every closed tiling) at n = 5, 6, 7, 8, cut set by cut set, all lines and blue lines, and at n = 9 (134,217,728 lines in eight parts). (C) from the definitions and THM-4729 (both ends of a blue line
   are blue tilings), THM-4930 (self-converse value => eternally blue) and THM-643's per-node parities. (D) from
   THM-4729's closure (closed => strong => H >= f(n)) and the classification of the realisers of 3 and 5 (a 3-cycle,
   resp. the strong 4-tournament, with transitive padding; THM-1370 / THM-4744 for the strong floors), with the
@@ -14,7 +13,11 @@ status: >
   statistics (pairs_analysis.py). KNOWN/CITED: the tiling frame and the blue/black lines (THM-643, 644), closed and
   open tilings (THM-4729), SC = A000570 (THM-793), the tribonacci tower (THM-4865 (c), A000213), eternal colours
   (THM-4930), first creators (THM-4922). Concurrent: opus-2026-11-09-S87's blue-line H mod 4 law at order 11
-  (PREREGISTRATION-2 of ternary_metagraph_20261109), independent of this. Audit: PENDING-AUDIT.
+  (PREREGISTRATION-2 of ternary_metagraph_20261109), independent of this. AUDIT: PASS WITH CORRECTIONS
+  (05-knowledge/results/ternary_ribbon_metagraph_audit_20261108.md; minors here: THM-4729 (3)-(4) cited for the
+  strong-strong count and the absence of lines between non-strong nodes, one transcription error in the census
+  paragraph), applied on 2026-11-09; the audit re-derived (A), (B) and verified the formula by its own enumeration
+  at n = 5, 6, 7 and the node census at n = 5, 6.
 session: mac-mini-2026-11-08-ternary
 source: 05-knowledge/results/ternary_ribbon_metagraph_lines_20261108.md
 scripts:
@@ -56,8 +59,10 @@ transitive line {0^m, 1^m}. Every tile crosses >= 2 consecutive positions, so no
 The open end's cut set contains S iff every tile crossing S is 1; the free tiles are those inside the blocks of S, so
 N_sup(S) = 2^(e(S)), e(S) = sum over blocks B of C(|B| - 1, 2), for S nonempty, and 2^(m-1) for S empty. The number of
 lines whose open end has cut set exactly S is N(S) = sum_{S' superset S} (-1)^|S' - S| N_sup(S'), and the number of
-lines between the strong class and the class with k strong components is L_k = sum_{|S| = k - 1} N(S); L_k = 0 for
-k >= 2 on both ends (the closed end is strong), so lines between two non-strong nodes do not exist. Blue lines: a
+lines between the strong class and the class with k strong components is L_k = sum_{|S| = k - 1} N(S). That the
+closed end is strong, that no line joins two non-strong nodes and that the strong-strong count is 2^(m-1) - NS(n)
+(NS = 14, 121, 1,995, 64,648 at n = 5..8) are THM-4729 (3)-(4), KNOWN; the new content is the full cut-set
+distribution N(S) and its blue refinement. Blue lines: a
 grid-symmetric tiling is free on the orbit representatives of its free tiles; with sigma(i) = n - i and Sbar = S u
 sigma(S), N_sup^blue(S) = 2^((m+f)/2 - 1) for S empty and 2^((e(Sbar) + f(Sbar))/2) otherwise (f(Sbar) = number of
 sigma-fixed tiles, a + b = n + 1, inside the blocks), and the same inversion gives the blue counts (zero unless S is
@@ -69,12 +74,12 @@ symmetric). Values (all lines; blue in brackets), open end with k components:
 | 6 | 391 (27) | 101 (1) | 15 (3) | 4 (0) | 0 | 1 (1) | |
 | 7 | 14,389 (239) | 1,816 (0) | 153 (15) | 20 (0) | 5 (1) | 0 | 1 (1) |
 | 8 | 983,928 (1,978) | 61,671 (5) | 2,739 (59) | 206 (2) | 25 (3) | 6 (0) | 1 (1) at k = 8 |
-| 9 | PENDING-N9 | | | | | | |
+| 9 | 130,053,749 (32,249) | 4,067,314 (0) | 92,695 (501) | 3,672 (0) | 260 (16) | 30 (0) | 7 (1), 0, 1 (1) at k = 7, 8, 9 |
 
 The leading terms of 2^(m-1) - N(empty) are the single cuts at positions 1 and n - 1 (an open end with a source or
 a sink), 2^(C(n-2, 2)) = 2^(m-1) 2^(3-n) each, the next 2^(m-1) 2^(6-2n); so the share of lines whose open end is not
-strong is 2^(4-n) (1 + O(2^-n)) (observed non-strong shares 0.4375, 0.2363, 0.1218, 0.0617 at n = 5..8 against
-2^(4-n) = 0.5, 0.25, 0.125, 0.0625), and the blue k = 2 count vanishes at odd n (no symmetric single cut).
+strong is 2^(4-n) (1 + O(2^-n)) (observed non-strong shares 0.4375, 0.2363, 0.1218, 0.0617, 0.0310 at n = 5..9
+against 2^(4-n) = 0.5, 0.25, 0.125, 0.0625, 0.03125), and the blue k = 2 count vanishes at odd n (no symmetric single cut).
 
 **(C) Colours.** A blue tiling is grid-symmetric, hence its tournament is self-converse and its value eternally blue
 (THM-4930); both ends of a blue line are blue tilings (THM-4729). So every blue line joins two eternally-blue-valued
@@ -95,10 +100,14 @@ n - 2 classes): fibre 3 carries n - 2 lines for n >= 4; those with H = 5 are TT_
 n = 5..8. Self-converse: SC-SC blue 8, 32, 256, 2,048; SC-SC black 12, 10, 876, 772; SC-NS black 12, 156, 5,044,
 53,072; NS-NS 0, 314, 10,208, 992,684. Value colours (nodes blue/black 12/0, 48/8, 370/86, 5,556/1,324): lines with
 both values eternally blue 32, 316, 10,356, 704,608 (shares 1, 0.617, 0.632, 0.672), mixed 0, 176, 5,326, 308,080,
-both eternally black 0, 20, 702, 35,888. First creators (THM-4922; nodes 6, 33, 328, 5,457): lines FC-FC 24, 371,
+both eternally black 0, 20, 702, 35,888. First creators (THM-4922; nodes 6, 33, 328, 5,457): lines FC-FC 18, 371,
 13,723, 932,047, FC-old 14, 131, 2,472, 104,099, old-old 0, 10, 189, 12,430. Multiplicities: the largest number of
 lines between two distinct iso-class nodes is 2, 6, 8, 12, never above min(H/|Aut|) of the pair; self-lines 4, 8, 44,
 206; same-value lines 7, 53, 470, 8,179; the closed end has the larger value in 0.75, 0.73, 0.72, 0.70 of the lines;
-at n = 8 the correlation of the end values is 0.741. Merged nodes (converse pairs identified): 10, 34, 272, 3,528 nodes; largest multiplicity between distinct
+at n = 8 the correlation of the end values is 0.741. At n = 9 (134,217,728 lines, 32,768 blue; values only):
+fibres 3 and 5 carry 7 and 30 lines, same-value lines 267,735 (0.0020), the closed end is larger in 0.686 of the
+lines, the correlation is 0.800, the largest value is 3,357; among the 12,188,691 lines whose two values are both
+below 1131 (decided colours), 9,921,395 join two eternally blue values, 115,704 two eternally black ones and
+2,151,592 one of each (the other 91% of the lines carry a value >= 1131). Merged nodes (converse pairs identified): 10, 34, 272, 3,528 nodes; largest multiplicity between distinct
 merged nodes 2, 14, 16, 26 at the value pairs (9, 9), (37, 43), (151, 153), (659, 653); largest blue multiplicity
 1, 2, 2, 4; self-lines 4, 26, 114, 622 (blue 0, 2, 0, 4).

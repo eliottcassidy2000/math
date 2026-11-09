@@ -23,7 +23,7 @@ only eternally-blue-valued nodes, the transitive node's line goes to the tribona
 carry exactly n - 2 and 5(n - 3) lines. PROVED by complete finite enumeration: span-2 ribbon words attain every value
 1 (mod 3) up to 10^4 except 10 and 31 (fixed point of the pruned state sets, so for all lengths), strong span-2 words
 miss 10, 31, 64, and 64 is the base-3 count of no strong tournament (Busch + orders <= 8). FINITE-EXACT: the line
-census by node class at n = 5..9 (n = 9: PENDING-N9). NEGATIVE: near-join digits do not realise the return forest
+census by node class at n = 5..8 and by value at n = 9. NEGATIVE: near-join digits do not realise the return forest
 (47 of 97 attainable h <= 199 lack R = h + 1 at order <= 8). OPEN: everything in HYP-9541.
 
 ## 1. Inheritance
@@ -56,9 +56,14 @@ against THM-4880's path automaton on the same words: the two automata agree, whi
 
 **Minimal dimension (PROVED, exact).** For span 2 the Z-module of functionals u -> I(Omega(T_u v), x) has rank 14
 over Q(x): a nonsingular 14 x 14 minor of the functional matrix has determinant `-x^13 (x - 2)(x + 2)`, and the rank
-is 14 at eighteen distinct specialisations (a nonzero 15 x 15 minor has degree <= 15, so it would have at most 15
-roots). The rank drops exactly at x = 0 (to 1: the constant series) and at x = +-2 (to 13; one linear relation among
-the fourteen generic basis functionals). So the Hamiltonian-path base x = 2 is the unique positive base at which the
+is 14 at more integer specialisations than the degree bound of a 15 x 15 minor (see the audit correction below). The rank drops exactly at x = 0 (to 1: the constant series) and at x = +-2 (to 13; one linear relation among
+the fourteen generic basis functionals). **Audit correction (MISTAKE-740).** The session's first certificate of the
+generic rank used eighteen specialisations and the bound "a nonzero 15 x 15 minor has degree <= 15", which is the
+degree of a single letter matrix; the functional rows are products of up to four letter matrices, with entries of
+degree <= 2 (at most one odd cycle, needing three vertices, closes in four steps), so the bound is 30 at depth 4 and
+45 at depth 5. The audit found rank 14 at 65 integer points for the depth-4 matrix and 61 for the depth-5 matrix,
+which proves that all 15 x 15 minors vanish identically and that the depth-4 span is letter-invariant;
+rankdrop.py now tests 36 points against the computed degree bound. So the Hamiltonian-path base x = 2 is the unique positive base at which the
 span-2 packing series has lower dimension, and 13 is THM-4880 (G)'s irreducible dimension (the path series' rank 14
 counted the empty word, where the path automaton gives 0 and the packing automaton 1). Integer representations
 (packing_intrep.py, echelon or LLL bases, verified on 400 random words each): span 2 at x = 2: rank 13, entries <= 2;
@@ -119,9 +124,15 @@ The pruned state sets are a fixed point from length 19 (1,197,559 states, unchan
 level n + 1 is the image of level n under the letters pruned by H_3 <= 10^4 (sound by THM-4940 (1), monotonicity
 under vertex deletion), the state set of every length is this fixed point, and the census is complete for all
 lengths: **every v = 1 (mod 3) with v <= 10,000 other than 10 and 31 is H_3 of a span-2 ribbon word; every such v
-other than 10, 31, 64 is H_3 of a strong span-2 ribbon word.** The run to 10^5: PENDING-S2-1E5.
+other than 10, 31, 64 is H_3 of a strong span-2 ribbon word.** To 10^5 (pk3_s2_1e5_levels.txt): states 5,276,750 at length 15 and 12,872,609 at length 16, then the cap of
+14,000,000 from length 17; every v = 1 (mod 3) with v <= 100,000 except 10 and 31 is attained by length 15 and every
+such v except 10, 31, 64 by a strong word; no fixed point is claimed at this bound. The audit verified the fixed point
+at 10^4 as set equality (S_19 = S_20 = S_21 = S_22; the program records cardinalities only) and noted that 10 and
+31 are excluded for every tournament by THM-4940 (3)-(4) regardless.
 
-**Span 3, H_3 <= 5,000.** PENDING-S3.
+**Span 3, H_3 <= 5,000** (pk3_s3_5e3_levels.txt; rank 70, the 121-state automaton): 1, 2, 8, 64, 384, 2,144,
+11,668, 66,424, 395,672, 2,187,270 states at lengths 1..10, then the cap of 5,000,000; every v = 1 (mod 3) with
+v <= 5,000 except 10 and 31 is attained by length 10, and every such v except 10, 31, 64 by a strong word.
 
 **Theorem D (64).** 64 = 1 + 3 * 21 is not the base-3 packing count of any strong tournament. Proof: for a strong T,
 H(T) = I(Omega, 2) <= I(Omega, 3) = H_3(T) (termwise), so H_3(T) = 64 forces H(T) <= 64 < 75 = f(9) (Busch, THM-4744),
@@ -129,8 +140,12 @@ hence |T| <= 8; the complete enumeration of all tournaments of orders <= 8 (spec
 packing polynomials by the set-partition brute force) gives the strong base-3 values, and 64 is not among them (the
 only values 1 (mod 3) below 1069 attained at orders <= 8 but not by a strong tournament are 1 and 64). 64 is attained
 as the ordinal sum C3 => T with H_3(T) = 16 (H_3(C3) = 4). In base 2 the strong spectrum at orders <= 8 omits only 1
-(THM-4880: strong values = all values); base 3 is the first base in which a composite attained value has no strong
-realiser. For comparison the same enumeration reproduces THM-4940's gap tables: base 2 misses 7, 21 (then only values
+(finite data; THM-4880 (C) is the ribbon-family statement). Across bases (audit correction 3): at orders <= 8 the
+attained values without a strong realiser are {1} in bases 2, 4, 5 and {1, 175}, {1, 120} in bases 6, 7 (audit
+census of all 12,357 tournaments of orders <= 8; 175 and 120 exceed f(9) = 75 and stay undecided), and for b >= 8
+every attained value below 64 is 1 + ab with a <= 7 in the intercyclic spectrum A (THM-4940 (2)), each such a being
+the odd-cycle count of a strong intercyclic tournament of order <= 5; hence 64 is the smallest value other than 1, in
+any base, that is attained but has no strong realiser. For comparison the same enumeration reproduces THM-4940's gap tables: base 2 misses 7, 21 (then only values
 above 611, the order limit); base 3 misses 10, 31 (then above 1069); base 4 misses 13, 57, 109 (then above 1669);
 base 5 misses 16, 51, 136, 371 (then above 2286).
 
@@ -178,8 +193,10 @@ lines between the strong class and the class with k components is `L_k = sum_{|S
 same inversion applies to `N_sup^blue(S) = 2^((m+f)/2 - 1)` (S empty) and `2^((e(Sbar) + f(Sbar))/2)` otherwise,
 Sbar = S u sigma(S), sigma(i) = n - i, f(Sbar) = number of sigma-fixed tiles (a + b = n + 1) inside the blocks of
 Sbar (a grid-symmetric tiling is free on orbit representatives of the free tiles). lines_formula.py evaluates both
-and lines_census.c enumerates every line; the k-tables and the full cut-set tables agree exactly at n = 5, 6, 7, 8
-(and n = 9: PENDING-N9).
+and lines_census.c enumerates every line; the k-tables and the full cut-set tables agree exactly at n = 5, 6, 7, 8 and
+9 (134,217,728 lines in eight parts, merge_parts.py). That the closed end is strong, that no line joins two
+non-strong nodes and that the strong-strong count is 2^(m-1) - NS(n) are THM-4729 (3)-(4) (KNOWN; NS = 14, 121,
+1,995, 64,648 at n = 5..8 reproduced); the new content is the full cut-set distribution and its blue refinement.
 
 | n | lines | blue | open end strong (blue) | k = 2 | k = 3 | k = 4 | k = 5 | k = 6 | k = n |
 |---|---|---|---|---|---|---|---|---|---|
@@ -187,12 +204,12 @@ and lines_census.c enumerates every line; the k-tables and the full cut-set tabl
 | 6 | 512 | 32 | 391 (27) | 101 (1) | 15 (3) | 4 (0) | 0 | - | 1 (1) |
 | 7 | 16,384 | 256 | 14,389 (239) | 1,816 (0) | 153 (15) | 20 (0) | 5 (1) | 0 | 1 (1) |
 | 8 | 1,048,576 | 2,048 | 983,928 (1,978) | 61,671 (5) | 2,739 (59) | 206 (2) | 25 (3) | 6 (0) | 1 (1) |
-| 9 | PENDING-N9 | | | | | | | | |
+| 9 | 134,217,728 | 32,768 | 130,053,749 (32,249) | 4,067,314 (0) | 92,695 (501) | 3,672 (0) | 260 (16) | 30 (0) | 7 (1) at k = 7; 0 at k = 8; 1 (1) |
 
 **(E3) Asymptotics.** The two largest terms of 2^(m-1) - N(empty) are the single cuts at positions 1 and n - 1
 (the open end has a source or a sink), each 2^(C(n-2, 2)) = 2^(m-1) * 2^(3-n); the next, positions 2 and n - 2, are
 2^(m-1) * 2^(6-2n). Hence the share of lines whose open end is not strong is `2^(4-n) (1 + O(2^-n))`: 0.5625, 0.7637,
-0.8782, 0.9383 strong-strong shares at n = 5..8 against 1 - 2^(4-n) = 0.5, 0.75, 0.875, 0.9375. For blue lines a
+0.8782, 0.9383, 0.9690 strong-strong shares at n = 5..9 against 1 - 2^(4-n) = 0.5, 0.75, 0.875, 0.9375, 0.96875. For blue lines a
 single symmetric cut exists only at even n (position n/2), so the blue k = 2 count vanishes at odd n and is
 2^(C(n/2 - 1, 2)) minus corrections at even n (5 at n = 8).
 
@@ -227,7 +244,11 @@ eternally-blue-valued nodes: 1.000, 0.617, 0.632, 0.672. Same-value lines (both 
 8,179 (shares 0.219, 0.104, 0.029, 0.0078); the closed end has the larger value in 24, 373, 11,838, 737,773 lines
 (0.75, 0.73, 0.72, 0.70) and the smaller in 1, 86, 4,076, 302,624. At n = 8 the mean values are 417.8 (closed) and
 359.6 (open), the correlation of the two end values is 0.741, and the smallest value on any line is the transitive 1
-(with 57). Multiplicities (iso-class nodes): the largest number of lines between two distinct nodes is 2, 6, 8, 12 at
+(with 57). At n = 9 (values only, merge_parts.py): fibres 3 and 5 carry 7 and 30 lines, same-value lines 267,735
+(0.0020), the closed end is larger in 0.686 of the lines, the correlation is 0.800, the largest value is 3,357; of the
+12,188,691 lines whose two values are both below 1131 (decided colours), 9,921,395 join two eternally blue values,
+115,704 two eternally black and 2,151,592 one of each, while 91% of the lines carry a value >= 1131 whose eternal
+colour THM-4930 does not yet decide. Multiplicities (iso-class nodes): the largest number of lines between two distinct nodes is 2, 6, 8, 12 at
 n = 5..8, always at most min(H/|Aut|) of the two nodes; self-lines (both ends in one class) 4, 8, 44, 206 (blue 0, 2,
 0, 4); the nodes whose distinct neighbours exhaust their fibre number 7, 17, 52, 213. Merged nodes (converse pairs identified; 10, 34, 272, 3,528 nodes at n = 5..8, of which 8, 12, 88, 176
 self-converse; a pair node's fibre is 2H/|Aut|, verified): the largest number of lines between two distinct merged
@@ -240,7 +261,7 @@ largest neighbourhoods have 7, 20, 94, 461 distinct neighbours against fibres of
 
 (1) The share of lines joining two eternally-black-valued nodes tends to 0 and the share joining two
 eternally-blue-valued nodes tends to 1 (the value-colour form of HYP-9520). (2) The largest multiplicity between two
-distinct merged nodes grows without bound but at most linearly in n, and is attained at pairs of equal or adjacent
+distinct merged nodes grows without bound but subexponentially, and is attained at pairs of large, nearly equal
 values. (3) The closed end has the larger value in a share of lines bounded away from 1/2 and from 1 (0.70-0.75
 observed), and the correlation of the two end values converges. (4) Base 3: the strong base-3 spectrum is the base-3
 spectrum minus {1, 64}; the span-3 ribbon family attains every v = 1 (mod 3) except 10 and 31 (ternary ribbon
@@ -250,7 +271,21 @@ the path base grows with w.
 
 ## 8. Audit
 
-PENDING-AUDIT.
+Independent adversarial audit (agent; `ternary_ribbon_metagraph_audit_20261108.md`): **PASS WITH CORRECTIONS**,
+one major and eight minors, all applied on 2026-11-09 (MISTAKE-740). Major: the certificate of the generic rank in
+THM-4952 (B) used the degree bound of a single letter matrix (15) for the minors of the functional matrix, whose
+entries are products of letters (degree 2 at depth 4, 3 at depth 5), and the committed script tested fewer points
+than the text claimed; the audit proved the generic rank with 65 and 61 specialisations and the script now tests
+more points than the computed bound. Minors: the fixed point at 10^4 was inferred from equal cardinalities (the
+audit verified set equality, and THM-4940 (3)-(4) exclude 10 and 31 anyway); the "first composite without a strong
+realiser in any base" claim needed the audit's bases-6-7 census and the block-lemma argument for b >= 8; FC-FC at
+n = 5 is 18, not 24; THM-4729 (3)-(4) are cited for the strong-strong count and the absence of non-strong-non-strong
+lines; the hypothesis and the note now agree on "subexponential" multiplicity growth; the x = 2 identification is
+spelled out; the base-2 strong spectrum at orders <= 8 is cited as finite data; the capped span-3 run is described as
+capped. The audit reproduced with its own code the automaton (200 words, own cycle enumeration and own path counts),
+the tower, the base-3 letter polynomials and blocks, the order-<= 8 census in bases 2-7, the near-join formula and the
+readiness counts, every structural claim of THM-4953 and the Moebius formula at n = 5, 6, 7, and the node census at
+n = 5, 6.
 
 ## 9. Scripts and receipts (`04-computation/experiments/ternary_ribbon_metagraph_20261108/`)
 

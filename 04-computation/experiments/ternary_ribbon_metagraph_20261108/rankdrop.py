@@ -21,10 +21,17 @@ for depth in range(1, 5):
     rows += frontier
 F = sp.Matrix.vstack(*rows)
 F = F.applyfunc(sp.expand)
-# generic rank via a random rational specialisation (sanity) then exact
+# degree-aware certificate of the generic rank (audit correction): the functional rows are products of up to
+# four letter matrices, so their entries have degree <= deg_max (printed; it is 2, since at most one odd cycle closes
+# per vertex and a closed odd cycle needs three vertices); a nonzero 15 x 15 minor then has degree <= 15 * deg_max
+# and at most that many roots, so rank 14 at more than 15 * deg_max distinct points proves the generic rank is 14.
+deg_max = max(sp.Poly(e, x).degree() if e != 0 else 0 for e in F)
 rk_generic = F.subs(x, sp.Rational(7, 3)).rank()
-print("rows", F.shape, "generic rank (x = 7/3):", rk_generic)
-for xv in [-3, -2, -1, 0, sp.Rational(1, 2), 1, sp.Rational(3, 2), 2, sp.Rational(5, 2), 3, 4, 5, 6, 7, 10]:
+print("rows", F.shape, "max entry degree", deg_max, "rank at x = 7/3:", rk_generic)
+pts = list(range(3, 3 + 15 * deg_max + 6))
+ranks = [F.subs(x, p).rank() for p in pts]
+print(f"rank at the {len(pts)} integer points 3..{pts[-1]}:", sorted(set(ranks)), "-> generic rank 14 certified:", all(r == 14 for r in ranks) and len(pts) > 15 * deg_max)
+for xv in [-3, -2, -1, 0, sp.Rational(1, 2), 1, sp.Rational(3, 2), 2, sp.Rational(5, 2)]:
     print(f"  rank at x = {xv}: {F.subs(x, xv).rank()}")
 # an independent set of 14 rows at a generic point, then a 14 x 14 minor with nonzero polynomial determinant
 Fq = F.subs(x, sp.Rational(7, 3))
