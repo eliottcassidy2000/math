@@ -1,0 +1,5 @@
+n=4: 4 lines, 4 classes touched, 4 distinct (closed class, open class, blue) triples
+n=5: 32 lines, 12 classes touched, 26 distinct (closed class, open class, blue) triples
+n=6: 512 lines, 56 classes touched, 409 distinct (closed class, open class, blue) triples
+n=7: 16384 lines, 456 classes touched, 13412 distinct (closed class, open class, blue) triples
+n=8: 1048576 lines, 6880 classes touched, 945577 distinct (closed class, open class, blue) triples

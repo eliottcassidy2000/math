@@ -1,0 +1,13 @@
+n=1 states 1 values 1 [1,1] solid [1,1] cum misses all 1666 strong 1666  (0 s)
+n=2 states 2 values 1 [1,1] solid [1,1] cum misses all 1666 strong 1666  (0 s)
+n=3 states 8 values 2 [1,4] solid [1,4] cum misses all 1665 strong 1665  (0 s)
+n=4 states 64 values 3 [1,7] solid [1,7] cum misses all 1664 strong 1664  (0 s)
+n=5 states 384 values 7 [1,22] solid [13,22] cum misses all 1660 strong 1660  (0 s)
+n=6 states 2144 values 21 [1,79] solid [43,61] cum misses all 1646 strong 1646  (0 s)
+n=7 states 11668 values 85 [1,304] solid [100,199] cum misses all 1582 strong 1582  (0 s)
+n=8 states 66424 values 330 [1,1141] solid [34,949] cum misses all 1337 strong 1338  (0 s)
+n=9 states 395672 values 1121 [1,3961] solid [34,3052] cum misses all 546 strong 547  (2 s)
+n=10 states 2187270 values 1665 [1,4999] solid [34,4999] cum misses all 2 strong 3  (27 s)
+state cap reached at n=11
+n=11 states 5000000 values 1665 [1,4999] solid [34,4999] cum misses all 2 strong 3  (142 s)
+n=12 states 5000000 values 1665 [1,4999] solid [34,4999] cum misses all 2 strong 3  (325 s)

@@ -1,0 +1,7 @@
+  depth 1: module rank 7, generators 9
+  depth 2: module rank 50, generators 455
+  depth 3: module rank 61, generators 3250
+  depth 4: module rank 61, generators 3965
+span 3, base x = 2: packing states 112, observable integer quotient of rank 61
+  reduced integer representation verified on 400 random words (n <= 11)
+  written pk2_span3_intrep.txt; largest |entry| 272; y0 = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; hcoef = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
