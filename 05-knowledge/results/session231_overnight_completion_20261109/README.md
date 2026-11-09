@@ -1,157 +1,133 @@
-# Session 231: overnight constructive completion research
+# Session 231: moving-core intervals and the remaining placement problem
 
-**Status: IN PROGRESS. Chan–Pak completeness remains OPEN.**
+**Status: independently audited partial results. Chan–Pak completeness remains OPEN.**
+All counts are raw directed Hamilton-path counts. This extended session pursued
+complementary construction, physical descent, source arithmetic and ribbon
+routes through several research and audit rounds. It did not complete the
+proof that every positive odd count other than 7 and 21 occurs.
 
-This ongoing packet contains independently audited partial results. It is not
-a proof of completeness. The target is every positive odd tournament Hamilton-path
-count other than 7 and 21. Base main is
-`9c48b9ac1e2a9c22b0814686c76e3358ad56051d`.
+## Main positive result
 
-## Inheritance and live concept board
+[THM-4960](../../../01-canon/theorems/THM-4960-twelve-bit-moving-core-consecutive-odd-intervals.md)
+gives genuinely unbounded consecutive-odd intervals using one moving core.
 
-1. **Physical descent.** Sessions228–229 give terminating physical-state and
-   graft inverse procedures, but not a physically realizable inverse branch
-   for every target. Revisit the older two-sided one-arc join and complete
-   rooted triples rather than replacing states by scalar counts.
-2. **Dense repair fibers.** Session229 gives context-stable adjacent pairs
-   and triples, including unsaturated deletion cores. Repeated central
-   switches scale by products and do not give unit intervals. Test changing
-   deletion topologies and core positions, retaining the full endpoint data.
-3. **Packing/carry operations.** Session230's positive cut kernel and S86's
-   audited packing-polynomial work tie omission proofs to growth. Fixed
-   sparse back-arc constructions, growing-budget variants and finite-width
-   interfaces are separate candidate universes.
-4. **Prime and creator structure.** A complete structural grammar is not an
-   arithmetic coverage theorem. Birth fibers are not scalar representatives;
-   W7 and the two63 creator orphans are inherited hostile examples.
-5. **Independent verification.** Every promoted result needs a separate
-   argument or implementation, explicit computational universe, hostile
-   controls, and normal/optimized replay. Finite coverage remains finite.
+- **Common full interface:** for every k>=0, the k+1 counts D_k-2j,
+  0<=j<=k, occur on strong tournaments with 12k+13 vertices, where
+  D_k=(245051264*4096^k+1602510*k+1118023)/24843.
+  The saturated deletion core has h=45 and gcd(h,q)=45. Its count is fixed,
+  rather than a growing product of repeated nontrivial cores.
+- **Smaller scalar witnesses:** deleting the protective flanks gives strong
+  tournaments on 12k+9 vertices with counts Z_k-2j, where
+  Z_k=(13617152*4096^k+1602510*k+717259)/24843.
+  The first upper endpoints are 577, 2245227 and 9196067477.
+  This smaller family does **not** have one full rooted interface: its last
+  witness changes the root-ending coordinate by 14.
 
-## Fresh corrections applied to the research plan
+The proof is a finite exact twelve-bit word identity plus an all-order
+context argument, not an extrapolation from finite k. The original 1188-bit
+unit-loop construction remains valid but is less efficient.
 
-The latest S86 audit (THM-4940, MISTAKE-739) and THM-4930 correction
-(MISTAKE-738) were read before starting new derivations. Session229's
-MISTAKE-736 separates core unsaturation from the scalar unit gap and from
-unsaturation after closure. MISTAKE-737 separates count existence, birth
-optimization and structural generation, and credits earlier directed-cut
-and one-back-arc calculus. No original result is claimed in this checkpoint.
+[Full-interface proof](fibers/SHORT_INTERVALS.md) ·
+[Independent audit](fiber_audit/SHORT12_THEOREM_AUDIT.md) ·
+[Smaller-witness proof](rerooted/PROOF.md) ·
+[Independent physical audit](rerooted_audit/AUDIT.md).
 
-## Workflow
+## What this does and does not solve
 
-Parallel complementary construction rounds will be followed by independent
-critical audits and nonforce mainline checkpoints. Exact scripts and proofs
-will be added as they become ready. A finite computation, gcd-one family or
-state-membership algorithm alone will not be described as completing the
-conjecture.
+It closes the earlier missing **unbounded consecutive repair width** mechanism.
+It does not place an interval over an arbitrary target. The displayed
+baselines grow exponentially while widths grow linearly.
 
-## Audited checkpoint 2: two-sided physical descent
+The final synthesis makes that gap precise:
 
-For a proper one-arc join of actual rooted triples (h,e,u), (k,f,v),
+1. [Exact selectors](placement/PROOF.md) enumerate every singleton-context
+   placement of the protected family under explicit target-dependent bounds.
+2. [Exterior rerooting](rerooted/PROOF.md) shows that common grafts confined
+   to the closing root and its exterior suffix multiply interval spacing by
+   the suffix Hamilton count. For a nontrivial unit window, this gives only
+   existing transitive singleton padding. Protected-core grafts and other
+   operations remain outside that obstruction.
+3. [Absorption](bare_coverage/PROOF.md) proves that every binary-context
+   placement of every bare moving interval is already a k=0 binary-context
+   placement around the same eight-vertex core. Increasing k organizes nearby
+   witnesses but adds no occupied targets to that complete context language.
+4. The **complete target-bounded census of this fixed-core language** attains
+   75,076 positive odd targets through 10^7 and 907,984 through 10^8, out of
+   5,000,000 and 50,000,000 possible odds. These are construction-specific
+   omissions, not missing tournament counts or an asymptotic density theorem.
+   The largest internal gap has 854 absent odds between attained 987933 and
+   989643. A separate transfer-tree implementation reproduces the entire union
+   byte-for-byte, not just its size.
 
-    N = hk - ef + uv,
-    h,k <= floor((2N-1)/3) < N,
-    uv <= N-1.
+[Coverage audit](bare_coverage_audit/AUDIT.md). The exact remaining obligation
+is a baseline selector, a more powerful core/interface family, or a different
+operation that reaches every admissible target. Gcd-one, residue coverage,
+large intervals and terminating inverses do not supply that obligation.
 
-An exact finite divisor inverse uses the inherited physical-state oracle, so
-no numerical cone point is admitted without a graph. Prime representations
-normalize to strong outputs. This is a two-sided synthesis of inherited
-counting, endpoint and membership mechanisms, not a new count formula or
-coverage theorem. The two endpoint/response triples cannot be replaced by
-scalar counts alone.
+## Other audited outcomes
 
-[Proof](descent/PROOF.md) · [Independent audit](descent_audit/AUDIT.md).
-Both independent and producer implementations check all 1,207,801 pairs of
-rooted labelled tournaments through order five; 5,625 smaller literal joins
-are counted directly. The audit additionally checks strongness, prime
-normalization and primitive interfaces. The enormous unrestricted membership
-oracle is proved mathematically, not computationally exhausted.
+- **Physical descent:** [two-sided join inverse](descent/PROOF.md) and
+  [equality refinement](descent/ROUND2.md). For a proper join,
+  N=hk-ef+uv, h,k<=floor((2N-1)/3)<N and uv<=N-1. Sole-exit analysis sharpens
+  the bound and classifies the equality cases. The inverse retains actual
+  physical states; the full membership oracle is proved, not exhaustively run.
+  [Audits](descent_audit/AUDIT.md), [round two](descent_audit/ROUND2_AUDIT.md).
+- **Near-dyadic twins:** [an infinite optimally affordable source class](dyadic/PROOF.md).
+  For m=17+84t, P=(2^m-3672)/5096 and c=3672P+323f(P)+2539, every k>=m+1
+  has strong witnesses for 2^k-c and 2^k-c-2 on k-3 vertices. The source
+  slope 2^m is minimal within the inherited positive-zero-tail dyadic route.
+  This is width two, not coverage. [Audit](dyadic_audit/AUDIT.md).
+- **Source arithmetic:** a [one-candidate-per-cylinder inverse](source/PROOF.md)
+  for the inherited 2,732-label bank, and [arbitrary-context two-clock rigidity](source/ROUND2/PROOF.md).
+  The positive centered-palindrome construction and cylinder strategy are
+  inherited; their exact coordinate and decoder refinements do not establish
+  occupancy. [Audits](source_audit/REVIEW.md), [round two](source_audit/ROUND2_REVIEW.md).
+- **Sparse constructions:** [an explicit sparse-back-arc kernel](ribbon/REPORT.md),
+  an all-order spectator obstruction, and precisely finite ribbon spectral
+  exclusions. The qualitative fixed-budget sparsity mechanism is inherited.
+  [Audit](ribbon_audit/AUDIT.md).
+- **Carrier scope:** [independent minimality/diameter audit](fiber_audit/MINIMALITY_PLACEMENT_AUDIT.md).
+  Twelve is the minimum unit-loop length in this particular moving mechanism
+  with physical cores of order at most nine. For fixed h,q and m singleton
+  positions, equal-interface scalar diameter is at most
+  m(q+2h-2)+q+2h. Neither is a global minimum or all-core obstruction.
 
-The frozen audit input manifest describes the submitted candidate header.
-Only its status and audit link were changed for publication, after PASS.
-Subsequent construction rounds and independent audits remain active.
+## Verification and reproducibility
 
-## Audited checkpoint 3: growing consecutive-odd intervals
+The packet retains producer and independent proofs, exact witnesses, sources,
+receipts, hostile controls, and normal/optimized comparisons. Major independent
+checks include all 1,207,801 pairs of rooted labelled tournaments through order
+five; every labelled tournament through order six for refined descent;
+complete class/cut censuses through order nine; 35,567 tested block occurrences in the declared finite ribbon
+universes; and full-subset DP for both 25-vertex named-port witnesses.
 
-**PROVED.** For every k >= 0, a single physical interface supports the k+1
-consecutive odd counts D_k, D_k-2, ..., D_k-2k, where
+The order-nine fiber census has 191,536 classes and 193,541,720 nonempty erased
+interfaces. Independent canonicalization/orbit mass and a separate sorted-record
+replay certify its scope. The fixed-core coverage union has SHA-256
+871cca7430a860219c3658c8672a18728cbecd01989f28e0ad3af4431bb99c77
+in the documented 6,250,000-byte encoding.
 
-    D_k = (245051264 * 4096^k + 1602510*k + 1118023) / 24843.
+[Reproduction instructions](REPRODUCE.md) separate compact checks, the large
+physical subset checks, complete discovery censuses and generated artifacts.
+Large class lists, union bitsets and binaries are regenerable and not committed.
+Checker predicates remain active under Python -O; deliberate-failure controls
+cover the repaired gates. MISTAKE-741 records the prepublication corrections.
+The recorded preregistration is not claimed as independently timestamp-certified.
 
-All witnesses are strong tournaments on 12k+13 vertices. The construction
-moves one eight-vertex core through two fixed twelve-bit singleton words;
-it does not repeat nontrivial cores. The common deletion core is saturated
-(h=45 and gcd(h,q)=45), which is explicitly allowed here. The exact local
-word identity and context law prove every k. Independent literal graph,
-seven-coordinate and six-state path-cover checks agree. The first baselines
-are 9909 and 40403039.
+[Research synthesis and next obligations](SYNTHESIS.md).
 
-[Compact theorem](fibers/SHORT_INTERVALS.md) ·
-[Standalone independent checker](fiber_audit/short12_audit.py).
+## Inheritance and concurrent work
 
-This supplies unbounded consecutive repair width, the mechanism missing
-from the earlier fixed-width fiber experiments. It does **not** select a
-baseline over every target: these displayed intervals are separated by
-exponential gaps. Universal Chan–Pak completeness remains OPEN.
+The session starts from main 9c48b9ac1e2a9c22b0814686c76e3358ad56051d and
+builds on Sessions228–230, the older one-arc/F2 bank, Session217 cylinder
+inversion, Session220's selector obstruction, and the earlier source-cost and
+centered-fan packets. Counting identities, finite coverage cutoffs and classical
+inputs are credited in each proof. No new unrestricted coverage cutoff is claimed.
 
-Also audited in this checkpoint:
-
-- [Sharper physical descent](descent/ROUND2.md): sole-exit zero-defect
-  classification, equality cases and an improved two-sided descent bound.
-  The independent census checks every labelled tournament through order six.
-- [Sparse-budget and ribbon results](ribbon/REPORT.md): an explicit
-  cutwidth-uniform sparse-back-arc kernel, all-order spectator obstruction,
-  and a precisely finite repeat-block spectral exclusion. The qualitative
-  bounded-budget sparsity mechanism is inherited, not new.
-
-Further arithmetic and target-placement rounds continue. Earlier proof
-candidates retained below their audited replacements are provenance, not
-claims of a complete proof.
-
-## Audited arithmetic and near-dyadic companions
-
-- [Near-dyadic twins](dyadic/PROOF.md): for every t >= 0, set m=17+84t,
-  P=(2^m-3672)/5096 and c=3672P+323f(P)+2539. Strong tournaments realize
-  2^k-c and 2^k-c-2 for every k >= m+1, on k-3 vertices. Their source
-  slope 2^m is optimal within the inherited positive-zero-tail dyadic route.
-  At t=0 the deficits are 98861 and 98863. The independent audit proves
-  the exact period, entry cost and limiting deficit ratio. Width remains two.
-- [Source inverse](source/PROOF.md): a rigorous one-candidate-per-cylinder
-  inverse for the inherited 2,732-label physical bank. Numerical running time
-  is O(sqrt(N) log N) for the fixed bank, not polynomial in the bit length.
-  This sharpens an inherited selection method but does not prove occupancy.
-- [Two-clock rigidity](source/ROUND2/PROOF.md): an all-context obstruction for
-  the specified equal-rate repeated-bit source model, with boundary and shift
-  cases included. The positive centered-palindrome family is inherited;
-  exact halfword coordinates and its square-root decoder are refinements.
-
-Independent reports: [dyadic](dyadic_audit/AUDIT.md),
-[source inverse](source_audit/REVIEW.md), and
-[two-clock analysis](source_audit/ROUND2_REVIEW.md).
-
-## Audited exact placement selector and graft boundary
-
-[Placement proof](placement/PROOF.md) and [independent audit](placement_audit/AUDIT.md)
-give a complete finite selector for this interval family with arbitrary
-singleton prefix/suffix contexts. Any successful target N satisfies
-5760*4096^k*2^m <= N-45, where m is the extra padding length. The search
-returns actual graphs, but has not been shown to accept every target.
-
-At the closing root, the interval is a pure-D four-state fiber. Iterating
-arbitrary grafts there produces spacing 2H_*, where H_* is the product of
-gadget Hamilton counts. For a nontrivial window, unit spacing forces every
-gadget to be transitive and yields only existing zero-suffix placements.
-The k=0 singleton boundary is explicitly excluded from that necessity claim.
-Rerooting and other non-ordinal changes remain possible escape routes.
-
-The main growing-width theorem is now routed as
-[THM-4960](../../../01-canon/theorems/THM-4960-twelve-bit-moving-core-consecutive-odd-intervals.md).
-Refinements to minimal loop length, quantitative diameter and alternative
-root choices are still being audited; their local files keep their status.
-
-The later [minimality and diameter audit](fiber_audit/MINIMALITY_PLACEMENT_AUDIT.md)
-now passes. Twelve is the minimum unit-loop length for this specific moving
-mechanism with physical cores of order at most nine. This is not a globally
-shortest interval-constructor claim. For any fixed-(h,q) one-core bank with m
-singleton positions, its equal-interface scalar diameter is at most
-m(q+2h-2)+q+2h. The common baseline-selection problem remains open.
+Concurrent S87 and audited ternary-ribbon work were preserved through main
+37f7d62b3f636807d8d67601edddc3cf62587804. Their base-three packing counts are
+not raw Hamilton counts, and were not used as binary-completeness evidence.
+The verified earlier checkpoints are 41329b268890302e9770212485777ada562547aa,
+6092b657764d41f2428e088c5426368744ee9ccd,
+b38a6a7d891eb699c9007f13925b27700b1cfb50 and
+30127fb6e839b84eea01c78b30b1c526aae3694c.

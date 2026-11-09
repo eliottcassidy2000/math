@@ -1,0 +1,63 @@
+{
+  "method": "integer prefix DP and pruned suffix transfer tree; no producer imports",
+  "cap": 100000000,
+  "prefix_bound": 122248,
+  "tree_visits": 2453041,
+  "representations_k0": 916809,
+  "count_le_1e7": 75076,
+  "count_le_1e8": 907984,
+  "largest_internal_gaps": [
+    [
+      1708,
+      987933,
+      989643
+    ],
+    [
+      1508,
+      77196595,
+      77198105
+    ],
+    [
+      1476,
+      2942299,
+      2943777
+    ],
+    [
+      1472,
+      45769299,
+      45770773
+    ],
+    [
+      1434,
+      97301033,
+      97302469
+    ],
+    [
+      1390,
+      60901779,
+      60903171
+    ],
+    [
+      1378,
+      1925639,
+      1927019
+    ],
+    [
+      1310,
+      41284053,
+      41285365
+    ],
+    [
+      1310,
+      568311,
+      569623
+    ],
+    [
+      1306,
+      28434401,
+      28435709
+    ]
+  ],
+  "bitset_encoding": "LSB first; bit floor(n/2) for positive odd n; byte length 6250000",
+  "bitset_sha256": "871cca7430a860219c3658c8672a18728cbecd01989f28e0ad3af4431bb99c77"
+}

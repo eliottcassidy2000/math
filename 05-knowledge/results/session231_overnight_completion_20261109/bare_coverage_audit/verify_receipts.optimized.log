@@ -1,0 +1,18 @@
+{
+  "all_receipt_witnesses_verified": 180,
+  "k1_witnesses_verified": 160,
+  "core_state": [
+    45,
+    1440,
+    878,
+    577,
+    332,
+    25,
+    14
+  ],
+  "bare_formula_through_k": 3,
+  "endpoint_controls": "PASS",
+  "absorption": "PASS",
+  "producer_normal_optimized_identical": true,
+  "sha256": "871cca7430a860219c3658c8672a18728cbecd01989f28e0ad3af4431bb99c77"
+}

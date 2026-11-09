@@ -1,0 +1,6 @@
+{
+  "cap": 100000000,
+  "encoding": "LSB-first bit floor(n/2) for attained positive odd n <= cap; zero otherwise",
+  "bytes": 6250000,
+  "sha256": "871cca7430a860219c3658c8672a18728cbecd01989f28e0ad3af4431bb99c77"
+}

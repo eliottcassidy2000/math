@@ -5,7 +5,9 @@ status: >
   PROVED, independently audited: for every integer k >= 0, one physical
   deletion interface supports all k+1 consecutive odd counts D_k-2j,
   0 <= j <= k, where D_k=(245051264*4096^k+1602510*k+1118023)/24843.
-  Every witness is strong and has 12k+13 vertices. The proof uses an exact
+  These full-interface witnesses are strong and have 12k+13 vertices. A later
+  independently audited deletion refinement gives strong scalar interval
+  witnesses on 12k+9 vertices, but not a common full interface. The proof uses an exact
   twelve-bit word identity, not finite-k extrapolation. The core is saturated,
   with h=45 and gcd(h,q)=45. Unrestricted Chan-Pak completeness and arbitrary
   target placement remain OPEN. No literature-priority or globally shortest
@@ -102,3 +104,30 @@ The unpadded baselines grow exponentially while width is only 2k. No overlap
 or all-target selection theorem is supplied. Chan-Pak completeness remains
 open; see the Session231 packet for the exact restricted-language selector
 and the obstruction to merely iterating grafts at the same closing root.
+
+
+## Audited smaller scalar witnesses
+
+The later Session231 `rerooted/PROOF.md`, independently verified in
+`rerooted_audit/AUDIT.md`, strips the four protective singleton/closure
+vertices. Take B_(k,j)=X^j => C => Y^(k-j) and add just the marked apex r.
+For all k>=0, 0<=j<=k, these graphs are strong on 12k+9 vertices and have
+counts Z_k-2j, where
+
+    Z_k=(13617152*4096^k+1602510*k+717259)/24843,
+    Z_0=577,
+    Z_(k+1)=4096*Z_k-264150*k-118165.
+
+The first three upper endpoints are 577, 2245227 and 9196067477. The
+shared bare A coordinate is A_B=878*4096^k+171630*J_k. Its rooted state is
+
+    (D,E,U,d)=(Z_k-2j,45-e_j,A_B+45,45),
+    e_j=0 for j<k, and e_k=14.
+
+Thus this smaller family is not a common full rooted-state fiber: the last
+witness changes E. The original 12k+13 family retains that stronger interface
+property. Both conclusions are all-order, and neither selects arbitrary
+targets. Strongness of the bare graphs uses the actual mixed cut and strong
+core C at an empty-word endpoint, and X's first selected / Y's last
+unselected bits otherwise. The independent audit checks the finite word
+identity and directly counts the physical 9- and 21-vertex bare controls.

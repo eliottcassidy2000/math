@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "executable_assert_nodes": 0,
+  "false_gate_tests": {
+    "audit.py": {
+      "normal_exit": 1,
+      "optimized_exit": 1
+    },
+    "controls.py": {
+      "normal_exit": 1,
+      "optimized_exit": 1
+    },
+    "verify_receipts.py": {
+      "normal_exit": 1,
+      "optimized_exit": 1
+    }
+  },
+  "normal_optimized_outputs_identical": true,
+  "original_result_and_controls_receipts_unchanged": true,
+  "union_byte_identical_to_producer": true,
+  "published_sibling_path_test": "PASS",
+  "verify_stdout_single_json": "PASS"
+}

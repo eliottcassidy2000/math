@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/07d5532f2fce/session231-bare-coverage-audit/controls.py", line 8, in <module>
+    check(False, "deliberate-false gate sentinel")
+  File "/workspace/scratch/07d5532f2fce/session231-bare-coverage-audit/controls.py", line 5, in check
+    raise RuntimeError(message)
+RuntimeError: deliberate-false gate sentinel

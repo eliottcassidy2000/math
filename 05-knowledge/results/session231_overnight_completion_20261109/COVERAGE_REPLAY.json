@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "normal_and_optimized": true,
+  "union_bytes": 6250000,
+  "union_sha256": "871cca7430a860219c3658c8672a18728cbecd01989f28e0ad3af4431bb99c77",
+  "checks": [
+    {
+      "script": "bare_coverage/census.py",
+      "status": "PASS",
+      "stdout_sha256": "3eaf4981b844933098ce461008f11920cafdbd9a350e613ab5fea81784684aee"
+    },
+    {
+      "script": "bare_coverage_audit/audit.py",
+      "status": "PASS",
+      "stdout_sha256": "6163153b797de50206d147c5a89fe5146874f6625f6aeed0b2fcb2e9eb5f64cb"
+    },
+    {
+      "script": "bare_coverage_audit/controls.py",
+      "status": "PASS",
+      "stdout_sha256": "f263a9ec833a1f2dc45fde47fdc651c5da6158d17bb3e52055a5578ff1c49060"
+    },
+    {
+      "script": "bare_coverage_audit/verify_receipts.py",
+      "status": "PASS",
+      "stdout_sha256": "e8b5c4a39881dedf1ed81dc75844783dbadccc3e39c0565e06d9c98375550a96"
+    }
+  ],
+  "scope": "Complete target-bounded fixed-core singleton-context language only."
+}

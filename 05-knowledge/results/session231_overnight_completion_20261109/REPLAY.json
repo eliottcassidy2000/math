@@ -1,0 +1,207 @@
+{
+  "status": "PASS",
+  "cases": 33,
+  "normal_and_optimized": true,
+  "full_physical": false,
+  "scope": "Exact compact receipts; large census regeneration is documented separately.",
+  "checks": [
+    {
+      "script": "descent/verify.py",
+      "receipt": "descent/CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "33c187f25ded80a71cb2ff979b619d53e06904bfeaf82e0d405c46c32ccb0b8e"
+    },
+    {
+      "script": "descent_audit/check.py",
+      "receipt": "descent_audit/CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "e5c9c0413903c830da52753af0017eec6cb2a470ecad0abc981e3c55138d2f59"
+    },
+    {
+      "script": "descent/round2_verify.py",
+      "receipt": "descent/ROUND2_CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "fd436724ef0c650b5b2e712de8d34af350fc600c3a98b9d9faa817c710b6381e"
+    },
+    {
+      "script": "descent_audit/round2_check.py",
+      "receipt": "descent_audit/ROUND2_CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "e2403da4e2b83bb526dd79579adfceda1c306adc437ec521e707a94b12990e52"
+    },
+    {
+      "script": "fibers/verify.py",
+      "receipt": "fibers/CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "e7518b933703c830da6c01f40d230e1b98b6a9bbfa25dbc47bd79977af239ca5"
+    },
+    {
+      "script": "fibers/verify_repairs.py",
+      "receipt": "fibers/REPAIRS.json",
+      "status": "PASS",
+      "stdout_sha256": "fd938a2bd97cf325aa1b81e88a244b539e63a810f0200a72960b5562e98470d6"
+    },
+    {
+      "script": "fibers/verify_family.py",
+      "receipt": "fibers/FAMILY_CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "21c1db2fe24df4d394714051b2f0c4fb2c9cae356ffb091a95f6d955bd483573"
+    },
+    {
+      "script": "fibers/verify_unit_family.py",
+      "receipt": "fibers/UNIT_FAMILY_CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "d2fddef283ff5b08aa19ecbe7b1411eb4a63c0c989c49030a67602010676d3c6"
+    },
+    {
+      "script": "fibers/verify_short12_unit.py",
+      "receipt": "fibers/SHORT12_CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "909c2075acb000e6d45baf000cbfac95d875147146539f56fc2621edf73b7d7f"
+    },
+    {
+      "script": "fibers/verify_short12_independent.py",
+      "receipt": "fibers/SHORT12_INDEPENDENT.json",
+      "status": "PASS",
+      "stdout_sha256": "c77033be200c24d04d3abbdd7b9c0bd01e0ed3f4f5cea995dcd21b32064fe8e2"
+    },
+    {
+      "script": "fibers/baseline_and_gcd.py",
+      "receipt": "fibers/BASELINE_GCD.json",
+      "status": "PASS",
+      "stdout_sha256": "f0a6f7e86a6a007f367a6398a4f3df9fdb56c6f2133ed01b3ccab899545bd6ce"
+    },
+    {
+      "script": "fibers/verify_contexts.py",
+      "receipt": "fibers/CONTEXT_CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "0d394ed596d00aeff2fe5edc107d1ecb556f8c0e2bafcaa05bf1dcdc547d06f9"
+    },
+    {
+      "script": "fibers/check_shorter_loops.py",
+      "receipt": "fibers/SHORTER_LOOP_CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "2e584a547642119d254a3b466d98a3fcbb096a5080801f40372f6e4b0abf36ad"
+    },
+    {
+      "script": "fiber_audit/unit_audit.py",
+      "receipt": "fiber_audit/UNIT_AUDIT.json",
+      "status": "PASS",
+      "stdout_sha256": "b4277e92a0a77ac9f7f0c928b2622b51e886e8d44142b6f3b92ca890c0408c46"
+    },
+    {
+      "script": "fiber_audit/short12_audit.py",
+      "receipt": "fiber_audit/SHORT12_AUDIT.json",
+      "status": "PASS",
+      "stdout_sha256": "ef4a9bb14ad68ec920bf84a4773cae98271aa8856001d0dafe730f4b475262b3"
+    },
+    {
+      "script": "fiber_audit/minimal_walks.py",
+      "receipt": "fiber_audit/MINIMAL_WALKS.json",
+      "status": "PASS",
+      "stdout_sha256": "8e35d08ea663ff2754f9c19e05830be856d30bc5585b6b0e80b93af3fd4de701"
+    },
+    {
+      "script": "fiber_audit/placement_audit.py",
+      "receipt": "fiber_audit/PLACEMENT_AUDIT.json",
+      "status": "PASS",
+      "stdout_sha256": "9c946bdb20c6289adb0bc42780fda8f3493ef957233cb1231845f1d64151afde"
+    },
+    {
+      "script": "fiber_audit/diameter_identity.py",
+      "receipt": "fiber_audit/DIAMETER_IDENTITY.json",
+      "status": "PASS",
+      "stdout_sha256": "ffe53c6edaa32e486edadd6ba1009357c63fa98ba6692d777d1a6433b2b8bad4"
+    },
+    {
+      "script": "source/verify.py",
+      "receipt": "source/CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "ccb18206c012c1026f03a0e60d405670da06fa5f1ed7e37d27340cced7b204ff"
+    },
+    {
+      "script": "source_audit/independent.py",
+      "receipt": "source_audit/RECEIPT.json",
+      "status": "PASS",
+      "stdout_sha256": "45db1d7fdf55343fe4ad2b6144bba716e80c3d0b31e7e473bedbdd658e117559"
+    },
+    {
+      "script": "source/ROUND2/verify.py",
+      "receipt": "source/ROUND2/CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "2051ebfe2c23e495cc20d64ca5c9b85152d1f9eb9b1721d2b53a764d1ef5055a"
+    },
+    {
+      "script": "source_audit/round2_independent.py",
+      "receipt": "source_audit/ROUND2_RECEIPT.json",
+      "status": "PASS",
+      "stdout_sha256": "2630acee5ff9ad650ecfb69eb5a3695cb1841c231045ddf2d3d2b1c36dada933"
+    },
+    {
+      "script": "dyadic/verify.py",
+      "receipt": "dyadic/CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "7d9d35fab6919c7445d9d0a47517d0aa46c4bfc6182ca401de67553aaa55395f"
+    },
+    {
+      "script": "dyadic_audit/check.py",
+      "receipt": "dyadic_audit/CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "1d86dafd57d6a06843b714b134f7d350f7bfc095e3dff78ca67ee2d432d4e459"
+    },
+    {
+      "script": "ribbon/verify.py",
+      "receipt": "ribbon/VERIFICATION.json",
+      "status": "PASS",
+      "stdout_sha256": "d32f05d3a4e6328f20373fcb4dfad4f17d5278bd867800e22040f841db043be6"
+    },
+    {
+      "script": "ribbon/parity_probe.py",
+      "receipt": "ribbon/PARITY_PROBE.json",
+      "status": "PASS",
+      "stdout_sha256": "6deb7ab436190c47ca7458a92c8d6b4893842103b9cb17cf016ae44aa8db8e85"
+    },
+    {
+      "script": "ribbon_audit/check.py",
+      "receipt": "ribbon_audit/RESULTS.jsonl",
+      "status": "PASS",
+      "stdout_sha256": "b860731725d2c942e9ef46c7a22832441d378ecbe7d73d141dc461a5d0c7a60f"
+    },
+    {
+      "script": "ribbon_audit/check_kernel.py",
+      "receipt": "ribbon_audit/KERNEL.json",
+      "status": "PASS",
+      "stdout_sha256": "df0cb7086872c0984fd3c0869e7072c895c62dac8d5f51c3847e97fd66d4d3e2"
+    },
+    {
+      "script": "ribbon_audit/check_active_gates.py",
+      "receipt": "ribbon_audit/GATES.json",
+      "status": "PASS",
+      "stdout_sha256": "df362b21e8f82ff7a647ef1d43ac5b211fae7bcda595297991b187b519b59669"
+    },
+    {
+      "script": "placement/verify.py",
+      "receipt": "placement/CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "7435c6c636b2c3355276619d3b71ead8d67d28353762afd17e429673667d9fa4"
+    },
+    {
+      "script": "placement/check_selector.py",
+      "receipt": "placement/SELECTOR_CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "5a55fde763c3a7ce2c2bfcde9673c3ed90905b0448efab5d7340aa8c050ab4c9"
+    },
+    {
+      "script": "placement_audit/audit.py",
+      "receipt": "placement_audit/CHECK.json",
+      "status": "PASS",
+      "stdout_sha256": "d1b2913e710cb0cf2dcb6e3cb47ecf710c383bbe6412959090b57eca1b3306f1"
+    },
+    {
+      "script": "rerooted/verify.py",
+      "receipt": "rerooted/VERIFY.json",
+      "status": "PASS",
+      "stdout_sha256": "df036494c46e7fde4f8c8fe8f832b678cc29221aa7b919b4b531f95adf57055a"
+    }
+  ]
+}

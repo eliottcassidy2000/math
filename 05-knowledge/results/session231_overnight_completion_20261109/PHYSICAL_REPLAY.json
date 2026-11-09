@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "receipt": "rerooted_audit/CHECK.json",
+  "sha256": "6e85957c56fad4173f9078b4f2052d00bfb8d8c95a5712b8d019f3de4f67d569",
+  "method": "Root replay of independently implemented full-subset physical audit with checked integer arithmetic",
+  "max_vertices": 25
+}
