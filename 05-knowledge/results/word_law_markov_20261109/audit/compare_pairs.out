@@ -1,0 +1,5 @@
+auditor DP census = session census (missing pairs), n = 6..40: True
+admissible-word and admissible-palindrome counts identical, n = 6..40: True
+exhaustive census = DP census, n = 6..28: True
+pairs missing for admissible words = pairs missing for ALL words (admissibility costs nothing), n = 6..28: True
+gap law (exactly the three families) fails at n in [] (range 6..40)

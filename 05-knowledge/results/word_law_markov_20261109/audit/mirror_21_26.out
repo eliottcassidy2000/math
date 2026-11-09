@@ -1,0 +1,27 @@
+n=21 k=7 blue (7, 7): w = 0100100000000010010, flipped mirror tiles: (0,20) (7,13) (8,12); nu(t) = 7, nu(t+1) = 7
+n=21 k=7: family members NOT found in this structured family:
+n=22 k=7 blue (1, 7): w = 00000000000000000000, flipped mirror tiles: (0,21); nu(t) = 1, nu(t+1) = 7
+n=22 k=7 blue (3, 7): w = 00000000000000000000, flipped mirror tiles: (0,21) (1,20) (2,19); nu(t) = 3, nu(t+1) = 7
+n=22 k=7 blue (5, 7): w = 01000000000000000010, flipped mirror tiles: (0,21) (4,17) (5,16); nu(t) = 5, nu(t+1) = 7
+n=22 k=7 blue (3, 5): w = 11100000000000000111, flipped mirror tiles: (4,17); nu(t) = 3, nu(t+1) = 5
+n=22 k=7 blue (5, 5): w = 11100000000000000111, flipped mirror tiles: (4,17) (5,16) (6,15); nu(t) = 5, nu(t+1) = 5
+n=22 k=7 blue (7, 7): w = 01001000000000010010, flipped mirror tiles: (0,21) (7,14) (8,13); nu(t) = 7, nu(t+1) = 7
+n=22 k=7: family members NOT found in this structured family:
+n=23 k=7: family members NOT found in this structured family:
+n=24 k=8 blue (3, 7): w = 1000000000000000000001, flipped mirror tiles: (3,20); nu(t) = 3, nu(t+1) = 7
+n=24 k=8 blue (5, 7): w = 1000000000000000000001, flipped mirror tiles: (3,20) (4,19) (5,18); nu(t) = 5, nu(t+1) = 7
+n=24 k=8 blue (7, 7): w = 1001000000000000001001, flipped mirror tiles: (6,17) (7,16) (8,15); nu(t) = 7, nu(t+1) = 7
+n=24 k=8 blue (5, 5): w = 1111000000000000001111, flipped mirror tiles: (6,17); nu(t) = 5, nu(t+1) = 5
+n=24 k=8 blue (8, 8): w = 1001001000000001001001, flipped mirror tiles: (0,23) (9,14) (10,13); nu(t) = 8, nu(t+1) = 8
+n=24 k=8: family members NOT found in this structured family:
+n=25 k=8 blue (8, 8): w = 10010010000000001001001, flipped mirror tiles: (0,24) (9,15) (10,14); nu(t) = 8, nu(t+1) = 8
+n=25 k=8: family members NOT found in this structured family:
+n=26 k=8 blue (3, 7): w = 110000000000000000000011, flipped mirror tiles: (3,22); nu(t) = 3, nu(t+1) = 7
+n=26 k=8 blue (5, 7): w = 110000000000000000000011, flipped mirror tiles: (3,22) (4,21) (5,20); nu(t) = 5, nu(t+1) = 7
+n=26 k=8 blue (7, 7): w = 110100000000000000001011, flipped mirror tiles: (6,19) (7,18) (8,17); nu(t) = 7, nu(t+1) = 7
+n=26 k=8 blue (5, 5): w = 111110000000000000011111, flipped mirror tiles: (6,19); nu(t) = 5, nu(t+1) = 5
+n=26 k=8: family members NOT found in this structured family:
+
+real	5m28.037s
+user	0m0.000s
+sys	0m0.030s

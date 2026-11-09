@@ -3,14 +3,15 @@ id: THM-5020
 title: "The word law for tight lines holds at every order. In the tiling line metagraph let w be a 0/1 word on the positions 0..n-3 with A = its 1-positions, B = its 0-positions, P = largest 3-separated subset, and R(w) the union of the staircases on the windows [p, q + 2] of its 1-runs [p, q]. (1) Junction lemma: if w has J junctions (an isolated letter between two runs of the other letter of length >= 2, i.e. a factor 11011 or 00100 centred on it) then P(A) + P(B) >= ceil((n - 2 + 2J)/3); so a tight colouring has at most one junction, and only at n = 0 (mod 3). (2) For every word, nu(R(w) + 1) = P(B). (3) If w avoids 11011, nu(R(w)) = P(A). (4) Hence at every n the triple words of tight lines (nu(t) + nu(t+1) = floor(n/3)) are exactly the tight colourings, realised by R(w) or by the line of R(complement w); the blue tight lines are exactly the palindromic ones. This proves HYP-9540 (A) and (C) at n = 3k, the open case. (5) Central-pair lemma: in a palindrome of even length, P(X) odd forces both central positions into X; so at even n no blue tight line has both packing numbers odd."
 status: >
   PROVED: (1)-(5), for all n.
+  In (6) these are PROVED: the exclusion of the three families; the nested mirror lines; black (k, k) at n = 3k.
+  These are FINITE-EXACT: the census of admissible words for 6 <= n <= 40, and the remaining members of family
+  (iii) for n <= 26.
   FINITE-EXACT checks, independent of the proofs:
-  - (1)-(3) on every word for n <= 15;
-  - (4) on every tight colouring for n <= 24;
-  - (5) on every palindrome of even length <= 24.
-  The finite census of admissible words in (6) is also FINITE-EXACT.
-  Pre-registered (PREREGISTRATION.md): Q1, Q2 REFUTED as registered. The run-window words realise every allowed pair
-  of HYP-9540 (B) for 13 <= n <= 40 except black (k, k) at n = 3k, blue (k, k) at n = 0, 1 (mod 3), and blue
-  both-odd non-tight pairs at even n. Q3 is not established.
+  - (1)-(3) on every word for n <= 15 (the audit: n <= 22, 2,097,150 words);
+  - (4) on every tight colouring for n <= 24 (the audit: n <= 36);
+  - (5) on every palindrome of even length <= 24 (the audit: <= 32).
+  Pre-registered (PREREGISTRATION.md): Q1, Q2 REFUTED as registered; the run-window family is too small for the
+  three families of (6). Q3 is not established.
   KNOWN and used:
   - THM-4951: the tiling frame, tight lines, (1) "tight lines are read off their words", the staircase lemma, and the
     run-window theorem for words whose runs all have length >= 2. This theorem extends that to every word without the
@@ -18,18 +19,37 @@ status: >
   - Session26: the line bound and its window certificates.
   - THM-554: consecutive triples.
   - THM-4731 (6), THM-337: the staircase T*_n.
-  NEW: the junction lemma; the triangle classifications of R(w) and R(w) + 1 with the certificate argument (2) and
-  the greedy feedback set (3); the word law and blue word law at n = 3k; the central-pair lemma.
-  NOT CLAIMED: HYP-9540 (B) beyond the pairs realised in (6); HYP-9540 (D).
-  AUDIT: PENDING.
+  - For (5):
+    - its n = 3k + 2 case is THM-4951 (3d) (an even palindromic block word has an even number of 1s);
+    - the pattern "blue tight pairs need j even or k odd" was FINITE-EXACT for n <= 26 in the S87 audit
+      (ternary_metagraph_20261109/audit/palindromic_pairs.out);
+    - that audit proved the n = 12 case by listing the palindromic tight colourings.
+  NEW:
+  - the junction lemma;
+  - the triangle classifications of R(w) and R(w) + 1, with the certificate argument (2) and the greedy feedback set
+    (3);
+  - the word law and blue word law at n = 3k;
+  - the central-pair lemma in general;
+  - the exclusion of family (ii) in (6).
+  The explicit lines in (6) are the audit's (m6).
+  NOT CLAIMED: HYP-9540 (B) beyond n = 26; HYP-9540 (D).
+  AUDIT: independent audit PASS WITH CORRECTIONS
+  (05-knowledge/results/word_law_markov_20261109/audit/AUDIT.md).
+  - (1)-(5) are correct, checked line by line and exhaustively with independent code.
+  - Its minors are applied: the Claim cases in (2), the scope of (4), the symmetry wording, the credits, and the
+    feedback-set wording.
+  - Its upgrades (the family (ii) proof, the explicit lines, HYP-9540 (B) for n <= 26) are incorporated.
+  - MISTAKE-745.
 session: opus-2026-11-09-S88
 source: 05-knowledge/results/word_law_markov_20261109/README.md
 related:
   - THM-4951
   - HYP-9540
+  - HYP-9590
   - THM-5021
   - THM-554
   - THM-4731
+  - THM-337
   - THM-5002
 ---
 
@@ -80,7 +100,8 @@ A realisation:
 - otherwise w avoids 00100 by (1), and the line of R(w-bar) has the endpoint R(w-bar) + 1 with triple word w.
 
 The line is blue iff w is a palindrome. This proves HYP-9540 (A) and (C) at n = 3k, the case THM-4951 left open. At
-n != 0 (mod 3) it reproves THM-4951 (3a)-(3f).
+n != 0 (mod 3) it gives a second proof of the word laws (THM-4951 (3f)). It does not reprove the block
+characterisations (3a), (3e), the counts (3c) (see THM-5021 (2)), or the list of blue pairs in (3d).
 
 **(5) Central-pair lemma.** Let w be a palindrome of even length L and X = A or B. If P(X) is odd, then both central
 positions L/2 - 1 and L/2 lie in X. Since they carry the same letter, P(A) and P(B) are not both odd. So:
@@ -89,17 +110,43 @@ positions L/2 - 1 and L/2 lie in X. Since they carry the same letter, P(A) and P
 - no admissible palindromic word realises a both-odd pair at even n.
 
 **(6) Lines with prescribed nu-pairs (consequence of (2), (3)).**
-- Every word w without 11011 gives a line with nu-pair (P(A), P(B)). It is blue iff w is a palindrome. Words without
-  00100 give such lines through their complements.
-- An exact census of these admissible words for 13 <= n <= 40 (pairs_check.out) realises every pair allowed by
-  HYP-9540 (B), except:
-  - black (k, k) at n = 3k;
-  - blue (k, k) at n = 0, 1 (mod 3);
-  - blue non-tight pairs with i and j both odd at even n.
-- The first of these is impossible for words: P(A) = k at n = 3k forces A to contain the unique maximum packing
-  {0, 3, ..., 3k - 3}. The third is (5).
-- Where complete censuses exist, such pairs are realised by other lines: black (3, 3) at n = 9 (THM-4951 (4)); blue
-  (3, 3) and (4, 4) at n = 12 (S87 audit census of all blue lines). There is no complete black census at n >= 10.
+- **Admissible words.** Every word w without 11011 gives a line with nu-pair (P(A), P(B)). It is blue iff w is a
+  palindrome. Words without 00100 give such lines through their complements.
+- **The census.** An exact census of the admissible words for 6 <= n <= 40 (FINITE-EXACT; pairs_check.out,
+  pairs_check_insample.out, confirmed by the audit) realises every pair allowed by HYP-9540 (B), except three
+  families:
+  - (i) black (k, k) at n = 3k;
+  - (ii) blue (k, k) at n = 0, 1 (mod 3);
+  - (iii) blue non-tight pairs with i and j both odd, at even n.
+- **The three families are excluded by proof.**
+  - (i) is impossible for every word: P(A) = k at n = 3k forces A to contain the unique maximum packing
+    {0, 3, ..., 3k - 3}.
+  - (ii) at n = 3k + 1, added after the pre-audit checkpoint; the session's palindrome_kk_check.py and the audit's m5
+    found it independently. The k-packings of [0, 3k - 2] are
+    S_j = {0, 3, ..., 3(j - 1)} u {3j + 1, ..., 3k - 2}, j = 0..k. The only disjoint pair is {S_0, S_k}, and the
+    mirror exchanges them, which no palindrome allows. At n = 3k, (ii) is (i).
+  - (iii) is (5).
+- **Explicit lines for the families.** These are the audit's constructions (m6), checked with exact nu for
+  n = 6..33.
+  - **Nested mirror lines.** Let t_m reverse exactly the mirror tiles (a, n - 1 - a), 0 <= a < m <= k, with n >= 6.
+    - Its backward arcs n - 1 - a -> a are pairwise disjoint and every cycle uses one, so nu(t_m) <= m.
+    - The 3-cycles {a, m + a, n - 1 - a} attain m.
+    - In t_m + 1 no consecutive window tile is forward, since the mirror tiles have length >= 3. So
+      nu(t_m + 1) = k.
+    - So blue (m, k) occurs for every 0 <= m <= k. This gives family (ii), m = k, at every n >= 6, and the members
+      (i, k) of family (iii).
+    - The single tile (0, n - 1) gives blue (1, k) at every n >= 4.
+  - **Black (k, k) at n = 3k >= 6.** Take t_k plus the tile (0, 3).
+    - Every cycle uses a backward arc, and the k + 1 backward arcs contain no k + 1 pairwise disjoint ones (3 -> 0
+      meets n - 1 -> 0 at the vertex 0). So nu <= k.
+    - The 3-cycles {a, x_a, n - 1 - a} (x_a in [k, 2k - 1], x_0 != 3) attain k.
+    - The complement keeps every window {3b, 3b + 1, 3b + 2}.
+    - The tile (0, 3) is not sigma-fixed, so the line is black. This gives family (i).
+  - **The remaining members of (iii).** Both-odd pairs (i, j) with j < k at even n are realised for every n <= 26 by
+    R(w) of a palindrome with at most three mirror tiles flipped (audit, FINITE-EXACT).
+- **Consequence.** With S87's complete censuses, HYP-9540 (B) holds for every n <= 26. HYP-9590 (B) is PROVED for
+  families (i) and (ii) and for the j = k members of (iii), and it is open beyond n = 26 for the j < k members of
+  (iii).
 
 ## Proof
 
@@ -135,7 +182,10 @@ deleted.
   - (T1) {x, x + 1, x + 2} with x in B.
   - (T2) {p - 1, p, c}: p is the start of a 1-run, c lies in its window, c >= p + 2.
   - (T3) {a, q + 2, q + 3}: q is the end of a 1-run [p, q], a lies in [p, q], and q + 3 <= n - 1.
-  - (T4) {a, b, c}: b is the vertex shared by two windows [p'', b] and [b, e'], with a < b < c.
+  - (T4) {a, b, c}: b is the vertex shared by two windows [p'', b] and [b, e'], with a <= b - 2 and c >= b + 2
+    (both steps are window tiles).
+
+  The types are exhaustive and mutually exclusive: b = a + 1 or not, and c = b + 1 or not.
 
 **(2).**
 - **Lower bound.** The T1 triangles at a maximum 3-separated subset of B are disjoint.
@@ -146,7 +196,9 @@ deleted.
   - T4: b - 1, the isolated 0 between the two 1-runs.
 
   In every case x(D) + 1 lies in D.
-- **Claim.** If D and D' are disjoint, then |x(D) - x(D')| >= 3. Suppose x = x(D) < x' = x(D') <= x + 2.
+- **Claim.** If D and D' are disjoint, then |x(D) - x(D')| >= 3.
+  - If x(D) = x(D') = x, both contain x + 1, so they meet.
+  - Otherwise suppose x = x(D) < x' = x(D') <= x + 2.
   - If x' = x + 1: x + 1 is in B, so D is not T2 or T4, where x + 1 is the start of a 1-run. So D is T1 or T3, and
     both contain x + 2 = x' + 1, which lies in D'.
   - If x' = x + 2, and D is T1 or T3: D contains x + 1 and x + 2, and D' contains x + 3.
@@ -154,9 +206,8 @@ deleted.
     - If D' is T3 or T4, its 1-run ends at x + 1 and starts there (x is in B). So the run is {x + 1}, and D' contains
       its member a' = x + 1, or a' in {x + 1, x + 2} for T4.
   - If x' = x + 2 and D is T2 or T4: the 1-run starting at x + 1 has length 1 (x + 2 is in B). So the window is
-    [x + 1, x + 3], and D contains x + 3 or (for T4 with c = x + 2) x + 2.
-    - In the first case D' contains x' + 1 = x + 3.
-    - In the second, every type of D' contains x + 2 or the run member x + 1.
+    [x + 1, x + 3]. In both types (b, c) or (p, c) is a window tile, so c >= x + 3. Hence c = x + 3 = x' + 1, which
+    lies in D'.
 
   So in every case D and D' meet.
 - **Conclusion.** The certificates of disjoint triangles form a 3-separated subset of B. So nu(u) <= P(B).
@@ -199,9 +250,16 @@ deleted.
   0-junction the two 1-windows share a vertex, and the shared-vertex triangles {a, b, c} with a <= b - 3 and
   c >= b + 3 escape the greedy feedback set; 1110111 at n = 9 is the smallest case. The cure is to put the
   staircases on the other colour's runs. The two kinds of junction cannot coexist, so one side is always safe.
-- **Symmetry and asymmetry.** The construction commutes with sigma and with complementation. The one asymmetric
-  choice, which colour carries the windows, is forced by the colour of the junction. A palindromic word can carry a
-  junction only at its centre, so blue lines never need an asymmetric choice.
-- **Packing versus covering.** In (2) a feedback set may not exist. For w = 010 the complement has three
-  pairwise-intersecting 3-cycles with no common vertex (nu = 1 < tau = 2). That is why (2) is proved by
-  certificates (a packing argument), not by a feedback set.
+- **Symmetry and asymmetry.** The construction commutes with sigma: sigma(R(w)) = R(reverse w). It does not commute
+  with complementation: R(complement w) = R(w) + 1 holds only for the two constant words.
+  - That failure is exactly the one asymmetric choice, which colour carries the windows, and the colour of the
+    junction forces it.
+  - A palindromic tight colouring can carry its junction only at the centre. When that central junction is a 0, the
+    complement construction is needed even for a blue line, which is still sigma-symmetric. This happens for 1, 2, 4,
+    8, 16 palindromic tight colourings at n = 9, 15, 21, 27, 33 (audit).
+- **Packing versus covering.** In (2) a feedback set of size P(B) need not exist. For w = 010 the complement has the
+  3-cycles {0,1,2}, {0,1,3}, {1,3,4} and {2,3,4}. They pairwise intersect but have no common vertex, so
+  nu = 1 < tau = 2. That is why (2) is proved by certificates (a packing argument), not by a feedback set.
+- **Session233's THM-5002.** It is related but does not overlap. THM-5002 gives a transfer for the odd-cycle packing
+  polynomial of the complementary run-window endpoints when all runs have length >= 2. THM-5020's new content is the
+  case of runs of length 1 (junctions), and THM-5021 counts words.

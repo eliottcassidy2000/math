@@ -23933,6 +23933,10 @@ THM-5002-three-state-transfer-for-bridge-linked-transitive-blocks.md;
   - both-odd pairs are impossible for even palindromes (THM-5020 (5)).
 
   So Q1 and Q2 were bound to fail. The run-window family is too small for these pairs. HYP-9540 (B) is not refuted.
+  - The third family, blue (k, k) at n = 1 (mod 3), is structural too: the k-packings S_j and the mirror exchange of
+    S_0 and S_k (audit m5).
+  - All three families are realised by other lines, nested mirror tiles and (0, 3), which the audit proved (m6).
+  - With these, HYP-9540 (B) holds for every n <= 26.
 - **Repair.**
   - The outcome is appended as REFUTED, without editing the predictions.
   - The structural reasons are proved (THM-5020 (5), (6)).

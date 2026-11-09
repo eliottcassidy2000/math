@@ -63,3 +63,13 @@ Consequences:
   - blue non-tight pairs with i and j both odd at even n.
 - Each such line exists by THM-5020 (L1), (L2) applied to a word found by an exact census.
 - The excepted pairs remain conjectural for n >= 13.
+
+## Label note (appended after the audit; nothing above is edited)
+
+"PROVED for 13 <= n <= 40" in the Consequences above means a FINITE-EXACT census of admissible words, combined with
+the proved lemmas THM-5020 (2), (3). This is how THM-5020 (6) labels it (audit m14). The census also holds on the
+in-sample range, so the gap law holds for every n = 6..40.
+
+The audit then supplied explicit lines for the three families: nested mirror tiles; (0, 3) for black (k, k) at n = 3k.
+These are proved for (k, k), black and blue, and for the blue pairs (i, k) at every n. They are FINITE-EXACT for the
+remaining blue both-odd pairs up to n = 26. With them, HYP-9540 (B) holds for every n <= 26 (THM-5020 (6), HYP-9590).

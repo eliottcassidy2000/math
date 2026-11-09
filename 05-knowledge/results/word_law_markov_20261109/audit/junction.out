@@ -1,0 +1,31 @@
+L=1 (n=3, k=1): words 2; junction-bound violations 0 (max J 0; words with J>0 attaining the bound 0); tight colourings 2 (palindromic 2), with 11011 0, with 00100 0, with both 0
+L=2 (n=4, k=1): words 4; junction-bound violations 0 (max J 0; words with J>0 attaining the bound 0); tight colourings 2 (palindromic 2), with 11011 0, with 00100 0, with both 0
+L=3 (n=5, k=1): words 8; junction-bound violations 0 (max J 0; words with J>0 attaining the bound 0); tight colourings 2 (palindromic 2), with 11011 0, with 00100 0, with both 0
+L=4 (n=6, k=2): words 16; junction-bound violations 0 (max J 0; words with J>0 attaining the bound 0); tight colourings 10 (palindromic 2), with 11011 0, with 00100 0, with both 0
+L=5 (n=7, k=2): words 32; junction-bound violations 0 (max J 1; words with J>0 attaining the bound 2); tight colourings 6 (palindromic 2), with 11011 0, with 00100 0, with both 0
+L=6 (n=8, k=2): words 64; junction-bound violations 0 (max J 1; words with J>0 attaining the bound 4); tight colourings 4 (palindromic 2), with 11011 0, with 00100 0, with both 0
+L=7 (n=9, k=3): words 128; junction-bound violations 0 (max J 1; words with J>0 attaining the bound 2); tight colourings 34 (palindromic 6), with 11011 1, with 00100 1, with both 0
+L=8 (n=10, k=3): words 256; junction-bound violations 0 (max J 2; words with J>0 attaining the bound 24); tight colourings 16 (palindromic 4), with 11011 0, with 00100 0, with both 0
+L=9 (n=11, k=3): words 512; junction-bound violations 0 (max J 2; words with J>0 attaining the bound 28); tight colourings 8 (palindromic 4), with 11011 0, with 00100 0, with both 0
+L=10 (n=12, k=4): words 1024; junction-bound violations 0 (max J 2; words with J>0 attaining the bound 14); tight colourings 100 (palindromic 6), with 11011 4, with 00100 4, with both 0
+L=11 (n=13, k=4): words 2048; junction-bound violations 0 (max J 3; words with J>0 attaining the bound 128); tight colourings 40 (palindromic 4), with 11011 0, with 00100 0, with both 0
+L=12 (n=14, k=4): words 4096; junction-bound violations 0 (max J 3; words with J>0 attaining the bound 150); tight colourings 16 (palindromic 4), with 11011 0, with 00100 0, with both 0
+L=13 (n=15, k=5): words 8192; junction-bound violations 0 (max J 3; words with J>0 attaining the bound 82); tight colourings 272 (palindromic 16), with 11011 12, with 00100 12, with both 0
+L=14 (n=16, k=5): words 16384; junction-bound violations 0 (max J 4; words with J>0 attaining the bound 516); tight colourings 96 (palindromic 8), with 11011 0, with 00100 0, with both 0
+L=15 (n=17, k=5): words 32768; junction-bound violations 0 (max J 4; words with J>0 attaining the bound 670); tight colourings 32 (palindromic 8), with 11011 0, with 00100 0, with both 0
+L=16 (n=18, k=6): words 65536; junction-bound violations 0 (max J 4; words with J>0 attaining the bound 436); tight colourings 704 (palindromic 16), with 11011 32, with 00100 32, with both 0
+L=17 (n=19, k=6): words 131072; junction-bound violations 0 (max J 5; words with J>0 attaining the bound 1826); tight colourings 224 (palindromic 8), with 11011 0, with 00100 0, with both 0
+L=18 (n=20, k=6): words 262144; junction-bound violations 0 (max J 5; words with J>0 attaining the bound 2638); tight colourings 64 (palindromic 8), with 11011 0, with 00100 0, with both 0
+L=19 (n=21, k=7): words 524288; junction-bound violations 0 (max J 5; words with J>0 attaining the bound 2060); tight colourings 1760 (palindromic 40), with 11011 80, with 00100 80, with both 0
+L=20 (n=22, k=7): words 1048576; junction-bound violations 0 (max J 6; words with J>0 attaining the bound 6086); tight colourings 512 (palindromic 16), with 11011 0, with 00100 0, with both 0
+L=21 (n=23, k=7): words 2097152; junction-bound violations 0 (max J 6; words with J>0 attaining the bound 9492); tight colourings 128 (palindromic 16), with 11011 0, with 00100 0, with both 0
+L=22 (n=24, k=8): words 4194304; junction-bound violations 0 (max J 6; words with J>0 attaining the bound 8736); tight colourings 4288 (palindromic 40), with 11011 192, with 00100 192, with both 0
+L=23 (n=25, k=8): words 8388608; junction-bound violations 0 (max J 7; words with J>0 attaining the bound 19818); tight colourings 1152 (palindromic 16), with 11011 0, with 00100 0, with both 0
+L=24 (n=26, k=8): words 16777216; junction-bound violations 0 (max J 7; words with J>0 attaining the bound 32112); tight colourings 256 (palindromic 16), with 11011 0, with 00100 0, with both 0
+L=25 (n=27, k=9): words 33554432; junction-bound violations 0 (max J 7; words with J>0 attaining the bound 33896); tight colourings 10240 (palindromic 96), with 11011 448, with 00100 448, with both 0
+L=26 (n=28, k=9): words 67108864; junction-bound violations 0 (max J 8; words with J>0 attaining the bound 64114); tight colourings 2560 (palindromic 32), with 11011 0, with 00100 0, with both 0
+L=27 (n=29, k=9): words 134217728; junction-bound violations 0 (max J 8; words with J>0 attaining the bound 104384); tight colourings 512 (palindromic 32), with 11011 0, with 00100 0, with both 0
+
+real	0m43.130s
+user	0m0.015s
+sys	0m0.000s

@@ -1,0 +1,39 @@
+n=6 k=2: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=6 k=2: t_k + tile (0,3): black (k, k) = (2, 2)
+n=7 k=2: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=8 k=2: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=9 k=3: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=9 k=3: t_k + tile (0,3): black (k, k) = (3, 3)
+n=10 k=3: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue  [both-odd members (m, k), m odd, realised]
+n=11 k=3: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=12 k=4: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=12 k=4: t_k + tile (0,3): black (k, k) = (4, 4)
+n=13 k=4: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=14 k=4: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=15 k=5: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=15 k=5: t_k + tile (0,3): black (k, k) = (5, 5)
+n=16 k=5: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue  [both-odd members (m, k), m odd, realised]
+n=17 k=5: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=18 k=6: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=18 k=6: t_k + tile (0,3): black (k, k) = (6, 6)
+n=19 k=6: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=20 k=6: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=21 k=7: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=21 k=7: t_k + tile (0,3): black (k, k) = (7, 7)
+n=22 k=7: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue  [both-odd members (m, k), m odd, realised]
+n=23 k=7: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=24 k=8: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=24 k=8: t_k + tile (0,3): black (k, k) = (8, 8)
+n=25 k=8: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=26 k=8: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=27 k=9: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=27 k=9: t_k + tile (0,3): black (k, k) = (9, 9)
+n=28 k=9: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue  [both-odd members (m, k), m odd, realised]
+n=29 k=9: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=30 k=10: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=30 k=10: t_k + tile (0,3): black (k, k) = (10, 10)
+n=31 k=10: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=32 k=10: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=33 k=11: nested mirror lines t_m, m = 0..k: nu-pairs (m, k), all blue
+n=33 k=11: t_k + tile (0,3): black (k, k) = (11, 11)
+[stopped by the auditor during n = 34 (the exact-nu confirmation of the proved construction is slow there); n = 6..33 checked, 0 failures]

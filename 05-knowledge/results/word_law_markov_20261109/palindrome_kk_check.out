@@ -1,0 +1,34 @@
+k = 1, L = 2: k-packings 2, equal to the S_j list: True
+k = 2, L = 5: k-packings 3, equal to the S_j list: True
+k = 3, L = 8: k-packings 4, equal to the S_j list: True
+k = 4, L = 11: k-packings 5, equal to the S_j list: True
+k = 5, L = 14: k-packings 6, equal to the S_j list: True
+k = 6, L = 17: k-packings 7, equal to the S_j list: True
+k = 7, L = 20: k-packings 8, equal to the S_j list: True
+n = 5 (n mod 3 = 2), k = 1: palindromes with P(A) = P(B) = k: 2
+n = 6 (n mod 3 = 0), k = 2: palindromes with P(A) = P(B) = k: 0
+n = 7 (n mod 3 = 1), k = 2: palindromes with P(A) = P(B) = k: 0
+n = 8 (n mod 3 = 2), k = 2: palindromes with P(A) = P(B) = k: 4
+n = 9 (n mod 3 = 0), k = 3: palindromes with P(A) = P(B) = k: 0
+n = 10 (n mod 3 = 1), k = 3: palindromes with P(A) = P(B) = k: 0
+n = 11 (n mod 3 = 2), k = 3: palindromes with P(A) = P(B) = k: 4
+n = 12 (n mod 3 = 0), k = 4: palindromes with P(A) = P(B) = k: 0
+n = 13 (n mod 3 = 1), k = 4: palindromes with P(A) = P(B) = k: 0
+n = 14 (n mod 3 = 2), k = 4: palindromes with P(A) = P(B) = k: 8
+n = 15 (n mod 3 = 0), k = 5: palindromes with P(A) = P(B) = k: 0
+n = 16 (n mod 3 = 1), k = 5: palindromes with P(A) = P(B) = k: 0
+n = 17 (n mod 3 = 2), k = 5: palindromes with P(A) = P(B) = k: 8
+n = 18 (n mod 3 = 0), k = 6: palindromes with P(A) = P(B) = k: 0
+n = 19 (n mod 3 = 1), k = 6: palindromes with P(A) = P(B) = k: 0
+n = 20 (n mod 3 = 2), k = 6: palindromes with P(A) = P(B) = k: 16
+n = 21 (n mod 3 = 0), k = 7: palindromes with P(A) = P(B) = k: 0
+n = 22 (n mod 3 = 1), k = 7: palindromes with P(A) = P(B) = k: 0
+n = 23 (n mod 3 = 2), k = 7: palindromes with P(A) = P(B) = k: 16
+n = 24 (n mod 3 = 0), k = 8: palindromes with P(A) = P(B) = k: 0
+n = 25 (n mod 3 = 1), k = 8: palindromes with P(A) = P(B) = k: 0
+n = 26 (n mod 3 = 2), k = 8: palindromes with P(A) = P(B) = k: 32
+n = 27 (n mod 3 = 0), k = 9: palindromes with P(A) = P(B) = k: 0
+n = 28 (n mod 3 = 1), k = 9: palindromes with P(A) = P(B) = k: 0
+n = 29 (n mod 3 = 2), k = 9: palindromes with P(A) = P(B) = k: 32
+n = 30 (n mod 3 = 0), k = 10: palindromes with P(A) = P(B) = k: 0
+n = 31 (n mod 3 = 1), k = 10: palindromes with P(A) = P(B) = k: 0

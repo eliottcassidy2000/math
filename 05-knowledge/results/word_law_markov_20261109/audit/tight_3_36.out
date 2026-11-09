@@ -1,0 +1,39 @@
+n=3 k=1: tight colourings 2 (palindromic 2); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=4 k=1: tight colourings 2 (palindromic 2); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=5 k=1: tight colourings 2 (palindromic 2); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=6 k=2: tight colourings 10 (palindromic 2); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=7 k=2: tight colourings 6 (palindromic 2); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=8 k=2: tight colourings 4 (palindromic 2); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=9 k=3: tight colourings 34 (palindromic 6); with 0-junction 1 (x_0 = 1: 1), with 1-junction 1, both 0; palindromic with a junction 2; realisation failures 0; R(w) alone fails on 1 of the 0-junction words
+n=10 k=3: tight colourings 16 (palindromic 4); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=11 k=3: tight colourings 8 (palindromic 4); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=12 k=4: tight colourings 100 (palindromic 6); with 0-junction 4 (x_0 = 1: 3), with 1-junction 4, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 4 of the 0-junction words
+n=13 k=4: tight colourings 40 (palindromic 4); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=14 k=4: tight colourings 16 (palindromic 4); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=15 k=5: tight colourings 272 (palindromic 16); with 0-junction 12 (x_0 = 1: 8), with 1-junction 12, both 0; palindromic with a junction 4; realisation failures 0; R(w) alone fails on 12 of the 0-junction words
+n=16 k=5: tight colourings 96 (palindromic 8); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=17 k=5: tight colourings 32 (palindromic 8); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=18 k=6: tight colourings 704 (palindromic 16); with 0-junction 32 (x_0 = 1: 20), with 1-junction 32, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 32 of the 0-junction words
+n=19 k=6: tight colourings 224 (palindromic 8); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=20 k=6: tight colourings 64 (palindromic 8); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=21 k=7: tight colourings 1760 (palindromic 40); with 0-junction 80 (x_0 = 1: 48), with 1-junction 80, both 0; palindromic with a junction 8; realisation failures 0; R(w) alone fails on 80 of the 0-junction words
+n=22 k=7: tight colourings 512 (palindromic 16); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=23 k=7: tight colourings 128 (palindromic 16); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=24 k=8: tight colourings 4288 (palindromic 40); with 0-junction 192 (x_0 = 1: 112), with 1-junction 192, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 192 of the 0-junction words
+n=25 k=8: tight colourings 1152 (palindromic 16); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=26 k=8: tight colourings 256 (palindromic 16); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=27 k=9: tight colourings 10240 (palindromic 96); with 0-junction 448 (x_0 = 1: 256), with 1-junction 448, both 0; palindromic with a junction 16; realisation failures 0; R(w) alone fails on 448 of the 0-junction words
+n=28 k=9: tight colourings 2560 (palindromic 32); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=29 k=9: tight colourings 512 (palindromic 32); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=30 k=10: tight colourings 24064 (palindromic 96); with 0-junction 1024 (x_0 = 1: 576), with 1-junction 1024, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 1024 of the 0-junction words
+n=31 k=10: tight colourings 5632 (palindromic 32); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=32 k=10: tight colourings 1024 (palindromic 32); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=33 k=11: tight colourings 55808 (palindromic 224); with 0-junction 2304 (x_0 = 1: 1280), with 1-junction 2304, both 0; palindromic with a junction 32; realisation failures 0; R(w) alone fails on 2304 of the 0-junction words
+n=34 k=11: tight colourings 12288 (palindromic 64); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=35 k=11: tight colourings 2048 (palindromic 64); with 0-junction 0 (x_0 = 1: 0), with 1-junction 0, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 0 of the 0-junction words
+n=36 k=12: tight colourings 128000 (palindromic 224); with 0-junction 5120 (x_0 = 1: 2816), with 1-junction 5120, both 0; palindromic with a junction 0; realisation failures 0; R(w) alone fails on 5120 of the 0-junction words
+total reported failures: 0 (3-cycles of u classified 0, disjoint pairs of them checked 0, 3-cycles of t classified 0)
+
+real	1m10.232s
+user	0m0.031s
+sys	0m0.015s

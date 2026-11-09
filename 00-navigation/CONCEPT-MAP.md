@@ -989,7 +989,7 @@ Evidence:
 Define Z_T(x) = Π_{[C] prime cycle} (1 - x^|C|)^{-1} (Ihara-type). For tournaments, all cycles are odd. The connection:
 - log Z_T(x) = Σ_k (c_k/k) x^k (formal power series)
 - I(Omega, x) is NOT simply related to Z_T(x) because independence structure is finer than count structure
-- The "cycle Euler product" Π_C (1 + λ^{|C|}) would equal I(Omega, λ) IF cycles were pairwise independent — but they're not!
+- The "cycle Euler product" Π_C (1 + λ) would equal I(Omega, λ) IF the cycles were pairwise vertex-disjoint (Omega edgeless) — but they're not! (Corrected 2026-11-09, opus-S88 audit m10: the exponent λ^{|C|} was a slip; I counts packings by their number of cycles.)
 - The gap between Π_C (1 + 2) and I(Omega, 2) measures "cycle interaction"
 
 ---

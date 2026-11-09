@@ -1,0 +1,11 @@
+n=22 k=7: black missing []; blue (non-tight) missing [(1, 7), (3, 5), (3, 7), (5, 5), (5, 7), (7, 7)]; missing even among ALL words: black [], blue [(1, 7), (3, 5), (3, 7), (5, 5), (5, 7), (7, 7)]
+n=23 k=7: black missing []; blue (non-tight) missing []; missing even among ALL words: black [], blue []
+n=24 k=8: black missing [(8, 8)]; blue (non-tight) missing [(3, 7), (5, 5), (5, 7), (7, 7), (8, 8)]; missing even among ALL words: black [(8, 8)], blue [(3, 7), (5, 5), (5, 7), (7, 7), (8, 8)]
+n=25 k=8: black missing []; blue (non-tight) missing [(8, 8)]; missing even among ALL words: black [], blue [(8, 8)]
+n=26 k=8: black missing []; blue (non-tight) missing [(3, 7), (5, 5), (5, 7), (7, 7)]; missing even among ALL words: black [], blue [(3, 7), (5, 5), (5, 7), (7, 7)]
+n=27 k=9: black missing [(9, 9)]; blue (non-tight) missing [(9, 9)]; missing even among ALL words: black [(9, 9)], blue [(9, 9)]
+n=28 k=9: black missing []; blue (non-tight) missing [(1, 9), (3, 7), (3, 9), (5, 5), (5, 7), (5, 9), (7, 7), (7, 9), (9, 9)]; missing even among ALL words: black [], blue [(1, 9), (3, 7), (3, 9), (5, 5), (5, 7), (5, 9), (7, 7), (7, 9), (9, 9)]
+
+real	0m16.924s
+user	0m0.000s
+sys	0m0.015s

@@ -1,0 +1,14 @@
+states used at positions m = 0 (mod 3) (block boundaries): [(1, 3, 1), (2, 3, 1), (3, 1, 1), (3, 2, 1), (3, 3, 0), (3, 3, 1)]
+states used at some position: 12 of 18
+never used: [(1, 1, 0), (1, 1, 1), (1, 2, 0), (2, 1, 0), (2, 2, 0), (2, 2, 1)]
+T restricted to the block-boundary states: x**2*(x - 2)**4 ; Jordan sizes at 2: {4: 1} ; at 0: {2: 1}
+dim ker (T - 2)^3 = 3 , dim ker (T - 2)^4 = 4
+a top vector of the size-4 chain is supported on: [(3, 3, 1), (3, 1, 1), (3, 2, 1), (1, 3, 1), (2, 3, 1)]
+a top LEFT vector of the size-4 chain is supported on: [(3, 3, 0)]
+dead reachable block-boundary states (never accepting): [(3, 3, 1)] ; self-loop weight of (3,3,1): 2
+trim states: [(3, 3, 0), (3, 1, 1), (3, 2, 1), (1, 3, 1), (2, 3, 1)]
+trim T = [[2, 1, 2, 1, 2], [0, 1, 0, 1, 1], [0, 0, 1, 0, 1], [0, 1, 1, 1, 0], [0, 0, 1, 0, 1]]
+trim T: characteristic polynomial x**2*(x - 2)**3 ; Jordan sizes at 2: {3: 1} ; at 0: {2: 1}
+  trim generating function L = 3k: -2*x/(2*x - 1)
+  trim generating function L = 3k - 1: -2*x*(x - 1)/(2*x - 1)**2
+  trim generating function L = 3k - 2: 2*x*(x**2 + x - 1)/(2*x - 1)**3

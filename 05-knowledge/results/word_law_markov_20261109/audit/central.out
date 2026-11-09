@@ -1,0 +1,32 @@
+L=1 (n=3, n mod 3 = 0): palindromes 2; odd length; palindromes with P(A) = P(B) = k: 0
+L=2 (n=4, n mod 3 = 1): palindromes 2; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 0
+L=3 (n=5, n mod 3 = 2): palindromes 4; odd length; palindromes with P(A) = P(B) = k: 2
+L=4 (n=6, n mod 3 = 0): palindromes 4; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 0
+L=5 (n=7, n mod 3 = 1): palindromes 8; odd length; palindromes with P(A) = P(B) = k: 0
+L=6 (n=8, n mod 3 = 2): palindromes 8; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 4
+L=7 (n=9, n mod 3 = 0): palindromes 16; odd length; palindromes with P(A) = P(B) = k: 0
+L=8 (n=10, n mod 3 = 1): palindromes 16; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 0
+L=9 (n=11, n mod 3 = 2): palindromes 32; odd length; palindromes with P(A) = P(B) = k: 4
+L=10 (n=12, n mod 3 = 0): palindromes 32; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 0
+L=11 (n=13, n mod 3 = 1): palindromes 64; odd length; palindromes with P(A) = P(B) = k: 0
+L=12 (n=14, n mod 3 = 2): palindromes 64; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 8
+L=13 (n=15, n mod 3 = 0): palindromes 128; odd length; palindromes with P(A) = P(B) = k: 0
+L=14 (n=16, n mod 3 = 1): palindromes 128; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 0
+L=15 (n=17, n mod 3 = 2): palindromes 256; odd length; palindromes with P(A) = P(B) = k: 8
+L=16 (n=18, n mod 3 = 0): palindromes 256; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 0
+L=17 (n=19, n mod 3 = 1): palindromes 512; odd length; palindromes with P(A) = P(B) = k: 0
+L=18 (n=20, n mod 3 = 2): palindromes 512; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 16
+L=19 (n=21, n mod 3 = 0): palindromes 1024; odd length; palindromes with P(A) = P(B) = k: 0
+L=20 (n=22, n mod 3 = 1): palindromes 1024; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 0
+L=21 (n=23, n mod 3 = 2): palindromes 2048; odd length; palindromes with P(A) = P(B) = k: 16
+L=22 (n=24, n mod 3 = 0): palindromes 2048; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 0
+L=23 (n=25, n mod 3 = 1): palindromes 4096; odd length; palindromes with P(A) = P(B) = k: 0
+L=24 (n=26, n mod 3 = 2): palindromes 4096; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 32
+L=25 (n=27, n mod 3 = 0): palindromes 8192; odd length; palindromes with P(A) = P(B) = k: 0
+L=26 (n=28, n mod 3 = 1): palindromes 8192; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 0
+L=27 (n=29, n mod 3 = 2): palindromes 16384; odd length; palindromes with P(A) = P(B) = k: 32
+L=28 (n=30, n mod 3 = 0): palindromes 16384; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 0
+L=29 (n=31, n mod 3 = 1): palindromes 32768; odd length; palindromes with P(A) = P(B) = k: 0
+L=30 (n=32, n mod 3 = 2): palindromes 32768; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 64
+L=31 (n=33, n mod 3 = 0): palindromes 65536; odd length; palindromes with P(A) = P(B) = k: 0
+L=32 (n=34, n mod 3 = 1): palindromes 65536; central-pair lemma holds, no both-odd pair; palindromes with P(A) = P(B) = k: 0

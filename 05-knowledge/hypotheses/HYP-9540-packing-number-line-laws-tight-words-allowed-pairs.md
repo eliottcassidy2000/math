@@ -9,11 +9,15 @@ status: >
   - It was FINITE-EXACT for n <= 12 before.
   (B): FINITE-EXACT for n <= 9 (complete census of all lines). The blue clause is also FINITE-EXACT for n <= 12 (the
   audit's census of all blue lines).
-  - THM-5020 (6) (S88) proves (B) for 13 <= n <= 40 on every pair, by run-window lines of admissible words, except
-    three families: black (k, k) at n = 3k; blue (k, k) at n = 0, 1 (mod 3); blue non-tight both-odd pairs at even n.
-  - Those families are the open residue, HYP-9590 (B).
+  - THM-5020 (6) (S88) establishes (B) for 6 <= n <= 40 on every pair except three families, by a FINITE-EXACT
+    census of admissible words together with the proved lemmas THM-5020 (2), (3). The families are black (k, k) at
+    n = 3k, blue (k, k) at n = 0, 1 (mod 3), and blue non-tight both-odd pairs at even n.
+  - The audit's explicit lines (THM-5020 (6)) prove the families (k, k), black and blue, at every n >= 6, and the
+    blue pairs (i, k) at every n.
+  - With the census and S87's complete censuses, (B) holds for every n <= 26.
+  - The open residue is the blue both-odd pairs (i, j), j < k, at even n > 26 (HYP-9590 (B)).
   - The boundary i + j = k is realised in black at every n (THM-4951 (2a)). In blue exactly the pairs of palindromic
-    tight colourings are possible (THM-4951 (3d)). Through (C), at n != 0 (mod 3) exactly those occur.
+    tight colourings are possible (THM-4951 (3d)). Through (C), exactly those occur at every n (THM-5020 (4)).
   - (0, k) and (1, k) occur at every n >= 4: the transitive line, and the single reversed tile (0, 3), which is black
     for n >= 5.
   - The first version of the blue clause ("the same pairs as black, except (1, 1) from n = 6 on") is REFUTED. At
@@ -58,8 +62,11 @@ related:
   - If it has no 0-junction, the run-window line of w realises it.
   - Otherwise the run-window line of its complement does.
   - The S87 follow-up audit found the run-window failures at n = 3k <= 18 to be exactly the 0-junction words (e.g.
-    1110111). THM-5020 (3) proves that words without a 0-junction never fail. That every 0-junction word fails is
-    FINITE-EXACT only, for n <= 18. There are (k - 2) 2^(k-3) such words (THM-5021 (3)).
+    1110111). THM-5020 (3) proves that words without a 0-junction never fail.
+  - That every 0-junction tight colouring fails is FINITE-EXACT only: the S88 audit checked it on all of them for
+    n <= 36 (tight_3_36.out).
+  - There are (k - 2) 2^(k-3) such words, both first letters counted (THM-5021 (3)), or (k - 1) 2^(k-4) with
+    x_0 = 1. S87's failure counts 1, 3, 8, 20 use the second convention.
 
 **Status.** PROVED; no falsifier remains.
 
@@ -74,7 +81,14 @@ related:
 
 **Notes.**
 - The blue boundary pairs are fixed by (C). For n <= 26 they are exactly the {j, k - j} with j even or k odd
-  (audit, palindromic_pairs.out). At n = 3k + 2 this is proved (THM-4951 (3d)).
+  (S87 audit, palindromic_pairs.out).
+  - At even n the exclusion of both-odd pairs is PROVED (THM-5020 (5), central-pair lemma). That includes
+    n = 3k + 2 with k even (THM-4951 (3d)).
+  - At odd n the rule constrains only n = 3k + 1 with k even: at n = 3k or 3k + 2, an odd n forces k odd. At
+    n = 3k + 1 with k even, the central run of a palindromic tight colouring has length 5 (mod 6), so both packing
+    numbers are even (S88 audit, m12).
+  - So the exclusion half of the rule is PROVED at every n. The realisation of every allowed split by a palindromic
+    tight colouring is PROVED at n = 3k + 2 (THM-4951 (3d)) and FINITE-EXACT for n <= 26.
 - The pair (1, 1) is excluded in blue by this rule from n = 6 on, so no separate exception is needed. At n = 6, 7, 8 it
   is a tight pair with k = 2 and i = 1 odd. From n = 9 on, i + j = 2 < k.
 

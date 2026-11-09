@@ -13,8 +13,8 @@ status: >
   - (5)(a): THM-791 (a).
   - (5)(b), the balance on blue tilings: the THM-4922 (4) audit proof, restricted to tilings containing the base path.
   FINITE-EXACT:
-  - the count (k^2 + 9k - 2) 2^(k-4) at n = 3k (DP for k <= 13; the audit's brute force for k <= 7; the closed form is
-    fitted, not proved);
+  - the count (k^2 + 9k - 2) 2^(k-4) at n = 3k (DP for k <= 13; the audit's brute force for k <= 7). The closed
+    form was fitted here; it is PROVED by THM-5021 (2) (S88);
   - (4) and (5)(c);
   - the n = 3k run-window failure set (an isolated 0 between two 1-runs of length >= 2), for n <= 18 (follow-up
     audit).
@@ -44,7 +44,8 @@ status: >
     not claimed (MISTAKE-742).
   NEW: the tight-line analysis (1)-(3) (equality case, staircase and run-window constructions, block laws, counts);
   the nu-pair census (4); the line-level mod-4 data and the degeneracy count (5)(c)-(e).
-  NOT CLAIMED: the word law at n = 3k (HYP-9540 (A)); which non-tight pairs occur (HYP-9540 (B)).
+  NOT CLAIMED here: the word law at n = 3k (HYP-9540 (A)), now PROVED by THM-5020 (S88, junction lemma and the two
+  sides of the run-window tiling), and which non-tight pairs occur (HYP-9540 (B); see THM-5020 (6), HYP-9590).
   AUDIT: independent audit PASS WITH CORRECTIONS (05-knowledge/results/ternary_metagraph_20261109/audit/AUDIT.md).
   - Every number was reproduced with independent code, including all lines for n <= 9, all blue lines for n <= 12
     and the tight lines for n <= 12.
@@ -57,6 +58,8 @@ status: >
 session: opus-2026-11-09-S87
 source: 05-knowledge/results/ternary_metagraph_20261109/README.md
 related:
+  - THM-5020
+  - THM-5021
   - THM-643
   - THM-646
   - THM-4729
@@ -142,8 +145,8 @@ related:
 - **(c) Counts of tight colourings, up to complement.**
   - n = 3k + 2: 2^(k-1), by (a).
   - n = 3k + 1: (k + 1) 2^(k-2), by (e).
-  - n = 3k: (k^2 + 9k - 2) 2^(k-4). This is fitted, not proved: it agrees with the DP of `staircase_check.py` for
-    k <= 13 and with the audit's brute force for k <= 7.
+  - n = 3k: (k^2 + 9k - 2) 2^(k-4). This was fitted here: it agrees with the DP of `staircase_check.py` for k <= 13
+    and with the audit's brute force for k <= 7. It is PROVED by THM-5021 (2).
 - **(d) Blue tight lines at n = 3k + 2.** sigma reverses the triple word, so the word of a blue line is a palindrome.
   - The blue tight lines at n = 3k + 2 are therefore exactly those of the palindromic block words, each realised by a
     blue multi-staircase.
