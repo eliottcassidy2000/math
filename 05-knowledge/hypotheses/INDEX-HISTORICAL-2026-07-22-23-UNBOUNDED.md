@@ -250,3 +250,4 @@ computation needs universe, controls, command, and output. Route `CLAIMED` and
 ## Archived from INDEX.md on 2026-10-21 (mac-mini-2026-10-21-electric, rebase line budget)
 
 - **THM-2101/2111 (PROVED PAPER):** additive DvdK avoids root products; the effective first return is a compound-determinant order at most `binom(M+N,min(M,N))`. Sharpening and Lean assembly are separate.
+- **HYP-9210 (OPEN, mac-mini-2026-10-06-chessboard; with THM-4550):** [latest first lonely time](HYP-9210-latest-first-lonely-time.md): tau*(2) = 4/9 (camel), tau*(3) = 7/16 at (1,3,12) PROVED; {1,3,4,...,N} gives 1/2 - 1/(2N) + O(1/N^2), so tau*(n) -> 1/2; exact values for n >= 4 open.

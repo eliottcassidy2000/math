@@ -1,0 +1,268 @@
+---
+id: THM-5040
+title: "Sharp even-graph Chan-Pak (HYP-9575 (B) PROVED). For every n >= 1, the dominating-set counts of even graphs (von Brömssen) on at most n vertices are exactly the odd numbers up to M(n) = 2^n - n (n odd) or 2^n - n - 1 (n even), except 3, 7, 13 and, for odd n >= 5, X(n) = 2^n - n - 2. So every odd k other than 3, 7, 13 is d(G) for an even graph G. The least order of such a G is the least n with k <= M(n), plus one when k = X(n); it never exceeds ceil(log2(k + 1)) + 1. Tools: the complement formula d(G) = 2^n - D(comp G), E_2-multi-joins, a leaf stable recursion d -> 3*2^(n-1) + d, and a jump family d = 2^(m-1) - D(H) that fills the top band"
+status: >
+  PROVED, with a computer-assisted base and an independent audit pending.
+  - Base: the exhaustive census of all graphs on <= 9 vertices (THM-4996 (3), audited P1), plus 268 base graphs on
+    <= 9 vertices (248 minimal-order realisers and 20 leaf graphs), each re-verified by brute force
+    (verify_base.py).
+  - The inductive step is general and uses no computation beyond order 9.
+  - Mechanical checks: every branch of the case analysis for 10 <= n <= 24 (proof_check.py); explicit witnesses built
+    exactly as the proof prescribes and brute-forced for 10 <= n <= 12 (construct.py); random tests of the four new
+    lemmas (lemma_check.py); an independent closure computation giving E(n) = O(n) for all n <= 25 (cover.py).
+session: opus-2026-11-09-S89
+date: 2026-11-09
+related: [HYP-9575, THM-4996, THM-4531, THM-4721, HYP-9610, THM-5041, THM-5042]
+script: 04-computation/experiments/egcp_20261109/
+---
+
+# THM-5040 - Sharp even-graph Chan-Pak
+
+Packet: [note](../../05-knowledge/results/egcp_20261109/README.md). The scripts are in
+`04-computation/experiments/egcp_20261109/`.
+
+## Statement
+
+**Notation.**
+- d(G) is the number of dominating sets of G. It is always odd (Brouwer-Csorba-Schrijver).
+- G is **even** if no automorphism reverses an odd number of edges under the reference orientation u -> v for u < v
+  (von Brömssen; THM-4996, THM-4531).
+- E(n) = {d(G) : G even with at most n vertices}. Padding with isolated vertices keeps evenness and d, so E(n) is also
+  the set of values on exactly n vertices.
+- M(n) = 2^n - n for n odd, and 2^n - n - 1 for n even.
+- X(n) = 2^n - n - 2 for odd n >= 5, and X(n) is empty otherwise.
+- O(n) = {odd k : k <= M(n)} minus {3, 7, 13} minus X(n).
+
+**Theorem.** E(n) = O(n) for every n >= 1.
+
+**Corollaries.**
+1. **HYP-9575 (B) holds.** {d(G) : G even} is exactly the set of odd numbers other than 3, 7 and 13.
+2. **Least order.** Let V(k) be the least order of an even graph with d = k. Then V(k) is the least n with
+   k <= M(n), plus one if k = X(n). Note that O(n) is contained in O(n + 1).
+3. **Cost of evenness.** ceil(log2(k + 1)) <= V(k) <= ceil(log2(k + 1)) + 1. All graphs attain the lower bound
+   (THM-4996 (1)), so evenness costs at most one vertex.
+   - The extra vertex is needed exactly when k lies in a **top band** T(m) = (M(m - 1), 2^(m - 1)) or k = X(m - 1),
+     where m = ceil(log2(k + 1)) + 1. These are 1 + floor((m - 2)/2) values per order.
+   - Examples: 2^m - 1 needs m + 1 vertices; 25 = X(5) and 119 = X(7) need 6 and 8.
+4. **The unreached values of THM-4996 Proposition B5 are covered.** Its join/cone closure missed 12,326 values below
+   2^22, clustered near 2^m - 2^k. Two mechanisms account for such clusters, and Theorem T and Lemma 10 below supply
+   both. This explains the clusters; it is not an exact classification of that closure's misses.
+   - The top bands T(m) are realisable only on m vertices, and only by graphs that are neither unions nor joins
+     (Lemma 0). Joins over them inherit the gap.
+   - Cone or join inputs that fall on 3, 7 or 13 give 2^m + {3, 7, 13} and 3*2^(m - 2) + {1, 5, 11}.
+   - The proof's own closure (cover.py) reaches every value of O(n) for n <= 25.
+
+## 1. Tools
+
+**Lemma 0 (complement formula; elementary).** A set S fails to dominate G iff some vertex v outside S has no neighbour
+in S, that is, S lies in the open neighbourhood of v in the complement comp(G).
+- Hence d(G) = 2^n - D(comp G), where D(H) = |union over v of 2^(N_H(v))| counts the sets contained in some open
+  neighbourhood (the empty set included).
+- **Unions.** D(H_1 u H_2) = D(H_1) + D(H_2) - 1, because a nonempty set inside a neighbourhood lies in one
+  component.
+- **C_4-free graphs.** A set of size >= 2 lies in at most one neighbourhood. So
+  D(H) = 1 + #(non-isolated vertices) + sum over v of (2^deg(v) - 1 - deg(v)).
+
+**Parity facts (THM-4996 Lemma B2).**
+- (B2.1) Adjacent twins make a graph odd. So an even graph has at most one universal vertex.
+- (B2.2) Padding keeps evenness.
+- (B2.3) If |G| >= 2 and G has no universal vertex, then K_1 v G is even iff G is.
+- (B2.5) sgn_G(g) sgn_comp(G)(g) = sgn(g) for every automorphism g.
+
+**Lemma 5' (multi-join sign rule).** Let J = A_1 v ... v A_r with every A_i co-connected (comp(A_i) connected). Then J
+is even iff every A_i is even and no two isomorphic A_i have odd order.
+
+*Proof.* Aut(J) = Aut(comp J) is generated by two kinds of map: automorphisms of a single A_i, and swaps of two
+isomorphic A_i, A_j along a fixed order-preserving isomorphism. Label the vertices block by block.
+- An automorphism of A_i alone keeps every cross edge's orientation, so its sign is sgn_(A_i).
+- A swap of blocks of order s:
+  - preserves the orientation of the edges inside the two blocks;
+  - reverses all s^2 edges between them;
+  - for every block lying between them in the labelling, reverses an even number 2 s |A_l| of edges.
+  So its sign is (-1)^s.
+- sgn_J is a homomorphism, so checking these generators suffices. QED
+
+**Lemma 5 (E_2-multi-join).** For an even graph G on g vertices and t >= 1, the graph J = E_2^(v t) v G is even on
+n = g + 2t vertices, and d(J) = 2^n - 2^g - 2t + d(G).
+
+*Proof.*
+- **Value.** comp(J) = t K_2 u comp(G). Lemma 0 gives D(comp J) = 1 + 2t + (D(comp G) - 1) = 2t + 2^g - d(G).
+- **Parity.** The co-components of J are t copies of E_2 (even order) and the co-components of G. The latter satisfy
+  Lemma 5' because G is even. QED
+
+**Lemma 6 (cocktail-party graphs).**
+- For n even, CP = comp(perfect matching) = E_2^(v n/2) has d = 2^n - n - 1 = M(n) and is even (Lemma 5').
+- For n odd, K_1 v CP_(n-1) has d = 2^n - n = M(n) and is even (B2.3).
+
+**Lemma 7 (leaf stable recursion SR).** Let G be even on n' >= 3 vertices, with a leaf q and no universal vertex. Form
+SR(G) by adding a hub a adjacent to V(G) - q and a pendant leaf u at a. Then:
+- d(SR G) = 3*2^(n' - 1) + d(G);
+- SR(G) is even, has a leaf (u) and has no universal vertex.
+
+*Proof.*
+- **Value.**
+  - Sets containing a: u is free, and q must be dominated by q or its neighbour, which gives 2(2^n' - 2^(n'-2)).
+  - Sets without a: they contain u, and their trace on V(G) dominates G, which gives d(G).
+- **a is fixed.** a has degree n'. Every other vertex has degree at most (n' - 2) + 1, since G has no universal
+  vertex. So a is the unique vertex of maximum degree. Its unique non-neighbour q is also fixed.
+- **Automorphisms.** The leaves at a (u and the isolated vertices of G) are non-adjacent twins, so permuting them is
+  even. Modulo these permutations, Aut(SR G) = Aut(G)_q.
+- **Sign.** Labelling a first, the edges at a never reverse. So the sign of each element is sgn_G = +1. QED
+
+**Lemma 8 (jump family).** Let H have rho vertices, let z be a vertex of H with h = deg_H(z) <= rho - 1, and put
+k = rho - h >= 1. Form J(H, z): take comp(H) on V(H), add a hub a adjacent to V(H) - z, and add k leaves at a. Then
+m = |J| = 2 rho + 1 - h, and:
+- (i) d(J) = 2^(m - 1) - D(H);
+- (ii) J has a leaf and no universal vertex;
+- (iii) if a is the unique vertex of degree m - 2 (which holds when rho > h + 1), then J is even iff sgn_H(g) = sgn(g)
+  for every automorphism g of H fixing z.
+
+*Proof.*
+- **(i)** Count the sets containing a and those not containing a.
+  - With a: the k leaves are free, and z must be dominated inside comp(H). The failing traces lie inside N_H(z), so
+    this gives 2^k (2^rho - 2^h).
+  - Without a: all leaves are taken, and the trace dominates comp(H). This gives 2^rho - D(H).
+  - The sum is 2^(k + rho) - D(H), since k + h = rho.
+- **(iii)**
+  - a is fixed, and so is z, its unique non-neighbour.
+  - The degree-1 neighbours of a are non-adjacent twins. Composing with an even permutation of them, every
+    automorphism maps U to U and V(H) to V(H).
+  - It therefore restricts to an element of Aut(comp H)_z = Aut(H)_z, and conversely every such element extends.
+  - Labelling a, then the leaves, then V(H), the sign is sgn_comp(H)(g) = sgn(g) sgn_H(g) (B2.5). QED
+
+**Lemma 9 (frontier families).** Each family below is even, has a leaf and no universal vertex (Lemma 8), and
+Aut(H)_z is trivial. Write P = P_(rho - 1) u K_1.
+- **(F-a)** m = 2 rho, rho >= 3: H = P, z = an end of the path (h = 1). Then D(H) = 2 rho - 3, so
+  d = 2^(m - 1) - (m - 3).
+- **(F-b)** m = 2 rho, rho >= 5: H = the spider with legs of lengths (rho - 4, 1, 2), z = the end of the first leg
+  (h = 1). Then D(H) = 2 rho + 1, so d = 2^(m - 1) - (m + 1) = X(m - 1).
+- **(F-c)** m = 2 rho - 1, rho >= 5: H = P, z = the second vertex of the path (h = 2; not fixed by the flip). Then
+  D(H) = 2 rho - 3, so d = 2^(m - 1) - (m - 2).
+
+The D values follow from Lemma 0's C_4-free formula. In every case rho > h + 1.
+
+## 2. Exclusions: E(n) is contained in O(n)
+
+**Lemma 1.** If G is even on n vertices, then d(G) <= 2^n - n.
+
+*Proof.* G has at most one universal vertex (B2.1). The empty set and the n - 1 other singletons fail to dominate.
+
+**Lemma 2.** If n is even, then d(G) <= 2^n - n - 1.
+
+*Proof.* Suppose d = 2^n - n. Then there is exactly one universal vertex u, and every set of size >= 2 dominates.
+- Write G = K_1 v G'. Then G' has no universal vertex, and no pair of vertices lies in a common neighbourhood of
+  H' = comp(G').
+- So H' is a perfect matching on n - 1 vertices, which forces n to be odd. QED
+
+**Lemma 3.** If n is odd, then 2^n - n - 2 is not in E(n).
+
+*Proof.* Graphs on fewer vertices give d <= M(n - 1) < X(n). So suppose d(G) = 2^n - n - 2 on exactly n vertices.
+- **Universal vertex.** Then G = K_1 v G', the non-dominating sets of G are those of G', and G' has no universal
+  vertex. So exactly two sets of size >= 2 lie in neighbourhoods of H' = comp(G'). Hence H' has maximum degree <= 2,
+  and H' is one of P_4 u sK_2, C_4 u sK_2, 2P_3 u sK_2.
+- **No universal vertex.** Then exactly one such set exists, and H = comp(G) = P_3 u sK_2.
+- **None is co-even (B2.5).**
+  - P_4: its flip reverses 3 edges but is an even permutation.
+  - C_4: a rotation reverses 2 edges and is an odd permutation.
+  - P_3: swapping its ends reverses 2 edges and is an odd permutation.
+  So G is odd. QED
+
+**Excluded small values.** 3, 7 and 13 are realised only by K_2, K_3 and K_4 - e, up to isolated vertices. All three
+are odd. This is THM-4996 (3), exhaustive for d <= 511 at every order (Lemma B3).
+
+Lemmas 1-3 and this exclusion give E(n) contained in O(n).
+
+## 3. The top band and the offsets
+
+Write Tj(m) for the j such that 2^(m - 1) - j needs exactly m vertices:
+- for m odd, Tj(m) = {1, 3, ..., m - 2};
+- for m even, Tj(m) = {1, 3, ..., m - 3} u {m + 1} (the X-value 2^(m - 1) - m - 1).
+
+An **L-graph** is an even graph with a leaf and no universal vertex.
+
+**Theorem T (top band).** For every m >= 8 and every j in Tj(m), there is an L-graph on m vertices with
+d = 2^(m - 1) - j.
+
+*Proof.* Induction on m.
+- **Base, m = 8, 9.** These are census graphs, listed as the L lines of base_witnesses.txt and verified.
+- **Step, m >= 10.**
+  - **New j.** Tj(m) minus Tj(m - 2) is {m - 2} for m odd and {m - 3, m + 1} for m even. Lemma 9 (F-c, F-a, F-b)
+    supplies these.
+  - **Old j.** SR (Lemma 7) carries 2^(m - 3) - j to 3*2^(m - 3) + 2^(m - 3) - j = 2^(m - 1) - j, and keeps the
+    L-property. QED
+
+**Lemma 10 (offsets).** For every m >= 8 and every c in {1, 3, 5, 7, 11, 13}, there is an L-graph on m vertices with
+d = 2^(m - 1) + c.
+
+*Proof.* Census for m = 8, 9 (base_witnesses.txt). SR maps 2^(m - 3) + c to 2^(m - 1) + c. QED
+
+## 4. The induction
+
+**Claim_3(n).** Every odd x <= 2^n - n - 3 with x not in {3, 7, 13} is in E(n).
+
+For n <= 9 this is the census. Let n >= 10 and assume Claim_3 below n. Take x odd with
+2^(n - 1) - n - 2 < x <= 2^n - n - 3; smaller x are covered by Claim_3(n - 1).
+
+- **Case 1: x < 2^(n - 1).** Write x = 2^(n - 1) - j with 1 <= j <= n + 1. Either j is in Tj(n) (Theorem T), or
+  x = M(n - 1) (Lemma 6, padded).
+- **Case 2a: x > 2^(n - 1) and D := 2^n - x <= 2^(n - 2) + 1.** Note that D >= n + 3.
+  - Take the least g with g = n (mod 2) and 2^g + n - g - 1 >= D. Then g <= n - 2.
+  - Put d_G = 2^g - D + n - g. It is odd and 1 <= d_G <= 2^g - g - 3 (because D >= n + 3), so Claim_3(g) gives G
+    unless d_G is in {3, 7, 13}. Then E_2^(v (n - g)/2) v G works (Lemma 5).
+  - If d_G is in {3, 7, 13} and g + 2 <= n - 2, use g + 2 instead. The new value is d_G + 3*2^g - 2 > 13, and it is
+    still <= 2^(g + 2) - (g + 2) - 3.
+  - Otherwise g = n - 2 and x = 3*2^(n - 2) + {1, 5, 11}. This is a cone over an L-graph on n - 1 vertices with
+    d = 2^(n - 2) + {1, 5, 11} (Lemma 10, B2.3).
+- **Case 2b: x > 2^(n - 1) and D >= 2^(n - 2) + 3.** Write x = 2^(n - 1) + y with 1 <= y <= 2^(n - 2) - 3, and cone
+  over a graph on n - 1 vertices without a universal vertex.
+  - If y <= 2^(n - 2) - n - 1 and y is not in {3, 7, 13}, pad a graph from Claim_3(n - 2).
+  - If y is in {3, 7, 13}, then x = 2^(n - 1) + y is directly an L-graph (Lemma 10).
+  - Otherwise y = 2^(n - 2) - j with 3 <= j <= n. Either j is in Tj(n - 1) (Theorem T), or y = M(n - 2) (Lemma 6,
+    padded).
+
+So Claim_3 holds for every n.
+
+**Conclusion.** The odd numbers in O(n) above 2^n - n - 3 are:
+- M(n) alone for n even;
+- M(n) and the excluded X(n) for n odd.
+
+Lemma 6 realises M(n). Hence O(n) is contained in E(n), and together with Section 2, E(n) = O(n). QED
+
+## 5. Verification (04-computation/experiments/egcp_20261109/)
+
+| Check | Script | Output | Result |
+| --- | --- | --- | --- |
+| Census base: E(n) = O(n) for n <= 9; 248 minimal-order W witnesses and 20 L witnesses (orders 8, 9) recounted and checked for evenness | verify_base.py | verify_base.out | PASS |
+| Complement formula and Lemmas 5, 7, 8 on random graphs (1,300 tests; Lemma 8 includes the evenness criterion in both directions, 206 even cases) | lemma_check.py | lemma_check.out | 0 failures |
+| Every branch of Section 4 for every x at every 10 <= n <= 24 | proof_check.py | proof_check_24.out | all cases verified |
+| Explicit witnesses built by the proof's own recursion and brute-forced (d, evenness, exact order) for 10 <= n <= 12: all delicate values plus a random sample, and all T(n) graphs | construct.py | construct_12.out | 0 failures |
+| Independent closure under padding, cones, E_2/K_1/E_3 multi-joins, two-hub graphs, the top band and SR | cover.py | cover_25.out | E(n) = O(n) for every n <= 25; the exact E0 conjecture misses about 2n values per order, which E never needs |
+
+## 6. Prior art and credits
+
+- **Every odd number is the dominating-set count of a connected graph.** This is S. Alikhani, *The domination
+  polynomial of a graph at -1*, Graphs Combin. 29 (2013) 1175-1181, as cited in the n-dominating-graph literature
+  (arXiv:1410.1169). THM-4996 (1) states that "no prior art was found for completeness". Completeness over all graphs
+  is Alikhani's; the conciseness ceil(log2(k + 1)) appears to be new.
+- **Credited from THM-4996:** Brouwer-Csorba-Schrijver (parity); von Brömssen and Royle-Praeger-Glasby-Freedman-Devillers
+  (even graphs, equinumerous with tournaments); Alikhani-Peng (join formula).
+- **Elementary:** Lemma 0, and Lemmas 7-8 as instances of the vertex-addition formula of THM-4996 Lemma B3.
+- **No prior art found** for dominating-set counts of even graphs, the exceptional set {3, 7, 13}, or the sharp
+  orders M(n), X(n). Searched: web; repo grep for "dominating" and "even graph".
+- **Concurrent lane.** mac-mini-2026-11-09-digraph721 (HYP-9625, THM-5055, THM-5056) is attacking (B) by explicit
+  coverage to 2^24. This proof was found independently (coordination: MSG-2471, MSG-1987).
+
+## 7. Remarks
+
+- **The tournament analogy, in the repo's binary/ternary dictionary (HYP-9610).**
+  - Rédei's theorem (H(T) odd) and Brouwer-Csorba-Schrijver (d(G) odd) are the two parity theorems on the two sides
+    of the RPGFD equinumerosity.
+  - The exceptional sets are {7, 21} for H on tournaments (Chan-Pak) and {3, 7, 13} for d on even graphs.
+  - 7 is shared. Each exceptional value is the count of the smallest odd structure forced by an adjacent-twin
+    obstruction.
+  - This is a typed ANALOGY. No map carries H to d (THM-4996 (4); THM-4531).
+- **Odd graphs.** The census shows the odd graphs miss exactly {1, 5, 37} below 512 (THM-4996 (3)). Whether {1, 5, 37}
+  is the complete exceptional set for odd graphs is OPEN here, and the tools above are evenness-specific.
+- **No universal vertex.** For 5 <= n <= 9, the values without a universal vertex are exactly the odd numbers up to
+  M0(n) minus {3, 7, 13, M0(n) - 2}, where M0(n) = 2^n - n - 1 (n even) and 2^n - n - 4 (n odd). This is
+  FINITE-EXACT; its all-n form is not needed for the theorem.

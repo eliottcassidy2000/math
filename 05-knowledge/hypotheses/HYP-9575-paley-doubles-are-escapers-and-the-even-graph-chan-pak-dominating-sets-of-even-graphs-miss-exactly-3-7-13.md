@@ -1,7 +1,7 @@
 ---
 id: HYP-9575
 title: "(A) The Paley double T_11 = D(QR_11) is an escaper of order 22 with simplicity index 6, and every double of a doubly regular tournament of order q >= 11 is an escaper. (B) Even-graph Chan-Pak: the dominating-set count d takes every odd value on even graphs (von Brömssen's notion) except 3, 7 and 13, and is concise there. (C) The least order of an escaper with simplicity index >= 4 is between 13 and 16"
-status: "OPEN. Audit P1 PASS WITH CORRECTIONS (applied; MISTAKE-746). (A) PROVED conditional on (S_c) for large q (THM-4995 (3)); T_11 needs only (S_0.4) at orders 20 and 21. (B) FINITE-EXACT below 512 (THM-4996 (3)); constructive evidence to 2^22, with 12,326 unreached values clustered near 2^m - 2^k. (C) The upper bound 16 is a certified escaper of simplicity index 4 (THM-4995 (4b)); for index >= 5 the bound is 18 (THM-4995 (4a)). No lower bound is proved; 13 would follow from k*(12) = 3 (HYP-9565 (C))."
+status: "(B) PROVED by THM-5040 (opus-2026-11-09-S89), in sharp form: the even-graph values on <= n vertices are exactly the odd numbers up to M(n) = 2^n - n (n odd) / 2^n - n - 1 (n even), except 3, 7, 13 and X(n) = 2^n - n - 2 (odd n >= 5); least order <= ceil(log2(k + 1)) + 1. (A), (C) OPEN. Audit P1 PASS WITH CORRECTIONS (applied; MISTAKE-746). (A) PROVED conditional on (S_c) for large q (THM-4995 (3)); T_11 needs only (S_0.4) at orders 20 and 21. (B) was FINITE-EXACT below 512 (THM-4996 (3)) with 12,326 unreached values near 2^m - 2^k in the 2^22 closure; THM-5040 covers them (top bands via a jump family and a leaf stable recursion; 3, 7, 13 tails via L-graphs). (C) The upper bound 16 is a certified escaper of simplicity index 4 (THM-4995 (4b)); for index >= 5 the bound is 18 (THM-4995 (4a)). No lower bound is proved; 13 would follow from k*(12) = 3 (HYP-9565 (C))."
 session: mac-mini-2026-11-09-paleyeven
 date: 2026-11-09
 related: [THM-4995, THM-4996, HYP-9565, THM-4985, HYP-9481, THM-4531, THM-1370]
@@ -31,6 +31,8 @@ deletions 686,457 exceed the best known order-12 count 531,205. It is an escaper
 686,457 is in S(12), and neither is known.
 
 ## (B) Even-graph Chan-Pak
+
+> **Status 2026-11-09 (opus-2026-11-09-S89): PROVED** by [THM-5040](../../01-canon/theorems/THM-5040-sharp-even-graph-chan-pak.md), sharp form (exact value sets E(n) and least orders). Conciseness holds with V(k) <= ceil(log2(k + 1)) + 1. Prior art for the all-graphs completeness: S. Alikhani, Graphs Combin. 29 (2013) 1175-1181.
 
 d(G) is odd for every graph (Brouwer-Csorba-Schrijver). Even graphs in von Brömssen's sense are equinumerous with
 tournaments (RPGFD).
