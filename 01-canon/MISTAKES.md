@@ -23796,3 +23796,46 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   mutation-free diagnostics and optimized checker semantics before promotion.
   Preserve endpoint bits, saturation and the actual interval center, not only
   a scalar gap, gcd or residue set.
+
+## MISTAKE-742 (2026-11-09, opus-2026-11-09-S87, HYP-9540 (B) and (D), THM-4950 (1) and (5), THM-4951 credits, at the pre-audit checkpoint adfb2402b7 and a5a3b2793e; PREREGISTRATION-2 outcome 8896d6e7a2; found by the independent audit, 05-knowledge/results/ternary_metagraph_20261109/audit/AUDIT.md)
+
+- **What was claimed.**
+  - HYP-9540 (B), blue clause: blue lines join exactly the nu-class pairs that black lines join, minus (1, 1) from
+    n = 6 on, plus the transitive line.
+  - HYP-9540 (D): the blue-line (1,3) excess of THM-4951 (5) persists at every odd n >= 11. It was still in the title,
+    status, README and INDEX after the session's own pre-registered U1 had refuted it at n = 13.
+  - THM-4950 (1): the proof labelled the directions the wrong way round.
+  - THM-4950 (5): stated without crediting its method, H <= H_3 with Busch's floor, which is THM-4952 (E). That had
+    been committed by the concurrent mac-mini lane 14 minutes earlier. It also claimed to confirm HYP-9541 (4) as a
+    whole, while it confirms only the strong-spectrum sentence, and under a different convention for order 1.
+  - THM-4951 (1), independence bullet: typed NEW, but it is Session26's corollary.
+  - THM-4951: the staircase lemma was presented without its earlier appearances (THM-4731 (6), THM-337).
+  - THM-4950: the binary lane list in the comparison omitted p != 3 in 7p and the carry atoms 49, 63, 343.
+  - PREREGISTRATION-2's outcome said "R1 is now proved at every odd n" via a quotient tournament and Redei, with no
+    source. That argument is step 5 of the THM-4922 (4) audit proof (2026-11-07).
+- **What is true.**
+  - Blue boundary lines have palindromic triple words. So the blue tight pairs are the P-pairs of palindromic tight
+    colourings, for n <= 26 exactly {j, k - j} with j even or k odd.
+  - At n = 12 no blue line has nu-pair (1, 3), proved by the three palindromic tight colourings and confirmed by the
+    audit's census of all 2^29 blue lines.
+  - The session had itself proved this at n = 14 (THM-4951 (3d)) and checked it at n = 12 (T4) before writing the
+    clause.
+  - The (1,3) excess changes sign: -0.000906 at n = 13 (z = -54), +0.001689 at n = 15, -0.000111 at n = 17.
+  - The mod-4 balance mechanism, the line bound and the window certificates are KNOWN: THM-4922 (4) audit and
+    Session26. The background survey found them before canon, and THM-4951 credits them.
+- **Repair.**
+  - HYP-9540 (B)'s blue clause is restated, and the old clause recorded as REFUTED.
+  - (D) is replaced by the sign law (-1)^(c+1), which passed the pre-registered U4 at n = 17, with its history.
+  - THM-4950 (1) is relabelled.
+  - THM-4950 (5) credits THM-4952 (E), narrows its scope, states the convention, and is strengthened to exact below
+    337.
+  - The credits are added (Session26, THM-4731 (6), THM-337, THM-791's odd-n contrast, THM-4744), and the binary
+    lanes corrected.
+  - The Q1-Q3 outcome is appended to PREREGISTRATION.md.
+- **Lesson.**
+  - Before writing a conjecture about which pairs or values occur, test it against every special case proved or
+    computed in the same session. A rule written in one section must not contradict a theorem two sections earlier.
+  - When a pre-registered test refutes a canon clause, change every copy of the clause in the same commit: title,
+    status, body, README and INDEX.
+  - On a same-day concurrent lane, credit the method, not only the result.
+  - Start the background prior-art survey before deriving a mechanism, not after (MISTAKE-690, MISTAKE-739).

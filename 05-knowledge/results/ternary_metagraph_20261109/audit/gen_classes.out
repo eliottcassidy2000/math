@@ -1,0 +1,9 @@
+n=1 classes 1 strong 1 distinct strong H_3 1 max strong H_3 1 OCF failures 0
+n=2 classes 1 strong 0 distinct strong H_3 0 max strong H_3 0 OCF failures 0
+n=3 classes 2 strong 1 distinct strong H_3 1 max strong H_3 4 OCF failures 0
+n=4 classes 4 strong 1 distinct strong H_3 1 max strong H_3 7 OCF failures 0
+n=5 classes 12 strong 6 distinct strong H_3 4 max strong H_3 22 OCF failures 0
+n=6 classes 56 strong 35 distinct strong H_3 15 max strong H_3 79 OCF failures 0
+n=7 classes 456 strong 353 distinct strong H_3 75 max strong H_3 304 OCF failures 0
+n=8 classes 6880 strong 6008 distinct strong H_3 357 max strong H_3 1207 OCF failures 0
+n=9 classes 191536 strong 178133 distinct strong H_3 1867 max strong H_3 6292 OCF failures 0

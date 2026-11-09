@@ -1,0 +1,25 @@
+n=3 c=1 N=0: blue tilings 2; H = 3 (mod 4) on 1 of them
+  blue lines by (H mod 4) pair: (1,1) 0 (1,3) 1 (3,3) 0 (each line counted once)
+  affinity f = A(y) + x.B(y) failures: 0 of 2; (P2) failures: 0 of 1
+  |D| = 1, |D_1| = 1, |D_0| = 0
+  formula 2^(N+c-2) + 2^(c-2)(|D_1| - |D_0|) = -9223372036854775808 (direct 1)
+n=5 c=2 N=2: blue tilings 16; H = 3 (mod 4) on 8 of them
+  blue lines by (H mod 4) pair: (1,1) 2 (1,3) 4 (3,3) 2 (each line counted once)
+  affinity f = A(y) + x.B(y) failures: 0 of 16; (P2) failures: 0 of 4
+  |D| = 0, |D_1| = 0, |D_0| = 0
+  formula 2^(N+c-2) + 2^(c-2)(|D_1| - |D_0|) = 4 (direct 4)
+n=7 c=3 N=6: blue tilings 512; H = 3 (mod 4) on 256 of them
+  blue lines by (H mod 4) pair: (1,1) 64 (1,3) 128 (3,3) 64 (each line counted once)
+  affinity f = A(y) + x.B(y) failures: 0 of 512; (P2) failures: 0 of 64
+  |D| = 0, |D_1| = 0, |D_0| = 0
+  formula 2^(N+c-2) + 2^(c-2)(|D_1| - |D_0|) = 128 (direct 128)
+n=9 c=4 N=12: blue tilings 65536; H = 3 (mod 4) on 32768 of them
+  blue lines by (H mod 4) pair: (1,1) 8192 (1,3) 16384 (3,3) 8192 (each line counted once)
+  affinity f = A(y) + x.B(y) failures: 0 of 65536; (P2) failures: 0 of 4096
+  |D| = 0, |D_1| = 0, |D_0| = 0
+  formula 2^(N+c-2) + 2^(c-2)(|D_1| - |D_0|) = 16384 (direct 16384)
+n=11 c=5 N=20: blue tilings 33554432; H = 3 (mod 4) on 16777216 of them
+  blue lines by (H mod 4) pair: (1,1) 4014080 (1,3) 8749056 (3,3) 4014080 (each line counted once)
+  affinity f = A(y) + x.B(y) failures: 0 of 33554432; (P2) failures: 0 of 1048576
+  |D| = 94208, |D_1| = 69632, |D_0| = 24576
+  formula 2^(N+c-2) + 2^(c-2)(|D_1| - |D_0|) = 8749056 (direct 8749056)

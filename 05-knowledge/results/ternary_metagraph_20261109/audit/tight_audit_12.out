@@ -1,0 +1,55 @@
+word 1000000000 P(A)=1 P(B)=3  black 768 blue 0
+word 1100000000 P(A)=1 P(B)=3  black 1777 blue 0
+word 1010000000 P(A)=1 P(B)=3  black 215 blue 0
+word 1110000000 P(A)=1 P(B)=3  black 1692 blue 0
+word 1111000000 P(A)=2 P(B)=2  black 5293 blue 0
+word 1111100000 P(A)=2 P(B)=2  black 8316 blue 0
+word 1111010000 P(A)=2 P(B)=2  black 692 blue 0
+word 1111110000 P(A)=2 P(B)=2  black 5293 blue 0
+word 1110001000 P(A)=2 P(B)=2  black 14829 blue 0
+word 1110101000 P(A)=2 P(B)=2  black 1656 blue 0
+word 1100011000 P(A)=2 P(B)=2  black 42516 blue 0
+word 1110011000 P(A)=2 P(B)=2  black 32334 blue 0
+word 1000111000 P(A)=2 P(B)=2  black 27698 blue 0
+word 1100111000 P(A)=2 P(B)=2  black 39145 blue 0
+word 1010111000 P(A)=2 P(B)=2  black 2254 blue 0
+word 1110111000 P(A)=2 P(B)=2  black 14829 blue 0
+word 1111111000 P(A)=3 P(B)=1  black 1692 blue 0
+word 1110001100 P(A)=2 P(B)=2  black 39145 blue 0
+word 1100011100 P(A)=2 P(B)=2  black 51396 blue 0
+word 1110011100 P(A)=2 P(B)=2  black 42516 blue 0
+word 1111111100 P(A)=3 P(B)=1  black 1777 blue 0
+word 1110001010 P(A)=2 P(B)=2  black 2254 blue 0
+word 1111111010 P(A)=3 P(B)=1  black 215 blue 0
+word 1110001110 P(A)=2 P(B)=2  black 27698 blue 0
+word 1111111110 P(A)=3 P(B)=1  black 768 blue 0
+word 1110000001 P(A)=2 P(B)=2  black 8114 blue 0
+word 1111110001 P(A)=3 P(B)=1  black 2928 blue 0
+word 1110000101 P(A)=2 P(B)=2  black 1668 blue 0
+word 1111110101 P(A)=3 P(B)=1  black 161 blue 0
+word 1100000011 P(A)=2 P(B)=2 palindrome black 18372 blue 156
+word 1110000011 P(A)=2 P(B)=2  black 24403 blue 0
+word 1111100011 P(A)=3 P(B)=1  black 7946 blue 0
+word 1111110011 P(A)=3 P(B)=1  black 6377 blue 0
+word 1000000111 P(A)=2 P(B)=2  black 8114 blue 0
+word 1100000111 P(A)=2 P(B)=2  black 24403 blue 0
+word 1010000111 P(A)=2 P(B)=2  black 1668 blue 0
+word 1110000111 P(A)=2 P(B)=2 palindrome black 22452 blue 140
+word 1111000111 P(A)=3 P(B)=1  black 12155 blue 0
+word 1111100111 P(A)=3 P(B)=1  black 10852 blue 0
+word 1111010111 P(A)=3 P(B)=1  black 572 blue 0
+word 1111110111 P(A)=3 P(B)=1  black 2684 blue 0
+word 1110001111 P(A)=3 P(B)=1  black 12155 blue 0
+word 1110101111 P(A)=3 P(B)=1  black 572 blue 0
+word 1100011111 P(A)=3 P(B)=1  black 7946 blue 0
+word 1110011111 P(A)=3 P(B)=1  black 10852 blue 0
+word 1000111111 P(A)=3 P(B)=1  black 2928 blue 0
+word 1100111111 P(A)=3 P(B)=1  black 6377 blue 0
+word 1010111111 P(A)=3 P(B)=1  black 161 blue 0
+word 1110111111 P(A)=3 P(B)=1  black 2684 blue 0
+word 1111111111 P(A)=4 P(B)=0 palindrome black 0 blue 1
+n=12 slice 0/1: tight colourings (x_0 = 1) 50, realised 50, palindromic 3 (realised by a blue line 3); tight lines 563609 (blue 297)
+  pair (0,4) blue 1
+  pair (1,3) black 96254
+  pair (2,2) black 467058
+  pair (2,2) blue 296

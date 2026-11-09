@@ -1,0 +1,14 @@
+order 3: strong classes 1 (S86 1); multiset of packing vectors identical: True; distinct strong H_3 1
+order 4: strong classes 1 (S86 1); multiset of packing vectors identical: True; distinct strong H_3 1
+order 5: strong classes 6 (S86 6); multiset of packing vectors identical: True; distinct strong H_3 4
+order 6: strong classes 35 (S86 35); multiset of packing vectors identical: True; distinct strong H_3 15
+order 7: strong classes 353 (S86 353); multiset of packing vectors identical: True; distinct strong H_3 75
+order 8: strong classes 6008 (S86 6008); multiset of packing vectors identical: True; distinct strong H_3 357
+order 9: strong classes 178133 (S86 178133); multiset of packing vectors identical: True; distinct strong H_3 1867
+distinct strong H_3 values of orders <= 9 (incl. order 1): 1909
+order 10: auditor 10070 values (max 31549); session bitmaps (12 slices) 10070; witness file 10070; identical sets: True
+order-10 values not attained by strong orders <= 9: 8243
+v = 1 (mod 3), v < 225, with no strong realiser of order <= 10: [10, 31, 64]
+first v = 1 (mod 3) >= 225 with no strong realiser of order <= 10: 28981
+missing below 337 (exactness bound from H_3 >= 1 + 1.5 (H - 1), H >= 225 at n >= 11): [10, 31, 64]
+order <= 9 strong value sets match S86: True

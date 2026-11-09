@@ -37,3 +37,18 @@ most about 17,700.
 A failure of Q1 or Q2 says nothing about the truth of ternary Chan-Pak; it only measures the construction universe.
 
 Outcome: to be appended below without editing the predictions.
+
+## Outcome (appended after the run; the predictions above are unedited)
+
+`ternary_order10.c` gave 10,070 distinct strong order-10 H_3 values (max 31,549), and `ternary_coverage10.py` formed
+the closure (coverage10.out). The independent audit reproduced both, the order-10 set by a different method
+(audit/ext10.out, audit/closure_check.out).
+
+- **Q1 CONFIRMED.** m* = 9679 >= 5000. Every value = 1 (mod 3) up to 29,035, except 10 and 31, is attained.
+- **Q2 CONFIRMED.** m* = 9679 <= 20000. The first uncovered value is 29,038 = 2 * 14,519, an irreducible of lane Q.
+- **Q3 CONFIRMED.** All 4,031 irreducibles of M3 below 29,038 are piece values. As stated in the prediction, this
+  holds automatically once the closure is formed correctly: an irreducible covered by the closure must be a single
+  piece value.
+
+Afterwards the audit observed that the strong classes of order <= 10 alone already give the same m*. Pieces (ii) and
+(iii) contribute nothing below 29,038.

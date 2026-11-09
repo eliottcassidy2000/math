@@ -1,0 +1,1 @@
+single reversed tile (0,3), n = 4..20: nu-pair (1, floor(n/3)), black for n >= 5: failures []

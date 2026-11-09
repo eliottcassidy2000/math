@@ -1,0 +1,116 @@
+n=3 tiles m=1 mode=all: lines 1 (expected 1), blue lines 1
+  nu-pair (0,1) blue 1
+  blue lines by H mod 4 pair: (1,1) 0 (1,3) 1 (3,3) 0
+  blue lines by H mod 8 pair: (1,3):1
+n=4 tiles m=3 mode=all: lines 4 (expected 4), blue lines 2
+  nu-pair (0,1) blue 1
+  nu-pair (1,1) black 2
+  nu-pair (1,1) blue 1
+  blue lines by H mod 4 pair: (1,1) 2 (1,3) 0 (3,3) 0
+  blue lines by H mod 8 pair: (1,5):1 (5,5):1
+n=5 tiles m=6 mode=all: lines 32 (expected 32), blue lines 8
+  nu-pair (0,1) blue 1
+  nu-pair (1,1) black 24
+  nu-pair (1,1) blue 7
+  blue lines by H mod 4 pair: (1,1) 2 (1,3) 4 (3,3) 2
+  blue lines by H mod 8 pair: (1,1):1 (1,3):2 (1,5):1 (3,5):1 (3,7):1 (5,7):1 (7,7):1
+n=6 tiles m=10 mode=all: lines 512 (expected 512), blue lines 32
+  nu-pair (0,2) blue 1
+  nu-pair (1,1) black 56
+  nu-pair (1,2) black 202
+  nu-pair (1,2) blue 8
+  nu-pair (2,2) black 222
+  nu-pair (2,2) blue 23
+  blue lines by H mod 4 pair: (1,1) 32 (1,3) 0 (3,3) 0
+  blue lines by H mod 8 pair: (1,1):7 (1,5):14 (5,5):11
+n=7 tiles m=15 mode=all: lines 16384 (expected 16384), blue lines 256
+  nu-pair (0,2) blue 1
+  nu-pair (1,1) black 30
+  nu-pair (1,2) black 1220
+  nu-pair (1,2) blue 45
+  nu-pair (2,2) black 14878
+  nu-pair (2,2) blue 210
+  blue lines by H mod 4 pair: (1,1) 64 (1,3) 128 (3,3) 64
+  blue lines by H mod 8 pair: (1,1):20 (1,3):23 (1,5):32 (1,7):29 (3,3):13 (3,5):33 (3,7):28 (5,5):12 (5,7):43 (7,7):23
+n=8 tiles m=21 mode=all: lines 1048576 (expected 1048576), blue lines 2048
+  nu-pair (0,2) blue 1
+  nu-pair (1,1) black 12
+  nu-pair (1,2) black 5024
+  nu-pair (1,2) blue 17
+  nu-pair (2,2) black 1041492
+  nu-pair (2,2) blue 2030
+  blue lines by H mod 4 pair: (1,1) 2048 (1,3) 0 (3,3) 0
+  blue lines by H mod 8 pair: (1,1):396 (1,5):1060 (5,5):592
+n=9 tiles m=28 mode=all: lines 134217728 (expected 134217728), blue lines 32768
+  nu-pair (0,3) blue 1
+  nu-pair (1,2) black 3634
+  nu-pair (1,2) blue 38
+  nu-pair (1,3) black 15294
+  nu-pair (1,3) blue 113
+  nu-pair (2,2) black 732080
+  nu-pair (2,2) blue 237
+  nu-pair (2,3) black 11480854
+  nu-pair (2,3) blue 2893
+  nu-pair (3,3) black 121953098
+  nu-pair (3,3) blue 29486
+  blue lines by H mod 4 pair: (1,1) 8192 (1,3) 16384 (3,3) 8192
+  blue lines by H mod 8 pair: (1,1):2125 (1,3):4062 (1,5):4026 (1,7):4006 (3,3):2071 (3,5):4254 (3,7):4106 (5,5):2041 (5,7):4062 (7,7):2015
+
+real	0m12.778s
+user	0m0.015s
+sys	0m0.000s
+n=4 tiles m=3 mode=blue: lines 2 (expected 0), blue lines 2
+  nu-pair (0,1) blue 1
+  nu-pair (1,1) blue 1
+  blue lines by H mod 4 pair: (1,1) 2 (1,3) 0 (3,3) 0
+  blue lines by H mod 8 pair: (1,5):1 (5,5):1
+n=5 tiles m=6 mode=blue: lines 8 (expected 0), blue lines 8
+  nu-pair (0,1) blue 1
+  nu-pair (1,1) blue 7
+  blue lines by H mod 4 pair: (1,1) 2 (1,3) 4 (3,3) 2
+  blue lines by H mod 8 pair: (1,1):1 (1,3):2 (1,5):1 (3,5):1 (3,7):1 (5,7):1 (7,7):1
+n=6 tiles m=10 mode=blue: lines 32 (expected 0), blue lines 32
+  nu-pair (0,2) blue 1
+  nu-pair (1,2) blue 8
+  nu-pair (2,2) blue 23
+  blue lines by H mod 4 pair: (1,1) 32 (1,3) 0 (3,3) 0
+  blue lines by H mod 8 pair: (1,1):7 (1,5):14 (5,5):11
+n=7 tiles m=15 mode=blue: lines 256 (expected 0), blue lines 256
+  nu-pair (0,2) blue 1
+  nu-pair (1,2) blue 45
+  nu-pair (2,2) blue 210
+  blue lines by H mod 4 pair: (1,1) 64 (1,3) 128 (3,3) 64
+  blue lines by H mod 8 pair: (1,1):20 (1,3):23 (1,5):32 (1,7):29 (3,3):13 (3,5):33 (3,7):28 (5,5):12 (5,7):43 (7,7):23
+n=8 tiles m=21 mode=blue: lines 2048 (expected 0), blue lines 2048
+  nu-pair (0,2) blue 1
+  nu-pair (1,2) blue 17
+  nu-pair (2,2) blue 2030
+  blue lines by H mod 4 pair: (1,1) 2048 (1,3) 0 (3,3) 0
+  blue lines by H mod 8 pair: (1,1):396 (1,5):1060 (5,5):592
+n=9 tiles m=28 mode=blue: lines 32768 (expected 0), blue lines 32768
+  nu-pair (0,3) blue 1
+  nu-pair (1,2) blue 38
+  nu-pair (1,3) blue 113
+  nu-pair (2,2) blue 237
+  nu-pair (2,3) blue 2893
+  nu-pair (3,3) blue 29486
+  blue lines by H mod 4 pair: (1,1) 8192 (1,3) 16384 (3,3) 8192
+  blue lines by H mod 8 pair: (1,1):2125 (1,3):4062 (1,5):4026 (1,7):4006 (3,3):2071 (3,5):4254 (3,7):4106 (5,5):2041 (5,7):4062 (7,7):2015
+n=10 tiles m=36 mode=blue: lines 524288 (expected 0), blue lines 524288
+  nu-pair (0,3) blue 1
+  nu-pair (1,2) blue 9
+  nu-pair (1,3) blue 25
+  nu-pair (2,2) blue 409
+  nu-pair (2,3) blue 14562
+  nu-pair (3,3) blue 509282
+  blue lines by H mod 4 pair: (1,1) 524288 (1,3) 0 (3,3) 0
+  blue lines by H mod 8 pair: (1,1):134984 (1,5):261960 (5,5):127344
+n=11 tiles m=45 mode=blue: lines 16777216 (expected 0), blue lines 16777216
+  nu-pair (0,3) blue 1
+  nu-pair (1,2) blue 18
+  nu-pair (1,3) blue 535
+  nu-pair (2,2) blue 184
+  nu-pair (2,3) blue 27327
+  nu-pair (3,3) blue 16749151
+  blue lines by H mod 4 pair: (1,1) 4014080 (1,3) 8749056 (3,3) 4014080
+  blue lines by H mod 8 pair: (1,1):1003904 (1,3):2197128 (1,5):2007724 (1,7):2171572 (3,3):1010444 (3,5):2204396 (3,7):2007068 (5,5):1002452 (5,7):2175960 (7,7):996568

@@ -41,8 +41,9 @@ odd-cycle packings of some tournament.
 - Below 242 these are the only gaps: THM-4940 (6), pre-registered P1, CONFIRMED.
 - Below 5399 they are still the only gaps: THM-4940 (9), constructive, with every other value attained by a tournament
   of order <= 9.
-- Below 29,036 they are still the only gaps (THM-4950 (3), opus-2026-11-09-S87). This is constructive, from the
-  complete strong order-10 census (10,070 values, independently re-checked) and the S86 pieces.
+- Below 29,036 they are still the only gaps (THM-4950 (3), opus-2026-11-09-S87). This is FINITE-EXACT by explicit
+  witnesses: every value is an order join of strong tournaments of order <= 10. The complete strong order-10 census
+  has 10,070 values, independently re-derived by the audit. S86's other pieces add nothing below 29,038.
 - **Reduction (THM-4950 (1), (2)).** (A) is equivalent to: every irreducible of the monoid
   M3 = {v = 1 (mod 3)} minus {10, 31} is H_3 of a strong tournament. The irreducibles are:
   - the primes = 1 (mod 3) other than 31;

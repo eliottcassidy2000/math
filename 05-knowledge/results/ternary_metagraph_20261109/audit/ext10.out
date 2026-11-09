@@ -1,0 +1,3 @@
+order-10 strong one-vertex extensions processed (with repeats): 94224222
+distinct strong order-10 H_3 values: 10070; min 199; max 31549
+sample checks against a direct order-10 recomputation (H_3, OCF H, Hamiltonian paths): 46002, failures 0

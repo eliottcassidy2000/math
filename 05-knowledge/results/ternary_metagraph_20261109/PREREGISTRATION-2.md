@@ -57,3 +57,12 @@ against Hamiltonian-path DP on 20,004 random blue tilings, with 0 mismatches.
   - The 1 : 2 : 1 law holds at n = 5, 7, 9 only.
 - **R1 is now proved at every odd n.** Mod 2, the mirror-free path count equals the total path count of a quotient
   tournament on the mirror pairs, which is odd by Redei (see the note).
+
+## Credit note (appended 2026-11-09, after the outcome; nothing above is edited)
+
+The proof of R1 sketched in the outcome is KNOWN.
+- The quotient tournament on the mirror pairs, with the mod-2 path count equal to its total path count, odd by
+  Redei, is step 5 of the THM-4922 (4) proof supplied by its audit
+  (first_creators_genealogy_20261107/audit/AUDIT.md section 4).
+- The mirror-path decomposition is step 3 of the same proof.
+- This session re-derived both before finding that proof (MISTAKE-742). THM-4951 (5) credits them.

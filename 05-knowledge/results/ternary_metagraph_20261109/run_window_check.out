@@ -1,0 +1,8 @@
+n = 4: tight colourings 1, run-window tight with the right word 1, fails 0 []
+n = 7: tight colourings 3, run-window tight with the right word 3, fails 0 []
+n = 10: tight colourings 8, run-window tight with the right word 8, fails 0 []
+n = 13: tight colourings 20, run-window tight with the right word 20, fails 0 []
+n = 16: tight colourings 48, run-window tight with the right word 48, fails 0 []
+n = 6: tight colourings 5, run-window tight with the right word 5, fails 0 []
+n = 9: tight colourings 17, run-window tight with the right word 16, fails 1 [('1110111', 3, 1)]
+n = 12: tight colourings 50, run-window tight with the right word 47, fails 3 [('1110111000', 3, 2), ('1111110111', 4, 1), ('1110111111', 4, 1)]

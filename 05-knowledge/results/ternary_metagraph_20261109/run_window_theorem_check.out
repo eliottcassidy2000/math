@@ -1,0 +1,8 @@
+(3f) run-window theorem: 284 colourings with all runs >= 2 at n = 5..13; failures 0
+(3e) k = 1, n = 4: tight colourings 2, block words with one short block 2, equal True; up to complement 1 vs (k+1) 2^(k-2) = 1.0
+(3e) k = 2, n = 7: tight colourings 6, block words with one short block 6, equal True; up to complement 3 vs (k+1) 2^(k-2) = 3.0
+(3e) k = 3, n = 10: tight colourings 16, block words with one short block 16, equal True; up to complement 8 vs (k+1) 2^(k-2) = 8.0
+(3e) k = 4, n = 13: tight colourings 40, block words with one short block 40, equal True; up to complement 20 vs (k+1) 2^(k-2) = 20.0
+(3e) k = 5, n = 16: tight colourings 96, block words with one short block 96, equal True; up to complement 48 vs (k+1) 2^(k-2) = 48.0
+(3e) k = 6, n = 19: tight colourings 224, block words with one short block 224, equal True; up to complement 112 vs (k+1) 2^(k-2) = 112.0
+(3e) failures 0

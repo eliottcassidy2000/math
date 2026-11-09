@@ -1,7 +1,6 @@
 /* nu_lines.c - opus-2026-11-09-S87.
  * Every line {t, t + 1} of the tiling line metagraph at order n, classified by the packing numbers
  * (nu = max number of vertex-disjoint cyclic triangles = of disjoint cycles) of its two endpoints and by colour.
- * Also records which endpoint is strong (closed tilings contain the Hamiltonian cycle; THM-4729).
  * usage: nu_lines n SLICE NSLICES      (prints counts "nuA nuB blue count" with nuA <= nuB)
  */
 #include <stdio.h>

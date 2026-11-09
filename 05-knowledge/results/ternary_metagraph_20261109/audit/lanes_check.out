@@ -1,0 +1,7 @@
+irreducibles of M3 below 200000: 23925; by lane {'10P': 1123, '31P': 413, '31Q': 515, 'P': 8987, 'Q': 12882, 'sporadic': 5}
+irreducibles outside the five lanes and sporadics: [] (0); lane elements that are reducible: [] (0)
+order-10 values not given by S86's pieces (orders <= 9, alpha_1 <= 80, intercyclic): 4063
+calibration: m* with strong pieces up to order 8 (+ S86 inventory and intercyclic): 370; up to order 9: 1800; up to order 10: 9679
+first irreducible not a piece value, by lane: {'Q': 29038, 'P': 29191, '31P': 30721, '31Q': 31093, '10P': 31210}
+sporadics attained as strong values: [(40, True), (250, True), (310, True), (9610, True), (29791, True)]; 29791 at order 10: True
+m* = 9679 is 0.9204 of the largest order-10 value 31549
