@@ -50,3 +50,14 @@ The signs so far are + at n = 11, - at n = 13 and + at n = 15. This suggests sig
   uniform samples.
 
 Outcome: to be appended below without editing U4.
+
+## Outcome of U4 (appended after the run; U4 above is unedited)
+
+A 20,000-sample timing probe at n = 17 was made first: +0.000425, se 0.000331, inconclusive. It is recorded in
+mirror_sample.out.
+
+- **U4 CONFIRMED.** At n = 17 (12,000,000 samples) the (1,3)-share is 1/2 - 0.000111, with standard error 0.000014
+  (z = -8.0). |D| / 2^56 is estimated at 0.00917.
+
+So far the sign of the excess is (-1)^(c+1) at n = 11, 13, 15, 17. The magnitudes are 0.0215 (exact), 0.0009, 0.0017
+and 0.0001: decreasing overall, but not monotone.
