@@ -1,0 +1,14 @@
+seed m=8 d=129 (2^7+1): brute d=129, C ODD/QODD, universal=0, deg(q=3)=1, networkx odd aut fixing q: True -> OK
+seed m=8 d=133 (2^7+5): brute d=133, C ODD/QODD, universal=0, deg(q=3)=1, networkx odd aut fixing q: True -> OK
+seed m=8 d=165 (2^7+37): brute d=165, C ODD/QODD, universal=0, deg(q=5)=1, networkx odd aut fixing q: True -> OK
+seed m=9 d=257 (2^8+1): brute d=257, C ODD/QODD, universal=0, deg(q=4)=1, networkx odd aut fixing q: True -> OK
+seed m=9 d=261 (2^8+5): brute d=261, C ODD/QODD, universal=0, deg(q=6)=1, networkx odd aut fixing q: True -> OK
+seed m=9 d=293 (2^8+37): brute d=293, C ODD/QODD, universal=0, deg(q=6)=1, networkx odd aut fixing q: True -> OK
+Lemma C chain m = 8..16, c in {1,5,37}: 27 graphs, 0 failures
+n=8: 64 new values built ({'C': 3, 'B': 29, 'A': 32}); failures 0; networkx/direct re-check of 12: 0 bad
+n=9: 128 new values built ({'C': 3, 'B': 61, 'A': 64}); failures 0; networkx/direct re-check of 12: 0 bad
+n=10: 256 new values built ({'C': 3, 'B': 125, 'A': 128}); failures 0; networkx/direct re-check of 12: 0 bad
+n=11: 512 new values built ({'C': 3, 'B': 253, 'A': 256}); failures 0; networkx/direct re-check of 0: 0 bad
+n=12: 1024 new values built ({'C': 3, 'B': 509, 'A': 512}); failures 0; networkx/direct re-check of 0: 0 bad
+n=13: 2048 new values built ({'C': 3, 'B': 1021, 'A': 1024}); failures 0; networkx/direct re-check of 0: 0 bad
+ALL: PASS

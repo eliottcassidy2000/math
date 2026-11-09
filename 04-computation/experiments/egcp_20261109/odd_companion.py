@@ -71,6 +71,8 @@ if __name__ == "__main__":
         ok &= good
         print("seed n=%d d=%d leaf=%d: %s" % (n, d, q, "OK" if good else "BAD"))
     base = {}
+    if len(sys.argv) <= 1:
+        print("census check skipped (pass dom511.out to run it); only the seeds were re-verified")
     if len(sys.argv) > 1:
         from collections import defaultdict
         connE = defaultdict(set); connO = defaultdict(set); conn_graph = {}

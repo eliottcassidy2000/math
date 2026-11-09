@@ -34,7 +34,7 @@ Scripts and outputs: `04-computation/experiments/egcp_20261109/` ([README](../..
 
 ## Companion results
 
-- **[THM-5042](../../../01-canon/theorems/THM-5042-odd-graph-companion.md)** is a second, independent proof of mac-mini's THM-5056, which was first in canon. Odd graphs on <= n vertices give
+- **[THM-5042](../../../01-canon/theorems/THM-5042-odd-graph-companion.md)** is a second proof of mac-mini's THM-5056, which was first in canon. Its Lemmas A and B (cone over a cone = K_2 v G; padded cones) are THM-5056's steps; only the offset seeds are independent. Odd graphs on <= n vertices give
   exactly the odd numbers up to 2^n - 1 except 1, 5 and 37, so oddness costs no vertex. The proof:
   - a cone over a cone is odd (two adjacent universal vertices);
   - padded cones over odd graphs are odd;
@@ -47,8 +47,9 @@ Scripts and outputs: `04-computation/experiments/egcp_20261109/` ([README](../..
   - H ignores loops and is tile-wise additive, so a defect tile carries the same total as the arc-flip pair through it;
   - the 7/21 conjecture is restated in these coordinates (refuted by Session234; corrected form DG2).
 - **[HYP-9610](../../hypotheses/HYP-9610-even-graph-domination-no-universal-and-dictionary.md).**
-  - The no-universal-vertex sets E0(n). The bound is proved; the sets are exact for n <= 9, and every closure miss at
-    n = 10, 11 is realised.
+  - The no-universal-vertex sets E0(n). The exclusions are PROVED for all n (audit2's excess argument). Containment is
+    FINITE-EXACT for n <= 13 by audit2's direct search; S89's own n = 10, 11 search had an array overflow
+    (MISTAKE-747).
   - The binary/ternary dictionary of exceptional sets, typed ANALOGY.
 
 ## What this changes
@@ -64,5 +65,4 @@ Scripts and outputs: `04-computation/experiments/egcp_20261109/` ([README](../..
 
 ## Open
 
-- The exact no-universal-vertex value sets beyond order 9. They are exact for n <= 9, and cover.py's closure misses
-  about 2n values per order, which the theorem never needs.
+- Containment for the no-universal-vertex sets at n >= 14 (HYP-9610 (A)).

@@ -1,0 +1,4 @@
+n=6 edges=[(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3)] degs=[5, 3, 2, 2, 1, 1] |Aut|=4 odd auts=0 universal=True non-adjacent twin pairs=[(2, 3), (4, 5)]
+n=6 edges=[(0, 1), (0, 3), (0, 4), (0, 5), (1, 2), (1, 4), (2, 3)] degs=[4, 3, 2, 2, 2, 1] |Aut|=1 odd auts=0 universal=False non-adjacent twin pairs=[]
+n=6 edges=[(0, 2), (0, 4), (0, 5), (1, 2), (1, 4), (1, 5), (2, 3)] degs=[3, 3, 3, 1, 2, 2] |Aut|=4 odd auts=0 universal=False non-adjacent twin pairs=[(0, 1), (4, 5)]
+n=6 edges=[(0, 1), (0, 3), (0, 5), (1, 3), (1, 4), (2, 3), (2, 4)] degs=[3, 3, 2, 3, 2, 1] |Aut|=2 odd auts=0 universal=False non-adjacent twin pairs=[]

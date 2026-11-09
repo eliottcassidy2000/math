@@ -1,0 +1,5 @@
+N 2 labelled 2 nfact 2
+ISO all 2 (sumAut 4) even 1 (sumAut 2) connected 1 connected_even 0
+# k lab_odd iso_odd lab_even iso_even lab_even0 iso_even0 lab_codd iso_codd lab_ceven iso_ceven wit_odd wit_even wit_even0
+V 1 0 0 1 1 1 1 0 0 0 0 -1 0 0
+V 3 1 1 0 0 0 0 1 1 0 0 1 -1 -1

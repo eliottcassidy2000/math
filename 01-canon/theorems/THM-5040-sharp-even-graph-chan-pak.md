@@ -317,7 +317,8 @@ The two-hub graph TH(G, t) is used only in cover.py's corroborating closure:
   - The exceptional sets are {7, 21} for H on tournaments (Chan-Pak) and {3, 7, 13} for d on even graphs.
   - 7 is shared. Each exceptional value is the count of the smallest odd structure forced by an adjacent-twin
     obstruction.
-  - This is a typed ANALOGY. No map carries H to d (THM-4996 (4); THM-4531).
+  - This is a typed ANALOGY. No natural map carries H to d (THM-4531; THM-4996 "NOT CLAIMED"). Value-preserving
+    bijections already fail at n = 3 (H in {1, 3}, d in {1, 5}).
 - **Odd graphs.** Odd graphs miss exactly {1, 5, 37}, on the minimal ceil(log2(k + 1)) vertices. This is THM-5056
   (mac-mini, first) and THM-5042 (independent second proof), which answer the question left open in the first version
   of this remark.

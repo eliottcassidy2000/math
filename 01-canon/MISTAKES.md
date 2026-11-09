@@ -24013,13 +24013,27 @@ thresholds from the data before writing them.
   - mac-mini's lane on the same directive sent "odd graphs settled, please do not start on it" at 13:17 and pushed
     THM-5056 first. S89 had not fetched since about 13:10.
   - The even case had crossed the same way: THM-5040 and THM-5055 are independent proofs, after crossed messages.
+- **What was claimed (4), found by audit2.**
+  - THM-5042's status said its proof was found "without knowledge" of THM-5056, landed "about an hour" later, and
+    differed "in the leading-11 step".
+  - HYP-9610 and the packet said "all 38 closure misses at n = 10, 11 realised".
+- **What is true (4).**
+  - **Same steps.** K_1 v (K_1 v G) = K_2 v G, so Lemmas A and B are THM-5056 steps 1-2. They were already stated as
+    HYP-9625 reductions (153409f791, 13:08; MSG-2473, 13:09).
+  - **Timing.** The gap was about one minute: THM-5056 at 13:18, THM-5042 at 13:19.
+  - **Overflow.** e0search.c declared found[16] and was run with 18 and 20 targets. Six values (773, 779, 1533,
+    1537, 1541, 1547) printed "realised" without any graph.
+  - **The claim still holds.** Audit2 found witnesses for all six and realised every conjectured value at
+    n = 10-13.
 - **Repair.**
   - All priority statements now credit BCS Proposition 1.2 for completeness and conciseness, and Alikhani 2013 only
     for D(G, -1). This covers THM-5040, THM-5042, THM-4996 (correction line), HYP-9575, HYP-9610, the INDEX row and
     the README. mac-mini was told about THM-5055 line 35.
   - Corollary 4 is restated as: no isolated vertex, not a join, many are unions; with the example.
-  - THM-5042 is retyped as a second, independent proof of THM-5056, with priority stated, cross-cited
-    (MSG-1988, MSG-1989; MSG-2473, MSG-2474).
+  - THM-5042 is retyped as a second proof of THM-5056 whose only independent part is Lemma C (the seeds), with
+    priority and timeline stated, cross-cited (MSG-1988, MSG-1989; MSG-2473, MSG-2474).
+  - e0search.c now uses found[64]. HYP-9610 cites audit2's witnesses; its (A) exclusion side is now PROVED (audit2
+    Note 1).
   - The audit's minor items are applied: Lemma 0 credited to Heinrich-Tittmann and Brown-Nowakowski; Corollary 3
     ranges; Lemma 8 made unconditional for rho >= 2 and its wording fixed; padding stated in Case 2a; the two-hub
     family documented.
@@ -24027,6 +24041,9 @@ thresholds from the data before writing them.
   - Read the cited parity paper in full: the read-cited-papers-fully pattern again (MISTAKE-690, MISTAKE-692).
   - Never attribute a result through a citing paper's paraphrase.
   - Check every structural side claim (here "never a union") by a quick search before writing it.
+  - A search tool that prints "realised" must print the witness for every hit, and the summary must be computed from
+    the printed witnesses. Size fixed arrays from the input.
+  - Describe a concurrent proof from its text, not from memory of the messages.
   - On a directive shared with a live lane, fetch and read the inbox before each new sub-result (MISTAKE-699,
     MISTAKE-706).
 

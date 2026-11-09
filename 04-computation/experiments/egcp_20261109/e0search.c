@@ -15,7 +15,7 @@ static void bt(int i){ if(oddfound) return; if(i==n){ int rev=0; for(int u=0;u<n
 static int is_even(int *adj){ memcpy(adjg,adj,sizeof(int)*n); for(int v=0;v<n;v++){deg[v]=__builtin_popcount(adj[v]); order_[v]=v; used[v]=0; perm[v]=-1;}
   for(int a=0;a<n;a++) for(int b=a+1;b<n;b++) if(deg[order_[b]]>deg[order_[a]]){int t=order_[a];order_[a]=order_[b];order_[b]=t;}
   oddfound=0; bt(0); return !oddfound; }
-int main(int argc,char**argv){ long iters=atol(argv[1]); n=atoi(argv[2]); rng=(unsigned)atoi(argv[3]); for(int i=4;i<argc;i++) targets[i-4]=atoi(argv[i]); int found[16]={0}; int adj[16];
+int main(int argc,char**argv){ long iters=atol(argv[1]); n=atoi(argv[2]); rng=(unsigned)atoi(argv[3]); for(int i=4;i<argc;i++) targets[i-4]=atoi(argv[i]); int found[64]={0}; /* was [16]: overflowed with 18/20 targets (audit2 Finding 3) */ int adj[16];
   for(long it=0;it<iters;it++){ memset(adj,0,sizeof(adj)); int p=30+rnd()%45; /* edge prob percent */
     for(int u=0;u<n;u++) for(int v=u+1;v<n;v++) if((int)(rnd()%100)<p){adj[u]|=1<<v;adj[v]|=1<<u;}
     int univ=0; for(int v=0;v<n;v++) if(__builtin_popcount(adj[v])==n-1) univ=1; if(univ) continue;

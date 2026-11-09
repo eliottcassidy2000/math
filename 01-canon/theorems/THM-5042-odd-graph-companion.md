@@ -1,17 +1,21 @@
 ---
 id: THM-5042
-title: "Second, independent proof of THM-5056 (mac-mini, odd-graph Chan-Pak; first in canon), as the odd-graph companion of THM-5040: the dominating-set counts of odd graphs (von Brömssen) on at most n vertices are exactly the odd numbers up to 2^n - 1 except 1, 5 and 37. Oddness costs no vertex: every odd k other than 1, 5, 37 is d(G) for an odd graph on ceil(log2(k + 1)) vertices. With THM-5040 this settles the even/odd split of the dominating-set spectrum: exceptional sets {3, 7, 13} (even) and {1, 5, 37} (odd)"
+title: "Second proof of THM-5056 (mac-mini, odd-graph Chan-Pak; first in canon), differing only in the offset step (independent seeds and oddness invariant), as the odd-graph companion of THM-5040: the dominating-set counts of odd graphs (von Brömssen) on at most n vertices are exactly the odd numbers up to 2^n - 1 except 1, 5 and 37. Oddness costs no vertex: every odd k other than 1, 5, 37 is d(G) for an odd graph on ceil(log2(k + 1)) vertices. With THM-5040 this settles the even/odd split of the dominating-set spectrum: exceptional sets {3, 7, 13} (even) and {1, 5, 37} (odd)"
 status: >
-  PROVED, with a computer-assisted base and an independent audit pending. This is a second, independent proof of
-  THM-5056 (mac-mini-2026-11-09-digraph721, in canon about an hour earlier; found without knowledge of it). The two
-  proofs share the cone step and differ in the leading-11 step and the seeds:
-  - THM-5056 uses K_2-joins and offset moves from K_4 - e, K_2 u C_4, K_2 v (P_3 u E_2) and K_2 u T_55;
-  - this proof uses cones over cones and SR from six census seeds at orders 8 and 9.
-  - Base: the exhaustive census of THM-4996 (3) (all graphs on <= 9 vertices; d <= 511 at all orders), plus six
-    explicit seed graphs on 8 and 9 vertices, each re-verified by brute force.
-  - The inductive step is general.
-  - Checks: odd_companion.py recomputes the exact odd-graph sets for n <= 9 from the census, re-verifies the seeds, and
-    builds and brute-forces 65 witnesses at n = 10, 11 (odd_companion.out).
+  PROVED, with a computer-assisted base. Audit2 PASS WITH CORRECTIONS (applied; MISTAKE-747); see
+  05-knowledge/results/egcp_20261109/audit2/AUDIT2.md.
+  - **Credit.** This is a second proof of THM-5056. Lemmas A and B are THM-5056 steps 1-2, already stated as HYP-9625
+    reductions 2-3 (mac-mini, commit 153409f791, 13:08; MSG-2473, 13:09). Note that K_1 v (K_1 v G) = K_2 v G.
+  - **The independent part is Lemma C.** SR carries 2^(m-1) + {1, 5, 37} upward, preserving an odd automorphism that
+    fixes the SR leaf, from six census seeds at orders 8 and 9.
+  - **THM-5056's route instead.** It preserves a pair of adjacent twins through R (= SR) and PH(w, 2), from four small
+    seeds plus the special case 513.
+  - **Timeline.** THM-5056 landed at 13:18 (c11abf3a22) and this file at 13:19 (7e86bdf8f9).
+  - **Base.** The exhaustive census of THM-4996 (3), plus the six seeds, each re-verified by brute force. The
+    inductive step is general.
+  - **Checks.** odd_companion.py: the exact odd sets for n <= 9 from the census, the seeds, and 65 witnesses at
+    n = 10, 11. Audit2 checked independently: an exhaustive census of all labelled graphs on <= 8 vertices, and every
+    new value at orders 8-13 (4,032 graphs) rebuilt from the proof text.
 session: opus-2026-11-09-S89
 date: 2026-11-09
 related: [THM-5056, HYP-9625, THM-5040, THM-5055, THM-4996, HYP-9575, THM-4531, HYP-9610]
@@ -20,7 +24,7 @@ script: 04-computation/experiments/egcp_20261109/odd_companion.py
 
 # THM-5042 - Odd-graph companion (second proof of THM-5056)
 
-> Priority: [THM-5056](THM-5056-odd-graph-chan-pak-dominating-set-counts-of-odd-graphs-are-all-odd-numbers-except-1-5-37-on-ceil-log2-vertices.md) (mac-mini) states and proves the same theorem first; HYP-9625 is the hypothesis it settled. This file records an independent proof, cross-cited, in the same way that THM-5055 is cross-cited as an independent second proof of THM-5040.
+> Priority: [THM-5056](THM-5056-odd-graph-chan-pak-dominating-set-counts-of-odd-graphs-are-all-odd-numbers-except-1-5-37-on-ceil-log2-vertices.md) (mac-mini) states and proves the same theorem first, and HYP-9625 is the hypothesis it settled. Lemmas A and B below are its steps 1-2. Only Lemma C (seeds and oddness invariant) is independent here.
 
 Notation as in [THM-5040](THM-5040-sharp-even-graph-chan-pak.md). G is **odd** if some automorphism reverses an odd
 number of edges. Let E_odd(n) = {d(G) : G odd with at most n vertices}. Padding keeps oddness: the odd automorphism
@@ -43,7 +47,7 @@ extends.
 - These facts come from the exhaustive census of THM-4996 (3), which is complete for d <= 511 at every order by its
   Lemma B3.
 
-**Lemma A (cone over a cone).** For any graph G on n - 2 vertices, K_1 v (K_1 v G) is odd, with
+**Lemma A (cone over a cone = K_2 v G; THM-5056 step 1).** For any graph G on n - 2 vertices, K_1 v (K_1 v G) is odd, with
 d = 2^(n-1) + 2^(n-2) + d(G).
 
 *Proof.*
@@ -51,7 +55,7 @@ d = 2^(n-1) + 2^(n-2) + d(G).
   between them (labelling the apexes first), so the graph is odd (B2.1).
 - The value comes from applying the cone formula twice (THM-4996 Lemma B1). QED
 
-**Lemma B (padded cone).** If G is odd on at most n - 2 vertices, then K_1 v (G u E_j), with j >= 1 chosen so that the
+**Lemma B (padded cone; THM-5056 step 2).** If G is odd on at most n - 2 vertices, then K_1 v (G u E_j), with j >= 1 chosen so that the
 inner graph has n - 1 vertices, is odd.
 
 *Proof.* The inner graph has an isolated vertex, so it has no universal vertex. Apply THM-4996 B2.3: such a cone is even
@@ -98,4 +102,6 @@ So E_odd(n) contains every odd k <= 2^n - 1 outside {1, 5, 37}; the exclusions g
 - **Tournaments: a typed ANALOGY ([HYP-9610](../../05-knowledge/hypotheses/HYP-9610-even-graph-domination-no-universal-and-dictionary.md)).**
   - Tournaments are equinumerous with even graphs (RPGFD).
   - Their path counts H are odd (Rédei), and the only known exceptions are {7, 21} (Chan-Pak).
-  - No map carries H to d (THM-4996 (4), THM-4531). The analogy is between exceptional-set phenomena, not values.
+  - No natural map carries H to d (THM-4531; THM-4996 "NOT CLAIMED"). Value-preserving bijections already fail at
+    n = 3: H is in {1, 3}, while even-graph d is in {1, 5}. The analogy is between exceptional-set phenomena, not
+    values.

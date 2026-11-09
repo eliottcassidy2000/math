@@ -1,0 +1,16 @@
+n=1  E_odd == odd<=2^n-1 minus{1,5,37}: True | E == O(n): True | E == base_sets E: True | E0 == base_sets E0: True | E0 == HYP-9610 formula: None   | conn. realisers of 37: even 0 odd 0; of 5: even 0 odd 0 | odd graphs at {1,5,37}: []
+n=2  E_odd == odd<=2^n-1 minus{1,5,37}: True | E == O(n): True | E == base_sets E: True | E0 == base_sets E0: True | E0 == HYP-9610 formula: None   | conn. realisers of 37: even 0 odd 0; of 5: even 0 odd 0 | odd graphs at {1,5,37}: []
+n=3  E_odd == odd<=2^n-1 minus{1,5,37}: True | E == O(n): True | E == base_sets E: True | E0 == base_sets E0: True | E0 == HYP-9610 formula: None   | conn. realisers of 37: even 0 odd 0; of 5: even 1 odd 0 | odd graphs at {1,5,37}: []
+n=4  E_odd == odd<=2^n-1 minus{1,5,37}: True | E == O(n): True | E == base_sets E: True | E0 == base_sets E0: True | E0 == HYP-9610 formula: None   | conn. realisers of 37: even 0 odd 0; of 5: even 0 odd 0 | odd graphs at {1,5,37}: []
+n=5  E_odd == odd<=2^n-1 minus{1,5,37}: True | E == O(n): True | E == base_sets E: True | E0 == base_sets E0: True | E0 == HYP-9610 formula: True   | conn. realisers of 37: even 0 odd 0; of 5: even 0 odd 0 | odd graphs at {1,5,37}: []
+     M0(n) = 23, M0-2 = 21 in E0: False; M0 in E0: True; max E0 = 23
+n=6  E_odd == odd<=2^n-1 minus{1,5,37}: True | E == O(n): True | E == base_sets E: True | E0 == base_sets E0: True | E0 == HYP-9610 formula: True   | conn. realisers of 37: even 4 odd 0; of 5: even 0 odd 0 | odd graphs at {1,5,37}: []
+     M0(n) = 57, M0-2 = 55 in E0: False; M0 in E0: True; max E0 = 57
+n=7  E_odd == odd<=2^n-1 minus{1,5,37}: True | E == O(n): True | E == base_sets E: True | E0 == base_sets E0: True | E0 == HYP-9610 formula: True   | conn. realisers of 37: even 0 odd 0; of 5: even 0 odd 0 | odd graphs at {1,5,37}: []
+     M0(n) = 117, M0-2 = 115 in E0: False; M0 in E0: True; max E0 = 117
+n=8  E_odd == odd<=2^n-1 minus{1,5,37}: True | E == O(n): True | E == base_sets E: True | E0 == base_sets E0: True | E0 == HYP-9610 formula: True   | conn. realisers of 37: even 0 odd 0; of 5: even 0 odd 0 | odd graphs at {1,5,37}: []
+     M0(n) = 247, M0-2 = 245 in E0: False; M0 in E0: True; max E0 = 247
+connected realisers of 37 over n <= 8 (iso classes): 4 (all even); of 5: 1
+base_sets.json E0[8] == HYP-9610 formula: True (extra [], missing [])
+base_sets.json E0[9] == HYP-9610 formula: True (extra [], missing [])
+ALL: PASS

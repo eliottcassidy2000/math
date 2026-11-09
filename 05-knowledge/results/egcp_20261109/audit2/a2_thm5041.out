@@ -1,0 +1,29 @@
+Session234 example 7 (order 4): H = 7, tiles (1,1) = 2, (0,0) = 0, diagonal = [0, 0, 0, 0]
+Session234 example 21 (order 5): H = 21, tiles (1,1) = 2, (0,0) = 0, diagonal = [0, 0, 0, 0, 0]
+Session234 example 21 (order 6, one reciprocal pair): H = 21, tiles (1,1) = 1, (0,0) = 0, diagonal = [0, 0, 0, 0, 0, 0]
+   order-6 example: resolutions and missing state at {0,3}: 17 19 15
+semicomplete n=2: reciprocal-pair counts at H=7: [], at H=21: []
+semicomplete n=3: reciprocal-pair counts at H=7: [], at H=21: []
+semicomplete n=4: reciprocal-pair counts at H=7: [2], at H=21: []
+semicomplete n=5: reciprocal-pair counts at H=7: [2], at H=21: [2, 3]
+class tournament <=> L = complement U                                       tests     64  failures 0
+class semicomplete <=> U or L = 1 everywhere                                tests     64  failures 0
+class oriented <=> U and L = 0 everywhere                                   tests     64  failures 0
+class undirected <=> U = L                                                  tests     64  failures 0
+(1a) bijection at n=3                                                       tests      1  failures 0
+(1c) counts 4^3, 3^3, 2^3 at n=3                                            tests      1  failures 0
+(1d) transpose (U,L)->(L,U)                                                 tests    400  failures 0
+(2a) H(transpose) = H                                                       tests    400  failures 0
+(1d) complement J-A                                                         tests    400  failures 0
+(1d) reversal (U,L)->(sL,sU)                                                tests    400  failures 0
+(2a) loops irrelevant                                                       tests    400  failures 0
+(2b) tile additivity (every pair)                                           tests   2942  failures 0
+(2a) H = 2 hp on equal pairs                                                tests    200  failures 0
+THM-5071 (3): H = #packings of defect cycles (mod 2), general digraphs      tests    300  failures 0
+(2c) H(recip) + H(missing) = H(T) + H(T^+p)                                 tests   1508  failures 0
+(2c) one-defect totals have equal parity                                    tests   1508  failures 0
+(2c) H(recip) - H(missing) = HPs of T or T^+p through p                     tests   1508  failures 0
+(2c) signed expansion over reciprocal sets                                  tests    120  failures 0
+DG2 (semicomplete n<=5): H=7 => >=2 (1,1) tiles                             tests      4  failures 0
+DG2 (semicomplete n<=5): H=21 => >=1 (1,1) tile                             tests      4  failures 0
+ALL: PASS

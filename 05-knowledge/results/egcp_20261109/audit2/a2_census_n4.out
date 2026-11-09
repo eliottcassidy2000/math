@@ -1,0 +1,11 @@
+N 4 labelled 64 nfact 24
+ISO all 11 (sumAut 264) even 4 (sumAut 96) connected 6 connected_even 2
+# k lab_odd iso_odd lab_even iso_even lab_even0 iso_even0 lab_codd iso_codd lab_ceven iso_ceven wit_odd wit_even wit_even0
+V 1 0 0 1 1 1 1 0 0 0 0 -1 0 0
+V 3 6 1 0 0 0 0 0 0 0 0 1 -1 -1
+V 5 0 0 12 1 12 1 0 0 0 0 -1 3 3
+V 7 4 1 0 0 0 0 0 0 0 0 11 -1 -1
+V 9 15 2 4 1 0 0 12 1 4 1 12 7 -1
+V 11 12 1 3 1 3 1 12 1 3 1 15 30 30
+V 13 6 1 0 0 0 0 6 1 0 0 31 -1 -1
+V 15 1 1 0 0 0 0 1 1 0 0 63 -1 -1

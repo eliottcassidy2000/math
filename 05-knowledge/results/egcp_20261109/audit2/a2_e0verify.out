@@ -1,0 +1,7 @@
+n=10: targets 18, 'realised' lines 18, FOUND lines with a graph 16; independent re-check: 0 bad
+      targets claimed 'realised' but with NO printed graph: [773, 779]
+      index of those targets in the command-line target list: [16, 17]
+n=11: targets 20, 'realised' lines 20, FOUND lines with a graph 16; independent re-check: 0 bad
+      targets claimed 'realised' but with NO printed graph: [1533, 1537, 1541, 1547]
+      index of those targets in the command-line target list: [16, 17, 18, 19]
+witness re-check: PASS
