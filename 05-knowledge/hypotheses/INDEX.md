@@ -100,7 +100,6 @@ A hypothesis is unresolved unless a proved leaf is named explicitly. Search its 
 - **THM-2081--2087 (PROVED):** relative Hunter, residue blindness, the height-57 cut, and modular/lacunary closures reduce rank-seven containment; a three-coordinate relation may have zero guard coefficient.
 - **THM-2088--2090 and THM-2092/2093 (PROVED):** flat persistence, the global splice, height transfer, and dyadic cocircuit flags make every no-pair cut branch finite. The banks are not enumerated.
 - **THM-2091/THM-2094/THM-2096 (PROVED):** centered energy is necessary, the four-`7|q` branch is empty, and Cayley-tree variance raises bounded-bank thresholds; complete maximum-tree information can be stronger.
-- **THM-2098/2099/2103/2119 (PROVED):** guarded sizes `8..10` split into pure, low-mixed, and high-vertical lanes; only pure rows inherit the collision budget. Pair trees miss dyadic rows; pure-transverse rank eight is projectively three-sparse under THM-2119's exact hypotheses. blockers; a joint Toeplitz certificate closes a row missed by scalar clocks. `13`-blocker or at least five nonblocker terminals projectively parallel to the guard modulo thirteen. THM-2124 proves the complementary finite-plane seven-pencil theorem; its all-eight pencil and moving offsets remain open.
 - **THM-2102/2110/2113/2118/2127/2129 (PROVED planar-JC strata):** cubic source fibers, exact coprime two-face trains, and affine-root families close. The balanced quartic triple is empty in odd degree and has one twice-odd square.
 
 ## LRC(14) — OPEN
