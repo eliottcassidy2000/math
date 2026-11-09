@@ -1,0 +1,394 @@
+{
+  "cutoff": 4095,
+  "escape_137_rows": [
+    14,
+    12,
+    120,
+    112,
+    99,
+    67,
+    3
+  ],
+  "escape_family_m1_through10": [
+    11,
+    45,
+    137,
+    393,
+    1121,
+    3225,
+    9377,
+    27513,
+    81281,
+    241305
+  ],
+  "escape_formula_literal_controls": 15,
+  "general_template_count": 26,
+  "general_template_literal_controls": 400,
+  "new_count": 17,
+  "new_values": [
+    137,
+    159,
+    483,
+    509,
+    1121,
+    1669,
+    1685,
+    1779,
+    1959,
+    2097,
+    2233,
+    2239,
+    2283,
+    2415,
+    2721,
+    2823,
+    2961
+  ],
+  "new_witnesses": [
+    {
+      "H": 137,
+      "children": [
+        "J(s0,s0)",
+        "J(s0,s0)",
+        "J(s0,J(s0,s0))"
+      ],
+      "order": 7,
+      "rows": [
+        14,
+        12,
+        120,
+        112,
+        99,
+        67,
+        3
+      ]
+    },
+    {
+      "H": 159,
+      "children": [
+        "J(s0,s0)",
+        "J(s0,s0)",
+        "s3"
+      ],
+      "order": 7,
+      "rows": [
+        14,
+        12,
+        120,
+        112,
+        67,
+        19,
+        35
+      ]
+    },
+    {
+      "H": 483,
+      "children": [
+        "J(s0,s0)",
+        "J(s0,s0)",
+        "J(s0,s3)"
+      ],
+      "order": 8,
+      "rows": [
+        14,
+        12,
+        248,
+        240,
+        227,
+        131,
+        35,
+        67
+      ]
+    },
+    {
+      "H": 509,
+      "children": [
+        "J(s0,s0)",
+        "J(s0,J(s0,s0))",
+        "J(s0,J(s0,s0))"
+      ],
+      "order": 8,
+      "rows": [
+        30,
+        28,
+        248,
+        240,
+        224,
+        195,
+        131,
+        3
+      ]
+    },
+    {
+      "H": 1121,
+      "children": [
+        "J(s0,s0)",
+        "J(s0,s0)",
+        "J(J(s0,s0),J(s0,J(s0,s0)))"
+      ],
+      "order": 9,
+      "rows": [
+        14,
+        12,
+        504,
+        496,
+        483,
+        451,
+        387,
+        259,
+        3
+      ]
+    },
+    {
+      "H": 1669,
+      "children": [
+        "J(s0,s0)",
+        "J(s0,s0)",
+        "J(s0,s6)"
+      ],
+      "order": 9,
+      "rows": [
+        14,
+        12,
+        504,
+        496,
+        483,
+        259,
+        35,
+        99,
+        195
+      ]
+    },
+    {
+      "H": 1685,
+      "children": [
+        "J(s0,s0)",
+        "J(s0,J(s0,s0))",
+        "J(J(s0,s0),J(s0,s0))"
+      ],
+      "order": 9,
+      "rows": [
+        30,
+        28,
+        504,
+        496,
+        480,
+        451,
+        387,
+        259,
+        3
+      ]
+    },
+    {
+      "H": 1779,
+      "children": [
+        "J(s0,s0)",
+        "s3",
+        "J(J(s0,s0),J(s0,s0))"
+      ],
+      "order": 9,
+      "rows": [
+        30,
+        28,
+        496,
+        484,
+        488,
+        451,
+        387,
+        259,
+        3
+      ]
+    },
+    {
+      "H": 1959,
+      "children": [
+        "J(s0,s0)",
+        "J(s0,J(s0,s0))",
+        "J(s0,s3)"
+      ],
+      "order": 9,
+      "rows": [
+        30,
+        28,
+        504,
+        496,
+        480,
+        451,
+        259,
+        67,
+        131
+      ]
+    },
+    {
+      "H": 2097,
+      "children": [
+        "J(s0,s0)",
+        "s3",
+        "J(s0,s3)"
+      ],
+      "order": 9,
+      "rows": [
+        30,
+        28,
+        496,
+        484,
+        488,
+        451,
+        259,
+        67,
+        131
+      ]
+    },
+    {
+      "H": 2233,
+      "children": [
+        "J(s0,s0)",
+        "J(s0,J(s0,s0))",
+        "s6"
+      ],
+      "order": 9,
+      "rows": [
+        30,
+        28,
+        504,
+        496,
+        480,
+        259,
+        35,
+        99,
+        195
+      ]
+    },
+    {
+      "H": 2239,
+      "children": [
+        "J(s0,s0)",
+        "J(s0,s0)",
+        "s11"
+      ],
+      "order": 9,
+      "rows": [
+        14,
+        12,
+        504,
+        496,
+        387,
+        19,
+        51,
+        99,
+        227
+      ]
+    },
+    {
+      "H": 2283,
+      "children": [
+        "J(s0,s0)",
+        "J(s0,s0)",
+        "s14"
+      ],
+      "order": 9,
+      "rows": [
+        14,
+        12,
+        504,
+        496,
+        259,
+        147,
+        51,
+        83,
+        227
+      ]
+    },
+    {
+      "H": 2415,
+      "children": [
+        "J(s0,s0)",
+        "s3",
+        "s6"
+      ],
+      "order": 9,
+      "rows": [
+        30,
+        28,
+        496,
+        484,
+        488,
+        259,
+        35,
+        99,
+        195
+      ]
+    },
+    {
+      "H": 2721,
+      "children": [
+        "J(s0,J(s0,s0))",
+        "J(s0,J(s0,s0))",
+        "J(s0,J(s0,s0))"
+      ],
+      "order": 9,
+      "rows": [
+        62,
+        60,
+        56,
+        496,
+        480,
+        448,
+        391,
+        263,
+        7
+      ]
+    },
+    {
+      "H": 2823,
+      "children": [
+        "J(s0,J(s0,s0))",
+        "J(s0,J(s0,s0))",
+        "s3"
+      ],
+      "order": 9,
+      "rows": [
+        62,
+        60,
+        56,
+        496,
+        480,
+        448,
+        263,
+        71,
+        135
+      ]
+    },
+    {
+      "H": 2961,
+      "children": [
+        "J(s0,J(s0,s0))",
+        "s3",
+        "s3"
+      ],
+      "order": 9,
+      "rows": [
+        62,
+        60,
+        56,
+        480,
+        456,
+        464,
+        263,
+        71,
+        135
+      ]
+    }
+  ],
+  "nineteen_still_excluded": "Every genuinely new ternary node has H>=45; old grammar excludes19.",
+  "old_bound": 13,
+  "old_scalar_count": 577,
+  "old_scalar_sha256": "0b772335fd27f2e4bf07ca83422d42ba07cfe7fbeeedd82490af765bebc33332",
+  "scope": "Exact old grammar through4095; single ternary nodes with old children order<=5, not full expanded grammar",
+  "seed_presentations": 1099,
+  "seed_profiles": 15,
+  "status": "PASS",
+  "ternary_candidate_triples": 680,
+  "transitive_kernel_controls": 216,
+  "transitive_literal_controls": 27
+}

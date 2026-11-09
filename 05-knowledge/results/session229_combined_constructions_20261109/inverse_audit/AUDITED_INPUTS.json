@@ -1,0 +1,13 @@
+{
+  "session229-inverse/CHECK.json": "b6df01571e82378f088ae0281a4f766002ab34f7aba9fb0727ea18a55b2c52b9",
+  "session229-inverse/INHERITANCE.md": "07b6939b9809618673c48e8109020d698d8a3a0fe6748a7dd137e73dbf5896e7",
+  "session229-inverse/PROOF.md": "1912c98719fa007bfab72811e98c2edba01a90e56f7ba87c7fb5ceef8428fbf5",
+  "session229-inverse/inherited.py": "9e834801a3dcaeb74a22a9fd7787d2bdf8c6c1b49e594f7177f0031bdfe088d5",
+  "session229-inverse/verify.py": "67e2800edf5e8bf9ecb4a5eb690f5b06db41eb7d1c2eddea6a92a50456e8de92",
+  "session229-work/01-canon/theorems/THM-4876-deletion-and-flip-increments-of-the-hamiltonian-path-count-an-increment-of-two-forces-at-most-three-paths-the-increment-ladder-thm-013-for-all-orders-and-what-extension-spectra-forbid-for-chan-pak.md": "3efbe4a2bf4d5bf1e846e027ae4f069d47abbb40062cfc47bad64214f785968e",
+  "session229-work/05-knowledge/results/camion_busch_gaps_polyhedra_collatz_20261002.md": "7e8c6fc9d430cf2ccf1f412b5f4de1ff109e59c73f737491b37a8890e3761be5",
+  "session229-work/05-knowledge/results/session225_graft_recovery_20261108/PROOF.md": "f521b85b95c593d8c51e8122eff770b1b2a1ff449504f2cf1afa64f6dd522479",
+  "session229-work/05-knowledge/results/session226_structural_continuation_20261108/strong_grafts/PROOF.md": "f13169452635a695e4e5a9bd5c95a5e597ece3d7d63bc7391189e889d12a0839",
+  "session229-work/05-knowledge/results/session228_recursive_constructions_20261108/physical_state/PROOF.md": "13dd50a9a7abdc786394ae67b076cfc28d5cd934875421fd7c9af4002b36cb32",
+  "session229-work/05-knowledge/results/session228_recursive_constructions_20261108/physical_state_audit/AUDIT.md": "3b39683b0ec67b182b698d3000bd4ea4bb7013afd77802089aaca7e60a43aa6d"
+}
