@@ -41,6 +41,18 @@ connected graph on m - 1 vertices.
 
 Outcomes will be appended below without editing the predictions.
 
-## Outcomes
+## Outcomes (appended 2026-11-09, after the runs; predictions above unedited)
 
-(to be appended)
+- **Q1: REFUTED.**
+  - Two runs of `sa13.c` (seeds 101 and 202, 400,000 steps each, about 20 CPU minutes each) found no order-13 escaper
+    with lambda = 4. `sa13_seed101.out` and `sa13_seed202.out` are empty.
+  - This is a failed search, not a proof that none exists.
+  - Not pre-registered, but consistent:
+    - among extensions with minimum semidegree 4 of all 193 order-12 escapers, the ones with the smallest largest
+      deletion still have a deletion with H >= 171,039 > max H(11) and H(T) about 7.8·10^5 > max H(12) = 545,835
+      (`ext13.c`, `ext13_diag.c`);
+    - `minH` gives f_4(13) <= 926,401 and f_4(12) <= 232,001;
+    - the substitution C3[R5, R5, TT_2] has lambda = 4 and H = 229,725.
+- **Q2: REFUTED.** No order-13 escaper was found at all.
+- **Q3: REFUTED.** The labelled share of new spanning-tree counts rises: 0.4190 (m = 6), 0.5150 (m = 7), 0.5719 (m = 8)
+  (`tau_share_le8.out`; abs(S_tau(m)) reproduces OEIS A182290).

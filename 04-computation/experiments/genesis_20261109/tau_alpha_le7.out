@@ -1,0 +1,12 @@
+m=2 connected labelled=1 |S_tau(m)|=1 max=1 new values=0  labelled share NEW=0.0000  missing below max=0
+first-at-2:
+m=3 connected labelled=4 |S_tau(m)|=2 max=3 new values=1  labelled share NEW=0.2500  missing below max=1
+first-at-3: 3
+m=4 connected labelled=38 |S_tau(m)|=5 max=16 new values=3  labelled share NEW=0.2632  missing below max=11
+first-at-4: 4 8 16
+m=5 connected labelled=728 |S_tau(m)|=16 max=125 new values=11  labelled share NEW=0.3475  missing below max=109
+first-at-5: 5 9 11 12 20 21 24 40 45 75
+m=6 connected labelled=26704 |S_tau(m)|=65 max=1296 new values=49  labelled share NEW=0.4190  missing below max=1231
+first-at-6: 6 14 15 28 29 30 32 35 36 48 52 54 55 56 60 61 64 66 69 81 96 99 100 104 111 114 115 120
+m=7 connected labelled=1866256 |S_tau(m)|=386 max=16807 new values=321  labelled share NEW=0.5150  missing below max=16421
+first-at-7: 7 17 19 27 33 37 39 41 43 44 46 49 50 51 63 68 72 73 76 79 80 82 84 85 87 88 89 90 91 93 94 95 98 101 105 110 112 117

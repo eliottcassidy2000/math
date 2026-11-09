@@ -1,0 +1,26 @@
+15 classes:  A = order 6, H 43   |   B = order 6, H 43
+11 classes:  A = order 6, H 41   |   B = order 6, H 43
+9 classes:  A = order 6, H 43   |   B = order 6, H 37
+8 classes:  A = order 6, H 37   |   B = order 6, H 43
+7 classes:  A = order 6, H 43   |   B = order 6, H 41
+6 classes:  A = order 6, H 43   |   B = order 6, H 45
+5 classes:  A = order 6, H 45   |   B = order 6, H 45
+4 classes:  A = order 6, H 45   |   B = order 6, H 43
+4 classes:  A = order 6, H 45   |   B = order 6, H 41
+4 classes:  A = order 6, H 45   |   B = order 6, H 37
+4 classes:  A = order 6, H 41   |   B = order 6, H 45
+3 classes:  A = order 6, H 41   |   B = order 6, H 41
+3 classes:  A = order 6, H 37   |   B = order 6, H 41
+3 classes:  A = order 6, H 41   |   B = order 6, H 37
+3 classes:  A = order 6, H 41   |   B = order 6, H 33
+3 classes:  A = order 6, H 43   |   B = order 6, H 33
+2 classes:  A = order 6, H 33   |   B = order 6, H 41
+2 classes:  A = order 6, H 33   |   B = order 6, H 43
+2 classes:  A = order 6, H 37   |   B = order 6, H 37
+2 classes:  A = order 6, H 33   |   B = order 6, H 45
+2 classes:  A = order 6, H 37   |   B = order 6, H 45
+1 classes:  A = order 6, H 33   |   B = order 6, H 37
+1 classes:  A = order 6, H 45   |   B = order 6, H 33
+1 classes:  A = order 6, H 33   |   B = order 6, H 33
+1 classes:  A = order 6, H 37   |   B = order 6, H 33
+FC-FC cuts per class: {0: 87, 1: 106}

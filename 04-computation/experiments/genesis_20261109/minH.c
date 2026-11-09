@@ -38,6 +38,7 @@ int main(int argc, char **argv) {
              for (int i = 0; i < N; i++) for (int j = i + 1; j < N; j++) { if (xr() & 1) out[i] |= 1u << j; else out[j] |= 1u << i; }
         } while (minsemi() < K);
         uint64_t h = H();
+        if (h < best) { best = h; memcpy(bestout, out, sizeof out); }
         for (long t = 0; t < steps; t++) {
             double temp = 0.3 * (1.0 - (double)t / steps) + 0.005;
             int a = xr() % N, b = xr() % N; if (a == b) continue;

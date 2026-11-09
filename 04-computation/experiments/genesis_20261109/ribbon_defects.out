@@ -1,0 +1,4 @@
+s=3 strong samples=7  lambda [1, 1, 1, 1, 1, 1, 1]  module defect [0, 0, 1, 1, 1, 1, 1]  twin [0, 0, 1, 1, 1, 1, 1]  dec [0, 0, 1, 1, 1, 1, 1]  H range [8325, 61481]
+s=4 strong samples=9  lambda [1, 1, 1, 1, 1, 1, 1, 2, 2]  module defect [0, 0, 1, 1, 1, 1, 1, 1, 1]  twin [0, 1, 1, 1, 1, 1, 1, 1, 1]  dec [0, 0, 1, 1, 1, 1, 1, 1, 1]  H range [30731, 368899]
+s=5 strong samples=10  lambda [1, 1, 1, 1, 2, 2, 2, 2, 2, 2]  module defect [0, 0, 1, 1, 1, 1, 1, 1, 1, 2]  twin [0, 0, 1, 1, 1, 1, 1, 1, 1, 2]  dec [0, 0, 1, 1, 1, 1, 1, 1, 1, 2]  H range [56423, 1222713]
+s=6 strong samples=12  lambda [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2]  module defect [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]  twin [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]  dec [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]  H range [209095, 4016043]

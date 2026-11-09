@@ -1,0 +1,2 @@
+106 both sides first creators  e.g. H=47461 cuts(min side, both FC, some FC)=[(6, True, True)]
+87 no nontrivial 3-cut  e.g. H=45895 cuts(min side, both FC, some FC)=[]
