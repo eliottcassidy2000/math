@@ -23591,3 +23591,58 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **Repair:** the final [context-stable switch proof](../05-knowledge/results/session229_combined_constructions_20261109/dynamic/PROOF.md) distinguishes a unit scalar gap from arithmetic saturation. Genuine unsaturated unit switches are separately exhibited at (H,Q)=(95,1276) and (389,5600). The [carry proof](../05-knowledge/results/session229_combined_constructions_20261109/overlap/PROOF.md) defines the forward polynomial P(z)=sum delta_i z^i and uses its correct divisor qz-h. The closure correction is explicit: the H95 core yields output (H,Q)=(681,15600) and (683,15664), with gcd3 and1; the H389 core yields (5269,111760) and (5267,111608), with gcd11 and1. The proved statement is strong adjacent-count pairs arising from unsaturated cores, not unsaturation of both outputs. Independent audits confirm the repaired statements; the constructive gap-two theorem is unchanged.
 - **Mechanism:** a difference invariant is not the integral content of the whole module. Always compute gcd(H,Q) before using "unsaturated", even when a difference equals two. Specify polynomial orientation before naming a linear factor; retain the sign-fixed recurrence as the authoritative identity.
 - **Verification repair:** isolated Python replays explicitly load their sibling modules. An editorial proof change alters its bound receipt hash even when the mathematical output is unchanged; final receipts were regenerated and independently replayed.
+
+## MISTAKE-737 (2026-11-08, kind-pasteur-2026-11-08-S17, THM-4942, HYP-9532 and the packet `05-knowledge/results/first_creator_generation_20261108/` at the pre-audit checkpoints 14487ef208 and f870c2abf1; found by the independent audit `05-knowledge/results/first_creator_generation_20261108/audit/AUDIT.md` and, for item (4), by the concurrent Session230)
+
+- **What was claimed.**
+  - (1) "Among all odd h <= 95,095, these are exactly 3, 5, 9, 11, 13, 17, 19, 23, 35, 39, 63." This is the list of
+    values born at their Busch bound, n(h) = B(h). It appeared in PROOF section 4.2, the THM-4942 title, status and
+    item 6, README item 5, and HYP-9532 (E).
+  - (2) PROOF section 4.1, typed PROVED: "The first creators are the members of Strong(h) at the least order."
+  - (3) PROOF section 3.2, typed PROVED and uncredited: for n <= 13, lambda >= 3 iff min degree >= 3. The class
+    counts by lambda in section 3.3 were presented as new.
+  - (4) PROOF section 1, "The attachment form (PROVED, elementary)", and the THM-4942 title ("H(T + v) is an explicit
+    quadratic form in the attachment pattern (split-path coefficients)") were presented as this packet's.
+  - Minor:
+    - M_ab was bounded only by 2 max H(n + 1);
+    - the neutral patterns were stated in THM-1900's complementary convention;
+    - k*(n) was given for orders <= 5 as 1;
+    - finiteness of W(h) was cited to THM-1370 (3);
+    - the order-9 fertility minimum was given as "at least 256/512";
+    - "every tournament is generated from the first creators" overreached;
+    - C3[R5, R5, 1] was called "built literally from first creators";
+    - the lambda >= 3 search ran on a wider class set than registered;
+    - two notations clashed (f_2, M_ab);
+    - the median, the 564-minimum and the value count needed precision.
+- **Why it was wrong.**
+  - (1) n(h) is known only on S(11). The 3,635 odd values of [80,453, 95,093] outside S(11) have B(h) = 22 and
+    n(h) >= 12, so no census decides whether n(h) = B(h). The claim is exact on S(11), so through 80,451, and
+    conditional on HYP-9481 (a) above that.
+  - (2) That every first creator is strong is THM-4922 (1), FINITE-EXACT through order 11. In general it is
+    HYP-9481 (b), OPEN. This is the second occurrence of the slip corrected as M2 of MISTAKE-735.
+  - (3) The lemma is the case delta^0 = 3 of THM-4811 (B), whose proof uses the same cut count. THM-4811's census
+    already lists the class counts by lambda through order 10.
+  - (4) The formula is HYP-2879 / THM-4097 eq. (4). The coefficient matrix is THM-4097 eq. (5), Q_ab = sum_A
+    E_A(a) B_{V\A}(b), by the same subset DP. THM-4097 section 3 has the cut-field identity, and THM-4114 section 6
+    the submodular directed-cut quadratic. The pre-audit priority search used the vocabulary "attachment", "quadratic
+    in" and "response polynomial", and missed the repo's terms "ear", "insertion cut", "exposed slot" and "cut field".
+    The audit's search missed it too.
+- **Repair.**
+  - (1) is scoped to S(11): through 80,451, conditional above.
+  - (2) is retyped FINITE-EXACT through order 11, with HYP-9481 (b) cited.
+  - (3) is retyped KNOWN, crediting THM-4811 (B).
+  - (4) is retyped KNOWN, crediting HYP-2879, THM-4097, THM-4114 and THM-4118. The packet's own part is the
+    Gray-code engine with deletion forms, run exhaustively at order 11.
+  - All eighteen audit minors are applied, and the audit's own one-back-arc graft formula (m9) is corrected:
+    H(A)H(B) - F_A(a)G_B(b) + U_A(a)U'_B(b), checked against direct DP.
+  - The audit's class-level test, that every order-11 first creator has a first-creator deletion, is adopted with
+    credit.
+- **Lessons.**
+  - Before writing "exact through X" for any statement built on n(h), check that n(h) is known on the whole range.
+    Beyond the completeness range of S(N), it is not.
+  - Any sentence equating first creators with strong objects must carry the THM-4922 (1) / HYP-9481 (b) scope. This
+    is now twice repeated.
+  - Run priority searches under the repo's own vocabularies:
+    - one-vertex extensions: "ear", "insertion cut", "exposed slot", "cut field", "slot matrix";
+    - connectivity: "delta^0", "semi-degree", "arc-strong".
+    Grep the target statement in each vocabulary before typing PROVED or new (cf. MISTAKE-734, MISTAKE-735).
