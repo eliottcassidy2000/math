@@ -1,0 +1,8 @@
+# large regenerable receipts and compiled binaries (kept out of the repository; see lines_n9_summary.txt)
+lines_n9_p*.txt
+lines_nodes_n8.json
+lines_census
+ribbon_levels_mod16
+ribbon_levels_mod32
+ribbon_levels_mod160
+ribbon_levels_mod_s3
