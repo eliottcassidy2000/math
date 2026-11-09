@@ -1,0 +1,4 @@
+order 5, H = 7, one missing pair (0, 2): rows 00001 10000 01... -> H = 7, pair types {'T': 9, 'B': 0, 'Z': 1}, loops 0
+order 6, H = 21, one missing pair (1, 5): rows 000011 100000... -> H = 21, pair types {'T': 14, 'B': 0, 'Z': 1}, loops 0
+order 6, H = 21, one reciprocal pair (0, 3): rows 000101 100... -> H = 21, pair types {'T': 14, 'B': 1, 'Z': 0}, loops 0
+README order-5 H=7 one-missing-pair example: 7 ({'T': 9, 'B': 0, 'Z': 1}, 0)

@@ -1,0 +1,16 @@
+== base 2, my 56 order<=4 matrices, LIM 200000, packet cap
+misses (v = 1 mod 2, v <= 200000): 7 21 47 67 127 173 491
+count 7; states 55566866; reached h-values certified by exact word products: 99993, failures 0; longest certificate word 5
+56 matrices X=2 LIM=200000 CAP=100001 (mode 0) bits h=18 e/o=17
+
+real	0m18.222s
+user	0m0.015s
+sys	0m0.000s
+== base 2, the 13 generators, LIM 200000, packet cap
+misses (v = 1 mod 2, v <= 200000): 7 21 47 67 127 163 173 331 491 511 799 959
+count 12; states 14389973; reached h-values certified by exact word products: 99988, failures 0; longest certificate word 8
+13 matrices X=2 LIM=200000 CAP=100001 (mode 0) bits h=18 e/o=17
+
+real	0m2.205s
+user	0m0.000s
+sys	0m0.015s

@@ -1,0 +1,20 @@
+== base 4, my order<=5 matrices (270), LIM 120001 (alpha-sum 30000), packet cap
+misses (v = 1 mod 4, v <= 120001): 13 57 109 597
+count 4; states 12754909; reached h-values certified by exact word products: 29997, failures 0; longest certificate word 3
+270 matrices X=4 LIM=120001 CAP=30001 (mode 0) bits h=17 e/o=15
+== base 5, my order<=5 matrices (271), LIM 150001 (alpha-sum 30000), packet cap
+misses (v = 1 mod 5, v <= 150001): 16 51 136 311 481 646 716 1171 1676 2711 3071
+count 11; states 7568600; reached h-values certified by exact word products: 29990, failures 0; longest certificate word 3
+271 matrices X=5 LIM=150001 CAP=30001 (mode 0) bits h=18 e/o=15
+== base 6, my order<=5 matrices (270), LIM 180001 (alpha-sum 30000), packet cap
+misses (v = 1 mod 6, v <= 180001): 19 61 85 127 277 283 355 733 781 853 877 1315 1711
+count 13; states 4548715; reached h-values certified by exact word products: 29988, failures 0; longest certificate word 3
+270 matrices X=6 LIM=180001 CAP=30001 (mode 0) bits h=18 e/o=15
+== base 7, my order<=5 matrices (271), LIM 210001 (alpha-sum 30000), packet cap
+misses (v = 1 mod 7, v <= 210001): 22 71 99 204 918 1023 1051 1401 1947 2829 3263
+count 11; states 3544335; reached h-values certified by exact word products: 29990, failures 0; longest certificate word 4
+271 matrices X=7 LIM=210001 CAP=30001 (mode 0) bits h=18 e/o=15
+== base 8, my order<=5 matrices (271), LIM 240001 (alpha-sum 30000), packet cap
+misses (v = 1 mod 8, v <= 240001): 25 281 345 377 417 641 1049 1265 1321 1561 1753 2105 2161 2369 2545 2905 2953 3049 3121 3625 3785 3881 4057 4073 4121 4153 4345 4681 5417 5737 7417 7577 7841 9209 9289 9545 9721 11201 13793 15185 16921 17033 19249 21673 26297 70313
+count 46; states 2472999; reached h-values certified by exact word products: 29955, failures 0; longest certificate word 4
+271 matrices X=8 LIM=240001 CAP=30001 (mode 0) bits h=18 e/o=15

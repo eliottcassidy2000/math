@@ -3,9 +3,12 @@ id: HYP-9640
 title: "Chan-Pak in both bases as cofiniteness of an explicit matrix-semigroup orbit, and one-defect digraph spectra. (A) The 15 explicit base-3 port-chain generators (nonnegative 3 x 3 integer matrices) carry (1,0,1) to states with every first coordinate v = 1 (mod 3), v >= 866; with the finite censuses this implies ternary Chan-Pak. (B) The 56 base-2 port-chain matrices of blocks of order <= 4 reach every odd v >= 493; this implies binary Chan-Pak. (C) With exactly one reciprocal pair and no missing pair, the digraph path totals are exactly the integers >= 2 other than 4 and 7. (D) With exactly one missing pair and no reciprocal pair, every nonnegative integer is a total. (E) For bases 4-8 the gap set is exactly its part below 81 (verified below alpha-sum 30,000)."
 status: >
   OPEN.
-  (A): FINITE-EXACT to 10^6 (THM-5070 (4)).
+  (A): FINITE-EXACT to 10^6 (THM-5070 (4)), and to 3*10^6 by the audit (293,669,502 states, the same ten misses).
+  AUDIT: PASS WITH CORRECTIONS (05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/audit/AUDIT.md;
+  M1 and M2 applied here).
   (B): FINITE-EXACT to 2*10^5.
-  (C): the exclusions are PROVED at every order (THM-5071 (4b)); attainment FINITE-EXACT below 198 (orders <= 7).
+  (C): the exclusions are PROVED at every order (THM-5071 (4b)). 1 and 7 are KNOWN (Session234 DG3/DG4/DG5); the
+  exclusion of 4 is new. Attainment is FINITE-EXACT below 198 (orders <= 7).
   (D): FINITE-EXACT below 130 (orders <= 7).
   (E): FINITE-EXACT below alpha-sum 30,000 (THM-5070 (6)).
 session: kind-pasteur-2026-11-09-S18
@@ -34,12 +37,15 @@ M_r ... M_1 (1, 0, 1) for some M_i in G_3.
   (THM-5070 (4)), and earlier by THM-4940 (9) and THM-4950 (3).
 - 10 and 31 are never values (THM-4940 (3), (4)).
 
-**Evidence.** The statement holds on [866, 10^6], with 64,420,757 reachable states.
+**Evidence.** The statement holds on [866, 10^6] (64,420,757 reachable states). The audit extended it to 3*10^6,
+with every reached value certified by an exact word product.
 
 **Falsifier.** A value v = 1 (mod 3), v >= 866, outside the orbit.
 
-**Route.** THM-5070 (5) excludes an affine digit system along the tower. A proof needs a second mechanism, for
-instance a set of reachable states, stable under a few blocks, whose first coordinates fill intervals.
+**Route.** THM-5070 (5) shows that no block product of length <= 4 other than a tower power preserves the tower
+direction. So an affine digit system along the tower is not available from short products. A proof probably needs a
+second mechanism, for instance a set of reachable states, stable under a few blocks, whose first coordinates fill
+intervals.
 
 ## (B) Binary
 
@@ -56,7 +62,8 @@ THM-4875 (D)).
 **Statement.** The totals of loopless semicomplete digraphs with exactly one reciprocal pair are exactly {2, 3, 5, 6}
 together with every integer >= 8.
 
-**Status.** Exclusion of 1, 4 and 7 is PROVED at all orders (THM-5071 (4b)). Attainment is checked below 198.
+**Status.** Exclusion of 1, 4 and 7 is PROVED at all orders (THM-5071 (4b)). The cases 1 and 7 are Session234's
+(DG3/DG4, DG5); 4 is new. Attainment is checked below 198.
 
 **Falsifier.** An integer >= 8 never attained.
 

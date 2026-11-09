@@ -1,0 +1,16 @@
+== base 3, my 57 order<=4 matrices, LIM 200000, packet cap
+misses (v = 1 mod 3, v <= 200000): 10 31 61 106 217 274 337 346 607 865
+count 10; states 22540354; reached h-values certified by exact word products: 66657, failures 0; longest certificate word 5
+57 matrices X=3 LIM=200000 CAP=66667 (mode 0) bits h=18 e/o=17
+
+real	0m5.905s
+user	0m0.000s
+sys	0m0.015s
+== base 3, the 15 generators of out/generators_base3_15.txt, LIM 1000000, packet cap
+misses (v = 1 mod 3, v <= 1000000): 10 31 61 106 217 274 337 346 607 865
+count 10; states 64420757; reached h-values certified by exact word products: 333324, failures 0; longest certificate word 8
+15 matrices X=3 LIM=1000000 CAP=333334 (mode 0) bits h=20 e/o=19
+
+real	0m14.264s
+user	0m0.015s
+sys	0m0.015s

@@ -64,5 +64,8 @@ Appended 2026-11-09 after the runs. The text above is unchanged.
 - **P3: CONFIRMED.** Base 2, blocks of order <= 4: the misses below 200000 are 7, 21, 47, 67, 127, 173, 491, all
   below 2000. With order <= 5 the misses are exactly 7 and 21.
 - **P4: CONFIRMED.** One arc deleted gives H = 7 at order 5 and H = 21 at order 6 (`out/digraph_weights.out`,
-  `out/one_defect_witness.out`).
-- **P5: PASSED.** 232,263 checks, 0 failures.
+  `out/one_defect_witness.out`). The audit found that the order-5 H = 7 half was already in Session234's census
+  (general_census.csv, row 5,7,1,0,1,600) before this pre-registration. Only the order-6 H = 21 half was a genuine
+  prediction.
+- **P5: PASSED.** 232,263 checks, 0 failures. The order-7 sample was 10^4, not the promised 10^5, which is harmless
+  for a gate. The audit's own check covers 1,372,741 digraphs.

@@ -1,0 +1,8 @@
+== base 3, the 15 generators, LIM 3000000 (extension beyond the packet's 10^6), packet cap
+misses (v = 1 mod 3, v <= 3000000): 10 31 61 106 217 274 337 346 607 865
+count 10; states 293669502; reached h-values certified by exact word products: 999990, failures 0; longest certificate word 8
+15 matrices X=3 LIM=3000000 CAP=1000001 (mode 0) bits h=22 e/o=20
+
+real	0m59.119s
+user	0m0.015s
+sys	0m0.000s

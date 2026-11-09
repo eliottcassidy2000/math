@@ -125,9 +125,12 @@ Suppose every odd cycle of T passes through u, and every odd cycle of B passes t
 
 **(4) Coverage.**
 - `chain_cover.c` takes the breadth-first closure of (1, 0, 1) under the block matrices, keeping h <= LIM.
-- **Saturation.** E and O are saturated at CAP = floor(LIM/x) + 1. This is exact for two reasons:
+- **Pruning.** Discarding states with h > LIM is sound because h never decreases: h' >= eta h >= h, since
+  eta = I(Omega(B), x) >= 1.
+- **Saturation.** E and O are saturated at CAP = floor(LIM/x) + 1; h is never capped. This is exact for two reasons:
   - Every h-row is (eta, x q_o, x q_e), so a coordinate >= CAP with a positive coefficient forces h > LIM.
-  - With nonnegative integer matrices, min(., CAP) commutes with every row.
+  - For nonnegative integer rows, cap(row . s) = cap(row . cap(s)) with cap acting on E and O only.
+- **Audit check.** The audit obtained identical miss sets with this cap, with cap = LIM, and with no cap at all.
 - **Order <= 5 versus order <= 4.** Blocks of order <= 5 include those of order <= 4. So the order-5 family's miss
   set below LIM is contained in the order-4 family's. That is why the order-5 runs only need to reach 3000.
 
@@ -157,7 +160,10 @@ Suppose every odd cycle of T passes through u, and every odd cycle of B passes t
 
 ### (1) The Grinberg-Stanley formula
 
-**Source.** Grinberg and Stanley, *The Redei-Berge symmetric function of a directed graph*, arXiv:2307.05569.
+**Source.** Grinberg and Stanley, *The Redei-Berge symmetric function of a directed graph*, arXiv:2307.05569v1,
+Theorem 1.30 (Section 1.8.2). It is restated as Corollary 14 of Irving-Omar, arXiv:2412.10572v3. (1) is that theorem
+specialised at (1, 0, 0, ...), so (1) is KNOWN/CITED. Pairing a cycle with its reversed complement cycle, used in (2),
+is GS's own device (Section 3, the tournament case).
 - For a digraph X on V they define U_X = sum over listings w of V of F_{Des(w, X)}, where Des(w, X) is the set of i
   with (w_i, w_{i+1}) an arc of X.
 - Their p-expansion for arbitrary digraphs is
@@ -215,8 +221,11 @@ and contributes +1. Every other cycle of Dbar uses a Z-pair and contributes (-1)
 ### (3) Parity
 
 Weights 0 and 2 are even and weights +-1 are odd, so H(D) is congruent, mod 2, to the number of packings (the empty
-one included) of defect cycles: B-cycles of D and Z-cycles of Dbar. With no defect pair this is 1, which is
-Redei's theorem.
+one included) of defect cycles: B-cycles of D and Z-cycles of Dbar.
+- With no defect pair this is 1, which is Redei's theorem.
+- The defect cycles of D and of Dbar are the same set, so (3) implies Berge's theorem H(D) = H(Dbar) (mod 2), which
+  it refines.
+- Whether Grinberg-Stanley Section 6 already states (3) was not checked; no novelty is claimed for it.
 
 ### (4a) Every positive integer is the count of a semicomplete digraph
 
@@ -233,6 +242,10 @@ earlier vertices.
 `one_defect_witness.py` checks h <= 299.
 
 ### (4b) Exactly one reciprocal pair excludes 1, 4 and 7
+
+**Credit.** The method is Session234's (PROOFS.md DG3 factorisation, DG4 strong spanning tournament, Moon floor). Its
+DG5 ("H = 7 forces exactly two reciprocal pairs") already gives the case 7, and DG3/DG4 give the case 1. The new
+case is 4. Step 3 below is the b = 1 case of DG4, written out.
 
 Let D be loopless semicomplete with exactly one B-pair {u, v}.
 

@@ -1,0 +1,10 @@
+all loopless digraphs of order 1: cumulative checks 1, formula failures 0, parity failures 0
+all loopless digraphs of order 2: cumulative checks 5, formula failures 0, parity failures 0
+all loopless digraphs of order 3: cumulative checks 69, formula failures 0, parity failures 0
+all loopless digraphs of order 4: cumulative checks 4165, formula failures 0, parity failures 0
+all loopless digraphs of order 5: cumulative checks 1052741, formula failures 0, parity failures 0
+random digraphs of order 6 (uniform / semicomplete / oriented / tournament+few defects): cumulative checks 1252741, formula failures 0, parity failures 0
+random digraphs of order 7 (uniform / semicomplete / oriented / tournament+few defects): cumulative checks 1352741, formula failures 0, parity failures 0
+random digraphs of order 8 (uniform / semicomplete / oriented / tournament+few defects): cumulative checks 1372741, formula failures 0, parity failures 0
+explicit-permutation route used on 1252741 of them (orders <= 6)
+(4a) sink back-arc construction, all S, orders 2..10: 1022 digraphs, 0 failures

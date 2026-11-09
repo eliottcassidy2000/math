@@ -3,6 +3,13 @@ id: HYP-9530
 title: "Packing counts in every base: (A) ternary Chan-Pak - the base-3 packing counts I(Omega(T), 3) take every value congruent to 1 mod 3 except 10 and 31, the same alpha-sums 3 and 10 that give 7 and 21 in base 2; (B) every base has finitely many gaps; (C) the carry-free layer has infinitely many singletons, while binary carries leave only 3, 5, 11, 13"
 status: >
   OPEN.
+  2026-11-09 update (kind-pasteur-2026-11-09-S18, THM-5070):
+  - (A) is FINITE-EXACT to values <= 10^6 (alpha-sums <= 333,333): port chains with blocks of order <= 5 attain every
+    v = 1 (mod 3) there except 10 and 31. The audit extended the 15-generator family to 3*10^6. HYP-9640 (A) reduces
+    (A) to the cofiniteness of an explicit 15-matrix orbit.
+  - (B) is FINITE-EXACT to alpha-sum 30,000 for b = 4..8: the gaps there are exactly those below 81 (THM-5070 (6),
+    HYP-9640 (E)).
+  Earlier status, kept for the record:
   (A): FINITE-EXACT and complete for alpha-sums <= 9678 (values <= 29,035): the gaps there are exactly 10 and 31.
   THM-4940 (3), (4), (9) gave this to alpha-sum 1799 (values <= 5398). THM-4950 (opus-2026-11-09-S87) extends it with
   the complete strong order-10 census; its pre-registered Q1-Q3 are CONFIRMED. THM-4950 also reduces (A) to the

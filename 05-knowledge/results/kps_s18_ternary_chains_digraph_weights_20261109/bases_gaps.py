@@ -26,6 +26,9 @@ def main():
                        check=True, capture_output=True)
         out = subprocess.run([prog, mats, str(b), str(1 + b * M)], capture_output=True, text=True).stdout
         miss = [(int(t) - 1) // b for t in out.split("\n")[0].split(":")[1].split()]
+        # chain_cover prints at most 200 misses: refuse to proceed if the list was truncated (audit m5)
+        count = int(out.split("count")[1].split()[0])
+        assert count == len(miss), f"base {b}: {count} misses but only {len(miss)} printed"
         att = set(range(M + 1)) - set(miss)
         att |= set(m for m in range(81) if m not in KNOWN_GAPS_LE_80[b])
         cl = set(att)

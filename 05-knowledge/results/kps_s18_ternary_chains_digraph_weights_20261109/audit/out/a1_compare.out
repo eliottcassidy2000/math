@@ -1,0 +1,6 @@
+x=2 k<=4: mine 56, packet 56, identical sets: True
+x=2 k<=5: mine 264, packet 264, identical sets: True
+x=3 k<=4: mine 57, packet 57, identical sets: True
+x=3 k<=5: mine 271, packet 271, identical sets: True
+generators_base3_15.txt: 15 generators, 15 rebuilt from their block (tournament, order <= 4, matrix equal)
+generators_base2_13.txt: 13 generators, 13 rebuilt from their block (tournament, order <= 4, matrix equal)

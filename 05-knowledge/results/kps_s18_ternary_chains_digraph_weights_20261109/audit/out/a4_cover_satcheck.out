@@ -1,0 +1,48 @@
+== m_x3_k4.txt 3 30000 0
+misses (v = 1 mod 3, v <= 30000): 10 31 61 106 217 274 337 346 607 865
+count 10; states 1371436; reached h-values certified by exact word products: 9990, failures 0; longest certificate word 4
+57 matrices X=3 LIM=30000 CAP=10001 (mode 0) bits h=15 e/o=14
+== m_x3_k4.txt 3 30000 30000
+misses (v = 1 mod 3, v <= 30000): 10 31 61 106 217 274 337 346 607 865
+count 10; states 2706511; reached h-values certified by exact word products: 9990, failures 0; longest certificate word 4
+57 matrices X=3 LIM=30000 CAP=30000 (mode 30000) bits h=15 e/o=15
+== m_x3_k4.txt 3 30000 -1
+misses (v = 1 mod 3, v <= 30000): 10 31 61 106 217 274 337 346 607 865
+count 10; states 3763946; reached h-values certified by exact word products: 9990, failures 0; longest certificate word 4
+57 matrices X=3 LIM=30000 CAP=0 (mode -1) bits h=15 e/o=24
+== m_x2_k4.txt 2 20000 0
+misses (v = 1 mod 2, v <= 20000): 7 21 47 67 127 173 491
+count 7; states 1748512; reached h-values certified by exact word products: 9993, failures 0; longest certificate word 4
+56 matrices X=2 LIM=20000 CAP=10001 (mode 0) bits h=15 e/o=14
+== m_x2_k4.txt 2 20000 -1
+misses (v = 1 mod 2, v <= 20000): 7 21 47 67 127 173 491
+count 7; states 3840422; reached h-values certified by exact word products: 9993, failures 0; longest certificate word 4
+56 matrices X=2 LIM=20000 CAP=0 (mode -1) bits h=15 e/o=24
+== gen3_15.txt 3 30000 0
+misses (v = 1 mod 3, v <= 30000): 10 31 61 106 217 274 337 346 607 865
+count 10; states 511922; reached h-values certified by exact word products: 9990, failures 0; longest certificate word 8
+15 matrices X=3 LIM=30000 CAP=10001 (mode 0) bits h=15 e/o=14
+== gen3_15.txt 3 30000 -1
+misses (v = 1 mod 3, v <= 30000): 10 31 61 106 217 274 337 346 607 865
+count 10; states 1296159; reached h-values certified by exact word products: 9990, failures 0; longest certificate word 8
+15 matrices X=3 LIM=30000 CAP=0 (mode -1) bits h=15 e/o=24
+== m_x3_k5.txt 3 30000 0
+misses (v = 1 mod 3, v <= 30000): 10 31
+count 2; states 4174315; reached h-values certified by exact word products: 9998, failures 0; longest certificate word 3
+271 matrices X=3 LIM=30000 CAP=10001 (mode 0) bits h=15 e/o=14
+== base 4 order<=5, LIM 12001, capmode 0
+misses (v = 1 mod 4, v <= 12001): 13 57 109 597
+count 4; states 363779; reached h-values certified by exact word products: 2997, failures 0; longest certificate word 3
+270 matrices X=4 LIM=12001 CAP=3001 (mode 0) bits h=14 e/o=12
+== base 4 order<=5, LIM 12001, capmode -1
+misses (v = 1 mod 4, v <= 12001): 13 57 109 597
+count 4; states 1358144; reached h-values certified by exact word products: 2997, failures 0; longest certificate word 3
+270 matrices X=4 LIM=12001 CAP=0 (mode -1) bits h=14 e/o=24
+== base 8 order<=5, LIM 24001, capmode 0
+misses (v = 1 mod 8, v <= 24001): 25 281 345 377 417 641 1049 1265 1321 1561 1753 2105 2161 2369 2545 2905 2953 3049 3121 3625 3785 3881 4057 4073 4121 4153 4345 4681 5417 5737 7417 7577 7841 9209 9289 9545 9721 11201 13793 15185 16921 17033 19249 21673
+count 44; states 109610; reached h-values certified by exact word products: 2957, failures 0; longest certificate word 4
+271 matrices X=8 LIM=24001 CAP=3001 (mode 0) bits h=15 e/o=12
+== base 8 order<=5, LIM 24001, capmode -1
+misses (v = 1 mod 8, v <= 24001): 25 281 345 377 417 641 1049 1265 1321 1561 1753 2105 2161 2369 2545 2905 2953 3049 3121 3625 3785 3881 4057 4073 4121 4153 4345 4681 5417 5737 7417 7577 7841 9209 9289 9545 9721 11201 13793 15185 16921 17033 19249 21673
+count 44; states 453344; reached h-values certified by exact word products: 2957, failures 0; longest certificate word 4
+271 matrices X=8 LIM=24001 CAP=0 (mode -1) bits h=15 e/o=24

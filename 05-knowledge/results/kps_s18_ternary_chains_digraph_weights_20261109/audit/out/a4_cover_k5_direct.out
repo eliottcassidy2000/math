@@ -1,0 +1,8 @@
+== base 3, my 271 order<=5 matrices, LIM 200000 (direct run; the packet derived this bound by containment)
+misses (v = 1 mod 3, v <= 200000): 10 31
+count 2; states 92242587; reached h-values certified by exact word products: 66665, failures 0; longest certificate word 4
+271 matrices X=3 LIM=200000 CAP=66667 (mode 0) bits h=18 e/o=17
+== base 2, my 264 order<=5 matrices, LIM 200000 (direct run)
+misses (v = 1 mod 2, v <= 200000): 7 21
+count 2; states 322705694; reached h-values certified by exact word products: 99998, failures 0; longest certificate word 4
+264 matrices X=2 LIM=200000 CAP=100001 (mode 0) bits h=18 e/o=17

@@ -3,19 +3,31 @@ id: THM-5070
 title: "Port chains: a nonnegative 3-dimensional transfer for odd-cycle packing counts in every base. (1) Gluing a block (B, w, u') after a ported tournament (T, u) - every old vertex beats every block vertex except w -> u, new port u' - maps the state (I(Omega(T), x), E, O) by a nonnegative integer 3 x 3 matrix N_x(B, w, u'), where E, O sum I(Omega(T - V(P)), x) over paths P from the port of even and odd order. (2) Apex bridges: if the odd cycles of each side all pass through its glued vertex, I = I_1 I_2 + x c; for one-apex sides I = (1 + x a(W))(1 + x a(W')) + x[ceil(W/2)(1 + floor(W'/2)) + (1 + floor(W/2)) ceil(W'/2)]. (3) The one-vertex block is the tower, characteristic polynomial t^3 - t^2 - t - (x - 1), = (t - 2)(t^2 + t + 1) at x = 3. (4) Port chains with blocks of order <= 5 attain every v = 1 (mod 3), v <= 10^6, except 10 and 31, and every odd v <= 2*10^5 except 7 and 21; with blocks of order <= 4 the base-3 misses below 10^6 are exactly 10, 31, 61, 106, 217, 274, 337, 346, 607, 865 (already for 15 explicit generators) and the base-2 misses below 2*10^5 are exactly 7, 21, 47, 67, 127, 173, 491. (5) Among all products of <= 3 order-<= 4 base-3 blocks, the only matrices preserving the tower's dominant direction are the tower powers. (6) In bases 4-8 the alpha-sum gaps below 30,000 are exactly the known gaps below 81: {3,14,27}, {3,10,27}, {3,10,14,21,46}, {3,10,14,29}, {3,35,52}."
 status: >
   PROVED: (1), (2) and (3).
-  - (1) is the base-x packing form of the seam transfer (KNOWN at x = 2 through OCF: SEAM.md,
-    seven_return_native_recursions_20261029; THM-4875 (B); two-block count Session29 ADDENDUM section 2).
-  - (2) specialises the one-arc join law (THM-4866 (B)). Its one-apex statistics use the inherited one-apex recurrence
+  - (1) is the base-x packing form of the seam transfer. It is KNOWN at x = 2 through OCF (SEAM.md,
+    seven_return_native_recursions_20261029; THM-4875 (B); two-block count Session29 ADDENDUM section 2). At x = 2
+    SEAM.md's coordinates are (H, S, R) = (h, O - E, E + O), observed by the audit on 60 chains.
+  - THM-4952 (A) is the general-base precedent: a finite-state transfer for I(Omega, x) on span-w ribbon words. A port
+    chain with blocks of order <= k is a ribbon word of span <= 2k - 1. The new content is the 3-dimensional
+    nonnegative port state.
+  - S86's packet asked for such a ternary coverage engine (packing_bases_repunits_20261108/README.md, section 8).
+  - (2) specialises the one-arc join law (THM-4866 (B)). Its hypothesis holds exactly for one-apex sides (T - u
+    transitive). Its one-apex statistics use the inherited one-apex recurrence
     (session25, Session191 one_apex/PROOF.md (1)).
   - The recurrence in (3) is KNOWN (THM-4952 (C), THM-4865 (c)); the matrix form is new.
   FINITE-EXACT: (4), (5) and (6).
-  - (6): the gap sets of bases 4-8 to alpha-sum 30,000, from three sources: THM-4940 (6), port chains with order
-    joins, and 61 independently verified witnesses of orders 8-11.
+  - (6): the gap sets of bases 4-8 to alpha-sum 30,000.
+    - m <= 80: THM-4940 (6). The audit independently confirmed its attained side.
+    - 80 < m <= 30,000: port chains, plus 61 hill-climbed witnesses of orders 8-11. The witnesses were checked by a
+      second script of this session, and then independently by the audit (all 61 pass).
+    - The order-join closure settled nothing in (80, 30000].
   - (4) by saturated breadth-first closure; saturation is exact for nonnegative matrices.
-  - Pre-registered P1-P3 all CONFIRMED (PREREGISTRATION.md).
+  - Pre-registered P1-P3 all CONFIRMED (PREREGISTRATION.md). The audit ran both order-5 rows directly to 2*10^5, and
+    the 15 generators to 3*10^6 (293,669,502 states, the same ten misses).
   - The transfer is checked against an independent brute-force packing count on 600 random chains of orders <= 14
     (0 failures).
   NOT CLAIMED: ternary or binary Chan-Pak, both OPEN; see HYP-9640 (A), (B) for the reductions.
+  AUDIT: PASS WITH CORRECTIONS (05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/audit/AUDIT.md;
+  M2 over-claim in the gloss of (5); m3, m4, m6, m10, m11 applied; MISTAKE-748).
 session: kind-pasteur-2026-11-09-S18
 source: 05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/README.md
 proof: 05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/PROOF.md
@@ -64,7 +76,9 @@ x >= 0. Its first row is (eta, x q_o, x q_e), where:
 
 The E- and O-rows are the explicit path sums of PROOF.md, Lemma C.
 
-**(2) Apex bridges.** Suppose every odd cycle of T passes through u and every odd cycle of B passes through w. Then
+**(2) Apex bridges.** Suppose every odd cycle of T passes through u and every odd cycle of B passes through w. In a
+tournament this is equivalent to T - u and B - w being transitive (every cycle implies a 3-cycle), i.e. to one-apex
+sides. Then
 
     I(Omega(T (.) B), x) = I(Omega(T), x) I(Omega(B), x) + x c,
 
@@ -84,7 +98,9 @@ with a(2W+1) = a(W), a(2W) = a(W) + ceil(W/2), a(0) = 0.
 tower 1-^n. Its characteristic polynomial is t^3 - t^2 - t - (x - 1). At x = 3 this is (t - 2)(t^2 + t + 1), with
 dominant eigenvector (3, 1, 2).
 
-**(4) Coverage (FINITE-EXACT).**
+**(4) Coverage (FINITE-EXACT).** The audit reproduced every row with its own code: every state count matched, and
+every reached value has a certificate word. It also ran the order-5 rows directly to 2*10^5, and the 15 generators to
+3*10^6 with the same ten misses.
 
 | family | base | misses (complete list up to the bound) | bound |
 |---|---|---|---|
@@ -108,20 +124,23 @@ Gap_b = {m : 1 + b m is not I(Omega(T), b) for any tournament T} satisfies Gap_b
 
 Proof sketch:
 - **m <= 80.** THM-4940 (6) gives the exact gap sets here.
-- **80 < m <= 30,000.** The values are covered in three ways:
+- **80 < m <= 30,000.** The values are covered by:
   - the order-<= 5 port chains in base b;
-  - their closure under order joins;
-  - 61 explicit tournaments of orders 8-11 for the alpha-sums that were still open: 1 in base 4, 7 in base 5, 6 in
-    base 6, 7 in base 7, 40 in base 8.
-- **Witness check.** The 61 witnesses were found by hill-climbing and verified from scratch: cycle DP, packing DP and
-  OCF (`out/bases_4to8_witnesses_verify.out`).
+  - 61 explicit tournaments of orders 8-11 for the alpha-sums the chains miss: 1 in base 4, 7 in base 5, 6 in base 6,
+    7 in base 7, 40 in base 8.
+
+  Closing the chain values under order joins was tried and added nothing in this range.
+- **Witness check.** The 61 witnesses were found by hill-climbing. A second script of this session verified them from
+  scratch (cycle DP, packing DP, OCF; `out/bases_4to8_witnesses_verify.out`). The audit verified all 61 again
+  independently.
 
 This is evidence for HYP-9530 (B) (finite gaps in every base); see HYP-9640 (E).
 
 **(5) Tower directions (FINITE-EXACT).**
 - Take all products of length <= 3 of the 57 base-3 blocks of order <= 4. The distinct ones that map (3, 1, 2) to a
   multiple of itself are exactly M_T^k, k = 1..12.
-- So these blocks give no finite-state digit system (affine numeration) along the tower.
+- So, among products of length <= 3 (and, by the audit, of length exactly 4), no block product other than a tower
+  power preserves the tower direction. Longer products are not covered by this check.
 
 ## Proof
 
@@ -141,8 +160,10 @@ chain paths by parity.
 
 **(4).** `chain_cover.c` takes the breadth-first closure of (1, 0, 1), keeping h <= LIM and saturating E, O at
 floor(LIM/x) + 1.
-- The saturation is exact. Each h-row is (eta, x q_o, x q_e), so a saturated coordinate with a positive coefficient
-  forces h > LIM. Nonnegative rows commute with min(., CAP).
+- **Pruning.** Pruning at h > LIM is sound because h never decreases: h' >= eta h >= h, since eta = I(Omega(B), x) >= 1.
+- **Saturation is exact.** Each h-row is (eta, x q_o, x q_e), so a saturated coordinate with a positive coefficient
+  forces h > LIM. For nonnegative integer rows, cap(row . s) = cap(row . cap(s)), where only E and O are capped.
+- **Audit check.** The audit obtained identical miss sets with this cap, with cap = LIM, and with no cap.
 - The order-5 family contains the order-4 family. So the order-5 runs to 3000 settle all misses below the
   order-4 bounds.
 - The 10^6 base-3 run used 64,420,757 states.
@@ -155,8 +176,9 @@ floor(LIM/x) + 1.
 
 - **What a proof would need.** HYP-9640 (A), (B) restate ternary and binary Chan-Pak as the cofiniteness of the orbit
   of (1, 0, 1) under 15 (resp. 56) explicit nonnegative 3 x 3 integer matrices.
-  - (5) rules out the cheapest route, a common eigen-direction with affine digits.
+  - (5) shows that the cheapest route, a common eigen-direction with affine digits, does not appear among short
+    products of order-<= 4 blocks.
   - Exploratory runs (not claimed) show that the apex-bridge family alone, and the 2-dimensional subsystem made by
     appending a sink after each block, both leave gaps that keep growing.
-- **Base 2 and base 3 together.** The same 271 / 264 order-5 matrices realise both Chan-Pak spectra to the stated
-  bounds. The only misses are the permanent gaps: alpha-sums 3 and 10 in both bases (THM-4940 (3), (4); THM-1370).
+- **Base 2 and base 3 together.** The same order-<= 5 blocks (387 classes) realise both Chan-Pak spectra to the
+  stated bounds. The matrices depend on the base: 264 distinct at x = 2, 271 at x = 3. The only misses are the permanent gaps: alpha-sums 3 and 10 in both bases (THM-4940 (3), (4); THM-1370).

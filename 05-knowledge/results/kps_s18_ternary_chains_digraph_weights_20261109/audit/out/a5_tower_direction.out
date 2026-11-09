@@ -1,0 +1,4 @@
+57 matrices; single blocks equal to tower powers: [1, 2, 3, 4]
+length <= 1: 57 distinct products, 4 preserve the direction (3,1,2); tower powers among them: [1, 2, 3, 4]; non-tower: []
+length <= 2: 2654 distinct products, 8 preserve the direction (3,1,2); tower powers among them: [1, 2, 3, 4, 5, 6, 7, 8]; non-tower: []
+length <= 3: 119516 distinct products, 12 preserve the direction (3,1,2); tower powers among them: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; non-tower: []

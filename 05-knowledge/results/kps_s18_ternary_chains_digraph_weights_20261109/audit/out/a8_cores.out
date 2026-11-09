@@ -1,0 +1,24 @@
+order 2: classes by (H, b): {}
+order 3: classes by (H, b): {}
+n=4 H=7 b=2 kinds={'B': 6} H = 6[B] + 1[empty]
+n=4 H=7 b=2 kinds={'B': 6} H = 6[B] + 1[empty]
+n=4 H=7 b=2 kinds={'B': 5} H = 5[B] + 1[empty] + 1[B+B]
+order 4: classes by (H, b): {(7, 2): 3}
+n=5 H=21 b=3 kinds={'B': 18, 'To': 1} H = 18[B] + 2[To] + 1[empty]
+n=5 H=21 b=3 kinds={'B': 16, 'To': 1} H = 16[B] + 2[To] + 1[empty] + 2[B+To]
+n=5 H=21 b=3 kinds={'B': 17} H = 17[B] + 1[empty] + 3[B+B]
+n=5 H=21 b=3 kinds={'B': 16} H = 16[B] + 1[empty] + 4[B+B]
+n=5 H=21 b=2 kinds={'B': 12, 'Te': 1, 'To': 3} H = 12[B] + 6[To] + 1[empty] + 2[B+To]
+n=5 H=21 b=3 kinds={'B': 15} H = 15[B] + 1[empty] + 5[B+B]
+n=5 H=21 b=2 kinds={'B': 14, 'Te': 1, 'To': 2} H = 14[B] + 4[To] + 1[empty] + 2[B+To]
+n=5 H=21 b=2 kinds={'B': 14, 'Te': 1, 'To': 2} H = 14[B] + 4[To] + 1[empty] + 2[B+To]
+n=5 H=21 b=2 kinds={'B': 12, 'Te': 1, 'To': 3} H = 12[B] + 6[To] + 1[empty] + 2[B+To]
+n=5 H=21 b=3 kinds={'B': 16, 'To': 1} H = 16[B] + 2[To] + 1[empty] + 2[B+To]
+n=5 H=21 b=3 kinds={'B': 18, 'To': 1} H = 18[B] + 2[To] + 1[empty]
+n=5 H=21 b=2 kinds={'B': 13, 'Te': 2, 'To': 2} H = 13[B] + 4[To] + 1[empty] + 3[B+B]
+n=5 H=21 b=2 kinds={'B': 11, 'Te': 2, 'To': 3} H = 11[B] + 6[To] + 1[empty] + 3[B+B]
+n=5 H=21 b=3 kinds={'B': 17} H = 17[B] + 1[empty] + 3[B+B]
+n=5 H=21 b=3 kinds={'B': 15} H = 15[B] + 1[empty] + 5[B+B]
+n=5 H=21 b=3 kinds={'B': 16} H = 16[B] + 1[empty] + 4[B+B]
+order 5: classes by (H, b): {(21, 2): 6, (21, 3): 10}
+total classes 19; packet lines 19; matched with consistent numbers 19

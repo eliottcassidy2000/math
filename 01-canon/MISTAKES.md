@@ -24029,3 +24029,48 @@ thresholds from the data before writing them.
   - Check every structural side claim (here "never a union") by a quick search before writing it.
   - On a directive shared with a live lane, fetch and read the inbox before each new sub-result (MISTAKE-699,
     MISTAKE-706).
+
+## MISTAKE-748 (2026-11-09, kind-pasteur-2026-11-09-S18, THM-5070, THM-5071, HYP-9640 and `05-knowledge/results/kps_s18_ternary_chains_digraph_weights_20261109/`) -- a transfer that dropped the surviving bridge (caught by the permanent gaps); a known exclusion presented as new; a finite check glossed as universal
+
+- **Near miss (caught before any claim).** The first port-chain transfer weighted every path remainder
+  T + (B - V(P')) by h I(Omega(B - V(P')), x). That is wrong when w survives in the remainder: the bridge w -> u is
+  still present there and creates further odd cycles (PROOF.md Lemma C (i)).
+  - The faulty engine reported zero misses below 3000, including 10 and 31. Those are proved permanent base-3 gaps
+    (THM-4940 (3), (4)), which exposed the bug.
+  - The corrected transfer was then checked against an independent brute-force packing count on 600 random chains
+    (0 failures) before any coverage run was used.
+- **MAJOR (credit; found by the audit `audit/AUDIT.md`, M1).** THM-5071 (4b), "exactly one reciprocal pair never
+  gives 1, 4 or 7", was typed as this session's theorem.
+  - Session234 (PROOFS.md DG3, DG4, DG5) already proves the cases 1 and 7. Its DG5 says "H = 7 forces exactly two
+    reciprocal pairs".
+  - The method is Session234's too: component factorisation, a strong spanning tournament, the Moon floor. The
+    four-cell lemma is the b = 1 case of DG4.
+  - Only the exclusion of 4 is new.
+  - The packet even quoted DG5 in its README.
+  - Repaired in THM-5071, PROOF.md, README, HYP-9640 (C) and both INDEX rows.
+- **MAJOR (over-claim; audit M2).** THM-5070 (5) checked block products of length <= 3. Its glosses in THM-5070,
+  HYP-9640 (A), the results INDEX and the README said that no finite-state digit system exists along the tower. The
+  README also blamed this for "infinitely many" gaps of other families. Repaired to the finite statement: lengths <= 3,
+  plus length 4 from the audit.
+- **Minor (audit m1-m15).**
+  - Grinberg-Stanley's Theorem 1.30 number was missing, and (1) is KNOWN/CITED.
+  - Berge's parity theorem was not credited.
+  - THM-4952 (A) was not cited as the general-base precedent.
+  - The pruning step h' >= h was not stated.
+  - `bases_gaps.py` could have silently truncated miss lists (now asserted).
+  - The order-join "source" in THM-5070 (6) settled nothing.
+  - The witnesses were called independently verified before the audit.
+  - HYP-9530 pointers were stale.
+  - Half of P4 was already in Session234's census.
+  - THM-5071 (5) was typed by order only.
+  - Assorted wording: "same matrices", the one-apex equivalence, citations, "exactly", "shows", and the P5 sample size.
+- **Process.**
+  - A hypotheses-INDEX row carrying a check_docs required token (THM-2095) was archived to keep the 120-line budget.
+    check_docs caught it; repaired by merging the new row into this session's own lane row.
+  - The first canon filenames exceeded the Windows 260-character path limit in this deep worktree. They were
+    shortened before the checkpoint.
+
+Lesson: run every coverage engine against the permanent gaps first. One that attains 10 or 31 in base 3 (7 or 21 in
+base 2) is wrong. Never archive an index row without grepping check_docs' required-token list. When a concurrent
+same-prompt packet has already been read, credit each of its lemmas used, by number, before typing a statement
+PROVED-new. State a finite check at its checked range everywhere it is quoted.

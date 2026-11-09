@@ -12,6 +12,13 @@
 Proofs are in [PROOF.md](PROOF.md); the predictions are in [PREREGISTRATION.md](PREREGISTRATION.md) (P1-P5, all
 CONFIRMED).
 
+**Independent audit:** PASS WITH CORRECTIONS ([audit/AUDIT.md](audit/AUDIT.md)). 2 MAJOR and 15 MINOR findings, all
+applied; MISTAKE-748. No wrong number or proof was found, and every count reproduced. The majors:
+- (4b) "one reciprocal pair never gives 1, 4, 7": the cases 1 and 7 and the method are Session234's; 4 is new.
+- The tower-direction check was glossed beyond its finite range (length <= 3; the audit adds length 4).
+
+The audit extended the ternary 15-generator coverage to 3*10^6.
+
 ## Owner prompt (2026-11-09)
 
 > keep going and prove the ternary Chan-Pak conjecture and beyond. spend the next session considering hamiltonian
@@ -80,12 +87,13 @@ characteristic polynomial t^3 - t^2 - t - (x - 1). In base 3 this is (t - 2)(t^2
 - One explicit family realises both Chan-Pak spectra, and its only misses are the permanent gaps.
 - The binary row is a control: THM-4875 (D) already reaches 2^32 with one-arc joins.
 
-**(6) Beyond base 3: the gap sets of bases 4-8, FINITE-EXACT, not pre-registered.** For each base b = 4..8 the
-following three sources together settle every alpha-sum m in (80, 30000]:
-- port chains with blocks of order <= 5;
-- their order-join closure, together with THM-4940 (6)'s exact table below 81;
-- 61 hill-climbed tournaments of orders 8-11 for the values still open (`hunt.c`), each verified from scratch
-  (`verify_witnesses.py`).
+**(6) Beyond base 3: the gap sets of bases 4-8, FINITE-EXACT, not pre-registered.** For each base b = 4..8:
+- m <= 80 is THM-4940 (6)'s exact table.
+- Every m in (80, 30000] is settled by port chains with blocks of order <= 5, together with 61 hill-climbed
+  tournaments of orders 8-11 for the values the chains miss (`hunt.c`).
+- The witnesses were checked by a second script of this session (`verify_witnesses.py`), and independently by the
+  audit (all 61 pass).
+- Order-join closure was tried and settled nothing in this range.
 
 So Gap_b below 30,000 is exactly the known small gap set:
 
@@ -95,13 +103,17 @@ So Gap_b below 30,000 is exactly the known small gap set:
 
 This is strong evidence for HYP-9530 (B) and its sharpening HYP-9640 (E).
 
-**(5) Why there is no easy digit proof, FINITE-EXACT.** A digit (numeration) proof would need block products that
-preserve the tower direction (3, 1, 2), the eigenvalue-2 eigenvector. Among the products of length <= 3 of all 57
-order-<= 4 blocks, only the tower powers M_T^1, ..., M_T^12 do so. This is also the reason the 2-dimensional
-"sink-normalised" subsystem and the apex-bridge family alone leave infinitely many gaps (exploratory runs, not
-claimed).
+**(5) Why there is no easy digit proof, FINITE-EXACT.** A digit (numeration) proof along the tower would need block
+products that preserve the tower direction (3, 1, 2), the eigenvalue-2 eigenvector.
+- Among the products of length <= 3 of all 57 order-<= 4 blocks, only the tower powers M_T^1, ..., M_T^12 do so.
+- The audit adds length exactly 4: only M_T^4, ..., M_T^16.
+- Longer products are not checked.
 
-**HYP-9640 (A), OPEN.** The 15 explicit base-3 generators reach every v = 1 (mod 3) with v >= 866.
+Separately, exploratory runs (not claimed) show that the 2-dimensional "sink-normalised" subsystem and the apex-bridge
+family alone leave gaps that keep growing in the computed range.
+
+**HYP-9640 (A), OPEN.** The 15 explicit base-3 generators reach every v = 1 (mod 3) with v >= 866. Checked to 10^6
+here and to 3*10^6 by the audit.
 
 **HYP-9640 (B), OPEN.** The 56 order-<= 4 base-2 matrices reach every odd v >= 493.
 
@@ -137,11 +149,12 @@ The formula was checked against direct counts on 232,263 digraphs (P5 gate, 0 fa
 - **What a reciprocal 11 pair does.** It removes the partner of every cycle through it, so those cycles weigh 1
   instead of 2.
 - **What a missing 00 pair does.** It creates unpartnered cycles in the complement, with signed weight.
-- **Loops.** The diagonal never enters. The "reflexive node" clause of the conjecture is therefore vacuous: a loop
-  can be added to any matrix without changing its path total.
+- **Loops.** The diagonal never enters (Session234 DG1). The "reflexive node" clause of the conjecture is therefore
+  vacuous: a loop can be added to any matrix without changing its path total.
 
-**Parity law (PROVED).** H(D) is congruent, mod 2, to the number of packings of defect cycles. This generalises
-Rédei.
+**Parity law (PROVED).** H(D) is congruent, mod 2, to the number of packings of defect cycles. This refines Berge's
+theorem H(D) = H(complement) (mod 2); Rédei's theorem is the tournament case. The formula itself is Grinberg-Stanley's
+Theorem 1.30 (arXiv:2307.05569v1), specialised at (1, 0, 0, ...).
 
 ### The 7/21 families, decomposed (FINITE-EXACT; Session234's cores)
 
@@ -151,7 +164,7 @@ Rédei.
 | one class | 7 = 1 + 5 x 1 + 1 x 1: one disjoint pair of reciprocal cycles |
 
 - **Why 7 is out of reach for tournaments.** In tournaments 7 would need alpha = (3, 0): three pairwise
-  intersecting odd cycles of weight 2, which is impossible (THM-1370).
+  intersecting odd cycles of weight 2, which is impossible (THM-4940 (3), THM-343).
 - **How the cores escape.** Each core uses six weight-1 cycles instead.
 - **The 21-cores.** The sixteen order-5 cores (b = 2 or 3) decompose as 1 + 18 + 2, 1 + 17 + 3, 1 + 12 + 6 + 2,
   and so on (`out/core_weights.out`). Each mixes weight-1 reciprocal cycles with at most three odd tournament cycles.
@@ -159,13 +172,16 @@ Rédei.
 ### One defect at a time (PROVED / FINITE-EXACT; pre-registered P4, CONFIRMED)
 
 **Exactly one reciprocal pair, no missing pair.** The total is never 1, 4 or 7, at any order.
+- **Credit.** The cases 1 and 7, and the method, are Session234's: component factorisation DG3, strong spanning
+  tournament DG4, and DG5's "7 needs exactly two reciprocal pairs". New here: the exclusion of 4.
 - **Proof.** Factor over strong components. A strong semicomplete digraph with one reciprocal pair has a strong
-  tournament resolution (a self-contained four-cell argument). The Busch floor f(5) = 9 then leaves orders <= 4, and
-  those are checked exhaustively.
+  tournament resolution (DG4; a self-contained four-cell check is in PROOF.md). The Busch floor f(5) = 9 then leaves
+  orders <= 4, and those are checked exhaustively.
 - **What is attained.** Every other value 2..197 is attained at orders <= 7. In particular 21 is attained with one
   reciprocal pair, already at order 6 (first found by Session234).
 
-**Exactly one missing pair, no reciprocal pair.** Every value 0..129 is attained at orders <= 7, including
+**Exactly one missing pair, no reciprocal pair.** Every value 0..129 is attained at orders <= 7. The H = 7 case at
+order 5 was already in Session234's census (600 labelled digraphs). The examples are
 - 7 at order 5: rows 00001 10000 01000 11100 01110, with pair {0, 2} missing;
 - 21 at order 6.
 
@@ -176,11 +192,11 @@ binary digits of h - 1; then H = h.
 The sharp form is:
 - 7 and 21 force a defect pair;
 - a single 00 pair suffices for both;
-- a single 11 pair suffices for 21 but never for 7;
-- for 7 one needs a 00 pair or two 11 pairs (Session234).
+- a single 11 pair suffices for 21 but never for 7 (both Session234's);
+- for 7 one needs a 00 pair or exactly two 11 pairs (Session234 DG5).
 
-The values excluded by one 11 pair are exactly {1, 4, 7}. This is proved for all orders. That nothing else is
-excluded is HYP-9640 (C), verified below 198.
+1, 4 and 7 are excluded by one 11 pair at all orders (proved; 4 is the new case). That nothing else is excluded is
+HYP-9640 (C), verified below 198.
 
 ## 3. Binary and ternary (typed ANALOGY; S89 holds the dictionary lane)
 
@@ -193,8 +209,9 @@ excluded is HYP-9640 (C), verified below 198.
 - **"2 and 3" in the tower.** In base 3 the tower grows as exactly 2^n with a period-3 correction (eigenvalues 2, ω,
   ω^2). The exact count is H_3 = (3 * 2^n + c_n)/7 (THM-4952 (C)).
 
-Whether some digraph construction D(T) has H(D(T)) = H_3(T) is left open. The weighted formula shows it would need
-weight 3 on every odd cycle. No such construction is claimed.
+Whether some digraph construction D(T) has H(D(T)) = H_3(T) is left open. The weighted formula suggests it would
+need weight 3 on every odd cycle. This is a heuristic, since nothing forces a construction to act cycle by cycle. No
+such construction is claimed.
 
 ## 4. Files
 
