@@ -1,0 +1,13 @@
+{
+  "session231-descent-audit/AUDIT.md": "7650d11c6b8d402eacfcfe60b1da48125992ac0ef9230a842f6264a9d9329a31",
+  "session231-descent-audit/CHECK.json": "e5c9c0413903c830da52753af0017eec6cb2a470ecad0abc981e3c55138d2f59",
+  "session231-descent-audit/CHECK.optimized.json": "e5c9c0413903c830da52753af0017eec6cb2a470ecad0abc981e3c55138d2f59",
+  "session231-descent-audit/check.py": "5234ae5002f62fb27f786f11d8391e1a8311b4729ccc8b619b3ab5c21fcdb974",
+  "session231-physical-descent/CHECK.json": "33c187f25ded80a71cb2ff979b619d53e06904bfeaf82e0d405c46c32ccb0b8e",
+  "session231-physical-descent/CHECK.optimized.json": "33c187f25ded80a71cb2ff979b619d53e06904bfeaf82e0d405c46c32ccb0b8e",
+  "session231-physical-descent/PROOF.md": "d93b7f47ac7441c102071ef32b0521922180c78e03e9ee33b8f47a56c77f3ebb",
+  "session231-physical-descent/README.md": "6d22d236495069f64cb2a72aac7bdbdae015c2cb9a3c9f4263697d837376e644",
+  "session231-physical-descent/SHA256SUMS": "1032735293f3b95d97a6957092c9ca04e08cb5e4e08c22193baa94e0bea1933b",
+  "session231-physical-descent/inherited.py": "9e834801a3dcaeb74a22a9fd7787d2bdf8c6c1b49e594f7177f0031bdfe088d5",
+  "session231-physical-descent/verify.py": "d6ecb84dded0b7bc18333f6885f74fbba42885e491a2f29901603b4268196ffd"
+}

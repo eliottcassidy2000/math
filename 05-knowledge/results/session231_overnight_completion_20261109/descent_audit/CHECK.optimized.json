@@ -1,0 +1,95 @@
+{
+  "full_oracle_implemented": false,
+  "graphs": 1099,
+  "inverse_bounded_bank": [
+    [
+      3,
+      2
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      9,
+      14
+    ],
+    [
+      11,
+      2
+    ],
+    [
+      13,
+      2
+    ],
+    [
+      15,
+      20
+    ],
+    [
+      17,
+      14
+    ],
+    [
+      19,
+      8
+    ],
+    [
+      21,
+      0
+    ],
+    [
+      23,
+      12
+    ],
+    [
+      25,
+      12
+    ],
+    [
+      27,
+      24
+    ],
+    [
+      29,
+      14
+    ],
+    [
+      31,
+      10
+    ],
+    [
+      33,
+      14
+    ],
+    [
+      35,
+      4
+    ],
+    [
+      37,
+      8
+    ],
+    [
+      39,
+      4
+    ],
+    [
+      41,
+      10
+    ]
+  ],
+  "literal_join_checks": 5625,
+  "pair_universe": 1207801,
+  "physical_triples": 42,
+  "prime_pair_checks": 325657,
+  "proper_pairs": 1202025,
+  "scope": "finite exact independent controls; general claims require proof",
+  "status": "PASS",
+  "strongness_iff_checks": 5481,
+  "universe": "all labelled root-zero tournaments orders 1..5; literal joins and strongness orders 1..4"
+}

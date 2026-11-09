@@ -2,8 +2,8 @@
 
 **Status: IN PROGRESS. Chan–Pak completeness remains OPEN.**
 
-This is a checkpoint of the research question and inherited boundaries, not a
-proof announcement. The target is every positive odd tournament Hamilton-path
+This ongoing packet contains independently audited partial results. It is not
+a proof of completeness. The target is every positive odd tournament Hamilton-path
 count other than 7 and 21. Base main is
 `9c48b9ac1e2a9c22b0814686c76e3358ad56051d`.
 
@@ -44,3 +44,29 @@ critical audits and nonforce mainline checkpoints. Exact scripts and proofs
 will be added as they become ready. A finite computation, gcd-one family or
 state-membership algorithm alone will not be described as completing the
 conjecture.
+
+## Audited checkpoint 2: two-sided physical descent
+
+For a proper one-arc join of actual rooted triples (h,e,u), (k,f,v),
+
+    N = hk - ef + uv,
+    h,k <= floor((2N-1)/3) < N,
+    uv <= N-1.
+
+An exact finite divisor inverse uses the inherited physical-state oracle, so
+no numerical cone point is admitted without a graph. Prime representations
+normalize to strong outputs. This is a two-sided synthesis of inherited
+counting, endpoint and membership mechanisms, not a new count formula or
+coverage theorem. The two endpoint/response triples cannot be replaced by
+scalar counts alone.
+
+[Proof](descent/PROOF.md) · [Independent audit](descent_audit/AUDIT.md).
+Both independent and producer implementations check all 1,207,801 pairs of
+rooted labelled tournaments through order five; 5,625 smaller literal joins
+are counted directly. The audit additionally checks strongness, prime
+normalization and primitive interfaces. The enormous unrestricted membership
+oracle is proved mathematically, not computationally exhausted.
+
+The frozen audit input manifest describes the submitted candidate header.
+Only its status and audit link were changed for publication, after PASS.
+Subsequent construction rounds and independent audits remain active.
