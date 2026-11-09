@@ -8,3 +8,5 @@ wit
 # large regenerable census outputs (regenerate: ./dom_even 255 14 > dom_K255.out ; ./dom_even 511 16 > dom_K511.out)
 dom_K255.out
 dom_K511.out
+# in-flight outputs of background witness searches (copied to tracked files only after the job ends)
+*.running
