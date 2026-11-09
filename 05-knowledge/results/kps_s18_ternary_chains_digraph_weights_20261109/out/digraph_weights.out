@@ -1,0 +1,19 @@
+all loopless digraphs n=1: checks so far 1 fails 0
+all loopless digraphs n=2: checks so far 5 fails 0
+all loopless digraphs n=3: checks so far 69 fails 0
+all loopless digraphs n=4: checks so far 4165 fails 0
+semicomplete n=5: checks so far 63214 fails 0
+oriented n=5: checks so far 122263 fails 0
+random digraphs n=6: checks so far 222263 fails 0
+random digraphs n=7: checks so far 232263 fails 0
+GS weighted formula: 232263 checks, 0 failures
+n=3 one arc deleted: H=7 no, H=21 no; first absent values: 2 3 4 5 6 7 8 9 10 11 12 13
+n=3 one reverse arc added: H=7 no, H=21 no; first absent values: 1 4 5 6 7 8 9 10 11 12 13 14
+n=4 one arc deleted: H=7 no, H=21 no; first absent values: 3 5 6 7 8 9 10 11 12 13 14 15
+n=4 one reverse arc added: H=7 no, H=21 no; first absent values: 1 4 7 9 10 11 12 13 14 15 16 17
+n=5 one arc deleted: H=7 yes, H=21 no; first absent values: 10 12 13 14 15 16 17 18 19 20 21 22
+n=5 one reverse arc added: H=7 no, H=21 no; first absent values: 1 4 7 18 20 21 22 23 24 25 26 27
+n=6 one arc deleted: H=7 yes, H=21 yes; first absent values: 35 37 38 39 40 41 42 43 44 45 46 47
+n=6 one reverse arc added: H=7 no, H=21 yes; first absent values: 1 4 7 22 33 55 57 58 59 60 61 62
+n=7 one arc deleted: H=7 yes, H=21 yes; first absent values: 130 131 132 133 134 136 137 138 139 140 141 142
+n=7 one reverse arc added: H=7 no, H=21 yes; first absent values: 1 4 7 198

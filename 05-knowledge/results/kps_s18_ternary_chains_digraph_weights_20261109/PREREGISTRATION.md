@@ -53,4 +53,16 @@ Outcomes will be appended below, unedited, after the runs.
 
 ## Outcomes
 
-(pending)
+Appended 2026-11-09 after the runs. The text above is unchanged.
+
+- **P1: CONFIRMED.** Blocks of order <= 4, base 3, LIM = 200000: the misses are exactly 10, 31, 61, 106, 217, 274,
+  337, 346, 607, 865, with 22,540,354 states (`out/chain_k4_base3_2e5.out`). The run was extended to 10^6 with a
+  15-matrix subset: the same ten misses, 64,420,757 states (`out/chain_gen15_base3_1e6.out`).
+- **P2: CONFIRMED.** Blocks of order <= 5, base 3: below 3000 the misses are exactly 10 and 31
+  (`out/chain_k5_base3_3000.out`). The order-5 family contains the order-4 family, so its misses below 2*10^5 (and
+  below 10^6) are exactly 10 and 31.
+- **P3: CONFIRMED.** Base 2, blocks of order <= 4: the misses below 200000 are 7, 21, 47, 67, 127, 173, 491, all
+  below 2000. With order <= 5 the misses are exactly 7 and 21.
+- **P4: CONFIRMED.** One arc deleted gives H = 7 at order 5 and H = 21 at order 6 (`out/digraph_weights.out`,
+  `out/one_defect_witness.out`).
+- **P5: PASSED.** 232,263 checks, 0 failures.

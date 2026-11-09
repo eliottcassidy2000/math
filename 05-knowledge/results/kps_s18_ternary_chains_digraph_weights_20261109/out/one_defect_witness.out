@@ -1,0 +1,4 @@
+order 5, H = 7, one missing pair (0, 2): rows 00001 10000 01000 11100 01110
+order 6, H = 21, one missing pair (1, 5): rows 000011 100000 110000 111000 011100 001110
+order 6, H = 21, one reciprocal pair (0, 3): rows 000101 100000 110000 111000 111100 011110
+sink back-arc construction: H = h for every h in 1..299 (checked)
