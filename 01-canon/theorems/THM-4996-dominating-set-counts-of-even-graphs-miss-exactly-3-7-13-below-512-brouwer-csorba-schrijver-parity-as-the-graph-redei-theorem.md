@@ -35,7 +35,8 @@ status: >
   - Session232 (THM-4987-4990): the automorphism-orbit side of 7/21. This theorem is a different, intrinsic
     statistic.
   NOT CLAIMED:
-  - the exceptional set above 511 (HYP-9575 (B) conjectures {3, 7, 13});
+  - the exceptional set above 511 (HYP-9575 (B) conjectured {3, 7, 13}; now PROVED, with sharp orders, by THM-5040
+    and independently by THM-5055);
   - any natural correspondence between d on even graphs and H on tournaments. The shared 7 is an analogy.
 session: mac-mini-2026-11-09-paleyeven
 date: 2026-11-09

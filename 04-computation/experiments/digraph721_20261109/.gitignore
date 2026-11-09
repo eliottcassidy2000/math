@@ -1,0 +1,9 @@
+# compiled binaries
+dom_even
+evenclos
+closure4
+wcheck
+__pycache__/
+# large regenerable outputs (hashes in sha256.txt); regenerate with the commands in PROOF.md section 6
+dom_K511.out
+witnesses.txt

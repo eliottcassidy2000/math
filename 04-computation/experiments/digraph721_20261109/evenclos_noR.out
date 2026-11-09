@@ -1,0 +1,27 @@
+E(1): missing 0, extra 0
+E(2): missing 0, extra 0
+E(3): missing 0, extra 0
+E(4): missing 0, extra 0
+E(5): missing 0, extra 0
+E(6): missing 0, extra 0
+E(7): missing 0, extra 0
+E(8): missing 0, extra 0
+E(9): missing 0, extra 0
+E(10): missing 8, extra 0, first missing 501
+E(11): missing 23, extra 0, first missing 501
+E(12): missing 55, extra 0, first missing 501
+E(13): missing 118, extra 0, first missing 501
+E(14): missing 246, extra 0, first missing 501
+E(15): missing 501, extra 0, first missing 501
+E(16): missing 1013, extra 0, first missing 501
+E(17): missing 2036, extra 0, first missing 501
+E(18): missing 4084, extra 0, first missing 501
+E(19): missing 8179, extra 0, first missing 501
+E(20): missing 16371, extra 0, first missing 501
+E(21): missing 32754, extra 0, first missing 501
+E(22): missing 65522, extra 0, first missing 501
+E(23): missing 131057, extra 0, first missing 501
+E(24): missing 262129, extra 0, first missing 501
+E(25): missing 524272, extra 0, first missing 501
+E(26): missing 1048560, extra 0, first missing 501
+TOTAL E(n) vs formula for n <= 26: missing 2096928, extra 0
