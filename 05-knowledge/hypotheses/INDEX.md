@@ -107,7 +107,6 @@ A hypothesis is unresolved unless a proved leaf is named explicitly. Search its 
 - **THM-2080:** dyadic depth at most four, terminal size `7..10`, maximum at least `25`; depth-zero eleven and rank twelve remain separate.
 - **HYP-6820 (MIXED):** uniform `q<=25` is refuted; non-AP/deep multi-defect emptiness remains open.
 - **THM-741 (CLAIMED STUB / UNPROVED):** the global near-AP four-slot census is incomplete; route it as a candidate, not proved canon.
-
 ## NC2 / GMC and Lean
 - **Paper:** THM-2022 proves NC2/GMC(2); THM-2111 supplies an effective seed, THM-2101 two independent additive proofs, and THM-2067 the historical route.
 - **Formal:** `GMC2Main.gmc2` is unconditional, root-imported, and kernel-pure. `GMC2DvdKOmegaWiring.singlePolyCrux_holds` closes the former `DvdK1` endpoint; `HeightWitnessSupplier`, orbit-product, irreducibility, additive incidence, and the small-root frame are checked along its dependency chain.

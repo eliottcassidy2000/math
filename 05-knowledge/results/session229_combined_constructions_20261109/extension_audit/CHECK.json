@@ -1,0 +1,70 @@
+{
+  "EXTEND_TRIPLES.json": {
+    "all_pair_orientations": [],
+    "all_pair_physical_witness_count": 0,
+    "candidates": 128,
+    "complete_census_sha256": "00faf4c568a2bbfb05dd20c5d03d65e0f9e95f24aba4ff96c7292180a5e291ad",
+    "cut_records": 6144,
+    "eligible_by_core": {
+      "0": 48
+    },
+    "eligible_extensions": 48,
+    "fiber_size_histogram": {
+      "1": 1772
+    },
+    "interfaces": 1772,
+    "max_run": 1,
+    "maximal_run_count": 1772,
+    "nonordinal_multivalue_examples": [],
+    "nonordinal_multivalue_interface_count": 0
+  },
+  "EXTEND_UNSATURATED.json": {
+    "all_pair_orientations": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        127
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        255
+      ]
+    ],
+    "all_pair_physical_witness_count": 80,
+    "candidates": 384,
+    "complete_census_sha256": "25ab1a8838ffbd7e4beea711ade9a1b4779c9a18a5221f1149fc64c72d55f7d4",
+    "cut_records": 100864,
+    "eligible_by_core": {
+      "0": 86,
+      "1": 154
+    },
+    "eligible_extensions": 240,
+    "fiber_size_histogram": {
+      "1": 97056,
+      "2": 152
+    },
+    "interfaces": 97208,
+    "max_run": 2,
+    "maximal_run_count": 40,
+    "nonordinal_multivalue_examples": [],
+    "nonordinal_multivalue_interface_count": 0
+  },
+  "inputs_sha256": {
+    "EXTEND_TRIPLES.json": "13afb3f5ecdec635c0677943e22082a92e327363e43bfd810b0d3b2c47714cc4",
+    "EXTEND_UNSATURATED.json": "b99157ab2eec4f99a6c42df8815d52471b0b93b59a11c52e82b0601b091add89",
+    "EXTENSION_PROOF.md": "5501daddf7affe0f9381189c8d1c36d938e58f064f91a034ed2885e94ba45dcc",
+    "PROOF.md": "15f8a4d160084bf7f068e8e5e1b5a74c4052addc67d857d7885a8521b7e6947c",
+    "extend_triples.py": "5ec6c9f90d6ecb48a80edcb078c37fa7d05dcfd8a561a1a24d10e16afa38b962",
+    "extend_unsaturated.py": "1f088de998c9a409e6f226edcb61cf5c25826af80146443afc6f599bc10d1566",
+    "search.py": "d9708e13f299917a492fcee97337c91704a1fd170afc64c16937e8857b0bd9b9"
+  },
+  "method": "Exhaustive directed path sequence enumeration; source coordinates of ordered path covers; complete full-interface grouping retaining every physical witness, no producer imports; explicit checks (no assert).",
+  "status": "PASS"
+}

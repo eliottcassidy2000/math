@@ -1,5 +1,5 @@
 {
-  "canonical_runs": 18,
+  "canonical_runs": 36,
   "runs": [
     {
       "optimized": false,
@@ -108,6 +108,114 @@
       "receipt_sha256": "1f9942bba46625fd56eacb5b377957f8c1d99c6bd63ee0585b3fec10c45dc9a8",
       "script": "inverse_audit/check.py",
       "script_sha256": "b09e047f0a1d281d414f31af88feaff8009b8cd55fa65de51f90f1b009588a5a"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "0af661f39f41ae53c13c7ba89599a8b20e796ab5fd1bb6b0773b13b31daa7232",
+      "script": "dynamic/verify.py",
+      "script_sha256": "db06a7bad3e93852a16dd69543bc37c9a8417d47b25994bd1651297e9d4a20ef"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "0af661f39f41ae53c13c7ba89599a8b20e796ab5fd1bb6b0773b13b31daa7232",
+      "script": "dynamic/verify.py",
+      "script_sha256": "db06a7bad3e93852a16dd69543bc37c9a8417d47b25994bd1651297e9d4a20ef"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "10806c7c4a715929a92e0cdd09f440cf7b162376a160d77777377f80d74c3a48",
+      "script": "dynamic_audit/check.py",
+      "script_sha256": "7ca0ef99f892a1fb8f730cc42190d5719603abc2d99dcf60a8b18d9a0a9b41b9"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "10806c7c4a715929a92e0cdd09f440cf7b162376a160d77777377f80d74c3a48",
+      "script": "dynamic_audit/check.py",
+      "script_sha256": "7ca0ef99f892a1fb8f730cc42190d5719603abc2d99dcf60a8b18d9a0a9b41b9"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "d8f017f8abdf757c22cd42718590acf3bfe3f0f4aa025726e650e6791b448c43",
+      "script": "rich/verify.py",
+      "script_sha256": "8668c27e8bde7ab97579af3f60635648579b2bfddfa8370465752a348c0c3c86"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "d8f017f8abdf757c22cd42718590acf3bfe3f0f4aa025726e650e6791b448c43",
+      "script": "rich/verify.py",
+      "script_sha256": "8668c27e8bde7ab97579af3f60635648579b2bfddfa8370465752a348c0c3c86"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "461bce33ce199a94b891c4c47fbd8a9988907e59fd6902bc4c3b2762a8c14468",
+      "script": "rich_audit/check.py",
+      "script_sha256": "7c3ccbcec70f927594a83cad76366578526e3433c67c54d3da9bd2b6a6ed7cda"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "461bce33ce199a94b891c4c47fbd8a9988907e59fd6902bc4c3b2762a8c14468",
+      "script": "rich_audit/check.py",
+      "script_sha256": "7c3ccbcec70f927594a83cad76366578526e3433c67c54d3da9bd2b6a6ed7cda"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "13afb3f5ecdec635c0677943e22082a92e327363e43bfd810b0d3b2c47714cc4",
+      "script": "rich/extend_triples.py",
+      "script_sha256": "5ec6c9f90d6ecb48a80edcb078c37fa7d05dcfd8a561a1a24d10e16afa38b962"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "13afb3f5ecdec635c0677943e22082a92e327363e43bfd810b0d3b2c47714cc4",
+      "script": "rich/extend_triples.py",
+      "script_sha256": "5ec6c9f90d6ecb48a80edcb078c37fa7d05dcfd8a561a1a24d10e16afa38b962"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "b99157ab2eec4f99a6c42df8815d52471b0b93b59a11c52e82b0601b091add89",
+      "script": "rich/extend_unsaturated.py",
+      "script_sha256": "1f088de998c9a409e6f226edcb61cf5c25826af80146443afc6f599bc10d1566"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "b99157ab2eec4f99a6c42df8815d52471b0b93b59a11c52e82b0601b091add89",
+      "script": "rich/extend_unsaturated.py",
+      "script_sha256": "1f088de998c9a409e6f226edcb61cf5c25826af80146443afc6f599bc10d1566"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "e33bd00c3aef61a6b7d5d72626ba4d7d6e613a9dd8ec0f8238f38346bab449b1",
+      "script": "extension_audit/check.py",
+      "script_sha256": "c19263619e0d019e505f065353a59adc1ace6f69fc653a279a5884b7ef0d2a90"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "e33bd00c3aef61a6b7d5d72626ba4d7d6e613a9dd8ec0f8238f38346bab449b1",
+      "script": "extension_audit/check.py",
+      "script_sha256": "c19263619e0d019e505f065353a59adc1ace6f69fc653a279a5884b7ef0d2a90"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "f8fc910be352e95bbad6946706785f658dc669c96da292ab4a1a046e85748385",
+      "script": "dynamic/search.cpp",
+      "script_sha256": "b11d03a631cd6f026db1f5b758b15ee79630a830f4d46d5398e205b1201a90df"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "f8fc910be352e95bbad6946706785f658dc669c96da292ab4a1a046e85748385",
+      "script": "dynamic/search.cpp",
+      "script_sha256": "b11d03a631cd6f026db1f5b758b15ee79630a830f4d46d5398e205b1201a90df"
+    },
+    {
+      "optimized": false,
+      "receipt_sha256": "46a53353806d14cf2b65d83d4232aed7330421d779c98b721a39a523281845bb",
+      "script": "dynamic_audit/census.cpp",
+      "script_sha256": "a6036463013c28a0cc2554ae6043ddac9579f9e6a70c9debc43d6690ce083d98"
+    },
+    {
+      "optimized": true,
+      "receipt_sha256": "46a53353806d14cf2b65d83d4232aed7330421d779c98b721a39a523281845bb",
+      "script": "dynamic_audit/census.cpp",
+      "script_sha256": "a6036463013c28a0cc2554ae6043ddac9579f9e6a70c9debc43d6690ce083d98"
     }
   ],
   "status": "PASS"

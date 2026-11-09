@@ -33,3 +33,12 @@ Producer and independent checker were replayed from the assembled packet; normal
 - [Uniform proper-graft descent](inverse/PROOF.md), [independent audit](inverse_audit/REPORT.md): every proper graft admits a finite all-gadget physical inverse search, with both input Hamilton counts strictly smaller than the target. The gadget order and source coordinates have explicit bounds; prime targets normalize to reachable-root sources. This supplies a finite decreasing inverse, not the missing theorem that every target has a successful branch.
 
 `python3 -I -B verify_all.py` replays both execution modes against committed receipts. The first-stage recursive files remain frozen; `recursive_complete` is the strengthened version. Chan–Pak remains OPEN. A second construction phase is exploring context-stable unit switches and richer unsaturated modules rather than stopping at these barriers.
+
+## Audited checkpoint 4: context-stable repairs
+
+The second phase supplies constructive repairs, not just larger finite searches:
+
+- [Universal pairs and triples](dynamic/PROOF.md), [audit](dynamic_audit/AUDIT.md): a five-vertex core produces two consecutive odd outputs under every legal binary prefix/suffix; two six-vertex core topologies produce three consecutive odd outputs in every common context. Complete labeled core/cut enumeration through six vertices gives maximum run lengths1,2,3 through orders4,5,6 respectively.
+- [Unsaturated unit switches and four choices](rich/PROOF.md), [audit](rich_audit/REVIEW.md): H95/Q1276 and H389/Q5600 cores have gcd one and preserve the complete endpoint interface while changing only the scalar correction by two. The first supplies strong adjacent-count pairs at every order≥9. The H29/Q320 module has four distinct equal-alpha transfers and an all-order4^k transfer amplification. Transfer distinctness is not automatically scalar distinctness.
+
+These constructions isolate the endpoint coordinate T that the old equal-alpha switches failed to control. Repetition scales the gaps by outside Hamilton counts, so fixed-width repairs do not become unbounded consecutive intervals for free. The exact inverse still needs an all-target physical branch-selection theorem. Late one-vertex extension tests are separately typed finite experiments and are not used to prove the positive constructions.
