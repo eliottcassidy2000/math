@@ -1,0 +1,6 @@
+n=5: 11 graphs with complement of max degree <= 2; realisers of X(n) = 25: 4, even: 0; those with <= 1 universal vertex: 3, all of the listed shapes: True
+n=7: 29 graphs with complement of max degree <= 2; realisers of X(n) = 119: 6, even: 0; those with <= 1 universal vertex: 4, all of the listed shapes: True
+n=9: 70 graphs with complement of max degree <= 2; realisers of X(n) = 501: 11, even: 0; those with <= 1 universal vertex: 4, all of the listed shapes: True
+n=11: 156 graphs with complement of max degree <= 2; realisers of X(n) = 2035: 21, even: 0; those with <= 1 universal vertex: 4, all of the listed shapes: True
+n=13: 334 graphs with complement of max degree <= 2; realisers of X(n) = 8177: 31, even: 0; those with <= 1 universal vertex: 4, all of the listed shapes: True
+n=15: 686 graphs with complement of max degree <= 2; realisers of X(n) = 32751: 50, even: 0; those with <= 1 universal vertex: 4, all of the listed shapes: True

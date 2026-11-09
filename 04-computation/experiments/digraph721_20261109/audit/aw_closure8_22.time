@@ -1,0 +1,2 @@
+python3 aw_closure.py aw_enum8_rep.out 8 22 12 aw_closure8_22_w.txt 12 >   7.00s user 0.11s system 97% cpu 7.328 total
+SUMMARY lines=966 ok=966 bad=0

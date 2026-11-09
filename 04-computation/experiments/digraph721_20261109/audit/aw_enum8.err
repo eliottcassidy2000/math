@@ -1,0 +1,16 @@
+n=1 labelled graphs 1, degree-sorted 1, parity calls 1
+n=1 even d-values vs F(n): missing 0 extra 0; max even d = 1, M(n) = 1; X(n) none; 3/7/13 even: 0 0 0
+n=2 labelled graphs 2, degree-sorted 2, parity calls 2
+n=2 even d-values vs F(n): missing 0 extra 0; max even d = 1, M(n) = 1; X(n) none; 3/7/13 even: 0 0 0
+n=3 labelled graphs 8, degree-sorted 4, parity calls 4
+n=3 even d-values vs F(n): missing 0 extra 0; max even d = 5, M(n) = 5; X(n) none; 3/7/13 even: 0 0 0
+n=4 labelled graphs 64, degree-sorted 16, parity calls 14
+n=4 even d-values vs F(n): missing 0 extra 0; max even d = 11, M(n) = 11; X(n) none; 3/7/13 even: 0 0 0
+n=5 labelled graphs 1024, degree-sorted 84, parity calls 54
+n=5 even d-values vs F(n): missing 0 extra 0; max even d = 27, M(n) = 27; X(n) not realised; 3/7/13 even: 0 0 0
+n=6 labelled graphs 32768, degree-sorted 936, parity calls 323
+n=6 even d-values vs F(n): missing 0 extra 0; max even d = 57, M(n) = 57; X(n) none; 3/7/13 even: 0 0 0
+n=7 labelled graphs 2097152, degree-sorted 16758, parity calls 1918
+n=7 even d-values vs F(n): missing 0 extra 0; max even d = 121, M(n) = 121; X(n) not realised; 3/7/13 even: 0 0 0
+n=8 labelled graphs 268435456, degree-sorted 602544, parity calls 12995
+n=8 even d-values vs F(n): missing 0 extra 0; max even d = 247, M(n) = 247; X(n) none; 3/7/13 even: 0 0 0

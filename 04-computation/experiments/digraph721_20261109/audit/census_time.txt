@@ -1,0 +1,3 @@
+./dom_even_audit 511 16 > dom_K511_regen.out 2> dom_K511_regen.err  17.90s user 0.65s system 87% cpu 21.097 total
+rc=0
+6307dfa1d0fc58de7cd0990b1c4c948064d2be4f4a0c5846f9135df50d0afd0e  dom_K511_regen.out

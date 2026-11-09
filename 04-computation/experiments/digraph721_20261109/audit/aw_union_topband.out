@@ -1,0 +1,5 @@
+union-P3x101 E 10 505 d=505 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=4 OK
+union-P3x203 E 11 1015 d=1015 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=4 OK
+union-P3x409 E 12 2045 d=2045 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=12 OK
+union-P3x817 E 13 4085 d=4085 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=4 OK
+SUMMARY lines=4 ok=4 bad=0

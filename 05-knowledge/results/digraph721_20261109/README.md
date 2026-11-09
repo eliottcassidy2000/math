@@ -5,6 +5,7 @@ Session mac-mini-2026-11-09-digraph721 (2026-11-09).
 **Canon.**
 - THM-5055: a second, independent proof of THM-5040, the sharp even-graph Chan-Pak theorem (HYP-9575 (B)).
 - THM-5056: the odd-graph Chan-Pak theorem, exceptions exactly {1, 5, 37}, each value on ceil(log2(k + 1)) vertices.
+  opus-2026-11-09-S89's THM-5042 is a second, independent proof, cross-cited.
 - HYP-9625: the odd-graph conjecture with its reduction to primes; PROVED by THM-5056 the same day.
 
 [PROOF.md](PROOF.md). Code: `04-computation/experiments/digraph721_20261109/`.
@@ -50,9 +51,12 @@ between H(D) and H of the two associated (n+1)-tournaments. It took the even-gra
 4. **How the families are generated.** The odd numbers are written by their leading bits:
    - a cone over a padded graph writes 10;
    - an E_2-join writes 11, with a borrow of 2;
-   - the hub moves carry the values that neither can reach at any order. These are the values just below 2^(n-1)
-     (which need prime graphs) and the shifted exceptions 2^(n-1) + {3, 7, 13} and 3 * 2^(n-2) + {1, 5, 11}.
-5. **Why shift 3.** R alone is not enough. 11, 23 and 47 have no even realisation with a pendant at any order (they are
+   - the hub moves supply the inputs that cones and E_2-joins cannot take from lower orders:
+     - the values just below 2^(n-1). These are never cones or joins at any order; they can be disjoint unions
+       (e.g. 505 = d(P_3 u G_101)), but the induction uses connected, co-connected hub graphs;
+     - the shifted exceptions 2^(n-1) + {3, 7, 13};
+     - the cone inputs 2^(n-2) + {1, 5, 11}, which give 3 * 2^(n-2) + {1, 5, 11}.
+5. **Why shift 3** (PROVED from a census fact; PROOF.md remark 7.1). R alone is not enough. 11, 23 and 47 have no even realisation with a pendant at any order (they are
    prime, and none of their connected even realisers has a pendant). Through R this blocks the offset -81 at every
    even order. So the four-move closure is exact to n = 26 but misses 2^(n-1) - 81 for even n >= 84. PH(3, 2) changes
    the parity of the order and removes the block.
@@ -63,15 +67,18 @@ between H(D) and H of the two associated (n+1)-tournaments. It took the even-gra
    - Offsets 2^(L-1) + {1, 5, 37} come from the THM-5055 moves on graphs carrying a persistent pair of adjacent
      twins, which keeps every move odd. The four seeds are K_4 - e, K_2 u C_4, K_2 v (P_3 u E_2) and K_2 u T_55.
    - The base below 512 is the census.
-   - Example: 1061 = 2^10 + 37, which is prime and needs a prime graph, is the hub move PH(K_2 u T_55, w, 2) on 11
+   - Example: 1061 = 2^10 + 37 is prime, so no union of nontrivial components realises it, and 37 is not an odd
+     value, so no cone over an odd graph does. It is the hub move PH(K_2 u T_55, w, 2) on 11
      vertices.
 
 ## Verification
 
 - **Lemma checks.** The lemmas are proved in PROOF.md and checked by brute force: 706 single moves and 217 chains, with
   evenness from enumerating Aut(G).
-- **Closure.** The base closure was computed twice (C, and an independent numpy re-implementation). It gives
-  E(n) = F(n) for n <= 26, the fixed offsets from order 8, and the seed base for L(j) <= 12.
+- **Closure.** The base closure was computed twice, in C and in numpy (independent code, same base and moves). It
+  gives E(n) = F(n) for n <= 26, the fixed offsets from order 8, and the seed base for L(j) <= 12. Audit D1
+  reproduced it from its own base and code. The induction itself needs only the witnessed inputs (n <= 12, Lemma 7
+  and the Lemma 8 base).
 - **Witnesses.** 6,147 explicit witness graphs (up to 21 vertices) were checked by brute force for d, for evenness
   (via a generating set of Aut(G)) and for flags, with 0 failures.
 - **Case split.** The case split of the seed lemma was checked against the computed tables for 13 <= L(j) <= 15.
@@ -91,8 +98,9 @@ between H(D) and H of the two associated (n+1)-tournaments. It took the even-gra
 ## Credits
 
 - von Brömssen (even graphs); RPGFD 2023 (equinumerosity with tournaments).
-- Brouwer-Csorba-Schrijver (d odd); Alikhani-Peng (join formula); Alikhani, Graphs Combin. 29 (2013) (completeness
-  over all graphs).
+- Brouwer-Csorba-Schrijver 2009: d is odd, and Proposition 1.2 gives completeness and conciseness of d over all
+  graphs. An earlier draft of this note credited Alikhani 2013, which concerns D(G, -1) (MISTAKE-747).
+- Alikhani-Peng (the join formula).
 - Chan-Pak Conjecture 6.2 (the tournament analogue, {7, 21}, still open).
 - THM-4996 (census, parity calculus, the exceptional sets below 512).
 - THM-5040 (opus-2026-11-09-S89: the sharp statement, the exclusions, and a parallel proof).

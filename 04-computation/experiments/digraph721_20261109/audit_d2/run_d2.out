@@ -1,0 +1,99 @@
+== compile (own checkers; the session's wcheck.c only for its own re-run)
+== census hash (expect 6307dfa1d0fc58de7cd0990b1c4c948064d2be4f4a0c5846f9135df50d0afd0e, as in ../sha256.txt)
+6307dfa1d0fc58de7cd0990b1c4c948064d2be4f4a0c5846f9135df50d0afd0e  ../dom_K511.out
+== (A) the session's witness files, regenerated with the session's own scripts into this directory
+built 4093 values in [3,8192) on exactly L(k) vertices; order failures=0
+built 300 values in [8192,1048576) on exactly L(k) vertices; order failures=0
+special witnesses written: 57
+f83efc45ec5136a73e0b4130f6df8ea530211c54e059a6cb3714aec830a553e8  oddw_small_regen.txt
+38f92621f335697b81c08f69763bfe6cdc53bcf3db2a4dff6f5f1480836dc52a  oddw_large_regen.txt
+9feb2f3d735c301195e438ddc7f521c79b4aa534912346d866b24ecaf8f3e85f  oddw_special_regen.txt
+-- oddw_small: session wcheck, then audit d2check
+witnesses ok=4093 bad=0
+d2check: graphs=4093 failures=0 (odd certificates: transposition 3988, other automorphism 105; max n 13)
+-- oddw_large: session wcheck, then audit d2check
+witnesses ok=300 bad=0
+d2check: graphs=300 failures=0 (odd certificates: transposition 298, other automorphism 2; max n 20)
+-- oddw_special: session wcheck, then audit d2check
+witnesses ok=57 bad=0
+d2check: graphs=57 failures=0 (odd certificates: transposition 57, other automorphism 0; max n 20)
+== (B) d2check controls (expected: K2, P4, K4e OK; the other five FAIL)
+OK K2 n=2 k=3 d=3 order_ok=1 odd=1 cert=T
+OK P4 n=4 k=9 d=9 order_ok=1 odd=1 cert=A
+OK K4e n=4 k=13 d=13 order_ok=1 odd=1 cert=T
+FAIL P3_even n=3 k=5 d=5 order_ok=1 odd=0 cert=E
+FAIL C4_even n=4 k=11 d=11 order_ok=1 odd=0 cert=E
+FAIL K3_wrongvalue n=3 k=5 d=7 order_ok=1 odd=1 cert=T
+FAIL K2pad_wrongorder n=3 k=3 d=3 order_ok=0 odd=1 cert=T
+FAIL E2_even n=2 k=1 d=1 order_ok=0 odd=0 cert=E
+d2check: graphs=8 failures=5 (odd certificates: transposition 4, other automorphism 1; max n 4)
+== (C) exhaustive labelled enumeration, connected graphs n <= 7, vs census per (n, d, parity)
+MIN 1 1
+MIN 2 3
+REP 3 5 E 2 | 0-1 0-2
+MIN 3 5
+MIN 4 9
+MIN 5 15
+REP 6 37 E 4 | 0-1 0-2 0-3 0-4 0-5 1-2 1-3
+REP 6 37 E 1 | 0-1 0-3 0-4 0-5 1-2 1-4 2-3
+REP 6 37 E 4 | 0-2 0-4 0-5 1-2 1-4 1-5 2-3
+REP 6 37 E 2 | 0-1 0-3 0-5 1-3 1-4 2-3 2-4
+MIN 6 25
+MIN 7 45
+buckets compared: 136 classes mine: 996 census: 996 differences: 0
+== (D) the final statement for n <= 7 over ALL labelled graphs (no census, no construction)
+  count=0  matches {odd k <= 2^n-1} minus {1,5,37}: YES
+  count=1  matches {odd k <= 2^n-1} minus {1,5,37}: YES
+  count=2  matches {odd k <= 2^n-1} minus {1,5,37}: YES
+  count=6  matches {odd k <= 2^n-1} minus {1,5,37}: YES
+  count=14  matches {odd k <= 2^n-1} minus {1,5,37}: YES
+  count=29  matches {odd k <= 2^n-1} minus {1,5,37}: YES
+  count=61  matches {odd k <= 2^n-1} minus {1,5,37}: YES
+ALL n <= 7 MATCH
+== (E) base below 512, recomputed (census used only as a candidate list)
+odd k < 512 with an odd realiser on exactly L(k) vertices: 253 of 256
+no odd realiser found on L(k) vertices: [1, 5, 37]
+oddness certificate of the connected factor: odd transposition 222 ; other automorphism 31
+k=1: connected census graphs with d | k: 1 [(1, 1, 1, 'even')]
+k=5: connected census graphs with d | k: 2 [(1, 1, 1, 'even'), (3, 5, 2, 'even')]
+k=37: connected census graphs with d | k: 5 [(1, 1, 1, 'even'), (6, 37, 4, 'even'), (6, 37, 1, 'even'), (6, 37, 4, 'even'), (6, 37, 2, 'even')]
+d2check: graphs=253 failures=0 (odd certificates: transposition 222, other automorphism 31; max n 9)
+== (F) independent re-implementation of the construction, random admissible choices
+d2build all:512:16384 seed 11 graphs 7936 (all invariants asserted; orders = L(k))
+d2check: graphs=7936 failures=0 (odd certificates: transposition 7644, other automorphism 292; max n 14)
+d2build rand:16384:2097152:500 seed 12 graphs 500 (all invariants asserted; orders = L(k))
+d2check: graphs=500 failures=0 (odd certificates: transposition 495, other automorphism 5; max n 21)
+d2build special:21 seed 13 graphs 263 (all invariants asserted; orders = L(k))
+d2check: graphs=263 failures=0 (odd certificates: transposition 263, other automorphism 0; max n 21)
+== (G) seeds, every admissible w, 513
+K_4 - e: n=4 d=13 (claimed 13) offset=5 twins(0, 1)=True admissible w=[2, 3]; |Aut|=4 odd elements=2 -> ODD
+   PH(w=2,2): n=7 d=69 = 2^6 + 5; odd-good; |Aut|=4 odd elements=2 -> ODD
+   PH(w=3,2): n=7 d=69 = 2^6 + 5; odd-good; |Aut|=4 odd elements=2 -> ODD
+K_2 u C_4: n=6 d=33 (claimed 33) offset=1 twins(0, 1)=True admissible w=[2, 3, 4, 5]; |Aut|=16 odd elements=8 -> ODD
+   PH(w=2,2): n=9 d=257 = 2^8 + 1; odd-good; |Aut|=8 odd elements=4 -> ODD
+   PH(w=3,2): n=9 d=257 = 2^8 + 1; odd-good; |Aut|=8 odd elements=4 -> ODD
+   PH(w=4,2): n=9 d=257 = 2^8 + 1; odd-good; |Aut|=8 odd elements=4 -> ODD
+   PH(w=5,2): n=9 d=257 = 2^8 + 1; odd-good; |Aut|=8 odd elements=4 -> ODD
+K_2 v (P_3 u E_2): n=7 d=101 (claimed 101) offset=37 twins(0, 1)=True admissible w=[5, 6]; |Aut|=8 odd elements=4 -> ODD
+   PH(w=5,2): n=10 d=549 = 2^9 + 37; odd-good; |Aut|=8 odd elements=4 -> ODD
+   PH(w=6,2): n=10 d=549 = 2^9 + 37; odd-good; |Aut|=8 odd elements=4 -> ODD
+K_2 u T_55: n=8 d=165 (claimed 165) offset=37 twins(0, 1)=True admissible w=[5]; |Aut|=24 odd elements=12 -> ODD
+   PH(w=5,2): n=11 d=1061 = 2^10 + 37; odd-good; |Aut|=48 odd elements=24 -> ODD
+T_55 degrees: [4, 4, 4, 2, 5, 5] d = 55
+K_2 u T_171: n = 10 d = 513 L(513) = 10 ; |Aut|=2 odd elements=1 -> ODD (K_2 component)
+== (H) lemma tests
+tests: {'L41': 5331, 'K2J': 400, 'CONE': 400, 'O1b': 879, 'O1b_univ': 313, 'O1c': 150, 'O1d': 473}
+failures: 0 []
+== (I) symbolic sweep of the case analysis, odd k < 2^24
+Gamma_odd(5) up to 24: [7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+Gamma_odd(1) up to 24: [9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+Gamma_odd(37) up to 24: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+(x, L) gaps with L >= 10: [(1, 10)]
+odd k < 2^24 failing the case analysis: [1, 5, 37] (count 3)
+case counts: {'base': 253, 'c1': 4194176, 'c2': 4194131, 'c3': 44, 'c3_513': 1}
+== (J) base values with no twin-carrying realiser on L(k) vertices; the odd realisers of 17
+odd k < 512 (not 1, 5, 37) with no twin-carrying realiser on L(k) vertices: 1 [17]
+c17_11 n=5 k=17 d=17 |Aut|=24 odd_elements=0 parity=EVEN
+c17_18 n=5 k=17 d=17 |Aut|=2 odd_elements=1 parity=ODD
+c17_19 n=5 k=17 d=17 |Aut|=2 odd_elements=0 parity=EVEN
+== done

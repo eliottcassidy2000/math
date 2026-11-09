@@ -1,0 +1,13 @@
+25:K2vE3 E 5 25 d=25 ODD U=1 pend=0 pnu=0 r3=1 flags=1 gens=4 BAD
+185:cone(K2vP4+K1) E 8 185 d=185 ODD U=1 pend=1 pnu=0 r3=0 flags=1 gens=1 BAD
+517:paw+T47 E 10 517 d=517 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+1369:cone(K2+T115+K1) E 11 1369 d=1369 ODD U=1 pend=1 pnu=0 r3=1 flags=1 gens=1 BAD
+seed:K4-e E 4 13 d=13 ODD U=1 pend=0 pnu=0 r3=1 flags=1 gens=2 BAD
+seed:PH(K4-e,w,2) E 7 69 d=69 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+seed:K2uC4 E 6 33 d=33 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+seed:PH(K2uC4,w,2) E 9 257 d=257 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+seed:K2v(P3uE2) E 7 101 d=101 ODD U=1 pend=0 pnu=0 r3=1 flags=1 gens=3 BAD
+seed:PH(K2v(P3uE2),w,2) E 10 549 d=549 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=3 BAD
+seed:K2uT55 E 8 165 d=165 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+seed:PH(K2uT55,w,2) E 11 1061 d=1061 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+SUMMARY lines=12 ok=0 bad=12

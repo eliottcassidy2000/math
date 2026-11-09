@@ -1,0 +1,9 @@
+n=1 (parity calls 1): odd k < 2^n not realised by an odd graph on n vertices: 1
+n=2 (parity calls 2): odd k < 2^n not realised by an odd graph on n vertices: 1
+n=3 (parity calls 4): odd k < 2^n not realised by an odd graph on n vertices: 1 5
+n=4 (parity calls 9): odd k < 2^n not realised by an odd graph on n vertices: 1 5
+n=5 (parity calls 24): odd k < 2^n not realised by an odd graph on n vertices: 1 5
+n=6 (parity calls 77): odd k < 2^n not realised by an odd graph on n vertices: 1 5 37
+n=7 (parity calls 206): odd k < 2^n not realised by an odd graph on n vertices: 1 5 37
+n=8 (parity calls 669): odd k < 2^n not realised by an odd graph on n vertices: 1 5 37
+n=9 (parity calls 3599): odd k < 2^n not realised by an odd graph on n vertices: 1 5 37

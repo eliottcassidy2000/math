@@ -1,0 +1,5 @@
+./aw_enum 9 9 > aw_enum9.out 2> aw_enum9.err  265.93s user 4.43s system 91% cpu 4:55.33 total
+TUPLE SETS IDENTICAL for n=9
+     884 aw_enum9.out
+     884 base9f_eq9.sorted
+    1768 total

@@ -2,16 +2,20 @@
 id: THM-5055
 title: "Even-graph Chan-Pak by offset moves: a second, independent proof of THM-5040 (HYP-9575 (B)). For every n, an even graph on n vertices realises every odd k <= M(n) except 3, 7, 13 and X(n) (M(n) = 2^n - n for odd n, 2^n - n - 1 for even n; X(n) = {2^n - n - 2} for odd n >= 5). The engine is a hub move PH(G, u, l) with d -> d + (2^r - 1) 2^(n+l-r), even when the hub has strictly maximum degree. Two cases preserve the offset d - 2^(n-1): R (n -> n + 2) and PH(3,2) (n -> n + 3). A seed lemma gives every top-band offset -j from order L(j) + 8. Without the shift-3 move the four-move closure is exact to n = 26 but fails at even n >= 84"
 status: >
-  PROVED (independent second proof of THM-5040) + FINITE-EXACT + VERIFIED. Independent audit pending (D1).
+  PROVED (independent second proof of THM-5040) + FINITE-EXACT + VERIFIED. Independent audit D1: PASS WITH
+  CORRECTIONS (9 MINOR, applied; AUDIT_D1.md).
   - THM-5040 (opus-2026-11-09-S89, pushed earlier the same day, c46a3504dc) proves the same statement by a
     different route. It also uses cones, E_2-joins and the leaf stable recursion SR, which is R below. It handles the
     top bands with a jump family and gets the offsets {1, 3, 5, 7, 11, 13} from L-graphs.
   - The two proofs were found concurrently and are cross-cited (MSG-1988). The base computations agree.
-  - Induction (PROOF.md section 5). Its base is a finite closure: E(n) = F(n) for n <= 26, computed from the
-    exhaustive set of even graphs on <= 9 vertices. Lemma 7 (fixed offsets) and the L(j) <= 12 base of Lemma 8 are
-    finite closure checks too.
-  - The closure was reproduced by an independent numpy implementation. 6,147 explicit witness graphs (up to 21
-    vertices) were verified by brute force: d by subset enumeration, evenness from a generating set of Aut(G).
+  - Induction (PROOF.md section 5). It uses three computational inputs: F(n) contained in E(n) for n <= 12;
+    Lemma 7 at n = 8, 9; and the Lemma 8 base (L(j) <= 12, orders <= 21). All three are certified by 6,147 explicit
+    witness graphs (up to 21 vertices), each verified by brute force: d by subset enumeration, evenness from a
+    generating set of Aut(G).
+  - The census enters only the exclusions (Proposition 3.2) and remark 7.1.
+  - Supplementary: the closure of the exhaustive 9-vertex bases gives E(n) = F(n) for n <= 26. A numpy
+    re-implementation (same base and moves) reproduces it. Audit D1 also reproduced it independently in base and
+    code (its own base on <= 8 vertices, and an exhaustive check of all labelled graphs on 9 vertices).
   - The move lemmas were checked by brute force: 706 single moves and 217 chains.
   KNOWN and credited:
   - von Brömssen (even graphs; OEIS A334335).
@@ -26,14 +30,16 @@ status: >
     route message MSG-1987). The exclusions are re-derived independently in PROOF.md section 3.
   - Session234 (concurrent digraph/matrix lane; nothing here overlaps).
   NEW here, relative to THM-5040:
-  - the hub-move lemma for general r and l, with its evenness criterion;
+  - the hub move with r and l independent. THM-5040 has (r, l) = (2, 1) as SR, and l = r as its jump family J(H, z),
+    with an iff criterion via Aut(H)_z;
   - the offset form: R and PH(3, 2) on "good" graphs, shifts 2 and 3;
   - the seed lemma, Gamma(-j) contains [L(j) + 8, infinity);
   - the obstruction for R alone. 11, 23 and 47 have no even realiser with a pendant at any order. As a result, the
     four-move closure (no PH(3, 2)) is exact to n = 26 but misses 2^(n-1) - 81 at even n >= 84.
   - the prime reduction in HYP-9625.
-  Prior art: completeness of d over all graphs is S. Alikhani, Graphs Combin. 29 (2013) 1175-1181 (found by
-  THM-5040; THM-4996 (1) had reported none).
+  Prior art: completeness and conciseness of d over all graphs (every odd m < 2^n on n vertices) are
+  Brouwer-Csorba-Schrijver 2009, Proposition 1.2 (MISTAKE-747; restated in Alikhani-Fatehi-Klavzar,
+  arXiv:1512.07514, Prop. 2.1(iii)). Alikhani 2013 is not the source.
   NOT CLAIMED:
   - the odd-graph analogue (exceptions {1, 5, 37}), which is HYP-9625;
   - any statement about tournaments: Chan-Pak's {7, 21} is not addressed;
@@ -90,17 +96,21 @@ and the element of X(n), where:
 5. **(FINITE-EXACT)** The closure of the exhaustive set of even graphs on <= 9 vertices under the moves gives
    E(n) = F(n) for n <= 26.
    - Without hub moves it fails first at 501 = X(9), the pre-registered R3.
-   - With R but without PH(3, 2) it is exact to n = 26, but must fail at even n >= 84. 47 has no even realiser with a
-     pendant, which blocks the offset -81.
+   - With R but without PH(3, 2) it is exact to n = 26 (FINITE-EXACT). It must fail at even n >= 84: this is PROVED
+     (PROOF.md remark 7.1) from the FINITE-EXACT census fact that 47 has no even realiser with a pendant, which
+     blocks the offset -81.
 
 ## Reading
 
 - **How the families are generated.** The proof is a numeration of the odd numbers by their leading bits:
   - a cone over a padded graph writes a leading 10;
   - an E_2-join writes a leading 11, with a borrow of 2;
-  - two hub moves transport a fixed offset c from 2^(n-1) to 2^(n+1) and 2^(n+2). They supply exactly the values
-    that no cone or join can reach at any order: those just below a power of 2, and the shifts 2^(n-1) + {3, 7, 13}
-    and 3 * 2^(n-2) + {1, 5, 11} of the exceptions.
+  - two hub moves transport a fixed offset c from 2^(n-1) to 2^(n+1) and 2^(n+2). They supply the inputs that the
+    cone and E_2-join steps cannot take from lower orders: those just below a power of 2, the shifts 2^(n-1) + {3, 7, 13}
+    and the cone inputs 2^(n-2) + {1, 5, 11} (and the top band of order n - 2), over which cones write
+    3 * 2^(n-2) + {1, 5, 11}. Values just below 2^(n-1) are never cones or joins and have no isolated vertex on n
+    vertices. They can be disjoint unions (505 = d(P_3 u G_101) lies in the band (503, 512));
+    the hub moves supply the connected, co-connected ones the induction needs.
 - **Comparison with tournaments.** Even graphs and tournaments are equinumerous (RPGFD).
   - Here the exceptional set {3, 7, 13} is proved, with sharp orders.
   - For Rédei's H on tournaments, Chan-Pak's conjectured exceptions {7, 21} remain open.

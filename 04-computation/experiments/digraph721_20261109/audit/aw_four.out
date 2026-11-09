@@ -1,0 +1,27 @@
+n=1: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = -80: in S_n False, in E_n False
+n=2: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = -79: in S_n False, in E_n False
+n=3: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = -77: in S_n False, in E_n False
+n=4: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = -73: in S_n False, in E_n False
+n=5: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = -65: in S_n False, in E_n False
+n=6: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = -49: in S_n False, in E_n False
+n=7: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = -17: in S_n False, in E_n False
+n=8: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 47: in S_n False, in E_n True
+n=9: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 175: in S_n True, in E_n True
+n=10: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 431: in S_n False, in E_n True
+n=11: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 943: in S_n True, in E_n True
+n=12: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 1967: in S_n False, in E_n True
+n=13: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 4015: in S_n True, in E_n True
+n=14: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 8111: in S_n False, in E_n True
+n=15: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 16303: in S_n True, in E_n True
+n=16: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 32687: in S_n False, in E_n True
+n=17: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 65455: in S_n True, in E_n True
+n=18: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 130991: in S_n False, in E_n True
+n=19: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 262063: in S_n True, in E_n True
+n=20: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 524207: in S_n False, in E_n True
+n=21: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 1048495: in S_n True, in E_n True
+n=22: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 2097071: in S_n False, in E_n True
+n=23: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 4194223: in S_n True, in E_n True
+n=24: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 8388527: in S_n False, in E_n True
+n=25: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 16777135: in S_n True, in E_n True
+n=26: missing 0 extra 0; max P value <= 3*2^(n-2): True; v_n = 2^(n-1)-81 = 33554351: in S_n False, in E_n True
+total mismatches 0

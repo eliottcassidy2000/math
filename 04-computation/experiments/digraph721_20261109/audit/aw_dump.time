@@ -1,0 +1,1 @@
+./aw_dump 9 1 3 5 7 11 13 23 25 37 47 > aw_dump_smalld.out 2>   255.10s user 3.80s system 92% cpu 4:41.34 total

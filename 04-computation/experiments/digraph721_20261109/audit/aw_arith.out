@@ -1,0 +1,3 @@
+Lemma 8 cases for 13 <= J <= 400 : {'A1': '6.46e+119', 'A2': 1164, 'A3': 39770, 'B1': '6.46e+119', 'B3': 40352}
+Section 5 ranges for 13 <= n <= 400 checked
+failures: 0

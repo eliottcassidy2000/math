@@ -1,0 +1,6 @@
+odd k < 512 with an odd realiser on exactly L(k) vertices: 253 of 256
+no odd realiser found on L(k) vertices: [1, 5, 37]
+oddness certificate of the connected factor: odd transposition 222 ; other automorphism 31
+k=1: connected census graphs with d | k: 1 [(1, 1, 1, 'even')]
+k=5: connected census graphs with d | k: 2 [(1, 1, 1, 'even'), (3, 5, 2, 'even')]
+k=37: connected census graphs with d | k: 5 [(1, 1, 1, 'even'), (6, 37, 4, 'even'), (6, 37, 1, 'even'), (6, 37, 4, 'even'), (6, 37, 2, 'even')]

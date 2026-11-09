@@ -1,0 +1,10 @@
+# audit D2: compiled binaries and large regenerable outputs (hashes in sha256_d2.txt; regenerate with run_d2.sh)
+d2check
+d2small
+d2allsmall
+dom_even_d2
+wcheck_session
+dom_K511_regen.out
+oddw_*_regen.txt
+d2w_*.txt
+__pycache__/

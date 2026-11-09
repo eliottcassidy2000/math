@@ -1,5 +1,7 @@
-"""Explicit odd realisers on exactly L(k) vertices for every odd k other than 1, 5, 37, following the THM-5056
-induction; brute-force check of d and of an adjacent-twin pair (a certificate of oddness, THM-4996 B2.1)."""
+"""Explicit odd realisers on exactly L(k) vertices for every odd k other than 1, 5, 37, built exactly as the THM-5056
+induction prescribes, and written in wcheck format (set O).  This script only builds and checks the order; d (by
+subset enumeration) and oddness (via a generating set of Aut(G)) are checked by wcheck.
+usage: python3 oddbuild.py lo hi [samples] out.txt ; ./wcheck < out.txt"""
 import sys, random
 CENSUS='dom_K511.out'
 def L(k): return k.bit_length()

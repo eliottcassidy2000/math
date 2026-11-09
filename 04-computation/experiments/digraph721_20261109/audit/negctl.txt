@@ -1,0 +1,5 @@
+negK2 E 2 3 | 0-1
+negP4 E 4 9 | 0-1 1-2 2-3
+negWrong E 3 7 | 0-1 1-2
+posP3 E 3 5 | 0-1 1-2
+negFlagG G 4 5 | 0-1 1-2

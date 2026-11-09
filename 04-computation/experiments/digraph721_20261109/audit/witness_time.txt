@@ -1,0 +1,6 @@
+base representatives: 2436
+python3 ../witness.py dom_K511_regen.out 9 22 witnesses_regen.txt 12 >   9.90s user 0.32s system 92% cpu 11.061 total
+rc=0
+5013c32654b810d061ed4d2b02d1e8aa7c4b744da9c3b720aae48fe32465a4de  witnesses_regen.txt
+witnesses identical
+witness_regen.out ../witness.out differ: char 1, line 1

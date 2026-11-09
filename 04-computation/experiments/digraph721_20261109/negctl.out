@@ -1,0 +1,5 @@
+BAD neg1 E n=2 k=3 d=3 odd=1 flags=1
+BAD neg2 E n=4 k=9 d=9 odd=1 flags=1
+BAD neg3 E n=3 k=7 d=5 odd=0 flags=1
+witnesses ok=0 bad=3
+wcheck rc=1 (nonzero expected: all three must be rejected)

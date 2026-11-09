@@ -1,0 +1,401 @@
+BF CP2 n=2 odd(sc)=0 odd(bf)=0 d(ie)=1 d(direct)=1 AGREE
+CP2 E 2 0 d=1 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=1 BAD
+BF CP2_rl n=2 odd(sc)=0 odd(bf)=0 d(ie)=1 d(direct)=1 AGREE
+CP2_rl E 2 0 d=1 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=1 BAD
+BF K1vCP2 n=3 odd(sc)=0 odd(bf)=0 d(ie)=5 d(direct)=5 AGREE
+K1vCP2 E 3 0 d=5 EVEN U=1 pend=2 pnu=0 r3=1 flags=1 gens=1 BAD
+BF K1vCP2_rl n=3 odd(sc)=0 odd(bf)=0 d(ie)=5 d(direct)=5 AGREE
+K1vCP2_rl E 3 0 d=5 EVEN U=1 pend=2 pnu=0 r3=1 flags=1 gens=1 BAD
+BF CP4 n=4 odd(sc)=0 odd(bf)=0 d(ie)=11 d(direct)=11 AGREE
+CP4 E 4 0 d=11 EVEN U=0 pend=0 pnu=0 r3=1 flags=1 gens=4 BAD
+BF CP4_rl n=4 odd(sc)=0 odd(bf)=0 d(ie)=11 d(direct)=11 AGREE
+CP4_rl E 4 0 d=11 EVEN U=0 pend=0 pnu=0 r3=1 flags=1 gens=4 BAD
+BF K1vCP4 n=5 odd(sc)=0 odd(bf)=0 d(ie)=27 d(direct)=27 AGREE
+K1vCP4 E 5 0 d=27 EVEN U=1 pend=0 pnu=0 r3=0 flags=1 gens=4 BAD
+BF K1vCP4_rl n=5 odd(sc)=0 odd(bf)=0 d(ie)=27 d(direct)=27 AGREE
+K1vCP4_rl E 5 0 d=27 EVEN U=1 pend=0 pnu=0 r3=0 flags=1 gens=4 BAD
+BF CP6 n=6 odd(sc)=0 odd(bf)=0 d(ie)=57 d(direct)=57 AGREE
+CP6 E 6 0 d=57 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=9 BAD
+BF CP6_rl n=6 odd(sc)=0 odd(bf)=0 d(ie)=57 d(direct)=57 AGREE
+CP6_rl E 6 0 d=57 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=9 BAD
+BF K1vCP6 n=7 odd(sc)=0 odd(bf)=0 d(ie)=121 d(direct)=121 AGREE
+K1vCP6 E 7 0 d=121 EVEN U=1 pend=0 pnu=0 r3=0 flags=1 gens=9 BAD
+BF K1vCP6_rl n=7 odd(sc)=0 odd(bf)=0 d(ie)=121 d(direct)=121 AGREE
+K1vCP6_rl E 7 0 d=121 EVEN U=1 pend=0 pnu=0 r3=0 flags=1 gens=9 BAD
+BF CP8 n=8 odd(sc)=0 odd(bf)=0 d(ie)=247 d(direct)=247 AGREE
+CP8 E 8 0 d=247 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=16 BAD
+BF CP8_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=247 d(direct)=247 AGREE
+CP8_rl E 8 0 d=247 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=16 BAD
+BF K1vCP8 n=9 odd(sc)=0 odd(bf)=0 d(ie)=503 d(direct)=503 AGREE
+K1vCP8 E 9 0 d=503 EVEN U=1 pend=0 pnu=0 r3=0 flags=1 gens=16 BAD
+BF K1vCP8_rl n=9 odd(sc)=0 odd(bf)=0 d(ie)=503 d(direct)=503 AGREE
+K1vCP8_rl E 9 0 d=503 EVEN U=1 pend=0 pnu=0 r3=0 flags=1 gens=16 BAD
+BF CP10 n=10 odd(sc)=0 odd(bf)=0 d(ie)=1013 d(direct)=1013 AGREE
+CP10 E 10 0 d=1013 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=25 BAD
+BF CP10_rl n=10 odd(sc)=0 odd(bf)=0 d(ie)=1013 d(direct)=1013 AGREE
+CP10_rl E 10 0 d=1013 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=25 BAD
+BF K1vCP10 n=11 odd(sc)=0 odd(bf)=0 d(ie)=2037 d(direct)=2037 AGREE
+K1vCP10 E 11 0 d=2037 EVEN U=1 pend=0 pnu=0 r3=0 flags=1 gens=25 BAD
+BF K1vCP10_rl n=11 odd(sc)=0 odd(bf)=0 d(ie)=2037 d(direct)=2037 AGREE
+K1vCP10_rl E 11 0 d=2037 EVEN U=1 pend=0 pnu=0 r3=0 flags=1 gens=25 BAD
+BF K11 n=2 odd(sc)=1 odd(bf)=1 d(ie)=3 d(direct)=3 AGREE
+K11 E 2 0 d=3 ODD U=1 pend=2 pnu=0 r3=0 flags=1 gens=1 BAD
+BF K11_rl n=2 odd(sc)=1 odd(bf)=1 d(ie)=3 d(direct)=3 AGREE
+K11_rl E 2 0 d=3 ODD U=1 pend=2 pnu=0 r3=0 flags=1 gens=1 BAD
+BF K22 n=4 odd(sc)=0 odd(bf)=0 d(ie)=11 d(direct)=11 AGREE
+K22 E 4 0 d=11 EVEN U=0 pend=0 pnu=0 r3=1 flags=1 gens=4 BAD
+BF K22_rl n=4 odd(sc)=0 odd(bf)=0 d(ie)=11 d(direct)=11 AGREE
+K22_rl E 4 0 d=11 EVEN U=0 pend=0 pnu=0 r3=1 flags=1 gens=4 BAD
+BF K33 n=6 odd(sc)=1 odd(bf)=1 d(ie)=51 d(direct)=51 AGREE
+K33 E 6 0 d=51 ODD U=0 pend=0 pnu=0 r3=0 flags=1 gens=3 BAD
+BF K33_rl n=6 odd(sc)=1 odd(bf)=1 d(ie)=51 d(direct)=51 AGREE
+K33_rl E 6 0 d=51 ODD U=0 pend=0 pnu=0 r3=0 flags=1 gens=3 BAD
+BF K44 n=8 odd(sc)=0 odd(bf)=0 d(ie)=227 d(direct)=227 AGREE
+K44 E 8 0 d=227 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=16 BAD
+BF K44_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=227 d(direct)=227 AGREE
+K44_rl E 8 0 d=227 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=16 BAD
+BF K55 n=10 odd(sc)=1 odd(bf)=1 d(ie)=963 d(direct)=963 AGREE
+K55 E 10 0 d=963 ODD U=0 pend=0 pnu=0 r3=0 flags=1 gens=5 BAD
+BF K55_rl n=10 odd(sc)=1 odd(bf)=1 d(ie)=963 d(direct)=963 AGREE
+K55_rl E 10 0 d=963 ODD U=0 pend=0 pnu=0 r3=0 flags=1 gens=1 BAD
+BF C3 n=3 odd(sc)=1 odd(bf)=1 d(ie)=7 d(direct)=7 AGREE
+C3 E 3 0 d=7 ODD U=1 pend=0 pnu=0 r3=1 flags=1 gens=1 BAD
+BF C3_rl n=3 odd(sc)=1 odd(bf)=1 d(ie)=7 d(direct)=7 AGREE
+C3_rl E 3 0 d=7 ODD U=1 pend=0 pnu=0 r3=1 flags=1 gens=1 BAD
+BF C4 n=4 odd(sc)=0 odd(bf)=0 d(ie)=11 d(direct)=11 AGREE
+C4 E 4 0 d=11 EVEN U=0 pend=0 pnu=0 r3=1 flags=1 gens=4 BAD
+BF C4_rl n=4 odd(sc)=0 odd(bf)=0 d(ie)=11 d(direct)=11 AGREE
+C4_rl E 4 0 d=11 EVEN U=0 pend=0 pnu=0 r3=1 flags=1 gens=4 BAD
+BF C5 n=5 odd(sc)=1 odd(bf)=1 d(ie)=21 d(direct)=21 AGREE
+C5 E 5 0 d=21 ODD U=0 pend=0 pnu=0 r3=1 flags=1 gens=2 BAD
+BF C5_rl n=5 odd(sc)=1 odd(bf)=1 d(ie)=21 d(direct)=21 AGREE
+C5_rl E 5 0 d=21 ODD U=0 pend=0 pnu=0 r3=1 flags=1 gens=1 BAD
+BF C6 n=6 odd(sc)=0 odd(bf)=0 d(ie)=39 d(direct)=39 AGREE
+C6 E 6 0 d=39 EVEN U=0 pend=0 pnu=0 r3=1 flags=1 gens=6 BAD
+BF C6_rl n=6 odd(sc)=0 odd(bf)=0 d(ie)=39 d(direct)=39 AGREE
+C6_rl E 6 0 d=39 EVEN U=0 pend=0 pnu=0 r3=1 flags=1 gens=6 BAD
+BF C7 n=7 odd(sc)=1 odd(bf)=1 d(ie)=71 d(direct)=71 AGREE
+C7 E 7 0 d=71 ODD U=0 pend=0 pnu=0 r3=1 flags=1 gens=2 BAD
+BF C7_rl n=7 odd(sc)=1 odd(bf)=1 d(ie)=71 d(direct)=71 AGREE
+C7_rl E 7 0 d=71 ODD U=0 pend=0 pnu=0 r3=1 flags=1 gens=1 BAD
+BF C8 n=8 odd(sc)=0 odd(bf)=0 d(ie)=131 d(direct)=131 AGREE
+C8 E 8 0 d=131 EVEN U=0 pend=0 pnu=0 r3=1 flags=1 gens=8 BAD
+BF C8_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=131 d(direct)=131 AGREE
+C8_rl E 8 0 d=131 EVEN U=0 pend=0 pnu=0 r3=1 flags=1 gens=8 BAD
+BF C9 n=9 odd(sc)=1 odd(bf)=1 d(ie)=241 d(direct)=241 AGREE
+C9 E 9 0 d=241 ODD U=0 pend=0 pnu=0 r3=1 flags=1 gens=2 BAD
+BF C9_rl n=9 odd(sc)=1 odd(bf)=1 d(ie)=241 d(direct)=241 AGREE
+C9_rl E 9 0 d=241 ODD U=0 pend=0 pnu=0 r3=1 flags=1 gens=1 BAD
+BF C10 n=10 odd(sc)=0 odd(bf)=0 d(ie)=443 d(direct)=443 AGREE
+C10 E 10 0 d=443 EVEN U=0 pend=0 pnu=0 r3=1 flags=1 gens=10 BAD
+BF C10_rl n=10 odd(sc)=0 odd(bf)=0 d(ie)=443 d(direct)=443 AGREE
+C10_rl E 10 0 d=443 EVEN U=0 pend=0 pnu=0 r3=1 flags=1 gens=10 BAD
+BF C11 n=11 odd(sc)=1 odd(bf)=1 d(ie)=815 d(direct)=815 AGREE
+C11 E 11 0 d=815 ODD U=0 pend=0 pnu=0 r3=1 flags=1 gens=2 BAD
+BF C11_rl n=11 odd(sc)=1 odd(bf)=1 d(ie)=815 d(direct)=815 AGREE
+C11_rl E 11 0 d=815 ODD U=0 pend=0 pnu=0 r3=1 flags=1 gens=2 BAD
+BF P2 n=2 odd(sc)=1 odd(bf)=1 d(ie)=3 d(direct)=3 AGREE
+P2 E 2 0 d=3 ODD U=1 pend=2 pnu=0 r3=0 flags=1 gens=1 BAD
+BF P2_rl n=2 odd(sc)=1 odd(bf)=1 d(ie)=3 d(direct)=3 AGREE
+P2_rl E 2 0 d=3 ODD U=1 pend=2 pnu=0 r3=0 flags=1 gens=1 BAD
+BF P3 n=3 odd(sc)=0 odd(bf)=0 d(ie)=5 d(direct)=5 AGREE
+P3 E 3 0 d=5 EVEN U=1 pend=2 pnu=0 r3=1 flags=1 gens=1 BAD
+BF P3_rl n=3 odd(sc)=0 odd(bf)=0 d(ie)=5 d(direct)=5 AGREE
+P3_rl E 3 0 d=5 EVEN U=1 pend=2 pnu=0 r3=1 flags=1 gens=1 BAD
+BF P4 n=4 odd(sc)=1 odd(bf)=1 d(ie)=9 d(direct)=9 AGREE
+P4 E 4 0 d=9 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P4_rl n=4 odd(sc)=1 odd(bf)=1 d(ie)=9 d(direct)=9 AGREE
+P4_rl E 4 0 d=9 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P5 n=5 odd(sc)=0 odd(bf)=0 d(ie)=17 d(direct)=17 AGREE
+P5 E 5 0 d=17 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P5_rl n=5 odd(sc)=0 odd(bf)=0 d(ie)=17 d(direct)=17 AGREE
+P5_rl E 5 0 d=17 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P6 n=6 odd(sc)=1 odd(bf)=1 d(ie)=31 d(direct)=31 AGREE
+P6 E 6 0 d=31 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P6_rl n=6 odd(sc)=1 odd(bf)=1 d(ie)=31 d(direct)=31 AGREE
+P6_rl E 6 0 d=31 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P7 n=7 odd(sc)=0 odd(bf)=0 d(ie)=57 d(direct)=57 AGREE
+P7 E 7 0 d=57 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P7_rl n=7 odd(sc)=0 odd(bf)=0 d(ie)=57 d(direct)=57 AGREE
+P7_rl E 7 0 d=57 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P8 n=8 odd(sc)=1 odd(bf)=1 d(ie)=105 d(direct)=105 AGREE
+P8 E 8 0 d=105 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P8_rl n=8 odd(sc)=1 odd(bf)=1 d(ie)=105 d(direct)=105 AGREE
+P8_rl E 8 0 d=105 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P9 n=9 odd(sc)=0 odd(bf)=0 d(ie)=193 d(direct)=193 AGREE
+P9 E 9 0 d=193 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P9_rl n=9 odd(sc)=0 odd(bf)=0 d(ie)=193 d(direct)=193 AGREE
+P9_rl E 9 0 d=193 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P10 n=10 odd(sc)=1 odd(bf)=1 d(ie)=355 d(direct)=355 AGREE
+P10 E 10 0 d=355 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P10_rl n=10 odd(sc)=1 odd(bf)=1 d(ie)=355 d(direct)=355 AGREE
+P10_rl E 10 0 d=355 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P11 n=11 odd(sc)=0 odd(bf)=0 d(ie)=653 d(direct)=653 AGREE
+P11 E 11 0 d=653 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P11_rl n=11 odd(sc)=0 odd(bf)=0 d(ie)=653 d(direct)=653 AGREE
+P11_rl E 11 0 d=653 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF Star2 n=3 odd(sc)=0 odd(bf)=0 d(ie)=5 d(direct)=5 AGREE
+Star2 E 3 0 d=5 EVEN U=1 pend=2 pnu=0 r3=1 flags=1 gens=1 BAD
+BF Star2_rl n=3 odd(sc)=0 odd(bf)=0 d(ie)=5 d(direct)=5 AGREE
+Star2_rl E 3 0 d=5 EVEN U=1 pend=2 pnu=0 r3=1 flags=1 gens=1 BAD
+BF Star3 n=4 odd(sc)=0 odd(bf)=0 d(ie)=9 d(direct)=9 AGREE
+Star3 E 4 0 d=9 EVEN U=1 pend=3 pnu=0 r3=0 flags=1 gens=3 BAD
+BF Star3_rl n=4 odd(sc)=0 odd(bf)=0 d(ie)=9 d(direct)=9 AGREE
+Star3_rl E 4 0 d=9 EVEN U=1 pend=3 pnu=0 r3=0 flags=1 gens=3 BAD
+BF Star4 n=5 odd(sc)=0 odd(bf)=0 d(ie)=17 d(direct)=17 AGREE
+Star4 E 5 0 d=17 EVEN U=1 pend=4 pnu=0 r3=0 flags=1 gens=6 BAD
+BF Star4_rl n=5 odd(sc)=0 odd(bf)=0 d(ie)=17 d(direct)=17 AGREE
+Star4_rl E 5 0 d=17 EVEN U=1 pend=4 pnu=0 r3=0 flags=1 gens=6 BAD
+BF Star5 n=6 odd(sc)=0 odd(bf)=0 d(ie)=33 d(direct)=33 AGREE
+Star5 E 6 0 d=33 EVEN U=1 pend=5 pnu=0 r3=0 flags=1 gens=10 BAD
+BF Star5_rl n=6 odd(sc)=0 odd(bf)=0 d(ie)=33 d(direct)=33 AGREE
+Star5_rl E 6 0 d=33 EVEN U=1 pend=5 pnu=0 r3=0 flags=1 gens=10 BAD
+BF Star6 n=7 odd(sc)=0 odd(bf)=0 d(ie)=65 d(direct)=65 AGREE
+Star6 E 7 0 d=65 EVEN U=1 pend=6 pnu=0 r3=0 flags=1 gens=15 BAD
+BF Star6_rl n=7 odd(sc)=0 odd(bf)=0 d(ie)=65 d(direct)=65 AGREE
+Star6_rl E 7 0 d=65 EVEN U=1 pend=6 pnu=0 r3=0 flags=1 gens=15 BAD
+BF Star7 n=8 odd(sc)=0 odd(bf)=0 d(ie)=129 d(direct)=129 AGREE
+Star7 E 8 0 d=129 EVEN U=1 pend=7 pnu=0 r3=0 flags=1 gens=21 BAD
+BF Star7_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=129 d(direct)=129 AGREE
+Star7_rl E 8 0 d=129 EVEN U=1 pend=7 pnu=0 r3=0 flags=1 gens=21 BAD
+BF Star8 n=9 odd(sc)=0 odd(bf)=0 d(ie)=257 d(direct)=257 AGREE
+Star8 E 9 0 d=257 EVEN U=1 pend=8 pnu=0 r3=0 flags=1 gens=28 BAD
+BF Star8_rl n=9 odd(sc)=0 odd(bf)=0 d(ie)=257 d(direct)=257 AGREE
+Star8_rl E 9 0 d=257 EVEN U=1 pend=8 pnu=0 r3=0 flags=1 gens=28 BAD
+BF Star9 n=10 odd(sc)=0 odd(bf)=0 d(ie)=513 d(direct)=513 AGREE
+Star9 E 10 0 d=513 EVEN U=1 pend=9 pnu=0 r3=0 flags=1 gens=36 BAD
+BF Star9_rl n=10 odd(sc)=0 odd(bf)=0 d(ie)=513 d(direct)=513 AGREE
+Star9_rl E 10 0 d=513 EVEN U=1 pend=9 pnu=0 r3=0 flags=1 gens=36 BAD
+BF Star10 n=11 odd(sc)=0 odd(bf)=0 d(ie)=1025 d(direct)=1025 AGREE
+Star10 E 11 0 d=1025 EVEN U=1 pend=10 pnu=0 r3=0 flags=1 gens=45 BAD
+BF Star10_rl n=11 odd(sc)=0 odd(bf)=0 d(ie)=1025 d(direct)=1025 AGREE
+Star10_rl E 11 0 d=1025 EVEN U=1 pend=10 pnu=0 r3=0 flags=1 gens=45 BAD
+BF Petersen n=10 odd(sc)=0 odd(bf)=0 d(ie)=653 d(direct)=653 AGREE
+Petersen E 10 0 d=653 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=15 BAD
+BF Petersen_rl n=10 odd(sc)=0 odd(bf)=0 d(ie)=653 d(direct)=653 AGREE
+Petersen_rl E 10 0 d=653 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=15 BAD
+BF coPetersen n=10 odd(sc)=1 odd(bf)=1 d(ie)=973 d(direct)=973 AGREE
+coPetersen E 10 0 d=973 ODD U=0 pend=0 pnu=0 r3=0 flags=1 gens=5 BAD
+BF coPetersen_rl n=10 odd(sc)=1 odd(bf)=1 d(ie)=973 d(direct)=973 AGREE
+coPetersen_rl E 10 0 d=973 ODD U=0 pend=0 pnu=0 r3=0 flags=1 gens=4 BAD
+BF Q3 n=8 odd(sc)=0 odd(bf)=0 d(ie)=183 d(direct)=183 AGREE
+Q3 E 8 0 d=183 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=10 BAD
+BF Q3_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=183 d(direct)=183 AGREE
+Q3_rl E 8 0 d=183 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=10 BAD
+BF coQ3 n=8 odd(sc)=0 odd(bf)=0 d(ie)=227 d(direct)=227 AGREE
+coQ3 E 8 0 d=227 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=10 BAD
+BF coQ3_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=227 d(direct)=227 AGREE
+coQ3_rl E 8 0 d=227 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=10 BAD
+BF 3P3 n=9 odd(sc)=0 odd(bf)=0 d(ie)=125 d(direct)=125 AGREE
+3P3 E 9 0 d=125 EVEN U=0 pend=6 pnu=6 r3=1 flags=1 gens=9 BAD
+BF 3P3_rl n=9 odd(sc)=0 odd(bf)=0 d(ie)=125 d(direct)=125 AGREE
+3P3_rl E 9 0 d=125 EVEN U=0 pend=6 pnu=6 r3=1 flags=1 gens=9 BAD
+BF 2P3uK1 n=7 odd(sc)=0 odd(bf)=0 d(ie)=25 d(direct)=25 AGREE
+2P3uK1 E 7 0 d=25 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=4 BAD
+BF 2P3uK1_rl n=7 odd(sc)=0 odd(bf)=0 d(ie)=25 d(direct)=25 AGREE
+2P3uK1_rl E 7 0 d=25 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=4 BAD
+BF K4-e n=4 odd(sc)=1 odd(bf)=1 d(ie)=13 d(direct)=13 AGREE
+K4-e E 4 0 d=13 ODD U=1 pend=0 pnu=0 r3=1 flags=1 gens=2 BAD
+BF K4-e_rl n=4 odd(sc)=1 odd(bf)=1 d(ie)=13 d(direct)=13 AGREE
+K4-e_rl E 4 0 d=13 ODD U=1 pend=0 pnu=0 r3=1 flags=1 gens=2 BAD
+BF Wheel6 n=7 odd(sc)=0 odd(bf)=0 d(ie)=103 d(direct)=103 AGREE
+Wheel6 E 7 0 d=103 EVEN U=1 pend=0 pnu=0 r3=0 flags=1 gens=6 BAD
+BF Wheel6_rl n=7 odd(sc)=0 odd(bf)=0 d(ie)=103 d(direct)=103 AGREE
+Wheel6_rl E 7 0 d=103 EVEN U=1 pend=0 pnu=0 r3=0 flags=1 gens=6 BAD
+BF K3xK3 n=9 odd(sc)=1 odd(bf)=1 d(ie)=421 d(direct)=421 AGREE
+K3xK3 E 9 0 d=421 ODD U=0 pend=0 pnu=0 r3=0 flags=1 gens=1 BAD
+BF K3xK3_rl n=9 odd(sc)=1 odd(bf)=1 d(ie)=421 d(direct)=421 AGREE
+K3xK3_rl E 9 0 d=421 ODD U=0 pend=0 pnu=0 r3=0 flags=1 gens=3 BAD
+BF E_6 n=6 odd(sc)=0 odd(bf)=0 d(ie)=1 d(direct)=1 AGREE
+E_6 E 6 0 d=1 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=15 BAD
+BF E_6_rl n=6 odd(sc)=0 odd(bf)=0 d(ie)=1 d(direct)=1 AGREE
+E_6_rl E 6 0 d=1 EVEN U=0 pend=0 pnu=0 r3=0 flags=1 gens=15 BAD
+BF 2C5 n=10 odd(sc)=1 odd(bf)=1 d(ie)=441 d(direct)=441 AGREE
+2C5 E 10 0 d=441 ODD U=0 pend=0 pnu=0 r3=1 flags=1 gens=2 BAD
+BF 2C5_rl n=10 odd(sc)=1 odd(bf)=1 d(ie)=441 d(direct)=441 AGREE
+2C5_rl E 10 0 d=441 ODD U=0 pend=0 pnu=0 r3=1 flags=1 gens=2 BAD
+BF C4uC4uK2 n=10 odd(sc)=1 odd(bf)=1 d(ie)=363 d(direct)=363 AGREE
+C4uC4uK2 E 10 0 d=363 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF C4uC4uK2_rl n=10 odd(sc)=1 odd(bf)=1 d(ie)=363 d(direct)=363 AGREE
+C4uC4uK2_rl E 10 0 d=363 ODD U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF P4vP4 n=8 odd(sc)=1 odd(bf)=1 d(ie)=243 d(direct)=243 AGREE
+P4vP4 E 8 0 d=243 ODD U=0 pend=0 pnu=0 r3=0 flags=1 gens=1 BAD
+BF P4vP4_rl n=8 odd(sc)=1 odd(bf)=1 d(ie)=243 d(direct)=243 AGREE
+P4vP4_rl E 8 0 d=243 ODD U=0 pend=0 pnu=0 r3=0 flags=1 gens=2 BAD
+BF E3vE3 n=6 odd(sc)=1 odd(bf)=1 d(ie)=51 d(direct)=51 AGREE
+E3vE3 E 6 0 d=51 ODD U=0 pend=0 pnu=0 r3=0 flags=1 gens=3 BAD
+BF E3vE3_rl n=6 odd(sc)=1 odd(bf)=1 d(ie)=51 d(direct)=51 AGREE
+E3vE3_rl E 6 0 d=51 ODD U=0 pend=0 pnu=0 r3=0 flags=1 gens=1 BAD
+BF E2vE2vP3 n=7 odd(sc)=0 odd(bf)=0 d(ie)=121 d(direct)=121 AGREE
+E2vE2vP3 E 7 0 d=121 EVEN U=1 pend=0 pnu=0 r3=0 flags=1 gens=9 BAD
+BF E2vE2vP3_rl n=7 odd(sc)=0 odd(bf)=0 d(ie)=121 d(direct)=121 AGREE
+E2vE2vP3_rl E 7 0 d=121 EVEN U=1 pend=0 pnu=0 r3=0 flags=1 gens=9 BAD
+BF PH_P3uK1_0_1 n=6 odd(sc)=0 odd(bf)=0 d(ie)=29 d(direct)=29 AGREE
+PH_P3uK1_0_1 E 6 0 d=29 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=1 BAD
+BF PH_P3uK1_0_1_rl n=6 odd(sc)=0 odd(bf)=0 d(ie)=29 d(direct)=29 AGREE
+PH_P3uK1_0_1_rl E 6 0 d=29 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=1 BAD
+BF PH_P3uK1_0_2 n=7 odd(sc)=0 odd(bf)=0 d(ie)=53 d(direct)=53 AGREE
+PH_P3uK1_0_2 E 7 0 d=53 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=3 BAD
+BF PH_P3uK1_0_2_rl n=7 odd(sc)=0 odd(bf)=0 d(ie)=53 d(direct)=53 AGREE
+PH_P3uK1_0_2_rl E 7 0 d=53 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=3 BAD
+BF PH_P3uK1_0_3 n=8 odd(sc)=0 odd(bf)=0 d(ie)=101 d(direct)=101 AGREE
+PH_P3uK1_0_3 E 8 0 d=101 EVEN U=0 pend=5 pnu=5 r3=1 flags=1 gens=6 BAD
+BF PH_P3uK1_0_3_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=101 d(direct)=101 AGREE
+PH_P3uK1_0_3_rl E 8 0 d=101 EVEN U=0 pend=5 pnu=5 r3=1 flags=1 gens=6 BAD
+BF PH_P3uK1_1_1 n=6 odd(sc)=0 odd(bf)=0 d(ie)=33 d(direct)=33 AGREE
+PH_P3uK1_1_1 E 6 0 d=33 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+BF PH_P3uK1_1_1_rl n=6 odd(sc)=0 odd(bf)=0 d(ie)=33 d(direct)=33 AGREE
+PH_P3uK1_1_1_rl E 6 0 d=33 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+BF PH_P3uK1_1_2 n=7 odd(sc)=0 odd(bf)=0 d(ie)=61 d(direct)=61 AGREE
+PH_P3uK1_1_2 E 7 0 d=61 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=4 BAD
+BF PH_P3uK1_1_2_rl n=7 odd(sc)=0 odd(bf)=0 d(ie)=61 d(direct)=61 AGREE
+PH_P3uK1_1_2_rl E 7 0 d=61 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=4 BAD
+BF PH_P3uK1_1_3 n=8 odd(sc)=0 odd(bf)=0 d(ie)=117 d(direct)=117 AGREE
+PH_P3uK1_1_3 E 8 0 d=117 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=7 BAD
+BF PH_P3uK1_1_3_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=117 d(direct)=117 AGREE
+PH_P3uK1_1_3_rl E 8 0 d=117 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=7 BAD
+BF PH_P3uK1_2_1 n=6 odd(sc)=0 odd(bf)=0 d(ie)=29 d(direct)=29 AGREE
+PH_P3uK1_2_1 E 6 0 d=29 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=1 BAD
+BF PH_P3uK1_2_1_rl n=6 odd(sc)=0 odd(bf)=0 d(ie)=29 d(direct)=29 AGREE
+PH_P3uK1_2_1_rl E 6 0 d=29 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=1 BAD
+BF PH_P3uK1_2_2 n=7 odd(sc)=0 odd(bf)=0 d(ie)=53 d(direct)=53 AGREE
+PH_P3uK1_2_2 E 7 0 d=53 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=3 BAD
+BF PH_P3uK1_2_2_rl n=7 odd(sc)=0 odd(bf)=0 d(ie)=53 d(direct)=53 AGREE
+PH_P3uK1_2_2_rl E 7 0 d=53 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=3 BAD
+BF PH_P3uK1_2_3 n=8 odd(sc)=0 odd(bf)=0 d(ie)=101 d(direct)=101 AGREE
+PH_P3uK1_2_3 E 8 0 d=101 EVEN U=0 pend=5 pnu=5 r3=1 flags=1 gens=6 BAD
+BF PH_P3uK1_2_3_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=101 d(direct)=101 AGREE
+PH_P3uK1_2_3_rl E 8 0 d=101 EVEN U=0 pend=5 pnu=5 r3=1 flags=1 gens=6 BAD
+BF PH_P3uK1_3_1 n=6 odd(sc)=0 odd(bf)=0 d(ie)=21 d(direct)=21 AGREE
+PH_P3uK1_3_1 E 6 0 d=21 EVEN U=0 pend=1 pnu=1 r3=1 flags=1 gens=1 BAD
+BF PH_P3uK1_3_1_rl n=6 odd(sc)=0 odd(bf)=0 d(ie)=21 d(direct)=21 AGREE
+PH_P3uK1_3_1_rl E 6 0 d=21 EVEN U=0 pend=1 pnu=1 r3=1 flags=1 gens=1 BAD
+BF PH_P3uK1_3_2 n=7 odd(sc)=0 odd(bf)=0 d(ie)=37 d(direct)=37 AGREE
+PH_P3uK1_3_2 E 7 0 d=37 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+BF PH_P3uK1_3_2_rl n=7 odd(sc)=0 odd(bf)=0 d(ie)=37 d(direct)=37 AGREE
+PH_P3uK1_3_2_rl E 7 0 d=37 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+BF PH_P3uK1_3_3 n=8 odd(sc)=0 odd(bf)=0 d(ie)=69 d(direct)=69 AGREE
+PH_P3uK1_3_3 E 8 0 d=69 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=4 BAD
+BF PH_P3uK1_3_3_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=69 d(direct)=69 AGREE
+PH_P3uK1_3_3_rl E 8 0 d=69 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=4 BAD
+BF PH_P3uP3_0_1 n=8 odd(sc)=0 odd(bf)=0 d(ie)=121 d(direct)=121 AGREE
+PH_P3uP3_0_1 E 8 0 d=121 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF PH_P3uP3_0_1_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=121 d(direct)=121 AGREE
+PH_P3uP3_0_1_rl E 8 0 d=121 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF PH_P3uP3_0_2 n=9 odd(sc)=0 odd(bf)=0 d(ie)=217 d(direct)=217 AGREE
+PH_P3uP3_0_2 E 9 0 d=217 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=2 BAD
+BF PH_P3uP3_0_2_rl n=9 odd(sc)=0 odd(bf)=0 d(ie)=217 d(direct)=217 AGREE
+PH_P3uP3_0_2_rl E 9 0 d=217 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=2 BAD
+BF PH_P3uP3_0_3 n=10 odd(sc)=0 odd(bf)=0 d(ie)=409 d(direct)=409 AGREE
+PH_P3uP3_0_3 E 10 0 d=409 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=4 BAD
+BF PH_P3uP3_0_3_rl n=10 odd(sc)=0 odd(bf)=0 d(ie)=409 d(direct)=409 AGREE
+PH_P3uP3_0_3_rl E 10 0 d=409 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=4 BAD
+BF PH_P3uP3_1_1 n=8 odd(sc)=0 odd(bf)=0 d(ie)=137 d(direct)=137 AGREE
+PH_P3uP3_1_1 E 8 0 d=137 EVEN U=0 pend=1 pnu=1 r3=1 flags=1 gens=2 BAD
+BF PH_P3uP3_1_1_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=137 d(direct)=137 AGREE
+PH_P3uP3_1_1_rl E 8 0 d=137 EVEN U=0 pend=1 pnu=1 r3=1 flags=1 gens=2 BAD
+BF PH_P3uP3_1_2 n=9 odd(sc)=0 odd(bf)=0 d(ie)=249 d(direct)=249 AGREE
+PH_P3uP3_1_2 E 9 0 d=249 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=3 BAD
+BF PH_P3uP3_1_2_rl n=9 odd(sc)=0 odd(bf)=0 d(ie)=249 d(direct)=249 AGREE
+PH_P3uP3_1_2_rl E 9 0 d=249 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=3 BAD
+BF PH_P3uP3_1_3 n=10 odd(sc)=0 odd(bf)=0 d(ie)=473 d(direct)=473 AGREE
+PH_P3uP3_1_3 E 10 0 d=473 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=5 BAD
+BF PH_P3uP3_1_3_rl n=10 odd(sc)=0 odd(bf)=0 d(ie)=473 d(direct)=473 AGREE
+PH_P3uP3_1_3_rl E 10 0 d=473 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=5 BAD
+BF PH_P3uP3_2_1 n=8 odd(sc)=0 odd(bf)=0 d(ie)=121 d(direct)=121 AGREE
+PH_P3uP3_2_1 E 8 0 d=121 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF PH_P3uP3_2_1_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=121 d(direct)=121 AGREE
+PH_P3uP3_2_1_rl E 8 0 d=121 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF PH_P3uP3_2_2 n=9 odd(sc)=0 odd(bf)=0 d(ie)=217 d(direct)=217 AGREE
+PH_P3uP3_2_2 E 9 0 d=217 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=2 BAD
+BF PH_P3uP3_2_2_rl n=9 odd(sc)=0 odd(bf)=0 d(ie)=217 d(direct)=217 AGREE
+PH_P3uP3_2_2_rl E 9 0 d=217 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=2 BAD
+BF PH_P3uP3_2_3 n=10 odd(sc)=0 odd(bf)=0 d(ie)=409 d(direct)=409 AGREE
+PH_P3uP3_2_3 E 10 0 d=409 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=4 BAD
+BF PH_P3uP3_2_3_rl n=10 odd(sc)=0 odd(bf)=0 d(ie)=409 d(direct)=409 AGREE
+PH_P3uP3_2_3_rl E 10 0 d=409 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=4 BAD
+BF PH_P3uP3_3_1 n=8 odd(sc)=0 odd(bf)=0 d(ie)=121 d(direct)=121 AGREE
+PH_P3uP3_3_1 E 8 0 d=121 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF PH_P3uP3_3_1_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=121 d(direct)=121 AGREE
+PH_P3uP3_3_1_rl E 8 0 d=121 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF PH_P3uP3_3_2 n=9 odd(sc)=0 odd(bf)=0 d(ie)=217 d(direct)=217 AGREE
+PH_P3uP3_3_2 E 9 0 d=217 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=2 BAD
+BF PH_P3uP3_3_2_rl n=9 odd(sc)=0 odd(bf)=0 d(ie)=217 d(direct)=217 AGREE
+PH_P3uP3_3_2_rl E 9 0 d=217 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=2 BAD
+BF PH_P3uP3_3_3 n=10 odd(sc)=0 odd(bf)=0 d(ie)=409 d(direct)=409 AGREE
+PH_P3uP3_3_3 E 10 0 d=409 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=4 BAD
+BF PH_P3uP3_3_3_rl n=10 odd(sc)=0 odd(bf)=0 d(ie)=409 d(direct)=409 AGREE
+PH_P3uP3_3_3_rl E 10 0 d=409 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=4 BAD
+BF PH_P3uP3_4_1 n=8 odd(sc)=0 odd(bf)=0 d(ie)=137 d(direct)=137 AGREE
+PH_P3uP3_4_1 E 8 0 d=137 EVEN U=0 pend=1 pnu=1 r3=1 flags=1 gens=2 BAD
+BF PH_P3uP3_4_1_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=137 d(direct)=137 AGREE
+PH_P3uP3_4_1_rl E 8 0 d=137 EVEN U=0 pend=1 pnu=1 r3=1 flags=1 gens=2 BAD
+BF PH_P3uP3_4_2 n=9 odd(sc)=0 odd(bf)=0 d(ie)=249 d(direct)=249 AGREE
+PH_P3uP3_4_2 E 9 0 d=249 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=3 BAD
+BF PH_P3uP3_4_2_rl n=9 odd(sc)=0 odd(bf)=0 d(ie)=249 d(direct)=249 AGREE
+PH_P3uP3_4_2_rl E 9 0 d=249 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=3 BAD
+BF PH_P3uP3_4_3 n=10 odd(sc)=0 odd(bf)=0 d(ie)=473 d(direct)=473 AGREE
+PH_P3uP3_4_3 E 10 0 d=473 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=5 BAD
+BF PH_P3uP3_4_3_rl n=10 odd(sc)=0 odd(bf)=0 d(ie)=473 d(direct)=473 AGREE
+PH_P3uP3_4_3_rl E 10 0 d=473 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=5 BAD
+BF PH_P3uP3_5_1 n=8 odd(sc)=0 odd(bf)=0 d(ie)=121 d(direct)=121 AGREE
+PH_P3uP3_5_1 E 8 0 d=121 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF PH_P3uP3_5_1_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=121 d(direct)=121 AGREE
+PH_P3uP3_5_1_rl E 8 0 d=121 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=1 BAD
+BF PH_P3uP3_5_2 n=9 odd(sc)=0 odd(bf)=0 d(ie)=217 d(direct)=217 AGREE
+PH_P3uP3_5_2 E 9 0 d=217 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=2 BAD
+BF PH_P3uP3_5_2_rl n=9 odd(sc)=0 odd(bf)=0 d(ie)=217 d(direct)=217 AGREE
+PH_P3uP3_5_2_rl E 9 0 d=217 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=2 BAD
+BF PH_P3uP3_5_3 n=10 odd(sc)=0 odd(bf)=0 d(ie)=409 d(direct)=409 AGREE
+PH_P3uP3_5_3 E 10 0 d=409 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=4 BAD
+BF PH_P3uP3_5_3_rl n=10 odd(sc)=0 odd(bf)=0 d(ie)=409 d(direct)=409 AGREE
+PH_P3uP3_5_3_rl E 10 0 d=409 EVEN U=0 pend=4 pnu=4 r3=1 flags=1 gens=4 BAD
+BF PH_C4_0_1 n=6 odd(sc)=0 odd(bf)=0 d(ie)=39 d(direct)=39 AGREE
+PH_C4_0_1 E 6 0 d=39 EVEN U=0 pend=1 pnu=1 r3=1 flags=1 gens=1 BAD
+BF PH_C4_0_1_rl n=6 odd(sc)=0 odd(bf)=0 d(ie)=39 d(direct)=39 AGREE
+PH_C4_0_1_rl E 6 0 d=39 EVEN U=0 pend=1 pnu=1 r3=1 flags=1 gens=1 BAD
+BF PH_C4_0_2 n=7 odd(sc)=0 odd(bf)=0 d(ie)=67 d(direct)=67 AGREE
+PH_C4_0_2 E 7 0 d=67 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+BF PH_C4_0_2_rl n=7 odd(sc)=0 odd(bf)=0 d(ie)=67 d(direct)=67 AGREE
+PH_C4_0_2_rl E 7 0 d=67 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+BF PH_C4_0_3 n=8 odd(sc)=0 odd(bf)=0 d(ie)=123 d(direct)=123 AGREE
+PH_C4_0_3 E 8 0 d=123 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=4 BAD
+BF PH_C4_0_3_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=123 d(direct)=123 AGREE
+PH_C4_0_3_rl E 8 0 d=123 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=4 BAD
+BF PH_C4_1_1 n=6 odd(sc)=0 odd(bf)=0 d(ie)=39 d(direct)=39 AGREE
+PH_C4_1_1 E 6 0 d=39 EVEN U=0 pend=1 pnu=1 r3=1 flags=1 gens=1 BAD
+BF PH_C4_1_1_rl n=6 odd(sc)=0 odd(bf)=0 d(ie)=39 d(direct)=39 AGREE
+PH_C4_1_1_rl E 6 0 d=39 EVEN U=0 pend=1 pnu=1 r3=1 flags=1 gens=1 BAD
+BF PH_C4_1_2 n=7 odd(sc)=0 odd(bf)=0 d(ie)=67 d(direct)=67 AGREE
+PH_C4_1_2 E 7 0 d=67 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+BF PH_C4_1_2_rl n=7 odd(sc)=0 odd(bf)=0 d(ie)=67 d(direct)=67 AGREE
+PH_C4_1_2_rl E 7 0 d=67 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+BF PH_C4_1_3 n=8 odd(sc)=0 odd(bf)=0 d(ie)=123 d(direct)=123 AGREE
+PH_C4_1_3 E 8 0 d=123 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=4 BAD
+BF PH_C4_1_3_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=123 d(direct)=123 AGREE
+PH_C4_1_3_rl E 8 0 d=123 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=4 BAD
+BF PH_C4_2_1 n=6 odd(sc)=0 odd(bf)=0 d(ie)=39 d(direct)=39 AGREE
+PH_C4_2_1 E 6 0 d=39 EVEN U=0 pend=1 pnu=1 r3=1 flags=1 gens=1 BAD
+BF PH_C4_2_1_rl n=6 odd(sc)=0 odd(bf)=0 d(ie)=39 d(direct)=39 AGREE
+PH_C4_2_1_rl E 6 0 d=39 EVEN U=0 pend=1 pnu=1 r3=1 flags=1 gens=1 BAD
+BF PH_C4_2_2 n=7 odd(sc)=0 odd(bf)=0 d(ie)=67 d(direct)=67 AGREE
+PH_C4_2_2 E 7 0 d=67 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+BF PH_C4_2_2_rl n=7 odd(sc)=0 odd(bf)=0 d(ie)=67 d(direct)=67 AGREE
+PH_C4_2_2_rl E 7 0 d=67 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+BF PH_C4_2_3 n=8 odd(sc)=0 odd(bf)=0 d(ie)=123 d(direct)=123 AGREE
+PH_C4_2_3 E 8 0 d=123 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=4 BAD
+BF PH_C4_2_3_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=123 d(direct)=123 AGREE
+PH_C4_2_3_rl E 8 0 d=123 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=4 BAD
+BF PH_C4_3_1 n=6 odd(sc)=0 odd(bf)=0 d(ie)=39 d(direct)=39 AGREE
+PH_C4_3_1 E 6 0 d=39 EVEN U=0 pend=1 pnu=1 r3=1 flags=1 gens=1 BAD
+BF PH_C4_3_1_rl n=6 odd(sc)=0 odd(bf)=0 d(ie)=39 d(direct)=39 AGREE
+PH_C4_3_1_rl E 6 0 d=39 EVEN U=0 pend=1 pnu=1 r3=1 flags=1 gens=1 BAD
+BF PH_C4_3_2 n=7 odd(sc)=0 odd(bf)=0 d(ie)=67 d(direct)=67 AGREE
+PH_C4_3_2 E 7 0 d=67 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+BF PH_C4_3_2_rl n=7 odd(sc)=0 odd(bf)=0 d(ie)=67 d(direct)=67 AGREE
+PH_C4_3_2_rl E 7 0 d=67 EVEN U=0 pend=2 pnu=2 r3=1 flags=1 gens=2 BAD
+BF PH_C4_3_3 n=8 odd(sc)=0 odd(bf)=0 d(ie)=123 d(direct)=123 AGREE
+PH_C4_3_3 E 8 0 d=123 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=4 BAD
+BF PH_C4_3_3_rl n=8 odd(sc)=0 odd(bf)=0 d(ie)=123 d(direct)=123 AGREE
+PH_C4_3_3_rl E 8 0 d=123 EVEN U=0 pend=3 pnu=3 r3=1 flags=1 gens=4 BAD
+SUMMARY lines=200 ok=0 bad=200

@@ -1,0 +1,2 @@
+graphs: 436  max order: 22
+construction steps used: {'A1': 12, 'A2': 6, 'A3': 12, 'B1': 12, 'B3': 14, 'L7:PH32': 53, 'L7:R': 122, 'L7base': 55, 'L8:PH32': 44, 'L8:R': 93, 'L8b:PH32': 187, 'L8b:R': 350, 'L8base': 142, 'base<=12': 239, 'r1': 335, 'r2': 64, 'r3a': 143, 'r3b': 52, 'r3c': 24, 'r4a': 213, 'r4b': 25}

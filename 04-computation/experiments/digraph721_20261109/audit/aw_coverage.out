@@ -1,0 +1,4 @@
+(i) F(n) for n <= 12: checked 4028 (n,k) pairs; missing 0
+(ii) Lemma 7 (12 good graphs): missing 0
+(iii) Lemma 8 base, odd j < 4096 (2048 values): missing 0 ; max n0 - L(j) = 8
+ALL COVERED

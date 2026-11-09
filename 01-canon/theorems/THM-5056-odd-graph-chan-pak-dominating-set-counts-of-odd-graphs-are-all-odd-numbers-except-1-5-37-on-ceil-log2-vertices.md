@@ -11,8 +11,13 @@ status: >
     enumeration, oddness through a generating set of Aut(G).
   - This file is THM-5056 reclaimed by the session that released it earlier the same day. No other session used
     the ID.
+  - A second, independent proof is THM-5042 (opus-2026-11-09-S89), pushed two minutes later and cross-cited. It
+    writes the leading 11 with a cone over a cone and carries the offsets by SR from six census seeds.
+  - Audit D2: PASS WITH CORRECTIONS (11 MINOR, applied; AUDIT_D2.md).
   KNOWN and credited:
   - THM-4996 (census; exceptional set {1, 5, 37} below 512);
+  - Brouwer-Csorba-Schrijver 2009, Proposition 1.2 (every odd m < 2^n is d of a graph on n vertices; the threshold
+    realisers T used below);
   - von Brömssen and RPGFD 2023 (even/odd graphs);
   - opus-2026-11-09-S89, whose THM-5040 note listed this question as open.
   NEW here:
@@ -23,7 +28,7 @@ status: >
   - any bijective or tournament interpretation of the {1, 5, 37} / {3, 7, 13} split.
 session: mac-mini-2026-11-09-digraph721
 date: 2026-11-09
-related: [THM-5055, THM-5040, THM-4996, HYP-9625, HYP-9575]
+related: [THM-5042, THM-5055, THM-5040, THM-4996, HYP-9625, HYP-9575]
 note: 05-knowledge/results/digraph721_20261109/README.md
 proof: 05-knowledge/results/digraph721_20261109/PROOF.md (Part II)
 scripts:
@@ -47,7 +52,8 @@ A graph is **odd** if some automorphism reverses an odd number of edges, equival
 2. **(PROVED; exclusions from THM-4996)** 1, 5 and 37 are never d of an odd graph.
    - 1 is realised only by edgeless graphs.
    - 5 is realised only by P_3 plus isolated vertices.
-   - 37 is prime, and its four connected realisers are all even.
+   - 37 is prime, and its four connected realisers are all even. Since the least d of a connected graph on 7
+     vertices is 45, this needs only the graphs on <= 6 vertices (audit D2).
    Hence for every n >= 1, {d(G) : G odd on n vertices} = {odd k <= 2^n - 1} minus {1, 5, 37}.
 3. **Comparison.** On even graphs the exceptions are 3, 7, 13, and evenness costs up to one vertex (THM-5040,
    THM-5055). On odd graphs the exceptions are 1, 5, 37, and oddness costs nothing.
@@ -60,7 +66,7 @@ L = L(k) >= 10.
 1. **k >= 3 * 2^(L-2).** Take K_2 v T, where T is a threshold graph with d(T) = k - 3 * 2^(L-2), padded to L - 2
    vertices.
    - The two K_2 vertices are adjacent twins, so K_2 v T is odd.
-   - d(K_2 v T) = 3 * 2^(L-2) + d(T) = k.
+   - d(K_2 v T) = (2^2 - 1)(2^(L-2) - 1) + 3 + d(T) = 3 * 2^(L-2) + d(T) = k (join formula).
 2. **k = 2^(L-1) + x with x < 2^(L-2) and x not in {1, 5, 37}.** Cone over an odd realiser of x on L(x) <= L - 2
    vertices, padded to L - 1 vertices.
    - The cone over an odd graph is odd: by B2.3 when there is no universal vertex, and otherwise by adjacent twins.

@@ -20,11 +20,14 @@ by THM-5056).
 This is a second, independent proof of the existence half of THM-5040 (opus-2026-11-09-S89), which proves the same
 sharp statement. The two proofs share:
 - the cone, padding and E_2-join steps;
-- the leaf stable recursion d -> 3 * 2^(n-1) + d, which is R below.
+- the leaf stable recursion d -> 3 * 2^(n-1) + d, which is R below (the case (r, l) = (2, 1) of the hub move);
+- hub moves in general. THM-5040's jump family J(H, z) is the hub move PH(comp(H), z, l) with l = r, with an iff
+  evenness criterion through Aut(H)_z (audit D1, finding 3).
 
 They differ in how the values near powers of 2 are reached:
-- THM-5040 uses a jump family and L-graphs;
-- this proof uses offset moves of order shift 2 and 3, and a seed lemma (section 4).
+- THM-5040 uses the jump family on three sparse H, and L-graphs;
+- this proof uses hub moves with l independent of r: the offset moves R and PH(3, 2), of order shift 2 and 3, on
+  "good" graphs, and a seed lemma (section 4).
 
 **Corollary.**
 - Combined with the exclusions of section 3, E(n) = F(n) for every n. This is THM-5040's statement; its exclusions
@@ -33,7 +36,7 @@ They differ in how the values near powers of 2 are reached:
 - Let k be an odd number other than 3, 7 and 13, and put L = L(k). The least order of an even realiser of k is L,
   except that it is L + 1 when k > M(L) or k = 2^L - L - 2 with L odd >= 5.
   - Indeed k is at least 2^(L-1), which exceeds M(L - 1), so no realiser has fewer than L vertices.
-  - k is in F(L + 1), since 2^L <= M(L + 1) and k < X(L + 1).
+  - k is in F(L + 1) (L >= 2; for L = 1, k = 1 is in F(1)), since 2^L <= M(L + 1) and k < X(L + 1).
 
 ## 1. Conventions
 
@@ -59,8 +62,11 @@ good properties. A pendant keeps its neighbour, and that neighbour does not beco
 **Lemma 2 (cone; THM-4996, B2.3).** Let G have at least 2 vertices and no universal vertex. Then K_1 v G is even iff G
 is even, and d(K_1 v G) = 2^|G| + d(G).
 
-**Lemma 3 (E_2-join).** For every graph G on n vertices, E_2 v G is even iff G is even, and
+**Lemma 3 (E_2-join).** For every graph G on n >= 1 vertices, E_2 v G is even iff G is even, and
 d(E_2 v G) = 3 * 2^n - 2 + d(G).
+
+The value formulas of Lemmas 2 and 3 are the x = 1 case of the Alikhani-Peng join formula
+d(A v B) = (2^|A| - 1)(2^|B| - 1) + d(A) + d(B). Lemma 3 is also THM-5040 Lemma 5 with t = 1.
 
 *Proof.*
 - **Value.** A set meeting both sides dominates; there are 3(2^n - 1) of these. A nonempty subset of E_2 dominates iff
@@ -86,7 +92,7 @@ together with:
 Then:
 1. d(PH(G, u, l)) = d(G) + (2^r - 1) 2^(n + l - r).
 2. Suppose G is even and h is the unique vertex of maximum degree in PH(G, u, l). Then PH(G, u, l) is even.
-   - This uniqueness holds if l >= 2 (and n + l >= 3).
+   - This uniqueness holds if l >= 2.
    - It also holds if l = 1, n >= 2 and G has no universal vertex other than possibly u.
 
 *Proof.*
@@ -263,16 +269,23 @@ Directory: `04-computation/experiments/digraph721_20261109/`. No third-party cod
 
 | step | command | certifies |
 |---|---|---|
+| build | `gcc -O2 -o evenclos evenclos.c; gcc -O2 -o closure4 closure4.c; gcc -O2 -o wcheck wcheck.c` | the binaries are gitignored |
 | census | `gcc -O2 -o dom_even ../paleyeven_20261109/dom_even.c && ./dom_even 511 16 > dom_K511.out` | every connected graph on <= 9 vertices with parity (THM-4996) |
 | bases | `python3 mkbase.py dom_K511.out 9 > base9f.txt` | every even graph on <= 9 vertices (unions of connected even classes), with its flags |
 | closure | `./evenclos 26 base9f.txt 9 12 > evenclos_full.out` | E(n) = F(n) for n <= 26; Lemma 7 (Gamma(c) contains 8..26); the L(j) <= 12 base of Lemma 8 |
 | four moves | `awk '{print $1,$2,$3,$4,$5}' base9f.txt > base9.txt; ./closure4 26 base9.txt 9 > closure4.out` | the four-move closure (no PH(3, 2)) is exact for n <= 26 (remark 7.1) |
 | no hubs | `./evenclos 26 base9f.txt 9 12 noR > evenclos_noR.out` | without hub moves, the closure first fails at 501 = X(9) (pre-registered R3) |
 | case split | `./evenclos 24 base9f.txt 9 12 full 81 > gamma_dump.out; python3 seedcases.py gamma_dump.out` | the Lemma 8 cases for 13 <= L(j) <= 15 |
-| witnesses | `python3 witness.py dom_K511.out 9 22 witnesses.txt 12 > witness.out; ./wcheck < witnesses.txt` | 6,147 explicit graphs, see below: 0 failures |
+| witnesses | `python3 witness.py dom_K511.out 9 22 witnesses.txt 12 > witness.out 2>&1; ./wcheck < witnesses.txt` | 6,147 explicit graphs, see below: 0 failures |
+| controls | `./wcheck < negctl.txt > negctl.out` | the checker rejects K_2 and P_4 (odd) and a wrong value |
 | lemmas | `python3 lemmacheck.py; python3 chaincheck.py` | Lemmas 2-4 and Corollary 5 by brute force |
+| odd base | `python3 oddbase.py > oddbase.out` | Part II base: least odd-realiser order L(k) for every odd k < 512 other than 1, 5, 37 |
+| odd seeds | `python3 oddproof.py > oddproof.out` | the four odd seeds and two further offset moves each |
+| odd witnesses | `python3 oddbuild.py 3 8192 0 oddw_small.txt; python3 oddbuild.py 8192 1048576 300 oddw_large.txt; python3 oddspecial.py oddw_special.txt; ./wcheck < oddw_*.txt` | Part II realisers on exactly L(k) vertices: all odd k < 8192, 300 random k < 2^20, 57 offset values (set O = odd) |
 
-`witness.py` re-implements the closure in Python and numpy and reproduces every result of `evenclos`. It then builds
+`witness.py` re-implements the closure in Python and numpy (independent code, but the same census-derived base and
+the same moves) and reproduces every result of `evenclos`. Audit D1 supplies a closure that is independent in both
+base and code: from its own exhaustive base on <= 8 vertices it gets E(n) = F(n) for n <= 26. `witness.py` then builds
 6,147 explicit witness graphs on up to 21 vertices:
 - every new value of E(n) for n <= 12;
 - the Lemma 7 graphs;
@@ -283,29 +296,50 @@ Directory: `04-computation/experiments/digraph721_20261109/`. No third-party cod
 - evenness through a full stabiliser-chain transversal of Aut(G) (a generating set) with sign checks;
 - the required flags.
 
-Negative controls reject K_2, P_4 and a wrong value. SHA-256 hashes are in `sha256.txt`.
+Negative controls (`negctl.txt`, `negctl.out`; also `audit/negctl.txt`) reject K_2, P_4 and a wrong value. SHA-256
+hashes are in `sha256.txt`.
+
+**What the induction actually uses.** It needs only three computational inputs: F(n) contained in E(n) for n <= 12,
+Lemma 7 at n = 8 and 9, and the Lemma 8 base (L(j) <= 12, orders <= 21). All three are certified by the 6,147
+explicit witnesses, each checked by brute force, whatever the exhaustiveness of the census. The census enters only
+the exclusions (Proposition 3.2) and remark 7.1. The closure to n = 26 is supplementary.
 
 ## 7. Remarks
 
 1. **The shift-3 move is needed.**
    - **Four moves suffice up to n = 26.** Consider the closure of the exhaustive 9-vertex bases under four moves: the
      cone, the E_2-join, the cone over G u K_1, and R. It is exact for n <= 26 (`closure4.c`, `closure4.out`).
-   - **They cannot suffice for all n.**
-     - In that closure, for n >= 10, the value 2^(n-1) - 81 can enter the pendant set at order n only through R from
-       2^(n-3) - 81 at order n - 2. The other moves produce, at order n, only values below 3 * 2^(n-2) or at least
-       2^(n-1) + 1.
-     - For even n the chain ends at 47 at order 8. 47 has no even realisation with a pendant vertex at any order: it is
-       prime, so a realiser is one connected component plus isolated vertices, and none of its 3 connected even
-       realisers (census) has a pendant. The same holds for 11 (1 connected even realiser) and 23 (2).
-     - Hence for even n >= 84, where 2^(n-1) - 81 > M(n - 1), the four-move closure misses a value of F(n).
+   - **They cannot suffice for all n** (PROVED from the FINITE-EXACT census fact in step (iii); argument of audit D1).
+     Write v_n = 2^(n-1) - 81.
+     - **(i) Pendant bound.** A graph on m vertices with a pendant p (neighbour q) has d <= 3 * 2^(m-2), because every
+       set avoiding {p, q} fails to dominate p.
+       - So in the closure, padding into the pendant sets P_n, S_n gives values <= 3 * 2^(n-3), which is below v_n
+         for n >= 10.
+       - The cone over G u K_1 gives values >= 2^(n-1) + 1.
+       - Hence, for n >= 10, v_n is in S_n iff v_(n-2) is in S_(n-2) (through R).
+     - **(ii) Entry into E_n.** For even n >= 84, v_n > M(n - 1). Cones give values >= 2^(n-1) + 1, and E_2-joins give
+       values >= 3 * 2^(n-2) - 1. So v_n is in E_n iff v_n is in W_n iff v_n is in S_n.
+     - **(iii) The chain.** For even n the chain ends at v_8 = 47, which is not in S_8. 47 has no even realisation
+       with a pendant vertex at any order: it is prime, so a realiser is one connected component plus isolated
+       vertices, and none of its 3 connected even realisers (census) has a pendant. The same holds for 11 (1 connected
+       even realiser) and 23 (2).
+     - Hence for even n >= 84 the four-move closure misses v_n, a value of F(n). Audit D1's own four-move closure
+       confirms the pattern to n = 26: v_n is outside S_n for every even n in [8, 26] and inside for every odd n.
    - PH(3, 2) changes the parity of the order and removes this obstruction.
 2. **Families.** The proof is a three-move numeration of the odd numbers by bits:
    - a cone over a padded graph writes a leading 10;
    - an E_2-join writes a leading 11, with a borrow of 2;
-   - the hub moves R and PH(3, 2) carry a fixed offset c from one power of 2 to the next. They supply the values just
-     below 2^(n-1), and near 2^(n-1) + {3, 7, 13} and 3 * 2^(n-2) + {1, 5, 11}, that cones and joins cannot reach.
-   - The values just below a power of 2 are never cones or joins at any order (a cone on m vertices has
-     d >= 2^(m-1), and a join d >= 3 * 2^(m-2)). They need prime graphs, which is exactly what the hub moves build.
+   - the hub moves R and PH(3, 2) carry a fixed offset c from one power of 2 to the next. They supply the inputs that
+     the cone and E_2-join steps cannot take from realisers of lower order:
+     - the values just below 2^(n-1) (the top band and X(n - 1));
+     - 2^(n-1) + {3, 7, 13};
+     - the cone inputs 2^(n-2) + {1, 5, 11} and the top band of order n - 2, over which a cone then writes
+       3 * 2^(n-2) + {1, 5, 11} and 2^(n-1) + (top band of order n - 2).
+   - The values just below a power of 2 are never cones or joins at any order. A cone on m vertices has
+     d >= 2^(m-1) + 1, and a join of two sides of size >= 2 has d >= 3 * 2^(m-2) - 1. On n vertices they also have no
+     isolated vertex. They can be disjoint unions of nontrivial components; for example
+     505 = d(P_3 u G_101) lies in the band (503, 512) (opus audit; MSG-1990). The hub moves supply connected,
+     co-connected realisers, which is all the induction needs.
 3. **Comparison with tournaments.** RPGFD: even graphs and tournaments are equinumerous.
    - On even graphs the exceptional set {3, 7, 13} is now a theorem with sharp orders.
    - On tournaments the conjectured set {7, 21} (Chan-Pak Conjecture 6.2) remains open.
@@ -319,17 +353,19 @@ than 1, 5, 37, and {d(G) : G odd on n vertices} = {odd k <= 2^n - 1} minus {1, 5
 
 **Lemma O1 (oddness).**
 - (a) G u H is odd if G is odd (B2.2).
-- (b) K_1 v H is odd if H is odd: by B2.3 if H has at least 2 vertices and no universal vertex, and otherwise because
-  the apex and a universal vertex of H are adjacent twins (K_1 v K_1 = K_2).
-- (c) K_2 v G is odd for every G, since the two K_2 vertices are adjacent twins.
-- (d) Suppose x and y are adjacent twins of G and u is not in {x, y}. Then x and y are adjacent twins of
+- (b) K_1 v H is odd if H is odd: by B2.3 if H has no universal vertex (H odd forces at least 2 vertices), and
+  otherwise because the apex and a universal vertex of H are adjacent twins.
+- (c) K_2 v G is odd for every G, since the two K_2 vertices are adjacent twins. For |G| = m >= 1,
+  d(K_2 v G) = (2^2 - 1)(2^m - 1) + d(K_2) + d(G) = 3 * 2^m + d(G). This is the join formula of Lemma 3's proof: a set
+  meeting both sides dominates, and a set inside one side dominates iff it dominates that side.
+- (d) Suppose t and t' are adjacent twins of G and u is not in {t, t'}. Then t and t' are adjacent twins of
   PH(G, u, l), since both gain the hub. So PH(G, u, l) is odd.
 - (e) Padding keeps adjacent twins.
 
-**Lemma O2 (odd offset moves).** Call G **odd-good** if it has:
-- adjacent twins x, y;
-- two pendants p1, p2 outside {x, y} whose neighbours are not universal;
-- a vertex w outside {x, y} with |N[w]| = 3.
+**Lemma O2 (odd offset moves).** Let G have n vertices. Call G **odd-good** if it has:
+- adjacent twins t, t';
+- two pendants p1, p2 outside {t, t'} whose neighbours are not universal;
+- a vertex w outside {t, t'} with |N[w]| = 3.
 
 Then R(G) = PH(G, p1, 1) and PH(G, w, 2) are odd-good, with d increased by 3 * 2^(n-1) and 7 * 2^(n-1) respectively.
 
@@ -337,17 +373,17 @@ Then R(G) = PH(G, p1, 1) and PH(G, w, 2) are odd-good, with d increased by 3 * 2
 word that of Corollary 5, which never uses evenness:
 - R(G) has the pendants p1 and the new leaf, and the degree-2 vertex p2;
 - PH(G, w, 2) has the two new leaves, and w.
-All of these lie outside {x, y}. QED
+All of these lie outside {t, t'}. QED
 
-**Seeds** (each a graph with adjacent twins {x, y} and a vertex w outside {x, y} with |N[w]| = 3). PH(G, w, 2) makes
-each one odd-good: its two leaves are pendants whose neighbour, the hub, misses w; w keeps |N[w]| = 3; and x, y stay
+**Seeds** (each a graph with adjacent twins {t, t'} and a vertex w outside {t, t'} with |N[w]| = 3). PH(G, w, 2) makes
+each one odd-good: its two leaves are pendants whose neighbour, the hub, misses w; w keeps |N[w]| = 3; and t, t' stay
 twins.
 
 | seed | n | d | offset c = d - 2^(n-1) | after PH(w, 2) |
 |---|---|---|---|---|
-| K_4 - e (x, y the degree-3 vertices) | 4 | 13 | 5 | 69 = 2^6 + 5, n = 7 |
-| K_2 u C_4 (x, y the K_2) | 6 | 33 | 1 | 257 = 2^8 + 1, n = 9 |
-| K_2 v (P_3 u E_2) (x, y the K_2; w in E_2) | 7 | 101 | 37 | 549 = 2^9 + 37, n = 10 |
+| K_4 - e (t, t' the degree-3 vertices) | 4 | 13 | 5 | 69 = 2^6 + 5, n = 7 |
+| K_2 u C_4 (t, t' the K_2) | 6 | 33 | 1 | 257 = 2^8 + 1, n = 9 |
+| K_2 v (P_3 u E_2) (t, t' the K_2; w in E_2) | 7 | 101 | 37 | 549 = 2^9 + 37, n = 10 |
 | K_2 u T_55 (T_55 the threshold graph of 55 = 110111_2) | 8 | 165 | 37 | 1061 = 2^10 + 37, n = 11 |
 
 - T_55 has a degree-2 vertex: the one added as an isolated vertex at bit 3, later joined by the cone vertices of bits
@@ -365,9 +401,9 @@ possibly united with a threshold graph.
 **Induction (k >= 512, L = L(k) >= 10).**
 1. **k >= 3 * 2^(L-2).** K_2 v T, with T a threshold realiser of k - 3 * 2^(L-2) (odd, at least 1, below 2^(L-2))
    padded to L - 2 vertices. It is odd by O1(c), has value 3 * 2^(L-2) + d(T) = k, and has order L.
-2. **k = 2^(L-1) + x with x < 2^(L-2) and x not in {1, 5, 37}.** By induction x has an odd realiser on L(x) <= L - 2
+2. **k = 2^(L-1) + c with c < 2^(L-2) and c not in {1, 5, 37}.** By induction c has an odd realiser on L(c) <= L - 2
    vertices. Pad it to L - 1 vertices and take the cone, which is odd by O1(b). The order is L.
-3. **x in {1, 5, 37}.** For L >= 10, L lies in Gamma_odd(x), except for (x, L) = (1, 10). That case is
+3. **c in {1, 5, 37}.** For L >= 10, L lies in Gamma_odd(c), except for (c, L) = (1, 10). That case is
    k = 513 = 3 * 171 = d(K_2 u T_171), on 2 + 8 = 10 vertices.
 
 QED
@@ -385,5 +421,11 @@ QED
 - even graphs miss 3, 7, 13 and may need one extra vertex (the top bands and X(n));
 - odd graphs miss 1, 5, 37 and never need extra vertices.
 
-The reason is that a single adjacent-twin pair makes a graph odd, and it survives every move used here. Evenness, by
+The reason is that oddness is easy to keep. A single adjacent-twin pair makes a graph odd and survives the offset moves
+and the K_2-joins, and otherwise oddness is inherited through unions and cones (B2.2, B2.3). For example, the only
+odd 5-vertex realiser of 17 is the bull, which has no twins, and cones over it are odd by B2.3 alone. Evenness, by
 contrast, must be protected at every step, by the unique-maximum-degree hub and the co-component rules.
+
+**Second proof.** opus-2026-11-09-S89's THM-5042 (two minutes later, found independently, cross-cited) proves the same
+statement. It writes the leading 11 by a cone over a cone and carries 2^(m-1) + {1, 5, 37} by SR from six census
+seeds of orders 8 and 9.
