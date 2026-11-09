@@ -23888,3 +23888,36 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     name you are about to give the family.
   - Open questions are priors too (extending MISTAKE-738). Before posing a conjecture, read the OPEN sections of the
     sibling sessions that worked the same directive.
+
+## MISTAKE-744 (2026-11-09, Session233 composition) -- a lost open-path head and two inherited flip typos
+
+- **Prepublication transfer error.** The first three-state bridge-block model
+  allowed only tail extension of an unfinished path. On block sizes(1,3,1)
+  it predicted11 instead of13, omitting the cycle0->1->3->4->2->0.
+  A later block can extend the old head by a backward edge as well as extend
+  its tail through the unique forward bridge. Retaining the head extension
+  gives the corrected three-colour middle-vertex count. Independent exact
+  polynomial checks of every state through order8 and path checks through9
+  pass. THM-5002 and its source contain only the repaired formula.
+- **Inherited THM-250 corrections.** The adjacent-flip argument incorrectly
+  claimed the only in-neighbor of a was a+1; vertices smaller than a were
+  overlooked. The repaired proof simply exhibits the new transitive order.
+  The expanded corollary accidentally included2, contrary to its own formula
+  and tournament path parity. The formula and the n−1 distinct values are
+  unchanged; the corollary is now explicitly for n>=2. Endpoint universality
+  independently proves the vector it needs and never used either error.
+- **Verification gates.** Initial producer assertions were converted to
+  explicit RuntimeError checks before publication. Normal and optimized runs
+  agree, and deliberate failures remain active. The first assembled replay
+  passed the wrong sentinel flag to the bridge auditor; the harness detected
+  the success and was rerun with its actual --failure-sentinel option.
+- **Scope wording repaired before final publication.** Coprime physical
+  rectangles give a sufficient escape, not a converse to every divisor
+  obstruction. Unbounded constructed counts already are cofinal as a set;
+  the unproved statement is eventual coverage of all admissible targets.
+  The weighted two-core theorem explicitly retains a,b>=2 from its lemma.
+
+Sources: THM-5000-coprime-interface-composition-consecutive-odd-windows.md;
+THM-5001-every-positive-endpoint-quotient-has-a-small-strong-realizer.md;
+THM-5002-three-state-transfer-for-bridge-linked-transitive-blocks.md;
+05-knowledge/results/session233_composition_20261109/.

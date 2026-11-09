@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/07d5532f2fce/session233-graft-audit/audit_supplement.py", line 5, in <module>
+    if args.sentinel:need(False,'intentional supplement failure')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/07d5532f2fce/session233-graft-audit/audit_common.py", line 5, in need
+    if not x: raise RuntimeError(m)
+              ^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: intentional supplement failure
+sentinel exit=1

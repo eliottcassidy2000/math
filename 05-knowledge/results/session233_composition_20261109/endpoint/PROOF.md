@@ -68,4 +68,7 @@ Thus the endpoint coordinate uses binary weights 2^(i-1), while the response coo
 
 `response.py` checks this identity by a separate start-path subset DP for every selector at base orders 4,...,9. At n=6 the base responses are (31,69,44,28,18,17). As N runs from 1 to 15, the child H values are (27,41,33,59,51,65,39,85,71,91,59,109,77,97,47), and B_x values are (155,180,111,196,127,152,83,206,137,162,93,178,109,134,65). These nonmonotone profiles are finite-exact, not a theorem that no other composition can eliminate the sidecar.
 
-Verification robustness: all mathematical checks raise explicit exceptions rather than using removable assertions. Both executable verification scripts have a `--fail` sentinel. Normal and `python3 -O` runs produce byte-identical outputs; the deliberate failure exits nonzero in both modes. See `verification_robustness.out` for receipts. Status remains proof candidate pending independent audit.
+Verification robustness: all mathematical checks raise explicit exceptions rather than using removable assertions. Both executable verification scripts have a `--fail` sentinel. Normal and `python3 -O` runs produce byte-identical outputs; the deliberate failure exits nonzero in both modes. See `verification_robustness.out` for receipts. Independent audit PASS is recorded in ../endpoint_audit/REPORT.md.
+
+
+Session233 close-out note: THM-250's erroneous corollary entry 2 and its adjacent-flip proof sentence have now been repaired in canon; the formula used above is unchanged. See MISTAKE-744.

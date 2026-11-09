@@ -26,7 +26,7 @@ These are direct graph controls only for small cores and small ordinal examples.
 
 ## Provenance clarification
 
-The parent resolved the historical shorthand citation Session229 `dynamic/PROOF.md` to `05-knowledge/results/session229_combined_constructions_20261109/dynamic/PROOF.md`. The parent supplied this exact path after the initial audit; it was not materialized in the auditor’s checkout and was not independently inspected. The same seven-coordinate law and definitions are also displayed in canonical THM-4960. The minor provenance question is resolved; the stable theorem verdict remains PASS. No required fix identified.
+The parent resolved the historical shorthand citation Session229 `dynamic/PROOF.md` to `05-knowledge/results/session229_combined_constructions_20261109/dynamic/PROOF.md`. The parent supplied this exact path after the initial audit; it was subsequently materialized and inspected during the supplement audit. Its coordinate definitions and pure-T context theorem agree with the inherited use. The same seven-coordinate law and definitions are also displayed in canonical THM-4960. The minor provenance question is resolved; the stable theorem verdict remains PASS. No required fix identified.
 
 Reproduce in an assembled packet with sibling directories `graft_audit` and `graft` by running `python3 graft_audit/audit.py` and `python3 -O graft_audit/audit.py`. For another layout use `--source PATH_TO_GRAFT`. The sentinel is `python3 -O graft_audit/audit.py --sentinel` and must exit nonzero before reading sources.
 

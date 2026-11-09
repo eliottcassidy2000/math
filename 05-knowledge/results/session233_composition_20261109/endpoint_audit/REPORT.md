@@ -39,3 +39,6 @@ Read and checked THM-4988, THM-250, and THM-4865 in the designated worktree. THM
 The meaningful new result relative to those checked sources is the universal binary endpoint selector with strongness, trivial rooted stabilizer, and logarithmic order. This is a scoped lineage comparison, not an exhaustive repository or literature novelty certification. The general response identity is a natural multi-outneighbor generalization of the inherited sole-exit identity, with its own valid elementary proof. No global spectrum completion is certified.
 
 No producer files or repository files were edited; no commits were made.
+
+
+Session233 close-out note: THM-250's erroneous corollary entry2 and its adjacent-flip proof sentence have now been repaired in canon; the formula used above is unchanged. See MISTAKE-744.

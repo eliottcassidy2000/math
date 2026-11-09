@@ -29,7 +29,14 @@ The only Hamiltonian path in T_n^{(a,a+1)} is obtained by swapping positions a a
 - a → (a+2): transitive arc with skip 2 (exists since a+2 > a)
 - i → i+1 for i > a+1 (unchanged transitive arcs)
 
-**Verification that no other path exists:** Any other path must use the arc (a+1) → a at some point (since vertex a can only be reached from a+1, given that all other arcs from vertices > a to a are absent — the only arc INTO a is from a+1). After using (a+1) → a, the path must continue from a forward, giving the unique continuation. Similarly, before (a+1), the path must reach a+1 from below, giving a unique prefix. ∎
+**Uniqueness.** Reversing an adjacent pair changes the transitive order to
+0,1,...,a-1,a+1,a,a+2,...,n-1. Every arc respects this new order because
+there is no vertex between a and a+1 in the old order. The resulting
+tournament is transitive and therefore has exactly one Hamiltonian path. ∎
+
+**Session233 correction:** the former proof incorrectly said the only arc
+into a came from a+1, overlooking vertices smaller than a. The conclusion
+was correct; the transitive-order argument repairs the proof.
 
 ### Case 2: b - a = k ≥ 2 (non-adjacent flip)
 
@@ -68,8 +75,11 @@ H = 1 (original path) + 2^{k-1} (new paths) = 2^{k-1} + 1. ∎
 
 ## Corollary
 
-The set of H values achievable by a single-flip perturbation of the n-vertex transitive tournament is:
+For n>=2, the set of H values achievable by a single-flip perturbation of the n-vertex transitive tournament is:
 
-{1} ∪ {2^{k-1} + 1 : k = 2, 3, ..., n-1} = {1, 2, 3, 5, 9, 17, 33, ..., 2^{n-2} + 1}
+{1} ∪ {2^{k-1} + 1 : k = 2, 3, ..., n-1}.
+
+As n grows, the possible values begin 1, 3, 5, 9, 17, 33, ... . The former
+expanded list accidentally included 2; that was a typo, not a value of H.
 
 These are n - 1 distinct values. Each skip length gives a unique H value.

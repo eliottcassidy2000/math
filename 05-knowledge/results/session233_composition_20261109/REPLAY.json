@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "normal_and_optimized_runs": 22,
+  "failure_control_runs": 22,
+  "tests": [
+    {
+      "folder": "graft",
+      "script": "verify.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_sha256": "e87922aba946872eef04ea288d8b415fcc0198825841113d797d81b40aac1bdc",
+      "failure_control": "--fail",
+      "failure_active_both_modes": true
+    },
+    {
+      "folder": "graft",
+      "script": "verify_weighted.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_sha256": "6478dc759b6b43bc245020b25fcf63269ee350ba6ec62c64c0d691c6cdd37840",
+      "failure_control": "--fail",
+      "failure_active_both_modes": true
+    },
+    {
+      "folder": "graft_audit",
+      "script": "audit.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_sha256": "3cdaa45997fed2b3e981bb81638c122d2f847f732f6556a91f340199c172ee44",
+      "failure_control": "--sentinel",
+      "failure_active_both_modes": true
+    },
+    {
+      "folder": "graft_audit",
+      "script": "audit_supplement.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_sha256": "6d3743968b303c94ba845301a000199cbf1c70a388f0e512199ad48db6602762",
+      "failure_control": "--sentinel",
+      "failure_active_both_modes": true
+    },
+    {
+      "folder": "endpoint",
+      "script": "verify_endpoint.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_sha256": "6e65fd134711971da2b01ab65a7d6ee6c0d1dbc34c8aa75478d375134122ef21",
+      "failure_control": "--fail",
+      "failure_active_both_modes": true
+    },
+    {
+      "folder": "endpoint",
+      "script": "response.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_sha256": "ff7d176a0e5d2e135f20e8fc3f73bd3d44c659444ec5b8c9bb90ee6fd3e477b4",
+      "failure_control": "--fail",
+      "failure_active_both_modes": true
+    },
+    {
+      "folder": "endpoint_audit",
+      "script": "audit.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_sha256": "f7c2eb414dfcbb0de5b3c08b51251d803df8b1a9451c7f3de8ebf7a4f2bcdcf4",
+      "failure_control": "--fail",
+      "failure_active_both_modes": true
+    },
+    {
+      "folder": "transducer",
+      "script": "bridge_blocks.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_sha256": "ff0e6e90466708739a4a59c7cd23425f85c754e5f2374b1d7f2994ad24b25803",
+      "failure_control": "--fail",
+      "failure_active_both_modes": true
+    },
+    {
+      "folder": "transducer",
+      "script": "check_polynomial.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_sha256": "959a61df301711c4f8cff2f8abeb71c9eb5445673786685cf2294be141bebb8b",
+      "failure_control": "--fail",
+      "failure_active_both_modes": true
+    },
+    {
+      "folder": "transducer_audit",
+      "script": "audit.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_sha256": "bca8afb55dbac7cd37e1a821d46db19e1e4e6822be25e48d644c4881737c5c90",
+      "failure_control": "--failure-sentinel",
+      "failure_active_both_modes": true
+    },
+    {
+      "folder": ".",
+      "script": "check_legacy_flip.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "stdout_sha256": "6cb5505ed8926d40c797a167df6f722eee19495ee9b6092d04d028c218a87123",
+      "failure_control": "--fail",
+      "failure_active_both_modes": true
+    }
+  ],
+  "scope": "Compact certificate and audit replay, not rediscovery or exhaustive enumeration of large constructed graphs."
+}

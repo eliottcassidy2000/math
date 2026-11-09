@@ -1,0 +1,130 @@
+{
+  "crt": [
+    {
+      "L": 337,
+      "vertices": 5006,
+      "consecutive_odd_values": 362,
+      "lower_bit_length": 5010,
+      "lower_sha256": "4b5c21120fc4667f69cd62cb31363576d25b48b92726cf3b85fd8e62a0cb8e1e"
+    },
+    {
+      "L": 400,
+      "vertices": 5762,
+      "consecutive_odd_values": 24113,
+      "lower_bit_length": 5766,
+      "lower_sha256": "4ee3250a06d4c51e6e8f01e78da5b1f98419d00537dbd7b635f2804dded61084"
+    },
+    {
+      "L": 1000,
+      "vertices": 12962,
+      "consecutive_odd_values": 250313,
+      "lower_bit_length": 12966,
+      "lower_sha256": "fe78f2c31a532384fc58a3329368bcdf8bcb3cc22d382b7f8ba3bb9f1fc22ac1"
+    }
+  ],
+  "status": "PASS",
+  "new_loops": [
+    {
+      "h": 13,
+      "length": 12,
+      "gain": 10
+    },
+    {
+      "h": 29,
+      "length": 28,
+      "gain": 6
+    }
+  ],
+  "pairs": [
+    {
+      "h": 13,
+      "K": 12,
+      "L": 224,
+      "vertices": 2855,
+      "consecutive_odd_values": 237,
+      "lower_bit_length": 2857
+    },
+    {
+      "h": 13,
+      "K": 12,
+      "L": 250,
+      "vertices": 3167,
+      "consecutive_odd_values": 575,
+      "lower_bit_length": 3169
+    },
+    {
+      "h": 13,
+      "K": 12,
+      "L": 300,
+      "vertices": 3767,
+      "consecutive_odd_values": 1225,
+      "lower_bit_length": 3769
+    },
+    {
+      "h": 13,
+      "K": 12,
+      "L": 1000,
+      "vertices": 12167,
+      "consecutive_odd_values": 10325,
+      "lower_bit_length": 12169
+    },
+    {
+      "h": 29,
+      "K": 28,
+      "L": 134,
+      "vertices": 2416,
+      "consecutive_odd_values": 163,
+      "lower_bit_length": 2419
+    },
+    {
+      "h": 29,
+      "K": 28,
+      "L": 150,
+      "vertices": 2608,
+      "consecutive_odd_values": 627,
+      "lower_bit_length": 2611
+    },
+    {
+      "h": 29,
+      "K": 28,
+      "L": 200,
+      "vertices": 3208,
+      "consecutive_odd_values": 2077,
+      "lower_bit_length": 3211
+    },
+    {
+      "h": 29,
+      "K": 28,
+      "L": 1000,
+      "vertices": 12808,
+      "consecutive_odd_values": 25277,
+      "lower_bit_length": 12811
+    }
+  ],
+  "triple": [
+    {
+      "L": 44,
+      "vertices": 5190,
+      "consecutive_odd_values": 421,
+      "lower_bit_length": 5194
+    },
+    {
+      "L": 50,
+      "vertices": 5262,
+      "consecutive_odd_values": 2683,
+      "lower_bit_length": 5266
+    },
+    {
+      "L": 100,
+      "vertices": 5862,
+      "consecutive_odd_values": 21533,
+      "lower_bit_length": 5866
+    },
+    {
+      "L": 1000,
+      "vertices": 16662,
+      "consecutive_odd_values": 360833,
+      "lower_bit_length": 16666
+    }
+  ]
+}

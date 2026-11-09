@@ -1,3 +1,5 @@
+import sys
+if '--fail' in sys.argv: raise RuntimeError('deliberate producer sentinel')
 import json, math, hashlib
 from pathlib import Path
 P=Path(__file__).resolve().parent
