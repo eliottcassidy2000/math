@@ -53,4 +53,19 @@ Outcomes will be appended below, unedited, after the runs.
 
 ## Outcomes
 
-(pending)
+Appended 2026-11-09 after the runs. The text above is unchanged.
+
+- **Q1: CONFIRMED.** Base 2, cores of order <= 7 (2,831 distinct core states), letters S, I_0, I_1, I_2: the odd misses
+  below 10^6 are exactly 7 and 21. The search used 57,330,333 states (`out/q1_b2_le7_1e6.out`).
+- **Q2: CONFIRMED.** Base 3, the same family (2,901 core states): the misses below 10^6 are exactly 10 and 31. The
+  search used 34,006,533 states (`out/q2_b3_le7_1e6.out`).
+- **Q3: REFUTED as worded; the intended statement is CONFIRMED.** Cores of order <= 6 leave 20 misses below 10^6, which
+  is inside the predicted range 6-500. But the clause "every one of them lies above 30,000" fails as written, because
+  7 and 21 are among the misses. The intended clause excluded the permanent gaps; the other 18 misses all lie above
+  30,000 (smallest 34,869) (`out/q3_b2_le6_1e6.out`). This wording slip is recorded in MISTAKES.
+- **Q4: UNDECIDED.**
+  - **Upper bound.** A greedy cover of the odd targets in [1001, 200000] uses 81 core states (base 2); base 3 uses 86
+    for [1000, 200000].
+  - **Lower bound.** Every cover needs at least 17 (base 2) and 20 (base 3): the program finds that many targets whose
+    covering-core sets are pairwise disjoint.
+  - So "at most 40" is neither confirmed nor refuted (`out/q4_greedy_b2.out`, `out/q4_greedy_b3.out`).
