@@ -1,4 +1,4 @@
-/* dom_even.c - all connected graphs with at most K dominating sets, with their Royle parity (paleyeven lane,
+/* dom_even.c - all connected graphs with at most K dominating sets, with their Even/odd parity (von Bromssen; RPGFD 2023) (paleyeven lane,
  * mac-mini-2026-11-09).
  *
  * d(G) = number of dominating sets (S such that every vertex is in S or adjacent to S); always odd (Brouwer 2009).
@@ -10,7 +10,7 @@
  * C(N) = #{dominating S of G disjoint from N} (two subset-zeta transforms per parent).
  * Isomorphism: 1-WL colour refinement with canonical colour names gives an invariant hash; exact backtracking
  * isomorphism tests inside a hash bucket.
- * Royle parity: reference orientation u -> v for u < v; an automorphism g reverses {u,v} iff g(u) > g(v); G is ODD iff
+ * Even/odd parity (von Bromssen; RPGFD 2023): reference orientation u -> v for u < v; an automorphism g reverses {u,v} iff g(u) > g(v); G is ODD iff
  * some automorphism reverses an odd number of edges.  We compute a full transversal of every level of the stabiliser
  * chain (base 0,1,...,n-1): for each base point b and each candidate image c we search for an automorphism fixing the
  * earlier base points with b -> c.  These transversals generate Aut(G), and the sign is a homomorphism, so G is even

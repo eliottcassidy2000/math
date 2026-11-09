@@ -1,0 +1,22 @@
+n=1 classes=1 even=1 odd=0
+   level 2: 1 candidate children canonicalised
+n=2 classes=1 even=0 odd=1
+   level 3: 3 candidate children canonicalised
+n=3 classes=2 even=1 odd=1
+   level 4: 14 candidate children canonicalised
+n=4 classes=6 even=2 odd=4
+   level 5: 90 candidate children canonicalised
+n=5 classes=21 even=8 odd=13
+   level 6: 651 candidate children canonicalised
+n=6 classes=112 even=43 odd=69
+   level 7: 7056 candidate children canonicalised
+n=7 classes=853 even=398 odd=455
+   level 8: 108331 candidate children canonicalised
+n=8 classes=11117 even=6413 odd=4704
+   level 9: 76505 candidate children canonicalised
+n=9 classes=9140 even=6701 odd=2439
+   level 10: 427 candidate children canonicalised
+n=10 classes=94 even=61 odd=33
+   level 11: 0 candidate children canonicalised
+no classes at n=11
+./dom_census census 255 16 > $SCR/census_K255.txt  0.26s user 0.01s system 90% cpu 0.297 total

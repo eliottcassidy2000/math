@@ -1,0 +1,5 @@
+band_3(13) n=13 md=1 twin=1 lambda=3 delta0=3 n_md_sets=6 sizes: 2x6 pairs: {0,1} {1,2} {2,3} {9,10} {10,11} {11,12}
+band_4(15) n=15 md=1 twin=1 lambda=4 delta0=4 n_md_sets=8 sizes: 2x8
+band_4(16) n=16 md=1 twin=1 lambda=4 delta0=4 n_md_sets=8 sizes: 2x8
+band_5(18) n=18 md=1 twin=1 lambda=5 delta0=5 n_md_sets=10 sizes: 2x10
+band_5(20) n=20 md=1 twin=1 lambda=5 delta0=5 n_md_sets=10 sizes: 2x10

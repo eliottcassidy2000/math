@@ -14,6 +14,16 @@ For a tournament T on vertex set V and a set M with 2 <= |M| <= |V| - 1, the **d
 the number of arc reversals that make M a module. The **module defect** md(T) is the minimum of def(M) over all such
 M. lambda(T) is the arc-strong connectivity, and delta0(T) is the least of all in- and out-degrees.
 
+**Priority (audit P1, MAJOR 1).**
+- md(T) is the classical **simplicity index** s(T): the least number of arc reversals making T non-simple. See
+  Müller-Pelant, Czechoslovak Math. J. 24 (1974) 378-391, and Boussaïri-Lakhlifi-Talbaoui, Contrib. Discrete Math.
+  17 (2022) 172-186, arXiv:1907.11777.
+- THM-4985's "decomposability defect" is the same notion.
+- lambda is Kirkland's (1993) reversal index.
+- Lemma A1 below is the equality case of the Müller-Pelant theorem s(T) <= (n - 1)/2, and Lemma A0 is essentially
+  BLT 2022, Proposition 3.1.
+- New here: the doubles D(B), Theorem A2, Theorems A4-A5.
+
 A tournament B of order q is **doubly regular** if every pair of vertices has exactly (q - 3)/4 common out-neighbours.
 Then q = 3 (mod 4), B is regular of degree mu = (q - 1)/2, and every pair also has (q - 3)/4 common in-neighbours.
 Paley tournaments QR_p (p prime, p = 3 mod 4; x -> y iff y - x is a nonzero square) are doubly regular.
@@ -32,9 +42,11 @@ e(U -> V \ U) = lambda.
 - If V \ U = {v}, then lambda = d-(v). Take M = V \ {v}, which has n - 1 >= 2 vertices; then
   def(M) = min(d+(v), d-(v)) <= lambda.
 
-(This is the inequality behind THM-4985's dec = md for n >= 3.) QED
+(KNOWN: BLT 2022, Proposition 3.1 gives s(T) <= min(delta0, twin distance). md <= lambda is immediate, because a
+non-strong tournament on >= 3 vertices is not simple. This is the inequality behind THM-4985's dec = md for
+n >= 3.) QED
 
-### Lemma A1 (doubly regular tournaments have md = (q - 1)/2)
+### Lemma A1 (doubly regular tournaments have md = (q - 1)/2; KNOWN: Müller-Pelant 1974, alternative proof)
 
 Let B be doubly regular of order q >= 7. Then md(B) = mu = (q - 1)/2, and def(X) >= mu for every X with
 2 <= |X| <= q - 1.
@@ -55,7 +67,7 @@ Let B be doubly regular of order q >= 7. Then md(B) = mu = (q - 1)/2, and def(X)
 
       def(X) >= (q - s)(s - sqrt(s))/2 =: f(s).
 
-  - s = 3: f = 0.634(q - 3) >= (q - 1)/2 iff q >= 10.5.
+  - s = 3: f = 0.634(q - 3) >= (q - 1)/2 iff q >= 10.464, so q >= 11.
   - s = q - 2: f = q - 2 - sqrt(q - 2) >= (q - 1)/2 iff q^2 - 10q + 17 >= 0 iff q >= 7.83.
   - s = q - 3: f = (3/2)(q - 3 - sqrt(q - 3)) >= (q - 1)/2 iff 2q - 8 >= 3 sqrt(q - 3), which holds for q >= 7.
   - 4 <= s <= q - 4: s - sqrt(s) >= s/2, so f >= (q - s)s/4 >= 4(q - 4)/4 = q - 4 >= (q - 1)/2 for q >= 7.
@@ -133,7 +145,7 @@ FINITE-EXACT: md, twin distance, lambda and delta0 of T_7 and T_11 over all 2^14
   - H(T_11) = 17,667,825,987,845 and H(T_11 - v) = 1,822,800,617,515 for all v.
   - The deletions are equal because Aut(QR_p) is transitive and D(QR_p) is self-converse.
   - H(T_p)/H(QR_p)^2 = 132.4 and 1953.7: the matched back arcs multiply the ordinal-sum count heavily.
-- **Brégman bound.** Adding a vertex w with w <-> v for all v turns Hamiltonian paths of a digraph into Hamiltonian
+- **Brégman bound (Alon's method, Combinatorica 10 (1990)).** Adding a vertex w with w <-> v for all v turns Hamiltonian paths of a digraph into Hamiltonian
   cycles through w. Brégman's permanent bound then gives
 
       H(D) <= (n!)^(1/n) * prod_v ((d+(v) + 1)!)^(1/(d+(v) + 1)).
@@ -148,26 +160,28 @@ all m >= m_0. (The exact censuses show S(10) and S(11) are solid up to 2.07 and 
 THM-4889.)
 
 Under (S_1), D(B) is an escaper (THM-4985) for every doubly regular B of order q >= 55 with 2q - 2 >= m_0.
-Under (S_c) for any fixed c > 0, the same holds for all q >= q_0(c). Hence escapers of unbounded decomposability defect
+Under (S_c) for any fixed c > 0, the same holds for all q >= q_0(c). Hence escapers of unbounded simplicity index
 exist under (S_c): HYP-9565 (A) holds conditionally.
 
 *Proof.* D(B) is strong, prime and has lambda = (q + 1)/2 >= 3 (Theorem A2). It remains to show
 H(D(B)) <= (2q - 1)!/2^(2q - 2) and H(D(B) - v) <= (2q - 2)!/2^(2q - 3) for every v.
 - For 55 <= q <= 20,000 (q = 3 mod 4), both log-ratios of Brégman's bound to these means are negative and decrease
-  (exact log-gamma evaluation, `bregman_table.out`). In log10 they are -1.053 and -0.388 at q = 55, -1.461 and -0.791
+  (lgamma, checked against exact factorials to 9e-13 by audit P1; `bregman_table.out`). In log10 they are -1.053 and -0.388 at q = 55, -1.461 and -0.791
   at q = 59, and -2.718 and -2.039 at q = 71. q = 55 is the first q with both negative: at q = 51 the deletion ratio
   is +0.008.
-- For large q, Stirling's formula with Robbins' bounds gives log(Brégman / E) = q log(3/4) + O(log q). The same holds
-  for deletions. Hence they are negative for all q beyond the verified range.
+- For every q >= 7, Robbins' Stirling bounds give R(q) <= q log(3/4) + 2.85 log q + 4.8 for both natural-log
+  ratios. The right side decreases for q >= 10 and is negative for q >= 57 (derived and checked numerically to
+  q = 2·10^6 by audit P1, `audit/bregman_tail.out`). With the table this covers every q >= 55.
 
 For (S_c) the margin q log(4/3) - O(log q) eventually exceeds log(1/c). QED
 
 FINITE-EXACT: H(T_11)/E[H(21)] = 0.3626 and H(T_11 - v)/E[H(20)] = 0.3928. So T_11 is an escaper of md 6 already
-under (S_0.4) at orders 20 and 21. T_7 is not: H(T_7) = 4,730,397 exceeds 3,719,831, the best known order-13 count
-(THM-329), and is 3.11 E[H(13)]. Its deletions, 686,457 = 2.93 E[H(12)], exceed 531,205, the best known order-12 count.
-So T_7 is a first creator unless max H(13) >= 4,730,397.
+under (S_0.4) at orders 20 and 21. The argument does not cover T_7: H(T_7) = 4,730,397 exceeds 3,719,831, the best
+known order-13 count (THM-329), and is 3.11 E[H(13)]. Its deletions, 686,457 = 2.93 E[H(12)], exceed 531,205, the best
+known order-12 count. T_7 is an escaper iff 4,730,397 is in S(13) and 686,457 is in S(12). It is not one if
+a(12) = 531,205 or if max H(13) < 4,730,397. Both questions are open.
 
-### Theorem A5 (a certified escaper of decomposability defect 5, order 18)
+### Theorem A5 (certified escapers of simplicity index 5 at order 18 and 4 at order 16)
 
 Let C = C_9{1,2,3,5}, the circulant tournament on Z_9 with x -> x + s for s in {1, 2, 3, 5}, and let D = D(C) (order
 18).
@@ -178,23 +192,39 @@ Let C = C_9{1,2,3,5}, the circulant tournament on Z_9 with x -> x + s for s in {
     inside `wit.c`.
   - 6,450,103,269 is in S(17): `wit_d9_H_m17.out` gives an explicit 17-tournament, found by `./wit 17 0.5 4242` and
     re-counted by wit.c's DP and by tprop.c.
-  - Hence D is an escaper of order 18 with decomposability defect 5. The previous record was 3 (THM-4985 (2)).
-  - Housekeeping: an earlier run (seed 1709) ended, probably with a witness, but its output was lost. The file it was
-    writing had been committed, and a `git pull --rebase` replaced it with a new inode.
+  - Hence D is an escaper of order 18 with simplicity index 5. The previous record was 3 (THM-4985 (2)); the
+    THM-4985 bands have index 1 (checked by audit P1).
 
 C is not doubly regular: md(C) = 3 = twin distance. So Theorem A2 does not apply, and md(D) = 5 = 1 + delta0(C) is
 the computed value. The other Z_9 circulants with 1 in S give md(D) <= 5. S = {1, 2, 3, 4} gives md(D) = 3, because a
 twin distance of 1 in C contributes 1 + 2.
 
-## Part B. Dominating sets of Royle-even graphs
+**Order 16, simplicity index 4.** Let B8 be the near-regular 8-tournament with code 1010100100111001101001010101
+(upper triangle, '1' iff i -> j; scores 3, 4, 3, 4, 4, 3, 3, 4; twin distance 2), and let D' = D(B8) (`d8_144.txt`).
+- **Structure.** md(D') = lambda(D') = delta0(D') = 4 (mdefect.c over all 2^16 sets; re-checked in pure Python by
+  `verify_md_py.py`). D' is strong and prime.
+- **Counts.** H(D') = 144,227,835 = 1.81 E[H(15)]. The 16 deletions take the eight values 16,750,389, 17,527,823,
+  18,351,387, 18,908,079, 19,218,519, 19,720,143, 20,574,141 and 21,469,761. The largest is 2.02 E[H(14)]
+  (`d8_144_tprop.out`).
+- **Certificates.** `wit_d8_H_m15.out` (H in S(15)) and `wit_d8_del_m14_part1-3.out` (all eight deletion values in
+  S(14)). Each witness is re-counted by wit.c's DP and by tprop.c.
+- Hence D' is an escaper of order 16 with simplicity index 4.
+- A random sample of 300 doubles of near-regular 8-tournaments contains 61 with md 4, all with H in
+  [144,227,835, 145,280,921] (`d8_mdefect.out`, `d8_md4_tprop.out`).
+- At order 15, unequal doubles (near-regular 8-block plus QR_7 with 7 back arcs; 14 of a random 400 have md 4) and the
+  R_5-chain have a deletion above the best known order-13 count. They are not certifiable (`d87_*`).
+
+## Part B. Dominating sets of even graphs
 
 ### Notation
 
 - d(G) is the number of vertex sets S that dominate G (every vertex is in S or adjacent to S). It is always odd
-  (Brouwer 2009).
-- Royle parity: fix the reference orientation u -> v for u < v. An automorphism g reverses {u, v} iff
-  g(u) > g(v). sgn_G(g) = (-1)^{#reversed edges} is independent of the labelling and is a homomorphism on Aut(G).
-- G is **even** iff sgn_G is trivial (Royle-Praeger-Glasby-Freedman-Devillers 2023; THM-4531).
+  (A. E. Brouwer, P. Csorba, A. Schrijver, The number of dominating sets of a finite graph is odd, preprint 2009).
+- Parity: fix the reference orientation u -> v for u < v. An automorphism g reverses {u, v} iff g(u) > g(v).
+  sgn_G(g) = (-1)^{#reversed edges} is independent of the labelling and is a homomorphism on Aut(G).
+- G is **even** iff sgn_G is trivial, and odd otherwise. This is von Brömssen's notion (OEIS A334335). Royle,
+  Praeger, Glasby, Freedman and Devillers (J. Algebraic Combin. 57 (2023)) proved his conjecture that even graphs and
+  tournaments are equinumerous; see also THM-4531.
 - E_r denotes the empty graph on r vertices, and v denotes join.
 
 ### Lemma B1 (completeness and conciseness of d over all graphs)
@@ -207,7 +237,9 @@ G (and is then nonempty). Padding with isolated vertices does not change d. Indu
 - if 2^(N - 1) < k < 2^N, write k = 2^(N - 1) + x with x odd and x < 2^(N - 1), and cone over a graph on N - 1 vertices
   with d = x.
 
-These are the threshold graphs. (Elementary; very possibly folklore.) QED
+These are the threshold graphs. The cone formula is the x = 1 case of the domination-polynomial join theorem of
+Alikhani-Peng (arXiv:0905.2251, Theorem 2; domination polynomial: Arocha-Llano 2000). No prior art was found for the
+completeness or conciseness of d on the odd numbers. QED
 
 ### Lemma B2 (parity calculus)
 
@@ -255,8 +287,9 @@ Run `dom_even 511 16` (`dom_K511.err`, `dom_K511_summary.txt`):
   graph on <= 9 vertices; A001349), then 199,053 on 10 vertices, 1,855 on 11 and none on 12.
 - **Check on the parity code.** The Euler transform of the connected-even counts 1, 0, 1, 2, 8, 43, 398, 6,413,
   184,596 (A334335, as in THM-4721) is 1, 1, 2, 4, 12, 56, 456, 6,880, 191,536 = A000568. This is the
-  Royle-Praeger-Glasby-Freedman-Devillers equinumerosity, reproduced class by class through order 9. It independently
-  validates the parity code: even = all components even (B2.2).
+  RPGFD equinumerosity, re-checked count by count through order 9 (von Brömssen already verified the counts to
+  n = 10). It independently validates the parity code: even = all components even (B2.2). Audit P1 reproduced the
+  whole census with independent canonical forms and full automorphism enumeration.
 - **Exceptional set.** Since d is multiplicative over components and evenness is componentwise:
   - the even d-values below 512 are all odd numbers except 3, 7 and 13;
   - all graphs give every odd number;
@@ -266,7 +299,7 @@ Run `dom_even 511 16` (`dom_K511.err`, `dom_K511_summary.txt`):
 - **The value 21** is even: 21 = d(K_1 v (P_3 u K_1)) = 16 + 5. Its only nontrivial automorphism swaps the
   non-adjacent twins.
 - **Odd graphs (added during audit P1).** For the complementary class, a graph is odd iff some component is odd.
-  Below 512 the d-values of Royle-odd graphs are all odd numbers except 1, 5 and 37.
+  Below 512 the d-values of odd graphs are all odd numbers except 1, 5 and 37.
   - 1 is realised only by empty graphs;
   - 5 only by P_3 (plus isolated vertices);
   - 37 is prime, and its four connected realisers are all even.
@@ -279,8 +312,9 @@ and general joins (A' u E_i) v (G' u E_j) (B2.4). Up to 2^22:
 - the general joins reach every odd value except 3, 7, 13 and 12,326 others (`dom_cover_K511_22_genjoin.out`);
 - without general joins, 18,766 others are missed (`dom_cover_K511_22_basic.out`).
 
-The unreached values cluster at 2^m + {3, 7, 13} and just below 2^m. Cones cannot produce 2^m + {3, 7, 13}, because
-3, 7 and 13 are not even values. These are limits of the chosen families, not counterexamples.
+The unreached values cluster near 2^m - 2^k, including 2^m itself. Examples: 761-773 near 768, 949-953 near 960,
+1009-1031 near 1024, 1783-1799 near 1792, 3571-3581 near 3584. Cones cannot produce 2^m + {3, 7, 13}, because 3, 7 and
+13 are not even values. These are limits of the chosen families, not counterexamples.
 
 ### Proposition B6 (the OCF statistic on even graphs, small range)
 

@@ -1,0 +1,11 @@
+(P) brute-force parity vs census parity, connected classes n <= 7: 996 checked, 0 disagree
+(B1) threshold realisers on ceil(log2(k+1)) vertices for odd k <= 1023: 0 failures
+(B2.1) census classes with adjacent twins: 98221; of these not odd: 0
+    graphs up to isomorphism on 1..6 vertices (A000088 check: 1, 2, 4, 11, 34, 156): [1, 2, 4, 11, 34, 156]
+(B2.2) unions of two connected classes with n1 + n2 <= 7: 188 tested, 0 failures
+(B2.3) cones K1 v G over graphs on 2..6 vertices without universal vertex: 155 tested, 0 failures
+       (outside the hypothesis, G with a universal vertex: (G odd?, cone odd?) counts {(True, True): 38, (False, True): 14})
+(B2.4) joins of co-connected A, G (|A|+|G| <= 7), A not iso G: 184 tested, 0 failures; A v A: 4 tested, 0 failures of 'odd iff A odd or |A| odd'
+(B2.5) sgn_G(g) sgn_coG(g) = sgn(g), 2000 random (graph, permutation): 0 failures
+(B2.6) trees up to 11 vertices: 436 tested, 0 failures of 'odd iff bicentral with isomorphic halves'
+       trees per order (A000055) / odd: {1: (1, 0), 2: (1, 1), 3: (1, 0), 4: (2, 1), 5: (3, 0), 6: (6, 2), 7: (11, 0), 8: (23, 4), 9: (47, 0), 10: (106, 9), 11: (235, 0)}

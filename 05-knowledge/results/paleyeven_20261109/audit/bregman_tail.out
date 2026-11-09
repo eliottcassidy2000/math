@@ -1,0 +1,7 @@
+D ratio strictly decreasing for q >= 55: True
+deletion ratio strictly decreasing for q >= 55: True
+tail bound holds for all q in [7, 2e6] (both ratios): True
+bound negative from q = 67
+max slack (bound - ratio) at q = 7, 55, 1e6: [5.042, 3.691, 3.444]
+bound with constant 4.8 holds for all q in [7, 2e6] (both ratios): True ; negative and decreasing from q = 57
+min slack of the 4.8 bound over q in [7, 2e6]: 0.958 at q = 1975

@@ -1,0 +1,6 @@
+block code given in the task: 1010100100111001101001010101 ; file: 1010100100111001101001010101 ; equal: True
+T is a tournament: True ; B8 is a tournament: True
+d8_144 == D(B8) (A = 0..7, B' = 8..15, back arcs b_x -> a_x, other cross arcs A -> B'): True
+B8 scores (out-degrees): [3, 4, 3, 4, 4, 3, 3, 4]
+B8 twin distance: 2
+d87_list.txt: 400 tournaments; structure violations (A near-regular, B' = QR_7, 7 back arcs b_y -> a_f(y), f injective covering the 4 in-degree-3 vertices of A): 0

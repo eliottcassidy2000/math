@@ -1,0 +1,43 @@
+== per order: classes / even
+  n=1: 1 / 1
+  n=2: 1 / 0
+  n=3: 2 / 1
+  n=4: 6 / 2
+  n=5: 21 / 8
+  n=6: 112 / 43
+  n=7: 853 / 398
+  n=8: 11117 / 6413
+  n=9: 261080 / 184596
+  n=10: 199053 / 159079
+  n=11: 1855 / 1434
+A000568 (own Burnside computation), n = 0..10: [1, 1, 1, 2, 4, 12, 56, 456, 6880, 191536, 9733056]
+connected-even counts n = 1..9: [1, 0, 1, 2, 8, 43, 398, 6413, 184596]
+Euler transform of connected-even counts: [1, 1, 2, 4, 12, 56, 456, 6880, 191536]
+matches A000568 for n = 1..9: True
+inverse Euler transform of A000568 (A334335): [1, 0, 1, 2, 8, 43, 398, 6413, 184596, 9540998]
+Euler transform of all connected counts (A000088 check): [1, 2, 4, 11, 34, 156, 1044, 12346, 274668]
+== value sets below 512
+odd values NOT attained by any Royle-even graph: [3, 7, 13]
+odd values NOT attained by a CONNECTED Royle-even graph: [3, 7, 13, 25]
+odd values NOT attained by any Royle-odd graph: [1, 5, 37]
+odd values NOT attained by a CONNECTED Royle-odd graph: [1, 5, 37]
+all graphs: odd values not attained by connected graphs or products: []
+== connected realisers of selected values (n m parity |Aut| edges)
+  d=3: [(2, 1, 'O', 0, '01')]
+  d=5: [(3, 2, 'E', 2, '0102')]
+  d=7: [(3, 3, 'O', 0, '010212')]
+  d=13: [(4, 5, 'O', 0, '0102031323')]
+  d=21: [(5, 6, 'E', 2, '010203041424'), (5, 5, 'O', 0, '0102041324'), (5, 6, 'O', 0, '010204131424'), (5, 5, 'O', 0, '0102132434')]
+  d=25: [(5, 7, 'O', 0, '01020304142434'), (5, 7, 'O', 0, '01020413142434'), (5, 6, 'O', 0, '010203041324'), (5, 7, 'O', 0, '01020313142434'), (6, 5, 'O', 0, '0102031415')]
+  d=37: [(6, 7, 'E', 4, '01020304051525'), (6, 7, 'E', 4, '01020314152535'), (6, 7, 'E', 1, '01020305142545'), (6, 7, 'E', 2, '01020413142545')]
+== I(G,2) on connected even graphs with n <= 7 and I <= 31: {3: 1, 11: 1, 17: 1, 19: 1, 25: 1, 27: 2, 29: 2}
+  I=3: [(1, 0, '')]
+  I=11: [(3, 2, '0102')]
+  I=17: [(4, 4, '01021323')]
+  I=19: [(5, 8, '0102041314232434')]
+  I=25: [(6, 12, '010204051314152324253435')]
+  I=27: [(5, 6, '010204132434'), (7, 18, '010204050613141516232425263435364656')]
+  I=29: [(4, 3, '010203'), (6, 11, '0102040513152425343545')]
+I(G,2) values on even graphs below 32 (products of connected-even values, 1 = null graph): [1, 3, 9, 11, 17, 19, 25, 27, 29]
+odd values below 32 missed: [5, 7, 13, 15, 21, 23, 31]
+== session summary table: 256 rows compared, 0 mismatches; audit has 256 d-values

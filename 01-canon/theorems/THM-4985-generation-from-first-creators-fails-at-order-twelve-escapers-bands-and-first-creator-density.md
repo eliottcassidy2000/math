@@ -19,6 +19,12 @@ status: >
   - (6) FINITE-EXACT shares from klein's census. The density statement is PROVED conditional on (M_eps): max H(m) <=
     (1 - eps)((m + 1)/2) m!/2^(m - 1) for large m. (M_eps) is OPEN; Alon's 1990 upper bound carries m^(3/2).
   KNOWN and credited:
+  - ADDED 2026-11-09 after audit P1 of mac-mini-2026-11-09-paleyeven (MISTAKE-746): the "decomposability defect" dec
+    (= the module defect for n >= 3) is the classical SIMPLICITY INDEX s(T). See J. Müller, J. Pelant, Czechoslovak
+    Math. J. 24 (1974) 378-391 (s(T) <= (n - 1)/2, with equality iff T is doubly regular) and H. Boussaïri,
+    A. Lakhlifi, M. Talbaoui, Contrib. Discrete Math. 17 (2022) 172-186, arXiv:1907.11777 (s(T) <=
+    min(delta0, twin distance)). The statements about escapers are unaffected. THM-4995 continues this lane
+    (escapers of simplicity index 4 at order 16 and 5 at order 18; unbounded index under (S_c));
   - THM-4942 / HYP-9532 (kind-pasteur S17): the grammar, the seven order-11 parents, the connectivity floors;
   - THM-4922 (S16): first creators;
   - klein-2026-11-06: the exact spectra;

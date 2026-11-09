@@ -1,5 +1,5 @@
 # dom_even 511 16: every connected graph with at most 511 dominating sets (exhaustive; d strictly increases
-# under adding a joined vertex). Columns: d  #connected-classes  #Royle-even  smallest realiser (even if any):
+# under adding a joined vertex). Columns: d  #connected-classes  #even (von Bromssen; RPGFD)  smallest realiser (even if any):
 # n m parity edges(hex vertex pairs). Class counts per order are in dom_K511.err.
 1 1 1 1 0 E 
 3 1 0 2 1 O 01

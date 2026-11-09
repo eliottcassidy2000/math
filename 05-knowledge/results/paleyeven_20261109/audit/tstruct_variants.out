@@ -1,0 +1,7 @@
+T7_2reg_d1 n=14 md=2 twin=2 lambda=5 delta0=5 n_md_sets=7 sizes: 2x7 pairs: {6,7} {0,8} {1,9} {2,10} {3,11} {4,12} {5,13}
+T7_2reg_d3 n=14 md=2 twin=2 lambda=5 delta0=5 n_md_sets=7 sizes: 2x7 pairs: {6,7} {0,8} {1,9} {2,10} {3,11} {4,12} {5,13}
+T7_fano n=14 md=0 twin=0 lambda=6 delta0=6 n_md_sets=7 sizes: 2x7 pairs: {6,7} {0,8} {1,9} {2,10} {3,11} {4,12} {5,13}
+chain_QR7_r3 n=21 md=4 twin=5 lambda=4 delta0=4 n_md_sets=14 sizes: 20x14
+chain_R5_r3_D02 n=15 md=4 twin=4 lambda=4 delta0=4 n_md_sets=20 sizes: 2x10 14x10
+D_C9_1234 n=18 md=3 twin=3 lambda=5 delta0=5 n_md_sets=18 sizes: 2x18
+T7_check_as_chain n=14 md=4 twin=4 lambda=4 delta0=4 n_md_sets=35 sizes: 2x21 13x14 pairs: {3,7} {5,7} {6,7} {0,8} {4,8} {6,8} {0,9} {1,9} {5,9} {1,10} {2,10} {6,10} {0,11} {2,11} {3,11} {1,12} {3,12} {4,12} {2,13} {4,13} {5,13}

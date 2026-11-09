@@ -1,0 +1,18 @@
+wit_d8_H_m15_wit0_claimed_144227835: n=15 claimed=144227835 subsetDP=144227835 inclusion-exclusion=144227835 OK
+wit_d8_del_m14_part1_wit0_claimed_16750389: n=14 claimed=16750389 subsetDP=16750389 inclusion-exclusion=16750389 OK
+wit_d8_del_m14_part2_wit0_claimed_19218519: n=14 claimed=19218519 subsetDP=19218519 inclusion-exclusion=19218519 OK
+wit_d8_del_m14_part2_wit1_claimed_17527823: n=14 claimed=17527823 subsetDP=17527823 inclusion-exclusion=17527823 OK
+wit_d8_del_m14_part2_wit2_claimed_18351387: n=14 claimed=18351387 subsetDP=18351387 inclusion-exclusion=18351387 OK
+wit_d8_del_m14_part2_wit3_claimed_19720143: n=14 claimed=19720143 subsetDP=19720143 inclusion-exclusion=19720143 OK
+wit_d8_del_m14_part2_wit4_claimed_18908079: n=14 claimed=18908079 subsetDP=18908079 inclusion-exclusion=18908079 OK
+wit_d8_del_m14_part2_wit5_claimed_20574141: n=14 claimed=20574141 subsetDP=20574141 inclusion-exclusion=20574141 OK
+wit_d8_del_m14_part3_wit0_claimed_17527823: n=14 claimed=17527823 subsetDP=17527823 inclusion-exclusion=17527823 OK
+wit_d8_del_m14_part3_wit1_claimed_19218519: n=14 claimed=19218519 subsetDP=19218519 inclusion-exclusion=19218519 OK
+wit_d8_del_m14_part3_wit2_claimed_18908079: n=14 claimed=18908079 subsetDP=18908079 inclusion-exclusion=18908079 OK
+wit_d8_del_m14_part3_wit3_claimed_18351387: n=14 claimed=18351387 subsetDP=18351387 inclusion-exclusion=18351387 OK
+wit_d8_del_m14_part3_wit4_claimed_20574141: n=14 claimed=20574141 subsetDP=20574141 inclusion-exclusion=20574141 OK
+wit_d8_del_m14_part3_wit5_claimed_19720143: n=14 claimed=19720143 subsetDP=19720143 inclusion-exclusion=19720143 OK
+wit_d8_del_m14_part3_wit6_claimed_21469761: n=14 claimed=21469761 subsetDP=21469761 inclusion-exclusion=21469761 OK
+all recounts agree with the claimed values: True
+order-14 witnesses cover all 8 deletion values: True ; missing: []
+order-15 witness values: [144227835] ; covers H(D8_144) = 144227835: True

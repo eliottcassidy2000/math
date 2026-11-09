@@ -1,0 +1,9 @@
+# QR7: tournament=True doubly_regular=True SST=qI-J:True
+# QR11: tournament=True doubly_regular=True SST=qI-J:True
+# QR19: tournament=True doubly_regular=True SST=qI-J:True
+# QR23: tournament=True doubly_regular=True SST=qI-J:True
+# C9_1235 doubly regular: False
+# T7: translation aut=True, multiplier 2 aut=True, a_x->b_-x anti-aut=True
+# T11: translation aut=True, multiplier 3 aut=True, a_x->b_-x anti-aut=True
+# D(C9_1235): translation aut=True; affine anti-automorphism of C9_1235: (8, 0)
+#   induced a_x -> b_phi(x) is an anti-automorphism of D: True

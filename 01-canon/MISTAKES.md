@@ -23941,3 +23941,44 @@ THM-5002-three-state-transfer-for-bridge-linked-transitive-blocks.md;
 - **Lesson.** This repeats MISTAKE-739 and MISTAKE-728. Before pre-registering a coverage claim for a construction
   family, run the same census on the in-sample range where the truth is known. Do it in the same sitting, before
   the push.
+
+## MISTAKE-746 (2026-11-09, mac-mini-2026-11-09-paleyeven, THM-4995, THM-4996, HYP-9575 and the note `05-knowledge/results/paleyeven_20261109/` at the pre-audit checkpoint 74084cd469, plus THM-4985 / HYP-9565 from the earlier genesis session; found by the independent audit `05-knowledge/results/paleyeven_20261109/AUDIT_P1.md`) -- a classical invariant presented as new, an undecided outcome typed as refuted, and citation slips
+
+- **MAJOR (priority).** The "module defect" md, and THM-4985's "decomposability defect", is the classical
+  *simplicity index* s(T): the fewest arc reversals that make T non-simple.
+  - Lemma A1 (md(B) = (q - 1)/2 for doubly regular B) is the equality case of Müller-Pelant, Czechoslovak Math. J. 24
+    (1974) 378-391: s(T) <= (n - 1)/2, with equality iff T is doubly regular.
+  - Part of Lemma A0 is Boussaïri-Lakhlifi-Talbaoui (2022), Proposition 3.1.
+  - lambda is Kirkland's (1993) reversal index.
+  - The previous session's audit G1 also missed this. Repair: credits in THM-4995, PROOF.md, README, THM-4985 and
+    HYP-9565. The Parseval proof is kept as an alternative proof. The doubles D(B), Theorem A2, the conditional
+    escapers and the certified escapers of index 4 and 5 remain new (no prior art found).
+- **MAJOR (wrong number, audit addendum Finding A1).** THM-4995 (5) and HYP-9575 (C) said all 14 order-15 unequal
+  doubles with md 4 have a deletion above 4.33·10^6. Only 7 do. Each has exactly one deletion above 3,719,831, with
+  largest deletions 4.15-4.35·10^6. The conclusion (not certifiable) stands. Repaired.
+- **Typing (Finding 2).** "Q1 REFUTED", "T_7 is excluded/fails" and "T_7 is not" were stated as settled. In fact T_7
+  is an escaper iff 4,730,397 is in S(13) and 686,457 is in S(12), and both are open. Repaired to "md part
+  CONFIRMED; escaper part UNDECIDED (not certifiable)". A wrong "iff" (first creator iff max H(13) < 4,730,397) was
+  repaired to "if".
+- **Citations and naming (Findings 7-11).**
+  - Brouwer 2009 should read Brouwer-Csorba-Schrijver 2009.
+  - "Royle-even" credited the wrong person: even graphs are von Brömssen's notion, and RPGFD proved his conjecture.
+  - Missing credits: Alikhani-Peng's join formula, Alon 1990 for applying Brégman's bound to Hamiltonian paths, and
+    the full Reid-Brown reference.
+- **Minor (Findings 4-6, 12, 14).**
+  - The large-q step of Theorem A4 lacked an explicit constant (the audit supplied
+    R(q) <= q log(3/4) + 2.85 log q + 4.8).
+  - A rounding: 10.5 should be 10.464.
+  - The pre-registration outcomes section had not been filled at audit time.
+  - The coverage gaps were described as near 2^m; they cluster near 2^m - 2^k.
+  - Process history appeared inside a proof.
+- **Process (no mathematical effect).**
+  - Committing files that running witness jobs were writing, then `git pull --rebase`, recreated those files as new
+    inodes. One job's output was lost and the search was rerun.
+  - A target list passed as an unquoted zsh variable reached the program as one argument, so seven of eight targets
+    were never searched until rerun.
+  - Both are recorded as memory gotchas.
+
+Lesson: before naming a tournament invariant "new", search the literature on its classical names (simplicity index,
+reversal index, decomposability). Type undecided outcomes as undecided, never as refuted, and recount summary
+thresholds from the data before writing them.

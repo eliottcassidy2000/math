@@ -1,0 +1,17 @@
+D87_3: H=22207977 max deletion=4156793 min deletion=2818529 deletions > 3719831: 1/15
+D87_92: H=22203729 max deletion=4155717 min deletion=2815439 deletions > 3719831: 1/15
+D87_102: H=22007179 max deletion=4330907 min deletion=2709519 deletions > 3719831: 1/15
+D87_106: H=22222279 max deletion=4162379 min deletion=2846455 deletions > 3719831: 1/15
+D87_109: H=22044399 max deletion=4345085 min deletion=2808805 deletions > 3719831: 1/15
+D87_122: H=22210691 max deletion=4152889 min deletion=2827263 deletions > 3719831: 1/15
+D87_146: H=22026229 max deletion=4335655 min deletion=2788823 deletions > 3719831: 1/15
+D87_200: H=22022811 max deletion=4340665 min deletion=2802705 deletions > 3719831: 1/15
+D87_207: H=22030071 max deletion=4335905 min deletion=2717705 deletions > 3719831: 1/15
+D87_270: H=22197593 max deletion=4155679 min deletion=2841941 deletions > 3719831: 1/15
+D87_305: H=22197715 max deletion=4157259 min deletion=2825157 deletions > 3719831: 1/15
+D87_371: H=22229085 max deletion=4158769 min deletion=2819167 deletions > 3719831: 1/15
+D87_374: H=22012211 max deletion=4340073 min deletion=2792913 deletions > 3719831: 1/15
+D87_395: H=22010433 max deletion=4340777 min deletion=2714217 deletions > 3719831: 1/15
+count with md = 4: 14
+every md-4 unequal double has a deletion > 4.33e6: False
+smallest max-deletion: 4152889 ; smallest min-deletion: 2709519

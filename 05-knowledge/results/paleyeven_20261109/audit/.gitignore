@@ -1,0 +1,7 @@
+# compiled audit binaries (regenerate with cc -O2)
+tstruct
+ham_ie
+ham_dp
+drt7
+dom_census
+__pycache__/

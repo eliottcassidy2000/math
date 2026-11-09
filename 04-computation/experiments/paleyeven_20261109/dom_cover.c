@@ -1,7 +1,7 @@
-/* dom_cover.c - constructive coverage of odd numbers by dominating-set counts of Royle-even graphs
+/* dom_cover.c - constructive coverage of odd numbers by dominating-set counts of even (von Bromssen; RPGFD) graphs
  * (paleyeven lane, mac-mini-2026-11-09).
  *
- * Base: all connected Royle-even graphs from an exhaustive dom_even run (lines "n m d E|O ..."), giving (value, size).
+ * Base: all connected even (von Bromssen; RPGFD) graphs from an exhaustive dom_even run (lines "n m d E|O ..."), giving (value, size).
  * Operations with proved evenness (PROOF.md, Part B, Lemmas B2-B4); every operation strictly increases the value, so
  * values are finalised in increasing order (least realisation size is exact for this generating system):
  *   (U) G u H                         d = d(G) d(H)                          size g + h

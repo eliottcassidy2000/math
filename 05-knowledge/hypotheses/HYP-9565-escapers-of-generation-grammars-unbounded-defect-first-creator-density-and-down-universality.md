@@ -1,7 +1,7 @@
 ---
 id: HYP-9565
 title: "Escapers of generation grammars and the density of first creators: (A) the decomposability defect of escapers (non-creators with no first-creator deletion, prime and 3-arc-strong) is unbounded; (B) the share of first creators among the n-tournaments tends to 1; (C) k*(12) = 3, so no 4-arc-strong 12-tournament is a non-creator; (D) every tournament is an induced subtournament of a first creator"
-status: "OPEN. Audit G1 PASS WITH CORRECTIONS (applied; MISTAKE-743). (A): at least 3 at order 12 (THM-4985 (2)); the bands have defect 1, so they say nothing here. (B): 0.719, 0.793, 0.8545, 0.8884, 0.9200 at orders 7-11 (THM-4985 (6)); PROVED conditional on (M_eps). (C): evidence in section (C): f_4(12) <= 229,725 from the explicit C3[R5, R5, TT_2] (lambda = 4), more than twice max H(11) = 95,095; annealing found only 232,001. (D): PROVED conditional on (M_eps) (THM-4985 (6)). Pre-registered Q1-Q3 (commit fb31d2c38a): all three REFUTED as predictions (see the last section)."
+status: "OPEN. Audit G1 PASS WITH CORRECTIONS (applied; MISTAKE-743). (A): dec = simplicity index (Müller-Pelant 1974; credited 2026-11-09, MISTAKE-746); certified escapers of index 4 (order 16) and 5 (order 18), and PROVED conditional on (S_c) for unbounded index (THM-4995); at least 3 at order 12 (THM-4985 (2)); the bands have defect 1, so they say nothing here. (B): 0.719, 0.793, 0.8545, 0.8884, 0.9200 at orders 7-11 (THM-4985 (6)); PROVED conditional on (M_eps). (C): evidence in section (C): f_4(12) <= 229,725 from the explicit C3[R5, R5, TT_2] (lambda = 4), more than twice max H(11) = 95,095; annealing found only 232,001. (D): PROVED conditional on (M_eps) (THM-4985 (6)). Pre-registered Q1-Q3 (commit fb31d2c38a): all three REFUTED as predictions (see the last section)."
 session: mac-mini-2026-11-09-genesis
 date: 2026-11-09
 related: [THM-4985, THM-4986, HYP-9532, THM-4942, HYP-9481, THM-4922]
@@ -26,6 +26,16 @@ is the fewest arc reversals to a non-strong or non-prime tournament.
 
 Conjecture: for every d there are escapers with dec >= d. Then no grammar built from first creators by a bounded number
 of reversals of decomposable tournaments works at all orders.
+
+**Update 2026-11-09 (mac-mini-2026-11-09-paleyeven, THM-4995; audit P1, MISTAKE-746).**
+- **Priority.** dec is the classical simplicity index s(T) (Müller-Pelant 1974; Boussaïri-Lakhlifi-Talbaoui 2022),
+  which was not credited here before.
+- **Unconditional records.** Certified escapers of simplicity index 4 (order 16, a double of a near-regular
+  8-tournament) and 5 (order 18, the double of C_9{1,2,3,5}).
+- **Conditional.** Doubles D(B) of doubly regular B have dec = lambda = (q + 1)/2 (PROVED). Under (S_c) they are
+  escapers for all large q (q >= 55 when c = 1), so (A) holds conditionally.
+- **The heuristic below was too optimistic at small orders.** The matched back arcs multiply H(A)H(B) by 132 (q = 7)
+  and 1954 (q = 11).
 
 The bounded-defect question is Session230's (primes/REPORT.md §5: "whether all prime noncreators admit a bounded-cut or
 bounded-defect derivation from creator parents at arbitrary order"; SYNTHESIS §6). (A) makes it precise: escapers are

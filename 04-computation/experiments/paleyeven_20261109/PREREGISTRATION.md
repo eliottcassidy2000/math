@@ -38,18 +38,24 @@ afterwards; outcomes are appended at the end.
 
 (Appended after the runs, 2026-11-09. The predictions above are unedited.)
 
-- **Q1 REFUTED** (predicted YES, 0.70). md(T_7) = lambda(T_7) = minimum semidegree = 4 holds (`paley_mdefect.out`).
-  T_7 is not a certifiable escaper: H(T_7) = 4,730,397 exceeds 3,719,831, the best known order-13 count (THM-329),
-  and its deletions (686,457) exceed 531,205, the best known order-12 count (`p7_tprop.out`).
+- **Q1: md part CONFIRMED; escaper part UNDECIDED** (predicted YES, 0.70). Corrected after audit P1 (Finding 2):
+  this first read "Q1 REFUTED", which overstated the outcome.
+  - md(T_7) = lambda(T_7) = minimum semidegree = 4 holds (`paley_mdefect.out`).
+  - T_7 is not a certifiable escaper: H(T_7) = 4,730,397 exceeds 3,719,831, the best known order-13 count (THM-329),
+    and its deletions (686,457) exceed 531,205, the best known order-12 count (`p7_tprop.out`).
+  - It is an escaper iff 4,730,397 is in S(13) and 686,457 is in S(12). It is not one if a(12) = 531,205 or if
+    max H(13) < 4,730,397.
 - **Q2 CONFIRMED** for md(T_11) = lambda(T_11) = 6 (probability 0.80).
   - The separate prediction (certification of T_11 as an escaper within the session, 0.35) was NOT achieved.
   - Its values are 0.363 E[H(21)] and 0.393 E[H(20)], beyond witness search.
   - It is an escaper only conditionally (THM-4995 (3)).
 - **Q3 CONFIRMED and PROVED** (0.75 / 0.60): md(D(B)) = (q + 1)/2 for every doubly regular B of order q >= 7
-  (PROOF.md, Theorem A2). This covers every Paley prime p >= 7.
+  (PROOF.md, Theorem A2). This covers every Paley prime p >= 7. The input lemma md(B) = (q - 1)/2 is the equality
+  case of Müller-Pelant (1974), where md is the simplicity index (audit P1, Finding 1).
 - **Q4 REFUTED** (predicted YES, 0.30). The exceptional set is {3, 7, 13}, exact below 512 (`dom_K511_summary.txt`).
   - "21 is unattained" (0.60) is REFUTED: 21 = d(K_1 v (P_3 u K_1)), which is even.
   - "Some other odd value <= 255 is unattained" (0.55) is CONFIRMED: 13, realised only by K_4 - e, which is odd.
 - **Not pre-registered, found along the way:**
   - the order-18 double of C_9{1,2,3,5}, a certified escaper of defect 5 (`wit_d9_del_m16.out`, `wit_d9_H_m17.out`);
+  - the order-16 double of a near-regular 8-tournament, a certified escaper of defect 4 (`wit_d8_*`);
   - the odd-graph exceptional set {1, 5, 37} below 512.
