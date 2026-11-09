@@ -29,3 +29,21 @@ The range is alpha-sums 80 < m <= 100,000.
   - This would be evidence for HYP-9530 (B), not a proof.
 
 Outcome: to be appended below without editing the predictions.
+
+## Outcome (appended after the run; the predictions above are unedited)
+
+`coverage_products.py` writes `coverage_products.out`, in about 5 s. Within m <= 80 the product closure reproduces
+the exact gap tables in every base 2-8, which checks the pipeline.
+
+- **P7 (binary control) REFUTED.** 18,038 alpha-sums in (80, 100000] are uncovered, starting with m = 179 (H = 359).
+  Every one of them is an H-value (all-odd coverage to 2^32, THM-4875 (D)). So the construction universe, not the
+  spectrum, is the limit.
+- **P6 REFUTED.** 24,059 uncovered alpha-sums in base 3, starting with m = 340. No gap is implied.
+- **P8 REFUTED.** In bases 4-8 there are 5,182 to 6,561 uncovered alpha-sums in (80, 20000]. No gap is implied.
+- **Why.** Mid-range values need single strong pieces that have disjoint cycles and more than 80 odd cycles. Neither
+  the alpha_1 <= 80 inventory nor the intercyclic families supply them, and products of small pieces grow too fast.
+- **The analogue that should have been run first.** Pieces with alpha_1 <= 20 (plus the intercyclic families) leave
+  14 alpha-sums in (20, 80] uncovered, in both bases 2 and 3. Pieces with alpha_1 <= 40 leave one (m = 80). That
+  would have predicted the failure. The prediction's basis ("the number of products grows quickly") was not checked
+  against it. This is recorded with the session's MISTAKE entry.
+- **Status of the ternary law.** HYP-9530 (A) rests on the exact tables to alpha-sum 80 (P1) and nothing more.
