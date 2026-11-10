@@ -88,7 +88,7 @@ example has H27 while three times its collapsed count is15. The exact
 omitted term is6A(B+1), or its swapped version. The missing information
 is the exterior return route, not just which direction the new vertex
 faces the module. [Audit and correction](history/ATTACHMENT_AUDIT.md),
-[MISTAKE-756](../../../01-canon/MISTAKES.md#mistake-756-2026-11-10-codex-decomposition16-odd-spectrum-unpublished-attachment-compiler-draft----uniform-module-contact-was-mistaken-for-one-contiguous-visit).
+[MISTAKE-756](../../../01-canon/MISTAKES.md).
 
 ## Retaining several named ports
 
