@@ -15,3 +15,9 @@ Sources actually inspected:
 Local searches tried the literal hyphen form, comma/space/plus variants and wider punctuation variants across existing canon, reflections and selected results. The only literal tuple hit in an older numerical output was an unrelated modular cycle representative in `orbit_cycle_extraction.out`; it is not used. Full-tree `git grep HEAD` requests were cancelled because sparse-clone lazy fetching was too broad and slow; this is not an exhaustive absence claim. No sparse configuration or git state was changed by this lane.
 
 Next decisive source: the earlier user conversation in which the decomposition was introduced, or a named result file from that conversation. This search report deliberately prevents silently replacing the intended object with the Clebsch graph.
+
+Subsequent constructive step: [DIGRAPH_CANDIDATE_SIXTEEN.md](DIGRAPH_CANDIDATE_SIXTEEN.md)
+gives the natural empty/sparse/half-full/dense/full grouping of the fine
+digraph grades, with complement as its exact symmetry. This supplies a
+mathematical candidate, not the missing historical identification. A
+separate conversation search likewise did not recover the earlier source.

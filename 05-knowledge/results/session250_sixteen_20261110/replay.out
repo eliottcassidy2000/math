@@ -1,0 +1,793 @@
+
+REPLAY geometry/check_switching.py
+{
+  "2": {
+    "tournaments": 2,
+    "fourier_degrees": [
+      0
+    ],
+    "operator_annihilator_residual": 0
+  },
+  "3": {
+    "tournaments": 8,
+    "fourier_degrees": [
+      0,
+      2
+    ],
+    "operator_annihilator_residual": 0
+  },
+  "4": {
+    "tournaments": 64,
+    "fourier_degrees": [
+      0,
+      2
+    ],
+    "operator_annihilator_residual": 0
+  },
+  "5": {
+    "tournaments": 1024,
+    "fourier_degrees": [
+      0,
+      2
+    ],
+    "operator_annihilator_residual": 0
+  },
+  "6": {
+    "tournaments": 14,
+    "fourier_degrees": [
+      0,
+      2,
+      4
+    ],
+    "operator_annihilator_residual": 0
+  },
+  "7": {
+    "tournaments": 14,
+    "fourier_degrees": [
+      0,
+      2,
+      4
+    ],
+    "operator_annihilator_residual": 0
+  }
+}
+regular5 ([0, 2], {1: 5, 9: 5, 11: 5, 15: 1})
+
+REPLAY geometry/digraph_candidate.py
+{
+  "arc_grades": {
+    "0": 1,
+    "1": 1,
+    "2": 4,
+    "3": 4,
+    "4": 4,
+    "5": 1,
+    "6": 1
+  },
+  "fixed": {
+    "transpose": 10,
+    "complement": 4,
+    "complement_transpose": 2
+  },
+  "klein_orbits": 8,
+  "rows": [
+    {
+      "mask": 0,
+      "arcs": 0,
+      "H": 0,
+      "transpose": 0,
+      "complement": 63,
+      "complement_transpose": 63,
+      "aut": 6
+    },
+    {
+      "mask": 1,
+      "arcs": 1,
+      "H": 0,
+      "transpose": 1,
+      "complement": 31,
+      "complement_transpose": 31,
+      "aut": 1
+    },
+    {
+      "mask": 3,
+      "arcs": 2,
+      "H": 0,
+      "transpose": 10,
+      "complement": 15,
+      "complement_transpose": 30,
+      "aut": 2
+    },
+    {
+      "mask": 5,
+      "arcs": 2,
+      "H": 0,
+      "transpose": 5,
+      "complement": 23,
+      "complement_transpose": 23,
+      "aut": 2
+    },
+    {
+      "mask": 6,
+      "arcs": 2,
+      "H": 1,
+      "transpose": 6,
+      "complement": 27,
+      "complement_transpose": 27,
+      "aut": 1
+    },
+    {
+      "mask": 7,
+      "arcs": 3,
+      "H": 1,
+      "transpose": 21,
+      "complement": 7,
+      "complement_transpose": 21,
+      "aut": 1
+    },
+    {
+      "mask": 10,
+      "arcs": 2,
+      "H": 0,
+      "transpose": 3,
+      "complement": 30,
+      "complement_transpose": 15,
+      "aut": 2
+    },
+    {
+      "mask": 11,
+      "arcs": 3,
+      "H": 1,
+      "transpose": 11,
+      "complement": 11,
+      "complement_transpose": 11,
+      "aut": 1
+    },
+    {
+      "mask": 15,
+      "arcs": 4,
+      "H": 2,
+      "transpose": 30,
+      "complement": 3,
+      "complement_transpose": 10,
+      "aut": 2
+    },
+    {
+      "mask": 21,
+      "arcs": 3,
+      "H": 1,
+      "transpose": 7,
+      "complement": 21,
+      "complement_transpose": 7,
+      "aut": 1
+    },
+    {
+      "mask": 23,
+      "arcs": 4,
+      "H": 2,
+      "transpose": 23,
+      "complement": 5,
+      "complement_transpose": 5,
+      "aut": 2
+    },
+    {
+      "mask": 25,
+      "arcs": 3,
+      "H": 3,
+      "transpose": 25,
+      "complement": 25,
+      "complement_transpose": 25,
+      "aut": 3
+    },
+    {
+      "mask": 27,
+      "arcs": 4,
+      "H": 3,
+      "transpose": 27,
+      "complement": 6,
+      "complement_transpose": 6,
+      "aut": 1
+    },
+    {
+      "mask": 30,
+      "arcs": 4,
+      "H": 2,
+      "transpose": 15,
+      "complement": 10,
+      "complement_transpose": 3,
+      "aut": 2
+    },
+    {
+      "mask": 31,
+      "arcs": 5,
+      "H": 4,
+      "transpose": 31,
+      "complement": 1,
+      "complement_transpose": 1,
+      "aut": 1
+    },
+    {
+      "mask": 63,
+      "arcs": 6,
+      "H": 6,
+      "transpose": 63,
+      "complement": 0,
+      "complement_transpose": 0,
+      "aut": 6
+    }
+  ]
+}
+
+REPLAY orbits/check_affine.py
+{
+  "status": "FINITE-EXACT",
+  "checks": [
+    {
+      "n": 2,
+      "labelled_universe": 2,
+      "switching_isomorphism_classes": 1,
+      "A000568": 1,
+      "H_enumerator": {
+        "1": 1
+      },
+      "classes": [
+        {
+          "representative": 0,
+          "projection_order": 2,
+          "fixed_types": {
+            "odd_nonempty": 1,
+            "even_empty": 1
+          },
+          "H_enumerator": {
+            "1": 1
+          },
+          "unlabelled_walk_H_sums": [
+            1,
+            2,
+            4,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "labelled_universe": 8,
+      "switching_isomorphism_classes": 1,
+      "A000568": 2,
+      "H_enumerator": {
+        "1": 1,
+        "3": 1
+      },
+      "classes": [
+        {
+          "representative": 0,
+          "projection_order": 3,
+          "fixed_types": {
+            "odd_nonempty": 3
+          },
+          "H_enumerator": {
+            "1": 1,
+            "3": 1
+          },
+          "unlabelled_walk_H_sums": [
+            4,
+            8,
+            28,
+            80,
+            244
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "labelled_universe": 64,
+      "switching_isomorphism_classes": 2,
+      "A000568": 4,
+      "H_enumerator": {
+        "1": 1,
+        "3": 2,
+        "5": 1
+      },
+      "classes": [
+        {
+          "representative": 0,
+          "projection_order": 4,
+          "fixed_types": {
+            "odd_nonempty": 1,
+            "even_empty": 3
+          },
+          "H_enumerator": {
+            "1": 1,
+            "5": 1
+          },
+          "unlabelled_walk_H_sums": [
+            6,
+            24,
+            96,
+            384,
+            1536
+          ]
+        },
+        {
+          "representative": 2,
+          "projection_order": 12,
+          "fixed_types": {
+            "odd_nonempty": 9,
+            "even_empty": 3
+          },
+          "H_enumerator": {
+            "3": 2
+          },
+          "unlabelled_walk_H_sums": [
+            6,
+            24,
+            96,
+            384,
+            1536
+          ]
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "labelled_universe": 1024,
+      "switching_isomorphism_classes": 2,
+      "A000568": 12,
+      "H_enumerator": {
+        "1": 1,
+        "3": 3,
+        "5": 2,
+        "9": 2,
+        "11": 1,
+        "13": 1,
+        "15": 2
+      },
+      "classes": [
+        {
+          "representative": 0,
+          "projection_order": 5,
+          "fixed_types": {
+            "odd_nonempty": 5
+          },
+          "H_enumerator": {
+            "1": 1,
+            "9": 1,
+            "11": 1,
+            "15": 1
+          },
+          "unlabelled_walk_H_sums": [
+            36,
+            156,
+            756,
+            3756,
+            18756
+          ]
+        },
+        {
+          "representative": 2,
+          "projection_order": 3,
+          "fixed_types": {
+            "odd_nonempty": 3
+          },
+          "H_enumerator": {
+            "3": 3,
+            "5": 2,
+            "9": 1,
+            "13": 1,
+            "15": 1
+          },
+          "unlabelled_walk_H_sums": [
+            56,
+            296,
+            1496,
+            7496,
+            37496
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+REPLAY constructive/examples.py
+{
+  "status": "all assertions passed",
+  "random_join_examples": 80,
+  "seam_examples": 160,
+  "unit_seed_signature": [
+    3,
+    12,
+    2,
+    2,
+    6,
+    6,
+    2
+  ],
+  "inherited_unit_seed_ray": [
+    13,
+    25,
+    49
+  ],
+  "small_bank_signature_count": 57,
+  "prefix_2_suffix_3_padded_seed_signature": [
+    3,
+    384,
+    0,
+    0,
+    48,
+    24,
+    2
+  ],
+  "padding_core_and_padded_odd_slope": [
+    3,
+    3
+  ],
+  "positive_gap_seed_in_factors_orders_at_most_4": null,
+  "scope": "finite examples, not spectrum coverage or a canon audit"
+}
+
+REPLAY sequences/apex_words.py
+{
+  "status": "FINITE-EXACT",
+  "alphabet": "bit i = apex i points to spine vertex",
+  "state_dimension": 36,
+  "brute_checked_words": 341,
+  "first_13_word": [
+    1,
+    2,
+    0
+  ],
+  "selected_witnesses": {
+    "1": [],
+    "3": [
+      2
+    ],
+    "5": [
+      1,
+      2
+    ],
+    "9": [
+      1,
+      0,
+      2
+    ],
+    "11": [
+      1,
+      2,
+      2
+    ],
+    "13": [
+      1,
+      2,
+      0
+    ],
+    "15": [
+      2,
+      1,
+      0
+    ],
+    "17": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "19": [
+      1,
+      0,
+      2,
+      2
+    ],
+    "23": [
+      1,
+      0,
+      2,
+      0
+    ],
+    "25": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "27": [
+      1,
+      3,
+      1,
+      2
+    ],
+    "29": [
+      1,
+      2,
+      0,
+      2
+    ],
+    "31": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "33": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "35": [
+      1,
+      0,
+      3,
+      3,
+      0
+    ],
+    "37": [
+      1,
+      2,
+      2,
+      0
+    ],
+    "39": [
+      1,
+      0,
+      2,
+      2,
+      2
+    ],
+    "41": [
+      3,
+      2,
+      0,
+      0
+    ],
+    "43": [
+      3,
+      1,
+      2,
+      0
+    ],
+    "45": [
+      3,
+      3,
+      0,
+      0
+    ],
+    "47": [
+      1,
+      1,
+      1,
+      2,
+      2
+    ],
+    "49": [
+      1,
+      0,
+      2,
+      1,
+      2
+    ],
+    "51": [
+      1,
+      0,
+      2,
+      0,
+      2
+    ],
+    "53": [
+      1,
+      0,
+      2,
+      1,
+      0
+    ],
+    "55": [
+      1,
+      1,
+      2,
+      3,
+      0
+    ],
+    "57": [
+      1,
+      0,
+      3,
+      2,
+      0
+    ],
+    "59": [
+      1,
+      0,
+      2,
+      0,
+      0
+    ],
+    "65": [
+      1,
+      0,
+      2,
+      2,
+      0
+    ],
+    "67": [
+      1,
+      2,
+      3,
+      0,
+      1
+    ],
+    "69": [
+      1,
+      2,
+      0,
+      1,
+      2
+    ],
+    "71": [
+      1,
+      2,
+      0,
+      0,
+      2
+    ],
+    "73": [
+      1,
+      1,
+      2,
+      0,
+      0
+    ],
+    "75": [
+      1,
+      2,
+      2,
+      1,
+      2
+    ],
+    "77": [
+      1,
+      2,
+      0,
+      1,
+      0
+    ],
+    "79": [
+      1,
+      2,
+      1,
+      0,
+      2
+    ],
+    "81": [
+      1,
+      1,
+      2,
+      2,
+      0
+    ],
+    "83": [
+      1,
+      3,
+      2,
+      0,
+      2
+    ],
+    "85": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "89": [
+      1,
+      2,
+      3,
+      2,
+      0
+    ],
+    "91": [
+      1,
+      2,
+      0,
+      2,
+      0
+    ],
+    "93": [
+      1,
+      3,
+      0,
+      2,
+      0
+    ],
+    "95": [
+      1,
+      2,
+      1,
+      2,
+      0
+    ],
+    "97": [
+      1,
+      2,
+      2,
+      1,
+      0
+    ]
+  }
+}
+moment rows: [(0, 1, 1), (1, 6, 12), (2, 48, 192), (3, 432, 4040), (4, 4224, 101568), (5, 43776, 2883072)]
+
+REPLAY sequences/moment_recurrence.py
+{
+  "status": "EXACT-RECURRENCE-CERTIFICATE",
+  "reachable_tensor_states": 1144,
+  "recurrence_degree": 17,
+  "backward_coefficients": [
+    1,
+    -184,
+    15152,
+    -740864,
+    24048384,
+    -548542464,
+    9071808512,
+    -110545928192,
+    997675761664,
+    -6637276364800,
+    32043392040960,
+    -108863730745344,
+    246046865227776,
+    -331193518129152,
+    200385994162176,
+    0,
+    0,
+    0
+  ],
+  "residuals_checked": 1144,
+  "initial_terms": [
+    1,
+    12,
+    192,
+    4040,
+    101568,
+    2883072,
+    88922880,
+    2904278016,
+    98591686656,
+    3431533182976,
+    121289449472000,
+    4326115278323712,
+    155093495866982400,
+    5575434812803514368,
+    200705241627045658624,
+    7229412357026969812992,
+    260457080251221595389952
+  ],
+  "proof": "Residual is a matrix coefficient of powers of B; dim(B) zero residuals imply every later one by Cayley-Hamilton.",
+  "characteristic_factorization": "X^3*(X-36)*(X-24)^2*(X-16)^2*(X-12)^2*(X-8)^4*(X-4)^3",
+  "ogf_numerator_coefficients": [
+    1,
+    -172,
+    13136,
+    -590328,
+    17425408,
+    -356799104,
+    5210894080,
+    -54870207488,
+    414946324480,
+    -2204494708736,
+    7787416780800,
+    -15708443901952,
+    6361882558464,
+    47265343340544,
+    -105114224295936,
+    86973087744000,
+    -50096498540544
+  ],
+  "leading_36_coefficient": "841/25600",
+  "limiting_relative_variance": "441/400"
+}
+SYNTHESIS support-bound initial values: [0, 1, 4, -442, -19376, -656384]
+Persistent H=3 construction checked through spine length20
+ALL SIX ENGINES AND SYNTHESIS CONTROLS PASSED
