@@ -195,7 +195,7 @@ Both chains have nonnegative spectrum. Explicitly for any real f on size-n class
     <f,R_{n,k}f>_{pi_n}
       = sum_T pi_k(T) [sum_U B_{k:n}(T,U)f(U)]^2 >=0. (B14)
 
-Thus R is a positive semidefinite reversible contraction. The rank bound rank(R_{n,k})<=number of k-vertex isomorphism classes is immediate. B14 does not provide sharp eigenvalues or a mixing-time estimate; the bridge lane's independent spectral description, when available, adds information beyond this factorization.
+Thus R is a positive semidefinite reversible contraction. The rank bound rank(R_{n,k})<=number of k-vertex isomorphism classes is immediate. B14 does not provide sharp eigenvalues or a mixing-time estimate; the bridge lane's spectral description adds information beyond this factorization.
 
 ### Marking changes mass: the exact orbit correction
 
@@ -218,7 +218,7 @@ Setwise and pointwise marking are not interchangeable. If the retained ordered t
 
 ### Exact spectral bridge and graded commutation
 
-The sibling [bridge proof](../bridges/PROOF.md), using inherited signed-even-graph coordinates, strengthens B14: on unlabelled classes R_{n,k} has eigenvalues binom(k,v)/binom(n,v), with multiplicity t_v-t_{v-1}, where t_v is the number of v-vertex tournament classes and t_{-1}=0. Thus its rank is exactly t_k, not just at most t_k. These diagonalization statements belong to that lane; B8–B17 supply their reversible probabilistic interpretation.
+The [spectral proof](../bridges/PROOF.md), using inherited signed-even-graph coordinates, strengthens B14: on unlabelled classes R_{n,k} has eigenvalues binom(k,v)/binom(n,v), with multiplicity t_v-t_{v-1}, where t_v is the number of v-vertex tournament classes and t_{-1}=0. Thus its rank is exactly t_k, not just at most t_k. These diagonalization statements belong to that lane; B8–B17 supply their reversible probabilistic interpretation.
 
 A direct cross-lane identity also relates the adjacent up-down and down-up chains:
 
@@ -230,7 +230,7 @@ Proof: following the birth, uniform deletion removes the newborn with probabilit
 
 ### Regular children cannot fracture the parent's group
 
-**Proposition B7 (PROVED; observation supplied by parent lane).** If U is regular of degree m and T=U-x, then every automorphism of T extends fixing x. Consequently r=1, and the symmetry ratio is exactly o.
+**Proposition B7 (PROVED).** If U is regular of degree m and T=U-x, then every automorphism of T extends fixing x. Consequently r=1, and the symmetry ratio is exactly o.
 
 Indeed, for v in N_U^+(x) one has d_T^+(v)=m, while for v->x one has d_T^+(v)=m-1. Thus the deleted parent's own degree function recovers the newborn incidence. Every parent automorphism preserves it. More generally the same conclusion holds whenever the two sets of parent outdegrees attained on N_U^+(x) and its complement are disjoint. This sufficient condition need not be necessary.
 

@@ -240,7 +240,7 @@ small-support expectations need not imply isomorphism.
 
 ### Cross-lane interpretation: a down-up chain
 
-The concurrent [birth lane](../birth/PROOF.md) supplies the type-level
+The [birth analysis](../birth/PROOF.md) supplies the type-level
 birth probabilities B_j(T,U)=a(T,U)/2^j and uniform-vertex-deletion
 probabilities D_(j+1)(U,T)=d(U,T)/(j+1), together with their orbit-volume
 balance law. Successively delete uniformly to size k, then add fair new

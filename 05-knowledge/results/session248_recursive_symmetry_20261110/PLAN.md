@@ -1,6 +1,6 @@
 # Session248: recursive symmetry is a layered phenomenon
 
-**ACTIVE RESEARCH, 10 November 2026.** New propositions are proved in the
+**Historical starting plan; session COMPLETE, 10 November 2026.** New propositions are proved in the
 session notes; inherited mathematics is used with attribution, not re-audited.
 No canon promotion or global tournament-spectrum solution is presumed.
 
