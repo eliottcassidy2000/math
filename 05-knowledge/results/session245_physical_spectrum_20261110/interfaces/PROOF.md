@@ -84,9 +84,9 @@ The product interfaces are
 
 Their protected strong closures have counts15669451 and15654639, gap14812, deletion47515 (coprime to3), common endpoint47515 and common response15941835. Each graph has22 vertices. The verifier literally constructs these graphs and checks strongness, and recounts each constituent interface. The order22 total is proved by the exact composition law; no independent order22 full subset-DP recount is claimed.
 
-## 6. Parent's smaller cut-cell and composition consequence
+## 6. A smaller cut-cell and composition consequence
 
-The parent independently found the more useful fixed deletion core C=[18,8,3,5,14]. This worker's independent interface enumeration verifies
+A direct cut search found the fixed deletion core C=[18,8,3,5,14]. Independent interface enumeration verifies
 
     cut3: (13,104,32,41,6,5,6),
     cut6: (13,104,32,44,8,4,6).
@@ -101,15 +101,15 @@ The S discrepancy does not enter because every preceding product has E=0. There 
 
 ## Scope and receipt
 
-Run `python3 -I -B verify.py` and `python3 -O -I -B verify.py`; compare outputs. `--fail` must terminate nonzero. The verifier is self-contained. `probe.py` and `search_more.py` are exploratory provenance scripts importing the Session244 scratch recovery; they are not required to reproduce the theorem. The latter uses seed245, every labelled rooted source through order5, 2500 sampled labelled order6 codes and700 order7 codes, all roots. `SEARCH_MORE.json` is a search receipt, not a census past order5. `rank_hits.py` correctly omits multiplication by a fictitious empty separator when t=0; its rows are exploratory and outside the t>=1 theorem.
+Run `python3 -I -B verify.py` and `python3 -O -I -B verify.py`; compare outputs. `--fail` must terminate nonzero. The verifier is self-contained. Exploratory source searches motivated the explicit witnesses, but are not required to reproduce any proved statement. The positive certificates do not assert a census beyond their stated universes.
 
 An early exploratory t=0 ranking briefly used an invalid endpoint identity and produced an odd gap105. This was rejected by tournament count parity, repaired to the true gap54, and is not used by any theorem or final verification. The t>=1 witness and proof were unaffected.
 
 Remaining bridge: realize arbitrary target N in one of these anchored physical families, or embed a sufficiently wide interval of switch increments inside a controlled near-target baseline. Reversal cancellation and coprime deletion alone prove neither. Chan–Pak remains open.
 
-## 7. Parent's h37 cell removes the growing divisor at every length
+## 7. An h37 cell removes the growing divisor at every length
 
-The parent subsequently supplied a second physical core C37=[32,17,3,7,13,30], with cut17 and cut33. Independent recomputation by this worker gives respectively
+The cut search subsequently supplied a second physical core C37=[32,17,3,7,13,30], with cut17 and cut33. Independent recomputation gives respectively
 
     (37,352,96,102,12,12,10),
     (37,352,96,96,32,10,10).
@@ -122,7 +122,7 @@ For k=1 the sole coefficient is−2. For k=2 the last coefficient is124, not div
 
 This is a genuine all-length escape from a growing scalar divisor in a fixed physical affine cube. It does not show that the binary subset sums cover an interval. The first boundary contribution13*192 is essential in the modular calculation; discarding it gives an incorrect intermediate residue even though the conclusion happens to survive.
 
-The supplementary `verify_chain.py` independently checks both parent cells, exhausts all binary choices through k=8, verifies the exact affine formulas and gcd2, and checks both h13 seven-vertex closures by direct permutation enumeration independent of subset DP.
+The supplementary `verify_chain.py` independently checks both explicit cells, exhausts all binary choices through k=12, verifies the exact affine formulas and gcd2, and checks both h13 seven-vertex closures by direct permutation enumeration independent of subset DP.
 
 ## 8. Exact exponential spacing despite primitive coefficient gcd
 

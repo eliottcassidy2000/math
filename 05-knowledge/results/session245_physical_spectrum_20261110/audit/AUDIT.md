@@ -4,8 +4,9 @@
 No substantive mathematical correction is required in the frozen supplied texts.
 Audit covers interfaces/PROOF.md (including Section8), forest/PROOF.md,
 forest/RUN_BUDGET.md, descent/PROOF.md, and their proof-facing verifiers.
-SOURCE_SHA256.txt records the audited source files. Paths there describe the
-original audit workspace; publication may relocate the artifacts.
+SOURCE_SHA256.txt records the final proof-facing sources using paths relative
+to this packet. Publication normalized provenance wording and relative paths
+without changing mathematical claims or executable algorithms.
 
 ## Interface mechanisms
 
@@ -119,10 +120,9 @@ source was frozen and matches. This was source drift, not an optimization
 or mathematical failure.
 
 Audit-owned independent.py and independent.json provide the additional
-permutation and arbitrary-signature controls. Normal/optimized source
-receipts are interfaces{,_opt}.json, chains{,_opt}.json,
-forest{,_opt}.json, descent{,_opt}.json. These tests have explicit finite
-universes and are not claimed to establish the symbolic universal results.
+permutation and arbitrary-signature controls. Per-lane receipts and AGGREGATE.json retain the verified results; verify_all.py
+repeats both modes. These tests have explicit finite universes and are not
+claimed to establish the symbolic universal results.
 
 ## Final-source amendment: half-word norms and complete family inverse
 

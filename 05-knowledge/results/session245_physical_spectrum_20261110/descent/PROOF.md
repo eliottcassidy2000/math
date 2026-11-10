@@ -138,4 +138,4 @@ The receipt checks8191 binary words through length12 against (3), every palindro
 
 To get an explicit graph use, for example, `python3 verify.py --middle ZZOJOOZ --k 3`. It emits row masks, marked root, exact count and construction word. Read each row mask as the outgoing-neighbor set. No tool access to another repository file is needed.
 
-The auxiliary searches ray.cpp, template.py, offsets.py, and general_offsets.py are exploratory records, not required to trust the proof or replay the final verifier. No result has been committed or published from this lane; the parent integrates owned artifacts.
+The auxiliary searches ray.cpp, template.py, offsets.py, and general_offsets.py are exploratory records, not required to trust the proof or replay the final verifier. The proof-facing compiler and receipt are self-contained.

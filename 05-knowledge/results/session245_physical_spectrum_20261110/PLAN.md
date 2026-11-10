@@ -1,6 +1,6 @@
 # Session245: physical spectrum closure attempts
 
-**ACTIVE, 10 November 2026. Chan–Pak remains OPEN.**
+**INITIAL PLAN; session completed 10 November 2026. Chan–Pak remains OPEN.**
 
 Goal: construct a tournament with every positive odd Hamilton-path count
 other than7 and21. Continue Session244, preserving every actual root sidecar

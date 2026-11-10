@@ -1,6 +1,6 @@
 # Session245: physical spectrum closure attempts
 
-**AUDITED RESEARCH CHECKPOINT, 10 November 2026. Chan–Pak remains OPEN.**
+**SESSION COMPLETE, 10 November 2026. Independently audited. Chan–Pak remains OPEN.**
 
 The goal is every positive odd Hamilton-path count except7 and21. This session
 does not close that conjecture. It produces three exact physical tools and
@@ -65,3 +65,5 @@ From this packet directory:
 
 All computations are finite checks of implementations or finite subclasses.
 The universal statements are proved separately in the linked documents.
+
+Canonical statements: [THM-5117](../../../01-canon/theorems/THM-5117-physical-cut-switches-reversal-cancellation-and-primitive-sparse-cubes.md), [THM-5118](../../../01-canon/theorems/THM-5118-synchronized-source-blocks-and-palindromic-defect-inverse.md), [THM-5119](../../../01-canon/theorems/THM-5119-commuting-gap-projections-and-fixed-apex-run-budget.md). Session245 has ended.

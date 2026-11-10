@@ -4,6 +4,15 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-10: Session245 physical switches, empty interfaces and inherited fans
+
+- **Wrong identity boundary:** an exploratory reversal ranking treated an empty separator as a genuine seven-coordinate endpoint identity and produced an impossible odd difference 105. Exact recomposition gives 54; the proved cancellation theorem requires a nonempty separator. Never transport nonempty endpoint formulas through a fictitious empty graph.
+- **Dropped interface term:** the first mixed h13/h37 update is A2=64*704+13*192=47552, hence 7 modulo 37. Dropping the second term changes the residue. The corrected all-length gcd-2 proof keeps this boundary, and the exact minimum spacing is 50*37^(k-2), not 2. Primitive coefficient gcd does not imply binary subset-sum coverage.
+- **Provenance recovered before promotion:** synchronized ZZ/ZOZ middle words reproduce THM-4748's existing all-Mersenne Fibonacci fans; the two-star 2*3^a+2^(a+2)-1 formula is its crossing case. The fixed-apex transfer itself is inherited from Sessions215/216 via Session221. Only the new projection identity, exact defect compiler, and scoped physical switches are promoted.
+- **Receipt discipline:** a proof/verifier changed during audit; a normal/optimized mismatch was source drift rather than a mathematical failure. Final-source hashes and both replays were refreshed before the audited publication.
+
+[Audited Session245 proof and scope](../05-knowledge/results/session245_physical_spectrum_20261110/README.md).
+
 ## 2026-11-10: Session244 anchoring, lost root menus and search admissibility
 
 - **Failed implication:** a physical pair for every even difference, even with upper count at most 5N, does not place a prescribed odd target at either endpoint. The compact upper endpoints repeat lower endpoints at doubled input. The exact zero-J density bound and chronological caterpillar description were already proved in Session199; the initial rediscovery is explicitly credited rather than promoted as new.
