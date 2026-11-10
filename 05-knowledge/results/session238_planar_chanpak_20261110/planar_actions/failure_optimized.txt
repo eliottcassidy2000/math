@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/tmp/math-wt-chanpak-s238-planar/05-knowledge/results/session238_planar_chanpak_20261110/planar_actions/verify.py", line 150, in <module>
+    check(False,'injected failure: guard survives optimization')
+  File "/tmp/math-wt-chanpak-s238-planar/05-knowledge/results/session238_planar_chanpak_20261110/planar_actions/verify.py", line 14, in check
+    raise RuntimeError(label)
+RuntimeError: injected failure: guard survives optimization

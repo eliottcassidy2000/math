@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/math-wt-chanpak-s238-planar/05-knowledge/results/session238_planar_chanpak_20261110/planar_actions_audit/verify.py", line 89, in <module>
+    if '--inject-failure' in sys.argv:check(False,'intentional audit failure')
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/math-wt-chanpak-s238-planar/05-knowledge/results/session238_planar_chanpak_20261110/planar_actions_audit/verify.py", line 8, in check
+    if not ok: raise RuntimeError(msg)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: intentional audit failure

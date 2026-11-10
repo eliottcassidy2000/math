@@ -1,0 +1,183 @@
+{
+  "status": "PASS",
+  "cases": 17,
+  "even_hostile": "reversed pair detected",
+  "rows": [
+    {
+      "group": [
+        1
+      ],
+      "degree": 0,
+      "m": 1,
+      "edges": 0,
+      "N": 5,
+      "completion_exponent": 4,
+      "H": 9,
+      "lower_bound": 7
+    },
+    {
+      "group": [
+        3
+      ],
+      "degree": 0,
+      "m": 3,
+      "edges": 0,
+      "N": 15,
+      "completion_exponent": 29,
+      "H": 3646107,
+      "lower_bound": 131
+    },
+    {
+      "group": [
+        3
+      ],
+      "degree": 2,
+      "m": 3,
+      "edges": 3,
+      "N": 18,
+      "completion_exponent": 43
+    },
+    {
+      "group": [
+        5
+      ],
+      "degree": 0,
+      "m": 5,
+      "edges": 0,
+      "N": 25,
+      "completion_exponent": 54
+    },
+    {
+      "group": [
+        5
+      ],
+      "degree": 2,
+      "m": 5,
+      "edges": 5,
+      "N": 30,
+      "completion_exponent": 79
+    },
+    {
+      "group": [
+        5
+      ],
+      "degree": 2,
+      "m": 5,
+      "edges": 5,
+      "N": 30,
+      "completion_exponent": 79
+    },
+    {
+      "group": [
+        5
+      ],
+      "degree": 4,
+      "m": 5,
+      "edges": 10,
+      "N": 35,
+      "completion_exponent": 109
+    },
+    {
+      "group": [
+        7
+      ],
+      "degree": 0,
+      "m": 7,
+      "edges": 0,
+      "N": 35,
+      "completion_exponent": 79
+    },
+    {
+      "group": [
+        7
+      ],
+      "degree": 2,
+      "m": 7,
+      "edges": 7,
+      "N": 42,
+      "completion_exponent": 115
+    },
+    {
+      "group": [
+        7
+      ],
+      "degree": 2,
+      "m": 7,
+      "edges": 7,
+      "N": 42,
+      "completion_exponent": 115
+    },
+    {
+      "group": [
+        7
+      ],
+      "degree": 4,
+      "m": 7,
+      "edges": 14,
+      "N": 49,
+      "completion_exponent": 158
+    },
+    {
+      "group": [
+        7
+      ],
+      "degree": 2,
+      "m": 7,
+      "edges": 7,
+      "N": 42,
+      "completion_exponent": 115
+    },
+    {
+      "group": [
+        7
+      ],
+      "degree": 4,
+      "m": 7,
+      "edges": 14,
+      "N": 49,
+      "completion_exponent": 158
+    },
+    {
+      "group": [
+        7
+      ],
+      "degree": 4,
+      "m": 7,
+      "edges": 14,
+      "N": 49,
+      "completion_exponent": 158
+    },
+    {
+      "group": [
+        7
+      ],
+      "degree": 6,
+      "m": 7,
+      "edges": 21,
+      "N": 56,
+      "completion_exponent": 208
+    },
+    {
+      "group": [
+        3,
+        3
+      ],
+      "degree": 0,
+      "m": 9,
+      "edges": 0,
+      "N": 45,
+      "completion_exponent": 104
+    },
+    {
+      "group": [
+        3,
+        3
+      ],
+      "degree": 8,
+      "m": 9,
+      "edges": 36,
+      "N": 81,
+      "completion_exponent": 346
+    }
+  ]
+}

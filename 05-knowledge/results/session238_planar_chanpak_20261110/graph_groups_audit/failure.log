@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/tmp/math-wt-chanpak-s238-planar/05-knowledge/results/session238_planar_chanpak_20261110/graph_groups_audit/check.py", line 178, in <module>
+    main()
+  File "/tmp/math-wt-chanpak-s238-planar/05-knowledge/results/session238_planar_chanpak_20261110/graph_groups_audit/check.py", line 152, in main
+    rows.append(audit((q,),copies,edges))
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/math-wt-chanpak-s238-planar/05-knowledge/results/session238_planar_chanpak_20261110/graph_groups_audit/check.py", line 87, in audit
+    need(ps <= arcs,'prescribed directed cycle arc lost')
+  File "/tmp/math-wt-chanpak-s238-planar/05-knowledge/results/session238_planar_chanpak_20261110/graph_groups_audit/check.py", line 11, in need
+    raise RuntimeError(message)
+RuntimeError: prescribed directed cycle arc lost

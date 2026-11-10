@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/tmp/math-wt-chanpak-s238-planar/04-computation/experiments/session238_graph_groups/verify.py", line 89, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/tmp/math-wt-chanpak-s238-planar/04-computation/experiments/session238_graph_groups/verify.py", line 83, in main
+    rows.append(test((n,),ds, '--inject-failure' in sys.argv and n==3 and mask==0))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/math-wt-chanpak-s238-planar/04-computation/experiments/session238_graph_groups/verify.py", line 50, in test
+    check(all((p[a],p[b]) in arcs for a,b in arcs),'group invariance')
+  File "/tmp/math-wt-chanpak-s238-planar/04-computation/experiments/session238_graph_groups/verify.py", line 6, in check
+    if not ok: raise RuntimeError(msg)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: group invariance
