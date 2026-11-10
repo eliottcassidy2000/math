@@ -125,8 +125,10 @@ def mul_f2(A, B, n):
 
 
 def monsky_nullity(primes):
-    """nullity over F_2 of M^2 + M + I, M = adjacency (i -> j iff [p_j/p_i] = 1) + diag(row parities);
-    the convention of 05-knowledge/results/bsd_selmer_growth_20261013a.md section 3 (primes = 3 mod 8)."""
+    """nullity over F_2 of M^2 + M + I, M = adjacency + diag(row parities), with i -> j iff p_j is a quadratic
+    residue modulo p_i (Legendre symbol +1).  The cited note 05-knowledge/results/bsd_selmer_growth_20261013a.md
+    section 3 (primes = 3 mod 8) writes its condition with an additive bracket symbol; the nullity is the same for
+    either orientation (THM-5125 (4c); checked by the audit on every tournament of orders 3-6)."""
     n = len(primes)
     A = [0] * n
     for i, p in enumerate(primes):

@@ -1,0 +1,3 @@
+H(core13) = 13  H(core37) = 37
+h13 then h37: closure order 15; counts {(0, 0): 88679, (0, 1): 88803, (1, 0): 88605, (1, 1): 88729}; increments -74, 124; mixed difference 0; affine with both increments nonzero: True
+h37 then h13: closure order 15; counts {(0, 0): 76839, (0, 1): 76189, (1, 0): 76579, (1, 1): 75929}; increments -260, -650; mixed difference 0; affine with both increments nonzero: True

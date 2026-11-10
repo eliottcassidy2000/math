@@ -1,0 +1,20 @@
+(W) THM-5122 witness: counts at bits 00, 10, 01, 11 = [345, 347, 347, 349] ; W row 0 = [0, 26, 14, 20, 26, 28] OK
+    eigenvalues of W: [-36.521, -24.122, -23.243, -20.003, -8.963, 112.852] ; n_-(W) = 5
+(Q) n=4: all 64 labelled cores, all 16 cuts: quadratic-identity failures 0; violations of W_ij >= 2 H(C - i - j): 0 OK [2s]
+(E2) n=4: (core, two disjoint pairs) with zero interaction: 72; (core, pairs, background) with both increments nonzero: 24
+(Q) n=5: all 1024 labelled cores, all 32 cuts: quadratic-identity failures 0; violations of W_ij >= 2 H(C - i - j): 0 OK [2s]
+(E2) n=5: (core, two disjoint pairs) with zero interaction: 3480; (core, pairs, background) with both increments nonzero: 3960
+(Q) n=6: all 32768 labelled cores, all 64 cuts: quadratic-identity failures 0; violations of W_ij >= 2 H(C - i - j): 0 OK [15s]
+(E2) n=6: (core, two disjoint pairs) with zero interaction: 205200; (core, pairs, background) with both increments nonzero: 619920
+(E3) n=6: (core, perfect matching, background) affine: 720; with all three increments nonzero: 0; of those with all 8 closures strong: 0; interval-complete (weights 1, <=2, <=1+sum): 0 (strong: 0)
+(E3) n=7: 20000 random cores, 105 triples of disjoint pairs each: affine (core, triple, background): 4664; all increments nonzero: 962 (direct recount mismatches 0); all 8 closures strong: 860 [27s]
+     example: core out-masks [68, 49, 18, 103, 105, 69, 6], x0 = 0010111, exchanges [(0, 3), (1, 6), (2, 5)], increments [394, -72, 128], base count 873
+     example: core out-masks [68, 49, 18, 103, 105, 69, 6], x0 = 0000111, exchanges [(0, 3), (1, 6), (2, 5)], increments [416, -66, 114], base count 641
+     example: core out-masks [30, 92, 0, 68, 108, 79, 5], x0 = 0100111, exchanges [(0, 3), (1, 4), (2, 6)], increments [-50, -6, 158], base count 479
+     example: core out-masks [30, 92, 0, 68, 108, 79, 5], x0 = 0000111, exchanges [(0, 3), (1, 4), (2, 6)], increments [-34, -2, 104], base count 301
+(E3) n=8: 3000 random cores, 420 triples of disjoint pairs each: affine (core, triple, background): 2676; all increments nonzero: 175 (direct recount mismatches 0); all 8 closures strong: 140 [38s]
+     example: core out-masks [196, 25, 242, 53, 225, 67, 10, 106], x0 = 10011011, exchanges [(0, 2), (1, 5), (3, 6)], increments [884, 120, -580], base count 6849
+     example: core out-masks [196, 25, 242, 53, 225, 67, 10, 106], x0 = 10001011, exchanges [(0, 2), (1, 5), (3, 6)], increments [932, 132, -536], base count 5759
+     example: core out-masks [196, 25, 242, 53, 225, 67, 10, 106], x0 = 00011011, exchanges [(0, 2), (1, 5), (3, 6)], increments [942, 192, -486], base count 5685
+     example: core out-masks [196, 25, 242, 53, 225, 67, 10, 106], x0 = 00001011, exchanges [(0, 2), (1, 5), (3, 6)], increments [990, 204, -442], base count 4339
+AUDIT EXCHANGE: ALL CHECKS PASSED [38s]

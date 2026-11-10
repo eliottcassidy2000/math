@@ -1,0 +1,6 @@
+(1) ear quadratic = direct count, order 2, all tournaments and cuts: mismatches 0 OK
+(1) ear quadratic = direct count, order 3, all tournaments and cuts: mismatches 0 OK
+(1) ear quadratic = direct count, order 4, all tournaments and cuts: mismatches 0 OK
+(1) ear quadratic = direct count, order 5, all tournaments and cuts: mismatches 0 OK
+(2) |S(theta)|^2 = differenced sum on 40 random (core, theta), orders 3-6: max discrepancy 1.03e-11 OK
+ALL CHECKS PASSED

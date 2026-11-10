@@ -1,0 +1,13 @@
+one apex, |F| = 2^n, 16 random theta: median and max of |S|/|F|, exponent log|S|/log|F| of the median
+  n = 12: median 0.03670  max 0.08110  exponent 0.603   (square root would be 0.01562)
+  n = 14: median 0.01764  max 0.04495  exponent 0.584   (square root would be 0.00781)
+  n = 16: median 0.00900  max 0.01313  exponent 0.575   (square root would be 0.00391)
+  n = 18: median 0.00422  max 0.00878  exponent 0.562   (square root would be 0.00195)
+  n = 20: median 0.00210  max 0.00561  exponent 0.555   (square root would be 0.00098)
+  n = 22: median 0.00090  max 0.00250  exponent 0.540   (square root would be 0.00049)
+two apexes, |F| = 2^n * 2^(n+1): same statistics; max count against the bound 2 * 3^n
+  n =  6: median 0.041197  max 0.112872  exponent 0.646   (square root would be 0.011049);  max count 509 <= 1458; direct recounts 1, mismatches 0
+  n =  8: median 0.009868  max 0.034183  exponent 0.608   (square root would be 0.002762);  max count 6069 <= 13122; direct recounts 14, mismatches 0
+  n = 10: median 0.001659  max 0.010096  exponent 0.560   (square root would be 0.000691);  max count 69485 <= 118098; direct recounts 211, mismatches 0
+  n = 11: median 0.000696  max 0.004365  exponent 0.544   (square root would be 0.000345);  max count 227295 <= 354294; direct recounts 842, mismatches 0
+ALL CHECKS PASSED

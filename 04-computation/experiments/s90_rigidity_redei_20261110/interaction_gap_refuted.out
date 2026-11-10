@@ -1,0 +1,8 @@
+order 4: no active interacting pair
+order 5 (exhaustive): min mu/max(d) = 2/4 at (c, d_a, d_b, mu) = (1, 4, 2, 2); 2 mu >= max(d) everywhere: True
+order 6 (exhaustive): min mu/max(d) = 2/4 at (c, d_a, d_b, mu) = (1, 4, 2, 2); 2 mu >= max(d) everywhere: True
+order 7 (recorded constant from a separate exhaustive numba run; confirmed by the audit): min mu/max(d) = 2/4, e.g. at (1, 4, 4, 2)
+order 8 witness after 646 seeded trials: out-neighbour masks [246, 252, 248, 177, 160, 64, 152, 32], a = 1, b = 2
+   brute-force counts: H(R) = 15, H(R+a) = 29, H(R+b) = 29, H(R+a+b) = 49
+   (c, d_a, d_b, mu) = (15, 14, 14, 6); 2 mu < max(d): candidate gap REFUTED: True
+ALL CHECKS PASSED

@@ -1,0 +1,28 @@
+(0) DFS path tables vs brute-force permutations, all 1099 labelled tournaments of orders 1..5: mismatches 0 OK
+(P) n=3: pairs with hypothesis (i) 0, with structure (ii) 0, mismatches 0, value failures 0 OK [1s]
+(P) n=4: pairs with hypothesis (i) 24, with structure (ii) 24, mismatches 0, value failures 0 OK [1s]
+(P) n=5: pairs with hypothesis (i) 240, with structure (ii) 240, mismatches 0, value failures 0 OK [1s]
+(P) n=6: pairs with hypothesis (i) 2160, with structure (ii) 2160, mismatches 0, value failures 0 OK [1s]
+(P) n=7: pairs with hypothesis (i) 23520, with structure (ii) 23520, mismatches 0, value failures 0 OK [7s]
+(R) n=3: ordered partitions per tournament 12; active zero-interaction module pairs 0; failures [values, #active, structure, hubs in B, inert vertices, sub-additivity, sub-values] = [0, 0, 0, 0, 0, 0, 0] OK
+(K) n=3: unordered module triples per tournament 1; examined 8; all three active 0; additive active 3-cubes 0 OK [8s]
+(R) n=4: ordered partitions per tournament 50; active zero-interaction module pairs 48; failures [values, #active, structure, hubs in B, inert vertices, sub-additivity, sub-values] = [0, 0, 0, 0, 0, 0, 0] OK
+(K) n=4: unordered module triples per tournament 10; examined 640; all three active 0; additive active 3-cubes 0 OK [8s]
+(R) n=5: ordered partitions per tournament 180; active zero-interaction module pairs 1440; failures [values, #active, structure, hubs in B, inert vertices, sub-additivity, sub-values] = [0, 0, 0, 0, 0, 0, 0] OK
+(K) n=5: unordered module triples per tournament 65; examined 66560; all three active 160; additive active 3-cubes 0 OK [8s]
+(R) n=6: ordered partitions per tournament 602; active zero-interaction module pairs 38880; failures [values, #active, structure, hubs in B, inert vertices, sub-additivity, sub-values] = [0, 0, 0, 0, 0, 0, 0] OK
+(K) n=6: unordered module triples per tournament 350; examined 11468800; all three active 245760; additive active 3-cubes 0 OK [8s]
+(R) n=7: ordered partitions per tournament 1932; active zero-interaction module pairs 1095360; failures [values, #active, structure, hubs in B, inert vertices, sub-additivity, sub-values] = [0, 0, 0, 0, 0, 0, 0] OK
+(K) n=7: unordered module triples per tournament 1701; examined 3567255552; all three active 258180160; additive active 3-cubes 0 OK [54s]
+(T) n=5: triples pairwise active with zero interaction over B = V - triple: 160 (transitive, 9c: 120; cyclic, 15c: 40); failures 0; joint value 7c: 0 OK [54s]
+(T) n=6: triples pairwise active with zero interaction over B = V - triple: 1920 (transitive, 9c: 1440; cyclic, 15c: 480); failures 0; joint value 7c: 0 OK [54s]
+(T) n=7: triples pairwise active with zero interaction over B = V - triple: 20160 (transitive, 9c: 15120; cyclic, 15c: 5040); failures 0; joint value 7c: 0 OK [59s]
+(S4) order of A = 0: 1 labelled A; failures of H(S(A)) = H(A) + D(A) as stated: 1; failures with the first term dropped for empty A: 0 OK
+(S4) order of A = 1: 1 labelled A; failures of H(S(A)) = H(A) + D(A) as stated: 0; failures with the first term dropped for empty A: 0 OK
+(S4) order of A = 2: 2 labelled A; failures of H(S(A)) = H(A) + D(A) as stated: 0; failures with the first term dropped for empty A: 0 OK
+(S4) order of A = 3: 8 labelled A; failures of H(S(A)) = H(A) + D(A) as stated: 0; failures with the first term dropped for empty A: 0 OK
+(S4) order of A = 4: 64 labelled A; failures of H(S(A)) = H(A) + D(A) as stated: 0; failures with the first term dropped for empty A: 0 OK
+(S4) order of A = 5: 1024 labelled A; failures of H(S(A)) = H(A) + D(A) as stated: 0; failures with the first term dropped for empty A: 0 OK
+(X) n=8: 30000 random tournaments (three arc biases): pairs with (i) 1443, with (ii) 1443, mismatches 0; statement-2 instances 3031, failures [0, 0, 0, 0, 0, 0, 0] OK [61s]
+(X) n=9: 8000 random tournaments (three arc biases): pairs with (i) 272, with (ii) 272, mismatches 0; statement-2 instances 461, failures [0, 0, 0, 0, 0, 0, 0] OK [61s]
+AUDIT RIGIDITY: ALL CHECKS PASSED [61s]

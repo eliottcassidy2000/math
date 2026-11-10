@@ -1,0 +1,11 @@
+(a) core [68, 49, 18, 103, 105, 69, 6] (H = 83), x0 = 0010111, exchanges [(0, 3), (1, 6), (2, 5)]: eight counts [873, 1267, 801, 1195, 1001, 1395, 929, 1323]; increments [394, -72, 128]; affine: True; all closures strong: True; all increments nonzero: True
+(b) every labelled A of order 1..5 (1099): H(S(A)) = F(full cut) = h + 2 a.1 - sum_(i<j) W_ij = H(A) + D(A), and F(x) = h + 2 a.x - (1/2) x^T W x at every cut: failures 0 OK
+(c) Busch floor f(3..9): [3, 5, 9, 15, 25, 45, 75]
+    2/5^(1/3) = 1.1696 (< 1.17), sqrt2/5^(1/3) = 0.8270 (< 0.83), (3/2) log_5 2 = 0.6460
+    n, floor(n/2), f(n+2), 2^(floor(n/2)+1)/f(n+2): [(4, 2, 15, 0.533), (6, 3, 45, 0.356), (8, 4, 125, 0.256), (10, 5, 375, 0.171), (12, 6, 1125, 0.114), (16, 8, 9375, 0.055), (20, 10, 78125, 0.026)]
+    constants of Remark 4: OK
+(d) P(overlap >= 4) = 0.0432; members below 100: Ramanujan 9, O/Z/J 9; shared members: [7, 21, 43, 67]
+(e) r_3: {3: 8, 11: 24, 19: 24, 43: 24, 67: 24, 163: 24}; r_3(d) = 24 h(-d) for the 39 squarefree d = 3 mod 8, 11 <= d < 400: failures 0 OK
+(f) (q+1)/4 for q = 3, 7, 11, 19, 43, 67, 163: [(1, False), (2, True), (3, True), (5, True), (11, True), (17, True), (41, True)]
+    odd numbers below 3000 not of the form x^2 + y^2 + 10 z^2: [3, 7, 21, 31, 33, 43, 67, 79, 87, 133, 217, 219, 223, 253, 307, 391, 679, 2719]
+AUDIT MISC: ALL CHECKS PASSED

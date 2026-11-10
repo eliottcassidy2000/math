@@ -1,0 +1,18 @@
+(P) n=3: pairs with hypotheses 0, pairs with structure 0, mismatches 0 OK
+(P) n=4: pairs with hypotheses 24, pairs with structure 24, mismatches 0 OK
+(P) n=5: pairs with hypotheses 240, pairs with structure 240, mismatches 0 OK
+(P) n=6: pairs with hypotheses 2160, pairs with structure 2160, mismatches 0 OK
+(P) n=7: pairs with hypotheses 23520, pairs with structure 23520, mismatches 0 OK
+(R) n=3: active zero-interaction ordered module pairs 0, violations of Theorem R 0; (K) module triples examined 8, additive active 3-cubes 0 OK
+(R) n=4: active zero-interaction ordered module pairs 48, violations of Theorem R 0; (K) module triples examined 640, additive active 3-cubes 0 OK
+(R) n=5: active zero-interaction ordered module pairs 1440, violations of Theorem R 0; (K) module triples examined 66560, additive active 3-cubes 0 OK
+(R) n=6: active zero-interaction ordered module pairs 38880, violations of Theorem R 0; (K) module triples examined 11468800, additive active 3-cubes 0 OK
+(K) n=3: additive active triples of single vertices over every base: 0 OK
+(K) n=4: additive active triples of single vertices over every base: 0 OK
+(K) n=5: additive active triples of single vertices over every base: 0 OK
+(K) n=6: additive active triples of single vertices over every base: 0 OK
+(K) n=7: additive active triples of single vertices over every base: 0 OK
+(S) n=8: 20000 random tournaments: Lemma P pairs with hypotheses 663, with structure 663, mismatches 0; Theorem R instances 978, violations 0 OK
+(S) n=9: 6000 random tournaments: Lemma P pairs with hypotheses 102, with structure 102, mismatches 0; Theorem R instances 113, violations 0 OK
+(S) n=10: 1500 random tournaments: Lemma P pairs with hypotheses 19, with structure 19, mismatches 0; Theorem R instances 22, violations 0 OK
+ALL CHECKS PASSED [35s]

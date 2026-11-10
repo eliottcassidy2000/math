@@ -1,0 +1,33 @@
+(T) apex triple (H, e, R) of T(v) = (g(v), e(v), 1 + v) for v < 64: mismatches 0 OK
+(T) H(T(u) => T(v)^op, apex arc reversed) = F1(u, v) for u, v < 16 (256 joins, orders up to 10): mismatches 0 OK [0s]
+(C) g(2h) = 2 psi(h) + 1 on the computed range: OK
+    F1 values up to 2^21: even values 0 (expected 0) [25s]
+(C) r_tri (ordered pairs with v even) = direct count of triples (h1, h2, s), all N <= 2^15: OK
+    zero sets of r_pair and r_tri coincide: OK
+window: odd N in [2^18, 2^21): 917504 integers; first misses: [7, 13, 21, 41, 43, 55, 67, 77, 83, 105, 109, 131, 133, 147, 163, 173, 175, 177, 193, 205, 211, 231, 233, 247, 251, 261, 267, 277, 281, 295, 299, 303, 313, 327, 335, 357, 373, 377, 415, 421]
+--- r_tri (packet): mean 11.0291, sd 5.782, misses 12668, miss rate 0.01381
+p= 3: class 0 12.1176, class -1 11.4852; others min 9.4846 max 9.4846 (spread 0.0000 = 0.0 s.e. of one class mean, s.e. 0.0105); top two = {0,-1}: True
+p= 5: class 0 12.3691, class -1 11.8747; others min 10.2990 max 10.3030 (spread 0.0040 = 0.3 s.e. of one class mean, s.e. 0.0135); top two = {0,-1}: True; (-N/p)=+1 classes 10.2995 vs -1 classes 10.3010 (diff -0.0015, -0.1 s.e.)
+p= 7: class 0 12.0057, class -1 12.0513; others min 10.4754 max 10.9130 (spread 0.4377 = 27.4 s.e. of one class mean, s.e. 0.0160); top two = {0,-1}: True; (-N/p)=+1 classes 10.4795 vs -1 classes 10.7292 (diff -0.2497, -17.1 s.e.)
+      p = 7 class means c = 0..6: [12.0057, 10.913, 10.6672, 10.4754, 10.6073, 10.4837, 12.0513]
+p=11: class 0 11.9932, class -1 11.7751; others min 10.7555 max 10.9306 (spread 0.1751 = 8.7 s.e. of one class mean, s.e. 0.0200); top two = {0,-1}: True; (-N/p)=+1 classes 10.8048 vs -1 classes 10.8665 (diff -0.0617, -4.6 s.e.)
+p=13: class 0 11.1614, class -1 11.2221; others min 10.9128 max 11.0738 (spread 0.1609 = 7.4 s.e. of one class mean, s.e. 0.0218); top two = {0,-1}: True; (-N/p)=+1 classes 10.9891 vs -1 classes 11.0082 (diff -0.0191, -1.4 s.e.)
+p=17: class 0 12.5608, class -1 12.0004; others min 10.8036 max 10.9370 (spread 0.1335 = 5.4 s.e. of one class mean, s.e. 0.0249); top two = {0,-1}: True; (-N/p)=+1 classes 10.8672 vs -1 classes 10.8578 (diff +0.0094, +0.7 s.e.)
+p=19: class 0 11.2344, class -1 11.2126; others min 10.9351 max 11.0632 (spread 0.1281 = 4.9 s.e. of one class mean, s.e. 0.0263); top two = {0,-1}: True; (-N/p)=+1 classes 11.0078 vs -1 classes 11.0049 (diff +0.0029, +0.2 s.e.)
+p=23: class 0 11.2738, class -1 11.2480; others min 10.9217 max 11.0502 (spread 0.1285 = 4.4 s.e. of one class mean, s.e. 0.0290); top two = {0,-1}: True; (-N/p)=+1 classes 11.0127 vs -1 classes 11.0018 (diff +0.0109, +0.9 s.e.)
+    N prime and (N+1)/4 prime         : n =    3479, mean 7.9043 (ratio 0.717), miss rate 0.03535 (ratio 2.561)
+    N(N+1) free of odd primes <= 29   : n =   60883, mean 7.9779 (ratio 0.723), miss rate 0.03556 (ratio 2.576)
+    15 | N(N+1)                       : n =  244668, mean 12.8309 (ratio 1.163), miss rate 0.00594 (ratio 0.430)
+    r at the Heegner numbers: {3: 1, 7: 0, 11: 2, 19: 4, 43: 0, 67: 0, 163: 0} ; r_pair there: {3: 1, 7: 0, 11: 1, 19: 3, 43: 0, 67: 0, 163: 0}
+    N = 4q - 1 < 3000 with N, q prime: 30 integers; r = 0 at [7, 43, 67, 163, 211, 547, 1171, 1723]
+--- r_pair (THM-4885): mean 11.7390, sd 7.381, misses 12668, miss rate 0.01381
+p= 3: class 0 14.3328, class -1 10.8637; others min 10.0204 max 10.0204 (spread 0.0000 = 0.0 s.e. of one class mean, s.e. 0.0133); top two = {0,-1}: True
+p= 5: class 0 14.1328, class -1 11.7298; others min 10.9375 max 10.9518 (spread 0.0144 = 0.8 s.e. of one class mean, s.e. 0.0172); top two = {0,-1}: True; (-N/p)=+1 classes 10.9375 vs -1 classes 10.9474 (diff -0.0099, -0.5 s.e.)
+p= 7: class 0 13.2125, class -1 12.2143; others min 11.1040 max 11.7209 (spread 0.6170 = 30.3 s.e. of one class mean, s.e. 0.0204); top two = {0,-1}: True; (-N/p)=+1 classes 11.1360 vs -1 classes 11.4914 (diff -0.3554, -19.1 s.e.)
+      p = 7 class means c = 0..6: [13.2125, 11.7209, 11.2066, 11.168, 11.5466, 11.104, 12.2143]
+p=11: class 0 13.3164, class -1 11.9876; others min 11.4197 max 11.6558 (spread 0.2361 = 9.2 s.e. of one class mean, s.e. 0.0256); top two = {0,-1}: True; (-N/p)=+1 classes 11.4889 vs -1 classes 11.5738 (diff -0.0849, -5.0 s.e.)
+p=13: class 0 11.9682, class -1 11.8433; others min 11.5855 max 11.8115 (spread 0.2261 = 8.1 s.e. of one class mean, s.e. 0.0278); top two = {0,-1}: True; (-N/p)=+1 classes 11.7026 vs -1 classes 11.7137 (diff -0.0112, -0.7 s.e.)
+p=17: class 0 14.2410, class -1 12.1088; others min 11.4960 max 11.6235 (spread 0.1275 = 4.0 s.e. of one class mean, s.e. 0.0318); top two = {0,-1}: True; (-N/p)=+1 classes 11.5520 vs -1 classes 11.5436 (diff +0.0083, +0.5 s.e.)
+p=19: class 0 12.0936, class -1 11.8274; others min 11.6212 max 11.7909 (spread 0.1697 = 5.1 s.e. of one class mean, s.e. 0.0336); top two = {0,-1}: True; (-N/p)=+1 classes 11.7180 vs -1 classes 11.7084 (diff +0.0096, +0.6 s.e.)
+p=23: class 0 12.1337, class -1 11.8621; others min 11.6398 max 11.8239 (spread 0.1841 = 5.0 s.e. of one class mean, s.e. 0.0370); top two = {0,-1}: True; (-N/p)=+1 classes 11.7237 vs -1 classes 11.7058 (diff +0.0179, +1.1 s.e.)
+AUDIT F1: ALL CHECKS PASSED [27s]

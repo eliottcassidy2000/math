@@ -24264,3 +24264,54 @@ Lesson: at session start, open every memory note and canon entry from this machi
 grep their packets for the new construction's vocabulary. Here that meant "dyadic" and "power of 2" in kps_s19* and
 session236*, before typing anything new. Every summary line (title, INDEX rows, notes in other files) must carry the
 same scope qualifier as the proved statement. A "closure is finite" statement must say which set: values or states.
+
+## MISTAKE-752 (2026-11-10, opus-2026-11-10-S90, THM-5124, THM-5125, HYP-9657 and `05-knowledge/results/s90_rigidity_redei_20261110/` at the pre-audit checkpoint b52e250ee9 and the working tree of 12:27; found by the independent audit `05-knowledge/results/s90_rigidity_redei_20261110/audit/AUDIT.md`) -- a known object typed as proved here, a same-day theorem misdescribed, a universal sentence written from eight primes, an uncredited earlier note of this machine
+
+- **MAJOR (priority; audit M1).** THM-5125 statement 1 (a)-(b) - on the primes `= 3 (mod 4)`, "`p -> q` iff `p` is a
+  quadratic residue mod `q`" has the extension property and is the countable random tournament - was typed PROVED
+  here, with only the class `3 mod 8` credited. It is KNOWN in the repository under the name *Legendre tournament*:
+  - `analogy_reduction_atlas_20261025/QR_TOURNAMENT.md` (klein, 2026-10-25): the object, same orientation;
+  - `root27_machine_bridges_20261026/anchor/LEGENDRE_SIDECAR.md` (2026-10-26): extension property by CRT, Dirichlet
+    and reciprocity, back-and-forth, "countable random tournament", typed CITED (Cameron 2001; Jones,
+    arXiv:1912.02709);
+  - HYP-9375 (PROVED 2026-10-29): quasirandom prime prefixes.
+  Repaired: retyped KNOWN / CITED; what remains of the session is the residue-chain reformulation, the Heegner
+  data and least realisers, and the balance criteria 4 (b)-(c). The startup sweep had searched for the owner's
+  theme words (Heegner, class number, elliptic) and not for the object's own names (Legendre, quadratic residue,
+  random tournament).
+- **MAJOR (misdescription; audit M2).** THM-5124 said that THM-5122 "constructs additive cubes of arbitrary
+  dimension up to the negative inertia in the EXCHANGE (ear) cube" and that such cubes "exist up to `n_-(W)`".
+  THM-5122 proves the affine criterion, the UPPER bound `k <= min(n_-(W), floor(n/2))` and one 2-cube; cubes of
+  every dimension are THM-5117's (order `7k + 1`); the bound is not attained at order 6 (audit, exhaustive); and
+  the ear cube proper (single cut bits) has strictly negative interactions, so additivity needs exchange
+  directions. The sentence was written from Session246's synthesis paragraph, not from the theorem. Repaired as a
+  trichotomy (presence `>= 0`, ear `< 0`, exchange signed). The mathematics of THM-5124 was not affected.
+- **MAJOR (overclaim; audit M3).** HYP-9657 (A) said "for every odd prime `p`" the classes `N = 0, -1` have the
+  largest mean, "the remaining classes are equal up to sampling error", "no Kronecker-symbol dependence", and read
+  the excess as "about `1/p`". Eight primes had been tested. On the same windows the pattern is absent at
+  `p = 29, 31, 37, 53, 61, 73, 89, 127`; the other classes differ at `p = 7` by dozens of standard errors (a bias
+  recorded in THM-4878 (5) and HYP-9480 (A)); a `(-N/7)` split is present; the excess is `0.26` at `p = 17` and about
+  `0` at `p = 29`. The pre-registered tests Q1-Q3 named five primes and stand. Repaired: (A) restricted to the primes
+  tested, the three sentences withdrawn, the sheet decomposition (class 0 from `s >= 1`, class -1 from `s = 0`,
+  established by the audit) kept.
+- **MAJOR (credit; audit M4, M5).** The local factor at `N = 0`, the mod-3 profile and the reduced mass on primes
+  are in this machine's own S82 note (section 5); `per(I + A)`, `det(I + A)` as sums over cycle collections and
+  `H = I(Omega, -1) mod 3` are THM-467, THM-1950, THM-4754, THM-4756; "cycle gas" is Session37's name; the corrected
+  "odd" map is THM-467 / LEM-004. All were presented without credit. Repaired in the three files and the note.
+- **MINOR (22 items, all applied).** Among them: the suspension formula `H(A) + D(A)` fails for empty `A`;
+  "(q + 1)/4 prime" needs `q >= 7`; 11 and 19 are not rough; `r` counts ordered triples whereas THM-4885 counts
+  pairs; an unsupported phrase about an element of order 3 acting on the 2-torsion of the curve; 679 and 2719 are
+  unconditional exceptions of Ramanujan's form (Ono-Soundararajan is completeness under GRH); the power-saving
+  exceptional set is Magee-Oh-Winter's, not Bourgain-Kontorovich's; the best counting bound is Session216's, not
+  THM-4887; `log H` is additive, not multiplicative, on order joins; a docstring gave `(15, 14, 10, 6)` for the
+  witness `(15, 14, 14, 6)`; the equality cases of the refuted gap are 14 profiles, not two.
+- **Caught before the audit, by the session's own probes.** "Monsky nullity `> 0` implies `3 | H`" (fails at order
+  5); `H mod 4` as a function of the `F_2` ranks (fails at order 5); the second-order gap `2 mu >= max(d)` (exhaustive
+  through order 7, false at order 8). These are recorded as refuted in HYP-9657 (C).
+
+Lesson: search the repository for the object's own names before typing it (here "Legendre", "quadratic residue",
+"random tournament"), not only for the words of the prompt. Describe another session's theorem from its statement
+file, never from its synthesis. A sentence beginning "for every" needs either a proof or a test at points that
+were not used to form it; a pre-registration that names five primes licenses a statement about five primes. Before
+writing a mechanism into a hypothesis, re-read this machine's previous notes on the same family (S82 section 5 had
+half of it).

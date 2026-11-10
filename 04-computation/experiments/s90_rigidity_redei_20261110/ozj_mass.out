@@ -1,0 +1,11 @@
+states: 1207081  B/F-sheet states: 372148  misses: [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 583, 637, 821, 1067, 1339, 1861, 2647]
+window [3000, 12000]: mean m = 72.06
+p= 3 class means: 101.3 55.8 59.0
+p= 5 class means: 94.8 66.9 64.4 66.6 67.6
+p= 7 class means: 75.8 70.1 69.4 72.9 71.3 71.4 73.5
+p=11 class means: 78.6 70.8 70.3 71.4 70.9 70.3 71.5 70.8 72.0 73.0 73.1
+p=13 class means: 76.7 73.2 71.4 69.6 71.0 71.8 72.0 72.7 71.6 71.4 71.6 72.1 71.6
+Rabinowitsch-rough in window: n = 45, mean m = 46.78 (ratio 0.649)
+primes in window: mean m = 48.77 (ratio 0.677)
+m at Heegner numbers: {3: 1, 7: 0, 11: 2, 19: 5, 43: 0, 67: 0, 163: 0}
+values above 2647 with m <= 3: []

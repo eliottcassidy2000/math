@@ -1,0 +1,16 @@
+(G) n=4: no pair with both vertices active and mu > 0
+(G) n=5: every labelled tournament, every pair: active pairs with mu > 0: 3120; violations of 2 mu >= max(d): 0; least mu/max(d) = 2/4 at (c, d_a, d_b, mu) = (1, 4, 2, 2); equality cases (c, max d, min d, mu): [(1, 4, 2, 2), (1, 4, 4, 2)] [1s]
+(G) n=6: every labelled tournament, every pair: active pairs with mu > 0: 307200; violations of 2 mu >= max(d): 0; least mu/max(d) = 2/4 at (c, d_a, d_b, mu) = (1, 4, 2, 2); equality cases (c, max d, min d, mu): [(1, 4, 2, 2), (1, 4, 4, 2), (1, 8, 2, 4), (3, 12, 12, 6), (5, 4, 4, 2), (5, 8, 8, 4)] [1s]
+(G) n=7: every labelled tournament, every pair: active pairs with mu > 0: 36375360; violations of 2 mu >= max(d): 0; least mu/max(d) = 2/4 at (c, d_a, d_b, mu) = (1, 4, 2, 2); equality cases (c, max d, min d, mu): [(1, 4, 2, 2), (1, 4, 4, 2), (1, 8, 2, 4), (1, 16, 2, 8), (3, 12, 12, 6), (3, 24, 6, 12), (5, 4, 4, 2), (5, 8, 8, 4), (5, 12, 4, 6), (5, 12, 12, 6), (9, 8, 6, 4), (9, 8, 8, 4), (11, 8, 8, 4), (11, 12, 8, 6)] [6s]
+(G) order-8 witness [246, 252, 248, 177, 160, 64, 152, 32], a = 1, b = 2: counts [15, 29, 29, 49], (c, d_a, d_b, mu) = (15, 14, 14, 6); 2 mu < max(d): True OK
+(G) n=8: 400000 random biased tournaments, all pairs: least mu/max(d) found = 6/14 = 3/7 (0.4286) at (c, d_a, d_b, mu) = (15, 10, 14, 6), masks [250, 204, 249, 224, 234, 66, 128, 32], a = 3, b = 6 [9s]
+(G) n=9: 150000 random biased tournaments, all pairs: least mu/max(d) found = 10/26 = 5/13 (0.3846) at (c, d_a, d_b, mu) = (27, 26, 18, 10), masks [494, 508, 504, 496, 449, 80, 256, 352, 32], a = 6, b = 7 [13s]
+(G) n=10: 40000 random biased tournaments, all pairs: least mu/max(d) found = 18/50 = 9/25 (0.3600) at (c, d_a, d_b, mu) = (51, 50, 50, 18), masks [894, 1020, 1016, 1008, 992, 448, 768, 833, 512, 32], a = 6, b = 8 [18s]
+(O) S/B/F system: 372148 states after B or F with h <= 12000; odd N <= 12000 with m = 0: 29, equal to the 29 values: True; even h among B/F states: 0
+    window [3000, 12000]: mean m = 72.06
+    p = 3: class means 101.3 55.8 59.0
+    p = 5: class means 94.8 66.9 64.4 66.6 67.6
+    p = 7: class means 75.8 70.1 69.4 72.9 71.3 71.4 73.5
+    primes: ratio 0.677; N prime and (N+1)/4 prime: n = 45, ratio 0.649; m at Heegner numbers: {3: 1, 7: 0, 11: 2, 19: 5, 43: 0, 67: 0, 163: 0}
+    packet numbers (72.06; 101.3; 0.677; 0.649) reproduced: OK
+AUDIT NEW ITEMS: ALL CHECKS PASSED [19s]

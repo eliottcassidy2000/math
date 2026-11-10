@@ -1,0 +1,7 @@
+(1) H = 2 psi(h) + 1 on all 511 reduced words of length <= 10; psi(h) = h - q(h) for h < 5000: OK
+(2) G recurrences (n < 5000), G(2h) + rho(h) = 2 psi(h) (h < 5000), G(n) = van der Corput inversion count (n < 700): OK
+(3) splitting law for j <= 8, all t < 2^j, m < 200: OK
+(4) S/B/F transfer rules against brute force on 500 random words of length <= 9: OK
+(4) orbit of (1,1,1,1) under S, B, F: 432792 states with h <= 6000, R <= 24000; odd h-values missed below 6000: [7, 13, 21, 41, 43, 55, 67, 77, 83, 163, 173, 231, 233, 247, 251, 277, 299, 421, 449, 503, 533, 569, 583, 637, 821, 1067, 1339, 1861, 2647]
+    equal to the 29 values of THM-4884 / Session 197: OK
+ALL CHECKS PASSED

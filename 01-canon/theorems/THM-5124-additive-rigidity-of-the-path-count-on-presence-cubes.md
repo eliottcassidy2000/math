@@ -7,17 +7,25 @@ status: >
   sets is the weight of the odd-cycle packings meeting both, hence >= 0; Claim A (THM-4876 (1), THM-070); the
   universal increment floor H(Z) = h or H(Z) >= (3h + 1)/2 for induced extensions (Session214 forced shuffle,
   HYP-9469 (1) PROVED), which gives a second, three-line proof of the dimension bound in (3); the count 2^k + 1 of
-  the reversed-extreme-arc tournaments (THM-4749, THM-4876 (6)). COMPLEMENT, not a duplicate: THM-5122 (Session246)
-  constructs additive cubes of arbitrary dimension up to the negative inertia in the EXCHANGE (ear) cube of one fixed
-  core, where the count is a quadratic polynomial of the cut and interactions are signed; the present theorem is
-  about the PRESENCE cube (induced subtournaments), where every interaction is nonnegative. FINITE-EXACT controls
+  the reversed-extreme-arc tournaments (THM-4749, THM-4876 (6)); statement 4 is the full-cut case of the inherited
+  protected-closure identity (THM-4114 section 6, THM-5122) and D is Session197's count of labelled two-bin covers.
+  COMPLEMENT, not a duplicate, of the orientation side: on the EAR cube of one core (single cut bits) every pair
+  interaction is strictly negative (THM-4114; Session192 cut_sumsets: no additive 2-cube); along EXCHANGE directions
+  (pairs of cut bits swapped) interactions are signed, THM-5122 (Session246) gives the affine criterion, the
+  capacity bound k <= min(n_-(W), floor(n/2)) and one 2-cube, and THM-5117 (Session245) gives affine exchange cubes
+  of every dimension k at order 7k + 1; the present theorem is about the PRESENCE cube (induced subtournaments),
+  where every interaction is nonnegative. FINITE-EXACT controls
   (rigidity_check.py): statement (1) on every labelled tournament of orders 3-7 (the hypothesis and the structure
   hold on the same 24, 240, 2160, 23520 pairs at orders 4-7); statement (2) on every ordered partition of every
   labelled tournament of orders 3-6 (38,880 instances at order 6, no violation); statement (3) on every module
   triple of orders 3-6 (11,468,800 triples at order 6) and every vertex triple over every base at orders 3-7; random
-  samples at orders 8-10. The Chan-Pak conjecture (every odd number other than 7 and 21 is a Hamiltonian-path
-  count) remains OPEN; this theorem removes one family of proof architectures and explains the smallest gap
-  mechanism, it does not bound the spectrum.
+  samples at orders 8-10. AUDITED (independent adversarial audit, own code,
+  05-knowledge/results/s90_rigidity_redei_20261110/audit/AUDIT.md): PASS WITH CORRECTIONS - every proof step and
+  number confirmed, statements 2 and 3 verified exhaustively at order 7 as well (1,095,360 module pairs; 3.57 * 10^9
+  module triples); corrections applied (the description of THM-5122 / THM-5117 and of the ear cube, the empty case
+  of statement 4, credits, wording; MISTAKE-752). The Chan-Pak conjecture (every odd number other than 7 and 21 is
+  a Hamiltonian-path count) remains OPEN; this theorem removes one family of proof architectures; it does not
+  bound the spectrum and does not reprove that 7 is not a value.
 session: opus-2026-11-10-S90
 source: 05-knowledge/results/s90_rigidity_redei_20261110/README.md
 scripts:
@@ -80,15 +88,18 @@ from `Q` to `X`).
    `T[B u {a1, a2, a3}] = Y => P => X` with `P` on `{x0, y0, a1, a2, a3}`, and the eight counts are
    `c (1; 3, 3, 3; 5, 5, 5; 9)` if `{a1, a2, a3}` is transitive and `c (1; 3, 3, 3; 5, 5, 5; 15)` if it is cyclic.
    The value `7c` predicted by additivity does not occur.
-4. **Parallel switches (two-hub suspension).** For a tournament `A` let `S(A)` be `A` together with two further
-   vertices `x0, y0`, `x0 -> y0`, `y0 -> A`, `A -> x0`. Then
+4. **Parallel switches (two-hub suspension).** For a nonempty tournament `A` let `S(A)` be `A` together with two
+   further vertices `x0, y0`, `x0 -> y0`, `y0 -> A`, `A -> x0`. Then
 
        H(S(A)) = H(A) + D(A),      D(A) = sum over U <= V(A) of H(A[U]) H(A - U)
 
-   (`D` counts ordered pairs of disjoint paths covering `V(A)`, either possibly empty). For `A` transitive of order
-   `k` this is `2^k + 1` (the reversed-extreme-arc tournament `R_(k+2)`), for the 3-cycle it is `15`. The presence
-   cube of `k` parallel switches over `B = Y u {x0, y0} u X` is `S |-> c (H(A[S]) + D(A[S]))`; it is additive iff
-   `k <= 2`.
+   (`D` counts ordered pairs of disjoint paths covering `V(A)`, either possibly empty: Session197's labelled
+   two-bin covers; for empty `A` the count is `1`, not `2`). This is the full-cut case of the inherited
+   protected-closure identity: `S(A)` is the closure of `A` with every vertex selected, and
+   `F(1) = h + 2 a.1 - sum_(i<j) W_ij = H(A) + D(A)` (THM-4114 section 6, THM-5122). For `A` transitive of order `k`
+   this is `2^k + 1` (the reversed-extreme-arc tournament `R_(k+2)`), for the 3-cycle it is `15`. The presence cube
+   of `k` parallel switches over `B = Y u {x0, y0} u X` is `S |-> c (H(A[S]) + D(A[S]))` for nonempty `S` and `c` at
+   `S` empty; it is additive iff `k <= 2`.
 
 ## Proofs
 
@@ -148,7 +159,8 @@ Uniqueness: if `a, a'` in `W1` were both active over `B`, apply the above to the
 and `({b}, b)`. In `T[B u {b}]` the vertex `b` lies on exactly one triangle (it is a one-triangle vertex of `Q`), so
 both structures have the same hubs `x0, y0`; then `y0 -> {a, a', b} -> x0`, and the hubs together with `a, a', b`
 taken along a Hamiltonian path of `T[{a, a', b}]` form a 5-cycle meeting both modules, a contradiction. Finally let
-`z` in `W1 - {a}`. Since `f(W1, empty) = f(W1 - z, empty) = 3c`, Claim A shows that `z` lies on no odd cycle of
+`z` in `W1 - {a}`. Since `a` lies in `W1 - z` and `f({a}, empty) = 3c`, monotonicity gives
+`3c <= f(W1 - z, empty) <= f(W1, empty) = 3c`; so adding `z` to `B u (W1 - z)` does not raise the count, and Claim A shows that `z` lies on no odd cycle of
 `T[B u W1]`; no odd cycle through `z` meets `W2`; so `z` lies on no odd cycle of `T`, hence on no cycle. QED.
 
 **Statement 3.** *First proof.* Suppose the cube is additive with all `d_i > 0`, `k >= 3`. Then `W1` and
@@ -178,14 +190,23 @@ Hamiltonian path of `A`, `x0`: `H(A)` paths - or contains `x0 y0` consecutively:
 1. **What the theorem says about 5 and 7.** `5 = 1 + 2 + 2` is the only additive identity among Hamiltonian-path
    counts of nested induced subtournaments, up to the scale factor `c`. A third parallel switch always creates the
    5-cycle `x0 -> y0 -> a1 -> a2 -> a3 -> x0` through all three (or more, if the switches are cyclic), which turns the
-   additive prediction `7` into `9` or `15`. This is the presence-cube form of the base-free obstruction "no
-   tournament has conflict polynomial `1 + 3x`" (THM-4940 (3)); the exclusion of `7` and `21` from the spectrum is
-   THM-1370 and is not reproved here.
-2. **Orientation versus presence.** In the exchange cube of one fixed core the count is the quadratic
-   `F(x) = h + 2 a^T x - (1/2) x^T W x` (THM-4114 section 6, THM-5122), interactions `-d_i^T W d_j` are signed, and
-   additive cubes exist up to dimension `n_-(W)`. In the presence cube interactions are packing weights, never
-   negative, and vanish only in the configuration of statement 1. Additivity of `H` is therefore an orientation
-   phenomenon, never a presence phenomenon beyond `1, 3, 3, 5`.
+   additive prediction `7` into `9` or `15`. This is consistent with, and does not prove, the base-free obstruction
+   "no tournament has conflict polynomial `1 + 3x`" (THM-4940 (3)); the exclusion of `7` and `21` from the spectrum
+   is THM-1370 and is not reproved here.
+2. **Three cubes, three signs.** For one new vertex over a fixed core the count is the quadratic
+   `F(x) = h + 2 a^T x - (1/2) x^T W x` of the cut (THM-4114 section 6, THM-5122).
+   - *Presence cube* (which vertices are present): interactions are packing weights, `>= 0`, and vanish between two
+     active sets only in the configuration of statement 1.
+   - *Ear cube* (single cut bits): the interaction of two bits is `-W_ij <= -2 H(C - i - j) < 0`, never zero
+     (nonpositivity: THM-4114; strictness: THM-5122, capacity paragraph, and Session124; Session192
+     `cut_sumsets/PROOF.md`: no additive cube of dimension two).
+   - *Exchange directions* (a selected and an unselected vertex swapped): interactions `-d_i^T W d_j` are signed and
+     can cancel. THM-5122 gives the affine criterion, the capacity bound `k <= min(n_-(W), floor(n/2))` and one
+     2-cube (`345, 347, 347, 349`); THM-5117 gives affine exchange cubes of every dimension `k` at order `7k + 1`,
+     with spacing `50 * 37^(k-2)`. The capacity bound is not attained in general (audit: no core of order 6 carries
+     three pairwise orthogonal disjoint exchanges with nonzero increments; order 7 does).
+   So additivity of `H` beyond `1, 3, 3, 5` is available only along exchange directions: it is an orientation
+   phenomenon, never a presence phenomenon.
 3. **Proof architectures this removes.** Any construction that asks for three or more vertex sets whose presence
    contributes independently to `H` - complete sequences in the sense of Brown's criterion, Erdos-Lewin antichain
    sums of 3-smooth numbers, sumsets of two independent rich families (Mann/Schnirelmann), affine presence cubes -
@@ -193,8 +214,9 @@ Hamiltonian path of `A`, `x0`: `H(A)` paths - or contains `x0 y0` consecutively:
    use interacting digits (carries), exchanges (THM-5122), or non-nested families.
 4. **Width of an orthogonal exchange cube (corollary of THM-5122 and Busch's floor; scope: strong closures).** An
    interaction-orthogonal family of `k` disjoint pair exchanges in a core of order `n` has `k <= floor(n/2)`
-   (THM-5122 (6)); if it is interval-complete its `2^k` counts fill an interval of at most `2^k` odd numbers
-   (THM-5122 (3)-(4)); if the closures are strong, of order `n + 2`, each count is at least the strong floor
+   (THM-5122, capacity); if it is interval-complete its `2^k` counts fill an interval of at most `2^k` odd numbers
+   (THM-5122, affine interval criterion; a unit-step interacting cube has at most `k + 1` values); if the closures
+   are strong, of order `n + 2`, each count is at least the strong floor
    `f(n + 2) >= 5^((n+1)/3)` (Busch 2006; `f = 3, 5, 9, 15, 25, 45, 75` at orders `3-9`). Hence the interval has
    relative length at most `2^(floor(n/2)+1) / 5^((n+1)/3) < 1.17 * 0.83^n`: an interval at baseline `B` obtained this
    way has length at most about `B^0.65`. Exchange cubes with strong closures can cover a constant-ratio window

@@ -1,0 +1,6 @@
+packet order-8 witness: order 8, masks [246, 252, 248, 177, 160, 64, 152, 32], a = 1, b = 2: (c, d_a, d_b, mu) = (15, 14, 14, 6); mu/max(d) = 3/7; 2 mu >= max(d): False
+audit order-8 witness : order 8, masks [250, 204, 249, 224, 234, 66, 128, 32], a = 3, b = 6: (c, d_a, d_b, mu) = (15, 10, 14, 6); mu/max(d) = 3/7; 2 mu >= max(d): False
+audit order-9 witness : order 9, masks [494, 508, 504, 496, 449, 80, 256, 352, 32], a = 6, b = 7: (c, d_a, d_b, mu) = (27, 26, 18, 10); mu/max(d) = 5/13; 2 mu >= max(d): False
+audit order-10 witness: order 10, masks [894, 1020, 1016, 1008, 992, 448, 768, 833, 512, 32], a = 6, b = 8: (c, d_a, d_b, mu) = (51, 50, 50, 18); mu/max(d) = 9/25; 2 mu >= max(d): False
+ratios 3/7, 3/7, 5/13, 9/25 = (2^j + 1)/(3 2^j + 1) for j = 1, 1, 2, 3: OK
+9/25 < 14/34: True
