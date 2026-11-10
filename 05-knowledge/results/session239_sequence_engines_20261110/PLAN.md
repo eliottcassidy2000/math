@@ -1,7 +1,8 @@
 # Session239: efficient exact sequence engines and proof-facing refinements
 
-**Status: WORK IN PROGRESS, 10 November 2026.** No new theorem is promoted by
-this checkpoint. Base: `4904ebec2923d9a014296607226a5013acb365bd`.
+**Status: original planning checkpoint, 10 November 2026.** The completed
+results and independent audits are in [README.md](README.md). No theorem was
+promoted by the original checkpoint. Base: `4904ebec2923d9a014296607226a5013acb365bd`.
 
 ## User target and typed objects
 

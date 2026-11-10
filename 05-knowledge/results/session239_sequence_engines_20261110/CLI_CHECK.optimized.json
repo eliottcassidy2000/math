@@ -1,0 +1,51 @@
+{
+  "large_decimal_serialization_through": 200,
+  "last_term_digits": 5991,
+  "status": "PASS",
+  "sequence_checks": [
+    {
+      "sequence": "A000568",
+      "source": "https://oeis.org/A000568",
+      "offset": 0,
+      "through": 10,
+      "pass": true
+    },
+    {
+      "sequence": "A051337",
+      "source": "https://oeis.org/A051337",
+      "offset": 0,
+      "through": 10,
+      "pass": true
+    },
+    {
+      "sequence": "A054946",
+      "source": "https://oeis.org/A054946",
+      "offset": 1,
+      "through": 10,
+      "pass": true
+    },
+    {
+      "sequence": "A000088",
+      "source": "https://oeis.org/A000088",
+      "offset": 0,
+      "through": 10,
+      "pass": true
+    },
+    {
+      "sequence": "A000273",
+      "source": "https://oeis.org/A000273",
+      "offset": 0,
+      "through": 10,
+      "pass": true
+    },
+    {
+      "sequence": "A001174",
+      "source": "https://oeis.org/A001174",
+      "offset": 1,
+      "through": 10,
+      "pass": true
+    }
+  ],
+  "empty_horizon_checks": 6,
+  "residue_prefix_through": 20
+}

@@ -1,0 +1,51 @@
+{
+  "scope": "All strong tournaments with a specified C7 action and H<225, using the cited all-order Busch floor to exclude n>=11.",
+  "status": "PASS",
+  "table": {
+    "7": {
+      "cycle_type": [
+        7
+      ],
+      "fixed_labelled_count": 8,
+      "strong_H_below_225": {
+        "175": 6,
+        "189": 2
+      },
+      "strong_count": 8,
+      "strong_minimum": 175
+    },
+    "8": {
+      "cycle_type": [
+        1,
+        7
+      ],
+      "fixed_labelled_count": 16,
+      "strong_H_below_225": {},
+      "strong_count": 0,
+      "strong_minimum": null
+    },
+    "9": {
+      "cycle_type": [
+        1,
+        1,
+        7
+      ],
+      "fixed_labelled_count": 64,
+      "strong_H_below_225": {},
+      "strong_count": 16,
+      "strong_minimum": 2163
+    },
+    "10": {
+      "cycle_type": [
+        1,
+        1,
+        1,
+        7
+      ],
+      "fixed_labelled_count": 512,
+      "strong_H_below_225": {},
+      "strong_count": 192,
+      "strong_minimum": 4151
+    }
+  }
+}

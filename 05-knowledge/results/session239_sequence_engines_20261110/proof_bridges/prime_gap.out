@@ -1,0 +1,113 @@
+{
+  "prime_action_gap": {
+    "3": {
+      "cases": [
+        {
+          "F2": 6,
+          "H": 3,
+          "inflation_H": 15,
+          "mask": 5
+        },
+        {
+          "F2": 6,
+          "H": 3,
+          "inflation_H": 15,
+          "mask": 2
+        }
+      ],
+      "gamma": 15,
+      "mu": 3,
+      "multi_orbit_lower": 15,
+      "nontransitive_action_lower": 15
+    },
+    "5": {
+      "cases": [
+        {
+          "F2": 90,
+          "H": 15,
+          "inflation_H": 135,
+          "mask": 947
+        },
+        {
+          "F2": 90,
+          "H": 15,
+          "inflation_H": 135,
+          "mask": 725
+        },
+        {
+          "F2": 90,
+          "H": 15,
+          "inflation_H": 135,
+          "mask": 298
+        },
+        {
+          "F2": 90,
+          "H": 15,
+          "inflation_H": 135,
+          "mask": 76
+        }
+      ],
+      "gamma": 135,
+      "mu": 15,
+      "multi_orbit_lower": 235,
+      "nontransitive_action_lower": 135
+    },
+    "7": {
+      "cases": [
+        {
+          "F2": 1638,
+          "H": 175,
+          "inflation_H": 2163,
+          "mask": 2079175
+        },
+        {
+          "F2": 1638,
+          "H": 189,
+          "inflation_H": 2205,
+          "mask": 1956555
+        },
+        {
+          "F2": 1638,
+          "H": 175,
+          "inflation_H": 2163,
+          "mask": 1486165
+        },
+        {
+          "F2": 1638,
+          "H": 175,
+          "inflation_H": 2163,
+          "mask": 1363545
+        },
+        {
+          "F2": 1638,
+          "H": 175,
+          "inflation_H": 2163,
+          "mask": 733606
+        },
+        {
+          "F2": 1638,
+          "H": 175,
+          "inflation_H": 2163,
+          "mask": 610986
+        },
+        {
+          "F2": 1638,
+          "H": 189,
+          "inflation_H": 2205,
+          "mask": 140596
+        },
+        {
+          "F2": 1638,
+          "H": 175,
+          "inflation_H": 2163,
+          "mask": 17976
+        }
+      ],
+      "gamma": 2163,
+      "mu": 175,
+      "multi_orbit_lower": 30639,
+      "nontransitive_action_lower": 2163
+    }
+  },
+  "status": "PASS"
+}

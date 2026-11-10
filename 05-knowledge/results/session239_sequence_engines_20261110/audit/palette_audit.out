@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "method": "Every coloring represented as full directed color matrix; fixedness checked for every permutation, then averaged",
+  "palettes": [
+    {
+      "q": 0,
+      "t": 0,
+      "independent_brute": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "q": 1,
+      "t": 1,
+      "independent_brute": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "q": 2,
+      "t": 0,
+      "independent_brute": [
+        1,
+        1,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "q": 2,
+      "t": 2,
+      "independent_brute": [
+        1,
+        1,
+        2,
+        4,
+        11
+      ]
+    },
+    {
+      "q": 3,
+      "t": 1,
+      "independent_brute": [
+        1,
+        1,
+        2,
+        7,
+        42
+      ]
+    },
+    {
+      "q": 3,
+      "t": 3,
+      "independent_brute": [
+        1,
+        1,
+        3,
+        10,
+        66
+      ]
+    },
+    {
+      "q": 4,
+      "t": 0,
+      "independent_brute": [
+        1,
+        1,
+        2,
+        12,
+        176
+      ]
+    },
+    {
+      "q": 4,
+      "t": 2,
+      "independent_brute": [
+        1,
+        1,
+        3,
+        16,
+        218
+      ]
+    },
+    {
+      "q": 4,
+      "t": 4,
+      "independent_brute": [
+        1,
+        1,
+        4,
+        20,
+        276
+      ]
+    }
+  ]
+}

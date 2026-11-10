@@ -1,0 +1,943 @@
+{
+  "status": "PASS",
+  "optimized": false,
+  "checks": [
+    {
+      "script": "audit/verify.py",
+      "pass": true,
+      "seconds": 5.674478904998978,
+      "source_sha256": "d6e5d8bc04296a70a589df0fe56b7abc4c9f7a166fa95ead6b8aa665072b733c",
+      "result": {
+        "status": "PASS",
+        "checks": {
+          "divisor exponent integral": 16857,
+          "class size integral": 16857,
+          "Davis terminal integral": 46,
+          "independent Davis 0..45": 46,
+          "precision bound": 8971,
+          "external reference": 77,
+          "horizon consistency": 10,
+          "composite residue": 70,
+          "binary residue": 50,
+          "invalid input rejected": 5,
+          "mod4": 59,
+          "mod8": 58,
+          "n3 exception": 1,
+          "independent SCC recurrence": 18,
+          "independent free action": 18
+        },
+        "reference_max": 76,
+        "seconds": 5.642780139998649
+      }
+    },
+    {
+      "script": "audit/strong_gap_audit.py",
+      "pass": true,
+      "seconds": 1.8966728030009108,
+      "source_sha256": "b518113820b0a381c8af5d43804ceea08e2e1a7eeeb4d44b77d41917ba8b40fe",
+      "result": {
+        "status": "PASS",
+        "method": "difference-set construction; exhaustive permutations of all9 vertices for each of8 cases",
+        "cases": [
+          {
+            "differences": [
+              4,
+              5,
+              6
+            ],
+            "internal_H": 175,
+            "two_cover": 1638,
+            "inflated_H": 2163
+          },
+          {
+            "differences": [
+              3,
+              5,
+              6
+            ],
+            "internal_H": 189,
+            "two_cover": 1638,
+            "inflated_H": 2205
+          },
+          {
+            "differences": [
+              2,
+              4,
+              6
+            ],
+            "internal_H": 175,
+            "two_cover": 1638,
+            "inflated_H": 2163
+          },
+          {
+            "differences": [
+              2,
+              3,
+              6
+            ],
+            "internal_H": 175,
+            "two_cover": 1638,
+            "inflated_H": 2163
+          },
+          {
+            "differences": [
+              1,
+              4,
+              5
+            ],
+            "internal_H": 175,
+            "two_cover": 1638,
+            "inflated_H": 2163
+          },
+          {
+            "differences": [
+              1,
+              3,
+              5
+            ],
+            "internal_H": 175,
+            "two_cover": 1638,
+            "inflated_H": 2163
+          },
+          {
+            "differences": [
+              1,
+              2,
+              4
+            ],
+            "internal_H": 189,
+            "two_cover": 1638,
+            "inflated_H": 2205
+          },
+          {
+            "differences": [
+              1,
+              2,
+              3
+            ],
+            "internal_H": 175,
+            "two_cover": 1638,
+            "inflated_H": 2163
+          }
+        ]
+      }
+    },
+    {
+      "script": "audit/palette_audit.py",
+      "pass": true,
+      "seconds": 0.24222939100036456,
+      "source_sha256": "8a49b245a4f23f23e790392a34b376cb218c4654d7186e6511879a973c89df47",
+      "result": {
+        "status": "PASS",
+        "method": "Every coloring represented as full directed color matrix; fixedness checked for every permutation, then averaged",
+        "palettes": [
+          {
+            "q": 0,
+            "t": 0,
+            "independent_brute": [
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "q": 1,
+            "t": 1,
+            "independent_brute": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "q": 2,
+            "t": 0,
+            "independent_brute": [
+              1,
+              1,
+              1,
+              2,
+              4
+            ]
+          },
+          {
+            "q": 2,
+            "t": 2,
+            "independent_brute": [
+              1,
+              1,
+              2,
+              4,
+              11
+            ]
+          },
+          {
+            "q": 3,
+            "t": 1,
+            "independent_brute": [
+              1,
+              1,
+              2,
+              7,
+              42
+            ]
+          },
+          {
+            "q": 3,
+            "t": 3,
+            "independent_brute": [
+              1,
+              1,
+              3,
+              10,
+              66
+            ]
+          },
+          {
+            "q": 4,
+            "t": 0,
+            "independent_brute": [
+              1,
+              1,
+              2,
+              12,
+              176
+            ]
+          },
+          {
+            "q": 4,
+            "t": 2,
+            "independent_brute": [
+              1,
+              1,
+              3,
+              16,
+              218
+            ]
+          },
+          {
+            "q": 4,
+            "t": 4,
+            "independent_brute": [
+              1,
+              1,
+              4,
+              20,
+              276
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "script": "proof_bridges/verify.py",
+      "pass": true,
+      "seconds": 5.01647389000027,
+      "source_sha256": "2c319154f3f1021992e7a5897bb2d5c0f520c42f30fdb6c12a46eaac7c45024c",
+      "result": {
+        "class_tables": {
+          "1": {
+            "H_histogram": {
+              "1": 1
+            },
+            "SCC_histogram": {
+              "1": 1
+            },
+            "classes": 1,
+            "strong_H_histogram": {
+              "1": 1
+            },
+            "strong_classes": 1
+          },
+          "2": {
+            "H_histogram": {
+              "1": 1
+            },
+            "SCC_histogram": {
+              "2": 1
+            },
+            "classes": 1,
+            "strong_H_histogram": {},
+            "strong_classes": 0
+          },
+          "3": {
+            "H_histogram": {
+              "1": 1,
+              "3": 1
+            },
+            "SCC_histogram": {
+              "1": 1,
+              "3": 1
+            },
+            "classes": 2,
+            "strong_H_histogram": {
+              "3": 1
+            },
+            "strong_classes": 1
+          },
+          "4": {
+            "H_histogram": {
+              "1": 1,
+              "3": 2,
+              "5": 1
+            },
+            "SCC_histogram": {
+              "1": 1,
+              "2": 2,
+              "4": 1
+            },
+            "classes": 4,
+            "strong_H_histogram": {
+              "5": 1
+            },
+            "strong_classes": 1
+          },
+          "5": {
+            "H_histogram": {
+              "1": 1,
+              "3": 3,
+              "5": 2,
+              "9": 2,
+              "11": 1,
+              "13": 1,
+              "15": 2
+            },
+            "SCC_histogram": {
+              "1": 6,
+              "2": 2,
+              "3": 3,
+              "5": 1
+            },
+            "classes": 12,
+            "strong_H_histogram": {
+              "9": 2,
+              "11": 1,
+              "13": 1,
+              "15": 2
+            },
+            "strong_classes": 6
+          },
+          "6": {
+            "H_histogram": {
+              "1": 1,
+              "3": 4,
+              "5": 3,
+              "9": 5,
+              "11": 2,
+              "13": 2,
+              "15": 6,
+              "17": 2,
+              "19": 2,
+              "23": 4,
+              "25": 2,
+              "27": 2,
+              "29": 4,
+              "31": 2,
+              "33": 5,
+              "37": 5,
+              "41": 1,
+              "43": 2,
+              "45": 2
+            },
+            "SCC_histogram": {
+              "1": 35,
+              "2": 13,
+              "3": 3,
+              "4": 4,
+              "6": 1
+            },
+            "classes": 56,
+            "strong_H_histogram": {
+              "15": 2,
+              "17": 2,
+              "19": 2,
+              "23": 4,
+              "25": 2,
+              "27": 2,
+              "29": 4,
+              "31": 2,
+              "33": 5,
+              "37": 5,
+              "41": 1,
+              "43": 2,
+              "45": 2
+            },
+            "strong_classes": 35
+          }
+        },
+        "cyclic_minima": {
+          "3": {
+            "histogram": {
+              "3": 2
+            },
+            "minimum": 3
+          },
+          "5": {
+            "histogram": {
+              "15": 4
+            },
+            "minimum": 15
+          },
+          "7": {
+            "histogram": {
+              "175": 6,
+              "189": 2
+            },
+            "minimum": 175
+          }
+        },
+        "divisor_truncation_checks": 319,
+        "scope": "all labelled tournaments and all permutation cycle types through order 6",
+        "status": "PASS",
+        "strong_labelled": [
+          0,
+          1,
+          0,
+          2,
+          24,
+          544,
+          22320,
+          1677488,
+          236522496,
+          64026088576,
+          33832910196480,
+          35262092417856512,
+          72926863133112198144,
+          300318571786159783496704,
+          2467430973323656141183549440,
+          40490606137578335674252914280448,
+          1327930515100058029678730655939526656,
+          87067103206776565199631396698426697711616,
+          11414845905965254129337512134389529143282565120,
+          2992721499742351209553694408894900427865008094380032,
+          1569155711970975590573601228539262259998188391897501794304
+        ],
+        "strong_unlabelled": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          6,
+          35,
+          353,
+          6008,
+          178133,
+          9355949,
+          884464590,
+          152310149735,
+          48234782263293,
+          28304491788158056,
+          30964247546702883729,
+          63468402142317299907481,
+          244785748571033855024746438,
+          1782909084196274276970660380187,
+          24602074618353524534591008760307017,
+          644972859058440070594348449839991522840
+        ],
+        "unlabelled": [
+          1,
+          1,
+          1,
+          2,
+          4,
+          12,
+          56,
+          456,
+          6880,
+          191536,
+          9733056,
+          903753248,
+          154108311168,
+          48542114686912,
+          28401423719122304,
+          31021002160355166848,
+          63530415842308265100288,
+          244912778438520759443245824,
+          1783398846284777975419600287232,
+          24605641171260376770598003978281472,
+          645022068557873570931850526424042500096
+        ]
+      }
+    },
+    {
+      "script": "proof_bridges/prime_gap.py",
+      "pass": true,
+      "seconds": 0.3079896760009433,
+      "source_sha256": "8ef55048143509ffa13b0f69bc64312d61100f8d5060e7100495fcb946829f98",
+      "result": {
+        "prime_action_gap": {
+          "3": {
+            "cases": [
+              {
+                "F2": 6,
+                "H": 3,
+                "inflation_H": 15,
+                "mask": 5
+              },
+              {
+                "F2": 6,
+                "H": 3,
+                "inflation_H": 15,
+                "mask": 2
+              }
+            ],
+            "gamma": 15,
+            "mu": 3,
+            "multi_orbit_lower": 15,
+            "nontransitive_action_lower": 15
+          },
+          "5": {
+            "cases": [
+              {
+                "F2": 90,
+                "H": 15,
+                "inflation_H": 135,
+                "mask": 947
+              },
+              {
+                "F2": 90,
+                "H": 15,
+                "inflation_H": 135,
+                "mask": 725
+              },
+              {
+                "F2": 90,
+                "H": 15,
+                "inflation_H": 135,
+                "mask": 298
+              },
+              {
+                "F2": 90,
+                "H": 15,
+                "inflation_H": 135,
+                "mask": 76
+              }
+            ],
+            "gamma": 135,
+            "mu": 15,
+            "multi_orbit_lower": 235,
+            "nontransitive_action_lower": 135
+          },
+          "7": {
+            "cases": [
+              {
+                "F2": 1638,
+                "H": 175,
+                "inflation_H": 2163,
+                "mask": 2079175
+              },
+              {
+                "F2": 1638,
+                "H": 189,
+                "inflation_H": 2205,
+                "mask": 1956555
+              },
+              {
+                "F2": 1638,
+                "H": 175,
+                "inflation_H": 2163,
+                "mask": 1486165
+              },
+              {
+                "F2": 1638,
+                "H": 175,
+                "inflation_H": 2163,
+                "mask": 1363545
+              },
+              {
+                "F2": 1638,
+                "H": 175,
+                "inflation_H": 2163,
+                "mask": 733606
+              },
+              {
+                "F2": 1638,
+                "H": 175,
+                "inflation_H": 2163,
+                "mask": 610986
+              },
+              {
+                "F2": 1638,
+                "H": 189,
+                "inflation_H": 2205,
+                "mask": 140596
+              },
+              {
+                "F2": 1638,
+                "H": 175,
+                "inflation_H": 2163,
+                "mask": 17976
+              }
+            ],
+            "gamma": 2163,
+            "mu": 175,
+            "multi_orbit_lower": 30639,
+            "nontransitive_action_lower": 2163
+          }
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "script": "proof_bridges/c7_low_fibres.py",
+      "pass": true,
+      "seconds": 0.6152346510007192,
+      "source_sha256": "30daa21c44b83e8751d4c68b59712f6b58a3c997ed8b8ee31124c1800966d162",
+      "result": {
+        "scope": "All strong tournaments with a specified C7 action and H<225, using the cited all-order Busch floor to exclude n>=11.",
+        "status": "PASS",
+        "table": {
+          "7": {
+            "cycle_type": [
+              7
+            ],
+            "fixed_labelled_count": 8,
+            "strong_H_below_225": {
+              "175": 6,
+              "189": 2
+            },
+            "strong_count": 8,
+            "strong_minimum": 175
+          },
+          "8": {
+            "cycle_type": [
+              1,
+              7
+            ],
+            "fixed_labelled_count": 16,
+            "strong_H_below_225": {},
+            "strong_count": 0,
+            "strong_minimum": null
+          },
+          "9": {
+            "cycle_type": [
+              1,
+              1,
+              7
+            ],
+            "fixed_labelled_count": 64,
+            "strong_H_below_225": {},
+            "strong_count": 16,
+            "strong_minimum": 2163
+          },
+          "10": {
+            "cycle_type": [
+              1,
+              1,
+              1,
+              7
+            ],
+            "fixed_labelled_count": 512,
+            "strong_H_below_225": {},
+            "strong_count": 192,
+            "strong_minimum": 4151
+          }
+        }
+      }
+    },
+    {
+      "script": "precision/precision.py",
+      "pass": true,
+      "seconds": 0.32304098199892906,
+      "source_sha256": "1fcfe011e4993f7abbea0acc63cec302cce9ac2dc64fcffa988af5c3118892b5",
+      "result": {
+        "scope": "odd n; U_n=A000568(n)/2^((n-1)/2); exact residues, not full counts",
+        "full_count_crosschecks_through": 51,
+        "precision_comparisons": 312,
+        "max_checked_precision_bits": 12,
+        "full_check_seconds": 0.22767641599966737,
+        "cutoff_examples": {
+          "1": [
+            1
+          ],
+          "2": [
+            1,
+            3
+          ],
+          "3": [
+            1,
+            3
+          ],
+          "5": [
+            1,
+            3
+          ],
+          "6": [
+            1,
+            3,
+            5
+          ],
+          "14": [
+            1,
+            3,
+            5
+          ],
+          "15": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "32": [
+            1,
+            3,
+            5,
+            7,
+            9
+          ],
+          "64": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13
+          ]
+        },
+        "examples": [
+          {
+            "n": 1,
+            "u_mod_8": 1,
+            "v2_a": 0
+          },
+          {
+            "n": 3,
+            "u_mod_8": 1,
+            "v2_a": 1
+          },
+          {
+            "n": 5,
+            "u_mod_8": 3,
+            "v2_a": 2
+          },
+          {
+            "n": 7,
+            "u_mod_8": 1,
+            "v2_a": 3
+          },
+          {
+            "n": 9,
+            "u_mod_8": 3,
+            "v2_a": 4
+          },
+          {
+            "n": 11,
+            "u_mod_8": 1,
+            "v2_a": 5
+          },
+          {
+            "n": 13,
+            "u_mod_8": 7,
+            "v2_a": 6
+          },
+          {
+            "n": 15,
+            "u_mod_8": 5,
+            "v2_a": 7
+          },
+          {
+            "n": 17,
+            "u_mod_8": 3,
+            "v2_a": 8
+          },
+          {
+            "n": 19,
+            "u_mod_8": 1,
+            "v2_a": 9
+          },
+          {
+            "n": 21,
+            "u_mod_8": 3,
+            "v2_a": 10
+          },
+          {
+            "n": 23,
+            "u_mod_8": 1,
+            "v2_a": 11
+          },
+          {
+            "n": 25,
+            "u_mod_8": 7,
+            "v2_a": 12
+          },
+          {
+            "n": 27,
+            "u_mod_8": 5,
+            "v2_a": 13
+          },
+          {
+            "n": 29,
+            "u_mod_8": 7,
+            "v2_a": 14
+          },
+          {
+            "n": 31,
+            "u_mod_8": 1,
+            "v2_a": 15
+          },
+          {
+            "n": 33,
+            "u_mod_8": 3,
+            "v2_a": 16
+          },
+          {
+            "n": 35,
+            "u_mod_8": 1,
+            "v2_a": 17
+          },
+          {
+            "n": 37,
+            "u_mod_8": 7,
+            "v2_a": 18
+          },
+          {
+            "n": 39,
+            "u_mod_8": 1,
+            "v2_a": 19
+          },
+          {
+            "n": 41,
+            "u_mod_8": 3,
+            "v2_a": 20
+          },
+          {
+            "n": 43,
+            "u_mod_8": 1,
+            "v2_a": 21
+          },
+          {
+            "n": 45,
+            "u_mod_8": 3,
+            "v2_a": 22
+          },
+          {
+            "n": 47,
+            "u_mod_8": 1,
+            "v2_a": 23
+          },
+          {
+            "n": 49,
+            "u_mod_8": 7,
+            "v2_a": 24
+          },
+          {
+            "n": 51,
+            "u_mod_8": 1,
+            "v2_a": 25
+          }
+        ],
+        "large_exact_residues": [
+          {
+            "n": 101,
+            "u_mod_8": 3,
+            "seconds": 0.00047447200086025987,
+            "visited_partitions": 226,
+            "retained_partitions": 108,
+            "cycle_counts": [
+              1,
+              3
+            ],
+            "precision_bits": 3
+          },
+          {
+            "n": 301,
+            "u_mod_8": 7,
+            "seconds": 0.004316522999943118,
+            "visited_partitions": 1926,
+            "retained_partitions": 975,
+            "cycle_counts": [
+              1,
+              3
+            ],
+            "precision_bits": 3
+          },
+          {
+            "n": 1001,
+            "u_mod_8": 3,
+            "seconds": 0.05178893699849141,
+            "visited_partitions": 21001,
+            "retained_partitions": 11263,
+            "cycle_counts": [
+              1,
+              3
+            ],
+            "precision_bits": 3
+          }
+        ],
+        "huge_formula_example": {
+          "n": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+          "u_mod_4": 3
+        },
+        "hostile_controls": {
+          "n1_formula_fails": true,
+          "n3_naive_mod8": 5,
+          "n3_actual_mod8": 1,
+          "domain_rejections": 4
+        }
+      }
+    },
+    {
+      "script": "verify_cli.py",
+      "pass": true,
+      "seconds": 0.39216194199980237,
+      "source_sha256": "5739991cd5d6b82054bc83830f46e9eb594f536f4db0f873a1c501d9a32d44b5",
+      "result": {
+        "large_decimal_serialization_through": 200,
+        "last_term_digits": 5991,
+        "status": "PASS",
+        "sequence_checks": [
+          {
+            "sequence": "A000568",
+            "source": "https://oeis.org/A000568",
+            "offset": 0,
+            "through": 10,
+            "pass": true
+          },
+          {
+            "sequence": "A051337",
+            "source": "https://oeis.org/A051337",
+            "offset": 0,
+            "through": 10,
+            "pass": true
+          },
+          {
+            "sequence": "A054946",
+            "source": "https://oeis.org/A054946",
+            "offset": 1,
+            "through": 10,
+            "pass": true
+          },
+          {
+            "sequence": "A000088",
+            "source": "https://oeis.org/A000088",
+            "offset": 0,
+            "through": 10,
+            "pass": true
+          },
+          {
+            "sequence": "A000273",
+            "source": "https://oeis.org/A000273",
+            "offset": 0,
+            "through": 10,
+            "pass": true
+          },
+          {
+            "sequence": "A001174",
+            "source": "https://oeis.org/A001174",
+            "offset": 1,
+            "through": 10,
+            "pass": true
+          }
+        ],
+        "empty_horizon_checks": 6,
+        "residue_prefix_through": 20
+      }
+    }
+  ]
+}

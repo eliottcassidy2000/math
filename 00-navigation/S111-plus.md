@@ -127,3 +127,5 @@ individual session routes preserve scope and remaining open obligations.
 - [S236](S236.md): exact ternary orbit cones, sharp growth and all-word tower-ray rigidity; audited; Chan-Pak OPEN.
 
 - [S238](S238.md): audited planar-group inheritance, sharp cyclic orbit costs, equivariant cycle carriers and positive-word commutator barrier; Chan-Pak OPEN.
+
+- [S239](S239.md): COMPLETE; faster integral sequence engines, exact precision congruences, value-refined SCC calculus and the sharp2163 strong sevenfold-symmetry threshold. Chan-Pak OPEN.

@@ -204,6 +204,8 @@ def main():
         lower=1
         for d in part: lower*=minima[d]['minimum'] if d>1 else 1
         require(min(c)>=lower,('cyclic profile floor',part))
+        if len(part)>=2 and G[part]:
+            require(min(G[part])>=lower+2*lcm(*part),('strict strong profile floor',part))
     output.update(class_tables=class_tables,divisor_truncation_checks=checks,unlabelled=A,strong_unlabelled=S,strong_labelled=LS,cyclic_minima=minima,status='PASS')
     print(json.dumps(output,indent=2,sort_keys=True))
 
