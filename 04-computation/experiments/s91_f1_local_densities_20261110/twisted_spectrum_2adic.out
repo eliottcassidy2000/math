@@ -1,0 +1,17 @@
+modulus 2^j: brute-force check at n = 18, then rates rho(T_k)/2 for odd k (even k belong to 2^(j-1))
+  j = 1: max over odd k of rho/2 = 0.707107 (k = 1), min = 0.707107, max over all k != 0 = 0.707107, brute-force error 1.6e-11
+  j = 2: max over odd k of rho/2 = 0.707107 (k = 1), min = 0.707107, max over all k != 0 = 0.707107, brute-force error 1.6e-11
+  j = 3: max over odd k of rho/2 = 0.707107 (k = 5), min = 0.707107, max over all k != 0 = 0.707107, brute-force error 1.6e-11
+  j = 4: max over odd k of rho/2 = 0.707107 (k = 5), min = 0.707107, max over all k != 0 = 0.707107, brute-force error 1.6e-11
+  j = 5: max over odd k of rho/2 = 0.707107 (k = 31), min = 0.707107, max over all k != 0 = 0.707107, brute-force error 1.6e-11
+  j = 6: max over odd k of rho/2 = 0.707107 (k = 41), min = 0.707107, max over all k != 0 = 0.707107, brute-force error 1.6e-11
+joint law of (q mod 8, h mod 8), h < 2^18: max relative deviation from uniform 0.0439
+  F1 box [0, 2^11)^2, s = 0, odd classes mod  8: max relative deviation 0.0011
+  F1 box [0, 2^11)^2, s = 0, odd classes mod 16: max relative deviation 0.0031
+  F1 box [0, 2^11)^2, s = 1, odd classes mod  8: max relative deviation 0.0017
+  F1 box [0, 2^11)^2, s = 1, odd classes mod 16: max relative deviation 0.0019
+  F1 box [0, 2^11)^2, s = 2, odd classes mod  8: max relative deviation 0.0013
+  F1 box [0, 2^11)^2, s = 2, odd classes mod 16: max relative deviation 0.0014
+  F1 box [0, 2^11)^2, s = 3, odd classes mod  8: max relative deviation 0.0013
+  F1 box [0, 2^11)^2, s = 3, odd classes mod 16: max relative deviation 0.0033
+ALL CHECKS PASSED
