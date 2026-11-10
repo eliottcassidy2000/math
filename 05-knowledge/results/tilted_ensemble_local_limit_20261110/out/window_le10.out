@@ -56,4 +56,4 @@ full-from ratio n0(h)/h for 237 <= h <= 1023: min 1.765  median 2.234  max 2.933
 least extension ratio n_min(h)/h (over h>=237): min 1.5058
 
 out-degree-one extensions only (h >= 237): density in [3h,5h): 0.7993   in [2h,3h): 0.8641
-all extensions (h >= 237): density in [2h,3h): 0.98927   in [3h/2,2h): 0.7423
+all extensions (h >= 237): density in [2h,3h): 0.98927   in [3h/2,2h): 0.7446

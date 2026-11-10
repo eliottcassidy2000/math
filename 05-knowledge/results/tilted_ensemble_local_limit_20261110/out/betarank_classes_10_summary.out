@@ -1,0 +1,10 @@
+order 10 (fast mode: rank of beta_R only), all 9,733,056 tournament classes (gentourng 10, eight residue classes r/8):
+  parity failures (mu odd): 0 ; least mu: 2
+  rank  2:        7   (0.0000007)
+  rank  4:      668   (0.0000686)
+  rank  6:   210562   (0.0216337)
+  rank  8:  5444657   (0.5593985)
+  rank 10:  4077162   (0.4188985)
+uniformly random alternating 10 x 10 matrix over F_2: rank 10: 0.41970 ; rank 8: 0.55905 ; rank 6: 0.02121 ; rank 4: 0.00004
+pre-registered P1 (PREREGISTRATION.md): rank 10 in [0.405, 0.430]: CONFIRMED ; rank 8 in [0.550, 0.575]: CONFIRMED ; rank <= 6 in [0.020, 0.032]: CONFIRMED (0.02170)
+pre-registered P2 (control): no odd mu, least mu = 2: CONFIRMED

@@ -41,7 +41,7 @@ def dens(T, lo, hi, hmin):
     tot = pres = 0
     for h, m in T.items():
         if h >= hmin:
-            n = int(lo*h); n += (n % 2 == 0)
+            n = -int(-lo*h // 1); n += (n % 2 == 0)      # least odd integer >= lo*h
             while n < hi*h:
                 k = (n-h)//2
                 if k < KM: tot += 1; pres += m >> k & 1

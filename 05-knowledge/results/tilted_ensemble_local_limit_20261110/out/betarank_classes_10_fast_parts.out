@@ -1,0 +1,54 @@
+order 10 (fast mode: rank only; all classes are listed in the second column): classes 1070860, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 1 with bias 2^-1
+  rank 4: 0 classes with zero bias, 77 with bias 2^-2
+  rank 6: 0 classes with zero bias, 22899 with bias 2^-3
+  rank 8: 0 classes with zero bias, 597828 with bias 2^-4
+  rank 10: 0 classes with zero bias, 450055 with bias 2^-5
+  mean |bias| over classes = 0.000000 ; signed mean (even minus odd)/2^m = 0.000000
+order 10 (fast mode: rank only; all classes are listed in the second column): classes 1077759, parity failures 0, prediction failures 0, min mu 4
+  rank 2: 0 classes with zero bias, 1 with bias 2^-1
+  rank 4: 0 classes with zero bias, 73 with bias 2^-2
+  rank 6: 0 classes with zero bias, 23363 with bias 2^-3
+  rank 8: 0 classes with zero bias, 603239 with bias 2^-4
+  rank 10: 0 classes with zero bias, 451083 with bias 2^-5
+  mean |bias| over classes = 0.000000 ; signed mean (even minus odd)/2^m = 0.000000
+order 10 (fast mode: rank only; all classes are listed in the second column): classes 971060, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 1 with bias 2^-1
+  rank 4: 0 classes with zero bias, 68 with bias 2^-2
+  rank 6: 0 classes with zero bias, 21010 with bias 2^-3
+  rank 8: 0 classes with zero bias, 543298 with bias 2^-4
+  rank 10: 0 classes with zero bias, 406683 with bias 2^-5
+  mean |bias| over classes = 0.000000 ; signed mean (even minus odd)/2^m = 0.000000
+order 10 (fast mode: rank only; all classes are listed in the second column): classes 1068891, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 2 with bias 2^-1
+  rank 4: 0 classes with zero bias, 101 with bias 2^-2
+  rank 6: 0 classes with zero bias, 23448 with bias 2^-3
+  rank 8: 0 classes with zero bias, 598946 with bias 2^-4
+  rank 10: 0 classes with zero bias, 446394 with bias 2^-5
+  mean |bias| over classes = 0.000000 ; signed mean (even minus odd)/2^m = 0.000000
+order 10 (fast mode: rank only; all classes are listed in the second column): classes 1471431, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 1 with bias 2^-1
+  rank 4: 0 classes with zero bias, 93 with bias 2^-2
+  rank 6: 0 classes with zero bias, 32098 with bias 2^-3
+  rank 8: 0 classes with zero bias, 822759 with bias 2^-4
+  rank 10: 0 classes with zero bias, 616480 with bias 2^-5
+  mean |bias| over classes = 0.000000 ; signed mean (even minus odd)/2^m = 0.000000
+order 10 (fast mode: rank only; all classes are listed in the second column): classes 1351281, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 1 with bias 2^-1
+  rank 4: 0 classes with zero bias, 79 with bias 2^-2
+  rank 6: 0 classes with zero bias, 29266 with bias 2^-3
+  rank 8: 0 classes with zero bias, 755571 with bias 2^-4
+  rank 10: 0 classes with zero bias, 566364 with bias 2^-5
+  mean |bias| over classes = 0.000000 ; signed mean (even minus odd)/2^m = 0.000000
+order 10 (fast mode: rank only; all classes are listed in the second column): classes 1317917, parity failures 0, prediction failures 0, min mu 2
+  rank 4: 0 classes with zero bias, 82 with bias 2^-2
+  rank 6: 0 classes with zero bias, 28338 with bias 2^-3
+  rank 8: 0 classes with zero bias, 737651 with bias 2^-4
+  rank 10: 0 classes with zero bias, 551846 with bias 2^-5
+  mean |bias| over classes = 0.000000 ; signed mean (even minus odd)/2^m = 0.000000
+order 10 (fast mode: rank only; all classes are listed in the second column): classes 1403857, parity failures 0, prediction failures 0, min mu 6
+  rank 4: 0 classes with zero bias, 95 with bias 2^-2
+  rank 6: 0 classes with zero bias, 30140 with bias 2^-3
+  rank 8: 0 classes with zero bias, 785365 with bias 2^-4
+  rank 10: 0 classes with zero bias, 588257 with bias 2^-5
+  mean |bias| over classes = 0.000000 ; signed mean (even minus odd)/2^m = 0.000000
