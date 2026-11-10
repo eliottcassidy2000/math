@@ -1,0 +1,78 @@
+labelled brute force (marked pairs {0,1},{2,3},...; route 1 = explicit odd-cycle count, route 2 = product of mod-4 signs over transversal deletions):
+  N = 2: pointwise mismatches between the routes: 0 ; B(2,0) = 1 ; B(1,1) = 1
+  N = 3: pointwise mismatches between the routes: 0 ; B(3,0) = 1/2 ; B(2,1) = 1
+  N = 4: pointwise mismatches between the routes: 0 ; B(4,0) = 1/2 ; B(3,1) = 1/4 ; B(2,2) = 1
+  N = 5: pointwise mismatches between the routes: 0 ; B(5,0) = 13/32 ; B(4,1) = 1/4 ; B(3,2) = 1/8
+  N = 6: pointwise mismatches between the routes: 0 ; B(6,0) = 1/4 ; B(5,1) = 23/128 ; B(4,2) = 1/8 ; B(3,3) = 1/8
+  N = 7: pointwise mismatches between the routes: 0 ; B(7,0) = 853/8192 ; B(6,1) = 21/256 ; B(5,2) = 85/1024 ; B(4,3) = 1/8
+class representatives with weights N!/|Aut| (all placements of the marked pairs, route 2):
+  N = 2: 1 classes, weight = 2^C(N,2) ; route 1 compared on 2 placements, mismatches 0 ; D_2 = 1 ; D_1 (from deletions) = 1
+    B(2,0) = 1 = 1.000000000
+    B(1,1) = 1 = 1.000000000
+  N = 3: 2 classes, weight = 2^C(N,2) ; route 1 compared on 8 placements, mismatches 0 ; D_3 = 1/2 ; D_2 (from deletions) = 1
+    B(3,0) = 1/2 = 0.500000000
+    B(2,1) = 1 = 1.000000000
+  N = 4: 4 classes, weight = 2^C(N,2) ; route 1 compared on 40 placements, mismatches 0 ; D_4 = 1/2 ; D_3 (from deletions) = 1/2
+    B(4,0) = 1/2 = 0.500000000
+    B(3,1) = 1/4 = 0.250000000
+    B(2,2) = 1 = 1.000000000
+  N = 5: 12 classes, weight = 2^C(N,2) ; route 1 compared on 312 placements, mismatches 0 ; D_5 = 13/32 ; D_4 (from deletions) = 1/2
+    B(5,0) = 13/32 = 0.406250000
+    B(4,1) = 1/4 = 0.250000000
+    B(3,2) = 1/8 = 0.125000000
+  N = 6: 56 classes, weight = 2^C(N,2) ; route 1 compared on 4256 placements, mismatches 0 ; D_6 = 1/4 ; D_5 (from deletions) = 13/32
+    B(6,0) = 1/4 = 0.250000000
+    B(5,1) = 23/128 = 0.179687500
+    B(4,2) = 1/8 = 0.125000000
+    B(3,3) = 1/8 = 0.125000000
+  N = 7: 456 classes, weight = 2^C(N,2) ; route 1 compared on 105792 placements, mismatches 0 ; D_7 = 853/8192 ; D_6 (from deletions) = 1/4
+    B(7,0) = 853/8192 = 0.104125977
+    B(6,1) = 21/256 = 0.082031250
+    B(5,2) = 85/1024 = 0.083007812
+    B(4,3) = 1/8 = 0.125000000
+  N = 8: 6880 classes, weight = 2^C(N,2) ; route 1 compared on 5256320 placements, mismatches 0 ; D_8 = 1361/32768 ; D_7 (from deletions) = 853/8192
+    B(8,0) = 1361/32768 = 0.041534424
+    B(7,1) = 1621/65536 = 0.024734497
+    B(6,2) = 161/4096 = 0.039306641
+    B(5,3) = 221/4096 = 0.053955078
+    B(4,4) = 1 = 1.000000000
+  N = 9: 191536 classes, weight = 2^C(N,2) ; route 1 compared on 7842119 placements, mismatches 0 ; D_9 = 63103/8388608 ; D_8 (from deletions) = 1361/32768
+    B(9,0) = 63103/8388608 = 0.007522464
+    B(8,1) = 57619/4194304 = 0.013737440
+    B(7,2) = 19581/1048576 = 0.018673897
+    B(6,3) = 1011/32768 = 0.030853271
+    B(5,4) = 6971/131072 = 0.053184509
+  N = 10: 9733056 classes, weight = 2^C(N,2) ; route 1 compared on 0 placements, mismatches 0 ; D_10 = 650471/268435456 ; D_9 (from deletions) = 63103/8388608
+    B(10,0) = 650471/268435456 = 0.002423193
+    B(9,1) = 1304557/268435456 = 0.004859854
+    B(8,2) = 156235/16777216 = 0.009312332
+    B(7,3) = 237873/16777216 = 0.014178336
+    B(6,4) = 6971/131072 = 0.053184509
+    B(5,5) = 6971/131072 = 0.053184509
+chain B(n,k)^2 <= B(n,k+1) (0 <= k <= n-1) and |D_n|^(2^k) <= B(n,k):
+    n = 2, k = 0: B(n,k)^2 = 1.000e+00 <= B(n,k+1) = 1.000e+00 : True  (equality)
+    n = 2, k = 1: B(n,k)^2 = 1.000e+00 <= B(n,k+1) = 1.000e+00 : True  (equality)
+    n = 3, k = 0: B(n,k)^2 = 2.500e-01 <= B(n,k+1) = 2.500e-01 : True  (equality)
+    n = 3, k = 1: B(n,k)^2 = 6.250e-02 <= B(n,k+1) = 1.250e-01 : True
+    n = 3, k = 2: B(n,k)^2 = 1.562e-02 <= B(n,k+1) = 1.250e-01 : True
+    n = 4, k = 0: B(n,k)^2 = 2.500e-01 <= B(n,k+1) = 2.500e-01 : True  (equality)
+    n = 4, k = 1: B(n,k)^2 = 6.250e-02 <= B(n,k+1) = 1.250e-01 : True
+    n = 4, k = 2: B(n,k)^2 = 1.562e-02 <= B(n,k+1) = 1.250e-01 : True
+    n = 4, k = 3: B(n,k)^2 = 1.562e-02 <= B(n,k+1) = 1.000e+00 : True
+    n = 5, k = 0: B(n,k)^2 = 1.650e-01 <= B(n,k+1) = 1.797e-01 : True
+    n = 5, k = 1: B(n,k)^2 = 3.229e-02 <= B(n,k+1) = 8.301e-02 : True
+    n = 5, k = 2: B(n,k)^2 = 6.890e-03 <= B(n,k+1) = 5.396e-02 : True
+    n = 5, k = 3: B(n,k)^2 = 2.911e-03 <= B(n,k+1) = 5.318e-02 : True
+    n = 5, k = 4: B(n,k)^2 = 2.829e-03 <= B(n,k+1) = 5.318e-02 : True
+    n = 6, k = 0: B(n,k)^2 = 6.250e-02 <= B(n,k+1) = 8.203e-02 : True
+    n = 6, k = 1: B(n,k)^2 = 6.729e-03 <= B(n,k+1) = 3.931e-02 : True
+    n = 6, k = 2: B(n,k)^2 = 1.545e-03 <= B(n,k+1) = 3.085e-02 : True
+    n = 6, k = 3: B(n,k)^2 = 9.519e-04 <= B(n,k+1) = 5.318e-02 : True
+    n = 7, k = 0: B(n,k)^2 = 1.084e-02 <= B(n,k+1) = 2.473e-02 : True
+    n = 7, k = 1: B(n,k)^2 = 6.118e-04 <= B(n,k+1) = 1.867e-02 : True
+    n = 7, k = 2: B(n,k)^2 = 3.487e-04 <= B(n,k+1) = 1.418e-02 : True
+    n = 8, k = 0: B(n,k)^2 = 1.725e-03 <= B(n,k+1) = 1.374e-02 : True
+    n = 8, k = 1: B(n,k)^2 = 1.887e-04 <= B(n,k+1) = 9.312e-03 : True
+    n = 9, k = 0: B(n,k)^2 = 5.659e-05 <= B(n,k+1) = 4.860e-03 : True
+ALL CHAIN INEQUALITIES HOLD
+deletion-pair values B(m+1, 1) = E_R[b_R^2] at order m: {0: '1', 1: '1', 2: '1/4', 3: '1/4', 4: '23/128', 5: '21/256', 6: '1621/65536', 7: '57619/4194304', 8: '1304557/268435456'}

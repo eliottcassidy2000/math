@@ -1,0 +1,10 @@
+m 2 all tournaments 2 violations 0 affine dim beta 0 (C(m,2)-1 = 0) affine dim (ell,beta) 1 (m+C(m,2)-2 = 1)
+m 3 all tournaments 8 violations 0 affine dim beta 0 (C(m,2)-1 = 2) affine dim (ell,beta) 2 (m+C(m,2)-2 = 4)
+m 4 all tournaments 64 violations 0 affine dim beta 5 (C(m,2)-1 = 5) affine dim (ell,beta) 8 (m+C(m,2)-2 = 8)
+m 5 all tournaments 1024 violations 0 affine dim beta 9 (C(m,2)-1 = 9) affine dim (ell,beta) 13 (m+C(m,2)-2 = 13)
+m 6 all tournaments 32768 violations 0 affine dim beta 14 (C(m,2)-1 = 14) affine dim (ell,beta) 19 (m+C(m,2)-2 = 19)
+m 7 all tournaments 2097152 violations 0 affine dim beta 20 (C(m,2)-1 = 20) affine dim (ell,beta) 26 (m+C(m,2)-2 = 26)
+m 8 random tournaments 400 violations 0 affine dim beta 27 (C(m,2)-1 = 27) affine dim (ell,beta) 34 (m+C(m,2)-2 = 34) full after 37 tournaments
+m 9 random tournaments 400 violations 0 affine dim beta 35 (C(m,2)-1 = 35) affine dim (ell,beta) 43 (m+C(m,2)-2 = 43) full after 50 tournaments
+m 10 random tournaments 400 violations 0 affine dim beta 44 (C(m,2)-1 = 44) affine dim (ell,beta) 53 (m+C(m,2)-2 = 53) full after 54 tournaments
+m 11 random tournaments 400 violations 0 affine dim beta 54 (C(m,2)-1 = 54) affine dim (ell,beta) 64 (m+C(m,2)-2 = 64) full after 65 tournaments

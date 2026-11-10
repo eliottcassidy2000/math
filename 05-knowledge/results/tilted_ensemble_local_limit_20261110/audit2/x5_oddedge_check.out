@@ -1,0 +1,35 @@
+closed forms N(m,2s), S(m,2s) against brute force over all graphs, m = [2, 3, 4, 5, 6, 7, 8] : AGREE
+
+ m | odd-edge law (rank: prob) | unconditioned | max abs difference over rank classes
+ 2 | 2: 1.0000000 | 2: 0.5000000  0: 0.5000000 | 5.000e-01 (= 1/2)
+ 3 | 2: 1.0000000 | 2: 0.8750000  0: 0.1250000 | 1.250e-01 (= 1/8)
+ 4 | 4: 0.3750000  2: 0.6250000 | 4: 0.4375000  2: 0.5468750  0: 0.0156250 | 7.812e-02 (= 5/64)
+ 5 | 4: 0.8437500  2: 0.1562500 | 4: 0.8476562  2: 0.1513672  0: 0.0009766 | 4.883e-03 (= 5/1024)
+ 6 | 6: 0.4257812  4: 0.5537109  2: 0.0205078 | 6: 0.4238281  4: 0.5562744  2: 0.0198669  0: 0.0000305 | 2.563e-03 (= 21/8192)
+ 7 | 6: 0.8410645  4: 0.1576538  2: 0.0012817 | 6: 0.8410339  4: 0.1576939  2: 0.0012717  0: 0.0000005 | 4.005e-05 (= 21/524288)
+ 8 | 8: 0.4205017  6: 0.5585194  4: 0.0209384  2: 0.0000405 | 8: 0.4205170  6: 0.5584991  4: 0.0209437  2: 0.0000402  0: 0.0000000 | 2.027e-05 (= 85/4194304)
+ 9 | 8: 0.8393912  6: 0.1592596  4: 0.0013485  2: 0.0000006 | 8: 0.8393913  6: 0.1592595  4: 0.0013486  2: 0.0000006  0: 0.0000000 | 7.916e-08 (= 85/1073741824)
+10 | 10: 0.4196957  8: 0.5590477  6: 0.0212139  4: 0.0000428  2: 0.0000000 | 10: 0.4196956  8: 0.5590477  6: 0.0212139  4: 0.0000428  2: 0.0000000  0: 0.0000000 | 3.970e-08 (= 341/8589934592)
+11 | 10: 0.8389814  8: 0.1596499  6: 0.0013680  4: 0.0000007  2: 0.0000000 | 10: 0.8389814  8: 0.1596499  6: 0.0013680  4: 0.0000007  2: 0.0000000  0: 0.0000000 | 3.877e-11 (= 341/8796093022208)
+12 | 12: 0.4194907  10: 0.5591844  8: 0.0212815  6: 0.0000434  4: 0.0000000  2: 0.0000000 | 12: 0.4194907  10: 0.5591844  8: 0.0212815  6: 0.0000434  4: 0.0000000  2: 0.0000000  0: 0.0000000 | 1.940e-11 (= 1365/70368744177664)
+
+max over 8 <= m <= 60 of the largest difference: 2.0266e-05 at m = 8 ; < 3e-5 : True
+largest difference at m = 7: 4.0054e-05 ; at m = 6: 2.5635e-03
+bound |difference| <= 1.46 * 2^(-floor(m/2)^2) for 2 <= m <= 60: True
+exact odd-edge laws at m = 4, 5, 6: {4: {2: '5/8', 4: '3/8'}, 5: {2: '5/32', 4: '27/32'}, 6: {2: '21/1024', 4: '567/1024', 6: '109/256'}}
+
+packet file oddedge_model.out: 70 printed probabilities (odd-edge and unconditioned, m = 2..11) compared with the closed forms to 7 decimals: 0 disagreements
+
+order 2 (direct): labelled rank law of beta_R = {2: '1'} ; odd-edge law = {2: '1'} ; EQUAL: True ; total variation 0.000000
+order 2 (labelled): labelled rank law of beta_R = {2: '1'} ; odd-edge law = {2: '1'} ; EQUAL: True ; total variation 0.000000
+order 3 (direct): labelled rank law of beta_R = {2: '1'} ; odd-edge law = {2: '1'} ; EQUAL: True ; total variation 0.000000
+order 3 (labelled): labelled rank law of beta_R = {2: '1'} ; odd-edge law = {2: '1'} ; EQUAL: True ; total variation 0.000000
+order 4 (direct): labelled rank law of beta_R = {2: '5/8', 4: '3/8'} ; odd-edge law = {2: '5/8', 4: '3/8'} ; EQUAL: True ; total variation 0.000000
+order 4 (labelled): labelled rank law of beta_R = {2: '5/8', 4: '3/8'} ; odd-edge law = {2: '5/8', 4: '3/8'} ; EQUAL: True ; total variation 0.000000
+order 5 (direct): labelled rank law of beta_R = {2: '5/32', 4: '27/32'} ; odd-edge law = {2: '5/32', 4: '27/32'} ; EQUAL: True ; total variation 0.000000
+order 5 (labelled): labelled rank law of beta_R = {2: '5/32', 4: '27/32'} ; odd-edge law = {2: '5/32', 4: '27/32'} ; EQUAL: True ; total variation 0.000000
+order 6 (direct): labelled rank law of beta_R = {4: '549/1024', 6: '475/1024'} ; odd-edge law = {2: '21/1024', 4: '567/1024', 6: '109/256'} ; EQUAL: False ; total variation 0.038086
+order 6 (labelled): labelled rank law of beta_R = {4: '549/1024', 6: '475/1024'} ; odd-edge law = {2: '21/1024', 4: '567/1024', 6: '109/256'} ; EQUAL: False ; total variation 0.038086
+order 7 (direct): labelled rank law of beta_R = {4: '10479/65536', 6: '55057/65536'} ; odd-edge law = {2: '21/16384', 4: '2583/16384', 6: '3445/4096'} ; EQUAL: False ; total variation 0.002243
+order 7 (labelled): labelled rank law of beta_R = {4: '10479/65536', 6: '55057/65536'} ; odd-edge law = {2: '21/16384', 4: '2583/16384', 6: '3445/4096'} ; EQUAL: False ; total variation 0.002243
+order 8 (direct): labelled rank law of beta_R = {2: '105/524288', 4: '60375/2097152', 6: '1154567/2097152', 8: '440895/1048576'} ; odd-edge law = {2: '85/2097152', 4: '43911/2097152', 6: '292825/524288', 8: '13779/32768'} ; EQUAL: False ; total variation 0.008010

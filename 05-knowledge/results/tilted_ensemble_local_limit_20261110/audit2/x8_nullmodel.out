@@ -1,0 +1,4 @@
+m = 2: (U) E[b^2] = 1/4 (2^-m = 1/4, equal: True) ; (O) E[b^2] = 1/4 = 2^-m * 1 ; P(all degrees even | odd edges) = 0 ; 2^-m (1 + P) = 1/4, equal: True
+m = 3: (U) E[b^2] = 1/8 (2^-m = 1/8, equal: True) ; (O) E[b^2] = 5/32 = 2^-m * 5/4 ; P(all degrees even | odd edges) = 1/4 ; 2^-m (1 + P) = 5/32, equal: True
+m = 4: (U) E[b^2] = 1/16 (2^-m = 1/16, equal: True) ; (O) E[b^2] = 9/128 = 2^-m * 9/8 ; P(all degrees even | odd edges) = 1/8 ; 2^-m (1 + P) = 9/128, equal: True
+m = 5: (U) E[b^2] = 1/32 (2^-m = 1/32, equal: True) ; (O) E[b^2] = 17/512 = 2^-m * 17/16 ; P(all degrees even | odd edges) = 1/16 ; 2^-m (1 + P) = 17/512, equal: True

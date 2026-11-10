@@ -1,0 +1,9 @@
+order  2: bias totals (classes, weight, S, U, A, classes and labelled weight per rank and zero/non-zero bias): IDENTICAL (8 fields) ; edge histogram of beta_R: IDENTICAL (3 fields) ; packet failure counters: 0 + 0
+order  3: bias totals (classes, weight, S, U, A, classes and labelled weight per rank and zero/non-zero bias): IDENTICAL (8 fields) ; edge histogram of beta_R: IDENTICAL (3 fields) ; packet failure counters: 0 + 0
+order  4: bias totals (classes, weight, S, U, A, classes and labelled weight per rank and zero/non-zero bias): IDENTICAL (10 fields) ; edge histogram of beta_R: IDENTICAL (4 fields) ; packet failure counters: 0 + 0
+order  5: bias totals (classes, weight, S, U, A, classes and labelled weight per rank and zero/non-zero bias): IDENTICAL (12 fields) ; edge histogram of beta_R: IDENTICAL (6 fields) ; packet failure counters: 0 + 0
+order  6: bias totals (classes, weight, S, U, A, classes and labelled weight per rank and zero/non-zero bias): IDENTICAL (12 fields) ; edge histogram of beta_R: IDENTICAL (8 fields) ; packet failure counters: 0 + 0
+order  7: bias totals (classes, weight, S, U, A, classes and labelled weight per rank and zero/non-zero bias): IDENTICAL (14 fields) ; edge histogram of beta_R: IDENTICAL (11 fields) ; packet failure counters: 0 + 0
+order  8: bias totals (classes, weight, S, U, A, classes and labelled weight per rank and zero/non-zero bias): IDENTICAL (18 fields) ; edge histogram of beta_R: IDENTICAL (13 fields) ; packet failure counters: 0 + 0
+order  9: bias totals (classes, weight, S, U, A, classes and labelled weight per rank and zero/non-zero bias): IDENTICAL (20 fields) ; edge histogram of beta_R: IDENTICAL (19 fields) ; packet failure counters: 0 + 0
+order 10: bias totals (classes, weight, S, U, A, classes and labelled weight per rank and zero/non-zero bias): IDENTICAL (24 fields) ; edge histogram of beta_R: IDENTICAL (23 fields) ; packet failure counters: 0 + 0

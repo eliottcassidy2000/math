@@ -56,3 +56,12 @@ is reported as FAILED; a failure of the control would refute Theorem C or the pr
 `out/biasweights_summary_10.out`).* Control: no failure in 9,733,056 classes; labelled weights sum to `2^45`.
 P3: `rho_10 = 1.040628` - CONFIRMED. P4: `0.26407` - CONFIRMED. P5: `D_11 = 260546929/549755813888 = 0.000473932`
 - CONFIRMED. P6: `E_R|b_R| = 0.022563` - CONFIRMED.
+
+*Annotation added after the second audit (2026-11-10, `audit2/AUDIT2.md` m8, m11; nothing above is rewritten).* P3
+and P6 are not independent of P4: given the labelled rank fractions of order 10, which were known from the first
+audit before this pre-registration (`audit/b_rankonly_10_parts.out`, same commit), `rho_10` and `E_R|b_R|` are affine
+functions of the non-zero-bias frequencies, dominated by the corank-2 term; the P4 interval maps to
+`rho_10 in [1.020, 1.099]` and `E_R|b_R| in [0.02225, 0.02347]`. The independent confirmations are P4 and P5, and
+"In-sample data: orders 2-9" above should have added the order-10 rank law. In P6, "the bound of Theorem C (4)"
+means the bound inside its proof (`E_R|b_R|`); the theorem as stated has `E_R[2^(-rank/2)]` (`0.05077` at `m = 10`).
+The second audit recomputed all four outcomes with independent code (identical).

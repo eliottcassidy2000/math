@@ -1,0 +1,158 @@
+order m = 2 (direct; 1 part): 1 classes, total weight 2 (= 2^C(m,2) = 2)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 1, 'n_ctrl': 0, 'n_gate': 1, 'n_deg': 1} ; mu in [2, 2]
+  E_R[b_R^2] = 1/4 = 0.250000000 ; rho_m = 1.000000 ; E_R|b_R| = 1/2 = 0.500000 ; E_R b_R = 0.500000
+  D_3 = 1/2 = 0.500000000 ; D^2 = 2.500e-01 <= (E|b|)^2 = 2.500e-01 <= E[b^2] = 2.500e-01 : True
+  labelled residues of H mod 8 at order 3 (1,3,5,7): 0.75000 0.25000 0.00000 0.00000 ; even residues: 0
+    rank  2 (corank 0): classes 0 zero-bias + 1 non-zero ; labelled fraction 1.0000000 (1) ; non-zero-bias frequency 1.00000 (uniform-form model 1.00000) ; contribution to rho - 1: +0.000000
+  rho - 1 = 0.000000 = sum of the corank contributions (0.000000) ; P(all beta-degrees even) = 0 = 0.000000 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 1:1
+  F_2-degree of digit k of X -> H(R + v_X) (classes): digit 1: {2: 1} ; digit 2: {-1: 1} ; digit 3: {-1: 1}
+order m = 2 (labelled; 1 part): 2 labelled tournaments, total weight 2 (= 2^C(m,2) = 2)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 2, 'n_ctrl': 0, 'n_gate': 2, 'n_deg': 2} ; mu in [2, 2]
+  E_R[b_R^2] = 1/4 = 0.250000000 ; rho_m = 1.000000 ; E_R|b_R| = 1/2 = 0.500000 ; E_R b_R = 0.500000
+  D_3 = 1/2 = 0.500000000 ; D^2 = 2.500e-01 <= (E|b|)^2 = 2.500e-01 <= E[b^2] = 2.500e-01 : True
+  labelled residues of H mod 8 at order 3 (1,3,5,7): 0.75000 0.25000 0.00000 0.00000 ; even residues: 0
+    rank  2 (corank 0): classes 0 zero-bias + 2 non-zero ; labelled fraction 1.0000000 (1) ; non-zero-bias frequency 1.00000 (uniform-form model 1.00000) ; contribution to rho - 1: +0.000000
+  rho - 1 = 0.000000 = sum of the corank contributions (0.000000) ; P(all beta-degrees even) = 0 = 0.000000 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 1:2
+  F_2-degree of digit k of X -> H(R + v_X) (labelled): digit 1: {2: 2} ; digit 2: {-1: 2} ; digit 3: {-1: 2}
+  affine span over F_2: beta_R dimension 0 (C(m,2) - 1 = 0) ; (ell_R, beta_R) dimension 1 (m + C(m,2) - 2 = 1)
+order m = 3 (direct; 1 part): 2 classes, total weight 8 (= 2^C(m,2) = 8)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 2, 'n_ctrl': 0, 'n_gate': 2, 'n_deg': 2} ; mu in [2, 2]
+  E_R[b_R^2] = 1/4 = 0.250000000 ; rho_m = 2.000000 ; E_R|b_R| = 1/2 = 0.500000 ; E_R b_R = 0.250000
+  D_4 = 1/2 = 0.500000000 ; D^2 = 2.500e-01 <= (E|b|)^2 = 2.500e-01 <= E[b^2] = 2.500e-01 : True
+  labelled residues of H mod 8 at order 4 (1,3,5,7): 0.37500 0.25000 0.37500 0.00000 ; even residues: 0
+    rank  2 (corank 1): classes 0 zero-bias + 2 non-zero ; labelled fraction 1.0000000 (1) ; non-zero-bias frequency 1.00000 (uniform-form model 0.50000) ; contribution to rho - 1: +1.000000
+  rho - 1 = 1.000000 = sum of the corank contributions (1.000000) ; P(all beta-degrees even) = 1 = 1.000000 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 3:2
+  F_2-degree of digit k of X -> H(R + v_X) (classes): digit 1: {2: 2} ; digit 2: {2: 2} ; digit 3: {-1: 2}
+order m = 3 (labelled; 1 part): 8 labelled tournaments, total weight 8 (= 2^C(m,2) = 8)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 8, 'n_ctrl': 0, 'n_gate': 8, 'n_deg': 8} ; mu in [2, 2]
+  E_R[b_R^2] = 1/4 = 0.250000000 ; rho_m = 2.000000 ; E_R|b_R| = 1/2 = 0.500000 ; E_R b_R = 0.250000
+  D_4 = 1/2 = 0.500000000 ; D^2 = 2.500e-01 <= (E|b|)^2 = 2.500e-01 <= E[b^2] = 2.500e-01 : True
+  labelled residues of H mod 8 at order 4 (1,3,5,7): 0.37500 0.25000 0.37500 0.00000 ; even residues: 0
+    rank  2 (corank 1): classes 0 zero-bias + 8 non-zero ; labelled fraction 1.0000000 (1) ; non-zero-bias frequency 1.00000 (uniform-form model 0.50000) ; contribution to rho - 1: +1.000000
+  rho - 1 = 1.000000 = sum of the corank contributions (1.000000) ; P(all beta-degrees even) = 1 = 1.000000 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 3:8
+  F_2-degree of digit k of X -> H(R + v_X) (labelled): digit 1: {2: 8} ; digit 2: {2: 8} ; digit 3: {-1: 8}
+  affine span over F_2: beta_R dimension 0 (C(m,2) - 1 = 2) ; (ell_R, beta_R) dimension 2 (m + C(m,2) - 2 = 4)
+order m = 4 (direct; 1 part): 4 classes, total weight 64 (= 2^C(m,2) = 64)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 4, 'n_ctrl': 0, 'n_gate': 4, 'n_deg': 4} ; mu in [2, 6]
+  E_R[b_R^2] = 23/128 = 0.179687500 ; rho_m = 2.875000 ; E_R|b_R| = 13/32 = 0.406250 ; E_R b_R = 0.156250
+  D_5 = 13/32 = 0.406250000 ; D^2 = 1.650e-01 <= (E|b|)^2 = 1.650e-01 <= E[b^2] = 1.797e-01 : True
+  labelled residues of H mod 8 at order 5 (1,3,5,7): 0.35156 0.23438 0.35156 0.06250 ; even residues: 0
+    rank  2 (corank 2): classes 0 zero-bias + 3 non-zero ; labelled fraction 0.6250000 (5/8) ; non-zero-bias frequency 1.00000 (uniform-form model 0.25000) ; contribution to rho - 1: +1.875000
+    rank  4 (corank 0): classes 0 zero-bias + 1 non-zero ; labelled fraction 0.3750000 (3/8) ; non-zero-bias frequency 1.00000 (uniform-form model 1.00000) ; contribution to rho - 1: +0.000000
+  rho - 1 = 1.875000 = sum of the corank contributions (1.875000) ; P(all beta-degrees even) = 1/4 = 0.250000 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 3:3 5:1
+  F_2-degree of digit k of X -> H(R + v_X) (classes): digit 1: {2: 4} ; digit 2: {2: 2, 3: 1, 4: 1} ; digit 3: {2: 1, 3: 1, 4: 2}
+order m = 4 (labelled; 1 part): 64 labelled tournaments, total weight 64 (= 2^C(m,2) = 64)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 64, 'n_ctrl': 0, 'n_gate': 64, 'n_deg': 64} ; mu in [2, 6]
+  E_R[b_R^2] = 23/128 = 0.179687500 ; rho_m = 2.875000 ; E_R|b_R| = 13/32 = 0.406250 ; E_R b_R = 0.156250
+  D_5 = 13/32 = 0.406250000 ; D^2 = 1.650e-01 <= (E|b|)^2 = 1.650e-01 <= E[b^2] = 1.797e-01 : True
+  labelled residues of H mod 8 at order 5 (1,3,5,7): 0.35156 0.23438 0.35156 0.06250 ; even residues: 0
+    rank  2 (corank 2): classes 0 zero-bias + 40 non-zero ; labelled fraction 0.6250000 (5/8) ; non-zero-bias frequency 1.00000 (uniform-form model 0.25000) ; contribution to rho - 1: +1.875000
+    rank  4 (corank 0): classes 0 zero-bias + 24 non-zero ; labelled fraction 0.3750000 (3/8) ; non-zero-bias frequency 1.00000 (uniform-form model 1.00000) ; contribution to rho - 1: +0.000000
+  rho - 1 = 1.875000 = sum of the corank contributions (1.875000) ; P(all beta-degrees even) = 1/4 = 0.250000 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 3:40 5:24
+  F_2-degree of digit k of X -> H(R + v_X) (labelled): digit 1: {2: 64} ; digit 2: {2: 16, 3: 24, 4: 24} ; digit 3: {2: 24, 3: 24, 4: 16}
+  affine span over F_2: beta_R dimension 5 (C(m,2) - 1 = 5) ; (ell_R, beta_R) dimension 8 (m + C(m,2) - 2 = 8)
+order m = 5 (direct; 1 part): 12 classes, total weight 1024 (= 2^C(m,2) = 1024)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 12, 'n_ctrl': 0, 'n_gate': 12, 'n_deg': 12} ; mu in [2, 12]
+  E_R[b_R^2] = 21/256 = 0.082031250 ; rho_m = 2.625000 ; E_R|b_R| = 1/4 = 0.250000 ; E_R b_R = 0.101562
+  D_6 = 1/4 = 0.250000000 ; D^2 = 6.250e-02 <= (E|b|)^2 = 6.250e-02 <= E[b^2] = 8.203e-02 : True
+  labelled residues of H mod 8 at order 6 (1,3,5,7): 0.30273 0.17578 0.32227 0.19922 ; even residues: 0
+    rank  2 (corank 3): classes 0 zero-bias + 2 non-zero ; labelled fraction 0.1562500 (5/32) ; non-zero-bias frequency 1.00000 (uniform-form model 0.12500) ; contribution to rho - 1: +1.093750
+    rank  4 (corank 1): classes 2 zero-bias + 8 non-zero ; labelled fraction 0.8437500 (27/32) ; non-zero-bias frequency 0.81481 (uniform-form model 0.50000) ; contribution to rho - 1: +0.531250
+  rho - 1 = 1.625000 = sum of the corank contributions (1.625000) ; P(all beta-degrees even) = 1/16 = 0.062500 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 3:3 5:5 7:3 9:1
+  F_2-degree of digit k of X -> H(R + v_X) (classes): digit 1: {2: 12} ; digit 2: {2: 1, 3: 1, 4: 10} ; digit 3: {2: 1, 4: 9, 5: 2}
+order m = 5 (labelled; 1 part): 1024 labelled tournaments, total weight 1024 (= 2^C(m,2) = 1024)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 1024, 'n_ctrl': 0, 'n_gate': 1024, 'n_deg': 1024} ; mu in [2, 12]
+  E_R[b_R^2] = 21/256 = 0.082031250 ; rho_m = 2.625000 ; E_R|b_R| = 1/4 = 0.250000 ; E_R b_R = 0.101562
+  D_6 = 1/4 = 0.250000000 ; D^2 = 6.250e-02 <= (E|b|)^2 = 6.250e-02 <= E[b^2] = 8.203e-02 : True
+  labelled residues of H mod 8 at order 6 (1,3,5,7): 0.30273 0.17578 0.32227 0.19922 ; even residues: 0
+    rank  2 (corank 3): classes 0 zero-bias + 160 non-zero ; labelled fraction 0.1562500 (5/32) ; non-zero-bias frequency 1.00000 (uniform-form model 0.12500) ; contribution to rho - 1: +1.093750
+    rank  4 (corank 1): classes 160 zero-bias + 704 non-zero ; labelled fraction 0.8437500 (27/32) ; non-zero-bias frequency 0.81481 (uniform-form model 0.50000) ; contribution to rho - 1: +0.531250
+  rho - 1 = 1.625000 = sum of the corank contributions (1.625000) ; P(all beta-degrees even) = 1/16 = 0.062500 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 3:280 5:504 7:200 9:40
+  F_2-degree of digit k of X -> H(R + v_X) (labelled): digit 1: {2: 1024} ; digit 2: {2: 40, 3: 120, 4: 864} ; digit 3: {2: 40, 4: 904, 5: 80}
+  affine span over F_2: beta_R dimension 9 (C(m,2) - 1 = 9) ; (ell_R, beta_R) dimension 13 (m + C(m,2) - 2 = 13)
+order m = 6 (direct; 1 part): 56 classes, total weight 32768 (= 2^C(m,2) = 32768)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 56, 'n_ctrl': 0, 'n_gate': 56, 'n_deg': 56} ; mu in [2, 32]
+  E_R[b_R^2] = 1621/65536 = 0.024734497 ; rho_m = 1.583008 ; E_R|b_R| = 131/1024 = 0.127930 ; E_R b_R = 0.026489
+  D_7 = 853/8192 = 0.104125977 ; D^2 = 1.084e-02 <= (E|b|)^2 = 1.637e-02 <= E[b^2] = 2.473e-02 : True
+  labelled residues of H mod 8 at order 7 (1,3,5,7): 0.29480 0.24620 0.25726 0.20174 ; even residues: 0
+    rank  4 (corank 2): classes 13 zero-bias + 17 non-zero ; labelled fraction 0.5361328 (549/1024) ; non-zero-bias frequency 0.52186 (uniform-form model 0.25000) ; contribution to rho - 1: +0.583008
+    rank  6 (corank 0): classes 0 zero-bias + 26 non-zero ; labelled fraction 0.4638672 (475/1024) ; non-zero-bias frequency 1.00000 (uniform-form model 1.00000) ; contribution to rho - 1: +0.000000
+  rho - 1 = 0.583008 = sum of the corank contributions (0.583008) ; P(all beta-degrees even) = 9/1024 = 0.008789 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 5:12 7:20 9:16 11:5 13:2 15:1
+  F_2-degree of digit k of X -> H(R + v_X) (classes): digit 1: {2: 56} ; digit 2: {4: 56} ; digit 3: {4: 2, 5: 31, 6: 23}
+order m = 6 (labelled; 1 part): 32768 labelled tournaments, total weight 32768 (= 2^C(m,2) = 32768)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 32768, 'n_ctrl': 0, 'n_gate': 32768, 'n_deg': 32768} ; mu in [2, 32]
+  E_R[b_R^2] = 1621/65536 = 0.024734497 ; rho_m = 1.583008 ; E_R|b_R| = 131/1024 = 0.127930 ; E_R b_R = 0.026489
+  D_7 = 853/8192 = 0.104125977 ; D^2 = 1.084e-02 <= (E|b|)^2 = 1.637e-02 <= E[b^2] = 2.473e-02 : True
+  labelled residues of H mod 8 at order 7 (1,3,5,7): 0.29480 0.24620 0.25726 0.20174 ; even residues: 0
+    rank  4 (corank 2): classes 8400 zero-bias + 9168 non-zero ; labelled fraction 0.5361328 (549/1024) ; non-zero-bias frequency 0.52186 (uniform-form model 0.25000) ; contribution to rho - 1: +0.583008
+    rank  6 (corank 0): classes 0 zero-bias + 15200 non-zero ; labelled fraction 0.4638672 (475/1024) ; non-zero-bias frequency 1.00000 (uniform-form model 1.00000) ; contribution to rho - 1: +0.000000
+  rho - 1 = 0.583008 = sum of the corank contributions (0.583008) ; P(all beta-degrees even) = 9/1024 = 0.008789 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 5:7488 7:11520 9:9600 11:3600 13:480 15:80
+  F_2-degree of digit k of X -> H(R + v_X) (labelled): digit 1: {2: 32768} ; digit 2: {4: 32768} ; digit 3: {4: 288, 5: 19440, 6: 13040}
+  affine span over F_2: beta_R dimension 14 (C(m,2) - 1 = 14) ; (ell_R, beta_R) dimension 19 (m + C(m,2) - 2 = 19)
+order m = 7 (direct; 1 part): 456 classes, total weight 2097152 (= 2^C(m,2) = 2097152)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 456, 'n_ctrl': 0, 'n_gate': 456, 'n_deg': 456} ; mu in [2, 120]
+  E_R[b_R^2] = 57619/4194304 = 0.013737440 ; rho_m = 1.758392 ; E_R|b_R| = 46321/524288 = 0.088350 ; E_R b_R = 0.011566
+  D_8 = 1361/32768 = 0.041534424 ; D^2 = 1.725e-03 <= (E|b|)^2 = 7.806e-03 <= E[b^2] = 1.374e-02 : True
+  labelled residues of H mod 8 at order 8 (1,3,5,7): 0.26599 0.24467 0.25478 0.23457 ; even residues: 0
+    rank  4 (corank 3): classes 32 zero-bias + 42 non-zero ; labelled fraction 0.1598969 (10479/65536) ; non-zero-bias frequency 0.53908 (uniform-form model 0.12500) ; contribution to rho - 1: +0.529678
+    rank  6 (corank 1): classes 136 zero-bias + 246 non-zero ; labelled fraction 0.8401031 (55057/65536) ; non-zero-bias frequency 0.63612 (uniform-form model 0.50000) ; contribution to rho - 1: +0.228714
+  rho - 1 = 0.758392 = sum of the corank contributions (0.758392) ; P(all beta-degrees even) = 99/4096 = 0.024170 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 5:7 7:56 9:119 11:148 13:65 15:50 17:5 19:4 21:2
+  F_2-degree of digit k of X -> H(R + v_X) (classes): digit 1: {2: 456} ; digit 2: {4: 456} ; digit 3: {4: 2, 5: 9, 6: 319, 7: 126}
+order m = 7 (labelled; 6 parts): 2097152 labelled tournaments, total weight 2097152 (= 2^C(m,2) = 2097152)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 2097152, 'n_ctrl': 0, 'n_gate': 2097152, 'n_deg': 2097152} ; mu in [2, 120]
+  E_R[b_R^2] = 57619/4194304 = 0.013737440 ; rho_m = 1.758392 ; E_R|b_R| = 46321/524288 = 0.088350 ; E_R b_R = 0.011566
+  D_8 = 1361/32768 = 0.041534424 ; D^2 = 1.725e-03 <= (E|b|)^2 = 7.806e-03 <= E[b^2] = 1.374e-02 : True
+  labelled residues of H mod 8 at order 8 (1,3,5,7): 0.26599 0.24467 0.25478 0.23457 ; even residues: 0
+    rank  4 (corank 3): classes 154560 zero-bias + 180768 non-zero ; labelled fraction 0.1598969 (10479/65536) ; non-zero-bias frequency 0.53908 (uniform-form model 0.12500) ; contribution to rho - 1: +0.529678
+    rank  6 (corank 1): classes 641088 zero-bias + 1120736 non-zero ; labelled fraction 0.8401031 (55057/65536) ; non-zero-bias frequency 0.63612 (uniform-form model 0.50000) ; contribution to rho - 1: +0.228714
+  rho - 1 = 0.758392 = sum of the corank contributions (0.758392) ; P(all beta-degrees even) = 99/4096 = 0.024170 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 5:27888 7:271200 9:559440 11:690816 13:320880 15:193088 17:21840 19:10080 21:1920
+  F_2-degree of digit k of X -> H(R + v_X) (labelled): digit 1: {2: 2097152} ; digit 2: {4: 2097152} ; digit 3: {4: 1728, 5: 38640, 6: 1449968, 7: 606816}
+order m = 8 (direct; 1 part): 6880 classes, total weight 268435456 (= 2^C(m,2) = 268435456)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 6880, 'n_ctrl': 0, 'n_gate': 6880, 'n_deg': 6880} ; mu in [2, 432]
+  E_R[b_R^2] = 1304557/268435456 = 0.004859854 ; rho_m = 1.244123 ; E_R|b_R| = 52721/1048576 = 0.050279 ; E_R b_R = 0.009448
+  D_9 = 63103/8388608 = 0.007522464 ; D^2 = 5.659e-05 <= (E|b|)^2 = 2.528e-03 <= E[b^2] = 4.860e-03 : True
+  labelled residues of H mod 8 at order 9 (1,3,5,7): 0.25382 0.24798 0.24994 0.24826 ; even residues: 0
+    rank  2 (corank 6): classes 0 zero-bias + 2 non-zero ; labelled fraction 0.0002003 (105/524288) ; non-zero-bias frequency 1.00000 (uniform-form model 0.01562) ; contribution to rho - 1: +0.012617
+    rank  4 (corank 4): classes 160 zero-bias + 45 non-zero ; labelled fraction 0.0287890 (60375/2097152) ; non-zero-bias frequency 0.20000 (uniform-form model 0.06250) ; contribution to rho - 1: +0.063336
+    rank  6 (corank 2): classes 2532 zero-bias + 1263 non-zero ; labelled fraction 0.5505404 (1154567/2097152) ; non-zero-bias frequency 0.32637 (uniform-form model 0.25000) ; contribution to rho - 1: +0.168169
+    rank  8 (corank 0): classes 0 zero-bias + 2878 non-zero ; labelled fraction 0.4204702 (440895/1048576) ; non-zero-bias frequency 1.00000 (uniform-form model 1.00000) ; contribution to rho - 1: +0.000000
+  rho - 1 = 0.244123 = sum of the corank contributions (0.244123) ; P(all beta-degrees even) = 3915/524288 = 0.007467 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 5:5 7:58 9:316 11:1106 13:1699 15:1897 17:1168 19:507 21:93 23:26 25:5
+  F_2-degree of digit k of X -> H(R + v_X) (classes): digit 1: {2: 6880} ; digit 2: {3: 2, 4: 6878} ; digit 3: {5: 2, 6: 548, 7: 3452, 8: 2878}
+order m = 9 (direct; 6 parts): 191536 classes, total weight 68719476736 (= 2^C(m,2) = 68719476736)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 191536, 'n_ctrl': 0, 'n_gate': 191536, 'n_deg': 191536} ; mu in [2, 2016]
+  E_R[b_R^2] = 155129173/68719476736 = 0.002257427 ; rho_m = 1.155802 ; E_R|b_R| = 67761877/2147483648 = 0.031554 ; E_R b_R = 0.004934
+  D_10 = 650471/268435456 = 0.002423193 ; D^2 = 5.872e-06 <= (E|b|)^2 = 9.957e-04 <= E[b^2] = 2.257e-03 : True
+  labelled residues of H mod 8 at order 10 (1,3,5,7): 0.25082 0.24901 0.25039 0.24978 ; even residues: 0
+    rank  2 (corank 7): classes 0 zero-bias + 8 non-zero ; labelled fraction 0.0000235 (1575/67108864) ; non-zero-bias frequency 1.00000 (uniform-form model 0.00781) ; contribution to rho - 1: +0.002981
+    rank  4 (corank 5): classes 318 zero-bias + 118 non-zero ; labelled fraction 0.0020923 (561645/268435456) ; non-zero-bias frequency 0.22546 (uniform-form model 0.03125) ; contribution to rho - 1: +0.013003
+    rank  6 (corank 3): classes 26088 zero-bias + 6447 non-zero ; labelled fraction 0.1692602 (90870893/536870912) ; non-zero-bias frequency 0.19515 (uniform-form model 0.12500) ; contribution to rho - 1: +0.094983
+    rank  8 (corank 1): classes 74825 zero-bias + 83732 non-zero ; labelled fraction 0.8286240 (444864129/536870912) ; non-zero-bias frequency 0.52705 (uniform-form model 0.50000) ; contribution to rho - 1: +0.044836
+  rho - 1 = 0.155802 = sum of the corank contributions (0.155802) ; P(all beta-degrees even) = 637373/134217728 = 0.004749 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 3:2 5:7 7:73 9:522 11:3228 13:12292 15:30020 17:46857 19:46740 21:32107 23:14141 25:4417 27:905 29:196 31:24 33:4 35:1
+  F_2-degree of digit k of X -> H(R + v_X) (classes): digit 1: {2: 191536} ; digit 2: {2: 2, 3: 6, 4: 191528} ; digit 3: {4: 2, 5: 7, 6: 907, 7: 32063, 8: 158557}
+order m = 10 (cut; 6 parts): 9733056 classes, total weight 35184372088832 (= 2^C(m,2) = 35184372088832)
+  failures: none (all 21 counters zero) ; controls: {'n_44': 0, 'n_ctrl': 9733056, 'n_gate': 0, 'n_deg': 9733056} ; mu in [2, 8848]
+  E_R[b_R^2] = 71511414601/70368744177664 = 0.001016238 ; rho_m = 1.040628 ; E_R|b_R| = 6202089377/274877906944 = 0.022563 ; E_R b_R = 0.002351
+  D_11 = 260546929/549755813888 = 0.000473932 ; D^2 = 2.246e-07 <= (E|b|)^2 = 5.091e-04 <= E[b^2] = 1.016e-03 : True
+  labelled residues of H mod 8 at order 11 (1,3,5,7): 0.25013 0.24987 0.25011 0.24989 ; even residues: 0
+    rank  2 (corank 8): classes 5 zero-bias + 2 non-zero ; labelled fraction 0.0000003 (38745/137438953472) ; non-zero-bias frequency 0.14634 (uniform-form model 0.00391) ; contribution to rho - 1: +0.000010
+    rank  4 (corank 6): classes 523 zero-bias + 145 non-zero ; labelled fraction 0.0000570 (489825/8589934592) ; non-zero-bias frequency 0.14972 (uniform-form model 0.01562) ; contribution to rho - 1: +0.000489
+    rank  6 (corank 4): classes 191763 zero-bias + 18799 non-zero ; labelled fraction 0.0215859 (1483371925/68719476736) ; non-zero-bias frequency 0.08753 (uniform-form model 0.06250) ; contribution to rho - 1: +0.008643
+    rank  8 (corank 2): classes 4005054 zero-bias + 1439603 non-zero ; labelled fraction 0.5594148 (76885390455/137438953472) ; non-zero-bias frequency 0.26407 (uniform-form model 0.25000) ; contribution to rho - 1: +0.031485
+    rank 10 (corank 0): classes 0 zero-bias + 4077162 non-zero ; labelled fraction 0.4189420 (28789471611/68719476736) ; non-zero-bias frequency 1.00000 (uniform-form model 1.00000) ; contribution to rho - 1: +0.000000
+  rho - 1 = 0.040628 = sum of the corank contributions (0.040628) ; P(all beta-degrees even) = 35183785/17179869184 = 0.002048 (the antipodal pair X, V - X contributes exactly this to rho)
+  number of beta-edges (classes): 5:4 7:22 9:470 11:4968 13:36302 15:177897 17:585584 19:1320398 21:2061298 23:2269770 25:1771670 27:982802 29:388110 31:108479 33:21602 35:3131 37:469 39:58 41:16 43:3 45:3
+  F_2-degree of digit k of X -> H(R + v_X) (classes): digit 1: {2: 9733056} ; digit 2: {3: 7, 4: 9733049} ; digit 3: {5: 5, 6: 885, 7: 210347, 8: 9521819}

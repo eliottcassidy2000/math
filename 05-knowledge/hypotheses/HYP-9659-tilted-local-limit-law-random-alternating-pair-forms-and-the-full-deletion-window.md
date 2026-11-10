@@ -8,9 +8,10 @@ status: >
   implication is PROVED (source note, Proposition 5.1).
   (B), (B'): FINITE-EXACT agreement within 1.2 percentage points at orders 8 and 9; pre-registered P1-P2 at order 10
   (9,733,056 classes) CONFIRMED, agreement within 0.08 points. (B) alone gives only that the mod-4 discrepancy tends
-  to 0; (B') gives the exponential rate (audit M3). (B'') (deletion-pair form, added after the audit): labelled
-  rho_m = 1.244, 1.156 at m = 8, 9. Pre-registered P3-P6 at m = 10 CONFIRMED (rho_10 = 1.041;
-  exact D_11 = 0.000474). PROVED towards (B''): E_R[b_R^2] <= 1/4 and |D_n| <= 1/2 at every order (THM-5127 (C) (6)).
+  to 0; (B') gives the exponential rate (audit M3). (B'') (deletion-pair form, added after the first audit; second audit
+  PASS WITH CORRECTIONS, audit2/AUDIT2.md, MISTAKE-755): labelled rho_m = 1.244, 1.156 at m = 8, 9. Pre-registered P3-P6 at m = 10 inside their
+  intervals (rho_10 = 1.041; exact D_11 = 0.000474; P4 and P5 are the independent predictions). PROVED towards
+  (B''): E_R[b_R^2] <= 1/4 and |D_n| <= 1/2 at every order (THM-5127 (C) (6)).
   (C): FINITE-EXACT for 237 <= h <= 1023 with bases of order <= 10 and all out-sets. The implication is PROVED
   (source note, Proposition 6.1). (C) is the all-out-sets form of klein's HYP-9453 (2).
   AUDIT: PASS WITH CORRECTIONS (the packet's audit/AUDIT.md; M3 and M4 concern this file; applied; MISTAKE-753).
@@ -72,23 +73,33 @@ against `0.4197 / 0.5590 / 0.0213`, CONFIRMED. For (B') with labelled weights (a
 `E_R[2^(-rank/2)] = 0.10239, 0.07348, 0.05077` at `m = 8, 9, 10` against `0.10135, 0.07271, 0.05072`. The exact
 labelled mod-4 discrepancy is much smaller than either bound: `0.0415, 0.00752, 0.00242` at orders 8, 9, 10.
 
-**(B'') Deletion-pair form (added after the audit; not audited).** Let `T` be uniform on `m+2` labelled vertices and
-`v != v'` two fixed vertices. Then the mod-4 classes of the two deletions decorrelate:
+**(B'') Deletion-pair form (added after the first audit; audited, `audit2/AUDIT2.md`).** Let `T` be uniform on `m+2`
+labelled vertices and `v != v'` two fixed vertices. Then the mod-4 classes of the two deletions decorrelate:
 `E_T (-1)^((H(T-v) - H(T-v'))/2) -> 0`; quantitatively `rho_m = 2^m E_T (-1)^((H(T-v) - H(T-v'))/2)` is bounded (and
 tends to 1). By THM-5127 (C) (5) the expectation equals `E_R[b_R^2]` with `b_R^2 in {0, 2^(-rank(beta_R))}`, and it is
-`E_T (-1)^(N_1(T))`, `N_1` the number of odd cycles of `T` through exactly one of `v, v'`. Relations (PROVED): (B)
-implies the qualitative form; bounded `rho_m` implies a mod-4 discrepancy `O(2^(-m/2))` at order `m+1`
-(Cauchy-Schwarz); neither of (B') and bounded `rho_m` implies the other (zero-bias forms count in (B') only; (B')
-bounds `E_R[b_R^2]` only by `C 2^(-m/2)`). The value `rho_m = 1` is the contribution of twin extensions and the exact
-value for a uniformly random quadratic form. This is the smallest open statement on the mod-4
-route. PROVED so far: `E_T (-1)^(N_1(T)) <= 1/4` for every `m >= 2` and `|D_n| <= 1/2` for every `n >= 3`, from the
-parity law `sum_{i<j} mu_R(i,j) = 2 mod 4` (THM-5127 (C) (6)), which gives `rank(beta_R) >= 2`; decay needs growth of
-the rank, and no second linear relation on `beta_R` is known.
+`E_T (-1)^(N_1(T))`, `N_1` the number of odd cycles of `T` through exactly one of `v, v'`. The value `rho_m = 1` is the
+contribution of twin extensions, and the exact value for a random quadratic form whose linear part is uniform and
+independent of the polar form.
 
-**Evidence for (B'').** Labelled, exact: `rho_m = 1, 2, 2.875, 2.625, 1.583, 1.758, 1.244, 1.156` at `m = 2, ..., 9`. Order 10,
-pre-registered (P3 `rho_10 in [1.01, 1.12]`; P4 corank-2 bias frequency in `[0.255, 0.290]`; P5 `D_11 in [0.0003, 0.0011]`;
-P6 `E_R|b_R| in [0.0220, 0.0238]`): `rho_10 = 1.0406`, `0.2641`, `D_11 = 260546929/2^39 = 0.000474`, `0.02256`; all
-CONFIRMED.
+Relations (PROVED): (B) implies the qualitative form; (B') implies it with rate `O(2^(-m/2))`; bounded `rho_m`
+implies a mod-4 discrepancy `O(2^(-m/2))` at order `m+1` (Cauchy-Schwarz) and (B') restricted to the forms of
+non-zero bias (`E_R abs(b_R) <= sqrt(rho_m) 2^(-m/2)`). No implication between (B') and bounded `rho_m` is known:
+forms of zero bias count in (B') only, and (B') bounds `E_R[b_R^2]` only by `C 2^(-m/2)`.
+
+The weakest open statement on the mod-4 route is `D_n -> 0`; the qualitative form of (B'') implies it. PROVED so
+far: `E_T (-1)^(N_1(T)) <= 1/4` for every `m >= 2` and `|D_n| <= 1/2` for every `n >= 3`, from the congruence
+`sum_{i<j} mu_R(i,j) = 2 mod 4` (THM-5127 (C) (6)), which gives `rank(beta_R) >= 2`. Decay needs growth of the rank.
+For each order `4 <= m <= 11` that congruence is the only affine relation over `F_2` satisfied by every `beta_R`
+(FINITE-EXACT certificate), so no further affine relation is available there; and vertex deletion changes `beta_R`
+by a matrix of the largest possible rank at orders 4-7, so no bounded-rank induction is visible.
+
+**Evidence for (B'').** Labelled, exact: `rho_m = 1, 2, 2.875, 2.625, 1.583, 1.758, 1.244, 1.156` at `m = 2, ..., 9`.
+Order 10, pre-registered (P3 `rho_10 in [1.01, 1.12]`; P4 corank-2 bias frequency in `[0.255, 0.290]`; P5
+`D_11 in [0.0003, 0.0011]`; P6 `E_R|b_R| in [0.0220, 0.0238]`): `rho_10 = 1.0406`, `0.2641`,
+`D_11 = 260546929/2^39 = 0.000474`, `0.02256`; all inside their intervals (P4 and P5 are the independent
+predictions: given the labelled rank law of order 10, which was in-sample, P3 and P6 are functions of the bias
+frequencies). At order 10 the pairs of different out-sets add 4.06% to the twin term in total; individual pairs are
+not uncorrelated (`(empty, V)` has correlation 1; antipodal pairs `0.00205` on average).
 
 **Falsifier.** A rank distribution at order 11 that moves away from the random-alternating one; for (B'), a sequence
 of orders along which `2^(m/2) E_R[2^(-rank(beta_R)/2)]` is unbounded; for (B''), a sequence along which `rho_m` is

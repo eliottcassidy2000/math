@@ -1,0 +1,12 @@
+order 4, 4 classes, 16 pairs (R, u); asymmetric beta: 0
+  rank of beta_R|_(V-u) + beta_(R-u): {0: 4, 2: 12}
+  (rank beta_R, rank beta_(R-u)): {(2, 2): 12, (4, 2): 4}
+order 5, 12 classes, 60 pairs (R, u); asymmetric beta: 0
+  rank of beta_R|_(V-u) + beta_(R-u): {0: 8, 2: 30, 4: 22}
+  (rank beta_R, rank beta_(R-u)): {(2, 2): 7, (2, 4): 3, (4, 2): 31, (4, 4): 19}
+order 6, 56 classes, 336 pairs (R, u); asymmetric beta: 0
+  rank of beta_R|_(V-u) + beta_(R-u): {0: 24, 2: 80, 4: 232}
+  (rank beta_R, rank beta_(R-u)): {(4, 2): 36, (4, 4): 144, (6, 2): 16, (6, 4): 140}
+order 7, 456 classes, 3192 pairs (R, u); asymmetric beta: 0
+  rank of beta_R|_(V-u) + beta_(R-u): {0: 118, 2: 278, 4: 1864, 6: 932}
+  (rank beta_R, rank beta_(R-u)): {(4, 4): 303, (4, 6): 215, (6, 4): 1387, (6, 6): 1287}

@@ -1,0 +1,7 @@
+m = 2: 2 labelled R ; failures {'q42': 0, 'l45': 0, 'thm4111': 0, 'thm4184': 0, 'evenpaths': 0, 'f44': 0, 'cor46a': 0, 'parity': 0, 'redei': 0} ; E_R[b_R^2] = 1/4 ; rho_m = 1 ; E_R|b_R| = 1/2 ; D_3 = 1/2
+m = 3: 8 labelled R ; failures {'q42': 0, 'l45': 0, 'thm4111': 0, 'thm4184': 0, 'evenpaths': 0, 'f44': 0, 'cor46a': 0, 'parity': 0, 'redei': 0} ; E_R[b_R^2] = 1/4 ; rho_m = 2 ; E_R|b_R| = 1/2 ; D_4 = 1/2
+m = 4: 64 labelled R ; failures {'q42': 0, 'l45': 0, 'thm4111': 0, 'thm4184': 0, 'evenpaths': 0, 'f44': 0, 'cor46a': 0, 'parity': 0, 'redei': 0} ; E_R[b_R^2] = 23/128 ; rho_m = 23/8 ; E_R|b_R| = 13/32 ; D_5 = 13/32
+m = 5: 1024 labelled R ; failures {'q42': 0, 'l45': 0, 'thm4111': 0, 'thm4184': 0, 'evenpaths': 0, 'f44': 0, 'cor46a': 0, 'parity': 0, 'redei': 0} ; E_R[b_R^2] = 21/256 ; rho_m = 21/8 ; E_R|b_R| = 1/4 ; D_6 = 1/4
+n = 4 (m = 2): E_T (-1)^((H(T-v)-H(T-v'))/2) = 1/4 ; E_T (-1)^(N_1) = 1/4 ; pointwise mismatches 0 of 64
+n = 5 (m = 3): E_T (-1)^((H(T-v)-H(T-v'))/2) = 1/4 ; E_T (-1)^(N_1) = 1/4 ; pointwise mismatches 0 of 1024
+n = 6 (m = 4): E_T (-1)^((H(T-v)-H(T-v'))/2) = 23/128 ; E_T (-1)^(N_1) = 23/128 ; pointwise mismatches 0 of 32768

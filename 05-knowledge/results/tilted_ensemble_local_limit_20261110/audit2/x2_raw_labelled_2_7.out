@@ -1,0 +1,6 @@
+N 2 labelled tournaments 2 pointwise mismatches route1/route2 0 ; k 0 n 2 sum_route1 2 sum_route2 2 k 1 n 1 sum_route1 2 sum_route2 2
+N 3 labelled tournaments 8 pointwise mismatches route1/route2 0 ; k 0 n 3 sum_route1 4 sum_route2 4 k 1 n 2 sum_route1 8 sum_route2 8
+N 4 labelled tournaments 64 pointwise mismatches route1/route2 0 ; k 0 n 4 sum_route1 32 sum_route2 32 k 1 n 3 sum_route1 16 sum_route2 16 k 2 n 2 sum_route1 64 sum_route2 64
+N 5 labelled tournaments 1024 pointwise mismatches route1/route2 0 ; k 0 n 5 sum_route1 416 sum_route2 416 k 1 n 4 sum_route1 256 sum_route2 256 k 2 n 3 sum_route1 128 sum_route2 128
+N 6 labelled tournaments 32768 pointwise mismatches route1/route2 0 ; k 0 n 6 sum_route1 8192 sum_route2 8192 k 1 n 5 sum_route1 5888 sum_route2 5888 k 2 n 4 sum_route1 4096 sum_route2 4096 k 3 n 3 sum_route1 4096 sum_route2 4096
+N 7 labelled tournaments 2097152 pointwise mismatches route1/route2 0 ; k 0 n 7 sum_route1 218368 sum_route2 218368 k 1 n 6 sum_route1 172032 sum_route2 172032 k 2 n 5 sum_route1 174080 sum_route2 174080 k 3 n 4 sum_route1 262144 sum_route2 262144

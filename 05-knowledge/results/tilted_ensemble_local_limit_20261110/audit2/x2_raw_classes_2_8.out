@@ -1,0 +1,7 @@
+N 2 classes 1 W 2 sumD 2 sumDel 4 route1_compared 2 route1_mismatch 0 ; k 0 n 2 placements 1 sum 2 k 1 n 1 placements 1 sum 2
+N 3 classes 2 W 8 sumD 4 sumDel 24 route1_compared 8 route1_mismatch 0 ; k 0 n 3 placements 1 sum 4 k 1 n 2 placements 3 sum 24
+N 4 classes 4 W 64 sumD 32 sumDel 128 route1_compared 40 route1_mismatch 0 ; k 0 n 4 placements 1 sum 32 k 1 n 3 placements 6 sum 96 k 2 n 2 placements 3 sum 192
+N 5 classes 12 W 1024 sumD 416 sumDel 2560 route1_compared 312 route1_mismatch 0 ; k 0 n 5 placements 1 sum 416 k 1 n 4 placements 10 sum 2560 k 2 n 3 placements 15 sum 1920
+N 6 classes 56 W 32768 sumD 8192 sumDel 79872 route1_compared 4256 route1_mismatch 0 ; k 0 n 6 placements 1 sum 8192 k 1 n 5 placements 15 sum 88320 k 2 n 4 placements 45 sum 184320 k 3 n 3 placements 15 sum 61440
+N 7 classes 456 W 2097152 sumD 218368 sumDel 3670016 route1_compared 105792 route1_mismatch 0 ; k 0 n 7 placements 1 sum 218368 k 1 n 6 placements 21 sum 3612672 k 2 n 5 placements 105 sum 18278400 k 3 n 4 placements 105 sum 27525120
+N 8 classes 6880 W 268435456 sumD 11149312 sumDel 223608832 route1_compared 5256320 route1_mismatch 0 ; k 0 n 8 placements 1 sum 11149312 k 1 n 7 placements 28 sum 185909248 k 2 n 6 placements 210 sum 2215772160 k 3 n 5 placements 420 sum 6083051520 k 4 n 4 placements 105 sum 28185722880

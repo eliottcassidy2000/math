@@ -3,9 +3,12 @@
 **Session:** mac-mini-2026-11-10-ensemble. **Canon:** THM-5127. **Hypotheses:** HYP-9659.
 **Audit:** independent, same day: PASS WITH CORRECTIONS (5 MAJOR - two missed credits, one implication, one
 mis-worded hypothesis, one misattribution - and 24 minor, plus three residual items R1-R3 on the corrected text; all
-applied; `audit/AUDIT.md`, MISTAKE-753). Added after the audit and marked as such (sections 4.1a, 4.1b): the
-deletion-pair form (4.3), the box-norm chain, the parity law (4.5) with `1/4 <= P(H = 1 mod 4) <= 3/4`, and the
-pre-registered order-10 bias run P3-P6 (all CONFIRMED); second audit (of these additions): pending at this commit.
+applied; `audit/AUDIT.md`, MISTAKE-753). Added after that audit (sections 4.1a, 4.1b): the deletion-pair form (4.3),
+the box-norm chain, the congruence of the parity law (4.5) with `1/4 <= P(H = 1 mod 4) <= 3/4`, the gate corollary,
+the digit-degree law, and the pre-registered order-10 bias run P3-P6 (all inside their intervals; P4 and P5 are the
+independent ones). **Second audit**, of these additions only: PASS WITH CORRECTIONS (1 MAJOR - the two equalities
+of (4.5) and the exact form of (4.4) are prior canon - and 15 minor; all applied; every number recomputed with
+independent code; `audit2/AUDIT2.md`, MISTAKE-755).
 
 **Owner directive (summary).** Aim to prove that 7 and 21 are the only positive odd numbers that are not the number
 `H(T)` of Hamiltonian paths of a tournament; prefer reasoning and experiments that expose structure over more coverage
@@ -24,20 +27,24 @@ What this session adds:
 3. **(PROVED)** A mod-4 law for the arcs at one vertex: for a fixed tournament `R`, the map
    `X -> (H(R + v_X) - H(R))/2 mod 2` is a quadratic form over `F_2` whose polar form is
    `beta_R(i,j) = mu_R(i,j)/2 mod 2`, where `mu_R(i,j)` is the pair term of the known cut quadratic
-   (THM-4118 eq. (4)), known to be even (THM-4097 eq. (6a)) and at least `2 H(R - {i,j}) >= 2` (Session 136
-   `positive_cut_geometry.md` eq. (3); THM-5122). Hence the mod-4 imbalance of `H` over that cube is exactly `0` or `2^(-rank(beta_R)/2)`, and the mod-4
+   (THM-4118 eq. (4)), known to be even (THM-4097 eq. (6a)) and at least `2 H(R - {i,j}) >= 2` (THM-4177 eq. (18);
+   Session 136 `positive_cut_geometry.md` eq. (3); THM-5122). Hence the mod-4 imbalance of `H` over that cube is exactly `0` or `2^(-rank(beta_R)/2)`, and the mod-4
    discrepancy of `H` over all tournaments of order `m+1` is at most the mean of `2^(-rank(beta_R)/2)` over order `m`
    (Theorem C). A Weyl-differencing bound covers every other frequency (Lemma C4). Explicitly `beta_R(i,j)` is the
-   parity of the number of even-order paths between `i` and `j` (4.4); the pair terms satisfy
+   parity of the number of even-order paths between `i` and `j` ((4.4); the exact integer form is THM-4177 eq. (16)).
+   The total of the pair terms is a known count (ordered two-path covers: THM-4111 eq. (6)); new here is its residue,
    `sum_{i<j} mu_R(i,j) = 2 mod 4`, so `rank(beta_R) >= 2` and `1/4 <= P(H = 1 mod 4) <= 3/4` at every order `n >= 3`
-   (Lemma 4.5, Corollary 4.6); and the second moment of the bias is the mod-4 correlation of two one-vertex deletions
-   (Proposition 4.3).
+   (Lemma 4.5, Corollary 4.6), and the gate `a -> b -> R -> a` preserves `H mod 4` (Corollary 4.7). The second
+   moment of the bias is the mod-4 correlation of two one-vertex deletions (Proposition 4.3). On a vertex cube the
+   `k`-th binary digit of `H` has `F_2`-degree at most `2^k`, exactly `2^k` iff `rank(beta_R) >= 2^k`
+   (Proposition 4.8).
 4. **(FINITE-EXACT)** Censuses designed to test structure rather than coverage:
    - `beta_R` on every tournament class of orders 2-9 (198,947 classes) and every labelled tournament of orders 2-7:
      no exception to Theorem C, and the rank statistics agree with those of a uniformly random alternating matrix
      over `F_2` to within 1.2 percentage points at orders 8 and 9. A **pre-registered** out-of-sample run at order
      10 (9,733,056 classes) then agreed to within 0.08 points (P1, P2 CONFIRMED). A second pre-registered run
-     (P3-P6 CONFIRMED) gives the exact bias of every order-10 vertex cube: the deletion-pair correlation is `1.041`
+     (P3-P6 inside their intervals; P4 and P5 are independent predictions) gives the exact bias of every order-10
+     vertex cube: the deletion-pair correlation is `1.041`
      times the twin term `2^(-10)`, and the exact labelled mod-4 discrepancy at order 11 is
      `260546929/2^39 = 0.000474` (orders 8, 9, 10: `0.0415, 0.00752, 0.00242`).
    - The class-count function `N_n(h)` at orders 9 and 10: in the window mean +- sd at order 10 every odd `h` has at
@@ -61,9 +68,11 @@ run, independently reproduced to `2^30`).
 
 - **Closest proved mechanism.** THM-4114 / THM-4097 (codex, 2026-08-25): a one-vertex ear response is a submodular
   directed-cut quadratic. Theorem C is a corollary of that quadratic plus Redei's parity. THM-4118 states the
-  quadratic in the form (4.2) and the evenness of its coefficients; Session 136
-  (`session136_full_tournament_spectrum_20261102/ear_geometry/positive_cut_geometry.md`) proves
-  `mu_R(i,j) >= 2 H(R - {i,j})`. New in Theorem C: (2), (3), (4) and Lemma C4.
+  quadratic in the form (4.2) and the evenness of its coefficients; THM-4177 eq. (16) gives the exact formula
+  `mu_R(i,j) = 2 sum_P H(R - V(P))` over the even-order paths `P` between `i` and `j`, whose one-arc layer (18) is
+  `mu_R(i,j) >= 2 H(R - {i,j})` (also Session 136,
+  `session136_full_tournament_spectrum_20261102/ear_geometry/positive_cut_geometry.md`); THM-4111 eq. (6) and
+  THM-4184 eq. (5) give the total of the pair terms as a count of two-path covers. New in Theorem C: (2), (3), (4) and Lemma C4.
 - **Closest prior statements on `H mod 4`.** `THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts` and
   `THM-478-digit-one-degree-law`: digit 1 of `H` is `c_odd mod 2` (`H = 1 + 2 c_odd mod 4`, Grinberg-Stanley; `c_odd`
   the number of directed odd cycles), of `F_2`-degree at most `2 floor((n-1)/2)` on the arc cube. Theorem C (2) is
@@ -79,8 +88,8 @@ run, independently reproduced to `2^30`).
   Walsh-degree decomposition of `H`. They are used here as the thermal coordinate of the problem.
 - **Same-day concurrent sessions on the same directive (2026-11-10)** (read before writing; nothing below is claimed against them):
   Session246 (THM-5120..5123: lawful resets, bounded-deletion shadowing, shared-core exchange intervals), opus S90
-  (THM-5124 additive rigidity on presence cubes, THM-5125, HYP-9657 mass profile of F1), kind-pasteur S21 (2-adic
-  lines, in progress). S90 section 5.3 already records the Bourgain-Kontorovich analogy for the fat O/Z/J orbit and
+  (THM-5124 additive rigidity on presence cubes, THM-5125, HYP-9657 mass profile of F1), kind-pasteur S21 (THM-5126: unit-offset rays; the 65 lines `1 + c 2^s` with odd `c <= 129` lie in the spectrum
+  except 7 and 21; its couplings `W_ef` are the pair terms `mu` of section 4). S90 section 5.3 already records the Bourgain-Kontorovich analogy for the fat O/Z/J orbit and
   that positive density is unproved; opus S82 (THM-4885) records that the join families need a pointwise bound. The
   contribution here is a different analytic object: the *whole* tournament cube with a product measure, where the
   count is hyper-abundant, instead of a word semigroup.
@@ -190,7 +199,7 @@ in general `sum_{i in X} sum_{j notin X} M[j,i] = sum_{i in X} sum_{j != i} M[j,
 **Theorem C.** For every tournament `R` on `m >= 2` vertices:
 
 1. (KNOWN.) `mu_R(i,j)` is even (THM-4097 eq. (6a); THM-4118 eq. (9)) and `mu_R(i,j) >= 2 H(R - {i,j}) >= 2` for
-   all `i != j` (Session 136 `positive_cut_geometry.md` eq. (3); THM-5122 "Capacity").
+   all `i != j` (THM-4177 eq. (18); Session 136 `positive_cut_geometry.md` eq. (3); THM-5122 "Capacity").
 2. `q_R(X) = (H(R + v_X) - H(R))/2 mod 2` is a quadratic form on `F_2^V`, with polar (alternating) form
    `beta_R(i,j) = mu_R(i,j)/2 mod 2`.
 3. `#{X : q_R(X) = 0} - #{X : q_R(X) = 1}` is `0` or `+-2^(m - rank(beta_R)/2)`. It is `0` exactly when `q_R` does
@@ -226,7 +235,9 @@ directed paths of `R` from `i` to `j` on an even number of vertices. An odd cycl
 and the linear part is `q_R({i}) = sum_{j != i} P_ij`. Comparing with (2): `mu_R(i,j)/2 = P_ij + P_ji mod 2`
 (checked on all labelled tournaments of orders 2-5 and samples of orders 6-8 by the audit's `b_digit1_link.py`).
 So the alternating matrix whose rank governs the mod-4 law is the parity of the number of even-order paths between
-two vertices, in either direction.
+two vertices, in either direction. (4.4) is the reduction mod 2 of THM-4177 Theorem 3, eq. (16):
+`mu_R(i,j) = 2 sum_P H(R - V(P))` over the directed paths `P` between `i` and `j`, in either direction, on an even
+number of vertices; its one-arc layer, eq. (18), is the bound `mu_R(i,j) >= 2 H(R - {i,j})` of Theorem C (1).
 
 **Lemma C4 (all frequencies).** Let `U, V'` be disjoint subsets of `V(R)` and `theta` real. With `d_j` independent,
 equal to `-1, 0, 1` with probabilities `1/4, 1/2, 1/4`, and `e(x) = exp(2 pi i x)`,
@@ -288,11 +299,11 @@ first has slack at order 7. For order 8 it gives `|P(H = 1 mod 4) - P(H = 3 mod 
 
 *Exact values from the audit (labelled; computed from class representatives with weights `m!/|Aut|` and from vertex
 cubes, two routes each).* The labelled mod-4 discrepancy is
-`1361/32768 = 0.04153` at order 8, `63103/8388608 = 0.007523` at order 9 and `650471/268435456 = 0.002423` at order
+`1361/32768 = 0.04153` at order 8, `63103/8388608 = 0.007522` at order 9 and `650471/268435456 = 0.002423` at order
 10, against the bounds `0.08835, 0.05028, 0.03155` of Theorem C (4): most of the decay comes from sign cancellation
 across `R`, which (4) discards. The labelled residues mod 8 at order 10 are `0.25082, 0.24901, 0.25039, 0.24978`.
 
-### 4.1a The second moment of the bias is a deletion-pair correlation (added after the audit)
+### 4.1a The second moment of the bias is a deletion-pair correlation (added after the first audit; audited, `audit2/AUDIT2.md`)
 
 Write `b_R = E_X (-1)^(q_R(X))`, so that `b_R^2` is `0` or `2^(-rank(beta_R))` by (3), and
 `D_n = P(H = 1 mod 4) - P(H = 3 mod 4)` for a uniform labelled tournament on `n` vertices.
@@ -302,33 +313,49 @@ Write `b_R = E_X (-1)^(q_R(X))`, so that `b_R^2` is `0` or `2^(-rank(beta_R))` b
     E_R[b_R^2] = E_T (-1)^((H(T - v) - H(T - v'))/2) = E_T (-1)^(N_1(T)),                                  (4.3)
 
 where `R` is uniform on `m` vertices and `N_1(T)` is the number of directed odd cycles of `T` through exactly one of
-`v, v'`. Consequently `D_(m+1)^2 <= (E_R |b_R|)^2 <= E_R[b_R^2]`. More generally, for a uniform tournament on `n + k`
-vertices with `k` disjoint marked pairs (`1 <= k <= n`) let `N_k` be the number of directed odd cycles that meet every
-marked pair in exactly one vertex, and `B(n,k) = E (-1)^(N_k)`, `B(n,0) = D_n`. Then
+`v, v'`. Consequently `D_(m+1)^2 <= (E_R |b_R|)^2 <= E_R[b_R^2]`. More generally, for a uniform tournament `W` on
+`n + k` vertices with `k` disjoint marked pairs (`0 <= k <= n`) let `N_k` be the number of directed odd cycles that
+meet every marked pair in exactly one vertex, and `B(n,k) = E (-1)^(N_k)`, so `B(n,0) = D_n`. Then
 
-    B(n,k)^2 <= B(n,k+1),        hence        |D_n|^(2^k) <= B(n,k).
+    B(n,k)^2 <= B(n,k+1)  for 0 <= k <= n-1,        hence        |D_n|^(2^k) <= B(n,k)  for 0 <= k <= n.
+
+Equivalently `(-1)^(N_k) = prod_D s(W - D)` over the `2^k` transversals `D` of the marked pairs, with `s = +1, -1` for
+`H = 1, 3 mod 4` (audit 2): `B(n,k)` is a box norm of the sign `s` over vertex pairs.
 
 *Proof.* Given `R = T - v - v'`, the tournaments `T - v'` and `T - v` are independent one-vertex extensions `R + v_X`
 and `R + v'_X'` (the arc between `v` and `v'` lies in neither). So the middle term is
 `E_R E_{X,X'} (-1)^(q_R(X) + q_R(X'))`, because `(a - c)/2 + (b - c)/2 = (a - b)/2 mod 2` for odd `a, b, c`; this is
 `E_R[b_R^2]`. The last equality is `H = 1 + 2 c_odd mod 4`: cycles avoiding both vertices cancel. The bound on `D`
-is the proof of Theorem C (4) followed by Cauchy-Schwarz. For the chain, let `u` be an unmarked vertex of a tournament
-`W` on `n + k` vertices; condition on `W - u`, apply Cauchy-Schwarz to the average over the star of `u`, and write the
-square as an average over two independent stars `u, u'`: a cycle avoiding both is counted twice, a cycle through both
-is counted in neither, so the exponent is `N_(k+1)` for the pairs of `W` together with `{u, u'}`. QED
+is the proof of Theorem C (4) followed by Cauchy-Schwarz. For the chain, let `u` be an unmarked vertex of `W`;
+condition on `W - u`, apply Cauchy-Schwarz to the average over the star of `u`, and write the square as an average
+over two independent stars `u, u'` (the arc between `u` and `u'` lies on no counted cycle; orient it uniformly at
+random, so that the tournament on the `n + k + 1` vertices is uniform): a cycle avoiding both is counted twice, a
+cycle through both is counted in neither, so the exponent is `N_(k+1)` for the pairs of `W` together with `{u, u'}`.
+QED
 
-Two calibrations of (4.3). The twin extensions `X = X'` alone contribute `2^(-m)`. And for a uniformly random
-quadratic form on `F_2^m` the left side is exactly `2^(-m)`, because the values at two distinct points are uncorrelated. So
-`rho_m = 2^m E_R[b_R^2]` measures how far the mod-4 classes of two *different* one-vertex extensions of the same base
-are from independent, and the statement "the rank of `beta_R` is large" can be written without forms: the mod-4
-classes of two one-vertex deletions of a random tournament decorrelate.
+The same proof gives (4.3) at every frequency,
+`E_R |E_X e(theta H(R + v_X))|^2 = E_T e(theta (H(T - v') - H(T - v)))`, which is the second moment that Lemma C4
+bounds. The chain is not monotone and its end is trivial: `B(4, .) = 1/2, 1/4, 1/8, 1/8, 1` (for even `n` a cycle
+meeting every pair once has `n` vertices, so `B(n,n) = 1`); audit 2 tabulates `B(n,k)` for `n + k <= 10`.
+
+Two calibrations of (4.3). The twin extensions `X = X'` alone contribute `2^(-m)`. And for a random quadratic form on
+`F_2^m` whose linear part is uniform and independent of the polar form the left side is exactly `2^(-m)`, because the
+values at two distinct points are then uncorrelated. (Under the constraints that every `q_R` satisfies - `q_R(V) = 0`,
+linear part of odd weight, odd number of edges, section 4.1b - the uniform law gives `2^(-m)(1 + 2^(-(m-1)))` for
+`m >= 3`: the antipodal pair `X, V \ X` has `q(X) + q(V \ X) = beta(X, 1)`. For tournaments this antipodal term is
+`2^(-m) P_R(all beta_R-degrees even)`, with `P_R = 1, 1/4, 1/16, 0.0088, 0.0242, 0.0075, 0.0047, 0.0020` at
+`m = 3, ..., 10`; audit 2.) So `rho_m = 2^m E_R[b_R^2]` measures the total correlation between the mod-4 classes of
+two *different* one-vertex extensions of the same base, in units of the twin term (an average over the pair of
+out-sets: `(rho_m - 1)/(2^m - 1)` per ordered pair). And "the rank of `beta_R` is large in probability" implies a
+statement without forms: the mod-4 classes of two one-vertex deletions of a random tournament decorrelate (not
+conversely: forms of low rank and zero bias do not contribute to `E_R[b_R^2]`).
 
 Exact values (labelled weights; `biasweights.c`, `merge_bias.py`, `out/biasweights_summary_2_9.out`; the program
-reproduces the audit's labelled rank tables and discrepancies at `m = 8, 9` digit for digit; (4.3) is checked by
-direct enumeration of both sides for `m <= 5` and of vertex cubes for `m <= 6` in `deletion_pair_corr.py 7`, and the
-chain for `n + k <= 6` in `box_norm_check.py`):
+reproduces the first audit's labelled rank tables and discrepancies at `m = 8, 9` digit for digit, and audit 2
+reproduces every entry from direct counts; (4.3) is checked by direct enumeration of both sides for `m <= 5` and of
+vertex cubes for `m <= 6` in `deletion_pair_corr.py 7`, and the chain for `n + k <= 6` in `box_norm_check.py`):
 
-| `m` | `E_R[b_R^2]` | `rho_m` | `E_R abs(b_R)` (bound of (4)) | `D_(m+1)` exact |
+| `m` | `E_R[b_R^2]` | `rho_m` | `E_R abs(b_R)` (the bound in the proof of (4)) | `D_(m+1)` exact |
 |---|---|---|---|---|
 | 2 | 1/4 | 1.000 | 0.5 | 1/2 |
 | 3 | 1/4 | 2.000 | 0.5 | 1/2 |
@@ -340,7 +367,11 @@ chain for `n + k <= 6` in `box_norm_check.py`):
 | 9 | 155129173/68719476736 | 1.156 | 0.03155 | 650471/268435456 = 0.002423 |
 | 10 (pre-registered) | 71511414601/70368744177664 | 1.041 | 0.02256 | 260546929/549755813888 = 0.000474 |
 
-The excess of `rho_m` over 1 comes from forms of positive corank whose linear part vanishes on the radical more often
+As integers, the signed counts `2^C(n,2) D_n = sum_T (-1)^((H(T)-1)/2)` over labelled tournaments are
+`1, 2, 4, 32, 416, 8192, 218368, 11149312, 516939776, 85258534912, 17075203538944` for `n = 1, ..., 11` (all positive;
+no match in the OEIS on 2026-11-10).
+
+The excess of `rho_m` over 1 comes from forms of positive corank for which `q_R` vanishes on the radical more often
 than the `2^(-corank)` of a random form: the labelled frequency of non-zero bias is `1, 0.815, 0.636, 0.527` at corank
 1 (`m = 3, 5, 7, 9`; model 1/2), `1, 0.522, 0.326, 0.264` at corank 2 (`m = 4, 6, 8, 10`; model 1/4), `1, 0.539, 0.195`
 at corank 3 (`m = 5, 7, 9`; model 1/8) and `0.200, 0.088` at corank 4 (`m = 8, 10`; model 1/16).
@@ -349,13 +380,21 @@ The order-10 row was predicted before it was run (`PREREGISTRATION.md`, second b
 before the run): P3 `rho_10 in [1.01, 1.12]` - observed `1.0406`; P4 frequency of non-zero bias at corank 2 in
 `[0.255, 0.290]` - observed `0.2641`; P5 `D_11` positive and in `[0.0003, 0.0011]` - observed `0.000474`; P6
 `E_R abs(b_R) in [0.0220, 0.0238]` - observed `0.02256`; control (Theorem C (1)-(3) on every class, weights summing to
-`2^45`) - no failure in 9,733,056 classes. All four CONFIRMED (`out/biasweights_summary_10.out`). So the mod-4 classes
-of two different one-vertex extensions of a random 10-vertex base are independent to within 4% of the twin term, and
-the exact labelled mod-4 discrepancy at order 11 is `260546929/2^39`.
+`2^45`) - no failure in 9,733,056 classes. All four inside their intervals (`out/biasweights_summary_10.out`;
+recomputed by audit 2 with independent code). P3 and P6 are not independent of P4: given the labelled rank fractions
+of order 10, known from the first audit before this pre-registration, `rho_10` and `E_R abs(b_R)` are affine functions
+of the non-zero-bias frequencies, dominated by the corank-2 term; the independent confirmations are P4 and P5. So at
+order 10 the pairs of different out-sets add 4.06% to the twin term in total: for independent uniform out-sets
+`X != X'` of a random 10-vertex base the mod-4 classes of the two extensions have correlation `3.97 * 10^(-5)` on
+average. Individual pairs are not uncorrelated: `(empty, V)` has correlation 1, and the antipodal pairs `(X, V \ X)`
+have correlation `P_R(all beta_R-degrees even) = 0.00205` on average (5% of the excess). The exact labelled mod-4
+discrepancy at order 11 is `260546929/2^39`; the labelled residues of `H` mod 8 at order 11 are
+`0.25013, 0.24987, 0.25011, 0.24989` (audit 2).
 
-### 4.1b A parity law for the pair matrix (added after the audit)
+### 4.1b A parity law for the pair matrix (added after the first audit; audited, `audit2/AUDIT2.md`)
 
-**Lemma 4.5 (PROVED).** For every tournament `R` on `m >= 2` vertices
+**Lemma 4.5 (the two equalities are KNOWN; the congruence and its consequences are PROVED here).** For every
+tournament `R` on `m >= 2` vertices
 
     sum_{i<j} mu_R(i,j) = sum_i a_i = sum_{S proper, non-empty} H(R[S]) H(R[V \ S]) = 2  (mod 4).           (4.5)
 
@@ -369,8 +408,18 @@ which is `sum_S H(R[S]) H(R[V \ S])` over proper non-empty `S`. Pairing `S` with
 of `2^(m-1) - 1` odd numbers (Redei), hence `2 mod 4` for `m >= 2`. A non-zero alternating matrix has rank at least
 2; then Theorem C (3). QED
 
-By (4.4) the lemma says that the number of directed paths of `R` on an even number of vertices is odd (Redei on
-every even subset: `sum_{k even >= 2} C(m,k) = 2^(m-1) - 1`).
+*Credits.* The first equality is `F_T(V) = H` (THM-4118 eqs. (2), (4)). The second is THM-4111 eq. (6),
+`sum_(a != b) Q_T(a,b) = (n-1) H(T) + F_1(T)` (`F_1` = orderings with exactly one backward adjacency), restated as
+THM-4115 eq. (7), THM-4181 eq. (6) (`W = sum_(i<j) c_ij` counts the exposed words; `c_ij = mu_R(i,j)` is THM-4167's
+exposure capacity) and Session 210 eq. (8) (`P_T(2) = (n+1) H(T) + m_(n-2)`); it is `W(V(B))` in kind-pasteur's
+same-day THM-5126 eq. (1'). The congruence is not stated in those files; it also follows in one line from THM-4184
+eq. (5) (`W/2 = P^0`, the sum of `H(R[S]) H(R[V \ S])` over the non-empty even `S`) or from the odd-subset gate
+formula THM-4892 (F) 3. Read in THM-4118's terms it says that the response-lattice gcd `d_T` is `2 mod 4` (eq. (9)
+there has only `d_T` even), and in THM-4115's terms that `F_1(T) = 2 - (n-1) H(T) (mod 4)` (there: `F_1` even for odd
+`n`).
+
+By (4.4), the statement that `beta_R` has an odd number of entries says that the number of directed paths of `R` on an
+even number of vertices is odd (Redei on every even subset: `sum_{k even >= 2} C(m,k) = 2^(m-1) - 1`).
 
 **Corollary 4.6 (PROVED).** (a) For every tournament `R` on `m >= 2` vertices, at least `2^(m-2)` of its `2^m`
 one-vertex extensions have `H = H(R) mod 4` and at least `2^(m-2)` have `H = H(R) + 2 mod 4`. (b) For `T` uniform on
@@ -379,15 +428,56 @@ one-vertex extensions have `H = H(R) mod 4` and at least `2^(m-2)` have `H = H(R
 
 *Proof.* (a) is `abs(b_R) <= 1/2`. (b): average (a) over `R = T - v`. (c) is immediate. QED
 
-(b) holds at every order and is far from the truth (`D_11 = 4.7 * 10^(-4)`); what is missing for decay is growth of
-the rank, and (4.5) is the only linear relation on `beta_R` found here. It fixes the null model: a uniformly random
-alternating matrix *with an odd number of edges*. Its rank law (`oddedge_model.py`, an exact Markov chain on rank,
-edge parity and whether the all-ones vector lies in the radical; checked against brute force for `m <= 6`) differs
-from the unconditioned law by less than `3 * 10^(-5)` in every rank class for `m >= 8`, so the comparison table of
-section 4.1 is unaffected. OBSERVATION (FINITE-EXACT, unexplained): at `m = 4` and `m = 5` the labelled rank law of
-`beta_R` equals the odd-edge law exactly (`5/8, 3/8` and `5/32, 27/32`); at `m = 6` it does not (no rank 2 occurs).
-Verification of (4.5): all 198,947 classes of orders 2-9 and all 9,733,056 classes of order 10 (`oddedge.c`,
-`out/oddedge_2_9.out`, `out/oddedge_10_parts.out`), no failure.
+**Corollary 4.7 (gate; PROVED).** For every tournament `R` on `m >= 2` vertices, `P_R(2) = 0 (mod 4)` and
+`H(Gamma R) = H(R) (mod 4)`, where `Gamma(R) = (a -> b -> R -> a)`, `P_R(2)` is the sum of `H(R[S]) H(R[V \ S])` over
+all subsets `S` (`H(empty) = 1`) and `H(Gamma R) = H(R) + P_R(2)` (KNOWN: Session 210 eq. (5); THM-4892 (F) 3;
+THM-4900). *Proof.* `P_R(2) = 2 H(R) +` the total of (4.5); or directly, `P_R(2)` is twice the sum of
+`H(R[S]) H(R[V \ S])` over the `2^(m-1)` odd subsets (THM-4892 (F) 3). QED So the gate statement and the congruence
+of (4.5) are the same statement read through Session 210 (5). Every gate tower `Gamma^r(R)`, `r >= 0`, keeps
+`H mod 4`. (At `m = 1` the residue changes: `H(Gamma(point)) = 3`.) FINITE-EXACT check: all classes of orders 2-7
+(`gate_mod4.py`); all classes of orders 2-9 and all labelled tournaments of orders 2-7 (audit 2).
+
+**(4.5) is the only affine relation (FINITE-EXACT, by certificate).** For each order `4 <= m <= 11`, (4.5) is the
+only affine relation over `F_2` among the entries of `beta_R` that holds for all tournaments of that order: the
+`beta_R` affinely span the hyperplane `sum = 1`, and the pairs `(ell_R, beta_R)` (`ell_R` the linear part) span the
+flat `sum ell = sum beta = 1` (`affine_span.py` exhibits affinely independent forms: all labelled tournaments for
+`m <= 5`, 200 seeded random ones for `m >= 6`; audit 2, `x6_affine.c`: every labelled tournament for `m <= 7`). At
+`m = 3` every `beta_R` is the triangle. This does not make `beta_R` generic: `R -> beta_R` reaches only 22 of the 32,
+352 of the 512 and 5,578 of the 16,384 graphs with an odd number of edges at `m = 4, 5, 6` (`audit2/x10_image.out`).
+
+**Proposition 4.8 (digit-degree law on a vertex cube; PROVED, standard argument).** For `k >= 1` the `k`-th binary
+digit of `H(R + v_X)`, as a Boolean function of `X`, has `F_2`-degree at most `2^k`. For `abs(U) = 2^k` the
+coefficient of `prod_{i in U} x_i` in its algebraic normal form is the Pfaffian of `beta_R` restricted to `U`
+(audit 2), so the degree is exactly `2^k` if and only if `rank(beta_R) >= 2^k`.
+
+*Proof.* By (4.2) and Theorem C (1), `G'(X) = (H(R + v_X) - 1)/2` is a non-negative polynomial of degree at most 2
+in the 0/1 coordinates of `X` with integer coefficients. Digit `j` of an integer `N >= 0` is `C(N, 2^j) mod 2`
+(Lucas). `C(G', 2^j)` is integer-valued on the cube and a polynomial of degree at most `2^(j+1)`; its multilinear
+form is unique, has integer coefficients (Moebius inversion) and the same degree bound; reduce mod 2. With
+`t = 2^(k-1)`, the degree-`2t` multilinear part of `C(G', t)` comes only from `(quadratic part)^t / t!`, and each
+perfect matching of `U` arises `t!` times, so the top coefficient is the hafnian of `mu/2` on `U`, which is the
+Pfaffian of `beta_R[U]` mod 2; an alternating matrix has rank at least `2t` iff some principal `2t x 2t` Pfaffian is
+non-zero. QED
+
+So digit 1 is the quadratic form of Theorem C, of degree exactly 2 for every `R` (Lemma 4.5). Digit 2 is a quartic
+whose degree is 4 except on the classes with `rank(beta_R) = 2` (3, 2, 0, 0, 2, 8, 7 classes at orders 4, ..., 10).
+On the whole arc cube digit 1 already has degree `2 floor((n-1)/2)` (THM-478). Mod 4 is the last layer of a vertex
+cube that is a quadratic form; mod 8 needs the differencing bound of Lemma C4. Checked with direct path counts on
+all classes of orders 3-7 (`digit_degree.py`) and of orders 3-10 by audit 2 (table in `audit2/AUDIT2.md`, L3).
+
+Corollary 4.6 (b) holds at every order and is far from the truth (`D_11 = 4.7 * 10^(-4)`); what is missing for decay
+is growth of the rank, and for `4 <= m <= 11` there is no further affine relation on `beta_R` to use. (4.5) fixes the
+null model: a uniformly random alternating matrix *with an odd number of edges*. Its rank law (`oddedge_model.py`, an
+exact Markov chain on rank, edge parity and whether the all-ones vector lies in the radical; checked against brute
+force for `m <= 6`) differs from the unconditioned law by exactly `4^C(s,2) [n choose s]_4 / 2^C(m,2)` in the rank
+class `2s` (`n = floor(m/2)`, Gaussian binomial at 4; proved and checked for `m <= 8` in audit 2, m6), at most
+`2.03 * 10^(-5)` for `m >= 8`, so the comparison table of section 4.1 is unaffected. OBSERVATION (FINITE-EXACT,
+unexplained): at `m = 4` and `m = 5` the labelled rank law of `beta_R` equals the odd-edge law exactly (`5/8, 3/8` and
+`5/32, 27/32`; trivially also at `m = 2, 3`, where every rank is 2); at `m = 6` it does not (no rank 2 occurs). It is
+a coincidence of the two rank laws only: the law of `beta_R` itself is not the odd-edge law (22 of 32 graphs reached
+at `m = 4`, with fibres of sizes 2 and 4; no graph with one edge occurs). Verification of (4.5): all 198,947 classes
+of orders 2-9 and all 9,733,056 classes of order 10 (`oddedge.c`, `out/oddedge_2_9.out`, `out/oddedge_10_parts.out`),
+no failure; recomputed from direct counts by audit 2.
 
 ### 4.2 A remark on small steps
 
@@ -567,6 +657,11 @@ of single integers of a sum that is only understood on average.
   `A * U - C(A) * M` with `M = H(T - u) >= 1` and `C` the pair-of-ones weight; positivity forbids cancelling `C`.
 - *Unit-step flip paths (discrete intermediate value)*: balanced bits exist at every scale (section 4.2) but have
   frequency `2^(-L/2)`; no percolation in solvable families.
+- *An inductive law for `rank(beta_R)`* (after the first audit; FINITE-EXACT, orders 4-7): over all classes and all
+  vertices `u` the difference `beta_R restricted to V - u, plus beta_(R-u)` attains the largest possible rank
+  `2 floor((m-1)/2)` (at order 7: ranks 0, 2, 4, 6 with counts 118, 278, 1864, 932), and the rank of `beta` can go up
+  as well as down under deletion (`deletion_rank.py`). No closed form for `beta_R` in terms of the adjacency matrix
+  was found. The mod-4 route stops at rank growth (HYP-9659 (B'')).
 
 ## 9. Reproduction
 
@@ -590,18 +685,24 @@ Requires `gentourng` (nauty) and a C compiler. From this directory:
                                                                   # classes at order 10), OR of the bitsets with
                                                                   # merge_parts.py, then analyze_window.py
                                                                   # (about 15 minutes on 8 cores)
-        cc -O2 -o /tmp/biasweights biasweights.c
+    cc -O2 -o /tmp/biasweights biasweights.c
     for m in 2 3 4 5 6 7 8 9; do gentourng -q $m | /tmp/biasweights $m; done > out/biasweights_2_9.out
-    python3 merge_bias.py out/biasweights_2_9.out                 # section 4.1a table (about 10 s)
+    python3 merge_bias.py out/biasweights_2_9.out > out/biasweights_summary_2_9.out     # section 4.1a table (10 s)
     for r in 0 1 2 3 4 5 6 7; do gentourng -q 10 $r/8 | /tmp/biasweights 10 > /tmp/bw10_$r.out & done; wait
-    cat /tmp/bw10_*.out > out/biasweights_10_parts.out && python3 merge_bias.py out/biasweights_10_parts.out   # P3-P6
-        python3 deletion_pair_corr.py 7 > out/deletion_pair_corr.out  # (4.3), brute force (about 20 minutes; `6`: 4 s)
-        python3 box_norm_check.py                                     # the box-norm chain for n + k <= 6
+    cat /tmp/bw10_*.out > out/biasweights_10_parts.out
+    python3 merge_bias.py out/biasweights_10_parts.out > out/biasweights_summary_10.out   # P3-P6 (4 minutes, 8 cores)
+    python3 deletion_pair_corr.py 7 > out/deletion_pair_corr.out  # (4.3), brute force (20 minutes of Python; `6`: 4 s)
+    python3 box_norm_check.py > out/box_norm_check.out            # the box-norm chain for n + k <= 6
     cc -O2 -o /tmp/oddedge oddedge.c
     for m in 2 3 4 5 6 7 8 9; do gentourng -q $m | /tmp/oddedge $m; done > out/oddedge_2_9.out   # Lemma 4.5
     for r in 0 1 2 3 4 5 6 7; do gentourng -q 10 $r/8 | /tmp/oddedge 10 > /tmp/oe10_$r.out & done; wait
     cat /tmp/oe10_*.out > out/oddedge_10_parts.out
     python3 oddedge_model.py 11 > out/oddedge_model.out           # rank law of odd-edge alternating matrices
+    for m in 3 4 5 6 7 8 9 10 11; do python3 affine_span.py $m 3000; done > out/affine_span.out   # only affine relation
+    python3 gate_mod4.py > out/gate_mod4.out                      # Corollary 4.7, orders 2-7
+    for m in 3 4 5 6 7; do python3 digit_degree.py $m; done > out/digit_degree.out      # Proposition 4.8 (m = 7: 3 minutes)
+    for m in 4 5 6 7; do python3 deletion_rank.py $m; done > out/deletion_rank.out      # section 8, last item
+    sh audit/run_all.sh; sh audit2/run_all.sh                     # the two audits' independent recomputations
     python3 flip_family.py                                        # section 4.2, d = 2..11 from the recurrence of g
     python3 ozj.py 30000                                            # non-negative O/Z/J coordinates: the known 29 misses
 

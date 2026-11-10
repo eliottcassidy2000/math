@@ -24417,3 +24417,39 @@ formula new, rewrite it in the other systems (here: rooted `(H, d, E, U)`, cut `
 not only the words of the present note. Cite a theorem for a law only after opening its file. A sentence of the
 form "no X of order <= n" must carry the search universe wherever it is repeated. A mean bounds members per unit;
 it never decides coverage, which is a collision question.
+
+## MISTAKE-755 (2026-11-10, mac-mini-2026-11-10-ensemble, THM-5127 (C) (5)-(6), HYP-9659 (B'') and sections 4.1a-4.1b of `05-knowledge/results/tilted_ensemble_local_limit_20261110/README.md` at checkpoint 612fa44c81; found by the second independent audit `05-knowledge/results/tilted_ensemble_local_limit_20261110/audit2/AUDIT2.md`) -- the credit error of MISTAKE-753 M1 made again three hours later in the same lane; a calibration stated for the wrong ensemble; "independent" written for an average; a non-implication typed PROVED; four pre-registered predictions that were two
+
+- **MAJOR (credit; audit 2 M1).** Lemma 4.5 (`sum_{i<j} mu_R(i,j) = sum_i a_i = sum_S H(R[S]) H(R[V \ S]) = 2 mod 4`)
+  was typed PROVED as a whole and listed under "NEW here". Both equalities are canon of the ear-response /
+  exposure-capacity lane: `F_T(V) = H` (THM-4118 eq. (2)); the total of the pair terms as the number of ordered
+  two-path covers, `(n-1)H + F_1` (THM-4111 eq. (6), THM-4115 eq. (7), THM-4181 eq. (6), Session 210 eq. (8)); half of
+  it as a sum over even subsets (THM-4184 eq. (5)). The explicit polar form (4.4) is THM-4177 eq. (16) reduced mod 2,
+  and its eq. (18) is the positivity `mu >= 2 H(R - {i,j})`, which MISTAKE-753 had credited to a note two months
+  younger. New are only the congruence and its corollaries (`rank(beta_R) >= 2`, `|b_R| <= 1/2`,
+  `1/4 <= P(H = 1 mod 4) <= 3/4`, the gate preserves `H mod 4`). Repaired in the note, THM-5127 and HYP-9659. This is
+  the mechanism of MISTAKE-753 M1 again, after its lesson had been written: the search for "two-path cover" was run,
+  found THM-4892, THM-5122 and THM-5126, and stopped before the lane's own files (THM-4111, 4115, 4167, 4177, 4181,
+  4184), which use the words "exposure capacity" and "exposed words" and the letters `Q_T`, `c_ij`, `W`.
+- **MINOR (15 items, all applied).** Among them: the calibration "a uniformly random quadratic form gives exactly
+  `2^(-m)`" holds when the linear part is uniform and independent of the polar form, not under the constraints every
+  tournament form satisfies (there it is `2^(-m)(1 + 2^(-(m-1)))`, through the antipodal pairs `X, V \ X`);
+  "independent to within 4%" was written for a signed total over pairs (individual pairs are not uncorrelated:
+  `(empty, V)` has correlation 1); the chain `B(n,k)^2 <= B(n,k+1)` lacked its range `0 <= k <= n-1` and the clause
+  that makes the enlarged tournament uniform; "neither of (B') and bounded `rho_m` implies the other" was typed PROVED
+  for two open statements; "the smallest open statement" was not the weakest (`D_n -> 0` is); P3, P4 and P6 of the
+  second pre-registration were one prediction, because the labelled rank law of order 10 had been computed by the
+  first audit before the pre-registration (the independent confirmations are P4 and P5); a bound "for all `m >= 8`"
+  had been computed to `m = 11` (true, by an exact formula the audit supplied); `0.007523` for `0.0075225`; "linear
+  relation" for an affine one.
+- **Late items (sent to the auditor during the audit; all confirmed, one corrected before publication).** The gate
+  corollary, the affine-span certificate, the digit-degree law and the vertex-deletion probe. "Digit 2 has degree
+  exactly 4" is not an all-order law: the exact criterion is `rank(beta_R) >= 2^k` (the top coefficient is a
+  Pfaffian), and it fails on the rank-2 classes of orders 4, 5, 8, 9, 10.
+
+Lesson: a lesson written into the ledger does not execute itself. Before typing a statement about a coefficient
+family as new, list every theorem file of its LANE (here the THM-4097..4184 block: ear response, cut quadratic,
+exposure capacity, path covers) and read their displayed equations, instead of grepping for the phrase one happens
+to use. A pre-registration must list everything already computed at the registered order by anyone, the audit
+included; otherwise predictions that are functions of in-sample data are counted as confirmations. A model value
+("exactly `2^(-m)`") must name its ensemble.
