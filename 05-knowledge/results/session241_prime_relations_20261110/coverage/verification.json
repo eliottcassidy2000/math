@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "arithmetic_pairs": 10000,
+  "literal_tournaments": [
+    [
+      1,
+      1,
+      19
+    ],
+    [
+      1,
+      2,
+      33
+    ],
+    [
+      1,
+      3,
+      61
+    ],
+    [
+      1,
+      4,
+      117
+    ],
+    [
+      2,
+      1,
+      39
+    ],
+    [
+      2,
+      2,
+      69
+    ],
+    [
+      2,
+      3,
+      129
+    ],
+    [
+      2,
+      4,
+      249
+    ],
+    [
+      3,
+      1,
+      79
+    ],
+    [
+      3,
+      2,
+      141
+    ],
+    [
+      3,
+      3,
+      265
+    ],
+    [
+      3,
+      4,
+      513
+    ],
+    [
+      4,
+      1,
+      159
+    ],
+    [
+      4,
+      2,
+      285
+    ],
+    [
+      4,
+      3,
+      537
+    ],
+    [
+      4,
+      4,
+      1041
+    ]
+  ],
+  "inverse_odd_targets_checked": 500000,
+  "image_below_bound": 138,
+  "odd_prime_period_and_valuation_checks": 72000,
+  "fixed_seed_identity_checks": 5112,
+  "dyadic_formula_bounds_checked": 157,
+  "counts": {
+    "1024": 24,
+    "1048576": 144,
+    "1099511627776": 684,
+    "1208925819614629174706176": 2964,
+    "1461501637330902918203684832716283019655932542976": 12324
+  },
+  "hostiles": {
+    "missing": [
+      7,
+      21
+    ],
+    "prime_H_composite_shift": [
+      19,
+      35
+    ],
+    "composite_H_composite_shift": [
+      33,
+      63
+    ]
+  },
+  "scope": "Restricted two-burst family only; not a proof of Chan-Pak."
+}

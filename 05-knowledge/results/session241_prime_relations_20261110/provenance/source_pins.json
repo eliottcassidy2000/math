@@ -1,0 +1,85 @@
+{
+  "snapshot": "3d42677c554d8c026229206c3497cd098cefdef8",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "last_modifying_commit": "881a9903995884c02a03ffb45c68e9174f8b6c58",
+      "blob": "963ba70f0d5f1154b07fd406cb24245eda16debc"
+    },
+    {
+      "path": "01-canon/theorems/THM-4644-fermat-primes-rigid-circulant-tournaments-wieferich-orbit-explosion.md",
+      "last_modifying_commit": "881a9903995884c02a03ffb45c68e9174f8b6c58",
+      "blob": "705bbae29f4787c6ba7f968cabdde6ecf18e846a"
+    },
+    {
+      "path": "01-canon/theorems/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md",
+      "last_modifying_commit": "153d17c527aef3552e9dc70dd7e7e66691e7a83e",
+      "blob": "17c7c724cd8a32699501cb8ae237d077d79d97c7"
+    },
+    {
+      "path": "01-canon/theorems/THM-4747-hamiltonian-cycles-under-automorphisms-fermat-wilson-congruences-for-circulant-and-paley-tournaments.md",
+      "last_modifying_commit": "3596c5d0b1990b05ae960e980a863956b47cc6b5",
+      "blob": "c0091ea1ae2f09730c6a7a15a4087b49d06f3590"
+    },
+    {
+      "path": "01-canon/theorems/THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md",
+      "last_modifying_commit": "52fde1af0df4543960465978c7788726304d4208",
+      "blob": "406f66a4174239ff7b4b5f57df1d010e60b68d59"
+    },
+    {
+      "path": "01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+      "last_modifying_commit": "9bee1a59fe0930e7677c9f1b07b9f097d2eee50d",
+      "blob": "1ccc489cb70a3ef3d61473522f4d380884c73d5b"
+    },
+    {
+      "path": "01-canon/theorems/THM-4801-collatz-meets-the-constructible-polygons-trunk-five-initial-segment-principle-collatz-closed-family.md",
+      "last_modifying_commit": "3dd768c8640ff7f0f7c1a13ea6cc99139b85466d",
+      "blob": "655e2210634dc1148eac2dd1edd765c308f834a7"
+    },
+    {
+      "path": "01-canon/theorems/THM-4847-fermat-primes-barriers-to-proving-exactly-five-the-function-field-analogue-and-why-tournament-counts-are-blind-while-three-state-counts-are-pepin.md",
+      "last_modifying_commit": "3b4571f3633ff7d814da7a2c389c5eb5608778b7",
+      "blob": "4a891ad0d27d1c62b411820c1747ce96721abc24"
+    },
+    {
+      "path": "01-canon/theorems/THM-4861-the-five-fermat-primes-are-hamiltonian-path-counts-of-tournaments-with-least-orders-3-4-6-8-11-a-vertex-transitive-tournament-has-a-prime-count-only-for-c3-and-fermat-primes-are-free-vertices-of-the-prime-square-sum-graph.md",
+      "last_modifying_commit": "12eaf3ab17de07fcfd8d495849c19c6ae1156039",
+      "blob": "e7625c6090361a19bc70c28ae2d22901a57f37f9"
+    },
+    {
+      "path": "01-canon/theorems/THM-4884-definability-lenses-korselt-congruence-of-spectrum-polynomial-strong-multiplicity-census-minimal-rank-sublanguages.md",
+      "last_modifying_commit": "74586119df6c2836363f080cd5c5ab331e4c78a3",
+      "blob": "8ca97b0b0d0b3a76c96889571f584ad340dc291f"
+    },
+    {
+      "path": "01-canon/theorems/THM-4904-root-change-word-fibers-carmichael-chamber-parity-law-sqrt-density.md",
+      "last_modifying_commit": "1be88a625518c2aa4eabf6d4e536839f74a4e74f",
+      "blob": "d9d6a0fbc7cc2936f2062837265eac449878682a"
+    },
+    {
+      "path": "01-canon/theorems/THM-4940-odd-cycle-packing-counts-in-every-base.md",
+      "last_modifying_commit": "9d3191377ce0fe9a0361fc92ced259755e2397e5",
+      "blob": "c601f130e762db959012d77da39a151d3e9a1b2b"
+    },
+    {
+      "path": "05-knowledge/results/session218_smith_repunit_totient_20261107/README.md",
+      "last_modifying_commit": "74586119df6c2836363f080cd5c5ab331e4c78a3",
+      "blob": "73bd33477311b8b7b84f3fb31b2d34a260666861"
+    },
+    {
+      "path": "05-knowledge/results/session219_fermat_totient_chanpak_20261107/README.md",
+      "last_modifying_commit": "acbad6c8636cf8cbb675b4c947fa19e33ac0df23",
+      "blob": "416921fb0330bb5fae650dd516499a736830f518"
+    },
+    {
+      "path": "05-knowledge/results/ordered_response_ten_20261103/NORMAL_FORMS.md",
+      "last_modifying_commit": "6f99623a8cc59a43576a15a425d9b31097ca5b83",
+      "blob": "c33011bee4492f87db52c8508679f6ddfb4532ed"
+    },
+    {
+      "path": "05-knowledge/results/session160_ordered_programs_20261103/axioms/NOTE.md",
+      "last_modifying_commit": "42eff9fbac7dbadc036fedc50247fa89a93f069c",
+      "blob": "d890f504210120b9b7c9dc9ed6d89051daa9a9da"
+    }
+  ]
+}

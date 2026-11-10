@@ -1,0 +1,140 @@
+{
+  "status": "PASS",
+  "adjacency_DP_rows_a_b_n_H": [
+    [
+      1,
+      1,
+      6,
+      19
+    ],
+    [
+      1,
+      2,
+      7,
+      33
+    ],
+    [
+      1,
+      3,
+      8,
+      61
+    ],
+    [
+      1,
+      4,
+      9,
+      117
+    ],
+    [
+      2,
+      1,
+      7,
+      39
+    ],
+    [
+      2,
+      2,
+      8,
+      69
+    ],
+    [
+      2,
+      3,
+      9,
+      129
+    ],
+    [
+      2,
+      4,
+      10,
+      249
+    ],
+    [
+      3,
+      1,
+      8,
+      79
+    ],
+    [
+      3,
+      2,
+      9,
+      141
+    ],
+    [
+      3,
+      3,
+      10,
+      265
+    ],
+    [
+      3,
+      4,
+      11,
+      513
+    ],
+    [
+      4,
+      1,
+      9,
+      159
+    ],
+    [
+      4,
+      2,
+      10,
+      285
+    ],
+    [
+      4,
+      3,
+      11,
+      537
+    ],
+    [
+      4,
+      4,
+      12,
+      1041
+    ]
+  ],
+  "binary_patterns_checked": 14400,
+  "gcd_identity_checks": 10000,
+  "inverse_targets_all_integers": 100000,
+  "image_count": 91,
+  "exact_power_two_counts_k_count": [
+    [
+      10,
+      24
+    ],
+    [
+      20,
+      144
+    ],
+    [
+      40,
+      684
+    ],
+    [
+      80,
+      2964
+    ],
+    [
+      160,
+      12324
+    ],
+    [
+      320,
+      50244
+    ]
+  ],
+  "controls": {
+    "transitive": 1,
+    "directed_triangle": 3,
+    "missing_seed_hostile": 9,
+    "correct_seed_minimum": 19,
+    "excluded_7_21": true
+  },
+  "source_sha256": "8aec227d597b1fc4b4ad85d785351769ff0cb67f35adfe23db582406b48e2361",
+  "scope": "Two-burst image only; no all-tournament exclusion except inherited facts; not Chan-Pak coverage."
+}

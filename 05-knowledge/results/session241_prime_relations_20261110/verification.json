@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "script": "constructions/verify.py",
+      "sha256": "e99766bbafdbf2d968bc424ae484fecb254b5e6ed4bd59745463c7e60ae1750b",
+      "status": "PASS"
+    },
+    {
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "script": "coverage/verify.py",
+      "sha256": "2f919e2dd6d1de54cf3084a304acd2b0ca9b7e58e7b192dcdc307827f4f3c970",
+      "status": "PASS"
+    },
+    {
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "script": "coverage_audit/verify.py",
+      "sha256": "d17f09d578394301d205879ca83d61b1986a0dc4dc67f19cb7fbde9c4cc32da8",
+      "status": "PASS"
+    },
+    {
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "script": "repunit_chart/verify.py",
+      "sha256": "4e746b5918a51bee0106dc850422dc821bed6b3227e8d229e9c763f346210df8",
+      "status": "PASS"
+    },
+    {
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "script": "embedding_audit/verify.py",
+      "sha256": "56239ae912646484fde18f9e1a0abdf55e6c7e8e8939b9f28a2cbb62d724cf93",
+      "status": "PASS"
+    },
+    {
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "script": "provenance/verify_smooth_lengths.py",
+      "sha256": "360f34420c5751c5efca6b34c2e388f7c82fa3fac6e393d28a6e311ad7f81b5f",
+      "status": "PASS"
+    }
+  ],
+  "processes": 12,
+  "scope": "Six independently scoped producer/audit programs; not unrestricted tournament coverage or a global repository test.",
+  "status": "PASS"
+}

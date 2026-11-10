@@ -1,0 +1,226 @@
+{
+  "actual_fans": [
+    {
+      "H": 3,
+      "n": 1,
+      "order": 3,
+      "rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "H": 15,
+      "n": 2,
+      "order": 6,
+      "rows": [
+        18,
+        60,
+        57,
+        49,
+        32,
+        1
+      ]
+    },
+    {
+      "H": 63,
+      "n": 3,
+      "order": 8,
+      "rows": [
+        102,
+        252,
+        248,
+        241,
+        225,
+        192,
+        128,
+        1
+      ]
+    },
+    {
+      "H": 255,
+      "n": 4,
+      "order": 10,
+      "rows": [
+        462,
+        1020,
+        1016,
+        1008,
+        993,
+        961,
+        896,
+        768,
+        512,
+        1
+      ]
+    },
+    {
+      "H": 1023,
+      "n": 5,
+      "order": 12,
+      "rows": [
+        1950,
+        4092,
+        4088,
+        4080,
+        4064,
+        4033,
+        3969,
+        3840,
+        3584,
+        3072,
+        2048,
+        1
+      ]
+    },
+    {
+      "H": 4095,
+      "n": 6,
+      "order": 14,
+      "rows": [
+        7998,
+        16380,
+        16376,
+        16368,
+        16352,
+        16320,
+        16257,
+        16129,
+        15872,
+        15360,
+        14336,
+        12288,
+        8192,
+        1
+      ]
+    }
+  ],
+  "hostiles": {
+    "H2_times_H3": 945,
+    "H_divisibility": false,
+    "R3_is_forbidden_H": true,
+    "chart_join_H6": 4095,
+    "index_divisibility": false,
+    "induced_Q2_in_Q3": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      7
+    ],
+    "normalized_R3": 21,
+    "ordinary_lcm_H2_H3": 315
+  },
+  "limits": [
+    "The normalized chart scalar R_n is not asserted to be realizable as H.",
+    "Finite tests supplement all-index proofs; no unrestricted Chan-Pak interval is claimed."
+  ],
+  "status": "PASS",
+  "totient_rows": [
+    {
+      "H": 3,
+      "n": 1,
+      "phi_H": 2,
+      "phi_index": 1
+    },
+    {
+      "H": 15,
+      "n": 2,
+      "phi_H": 8,
+      "phi_index": 1
+    },
+    {
+      "H": 63,
+      "n": 3,
+      "phi_H": 36,
+      "phi_index": 2
+    },
+    {
+      "H": 255,
+      "n": 4,
+      "phi_H": 128,
+      "phi_index": 2
+    },
+    {
+      "H": 1023,
+      "n": 5,
+      "phi_H": 600,
+      "phi_index": 4
+    },
+    {
+      "H": 4095,
+      "n": 6,
+      "phi_H": 1728,
+      "phi_index": 2
+    },
+    {
+      "H": 16383,
+      "n": 7,
+      "phi_H": 10584,
+      "phi_index": 6
+    },
+    {
+      "H": 65535,
+      "n": 8,
+      "phi_H": 32768,
+      "phi_index": 4
+    },
+    {
+      "H": 262143,
+      "n": 9,
+      "phi_H": 139968,
+      "phi_index": 6
+    },
+    {
+      "H": 1048575,
+      "n": 10,
+      "phi_H": 480000,
+      "phi_index": 4
+    },
+    {
+      "H": 4194303,
+      "n": 11,
+      "phi_H": 2640704,
+      "phi_index": 10
+    },
+    {
+      "H": 16777215,
+      "n": 12,
+      "phi_H": 6635520,
+      "phi_index": 4
+    },
+    {
+      "H": 67108863,
+      "n": 13,
+      "phi_H": 44717400,
+      "phi_index": 12
+    },
+    {
+      "H": 268435455,
+      "n": 14,
+      "phi_H": 132765696,
+      "phi_index": 6
+    },
+    {
+      "H": 1073741823,
+      "n": 15,
+      "phi_H": 534600000,
+      "phi_index": 8
+    },
+    {
+      "H": 4294967295,
+      "n": 16,
+      "phi_H": 2147483648,
+      "phi_index": 8
+    }
+  ],
+  "universe": {
+    "adjacency_fans": "n=1..6",
+    "arithmetic_pairs": 40000,
+    "image_totients": "n=1..16",
+    "prime_order_checks": 5000,
+    "totient_indices": "n=1..200"
+  }
+}

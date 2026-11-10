@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "universe": "0<=a,b<=12",
+  "nonunit_targets": 168,
+  "methods": [
+    "four-atom dynamic programming",
+    "three-counter exponent formula"
+  ],
+  "sharp_control": {
+    "value": 3969,
+    "lengths": [
+      2,
+      5
+    ]
+  },
+  "scope": "finite regression of inherited theorem; not a novelty claim"
+}

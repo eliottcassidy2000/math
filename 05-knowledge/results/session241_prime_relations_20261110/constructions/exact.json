@@ -1,0 +1,215 @@
+{
+  "actual_encoded_tournaments": [
+    {
+      "H": 1,
+      "n": 1,
+      "order": 0
+    },
+    {
+      "H": 3,
+      "n": 2,
+      "order": 3
+    },
+    {
+      "H": 5,
+      "n": 3,
+      "order": 4
+    },
+    {
+      "H": 9,
+      "n": 4,
+      "order": 6
+    },
+    {
+      "H": 17,
+      "n": 5,
+      "order": 6
+    },
+    {
+      "H": 15,
+      "n": 6,
+      "order": 7
+    },
+    {
+      "H": 257,
+      "n": 7,
+      "order": 10
+    },
+    {
+      "H": 27,
+      "n": 8,
+      "order": 9
+    },
+    {
+      "H": 25,
+      "n": 9,
+      "order": 8
+    },
+    {
+      "H": 51,
+      "n": 10,
+      "order": 9
+    },
+    {
+      "H": 45,
+      "n": 12,
+      "order": 10
+    },
+    {
+      "H": 771,
+      "n": 14,
+      "order": 13
+    },
+    {
+      "H": 85,
+      "n": 15,
+      "order": 10
+    },
+    {
+      "H": 81,
+      "n": 16,
+      "order": 12
+    }
+  ],
+  "arithmetic_pairs_1_to_31": 961,
+  "bank_optimization_exponents_1_to_16": [
+    {
+      "exponent_sets": [
+        [
+          1
+        ]
+      ],
+      "k": 1,
+      "minimum_total_order": 3
+    },
+    {
+      "exponent_sets": [
+        [
+          1,
+          2
+        ]
+      ],
+      "k": 2,
+      "minimum_total_order": 7
+    },
+    {
+      "exponent_sets": [
+        [
+          1,
+          2,
+          4
+        ]
+      ],
+      "k": 3,
+      "minimum_total_order": 13
+    },
+    {
+      "exponent_sets": [
+        [
+          1,
+          2,
+          4,
+          8
+        ]
+      ],
+      "k": 4,
+      "minimum_total_order": 23
+    },
+    {
+      "exponent_sets": [
+        [
+          1,
+          2,
+          4,
+          8,
+          16
+        ]
+      ],
+      "k": 5,
+      "minimum_total_order": 41
+    }
+  ],
+  "gcd_formula_pairs": 4096,
+  "hostiles": {
+    "addition": {
+      "phi_2": 3,
+      "phi_3": 5,
+      "phi_5": 17
+    },
+    "contained_E3_in_E4": [
+      0,
+      1,
+      3
+    ],
+    "distinct_values": 343,
+    "false_divisibility": {
+      "15_divides_51_times_85": true,
+      "quotient": 289
+    },
+    "injective_box_0_to_6_weights": [
+      15,
+      51,
+      85
+    ],
+    "prime_input_13_composite_image": {
+      "factorization": [
+        641,
+        6700417
+      ],
+      "phi_13": 4294967297
+    }
+  },
+  "near_transitive_H": [
+    {
+      "H": 3,
+      "a": 1,
+      "order": 3
+    },
+    {
+      "H": 5,
+      "a": 2,
+      "order": 4
+    },
+    {
+      "H": 9,
+      "a": 3,
+      "order": 5
+    },
+    {
+      "H": 17,
+      "a": 4,
+      "order": 6
+    },
+    {
+      "H": 33,
+      "a": 5,
+      "order": 7
+    },
+    {
+      "H": 65,
+      "a": 6,
+      "order": 8
+    },
+    {
+      "H": 129,
+      "a": 7,
+      "order": 9
+    },
+    {
+      "H": 257,
+      "a": 8,
+      "order": 10
+    },
+    {
+      "H": 513,
+      "a": 9,
+      "order": 11
+    },
+    {
+      "H": 1025,
+      "a": 10,
+      "order": 12
+    }
+  ],
+  "status": "FINITE-EXACT controls; all-order statements require PROOF.md"
+}
