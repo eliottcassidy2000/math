@@ -1,6 +1,6 @@
 # Session244: from universal even gaps to anchored odd targets
 
-**ACTIVE RESEARCH, 10 November 2026. No new all-target theorem is claimed.**
+**COMPLETED RESEARCH SESSION, 10 November 2026. No all-target theorem is claimed.**
 
 Starting main: c6b359b9c0cae3e26101657f648e70b008e99c0c.
 The objective is to prove that every positive odd integer except 7 and 21 is
@@ -49,4 +49,4 @@ graph checks where a formula is presented as a physical construction.
 Only explicitly owned files are staged. Unrelated existing newline changes
 in agent inbox files are preserved. Small nonforce checkpoints will be
 verified on origin/main. No reset, broad staging or chronology-based promotion
-is permitted. This is the initial checkpoint, not the session close-out.
+is permitted. This initial plan is retained for provenance. The final README, SYNTHESIS and audit record the completed session and the remaining open obligations.

@@ -8,3 +8,6 @@
 - `probe.py`: initial endpoint-coefficient word search, lengths1 through9.
 
 Main and structural verifiers pass isolated normal and optimized Python with byte-identical JSON. Main `--fail` exits nonzero. No finite coverage has been promoted to a universal target selector. No Git or navigation files were changed by this lane.
+
+- `INTERFACES.md`, `verify_interfaces.py`, `INTERFACES_CHECK.json`: exact common-continuation iff; the seven-coordinate ΔG=−12W identity; affine pure-gap cubes and their growing divisor; shorter strong response-error-one pairs and synchronized response-error-four pairs; the dyadic no-cancellation theorem; the inherited sqrt-approximation repair obligation.
+- `escape_divisor_probe.py`, `ESCAPE_DIVISOR_PROBE.jsonl`: finite length≤14 pure-D compiler search, repaired to preserve terminal-Z witnesses across matrix deduplication. The corrected search is not an all-word theorem.

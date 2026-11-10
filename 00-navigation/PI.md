@@ -60,3 +60,5 @@ Recovers older THM-3181 and Session27, extends [S176](S176.md) and
 - [Session242](S242.md): THM-5106 least-denominator congruent arithmetic and exact halving; THM-5107 proper-graft cofactor-seven exclusion; THM-5108 physical smooth descent and fixed-bank cost. Independently audited; global Chan–Pak OPEN.
 
 - [Session243](S243.md): audited primorial crossing-gap repair and Brown inverse, synchronized strong graft windows, and compact literal one-vertex gap pairs with upper count <=5N. Prescribed gaps do not solve arbitrary target placement; Chan–Pak OPEN.
+
+- [Session244](S244.md): endpoint cost ≤3N, pure-count gap cost ≤59N, exact anchor barriers and six-core grammar. Chan–Pak OPEN.

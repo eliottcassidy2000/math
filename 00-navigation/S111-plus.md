@@ -137,3 +137,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session242](S242.md): congruent arithmetic, cofactor-seven obstruction and physical smooth descent; audited. Chan–Pak OPEN.
 
 [Session243](S243.md): merges both Brocard meanings, Polignac and Euclid arithmetic with compact strong vertex increments and exact gap restrictions; independently audited, Chan–Pak OPEN.
+
+[Session244](S244.md): linear-cost endpoints, pure-count gaps and six-core forest grammar; Chan–Pak OPEN.

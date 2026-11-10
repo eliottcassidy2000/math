@@ -1,0 +1,15 @@
+{
+  "order": 12,
+  "status": "COMPLETED",
+  "running_source_sha256": "389e1d3209c6641cdd8c5e2ff09d530e81cc2df8237ff0e07d681c9cffc5b4ae",
+  "published_source_sha256": "29a702ef577fa5bc51876109aaddd61745a0da81e4bf59215b373daef3fb108f",
+  "running_binary_sha256": "ef16c67506aa4e349d3e0dc195e7cd44d1f21f37788bf90a0e19f8fd562d44c1",
+  "compile_command": "g++ -std=c++17 -O3 -Wall -Wextra -Wconversion -Werror -pedantic census.cpp -o forest-census",
+  "run_command": "forest-census 12 OUTPUT_DIRECTORY > SUMMARY.jsonl 2> CENSUS_PROGRESS.log",
+  "source_change": "Only argv[1] validation was hardened while the already-started order12 computation ran. Enumeration, DP, graph encoding, depth tracking, and output code are unchanged. Argument12 enters identical computation. ARGUMENT_VALIDATION.patch is the complete running-to-published diff; reverse it to reconstruct and verify the running source hash. No result was obtained from an invalid input.",
+  "exit_code": 0,
+  "histories_order12": 479001600,
+  "elapsed_seconds": 1805.13,
+  "summary_sha256": "8d6fb3bb8abeaab874630301dbd2aac59b40799cbc6bbbfbf6e5e071b3d061e1",
+  "prior_order1_through_11_csv_byte_equality": true
+}

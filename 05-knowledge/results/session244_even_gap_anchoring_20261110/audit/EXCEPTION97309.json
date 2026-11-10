@@ -1,0 +1,90 @@
+{
+  "H": 97309,
+  "choices": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    5,
+    1,
+    7,
+    3,
+    4,
+    2
+  ],
+  "code": 25112126,
+  "depth_at_most_two_order12_histories": 123489888,
+  "depths": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    2,
+    1,
+    3,
+    1,
+    2,
+    1
+  ],
+  "forced_depth_three_chain": [
+    8,
+    6,
+    4,
+    0
+  ],
+  "forced_reverse_deletions_vertex_parent": [
+    [
+      11,
+      1
+    ],
+    [
+      10,
+      3
+    ],
+    [
+      9,
+      2
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "masks": [
+    3910,
+    2044,
+    3576,
+    3057,
+    4001,
+    4033,
+    3728,
+    3841,
+    3648,
+    3076,
+    2056,
+    2
+  ],
+  "minimum_presentation_depth_of_this_graph": 3,
+  "order": 12,
+  "scope": "Exact positive witness and graph-depth proof. Absence of every other shallow graph with H97309 requires the separate exhaustive scalar census.",
+  "status": "PASS"
+}

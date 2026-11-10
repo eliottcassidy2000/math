@@ -32,8 +32,6 @@ response selector is not a complete full-count selector. The least-used
 sidecar here is the absolute source count retained beside its response.
 
 The packet makes no literature-priority claim. It leaves existing files alone.
-The message processor could not run because `.machine-id` is not present;
-no identity file was created in this shared worktree.
 
 ## 1. Exact recurrence and pair-image redundancy
 
@@ -236,3 +234,19 @@ exact target-bounded inverse. Cheapest decisive tests: 11 for the compact
 family, 13 for all one-apex graphs, 105 for all <=5 seed retained-root tails.
 No subtraction, density claim about the full tournament spectrum, or
 all-odd conclusion is licensed by these subfamily results.
+
+
+## Later selector rounds
+
+- `ROUND2.md`: explicit rerooting repairs for 13 and 173; a ternary-response
+  family; and a complete target cutoff allowing arbitrary root choices.
+- `ROUND3.md`: efficient endpoint universality with the entire rooted state
+  retained, and its exact fixed-root continuation obstruction.
+- `ROUND4.md`: a two-index pure-D gap anchor and complete inverse; a proved
+  positive-density omission for its bounded input banks; the hostile 27783
+  response fiber; and a literal matching rebase for consecutive J runs.
+  It explicitly credits Session199 modular universality, Session205 tail
+  formulas, and Session206 finite-bank parameter capacity.
+
+Each round has its own standard-library verifier and deterministic JSON
+receipt. The all-target four-block lemma and Chan–Pak remain OPEN.

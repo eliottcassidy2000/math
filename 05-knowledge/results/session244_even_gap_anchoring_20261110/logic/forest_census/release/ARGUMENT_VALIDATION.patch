@@ -1,0 +1,17 @@
+--- census.cpp.running
++++ census.cpp.published
+@@ -93,8 +93,12 @@
+ 
+ int main(int argc,char **argv){
+     if(argc!=3)throw std::runtime_error("usage: census max_order output_directory");
+-    target=static_cast<unsigned>(std::stoul(argv[1]));
+-    if(target<2||target>LIM)throw std::runtime_error("order must be 2..12");
++    const std::string argument=argv[1];
++    if(argument.empty()||argument.find_first_not_of("0123456789")!=std::string::npos)
++        throw std::runtime_error("order must be an integer in 2..12");
++    const auto parsed=std::stoul(argument);
++    if(parsed<2||parsed>LIM)throw std::runtime_error("order must be 2..12");
++    target=static_cast<unsigned>(parsed);
+     H[0]=1;H[1]=1;starts[1][0]=ends[1][0]=1;
+     visit(1,0,0);
+     uint64_t factorial=1;

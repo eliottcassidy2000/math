@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "controls_passed": 22,
+  "full_history_count_order12": 479001600,
+  "all_literal_witnesses_recounted": 138488,
+  "python_normal_optimized_byte_equality": true,
+  "prior_order1_through_11_csv_byte_equality": true,
+  "normalized_shallow_histories": 23670073,
+  "normalized_shallow_missing_values": [
+    97309
+  ],
+  "source_hashes_match_control_receipt": true,
+  "order12_scalar_failure_scope": "Exactly order12 within chronological-forest presentations; not variable-order absence. A depth1 order20 witness is independently certified."
+}

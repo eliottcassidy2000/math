@@ -4,6 +4,15 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-10: Session244 anchoring, lost root menus and search admissibility
+
+- **Failed implication:** a physical pair for every even difference, even with upper count at most 5N, does not place a prescribed odd target at either endpoint. The compact upper endpoints repeat lower endpoints at doubled input. The exact zero-J density bound and chronological caterpillar description were already proved in Session199; the initial rediscovery is explicitly credited rather than promoted as new.
+- **Exact repair:** retain absolute count and the full root menu. Rerooting the count-15 source edge.ZOOZ and applying ZZ gives an eight-vertex count-173 witness whose start counts are 23,72,5,27,17,14,10,5. No root has start count one, so this does not contradict Session197's unit-start grammar exclusion. Historical overnight_s3.out labels such as “NEVER (forbidden)” were bounded at order seven, not global nonexistence statements. No independent minimum-order claim is made here.
+- **Corrected formulas and provenance:** the inverse of Fminus is h=(h′−3e′)/2 and e=3h′−10e′. Session231 already supplies the nonsink zero-defect classification, and THM-4873/4875 supply the defect bound. Sessions205/206 already supply the general retained-root tail formula and parameter-capacity obstruction. New applications do not erase those dependencies.
+- **Lost continuation information:** the explicit forest graph with H=217 and code26485 has a child of count373, but no depth-at-most-two order-nine graph with H=217 has that child count. Scalar equality cannot replace a root-menu invariant. Likewise a count-five graph can support both binary signs and lose one after either chosen extension. The fixed-order scalar depth-two conjecture then failed at order twelve only for 97309; a separate shallow census confirms it, while 31·43·73 gives a depth-one witness at order twenty. These are scoped counterexamples, not refutations of unrestricted scalar coverage.
+- **Search admissibility correction:** deduplicating operation matrices by their first representative and then filtering for words ending Z is invalid: JZ and OJ have the same matrix, but only one retained word may end Z. A terminal constraint must be retained before deduplication or stored as a sidecar. The higher-interface theorem is independent of that exploratory search.
+- **Survivor and open obligation:** the new linear-cost endpoint theorem, pure-count gap pair and sharp forbidden-core theorem survive independent audit. Exact anchoring, the four-block coverage lemma and global Chan–Pak coverage remain OPEN. [Session244 proofs and controls](../05-knowledge/results/session244_even_gap_anchoring_20261110/README.md).
+
 ## 2026-11-10: Session243 prime-gap and physical-lift controls
 
 - **Failed bridge, not a retraction of the inherited offset definitions:** equal Fortunate and lesser-Fortunate offsets do not alone certify consecutive primes. At P_6=30030, offsets ±17 give primes 30013 and 30047, but 30029 intervenes. The actual crossing gap is 18, not 34.

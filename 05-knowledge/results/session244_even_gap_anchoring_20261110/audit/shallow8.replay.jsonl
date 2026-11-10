@@ -1,0 +1,2 @@
+{"status":"PASS","n":8,"no_immediate_parent_normalization":false,"histories":23544,"expected_histories":23544,"leaf_parents":3459,"distinct_shallow_values":192,"max_H":413,"complete_image_equals_full_census_depth_at_most_two":true,"full_census_values_absent_shallow":[]}
+{"status":"PASS","n":8,"no_immediate_parent_normalization":true,"histories":4697,"expected_histories":4697,"leaf_parents":705,"distinct_shallow_values":192,"max_H":413,"complete_image_equals_full_census_depth_at_most_two":true,"full_census_values_absent_shallow":[]}

@@ -1,0 +1,14 @@
+{"length": 1, "matrices": 3, "pairs_by_coordinate": [0, 0, 0, 0], "divisor_escapes": [], "escape_count": 0}
+{"length": 2, "matrices": 8, "pairs_by_coordinate": [0, 0, 0, 0], "divisor_escapes": [], "escape_count": 0}
+{"length": 3, "matrices": 21, "pairs_by_coordinate": [0, 0, 0, 0], "divisor_escapes": [], "escape_count": 0}
+{"length": 4, "matrices": 55, "pairs_by_coordinate": [0, 0, 0, 0], "divisor_escapes": [], "escape_count": 0}
+{"length": 5, "matrices": 144, "pairs_by_coordinate": [0, 0, 0, 0], "divisor_escapes": [], "escape_count": 0}
+{"length": 6, "matrices": 376, "pairs_by_coordinate": [0, 0, 0, 0], "divisor_escapes": [], "escape_count": 0}
+{"length": 7, "matrices": 981, "pairs_by_coordinate": [0, 0, 1, 0], "divisor_escapes": [], "escape_count": 0}
+{"length": 8, "matrices": 2557, "pairs_by_coordinate": [0, 0, 3, 0], "divisor_escapes": [], "escape_count": 0}
+{"length": 9, "matrices": 6660, "pairs_by_coordinate": [0, 0, 7, 0], "divisor_escapes": [], "escape_count": 0}
+{"length": 10, "matrices": 17337, "pairs_by_coordinate": [0, 0, 15, 0], "divisor_escapes": [], "escape_count": 0}
+{"length": 11, "matrices": 45105, "pairs_by_coordinate": [0, 0, 31, 0], "divisor_escapes": [], "escape_count": 0}
+{"length": 12, "matrices": 117302, "pairs_by_coordinate": [0, 0, 63, 0], "divisor_escapes": [], "escape_count": 0}
+{"length": 13, "matrices": 304938, "pairs_by_coordinate": [0, 0, 127, 0], "divisor_escapes": [], "escape_count": 0}
+{"length": 14, "matrices": 792415, "pairs_by_coordinate": [0, 0, 255, 0], "divisor_escapes": [], "escape_count": 0}

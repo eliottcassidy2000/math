@@ -1,0 +1,221 @@
+{
+  "status": "PASS",
+  "strict_compiler_flags": [
+    "-std=c++17",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Wconversion",
+    "-Werror",
+    "-pedantic"
+  ],
+  "small_run_order": 8,
+  "controls": [
+    {
+      "name": "reconstructed_running_source_and_wrapper_only_replay",
+      "result": "PASS",
+      "running_source_sha256": "389e1d3209c6641cdd8c5e2ff09d530e81cc2df8237ff0e07d681c9cffc5b4ae",
+      "summary_sha256": "3be2535f72494ee9dfd96fb61812804a0675c5107019a55c5b83bb1b433a2779"
+    },
+    {
+      "name": "normal_ndebug_byte_equality",
+      "result": "PASS",
+      "summary_sha256": "3be2535f72494ee9dfd96fb61812804a0675c5107019a55c5b83bb1b433a2779",
+      "csv_files": [
+        {
+          "file": "n1_witnesses.csv",
+          "sha256": "2c57e68a3d99f2224f140b1d32c522a248b6828637d2677657e78b4194a2aede"
+        },
+        {
+          "file": "n2_witnesses.csv",
+          "sha256": "2c57e68a3d99f2224f140b1d32c522a248b6828637d2677657e78b4194a2aede"
+        },
+        {
+          "file": "n3_witnesses.csv",
+          "sha256": "564af74eaf3fd684b2aa655f4e99f1871727c656fce28129acfffb196cbbe221"
+        },
+        {
+          "file": "n4_witnesses.csv",
+          "sha256": "106e3656fc840c937e6b290c906fa05ca74237e88b1e933117856ce159f5bdca"
+        },
+        {
+          "file": "n5_witnesses.csv",
+          "sha256": "62aea203df0e2c6c80c7e6c669d0105dfa074687087126d6a6e25b92f8d380d7"
+        },
+        {
+          "file": "n6_witnesses.csv",
+          "sha256": "312f39f8d768bc0fb1f3594b6c5411230a6ccb92bdf8b6f1095d40ad2f4c7dc9"
+        },
+        {
+          "file": "n7_witnesses.csv",
+          "sha256": "ba5672a9b163542746ed152b4e83e6c3f952c6f9a26cac3261ce96fe00807514"
+        },
+        {
+          "file": "n8_witnesses.csv",
+          "sha256": "c6c0a3c77edd6d9116b518340455b403dfc9570bba6426d3f9362e910a61bca6"
+        }
+      ]
+    },
+    {
+      "name": "small_run_all_codes_recount",
+      "result": "PASS",
+      "stdout_sha256": "b0529a4a57e21e516391c22dfaf16797052e63153846f7b922830d79fc96ae3e"
+    },
+    {
+      "name": "python_normal_optimized_byte_equality",
+      "result": "PASS",
+      "stdout_sha256": "12a673394d5417da08337995a961de4cf406415b7d8973b2c3af50f41f9b48d0"
+    },
+    {
+      "name": "census_rejects_bad_order",
+      "input": "13",
+      "result": "PASS",
+      "returncode": -6,
+      "stderr": "terminate called after throwing an instance of 'std::runtime_error'\n  what():  order must be 2..12"
+    },
+    {
+      "name": "census_rejects_bad_order",
+      "input": "4294967298",
+      "result": "PASS",
+      "returncode": -6,
+      "stderr": "terminate called after throwing an instance of 'std::runtime_error'\n  what():  order must be 2..12"
+    },
+    {
+      "name": "census_rejects_bad_order",
+      "input": "2junk",
+      "result": "PASS",
+      "returncode": -6,
+      "stderr": "terminate called after throwing an instance of 'std::runtime_error'\n  what():  order must be an integer in 2..12"
+    },
+    {
+      "name": "census_rejects_bad_order",
+      "input": "-2",
+      "result": "PASS",
+      "returncode": -6,
+      "stderr": "terminate called after throwing an instance of 'std::runtime_error'\n  what():  order must be an integer in 2..12"
+    },
+    {
+      "name": "census_rejects_bad_order",
+      "input": "0",
+      "result": "PASS",
+      "returncode": -6,
+      "stderr": "terminate called after throwing an instance of 'std::runtime_error'\n  what():  order must be 2..12"
+    },
+    {
+      "name": "audit_rejects_bad_order",
+      "input": "13",
+      "result": "PASS",
+      "returncode": 1,
+      "stderr": "ERROR: order must be 1..12"
+    },
+    {
+      "name": "audit_rejects_bad_order",
+      "input": "4294967298",
+      "result": "PASS",
+      "returncode": 1,
+      "stderr": "ERROR: order must be 1..12"
+    },
+    {
+      "name": "audit_rejects_bad_order",
+      "input": "2junk",
+      "result": "PASS",
+      "returncode": 1,
+      "stderr": "ERROR: order must be an integer in 1..12"
+    },
+    {
+      "name": "audit_rejects_bad_order",
+      "input": "-2",
+      "result": "PASS",
+      "returncode": 1,
+      "stderr": "ERROR: order must be an integer in 1..12"
+    },
+    {
+      "name": "audit_rejects_bad_order",
+      "input": "0",
+      "result": "PASS",
+      "returncode": 1,
+      "stderr": "ERROR: order must be 1..12"
+    },
+    {
+      "name": "normal_form_independent_literal_replay_ndebug_equality",
+      "result": "PASS",
+      "stdout_sha256": "baf821c1e17617e4b85ffa74454801426434bbf3b09f51ca6f49d517bd0ed786"
+    },
+    {
+      "name": "restricted_shallow_normal_ndebug_byte_equality",
+      "normalization": "0",
+      "result": "PASS",
+      "report": {
+        "status": "PASS",
+        "n": 8,
+        "no_immediate_parent_normalization": false,
+        "histories": 23544,
+        "expected_histories": 23544,
+        "leaf_parents": 3459,
+        "distinct_shallow_values": 192,
+        "max_H": 413,
+        "complete_image_equals_full_census_depth_at_most_two": true,
+        "full_census_values_absent_shallow": []
+      },
+      "stdout_sha256": "5d90f679bdfce91b69e8c997b091d9857839d1e22ace0b8540d9a718870da0c6"
+    },
+    {
+      "name": "restricted_shallow_normal_ndebug_byte_equality",
+      "normalization": "1",
+      "result": "PASS",
+      "report": {
+        "status": "PASS",
+        "n": 8,
+        "no_immediate_parent_normalization": true,
+        "histories": 4697,
+        "expected_histories": 4697,
+        "leaf_parents": 705,
+        "distinct_shallow_values": 192,
+        "max_H": 413,
+        "complete_image_equals_full_census_depth_at_most_two": true,
+        "full_census_values_absent_shallow": []
+      },
+      "stdout_sha256": "733074a3960349570a64373c7921001803c7f061e880993836fadc2dd511f7b0"
+    },
+    {
+      "name": "shallow_rejects_order13",
+      "result": "PASS",
+      "returncode": 1
+    },
+    {
+      "name": "depth_exception_and_order20_join_normal_optimized_equality",
+      "result": "PASS",
+      "stdout_sha256": "c1d698e24fe38d47f767a809150d1046a8d95cf4149ff507cabe8a835fd43b2e"
+    },
+    {
+      "name": "cpp_rejects_corrupted_private_csv",
+      "result": "PASS",
+      "mutation": "n3: H=3 changed to H=5; witness unchanged",
+      "returncode": 1,
+      "error": "ERROR: full witness mismatch"
+    },
+    {
+      "name": "python_rejects_corrupted_private_csv",
+      "result": "PASS",
+      "mutation": "n3: H=3 changed to H=5; witness unchanged",
+      "returncode": 1,
+      "error": "RuntimeError: first witness n=3 H=5 code=1"
+    },
+    {
+      "name": "python_optimized_rejects_corrupted_private_csv",
+      "result": "PASS",
+      "mutation": "n3: H=3 changed to H=5; witness unchanged",
+      "returncode": 1,
+      "error": "RuntimeError: first witness n=3 H=5 code=1"
+    }
+  ],
+  "artifact_source_sha256": {
+    "census.cpp": "29a702ef577fa5bc51876109aaddd61745a0da81e4bf59215b373daef3fb108f",
+    "audit_all_witnesses.cpp": "30357e0ec31648b14199f56a2c610125b4cf4a69ea57f6f92ffeb9e536eec5c3",
+    "audit.py": "cd4af379fd6507aded412ed41fe9be46ee7cb3772659af49cd2b5664904a3a48",
+    "verify_controls.py": "a8f8a8802417c2f9e8c575cbdba970e2c2fec9ca571a8c0a143b44d097b0d459",
+    "verify_normal_form.cpp": "dfaf9119f490b4f5e3d8ad788689ac9b3e6dcbd8563555204daa559c7a9a4f5e",
+    "shallow_census.cpp": "9c04a09b9ce376bd28d3a9fa063e578dfde7f92541d2a50e98b026ff6457542c",
+    "verify_depth_exception.py": "bf7f4b3d3a6e1298a76b5a6ea3bb67fef799f8642bda64a382a0fc2081cdea78"
+  }
+}

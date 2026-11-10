@@ -1,0 +1,8 @@
+{"n":1,"histories":1,"distinct_values":1,"max_H":1,"first_allowed_miss":3,"depth2_values":1,"depth3_values":1,"first_needing_depth_gt2":0}
+{"n":2,"histories":2,"distinct_values":1,"max_H":1,"first_allowed_miss":3,"depth2_values":1,"depth3_values":1,"first_needing_depth_gt2":0}
+{"n":3,"histories":6,"distinct_values":2,"max_H":3,"first_allowed_miss":5,"depth2_values":2,"depth3_values":2,"first_needing_depth_gt2":0}
+{"n":4,"histories":24,"distinct_values":3,"max_H":5,"first_allowed_miss":9,"depth2_values":3,"depth3_values":3,"first_needing_depth_gt2":0}
+{"n":5,"histories":120,"distinct_values":7,"max_H":15,"first_allowed_miss":17,"depth2_values":7,"depth3_values":7,"first_needing_depth_gt2":0}
+{"n":6,"histories":720,"distinct_values":16,"max_H":37,"first_allowed_miss":35,"depth2_values":16,"depth3_values":16,"first_needing_depth_gt2":0}
+{"n":7,"histories":5040,"distinct_values":55,"max_H":123,"first_allowed_miss":63,"depth2_values":55,"depth3_values":55,"first_needing_depth_gt2":0}
+{"n":8,"histories":40320,"distinct_values":192,"max_H":413,"first_allowed_miss":311,"depth2_values":192,"depth3_values":192,"first_needing_depth_gt2":0}

@@ -1,7 +1,7 @@
 # Efficient endpoint universality with its full state retained
 
 **PROVED construction and identities; finite exact replay.** Construction
-proposed by the parent Session244 agent and independently certified here.
+developed in Session244 and independently certified here.
 Endpoint existence and trivial-root-stabilizer existence are inherited from
 THM-5001; the quantitative cost and complete state below sharpen that route.
 No claim of literature priority or global optimality is made. Chan–Pak remains

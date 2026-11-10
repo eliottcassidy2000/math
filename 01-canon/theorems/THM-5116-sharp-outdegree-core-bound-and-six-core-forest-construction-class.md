@@ -69,3 +69,61 @@ and its finite obstruction characterization does not prove its scalar
 spectrum is every allowed odd number. That remains OPEN.
 
 [Full proof, exact representatives and independent comparisons](../../05-knowledge/results/session244_even_gap_anchoring_20261110/logic/ROUND3.md).
+
+## Graph-preserving Hamilton-path normalization
+
+Every chronological forest history can be changed, without changing its
+underlying tournament, into one with no newborn beating its immediate
+predecessor. Its maximum reversal-forest depth does not increase. Hence the
+normalized birth order is itself a Hamilton path, and the complete graph
+class, including its minimum presentation depths, can be searched using
+only (n-1)! histories at order n.
+
+To prove this, swap consecutive vertices x,y whenever y beats x. Among all
+vertex pairs only their mutual order changes. The backward edge y->x
+therefore disappears and every other backward edge is retained. Vertex y
+becomes a forest root, x keeps its earlier parent, and all later parent
+incidences remain valid. Depths cannot increase. Each swap removes one of
+at most n-1 forest edges, so iteration terminates. Starting with any
+minimum-depth presentation proves that restricting to normalized histories
+preserves the minimum. Each birth at position j, with j earlier vertices,
+has j choices: a sink or any earlier parent except its immediate predecessor.
+Their product is (n-1)!.
+
+The same argument applies to every outdegree-b-degenerate tournament:
+an ordering with at most b earlier outneighbors can be normalized to a
+Hamilton-path ordering without increasing that bound. The normalized
+history universe has size
+
+    product over j=1,...,n-1 of sum over i=0,...,min(b,j-1) of binom(j-1,i).
+
+This is an elementary adjacent-swap application, not a claim of external
+literature priority. It does not flatten every forest to depth two.
+
+## Fixed-order depth-two scalar equality is false
+
+**FINITE-EXACT, independently corroborated.** All chronological forest
+histories through order eleven have scalar images already attained at
+forest depth at most two. At order twelve, the full 479,001,600-history
+census has 53,549 distinct counts; exactly one, 97,309, has minimum depth
+three. An independently implemented normalized shallow census of 23,670,073
+histories produces the other 53,548 values and excludes 97,309. The full
+maximum is 115,781, and the first allowed missing count is 91,081.
+
+The explicit twelve-vertex witness has outgoing masks
+
+    [3910,2044,3576,3057,4001,4033,3728,3841,3648,3076,2056,2].
+
+Its forced reverse deletions include the chain 8->6->4->0, giving a direct
+proof that this graph needs depth at least three; its supplied history
+attains three. The separate shallow census excludes every other depth-two
+graph of the same order with this count.
+
+The order qualification is essential: 97,309=31*43*73 has a depth-one
+ordinal-join realization on twenty vertices, using independently counted
+factors of orders 6,7,7. No variable-order depth-two exclusion follows.
+All 138,488 stored positive and minimum-depth graph witnesses across the
+full census were independently recounted.
+
+[Complete normalized proof, depth counterexamples and source receipts](../../05-knowledge/results/session244_even_gap_anchoring_20261110/logic/forest_census/release/NORMAL_FORM.md) ·
+[Reproduction and exact finite scope](../../05-knowledge/results/session244_even_gap_anchoring_20261110/logic/forest_census/release/README.md).

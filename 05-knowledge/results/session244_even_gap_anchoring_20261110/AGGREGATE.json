@@ -1,0 +1,153 @@
+{
+  "full_census_regenerated": false,
+  "native_checks": [
+    {
+      "normal_and_ndebug": "PASS",
+      "source": "face/verify.cpp"
+    },
+    {
+      "normal_and_ndebug": "PASS",
+      "source": "dyadic/probe.cpp"
+    },
+    {
+      "order_12_stored_witnesses": "PASS",
+      "order_8_regeneration_and_hostile_controls": "PASS",
+      "order_9_normal_form_obstruction": "PASS",
+      "source": "logic/forest_census/release/census.cpp"
+    },
+    {
+      "order_12_receipt": "checked; full negative replay available with --full-census",
+      "order_8_both_modes": "PASS",
+      "source": "logic/forest_census/release/shallow_census.cpp"
+    }
+  ],
+  "python_checks": [
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "selector/verify.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "selector/verify_round2.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "selector/verify_round3.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "selector/verify_round4.py"
+    },
+    {
+      "hostile": "PASS",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "composition/verify.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "composition/verify_round2.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "composition/verify_round3.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "composition/verify_structure.py"
+    },
+    {
+      "hostile": "PASS",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "composition/verify_interfaces.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "logic/verify.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "logic/verify_round2.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "logic/verify_round3.py"
+    },
+    {
+      "hostile": "PASS",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "dyadic/verify.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "audit/independent_verify.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "audit/verify_cores.py"
+    },
+    {
+      "hostile": "PASS",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "audit/final_independent_verify.py"
+    },
+    {
+      "hostile": "PASS",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "audit/verify_hostile217.py"
+    },
+    {
+      "hostile": "PASS",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "audit/verify_interfaces_independent.py"
+    },
+    {
+      "hostile": "PASS",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "audit/verify_exception97309.py"
+    },
+    {
+      "hostile": "PASS",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "audit/verify_normalization.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "logic/forest_census/release/verify_depth_exception.py"
+    }
+  ],
+  "status": "PASS"
+}

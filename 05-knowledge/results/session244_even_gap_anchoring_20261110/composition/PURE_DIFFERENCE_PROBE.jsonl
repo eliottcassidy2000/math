@@ -1,0 +1,7 @@
+{"length": 1, "distinct_matrices": 3, "all_terminal_rows": 1, "pairs": [], "num_pairs": 0}
+{"length": 2, "distinct_matrices": 8, "all_terminal_rows": 3, "pairs": [], "num_pairs": 0}
+{"length": 3, "distinct_matrices": 21, "all_terminal_rows": 8, "pairs": [], "num_pairs": 0}
+{"length": 4, "distinct_matrices": 55, "all_terminal_rows": 21, "pairs": [], "num_pairs": 0}
+{"length": 5, "distinct_matrices": 144, "all_terminal_rows": 55, "pairs": [], "num_pairs": 0}
+{"length": 6, "distinct_matrices": 376, "all_terminal_rows": 144, "pairs": [], "num_pairs": 0}
+{"length": 7, "distinct_matrices": 981, "all_terminal_rows": 377, "pairs": [{"row": [17, 0, 40, 0], "coordinate": 2, "low": "OJJJJOZ", "high": "OJOZJOZ", "side": [[3, 0, 6, 0], [21, 0, 50, 0], [3, 0, 6, 0]]}], "num_pairs": 1}

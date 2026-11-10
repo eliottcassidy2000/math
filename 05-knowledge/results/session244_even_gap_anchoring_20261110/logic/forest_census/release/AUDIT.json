@@ -1,0 +1,425 @@
+{
+  "status": "PASS",
+  "order_results": [
+    {
+      "n": 1,
+      "histories": 1,
+      "distinct_values": 1,
+      "max_H": 1,
+      "first_allowed_miss": 3,
+      "depth2_values": 1,
+      "depth3_values": 1,
+      "first_needing_depth_gt2": 0,
+      "first_20_allowed_misses": [
+        3
+      ],
+      "rows_sampled": 1,
+      "codes_recounted": 2,
+      "csv_sha256": "2c57e68a3d99f2224f140b1d32c522a248b6828637d2677657e78b4194a2aede",
+      "depth_counts": {
+        "0": 1
+      }
+    },
+    {
+      "n": 2,
+      "histories": 2,
+      "distinct_values": 1,
+      "max_H": 1,
+      "first_allowed_miss": 3,
+      "depth2_values": 1,
+      "depth3_values": 1,
+      "first_needing_depth_gt2": 0,
+      "first_20_allowed_misses": [
+        3
+      ],
+      "rows_sampled": 1,
+      "codes_recounted": 2,
+      "csv_sha256": "2c57e68a3d99f2224f140b1d32c522a248b6828637d2677657e78b4194a2aede",
+      "depth_counts": {
+        "0": 1,
+        "1": 0
+      }
+    },
+    {
+      "n": 3,
+      "histories": 6,
+      "distinct_values": 2,
+      "max_H": 3,
+      "first_allowed_miss": 5,
+      "depth2_values": 2,
+      "depth3_values": 2,
+      "first_needing_depth_gt2": 0,
+      "first_20_allowed_misses": [
+        5
+      ],
+      "rows_sampled": 2,
+      "codes_recounted": 4,
+      "csv_sha256": "564af74eaf3fd684b2aa655f4e99f1871727c656fce28129acfffb196cbbe221",
+      "depth_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "n": 4,
+      "histories": 24,
+      "distinct_values": 3,
+      "max_H": 5,
+      "first_allowed_miss": 9,
+      "depth2_values": 3,
+      "depth3_values": 3,
+      "first_needing_depth_gt2": 0,
+      "first_20_allowed_misses": [],
+      "rows_sampled": 3,
+      "codes_recounted": 6,
+      "csv_sha256": "106e3656fc840c937e6b290c906fa05ca74237e88b1e933117856ce159f5bdca",
+      "depth_counts": {
+        "0": 1,
+        "1": 2,
+        "2": 0,
+        "3": 0
+      }
+    },
+    {
+      "n": 5,
+      "histories": 120,
+      "distinct_values": 7,
+      "max_H": 15,
+      "first_allowed_miss": 17,
+      "depth2_values": 7,
+      "depth3_values": 7,
+      "first_needing_depth_gt2": 0,
+      "first_20_allowed_misses": [
+        17
+      ],
+      "rows_sampled": 7,
+      "codes_recounted": 14,
+      "csv_sha256": "62aea203df0e2c6c80c7e6c669d0105dfa074687087126d6a6e25b92f8d380d7",
+      "depth_counts": {
+        "0": 1,
+        "1": 6,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      }
+    },
+    {
+      "n": 6,
+      "histories": 720,
+      "distinct_values": 16,
+      "max_H": 37,
+      "first_allowed_miss": 35,
+      "depth2_values": 16,
+      "depth3_values": 16,
+      "first_needing_depth_gt2": 0,
+      "first_20_allowed_misses": [
+        35,
+        39
+      ],
+      "rows_sampled": 16,
+      "codes_recounted": 32,
+      "csv_sha256": "312f39f8d768bc0fb1f3594b6c5411230a6ccb92bdf8b6f1095d40ad2f4c7dc9",
+      "depth_counts": {
+        "0": 1,
+        "1": 15,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    },
+    {
+      "n": 7,
+      "histories": 5040,
+      "distinct_values": 55,
+      "max_H": 123,
+      "first_allowed_miss": 63,
+      "depth2_values": 55,
+      "depth3_values": 55,
+      "first_needing_depth_gt2": 0,
+      "first_20_allowed_misses": [
+        63,
+        105,
+        107,
+        119,
+        121,
+        125
+      ],
+      "rows_sampled": 55,
+      "codes_recounted": 110,
+      "csv_sha256": "ba5672a9b163542746ed152b4e83e6c3f952c6f9a26cac3261ce96fe00807514",
+      "depth_counts": {
+        "0": 1,
+        "1": 52,
+        "2": 2,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      }
+    },
+    {
+      "n": 8,
+      "histories": 40320,
+      "distinct_values": 192,
+      "max_H": 413,
+      "first_allowed_miss": 311,
+      "depth2_values": 192,
+      "depth3_values": 192,
+      "first_needing_depth_gt2": 0,
+      "first_20_allowed_misses": [
+        311,
+        371,
+        373,
+        379,
+        385,
+        391,
+        395,
+        397,
+        401,
+        405,
+        407,
+        409,
+        411,
+        415
+      ],
+      "rows_sampled": 112,
+      "codes_recounted": 224,
+      "csv_sha256": "c6c0a3c77edd6d9116b518340455b403dfc9570bba6426d3f9362e910a61bca6",
+      "depth_counts": {
+        "0": 1,
+        "1": 179,
+        "2": 12,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0
+      }
+    },
+    {
+      "n": 9,
+      "histories": 362880,
+      "distinct_values": 706,
+      "max_H": 1509,
+      "first_allowed_miss": 991,
+      "depth2_values": 706,
+      "depth3_values": 706,
+      "first_needing_depth_gt2": 0,
+      "first_20_allowed_misses": [
+        991,
+        1179,
+        1243,
+        1271,
+        1299,
+        1325,
+        1349,
+        1351,
+        1363,
+        1365,
+        1373,
+        1381,
+        1383,
+        1385,
+        1395,
+        1399,
+        1405,
+        1409,
+        1415,
+        1423
+      ],
+      "rows_sampled": 121,
+      "codes_recounted": 242,
+      "csv_sha256": "59efbafdf3e8f614cec381d7cb48b9593bbdd31bf7c9c73575ab92338d893c03",
+      "depth_counts": {
+        "0": 1,
+        "1": 657,
+        "2": 48,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    {
+      "n": 10,
+      "histories": 3628800,
+      "distinct_values": 2817,
+      "max_H": 6083,
+      "first_allowed_miss": 4585,
+      "depth2_values": 2817,
+      "depth3_values": 2817,
+      "first_needing_depth_gt2": 0,
+      "first_20_allowed_misses": [
+        4585,
+        5025,
+        5071,
+        5105,
+        5123,
+        5177,
+        5199,
+        5239,
+        5243,
+        5257,
+        5263,
+        5275,
+        5297,
+        5333,
+        5345,
+        5353,
+        5373,
+        5379,
+        5387,
+        5391
+      ],
+      "rows_sampled": 124,
+      "codes_recounted": 248,
+      "csv_sha256": "08a16f39d333c5c69a5728db1f060f5ed9cebe31e2343ac83c20f662d10a61e1",
+      "depth_counts": {
+        "0": 1,
+        "1": 2543,
+        "2": 273,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      }
+    },
+    {
+      "n": 11,
+      "histories": 39916800,
+      "distinct_values": 11895,
+      "max_H": 25827,
+      "first_allowed_miss": 20407,
+      "depth2_values": 11895,
+      "depth3_values": 11895,
+      "first_needing_depth_gt2": 0,
+      "first_20_allowed_misses": [
+        20407,
+        21241,
+        21269,
+        21359,
+        21365,
+        21389,
+        21445,
+        21613,
+        21667,
+        21673,
+        21745,
+        21787,
+        21839,
+        21995,
+        22013,
+        22025,
+        22057,
+        22109,
+        22121,
+        22123
+      ],
+      "rows_sampled": 124,
+      "codes_recounted": 248,
+      "csv_sha256": "6589f28f754eea1d10740708c019aa86874f736790570dba3e8775cb7b982d90",
+      "depth_counts": {
+        "0": 1,
+        "1": 10463,
+        "2": 1431,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0
+      }
+    },
+    {
+      "n": 12,
+      "histories": 479001600,
+      "distinct_values": 53549,
+      "max_H": 115781,
+      "first_allowed_miss": 91081,
+      "depth2_values": 53548,
+      "depth3_values": 53549,
+      "first_needing_depth_gt2": 97309,
+      "first_20_allowed_misses": [
+        91081,
+        93909,
+        94363,
+        94773,
+        94789,
+        94847,
+        94915,
+        95173,
+        95275,
+        95665,
+        95939,
+        96211,
+        96227,
+        96279,
+        96609,
+        96625,
+        96673,
+        96731,
+        96939,
+        96977
+      ],
+      "rows_sampled": 124,
+      "codes_recounted": 248,
+      "csv_sha256": "c341e129e6184426e724a329cd8d0f93d185419654a44dfaed809028876d4b7a",
+      "depth_counts": {
+        "0": 1,
+        "1": 46092,
+        "2": 7455,
+        "3": 1,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0
+      }
+    }
+  ],
+  "independent_labelled_census": [
+    {
+      "n": 1,
+      "labelled_deg_one": 1,
+      "spectrum_size": 1
+    },
+    {
+      "n": 2,
+      "labelled_deg_one": 2,
+      "spectrum_size": 1
+    },
+    {
+      "n": 3,
+      "labelled_deg_one": 8,
+      "spectrum_size": 2
+    },
+    {
+      "n": 4,
+      "labelled_deg_one": 64,
+      "spectrum_size": 3
+    },
+    {
+      "n": 5,
+      "labelled_deg_one": 1000,
+      "spectrum_size": 7
+    },
+    {
+      "n": 6,
+      "labelled_deg_one": 26720,
+      "spectrum_size": 16
+    }
+  ],
+  "scope": "Complete labelled graph-class spectra independently checked through order 6; deterministic literal witness samples above order 6. Summary minimal depths rely on the exhaustive history census, not these positive recounts."
+}

@@ -100,6 +100,19 @@ for N in range(1,61):
     for m in range(51,351,2):
         a=next(a for a in range(m-28,m+1,2) if a%3==0 and (a+2*N)%5==0)
         ck(member(a) and member(a+2*N),'anchor')
+# Seven-letter pure-count compiler: literal independent permutation checks.
+for N in (1,2):
+    for word,coefficient in [('OJJJJOZ',40),('OJOZJOZ',42)]:
+        a=[0] if N==1 else [2,0];root=0
+        for letter in word:
+            n=len(a);a.append(0 if letter=='O' else 1<<root)
+            for i in range(n):
+                if letter=='O' or i!=root:a[i]|=1<<n
+            if letter=='J':root=n
+        bits=sum(1<<k for k,(i,j) in enumerate(it.combinations(range(len(a)),2)) if a[i]>>j&1)
+        states=profiles(len(a),bits)
+        expected=(17+coefficient*N,3+6*N,21+50*N,3+6*N)
+        ck(len(states)==len(a) and states[root]==expected,'pure-count compiler')
 # Efficient endpoint-source profiles via independent literal permutations.
 for N in range(1,17):
     a=[2,0];m=N;letters=[]
@@ -128,4 +141,4 @@ for root,letter in [(0,c) for c in 'ZOOZ']+[(2,'Z'),(2,'Z')]:
 bits=sum(1<<k for k,(i,j) in enumerate(it.combinations(range(len(a)),2)) if a[i]>>j&1)
 literal=profiles(len(a),bits)
 ck(len(literal)==8 and literal[2]==(173,9,209,9),'independent literal 173')
-print(json.dumps({'status':'PASS','method':'all directed permutations on subsets, no producer imports','labelled_tournaments_orders_2_to_5':total,'seed_banks':counts,'density_constant_lower':str(lo),'density_constant_upper':str(hi),'literal_efficient_endpoint_sources':16,'literal_173_profile':[173,9,209,9],'compact_model_pairs':10000,'constant_error_anchor_pairs':9000},indent=2,sort_keys=True))
+print(json.dumps({'status':'PASS','method':'all directed permutations on subsets, no producer imports','labelled_tournaments_orders_2_to_5':total,'seed_banks':counts,'density_constant_lower':str(lo),'density_constant_upper':str(hi),'literal_pure_count_compiler_outputs':4,'literal_efficient_endpoint_sources':16,'literal_173_profile':[173,9,209,9],'compact_model_pairs':10000,'constant_error_anchor_pairs':9000},indent=2,sort_keys=True))

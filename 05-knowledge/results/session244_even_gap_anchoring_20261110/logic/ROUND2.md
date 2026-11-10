@@ -167,7 +167,7 @@ composition inverse formula. The correct inverse of F- is
     h=(h'-3e')/2, e=3h'-10e'.
 
 For example (9,3) maps to (171,51), which this inverse returns to (9,3).
-The correction was sent to the parent for the composition packet. It does
+The correction is retained in the composition packet. It does
 not change the forward maps or the new pair compiler. This packet's final
 inverse differences have the positive signs shown in §4.
 

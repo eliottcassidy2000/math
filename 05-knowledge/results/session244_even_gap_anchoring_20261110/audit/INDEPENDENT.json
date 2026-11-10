@@ -11,6 +11,7 @@
     9
   ],
   "literal_efficient_endpoint_sources": 16,
+  "literal_pure_count_compiler_outputs": 4,
   "method": "all directed permutations on subsets, no producer imports",
   "seed_banks": {
     "3": {

@@ -1,0 +1,472 @@
+{
+  "status": "PASS",
+  "order12_witness": {
+    "n": 12,
+    "outgoing_masks": [
+      3910,
+      2044,
+      3576,
+      3057,
+      4001,
+      4033,
+      3728,
+      3841,
+      3648,
+      3076,
+      2056,
+      2
+    ],
+    "chronological_code": 25112126,
+    "choices_including_vertex_zero": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      5,
+      1,
+      7,
+      3,
+      4,
+      2
+    ],
+    "vertex_depths": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      2,
+      1,
+      3,
+      1,
+      2,
+      1
+    ],
+    "maximum_history_depth": 3,
+    "profile": {
+      "H": 97309,
+      "starts": [
+        11086,
+        4288,
+        9660,
+        7736,
+        12676,
+        14404,
+        7396,
+        8697,
+        6810,
+        5501,
+        4767,
+        4288
+      ],
+      "ends": [
+        7346,
+        4851,
+        4862,
+        4701,
+        5214,
+        5770,
+        7638,
+        8402,
+        12203,
+        11877,
+        12167,
+        12278
+      ],
+      "vertex_deletion_H": [
+        20109,
+        4851,
+        12067,
+        9043,
+        18491,
+        23395,
+        16123,
+        20683,
+        24041,
+        16895,
+        14867,
+        12783
+      ],
+      "root_two_path_cover_U": [
+        245740,
+        165211,
+        241180,
+        213637,
+        275260,
+        304060,
+        174310,
+        194240,
+        159987,
+        128901,
+        110575,
+        97814
+      ],
+      "singleton_child_H_including_sink": [
+        97309,
+        335703,
+        257669,
+        333627,
+        306245,
+        367355,
+        395599,
+        263981,
+        283147,
+        245093,
+        214333,
+        195717,
+        182845
+      ]
+    },
+    "forced_reverse_deletions": [
+      [
+        11,
+        1
+      ],
+      [
+        10,
+        3
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        4,
+        0
+      ]
+    ]
+  },
+  "depth_one_factors": [
+    {
+      "n": 6,
+      "H": 31,
+      "outgoing_masks": [
+        54,
+        28,
+        40,
+        49,
+        36,
+        2
+      ],
+      "chronological_code": 50,
+      "choices_including_vertex_zero": [
+        0,
+        0,
+        0,
+        1,
+        3,
+        2
+      ],
+      "vertex_depths": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "maximum_history_depth": 1,
+      "profile": {
+        "H": 31,
+        "starts": [
+          12,
+          3,
+          4,
+          5,
+          4,
+          3
+        ],
+        "ends": [
+          3,
+          5,
+          5,
+          3,
+          7,
+          8
+        ],
+        "vertex_deletion_H": [
+          15,
+          5,
+          9,
+          5,
+          13,
+          9
+        ],
+        "root_two_path_cover_U": [
+          89,
+          41,
+          39,
+          51,
+          45,
+          32
+        ],
+        "singleton_child_H_including_sink": [
+          31,
+          117,
+          67,
+          65,
+          79,
+          69,
+          55
+        ]
+      }
+    },
+    {
+      "n": 7,
+      "H": 43,
+      "outgoing_masks": [
+        118,
+        44,
+        120,
+        113,
+        98,
+        64,
+        2
+      ],
+      "chronological_code": 296,
+      "choices_including_vertex_zero": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        2
+      ],
+      "vertex_depths": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "maximum_history_depth": 1,
+      "profile": {
+        "H": 43,
+        "starts": [
+          14,
+          2,
+          8,
+          9,
+          6,
+          2,
+          2
+        ],
+        "ends": [
+          2,
+          3,
+          2,
+          2,
+          6,
+          15,
+          13
+        ],
+        "vertex_deletion_H": [
+          19,
+          3,
+          15,
+          9,
+          23,
+          25,
+          13
+        ],
+        "root_two_path_cover_U": [
+          204,
+          57,
+          134,
+          136,
+          106,
+          53,
+          43
+        ],
+        "singleton_child_H_including_sink": [
+          43,
+          245,
+          97,
+          175,
+          177,
+          143,
+          81,
+          73
+        ]
+      }
+    },
+    {
+      "n": 7,
+      "H": 73,
+      "outgoing_masks": [
+        110,
+        28,
+        120,
+        112,
+        97,
+        66,
+        2
+      ],
+      "chronological_code": 58,
+      "choices_including_vertex_zero": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2
+      ],
+      "vertex_depths": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "maximum_history_depth": 1,
+      "profile": {
+        "H": 73,
+        "starts": [
+          20,
+          4,
+          15,
+          11,
+          11,
+          8,
+          4
+        ],
+        "ends": [
+          4,
+          5,
+          5,
+          7,
+          4,
+          20,
+          28
+        ],
+        "vertex_deletion_H": [
+          23,
+          5,
+          25,
+          25,
+          11,
+          33,
+          33
+        ],
+        "root_two_path_cover_U": [
+          256,
+          85,
+          197,
+          147,
+          140,
+          112,
+          78
+        ],
+        "singleton_child_H_including_sink": [
+          73,
+          325,
+          153,
+          265,
+          213,
+          209,
+          165,
+          123
+        ]
+      }
+    }
+  ],
+  "order20_depth_one_witness": {
+    "n": 20,
+    "H": 97309,
+    "outgoing_masks": [
+      1048566,
+      1048540,
+      1048552,
+      1048561,
+      1048548,
+      1048514,
+      1047936,
+      1043200,
+      1048064,
+      1047616,
+      1046656,
+      1044480,
+      1040512,
+      901120,
+      229376,
+      983040,
+      917504,
+      794624,
+      540672,
+      16384
+    ],
+    "chronological_code": 168956712163820035,
+    "choices_including_vertex_zero": [
+      0,
+      0,
+      0,
+      1,
+      3,
+      2,
+      0,
+      0,
+      0,
+      7,
+      8,
+      0,
+      8,
+      0,
+      0,
+      0,
+      0,
+      14,
+      15,
+      15
+    ],
+    "vertex_depths": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    "maximum_history_depth": 1,
+    "count_method": "Exact ordinal-join multiplication of three independently literal-DP-counted factors; every cross edge verified."
+  },
+  "scope": "Order12 depth-three positive witness and exact depth-one order20 construction. The full same-order shallow exclusion is established separately by the exhaustive shallow census, not by these positive profiles."
+}

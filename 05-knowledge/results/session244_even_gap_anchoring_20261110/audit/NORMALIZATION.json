@@ -1,0 +1,56 @@
+{
+  "method": "direct graph order swaps, every vertex depth and every reversal recounted after each swap; no producer imports",
+  "orders": [
+    {
+      "all_histories": 1,
+      "maximum_swaps": 0,
+      "n": 1,
+      "normalized_history_universe_size": 1,
+      "total_swaps": 0
+    },
+    {
+      "all_histories": 2,
+      "maximum_swaps": 1,
+      "n": 2,
+      "normalized_history_universe_size": 1,
+      "total_swaps": 1
+    },
+    {
+      "all_histories": 6,
+      "maximum_swaps": 2,
+      "n": 3,
+      "normalized_history_universe_size": 2,
+      "total_swaps": 5
+    },
+    {
+      "all_histories": 24,
+      "maximum_swaps": 3,
+      "n": 4,
+      "normalized_history_universe_size": 6,
+      "total_swaps": 26
+    },
+    {
+      "all_histories": 120,
+      "maximum_swaps": 4,
+      "n": 5,
+      "normalized_history_universe_size": 24,
+      "total_swaps": 154
+    },
+    {
+      "all_histories": 720,
+      "maximum_swaps": 5,
+      "n": 6,
+      "normalized_history_universe_size": 120,
+      "total_swaps": 1044
+    },
+    {
+      "all_histories": 5040,
+      "maximum_swaps": 6,
+      "n": 7,
+      "normalized_history_universe_size": 720,
+      "total_swaps": 8028
+    }
+  ],
+  "scope": "Finite controls of the separately proved all-order graph-preserving normalization.",
+  "status": "PASS"
+}

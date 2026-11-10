@@ -6,7 +6,7 @@ full-count coverage remains **OPEN**. No literature-priority claim.
 
 ## 1. Inheritance and objects
 
-The parent's structural observation is the starting point: unrestricted
+The structural observation is the starting point: unrestricted
 free-reroot O/Z additions add a vertex with outdegree zero or one into the
 old tournament. We distinguish that graph operation from its **guarded**
 version, which permits Z only when its unique old out-neighbor reaches every

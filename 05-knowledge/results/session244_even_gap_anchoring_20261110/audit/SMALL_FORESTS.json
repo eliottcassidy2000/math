@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "method": "all histories independently reconstructed; Hamilton paths by full permutation enumeration",
+  "census": [
+    {
+      "n": 1,
+      "histories": 1,
+      "distinct_values": 1,
+      "minimum_depths_match": true
+    },
+    {
+      "n": 2,
+      "histories": 2,
+      "distinct_values": 1,
+      "minimum_depths_match": true
+    },
+    {
+      "n": 3,
+      "histories": 6,
+      "distinct_values": 2,
+      "minimum_depths_match": true
+    },
+    {
+      "n": 4,
+      "histories": 24,
+      "distinct_values": 3,
+      "minimum_depths_match": true
+    },
+    {
+      "n": 5,
+      "histories": 120,
+      "distinct_values": 7,
+      "minimum_depths_match": true
+    },
+    {
+      "n": 6,
+      "histories": 720,
+      "distinct_values": 16,
+      "minimum_depths_match": true
+    }
+  ]
+}
