@@ -1,0 +1,22 @@
+order 2: classes 2, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 2 with bias 2^-1
+  mean |bias| over classes = 0.500000 ; signed mean (even minus odd)/2^m = 0.500000
+order 3: classes 8, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 8 with bias 2^-1
+  mean |bias| over classes = 0.500000 ; signed mean (even minus odd)/2^m = 0.250000
+order 4: classes 64, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 40 with bias 2^-1
+  rank 4: 0 classes with zero bias, 24 with bias 2^-2
+  mean |bias| over classes = 0.406250 ; signed mean (even minus odd)/2^m = 0.156250
+order 5: classes 1024, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 160 with bias 2^-1
+  rank 4: 160 classes with zero bias, 704 with bias 2^-2
+  mean |bias| over classes = 0.250000 ; signed mean (even minus odd)/2^m = 0.101562
+order 6: classes 32768, parity failures 0, prediction failures 0, min mu 2
+  rank 4: 8400 classes with zero bias, 9168 with bias 2^-2
+  rank 6: 0 classes with zero bias, 15200 with bias 2^-3
+  mean |bias| over classes = 0.127930 ; signed mean (even minus odd)/2^m = 0.026489
+order 7: classes 2097152, parity failures 0, prediction failures 0, min mu 2
+  rank 4: 154560 classes with zero bias, 180768 with bias 2^-2
+  rank 6: 641088 classes with zero bias, 1120736 with bias 2^-3
+  mean |bias| over classes = 0.088350 ; signed mean (even minus odd)/2^m = 0.011566

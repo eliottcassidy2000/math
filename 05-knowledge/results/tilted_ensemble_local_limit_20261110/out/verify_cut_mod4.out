@@ -1,0 +1,8 @@
+m=1: all 1 labelled tournaments pass (cut quadratic, two-cover pair term, mu even >= 2, mod-4 Gauss sum)
+m=2: all 2 labelled tournaments pass (cut quadratic, two-cover pair term, mu even >= 2, mod-4 Gauss sum)
+m=3: all 8 labelled tournaments pass (cut quadratic, two-cover pair term, mu even >= 2, mod-4 Gauss sum)
+m=4: all 64 labelled tournaments pass (cut quadratic, two-cover pair term, mu even >= 2, mod-4 Gauss sum)
+m=5: all 1024 labelled tournaments pass (cut quadratic, two-cover pair term, mu even >= 2, mod-4 Gauss sum)
+m=6: 300 seeded random tournaments pass
+m=7: 100 seeded random tournaments pass
+TOTAL tournaments checked: 1499  failures: 0

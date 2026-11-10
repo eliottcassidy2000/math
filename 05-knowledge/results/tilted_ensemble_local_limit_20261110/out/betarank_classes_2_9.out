@@ -1,0 +1,34 @@
+order 2: classes 1, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 1 with bias 2^-1
+  mean |bias| over classes = 0.500000 ; signed mean (even minus odd)/2^m = 0.500000
+order 3: classes 2, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 2 with bias 2^-1
+  mean |bias| over classes = 0.500000 ; signed mean (even minus odd)/2^m = 0.000000
+order 4: classes 4, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 3 with bias 2^-1
+  rank 4: 0 classes with zero bias, 1 with bias 2^-2
+  mean |bias| over classes = 0.437500 ; signed mean (even minus odd)/2^m = -0.062500
+order 5: classes 12, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 2 with bias 2^-1
+  rank 4: 2 classes with zero bias, 8 with bias 2^-2
+  mean |bias| over classes = 0.250000 ; signed mean (even minus odd)/2^m = 0.000000
+order 6: classes 56, parity failures 0, prediction failures 0, min mu 2
+  rank 4: 13 classes with zero bias, 17 with bias 2^-2
+  rank 6: 0 classes with zero bias, 26 with bias 2^-3
+  mean |bias| over classes = 0.133929 ; signed mean (even minus odd)/2^m = -0.004464
+order 7: classes 456, parity failures 0, prediction failures 0, min mu 2
+  rank 4: 32 classes with zero bias, 42 with bias 2^-2
+  rank 6: 136 classes with zero bias, 246 with bias 2^-3
+  mean |bias| over classes = 0.090461 ; signed mean (even minus odd)/2^m = 0.005482
+order 8: classes 6880, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 2 with bias 2^-1
+  rank 4: 160 classes with zero bias, 45 with bias 2^-2
+  rank 6: 2532 classes with zero bias, 1263 with bias 2^-3
+  rank 8: 0 classes with zero bias, 2878 with bias 2^-4
+  mean |bias| over classes = 0.050872 ; signed mean (even minus odd)/2^m = 0.008430
+order 9: classes 191536, parity failures 0, prediction failures 0, min mu 2
+  rank 2: 0 classes with zero bias, 8 with bias 2^-1
+  rank 4: 318 classes with zero bias, 118 with bias 2^-2
+  rank 6: 26088 classes with zero bias, 6447 with bias 2^-3
+  rank 8: 74825 classes with zero bias, 83732 with bias 2^-4
+  mean |bias| over classes = 0.031705 ; signed mean (even minus odd)/2^m = 0.004720

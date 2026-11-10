@@ -1,0 +1,27 @@
+n=3: gamma=[1, 2]  mean formula exact: True
+n=4: gamma=[1, 8]  mean formula exact: True
+n=5: gamma=[1, 22, 16]  mean formula exact: True
+n=6: gamma=[1, 52, 136]  mean formula exact: True
+n=7: gamma=[1, 114, 720, 272]  mean formula exact: True
+
+n=7 tilted ensemble: p, mean, sd, cv, P(H=1 mod 4), mode prob, 2/(sd*sqrt(2pi))
+p=0.50 mean=  78.750 sd= 40.149 cv=0.510 P(1 mod 4)=0.5521 max/min pmf in mean±sd = 0.0360/0.00000  gauss=0.0199
+p=0.55 mean=  77.443 sd= 40.240 cv=0.520 P(1 mod 4)=0.5534 max/min pmf in mean±sd = 0.0356/0.00000  gauss=0.0198
+p=0.60 mean=  73.592 sd= 40.391 cv=0.549 P(1 mod 4)=0.5572 max/min pmf in mean±sd = 0.0341/0.00000  gauss=0.0198
+p=0.65 mean=  67.402 sd= 40.280 cv=0.598 P(1 mod 4)=0.5630 max/min pmf in mean±sd = 0.0339/0.00000  gauss=0.0198
+p=0.70 mean=  59.211 sd= 39.479 cv=0.667 P(1 mod 4)=0.5706 max/min pmf in mean±sd = 0.0358/0.00000  gauss=0.0202
+p=0.80 mean=  38.786 sd= 34.154 cv=0.881 P(1 mod 4)=0.5964 max/min pmf in mean±sd = 0.0801/0.00000  gauss=0.0234
+
+uniform measure: P(H = r mod 8), r = 1,3,5,7
+3 [0.75, 0.25, 0.0, 0.0]
+4 [0.375, 0.25, 0.375, 0.0]
+5 [0.3516, 0.2344, 0.3516, 0.0625]
+6 [0.3027, 0.1758, 0.3223, 0.1992]
+7 [0.2948, 0.2462, 0.2573, 0.2017]
+
+uniform measure: exact mod-4 discrepancy by order
+3 1/2 0.5
+4 1/2 0.5
+5 13/32 0.40625
+6 1/4 0.25
+7 853/8192 0.1041259765625

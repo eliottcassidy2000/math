@@ -1,0 +1,16 @@
+order 9: classes 191536, distinct values 1520, max H 3357, class-mean 1412.0, class-sd 654.5
+   every odd h <= 2881 occurs except 7 and 21; first missing value 2883
+   bulk window [757,2066]: least class count 108; rms normalised second difference 1.36 (1.00 for independent Poisson counts)
+   relative class count by h mod 3: {0: 1.049, 1: 0.972, 2: 0.988}
+   relative class count by h mod 4: {1: 1.003, 3: 1.002}
+   relative class count by h mod 5: {0: 1.015, 1: 0.994, 2: 0.996, 3: 1.005, 4: 1.004}
+   relative class count by h mod 7: {0: 1.002, 1: 0.99, 2: 0.998, 3: 0.985, 4: 1.01, 5: 1.016, 6: 1.018}
+   relative class count by h mod 8: {1: 1.011, 3: 0.996, 5: 0.996, 7: 1.008}
+order 10: classes 9733056, distinct values 7663, max H 15745, class-mean 7078.1, class-sd 3114.9
+   every odd h <= 14683 occurs except 7 and 21; first missing value 14685
+   bulk window [3963,10192]: least class count 1504; rms normalised second difference 1.45 (1.00 for independent Poisson counts)
+   relative class count by h mod 3: {0: 1.012, 1: 0.994, 2: 0.995}
+   relative class count by h mod 4: {1: 1.002, 3: 0.999}
+   relative class count by h mod 5: {0: 0.998, 1: 1.001, 2: 1.0, 3: 1.0, 4: 1.001}
+   relative class count by h mod 7: {0: 1.001, 1: 1.002, 2: 1.003, 3: 0.999, 4: 0.999, 5: 1.002, 6: 0.996}
+   relative class count by h mod 8: {1: 1.003, 3: 0.997, 5: 1.0, 7: 1.001}
