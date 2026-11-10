@@ -316,10 +316,15 @@ Every script exits nonzero on a failed check. Universes are stated in each docst
 ## 9. Next obligations
 
 1. The interaction of two active vertices outside the rigid configuration: the naive gap `2 mu >= max(d)` is false
-   from order 8 (section 4). Is `inf mu / max(d)` positive? The sampled minima `1/2, 3/7, 5/13` suggest a slow
-   decrease.
-2. Singular series for F1: derive the class ratios (`about 1 + 1/p` for classes `0` and `-1`) from the joint
-   distribution of `(2 psi(h) + 1, 2h + 1)` modulo `p`; explain the weak primes `13, 19, 23`.
+   from order 8 (section 4). Is `inf mu / max(d)` positive? The minima are `1/2` through order 7 and the witnesses
+   of orders 8, 9, 10 have `3/7, 5/13, 9/25 = (2^j + 1)/(3 * 2^j + 1)`: is the infimum `1/3`, that is, does
+   `3 mu > max(d)` hold at every order whenever `mu > 0`? OPEN; the pattern `2 mu >= max(d)` was also exhaustive
+   before it failed.
+2. Singular series for F1: derive the sheet excesses of the classes `0` and `-1` from the joint distribution of
+   `(2 psi(h) + 1, 2h + 1)` modulo `p`, and explain which primes carry an excess. The measured sizes (HYP-9657 (A))
+   are not `1/p` and not monotone: `0.56 / 0.49` at `p = 3` down to `0.18` at `11`, about `0.04` at `13, 19, 23`,
+   `0.26 / 0.23` at `17`, about `0` at `29, 31, 37`, positive again at `41, 43`. (An earlier wording of this item,
+   "about `1 + 1/p`", repeated the statement withdrawn by the audit, M3; corrected after close-out.)
 3. Decide whether the width bound (Remark 4 of THM-5124) survives non-strong closures.
 4. The program of section 5, item 5: a sup-norm bound for the ear-cube sum of one apex over a fixed core, uniform
    in the core, from the exact differencing identity; then two apexes.
