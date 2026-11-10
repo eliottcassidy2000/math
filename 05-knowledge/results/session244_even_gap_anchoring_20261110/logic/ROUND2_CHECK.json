@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "all_words_max_length": 10,
+  "words_checked": 88573,
+  "universal_face_words_checked": 24609,
+  "synchronized_derivatives": [
+    [
+      "",
+      [
+        1,
+        0,
+        1,
+        0
+      ]
+    ],
+    [
+      "Z",
+      [
+        2,
+        0,
+        2,
+        0
+      ]
+    ],
+    [
+      "ZZ",
+      [
+        4,
+        0,
+        4,
+        0
+      ]
+    ],
+    [
+      "ZZZ",
+      [
+        8,
+        0,
+        8,
+        0
+      ]
+    ],
+    [
+      "ZZZZ",
+      [
+        16,
+        0,
+        16,
+        0
+      ]
+    ],
+    [
+      "ZZZZZ",
+      [
+        32,
+        0,
+        32,
+        0
+      ]
+    ],
+    [
+      "ZZZZZZ",
+      [
+        64,
+        0,
+        64,
+        0
+      ]
+    ],
+    [
+      "ZZZZZZZ",
+      [
+        128,
+        0,
+        128,
+        0
+      ]
+    ],
+    [
+      "ZZZZZZZZ",
+      [
+        256,
+        0,
+        256,
+        0
+      ]
+    ],
+    [
+      "ZZZZZZZZZ",
+      [
+        512,
+        0,
+        512,
+        0
+      ]
+    ],
+    [
+      "ZZZZZZZZZZ",
+      [
+        1024,
+        0,
+        1024,
+        0
+      ]
+    ]
+  ],
+  "inverse_gap_N_checked": 10000,
+  "branch_cancellation_cases_checked": 3800,
+  "scope": "Exact finite support for infinite proofs in ROUND2.md."
+}

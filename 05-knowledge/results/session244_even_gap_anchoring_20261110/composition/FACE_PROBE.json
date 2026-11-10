@@ -1,0 +1,3119 @@
+{
+  "abstract_cone_points": 15750,
+  "distinct_maps": 536,
+  "inverse_covered": 5632,
+  "max_word_length": 8,
+  "misses_through_H51": [
+    [
+      3,
+      1
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      11,
+      1
+    ],
+    [
+      11,
+      5
+    ],
+    [
+      13,
+      3
+    ],
+    [
+      13,
+      5
+    ],
+    [
+      15,
+      1
+    ],
+    [
+      15,
+      5
+    ],
+    [
+      15,
+      7
+    ],
+    [
+      17,
+      3
+    ],
+    [
+      17,
+      7
+    ],
+    [
+      19,
+      1
+    ],
+    [
+      19,
+      5
+    ],
+    [
+      19,
+      7
+    ],
+    [
+      19,
+      9
+    ],
+    [
+      21,
+      3
+    ],
+    [
+      21,
+      7
+    ],
+    [
+      21,
+      9
+    ],
+    [
+      23,
+      1
+    ],
+    [
+      23,
+      5
+    ],
+    [
+      23,
+      9
+    ],
+    [
+      23,
+      11
+    ],
+    [
+      25,
+      3
+    ],
+    [
+      25,
+      7
+    ],
+    [
+      25,
+      9
+    ],
+    [
+      25,
+      11
+    ],
+    [
+      27,
+      1
+    ],
+    [
+      27,
+      5
+    ],
+    [
+      27,
+      9
+    ],
+    [
+      27,
+      11
+    ],
+    [
+      27,
+      13
+    ],
+    [
+      29,
+      3
+    ],
+    [
+      29,
+      7
+    ],
+    [
+      29,
+      11
+    ],
+    [
+      29,
+      13
+    ],
+    [
+      31,
+      1
+    ],
+    [
+      31,
+      5
+    ],
+    [
+      31,
+      11
+    ],
+    [
+      31,
+      13
+    ],
+    [
+      31,
+      15
+    ],
+    [
+      33,
+      3
+    ],
+    [
+      33,
+      7
+    ],
+    [
+      33,
+      11
+    ],
+    [
+      33,
+      13
+    ],
+    [
+      33,
+      15
+    ],
+    [
+      35,
+      1
+    ],
+    [
+      35,
+      5
+    ],
+    [
+      35,
+      9
+    ],
+    [
+      35,
+      13
+    ],
+    [
+      35,
+      15
+    ],
+    [
+      35,
+      17
+    ],
+    [
+      37,
+      3
+    ],
+    [
+      37,
+      7
+    ],
+    [
+      37,
+      11
+    ],
+    [
+      37,
+      13
+    ],
+    [
+      37,
+      15
+    ],
+    [
+      37,
+      17
+    ],
+    [
+      39,
+      1
+    ],
+    [
+      39,
+      5
+    ],
+    [
+      39,
+      9
+    ],
+    [
+      39,
+      13
+    ],
+    [
+      39,
+      15
+    ],
+    [
+      39,
+      17
+    ],
+    [
+      39,
+      19
+    ],
+    [
+      41,
+      3
+    ],
+    [
+      41,
+      7
+    ],
+    [
+      41,
+      11
+    ],
+    [
+      41,
+      15
+    ],
+    [
+      41,
+      17
+    ],
+    [
+      41,
+      19
+    ],
+    [
+      43,
+      1
+    ],
+    [
+      43,
+      5
+    ],
+    [
+      43,
+      9
+    ],
+    [
+      43,
+      13
+    ],
+    [
+      43,
+      15
+    ],
+    [
+      43,
+      17
+    ],
+    [
+      43,
+      19
+    ],
+    [
+      43,
+      21
+    ],
+    [
+      45,
+      3
+    ],
+    [
+      45,
+      7
+    ],
+    [
+      45,
+      11
+    ],
+    [
+      45,
+      15
+    ],
+    [
+      45,
+      17
+    ],
+    [
+      45,
+      19
+    ],
+    [
+      45,
+      21
+    ],
+    [
+      47,
+      1
+    ],
+    [
+      47,
+      5
+    ],
+    [
+      47,
+      9
+    ],
+    [
+      47,
+      13
+    ],
+    [
+      47,
+      17
+    ],
+    [
+      47,
+      19
+    ],
+    [
+      47,
+      21
+    ],
+    [
+      47,
+      23
+    ],
+    [
+      49,
+      3
+    ],
+    [
+      49,
+      7
+    ],
+    [
+      49,
+      11
+    ],
+    [
+      49,
+      15
+    ],
+    [
+      49,
+      17
+    ],
+    [
+      49,
+      19
+    ],
+    [
+      49,
+      21
+    ],
+    [
+      49,
+      23
+    ],
+    [
+      51,
+      1
+    ],
+    [
+      51,
+      5
+    ],
+    [
+      51,
+      9
+    ],
+    [
+      51,
+      13
+    ],
+    [
+      51,
+      17
+    ],
+    [
+      51,
+      19
+    ],
+    [
+      51,
+      21
+    ],
+    [
+      51,
+      23
+    ],
+    [
+      51,
+      25
+    ]
+  ],
+  "primitive_return_maps": [
+    {
+      "determinant": 2,
+      "matrix": [
+        [
+          2,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "word": "Z"
+    },
+    {
+      "determinant": 0,
+      "matrix": [
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "word": "OJ"
+    },
+    {
+      "determinant": -4,
+      "matrix": [
+        [
+          6,
+          -1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "word": "JOJ"
+    },
+    {
+      "determinant": 0,
+      "matrix": [
+        [
+          5,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "word": "OOJ"
+    },
+    {
+      "determinant": -8,
+      "matrix": [
+        [
+          10,
+          -1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "word": "JOOJ"
+    },
+    {
+      "determinant": 0,
+      "matrix": [
+        [
+          9,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "word": "OOOJ"
+    },
+    {
+      "determinant": 6,
+      "matrix": [
+        [
+          11,
+          -2
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "word": "OZOJ"
+    },
+    {
+      "determinant": -2,
+      "matrix": [
+        [
+          20,
+          -3
+        ],
+        [
+          6,
+          -1
+        ]
+      ],
+      "word": "JJJOJ"
+    },
+    {
+      "determinant": -16,
+      "matrix": [
+        [
+          18,
+          -1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "word": "JOOOJ"
+    },
+    {
+      "determinant": -14,
+      "matrix": [
+        [
+          20,
+          -1
+        ],
+        [
+          6,
+          -1
+        ]
+      ],
+      "word": "JOZOJ"
+    },
+    {
+      "determinant": 0,
+      "matrix": [
+        [
+          17,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "word": "OOOOJ"
+    },
+    {
+      "determinant": 10,
+      "matrix": [
+        [
+          21,
+          -2
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "word": "OOZOJ"
+    },
+    {
+      "determinant": -14,
+      "matrix": [
+        [
+          21,
+          -4
+        ],
+        [
+          7,
+          -2
+        ]
+      ],
+      "word": "OZJOJ"
+    },
+    {
+      "determinant": 12,
+      "matrix": [
+        [
+          19,
+          -4
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "word": "OZOOJ"
+    },
+    {
+      "determinant": 10,
+      "matrix": [
+        [
+          23,
+          -8
+        ],
+        [
+          7,
+          -2
+        ]
+      ],
+      "word": "OZZOJ"
+    },
+    {
+      "determinant": -8,
+      "matrix": [
+        [
+          37,
+          -6
+        ],
+        [
+          11,
+          -2
+        ]
+      ],
+      "word": "JJJJOJ"
+    },
+    {
+      "determinant": -4,
+      "matrix": [
+        [
+          34,
+          -5
+        ],
+        [
+          6,
+          -1
+        ]
+      ],
+      "word": "JJJOOJ"
+    },
+    {
+      "determinant": -32,
+      "matrix": [
+        [
+          34,
+          -1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "word": "JOOOOJ"
+    },
+    {
+      "determinant": -30,
+      "matrix": [
+        [
+          40,
+          -1
+        ],
+        [
+          10,
+          -1
+        ]
+      ],
+      "word": "JOOZOJ"
+    },
+    {
+      "determinant": -2,
+      "matrix": [
+        [
+          38,
+          -3
+        ],
+        [
+          12,
+          -1
+        ]
+      ],
+      "word": "JOZJOJ"
+    },
+    {
+      "determinant": -28,
+      "matrix": [
+        [
+          34,
+          -1
+        ],
+        [
+          6,
+          -1
+        ]
+      ],
+      "word": "JOZOOJ"
+    },
+    {
+      "determinant": -26,
+      "matrix": [
+        [
+          38,
+          -1
+        ],
+        [
+          12,
+          -1
+        ]
+      ],
+      "word": "JOZZOJ"
+    },
+    {
+      "determinant": 0,
+      "matrix": [
+        [
+          33,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "word": "OOOOOJ"
+    },
+    {
+      "determinant": 18,
+      "matrix": [
+        [
+          41,
+          -2
+        ],
+        [
+          9,
+          0
+        ]
+      ],
+      "word": "OOOZOJ"
+    },
+    {
+      "determinant": -26,
+      "matrix": [
+        [
+          39,
+          -4
+        ],
+        [
+          13,
+          -2
+        ]
+      ],
+      "word": "OOZJOJ"
+    },
+    {
+      "determinant": 20,
+      "matrix": [
+        [
+          37,
+          -4
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "word": "OOZOOJ"
+    },
+    {
+      "determinant": 14,
+      "matrix": [
+        [
+          45,
+          -8
+        ],
+        [
+          13,
+          -2
+        ]
+      ],
+      "word": "OOZZOJ"
+    },
+    {
+      "determinant": 10,
+      "matrix": [
+        [
+          39,
+          -8
+        ],
+        [
+          11,
+          -2
+        ]
+      ],
+      "word": "OZJJOJ"
+    },
+    {
+      "determinant": -28,
+      "matrix": [
+        [
+          35,
+          -6
+        ],
+        [
+          7,
+          -2
+        ]
+      ],
+      "word": "OZJOOJ"
+    },
+    {
+      "determinant": 24,
+      "matrix": [
+        [
+          35,
+          -8
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "word": "OZOOOJ"
+    },
+    {
+      "determinant": 46,
+      "matrix": [
+        [
+          43,
+          -12
+        ],
+        [
+          11,
+          -2
+        ]
+      ],
+      "word": "OZOZOJ"
+    },
+    {
+      "determinant": -30,
+      "matrix": [
+        [
+          45,
+          -16
+        ],
+        [
+          15,
+          -6
+        ]
+      ],
+      "word": "OZZJOJ"
+    },
+    {
+      "determinant": 20,
+      "matrix": [
+        [
+          39,
+          -14
+        ],
+        [
+          7,
+          -2
+        ]
+      ],
+      "word": "OZZOOJ"
+    },
+    {
+      "determinant": 18,
+      "matrix": [
+        [
+          47,
+          -20
+        ],
+        [
+          15,
+          -6
+        ]
+      ],
+      "word": "OZZZOJ"
+    },
+    {
+      "determinant": 16,
+      "matrix": [
+        [
+          68,
+          -11
+        ],
+        [
+          20,
+          -3
+        ]
+      ],
+      "word": "JJJJJOJ"
+    },
+    {
+      "determinant": -16,
+      "matrix": [
+        [
+          63,
+          -10
+        ],
+        [
+          11,
+          -2
+        ]
+      ],
+      "word": "JJJJOOJ"
+    },
+    {
+      "determinant": -8,
+      "matrix": [
+        [
+          62,
+          -9
+        ],
+        [
+          6,
+          -1
+        ]
+      ],
+      "word": "JJJOOOJ"
+    },
+    {
+      "determinant": 10,
+      "matrix": [
+        [
+          70,
+          -11
+        ],
+        [
+          20,
+          -3
+        ]
+      ],
+      "word": "JJJOZOJ"
+    },
+    {
+      "determinant": 26,
+      "matrix": [
+        [
+          79,
+          -18
+        ],
+        [
+          19,
+          -4
+        ]
+      ],
+      "word": "JJOOZOJ"
+    },
+    {
+      "determinant": 30,
+      "matrix": [
+        [
+          73,
+          -14
+        ],
+        [
+          23,
+          -4
+        ]
+      ],
+      "word": "JJOZJOJ"
+    },
+    {
+      "determinant": 22,
+      "matrix": [
+        [
+          75,
+          -14
+        ],
+        [
+          23,
+          -4
+        ]
+      ],
+      "word": "JJOZZOJ"
+    },
+    {
+      "determinant": -64,
+      "matrix": [
+        [
+          66,
+          -1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "word": "JOOOOOJ"
+    },
+    {
+      "determinant": -62,
+      "matrix": [
+        [
+          80,
+          -1
+        ],
+        [
+          18,
+          -1
+        ]
+      ],
+      "word": "JOOOZOJ"
+    },
+    {
+      "determinant": -2,
+      "matrix": [
+        [
+          74,
+          -3
+        ],
+        [
+          24,
+          -1
+        ]
+      ],
+      "word": "JOOZJOJ"
+    },
+    {
+      "determinant": -60,
+      "matrix": [
+        [
+          70,
+          -1
+        ],
+        [
+          10,
+          -1
+        ]
+      ],
+      "word": "JOOZOOJ"
+    },
+    {
+      "determinant": -58,
+      "matrix": [
+        [
+          82,
+          -1
+        ],
+        [
+          24,
+          -1
+        ]
+      ],
+      "word": "JOOZZOJ"
+    },
+    {
+      "determinant": 30,
+      "matrix": [
+        [
+          70,
+          -5
+        ],
+        [
+          20,
+          -1
+        ]
+      ],
+      "word": "JOZJJOJ"
+    },
+    {
+      "determinant": -4,
+      "matrix": [
+        [
+          64,
+          -5
+        ],
+        [
+          12,
+          -1
+        ]
+      ],
+      "word": "JOZJOOJ"
+    },
+    {
+      "determinant": -56,
+      "matrix": [
+        [
+          62,
+          -1
+        ],
+        [
+          6,
+          -1
+        ]
+      ],
+      "word": "JOZOOOJ"
+    },
+    {
+      "determinant": -54,
+      "matrix": [
+        [
+          74,
+          -1
+        ],
+        [
+          20,
+          -1
+        ]
+      ],
+      "word": "JOZOZOJ"
+    },
+    {
+      "determinant": -52,
+      "matrix": [
+        [
+          64,
+          -1
+        ],
+        [
+          12,
+          -1
+        ]
+      ],
+      "word": "JOZZOOJ"
+    },
+    {
+      "determinant": -50,
+      "matrix": [
+        [
+          74,
+          -1
+        ],
+        [
+          24,
+          -1
+        ]
+      ],
+      "word": "JOZZZOJ"
+    },
+    {
+      "determinant": 0,
+      "matrix": [
+        [
+          65,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "word": "OOOOOOJ"
+    },
+    {
+      "determinant": 34,
+      "matrix": [
+        [
+          81,
+          -2
+        ],
+        [
+          17,
+          0
+        ]
+      ],
+      "word": "OOOOZOJ"
+    },
+    {
+      "determinant": -50,
+      "matrix": [
+        [
+          75,
+          -4
+        ],
+        [
+          25,
+          -2
+        ]
+      ],
+      "word": "OOOZJOJ"
+    },
+    {
+      "determinant": 36,
+      "matrix": [
+        [
+          73,
+          -4
+        ],
+        [
+          9,
+          0
+        ]
+      ],
+      "word": "OOOZOOJ"
+    },
+    {
+      "determinant": 22,
+      "matrix": [
+        [
+          89,
+          -8
+        ],
+        [
+          25,
+          -2
+        ]
+      ],
+      "word": "OOOZZOJ"
+    },
+    {
+      "determinant": 22,
+      "matrix": [
+        [
+          73,
+          -8
+        ],
+        [
+          21,
+          -2
+        ]
+      ],
+      "word": "OOZJJOJ"
+    },
+    {
+      "determinant": -52,
+      "matrix": [
+        [
+          65,
+          -6
+        ],
+        [
+          13,
+          -2
+        ]
+      ],
+      "word": "OOZJOOJ"
+    },
+    {
+      "determinant": 40,
+      "matrix": [
+        [
+          69,
+          -8
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "word": "OOZOOOJ"
+    },
+    {
+      "determinant": 82,
+      "matrix": [
+        [
+          85,
+          -12
+        ],
+        [
+          21,
+          -2
+        ]
+      ],
+      "word": "OOZOZOJ"
+    },
+    {
+      "determinant": -58,
+      "matrix": [
+        [
+          87,
+          -16
+        ],
+        [
+          29,
+          -6
+        ]
+      ],
+      "word": "OOZZJOJ"
+    },
+    {
+      "determinant": 28,
+      "matrix": [
+        [
+          77,
+          -14
+        ],
+        [
+          13,
+          -2
+        ]
+      ],
+      "word": "OOZZOOJ"
+    },
+    {
+      "determinant": 22,
+      "matrix": [
+        [
+          93,
+          -20
+        ],
+        [
+          29,
+          -6
+        ]
+      ],
+      "word": "OOZZZOJ"
+    },
+    {
+      "determinant": 10,
+      "matrix": [
+        [
+          71,
+          -14
+        ],
+        [
+          21,
+          -4
+        ]
+      ],
+      "word": "OZJJJOJ"
+    },
+    {
+      "determinant": 20,
+      "matrix": [
+        [
+          67,
+          -14
+        ],
+        [
+          11,
+          -2
+        ]
+      ],
+      "word": "OZJJOOJ"
+    },
+    {
+      "determinant": -56,
+      "matrix": [
+        [
+          63,
+          -10
+        ],
+        [
+          7,
+          -2
+        ]
+      ],
+      "word": "OZJOOOJ"
+    },
+    {
+      "determinant": -32,
+      "matrix": [
+        [
+          71,
+          -12
+        ],
+        [
+          21,
+          -4
+        ]
+      ],
+      "word": "OZJOZOJ"
+    },
+    {
+      "determinant": 48,
+      "matrix": [
+        [
+          67,
+          -16
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "word": "OZOOOOJ"
+    },
+    {
+      "determinant": 86,
+      "matrix": [
+        [
+          83,
+          -22
+        ],
+        [
+          19,
+          -4
+        ]
+      ],
+      "word": "OZOOZOJ"
+    },
+    {
+      "determinant": -54,
+      "matrix": [
+        [
+          81,
+          -22
+        ],
+        [
+          27,
+          -8
+        ]
+      ],
+      "word": "OZOZJOJ"
+    },
+    {
+      "determinant": 92,
+      "matrix": [
+        [
+          75,
+          -22
+        ],
+        [
+          11,
+          -2
+        ]
+      ],
+      "word": "OZOZOOJ"
+    },
+    {
+      "determinant": 82,
+      "matrix": [
+        [
+          91,
+          -30
+        ],
+        [
+          27,
+          -8
+        ]
+      ],
+      "word": "OZOZZOJ"
+    },
+    {
+      "determinant": 26,
+      "matrix": [
+        [
+          83,
+          -30
+        ],
+        [
+          23,
+          -8
+        ]
+      ],
+      "word": "OZZJJOJ"
+    },
+    {
+      "determinant": -60,
+      "matrix": [
+        [
+          75,
+          -26
+        ],
+        [
+          15,
+          -6
+        ]
+      ],
+      "word": "OZZJOOJ"
+    },
+    {
+      "determinant": 40,
+      "matrix": [
+        [
+          71,
+          -26
+        ],
+        [
+          7,
+          -2
+        ]
+      ],
+      "word": "OZZOOOJ"
+    },
+    {
+      "determinant": 86,
+      "matrix": [
+        [
+          87,
+          -34
+        ],
+        [
+          23,
+          -8
+        ]
+      ],
+      "word": "OZZOZOJ"
+    },
+    {
+      "determinant": -62,
+      "matrix": [
+        [
+          93,
+          -40
+        ],
+        [
+          31,
+          -14
+        ]
+      ],
+      "word": "OZZZJOJ"
+    },
+    {
+      "determinant": 36,
+      "matrix": [
+        [
+          79,
+          -34
+        ],
+        [
+          15,
+          -6
+        ]
+      ],
+      "word": "OZZZOOJ"
+    },
+    {
+      "determinant": 34,
+      "matrix": [
+        [
+          95,
+          -44
+        ],
+        [
+          31,
+          -14
+        ]
+      ],
+      "word": "OZZZZOJ"
+    },
+    {
+      "determinant": -10,
+      "matrix": [
+        [
+          125,
+          -20
+        ],
+        [
+          37,
+          -6
+        ]
+      ],
+      "word": "JJJJJJOJ"
+    },
+    {
+      "determinant": 32,
+      "matrix": [
+        [
+          116,
+          -19
+        ],
+        [
+          20,
+          -3
+        ]
+      ],
+      "word": "JJJJJOOJ"
+    },
+    {
+      "determinant": -32,
+      "matrix": [
+        [
+          115,
+          -18
+        ],
+        [
+          11,
+          -2
+        ]
+      ],
+      "word": "JJJJOOOJ"
+    },
+    {
+      "determinant": -34,
+      "matrix": [
+        [
+          129,
+          -20
+        ],
+        [
+          37,
+          -6
+        ]
+      ],
+      "word": "JJJJOZOJ"
+    },
+    {
+      "determinant": -16,
+      "matrix": [
+        [
+          118,
+          -17
+        ],
+        [
+          6,
+          -1
+        ]
+      ],
+      "word": "JJJOOOOJ"
+    },
+    {
+      "determinant": 14,
+      "matrix": [
+        [
+          140,
+          -21
+        ],
+        [
+          34,
+          -5
+        ]
+      ],
+      "word": "JJJOOZOJ"
+    },
+    {
+      "determinant": -42,
+      "matrix": [
+        [
+          132,
+          -21
+        ],
+        [
+          42,
+          -7
+        ]
+      ],
+      "word": "JJJOZJOJ"
+    },
+    {
+      "determinant": 20,
+      "matrix": [
+        [
+          120,
+          -19
+        ],
+        [
+          20,
+          -3
+        ]
+      ],
+      "word": "JJJOZOOJ"
+    },
+    {
+      "determinant": 14,
+      "matrix": [
+        [
+          136,
+          -23
+        ],
+        [
+          42,
+          -7
+        ]
+      ],
+      "word": "JJJOZZOJ"
+    },
+    {
+      "determinant": 58,
+      "matrix": [
+        [
+          159,
+          -38
+        ],
+        [
+          35,
+          -8
+        ]
+      ],
+      "word": "JJOOOZOJ"
+    },
+    {
+      "determinant": 54,
+      "matrix": [
+        [
+          145,
+          -32
+        ],
+        [
+          47,
+          -10
+        ]
+      ],
+      "word": "JJOOZJOJ"
+    },
+    {
+      "determinant": 52,
+      "matrix": [
+        [
+          139,
+          -32
+        ],
+        [
+          19,
+          -4
+        ]
+      ],
+      "word": "JJOOZOOJ"
+    },
+    {
+      "determinant": 62,
+      "matrix": [
+        [
+          163,
+          -36
+        ],
+        [
+          47,
+          -10
+        ]
+      ],
+      "word": "JJOOZZOJ"
+    },
+    {
+      "determinant": -66,
+      "matrix": [
+        [
+          135,
+          -26
+        ],
+        [
+          39,
+          -8
+        ]
+      ],
+      "word": "JJOZJJOJ"
+    },
+    {
+      "determinant": 60,
+      "matrix": [
+        [
+          123,
+          -24
+        ],
+        [
+          23,
+          -4
+        ]
+      ],
+      "word": "JJOZJOOJ"
+    },
+    {
+      "determinant": -6,
+      "matrix": [
+        [
+          147,
+          -30
+        ],
+        [
+          39,
+          -8
+        ]
+      ],
+      "word": "JJOZOZOJ"
+    },
+    {
+      "determinant": 62,
+      "matrix": [
+        [
+          145,
+          -26
+        ],
+        [
+          47,
+          -8
+        ]
+      ],
+      "word": "JJOZZJOJ"
+    },
+    {
+      "determinant": 44,
+      "matrix": [
+        [
+          127,
+          -24
+        ],
+        [
+          23,
+          -4
+        ]
+      ],
+      "word": "JJOZZOOJ"
+    },
+    {
+      "determinant": 46,
+      "matrix": [
+        [
+          147,
+          -26
+        ],
+        [
+          47,
+          -8
+        ]
+      ],
+      "word": "JJOZZZOJ"
+    },
+    {
+      "determinant": -128,
+      "matrix": [
+        [
+          130,
+          -1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "word": "JOOOOOOJ"
+    },
+    {
+      "determinant": -126,
+      "matrix": [
+        [
+          160,
+          -1
+        ],
+        [
+          34,
+          -1
+        ]
+      ],
+      "word": "JOOOOZOJ"
+    },
+    {
+      "determinant": -2,
+      "matrix": [
+        [
+          146,
+          -3
+        ],
+        [
+          48,
+          -1
+        ]
+      ],
+      "word": "JOOOZJOJ"
+    },
+    {
+      "determinant": -124,
+      "matrix": [
+        [
+          142,
+          -1
+        ],
+        [
+          18,
+          -1
+        ]
+      ],
+      "word": "JOOOZOOJ"
+    },
+    {
+      "determinant": -122,
+      "matrix": [
+        [
+          170,
+          -1
+        ],
+        [
+          48,
+          -1
+        ]
+      ],
+      "word": "JOOOZZOJ"
+    },
+    {
+      "determinant": 62,
+      "matrix": [
+        [
+          138,
+          -5
+        ],
+        [
+          40,
+          -1
+        ]
+      ],
+      "word": "JOOZJJOJ"
+    },
+    {
+      "determinant": -4,
+      "matrix": [
+        [
+          124,
+          -5
+        ],
+        [
+          24,
+          -1
+        ]
+      ],
+      "word": "JOOZJOOJ"
+    },
+    {
+      "determinant": -120,
+      "matrix": [
+        [
+          130,
+          -1
+        ],
+        [
+          10,
+          -1
+        ]
+      ],
+      "word": "JOOZOOOJ"
+    },
+    {
+      "determinant": -118,
+      "matrix": [
+        [
+          158,
+          -1
+        ],
+        [
+          40,
+          -1
+        ]
+      ],
+      "word": "JOOZOZOJ"
+    },
+    {
+      "determinant": -2,
+      "matrix": [
+        [
+          158,
+          -3
+        ],
+        [
+          52,
+          -1
+        ]
+      ],
+      "word": "JOOZZJOJ"
+    },
+    {
+      "determinant": -116,
+      "matrix": [
+        [
+          140,
+          -1
+        ],
+        [
+          24,
+          -1
+        ]
+      ],
+      "word": "JOOZZOOJ"
+    },
+    {
+      "determinant": -114,
+      "matrix": [
+        [
+          166,
+          -1
+        ],
+        [
+          52,
+          -1
+        ]
+      ],
+      "word": "JOOZZZOJ"
+    },
+    {
+      "determinant": -42,
+      "matrix": [
+        [
+          128,
+          -9
+        ],
+        [
+          38,
+          -3
+        ]
+      ],
+      "word": "JOZJJJOJ"
+    },
+    {
+      "determinant": 60,
+      "matrix": [
+        [
+          120,
+          -9
+        ],
+        [
+          20,
+          -1
+        ]
+      ],
+      "word": "JOZJJOOJ"
+    },
+    {
+      "determinant": -8,
+      "matrix": [
+        [
+          116,
+          -9
+        ],
+        [
+          12,
+          -1
+        ]
+      ],
+      "word": "JOZJOOOJ"
+    },
+    {
+      "determinant": -48,
+      "matrix": [
+        [
+          130,
+          -9
+        ],
+        [
+          38,
+          -3
+        ]
+      ],
+      "word": "JOZJOZOJ"
+    },
+    {
+      "determinant": -112,
+      "matrix": [
+        [
+          118,
+          -1
+        ],
+        [
+          6,
+          -1
+        ]
+      ],
+      "word": "JOZOOOOJ"
+    },
+    {
+      "determinant": -110,
+      "matrix": [
+        [
+          144,
+          -1
+        ],
+        [
+          34,
+          -1
+        ]
+      ],
+      "word": "JOZOOZOJ"
+    },
+    {
+      "determinant": -2,
+      "matrix": [
+        [
+          140,
+          -3
+        ],
+        [
+          46,
+          -1
+        ]
+      ],
+      "word": "JOZOZJOJ"
+    },
+    {
+      "determinant": -108,
+      "matrix": [
+        [
+          128,
+          -1
+        ],
+        [
+          20,
+          -1
+        ]
+      ],
+      "word": "JOZOZOOJ"
+    },
+    {
+      "determinant": -106,
+      "matrix": [
+        [
+          152,
+          -1
+        ],
+        [
+          46,
+          -1
+        ]
+      ],
+      "word": "JOZOZZOJ"
+    },
+    {
+      "determinant": 54,
+      "matrix": [
+        [
+          136,
+          -5
+        ],
+        [
+          38,
+          -1
+        ]
+      ],
+      "word": "JOZZJJOJ"
+    },
+    {
+      "determinant": -104,
+      "matrix": [
+        [
+          116,
+          -1
+        ],
+        [
+          12,
+          -1
+        ]
+      ],
+      "word": "JOZZOOOJ"
+    },
+    {
+      "determinant": -102,
+      "matrix": [
+        [
+          140,
+          -1
+        ],
+        [
+          38,
+          -1
+        ]
+      ],
+      "word": "JOZZOZOJ"
+    },
+    {
+      "determinant": -100,
+      "matrix": [
+        [
+          124,
+          -1
+        ],
+        [
+          24,
+          -1
+        ]
+      ],
+      "word": "JOZZZOOJ"
+    },
+    {
+      "determinant": -98,
+      "matrix": [
+        [
+          146,
+          -1
+        ],
+        [
+          48,
+          -1
+        ]
+      ],
+      "word": "JOZZZZOJ"
+    },
+    {
+      "determinant": 0,
+      "matrix": [
+        [
+          129,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "word": "OOOOOOOJ"
+    },
+    {
+      "determinant": 66,
+      "matrix": [
+        [
+          161,
+          -2
+        ],
+        [
+          33,
+          0
+        ]
+      ],
+      "word": "OOOOOZOJ"
+    },
+    {
+      "determinant": -98,
+      "matrix": [
+        [
+          147,
+          -4
+        ],
+        [
+          49,
+          -2
+        ]
+      ],
+      "word": "OOOOZJOJ"
+    },
+    {
+      "determinant": 68,
+      "matrix": [
+        [
+          145,
+          -4
+        ],
+        [
+          17,
+          0
+        ]
+      ],
+      "word": "OOOOZOOJ"
+    },
+    {
+      "determinant": 38,
+      "matrix": [
+        [
+          177,
+          -8
+        ],
+        [
+          49,
+          -2
+        ]
+      ],
+      "word": "OOOOZZOJ"
+    },
+    {
+      "determinant": 46,
+      "matrix": [
+        [
+          141,
+          -8
+        ],
+        [
+          41,
+          -2
+        ]
+      ],
+      "word": "OOOZJJOJ"
+    },
+    {
+      "determinant": -100,
+      "matrix": [
+        [
+          125,
+          -6
+        ],
+        [
+          25,
+          -2
+        ]
+      ],
+      "word": "OOOZJOOJ"
+    },
+    {
+      "determinant": 72,
+      "matrix": [
+        [
+          137,
+          -8
+        ],
+        [
+          9,
+          0
+        ]
+      ],
+      "word": "OOOZOOOJ"
+    },
+    {
+      "determinant": 154,
+      "matrix": [
+        [
+          169,
+          -12
+        ],
+        [
+          41,
+          -2
+        ]
+      ],
+      "word": "OOOZOZOJ"
+    },
+    {
+      "determinant": -114,
+      "matrix": [
+        [
+          171,
+          -16
+        ],
+        [
+          57,
+          -6
+        ]
+      ],
+      "word": "OOOZZJOJ"
+    },
+    {
+      "determinant": 44,
+      "matrix": [
+        [
+          153,
+          -14
+        ],
+        [
+          25,
+          -2
+        ]
+      ],
+      "word": "OOOZZOOJ"
+    },
+    {
+      "determinant": 30,
+      "matrix": [
+        [
+          185,
+          -20
+        ],
+        [
+          57,
+          -6
+        ]
+      ],
+      "word": "OOOZZZOJ"
+    },
+    {
+      "determinant": 14,
+      "matrix": [
+        [
+          133,
+          -14
+        ],
+        [
+          39,
+          -4
+        ]
+      ],
+      "word": "OOZJJJOJ"
+    },
+    {
+      "determinant": 44,
+      "matrix": [
+        [
+          125,
+          -14
+        ],
+        [
+          21,
+          -2
+        ]
+      ],
+      "word": "OOZJJOOJ"
+    },
+    {
+      "determinant": -104,
+      "matrix": [
+        [
+          117,
+          -10
+        ],
+        [
+          13,
+          -2
+        ]
+      ],
+      "word": "OOZJOOOJ"
+    },
+    {
+      "determinant": -64,
+      "matrix": [
+        [
+          133,
+          -12
+        ],
+        [
+          39,
+          -4
+        ]
+      ],
+      "word": "OOZJOZOJ"
+    },
+    {
+      "determinant": 80,
+      "matrix": [
+        [
+          133,
+          -16
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "word": "OOZOOOOJ"
+    },
+    {
+      "determinant": 154,
+      "matrix": [
+        [
+          165,
+          -22
+        ],
+        [
+          37,
+          -4
+        ]
+      ],
+      "word": "OOZOOZOJ"
+    },
+    {
+      "determinant": -106,
+      "matrix": [
+        [
+          159,
+          -22
+        ],
+        [
+          53,
+          -8
+        ]
+      ],
+      "word": "OOZOZJOJ"
+    },
+    {
+      "determinant": 164,
+      "matrix": [
+        [
+          149,
+          -22
+        ],
+        [
+          21,
+          -2
+        ]
+      ],
+      "word": "OOZOZOOJ"
+    },
+    {
+      "determinant": 142,
+      "matrix": [
+        [
+          181,
+          -30
+        ],
+        [
+          53,
+          -8
+        ]
+      ],
+      "word": "OOZOZZOJ"
+    },
+    {
+      "determinant": 62,
+      "matrix": [
+        [
+          161,
+          -30
+        ],
+        [
+          45,
+          -8
+        ]
+      ],
+      "word": "OOZZJJOJ"
+    },
+    {
+      "determinant": -116,
+      "matrix": [
+        [
+          145,
+          -26
+        ],
+        [
+          29,
+          -6
+        ]
+      ],
+      "word": "OOZZJOOJ"
+    },
+    {
+      "determinant": 56,
+      "matrix": [
+        [
+          141,
+          -26
+        ],
+        [
+          13,
+          -2
+        ]
+      ],
+      "word": "OOZZOOOJ"
+    },
+    {
+      "determinant": 146,
+      "matrix": [
+        [
+          173,
+          -34
+        ],
+        [
+          45,
+          -8
+        ]
+      ],
+      "word": "OOZZOZOJ"
+    },
+    {
+      "determinant": -122,
+      "matrix": [
+        [
+          183,
+          -40
+        ],
+        [
+          61,
+          -14
+        ]
+      ],
+      "word": "OOZZZJOJ"
+    },
+    {
+      "determinant": 44,
+      "matrix": [
+        [
+          157,
+          -34
+        ],
+        [
+          29,
+          -6
+        ]
+      ],
+      "word": "OOZZZOOJ"
+    },
+    {
+      "determinant": 38,
+      "matrix": [
+        [
+          189,
+          -44
+        ],
+        [
+          61,
+          -14
+        ]
+      ],
+      "word": "OOZZZZOJ"
+    },
+    {
+      "determinant": -34,
+      "matrix": [
+        [
+          131,
+          -26
+        ],
+        [
+          39,
+          -8
+        ]
+      ],
+      "word": "OZJJJJOJ"
+    },
+    {
+      "determinant": 20,
+      "matrix": [
+        [
+          121,
+          -24
+        ],
+        [
+          21,
+          -4
+        ]
+      ],
+      "word": "OZJJJOOJ"
+    },
+    {
+      "determinant": 40,
+      "matrix": [
+        [
+          123,
+          -26
+        ],
+        [
+          11,
+          -2
+        ]
+      ],
+      "word": "OZJJOOOJ"
+    },
+    {
+      "determinant": -4,
+      "matrix": [
+        [
+          137,
+          -28
+        ],
+        [
+          39,
+          -8
+        ]
+      ],
+      "word": "OZJJOZOJ"
+    },
+    {
+      "determinant": -112,
+      "matrix": [
+        [
+          119,
+          -18
+        ],
+        [
+          7,
+          -2
+        ]
+      ],
+      "word": "OZJOOOOJ"
+    },
+    {
+      "determinant": -76,
+      "matrix": [
+        [
+          141,
+          -22
+        ],
+        [
+          35,
+          -6
+        ]
+      ],
+      "word": "OZJOOZOJ"
+    },
+    {
+      "determinant": -48,
+      "matrix": [
+        [
+          135,
+          -24
+        ],
+        [
+          43,
+          -8
+        ]
+      ],
+      "word": "OZJOZJOJ"
+    },
+    {
+      "determinant": -64,
+      "matrix": [
+        [
+          121,
+          -20
+        ],
+        [
+          21,
+          -4
+        ]
+      ],
+      "word": "OZJOZOOJ"
+    },
+    {
+      "determinant": -64,
+      "matrix": [
+        [
+          137,
+          -24
+        ],
+        [
+          43,
+          -8
+        ]
+      ],
+      "word": "OZJOZZOJ"
+    },
+    {
+      "determinant": 96,
+      "matrix": [
+        [
+          131,
+          -32
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "word": "OZOOOOOJ"
+    },
+    {
+      "determinant": 166,
+      "matrix": [
+        [
+          163,
+          -42
+        ],
+        [
+          35,
+          -8
+        ]
+      ],
+      "word": "OZOOOZOJ"
+    },
+    {
+      "determinant": -102,
+      "matrix": [
+        [
+          153,
+          -40
+        ],
+        [
+          51,
+          -14
+        ]
+      ],
+      "word": "OZOOZJOJ"
+    },
+    {
+      "determinant": 172,
+      "matrix": [
+        [
+          147,
+          -40
+        ],
+        [
+          19,
+          -4
+        ]
+      ],
+      "word": "OZOOZOOJ"
+    },
+    {
+      "determinant": 146,
+      "matrix": [
+        [
+          179,
+          -52
+        ],
+        [
+          51,
+          -14
+        ]
+      ],
+      "word": "OZOOZZOJ"
+    },
+    {
+      "determinant": -6,
+      "matrix": [
+        [
+          151,
+          -42
+        ],
+        [
+          43,
+          -12
+        ]
+      ],
+      "word": "OZOZJJOJ"
+    },
+    {
+      "determinant": -108,
+      "matrix": [
+        [
+          135,
+          -36
+        ],
+        [
+          27,
+          -8
+        ]
+      ],
+      "word": "OZOZJOOJ"
+    },
+    {
+      "determinant": 184,
+      "matrix": [
+        [
+          139,
+          -42
+        ],
+        [
+          11,
+          -2
+        ]
+      ],
+      "word": "OZOZOOOJ"
+    },
+    {
+      "determinant": 270,
+      "matrix": [
+        [
+          171,
+          -54
+        ],
+        [
+          43,
+          -12
+        ]
+      ],
+      "word": "OZOZOZOJ"
+    },
+    {
+      "determinant": -118,
+      "matrix": [
+        [
+          177,
+          -58
+        ],
+        [
+          59,
+          -20
+        ]
+      ],
+      "word": "OZOZZJOJ"
+    },
+    {
+      "determinant": 164,
+      "matrix": [
+        [
+          155,
+          -52
+        ],
+        [
+          27,
+          -8
+        ]
+      ],
+      "word": "OZOZZOOJ"
+    },
+    {
+      "determinant": 154,
+      "matrix": [
+        [
+          187,
+          -66
+        ],
+        [
+          59,
+          -20
+        ]
+      ],
+      "word": "OZOZZZOJ"
+    },
+    {
+      "determinant": 14,
+      "matrix": [
+        [
+          151,
+          -54
+        ],
+        [
+          45,
+          -16
+        ]
+      ],
+      "word": "OZZJJJOJ"
+    },
+    {
+      "determinant": 52,
+      "matrix": [
+        [
+          143,
+          -52
+        ],
+        [
+          23,
+          -8
+        ]
+      ],
+      "word": "OZZJJOOJ"
+    },
+    {
+      "determinant": -120,
+      "matrix": [
+        [
+          135,
+          -46
+        ],
+        [
+          15,
+          -6
+        ]
+      ],
+      "word": "OZZJOOOJ"
+    },
+    {
+      "determinant": -76,
+      "matrix": [
+        [
+          151,
+          -52
+        ],
+        [
+          45,
+          -16
+        ]
+      ],
+      "word": "OZZJOZOJ"
+    },
+    {
+      "determinant": 80,
+      "matrix": [
+        [
+          135,
+          -50
+        ],
+        [
+          7,
+          -2
+        ]
+      ],
+      "word": "OZZOOOOJ"
+    },
+    {
+      "determinant": 158,
+      "matrix": [
+        [
+          167,
+          -64
+        ],
+        [
+          39,
+          -14
+        ]
+      ],
+      "word": "OZZOOZOJ"
+    },
+    {
+      "determinant": -110,
+      "matrix": [
+        [
+          165,
+          -64
+        ],
+        [
+          55,
+          -22
+        ]
+      ],
+      "word": "OZZOZJOJ"
+    },
+    {
+      "determinant": 172,
+      "matrix": [
+        [
+          151,
+          -60
+        ],
+        [
+          23,
+          -8
+        ]
+      ],
+      "word": "OZZOZOOJ"
+    },
+    {
+      "determinant": 154,
+      "matrix": [
+        [
+          183,
+          -76
+        ],
+        [
+          55,
+          -22
+        ]
+      ],
+      "word": "OZZOZZOJ"
+    },
+    {
+      "determinant": 58,
+      "matrix": [
+        [
+          171,
+          -74
+        ],
+        [
+          47,
+          -20
+        ]
+      ],
+      "word": "OZZZJJOJ"
+    },
+    {
+      "determinant": -124,
+      "matrix": [
+        [
+          155,
+          -66
+        ],
+        [
+          31,
+          -14
+        ]
+      ],
+      "word": "OZZZJOOJ"
+    },
+    {
+      "determinant": 72,
+      "matrix": [
+        [
+          143,
+          -62
+        ],
+        [
+          15,
+          -6
+        ]
+      ],
+      "word": "OZZZOOOJ"
+    },
+    {
+      "determinant": 166,
+      "matrix": [
+        [
+          175,
+          -78
+        ],
+        [
+          47,
+          -20
+        ]
+      ],
+      "word": "OZZZOZOJ"
+    },
+    {
+      "determinant": -126,
+      "matrix": [
+        [
+          189,
+          -88
+        ],
+        [
+          63,
+          -30
+        ]
+      ],
+      "word": "OZZZZJOJ"
+    },
+    {
+      "determinant": 68,
+      "matrix": [
+        [
+          159,
+          -74
+        ],
+        [
+          31,
+          -14
+        ]
+      ],
+      "word": "OZZZZOOJ"
+    },
+    {
+      "determinant": 66,
+      "matrix": [
+        [
+          191,
+          -92
+        ],
+        [
+          63,
+          -30
+        ]
+      ],
+      "word": "OZZZZZOJ"
+    }
+  ],
+  "scope": "Exploratory finite face-linear maps, not physical completeness."
+}

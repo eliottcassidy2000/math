@@ -74,9 +74,11 @@ A collision family, independently checked through k=30, is
 All-Z words give g(2^k+1)=2^k+1; stripping O gives
 `g(3*2^(k-1))=g(3)=3`. The two inputs are distinct for k>=2.
 
-## 2. Positive-density loss despite every even gap
+## 2. Positive-density loss despite every even gap (INHERITED)
 
-**Proposition 2 (PROVED).** Define
+**Inheritance correction from Round4:** `session199/hidden-structure/PROOF.md`, §4, already proves this exact density constant and omitted proportion for the same balanced zero-J image. The proof below is an independently recovered proof, not a new density theorem. Endpoint redundancy in §1 identifies the compact pair image with that inherited image.
+
+**Proposition 2 (INHERITED, proof reproduced).** Define
 
     c = sum_{j>=0} 1/(2^(j+2)+1).
 

@@ -1,0 +1,123 @@
+{
+  "all_N_fixed_root_Z_tail_image_through_2001": 512,
+  "certified_tail_hostiles": [
+    13,
+    31,
+    127,
+    173
+  ],
+  "examples": [
+    {
+      "N": 1,
+      "profile": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "vertices": 3
+    },
+    {
+      "N": 2,
+      "profile": [
+        5,
+        2,
+        6,
+        3
+      ],
+      "vertices": 4
+    },
+    {
+      "N": 3,
+      "profile": [
+        9,
+        3,
+        11,
+        5
+      ],
+      "vertices": 5
+    },
+    {
+      "N": 7,
+      "profile": [
+        19,
+        7,
+        23,
+        11
+      ],
+      "vertices": 6
+    },
+    {
+      "N": 21,
+      "profile": [
+        61,
+        21,
+        79,
+        39
+      ],
+      "vertices": 8
+    },
+    {
+      "N": 37,
+      "profile": [
+        107,
+        37,
+        139,
+        69
+      ],
+      "vertices": 9
+    },
+    {
+      "N": 101,
+      "profile": [
+        289,
+        101,
+        375,
+        187
+      ],
+      "vertices": 10
+    },
+    {
+      "N": 257,
+      "profile": [
+        771,
+        257,
+        1027,
+        513
+      ],
+      "vertices": 12
+    }
+  ],
+  "literal_Z_tail_profiles": 96,
+  "literal_full_profiles": 129,
+  "root_stabilizer_enumerations": 16,
+  "status": "PROVED efficient endpoint construction and fixed-root continuation law; exact replay",
+  "tail_misses_through_101": [
+    1,
+    3,
+    7,
+    11,
+    13,
+    19,
+    21,
+    23,
+    31,
+    37,
+    39,
+    41,
+    43,
+    47,
+    55,
+    61,
+    63,
+    67,
+    69,
+    73,
+    77,
+    79,
+    83,
+    87,
+    91,
+    97
+  ]
+}

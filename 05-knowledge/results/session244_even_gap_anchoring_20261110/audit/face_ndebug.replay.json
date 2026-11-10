@@ -1,0 +1,9 @@
+{
+  "max_order": 6,
+  "labelled_tournaments": 33867,
+  "rooted_cases": 202013,
+  "outneighbor_pair_checks": 499398,
+  "bound_equalities": 53109,
+  "nontrivial_strong_saturated_roots": 5830,
+  "minimum_strong_defect_by_outdegree": [[1, 0], [2, 2], [3, 6], [4, 14]]
+}

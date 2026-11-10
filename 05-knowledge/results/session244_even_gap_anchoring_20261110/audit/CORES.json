@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "method": "forward graph insertion plus direct induced-subset obstruction checks",
+  "counts_order_unrestricted_guarded": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      2
+    ],
+    [
+      3,
+      8,
+      8
+    ],
+    [
+      4,
+      64,
+      56
+    ],
+    [
+      5,
+      1000,
+      760
+    ],
+    [
+      6,
+      26720,
+      18960
+    ]
+  ],
+  "core_orbit_sizes": [
+    24,
+    240,
+    720,
+    720,
+    240,
+    240
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "status": "PASS",
+  "census": [
+    {
+      "n": 1,
+      "labelled": 1,
+      "degone": 1,
+      "guarded": 1,
+      "minimal_cores": 0,
+      "first_mismatch": null,
+      "first_strong_mismatch": null
+    },
+    {
+      "n": 2,
+      "labelled": 2,
+      "degone": 2,
+      "guarded": 2,
+      "minimal_cores": 0,
+      "first_mismatch": null,
+      "first_strong_mismatch": null
+    },
+    {
+      "n": 3,
+      "labelled": 8,
+      "degone": 8,
+      "guarded": 8,
+      "minimal_cores": 0,
+      "first_mismatch": null,
+      "first_strong_mismatch": null
+    },
+    {
+      "n": 4,
+      "labelled": 64,
+      "degone": 64,
+      "guarded": 56,
+      "minimal_cores": 0,
+      "first_mismatch": [
+        4,
+        1,
+        2,
+        7
+      ],
+      "first_strong_mismatch": null
+    },
+    {
+      "n": 5,
+      "labelled": 1024,
+      "degone": 1000,
+      "guarded": 760,
+      "minimal_cores": 24,
+      "first_mismatch": [
+        4,
+        1,
+        2,
+        7,
+        15
+      ],
+      "first_strong_mismatch": [
+        16,
+        9,
+        3,
+        5,
+        14
+      ]
+    },
+    {
+      "n": 6,
+      "labelled": 32768,
+      "degone": 26720,
+      "guarded": 18960,
+      "minimal_cores": 2160,
+      "first_mismatch": [
+        4,
+        1,
+        2,
+        7,
+        15,
+        31
+      ],
+      "first_strong_mismatch": [
+        32,
+        9,
+        3,
+        5,
+        15,
+        30
+      ]
+    }
+  ],
+  "cores": [
+    {
+      "rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ],
+      "orbit_size": 24,
+      "H": 15
+    },
+    {
+      "rows": [
+        6,
+        12,
+        48,
+        5,
+        11,
+        27
+      ],
+      "orbit_size": 240,
+      "H": 33
+    },
+    {
+      "rows": [
+        6,
+        12,
+        24,
+        33,
+        11,
+        23
+      ],
+      "orbit_size": 720,
+      "H": 37
+    },
+    {
+      "rows": [
+        6,
+        12,
+        24,
+        33,
+        43,
+        7
+      ],
+      "orbit_size": 720,
+      "H": 37
+    },
+    {
+      "rows": [
+        6,
+        24,
+        26,
+        33,
+        41,
+        7
+      ],
+      "orbit_size": 240,
+      "H": 45
+    },
+    {
+      "rows": [
+        6,
+        24,
+        42,
+        33,
+        13,
+        19
+      ],
+      "orbit_size": 240,
+      "H": 45
+    }
+  ],
+  "guarded_scalar_witnesses": [
+    {
+      "H": 15,
+      "word": "OJOZ",
+      "rows": [
+        54,
+        60,
+        56,
+        17,
+        32,
+        8
+      ]
+    },
+    {
+      "H": 33,
+      "word": "OOOOZ",
+      "rows": [
+        62,
+        124,
+        120,
+        112,
+        96,
+        64,
+        1
+      ]
+    },
+    {
+      "H": 37,
+      "word": "OZZOZ",
+      "rows": [
+        38,
+        124,
+        120,
+        113,
+        97,
+        64,
+        1
+      ]
+    },
+    {
+      "H": 45,
+      "word": "OZOZZ",
+      "rows": [
+        22,
+        124,
+        120,
+        113,
+        96,
+        65,
+        1
+      ]
+    }
+  ],
+  "strong_guard_obstruction": {
+    "rows": [
+      14,
+      20,
+      24,
+      18,
+      1
+    ],
+    "H": 15
+  },
+  "scope": "Finite census through order6 plus infinite proof in ROUND3.md."
+}

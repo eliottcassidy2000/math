@@ -1,0 +1,102 @@
+{
+  "105_product_factorization": [
+    3,
+    35
+  ],
+  "13_witness": {
+    "adjacency_bitmasks": [
+      18,
+      28,
+      9,
+      17,
+      4
+    ],
+    "reroot_to": 2,
+    "starting_word": "ZZ",
+    "suffix": "Z"
+  },
+  "173_witness": {
+    "adjacency_bitmasks": [
+      218,
+      252,
+      57,
+      240,
+      224,
+      193,
+      132,
+      4
+    ],
+    "profiles": [
+      [
+        15,
+        1,
+        59,
+        9
+      ],
+      [
+        73,
+        9,
+        109,
+        9
+      ],
+      [
+        173,
+        9,
+        209,
+        9
+      ]
+    ],
+    "reroot_to": 2,
+    "starting_word": "ZOOZ",
+    "suffix": "ZZ"
+  },
+  "OZ_bank5_product_closure_misses_through_2001": [
+    7,
+    21,
+    173,
+    631,
+    1897
+  ],
+  "all_OZJ_tail_misses_through_2001": {
+    "5": [
+      7,
+      21,
+      173
+    ],
+    "6": [
+      7,
+      21
+    ]
+  },
+  "grammar_states_through_response_2001": {
+    "5": 53772,
+    "6": 90402
+  },
+  "literal_family_profiles_checked": 8,
+  "literal_suffix_counts_checked": 15,
+  "minimum_response_potential_checks": 84,
+  "seed_profiles": {
+    "5": 42,
+    "6": 264
+  },
+  "slot_polynomials": {
+    "D": {
+      "0": -1,
+      "1": 3,
+      "2": 3
+    },
+    "E": {
+      "1": 1
+    },
+    "U": {
+      "1": -1,
+      "2": 6,
+      "3": 4
+    },
+    "d": {
+      "1": 1,
+      "2": 2
+    }
+  },
+  "status": "PROVED formulas and decreasing potential; finite exact grammar census"
+}
