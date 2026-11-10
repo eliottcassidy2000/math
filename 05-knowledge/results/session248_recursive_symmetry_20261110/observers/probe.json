@@ -1,0 +1,156 @@
+{
+  "affine_banks": [
+    {
+      "dual_weights": {
+        "0": 1,
+        "2": 6,
+        "4": 1
+      },
+      "m": 2,
+      "modules": 4,
+      "sector_size": 2,
+      "sectors": 8,
+      "sharp_root_threshold": 1
+    },
+    {
+      "dual_weights": {
+        "0": 1,
+        "4": 14,
+        "8": 1
+      },
+      "m": 3,
+      "modules": 8,
+      "sector_size": 16,
+      "sectors": 16,
+      "sharp_root_threshold": 2
+    },
+    {
+      "dual_weights": {
+        "0": 1,
+        "8": 30,
+        "16": 1
+      },
+      "m": 4,
+      "modules": 16,
+      "sector_size": 2048,
+      "sectors": 32,
+      "sharp_root_threshold": 4
+    }
+  ],
+  "inherited_tables": {
+    "pair": [
+      4161,
+      4297,
+      4933,
+      5085
+    ],
+    "single": [
+      41,
+      43
+    ]
+  },
+  "low_character_checks": 93,
+  "parity_thresholds": [
+    {
+      "even_minus_odd": -2,
+      "modules": 1,
+      "roots": 1
+    },
+    {
+      "even_minus_odd": 8,
+      "modules": 2,
+      "roots": 1
+    },
+    {
+      "even_minus_odd": -8,
+      "modules": 3,
+      "roots": 2
+    },
+    {
+      "even_minus_odd": 32,
+      "modules": 4,
+      "roots": 2
+    },
+    {
+      "even_minus_odd": -32,
+      "modules": 5,
+      "roots": 3
+    },
+    {
+      "even_minus_odd": 128,
+      "modules": 6,
+      "roots": 3
+    },
+    {
+      "even_minus_odd": -128,
+      "modules": 7,
+      "roots": 4
+    },
+    {
+      "even_minus_odd": 512,
+      "modules": 8,
+      "roots": 4
+    }
+  ],
+  "recursive_address_cases": 256,
+  "scope": "new code transfer and response identities only",
+  "sharp_halfspace_templates": [
+    {
+      "dual_mask": 170,
+      "mean_difference": 1620000
+    },
+    {
+      "dual_mask": 85,
+      "mean_difference": 1620000
+    },
+    {
+      "dual_mask": 204,
+      "mean_difference": 1620000
+    },
+    {
+      "dual_mask": 51,
+      "mean_difference": 1620000
+    },
+    {
+      "dual_mask": 102,
+      "mean_difference": 1620000
+    },
+    {
+      "dual_mask": 153,
+      "mean_difference": 1620000
+    },
+    {
+      "dual_mask": 240,
+      "mean_difference": 1620000
+    },
+    {
+      "dual_mask": 15,
+      "mean_difference": 1620000
+    },
+    {
+      "dual_mask": 90,
+      "mean_difference": 1620000
+    },
+    {
+      "dual_mask": 165,
+      "mean_difference": 1620000
+    },
+    {
+      "dual_mask": 60,
+      "mean_difference": 1620000
+    },
+    {
+      "dual_mask": 195,
+      "mean_difference": 1620000
+    },
+    {
+      "dual_mask": 150,
+      "mean_difference": 1620000
+    },
+    {
+      "dual_mask": 105,
+      "mean_difference": 1620000
+    }
+  ],
+  "status": "PASS"
+}

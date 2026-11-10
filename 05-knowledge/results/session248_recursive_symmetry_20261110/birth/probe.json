@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "parent": "TT2",
+      "automorphisms": 1,
+      "births": 4,
+      "child_classes": 2,
+      "symmetry_ratios": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "parent": "C3",
+      "automorphisms": 3,
+      "births": 8,
+      "child_classes": 3,
+      "symmetry_ratios": [
+        "1",
+        "1/3"
+      ]
+    },
+    {
+      "parent": "punctured_R5",
+      "automorphisms": 1,
+      "births": 16,
+      "child_classes": 8,
+      "symmetry_ratios": [
+        "1",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "parent": "R5",
+      "automorphisms": 5,
+      "births": 32,
+      "child_classes": 7,
+      "symmetry_ratios": [
+        "1",
+        "1/5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "1": {
+    "order": 3,
+    "group_order": 3,
+    "arc_scales": {
+      "0": {
+        "arc_orbit": 3,
+        "surviving_group": 1,
+        "block_flip_cost": 1
+      }
+    },
+    "binary_coloring_orbits_by_stabilizer": {
+      "1": 2,
+      "3": 2
+    },
+    "binary_type_count": 4,
+    "rigid_type_count": 2
+  },
+  "2": {
+    "order": 9,
+    "group_order": 81,
+    "arc_scales": {
+      "0": {
+        "arc_orbit": 27,
+        "surviving_group": 3,
+        "block_flip_cost": 9
+      },
+      "1": {
+        "arc_orbit": 9,
+        "surviving_group": 9,
+        "block_flip_cost": 1
+      }
+    },
+    "binary_coloring_orbits_by_stabilizer": {
+      "1": 2,
+      "3": 10,
+      "9": 8,
+      "27": 2,
+      "81": 2
+    },
+    "binary_type_count": 24,
+    "rigid_type_count": 2
+  },
+  "3": {
+    "binary_type_count": 4624,
+    "rigid_type_count": 2
+  },
+  "4": {
+    "binary_type_count": 32955830624,
+    "rigid_type_count": 2
+  },
+  "5": {
+    "binary_type_count": 11930963901626773064971580290624,
+    "rigid_type_count": 2
+  },
+  "code_n9": {
+    "dimension": 12,
+    "coordinate_weights": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      9,
+      9,
+      9
+    ],
+    "ambient_arc_dimension": 36
+  }
+}

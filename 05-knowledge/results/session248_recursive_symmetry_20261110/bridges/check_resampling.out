@@ -1,0 +1,13 @@
+n=3, k=0, types=2, spectrum={'1': 1, '0': 1}
+n=3, k=1, types=2, spectrum={'1': 1, '0': 1}
+n=3, k=2, types=2, spectrum={'1': 1, '0': 1}
+n=4, k=0, types=4, spectrum={'1': 1, '0': 3}
+n=4, k=1, types=4, spectrum={'1': 1, '0': 3}
+n=4, k=2, types=4, spectrum={'1': 1, '0': 3}
+n=4, k=3, types=4, spectrum={'1': 1, '1/4': 1, '0': 2}
+n=5, k=0, types=12, spectrum={'1': 1, '0': 11}
+n=5, k=1, types=12, spectrum={'1': 1, '0': 11}
+n=5, k=2, types=12, spectrum={'1': 1, '0': 11}
+n=5, k=3, types=12, spectrum={'1': 1, '1/10': 1, '0': 10}
+n=5, k=4, types=12, spectrum={'1': 1, '2/5': 1, '1/5': 2, '0': 8}
+PASS: direct exact quotient kernels match every predicted eigenvalue and multiplicity; stochasticity and orbit-volume reversibility hold.
