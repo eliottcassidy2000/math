@@ -57,3 +57,16 @@ vertex set `O`) and `r = +1` or `-1`. Same box, at most two levels. Seeds = stat
 - `300 <= N_4 < 1900`: the towers are one mechanism among several; report the exact families, the uncovered `c`, and
   what the uncovered seeds of the census look like.
 - `N_4 < 300`: the towers are thin; the write-up is restricted to the structure theorem and the explicit families.
+
+## E3 - depth six (added and pushed before the run; E1 and E2 were already run when this was written)
+
+Known when this was written: E1 gave `N_2 = 805`, `N_4 = 1612`; the odd `c <= 129` without a pure-tower seed of depth
+<= 4 in the E1 box are 5, 11, 23, 29, 73, 85, 91, 95, 127 (29 is reached from the transitive pair start
+`(r, g, M, E) = (-1, 0, 3, 1)`, which E1 did not include). Nothing of depth six has been computed.
+
+Run: pure towers from the E1 start states, box `delta` in {1, 2}, `0 <= x <= 5`, `0 <= m <= 2`, depth <= 6.
+`N_6'` = number of odd `c <= 4097` at even depth <= 6 in this smaller box.
+
+- **R6a.** At least 4 of the eight numbers 5, 11, 23, 73, 85, 91, 95, 127 occur at even depth <= 6.
+- **R6b.** 5 does not occur.
+- **R6c.** `N_6' >= 1500`.
