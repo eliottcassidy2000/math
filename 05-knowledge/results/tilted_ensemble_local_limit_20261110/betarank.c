@@ -9,7 +9,7 @@
 typedef unsigned long long u64; typedef long long i64;
 #define MAXN 11
 static int n; static u64 f[1<<MAXN][MAXN], g[1<<MAXN][MAXN], hS[1<<MAXN]; static int outm[MAXN], inm[MAXN];
-int main(int argc,char**argv){ n=atoi(argv[1]); int full=(1<<n)-1; char line[256];
+int main(int argc,char**argv){ n=atoi(argv[1]); int fast=(argc>2); int full=(1<<n)-1; char line[256];   /* any second argument: rank only (fast mode) */
   static u64 M[MAXN][MAXN]; u64 hist[MAXN+1][2]; for(int r=0;r<=MAXN;r++)hist[r][0]=hist[r][1]=0;
   u64 fail_even=0, fail_pred=0, nt=0; u64 minmu=~0ULL; double sumbias=0; i64 signedbias=0;
   while(fgets(line,sizeof line,stdin)){ if(line[0]!='0'&&line[0]!='1')continue; int k=0;
@@ -28,13 +28,14 @@ int main(int argc,char**argv){ n=atoi(argv[1]); int full=(1<<n)-1; char line[256
     for(int c=0;c<n;c++){ int p=-1; for(int i=rk;i<n;i++) if(rr[i]>>c&1){p=i;break;} if(p<0)continue; int t=rr[p];rr[p]=rr[rk];rr[rk]=t;
       for(int i=0;i<n;i++) if(i!=rk && (rr[i]>>c&1)) rr[i]^=rr[rk]; rk++; }
     i64 diff=0;
+    if(fast){ hist[rk][1]++; continue; }
     for(int X=0;X<=full;X++){ u64 val=0; for(int i=0;i<n;i++){ if(X>>i&1) val+=g[full][i]; else { val+=f[full][i]; int mm=X; while(mm){int t=__builtin_ctz(mm);mm&=mm-1;val+=M[i][t];} } }
       if(((val-H)>>1)&1) diff--; else diff++; }
     i64 ad = diff<0?-diff:diff; i64 pred = 1LL<<(n-rk/2);
     if(!(ad==0 || ad==pred) || (rk&1)) fail_pred++;
     hist[rk][ad!=0]++; sumbias += (double)ad/(double)(1LL<<n); signedbias += diff;
   }
-  printf("order %d: classes %llu, parity failures %llu, prediction failures %llu, min mu %llu\n", n, nt, fail_even, fail_pred, minmu);
+  printf("order %d%s: classes %llu, parity failures %llu, prediction failures %llu, min mu %llu\n", n, fast?" (fast mode: rank only; all classes are listed in the second column)":"", nt, fail_even, fail_pred, minmu);
   for(int r=0;r<=n;r++) if(hist[r][0]||hist[r][1]) printf("  rank %d: %llu classes with zero bias, %llu with bias 2^-%d\n", r, hist[r][0], hist[r][1], r/2);
   printf("  mean |bias| over classes = %.6f ; signed mean (even minus odd)/2^m = %.6f\n", sumbias/nt, (double)signedbias/((double)nt*(double)(1LL<<n)));
   return 0; }
