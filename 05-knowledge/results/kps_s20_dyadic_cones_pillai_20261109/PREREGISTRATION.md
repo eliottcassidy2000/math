@@ -60,3 +60,38 @@ complexity can be infinite.
 Outcomes will be appended below, unedited, after the runs.
 
 ## Outcomes
+
+- **P1: CONFIRMED.**
+  - Setup: the dyadic closure under all 22,243 distinct class-gadget matrices of order <= 7, started at the single
+    vertex.
+  - Result: 197 values, largest 1,995,807; there is no value above 10^7 (`out/p1_dyadic_closure_order7_1e10.out`).
+- **P2: CONFIRMED.**
+  - Setup: r0 = 63 with the 1,884 distinct class-gadget matrices of order <= 6.
+  - Result: 12,352 values, all below 86,371,467, so the value sets below 10^8 and 10^9 coincide
+    (`out/p2_r63_order6_1e9.out`).
+- **P3: CONFIRMED.**
+  - Setup: r0 = 1023 with the order-<= 5 gadgets.
+  - Result: 93,159 values below 10^9, inside the predicted window [60,000, 150,000]. Only the largest value,
+    340,931,297, lies above 10^8 (`out/p3_r1023_order5_1e9.out`).
+- **P4: CONFIRMED.**
+  - Setup: the 181 distinct dyadic base triples of order <= 8, with transitive gadgets of size m <= 20.
+  - Result: 0 two-step chains. Only 3 base triples admit even one dyadic step: (1, 0, 2) -> 9, (1, 1, 1) -> 9 and
+    (33, 4, 64) -> 289. The last uses an exit at the gadget source with e = 4 != 0 (`out/p4_two_step_chains.out`).
+
+## Addendum (pushed before the runs it names)
+
+**Exploratory, seen before this addendum.** Each closure was taken with the order-<= 5 gadgets below 10^9. For
+r0 = 3, 7, 15, 31, 63, 127, 255, 511, 1023 the closures are finite, with these counts:
+
+| quantity | r0 = 3 | 7 | 15 | 31 | 63 | 127 | 255 | 511 | 1023 |
+|---|---|---|---|---|---|---|---|---|---|
+| values | 35 | 83 | 258 | 724 | 2,103 | 5,580 | 14,392 | 36,765 | 93,159 |
+| complete prefix | 13 | 35 | 35 | 67 | 127 | 431 | 2,303 | 5,153 | 20,921 |
+
+The complete prefix is the least odd n, other than 7 and 21, that is missing from the closure.
+
+- **P5.** With the order-<= 5 gadgets and r0 = 2047, the closure below 4 * 10^9 is finite. Its complete prefix lies in
+  [40,000, 120,000].
+- **P6.** In the same run, the number of values lies in [180,000, 300,000], and every value is below 2 * 10^9.
+
+### Addendum outcomes
