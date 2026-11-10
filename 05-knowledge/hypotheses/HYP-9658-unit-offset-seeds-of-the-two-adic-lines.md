@@ -1,10 +1,13 @@
 ---
 id: HYP-9658
-title: "Unit-offset seeds of the 2-adic lines of the Hamiltonian-path spectrum: (A) every odd c has a rooted tournament with offset c0 = 1 and multiplier c 2^j - equivalently a tournament B and a vertex set O with W(O) = H(B) - 1 and U_B(O) = c 2^j - so that every line {1 + c 2^s} is eventually in the spectrum by one explicit ray; (B) the 33 odd c <= 4097 without a seed of order <= 10 (least 245) acquire one by order 12; (C) every odd number of binary weight three other than 7 and 21 is a path count; (D) the number of unit-offset roots grows geometrically with the order (2, 5, 7, 16, 31, 68, 207, 1333 class-vertex pairs for orders 2..9)."
+title: "Unit-offset seeds of the 2-adic lines of the Hamiltonian-path spectrum: (A) every odd c has a rooted tournament with offset c0 = 1 and multiplier c 2^j - equivalently a tournament B and a vertex set O with W(O) = H(B) - 1 and U_B(O) = c 2^j - so that every line {1 + c 2^s} is eventually in the spectrum by one explicit ray; (B) the 33 odd c <= 4097 without a seed among the unit-offset roots of order <= 10 and the doubling vertices of order <= 9 (least 245) acquire one by order 12; (C) every odd number of binary weight three other than 7 and 21 is a path count; (D) the number of unit-offset roots grows geometrically with the order (2, 5, 7, 16, 31, 68, 207, 1333 class-vertex pairs for orders 2..9)."
 status: >
   OPEN (conjectures (A)-(D)). FINITE-EXACT support: every rooted class of order <= 9 (seeds.c) and every vertex set of
-  size 2-4 over every class of order 9 (unitsets.c, i.e. the roots of order 10 with out-degree 2-4): 5,529 odd c have
-  a seed, among them all 65 odd c <= 129 and 2,016 of the 2,049 odd c <= 4097. PRE-REGISTERED tests, text pushed
+  size 2-4 over every class of order 9 (unitsets.c); the audit tested every size and found no unit set of size >= 4
+  over a base of order <= 9, so the list of unit-offset roots of order <= 10 is complete. Doubling vertices were
+  searched to order 8 (packet) and 9 (audit), not at order 10. 5,529 odd c have a seed, among them all 65 odd
+  c <= 129 and 2,016 of the 2,049 odd c <= 4097. The cut form of the offset used in (A) is KNOWN (Session216
+  star-closure law; THM-5126 (A)). Audit: PASS WITH CORRECTIONS (MISTAKE-754). PRE-REGISTERED tests, text pushed
   before each run (commits 2c27353a14 and 050845a98d on origin/main): order nine P2, P3 CONFIRMED, P1, P4 FAILED;
   order ten Q1-Q4 CONFIRMED; gates G1, G2 hold. (A) is neither implied by nor implies the Chan-Pak conjecture: a
   seed gives a ray of a line, not the finitely many points below it, and Chan-Pak gives every point but no ray. The
@@ -36,8 +39,9 @@ with `H - 1 = c 2^s0`.
 - **(A) Seeds exist.** Every odd `c >= 1` has a seed: there are a tournament `B` and a vertex set `O` with
   `W(O) = H(B) - 1` and `U_B(O) = c 2^j`. Equivalently, for every odd `c` the line `L_c` is in the spectrum from
   some point on, by one explicit ray.
-- **(B) The thirty-three.** Each of the 33 odd `c <= 4097` without a seed of order `<= 10` (see README section 2
-  for the list) has a seed of order at most twelve.
+- **(B) The thirty-three.** Each of the 33 odd `c <= 4097` without a seed among the unit-offset roots of order
+  `<= 10` and the doubling vertices of order `<= 9` (list in README section 2) has a seed of order at most twelve.
+  (Doubling vertices of order ten have not been searched and could already settle some of them.)
 - **(C) Weight three.** Every number `1 + 2^a + 2^b` (`a > b >= 1`) other than `7` and `21` is a Hamiltonian-path
   count. (Rows `a - b <= 7` are THM-5126 (B4). This is a consequence of Chan-Pak.)
 - **(D) Growth.** The number `u(n)` of unit-offset roots of order `n` (class-vertex pairs) satisfies
@@ -48,15 +52,18 @@ with `H - 1 = c 2^s0`.
 A seed for `c` with multiplier `c 2^j` puts `1 + c 2^s` into the spectrum for `s >= j + 1`. The `j` points below
 are a separate finite question. So (A) is a statement about the *2-adic ends* of the spectrum: every line has an
 end inside `S`. Chan-Pak in addition needs every point below the first ray, uniformly in `c`. The least `s0(c)`
-found is at most `8` for `c <= 129` (attained at `c = 19`); no bound in `c` is conjectured.
+found is at most `8` for `c <= 129` (attained at `c = 19`); module seeds were searched to order eight only, and the
+audit's order-nine census of doubling vertices lowers `s0` on nine lines (`c = 27` to `3`; `45, 63, 85, 87, 105,
+165, 219, 261` to `1`). No bound in `c` is conjectured.
 
 The condition `W(O) = H(B) - 1` is a single equation between a quadratic form of the indicator of `O` (the cut
 matrix `W` of THM-5122, all of whose off-diagonal entries are even and positive) and the path count of the base.
 For a transitive base it forces `|O| <= 1` (fans, `c = 1`). The roots found have out-degree at most `2` up to
-order seven; out-degree `3` first occurs at order eight, and no unit set of size four exists over a base of order
-nine. For a root with `H(B) = E` (every Hamiltonian path of `B` ends at an in-neighbour of `v`) the multiplier is
+order seven; out-degree `3` first occurs at order eight, and no unit set of size four or more exists over a base of
+order at most nine (sizes 2-4: unitsets.c; all sizes: audit). For a root with `H(B) = E` (every Hamiltonian path of `B` ends at an in-neighbour of `v`) the multiplier is
 `M = H - 1` and the ray is the doubling tower `1 + (H - 1) 2^t`: 116 of the 336 unit-offset roots of order `<= 8`
-are of this kind (197 of the 1,333 at order nine); 8 of the 336 are trivial (`M = 0`).
+are of this kind (197 of the 1,333 at order nine); 7 of the 336 are trivial (`M = 0`: the transitive tournament
+rooted at its sink).
 
 ## Pre-registered tests and outcomes (texts fixed before each run in PREREGISTRATION.md)
 
@@ -67,7 +74,8 @@ Order nine (direct, every root of every class):
 - P4 (`c = 33`): **FAILED** at order nine.
 - G1 (no ray through 7 or 21): holds.
 
-Order ten (through the cut matrix, root out-degree 2-4; out-degree `>= 5` not searched):
+Order ten (through the cut matrix, root out-degree 2-4; the audit later tested every out-degree: none above 3).
+The 19,002 unit sets count pairs (base class, `O`), not class-vertex pairs, and are not a term of the sequence in (D):
 - Q1 (at least 6 of the eleven odd `c <= 129` without a seed acquire one): **CONFIRMED**, all eleven.
 - Q2 (`c = 19`): **CONFIRMED**, `s0 = 8`. Q3 (`c = 33`): **CONFIRMED**, `s0 = 6`.
 - Q4 (at least 450 of the 513 odd `c <= 1025` have a seed): **CONFIRMED**, 510.

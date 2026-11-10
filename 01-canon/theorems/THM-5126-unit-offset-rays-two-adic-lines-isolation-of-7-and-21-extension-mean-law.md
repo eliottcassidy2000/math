@@ -2,20 +2,29 @@
 id: THM-5126
 title: "Unit-offset rays and the 2-adic lines of the Hamiltonian-path spectrum. (A) Offset formula: for a rooted tournament (L, v), B = L - v and O = N+(v), the fixed-root tail ray is H(L o 0^t) = c0 + M 2^t with c0 = H(B) - W(O) and M = U_B(O), where W(O) sums the two-path-cover couplings W_ef over the pairs of O and U_B(O) sums the responses. (B) Lines: every odd N > 1 lies on one line L_c = {1 + c 2^s}, c the odd part of N - 1; a unit-offset root (W(O) = H(B) - 1) or a doubling vertex puts a whole ray of a line into the spectrum. Every odd N > 1 whose N - 1 has odd part at most 129 is a Hamiltonian-path count, except 7 and 21: all 65 lines with c <= 129 lie in the spectrum, L_3 misses exactly 7 and L_5 misses exactly 21. In particular every number of binary weight three 1 + 2^b + 2^(b+d) with d <= 7 is a path count except 7 and 21. (C) Extension-mean law: the mean of H over all extensions of T by k vertices is k! 2^(1-k) sum_j C(k+1, j) 2^(-j) P_j(T), minimised exactly by transitive T. (D) Trajectory formula for one-apex counts."
 status: >
-  (A) PROVED: the tail law itself is KNOWN (O/Z tails of Sessions 195-205, THM-4888 (B), THM-5085 at x = 2, the
-  offsets of Session236); the proof is repeated in the present coordinates; new here are the identities
-  c0 = d - delta' = H(B) - W(O) and M = H - E + delta' = U_B(O), which express the offset through the cut matrix W of
-  THM-4114 / THM-5122. (B) PROVED from (A) and the KNOWN module law (THM-2195) + FINITE-EXACT certificates: 65
+  (A) KNOWN, re-derived in rooted coordinates: the tail law (O/Z tails of Sessions 195-205; THM-4888, Setting;
+  the ray (1) is THM-5085 (3) at x = 2; offsets of Session236) and its cut form (1'), which is the star-closure law
+  of Session216 (three-core/PROOF.md (3)-(4), star/PROOF.md section 6: h - T + 2^t A with A = U_B(O), T = W(O)),
+  restated in Session229 dynamic (1), THM-4960, Sessions 244-245 and THM-5122 (1); delta' is the coordinate T of that
+  interface. New in (A): the reading of h - T as the 2-adic offset of the fixed-root ray, its parity and equality
+  case, and the unit-offset equation W(O) = H(B) - 1 as a seed criterion. (B) PROVED from (A) and the KNOWN
+  substitution law (THM-3121 (4)) + FINITE-EXACT certificates: 65
   explicit seeds (61 rooted tournaments of order <= 10 with unit offset, 4 doubling vertices of order <= 8), each
   recounted literally (verify_lines.py), and for the 119 points below the rays the complete list of path counts of
   order <= 9 (117 points) and two order joins (5313 = 3 * 1771, 3425 = 5 * 685); the exclusions of 7 and 21 are
-  THM-1370 (KNOWN). The statement is about the 65 lines with c <= 129, a set of integers of density zero; whether
-  every odd c has a seed is HYP-9658 (A) (2,016 of the 2,049 odd c <= 4097 have a seed of order <= 10; the least c
-  without one is 245). (C) PROVED, elementary (new as an identity in this form; the one-vertex cut form is
-  THM-4114 (32) and its strict positivity is THM-5122). (D) PROVED: an exact restatement of the KNOWN one-apex
+  THM-1370 (KNOWN). The statement is about the 65 lines with c <= 129, a set of integers of density zero, and every
+  point of these lines below 2^35 was already a path count by THM-4875 (D) (FINITE-EXACT, another construction): the
+  new content is the part of each line above that range, by one explicit ray. Whether every odd c has a seed is
+  HYP-9658 (A): 2,016 of the 2,049 odd c <= 4097 have a seed among the unit-offset roots of order <= 10 (a complete
+  list: the audit found no unit set of size >= 4 over a base of order <= 9) and the doubling vertices of order <= 9
+  (order nine: audit); doubling vertices of order ten were not searched; the least c without such a seed is 245.
+  (C) PROVED, elementary. KNOWN at k = 1: THM-4111 (4), (6) and THM-4115 (5) (P_2 = (n-1) H + F_1; the variance is
+  THM-4115 (6)); the cut form is THM-4114 (32). New here, as far as a canon search shows: the identity for every k
+  and the bound P_j >= j! S(n, j) with its equality case. (D) PROVED: an exact restatement of the KNOWN one-apex
   recursion g(2v+1) = g(v), g(2v) = g(v) + v + (v mod 2) (Session 193; THM-4875 (D)). Remark (E), the module face
-  of THM-5124 (1), is credited to opus-2026-11-10-S90, with a second three-line proof. Independent audit: section
-  "Audit". The Chan-Pak conjecture (every odd number other than 7 and 21 is a Hamiltonian-path count of a
+  of THM-5124 (1), is credited to opus-2026-11-10-S90, with a second three-line proof. Independent audit: PASS WITH
+  CORRECTIONS (5 majors on credit, scope and wording, all applied; MISTAKE-754); the audit reproduced every seed,
+  every point below the rays and every census number with its own code. The Chan-Pak conjecture (every odd number other than 7 and 21 is a Hamiltonian-path count of a
   tournament) remains OPEN; nothing here bounds the spectrum from below in density.
 session: kind-pasteur-2026-11-10-S21
 source: 05-knowledge/results/kps_s21_two_adic_lines_20261110/README.md
@@ -26,11 +35,13 @@ scripts:
   - 05-knowledge/results/kps_s21_two_adic_lines_20261110/line_seeds.txt, below_rays.txt, unit_offset_roots_orders_2_to_9.txt
 related:
   - 01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md (the exclusions)
-  - 01-canon/theorems/THM-4888-*, THM-5085-*, THM-5109-* (fixed-root tails, offsets, dyadic cones; this machine)
+  - 01-canon/theorems/THM-4888-* (Setting), THM-5085-* (3), THM-5109-* (fixed-root tails, bridge rays, dyadic cones; this machine)
   - 01-canon/theorems/THM-4114-ocf-mobius-positivity-tropical-defect-layer-and-opposite-ear-cut-curvature.md (cut form)
   - 01-canon/theorems/THM-5122-shared-core-exchange-intervals-and-negative-inertia-capacity.md (the matrix W, W_ij >= 2 H(C - i - j) > 0)
   - 01-canon/theorems/THM-5124-additive-rigidity-of-the-path-count-on-presence-cubes.md (pair lemma)
-  - 01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md (module law)
+  - 01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md (substitution law, eq. (4))
+  - 01-canon/theorems/THM-4111-*, THM-4115-* (one-vertex extension mean and variance), THM-4960-* (path count 2A + h - T)
+  - 05-knowledge/results/session216_overnight_constructions_20261107/ (three-core/PROOF.md, star/PROOF.md: star-closure law)
   - 01-canon/theorems/THM-4875-* (one-apex counts g, the join family F1)
   - 05-knowledge/hypotheses/HYP-9658-unit-offset-seeds-of-the-two-adic-lines.md
 ---
@@ -80,7 +91,7 @@ So `H(L o y) = H - E (1 - y_1) + (U - d) C(y) + d C'(y)`. For `L = {v}` this rea
 
     H(L o 0^t) = c0 + M 2^t,      c0 = H - E + 2d - U,      M = U - d.                              (1)
 
-**Offset formula (new form).**
+**Offset formula (KNOWN in cut coordinates, Session216; rooted form).**
 
     c0 = d - delta' = H(B) - sum over pairs {e, f} of O of W_ef,        M = H - E + delta' = sum over y in O of U_B(y).   (1')
 
@@ -92,12 +103,18 @@ paths of `L` in which `v` is neither first nor last; the rest are the crossed co
 and `c0 = H - E + d - M = d - delta'`. A crossed cover is `(P1, v P2')` with `P1` ending at some `e in O` and `P2'`
 starting at some `f in O`, `e != f`, and `(P1, P2')` an ordered two-path cover of `B`: `delta' = sum over ordered
 pairs (e, f) of O of Q_B(e, f) = sum over pairs of W_ef`. A cover with `P2 != (v)` is `(P1, v P2')` with `P2'`
-starting at an out-neighbour `y` of `v` and `P1` possibly empty: `M = sum over y in O of U_B(y)`. `W_ef` is even and
-positive (THM-5122), which gives the parity and the equality case. QED
+starting at an out-neighbour `y` of `v` and `P1` possibly empty: `M = sum over y in O of U_B(y)`. Parity:
+`c0 = H(L o 0) - 2M` is odd by Redei, so `W(O) = H(B) - c0` is even for every `O`. Equality case: `W_ef > 0`
+(THM-5122: `W_ef >= 2 H(B - e - f)`; an insertion proof is in the audit report, A1). QED
+
+In the notation of Session216 (`h = H(B)`, `A = U_B(O)`, `T = W(O)`) this is the star-closure count
+`h - T + 2^t A`; `delta'` is the coordinate `T`. The contribution here is the reading: `h - T` is the offset of the
+ray, the 2-adic limit of its points.
 
 For a one-apex tournament with word `u` (binary value `A(u)`), `B` is transitive, `d = 1`, and `delta'` is the
 weighted number of pairs of one-bits of `A(u)` (Session 16's weighted inversions; the `q` of the S90 note), so
-`c0 = 1 - delta'` and the only unit-offset one-apex roots are the fans (`A(u)` a power of two).
+`c0 = 1 - delta'` and the only unit-offset one-apex roots are the fans (`A(u)` a power of two) and the transitive
+tournament rooted at its sink (`A(u) = 0`, `M = 0`).
 
 ## (B) Lines, seeds, and the isolation of 7 and 21
 
@@ -109,14 +126,15 @@ of `N - 1`), so Chan-Pak is the statement that every line lies in `S` except for
 `sum over pairs of O of W_ef = H(B) - 1`. A *doubling vertex* of `K` is a vertex `x` such that no Hamiltonian walk
 of `K` visits `x` three or more times and the number `c_2` of Hamiltonian walks visiting `x` exactly twice is
 `(H(K) - 1)/2`. (A Hamiltonian walk visits every other vertex once; `c_j = H(K[I_j at x]) / j!` with `I_j` an
-independent set of `j` twins. A walk visits `x` at most `min(d+(x), d-(x)) + 1` times.)
+independent set of `j` twins. A walk visits `x` at most `min(d+(x), d-(x)) + 1` times, and if no walk visits `x`
+exactly three times then none visits it more often: audit report, A2.)
 
 **(B1) Ray lemma.**
 - A unit-offset root with `M = c 2^j` (`c` odd) gives `1 + c 2^s in S` for every `s >= j + 1`, by (1).
 - A doubling vertex gives `H(K[TT_a at x]) = 1 + (H(K) - 1) 2^(a-1)` for every `a >= 1`, and more generally
   `H(K[M at x]) = H(M) + (H(K) - 1) pi_M(2) / 2` for every tournament `M`, where `pi_M(2) = 2 H(M) + P_2(M)` and
-  `P_2` counts ordered pairs of disjoint nonempty paths covering `M`. This is the KNOWN module law
-  `H(K[M at x]) = sum_j c_j(K, x) P_j(M)` with `c_1 = H(K)`, `c_2 = (H(K) - 1)/2`, `c_j = 0` for `j >= 3`, and
+  `P_2` counts ordered pairs of disjoint nonempty paths covering `M`. This is the KNOWN substitution law
+  `H(K[M at x]) = sum_j c_j(K, x) P_j(M)` (THM-3121 (4)) with `c_1 = H(K)`, `c_2 = (H(K) - 1)/2`, `c_j = 0` for `j >= 3`, and
   `P_2(TT_a) = 2^a - 2`.
 
 **(B2) The two gaps are isolated on their lines.** `L_3 ∩ S = L_3 - {7}` and `L_5 ∩ S = L_5 - {21}`.
@@ -137,7 +155,8 @@ such that the odd part of `N - 1` is at most `129` is a Hamiltonian-path count o
 
 *Proof.* `line_seeds.txt` gives, for each odd `c <= 129`, a unit-offset root of order `<= 10` with
 `M = c 2^(s0 - 1)`, or a doubling vertex of a tournament of order `<= 8` with `H - 1 = c 2^s0`; by (B1) the ray
-`s >= s0` is in `S`. The least `s0` found:
+`s >= s0` is in `S`. The least `s0` found by the packet's search (unit-offset roots of order `<= 10`, doubling
+vertices of order `<= 8`):
 
     c    1  3  5  7  9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 63 65
     s0   1  2  3  5  1  1  5  1  2  8  4  5  3  6  1  2  6  5  1  3  6  2  3  1  1  1  5  1  2  2  2  4  3
@@ -148,8 +167,12 @@ The `121` points `1 + c 2^s` with `s < s0` are listed in `below_rays.txt`: two a
 values of `H` at order `<= 9` (complete class list, 191,536 classes at order nine); and `5313 = 3 * 1771`,
 `3425 = 5 * 685` are products of two such values, hence path counts of order joins. The seeds are recounted
 literally by verify_lines.py (states, offset one, first ray points); the eleven seeds of order ten
-(`c = 19, 33, 71, 79, 83, 97, 101, 103, 107, 113, 115`) were found through (1') by unitsets.c. The value list is the
-output of classgen.c (validated against A000568). QED
+(`c = 19, 33, 71, 79, 83, 97, 101, 103, 107, 113, 115`) were found through (1') by unitsets.c. Every census point
+carries a witness tournament (order and code) in `below_rays.txt`, recounted literally by verify_lines.py; the
+witnesses are those of the audit's independent class census. QED
+
+The audit's census of doubling vertices of order nine lowers `s0` on nine lines (`c = 27` to `3`;
+`c = 45, 63, 85, 87, 105, 165, 219, 261` to `1`); the table is not a table of true minima.
 
 **(B4) The weight-three stratum.** An odd number has binary weight three iff it is `1 + 2^b + 2^(b+d)`, i.e. a point
 of the line `c = 2^d + 1`. By (B3): for `d <= 7` and every `b >= 1`, `1 + 2^b + 2^(b+d) in S` except `7`
@@ -182,8 +205,8 @@ least one tuple of Hamiltonian paths of its blocks (Redei), and distinct ordered
 Equality for all `j` forces `H(T) = P_1 = 1`, i.e. `T` transitive, and holds for transitive `T`. The coefficient
 of `P_1` in (2) is positive, so the minimiser is unique. QED
 
-**Reading.** For `k = 1` the count `H(T + v_O)` is the capacity of a directed cut (THM-4114 (32)), and (2) says its
-mean over the `2^n` cuts is `H + P_2/4 >= 2^(n-2) + 1/2`: a one-vertex extension family has `2^n` members and mean
+**Reading.** For `k = 1` the count `H(T + v_O)` is the capacity of a directed cut (THM-4114 (32)), and (2) is the
+KNOWN mean of THM-4111 (4) and THM-4115 (5): the mean over the `2^n` cuts is `H + P_2/4 >= 2^(n-2) + 1/2`: a one-vertex extension family has `2^n` members and mean
 at least `2^(n-2)`, and the one-apex family (transitive base) has the least mean. For the `k`-apex tape over
 `TT_n`, (2) gives `E_k ~ k! (k+1)^n 4^(-k)` against `2^(kn + C(k,2))` labelled members: word-growth exponent
 `k / log2(k + 1)` (`1, 1.26, 1.5, 1.72, ...`), in agreement with the flag eigenvalues `(k+1)^l` of THM-5123.
@@ -204,7 +227,7 @@ where the trajectory is `m -> (m + 1) / 2^(v_2(m+1)) -> ... -> 1`.
 
 If `x != y` both lie on cycles of `K`, some Hamiltonian walk of `K` visits `x` twice and `y` twice (and every other
 vertex once); hence a family `H(K[TT_a at x, TT_b at y]) = al + be 2^a + ga 2^b + de 2^(a+b)` (exact when no walk
-visits `x` or `y` three times, where `de` is the number of such walks) has `de >= 1` as soon as `x` and `y` lie on
+visits `x` or `y` three or more times, where `de` is the number of such walks) has `de >= 1` as soon as `x` and `y` lie on
 cycles. This is the module face of THM-5124 (1) (opus-2026-11-10-S90, first). Direct proof: if `x, y` are in one
 strong component `Q`, take a Hamiltonian cycle of `Q` through `x` (Camion), read as a closed walk from `x` to `x`,
 and put the second copy of `y` before it if `y -> x`, after it if `x -> y`; if they are in different components,
@@ -225,4 +248,12 @@ bilinear family has `de = 0` with `be, ga != 0`.
 
 ## Audit
 
-See the source note, section "Audit", and `05-knowledge/results/kps_s21_two_adic_lines_20261110/audit/`.
+Independent audit (fresh context, own code): **PASS WITH CORRECTIONS**,
+`05-knowledge/results/kps_s21_two_adic_lines_20261110/audit/AUDIT.md`. Five majors, all applied: (M1) the cut form
+(1') is Session216's star-closure law, not new; (M2) (C) at `k = 1` is THM-4111 / THM-4115; (M3) the substitution
+law is THM-3121 (4), not THM-2195; (M4) "no seed of order `<= 10`" needed its search scope (the audit completed the
+unit-set census in all sizes and added the doubling vertices of order nine); (M5) three README sentences were false
+or overstated. Seventeen minors, applied. The audit confirmed with its own class generator and counters: all 65
+seeds, all 2,016 lines of `line_seeds.txt` (6,052 literal ray counts), the 121 points below the rays, the offset
+identities on 1,782,476 roots, and every census number. Not verified by anyone: doubling vertices of order ten.
+Logged as MISTAKE-754.

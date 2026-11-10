@@ -1,0 +1,14 @@
+AUDIT EXTENSION: doubling vertices at order 9 (every vertex of every one of the 191,536 classes; definition c_2 = (H-1)/2, c_3 = 0 by walk counting)
+doubling vertices with c_2 > 0: 972; distinct values H: 160; distinct odd c = odd part of (H-1): 97; largest c: 541
+c <= 4097 with an order-9 module seed that have no seed in line_seeds.txt: []
+lines whose least s0 drops when order-9 doubling vertices are admitted (literal recount of K[TT_a at x], a = 2, 3, by DP and DFS):
+  c=27: s0 6 -> 3  (order 9, code 14032044548, x=2, H=217; K[TT_2], K[TT_3] = [433, 865]) ok
+  c=45: s0 3 -> 1  (order 9, code 34445721604, x=4, H=91; K[TT_2], K[TT_3] = [181, 361]) ok
+  c=63: s0 4 -> 1  (order 9, code 34445722116, x=5, H=127; K[TT_2], K[TT_3] = [253, 505]) ok
+  c=85: s0 3 -> 1  (order 9, code 35771123201, x=6, H=171; K[TT_2], K[TT_3] = [341, 681]) ok
+  c=87: s0 2 -> 1  (order 9, code 14025949186, x=7, H=175; K[TT_2], K[TT_3] = [349, 697]) ok
+  c=105: s0 3 -> 1  (order 9, code 14030045186, x=7, H=211; K[TT_2], K[TT_3] = [421, 841]) ok
+  c=165: s0 6 -> 1  (order 9, code 34766619658, x=6, H=331; K[TT_2], K[TT_3] = [661, 1321]) ok
+  c=219: s0 3 -> 1  (order 9, code 8699020041, x=7, H=439; K[TT_2], K[TT_3] = [877, 1753]) ok
+  c=261: s0 5 -> 1  (order 9, code 8593342740, x=7, H=523; K[TT_2], K[TT_3] = [1045, 2089]) ok
+PASS

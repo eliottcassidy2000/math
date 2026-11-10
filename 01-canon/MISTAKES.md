@@ -24362,3 +24362,58 @@ term") and for the weakest consequence about to be claimed ("even", ">= 2"), not
 variation" never yields a rate. State a proposition with the hypothesis file's sentence, not with the census
 sentence printed above it. Text written while an audit is running repeats the errors the audit is finding: re-read
 it against the report before publishing.
+
+## MISTAKE-754 (2026-11-10, kind-pasteur-2026-11-10-S21, THM-5126, HYP-9658 and `05-knowledge/results/kps_s21_two_adic_lines_20261110/` at the pre-audit checkpoints b576542d6c and 7035dd3c6e; found by the independent audit `05-knowledge/results/kps_s21_two_adic_lines_20261110/audit/AUDIT.md`) -- two known identities typed as new because they live in other coordinates, a wrong theorem cited for the substitution law, a negative statement wider than its search, and three note sentences that inferred coverage or density from a mean
+
+- **MAJOR (priority; audit M1).** THM-5126 (A) typed "new" the cut form of the tail offset,
+  `c0 = H(B) - W(O)`, `M = U_B(O)`. It is the star-closure law of Session216 (2026-11-07): `three-core/PROOF.md`
+  (3)-(4) gives `h - T + A 2^(b+1)` at `p = r = 0`, with `T` defined exactly as the crossed covers `delta'`;
+  `star/PROOF.md` section 6 gives "an unselected sink doubles alpha and fixes tau". It is restated in Session229
+  `dynamic/PROOF.md` (1), THM-4960 ("the path count is 2A + h - T"), Sessions 244-245 and THM-5122 (1). The startup
+  sweep opened this machine's own notes (after MISTAKE-750/751) and grepped `offset`, `ray`, `unit offset`; the
+  known form is written in the cut coordinates `(h, A, T)` and never uses those words. Repaired: (A) retyped KNOWN,
+  re-derived in rooted coordinates; new only the reading of `h - T` as the 2-adic offset of the fixed-root ray, its
+  parity and equality case, and `W(O) = H(B) - 1` as a seed criterion.
+- **MAJOR (priority; audit M2).** THM-5126 (C) typed the extension-mean law new "in this form". At `k = 1` it is
+  THM-4111 (4), (6) (`sum over S of H(T + x_S) = 2^(n-2)((n+3)H + F_1)`, `P_2 = (n-1)H + F_1`) and THM-4115 (5),
+  with the variance in THM-4115 (6). Repaired: `k = 1` KNOWN; new only the identity for every `k` and the bound
+  `P_j >= j! S(n, j)` with its equality case.
+- **MAJOR (wrong citation; audit M3).** The substitution law `H(K[M at x]) = sum_j c_j P_j(M)` was cited as
+  THM-2195, which is about arc-reversal distance and contains no statement about Hamiltonian paths. The law is
+  THM-3121 (4). The citation was written from a title in the frontier digest, not from the theorem file. Repaired
+  in the status, `related:` and (B1).
+- **MAJOR (scope; audit M4).** "2,016 of the 2,049 odd c <= 4097 have a seed of order <= 10; the least c without
+  one is 245" appeared in the THM status, README section 2 and the HYP title and (B) without the search scope
+  (unit sets of size 2-4 over bases of order nine; doubling vertices to order eight). The scope note was only in
+  PREREGISTRATION.md and the HYP status. The audit closed most of the gap (no unit set of size `>= 4` over a base of
+  order `<= 9`; doubling vertices of order nine add no `c` but lower `s0` on nine lines). Repaired: every negative
+  sentence carries its universe; doubling vertices of order ten are stated as unsearched; the `s0` table is
+  labelled as found, not minimal.
+- **MAJOR (overclaim; audit M5).** Three README sentences: (a) "if the mean is at least `2^m / C` the family cannot
+  cover an interval by itself" (false: a family whose values are `1, 3, ..., 2^(m+1) - 1` has mean `2^m`); (b) the
+  mean law as "the exact form of the observation that one-apex counts cover a positive proportion but not
+  everything" (it implies neither half; positive density is unproved); (c) "1 is a path count only as the empty
+  tournament" (false: every transitive tournament). Repaired as proposed by the audit; (c) retyped ANALOGY.
+- **MINOR (applied).** `7` not `8` trivial roots among the 336; `48` not `49` values with a doubling realiser
+  above the value 1; "eight points for c <= 257 above the order-nine range" was six for `129 < c <= 257`, one of
+  them inside the range; "THM-4888 (B)" was the wrong part (the tail formula is in its Setting; the ray is
+  THM-5085 (3)); the fans are not the only unit-offset one-apex roots (`A(u) = 0`); evenness of `W_ef` was credited
+  to THM-5122, which states positivity only; "three times" for "three or more times"; "the same statement" for a
+  consequence; "the first complete statement on an infinite arithmetic set" ignored the classical line `c = 1` and
+  the range `2^35` of THM-4875 (D); 19,002 counts pairs (base class, `O`), not class-vertex pairs; the certificates
+  of `below_rays.txt` could not be checked from the shipped files (now they carry witness tournaments); two stale
+  docstrings.
+- **Caught before the audit, by the session's own checks.** A table builder looped forever on the transitive
+  tournaments, whose vertices are trivially "doubling" with `c_2 = 0`; pre-registered P1 (growth of the number of
+  seeded lines) and P4 (`c = 33` at order nine) failed and are reported as failed; a hand evaluation `g(38) = 29`
+  (it is 25) put 25 instead of 29 in a list of one-apex misses and was caught by recomputation.
+  During the close-out rebase a conflict resolver aborted on an assertion (this ledger quotes merge markers in old
+  entries) and `git rebase --continue` recorded the markers; a grep for them before the push caught it, and the
+  local commit was amended. The MISTAKE number was moved from 753 to 754 after a concurrent session took 753.
+
+Lesson: an identity lives in every coordinate system the repository has used for its objects. Before typing a
+formula new, rewrite it in the other systems (here: rooted `(H, d, E, U)`, cut `(h, A, T, ...)`, ear
+`(Start, End, Q)`) and grep those forms and their words ("star closure", "2A + h - T", "uniform ear average"),
+not only the words of the present note. Cite a theorem for a law only after opening its file. A sentence of the
+form "no X of order <= n" must carry the search universe wherever it is repeated. A mean bounds members per unit;
+it never decides coverage, which is a collision question.

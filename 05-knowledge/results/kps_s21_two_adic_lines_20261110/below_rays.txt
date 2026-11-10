@@ -1,122 +1,122 @@
-# c s N certificate   (points 1 + c 2^s below the first ray, odd c <= 129)
+# c s N certificate   (points 1 + c 2^s below the first ray, odd c <= 129; witnesses: order and upper-triangle code)
 3 1 7 GAP (THM-1370)
-5 1 11 census
+5 1 11 census 5 209
 5 2 21 GAP (THM-1370)
-7 1 15 census
-7 2 29 census
-7 3 57 census
-7 4 113 census
-13 1 27 census
-13 2 53 census
-13 3 105 census
-13 4 209 census
-17 1 35 census
-19 1 39 census
-19 2 77 census
-19 3 153 census
-19 4 305 census
-19 5 609 census
-19 6 1217 census
-19 7 2433 census
-21 1 43 census
-21 2 85 census
-21 3 169 census
-23 1 47 census
-23 2 93 census
-23 3 185 census
-23 4 369 census
-25 1 51 census
-25 2 101 census
-27 1 55 census
-27 2 109 census
-27 3 217 census
-27 4 433 census
-27 5 865 census
-31 1 63 census
-33 1 67 census
-33 2 133 census
-33 3 265 census
-33 4 529 census
-33 5 1057 census
-35 1 71 census
-35 2 141 census
-35 3 281 census
-35 4 561 census
-39 1 79 census
-39 2 157 census
-41 1 83 census
-41 2 165 census
-41 3 329 census
-41 4 657 census
-41 5 1313 census
-43 1 87 census
-45 1 91 census
-45 2 181 census
-53 1 107 census
-53 2 213 census
-53 3 425 census
-53 4 849 census
-57 1 115 census
-59 1 119 census
-61 1 123 census
-63 1 127 census
-63 2 253 census
-63 3 505 census
-65 1 131 census
-65 2 261 census
-67 1 135 census
-67 2 269 census
-69 1 139 census
-69 2 277 census
-71 1 143 census
-71 2 285 census
-71 3 569 census
-71 4 1137 census
-71 5 2273 census
-73 1 147 census
-75 1 151 census
-75 2 301 census
-79 1 159 census
-79 2 317 census
-79 3 633 census
-79 4 1265 census
-83 1 167 census
-83 2 333 census
-83 3 665 census
-83 4 1329 census
-83 5 2657 census
-83 6 5313 product 3 1771
-85 1 171 census
-85 2 341 census
-87 1 175 census
-91 1 183 census
-97 1 195 census
-97 2 389 census
-97 3 777 census
-101 1 203 census
-101 2 405 census
-101 3 809 census
-103 1 207 census
-103 2 413 census
-103 3 825 census
-103 4 1649 census
-103 5 3297 census
-105 1 211 census
-105 2 421 census
-107 1 215 census
-107 2 429 census
-107 3 857 census
-107 4 1713 census
-107 5 3425 product 5 685
-113 1 227 census
-113 2 453 census
-113 3 905 census
-113 4 1809 census
-115 1 231 census
-117 1 235 census
-117 2 469 census
-119 1 239 census
-119 2 477 census
-121 1 243 census
-121 2 485 census
-121 3 969 census
+7 1 15 census 5 40
+7 2 29 census 6 8865
+7 3 57 census 7 1048728
+7 4 113 census 7 67874
+13 1 27 census 6 80
+13 2 53 census 7 428225
+13 3 105 census 7 346378
+13 4 209 census 8 25428500
+17 1 35 census 7 428034
+19 1 39 census 7 1081985
+19 2 77 census 7 131216
+19 3 153 census 7 1389893
+19 4 305 census 8 109618186
+19 5 609 census 8 38629574
+19 6 1217 census 9 9263231249
+19 7 2433 census 9 63919393557
+21 1 43 census 6 20748
+21 2 85 census 7 263176
+21 3 169 census 8 29630986
+23 1 47 census 7 263425
+23 2 93 census 7 262432
+23 3 185 census 8 309377
+23 4 369 census 8 172433554
+25 1 51 census 7 59458
+25 2 101 census 7 383046
+27 1 55 census 7 1089729
+27 2 109 census 7 33812
+27 3 217 census 8 20972072
+27 4 433 census 8 4214880
+27 5 865 census 9 67436992
+31 1 63 census 8 135528708
+33 1 67 census 7 57537
+33 2 133 census 7 1315120
+33 3 265 census 8 8389200
+33 4 529 census 8 139266380
+33 5 1057 census 9 11823776400
+35 1 71 census 7 267329
+35 2 141 census 7 1190162
+35 3 281 census 8 34243078
+35 4 561 census 8 22640
+39 1 79 census 7 196748
+39 2 157 census 7 699267
+41 1 83 census 7 1081876
+41 2 165 census 8 3146000
+41 3 329 census 8 5075331
+41 4 657 census 8 189084210
+41 5 1313 census 9 42958383107
+43 1 87 census 7 141384
+45 1 91 census 7 32944
+45 2 181 census 8 134480932
+53 1 107 census 8 4407426
+53 2 213 census 8 101213202
+53 3 425 census 8 168073489
+53 4 849 census 9 19595989026
+57 1 115 census 7 267298
+59 1 119 census 8 134226593
+61 1 123 census 7 1108050
+63 1 127 census 7 657682
+63 2 253 census 8 721414
+63 3 505 census 8 25442833
+65 1 131 census 7 1874194
+65 2 261 census 8 458900
+67 1 135 census 7 5168
+67 2 269 census 8 1048912
+69 1 139 census 7 149592
+69 2 277 census 8 12845636
+71 1 143 census 7 1092626
+71 2 285 census 8 46317706
+71 3 569 census 8 51127152
+71 4 1137 census 9 77952
+71 5 2273 census 9 10270057618
+73 1 147 census 7 466245
+75 1 151 census 7 380291
+75 2 301 census 8 426148
+79 1 159 census 7 5680
+79 2 317 census 8 336080
+79 3 633 census 8 96520905
+79 4 1265 census 9 43822158888
+83 1 167 census 8 25461000
+83 2 333 census 8 163930250
+83 3 665 census 9 68223296
+83 4 1329 census 9 4162980892
+83 5 2657 census 9 43512760936
+83 6 5313 product 3 1771 3 2 9 28062028440
+85 1 171 census 7 1776282
+85 2 341 census 8 172229728
+87 1 175 census 7 17976
+91 1 183 census 8 25469442
+97 1 195 census 8 134750881
+97 2 389 census 8 4212800
+97 3 777 census 9 3288401040
+101 1 203 census 8 25698826
+101 2 405 census 8 147093641
+101 3 809 census 9 1075995153
+103 1 207 census 8 7340300
+103 2 413 census 8 142900227
+103 3 825 census 9 27925975058
+103 4 1649 census 9 16215346449
+103 5 3297 census 9 31312460047
+105 1 211 census 8 101205012
+105 2 421 census 8 78947334
+107 1 215 census 8 460161
+107 2 429 census 8 23617
+107 3 857 census 9 5373076753
+107 4 1713 census 9 36308096082
+107 5 3425 product 5 685 4 34 9 807797258
+113 1 227 census 8 46413313
+113 2 453 census 8 145778435
+113 3 905 census 9 8667562656
+113 4 1809 census 9 16179679252
+115 1 231 census 8 34079040
+117 1 235 census 8 77095938
+117 2 469 census 8 143460420
+119 1 239 census 8 105169926
+119 2 477 census 8 54613507
+121 1 243 census 8 4194912
+121 2 485 census 8 75536913
+121 3 969 census 9 9805922594

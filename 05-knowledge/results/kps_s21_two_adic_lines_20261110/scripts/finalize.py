@@ -1,4 +1,4 @@
-"""finalize2.py - kind-pasteur-2026-11-10-S21. Line table from all seed sources:
+"""finalize.py - kind-pasteur-2026-11-10-S21. Line table from all seed sources:
   seeds_m.txt (direct runs, orders 2..9), dbl_m.txt (doubling vertices, orders 3..8), us_10.txt (unitsets.c on the
   order-9 classes: unit-offset roots of order 10 with root out-degree 2..4).
 Writes line_seeds.txt:  c s0 mechanism order code vertex H d E U

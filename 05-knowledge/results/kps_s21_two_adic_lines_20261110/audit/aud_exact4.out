@@ -1,0 +1,5 @@
+triples (orders 3..8): 406412; exact on the grid a,b <= 3: 20702; truly exact (no walk with 3 or 4 visits of x or y): 20702; grid-exact but not truly exact: 0 (by order: 3:0 4:0 5:0 6:0 7:0 8:0)
+
+real	0m10.264s
+user	0m0.015s
+sys	0m0.000s

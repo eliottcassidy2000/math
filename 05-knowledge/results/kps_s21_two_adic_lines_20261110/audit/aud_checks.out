@@ -1,0 +1,49 @@
+PASS T1 tail law H(L o y) = H + (U-d)C(y) + d(g(y)-1) + (d-E)eps(y); rays c0 + M 2^t, t = 1..5  | 8080 (L,v,y) triples (20 with L a single vertex); state from the definitions; all labelled n<=3, 75 random n=4..6
+PASS T1b DP counter agrees with literal DFS enumeration on every extension of order <= 8
+PASS T2a c0 = d - delta', M = H - E + delta' (delta' = crossed covers counted from the definition)  | 809 rooted tournaments: all labelled n<=4, 80 random n=5,6, 12 random n=7, every root
+PASS T2b cut form (1'): delta' = sum_{pairs of O} W_ef, M = sum_{y in O} U_B(y), c0 = H(B) - W(O)
+PASS T2c c0 is odd
+PASS T2d c0 <= H(B), with equality iff |O| <= 1
+PASS T2e W_ef is even and W_ef >= 2 H(B - e - f) > 0 for every pair
+  c=3 s0=2 tail order 4 root 3 outdeg 2 (H,d,E,U)=(5, 3, 1, 9) c0=1 M=6 ray points [13, 25, 49] ok
+  c=5 s0=3 tail order 6 root 2 outdeg 2 (H,d,E,U)=(15, 9, 3, 29) c0=1 M=20 ray points [41, 81, 161] ok
+  c=7 s0=5 tail order 8 root 2 outdeg 2 (H,d,E,U)=(99, 33, 19, 145) c0=1 M=112 ray points [225, 449, 897] ok
+  c=13 s0=5 tail order 9 root 2 outdeg 2 (H,d,E,U)=(183, 61, 35, 269) c0=1 M=208 ray points [417, 833, 1665] ok
+  c=57 s0=2 tail order 7 root 1 outdeg 2 (H,d,E,U)=(103, 29, 17, 143) c0=1 M=114 ray points [229, 457, 913] ok
+  c=69 s0=3 tail order 9 root 0 outdeg 2 (H,d,E,U)=(263, 53, 39, 329) c0=1 M=276 ray points [553, 1105, 2209] ok
+  c=395 s0=1 tail order 9 root 1 outdeg 2 (H,d,E,U)=(341, 105, 50, 500) c0=1 M=395 ray points [791, 1581, 3161] ok
+  c=461 s0=1 tail order 8 root 1 outdeg 2 (H,d,E,U)=(439, 83, 60, 544) c0=1 M=461 ray points [923, 1845, 3689] ok
+  c=555 s0=2 tail order 9 root 3 outdeg 3 (H,d,E,U)=(1005, 287, 181, 1397) c0=1 M=1110 ray points [2221, 4441, 8881] ok
+  c=873 s0=1 tail order 9 root 1 outdeg 2 (H,d,E,U)=(837, 135, 98, 1008) c0=1 M=873 ray points [1747, 3493, 6985] ok
+  c=1219 s0=2 tail order 9 root 0 outdeg 3 (H,d,E,U)=(2305, 453, 319, 2891) c0=1 M=2438 ray points [4877, 9753, 19505] ok
+  c=1411 s0=1 tail order 9 root 2 outdeg 3 (H,d,E,U)=(1335, 251, 174, 1662) c0=1 M=1411 ray points [2823, 5645, 11289] ok
+  c=1767 s0=1 tail order 9 root 4 outdeg 3 (H,d,E,U)=(1595, 445, 272, 2212) c0=1 M=1767 ray points [3535, 7069, 14137] ok
+  c=1935 s0=1 tail order 9 root 3 outdeg 3 (H,d,E,U)=(1741, 503, 308, 2438) c0=1 M=1935 ray points [3871, 7741, 15481] ok
+  c=9 s0=1 module order 6 x=2 H=19 K[TT_a at x], a=2,3,4: [37, 73, 145] ok
+  c=15 s0=1 module order 7 x=3 H=31 K[TT_a at x], a=2,3,4: [61, 121, 241] ok
+  c=51 s0=1 module order 8 x=6 H=103 K[TT_a at x], a=2,3,4: [205, 409, 817] ok
+  c=81 s0=1 module order 8 x=6 H=163 K[TT_a at x], a=2,3,4: [325, 649, 1297] ok
+  c=19 s0=8 tail order 10 root 9 outdeg 2 (H,d,E,U)=(2361, 345, 273, 2777) c0=1 M=2432 ray points [4865, 9729] ok
+  c=33 s0=6 tail order 10 root 9 outdeg 2 (H,d,E,U)=(889, 307, 139, 1363) c0=1 M=1056 ray points [2113, 4225] ok
+  c=71 s0=6 tail order 10 root 9 outdeg 3 (H,d,E,U)=(2175, 381, 283, 2653) c0=1 M=2272 ray points [4545, 9089] ok
+  c=79 s0=5 tail order 10 root 9 outdeg 2 (H,d,E,U)=(1235, 165, 135, 1429) c0=1 M=1264 ray points [2529, 5057] ok
+  c=83 s0=7 tail order 10 root 9 outdeg 2 (H,d,E,U)=(5219, 609, 515, 5921) c0=1 M=5312 ray points [10625, 21249] ok
+  c=97 s0=4 tail order 10 root 9 outdeg 2 (H,d,E,U)=(691, 181, 95, 957) c0=1 M=776 ray points [1553, 3105] ok
+  c=101 s0=4 tail order 10 root 9 outdeg 2 (H,d,E,U)=(727, 195, 113, 1003) c0=1 M=808 ray points [1617, 3233] ok
+  c=103 s0=6 tail order 10 root 9 outdeg 3 (H,d,E,U)=(3057, 745, 505, 4041) c0=1 M=3296 ray points [6593, 13185] ok
+  c=107 s0=6 tail order 10 root 9 outdeg 2 (H,d,E,U)=(3073, 757, 405, 4181) c0=1 M=3424 ray points [6849, 13697] ok
+  c=113 s0=5 tail order 10 root 9 outdeg 2 (H,d,E,U)=(1671, 361, 223, 2169) c0=1 M=1808 ray points [3617, 7233] ok
+  c=115 s0=2 tail order 10 root 9 outdeg 2 (H,d,E,U)=(165, 99, 33, 329) c0=1 M=230 ray points [461, 921] ok
+PASS T3 seeds c = 3, 5, 7, 13, ten random lines [57, 69, 395, 461, 555, 873, 1219, 1411, 1767, 1935], the module seeds [9, 15, 51, 81] and the eleven order-ten seeds: states, c0 = 1, M = c 2^(s0-1), literal ray points (DP and DFS)  | 76 literal counts
+PASS T4 (C) mean of H over all k-vertex extensions = k! 2^(1-k) sum_j C(k+1,j) 2^(-j) P_j, P_j from the definition  | 114 (k, T) cases: k=1 all n<=4 + 16 random n=5,6; k=2 all n<=3 + 6 random n=4; k=3 all n<=2 + 3 random n=3
+PASS T4b P_j >= j! S(n,j), equality for all j iff transitive; k = 1 sum >= 2^(2n-2) + 2^(n-1)
+PASS T5 (D) literal one-apex count of {v} o w = g(value of w, first letter most significant) = trajectory formula at m = value + 1 odd  | 510 words of length <= 8, DFS counts
+PASS T6 (E) the Camion construction gives a walk through x twice, y twice, every other vertex once, copies non-adjacent  | 17452 ordered pairs on cycles (all labelled n=3..5, 80 random n=6,7); 6724 pairs not both on cycles
+PASS T6b some walk visits x and y twice each iff both lie on cycles (literal count, all labelled n=3..5)
+PASS T7 mean of pi_T(x) over labelled tournaments = n! [t^n] ((2+t)/(2-t))^x = sum over odd-order permutations of 2^(psi-moved) x^cyc  | closed forms n <= 12, x = 1..5; permutation sum by brute force n <= 7
+PASS T7b E[P_j] = n! C(n-1,j-1) 2^(j-n) by brute force over all labelled tournaments, n <= 4
+ALL PASS
+
+real	0m10.774s
+user	0m0.031s
+sys	0m0.000s

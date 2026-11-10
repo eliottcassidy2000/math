@@ -1,6 +1,6 @@
-"""verify_s21.py - kind-pasteur-2026-11-10-S21. Exact checks for THM-5120 (forced interaction, the extension-mean
-identity, doubling vertices and the normal forms of one-apex counts). Pure Python, no dependencies.
-usage: python verify_s21.py            (about 3-5 minutes)
+"""verify_s21.py - kind-pasteur-2026-11-10-S21. Exact checks for THM-5126 (C)-(E) and (B1): the extension-mean
+identity, doubling vertices, the normal forms of one-apex counts, simultaneous doubling. Pure Python, no dependencies.
+usage: python verify_s21.py            (about 20 seconds)
 Every check prints PASS/FAIL with its universe; the script exits 1 on any failure.
 A deliberately wrong statement is tested at the end (negative control) and must FAIL.
 """

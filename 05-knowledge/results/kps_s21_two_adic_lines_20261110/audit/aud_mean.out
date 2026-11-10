@@ -1,0 +1,44 @@
+PASS (C) k=1, all 1 labelled tournaments of order n=1, 2 extensions counted literally
+PASS (C) k=1, all 2 labelled tournaments of order n=2, 8 extensions counted literally
+PASS (C) k=1, all 8 labelled tournaments of order n=3, 64 extensions counted literally
+PASS (C) k=1, all 64 labelled tournaments of order n=4, 1024 extensions counted literally
+PASS (C) k=1, all 1024 labelled tournaments of order n=5, 32768 extensions counted literally
+PASS (C) k=1, all 32768 labelled tournaments of order n=6, 2097152 extensions counted literally
+PASS (C) k=2, all 1 labelled tournaments of order n=1, 8 extensions counted literally
+PASS (C) k=2, all 2 labelled tournaments of order n=2, 64 extensions counted literally
+PASS (C) k=2, all 8 labelled tournaments of order n=3, 1024 extensions counted literally
+PASS (C) k=2, all 64 labelled tournaments of order n=4, 32768 extensions counted literally
+PASS (C) k=2, all 1024 labelled tournaments of order n=5, 2097152 extensions counted literally
+PASS (C) k=3, all 1 labelled tournaments of order n=1, 64 extensions counted literally
+PASS (C) k=3, all 2 labelled tournaments of order n=2, 1024 extensions counted literally
+PASS (C) k=3, all 8 labelled tournaments of order n=3, 32768 extensions counted literally
+PASS (C) k=3, all 64 labelled tournaments of order n=4, 2097152 extensions counted literally
+PASS (C) k=4, all 1 labelled tournaments of order n=1, 1024 extensions counted literally
+PASS (C) k=4, all 2 labelled tournaments of order n=2, 32768 extensions counted literally
+PASS (C) k=4, all 8 labelled tournaments of order n=3, 2097152 extensions counted literally
+PASS (C) k=5, all 1 labelled tournaments of order n=1, 32768 extensions counted literally
+PASS (C) k=5, all 2 labelled tournaments of order n=2, 2097152 extensions counted literally
+PASS (C) k=6, all 1 labelled tournaments of order n=1, 2097152 extensions counted literally
+PASS (C) k=3, n=5, code 432, 262144 extensions
+PASS (C) k=3, n=5, code 411, 262144 extensions
+PASS (C) k=3, n=5, code 720, 262144 extensions
+PASS (C) k=3, n=5, code 997, 262144 extensions
+PASS (C) k=3, n=5, code 946, 262144 extensions
+PASS (C) k=3, n=5, code 573, 262144 extensions
+PASS (C) k=2, n=6, code 17265, 8192 extensions
+PASS (C) k=2, n=6, code 31927, 8192 extensions
+PASS (C) k=2, n=6, code 16270, 8192 extensions
+PASS (C) k=2, n=6, code 23153, 8192 extensions
+PASS (C) k=2, n=6, code 2181, 8192 extensions
+PASS (C) k=2, n=6, code 19412, 8192 extensions
+PASS (C) k=2, n=6, code 7235, 8192 extensions
+PASS (C) k=2, n=6, code 29371, 8192 extensions
+PASS (C) k=2, n=6, code 10654, 8192 extensions
+PASS (C) k=2, n=6, code 16205, 8192 extensions
+PASS (C) k=2, n=6, code 27251, 8192 extensions
+PASS (C) k=2, n=6, code 22119, 8192 extensions
+MEAN ALL PASS
+
+real	0m40.984s
+user	0m0.015s
+sys	0m0.000s

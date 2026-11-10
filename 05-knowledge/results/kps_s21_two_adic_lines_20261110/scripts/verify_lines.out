@@ -1,5 +1,5 @@
 PASS (T) tail law  | 15570 (L, v, y) triples; all labelled orders <= 4, 60 random of orders 5-6
 PASS (L) line seeds: states and literal counts of the first three ray points  | 65 seeds with c <= 129
-PASS (B) every odd c <= 129 has a seed and a certificate for each point below its ray; the only GAP lines are (3,1) and (5,2)  | 121 points below rays
+PASS (B) every odd c <= 129 has a seed and a certificate for each point below its ray (witness tournaments recounted literally; products are order joins); the only GAP lines are (3,1) and (5,2)  | 121 points below rays
 PASS (G) gate: no ray through 7 or 21
 ALL PASS

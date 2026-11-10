@@ -1,0 +1,47 @@
+classes_1=1 A000568=1 mass_sum=1 two_pow=1 OK
+classes_2=1 A000568=1 mass_sum=2 two_pow=2 OK
+classes_3=2 A000568=2 mass_sum=8 two_pow=8 OK
+classes_4=4 A000568=4 mass_sum=64 two_pow=64 OK
+classes_5=12 A000568=12 mass_sum=1024 two_pow=1024 OK
+classes_6=56 A000568=56 mass_sum=32768 two_pow=32768 OK
+classes_7=456 A000568=456 mass_sum=2097152 two_pow=2097152 OK
+classes_8=6880 A000568=6880 mass_sum=268435456 two_pow=268435456 OK
+classes_9=191536 A000568=191536 mass_sum=68719476736 two_pow=68719476736 OK
+order=1 distinct_values=1 max_H=1 seven=0 twentyone=0
+base_order=1 root_order=2 unit_sets_by_size: 0:1 1:1
+order=2 distinct_values=1 max_H=1 seven=0 twentyone=0
+order=2 unit_offset_roots=2 with_d_eq_E=1 with_M_zero=1 outdeg: 0:1 1:1
+base_order=2 root_order=3 unit_sets_by_size: 0:1 1:2
+order=3 distinct_values=2 max_H=3 seven=0 twentyone=0
+order=3 unit_offset_roots=5 with_d_eq_E=4 with_M_zero=1 outdeg: 0:1 1:4
+base_order=3 root_order=4 unit_sets_by_size: 0:1 1:3 2:3
+order=3 doubling_vertices=6 with_c2_positive=3
+order=4 distinct_values=3 max_H=5 seven=0 twentyone=0
+order=4 unit_offset_roots=7 with_d_eq_E=5 with_M_zero=1 outdeg: 0:1 1:5 2:1
+base_order=4 root_order=5 unit_sets_by_size: 0:1 1:4 2:9
+order=4 doubling_vertices=12 with_c2_positive=8
+order=5 distinct_values=7 max_H=15 seven=0 twentyone=0
+order=5 unit_offset_roots=16 with_d_eq_E=7 with_M_zero=1 outdeg: 0:1 1:6 2:9
+base_order=5 root_order=6 unit_sets_by_size: 0:1 1:5 2:23
+order=5 doubling_vertices=23 with_c2_positive=18
+order=6 distinct_values=19 max_H=45 seven=0 twentyone=0
+order=6 unit_offset_roots=31 with_d_eq_E=12 with_M_zero=1 outdeg: 0:1 1:7 2:23
+base_order=6 root_order=7 unit_sets_by_size: 0:1 1:6 2:61
+order=6 doubling_vertices=50 with_c2_positive=44
+order=7 distinct_values=77 max_H=189 seven=0 twentyone=0
+order=7 unit_offset_roots=68 with_d_eq_E=25 with_M_zero=1 outdeg: 0:1 1:8 2:59
+base_order=7 root_order=8 unit_sets_by_size: 0:1 1:7 2:173 3:24
+order=7 doubling_vertices=122 with_c2_positive=115
+order=8 distinct_values=320 max_H=661 seven=0 twentyone=0
+order=8 unit_offset_roots=207 with_d_eq_E=62 with_M_zero=1 outdeg: 0:1 1:9 2:169 3:28
+base_order=8 root_order=9 unit_sets_by_size: 0:1 1:8 2:604 3:724
+order=8 doubling_vertices=324 with_c2_positive=316
+order=9 distinct_values=1520 max_H=3357 seven=0 twentyone=0
+order=9 unit_offset_roots=1333 with_d_eq_E=197 with_M_zero=1 outdeg: 0:1 1:10 2:586 3:736
+base_order=9 root_order=10 unit_sets_by_size: 0:1 1:9 2:2771 3:16231
+identity_checks_roots=1782476 (c0 = d - delta', M = H - E + delta', c0 odd, every root of every class of order 2..9)
+cut_form_checks=82771 (c0 = H(B) - W(O), M = U_B(O), delta' = W(O): every (B,O) with |B| <= 7, and every unit set found over |B| = 8, 9, on the literal L = B + v)
+module_law_literal_checks=195975
+doubling_flag_definition_vs_h2h3h4_test_differences=0
+two_module_triples=406412 exact=20702 additive_de0_be_ga_nonzero=0 E_violations(de>0 iff both on cycles)=0
+distinct_exact_tuples_order8=3477 distinct_exact_tuples_orders_3_to_8=3477

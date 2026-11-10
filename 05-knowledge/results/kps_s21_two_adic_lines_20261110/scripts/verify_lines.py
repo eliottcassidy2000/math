@@ -5,6 +5,8 @@
  (L) every seed of line_seeds.txt with c <= LIMIT: recompute (H,d,E,U) from the code, check c0 = 1 (tail seeds) and
      count H(L o 0^t) (tail) or H(K[TT_(t+1) at x]) (module) literally for t = 1,2,3 against 1 + c 2^s.
  (G) gate: no seed puts 7 or 21 on a ray.
+ (B) below_rays.txt: every point below a ray has a certificate; census witnesses and the factors of the two order
+     joins are recounted literally (witness tournaments from the audit's independent census).
 usage: python verify_lines.py [LIMIT=129]
 """
 import sys, os, itertools, random
@@ -148,7 +150,11 @@ def check_lines(limit):
         if line.startswith("#"): continue
         p=line.split(); c,sv,N=int(p[0]),int(p[1]),int(p[2]); seen[(c,sv)]=p[3]
         if N!=1+c*2**sv: okb=False
-        if p[3]=="product" and (int(p[4])*int(p[5])!=N or int(p[4])%2==0 or int(p[5])%2==0 or int(p[4]) in (1,7,21) or int(p[5]) in (1,7,21) or max(int(p[4]),int(p[5]))>=3357): okb=False
+        if p[3]=="census":
+            if H(decode(int(p[5]),int(p[4])))!=N: okb=False          # literal recount of the witness
+        if p[3]=="product":
+            a,b=int(p[4]),int(p[5])
+            if a*b!=N or H(decode(int(p[7]),int(p[6])))!=a or H(decode(int(p[9]),int(p[8])))!=b: okb=False
         if p[3]=="GAP" and N not in (7,21): okb=False
     s0s={}
     for line in open(fn):
@@ -159,7 +165,7 @@ def check_lines(limit):
         for sv in range(1,s0s[c]):
             if (c,sv) not in seen: okb=False
     gaps=sorted(k for k,v in seen.items() if v=="GAP")
-    report("(B) every odd c <= %d has a seed and a certificate for each point below its ray; the only GAP lines are (3,1) and (5,2)"%limit, okb and gaps==[(3,1),(5,2)], "%d points below rays"%len(seen))
+    report("(B) every odd c <= %d has a seed and a certificate for each point below its ray (witness tournaments recounted literally; products are order joins); the only GAP lines are (3,1) and (5,2)"%limit, okb and gaps==[(3,1),(5,2)], "%d points below rays"%len(seen))
     report("(G) gate: no ray through 7 or 21", gate)
 if __name__=="__main__":
     limit=int(sys.argv[1]) if len(sys.argv)>1 else 129

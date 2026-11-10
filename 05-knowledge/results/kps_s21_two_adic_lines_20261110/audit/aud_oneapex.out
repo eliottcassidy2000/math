@@ -1,0 +1,8 @@
+PASS (D) literal one-apex count = g(value) for all 8190 words of length <= 12
+PASS (D) G(m) = 1 + sum over the trajectory of 2 floor((o+1)/4) for odd m, literal G, all m <= 2^12 (4096 values)
+PASS (D) G(2x) = G(x), literal G
+odd numbers below 100 that are not one-apex counts (words of length <= 20): 7 13 21 29 35 41 43 49 55 57 59 67 71 75 77 83 89 93
+
+real	0m0.943s
+user	0m0.000s
+sys	0m0.000s

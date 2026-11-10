@@ -1,0 +1,54 @@
+PASS no tournament of order <= 9 has 7 or 21 Hamiltonian paths (complete class lists, own canonical forms)
+PASS every odd number below 200 other than 7 and 21 is a path count at order <= 8  | missing: [7, 21]
+PASS order <= 8 covers every odd value in [1, 609] except 7, 21 (THM-1370)
+     distinct values by order: {1: 1, 2: 1, 3: 2, 4: 3, 5: 7, 6: 19, 7: 77, 8: 320, 9: 1520} | max: {1: 1, 2: 1, 3: 3, 4: 5, 5: 15, 6: 45, 7: 189, 8: 661, 9: 3357}
+PASS 320 distinct values at order 8; 1,520 at order 9; maxima 661 and 3,357
+PASS the spectrum is monotone in the order (S_m subset of S_(m+1))
+     least odd number other than 7, 21 that is not a path count of order <= 9: 2883
+PASS unit-offset roots (class-vertex pairs) at orders 2..9 = 2, 5, 7, 16, 31, 68, 207, 1333  | [2, 5, 7, 16, 31, 68, 207, 1333]
+PASS 116 of the 336 unit-offset roots of order <= 8 have d = E; 197 of the 1,333 at order nine
+FAIL HYP-9658: '8 of the 336 are trivial (M = 0)'  | own count: 7 of the 336 (one per order 2..8); 8 of the 1,669 through order nine
+     out-degree of the root among unit-offset roots: {2: {0: 1, 1: 1}, 3: {0: 1, 1: 4}, 4: {0: 1, 1: 5, 2: 1}, 5: {0: 1, 1: 6, 2: 9}, 6: {0: 1, 1: 7, 2: 23}, 7: {0: 1, 1: 8, 2: 59}, 8: {0: 1, 1: 9, 2: 169, 3: 28}, 9: {0: 1, 1: 10, 2: 586, 3: 736}}
+PASS out-degree <= 2 up to order seven, out-degree 3 first at order eight
+PASS sets of (out-degree, M): direct root census = unit-set census at orders 8 and 9 (packet: 140 and 1,007 pairs)  | 140 and 1007 pairs
+     unit sets (base class, O) by root order and |O|: {2: {0: 1, 1: 1}, 3: {0: 1, 1: 2}, 4: {0: 1, 1: 3, 2: 3}, 5: {0: 1, 1: 4, 2: 9}, 6: {0: 1, 1: 5, 2: 23}, 7: {0: 1, 1: 6, 2: 61}, 8: {0: 1, 1: 7, 2: 173, 3: 24}, 9: {0: 1, 1: 8, 2: 604, 3: 724}, 10: {0: 1, 1: 9, 2: 2771, 3: 16231}}
+PASS order ten: 19,002 unit sets = 2,771 pairs + 16,231 triples, no set of size four
+PASS AUDIT EXTENSION: no unit set of size >= 4 over any base of order <= 9 (every O of every size was searched), so the order-ten census is complete  | unit sets of size >= 4: 0
+PASS odd c with a tail seed at order <= m, m = 2..8: 1, 1, 2, 3, 7, 24, 89  | [1, 1, 2, 3, 7, 24, 89]
+PASS odd c <= 63 without a tail seed at order <= 8: 9, 13, 19, 27, 33, 35, 41, 53, 59, 63  | [9, 13, 19, 27, 33, 35, 41, 53, 59, 63]
+PASS P2: 8 of the ten acquire a tail seed at order nine (9, 13, 27, 35, 41, 53, 59, 63); P3: c = 13; P4 fails: c = 33  | [9, 13, 27, 35, 41, 53, 59, 63]
+PASS P3 detail: a unit-offset root of order nine with (H,d,E,U) = (183,61,35,269), M = 208 = 13 * 16
+PASS P1 outcome: 636 odd c have a TAIL seed of order <= 9  | tail seeds of order <= 9: 636 odd c; tail <= 9 or module <= 8: 636 odd c; c with a module seed only: []
+PASS ratio 636 / 89 = 7.1  | 7.146
+PASS odd c <= 129 without a seed (tail <= 9 or module <= 8): 19, 33, 71, 79, 83, 97, 101, 103, 107, 113, 115  | [19, 33, 71, 79, 83, 97, 101, 103, 107, 113, 115]
+PASS Q1: all eleven acquire a seed at order ten, least s0 19:8 33:6 71:6 79:5 83:7 97:4 101:4 103:6 107:6 113:5 115:2  | {19: 8, 33: 6, 71: 6, 79: 5, 83: 7, 97: 4, 101: 4, 103: 6, 107: 6, 113: 5, 115: 2}
+PASS Q2/Q3 detail: unit sets with (H(B), M) = (345, 2432 = 19 * 128) and (307, 1056 = 33 * 32)
+PASS Q4: odd c <= 1025 with a seed rises from 377 to 510 of 513; the three without are 245, 853, 909  | 377 -> 510, missing [245, 853, 909]
+PASS 2,016 of the 2,049 odd c <= 4097 have a seed of order <= 10; the 33 without are the README's list (least 245)  | 2016; missing 33
+PASS 5,529 odd c have a seed in total (tail <= 10 or module <= 8)  | 5529
+PASS G1/G2: least s0 is 2 for c = 3 and 3 for c = 5 (no ray through 7 or 21)
+PASS line_seeds.txt: the set of c <= 4097 and every (least s0, order) agree with the own census  | 2016 lines
+PASS c <= 129: 61 tail seeds (order <= 10) and 4 module seeds (order <= 8)  | {'tail': 61, 'module': 4}
+PASS the s0 table of THM-5126 (B3) (65 entries, typed in from the theorem) = line_seeds.txt = own census
+PASS least s0 <= 8 for c <= 129, attained only at c = 19
+PASS below_rays.txt lists exactly the points (c, s), s < s0(c), odd c <= 129  | 121 points; sum of (s0 - 1) = 121
+PASS 121 points = 2 gaps + 117 census + 2 products  | {'GAP': 2, 'census': 117, 'product': 2}
+     5313 = 3 * 1771: witnesses of order 3 and 9 (H recounted: 3, 1771); order join of order 12 has H = 5313 (DP), 5313 (DFS)
+     3425 = 5 * 685: witnesses of order 4 and 9 (H recounted: 5, 685); order join of order 13 has H = 3425 (DP), 3425 (DFS)
+PASS every certificate of below_rays.txt holds: census values are path counts of order <= 9 (own witness recounted), products are order joins counted literally, gaps are 7 and 21  | 119 recounts; largest census value 3297
+PASS the two product points are indeed above the order-nine range (3,357)
+     README section 5: points below the rays for 129 < c <= 257: 108, of which above 3,357: 5 [(163, 5, 5217), (165, 5, 5281), (167, 5, 5345), (167, 6, 10689), (257, 4, 4113)]; not order-<=9 values: 6; c in (129,257] without a seed: [245]
+     weight-three rows c = 2^d + 1: (least s0, mechanism, order): {1: (2, 'tail', 4), 2: (3, 'tail', 6), 3: (1, 'module', 6), 4: (2, 'tail', 7), 5: (6, 'tail', 10), 6: (3, 'tail', 8), 7: (1, 'tail', 8), 8: (5, 'tail', 10), 9: (1, 'tail', 9), 10: (1, 'tail', 10), 11: (1, 'tail', 9), 12: (1, 'tail', 10)}
+PASS (B4): rows d <= 7 have seeds (c = 3, 5, 9, 17, 33, 65, 129 <= 129); d = 8 (c = 257) status  | c = 257: (5, 'tail', 10)
+FAIL 49 of the 320 values of order <= 8 have a doubling realiser (c_2 > 0) of order <= 8  | 48 values
+PASS N = 3 mod 4, N < 200 with a doubling realiser: 3, 19, 23, 31, 59, 75, 95, 99, 103, 111, 155, 163, 179, 191, 199  | [3, 19, 23, 31, 59, 75, 95, 99, 103, 111, 155, 163, 179, 191, 199]
+PASS 15 has no doubling realiser of order <= 8; 11 has none (forced by 21)
+PASS module seeds used for c <= 129: 9 (order 6), 15 (order 7), 51, 81 (order 8)
+PASS 3,477 distinct exact bilinear tuples (orders 3-8); none has de = 0 with be, ga != 0
+PASS positive controls: (3,-1,-1,1) [C_3[TT_a,TT_b,1]] and the fans are among the exact tuples
+PASS weight-three map: rows d <= 4 and d = 7 are complete (b <= 20 - d) from two-module tuples of order <= 8 alone  | complete rows: [1, 2, 3, 4, 7]; first misses: {5: [33793, 67585, 135169], 6: [4161, 66561, 133121], 8: [32897, 65793, 131585]}
+FAILURES: ["HYP-9658: '8 of the 336 are trivial (M = 0)'", '49 of the 320 values of order <= 8 have a doubling realiser (c_2 > 0) of order <= 8']
+
+real	0m1.629s
+user	0m0.015s
+sys	0m0.046s
