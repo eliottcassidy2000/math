@@ -1,0 +1,393 @@
+{
+  "contexts": [
+    {
+      "exponential_coefficients": {
+        "3": 1,
+        "12": 1
+      },
+      "kernel": {
+        "1": 3,
+        "2": 1
+      },
+      "minimal_characteristic_polynomial_descending": [
+        1,
+        -15,
+        36
+      ],
+      "name": "one_growing_C3_seed",
+      "terms_r_1_to_8": [
+        15,
+        153,
+        1755,
+        20817,
+        249075,
+        2986713,
+        35833995,
+        429988257
+      ],
+      "vertex_DP_controls": [
+        {
+          "H": 15,
+          "r": 1,
+          "vertices": 5
+        },
+        {
+          "H": 153,
+          "r": 2,
+          "vertices": 8
+        },
+        {
+          "H": 1755,
+          "r": 3,
+          "vertices": 11
+        }
+      ]
+    },
+    {
+      "exponential_coefficients": {
+        "1": 3,
+        "2": -2,
+        "4": 1
+      },
+      "kernel": {
+        "1,1": 3,
+        "1,2": 1,
+        "2,1": 1,
+        "2,2": 1
+      },
+      "minimal_characteristic_polynomial_descending": [
+        1,
+        -7,
+        14,
+        -8
+      ],
+      "name": "two_growing_singletons",
+      "terms_r_1_to_8": [
+        3,
+        11,
+        51,
+        227,
+        963,
+        3971,
+        16131,
+        65027
+      ],
+      "vertex_DP_controls": [
+        {
+          "H": 3,
+          "r": 1,
+          "vertices": 3
+        },
+        {
+          "H": 11,
+          "r": 2,
+          "vertices": 5
+        },
+        {
+          "H": 51,
+          "r": 3,
+          "vertices": 7
+        }
+      ]
+    },
+    {
+      "exponential_coefficients": {
+        "3": 3,
+        "6": -1,
+        "12": -1,
+        "24": 1
+      },
+      "kernel": {
+        "1,1": 3,
+        "1,2": 1,
+        "2,1": 1,
+        "2,2": 1
+      },
+      "minimal_characteristic_polynomial_descending": [
+        1,
+        -45,
+        630,
+        -3240,
+        5184
+      ],
+      "name": "two_growing_mixed",
+      "terms_r_1_to_8": [
+        15,
+        423,
+        11961,
+        309987,
+        7706745,
+        188072523,
+        4550366241,
+        109643672547
+      ],
+      "vertex_DP_controls": [
+        {
+          "H": 15,
+          "r": 1,
+          "vertices": 5
+        },
+        {
+          "H": 423,
+          "r": 2,
+          "vertices": 9
+        },
+        {
+          "H": 11961,
+          "r": 3,
+          "vertices": 13
+        }
+      ]
+    }
+  ],
+  "convention": "r>=1; counted objects are literal directed paths",
+  "cyclic_hostile": [
+    {
+      "H": 3,
+      "factorial_floor": 3,
+      "r": 1
+    },
+    {
+      "H": 45,
+      "factorial_floor": 24,
+      "r": 2
+    },
+    {
+      "H": 2721,
+      "factorial_floor": 648,
+      "r": 3
+    },
+    {
+      "H": 421425,
+      "factorial_floor": 41472,
+      "r": 4
+    }
+  ],
+  "one_apex": {
+    "direct_support_through_511_first_misses": [
+      7,
+      13,
+      21,
+      29,
+      35,
+      41,
+      43,
+      49,
+      55,
+      57,
+      59,
+      67,
+      71,
+      75,
+      77,
+      83,
+      89,
+      93,
+      101,
+      105
+    ],
+    "direct_support_through_511_size": 145,
+    "fibers": [
+      {
+        "H": 1,
+        "capped_states": 5,
+        "counts_n_0_to_10": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "fiber_denominator": "(1-z)^2",
+        "fiber_numerator": {
+          "0": 1
+        }
+      },
+      {
+        "H": 3,
+        "capped_states": 8,
+        "counts_n_0_to_10": [
+          0,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "fiber_denominator": "(1-z)^2",
+        "fiber_numerator": {
+          "2": 1
+        }
+      },
+      {
+        "H": 5,
+        "capped_states": 12,
+        "counts_n_0_to_10": [
+          0,
+          0,
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16
+        ],
+        "fiber_denominator": "(1-z)^2",
+        "fiber_numerator": {
+          "3": 2
+        }
+      },
+      {
+        "H": 9,
+        "capped_states": 17,
+        "counts_n_0_to_10": [
+          0,
+          0,
+          0,
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21
+        ],
+        "fiber_denominator": "(1-z)^2",
+        "fiber_numerator": {
+          "4": 3
+        }
+      },
+      {
+        "H": 11,
+        "capped_states": 21,
+        "counts_n_0_to_10": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "fiber_denominator": "(1-z)^2",
+        "fiber_numerator": {
+          "4": 1
+        }
+      },
+      {
+        "H": 13,
+        "capped_states": 22,
+        "counts_n_0_to_10": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fiber_denominator": "(1-z)^2",
+        "fiber_numerator": {}
+      },
+      {
+        "H": 15,
+        "capped_states": 25,
+        "counts_n_0_to_10": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12
+        ],
+        "fiber_denominator": "(1-z)^2",
+        "fiber_numerator": {
+          "5": 2
+        }
+      },
+      {
+        "H": 21,
+        "capped_states": 35,
+        "counts_n_0_to_10": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fiber_denominator": "(1-z)^2",
+        "fiber_numerator": {}
+      },
+      {
+        "H": 25,
+        "capped_states": 42,
+        "counts_n_0_to_10": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "fiber_denominator": "(1-z)^2",
+        "fiber_numerator": {
+          "6": 1
+        }
+      }
+    ],
+    "literal_controls": 127,
+    "periodic_10_GF": "(1-3z)/((1-4z)(1-z)^2)",
+    "periodic_10_terms_r_0_to_9": [
+      1,
+      3,
+      9,
+      31,
+      117,
+      459,
+      1825,
+      7287,
+      29133,
+      116515
+    ]
+  },
+  "status": "All new-formula controls passed; no all-odd support claim."
+}

@@ -1,0 +1,15 @@
+PASS: cycle-count variable specializations u=2 (all), u=3 (core), through n=12/order=2.
+FINITE-EXACT: all layers 0..3, degrees 0..18, agree with independent odd partitions.
+PASS: closed first/second Lambert formulas; base q=1; positivity; factorial integrality.
+PASS: odd-core-only specialization through n=12, order=2.
+Compiler wall seconds (environment-specific): 0.054
+A000568 through tested horizon: 1, 1, 1, 2, 4, 12, 56, 456, 6880, 191536, 9733056, 903753248, 154108311168, 48542114686912, 28401423719122304, 31021002160355166848, 63530415842308265100288, 244912778438520759443245824, 1783398846284777975419600287232
+n! [x^n s^0] A(x,1+s), n=0..12: 1, 1, 1, 3, 9, 45, 225, 1575, 11025, 99225, 893025, 9823275, 108056025
+n! [x^n s^1] A(x,1+s), n=0..12: 0, 0, 1, 5, 22, 138, 927, 7431, 57564, 575892, 6004845, 71670825, 872229330
+n! [x^n s^2] A(x,1+s), n=0..12: 0, 0, 0, 3, 23, 189, 1777, 17140, 152538, 1686222, 20547054, 265414689, 3565567881
+n! [x^n s^3] A(x,1+s), n=0..12: 0, 0, 0, 1, 20, 200, 2399, 28440, 309452, 3810500, 52610014, 728325423, 10680749664
+[x^n s^1] log A(x,1+s), n=0..9: 0, 0, 1/2, 1/3, 1/3, 2/5, 11/30, 3/7, 22/105, 4/9
+[x^n s^2] log A(x,1+s), n=0..9: 0, 0, 0, 1/2, 1/3, 7/10, 9/10, 352/315, 22/35, 131/105
+[x^n s^3] log A(x,1+s), n=0..9: 0, 0, 0, 1/6, 2/3, 2/3, 74/45, 668/315, 646/315, 178/63
+HOSTILE: order-3 Taylor lower bound first misses full A000568 at n=4: 37/12 < 4.
+PASS: complete Taylor reconstruction of q=2 through n=4 (order 6).

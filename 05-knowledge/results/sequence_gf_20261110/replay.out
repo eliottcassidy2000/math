@@ -1,0 +1,5 @@
+PASS: burnside/cluster_compiler.py (1470 output bytes)
+PASS: grammar/compiler.py (6432 output bytes)
+PASS: heat/compile_heat_covariance.py (2036 output bytes)
+PASS: rays/compile_rays.py (1216 output bytes)
+All four new-formula compilers passed. Prior tournament claims are inherited; Chan-Pak OPEN.

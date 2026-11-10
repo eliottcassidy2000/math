@@ -1,0 +1,340 @@
+{
+  "status": "FINITE-EXACT new formulas only; inherited theorem claims not re-audited",
+  "recurrence_controls": [
+    {
+      "y": "1",
+      "z": "1",
+      "checked_n": [
+        0,
+        40
+      ],
+      "prefix_0_through_10": [
+        "1",
+        "1",
+        "2",
+        "8",
+        "32",
+        "158",
+        "928",
+        "6350",
+        "49752",
+        "439670",
+        "4327904"
+      ]
+    },
+    {
+      "y": "1",
+      "z": "1/2",
+      "checked_n": [
+        0,
+        40
+      ],
+      "prefix_0_through_10": [
+        "1",
+        "1",
+        "2",
+        "25/4",
+        "25",
+        "1993/16",
+        "5955/8",
+        "332305/64",
+        "331321/8",
+        "95184241/256",
+        "474930245/128"
+      ]
+    },
+    {
+      "y": "1/4",
+      "z": "2/3",
+      "checked_n": [
+        0,
+        40
+      ],
+      "prefix_0_through_10": [
+        "1",
+        "1",
+        "2",
+        "166/27",
+        "664/27",
+        "29812/243",
+        "535328/729",
+        "11218396/2187",
+        "268769776/6561",
+        "7246159084/19683",
+        "8041371568/2187"
+      ]
+    },
+    {
+      "y": "0",
+      "z": "1",
+      "checked_n": [
+        0,
+        40
+      ],
+      "prefix_0_through_10": [
+        "1",
+        "1",
+        "2",
+        "6",
+        "24",
+        "120",
+        "720",
+        "5040",
+        "40320",
+        "362880",
+        "3628800"
+      ]
+    },
+    {
+      "y": "1",
+      "z": "0",
+      "checked_n": [
+        0,
+        40
+      ],
+      "prefix_0_through_10": [
+        "1",
+        "1",
+        "2",
+        "6",
+        "24",
+        "120",
+        "720",
+        "5040",
+        "40320",
+        "362880",
+        "3628800"
+      ]
+    },
+    {
+      "y": "2",
+      "z": "3",
+      "checked_n": [
+        0,
+        40
+      ],
+      "prefix_0_through_10": [
+        "1",
+        "1",
+        "2",
+        "114",
+        "456",
+        "4008",
+        "42192",
+        "349776",
+        "3352896",
+        "35712576",
+        "382786560"
+      ]
+    }
+  ],
+  "coherent_birth_energy_a_1_prefix_0_to_15": [
+    "1",
+    "1",
+    "1",
+    "13",
+    "49",
+    "361",
+    "3121",
+    "25621",
+    "296353",
+    "3176209",
+    "42700321",
+    "576245341",
+    "8817813841",
+    "142238316793",
+    "2465732073169",
+    "45790297278181"
+  ],
+  "coherent_birth_energy_a_1_over_4_prefix_0_to_15": [
+    "1",
+    "1",
+    "1",
+    "4",
+    "13",
+    "46",
+    "241",
+    "2417/2",
+    "7309",
+    "48448",
+    "344341",
+    "5451437/2",
+    "22777591",
+    "413456903/2",
+    "1987326433",
+    "81341770969/4"
+  ],
+  "covariance_polynomials": {
+    "0": {
+      "y^0 z^0": 1
+    },
+    "1": {
+      "y^0 z^0": 1
+    },
+    "2": {
+      "y^0 z^0": 2
+    },
+    "3": {
+      "y^0 z^0": 6,
+      "y^1 z^3": 2
+    },
+    "4": {
+      "y^0 z^0": 24,
+      "y^1 z^3": 8
+    },
+    "5": {
+      "y^0 z^0": 120,
+      "y^1 z^3": 36,
+      "y^2 z^5": 2
+    },
+    "6": {
+      "y^0 z^0": 720,
+      "y^1 z^3": 192,
+      "y^2 z^5": 8,
+      "y^2 z^6": 8
+    },
+    "7": {
+      "y^0 z^0": 5040,
+      "y^1 z^3": 1200,
+      "y^2 z^5": 36,
+      "y^2 z^6": 72,
+      "y^3 z^7": 2
+    },
+    "8": {
+      "y^0 z^0": 40320,
+      "y^1 z^3": 8640,
+      "y^2 z^5": 192,
+      "y^2 z^6": 576,
+      "y^3 z^7": 8,
+      "y^3 z^8": 16
+    },
+    "9": {
+      "y^0 z^0": 362880,
+      "y^1 z^3": 70560,
+      "y^2 z^5": 1200,
+      "y^2 z^6": 4800,
+      "y^3 z^7": 36,
+      "y^3 z^8": 144,
+      "y^3 z^9": 48,
+      "y^4 z^9": 2
+    },
+    "10": {
+      "y^0 z^0": 3628800,
+      "y^1 z^3": 645120,
+      "y^2 z^5": 8640,
+      "y^2 z^6": 43200,
+      "y^3 z^7": 192,
+      "y^3 z^8": 1152,
+      "y^3 z^9": 768,
+      "y^4 z^9": 8,
+      "y^4 z^10": 24
+    }
+  },
+  "direct_controls": [
+    {
+      "n": 2,
+      "labelled_universe": 2,
+      "histogram": {
+        "1": 2
+      },
+      "moments_H_0_through_4": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "normalized_centered_third_moment": "0",
+      "walsh_covariance_formula_matches": true,
+      "binomial_support_inversion_matches": true,
+      "odd_lower_even_upper_Bonferroni_checks": 4
+    },
+    {
+      "n": 3,
+      "labelled_universe": 8,
+      "histogram": {
+        "1": 6,
+        "3": 2
+      },
+      "moments_H_0_through_4": [
+        "1",
+        "3/2",
+        "3",
+        "15/2",
+        "21"
+      ],
+      "normalized_centered_third_moment": "2/9",
+      "walsh_covariance_formula_matches": true,
+      "binomial_support_inversion_matches": true,
+      "odd_lower_even_upper_Bonferroni_checks": 12
+    },
+    {
+      "n": 4,
+      "labelled_universe": 64,
+      "histogram": {
+        "1": 24,
+        "3": 16,
+        "5": 24
+      },
+      "moments_H_0_through_4": [
+        "1",
+        "3",
+        "12",
+        "54",
+        "255"
+      ],
+      "normalized_centered_third_moment": "0",
+      "walsh_covariance_formula_matches": true,
+      "binomial_support_inversion_matches": true,
+      "odd_lower_even_upper_Bonferroni_checks": 65
+    },
+    {
+      "n": 5,
+      "labelled_universe": 1024,
+      "histogram": {
+        "1": 120,
+        "3": 120,
+        "5": 240,
+        "9": 240,
+        "11": 120,
+        "13": 120,
+        "15": 64
+      },
+      "moments_H_0_through_4": [
+        "1",
+        "15/2",
+        "1185/16",
+        "13245/16",
+        "79365/8"
+      ],
+      "normalized_centered_third_moment": "11/900",
+      "walsh_covariance_formula_matches": true,
+      "binomial_support_inversion_matches": true,
+      "odd_lower_even_upper_Bonferroni_checks": 353
+    }
+  ],
+  "C3_connected_kernel_coefficients_by_vertex_size": {
+    "2": {},
+    "3": {
+      "t1^0 t2^2 t3^2": "2",
+      "t1^2 t2^0 t3^2": "2",
+      "t1^2 t2^2 t3^0": "2",
+      "t1^2 t2^2 t3^2": "8"
+    },
+    "4": {
+      "t1^2 t2^2 t3^2": "-8"
+    },
+    "5": {
+      "t1^0 t2^4 t3^4": "2",
+      "t1^2 t2^2 t3^4": "8",
+      "t1^2 t2^4 t3^2": "8",
+      "t1^2 t2^4 t3^4": "8",
+      "t1^4 t2^0 t3^4": "2",
+      "t1^4 t2^2 t3^2": "8",
+      "t1^4 t2^2 t3^4": "8",
+      "t1^4 t2^4 t3^0": "2",
+      "t1^4 t2^4 t3^2": "8",
+      "t1^4 t2^4 t3^4": "32"
+    }
+  }
+}
