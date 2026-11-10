@@ -1,0 +1,236 @@
+{
+  "status": "PASS",
+  "programs": 6,
+  "executions": 24,
+  "scope": "Six producer/audit programs; inherited all-order exclusion and vertex-transitive certificates not rerun",
+  "rows": [
+    {
+      "program": "05-knowledge/results/session238_planar_chanpak_20261110/cyclic_cost/check.py",
+      "runs": [
+        {
+          "optimized": false,
+          "injected_failure": false,
+          "returncode": 0,
+          "seconds": 0.332,
+          "stdout_sha256": "0e8e0fca797df4a761a30801e08247c78287a7fb16667e97b4e8a6e79a94aa73",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "optimized": false,
+          "injected_failure": true,
+          "returncode": 1,
+          "seconds": 0.286,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "06a018e72fa75dad482e0f868822c38e4415de16599abfbfc9ccebbaf1478d6b"
+        },
+        {
+          "optimized": true,
+          "injected_failure": false,
+          "returncode": 0,
+          "seconds": 0.379,
+          "stdout_sha256": "0e8e0fca797df4a761a30801e08247c78287a7fb16667e97b4e8a6e79a94aa73",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "optimized": true,
+          "injected_failure": true,
+          "returncode": 1,
+          "seconds": 0.351,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "06a018e72fa75dad482e0f868822c38e4415de16599abfbfc9ccebbaf1478d6b"
+        }
+      ],
+      "normal_optimized_match": true
+    },
+    {
+      "program": "05-knowledge/results/session238_planar_chanpak_20261110/cyclic_cost_audit/check.py",
+      "runs": [
+        {
+          "optimized": false,
+          "injected_failure": false,
+          "returncode": 0,
+          "seconds": 0.264,
+          "stdout_sha256": "a1adcaca42dd1e899418907ccd9f9be563318910568ad15d82a1095d32289b5b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "optimized": false,
+          "injected_failure": true,
+          "returncode": 1,
+          "seconds": 0.207,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "c6e2f403b2dd3d00b56b5b899beac56b05a9030ce8d24cafa5771bd2e4bee7f8"
+        },
+        {
+          "optimized": true,
+          "injected_failure": false,
+          "returncode": 0,
+          "seconds": 0.306,
+          "stdout_sha256": "a1adcaca42dd1e899418907ccd9f9be563318910568ad15d82a1095d32289b5b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "optimized": true,
+          "injected_failure": true,
+          "returncode": 1,
+          "seconds": 0.254,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "c6e2f403b2dd3d00b56b5b899beac56b05a9030ce8d24cafa5771bd2e4bee7f8"
+        }
+      ],
+      "normal_optimized_match": true
+    },
+    {
+      "program": "04-computation/experiments/session238_graph_groups/verify.py",
+      "runs": [
+        {
+          "optimized": false,
+          "injected_failure": false,
+          "returncode": 0,
+          "seconds": 0.254,
+          "stdout_sha256": "60bac46990fd563895a8c641693576dceea3d40ad54efac6ef419bb437833322",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "optimized": false,
+          "injected_failure": true,
+          "returncode": 1,
+          "seconds": 0.021,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "19e35261cfad41512250207b7703967f38ad1a9b45c136a0023f9f84c5041d75"
+        },
+        {
+          "optimized": true,
+          "injected_failure": false,
+          "returncode": 0,
+          "seconds": 0.281,
+          "stdout_sha256": "60bac46990fd563895a8c641693576dceea3d40ad54efac6ef419bb437833322",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "optimized": true,
+          "injected_failure": true,
+          "returncode": 1,
+          "seconds": 0.059,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "19e35261cfad41512250207b7703967f38ad1a9b45c136a0023f9f84c5041d75"
+        }
+      ],
+      "normal_optimized_match": true
+    },
+    {
+      "program": "05-knowledge/results/session238_planar_chanpak_20261110/graph_groups_audit/check.py",
+      "runs": [
+        {
+          "optimized": false,
+          "injected_failure": false,
+          "returncode": 0,
+          "seconds": 3.25,
+          "stdout_sha256": "f7eca792a4b1f301078115be71108229662b4873ba1703a94bc22d43b3d67eac",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "optimized": false,
+          "injected_failure": true,
+          "returncode": 1,
+          "seconds": 0.022,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "cf65e59010f0a3d60fbedd50ab66585a33d4a99de4b652e539a3e9050437d8d2"
+        },
+        {
+          "optimized": true,
+          "injected_failure": false,
+          "returncode": 0,
+          "seconds": 3.357,
+          "stdout_sha256": "f7eca792a4b1f301078115be71108229662b4873ba1703a94bc22d43b3d67eac",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "optimized": true,
+          "injected_failure": true,
+          "returncode": 1,
+          "seconds": 0.066,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "cf65e59010f0a3d60fbedd50ab66585a33d4a99de4b652e539a3e9050437d8d2"
+        }
+      ],
+      "normal_optimized_match": true
+    },
+    {
+      "program": "05-knowledge/results/session238_planar_chanpak_20261110/planar_actions/verify.py",
+      "runs": [
+        {
+          "optimized": false,
+          "injected_failure": false,
+          "returncode": 0,
+          "seconds": 0.185,
+          "stdout_sha256": "cd6ae22d8c0d61c82281e77df61cf18eafb2ba920659063be6ee8e319262b15e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "optimized": false,
+          "injected_failure": true,
+          "returncode": 1,
+          "seconds": 0.192,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "ce1d8c43362de34f39ce8d8c8c05c98d9920cb4caa2a184d1f7e0657c22e9666"
+        },
+        {
+          "optimized": true,
+          "injected_failure": false,
+          "returncode": 0,
+          "seconds": 0.275,
+          "stdout_sha256": "cd6ae22d8c0d61c82281e77df61cf18eafb2ba920659063be6ee8e319262b15e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "optimized": true,
+          "injected_failure": true,
+          "returncode": 1,
+          "seconds": 0.235,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "ce1d8c43362de34f39ce8d8c8c05c98d9920cb4caa2a184d1f7e0657c22e9666"
+        }
+      ],
+      "normal_optimized_match": true
+    },
+    {
+      "program": "05-knowledge/results/session238_planar_chanpak_20261110/planar_actions_audit/verify.py",
+      "runs": [
+        {
+          "optimized": false,
+          "injected_failure": false,
+          "returncode": 0,
+          "seconds": 0.076,
+          "stdout_sha256": "bff44dab7053e79607db59d06cae2ecf444936168942b9324d32f573d57c7f0b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "optimized": false,
+          "injected_failure": true,
+          "returncode": 1,
+          "seconds": 0.086,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "f1d61474b8bcaab70651a3058ea25e8d84b63c900680b698d7e6c11b22a963e1"
+        },
+        {
+          "optimized": true,
+          "injected_failure": false,
+          "returncode": 0,
+          "seconds": 0.127,
+          "stdout_sha256": "bff44dab7053e79607db59d06cae2ecf444936168942b9324d32f573d57c7f0b",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "optimized": true,
+          "injected_failure": true,
+          "returncode": 1,
+          "seconds": 0.123,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "f1d61474b8bcaab70651a3058ea25e8d84b63c900680b698d7e6c11b22a963e1"
+        }
+      ],
+      "normal_optimized_match": true
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "profile_cases": 208,
+  "rows": [
+    {
+      "profile": [
+        3
+      ],
+      "cases": 2,
+      "minimum": 3,
+      "histogram": {
+        "3": 2
+      }
+    },
+    {
+      "profile": [
+        5
+      ],
+      "cases": 4,
+      "minimum": 15,
+      "histogram": {
+        "15": 4
+      }
+    },
+    {
+      "profile": [
+        7
+      ],
+      "cases": 8,
+      "minimum": 175,
+      "histogram": {
+        "175": 6,
+        "189": 2
+      }
+    },
+    {
+      "profile": [
+        9
+      ],
+      "cases": 16,
+      "minimum": 3159,
+      "histogram": {
+        "3159": 4,
+        "3267": 6,
+        "3357": 6
+      }
+    },
+    {
+      "profile": [
+        3,
+        3
+      ],
+      "cases": 32,
+      "equality_cases": 8
+    },
+    {
+      "profile": [
+        3,
+        1,
+        1
+      ],
+      "cases": 16,
+      "equality_cases": 12
+    },
+    {
+      "profile": [
+        5,
+        1
+      ],
+      "cases": 8,
+      "equality_cases": 8
+    },
+    {
+      "profile": [
+        3,
+        3,
+        1
+      ],
+      "cases": 128,
+      "equality_cases": 24
+    },
+    {
+      "profile": [
+        3,
+        5
+      ],
+      "cases": 16,
+      "equality_cases": 16
+    },
+    {
+      "profile": [
+        1,
+        1,
+        1
+      ],
+      "cases": 8,
+      "equality_cases": 6
+    }
+  ],
+  "scope": "DFS through order9; inherited vertex-transitive classification not rerun"
+}

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/tmp/math-wt-chanpak-s238-planar/05-knowledge/results/session238_planar_chanpak_20261110/cyclic_cost_audit/check.py", line 75, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/tmp/math-wt-chanpak-s238-planar/05-knowledge/results/session238_planar_chanpak_20261110/cyclic_cost_audit/check.py", line 48, in main
+    require(minima[3]==3 and minima[5]==15 and minima[7]==expected,'prime minima')
+  File "/tmp/math-wt-chanpak-s238-planar/05-knowledge/results/session238_planar_chanpak_20261110/cyclic_cost_audit/check.py", line 6, in require
+    if not x: raise RuntimeError(msg)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: prime minima

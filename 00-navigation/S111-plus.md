@@ -125,3 +125,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session235](S235.md): COMPLETE; audited reciprocal/empty decoders, full oriented census through six, exact all-order joint fibres and strong-core boundary. Chan-Pak tournament completeness remains OPEN.
 
 - [S236](S236.md): exact ternary orbit cones, sharp growth and all-word tower-ray rigidity; audited; Chan-Pak OPEN.
+
+- [S238](S238.md): audited planar-group inheritance, sharp cyclic orbit costs, equivariant cycle carriers and positive-word commutator barrier; Chan-Pak OPEN.

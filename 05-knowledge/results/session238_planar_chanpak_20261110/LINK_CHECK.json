@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "scope": "README, S238 and three new canon files; manifest created after this check",
+  "links": [
+    {
+      "source": "05-knowledge/results/session238_planar_chanpak_20261110/README.md",
+      "target": "../../../01-canon/theorems/THM-5094-cyclic-orbit-profile-cost-and-sharp-sevenfold-path-floor.md"
+    },
+    {
+      "source": "05-knowledge/results/session238_planar_chanpak_20261110/README.md",
+      "target": "cyclic_cost/PROOF.md"
+    },
+    {
+      "source": "05-knowledge/results/session238_planar_chanpak_20261110/README.md",
+      "target": "cyclic_cost_audit/AUDIT.md"
+    },
+    {
+      "source": "05-knowledge/results/session238_planar_chanpak_20261110/README.md",
+      "target": "../../../01-canon/theorems/THM-5095-equivariant-odd-group-cycle-carriers-and-exact-completion-count.md"
+    },
+    {
+      "source": "05-knowledge/results/session238_planar_chanpak_20261110/README.md",
+      "target": "graph_groups/PROOF.md"
+    },
+    {
+      "source": "05-knowledge/results/session238_planar_chanpak_20261110/README.md",
+      "target": "graph_groups_audit/AUDIT.md"
+    },
+    {
+      "source": "05-knowledge/results/session238_planar_chanpak_20261110/README.md",
+      "target": "../../../01-canon/theorems/THM-5096-planar-commutator-forbidden-orbits-and-positive-tail-word-decoder.md"
+    },
+    {
+      "source": "05-knowledge/results/session238_planar_chanpak_20261110/README.md",
+      "target": "planar_actions/PROOF.md"
+    },
+    {
+      "source": "05-knowledge/results/session238_planar_chanpak_20261110/README.md",
+      "target": "planar_actions_audit/AUDIT.md"
+    },
+    {
+      "source": "05-knowledge/results/session238_planar_chanpak_20261110/README.md",
+      "target": "provenance/INHERITANCE.md"
+    },
+    {
+      "source": "05-knowledge/results/session238_planar_chanpak_20261110/README.md",
+      "target": "REPRODUCE.md"
+    },
+    {
+      "source": "05-knowledge/results/session238_planar_chanpak_20261110/README.md",
+      "target": "REPLAY.json"
+    },
+    {
+      "source": "05-knowledge/results/session238_planar_chanpak_20261110/README.md",
+      "target": "SHA256SUMS"
+    },
+    {
+      "source": "00-navigation/S238.md",
+      "target": "../05-knowledge/results/session238_planar_chanpak_20261110/README.md"
+    },
+    {
+      "source": "00-navigation/S238.md",
+      "target": "../01-canon/theorems/THM-5094-cyclic-orbit-profile-cost-and-sharp-sevenfold-path-floor.md"
+    },
+    {
+      "source": "00-navigation/S238.md",
+      "target": "../01-canon/theorems/THM-5095-equivariant-odd-group-cycle-carriers-and-exact-completion-count.md"
+    },
+    {
+      "source": "00-navigation/S238.md",
+      "target": "../01-canon/theorems/THM-5096-planar-commutator-forbidden-orbits-and-positive-tail-word-decoder.md"
+    },
+    {
+      "source": "01-canon/theorems/THM-5096-planar-commutator-forbidden-orbits-and-positive-tail-word-decoder.md",
+      "target": "../../05-knowledge/results/session238_planar_chanpak_20261110/planar_actions/PROOF.md"
+    },
+    {
+      "source": "01-canon/theorems/THM-5096-planar-commutator-forbidden-orbits-and-positive-tail-word-decoder.md",
+      "target": "../../05-knowledge/results/session238_planar_chanpak_20261110/planar_actions_audit/AUDIT.md"
+    },
+    {
+      "source": "01-canon/theorems/THM-5095-equivariant-odd-group-cycle-carriers-and-exact-completion-count.md",
+      "target": "../../05-knowledge/results/session238_planar_chanpak_20261110/graph_groups/PROOF.md"
+    },
+    {
+      "source": "01-canon/theorems/THM-5095-equivariant-odd-group-cycle-carriers-and-exact-completion-count.md",
+      "target": "../../05-knowledge/results/session238_planar_chanpak_20261110/graph_groups_audit/AUDIT.md"
+    },
+    {
+      "source": "01-canon/theorems/THM-5094-cyclic-orbit-profile-cost-and-sharp-sevenfold-path-floor.md",
+      "target": "../../05-knowledge/results/session238_planar_chanpak_20261110/cyclic_cost/PROOF.md"
+    },
+    {
+      "source": "01-canon/theorems/THM-5094-cyclic-orbit-profile-cost-and-sharp-sevenfold-path-floor.md",
+      "target": "../../05-knowledge/results/session238_planar_chanpak_20261110/cyclic_cost_audit/AUDIT.md"
+    }
+  ]
+}

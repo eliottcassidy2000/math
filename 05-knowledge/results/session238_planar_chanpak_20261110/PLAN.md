@@ -1,6 +1,7 @@
 # Session238: recover planar-group mechanisms for Chan–Pak
 
-**Status: ACTIVE RESEARCH. No new theorem is claimed in this checkpoint.**
+**Historical initial plan. Session now complete; see [README](README.md).**
+No new theorem was claimed at the initial checkpoint.
 Base: `001b4aee22c8790879434dccbf22a20a63655e4c` (Session237).
 
 The user requested merging prior planar-group work into the continuing
