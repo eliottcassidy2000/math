@@ -1,0 +1,35 @@
+{
+  "status": "all assertions passed",
+  "random_join_examples": 80,
+  "seam_examples": 160,
+  "unit_seed_signature": [
+    3,
+    12,
+    2,
+    2,
+    6,
+    6,
+    2
+  ],
+  "inherited_unit_seed_ray": [
+    13,
+    25,
+    49
+  ],
+  "small_bank_signature_count": 57,
+  "prefix_2_suffix_3_padded_seed_signature": [
+    3,
+    384,
+    0,
+    0,
+    48,
+    24,
+    2
+  ],
+  "padding_core_and_padded_odd_slope": [
+    3,
+    3
+  ],
+  "positive_gap_seed_in_factors_orders_at_most_4": null,
+  "scope": "finite examples, not spectrum coverage or a canon audit"
+}

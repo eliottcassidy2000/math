@@ -1,0 +1,163 @@
+{
+  "arc_grades": {
+    "0": 1,
+    "1": 1,
+    "2": 4,
+    "3": 4,
+    "4": 4,
+    "5": 1,
+    "6": 1
+  },
+  "fixed": {
+    "transpose": 10,
+    "complement": 4,
+    "complement_transpose": 2
+  },
+  "klein_orbits": 8,
+  "rows": [
+    {
+      "mask": 0,
+      "arcs": 0,
+      "H": 0,
+      "transpose": 0,
+      "complement": 63,
+      "complement_transpose": 63,
+      "aut": 6
+    },
+    {
+      "mask": 1,
+      "arcs": 1,
+      "H": 0,
+      "transpose": 1,
+      "complement": 31,
+      "complement_transpose": 31,
+      "aut": 1
+    },
+    {
+      "mask": 3,
+      "arcs": 2,
+      "H": 0,
+      "transpose": 10,
+      "complement": 15,
+      "complement_transpose": 30,
+      "aut": 2
+    },
+    {
+      "mask": 5,
+      "arcs": 2,
+      "H": 0,
+      "transpose": 5,
+      "complement": 23,
+      "complement_transpose": 23,
+      "aut": 2
+    },
+    {
+      "mask": 6,
+      "arcs": 2,
+      "H": 1,
+      "transpose": 6,
+      "complement": 27,
+      "complement_transpose": 27,
+      "aut": 1
+    },
+    {
+      "mask": 7,
+      "arcs": 3,
+      "H": 1,
+      "transpose": 21,
+      "complement": 7,
+      "complement_transpose": 21,
+      "aut": 1
+    },
+    {
+      "mask": 10,
+      "arcs": 2,
+      "H": 0,
+      "transpose": 3,
+      "complement": 30,
+      "complement_transpose": 15,
+      "aut": 2
+    },
+    {
+      "mask": 11,
+      "arcs": 3,
+      "H": 1,
+      "transpose": 11,
+      "complement": 11,
+      "complement_transpose": 11,
+      "aut": 1
+    },
+    {
+      "mask": 15,
+      "arcs": 4,
+      "H": 2,
+      "transpose": 30,
+      "complement": 3,
+      "complement_transpose": 10,
+      "aut": 2
+    },
+    {
+      "mask": 21,
+      "arcs": 3,
+      "H": 1,
+      "transpose": 7,
+      "complement": 21,
+      "complement_transpose": 7,
+      "aut": 1
+    },
+    {
+      "mask": 23,
+      "arcs": 4,
+      "H": 2,
+      "transpose": 23,
+      "complement": 5,
+      "complement_transpose": 5,
+      "aut": 2
+    },
+    {
+      "mask": 25,
+      "arcs": 3,
+      "H": 3,
+      "transpose": 25,
+      "complement": 25,
+      "complement_transpose": 25,
+      "aut": 3
+    },
+    {
+      "mask": 27,
+      "arcs": 4,
+      "H": 3,
+      "transpose": 27,
+      "complement": 6,
+      "complement_transpose": 6,
+      "aut": 1
+    },
+    {
+      "mask": 30,
+      "arcs": 4,
+      "H": 2,
+      "transpose": 15,
+      "complement": 10,
+      "complement_transpose": 3,
+      "aut": 2
+    },
+    {
+      "mask": 31,
+      "arcs": 5,
+      "H": 4,
+      "transpose": 31,
+      "complement": 1,
+      "complement_transpose": 1,
+      "aut": 1
+    },
+    {
+      "mask": 63,
+      "arcs": 6,
+      "H": 6,
+      "transpose": 63,
+      "complement": 0,
+      "complement_transpose": 0,
+      "aut": 6
+    }
+  ]
+}
