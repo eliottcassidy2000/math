@@ -1,0 +1,7 @@
+{
+  "exact_word_count_cases": 24,
+  "literal_fixed_apex_kernel_cases": 2730,
+  "scope": "finite controls; universal count bound proved in RUN_BUDGET.md; inherited kernel credited",
+  "singleton_chain_vertices_deleted": 2070,
+  "status": "PASS"
+}

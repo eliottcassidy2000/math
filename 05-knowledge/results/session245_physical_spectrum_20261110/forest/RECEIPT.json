@@ -1,0 +1,192 @@
+{
+  "independent_DP_words": {
+    "1": 127,
+    "2": 1093,
+    "3": 341
+  },
+  "k_star_families": {
+    "1": {
+      "positive_run_coefficients": [
+        "1",
+        "1"
+      ],
+      "zero_run": 1
+    },
+    "2": {
+      "positive_run_coefficients": [
+        "-1",
+        "4",
+        "2"
+      ],
+      "zero_run": 5
+    },
+    "3": {
+      "positive_run_coefficients": [
+        "-3",
+        "5",
+        "20",
+        "6"
+      ],
+      "zero_run": 29
+    },
+    "4": {
+      "positive_run_coefficients": [
+        "3",
+        "-16",
+        "102",
+        "120",
+        "24"
+      ],
+      "zero_run": 233
+    }
+  },
+  "projector_checks": 27288,
+  "scalar_hostile": {
+    "H": 3,
+    "ordered_child_counts": [
+      [
+        3,
+        15,
+        5
+      ],
+      [
+        3,
+        9,
+        9
+      ]
+    ],
+    "words": [
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ]
+    ]
+  },
+  "status": "PROVED compiler and fixed-run spectral identity; FINITE-EXACT controls; all-target coverage OPEN",
+  "two_root_census": [
+    {
+      "contains_173": false,
+      "distinct": 1,
+      "first_allowed_miss": 3,
+      "leaves": 0,
+      "maximum": 1,
+      "orders": 2,
+      "words": 1
+    },
+    {
+      "contains_173": false,
+      "distinct": 2,
+      "first_allowed_miss": 5,
+      "leaves": 1,
+      "maximum": 3,
+      "orders": 3,
+      "words": 3
+    },
+    {
+      "contains_173": false,
+      "distinct": 3,
+      "first_allowed_miss": 9,
+      "leaves": 2,
+      "maximum": 5,
+      "orders": 4,
+      "words": 9
+    },
+    {
+      "contains_173": false,
+      "distinct": 7,
+      "first_allowed_miss": 17,
+      "leaves": 3,
+      "maximum": 15,
+      "orders": 5,
+      "words": 27
+    },
+    {
+      "contains_173": false,
+      "distinct": 16,
+      "first_allowed_miss": 35,
+      "leaves": 4,
+      "maximum": 37,
+      "orders": 6,
+      "words": 81
+    },
+    {
+      "contains_173": false,
+      "distinct": 47,
+      "first_allowed_miss": 61,
+      "leaves": 5,
+      "maximum": 111,
+      "orders": 7,
+      "words": 243
+    },
+    {
+      "contains_173": true,
+      "distinct": 138,
+      "first_allowed_miss": 125,
+      "leaves": 6,
+      "maximum": 325,
+      "orders": 8,
+      "words": 729
+    },
+    {
+      "contains_173": true,
+      "distinct": 407,
+      "first_allowed_miss": 125,
+      "leaves": 7,
+      "maximum": 999,
+      "orders": 9,
+      "words": 2187
+    },
+    {
+      "contains_173": true,
+      "distinct": 1179,
+      "first_allowed_miss": 1003,
+      "leaves": 8,
+      "maximum": 3085,
+      "orders": 10,
+      "words": 6561
+    },
+    {
+      "contains_173": true,
+      "distinct": 3481,
+      "first_allowed_miss": 1683,
+      "leaves": 9,
+      "maximum": 9639,
+      "orders": 11,
+      "words": 19683
+    },
+    {
+      "contains_173": true,
+      "distinct": 10283,
+      "first_allowed_miss": 3091,
+      "leaves": 10,
+      "maximum": 30061,
+      "orders": 12,
+      "words": 59049
+    }
+  ],
+  "two_star_family": "H(a)=2*3^a+2^(a+2)-1, a>=0",
+  "witness173": {
+    "outgoing_masks": [
+      198,
+      124,
+      248,
+      241,
+      225,
+      193,
+      128,
+      2
+    ],
+    "word": [
+      -1,
+      0,
+      0,
+      0,
+      -1,
+      1
+    ]
+  }
+}

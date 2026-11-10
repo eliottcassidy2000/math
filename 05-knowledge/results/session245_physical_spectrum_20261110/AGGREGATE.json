@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "hostile": "PASS",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "interfaces/verify.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "interfaces/verify_chain.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "forest/verify.py"
+    },
+    {
+      "hostile": "PASS",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "forest/verify_run_budget.py"
+    },
+    {
+      "hostile": "PASS",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "descent/verify.py"
+    },
+    {
+      "hostile": "not applicable",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "audit/independent.py"
+    }
+  ],
+  "scope": "exact finite replays; all-target Chan-Pak remains OPEN",
+  "status": "PASS"
+}

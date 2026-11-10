@@ -1,0 +1,360 @@
+{
+  "status": "PASS",
+  "target_inverse_cap": 5001,
+  "target_inverse_accepted": 120,
+  "mirror_norm_words": 511,
+  "binary_words": 8191,
+  "palindromes": 253,
+  "general_words": 1093,
+  "general_substitutions": 13116,
+  "literal_graphs": [
+    {
+      "middle": "ZZ",
+      "k": 0,
+      "count": 15,
+      "cycles": 1,
+      "rows": [
+        18,
+        60,
+        57,
+        49,
+        32,
+        1
+      ],
+      "root": 5
+    },
+    {
+      "middle": "ZZ",
+      "k": 1,
+      "count": 63,
+      "cycles": 1,
+      "rows": [
+        102,
+        252,
+        248,
+        241,
+        225,
+        192,
+        128,
+        1
+      ],
+      "root": 7
+    },
+    {
+      "middle": "ZOZ",
+      "k": 0,
+      "count": 31,
+      "cycles": 1,
+      "rows": [
+        42,
+        124,
+        121,
+        112,
+        97,
+        64,
+        1
+      ],
+      "root": 6
+    },
+    {
+      "middle": "ZOZ",
+      "k": 1,
+      "count": 127,
+      "cycles": 1,
+      "rows": [
+        214,
+        508,
+        504,
+        497,
+        480,
+        449,
+        384,
+        256,
+        1
+      ],
+      "root": 8
+    },
+    {
+      "middle": "ZZZ",
+      "k": 0,
+      "count": 27,
+      "cycles": 1,
+      "rows": [
+        34,
+        124,
+        121,
+        113,
+        97,
+        64,
+        1
+      ],
+      "root": 6
+    },
+    {
+      "middle": "ZZZ",
+      "k": 1,
+      "count": 123,
+      "cycles": 1,
+      "rows": [
+        198,
+        508,
+        504,
+        497,
+        481,
+        449,
+        384,
+        256,
+        1
+      ],
+      "root": 8
+    },
+    {
+      "middle": "ZOZOZ",
+      "k": 0,
+      "count": 117,
+      "cycles": 1,
+      "rows": [
+        170,
+        508,
+        505,
+        496,
+        481,
+        448,
+        385,
+        256,
+        1
+      ],
+      "root": 8
+    },
+    {
+      "middle": "ZOZOZ",
+      "k": 1,
+      "count": 501,
+      "cycles": 1,
+      "rows": [
+        854,
+        2044,
+        2040,
+        2033,
+        2016,
+        1985,
+        1920,
+        1793,
+        1536,
+        1024,
+        1
+      ],
+      "root": 10
+    },
+    {
+      "middle": "ZZOZZ",
+      "k": 0,
+      "count": 107,
+      "cycles": 1,
+      "rows": [
+        146,
+        508,
+        505,
+        497,
+        480,
+        449,
+        385,
+        256,
+        1
+      ],
+      "root": 8
+    },
+    {
+      "middle": "ZZOZZ",
+      "k": 1,
+      "count": 491,
+      "cycles": 1,
+      "rows": [
+        806,
+        2044,
+        2040,
+        2033,
+        2017,
+        1984,
+        1921,
+        1793,
+        1536,
+        1024,
+        1
+      ],
+      "root": 10
+    },
+    {
+      "middle": "ZZOJOOZ",
+      "k": 0,
+      "count": 305,
+      "cycles": 1,
+      "rows": [
+        2002,
+        2044,
+        2041,
+        2033,
+        2016,
+        705,
+        1920,
+        1792,
+        1568,
+        1024,
+        32
+      ],
+      "root": 10
+    },
+    {
+      "middle": "ZZOJOOZ",
+      "k": 1,
+      "count": 1325,
+      "cycles": 1,
+      "rows": [
+        8102,
+        8188,
+        8184,
+        8177,
+        8161,
+        8128,
+        3457,
+        7936,
+        7680,
+        7232,
+        6144,
+        4096,
+        64
+      ],
+      "root": 12
+    },
+    {
+      "middle": "ZZJOOOZ",
+      "k": 0,
+      "count": 399,
+      "cycles": 1,
+      "rows": [
+        2018,
+        2044,
+        2041,
+        2033,
+        737,
+        1984,
+        1920,
+        1792,
+        1552,
+        1024,
+        16
+      ],
+      "root": 10
+    },
+    {
+      "middle": "ZZJOOOZ",
+      "k": 1,
+      "count": 1707,
+      "cycles": 1,
+      "rows": [
+        8134,
+        8188,
+        8184,
+        8177,
+        8161,
+        3521,
+        8064,
+        7936,
+        7680,
+        7200,
+        6144,
+        4096,
+        32
+      ],
+      "root": 12
+    },
+    {
+      "middle": "ZZJJOOZ",
+      "k": 0,
+      "count": 377,
+      "cycles": 1,
+      "rows": [
+        2018,
+        2044,
+        2041,
+        2033,
+        1985,
+        720,
+        1920,
+        1792,
+        1568,
+        1024,
+        32
+      ],
+      "root": 10
+    },
+    {
+      "middle": "ZZJJOOZ",
+      "k": 1,
+      "count": 1637,
+      "cycles": 1,
+      "rows": [
+        8134,
+        8188,
+        8184,
+        8177,
+        8161,
+        8065,
+        3488,
+        7936,
+        7680,
+        7232,
+        6144,
+        4096,
+        64
+      ],
+      "root": 12
+    }
+  ],
+  "distinct_offsets_length_at_most_12": 120,
+  "selected_coefficients": {
+    "ZZ": [
+      16,
+      0,
+      -1
+    ],
+    "ZOZ": [
+      32,
+      0,
+      -1
+    ],
+    "ZZZ": [
+      32,
+      0,
+      -5
+    ],
+    "ZOZOZ": [
+      128,
+      0,
+      -11
+    ],
+    "ZZOZZ": [
+      128,
+      0,
+      -21
+    ],
+    "ZZOJOOZ": [
+      340,
+      0,
+      -35
+    ],
+    "ZZJOOOZ": [
+      436,
+      0,
+      -37
+    ],
+    "ZZJJOOZ": [
+      420,
+      0,
+      -43
+    ]
+  },
+  "mersenne_symbolic_evaluations": 2002,
+  "source_sha256": "85fd5cfa7bd8ec43b1567f5591318da40789fd0d2f10afe881a31bc138709da7",
+  "scope": "Universal identities are proved in PROOF.md; finite tests do not prove all-target coverage."
+}
