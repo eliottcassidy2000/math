@@ -1,0 +1,30 @@
+{
+  "deletion_cube_entry_checks": 8768,
+  "independence": "subset DP and Floyd reachability versus reviewed literal permutations and DFS reachability",
+  "labelled_three_root_graphs": 1096,
+  "reviewed_sha256": {
+    "JOINT_CORES.md": "0d154ef98bffd3ed5827c41c010167715130e06882b8fcc0f087d08adf8ad0a3",
+    "induction/check.py": "35caf2a3514f3cd094ce043464b7f41159e4dd3b1320f7598c88d764cd63dbd5",
+    "joint_check.py": "b00d3e6d4e728170b4a07059db8cb8a4b764cbb23be07ff077f7a5f4390b62ed"
+  },
+  "script_sha256": "d6d8e77c18ea07d5bb43170b9ce49564621f431b2d6657b5b389295194c1b92c",
+  "status": "PASS",
+  "strong_two_root_zero_determinant_hostile": {
+    "cube": [
+      15,
+      3,
+      5,
+      1
+    ],
+    "rows": [
+      16,
+      9,
+      3,
+      5,
+      14
+    ]
+  },
+  "three_root_marked_classes": 584,
+  "three_root_rational_series": 109,
+  "universe": "all labelled tournaments n3..5 with roots0,1,2; marked quotient fixes all three names"
+}

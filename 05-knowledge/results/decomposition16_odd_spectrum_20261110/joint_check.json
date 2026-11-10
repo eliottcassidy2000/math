@@ -1,0 +1,31 @@
+{
+  "joint_rational_series_checked": 38,
+  "labelled_graphs": 1098,
+  "padding_controls": 16,
+  "primitive_labelled_cubes": 1082,
+  "primitive_marked_classes_by_order": {
+    "2": 2,
+    "3": 8,
+    "4": 32,
+    "5": 168
+  },
+  "script_sha256": "b00d3e6d4e728170b4a07059db8cb8a4b764cbb23be07ff077f7a5f4390b62ed",
+  "status": "PASS",
+  "strong_rank_one_hostile": {
+    "deletion_cube": [
+      15,
+      3,
+      5,
+      1
+    ],
+    "order": 5,
+    "rows": [
+      16,
+      9,
+      3,
+      5,
+      14
+    ]
+  },
+  "universe": "all labelled tournaments n=2..5, two distinct fixed roots0,1"
+}

@@ -1,0 +1,101 @@
+{
+  "class_recounts": 263,
+  "count_method": "literal directed-word enumeration with no producer imports",
+  "input_status": "inherited independent audited complete strong inventory H<=375",
+  "missing_pairs": [
+    [
+      1,
+      7
+    ],
+    [
+      3,
+      11
+    ],
+    [
+      15,
+      47
+    ],
+    [
+      35,
+      107
+    ],
+    [
+      93,
+      281
+    ],
+    [
+      17,
+      55
+    ],
+    [
+      35,
+      109
+    ],
+    [
+      41,
+      127
+    ],
+    [
+      87,
+      265
+    ],
+    [
+      13,
+      27
+    ]
+  ],
+  "positive_controls": {
+    "3,13": {
+      "code": "276",
+      "order": 5,
+      "root": 2
+    },
+    "5,11": {
+      "code": "660",
+      "order": 5,
+      "root": 0
+    },
+    "5,13": {
+      "code": "276",
+      "order": 5,
+      "root": 0
+    },
+    "5,17": {
+      "code": "8737",
+      "order": 6,
+      "root": 1
+    },
+    "5,19": {
+      "code": "8740",
+      "order": 6,
+      "root": 5
+    }
+  },
+  "script_sha256": "896a7f28fa36a2edb01800fbf1d50ae375672d697fd87318812313a7154a3159",
+  "selected_strong_classes_by_child_count": {
+    "11": 1,
+    "13": 1,
+    "17": 2,
+    "19": 2,
+    "27": 5,
+    "29": 6,
+    "31": 4,
+    "35": 2,
+    "37": 7,
+    "41": 6,
+    "43": 4,
+    "47": 2,
+    "55": 4,
+    "107": 14,
+    "109": 26,
+    "127": 12,
+    "265": 73,
+    "281": 92
+  },
+  "source_sha256": {
+    "04-computation/experiments/h_spectrum_multiplicities_20261021/audit_S50/inventory_375.json": "2c66c872b7af50346624a367150a6fb094af916fa1397ef707f342a897a73bd3"
+  },
+  "status": "PASS",
+  "strong_order12_floor": 375,
+  "vertex_deletion_recounts": 2171
+}

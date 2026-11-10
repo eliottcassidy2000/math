@@ -1,0 +1,239 @@
+{
+  "SCC_factorization_checks": 3613,
+  "class_counts": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456
+  ],
+  "hamiltonian_frame_presentations_through6": 1100,
+  "hostile_13_to27": {
+    "matches": 0,
+    "possible_strong_core_orders": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "independent_path_count_checks": 532,
+  "inherited_not_rerun_window_census": {
+    "base_order_max": 10,
+    "both_branch_rows": 465,
+    "both_branches_h_interval": [
+      95,
+      1023
+    ],
+    "global_absence_cutoff": {
+      "f12": 375,
+      "largest_missing_N": 281
+    },
+    "h_max": 1023,
+    "missing_ternary_pairs": {
+      "2": [
+        [
+          3,
+          11
+        ],
+        [
+          15,
+          47
+        ],
+        [
+          35,
+          107
+        ],
+        [
+          93,
+          281
+        ]
+      ],
+      "4": [
+        [
+          1,
+          7
+        ],
+        [
+          17,
+          55
+        ],
+        [
+          35,
+          109
+        ],
+        [
+          41,
+          127
+        ],
+        [
+          87,
+          265
+        ]
+      ]
+    },
+    "positive_branch_pairs": 1011
+  },
+  "joint_series_pairs_checked": 614,
+  "marked_classes": 3403,
+  "order7_augmentations": 3584,
+  "script_sha256": "35caf2a3514f3cd094ce043464b7f41159e4dd3b1320f7598c88d764cd63dbd5",
+  "selected_strong_marked_polynomials": {
+    "1,3": {
+      "3": 1
+    },
+    "1,5": {
+      "4": 2
+    },
+    "11,35": {
+      "7": 2
+    },
+    "11,37": {
+      "6": 6,
+      "7": 2
+    },
+    "13,27": {},
+    "13,41": {
+      "7": 2
+    },
+    "13,43": {
+      "6": 4,
+      "7": 2
+    },
+    "3,11": {},
+    "3,13": {
+      "5": 2
+    },
+    "3,5": {
+      "4": 2
+    },
+    "5,11": {
+      "5": 4
+    },
+    "5,13": {
+      "5": 3
+    },
+    "5,17": {
+      "6": 2
+    },
+    "5,19": {
+      "6": 2
+    },
+    "9,29": {
+      "6": 10,
+      "7": 2
+    },
+    "9,31": {
+      "6": 4,
+      "7": 5
+    }
+  },
+  "small_ternary_branches_complete_all_orders": [
+    {
+      "N": 5,
+      "core_polynomial": {
+        "4": 2
+      },
+      "exists": true,
+      "h": 1
+    },
+    {
+      "N": 7,
+      "core_polynomial": {},
+      "exists": false,
+      "h": 1
+    },
+    {
+      "N": 11,
+      "core_polynomial": {},
+      "exists": false,
+      "h": 3
+    },
+    {
+      "N": 13,
+      "core_polynomial": {
+        "5": 2
+      },
+      "exists": true,
+      "h": 3
+    },
+    {
+      "N": 17,
+      "core_polynomial": {
+        "6": 2
+      },
+      "exists": true,
+      "h": 5
+    },
+    {
+      "N": 19,
+      "core_polynomial": {
+        "6": 2
+      },
+      "exists": true,
+      "h": 5
+    },
+    {
+      "N": 29,
+      "core_polynomial": {
+        "6": 10,
+        "7": 2
+      },
+      "exists": true,
+      "h": 9
+    },
+    {
+      "N": 31,
+      "core_polynomial": {
+        "6": 4,
+        "7": 5
+      },
+      "exists": true,
+      "h": 9
+    },
+    {
+      "N": 35,
+      "core_polynomial": {
+        "7": 2
+      },
+      "exists": true,
+      "h": 11
+    },
+    {
+      "N": 37,
+      "core_polynomial": {
+        "6": 6,
+        "7": 2
+      },
+      "exists": true,
+      "h": 11
+    },
+    {
+      "N": 41,
+      "core_polynomial": {
+        "7": 2
+      },
+      "exists": true,
+      "h": 13
+    },
+    {
+      "N": 43,
+      "core_polynomial": {
+        "6": 4,
+        "7": 2
+      },
+      "exists": true,
+      "h": 13
+    }
+  ],
+  "source_sha256": {
+    "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/n7_representatives.txt": "3989273b1634117975f2a88e3f11c36e5ae263812e5f071f26d549fb25b7edc1",
+    "05-knowledge/results/tilted_ensemble_local_limit_20261110/out/pA_le10.bin.gz": "926032001a533d2156f9992a8c4f2747f43212335cb8339f5166db970b9e3cfc"
+  },
+  "status": "PASS",
+  "universe": "all unlabelled tournament classes of orders0..7; marked classes use automorphism root orbits"
+}

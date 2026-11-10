@@ -24453,3 +24453,36 @@ exposure capacity, path covers) and read their displayed equations, instead of g
 to use. A pre-registration must list everything already computed at the registered order by anyone, the audit
 included; otherwise predictions that are functions of in-sample data are counted as confirmations. A model value
 ("exactly `2^(-m)`") must name its ensemble.
+
+## MISTAKE-756 (2026-11-10, codex-decomposition16-odd-spectrum, unpublished attachment compiler draft) -- uniform module contact was mistaken for one contiguous visit
+
+- **Refuted implication.** The first draft of
+  `05-knowledge/results/decomposition16_odd_spectrum_20261110/attachment/PROOF.md`
+  replaced a uniformly contacted triangle module by one vertex and multiplied
+  the resulting Hamilton count by3. The independent history audit caught the
+  mistake before publication or canon promotion.
+- **Literal witness.** Start with `0 -> C3(1,2,3) -> 4`, and add vertex5
+  beating0,1,2,3 and losing to4. Out-row masks are
+  `(30,20,24,18,32,15)`. The child has H27, while the collapsed quotient
+  `(6,4,8,3)` has H5. The Hamilton order `(1,2,4,5,0,3)` leaves and reenters
+  the triangle through the exterior. Uniform contact does not force a
+  module to occupy a single run when the quotient has a return route.
+- **Repair and strongest survivor.** Retaining the left/right binary cut
+  integers A,B and the ordered triangle path-cover contribution gives the
+  corrected all-order uniform formula U in that packet. Relative to three
+  times the collapsed count, the omitted term is exactly `6A(B+1)` for
+  one uniform direction, and `6B(A+1)` for the other. Equality holds
+  exactly when A=0 or B=0, respectively. Divisibility by3 survives by
+  the free triangle-rotation action. The independently derived mixed-cut
+  formula and the no-H3-parent-for-11 conclusion remain valid.
+- **Validation.** The independent
+  `history/ATTACHMENT_AUDIT.md` in the same packet checks all1,032 cuts
+  on the declared small source universe, all258 uniform cuts with their
+  exact correction, and136 literal permutation controls. The missing
+  sidecar is the exterior return route and ordered module-run data,
+  already required by the inherited nontransitive substitution kernel.
+
+Lesson: a module supplies identical external contacts, not path contiguity.
+Before replacing it by its scalar H, retain the quotient's possible returns
+and the module's ordered path-cover counts. Ordered joins are the scalar
+product case; cyclic quotients require the full substitution response.
