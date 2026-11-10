@@ -7,7 +7,7 @@
  (G) gate: no seed puts 7 or 21 on a ray.
 usage: python verify_lines.py [LIMIT=129]
 """
-import sys, itertools, random
+import sys, os, itertools, random
 FAILS=[]
 def report(name, ok, detail=""):
     print(("PASS " if ok else "FAIL ")+name+("  | "+detail if detail else ""))
@@ -29,25 +29,34 @@ def H(A):
                     dp[m|1<<u][u]+=c
     return sum(dp[(1<<n)-1])
 def sub(A,keep): return [[A[i][j] for j in keep] for i in keep]
+def start_count(B):
+    """number of Hamiltonian paths of B starting at vertex 0 (literal DP on the converse ending at 0)"""
+    k=len(B)
+    if k==1: return 1
+    inn=[sum(1<<u for u in range(k) if B[u][x]) for x in range(k)]
+    dp=[[0]*k for _ in range(1<<k)]
+    dp[1][0]=1
+    for m in range(1,1<<k):
+        if not m&1: continue
+        for x in range(k):
+            c=dp[m][x]
+            if c:
+                nx=sum(1<<u for u in range(k) if B[x][u])&~m
+                while nx:
+                    u=(nx&-nx).bit_length()-1; nx&=nx-1; dp[m|1<<u][u]+=c
+    return sum(dp[(1<<k)-1])
 def state(A,v):
-    n=len(A); h=H(A); d=H(sub(A,[i for i in range(n) if i!=v]))
-    # E: paths ending at v ; U: covers (P1 possibly empty, P2 starting at v) -- by literal enumeration over subsets
-    E=0; U=0
-    others=[i for i in range(n) if i!=v]
+    n=len(A); h=H(A); others=[i for i in range(n) if i!=v]; d=H(sub(A,others))
+    # E: Hamiltonian paths ending at v = paths of the converse starting at v
+    conv=[[A[j][i] for j in [v]+others] for i in [v]+others]
+    E=start_count(conv)
+    U=0
     for r in range(len(others)+1):
-        for X in itertools.combinations(others,r):          # X = vertex set of P1
-            Y=[v]+[i for i in others if i not in X]          # P2 lives on Y and starts at v
+        for X in itertools.combinations(others,r):          # X = vertex set of P1 (possibly empty)
             hx=H(sub(A,list(X)))
             if hx==0: continue
-            # number of Hamiltonian paths of A[Y] starting at v: add a source s -> v only trick avoided; count directly
-            k=len(Y); B=sub(A,Y); cnt=0
-            for p in itertools.permutations(range(1,k)):
-                seq=(0,)+p
-                if all(B[seq[i]][seq[i+1]] for i in range(k-1)): cnt+=1
-            U+=hx*cnt
-    for p in itertools.permutations(others):
-        seq=p+(v,)
-        if all(A[seq[i]][seq[i+1]] for i in range(n-1)): E+=1
+            Y=[v]+[i for i in others if i not in X]
+            U+=hx*start_count(sub(A,Y))
     return h,d,E,U
 def tail(A,v,y):
     n=len(A); t=len(y); N=n+t; B=[[0]*N for _ in range(N)]
@@ -113,7 +122,6 @@ def blow(A,x,a):
     return B
 def check_lines(limit):
     ok=True; gate=True; n=0
-    import os
     fn = "line_seeds.txt" if os.path.exists("line_seeds.txt") else os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "line_seeds.txt")
     for line in open(fn):
         if line.startswith("#"): continue
@@ -126,12 +134,32 @@ def check_lines(limit):
             if (h,d,E,U)!=tuple(map(int,p[6:10])) or h-E+2*d-U!=1 or (U-d)!=c*2**(s0-1): ok=False; continue
             for t in (1,2,3):
                 if m+t<=12 and H(tail(A,v,(0,)*t))!=1+c*2**(s0-1+t): ok=False
+            if m==10 and H(tail(A,v,(0,)*1))!=1+c*2**s0: ok=False
         else:
             h=H(A)
             for t in (1,2,3):
                 if m+t<=12 and H(blow(A,v,t+1))!=1+(h-1)*2**t: ok=False
             if (h-1)!=c*2**s0: ok=False
     report("(L) line seeds: states and literal counts of the first three ray points", ok, "%d seeds with c <= %d"%(n,limit))
+    # certificates below the rays: arithmetic of the product lines, and every odd c <= limit is present with all s < s0
+    bfn = "below_rays.txt" if os.path.exists("below_rays.txt") else os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "below_rays.txt")
+    okb=True; seen={}
+    for line in open(bfn):
+        if line.startswith("#"): continue
+        p=line.split(); c,sv,N=int(p[0]),int(p[1]),int(p[2]); seen[(c,sv)]=p[3]
+        if N!=1+c*2**sv: okb=False
+        if p[3]=="product" and (int(p[4])*int(p[5])!=N or int(p[4])%2==0 or int(p[5])%2==0 or int(p[4]) in (1,7,21) or int(p[5]) in (1,7,21) or max(int(p[4]),int(p[5]))>=3357): okb=False
+        if p[3]=="GAP" and N not in (7,21): okb=False
+    s0s={}
+    for line in open(fn):
+        if line.startswith("#"): continue
+        q=line.split(); s0s[int(q[0])]=int(q[1])
+    for c in range(1,limit+1,2):
+        if c not in s0s: okb=False; continue
+        for sv in range(1,s0s[c]):
+            if (c,sv) not in seen: okb=False
+    gaps=sorted(k for k,v in seen.items() if v=="GAP")
+    report("(B) every odd c <= %d has a seed and a certificate for each point below its ray; the only GAP lines are (3,1) and (5,2)"%limit, okb and gaps==[(3,1),(5,2)], "%d points below rays"%len(seen))
     report("(G) gate: no ray through 7 or 21", gate)
 if __name__=="__main__":
     limit=int(sys.argv[1]) if len(sys.argv)>1 else 129

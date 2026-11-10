@@ -1,7 +1,9 @@
 # The 2-adic lines of the Hamiltonian-path spectrum: unit-offset rays, the isolation of 7 and 21, and the extension-mean law
 
 **Session:** kind-pasteur-2026-11-10-S21. **Canon:** THM-5126, HYP-9658. **Status:** PROVED / FINITE-EXACT partial
-results, pre-registered order-nine test (2 of 4 predictions confirmed), independent audit in section 9.
+results; two pre-registered runs (order nine: 2 of 4 predictions confirmed; order ten: 4 of 4); independent audit
+in section 9. **Headline:** every odd `N > 1` whose `N - 1` has odd part at most 129 is a Hamiltonian-path count,
+except 7 and 21 (65 infinite lines; a set of density zero).
 **The Chan-Pak conjecture (every odd number other than 7 and 21 is a Hamiltonian-path count of a tournament) remains
 OPEN.** No coverage cutoff, density bound or completeness statement is claimed.
 
@@ -34,17 +36,22 @@ For a rooted tournament `(L, v)` let `d = H(L - v)`, `E` the number of Hamiltoni
 `delta'` the number of *crossed covers*: ordered pairs of nonempty disjoint paths `(P1, v P2')` covering `L`, with
 `P2'` nonempty and `v` beating the last vertex of `P1`. Then for `t >= 1`
 
-    H(L o 0^t) = c0 + M 2^t,     c0 = d - delta',     M = H - E + delta'.
+    H(L o 0^t) = c0 + M 2^t,     c0 = d - delta' = H(B) - W(O),     M = H - E + delta' = U_B(O),
 
-The law is known; the two identities are the new form. They say what the offset *is*: the path count of `L - v`
-minus the covers that cannot be merged through `v`. The offset is the 2-adic limit of the ray: the tournament with
-an infinite tail has a 2-adic path count, and it is an ordinary integer `<= H(L - v)`.
+with `B = L - v`, `O = N+(v)`, `W(O)` the sum over the pairs `{e, f}` of `O` of the two-path-cover coupling `W_ef`
+(the cut matrix of THM-4114 and THM-5122), and `U_B(O)` the sum of the responses `U_B(y)`, `y in O`.
+
+The law is known; the identities are the new form. They say what the offset *is*: the path count of the base minus
+the coupling energy of the out-neighbourhood. A ray is thus a pair (base, vertex set): its offset is a quadratic
+function of the set and its slope a linear one. The offset is the 2-adic limit of the ray: the tournament with an
+infinite tail has a 2-adic path count, and it is an ordinary odd integer `<= H(B)`.
 
 ## 2. Lines (THM-5126 (B))
 
 Every odd `N > 1` is `1 + c 2^s` for one odd `c`: it lies on the line `L_c`. Chan-Pak says that every line is in
 the spectrum except for one point on `L_3` and one on `L_5`. A root with `c0 = 1` (a *unit-offset root*) puts a
-whole ray of one line into the spectrum; so does a *doubling vertex* (a vertex `x` of `K` with `(H - 1)/2` double
+whole ray of one line into the spectrum. By section 1 this is the single equation `W(O) = H(B) - 1`. So does a
+*doubling vertex* (a vertex `x` of `K` with `(H - 1)/2` double
 visits and no triple visit: then `H(K[TT_a at x]) = 1 + (H - 1) 2^(a-1)`).
 
 **The two gaps are isolated on their lines.**
@@ -57,14 +64,17 @@ visits and no triple visit: then `H(K[TT_a at x]) = 1 + (H - 1) 2^(a-1)`).
 So 7 is the missing *root* of its line, and 21 is the one point between the root 11 and the first seed 41. The
 hostile fact "11 cannot be doubled" is the same statement.
 
-**Fifty-four complete lines.** For 54 of the 65 odd `c <= 129`, a seed of order `<= 9` exists and every point
-below its ray is a path count of order `<= 9`; these lines are entirely in the spectrum (minus 7 and 21). The
-eleven others (`19, 33, 71, 79, 83, 97, 101, 103, 107, 113, 115`) have no seed yet (HYP-9658). Table of least
-`s0` in THM-5126 (B3); all seeds in `line_seeds.txt`.
+**All 65 lines with `c <= 129` are complete.** Every odd `c <= 129` has a seed: 54 of order `<= 9` and, for
+`c = 19, 33, 71, 79, 83, 97, 101, 103, 107, 113, 115`, eleven of order ten found through the equation
+`W(O) = H(B) - 1`. The 119 points below the rays are path counts of order `<= 9`, except `5313 = 3 * 1771` and
+`3425 = 5 * 685`, which are order joins. Hence **every odd `N > 1` whose `N - 1` has odd part at most 129 is a
+path count, except 7 and 21** (THM-5126 (B3); seeds in `line_seeds.txt`, certificates in `below_rays.txt`).
+Beyond: 2,016 of the 2,049 odd `c <= 4097` have a seed of order `<= 10`; the 33 without are 245, 853, 909, 1049,
+1407, 1467, 1515, 1577, 1629, 1829, 1887, 2023, 2037, 2085, 2343, 2393, 2703, 3001, 3033, 3123, 3313, 3411, 3427,
+3545, 3713, 3733, 3753, 3773, 3907, 3909, 3985, 3991, 4023 (HYP-9658 (B)).
 
 **Weight three.** `7 = 111_2` and `21 = 10101_2` both have binary weight three, and weight-three numbers are the
-points of the lines `c = 2^d + 1`. Rows `d = 1, 2, 3, 4, 6, 7` are complete except for 7 and 21; rows `d = 5` and
-`d = 8` have no seed of order `<= 9`. In Horner form `N = 1 + 2^(a_1)(1 + 2^(a_2)(1 + ...))`: the gaps are the two
+points of the lines `c = 2^d + 1`. Rows `d <= 7` are complete except for 7 and 21 (THM-5126 (B4)). In Horner form `N = 1 + 2^(a_1)(1 + 2^(a_2)(1 + ...))`: the gaps are the two
 depth-two Horner numbers with equal small steps, `1 + 2(1 + 2)` and `1 + 4(1 + 4)`; the next one,
 `73 = 1 + 8(1 + 8)`, is a path count.
 
@@ -85,10 +95,12 @@ first point of the line `L_3` above its gap.
 | experiment | universe | result |
 |---|---|---|
 | unit-offset roots (`seeds.c`) | every root of every class of order `<= 9` (1,723,824 at order 9) | 2, 5, 7, 16, 31, 68, 207, 1333 roots; 636 odd `c` with a seed |
+| unit sets (`unitsets.c`) | every vertex set of size 2-4 over every class of order 9 (roots of order 10 with out-degree 2-4) | 19,002 unit sets (2,771 pairs, 16,231 triples, no 4-set); 5,529 odd `c` with a seed in total |
 | doubling vertices (`dbl.c`) | every vertex of every class of order `<= 8` | 49 of the 320 values have a doubling realiser; for `N = 3 mod 4`, `N < 200`: 3, 19, 23, 31, 59, 75, 95, 99, 103, 111, 155, 163, 179, 191, 199 |
 | two-module families (`modfam.c`) | every class of order `<= 8`, every ordered pair of vertices (406,412 triples) | 3,477 distinct exact bilinear tuples at order 8; none is additive (`de = 0` with `be, ga != 0`), in agreement with THM-5124 |
 | weight-three map (`cover3.py`) | all tuples above, `a, b <= 26` | rows `d <= 4` and `d = 7` complete from order `<= 8` cores alone |
 | pre-registered order-9 run | PREREGISTRATION.md, pushed before the run | P2, P3 CONFIRMED; P1 (count in [250, 420]; actual 636) and P4 (`c = 33`) FAILED; gate G1 holds |
+| pre-registered order-10 run | second part of PREREGISTRATION.md, pushed before the run | Q1-Q4 CONFIRMED (all eleven missing `c <= 129` acquire seeds; 510 of 513 odd `c <= 1025`); gate G2 holds |
 
 Positive controls: the scan recovers the fans (`c = 1`), the family `3 - X - Y + XY` of `C_3[TT_a, TT_b, 1]`, and
 the known one-apex ray `1 + 9 * 2^k` (word `1 0 1^k 0 0`). Hostile controls: no ray passes through 7 or 21; the
@@ -101,13 +113,19 @@ widely: 15 has no doubling realiser of order `<= 8`, so "double every realiser" 
   on `L_3` and one on `L_5`*. A ray settles a line from one point on; what remains on each line is finite.
 - It does not reduce the problem to finitely many checks: there are infinitely many lines, each needs a seed
   (HYP-9658 (A)) and its finitely many points below the seed. The points below a seed are again ordinary targets.
+- It gives the first statement of this thread that is complete on an infinite set defined by a simple arithmetic
+  condition: all `N` with `N - 1 = c 2^s`, `c <= 129`. The set has density zero (about `65 log2 X` members up to
+  `X`), so this says nothing about density.
+- It turns "find a seed" into an equation in known objects: `W(O) = H(B) - 1` for the cut matrix `W` of the base.
+  The order-ten run solved it for every `c <= 129` in 22 seconds; a construction of solutions for all `c` is open.
 - It removes one architecture: lifting every realiser along its own line (the 15 control), and it adds a concrete
   gate for any engine: it must miss the root of `L_3` and the second point of `L_5` and nothing else on them.
 - Rigorous lower bounds for the counting function of the spectrum are unchanged (THM-4887: `X^(2/3)` up to a
   logarithm). Positive density is still unproved.
 
-Next obligations: (1) a grammar for unit-offset roots with `d = E` (doubling towers), to produce seeds for all `c`
-rather than find them; (2) order ten for HYP-9658 (B); (3) decide whether `s0(c)` is bounded on average.
+Next obligations: (1) a grammar for the unit sets `W(O) = H(B) - 1`, to produce seeds for all `c` rather than find
+them; (2) order eleven for HYP-9658 (B); (3) decide whether `s0(c)` is bounded on average; (4) the points below
+the rays for `129 < c <= 4097` (eight of them for `c <= 257` are above the order-nine range).
 
 ## 6. Connections, typed (source / target / map / preserved / lost / test)
 
@@ -167,5 +185,7 @@ See `audit/AUDIT.md` (independent agent, fresh context).
     gcc -O2 -o seeds seeds.c && for m in 2 3 4 5 6 7 8; do ./seeds $m < cls_$m.txt > seeds_$m.txt; done
     ./seeds 9 < cls9_9.txt > seeds_9.txt
     gcc -O2 -o dbl dbl.c && for m in 3 4 5 6 7 8; do ./dbl $m < cls_$m.txt > dbl_$m.txt; done
-    python finalize.py                   # writes line_seeds.txt and prints the line table
+    gcc -O2 -o unitsets unitsets.c && ./unitsets 9 4 < cls9_9.txt > us_10.txt   # order-ten unit sets, 22 s
+    python finalize.py 129               # writes line_seeds.txt, below_rays.txt and prints the line table
+    python unitpairs.py ../unit_offset_roots_orders_2_to_9.txt 8                # identity (1') on 336 roots
     gcc -O2 -o modfam modfam.c && ./modfam 8 3 < cls_8.txt > mf_8.txt           # about 4 minutes

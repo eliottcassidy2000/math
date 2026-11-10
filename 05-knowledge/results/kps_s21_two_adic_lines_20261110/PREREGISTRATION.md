@@ -62,3 +62,19 @@ with root out-degree 2, 3 or 4; out-degrees 0 and 1 give only fans; out-degree >
 - **Q3.** c = 33 acquires a seed.
 - **Q4.** The number of odd c <= 1025 with a seed rises from 377 to at least 450 (of 513).
 - **G2 (gate, forced by THM-1370).** No ray contains 7 or 21.
+
+## Outcomes of the second pre-registration (appended after the run; the text above is unchanged)
+
+Run: `unitsets 9 4` on the 191,536 classes of order nine (22 s): 19,002 unit sets, 2,771 pairs and 16,231 triples,
+no set of size four.
+
+- **Q1 CONFIRMED.** All eleven acquire a seed (least s0: 19: 8, 33: 6, 71: 6, 79: 5, 83: 7, 97: 4, 101: 4, 103: 6,
+  107: 6, 113: 5, 115: 2).
+- **Q2 CONFIRMED.** c = 19: base of order nine with H(B) = 345, M = 2432 = 19 * 128.
+- **Q3 CONFIRMED.** c = 33: H(B) = 307, M = 1056 = 33 * 32.
+- **Q4 CONFIRMED.** 510 of the 513 odd c <= 1025 have a seed (was 377); the three without are 245, 853, 909.
+- **G2 holds.** Least s0 stays 2 for c = 3 and 3 for c = 5.
+
+After the run every odd c <= 129 has a seed, and 2,016 of the 2,049 odd c <= 4097 do. Five of the order-ten seeds
+(c = 19, 33, 83, 107, 115) were recounted literally on the tournaments of orders 11 and 12 before the tables were
+written; verify_lines.py recounts all eleven.
