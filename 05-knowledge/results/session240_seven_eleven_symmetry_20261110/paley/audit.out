@@ -1,0 +1,3 @@
+Independent 7! permutation checks passed: 168 design automorphisms, 8 skew matchings.
+[{"design_aut": 11, "tournament_aut": 11, "skew_matchings": 1, "labelled_connection_sets": 20}, {"design_aut": 22, "tournament_aut": 11, "skew_matchings": 2, "labelled_connection_sets": 10}, {"design_aut": 660, "tournament_aut": 55, "skew_matchings": 12, "labelled_connection_sets": 2}]
+All 32 circulant connection sets at 11 have a single orbit of compatible matchings. ALL CHECKS PASSED

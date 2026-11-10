@@ -1,0 +1,57 @@
+{
+  "commit": "bdaec8654d7b225cb5b270331c19c2e2b4f1332b",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-4552-exceptional-knight-tori-six-is-a-two-place-product-seven-is-a-paley-torus.md",
+      "blob": "33e61eedcd68aaaf566fbdbea1af798be357b6ac"
+    },
+    {
+      "path": "01-canon/theorems/THM-4553-the-point-stripping-ladder-psl27-borel-torus-and-the-collatz-frobenius.md",
+      "blob": "e7af568d8c78ffd550d7d68dde67f6b4763c0d60"
+    },
+    {
+      "path": "01-canon/theorems/THM-4592-the-eleven-squares-fibonacci-torus-is-the-period-five-collatz-cycle-set.md",
+      "blob": "7421b2d3695ee2717d2bd5b3db4d22caa5db8c22"
+    },
+    {
+      "path": "01-canon/theorems/THM-4602-tournaments-as-chirotopes-pfaffian-criterion-and-legendre-frieze-strips.md",
+      "blob": "a95db7d6ed90f32716858d098f1b350b2402b3b1"
+    },
+    {
+      "path": "01-canon/theorems/THM-481-paley-gauge-generates-gleason.md",
+      "blob": "ebb1101ac715accbd17c03623dd1fbe73973a194"
+    },
+    {
+      "path": "01-canon/theorems/THM-4849-circulant-tournaments-are-rational-collatz-cycles-shift-decimation-reversal-two-base-points-and-the-locking-theorem-behind-35-and-175.md",
+      "blob": "2eb282e913981144e5a68afee19fd65b8cb27171"
+    },
+    {
+      "path": "01-canon/theorems/THM-4857-the-gf2-automaton-of-a-tournament-classifies-the-merged-metagraph-exactly-through-order-five-circulants-are-additive-cellular-automata-and-paley-tournaments-give-quadratic-residue-codes.md",
+      "blob": "f8db1f2e8d170940f659844ad58ec4b16fc36d67"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9357-paley-hamiltonian-path-maximality-and-the-kantor-galois-exceptional-primes-3-7-11.md",
+      "blob": "c53c0ca8678efcb7b3bb5db870afbbfb3e2e3c9d"
+    },
+    {
+      "path": "01-canon/MISTAKES.md",
+      "blob": "03e004c7cf30292ad70158ca50f2f64572dcc613"
+    },
+    {
+      "path": "05-knowledge/results/eleven_squares_routing_bridges_20261007.md",
+      "blob": "eed86ee64f8cc885ee1d82065021634776ec03c0"
+    },
+    {
+      "path": "05-knowledge/results/session74_eleven_mechanisms_20261027/session74-clocks/RESULT.md",
+      "blob": "2ab5215bbd3187f79d10722925940c23d10cf1c7"
+    },
+    {
+      "path": "05-knowledge/results/session74_eleven_mechanisms_20261027/session74-golden-audit/AUDIT.md",
+      "blob": "0a94cbfa27b4aeedb507bb8a3720ec7f46441bc4"
+    },
+    {
+      "path": "05-knowledge/results/session74_eleven_mechanisms_20261027/session74-inheritance/INHERITANCE.md",
+      "blob": "ac32e959d7dc1fb179ba21160cfe6c508825c676"
+    }
+  ]
+}

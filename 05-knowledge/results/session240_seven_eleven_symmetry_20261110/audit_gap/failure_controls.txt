@@ -1,0 +1,3 @@
+normal_python_failure_exit=1
+optimized_python_failure_exit=1
+cpp_failure_exit=134

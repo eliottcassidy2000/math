@@ -1,0 +1,46 @@
+{
+  "checks": [
+    {
+      "saved_output": "gaps/probe.json",
+      "script": "gaps/probe.py",
+      "status": "PASS"
+    },
+    {
+      "saved_output": "paley/output.jsonl",
+      "script": "paley/verify.py",
+      "status": "PASS"
+    },
+    {
+      "saved_output": "paley/audit.out",
+      "script": "paley/audit.py",
+      "status": "PASS"
+    },
+    {
+      "saved_output": "provenance/receipt.json",
+      "script": "provenance/verify_small.py",
+      "status": "PASS"
+    },
+    {
+      "saved_output": "mixed/output.json",
+      "script": "mixed/verify.py",
+      "status": "PASS"
+    },
+    {
+      "saved_output": "audit_gap/output.json",
+      "script": "audit_gap/audit.py",
+      "status": "PASS"
+    },
+    {
+      "saved_output": "audit_design/output.jsonl",
+      "script": "audit_design/verify_independent.py",
+      "status": "PASS"
+    },
+    {
+      "saved_output": "audit_gap/output19.txt",
+      "script": "audit_gap/audit19.cpp",
+      "status": "PASS"
+    }
+  ],
+  "python_optimized": true,
+  "status": "PASS"
+}

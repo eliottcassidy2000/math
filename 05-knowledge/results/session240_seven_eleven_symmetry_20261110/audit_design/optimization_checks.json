@@ -1,0 +1,18 @@
+{
+  "normalized_outputs_equal": true,
+  "ignored_field": "elapsed_seconds",
+  "deliberate_failure_controls": [
+    {
+      "flags": [],
+      "exit_code": 1,
+      "expected_runtime_error": true
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "exit_code": 1,
+      "expected_runtime_error": true
+    }
+  ]
+}

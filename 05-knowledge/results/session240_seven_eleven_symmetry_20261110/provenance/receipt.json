@@ -1,0 +1,47 @@
+{
+  "11": {
+    "extended_weight_distribution": {
+      "0": 1,
+      "2": 66,
+      "4": 495,
+      "6": 924,
+      "8": 495,
+      "10": 66,
+      "12": 1
+    },
+    "inverse_is_transpose": true,
+    "norm5_circle_size": 12,
+    "projection": false,
+    "qr": [
+      1,
+      3,
+      4,
+      5,
+      9
+    ],
+    "rank": 11
+  },
+  "7": {
+    "extended_weight_distribution": {
+      "0": 1,
+      "4": 14,
+      "8": 1
+    },
+    "inverse_is_transpose": false,
+    "norm5_circle_size": 8,
+    "projection": true,
+    "qr": [
+      1,
+      2,
+      4
+    ],
+    "rank": 4
+  },
+  "golden_period5": {
+    "affine_group_order": 55,
+    "labels": 11,
+    "shift_multiplier": 4,
+    "unordered_pair_orbit": 55,
+    "words": 11
+  }
+}
