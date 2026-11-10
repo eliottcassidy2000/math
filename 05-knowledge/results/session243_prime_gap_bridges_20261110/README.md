@@ -33,6 +33,14 @@ finite residue sieve cannot certify a prime or a physical tournament inverse.
 Least-used sidecar: prime-power signs in Brown factor pairs, and joint gap
 information for pairs of actual constructor outputs.
 
+## Audited arithmetic checkpoint
+
+[THM-5110](../../../01-canon/theorems/THM-5110-primorial-crossing-gap-repair-and-brown-prime-power-inverse.md)
+now gives the exact offset-one repair for primorial crossing gaps, the fixed
+non-twin offset obstruction, and the Brown prime-power partition inverse.
+[Independent arithmetic audit](arithmetic_audit/REPORT.md) passes all declared
+controls. Physical constructor extensions remain under independent audit.
+
 ## Planned validation
 
 Each claim will carry its quantifiers, physical map, lost coordinates,

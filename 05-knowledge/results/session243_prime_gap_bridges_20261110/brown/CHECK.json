@@ -1,0 +1,333 @@
+{
+  "brown_roots": [
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      7,
+      71
+    ]
+  ],
+  "hostiles": {
+    "nonphysical_square_root": [
+      49,
+      7
+    ],
+    "sign_survivor_wrong_quotient": 23,
+    "wheel_survivor": 7
+  },
+  "rows": [
+    {
+      "hits": [
+        {
+          "even": 2,
+          "odd": 3,
+          "root": 5
+        }
+      ],
+      "n": 4,
+      "selections": 2
+    },
+    {
+      "hits": [
+        {
+          "even": 6,
+          "odd": 5,
+          "root": 11
+        }
+      ],
+      "n": 5,
+      "selections": 4
+    },
+    {
+      "hits": [],
+      "n": 6,
+      "selections": 4
+    },
+    {
+      "hits": [
+        {
+          "even": 36,
+          "odd": 35,
+          "root": 71
+        }
+      ],
+      "n": 7,
+      "selections": 8
+    },
+    {
+      "hits": [],
+      "n": 8,
+      "selections": 8
+    },
+    {
+      "hits": [],
+      "n": 9,
+      "selections": 8
+    },
+    {
+      "hits": [],
+      "n": 10,
+      "selections": 8
+    },
+    {
+      "hits": [],
+      "n": 11,
+      "selections": 16
+    },
+    {
+      "hits": [],
+      "n": 12,
+      "selections": 16
+    },
+    {
+      "hits": [],
+      "n": 13,
+      "selections": 32
+    },
+    {
+      "hits": [],
+      "n": 14,
+      "selections": 32
+    },
+    {
+      "hits": [],
+      "n": 15,
+      "selections": 32
+    },
+    {
+      "hits": [],
+      "n": 16,
+      "selections": 32
+    },
+    {
+      "hits": [],
+      "n": 17,
+      "selections": 64
+    },
+    {
+      "hits": [],
+      "n": 18,
+      "selections": 64
+    },
+    {
+      "hits": [],
+      "n": 19,
+      "selections": 128
+    },
+    {
+      "hits": [],
+      "n": 20,
+      "selections": 128
+    },
+    {
+      "hits": [],
+      "n": 21,
+      "selections": 128
+    },
+    {
+      "hits": [],
+      "n": 22,
+      "selections": 128
+    },
+    {
+      "hits": [],
+      "n": 23,
+      "selections": 256
+    },
+    {
+      "hits": [],
+      "n": 24,
+      "selections": 256
+    },
+    {
+      "hits": [],
+      "n": 25,
+      "selections": 256
+    },
+    {
+      "hits": [],
+      "n": 26,
+      "selections": 256
+    },
+    {
+      "hits": [],
+      "n": 27,
+      "selections": 256
+    },
+    {
+      "hits": [],
+      "n": 28,
+      "selections": 256
+    },
+    {
+      "hits": [],
+      "n": 29,
+      "selections": 512
+    },
+    {
+      "hits": [],
+      "n": 30,
+      "selections": 512
+    },
+    {
+      "hits": [],
+      "n": 31,
+      "selections": 1024
+    },
+    {
+      "hits": [],
+      "n": 32,
+      "selections": 1024
+    },
+    {
+      "hits": [],
+      "n": 33,
+      "selections": 1024
+    },
+    {
+      "hits": [],
+      "n": 34,
+      "selections": 1024
+    },
+    {
+      "hits": [],
+      "n": 35,
+      "selections": 1024
+    },
+    {
+      "hits": [],
+      "n": 36,
+      "selections": 1024
+    },
+    {
+      "hits": [],
+      "n": 37,
+      "selections": 2048
+    },
+    {
+      "hits": [],
+      "n": 38,
+      "selections": 2048
+    },
+    {
+      "hits": [],
+      "n": 39,
+      "selections": 2048
+    },
+    {
+      "hits": [],
+      "n": 40,
+      "selections": 2048
+    },
+    {
+      "hits": [],
+      "n": 41,
+      "selections": 4096
+    },
+    {
+      "hits": [],
+      "n": 42,
+      "selections": 4096
+    },
+    {
+      "hits": [],
+      "n": 43,
+      "selections": 8192
+    },
+    {
+      "hits": [],
+      "n": 44,
+      "selections": 8192
+    },
+    {
+      "hits": [],
+      "n": 45,
+      "selections": 8192
+    },
+    {
+      "hits": [],
+      "n": 46,
+      "selections": 8192
+    },
+    {
+      "hits": [],
+      "n": 47,
+      "selections": 16384
+    },
+    {
+      "hits": [],
+      "n": 48,
+      "selections": 16384
+    },
+    {
+      "hits": [],
+      "n": 49,
+      "selections": 16384
+    },
+    {
+      "hits": [],
+      "n": 50,
+      "selections": 16384
+    },
+    {
+      "hits": [],
+      "n": 51,
+      "selections": 16384
+    },
+    {
+      "hits": [],
+      "n": 52,
+      "selections": 16384
+    },
+    {
+      "hits": [],
+      "n": 53,
+      "selections": 32768
+    },
+    {
+      "hits": [],
+      "n": 54,
+      "selections": 32768
+    },
+    {
+      "hits": [],
+      "n": 55,
+      "selections": 32768
+    },
+    {
+      "hits": [],
+      "n": 56,
+      "selections": 32768
+    },
+    {
+      "hits": [],
+      "n": 57,
+      "selections": 32768
+    },
+    {
+      "hits": [],
+      "n": 58,
+      "selections": 32768
+    },
+    {
+      "hits": [],
+      "n": 59,
+      "selections": 65536
+    },
+    {
+      "hits": [],
+      "n": 60,
+      "selections": 65536
+    }
+  ],
+  "selection_count": 484682,
+  "sign_congruence_controls": 5500,
+  "status": "PASS",
+  "universe": "all n=4,...,60 and every unitary prime-power partition at each n"
+}

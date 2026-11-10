@@ -1,0 +1,264 @@
+{
+  "Brown_n_universe": [
+    4,
+    40
+  ],
+  "Brown_solutions": [
+    [
+      4,
+      5,
+      2,
+      3
+    ],
+    [
+      5,
+      11,
+      5,
+      6
+    ],
+    [
+      7,
+      71,
+      35,
+      36
+    ]
+  ],
+  "Brown_subsets_checked": 35476,
+  "fixed_offset_examples": [
+    {
+      "P": 6,
+      "d": 2,
+      "first_tested_n": 2,
+      "r": 2
+    },
+    {
+      "P": 30,
+      "d": 3,
+      "first_tested_n": 3,
+      "r": 3
+    },
+    {
+      "P": 30,
+      "d": 4,
+      "first_tested_n": 3,
+      "r": 2
+    },
+    {
+      "P": 30,
+      "d": 5,
+      "first_tested_n": 3,
+      "r": 5
+    },
+    {
+      "P": 30,
+      "d": 6,
+      "first_tested_n": 3,
+      "r": 2
+    },
+    {
+      "P": 210,
+      "d": 7,
+      "first_tested_n": 4,
+      "r": 7
+    },
+    {
+      "P": 30,
+      "d": 8,
+      "first_tested_n": 3,
+      "r": 2
+    },
+    {
+      "P": 30,
+      "d": 9,
+      "first_tested_n": 3,
+      "r": 3
+    },
+    {
+      "P": 30,
+      "d": 10,
+      "first_tested_n": 3,
+      "r": 2
+    },
+    {
+      "P": 2310,
+      "d": 11,
+      "first_tested_n": 5,
+      "r": 11
+    }
+  ],
+  "fixed_offsets_checked": 99,
+  "prime_square_examples": [
+    {
+      "brackets": 1,
+      "gap": 2,
+      "next_prime": 5,
+      "p": 3,
+      "prime_count": 5
+    },
+    {
+      "brackets": 1,
+      "gap": 2,
+      "next_prime": 7,
+      "p": 5,
+      "prime_count": 6
+    },
+    {
+      "brackets": 2,
+      "gap": 4,
+      "next_prime": 11,
+      "p": 7,
+      "prime_count": 15
+    },
+    {
+      "brackets": 1,
+      "gap": 2,
+      "next_prime": 13,
+      "p": 11,
+      "prime_count": 9
+    },
+    {
+      "brackets": 2,
+      "gap": 4,
+      "next_prime": 17,
+      "p": 13,
+      "prime_count": 22
+    },
+    {
+      "brackets": 1,
+      "gap": 2,
+      "next_prime": 19,
+      "p": 17,
+      "prime_count": 11
+    },
+    {
+      "brackets": 2,
+      "gap": 4,
+      "next_prime": 23,
+      "p": 19,
+      "prime_count": 27
+    },
+    {
+      "brackets": 3,
+      "gap": 6,
+      "next_prime": 29,
+      "p": 23,
+      "prime_count": 47
+    }
+  ],
+  "prime_square_unions_checked": 29,
+  "primorial_rows": [
+    {
+      "F": 5,
+      "L": 3,
+      "P": 6,
+      "crossing_gap": 2,
+      "equal_offset_control": null,
+      "minus1_prime": true,
+      "n": 2,
+      "nearest_pair": [
+        5,
+        7
+      ],
+      "plus1_prime": true
+    },
+    {
+      "F": 7,
+      "L": 7,
+      "P": 30,
+      "crossing_gap": 2,
+      "equal_offset_control": {
+        "intervening_primes": [
+          29,
+          31
+        ],
+        "raw_gap": 14
+      },
+      "minus1_prime": true,
+      "n": 3,
+      "nearest_pair": [
+        29,
+        31
+      ],
+      "plus1_prime": true
+    },
+    {
+      "F": 13,
+      "L": 11,
+      "P": 210,
+      "crossing_gap": 12,
+      "equal_offset_control": null,
+      "minus1_prime": false,
+      "n": 4,
+      "nearest_pair": [
+        199,
+        211
+      ],
+      "plus1_prime": true
+    },
+    {
+      "F": 23,
+      "L": 13,
+      "P": 2310,
+      "crossing_gap": 2,
+      "equal_offset_control": null,
+      "minus1_prime": true,
+      "n": 5,
+      "nearest_pair": [
+        2309,
+        2311
+      ],
+      "plus1_prime": true
+    },
+    {
+      "F": 17,
+      "L": 17,
+      "P": 30030,
+      "crossing_gap": 18,
+      "equal_offset_control": {
+        "intervening_primes": [
+          30029
+        ],
+        "raw_gap": 34
+      },
+      "minus1_prime": true,
+      "n": 6,
+      "nearest_pair": [
+        30029,
+        30047
+      ],
+      "plus1_prime": false
+    },
+    {
+      "F": 19,
+      "L": 29,
+      "P": 510510,
+      "crossing_gap": 48,
+      "equal_offset_control": null,
+      "minus1_prime": false,
+      "n": 7,
+      "nearest_pair": [
+        510481,
+        510529
+      ],
+      "plus1_prime": false
+    },
+    {
+      "F": 23,
+      "L": 23,
+      "P": 9699690,
+      "crossing_gap": 46,
+      "equal_offset_control": {
+        "intervening_primes": [],
+        "raw_gap": 46
+      },
+      "minus1_prime": false,
+      "n": 8,
+      "nearest_pair": [
+        9699667,
+        9699713
+      ],
+      "plus1_prime": false
+    }
+  ],
+  "status": "PASS"
+}

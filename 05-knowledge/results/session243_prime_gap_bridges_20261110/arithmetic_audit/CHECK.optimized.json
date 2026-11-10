@@ -1,0 +1,1324 @@
+{
+  "brown": {
+    "all_divisor_candidates": 1408,
+    "all_divisor_scan_n": [
+      4,
+      10
+    ],
+    "complete_residue_tests": 204552,
+    "hostiles": {
+      "lost_exponents": {
+        "m": 29,
+        "n": 7
+      },
+      "lost_quotient": {
+        "m": 23,
+        "n": 4,
+        "quotient": 22
+      },
+      "wheel": {
+        "m": 7,
+        "n": 5
+      }
+    },
+    "n_below_four": [
+      {
+        "factorial_plus_one": 2,
+        "is_square": false,
+        "n": 0
+      },
+      {
+        "factorial_plus_one": 2,
+        "is_square": false,
+        "n": 1
+      },
+      {
+        "factorial_plus_one": 3,
+        "is_square": false,
+        "n": 2
+      },
+      {
+        "factorial_plus_one": 7,
+        "is_square": false,
+        "n": 3
+      }
+    ],
+    "n_universe": [
+      4,
+      60
+    ],
+    "partition_count": 484682,
+    "residue_rows": [
+      {
+        "n": 4,
+        "period": 12,
+        "successful_residues": 4
+      },
+      {
+        "n": 5,
+        "period": 60,
+        "successful_residues": 8
+      },
+      {
+        "n": 6,
+        "period": 360,
+        "successful_residues": 8
+      },
+      {
+        "n": 7,
+        "period": 2520,
+        "successful_residues": 16
+      },
+      {
+        "n": 8,
+        "period": 20160,
+        "successful_residues": 16
+      },
+      {
+        "n": 9,
+        "period": 181440,
+        "successful_residues": 16
+      }
+    ],
+    "roots": [
+      [
+        4,
+        5,
+        2,
+        3
+      ],
+      [
+        5,
+        11,
+        5,
+        6
+      ],
+      [
+        7,
+        71,
+        35,
+        36
+      ]
+    ],
+    "rows": [
+      {
+        "n": 4,
+        "partitions": 2,
+        "roots": [
+          5
+        ]
+      },
+      {
+        "n": 5,
+        "partitions": 4,
+        "roots": [
+          11
+        ]
+      },
+      {
+        "n": 6,
+        "partitions": 4,
+        "roots": []
+      },
+      {
+        "n": 7,
+        "partitions": 8,
+        "roots": [
+          71
+        ]
+      },
+      {
+        "n": 8,
+        "partitions": 8,
+        "roots": []
+      },
+      {
+        "n": 9,
+        "partitions": 8,
+        "roots": []
+      },
+      {
+        "n": 10,
+        "partitions": 8,
+        "roots": []
+      },
+      {
+        "n": 11,
+        "partitions": 16,
+        "roots": []
+      },
+      {
+        "n": 12,
+        "partitions": 16,
+        "roots": []
+      },
+      {
+        "n": 13,
+        "partitions": 32,
+        "roots": []
+      },
+      {
+        "n": 14,
+        "partitions": 32,
+        "roots": []
+      },
+      {
+        "n": 15,
+        "partitions": 32,
+        "roots": []
+      },
+      {
+        "n": 16,
+        "partitions": 32,
+        "roots": []
+      },
+      {
+        "n": 17,
+        "partitions": 64,
+        "roots": []
+      },
+      {
+        "n": 18,
+        "partitions": 64,
+        "roots": []
+      },
+      {
+        "n": 19,
+        "partitions": 128,
+        "roots": []
+      },
+      {
+        "n": 20,
+        "partitions": 128,
+        "roots": []
+      },
+      {
+        "n": 21,
+        "partitions": 128,
+        "roots": []
+      },
+      {
+        "n": 22,
+        "partitions": 128,
+        "roots": []
+      },
+      {
+        "n": 23,
+        "partitions": 256,
+        "roots": []
+      },
+      {
+        "n": 24,
+        "partitions": 256,
+        "roots": []
+      },
+      {
+        "n": 25,
+        "partitions": 256,
+        "roots": []
+      },
+      {
+        "n": 26,
+        "partitions": 256,
+        "roots": []
+      },
+      {
+        "n": 27,
+        "partitions": 256,
+        "roots": []
+      },
+      {
+        "n": 28,
+        "partitions": 256,
+        "roots": []
+      },
+      {
+        "n": 29,
+        "partitions": 512,
+        "roots": []
+      },
+      {
+        "n": 30,
+        "partitions": 512,
+        "roots": []
+      },
+      {
+        "n": 31,
+        "partitions": 1024,
+        "roots": []
+      },
+      {
+        "n": 32,
+        "partitions": 1024,
+        "roots": []
+      },
+      {
+        "n": 33,
+        "partitions": 1024,
+        "roots": []
+      },
+      {
+        "n": 34,
+        "partitions": 1024,
+        "roots": []
+      },
+      {
+        "n": 35,
+        "partitions": 1024,
+        "roots": []
+      },
+      {
+        "n": 36,
+        "partitions": 1024,
+        "roots": []
+      },
+      {
+        "n": 37,
+        "partitions": 2048,
+        "roots": []
+      },
+      {
+        "n": 38,
+        "partitions": 2048,
+        "roots": []
+      },
+      {
+        "n": 39,
+        "partitions": 2048,
+        "roots": []
+      },
+      {
+        "n": 40,
+        "partitions": 2048,
+        "roots": []
+      },
+      {
+        "n": 41,
+        "partitions": 4096,
+        "roots": []
+      },
+      {
+        "n": 42,
+        "partitions": 4096,
+        "roots": []
+      },
+      {
+        "n": 43,
+        "partitions": 8192,
+        "roots": []
+      },
+      {
+        "n": 44,
+        "partitions": 8192,
+        "roots": []
+      },
+      {
+        "n": 45,
+        "partitions": 8192,
+        "roots": []
+      },
+      {
+        "n": 46,
+        "partitions": 8192,
+        "roots": []
+      },
+      {
+        "n": 47,
+        "partitions": 16384,
+        "roots": []
+      },
+      {
+        "n": 48,
+        "partitions": 16384,
+        "roots": []
+      },
+      {
+        "n": 49,
+        "partitions": 16384,
+        "roots": []
+      },
+      {
+        "n": 50,
+        "partitions": 16384,
+        "roots": []
+      },
+      {
+        "n": 51,
+        "partitions": 16384,
+        "roots": []
+      },
+      {
+        "n": 52,
+        "partitions": 16384,
+        "roots": []
+      },
+      {
+        "n": 53,
+        "partitions": 32768,
+        "roots": []
+      },
+      {
+        "n": 54,
+        "partitions": 32768,
+        "roots": []
+      },
+      {
+        "n": 55,
+        "partitions": 32768,
+        "roots": []
+      },
+      {
+        "n": 56,
+        "partitions": 32768,
+        "roots": []
+      },
+      {
+        "n": 57,
+        "partitions": 32768,
+        "roots": []
+      },
+      {
+        "n": 58,
+        "partitions": 32768,
+        "roots": []
+      },
+      {
+        "n": 59,
+        "partitions": 65536,
+        "roots": []
+      },
+      {
+        "n": 60,
+        "partitions": 65536,
+        "roots": []
+      }
+    ],
+    "signed_integer_tests": 14649,
+    "status": "PASS"
+  },
+  "implementation": "independent; Eratosthenes + Legendre valuations + Gray codes",
+  "prime_gaps": {
+    "P2_d3_exception": {
+      "both_prime": false,
+      "lower_endpoint": 3,
+      "upper_endpoint": 9
+    },
+    "fixed_multipliers": [
+      1,
+      5
+    ],
+    "fixed_offset_rows": [
+      {
+        "d": 2,
+        "first_obstructing_n": 2,
+        "prime_divisor": 2
+      },
+      {
+        "d": 3,
+        "first_obstructing_n": 3,
+        "prime_divisor": 3
+      },
+      {
+        "d": 4,
+        "first_obstructing_n": 3,
+        "prime_divisor": 2
+      },
+      {
+        "d": 5,
+        "first_obstructing_n": 3,
+        "prime_divisor": 5
+      },
+      {
+        "d": 6,
+        "first_obstructing_n": 3,
+        "prime_divisor": 2
+      },
+      {
+        "d": 7,
+        "first_obstructing_n": 4,
+        "prime_divisor": 7
+      },
+      {
+        "d": 8,
+        "first_obstructing_n": 3,
+        "prime_divisor": 2
+      },
+      {
+        "d": 9,
+        "first_obstructing_n": 3,
+        "prime_divisor": 3
+      },
+      {
+        "d": 10,
+        "first_obstructing_n": 3,
+        "prime_divisor": 2
+      },
+      {
+        "d": 11,
+        "first_obstructing_n": 5,
+        "prime_divisor": 11
+      },
+      {
+        "d": 12,
+        "first_obstructing_n": 3,
+        "prime_divisor": 2
+      },
+      {
+        "d": 13,
+        "first_obstructing_n": 6,
+        "prime_divisor": 13
+      },
+      {
+        "d": 14,
+        "first_obstructing_n": 3,
+        "prime_divisor": 2
+      },
+      {
+        "d": 15,
+        "first_obstructing_n": 3,
+        "prime_divisor": 3
+      },
+      {
+        "d": 16,
+        "first_obstructing_n": 3,
+        "prime_divisor": 2
+      },
+      {
+        "d": 17,
+        "first_obstructing_n": 7,
+        "prime_divisor": 17
+      },
+      {
+        "d": 18,
+        "first_obstructing_n": 3,
+        "prime_divisor": 2
+      },
+      {
+        "d": 19,
+        "first_obstructing_n": 8,
+        "prime_divisor": 19
+      },
+      {
+        "d": 20,
+        "first_obstructing_n": 3,
+        "prime_divisor": 2
+      },
+      {
+        "d": 21,
+        "first_obstructing_n": 3,
+        "prime_divisor": 3
+      },
+      {
+        "d": 22,
+        "first_obstructing_n": 3,
+        "prime_divisor": 2
+      },
+      {
+        "d": 23,
+        "first_obstructing_n": 9,
+        "prime_divisor": 23
+      },
+      {
+        "d": 24,
+        "first_obstructing_n": 3,
+        "prime_divisor": 2
+      },
+      {
+        "d": 25,
+        "first_obstructing_n": 4,
+        "prime_divisor": 5
+      },
+      {
+        "d": 26,
+        "first_obstructing_n": 3,
+        "prime_divisor": 2
+      },
+      {
+        "d": 27,
+        "first_obstructing_n": 4,
+        "prime_divisor": 3
+      },
+      {
+        "d": 28,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 29,
+        "first_obstructing_n": 10,
+        "prime_divisor": 29
+      },
+      {
+        "d": 30,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 31,
+        "first_obstructing_n": 11,
+        "prime_divisor": 31
+      },
+      {
+        "d": 32,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 33,
+        "first_obstructing_n": 4,
+        "prime_divisor": 3
+      },
+      {
+        "d": 34,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 35,
+        "first_obstructing_n": 4,
+        "prime_divisor": 5
+      },
+      {
+        "d": 36,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 37,
+        "first_obstructing_n": 12,
+        "prime_divisor": 37
+      },
+      {
+        "d": 38,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 39,
+        "first_obstructing_n": 4,
+        "prime_divisor": 3
+      },
+      {
+        "d": 40,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 41,
+        "first_obstructing_n": 13,
+        "prime_divisor": 41
+      },
+      {
+        "d": 42,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 43,
+        "first_obstructing_n": 14,
+        "prime_divisor": 43
+      },
+      {
+        "d": 44,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 45,
+        "first_obstructing_n": 4,
+        "prime_divisor": 3
+      },
+      {
+        "d": 46,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 47,
+        "first_obstructing_n": 15,
+        "prime_divisor": 47
+      },
+      {
+        "d": 48,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 49,
+        "first_obstructing_n": 4,
+        "prime_divisor": 7
+      },
+      {
+        "d": 50,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 51,
+        "first_obstructing_n": 4,
+        "prime_divisor": 3
+      },
+      {
+        "d": 52,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 53,
+        "first_obstructing_n": 16,
+        "prime_divisor": 53
+      },
+      {
+        "d": 54,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 55,
+        "first_obstructing_n": 4,
+        "prime_divisor": 5
+      },
+      {
+        "d": 56,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 57,
+        "first_obstructing_n": 4,
+        "prime_divisor": 3
+      },
+      {
+        "d": 58,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 59,
+        "first_obstructing_n": 17,
+        "prime_divisor": 59
+      },
+      {
+        "d": 60,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 61,
+        "first_obstructing_n": 18,
+        "prime_divisor": 61
+      },
+      {
+        "d": 62,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 63,
+        "first_obstructing_n": 4,
+        "prime_divisor": 3
+      },
+      {
+        "d": 64,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 65,
+        "first_obstructing_n": 4,
+        "prime_divisor": 5
+      },
+      {
+        "d": 66,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 67,
+        "first_obstructing_n": 19,
+        "prime_divisor": 67
+      },
+      {
+        "d": 68,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 69,
+        "first_obstructing_n": 4,
+        "prime_divisor": 3
+      },
+      {
+        "d": 70,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 71,
+        "first_obstructing_n": 20,
+        "prime_divisor": 71
+      },
+      {
+        "d": 72,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 73,
+        "first_obstructing_n": 21,
+        "prime_divisor": 73
+      },
+      {
+        "d": 74,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 75,
+        "first_obstructing_n": 4,
+        "prime_divisor": 3
+      },
+      {
+        "d": 76,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 77,
+        "first_obstructing_n": 4,
+        "prime_divisor": 7
+      },
+      {
+        "d": 78,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 79,
+        "first_obstructing_n": 22,
+        "prime_divisor": 79
+      },
+      {
+        "d": 80,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 81,
+        "first_obstructing_n": 4,
+        "prime_divisor": 3
+      },
+      {
+        "d": 82,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 83,
+        "first_obstructing_n": 23,
+        "prime_divisor": 83
+      },
+      {
+        "d": 84,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 85,
+        "first_obstructing_n": 4,
+        "prime_divisor": 5
+      },
+      {
+        "d": 86,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 87,
+        "first_obstructing_n": 4,
+        "prime_divisor": 3
+      },
+      {
+        "d": 88,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 89,
+        "first_obstructing_n": 24,
+        "prime_divisor": 89
+      },
+      {
+        "d": 90,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 91,
+        "first_obstructing_n": 4,
+        "prime_divisor": 7
+      },
+      {
+        "d": 92,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 93,
+        "first_obstructing_n": 4,
+        "prime_divisor": 3
+      },
+      {
+        "d": 94,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 95,
+        "first_obstructing_n": 4,
+        "prime_divisor": 5
+      },
+      {
+        "d": 96,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 97,
+        "first_obstructing_n": 25,
+        "prime_divisor": 97
+      },
+      {
+        "d": 98,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      },
+      {
+        "d": 99,
+        "first_obstructing_n": 4,
+        "prime_divisor": 3
+      },
+      {
+        "d": 100,
+        "first_obstructing_n": 4,
+        "prime_divisor": 2
+      }
+    ],
+    "fixed_offset_universe": [
+      2,
+      100
+    ],
+    "primorial_indices": [
+      2,
+      8
+    ],
+    "proper_factor_certificates": 990,
+    "rows": [
+      {
+        "F": 5,
+        "L": 3,
+        "P": 6,
+        "gap": 2,
+        "interior_primes": [
+          5,
+          7
+        ],
+        "n": 2,
+        "nearest_pair": [
+          5,
+          7
+        ],
+        "raw_pair": [
+          3,
+          11
+        ]
+      },
+      {
+        "F": 7,
+        "L": 7,
+        "P": 30,
+        "gap": 2,
+        "interior_primes": [
+          29,
+          31
+        ],
+        "n": 3,
+        "nearest_pair": [
+          29,
+          31
+        ],
+        "raw_pair": [
+          23,
+          37
+        ]
+      },
+      {
+        "F": 13,
+        "L": 11,
+        "P": 210,
+        "gap": 12,
+        "interior_primes": [
+          211
+        ],
+        "n": 4,
+        "nearest_pair": [
+          199,
+          211
+        ],
+        "raw_pair": [
+          199,
+          223
+        ]
+      },
+      {
+        "F": 23,
+        "L": 13,
+        "P": 2310,
+        "gap": 2,
+        "interior_primes": [
+          2309,
+          2311
+        ],
+        "n": 5,
+        "nearest_pair": [
+          2309,
+          2311
+        ],
+        "raw_pair": [
+          2297,
+          2333
+        ]
+      },
+      {
+        "F": 17,
+        "L": 17,
+        "P": 30030,
+        "gap": 18,
+        "interior_primes": [
+          30029
+        ],
+        "n": 6,
+        "nearest_pair": [
+          30029,
+          30047
+        ],
+        "raw_pair": [
+          30013,
+          30047
+        ]
+      },
+      {
+        "F": 19,
+        "L": 29,
+        "P": 510510,
+        "gap": 48,
+        "interior_primes": [],
+        "n": 7,
+        "nearest_pair": [
+          510481,
+          510529
+        ],
+        "raw_pair": [
+          510481,
+          510529
+        ]
+      },
+      {
+        "F": 23,
+        "L": 23,
+        "P": 9699690,
+        "gap": 46,
+        "interior_primes": [],
+        "n": 8,
+        "nearest_pair": [
+          9699667,
+          9699713
+        ],
+        "raw_pair": [
+          9699667,
+          9699713
+        ]
+      }
+    ],
+    "sieve_bound": 9700690,
+    "status": "PASS"
+  },
+  "prime_square_brocard": {
+    "caution": "Conditional minima are implications, not proofs of either conjecture.",
+    "first_pair": [
+      3,
+      5
+    ],
+    "largest_endpoint_prime_index": 31,
+    "last_pair": [
+      113,
+      127
+    ],
+    "pair_count": 29,
+    "rows": [
+      {
+        "Legendre_conditional_minimum": 2,
+        "Legendre_counting_implication_to_four": false,
+        "gap": 2,
+        "odd_square_brackets": 1,
+        "p": 3,
+        "prime_count": 5,
+        "q": 5
+      },
+      {
+        "Legendre_conditional_minimum": 2,
+        "Legendre_counting_implication_to_four": false,
+        "gap": 2,
+        "odd_square_brackets": 1,
+        "p": 5,
+        "prime_count": 6,
+        "q": 7
+      },
+      {
+        "Legendre_conditional_minimum": 4,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 4,
+        "odd_square_brackets": 2,
+        "p": 7,
+        "prime_count": 15,
+        "q": 11
+      },
+      {
+        "Legendre_conditional_minimum": 2,
+        "Legendre_counting_implication_to_four": false,
+        "gap": 2,
+        "odd_square_brackets": 1,
+        "p": 11,
+        "prime_count": 9,
+        "q": 13
+      },
+      {
+        "Legendre_conditional_minimum": 4,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 4,
+        "odd_square_brackets": 2,
+        "p": 13,
+        "prime_count": 22,
+        "q": 17
+      },
+      {
+        "Legendre_conditional_minimum": 2,
+        "Legendre_counting_implication_to_four": false,
+        "gap": 2,
+        "odd_square_brackets": 1,
+        "p": 17,
+        "prime_count": 11,
+        "q": 19
+      },
+      {
+        "Legendre_conditional_minimum": 4,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 4,
+        "odd_square_brackets": 2,
+        "p": 19,
+        "prime_count": 27,
+        "q": 23
+      },
+      {
+        "Legendre_conditional_minimum": 6,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 6,
+        "odd_square_brackets": 3,
+        "p": 23,
+        "prime_count": 47,
+        "q": 29
+      },
+      {
+        "Legendre_conditional_minimum": 2,
+        "Legendre_counting_implication_to_four": false,
+        "gap": 2,
+        "odd_square_brackets": 1,
+        "p": 29,
+        "prime_count": 16,
+        "q": 31
+      },
+      {
+        "Legendre_conditional_minimum": 6,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 6,
+        "odd_square_brackets": 3,
+        "p": 31,
+        "prime_count": 57,
+        "q": 37
+      },
+      {
+        "Legendre_conditional_minimum": 4,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 4,
+        "odd_square_brackets": 2,
+        "p": 37,
+        "prime_count": 44,
+        "q": 41
+      },
+      {
+        "Legendre_conditional_minimum": 2,
+        "Legendre_counting_implication_to_four": false,
+        "gap": 2,
+        "odd_square_brackets": 1,
+        "p": 41,
+        "prime_count": 20,
+        "q": 43
+      },
+      {
+        "Legendre_conditional_minimum": 4,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 4,
+        "odd_square_brackets": 2,
+        "p": 43,
+        "prime_count": 46,
+        "q": 47
+      },
+      {
+        "Legendre_conditional_minimum": 6,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 6,
+        "odd_square_brackets": 3,
+        "p": 47,
+        "prime_count": 80,
+        "q": 53
+      },
+      {
+        "Legendre_conditional_minimum": 6,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 6,
+        "odd_square_brackets": 3,
+        "p": 53,
+        "prime_count": 78,
+        "q": 59
+      },
+      {
+        "Legendre_conditional_minimum": 2,
+        "Legendre_counting_implication_to_four": false,
+        "gap": 2,
+        "odd_square_brackets": 1,
+        "p": 59,
+        "prime_count": 32,
+        "q": 61
+      },
+      {
+        "Legendre_conditional_minimum": 6,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 6,
+        "odd_square_brackets": 3,
+        "p": 61,
+        "prime_count": 90,
+        "q": 67
+      },
+      {
+        "Legendre_conditional_minimum": 4,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 4,
+        "odd_square_brackets": 2,
+        "p": 67,
+        "prime_count": 66,
+        "q": 71
+      },
+      {
+        "Legendre_conditional_minimum": 2,
+        "Legendre_counting_implication_to_four": false,
+        "gap": 2,
+        "odd_square_brackets": 1,
+        "p": 71,
+        "prime_count": 30,
+        "q": 73
+      },
+      {
+        "Legendre_conditional_minimum": 6,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 6,
+        "odd_square_brackets": 3,
+        "p": 73,
+        "prime_count": 106,
+        "q": 79
+      },
+      {
+        "Legendre_conditional_minimum": 4,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 4,
+        "odd_square_brackets": 2,
+        "p": 79,
+        "prime_count": 75,
+        "q": 83
+      },
+      {
+        "Legendre_conditional_minimum": 6,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 6,
+        "odd_square_brackets": 3,
+        "p": 83,
+        "prime_count": 114,
+        "q": 89
+      },
+      {
+        "Legendre_conditional_minimum": 8,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 8,
+        "odd_square_brackets": 4,
+        "p": 89,
+        "prime_count": 163,
+        "q": 97
+      },
+      {
+        "Legendre_conditional_minimum": 4,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 4,
+        "odd_square_brackets": 2,
+        "p": 97,
+        "prime_count": 89,
+        "q": 101
+      },
+      {
+        "Legendre_conditional_minimum": 2,
+        "Legendre_counting_implication_to_four": false,
+        "gap": 2,
+        "odd_square_brackets": 1,
+        "p": 101,
+        "prime_count": 42,
+        "q": 103
+      },
+      {
+        "Legendre_conditional_minimum": 4,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 4,
+        "odd_square_brackets": 2,
+        "p": 103,
+        "prime_count": 87,
+        "q": 107
+      },
+      {
+        "Legendre_conditional_minimum": 2,
+        "Legendre_counting_implication_to_four": false,
+        "gap": 2,
+        "odd_square_brackets": 1,
+        "p": 107,
+        "prime_count": 42,
+        "q": 109
+      },
+      {
+        "Legendre_conditional_minimum": 4,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 4,
+        "odd_square_brackets": 2,
+        "p": 109,
+        "prime_count": 100,
+        "q": 113
+      },
+      {
+        "Legendre_conditional_minimum": 14,
+        "Legendre_counting_implication_to_four": true,
+        "gap": 14,
+        "odd_square_brackets": 7,
+        "p": 113,
+        "prime_count": 354,
+        "q": 127
+      }
+    ],
+    "status": "PASS"
+  },
+  "status": "PASS"
+}

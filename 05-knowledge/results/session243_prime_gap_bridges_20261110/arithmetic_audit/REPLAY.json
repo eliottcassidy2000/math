@@ -1,0 +1,254 @@
+{
+  "audited_source_hashes": [
+    {
+      "path": "brown/PROOF.md",
+      "sha256": "ee76265b0bfa3d9e5f245e4a3228592228420d388308104f8eebefa773f5c6b4"
+    },
+    {
+      "path": "brown/verify.py",
+      "sha256": "1f46d9541ce0ce7b490872c460e2c54c56fa61cd92bc0b1b71c223daa36beffd"
+    },
+    {
+      "path": "provenance/PROOF.md",
+      "sha256": "9e657d14b5855efa6e5a71462c33955c6cc8e29971df33626cd5e3fc79037465"
+    },
+    {
+      "path": "provenance/verify.py",
+      "sha256": "3a3a7bfaa8c307e407e338dc94139da3caf00409d4d12c8aabfd32b4d07d5411"
+    },
+    {
+      "path": "provenance/source_pins.json",
+      "sha256": "2b156afeaef49828e53b51328a924ad124237d447d2088f9211c5bf11fa9685d"
+    },
+    {
+      "path": "arithmetic_audit/verify.py",
+      "sha256": "668522a1cbe7b116e56e8ef1f3c32012e79d3427e51b039b9cbe7291763ff02e"
+    }
+  ],
+  "negative_replays": 16,
+  "normal_optimized_outputs_identical": true,
+  "positive_replays": 6,
+  "producer_output_comparison": "PASS",
+  "runs": [
+    {
+      "exit_code": 0,
+      "failure": null,
+      "failure_message": null,
+      "lane": "brown",
+      "optimized": false,
+      "stdout_sha256": "8ff574304ba41200715ea5024b7c05c56a18cc0d7f78ddd5351ae9299a70bf2c"
+    },
+    {
+      "exit_code": 0,
+      "failure": null,
+      "failure_message": null,
+      "lane": "brown",
+      "optimized": true,
+      "stdout_sha256": "8ff574304ba41200715ea5024b7c05c56a18cc0d7f78ddd5351ae9299a70bf2c"
+    },
+    {
+      "exit_code": 1,
+      "failure": "",
+      "failure_message": "RuntimeError: deliberate negative control",
+      "lane": "brown",
+      "optimized": false,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "failure": "",
+      "failure_message": "RuntimeError: deliberate negative control",
+      "lane": "brown",
+      "optimized": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "failure": null,
+      "failure_message": null,
+      "lane": "provenance",
+      "optimized": false,
+      "stdout_sha256": "6d0423ea1fc52d61ed72272026dfeea785e478e87fce5805859464d0722acbe2"
+    },
+    {
+      "exit_code": 0,
+      "failure": null,
+      "failure_message": null,
+      "lane": "provenance",
+      "optimized": true,
+      "stdout_sha256": "6d0423ea1fc52d61ed72272026dfeea785e478e87fce5805859464d0722acbe2"
+    },
+    {
+      "exit_code": 1,
+      "failure": "skip-one",
+      "failure_message": "ValueError: intentional lost offset1",
+      "lane": "provenance",
+      "optimized": false,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "failure": "skip-one",
+      "failure_message": "ValueError: intentional lost offset1",
+      "lane": "provenance",
+      "optimized": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "failure": "wheel-prime",
+      "failure_message": "ValueError: intentional wheel-survivor primality",
+      "lane": "provenance",
+      "optimized": false,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "failure": "wheel-prime",
+      "failure_message": "ValueError: intentional wheel-survivor primality",
+      "lane": "provenance",
+      "optimized": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "failure": "brown-packet",
+      "failure_message": "ValueError: intentional split prime-power packet",
+      "lane": "provenance",
+      "optimized": false,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "failure": "brown-packet",
+      "failure_message": "ValueError: intentional split prime-power packet",
+      "lane": "provenance",
+      "optimized": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "failure": null,
+      "failure_message": null,
+      "lane": "arithmetic_audit",
+      "optimized": false,
+      "stdout_sha256": "bf2b6d9105c055456a1bc567e9b80e494f3f816649794cd1103bd6909ff6f911"
+    },
+    {
+      "exit_code": 0,
+      "failure": null,
+      "failure_message": null,
+      "lane": "arithmetic_audit",
+      "optimized": true,
+      "stdout_sha256": "bf2b6d9105c055456a1bc567e9b80e494f3f816649794cd1103bd6909ff6f911"
+    },
+    {
+      "exit_code": 1,
+      "failure": "skip-one",
+      "failure_message": "RuntimeError: deliberate false consecutive gap",
+      "lane": "arithmetic_audit",
+      "optimized": false,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "failure": "skip-one",
+      "failure_message": "RuntimeError: deliberate false consecutive gap",
+      "lane": "arithmetic_audit",
+      "optimized": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "failure": "fixed-offset",
+      "failure_message": "RuntimeError: deliberate erased equality exception",
+      "lane": "arithmetic_audit",
+      "optimized": false,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "failure": "fixed-offset",
+      "failure_message": "RuntimeError: deliberate erased equality exception",
+      "lane": "arithmetic_audit",
+      "optimized": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "failure": "brown-quotient",
+      "failure_message": "RuntimeError: deliberate sign-to-equality overclaim",
+      "lane": "arithmetic_audit",
+      "optimized": false,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "failure": "brown-quotient",
+      "failure_message": "RuntimeError: deliberate sign-to-equality overclaim",
+      "lane": "arithmetic_audit",
+      "optimized": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "failure": "sign-exponent",
+      "failure_message": "RuntimeError: deliberate radical-to-full-power overclaim",
+      "lane": "arithmetic_audit",
+      "optimized": false,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "failure": "sign-exponent",
+      "failure_message": "RuntimeError: deliberate radical-to-full-power overclaim",
+      "lane": "arithmetic_audit",
+      "optimized": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_pins_checked": [
+    {
+      "git_blob": "b068e5b1db168594c60e7e207030adcd57188d03",
+      "path": "05-knowledge/results/procgen_brackets_20260924_pairings_transitions.md",
+      "sha256": "34a3c26f753c02cc4fea81b304a56206da358c6191dd7775e7aceb2835803d46"
+    },
+    {
+      "git_blob": "ad6f5f4eb24d0f0ad7af398a533942d494bdda88",
+      "path": "05-knowledge/results/collatz_doubling_tower_brocard_20260927.md",
+      "sha256": "73f6d352e1332f3a1bc86bed24a401a7b0bbee14202eaf915c04775ea0810956"
+    },
+    {
+      "git_blob": "f5707e0bfd0a4f433f4509ef4548b19108c4a1ae",
+      "path": "05-knowledge/results/session51_structural_errors_relational_packets_20261024/prime-offsets/THEOREM.md",
+      "sha256": "4db86ba83df28cf2c4ce437076194cb1d872d0a5273b0525348c7dd265f79ca8"
+    },
+    {
+      "git_blob": "52a6e0c2579449a91ac020c90860f723a4125d73",
+      "path": "05-knowledge/results/session52_saturation_residues_metagraph_20261024/fortunate-square-pattern/THEOREM.md",
+      "sha256": "bc5fc6cf7e642b863728b218b63a10f5bf463039fdabf91afcb2579f3abbbbc3"
+    },
+    {
+      "git_blob": "58de617763cdd8dc975e7a84ef79a5a8422991ee",
+      "path": "05-knowledge/results/session241_prime_relations_20261110/constructions/PROOF.md",
+      "sha256": "fbddc848f502e746ba09dab8d3986964e8dfe7ba0340438627bb82ecf29453a1"
+    },
+    {
+      "git_blob": "502cf2f3e5b4a87db658259d0ec22b5333754dd9",
+      "path": "05-knowledge/results/session242_congruent_descent_20261110/exception/PROOF.md",
+      "sha256": "23b45ced83f0e990e5281beaf272d4d6c86f3109b49d3b3e74fe243e19ade32c"
+    },
+    {
+      "git_blob": "a29e3d6cc4273736918f78ace8f7a9de79e0e5fd",
+      "path": "05-knowledge/results/session242_congruent_descent_20261110/descent/PROOF.md",
+      "sha256": "63758df195d3a14358be50d1f75257b437265033bdfaae34cb108b4197e3067d"
+    },
+    {
+      "git_blob": "d97c654a99217322402f4c76616da2ef09fb0592",
+      "path": "05-knowledge/results/session242_congruent_descent_20261110/SYNTHESIS.md",
+      "sha256": "04a508b4568f5d0731d42a4f2f82d91116fba5e920b64a2af5a0e2e1639ffe5c"
+    }
+  ],
+  "source_pins_ref": "73acf94e85d978c2a7bc21622531c7d1f2a756c1",
+  "status": "PASS"
+}
