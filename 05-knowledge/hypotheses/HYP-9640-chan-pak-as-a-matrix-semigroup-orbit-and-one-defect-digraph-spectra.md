@@ -93,3 +93,13 @@ This sharpens HYP-9530 (B) for these bases.
 ## Session236 structural update (PROVED, not coverage)
 
 [THM-5080](../../01-canon/theorems/THM-5080-port-orbit-polyhedral-cones-sharp-growth-and-all-word-tower-ray-rigidity.md) proves exact full/nonempty conical hulls for the fifteen-generator orbit, sharp growth292/193 after the first step, and all-word tower-ray rigidity for all57 ternary matrices. Only tower powers preserve the tower direction at any word length, strengthening the earlier finite test. Cone membership is not integer reachability: (10,4,5) satisfies all cone facets but is unreachable. Both (A) and (B) remain OPEN. The singleton final-bridge offset restriction does not apply to S19 multi-bridge tails.
+
+## kind-pasteur-2026-11-09-S20 note (HYP-9656)
+
+- **Slices of the one-arc orbit.** Slicing the one-arc gadget orbit of a single vertex by the odd part of the root
+  response gives finite slices.
+  - r0 = 1 with gadgets of order <= 7: 197 values.
+  - r0 <= 2047 with gadgets of order <= 5: at most 233,115 values, all below 3.41 * 10^8.
+- **Complete prefixes.** Each slice is complete on a prefix: every odd n < 55,343 except 7 and 21 at r0 = 2047.
+- **Consequence.** Cofiniteness of the orbit is equivalent to these prefixes tending to infinity (HYP-9656 (B)).
+- **Cones.** Pure cones (B a power of two) cannot be iterated (THM-5109 (E)).

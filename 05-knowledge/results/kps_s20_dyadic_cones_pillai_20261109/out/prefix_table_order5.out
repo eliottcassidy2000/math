@@ -1,0 +1,9 @@
+GMAX=5 r0=3 HMAX=1000000000 distinct-matrices=264 triples=890 values=35 max=3453   complete-prefix: every odd n < 13 except 7, 21 
+GMAX=5 r0=7 HMAX=1000000000 distinct-matrices=264 triples=2421 values=83 max=6317   complete-prefix: every odd n < 35 except 7, 21 
+GMAX=5 r0=15 HMAX=1000000000 distinct-matrices=264 triples=8355 values=258 max=30237   complete-prefix: every odd n < 35 except 7, 21 
+GMAX=5 r0=31 HMAX=1000000000 distinct-matrices=264 triples=25780 values=724 max=83981   complete-prefix: every odd n < 67 except 7, 21 
+GMAX=5 r0=63 HMAX=1000000000 distinct-matrices=264 triples=87084 values=2103 max=824709   complete-prefix: every odd n < 127 except 7, 21 
+GMAX=5 r0=127 HMAX=1000000000 distinct-matrices=264 triples=266832 values=5580 max=2332785   complete-prefix: every odd n < 431 except 7, 21 
+GMAX=5 r0=255 HMAX=1000000000 distinct-matrices=264 triples=815651 values=14392 max=5248767   complete-prefix: every odd n < 2303 except 7, 21 
+GMAX=5 r0=511 HMAX=1000000000 distinct-matrices=264 triples=2458601 values=36765 max=13388229   complete-prefix: every odd n < 5153 except 7, 21 
+GMAX=5 r0=1023 HMAX=1000000000 distinct-matrices=264 triples=7587283 values=93159 max=340931297   complete-prefix: every odd n < 20921 except 7, 21 

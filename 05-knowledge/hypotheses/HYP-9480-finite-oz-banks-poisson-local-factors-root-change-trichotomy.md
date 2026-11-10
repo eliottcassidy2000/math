@@ -165,3 +165,10 @@ An effective form of (D)(2), with an explicit N_0, plus a finite check below N_0
 - Root-change depth below 10^9 is at most 7, and the strong C = 1 spectrum misses exactly Session197's 29 values
   below 10^9.
 - See THM-4904 and `05-knowledge/results/root_change_carmichael_chamber_20261107/`.
+
+## kind-pasteur-2026-11-09-S20 note (THM-5109 (F))
+
+- **Exact tiling.** On a post-bridge sheet h_u = c, the letters B and S^j B tile the odd lattice (h, R) exactly. Every
+  point has one predecessor, with j = v_2(R + c) - 1, and the total mass sum_j 2^(-(j+1)) is 1.
+- **Interpretation.** A single fixed-port core is therefore an exactly critical system. This is a structural reading
+  of (C): a finite bank has no surplus mass, and mass enters only through root changes.

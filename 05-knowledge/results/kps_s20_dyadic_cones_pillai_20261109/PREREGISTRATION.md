@@ -95,3 +95,13 @@ The complete prefix is the least odd n, other than 7 and 21, that is missing fro
 - **P6.** In the same run, the number of values lies in [180,000, 300,000], and every value is below 2 * 10^9.
 
 ### Addendum outcomes
+
+- **P5: CONFIRMED.**
+  - Setup: r0 = 2047 with the order-<= 5 gadgets, below 4 * 10^9.
+  - Result: the closure is finite, and its complete prefix is 55,343 (every odd n < 55,343 except 7 and 21), inside the
+    predicted [40,000, 120,000]. The value sets below 10^9 and below 4 * 10^9 coincide
+    (`out/p5_r2047_order5_4e9.out`).
+- **P6: CONFIRMED.**
+  - Setup: the same run.
+  - Result: 233,115 values, inside [180,000, 300,000]. The largest is 340,931,297, below 2 * 10^9; it is also the
+    largest value of the r0 = 1023 closure.

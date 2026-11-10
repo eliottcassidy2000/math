@@ -1,0 +1,15 @@
+GMAX=5 r0=2047 HMAX=4000000000 distinct-matrices=264 triples=26567358 values=233115 max=340931297
+  values<=10: 4
+  values<=100: 48
+  values<=1000: 498
+  values<=10000: 4998
+  values<=100000: 49886
+  values<=1000000: 207835
+  values<=10000000: 231463
+  values<=100000000: 233108
+  values<=1000000000: 233115
+  complete-prefix: every odd n < 55343 except 7, 21
+
+real	0m29.962s
+user	0m0.016s
+sys	0m0.000s

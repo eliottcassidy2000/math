@@ -1,0 +1,2 @@
+solutions (t,a,h) of 1 <= 2^t-3^a <= 2^a, t<=60: [(1, 0, 1), (2, 1, 1), (5, 3, 5), (8, 5, 13)]
+Ellison bound violations for 28<=t<=60: []

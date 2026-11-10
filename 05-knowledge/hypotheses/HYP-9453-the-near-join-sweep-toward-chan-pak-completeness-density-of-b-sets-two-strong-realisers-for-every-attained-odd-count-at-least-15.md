@@ -32,3 +32,12 @@ related:
 ## 3. Two strong realisers (OPEN beyond order 9)
 
 Every attained odd `h ∈ [15, 2881]` is the count of at least two non-isomorphic strong tournaments of order `≤ 9`; the strong singletons through order 9 are exactly `3, 5, 11, 13` and band values above 2,881. **Claim:** for every attained odd `h ≥ 15` the strong fibre has at least two members. Its role: the rigid values 11 and 13 are the only ones the near-join family can never reach below 47, and rigidity is what a "leaf" is in the square-sum graph of THM-4860.
+
+## kind-pasteur-2026-11-09-S20 note (THM-5109, HYP-9656)
+
+- **B a power of two.** When B = 2^j the near-join is a pure cone: h + 2^K for every K > j. Such "dyadic ports" exist
+  for 69 of the 148 attained odd values <= 300 at order <= 8.
+- **Cone chains.** A cone step lands on a dyadic port again only if h + 3^a = 2^t (THM-5109 (D)). By Ellison's bound
+  this happens only at the Pillai near-misses 1, 5, 13, and no two dyadic cone steps chain (THM-5109 (E)).
+- **Bounded odd parts.** Closures that keep the odd part of B bounded are finite (HYP-9656). So the response intervals
+  sought here must come from B with unbounded odd part.

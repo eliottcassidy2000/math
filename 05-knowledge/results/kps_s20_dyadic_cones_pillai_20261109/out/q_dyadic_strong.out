@@ -1,0 +1,12 @@
+n=4 code=34 H=5 Q=2^5
+n=6 code=17057 H=19 Q=2^8
+n=6 code=6658 H=19 Q=2^8
+n=8 code=144179468 H=217 Q=2^12
+n=8 code=247767681 H=217 Q=2^12
+n=8 code=147063080 H=223 Q=2^12
+n=8 code=243319937 H=223 Q=2^12
+n=8 code=72166211 H=599 Q=2^13
+n=8 code=193922693 H=599 Q=2^13
+n=8 code=87067660 H=599 Q=2^13
+n=8 code=34476340 H=599 Q=2^13
+total strong classes with Q a power of two (order <= 8): 11

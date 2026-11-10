@@ -1,0 +1,14 @@
+GMAX=5 r0=1023 HMAX=1000000000 distinct-matrices=264 triples=7587283 values=93159 max=340931297
+  values<=10: 4
+  values<=100: 48
+  values<=1000: 498
+  values<=10000: 4998
+  values<=100000: 44854
+  values<=1000000: 89732
+  values<=10000000: 92964
+  values<=100000000: 93158
+  values<=1000000000: 93159
+
+real	0m8.830s
+user	0m0.000s
+sys	0m0.015s

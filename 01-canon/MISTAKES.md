@@ -24137,3 +24137,27 @@ Lesson: before typing any transfer law, tail formula or bank conjecture new, gre
 (THM-48xx, HYP-94xx) and the session19x-20x trees for the formula's signature. A new bank conjecture must be checked
 against the existing bank conjectures before it is written. A displayed example must be recomputed from the theorem's
 own formula, not recalled from a neighbouring paper.
+
+## MISTAKE-750 (2026-11-09, kind-pasteur-2026-11-09-S20, THM-5109 and `05-knowledge/results/kps_s20_dyadic_cones_pillai_20261109/` before any checkpoint of the theorem text; found by the author while writing the INDEX rows, before the independent audit) -- this machine's own transitive gadget table typed as new, a third time
+
+- **MAJOR (priority; self-caught).** The draft typed two results as PROVED and new:
+  - THM-5109 (A), the one-arc response row as path sums;
+  - THM-5109 (B), the closed table for transitive gadgets TT_m with entry p and exit q, including the factor
+    3^(p-q-1) for exits before the entry.
+
+  Both are THM-4879 (A)-(B), audited, from this same machine's S11 (2026-11-04), in SEAM's converse convention. THM-4879
+  gives R-row (2^z, -mu, c), c = 2^(k-z+u) 3^(z-u-1) for z > u. The plane S = 0 analysed in HYP-9471 (also S11) is the
+  e = 0 sheet of the draft's exploration.
+  - The exact matrix counts 1, 4, 12, 44, 220, 1660, 20500 recomputed this session were printed in HYP-9471's title.
+  - This machine's memory note seam-gadget-thickness-thread names THM-4879 explicitly.
+- **Why it happened.** The search before writing used the S19 gotcha list (`2R - d`, `O/Z`, tail bank). It did not
+  search for the distinctive constant of the new formula (`3^(`, `three-power`, `transitive gadget`). MISTAKE-749 and
+  MISTAKE-737 record the same failure.
+- **Repaired before publication.**
+  - (A)-(B) retyped INHERITED (THM-4879), with the convention map checked entry by entry.
+  - The THM-5109 file renamed to drop "transitive gadget table" from the title.
+  - Only (C)-(F) remain new: dyadic cones, the Pillai chain law and rigidity, and critical fixed-port sheets.
+
+Lesson: before typing any gadget, transfer or tail formula new, grep this machine's own canon titles for the formula's
+distinctive constant or factor (here 3^( and three-power), not only for the mechanism's vocabulary. Also compare any
+"new" enumeration count with the titles that print the same count.
