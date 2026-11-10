@@ -1,0 +1,33 @@
+{
+  "scope": "Only newly derived formulas and stated finite physical examples. No inherited proof audit, no universal spectrum census.",
+  "checks": [
+    {
+      "lane": "marked",
+      "script": "probe.py",
+      "exit_code": 0,
+      "stdout_sha256": "5de0dda1ed89f2ab93fad0f4ee3fd1772f6e7ecec61814da19b1de826ecda4b4",
+      "stdout_bytes": 4893
+    },
+    {
+      "lane": "transfer",
+      "script": "check.py",
+      "exit_code": 0,
+      "stdout_sha256": "3ef770073e8eee026c0d260d2d01c35ce0c356b2a63c2c107dd232c9f0f0de4d",
+      "stdout_bytes": 1386
+    },
+    {
+      "lane": "gluing",
+      "script": "check_scale_gluing.py",
+      "exit_code": 0,
+      "stdout_sha256": "e51e4fc0be6825427c59828067caaf6709a9ac649a62d6fa80981ced4e355725",
+      "stdout_bytes": 284
+    },
+    {
+      "lane": "carry",
+      "script": "verify.py",
+      "exit_code": 0,
+      "stdout_sha256": "4248bd1ae5b7d7311804b785eca3cfed417f531a362ef0a8a6e6349fe981722b",
+      "stdout_bytes": 82
+    }
+  ]
+}

@@ -1,5 +1,145 @@
 {
-  "scope": "Literal subset-DP only for k=1,2 and one boundary example. Larger rows evaluate the proved formula, not independent tournaments.",
+  "degree_two_sharpness": {
+    "00": 4161,
+    "01": 4297,
+    "10": 4933,
+    "11": 5085
+  },
+  "charge_free_repair": {
+    "seed_profiles": [
+      [
+        101,
+        585,
+        915,
+        570,
+        162,
+        21,
+        1
+      ],
+      [
+        101,
+        585,
+        915,
+        570,
+        162,
+        21,
+        1
+      ]
+    ],
+    "states": {
+      "568": {
+        "h": 101,
+        "Q": 1372,
+        "E": 44,
+        "S": 46,
+        "D": 303,
+        "A": 541,
+        "B": 625
+      },
+      "696": {
+        "h": 101,
+        "Q": 1372,
+        "E": 43,
+        "S": 46,
+        "D": 310,
+        "A": 541,
+        "B": 628
+      }
+    },
+    "literal_k2": {
+      "00": 410445,
+      "01": 411051,
+      "10": 412729,
+      "11": 413335
+    },
+    "formula_rows": [
+      {
+        "k": 2,
+        "baseline": 410445,
+        "increments": [
+          2284,
+          606
+        ],
+        "normalized_gcd": 1
+      },
+      {
+        "k": 3,
+        "baseline": 542808397,
+        "increments": [
+          2457440,
+          230684,
+          61206
+        ],
+        "normalized_gcd": 1
+      },
+      {
+        "k": 4,
+        "baseline": 741941436749,
+        "increments": [
+          3303310672,
+          248201440,
+          23299084,
+          6181806
+        ],
+        "normalized_gcd": 1
+      },
+      {
+        "k": 5,
+        "baseline": 1017587037245501,
+        "increments": [
+          4525244244176,
+          333634377872,
+          25068345440,
+          2353207484,
+          624362406
+        ],
+        "normalized_gcd": 1
+      },
+      {
+        "k": 6,
+        "baseline": 1396085857045874653,
+        "increments": [
+          6207938405230864,
+          457049668661776,
+          33697072165072,
+          2531902889440,
+          237673955884,
+          63060603006
+        ],
+        "normalized_gcd": 1
+      },
+      {
+        "k": 7,
+        "baseline": 1915424634958989644205,
+        "increments": [
+          8517221125501106000,
+          627001778928317264,
+          46162016534839376,
+          3403404288672272,
+          255722191833440,
+          24005069544284,
+          6369120903606
+        ],
+        "normalized_gcd": 1
+      },
+      {
+        "k": 8,
+        "baseline": 2627962000996046387834157,
+        "increments": [
+          11685620277173477851792,
+          860239333675611706000,
+          63327179671760043664,
+          4662363670018776976,
+          343743833155899472,
+          25827941375177440,
+          2424512023972684,
+          643281211264206
+        ],
+        "normalized_gcd": 1
+      }
+    ]
+  },
+  "scope": "Literal subset-DP for the stated k=1,2 six-vertex cases, charge-free k=2, and one boundary example. Larger rows evaluate the proved formula, not independent tournaments.",
   "inherited_seed_profiles_not_reaudited": true,
   "states": {
     "18": {

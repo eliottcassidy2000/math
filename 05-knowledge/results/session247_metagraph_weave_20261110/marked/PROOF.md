@@ -219,3 +219,106 @@ Sources:
 `07-reflections/coefficient-tiling-and-prime-irreducible-addresses.md`;
 `07-reflections/irreducibility-prime-values-and-tournament-recombination.md`;
 `01-canon/theorems/THM-5122-shared-core-exchange-intervals-and-negative-inertia-capacity.md`.
+
+## 6. The fixed-divisor repair is physically realizable
+
+The old order-seven metagraph atlas (Session166,
+`cartesian_flip/metagraph_n7.json`) contains another adjacent equal-profile
+pair. Let C,D have seven-vertex masks 568,696. Their xor is 128, so this is
+one literal designated arc flip. The common path-cover profile is
+
+    (101,585,915,570,162,21,1).
+
+Already gcd(101,2*585)=1, hence delta(C)=delta(D)=1. This is a real repair
+of the charge obstruction, not a request to assume a charge-free pair exists.
+The small companion computes these two new seed profiles directly. No
+all-order profile-equality inference is drawn from a search pattern.
+
+Let the marked root beat mask 53, namely vertices {0,2,4,5}, in each block.
+The exact two states are
+
+    C: (h,Q,E,S,D,A,B)=(101,1372,44,46,303,541,625),
+    D: (h,Q,E,S,D,A,B)=(101,1372,43,46,310,541,628).
+
+Again Delta S=Delta A=0. Formula (3) therefore gives a physical affine cube
+of every dimension, with positive even increments
+
+    g_(k,k)=6*101^(k-1),
+    g_(k,i)=661*101^(k-2)
+             +1623 sum_(d=1)^(k-i) 101^(k-d-1)1372^(d-1), i<k. (6)
+
+The one-module counts are 393 and 399. At k=2 the exact cube is
+
+    baseline 410445, increments (2284,606),
+    counts {410445,411051,412729,413335}.
+
+**Proposition (primitive increments at every depth).** For every k>=2,
+
+    gcd(g_(k,1)/2,...,g_(k,k)/2)=1.                       (7)
+
+**Proof.** The last two normalized increments are
+`1142*101^(k-2)` and `303*101^(k-2)`. Since gcd(1142,303)=1, their gcd is
+`101^(k-2)`. For k=2 this is already 1. For k>=3, (6) modulo 101 gives
+`g_(k,1)/2 = (1623/2)*1372^(k-2) mod101`, where 2 is inverted modulo101.
+None of 2,1623,1372 is divisible by the prime101. Thus the first normalized
+increment is coprime to101, eliminating the remaining possible gcd. QED.
+
+The construction is strongly connected for the same reason as section4.
+It retains the labelled physical switches, complete seed profile, marked
+boundary response, and exact integer counts. Unlike the original pair, it
+has no universal fixed-divisor charge and no nontrivial gcd obstruction
+among its increments from depth2 onward.
+
+Equation (7) is **not** a bounded-digit completeness claim: binary subset
+sums with primitive weights can still have enormous gaps. For example the
+k=2 normalized weights are303 and1142, neither1. The next meaningful
+constructive task is to combine these charge-free affine switches with a
+shared-core or fixed-cardinality reservoir that lowers the smallest weight
+and overlaps actual baseline windows. The charge-free affine source now
+exists explicitly, so that task starts from real tournament vertices rather
+than a hypothetical response vector.
+
+## 7. The exact observation degree of a marked interface
+
+The same skeleton argument gives a positive response theorem, not only a
+valuation restriction. In each of k module positions, choose one of two
+same-order tournaments M_i^0,M_i^1 having identical complete path-cover
+profiles. Keep an arbitrary quotient tournament between module positions.
+Attach q marked vertices with arbitrary, fixed, vertex-labelled incidences
+to the modules and arbitrary arcs among themselves. Let b_i choose the
+internal module state; no connector arc changes with b.
+
+**Theorem 3 (boundary-degree bound).** The multilinear Boolean polynomial
+of the physical count `b -> H(T_b)` has degree at most min(k,2q).
+Equivalently every mixed finite difference involving more than2q module
+bits vanishes identically, in every setting of the other bits.
+
+**Proof.** Use the skeleton partition in Theorem1. For any untouched module,
+its factor is `c_i! pc_(M_i)(c_i)`, which is bit-independent by the full
+profile equality. Only the at most2q touched modules can change that
+skeleton contribution. Any function of those binary variables has a
+multilinear representation of degree at most their number. Summing all
+skeleton contributions proves the bound. This argument keeps actual
+endpoint restrictions in touched blocks; replacing them by unmarked
+profiles would incorrectly give degree0. QED.
+
+The bound is sharp for every q>=1. For q=1 use two of the six-vertex
+A/B modules, joined in order, and let the root beat mask1 in each. Formula
+(3) gives, in bit order00,01,10,11,
+
+    4161,4297,4933,5085.
+
+The mixed second difference is16. Now take an ordinal sum of q copies of
+this entire rooted two-module construction. Regard their q roots as the
+marked set and their2q six-vertex blocks as the modules. Counts multiply
+under ordinal sum, so the coefficient of the product of all2q bits is
+`16^q`, nonzero. Thus the interaction degree2q is physically attained,
+with no formal cube-interior assumption.
+
+This gives an exact translation from the old constant-profile topology
+compiler into bounded-interface observation: arbitrary selected cubical
+topology at q=0 can be invisible to H, while q marked vertices expose at
+most2q-way interactions. The affine families above deliberately cancel the
+second-degree part for q=1, and the charge-free family simultaneously
+removes the fixed-divisor obstruction. Neither ingredient alone controls
+the absolute integer image.

@@ -1,27 +1,28 @@
 # Session247: metagraph weave toward exact odd counts
 
-**ACTIVE. Synthesis-first research, 10 November 2026. Chan–Pak remains OPEN.**
+**COMPLETE, 10 November 2026. Chan–Pak remains OPEN.**
 
-The first mathematical checkpoint develops a literal marked-interface
-construction rather than auditing the inherited corpus.
+[Read the synthesis](SYNTHESIS.md).
 
-- [Marked proof](marked/PROOF.md): one new root turns Session170's invisible
-  module-flip cubes into H-affine physical cubes in every dimension. The
-  one-module interval is 41,43; the two-module cube is
-  5605,5635,6005,6035.
-- A general bounded-interface theorem retains the fixed-divisor charge of
-  factorial path-cover profiles. For k of the old six-vertex modules and q
-  arbitrary marked vertices, H is divisible by 3^max(0,k-2q), even with an
-  arbitrary tournament quotient. This is a new consequence of retained
-  endpoint incidence, not a re-test of the old profile equality.
-- [Small new-formula probes](marked/RESULT.json), reproduced by
-  `python3 marked/probe.py` from this directory. Larger k rows evaluate the
-  proved response formula and are not independent literal graph censuses.
+- [Marked interfaces](marked/PROOF.md): old count-invisible metagraph edges
+  become explicit affine physical cubes. A charge-free seven-vertex pair
+  has primitive increments in every dimension>=2. General fixed-divisor
+  survival and sharp2q observation degree quantify marked-interface power.
+- [Conserved-charge selectors](transfer/PROOF.md): dense interaction gauges,
+  an exact safe-swap test, and an actual89/91 charge-slice interval.
+- [Global gluing](gluing/PROOF.md): exact scale-circle overlap; three narrow
+  recurring windows at237,343,495 would cover every odd>=711. Their physical
+  continuation remains open.
+- [Carry budget](carry/PROOF.md): an explicit arithmetic reorganization of
+  inherited inverse methods, with no new completeness claim.
 
-These are proved-in-note statements with their named inherited inputs, not
-an independently audited canon promotion. Other lanes are developing
-fixed-cardinality selection, global gluing and target arithmetic. The next
-checkpoint will integrate their strongest results and name the remaining
-all-target obligation.
+These are proved-in-note results and conditional reductions, not an
+independently audited canon promotion. Historical and fresh concurrent
+claims were used as named inputs rather than re-audited. All new finite
+checks have explicit scope. [Plan](PLAN.md).
 
-[Plan and concept board](PLAN.md).
+Reproduce only the session's targeted new-formula checks:
+
+    python3 verify_all.py
+
+The script does not run the repository's historical audits or censuses.

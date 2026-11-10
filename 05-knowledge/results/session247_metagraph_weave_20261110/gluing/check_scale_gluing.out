@@ -1,0 +1,5 @@
+PASS: exact interval union agrees with cyclic seam criterion on 594 small cases
+NARROW_FIRST_WINDOWS [(711, 1185), (1029, 1715), (1485, 2475), (2133, 3555)]
+WIDE_FIRST_WINDOWS [(1095, 3285), (3285, 9855), (9855, 29565)]
+NARROW_MIN_PHASES 3
+WIDE_PLUS_TWO_SEAM_HOLES [3285, 3287, 3289]
