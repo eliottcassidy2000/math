@@ -135,3 +135,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session241](S241.md): faithful path-count arithmetic, strong divisor/totient chart and an exact sparse inverse; Chan–Pak OPEN.
 
 [Session242](S242.md): congruent arithmetic, cofactor-seven obstruction and physical smooth descent; audited. Chan–Pak OPEN.
+
+[Session243](S243.md): merges both Brocard meanings, Polignac and Euclid arithmetic with compact strong vertex increments and exact gap restrictions; independently audited, Chan–Pak OPEN.

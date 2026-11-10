@@ -1,0 +1,676 @@
+{
+  "compact_exact_arithmetic_targets": 10000,
+  "compact_literal_targets": 128,
+  "compact_receipt_sha256": "b9a19be62dd998eac205ae147929a9e79f851a0af49e311ae680fc8804badfbc",
+  "compact_samples": [
+    {
+      "N": 1,
+      "counts": [
+        3,
+        5
+      ],
+      "orders": [
+        3,
+        4
+      ],
+      "words": [
+        "Z",
+        "OZ"
+      ]
+    },
+    {
+      "N": 2,
+      "counts": [
+        5,
+        9
+      ],
+      "orders": [
+        4,
+        5
+      ],
+      "words": [
+        "OZ",
+        "OOZ"
+      ]
+    },
+    {
+      "N": 3,
+      "counts": [
+        9,
+        15
+      ],
+      "orders": [
+        5,
+        6
+      ],
+      "words": [
+        "ZOZ",
+        "ZOOZ"
+      ]
+    },
+    {
+      "N": 4,
+      "counts": [
+        9,
+        17
+      ],
+      "orders": [
+        5,
+        6
+      ],
+      "words": [
+        "OOZ",
+        "OOOZ"
+      ]
+    },
+    {
+      "N": 5,
+      "counts": [
+        15,
+        25
+      ],
+      "orders": [
+        6,
+        7
+      ],
+      "words": [
+        "ZZOZ",
+        "ZZOOZ"
+      ]
+    },
+    {
+      "N": 6,
+      "counts": [
+        15,
+        27
+      ],
+      "orders": [
+        6,
+        7
+      ],
+      "words": [
+        "ZOOZ",
+        "ZOOOZ"
+      ]
+    },
+    {
+      "N": 7,
+      "counts": [
+        19,
+        33
+      ],
+      "orders": [
+        6,
+        7
+      ],
+      "words": [
+        "OZOZ",
+        "OZOOZ"
+      ]
+    },
+    {
+      "N": 8,
+      "counts": [
+        17,
+        33
+      ],
+      "orders": [
+        6,
+        7
+      ],
+      "words": [
+        "OOOZ",
+        "OOOOZ"
+      ]
+    },
+    {
+      "N": 9,
+      "counts": [
+        27,
+        45
+      ],
+      "orders": [
+        7,
+        8
+      ],
+      "words": [
+        "ZZZOZ",
+        "ZZZOOZ"
+      ]
+    },
+    {
+      "N": 16,
+      "counts": [
+        33,
+        65
+      ],
+      "orders": [
+        7,
+        8
+      ],
+      "words": [
+        "OOOOZ",
+        "OOOOOZ"
+      ]
+    },
+    {
+      "N": 17,
+      "counts": [
+        51,
+        85
+      ],
+      "orders": [
+        8,
+        9
+      ],
+      "words": [
+        "ZZZZOZ",
+        "ZZZZOOZ"
+      ]
+    },
+    {
+      "N": 31,
+      "counts": [
+        79,
+        141
+      ],
+      "orders": [
+        8,
+        9
+      ],
+      "words": [
+        "OOOZOZ",
+        "OOOZOOZ"
+      ]
+    },
+    {
+      "N": 32,
+      "counts": [
+        65,
+        129
+      ],
+      "orders": [
+        8,
+        9
+      ],
+      "words": [
+        "OOOOOZ",
+        "OOOOOOZ"
+      ]
+    },
+    {
+      "N": 33,
+      "counts": [
+        99,
+        165
+      ],
+      "orders": [
+        9,
+        10
+      ],
+      "words": [
+        "ZZZZZOZ",
+        "ZZZZZOOZ"
+      ]
+    },
+    {
+      "N": 127,
+      "counts": [
+        319,
+        573
+      ],
+      "orders": [
+        10,
+        11
+      ],
+      "words": [
+        "OOOOOZOZ",
+        "OOOOOZOOZ"
+      ]
+    },
+    {
+      "N": 128,
+      "counts": [
+        257,
+        513
+      ],
+      "orders": [
+        10,
+        11
+      ],
+      "words": [
+        "OOOOOOOZ",
+        "OOOOOOOOZ"
+      ]
+    },
+    {
+      "N": 10000,
+      "counts": [
+        20591,
+        40591
+      ],
+      "orders": [
+        17,
+        18
+      ],
+      "words": [
+        "ZZOOOZZZZOOOOOZ",
+        "ZZOOOZZZZOOOOOOZ"
+      ]
+    }
+  ],
+  "endpoint_samples": [
+    {
+      "E": 1,
+      "N": 1,
+      "common_output_order": 10,
+      "counts": [
+        285,
+        287
+      ],
+      "extra_base_vertices": 0,
+      "source_order": 5
+    },
+    {
+      "E": 1,
+      "N": 1,
+      "common_output_order": 11,
+      "counts": [
+        663,
+        665
+      ],
+      "extra_base_vertices": 1,
+      "source_order": 6
+    },
+    {
+      "E": 1,
+      "N": 1,
+      "common_output_order": 12,
+      "counts": [
+        1635,
+        1637
+      ],
+      "extra_base_vertices": 2,
+      "source_order": 7
+    },
+    {
+      "E": 2,
+      "N": 2,
+      "common_output_order": 10,
+      "counts": [
+        345,
+        349
+      ],
+      "extra_base_vertices": 0,
+      "source_order": 5
+    },
+    {
+      "E": 2,
+      "N": 2,
+      "common_output_order": 11,
+      "counts": [
+        813,
+        817
+      ],
+      "extra_base_vertices": 1,
+      "source_order": 6
+    },
+    {
+      "E": 2,
+      "N": 2,
+      "common_output_order": 12,
+      "counts": [
+        1983,
+        1987
+      ],
+      "extra_base_vertices": 2,
+      "source_order": 7
+    },
+    {
+      "E": 3,
+      "N": 3,
+      "common_output_order": 10,
+      "counts": [
+        243,
+        249
+      ],
+      "extra_base_vertices": 0,
+      "source_order": 5
+    },
+    {
+      "E": 3,
+      "N": 3,
+      "common_output_order": 11,
+      "counts": [
+        549,
+        555
+      ],
+      "extra_base_vertices": 1,
+      "source_order": 6
+    },
+    {
+      "E": 3,
+      "N": 3,
+      "common_output_order": 12,
+      "counts": [
+        1287,
+        1293
+      ],
+      "extra_base_vertices": 2,
+      "source_order": 7
+    },
+    {
+      "E": 4,
+      "N": 4,
+      "common_output_order": 11,
+      "counts": [
+        951,
+        959
+      ],
+      "extra_base_vertices": 0,
+      "source_order": 6
+    },
+    {
+      "E": 4,
+      "N": 4,
+      "common_output_order": 12,
+      "counts": [
+        2283,
+        2291
+      ],
+      "extra_base_vertices": 1,
+      "source_order": 7
+    },
+    {
+      "E": 4,
+      "N": 4,
+      "common_output_order": 13,
+      "counts": [
+        5757,
+        5765
+      ],
+      "extra_base_vertices": 2,
+      "source_order": 8
+    },
+    {
+      "E": 5,
+      "N": 5,
+      "common_output_order": 11,
+      "counts": [
+        687,
+        697
+      ],
+      "extra_base_vertices": 0,
+      "source_order": 6
+    },
+    {
+      "E": 5,
+      "N": 5,
+      "common_output_order": 12,
+      "counts": [
+        1587,
+        1597
+      ],
+      "extra_base_vertices": 1,
+      "source_order": 7
+    },
+    {
+      "E": 5,
+      "N": 5,
+      "common_output_order": 13,
+      "counts": [
+        3873,
+        3883
+      ],
+      "extra_base_vertices": 2,
+      "source_order": 8
+    },
+    {
+      "E": 6,
+      "N": 6,
+      "common_output_order": 11,
+      "counts": [
+        837,
+        849
+      ],
+      "extra_base_vertices": 0,
+      "source_order": 6
+    },
+    {
+      "E": 6,
+      "N": 6,
+      "common_output_order": 12,
+      "counts": [
+        1935,
+        1947
+      ],
+      "extra_base_vertices": 1,
+      "source_order": 7
+    },
+    {
+      "E": 6,
+      "N": 6,
+      "common_output_order": 13,
+      "counts": [
+        4725,
+        4737
+      ],
+      "extra_base_vertices": 2,
+      "source_order": 8
+    },
+    {
+      "E": 7,
+      "N": 7,
+      "common_output_order": 11,
+      "counts": [
+        483,
+        497
+      ],
+      "extra_base_vertices": 0,
+      "source_order": 6
+    },
+    {
+      "E": 7,
+      "N": 7,
+      "common_output_order": 12,
+      "counts": [
+        1077,
+        1091
+      ],
+      "extra_base_vertices": 1,
+      "source_order": 7
+    },
+    {
+      "E": 7,
+      "N": 7,
+      "common_output_order": 13,
+      "counts": [
+        2535,
+        2549
+      ],
+      "extra_base_vertices": 2,
+      "source_order": 8
+    },
+    {
+      "E": 8,
+      "N": 8,
+      "common_output_order": 12,
+      "counts": [
+        2595,
+        2611
+      ],
+      "extra_base_vertices": 0,
+      "source_order": 7
+    },
+    {
+      "E": 8,
+      "N": 8,
+      "common_output_order": 13,
+      "counts": [
+        6411,
+        6427
+      ],
+      "extra_base_vertices": 1,
+      "source_order": 8
+    },
+    {
+      "E": 8,
+      "N": 8,
+      "common_output_order": 14,
+      "counts": [
+        16653,
+        16669
+      ],
+      "extra_base_vertices": 2,
+      "source_order": 9
+    },
+    {
+      "E": 9,
+      "N": 9,
+      "common_output_order": 12,
+      "counts": [
+        1845,
+        1863
+      ],
+      "extra_base_vertices": 0,
+      "source_order": 7
+    },
+    {
+      "E": 9,
+      "N": 9,
+      "common_output_order": 13,
+      "counts": [
+        4437,
+        4455
+      ],
+      "extra_base_vertices": 1,
+      "source_order": 8
+    },
+    {
+      "E": 9,
+      "N": 9,
+      "common_output_order": 14,
+      "counts": [
+        11259,
+        11277
+      ],
+      "extra_base_vertices": 2,
+      "source_order": 9
+    },
+    {
+      "E": 10,
+      "N": 10,
+      "common_output_order": 12,
+      "counts": [
+        2247,
+        2267
+      ],
+      "extra_base_vertices": 0,
+      "source_order": 7
+    },
+    {
+      "E": 10,
+      "N": 10,
+      "common_output_order": 13,
+      "counts": [
+        5379,
+        5399
+      ],
+      "extra_base_vertices": 1,
+      "source_order": 8
+    },
+    {
+      "E": 10,
+      "N": 10,
+      "common_output_order": 14,
+      "counts": [
+        13605,
+        13625
+      ],
+      "extra_base_vertices": 2,
+      "source_order": 9
+    },
+    {
+      "E": 11,
+      "N": 11,
+      "common_output_order": 12,
+      "counts": [
+        1335,
+        1357
+      ],
+      "extra_base_vertices": 0,
+      "source_order": 7
+    },
+    {
+      "E": 11,
+      "N": 11,
+      "common_output_order": 13,
+      "counts": [
+        3099,
+        3121
+      ],
+      "extra_base_vertices": 1,
+      "source_order": 8
+    },
+    {
+      "E": 11,
+      "N": 11,
+      "common_output_order": 14,
+      "counts": [
+        7617,
+        7639
+      ],
+      "extra_base_vertices": 2,
+      "source_order": 9
+    },
+    {
+      "E": 12,
+      "N": 12,
+      "common_output_order": 12,
+      "counts": [
+        2547,
+        2571
+      ],
+      "extra_base_vertices": 0,
+      "source_order": 7
+    },
+    {
+      "E": 12,
+      "N": 12,
+      "common_output_order": 13,
+      "counts": [
+        6057,
+        6081
+      ],
+      "extra_base_vertices": 1,
+      "source_order": 8
+    },
+    {
+      "E": 12,
+      "N": 12,
+      "common_output_order": 14,
+      "counts": [
+        15255,
+        15279
+      ],
+      "extra_base_vertices": 2,
+      "source_order": 9
+    }
+  ],
+  "status": "PASS",
+  "suffix_all_roots_sources_through_order4": 285,
+  "suffix_rows": [
+    [
+      9,
+      -3,
+      9,
+      0
+    ],
+    [
+      9,
+      -1,
+      9,
+      0
+    ]
+  ]
+}

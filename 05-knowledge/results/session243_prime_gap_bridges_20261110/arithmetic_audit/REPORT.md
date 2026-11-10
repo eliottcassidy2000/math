@@ -191,5 +191,20 @@ From this directory:
     python3 -I -B replay.py > REPLAY.json
 
 `replay.py` also checks the producer outputs and the pinned Git objects.
-No producer source was edited by this audit. No commits or pushes were made
-by the auditor; publication belongs to the parent session.
+The original Brown and provenance proof/verifier sources were not edited by
+this audit. The final condensed-canon review made the two corrections below.
+No commits or pushes were made by the auditor; publication belongs to the
+parent session.
+
+## Final condensed-canon review
+
+`01-canon/theorems/THM-5110-primorial-crossing-gap-repair-and-brown-prime-power-inverse.md`
+is **ACCEPTED** against the same audited proofs. Two narrow edits were made
+in this final review: the fixed-offset proposition now expressly requires
+integer `d>1` and positive integer `c`, and the closing disclaimer names
+prime-gap infinitude/density instead of denying every possible asymptotic
+statement (the proposition itself establishes eventual compositeness).
+No mathematical content beyond the accepted proof was introduced.
+
+Reviewed canon SHA-256:
+`c280cdba88123cc9342cc6ae7d571cb010b6d7b3afc83fd03954e9035b928d8c`.

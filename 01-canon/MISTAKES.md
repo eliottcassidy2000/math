@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-10: Session243 prime-gap and physical-lift controls
+
+- **Failed bridge, not a retraction of the inherited offset definitions:** equal Fortunate and lesser-Fortunate offsets do not alone certify consecutive primes. At P_6=30030, offsets ±17 give primes 30013 and 30047, but 30029 intervenes. The actual crossing gap is 18, not 34.
+- **Exact repair:** retain primality of P_n±1. These are precisely the only potentially intervening primes when the two least offsets strictly larger than one agree. The fixed-offset divisibility obstruction also needs a proper divisor: P_2−3=3 is the equality boundary.
+- **Corrected during this session, before theorem publication:** the primorial-plus-one obstruction belongs to the synchronized transitive window and the genuine unit-intercept graft subfamily. It does not hold for arbitrary fixed-root grafts: a source with (a,b)=(-5,18) and singleton gadget gives 31=30+1. The product formula for the retained-root family is stated for a nonempty graft word; the empty word has the original count D.
+- **Lost coordinates:** roughness does not retain Brown prime-power signs, and even the complete sign packet proves divisibility rather than equality. At n=4, m=23 passes the full packet but (m²−1)/4!=22. A 49-path tournament does not justify extracting a 7-path tournament.
+- **Survivors and obligation:** THM-5110/5111/5112 prove the repaired arithmetic inverse, synchronized physical outputs and compact prescribed-gap pair. Universal all-even-gap existence was already proved in Sessions199/221. Neither those gaps nor the new size bound place an arbitrary prescribed target in the path-count spectrum. [Proofs, independent audits and reproduction](../05-knowledge/results/session243_prime_gap_bridges_20261110/README.md).
+
 ## 2026-11-09: First-creator generation scope, orientation and recovered priority
 
 - **Initial source:** THM-4942 / `first_creator_generation_20261108` at f870c2abf. x_a=[a->v] was confused with its complementary beaten set; existential parent-per-value evidence was promoted to every class; finite strong-first-birth evidence was written globally. The old edge a->b with x={a} is a neutral prefix, not a suffix.

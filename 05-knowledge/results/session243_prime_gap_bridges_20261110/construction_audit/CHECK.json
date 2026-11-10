@@ -1,0 +1,346 @@
+{
+  "accidental_Euclid_output_not_unit_intercept": {
+    "actual_H": 31,
+    "genuine_intercept": -5,
+    "primorial": 30,
+    "root": 3,
+    "source_ab": [
+      -5,
+      18
+    ],
+    "source_rows": [
+      20,
+      1,
+      2,
+      7,
+      14
+    ],
+    "strong": true,
+    "transitive_gadget_order": 1
+  },
+  "all_source_order_le4_all_roots_gadget_order_le3": 3135,
+  "bank_all_labelled_gadgets_through5": {
+    "gadgets": 1099,
+    "grafts": 4396,
+    "receipt_sha256": "5ac5106b380e21cff1432f30955ebc1200c9cd514986d36a4c6b570ed8ad71ab"
+  },
+  "boundary_hostiles": {
+    "empty_gadget": {
+      "actual": 5,
+      "false_a_plus_b": 7
+    },
+    "reroot": {
+      "new_root_ab": [
+        5,
+        9
+      ],
+      "retained_root_ab": [
+        1,
+        12
+      ]
+    },
+    "sink_padding": {
+      "H_after": 13,
+      "H_before": 13,
+      "strong_after": false
+    }
+  },
+  "independent_methods": [
+    "first-vertex subset recurrence",
+    "literal permutations on all subsets",
+    "mandatory/optional B-run slots"
+  ],
+  "literal_output_permutation_checks": 8,
+  "nested_controls": [
+    {
+      "H_product": 3,
+      "Q_product": 96,
+      "root": 3,
+      "seed": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "state": [
+        573,
+        3,
+        579,
+        3
+      ]
+    },
+    {
+      "H_product": 3,
+      "Q_product": 96,
+      "root": 2,
+      "seed": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "state": [
+        579,
+        9,
+        585,
+        9
+      ]
+    },
+    {
+      "H_product": 3,
+      "Q_product": 96,
+      "root": 1,
+      "seed": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "state": [
+        585,
+        9,
+        585,
+        9
+      ]
+    },
+    {
+      "H_product": 3,
+      "Q_product": 96,
+      "root": 2,
+      "seed": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "state": [
+        591,
+        15,
+        591,
+        15
+      ]
+    }
+  ],
+  "seeds": [
+    {
+      "ab": [
+        -1,
+        6
+      ],
+      "root": 3,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "run_coefficients": [
+        11,
+        6
+      ],
+      "state": [
+        5,
+        1,
+        7,
+        1
+      ]
+    },
+    {
+      "ab": [
+        1,
+        6
+      ],
+      "root": 2,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "run_coefficients": [
+        13,
+        6
+      ],
+      "state": [
+        5,
+        1,
+        9,
+        3
+      ]
+    },
+    {
+      "ab": [
+        3,
+        6
+      ],
+      "root": 1,
+      "rows": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "run_coefficients": [
+        15,
+        6
+      ],
+      "state": [
+        9,
+        3,
+        9,
+        3
+      ]
+    },
+    {
+      "ab": [
+        5,
+        6
+      ],
+      "root": 2,
+      "rows": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "run_coefficients": [
+        17,
+        6
+      ],
+      "state": [
+        9,
+        3,
+        11,
+        5
+      ]
+    }
+  ],
+  "status": "PASS",
+  "transitive_controls": [
+    {
+      "H_values": [
+        11,
+        13,
+        15,
+        17
+      ],
+      "m": 1,
+      "orders": [
+        5,
+        5,
+        6,
+        6
+      ]
+    },
+    {
+      "H_values": [
+        23,
+        25,
+        27,
+        29
+      ],
+      "m": 2,
+      "orders": [
+        6,
+        6,
+        7,
+        7
+      ]
+    },
+    {
+      "H_values": [
+        47,
+        49,
+        51,
+        53
+      ],
+      "m": 3,
+      "orders": [
+        7,
+        7,
+        8,
+        8
+      ]
+    },
+    {
+      "H_values": [
+        95,
+        97,
+        99,
+        101
+      ],
+      "m": 4,
+      "orders": [
+        8,
+        8,
+        9,
+        9
+      ]
+    },
+    {
+      "H_values": [
+        191,
+        193,
+        195,
+        197
+      ],
+      "m": 5,
+      "orders": [
+        9,
+        9,
+        10,
+        10
+      ]
+    },
+    {
+      "H_values": [
+        383,
+        385,
+        387,
+        389
+      ],
+      "m": 6,
+      "orders": [
+        10,
+        10,
+        11,
+        11
+      ]
+    },
+    {
+      "H_values": [
+        767,
+        769,
+        771,
+        773
+      ],
+      "m": 7,
+      "orders": [
+        11,
+        11,
+        12,
+        12
+      ]
+    },
+    {
+      "H_values": [
+        1535,
+        1537,
+        1539,
+        1541
+      ],
+      "m": 8,
+      "orders": [
+        12,
+        12,
+        13,
+        13
+      ]
+    }
+  ],
+  "unit_gadget_controls": 1099
+}

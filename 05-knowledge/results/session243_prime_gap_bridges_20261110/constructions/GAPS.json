@@ -1,0 +1,920 @@
+{
+  "cheap_graph_checks": [
+    {
+      "D": 1,
+      "N": 1,
+      "lower": 3,
+      "orders": [
+        3,
+        4
+      ],
+      "source_word": "",
+      "upper": 5
+    },
+    {
+      "D": 1,
+      "N": 2,
+      "lower": 5,
+      "orders": [
+        4,
+        5
+      ],
+      "source_word": "O",
+      "upper": 9
+    },
+    {
+      "D": 3,
+      "N": 3,
+      "lower": 9,
+      "orders": [
+        5,
+        6
+      ],
+      "source_word": "ZO",
+      "upper": 15
+    },
+    {
+      "D": 1,
+      "N": 4,
+      "lower": 9,
+      "orders": [
+        5,
+        6
+      ],
+      "source_word": "OO",
+      "upper": 17
+    },
+    {
+      "D": 5,
+      "N": 5,
+      "lower": 15,
+      "orders": [
+        6,
+        7
+      ],
+      "source_word": "ZZO",
+      "upper": 25
+    },
+    {
+      "D": 3,
+      "N": 6,
+      "lower": 15,
+      "orders": [
+        6,
+        7
+      ],
+      "source_word": "ZOO",
+      "upper": 27
+    },
+    {
+      "D": 5,
+      "N": 7,
+      "lower": 19,
+      "orders": [
+        6,
+        7
+      ],
+      "source_word": "OZO",
+      "upper": 33
+    },
+    {
+      "D": 1,
+      "N": 8,
+      "lower": 17,
+      "orders": [
+        6,
+        7
+      ],
+      "source_word": "OOO",
+      "upper": 33
+    },
+    {
+      "D": 9,
+      "N": 9,
+      "lower": 27,
+      "orders": [
+        7,
+        8
+      ],
+      "source_word": "ZZZO",
+      "upper": 45
+    },
+    {
+      "D": 5,
+      "N": 10,
+      "lower": 25,
+      "orders": [
+        7,
+        8
+      ],
+      "source_word": "ZZOO",
+      "upper": 45
+    },
+    {
+      "D": 9,
+      "N": 11,
+      "lower": 31,
+      "orders": [
+        7,
+        8
+      ],
+      "source_word": "ZOZO",
+      "upper": 53
+    },
+    {
+      "D": 3,
+      "N": 12,
+      "lower": 27,
+      "orders": [
+        7,
+        8
+      ],
+      "source_word": "ZOOO",
+      "upper": 51
+    },
+    {
+      "D": 11,
+      "N": 13,
+      "lower": 37,
+      "orders": [
+        7,
+        8
+      ],
+      "source_word": "OZZO",
+      "upper": 63
+    },
+    {
+      "D": 5,
+      "N": 14,
+      "lower": 33,
+      "orders": [
+        7,
+        8
+      ],
+      "source_word": "OZOO",
+      "upper": 61
+    },
+    {
+      "D": 9,
+      "N": 15,
+      "lower": 39,
+      "orders": [
+        7,
+        8
+      ],
+      "source_word": "OOZO",
+      "upper": 69
+    },
+    {
+      "D": 1,
+      "N": 16,
+      "lower": 33,
+      "orders": [
+        7,
+        8
+      ],
+      "source_word": "OOOO",
+      "upper": 65
+    },
+    {
+      "D": 17,
+      "N": 17,
+      "lower": 51,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "ZZZZO",
+      "upper": 85
+    },
+    {
+      "D": 9,
+      "N": 18,
+      "lower": 45,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "ZZZOO",
+      "upper": 81
+    },
+    {
+      "D": 15,
+      "N": 19,
+      "lower": 53,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "ZZOZO",
+      "upper": 91
+    },
+    {
+      "D": 5,
+      "N": 20,
+      "lower": 45,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "ZZOOO",
+      "upper": 85
+    },
+    {
+      "D": 19,
+      "N": 21,
+      "lower": 61,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "ZOZZO",
+      "upper": 103
+    },
+    {
+      "D": 9,
+      "N": 22,
+      "lower": 53,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "ZOZOO",
+      "upper": 97
+    },
+    {
+      "D": 15,
+      "N": 23,
+      "lower": 61,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "ZOOZO",
+      "upper": 107
+    },
+    {
+      "D": 3,
+      "N": 24,
+      "lower": 51,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "ZOOOO",
+      "upper": 99
+    },
+    {
+      "D": 23,
+      "N": 25,
+      "lower": 73,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "OZZZO",
+      "upper": 123
+    },
+    {
+      "D": 11,
+      "N": 26,
+      "lower": 63,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "OZZOO",
+      "upper": 115
+    },
+    {
+      "D": 19,
+      "N": 27,
+      "lower": 73,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "OZOZO",
+      "upper": 127
+    },
+    {
+      "D": 5,
+      "N": 28,
+      "lower": 61,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "OZOOO",
+      "upper": 117
+    },
+    {
+      "D": 23,
+      "N": 29,
+      "lower": 81,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "OOZZO",
+      "upper": 139
+    },
+    {
+      "D": 9,
+      "N": 30,
+      "lower": 69,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "OOZOO",
+      "upper": 129
+    },
+    {
+      "D": 17,
+      "N": 31,
+      "lower": 79,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "OOOZO",
+      "upper": 141
+    },
+    {
+      "D": 1,
+      "N": 32,
+      "lower": 65,
+      "orders": [
+        8,
+        9
+      ],
+      "source_word": "OOOOO",
+      "upper": 129
+    },
+    {
+      "D": 33,
+      "N": 33,
+      "lower": 99,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZZZZZO",
+      "upper": 165
+    },
+    {
+      "D": 17,
+      "N": 34,
+      "lower": 85,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZZZZOO",
+      "upper": 153
+    },
+    {
+      "D": 27,
+      "N": 35,
+      "lower": 97,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZZZOZO",
+      "upper": 167
+    },
+    {
+      "D": 9,
+      "N": 36,
+      "lower": 81,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZZZOOO",
+      "upper": 153
+    },
+    {
+      "D": 33,
+      "N": 37,
+      "lower": 107,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZZOZZO",
+      "upper": 181
+    },
+    {
+      "D": 15,
+      "N": 38,
+      "lower": 91,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZZOZOO",
+      "upper": 167
+    },
+    {
+      "D": 25,
+      "N": 39,
+      "lower": 103,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZZOOZO",
+      "upper": 181
+    },
+    {
+      "D": 5,
+      "N": 40,
+      "lower": 85,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZZOOOO",
+      "upper": 165
+    },
+    {
+      "D": 39,
+      "N": 41,
+      "lower": 121,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZOZZZO",
+      "upper": 203
+    },
+    {
+      "D": 19,
+      "N": 42,
+      "lower": 103,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZOZZOO",
+      "upper": 187
+    },
+    {
+      "D": 31,
+      "N": 43,
+      "lower": 117,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZOZOZO",
+      "upper": 203
+    },
+    {
+      "D": 9,
+      "N": 44,
+      "lower": 97,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZOZOOO",
+      "upper": 185
+    },
+    {
+      "D": 37,
+      "N": 45,
+      "lower": 127,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZOOZZO",
+      "upper": 217
+    },
+    {
+      "D": 15,
+      "N": 46,
+      "lower": 107,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZOOZOO",
+      "upper": 199
+    },
+    {
+      "D": 27,
+      "N": 47,
+      "lower": 121,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZOOOZO",
+      "upper": 215
+    },
+    {
+      "D": 3,
+      "N": 48,
+      "lower": 99,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "ZOOOOO",
+      "upper": 195
+    },
+    {
+      "D": 47,
+      "N": 49,
+      "lower": 145,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OZZZZO",
+      "upper": 243
+    },
+    {
+      "D": 23,
+      "N": 50,
+      "lower": 123,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OZZZOO",
+      "upper": 223
+    },
+    {
+      "D": 37,
+      "N": 51,
+      "lower": 139,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OZZOZO",
+      "upper": 241
+    },
+    {
+      "D": 11,
+      "N": 52,
+      "lower": 115,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OZZOOO",
+      "upper": 219
+    },
+    {
+      "D": 45,
+      "N": 53,
+      "lower": 151,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OZOZZO",
+      "upper": 257
+    },
+    {
+      "D": 19,
+      "N": 54,
+      "lower": 127,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OZOZOO",
+      "upper": 235
+    },
+    {
+      "D": 33,
+      "N": 55,
+      "lower": 143,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OZOOZO",
+      "upper": 253
+    },
+    {
+      "D": 5,
+      "N": 56,
+      "lower": 117,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OZOOOO",
+      "upper": 229
+    },
+    {
+      "D": 51,
+      "N": 57,
+      "lower": 165,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OOZZZO",
+      "upper": 279
+    },
+    {
+      "D": 23,
+      "N": 58,
+      "lower": 139,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OOZZOO",
+      "upper": 255
+    },
+    {
+      "D": 39,
+      "N": 59,
+      "lower": 157,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OOZOZO",
+      "upper": 275
+    },
+    {
+      "D": 9,
+      "N": 60,
+      "lower": 129,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OOZOOO",
+      "upper": 249
+    },
+    {
+      "D": 47,
+      "N": 61,
+      "lower": 169,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OOOZZO",
+      "upper": 291
+    },
+    {
+      "D": 17,
+      "N": 62,
+      "lower": 141,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OOOZOO",
+      "upper": 265
+    },
+    {
+      "D": 33,
+      "N": 63,
+      "lower": 159,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OOOOZO",
+      "upper": 285
+    },
+    {
+      "D": 1,
+      "N": 64,
+      "lower": 129,
+      "orders": [
+        9,
+        10
+      ],
+      "source_word": "OOOOOO",
+      "upper": 257
+    }
+  ],
+  "cheap_integer_inverse_targets": 10000,
+  "endpoint_literal_pairs": [
+    {
+      "N": 1,
+      "common_order": 10,
+      "extra": 0,
+      "lower": 285,
+      "source_rows": [
+        6,
+        28,
+        8,
+        1,
+        13
+      ],
+      "source_state": [
+        9,
+        1,
+        23,
+        5
+      ],
+      "upper": 287
+    },
+    {
+      "N": 2,
+      "common_order": 10,
+      "extra": 0,
+      "lower": 345,
+      "source_rows": [
+        6,
+        12,
+        24,
+        1,
+        11
+      ],
+      "source_state": [
+        13,
+        2,
+        26,
+        5
+      ],
+      "upper": 349
+    },
+    {
+      "N": 3,
+      "common_order": 10,
+      "extra": 0,
+      "lower": 243,
+      "source_rows": [
+        6,
+        28,
+        24,
+        1,
+        9
+      ],
+      "source_state": [
+        11,
+        3,
+        17,
+        5
+      ],
+      "upper": 249
+    },
+    {
+      "N": 7,
+      "common_order": 11,
+      "extra": 0,
+      "lower": 483,
+      "source_rows": [
+        14,
+        60,
+        56,
+        48,
+        1,
+        17
+      ],
+      "source_state": [
+        23,
+        7,
+        33,
+        9
+      ],
+      "upper": 497
+    },
+    {
+      "N": 13,
+      "common_order": 12,
+      "extra": 0,
+      "lower": 1635,
+      "source_rows": [
+        30,
+        124,
+        56,
+        112,
+        96,
+        1,
+        37
+      ],
+      "source_state": [
+        77,
+        13,
+        109,
+        17
+      ],
+      "upper": 1661
+    },
+    {
+      "N": 21,
+      "common_order": 13,
+      "extra": 0,
+      "lower": 4365,
+      "source_rows": [
+        62,
+        252,
+        120,
+        240,
+        96,
+        192,
+        1,
+        85
+      ],
+      "source_state": [
+        187,
+        21,
+        305,
+        33
+      ],
+      "upper": 4407
+    },
+    {
+      "N": 1,
+      "common_order": 11,
+      "extra": 1,
+      "lower": 663,
+      "source_rows": [
+        14,
+        60,
+        24,
+        16,
+        1,
+        29
+      ],
+      "source_state": [
+        15,
+        1,
+        59,
+        9
+      ],
+      "upper": 665
+    },
+    {
+      "N": 1,
+      "common_order": 12,
+      "extra": 2,
+      "lower": 1635,
+      "source_rows": [
+        30,
+        124,
+        56,
+        48,
+        32,
+        1,
+        61
+      ],
+      "source_state": [
+        27,
+        1,
+        155,
+        17
+      ],
+      "upper": 1637
+    },
+    {
+      "N": 7,
+      "common_order": 12,
+      "extra": 1,
+      "lower": 1077,
+      "source_rows": [
+        30,
+        124,
+        120,
+        112,
+        32,
+        1,
+        49
+      ],
+      "source_state": [
+        39,
+        7,
+        83,
+        17
+      ],
+      "upper": 1091
+    }
+  ],
+  "one_letter_literal_state_checks": 855,
+  "scope": "Even differences of attainable total counts, not prime pairs, consecutive attainable values, or arbitrary targets.",
+  "status": "PASS",
+  "universal_row_pair_absent_for_both_word_lengths_at_most": 4,
+  "universal_word_rows": {
+    "JOJOZ": [
+      9,
+      -3,
+      9,
+      0
+    ],
+    "JOOOZ": [
+      9,
+      -1,
+      9,
+      0
+    ]
+  }
+}

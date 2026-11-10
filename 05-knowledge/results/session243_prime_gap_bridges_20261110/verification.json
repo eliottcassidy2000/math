@@ -1,0 +1,151 @@
+{
+  "arithmetic_replay_sha256": "35e24cfbf07ffc40a9e870272dece90aa2c948b9cab482201c9dfba232132371",
+  "negative_controls": 26,
+  "physical_replays": [
+    {
+      "exit_code": 0,
+      "negative_control": false,
+      "optimized": false,
+      "script": "constructions/verify.py",
+      "stdout_sha256": "c36de45d92085bbf7c093df8586dafe357177b774ec58b3acd093a9531cb1e6b"
+    },
+    {
+      "exit_code": 1,
+      "negative_control": true,
+      "optimized": false,
+      "script": "constructions/verify.py",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "negative_control": false,
+      "optimized": true,
+      "script": "constructions/verify.py",
+      "stdout_sha256": "c36de45d92085bbf7c093df8586dafe357177b774ec58b3acd093a9531cb1e6b"
+    },
+    {
+      "exit_code": 1,
+      "negative_control": true,
+      "optimized": true,
+      "script": "constructions/verify.py",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "negative_control": false,
+      "optimized": false,
+      "script": "constructions/verify_gaps.py",
+      "stdout_sha256": "ed9b5fcf52e5896e5951b802dad45224e8faf23a6211ab5a5c3b96c21ecf41f7"
+    },
+    {
+      "exit_code": 1,
+      "negative_control": true,
+      "optimized": false,
+      "script": "constructions/verify_gaps.py",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "negative_control": false,
+      "optimized": true,
+      "script": "constructions/verify_gaps.py",
+      "stdout_sha256": "ed9b5fcf52e5896e5951b802dad45224e8faf23a6211ab5a5c3b96c21ecf41f7"
+    },
+    {
+      "exit_code": 1,
+      "negative_control": true,
+      "optimized": true,
+      "script": "constructions/verify_gaps.py",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "negative_control": false,
+      "optimized": false,
+      "script": "construction_audit/verify_independent.py",
+      "stdout_sha256": "ee69dff376fb97996185b949771cc622890c1ebf30325c2193409362406cf5a3"
+    },
+    {
+      "exit_code": 1,
+      "negative_control": true,
+      "optimized": false,
+      "script": "construction_audit/verify_independent.py",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "negative_control": false,
+      "optimized": true,
+      "script": "construction_audit/verify_independent.py",
+      "stdout_sha256": "ee69dff376fb97996185b949771cc622890c1ebf30325c2193409362406cf5a3"
+    },
+    {
+      "exit_code": 1,
+      "negative_control": true,
+      "optimized": true,
+      "script": "construction_audit/verify_independent.py",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "negative_control": false,
+      "optimized": false,
+      "script": "construction_audit/verify_gaps_independent.py",
+      "stdout_sha256": "13b9c3867f0b88ad2d5ab38ae99ecd0af5a9a83f71b5d79f663faf8daa1a36dc"
+    },
+    {
+      "exit_code": 1,
+      "negative_control": true,
+      "optimized": false,
+      "script": "construction_audit/verify_gaps_independent.py",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "negative_control": false,
+      "optimized": true,
+      "script": "construction_audit/verify_gaps_independent.py",
+      "stdout_sha256": "13b9c3867f0b88ad2d5ab38ae99ecd0af5a9a83f71b5d79f663faf8daa1a36dc"
+    },
+    {
+      "exit_code": 1,
+      "negative_control": true,
+      "optimized": true,
+      "script": "construction_audit/verify_gaps_independent.py",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "negative_control": false,
+      "optimized": false,
+      "script": "construction_audit/verify_arithmetic_independent.py",
+      "stdout_sha256": "fe732bb6c2aba0783821421f4ea193ab8f09ad294aae41f193dbc9766eb84c9d"
+    },
+    {
+      "exit_code": 1,
+      "negative_control": true,
+      "optimized": false,
+      "script": "construction_audit/verify_arithmetic_independent.py",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "negative_control": false,
+      "optimized": true,
+      "script": "construction_audit/verify_arithmetic_independent.py",
+      "stdout_sha256": "fe732bb6c2aba0783821421f4ea193ab8f09ad294aae41f193dbc9766eb84c9d"
+    },
+    {
+      "exit_code": 1,
+      "negative_control": true,
+      "optimized": true,
+      "script": "construction_audit/verify_arithmetic_independent.py",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "physical_source_pin_file_sha256": "137e273a4df4606bdf58ff2ccc62db2620634cd4916a46746bf5e64703ca9079",
+  "physical_source_pins_verified": 25,
+  "positive_replays": 16,
+  "scope": "Exact finite replays supplement the stated proofs; no global coverage or prime infinitude claim.",
+  "status": "PASS"
+}

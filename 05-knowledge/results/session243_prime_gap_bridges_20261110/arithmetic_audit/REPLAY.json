@@ -10,7 +10,7 @@
     },
     {
       "path": "provenance/PROOF.md",
-      "sha256": "9e657d14b5855efa6e5a71462c33955c6cc8e29971df33626cd5e3fc79037465"
+      "sha256": "15f87309def1e0ec66fe5d09352b374ec9e3ffed251e968fb361e5e42daf5509"
     },
     {
       "path": "provenance/verify.py",

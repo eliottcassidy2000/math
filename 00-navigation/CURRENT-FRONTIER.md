@@ -194,7 +194,7 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
-[S237](S237.md), [S241](S241.md), [S242](S242.md): OPEN.
+[S241](S241.md), [S242](S242.md), [S243](S243.md): OPEN.
 - [Exact U5-free capacity](../05-knowledge/results/ramsey_neighbourhood_lifts_20261030/README.md).
 - [67](S67.md);[68](S68.md);[69](S69.md);[70](S70.md);[71](S71.md);[72](S72.md);[73](S73.md);[74](S74.md);[HN](HN.md);[Twists](../05-knowledge/results/twist_conductor_reverse_20261025/README.md);[Unnamed](../05-knowledge/results/unnamed_carrier_dissection_20261026/README.md).
 - [Six/seven routes](START-HERE.md); [Divisor/F1](../05-knowledge/results/reflection_bridge_20261025/README.md); [Arithmetic/F1](../05-knowledge/results/normseven_arithmetic_f1_20261026/README.md): Gale twists, THM-4773 repaired to 0/8/infinite, conic norms, prime3 inertia. Integer squares OPEN.

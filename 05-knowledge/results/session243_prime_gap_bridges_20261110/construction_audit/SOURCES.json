@@ -1,0 +1,139 @@
+{
+  "base_commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+  "canon_files_reviewed": [
+    {
+      "path": "01-canon/theorems/THM-5111-synchronized-strong-graft-windows-and-prime-euclid-boundary.md",
+      "sha256": "3af263eff052ddcaf1a804759cb15e8fe6e2a2db74afa5ac4dc09ff2ef7db134"
+    },
+    {
+      "path": "01-canon/theorems/THM-5112-compact-strong-vertex-increments-and-endpoint-gap-compiler.md",
+      "sha256": "cbfe328f67786e13385e74f3625fae9bb26ecacfa4599c5c6441081a8cd993e8"
+    }
+  ],
+  "inherited_sources": [
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "05-knowledge/results/session225_graft_recovery_20261108/PROOF.md",
+      "sha256": "f521b85b95c593d8c51e8122eff770b1b2a1ff449504f2cf1afa64f6dd522479"
+    },
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "05-knowledge/results/session226_structural_continuation_20261108/graft/PROOF.md",
+      "sha256": "ebb93392b7230ecae282371cb486478acf623d40916da6a025a7101f2c32125d"
+    },
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "05-knowledge/results/session226_structural_continuation_20261108/strong_grafts/PROOF.md",
+      "sha256": "f13169452635a695e4e5a9bd5c95a5e597ece3d7d63bc7391189e889d12a0839"
+    },
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "05-knowledge/results/session227_chan_pak_constructions_20261108/multiroot/PROOF.md",
+      "sha256": "f33bdeedb26b43f883a9ee27458968cf3571dfb656f7455dbc80bd977dd9b433"
+    },
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "05-knowledge/results/session229_combined_constructions_20261109/inverse/PROOF.md",
+      "sha256": "1912c98719fa007bfab72811e98c2edba01a90e56f7ba87c7fb5ceef8428fbf5"
+    },
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "session199/physical-interpolation/PROOF.md",
+      "sha256": "bdcada6cebd621f57cd0f4a7e5323b21da2343e86eb095e870174618f72fa7c9"
+    },
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "session199/physical-interpolation/README.md",
+      "sha256": "e9001b878b6a26b1775b97f878c57859fa22fa76afca3da22dc211128781faf2"
+    },
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "session199/physical-interpolation/audit/INDEPENDENT.json",
+      "sha256": "69021ef587be6121b93c35fb88edeb7effd8c37b84207c0296bfe955f365d60b"
+    },
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "05-knowledge/results/session221_computation_to_construction_20261107/README.md",
+      "sha256": "0b27452cf35ad4784cabcfb0672713729f17442d84c7377fbc01feb0d7ae9ea0"
+    },
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "05-knowledge/results/apex_wedge_constructor_20261103/THEORY.md",
+      "sha256": "67232eb30059e1bef39bbf1a79c465ad8f72e73ca6067c8a7372ebde8c12476e"
+    },
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "05-knowledge/results/kps_s20_dyadic_cones_pillai_20261109/PREREGISTRATION.md",
+      "sha256": "4454f5ebb5d659213f97e9907dec43673d15dd5140ac0403c99b763ca359f24b"
+    },
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "01-canon/theorems/THM-5001-every-positive-endpoint-quotient-has-a-small-strong-realizer.md",
+      "sha256": "4b98b7721aca0849867b498b9b618b4d12218f79c76176c021c8d84914f52fa3"
+    },
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "01-canon/theorems/THM-4876-deletion-and-flip-increments-of-the-hamiltonian-path-count-an-increment-of-two-forces-at-most-three-paths-the-increment-ladder-thm-013-for-all-orders-and-what-extension-spectra-forbid-for-chan-pak.md",
+      "sha256": "3efbe4a2bf4d5bf1e846e027ae4f069d47abbb40062cfc47bad64214f785968e"
+    },
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "01-canon/theorems/THM-5107-physical-graft-content-excludes-cofactor-seven.md",
+      "sha256": "ad1ff3168bde1724d46897d33b273a05506090f046365b4420487f8e2502e74a"
+    },
+    {
+      "access": "git object; some paths absent from sparse filesystem",
+      "commit": "9332291ed45937bfd949b10111a59246cdc201f4",
+      "path": "01-canon/theorems/THM-5109-dyadic-cones-transitive-gadget-table-and-the-pillai-chain-law.md",
+      "sha256": "ab66896cc566d97660b9131a3f0f4916d59cd5276c748307fa9774c344ebb903"
+    }
+  ],
+  "producer_files_reviewed": [
+    {
+      "path": "05-knowledge/results/session243_prime_gap_bridges_20261110/constructions/CHECK.json",
+      "sha256": "c36de45d92085bbf7c093df8586dafe357177b774ec58b3acd093a9531cb1e6b"
+    },
+    {
+      "path": "05-knowledge/results/session243_prime_gap_bridges_20261110/constructions/GAPS.json",
+      "sha256": "ed9b5fcf52e5896e5951b802dad45224e8faf23a6211ab5a5c3b96c21ecf41f7"
+    },
+    {
+      "path": "05-knowledge/results/session243_prime_gap_bridges_20261110/constructions/GAP_UNIVERSALITY.md",
+      "sha256": "9bdd07d6d11257d3fd832b60c876a70eb9139c9ff2365bca66e3a9f8bc534ce0"
+    },
+    {
+      "path": "05-knowledge/results/session243_prime_gap_bridges_20261110/constructions/PROOF.md",
+      "sha256": "789215b1149e9a2b9537d0bdc4c87f7c387e87ef9905b8cbe37c6c4ecd81fc29"
+    },
+    {
+      "path": "05-knowledge/results/session243_prime_gap_bridges_20261110/constructions/README.md",
+      "sha256": "b034bd023527c6cec70b8124a1dc1d49ac4f5a2eb486ce5adfa49f04e8e6e896"
+    },
+    {
+      "path": "05-knowledge/results/session243_prime_gap_bridges_20261110/constructions/SHA256SUMS",
+      "sha256": "6d7686e948a797b5bc577b2ce409278ee051df873f9cdb61b0a2bf670d871cf8"
+    },
+    {
+      "path": "05-knowledge/results/session243_prime_gap_bridges_20261110/constructions/verify.py",
+      "sha256": "2a60bae60cef6275109347c783cb5f0265684c92efcd8593360337d0d4eab9dd"
+    },
+    {
+      "path": "05-knowledge/results/session243_prime_gap_bridges_20261110/constructions/verify_gaps.py",
+      "sha256": "e924ed9da244570b5b2574b7bf592de5ee702eaee149eefc47d5c4bfbd03e1b6"
+    }
+  ]
+}

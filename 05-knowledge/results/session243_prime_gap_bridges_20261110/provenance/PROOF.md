@@ -1,8 +1,8 @@
 # Primorial centers, the offset-one bridge, and the two Brocard problems
 
-Session243, 10 November 2026. **Elementary proof candidate; FINITE-EXACT controls.**
-Producer checks pass; independent audit is pending. No canonical promotion
-is claimed by this lane.
+Session243, 10 November 2026. **PROVED elementary statements; FINITE-EXACT controls.**
+The independent arithmetic audit accepts the stated scopes; see
+`../arithmetic_audit/REPORT.md` and THM-5110.
 Polignac, prime-square Brocard, factorial-square Brocard, and infinitude of
 primorial primes remain OPEN. No literature-priority claim is made.
 
@@ -216,13 +216,13 @@ Chan–Pak is asserted.
 ## 6. Genuine connection to a physical count construction
 
 The reusable obstruction is the preservation of the exact parameter and
-witness predicate, not the coincidence of small prime values. The candidate
-four-count family reported by the companion construction lane is
+witness predicate, not the coincidence of small prime values. The proved
+four-count family in the companion construction lane is
 
     6Q(T)-H(T), 6Q(T)+H(T), 6Q(T)+3H(T), 6Q(T)+5H(T).
 
-Its physicality must come from that lane's literal graph proof; this note
-does not certify unseen graphs. Once certified, it is an arithmetic
+Its literal graph proof and independent physical audit are retained in
+`../constructions/PROOF.md` and `../construction_audit/AUDIT.md`. It is an arithmetic
 progression with step `2H(T)`, giving a concrete map from one graph to four
 graphs with prescribed **count differences**. Those output integers need not
 be prime or consecutive primes. The step depends on the actual input H.

@@ -1,0 +1,657 @@
+{
+  "Brown": [
+    {
+      "H": 5,
+      "joined_H": 25,
+      "joined_order": 8,
+      "rows": [
+        6,
+        12,
+        8,
+        1
+      ]
+    },
+    {
+      "H": 11,
+      "joined_H": 121,
+      "joined_order": 10,
+      "rows": [
+        24,
+        17,
+        19,
+        6,
+        8
+      ]
+    },
+    {
+      "H": 71,
+      "joined_H": 5041,
+      "joined_order": 16,
+      "rows": [
+        206,
+        252,
+        248,
+        240,
+        225,
+        65,
+        128,
+        32
+      ]
+    }
+  ],
+  "E6": {
+    "pair": [
+      17,
+      224
+    ],
+    "rows": [
+      30,
+      60,
+      56,
+      48,
+      32,
+      1
+    ]
+  },
+  "all_words_length_at_most4": 121,
+  "compact_equality_targets": 10000,
+  "compact_period": 330,
+  "compact_survivors": [
+    5,
+    17,
+    23,
+    29,
+    47,
+    53,
+    59,
+    65,
+    77,
+    83,
+    89,
+    95,
+    107,
+    113,
+    119,
+    125,
+    137,
+    143,
+    149,
+    155,
+    173,
+    179,
+    185,
+    197,
+    203,
+    209,
+    215,
+    227,
+    239,
+    245,
+    257,
+    263,
+    269,
+    275,
+    287,
+    293,
+    305,
+    317,
+    323,
+    329
+  ],
+  "prime_examples": [
+    {
+      "m": 1,
+      "prime_flags": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "values": [
+        11,
+        13,
+        15,
+        17
+      ]
+    },
+    {
+      "m": 2,
+      "prime_flags": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "values": [
+        23,
+        25,
+        27,
+        29
+      ]
+    },
+    {
+      "m": 3,
+      "prime_flags": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "values": [
+        47,
+        49,
+        51,
+        53
+      ]
+    },
+    {
+      "m": 4,
+      "prime_flags": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "values": [
+        95,
+        97,
+        99,
+        101
+      ]
+    },
+    {
+      "m": 5,
+      "prime_flags": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "values": [
+        191,
+        193,
+        195,
+        197
+      ]
+    },
+    {
+      "m": 6,
+      "prime_flags": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "values": [
+        383,
+        385,
+        387,
+        389
+      ]
+    },
+    {
+      "m": 7,
+      "prime_flags": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "values": [
+        767,
+        769,
+        771,
+        773
+      ]
+    },
+    {
+      "m": 8,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "values": [
+        1535,
+        1537,
+        1539,
+        1541
+      ]
+    },
+    {
+      "m": 9,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "values": [
+        3071,
+        3073,
+        3075,
+        3077
+      ]
+    },
+    {
+      "m": 10,
+      "prime_flags": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "values": [
+        6143,
+        6145,
+        6147,
+        6149
+      ]
+    },
+    {
+      "m": 11,
+      "prime_flags": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "values": [
+        12287,
+        12289,
+        12291,
+        12293
+      ]
+    },
+    {
+      "m": 12,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "values": [
+        24575,
+        24577,
+        24579,
+        24581
+      ]
+    },
+    {
+      "m": 13,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "values": [
+        49151,
+        49153,
+        49155,
+        49157
+      ]
+    },
+    {
+      "m": 14,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "values": [
+        98303,
+        98305,
+        98307,
+        98309
+      ]
+    },
+    {
+      "m": 15,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "values": [
+        196607,
+        196609,
+        196611,
+        196613
+      ]
+    },
+    {
+      "m": 16,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "values": [
+        393215,
+        393217,
+        393219,
+        393221
+      ]
+    },
+    {
+      "m": 17,
+      "prime_flags": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "values": [
+        786431,
+        786433,
+        786435,
+        786437
+      ]
+    },
+    {
+      "m": 18,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "values": [
+        1572863,
+        1572865,
+        1572867,
+        1572869
+      ]
+    },
+    {
+      "m": 19,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "values": [
+        3145727,
+        3145729,
+        3145731,
+        3145733
+      ]
+    },
+    {
+      "m": 20,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "values": [
+        6291455,
+        6291457,
+        6291459,
+        6291461
+      ]
+    },
+    {
+      "m": 21,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "values": [
+        12582911,
+        12582913,
+        12582915,
+        12582917
+      ]
+    },
+    {
+      "m": 22,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "values": [
+        25165823,
+        25165825,
+        25165827,
+        25165829
+      ]
+    },
+    {
+      "m": 23,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "values": [
+        50331647,
+        50331649,
+        50331651,
+        50331653
+      ]
+    },
+    {
+      "m": 24,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "values": [
+        100663295,
+        100663297,
+        100663299,
+        100663301
+      ]
+    },
+    {
+      "m": 25,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "values": [
+        201326591,
+        201326593,
+        201326595,
+        201326597
+      ]
+    },
+    {
+      "m": 26,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "values": [
+        402653183,
+        402653185,
+        402653187,
+        402653189
+      ]
+    },
+    {
+      "m": 27,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "values": [
+        805306367,
+        805306369,
+        805306371,
+        805306373
+      ]
+    },
+    {
+      "m": 28,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "values": [
+        1610612735,
+        1610612737,
+        1610612739,
+        1610612741
+      ]
+    },
+    {
+      "m": 29,
+      "prime_flags": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "values": [
+        3221225471,
+        3221225473,
+        3221225475,
+        3221225477
+      ]
+    },
+    {
+      "m": 30,
+      "prime_flags": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "values": [
+        6442450943,
+        6442450945,
+        6442450947,
+        6442450949
+      ]
+    }
+  ],
+  "prime_exponents": {
+    "consecutive_gap6": [
+      2,
+      3,
+      6
+    ],
+    "gap4": [
+      1,
+      4,
+      5,
+      7
+    ],
+    "gap6": [
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    "twins": [
+      1,
+      5,
+      17
+    ]
+  },
+  "short_endpoint_gap_pairs": 0,
+  "source_census": {
+    "ab_pairs": 39,
+    "full_states": 43,
+    "nonsink_roots": 5044
+  },
+  "status": "PASS",
+  "wheel": [
+    {
+      "forbidden": [],
+      "order": 2,
+      "prime": 3
+    },
+    {
+      "forbidden": [
+        0,
+        2
+      ],
+      "order": 4,
+      "prime": 5
+    },
+    {
+      "forbidden": [
+        0
+      ],
+      "order": 3,
+      "prime": 7
+    },
+    {
+      "forbidden": [
+        1,
+        6
+      ],
+      "order": 10,
+      "prime": 11
+    },
+    {
+      "forbidden": [
+        1,
+        7
+      ],
+      "order": 12,
+      "prime": 13
+    },
+    {
+      "forbidden": [],
+      "order": 8,
+      "prime": 17
+    },
+    {
+      "forbidden": [
+        4,
+        13
+      ],
+      "order": 18,
+      "prime": 19
+    },
+    {
+      "forbidden": [
+        2
+      ],
+      "order": 11,
+      "prime": 23
+    },
+    {
+      "forbidden": [
+        8,
+        22
+      ],
+      "order": 28,
+      "prime": 29
+    },
+    {
+      "forbidden": [],
+      "order": 5,
+      "prime": 31
+    }
+  ],
+  "wheel_full_lcm": 27720
+}

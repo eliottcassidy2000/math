@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "exit_code": 1,
+      "intentional_failure_seen": true,
+      "optimized": false,
+      "script": "verify_independent.py"
+    },
+    {
+      "exit_code": 1,
+      "intentional_failure_seen": true,
+      "optimized": true,
+      "script": "verify_independent.py"
+    },
+    {
+      "exit_code": 1,
+      "intentional_failure_seen": true,
+      "optimized": false,
+      "script": "verify_gaps_independent.py"
+    },
+    {
+      "exit_code": 1,
+      "intentional_failure_seen": true,
+      "optimized": true,
+      "script": "verify_gaps_independent.py"
+    },
+    {
+      "exit_code": 1,
+      "intentional_failure_seen": true,
+      "optimized": false,
+      "script": "verify_arithmetic_independent.py"
+    },
+    {
+      "exit_code": 1,
+      "intentional_failure_seen": true,
+      "optimized": true,
+      "script": "verify_arithmetic_independent.py"
+    }
+  ]
+}
