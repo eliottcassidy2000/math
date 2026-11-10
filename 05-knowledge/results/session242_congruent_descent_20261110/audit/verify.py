@@ -80,4 +80,14 @@ for n in range(1,limit+1,2):
         while m%p==0:m//=p
     if m==1:
         smooth.append(n);require((n in possible)==(n not in (7,21)),'smooth closure finite control')
-print(json.dumps({'independent_seed_counts':seeds,'smooth_targets_through_100000':len(smooth),'denominator_residues':residues,'factor_pairs_checked':len(pairs),'unique_d12_positive_roots':solutions,'P':list(map(str,P)),'Q':list(map(str,Q)),'double_Q':list(map(str,R)),'x_height_P_Q_doubleQ':list(map(height,(P,Q,R))),'torsion_translate_P':list(map(str,PT))},indent=2,sort_keys=True))
+# Separate one-dimensional optimization over every 49/343 recipe up to c=200.
+carry_cost=[]
+for c in range(201):
+    candidates=[8*v+11*t for v in range(c//2+1) for t in range(c//3+1) if 2*v+3*t==c]
+    cost=min(candidates) if candidates else None
+    q,r=divmod(c,3)
+    formula=None if c==1 else 11*q+(0,5,8)[r]
+    require(cost==formula, 'carry cost formula')
+    carry_cost.append(cost)
+require(all(carry_cost[c+3]==carry_cost[c]+11 for c in range(198) if c!=1),'carry periodicity')
+print(json.dumps({'carry_cost_cases':len(carry_cost),'independent_seed_counts':seeds,'smooth_targets_through_100000':len(smooth),'denominator_residues':residues,'factor_pairs_checked':len(pairs),'unique_d12_positive_roots':solutions,'P':list(map(str,P)),'Q':list(map(str,Q)),'double_Q':list(map(str,R)),'x_height_P_Q_doubleQ':list(map(height,(P,Q,R))),'torsion_translate_P':list(map(str,PT))},indent=2,sort_keys=True))

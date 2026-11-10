@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "witnesses": [
+    {
+      "label": "gadget",
+      "rows": [
+        22,
+        60,
+        8,
+        81,
+        4,
+        29,
+        55
+      ],
+      "vertices": 7,
+      "recursive_count": 49,
+      "permutation_count": 49,
+      "strong": true
+    },
+    {
+      "label": "root",
+      "rows": [
+        126,
+        180,
+        120,
+        2,
+        168,
+        72,
+        154,
+        45
+      ],
+      "vertices": 8,
+      "recursive_count": 259,
+      "permutation_count": 259,
+      "strong": true
+    },
+    {
+      "label": "C3_graft",
+      "rows": [
+        2,
+        1020,
+        1017,
+        177,
+        481,
+        65,
+        649,
+        33,
+        233,
+        441
+      ],
+      "vertices": 10,
+      "recursive_count": 1673,
+      "permutation_count": 1673,
+      "strong": true
+    },
+    {
+      "label": "SB",
+      "rows": [
+        894,
+        948,
+        888,
+        258,
+        936,
+        840,
+        922,
+        813,
+        512,
+        8
+      ],
+      "vertices": 10,
+      "recursive_count": 791,
+      "permutation_count": 791,
+      "strong": true
+    }
+  ],
+  "proper_literal_checks": 2684,
+  "sink_literal_checks": 451,
+  "normalized_pairs_at_7": [
+    [
+      1,
+      4
+    ]
+  ],
+  "root_state_D_E_U_d": [
+    259,
+    70,
+    266,
+    77
+  ],
+  "gadget_gcd": 7
+}

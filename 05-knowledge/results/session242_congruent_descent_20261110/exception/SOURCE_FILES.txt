@@ -1,0 +1,3 @@
+01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md
+01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md
+01-canon/theorems/THM-5092-four-test-tail-content-and-invisible-reroot-escape.md

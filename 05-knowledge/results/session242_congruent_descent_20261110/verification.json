@@ -1,0 +1,87 @@
+{
+  "canonical_replays": [
+    {
+      "optimized": false,
+      "script": "arithmetic/verify.py",
+      "sha256": "9c763b0d834fc30e32c1b3b861be44fbf1d98b71af8cd731cd9aec0cf050c1a3",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "script": "arithmetic/verify.py",
+      "sha256": "9c763b0d834fc30e32c1b3b861be44fbf1d98b71af8cd731cd9aec0cf050c1a3",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "script": "descent/verify.py",
+      "sha256": "a32331d34722276900a09ae3a7467cf6ffcfbe01ed75c5a248129dcb56acd496",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "script": "descent/verify.py",
+      "sha256": "a32331d34722276900a09ae3a7467cf6ffcfbe01ed75c5a248129dcb56acd496",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "script": "exception/verify.py",
+      "sha256": "4f125f03a11696c2b2169535d58b7da43617440d61148c77e111806dcc295948",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "script": "exception/verify.py",
+      "sha256": "4f125f03a11696c2b2169535d58b7da43617440d61148c77e111806dcc295948",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "script": "audit/verify.py",
+      "sha256": "228f8b9cfd9420b3ca42632516ffcc5b2f2c340baffe966c38b7bcc29c46dfa3",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "script": "audit/verify.py",
+      "sha256": "228f8b9cfd9420b3ca42632516ffcc5b2f2c340baffe966c38b7bcc29c46dfa3",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "script": "graft_audit/verify.py",
+      "sha256": "a85d2b8784b8888fa35f9ab2827c5b8960d2b62b49f84745350c84af15d0ea68",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "script": "graft_audit/verify.py",
+      "sha256": "a85d2b8784b8888fa35f9ab2827c5b8960d2b62b49f84745350c84af15d0ea68",
+      "status": "PASS"
+    }
+  ],
+  "negative_controls": [
+    {
+      "optimized": false,
+      "script": "exception/verify.py",
+      "status": "EXPECTED_FAILURE"
+    },
+    {
+      "optimized": true,
+      "script": "exception/verify.py",
+      "status": "EXPECTED_FAILURE"
+    },
+    {
+      "optimized": false,
+      "script": "graft_audit/verify.py",
+      "status": "EXPECTED_FAILURE"
+    },
+    {
+      "optimized": true,
+      "script": "graft_audit/verify.py",
+      "status": "EXPECTED_FAILURE"
+    }
+  ],
+  "status": "PASS"
+}

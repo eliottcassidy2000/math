@@ -1,6 +1,6 @@
 # Independent hostile audit: arithmetic and smooth witness bank
 
-Status: **ACCEPT arithmetic; ACCEPT finite physical seed verification; bank cost proof pending producer text.** Chan–Pak remains OPEN. This audit owns only this directory. Graft obstruction is independently reviewed by a separate audit lane.
+Status: **ACCEPT arithmetic; ACCEPT physical seed verification; ACCEPT all-exponent smooth-sector descent and fixed-bank cost theorem.** Chan–Pak remains OPEN. This audit owns only this directory. Graft obstruction is independently reviewed by a separate audit lane.
 
 ## Arithmetic verdict
 
@@ -37,4 +37,10 @@ Run from the repository root:
 
 Output is `audit/verify.json`. The audit reads only the seed masks from `descent/CHECK.json`; it imports no producer code. All checks are explicit exceptions, not removable assertions. The arithmetic and descent producer scripts were additionally replayed in normal and optimized modes and byte-matched their stored outputs.
 
-Pending: detailed review of the all-exponent minimum-bank cost and eventual-periodicity proof once supplied. No pending question affects the arithmetic acceptance.
+## All-exponent bank proof verdict
+
+The supplied `descent/PROOF.md` §§2–4 pass hostile audit. Its universal join lift needs only the smaller target count, not a special rooted realization, so it genuinely preserves the failure predicate on the declared smooth sector. Every residual in the five-case descent remains in that sector and strictly decreases. The terminal1 is realized. This is stronger logically than testing inverse branches of supplied witnesses, but only inside the declared sector.
+
+The fixed-bank cost formula accounts for all generator multiplicities, including the ordinary-prime costs consumed by63,35,217,287. The pure-seven carry minimization is valid: minimizing8v+11t with2v+3t=c is equivalent to minimizing v, whose least feasible value is0,1,2 for residues0,2,1. The c=1 exception is explicitly retained. An independent exhaustive carry-cost check covers0≤c≤200. For c≥K+2 every residual is at least2, so every candidate shifts by exactly11 under c→c+3; taking minima preserves that equality. No global minimum tournament-order claim follows or is made.
+
+One documentary correction was sent to the parent: §0 initially cited THM-4094 with a nonexistent trailing `-reduction` in the filename. The actual path is given above. No mathematical blocker remains. Graft exclusion/sharpness is outside this audit and is assigned separately.

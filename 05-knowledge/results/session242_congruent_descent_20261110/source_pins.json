@@ -1,0 +1,53 @@
+{
+  "baseline": "68e5a06fbb520a861eb2e094efbc40a82cc52b1a",
+  "inherited_sources": [
+    {
+      "path": "05-knowledge/results/ap_square_pythagorean_20261019.md",
+      "blob": "03df64b6e5cf1530a6b7e4481cb842685f832dac",
+      "sha256": "106acbaaade8a65420c615cf1e26401b783f6f217ee238bd38570e620e5f442b",
+      "url": "https://github.com/eliottcassidy2000/math/blob/68e5a06fbb520a861eb2e094efbc40a82cc52b1a/05-knowledge/results/ap_square_pythagorean_20261019.md"
+    },
+    {
+      "path": "05-knowledge/results/congruent_square_gap_classes_20261019.md",
+      "blob": "5eb3080d0f25584edd434c45bd70da2706c27952",
+      "sha256": "42585226d7126d6126aaf80ff0217b6f95308c363d434723343f341d05bd389d",
+      "url": "https://github.com/eliottcassidy2000/math/blob/68e5a06fbb520a861eb2e094efbc40a82cc52b1a/05-knowledge/results/congruent_square_gap_classes_20261019.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+      "url": "https://github.com/eliottcassidy2000/math/blob/68e5a06fbb520a861eb2e094efbc40a82cc52b1a/01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "url": "https://github.com/eliottcassidy2000/math/blob/68e5a06fbb520a861eb2e094efbc40a82cc52b1a/01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-5092-four-test-tail-content-and-invisible-reroot-escape.md",
+      "blob": "0a5c7f8c64bbb767e2cf902532dfb332c3081ddc",
+      "sha256": "b9a98d3757b0b8a3459128c0d0f2da2eeddc340c3b0aae208f60df8540364742",
+      "url": "https://github.com/eliottcassidy2000/math/blob/68e5a06fbb520a861eb2e094efbc40a82cc52b1a/01-canon/theorems/THM-5092-four-test-tail-content-and-invisible-reroot-escape.md"
+    },
+    {
+      "path": "05-knowledge/results/session229_combined_constructions_20261109/inverse/PROOF.md",
+      "blob": "5c026c2276b416b8b581c0c1b0f260eddd9f0ddf",
+      "sha256": "1912c98719fa007bfab72811e98c2edba01a90e56f7ba87c7fb5ceef8428fbf5",
+      "url": "https://github.com/eliottcassidy2000/math/blob/68e5a06fbb520a861eb2e094efbc40a82cc52b1a/05-knowledge/results/session229_combined_constructions_20261109/inverse/PROOF.md"
+    },
+    {
+      "path": "05-knowledge/results/session229_combined_constructions_20261109/inverse_audit/REPORT.md",
+      "blob": "669431a84a99a5301064dd427d923e3fa7d9e6c0",
+      "sha256": "e940c8cbf9faea029e4d54e6ec44830918648fbb6a1056f6ea26bdb3a03a491c",
+      "url": "https://github.com/eliottcassidy2000/math/blob/68e5a06fbb520a861eb2e094efbc40a82cc52b1a/05-knowledge/results/session229_combined_constructions_20261109/inverse_audit/REPORT.md"
+    },
+    {
+      "path": "05-knowledge/results/session241_prime_relations_20261110/provenance/README.md",
+      "blob": "84f1319918de78a7fd355a46204e44182c6904b5",
+      "sha256": "fa5fe20ccc4788c2560bb74029aeb23ac2accf7a2505df0cdac91dc20d625efc",
+      "url": "https://github.com/eliottcassidy2000/math/blob/68e5a06fbb520a861eb2e094efbc40a82cc52b1a/05-knowledge/results/session241_prime_relations_20261110/provenance/README.md"
+    }
+  ]
+}

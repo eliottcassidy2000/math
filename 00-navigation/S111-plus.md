@@ -133,3 +133,5 @@ individual session routes preserve scope and remaining open obligations.
 - [S240](S240.md): sharp1848759 elevenfold gap, complete8/12 Paley orientation fibres, and the first strong joint7/11 carrier at19 vertices. Independently audited; Chan-Pak OPEN.
 
 [Session241](S241.md): faithful path-count arithmetic, strong divisor/totient chart and an exact sparse inverse; Chan–Pak OPEN.
+
+[Session242](S242.md): congruent arithmetic, cofactor-seven obstruction and physical smooth descent; audited. Chan–Pak OPEN.

@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "labelled_HQ_census": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      4,
+      64
+    ],
+    [
+      5,
+      1024
+    ]
+  ],
+  "gadget": {
+    "rows": [
+      22,
+      60,
+      8,
+      81,
+      4,
+      29,
+      55
+    ],
+    "H": 49,
+    "Q": 812,
+    "gcd": 7,
+    "normalized_pair": [
+      7,
+      116
+    ]
+  },
+  "source_C3_state_h_R_e_d": [
+    3,
+    3,
+    1,
+    1
+  ],
+  "graft": {
+    "vertices": 10,
+    "H": 1673,
+    "prime_cofactor": 239,
+    "strong": true
+  },
+  "root_content_seven": {
+    "rows": [
+      126,
+      180,
+      120,
+      2,
+      168,
+      72,
+      154,
+      45
+    ],
+    "root": 3,
+    "state": [
+      259,
+      266,
+      70,
+      77
+    ],
+    "content": 7
+  },
+  "SB": {
+    "vertices": 10,
+    "H": 791,
+    "prime_cofactor": 113,
+    "strong": true
+  },
+  "quotient_seven_forced_pairs": [
+    [
+      1,
+      4
+    ]
+  ],
+  "relaxed_source_solutions": []
+}

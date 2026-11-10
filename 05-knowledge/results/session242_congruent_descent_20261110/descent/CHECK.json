@@ -1,0 +1,360 @@
+{
+  "cost_formula_cases": 1053,
+  "examples": {
+    "117649": {
+      "minimum_bank_order": 22,
+      "recipe": [
+        343,
+        343
+      ],
+      "target_vector": [
+        0,
+        0,
+        0,
+        0,
+        6
+      ]
+    },
+    "217": {
+      "minimum_bank_order": 10,
+      "recipe": [
+        217
+      ],
+      "target_vector": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    "287": {
+      "minimum_bank_order": 10,
+      "recipe": [
+        287
+      ],
+      "target_vector": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "343": {
+      "minimum_bank_order": 11,
+      "recipe": [
+        343
+      ],
+      "target_vector": [
+        0,
+        0,
+        0,
+        0,
+        3
+      ]
+    },
+    "35": {
+      "minimum_bank_order": 7,
+      "recipe": [
+        35
+      ],
+      "target_vector": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    "3969": {
+      "minimum_bank_order": 16,
+      "recipe": [
+        63,
+        63
+      ],
+      "target_vector": [
+        4,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "44485": {
+      "minimum_bank_order": 20,
+      "recipe": [
+        5,
+        41,
+        217
+      ],
+      "target_vector": [
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "49": {
+      "minimum_bank_order": 8,
+      "recipe": [
+        49
+      ],
+      "target_vector": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "62279": {
+      "minimum_bank_order": 20,
+      "recipe": [
+        217,
+        287
+      ],
+      "target_vector": [
+        0,
+        0,
+        1,
+        1,
+        2
+      ]
+    },
+    "63": {
+      "minimum_bank_order": 8,
+      "recipe": [
+        63
+      ],
+      "target_vector": [
+        2,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "hostiles": {
+    "forbidden_targets": [
+      7,
+      21
+    ],
+    "greedy49_vs343_at117649": {
+      "three49_cost": 24,
+      "two343_cost": 22
+    },
+    "missing_supplier": 217,
+    "unsafe_division": [
+      35,
+      5,
+      7
+    ]
+  },
+  "literal_joins": [
+    [
+      [
+        3,
+        5
+      ],
+      7,
+      15
+    ],
+    [
+      [
+        5,
+        41
+      ],
+      10,
+      205
+    ],
+    [
+      [
+        31,
+        5
+      ],
+      11,
+      155
+    ],
+    [
+      [
+        49,
+        3
+      ],
+      11,
+      147
+    ],
+    [
+      [
+        63,
+        5
+      ],
+      12,
+      315
+    ],
+    [
+      [
+        35,
+        35
+      ],
+      14,
+      1225
+    ],
+    [
+      [
+        217,
+        3
+      ],
+      13,
+      651
+    ],
+    [
+      [
+        287,
+        3
+      ],
+      13,
+      861
+    ]
+  ],
+  "periodicity_cases": 2560,
+  "seeds": {
+    "217": {
+      "masks": [
+        1014,
+        1020,
+        1016,
+        305,
+        992,
+        960,
+        904,
+        776,
+        512,
+        8
+      ],
+      "order": 10,
+      "word": "OJOOZZOZ"
+    },
+    "287": {
+      "masks": [
+        830,
+        1020,
+        1016,
+        1008,
+        992,
+        960,
+        897,
+        257,
+        512,
+        128
+      ],
+      "order": 10,
+      "word": "OOOOZJOZ"
+    },
+    "3": {
+      "masks": [
+        2,
+        4,
+        1
+      ],
+      "order": 3,
+      "word": "Z"
+    },
+    "31": {
+      "masks": [
+        42,
+        124,
+        121,
+        112,
+        97,
+        64,
+        1
+      ],
+      "order": 7,
+      "word": "ZOZOZ"
+    },
+    "343": {
+      "masks": [
+        2030,
+        2044,
+        2040,
+        2032,
+        1825,
+        1984,
+        1936,
+        1552,
+        640,
+        1024,
+        256
+      ],
+      "order": 11,
+      "word": "OOJOZJJOZ"
+    },
+    "35": {
+      "masks": [
+        102,
+        124,
+        120,
+        113,
+        33,
+        64,
+        16
+      ],
+      "order": 7,
+      "word": "OZJOZ"
+    },
+    "41": {
+      "masks": [
+        56,
+        49,
+        35,
+        6,
+        12,
+        24
+      ],
+      "order": 6,
+      "word": null
+    },
+    "49": {
+      "masks": [
+        246,
+        252,
+        248,
+        225,
+        104,
+        192,
+        128,
+        16
+      ],
+      "order": 8,
+      "word": "OJJOOZ"
+    },
+    "5": {
+      "masks": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "order": 4,
+      "word": "OZ"
+    },
+    "63": {
+      "masks": [
+        102,
+        252,
+        248,
+        241,
+        225,
+        192,
+        128,
+        1
+      ],
+      "order": 8,
+      "word": "OZZOOZ"
+    }
+  },
+  "status": "FINITE-EXACT controls; all-order proof in PROOF.md"
+}
