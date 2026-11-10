@@ -14,15 +14,15 @@ Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-b
 
 [S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md); [S63](S63.md): modular depth/root stacks. [S64](S64.md); [S65](S65.md); [S66](S66.md); [S67](S67.md); [S75](S75.md).
 
-[Sessions](S111-plus.md); [Proofs](PI.md).
+[Sessions](S111-plus.md); [Proofs](PI.md); [S249](S249.md).
 
 ## Orientation
 
 1. **Main prize:** LRC(14) is **OPEN**; external claims: CORE-PAPERS.
 2. **Old shortcuts:** no uniform good period `q <= 25`; twelve-speed sporadic emptiness remains **OPEN**.
 3. **Major closures:** THM-2022 proves NC2/GMC(2), and THM-2801 makes the Special Image boundary true at one pair and false from two; neither settles the restricted planar-JC sectors.
-4. **Truth discipline:** corrected canon outranks canon, exact computation, hypothesis, synthesis, and historical prose.
-5. **Posture:** Anchor / Niche / Wildcard; retain mechanisms, hostiles and lost coordinates.
+4. **Truth:** corrections > canon > exact computation > hypotheses > synthesis > history.
+5. **Posture:** Anchor / Niche / Wildcard; retain mechanisms and lost coordinates.
 
 Start with:
 

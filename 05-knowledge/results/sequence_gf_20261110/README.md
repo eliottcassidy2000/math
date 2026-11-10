@@ -1,17 +1,20 @@
 # Sequence generators, recurrences, and the Chan–Pak bridge
 
-Session249, 10 November 2026. **ACTIVE research.** New statements are proved
+Session249, 10 November 2026. **COMPLETE.** New statements are proved
 in the lane notes with small exact implementation checks; no independent
 canon audit or literature-priority claim. Chan–Pak remains OPEN.
+
+Read the [final synthesis](SYNTHESIS.md) first. Run `python3 run_all.py`
+from this directory to replay the four compilers. All use the standard library.
 
 The goal is to derive equations from operations, not to fit longer prefixes.
 The four lanes deliberately use different sequence indices:
 
-1. **Burnside:** ordinary tournament classes by vertex order (A000568),
+1. **[Burnside](burnside/README.md):** ordinary tournament classes by vertex order (A000568),
    odd cycle partitions, connected cumulants, divisor and lcm transforms.
-2. **Grammar:** Hamiltonian-path counts in repeatedly inflated tournaments;
+2. **[Grammar](grammar/PROOF.md):** Hamiltonian-path counts in repeatedly inflated tournaments;
    rationality versus factorial growth from the growing quotient.
-3. **Heat:** path-count covariance by vertex order, with edge-noise and
+3. **[Heat](heat/README.md):** path-count covariance by vertex order, with edge-noise and
    vertex-support gradings retained together.
 4. **[Rays](rays/PROOF.md):** certified path-count values by numerical value;
    positive Mahler equations, binary languages, and the exceptional point11.
@@ -41,5 +44,5 @@ ordered boundary runs, Fourier vertex support, and dyadic ray sources.
 
 The live concept board is those four carriers plus coefficient positivity.
 A proposed bridge must retain the actual target value and state what has
-been lost. The final synthesis will list the new equations, runnable
+been lost. The [final synthesis](SYNTHESIS.md) lists the new equations, runnable
 compilers, strongest examples, and the remaining coverage obligation.
