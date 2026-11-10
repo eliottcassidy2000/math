@@ -45,3 +45,20 @@ Run: `classgen 9` (191,536 classes), `seeds 9` on every class and root; 1,333 un
 
 Odd c <= 129 without a seed (tail of order <= 9 or module of order <= 8): 19, 33, 71, 79, 83, 97, 101, 103, 107,
 113, 115.
+
+# Second pre-registration: order ten through the cut matrix (written and pushed BEFORE the run)
+
+Engine `scripts/unitsets.c`: for a base B, a vertex set O is the out-neighbourhood of a unit-offset root of
+L = B + v iff the sum of the two-path-cover couplings W_ef over the pairs of O equals H(B) - 1; the multiplier is
+the sum of the responses U_B(y), y in O. Validated before this run: on all bases of orders 7 and 8 the sets of
+(out-degree, M) agree with the direct runs of `seeds.c` at orders 8 and 9 (140 and 1,007 pairs).
+
+Run: every class B of order 9 (191,536), every O with 2 <= |O| <= 4. This finds the unit-offset roots of order ten
+with root out-degree 2, 3 or 4; out-degrees 0 and 1 give only fans; out-degree >= 5 is NOT searched.
+
+- **Q1.** At least 6 of the eleven odd c <= 129 without a seed (19, 33, 71, 79, 83, 97, 101, 103, 107, 113, 115)
+  acquire a seed.
+- **Q2.** c = 19 acquires a seed.
+- **Q3.** c = 33 acquires a seed.
+- **Q4.** The number of odd c <= 1025 with a seed rises from 377 to at least 450 (of 513).
+- **G2 (gate, forced by THM-1370).** No ray contains 7 or 21.
