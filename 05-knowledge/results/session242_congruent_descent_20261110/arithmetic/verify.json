@@ -1,0 +1,39 @@
+{
+  "residue_steps_mod16": [
+    0,
+    8
+  ],
+  "residue_steps_mod3": [
+    0
+  ],
+  "gap5_least_denominator": 12,
+  "unique_positive_roots_at_denominator12": [
+    [
+      31,
+      41,
+      49
+    ]
+  ],
+  "triangle": [
+    "3/2",
+    "20/3",
+    "41/6"
+  ],
+  "P": [
+    "25/4",
+    "75/8"
+  ],
+  "Q_minus_2P": [
+    "1681/144",
+    "62279/1728"
+  ],
+  "Berggren_spine_area_classes": [
+    6,
+    30,
+    21,
+    5
+  ],
+  "Q_in_2E_not_4E": true,
+  "distinct_positivity_chambers_checked": true,
+  "primitive_triangle_identity_checks": 331
+}
