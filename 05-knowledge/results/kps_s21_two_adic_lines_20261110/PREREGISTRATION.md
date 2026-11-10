@@ -32,3 +32,16 @@ for m = 2..8. Among odd c <= 63 the ten values 9, 13, 19, 27, 33, 35, 41, 53, 59
 
 Refutation criteria: each of P1-P4 fails exactly when its sentence is false for the run. Outcomes will be appended
 below without editing the text above.
+
+## Outcomes (appended after the run; the text above is unchanged)
+
+Run: `classgen 9` (191,536 classes), `seeds 9` on every class and root; 1,333 unit-offset roots at order nine.
+
+- **P1 FAILED.** 636 odd c have a tail seed of order <= 9 (predicted 250-420; the count grew by 7.1, not 3.5).
+- **P2 CONFIRMED.** 8 of the ten: 9, 13, 27, 35, 41, 53, 59, 63. Still without a tail seed: 19, 33.
+- **P3 CONFIRMED.** c = 13: order nine, (H, d, E, U) = (183, 61, 35, 269), M = 208 = 13 * 16.
+- **P4 FAILED.** c = 33 has no unit-offset root of order <= 9.
+- **G1 holds.** Least s0: 2 for c = 3, 3 for c = 5.
+
+Odd c <= 129 without a seed (tail of order <= 9 or module of order <= 8): 19, 33, 71, 79, 83, 97, 101, 103, 107,
+113, 115.

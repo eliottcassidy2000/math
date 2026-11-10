@@ -1,0 +1,8 @@
+PASS (T) tail law  | 15570 (L, v, y) triples; all labelled orders <= 4, 60 random of orders 5-6
+PASS (L) line seeds: states and literal counts of the first three ray points  | 54 seeds with c <= 129
+PASS (G) gate: no ray through 7 or 21
+ALL PASS
+
+real	0m3.781s
+user	0m0.015s
+sys	0m0.015s

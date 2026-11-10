@@ -1,0 +1,15 @@
+PASS (A) M_ab = Q(a,b)+Q(b,a) is even and >= 2  | all labelled tournaments n=2..6 + 120 random n=7..9; 505570 pairs; minimum 2 attained 15602 times (n<=6)
+PASS (A') H(T+v_O) = capacity of the directed s-t cut (THM-4114 (32)), P_2 = sum Q  | all labelled n=1..5, all 2^n out-sets
+PASS (C1) sum_O H(T+v_O) = 2^(n-2) (4H + P_2)  | all labelled n=1..5 (1099 tournaments)
+PASS (C2) P_j(T) >= j! S(n,j) for all j, equality for all j iff T transitive; 2H+P_2 >= 2^n  | all labelled n=1..5
+PASS (C3) two new vertices: sum over all extensions = 2^(2n+1) (12 P_1 + 6 P_2 + P_3)/8  | all labelled n=1..4
+PASS (B1) some Hamiltonian walk visits x and y twice each  iff  x and y both lie on cycles  | all labelled n=3..5, 10648 pairs
+PASS (B2) simultaneous doubling of a set of cycle vertices  | 83 cases (all strong n<=4 with R=V; random n=6 with |R|=3)
+PASS (D1) one-apex count H(w) = g(A(w)), g(2v+1)=g(v), g(2v)=g(v)+v+(v mod 2)  | brute force, all words of length <= 9
+PASS (D2) g(b) = 1 + 2 floor(b/2) - pi(b), pi = pair penalty of the one-bits  | all b < 2^16
+PASS (D3) G(m)-1 = sum over the (x+1)-trajectory of m of 2 floor((o+1)/4); G(2m)=G(m)  | all odd m < 2^15
+PASS (D4) H(u 1^k v) = (1+m)(1+y) - pi(m) - pi(y)  | u of length <= 5 ending in 0 (or empty), k <= 3, v of length <= 4
+PASS (E1) doubling vertex: H(K[TT_a at x]) = 1 + (H-1) 2^(a-1) persists at a = 5  | 2256 doubling vertices, all labelled n=3..5
+PASS (E2) doubling vertex: H(K[M at x]) = H(M) + (H(K)-1) pi_M(2)/2 for M in {C3, T4, TT2, point}
+PASS negative control: 'every cycle vertex is doubling' is correctly rejected
+ALL PASS
