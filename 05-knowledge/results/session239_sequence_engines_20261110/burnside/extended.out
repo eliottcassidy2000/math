@@ -1,0 +1,4 @@
+{"n": 80, "compiled_single_term_seconds": 0.01907997200032696, "integer_full_prefix_seconds": 0.05019600299965532, "integer_prefix_stats": {"peak_states": 1227, "transitions": 36384}, "binary16_full_prefix_seconds": 0.023525079999672016, "binary16_stats": {"peak_states": 359, "transitions": 10163}}
+{"n": 100, "compiled_single_term_seconds": 0.1170766380000714, "integer_full_prefix_seconds": 0.12671005700030946, "integer_prefix_stats": {"peak_states": 2953, "transitions": 90219}, "binary16_full_prefix_seconds": 0.04404833199987479, "binary16_stats": {"peak_states": 598, "transitions": 20229}}
+{"n": 120, "compiled_single_term_seconds": 0.6977204649992927, "integer_full_prefix_seconds": 0.3194255919988791, "integer_prefix_stats": {"peak_states": 6776, "transitions": 202287}, "binary16_full_prefix_seconds": 0.09041951099970902, "binary16_stats": {"peak_states": 1062, "transitions": 37530}}
+PASS: external table, compiled engine, binary residues and boundaries

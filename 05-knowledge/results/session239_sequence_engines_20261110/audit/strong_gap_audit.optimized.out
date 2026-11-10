@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "method": "difference-set construction; exhaustive permutations of all9 vertices for each of8 cases",
+  "cases": [
+    {
+      "differences": [
+        4,
+        5,
+        6
+      ],
+      "internal_H": 175,
+      "two_cover": 1638,
+      "inflated_H": 2163
+    },
+    {
+      "differences": [
+        3,
+        5,
+        6
+      ],
+      "internal_H": 189,
+      "two_cover": 1638,
+      "inflated_H": 2205
+    },
+    {
+      "differences": [
+        2,
+        4,
+        6
+      ],
+      "internal_H": 175,
+      "two_cover": 1638,
+      "inflated_H": 2163
+    },
+    {
+      "differences": [
+        2,
+        3,
+        6
+      ],
+      "internal_H": 175,
+      "two_cover": 1638,
+      "inflated_H": 2163
+    },
+    {
+      "differences": [
+        1,
+        4,
+        5
+      ],
+      "internal_H": 175,
+      "two_cover": 1638,
+      "inflated_H": 2163
+    },
+    {
+      "differences": [
+        1,
+        3,
+        5
+      ],
+      "internal_H": 175,
+      "two_cover": 1638,
+      "inflated_H": 2163
+    },
+    {
+      "differences": [
+        1,
+        2,
+        4
+      ],
+      "internal_H": 189,
+      "two_cover": 1638,
+      "inflated_H": 2205
+    },
+    {
+      "differences": [
+        1,
+        2,
+        3
+      ],
+      "internal_H": 175,
+      "two_cover": 1638,
+      "inflated_H": 2163
+    }
+  ]
+}

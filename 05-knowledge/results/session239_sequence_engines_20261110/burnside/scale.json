@@ -1,0 +1,50 @@
+[
+  {
+    "n": 120,
+    "integer_seconds": 0.3361771759991825,
+    "inherited_fraction_seconds": 1.3181734589998086,
+    "speedup": 3.921067678321547,
+    "binary16_seconds": 0.115689841000858,
+    "states": {
+      "peak_states": 6776,
+      "transitions": 202287
+    },
+    "binary16_states": {
+      "peak_states": 1062,
+      "transitions": 37530
+    },
+    "prefix_sha256": "8d49663505082addf8b01b799b8064f429730644a9c26b3997ad5267bdd3f73e"
+  },
+  {
+    "n": 160,
+    "integer_seconds": 1.8140083340003912,
+    "inherited_fraction_seconds": 6.756677033001324,
+    "speedup": 3.72472215610001,
+    "binary16_seconds": 0.38209209500018915,
+    "states": {
+      "peak_states": 27506,
+      "transitions": 844358
+    },
+    "binary16_states": {
+      "peak_states": 3002,
+      "transitions": 124307
+    },
+    "prefix_sha256": "9c0e3ce6b2af7f1153402fbb02965a4a6d9896d79aa87c94d1cf6b1c5b95bbe2"
+  },
+  {
+    "n": 200,
+    "integer_seconds": 7.477081058999829,
+    "inherited_fraction_seconds": 27.141047682000135,
+    "speedup": 3.6298988158395935,
+    "binary16_seconds": 1.1208558550006273,
+    "states": {
+      "peak_states": 96836,
+      "transitions": 2994814
+    },
+    "binary16_states": {
+      "peak_states": 7024,
+      "transitions": 321672
+    },
+    "prefix_sha256": "3f63b3ccd51ad3983db13b38a3a85220d31b13fee8864b32231775b0f45e4f5b"
+  }
+]

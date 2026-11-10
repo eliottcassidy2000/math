@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checks": {
+    "divisor exponent integral": 16857,
+    "class size integral": 16857,
+    "Davis terminal integral": 46,
+    "independent Davis 0..45": 46,
+    "precision bound": 8971,
+    "external reference": 77,
+    "horizon consistency": 10,
+    "composite residue": 70,
+    "binary residue": 50,
+    "invalid input rejected": 5,
+    "mod4": 59,
+    "mod8": 58,
+    "n3 exception": 1,
+    "independent SCC recurrence": 18,
+    "independent free action": 18
+  },
+  "reference_max": 76,
+  "seconds": 5.464061488999505
+}

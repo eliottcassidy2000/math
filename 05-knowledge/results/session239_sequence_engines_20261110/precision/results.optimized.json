@@ -1,0 +1,236 @@
+{
+  "scope": "odd n; U_n=A000568(n)/2^((n-1)/2); exact residues, not full counts",
+  "full_count_crosschecks_through": 51,
+  "precision_comparisons": 312,
+  "max_checked_precision_bits": 12,
+  "full_check_seconds": 0.19481782600087172,
+  "cutoff_examples": {
+    "1": [
+      1
+    ],
+    "2": [
+      1,
+      3
+    ],
+    "3": [
+      1,
+      3
+    ],
+    "5": [
+      1,
+      3
+    ],
+    "6": [
+      1,
+      3,
+      5
+    ],
+    "14": [
+      1,
+      3,
+      5
+    ],
+    "15": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "32": [
+      1,
+      3,
+      5,
+      7,
+      9
+    ],
+    "64": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13
+    ]
+  },
+  "examples": [
+    {
+      "n": 1,
+      "u_mod_8": 1,
+      "v2_a": 0
+    },
+    {
+      "n": 3,
+      "u_mod_8": 1,
+      "v2_a": 1
+    },
+    {
+      "n": 5,
+      "u_mod_8": 3,
+      "v2_a": 2
+    },
+    {
+      "n": 7,
+      "u_mod_8": 1,
+      "v2_a": 3
+    },
+    {
+      "n": 9,
+      "u_mod_8": 3,
+      "v2_a": 4
+    },
+    {
+      "n": 11,
+      "u_mod_8": 1,
+      "v2_a": 5
+    },
+    {
+      "n": 13,
+      "u_mod_8": 7,
+      "v2_a": 6
+    },
+    {
+      "n": 15,
+      "u_mod_8": 5,
+      "v2_a": 7
+    },
+    {
+      "n": 17,
+      "u_mod_8": 3,
+      "v2_a": 8
+    },
+    {
+      "n": 19,
+      "u_mod_8": 1,
+      "v2_a": 9
+    },
+    {
+      "n": 21,
+      "u_mod_8": 3,
+      "v2_a": 10
+    },
+    {
+      "n": 23,
+      "u_mod_8": 1,
+      "v2_a": 11
+    },
+    {
+      "n": 25,
+      "u_mod_8": 7,
+      "v2_a": 12
+    },
+    {
+      "n": 27,
+      "u_mod_8": 5,
+      "v2_a": 13
+    },
+    {
+      "n": 29,
+      "u_mod_8": 7,
+      "v2_a": 14
+    },
+    {
+      "n": 31,
+      "u_mod_8": 1,
+      "v2_a": 15
+    },
+    {
+      "n": 33,
+      "u_mod_8": 3,
+      "v2_a": 16
+    },
+    {
+      "n": 35,
+      "u_mod_8": 1,
+      "v2_a": 17
+    },
+    {
+      "n": 37,
+      "u_mod_8": 7,
+      "v2_a": 18
+    },
+    {
+      "n": 39,
+      "u_mod_8": 1,
+      "v2_a": 19
+    },
+    {
+      "n": 41,
+      "u_mod_8": 3,
+      "v2_a": 20
+    },
+    {
+      "n": 43,
+      "u_mod_8": 1,
+      "v2_a": 21
+    },
+    {
+      "n": 45,
+      "u_mod_8": 3,
+      "v2_a": 22
+    },
+    {
+      "n": 47,
+      "u_mod_8": 1,
+      "v2_a": 23
+    },
+    {
+      "n": 49,
+      "u_mod_8": 7,
+      "v2_a": 24
+    },
+    {
+      "n": 51,
+      "u_mod_8": 1,
+      "v2_a": 25
+    }
+  ],
+  "large_exact_residues": [
+    {
+      "n": 101,
+      "u_mod_8": 3,
+      "seconds": 0.0005091229995741742,
+      "visited_partitions": 226,
+      "retained_partitions": 108,
+      "cycle_counts": [
+        1,
+        3
+      ],
+      "precision_bits": 3
+    },
+    {
+      "n": 301,
+      "u_mod_8": 7,
+      "seconds": 0.0040729829997872,
+      "visited_partitions": 1926,
+      "retained_partitions": 975,
+      "cycle_counts": [
+        1,
+        3
+      ],
+      "precision_bits": 3
+    },
+    {
+      "n": 1001,
+      "u_mod_8": 3,
+      "seconds": 0.046575092999773915,
+      "visited_partitions": 21001,
+      "retained_partitions": 11263,
+      "cycle_counts": [
+        1,
+        3
+      ],
+      "precision_bits": 3
+    }
+  ],
+  "huge_formula_example": {
+    "n": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+    "u_mod_4": 3
+  },
+  "hostile_controls": {
+    "n1_formula_fails": true,
+    "n3_naive_mod8": 5,
+    "n3_actual_mod8": 1,
+    "domain_rejections": 4
+  }
+}
