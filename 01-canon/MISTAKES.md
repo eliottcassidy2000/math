@@ -24315,3 +24315,50 @@ file, never from its synthesis. A sentence beginning "for every" needs either a 
 were not used to form it; a pre-registration that names five primes licenses a statement about five primes. Before
 writing a mechanism into a hypothesis, re-read this machine's previous notes on the same family (S82 section 5 had
 half of it).
+
+## MISTAKE-753 (2026-11-10, mac-mini-2026-11-10-ensemble, THM-5127, HYP-9659 and `05-knowledge/results/tilted_ensemble_local_limit_20261110/` at the pre-audit checkpoint 7d5cf47d10; found by the independent audit `05-knowledge/results/tilted_ensemble_local_limit_20261110/audit/AUDIT.md`) -- known canon typed as new twice, a hypothesis that did not imply its stated consequence, a proposition whose hypothesis could not hold, a statement attributed to a theorem that does not contain it
+
+- **MAJOR (credit; audit M1).** THM-5127 listed "the parity and strict positivity of the pair term" `mu_R(i,j)` of
+  the cut quadratic as new, and the note derived the form (4.2) without credit. (4.2) is THM-4118 eq. (4); evenness
+  is THM-4097 eq. (6a) and THM-4118 eq. (9); positivity is known in the stronger form
+  `mu_R(i,j) >= 2 H(R - {i,j})` (Session 136 `positive_cut_geometry.md` eq. (3); THM-5122 "Capacity", same day).
+  Repaired: (C) (1) retyped KNOWN; the insertion argument is kept as a second proof that does not use the odd-cycle
+  formula; new are (C) (2)-(4) and (C4). The inheritance pass had read THM-4097 and THM-4114 and stopped; the pair
+  coefficient has two more files under other letters (`K_ij` in THM-4118, `w_ij` in Session 136).
+- **MAJOR (credit and citation; audit M2).** The all-`n` algebra of the noise identity (A) was credited to THM-071,
+  which proves its Walsh statement only for `n = 5, 7`. It is THM-4757 section 5 with THM-4761 (1) - this machine's
+  own lane of 2026-10-22. The Gaussian regime was credited to THM-589 / THM-071; the limit statement is THM-4761,
+  conditional on Moran. Repaired in the note, THM-5127 and HYP-9659; (A) is typed as the probabilistic reading of
+  that algebra.
+- **MAJOR (implication; audit M3).** HYP-9659 (B) (rank law within `o(1)` in total variation of the
+  random-alternating law) was said to imply `E_R[2^(-rank/2)] = O(2^(-m/2))`. Total variation `o(1)` gives only
+  `o(1)`, and the low-rank tail is exactly where the census deviates (rank-2 classes over-represented by factors
+  7.2, 66, 145 at orders 8, 9, 10). Repaired: the quantitative statement is a separate hypothesis (B').
+- **MAJOR (hypothesis; audit M4).** Proposition 6.1 was stated with the census form (W1) of the window law, which
+  contains `|T| <= 10` and is therefore false for every `h > 15,745`. Repaired: the hypothesis is HYP-9659 (C)
+  (bases of any order, `h` a count).
+- **MAJOR (misattribution; audit M5).** "THM-4876 shows the witnesses must change with `n`" is not in THM-4876;
+  proved is only that a realiser of `h` has no extension value in `(h, (3h+1)/2)` (Session214; THM-4876 (2)). The
+  fact that was meant is FINITE-EXACT (no base of order `<= 10` covers more than 44% of `[3h, 5h)` for `h >= 237`)
+  and is now typed so. The same sentence was repeated in a summary paragraph written while the audit was running,
+  together with a confusion of ear cubes and presence cubes (audit residual R2).
+- **MINOR (24 items and three residuals, all applied).** Among them: `n_0 >= 4` in the tilted local limit law; a
+  missing hypothesis (`q` not dividing `a`) in the odd-prime case of (C4); "`(3/2)^k` words per value" is an average,
+  not a pointwise bound; "near-Poisson" was a variance about twice Poisson; a density computed from a window
+  starting at `floor(3h/2)` instead of the least odd integer `>= 3h/2` (0.7423 for 0.7446); an output file for 3,000
+  cited as 30,000; model probabilities rounded to 0.0014 for 0.0013492 and to 0.5591 for 0.5590477; "a proof of the
+  same shape cannot exist" written for a contrast; "no single solvable family can be complete" inferred from one
+  family; the `2^35` range cited without "one run"; THM-589 and THM-1370 cited without slug; the closest prior
+  statements on `H mod 4` (THM-466, THM-478) not cited, although they give (C) (2) in two lines with the explicit
+  polar form `beta_R(i,j) = P_ij + P_ji mod 2`.
+- **Caught before the audit, by the session's own reading.** The state calculus, the one-apex picture, the
+  submodular cut quadratic, the window induction and the Bourgain-Kontorovich analogy had been re-derived before the
+  inheritance pass found them (S82, THM-4114, HYP-9453, S90); they were credited before the first checkpoint.
+
+Lesson: an inheritance pass that finds the theorem has not yet found its coefficients. Search the repository for
+the formula's coefficients under every letter they have carried (`mu`, `K_ij`, `w_ij`, "two-path cover", "pair
+term") and for the weakest consequence about to be claimed ("even", ">= 2"), not only for the theorem. Check an
+"all n" citation against the cited file's own scope line (THM-071 says `n = 5, 7`). "Within o(1) in total
+variation" never yields a rate. State a proposition with the hypothesis file's sentence, not with the census
+sentence printed above it. Text written while an audit is running repeats the errors the audit is finding: re-read
+it against the report before publishing.
