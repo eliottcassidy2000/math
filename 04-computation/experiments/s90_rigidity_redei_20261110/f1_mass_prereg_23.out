@@ -1,0 +1,22 @@
+F1 family, odd N in [2^21, 2^23): n = 3145728, mean r = 12.1898, (s = 0 part 5.3955), miss rate = 0.00823, misses = 25878
+first misses overall: [7, 13, 21, 41, 43, 55, 67, 77, 83, 105, 109, 131, 133, 147, 163, 173, 175, 177, 193, 205, 211, 231, 233, 247, 251, 261, 267, 277, 281, 295, 299, 303, 313, 327, 335, 357, 373, 377, 415, 421]
+p =  3: class 0: 13.3099  class -1: 12.9251  other classes: mean 10.3343, max 10.3343, min 10.3343   top two classes = {0, -1}: True
+p =  5: class 0: 13.6274  class -1: 13.0906  other classes: mean 11.4103, max 11.4122, min 11.4092   top two classes = {0, -1}: True
+p =  7: class 0: 13.2855  class -1: 13.1521  other classes: mean 11.7781, max 12.1863, min 11.4654   top two classes = {0, -1}: True
+p = 11: class 0: 13.2227  class -1: 12.8745  other classes: mean 11.9989, max 12.0409, min 11.9693   top two classes = {0, -1}: True
+p = 13: class 0: 12.3858  class -1: 12.3413  other classes: mean 12.1582, max 12.2163, min 12.0674   top two classes = {0, -1}: True
+p = 17: class 0: 13.7491  class -1: 13.2245  other classes: mean 12.0168, max 12.0805, min 11.9574   top two classes = {0, -1}: True
+p = 19: class 0: 12.4629  class -1: 12.4473  other classes: mean 12.1585, max 12.2395, min 12.1011   top two classes = {0, -1}: True
+p = 23: class 0: 12.4699  class -1: 12.4174  other classes: mean 12.1656, max 12.2160, min 12.1144   top two classes = {0, -1}: True
+all odd N                                                      n =  3145728  mean r =  12.1898  ratio 1.000   miss rate = 0.00823  ratio 1.000
+N prime                                                        n =   408552  mean r =  10.9168  ratio 0.896   miss rate = 0.01286  ratio 1.564
+N prime and (N+1)/4 prime [Rabinowitsch-rough]                 n =     9636  mean r =   8.7134  ratio 0.715   miss rate = 0.02719  ratio 3.305
+N prime, N = 3 mod 4, (N+1)/4 composite                        n =   194784  mean r =  11.0204  ratio 0.904   miss rate = 0.01214  ratio 1.476
+N(N+1) free of odd primes <= 29                                n =   208815  mean r =   8.7789  ratio 0.720   miss rate = 0.02432  ratio 2.957
+15 | N(N+1)                                                    n =   838861  mean r =  14.2442  ratio 1.169   miss rate = 0.00297  ratio 0.361
+r at the Heegner numbers: {3: 1, 7: 0, 11: 2, 19: 4, 43: 0, 67: 0, 163: 0}
+N = 4q - 1 < 3000 with N, q prime, and r(N): [(7, 0), (11, 2), (19, 4), (43, 0), (67, 0), (163, 0), (211, 0), (283, 6), (331, 4), (523, 8), (547, 0), (691, 12), (787, 6), (907, 2), (1051, 4), (1123, 6), (1171, 0), (1531, 6), (1723, 0), (1867, 2), (2011, 4), (2083, 6), (2251, 4), (2347, 4), (2371, 8), (2467, 8), (2707, 12), (2731, 4), (2803, 2), (2971, 6)]
+   of which r = 0: [7, 43, 67, 163, 211, 547, 1171, 1723]
+PRE-REGISTERED (HYP-9657) Q1 [classes 0 and -1 are the top two for p = 3, 5, 7, 11, 17]: CONFIRMED
+PRE-REGISTERED (HYP-9657) Q2 [rough: mean ratio <= 0.80 and miss-rate ratio >= 1.8]: CONFIRMED
+PRE-REGISTERED (HYP-9657) Q3 [15 | N(N+1): mean ratio >= 1.12 and miss-rate ratio <= 0.6]: CONFIRMED

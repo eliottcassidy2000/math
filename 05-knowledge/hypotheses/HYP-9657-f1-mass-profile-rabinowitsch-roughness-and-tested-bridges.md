@@ -3,8 +3,8 @@ id: HYP-9657
 title: "Representation mass of one-arc joins of one-apex tournaments (the F1 family): (A) the class means of the representation count r(N) modulo an odd prime p favour N = 0 and N = -1 (mod p) and show no Kronecker-symbol dependence, i.e. the local densities are of additive-divisor (sum of two products) type in N and N + 1, not of class-number type; (B) consequently integers N with N(N + 1) free of small odd primes - in particular the Heegner numbers d >= 7, for which d and (d + 1)/4 are both prime - carry the least mass and are over-represented among the misses of F1-type families (r(7) = r(43) = r(67) = r(163) = 0); (C) bridges tested and REFUTED: H mod 4 or 8 is not a function of the F_2 Redei / Monsky data, and a positive Monsky nullity does not force 3 | H (first failure: order 5, H = 13)"
 status: >
   (A), (B): NUMERICAL (in-sample: odd N in [2^18, 2^21), script f1_mass.py, output f1_mass_insample_21.out), with
-  three PRE-REGISTERED out-of-sample tests Q1-Q3 on [2^21, 2^23) recorded below BEFORE the run (this file was committed
-  first; outcomes are appended in the section "Outcomes"). The mechanism in (A) is a heuristic reading of the two
+  three PRE-REGISTERED out-of-sample tests Q1-Q3 on [2^21, 2^23) recorded below BEFORE the run (pre-registration
+  commit on origin/main preceding the run; all three CONFIRMED, section "Outcomes"). The mechanism in (A) is a heuristic reading of the two
   sub-families s = 0 and s >= 1; no asymptotic formula is proved. (C): FINITE-EXACT refutations (cycle_gas.py, every
   labelled tournament of orders 3-6). The Chan-Pak conjecture (every odd number other than 7 and 21 is a
   Hamiltonian-path count) remains OPEN; nothing here is evidence for or against it beyond what the cited canon
@@ -81,7 +81,14 @@ Q2 ratios 0.717 and 2.56; Q3 ratios 1.163 and 0.430.
 
 ## Outcomes
 
-(appended after the run)
+Run after the pre-registration commit (`f1_mass_prereg_23.out`; odd N in [2^21, 2^23), 3,145,728 integers, overall
+mean r = 12.19, miss rate 0.82%).
+- **Q1 CONFIRMED.** Classes 0 and -1 are the top two for p = 3, 5, 7, 11, 17, and also for 13, 19, 23
+  (p = 3: 13.31, 12.93 against 10.33; p = 5: 13.63, 13.09 against 11.41; p = 17: 13.75, 13.22 against 12.02).
+- **Q2 CONFIRMED.** N prime with (N + 1)/4 prime (9,636 integers): mean ratio 0.715, miss-rate ratio 3.31.
+- **Q3 CONFIRMED.** 15 | N(N + 1): mean ratio 1.169, miss-rate ratio 0.361.
+The mean ratios are stable between the two windows (0.717 / 0.715 and 1.163 / 1.169) while the miss-rate contrast
+widens (2.56 to 3.31 and 0.43 to 0.36), as expected when the overall mass grows like ln N.
 
 ## Non-consequences
 
