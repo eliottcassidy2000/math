@@ -95,3 +95,25 @@ tournament counts after filling all holes while retaining a desired target;
 unlimited source-compatible3H+2/+4 recursion; the complete tournament odd
 spectrum. No finite census, mean identity or selected-matching response
 is promoted to any of these statements.
+
+## Incoming reconciliation through 8e78147a28
+
+The three incoming Session249 commits were read before publication. Their
+[sequence-generator synthesis](../sequence_gf_20261110/SYNTHESIS.md) separates
+class counts by vertex order, growing-family path counts, labelled moments,
+and membership indicators indexed by the target integer. Its connected
+Burnside expansion retains marked permutation pair-orbits; our weighted
+polynomial instead records the three actual matrix pair states. These are
+different refinements of the same inherited Burnside mechanism. Neither is
+a new scalar formula for A000568 or a certificate of its H-support.
+
+Its fixed-target nonnegative grammar clipping and moment-support inequalities
+identify useful future consumers of the present exact response interfaces.
+The port quotient evaluates joint constrained counts without forcing them
+back into the tournament class, while the binary oriented family supplies
+a positive control for an all-target acceptance rule. That control leaves
+missing pairs, so it cannot certify the tournament rule. Likewise our
+path-marked mass is one weighted aggregate; it does not supply Session249's
+full target-bearing moment hierarchy. These incoming claims are credited
+as proved-in-note there, not independently audited or used as dependencies
+of the present proofs.
