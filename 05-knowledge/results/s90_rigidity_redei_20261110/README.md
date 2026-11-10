@@ -161,7 +161,11 @@ Each line is typed as in the protocol: source / target / map / preserved / lost 
 
 - `H mod 4` (or `mod 8`) as a function of the Redei/Monsky `F_2` data: true at orders 3-4, false at order 5.
   First failed implication: equal (Laplacian corank, Monsky nullity, nullity of `I + A`) does not give equal number
-  of odd cycles modulo 2. Survivor: Redei's parity and the identities of THM-5125 (4).
+  of odd cycles modulo 2. Survivor: Redei's parity and the identities of THM-5125 (4). The correct mod-4 statement
+  was published the same day by mac-mini, THM-5127 (C): on the ear cube of a fixed core `R`, the map
+  `X -> (H(R + v_X) - H(R))/2 mod 2` is a quadratic form over `F_2` with polar form `mu_R / 2 mod 2`, so the mod-4
+  imbalance over the `2^m` cuts is `0` or `+-2^(m - rank/2)`: the mod-4 information lives in a quadratic form on
+  cuts, not in the ranks of the adjacency matrix.
 - "Monsky nullity `> 0` implies `3 | H`": true at orders 3-4, false at order 5 (`H = 13`, the five-vertex
   tournament with out-neighbour masks `[18, 8, 3, 5, 14]`, which is Session245's h13 cell). With the pure adjacency
   matrix it survives to order 5 and fails at order 6 (`H = 17`). Survivor: for a single triangle both hold.
@@ -190,7 +194,11 @@ Each line is typed as in the protocol: source / target / map / preserved / lost 
    (conjectured to miss a positive proportion, HYP-9480 (C), OPEN).
 2. *Alive, with a quantified limit:* exchange cubes (THM-5122 criterion, THM-5117 cubes of every dimension) - width
    at most about `B^0.65` per cube with strong closure, so a covering needs polynomially many baselines per octave;
-   moving cores (THM-4960, THM-5000).
+   moving cores (THM-4960, THM-5000). Published the same day by kind-pasteur, THM-5126: every odd `N > 1` lies on
+   one 2-adic line `1 + c 2^s` (`c` the odd part of `N - 1`), unit-offset roots put whole rays of a line into the
+   spectrum, and all 65 lines with `c <= 129` lie in it except for `7` (the only miss of `c = 3`) and `21` (the
+   only miss of `c = 5`): an all-order family organised by the 2-adic coordinate, the natural partner of the
+   threshold count in item 5.
 3. *The analytic route.* The three-letter rooted system `S, B, F` on states `(h, R, e, u)` (it is the O/Z/J grammar;
    rules re-derived and checked against brute force in `psi_sbf.py`) satisfies `h <= R` at every state and `R` at
    most doubles with each letter, so the `2 * 3^(k-1)` words of length `k` not ending in `S` all have count at most
@@ -227,7 +235,9 @@ Each line is typed as in the protocol: source / target / map / preserved / lost 
      `E(x) = c0 + L.x - (1/2) x^T W x` (THM-4114), and Weyl differencing on the cube is exact:
      `|S(theta)|^2 = sum over d in {-1,0,1}^n of e(theta (L.d - (1/2) sum_{i in supp d} (W d)_i)) prod_{i not in supp d} (1 + e(-theta (W d)_i))`
      (`ear_weyl_identity.py`, checked). So `|S|^2 <= sum_d prod_{i not in supp d} 2 |cos(pi theta (W d)_i)|`, and a
-     power saving follows whenever `theta W d` has many coordinates far from the integers.
+     power saving follows whenever `theta W d` has many coordinates far from the integers. The same differencing
+     bound, in a decoupled form over two disjoint vertex sets, is THM-5127 (C4) (mac-mini, published the same day at
+     12:11, before this note was pushed; found here independently): cite THM-5127 for the inequality.
    - *What is missing.* One cube can save at most about `2^(-n/2)`; the threshold asks for `(k+1)^(-n)`, so the
      saving must be harvested from about `2 log2(k+1)` apexes at once without the `2^(-k)` loss of iterated
      Cauchy-Schwarz; the resonant rationals (Mersenne-type denominators, where the one-apex rate is `0.89` to

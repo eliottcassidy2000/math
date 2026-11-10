@@ -92,7 +92,9 @@ m(N) = 0 are the values of THM-4884 (FINITE-EXACT there through 50,001).
 M = A + diag(row parities) (the Monsky / Redei-type matrix of the reciprocity tournament, convention of
 bsd_selmer_growth_20261013a.md).
 1. H mod 4 is not a function of (corank of the F_2-Laplacian, nullity(M^2 + M + I), nullity(I + A)): it is on
-   orders 3 and 4, fails on 3 of 6 classes at order 5 and on 6 of 16 at order 6.
+   orders 3 and 4, fails on 3 of 6 classes at order 5 and on 6 of 16 at order 6. (The mod-4 law that does hold is
+   THM-5127 (C), mac-mini, published the same day: on the ear cube of a fixed core, (H - h)/2 mod 2 is a quadratic
+   form over F_2 with polar form mu_R / 2 mod 2.)
 2. "nullity(M^2 + M + I) > 0 implies 3 | H" holds on orders 3 and 4 and fails at order 5 (out-neighbour masks
    [18, 8, 3, 5, 14], H = 13, the core of Session245's THM-5117); with the pure adjacency matrix it holds through
    order 5 and fails at order 6 (masks [32, 1, 3, 7, 15, 30], H = 17).
@@ -118,7 +120,8 @@ X^1.58 and are below this threshold; k apexes over a transitive chain have 2^(kn
 k! (k+1)^n (PROVED, elementary), so |F| >= X^(k / log2(k+1)), which exceeds X^2 from k = 6. Known obstacle: at
 rationals with Mersenne-type denominators the one-apex sum decays slowly (rate 0.93 per letter at 1/7, about 0.89 at
 1/15, 1/31, 1/63; S82 note), so those points must be treated as major arcs with vanishing local factor.
-No bound is proved; the exact differencing identity for one ear cube (ear_weyl_identity.py) is the available tool.
+No bound is proved; the exact differencing identity for one ear cube (ear_weyl_identity.py; its inequality form
+is also THM-5127 (C4), mac-mini, published the same day at 12:11, before this file) is the available tool.
 This item records where the exponent count first allows a statement about every large N rather than about almost
 all N; it is not a claim that the route works.
 
