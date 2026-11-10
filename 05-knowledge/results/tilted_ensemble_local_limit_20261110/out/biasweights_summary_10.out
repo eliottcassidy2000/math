@@ -1,0 +1,9 @@
+order m = 10: classes 9733056, labelled weight 35184372088832 (= 2^C(m,2)); failures (mu odd, a odd, Theorem C (3), aut) = [0, 0, 0, 0]
+  E_R[b_R^2] = 71511414601/70368744177664 = 0.001016238 ; rho_m = 2^m E_R[b_R^2] = 1.040628
+  E_R|b_R| = 0.022563 ; E_R[2^(-rank/2)] = 0.050768 ; sqrt(E_R[b_R^2]) = 0.031878
+  D_11 = P(H = 1 mod 4) - P(H = 3 mod 4) at order 11 = 260546929/549755813888 = 0.000473932
+    rank  2 (corank 8): classes 5 zero-bias + 2 ; labelled fraction 0.0000003 ; nonzero-bias fraction (labelled) 0.14634 (model 0.00391)
+    rank  4 (corank 6): classes 523 zero-bias + 145 ; labelled fraction 0.0000570 ; nonzero-bias fraction (labelled) 0.14972 (model 0.01562)
+    rank  6 (corank 4): classes 191763 zero-bias + 18799 ; labelled fraction 0.0215859 ; nonzero-bias fraction (labelled) 0.08753 (model 0.06250)
+    rank  8 (corank 2): classes 4005054 zero-bias + 1439603 ; labelled fraction 0.5594148 ; nonzero-bias fraction (labelled) 0.26407 (model 0.25000)
+    rank 10 (corank 0): classes 0 zero-bias + 4077162 ; labelled fraction 0.4189420 ; nonzero-bias fraction (labelled) 1.00000 (model 1.00000)

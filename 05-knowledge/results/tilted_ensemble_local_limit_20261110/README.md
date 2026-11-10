@@ -3,8 +3,9 @@
 **Session:** mac-mini-2026-11-10-ensemble. **Canon:** THM-5127. **Hypotheses:** HYP-9659.
 **Audit:** independent, same day: PASS WITH CORRECTIONS (5 MAJOR - two missed credits, one implication, one
 mis-worded hypothesis, one misattribution - and 24 minor, plus three residual items R1-R3 on the corrected text; all
-applied; `audit/AUDIT.md`, MISTAKE-753). Added after the audit and marked as such: the deletion-pair form (4.3), the
-box-norm chain and the pre-registered order-10 bias run P3-P6 (section 4.1).
+applied; `audit/AUDIT.md`, MISTAKE-753). Added after the audit and marked as such (sections 4.1a, 4.1b): the
+deletion-pair form (4.3), the box-norm chain, the parity law (4.5) with `1/4 <= P(H = 1 mod 4) <= 3/4`, and the
+pre-registered order-10 bias run P3-P6 (all CONFIRMED); second audit (of these additions): pending at this commit.
 
 **Owner directive (summary).** Aim to prove that 7 and 21 are the only positive odd numbers that are not the number
 `H(T)` of Hamiltonian paths of a tournament; prefer reasoning and experiments that expose structure over more coverage
@@ -26,12 +27,19 @@ What this session adds:
    (THM-4118 eq. (4)), known to be even (THM-4097 eq. (6a)) and at least `2 H(R - {i,j}) >= 2` (Session 136
    `positive_cut_geometry.md` eq. (3); THM-5122). Hence the mod-4 imbalance of `H` over that cube is exactly `0` or `2^(-rank(beta_R)/2)`, and the mod-4
    discrepancy of `H` over all tournaments of order `m+1` is at most the mean of `2^(-rank(beta_R)/2)` over order `m`
-   (Theorem C). A Weyl-differencing bound covers every other frequency (Lemma C4).
+   (Theorem C). A Weyl-differencing bound covers every other frequency (Lemma C4). Explicitly `beta_R(i,j)` is the
+   parity of the number of even-order paths between `i` and `j` (4.4); the pair terms satisfy
+   `sum_{i<j} mu_R(i,j) = 2 mod 4`, so `rank(beta_R) >= 2` and `1/4 <= P(H = 1 mod 4) <= 3/4` at every order `n >= 3`
+   (Lemma 4.5, Corollary 4.6); and the second moment of the bias is the mod-4 correlation of two one-vertex deletions
+   (Proposition 4.3).
 4. **(FINITE-EXACT)** Censuses designed to test structure rather than coverage:
    - `beta_R` on every tournament class of orders 2-9 (198,947 classes) and every labelled tournament of orders 2-7:
      no exception to Theorem C, and the rank statistics agree with those of a uniformly random alternating matrix
      over `F_2` to within 1.2 percentage points at orders 8 and 9. A **pre-registered** out-of-sample run at order
-     10 (9,733,056 classes) then agreed to within 0.08 points (P1, P2 CONFIRMED).
+     10 (9,733,056 classes) then agreed to within 0.08 points (P1, P2 CONFIRMED). A second pre-registered run
+     (P3-P6 CONFIRMED) gives the exact bias of every order-10 vertex cube: the deletion-pair correlation is `1.041`
+     times the twin term `2^(-10)`, and the exact labelled mod-4 discrepancy at order 11 is
+     `260546929/2^39 = 0.000474` (orders 8, 9, 10: `0.0415, 0.00752, 0.00242`).
    - The class-count function `N_n(h)` at orders 9 and 10: in the window mean +- sd at order 10 every odd `h` has at
      least 1,504 classes, the local fluctuations are of Poisson order (variance about twice Poisson), and residue
      classes mod 3, 4, 5, 7, 8 are balanced to 1.2% or better (the only effect seen is an excess of multiples of 3).
@@ -310,14 +318,14 @@ square as an average over two independent stars `u, u'`: a cycle avoiding both i
 is counted in neither, so the exponent is `N_(k+1)` for the pairs of `W` together with `{u, u'}`. QED
 
 Two calibrations of (4.3). The twin extensions `X = X'` alone contribute `2^(-m)`. And for a uniformly random
-quadratic form on `F_2^m` the left side is exactly `2^(-m)`, because two distinct points have independent values. So
+quadratic form on `F_2^m` the left side is exactly `2^(-m)`, because the values at two distinct points are uncorrelated. So
 `rho_m = 2^m E_R[b_R^2]` measures how far the mod-4 classes of two *different* one-vertex extensions of the same base
 are from independent, and the statement "the rank of `beta_R` is large" can be written without forms: the mod-4
 classes of two one-vertex deletions of a random tournament decorrelate.
 
 Exact values (labelled weights; `biasweights.c`, `merge_bias.py`, `out/biasweights_summary_2_9.out`; the program
 reproduces the audit's labelled rank tables and discrepancies at `m = 8, 9` digit for digit; (4.3) is checked by
-direct enumeration of both sides for `m <= 4` and of vertex cubes for `m <= 5` in `deletion_pair_corr.py`, and the
+direct enumeration of both sides for `m <= 5` and of vertex cubes for `m <= 6` in `deletion_pair_corr.py 7`, and the
 chain for `n + k <= 6` in `box_norm_check.py`):
 
 | `m` | `E_R[b_R^2]` | `rho_m` | `E_R abs(b_R)` (bound of (4)) | `D_(m+1)` exact |
@@ -330,14 +338,56 @@ chain for `n + k <= 6` in `box_norm_check.py`):
 | 7 | 57619/4194304 | 1.758 | 0.08835 | 1361/32768 = 0.04153 |
 | 8 | 1304557/268435456 | 1.244 | 0.05028 | 63103/8388608 = 0.007522 |
 | 9 | 155129173/68719476736 | 1.156 | 0.03155 | 650471/268435456 = 0.002423 |
-| 10 | pre-registered (P3-P6); run pending at this commit | | | |
+| 10 (pre-registered) | 71511414601/70368744177664 | 1.041 | 0.02256 | 260546929/549755813888 = 0.000474 |
 
 The excess of `rho_m` over 1 comes from forms of positive corank whose linear part vanishes on the radical more often
 than the `2^(-corank)` of a random form: the labelled frequency of non-zero bias is `1, 0.815, 0.636, 0.527` at corank
-1 (`m = 3, 5, 7, 9`; model 1/2), `1, 0.522, 0.326` at corank 2 (`m = 4, 6, 8`; model 1/4) and `1, 0.539, 0.195` at
-corank 3 (`m = 5, 7, 9`; model 1/8).
+1 (`m = 3, 5, 7, 9`; model 1/2), `1, 0.522, 0.326, 0.264` at corank 2 (`m = 4, 6, 8, 10`; model 1/4), `1, 0.539, 0.195`
+at corank 3 (`m = 5, 7, 9`; model 1/8) and `0.200, 0.088` at corank 4 (`m = 8, 10`; model 1/16).
 
-The order-10 row is pre-registered (`PREREGISTRATION.md`, P3-P6) and not yet run at this commit.
+The order-10 row was predicted before it was run (`PREREGISTRATION.md`, second block; commit 23d6c4033f, pushed
+before the run): P3 `rho_10 in [1.01, 1.12]` - observed `1.0406`; P4 frequency of non-zero bias at corank 2 in
+`[0.255, 0.290]` - observed `0.2641`; P5 `D_11` positive and in `[0.0003, 0.0011]` - observed `0.000474`; P6
+`E_R abs(b_R) in [0.0220, 0.0238]` - observed `0.02256`; control (Theorem C (1)-(3) on every class, weights summing to
+`2^45`) - no failure in 9,733,056 classes. All four CONFIRMED (`out/biasweights_summary_10.out`). So the mod-4 classes
+of two different one-vertex extensions of a random 10-vertex base are independent to within 4% of the twin term, and
+the exact labelled mod-4 discrepancy at order 11 is `260546929/2^39`.
+
+### 4.1b A parity law for the pair matrix (added after the audit)
+
+**Lemma 4.5 (PROVED).** For every tournament `R` on `m >= 2` vertices
+
+    sum_{i<j} mu_R(i,j) = sum_i a_i = sum_{S proper, non-empty} H(R[S]) H(R[V \ S]) = 2  (mod 4).           (4.5)
+
+Hence `beta_R` has an odd number of non-zero entries above the diagonal, the linear part `(a_i/2 mod 2)_i` has odd
+weight, `rank(beta_R) >= 2` and `abs(b_R) <= 1/2`.
+
+*Proof.* (4.2) at `X = V`: the new vertex is a source, so `H(R + v_V) = H(R)` and `sum_i a_i = sum_{i<j} mu(i,j)`.
+By (4.1) at `X = {i}`, `a_i = g(i) - f(i) + sum_{j != i} M[j,i]`. Summing over `i`, the first two terms cancel
+(`sum_i g(i) = sum_i f(i) = H(R)`) and the rest counts the ordered pairs of disjoint non-empty paths covering `V`,
+which is `sum_S H(R[S]) H(R[V \ S])` over proper non-empty `S`. Pairing `S` with its complement, this is twice a sum
+of `2^(m-1) - 1` odd numbers (Redei), hence `2 mod 4` for `m >= 2`. A non-zero alternating matrix has rank at least
+2; then Theorem C (3). QED
+
+By (4.4) the lemma says that the number of directed paths of `R` on an even number of vertices is odd (Redei on
+every even subset: `sum_{k even >= 2} C(m,k) = 2^(m-1) - 1`).
+
+**Corollary 4.6 (PROVED).** (a) For every tournament `R` on `m >= 2` vertices, at least `2^(m-2)` of its `2^m`
+one-vertex extensions have `H = H(R) mod 4` and at least `2^(m-2)` have `H = H(R) + 2 mod 4`. (b) For `T` uniform on
+`n >= 3` labelled vertices, `1/4 <= P(H(T) = 1 mod 4) <= 3/4`, that is `abs(D_n) <= 1/2`; equality holds at
+`n = 3, 4`. (c) `E_R[b_R^2] <= 1/4`.
+
+*Proof.* (a) is `abs(b_R) <= 1/2`. (b): average (a) over `R = T - v`. (c) is immediate. QED
+
+(b) holds at every order and is far from the truth (`D_11 = 4.7 * 10^(-4)`); what is missing for decay is growth of
+the rank, and (4.5) is the only linear relation on `beta_R` found here. It fixes the null model: a uniformly random
+alternating matrix *with an odd number of edges*. Its rank law (`oddedge_model.py`, an exact Markov chain on rank,
+edge parity and whether the all-ones vector lies in the radical; checked against brute force for `m <= 6`) differs
+from the unconditioned law by less than `3 * 10^(-5)` in every rank class for `m >= 8`, so the comparison table of
+section 4.1 is unaffected. OBSERVATION (FINITE-EXACT, unexplained): at `m = 4` and `m = 5` the labelled rank law of
+`beta_R` equals the odd-edge law exactly (`5/8, 3/8` and `5/32, 27/32`); at `m = 6` it does not (no rank 2 occurs).
+Verification of (4.5): all 198,947 classes of orders 2-9 and all 9,733,056 classes of order 10 (`oddedge.c`,
+`out/oddedge_2_9.out`, `out/oddedge_10_parts.out`), no failure.
 
 ### 4.2 A remark on small steps
 
@@ -545,7 +595,13 @@ Requires `gentourng` (nauty) and a C compiler. From this directory:
     python3 merge_bias.py out/biasweights_2_9.out                 # section 4.1a table (about 10 s)
     for r in 0 1 2 3 4 5 6 7; do gentourng -q 10 $r/8 | /tmp/biasweights 10 > /tmp/bw10_$r.out & done; wait
     cat /tmp/bw10_*.out > out/biasweights_10_parts.out && python3 merge_bias.py out/biasweights_10_parts.out   # P3-P6
-    python3 deletion_pair_corr.py 6; python3 box_norm_check.py    # (4.3) and the box-norm chain, brute force
+        python3 deletion_pair_corr.py 7 > out/deletion_pair_corr.out  # (4.3), brute force (about 20 minutes; `6`: 4 s)
+        python3 box_norm_check.py                                     # the box-norm chain for n + k <= 6
+    cc -O2 -o /tmp/oddedge oddedge.c
+    for m in 2 3 4 5 6 7 8 9; do gentourng -q $m | /tmp/oddedge $m; done > out/oddedge_2_9.out   # Lemma 4.5
+    for r in 0 1 2 3 4 5 6 7; do gentourng -q 10 $r/8 | /tmp/oddedge 10 > /tmp/oe10_$r.out & done; wait
+    cat /tmp/oe10_*.out > out/oddedge_10_parts.out
+    python3 oddedge_model.py 11 > out/oddedge_model.out           # rank law of odd-edge alternating matrices
     python3 flip_family.py                                        # section 4.2, d = 2..11 from the recurrence of g
     python3 ozj.py 30000                                            # non-negative O/Z/J coordinates: the known 29 misses
 

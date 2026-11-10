@@ -1,0 +1,31 @@
+chain = brute force for m = 2..6
+m =  2 odd-edge:  rank 2: 1.0000000
+        uncond.:   rank 2: 0.5000000  rank 0: 0.5000000
+        odd-edge E[2^(-rank/2)] = 0.500000 ; 2^(m/2) * that = 1.0000
+m =  3 odd-edge:  rank 2: 1.0000000
+        uncond.:   rank 2: 0.8750000  rank 0: 0.1250000
+        odd-edge E[2^(-rank/2)] = 0.500000 ; 2^(m/2) * that = 1.4142
+m =  4 odd-edge:  rank 4: 0.3750000  rank 2: 0.6250000
+        uncond.:   rank 4: 0.4375000  rank 2: 0.5468750  rank 0: 0.0156250
+        odd-edge E[2^(-rank/2)] = 0.406250 ; 2^(m/2) * that = 1.6250
+m =  5 odd-edge:  rank 4: 0.8437500  rank 2: 0.1562500
+        uncond.:   rank 4: 0.8476562  rank 2: 0.1513672  rank 0: 0.0009766
+        odd-edge E[2^(-rank/2)] = 0.289062 ; 2^(m/2) * that = 1.6352
+m =  6 odd-edge:  rank 6: 0.4257812  rank 4: 0.5537109  rank 2: 0.0205078
+        uncond.:   rank 6: 0.4238281  rank 4: 0.5562744  rank 2: 0.0198669  rank 0: 0.0000305
+        odd-edge E[2^(-rank/2)] = 0.201904 ; 2^(m/2) * that = 1.6152
+m =  7 odd-edge:  rank 6: 0.8410645  rank 4: 0.1576538  rank 2: 0.0012817
+        uncond.:   rank 6: 0.8410339  rank 4: 0.1576939  rank 2: 0.0012717  rank 0: 0.0000005
+        odd-edge E[2^(-rank/2)] = 0.145187 ; 2^(m/2) * that = 1.6426
+m =  8 odd-edge:  rank 8: 0.4205017  rank 6: 0.5585194  rank 4: 0.0209384  rank 2: 0.0000405
+        uncond.:   rank 8: 0.4205170  rank 6: 0.5584991  rank 4: 0.0209437  rank 2: 0.0000402  rank 0: 0.0000000
+        odd-edge E[2^(-rank/2)] = 0.101351 ; 2^(m/2) * that = 1.6216
+m =  9 odd-edge:  rank 8: 0.8393912  rank 6: 0.1592596  rank 4: 0.0013485  rank 2: 0.0000006
+        uncond.:   rank 8: 0.8393913  rank 6: 0.1592595  rank 4: 0.0013486  rank 2: 0.0000006  rank 0: 0.0000000
+        odd-edge E[2^(-rank/2)] = 0.072707 ; 2^(m/2) * that = 1.6452
+m = 10 odd-edge:  rank 10: 0.4196957  rank 8: 0.5590477  rank 6: 0.0212139  rank 4: 0.0000428  rank 2: 0.0000000
+        uncond.:   rank 10: 0.4196956  rank 8: 0.5590477  rank 6: 0.0212139  rank 4: 0.0000428  rank 2: 0.0000000  rank 0: 0.0000000
+        odd-edge E[2^(-rank/2)] = 0.050718 ; 2^(m/2) * that = 1.6230
+m = 11 odd-edge:  rank 10: 0.8389814  rank 8: 0.1596499  rank 6: 0.0013680  rank 4: 0.0000007  rank 2: 0.0000000
+        uncond.:   rank 10: 0.8389814  rank 8: 0.1596499  rank 6: 0.0013680  rank 4: 0.0000007  rank 2: 0.0000000  rank 0: 0.0000000
+        odd-edge E[2^(-rank/2)] = 0.036367 ; 2^(m/2) * that = 1.6458

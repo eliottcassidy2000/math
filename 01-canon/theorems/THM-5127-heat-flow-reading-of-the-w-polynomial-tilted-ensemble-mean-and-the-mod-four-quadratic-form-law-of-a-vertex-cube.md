@@ -1,8 +1,8 @@
 ---
 id: THM-5127
-title: "The heat flow of the Hamiltonian-path count and the mod-4 law of a vertex cube. (A) The W-polynomial is the noise semigroup of the arc cube applied to H: (N_rho H)(T) = sum_k a_k(T) p^k q^(n-1-k) and W_T(r) = (2r)^(n-1) (N_{1/(2r)} H)(T) for |r| >= 1/2; in the coordinate w = p(1-p) the noised count is sum_j gamma_j(T) w^j with integer gamma_j(T), gamma_0(T) = H(T) and sum_j gamma_j(T) 4^(-j) = n!/2^(n-1). (B) Tilted ensemble: if each pair i < j is oriented i -> j independently with probability p, then E_p[H_n] = sum_j gamma_{n,j} (p(1-p))^j with gamma_{n,j} the gamma-vector of the Eulerian polynomial; for n >= 3 it decreases strictly and continuously from n!/2^(n-1) at p = 1/2 to 1 at p = 1. (C) For a tournament R on m vertices the pair term mu_R(i,j) of the cut quadratic is even and >= 2 (KNOWN); X -> (H(R + v_X) - H(R))/2 mod 2 is a quadratic form over F_2 with polar form beta_R = mu_R/2 mod 2; the mod-4 imbalance of H over the 2^m out-sets is 0 or +-2^(m - rank(beta_R)/2); hence the mod-4 discrepancy of H over labelled tournaments of order m+1 is at most the mean of 2^(-rank(beta_R)/2) over order m; explicitly beta_R(i,j) = P_ij + P_ji mod 2 with P_ij the number of i-to-j paths of R on an even number of vertices; the second moment of the bias is the mod-4 correlation of two one-vertex deletions, E_R[b_R^2] = E_T (-1)^((H(T-v) - H(T-v'))/2). (C4) |E_X e(theta H(R + v_X))|^2 <= E_d prod_{i in U} |cos(pi theta sum_{j in V'} mu_R(i,j) d_j)|. FINITE-EXACT: beta_R on all classes of orders 2-9 and all labelled tournaments of orders 2-7 (rank statistics within 1.2 points of a uniformly random alternating matrix at orders 8, 9, and within 0.08 points at order 10 in a pre-registered run); class counts at orders 9, 10; the full deletion window [3h, 5h) for 237 <= h <= 1023 and [3h, 9h) for 365 <= h <= 1023 with bases of order <= 10. Chan-Pak OPEN"
+title: "The heat flow of the Hamiltonian-path count and the mod-4 law of a vertex cube. (A) The W-polynomial is the noise semigroup of the arc cube applied to H: (N_rho H)(T) = sum_k a_k(T) p^k q^(n-1-k) and W_T(r) = (2r)^(n-1) (N_{1/(2r)} H)(T) for |r| >= 1/2; in the coordinate w = p(1-p) the noised count is sum_j gamma_j(T) w^j with integer gamma_j(T), gamma_0(T) = H(T) and sum_j gamma_j(T) 4^(-j) = n!/2^(n-1). (B) Tilted ensemble: if each pair i < j is oriented i -> j independently with probability p, then E_p[H_n] = sum_j gamma_{n,j} (p(1-p))^j with gamma_{n,j} the gamma-vector of the Eulerian polynomial; for n >= 3 it decreases strictly and continuously from n!/2^(n-1) at p = 1/2 to 1 at p = 1. (C) For a tournament R on m vertices the pair term mu_R(i,j) of the cut quadratic is even and >= 2 (KNOWN); X -> (H(R + v_X) - H(R))/2 mod 2 is a quadratic form over F_2 with polar form beta_R = mu_R/2 mod 2; the mod-4 imbalance of H over the 2^m out-sets is 0 or +-2^(m - rank(beta_R)/2); hence the mod-4 discrepancy of H over labelled tournaments of order m+1 is at most the mean of 2^(-rank(beta_R)/2) over order m; explicitly beta_R(i,j) = P_ij + P_ji mod 2 with P_ij the number of i-to-j paths of R on an even number of vertices; the second moment of the bias is the mod-4 correlation of two one-vertex deletions, E_R[b_R^2] = E_T (-1)^((H(T-v) - H(T-v'))/2); parity law: sum_{i<j} mu_R(i,j) = 2 mod 4 for m >= 2, so rank(beta_R) >= 2 and 1/4 <= P(H = 1 mod 4) <= 3/4 at every order n >= 3. (C4) |E_X e(theta H(R + v_X))|^2 <= E_d prod_{i in U} |cos(pi theta sum_{j in V'} mu_R(i,j) d_j)|. FINITE-EXACT: beta_R on all classes of orders 2-9 and all labelled tournaments of orders 2-7 (rank statistics within 1.2 points of a uniformly random alternating matrix at orders 8, 9, and within 0.08 points at order 10 in a pre-registered run); class counts at orders 9, 10; the full deletion window [3h, 5h) for 237 <= h <= 1023 and [3h, 9h) for 365 <= h <= 1023 with bases of order <= 10. Chan-Pak OPEN"
 status: >
-  PROVED: (A), (B), (C) (2)-(4), (C4), and the implications Proposition 5.1 and Proposition 6.1 of the source note.
+  PROVED: (A), (B), (C) (2)-(6), (C4), and the implications Proposition 5.1 and Proposition 6.1 of the source note.
   KNOWN, credited:
   - forward-edge numbers, palindromy and the W-polynomial (THM-059, THM-062); the transitive case
     a_k(TT_n) = A(n,k), i.e. THM-059's master polynomial F_(n-1);
@@ -26,18 +26,20 @@ status: >
   - the Bourgain-Kontorovich analogy for word semigroups (Session205, opus S82, opus S90).
   NEW here: the noise/tilt reading and the gamma form, positivity reading and strict monotonicity of Theorem B; the F_2
   quadratic form of a vertex cube and its rank bound for H mod 4 ((C) (2)-(4)); (C4) (opus S90's note has an exact
-  ear-cube Weyl identity found independently the same day); the deletion-pair identity (4.3) and the box-norm chain
-  (added after the audit; elementary); the censuses listed under FINITE-EXACT.
-  FINITE-EXACT: sections 4.1, 5 and 6 of the source note (programs and outputs in the packet); pre-registered P1-P2
-  (order-10 rank distribution) CONFIRMED.
+  ear-cube Weyl identity found independently the same day); the deletion-pair identity (4.3), the box-norm chain and the parity law (4.5) with its corollary (added after the
+  audit; elementary); the censuses listed under FINITE-EXACT.
+    FINITE-EXACT: sections 4.1, 4.1a, 4.1b, 5 and 6 of the source note (programs and outputs in the packet);
+  pre-registered P1-P2 (order-10 rank distribution) and P3-P6 (order-10 bias, deletion-pair correlation, D_11)
+  CONFIRMED.
   NUMERICAL: the bridging tilt p_n and its asymptotic.
   NOT CLAIMED: the Chan-Pak conjecture, positive density of the spectrum, or any part of HYP-9659.
   AUDIT: PASS WITH CORRECTIONS (05-knowledge/results/tilted_ensemble_local_limit_20261110/audit/AUDIT.md; 5 MAJOR:
   M1 (C) (1) and (4.2) are prior canon, M2 the all-n algebra of (A) is THM-4757/4761, M3 the hypothesis (B) did not
   imply its stated consequence, M4 Proposition 6.1's hypothesis mis-worded, M5 a statement misattributed to THM-4876;
   24 minor and three residual items; all applied; every theorem and every number of the audited text reproduced with
-  independent code; MISTAKE-753). NOT AUDITED: Proposition 4.3, the box-norm chain and the order-10 bias run P3-P6, added
-  after the audit (the program reproduces the audit's labelled tables at orders 8 and 9 digit for digit).
+  independent code; MISTAKE-753). Added after that audit: (C) (5), (6)
+  and the order-10 bias run P3-P6 (the program reproduces the first audit's labelled tables at orders 8 and 9 digit for
+  digit); SECOND AUDIT: PENDING at this commit (audit2/ in the packet).
 session: mac-mini-2026-11-10-ensemble
 source: 05-knowledge/results/tilted_ensemble_local_limit_20261110/README.md
 related:
@@ -126,7 +128,12 @@ reversed arc.
    For a uniform tournament on `n + k` vertices with `k` disjoint marked pairs and `N_k` the number of odd cycles
    meeting every pair exactly once, `B(n,k) = E (-1)^(N_k)` satisfies `B(n,k)^2 <= B(n,k+1)`, so
    `|D_n|^(2^k) <= B(n,k)` (`1 <= k <= n`). The twin extensions alone contribute `2^(-m)` to `E_R[b_R^2]`, which is also
-   its exact value for a uniformly random quadratic form.
+      its exact value for a uniformly random quadratic form.
+6. (Parity law; added after the audit.) For `m >= 2`:
+   `sum_{i<j} mu_R(i,j) = sum_i a_i = sum_{S proper, non-empty} H(R[S]) H(R[V \ S]) = 2 (mod 4)`. Hence `beta_R` has an
+   odd number of non-zero entries above the diagonal, `rank(beta_R) >= 2`, `abs(b_R) <= 1/2`; every tournament on
+   `m >= 2` vertices has at least `2^(m-2)` one-vertex extensions in each of the classes `H(R)`, `H(R) + 2` mod 4; and
+   `1/4 <= P(H = 1 mod 4) <= 3/4` for a uniform labelled tournament of every order `n >= 3` (equality at `n = 3, 4`).
 
 (C4) For disjoint `U, V' subset V(R)`, real `theta`, and `d_j` independent in `{-1, 0, 1}` with probabilities
 `1/4, 1/2, 1/4`: `|E_X e(theta H(R + v_X))|^2 <= E_d prod_{i in U} |cos(pi theta sum_{j in V'} mu_R(i,j) d_j)|`.
@@ -145,7 +152,10 @@ Failure boundary: the count is an exact quadratic only in the arcs at one new ve
   representatives with weights `n!/|Aut|` and from vertex cubes): `1361/32768`, `63103/8388608`, `650471/268435456`
   (0.0415, 0.00752, 0.00242).
 - Second moment (labelled, exact): `rho_m = 2^m E_R[b_R^2] = 1, 2, 2.875, 2.625, 1.583, 1.758, 1.244, 1.156` at
-  `m = 2, ..., 9` (`E_R[b_R^2] = 1304557/268435456` at `m = 8`, `155129173/68719476736` at `m = 9`). Order 10: pre-registered P3-P6, run pending at this commit.
+  `m = 2, ..., 9` (`E_R[b_R^2] = 1304557/268435456` at `m = 8`, `155129173/68719476736` at `m = 9`). At `m = 10`
+  (pre-registered P3-P6, all CONFIRMED): `rho_10 = 1.0406`, `E_R abs(b_R) = 0.02256`, and the exact labelled discrepancy
+  at order 11 is `D_11 = 260546929/549755813888 = 0.000474`.
+- Parity law (4.5): no failure on all classes of orders 2-10.
 - Class counts: at order 10 every odd `h <= 14683` except 7, 21 occurs; in the window `[3963, 10192]` (class mean
   +- sd) every odd `h` has at least 1,504 classes; residue classes mod 3, 4, 5, 7, 8 are balanced to 1.2% (the only effect seen is an excess of multiples of 3);
   the local variance of the class counts is about twice Poisson.

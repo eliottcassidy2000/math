@@ -9,7 +9,8 @@ status: >
   (B), (B'): FINITE-EXACT agreement within 1.2 percentage points at orders 8 and 9; pre-registered P1-P2 at order 10
   (9,733,056 classes) CONFIRMED, agreement within 0.08 points. (B) alone gives only that the mod-4 discrepancy tends
   to 0; (B') gives the exponential rate (audit M3). (B'') (deletion-pair form, added after the audit): labelled
-  rho_m = 1.244, 1.156 at m = 8, 9. Order 10 pre-registered (P3-P6), run pending at this commit.
+  rho_m = 1.244, 1.156 at m = 8, 9. Pre-registered P3-P6 at m = 10 CONFIRMED (rho_10 = 1.041;
+  exact D_11 = 0.000474). PROVED towards (B''): E_R[b_R^2] <= 1/4 and |D_n| <= 1/2 at every order (THM-5127 (C) (6)).
   (C): FINITE-EXACT for 237 <= h <= 1023 with bases of order <= 10 and all out-sets. The implication is PROVED
   (source note, Proposition 6.1). (C) is the all-out-sets form of klein's HYP-9453 (2).
   AUDIT: PASS WITH CORRECTIONS (the packet's audit/AUDIT.md; M3 and M4 concern this file; applied; MISTAKE-753).
@@ -79,10 +80,15 @@ tends to 1). By THM-5127 (C) (5) the expectation equals `E_R[b_R^2]` with `b_R^2
 implies the qualitative form; bounded `rho_m` implies a mod-4 discrepancy `O(2^(-m/2))` at order `m+1`
 (Cauchy-Schwarz); neither of (B') and bounded `rho_m` implies the other (zero-bias forms count in (B') only; (B')
 bounds `E_R[b_R^2]` only by `C 2^(-m/2)`). The value `rho_m = 1` is the contribution of twin extensions and the exact
-value for a uniformly random quadratic form. This is the smallest open statement on the mod-4 route: no bound below
-the trivial 1 is proved here for `E_T (-1)^(N_1(T))` at large `m`.
+value for a uniformly random quadratic form. This is the smallest open statement on the mod-4
+route. PROVED so far: `E_T (-1)^(N_1(T)) <= 1/4` for every `m >= 2` and `|D_n| <= 1/2` for every `n >= 3`, from the
+parity law `sum_{i<j} mu_R(i,j) = 2 mod 4` (THM-5127 (C) (6)), which gives `rank(beta_R) >= 2`; decay needs growth of
+the rank, and no second linear relation on `beta_R` is known.
 
-**Evidence for (B'').** Labelled, exact: `rho_m = 1, 2, 2.875, 2.625, 1.583, 1.758, 1.244, 1.156` at `m = 2, ..., 9`. Order 10: pre-registered P3-P6 (`PREREGISTRATION.md`), run pending at this commit.
+**Evidence for (B'').** Labelled, exact: `rho_m = 1, 2, 2.875, 2.625, 1.583, 1.758, 1.244, 1.156` at `m = 2, ..., 9`. Order 10,
+pre-registered (P3 `rho_10 in [1.01, 1.12]`; P4 corank-2 bias frequency in `[0.255, 0.290]`; P5 `D_11 in [0.0003, 0.0011]`;
+P6 `E_R|b_R| in [0.0220, 0.0238]`): `rho_10 = 1.0406`, `0.2641`, `D_11 = 260546929/2^39 = 0.000474`, `0.02256`; all
+CONFIRMED.
 
 **Falsifier.** A rank distribution at order 11 that moves away from the random-alternating one; for (B'), a sequence
 of orders along which `2^(m/2) E_R[2^(-rank(beta_R)/2)]` is unbounded; for (B''), a sequence along which `rho_m` is

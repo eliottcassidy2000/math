@@ -1,0 +1,8 @@
+order 2 classes 1 failures: sum mu != sum a 0 ; sum a != sum_S H(S)H(S^c) 0 ; sum mu != 2 mod 4 0 ; even number of beta-edges 0 ; even weight of ell 0 ; edges: 1:1
+order 3 classes 2 failures: sum mu != sum a 0 ; sum a != sum_S H(S)H(S^c) 0 ; sum mu != 2 mod 4 0 ; even number of beta-edges 0 ; even weight of ell 0 ; edges: 3:2
+order 4 classes 4 failures: sum mu != sum a 0 ; sum a != sum_S H(S)H(S^c) 0 ; sum mu != 2 mod 4 0 ; even number of beta-edges 0 ; even weight of ell 0 ; edges: 3:3 5:1
+order 5 classes 12 failures: sum mu != sum a 0 ; sum a != sum_S H(S)H(S^c) 0 ; sum mu != 2 mod 4 0 ; even number of beta-edges 0 ; even weight of ell 0 ; edges: 3:3 5:5 7:3 9:1
+order 6 classes 56 failures: sum mu != sum a 0 ; sum a != sum_S H(S)H(S^c) 0 ; sum mu != 2 mod 4 0 ; even number of beta-edges 0 ; even weight of ell 0 ; edges: 5:12 7:20 9:16 11:5 13:2 15:1
+order 7 classes 456 failures: sum mu != sum a 0 ; sum a != sum_S H(S)H(S^c) 0 ; sum mu != 2 mod 4 0 ; even number of beta-edges 0 ; even weight of ell 0 ; edges: 5:7 7:56 9:119 11:148 13:65 15:50 17:5 19:4 21:2
+order 8 classes 6880 failures: sum mu != sum a 0 ; sum a != sum_S H(S)H(S^c) 0 ; sum mu != 2 mod 4 0 ; even number of beta-edges 0 ; even weight of ell 0 ; edges: 5:5 7:58 9:316 11:1106 13:1699 15:1897 17:1168 19:507 21:93 23:26 25:5
+order 9 classes 191536 failures: sum mu != sum a 0 ; sum a != sum_S H(S)H(S^c) 0 ; sum mu != 2 mod 4 0 ; even number of beta-edges 0 ; even weight of ell 0 ; edges: 3:2 5:7 7:73 9:522 11:3228 13:12292 15:30020 17:46857 19:46740 21:32107 23:14141 25:4417 27:905 29:196 31:24 33:4 35:1

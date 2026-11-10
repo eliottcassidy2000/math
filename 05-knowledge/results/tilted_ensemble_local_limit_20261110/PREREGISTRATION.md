@@ -51,3 +51,8 @@ the labelled weights sum to `2^45`.
 
 **Refutation.** `rho_10 >= rho_9 = 1.156` refutes the decay of the excess in (B''); any of P3-P6 outside its interval
 is reported as FAILED; a failure of the control would refute Theorem C or the program.
+
+*Outcome of P3-P6 (run after commit 23d6c4033f was pushed; `out/biasweights_10_parts.out`,
+`out/biasweights_summary_10.out`).* Control: no failure in 9,733,056 classes; labelled weights sum to `2^45`.
+P3: `rho_10 = 1.040628` - CONFIRMED. P4: `0.26407` - CONFIRMED. P5: `D_11 = 260546929/549755813888 = 0.000473932`
+- CONFIRMED. P6: `E_R|b_R| = 0.022563` - CONFIRMED.
