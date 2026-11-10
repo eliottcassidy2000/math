@@ -106,6 +106,11 @@ use modules with charge 1, or abandon this module decomposition.
 
 ## 3. Exact one-root ordinal response
 
+This is a specialized boundary-run restatement of the earlier ordinal
+interface calculus (Session244 and THM-5117, Session245), included to make
+the selected invisible-edge construction self-contained. No claim that
+ordinal response composition itself is new is intended.
+
 For a tournament M and a new root x, let O be the vertices beaten by x.
 For S subset V(M), let
 
@@ -221,6 +226,15 @@ Sources:
 `01-canon/theorems/THM-5122-shared-core-exchange-intervals-and-negative-inertia-capacity.md`.
 
 ## 6. The fixed-divisor repair is physically realizable
+
+**Priority boundary.** THM-5117
+(`01-canon/theorems/THM-5117-physical-cut-switches-reversal-cancellation-and-primitive-sparse-cubes.md`;
+Session245) already gives all-length physical affine cubes with coefficient
+gcd2 and exponentially large spacing. Existence of primitive affine cubes
+is therefore not new here. The contribution below is a different literal
+construction from full-profile-invisible internal arc flips, paired with
+the general interface charge and sharp observation-degree theorems. The
+small-weight and baseline obstacle remains the same known obstacle.
 
 The old order-seven metagraph atlas (Session166,
 `cartesian_flip/metagraph_n7.json`) contains another adjacent equal-profile

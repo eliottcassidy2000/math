@@ -5,9 +5,10 @@ no independent canon audit requested or claimed. Chan–Pak remains OPEN.**
 
 This session did not re-audit the hundreds of inherited sessions. It used
 widely separated parts of that work to change the physical objects on which
-one tries to select a target. The principal new positive result is an
-explicit charge-free affine family derived from an old count-invisible
-metagraph edge. The principal global simplification is that three specified
+one tries to select a target. The main new structural results quantify exactly what marked interfaces
+can observe and which fixed divisors survive them. A new explicit family
+activates old count-invisible metagraph edges. The principal global
+simplification is that three specified
 window orbits would suffice, rather than a universal theorem about every
 count. Neither result is a complete spectrum proof.
 
@@ -31,6 +32,12 @@ Two explicit families result:
   marked by root mask53, has H=393/399 at depth1 and
   410445,411051,412729,413335 at depth2. It extends to every dimension.
   From dimension2 onward the gcd of all normalized increments is1.
+
+Primitive affine cubes of every dimension already existed in THM-5117
+(Session245), including the proof that gcd1 can coexist with exponential
+spacing. We do not claim that general feature as new. Our different source
+is a full-profile-invisible internal arc-flip edge; the new general results
+are the interface charge and observation-degree laws.
 
 The second family repairs a real obstruction in the first. Define the
 module charge as gcd_c(c!pc(c)), equivalently the fixed divisor of its

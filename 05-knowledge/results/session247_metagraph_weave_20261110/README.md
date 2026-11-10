@@ -6,7 +6,8 @@
 
 - [Marked interfaces](marked/PROOF.md): old count-invisible metagraph edges
   become explicit affine physical cubes. A charge-free seven-vertex pair
-  has primitive increments in every dimension>=2. General fixed-divisor
+  has primitive increments in every dimension>=2 (the general existence of
+  primitive affine cubes was already THM-5117). General fixed-divisor
   survival and sharp2q observation degree quantify marked-interface power.
 - [Conserved-charge selectors](transfer/PROOF.md): dense interaction gauges,
   an exact safe-swap test, and an actual89/91 charge-slice interval.
