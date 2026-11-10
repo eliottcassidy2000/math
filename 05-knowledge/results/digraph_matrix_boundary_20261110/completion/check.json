@@ -1,0 +1,637 @@
+{
+  "by_order": [
+    {
+      "graphs": 1,
+      "n": 0,
+      "selected_pair_responses": 1
+    },
+    {
+      "graphs": 1,
+      "n": 1,
+      "selected_pair_responses": 1
+    },
+    {
+      "graphs": 4,
+      "n": 2,
+      "selected_pair_responses": 8
+    },
+    {
+      "graphs": 64,
+      "n": 3,
+      "selected_pair_responses": 512
+    },
+    {
+      "graphs": 4096,
+      "n": 4,
+      "selected_pair_responses": 262144
+    }
+  ],
+  "checker_sha256": "3317a5bcbf9d20472f0786a409b4a808b08e57d81d9dc61dbe97be92176b2af6",
+  "constrained_target_witnesses": [
+    {
+      "constrained_H": 7,
+      "endpoint_quotient_rows": [
+        14,
+        12,
+        9,
+        1
+      ],
+      "full_tournament_H": 79,
+      "input_H": 7,
+      "input_rows": [
+        14,
+        12,
+        9,
+        1
+      ],
+      "matching_arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "tournament_matrix": [
+        "01111010",
+        "00111111",
+        "00011111",
+        "00001111",
+        "00000111",
+        "10000011",
+        "00000001",
+        "10000000"
+      ],
+      "tournament_rows": [
+        94,
+        252,
+        248,
+        240,
+        224,
+        193,
+        128,
+        1
+      ]
+    },
+    {
+      "constrained_H": 21,
+      "endpoint_quotient_rows": [
+        30,
+        12,
+        24,
+        17,
+        3
+      ],
+      "full_tournament_H": 2621,
+      "input_H": 21,
+      "input_rows": [
+        30,
+        12,
+        24,
+        17,
+        3
+      ],
+      "matching_arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "tournament_matrix": [
+        "0111111010",
+        "0011111111",
+        "0001111110",
+        "0000111101",
+        "0000011111",
+        "0000001111",
+        "0000000111",
+        "1000000011",
+        "0001000001",
+        "1010000000"
+      ],
+      "tournament_rows": [
+        382,
+        1020,
+        504,
+        752,
+        992,
+        960,
+        896,
+        769,
+        520,
+        5
+      ]
+    }
+  ],
+  "embedding_literal_controls": 70,
+  "forbidden_support_count": 122944,
+  "graph_count": 4166,
+  "minimal_contraction_defects": [
+    {
+      "blocks": [
+        [
+          0,
+          2
+        ],
+        [
+          1
+        ]
+      ],
+      "quotient_H": 0,
+      "quotient_rows": [
+        0,
+        0
+      ],
+      "tournament_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "blocks": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "quotient_H": 2,
+      "quotient_rows": [
+        2,
+        1
+      ],
+      "tournament_rows": [
+        2,
+        4,
+        1
+      ]
+    }
+  ],
+  "one_digon_collision": [
+    {
+      "H": 6,
+      "intersection": [
+        [
+          0,
+          2,
+          1,
+          3
+        ],
+        [
+          1,
+          3,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          3,
+          0
+        ],
+        [
+          3,
+          0,
+          2,
+          1
+        ]
+      ],
+      "matrix": [
+        "0110",
+        "1001",
+        "0101",
+        "1000"
+      ],
+      "missing_H": 4,
+      "resolutions": [
+        {
+          "H": 5,
+          "canonical": [
+            2,
+            4,
+            9,
+            3
+          ],
+          "canonical_order": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "rows": [
+            6,
+            8,
+            10,
+            1
+          ],
+          "words": [
+            [
+              0,
+              2,
+              1,
+              3
+            ],
+            [
+              1,
+              3,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "H": 5,
+          "canonical": [
+            2,
+            4,
+            9,
+            3
+          ],
+          "canonical_order": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "rows": [
+            4,
+            9,
+            10,
+            1
+          ],
+          "words": [
+            [
+              0,
+              2,
+              1,
+              3
+            ],
+            [
+              1,
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              3,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              3,
+              0
+            ],
+            [
+              3,
+              0,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "rows": [
+        6,
+        9,
+        10,
+        1
+      ],
+      "strong": true,
+      "words": [
+        [
+          0,
+          2,
+          1,
+          3
+        ],
+        [
+          1,
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          3,
+          0
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "H": 8,
+      "intersection": [
+        [
+          0,
+          2,
+          3,
+          1
+        ],
+        [
+          1,
+          2,
+          3,
+          0
+        ]
+      ],
+      "matrix": [
+        "0110",
+        "1010",
+        "0001",
+        "1100"
+      ],
+      "missing_H": 2,
+      "resolutions": [
+        {
+          "H": 5,
+          "canonical": [
+            2,
+            4,
+            9,
+            3
+          ],
+          "canonical_order": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "rows": [
+            6,
+            4,
+            8,
+            3
+          ],
+          "words": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              2,
+              3,
+              1
+            ],
+            [
+              1,
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "H": 5,
+          "canonical": [
+            2,
+            4,
+            9,
+            3
+          ],
+          "canonical_order": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "rows": [
+            4,
+            5,
+            8,
+            3
+          ],
+          "words": [
+            [
+              0,
+              2,
+              3,
+              1
+            ],
+            [
+              1,
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3,
+              0
+            ],
+            [
+              2,
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              0,
+              2
+            ]
+          ]
+        }
+      ],
+      "rows": [
+        6,
+        5,
+        8,
+        3
+      ],
+      "strong": true,
+      "words": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          3,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          0
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          1,
+          0,
+          2
+        ]
+      ]
+    }
+  ],
+  "one_digon_minimality": [
+    {
+      "indexed_resolution_vectors": [
+        {
+          "possible_union_H": [
+            2
+          ],
+          "vector": [
+            1,
+            1
+          ]
+        }
+      ],
+      "n": 2
+    },
+    {
+      "indexed_resolution_vectors": [
+        {
+          "possible_union_H": [
+            2
+          ],
+          "vector": [
+            1,
+            1
+          ]
+        },
+        {
+          "possible_union_H": [
+            3
+          ],
+          "vector": [
+            1,
+            3
+          ]
+        },
+        {
+          "possible_union_H": [
+            3
+          ],
+          "vector": [
+            3,
+            1
+          ]
+        }
+      ],
+      "n": 3
+    }
+  ],
+  "padding_checks": 18,
+  "response_count": 262666,
+  "scope": "All loopless labelled digraphs of orders0..4 and every selected unordered-pair set; exact additional named witnesses. No spectrum completeness claim.",
+  "source_sha256": {
+    "01-canon/theorems/THM-5041-matrix-tiling-pair-dictionary.md": "d46b95f5609535d244f5c6a3eddc62f0eaca7c14edd4bd6e0bfb895ff9f8f3e3",
+    "01-canon/theorems/THM-5071-weighted-cycle-formula-for-digraph-path-totals-and-one-reciprocal-pair-exclusions.md": "00d2f9bdf47cf266aea1c0593bd487fb939bde904f34df15b9910093655febc0",
+    "05-knowledge/results/session234_digraphs_20261109/PROOFS.md": "64804f94ede7ed734294201bf5dea6029fad9cf37521a0f17a387d3cc4cbd713",
+    "05-knowledge/results/session235_arc_pair_models_20261109/theory/PROOFS.md": "e7706821be361ef2c3994efe6315db7081fedab3f13fde6a285aab6e5bfb3f3e"
+  },
+  "status": "PASS"
+}

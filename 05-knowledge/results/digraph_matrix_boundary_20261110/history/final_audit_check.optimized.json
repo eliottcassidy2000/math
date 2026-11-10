@@ -1,0 +1,95 @@
+{
+  "c4_fibres": {
+    "labelled_looped": 64,
+    "labelled_loopless": 4,
+    "types_looped": 22,
+    "types_loopless": 3
+  },
+  "collisions": [
+    {
+      "common_H": 4,
+      "raw_H": 6,
+      "rows": [
+        6,
+        9,
+        10,
+        1
+      ],
+      "types": [
+        [
+          2,
+          4,
+          9,
+          3
+        ],
+        [
+          2,
+          4,
+          9,
+          3
+        ]
+      ]
+    },
+    {
+      "common_H": 2,
+      "raw_H": 8,
+      "rows": [
+        6,
+        5,
+        8,
+        3
+      ],
+      "types": [
+        [
+          2,
+          4,
+          9,
+          3
+        ],
+        [
+          2,
+          4,
+          9,
+          3
+        ]
+      ]
+    }
+  ],
+  "raw_class_controls": [
+    {
+      "labelled_inputs": 1,
+      "n": 1,
+      "types": 1
+    },
+    {
+      "labelled_inputs": 4,
+      "n": 2,
+      "types": 3
+    },
+    {
+      "labelled_inputs": 64,
+      "n": 3,
+      "types": 16
+    }
+  ],
+  "scope": "Small independent controls and saved normal/O equality, not a fresh full producer rerun",
+  "selected_tournament": {
+    "constrained_H": 7,
+    "full_H": 79,
+    "order": 8
+  },
+  "source_sha256": {
+    "completion/PROOFS.md": "9359b88aab3a37be18d2f24f0471218f37ffcf713359ff2d1d695ccb74ac0286",
+    "completion/check.json": "4c5f8c44039a87a57e6d7e6eb74a95b8c83dada887a35363e2466c5065a89374",
+    "completion/check.optimized.json": "4c5f8c44039a87a57e6d7e6eb74a95b8c83dada887a35363e2466c5065a89374",
+    "completion/check.py": "3317a5bcbf9d20472f0786a409b4a808b08e57d81d9dc61dbe97be92176b2af6",
+    "construction/PROOF.md": "ea21d714af5373bcdd00f607ecd36d484b7fcab8602a5e04c5df137953b2f7fa",
+    "construction/check.py": "9684430e234fa3af58cd75805dfc8753af51ddcb52a9d468becb7e1f686f861a",
+    "enumeration/NOTE.md": "00506c9447bc2607002553db9c8a65667b49d214a238ad58e10ecc0b7e96b94b",
+    "enumeration/check.py": "bbcb3459b7dcd815ecf8223a838e93bac38841a6a7813228a1e04feeb70a9461",
+    "enumeration/normal.json": "9d7fb0c995ddc7932045f018eebfa8e57ec022740726e01e09d9bbe3f911534d",
+    "enumeration/optimized.json": "9d7fb0c995ddc7932045f018eebfa8e57ec022740726e01e09d9bbe3f911534d",
+    "history/final_audit_check.py": "61e8e85281ba2c580e38d596718aea50832d7eb5dbdfbfffbf61ea05839f9999"
+  },
+  "status": "PASS"
+}

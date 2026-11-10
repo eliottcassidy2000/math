@@ -1,0 +1,885 @@
+{
+  "c4_fibre": {
+    "automorphism_order": 4,
+    "by_digons": {
+      "0": 1,
+      "1": 1,
+      "2": 1
+    },
+    "effective_H": 4,
+    "effective_rows": [
+      2,
+      4,
+      8,
+      1
+    ],
+    "labelled_preimages": 4,
+    "looped_preimage_types": 22,
+    "missing_pairs": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "raw_types": [
+      {
+        "cancelled_H": 4,
+        "digons": 0,
+        "ordinary_H": 4,
+        "rows": [
+          2,
+          4,
+          8,
+          1
+        ]
+      },
+      {
+        "cancelled_H": 4,
+        "digons": 1,
+        "ordinary_H": 4,
+        "rows": [
+          2,
+          12,
+          3,
+          4
+        ]
+      },
+      {
+        "cancelled_H": 4,
+        "digons": 2,
+        "ordinary_H": 8,
+        "rows": [
+          6,
+          9,
+          10,
+          5
+        ]
+      }
+    ],
+    "unlabelled_preimages": 3
+  },
+  "cancellation_fibre_polynomial_checks": 104,
+  "complete_censuses": [
+    {
+      "cancelled_path_marked_types": 1,
+      "labelled_matrices": 1,
+      "looped_raw_types": 2,
+      "n": 1,
+      "ordinary_path_marked_types": 1,
+      "raw_types": 1,
+      "semantic_oriented_types": 1
+    },
+    {
+      "cancelled_path_marked_types": 1,
+      "labelled_matrices": 4,
+      "looped_raw_types": 10,
+      "n": 2,
+      "ordinary_path_marked_types": 2,
+      "raw_types": 3,
+      "semantic_oriented_types": 2
+    },
+    {
+      "cancelled_path_marked_types": 4,
+      "labelled_matrices": 64,
+      "looped_raw_types": 104,
+      "n": 3,
+      "ordinary_path_marked_types": 16,
+      "raw_types": 16,
+      "semantic_oriented_types": 7
+    },
+    {
+      "cancelled_path_marked_types": 64,
+      "labelled_matrices": 4096,
+      "looped_raw_types": 3044,
+      "n": 4,
+      "ordinary_path_marked_types": 512,
+      "raw_types": 218,
+      "semantic_oriented_types": 42
+    }
+  ],
+  "diagonal_refinement_A384105": [
+    [
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      3,
+      4,
+      3
+    ],
+    [
+      16,
+      36,
+      36,
+      16
+    ],
+    [
+      218,
+      752,
+      1104,
+      752,
+      218
+    ],
+    [
+      9608,
+      45960,
+      90416,
+      90416,
+      45960,
+      9608
+    ],
+    [
+      1540944,
+      9133760,
+      22692704,
+      30194176,
+      22692704,
+      9133760,
+      1540944
+    ]
+  ],
+  "pair_orbit_profile_checks": 139,
+  "scope": "Exact pair-state, cancellation-fibre and path-marked identities; finite independent universe through order4; no Hamilton spectrum closure.",
+  "sequence_prefixes": {
+    "digraphs_A000273": [
+      1,
+      1,
+      3,
+      16,
+      218,
+      9608,
+      1540944,
+      882033440,
+      1793359192848,
+      13027956824399552,
+      341260431952972580352
+    ],
+    "graphs_A000088": [
+      1,
+      1,
+      2,
+      4,
+      11,
+      34,
+      156,
+      1044,
+      12346,
+      274668,
+      12005168
+    ],
+    "looped_digraphs_A000595": [
+      1,
+      2,
+      10,
+      104,
+      3044,
+      291968,
+      96928992,
+      112282908928,
+      458297100061728,
+      6666621572153927936,
+      349390545493499839161856
+    ],
+    "oriented_A001174": [
+      1,
+      1,
+      2,
+      7,
+      42,
+      582,
+      21480,
+      2142288,
+      575016219,
+      415939243032,
+      816007449011040
+    ],
+    "tournaments_A000568": [
+      1,
+      1,
+      1,
+      2,
+      4,
+      12,
+      56,
+      456,
+      6880,
+      191536,
+      9733056
+    ]
+  },
+  "source_sha256": {
+    "01-canon/theorems/THM-4720-k-valued-tournaments-by-burnside-the-parity-dichotomy-of-the-tie-state-and-three-hypertournaments.md": "f2b7f8fe7abdb0d8d2bd88151abb719f97f98a324860a4c86c95eeb72c0ee20f",
+    "01-canon/theorems/THM-5041-matrix-tiling-pair-dictionary.md": "d46b95f5609535d244f5c6a3eddc62f0eaca7c14edd4bd6e0bfb895ff9f8f3e3",
+    "05-knowledge/results/digraph_matrix_boundary_20261110/enumeration/check.py": "bbcb3459b7dcd815ecf8223a838e93bac38841a6a7813228a1e04feeb70a9461",
+    "05-knowledge/results/session234_digraphs_20261109/PROOFS.md": "64804f94ede7ed734294201bf5dea6029fad9cf37521a0f17a387d3cc4cbd713",
+    "05-knowledge/results/session239_sequence_engines_20261110/burnside/PALETTE_PROOF.md": "ef552c16bcf9d915cb27a9cf5b0e79242b158eab5b4cd400e9103c1f3736be3d"
+  },
+  "status": "PASS",
+  "weighted_orbit_coefficients": {
+    "1": [
+      {
+        "digons": 0,
+        "missing": 0,
+        "single": 0,
+        "types": 1
+      }
+    ],
+    "2": [
+      {
+        "digons": 0,
+        "missing": 0,
+        "single": 1,
+        "types": 1
+      },
+      {
+        "digons": 1,
+        "missing": 0,
+        "single": 0,
+        "types": 1
+      },
+      {
+        "digons": 0,
+        "missing": 1,
+        "single": 0,
+        "types": 1
+      }
+    ],
+    "3": [
+      {
+        "digons": 0,
+        "missing": 0,
+        "single": 3,
+        "types": 2
+      },
+      {
+        "digons": 1,
+        "missing": 0,
+        "single": 2,
+        "types": 3
+      },
+      {
+        "digons": 2,
+        "missing": 0,
+        "single": 1,
+        "types": 1
+      },
+      {
+        "digons": 3,
+        "missing": 0,
+        "single": 0,
+        "types": 1
+      },
+      {
+        "digons": 0,
+        "missing": 1,
+        "single": 2,
+        "types": 3
+      },
+      {
+        "digons": 1,
+        "missing": 1,
+        "single": 1,
+        "types": 2
+      },
+      {
+        "digons": 2,
+        "missing": 1,
+        "single": 0,
+        "types": 1
+      },
+      {
+        "digons": 0,
+        "missing": 2,
+        "single": 1,
+        "types": 1
+      },
+      {
+        "digons": 1,
+        "missing": 2,
+        "single": 0,
+        "types": 1
+      },
+      {
+        "digons": 0,
+        "missing": 3,
+        "single": 0,
+        "types": 1
+      }
+    ],
+    "4": [
+      {
+        "digons": 0,
+        "missing": 0,
+        "single": 6,
+        "types": 4
+      },
+      {
+        "digons": 1,
+        "missing": 0,
+        "single": 5,
+        "types": 10
+      },
+      {
+        "digons": 2,
+        "missing": 0,
+        "single": 4,
+        "types": 12
+      },
+      {
+        "digons": 3,
+        "missing": 0,
+        "single": 3,
+        "types": 10
+      },
+      {
+        "digons": 4,
+        "missing": 0,
+        "single": 2,
+        "types": 4
+      },
+      {
+        "digons": 5,
+        "missing": 0,
+        "single": 1,
+        "types": 1
+      },
+      {
+        "digons": 6,
+        "missing": 0,
+        "single": 0,
+        "types": 1
+      },
+      {
+        "digons": 0,
+        "missing": 1,
+        "single": 5,
+        "types": 10
+      },
+      {
+        "digons": 1,
+        "missing": 1,
+        "single": 4,
+        "types": 23
+      },
+      {
+        "digons": 2,
+        "missing": 1,
+        "single": 3,
+        "types": 22
+      },
+      {
+        "digons": 3,
+        "missing": 1,
+        "single": 2,
+        "types": 13
+      },
+      {
+        "digons": 4,
+        "missing": 1,
+        "single": 1,
+        "types": 3
+      },
+      {
+        "digons": 5,
+        "missing": 1,
+        "single": 0,
+        "types": 1
+      },
+      {
+        "digons": 0,
+        "missing": 2,
+        "single": 4,
+        "types": 12
+      },
+      {
+        "digons": 1,
+        "missing": 2,
+        "single": 3,
+        "types": 22
+      },
+      {
+        "digons": 2,
+        "missing": 2,
+        "single": 2,
+        "types": 18
+      },
+      {
+        "digons": 3,
+        "missing": 2,
+        "single": 1,
+        "types": 6
+      },
+      {
+        "digons": 4,
+        "missing": 2,
+        "single": 0,
+        "types": 2
+      },
+      {
+        "digons": 0,
+        "missing": 3,
+        "single": 3,
+        "types": 10
+      },
+      {
+        "digons": 1,
+        "missing": 3,
+        "single": 2,
+        "types": 13
+      },
+      {
+        "digons": 2,
+        "missing": 3,
+        "single": 1,
+        "types": 6
+      },
+      {
+        "digons": 3,
+        "missing": 3,
+        "single": 0,
+        "types": 3
+      },
+      {
+        "digons": 0,
+        "missing": 4,
+        "single": 2,
+        "types": 4
+      },
+      {
+        "digons": 1,
+        "missing": 4,
+        "single": 1,
+        "types": 3
+      },
+      {
+        "digons": 2,
+        "missing": 4,
+        "single": 0,
+        "types": 2
+      },
+      {
+        "digons": 0,
+        "missing": 5,
+        "single": 1,
+        "types": 1
+      },
+      {
+        "digons": 1,
+        "missing": 5,
+        "single": 0,
+        "types": 1
+      },
+      {
+        "digons": 0,
+        "missing": 6,
+        "single": 0,
+        "types": 1
+      }
+    ],
+    "5": [
+      {
+        "digons": 0,
+        "missing": 0,
+        "single": 10,
+        "types": 12
+      },
+      {
+        "digons": 1,
+        "missing": 0,
+        "single": 9,
+        "types": 50
+      },
+      {
+        "digons": 2,
+        "missing": 0,
+        "single": 8,
+        "types": 107
+      },
+      {
+        "digons": 3,
+        "missing": 0,
+        "single": 7,
+        "types": 144
+      },
+      {
+        "digons": 4,
+        "missing": 0,
+        "single": 6,
+        "types": 131
+      },
+      {
+        "digons": 5,
+        "missing": 0,
+        "single": 5,
+        "types": 78
+      },
+      {
+        "digons": 6,
+        "missing": 0,
+        "single": 4,
+        "types": 41
+      },
+      {
+        "digons": 7,
+        "missing": 0,
+        "single": 3,
+        "types": 13
+      },
+      {
+        "digons": 8,
+        "missing": 0,
+        "single": 2,
+        "types": 4
+      },
+      {
+        "digons": 9,
+        "missing": 0,
+        "single": 1,
+        "types": 1
+      },
+      {
+        "digons": 10,
+        "missing": 0,
+        "single": 0,
+        "types": 1
+      },
+      {
+        "digons": 0,
+        "missing": 1,
+        "single": 9,
+        "types": 50
+      },
+      {
+        "digons": 1,
+        "missing": 1,
+        "single": 8,
+        "types": 212
+      },
+      {
+        "digons": 2,
+        "missing": 1,
+        "single": 7,
+        "types": 404
+      },
+      {
+        "digons": 3,
+        "missing": 1,
+        "single": 6,
+        "types": 485
+      },
+      {
+        "digons": 4,
+        "missing": 1,
+        "single": 5,
+        "types": 358
+      },
+      {
+        "digons": 5,
+        "missing": 1,
+        "single": 4,
+        "types": 190
+      },
+      {
+        "digons": 6,
+        "missing": 1,
+        "single": 3,
+        "types": 67
+      },
+      {
+        "digons": 7,
+        "missing": 1,
+        "single": 2,
+        "types": 18
+      },
+      {
+        "digons": 8,
+        "missing": 1,
+        "single": 1,
+        "types": 3
+      },
+      {
+        "digons": 9,
+        "missing": 1,
+        "single": 0,
+        "types": 1
+      },
+      {
+        "digons": 0,
+        "missing": 2,
+        "single": 8,
+        "types": 107
+      },
+      {
+        "digons": 1,
+        "missing": 2,
+        "single": 7,
+        "types": 404
+      },
+      {
+        "digons": 2,
+        "missing": 2,
+        "single": 6,
+        "types": 708
+      },
+      {
+        "digons": 3,
+        "missing": 2,
+        "single": 5,
+        "types": 704
+      },
+      {
+        "digons": 4,
+        "missing": 2,
+        "single": 4,
+        "types": 455
+      },
+      {
+        "digons": 5,
+        "missing": 2,
+        "single": 3,
+        "types": 185
+      },
+      {
+        "digons": 6,
+        "missing": 2,
+        "single": 2,
+        "types": 54
+      },
+      {
+        "digons": 7,
+        "missing": 2,
+        "single": 1,
+        "types": 9
+      },
+      {
+        "digons": 8,
+        "missing": 2,
+        "single": 0,
+        "types": 2
+      },
+      {
+        "digons": 0,
+        "missing": 3,
+        "single": 7,
+        "types": 144
+      },
+      {
+        "digons": 1,
+        "missing": 3,
+        "single": 6,
+        "types": 485
+      },
+      {
+        "digons": 2,
+        "missing": 3,
+        "single": 5,
+        "types": 704
+      },
+      {
+        "digons": 3,
+        "missing": 3,
+        "single": 4,
+        "types": 608
+      },
+      {
+        "digons": 4,
+        "missing": 3,
+        "single": 3,
+        "types": 305
+      },
+      {
+        "digons": 5,
+        "missing": 3,
+        "single": 2,
+        "types": 102
+      },
+      {
+        "digons": 6,
+        "missing": 3,
+        "single": 1,
+        "types": 20
+      },
+      {
+        "digons": 7,
+        "missing": 3,
+        "single": 0,
+        "types": 4
+      },
+      {
+        "digons": 0,
+        "missing": 4,
+        "single": 6,
+        "types": 131
+      },
+      {
+        "digons": 1,
+        "missing": 4,
+        "single": 5,
+        "types": 358
+      },
+      {
+        "digons": 2,
+        "missing": 4,
+        "single": 4,
+        "types": 455
+      },
+      {
+        "digons": 3,
+        "missing": 4,
+        "single": 3,
+        "types": 305
+      },
+      {
+        "digons": 4,
+        "missing": 4,
+        "single": 2,
+        "types": 124
+      },
+      {
+        "digons": 5,
+        "missing": 4,
+        "single": 1,
+        "types": 27
+      },
+      {
+        "digons": 6,
+        "missing": 4,
+        "single": 0,
+        "types": 6
+      },
+      {
+        "digons": 0,
+        "missing": 5,
+        "single": 5,
+        "types": 78
+      },
+      {
+        "digons": 1,
+        "missing": 5,
+        "single": 4,
+        "types": 190
+      },
+      {
+        "digons": 2,
+        "missing": 5,
+        "single": 3,
+        "types": 185
+      },
+      {
+        "digons": 3,
+        "missing": 5,
+        "single": 2,
+        "types": 102
+      },
+      {
+        "digons": 4,
+        "missing": 5,
+        "single": 1,
+        "types": 27
+      },
+      {
+        "digons": 5,
+        "missing": 5,
+        "single": 0,
+        "types": 6
+      },
+      {
+        "digons": 0,
+        "missing": 6,
+        "single": 4,
+        "types": 41
+      },
+      {
+        "digons": 1,
+        "missing": 6,
+        "single": 3,
+        "types": 67
+      },
+      {
+        "digons": 2,
+        "missing": 6,
+        "single": 2,
+        "types": 54
+      },
+      {
+        "digons": 3,
+        "missing": 6,
+        "single": 1,
+        "types": 20
+      },
+      {
+        "digons": 4,
+        "missing": 6,
+        "single": 0,
+        "types": 6
+      },
+      {
+        "digons": 0,
+        "missing": 7,
+        "single": 3,
+        "types": 13
+      },
+      {
+        "digons": 1,
+        "missing": 7,
+        "single": 2,
+        "types": 18
+      },
+      {
+        "digons": 2,
+        "missing": 7,
+        "single": 1,
+        "types": 9
+      },
+      {
+        "digons": 3,
+        "missing": 7,
+        "single": 0,
+        "types": 4
+      },
+      {
+        "digons": 0,
+        "missing": 8,
+        "single": 2,
+        "types": 4
+      },
+      {
+        "digons": 1,
+        "missing": 8,
+        "single": 1,
+        "types": 3
+      },
+      {
+        "digons": 2,
+        "missing": 8,
+        "single": 0,
+        "types": 2
+      },
+      {
+        "digons": 0,
+        "missing": 9,
+        "single": 1,
+        "types": 1
+      },
+      {
+        "digons": 1,
+        "missing": 9,
+        "single": 0,
+        "types": 1
+      },
+      {
+        "digons": 0,
+        "missing": 10,
+        "single": 0,
+        "types": 1
+      }
+    ]
+  }
+}
