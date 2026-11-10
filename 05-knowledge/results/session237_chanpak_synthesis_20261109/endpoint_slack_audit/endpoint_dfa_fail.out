@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/tmp/math-wt-chanpak-s229-tangential/05-knowledge/results/session237_chanpak_synthesis_20261109/endpoint_slack_audit/endpoint_dfa.py", line 7, in <module>
+    require('--fail' not in sys.argv,'deliberate checker failure')
+  File "/tmp/math-wt-chanpak-s229-tangential/05-knowledge/results/session237_chanpak_synthesis_20261109/endpoint_slack_audit/endpoint_dfa.py", line 6, in require
+    if not x:raise RuntimeError(msg)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: deliberate checker failure
+
+exit_code=1

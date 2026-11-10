@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "positive_nonsink_rooted_cases": 3446,
+  "equality_by_order": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      48
+    ],
+    [
+      5,
+      360
+    ]
+  ],
+  "zero_endpoint_nonsink_equality_cases": 566,
+  "literal_apex_masks_l_le_6": 127
+}

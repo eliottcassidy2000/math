@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "universe": "all labelled simple graphs with 1..5 vertices",
+  "graphs": 1099,
+  "max_constructed_order": 37,
+  "hamiltonian_controls": [
+    {
+      "m": 1,
+      "edges": [],
+      "n": 5,
+      "H": 9,
+      "corona_bound": 5,
+      "strengthened_bound": 7
+    },
+    {
+      "m": 2,
+      "edges": [],
+      "n": 10,
+      "H": 81,
+      "corona_bound": 25,
+      "strengthened_bound": 29
+    },
+    {
+      "m": 2,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "n": 13,
+      "H": 4617,
+      "corona_bound": 21,
+      "strengthened_bound": 25
+    }
+  ],
+  "hostile_K3_value": 7,
+  "one_vertex_completions": 16,
+  "one_vertex_completion_H_values": [
+    9,
+    11,
+    13,
+    15
+  ]
+}

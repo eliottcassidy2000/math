@@ -1,6 +1,6 @@
 # Session237: connective Chan–Pak research
 
-**Status: research in progress, no completeness claim.** Started 2026-11-09
+**Status: historical opening plan; session subsequently completed and audited.** Started 2026-11-09
 from `0352fb55faaa`, the audited Session236 recovery and concurrent S19/S89.
 The target remains all positive odd tournament Hamilton-path counts except 7
 and 21. Binary H, ternary cycle-packing evaluation, graph dominating-set

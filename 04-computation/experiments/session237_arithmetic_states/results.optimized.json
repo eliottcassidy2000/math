@@ -1,0 +1,229 @@
+{
+  "status": "FINITE-EXACT, corroborating all-order proofs",
+  "automata": [
+    {
+      "M": 2,
+      "states": 8,
+      "max_shortest_input_length": 4
+    },
+    {
+      "M": 3,
+      "states": 18,
+      "max_shortest_input_length": 8
+    },
+    {
+      "M": 4,
+      "states": 32,
+      "max_shortest_input_length": 8
+    },
+    {
+      "M": 5,
+      "states": 50,
+      "max_shortest_input_length": 9
+    },
+    {
+      "M": 6,
+      "states": 72,
+      "max_shortest_input_length": 10
+    },
+    {
+      "M": 7,
+      "states": 98,
+      "max_shortest_input_length": 12
+    },
+    {
+      "M": 8,
+      "states": 128,
+      "max_shortest_input_length": 10
+    },
+    {
+      "M": 9,
+      "states": 162,
+      "max_shortest_input_length": 12
+    },
+    {
+      "M": 10,
+      "states": 200,
+      "max_shortest_input_length": 10
+    },
+    {
+      "M": 11,
+      "states": 242,
+      "max_shortest_input_length": 11
+    },
+    {
+      "M": 12,
+      "states": 288,
+      "max_shortest_input_length": 13
+    },
+    {
+      "M": 13,
+      "states": 338,
+      "max_shortest_input_length": 12
+    },
+    {
+      "M": 14,
+      "states": 392,
+      "max_shortest_input_length": 14
+    },
+    {
+      "M": 15,
+      "states": 450,
+      "max_shortest_input_length": 14
+    },
+    {
+      "M": 16,
+      "states": 512,
+      "max_shortest_input_length": 12
+    },
+    {
+      "M": 17,
+      "states": 578,
+      "max_shortest_input_length": 13
+    },
+    {
+      "M": 18,
+      "states": 648,
+      "max_shortest_input_length": 14
+    },
+    {
+      "M": 19,
+      "states": 722,
+      "max_shortest_input_length": 13
+    },
+    {
+      "M": 20,
+      "states": 800,
+      "max_shortest_input_length": 14
+    },
+    {
+      "M": 21,
+      "states": 882,
+      "max_shortest_input_length": 16
+    },
+    {
+      "M": 22,
+      "states": 968,
+      "max_shortest_input_length": 14
+    },
+    {
+      "M": 23,
+      "states": 1058,
+      "max_shortest_input_length": 14
+    },
+    {
+      "M": 24,
+      "states": 1152,
+      "max_shortest_input_length": 14
+    },
+    {
+      "M": 25,
+      "states": 1250,
+      "max_shortest_input_length": 15
+    },
+    {
+      "M": 26,
+      "states": 1352,
+      "max_shortest_input_length": 14
+    },
+    {
+      "M": 27,
+      "states": 1458,
+      "max_shortest_input_length": 15
+    },
+    {
+      "M": 28,
+      "states": 1568,
+      "max_shortest_input_length": 16
+    },
+    {
+      "M": 29,
+      "states": 1682,
+      "max_shortest_input_length": 14
+    },
+    {
+      "M": 30,
+      "states": 1800,
+      "max_shortest_input_length": 15
+    },
+    {
+      "M": 31,
+      "states": 1922,
+      "max_shortest_input_length": 16
+    },
+    {
+      "M": 32,
+      "states": 2048,
+      "max_shortest_input_length": 15
+    },
+    {
+      "M": 33,
+      "states": 2178,
+      "max_shortest_input_length": 15
+    },
+    {
+      "M": 34,
+      "states": 2312,
+      "max_shortest_input_length": 15
+    },
+    {
+      "M": 35,
+      "states": 2450,
+      "max_shortest_input_length": 17
+    },
+    {
+      "M": 36,
+      "states": 2592,
+      "max_shortest_input_length": 17
+    },
+    {
+      "M": 37,
+      "states": 2738,
+      "max_shortest_input_length": 16
+    },
+    {
+      "M": 38,
+      "states": 2888,
+      "max_shortest_input_length": 15
+    },
+    {
+      "M": 39,
+      "states": 3042,
+      "max_shortest_input_length": 16
+    },
+    {
+      "M": 40,
+      "states": 3200,
+      "max_shortest_input_length": 15
+    }
+  ],
+  "literal_pumping_checks": 2990,
+  "recurrence_checks": 393216,
+  "literal_tournaments": 256,
+  "joint_moduli": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "hostile_controls": [
+    "m modulo M loses the parity lift at M=4",
+    "scalar output alone loses continuation",
+    "full modular projections do not attain 7 or 21"
+  ]
+}

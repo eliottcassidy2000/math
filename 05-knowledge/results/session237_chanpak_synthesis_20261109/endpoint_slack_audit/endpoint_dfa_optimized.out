@@ -1,0 +1,246 @@
+{
+  "status": "PASS",
+  "method": "BFS and Moore partition refinement, M=1..40",
+  "counts": [
+    {
+      "M": 1,
+      "endpoint_E": 1,
+      "normalized_total": 1,
+      "actual_total": 1
+    },
+    {
+      "M": 2,
+      "endpoint_E": 2,
+      "normalized_total": 8,
+      "actual_total": 1
+    },
+    {
+      "M": 3,
+      "endpoint_E": 18,
+      "normalized_total": 18,
+      "actual_total": 18
+    },
+    {
+      "M": 4,
+      "endpoint_E": 8,
+      "normalized_total": 32,
+      "actual_total": 8
+    },
+    {
+      "M": 5,
+      "endpoint_E": 50,
+      "normalized_total": 50,
+      "actual_total": 50
+    },
+    {
+      "M": 6,
+      "endpoint_E": 18,
+      "normalized_total": 72,
+      "actual_total": 18
+    },
+    {
+      "M": 7,
+      "endpoint_E": 98,
+      "normalized_total": 98,
+      "actual_total": 98
+    },
+    {
+      "M": 8,
+      "endpoint_E": 32,
+      "normalized_total": 128,
+      "actual_total": 32
+    },
+    {
+      "M": 9,
+      "endpoint_E": 162,
+      "normalized_total": 162,
+      "actual_total": 162
+    },
+    {
+      "M": 10,
+      "endpoint_E": 50,
+      "normalized_total": 200,
+      "actual_total": 50
+    },
+    {
+      "M": 11,
+      "endpoint_E": 242,
+      "normalized_total": 242,
+      "actual_total": 242
+    },
+    {
+      "M": 12,
+      "endpoint_E": 72,
+      "normalized_total": 288,
+      "actual_total": 72
+    },
+    {
+      "M": 13,
+      "endpoint_E": 338,
+      "normalized_total": 338,
+      "actual_total": 338
+    },
+    {
+      "M": 14,
+      "endpoint_E": 98,
+      "normalized_total": 392,
+      "actual_total": 98
+    },
+    {
+      "M": 15,
+      "endpoint_E": 450,
+      "normalized_total": 450,
+      "actual_total": 450
+    },
+    {
+      "M": 16,
+      "endpoint_E": 128,
+      "normalized_total": 512,
+      "actual_total": 128
+    },
+    {
+      "M": 17,
+      "endpoint_E": 578,
+      "normalized_total": 578,
+      "actual_total": 578
+    },
+    {
+      "M": 18,
+      "endpoint_E": 162,
+      "normalized_total": 648,
+      "actual_total": 162
+    },
+    {
+      "M": 19,
+      "endpoint_E": 722,
+      "normalized_total": 722,
+      "actual_total": 722
+    },
+    {
+      "M": 20,
+      "endpoint_E": 200,
+      "normalized_total": 800,
+      "actual_total": 200
+    },
+    {
+      "M": 21,
+      "endpoint_E": 882,
+      "normalized_total": 882,
+      "actual_total": 882
+    },
+    {
+      "M": 22,
+      "endpoint_E": 242,
+      "normalized_total": 968,
+      "actual_total": 242
+    },
+    {
+      "M": 23,
+      "endpoint_E": 1058,
+      "normalized_total": 1058,
+      "actual_total": 1058
+    },
+    {
+      "M": 24,
+      "endpoint_E": 288,
+      "normalized_total": 1152,
+      "actual_total": 288
+    },
+    {
+      "M": 25,
+      "endpoint_E": 1250,
+      "normalized_total": 1250,
+      "actual_total": 1250
+    },
+    {
+      "M": 26,
+      "endpoint_E": 338,
+      "normalized_total": 1352,
+      "actual_total": 338
+    },
+    {
+      "M": 27,
+      "endpoint_E": 1458,
+      "normalized_total": 1458,
+      "actual_total": 1458
+    },
+    {
+      "M": 28,
+      "endpoint_E": 392,
+      "normalized_total": 1568,
+      "actual_total": 392
+    },
+    {
+      "M": 29,
+      "endpoint_E": 1682,
+      "normalized_total": 1682,
+      "actual_total": 1682
+    },
+    {
+      "M": 30,
+      "endpoint_E": 450,
+      "normalized_total": 1800,
+      "actual_total": 450
+    },
+    {
+      "M": 31,
+      "endpoint_E": 1922,
+      "normalized_total": 1922,
+      "actual_total": 1922
+    },
+    {
+      "M": 32,
+      "endpoint_E": 512,
+      "normalized_total": 2048,
+      "actual_total": 512
+    },
+    {
+      "M": 33,
+      "endpoint_E": 2178,
+      "normalized_total": 2178,
+      "actual_total": 2178
+    },
+    {
+      "M": 34,
+      "endpoint_E": 578,
+      "normalized_total": 2312,
+      "actual_total": 578
+    },
+    {
+      "M": 35,
+      "endpoint_E": 2450,
+      "normalized_total": 2450,
+      "actual_total": 2450
+    },
+    {
+      "M": 36,
+      "endpoint_E": 648,
+      "normalized_total": 2592,
+      "actual_total": 648
+    },
+    {
+      "M": 37,
+      "endpoint_E": 2738,
+      "normalized_total": 2738,
+      "actual_total": 2738
+    },
+    {
+      "M": 38,
+      "endpoint_E": 722,
+      "normalized_total": 2888,
+      "actual_total": 722
+    },
+    {
+      "M": 39,
+      "endpoint_E": 3042,
+      "normalized_total": 3042,
+      "actual_total": 3042
+    },
+    {
+      "M": 40,
+      "endpoint_E": 800,
+      "normalized_total": 3200,
+      "actual_total": 800
+    }
+  ]
+}

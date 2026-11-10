@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/tmp/math-wt-chanpak-s229-tangential/05-knowledge/results/session237_chanpak_synthesis_20261109/symmetry_grafts_audit/check.py", line 56, in <module>
+    raise RuntimeError('deliberate checker failure')
+RuntimeError: deliberate checker failure
+
+exit_code=1

@@ -1,0 +1,345 @@
+{
+  "status": "PASS",
+  "physical_seeds": [
+    {
+      "seed": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "seed": [
+        5,
+        6,
+        2,
+        3
+      ],
+      "rows": [
+        2,
+        8,
+        3,
+        5
+      ]
+    },
+    {
+      "seed": [
+        9,
+        11,
+        3,
+        5
+      ],
+      "rows": [
+        4,
+        17,
+        2,
+        7,
+        13
+      ]
+    }
+  ],
+  "literal_permutation_checks": 48,
+  "automata": [
+    {
+      "M": 1,
+      "reachable": 2,
+      "minimal": 1,
+      "partition_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "M": 2,
+      "reachable": 8,
+      "minimal": 8,
+      "partition_counts": [
+        2,
+        8,
+        8
+      ]
+    },
+    {
+      "M": 3,
+      "reachable": 18,
+      "minimal": 18,
+      "partition_counts": [
+        3,
+        18,
+        18
+      ]
+    },
+    {
+      "M": 4,
+      "reachable": 32,
+      "minimal": 32,
+      "partition_counts": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "M": 5,
+      "reachable": 50,
+      "minimal": 50,
+      "partition_counts": [
+        5,
+        50,
+        50
+      ]
+    },
+    {
+      "M": 6,
+      "reachable": 72,
+      "minimal": 72,
+      "partition_counts": [
+        6,
+        72,
+        72
+      ]
+    },
+    {
+      "M": 8,
+      "reachable": 128,
+      "minimal": 128,
+      "partition_counts": [
+        8,
+        128,
+        128
+      ]
+    },
+    {
+      "M": 9,
+      "reachable": 162,
+      "minimal": 162,
+      "partition_counts": [
+        9,
+        162,
+        162
+      ]
+    },
+    {
+      "M": 10,
+      "reachable": 200,
+      "minimal": 200,
+      "partition_counts": [
+        10,
+        200,
+        200
+      ]
+    },
+    {
+      "M": 12,
+      "reachable": 288,
+      "minimal": 288,
+      "partition_counts": [
+        12,
+        288,
+        288
+      ]
+    },
+    {
+      "M": 15,
+      "reachable": 450,
+      "minimal": 450,
+      "partition_counts": [
+        15,
+        450,
+        450
+      ]
+    },
+    {
+      "M": 16,
+      "reachable": 512,
+      "minimal": 512,
+      "partition_counts": [
+        16,
+        512,
+        512
+      ]
+    },
+    {
+      "M": 18,
+      "reachable": 648,
+      "minimal": 648,
+      "partition_counts": [
+        18,
+        648,
+        648
+      ]
+    },
+    {
+      "M": 21,
+      "reachable": 882,
+      "minimal": 882,
+      "partition_counts": [
+        21,
+        882,
+        882
+      ]
+    },
+    {
+      "M": 25,
+      "reachable": 1250,
+      "minimal": 1250,
+      "partition_counts": [
+        25,
+        1250,
+        1250
+      ]
+    },
+    {
+      "M": 27,
+      "reachable": 1458,
+      "minimal": 1458,
+      "partition_counts": [
+        27,
+        1458,
+        1458
+      ]
+    },
+    {
+      "M": 30,
+      "reachable": 1800,
+      "minimal": 1800,
+      "partition_counts": [
+        30,
+        1800,
+        1800
+      ]
+    },
+    {
+      "M": 32,
+      "reachable": 2048,
+      "minimal": 2048,
+      "partition_counts": [
+        32,
+        2048,
+        2048
+      ]
+    },
+    {
+      "M": 35,
+      "reachable": 2450,
+      "minimal": 2450,
+      "partition_counts": [
+        35,
+        2450,
+        2450
+      ]
+    }
+  ],
+  "actual_pumping_witnesses": 3570,
+  "max_witness_bits": 174,
+  "joint_images": [
+    {
+      "M": 1,
+      "joint_triples": 1,
+      "root_and_rank_one": 1,
+      "root_and_unimodular": 1
+    },
+    {
+      "M": 2,
+      "joint_triples": 8,
+      "root_and_rank_one": 4,
+      "root_and_unimodular": 4
+    },
+    {
+      "M": 3,
+      "joint_triples": 18,
+      "root_and_rank_one": 6,
+      "root_and_unimodular": 9
+    },
+    {
+      "M": 4,
+      "joint_triples": 32,
+      "root_and_rank_one": 8,
+      "root_and_unimodular": 16
+    },
+    {
+      "M": 5,
+      "joint_triples": 50,
+      "root_and_rank_one": 10,
+      "root_and_unimodular": 25
+    },
+    {
+      "M": 6,
+      "joint_triples": 72,
+      "root_and_rank_one": 12,
+      "root_and_unimodular": 36
+    },
+    {
+      "M": 7,
+      "joint_triples": 98,
+      "root_and_rank_one": 14,
+      "root_and_unimodular": 49
+    },
+    {
+      "M": 8,
+      "joint_triples": 128,
+      "root_and_rank_one": 16,
+      "root_and_unimodular": 64
+    },
+    {
+      "M": 9,
+      "joint_triples": 162,
+      "root_and_rank_one": 18,
+      "root_and_unimodular": 81
+    },
+    {
+      "M": 10,
+      "joint_triples": 200,
+      "root_and_rank_one": 20,
+      "root_and_unimodular": 100
+    },
+    {
+      "M": 11,
+      "joint_triples": 242,
+      "root_and_rank_one": 22,
+      "root_and_unimodular": 121
+    },
+    {
+      "M": 12,
+      "joint_triples": 288,
+      "root_and_rank_one": 24,
+      "root_and_unimodular": 144
+    },
+    {
+      "M": 13,
+      "joint_triples": 338,
+      "root_and_rank_one": 26,
+      "root_and_unimodular": 169
+    },
+    {
+      "M": 14,
+      "joint_triples": 392,
+      "root_and_rank_one": 28,
+      "root_and_unimodular": 196
+    },
+    {
+      "M": 15,
+      "joint_triples": 450,
+      "root_and_rank_one": 30,
+      "root_and_unimodular": 225
+    },
+    {
+      "M": 16,
+      "joint_triples": 512,
+      "root_and_rank_one": 32,
+      "root_and_unimodular": 256
+    },
+    {
+      "M": 17,
+      "joint_triples": 578,
+      "root_and_rank_one": 34,
+      "root_and_unimodular": 289
+    }
+  ],
+  "digit_recurrence_checks": 20000
+}

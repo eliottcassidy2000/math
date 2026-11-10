@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "labelled_graphs_including_empty": 1100,
+  "max_n_through_order5": 37,
+  "random_complete_and_empty_completions": 112,
+  "K1_all16_H_values": [
+    9,
+    9,
+    13,
+    9,
+    13,
+    11,
+    15,
+    9,
+    13,
+    15,
+    15,
+    13,
+    15,
+    13,
+    13,
+    9
+  ],
+  "K1_odd_cycle_numbers": [
+    4,
+    4,
+    6,
+    4,
+    6,
+    5,
+    7,
+    4,
+    6,
+    7,
+    7,
+    6,
+    7,
+    6,
+    6,
+    4
+  ],
+  "hamiltonian_controls": [
+    {
+      "m": 0,
+      "edges": [],
+      "n": 0,
+      "H": 1
+    },
+    {
+      "m": 1,
+      "edges": [],
+      "n": 5,
+      "H": 9
+    },
+    {
+      "m": 2,
+      "edges": [],
+      "n": 10,
+      "H": 81
+    },
+    {
+      "m": 2,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "n": 13,
+      "H": 4617
+    }
+  ]
+}

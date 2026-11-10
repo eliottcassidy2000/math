@@ -1,0 +1,33 @@
+{
+  "all_apex_words_through_length9": 1023,
+  "equality_by_order": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      48
+    ],
+    [
+      5,
+      360
+    ],
+    [
+      6,
+      2880
+    ]
+  ],
+  "equality_total": 3294,
+  "rooted_nonsink_positive_cases": 157526,
+  "status": "PASS",
+  "universe": "all labelled tournaments n<=6; all apex masks l<=9"
+}

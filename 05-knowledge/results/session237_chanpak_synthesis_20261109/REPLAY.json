@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "mode": "compact",
+  "checks": [
+    {
+      "script": "04-computation/experiments/session237_arithmetic_states/verify.py",
+      "source_sha256": "f0ed1db30342d9b4b29fce3d58354dfce88554ff37833820db548492ede93394",
+      "output_sha256": "1d96b139673246e4bc064d499b14ab270bc9594d6777981f933460cea56daf0c",
+      "normal_and_optimized": "PASS",
+      "both_failure_controls": "PASS"
+    },
+    {
+      "script": "04-computation/experiments/session237_arithmetic_states/verify_endpoint.py",
+      "source_sha256": "63e52195c202c5890bd2563a4c9cffe7c86730532befb2e16ff0538334f9e73f",
+      "output_sha256": "c8773313b80445034e1e186e84448402bc3a0abe8e96cc960ed1f80c34201738",
+      "normal_and_optimized": "PASS",
+      "both_failure_controls": "PASS"
+    },
+    {
+      "script": "04-computation/experiments/session237_cycle_tilings/verify.py",
+      "source_sha256": "e483587be3d8ebda95321a80a24abb4f3cb0a3656a467bc66d22c90656966c0c",
+      "output_sha256": "2fd63957e0fee47f0c4ed0803ae164f5d5a4e9cb9584cef1056ed081a2bee8f2",
+      "normal_and_optimized": "PASS",
+      "both_failure_controls": "PASS"
+    },
+    {
+      "script": "04-computation/experiments/session237_symmetry_grafts/witness_audit.py",
+      "source_sha256": "18259d1fc8fe9824627e8280b3b67c998407688aec89faa0ab85362305e4a46e",
+      "output_sha256": "d3fdad7f85dcc1170f6216ca107bd5df311cbe9fd7962ba8efe01d19dab44c6e",
+      "normal_and_optimized": "PASS",
+      "both_failure_controls": "PASS"
+    },
+    {
+      "script": "04-computation/experiments/session237_endpoint_slack/verify.py",
+      "source_sha256": "efbc833f1e51643f68d119d1e38924303afca70cdcdac897473a6cb298dc2c5a",
+      "output_sha256": "ec0c55b8c373a7b42ecb3823cfd2d7fa627f2a72e5884b88441865264937129f",
+      "normal_and_optimized": "PASS",
+      "both_failure_controls": "PASS"
+    },
+    {
+      "script": "05-knowledge/results/session237_chanpak_synthesis_20261109/arithmetic_states_audit/independent_verify.py",
+      "source_sha256": "f3a10328d04a0cdb2c83ad5e88a655e2e6028749e0c7e09f6112dc8d57633afb",
+      "output_sha256": "34cdbbbc72b7d77146abecb198d3e0f32714c970ad49a507d9de9e09dacbcd3e",
+      "normal_and_optimized": "PASS",
+      "both_failure_controls": "PASS"
+    },
+    {
+      "script": "05-knowledge/results/session237_chanpak_synthesis_20261109/cycle_tilings_audit/check.py",
+      "source_sha256": "73cf074aaa0b36a72d0b9ac153a9cdaae73adff55466e7b880ee35bb2cd68244",
+      "output_sha256": "5cde4ad395259ba69330cac6a75ae50c672cd9a67cdc4ae8d989b4bb1dc4cad2",
+      "normal_and_optimized": "PASS",
+      "both_failure_controls": "PASS"
+    },
+    {
+      "script": "05-knowledge/results/session237_chanpak_synthesis_20261109/symmetry_grafts_audit/check.py",
+      "source_sha256": "469b52793c92853582c6fd21000df1dbe1a5647e4296a6e48ab51e31f38bcdff",
+      "output_sha256": "45a34e4e7a73ba68f81b216262639d4e3f2d3df0c37e59d498321db3fc8e9623",
+      "normal_and_optimized": "PASS",
+      "both_failure_controls": "PASS"
+    },
+    {
+      "script": "05-knowledge/results/session237_chanpak_synthesis_20261109/endpoint_slack_audit/check.py",
+      "source_sha256": "dd202fcd7db04b2e9c0421f90c7fad34bf295b3ff269108df896f77c61707f8e",
+      "output_sha256": "d06337d5e310a29305099fa9c90ceb34c2dff8db549198b1e61dcd9b9deaf8ab",
+      "normal_and_optimized": "PASS",
+      "both_failure_controls": "PASS"
+    },
+    {
+      "script": "05-knowledge/results/session237_chanpak_synthesis_20261109/endpoint_slack_audit/endpoint_dfa.py",
+      "source_sha256": "7d5476825557702535f270da56c8165b38f95b6dad28b8904a763b3ef58ce0e9",
+      "output_sha256": "97e8e462e3b651121c6e81e39c6d59a5dd2f747bb1afee08d5199112fd0d8b78",
+      "normal_and_optimized": "PASS",
+      "both_failure_controls": "PASS"
+    }
+  ],
+  "full_symmetry_preserved_normal_optimized_output_sha256": "f9bcfd74983319514e3500721bf7df47b4449147119446b9a79218b6e75af500",
+  "full_symmetry_freshly_replayed": false,
+  "scopes": "See REPRODUCE.md; no all-target coverage claimed."
+}

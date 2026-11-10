@@ -1,0 +1,87 @@
+done 1 1
+done 2 5
+done 3 29
+B {'n': 4, 'mask': 4, 'root': 1, 'state': (5, 6, 2, 3), 'child': (9, 9, 3, 3), 'content': 1, 'child_content': 3, 'aut_root': 1, 'rows': [8, 1, 3, 6]}
+done 4 285
+rigid {'n': 5, 'mask': 9, 'root': 1, 'state': (5, 5, 5, 5), 'content': 5, 'rows': [18, 0, 3, 7, 14]}
+S {'n': 5, 'mask': 10, 'root': 4, 'state': (9, 21, 1, 3), 'child': (9, 42, 0, 3), 'content': 1, 'child_content': 3, 'aut_root': 1, 'rows': [20, 1, 2, 7, 14]}
+done 5 5405
+done 6 202013
+{
+  "tested": 202013,
+  "physical_checks": 4275,
+  "witnesses": {
+    "B": {
+      "n": 4,
+      "mask": 4,
+      "root": 1,
+      "state": [
+        5,
+        6,
+        2,
+        3
+      ],
+      "child": [
+        9,
+        9,
+        3,
+        3
+      ],
+      "content": 1,
+      "child_content": 3,
+      "aut_root": 1,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ]
+    },
+    "rigid": {
+      "n": 5,
+      "mask": 9,
+      "root": 1,
+      "state": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "content": 5,
+      "rows": [
+        18,
+        0,
+        3,
+        7,
+        14
+      ]
+    },
+    "S": {
+      "n": 5,
+      "mask": 10,
+      "root": 4,
+      "state": [
+        9,
+        21,
+        1,
+        3
+      ],
+      "child": [
+        9,
+        42,
+        0,
+        3
+      ],
+      "content": 1,
+      "child_content": 3,
+      "aut_root": 1,
+      "rows": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ]
+    }
+  }
+}
