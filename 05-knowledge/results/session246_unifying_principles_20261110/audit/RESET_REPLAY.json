@@ -1,0 +1,165 @@
+{
+  "base": "0e140250d07c",
+  "literal_checks": [
+    [
+      "OJOJ",
+      15
+    ],
+    [
+      "OJOJJ",
+      25
+    ],
+    [
+      "OJOJZ",
+      25
+    ],
+    [
+      "OOJOJ",
+      27
+    ],
+    [
+      "OOJOJJ",
+      45
+    ],
+    [
+      "OOJOJZ",
+      45
+    ],
+    [
+      "ZOJOJ",
+      27
+    ],
+    [
+      "ZOJOJJ",
+      45
+    ],
+    [
+      "ZOJOJZ",
+      45
+    ],
+    [
+      "JOJOJ",
+      27
+    ],
+    [
+      "JOJOJJ",
+      45
+    ],
+    [
+      "JOJOJZ",
+      45
+    ],
+    [
+      "OZOJOJ",
+      57
+    ],
+    [
+      "OZOJOJJ",
+      95
+    ],
+    [
+      "OZOJOJZ",
+      95
+    ],
+    [
+      "ZZOJOJ",
+      45
+    ],
+    [
+      "ZZOJOJJ",
+      75
+    ],
+    [
+      "ZZOJOJZ",
+      75
+    ]
+  ],
+  "literal_reset_rows": [
+    54,
+    60,
+    56,
+    17,
+    32,
+    8
+  ],
+  "pool_size": 18,
+  "rank_histograms": [
+    {
+      "3": 3
+    },
+    {
+      "2": 2,
+      "3": 7
+    },
+    {
+      "2": 11,
+      "3": 16
+    },
+    {
+      "1": 4,
+      "2": 40,
+      "3": 37
+    }
+  ],
+  "reset_matrix": [
+    [
+      3,
+      0,
+      6,
+      0
+    ],
+    [
+      1,
+      0,
+      2,
+      0
+    ],
+    [
+      3,
+      0,
+      6,
+      0
+    ],
+    [
+      1,
+      0,
+      2,
+      0
+    ]
+  ],
+  "sample": [
+    {
+      "index": 0,
+      "path": "01-canon/theorems/THM-1770-the-localisation-lemma-as-first-return-renewal-and-the-pair-only-closure.md",
+      "sha256": "313576cc149494e67be8a041e70c97226f40a630f690006d6c94f69db76d6c8c"
+    },
+    {
+      "index": 10,
+      "path": "01-canon/theorems/THM-4250-odd-core-suffix-lift-automaton-and-density-one-compiler.md",
+      "sha256": "169cd5cd415806dc55cd20e12d31af3337ef9c055e9017f159ba39a0e314c136"
+    },
+    {
+      "index": 3,
+      "path": "01-canon/theorems/THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall.md",
+      "sha256": "fa3a49401807bb37f213ddb166bab4b3548e39b3dfe3988498d43b96ca69a2d9"
+    },
+    {
+      "index": 13,
+      "path": "01-canon/theorems/THM-4852-primegame-phase-law-both-published-lists-agree-selector-cellular-automaton-in-base-29-primorial.md",
+      "sha256": "e694122f3b7d2ca1170e486481fffc16d2c068943149a13f612b2d71e82c1683"
+    },
+    {
+      "index": 16,
+      "path": "01-canon/theorems/THM-4878-graded-spine-grammars-cut-state-automaton-hankel-and-seam-ranks-cutwidth-censuses.md",
+      "sha256": "1d0c5cc189df6e81d52eaca63891e5a2af104939e437e072cafb796dc7f6c8f8"
+    }
+  ],
+  "seed": 24620261110,
+  "shortest_rank_one_words": [
+    "OJOJ",
+    "OJJZ",
+    "JZOJ",
+    "JZJZ"
+  ],
+  "status": "PASS"
+}

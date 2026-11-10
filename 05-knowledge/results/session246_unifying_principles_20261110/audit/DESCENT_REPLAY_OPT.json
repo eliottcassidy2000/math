@@ -1,0 +1,36 @@
+{
+  "binary_tails": 3577,
+  "dense_prefix_length": 1044,
+  "dyadic_bins_hit": 32,
+  "finite_controllers": 455,
+  "independent_graph_profiles": 121,
+  "periodic_limits": [
+    [
+      "OZ",
+      "2/3"
+    ],
+    [
+      "ZO",
+      "1/3"
+    ],
+    [
+      "OOZ",
+      "4/7"
+    ],
+    [
+      "OZZ",
+      "6/7"
+    ],
+    [
+      "OZOZ",
+      "2/3"
+    ],
+    [
+      "ZZOOO",
+      "3/31"
+    ]
+  ],
+  "scope": "Structural controls, not scalar coverage census",
+  "status": "PASS",
+  "ternary_words": 3280
+}
