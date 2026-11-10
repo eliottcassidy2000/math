@@ -1,0 +1,11 @@
+(a) Q multiplicative over ordinal sums: 60 random pairs, failures 0
+(b) source over X has (h, e, R) = (H(X), 0, Q(X)) (X nonempty): 60 random X, failures 0
+(c) C4            H=5 Q=2^5 : K=6: H(N)=69 ok, K=7: H(N)=133 ok, K=8: H(N)=261 ok
+(c) C4=>C4        H=25 Q=2^10 : K=11: H(N)=2073 ok, K=12: H(N)=4121 ok, K=13: H(N)=8217 ok
+(c) C4=>C19       H=95 Q=2^13 : K=14: H(N)=16479 ok, K=15: H(N)=32863 ok, K=16: H(N)=65631 ok
+(c) C19b=>C4      H=95 Q=2^13 : K=14: H(N)=16479 ok, K=15: H(N)=32863 ok, K=16: H(N)=65631 ok
+(c) C217          H=217 Q=2^12 : K=13: H(N)=8409 ok, K=14: H(N)=16601 ok, K=15: H(N)=32985 ok
+(c) C223          H=223 Q=2^12 : K=13: H(N)=8415 ok, K=14: H(N)=16607 ok, K=15: H(N)=32991 ok
+(c) C599          H=599 Q=2^13 : K=14: H(N)=16983 ok, K=15: H(N)=33367 ok, K=16: H(N)=66135 ok
+(c) TT2=>C4=>TT1  H=5 Q=2^8 : K=9: H(N)=517 ok, K=10: H(N)=1029 ok, K=11: H(N)=2053 ok
+(d) e_v = O - E: 98 ports, failures 0

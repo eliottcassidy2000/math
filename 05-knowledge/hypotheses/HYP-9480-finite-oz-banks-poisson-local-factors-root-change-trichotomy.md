@@ -168,7 +168,9 @@ An effective form of (D)(2), with an explicit N_0, plus a finite check below N_0
 
 ## kind-pasteur-2026-11-09-S20 note (THM-5109 (F))
 
-- **Exact tiling.** On a post-bridge sheet h_u = c, the letters B and S^j B tile the odd lattice (h, R) exactly. Every
-  point has one predecessor, with j = v_2(R + c) - 1, and the total mass sum_j 2^(-(j+1)) is 1.
-- **Interpretation.** A single fixed-port core is therefore an exactly critical system. This is a structural reading
-  of (C): a finite bank has no surplus mass, and mass enters only through root changes.
+- **Exact tiling.** On a post-bridge sheet h_u = c, the letters B and S^j B tile the odd lattice (h, R) off the line
+  R = -c. Every point with R > 0 has one predecessor, with j = v_2(R + c) - 1, and the total mass sum_j 2^(-(j+1)) is
+  1.
+- **Status.** This is an elementary reformulation of the known one-core decoders (Session197 ONE_CORE_BINARY_INVERSE,
+  THM-5096). Its "critical" reading is quantified by Session206's (ln 2) X mass, recorded above.
+- **Not a proof.** It is a structural reading of (C), not a proof of (C).

@@ -1,0 +1,5 @@
+(a) strong H=5 class code 34 (order 4): Q = 32 (odd part 1); B_w = [5, 6, 7, 9]; odd parts [3, 5, 7, 9]
+(a) strong H=13 class code 305 (order 5): Q = 104 (odd part 13); B_w = [14, 15, 18, 18, 26]; odd parts [7, 9, 13, 15]
+(b) singleton core, port u fixed, letters SBSBSSBSBSSSB: (letter, h, R_u, oddpart R_u) = [('S', 1, 2, 1), ('B', 3, 3, 3), ('S', 3, 6, 3), ('B', 9, 11, 11), ('S', 9, 22, 11), ('S', 9, 44, 11), ('B', 53, 87, 87), ('S', 53, 174, 87), ('B', 227, 347, 347), ('S', 227, 694, 347), ('S', 227, 1388, 347), ('S', 227, 2776, 347), ('B', 3003, 5551, 5551)]
+(b) 3-cycle core, port u fixed, letters SBSBSSBSBSSSB: (letter, h, R_u, oddpart R_u) = [('S', 3, 6, 3), ('B', 9, 11, 11), ('S', 9, 22, 11), ('B', 31, 43, 43), ('S', 31, 86, 43), ('S', 31, 172, 43), ('B', 203, 343, 343), ('S', 203, 686, 343), ('B', 889, 1371, 1371), ('S', 889, 2742, 1371), ('S', 889, 5484, 1371), ('S', 889, 10968, 1371), ('B', 11857, 21935, 21935)]
+(c) least-squares exponent of N(r0) on r0 = 63..2047: 1.759 ; endpoint exponent log(55343/127)/log(2047/63) = 1.746

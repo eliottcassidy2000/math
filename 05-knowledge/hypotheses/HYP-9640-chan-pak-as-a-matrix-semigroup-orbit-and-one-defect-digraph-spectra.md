@@ -97,9 +97,14 @@ This sharpens HYP-9530 (B) for these bases.
 ## kind-pasteur-2026-11-09-S20 note (HYP-9656)
 
 - **Slices of the one-arc orbit.** Slicing the one-arc gadget orbit of a single vertex by the odd part of the root
-  response gives finite slices.
+  response appears to give slices with finitely many values (HYP-9656 (A), conjectural, OPEN; saturation evidence
+  P1-P6 and the audit's stress runs).
   - r0 = 1 with gadgets of order <= 7: 197 values.
-  - r0 <= 2047 with gadgets of order <= 5: at most 233,115 values, all below 3.41 * 10^8.
-- **Complete prefixes.** Each slice is complete on a prefix: every odd n < 55,343 except 7 and 21 at r0 = 2047.
-- **Consequence.** Cofiniteness of the orbit is equivalent to these prefixes tending to infinity (HYP-9656 (B)).
-- **Cones.** Pure cones (B a power of two) cannot be iterated (THM-5109 (E)).
+  - r0 <= 2047 with gadgets of order <= 5: at most 233,115 values.
+- **Complete prefixes.** Each slice is complete on a prefix: every odd n < 55,343 except 7 and 21 at r0 = 2047, and
+  every odd n < 145,433 at r0 = 4095 (audit).
+- **Consequence.** The prefixes tend to infinity iff the full one-arc closure of a point is complete (every odd n except
+  7 and 21). The order-<= 5 library with no bound already reaches every odd value up to 2 * 10^5 except 7 and 21
+  (THM-5070 (4)).
+- **Cones.** Cone steps whose new dyadic port is the exit inside a transitive gadget cannot be iterated
+  (THM-5109 (E)). Re-rooted versions are OPEN.

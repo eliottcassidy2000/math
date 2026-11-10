@@ -1,0 +1,20 @@
+audit labelled <=5   rows  26705  distinct(order<=1) 1  distinct(order<=2) 5  distinct(order<=3) 16  distinct(order<=4) 56  distinct(order<=5) 264
+audit classes <=7    rows  24747  distinct(order<=1) 1  distinct(order<=2) 5  distinct(order<=3) 16  distinct(order<=4) 56  distinct(order<=5) 264  distinct(order<=6) 1884  distinct(order<=7) 22243
+author gadgets5      rows  26705  distinct(order<=1) 1  distinct(order<=2) 5  distinct(order<=3) 16  distinct(order<=4) 56  distinct(order<=5) 264
+author gadgets7c     rows  24747  distinct(order<=1) 1  distinct(order<=2) 5  distinct(order<=3) 16  distinct(order<=4) 56  distinct(order<=5) 264  distinct(order<=6) 1884  distinct(order<=7) 22243
+order <= 1: audit labelled == audit classes: True ; audit == author gadgets5: True
+order <= 2: audit labelled == audit classes: True ; audit == author gadgets5: True
+order <= 3: audit labelled == audit classes: True ; audit == author gadgets5: True
+order <= 4: audit labelled == audit classes: True ; audit == author gadgets5: True
+order <= 5: audit labelled == audit classes: True ; audit == author gadgets5: True
+order <= 1: audit classes == author gadgets7c: True (1 vs 1)
+order <= 2: audit classes == author gadgets7c: True (5 vs 5)
+order <= 3: audit classes == author gadgets7c: True (16 vs 16)
+order <= 4: audit classes == author gadgets7c: True (56 vs 56)
+order <= 5: audit classes == author gadgets7c: True (264 vs 264)
+order <= 6: audit classes == author gadgets7c: True (1884 vs 1884)
+order <= 7: audit classes == author gadgets7c: True (22243 vs 22243)
+structural facts over all 22243 distinct matrices: min E_u = 1 ; violations of 0 <= s_u <= h_G: 0 ; min h_G = 1
+wrote amat_le5.txt: 264 distinct matrices, sha256 a673912fded78bef
+wrote amat_le6.txt: 1884 distinct matrices, sha256 e25320fd6cbc9af5
+wrote amat_le7.txt: 22243 distinct matrices, sha256 9c302180c57cb4c2

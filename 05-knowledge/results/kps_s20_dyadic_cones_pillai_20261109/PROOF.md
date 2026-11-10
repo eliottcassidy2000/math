@@ -9,7 +9,15 @@ kind-pasteur-2026-11-09-S20. Base 2 throughout (H = I(Omega, 2) by OCF).
   3^(p-q-1) 2^(m-p+q) (q < p) below.
 - The proofs are reproduced in the direct convention only because sections 4-5 use them. The pre-audit draft typed
   them as new; that is MISTAKE-750.
-- New in this file: Corollary C, Theorem D, Theorem E and Theorem F.
+- The cone of section 3 is also KNOWN: Session236 offsets section 2, and this machine's THM-5085 (3). The pre-audit
+  draft typed it as new; that is MISTAKE-751.
+- New in this file:
+  - the window bound and the census in section 3;
+  - Theorem D;
+  - Theorem E.
+- Theorem F is an elementary reformulation of known decoders.
+- The independent audit (`audit/AUDIT.md`) found no error in a proof. Its corrections, all applied, concerned
+  priority, scope and summaries.
 
 ## 0. Notation and inherited facts
 
@@ -36,9 +44,11 @@ e = O - E. This is the identification of SEAM.md's (H, S, R) with (h, O - E, E +
     Q(X) = sum over S subset V(X) of H(X[S]) H(X[V(X) - S]),    Q(empty) = 1.
 
 - Q(X) is the response of a new source u added above X: R(u => X, u) = Q(X). The paths from u are u followed by a
-  path of X.
+  path of X. This is Session229's U-formula (`overlap/PROOF.md` section 1, eq. (1)) for a root that beats every block;
+  it telescopes to the product of the blocks' Q.
 - Q is Session229's proper-graft quantity and the Q of THM-5107 (Session242). Session242 proves 4 | Q for |X| >= 2.
-- Q is multiplicative over ordinal sums, Q(X => Y) = Q(X) Q(Y), because H is.
+- Q is multiplicative over ordinal sums, Q(X => Y) = Q(X) Q(Y), because H is. This is KNOWN: Session227
+  `multiroot/PROOF.md` section 5, and Session229 `dynamic/PROOF.md` eq. (6).
 
 **One-arc join** (SEAM.md; THM-4875 (B)).
 - Construction: N = T => G with the single arc v -> u reversed to u -> v, for an entry u of G. The new root is the
@@ -149,20 +159,43 @@ The new response R' is:
 
 QED
 
-**Checks.** `check_tt.py` compares every formula with brute-force path counts:
-- 3,360 cases with p >= 2 and all q (24 random bases of order <= 6, m <= 7): 0 mismatches;
-- the p = 1 rows on 1,080 further cases (30 bases, m <= 8): 0 mismatches (`out/check_tt.out`).
+**Checks** (corrected after audit minor 1).
+- `check_tt.py`: 24 random bases of order <= 6, every (m, p, q) with m <= 7, 3,360 cases. It compares h' and e' on all
+  3,360, and R' on the 2,688 cases with p >= 2 (`out/check_tt.out`).
+- `check_tt_p1.py`: 30 bases, m <= 8, 1,080 cases with p = 1. It compares h' and R' (`out/check_tt_p1.out`).
+- In all, h' was compared on 4,440 cases, e' on 3,360 and R' on 3,768, with 0 mismatches.
+- The audit's own counter checks every row, p = 1 included, on 7,956 cases with 0 mismatches. It also matches
+  THM-4879 (B) read verbatim through the converse map (`audit/a01_validate_and_tableB.out`).
 
-## 3. Corollary C (dyadic cones and certified infinite families)
+## 3. Corollary C (dyadic cones: KNOWN mechanism) and the window bound (new)
 
-**Statement.** Suppose R = 2^j (a *dyadic port*). For every K >= j + 1, let p = K - j + 1 >= 2 and attach TT_m with
-any m >= p. This gives H = h + 2^K.
+**Statement (KNOWN).** Suppose R = 2^j (a *dyadic port*). For every K >= j + 1, let p = K - j + 1 >= 2 and attach TT_m
+with any m >= p. This gives H = h + 2^K.
 
-This is the near-join h + 2^k B of HYP-9453 and THM-4865, specialised to B = 2^j. The specialisation turns the
-near-join into a pure cone: the increment depends on K alone.
+**Priority (audit M1; MISTAKE-751).**
+- This is the near-join h + 2^k B of HYP-9453 and THM-4865, specialised to B = 2^j.
+- It is already in Session236 `offsets/PROOF.md` section 2 ("Clock shifts A = 2^r"), with the seeds (5, 0, 32) and
+  (9, 2, 16) and the rays 2^(m+5) + 5 (69, 133, 261, ...) and 2^(m+4) + 9.
+- It is also in this machine's THM-5085 (3) (S19 PROOF sections 2 (b) and 3, "pure dyadic rays"). There, s sinks
+  followed by one bridge is literally the one-arc join with TT_(s+1) entered at its sink, that is, the cone with
+  p = m.
+- Session236 also has the lemma "R = 1 iff T is transitive and rooted at its sink", used in (E2).
 
-**Source ports.** If Q(X) = 2^i, then the new source over X is a dyadic port of value H(X), and Q is multiplicative.
-The strong tournaments of order <= 8 with Q a power of two are exactly 11 classes (`out/q_dyadic_strong.out`):
+**Proposition C.1 (window bound).** Every cone value from a dyadic port lies in (2^K, 3 * 2^(K-1)]. Hence an odd cone
+value has binary expansion beginning 10. No cone, from any dyadic port of any tournament, reaches an odd N in
+(3 * 2^(K-1), 2^(K+1)): for example 7, 13, 15, 25-31, 49-63.
+
+*Proof.* By Proposition 0.1, h <= R = 2^j, and K >= j + 1 gives 2^j <= 2^(K-1). So 2^K < h + 2^K <= 2^K + 2^(K-1).
+QED
+
+Compare THM-5055's even-graph remark that values just below 2^(n-1) are never cones. This was suggested by the audit
+(M4).
+
+**Source ports.** If Q(X) = 2^i, then the new source over X is a dyadic port of value H(X), and Q is multiplicative
+(both inherited, section 0). The strong tournaments of order 3-8 with Q a power of two are exactly 11 classes
+(`out/q_dyadic_strong.out`; reproduced by audit a03). The trivial order-1 tournament also has Q = 2.
+- The pairs (5, 32) and (19, 256) are known (Session227 multiroot section 5; Session228/229).
+- The values 217, 223 and 599 are new data.
 
 | order | H | Q |
 |---|---|---|
@@ -212,6 +245,8 @@ The values 2^x - 3^y are 1, 1, 5, 13.
   - These contradict 2^x - 3^y <= 2^y.
 - **Small x.** `h1_list.py` enumerates x <= 60 exhaustively and finds the four solutions.
 - **Sanity check.** It also confirms Ellison's inequality for every 28 <= x <= 60.
+- **Audit check.** The audit's own download of Waldschmidt confirms the quote, in section 2.2.2. Numerically the
+  inequality fails for x >= 12 exactly at x = 13, 14, 16, 19, 27, up to x = 20,000 (`audit/a05_pillai.out`).
 
 QED
 
@@ -286,6 +321,35 @@ attached gadgets.
 
 QED
 
+**Abstract triples (audit minor 4).** For abstract triples (h, e, 2^j), constrained only by h <= 2^j, 0 <= e <= h and
+e = R (mod 2), the realisability step used against h = 5 and h = 13 in (E2) is unavailable. Three extra first steps
+then exist.
+- **(5, 0, 8), type (ii-a), p = 5.** The output is h' = 5 + 2^7 = 133, with 2^s = 16 * 5 + 27 * 16 = 2^9, j' = m + 4
+  and e' = 8 if m = p, else 0.
+- **(13, e, 16), type (i), q = 2, p = 8.** The output is h' = 13 + 2^11 = 2061, with j' = m + 6 and e' = 32 if m = p,
+  else 0.
+- **(13, 0, 32), type (ii-a), p = 7.** The output is again h' = 2061, with 2^s = 2^14, j' = m + 7 and e' = 32 if m = p.
+
+None of these outputs chains:
+- 133 and 2061 are not in {1, 5, 13};
+- the (beta) relation would need e' = 2^(p'-1) h' - d_(p') 2^(j'+1) with e' in {8, 32}, and for p' = 3, 5, 7 the right
+  side is negative:
+  - 532 - 1024, 2128 - 5120 and 8512 - 13312 for h' = 133, j' = 9;
+  - 8244 - 32768, 32976 - 163840 and 131904 - 425984 for h' = 2061, j' = 14.
+
+So (E3) holds for abstract triples too.
+
+**Scope (audit M2).** (E2)/(E3) concern the new dyadic port at the exit inside the attached gadget. Outside the gadget,
+one-step re-landings at old vertices exist (`audit/a15_scope_witnesses.out`):
+- **W1.** TT_2 rooted at its sink, (1, 1, 1), cone through TT_3 at p = 3 to H = 5. The old source of T has
+  (e, R) = (0, 32).
+- **W2.** (1, 0, 4) cone to 9, with (9, 2, 16) at an old vertex.
+- **W3.** (33, 0, 128) cone to 289, with (289, 64, 512) at an old vertex.
+
+With re-rooting allowed (any vertex, or a new source above N), the audit found no second consecutive re-landing. Its
+search covered all 181 dyadic bases of order <= 8, TT_m with m <= 4, and outputs of order <= 15
+(`audit/a12_reroot_chains.out`). Whether re-rooted dyadic cone chains exist is OPEN.
+
 **Cross-checks.**
 - `e_classify.py` sweeps every abstract state (h, e, 2^j) with h <= 2^j, 0 <= e <= h and e = R (mod 2) for small j. It
   confirms the classification and finds no two-step chain.
@@ -293,7 +357,14 @@ QED
   1 -> 9 (two ways) and 33 -> 289. The latter is type (beta) with p = 3: e = 4 = 4 * 33 - 2^7. P4 found no two-step
   chain.
 
-## 6. Theorem F (fixed-port sheets are exactly critical)
+## 6. Theorem F (fixed-port sheets are exactly critical; elementary reformulation of known decoders)
+
+**Priority (audit minor 3).**
+- The content is the exact one-core decoder: Session197 `path-polynomials/ONE_CORE_BINARY_INVERSE.md` section 3,
+  THM-5096 and THM-5085 (1)-(2).
+- The "critical" reading has a quantitative precursor: Session206's zero-root-change mass (ln 2) X ("one free block
+  never suffices"), recorded in HYP-9480 (C)/(D).
+- What is new is only the tiling formulation.
 
 **Setting.** Fix a port u with h_u = c, an odd number. After a bridge letter B (THM-5085), Delta = E - O = -c. Call such
 states the *post-bridge sheet* of c. On the sheet, h and R are odd: h is an H-value, and R = 2R_prev - c.
@@ -303,8 +374,14 @@ states the *post-bridge sheet* of c. On the sheet, h and R are odd: h is an H-va
     T_0(h, R) = (h + R - c, 2R - c)              (the letter B),
     T_j(h, R) = (h + 2^j R, 2^(j+1) R - c)       (S^j then B, j >= 1).
 
-Each T_j maps L_c injectively onto {(h', R') in L_c : v_2(R' + c) = j + 1}. So the images tile L_c, and every point has
-exactly one predecessor, under T_j with j = v_2(R' + c) - 1.
+Then:
+- each T_j maps L_c injectively onto {(h', R') in L_c : v_2(R' + c) = j + 1};
+- so the images tile L_c minus the line R' = -c, which has no predecessor;
+- every point with R' > 0 has exactly one predecessor, under T_j with j = v_2(R' + c) - 1, and that predecessor has
+  R = (R' + c)/2^(j+1) > 0.
+
+Forward images of points with R > 0 can have R' < 0, for instance 2R - c when c > 2R. Predecessors of realised points
+need not be realised.
 
 **Proof.**
 - **j = 0.** R' + c = 2R with R odd. Conversely R = (R' + c)/2, and h = h' - (R' - c)/2. Here (R' - c)/2 is even
@@ -313,7 +390,9 @@ exactly one predecessor, under T_j with j = v_2(R' + c) - 1.
 
 QED
 
-**Remark.** T_j has determinant 2^(j+1), and the sum over j of 2^(-(j+1)) is 1. So the fixed-port dynamics of a single
-core is critical. This is the deterministic decoder of THM-5085's closed form (THM-5096 gives it for the sink-ending
-alphabet), recast as a tiling. Finite banks therefore have no surplus mass (compare HYP-9480 (C) and HYP-9655). Mass
-enters only through root changes, which move to the sheet of the current value.
+**Remark (heuristic).**
+- T_j has determinant 2^(j+1), and the sum over j of 2^(-(j+1)) is 1. In this sense the fixed-port dynamics of a single
+  core is exactly critical.
+- That is a structural reading of why finite fixed-port banks are expected to miss a positive proportion (HYP-9480 (C),
+  HYP-9655, OPEN). Mass enters through root changes, which move to the sheet of the current value.
+- No coverage statement is claimed here.

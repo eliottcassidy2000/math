@@ -1,6 +1,9 @@
-/* rclosure3: closure of triples (h,e,R) with oddpart(R) <= r0 under one-arc gadget matrices (exit inside the
+/* rclosure4 (rclosure3 plus the complete-prefix line): closure of triples (h,e,R) with oddpart(R) <= r0 under one-arc gadget matrices (exit inside the
    gadget) and sink padding (h,e,R) -> (h,0,2R).  Along every step h does not decrease (THM-4875 (C) on realisable
-   triples), so the closure below a bound HMAX is exact.  Wide (64-bit) storage of h, e, R.
+   triples), so the closure below a bound HMAX is exact.  Capping R is also exact: every library matrix has
+   E_u >= 1 and s_u <= h_G, so a gadget step gives h' >= E_u R >= R; a triple with R > HMAX can only produce values
+   above HMAX (gadget step) or its own value (sink padding).  The VALUE set is what may be finite; the triple set
+   is always infinite through sink padding (audit M5).  Wide (64-bit) storage of h, e, R.
    usage: rclosure3 GADGETFILE GMAX HMAX r0 [log2 hash size]
    output: number of distinct matrices, triples, distinct values, values by decade, all values when <= 600. */
 #include <stdio.h>

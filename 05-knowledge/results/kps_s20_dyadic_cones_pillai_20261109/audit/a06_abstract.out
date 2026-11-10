@@ -1,0 +1,4 @@
+JMAX=9 PMAX=40 parity=1: states 43947, with a dyadic step 120 (h=1: 2, h in {5,13}: 10, other h: 108; states with a q>=2 step: 8), classification violations 0, two-step chains 0, dyadic exits q>=p: 0
+JMAX=9 PMAX=40 parity=0: states 87894, with a dyadic step 128 (h=1: 3, h in {5,13}: 17, other h: 108; states with a q>=2 step: 16), classification violations 0, two-step chains 0, dyadic exits q>=p: 0
+JMAX=12 PMAX=60 parity=0: states 5596502, with a dyadic step 897 (h=1: 3, h in {5,13}: 17, other h: 877; states with a q>=2 step: 16), classification violations 0, two-step chains 0, dyadic exits q>=p: 0
+JMAX=14 PMAX=60 parity=1: states 44747435, with a dyadic step 3528 (h=1: 2, h in {5,13}: 10, other h: 3516; states with a q>=2 step: 8), classification violations 0, two-step chains 0, dyadic exits q>=p: 0

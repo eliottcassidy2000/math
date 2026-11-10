@@ -1,0 +1,52 @@
+matrices=22243 HMAX=10000000000 r0=1 mode=exact triples=4775 values=197 max=1995807
+  per decade: <=10:3 <=100:19 <=1000:114 <=10000:158 <=100000:190 <=1000000:194 <=10000000:197 <=100000000:197 <=1000000000:197 <=10000000000:197
+  complete prefix: every odd n < 3 except 7, 21 is a value
+matrices=1884 HMAX=100000000 r0=63 mode=exact triples=349317 values=12352 max=86371467
+  per decade: <=10:4 <=100:48 <=1000:494 <=10000:4314 <=100000:10441 <=1000000:12236 <=10000000:12341 <=100000000:12352
+  complete prefix: every odd n < 383 except 7, 21 is a value
+matrices=1884 HMAX=1000000000 r0=63 mode=exact triples=429327 values=12352 max=86371467
+  per decade: <=10:4 <=100:48 <=1000:494 <=10000:4314 <=100000:10441 <=1000000:12236 <=10000000:12341 <=100000000:12352 <=1000000000:12352
+  complete prefix: every odd n < 383 except 7, 21 is a value
+matrices=1884 HMAX=1000000000 r0=63 mode=author-Rcap triples=429327 values=12352 max=86371467
+  per decade: <=10:4 <=100:48 <=1000:494 <=10000:4314 <=100000:10441 <=1000000:12236 <=10000000:12341 <=100000000:12352 <=1000000000:12352
+  complete prefix: every odd n < 383 except 7, 21 is a value
+matrices=264 HMAX=1000000000 r0=3 mode=exact triples=890 values=35 max=3453
+  per decade: <=10:4 <=100:21 <=1000:31 <=10000:35 <=100000:35 <=1000000:35 <=10000000:35 <=100000000:35 <=1000000000:35
+  complete prefix: every odd n < 13 except 7, 21 is a value
+matrices=264 HMAX=1000000000 r0=7 mode=exact triples=2421 values=83 max=6317
+  per decade: <=10:4 <=100:31 <=1000:67 <=10000:83 <=100000:83 <=1000000:83 <=10000000:83 <=100000000:83 <=1000000000:83
+  complete prefix: every odd n < 35 except 7, 21 is a value
+matrices=264 HMAX=1000000000 r0=15 mode=exact triples=8355 values=258 max=30237
+  per decade: <=10:4 <=100:42 <=1000:161 <=10000:252 <=100000:258 <=1000000:258 <=10000000:258 <=100000000:258 <=1000000000:258
+  complete prefix: every odd n < 35 except 7, 21 is a value
+matrices=264 HMAX=1000000000 r0=31 mode=exact triples=25780 values=724 max=83981
+  per decade: <=10:4 <=100:47 <=1000:318 <=10000:686 <=100000:724 <=1000000:724 <=10000000:724 <=100000000:724 <=1000000000:724
+  complete prefix: every odd n < 67 except 7, 21 is a value
+matrices=264 HMAX=1000000000 r0=63 mode=exact triples=87084 values=2103 max=824709
+  per decade: <=10:4 <=100:48 <=1000:455 <=10000:1778 <=100000:2089 <=1000000:2103 <=10000000:2103 <=100000000:2103 <=1000000000:2103
+  complete prefix: every odd n < 127 except 7, 21 is a value
+matrices=264 HMAX=1000000000 r0=127 mode=exact triples=266832 values=5580 max=2332785
+  per decade: <=10:4 <=100:48 <=1000:494 <=10000:3370 <=100000:5425 <=1000000:5572 <=10000000:5580 <=100000000:5580 <=1000000000:5580
+  complete prefix: every odd n < 431 except 7, 21 is a value
+matrices=264 HMAX=1000000000 r0=255 mode=exact triples=815651 values=14392 max=5248767
+  per decade: <=10:4 <=100:48 <=1000:498 <=10000:4697 <=100000:13384 <=1000000:14340 <=10000000:14392 <=100000000:14392 <=1000000000:14392
+  complete prefix: every odd n < 2303 except 7, 21 is a value
+matrices=264 HMAX=1000000000 r0=511 mode=exact triples=2458601 values=36765 max=13388229
+  per decade: <=10:4 <=100:48 <=1000:498 <=10000:4992 <=100000:29530 <=1000000:36349 <=10000000:36760 <=100000000:36765 <=1000000000:36765
+  complete prefix: every odd n < 5153 except 7, 21 is a value
+matrices=264 HMAX=1000000000 r0=1023 mode=exact triples=7587283 values=93159 max=340931297
+  per decade: <=10:4 <=100:48 <=1000:498 <=10000:4998 <=100000:44854 <=1000000:89732 <=10000000:92964 <=100000000:93158 <=1000000000:93159
+  complete prefix: every odd n < 20921 except 7, 21 is a value
+matrices=264 HMAX=1000000000 r0=1023 mode=author-Rcap triples=7587283 values=93159 max=340931297
+  per decade: <=10:4 <=100:48 <=1000:498 <=10000:4998 <=100000:44854 <=1000000:89732 <=10000000:92964 <=100000000:93158 <=1000000000:93159
+  complete prefix: every odd n < 20921 except 7, 21 is a value
+matrices=264 HMAX=4000000000 r0=2047 mode=exact triples=26567358 values=233115 max=340931297
+  per decade: <=10:4 <=100:48 <=1000:498 <=10000:4998 <=100000:49886 <=1000000:207835 <=10000000:231463 <=100000000:233108 <=1000000000:233115
+  complete prefix: every odd n < 55343 except 7, 21 is a value
+matrices=264 HMAX=4000000000 r0=2047 mode=author-Rcap triples=26567358 values=233115 max=340931297
+  per decade: <=10:4 <=100:48 <=1000:498 <=10000:4998 <=100000:49886 <=1000000:207835 <=10000000:231463 <=100000000:233108 <=1000000000:233115
+  complete prefix: every odd n < 55343 except 7, 21 is a value
+
+real	2m26.110s
+user	0m0.120s
+sys	0m0.274s

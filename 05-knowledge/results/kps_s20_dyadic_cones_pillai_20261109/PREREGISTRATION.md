@@ -105,3 +105,16 @@ The complete prefix is the least odd n, other than 7 and 21, that is missing fro
   - Setup: the same run.
   - Result: 233,115 values, inside [180,000, 300,000]. The largest is 340,931,297, below 2 * 10^9; it is also the
     largest value of the r0 = 1023 closure.
+
+## Notes appended after the independent audit (outcome lines above unedited)
+
+- **P2 wording (audit minor 8).** "all below 86,371,467" should read "at most 86,371,467": that number is the maximum
+  value.
+- **HYP-9656 (A) as worded (audit M5).** The closure C(r0) is a set of triples, and it is always infinite because
+  (1, 0, 2^k) belongs to it for every k. The predictions P1-P6 concern the value set h(C(r0)). The programs bound
+  both h and R, and that bound is exact because a gadget step gives h' >= R.
+- **"Already seen" (audit minor 6).** "No persistence through the standard near-join" is true only of the 15 cases
+  tested. P4's own 33 -> 289 is a near-join landing on a dyadic exit.
+- **Reproduction.** The audit reproduced P1-P6 and the complete-prefix table with independent code. It also ran
+  r0 = 4095, giving N(4095) = 145,433 and 580,505 values.
+

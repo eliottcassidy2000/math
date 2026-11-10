@@ -1,0 +1,3 @@
+W1: base triple (1, 1, 1) at v=1 (|T|=2); TT_3 entry p=3 -> H(N)=5 = 1 + 2^2; old-vertex dyadic ports (w, e_w, R_w): [(0, 0, 32)]; N out-masks [30, 12, 24, 16, 2]
+W2: base triple (1, 0, 4) at v=0 (|T|=3); TT_2 entry p=2 -> H(N)=9 = 1 + 2^3; old-vertex dyadic ports (w, e_w, R_w): [(2, 2, 16)]; N out-masks [14, 28, 24, 16, 1]
+W3: base triple (33, 0, 128) at v=3 (|T|=7); TT_2 entry p=2 -> H(N)=289 = 33 + 2^8; old-vertex dyadic ports (w, e_w, R_w): [(0, 64, 512)]; N out-masks [384, 389, 409, 227, 427, 455, 407, 256, 8]

@@ -35,9 +35,21 @@ Every attained odd `h ∈ [15, 2881]` is the count of at least two non-isomorphi
 
 ## kind-pasteur-2026-11-09-S20 note (THM-5109, HYP-9656)
 
-- **B a power of two.** When B = 2^j the near-join is a pure cone: h + 2^K for every K > j. Such "dyadic ports" exist
-  for 69 of the 148 attained odd values <= 300 at order <= 8.
-- **Cone chains.** A cone step lands on a dyadic port again only if h + 3^a = 2^t (THM-5109 (D)). By Ellison's bound
-  this happens only at the Pillai near-misses 1, 5, 13, and no two dyadic cone steps chain (THM-5109 (E)).
-- **Bounded odd parts.** Closures that keep the odd part of B bounded are finite (HYP-9656). So the response intervals
-  sought here must come from B with unbounded odd part.
+- **B a power of two.** When B = 2^j the near-join is a pure cone: h + 2^K for every K > j.
+  - The mechanism is Session236's (offsets section 2) and THM-5085 (3)'s.
+  - Such "dyadic ports" exist for 69 of the 148 attained odd values <= 300 at order <= 8.
+- **Window bound (THM-5109 (C)).** Since B >= h, every cone value lies in (2^K, 3 * 2^(K-1)]. So cones never reach
+  odd values whose binary expansion begins 11.
+- **Re-landing at the exit inside the gadget.** A cone step lands on a dyadic port at the exit inside the attached
+  transitive gadget iff one of the following holds:
+  - h + 3^(q+j-1) = 2^t with p = 2q + j; or
+  - the exit is at the gadget source and 2^(p-1) h - e + 3^(p-2) 2^(j+1) is a power of two.
+- **Which steps occur.** By Ellison's bound the realisable steps are:
+  - 1 -> 9;
+  - a family with e = 2^(p-1) h - d_p 2^(j+1), d_p = 1, 5, 13 (example 33 -> 289).
+
+  The near-miss values 5 and 13 carry no suitable port, and no two such steps chain (THM-5109 (D)-(E)). Re-landings at
+  old vertices exist; whether they chain is OPEN.
+- **Bounded odd parts.** Closures that keep the odd part of B bounded appear to have finitely many values
+  (HYP-9656 (A), conjectural, OPEN). So the response intervals sought here should be expected to need B with unbounded
+  odd part.

@@ -1,0 +1,9 @@
+n=1 codes=1 distinct_iso_classes=1
+n=2 codes=1 distinct_iso_classes=1
+n=3 codes=2 distinct_iso_classes=2
+n=4 codes=4 distinct_iso_classes=4
+n=5 codes=12 distinct_iso_classes=12
+n=6 codes=56 distinct_iso_classes=56
+n=7 codes=456 distinct_iso_classes=456
+n=8 codes=6880 distinct_iso_classes=6880
+A000568(1..8) = 1 1 2 4 12 56 456 6880

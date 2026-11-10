@@ -1,0 +1,6 @@
+(a) solutions of 1 <= 2^x - 3^y <= 2^y with x <= 400: [(1, 0, 1), (2, 1, 1), (5, 3, 5), (8, 5, 13)]
+    of which strict (2^x - 3^y < 2^y): [(2, 1, 1), (5, 3, 5), (8, 5, 13)]
+(b) x in [1, 20000] where Ellison's inequality fails for some y: [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 13, 14, 16, 19, 27]
+    restricted to x >= 12: [13, 14, 16, 19, 27]
+    smallest log-margin for 28 <= x <= 20000: x = 38, ln(|2^x-3^y|/2^x) + x/10 = 0.2054
+(c) 1 - 1/(10 ln 2) = 0.855730 (PROOF uses > 0.855);  log 2 / log 3 = 0.630930 (PROOF uses < 0.631)

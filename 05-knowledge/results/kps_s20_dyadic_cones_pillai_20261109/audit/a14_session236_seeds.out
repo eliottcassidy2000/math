@@ -1,0 +1,2 @@
+Session236 seed rows [12, 29, 24, 16, 1] port 1 : (h,e,R) = (5, 0, 32) ; H(J_m), m=1..4 = [69, 133, 261, 517] ; equals h + 2^m R: True
+Session236 seed rows [14, 28, 24, 16, 1] port 2 : (h,e,R) = (9, 2, 16) ; H(J_m), m=1..4 = [41, 73, 137, 265] ; equals h + 2^m R: True

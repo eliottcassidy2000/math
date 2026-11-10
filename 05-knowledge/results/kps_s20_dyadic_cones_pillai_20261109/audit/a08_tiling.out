@@ -1,0 +1,7 @@
+(a) letters S/B checked on 142 physical steps: mismatches 0; post-bridge T_j checked on 72: mismatches 0
+(b) c=1: 30702 lattice points (h, R odd, |h| <= 101, |R| <= 301, R != -c): points without exactly one preimage: 0; points with R = -c have [0] preimages
+(b) c=3: 30702 lattice points (h, R odd, |h| <= 101, |R| <= 301, R != -c): points without exactly one preimage: 0; points with R = -c have [0] preimages
+(b) c=5: 30702 lattice points (h, R odd, |h| <= 101, |R| <= 301, R != -c): points without exactly one preimage: 0; points with R = -c have [0] preimages
+(b) c=9: 30702 lattice points (h, R odd, |h| <= 101, |R| <= 301, R != -c): points without exactly one preimage: 0; points with R = -c have [0] preimages
+(b) c=15: 30702 lattice points (h, R odd, |h| <= 101, |R| <= 301, R != -c): points without exactly one preimage: 0; points with R = -c have [0] preimages
+(b) c=45: 30702 lattice points (h, R odd, |h| <= 101, |R| <= 301, R != -c): points without exactly one preimage: 0; points with R = -c have [0] preimages

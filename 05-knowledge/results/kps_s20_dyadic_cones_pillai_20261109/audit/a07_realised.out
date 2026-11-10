@@ -1,0 +1,13 @@
+distinct dyadic triples of order <= 8: 181
+(a) bases with a dyadic one-step (m <= 20): 3
+     (1, 0, 2) -> [(3, 1, 9)]  (m values: 3..20)
+     (1, 1, 1) -> [(4, 2, 9)]  (m values: 4..20)
+     (33, 4, 64) -> [(3, 1, 289)]  (m values: 3..20)
+    two-step chains: 0
+(b) brute-force joins with TT_m, m <= 5: 1810  bases with a dyadic exit: 3  agreement with formula search (m <= 5): True
+     (1, 0, 2) [(3, 3, 1, 9, 2, 16), (4, 3, 1, 9, 0, 32), (5, 3, 1, 9, 0, 64)]
+     (1, 1, 1) [(4, 4, 2, 9, 2, 16), (5, 4, 2, 9, 0, 32)]
+     (33, 4, 64) [(3, 3, 1, 289, 64, 512), (4, 3, 1, 289, 0, 1024), (5, 3, 1, 289, 0, 2048)]
+(c) base (33, 4, 64) realised by class code 23649 (order 6, root 2); TT_3 entry p=3 exit q=1 -> (h,e,R) = (289, 64, 512); second dyadic step from it (m <= 20): False
+(c) base (1, 1, 1) realised by class code 0 (order 1, root 0); TT_4 entry p=4 exit q=2 -> (h,e,R) = (9, 2, 16); second dyadic step from it (m <= 20): False
+(c) base (1, 0, 2) realised by class code 0 (order 2, root 1); TT_3 entry p=3 exit q=1 -> (h,e,R) = (9, 2, 16); second dyadic step from it (m <= 20): False

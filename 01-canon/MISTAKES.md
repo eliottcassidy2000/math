@@ -24178,3 +24178,70 @@ own formula, not recalled from a neighbouring paper.
 Lesson: before typing any gadget, transfer or tail formula new, grep this machine's own canon titles for the formula's
 distinctive constant or factor (here 3^( and three-power), not only for the mechanism's vocabulary. Also compare any
 "new" enumeration count with the titles that print the same count.
+
+## MISTAKE-751 (2026-11-10, kind-pasteur-2026-11-09-S20, THM-5109, HYP-9656 and `05-knowledge/results/kps_s20_dyadic_cones_pillai_20261109/` at the pre-audit checkpoint be5ce9a33c; found by the independent audit `05-knowledge/results/kps_s20_dyadic_cones_pillai_20261109/audit/AUDIT.md`) -- a known cone typed as new (this machine's own S19 again), a scope qualifier dropped from every summary, a misquoted chain law, a hypothesis false as literally written
+
+- **MAJOR (priority; audit M1).** THM-5109 (C), the dyadic cone, was typed PROVED (new): a root response B = 2^j turns
+  the near-join into the pure ray h + 2^K. It is KNOWN, with the very same example 69, 133, 261, ...:
+  - Session236 `offsets/PROOF.md` section 2 (seeds (5, 0, 32) and (9, 2, 16)), audited the same day;
+  - this machine's own S19, THM-5085 (3) ("pure dyadic rays"; S19 PROOF sections 2 (b) and 3).
+
+  The ingredients are also inherited:
+  - (5, 32): Session227;
+  - (19, 256): Session228/229;
+  - Q multiplicative: Session227 section 5 and Session229 eq. (6);
+  - source response = product of Q: Session229 overlap eq. (1).
+
+  The README even said "No one had the dyadic-port lane". This is the fourth own-canon miss (MISTAKE-737, 749, 750),
+  this time a result from the previous session. Repaired:
+  - (C) retyped as an inherited mechanism;
+  - new only: the order-3-8 census (H = 217, 223, 599), the product family, and the audit-suggested window bound
+    (cone values lie in (2^K, 3 * 2^(K-1)]).
+- **MAJOR (scope; audit M2).** (E2)/(E3) are proved only for the new dyadic port at the exit inside the attached
+  transitive gadget.
+  - The THM-5109 title, its (E2) line, the README, both INDEX rows, the HYP-9640 note and the "Consequence" dropped the
+    qualifier. The unqualified reading is false: re-landings at old vertices exist (1 -> 5 with (5, 0, 32);
+    (1, 0, 4) -> 9 with (9, 2, 16); (33, 0, 128) -> 289 with (289, 64, 512)).
+  - Repaired everywhere. Re-rooted chains are stated as OPEN; the audit's search found none up to outputs of order 15.
+- **MAJOR (misquotation; audit M3).** The HYP-9453 note and both INDEX rows said cone steps re-land "only through
+  h + 3^a = 2^t ... near-misses 1, 5, 13".
+  - This omits the (beta) family (33 -> 289, and 33 + 3^a is never a power of two).
+  - It also lists 5 and 13, which (E2) excludes.
+  - Repaired with the audit's text. The commit message of be5ce9a33c keeps the misquotation; it cannot be changed.
+- **MAJOR (scope of the heuristic; audit M4).** HYP-9656 (C) and the README said finite banks and fixed-port tails are
+  bounded-response families that "cannot reach every large N".
+  - Fixed-port tails keep the root in the core, and their responses have unbounded odd part.
+  - Finite banks attain every odd value below 10^7 except 7 and 21 (THM-5085 (4)), and their coverage is HYP-9480
+    (C).
+  - "By (A), cones cannot reach every large N" was a non sequitur.
+  - Repaired: those clauses deleted; the proved window bound is stated instead.
+- **MAJOR (literally false; audit M5).** HYP-9656 (A) said "C(r0) is finite". C(r0) is a set of triples and always
+  contains (1, 0, 2^k) for every k, so it is infinite. The conjecture is about the value set.
+  - The README (twice), both INDEX rows and the HYP-9640 note also stated the conjecture as fact.
+  - Repaired: "the value set is finite (conjectural, OPEN)" everywhere. The exactness of the R cap now has its proof
+    (h' >= E_u R >= R, since E_u >= 1 and s_u <= h_G).
+- **Minor (audit m1-m9).**
+  - The Theorem B check counts: R' was compared on 3,768 cases, not 3,360 with p >= 2. The p = 1 script had not been
+    saved; it is now `check_tt_p1.py`.
+  - The closure-exactness argument.
+  - (F) retyped as an elementary reformulation of known decoders (Session197, THM-5096; Session206's (ln 2) X mass),
+    with the line R = -c excluded.
+  - The abstract (E3) paragraph for the first steps from 5 and 13.
+  - "Equivalent to cofiniteness" corrected to "completeness", with THM-5070 (4) as the r0 = infinity baseline.
+  - The pre-registered "no persistence" remark annotated (P4's own 33 -> 289 contradicts it).
+  - Credits for the Q facts.
+  - "Order 3-8" (order 1 has Q = 2).
+  - "about r0^1.75, possibly slowing" (N(4095) = 145,433).
+  - "At most 86,371,467".
+  - MISTAKE-750's "HYP-9471's title" should read "HYP-9471's table".
+  - The Waldschmidt section number (2.2.2).
+  - The rclosure4 header.
+- **Audit additions kept.**
+  - N(4095) = 145,433 (580,505 values).
+  - An order-6, r0 = 255 run with 2 values above 10^9. Saturation claims need a wide margin.
+  - Value counts unchanged up to 10^13.
+
+Lesson: at session start, open every memory note and canon entry from this machine's previous three sessions and
+grep their packets for the new construction's vocabulary. Here that meant "dyadic" and "power of 2" in kps_s19* and
+session236*, before typing anything new. Every summary line (title, INDEX rows, notes in other files) must carry the
+same scope qualifier as the proved statement. A "closure is finite" statement must say which set: values or states.

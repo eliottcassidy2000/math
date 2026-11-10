@@ -1,0 +1,9 @@
+depth 0: 273 dyadic rooted states (order <= 8)
+depth 1: 81 new dyadic rooted states (orders up to 15); values: [5, 9, 289]
+    chain: [(1, 1, 1), ('src', 5, 0, 512)]
+    chain: [(1, 0, 2), ('src', 5, 0, 512)]
+    chain: [(1, 1, 1), ('src', 5, 0, 512)]
+    chain: [(1, 1, 1), (5, 0, 64)]
+    chain: [(1, 1, 1), (5, 0, 128)]
+    chain: [(1, 1, 1), (5, 0, 256)]
+depth 2: 0 new dyadic rooted states (orders up to 15); values: []

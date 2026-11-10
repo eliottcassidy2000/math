@@ -1,0 +1,22 @@
+strong classes per order (is_strong, order 1 counted as strong): {1: 1, 3: 1, 4: 1, 5: 6, 6: 35, 7: 353, 8: 6008}
+strong classes with Q a power of two:
+  n=1 code=0 H=1 Q=2^1
+  n=4 code=34 H=5 Q=2^5
+  n=6 code=17057 H=19 Q=2^8
+  n=6 code=6658 H=19 Q=2^8
+  n=8 code=144179468 H=217 Q=2^12
+  n=8 code=247767681 H=217 Q=2^12
+  n=8 code=147063080 H=223 Q=2^12
+  n=8 code=243319937 H=223 Q=2^12
+  n=8 code=72166211 H=599 Q=2^13
+  n=8 code=193922693 H=599 Q=2^13
+  n=8 code=87067660 H=599 Q=2^13
+  n=8 code=34476340 H=599 Q=2^13
+  total incl. order 1: 12; of order >= 3: 11
+rooted triples: 58653  parity R = e mod 2 violations: 0  R < h violations: 0
+attained odd values <= 300 at order <= 8: 148  missing odd values <= 300: [7, 21]
+values <= 300 with a dyadic port: 69
+distinct dyadic triples (h,e,R): 181
+response odd parts at H = 5: [1, 3, 5, 7, 9]   at H = 13: [7, 9, 13, 15]
+dyadic triples with h = 5: [(5, 0, 32), (5, 0, 64), (5, 0, 128), (5, 0, 256)]  with h = 13: []
+least j per value (<= 300): 1:0 5:5 9:4 19:8 31:5 33:6 37:6 41:7 43:6 45:8 49:7 59:6 63:6 71:7 73:7 77:7 87:7 89:7 91:7 101:8 103:7 105:7 109:7 115:7 117:7 121:7 123:7 131:8 137:8 139:8 141:8 143:8 149:9 157:8 171:8 173:8 175:8 177:9 179:8 181:10 183:8 185:8 187:9 189:8 191:8 209:8 213:9 225:9 229:9 231:8 233:8 237:8 239:8 241:8 243:8 245:9 247:8 249:8 251:8 265:9 267:9 275:9 283:9 285:9 287:9 289:9 291:9 295:9 299:9
