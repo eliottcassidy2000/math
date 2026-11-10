@@ -2,28 +2,28 @@
 
 **SESSION COMPLETE, 10 November 2026. Independently audited. Chan–Pak remains OPEN.**
 
-The goal is every positive odd Hamilton-path count except7 and21. This session
+The goal is every positive odd Hamilton-path count except 7 and 21. This session
 does not close that conjecture. It produces three exact physical tools and
 identifies precisely why their apparent shortcuts do not prove coverage.
 
 ## New proved mechanisms
 
 1. **A small pure-count switch beyond the word-family divisor.** Two strong
-   seven-vertex tournaments have counts69 and71 with identical rooted
-   endpoint, response and deletion counts(13,77,13). The deletion count13 is
-   coprime to3. Full seven-coordinate interfaces are retained and independently
+   seven-vertex tournaments have counts 69 and 71 with identical rooted
+   endpoint, response and deletion counts (13,77,13). The deletion count 13 is
+   coprime to 3. Full seven-coordinate interfaces are retained and independently
    recounted. [Proof and exact contextual laws](interfaces/PROOF.md).
 2. **Physical response cancellation by reversal.** An opposite-facing module
    with a transitive separator cancels the response error that could not
    cancel in the earlier similarly oriented chain. Exact strong examples have
-   gap812 at order19 and gap14812 with deletion47515 coprime to3 at order22.
+   gap 812 at order 19 and gap 14812 with deletion 47515 coprime to 3 at order 22.
    The latter is proved by constituent enumeration plus the composition law,
-   not by a full order22 subset recount. [Proof](interfaces/PROOF.md).
+   not by a full order 22 subset recount. [Proof](interfaces/PROOF.md).
 3. **Synchronized outer blocks and exact defects.** Every fixed O/Z/J middle
-   supplies an explicit quadratic in2^k. For binary middles the linear term
+   supplies an explicit quadratic in 2^k. For binary middles the linear term
    cancels exactly for palindromes. Three half-word norm formulas and a complete
    target inverse retain actual graph recipes. Root-changing middles give,
-   for example, the all-k family436·4^k−37. Mersenne coverage and the original
+   for example, the all-k family 436·4^k−37. Mersenne coverage and the original
    binary block law are explicitly inherited. [Proof/compiler](descent/PROOF.md).
 4. **Simple constant-run spectrum.** Every individual letter in the inherited
    k-apex tape is a sum of commuting projections, with square-free annihilator
@@ -33,8 +33,8 @@ identifies precisely why their apparent shortcuts do not prove coverage.
 
 ## The remaining barriers are now exact
 
-A mixed h13/h37 chain has coefficient gcd exactly2 at every length. However,
-its2^k scalar outputs have minimum spacing50·37^(k−2) for k>=2. This is a real
+A mixed h13/h37 chain has coefficient gcd exactly 2 at every length. However,
+its 2^k scalar outputs have minimum spacing 50·37^(k−2) for k>=2. This is a real
 escape from the growing-divisor obstruction but still not an interval.
 
 For a fixed apex graph and alphabet, at most r constant runs supply only

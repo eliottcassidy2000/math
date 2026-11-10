@@ -39,7 +39,7 @@ loses continuation data, as the explicit hostile below shows.
 
 Fix a tournament A on k named roots. All other vertices form a transitive chain,
 in tape order. Fix a root permutation p=(p_0,...,p_(k-1)). A Hamilton path has a
-unique form: an increasing chain run in gap0, root p_0, run in gap1, ..., root
+unique form: an increasing chain run in gap 0, root p_0, run in gap 1, ..., root
 p_(k-1), run in gap k. Assigning every chain vertex to its gap specifies its
 position because each gap run is increasing.
 
@@ -55,7 +55,7 @@ vertex beats the new one because tape order is transitive. Replace its state
 by 1 or 2 according to whether the new last vertex beats the right root,
 using 2 in the final gap. All other coordinates stay unchanged.
 
-A terminal state is accepted iff every occupied nonfinal gap has state2,
+A terminal state is accepted iff every occupied nonfinal gap has state 2,
 and every empty internal gap has the required root arc p_(g-1)->p_g.
 Summing over all p counts each Hamilton path exactly once. This is a direct
 bijection, with no OCF assumption and no extrapolation from examples.
@@ -98,7 +98,7 @@ and suffix v, therefore,
     c_j=initial * A_u * P_j(A_a) * A_v * terminal.
 
 All coefficients are rational, and all resulting values are nonnegative
-integers. Coefficients need not be positive. For m>=1 only bases1,...,k+1
+integers. Coefficients need not be positive. For m>=1 only bases 1,...,k+1
 remain, so k+1 exact values determine all positive-length values by a Vandermonde
 inverse. The value at m=0 needs its own zero-eigenvalue correction.
 
@@ -129,12 +129,12 @@ Let F_k(a) have tape (-1)^a followed by 0,1,...,k-1. By (2), for a>=1,
 
 For the coefficient proof, the top spectral projection of the -1 letter is
 product_g E_(-1,g): its joint eigenspace requires every gap projection to have
-eigenvalue1. Applied to the empty state, this fills every gap, producing bad
+eigenvalue 1. Applied to the empty state, this fills every gap, producing bad
 last status in each nonfinal gap and good status in the final one. The suffix
 has exactly one vertex that can finish the gap before each root. Each of those
 k vertices is therefore forced into its matching gap. All gaps were already
 occupied, so no first-vertex condition obstructs this unique assignment.
-Each of the k! root permutations contributes exactly1 to the top coefficient.
+Each of the k! root permutations contributes exactly 1 to the top coefficient.
 Thus the (k+1)^a term is genuinely present, not merely an upper eigenvalue bound.
 
 Exact interpolation, using the proved law, gives:
@@ -156,11 +156,11 @@ k=1,2 and four leaves for k=3: 1561 separate words total. It checks 27288
 idempotence/commutation instances. Optimized and ordinary receipts agree.
 
 The restricted two-initial-root census exhausts all 3^m words at each
-0<=m<=10. At order12 it gives 10283 distinct counts, maximum30061, and first
-allowed miss3091. This is a restricted word census, not the full forest
+0<=m<=10. At order 12 it gives 10283 distinct counts, maximum 30061, and first
+allowed miss 3091. This is a restricted word census, not the full forest
 census, not a count of isomorphism classes, and not a global exclusion.
 
-In this depth-one subclass, H=173 already occurs at order8 with tape
+In this depth-one subclass, H=173 already occurs at order 8 with tape
 
     (-1,0,0,0,-1,1),
 
