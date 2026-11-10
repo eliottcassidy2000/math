@@ -1,0 +1,52 @@
+F1 on odd N in [2^24, 2^27):  predicted triples per odd N: sheet s = 0: 6.2819, sheet s >= 1: 7.8598, total 14.1417
+pre-registration written to prereg_window_27_24.json (no enumeration was run)
+  p =      3 first divisible h =         1   s = 0: E +0.51461  f_div 0.240952  E_nd -0.33224    s >= 1: E +0.53172  f_div 0.244549  E_nd -0.33196
+  p =      5 first divisible h =         2   s = 0: E +0.31201  f_div 0.096300  E_nd -0.19953    s >= 1: E +0.32835  f_div 0.099042  E_nd -0.19938
+  p =      7 first divisible h =        38   s = 0: E +0.17360  f_div 0.044110  E_nd -0.14283    s >= 1: E +0.17549  f_div 0.044361  E_nd -0.14283
+  p =     11 first divisible h =        16   s = 0: E +0.17045  f_div 0.023385  E_nd -0.09077    s >= 1: E +0.17486  f_div 0.023770  E_nd -0.09076
+  p =     13 first divisible h =        32   s = 0: E +0.04594  f_div 0.009417  E_nd -0.07690    s >= 1: E +0.04479  f_div 0.009329  E_nd -0.07690
+  p =     17 first divisible h =         8   s = 0: E +0.20806  f_div 0.015491  E_nd -0.05850    s >= 1: E +0.22882  f_div 0.016672  E_nd -0.05841
+  p =     19 first divisible h =       218   s = 0: E +0.05112  f_div 0.005446  E_nd -0.05263    s >= 1: E +0.04967  f_div 0.005370  E_nd -0.05263
+  p =     23 first divisible h =       103   s = 0: E +0.04697  f_div 0.003925  E_nd -0.04348    s >= 1: E +0.04477  f_div 0.003829  E_nd -0.04348
+  p =     29 first divisible h =      1435   s = 0: E +0.00321  f_div 0.001299  E_nd -0.03447    s >= 1: E +0.00068  f_div 0.001212  E_nd -0.03447
+  p =     31 first divisible h =      8664   s = 0: E -0.00611  f_div 0.000843  E_nd -0.03225    s >= 1: E -0.00887  f_div 0.000754  E_nd -0.03224
+  p =     37 first divisible h =      1350   s = 0: E +0.00743  f_div 0.000931  E_nd -0.02702    s >= 1: E +0.00610  f_div 0.000895  E_nd -0.02702
+  p =     41 first divisible h =       266   s = 0: E +0.03177  f_div 0.001369  E_nd -0.02439    s >= 1: E +0.03233  f_div 0.001382  E_nd -0.02439
+  p =     43 first divisible h =        64   s = 0: E +0.08773  f_div 0.002575  E_nd -0.02323    s >= 1: E +0.09411  f_div 0.002723  E_nd -0.02323
+  p =     47 first divisible h =       399   s = 0: E +0.01973  f_div 0.000872  E_nd -0.02128    s >= 1: E +0.01818  f_div 0.000839  E_nd -0.02128
+  p =     53 first divisible h =       609   s = 0: E +0.00873  f_div 0.000521  E_nd -0.01887    s >= 1: E +0.00762  f_div 0.000500  E_nd -0.01887
+  p =     59 first divisible h =      1091   s = 0: E +0.01346  f_div 0.000515  E_nd -0.01695    s >= 1: E +0.01256  f_div 0.000500  E_nd -0.01695
+  p =     61 first divisible h =      5886   s = 0: E +0.00160  f_div 0.000295  E_nd -0.01639    s >= 1: E +0.00054  f_div 0.000278  E_nd -0.01639
+  p =     67 first divisible h =      2914   s = 0: E +0.00322  f_div 0.000271  E_nd -0.01492    s >= 1: E +0.00234  f_div 0.000258  E_nd -0.01492
+  p =     71 first divisible h =      1881   s = 0: E +0.00367  f_div 0.000250  E_nd -0.01408    s >= 1: E +0.00273  f_div 0.000237  E_nd -0.01408
+  p =     73 first divisible h =     13030   s = 0: E -0.00110  f_div 0.000173  E_nd -0.01370    s >= 1: E -0.00213  f_div 0.000158  E_nd -0.01370
+  p =     79 first divisible h =      6438   s = 0: E -0.00229  f_div 0.000131  E_nd -0.01266    s >= 1: E -0.00334  f_div 0.000118  E_nd -0.01266
+  p =     83 first divisible h =     15645   s = 0: E -0.00063  f_div 0.000138  E_nd -0.01205    s >= 1: E -0.00170  f_div 0.000125  E_nd -0.01205
+  p =     89 first divisible h =      1379   s = 0: E +0.00781  f_div 0.000214  E_nd -0.01124    s >= 1: E +0.00704  f_div 0.000205  E_nd -0.01124
+  p =     97 first divisible h =     21679   s = 0: E -0.00257  f_div 0.000080  E_nd -0.01031    s >= 1: E -0.00352  f_div 0.000070  E_nd -0.01031
+  p =    101 first divisible h =     13180   s = 0: E +0.00105  f_div 0.000108  E_nd -0.00990    s >= 1: E +0.00042  f_div 0.000102  E_nd -0.00990
+  p =    103 first divisible h =     16531   s = 0: E -0.00161  f_div 0.000079  E_nd -0.00971    s >= 1: E -0.00251  f_div 0.000070  E_nd -0.00971
+  p =    107 first divisible h =       695   s = 0: E +0.03549  f_div 0.000419  E_nd -0.00934    s >= 1: E +0.03593  f_div 0.000423  E_nd -0.00934
+  p =    109 first divisible h =     17712   s = 0: E -0.00135  f_div 0.000072  E_nd -0.00917    s >= 1: E -0.00209  f_div 0.000065  E_nd -0.00917
+  p =    113 first divisible h =      8192   s = 0: E -0.00155  f_div 0.000065  E_nd -0.00885    s >= 1: E -0.00225  f_div 0.000058  E_nd -0.00885
+  p =    127 first divisible h =    109283   s = 0: E -0.00435  f_div 0.000028  E_nd -0.00787    s >= 1: E -0.00500  f_div 0.000023  E_nd -0.00787
+  p =    131 first divisible h =     16702   s = 0: E -0.00023  f_div 0.000057  E_nd -0.00763    s >= 1: E -0.00086  f_div 0.000052  E_nd -0.00763
+  p =    241 first divisible h =      2048   s = 0: E +0.01418  f_div 0.000076  E_nd -0.00415    s >= 1: E +0.01530  f_div 0.000081  E_nd -0.00415
+  p =    251 first divisible h =     23970   s = 0: E -0.00025  f_div 0.000015  E_nd -0.00398    s >= 1: E -0.00051  f_div 0.000014  E_nd -0.00398
+  p =    257 first divisible h =       128   s = 0: E +0.18152  f_div 0.000721  E_nd -0.00386    s >= 1: E +0.20436  f_div 0.000810  E_nd -0.00385
+  p =    263 first divisible h =     79294   s = 0: E -0.00099  f_div 0.000011  E_nd -0.00380    s >= 1: E -0.00133  f_div 0.000009  E_nd -0.00380
+  p =    677 first divisible h =    788366   s = 0: E -0.00076  f_div 0.000001  E_nd -0.00148    s >= 1: E -0.00092  f_div 0.000001  E_nd -0.00148
+  p =    683 first divisible h =      1024   s = 0: E +0.06059  f_div 0.000091  E_nd -0.00146    s >= 1: E +0.06821  f_div 0.000102  E_nd -0.00146
+  p =    691 first divisible h =    433602   s = 0: E -0.00047  f_div 0.000001  E_nd -0.00145    s >= 1: E -0.00061  f_div 0.000001  E_nd -0.00145
+  p =   2729 first divisible h =   6862070   s = 0: E -0.00029  f_div 0.000000  E_nd -0.00037    s >= 1: E -0.00031  f_div 0.000000  E_nd -0.00037
+  p =   2731 first divisible h =      4096   s = 0: E +0.06085  f_div 0.000022  E_nd -0.00037    s >= 1: E +0.06853  f_div 0.000025  E_nd -0.00037
+  p =   2741 first divisible h =   7391106   s = 0: E -0.00028  f_div 0.000000  E_nd -0.00036    s >= 1: E -0.00031  f_div 0.000000  E_nd -0.00036
+  p =   8191 first divisible h =        -1   s = 0: E -0.00012  f_div 0.000000  E_nd -0.00012    s >= 1: E -0.00012  f_div 0.000000  E_nd -0.00012
+  p =  43691 first divisible h =     65536   s = 0: E +0.06104  f_div 0.000001  E_nd -0.00002    s >= 1: E +0.06876  f_div 0.000002  E_nd -0.00002
+  p =  65521 first divisible h =        -1   s = 0: E -0.00002  f_div 0.000000  E_nd -0.00002    s >= 1: E -0.00002  f_div 0.000000  E_nd -0.00002
+  p =  65537 first divisible h =     32768   s = 0: E +0.18317  f_div 0.000003  E_nd -0.00002    s >= 1: E +0.20633  f_div 0.000003  E_nd -0.00002
+  p =  65539 first divisible h =        -1   s = 0: E -0.00002  f_div 0.000000  E_nd -0.00002    s >= 1: E -0.00002  f_div 0.000000  E_nd -0.00002
+
+real	0m10.249s
+user	0m0.030s
+sys	0m0.000s
