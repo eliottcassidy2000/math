@@ -1,6 +1,6 @@
 # Session241: natural-number relations inside tournament constructions
 
-**AUDITED RESULTS, 10 November 2026. Publication and final reproduction in progress. Chan–Pak completeness remains OPEN.**
+**COMPLETE, 10 November 2026. Independently audited; all twelve normal/optimized replays PASS. Chan–Pak completeness remains OPEN.**
 
 The answer is precise: tournament path counts can faithfully encode several
 relations of the natural numbers. The relation and the representation matter.
@@ -110,3 +110,18 @@ Finite controls supplement all-order proofs; no full tournament census is implie
 
 The inherited base is commit `8a6b203c9b33c87a0a75cfc1fd6038308ad92646`.
 The dirty main checkout is preserved; this session uses an isolated worktree.
+
+## Close-out
+
+All six live concepts were revisited: valuation supports give the faithful map,
+SCC order explains the sorting loss, rooted words give the inverse, prime
+orders govern shifted divisibility, and aggregate Camion/totient fibers remain
+distinct targets. The existing research-method cards “Separate local support
+from bounded-height coverage” and “Keep observer, recurrence class, and finite
+head” were used. No new method card is promoted from a single session.
+
+The first two verified main checkpoints are
+`3d42677c554d8c026229206c3497cd098cefdef8` and
+`cc8fbf1f70e4a88522dc5443905af27d2f1fe18b`. This final checkpoint adds
+maintained navigation, frozen checksums and close-out. No theorem completion
+is inferred from finite testing. **Session241 has ended.**

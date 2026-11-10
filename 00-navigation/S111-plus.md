@@ -131,3 +131,5 @@ individual session routes preserve scope and remaining open obligations.
 - [S239](S239.md): COMPLETE; faster integral sequence engines, exact precision congruences, value-refined SCC calculus and the sharp2163 strong sevenfold-symmetry threshold. Chan-Pak OPEN.
 
 - [S240](S240.md): sharp1848759 elevenfold gap, complete8/12 Paley orientation fibres, and the first strong joint7/11 carrier at19 vertices. Independently audited; Chan-Pak OPEN.
+
+[Session241](S241.md): faithful path-count arithmetic, strong divisor/totient chart and an exact sparse inverse; Chan–Pak OPEN.
