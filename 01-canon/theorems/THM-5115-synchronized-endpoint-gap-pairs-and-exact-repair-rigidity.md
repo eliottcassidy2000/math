@@ -1,6 +1,6 @@
 ---
 id: THM-5115
-title: "Synchronized physical endpoint-gap pairs, primitive state control and exact continuation restrictions"
+title: "Pure-count and synchronized physical gap pairs with controlled root sidecars and exact continuation restrictions"
 status: "PROVED, independently audited. Universal gap existence inherited; synchronization and scoped repair statements only."
 session: Session244-even-gap-anchoring-20261110
 source: 05-knowledge/results/session244_even_gap_anchoring_20261110/composition/PROOF.md
@@ -56,6 +56,30 @@ The complete zero-defect classification, H>=3e and e=1 dyadic slice used
 here are INHERITED from Session231 descent/ROUND2.md; the degree bound is
 inherited from THM-4873/4875. The packet retains independent proofs and
 scoped corollaries, not a new claim to those theorems.
+
+## Stronger pure-count pair
+
+For every rooted source, two seven-letter words have states
+
+    OJJJJOZ: (17D+40U,3D+6U,21D+50U,3D+6U),
+    OJOZJOZ: (17D+42U,3D+6U,21D+50U,3D+6U).
+
+Only the total count changes; all three other rooted coordinates agree.
+Choosing the inherited canonical response source U=N gives gap2N, upper
+count17g(N)+42N<=59N, and strong same-order graphs on at most
+ceil(log2 N)+8 vertices. N=1 uses the singleton source; the opening O
+handles that boundary. This is a stronger synchronization condition than
+the five-letter pair above, not a replacement for its smaller word length.
+
+Every common O/Z continuation preserves the exact gap and all three equal
+sidecars. Thus the anchor may change along an arbitrary physical binary
+tail without changing the prescribed difference. A first common J sends
+the pure-count difference to a positive multiple of the singleton state
+(1,1,1,1); later physical transfers cannot make its deletion coordinate
+zero again. Hence a common word preserves this pure-count synchronization
+exactly when it contains no J. This gives no arbitrary-anchor selector.
+
+[Pure-count proof and literal checks](../../05-knowledge/results/session244_even_gap_anchoring_20261110/composition/ROUND3.md).
 
 [Compiler and checks](../../05-knowledge/results/session244_even_gap_anchoring_20261110/composition/PROOF.md) ·
 [Efficient substitution](../../05-knowledge/results/session244_even_gap_anchoring_20261110/composition/ROUND2.md) ·

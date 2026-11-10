@@ -223,5 +223,47 @@
     ],
     "H": 15
   },
+  "sharp_general_cores": [
+    {
+      "k": 1,
+      "order": 3,
+      "all_deletions_peeled": true
+    },
+    {
+      "k": 2,
+      "order": 6,
+      "all_deletions_peeled": true
+    },
+    {
+      "k": 3,
+      "order": 10,
+      "all_deletions_peeled": true
+    },
+    {
+      "k": 4,
+      "order": 15,
+      "all_deletions_peeled": true
+    },
+    {
+      "k": 5,
+      "order": 21,
+      "all_deletions_peeled": true
+    },
+    {
+      "k": 6,
+      "order": 28,
+      "all_deletions_peeled": true
+    },
+    {
+      "k": 7,
+      "order": 36,
+      "all_deletions_peeled": true
+    },
+    {
+      "k": 8,
+      "order": 45,
+      "all_deletions_peeled": true
+    }
+  ],
   "scope": "Finite census through order6 plus infinite proof in ROUND3.md."
 }

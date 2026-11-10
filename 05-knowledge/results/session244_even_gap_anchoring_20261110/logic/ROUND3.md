@@ -65,7 +65,35 @@ cores of orders 5 and 6 as induced subtournaments.
 This is a genuinely finite forbidden-graph criterion. It does not assert
 that avoiding these graphs forces an arbitrary desired Hamilton-path count.
 For general k, (1) similarly gives a finite obstruction-size bound for
-outdegree-(k-1)-degeneracy. No optimality claim is made for k>2.
+outdegree-(k-1)-degeneracy. The bound is sharp for every k, by the explicit construction below.
+
+### Sharpness for every k
+
+For k=1 take C3. For k>=2 choose any strong tournament S of order s=k+1.
+For each u in S create exactly k-d_S+(u) new vertices owned by u. Orient an
+owned vertex v so that u->v and v beats every other vertex of S. Orient all
+new vertices as a transitive tournament. The resulting graph T has
+
+    |T| = s + sum_u(k-d_S+(u)) = (k+1)(k+2)/2.
+
+Each old vertex has outdegree exactly k. Every new vertex has k outgoing
+arcs into S, and possibly more into the new vertices, so minimum outdegree
+is at least k.
+
+Delete any one vertex. If it was new, its owner now has outdegree k-1 and
+may be peeled; if it was old, an old vertex has already been removed. Any
+old vertex with an arc to an already removed old vertex is now below degree
+k and can also be peeled. Strong connectivity of S propagates this process
+to all old vertices by reverse reachability. The remaining new vertices are
+transitive, so peel sinks until none remain. Thus T-v is outdegree-(k-1)-
+degenerate for every v. In particular every proper induced subtournament
+has a vertex of outdegree below k: the bound in (1) is attained by an
+inclusion-minimal core for every k. This also explains the mechanism behind
+the finite bound, rather than relying only on the quadratic estimate.
+
+The exact checker constructs such cores for k=1,...,8 and checks their
+sizes, minimum degrees, and complete peeling after every single deletion.
+The general proof, rather than this finite test, supplies all k.
 
 ## 3. Exact six-core classification
 

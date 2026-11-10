@@ -102,4 +102,30 @@ b=(14,4,8,2);a=tuple(x|16 for x in b[0:1])+tuple(x|16 for x in b[1:])+ (1,)
 # The source is the unique old vertex beaten by r, so remove its arc to r.
 a=(a[0]^16,)+a[1:]
 need(strong(a) and degone(a) and not guarded(a) and hp(a)==15,'strong order5 obstruction')
-print(json.dumps({'status':'PASS','census':census,'cores':[{'rows':a,'orbit_size':len(o),'H':hp(a)} for a,o in zip(cores,orbits)],'guarded_scalar_witnesses':cert,'strong_guard_obstruction':{'rows':a,'H':hp(a)},'scope':'Finite census through order6 plus infinite proof in ROUND3.md.'},indent=2))
+# Sharp cores for general threshold k, with every one-vertex deletion peeled.
+def sharp_core(k):
+    if k==1:return (2,4,1)
+    size=k+1
+    old=[sum(1<<j for j in range(i+1,size)) for i in range(size)]
+    old[0]^=1<<(size-1);old[-1]|=1
+    owners=[u for u in range(size) for _ in range(k-old[u].bit_count())]
+    a=old+[0]*len(owners)
+    for offset,u in enumerate(owners):
+        v=size+offset
+        for w in range(size):
+            if w==u:a[w]|=1<<v
+            else:a[v]|=1<<w
+        for w in range(v+1,len(a)):a[v]|=1<<w
+    return tuple(a)
+sharp_checks=[]
+for k in range(1,9):
+    core=sharp_core(k);n=len(core)
+    need(n==(k+1)*(k+2)//2 and min(x.bit_count() for x in core)>=k,'sharp core size/degree')
+    for v in range(n):
+        mask=((1<<n)-1)^(1<<v)
+        while mask:
+            options=[u for u in range(n) if mask>>u&1 and (core[u]&mask).bit_count()<k]
+            need(bool(options),'sharp core deletion peeling')
+            mask^=1<<options[0]
+    sharp_checks.append({'k':k,'order':n,'all_deletions_peeled':True})
+print(json.dumps({'status':'PASS','census':census,'cores':[{'rows':a,'orbit_size':len(o),'H':hp(a)} for a,o in zip(cores,orbits)],'guarded_scalar_witnesses':cert,'strong_guard_obstruction':{'rows':a,'H':hp(a)},'sharp_general_cores':sharp_checks,'scope':'Finite census through order6 plus infinite proof in ROUND3.md.'},indent=2))
