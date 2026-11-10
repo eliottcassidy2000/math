@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "run_words": [
+    "ABz",
+    "BzA",
+    "zAB",
+    "ABzA",
+    "BzAB",
+    "ABzAB"
+  ],
+  "order77_profiles_through19": [
+    {
+      "n": 18,
+      "seven_cycles": 1,
+      "eleven_cycles": 1,
+      "fixed": 0
+    },
+    {
+      "n": 19,
+      "seven_cycles": 1,
+      "eleven_cycles": 1,
+      "fixed": 1
+    }
+  ],
+  "cross_pair_orbit_size": 77,
+  "mixed_minimum": 3049061631,
+  "missing_packet_markdown_links": [],
+  "scope": "Cheap independent synthesis checks; the larger finite censuses use the two independent audits."
+}

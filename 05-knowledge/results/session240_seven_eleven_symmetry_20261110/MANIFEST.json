@@ -1,0 +1,235 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "00-navigation/S240.md",
+      "sha256": "d42a1710af44b978140385323f9e8483cba77e60b023ffa437c1474d366af1f3",
+      "git_blob": "32c1caa07607826f96968e16c682af57e042d57b"
+    },
+    {
+      "path": "01-canon/theorems/THM-5100-sharp-strong-elevenfold-symmetry-gap.md",
+      "sha256": "9451107b012e095861e5b4c3af5f348a50c46aa6828c7c96904731e4737ff8ff",
+      "git_blob": "c6a6267d2075425dc79abca0ca860e9fe22b3617"
+    },
+    {
+      "path": "01-canon/theorems/THM-5101-paley-design-skew-matching-fibres-and-induced-path-actions.md",
+      "sha256": "6e6213d844f60726486d5402d8989febe6edc2f2b00ac791dae8745d33fd35b2",
+      "git_blob": "da73268cc9e73b6ae3bedb3293ee9001b54d79ee"
+    },
+    {
+      "path": "01-canon/theorems/THM-5102-minimum-order-seventy-seven-symmetry-and-exact-mixed-path-cost.md",
+      "sha256": "78fed586f5deae2f2bfa57a91f534a9ffb8d7d32a8ddce6c2b3e8536f3f53550",
+      "git_blob": "381c3467504ebefd77ca0d63ee1bcf2e6cf6c613"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/COMPLETION.md",
+      "sha256": "98e21fc5d4627abf10e8a3c2e6146528eed4d5817dbc0cf7048d990e4628d27f",
+      "git_blob": "738cc73b413db183173fdf6ac44f0f07357251b3"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/DOC_CHECK.out",
+      "sha256": "bbb7224c9c12db914cb21fff872f709dd506b092a4a4f18427885c46bd02c38a",
+      "git_blob": "a326cf2da5a12189107106cf40e14c56689268d1"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/LINK_CHECK.json",
+      "sha256": "53e465fb18305ce0188858cdd85d80ae91df4701d0bb702d23d79f857c0a1aa6",
+      "git_blob": "5f82f8793c8911637c06475f91b5f7ad505fc36a"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/PLAN.md",
+      "sha256": "d636a9a0b26f3269c07d58460f1e858c71e19653f00663fab74804d3768021ca",
+      "git_blob": "62fb25561d035a33cde4b675aeecffa8a67be151"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/README.md",
+      "sha256": "1e34a54cb280cbe5dee1fc988583c17f5e7410a4c22febd24b79a544fcd8c353",
+      "git_blob": "b8b6a7cb82b34aac5d93a0fe397d86faf74aaf80"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/REPLAY.json",
+      "sha256": "7a1a0e6f545ec08bf53468df9ae3702b3bd6a55e21d650e608c418ad8f85684a",
+      "git_blob": "e354c3c5603caccb974713f07fae73ca8880dfac"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/REPLAY.optimized.json",
+      "sha256": "27855d3b1791ba7ee8381a0eb992a4ef5ca1b6f9f77f46efe82628a8ed96921d",
+      "git_blob": "9fb926a9a25c1748d276852fd92acd285737d5be"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/REPRODUCE.md",
+      "sha256": "3f2f937e831be7586bdcfe74b6ab143685046ee00905cc9bab1b88466cde7c95",
+      "git_blob": "f8943419fa445fc77f81af12ac9659de6008ecee"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_design/AUDIT.md",
+      "sha256": "bd5a6972af490943b30fa29fca4cb16f93791a55d82d79c73940094904399630",
+      "git_blob": "21b2b336598c4a0e166f61d76c243e529714f326"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_design/optimization_checks.json",
+      "sha256": "cf85e2b8000764ff9443f0490f63987bd50303022926ae5a987e58763263fb27",
+      "git_blob": "a0bdb7ff0c21a5b0a40aba4c977ec5a888726ba3"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_design/output.jsonl",
+      "sha256": "b14a9700586affad344afc6f44f0bbccfa4a02553b9379ff49c828c4654df00c",
+      "git_blob": "ebbd788848923b525c5633b9b3634095b04f40b8"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_design/output.optimized.jsonl",
+      "sha256": "85d82b9f73349462d648b19b8e64475f51397609dcab10e9de697d7fc23dbe54",
+      "git_blob": "c9e08f0d682a1c3b0cd1d472aa471c2e416d055c"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_design/verify_independent.py",
+      "sha256": "0dcb0960157d446beaea74e4009b5735b7d2644aa978ddce66d8a9681c7c112e",
+      "git_blob": "2d29793a2dfe7c7a1635c956782dbdf72573fb64"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_final/FINAL_REVIEW.md",
+      "sha256": "1d10d9c46aeaf779464ee4d1746876a93ecb1f43d63e53e02a2b401b666b0b21",
+      "git_blob": "22f71b8fe0350f52e4ac8388285fcb79c1eb5578"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_final/checks.json",
+      "sha256": "c6995bc942c7cc78b380a582fc859368bdb96bbc636d5e758b1f8861d12d9e67",
+      "git_blob": "89f204c21729f228400fd007b9fd56b0fb057b72"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_final/source_check.json",
+      "sha256": "e88e8469ede8ddba4970ed6dd97152ff468a6e5ba7a88341902fee589e780f02",
+      "git_blob": "392fadc5595289a2dec704c5ea86fd4fab0a2076"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_gap/AUDIT.md",
+      "sha256": "629cfbb6a8004a81bb16d961298ba274ce29aaa13c3551a97eee4f599e9bc0ad",
+      "git_blob": "3b75f3f05480e263dd79ab6391e15aa4be5ba7aa"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_gap/SHA256SUMS",
+      "sha256": "d4c7722236846bd80c8650269d8811d5a349368bf4c50d81ed61552c20b0eba4",
+      "git_blob": "fc2eddacaaeb0070c7717e8c600a8439373970d0"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_gap/audit.py",
+      "sha256": "d5b6b00002f8b1e00e550955b61c8d6f10c3e49de355cf0bb7518852aa79dde8",
+      "git_blob": "08ac9f5c13405a5ecad8bdb7d0e36b5518c6f333"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_gap/audit19.cpp",
+      "sha256": "0c39857c95864c23884a0e8f0bf3ca87c30998e9d6455385a3057df33029af0a",
+      "git_blob": "35e88d1ec2c495cdc0f9aaa6b3d974b525a6d752"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_gap/failure_controls.txt",
+      "sha256": "6274245a507cf0241b676248623f74d91c0dcbecb6e1cfcc08d9ee4c6c86b5ef",
+      "git_blob": "243d19a4ce8605a14d439ac5f195b31b8e21c63b"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_gap/output.json",
+      "sha256": "e09edeb576a1971e6b48e95c52b6fe2175931f03db55b619f24dd7d2a7c529a9",
+      "git_blob": "b78a83cb13489173430524f89a5489e60517d204"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_gap/output.optimized.json",
+      "sha256": "e09edeb576a1971e6b48e95c52b6fe2175931f03db55b619f24dd7d2a7c529a9",
+      "git_blob": "b78a83cb13489173430524f89a5489e60517d204"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/audit_gap/output19.txt",
+      "sha256": "00b1039617bdb1c08b71c56fb407cedf8a62d901f3e958ad75ab37d15c07a3c5",
+      "git_blob": "e8ccb57e58b6405b1b2d3a7b9c757e4d065f4fa8"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/gaps/PROOF.md",
+      "sha256": "b975901072b1722b36c3e53eb22ec168e593fc0fad2500612c799d32bf89d7d1",
+      "git_blob": "a1168b7a0a7dde8d0c5815f35e626959dd3e8dce"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/gaps/SHA256SUMS",
+      "sha256": "5c68ccc75aded14a82c6e67fecaa0a002dfa61f3c31c439f9312d27a6dc3fbcf",
+      "git_blob": "3d947e309b3354a51d034b8cae41fd2aa14b10dd"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/gaps/probe.json",
+      "sha256": "462fd136f2a4650bbf760e3c8fa9581bcba065e8fc11c76084a9dc2757f13d73",
+      "git_blob": "60db5e3e9b239c197ce4e0f4bf9aaedd08a20f68"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/gaps/probe.optimized.json",
+      "sha256": "462fd136f2a4650bbf760e3c8fa9581bcba065e8fc11c76084a9dc2757f13d73",
+      "git_blob": "60db5e3e9b239c197ce4e0f4bf9aaedd08a20f68"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/gaps/probe.py",
+      "sha256": "626abc3ecbc3927559f7e8ec17f74922b0c1c9b38569a667e2350e3e3a8644ef",
+      "git_blob": "c2c47d927490a33901fc5899e50f61709dc2742a"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/mixed/PROOF.md",
+      "sha256": "e01f2f24931af640d191319b445d565652cfe9b777c142dd2eae661b15db4997",
+      "git_blob": "e0dbffa1bf8a1bbb4400e50f52315942aa571849"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/mixed/output.json",
+      "sha256": "55600e7afc46528a77cc1223c208658855a2d69e9a80a2b5721696743d883be9",
+      "git_blob": "9b6977c30e257accd38c484ac567a284d1bf3cdb"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/mixed/verify.py",
+      "sha256": "61efe7e9ba609d09f83815d857bc3b8ad600a7eb74a65e84227239fe7531077c",
+      "git_blob": "8442ed4aa3870308559485221fc650a1fefc5c9d"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/paley/REPORT.md",
+      "sha256": "a4fdb5dc9a4304cbcb99d5f9fc4acbecce2480f3aa710f84cf8709650b91937d",
+      "git_blob": "10d3a8ca9cd4d24dd5f3e16c7f7f8d234ceceff9"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/paley/audit.out",
+      "sha256": "1f6418292d3a87e693b27f25e293822cbd362698cfc1770b63211bd8802cecac",
+      "git_blob": "6562bb877f9336c9cde7d029508a30d6a933d364"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/paley/audit.py",
+      "sha256": "f02aed98e28d1fa872a883dd0720a9a698f643fe7fe2f0c2235616d1b6d3aeaf",
+      "git_blob": "c014e5faa347ba69ce6f9e7227430c658f77f33f"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/paley/output.jsonl",
+      "sha256": "05899e261eafe3283bc91bf9d8c1ea62f68790f1244e0feb24ddd0cd2e8d31fa",
+      "git_blob": "c33d0433b43efb8843919bee16578d39aaa55cb8"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/paley/verify.py",
+      "sha256": "cce17681d9df08cdae20dc669f7f0e63874f7fc23aadaab8d1bfb3bc37a11d19",
+      "git_blob": "6d3811da29e4a0503bd2c1f2cb21f5cfe05f2f74"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/provenance/README.md",
+      "sha256": "1442c12d1a39a2f7e9defd81175105478818d25c2b347ba9b7be1146669062f2",
+      "git_blob": "af99c951afc3a1b7a0b1b6b1cc95df5e90b8f7ad"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/provenance/SOURCES.json",
+      "sha256": "1bb0e372a5e0cf83ac65213cb70de4d169bb6a072eabd9f61255e24d8220015f",
+      "git_blob": "2f1f55865dd243445128bd9401f4807d4c8e9839"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/provenance/receipt.json",
+      "sha256": "d4f50306ddaa4613c7b7cf0c8abb6046b97fef2a3b57b171fbb5954478ebc3b5",
+      "git_blob": "e81c612f16d242cfab6500cd02194381101b381f"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/provenance/verify_small.py",
+      "sha256": "93b5c6f73c0ab0fda5c00ea386518851daf8741617eb75aab1eec5737471e7f9",
+      "git_blob": "6c12528369ec3a18488bc357bef1f736cb21fdac"
+    },
+    {
+      "path": "05-knowledge/results/session240_seven_eleven_symmetry_20261110/replay.py",
+      "sha256": "8d57a368218de1cccb8da57fa4512d97c16228279935e21509dc902ed02dbd83",
+      "git_blob": "50b8c0641d653010de3bacbcd7109e6a1ef50de8"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "commit": "bdaec8654d7b225cb5b270331c19c2e2b4f1332b",
+  "verified_source_blobs": 13,
+  "method": "read-only git cat-file and rev-parse"
+}

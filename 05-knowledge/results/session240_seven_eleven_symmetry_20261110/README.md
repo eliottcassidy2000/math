@@ -1,6 +1,6 @@
 # Session240: seven and eleven, with the symmetry coordinate restored
 
-2026-11-10. **Research results independently audited; final replay in progress.**
+2026-11-10. **COMPLETE. Independently audited; normal and optimized final replays PASS.**
 Chan–Pak completeness remains **OPEN**. H counts ordered directed Hamiltonian
 paths, not isomorphism classes or paths modulo automorphisms.
 
