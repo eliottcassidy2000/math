@@ -10,8 +10,8 @@
     "JZJZ"
   ],
   "source_sha256": {
-    "bridges/RESET_PRINCIPLE.md": "02ebd1d393dace7d742f3278c0d09c276cefa8cdc3f5de1d61e765552b1cfa2c",
-    "bridges/verify_reset.py": "29a92ea1b33e5757bb06179cf394c104a984f1bd6919b1cf97109a861885d640",
+    "bridges/RESET_PRINCIPLE.md": "ca34d6afc164e97a04825e226a8614b358684a068c1d4f0aaf877ede10d47a58",
+    "bridges/verify_reset.py": "22c933ff7d5196f981a073b86f0b8fd5bfe78413c9732541d9de15587893c469",
     "descent/PROOF.md": "b634ccc92bd5390f222280a95546df77c2df61e5148c5874750ef7ada3bb89fd",
     "descent/README.md": "bf0db960898120ed84ab2af8250e2f17dddc406b3ddad92e09c4a4fce162ddc2",
     "descent/verify.py": "e840b1a84686e95209662bc3c0fcadf1723b9ef08315182982a8d8acd20f4246"

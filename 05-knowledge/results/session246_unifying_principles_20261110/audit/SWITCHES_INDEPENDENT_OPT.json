@@ -1,0 +1,32 @@
+{
+  "closure_certificates": [
+    [
+      37,
+      345,
+      411,
+      43
+    ],
+    [
+      49,
+      347,
+      423,
+      43
+    ],
+    [
+      13,
+      347,
+      407,
+      43
+    ],
+    [
+      25,
+      349,
+      419,
+      43
+    ]
+  ],
+  "core_path_count": 43,
+  "scope": "literal stated core and four physical eight-vertex closures; no coverage expansion",
+  "status": "PASS",
+  "weight_tests": 625
+}

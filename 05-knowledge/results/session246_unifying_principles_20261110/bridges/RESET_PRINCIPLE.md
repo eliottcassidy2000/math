@@ -173,7 +173,11 @@ rank-one ideal is claimed.
 
 Run `python3 -I -B verify_reset.py`, then `python3 -O -I -B verify_reset.py`.
 Outputs agree byte for byte with `RESET_CHECK.json`. `--fail` must exit
-nonzero. Standard-library rational elimination certifies ranks; literal
+nonzero. The mathematics uses only the Python standard library; Git and this repository
+(with the pinned base commit available) are required only for sampled-source
+provenance. Git commands are anchored to the script’s resolved repository root
+and use full-tree paths, so the output is independent of the working directory.
+Standard-library rational elimination certifies ranks; literal
 subset DP counts separately constructed adjacency lists. Checks include
 all suffix matrices through length five, 18 literal graph counts, exact
 reset matrices for a finite m,k grid, and the hostile equal-count pair.

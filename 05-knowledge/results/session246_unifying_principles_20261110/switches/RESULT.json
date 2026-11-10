@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "physical_cube": [
+    {
+      "bits": [
+        0,
+        0
+      ],
+      "cut": 37,
+      "count": 345,
+      "response": 411,
+      "root_end": 43,
+      "rows": [
+        74,
+        220,
+        113,
+        228,
+        233,
+        67,
+        128,
+        37
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1
+      ],
+      "cut": 13,
+      "count": 347,
+      "response": 407,
+      "root_end": 43,
+      "rows": [
+        74,
+        220,
+        113,
+        100,
+        233,
+        195,
+        128,
+        13
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0
+      ],
+      "cut": 49,
+      "count": 347,
+      "response": 423,
+      "root_end": 43,
+      "rows": [
+        74,
+        220,
+        241,
+        228,
+        105,
+        67,
+        128,
+        49
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1
+      ],
+      "cut": 25,
+      "count": 349,
+      "response": 419,
+      "root_end": 43,
+      "rows": [
+        74,
+        220,
+        241,
+        100,
+        105,
+        195,
+        128,
+        25
+      ]
+    }
+  ],
+  "all_cuts": 64,
+  "permutations_per_graph": 40320,
+  "complete_sequence_cases": 781,
+  "lipschitz_coefficient_cases": 15625,
+  "lipschitz_accepted": 173,
+  "formal_chain_length": 100,
+  "scope": "One literal shared-core cube; proved conditional interval and capacity criteria; no unrestricted coverage"
+}

@@ -1,0 +1,62 @@
+{
+  "audited_sources_checked": 10,
+  "programs": {
+    "audit/independent.py": {
+      "failure_sentinel": "FAILS_AS_REQUIRED",
+      "normal_optimized": "MATCH",
+      "sha256": "4e15909d0ebe4f9e31a5e42278ea79a77192aa2ce1f1926dc66cad97f570ce69"
+    },
+    "audit/periodic_independent.py": {
+      "failure_sentinel": "FAILS_AS_REQUIRED",
+      "normal_optimized": "MATCH",
+      "sha256": "4e5dbc069b489695f9e38830524be886e080e8934cdb24d2c49c72322956545f"
+    },
+    "audit/switches_independent.py": {
+      "failure_sentinel": "FAILS_AS_REQUIRED",
+      "normal_optimized": "MATCH",
+      "sha256": "45b5ed3c1bcfcfd023c6cf33aae770a5cd7b9cea418c10385b1c92b188b20377"
+    },
+    "bridges/verify_reset.py": {
+      "failure_sentinel": "FAILS_AS_REQUIRED",
+      "normal_optimized": "MATCH",
+      "sha256": "1cf7c3d7f610642fe81e5bece53cc14c3bd6af06808e8982940fed347f9275cf"
+    },
+    "descent/verify.py": {
+      "failure_sentinel": "FAILS_AS_REQUIRED",
+      "normal_optimized": "MATCH",
+      "sha256": "3af6592d820cfa90365f40ac51165c94cbdc116c5d32c6aa45f23248e333527d"
+    },
+    "periodic/verify.py": {
+      "failure_sentinel": "FAILS_AS_REQUIRED",
+      "normal_optimized": "MATCH",
+      "sha256": "aedb97ce094080a4926a3357929af94e9377d514e355663742aa428ad891a47e"
+    },
+    "switches/verify.py": {
+      "failure_sentinel": "FAILS_AS_REQUIRED",
+      "normal_optimized": "MATCH",
+      "sha256": "db5a48e2f056039db4bf1ff14e25c55e1584d19bf9253a876683a38684f2aafc"
+    }
+  },
+  "proof_scope": "Structural theorems and scoped physical selectors; Chan-Pak OPEN.",
+  "source_sha256": {
+    "PLAN.md": "51890749e5cf2158706b0ef5ba98702b49250c8190b4eb6c506de17091534bca",
+    "README.md": "84ed1b7048a1d14c4de5ec5e5c4fe46bd98ad69e90ca77c0a923d7b8694fe917",
+    "SYNTHESIS.md": "4582ba91bb8fddffb4baa1eba86fa5491f2087749adfe5e9196800ce7056f745",
+    "audit/AUDIT.md": "89b0526dcce414eadde228c1bd51e22f6e9525737e0ef2d82e158517594290ff",
+    "audit/independent.py": "25b9bc5b2386c2f1c9fed30a95d27565f4563728e27067011ffe797dc27f2a43",
+    "audit/periodic_independent.py": "8f3d925044844b0ce1a8074a48887cbf657367be12a5811f6f835365f19dd553",
+    "audit/switches_independent.py": "aef727cd633f986bd399d9e51e02e9d268913fe48e36024d1794a8415745f8a2",
+    "bridges/RESET_PRINCIPLE.md": "ca34d6afc164e97a04825e226a8614b358684a068c1d4f0aaf877ede10d47a58",
+    "bridges/verify_reset.py": "22c933ff7d5196f981a073b86f0b8fd5bfe78413c9732541d9de15587893c469",
+    "descent/PROOF.md": "b634ccc92bd5390f222280a95546df77c2df61e5148c5874750ef7ada3bb89fd",
+    "descent/README.md": "bf0db960898120ed84ab2af8250e2f17dddc406b3ddad92e09c4a4fce162ddc2",
+    "descent/verify.py": "e840b1a84686e95209662bc3c0fcadf1723b9ef08315182982a8d8acd20f4246",
+    "periodic/PROOF.md": "2b22a8c36d3de18e8cfed015dcd675235ba7b17c60d352c4f4295d176d9f06c7",
+    "periodic/README.md": "a40d96ec5dc934e9fbd3c12a229ec65474315b6cdeef05061714574be481801e",
+    "periodic/verify.py": "a78922cb5540073728d56947ed7284919b79fef0fc66e7490e4055749949c86d",
+    "switches/PROOF.md": "4d11d87a1dcf2afce329bc7c54c74f0df6bf27667a54b8f64aa97c60e0b5b680",
+    "switches/verify.py": "9566fd8e7d17e51b3394c6adab8dbae6ed19e8640adc7d6d033527fd9717492f",
+    "verify_all.py": "8e912b428ea78617b400a863eb38f9d3ba872bbe66d153493ba246cc9794b1d6"
+  },
+  "status": "PASS"
+}

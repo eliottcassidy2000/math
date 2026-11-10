@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Exact lawful reset certificate. Standard library only; no assertions."""
+"""Exact reset certificate; Python stdlib. Git/repo needed for provenance only."""
 import itertools,json,subprocess,random,hashlib,sys
 from fractions import Fraction
 from pathlib import Path
 BASE='0e140250d07c'
+REPO=Path(__file__).resolve().parents[4]
+GIT=['git','-C',str(REPO)]
 M={'O':[[1,0,0,0],[0,0,0,0],[0,0,2,0],[0,0,0,1]],'Z':[[1,-1,1,0],[0,0,0,1],[0,0,2,-1],[0,0,0,1]],'J':[[1,-1,1,0],[1,-1,0,0],[1,0,1,0],[1,0,0,0]]}
 I=[[int(i==j) for j in range(4)]for i in range(4)]
 t=(1,0,2,1)
@@ -85,10 +87,12 @@ for u in ('','O','Z','J','OZ','ZZ'):
   need(got==expected,'independent literal reset count');literal.append([word,got])
 # Hostile: scalar equality without matching response does not propagate.
 need(state('O')[0]==state('')[0] and state('OJ')[0]!=state('J')[0],'hostile equal scalar')
-paths=subprocess.check_output(['git','ls-tree','-r','--name-only',BASE],text=True).splitlines()
+paths=subprocess.check_output(GIT+['ls-tree','--full-tree','-r','--name-only',BASE],text=True).splitlines()
 terms=['renewal','continuant','confluence','controllability','semigroup','invariant-quotient','automaton']
 pool=sorted(p for p in paths if p.startswith('01-canon/theorems/') and any(t in p.lower()for t in terms))
+need(len(pool)==18,'pinned provenance pool must contain 18 paths')
 indices=random.Random(24620261110).sample(range(len(pool)),min(5,len(pool)))
-sampled=[{'index':i,'path':pool[i],'sha256':hashlib.sha256(subprocess.check_output(['git','show',BASE+':'+pool[i]])).hexdigest()}for i in indices]
+need(indices==[0,10,3,13,16],'pinned provenance sample indices')
+sampled=[{'index':i,'path':pool[i],'sha256':hashlib.sha256(subprocess.check_output(GIT+['show',BASE+':'+pool[i]])).hexdigest()}for i in indices]
 if '--fail' in sys.argv:need(False,'deliberate hostile failure')
 print(json.dumps({'base':BASE,'seed':24620261110,'pool_size':len(pool),'sample':sampled,'rank_histograms':hist,'shortest_rank_one_words':resets,'literal_reset_rows':graph('OJOJ'),'reset_matrix':r,'literal_checks':literal,'status':'PASS'},indent=2,sort_keys=True))

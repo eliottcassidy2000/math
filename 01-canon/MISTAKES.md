@@ -4,6 +4,16 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-10: Session246 reset scope, interaction signs and mixed-letter memory
+
+- **Scope corrected before publication:** the first reset interpretation said prime coverage must avoid the whole rank-one ideal. The proof certifies only the displayed reset sublanguage and its OJ/JZ rewrites. No full ideal classification is claimed. A canonical phrase suggesting a decision theorem was likewise narrowed to exact symbolic recurrences. The final summary now says the controller approximates every ratio to arbitrary precision; it does not exactly attain irrational ratios.
+- **False tempting extension:** separately diagonalizable tape letters need not have diagonalizable products. The literal one-apex two-letter period has H_m=(4·4^m+6m+5)/9, with a nonzero linear term. A common flag preserves eigenvalue labels but loses Jordan extension data unless the filtration is retained.
+- **Correct geometry:** pair-exchange directions are not isotropic for the cut interaction form. Their self-pairing is strictly negative, and mutually orthogonal directions span a negative-definite subspace. The capacity bound uses negative inertia, not an unsupported half-rank slogan.
+- **Reproduction boundary:** the initial reset-source sampler used Git paths relative to the caller. Root-directory checks passed, but running the documented command inside the packet silently produced an empty provenance pool. The repair pins the repository root, requests full-tree paths and explicitly checks the expected pool; all documented working directories are replayed. Mathematical counts were unchanged.
+- **Retained arithmetic boundary:** a lawful continuum ratio controller and full interval limit set coexist with inherited positive-density integer omissions. A shared-core finite interval also needs its actual baseline and changing response U; neither result is an unrestricted selector.
+
+[Audited Session246 proofs, controls and remaining obligation](../05-knowledge/results/session246_unifying_principles_20261110/README.md).
+
 ## 2026-11-10: Session245 physical switches, empty interfaces and inherited fans
 
 - **Wrong identity boundary:** an exploratory reversal ranking treated an empty separator as a genuine seven-coordinate endpoint identity and produced an impossible odd difference 105. Exact recomposition gives 54; the proved cancellation theorem requires a nonempty separator. Never transport nonempty endpoint formulas through a fictitious empty graph.

@@ -1,25 +1,49 @@
 # Session246: unifying physical mechanisms
 
-**ACTIVE. Chan–Pak remains OPEN. No numerical coverage-range expansion.**
+**SESSION COMPLETE, 10 November 2026. Independently audited. Chan–Pak remains OPEN.**
 
-The first mathematical checkpoint records two independently audited mechanisms:
+No larger numerical coverage range is claimed. The result is four rigorous
+mechanisms, with exact physical examples and explicit remaining obligations.
 
-1. [Lawful reset transport](bridges/RESET_PRINCIPLE.md): an explicit infinite
-   family of physical words collapses the full response state to one direction.
-   Every later count factors. Prime outputs therefore avoid the displayed
-   reset patterns. A strongly connected count-15 witness shows this is not
-   simply strongly connected component factorization.
-2. [Physical ratio control](descent/PROOF.md): bounded deletion is equivalent
-   to finitely many root changes, and all subsequent normalized dynamics have
-   a uniform binary shadow. Actual words approach every ratio, yet an explicit
-   trajectory remains inside an arithmetic family with positive-density gaps.
+1. **Lawful reset transport.** An infinite physical reset family factors every
+   future count, even for a strong tournament. Prime-output words must avoid
+   its certified patterns. [Proof](bridges/RESET_PRINCIPLE.md), [THM-5120](../../../01-canon/theorems/THM-5120-lawful-rank-one-reset-transport-and-prime-word-avoidance.md).
+2. **Physical infinite dynamics.** Bounded deletion means finitely many root
+   changes. An explicit binary controller approximates every normalized ratio
+   to arbitrary precision,
+   yet a full-interval limit set coexists with positive-density integer gaps.
+   [Proof](descent/PROOF.md), [THM-5121](../../../01-canon/theorems/THM-5121-bounded-deletion-binary-shadow-and-physical-ratio-control.md).
+3. **Shared-core interval selection.** Exact interaction cancellation gives
+   additive switches without a repeated-module multiplier. Negative inertia
+   bounds capacity; unit-step interactions admit constructive path/cycle
+   selection. [Proof](switches/PROOF.md), [THM-5122](../../../01-canon/theorems/THM-5122-shared-core-exchange-intervals-and-negative-inertia-capacity.md).
+4. **Universal periodic recurrences.** A common tensor flag bounds every
+   periodic fixed-apex block by an order-(k+1)(k+4)/2 recurrence. Mixed periods
+   retain polynomial memory, already (4·4^m+6m+5)/9 for one apex.
+   [Proof](periodic/PROOF.md), [THM-5123](../../../01-canon/theorems/THM-5123-common-gap-flag-and-periodic-apex-jordan-bounds.md).
 
-The first mechanism transfers across precisely typed factorial and Rule30
-reset systems. The second exposes what is lost by passage to a continuum:
-integer scale, deletion and an exact target certificate. Neither supplies an
-arbitrary-target predecessor. Physical independent switches and periodic
-fixed-apex continuation algebra are still under investigation.
+[Unifying synthesis and exact missing step](SYNTHESIS.md) ·
+[Independent hostile audit](audit/AUDIT.md).
 
-Canonical statements: THM-5120 and THM-5121. Each full proof includes prior
-mechanisms, source paths, quantified boundaries and standalone exact controls.
-[Independent audit](audit/AUDIT.md) records what has been checked so far.
+The sampled connections are reproducible and source-aware: modular factorial
+resets, Rule30 spatial resets, response tomography and local/global realization.
+Inherited theorems remain credited. In particular the source grammar, the
+fixed-apex compiler, quadratic ear formula, and deletion-one density gaps
+are not presented as new results.
+
+## Reproduction
+
+From this packet directory:
+
+    python3 -I -B verify_all.py > REPLAY.json
+    cmp AGGREGATE.json REPLAY.json
+    sha256sum -c SHA256SUMS
+
+The aggregate runs four producer and three independent programs in ordinary
+and optimized Python, checks stored receipts and source seals, and requires
+all seven deliberate-failure controls to fail. Finite checks validate the
+implementations; the linked proofs establish the all-order statements.
+
+The all-target obligation is still an exact physical selector or a lawful
+well-founded predecessor, retaining absolute count and continuation state.
+Session246 has ended.
