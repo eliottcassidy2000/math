@@ -54,7 +54,11 @@ with actual six-vertex tournaments, not nonphysical integer states.
    fixed-port bank's large-prime task, then retain root-resolved responses
    when adding reroot/converse operations. The new physical twins are cheap
    regression tests for any proposed quotient. No finite-dimensional closure
-   under arbitrary root change has been proved here.
+   under arbitrary root change has been proved here. The inherited
+   [Session227 strong collision family](../session227_chan_pak_constructions_20261108/multiroot/PROOF.md),
+   of size binom(2m,m) at one order and interface, is a larger future stress
+   test. The present work does not establish different reroot behavior inside
+   that family.
 2. **Controlled completions.** Seek selected carriers whose extra-cycle
    partition sum has a bounded transfer state, rather than arbitrary graph
    embeddings. Port chains and bounded-span ribbons are inherited positive

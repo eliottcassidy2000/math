@@ -33,6 +33,17 @@ The new synthesis here is the exact four-test content certificate, explicit
 rigid arithmetic trapping, and a pair of physically realizable equal states
 with opposite answers to primitive re-rootability. No external novelty claim.
 
+Equal-interface collisions themselves are already known: Session227
+[multiroot section5](../../session227_chan_pak_constructions_20261108/multiroot/PROOF.md)
+constructs binom(2m,m) nonisomorphic strong tournaments at the same order7m+5
+with identical four-coordinate rooted states and all common fixed-root graft
+responses. Its convention (D,E,U,d) translates here to (h,R,e,d)=(D,U,E,d).
+That theorem expressly excludes arbitrary rerooting from its equivalence.
+The advance here is a witnessed difference in primitive reroot escape and
+converse states, not discovery that the four coordinates have collisions.
+The larger Session227 family is a useful future root-deck stress test; no
+reroot difference within that family is established in this session.
+
 ## Definitions
 
 For a rooted nonempty tournament (C,u), let h=H(C), d=H(C-u), e the number of

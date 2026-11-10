@@ -27,6 +27,10 @@ Only X has a content-one reroot; their converse states differ too. Therefore
 even (order,h,R,e,d) cannot determine primitive rerootability or converse
 state, despite determining every fixed-port S/B continuation count.
 
+Session227 multiroot section5 already gives exponentially many same-order
+strong fixed-root interface collisions. The new witness concerns differing
+reroot escape/converse behavior, not existence of collisions.
+
 This is an information-loss and operation theorem, not a coverage theorem.
 Actual subgroup orbit omissions are inherited from THM-4987/4990 and are
 not applied to formal division by arithmetic content or endpoint counts.
