@@ -1,0 +1,12 @@
+order 2: classes read 1, bases with H < 1024: 1, failed controls 0, extension values >= 16384 (not recorded): 0
+order 3: classes read 2, bases with H < 1024: 2, failed controls 0, extension values >= 16384 (not recorded): 0
+order 4: classes read 4, bases with H < 1024: 4, failed controls 0, extension values >= 16384 (not recorded): 0
+order 5: classes read 12, bases with H < 1024: 12, failed controls 0, extension values >= 16384 (not recorded): 0
+order 6: classes read 56, bases with H < 1024: 56, failed controls 0, extension values >= 16384 (not recorded): 0
+order 7: classes read 456, bases with H < 1024: 456, failed controls 0, extension values >= 16384 (not recorded): 0
+order 8: classes read 6880, bases with H < 1024: 6880, failed controls 0, extension values >= 16384 (not recorded): 0
+order 9: classes read 191536, bases with H < 1024: 56856, failed controls 0, extension values >= 16384 (not recorded): 0
+order 10: classes read 2542291, bases with H < 1024: 38120, failed controls 0, extension values >= 16384 (not recorded): 2592109
+order 10: classes read 2429040, bases with H < 1024: 36024, failed controls 0, extension values >= 16384 (not recorded): 2746498
+order 10: classes read 2288977, bases with H < 1024: 35868, failed controls 0, extension values >= 16384 (not recorded): 2881801
+order 10: classes read 2472748, bases with H < 1024: 34488, failed controls 0, extension values >= 16384 (not recorded): 2630133

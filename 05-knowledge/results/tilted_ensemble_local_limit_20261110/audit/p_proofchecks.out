@@ -1,0 +1,47 @@
+== 1. Theorem C (1), insertion construction executed literally ==
+   m=2: 2 (R, pair, Q) cases, c = r in 2, c = 0 in 2; invalid constructions: 0
+   m=3: 24 (R, pair, Q) cases, c = r in 6, c = 0 in 18; invalid constructions: 0
+   m=4: 384 (R, pair, Q) cases, c = r in 24, c = 0 in 288; invalid constructions: 0
+   m=5: 15360 (R, pair, Q) cases, c = r in 240, c = 0 in 11520; invalid constructions: 0
+   m=6: 1474560 (R, pair, Q) cases, c = r in 5760, c = 0 in 1105920; invalid constructions: 0
+== 2. two-path covers by brute force over permutations (m = 2..5) ==
+   m=2: 2 (R, pair) cases; failures 0; min mu 2; equality mu = 2 H(R-{i,j}) in 2 cases
+   m=3: 24 (R, pair) cases; failures 0; min mu 2; equality mu = 2 H(R-{i,j}) in 24 cases
+   m=4: 384 (R, pair) cases; failures 0; min mu 2; equality mu = 2 H(R-{i,j}) in 216 cases
+   m=5: 10240 (R, pair) cases; failures 0; min mu 2; equality mu = 2 H(R-{i,j}) in 1760 cases
+== 3. Lemma C4 (random R on 5..7 vertices, random disjoint U, V', several theta) ==
+   480 (R, U, V', theta) tests: violations of the inequality 0 (largest LHS - RHS = 0.000e+00); cases with equality 0
+   theta = 1/4: right side != 2^(-rank of the U x V' block of beta) or LHS > 2^(-rank beta): 0 failures
+   theta = a/q (q = 3, 5, 7, q not dividing a): right side > E_d cos(pi/q)^N(d): 0 failures
+== 4. Proposition 6.1 arithmetic ==
+   odd n in [1025, 3*10^6]: failures 0; n - 3h takes the values [0, 2, 4]; least h = 341 (at n = 1025: h = 341)
+   base range: largest odd n below 1025 is 1023 = 3 * 341, so the base 'all odd numbers below 1024' is exactly what the step needs
+== 5. Proposition 5.1 ==
+   mu_1..mu_6 = ['1', '1', '3/2', '3', '15/2', '45/2'] ; nondecreasing from n=1: True ; strictly increasing from n=2: True ; mu_1 = mu_2: True
+   for n = 3..12 and every odd h in (mu_(n-1), mu_n]: mu_(n-1) < h <= E_(1/2)[H_n], so by strict monotonicity the tilt lies in [1/2, p_n): True
+   note: p_n is undefined at n = 2 (E_p[H_2] = 1 for all p) and p_3 = 1 (mu_2 = 1); the hypothesis needs n_0 >= 3
+== 6. bridging tilt p_n and the Eulerian asymptotic ==
+   n=4: p_n = 0.93301; (p_n - 1/2) sqrt(n/ln n) = 0.7355; sqrt(3 ln(n/2)/(4n)) = 0.3605; p_n - 1/2 = 0.4330
+   n=6: p_n = 0.88828; (p_n - 1/2) sqrt(n/ln n) = 0.7105; sqrt(3 ln(n/2)/(4n)) = 0.3706; p_n - 1/2 = 0.3883
+   n=10: p_n = 0.84406; (p_n - 1/2) sqrt(n/ln n) = 0.7170; sqrt(3 ln(n/2)/(4n)) = 0.3474; p_n - 1/2 = 0.3441
+   n=16: p_n = 0.80440; (p_n - 1/2) sqrt(n/ln n) = 0.7312; sqrt(3 ln(n/2)/(4n)) = 0.3122; p_n - 1/2 = 0.3044
+   n=40: p_n = 0.73125; (p_n - 1/2) sqrt(n/ln n) = 0.7615; sqrt(3 ln(n/2)/(4n)) = 0.2370; p_n - 1/2 = 0.2313
+   n=80: p_n = 0.68270; (p_n - 1/2) sqrt(n/ln n) = 0.7806; sqrt(3 ln(n/2)/(4n)) = 0.1860; p_n - 1/2 = 0.1827
+   n=160: p_n = 0.64166; (p_n - 1/2) sqrt(n/ln n) = 0.7954; sqrt(3 ln(n/2)/(4n)) = 0.1433; p_n - 1/2 = 0.1417
+   n=20, t=0.5: A_n(t)/n! = 2.099256e-03; ((t-1)/ln t)^(n+1) = 1.049628e-03 (ratio 2.000000); with the factor 1/t: ratio 1.000000
+   n=20, t=0.8: A_n(t)/n! = 1.253917e-01; ((t-1)/ln t)^(n+1) = 1.003134e-01 (ratio 1.250000); with the factor 1/t: ratio 1.000000
+   n=60, t=0.5: A_n(t)/n! = 4.444748e-09; ((t-1)/ln t)^(n+1) = 2.222374e-09 (ratio 2.000000); with the factor 1/t: ratio 1.000000
+   n=60, t=0.8: A_n(t)/n! = 1.570706e-03; ((t-1)/ln t)^(n+1) = 1.256565e-03 (ratio 1.250000); with the factor 1/t: ratio 1.000000
+== 7. rank distribution of alternating matrices over F_2 ==
+   m=2: brute force {0: 1, 2: 1}; formula {0: 1, 2: 1}; equal: True
+   m=3: brute force {0: 1, 2: 7}; formula {0: 1, 2: 7}; equal: True
+   m=4: brute force {0: 1, 2: 35, 4: 28}; formula {0: 1, 2: 35, 4: 28}; equal: True
+   m=5: brute force {0: 1, 2: 155, 4: 868}; formula {0: 1, 2: 155, 4: 868}; equal: True
+   m=6: brute force {0: 1, 2: 651, 4: 18228, 6: 13888}; formula {0: 1, 2: 651, 4: 18228, 6: 13888}; equal: True
+   m=8: random: top rank 0.4205, next 0.5585, lower 0.0210; rank 2 probability 4.021e-05; E[2^(-rank/2)] = 0.101351
+         classes: top 0.4183, next 0.5516, lower 0.0301; rank 2 fraction 2.907e-04 (ratio to random 7.2); lower/random = 1.43
+         labelled (auditor, weights m!/|Aut|): top 0.4205, next 0.5505, lower 0.0290; largest |census - random| over the three bins: classes 0.91 pp, labelled 0.80 pp
+   m=9: random: top rank 0.8394, next 0.1593, lower 0.0013; rank 2 probability 6.321e-07; E[2^(-rank/2)] = 0.072707
+         classes: top 0.8278, next 0.1699, lower 0.0023; rank 2 fraction 4.177e-05 (ratio to random 66.1); lower/random = 1.72
+         labelled (auditor, weights m!/|Aut|): top 0.8286, next 0.1693, lower 0.0021; largest |census - random| over the three bins: classes 1.16 pp, labelled 1.08 pp
+   m=10: random: top rank 0.4197, next 0.5590, lower 0.0213; rank 2 probability 4.953e-09; E[2^(-rank/2)] = 0.050718

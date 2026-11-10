@@ -8,7 +8,8 @@ status: >
   implication is PROVED (source note, Proposition 5.1).
   (B), (B'): FINITE-EXACT agreement within 1.2 percentage points at orders 8 and 9; pre-registered P1-P2 at order 10
   (9,733,056 classes) CONFIRMED, agreement within 0.08 points. (B) alone gives only that the mod-4 discrepancy tends
-  to 0; (B') gives the exponential rate (audit M3).
+  to 0; (B') gives the exponential rate (audit M3). (B'') (deletion-pair form, added after the audit): labelled
+  rho_m = 1.244, 1.156 at m = 8, 9. Order 10 pre-registered (P3-P6), run pending at this commit.
   (C): FINITE-EXACT for 237 <= h <= 1023 with bases of order <= 10 and all out-sets. The implication is PROVED
   (source note, Proposition 6.1). (C) is the all-out-sets form of klein's HYP-9453 (2).
   AUDIT: PASS WITH CORRECTIONS (the packet's audit/AUDIT.md; M3 and M4 concern this file; applied; MISTAKE-753).
@@ -45,7 +46,8 @@ The word families studied so far have bounded, logarithmic or polynomial multipl
 **Falsifier.** An order `n` and an odd `h` in the stated window with `P_p(H_n = h) = 0`, for `n` beyond any proposed
 `n_0`; or, at finite range, class counts in the bulk at order 11 that are not smooth.
 
-**Route.** Characteristic function of `H_n` under `P_p`: Gaussian regime from the Walsh levels (THM-071, THM-589);
+**Route.** Characteristic function of `H_n` under `P_p`: Gaussian regime at `p = 1/2` from the Walsh levels
+(THM-4757 section 5, THM-4761; CONDITIONAL on Moran's CITED theorem);
 rational frequencies from THM-5127 (C), (C4) and part (B) below; the remaining range needs a decoupling over several
 exposed vertices and is untouched. No variance formula or limit law is known for `p != 1/2` (at `p = 1/2`: THM-4761,
 conditional on Moran's theorem).
@@ -56,7 +58,8 @@ conditional on Moran's theorem).
 variation of the rank distribution of a uniformly random alternating `m x m` matrix over `F_2`. By THM-5127 (C) (4) this gives that the mod-4 discrepancy of `H` at order `m+1` tends to 0.
 
 **(B') Quantitative form.** There is an absolute constant `C` with `E_R[2^(-rank(beta_R)/2)] <= C 2^(-m/2)` (for a
-uniformly random alternating matrix the left side is about `1.62 * 2^(-m/2)`). By THM-5127 (C) (4), (B') gives a
+uniformly random alternating matrix the left side is about `1.62 * 2^(-m/2)` for even `m` and `1.65 * 2^(-m/2)` for
+odd `m`). By THM-5127 (C) (4), (B') gives a
 mod-4 discrepancy `O(2^(-m/2))` at order `m+1`. (B) does not imply (B'): closeness `o(1)` in total variation only
 gives `o(1)`, and the low-rank tail is exactly where the census deviates (rank-2 classes are over-represented by
 factors 7.2, 66, 145 at orders 8, 9, 10).
@@ -64,12 +67,26 @@ factors 7.2, 66, 145 at orders 8, 9, 10).
 **Evidence.** Orders 8 and 9, all classes: `0.4183 / 0.5516 / 0.0301` against `0.4205 / 0.5585 / 0.0210`, and
 `0.8278 / 0.1699 / 0.0023` against `0.8394 / 0.1593 / 0.0013` (top rank / next / lower). Order 10, pre-registered
 (P1: fractions in `[0.405, 0.430]`, `[0.550, 0.575]`, `[0.020, 0.032]`; P2: control): `0.4189 / 0.5594 / 0.0217`
-against `0.4197 / 0.5591 / 0.0213`, CONFIRMED. For (B') with labelled weights (audit):
+against `0.4197 / 0.5590 / 0.0213`, CONFIRMED. For (B') with labelled weights (audit):
 `E_R[2^(-rank/2)] = 0.10239, 0.07348, 0.05077` at `m = 8, 9, 10` against `0.10135, 0.07271, 0.05072`. The exact
 labelled mod-4 discrepancy is much smaller than either bound: `0.0415, 0.00752, 0.00242` at orders 8, 9, 10.
 
+**(B'') Deletion-pair form (added after the audit; not audited).** Let `T` be uniform on `m+2` labelled vertices and
+`v != v'` two fixed vertices. Then the mod-4 classes of the two deletions decorrelate:
+`E_T (-1)^((H(T-v) - H(T-v'))/2) -> 0`; quantitatively `rho_m = 2^m E_T (-1)^((H(T-v) - H(T-v'))/2)` is bounded (and
+tends to 1). By THM-5127 (C) (5) the expectation equals `E_R[b_R^2]` with `b_R^2 in {0, 2^(-rank(beta_R))}`, and it is
+`E_T (-1)^(N_1(T))`, `N_1` the number of odd cycles of `T` through exactly one of `v, v'`. Relations (PROVED): (B)
+implies the qualitative form; bounded `rho_m` implies a mod-4 discrepancy `O(2^(-m/2))` at order `m+1`
+(Cauchy-Schwarz); neither of (B') and bounded `rho_m` implies the other (zero-bias forms count in (B') only; (B')
+bounds `E_R[b_R^2]` only by `C 2^(-m/2)`). The value `rho_m = 1` is the contribution of twin extensions and the exact
+value for a uniformly random quadratic form. This is the smallest open statement on the mod-4 route: no bound below
+the trivial 1 is proved here for `E_T (-1)^(N_1(T))` at large `m`.
+
+**Evidence for (B'').** Labelled, exact: `rho_m = 1, 2, 2.875, 2.625, 1.583, 1.758, 1.244, 1.156` at `m = 2, ..., 9`. Order 10: pre-registered P3-P6 (`PREREGISTRATION.md`), run pending at this commit.
+
 **Falsifier.** A rank distribution at order 11 that moves away from the random-alternating one; for (B'), a sequence
-of orders along which `2^(m/2) E_R[2^(-rank(beta_R)/2)]` is unbounded.
+of orders along which `2^(m/2) E_R[2^(-rank(beta_R)/2)]` is unbounded; for (B''), a sequence along which `rho_m` is
+unbounded.
 
 ## (C) Window law
 

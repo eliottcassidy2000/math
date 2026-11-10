@@ -1,0 +1,22 @@
+== Theorem A: all labelled tournaments, n = 2..5; 12 seeded random tournaments at n = 6 ==
+   n=2: 2 tournaments checked: (1) at p=2/3,1/5,1/2,1; (2) at r=3/2,-2,1/2,7/5; (3) existence, gamma_0=H, sum gamma_j/4^j = n!/2^(n-1)
+   n=3: 8 tournaments checked: (1) at p=2/3,1/5,1/2,1; (2) at r=3/2,-2,1/2,7/5; (3) existence, gamma_0=H, sum gamma_j/4^j = n!/2^(n-1)
+   n=4: 64 tournaments checked: (1) at p=2/3,1/5,1/2,1; (2) at r=3/2,-2,1/2,7/5; (3) existence, gamma_0=H, sum gamma_j/4^j = n!/2^(n-1)
+   n=5: 1024 tournaments checked: (1) at p=2/3,1/5,1/2,1; (2) at r=3/2,-2,1/2,7/5; (3) existence, gamma_0=H, sum gamma_j/4^j = n!/2^(n-1)
+   n=6: 12 tournaments checked: (1) at p=2/3,1/5,1/2,1; (2) at r=3/2,-2,1/2,7/5; (3) existence, gamma_0=H, sum gamma_j/4^j = n!/2^(n-1)
+== Remark after Theorem A: Walsh levels (n = 3, 4, 5, all labelled tournaments) ==
+   n=3: odd levels vanish: True; max level 2; gamma/Walsh and W-coefficient identities failures: 0
+   n=4: odd levels vanish: True; max level 2; gamma/Walsh and W-coefficient identities failures: 0
+   n=5: odd levels vanish: True; max level 4; gamma/Walsh and W-coefficient identities failures: 0
+== Theorem B: exhaustive over all labelled tournaments, n = 3..6 (polynomial identities in p) ==
+   n=3: Eulerian [1, 4, 1]; gamma [1, 2]; E_p[H]=Eulerian form: True; =gamma form: True; gamma_1=2^n-2n: True; E_p[H^2] in w: [1, 8]
+   n=4: Eulerian [1, 11, 11, 1]; gamma [1, 8]; E_p[H]=Eulerian form: True; =gamma form: True; gamma_1=2^n-2n: True; E_p[H^2] in w: [1, 40, 16]
+   n=5: Eulerian [1, 26, 66, 26, 1]; gamma [1, 22, 16]; E_p[H]=Eulerian form: True; =gamma form: True; gamma_1=2^n-2n: True; E_p[H^2] in w: [1, 152, 544, 56, 48]
+   n=6: Eulerian [1, 57, 302, 302, 57, 1]; gamma [1, 52, 136]; E_p[H]=Eulerian form: True; =gamma form: True; gamma_1=2^n-2n: True; E_p[H^2] in w: [1, 552, 6288, 6944, 3072]
+   n=7: gamma vector of A_n by brute-force Eulerian numbers: [1, 114, 720, 272]; gamma_1 = 2^n - 2n: True; all >= 0: True
+   n=8: gamma vector of A_n by brute-force Eulerian numbers: [1, 240, 3072, 3968]; gamma_1 = 2^n - 2n: True; all >= 0: True
+   n=9: gamma vector of A_n by brute-force Eulerian numbers: [1, 494, 11616, 34304, 7936]; gamma_1 = 2^n - 2n: True; all >= 0: True
+   second-moment polynomials n=3..6 equal README: True
+   uniform second moments equal n! W(n)/4^(n-1) with W = 8, 32, 158, 928: True
+== Theorem B consequences n=3..40: gamma >= 0, gamma_0 = 1, gamma_1 = 2^n - 2n, endpoints n!/2^(n-1) and 1, strictly decreasing on a grid: True
+ALL CHECKS PASSED

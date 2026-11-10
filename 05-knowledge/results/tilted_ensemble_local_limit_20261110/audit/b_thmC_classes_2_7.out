@@ -1,0 +1,46 @@
+order 2 (direct): tournaments 1, labelled weight total 2 (2^C(m,2) = 2)
+  failures: ends 0, (4.1) 0, (4.2) 0, mu=M+M^T 0, mu even 0, mu>=2 0, quadratic form 0, Gauss sum 0, radical criterion 0, direct control 0
+  min mu 2, max mu 2
+  rank 2: classes zero-bias 0, bias 2^-1 1 | labelled zero-bias 0, bias 2^-1 2
+  mean |imbalance|: classes 0.500000 ; labelled 0.500000 ; labelled mean of 2^(-rank/2) = 0.500000
+  labelled signed sum  sum_R (-1)^((H(R)-1)/2) diff_R = 4  => P(H=1 mod 4) - P(H=3 mod 4) at order 3 = 4 / 2^3 = 0.5000000000
+  labelled unsigned-by-H sum  sum_R diff_R = 4 (mean 0.500000)
+order 3 (direct): tournaments 2, labelled weight total 8 (2^C(m,2) = 8)
+  failures: ends 0, (4.1) 0, (4.2) 0, mu=M+M^T 0, mu even 0, mu>=2 0, quadratic form 0, Gauss sum 0, radical criterion 0, direct control 0
+  min mu 2, max mu 2
+  rank 2: classes zero-bias 0, bias 2^-1 2 | labelled zero-bias 0, bias 2^-1 8
+  mean |imbalance|: classes 0.500000 ; labelled 0.500000 ; labelled mean of 2^(-rank/2) = 0.500000
+  labelled signed sum  sum_R (-1)^((H(R)-1)/2) diff_R = 32  => P(H=1 mod 4) - P(H=3 mod 4) at order 4 = 32 / 2^6 = 0.5000000000
+  labelled unsigned-by-H sum  sum_R diff_R = 16 (mean 0.250000)
+order 4 (direct): tournaments 4, labelled weight total 64 (2^C(m,2) = 64)
+  failures: ends 0, (4.1) 0, (4.2) 0, mu=M+M^T 0, mu even 0, mu>=2 0, quadratic form 0, Gauss sum 0, radical criterion 0, direct control 0
+  min mu 2, max mu 6
+  rank 2: classes zero-bias 0, bias 2^-1 3 | labelled zero-bias 0, bias 2^-1 40
+  rank 4: classes zero-bias 0, bias 2^-2 1 | labelled zero-bias 0, bias 2^-2 24
+  mean |imbalance|: classes 0.437500 ; labelled 0.406250 ; labelled mean of 2^(-rank/2) = 0.406250
+  labelled signed sum  sum_R (-1)^((H(R)-1)/2) diff_R = 416  => P(H=1 mod 4) - P(H=3 mod 4) at order 5 = 416 / 2^10 = 0.4062500000
+  labelled unsigned-by-H sum  sum_R diff_R = 160 (mean 0.156250)
+order 5 (direct): tournaments 12, labelled weight total 1024 (2^C(m,2) = 1024)
+  failures: ends 0, (4.1) 0, (4.2) 0, mu=M+M^T 0, mu even 0, mu>=2 0, quadratic form 0, Gauss sum 0, radical criterion 0, direct control 0
+  min mu 2, max mu 12
+  rank 2: classes zero-bias 0, bias 2^-1 2 | labelled zero-bias 0, bias 2^-1 160
+  rank 4: classes zero-bias 2, bias 2^-2 8 | labelled zero-bias 160, bias 2^-2 704
+  mean |imbalance|: classes 0.250000 ; labelled 0.250000 ; labelled mean of 2^(-rank/2) = 0.289062
+  labelled signed sum  sum_R (-1)^((H(R)-1)/2) diff_R = 8192  => P(H=1 mod 4) - P(H=3 mod 4) at order 6 = 8192 / 2^15 = 0.2500000000
+  labelled unsigned-by-H sum  sum_R diff_R = 3328 (mean 0.101562)
+order 6 (direct): tournaments 56, labelled weight total 32768 (2^C(m,2) = 32768)
+  failures: ends 0, (4.1) 0, (4.2) 0, mu=M+M^T 0, mu even 0, mu>=2 0, quadratic form 0, Gauss sum 0, radical criterion 0, direct control 0
+  min mu 2, max mu 32
+  rank 4: classes zero-bias 13, bias 2^-2 17 | labelled zero-bias 8400, bias 2^-2 9168
+  rank 6: classes zero-bias 0, bias 2^-3 26 | labelled zero-bias 0, bias 2^-3 15200
+  mean |imbalance|: classes 0.133929 ; labelled 0.127930 ; labelled mean of 2^(-rank/2) = 0.192017
+  labelled signed sum  sum_R (-1)^((H(R)-1)/2) diff_R = 218368  => P(H=1 mod 4) - P(H=3 mod 4) at order 7 = 218368 / 2^21 = 0.1041259766
+  labelled unsigned-by-H sum  sum_R diff_R = 55552 (mean 0.026489)
+order 7 (direct): tournaments 456, labelled weight total 2097152 (2^C(m,2) = 2097152)
+  failures: ends 0, (4.1) 0, (4.2) 0, mu=M+M^T 0, mu even 0, mu>=2 0, quadratic form 0, Gauss sum 0, radical criterion 0, direct control 0
+  min mu 2, max mu 120
+  rank 4: classes zero-bias 32, bias 2^-2 42 | labelled zero-bias 154560, bias 2^-2 180768
+  rank 6: classes zero-bias 136, bias 2^-3 246 | labelled zero-bias 641088, bias 2^-3 1120736
+  mean |imbalance|: classes 0.090461 ; labelled 0.088350 ; labelled mean of 2^(-rank/2) = 0.144987
+  labelled signed sum  sum_R (-1)^((H(R)-1)/2) diff_R = 11149312  => P(H=1 mod 4) - P(H=3 mod 4) at order 8 = 11149312 / 2^28 = 0.0415344238
+  labelled unsigned-by-H sum  sum_R diff_R = 3104768 (mean 0.011566)

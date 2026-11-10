@@ -1,0 +1,10 @@
+order 9 (fast): tournaments 191536, labelled weight total 68719476736 (2^C(m,2) = 68719476736)
+  failures: ends 0, (4.1) 0, (4.2) 0, mu=M+M^T 0, mu even 0, mu>=2 0, quadratic form 0, Gauss sum 0, radical criterion 0, direct control 0
+  min mu 2, max mu 2016
+  rank 2: classes zero-bias 0, bias 2^-1 8 | labelled zero-bias 0, bias 2^-1 1612800
+  rank 4: classes zero-bias 318, bias 2^-2 118 | labelled zero-bias 111363840, bias 2^-2 32417280
+  rank 6: classes zero-bias 26088, bias 2^-3 6447 | labelled zero-bias 9361642752, bias 2^-3 2269831552
+  rank 8: classes zero-bias 74825, bias 2^-4 83732 | labelled zero-bias 26930762112, bias 2^-4 30011846400
+  mean |imbalance|: classes 0.031705 ; labelled 0.031554 ; labelled mean of 2^(-rank/2) = 0.073481
+  labelled signed sum  sum_R (-1)^((H(R)-1)/2) diff_R = 85258534912  => P(H=1 mod 4) - P(H=3 mod 4) at order 10 = 85258534912 / 2^45 = 0.0024231933
+  labelled unsigned-by-H sum  sum_R diff_R = 173588676608 (mean 0.004934)

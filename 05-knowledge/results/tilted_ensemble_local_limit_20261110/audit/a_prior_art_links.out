@@ -1,0 +1,19 @@
+== (i) THM-4757 / THM-4761 form of Theorem A (all labelled tournaments, n = 3, 4, 5) ==
+   n=3: 8 tournaments, failures 0
+   n=4: 64 tournaments, failures 0
+   n=5: 1024 tournaments, failures 0
+== (ii) THM-059: sum_j gamma_(n,j) w^j = sum_j b_(k,j) (2j+1)! w^j (1-4w)^(k-j), n = 2k+1 ==
+   n=3: gamma = [1, 2]; central-factorial row [1, 1]; identity holds: True
+   n=5: gamma = [1, 22, 16]; central-factorial row [1, 5, 1]; identity holds: True
+   n=7: gamma = [1, 114, 720, 272]; central-factorial row [1, 21, 14, 1]; identity holds: True
+   n=9: gamma = [1, 494, 11616, 34304, 7936]; central-factorial row [1, 85, 147, 30, 1]; identity holds: True
+   n=11: gamma = [1, 2026, 136384, 1328336, 2265344, 353792]; central-factorial row [1, 341, 1408, 627, 55, 1]; identity holds: True
+   n=13: gamma = [1, 8166, 1398000, 33981760, 179266560, 198825216, 22368256]; central-factorial row [1, 1365, 13013, 11440, 2002, 91, 1]; identity holds: True
+   n=15: gamma = [1, 32738, 13431792, 711611920, 8736700160, 28803641856, 22425653248, 1903757312]; central-factorial row [1, 5461, 118482, 196053, 61490, 5278, 140, 1]; identity holds: True
+== (iii) THM-4756 ==> gamma_j(T) = H(T) gamma_(n,j) mod 3 ==
+   n=3: 8 tournaments (all), failures 0
+   n=4: 64 tournaments (all), failures 0
+   n=5: 1024 tournaments (all), failures 0
+   n=6: 40 tournaments (seeded sample), failures 0
+   n=7: 8 tournaments (seeded sample), failures 0
+ALL CHECKS PASSED

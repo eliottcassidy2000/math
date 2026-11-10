@@ -1,0 +1,5 @@
+base orders read: [2, 3, 4, 5, 6, 7, 8, 9, 10] ; realised odd h < 1024: 510 ; bases with H < 1024: 208767
+h for which a SINGLE base fills all h odd values of [3h,5h): [1]
+largest single-base coverage, h >= 9 (h, covered, base order, fraction): [(23, 20, 10, 0.87), (27, 22, 10, 0.815), (15, 12, 10, 0.8), (29, 23, 10, 0.793), (33, 26, 10, 0.788), (9, 7, 10, 0.778), (31, 24, 10, 0.774), (35, 27, 10, 0.771)]
+largest single-base coverage, h >= 237: [(243, 107, 10, 0.44), (247, 108, 10, 0.437), (357, 153, 10, 0.429), (295, 126, 10, 0.427), (267, 114, 10, 0.427), (359, 153, 10, 0.426)]
+=> for every realised odd h in [237, 1023] the best single base covers at most 44.0% of [3h,5h)

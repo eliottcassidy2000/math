@@ -1,0 +1,8 @@
+order 2 classes 1 weight 2 failures(mu odd, a odd, C3, aut) 0 0 0 0 S 4 U 4 A 4 r0 0 0 0 0 r1 0 0 0 0 r2 0 1 0 2
+order 3 classes 2 weight 8 failures(mu odd, a odd, C3, aut) 0 0 0 0 S 32 U 16 A 32 r0 0 0 0 0 r1 0 0 0 0 r2 0 2 0 8 r3 0 0 0 0
+order 4 classes 4 weight 64 failures(mu odd, a odd, C3, aut) 0 0 0 0 S 416 U 160 A 416 r0 0 0 0 0 r1 0 0 0 0 r2 0 3 0 40 r3 0 0 0 0 r4 0 1 0 24
+order 5 classes 12 weight 1024 failures(mu odd, a odd, C3, aut) 0 0 0 0 S 8192 U 3328 A 8192 r0 0 0 0 0 r1 0 0 0 0 r2 0 2 0 160 r3 0 0 0 0 r4 2 8 160 704 r5 0 0 0 0
+order 6 classes 56 weight 32768 failures(mu odd, a odd, C3, aut) 0 0 0 0 S 218368 U 55552 A 268288 r0 0 0 0 0 r1 0 0 0 0 r2 0 0 0 0 r3 0 0 0 0 r4 13 17 8400 9168 r5 0 0 0 0 r6 0 26 0 15200
+order 7 classes 456 weight 2097152 failures(mu odd, a odd, C3, aut) 0 0 0 0 S 11149312 U 3104768 A 23716352 r0 0 0 0 0 r1 0 0 0 0 r2 0 0 0 0 r3 0 0 0 0 r4 32 42 154560 180768 r5 0 0 0 0 r6 136 246 641088 1120736 r7 0 0 0 0
+order 8 classes 6880 weight 268435456 failures(mu odd, a odd, C3, aut) 0 0 0 0 S 516939776 U 649281536 A 3455123456 r0 0 0 0 0 r1 0 0 0 0 r2 0 2 0 53760 r3 0 0 0 0 r4 160 45 6182400 1545600 r5 0 0 0 0 r6 2532 1263 99552768 48231808 r7 0 0 0 0 r8 0 2878 0 112869120
+order 9 classes 191536 weight 68719476736 failures(mu odd, a odd, C3, aut) 0 0 0 0 S 85258534912 U 173588676608 A 1110210592768 r0 0 0 0 0 r1 0 0 0 0 r2 0 8 0 1612800 r3 0 0 0 0 r4 318 118 111363840 32417280 r5 0 0 0 0 r6 26088 6447 9361642752 2269831552 r7 0 0 0 0 r8 74825 83732 26930762112 30011846400 r9 0 0 0 0

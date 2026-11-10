@@ -1,0 +1,8 @@
+m=2: 2 labelled tournaments (all), all out-sets and pairs: failures 0
+m=3: 8 labelled tournaments (all), all out-sets and pairs: failures 0
+m=4: 64 labelled tournaments (all), all out-sets and pairs: failures 0
+m=5: 1024 labelled tournaments (all), all out-sets and pairs: failures 0
+m=6: 300 labelled tournaments (seeded random sample), all out-sets and pairs: failures 0
+m=7: 60 labelled tournaments (seeded random sample), all out-sets and pairs: failures 0
+m=8: 12 labelled tournaments (seeded random sample), all out-sets and pairs: failures 0
+ALL CHECKS PASSED

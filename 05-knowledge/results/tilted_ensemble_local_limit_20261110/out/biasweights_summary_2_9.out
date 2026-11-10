@@ -1,0 +1,50 @@
+order m = 2: classes 1, labelled weight 2 (= 2^C(m,2)); failures (mu odd, a odd, Theorem C (3), aut) = [0, 0, 0, 0]
+  E_R[b_R^2] = 1/4 = 0.250000000 ; rho_m = 2^m E_R[b_R^2] = 1.000000
+  E_R|b_R| = 0.500000 ; E_R[2^(-rank/2)] = 0.500000 ; sqrt(E_R[b_R^2]) = 0.500000
+  D_3 = P(H = 1 mod 4) - P(H = 3 mod 4) at order 3 = 1/2 = 0.500000000
+    rank  2 (corank 0): classes 0 zero-bias + 1 ; labelled fraction 1.0000000 ; nonzero-bias fraction (labelled) 1.00000 (model 1.00000)
+order m = 3: classes 2, labelled weight 8 (= 2^C(m,2)); failures (mu odd, a odd, Theorem C (3), aut) = [0, 0, 0, 0]
+  E_R[b_R^2] = 1/4 = 0.250000000 ; rho_m = 2^m E_R[b_R^2] = 2.000000
+  E_R|b_R| = 0.500000 ; E_R[2^(-rank/2)] = 0.500000 ; sqrt(E_R[b_R^2]) = 0.500000
+  D_4 = P(H = 1 mod 4) - P(H = 3 mod 4) at order 4 = 1/2 = 0.500000000
+    rank  2 (corank 1): classes 0 zero-bias + 2 ; labelled fraction 1.0000000 ; nonzero-bias fraction (labelled) 1.00000 (model 0.50000)
+order m = 4: classes 4, labelled weight 64 (= 2^C(m,2)); failures (mu odd, a odd, Theorem C (3), aut) = [0, 0, 0, 0]
+  E_R[b_R^2] = 23/128 = 0.179687500 ; rho_m = 2^m E_R[b_R^2] = 2.875000
+  E_R|b_R| = 0.406250 ; E_R[2^(-rank/2)] = 0.406250 ; sqrt(E_R[b_R^2]) = 0.423896
+  D_5 = P(H = 1 mod 4) - P(H = 3 mod 4) at order 5 = 13/32 = 0.406250000
+    rank  2 (corank 2): classes 0 zero-bias + 3 ; labelled fraction 0.6250000 ; nonzero-bias fraction (labelled) 1.00000 (model 0.25000)
+    rank  4 (corank 0): classes 0 zero-bias + 1 ; labelled fraction 0.3750000 ; nonzero-bias fraction (labelled) 1.00000 (model 1.00000)
+order m = 5: classes 12, labelled weight 1024 (= 2^C(m,2)); failures (mu odd, a odd, Theorem C (3), aut) = [0, 0, 0, 0]
+  E_R[b_R^2] = 21/256 = 0.082031250 ; rho_m = 2^m E_R[b_R^2] = 2.625000
+  E_R|b_R| = 0.250000 ; E_R[2^(-rank/2)] = 0.289062 ; sqrt(E_R[b_R^2]) = 0.286411
+  D_6 = P(H = 1 mod 4) - P(H = 3 mod 4) at order 6 = 1/4 = 0.250000000
+    rank  2 (corank 3): classes 0 zero-bias + 2 ; labelled fraction 0.1562500 ; nonzero-bias fraction (labelled) 1.00000 (model 0.12500)
+    rank  4 (corank 1): classes 2 zero-bias + 8 ; labelled fraction 0.8437500 ; nonzero-bias fraction (labelled) 0.81481 (model 0.50000)
+order m = 6: classes 56, labelled weight 32768 (= 2^C(m,2)); failures (mu odd, a odd, Theorem C (3), aut) = [0, 0, 0, 0]
+  E_R[b_R^2] = 1621/65536 = 0.024734497 ; rho_m = 2^m E_R[b_R^2] = 1.583008
+  E_R|b_R| = 0.127930 ; E_R[2^(-rank/2)] = 0.192017 ; sqrt(E_R[b_R^2]) = 0.157272
+  D_7 = P(H = 1 mod 4) - P(H = 3 mod 4) at order 7 = 853/8192 = 0.104125977
+    rank  4 (corank 2): classes 13 zero-bias + 17 ; labelled fraction 0.5361328 ; nonzero-bias fraction (labelled) 0.52186 (model 0.25000)
+    rank  6 (corank 0): classes 0 zero-bias + 26 ; labelled fraction 0.4638672 ; nonzero-bias fraction (labelled) 1.00000 (model 1.00000)
+order m = 7: classes 456, labelled weight 2097152 (= 2^C(m,2)); failures (mu odd, a odd, Theorem C (3), aut) = [0, 0, 0, 0]
+  E_R[b_R^2] = 57619/4194304 = 0.013737440 ; rho_m = 2^m E_R[b_R^2] = 1.758392
+  E_R|b_R| = 0.088350 ; E_R[2^(-rank/2)] = 0.144987 ; sqrt(E_R[b_R^2]) = 0.117207
+  D_8 = P(H = 1 mod 4) - P(H = 3 mod 4) at order 8 = 1361/32768 = 0.041534424
+    rank  4 (corank 3): classes 32 zero-bias + 42 ; labelled fraction 0.1598969 ; nonzero-bias fraction (labelled) 0.53908 (model 0.12500)
+    rank  6 (corank 1): classes 136 zero-bias + 246 ; labelled fraction 0.8401031 ; nonzero-bias fraction (labelled) 0.63612 (model 0.50000)
+order m = 8: classes 6880, labelled weight 268435456 (= 2^C(m,2)); failures (mu odd, a odd, Theorem C (3), aut) = [0, 0, 0, 0]
+  E_R[b_R^2] = 1304557/268435456 = 0.004859854 ; rho_m = 2^m E_R[b_R^2] = 1.244123
+  E_R|b_R| = 0.050279 ; E_R[2^(-rank/2)] = 0.102394 ; sqrt(E_R[b_R^2]) = 0.069713
+  D_9 = P(H = 1 mod 4) - P(H = 3 mod 4) at order 9 = 63103/8388608 = 0.007522464
+    rank  2 (corank 6): classes 0 zero-bias + 2 ; labelled fraction 0.0002003 ; nonzero-bias fraction (labelled) 1.00000 (model 0.01562)
+    rank  4 (corank 4): classes 160 zero-bias + 45 ; labelled fraction 0.0287890 ; nonzero-bias fraction (labelled) 0.20000 (model 0.06250)
+    rank  6 (corank 2): classes 2532 zero-bias + 1263 ; labelled fraction 0.5505404 ; nonzero-bias fraction (labelled) 0.32637 (model 0.25000)
+    rank  8 (corank 0): classes 0 zero-bias + 2878 ; labelled fraction 0.4204702 ; nonzero-bias fraction (labelled) 1.00000 (model 1.00000)
+order m = 9: classes 191536, labelled weight 68719476736 (= 2^C(m,2)); failures (mu odd, a odd, Theorem C (3), aut) = [0, 0, 0, 0]
+  E_R[b_R^2] = 155129173/68719476736 = 0.002257427 ; rho_m = 2^m E_R[b_R^2] = 1.155802
+  E_R|b_R| = 0.031554 ; E_R[2^(-rank/2)] = 0.073481 ; sqrt(E_R[b_R^2]) = 0.047512
+  D_10 = P(H = 1 mod 4) - P(H = 3 mod 4) at order 10 = 650471/268435456 = 0.002423193
+    rank  2 (corank 7): classes 0 zero-bias + 8 ; labelled fraction 0.0000235 ; nonzero-bias fraction (labelled) 1.00000 (model 0.00781)
+    rank  4 (corank 5): classes 318 zero-bias + 118 ; labelled fraction 0.0020923 ; nonzero-bias fraction (labelled) 0.22546 (model 0.03125)
+    rank  6 (corank 3): classes 26088 zero-bias + 6447 ; labelled fraction 0.1692602 ; nonzero-bias fraction (labelled) 0.19515 (model 0.12500)
+    rank  8 (corank 1): classes 74825 zero-bias + 83732 ; labelled fraction 0.8286240 ; nonzero-bias fraction (labelled) 0.52705 (model 0.50000)

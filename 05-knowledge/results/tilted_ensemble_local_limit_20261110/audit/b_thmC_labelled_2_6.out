@@ -1,0 +1,38 @@
+order 2 (labelled): tournaments 2, labelled weight total 2 (2^C(m,2) = 2)
+  failures: ends 0, (4.1) 0, (4.2) 0, mu=M+M^T 0, mu even 0, mu>=2 0, quadratic form 0, Gauss sum 0, radical criterion 0, direct control 0
+  min mu 2, max mu 2
+  rank 2: classes zero-bias 0, bias 2^-1 2 | labelled zero-bias 0, bias 2^-1 2
+  mean |imbalance|: classes 0.500000 ; labelled 0.500000 ; labelled mean of 2^(-rank/2) = 0.500000
+  labelled signed sum  sum_R (-1)^((H(R)-1)/2) diff_R = 4  => P(H=1 mod 4) - P(H=3 mod 4) at order 3 = 4 / 2^3 = 0.5000000000
+  labelled unsigned-by-H sum  sum_R diff_R = 4 (mean 0.500000)
+order 3 (labelled): tournaments 8, labelled weight total 8 (2^C(m,2) = 8)
+  failures: ends 0, (4.1) 0, (4.2) 0, mu=M+M^T 0, mu even 0, mu>=2 0, quadratic form 0, Gauss sum 0, radical criterion 0, direct control 0
+  min mu 2, max mu 2
+  rank 2: classes zero-bias 0, bias 2^-1 8 | labelled zero-bias 0, bias 2^-1 8
+  mean |imbalance|: classes 0.500000 ; labelled 0.500000 ; labelled mean of 2^(-rank/2) = 0.500000
+  labelled signed sum  sum_R (-1)^((H(R)-1)/2) diff_R = 32  => P(H=1 mod 4) - P(H=3 mod 4) at order 4 = 32 / 2^6 = 0.5000000000
+  labelled unsigned-by-H sum  sum_R diff_R = 16 (mean 0.250000)
+order 4 (labelled): tournaments 64, labelled weight total 64 (2^C(m,2) = 64)
+  failures: ends 0, (4.1) 0, (4.2) 0, mu=M+M^T 0, mu even 0, mu>=2 0, quadratic form 0, Gauss sum 0, radical criterion 0, direct control 0
+  min mu 2, max mu 6
+  rank 2: classes zero-bias 0, bias 2^-1 40 | labelled zero-bias 0, bias 2^-1 40
+  rank 4: classes zero-bias 0, bias 2^-2 24 | labelled zero-bias 0, bias 2^-2 24
+  mean |imbalance|: classes 0.406250 ; labelled 0.406250 ; labelled mean of 2^(-rank/2) = 0.406250
+  labelled signed sum  sum_R (-1)^((H(R)-1)/2) diff_R = 416  => P(H=1 mod 4) - P(H=3 mod 4) at order 5 = 416 / 2^10 = 0.4062500000
+  labelled unsigned-by-H sum  sum_R diff_R = 160 (mean 0.156250)
+order 5 (labelled): tournaments 1024, labelled weight total 1024 (2^C(m,2) = 1024)
+  failures: ends 0, (4.1) 0, (4.2) 0, mu=M+M^T 0, mu even 0, mu>=2 0, quadratic form 0, Gauss sum 0, radical criterion 0, direct control 0
+  min mu 2, max mu 12
+  rank 2: classes zero-bias 0, bias 2^-1 160 | labelled zero-bias 0, bias 2^-1 160
+  rank 4: classes zero-bias 160, bias 2^-2 704 | labelled zero-bias 160, bias 2^-2 704
+  mean |imbalance|: classes 0.250000 ; labelled 0.250000 ; labelled mean of 2^(-rank/2) = 0.289062
+  labelled signed sum  sum_R (-1)^((H(R)-1)/2) diff_R = 8192  => P(H=1 mod 4) - P(H=3 mod 4) at order 6 = 8192 / 2^15 = 0.2500000000
+  labelled unsigned-by-H sum  sum_R diff_R = 3328 (mean 0.101562)
+order 6 (labelled): tournaments 32768, labelled weight total 32768 (2^C(m,2) = 32768)
+  failures: ends 0, (4.1) 0, (4.2) 0, mu=M+M^T 0, mu even 0, mu>=2 0, quadratic form 0, Gauss sum 0, radical criterion 0, direct control 0
+  min mu 2, max mu 32
+  rank 4: classes zero-bias 8400, bias 2^-2 9168 | labelled zero-bias 8400, bias 2^-2 9168
+  rank 6: classes zero-bias 0, bias 2^-3 15200 | labelled zero-bias 0, bias 2^-3 15200
+  mean |imbalance|: classes 0.127930 ; labelled 0.127930 ; labelled mean of 2^(-rank/2) = 0.192017
+  labelled signed sum  sum_R (-1)^((H(R)-1)/2) diff_R = 218368  => P(H=1 mod 4) - P(H=3 mod 4) at order 7 = 218368 / 2^21 = 0.1041259766
+  labelled unsigned-by-H sum  sum_R diff_R = 55552 (mean 0.026489)

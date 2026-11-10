@@ -1,0 +1,12 @@
+order 9: classes 191536; distinct H values 1520; max H 3357; all H odd: True
+   class-mean 1411.992, class-sd 654.530  (labelled mean n!/2^(n-1) = 1417.500)
+   odd values not occurring at this order, below the first other gap: [7, 21]; first missing odd value other than 7, 21: 2883  => every odd h <= 2881 except 7, 21 occurs
+   window mean +- sd = [757.46, 2066.52] -> odd h from 759 to 2065 (654 values); least class count 108 at h = [799]
+   rms normalised second difference 1.365  (variance ratio to independent Poisson 1.86)
+   h mod 3: mean of local ratios {0: 1.049, 1: 0.972, 2: 0.988}; ratio of sums {0: 1.046, 1: 0.971, 2: 0.984}
+   h mod 4: mean of local ratios {1: 1.003, 3: 1.002}; ratio of sums {1: 1.001, 3: 0.999}
+   h mod 5: mean of local ratios {0: 1.015, 1: 0.994, 2: 0.996, 3: 1.005, 4: 1.004}; ratio of sums {0: 1.012, 1: 0.991, 2: 0.994, 3: 1.003, 4: 1.001}
+   h mod 7: mean of local ratios {0: 1.002, 1: 0.99, 2: 0.998, 3: 0.985, 4: 1.01, 5: 1.016, 6: 1.018}; ratio of sums {0: 0.999, 1: 0.989, 2: 0.996, 3: 0.983, 4: 1.005, 5: 1.013, 6: 1.016}
+   h mod 8: mean of local ratios {1: 1.011, 3: 0.996, 5: 0.996, 7: 1.008}; ratio of sums {1: 1.009, 3: 0.994, 5: 0.993, 7: 1.004}
+   largest residue deviation 4.9% at h = 0 mod 3
+   identical to the packet's out/hist_9.txt: True

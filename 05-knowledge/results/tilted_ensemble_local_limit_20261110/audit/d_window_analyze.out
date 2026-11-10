@@ -1,0 +1,35 @@
+
+=== bases of order <= 8 (1 table file(s) at order 8) ===
+realised odd h < 1024: 320; unrealised below the largest realised: [7, 21, 611, 615, 617, 619, 623, 625, 635, 647, 655]; largest realised 661
+(W1) [3h,5h): 264 realised h with an incomplete window; largest such h = 661; complete (and h realised) for every odd h in [1025, 1023]
+(W2) [3h,9h): 318 realised h with an incomplete window; largest such h = 661; complete (and h realised) for every odd h in [1025, 1023]
+   own sub-statement: with bases of order <= 8 the window [3h,5h) is complete for every odd h in [229, 233] (3 consecutive odd h); all maximal runs of length >= 5: []
+   incomplete windows for h <= 45 (order <= 8): {3: [11], 5: [21], 9: [35], 11: [39, 47, 49], 13: [47, 51, 53, 55, 57, 59, 63], 15: [47, 63, 67], 17: [55, 61, 63], 19: [63, 75, 81, 85, 93], 23: [87], 25: [87, 107, 121], 27: [103], 31: [119, 125, 145, 147], 35: [107, 109, 117, 127, 137, 141, 147, 171], 37: [147, 163, 167], 39: [125, 127, 131, 145, 151, 165, 175, 183, 185], 41: [127], 43: [163, 167, 195, 201, 207, 211]}
+full-from ratio n0(h)/h, realised 237 <= h <= 1023 (204 values): min 2.289 (h=239), median 4.862, max 5.000 (h=661)
+least extension ratio over realised h >= 237: 1.5882 at h = 255, n = 405; forced bound (3h+1)/(2h) = 1.5020; violations of n >= (3h+1)/2: 0; pairs on the bound: []
+all out-sets, h >= 237: density [3h,5h) 0.83488; [2h,3h) 0.50574; [3h/2,2h) 0.1122
+all out-sets, h >= 100: density [3h/2,2h) 0.1488
+out-degree-one extensions, h >= 237: density [3h,5h) 0.0735; [2h,3h) 0.3665
+packet list of missing pairs in [3h,5h) (order <= 10): 48 values of h, 185 pairs; of these, absent from the auditor's table at order <= 8: 185 (must be all 185); auditor's exception list identical to the packet's: False
+
+=== bases of order <= 9 (1 table file(s) at order 9) ===
+realised odd h < 1024: 510; unrealised below the largest realised: [7, 21]; largest realised 1023
+(W1) [3h,5h): 68 realised h with an incomplete window; largest such h = 955; complete (and h realised) for every odd h in [957, 1023]
+(W2) [3h,9h): 160 realised h with an incomplete window; largest such h = 1023; complete (and h realised) for every odd h in [1025, 1023]
+full-from ratio n0(h)/h, realised 237 <= h <= 1023 (394 values): min 2.054 (h=315), median 2.576, max 4.311 (h=395)
+least extension ratio over realised h >= 237: 1.5263 at h = 285, n = 435; forced bound (3h+1)/(2h) = 1.5018; violations of n >= (3h+1)/2: 0; pairs on the bound: []
+all out-sets, h >= 237: density [3h,5h) 0.99993; [2h,3h) 0.93968; [3h/2,2h) 0.4983
+all out-sets, h >= 100: density [3h/2,2h) 0.5054
+out-degree-one extensions, h >= 237: density [3h,5h) 0.4427; [2h,3h) 0.7475
+packet list of missing pairs in [3h,5h) (order <= 10): 48 values of h, 185 pairs; of these, absent from the auditor's table at order <= 9: 185 (must be all 185); auditor's exception list identical to the packet's: False
+
+=== bases of order <= 10 (4 table file(s) at order 10) ===
+realised odd h < 1024: 510; unrealised below the largest realised: [7, 21]; largest realised 1023
+(W1) [3h,5h): 48 realised h with an incomplete window; largest such h = 235; complete (and h realised) for every odd h in [237, 1023]
+(W2) [3h,9h): 57 realised h with an incomplete window; largest such h = 363; complete (and h realised) for every odd h in [365, 1023]
+full-from ratio n0(h)/h, realised 237 <= h <= 1023 (394 values): min 1.765 (h=345), median 2.234, max 2.933 (h=541)
+least extension ratio over realised h >= 237: 1.5058 at h = 257, n = 387; forced bound (3h+1)/(2h) = 1.5019; violations of n >= (3h+1)/2: 0; pairs on the bound: [(257, 387)]
+all out-sets, h >= 237: density [3h,5h) 1.00000; [2h,3h) 0.98927; [3h/2,2h) 0.7446
+all out-sets, h >= 100: density [3h/2,2h) 0.7427
+out-degree-one extensions, h >= 237: density [3h,5h) 0.7993; [2h,3h) 0.8641
+packet list of missing pairs in [3h,5h) (order <= 10): 48 values of h, 185 pairs; of these, absent from the auditor's table at order <= 10: 185 (must be all 185); auditor's exception list identical to the packet's: True
