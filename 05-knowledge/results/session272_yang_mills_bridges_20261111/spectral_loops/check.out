@@ -1,0 +1,10 @@
+disk edges=12 configurations=4096 subsets=16 PASS
+torus edges=8 configurations=256 subsets=16 PASS
+torus a=1: 15/41 a=2: 9/41 noncontractible: 0
+uniform-phase fixed monomial checks: 4088 PASS; gaps 1/2 through 1/256
+two-channel transfer powers 0..20 PASS
+gapless continuous control t=1: C(t)=0.528482235314, t^2*C(t)=0.528482235314
+gapless continuous control t=2: C(t)=0.296997075145, t^2*C(t)=1.18798830058
+gapless continuous control t=10: C(t)=0.0199900120155, t^2*C(t)=1.99900120155
+gapless continuous control t=100: C(t)=0.0002, t^2*C(t)=2
+Exact finite checks complete; YM hypotheses, continuum limits and mass gap NOT tested.
