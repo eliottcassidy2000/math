@@ -8,6 +8,13 @@ The actual convention is the central 2-by-2 block of the multiplication table in
 
 Closest proved mechanism: `05-knowledge/results/tiling_modular_atoms_20261003.md`, §3, gives the central blocks for m=4N±1. `01-canon/theorems/THM-4792-two-sheets-mod-odd-m-merged-centre-reflections-unit-shift-and-alternation-classification.md` merges their rational ±1/4 interpretation with signed-sheet symmetries. The latter's modular sheet-alternation classification is a different question: it is not needed here. The old `05-knowledge/results/collatz_spectrum_equality_and_stitched_sheets_20261005.md`, §2, preserves the owner's mod9/mod11 examples; only the elementary central-block identity is inherited, not its numerical spectrum conclusions.
 
+A direct earlier Collatz linkage is `05-knowledge/results/paired_prime_collatz_20261003.md`, §3 (present at commit `124b7ef29692d39b00b65079cd2bbf9468567da1`). Its shortcut map, denoted here H_s to avoid conflicting with our accelerated T_s below, is H_s(n)=n/2 for even n and (3n+s)/2 for odd n. It proves
+
+    (H_+(2N−1),H_+(2N))=(3N−1,N),
+    (H_−(2N),H_−(2N+1))=(N,3N+1).
+
+These output pairs sum to the table moduli 4N−1 and 4N+1. Thus central blocks already encoded signed Collatz **shortcut outputs of adjacent source labels**. That note explicitly retains family/sign and full exponent sidecars, and warns against inferring the sign solely from a displayed 3N±1 expression. We credit that central Collatz linkage, not claim it anew. Our atlas instead reads an entry N as the **raw-edge source**, restricts N by parity, and decodes the even-source edge with the owner's division by six. The two conventions therefore differ in their source labels and map, not in their arithmetic: the block (N,3N+1) is a pair of minus-shortcut outputs at (2N,2N+1), yet for odd N it is also the raw plus edge N→3N+1. Similarly (N,3N−1) is a reordered pair of plus-shortcut outputs, yet for odd N a raw minus edge. The user-requested mod8 split in §2 makes that change of convention explicit.
+
 The inverse-fibre mechanism x→4x+1 and its 3-adic odometer are inherited from `05-knowledge/results/arithmetic_braids_20260917_collatz.md`, §§1–3. New here is an explicit graph-type bridge for the owner's four mod8 classes and an arbitrary odd-modulus compiler for the signed inverse ladders. These are local constructions, not claims to have invented inverse Collatz formulas.
 
 Canonical hostile: center 2→7 in the mod9 table is not a positive Collatz edge. Corrected near miss: treating that center pair as an ordinary edge without the owner's subtraction, division, and orientation changes. Least-used sidecar: the integer quotient and edge orientation, which a residue-class-only picture discards.

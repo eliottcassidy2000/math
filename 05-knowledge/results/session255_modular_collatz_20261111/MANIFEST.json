@@ -1,0 +1,110 @@
+{
+  "session": 255,
+  "date": "2026-11-11",
+  "scope": "Scoped new proofs and exact controls; no major-conjecture closure",
+  "starting_main": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+  "published_checkpoints_before_final": [
+    "ccdbcedf547f6f5b3d3ffdfc4d39caf1b2ef593f",
+    "1ee7a212b27f363af7718de127acd79df544720b"
+  ],
+  "replay": "All four new-claim engines PASS",
+  "docs": "agents/check_docs.py PASS",
+  "source_pins": 15,
+  "artifacts": [
+    {
+      "path": "BOARD.md",
+      "sha256": "153685e3859ac9d8f8cda3caf6cd7d6e8dc83765cd53e8bd9ebdd528f4e03230",
+      "bytes": 2401
+    },
+    {
+      "path": "README.md",
+      "sha256": "6ed30d94ae08134d775ced1a770eabb35d040af66f74ddb3cf7e3aab5e8d171d",
+      "bytes": 1966
+    },
+    {
+      "path": "REPLAY.json",
+      "sha256": "86d11a61860f58975e36b694c693c0fb6460477799419cc297bfcf4a10e89efb",
+      "bytes": 8730
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "sha256": "33b40c2b8ecab5b812c681d9d05c619866caa0070a21848b6f6373a1e35f5f4e",
+      "bytes": 6039
+    },
+    {
+      "path": "SYNTHESIS.md",
+      "sha256": "433579d01428e9e2e3393620efbaf50a3ba7a0d6af5d9788890bbfe565fc6fda",
+      "bytes": 9813
+    },
+    {
+      "path": "central_table/README.md",
+      "sha256": "11a185f3a47df84edef5ed7642eab93bde43a79b9c1eeec784f848cf9cb694f9",
+      "bytes": 13980
+    },
+    {
+      "path": "central_table/check.py",
+      "sha256": "5811ce3ebff38398c51f065a1ea5054d23322372b0a01af1cfae60e210d999ee",
+      "bytes": 3368
+    },
+    {
+      "path": "central_table/checks.json",
+      "sha256": "ccf479712821711986c0b2d738291fb993fce1b7e220ff5e25185d0025d893cc",
+      "bytes": 2060
+    },
+    {
+      "path": "collatz_dictionary/README.md",
+      "sha256": "384e1c42dc1fef01b26a06ff5e2b96d9b37d0f4ea1d4a26d3fbc5efd11fbe086",
+      "bytes": 10985
+    },
+    {
+      "path": "collatz_dictionary/check_dictionary.py",
+      "sha256": "e63ce8eff94f24c2e4f5fb99a68292d0f056977a5b3f92e49bf66af820c73fc0",
+      "bytes": 1848
+    },
+    {
+      "path": "cross_frontiers/PROOF.md",
+      "sha256": "78ca0182c8d776c6200624494479808dfbb1482048b1a17c17e8fb467d72eda9",
+      "bytes": 11961
+    },
+    {
+      "path": "cross_frontiers/SHA256SUMS",
+      "sha256": "a6aefce3b939cb2ee3b98ddda9c05b94fda555b0b8141fb8bdbed633237ed7cb",
+      "bytes": 448
+    },
+    {
+      "path": "cross_frontiers/probe.py",
+      "sha256": "2f33a17d024109f47852dce661e0c7dcf4d58a211c44cb0c2d216cf3ffd7b636",
+      "bytes": 2539
+    },
+    {
+      "path": "cross_frontiers/receipt.json",
+      "sha256": "c222edc6176ee41d9ac4948fb019744287ac92aa215c546f78a103a716a57a35",
+      "bytes": 1763
+    },
+    {
+      "path": "finite_infinite/EXACT_RESULTS.json",
+      "sha256": "e38955da27ad68f4021c5291f13a0f2e8d3cc5f8915467790f7961dfb41f4858",
+      "bytes": 2481
+    },
+    {
+      "path": "finite_infinite/PROOF.md",
+      "sha256": "98c022cba7ee3791ce9914db318472498cb0e0450714902b6a68627210ba9e54",
+      "bytes": 21985
+    },
+    {
+      "path": "finite_infinite/SOURCE_PINS.json",
+      "sha256": "8e64c69580949801374bcaf51a004e2fba7c833ef754d5e773930f685ca48530",
+      "bytes": 683
+    },
+    {
+      "path": "finite_infinite/reproduce.py",
+      "sha256": "e4b22a5dd7df54d1b6770e622064e93344dc56b6791bbbf13bd16a99b56a6720",
+      "bytes": 6783
+    },
+    {
+      "path": "reproduce_all.py",
+      "sha256": "b21900a418760c8169653498d7bec1abf6ff9d84e841c8ab9b48ecc31c4e48df",
+      "bytes": 1351
+    }
+  ]
+}

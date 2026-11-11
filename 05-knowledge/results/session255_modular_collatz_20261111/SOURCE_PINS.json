@@ -1,0 +1,95 @@
+{
+  "scope": "Inherited mechanisms, used at stated scope; not a new audit",
+  "sources": [
+    {
+      "path": "05-knowledge/results/paired_prime_collatz_20261003.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "0470d0e9d1cbc51c7cda0005654226dd0f1ff8cb",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/05-knowledge/results/paired_prime_collatz_20261003.md"
+    },
+    {
+      "path": "05-knowledge/results/tiling_modular_atoms_20261003.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "cb15af8038edf9bd4a3229da958a4d896a0e8efb",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/05-knowledge/results/tiling_modular_atoms_20261003.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4792-two-sheets-mod-odd-m-merged-centre-reflections-unit-shift-and-alternation-classification.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "624f092dd019ba60ea93cc28f1a4575477b87f7a",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/01-canon/theorems/THM-4792-two-sheets-mod-odd-m-merged-centre-reflections-unit-shift-and-alternation-classification.md"
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_collatz.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "74fec4a45f9a7e617389a09df264215eaab79273",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/05-knowledge/results/arithmetic_braids_20260917_collatz.md"
+    },
+    {
+      "path": "05-knowledge/results/modular_fourier_zeckendorf_routes_20261003.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "9b9ad94c64143acca5b4ed724fd0d2c0cd3921c5",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/05-knowledge/results/modular_fourier_zeckendorf_routes_20261003.md"
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260917_reverse_tree_pieces.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "452777b110b38a1670fb12fadf483e3af7003bcd",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/05-knowledge/results/collatz_mod6_20260917_reverse_tree_pieces.md"
+    },
+    {
+      "path": "05-knowledge/results/collatz_basin_observer_20261009.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "f5fdcd554ea2eb5887654cbb58626400bc52036a",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/05-knowledge/results/collatz_basin_observer_20261009.md"
+    },
+    {
+      "path": "05-knowledge/results/collatz_measurement_independence_20261005.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "9ada871e26262e32a7975ab29244e0c99ff3664b",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/05-knowledge/results/collatz_measurement_independence_20261005.md"
+    },
+    {
+      "path": "05-knowledge/results/session254_four_frontiers_20261111/SYNTHESIS.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "4ffe5edf186dc5d9618447bac38ce625bac46631",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/05-knowledge/results/session254_four_frontiers_20261111/SYNTHESIS.md"
+    },
+    {
+      "path": "05-knowledge/results/session254_four_frontiers_20261111/chan_pak/PROOF.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "1b7f8be42cae052b3ec0da1868aa3986fb223bf7",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/05-knowledge/results/session254_four_frontiers_20261111/chan_pak/PROOF.md"
+    },
+    {
+      "path": "05-knowledge/results/h13_paired_descent_20261111/dynamics/PROOF.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "f49a72a9cb03dc2a06a6b5578413ca5728b3bd7b",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/05-knowledge/results/h13_paired_descent_20261111/dynamics/PROOF.md"
+    },
+    {
+      "path": "05-knowledge/results/h13_paired_descent_20261111/dynamics/INCOMING_REPAIR.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "8f4bb2812bcb302e7084dab836c26f54e94153da",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/05-knowledge/results/h13_paired_descent_20261111/dynamics/INCOMING_REPAIR.md"
+    },
+    {
+      "path": "05-knowledge/results/infinite_birth_families_20261111/BIRTH_THEOREMS.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "c4d549fa5780f6c8b968dea7e33091c0bbca6010",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/05-knowledge/results/infinite_birth_families_20261111/BIRTH_THEOREMS.md"
+    },
+    {
+      "path": "05-knowledge/results/uniform_return_metagraph_20261111/defect/BOUNDED_TEMPLATES.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "8b313706717ad1734f09b2fe383eb027ad1883fd",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/05-knowledge/results/uniform_return_metagraph_20261111/defect/BOUNDED_TEMPLATES.md"
+    },
+    {
+      "path": "05-knowledge/results/uniform_return_metagraph_20261111/reset/COMPOSITION.md",
+      "commit": "6bb050cb3a0d5eaeea6a659c0cd290881c658d11",
+      "blob_sha": "30cde30a797a69b652b44c5f9dfe6e6fd74e53fe",
+      "url": "https://github.com/eliottcassidy2000/math/blob/6bb050cb3a0d5eaeea6a659c0cd290881c658d11/05-knowledge/results/uniform_return_metagraph_20261111/reset/COMPOSITION.md"
+    }
+  ]
+}

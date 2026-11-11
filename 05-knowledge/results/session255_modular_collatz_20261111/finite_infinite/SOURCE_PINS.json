@@ -1,0 +1,21 @@
+{
+  "commit": "ccdbcedf547f6f5b3d3ffdfc4d39caf1b2ef593f",
+  "sources": [
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260917_reverse_tree_pieces.md",
+      "blob": "452777b110b38a1670fb12fadf483e3af7003bcd"
+    },
+    {
+      "path": "05-knowledge/results/collatz_basin_observer_20261009.md",
+      "blob": "f5fdcd554ea2eb5887654cbb58626400bc52036a"
+    },
+    {
+      "path": "05-knowledge/results/collatz_measurement_independence_20261005.md",
+      "blob": "9ada871e26262e32a7975ab29244e0c99ff3664b"
+    },
+    {
+      "path": "05-knowledge/results/session254_four_frontiers_20261111/SYNTHESIS.md",
+      "blob": "4ffe5edf186dc5d9618447bac38ce625bac46631"
+    }
+  ]
+}

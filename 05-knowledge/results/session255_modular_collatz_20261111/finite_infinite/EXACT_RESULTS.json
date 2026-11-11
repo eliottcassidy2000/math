@@ -1,0 +1,176 @@
+{
+  "signed_dyadic_cylinders": 2044,
+  "signed_prime_power_trace_polynomials": 72,
+  "symbolic_determinants": {
+    "q=3,sigma=-1": "(z - 1)*(z + 1)*(u*z + z - 1)",
+    "q=9,sigma=-1": "-(z - 1)**2*(z + 1)**2*(z**2 - z + 1)*(z**2 + z + 1)*(u*z + z - 1)",
+    "q=3,sigma=1": "(z - 1)*(z + 1)*(u*z + z - 1)",
+    "q=9,sigma=1": "-(z - 1)**2*(z + 1)**2*(z**2 - z + 1)*(z**2 + z + 1)*(u*z + z - 1)"
+  },
+  "mixed_prime_trace_polynomials": 42,
+  "mixed_prime_determinant_specializations": 6,
+  "finite_driver_no_consecutive_ones": {
+    "-1": {
+      "determinant": "(z - 1)*(z + 1)*(u*z**2 + z - 1)",
+      "accepted_series_by_start_residue": {
+        "0": "-1/(z - 1)",
+        "1": "0"
+      }
+    },
+    "1": {
+      "determinant": "(z - 1)*(z + 1)*(u*z**2 + z - 1)",
+      "accepted_series_by_start_residue": {
+        "0": "-1/(z - 1)",
+        "1": "0"
+      }
+    }
+  },
+  "crt_hostile": {
+    "synchronized": [
+      0,
+      8
+    ],
+    "independent": [
+      0,
+      3,
+      5,
+      8
+    ],
+    "spurious": [
+      3,
+      5
+    ]
+  },
+  "times_three_mod8": [
+    0,
+    3,
+    6,
+    1,
+    4,
+    7,
+    2,
+    5
+  ],
+  "mod8_division_hostile": {
+    "inputs": [
+      1,
+      9
+    ],
+    "outputs": [
+      2,
+      14
+    ]
+  },
+  "integer_realization_hostile": {
+    "word": "100",
+    "rational_root": "1/5",
+    "all_ternary_levels": "accepted by theorem",
+    "mod5": "rejected"
+  },
+  "trace_snapshots": {
+    "q=3,k=2": [
+      3,
+      2,
+      1
+    ],
+    "q=3,k=6": [
+      3,
+      6,
+      15,
+      20,
+      15,
+      6,
+      1
+    ],
+    "q=3,k=9": [
+      1,
+      9,
+      36,
+      84,
+      126,
+      126,
+      84,
+      36,
+      9,
+      1
+    ],
+    "q=9,k=2": [
+      3,
+      2,
+      1
+    ],
+    "q=9,k=6": [
+      9,
+      6,
+      15,
+      20,
+      15,
+      6,
+      1
+    ],
+    "q=9,k=9": [
+      1,
+      9,
+      36,
+      84,
+      126,
+      126,
+      84,
+      36,
+      9,
+      1
+    ],
+    "q=27,k=2": [
+      3,
+      2,
+      1
+    ],
+    "q=27,k=6": [
+      9,
+      6,
+      15,
+      20,
+      15,
+      6,
+      1
+    ],
+    "q=27,k=9": [
+      1,
+      9,
+      36,
+      84,
+      126,
+      126,
+      84,
+      36,
+      9,
+      1
+    ],
+    "q=81,k=2": [
+      3,
+      2,
+      1
+    ],
+    "q=81,k=6": [
+      9,
+      6,
+      15,
+      20,
+      15,
+      6,
+      1
+    ],
+    "q=81,k=9": [
+      1,
+      9,
+      36,
+      84,
+      126,
+      126,
+      84,
+      36,
+      9,
+      1
+    ]
+  }
+}
