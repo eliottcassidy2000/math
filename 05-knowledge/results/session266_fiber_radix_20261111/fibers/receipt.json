@@ -1,0 +1,9 @@
+{
+  "active_constructor_checks": 5704,
+  "normal_and_optimized_match": true,
+  "cumulative_h1_at_30": 30,
+  "cumulative_empty_exclusion_checked": true,
+  "negative_n_and_out_of_scope_h_rejected": true,
+  "h7_and_h21_all_zero": true,
+  "report_sha256": "71da43e26710caacd5aa0bf5326dca3f76689c5a865de86e58e31ac35905303b"
+}

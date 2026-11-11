@@ -1,0 +1,400 @@
+{
+  "scope": "Inherited complete strong inventory for odd H<=73; completeness by Busch bound 5^8>73^3.",
+  "sources": {
+    "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/census.json": "06650ed6d8e77d4b54f8e45cff0744e16b541390258fdd45e1bae490e48d99f8",
+    "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/n8_classes.csv": "5226fb6d6cb71e2c99dc50536744f044c31af55e173e3be9f5f722a39edf3bc2"
+  },
+  "atoms": [
+    {
+      "n": 3,
+      "h": 3,
+      "ordinary": 1,
+      "self_converse": 1,
+      "weight": "1/3"
+    },
+    {
+      "n": 4,
+      "h": 5,
+      "ordinary": 1,
+      "self_converse": 1,
+      "weight": "1"
+    },
+    {
+      "n": 5,
+      "h": 9,
+      "ordinary": 2,
+      "self_converse": 2,
+      "weight": "2"
+    },
+    {
+      "n": 5,
+      "h": 11,
+      "ordinary": 1,
+      "self_converse": 1,
+      "weight": "1"
+    },
+    {
+      "n": 5,
+      "h": 13,
+      "ordinary": 1,
+      "self_converse": 1,
+      "weight": "1"
+    },
+    {
+      "n": 5,
+      "h": 15,
+      "ordinary": 2,
+      "self_converse": 2,
+      "weight": "8/15"
+    },
+    {
+      "n": 6,
+      "h": 15,
+      "ordinary": 2,
+      "self_converse": 0,
+      "weight": "2"
+    },
+    {
+      "n": 6,
+      "h": 17,
+      "ordinary": 2,
+      "self_converse": 2,
+      "weight": "2"
+    },
+    {
+      "n": 6,
+      "h": 19,
+      "ordinary": 2,
+      "self_converse": 0,
+      "weight": "2"
+    },
+    {
+      "n": 6,
+      "h": 23,
+      "ordinary": 4,
+      "self_converse": 0,
+      "weight": "4"
+    },
+    {
+      "n": 6,
+      "h": 25,
+      "ordinary": 2,
+      "self_converse": 0,
+      "weight": "2"
+    },
+    {
+      "n": 6,
+      "h": 27,
+      "ordinary": 2,
+      "self_converse": 0,
+      "weight": "2/3"
+    },
+    {
+      "n": 6,
+      "h": 29,
+      "ordinary": 4,
+      "self_converse": 2,
+      "weight": "4"
+    },
+    {
+      "n": 6,
+      "h": 31,
+      "ordinary": 2,
+      "self_converse": 0,
+      "weight": "2"
+    },
+    {
+      "n": 6,
+      "h": 33,
+      "ordinary": 5,
+      "self_converse": 1,
+      "weight": "11/3"
+    },
+    {
+      "n": 6,
+      "h": 37,
+      "ordinary": 5,
+      "self_converse": 1,
+      "weight": "5"
+    },
+    {
+      "n": 6,
+      "h": 41,
+      "ordinary": 1,
+      "self_converse": 1,
+      "weight": "1"
+    },
+    {
+      "n": 6,
+      "h": 43,
+      "ordinary": 2,
+      "self_converse": 0,
+      "weight": "2"
+    },
+    {
+      "n": 6,
+      "h": 45,
+      "ordinary": 2,
+      "self_converse": 2,
+      "weight": "2/3"
+    },
+    {
+      "n": 7,
+      "h": 25,
+      "ordinary": 1,
+      "self_converse": 1,
+      "weight": "1"
+    },
+    {
+      "n": 7,
+      "h": 27,
+      "ordinary": 3,
+      "self_converse": 1,
+      "weight": "3"
+    },
+    {
+      "n": 7,
+      "h": 29,
+      "ordinary": 2,
+      "self_converse": 0,
+      "weight": "2"
+    },
+    {
+      "n": 7,
+      "h": 31,
+      "ordinary": 2,
+      "self_converse": 2,
+      "weight": "2"
+    },
+    {
+      "n": 7,
+      "h": 33,
+      "ordinary": 3,
+      "self_converse": 1,
+      "weight": "3"
+    },
+    {
+      "n": 7,
+      "h": 35,
+      "ordinary": 2,
+      "self_converse": 0,
+      "weight": "2"
+    },
+    {
+      "n": 7,
+      "h": 37,
+      "ordinary": 2,
+      "self_converse": 0,
+      "weight": "2"
+    },
+    {
+      "n": 7,
+      "h": 39,
+      "ordinary": 2,
+      "self_converse": 0,
+      "weight": "2"
+    },
+    {
+      "n": 7,
+      "h": 41,
+      "ordinary": 5,
+      "self_converse": 1,
+      "weight": "5"
+    },
+    {
+      "n": 7,
+      "h": 43,
+      "ordinary": 2,
+      "self_converse": 0,
+      "weight": "2"
+    },
+    {
+      "n": 7,
+      "h": 45,
+      "ordinary": 5,
+      "self_converse": 1,
+      "weight": "11/3"
+    },
+    {
+      "n": 7,
+      "h": 47,
+      "ordinary": 2,
+      "self_converse": 0,
+      "weight": "2"
+    },
+    {
+      "n": 7,
+      "h": 49,
+      "ordinary": 7,
+      "self_converse": 1,
+      "weight": "7"
+    },
+    {
+      "n": 7,
+      "h": 51,
+      "ordinary": 8,
+      "self_converse": 2,
+      "weight": "6"
+    },
+    {
+      "n": 7,
+      "h": 53,
+      "ordinary": 4,
+      "self_converse": 0,
+      "weight": "4"
+    },
+    {
+      "n": 7,
+      "h": 55,
+      "ordinary": 4,
+      "self_converse": 0,
+      "weight": "4"
+    },
+    {
+      "n": 7,
+      "h": 57,
+      "ordinary": 4,
+      "self_converse": 0,
+      "weight": "8/3"
+    },
+    {
+      "n": 7,
+      "h": 59,
+      "ordinary": 8,
+      "self_converse": 0,
+      "weight": "8"
+    },
+    {
+      "n": 7,
+      "h": 61,
+      "ordinary": 1,
+      "self_converse": 1,
+      "weight": "1"
+    },
+    {
+      "n": 7,
+      "h": 65,
+      "ordinary": 11,
+      "self_converse": 3,
+      "weight": "11"
+    },
+    {
+      "n": 7,
+      "h": 67,
+      "ordinary": 6,
+      "self_converse": 2,
+      "weight": "6"
+    },
+    {
+      "n": 7,
+      "h": 69,
+      "ordinary": 12,
+      "self_converse": 2,
+      "weight": "8"
+    },
+    {
+      "n": 7,
+      "h": 71,
+      "ordinary": 7,
+      "self_converse": 1,
+      "weight": "7"
+    },
+    {
+      "n": 7,
+      "h": 73,
+      "ordinary": 8,
+      "self_converse": 0,
+      "weight": "8"
+    },
+    {
+      "n": 8,
+      "h": 45,
+      "ordinary": 5,
+      "self_converse": 1,
+      "weight": "5"
+    },
+    {
+      "n": 8,
+      "h": 49,
+      "ordinary": 1,
+      "self_converse": 1,
+      "weight": "1"
+    },
+    {
+      "n": 8,
+      "h": 51,
+      "ordinary": 4,
+      "self_converse": 0,
+      "weight": "4"
+    },
+    {
+      "n": 8,
+      "h": 53,
+      "ordinary": 6,
+      "self_converse": 0,
+      "weight": "6"
+    },
+    {
+      "n": 8,
+      "h": 57,
+      "ordinary": 3,
+      "self_converse": 1,
+      "weight": "3"
+    },
+    {
+      "n": 8,
+      "h": 59,
+      "ordinary": 4,
+      "self_converse": 0,
+      "weight": "4"
+    },
+    {
+      "n": 8,
+      "h": 61,
+      "ordinary": 4,
+      "self_converse": 0,
+      "weight": "4"
+    },
+    {
+      "n": 8,
+      "h": 63,
+      "ordinary": 2,
+      "self_converse": 0,
+      "weight": "2"
+    },
+    {
+      "n": 8,
+      "h": 65,
+      "ordinary": 3,
+      "self_converse": 1,
+      "weight": "3"
+    },
+    {
+      "n": 8,
+      "h": 69,
+      "ordinary": 6,
+      "self_converse": 0,
+      "weight": "6"
+    },
+    {
+      "n": 8,
+      "h": 71,
+      "ordinary": 4,
+      "self_converse": 0,
+      "weight": "4"
+    },
+    {
+      "n": 8,
+      "h": 73,
+      "ordinary": 11,
+      "self_converse": 1,
+      "weight": "11"
+    }
+  ],
+  "source_repository": "https://github.com/eliottcassidy2000/math",
+  "verified_source_snapshot": "72605d9ef8360bec91dd315f92b29cb2b1da42b2",
+  "source_links": {
+    "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/census.json": "https://github.com/eliottcassidy2000/math/blob/72605d9ef8360bec91dd315f92b29cb2b1da42b2/05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/census.json",
+    "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/n8_classes.csv": "https://github.com/eliottcassidy2000/math/blob/72605d9ef8360bec91dd315f92b29cb2b1da42b2/05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/n8_classes.csv"
+  }
+}

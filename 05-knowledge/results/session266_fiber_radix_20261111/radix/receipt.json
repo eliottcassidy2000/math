@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "scope": "plant recurrence and radix injectivity; finite gap enumeration; converse Burnside; synthetic finite-catalog tomography",
+  "checks": 17154,
+  "decimal_solution": [
+    4,
+    2,
+    7
+  ],
+  "integer_427_base_examples": {
+    "8": [
+      6,
+      5,
+      3
+    ],
+    "9": [
+      5,
+      2,
+      4
+    ],
+    "10": [
+      4,
+      2,
+      7
+    ],
+    "11": [
+      3,
+      5,
+      9
+    ],
+    "12": [
+      2,
+      11,
+      7
+    ],
+    "13": [
+      2,
+      6,
+      11
+    ],
+    "16": [
+      1,
+      10,
+      11
+    ]
+  },
+  "catalog_jet": [
+    48,
+    23,
+    7,
+    1
+  ],
+  "not_claimed": "No exhaustive tournament census, Collatz convergence, or new attribution of the original puzzle."
+}
