@@ -66,4 +66,19 @@ describes the vertex-cube form of THM-5127 does NOT describe `M` (order 6: coran
 
 ## Outcomes
 
-(filled after the runs)
+**R1: CONFIRMED on all ten registered runs** (`out/two_adic_R1.txt`; registration pushed at 9f260a24f7 before
+the runs). Orders 11 (three random tournaments, one circulant), 12 (two random, the transitive one), 13 (one
+random, one circulant), 14 (one random): no `U` violates (P1) or (P2) - 1,023 to 8,191 sets `U` per run and per
+function; the digits `k = 1, 2, 3` of `H` have `F_2`-degree exactly 2, 4, 8 in every run. The control
+`c_U(H) = 0` for `|U| > 2 floor(n/3)` holds. Not predicted, seen in the data: for even `n` the least valuation at
+`|U| = 5, 6` is 5 (orders 10, 12, 14), not 3; at odd `n` the bound `ceil(|U|/2)` is attained for every
+`|U| <= 6` (orders 9, 11, 13). The conjecture is not proved by these runs.
+
+**R2: not scored** (order 12 has not been enumerated). The forecasts stand as written, in HYP-9670.
+
+**R3 (exploratory, no prediction).** `out/rank_stats_n6_8.txt`, `out/rank_stats_n9_11.txt`: corank of `M` on
+`F_2^n/<1>`, in percent of 2,000-3,000 random tournaments: order 6: corank 1: 100; order 7: corank 0: 61.8,
+corank 2: 38.2; order 8: 1: 62.7, 3: 36.0, 7 (`M = 0`): 1.3; order 9: 0: 41.7, 2: 54.4, 4: 3.9; order 10:
+1: 80.0, 3: 19.3, 5: 0.7; order 11: 0: 41.1, 2: 56.7, 4: 2.2. Uniform alternating matrices of the same
+dimension: 42.1 / 55.9 / 2.1 (dimensions 8 and 10), 83.9 / 15.9 / 0.1 (dimension 9). So `M` is far from the
+uniform law for `n <= 8` and within 4 points of it at orders 9, 10, within 1.2 points at order 11.

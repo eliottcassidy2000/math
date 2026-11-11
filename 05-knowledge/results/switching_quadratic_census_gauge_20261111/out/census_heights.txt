@@ -1,0 +1,4 @@
+integer-height (discrete Gaussian) moments: E[2^(M J)] for P(J=j) ~ 2^(-j^2/(2 phi)), against 2^(phi M^2/2)
+  largest relative deviation over phi in {2,4,6,8,12}, M = -3..8: 0.0
+  triangular heights P(J=j) ~ 2^(-j(j+1)/2): E[2^(M J)] = 2^C(M,2) (labelled tournaments), M = 0..12; largest relative deviation: 0.0
+  a(n) = E[ Z_n(2^(H_p)) ] with H_p = sum_{d | p} J_d (exact moments), n <= 15: True

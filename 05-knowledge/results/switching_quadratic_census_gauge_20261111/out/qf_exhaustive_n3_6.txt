@@ -1,8 +1,12 @@
+switching classes: 2, each with 4 members; number of members with H = 1 (mod 4) : number of classes -> 3:2
 n=3 tournaments=8  H=1 mod 4: 6  H=3 mod 4: 2
 violations: (a) Lambda symmetric/zero diagonal/even rows: 0  (b) class invariance: 0  (c) D_a hc = 1+e(a): 0  (d) D_a D_b hc = Lambda_ab: 0  (e) triple sums: hc 0, H mod 4 0
+switching classes: 8, each with 8 members; number of members with H = 1 (mod 4) : number of classes -> 0:2 8:6
 n=4 tournaments=64  H=1 mod 4: 48  H=3 mod 4: 16
 violations: (a) Lambda symmetric/zero diagonal/even rows: 0  (b) class invariance: 0  (c) D_a hc = 1+e(a): 0  (d) D_a D_b hc = Lambda_ab: 0  (e) triple sums: hc 0, H mod 4 0
+switching classes: 64, each with 16 members; number of members with H = 1 (mod 4) : number of classes -> 10:24 12:40
 n=5 tournaments=1024  H=1 mod 4: 720  H=3 mod 4: 304
 violations: (a) Lambda symmetric/zero diagonal/even rows: 0  (b) class invariance: 0  (c) D_a hc = 1+e(a): 0  (d) D_a D_b hc = Lambda_ab: 0  (e) triple sums: hc 0, H mod 4 0
+switching classes: 1024, each with 32 members; number of members with H = 1 (mod 4) : number of classes -> 20:1024
 n=6 tournaments=32768  H=1 mod 4: 20480  H=3 mod 4: 12288
 violations: (a) Lambda symmetric/zero diagonal/even rows: 0  (b) class invariance: 0  (c) D_a hc = 1+e(a): 0  (d) D_a D_b hc = Lambda_ab: 0  (e) triple sums: hc 0, H mod 4 0

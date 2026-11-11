@@ -1,0 +1,9 @@
+n=6 trials=2000 seed=1
+corank of M on F_2^n/<1> (dim 5): 1:2000
+class imbalance (#H=1 - #H=3 mod 4)/2^(n-1): zero 0, positive 2000, negative 0 ; mean 0.250000 ; mean |.| 0.250000 ; fraction of sampled T with H=1 mod 4: 0.6315
+n=7 trials=2000 seed=1
+corank of M on F_2^n/<1> (dim 6): 0:1236 2:764
+class imbalance (#H=1 - #H=3 mod 4)/2^(n-1): zero 293, positive 1543, negative 164 ; mean 0.101875 ; mean |.| 0.136125 ; fraction of sampled T with H=1 mod 4: 0.5455
+n=8 trials=2000 seed=1
+corank of M on F_2^n/<1> (dim 7): 1:1254 3:720 7:26
+class imbalance (#H=1 - #H=3 mod 4)/2^(n-1): zero 889, positive 822, negative 289 ; mean 0.049125 ; mean |.| 0.099125 ; fraction of sampled T with H=1 mod 4: 0.5275

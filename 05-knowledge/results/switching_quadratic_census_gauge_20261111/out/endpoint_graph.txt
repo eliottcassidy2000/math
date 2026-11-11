@@ -1,0 +1,8 @@
+n=3  (1) affine+even graph 30/30  (2) hc quadratic 30/30  (3) recursion (**) 0/0  (4) H mod 4 formula 30/30  (5) Hessian recursion 0/0
+n=4  (1) affine+even graph 30/30  (2) hc quadratic 30/30  (3) recursion (**) 30/30  (4) H mod 4 formula 30/30  (5) Hessian recursion 0/0
+n=5  (1) affine+even graph 30/30  (2) hc quadratic 30/30  (3) recursion (**) 30/30  (4) H mod 4 formula 30/30  (5) Hessian recursion 30/30
+n=6  (1) affine+even graph 30/30  (2) hc quadratic 30/30  (3) recursion (**) 30/30  (4) H mod 4 formula 30/30  (5) Hessian recursion 30/30  (6) order-6 closed form 30/30
+n=7  (1) affine+even graph 30/30  (2) hc quadratic 30/30  (3) recursion (**) 30/30  (4) H mod 4 formula 30/30  (5) Hessian recursion 30/30
+n=8  (1) affine+even graph 8/8  (2) hc quadratic 8/8  (3) recursion (**) 8/8  (4) H mod 4 formula 8/8  (5) Hessian recursion 8/8
+n=9  (1) affine+even graph 8/8  (2) hc quadratic 8/8  (3) recursion (**) 8/8  (4) H mod 4 formula 0/0  (5) Hessian recursion 8/8
+n=10  (1) affine+even graph 3/3  (2) hc quadratic 3/3  (3) recursion (**) 3/3  (4) H mod 4 formula 0/0  (5) Hessian recursion 0/0

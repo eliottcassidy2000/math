@@ -70,6 +70,13 @@ int main(int argc,char**argv){
             }
         }
     }
+    /* histogram, over switching classes, of the number of members with H = 1 (mod 4) */
+    { uint16_t *c1=calloc(NT,sizeof(uint16_t)); unsigned long long hist[130]; memset(hist,0,sizeof(hist));
+      for(uint32_t T=0;T<NT;T++){ uint32_t R=T; for(int v=0;v<n-1;v++) if(!((T>>pidx[v][n-1])&1)) {;} else R^=vmask[v]; /* v -> n-1: switch v */
+          if(H4[T]==1) c1[R]++; }
+      unsigned long long ncl=0; for(uint32_t T=0;T<NT;T++){ int src=1; for(int v=0;v<n-1;v++) if((T>>pidx[v][n-1])&1) src=0; if(src){ ncl++; hist[c1[T]]++; } }
+      printf("switching classes: %llu, each with %d members; number of members with H = 1 (mod 4) : number of classes ->",ncl,1<<(n-1));
+      for(int i=0;i<130;i++) if(hist[i]) printf(" %d:%llu",i,hist[i]); printf("\n"); free(c1); }
     printf("n=%d tournaments=%llu  H=1 mod 4: %llu  H=3 mod 4: %llu\n",n,cnt,h1,h3);
     printf("violations: (a) Lambda symmetric/zero diagonal/even rows: %llu  (b) class invariance: %llu  (c) D_a hc = 1+e(a): %llu  (d) D_a D_b hc = Lambda_ab: %llu  (e) triple sums: hc %llu, H mod 4 %llu\n",bad_a,bad_b,bad_c,bad_d,bad_e_hc,bad_e_H);
     return 0;

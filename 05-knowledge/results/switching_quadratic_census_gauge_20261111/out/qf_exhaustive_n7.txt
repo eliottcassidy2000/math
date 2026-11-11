@@ -1,2 +1,3 @@
+switching classes: 32768, each with 64 members; number of members with H = 1 (mod 4) : number of classes -> 24:1680 28:720 32:5040 36:19280 40:6048
 n=7 tournaments=2097152  H=1 mod 4: 1157760  H=3 mod 4: 939392
 violations: (a) Lambda symmetric/zero diagonal/even rows: 0  (b) class invariance: 0  (c) D_a hc = 1+e(a): 0  (d) D_a D_b hc = Lambda_ab: 0  (e) triple sums: hc 0, H mod 4 0

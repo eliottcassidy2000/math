@@ -1,0 +1,2 @@
+control 1: independent Burnside sum equals the recorded exact values for n <= 40: True
+control 2: f_n = sum_k L_k(n) exactly (all levels) for 3 <= n <= 60: True
