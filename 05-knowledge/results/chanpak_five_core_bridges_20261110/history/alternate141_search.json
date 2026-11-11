@@ -1,0 +1,51 @@
+{
+  "parent_rows": [
+    254,
+    508,
+    504,
+    240,
+    480,
+    448,
+    384,
+    256,
+    9
+  ],
+  "H": 141,
+  "core_index": 0,
+  "core_outmask": 0,
+  "A": 1,
+  "B": 61,
+  "first_outmask": 128,
+  "middle_rows": [
+    766,
+    1020,
+    1016,
+    752,
+    992,
+    960,
+    896,
+    256,
+    521,
+    128
+  ],
+  "middle_H": 215,
+  "second_outmask": 512,
+  "child_rows": [
+    1790,
+    2044,
+    2040,
+    1776,
+    2016,
+    1984,
+    1920,
+    1280,
+    1545,
+    128,
+    512
+  ],
+  "child_H": 425,
+  "parent_index": 14,
+  "tested_middle_classes": 237,
+  "raw_witnesses": 42,
+  "strong_parent_classes": 19
+}

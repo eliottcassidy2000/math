@@ -1,0 +1,8 @@
+{
+  "all_32_per_core_support_counts_match": true,
+  "independent_raw_cut_bound": 4095,
+  "inherited_prefix_bound": 262143,
+  "raw_python_parameter_pairs": 105388,
+  "scope": "Independent complete support through4095; higher runs retain C++ exact inverse and inherited prefix controls, not an independent high-range replay.",
+  "status": "PASS"
+}

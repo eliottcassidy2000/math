@@ -20,6 +20,8 @@ unlabelled by y, and use leading zeroes and epsilon transitions. It need not
 select every witness or a unique witness. Every successful path must encode
 a valid equality for at least one bank row. Binary word boundaries are part
 of the representation, not values in an unbounded arithmetic register.
+Each tape is read from its most significant end; transitions can be normalized
+to single-bit or epsilon labels by finitely subdividing any finite-word edge.
 
 **Theorem.** Such a selector produces at most O((log(X+2))^R) distinct
 positive outputs N<=X, for a constant R depending on the finite selector
@@ -69,7 +71,7 @@ fixed suffix z, the integer v_m=value(u w^m z) has the form
 
 The inherited mixed-period lemma proves
 
-    g(v_m) = c 2^(km) + D_w m + e,                      (2)
+    g(v_m) = c 2^(km) + D_w m + e, m>=1,                (2)
 
 with D_w>0 if w contains both binary digits. If w is monochromatic,
 D_w=0. For an empty loop word v_m is constant and we also put D_w=0.

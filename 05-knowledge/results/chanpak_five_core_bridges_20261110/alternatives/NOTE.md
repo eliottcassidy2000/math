@@ -38,6 +38,21 @@ preserves their profile equality by THM-3121,
 `01-canon/theorems/THM-3121-the-path-cover-walk-content-substitution-kernel-and-the-exact-c3-diagonal-law.md`.
 Arbitrary pointed attachment does not preserve it.
 
+Concurrent Session252 was integrated before this packet's final audit. Its
+`session252_fivefold_bridges_20261111/golden/PROOF.md` and `algebra/PROOF.md`
+already give the rank-five polynomial interface algebra, associative
+reassociation pentagon, seven-coordinate reduction, and finite/affine
+triangle-overlap separation of the H9 cores. Those are inherited here.
+The additional construction below is the map into the C4 ready-tail layer,
+its literal neutral switch, and its exact ready-return/deletion boundary.
+The complete sixteen-tail C4 classification and all its scalar count formulas,
+including the equal-count pair `01,01,10` / `01,11,10`, were already explicit
+in `ready_return_pentagon_20261103/ATLAS.md`, A3. Its warning that H plus the
+growth clock merges actual rooted classes is inherited. We do not claim a
+new C4 classification or discovery of that scalar collision. The new work
+identifies its two H9 deletion charts, supplies the literal edge operation
+and complete contextual defect, and proves the addition/deletion boundary.
+
 ## 2. An inner-apex dictionary, not five-dimensional state
 
 Delete the listed vertex and read the unique remaining transitive order. The
@@ -109,7 +124,8 @@ literal graph checks for k1 through5 as independent controls.
 
 ## 4. A literal neutral edge switch, and the exact lost coordinate
 
-**Proposition 3.** At every k>=1 compare tails
+**Proposition 3 (inherited scalar family, explicit operation and response
+audit).** At every k>=1 compare tails
 
     01,11,10      and      01,01,10.
 
@@ -145,10 +161,9 @@ full marked core. The same source count, same full unpointed profile, and
 same standard rooted reset response do not supply that sidecar.
 
 The literal finite audit finds no1-ready or2-ready root anywhere in either
-displayed neutral family for k1 through5. This is a finite hostile, not an
-all-k absence theorem. The standard two-birth reset by itself yields offset8;
-an offset-restoration or different source-return construction is still
-needed for ternary digits2 and4.
+displayed neutral family for k1 through5, and none in any one-vertex
+extension of either k1 source. Section6 proves the stronger all-order
+obstruction and supplies explicit deletion gates which repair readiness.
 
 ## 5. Other actual switches from the old labelled H9 pair
 
@@ -169,7 +184,102 @@ linear slopes and constant difference +/-2 on any fixed parity class.
 That finite test rejects only this two-free-flank macro; it says nothing
 about longer cores, changed flanks, or multi-step operations.
 
-## 6. A primitive-word collision and its arithmetic boundary
+## 6. Exact ready returns, and why some deletion is necessary
+
+**Proposition 4 (two complementary actual return gates).** Starting from
+either neutral source in Proposition3, with D=2^k:
+
+1. Delete the middle tail vertex. Both graphs become exactly the same old
+   pentagon source `11^k,01,10`, preserving r and both ordered ports. Its
+   state is `H=14D+3, s=q=5, F-H=2`. The standard two births at r then give
+   `H'=42D+13`. At k1 this is the literal count trace `73 -> 31 -> 97`.
+2. Delete port a. Both graphs become identical, with H=`4D+1`. Their last
+   tail vertex is now a global sink. Delete it too; H stays `4D+1`, and the
+   result is the primitive one-apex word `10^(k+2)`. The first zero vertex
+   has `s=2D, q=2D+1, F-H=1`. The standard two births at that vertex give
+   `H'=12D+5`. At k1 the trace is `73 -> 9 -> 9 -> 29`.
+
+These are graph identities, not merely equal counts. The changed edge of the
+neutral switch is erased by either the first gate's middle-vertex deletion
+or the second gate's port deletion. The surviving vertices and all their
+arcs are kept. The two-birth operation means: add x beaten only by the
+selected root, then add y beaten only by x.
+
+The first gate is the inherited BA pentagon tail, so its state follows from
+READY. For the second, after both deletions the remaining port b beats the
+original root r and loses to all k+2 remaining chain vertices. The order
+`r, chain` is transitive, hence its literal inner word is `10^(k+2)`.
+Its first zero u has sole predecessor r; after deleting u, exactly one
+Hamilton path starts at r (the remaining chain in order, followed by b).
+The indegree1 formula therefore gives F-H=1. Deleting u reduces the pure
+run exponent by1, so q=`2D+1` and s=q-1=`2D`. This proves the stated
+all-k responses and the two reset counts.
+
+The parameter D and named graph interfaces survive these returns; the
+original Hamilton count does not. In particular neither return proves the
+desired operations `H -> 3H+2` and `H -> 3H+4` at an arbitrary source.
+
+**Lemma (start-count monotonicity under strong extension).** If U is a
+strong tournament containing an induced tournament S, then for every
+v in S the number of Hamilton paths starting at v cannot decrease. If S
+is strong, the minimum start count over U is at least that over S.
+
+Proof: a directed path on a current vertex set can be extended without
+changing its first vertex whenever an outside vertex w has an incoming arc
+from that set: insert w just after the last current vertex beating w.
+Strongness of U guarantees such an outside vertex until the set is full.
+Choose the successive outside vertices by a fixed label rule, independently
+of the path; restricting the output to the old set recovers the input, so
+the map is injective. This proves the fixed-v assertion even when S is not
+strong. For a new starting vertex x, fix a path from x to its first vertex
+y in S, concatenate each Hamilton path of S starting at y, then use the
+same insertion argument. This gives at least the minimum start count of S.
+
+**Proposition 5 (all-additions obstruction).** No strong tournament
+containing either seven-vertex k1 neutral source as an induced subtournament
+has any1-ready or2-ready root. Therefore no sequence of births alone can
+repair readiness for any member of either neutral family. At least one
+deletion or old-arc change is necessary. Proposition4's first gate shows
+that one deletion suffices while preserving the original root and ports.
+
+Proof: call either base S. Its H is73. Its start vectors are respectively
+
+    (30,10,10,4,4,6,9), (30,11,7,5,5,6,9).
+
+In both, the only vertex of indegree1 is the first prefix vertex u. Its
+sole predecessor is r, and deleting u leaves exactly7 Hamilton paths
+starting at r. These are the small literal facts independently certified
+in `receipt.json`.
+
+READY classifies a1/2-ready root z in a strong supertournament U into two
+cases. In the indegree1 case, U-z is strong, and its sole predecessor a
+starts exactly1 or2 Hamilton paths. If z lies outside S, apply the
+minimum-start lemma to S inside U-z, contradicting the lower bound4 or5.
+If z lies in S, then z must be u, and a must be the old r. Apply the
+fixed-start lemma to S-u inside U-u; the lower bound7 contradicts1 or2.
+
+In the indegree2 case, U is one of the classified C2 pentagon families.
+Consider an induced seven-vertex strong copy of S in such a U. It must
+retain the ready root: otherwise at least three of its vertices come from
+the free11 prefix, whose first selected vertex dominates the entire copy,
+contradicting strongness. If it omits either port, the copy is at most
+one-apex over a transitive six-chain, and H<=2^6=64: a Hamilton path is
+uniquely determined by which chain vertices precede the apex. This
+contradicts H73. Therefore it retains the root and both ports. Its four
+chosen chain vertices then form one of the five C2 tails with a shortened
+free prefix. The five possible order7 counts are exactly
+
+    47,49,39,55,59,
+
+again excluding73. This exhausts READY's classification. Finally, every
+k>=1 neutral source contains its k1 member by retaining one prefix vertex.
+The obstruction therefore applies to the entire infinite families.
+
+The proof records why the bounded-birth attempt fails, rather than only
+reporting its empty search. It also isolates the successful repair:
+delete one particular vertex which carries the extra response budget.
+
+## 7. A primitive-word collision and its arithmetic boundary
 
 The two H9 inner words are also a special meeting of two explicit families.
 The one-apex word `10^r` has count `2^r+1`. The alternating word `(10)^m`
@@ -192,7 +302,7 @@ The Fermat-prime condition on `2^r+1` restricts r when that number is prime;
 our construction counts need not be prime, and H9 is composite. The
 mechanism is collision of two actual counting laws, not primality transfer.
 
-## 7. Reproduction and remaining gate
+## 8. Reproduction and remaining gate
 
 Run `python -I -B check.py` or `python -I -B -O check.py`; the output is
 `receipt.json`. The checker imports no repository module, uses explicit
@@ -201,12 +311,19 @@ programs, independently evaluates the marked-core coefficients, and compares
 the resulting counts. `--fail` is an intentional nonzero hostile control.
 The explicit universe is all transitive deletions of the five fixed cores;
 all36 reduced length3 two-port tails (first not11, last not00); all32x32
-cross-core cut pairs; B0..15 in the two contextual macros; and k1..5 in the
-four stated C4 families. The complete inherited C2 classification supplies
-the all-order minimal-budget argument; the finite tail search alone does not.
+cross-core cut pairs; B0..15 in the two contextual macros; k1..5 in the
+four stated C4 families and both actual ready returns; and all128 one-vertex
+attachments to each of the two k1 neutral sources, checking every root.
+The complete inherited C2 classification and the proved insertion lemma
+supply the all-order conclusions; the finite searches alone do not.
+Normal and optimized outputs were byte-identical; the intentional `--fail`
+control exited nonzero. The retained receipt SHA256 is
+`59ecb5801d80120e1b35a6945e9efa4bb34d53375232b48c51f8d1f5d4ecf562`.
 
-Next cheapest gate: rerooting or bounded attachments which restore a1-ready
-or2-ready source after the neutral C4 switch, with the target Hamilton count
-recorded explicitly. Such a gate is not supplied by the present identities.
-The alternative operations are concrete and their exact failure boundary is
-known, but they are not a proof of Chan–Pak.
+The remaining gate is target control: turn these explicit source returns
+into count recurrences that reach an arbitrary allowed odd integer and
+return to a compatible marked source. The current operations retain D,
+the ports, and a controlled deletion core, but they alter H by the stated
+formulas. The new all-additions obstruction shows exactly why unrestricted
+birth searches inside this C4 family cannot solve the missing return step.
+Chan–Pak remains open.

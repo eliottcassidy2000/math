@@ -1,0 +1,49 @@
+{
+  "checks": [
+    {
+      "normal_optimized_bytes_equal": true,
+      "output_sha256": "cfdd15524e214e0de5d00e8b2fb6866f31541447ba982d3e5d5d7f81b2c87c17",
+      "receipt_json_equal": true,
+      "script": "check_selector.py",
+      "source_sha256": "9704cf6a05d45ba221dca61706c0161172c0d4b02df9e13bbf0607c4db1c3db7"
+    },
+    {
+      "normal_optimized_bytes_equal": true,
+      "output_sha256": "854a320cc2b50ec76488c9dc410a21dfa49c27bcb763bff1ff84db3651553fae",
+      "receipt_json_equal": true,
+      "script": "check_switch.py",
+      "source_sha256": "1933128fc6eeb1a0421b6c0f1b89f5241cf132eb68ec57c8e4cf3cb8554ff593"
+    },
+    {
+      "normal_optimized_bytes_equal": true,
+      "output_sha256": "c7b2a62c06429bb285e21908586f17e4ee0d95e17843c0a43807950467e779da",
+      "receipt_json_equal": true,
+      "script": "check_reset.py",
+      "source_sha256": "6bc38c923d227dd52fbdc037761173654e2c4cab52ada00b437c910ed8f69675"
+    },
+    {
+      "normal_optimized_bytes_equal": true,
+      "output_sha256": "84f926de22cc0fdbbe1d0c0ee60291c925ad81dfe41170eef781909e1492c486",
+      "receipt_json_equal": true,
+      "script": "check_gap.py",
+      "source_sha256": "c80fe1035b3c075b06afd67561e9c5117a821f3c2b282fa11a275a7f2af2d3f0"
+    },
+    {
+      "normal_optimized_bytes_equal": true,
+      "output_sha256": "6b1a82ab7dcc3890d5d54f4ec1a7550cb3451dd9614a1ddc7aab18fe187caeeb",
+      "receipt_json_equal": true,
+      "script": "verify_support.py",
+      "source_sha256": "2df82f04a1b29cff16f273562d59183fe9a93a49057c93c6c88890fbcdd1c6da"
+    },
+    {
+      "normal_optimized_bytes_equal": true,
+      "output_sha256": "df2f4911868c741962f9dec5c8625c73273638711fcabade6817736eabfd0492",
+      "receipt_json_equal": true,
+      "script": "audit_frontier.py",
+      "source_sha256": "5306414b61e34787490b64d35d5ce929b941366accc9559c24d4f2b4b719e86c"
+    }
+  ],
+  "independent_frontier_intentional_failure_exit": 1,
+  "scope": "Normal and optimized reruns of the six named exact checkers; large support runs are retained data with independent prefix controls, not rerun here.",
+  "status": "PASS"
+}

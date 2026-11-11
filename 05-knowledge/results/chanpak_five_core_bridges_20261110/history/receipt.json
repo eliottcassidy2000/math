@@ -9,7 +9,7 @@
   "independent_cases": 1099,
   "labelled_total": 33867,
   "reproduction": "python 05-knowledge/results/chanpak_five_core_bridges_20261110/history/check_five_cores.py",
-  "script_sha256": "03f60e5fc90b3ca94a2467e68f46a78c649afff0abab2f1f48c1b47afd748e63",
+  "script_sha256": "5afef326b4b37f6b0652c3b5953111c0c3d6a33acdd2d625b2a195fc4210c27b",
   "core_details": [
     {
       "index": 0,

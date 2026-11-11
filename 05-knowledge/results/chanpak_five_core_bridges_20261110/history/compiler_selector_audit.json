@@ -1,0 +1,17 @@
+{
+  "status": "PASS; independent-agent audit controls, not an infinite selector census",
+  "core_classes": 20,
+  "cuts": 470,
+  "physical_child_DP_checks": 6110,
+  "largest_child_order": 12,
+  "coefficient_rank": 7,
+  "loop_words_length_1_through_8": 510,
+  "drift_prefix_suffix_checks": 4590,
+  "m_zero_hostile": {
+    "g_1_actual": 1,
+    "formal_2_to_m_plus_1_at_zero": 2,
+    "scope": "periodic formulas need m>=1; pumping proof already does"
+  },
+  "imports": "Only this lane's independent path/canonicalization code; no producer imports",
+  "script_sha256": "3b45d352f99ca6f886d28f844588ce158ca9ff47a996351690899b79e1cff144"
+}

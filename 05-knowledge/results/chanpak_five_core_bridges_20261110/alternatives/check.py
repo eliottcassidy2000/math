@@ -147,6 +147,13 @@ def arc_difference(a,b):
     return [(i,j) for i in range(len(a)) for j in range(i+1,len(a))
             if ((a[i] >> j) & 1) != ((b[i] >> j) & 1)]
 
+def birth_beaten_only_by(rows, root):
+    n = len(rows)
+    return tuple(row | ((1 << n) if v == root else 0) for v,row in enumerate(rows)) + (((1 << n)-1) ^ (1 << root),)
+
+def two_birth_reset(rows, root):
+    return birth_beaten_only_by(birth_beaten_only_by(rows,root),len(rows))
+
 def slot_profile(rows, max_slots=6):
     hp,_ = dp(rows)
     full = (1 << len(rows))-1
@@ -223,6 +230,59 @@ def main():
     result['C4_neutral_switch']={'tails':[[2,3,1],[2,2,1]],'seven_a':seven_a,'seven_b':seven_b,
                                  'edge_at_k':['k+1','k+3'],'preserved':'root, ordered ports, tape order, h,s_root,q,F',
                                  'lost':'Full flank observer; count difference after right code B is 3B+(B mod2).'}
+    base_obstructions=[]
+    one_birth_tests=0
+    for tail in ((2,3,1),(2,2,1)):
+        T=ready_source(tail,1)
+        roots=root_profiles(T)
+        indegrees=[len(T)-1-row.bit_count() for row in T]
+        need([r for r,d in enumerate(indegrees) if d==1]==[0],'only inherited indegree1 root')
+        sole_predecessor=next(v for v in range(len(T)) if T[v]&1)
+        parent=induced(T,range(1,len(T)))
+        predecessor_starts=root_profiles(parent)[sole_predecessor-1]['s']
+        need(predecessor_starts==7,'specified parent start obstruction')
+        base_obstructions.append({'tail':tail,'rows':T,'starts':[r['s'] for r in roots],
+                                  'indegrees':indegrees,'only_indegree1_root':0,
+                                  'sole_predecessor':sole_predecessor,'predecessor_starts_after_delete':predecessor_starts})
+        for out in range(1 << len(T)):
+            child=attach(T,out)
+            need(all(r['gap'] not in (1,2) for r in root_profiles(child)),'one birth cannot restore readiness')
+            one_birth_tests+=1
+    result['addition_obstruction_base_data']=base_obstructions
+    result['exhaustive_one_birth_children_without_ready_root']=one_birth_tests
+    order7=[]
+    for tail in ((),(1,),(2,),(1,2),(2,1)):
+        k=4-len(tail)
+        count=dp(ready_source(tail,k))[0][-1]
+        order7.append(count)
+    need(order7==[47,49,39,55,59],'exceptional ready order7 counts')
+    result['C2_ready_order7_counts']=order7
+    returns=[]
+    for k in range(1,6):
+        sources=[ready_source(tail,k) for tail in ((2,3,1),(2,2,1))]
+        # Removing the middle tail vertex erases the changed edge and restores BA.
+        gate2=[induced(T,[v for v in range(len(T)) if v!=k+1]) for T in sources]
+        need(gate2[0]==gate2[1]==ready_source((2,1),k),'literal shared 2-ready gate')
+        r2=root_profiles(gate2[0])[-1]
+        need((r2['h'],r2['s'],r2['q'],r2['gap'])==(14*2**k+3,5,5,2),'2-ready returned response')
+        reset2=two_birth_reset(gate2[0],len(gate2[0])-1)
+        need(dp(reset2)[0][-1]==42*2**k+13,'2-ready returned reset')
+        # Removing port a leaves a common graph with a global sink; removing
+        # that last tail vertex gives the pure 10^(k+2) source.
+        ancestor=[induced(T,[v for v in range(len(T)) if v!=k+3]) for T in sources]
+        need(ancestor[0]==ancestor[1],'shared one-port ancestor')
+        need(dp(ancestor[0])[0][-1]==2**(k+2)+1,'Fermat-shaped ancestor count')
+        gate1=[induced(T,[v for v in range(len(T)) if v not in (k+2,k+3)]) for T in sources]
+        need(gate1[0]==gate1[1],'literal shared 1-ready gate')
+        r1=root_profiles(gate1[0])[0]
+        need((r1['h'],r1['s'],r1['q'],r1['gap'])==(2**(k+2)+1,2**(k+1),2**(k+1)+1,1),'1-ready returned response')
+        reset1=two_birth_reset(gate1[0],0)
+        need(dp(reset1)[0][-1]==12*2**k+5,'1-ready returned reset')
+        returns.append({'k':k,'source_count':34*2**k+5,'gate2_rows':gate2[0],'gate2_root':r2,
+                        'reset2_rows':reset2,'reset2_h':42*2**k+13,
+                        'Fermat_ancestor_rows':ancestor[0],'gate1_rows':gate1[0],'gate1_root':r1,
+                        'reset1_rows':reset1,'reset1_h':12*2**k+5})
+    result['literal_ready_returns']=returns
     switches=[]
     for out,delta in ((9,0),(22,-2)):
         sig0,sig1=signature(B0,out),signature(B1,out)

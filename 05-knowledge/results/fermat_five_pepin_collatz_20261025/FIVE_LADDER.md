@@ -4,6 +4,13 @@
 verified in `fermat-normal.json`; the repository relations in §4 are typed STRUCTURE / COINCIDENCE
 as in the earlier ledgers. No novelty claim for the classical parts.
 
+**Correction, 2026-11-10:** Section3's undirected Paley graph statements
+require `i>=1`. The exceptional Fermat prime `F_0=3` gives the directed
+Paley tournament `C_3`. Thus there are four known members of this graph
+family, while the complete Fermat-prime list has five known members;
+exhaustion of either list is open. The ladder and product identities are
+unchanged. See the [correction ledger](../../../01-canon/MISTAKES.md).
+
 ## 1. The ladder
 
 The three sets are three floors of one tower: an index `i in {0,1,2,3,4}`, its power `2^i in
@@ -41,14 +48,16 @@ within each.)
 
 ## 3. The Fermat Paley graphs (EXACT)
 
-Fermat primes are `≡ 1 (mod 4)`, so the Legendre relation on `Z/F_i` is symmetric: a Paley **graph**,
-not a tournament (contrast the primes `≡ 3 (mod 4)` of HYP-9375). `P(F_i)` is self-complementary,
+For a Fermat prime `F_i` with `i>=1`, we have `F_i ≡ 1 (mod 4)`, so the Legendre relation on
+`Z/F_i` is symmetric: a Paley **graph**. The exception `F_0=3 ≡ 3 (mod 4)` instead gives the
+Paley tournament `C_3`. For `i>=1`, `P(F_i)` is self-complementary,
 strongly regular of degree `(F_i - 1)/2 = 2^{2^i - 1}`, with spectrum `{(F_i-1)/2, (-1 ± sqrt F_i)/2}`
 (Gauss sums). Computed: `P(5) = C_5` with eigenvalues `(-phi, 1/phi, 2)` — the golden ratio of the
 Antihydra note returns as the pentagon's spectrum — and `P(17)` with eigenvalues `(-2.5616, 1.5616, 8)`
 and clique number `3`: the classical `R(4,4) = 18` witness (self-complementary, so also no independent
-4-set). `P(257)` and `P(65537)` continue the family. Completeness of the five says this
-Fermat–Paley family has exactly five members.
+4-set). `P(257)` and `P(65537)` continue the family. These are the four known
+Fermat–Paley graphs. The open assertion that there are exactly five Fermat primes is equivalent
+to this undirected graph family having exactly four members, because `F_0=3` is the sole exception.
 
 ## 4. Relations to the repository's other fives
 

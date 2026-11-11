@@ -55,9 +55,43 @@ retained apex context; a scalar rule attached only to the H9 source would
 lose the constant. The two-cut formula is an application of the existing
 cut interaction calculus, evaluated here on a specific bank core.
 
+## The other H9 core has a different switch geometry
+
+For S5b=(2,4,25,3,11), the singleton cuts at vertices1 and2 have positive
+coordinates (60,9,8,1,17) and (66,15,8,1,23), respectively. These vertices
+again have the same Hamilton start/end data, but now
+
+    H_{2}(A,B)-H_{1}(A,B)=6(A+B+1)>0.
+
+There is no count-neutral line in the nonnegative quadrant. Thus equal
+ordinary endpoint data still loses the residual-path information that
+distinguishes cancellation in S5a from strict separation in S5b. Neither
+phenomenon follows from their shared uncoloured H=9 or L=84.
+
+## Actual reset probe and its stopping reason
+
+Set A=t+1,B=t in S5a. The two-arc surgery is then count-neutral. For
+t=0,...,7 its counts are 77,321,725,1305,2063,2961,4019,5289. The paired
+sources have different one-apex output supports, witnessed already by
+135 versus133 at H77 and515 versus513 at H321. Hence the operation changes
+future response while preserving current count.
+
+Two separate exact tests assess ternary return. First, every ONE-APEX
+attachment is enumerated: both H77 sources admit3H+2=233 and neither
+admits3H+4=235; for every tested t=1,...,7, neither member admits either
+target by one apex. Second, independently of this attachment test, the
+rooted two-bin count F is evaluated at every vertex. Both H77 sources
+are1-ready at vertex0 (F-H=1), and no other1/2-ready root occurs in any
+of the sixteen sources. Thus the standard two-birth reset is available
+there, while t=1,...,7 have no ready root. One-apex branch attainment and
+two-birth readiness are different predicates; neither is inferred from
+the other. These are finite tests on the named sources, not all-order
+impossibility statements. The changed response need not hit the required
+target. `reset_checks.json` retains all root defects, scopes and witnesses.
+
 ## Limits and next test
 
-The switch can alter readiness while preserving H on its zero line, but
+The switch changes future response while preserving H on its zero line, but
 the zero line depends on the selected context. It is not a universal
 reset between all realisers of an arbitrary count. To turn adjacent pairs
 into a Chan–Pak proof one still needs a construction whose LOWER count is

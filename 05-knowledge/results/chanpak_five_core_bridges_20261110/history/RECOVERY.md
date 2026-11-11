@@ -2,8 +2,11 @@
 
 **Status:** inherited PROVED/CITED results, new FINITE-EXACT small-tournament
 checks and an enumeration-assisted all-order core classification; proposed
-coverage and return mechanisms remain **OPEN**. This lane has two independent
-counting algorithms, not an independent-agent audit. Chan–Pak is not proved.
+coverage and return mechanisms remain **OPEN**. The small-core census has two
+independent counting algorithms. The compiler and selector have the separate
+[independent-agent audit](INDEPENDENT_AUDIT.md); other audited packet results
+are scoped in [the cross-lane report](../cover/AUDIT.md). This is not a blanket
+audit of every historical source. Chan–Pak is not proved.
 
 The history pass used the current worktree baseline `0f96e904a5`, targeted
 tracked theorem/result/reflection searches, and direct reads reaching back to
@@ -121,6 +124,19 @@ interfaces. This does not claim that readiness alone explains their
 indispensability in the larger one-apex compiler, but it rules out the
 scalar quotient for this concrete continuation query.
 
+The old ready interface is already one of the new compiler's coordinates:
+`F_r=I_{r}(+1)`, where the endpoint mark is the singleton set {r}. Both
+expressions sum `H(T minus V(P))` over nonempty directed paths P ending at r.
+The complete positive endpoint arrays are
+
+    S5a: [23,21,11,9,11],
+    S5b: [25,15,9,16,10].
+
+Each sums to75, the shared uncoloured K(+1). Only the first contains11,
+and only the second contains10. Thus the precise discarded coordinate
+behind this H/K collision is a singleton endpoint response; readiness is
+simply `I_{r}(+1)-H=2` or1. No new auxiliary invariant is being imposed.
+
 There is also a literal overlap with the older five-tail atlas. Its source
 word `11` is Q4 rooted at vertex 1; its word `11,01` is S5a rooted at vertex 2.
 The checker constructs the old chart with named r,a,b and chain vertices and
@@ -231,8 +247,7 @@ A golden triangle has angles 36,72,72 degrees, with equal side/base ratio
 `sin(72 degrees)/sin(36 degrees)=2cos(36 degrees)=phi`. A pentagon's
 diagonal/side ratio is the same phi. These are elementary geometry in
 Q(sqrt(5)); a triangle is not itself a five-element set. The C5 adjacency
-spectrum is `2,(1/phi)^2,(-phi)^2`, where superscript 2 here means
-multiplicity, not squaring the eigenvalue. Fibonacci transfer instead has
+spectrum is `2,1/phi,1/phi,-phi,-phi`. Fibonacci transfer instead has
 eigenvalues phi and -1/phi. The shared quadratic equation is a precise
 common algebraic ingredient; the operators and geometric objects differ.
 
@@ -392,6 +407,7 @@ must be kept separate.
 | Five historically troublesome aliquot starters | `{276,552,564,660,966}` in [the Lehmer-five note](../../collatz_aliquot_lehmer_five_20260927.md). | A historical computational frontier, not a finite classification theorem. Current unresolved status was not re-audited. |
 | Five Catalan bracketings | The four-letter associahedron. | Already an actual operation graph on C=2 tails, section 3; arbitrary attachments still require coherence and guards. |
 | Five familiar integer Terras cycles | Historical finite verification and special algebraic families, not proved exhaustion of all integer cycles. | Do not import their count as a global classification; no source-return mechanism follows. |
+| Exactly five O/Z runs to separate the factors of F5 | [Five-run threshold](../../session219_fermat_totient_chanpak_20261107/fermat/FIVE_RUN_THRESHOLD.md): every at-most-four-run closure with6700417 dividing H also has641 dividing H, while `O^31 Z^15 O^9 Z^5 O^9` separates them. | This is an actual minimal recipe-complexity theorem, supported by an inherited complete finite modular lemma and explicit physical witness. It is distinct from five known Fermat primes. A fixed run bound still has only polylogarithmic address capacity, so the five-run repair is not a global coverage theorem. |
 | Fivefold A4 Fourier coordinates | Physical and conjugate complex embeddings at fifth roots of unity; retained internal coordinate restores a discrete lattice/window. [Fivefold boundary](../../fivefold_boundary_20261018g.md). | Exact analogy for a lost sidecar: a pretty planar projection is nondiscrete unless its conjugate constraint is kept. |
 | Petersen five-spoke contraction | Contracting the spokes gives K5; integral cycle flows lift only with restored spoke-divergence data, and energy has a correction. Same source. | Offers the concrete method “quotient plus boundary defect”, relevant to endpoint-coloured core compression. |
 
@@ -470,6 +486,35 @@ test it against the smallest incompatible example.
 
 These are open proof obligations with cheap discriminating tests. None is
 presented as a proof that five cores suffice at every height.
+
+## Incoming Session252: complement rather than rediscovery
+
+While this lane was running, `cb7a17db97` published
+[Session252's historical atlas](../../session252_fivefold_bridges_20261111/HISTORICAL_ATLAS.md)
+and [golden/ADE proof](../../session252_fivefold_bridges_20261111/golden/PROOF.md).
+The overlapping March-to-November recovery is inherited rather than claimed
+as a new discovery. That incoming packet supplies an explicit polynomial
+upper-triangular gluing algebra, its associahedral pentagon, the
+triangle-arc-overlap fingerprints empty,A1,A2,A3,affine-A2 for the bank,
+and the golden ratio as the Perron value of the next stem member T6.
+Those results and their priority belong to the incoming packet.
+
+The concrete additions here are the complete strong-H<=9 classification,
+the five-versus-one fixed-point obstruction to a global-converse/Platonic
+identification, and the ready-root dictionary and exact resets in section2.
+The two pentagons have different predicates: the incoming **reassociation
+pentagon** preserves the full interface because matrix multiplication is
+associative; the recovered **ready-tail operation pentagon** changes the
+source and can change H, while transporting persistent vertices. They
+must not be conflated.
+
+There is a literal connection to the incoming golden stem. The first birth
+from Q4 at root3 is S5a. The second is
+`T6=(2,4,9,19,39,15)`, H17, exactly our 1-ready reset control. Thus one
+and the same actual T6 carries the incoming golden triangle-overlap
+observable and the inherited ready operation producing the Fermat count17.
+Its ready gaps still fail the next standard reset interface. This retains
+the geometric bridge and its source-return obstruction together.
 
 ## Reproduction and source scope
 

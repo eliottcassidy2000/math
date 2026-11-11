@@ -1,0 +1,309 @@
+{
+  "prefix_length": 2,
+  "scope": "All ordered two-vertex induced extensions of each specified actual source; no isomorphism filtering.",
+  "sources": [
+    {
+      "h": 141,
+      "hits": {
+        "425": [],
+        "427": []
+      },
+      "ordered_two_birth_universe": 131072,
+      "rows": [
+        126,
+        124,
+        88,
+        112,
+        32,
+        196,
+        144,
+        31
+      ],
+      "tail": [
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "h": 141,
+      "hits": {
+        "425": [],
+        "427": [
+          {
+            "deletion_counts": [
+              219,
+              181,
+              173,
+              173,
+              93,
+              33,
+              53,
+              27,
+              427,
+              141
+            ],
+            "first_outmask": 0,
+            "module_responses": [
+              {
+                "prefix_vertex": 0,
+                "run_coefficients": [
+                  219,
+                  427,
+                  206,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "uniform_remaining_prefix_lift": false
+              },
+              {
+                "prefix_vertex": 1,
+                "run_coefficients": [
+                  181,
+                  427,
+                  297,
+                  52,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "uniform_remaining_prefix_lift": false
+              }
+            ],
+            "rows": [
+              894,
+              380,
+              344,
+              336,
+              288,
+              972,
+              400,
+              799,
+              0,
+              350
+            ],
+            "second_outmask": 350
+          },
+          {
+            "deletion_counts": [
+              219,
+              181,
+              173,
+              173,
+              93,
+              33,
+              53,
+              27,
+              141,
+              427
+            ],
+            "first_outmask": 94,
+            "module_responses": [
+              {
+                "prefix_vertex": 0,
+                "run_coefficients": [
+                  219,
+                  427,
+                  206,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "uniform_remaining_prefix_lift": false
+              },
+              {
+                "prefix_vertex": 1,
+                "run_coefficients": [
+                  181,
+                  427,
+                  297,
+                  52,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "uniform_remaining_prefix_lift": false
+              }
+            ],
+            "rows": [
+              894,
+              636,
+              600,
+              592,
+              544,
+              972,
+              656,
+              799,
+              606,
+              0
+            ],
+            "second_outmask": 0
+          },
+          {
+            "deletion_counts": [
+              219,
+              181,
+              173,
+              173,
+              93,
+              33,
+              53,
+              27,
+              141,
+              427
+            ],
+            "first_outmask": 94,
+            "module_responses": [
+              {
+                "prefix_vertex": 0,
+                "run_coefficients": [
+                  219,
+                  427,
+                  206,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "uniform_remaining_prefix_lift": false
+              },
+              {
+                "prefix_vertex": 1,
+                "run_coefficients": [
+                  181,
+                  427,
+                  297,
+                  52,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "uniform_remaining_prefix_lift": false
+              }
+            ],
+            "rows": [
+              382,
+              124,
+              88,
+              80,
+              32,
+              460,
+              144,
+              287,
+              94,
+              511
+            ],
+            "second_outmask": 511
+          },
+          {
+            "deletion_counts": [
+              219,
+              181,
+              173,
+              173,
+              93,
+              33,
+              53,
+              27,
+              427,
+              141
+            ],
+            "first_outmask": 255,
+            "module_responses": [
+              {
+                "prefix_vertex": 0,
+                "run_coefficients": [
+                  219,
+                  427,
+                  206,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "uniform_remaining_prefix_lift": false
+              },
+              {
+                "prefix_vertex": 1,
+                "run_coefficients": [
+                  181,
+                  427,
+                  297,
+                  52,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "uniform_remaining_prefix_lift": false
+              }
+            ],
+            "rows": [
+              638,
+              124,
+              88,
+              80,
+              32,
+              716,
+              144,
+              543,
+              767,
+              94
+            ],
+            "second_outmask": 94
+          }
+        ]
+      },
+      "ordered_two_birth_universe": 131072,
+      "rows": [
+        126,
+        124,
+        88,
+        80,
+        32,
+        204,
+        144,
+        31
+      ],
+      "tail": [
+        2,
+        2,
+        1
+      ]
+    }
+  ]
+}

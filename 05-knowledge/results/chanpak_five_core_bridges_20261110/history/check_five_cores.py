@@ -91,6 +91,7 @@ def rooted_profiles(rows):
                     if all(rows[a] >> b & 1 for a, b in zip(p, p[1:]))]
              for mask in range(full + 1)}
     h = len(paths[full])
+    check(h == paths_dp(rows), "rooted permutation count disagrees with subset DP")
     result = []
     for r in range(n):
         s = sum(p[0] == r for p in paths[full])

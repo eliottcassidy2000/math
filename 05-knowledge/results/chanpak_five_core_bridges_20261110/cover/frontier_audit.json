@@ -1,0 +1,165 @@
+{
+  "bound": 427,
+  "literal_controls": 126,
+  "scope": "Independent even-directed-path cut polynomial for every labelled cut from all retained strong parents; exact frontier closure. All-order implication additionally uses the written strong-ear threshold proof.",
+  "sources": [
+    {
+      "all_labelled_children_match": true,
+      "cyclic_two_ear_h": 3237,
+      "h": 141,
+      "layers": [
+        {
+          "children_count": 25,
+          "count_histogram": {
+            "227": 1,
+            "245": 1,
+            "277": 4,
+            "293": 2,
+            "313": 1,
+            "337": 4,
+            "373": 1,
+            "375": 1,
+            "383": 1,
+            "385": 1,
+            "387": 2,
+            "389": 2,
+            "411": 1,
+            "417": 2,
+            "423": 1
+          },
+          "cuts_examined": 256,
+          "parent_count": 1
+        },
+        {
+          "children_count": 4,
+          "count_histogram": {
+            "381": 2,
+            "393": 2
+          },
+          "cuts_examined": 12800,
+          "parent_count": 25
+        },
+        {
+          "children_count": 0,
+          "count_histogram": {},
+          "cuts_examined": 4096,
+          "parent_count": 4
+        }
+      ],
+      "reached_counts": [
+        227,
+        245,
+        277,
+        293,
+        313,
+        337,
+        373,
+        375,
+        381,
+        383,
+        385,
+        387,
+        389,
+        393,
+        411,
+        417,
+        423
+      ],
+      "source_rows": [
+        126,
+        124,
+        88,
+        112,
+        32,
+        196,
+        144,
+        31
+      ],
+      "two_ear_lower_bound": 1410
+    },
+    {
+      "all_labelled_children_match": true,
+      "cyclic_two_ear_h": 3069,
+      "h": 141,
+      "layers": [
+        {
+          "children_count": 28,
+          "count_histogram": {
+            "227": 1,
+            "255": 1,
+            "277": 4,
+            "293": 1,
+            "303": 1,
+            "329": 2,
+            "337": 2,
+            "339": 1,
+            "353": 3,
+            "363": 1,
+            "371": 1,
+            "373": 1,
+            "387": 2,
+            "391": 1,
+            "403": 1,
+            "409": 1,
+            "415": 1,
+            "423": 2,
+            "427": 1
+          },
+          "cuts_examined": 256,
+          "parent_count": 1
+        },
+        {
+          "children_count": 4,
+          "count_histogram": {
+            "381": 2,
+            "411": 2
+          },
+          "cuts_examined": 14336,
+          "parent_count": 28
+        },
+        {
+          "children_count": 0,
+          "count_histogram": {},
+          "cuts_examined": 4096,
+          "parent_count": 4
+        }
+      ],
+      "reached_counts": [
+        227,
+        255,
+        277,
+        293,
+        303,
+        329,
+        337,
+        339,
+        353,
+        363,
+        371,
+        373,
+        381,
+        387,
+        391,
+        403,
+        409,
+        411,
+        415,
+        423,
+        427
+      ],
+      "source_rows": [
+        126,
+        124,
+        88,
+        80,
+        32,
+        204,
+        144,
+        31
+      ],
+      "two_ear_lower_bound": 1410
+    }
+  ],
+  "status": "PASS",
+  "total_cuts_examined": 35840
+}

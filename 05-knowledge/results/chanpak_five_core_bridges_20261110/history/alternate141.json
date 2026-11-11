@@ -1,0 +1,161 @@
+{
+  "status": "PROVED literal alternative source and scoped family; no general source-return theorem",
+  "parent": {
+    "rows": [
+      254,
+      508,
+      504,
+      240,
+      480,
+      448,
+      384,
+      256,
+      9
+    ],
+    "H": 141,
+    "order": 9,
+    "five_core_index": 0,
+    "out_mask": 0,
+    "A": 1,
+    "B": 61
+  },
+  "middle": {
+    "rows": [
+      766,
+      1020,
+      1016,
+      752,
+      992,
+      960,
+      896,
+      256,
+      521,
+      128
+    ],
+    "H": 215,
+    "new_outmask": 128
+  },
+  "child": {
+    "rows": [
+      1790,
+      2044,
+      2040,
+      1776,
+      2016,
+      1984,
+      1920,
+      1280,
+      1545,
+      128,
+      512
+    ],
+    "H": 425,
+    "new_outmask": 512
+  },
+  "converse_parent_root": 7,
+  "converse_ready_profile": {
+    "root": 7,
+    "s_start": 68,
+    "q_delete": 69,
+    "F_ordered_two_bins": 142,
+    "ready_gap": 1,
+    "joint_delta": 0
+  },
+  "family_m_ge_4": [
+    {
+      "m": 4,
+      "B": 13,
+      "source_H": 33,
+      "output_H": 101
+    },
+    {
+      "m": 5,
+      "B": 29,
+      "source_H": 69,
+      "output_H": 209
+    },
+    {
+      "m": 6,
+      "B": 61,
+      "source_H": 141,
+      "output_H": 425
+    },
+    {
+      "m": 7,
+      "B": 125,
+      "source_H": 285,
+      "output_H": 857
+    },
+    {
+      "m": 8,
+      "B": 253,
+      "source_H": 573,
+      "output_H": 1721
+    }
+  ],
+  "neutral_C4_value_intersections": [
+    {
+      "k": 1,
+      "H": 73,
+      "one_apex_ready_parameters_u": [
+        21,
+        23
+      ],
+      "cut_words": [
+        "1010100",
+        "1011100"
+      ]
+    },
+    {
+      "k": 2,
+      "H": 141,
+      "one_apex_ready_parameters_u": [
+        36
+      ],
+      "cut_words": [
+        "10010000"
+      ]
+    },
+    {
+      "k": 3,
+      "H": 277,
+      "one_apex_ready_parameters_u": [],
+      "cut_words": []
+    },
+    {
+      "k": 4,
+      "H": 549,
+      "one_apex_ready_parameters_u": [],
+      "cut_words": []
+    },
+    {
+      "k": 5,
+      "H": 1093,
+      "one_apex_ready_parameters_u": [],
+      "cut_words": []
+    },
+    {
+      "k": 6,
+      "H": 2181,
+      "one_apex_ready_parameters_u": [],
+      "cut_words": []
+    },
+    {
+      "k": 7,
+      "H": 4357,
+      "one_apex_ready_parameters_u": [
+        1140
+      ],
+      "cut_words": [
+        "1000111010000"
+      ]
+    },
+    {
+      "k": 8,
+      "H": 8709,
+      "one_apex_ready_parameters_u": [],
+      "cut_words": []
+    }
+  ],
+  "scope": "Alternative same-H realizer; no H-neutral native transformation from either hostile C4 source is supplied. Two births, not a one-birth certificate."
+}

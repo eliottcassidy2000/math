@@ -4,6 +4,25 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-10: Fermat Paley graph family excludes the first Fermat prime
+
+- **Affected source:** [FIVE_LADDER, section3](../05-knowledge/results/fermat_five_pepin_collatz_20261025/FIVE_LADDER.md).
+  Its claim that every Fermat prime is1 modulo4 incorrectly included `F_0=3`;
+  its consequent count of five known undirected Fermat–Paley graphs was off by one.
+- **Minimal witness and first failed implication:** modulo3, the nonzero square
+  is1 while -1=2 is not a square. The Legendre arc relation is antisymmetric,
+  giving `C_3`, rather than a symmetric undirected graph. The congruence
+  `2^(2^i)+1=1 mod4` requires `i>=1`.
+- **Repair and strongest survivor:** restrict the undirected graph, degree,
+  spectrum and self-complementarity statements to `i>=1`. The known graph
+  members have orders5,17,257,65537. Exactly five Fermat primes would mean
+  exactly four such graphs; both exhaustion assertions remain OPEN. The
+  five-prime ladder, constructibility and Pascal/product identities survive.
+- **Missing coordinate and new question:** retain the initial index i=0
+  before switching between symmetric and oriented quadratic-residue objects.
+  This repair adds no evidence about unknown Fermat primes or Chan–Pak.
+  Recovered during the [five-core history pass](../05-knowledge/results/chanpak_five_core_bridges_20261110/history/RECOVERY.md).
+
 ## 2026-11-10: Fortunate/Landau comparison, prepublication wording audit
 
 - Coordinate difference is not Euclidean distance: the Gaussian coordinates
