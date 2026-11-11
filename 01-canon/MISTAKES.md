@@ -24661,3 +24661,70 @@ For a closed-form value, grep the value itself in several spellings (`2^(-floor(
 `2^{-floor`) before grepping the words of the proof. (3) A row may be labelled exact only if its digits come from an
 exact count in this packet or are copied with their source; digits derived from rounded fractions are not exact.
 (4) A statement about a rate needs at least two orders beyond the plateau it replaces.
+
+## MISTAKE-761 (2026-11-11, opus-2026-11-10-S91; THM-5128, THM-5129, HYP-9660, HYP-9661 and `05-knowledge/results/s91_f1_local_densities_20261110/README.md` at the pre-audit checkpoints 6cf358fd9c and 661a2a7e52; found by the independent audit of seven auditors, record `05-knowledge/results/s91_f1_local_densities_20261110/audit/AUDIT_REPORT.md`) -- a class average named "the singular series", a by-value statement proved only for index boxes, numbers without receipts, and credit and reach stated beyond the evidence
+
+No stated theorem was found false. 7 verdicts PASS WITH CORRECTIONS; about twenty distinct MAJOR findings.
+
+- **MAJOR (statement).** THM-5128 (D3) named `prod_p (1 - 1/p^2 + [p | N + [sigma = 0]]/p)` "the singular series"
+  and the note used it for individual `N` ("the local factor at `p` depends only on whether `p` divides `N`").
+  What is proved is the class factor modulo a prime and its product over squarefree moduli. At an integer the
+  `p`-adic factor depends on `v = v_p(N + [sigma = 0])`: `(1 - p^-2) sigma(p^v)/p^v` for equidistributed states (exact
+  count; the audit's census modulo 9 gives `0.848, 1.229, 1.456` for `v = 0, 1, >= 2` where the stated factor gives
+  `1.222` for both divisible patterns). The series proper would be `(8/pi^2) sigma(n)/n`, `n` the odd part.
+- **MAJOR (status).** THM-5128 (E) typed PROVED that `N` is equidistributed on the odd classes modulo `2^j` "on each
+  sheet". The proof covered index boxes `h1, h2 < 2^n` only. By value its premise is false (for `h1 = 0`, `s = 0` the
+  classes of `y2` modulo 8 have shares `0.224, 0.258, 0.240, 0.278`); the conclusion for `N` is true, and the audit
+  supplied a proof with error `O(X^(7/8))`.
+- **MAJOR (numbers).** (i) "between `0.776` and `0.806` for the other primes up to 89": the rate at 79 is `0.7691`;
+  the cited script had never computed 71, 79, 83. (ii) "relative variance about `0.75`": that is the constant of
+  the registered tolerance, not a measurement (measured `0.39` to `0.56`; index of dispersion `2.8 / 3.1`).
+  (iii) `A_7` "about `0.006, 0.007`": partial sums at `2^26` of a series that reaches `0.0006, -0.0002` at `2^40`.
+  (iv) The note said 13 and 19 "show an excess far above the generic value": they are below it (`A_13 < 0`).
+  (v) "The poorest offsets are those with only two strong realisers": false (67 is the third poorest, six
+  classes), and the correlation had no committed receipt. (vi) A next-obligation gave orders 13 and 14 for the
+  strong tournaments with at most 513 and 1025 paths (12 and 13 by Busch). (vii) HYP-9660 (D) reported only the
+  decaying excess of class 0 at 3 and omitted the deficit of class 2, which does not move.
+- **MAJOR (credit).** THM-5128 (F) (`x = y` exactly at the fans) is THM-5126 (A) and THM-4748; the first-order
+  mechanism and the weights `w^0, w^1` are in the S82 note section 5, Session206, THM-4888 (C), HYP-9480 (A); the
+  rate scan for `q <= 120` and the extremality of `1/7` are the S82 note section 7 (where the failure of the
+  "worst prime power" rule is already visible). THM-5129 (A2): monotonicity of the strong floor, the insertion
+  lemma and the finite inventory of strong cores are THM-1370 (1)-(3), THM-4873 (iii), Session 24, THM-4744 (3),
+  THM-4884 (2); six of the seven "least exponents" of the 9-grid follow from `U >= D` (kind-pasteur, Proposition
+  4), only level 6 is new. The eight numbers of the directive were treated first by
+  odd_c_seed_symmetry_20261110 and kind-pasteur S22, and "qualifying" was defined first in EXTENSIONS.md; a
+  background fact was attributed to the multiset-dimension paper as its theorem.
+- **MAJOR (reach).** "A level of distribution", "the major-arc side is closed", "the local side is closed": nothing
+  is uniform in the modulus and prime powers are not treated. "Finite supply is the reason single-base windows
+  cannot work": a non sequitur (`|Delta(h)|` exceeds the window size from `h = 33` on, and the covered share rises
+  to `0.75` at 129). "No local obstruction" presented as a finding: KNOWN. "Exactly the dichotomy of THM-5128" for
+  the parity of `ord_p(2)`: numerology as mechanism. Sentences readable as progress on completeness.
+- **Caught by the session before the audit** (not in pushed canon): "a composite modulus has the rate of its worst
+  prime power" (false: 15, 93); a conjecture that every attained number is a head value (vacuous: `E = U = D` at a
+  sink); a 64-bit overflow of order-12 codes in source_supply_levels78.py (exposed by a failing check);
+  the exceptional set of HYP-9453 and the level 7-9 sources of kind-pasteur S22 were re-derived before the sweep
+  found them.
+- **Why it happened.** (1) The Euler product was written from the prime-modulus computation; no prime-power
+  modulus had been enumerated. (2) Only the box computation at 2 had been run; "by value" came from the
+  surrounding text. (3) A band was read off a script whose list of moduli was incomplete. (4) A tolerance constant
+  was reused as a measurement. (5) The prior-art sweep used the session's own vocabulary and predated two same-day
+  packets. (6) Summary sentences were written from the intended picture, not from the tables beneath them.
+- **Repaired (S91).** All findings were applied by five editors and five verifiers, one pair per document, and cross-checked by
+  the session. THM-5128: (D3) restated (class factors modulo a prime and squarefree-level product PROVED; exact
+  factor `(1 - p^-2) sigma(p^v)/p^v` for uniform states modulo `p^k`; by-value law at odd prime powers NUMERICAL;
+  the series `(8/pi^2) sigma(n)/n` conditional); (E) restated with the audit's by-value proof and the period-12
+  law of the mod-4 sums; rate band, dispersion, `A_7` and the first-order remainders corrected, each with a
+  receipt; credits added. THM-5129: credits added, the bound `j >= s - 3` attributed, level 6 kept as the one new
+  exponent, windows typed OPEN for large `h`, the rows of (F) typed as lower bounds, the lists at the offsets 129
+  and 257 added and recomputed by the audit. HYP-9660 (B), (C), (D) and HYP-9661 (B), (C), (D) corrected (the
+  verification added an all-order answer to HYP-9661 (C) below 382,688). The note: sections 0 to 8. Receipts
+  added: `rates_exact/rates_by_modulus.txt`, `rooted_spectrum/slope_lists_le73.txt`, section (6) of
+  `source_supply.out`, the counts in `source_witnesses.out`, `blind_proof/BLIND_DERIVATION.md` and
+  `check_blind_proof.out`. HYP-9657: the correction of MISTAKE-758 completed with the by-value prior statements.
+  The registered files (PREREGISTRATION.md, window_split.py, line_density_order10.py) were not edited.
+- **Lesson.** (a) A local density at an integer is not established until a prime-power modulus has been
+  enumerated: test `p^2` before writing an Euler product in `N`. (b) "By value" and "by index" are different
+  orderings; test a statement in the ordering in which it is typed. (c) A range statement needs a receipt that
+  lists every member of the range. (d) A constant chosen for a tolerance is not a measurement. (e) Before writing
+  "the reason X cannot work", check that the bound excludes X at the sizes computed. (f) Read the table under a
+  summary sentence before keeping the sentence.
