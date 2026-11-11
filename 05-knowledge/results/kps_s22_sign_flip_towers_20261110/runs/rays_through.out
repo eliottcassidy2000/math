@@ -1,0 +1,25 @@
+pairs read: 62422
+N = 7: 0 rays r + 2^t M (t >= 1) through it
+N = 21: 0 rays r + 2^t M (t >= 1) through it
+N = 13: 15 rays r + 2^t M (t >= 1) through it
+     13 = 1 + 2^1 * 6   (base of order 3, code 5, out-set mask 3, H(B) = 3)
+N = 19: 17 rays r + 2^t M (t >= 1) through it
+     19 = -1 + 2^2 * 5   (base of order 3, code 0, out-set mask 5, H(B) = 1)
+     19 = -1 + 2^1 * 10   (base of order 4, code 0, out-set mask 10, H(B) = 1)
+     19 = 5 + 2^1 * 7   (base of order 4, code 34, out-set mask 4, H(B) = 5)
+     19 = -7 + 2^1 * 13   (base of order 4, code 0, out-set mask 13, H(B) = 1)
+N = 27: 110 rays r + 2^t M (t >= 1) through it
+     27 = 3 + 2^3 * 3   (base of order 3, code 5, out-set mask 1, H(B) = 3)
+     27 = 3 + 2^1 * 12   (base of order 4, code 9, out-set mask 8, H(B) = 3)
+     27 = 3 + 2^2 * 6   (base of order 4, code 40, out-set mask 2, H(B) = 3)
+     27 = -15 + 2^1 * 21   (base of order 4, code 9, out-set mask 15, H(B) = 3)
+     27 = -3 + 2^1 * 15   (base of order 5, code 640, out-set mask 5, H(B) = 3)
+     27 = -7 + 2^1 * 17   (base of order 5, code 0, out-set mask 17, H(B) = 1)
+N = 1039: 156 rays r + 2^t M (t >= 1) through it
+     1039 = -17 + 2^5 * 33   (base of order 5, code 144, out-set mask 19, H(B) = 3)
+     1039 = 7 + 2^3 * 129   (base of order 6, code 9313, out-set mask 36, H(B) = 29)
+     1039 = -9 + 2^3 * 131   (base of order 6, code 12897, out-set mask 26, H(B) = 25)
+     1039 = 15 + 2^3 * 128   (base of order 6, code 20612, out-set mask 34, H(B) = 31)
+     1039 = -17 + 2^4 * 66   (base of order 6, code 4608, out-set mask 38, H(B) = 3)
+     1039 = -17 + 2^3 * 132   (base of order 6, code 8865, out-set mask 25, H(B) = 29)
+control (no ray through 7 or 21): True

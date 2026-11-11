@@ -1,0 +1,4 @@
+depth <= 0: offset +1: 1 odd c <= 4097 ; offset -1: 0
+depth <= 1: offset +1: 1 odd c <= 4097 ; offset -1: 80
+depth <= 2: offset +1: 805 odd c <= 4097 ; offset -1: 80
+start states 12 ; offset -1 states with M a power of two: 0

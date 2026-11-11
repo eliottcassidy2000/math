@@ -70,3 +70,66 @@ Run: pure towers from the E1 start states, box `delta` in {1, 2}, `0 <= x <= 5`,
 - **R6a.** At least 4 of the eight numbers 5, 11, 23, 73, 85, 91, 95, 127 occur at even depth <= 6.
 - **R6b.** 5 does not occur.
 - **R6c.** `N_6' >= 1500`.
+
+## Outcomes of E1 and E2 (written after the runs; nothing above this line was changed)
+
+Runs: `runs/e1_d2.err`, `runs/e1_d4.err`, `runs/e1_d4.txt` (E1); `runs/e2_states_order_le7.txt`, `runs/e2_d2.err`,
+`runs/e2_d2.txt` (E2).
+
+- **E1.** `N_2 = 805`, `N_4 = 1612`; 1,330 odd `c <= 4097` occur with offset `-1` at depth <= 3.
+  - R1 (`300 <= N_4 <= 1400`): **FAILED**, the towers reach more than predicted.
+  - R2 (`N_4 >= 1.5 N_2`): **CONFIRMED** (1,612 against 1,207.5).
+  - R3 (no power of two as slope at odd depth <= 3): **FAILED**. 15 states of depth 3 have offset `-1` and slope
+    `2^23`, `2^24` or `2^25`; all 15 were rebuilt as tournaments and recounted by the transfer-matrix count
+    (`scripts/mersenne_towers.out`): `2^N - 1` paths on `N >= 24` vertices. (That `2^k - 1` is a path count for
+    `k >= 4` is KNOWN, THM-4748 (4); what the prediction missed is that a tower can have a power of two as slope.)
+  - R5 (least uncovered `c >= 3` is at most 13): **CONFIRMED**, it is 5. Uncovered up to 129: 5, 11, 23, 29, 73,
+    85, 91, 95, 127.
+- **E2.** Seeds for 1,872 and anti-seeds for 1,782 of the 2,049 odd `c <= 4097`.
+  - R4 (at least 3 of the 33 exceptional `c`): **CONFIRMED**, 32 of 33; the missing one is 3773.
+- **G3.** `300 <= N_4 < 1900`: the towers are reported as one mechanism among several.
+
+Not pre-registered (done after E1 and E2, reported as exploratory in the note): the transitive pair starts
+`(-1, 0, 3, 1)` and `(-1, 0, 5, 1)` (`runs/e1x_d3.txt`); starts of order 8 (`runs/e2o8_d2.txt`) and three levels
+(`runs/e2_d3.txt`); pairs of order 9 for the certificates. With them every odd `c <= 4097` has a seed and an
+anti-seed (`certs_plus.txt`, `certs_minus.txt`, each recounted).
+
+## Outcome of E3 (written after the run)
+
+Run: `runs/e3_d6.err`, `runs/e3_d6.txt` (about two and a half hours of one core). `N_2' = 614`, `N_4' = 1357`,
+`N_6' = 1592` odd `c <= 4097` with offset `+1`; 1,554 with offset `-1` at depth <= 5.
+
+- R6a (at least 4 of the eight numbers): **FAILED**. Three occur at depth 6: 5 (slope `5 * 2^32`), 73 (`73 * 2^31`),
+  85 (`85 * 2^30`). 11, 23, 91, 95, 127 do not occur.
+- R6b (5 does not occur): **FAILED**. So the line `1 + 5 * 2^s` has a pure-tower seed with seven closers.
+- R6c (`N_6' >= 1500`): **CONFIRMED** (1,592).
+
+Reading: both failures go in the same direction as R1 and R3 (the towers reach more than expected), and depth six
+adds 235 values of `c` to the 1,357 of depth four in this box; the reach is still growing with depth.
+
+## E4 - sources for the 9-grid from the gadget law (added 2026-11-11, pushed before the run)
+
+Context (owner's continuation: reusable source interfaces and the domination-defect inequality of Sessions 260-261).
+Session261 realises `N(9, r, s) = 1 + 2^s + 9 * 2^(r+s)` for all `r >= 1` and `s <= 6` from singleton-marked sources
+`(D, U)` = (offset, slope) with `D = 1 + 2^s` and odd part of `U` equal to 9, and leaves `s >= 7` open.
+
+Derived by hand before any run (THM-5130 (A) with a one-vertex out-set in a transitive tail): from a seed
+`(r, M, h, E) = (1, 2^k, h, E)` the gadget `(TT_a, {p})` gives the source
+
+    D = 1 + 2^(a+k),      U = 2^(a-p) (1 + h) + 2^(p+k) 3^(a-p) - [p = 1] E.
+
+With `p = a`: `U = 2^s + h + 1` (`s = a + k`), so the odd part of `U` is 9 exactly when `h + 1 = 2^(s-3)`, or
+`5 * 2^(s-2)`, or `7 * 2^(s-1)`; since `M >= 2 H(B)` only the first is possible, with `k = s - 2` or `s - 1`.
+Nothing below has been computed: no state `E` of the pairs with `(h, M) = (15, 2^k)`, no census of singleton sources
+of order 8 or 9, no pair with `H(B) = 31` and a power of two as slope.
+
+- **G1.** Some pair of order at most 8 with `(r, h, M) = (1, 15, 64)` and one gadget `(TT_a, {p})` give a source with
+  `D = 129` and odd part of `U` equal to 9 (level `s = 7`), confirmed by a literal recount.
+- **G2.** Among pairs `(B, {o})` with `B` of order at most 9 there are sources of the 9-grid for `s = 7` and for
+  `s = 8` (`H(B) = 129`, `257` and odd part of `U_B(o)` equal to 9).
+- **G3.** No pair of order at most 9 has `r = 1`, `H(B) = 31` and slope 64 or 128 (so level 8 does not come from
+  this mechanism at these orders).
+- **G4 (domination ray).** For every pair `(B, O)` with `B` of order at most 6, `M >= sum over nonempty S in O of
+  2^(number of out-neighbours of S outside O)`, with equality for transitive `B` and one-vertex `O`. (If my
+  computation of the dominating-set count of the closed tournament is right this is a consequence of the
+  inequality of Session261; the run checks the computation.)
