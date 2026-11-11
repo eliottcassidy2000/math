@@ -1,0 +1,7 @@
+{
+  "scope": "Exact finite controls; general theorem is the written pumping proof.",
+  "single_loop_prefix_suffix_checks": 1134,
+  "single_loop_words": 126,
+  "status": "PASS",
+  "two_input_signature_checks": 2816
+}

@@ -4,6 +4,14 @@
 The all-height covering statement and Chan–Pak remain OPEN. This note does
 not claim that the old alternating identity is new.
 
+**Concurrent provenance.** Before this packet's first push, Session252
+published its independent seven-coordinate reduction, rank-seven certificate,
+and associative join law in commit `cb7a17db97`; see its
+[algebra note](../../session252_fivefold_bridges_20261111/algebra/PROOF.md).
+Those conclusions are credited as concurrent prior publication. The present
+note adds the direct March THM-016 endpoint interpretation, explicitly
+nonnegative coordinates, and the seven physical reconstruction contexts (4).
+
 ## 1. Recover the March mechanism before changing coordinates
 
 The source is [THM-016, claim-b-alternating-sum](../../../../01-canon/theorems/THM-016-claim-b-alternating-sum.md),

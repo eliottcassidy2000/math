@@ -1,0 +1,6 @@
+{
+  "context_signature_checks": 8,
+  "literal_child_counts": 128,
+  "scope": "All eight core contexts; actual graph controls A,B in0..7. All-parameter proof by coefficient subtraction.",
+  "status": "PASS"
+}
