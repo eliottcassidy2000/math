@@ -1,0 +1,29 @@
+{
+  "source_commit": "1afe556196c741d5da96891f88c22c85288ff9ef",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "path": "01-canon/theorems/THM-3166-falling-factorial-order-join-path-colour-transform.md",
+      "sha256": "01abd5e2a0bb1fc617d3f2649534acfb7b05f00cc4fe7573deb18302997c9198"
+    },
+    {
+      "path": "01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md",
+      "sha256": "485f34b2186f3d7827c6c9ffc8305015b8f0fff66b0bd2ca76dceab08cdb3318"
+    },
+    {
+      "path": "05-knowledge/results/session253_cross_problem_frontiers_20261111/tournaments/PROOF.md",
+      "sha256": "60ac1b5fb2cb296b8b4d9eac54d5a85c8eb24626d85ae3fcaaf78bed5ae8c0bc"
+    },
+    {
+      "path": "05-knowledge/results/chanpak_five_core_bridges_20261110/alternatives/RESET.md",
+      "sha256": "97ed86dc83981ea8c4bc27d1db9269551fef9831d525098a9ec1a5b7b92cb0b6"
+    },
+    {
+      "path": "05-knowledge/results/chanpak_five_core_bridges_20261110/algebra/LOW_RATIO_FRONTIER.md",
+      "sha256": "61b54d1357fa20548b2a9048e34ec4f6c7b32f19850a258a79800cdb5a3003fb"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+EXPLICIT_MONOMIAL_ATTAINMENT d0..8,n=d..40; cases 333 PASS
+UNIVERSAL_BRACKET_VARIATION_IDENTITY=PASS
+ROW17_DEPTH 2 shape (207, 504) rank 143
+ROW17_DEPTH 3 shape (225, 811) rank 169
+ROW17_SELECTOR shape (120, 18) rank 7 kernel_degree_max 10
+ROW17_PIVOT_MINOR rows [56, 57, 58, 59, 60, 61, 62] cols [11, 12, 13, 14, 15, 16, 17] det 1/128
+HOSTILE theta=x^11 at n17: rejected; n-6 pattern fails; PASS

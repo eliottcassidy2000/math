@@ -1,0 +1,34 @@
+{
+  "inherited_head": "7b7c5965cc1e",
+  "sources": [
+    {
+      "path": "00-navigation/CURRENT-FRONTIER.md",
+      "scope": "Current LRC14 entry/synchronization frontier; remains open."
+    },
+    {
+      "path": "01-canon/theorems/THM-4112-antipodal-component-ancestry-chain-and-scale-separated-lrc-families.md",
+      "scope": "Proved component-ancestry comparison; not needed for the new Fourier proof."
+    },
+    {
+      "path": "01-canon/theorems/THM-4448-lrc14-general-shore-attachment-and-decoder-pair-cones.md",
+      "scope": "Proved protected-arc and common-dilation shore mechanism; comparison and inheritance."
+    },
+    {
+      "path": "01-canon/theorems/THM-4066-lrc14-diagonal-intercept-pullback-and-exact-affine-ray-closure.md",
+      "scope": "Proved intercept-retaining selected-shape affine closures; comparison only."
+    },
+    {
+      "path": "01-canon/theorems/THM-594-pair-overlap-law-mirsky-newman-floor.md",
+      "scope": "CLAIMED historical provenance only; corrected pair-overlap branch not used. All current analytic claims proved independently."
+    },
+    {
+      "path": "05-knowledge/reference/CORE-PAPERS.md",
+      "scope": "Cited lower-dimensional LRC through thirteen total runners; only the six-speed/seven-total case is needed in Corollary4."
+    },
+    {
+      "path": "01-canon/theorems/THM-357-lonely-runner-endpoint-protection-trichotomy.md",
+      "scope": "Closed-safe/open-danger convention and distinction between zero mass and empty safe set."
+    }
+  ],
+  "new_claims": "Proof sections2-4; no external priority claim"
+}

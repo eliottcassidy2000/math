@@ -1,0 +1,102 @@
+{
+  "cases": 1599,
+  "curvatures_seen": [
+    0,
+    1,
+    2
+  ],
+  "distinct_normal_form_states": 40,
+  "neutral_edge_surgery": {
+    "H": 37,
+    "after_K": 0,
+    "after_Q": [
+      0,
+      0,
+      24,
+      0,
+      12,
+      0,
+      1
+    ],
+    "after_rows": [
+      56,
+      9,
+      51,
+      4,
+      10,
+      26
+    ],
+    "before_K": 2,
+    "before_Q": [
+      0,
+      0,
+      22,
+      0,
+      14,
+      0,
+      1
+    ],
+    "before_rows": [
+      56,
+      9,
+      51,
+      36,
+      10,
+      18
+    ],
+    "edge": [
+      3,
+      5
+    ]
+  },
+  "normalizations_checked": 4052,
+  "same_exact_H_distinct_curvature": [
+    {
+      "H": 37,
+      "K": 2,
+      "Q": [
+        0,
+        0,
+        22,
+        0,
+        14,
+        0,
+        1
+      ],
+      "mask": 11356,
+      "n": 6,
+      "rows": [
+        56,
+        9,
+        51,
+        36,
+        10,
+        18
+      ]
+    },
+    {
+      "H": 37,
+      "K": 0,
+      "Q": [
+        0,
+        0,
+        24,
+        0,
+        12,
+        0,
+        1
+      ],
+      "mask": 15909,
+      "n": 6,
+      "rows": [
+        10,
+        4,
+        57,
+        50,
+        3,
+        19
+      ]
+    }
+  ],
+  "universe": "All labelled tournaments through order5 plus500 deterministic order6 samples"
+}

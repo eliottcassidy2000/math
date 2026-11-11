@@ -1,0 +1,15 @@
+DEPTH 2 shape (168, 400) rank 119 cokernel 49
+DEPTH 3 shape (184, 641) rank 142 cokernel 42
+TERMINAL15_KERNEL=span(1,x,...,x^9); selector shape (91, 16) rank 6
+DEPTH_NONZERO_MINOR rows [42, 43, 44, 45, 46, 47] cols10..15 det 1/64
+DEPTH16 2 shape (187, 451) rank 131 cokernel 56
+DEPTH16 3 shape (204, 724) rank 155 cokernel 49
+TERMINAL16_KERNEL=span(1,x,...,x^10); selector shape (105, 17) rank 6
+DEPTH16_NONZERO_MINOR rows [49, 50, 51, 52, 53, 54] cols11..16 det 1/64
+ROW16_QUOTIENT_DIM=7; RESPONSE_RANK=1; JOINT_RANK=11
+ROW16_RESPONSE_PRIMITIVE= [4495, 0, 870, 0, 540, 0, 600, 0, 1008]
+ROW16_MOMENTS_TO_10= [1, 0, 6/31, 0, 108/899, 0, 120/899, 0, 1008/4495, 0, 54432/103385]
+WEIGHT24_PAYER=y^8; moment= 1008/4495
+HOSTILES=x^11,...,x^16 are each unpayable; x^7 source invisible
+POSITIVE_CONTROL=coefficients 1..11, unique tangent after y8 payment; PASS
+GENERAL_QUOTIENT_CONTROLS=m2..20,d0..m-1; PASS

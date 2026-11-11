@@ -1,0 +1,40 @@
+{
+  "algebraic_arches": 100,
+  "exact_cross_incidence_pairs": 10000,
+  "palettes": {
+    "2": [
+      1,
+      0
+    ],
+    "3": [
+      6,
+      5
+    ],
+    "4": [
+      21,
+      20
+    ],
+    "5": [
+      52,
+      51
+    ],
+    "6": [
+      105,
+      104
+    ],
+    "7": [
+      186,
+      185
+    ],
+    "8": [
+      301,
+      300
+    ]
+  },
+  "scope": "rational hypotheses checked; exact radical-norm cross-incidence checked; all-r incidence proved in PROOF.md; matrix and literal colour counts agree",
+  "six_colour_channels_r3": [
+    1157625,
+    1124864
+  ],
+  "status": "PASS"
+}
