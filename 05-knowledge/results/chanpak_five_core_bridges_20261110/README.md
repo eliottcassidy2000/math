@@ -42,7 +42,7 @@ signed endpoint cancellation and recover it from small physical contexts.
 
 Every lane separates inherited theorem, new elementary deduction, finite exact
 evidence, conditional statement and open obligation. No scarce theorem ID is
-reserved. The results and final audit will be linked here after the lanes close.
+reserved. The completed results and final audit are linked below.
 
 ## Predeclared root probes
 

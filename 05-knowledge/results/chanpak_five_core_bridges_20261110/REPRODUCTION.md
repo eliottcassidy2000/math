@@ -73,9 +73,14 @@ No Lean formalization or unrestricted minimum-order claim is made.
 
 Initial baseline: `0f96e904a570`. Concurrent Session252 published its
 seven-coordinate reduction and interface algebra before this packet's first
-push, in `cb7a17db97`; our notes explicitly credit it. Later incoming boards
-for Session253 and `five_core_web_20261111` were read and retain their active
-status. No claims from those unfinished lanes are used as proved inputs.
+push, in `cb7a17db97`; our notes explicitly credit it. The final incoming
+integration through `46c7c46f3b` reads the completed scoped notes from
+Session253 and `five_core_web_20261111`: the integral observer lattices,
+factorial jets and two-ear residue cover, natural module flag and C5 switch,
+and the exact continuation analysis of our322 small-parent holes. Section5
+of the synthesis connects these results without treating their finite
+censuses as new independent audits by this packet. The incoming metagraph
+sequence packet is likewise retained with its stated finite-order scope.
 
 Historical theorem IDs are accompanied by paths. Corrected March/October
 fivefold claims are not revived. The Fermat Paley F0 exception was repaired

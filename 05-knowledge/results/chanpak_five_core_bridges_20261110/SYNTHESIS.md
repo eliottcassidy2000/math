@@ -172,6 +172,44 @@ The history pass also repairs a live error: F0=3 gives a Paley tournament,
 while only the other four known Fermat primes give undirected Paley graphs.
 The repaired original statement and mechanism are recorded in MISTAKES.
 
+### Final concurrent integration: what the other lanes add
+
+These are incoming scoped results read at the final merge through
+`46c7c46f3b`; their provenance and proofs remain in their own packets.
+
+The [Session253 integral calculation](../session253_cross_problem_frontiers_20261111/integral/PROOF.md)
+shows that K1,C3,S4 already span the full universal linear coefficient
+lattice, of index16 in Z^7. Their affine lattice additionally requires
+L=2 modulo10. Either H9 core removes this factor-five restriction; both
+together add no further affine direction. Yet their actual target holes
+differ. Thus the two H9 branches carry positive realization information
+that this integral invariant loses. The seven physical readings also obey
+one extra congruence modulo4 beyond their common parity.
+
+The [five-core web construction notes](../five_core_web_20261111/construction/PROOF.md)
+give the five module types a natural flag interpretation: six contiguous
+nonempty subquotients yield five types because one simple repeats. They
+also recover an actual C5 pentagon/pentagram cut switch with
+Delta J=z^2(z-1)(z^2+4z+2). Its positive specialization vanishes while its
+signed specialization is2, pinpointing information lost by a positive-only
+observer. This is a concrete fivefold operation with a retained central
+channel, rather than a cardinality identification between unrelated sets.
+
+The [continuation inverse](../five_core_web_20261111/fivefold/continuation/PROOF.md)
+uses our322 small-parent holes and all3560 H9 witnesses. Axis-only repair
+first fails at53707;1759233 first requires the shorter flank to be at
+least13. Constant chart-weight partitions also fail in the declared finite
+linear systems. These are exact pressure tests for a proposed descent;
+they do not establish a universal required flank length.
+
+Finally, the [Session253 tournament jet notes](../session253_cross_problem_frontiers_20261111/tournaments/PROOF.md)
+use the same two-ear H+Q2 identity as our low-ratio frontier. Transitive
+padding makes H=h+2^r Q2; two seed families cover every residue modulo
+every power of3, but contain only O(log X) actual values up to X. The same
+constructor therefore supplies modular surjectivity and, through its
+minimum cost, our exact source-preservation obstruction. The remaining
+integer-height/source-return requirement survives both descriptions.
+
 ## 6. The remaining proof obligation
 
 The most direct sufficient statement is still: every allowed odd N equals
