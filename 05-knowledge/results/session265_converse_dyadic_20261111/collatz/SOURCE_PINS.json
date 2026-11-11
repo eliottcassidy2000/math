@@ -1,0 +1,47 @@
+[
+  {
+    "path": "01-canon/theorems/THM-5130-sign-flip-towers-gadget-transfer-law-and-seeds-of-both-signs.md",
+    "commit": "17a27f63bbcaba9525e8ab7147ecc8267114662a",
+    "sha256": "ecbf4f5d1e7295073a1beb9d54fc18bc57cd7f450ca481acf997404d14f8d343"
+  },
+  {
+    "path": "05-knowledge/results/session264_constructive_20261111/control/PROOF.md",
+    "commit": "17a27f63bbcaba9525e8ab7147ecc8267114662a",
+    "sha256": "da7c45ced1cfe5a1da0a65074b088a6db1ecf91fd6489525267ba1a897a98e88"
+  },
+  {
+    "path": "session199/profinite-source-escape/PROOF.md",
+    "commit": "17a27f63bbcaba9525e8ab7147ecc8267114662a",
+    "sha256": "abcde17f087b53117ca4754d49984dfaaf920de621809363c040d0f5277a97bb"
+  },
+  {
+    "path": "session202/append-binary/D_INTERFACE.md",
+    "commit": "17a27f63bbcaba9525e8ab7147ecc8267114662a",
+    "sha256": "b4f3ffc053e8f32ee9182781af807e8d9bc6e69a4f3a96c97a0ec9d5ecfce57a"
+  },
+  {
+    "path": "01-canon/theorems/THM-4473-collatz-digit-chains-rotation-repunits.md",
+    "commit": "17a27f63bbcaba9525e8ab7147ecc8267114662a",
+    "sha256": "eead5a087206c0d89a34b3c25f67a8cafbb84639ff7cb9646faa191c674a3a80"
+  },
+  {
+    "path": "01-canon/theorems/THM-4604-collatz-words-are-the-reducible-locus-carries-are-the-extension-cocycle-and-traces-only-hear-the-tuning.md",
+    "commit": "17a27f63bbcaba9525e8ab7147ecc8267114662a",
+    "sha256": "b45fc4a6b7f1dd7ef2f9f63e1b219c72e69e87c4c5242aff44f3900c3466ae46"
+  },
+  {
+    "path": "01-canon/theorems/THM-4507-finite-valuation-collatz-potential-obstruction.md",
+    "commit": "17a27f63bbcaba9525e8ab7147ecc8267114662a",
+    "sha256": "afdf74ae12b502b77aa0fb025f65de2323eeeaa8b440dac2b17dd6cd819a8274"
+  },
+  {
+    "path": "01-canon/theorems/THM-4519-frequency-one-coefficient-carries-the-renewal-series.md",
+    "commit": "17a27f63bbcaba9525e8ab7147ecc8267114662a",
+    "sha256": "8981883073e95d82200c5b2f60673f12cbd8756953db066da195c6817eeb1803"
+  },
+  {
+    "path": "01-canon/theorems/THM-5133-flip-and-spin-kernel-signature-sign-tournaments-of-twisted-algebras-and-the-pg32-extremal-theorems.md",
+    "commit": "17a27f63bbcaba9525e8ab7147ecc8267114662a",
+    "sha256": "7e521cc1507c8f7da41fbeac875c401fe291d7d790d04548da80fef5031c8552"
+  }
+]

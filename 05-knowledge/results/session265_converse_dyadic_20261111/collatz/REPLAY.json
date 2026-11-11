@@ -1,0 +1,11 @@
+{
+  "normal_command": "python3 -B 05-knowledge/results/session265_converse_dyadic_20261111/collatz/controls.py",
+  "optimized_command": "python3 -B -O 05-knowledge/results/session265_converse_dyadic_20261111/collatz/controls.py",
+  "normal_passed": true,
+  "optimized_passed": true,
+  "results_identical": true,
+  "results_sha256": "076d123463ddef674d618286a059bb255a7a225188ea68c8a40fce517eb15e4d",
+  "source_sha256": "280bd5e5f7a78674baf8eccf649cfcf1e75e7ccd8dd121e9ac01718f50e590bd",
+  "new_mathematics_only": true,
+  "finite_universes": "See RESULTS.json and README.md; no old tournament census re-audit."
+}
