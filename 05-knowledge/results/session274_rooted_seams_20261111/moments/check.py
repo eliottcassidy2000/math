@@ -26,6 +26,14 @@ def mean(n):
    elif r:runs.append(r);r=0
   if all(x%2==0 for x in runs):ans+=2**len(runs)*math.factorial(n-s.bit_count())
  return Fraction(ans,2**(n-1))
+def mean_transfer(n):
+ A=[1];O=[0];E=[0]
+ for _ in range(n-1):
+  add=lambda a,b:[(a[i] if i<len(a) else 0)+(b[i] if i<len(b) else 0) for i in range(max(len(a),len(b)))]
+  A,O,E=add(A,E),[0]+add([2*x for x in A],E),[0]+O
+ F=add(A,E) if n>1 else A
+ return Fraction(sum(c*math.factorial(n-k) for k,c in enumerate(F)),2**(n-1))
+for n in range(1,16): assert mean(n)==mean_transfer(n)
 out={}
 for n in range(2,7):
  edges=[(i,j) for i in range(n) for j in range(i+2,n)]

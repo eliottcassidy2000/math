@@ -1,0 +1,13 @@
+{
+  "paired_root_inverse_cases": 5405,
+  "birth_sector_cases": 24,
+  "fan_recurrence_cases": 87,
+  "fan_universe": "all labelled n<=3, every root, t=1..3, lengths0..3",
+  "moment_order5": {
+    "0": "221/2",
+    "1": "227/2",
+    "2": "217/2",
+    "3": "109"
+  },
+  "status": "PASS"
+}

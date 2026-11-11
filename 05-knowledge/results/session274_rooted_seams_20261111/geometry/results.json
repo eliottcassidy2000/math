@@ -1,0 +1,118 @@
+{
+  "4": {
+    "sectors": 1,
+    "orbit_size": 8,
+    "common_profile_sum": [
+      32,
+      80,
+      48,
+      8
+    ],
+    "birth_sectors_per_parent_sector_by_root": [
+      4,
+      4,
+      4,
+      4
+    ],
+    "birth_multiplicity": 2,
+    "birth_complement_defect_is_cut_by_root": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "complement_in_same_sector": true
+  },
+  "5": {
+    "sectors": 4,
+    "orbit_size": 16,
+    "common_profile_sum": [
+      158,
+      552,
+      504,
+      160,
+      16
+    ],
+    "birth_sectors_per_parent_sector_by_root": [
+      8,
+      8,
+      8,
+      8,
+      8
+    ],
+    "birth_multiplicity": 2,
+    "birth_complement_defect_is_cut_by_root": [
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "complement_in_same_sector": false
+  },
+  "6": {
+    "sectors": 32,
+    "orbit_size": 32,
+    "common_profile_sum": [
+      928,
+      4192,
+      5184,
+      2464,
+      480,
+      32
+    ],
+    "birth_sectors_per_parent_sector_by_root": [
+      16,
+      16,
+      16,
+      16,
+      16,
+      16
+    ],
+    "birth_multiplicity": 2,
+    "birth_complement_defect_is_cut_by_root": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "complement_in_same_sector": false
+  },
+  "paired_root_compiler_children_by_root": {
+    "1": [
+      1
+    ],
+    "2": [
+      2,
+      2
+    ],
+    "3": [
+      8,
+      8,
+      8
+    ],
+    "4": [
+      64,
+      64,
+      64,
+      64
+    ],
+    "5": [
+      1024,
+      1024,
+      1024,
+      1024,
+      1024
+    ],
+    "6": [
+      32768,
+      32768,
+      32768,
+      32768,
+      32768,
+      32768
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "reproduction_matches": {
+    "constructions/RESULTS.json": true,
+    "geometry/results.json": true,
+    "moments/results.json": true,
+    "review/RESULTS.json": true
+  },
+  "doc_check": "agents/check_docs.py passed",
+  "scope": "new structural packet only; Chan-Pak OPEN"
+}
