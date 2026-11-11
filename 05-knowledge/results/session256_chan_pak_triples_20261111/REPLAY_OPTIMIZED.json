@@ -1,0 +1,56 @@
+{
+  "scope": "Session256 new-claim engines only",
+  "optimized": true,
+  "engines": [
+    {
+      "script": "history/probe_bank.py",
+      "receipt": "history/probe_bank.out",
+      "status": "PASS",
+      "source_sha256": "ce95f1d3fbaf1f11435eb8c6c200b5aa94e66b65263ab16b4537616c29846ac4",
+      "receipt_sha256": "6cf58cbe2e4635c33012f2c415d02d35b038f866295156eaa559c18e49e6eea1"
+    },
+    {
+      "script": "spinor/test_spinor.py",
+      "receipt": "spinor/results.json",
+      "status": "PASS",
+      "source_sha256": "abf840ab193c9284c3883edcd7a4273980a14311b4764494d562e977a022f503",
+      "receipt_sha256": "8496c51788bb55917378296dcb27dce8f1430c57cb8f4052aabb37dc29d0da53"
+    },
+    {
+      "script": "spinor/test_sorted.py",
+      "receipt": "spinor/sorted_results.json",
+      "status": "PASS",
+      "source_sha256": "d003a63b14aa50d69ef3a6f6116a75960b85a817a8a0496b12cd0467bfc4f6db",
+      "receipt_sha256": "086a7df313af5143f96db25725b05db350d03c2a4e3f2fcd9eda2cd7b7679d08"
+    },
+    {
+      "script": "gram/check.py",
+      "receipt": "gram/results.json",
+      "status": "PASS",
+      "source_sha256": "8ecad3d6593eec53dc5d47bda7b6a81f7ba69c0076c648eaeb3e606dd6c33c1c",
+      "receipt_sha256": "0e1d12c0d33d8150093360975280fb6aec05ccc3d773d238291c40da5304bfee"
+    },
+    {
+      "script": "compiler/engine.py",
+      "receipt": "compiler/results.json",
+      "status": "PASS",
+      "source_sha256": "39e5c1265aa2a884fcb59566f803a85dd17beb730a48658cb9194feff76e99f3",
+      "receipt_sha256": "4bbb935f3c4c7f8ad7ee047a082db1fa5b6344e690b47a14287382f4ff89ea27"
+    },
+    {
+      "script": "compiler/morphic_optimizer.py",
+      "receipt": "compiler/morphic_results.json",
+      "status": "PASS",
+      "source_sha256": "e22383946489ba08ecf4966732f3984989247382be7bc5e067a4e3fd92b4d215",
+      "receipt_sha256": "cbd017bb2ae3cb5d1abd5184702f8904fe75530f78e92ea41c359913fa63a609"
+    },
+    {
+      "script": "compiler/verify_morphic_certificate.py",
+      "receipt": "compiler/morphic_certificate_verified.json",
+      "status": "PASS",
+      "source_sha256": "ff5082f4b0059ac83f8efc086aef4a4fdb6f2a97a265be17fed2ee44cf2fa2f1",
+      "receipt_sha256": "b77234d318920b2477bb91a0cddbc38f93dd2d678f8652207da12041da980adb"
+    }
+  ],
+  "status": "PASS"
+}

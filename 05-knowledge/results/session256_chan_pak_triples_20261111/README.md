@@ -1,6 +1,6 @@
 # Primitive triples, ternary grammars, and Chan–Pak
 
-**Session256, 11 November 2026. ACTIVE research packet.**
+**Session256, 11 November 2026. COMPLETE research packet.**
 
 The session reconnects the repository's primitive-Pythagorean and ternary-tree
 work to literal tournament constructors. It imports prior claims at their
@@ -19,7 +19,18 @@ corpus. Chan–Pak remains **OPEN**.
 Completed mechanisms now include the [Berggren graph lift](spinor/PROOF.md),
 [all-height fibre optimizer](compiler/PROOF.md), [positive cyclic Gram
 geometry](gram/PROOF.md), and the [22-bridge inheritance atlas](history/README.md).
-The final synthesis and certificate manifest are being assembled.
+[Read the synthesis](SYNTHESIS.md) and [next research questions](OPEN_QUESTIONS.md).
+
+Run `python3 -B reproduce_all.py` here to replay seven new-claim engines.
+The complete modulo16 certificate records633 reachable representatives and
+checks1,899 same-label domination closures, proving the restricted morphic
+image misses13 and15 at every depth. These are not exclusions from general
+tournament counts. The historical atlas imports22 distinct bridges.
+
+[SOURCE_PINS.json](SOURCE_PINS.json), [MANIFEST.json](MANIFEST.json),
+[REPLAY.json](REPLAY.json) and [optimized replay](REPLAY_OPTIMIZED.json)
+record provenance and reproducibility. New local results are proved in
+notes, without independent canon promotion or literature-priority claims.
 
 Starting main: `bf945ba9470c5d7328f365715c3f59ebe93eb513`.
 

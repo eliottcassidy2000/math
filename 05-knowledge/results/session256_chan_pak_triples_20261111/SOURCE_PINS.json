@@ -1,0 +1,51 @@
+{
+  "session": 256,
+  "starting_main": "bf945ba9470c5d7328f365715c3f59ebe93eb513",
+  "scope": "Inherited claims retained at stated scope; no broad re-audit or canon promotion",
+  "sources": [
+    {
+      "path": "05-knowledge/results/session251_creative_completion_20261111/SYNTHESIS.md",
+      "read_ref": "bf945ba9470c5d7328f365715c3f59ebe93eb513",
+      "blob_sha": "13358eef264942f1415c007bf08984ce9727ed57"
+    },
+    {
+      "path": "05-knowledge/results/session251_creative_completion_20261111/ternary/PROOF.md",
+      "blob_sha": "221d323e6ba678471e471ddd393884a3e623fc3c",
+      "note": "Fetched by compiler lane, inherited formula"
+    },
+    {
+      "path": "05-knowledge/results/session255_modular_collatz_20261111/SYNTHESIS.md",
+      "read_ref": "bf945ba9470c5d7328f365715c3f59ebe93eb513",
+      "blob_sha": "6aa2f94a0430b5293cfb9319be33dc8b8de714a1"
+    },
+    {
+      "path": "05-knowledge/results/central_modular_chanpak_20261110/README.md",
+      "read_ref": "206e445797338638604337b8fc1f581f30be0e00",
+      "blob_sha": "e99b8649bdd722b0d8966aa2fd6bdad8e575acac"
+    },
+    {
+      "path": "05-knowledge/results/central_modular_chanpak_20261110/compiler/INCOMING_HEIGHT.md",
+      "read_ref": "206e445797338638604337b8fc1f581f30be0e00",
+      "blob_sha": "b9c136a0b06e8266e9a2ded7ffe7652bc0d04fe4"
+    },
+    {
+      "path": "05-knowledge/results/central_modular_chanpak_20261110/gauge/PROOF.md",
+      "read_ref": "206e445797338638604337b8fc1f581f30be0e00",
+      "blob_sha": "a6fc769702f6b229dc6374f93be41f1a397085e4"
+    },
+    {
+      "path": "history/SOURCE_PINS.json",
+      "note": "25 historical local source pins, full paths and SHA256; reference commit1b91742ce55a202b73c80d56561ba56d00b503a6"
+    },
+    {
+      "path": "05-knowledge/results/modular_centers_collatz_pell_20261111/README.md",
+      "read_ref": "0f674ffece36a42512114311f6d4d962e86b3df5",
+      "blob_sha": "f9e1e61f09ad19772cad6c187a98870ec72ae9e1"
+    },
+    {
+      "path": "05-knowledge/results/modular_centers_collatz_pell_20261111/TOURNAMENTS.md",
+      "read_ref": "0f674ffece36a42512114311f6d4d962e86b3df5",
+      "blob_sha": "b3bc303979a64a94c2d2ad9d0b6ef69d0b36cfd6"
+    }
+  ]
+}

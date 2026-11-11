@@ -1,6 +1,6 @@
 # Session256 concept board
 
-**ACTIVE.** New local mechanisms and creative transfers; no broad re-audit.
+**COMPLETE SESSION.** New local mechanisms and creative transfers; no broad re-audit.
 
 | Object | Retained coordinate | Goal | Missing step |
 |---|---|---|---|
@@ -18,3 +18,23 @@ responses; C3[TT2,TT2,TT2] has H45, not the illegal intercyclic value29;
 modular universality misses exact targets without height control. Least-used
 sidecars: complete cut substitution, endpoint-coloured response, positive
 path-cover jets, and source-dependent repair charts.
+
+## Results that changed the board
+
+The full Berggren tree now has an actual decorated-tournament lift, while
+sorting its cuts permanently loses class1 modulo3. Positive matrix-pair
+transitions extend the Pareto optimizer to substitution semigroups and give
+complete all-depth image obstructions. Eight flank probes and c+1 cyclic
+probes provide exact, different operation interfaces. The cyclic kernel is
+positive but has a different norm from the ordinary Pythagorean cone.
+Incoming main206e445 supplies signed-cancellation and bounded-suffix
+boundaries, preserving the need for unbounded carry or a different operation.
+
+Method cards used: hidden second coordinate; native operation carrier;
+coherent common driver; retain a family of Pareto-incomparable states;
+finite response interface before quotienting. No global method-card or
+canon promotion is claimed.
+
+Incoming main0f674ffe adds endpoint-dependent automorphism divisibility.
+It distinguishes a ternary operation-address tree from a recursively
+substituted ternary tournament and filters impossible physical sources.
