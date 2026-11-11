@@ -1,5 +1,7 @@
 # Chain-run lifting strengthens the component theorem
 
+**Later closure in this session:** [EXTENSION4.md](EXTENSION4.md) proves the universal quantitative and single-cycle inequalities. OPEN labels for those two targets below record the earlier research stage; Chan–Pak remains open.
+
 **PROVED all orders:** the quantitative defect inequality for every disjoint union of chain graphs, with arbitrary tournaments inside both shores. **OPEN:** the single-cycle domination conjecture introduced below. This is a continuation of `PATH_COVER_INTERFACES.md`, not a replacement of its biclique proof.
 
 ## 1. Even-path inventory

@@ -6,5 +6,8 @@
     "05-knowledge/results/unit_equality_quantized_guards_20261011e.md",
     "05-knowledge/results/simplex_cuboid_cyclotomic.md",
     "05-knowledge/results/planar_jc48_sep08_odd_retention_audit.md"
-  ]
+  ],
+  "pool": "sorted materialized 05-knowledge/results/**/*.md paths in the sparse worktree, excluding session260/session261; not the complete Git-tree pool",
+  "source_commit": "f92e070445e43c59f1252f2979db564df88d7b60",
+  "sampler": "Python random.Random(seed).sample(pool,4)"
 }

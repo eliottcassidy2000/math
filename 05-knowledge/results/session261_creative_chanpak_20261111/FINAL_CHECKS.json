@@ -1,0 +1,17 @@
+{
+  "scope": "Publication integrity and scoped new-proof review, not a blanket replay or audit of inherited claims.",
+  "documentation_check": "agents/check_docs.py passed",
+  "git_whitespace_check": "git diff --check passed before final freeze",
+  "json_files_parsed_before_manifest": 32,
+  "python_files_compiled_before_manifest": 38,
+  "relative_markdown_links": "All local relative links in this packet resolved.",
+  "focused_new_proof_review": "review/NEW_PROOFS.md: PASS at its stated interfaces; did not rerun all receipts.",
+  "last_constructive_extension": "18 literal graph controls and 16 fan controls; producer reported normal and optimized outputs identical.",
+  "not_performed": [
+    "Full equality-basis synthesis",
+    "A general Chan\u2013Pak proof",
+    "Re-audit of inherited repository results",
+    "Blanket rerun of every exploratory search"
+  ],
+  "final_incoming_transfer_review": "PASS: all-module obstruction to exact 9-grid offset sources, with inherited carrier formulas accepted."
+}

@@ -1,6 +1,6 @@
 {
   "seed": 2026111126101,
-  "selection": "random.Random(seed).sample(sorted git tracked Markdown pool excluding Chan-Pak/tournament/seed/pathcover/spectrum/session25/session260 names)",
+  "selection": "Python random.Random(seed).sample(pool,10), with git ls-tree -r --name-only HEAD ordering and the declared prefixes/exclusions",
   "pool_size": 13546,
   "paths": [
     "05-knowledge/results/egcp_20261109/audit2/AUDIT2.md",
@@ -13,5 +13,21 @@
     "05-knowledge/results/a000568_intransitivity_families_20261026/INTRANSITIVITY.md",
     "01-canon/theorems/THM-4556-the-mersenne-line-is-a-chain-of-debt-states-odd-shift-distance-2-adic-periodicity.md",
     "01-canon/theorems/THM-3781-common-step-three-by-three-danielewski-darboux-nonentry.md"
+  ],
+  "source_commit": "f92e070445e43c59f1252f2979db564df88d7b60",
+  "pool_prefixes": [
+    "01-canon/theorems/",
+    "05-knowledge/results/"
+  ],
+  "exclude_case_insensitive_substrings": [
+    "chanpak",
+    "chan-pak",
+    "hamilton",
+    "session25",
+    "session260",
+    "tournament",
+    "spectrum",
+    "seed",
+    "pathcover"
   ]
 }

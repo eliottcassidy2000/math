@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "scope": "Complete order6 classes and every one-vertex extension, all selected subsets; complete through order7, not an all-order exclusion",
+  "six_class_count": 56,
+  "presentations_tested": 3640,
+  "hit_presentations": {
+    "2": 101,
+    "3": 190,
+    "4": 36,
+    "5": 66,
+    "6": 14
+  },
+  "best": {
+    "2": {
+      "s": 2,
+      "rows": [
+        2,
+        4,
+        9,
+        3,
+        15,
+        31
+      ],
+      "O": 8,
+      "H": 5,
+      "W": 0,
+      "D": 5,
+      "U": 9,
+      "j": 0
+    },
+    "3": {
+      "s": 3,
+      "rows": [
+        0,
+        5,
+        9,
+        19,
+        39,
+        15
+      ],
+      "O": 1,
+      "H": 9,
+      "W": 0,
+      "D": 9,
+      "U": 9,
+      "j": 0
+    },
+    "4": {
+      "s": 4,
+      "rows": [
+        2,
+        4,
+        57,
+        3,
+        11,
+        27
+      ],
+      "O": 1,
+      "H": 17,
+      "W": 0,
+      "D": 17,
+      "U": 18,
+      "j": 1
+    },
+    "5": {
+      "s": 5,
+      "rows": [
+        2,
+        12,
+        25,
+        49,
+        35,
+        7
+      ],
+      "O": 1,
+      "H": 33,
+      "W": 0,
+      "D": 33,
+      "U": 36,
+      "j": 2
+    },
+    "6": {
+      "s": 6,
+      "rows": [
+        6,
+        12,
+        24,
+        33,
+        107,
+        7,
+        47
+      ],
+      "O": 64,
+      "H": 65,
+      "W": 0,
+      "D": 65,
+      "U": 288,
+      "j": 5
+    }
+  }
+}

@@ -117,8 +117,8 @@ with the same ordered cover vector. Wildcard: boundary-count kernels from a
 random historical source. Live board: unit defect / exact multiplier / marked
 boundary / cover content / hidden root menu / physical substitution.
 
-Random seed261771 sampled four files from the sorted2312 historical result
-Markdown paths, excluding sessions260/261; `random_sources.json` records the
+Random seed261771 sampled four files from the sorted2312 materialized historical result
+Markdown paths in the sparse worktree, excluding sessions260/261; `random_sources.json` records the
 actual pool and paths. The useful unrelated source was
 `unit_equality_quantized_guards_20261011e.md`: its boundary-count matrix and
 integer quanta suggested retaining the full extension-count interface and

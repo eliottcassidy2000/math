@@ -47,17 +47,58 @@ Our mixed2^m/3^m marked ladder, two-port profiles, and integral orbit gate
 all fail if those channels are collapsed into one scalar. The arithmetic
 classification is credited and kept separate from physical realizability.
 
-## 3. The aggregate inequality does not close the exchange graph
+## 3. Later independent closure of the exchange graph
 
-Incoming `exchange/PROOF.md`, `classification/EXCHANGE_IDEAS.md`, and
-`history/ENDPOINT_LEMMA.md` study a more structured injection that reserves
-old-path and dominating-cut fibres simultaneously. The incoming endpoint
-facts were developed independently; their broader source/target framework
-is retained as useful parallel work.
+The first incoming checkpoint left a stronger simultaneous reservation
+problem open. During the final freeze, concurrent checkpoint
+`5e12897d7b8cb86a465bcb9abefb612834168d51` arrived and is also preserved.
+Its `exchange/STARS.md` proves that every closed tree of the literal
+path–cut incidence graph is a star and at most one exists. It thereby
+reserves distinct newborn paths for all old paths and all but at most one
+dominating cut. This is an incoming independent proof, accepted at its
+stated scope, not a consequence of our aggregate inequality.
 
-Our even-component proof establishes the universal aggregate inequality
-without constructing that reserved-fibre matching. In particular it does
-not imply that every closed tree component of the exchange graph is a star,
-or automatically prove the proposed stronger bound on those components.
-Those questions remain open in this packet. A cardinal inequality and a
-fibre-respecting assignment are different assertions.
+Our even-component proof supplies positive local fibres and the stronger
+single-cycle bound; the incoming `exchange/DUAL_DEFECT.md` compares the
+same slack through its incidence decomposition. The formerly open
+closed-tree claim is therefore no longer listed as open. Neither proof
+makes an arbitrary increment freely selectable.
+
+## 4. A final transfer test: arbitrary modules still cannot make a 9-offset
+
+The later incoming `chanpak/OFFSET_TRANSPORT.md` proves three physical
+carriers for arbitrary nonempty tournament modules M. Write h=H(M) and
+q=Q₂(M), the ordered two-path count allowing empty slots. Their exact
+source responses are
+
+    (D,U)=(h+16q,24q), (h+4q,42q), (h+32q,35q).
+
+They implement reusable offset transport on transitive modules, and their
+physical tail and module growth operations commute. This is strictly more
+than a numerical family. It suggests trying to plug a new module into one
+of these carriers to extend our six completed levels of the 9-grid.
+
+**PROVED obstruction for this exact transfer.** None of the three carriers,
+with any nonempty module M, has simultaneously
+
+    D=1+2^s, U=9·2^j, for nonnegative integers s,j.
+
+For the second carrier, 42q cannot equal 9·2^j by divisibility by 7. For
+the third, 35q cannot equal it by divisibility by 5. In the first, equality
+forces j≥3 and q=3·2^k for k=j−3≥0. The two covers with one empty slot
+show q≥2h, while h≥1. Hence
+
+    48·2^k ≤ D−1=16q+h−1 ≤ (99/2)·2^k−1.
+
+Every number in this interval is strictly between 2^(k+5) and 2^(k+6),
+so D−1 is not a power of two. This proves the obstruction for every module
+order, without a bounded module census.
+
+**Transfer contract.** The source is the new arbitrary-module interface;
+the target is a Fermat-offset 9-grid source. We preserve the actual coupled
+statistics h and q instead of pretending to choose them independently.
+The decisive invariant is the empty-slot inequality q≥2h. The attempt
+fails for an entire module family. This does not prohibit accidental
+count intersections after a tail, another presentation of the same count,
+or a new quotient carrier. It sharpens the next constructive requirement:
+change the carrier, rather than insert a larger module into these three.

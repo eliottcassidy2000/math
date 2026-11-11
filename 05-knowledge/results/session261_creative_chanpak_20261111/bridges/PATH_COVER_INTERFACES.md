@@ -1,5 +1,7 @@
 # Domination components, ordered blocks, and a literal two-apex escape
 
+**Later closure in this session:** [EXTENSION4.md](EXTENSION4.md) proves the universal quantitative and single-cycle inequalities. OPEN labels for those two targets below record the earlier research stage; Chan–Pak remains open.
+
 **PROVED:** the quantitative defect inequality for disjoint unions of complete bipartite components; a weighted induced-biclique bound; exponential clone amplification; and an exact two-apex alternating family (the latter with an explicit finite integer matrix certificate).
 **FINITE-EXACT:** small controls and a continuation-state collision. **OPEN:** arbitrary bipartite quantitative defect and Chan–Pak coverage.
 

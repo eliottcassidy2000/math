@@ -57,3 +57,14 @@ Compressed maximal runs give finitely many nonnegative skeleton coefficients: on
 Expanding x=37C_2+72H confirms 37 times the claimed bilinear law equals xx'+329HH'. The cut injection counts (n+1)H distinct ordered two-slot covers with empty slots allowed: concatenation and cut position recover the original path. Thus x>=(37n+35)H, and the positive-definite norm gives finitely many positive integer candidates (x,h) and then a rigorous finite order bound. The integrality test and actual tournament enumeration retain the physical profile constraint.
 
 A nonnegative row offset forces n<=3; the four small isomorphism types and their stated profiles yield exactly the listed offsets. Thus the unique unit-offset row is genuinely all-order. The residue statement is correct because 37 is 2 modulo 7 and its inverse 4 is itself a quadratic residue. The chain increment formulas and exchanged sidecar agree with the all-chain expression. No numerical coefficient receipt was independently rerun, and no general coverage result is implied.
+
+## Final incoming-interface transfer
+
+A final narrow review accepted the new all-module obstruction in
+INCOMING_CONNECTIONS. Assuming the incoming responses
+(h+16q,24q), (h+4q,42q), (h+32q,35q), none can realize
+(D,U)=(1+2^s,9·2^j). Divisibility excludes the latter two. The first
+forces q=3·2^k and uses 1≤h≤q/2 to put D−1 strictly between consecutive
+powers 2^(k+5) and 2^(k+6). Parity of q is unnecessary. This checks only
+the new transfer, not the inherited carrier proofs, and excludes no other
+presentation or accidental target-count intersection. **PASS.**

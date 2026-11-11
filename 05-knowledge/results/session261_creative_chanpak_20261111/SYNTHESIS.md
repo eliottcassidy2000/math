@@ -1,6 +1,6 @@
 # Session261: creative routes through physical continuation states
 
-**11 November2026. Checkpoint3; final integration in progress. Chan–Pak remains OPEN.**
+**11 November2026. Final synthesis. Chan–Pak remains OPEN.**
 
 The requested longer session starts from Session260 at
 `f92e070445e43c59f1252f2979db564df88d7b60`, accepts its inherited machinery,
@@ -32,7 +32,7 @@ orders, and 2c!≥2^c. Closing through z gives the new odd cycles. The exact
 refinement has individually nonnegative fibres, retaining H(U−W).
 [Complete proof and focused controls](bridges/EXTENSION4.md).
 
-This is the session's strongest closure so far. It controls the unavoidable
+This is the session's strongest closure. It controls the unavoidable
 excess of the domination adapter; it does not prescribe an arbitrary exact
 Hamilton count, so Chan–Pak remains open.
 
@@ -77,6 +77,29 @@ supply the missing recurrent return. Genuine two-ended/converse controllers
 have a different exact resonance condition, and a physical alternating
 plus-only controller is constructed. A complete two-digit controller remains
 missing. [Fifth-wave theorem](wildcard/FIFTH_WAVE.md).
+
+## Final constructive extension: six complete levels of the 9-grid
+
+**PROVED:** for every r≥1 and every s=1,…,6, an explicit tournament has count
+
+    N(9,r,s)=1+2^s+9·2^(r+s).
+
+Level 1 uses an inherited product family. Levels 2 through 6 use actual
+singleton-marked offset sources with (D,U) equal to (5,9), (9,9), (17,18),
+(33,36), and (65,288), respectively. The exact selected-tail identity
+D+2^t U proves all r at once, without finite head exceptions. The supplied
+constructor emits every vertex and arc, with 18 literal graph controls.
+No claim of new numerical spectrum values or historical priority is made.
+
+The route was extended again rather than stopping at those sources. An
+all-position formula and classification for singleton marks in
+C₃[TT_n,1,1] proves that oddpart(U)=9 occurs only at n=2,3,4. Consequently
+that carrier cannot supply the missing uniform continuation. The s=5 and
+s=6 sources genuinely change the carrier. The complete bounded source
+search and a further one-vertex extension search have explicitly limited
+scope; they do not exclude higher-order sources.
+[Constructors and the all-order fan obstruction](constructors/NINE_OFFSET_EXTENSION.md).
+Levels s≥7 and a uniform family remain open in this packet.
 
 ## Additional advances after the first checkpoint
 
@@ -141,18 +164,20 @@ continuation state. Per-target decidability, dense finite ranges, an ambient
 matrix solution and a count-preserving trade without its host are each kept
 separate from a proof of Chan–Pak.
 
-## Current next attempts
+## Remaining obligations after the session
 
-1. Embed a marked module trade, or use a genuine same-q reselection, to leave
-   the old parity-separated L/R/G carrier.
+1. Turn the proved marked-module/reselection returns into both required
+   arithmetic digits, rather than only a changed port menu.
 2. Use the now-proved universal defect identity to classify equality and its
    hereditary obstruction patterns, then test a constructive consequence.
 3. Find physically reachable binary-return states, potentially with several
    control states and longer word blocks.
-4. Intersect the packing-resource language with the positive count compiler,
-   then transfer another random unrelated mechanism when these gates block.
+4. Construct a uniform 9-grid offset family beyond the six complete levels;
+   bounded source searches do not settle the higher levels.
+5. Use the exact packing and integral-state constraints to find reachable
+   productive states; neither relaxation supplies them automatically.
 
-The packet will receive further coherent checkpoints and a final synthesis.
+The completed packet records the repeated extensions and their precise stopping points.
 No numbered canon claim, external priority claim or Lean proof is asserted.
 
 ## Incoming work and scope preserved
@@ -161,7 +186,28 @@ Concurrent checkpoint `b42131e609ec` was preserved between our first and
 second publications. It classifies strict finite multiplicand saturation
 and completes every level of the d=35 grid. These are incoming results,
 not credited to this session. Its s=2 product construction is not asserted
-strong. Our universal scalar/odd-cycle inequality does not establish its
-stronger fibre-respecting closed-tree exchange bound, which remains open.
-The shared useful move is retaining nonunit offset data instead of throwing
-away a failed unit-seed family. See [incoming integration](INCOMING_CONNECTIONS.md).
+strong. Our universal scalar/odd-cycle inequality did not establish its
+stronger fibre-respecting closed-tree exchange bound. A later concurrent
+checkpoint, `5e12897d7b8c`, independently closes that bound and supplies
+three reusable physical offset transports with arbitrary-module interfaces.
+Those incoming results are preserved and credited, not re-audited here.
+
+We extended the new connection one more time: an all-module inequality
+proves that none of those three incoming carriers can directly supply the
+Fermat-offset source needed for our 9-grid, regardless of module order.
+This leaves a precise need for a different carrier, not a longer search
+inside the same interface. See [incoming integration and final obstruction](INCOMING_CONNECTIONS.md).
+
+## Evidence and close-out
+
+The session used four research lanes and13 recorded random-source draws,
+with repeated changes of representation after obstructions. The narrow new
+proof review passed the universal defect, equality basis, resource, spectral
+and kernel interfaces. Numerical controls are individually scoped; the review
+did not re-audit inherited work or rerun every receipt. See [research progression](RESEARCH_WAVES.md),
+[reproduction limits](REPRODUCE.md), and [source pins](SOURCE_PINS.json).
+
+Multiple non-force checkpoints preserve the concurrent main history. No
+numbered canon promotion, external novelty priority or Lean proof is claimed.
+The unresolved target is still a complete physical constructor for every
+allowed odd number, not a missing verification of the new inequalities.

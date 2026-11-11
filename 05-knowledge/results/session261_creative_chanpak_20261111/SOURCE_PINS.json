@@ -1,0 +1,13 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "starting_main": "f92e070445e43c59f1252f2979db564df88d7b60",
+  "inherited_frontier": "05-knowledge/results/session260_quasiperfect_chanpak_20261111/SYNTHESIS.md",
+  "checkpoint1": "79ec1b74a5a8e79ce04c21daaa6d39bd975e6b7b",
+  "incoming_preserved": "b42131e609ec7a66a3f41a49e6d87592e7b29069",
+  "checkpoint2": "40eba89fd50415570126027be442bbebdff81887",
+  "checkpoint3": "d42d89d3f95428c427385597609ea1620334d215",
+  "publication_mode": "GitHub connector, non-force update with expected head, fetched back to isolated worktree",
+  "random_provenance": "RESEARCH_WAVES.md and lane-specific JSON/Markdown ledgers",
+  "inheritance_policy": "Earlier inputs accepted at named scope; new claims have proofs and narrowly focused controls; no external novelty claim.",
+  "incoming_final_preserved": "5e12897d7b8cb86a465bcb9abefb612834168d51"
+}
