@@ -1,0 +1,350 @@
+{
+  "base_commit": "f2e03e29358d7a6e566f27f75794ec601d0449f5",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "sources": {
+    "05-knowledge/results/degree_local_tournament_enumeration_20261021/session22-enumeration/local_scale.py": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad",
+    "04-computation/a000568_gmp_enum_v4.c": "b9d6445b8dd7833e25fecb23707155b4e3d0a104888f3a1249fce96d4efb305a"
+  },
+  "new_sources": {
+    "counter.py": "75eeba6cfc3d244cacf789531fd57ad91570e097d066b1a08e4ffbfb16b32709",
+    "counter.cpp": "1c4d6f7654218e7dc14fdc81320abdc4e2a87cffdb58a3540a5a4ef37ace16ae"
+  },
+  "controls": "all targets 0..30 equal independent direct Burnside; switches3,9,15,999 and raw",
+  "scope": "single coefficient engines vs inherited full prefix; compiled C is single coefficient, one thread",
+  "benchmarks": [
+    {
+      "n": 80,
+      "seconds": {
+        "projective": [
+          0.013356130999454763,
+          0.011319119999825489,
+          0.01158660899818642
+        ],
+        "raw_single": [
+          0.011168185999849811,
+          0.011740526999346912,
+          0.011530314997798996
+        ],
+        "inherited_prefix": [
+          0.018234029001177987,
+          0.02093885299836984,
+          0.01976599699992221
+        ],
+        "cpp_projective": [
+          0.007091089999448741,
+          0.007138574997952674,
+          0.007591644000058295
+        ],
+        "cpp_raw": [
+          0.0075392370017652865,
+          0.008124736999889137,
+          0.006746466999175027
+        ],
+        "compiled_single": [
+          0.02742598900294979,
+          0.020930429000145523,
+          0.017938092001713812
+        ]
+      },
+      "medians": {
+        "projective": 0.01158660899818642,
+        "raw_single": 0.011530314997798996,
+        "inherited_prefix": 0.01976599699992221,
+        "cpp_projective": 0.007138574997952674,
+        "cpp_raw": 0.0075392370017652865,
+        "compiled_single": 0.020930429000145523
+      },
+      "statistics": {
+        "projective": {
+          "transitions": 13168,
+          "terminal_terms": 4907,
+          "peak_states": 1012
+        },
+        "raw_single": {
+          "transitions": 21833,
+          "peak_states": 1227
+        },
+        "inherited_prefix": {
+          "transitions": 36384,
+          "precomputed_transfers": 6753,
+          "peak_states": 1227
+        },
+        "cpp_projective": {
+          "seconds": 0.00473479,
+          "transitions": 18075,
+          "peak_states": 1012
+        },
+        "cpp_raw": {
+          "seconds": 0.00462902,
+          "transitions": 21833,
+          "peak_states": 1227
+        },
+        "compiled_single": {}
+      },
+      "answer_sha256": "920afd5b1e34b9d174dfce8652a8077a3610b6e0d4c1632dda1d62a332d4069d",
+      "answer_bits": 2766
+    },
+    {
+      "n": 120,
+      "seconds": {
+        "projective": [
+          0.08286060899990844,
+          0.07992374999957974,
+          0.07792256799802999
+        ],
+        "raw_single": [
+          0.08698105899748043,
+          0.0890816149985767,
+          0.0814573659990856
+        ],
+        "inherited_prefix": [
+          0.10583321600279305,
+          0.11540401799720712,
+          0.10895002599863801
+        ],
+        "cpp_projective": [
+          0.030643740999948932,
+          0.05017203099851031,
+          0.029751128000498284
+        ],
+        "cpp_raw": [
+          0.03477143200143473,
+          0.033563765999133466,
+          0.031185522999294335
+        ],
+        "compiled_single": [
+          0.7857186479996017,
+          0.7315384089997679,
+          0.7649755730017205
+        ]
+      },
+      "medians": {
+        "projective": 0.07992374999957974,
+        "raw_single": 0.08698105899748043,
+        "inherited_prefix": 0.10895002599863801,
+        "cpp_projective": 0.030643740999948932,
+        "cpp_raw": 0.033563765999133466,
+        "compiled_single": 0.7649755730017205
+      },
+      "statistics": {
+        "projective": {
+          "transitions": 105745,
+          "terminal_terms": 17385,
+          "peak_states": 6427
+        },
+        "raw_single": {
+          "transitions": 153595,
+          "peak_states": 6776
+        },
+        "inherited_prefix": {
+          "transitions": 202287,
+          "precomputed_transfers": 16651,
+          "peak_states": 6776
+        },
+        "cpp_projective": {
+          "seconds": 0.0265609,
+          "transitions": 123130,
+          "peak_states": 6427
+        },
+        "cpp_raw": {
+          "seconds": 0.0287138,
+          "transitions": 153595,
+          "peak_states": 6776
+        },
+        "compiled_single": {}
+      },
+      "answer_sha256": "eff86c13804fe546924315782802ef696f518941f1edba0f1d22abeb26b2441f",
+      "answer_bits": 6480
+    },
+    {
+      "n": 160,
+      "seconds": {
+        "projective": [
+          0.45966335000048275,
+          0.5486375510008656,
+          0.44385013799910666
+        ],
+        "raw_single": [
+          0.4468942160019651,
+          0.4963881080002466,
+          0.4938522250013193
+        ],
+        "inherited_prefix": [
+          0.5254160910008068,
+          0.5915632729993376,
+          0.5942479810000805
+        ],
+        "cpp_projective": [
+          0.21109110299948952,
+          0.19717552899965085,
+          0.24717245899955742
+        ],
+        "cpp_raw": [
+          0.19267407799998182,
+          0.2194740630002343,
+          0.2028673009990598
+        ]
+      },
+      "medians": {
+        "projective": 0.45966335000048275,
+        "raw_single": 0.4938522250013193,
+        "inherited_prefix": 0.5915632729993376,
+        "cpp_projective": 0.21109110299948952,
+        "cpp_raw": 0.2028673009990598
+      },
+      "statistics": {
+        "projective": {
+          "transitions": 549379,
+          "terminal_terms": 42236,
+          "peak_states": 24506
+        },
+        "raw_single": {
+          "transitions": 729391,
+          "peak_states": 27506
+        },
+        "inherited_prefix": {
+          "transitions": 844358,
+          "precomputed_transfers": 31449,
+          "peak_states": 27506
+        },
+        "cpp_projective": {
+          "seconds": 0.234216,
+          "transitions": 591615,
+          "peak_states": 24506
+        },
+        "cpp_raw": {
+          "seconds": 0.197408,
+          "transitions": 729391,
+          "peak_states": 27506
+        }
+      },
+      "answer_sha256": "46ec4eb474ff59b77b7300d3620338402f23f2d7094dd23127da8e5e8e2bb226",
+      "answer_bits": 11775
+    },
+    {
+      "n": 200,
+      "seconds": {
+        "projective": [
+          2.2550834649991884,
+          2.124229764998745,
+          2.122492146998411
+        ],
+        "raw_single": [
+          2.2647766459995182,
+          2.149387374000071,
+          2.223537640998984
+        ],
+        "inherited_prefix": [
+          2.528316560001258,
+          2.5023503960001108,
+          2.3748269679999794
+        ],
+        "cpp_projective": [
+          1.204788565999479,
+          1.095603049001511,
+          1.0036503500014078
+        ],
+        "cpp_raw": [
+          1.1066157470013422,
+          1.0994877880002605,
+          1.1550603860014235
+        ]
+      },
+      "medians": {
+        "projective": 2.124229764998745,
+        "raw_single": 2.223537640998984,
+        "inherited_prefix": 2.5023503960001108,
+        "cpp_projective": 1.095603049001511,
+        "cpp_raw": 1.1066157470013422
+      },
+      "statistics": {
+        "projective": {
+          "transitions": 2222489,
+          "terminal_terms": 83727,
+          "peak_states": 96836
+        },
+        "raw_single": {
+          "transitions": 2770773,
+          "peak_states": 96836
+        },
+        "inherited_prefix": {
+          "transitions": 2994814,
+          "precomputed_transfers": 51374,
+          "peak_states": 96836
+        },
+        "cpp_projective": {
+          "seconds": 0.996168,
+          "transitions": 2306216,
+          "peak_states": 96836
+        },
+        "cpp_raw": {
+          "seconds": 1.1407,
+          "transitions": 2770773,
+          "peak_states": 96836
+        }
+      },
+      "answer_sha256": "f3b799a195877c94345f682c46fb0a70435c709002e80c6e7198fedde662013d",
+      "answer_bits": 18655
+    },
+    {
+      "n": 250,
+      "seconds": {
+        "projective": [
+          12.583525713998824
+        ],
+        "raw_single": [
+          12.943953285001044
+        ],
+        "inherited_prefix": [
+          13.955174200000329
+        ],
+        "cpp_projective": [
+          8.71347761600191
+        ],
+        "cpp_raw": [
+          9.045153359998949
+        ]
+      },
+      "medians": {
+        "projective": 12.583525713998824,
+        "raw_single": 12.943953285001044,
+        "inherited_prefix": 13.955174200000329,
+        "cpp_projective": 8.71347761600191,
+        "cpp_raw": 9.045153359998949
+      },
+      "statistics": {
+        "projective": {
+          "transitions": 10196347,
+          "terminal_terms": 165491,
+          "peak_states": 441859
+        },
+        "raw_single": {
+          "transitions": 12024202,
+          "peak_states": 441859
+        },
+        "inherited_prefix": {
+          "transitions": 12461024,
+          "precomputed_transfers": 83767,
+          "peak_states": 441859
+        },
+        "cpp_projective": {
+          "seconds": 8.69419,
+          "transitions": 10361838,
+          "peak_states": 441859
+        },
+        "cpp_raw": {
+          "seconds": 9.0314,
+          "transitions": 12024202,
+          "peak_states": 441859
+        }
+      },
+      "answer_sha256": "015625ad048df7e8ec9c899f433d58903128fe977f37c91ecccd24829c913373",
+      "answer_bits": 29489
+    }
+  ],
+  "post_timing_comment_correction": {
+    "counter.py_sha256": "63f8cab0e2ee3154aa004aff9b7f110e9c982291dadb2a867b2278aa9aac2049",
+    "description": "Only the coordinate comment was corrected to include division by2; executable statements are unchanged."
+  }
+}

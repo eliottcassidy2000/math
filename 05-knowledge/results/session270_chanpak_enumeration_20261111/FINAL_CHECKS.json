@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "full_atlas_replayed": true,
+  "checks": [
+    {
+      "check": "enumeration checksums",
+      "exit_code": 0,
+      "seconds": 0.003992634003225248,
+      "stdout_sha256": "7776e7703467e35e9241a553a70b53c925f46e0fa3d8703624e28f6902467b47"
+    },
+    {
+      "check": "chanpak checksums",
+      "exit_code": 0,
+      "seconds": 0.004131619996769587,
+      "stdout_sha256": "3d6a41d028a7ccb5c46c409a66fa5f091fc638da9e4cb871dc6350565e125b44"
+    },
+    {
+      "check": "final exact enumeration controls",
+      "exit_code": 0,
+      "seconds": 1.322442412001692,
+      "stdout_sha256": "c9fedddbd264e6c43326f5f74321cd9956640787f41557905077c64e156c0672"
+    },
+    {
+      "check": "new even-order residue formulas",
+      "exit_code": 0,
+      "seconds": 0.08433183599845506,
+      "stdout_sha256": "5a215de505b4518c1d69d7577c05328f44deff4fd5b3de3cfcc2d72d46e0f082"
+    },
+    {
+      "check": "marked classes and labelled path mass",
+      "exit_code": 0,
+      "seconds": 0.26438154599964037,
+      "stdout_sha256": "ea04ded7ef1db3b9d584447fedcbedd74fbb087782fa55fac8342a2023086124"
+    },
+    {
+      "check": "positive transfer small physical controls",
+      "exit_code": 0,
+      "seconds": 0.22378581399971154,
+      "stdout_sha256": "b0280794b973316ced65604e7ea39209d90c4ec6baffd9fa64a5e0e3f44f075f"
+    },
+    {
+      "check": "averaged GF and tomography",
+      "exit_code": 0,
+      "seconds": 0.36751976600135094,
+      "stdout_sha256": "e6cd19c4144be80dfbf27b02937b723964e51470ae6185abf336e1889ec45828"
+    },
+    {
+      "check": "all-word rational rank certificate",
+      "exit_code": 0,
+      "seconds": 2.543449626999063,
+      "stdout_sha256": "950ab08c6d7c8bc81e28d61083073137b9d146fdbaed8fac32ad6837fec68db4"
+    },
+    {
+      "check": "compile target999999",
+      "exit_code": 0,
+      "seconds": 0.24319022999770823,
+      "stdout_sha256": "cdb2eb4a400583f1de1504bb86e7629c46de50909c3e583a4b15176bab57b36a"
+    },
+    {
+      "check": "decode full atlas",
+      "exit_code": 0,
+      "seconds": 0.22584426600224106,
+      "stdout_sha256": "10fa22ff7a679fc09c10de547d80958f08f66ba29848ea0d98a767d6e859790a"
+    },
+    {
+      "check": "compile full atlas verifier",
+      "exit_code": 0,
+      "seconds": 0.6284075590010616,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "check": "complete atlas replay and subset checks",
+      "exit_code": 0,
+      "seconds": 1.070238784999674,
+      "stdout_sha256": "984ea172574ddf1d53e845178e6c6ccce5fb8ea622a8696f352b69c955a34d7f"
+    }
+  ],
+  "historical_inputs": "Inherited, not re-audited. New outputs independently checked in stated scopes."
+}

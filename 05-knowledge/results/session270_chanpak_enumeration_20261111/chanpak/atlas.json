@@ -1,0 +1,33 @@
+{
+  "scope": "marked two-apex G(2,0) words, all lengths 0..14; not tournament class counts",
+  "target_limit": 1000000,
+  "max_spine": 14,
+  "max_vertices": 16,
+  "attained": 499998,
+  "missing": [
+    7,
+    21
+  ],
+  "vertex_histogram": {
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 4,
+    "6": 12,
+    "7": 40,
+    "8": 143,
+    "9": 415,
+    "10": 1350,
+    "11": 4278,
+    "12": 13631,
+    "13": 43237,
+    "14": 137122,
+    "15": 297033,
+    "16": 2730
+  },
+  "certificate_format": "little-endian uint32 indexed by (N-1)/2, high4 bits spine length, low28 bits base4 word; FFFFFFFF absent",
+  "raw_sha256": "15e3be6c8a86ef9be38148904020c1afeb19f7f13be832aa9c5ed6b8a9b6a4e1",
+  "raw_bytes": 2000000,
+  "base85_characters": 1929695,
+  "visited_prefixes_with_repetition": 477218583
+}

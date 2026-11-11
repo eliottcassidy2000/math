@@ -1,22 +1,29 @@
-# Session270: faster tournament counts and state-returning constructions
+# Session270: exact queries and a million-target compiler
 
-**Status: ACTIVE RESEARCH, 11 November 2026. Chan–Pak remains OPEN.**
+**COMPLETE, 11 November 2026. Chan–Pak remains OPEN.**
 
-This packet develops exact A000568 counting engines and Hamiltonian-path
-construction grammars. A000568 counts ordinary tournament isomorphism classes;
-it does not count path values or classes after identifying converse.
+- Exact A000568 cache through 250, with all 251 coefficients independently
+  checked. A fresh maximum query including8,878-digit output takes about0.06s.
+- Fresh C++/GMP count at 200:1.096s median; at 250:8.713s single run.
+  Benchmarks separate preprocessing, arithmetic, output and inherited methods.
+- Every eligible odd Hamiltonian-path target through 1,000,000 has a saved
+  tournament witness on at most16 vertices, excluding7 and 21.
+- 36-state positive transfer and exactly minimal 17-dimensional rational
+  representation; general fixed-core averaged GF and cover tomography.
+- Marked-spine class recurrence, binomial-moment path mass, huge-index
+  three-bit queries, and accelerated constant-gcd Burnside sectors.
 
-New claims are kept in proved-in-note, finite-exact, inherited, and open
-categories. Source results are inherited rather than re-audited.
+[Full synthesis](SYNTHESIS.md) · [Reproduce](REPRODUCE.md) ·
+[Open questions](OPEN_QUESTIONS.md) · [Concept board](CONCEPT_BOARD.md).
 
-## Research lanes
+## Tools and proofs
 
-- `enumeration/`: exact response-state recurrence with eliminated terminal states.
-- `chanpak/`: a state-returning bounded-feedback construction grammar.
-- `terminal/`: arithmetic sector generating functions and elimination kernels.
-- `bridges/`: low-precision arithmetic and related exact transforms.
+- [Exact enumeration](enumeration/README.md)
+- [Chan–Pak finite compiler and new GF](chanpak/README.md)
+- [Common marked carrier](carrier/PROOF.md)
+- [Arithmetic residue query](bridges/PROOF.md)
+- [Constant-gcd kernels](terminal/PROOF.md)
 
-The final synthesis and reproducibility entry point will be added after the
-research artifacts and scoped implementation checks are complete.
-
-[Concept board](CONCEPT_BOARD.md) · [Source pins](SOURCE_PINS.json).
+Inherited mechanisms are credited. Finite coverage is not an all-target
+proof, marked classes are not unmarked classes, and the bounded cache is not
+a constant-time arbitrary-n algorithm.

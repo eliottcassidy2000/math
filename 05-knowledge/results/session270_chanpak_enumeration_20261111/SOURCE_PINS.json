@@ -36,6 +36,21 @@
       "path": "05-knowledge/results/degree_local_tournament_enumeration_20261021/session22-enumeration/local_scale.py",
       "git_blob": "d84499140936a3e542c6de979307dd23ebe3562f",
       "sha256": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad"
+    },
+    {
+      "path": "01-canon/theorems/THM-4878-graded-spine-grammars-cut-state-automaton-hankel-and-seam-ranks-cutwidth-censuses.md",
+      "git_blob": "9b915fad87f84149db4731713f5974eeb9e51950",
+      "sha256": "1d0c5cc189df6e81d52eaca63891e5a2af104939e437e072cafb796dc7f6c8f8"
+    },
+    {
+      "path": "05-knowledge/results/session98_tournament_growth_20261029/recurrence/PROJECTIVE_RESPONSE.md",
+      "git_blob": "553c1532071208aaa63426b72c479316d6c5be81",
+      "sha256": "9a7842df21867e9c7760505d6f91d37ebcee5902e43b27a16486054b9904c017"
+    },
+    {
+      "path": "04-computation/a000568_series_exact_s26.py",
+      "git_blob": "25edee5bbda4822785f0eafde595a8a2135bc60e",
+      "sha256": "e54b58b907a0c10c567e20a26932a0ac1b11ed2dbdd5d68fb6758ad1100972e8"
     }
   ]
 }

@@ -1,0 +1,31 @@
+{
+  "base_commit": "f2e03e29358d7a6e566f27f75794ec601d0449f5",
+  "source_sha256": {
+    "05-knowledge/results/degree_local_tournament_enumeration_20261021/session22-enumeration/local_scale.py": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad",
+    "05-knowledge/results/session239_sequence_engines_20261110/burnside/engines.py": "49c5d0f7ad9070ab0a332d09e8bb0622b44c9c985c28005c57faab9e3a938d30"
+  },
+  "max_n": 250,
+  "all_coefficients_compared": 251,
+  "degree_local_seconds": 17.37604322200059,
+  "independent_factorial_seconds": 45.8678631110015,
+  "file_sha256": "40137cd028d3826392d7f81caa1547d886170d917a1782cc404b26cf7c910d06",
+  "bytes": 730950,
+  "scope": "Precomputed exact table, not a faster general enumeration algorithm.",
+  "cold_read_verify_parse_seconds": [
+    0.022879799998918315,
+    0.019651452003017766,
+    0.018225463001726894,
+    0.017481938000855735,
+    0.0165620210027555
+  ],
+  "warm_lookup_seconds_per_query": 3.897651000443147e-08,
+  "cold_cli_max_query_seconds": [
+    0.06161416300165001,
+    0.07294336000268231,
+    0.05844147100287955,
+    0.06690662300024997,
+    0.057685425999807194
+  ],
+  "cold_cli_max_query_median": 0.06161416300165001,
+  "max_query_output_digits": 8878
+}
