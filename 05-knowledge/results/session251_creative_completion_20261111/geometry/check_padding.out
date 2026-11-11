@@ -1,0 +1,36 @@
+{
+  "branch_cases": 3888,
+  "labelled_attachment_checks": 33866,
+  "low_ratio_checks": 27006,
+  "low_ratio_unique_inversion_cases": 646,
+  "nontrivial_equality_example": {
+    "child": 9,
+    "h": 3,
+    "outset": 23,
+    "pair": [
+      4,
+      3
+    ],
+    "rows": [
+      4,
+      1,
+      2,
+      7,
+      15
+    ]
+  },
+  "one_sided_core_checks": 23100,
+  "singleton_interval_checks": 1484,
+  "threshold_hostile": {
+    "child": 5,
+    "h": 1,
+    "inversions": 2,
+    "outset": 2,
+    "rows": [
+      14,
+      12,
+      8,
+      0
+    ]
+  }
+}

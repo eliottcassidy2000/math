@@ -1,6 +1,6 @@
 # Creative routes to the Chan–Pak spectrum
 
-**Session251, 11 November 2026. ACTIVE research packet. Chan–Pak remains OPEN.**
+**Session251, 11 November 2026. COMPLETE research packet. Chan–Pak remains OPEN.**
 
 The objective is to construct tournaments with every positive odd number of
 Hamiltonian paths except 7 and 21. This session prioritizes new combinations
@@ -38,6 +38,11 @@ odd-cycle packing, and the integer carries of positive digit compilers.
 | Synthesis | Scalar induction versus source grammar | Target value under true maps | Compatible next source | Identify an explicit smaller open lemma |
 
 No statement is promoted to canon merely because it is suggested here.
-Each completed lane will include its proofs, sources, new executable tests
-and scope boundary. Final synthesis and reproduction instructions will be
-added in a later checkpoint.
+[Read the full synthesis](SYNTHESIS.md).
+
+Completed lanes: [five-core compiler and H173](ternary/PROOF.md),
+[monotone padding](geometry/PADDING_CUT_NORMAL_FORM.md),
+[safe cycle inflation](cycles/README.md), and
+[exact local images and height](gems/README.md).
+Run `python3 -B run_all.py` here; use `--optimized` for the optimized replay.
+The five-core all-height covering conjecture remains OPEN.

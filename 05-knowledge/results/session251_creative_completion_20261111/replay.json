@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "passed": true,
+      "receipts": {
+        "geometry/check_padding.out": "3a53438ccb9c18e870c48460eb3783ccac1433d35ce198df5bb48ce623f5d4ec"
+      },
+      "script": "geometry/check_padding.py"
+    },
+    {
+      "passed": true,
+      "receipts": {
+        "gems/receipt.json": "eb3bd854a5597a154bfd936f074b68c4a902884dd6cf32cefb1a59fdf06deb49"
+      },
+      "script": "gems/local_image.py"
+    },
+    {
+      "passed": true,
+      "receipts": {
+        "cycles/check.out": "20825ba813bb4b668fb71decd4f2335725a671aa4c26c6870733bb127819d8c9",
+        "cycles/results.json": "ed49acf0d3e3d659d087c6d9dd416007339e07ff71c2a903376ef91e5abcb4bd"
+      },
+      "script": "cycles/explore.py"
+    },
+    {
+      "passed": true,
+      "receipts": {
+        "ternary/results.json": "4008972a962944ebe2962a770ea0c201a9bd6370e4c2296ecb4e04f4c32c2c9d"
+      },
+      "script": "ternary/compiler.py"
+    },
+    {
+      "passed": true,
+      "receipts": {
+        "ternary/explore-results.json": "0a6b60b23c2d5d45cd9a7f939ba0eff0403442c7c27304d69c8401281244afa3"
+      },
+      "script": "ternary/explore.py"
+    },
+    {
+      "passed": true,
+      "receipts": {
+        "ternary/hole-repairs.json": "d22e4e92b5bc23a3b6564f3b6779503466325b231d36def9ea531b91781a5bb3"
+      },
+      "script": "ternary/repair_holes.py"
+    }
+  ],
+  "scope": "Six new engines; no inherited large census rerun."
+}

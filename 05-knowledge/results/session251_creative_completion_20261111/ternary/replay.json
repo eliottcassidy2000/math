@@ -1,0 +1,13 @@
+{
+  "normal_optimized_identical": true,
+  "receipt_sha256": {
+    "explore-results.json": "0a6b60b23c2d5d45cd9a7f939ba0eff0403442c7c27304d69c8401281244afa3",
+    "hole-repairs.json": "d22e4e92b5bc23a3b6564f3b6779503466325b231d36def9ea531b91781a5bb3",
+    "results.json": "4008972a962944ebe2962a770ea0c201a9bd6370e4c2296ecb4e04f4c32c2c9d"
+  },
+  "scripts_sha256": {
+    "compiler.py": "56c231002bb23fe56ced0455b0ffa4167fd4905f2aa38f313073d172d77cbc62",
+    "explore.py": "a4b74ca93ef616be1cf10202c5b9d156432bc400b9c6f18664cdf6dfc5767ee6",
+    "repair_holes.py": "20dc1109d76272e8bdd27b18919d3c99e791b832233e725af705ad115df60812"
+  }
+}

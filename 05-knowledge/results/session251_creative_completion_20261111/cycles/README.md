@@ -1,6 +1,6 @@
 # Intersecting-cycle inflation: exact Mersenne arithmetic and its boundary
 
-2026-11-11. **PROVED scoped construction; FINITE-EXACT five-template
+2026-11-11. **PROVED scoped construction; FINITE-EXACT five-vertex-template
 classification and controls; full Chan–Pak spectrum remains OPEN.**
 
 ## Result first

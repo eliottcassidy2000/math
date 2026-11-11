@@ -1,0 +1,4 @@
+01-canon/theorems/THM-002-ocf.md
+01-canon/theorems/THM-1900-the-insertion-response-calculus.md
+01-canon/theorems/THM-4177-root-split-johnson-current-and-source-sink-boundary-census.md
+01-canon/theorems/THM-5127-heat-flow-reading-of-the-w-polynomial-tilted-ensemble-mean-and-the-mod-four-quadratic-form-law-of-a-vertex-cube.md
