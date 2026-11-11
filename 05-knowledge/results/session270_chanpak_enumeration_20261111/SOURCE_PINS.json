@@ -1,0 +1,41 @@
+{
+  "base_commit": "f2e03e29358d7a6e566f27f75794ec601d0449f5",
+  "inherited_not_reaudited": true,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "git_blob": "4b8fdf59ea4efb044276cb17e9348f477cccba41",
+      "sha256": "c1e58986eaf9b07b01d9092328400bbcc25ed0e3db2e243ed0351906d996a5ea"
+    },
+    {
+      "path": "01-canon/theorems/THM-514-the-a000568-unit-tail-core-kernel-and-prime-tail-ladder.md",
+      "git_blob": "f9968cbf92c6ae62d1a5640d2d75d095a84f23a7",
+      "sha256": "da2cf8ca88a33c6ce1cb00dc9fe645da178e259ea360e03a3ac72daff76fccb9"
+    },
+    {
+      "path": "01-canon/theorems/THM-5097-factorial-gauge-integral-cycle-response-recurrence.md",
+      "git_blob": "2d3553d3c4445e243bca1a258eeb4aff43f41c46",
+      "sha256": "1f9d00b3eb481c6c926b9931cc136caf3ebde5a0d6bb5f04f4af18fa2081168e"
+    },
+    {
+      "path": "01-canon/theorems/THM-5098-precision-cycle-cutoff-and-normalized-tournament-congruences.md",
+      "git_blob": "b6baea23cbe357f3bb5e664db11fcca1eaf10de0",
+      "sha256": "883820532036c4caba28bc6f0cdbcf35c4bf05ae22036c93aae77fd85f1ff5fc"
+    },
+    {
+      "path": "05-knowledge/results/sequence_gf_20261110/SYNTHESIS.md",
+      "git_blob": "762520f8e2634fa049bd341dc90fc7e925f38b0a",
+      "sha256": "1c91d10e14750aa0e769351e68a0c5c9716d0f570dd2e3f603daafa7db58838f"
+    },
+    {
+      "path": "05-knowledge/results/session268_composable_tournaments_20261111/SYNTHESIS.md",
+      "git_blob": "abb4ade9205cc71ecf9538b5b8304aefd2b859bf",
+      "sha256": "2118fb8fc4cc85d5608102a5772991e608e358f5b4222641f27e3f1994097726"
+    },
+    {
+      "path": "05-knowledge/results/degree_local_tournament_enumeration_20261021/session22-enumeration/local_scale.py",
+      "git_blob": "d84499140936a3e542c6de979307dd23ebe3562f",
+      "sha256": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad"
+    }
+  ]
+}
