@@ -1,0 +1,27 @@
+{
+  "status": "FINITE-EXACT controls on all-address proof in PORTABLE_GAPS.md",
+  "literal_pair_controls": 32,
+  "universe": "A0..7,B0..3, both specified H13 cuts, every rooted coordinate by subset DP",
+  "J_singleton_counts_first_16": [
+    1,
+    1,
+    3,
+    5,
+    9,
+    17,
+    31,
+    57,
+    105,
+    193,
+    355,
+    653,
+    1201,
+    2209,
+    4063,
+    7473
+  ],
+  "J_recurrence_controls": 37,
+  "literal_ordinal_prefix_controls": 8,
+  "positive_controls": "A0 unit width; A1 width4; nonempty left/right flanks",
+  "boundary": "multiples of6 use an actual C3 ordinal prefix; absolute baseline compatibility remains open"
+}

@@ -1,0 +1,268 @@
+{
+  "status": "FINITE-EXACT controls of proved formulas",
+  "compiler_sha256": "56c231002bb23fe56ced0455b0ffa4167fd4905f2aa38f313073d172d77cbc62",
+  "signatures": {
+    "Q": [
+      13,
+      91,
+      -13,
+      50,
+      -8,
+      32,
+      -6,
+      18,
+      2
+    ],
+    "S5a": [
+      9,
+      75,
+      -9,
+      53,
+      -5,
+      34,
+      -2,
+      24,
+      4
+    ],
+    "S5b": [
+      9,
+      75,
+      -9,
+      50,
+      -4,
+      34,
+      -2,
+      23,
+      5
+    ],
+    "S4": [
+      5,
+      27,
+      -5,
+      21,
+      -3,
+      9,
+      -1,
+      6,
+      2
+    ]
+  },
+  "literal_tournaments": [
+    {
+      "k": 2,
+      "chart": "Q",
+      "B": 2,
+      "order": 8,
+      "state": [
+        123,
+        13,
+        167,
+        13
+      ]
+    },
+    {
+      "k": 2,
+      "chart": "S5a",
+      "B": 2,
+      "order": 8,
+      "state": [
+        123,
+        9,
+        163,
+        9
+      ]
+    },
+    {
+      "k": 2,
+      "chart": "S5b",
+      "B": 2,
+      "order": 8,
+      "state": [
+        123,
+        9,
+        163,
+        9
+      ]
+    },
+    {
+      "k": 2,
+      "chart": "S4",
+      "B": 11,
+      "order": 9,
+      "state": [
+        123,
+        5,
+        159,
+        5
+      ]
+    },
+    {
+      "k": 3,
+      "chart": "Q",
+      "B": 6,
+      "order": 9,
+      "state": [
+        277,
+        13,
+        321,
+        13
+      ]
+    },
+    {
+      "k": 3,
+      "chart": "S5a",
+      "B": 6,
+      "order": 9,
+      "state": [
+        277,
+        9,
+        317,
+        9
+      ]
+    },
+    {
+      "k": 3,
+      "chart": "S5b",
+      "B": 6,
+      "order": 9,
+      "state": [
+        277,
+        9,
+        317,
+        9
+      ]
+    },
+    {
+      "k": 3,
+      "chart": "S4",
+      "B": 27,
+      "order": 10,
+      "state": [
+        277,
+        5,
+        313,
+        5
+      ]
+    },
+    {
+      "k": 4,
+      "chart": "Q",
+      "B": 14,
+      "order": 10,
+      "state": [
+        585,
+        13,
+        629,
+        13
+      ]
+    },
+    {
+      "k": 4,
+      "chart": "S5a",
+      "B": 14,
+      "order": 10,
+      "state": [
+        585,
+        9,
+        625,
+        9
+      ]
+    },
+    {
+      "k": 4,
+      "chart": "S5b",
+      "B": 14,
+      "order": 10,
+      "state": [
+        585,
+        9,
+        625,
+        9
+      ]
+    },
+    {
+      "k": 4,
+      "chart": "S4",
+      "B": 59,
+      "order": 11,
+      "state": [
+        585,
+        5,
+        621,
+        5
+      ]
+    },
+    {
+      "k": 5,
+      "chart": "Q",
+      "B": 30,
+      "order": 11,
+      "state": [
+        1201,
+        13,
+        1245,
+        13
+      ]
+    },
+    {
+      "k": 5,
+      "chart": "S5a",
+      "B": 30,
+      "order": 11,
+      "state": [
+        1201,
+        9,
+        1241,
+        9
+      ]
+    },
+    {
+      "k": 5,
+      "chart": "S5b",
+      "B": 30,
+      "order": 11,
+      "state": [
+        1201,
+        9,
+        1241,
+        9
+      ]
+    },
+    {
+      "k": 5,
+      "chart": "S4",
+      "B": 123,
+      "order": 12,
+      "state": [
+        1201,
+        5,
+        1237,
+        5
+      ]
+    }
+  ],
+  "zero_set_universe": "0 <= B < 65536, all three replacement charts",
+  "zero_set": [
+    2,
+    6,
+    14,
+    30,
+    62,
+    126,
+    254,
+    510,
+    1022,
+    2046,
+    4094,
+    8190,
+    16382,
+    32766,
+    65534
+  ],
+  "shell_pairs": 2036,
+  "shell_universe": "2 <= k <= 11, every interior fibre",
+  "fold_cases": 1024,
+  "fold_universe": "0 <= prefix P < 64, all sixteen suffixes",
+  "hostile_controls": "Every B outside the classified ray in the stated universe fails all three aligned replacements; both suffix-lift orientations are retained.",
+  "coverage_claim": false
+}

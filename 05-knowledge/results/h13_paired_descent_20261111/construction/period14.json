@@ -1,0 +1,67 @@
+{
+  "word_search": [
+    {
+      "length": 2,
+      "ordered_word_pairs": 0
+    },
+    {
+      "length": 3,
+      "ordered_word_pairs": 0
+    },
+    {
+      "length": 4,
+      "ordered_word_pairs": 0
+    },
+    {
+      "length": 5,
+      "ordered_word_pairs": 0
+    },
+    {
+      "length": 6,
+      "ordered_word_pairs": 0
+    },
+    {
+      "length": 7,
+      "ordered_word_pairs": 0
+    },
+    {
+      "length": 8,
+      "ordered_word_pairs": 0
+    },
+    {
+      "length": 9,
+      "ordered_word_pairs": 0
+    },
+    {
+      "length": 10,
+      "ordered_word_pairs": 0
+    },
+    {
+      "length": 11,
+      "ordered_word_pairs": 0
+    },
+    {
+      "length": 12,
+      "ordered_word_pairs": 0
+    },
+    {
+      "length": 13,
+      "ordered_word_pairs": 0
+    },
+    {
+      "length": 14,
+      "ordered_word_pairs": 1568
+    }
+  ],
+  "chosen_pair": {
+    "new_word": "00000000000101",
+    "old_word": "00001001110101",
+    "new_drift_numerator": 18434,
+    "old_drift_numerator": 35450,
+    "denominator": 16383,
+    "weighted_drift_numerator": 460850
+  },
+  "synchronized_seed_box": 32767,
+  "synchronized_seeds": 227,
+  "exact_period14_returns": []
+}

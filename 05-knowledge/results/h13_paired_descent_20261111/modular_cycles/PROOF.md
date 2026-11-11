@@ -10,8 +10,11 @@ promoted as tournament theorems.
 The concrete new operation is a simultaneous same-count replacement of
 the H13 family's211/213 twins. It reduces their order from9 to8, raises
 their minimum deletion count from13 to25, and lowers their U coordinate
-from347 to269. After every nonempty common O/Z word it produces strictly
+from347 to269. After every common O/Z word containing Z it produces strictly
 smaller counts, by a known amount, while preserving the internal unit gap.
+Pure O words preserve H. The follow-up [restoration note](RESTORATION.md)
+gives a native root-change gap compiler and a second actual same-count
+meeting at 26649/26651.
 
 ## 1. The recovered modular idea that suggested the operation
 
@@ -215,6 +218,14 @@ This comparison is the main reusable result. It gives exact inequalities
 for replacing a source, including the coordinate that increases and the
 coordinate that decreases. Neither H alone nor a shared overlap spectrum
 would reveal this order.
+
+The accompanying [root-dynamics theorem](../dynamics/PROOF.md) strengthens
+this to arbitrary words in O, Z, and the root-changing birth J. In its
+positive coordinates `(H,U,U-d,H+U-E)`, old minus new is `(0,78,90,90)`.
+The reset therefore lowers H strictly once the common word contains Z
+or J, and otherwise preserves H. The later paired meeting in
+[RESTORATION.md](RESTORATION.md) has difference `(0,9686,9698,9698)`
+in the same coordinates.
 
 ## 6. The exact stopping boundary of the native search
 

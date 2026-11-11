@@ -1,0 +1,483 @@
+{
+  "status": "FINITE-EXACT controls for arbitrary-word iff proofs",
+  "universe": "All 0 <= B < 65536, all eight rules, no inherited target filters",
+  "compiler_sha256": "56c231002bb23fe56ced0455b0ffa4167fd4905f2aa38f313073d172d77cbc62",
+  "rules": {
+    "U0": {
+      "signature": [
+        5,
+        27,
+        -5,
+        21,
+        -3,
+        9,
+        -1,
+        6,
+        2
+      ],
+      "defect": [
+        8,
+        -4,
+        6,
+        -16
+      ],
+      "hits": [
+        2,
+        6,
+        14,
+        30,
+        62,
+        126,
+        254,
+        510,
+        1022,
+        2046,
+        4094,
+        8190,
+        16382,
+        32766,
+        65534
+      ]
+    },
+    "U1": {
+      "signature": [
+        5,
+        27,
+        -5,
+        5,
+        -1,
+        20,
+        -4,
+        4,
+        0
+      ],
+      "defect": [
+        8,
+        -8,
+        6,
+        -8
+      ],
+      "hits": [
+        0,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384,
+        32768
+      ]
+    },
+    "U2": {
+      "signature": [
+        5,
+        27,
+        -5,
+        22,
+        -4,
+        7,
+        -1,
+        6,
+        0
+      ],
+      "defect": [
+        8,
+        -7,
+        5,
+        -12
+      ],
+      "hits": [
+        4,
+        20,
+        36,
+        68,
+        132,
+        260,
+        516,
+        1028,
+        2052,
+        4100,
+        8196,
+        16388,
+        32772
+      ]
+    },
+    "L0": {
+      "signature": [
+        5,
+        27,
+        -5,
+        27,
+        -5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "defect": [
+        8,
+        0,
+        6,
+        -14
+      ],
+      "hits": [
+        1,
+        3,
+        7,
+        15,
+        31,
+        63,
+        127,
+        255,
+        511,
+        1023,
+        2047,
+        4095,
+        8191,
+        16383,
+        32767,
+        65535
+      ]
+    },
+    "L1": {
+      "signature": [
+        5,
+        27,
+        -5,
+        18,
+        -4,
+        6,
+        -2,
+        3,
+        1
+      ],
+      "defect": [
+        8,
+        -2,
+        6,
+        -8
+      ],
+      "hits": [
+        0,
+        3,
+        11,
+        19,
+        35,
+        67,
+        131,
+        259,
+        515,
+        1027,
+        2051,
+        4099,
+        8195,
+        16387,
+        32771
+      ]
+    },
+    "L2": {
+      "signature": [
+        5,
+        27,
+        -5,
+        22,
+        -4,
+        7,
+        -1,
+        6,
+        0
+      ],
+      "defect": [
+        8,
+        -6,
+        6,
+        -12
+      ],
+      "hits": [
+        2,
+        10,
+        18,
+        34,
+        66,
+        130,
+        258,
+        514,
+        1026,
+        2050,
+        4098,
+        8194,
+        16386,
+        32770
+      ]
+    },
+    "L3": {
+      "signature": [
+        5,
+        27,
+        -5,
+        20,
+        -4,
+        5,
+        -1,
+        4,
+        0
+      ],
+      "defect": [
+        8,
+        -5,
+        5,
+        -10
+      ],
+      "hits": [
+        6,
+        22,
+        38,
+        70,
+        134,
+        262,
+        518,
+        1030,
+        2054,
+        4102,
+        8198,
+        16390,
+        32774
+      ]
+    },
+    "L4": {
+      "signature": [
+        9,
+        75,
+        -9,
+        19,
+        -5,
+        35,
+        -7,
+        8,
+        0
+      ],
+      "defect": [
+        4,
+        -3,
+        -1,
+        10
+      ],
+      "hits": [
+        74,
+        146,
+        290,
+        578,
+        1154,
+        2306,
+        4610,
+        9218,
+        18434,
+        36866
+      ]
+    }
+  },
+  "literal_witnesses": [
+    {
+      "rule": "U0",
+      "B": 2,
+      "address": 11,
+      "order": 9,
+      "HP": 123
+    },
+    {
+      "rule": "U0",
+      "B": 6,
+      "address": 27,
+      "order": 10,
+      "HP": 277
+    },
+    {
+      "rule": "U0",
+      "B": 14,
+      "address": 59,
+      "order": 11,
+      "HP": 585
+    },
+    {
+      "rule": "U1",
+      "B": 0,
+      "address": 1,
+      "order": 6,
+      "HP": 33
+    },
+    {
+      "rule": "U1",
+      "B": 2,
+      "address": 5,
+      "order": 8,
+      "HP": 123
+    },
+    {
+      "rule": "U1",
+      "B": 4,
+      "address": 9,
+      "order": 9,
+      "HP": 213
+    },
+    {
+      "rule": "U2",
+      "B": 4,
+      "address": 4,
+      "order": 9,
+      "HP": 213
+    },
+    {
+      "rule": "U2",
+      "B": 20,
+      "address": 20,
+      "order": 11,
+      "HP": 907
+    },
+    {
+      "rule": "U2",
+      "B": 36,
+      "address": 36,
+      "order": 12,
+      "HP": 1601
+    },
+    {
+      "rule": "L0",
+      "B": 1,
+      "address": 1,
+      "order": 7,
+      "HP": 69
+    },
+    {
+      "rule": "L0",
+      "B": 3,
+      "address": 3,
+      "order": 8,
+      "HP": 133
+    },
+    {
+      "rule": "L0",
+      "B": 7,
+      "address": 7,
+      "order": 9,
+      "HP": 261
+    },
+    {
+      "rule": "L1",
+      "B": 0,
+      "address": 2,
+      "order": 7,
+      "HP": 31
+    },
+    {
+      "rule": "L1",
+      "B": 3,
+      "address": 14,
+      "order": 9,
+      "HP": 133
+    },
+    {
+      "rule": "L1",
+      "B": 11,
+      "address": 46,
+      "order": 11,
+      "HP": 415
+    },
+    {
+      "rule": "L2",
+      "B": 2,
+      "address": 10,
+      "order": 9,
+      "HP": 121
+    },
+    {
+      "rule": "L2",
+      "B": 10,
+      "address": 42,
+      "order": 11,
+      "HP": 455
+    },
+    {
+      "rule": "L2",
+      "B": 18,
+      "address": 74,
+      "order": 12,
+      "HP": 789
+    },
+    {
+      "rule": "L3",
+      "B": 6,
+      "address": 6,
+      "order": 9,
+      "HP": 275
+    },
+    {
+      "rule": "L3",
+      "B": 22,
+      "address": 22,
+      "order": 11,
+      "HP": 917
+    },
+    {
+      "rule": "L3",
+      "B": 38,
+      "address": 38,
+      "order": 12,
+      "HP": 1559
+    },
+    {
+      "rule": "L4",
+      "B": 74,
+      "address": 74,
+      "order": 13,
+      "HP": 3075
+    },
+    {
+      "rule": "L4",
+      "B": 146,
+      "address": 146,
+      "order": 14,
+      "HP": 6081
+    },
+    {
+      "rule": "L4",
+      "B": 290,
+      "address": 290,
+      "order": 15,
+      "HP": 12093
+    }
+  ],
+  "union_count": 106,
+  "first_uncovered_addresses": [
+    5,
+    9,
+    12,
+    13,
+    17,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    33,
+    37,
+    39,
+    40,
+    41,
+    42,
+    43
+  ],
+  "hostile_controls": "Every address outside each stated equality language is checked to have nonzero defect; the union is explicitly not exhaustive.",
+  "defect_transitions": "Both digits for every q in [0,255], all eight coefficient states",
+  "complete_spectrum_claim": false
+}

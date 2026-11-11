@@ -1,0 +1,636 @@
+{
+  "scope": "All fixed five-core cuts; p digit^m suffix with0<=p<=77 (empty prefix only for one loops),suffixlength<=7; A solved from exponential coefficient77*2^shift, shift0..6; originalrayindex m=looplength+shift. Exact matches to77*2^m-33 / -31.",
+  "counts": {
+    "-33": 0,
+    "-31": 21
+  },
+  "paired_matches": [],
+  "hits": {
+    "-33": [],
+    "-31": [
+      {
+        "shift": 0,
+        "core": "S5a",
+        "rows": [
+          2,
+          4,
+          9,
+          19,
+          7
+        ],
+        "cut": 20,
+        "A": 0,
+        "p": 0,
+        "loop": 1,
+        "suffix": 0,
+        "suffix_length": 1,
+        "B_coeff": [
+          2,
+          -2
+        ],
+        "g_coeff": [
+          1,
+          1
+        ],
+        "U_coeff": [
+          77,
+          9
+        ],
+        "d": 9
+      },
+      {
+        "shift": 0,
+        "core": "S5b",
+        "rows": [
+          2,
+          4,
+          25,
+          3,
+          11
+        ],
+        "cut": 18,
+        "A": 0,
+        "p": 0,
+        "loop": 1,
+        "suffix": 0,
+        "suffix_length": 1,
+        "B_coeff": [
+          2,
+          -2
+        ],
+        "g_coeff": [
+          1,
+          1
+        ],
+        "U_coeff": [
+          77,
+          9
+        ],
+        "d": 9
+      },
+      {
+        "shift": 1,
+        "core": "S5a",
+        "rows": [
+          2,
+          4,
+          9,
+          19,
+          7
+        ],
+        "cut": 20,
+        "A": 0,
+        "p": 1,
+        "loop": 1,
+        "suffix": 0,
+        "suffix_length": 1,
+        "B_coeff": [
+          4,
+          -2
+        ],
+        "g_coeff": [
+          2,
+          1
+        ],
+        "U_coeff": [
+          154,
+          9
+        ],
+        "d": 9
+      },
+      {
+        "shift": 1,
+        "core": "S5b",
+        "rows": [
+          2,
+          4,
+          25,
+          3,
+          11
+        ],
+        "cut": 18,
+        "A": 0,
+        "p": 1,
+        "loop": 1,
+        "suffix": 0,
+        "suffix_length": 1,
+        "B_coeff": [
+          4,
+          -2
+        ],
+        "g_coeff": [
+          2,
+          1
+        ],
+        "U_coeff": [
+          154,
+          9
+        ],
+        "d": 9
+      },
+      {
+        "shift": 0,
+        "core": "S4",
+        "rows": [
+          2,
+          4,
+          9,
+          3
+        ],
+        "cut": 8,
+        "A": 0,
+        "p": 0,
+        "loop": 1,
+        "suffix": 3,
+        "suffix_length": 3,
+        "B_coeff": [
+          8,
+          -5
+        ],
+        "g_coeff": [
+          1,
+          1
+        ],
+        "U_coeff": [
+          77,
+          5
+        ],
+        "d": 5
+      },
+      {
+        "shift": 2,
+        "core": "S5a",
+        "rows": [
+          2,
+          4,
+          9,
+          19,
+          7
+        ],
+        "cut": 20,
+        "A": 0,
+        "p": 3,
+        "loop": 1,
+        "suffix": 0,
+        "suffix_length": 1,
+        "B_coeff": [
+          8,
+          -2
+        ],
+        "g_coeff": [
+          4,
+          1
+        ],
+        "U_coeff": [
+          308,
+          9
+        ],
+        "d": 9
+      },
+      {
+        "shift": 2,
+        "core": "S5b",
+        "rows": [
+          2,
+          4,
+          25,
+          3,
+          11
+        ],
+        "cut": 18,
+        "A": 0,
+        "p": 3,
+        "loop": 1,
+        "suffix": 0,
+        "suffix_length": 1,
+        "B_coeff": [
+          8,
+          -2
+        ],
+        "g_coeff": [
+          4,
+          1
+        ],
+        "U_coeff": [
+          308,
+          9
+        ],
+        "d": 9
+      },
+      {
+        "shift": 1,
+        "core": "S4",
+        "rows": [
+          2,
+          4,
+          9,
+          3
+        ],
+        "cut": 8,
+        "A": 0,
+        "p": 1,
+        "loop": 1,
+        "suffix": 3,
+        "suffix_length": 3,
+        "B_coeff": [
+          16,
+          -5
+        ],
+        "g_coeff": [
+          2,
+          1
+        ],
+        "U_coeff": [
+          154,
+          5
+        ],
+        "d": 5
+      },
+      {
+        "shift": 3,
+        "core": "S5a",
+        "rows": [
+          2,
+          4,
+          9,
+          19,
+          7
+        ],
+        "cut": 20,
+        "A": 0,
+        "p": 7,
+        "loop": 1,
+        "suffix": 0,
+        "suffix_length": 1,
+        "B_coeff": [
+          16,
+          -2
+        ],
+        "g_coeff": [
+          8,
+          1
+        ],
+        "U_coeff": [
+          616,
+          9
+        ],
+        "d": 9
+      },
+      {
+        "shift": 3,
+        "core": "S5b",
+        "rows": [
+          2,
+          4,
+          25,
+          3,
+          11
+        ],
+        "cut": 18,
+        "A": 0,
+        "p": 7,
+        "loop": 1,
+        "suffix": 0,
+        "suffix_length": 1,
+        "B_coeff": [
+          16,
+          -2
+        ],
+        "g_coeff": [
+          8,
+          1
+        ],
+        "U_coeff": [
+          616,
+          9
+        ],
+        "d": 9
+      },
+      {
+        "shift": 2,
+        "core": "S4",
+        "rows": [
+          2,
+          4,
+          9,
+          3
+        ],
+        "cut": 8,
+        "A": 0,
+        "p": 3,
+        "loop": 1,
+        "suffix": 3,
+        "suffix_length": 3,
+        "B_coeff": [
+          32,
+          -5
+        ],
+        "g_coeff": [
+          4,
+          1
+        ],
+        "U_coeff": [
+          308,
+          5
+        ],
+        "d": 5
+      },
+      {
+        "shift": 4,
+        "core": "S5a",
+        "rows": [
+          2,
+          4,
+          9,
+          19,
+          7
+        ],
+        "cut": 20,
+        "A": 0,
+        "p": 15,
+        "loop": 1,
+        "suffix": 0,
+        "suffix_length": 1,
+        "B_coeff": [
+          32,
+          -2
+        ],
+        "g_coeff": [
+          16,
+          1
+        ],
+        "U_coeff": [
+          1232,
+          9
+        ],
+        "d": 9
+      },
+      {
+        "shift": 4,
+        "core": "S5b",
+        "rows": [
+          2,
+          4,
+          25,
+          3,
+          11
+        ],
+        "cut": 18,
+        "A": 0,
+        "p": 15,
+        "loop": 1,
+        "suffix": 0,
+        "suffix_length": 1,
+        "B_coeff": [
+          32,
+          -2
+        ],
+        "g_coeff": [
+          16,
+          1
+        ],
+        "U_coeff": [
+          1232,
+          9
+        ],
+        "d": 9
+      },
+      {
+        "shift": 3,
+        "core": "S4",
+        "rows": [
+          2,
+          4,
+          9,
+          3
+        ],
+        "cut": 8,
+        "A": 0,
+        "p": 7,
+        "loop": 1,
+        "suffix": 3,
+        "suffix_length": 3,
+        "B_coeff": [
+          64,
+          -5
+        ],
+        "g_coeff": [
+          8,
+          1
+        ],
+        "U_coeff": [
+          616,
+          5
+        ],
+        "d": 5
+      },
+      {
+        "shift": 5,
+        "core": "S5a",
+        "rows": [
+          2,
+          4,
+          9,
+          19,
+          7
+        ],
+        "cut": 20,
+        "A": 0,
+        "p": 31,
+        "loop": 1,
+        "suffix": 0,
+        "suffix_length": 1,
+        "B_coeff": [
+          64,
+          -2
+        ],
+        "g_coeff": [
+          32,
+          1
+        ],
+        "U_coeff": [
+          2464,
+          9
+        ],
+        "d": 9
+      },
+      {
+        "shift": 5,
+        "core": "S5b",
+        "rows": [
+          2,
+          4,
+          25,
+          3,
+          11
+        ],
+        "cut": 18,
+        "A": 0,
+        "p": 31,
+        "loop": 1,
+        "suffix": 0,
+        "suffix_length": 1,
+        "B_coeff": [
+          64,
+          -2
+        ],
+        "g_coeff": [
+          32,
+          1
+        ],
+        "U_coeff": [
+          2464,
+          9
+        ],
+        "d": 9
+      },
+      {
+        "shift": 4,
+        "core": "S4",
+        "rows": [
+          2,
+          4,
+          9,
+          3
+        ],
+        "cut": 8,
+        "A": 0,
+        "p": 15,
+        "loop": 1,
+        "suffix": 3,
+        "suffix_length": 3,
+        "B_coeff": [
+          128,
+          -5
+        ],
+        "g_coeff": [
+          16,
+          1
+        ],
+        "U_coeff": [
+          1232,
+          5
+        ],
+        "d": 5
+      },
+      {
+        "shift": 6,
+        "core": "S5a",
+        "rows": [
+          2,
+          4,
+          9,
+          19,
+          7
+        ],
+        "cut": 20,
+        "A": 0,
+        "p": 63,
+        "loop": 1,
+        "suffix": 0,
+        "suffix_length": 1,
+        "B_coeff": [
+          128,
+          -2
+        ],
+        "g_coeff": [
+          64,
+          1
+        ],
+        "U_coeff": [
+          4928,
+          9
+        ],
+        "d": 9
+      },
+      {
+        "shift": 6,
+        "core": "S5b",
+        "rows": [
+          2,
+          4,
+          25,
+          3,
+          11
+        ],
+        "cut": 18,
+        "A": 0,
+        "p": 63,
+        "loop": 1,
+        "suffix": 0,
+        "suffix_length": 1,
+        "B_coeff": [
+          128,
+          -2
+        ],
+        "g_coeff": [
+          64,
+          1
+        ],
+        "U_coeff": [
+          4928,
+          9
+        ],
+        "d": 9
+      },
+      {
+        "shift": 5,
+        "core": "S4",
+        "rows": [
+          2,
+          4,
+          9,
+          3
+        ],
+        "cut": 8,
+        "A": 0,
+        "p": 31,
+        "loop": 1,
+        "suffix": 3,
+        "suffix_length": 3,
+        "B_coeff": [
+          256,
+          -5
+        ],
+        "g_coeff": [
+          32,
+          1
+        ],
+        "U_coeff": [
+          2464,
+          5
+        ],
+        "d": 5
+      },
+      {
+        "shift": 6,
+        "core": "S4",
+        "rows": [
+          2,
+          4,
+          9,
+          3
+        ],
+        "cut": 8,
+        "A": 0,
+        "p": 63,
+        "loop": 1,
+        "suffix": 3,
+        "suffix_length": 3,
+        "B_coeff": [
+          512,
+          -5
+        ],
+        "g_coeff": [
+          64,
+          1
+        ],
+        "U_coeff": [
+          4928,
+          5
+        ],
+        "d": 5
+      }
+    ]
+  }
+}

@@ -1,0 +1,421 @@
+{
+  "status": "FINITE-EXACT controls of arbitrary-prefix theorem",
+  "defect_identity_universe": "0 <= B < 4096, both C3 replacements",
+  "prefix_universe": "Every 0 <= p < 32; no filtered prefixes",
+  "prefixes": [
+    {
+      "p": 0,
+      "q": 3,
+      "m": 2,
+      "B_bitlength": 10,
+      "target_bitlength": 16
+    },
+    {
+      "p": 1,
+      "q": 7,
+      "m": 6,
+      "B_bitlength": 27,
+      "target_bitlength": 33
+    },
+    {
+      "p": 2,
+      "q": 11,
+      "m": 5,
+      "B_bitlength": 24,
+      "target_bitlength": 29
+    },
+    {
+      "p": 3,
+      "q": 15,
+      "m": 14,
+      "B_bitlength": 60,
+      "target_bitlength": 66
+    },
+    {
+      "p": 4,
+      "q": 19,
+      "m": 8,
+      "B_bitlength": 37,
+      "target_bitlength": 42
+    },
+    {
+      "p": 5,
+      "q": 23,
+      "m": 17,
+      "B_bitlength": 73,
+      "target_bitlength": 78
+    },
+    {
+      "p": 6,
+      "q": 27,
+      "m": 16,
+      "B_bitlength": 69,
+      "target_bitlength": 75
+    },
+    {
+      "p": 7,
+      "q": 31,
+      "m": 30,
+      "B_bitlength": 125,
+      "target_bitlength": 131
+    },
+    {
+      "p": 8,
+      "q": 35,
+      "m": 14,
+      "B_bitlength": 62,
+      "target_bitlength": 67
+    },
+    {
+      "p": 9,
+      "q": 39,
+      "m": 28,
+      "B_bitlength": 118,
+      "target_bitlength": 123
+    },
+    {
+      "p": 10,
+      "q": 43,
+      "m": 22,
+      "B_bitlength": 94,
+      "target_bitlength": 99
+    },
+    {
+      "p": 11,
+      "q": 47,
+      "m": 41,
+      "B_bitlength": 170,
+      "target_bitlength": 175
+    },
+    {
+      "p": 12,
+      "q": 51,
+      "m": 25,
+      "B_bitlength": 106,
+      "target_bitlength": 111
+    },
+    {
+      "p": 13,
+      "q": 55,
+      "m": 44,
+      "B_bitlength": 182,
+      "target_bitlength": 188
+    },
+    {
+      "p": 14,
+      "q": 59,
+      "m": 38,
+      "B_bitlength": 158,
+      "target_bitlength": 164
+    },
+    {
+      "p": 15,
+      "q": 63,
+      "m": 62,
+      "B_bitlength": 254,
+      "target_bitlength": 260
+    },
+    {
+      "p": 16,
+      "q": 67,
+      "m": 26,
+      "B_bitlength": 111,
+      "target_bitlength": 116
+    },
+    {
+      "p": 17,
+      "q": 71,
+      "m": 50,
+      "B_bitlength": 207,
+      "target_bitlength": 212
+    },
+    {
+      "p": 18,
+      "q": 75,
+      "m": 39,
+      "B_bitlength": 163,
+      "target_bitlength": 168
+    },
+    {
+      "p": 19,
+      "q": 79,
+      "m": 68,
+      "B_bitlength": 279,
+      "target_bitlength": 284
+    },
+    {
+      "p": 20,
+      "q": 83,
+      "m": 37,
+      "B_bitlength": 155,
+      "target_bitlength": 160
+    },
+    {
+      "p": 21,
+      "q": 87,
+      "m": 66,
+      "B_bitlength": 271,
+      "target_bitlength": 276
+    },
+    {
+      "p": 22,
+      "q": 91,
+      "m": 55,
+      "B_bitlength": 227,
+      "target_bitlength": 232
+    },
+    {
+      "p": 23,
+      "q": 95,
+      "m": 89,
+      "B_bitlength": 363,
+      "target_bitlength": 368
+    },
+    {
+      "p": 24,
+      "q": 99,
+      "m": 43,
+      "B_bitlength": 179,
+      "target_bitlength": 184
+    },
+    {
+      "p": 25,
+      "q": 103,
+      "m": 77,
+      "B_bitlength": 315,
+      "target_bitlength": 320
+    },
+    {
+      "p": 26,
+      "q": 107,
+      "m": 61,
+      "B_bitlength": 251,
+      "target_bitlength": 256
+    },
+    {
+      "p": 27,
+      "q": 111,
+      "m": 100,
+      "B_bitlength": 407,
+      "target_bitlength": 413
+    },
+    {
+      "p": 28,
+      "q": 115,
+      "m": 59,
+      "B_bitlength": 243,
+      "target_bitlength": 249
+    },
+    {
+      "p": 29,
+      "q": 119,
+      "m": 98,
+      "B_bitlength": 399,
+      "target_bitlength": 405
+    },
+    {
+      "p": 30,
+      "q": 123,
+      "m": 82,
+      "B_bitlength": 335,
+      "target_bitlength": 341
+    },
+    {
+      "p": 31,
+      "q": 127,
+      "m": 126,
+      "B_bitlength": 511,
+      "target_bitlength": 517
+    }
+  ],
+  "literal_controls": [
+    {
+      "B": 921,
+      "cut": 0,
+      "right_address": 14748,
+      "order": 18,
+      "HP": 34293
+    },
+    {
+      "B": 921,
+      "cut": 1,
+      "right_address": 7374,
+      "order": 17,
+      "HP": 34295
+    }
+  ],
+  "rooted_pair_controls": [
+    {
+      "B": 0,
+      "cut": 0,
+      "state": [
+        33,
+        3,
+        39,
+        3
+      ]
+    },
+    {
+      "B": 0,
+      "cut": 1,
+      "state": [
+        35,
+        3,
+        39,
+        3
+      ]
+    },
+    {
+      "B": 1,
+      "cut": 0,
+      "state": [
+        69,
+        3,
+        75,
+        3
+      ]
+    },
+    {
+      "B": 1,
+      "cut": 1,
+      "state": [
+        71,
+        3,
+        75,
+        3
+      ]
+    },
+    {
+      "B": 2,
+      "cut": 0,
+      "state": [
+        111,
+        3,
+        153,
+        3
+      ]
+    },
+    {
+      "B": 2,
+      "cut": 1,
+      "state": [
+        113,
+        3,
+        153,
+        3
+      ]
+    },
+    {
+      "B": 3,
+      "cut": 0,
+      "state": [
+        141,
+        3,
+        147,
+        3
+      ]
+    },
+    {
+      "B": 3,
+      "cut": 1,
+      "state": [
+        143,
+        3,
+        147,
+        3
+      ]
+    },
+    {
+      "B": 4,
+      "cut": 0,
+      "state": [
+        189,
+        3,
+        309,
+        3
+      ]
+    },
+    {
+      "B": 4,
+      "cut": 1,
+      "state": [
+        191,
+        3,
+        309,
+        3
+      ]
+    },
+    {
+      "B": 5,
+      "cut": 0,
+      "state": [
+        219,
+        3,
+        297,
+        3
+      ]
+    },
+    {
+      "B": 5,
+      "cut": 1,
+      "state": [
+        221,
+        3,
+        297,
+        3
+      ]
+    },
+    {
+      "B": 6,
+      "cut": 0,
+      "state": [
+        261,
+        3,
+        303,
+        3
+      ]
+    },
+    {
+      "B": 6,
+      "cut": 1,
+      "state": [
+        263,
+        3,
+        303,
+        3
+      ]
+    },
+    {
+      "B": 7,
+      "cut": 0,
+      "state": [
+        285,
+        3,
+        291,
+        3
+      ]
+    },
+    {
+      "B": 7,
+      "cut": 1,
+      "state": [
+        287,
+        3,
+        291,
+        3
+      ]
+    }
+  ],
+  "response_boundary_control": {
+    "universe": "1 <= q < 65536, m(q)>=1",
+    "eligible_count": 26201,
+    "maximum_delta": -6,
+    "equality_prefixes": [
+      3,
+      57
+    ]
+  },
+  "original_target_preserved_during_padding": false,
+  "both_padded_targets_preserved_by_rebase": true,
+  "full_spectrum_claim": false
+}

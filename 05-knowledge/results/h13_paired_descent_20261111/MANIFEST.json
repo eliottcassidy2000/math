@@ -1,0 +1,152 @@
+{
+  "scope": "Research notes and exact controls. Chan-Pak OPEN. No global range expansion or independent canon audit claimed.",
+  "startup_commit": "1afe556196c7",
+  "incoming_integrated": [
+    "e48c52e9dc",
+    "946fb3f88f",
+    "e322dd80eb"
+  ],
+  "first_published_checkpoint": "0a37d375cb",
+  "files": {
+    "README.md": {
+      "bytes": 2828,
+      "sha256": "f08498b44af08ab5655a3b91424fa54b268ae63a28ea705b47c33737d71e1915"
+    },
+    "SYNTHESIS.md": {
+      "bytes": 11456,
+      "sha256": "c39e646b729d6a7da13e773f793ad96a6293fbda469acc9e5c6b8259e0757921"
+    },
+    "construction/PROOF.md": {
+      "bytes": 15949,
+      "sha256": "94d5907f2923e8d0a33c095c569aefe0e43dc914589d51a6aeb2e9b156081e26"
+    },
+    "construction/check_positive.py": {
+      "bytes": 4910,
+      "sha256": "7a6e97f5b48729dd12e1a1772ddd583456bac9aa25c54511eb4d5c1eed4b540d"
+    },
+    "construction/find_intersections.py": {
+      "bytes": 2713,
+      "sha256": "a9110c8516a194d6cd48f671d2100f62db08c0da4d1571e973c36ef421697953"
+    },
+    "construction/find_ray_rebases.py": {
+      "bytes": 2322,
+      "sha256": "7b21ee1f77239932d7d5fb5e504968dc9001f810131288d6417b4130b5e9ec6b"
+    },
+    "construction/intersections.json": {
+      "bytes": 302,
+      "sha256": "f238fed56f868bc60f58b3100d03fd70255dec65adf8693300ca02a05304a897"
+    },
+    "construction/period14.json": {
+      "bytes": 1160,
+      "sha256": "b7db2d6b2b97d48d76e391e4827085076b6a3f3668921a7115f0d2a9495a72ee"
+    },
+    "construction/period14.py": {
+      "bytes": 1588,
+      "sha256": "af3c39bfd5fe65f0a3881058500fc30798421d360d9907b1fc953e60e3dfc458"
+    },
+    "construction/positive_receipt.json": {
+      "bytes": 3345,
+      "sha256": "5d13630fa22a03e7eb525c93f07db7e02ad9811c90c29f595a9cc0b09a3e548c"
+    },
+    "construction/ray_rebases.json": {
+      "bytes": 10015,
+      "sha256": "283e592c62acec2664c669fa0a5135976bd0a548c20f4dfd26f94286b6e4b729"
+    },
+    "dynamics/PORTABLE_GAPS.md": {
+      "bytes": 5528,
+      "sha256": "d3e9728803ebbb4b89f239e7e967f6df3867f690edcf669b7f0c46464d66d06f"
+    },
+    "dynamics/PROOF.md": {
+      "bytes": 7489,
+      "sha256": "7f7f09eb11718231346b0543da6585e7e743f8b78370bdf124ce4131c002cbd5"
+    },
+    "dynamics/portable_probe.py": {
+      "bytes": 2579,
+      "sha256": "899b6e95454d6728dca77e3b015c15d41e9bf4ea502b8d3904aa39d98e6bfd74"
+    },
+    "dynamics/portable_receipt.json": {
+      "bytes": 637,
+      "sha256": "c067df89847e45d1008bc943ba149f04bc517a9c50f708014d59ccf592a26b29"
+    },
+    "dynamics/probe.py": {
+      "bytes": 3164,
+      "sha256": "8ee49d48c58f0c645251623c523b9243c89cc99b9d5e95aa03ba30e8c49fc6d0"
+    },
+    "dynamics/receipt.json": {
+      "bytes": 1082,
+      "sha256": "9b22d189cf87d1aad481a5f61dfe0aee54cd7e684ea7299edfb61fa0447433fb"
+    },
+    "modular_cycles/ADDITIVITY.md": {
+      "bytes": 15231,
+      "sha256": "0d36811558ccc28e39bdccfb1d147cdc9fa6b7fee27b34a22477cd2e5402f067"
+    },
+    "modular_cycles/PROOF.md": {
+      "bytes": 14298,
+      "sha256": "9905ee3e4af302d7c0f8d896c376b16d0942daeaf30bc6fd2cc5b1e4e4492090"
+    },
+    "modular_cycles/RESTORATION.md": {
+      "bytes": 7554,
+      "sha256": "69d0e0917b21dab7e3ee77bb1314a23d46a4f2018915320d09d04c268d22e403"
+    },
+    "modular_cycles/amalgam.py": {
+      "bytes": 6456,
+      "sha256": "e04eecb3fbbaf4b8445c526bc37e2e48cb242dc252447056d473c8c75672b6f0"
+    },
+    "modular_cycles/amalgam_receipt.json": {
+      "bytes": 18205,
+      "sha256": "5dd5f096bf4a324b7057cb62778a35598b251403a06a9f8c821dcb03711a977b"
+    },
+    "modular_cycles/probe.py": {
+      "bytes": 6155,
+      "sha256": "8eff366248559a01485646f064a53c16c731029eb37271eba2116146267cc35a"
+    },
+    "modular_cycles/receipt.json": {
+      "bytes": 13385,
+      "sha256": "966fd6d664e253a69ee3f616725c331b2d07420956ab3ccaaf2dbe11ec7f58a8"
+    },
+    "modular_cycles/synchronization.json": {
+      "bytes": 90795,
+      "sha256": "be7300d671fd3ba0035d7abd4495da9dcd670e60a2c6011647db805015941df6"
+    },
+    "modular_cycles/synchronize.py": {
+      "bytes": 2212,
+      "sha256": "bdb8fbf5f43fc1b218d1f7b6ae465ce13bfbc6a28872c22d101f82292721d8c2"
+    },
+    "square_graceful/ADDITIVE_CARRY.md": {
+      "bytes": 8586,
+      "sha256": "cce2ed6a2b5cae7e0678de41d467c923bf197ee980306c3508132f2f3f04543e"
+    },
+    "square_graceful/GRAMMAR.md": {
+      "bytes": 6925,
+      "sha256": "1c56aeb31e07f745add1dcdf2851c41cb7674b0dd19876eae282669e70822cc0"
+    },
+    "square_graceful/PROOF.md": {
+      "bytes": 10189,
+      "sha256": "44d4b8ea9bd60d8e4480580ea19e5ceaf8ecf9259585382d9854a8f5edaef52c"
+    },
+    "square_graceful/carry_probe.py": {
+      "bytes": 3010,
+      "sha256": "c76ec1233fdc76d71657d6c4dedd1b6121167e926732544a91aa853306ec1dc4"
+    },
+    "square_graceful/carry_receipt.json": {
+      "bytes": 6281,
+      "sha256": "69bbd6ddf5678a5da7c78fbbefc29e1f209d97c0d1d10ee850aad91f7896d435"
+    },
+    "square_graceful/grammar_probe.py": {
+      "bytes": 3337,
+      "sha256": "ca8e0124552b3fad67b6db8ebdaae93c21a6e2aa3c2f195c763a104244f2b697"
+    },
+    "square_graceful/grammar_receipt.json": {
+      "bytes": 6706,
+      "sha256": "7e3a80c3c6c0e177526ffe0a5ffae6864d59df9cdb1746e75e6afd36f8c60a35"
+    },
+    "square_graceful/probe.py": {
+      "bytes": 4669,
+      "sha256": "c8b766b33893f581227c951eea6c33a24ac34a684730c951eb3bc2109a595b99"
+    },
+    "square_graceful/receipt.json": {
+      "bytes": 3685,
+      "sha256": "7fa6c01f6ba1465a6b9fccee11890ea5f7f4bae51290632b6a9998fbe0f30baf"
+    }
+  }
+}
