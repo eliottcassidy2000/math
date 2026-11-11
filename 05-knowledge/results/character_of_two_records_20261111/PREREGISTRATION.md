@@ -175,6 +175,43 @@ Conjecture to be recorded if R11 and R9 hold: for every tournament `U` on `N` ve
 
 ---
 
+# Sixth block (same session): R12
+
+Written after Runs G, H1, H2 and part of H3 were read and the note was drafted (pre-audit checkpoint `1ca9c5f83b`;
+the independent audit is running), and before Run I was started. Checked first: the Sierpinski lane
+(`04-computation/experiments/sierpinski_ocf_20261022/drt*`) and canon contain no cycle counts by length for doubly
+regular tournaments of order 19, 23 or 27 (grep for `c_7`, "7-cycles", "cycle counts", "odd cycles" in the lane
+files and for "doubly regular" near cycle counts in canon).
+
+In-sample (exploratory, `cycle_parities` run of this hour): for every member examined of the switching classes of
+`P_3^+` (all 8), `P_7^+` (all 128), `P_11^+` (40 random) and `CD_4^+` (`CD_4` itself and 12 random members) the number
+`c_(2k+1)` of directed cycles of each odd length has the parity of `[N = 4 mod 8] C(N/2 - 1, k)`: the parity vectors
+`(c_3, c_5, ...)` are `1`, `000`, `10011`, `0000000`. Proved: the same for every doubly regular tournament with a
+converse symmetry (Theorem E), and for `k = 1, 2` for every tournament whose scores have one parity (THM-5132).
+
+## Run I: cycle counts by length (`cycle_lengths.c`, `cycle_parities.py`)
+
+Numbers of directed cycles of every length modulo 256, by a subset programme rooted at the smallest vertex of the
+cycle.
+
+- **I1 (order 23).** The thirteen classes of HYP-9371 (`drt23_classes.json`: `P_23` and twelve classes without a
+  converse symmetry) and the double of `P_11`.
+- **I2 (`N = 24`).** Ten random members (seeded) of each of the switching classes of `P_23^+` and `D(P_11)^+`.
+- **I3 (`N = 20`).** `D_19`, `P_19` with a source, and twenty random members of each of their switching classes.
+- **I4 (order 27).** `P_27`, the three self-converse classes and the six classes without converse symmetry of H3.
+- Controls: `c_3 = n(n^2 - 1)/24` for regular tournaments; the Hamiltonian cycle counts `24, 5505, 34358763933,
+  374127973957716` of `P_7, P_11, P_19, P_23` (THM-4747) modulo 256; `1 + 2 (sum of the odd cycle counts) = H (mod 4)`
+  where `H` is known.
+
+- **R12.** In I1 and I2 every odd cycle count is even (lengths 3 to 23). In I3 the parities of
+  `(c_3, c_5, ..., c_19)` are `C(9, k) mod 2 = 1, 0, 0, 0, 0, 0, 0, 1, 1` for every member. In I4 the parities of
+  `(c_3, ..., c_27)` are `C(13, k) mod 2 = 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1` for every tournament.
+
+Conjecture to be recorded if R12 holds: if `S^2 = -(N-1) I` then `c_(2k+1) = [N = 4 mod 8] C(N/2 - 1, k) (mod 2)` for
+every `k`. One tournament with one odd length outside this refutes it (the total parity may then still agree).
+
+---
+
 # Outcomes (appended after the runs; the blocks above are unchanged)
 
 Outputs: `out/`. Program names changed after registration: `paley_sym.c` is `halfpaths.c`, `selfconv_census.py` is
