@@ -1,0 +1,6 @@
+class of (source) + P_7 (N = 8): 36 single and double switchings; odd parity vectors: [('000', 36)]; normalised member 000; predicted 000
+class of (source) + P_11 (N = 12): 78 single and double switchings; odd parity vectors: [('10011', 78)]; normalised member 10011; predicted 10011
+class of (source) + CD_4 (N = 16): 136 single and double switchings; odd parity vectors: [('0000000', 136)]; normalised member 0000000; predicted 0000000
+class of (source) + P_19 (N = 20): 210 single and double switchings; odd parity vectors: [('100000011', 210)]; normalised member 100000011; predicted 100000011
+class of (source) + D_19 (N = 20): 210 single and double switchings; odd parity vectors: [('100000011', 210)]; normalised member 100000011; predicted 100000011
+python3 cycle_parities.py /tmp/claude-cyclen pairs P_7 P_11 CD_4 P_19 D_19  46.92s user 2.08s system 98% cpu 49.928 total

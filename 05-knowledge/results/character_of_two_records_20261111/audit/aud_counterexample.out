@@ -1,0 +1,9 @@
+D23_0 doubly regular: True; code: 0100000011101011111100001101110000010011101000011111011000010111100011010001001010010000011100011111111011000001001100110110110000100101001111001000101001011100110111111000110011001100101101001111001101110000001011110101001110010001101001100100101010111
+switching set X (vertices 1..23 of D23_0, as a 0/1 string): 10110111011011111111001  (|X| = 17)
+U is a tournament on N = 24 vertices; S S^T = (N-1) I: True; scores: [6, 8, 8, 10, 10, 10, 10, 10, 10, 10, 12, 12, 12, 12, 12, 12, 12, 12, 14, 14, 14, 14, 16, 16]
+H(U) mod 2^32, subset DP: 3395494411; on a relabelled converse: 3395494411; H mod 4 = 3, H mod 8 = 3; (bS) predicts 1 + N/2 = 1 (mod 4)
+H(U) mod 2^64, inclusion-exclusion: 74048555293286923; mod 2^32: 3395494411 (agrees with the subset DP: True); H mod 4 = 3
+cycle counts mod 2^32 by length 3..24: [506, 3795, 31878, 251113, 1947024, 14471964, 102993708, 695198788, 130020940, 598188779, 29085104, 2990795789, 2896702266, 1605676004, 3733708634, 3006958888, 851183068, 2521271305, 1976099354, 3200900630, 1549246471, 3162300315]
+parities of (c_3, c_5, ..., c_23): 00000000001; (bK) predicts 00000000000; 1 + 2 c_odd = 3 (mod 4)
+written: counterexample_N24_adjacency.txt (rows of 0/1), counterexample_N24_outmasks.txt (N, then N decimal out-neighbour masks)
+python3 aud_counterexample.py $S/aud_ham $S/aud_ham_ie $S/aud_cyc  write  29.47s user 3.19s system 75% cpu 43.229 total

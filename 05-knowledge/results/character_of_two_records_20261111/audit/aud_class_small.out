@@ -1,0 +1,27 @@
+class of (source) + P_3
+N = 4: switching class of (source) + T, T of order 3: 8 switching sets
+  members that are not skew Hadamard: 0
+  (bK) predicted parity vector (c_3, c_5, ...):1; members with another vector: 0
+  odd parity vectors found: 1:8
+  (bS) H = 1 + N/2 = 3 (mod 4): violations 0; H = 1 + 2 c_odd (mod 4) violations: 0
+  H mod 8: 3:8
+  distinct parity vectors of the even cycle counts (c_4, c_6, ..., c_N): 1
+   [0.2 s]
+class of (source) + P_7
+N = 8: switching class of (source) + T, T of order 7: 128 switching sets
+  members that are not skew Hadamard: 0
+  (bK) predicted parity vector (c_3, c_5, ...):000; members with another vector: 0
+  odd parity vectors found: 000:128
+  (bS) H = 1 + N/2 = 1 (mod 4): violations 0; H = 1 + 2 c_odd (mod 4) violations: 0
+  H mod 8: 5:128
+  distinct parity vectors of the even cycle counts (c_4, c_6, ..., c_N): 1
+   [0.0 s]
+class of (source) + P_11
+N = 12: switching class of (source) + T, T of order 11: 2048 switching sets
+  members that are not skew Hadamard: 0
+  (bK) predicted parity vector (c_3, c_5, ...):10011; members with another vector: 0
+  odd parity vectors found: 10011:2048
+  (bS) H = 1 + N/2 = 3 (mod 4): violations 0; H = 1 + 2 c_odd (mod 4) violations: 0
+  H mod 8: 7:2048
+  distinct parity vectors of the even cycle counts (c_4, c_6, ..., c_N): 1
+   [1.4 s]

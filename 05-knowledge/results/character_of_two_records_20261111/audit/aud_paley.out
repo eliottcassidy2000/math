@@ -1,0 +1,30 @@
+q =  3 (q mod 8 = 3, chi(2) = -1): |D_1| = 1 of 1; Z = P_q[squares] via a -> a^2: True (squaring bijective on squares: True); H(Z) = 1
+   F_k mod 2 = 1 ; predicted [q=3 mod 8] C(m,k) = 1 ; paths of Z ending in D_1 mod 2 = 1 ; agree: True
+   F = 1 ; F mod 4 = 1 ; (q+1)/4 mod 4 = 1 ; HYP (c) predicts 1; cycles by definition: c_odd lengths [1], invariant [1] (half-path DP agrees: True; c = F mod 2: True)
+   H(P_q) = 3 (repository value 3: True); H mod 4 = 3, mod 8 = 3; q(q-1)/2 mod 8 = 3; 2 - chi(2) = 3; H = 1 + 2F mod 4: True; K_q = H/(q(q-1)/2) = 1 (exact division: True), K_q mod 4 = 1, mod 8 = 1
+   paths starting 0 -> 1 (direct DFS): 1
+q =  7 (q mod 8 = 7, chi(2) = +1): |D_1| = 0 of 3; Z = P_q[squares] via a -> a^2: True (squaring bijective on squares: True); H(Z) = 3
+   F_k mod 2 = 000 ; predicted [q=3 mod 8] C(m,k) = 000 ; paths of Z ending in D_1 mod 2 = 000 ; agree: True
+   F = 12 ; F mod 4 = 0 ; (q+1)/4 mod 4 = 2 ; HYP (c) predicts 0; cycles by definition: c_odd lengths [14, 42, 24], invariant [0, 6, 6] (half-path DP agrees: True; c = F mod 2: True)
+   H(P_q) = 189 (repository value 189: True); H mod 4 = 1, mod 8 = 5; q(q-1)/2 mod 8 = 5; 2 - chi(2) = 1; H = 1 + 2F mod 4: True; K_q = H/(q(q-1)/2) = 9 (exact division: True), K_q mod 4 = 1, mod 8 = 1
+   paths starting 0 -> 1 (direct DFS): 9
+q = 11 (q mod 8 = 3, chi(2) = -1): |D_1| = 5 of 5; Z = P_q[squares] via a -> a^2: True (squaring bijective on squares: True); H(Z) = 15
+   F_k mod 2 = 10011 ; predicted [q=3 mod 8] C(m,k) = 10011 ; paths of Z ending in D_1 mod 2 = 10011 ; agree: True
+   F = 215 ; F mod 4 = 3 ; (q+1)/4 mod 4 = 3 ; HYP (c) predicts 3; cycles by definition: c_odd lengths [55, 594, 3960, 11055, 5505], invariant [5, 10, 40, 75, 85] (half-path DP agrees: True; c = F mod 2: True)
+   H(P_q) = 95095 (repository value 95095: True); H mod 4 = 3, mod 8 = 7; q(q-1)/2 mod 8 = 7; 2 - chi(2) = 3; H = 1 + 2F mod 4: True; K_q = H/(q(q-1)/2) = 1729 (exact division: True), K_q mod 4 = 1, mod 8 = 1
+   paths starting 0 -> 1 (direct DFS): 1729
+q = 19 (q mod 8 = 3, chi(2) = -1): |D_1| = 9 of 9; Z = P_q[squares] via a -> a^2: True (squaring bijective on squares: True); H(Z) = 3357
+   F_k mod 2 = 100000011 ; predicted [q=3 mod 8] C(m,k) = 100000011 ; paths of Z ending in D_1 mod 2 = 100000011 ; agree: True
+   F = 723681 ; F mod 4 = 1 ; (q+1)/4 mod 4 = 1 ; HYP (c) predicts 1
+   H(P_q) = 1172695746915 (repository value 1172695746915: True); H mod 4 = 3, mod 8 = 3; q(q-1)/2 mod 8 = 3; 2 - chi(2) = 3; H = 1 + 2F mod 4: True; K_q = H/(q(q-1)/2) = 6857869865 (exact division: True), K_q mod 4 = 1, mod 8 = 1
+q = 23 (q mod 8 = 7, chi(2) = +1): |D_1| = 0 of 11; Z = P_q[squares] via a -> a^2: True (squaring bijective on squares: True); H(Z) = 92411
+   F_k mod 2 = 00000000000 ; predicted [q=3 mod 8] C(m,k) = 00000000000 ; paths of Z ending in D_1 mod 2 = 00000000000 ; agree: True
+   F = 91471116 ; F mod 4 = 0 ; (q+1)/4 mod 4 = 2 ; HYP (c) predicts 0
+   H(P_q) = 15760206976379349 (repository value 15760206976379349: True); H mod 4 = 1, mod 8 = 5; q(q-1)/2 mod 8 = 5; 2 - chi(2) = 1; H = 1 + 2F mod 4: True; K_q = H/(q(q-1)/2) = 62293308207033 (exact division: True), K_q mod 4 = 1, mod 8 = 1
+q = 27 (q mod 8 = 3, chi(2) = -1): |D_1| = 13 of 13; Z = P_q[squares] via a -> a^2: True (squaring bijective on squares: True); H(Z) = 3703011
+   F_k mod 2 = 1001100110011 ; predicted [q=3 mod 8] C(m,k) = 1001100110011 ; paths of Z ending in D_1 mod 2 = 1001100110011 ; agree: True
+   F = 12950032615 ; F mod 4 = 3 ; (q+1)/4 mod 4 = 3 ; HYP (c) predicts 3
+q = 31 (q mod 8 = 7, chi(2) = +1): |D_1| = 0 of 15; Z = P_q[squares] via a -> a^2: True (squaring bijective on squares: True); H(Z) = 196922055
+   F_k mod 2 = 000000000000000 ; predicted [q=3 mod 8] C(m,k) = 000000000000000 ; paths of Z ending in D_1 mod 2 = 000000000000000 ; agree: True
+   F = 2971024551660 ; F mod 4 = 0 ; (q+1)/4 mod 4 = 0 ; HYP (c) predicts 0
+python3 aud_paley.py $S/aud_ham  6.34s user 0.50s system 86% cpu 7.879 total

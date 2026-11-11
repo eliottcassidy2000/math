@@ -1,0 +1,8 @@
+order 4, all 64 labelled tournaments: algebraic degree of f_U: [(-1, 64)]  (-1 = identically zero)
+order 5, all 1024 labelled tournaments: algebraic degree of f_U: [(2, 1024)]  (-1 = identically zero)
+order 6, all 32768 labelled tournaments: algebraic degree of f_U: [(2, 32768)]  (-1 = identically zero)
+order 7, 60 random tournaments: algebraic degree of f_U: [(2, 60)]
+order 8, 40 random tournaments: algebraic degree of f_U: [(2, 40)]
+order 9, 12 random tournaments: algebraic degree of f_U: [(2, 12)]
+order 10, 4 random tournaments: algebraic degree of f_U: [(2, 4)]
+python3 switch_quadratic.py anf  73.92s user 0.28s system 97% cpu 1:16.11 total

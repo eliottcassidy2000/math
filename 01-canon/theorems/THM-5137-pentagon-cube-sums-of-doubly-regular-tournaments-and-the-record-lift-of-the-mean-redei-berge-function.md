@@ -9,23 +9,34 @@ status: >
   k = 2..7, by the kernel formula, by elimination of the quadratic form and (orders <= 11) by counting 3- and
   5-cycles in all extensions; (R) on every labelled tournament of order <= 5, the identity
   sum_{alpha with odd parts} 2^l(alpha)/pi_u(alpha) = 2 for n <= 22, the exponential formula for n <= 12.
-  KNOWN, credited: THM-5132 (this machine, this morning; audited); double regularity of the Paley tournaments and
-  of the Cayley-Dickson tower (THM-448, THM-451, THM-5133 (G)); rank (n+1)/2 and the quadratic-residue codes of
-  Paley tournaments (THM-481, THM-4857); U_T and the odd-cycle formula (Grinberg-Stanley; THM-002, THM-073, THM-078);
-  the scalar forms sum E[H_n] t^n/n! = (2+t)/(2-t) (HYP-1400, HYP-1528) and E[path-cover polynomial] with generating
-  function ((2+t)/(2-t))^x (kind-pasteur S21, audit A4); W_X in noncommuting variables (INV-051,
-  Mitrovic-Stojadinovic); T = 1/(1 - S) for tournaments and strong tournaments (THM-1862, THM-1936, THM-4817) and
-  the relation of T with connected graphs (THM-4746); the question answered by (R) 2 (kind-pasteur S22,
-  SOURCES_AND_DOMINATION.md section 7).
-  KNOWN in the literature (CITED): (D) 1 is an immediate consequence of the classical identity c_5 + 2 c_4 =
-  n(n^2-1)(n^2-9)/160 for regular tournaments (Rowlinson 1986; Savchenko 2016).
-  NEW here (the audit searched the repository as well): (D) 1 as a statement in this repository, (D) 2-3; the symmetric-function form of the mean and its
-  identification with q_n and the hook Schur functions; the record interpretation of the lift; the reach-set
-  reading l_n = A001187(n) and the equidistribution by max-ordered type.
+  KNOWN, credited: THM-5132 (this machine, this morning; audited); (D) 1 is a corollary of THM-155 / HYP-668
+  (c_5 + 2 c_4 = n(n^2-1)(n^2-9)/160 for every regular tournament; the right side is divisible by 4) and of the same
+  identity in the literature; over F_2, A^2 = A (n = 7 mod 8) and A^(-1) = A^T (n = 3 mod 8) for every doubly regular
+  tournament (lenses_tm_ca_fractran_tournaments_20261101.md, item 4) and the self-orthogonal code of dimension
+  (n-1)/2 (oai3_two_orbits_twos_and_threes_20261007.md, section 5); double regularity of the Paley tournaments and
+  of the Cayley-Dickson sign tournaments CD_k for every k (THM-5133 (G); CD_4 is T_15 of THM-448, CD_5 is not the
+  doubling tower); rank (n+1)/2 and the quadratic-residue codes of Paley tournaments (THM-481, THM-4857); U_T and
+  the odd-cycle formula (Grinberg-Stanley; THM-002, THM-073, THM-078); the scalar forms sum E[H_n] t^n/n! =
+  (2+t)/(2-t) (HYP-1400, HYP-1528) and E[path-cover polynomial] with generating function ((2+t)/(2-t))^x
+  (kind-pasteur S21, audit A4); W_X in noncommuting variables (INV-051, Mitrovic-Stojadinovic); T = 1/(1 - S) for
+  tournaments and strong tournaments (THM-1862, THM-1936, THM-4817); (R) 3 (a): the OEIS entry A001187 carries the
+  statement that the tournaments from which one vertex is reachable are counted by the connected labelled graphs
+  (D. Knuth, 2020), and the relation of the two series is used in THM-4746; the question answered by (R) 2
+  (kind-pasteur S22, SOURCES_AND_DOMINATION.md section 7); the elasticity 5/2 of the monoid of path counts
+  (Session160 axioms/NOTE.md section 4; Session266 smooth/PROOF.md section 6; THM-4749).
+  NEW here (not found by the author or by the audit): (D) 2-3 for the pentagon (the weights modulo 4 of the kernel
+  and the value of the cube sum); the symmetric-function form of the mean and its identification with q_n and the
+  hook Schur functions; the record interpretation of the lift; (R) 3 (c), the equidistribution of tournaments and
+  graphs by max-ordered type (an instance of Proposition 6.1 of the cited paper); in the remark on factorisation
+  lengths, the length set, equality exactly at the even powers of 63, and the smallest two-length element 315.
   NOT CLAIMED: novelty in the literature (the mean of U_T is a short computation; connected graphs and tournaments
   sharing an exponential generating function is classical); any consequence for the Chan-Pak conjecture.
-  Pre-registered: R4, R5 CONFIRMED (cube sums of P_q and CD_k) and now instances of (D).
-  AUDIT: AUDIT-PENDING (pre-audit checkpoint)
+  Pre-registered: R4, R5 CONFIRMED (cube sums of P_q and CD_k); both are instances of (D) and were derivable from
+  THM-5132 (3) with recorded facts (consistency checks, not evidence).
+  AUDIT: PASS WITH CORRECTIONS (05-knowledge/results/character_of_two_records_20261111/audit/AUDIT.md): (D), (R)
+  re-derived and recomputed (cube sums by direct count and over all extensions up to P_31 and CD_5; records by
+  brute force for n <= 6; l_n to n = 8), no error; corrections of credit applied (THM-155 / HYP-668 and the F_2
+  notes, its M4; the identification of CD_k, M5; OEIS A001187, M6; the elasticity remark, M3; minor 10). MISTAKE-763.
 session: mac-mini-2026-11-11-atoms
 source: 05-knowledge/results/character_of_two_records_20261111/README.md
 related:
@@ -46,19 +57,21 @@ related:
 # THM-5137 - pentagon sums of doubly regular tournaments; records
 
 Source: [the note](../../05-knowledge/results/character_of_two_records_20261111/README.md), sections 5.1, 6, 7.
-Independent audit: AUDIT-PENDING (pre-audit checkpoint)
+Independent audit: [AUDIT.md](../../05-knowledge/results/character_of_two_records_20261111/audit/AUDIT.md), PASS WITH
+CORRECTIONS (no mathematical error; credit corrected: THM-155 / HYP-668, THM-5133 (G), OEIS A001187, Session160 / Session266).
 
 ## (D) Pentagon sums
 
 Notation of THM-5132: `G_35(R) = sum_X (-1)^((c_3 + c_5)(R + v_X))`, the sum over the `2^m` one-vertex extensions of a
 tournament `R` on `m` vertices; `K_0 = ker A^T`, `K_1 = {u : A^T u = 1}` over `F_2`.
 
-1. Every regular tournament has an even number of 5-cycles.
+1. Every regular tournament has an even number of 5-cycles (KNOWN: a corollary of THM-155 / HYP-668).
 2. Let `R` be doubly regular of order `n = 4t + 3`.
    - `n = 7 (mod 8)`: `rank_2 A = (n+1)/2`; every element of `K_0` has weight `0 (mod 4)`; `K_1 = 1 + K_0`;
      `G_35(R) = 2^n`, i.e. every one-vertex extension of `R` has `c_3 + c_5` even.
    - `n = 3 (mod 8)`: `A A^T = I` over `F_2`; `G_35(R) = 2^((n+1)/2)`, the least value possible at `m = 3 (mod 4)`.
-3. `G_35(P_q) = 2^q` if 2 is a square in `GF(q)` and `2^((q+1)/2)` if not; `G_35(CD_k) = 2^(2^k - 1)` for `k >= 3`.
+3. `G_35(P_q) = 2^q` if 2 is a square in `GF(q)` and `2^((q+1)/2)` if not; `G_35(CD_k) = 2^(2^k - 1)` for `k >= 3`
+   (the Cayley-Dickson sign tournaments are doubly regular, THM-5133 (G)).
 
 Proof. (1) THM-5132 (1): `c_5 = C(q_1, 2) + C(q_2, 2) (mod 2)`; in a regular tournament `s = A1` is `0` or `1` and
 `t = As = s`, so `q_1 = q_2`. (2) `A A^T = (t+1) I + t J`, `A 1 = A^T 1 = (2t+1) 1`. For `t` odd: `A A^T = J`; `u` in
@@ -79,25 +92,26 @@ noncommutative power sums of the first kind.
               = (n!/2^(n-1)) sum_(k=0)^(n-1) s_(n-k, 1^k),      sum_n q_n t^n = prod_i (1 + x_i t)/(1 - x_i t).
 
 2. With `U_T^nc = sum_S 2^|S| Psi^(tau(S))`, `tau(S)` the block sizes of `S` (cycles and singletons) listed by
-   increasing largest vertex: `E[U_T^nc] = n! sum_(alpha |= n, odd parts) (2^(l(alpha) - n)/pi_u(alpha)) Psi^alpha`, the
-   canonical lift of `E[U_T]` in the sense of Chen-Mogielnicki-Ono. In particular
+   increasing largest vertex: `E[U_T^nc] = n! sum_(alpha |= n, odd parts) (2^(l(alpha) - n)/pi_u(alpha)) Psi^alpha`, which
+   is `n!` times the canonical lift, in the sense of Chen-Mogielnicki-Ono, of the sprout sequence `E[U_T]/n!`. In particular
    `sum_(alpha |= n, odd parts) 2^l(alpha)/pi_u(alpha) = 2`.
 3. Let `l_n` be the number of labelled tournaments on `[n]` in which the vertex `n` reaches every vertex. Then
    `sum 2^C(n,2) x^n/n! = exp(sum l_n x^n/n!)`, so `l_n = A001187(n) = 1, 1, 4, 38, 728, 26704, 1866256, ...` (connected
-   labelled graphs); `l_n = sum_j C(n-1, j-1) S_j 2^C(n-j, 2)` with `S_j` the number of strong labelled tournaments; and
+   labelled graphs; KNOWN, OEIS); `l_n = sum_j C(n-1, j-1) S_j 2^C(n-j, 2)` with `S_j` the number of strong labelled tournaments; and
    the number of labelled tournaments whose pieces (cut the sequence of strong components before every component
    whose largest vertex exceeds all earlier ones), listed by increasing largest vertex, have sizes `alpha` is
    `prod_j C(s_j - 1, alpha_j - 1) l_(alpha_j)`, the number of labelled graphs whose components have that type.
 
 Proofs: source note, section 6.
 
-## Remark (elementary): the monoid of path counts has elasticity 5/2
+## Remark (KNOWN, with three elementary additions): factorisation lengths of path counts
 
 With the atoms of `M = {odd} \ {7, 21}` (KNOWN, THM-4094: the primes other than 7, the numbers `7p` with `p` an odd
-prime other than 3, 63, 343): the largest ratio of two factorisation lengths of one element is `5/2`, attained
-exactly at the even powers of 63 (`63^2 = 3^4 * 49`); the smallest element with factorisations of different lengths
-is `315`. For the actual set of path counts the lower bound is unconditional and the upper bound holds if the
-Chan-Pak conjecture does (source note, section 7).
+prime other than 3, 63, 343) the largest ratio of two factorisation lengths of one element is `5/2`, attained at
+`63^2 = 3^4 * 49` (KNOWN: Session160, Session266); for the actual set of path counts the lower bound is unconditional
+and the upper bound holds if the Chan-Pak conjecture does. Added here (source note, section 7): the set of lengths
+of an element; equality exactly at the even powers of 63; the smallest element with two lengths is 315; without
+63 the monoid is still not half-factorial (`1225 = 35 * 35 = 5 * 5 * 49`), with elasticity `3/2`.
 
 ## Falsifier
 

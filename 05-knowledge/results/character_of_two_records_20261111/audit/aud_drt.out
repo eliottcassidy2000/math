@@ -1,0 +1,48 @@
+== order 15: Cayley-Dickson sign tournament CD_4 (own construction)
+CD_2: order 3, doubly regular: True, H = 3, H mod 8 = 3, n(n-1)/2 mod 8 = 3
+CD_2: order 3, doubly regular: True, anti-automorphisms found: 3, anti-involutions: 3
+   fixed vertex 0: invariant triples cyclic: 1 of 1 (Theorem E predicts all); |E| values [0]; paths of Z ending in D_1 mod 2 by k: 1; predicted C(m,k)[t even]: 1; fold formula H mod 4 = 3
+   fixed vertex 2: invariant triples cyclic: 1 of 1 (Theorem E predicts all); |E| values [0]; paths of Z ending in D_1 mod 2 by k: 1; predicted C(m,k)[t even]: 1; fold formula H mod 4 = 3
+   fixed vertex 1: invariant triples cyclic: 1 of 1 (Theorem E predicts all); |E| values [0]; paths of Z ending in D_1 mod 2 by k: 1; predicted C(m,k)[t even]: 1; fold formula H mod 4 = 3
+CD_3: order 7, doubly regular: True, H = 189, H mod 8 = 5, n(n-1)/2 mod 8 = 5
+CD_3: order 7, doubly regular: True, anti-automorphisms found: 21, anti-involutions: 7
+   fixed vertex 0: invariant triples cyclic: 0 of 3 (Theorem E predicts none); |E| values [2]; paths of Z ending in D_1 mod 2 by k: 000; predicted C(m,k)[t even]: 000; fold formula H mod 4 = 1
+   fixed vertex 6: invariant triples cyclic: 0 of 3 (Theorem E predicts none); |E| values [2]; paths of Z ending in D_1 mod 2 by k: 000; predicted C(m,k)[t even]: 000; fold formula H mod 4 = 1
+   fixed vertex 5: invariant triples cyclic: 0 of 3 (Theorem E predicts none); |E| values [2]; paths of Z ending in D_1 mod 2 by k: 000; predicted C(m,k)[t even]: 000; fold formula H mod 4 = 1
+CD_4: order 15, doubly regular: True, H = 198335025, H mod 8 = 1, n(n-1)/2 mod 8 = 1
+CD_4: order 15, doubly regular: True, anti-automorphisms found: 0, anti-involutions: 0
+CD_3 isomorphic to P_7 (both doubly regular of order 7, unique class): H(CD_3) = 189, H(P_7) = 189
+double of P_7: tournament form equals matrix form: True; doubly regular: True; H = 198335025 (CD_4: 198335025)
+double of P_3: tournament form equals matrix form: True
+double of P_11: tournament form equals matrix form: True
+== order 19
+D_19: doubly regular: True; H = 1172732961771 (record 1172732961771: True); H mod 4 = 3, mod 8 = 3, mod 16 = 11; n(n-1)/2 mod 8 = 3
+D_19: order 19, doubly regular: True, anti-automorphisms found: 3, anti-involutions: 1
+   fixed vertex 1: invariant triples cyclic: 9 of 9 (Theorem E predicts all); |E| values [4]; paths of Z ending in D_1 mod 2 by k: 100000011; predicted C(m,k)[t even]: 100000011; fold formula H mod 4 = 3
+P_19: order 19, doubly regular: True, anti-automorphisms found: 171, anti-involutions: 19
+   fixed vertex 0: invariant triples cyclic: 9 of 9 (Theorem E predicts all); |E| values [4]; paths of Z ending in D_1 mod 2 by k: 100000011; predicted C(m,k)[t even]: 100000011; fold formula H mod 4 = 3
+   fixed vertex 10: invariant triples cyclic: 9 of 9 (Theorem E predicts all); |E| values [4]; paths of Z ending in D_1 mod 2 by k: 100000011; predicted C(m,k)[t even]: 100000011; fold formula H mod 4 = 3
+   fixed vertex 1: invariant triples cyclic: 9 of 9 (Theorem E predicts all); |E| values [4]; paths of Z ending in D_1 mod 2 by k: 100000011; predicted C(m,k)[t even]: 100000011; fold formula H mod 4 = 3
+D_19 not isomorphic to P_19: H differs: True
+== order 23
+recorded H (drt23_classes.out): 13 classes; residues mod 8: [5]; mod 16: [5, 13]; mod 32: [5, 13, 21, 29]
+codes in drt23_codes_all.txt: 15
+  code  0: doubly regular: True; H = 15759953146384333; in recorded list: True; H mod 8 = 5; mod 16 = 13; self-converse: False
+  code  1: doubly regular: True; H = 15759901654866253; in recorded list: True; H mod 8 = 5; mod 16 = 13; self-converse: False
+  code  2: doubly regular: True; H = 15759902090984757; in recorded list: True; H mod 8 = 5; mod 16 = 5; self-converse: False
+  code  3: doubly regular: True; H = 15759921650267341; in recorded list: True; H mod 8 = 5; mod 16 = 13; self-converse: False
+  code  4: doubly regular: True; H = 15760011998148461; in recorded list: True; H mod 8 = 5; mod 16 = 13; self-converse: False
+  code  5: doubly regular: True; H = 15760016645693693; in recorded list: True; H mod 8 = 5; mod 16 = 13; self-converse: False
+  code  6: doubly regular: True; H = 15759978266502125; in recorded list: True; H mod 8 = 5; mod 16 = 13; self-converse: False
+  code  7: doubly regular: True; H = 15759966226135093; in recorded list: True; H mod 8 = 5; mod 16 = 5; self-converse: False
+  code  8: doubly regular: True; H = 15760009030383957; in recorded list: True; H mod 8 = 5; mod 16 = 5; self-converse: False
+  code  9: doubly regular: True; H = 15759987145644133; in recorded list: True; H mod 8 = 5; mod 16 = 5; self-converse: False
+  code 10: doubly regular: True; H = 15759978266502125; in recorded list: True; H mod 8 = 5; mod 16 = 13; self-converse: False
+  code 11: doubly regular: True; H = 15759966226135093; in recorded list: True; H mod 8 = 5; mod 16 = 5; self-converse: False
+  code 12: doubly regular: True; H = 15759966226135093; in recorded list: True; H mod 8 = 5; mod 16 = 5; self-converse: False
+  code 13: doubly regular: True; H = 15759978266502125; in recorded list: True; H mod 8 = 5; mod 16 = 13; self-converse: False
+  code 14: doubly regular: True; H = 15760011998148461; in recorded list: True; H mod 8 = 5; mod 16 = 13; self-converse: False
+distinct H among recomputed codes: 10
+double of P_11: doubly regular: True; H = 15759752857737405 (record 15759752857737405: True); H mod 8 = 5; mod 16 = 13; self-converse: False
+P_23: self-converse: True
+python3 aud_drt.py $S/aud_ham /Users/e/Documents/GitHub/math-wt-atoms all23  38.87s user 3.65s system 94% cpu 44.853 total

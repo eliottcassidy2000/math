@@ -1,0 +1,29 @@
+== R1 (b), R2: means over all labelled tournaments
+n = 1: 1 tournaments; U_T(1,0,...) = H(T) fails: 0; mean [p_lambda] = n! 2^(l-n)/z_lambda for all lambda: True; mean by max-ordered type = n! 2^(l-n)/pi_u: True
+     (1,): 1
+n = 2: 2 tournaments; U_T(1,0,...) = H(T) fails: 0; mean [p_lambda] = n! 2^(l-n)/z_lambda for all lambda: True; mean by max-ordered type = n! 2^(l-n)/pi_u: True
+     (1, 1): 1
+n = 3: 8 tournaments; U_T(1,0,...) = H(T) fails: 0; mean [p_lambda] = n! 2^(l-n)/z_lambda for all lambda: True; mean by max-ordered type = n! 2^(l-n)/pi_u: True
+     (1, 1, 1): 1; (3,): 1/2
+n = 4: 64 tournaments; U_T(1,0,...) = H(T) fails: 0; mean [p_lambda] = n! 2^(l-n)/z_lambda for all lambda: True; mean by max-ordered type = n! 2^(l-n)/pi_u: True
+     (1, 1, 1, 1): 1; (1, 3): 3/2; (3, 1): 1/2
+n = 5: 1024 tournaments; U_T(1,0,...) = H(T) fails: 0; mean [p_lambda] = n! 2^(l-n)/z_lambda for all lambda: True; mean by max-ordered type = n! 2^(l-n)/pi_u: True
+     (1, 1, 1, 1, 1): 1; (1, 1, 3): 3; (1, 3, 1): 3/2; (3, 1, 1): 1/2; (5,): 3/2
+== identity sum over compositions of n into odd parts of 2^l/pi_u = 2
+n =  1: 2; n =  2: 2; n =  3: 2; n =  4: 2; n =  5: 2; n =  6: 2; n =  7: 2; n =  8: 2; n =  9: 2; n = 10: 2; n = 11: 2; n = 12: 2; n = 13: 2; n = 14: 2; n = 15: 2; n = 16: 2; 
+== q_n = sum over odd-part partitions of 2^l p_lambda/z_lambda = 2 * (sum of hook Schur functions), random integer points
+n = 1..7, three random points each (n + 1 variables): q_n = power-sum form = 2 * hooks: True
+== R3: pieces of tournaments and components of graphs by max-ordered type
+n = 1: l_n = 1 (A001187: 1); strong labelled tournaments S_n = 1; piece types of tournaments = component types of graphs = prod C(s_j - 1, a_j - 1) l_(a_j) for all 1 compositions: True
+n = 2: l_n = 1 (A001187: 1); strong labelled tournaments S_n = 0; piece types of tournaments = component types of graphs = prod C(s_j - 1, a_j - 1) l_(a_j) for all 2 compositions: True
+n = 3: l_n = 4 (A001187: 4); strong labelled tournaments S_n = 2; piece types of tournaments = component types of graphs = prod C(s_j - 1, a_j - 1) l_(a_j) for all 4 compositions: True
+n = 4: l_n = 38 (A001187: 38); strong labelled tournaments S_n = 24; piece types of tournaments = component types of graphs = prod C(s_j - 1, a_j - 1) l_(a_j) for all 8 compositions: True
+     n = 4 tournaments by type: [((1, 1, 1, 1), 1), ((1, 1, 2), 3), ((1, 2, 1), 2), ((1, 3), 12), ((2, 1, 1), 1), ((2, 2), 3), ((3, 1), 4), ((4,), 38)]
+n = 5: l_n = 728 (A001187: 728); strong labelled tournaments S_n = 544; piece types of tournaments = component types of graphs = prod C(s_j - 1, a_j - 1) l_(a_j) for all 16 compositions: True
+     type (1,3,1) at n = 5: tournaments 12, graphs 12
+n = 6: l_n = 26704 (A001187: 26704); strong labelled tournaments S_n = 22320; piece types of tournaments = component types of graphs = prod C(s_j - 1, a_j - 1) l_(a_j) for all 32 compositions: True
+== formula (b): l_n = sum_j C(n-1, j-1) S_j 2^C(n-j, 2), with S_j from T = 1/(1 - S)
+S_n (n = 1..8): [1, 0, 2, 24, 544, 22320, 1677488, 236522496]
+connected labelled graphs from log of the series (n = 1..8): [1, 1, 4, 38, 728, 26704, 1866256, 251548592]
+formula (b) equals the connected-graph numbers for n <= 12: True; brute-force S_n agree for n <= 6: True; brute-force l_n agree: True
+python3 aud_records.py  1.27s user 0.06s system 86% cpu 1.541 total

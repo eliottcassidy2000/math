@@ -9,6 +9,8 @@ Conjecture (HYP-9667 (bK)): if S^2 = -(N-1) I then c_(2k+1) = [N = 4 mod 8] C(N/
                                           and the double of P_11
   cycle_parities.py CYC i1mod4 JSON       the same classes: odd cycle counts modulo 4 (exploratory)
   cycle_parities.py CYC short JSON        cycle counts of lengths 3..12 modulo 256, orders 19 and 23 (exploratory)
+  cycle_parities.py CYC pairs NAMES       all single and double switchings of (source) + T, T in P_7, P_11, CD_4,
+                                          P_19, D_19, P_23, DP_11 (the double of P_11)
   cycle_parities.py CYC i2 [members]      N = 24: random members of the classes of P_23^+ and D(P_11)^+
   cycle_parities.py CYC i3 [members]      N = 20: D_19, P_19 (with a source) and random members of their classes
   cycle_parities.py CYC i4 MAXMAT STRIDE K  order 27: P_27 and the classes of drt27_direct.py (same order)
@@ -114,6 +116,22 @@ if __name__ == "__main__":
         print("order 19: the same")
         for name, out in [("P_19", paley_out(19)), ("D_19", G)]:
             c = cycles(exe, out); print("  %-7s %s" % (name, ' '.join("%3d" % c[l] for l in range(3, 13))))
+    elif mode == "pairs":
+        # all single and double switchings of (source) + T for the classes on which the law was seen to hold:
+        # if H mod 4 and the cycle parities are quadratic functions of the switching set (observation QF), a class
+        # on which all singles and pairs agree with the normalised member is constant.
+        names = sys.argv[3:]
+        a, b, c0, d0 = next(gs_solutions(5)); G = descendant(goethals_seidel(a, b, c0, d0), 0)
+        pool = {"P_7": paley_out(7), "P_11": paley_out(11), "CD_4": tournament(4)[0], "P_19": paley_out(19), "D_19": G,
+                "P_23": paley_out(23), "DP_11": descendant(double(paley_matrix(11)), 0)}
+        for name in names:
+            T = plus(pool[name]); N = len(T); base = odd_vector(cycles(exe, T), N); vs = {}
+            for u in range(N):
+                for v in range(u, N):
+                    X = (1 << u) | (1 << v)
+                    w = odd_vector(cycles(exe, switch(T, X)), N); vs[w] = vs.get(w, 0) + 1
+            print("class of (source) + %s (N = %d): %d single and double switchings; odd parity vectors: %s; normalised member %s; predicted %s" % (
+                name, N, N + N * (N - 1) // 2, sorted(vs.items()), base, predicted(N))); sys.stdout.flush()
     elif mode == "i2":
         k = int(sys.argv[3]) if len(sys.argv) > 3 else 10; random.seed(2412)
         print("I2: N = 24: predicted " + predicted(24))

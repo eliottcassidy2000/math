@@ -1,0 +1,12 @@
+k = 4 (order 15): CD_k doubly regular: True; D(CD_(k-1)) doubly regular: True
+   transitive 5-subsets: CD_k 21, converse of CD_k 21, D(CD_(k-1)) 21, its converse 21
+   TT4-through-vertex profiles equal: CD_k vs D(CD_(k-1)): True; CD_k vs converse of D: True; CD_k vs its own converse: True
+   distinct values of TT4 through a vertex: CD_k [84] ; D(CD_(k-1)) [84]
+k = 5 (order 31): CD_k doubly regular: True; D(CD_(k-1)) doubly regular: True
+   transitive 5-subsets: CD_k 10395, converse of CD_k 10395, D(CD_(k-1)) 10395, its converse 10395
+   TT4-through-vertex profiles equal: CD_k vs D(CD_(k-1)): True; CD_k vs converse of D: True; CD_k vs its own converse: True
+   distinct values of TT4 through a vertex: CD_k [1260] ; D(CD_(k-1)) [1260]
+k = 6 (order 63): CD_k doubly regular: True; D(CD_(k-1)) doubly regular: True
+   transitive 5-subsets: CD_k 628215, converse of CD_k 628215, D(CD_(k-1)) 628215, its converse 628215
+   TT4-through-vertex profiles equal: CD_k vs D(CD_(k-1)): True; CD_k vs converse of D: True; CD_k vs its own converse: True
+   distinct values of TT4 through a vertex: CD_k [13020] ; D(CD_(k-1)) [13020]

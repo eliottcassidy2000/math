@@ -1,0 +1,13 @@
+order 11: 40 random (tournament, triple): sum of H over the 8 switchings != 0 (mod 4) in 0
+order 12: 40 random (tournament, triple): sum of H over the 8 switchings != 0 (mod 4) in 0
+order 13: 40 random (tournament, triple): sum of H over the 8 switchings != 0 (mod 4) in 0
+order 14: 40 random (tournament, triple): sum of H over the 8 switchings != 0 (mod 4) in 0
+order 15: 40 random (tournament, triple): sum of H over the 8 switchings != 0 (mod 4) in 0
+order 16: 40 random (tournament, triple): sum of H over the 8 switchings != 0 (mod 4) in 0
+order 18: 10 random (tournament, triple): sum of H over the 8 switchings != 0 (mod 4) in 0
+order 20: 10 random (tournament, triple): sum of H over the 8 switchings != 0 (mod 4) in 0
+class of (source) + P_11 (N = 12): 30 random (member, triple): violations 0
+class of (source) + CD_4 (N = 16): 30 random (member, triple): violations 0
+class of (source) + P_19 (N = 20): 10 random (member, triple): violations 0
+class of (source) + D_19 (N = 20): 10 random (member, triple): violations 0
+python3 switch_quadratic.py third /tmp/claude-hamexact  43.31s user 1.57s system 95% cpu 47.005 total

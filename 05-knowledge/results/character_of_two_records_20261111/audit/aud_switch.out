@@ -1,0 +1,44 @@
+== (ii) switching classes of (source) + T: H mod 4 and mod 8 over members
+N =  4, class of (source) + P_3: 8 switching sets (all), 8 distinct labelled members; H mod 4: {3: 8}; H mod 8: {3: 8}; 1 + N/2 mod 4 = 3
+N =  8, class of (source) + P_7: 128 switching sets (all), 128 distinct labelled members; H mod 4: {1: 128}; H mod 8: {5: 128}; 1 + N/2 mod 4 = 1
+N = 12, class of (source) + P_11: 200 switching sets (random), 192 distinct labelled members; H mod 4: {3: 200}; H mod 8: {7: 200}; 1 + N/2 mod 4 = 3
+N = 16, class of (source) + CD_4: 100 switching sets (random), 100 distinct labelled members; H mod 4: {1: 100}; H mod 8: {1: 76, 5: 24}; 1 + N/2 mod 4 = 1
+N = 20, class of (source) + P_19: 40 switching sets (random), 40 distinct labelled members; H mod 4: {3: 40}; H mod 8: {3: 40}; 1 + N/2 mod 4 = 3
+N = 20, class of (source) + D_19: 40 random members; H mod 4: {3: 40}; H mod 8: {3: 26, 7: 14}; 1 + N/2 mod 4 = 3
+N = 24, class of (source) + P_23: 12 random members; H mod 4: {1: 12}; H mod 8: {5: 12}; 1 + N/2 mod 4 = 1
+N = 24, class of (source) + double of P_11: 12 random members; H mod 4: {1: 12}; H mod 8: {5: 12}; 1 + N/2 mod 4 = 1
+N = 24, class of (source) + annealed D_23 code 0: 8 random members; H mod 4: {1: 5, 3: 3}; H mod 8: {1: 3, 3: 3, 5: 2}; 1 + N/2 mod 4 = 1
+N = 24, class of (source) + annealed D_23 code 2: 8 random members; H mod 4: {1: 8}; H mod 8: {1: 5, 5: 3}; 1 + N/2 mod 4 = 1
+== H mod 4 is not a switching invariant in general
+order 4: H mod 4 differs for 0 of 200 random (tournament, switching set) pairs
+order 5: H mod 4 differs for 80 of 200 random (tournament, switching set) pairs
+order 6: H mod 4 differs for 93 of 200 random (tournament, switching set) pairs
+order 7: H mod 4 differs for 94 of 200 random (tournament, switching set) pairs
+order 8: H mod 4 differs for 104 of 200 random (tournament, switching set) pairs
+order 9: H mod 4 differs for 95 of 200 random (tournament, switching set) pairs
+order 10: H mod 4 differs for 95 of 200 random (tournament, switching set) pairs
+== the proved reduction: (H(U) - H(U^v))/2 = sum_{x in N^-(v)} g_R(x) (mod 2); for |R| odd g_R = paths on |R|-1 vertices
+random tournaments of orders 3..9: 840 tested, violations of the reduction: 0; |R| odd: 360 tested, g_R != (paths on |R|-1 vertices) in 0
+== refuted local form 1: det S = 4H - 3 (mod 16)
+order 2: all 2 labelled tournaments, violations: 0
+order 4: all 64 labelled tournaments, violations: 0
+order 6: all 32768 labelled tournaments, violations: 15360
+== refuted local form 2: one orthogonal row (exhaustive up to isomorphism)
+   U has row v of S orthogonal to all other rows iff U is a switching of (source) + R', R' regular; U^v is then (source) + R' switched at the complementary set.
+N =  4: 1 regular tournaments of order 3 up to isomorphism; pairs {U, U^v}: 4; H mod 4 differs in 0 (classes with a failure: 0)
+N =  6: 1 regular tournaments of order 5 up to isomorphism; pairs {U, U^v}: 16; H mod 4 differs in 0 (classes with a failure: 0)
+N =  8: 3 regular tournaments of order 7 up to isomorphism; pairs {U, U^v}: 192; H mod 4 differs in 0 (classes with a failure: 0)
+N = 10: 15 regular tournaments of order 9 up to isomorphism; pairs {U, U^v}: 3840; H mod 4 differs in 1152 (classes with a failure: 9)
+== refuted local form 3: score parities: <s_R, g_R> = 0 (mod 2) for every tournament R
+order 3: 2 isomorphism classes, <s, g> odd in 0
+order 4: 4 isomorphism classes, <s, g> odd in 2
+order 5: 12 isomorphism classes, <s, g> odd in 0
+order 6: 56 isomorphism classes, <s, g> odd in 32
+order 7: 456 isomorphism classes, <s, g> odd in 208
+== the double of an arbitrary base tournament: residues of H mod 4
+base order 1 (1 classes and their converses): H(double) mod 4: {3: 2}
+base order 2 (1 classes and their converses): H(double) mod 4: {1: 2}
+base order 3 (2 classes and their converses): H(double) mod 4: {1: 2, 3: 2}
+base order 4 (4 classes and their converses): H(double) mod 4: {1: 8}
+base order 5 (12 classes and their converses): H(double) mod 4: {1: 8, 3: 16}
+python3 aud_switch.py $S/aud_ham n24  145.21s user 27.12s system 82% cpu 3:28.29 total

@@ -1,0 +1,5 @@
+descendants of the class of (source) + annealed code 4: 24 tournaments, not doubly regular: 0; distinct H mod 2^32: 4; H mod 8: {5: 24}; odd parity vectors: {'00000000000': 24}
+descendants of the class of (source) + annealed code 5: 24 tournaments, not doubly regular: 0; distinct H mod 2^32: 3; H mod 8: {5: 24}; odd parity vectors: {'00000000000': 24}
+descendants of the class of (source) + annealed code 6: 24 tournaments, not doubly regular: 0; distinct H mod 2^32: 4; H mod 8: {5: 24}; odd parity vectors: {'00000000000': 24}
+descendants of the class of (source) + annealed code 7: 24 tournaments, not doubly regular: 0; distinct H mod 2^32: 3; H mod 8: {5: 24}; odd parity vectors: {'00000000000': 24}
+python3 aud_refute.py $S/aud_ham $S/aud_cyc  desc 4 5 6 7  208.34s user 10.96s system 87% cpu 4:09.56 total

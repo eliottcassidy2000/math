@@ -11,21 +11,33 @@ status: >
   512, 65,536, 33,554,432 tournaments; every k), H = 1 + 2F (mod 4) by direct count for orders <= 9; all 126 circulant
   tournaments of orders 3-13 against a direct count of H; (E) on the non-Paley doubly regular tournament D_19
   (exact H) and on three non-Paley self-converse classes of order 27 (direct counts mod 256); (P) for
-  q = 3, 7, 11, 19, 23, 27, 31, 43, 47 (invariant cycles of every length modulo 256) and against the known H for q <= 27.
+  q = 3, 7, 11, 19, 23, 27, 31, 43, 47 (invariant cycles of every length modulo 256) and against the known H (exact
+  for q <= 23; modulo 256 for q = 27, 31).
   KNOWN, credited: the half-path form of invariant cycles and H = 1 + 2F (mod 4), H = 1 + 2F + 4I (mod 8), the
   remark that F is not decided by triangles alone, conjugacy of anti-involutions (Session29 half-path and
-  converse-congruences reports, 2026-10-22); c_3 = F_1 (mod 2) (THM-552); H = 1 (mod 4) for self-converse tournaments
+  converse-congruences reports, 2026-10-22); the cycle-cut bridge of Session130 (hamiltonian/PROOFS.md, Theorem 2,
+  2026-10-31): F = sum over the pairs of D_1 of a two-path-cover weight of T - v_0 (mod 2), which is the shape of
+  (Q) 3 and gives Corollary (a) for the total F (found by the audit; the weights agree term by term with the path
+  counts of Z); HYP-9273 (B) (opus S33, 2026-10-14, OPEN): H(P_q) = q(q-1)/2 (mod 8), seven cases q <= 31, of which
+  (P) 3 is the proof modulo 4; c_3 = F_1 (mod 2) (THM-552); H = 1 (mod 4) for self-converse tournaments
   of even order (THM-791); H = 1 + 2 c_odd (mod 4) (THM-466, THM-478); Redei's theorem; p | H(P_p), free action of
   Aut on Hamiltonian paths, the values H(P_q) for q <= 23 and the orbit numbers 1, 9, 1729, ... (THM-212, LEM-003,
   THM-5101, THM-4747); D_19 and its path count (HYP-9365, this machine, 2026-10-22); maxima of H at orders <= 9
   (THM-338).
-  NEW here (the audit searched the repository as well): the fold (Z, D_1), statement (Q) and its corollaries, (E),
-  (P) including the residue of H(P_q) modulo 4 for every prime power q = 3 (mod 4), H(P_27) modulo 256.
+  NEW here (not found by the author or by the audit): the fold (Z, D_1) - a tournament of half the size whose path
+  counts are the weights, independent of D_1; (Q) 2, the refinement by cycle length; Corollaries (b), (c); (E); (P) 1-2
+  and the proof of the residue of H(P_q) modulo 4 for every prime power q = 3 (mod 4); H(P_27) modulo 256 (it was
+  on record modulo 8424).
   NOT CLAIMED: novelty in the literature; anything about tournaments without a converse symmetry (HYP-9667); the
   Chan-Pak conjecture, which remains OPEN.
-  Pre-registered: R1 (F(P_27), F(P_43) odd) CONFIRMED and now a corollary; R2, R3 FAILED and were replaced by (Q);
-  R8 CONFIRMED (H(P_27) = 7 mod 8). MISTAKE-PENDING (entry filed at close-out) (two registrations were decidable from the repository).
-  AUDIT: AUDIT-PENDING (pre-audit checkpoint)
+  Pre-registered: R1 (F(P_27), F(P_43) odd) CONFIRMED and now a corollary (the P_27 half was decidable from
+  HYP-9273); R2, R3 FAILED and were replaced by (Q); R8 (H(P_27) = 7 mod 8) CONFIRMED but decidable from HYP-9273.
+  MISTAKE-763.
+  AUDIT: PASS WITH CORRECTIONS (05-knowledge/results/character_of_two_records_20261111/audit/AUDIT.md): (Q), (E), (P)
+  re-derived by hand and recomputed with independent programs (every labelled tournament with the fixed
+  anti-involution of orders 3-9, cycles counted from the definition; Paley data to q = 31; D_19), no error;
+  corrections of credit applied (Session130 Theorem 2, its M7; HYP-9273 (B) and the registrations decidable from
+  it, M2; minor 11). MISTAKE-763.
 session: mac-mini-2026-11-11-atoms
 source: 05-knowledge/results/character_of_two_records_20261111/README.md
 related:
@@ -42,12 +54,14 @@ related:
   - THM-451
   - HYP-9365
   - HYP-9371
+  - HYP-9273
 ---
 
 # THM-5136 - folding a tournament by a converse symmetry
 
 Source: [the note](../../05-knowledge/results/character_of_two_records_20261111/README.md), sections 3, 4, 5.2.
-Independent audit: AUDIT-PENDING (pre-audit checkpoint)
+Independent audit: [AUDIT.md](../../05-knowledge/results/character_of_two_records_20261111/audit/AUDIT.md), PASS WITH
+CORRECTIONS (no mathematical error; credit corrected: Session130 Theorem 2, HYP-9273 (B)).
 
 ## Setting
 
@@ -125,7 +139,8 @@ square), `psi(x) = -x`, `chi` the quadratic character.
 2. `a -> a^2` is an isomorphism from `Z` onto `P_q` restricted to the non-zero squares (`z_ab = 1` iff `b^2 - a^2` is a
    square).
 3. `H(P_q) = 2 - chi(2) = q(q-1)/2 (mod 4)`; the number of Hamiltonian paths starting with the arc `0 -> 1` is
-   `1 (mod 4)` (for prime `q`: the number of orbits under `Aut(P_q)`).
+   `1 (mod 4)` (for prime `q`: the number of orbits under `Aut(P_q)`). This is HYP-9273 (B) modulo 4; modulo 8 that
+   hypothesis is open.
 
 | `q` | `q mod 8` | fold `Z` | `H(Z)` | `(F_k mod 2)_k` | `F mod 4` | `H(P_q) mod 8` |
 |---|---|---|---|---|---|---|
@@ -135,7 +150,7 @@ square), `psi(x) = -x`, `chi` the quadratic character.
 | 19 | 3 | regular, order 9 | 3357 | `100000011` | 1 | 3 |
 | 23 | 7 | order 11 | 92411 | all 0 | 0 | 5 |
 | 27 | 3 | order 13 | 3703011 | `1001100110011` | 3 | 7 |
-| 31 | 7 | order 15 | 196922055 | all 0 | 0 | |
+| 31 | 7 | order 15 | 196922055 | all 0 | 0 | 1 (HYP-9273) |
 | 43 | 3 | order 21 | | `C(21, k) mod 2` | 3 | |
 | 47 | 7 | order 23 | | all 0 | 0 | |
 

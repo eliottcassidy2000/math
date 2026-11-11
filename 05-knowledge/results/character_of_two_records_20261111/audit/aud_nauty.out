@@ -1,0 +1,7 @@
+sanity: P_7 vs CD_3: True ; P_7 vs its converse: True
+k = 4 (order 15): |Aut(CD_k)|: 3 orbits; grpsize=21; 2 gens; 14 nodes (6 bad leaves); maxlev=3 ; |Aut(D(CD_(k-1)))|: 3 orbits; grpsize=21; 2 gens; 19 nodes (5 bad leaves); maxlev=4
+   CD_k isomorphic to D(CD_(k-1)): True; to the converse of D(CD_(k-1)): False; CD_k self-converse: False; D(CD_(k-1)) self-converse: False
+k = 5 (order 31): |Aut(CD_k)|: 7 orbits; grpsize=21; 2 gens; 48 nodes (35 bad leaves); maxlev=3 ; |Aut(D(CD_(k-1)))|: 7 orbits; grpsize=21; 2 gens; 48 nodes (33 bad leaves); maxlev=3
+   CD_k isomorphic to D(CD_(k-1)): False; to the converse of D(CD_(k-1)): False; CD_k self-converse: False; D(CD_(k-1)) self-converse: False
+k = 6 (order 63): |Aut(CD_k)|: 15 orbits; grpsize=21; 2 gens; 193 nodes (165 bad leaves); maxlev=4 ; |Aut(D(CD_(k-1)))|: 15 orbits; grpsize=21; 2 gens; 189 nodes (162 bad leaves); maxlev=4
+   CD_k isomorphic to D(CD_(k-1)): False; to the converse of D(CD_(k-1)): False; CD_k self-converse: False; D(CD_(k-1)) self-converse: False

@@ -219,20 +219,30 @@ Outputs: `out/`. Program names changed after registration: `paley_sym.c` is `hal
 
 | | verdict | what happened |
 |---|---|---|
-| R1 | CONFIRMED | `F(P_27)`, `F(P_43)` odd. Now a corollary of the folding formula. |
+| R1 | CONFIRMED | `F(P_27)`, `F(P_43)` odd. Now a corollary of the folding formula. The `P_27` half was decidable from the repository (HYP-9273: `H(P_27) = 3 mod 4`; audit); out-of-sample was `P_43`. |
 | R2 | FAILED | `F_k(P_q)` is odd for `k = 4, 5` already at `q = 11`; the parities are `C((q-1)/2, k) mod 2`. |
 | R3 | FAILED | With all invariant triples cyclic, `F` is odd at every order tried (`n = 3, 5, 7, 9, 11`), not `(n-1)/2 mod 2`. Replaced by `F_k = C(m, k) (mod 2)`, proved. |
-| R4 | CONFIRMED | Kernel formula, elimination and (orders <= 11) direct count agree. Now a theorem for all doubly regular tournaments. |
-| R5 | CONFIRMED | `k = 3, 4, 5` (also `6, 7`). Same theorem. |
-| R6 | FAILED | `CD_4`, `CD_5` have no anti-automorphism. **This part was decidable from canon** (THM-448, THM-451: the tower is not self-converse beyond order 7) and should not have been registered. `H(CD_5) mod 4` was not computed. |
-| R7 | CONFIRMED, uninformative | All 16 descendants are isomorphic to `CD_4`. |
-| R8 | CONFIRMED | Paths starting `0 -> 1` in `P_27`: `1 (mod 256)`; `H(P_27) = 95 (mod 256)`. |
+| R4 | CONFIRMED (a consistency check) | Kernel formula, elimination and (orders <= 11) direct count agree. Now a theorem for all doubly regular tournaments; it was derivable from THM-5132 (3) and recorded facts without a run (audit). |
+| R5 | CONFIRMED (a consistency check) | `k = 3, 4, 5` (also `6, 7`). Same theorem, same remark. |
+| R6 | FAILED | `CD_4`, `CD_5` have no anti-automorphism. For `CD_4` **this was decidable from canon** (THM-448, THM-451) and should not have been registered; for `CD_5` it was a legitimate registration, because `CD_5` is not the doubling tower of THM-448 (THM-5133 (G); the identification made in the first block of this file is wrong for `k >= 5`; audit). `H(CD_5) mod 4` was not computed. |
+| R7 | CONFIRMED, uninformative | All 16 descendants are isomorphic to `CD_4`; the statement also follows from the classification (both doubly regular tournaments of order 15 have `H = 198335025`). |
+| R8 | CONFIRMED, but decidable from the repository | Paths starting `0 -> 1` in `P_27`: `1 (mod 256)`; `H(P_27) = 95 (mod 256)`. HYP-9273 (opus S33) already records `H(P_27) = 3159 (mod 8424)`, hence `7 (mod 8)`; the sentence of the third block ("not found in the repository") is wrong: the search read canon and not the hypothesis files (audit). The conjecture "to be recorded" is HYP-9273 (B). |
 | R9 | CONFIRMED | G1: all 12,000 Goethals-Seidel matrices give one class, `D_19`, `H = 1172732961771 = 3 (mod 4)`. G2: one class, `H = 189 (mod 256)`. G3: 39 classes from 40 matrices, three with a converse symmetry, `H = 3 (mod 4)` by folding. H3: nine classes of order 27 (three with, six without converse symmetry), `H = 127, 191, 111, 151, 55, 23, 247, 127, 23 (mod 256)`, all `3 (mod 4)`; the folding formula agrees on the first three. |
 | R10 | CONFIRMED | G1: `3 (mod 8)`; G2: `5 (mod 8)`; H3: `7 (mod 8)` for all nine. |
-| R11 | CONFIRMED | 40 random members of each class: `H = 1 (mod 4)` for both classes at `N = 24`, `3 (mod 4)` at `N = 20`. |
-| R12 | CONFIRMED | I1: 14 of 14 classes of order 23 have every odd cycle count even. I2: 20 of 20. I3: 42 of 42 with the vector `100000011`. I4: 10 of 10 with the vector `1001100110011` (six classes without converse symmetry). Extension after R12 was read, same criterion, not separately registered: all 39 classes met at order 27 (`out/cycle_parities_i4_all.out`), 39 of 39. The vertex-local form (cycles through one vertex) fails, so the law is global. |
+| R11 | CONFIRMED as registered; the conjecture recorded from it REFUTED | 40 random members of each class: `H = 1 (mod 4)` for both classes at `N = 24`, `3 (mod 4)` at `N = 20`. The conjecture written in the fifth block ("for every tournament with `S^2 = -(N-1) I`, `H = 1 + N/2 (mod 4)`") is false: see below. |
+| R12 | CONFIRMED as registered; the class form of the conjecture REFUTED | I1: 14 of 14 classes of order 23 have every odd cycle count even. I2: 20 of 20. I3: 42 of 42 with the vector `100000011`. I4: 10 of 10 with the vector `1001100110011` (six classes without converse symmetry). Extension after R12 was read, same criterion, not separately registered: all 39 classes met at order 27 (`out/cycle_parities_i4_all.out`), 39 of 39. The vertex-local form (cycles through one vertex) fails, so the law is global. |
 
-**Registration errors.** (1) R6, as above. (2) R9 and R10 at orders 19 and 23: the repository already had the exact
+**The independent audit refuted the conjectures recorded from R11 and R12 in their class form.** For the annealed
+doubly regular tournament `D23_0` of HYP-9371, `(source) + D23_0` switched at one vertex has `H = 3 (mod 4)` and an
+odd number of 23-cycles (`audit/counterexample_N24_outmasks.txt`; re-checked with `descendants23.py`). The classes
+registered in R11 and in I2, I3 of R12 (`P_23`, the double of `P_11`, `P_19`, `D_19`) are the ones whose matrix has a
+single class of descendants; on them the statements hold (afterwards also checked on all single and double
+switchings). For doubly regular tournaments themselves (I1, I4 and the descendants of all fourteen matrices of
+order 24) no exception was found, and the conjecture is kept in that form (HYP-9667 (bK), (b4), (b8)).
+
+**Registration errors.** (0) R11 and R12 sampled a statement about every switching class on the most symmetric
+classes only, although twelve generic classes of order 24 were in the repository. (0') R8 and half of R1 were
+decidable from HYP-9273, R4, R5, R7 derivable (found by the audit). (1) R6 for `CD_4`, as above. (2) R9 and R10 at orders 19 and 23: the repository already had the exact
 path counts of `D_19` (HYP-9365) and of the doubled Paley class of order 23 (HYP-9371,
 `04-computation/experiments/sierpinski_ocf_20261022/drt23_doubled_check.out`), written by this machine on
 2026-10-22; the check before registering looked at four theorem files and for the words of the predicted

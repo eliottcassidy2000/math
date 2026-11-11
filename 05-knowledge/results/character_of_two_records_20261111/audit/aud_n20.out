@@ -1,0 +1,5 @@
+N = 20, class of (source) + P_19: predicted 100000011; 19 single-vertex switchings: {'100000011': 19}; 150 random members: {'100000011': 150}
+N = 20, class of (source) + D_19: predicted 100000011; 19 single-vertex switchings: {'100000011': 19}; 150 random members: {'100000011': 150}
+N = 24, class of (source) + P_23: predicted 00000000000; single-vertex switchings (1 tested; all 23 are isomorphic, Aut is vertex-transitive): {'00000000000': 1}
+N = 24, class of (source) + double of P_11: predicted 00000000000; single-vertex switchings (23 tested): {'00000000000': 23}
+python3 aud_n20.py $S/aud_cyc /Users/e/Documents/GitHub/math-wt-atoms  83.94s user 7.94s system 93% cpu 1:37.98 total

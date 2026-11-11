@@ -1,0 +1,24 @@
+isomorphism classes among the recorded tournaments and their converses: 23
+isomorphism classes after adding all descendants and their converses: 37 (the literature counts 37 doubly regular tournaments of order 23)
+classes up to converse: 19 (self-converse: 1)
+  D23_0                                                |Aut| = 1    self-converse: False H mod 2^32 =  150441933  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  D23_1                                                |Aut| = 1    self-converse: False H mod 2^32 =  198531405  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  D23_2                                                |Aut| = 1    self-converse: False H mod 2^32 =  634649909  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  D23_3                                                |Aut| = 1    self-converse: False H mod 2^32 = 3014063309  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  D23_4                                                |Aut| = 1    self-converse: False H mod 2^32 = 3167631213  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  D23_5                                                |Aut| = 1    self-converse: False H mod 2^32 = 3520209149  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  D23_6                                                |Aut| = 1    self-converse: False H mod 2^32 = 3795723245  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  D23_7                                                |Aut| = 1    self-converse: False H mod 2^32 =  345290805  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  D23_8                                                |Aut| = 1    self-converse: False H mod 2^32 =  199866709  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  D23_9                                                |Aut| = 1    self-converse: False H mod 2^32 = 4084930661  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  P_23                                                 |Aut| = 253  self-converse: True  H mod 2^32 =  577366485  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  descendant 1 of the class of D23_2                   |Aut| = 5    self-converse: False H mod 2^32 = 3790919365  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  descendant 1 of the class of D23_4                   |Aut| = 1    self-converse: False H mod 2^32 = 3232528173  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  descendant 1 of the class of D23_5                   |Aut| = 1    self-converse: False H mod 2^32 =  257610117  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  descendant 2 of the class of D23_4                   |Aut| = 1    self-converse: False H mod 2^32 = 2479120981  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  descendant 2 of the class of D23_5                   |Aut| = 1    self-converse: False H mod 2^32 = 4178672077  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  descendant 2 of the class of D23_9                   |Aut| = 1    self-converse: False H mod 2^32 = 3026028581  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  descendant 5 of the class of D23_1                   |Aut| = 1    self-converse: False H mod 2^32 =  254398901  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+  double of P_11                                       |Aut| = 55   self-converse: False H mod 2^32 = 1725257917  H mod 8 = 5  odd cycle parities 00000000000  c_9 = 97774380
+H mod 8 over the classes (up to converse): {5: 19}; odd parity vectors: {'00000000000': 19}; |Aut| distribution: {'1': 16, '253': 1, '5': 1, '55': 1}
+python3 aud_order23_census.py $S/aud_ham $S/aud_cyc   43.98s user 3.66s system 95% cpu 49.931 total

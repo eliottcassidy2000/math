@@ -1,0 +1,70 @@
+== cube sums
+P_3 (order 3 = 3 mod 8): rank_2 A = 3 [(n+1)/2 = 2], dim ker A^T = 0, A A^T = I: True, = J: False
+   weights mod 4 of ker A^T: [1, 0, 0, 0] ; of {u : A^T u = 1}: [0, 0, 0, 1] ; kernel formula 2^((n+1)/2)(n_00 + n_10) = 4 ; Theorem D predicts 4 ; equal: True
+   order 3: c_3 = 1, c_5 = 0
+   walk method: extensions with c_3 + c_5 even: 6, odd: 2, G_35 = 4
+   full method: extensions with c_3 + c_5 even: 6, odd: 2, G_35 = 4 (agrees with the walk method)
+P_7 (order 7 = 7 mod 8): rank_2 A = 4 [(n+1)/2 = 4], dim ker A^T = 3, A A^T = I: False, = J: True
+   weights mod 4 of ker A^T: [8, 0, 0, 0] ; of {u : A^T u = 1}: [0, 0, 0, 8] ; kernel formula 2^((n+1)/2)(n_00 + n_10) = 128 ; Theorem D predicts 128 ; equal: True
+   order 7: c_3 = 14, c_5 = 42
+   walk method: extensions with c_3 + c_5 even: 128, odd: 0, G_35 = 128
+   full method: extensions with c_3 + c_5 even: 128, odd: 0, G_35 = 128 (agrees with the walk method)
+CD_3 (order 7 = 7 mod 8): rank_2 A = 4 [(n+1)/2 = 4], dim ker A^T = 3, A A^T = I: False, = J: True
+   weights mod 4 of ker A^T: [8, 0, 0, 0] ; of {u : A^T u = 1}: [0, 0, 0, 8] ; kernel formula 2^((n+1)/2)(n_00 + n_10) = 128 ; Theorem D predicts 128 ; equal: True
+   order 7: c_3 = 14, c_5 = 42
+   walk method: extensions with c_3 + c_5 even: 128, odd: 0, G_35 = 128
+   full method: extensions with c_3 + c_5 even: 128, odd: 0, G_35 = 128 (agrees with the walk method)
+P_11 (order 11 = 3 mod 8): rank_2 A = 11 [(n+1)/2 = 6], dim ker A^T = 0, A A^T = I: True, = J: False
+   weights mod 4 of ker A^T: [1, 0, 0, 0] ; of {u : A^T u = 1}: [0, 0, 0, 1] ; kernel formula 2^((n+1)/2)(n_00 + n_10) = 64 ; Theorem D predicts 64 ; equal: True
+   order 11: c_3 = 55, c_5 = 594
+   walk method: extensions with c_3 + c_5 even: 1056, odd: 992, G_35 = 64
+   full method: extensions with c_3 + c_5 even: 1056, odd: 992, G_35 = 64 (agrees with the walk method)
+CD_4 (order 15 = 7 mod 8): rank_2 A = 8 [(n+1)/2 = 8], dim ker A^T = 7, A A^T = I: False, = J: True
+   weights mod 4 of ker A^T: [128, 0, 0, 0] ; of {u : A^T u = 1}: [0, 0, 0, 128] ; kernel formula 2^((n+1)/2)(n_00 + n_10) = 32768 ; Theorem D predicts 32768 ; equal: True
+   order 15: c_3 = 140, c_5 = 3276
+   walk method: extensions with c_3 + c_5 even: 32768, odd: 0, G_35 = 32768
+P_19 (order 19 = 3 mod 8): rank_2 A = 19 [(n+1)/2 = 10], dim ker A^T = 0, A A^T = I: True, = J: False
+   weights mod 4 of ker A^T: [1, 0, 0, 0] ; of {u : A^T u = 1}: [0, 0, 0, 1] ; kernel formula 2^((n+1)/2)(n_00 + n_10) = 1024 ; Theorem D predicts 1024 ; equal: True
+   order 19: c_3 = 285, c_5 = 11628
+   walk method: extensions with c_3 + c_5 even: 262656, odd: 261632, G_35 = 1024
+P_23 (order 23 = 7 mod 8): rank_2 A = 12 [(n+1)/2 = 12], dim ker A^T = 11, A A^T = I: False, = J: True
+   weights mod 4 of ker A^T: [2048, 0, 0, 0] ; of {u : A^T u = 1}: [0, 0, 0, 2048] ; kernel formula 2^((n+1)/2)(n_00 + n_10) = 8388608 ; Theorem D predicts 8388608 ; equal: True
+   order 23: c_3 = 506, c_5 = 31878
+   walk method: extensions with c_3 + c_5 even: 8388608, odd: 0, G_35 = 8388608
+P_27 (order 27 = 3 mod 8): rank_2 A = 27 [(n+1)/2 = 14], dim ker A^T = 0, A A^T = I: True, = J: False
+   weights mod 4 of ker A^T: [1, 0, 0, 0] ; of {u : A^T u = 1}: [0, 0, 0, 1] ; kernel formula 2^((n+1)/2)(n_00 + n_10) = 16384 ; Theorem D predicts 16384 ; equal: True
+   order 27: c_3 = 819, c_5 = 73710
+   walk method: extensions with c_3 + c_5 even: 67117056, odd: 67100672, G_35 = 16384
+P_31 (order 31 = 7 mod 8): rank_2 A = 16 [(n+1)/2 = 16], dim ker A^T = 15, A A^T = I: False, = J: True
+   weights mod 4 of ker A^T: [32768, 0, 0, 0] ; of {u : A^T u = 1}: [0, 0, 0, 32768] ; kernel formula 2^((n+1)/2)(n_00 + n_10) = 2147483648 ; Theorem D predicts 2147483648 ; equal: True
+   order 31: c_3 = 1240, c_5 = 151032
+   walk method: extensions with c_3 + c_5 even: 2147483648, odd: 0, G_35 = 2147483648
+CD_5 (order 31 = 7 mod 8): rank_2 A = 16 [(n+1)/2 = 16], dim ker A^T = 15, A A^T = I: False, = J: True
+   weights mod 4 of ker A^T: [32768, 0, 0, 0] ; of {u : A^T u = 1}: [0, 0, 0, 32768] ; kernel formula 2^((n+1)/2)(n_00 + n_10) = 2147483648 ; Theorem D predicts 2147483648 ; equal: True
+   order 31: c_3 = 1240, c_5 = 151032
+   walk method: extensions with c_3 + c_5 even: 2147483648, odd: 0, G_35 = 2147483648
+== kernel data only (no brute force)
+P_31 (order 31 = 7 mod 8): doubly regular: True; rank_2 A = 16 [(n+1)/2 = 16]; A A^T = I: False, = J: True; weights mod 4 of ker A^T: [32768, 0, 0, 0] ; of K_1: [0, 0, 0, 32768] ; formula = 2^31 ; predicted 2^31 ; equal: True
+P_43 (order 43 = 3 mod 8): doubly regular: True; rank_2 A = 43 [(n+1)/2 = 22]; A A^T = I: True, = J: False; weights mod 4 of ker A^T: [1, 0, 0, 0] ; of K_1: [0, 0, 0, 1] ; formula = 2^22 ; predicted 2^22 ; equal: True
+P_47 (order 47 = 7 mod 8): doubly regular: True; rank_2 A = 24 [(n+1)/2 = 24]; A A^T = I: False, = J: True; kernel too large to enumerate (dim 23); checking doubly-evenness on the basis and pairwise even overlaps: doubly even: True
+CD_5 (order 31 = 7 mod 8): doubly regular: True; rank_2 A = 16 [(n+1)/2 = 16]; A A^T = I: False, = J: True; weights mod 4 of ker A^T: [32768, 0, 0, 0] ; of K_1: [0, 0, 0, 32768] ; formula = 2^31 ; predicted 2^31 ; equal: True
+CD_6 (order 63 = 7 mod 8): doubly regular: True; rank_2 A = 32 [(n+1)/2 = 32]; A A^T = I: False, = J: True; kernel too large to enumerate (dim 31); checking doubly-evenness on the basis and pairwise even overlaps: doubly even: True
+CD_7 (order 127 = 7 mod 8): doubly regular: True; rank_2 A = 64 [(n+1)/2 = 64]; A A^T = I: False, = J: True; kernel too large to enumerate (dim 63); checking doubly-evenness on the basis and pairwise even overlaps: doubly even: True
+== Theorem D (1): c_5 of regular tournaments
+order 5: 4 circulant tournaments, odd c_5 so far: 0
+order 7: 8 circulant tournaments, odd c_5 so far: 0
+order 9: 16 circulant tournaments, odd c_5 so far: 0
+order 11: 32 circulant tournaments, odd c_5 so far: 0
+order 13: 64 circulant tournaments, odd c_5 so far: 0
+order 5: 300 random regular tournaments (triangle reversals), 1 distinct values of c_5, odd c_5: 0
+order 7: 300 random regular tournaments (triangle reversals), 3 distinct values of c_5, odd c_5: 0
+order 9: 300 random regular tournaments (triangle reversals), 8 distinct values of c_5, odd c_5: 0
+order 11: 300 random regular tournaments (triangle reversals), 24 distinct values of c_5, odd c_5: 0
+order 13: 300 random regular tournaments (triangle reversals), 35 distinct values of c_5, odd c_5: 0
+order 15: 300 random regular tournaments (triangle reversals), 46 distinct values of c_5, odd c_5: 0
+order 17: 300 random regular tournaments (triangle reversals), 56 distinct values of c_5, odd c_5: 0
+order 21: 300 random regular tournaments (triangle reversals), 85 distinct values of c_5, odd c_5: 0
+regular tournaments tested: 2524, with odd c_5: 0
+== THM-5132 (1) on random tournaments: c_5 = C(q_1,2) + C(q_2,2) (mod 2)
+random tournaments of orders 3..15: 2600 tested, violations: 0
+python3 aud_theoremD.py $S/aud_cube big  17.48s user 0.44s system 79% cpu 22.476 total

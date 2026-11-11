@@ -1,0 +1,26 @@
+normalised member: odd parity vector 00000000000
+switched at the single vertex  1: odd parity vector 00000000001; H mod 4 = 3
+switched at the single vertex  2: odd parity vector 00000000110; H mod 4 = 1
+switched at the single vertex  3: odd parity vector 00000000000; H mod 4 = 1
+switched at the single vertex  4: odd parity vector 00000000110; H mod 4 = 1
+switched at the single vertex  5: odd parity vector 00000000110; H mod 4 = 1
+switched at the single vertex  6: odd parity vector 00000000110; H mod 4 = 1
+switched at the single vertex  7: odd parity vector 00000000111; H mod 4 = 3
+switched at the single vertex  8: odd parity vector 00000000001; H mod 4 = 3
+switched at the single vertex  9: odd parity vector 00000000001; H mod 4 = 3
+switched at the single vertex 10: odd parity vector 00000000000; H mod 4 = 1
+switched at the single vertex 11: odd parity vector 00000000001; H mod 4 = 3
+switched at the single vertex 12: odd parity vector 00000000110; H mod 4 = 1
+switched at the single vertex 13: odd parity vector 00000000111; H mod 4 = 3
+switched at the single vertex 14: odd parity vector 00000000111; H mod 4 = 3
+switched at the single vertex 15: odd parity vector 00000000111; H mod 4 = 3
+switched at the single vertex 16: odd parity vector 00000000000; H mod 4 = 1
+switched at the single vertex 17: odd parity vector 00000000001; H mod 4 = 3
+switched at the single vertex 18: odd parity vector 00000000000; H mod 4 = 1
+switched at the single vertex 19: odd parity vector 00000000111; H mod 4 = 3
+switched at the single vertex 20: odd parity vector 00000000110; H mod 4 = 1
+switched at the single vertex 21: odd parity vector 00000000001; H mod 4 = 3
+switched at the single vertex 22: odd parity vector 00000000000; H mod 4 = 1
+switched at the single vertex 23: odd parity vector 00000000111; H mod 4 = 3
+single-vertex switchings violating (bK): 18 of 23
+python3 aud_refute.py $S/aud_ham $S/aud_cyc  single 0  57.82s user 9.80s system 68% cpu 1:38.09 total

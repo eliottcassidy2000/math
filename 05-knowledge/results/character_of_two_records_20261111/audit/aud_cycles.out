@@ -1,0 +1,24 @@
+== CD_4 (order 15, audit's own Cayley-Dickson construction): global counts, DFS enumeration, per-vertex counts
+cycle counts by length (subset programme): [140, 630, 3276, 14490, 61200, 228690, 765660, 2205588, 5361132, 10472707, 15468936, 15289041, 7610862]
+cycle counts by length (DFS enumeration):  [140, 630, 3276, 14490, 61200, 228690, 765660, 2205588, 5361132, 10472707, 15468936, 15289041, 7610862] ; equal: True
+odd parity vector (c_3, ..., c_15): 0000000 ; (bK) for a doubly regular tournament of order 15: 0000000
+sum over vertices of (cycles of length l through v) = l c_l for every l: True
+parity vectors of the odd cycles through one vertex: {'0000010': 8, '0000000': 7}
+vertices with an odd number of 13-cycles through them: 8 of 15
+== order 23: classes of drt23_classes.json (code = upper triangle, row-major) and the double of P_11
+D23_0           odd parities 00000000000 (predicted 00000000000); c_l mod 4 (l = 3..23 odd): 22000022220; c_odd mod 8 = 4; even parities 1100110011; 1 + 2 c_odd = 1 = H mod 4 (1); p_23 = H mod 2^32: True; p_j = C(23, j) (mod 4) for every j: True
+D23_4           odd parities 00000000000 (predicted 00000000000); c_l mod 4 (l = 3..23 odd): 22000022022; c_odd mod 8 = 0; even parities 1100111100; 1 + 2 c_odd = 1 = H mod 4 (1); p_23 = H mod 2^32: True; p_j = C(23, j) (mod 4) for every j: True
+D23_5           odd parities 00000000000 (predicted 00000000000); c_l mod 4 (l = 3..23 odd): 22000022222; c_odd mod 8 = 2; even parities 1100110000; 1 + 2 c_odd = 1 = H mod 4 (1); p_23 = H mod 2^32: True; p_j = C(23, j) (mod 4) for every j: True
+D23_8           odd parities 00000000000 (predicted 00000000000); c_l mod 4 (l = 3..23 odd): 22000022222; c_odd mod 8 = 2; even parities 1100110000; 1 + 2 c_odd = 1 = H mod 4 (1); p_23 = H mod 2^32: True; p_j = C(23, j) (mod 4) for every j: True
+P_23            odd parities 00000000000 (predicted 00000000000); c_l mod 4 (l = 3..23 odd): 22000022220; c_odd mod 8 = 4; even parities 1100110011; 1 + 2 c_odd = 1 = H mod 4 (1); p_23 = H mod 2^32: True; p_j = C(23, j) (mod 4) for every j: True
+double of P_11  odd parities 00000000000 (predicted 00000000000); c_l mod 4 (l = 3..23 odd): 22000022220; c_odd mod 8 = 4; even parities 1100110011; 1 + 2 c_odd = 1 = H mod 4 (1); p_23 = H mod 2^32: True; p_j = C(23, j) (mod 4) for every j: True
+== path form of (bK): p_j mod 4 against C(n, j) + 2 [n = 3 mod 8][j odd, j >= 3] C(m, (j-1)/2)
+P_3   n =  3: p_j mod 4 = 333 ; formula: 333 ; equal: True ; odd cycle parities 1 (predicted 1)
+P_7   n =  7: p_j mod 4 = 3133131 ; formula: 3133131 ; equal: True ; odd cycle parities 000 (predicted 000)
+P_11  n = 11: p_j mod 4 = 33322221133 ; formula: 33322221133 ; equal: True ; odd cycle parities 10011 (predicted 10011)
+CD_4  n = 15: p_j mod 4 = 313131331313131 ; formula: 313131331313131 ; equal: True ; odd cycle parities 0000000 (predicted 0000000)
+P_19  n = 19: p_j mod 4 = 3330000222200001133 ; formula: 3330000222200001133 ; equal: True ; odd cycle parities 100000011 (predicted 100000011)
+D_19  n = 19: p_j mod 4 = 3330000222200001133 ; formula: 3330000222200001133 ; equal: True ; odd cycle parities 100000011 (predicted 100000011)
+== the subset identity (p_j - C(n,j))/2 = sum over odd l of C(n-l, j-l) c_l (mod 2), exact counts, random tournaments
+identities tested: 3000, violations: 0
+python3 aud_cycles.py $S/aud_cyc /Users/e/Documents/GitHub/math-wt-atoms  18.78s user 6.22s system 44% cpu 56.496 total

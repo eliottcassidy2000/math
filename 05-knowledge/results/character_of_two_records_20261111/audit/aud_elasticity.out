@@ -1,0 +1,12 @@
+limit 130000: atoms found 14282; equal to the predicted list (odd primes != 7; 7p, p odd prime != 3; 63; 343): True
+atoms divisible by 9: [63]
+largest ratio of two factorisation lengths below 130000: 5/2, attained at [3969]
+smallest element with two different lengths: (315, [2, 3])
+elements with at least two lengths: 1525; among them NOT divisible by 63: 502; the smallest of those: (1225, [2, 3])
+largest ratio among elements not divisible by 63: 3/2, first attained at [1225, 2695, 3185, 4165, 4655]
+   lengths(315) = [2, 3]
+   lengths(1225) = [2, 3]
+   lengths(3969) = [2, 5]
+   lengths(117649) = [2, 3]
+length formula of the note (L = c + a + v + x - w with u + 2v + w + 3x = b, 2w <= a, u <= c) disagrees on 0 elements
+python3 aud_elasticity.py 130000  27.38s user 0.69s system 77% cpu 36.419 total

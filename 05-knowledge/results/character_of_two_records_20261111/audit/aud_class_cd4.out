@@ -1,0 +1,9 @@
+class of (source) + CD_4 (audit's own Cayley-Dickson construction)
+N = 16: switching class of (source) + T, T of order 15: 32768 switching sets
+  members that are not skew Hadamard: 0
+  (bK) predicted parity vector (c_3, c_5, ...):0000000; members with another vector: 0
+  odd parity vectors found: 0000000:32768
+  (bS) H = 1 + N/2 = 1 (mod 4): violations 0; H = 1 + 2 c_odd (mod 4) violations: 0
+  H mod 8: 1:24576 5:8192
+  distinct parity vectors of the even cycle counts (c_4, c_6, ..., c_N): 2
+$S/aud_class < $S/cd4.txt  351.59s user 12.97s system 76% cpu 7:54.53 total

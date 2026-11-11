@@ -1,0 +1,14 @@
+class of (source) + annealed code 0: 6 random members; odd parity vectors (c_3..c_23): {'00000000000': 2, '00000000001': 2, '00000000110': 2}; H mod 4: {1: 4, 3: 2}
+class of (source) + annealed code 1: 6 random members; odd parity vectors (c_3..c_23): {'00000000000': 3, '00000000110': 1, '00000000111': 2}; H mod 4: {1: 4, 3: 2}
+class of (source) + annealed code 2: 6 random members; odd parity vectors (c_3..c_23): {'00000000000': 3, '00000000110': 3}; H mod 4: {1: 6}
+class of (source) + annealed code 3: 6 random members; odd parity vectors (c_3..c_23): {'00000000001': 3, '00000000110': 2, '00000000111': 1}; H mod 4: {1: 2, 3: 4}
+class of (source) + annealed code 4: 6 random members; odd parity vectors (c_3..c_23): {'00000000000': 1, '00000000001': 2, '00000000110': 1, '00000000111': 2}; H mod 4: {1: 2, 3: 4}
+class of (source) + annealed code 5: 6 random members; odd parity vectors (c_3..c_23): {'00000000000': 2, '00000000001': 1, '00000000110': 2, '00000000111': 1}; H mod 4: {1: 4, 3: 2}
+class of (source) + annealed code 6: 6 random members; odd parity vectors (c_3..c_23): {'00000000000': 1, '00000000001': 2, '00000000110': 1, '00000000111': 2}; H mod 4: {1: 2, 3: 4}
+class of (source) + annealed code 7: 6 random members; odd parity vectors (c_3..c_23): {'00000000000': 1, '00000000001': 2, '00000000110': 2, '00000000111': 1}; H mod 4: {1: 3, 3: 3}
+class of (source) + annealed code 8: 6 random members; odd parity vectors (c_3..c_23): {'00000000000': 1, '00000000001': 2, '00000000110': 1, '00000000111': 2}; H mod 4: {1: 2, 3: 4}
+class of (source) + annealed code 9: 6 random members; odd parity vectors (c_3..c_23): {'00000000000': 1, '00000000001': 2, '00000000111': 3}; H mod 4: {1: 1, 3: 5}
+class of (source) + P_23: 6 random members; odd parity vectors (c_3..c_23): {'00000000000': 6}; H mod 4: {1: 6}
+class of (source) + double of P_11: 6 random members; odd parity vectors (c_3..c_23): {'00000000000': 6}; H mod 4: {1: 6}
+total members 72: violating (bK): 45; violating (bS): 30
+python3 aud_refute.py $S/aud_ham $S/aud_cyc  sample 6  177.11s user 34.18s system 60% cpu 5:50.34 total

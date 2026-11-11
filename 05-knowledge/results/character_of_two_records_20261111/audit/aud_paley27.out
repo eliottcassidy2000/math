@@ -1,0 +1,5 @@
+q =  7: paths starting 0 -> 1, mod 256:   9 (exact value 9 = 9 mod 256: True); H(P_q) = q(q-1)/2 * K = 189 (mod 256), 5 (mod 8); q(q-1)/2 = 5 (mod 8)   [0 s]
+q = 11: paths starting 0 -> 1, mod 256: 193 (exact value 1729 = 193 mod 256: True); H(P_q) = q(q-1)/2 * K = 119 (mod 256), 7 (mod 8); q(q-1)/2 = 7 (mod 8)   [0 s]
+q = 19: paths starting 0 -> 1, mod 256:  41 (exact value 6857869865 = 41 mod 256: True); H(P_q) = q(q-1)/2 * K = 99 (mod 256), 3 (mod 8); q(q-1)/2 = 3 (mod 8)   [0 s]
+q = 23: paths starting 0 -> 1, mod 256: 185 (exact value 62293308207033 = 185 mod 256: True); H(P_q) = q(q-1)/2 * K = 213 (mod 256), 5 (mod 8); q(q-1)/2 = 5 (mod 8)   [0 s]
+q = 27: paths starting 0 -> 1, mod 256:   1; H(P_q) = q(q-1)/2 * K = 95 (mod 256), 7 (mod 8); q(q-1)/2 = 7 (mod 8)   [6 s]

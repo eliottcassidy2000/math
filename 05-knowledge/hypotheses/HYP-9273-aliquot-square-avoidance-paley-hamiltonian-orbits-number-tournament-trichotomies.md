@@ -64,6 +64,8 @@ related: [THM-4644, THM-871, THM-307, THM-4641, HYP-9258]
 
 **Status.** OPEN; seven cases (`q = 3, 7, 11, 19, 23, 27, 31`). The `q = 31` case was named in advance as the first test and passed: `H(P_31)/465 ≡ 41 (mod 256)`. The broader statements for all circulant tournaments with `p ≡ 3 (mod 4)` and for all doubly regular tournaments are refuted (controls above). `q = 43` is beyond subset DP (`2^41` subsets).
 
+**UPDATE 2026-11-11 (mac-mini-2026-11-11-atoms, THM-5136 (P); added on the advice of that packet's audit).** (B) is PROVED modulo 4: `H(P_q) ≡ q(q−1)/2 (mod 4)` for every prime power `q ≡ 3 (mod 4)`, i.e. `H(P_q) ≡ 1 (mod 4)` iff 2 is a square in `F_q`, and the orbit count is `1 (mod 4)` (folding `P_q` by `x ↦ −x`; the folded tournament is `P_q` on the squares). The residue modulo 8 remains OPEN. On the doubly regular control: the orbit form `H/|Aut| ≡ 1 (mod 8)` fails for `T_4`, but the form `H ≡ n(n−1)/2 (mod 8)` holds for `T_4` (`198335025 ≡ 105 ≡ 1`) and for every doubly regular tournament of order at most 23 (HYP-9667 (b8), OPEN in general).
+
 **Remarks.**
 - **The parity part is free.** By Rédei, `H` is odd, and the affine group has odd order. So the orbit count is odd: the hypothesis concerns the next two binary digits.
 - **The 2-adic part.** The mod-8 statement needs finer 2-adic information, in the sense of the repository's 2-adic digits of `H` (OCF: `H = 1 + 2α_1 + 4α_2 + ...`).

@@ -1,0 +1,30 @@
+order 3 (m = 1): 4 labelled tournaments invariant under the fixed anti-involution (not anti-invariant by construction error: 0)
+  Z not a tournament: 0
+  invariant odd cycles avoiding the fixed vertex: 0
+  violations of F_k = #{k-vertex paths of Z ending in D_1} (mod 2), any k: 0
+  violations of c_(2k+1) = F_k (mod 2): 0
+  violations of H = 1 + 2 c_odd (mod 4): 0
+  violations of H = 1 + 2 #{paths of Z ending in D_1} (mod 4): 0
+  violations of corollary (a) [D_1 empty => F_k even]: 0; of (b) [D_1 full => F_k = C(m,k)]: 0
+  violations of corollary (c) [exactly half of the D_1 choices give H = 1 mod 4]: 0 of 2 outer configurations
+  H = 1 (mod 4): 2; H = 3 (mod 4): 2
+order 5 (m = 2): 64 labelled tournaments invariant under the fixed anti-involution (not anti-invariant by construction error: 0)
+  Z not a tournament: 0
+  invariant odd cycles avoiding the fixed vertex: 0
+  violations of F_k = #{k-vertex paths of Z ending in D_1} (mod 2), any k: 0
+  violations of c_(2k+1) = F_k (mod 2): 0
+  violations of H = 1 + 2 c_odd (mod 4): 0
+  violations of H = 1 + 2 #{paths of Z ending in D_1} (mod 4): 0
+  violations of corollary (a) [D_1 empty => F_k even]: 0; of (b) [D_1 full => F_k = C(m,k)]: 0
+  violations of corollary (c) [exactly half of the D_1 choices give H = 1 mod 4]: 0 of 16 outer configurations
+  H = 1 (mod 4): 32; H = 3 (mod 4): 32
+order 7 (m = 3): 4096 labelled tournaments invariant under the fixed anti-involution (not anti-invariant by construction error: 0)
+  Z not a tournament: 0
+  invariant odd cycles avoiding the fixed vertex: 0
+  violations of F_k = #{k-vertex paths of Z ending in D_1} (mod 2), any k: 0
+  violations of c_(2k+1) = F_k (mod 2): 0
+  violations of H = 1 + 2 c_odd (mod 4): 0
+  violations of H = 1 + 2 #{paths of Z ending in D_1} (mod 4): 0
+  violations of corollary (a) [D_1 empty => F_k even]: 0; of (b) [D_1 full => F_k = C(m,k)]: 0
+  violations of corollary (c) [exactly half of the D_1 choices give H = 1 mod 4]: 0 of 512 outer configurations
+  H = 1 (mod 4): 2048; H = 3 (mod 4): 2048
