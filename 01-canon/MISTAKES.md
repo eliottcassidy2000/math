@@ -24848,3 +24848,59 @@ on disk and only the symmetric ones were sampled. (3) A pre-registration check i
 prediction (their names, orders, one typical value) in results, hypotheses and experiments, including this
 machine's own lanes; a prediction the repository decides is recorded as in-sample evidence, not registered.
 (4) When a repair suggests a new tidy criterion, run it against all the data at hand before writing it down.
+
+## MISTAKE-764 (2026-11-11, kind-pasteur-2026-11-11-S24, THM-5138, HYP-9668 and `05-knowledge/results/kps_s24_stein_modules_keller_20261111/` at the pre-audit commit 86ab0707d6; found by the independent audit `audit/AUDIT.md` of that packet, by the concurrent Session269, and by the author after the audit) -- conjectures announced as new and intermediate that were an instance of a published conjecture and equivalent to the open problem; a hypothesis refuted by a three-line identity; failures claimed from five computed values
+
+- **M1. A false hypothesis, refuted by the note's own example.** HYP-9668 (E) asked whether the kernel of the
+  functional is a Mathieu-Zhao subspace whenever `H^2(C^2, d - dW ^)` is one-dimensional, and named `W = x^2 y` as a
+  case. There `1 = 2 (d/dy - W_y)(y) - (d/dx - W_x)(x)` lies in the kernel, and a Mathieu-Zhao subspace that
+  contains 1 is the whole ring. I had computed the dimension (1) and never asked for the class of 1.
+- **M2. "New conjectures" that were not new.** The note presented K-GMC ("the Stein kernel of a Keller pair is a
+  Mathieu-Zhao subspace") as a new conjecture. With `{f, g} = 1` the Stein kernel is
+  `Im(d/dx - W_x) + Im(d/dy - W_y)`, `W = (f - a)(g - b)`: K-GMC is the instance `q = (f - a)(g - b)` of Zhao's Image
+  Conjecture (J. Algebra 324 (2010), Conjecture 1.3, Theorem 2.5), finite-dimensionality of the quotient is his
+  Corollary 2.11, and the nearest published equivalence with JC(2) is van den Essen-Wright-Zhao 2011, Theorem 4.3.
+  In the repo the vacuum-Mathieu programme HYP-8350 was cited only through a colliding theorem ID. No literature
+  search had been made for the statement itself, only for the tools.
+- **M3. "Between GMC(2) and JC(2)" was wrong.** The note and the hypothesis said that K-GMC, CV and SN for all Keller
+  pairs lie between the theorem and the open problem and that it was open whether they imply JC(2). Each is
+  equivalent to JC(2). Session269 pushed this (two directions, conditional on the dimension count) twenty minutes
+  after my checkpoint; my own proof existed as an unpushed draft; and the elementary reason (the Stein kernels are
+  the fibres of one torsion-free module, so at a centre in general position "`d_u^m x` lies in the kernel" means
+  "`d_u^m x = 0`") was found only after the audit named torsion-freeness as the missing step. A reformulation was
+  advertised as a ladder.
+- **M4. Failure claimed from finitely many values.** "SN, CV, K-GMC all fail on the slice" rested on nonzero normal
+  forms for `m <= 5` at one rational centre, relative to a truncation. SN is a statement about all large `m`. What
+  is proved: finite chaos fails there, and SN fails at centres algebraically independent over `Q`.
+- **M5. A false sentence about my own search, and a cited theorem not read to the end.** The note said a grep for
+  "Dimca" returned nothing and called the comparison theorem "not in the repo before"; my own grep had counted hits
+  in the notes, among them `logic_lenses_audit_A_20261012.md:32`, where Dimca-Saito is named as the mechanism behind
+  the known case `W = f`. And Remark 3.4 ("the count does not see the degrees of f and g") contradicted THM-4122 (4), which the
+  note cites two sections earlier and which gives `dim S = c + ((deg f + deg g)/gcd) sum delta_i rho_i` and makes
+  every centre admissible on `C^2`.
+- **M6. Heuristics in the summary without their label.** "The extra functionals of a counterexample are not
+  Gaussian; they sit on the non-properness curve" stood in section 0 as a finding. On the double cover it is false:
+  the two Stein functionals are the local Gaussians at the two preimages of the centre. "One residue functional per
+  puncture" is wrong at ramified punctures, which both examples have.
+- **A theorem added after the checkpoint.** The detection theorem was written after the pre-audit push and reached
+  the auditor as a draft; the final sections 5.2-5.4 (torsion-freeness, injectivity, one-direction detection, the
+  special-centre example) were written after the first audit and needed a second one.
+- **Minors (16).** A finite-chaos theorem stated as an inequality that decided nothing for the double cover, where
+  the sharp statement (audit) is an equivalence; `c = 1` asserted without Bertini; a missing `a != 0`; "PROVED by
+  hand" for a dimension whose upper bound was machine only; Hien 2009 cited for a statement that is
+  Hien-Roucairol 2008; "generate" for "normally generate"; "exact" for "stable" in the pre-registration outcomes;
+  a sentence about a proof of GMC(2) "by integration by parts only" that cannot exist; colliding IDs cited without
+  slugs. All applied.
+- **Repair and strongest survivor.** All statuses retyped; HYP-9668 (E) marked REFUTED and replaced by (E'); (A)-(C)
+  recorded as equivalent to JC(2); credits to Zhao, van den Essen-Wright-Zhao, Derksen-van den Essen-Zhao, HYP-8350
+  and Session269 added. Survivors: the Stein module and its identities; the count `>= 2d - 1` (from a CITED
+  theorem); the sharp finite-chaos theorem (audit); torsion-freeness and injectivity of the Stein transform, with
+  detection from first hits of `x, y` in one direction at a centre in general position; the exact dimensions 2 and
+  11; the special-centre example where SN holds without an isomorphism.
+- **Lessons.** (1) Before calling a conjecture new, write it in the frame `dx ^ dy` and search for the statement,
+  not for the tools: "image of commuting first-order operators is a Mathieu subspace" has an author. (2) Before
+  asking whether a kernel is Mathieu-Zhao, compute the class of 1. (3) Before calling statements intermediate, try
+  to prove that the weakest one implies the strongest when the free parameter (here the centre) is generic. (4)
+  "Fails" needs a proof; finitely many nonzero values are "no vanishing observed". (5) Report a grep as it came
+  out. (6) When a cited canon theorem has several statements, use all of them. (7) Fetch before the audit returns:
+  a concurrent session can build on a checkpoint within minutes.
